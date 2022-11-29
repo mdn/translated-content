@@ -127,11 +127,11 @@ document.getElementById("stop").addEventListener("click", stopTextColor);
 
 {{EmbedLiveSample("Example_2:_Alternating_two_colors")}}
 
-Véase también: [`clearInterval()`](/en-US/docs/Web/API/clearInterval).
+Véase también: [`clearInterval()`](/es/docs/Web/API/clearInterval).
 
 ## El problema con "this"
 
-Cuando le pasas un método a `setInterval()` o cualquier otra función, ésta será invocada con el valor de [`this`](/es/docs/Web/JavaScript/Reference/Operators/this) incorrecto. Este problema es explicado en detalle en la [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
+Cuando le pasas un método a `setInterval()` o cualquier otra función, ésta será invocada con el valor de [`this`](/es/docs/Web/JavaScript/Reference/Operators/this) incorrecto. Este problema es explicado en detalle en la [JavaScript reference](/es/docs/Web/JavaScript/Reference/Operators/this#as_an_object_method).
 
 ### Explicación
 

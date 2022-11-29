@@ -11,4 +11,4 @@ FTP (del inglés _File Transfer Protocol_, Protocolo de transferencia de archivo
 ### Conocimiento general
 
 - [FTP](https://es.wikipedia.org/wiki/Protocolo_de_transferencia_de_archivos) en Wikipedia
-- [Beginner's guide to uploading files via FTP](/en-US/Learn/Upload_files_to_a_web_server)
+- [Beginner's guide to uploading files via FTP](/es/Learn/Upload_files_to_a_web_server)

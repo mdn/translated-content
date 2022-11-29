@@ -89,4 +89,4 @@ Si aún no existe una hoja de estilos, se crea un nuevo elemento {{ HTMLElement(
 
 ## Ver tambien
 
-- [Animaciones CSS](es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS)
+- [Animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS)

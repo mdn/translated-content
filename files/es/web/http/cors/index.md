@@ -29,7 +29,7 @@ Este [estándar de intercambio de origen cruzado](http://www.w3.org/TR/cors/) es
 - Invocaciones de las APIs [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) o [Fetch](/es/docs/Web/API/Fetch_API) en una manera de sitio cruzado, como se discutió arriba.
 - Fuentes Web (para usos de fuente en dominios cruzados `@font-face` dentro de CSS), [para que los servidores puedan mostrar fuentes TrueType que sólo puedan ser cargadas por sitios cruzados y usadas por sitios web que lo tengan permitido.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - Texturas WebGL.
-- Imágenes dibujadas en patrones usando [`drawImage`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage).
+- Imágenes dibujadas en patrones usando [`drawImage`](/es/docs/Web/API/CanvasRenderingContext2D/drawImage).
 - Hojas de estilo (para acceso [CSSOM](/es/docs/Web/CSS/CSSOM_View)).
 - Scripts (para excepciones inmutadas).
 

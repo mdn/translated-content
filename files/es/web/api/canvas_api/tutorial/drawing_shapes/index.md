@@ -290,7 +290,7 @@ function draw() {
 
 ### Curvas de Bézier y cuadráticas
 
-El siguiente tipo de trayectorias disponibles son las [Curvas de Bézier](/en-US/docs/Glossary/Bezier_curve), disponibles en las variedades cúbica y cuadrática. Se utilizan generalmente para dibujar formas orgánicas complejas.
+El siguiente tipo de trayectorias disponibles son las [Curvas de Bézier](/es/docs/Glossary/Bezier_curve), disponibles en las variedades cúbica y cuadrática. Se utilizan generalmente para dibujar formas orgánicas complejas.
 
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo", "quadraticCurveTo(cp1x, cp1y, x, y)")}}
   - : Dibuja una curva cuadrática de Bézier desde la posición actual de la pluma hasta el punto final especificado por `x` e `y`, utilizando el punto de control especificado por `cp1x` y `cp1y`.
@@ -491,7 +491,7 @@ Como hemos visto en el último ejemplo, puede haber una serie trazados y comando
 Veamos cómo podemos construir un objeto `Path2D`:
 
 - {{domxref("Path2D.Path2D", "Path2D()")}}
-  - : El constructor **`Path2D()`** devuelve un objeto `Path2D` recién instanciado, opcionalmente con otra ruta como argumento (crea una copia), u opcionalmente con una cadena de caracteres formada por datos de un trazado [SVG path](/en-US/docs/Web/SVG/Tutorial/Paths).
+  - : El constructor **`Path2D()`** devuelve un objeto `Path2D` recién instanciado, opcionalmente con otra ruta como argumento (crea una copia), u opcionalmente con una cadena de caracteres formada por datos de un trazado [SVG path](/es/docs/Web/SVG/Tutorial/Paths).
 
 ```js
 new Path2D();     // Objeto Path2D vacío
@@ -540,9 +540,9 @@ function draw() {
 
 ### Uso de trazados (SVG paths)
 
-Otra poderosa característica de la nueva API `Path2D` del canvas es el uso de datos de trazados o [SVG path](/en-US/docs/Web/SVG/Tutorial/Paths) para inicializar los trazados en el canvas. Esto podría permitirle pasar los datos del trazado y reutilizarlos tanto en el SVG como en el canvas.
+Otra poderosa característica de la nueva API `Path2D` del canvas es el uso de datos de trazados o [SVG path](/es/docs/Web/SVG/Tutorial/Paths) para inicializar los trazados en el canvas. Esto podría permitirle pasar los datos del trazado y reutilizarlos tanto en el SVG como en el canvas.
 
-El trazado se moverá al punto (`M10 10`) y luego se moverá horizontalmente 80 puntos a la derecha (`h 80`), luego 80 puntos hacia abajo (`v 80`), luego 80 puntos a la izquierda (`h -80`), y luego de vuelta al inicio (`z`). Puedes ver este ejemplo en el [`constructor Path2D`](/en-US/docs/Web/API/Path2D/Path2D#using_svg_paths).
+El trazado se moverá al punto (`M10 10`) y luego se moverá horizontalmente 80 puntos a la derecha (`h 80`), luego 80 puntos hacia abajo (`v 80`), luego 80 puntos a la izquierda (`h -80`), y luego de vuelta al inicio (`z`). Puedes ver este ejemplo en el [`constructor Path2D`](/es/docs/Web/API/Path2D/Path2D#using_svg_paths).
 
 ```js
 const p = new Path2D('M10 10 h 80 v 80 h -80 Z');
