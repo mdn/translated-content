@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "husky": "8.0.1",
-    "lint-staged": "13.0.3",
+    "lint-staged": "13.0.4",
     "markdownlint-cli2": "0.5.1",
     "prettier": "2.8.0"
   }
