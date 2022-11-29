@@ -31,7 +31,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 只有实现了一个拥有以下语义（semantic）的 **`next()`** 方法，一个对象才能成为迭代器：
 
 - `next()`
-  - : 无参数或者接受一个参数，并返回符合 `IteratorResult` 接口的对象的函数（见下文）。如果在使用迭代器内置的语言特征（例如 `for...of`）时，得到一个非对象返回值（例如 `false` 或 `undefined`），将会抛出 {{jsxref("TypeError")}}（`"iterator.next() returned a non-object value"`）。
+  - : 无参数或者接受一个参数的函数，并返回符合 `IteratorResult` 接口的对象（见下文）。如果在使用迭代器内置的语言特征（例如 `for...of`）时，得到一个非对象返回值（例如 `false` 或 `undefined`），将会抛出 {{jsxref("TypeError")}}（`"iterator.next() returned a non-object value"`）。
 
 所有迭代器协议的方法（`next()`、`return()` 和 `throw()`）都应返回实现 `IteratorResult` 接口的对象。它必须有以下属性：
 
@@ -53,9 +53,9 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 可选地，迭代器也实现了 **`return(value)`** 和 **`throw(exception)`** 方法，这些方法在调用时告诉迭代器，调用者已经完成迭代，并且可以执行任何必要的清理（例如关闭数据库）。
 
 - `return(value)` {{optional_inline}}
-  - : 无参数或者接受一个参数，并返回符合 `IteratorResult` 接口的对象，其 `value` 通常等价于传递的 `value`，并且 `done` 等于 `true`。调用这个方法表明迭代器的调用者不打算调用更多的 `next()`，并且可以进行清理工作。
+  - : 无参数或者接受一个参数的函数，并返回符合 `IteratorResult` 接口的对象，其 `value` 通常等价于传递的 `value`，并且 `done` 等于 `true`。调用这个方法表明迭代器的调用者不打算调用更多的 `next()`，并且可以进行清理工作。
 - `throw(exception)` {{optional_inline}}
-  - : 无参数或者接受一个参数，并返回符合 `IteratorResult` 接口的对象，其 `value` 通常等价于传递的 `value`，并且 `done` 等于 `true`。调用这个方法表明迭代器的调用者监测到错误的状况，并且 `exception` 通常是一个 {{jsxref("Error")}} 实例。
+  - : 无参数或者接受一个参数的函数，并返回符合 `IteratorResult` 接口的对象，通常 `done` 等于 `true`。调用这个方法表明迭代器的调用者监测到错误的状况，并且 `exception` 通常是一个 {{jsxref("Error")}} 实例。
 
 > **备注：** 不可能判断（例如，没有实际调用 `next()` 并验证返回的结果）一个特定的对象是否实现了迭代器协议。
 
@@ -103,11 +103,11 @@ console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
 当对象实现以下方法时，它会实现异步迭代器协议：
 
 - `next()`
-  - : 无参数或者接受一个参数，并返回 promise 的函数。promise 兑现为一个对象，该对象符合 `IteratorResult` 接口，并且这些属性与同步迭代器有着相同的语义。
+  - : 无参数或者接受一个参数的函数，并返回 promise。promise 兑现为一个对象，该对象符合 `IteratorResult` 接口，并且这些属性与同步迭代器有着相同的语义。
 - `return(value)` {{optional_inline}}
-  - : 无参数或者接受一个参数，并返回 promise 的函数。promise 兑现为一个对象，该对象符合 `IteratorResult` 接口，并且这些属性与同步迭代器有着相同的语义。
+  - : 无参数或者接受一个参数的函数，并返回 promise。promise 兑现为一个对象，该对象符合 `IteratorResult` 接口，并且这些属性与同步迭代器有着相同的语义。
 - `throw(exception)` {{optional_inline}}
-  - : 无参数或者接受一个参数，并返回 promise 的函数。promise 兑现为一个对象，该对象符合 `IteratorResult` 接口，并且这些属性与同步迭代器有着相同的语义。
+  - : 无参数或者接受一个参数的函数，并返回 promise。promise 兑现为一个对象，该对象符合 `IteratorResult` 接口，并且这些属性与同步迭代器有着相同的语义。
 
 ## 语言和迭代协议之间的交互
 
