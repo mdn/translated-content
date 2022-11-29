@@ -15,7 +15,7 @@ translation_of: Web/API/IDBIndex
 
 {{APIRef("IndexedDB")}}
 
-L'interface **`IDBIndex`**de l'{{domxref("IndexedDB_API","API IndexedDB")}} est un accès à un index d'un magasins d'objet. Un index permet de trier les enregistrements d'un magasin d'objet sur une autre clé que la clé primaire.
+L'interface **`IDBIndex`** de l'{{domxref("IndexedDB_API","API IndexedDB")}} est un accès à un index d'un magasins d'objet. Un index permet de trier les enregistrements d'un magasin d'objet sur une autre clé que la clé primaire.
 
 Un index contient des enregistrements persistent. Chaque enregistrement est composé d'une clé ( la valeur du chemin de clé) et d'une valeur (la clé primaire de l'enregistrement dans le magasin d'objet). Les enregistrements de l'index se mettent automatiquement à jour lorsque un enregistrement du magasin d'objet est ajouté , mise à jour ou supprimé. Chaque enregistrement de l'index ne peut référer qu'a un enregistrement du magasin d'objet. Un magasin d'objet peut avoir plusieurs index et lorsque le magasin d'objet change tout les index sont mis à jour automatiquement.
 
@@ -25,7 +25,7 @@ On peut retrouver les enregistrement sur une partie des clés, voir {{domxref("I
 
 ## Méthodes
 
-Hérite de: [EventTarget](/en/DOM/EventTarget)
+Hérite de: [EventTarget](/fr/docs/Web/API/EventTarget)
 
 - {{domxref("IDBIndex.count()")}}
   - : Fait un {{domxref("IDBRequest","requête")}} sur l'index. La requête compte le nombre d'enregistrements dans cet index ou sur l'{{domxref("IDBKeyRange","intervalle de clé")}} passé en paramètre.

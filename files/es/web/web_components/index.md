@@ -1,13 +1,6 @@
 ---
 title: Web Components
 slug: Web/Web_Components
-tags:
-  - Componentes
-  - Componentes Web
-  - Landing
-  - TopicStub
-  - Web Components
-translation_of: Web/Web_Components
 ---
 
 {{DefaultAPISidebar("Web Components")}}

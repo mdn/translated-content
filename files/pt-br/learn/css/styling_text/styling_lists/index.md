@@ -155,7 +155,7 @@ Você não pode usar os contadores a menos que você sabe que todo mundo que lê
 
 Se você é capaz de usar contadores, eles têm a vantagem de que você pode estilizar os contadores separadamente dos itens da lista. No exemplo acima, os contadores estão em negrito mas os itens da lista não são.
 
-Você também pode usar contadores em formas mais complexas, por exemplo, para numerar seções, títulos, subtítulos e parágrafos em documentos formais. Para mais detalhes, consulte [contadores automáticos e numeração](http://www.w3.org/TR/CSS21/generate.html#counters) em CSS Specification.
+Você também pode usar contadores em formas mais complexas, por exemplo, para numerar seções, títulos, subtítulos e parágrafos em documentos formais. Para mais detalhes, consulte [contadores automáticos e numeração](https://www.w3.org/TR/CSS21/generate.html#counters) em CSS Specification.
 
 ## Listas denominadas: Ação
 

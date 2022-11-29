@@ -430,9 +430,7 @@ console.log(docCookies.my_cookie1);
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-proxy-objects', 'Proxy')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

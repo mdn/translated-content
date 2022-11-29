@@ -22,4 +22,4 @@ Lanzado en Noviembre del 2004, Firefox es completamente personalizable con temas
 
 ### Referencias técnicas
 
-- [Documentación/Información para desarrolladores en MDN](/en-US/Firefox)
+- [Documentación/Información para desarrolladores en MDN](/es/Firefox)

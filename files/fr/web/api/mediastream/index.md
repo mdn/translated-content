@@ -20,9 +20,9 @@ L'interface `MediaStream` représente le contenu d'un flux de média. Un flux es
 - {{domxref("MediaStream.onaddtrack")}}
   - : Est un gestionnaire d'évènement contenant l'action à exécuter lorsqu'un évènement [`addtrack`](/fr/docs/Web/API/MediaStream/addtrack_event) est déclenché sur l'objet, ce qui arrive lorsqu'un nouvel objet {{domxref("MediaStreamTrack")}} est ajouté.
 - {{domxref("MediaStream.onended")}}
-  - : Est un  gestionnaire d'évènement contenant l'action à exécuter lorsqu'un évènement [`ended`](/fr/docs/Web/API/MediaStreamTrack/ended_event) est déclenché sur l'objet, ce qui arrive lorsque la diffusion est terminée.
+  - : Est un gestionnaire d'évènement contenant l'action à exécuter lorsqu'un évènement [`ended`](/fr/docs/Web/API/MediaStreamTrack/ended_event) est déclenché sur l'objet, ce qui arrive lorsque la diffusion est terminée.
 - {{domxref("MediaStream.onremovetrack")}}
-  - : Est un gestionnaire d'évènement contenant l'action à exécuter lorsqu'un évènement [`removetrack`](/fr/docs/Web/API/MediaStream/removetrack_event) est délenché sur l'objet, ce qui arrive quand un objet  {{domxref("MediaStreamTrack")}} est retiré.
+  - : Est un gestionnaire d'évènement contenant l'action à exécuter lorsqu'un évènement [`removetrack`](/fr/docs/Web/API/MediaStream/removetrack_event) est délenché sur l'objet, ce qui arrive quand un objet {{domxref("MediaStreamTrack")}} est retiré.
 
 ## Méthodes
 

@@ -35,7 +35,7 @@ Un {{jsxref("Object")}} con dos propiedades:
 
 ### Using `throw()`
 
-The following example shows a simple generator and an error that is thrown using the `throw` method. An error can be caught by a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block as usual.
+The following example shows a simple generator and an error that is thrown using the `throw` method. An error can be caught by a [`try...catch`](/es/docs/Web/JavaScript/Reference/Statements/try...catch) block as usual.
 
 ```js
 function* gen() {
@@ -66,4 +66,4 @@ g.throw(new Error('Something went wrong'));
 
 ## See also
 
-- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*`](/es/docs/Web/JavaScript/Reference/Statements/function*)

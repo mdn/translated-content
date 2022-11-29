@@ -3,6 +3,7 @@ title: NotifyAudioAvailableEvent
 slug: Web/API/NotifyAudioAvailableEvent
 translation_of: Web/API/NotifyAudioAvailableEvent
 ---
+
 {{APIRef("Web Audio API")}}{{Non-standard_header}}{{Deprecated_header}}This interface defines the event for audio elements triggered when the Audiobuffer is full.
 
 ### Attributes

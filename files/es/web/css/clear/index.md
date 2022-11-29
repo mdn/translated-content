@@ -1,10 +1,6 @@
 ---
 title: clear
 slug: Web/CSS/clear
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/clear
 ---
 
 {{CSSRef}}

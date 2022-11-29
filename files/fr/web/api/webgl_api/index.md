@@ -141,7 +141,7 @@ Dans la section qui suit, vous trouverez un ensemble de guide pour apprendre les
 
 - [Site WebGL de Khronos](https://www.khronos.org/webgl/), le site principal du Khronos Group pour WebGL.
 - [<i lang="en">WebGL Fundamentals</i> (en anglais)](https://web.dev/webgl-fundamentals/), un tutoriel pour apprendre les fondamentaux de WebGL.
-- [<i lang="en">Raw WebGL: An introduction to WebGL</i> (en anglais)](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage), une présentation de  Nick Desaulniers qui introduit les bases de WebGL.
+- [<i lang="en">Raw WebGL: An introduction to WebGL</i> (en anglais)](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage), une présentation de Nick Desaulniers qui introduit les bases de WebGL.
 - [Bac à sable WebGL](http://webglplayground.net), un outil en ligne pour créer et partager des projets WebGL, utile pour le prototypage et l'expérimentation.
 - [<i lang="en">WebGL Academy</i> (en anglais)](http://www.webglacademy.com), un éditeur HTML/JavaScript avec des tutoriels pour apprendre les fondamentaux de la programmation WebGL.
 - [Stats WebGL](https://webglreport.com/), un site avec des statistiques quant aux fonctionnalités WebGL des navigateurs sur les différentes plateformes.

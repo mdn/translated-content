@@ -13,7 +13,8 @@ tags:
   - 오프라인
 translation_of: Web/API/Service_Worker_API
 ---
-{{ServiceWorkerSidebar}}
+
+{{securecontext_header}}{{APIRef("Service Workers API")}}
 
 서비스 워커는 웹 응용 프로그램, 브라우저, 그리고 (사용 가능한 경우) 네트워크 사이의 프록시 서버 역할을 합니다. 서비스 워커의 개발 의도는 여러가지가 있지만, 그 중에서도 효과적인 오프라인 경험을 생성하고, 네트워크 요청을 가로채서 네트워크 사용 가능 여부에 따라 적절한 행동을 취하고, 서버의 자산을 업데이트할 수 있습니다. 또한 푸시 알림과 백그라운드 동기화 API로의 접근도 제공합니다.
 

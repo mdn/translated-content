@@ -1,15 +1,6 @@
 ---
 title: HTMLFormElement.reset()
 slug: Web/API/HTMLFormElement/reset
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Referencia
-translation_of: Web/API/HTMLFormElement/reset
 ---
 
 {{APIRef("HTML DOM")}}

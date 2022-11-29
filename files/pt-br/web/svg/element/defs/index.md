@@ -15,7 +15,7 @@ A especificação do SVG permite que objetos gráficos sejam definidos para reus
 
 ```xml
 <svg width="80px" height="30px" viewBox="0 0 80 30"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="https://www.w3.org/2000/svg">
 
   <defs>
     <linearGradient id="Gradient01">
@@ -33,10 +33,10 @@ A especificação do SVG permite que objetos gráficos sejam definidos para reus
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/en/SVG/Attribute#ConditionalProccessing) »
-- [Atributos centrais](/en/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/en/SVG/Attribute#GraphicalEvent) »
-- [Atributos de apresentação](/en/SVG/Attribute#Presentation) »
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
+- [Atributos centrais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -48,7 +48,7 @@ _Não existem atributos específicos_
 
 ## DOM Interface
 
-Este elemento implementa a interface [`SVGDefsElement`](/en/DOM/SVGDefsElement).
+Este elemento implementa a interface [`SVGDefsElement`](/pt-BR/DOM/SVGDefsElement).
 
 ## Compatibilidade com navegadores
 

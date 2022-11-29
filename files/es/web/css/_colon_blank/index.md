@@ -1,12 +1,6 @@
 ---
 title: ':blank'
 slug: Web/CSS/:blank
-tags:
-  - ':blank'
-  - Borrador
-  - CSS
-  - Experimental
-translation_of: Web/CSS/:blank
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

@@ -1,20 +1,6 @@
 ---
 title: PWA developer guide
 slug: orphaned/Web/Progressive_web_apps/Developer_guide
-tags:
-  - Applications
-  - Apps
-  - Developer Guide
-  - Landing
-  - NeedsTranslation
-  - Offline
-  - PWA
-  - Persistent
-  - Progressive web apps
-  - TopicStub
-  - Web
-  - progressive
-translation_of: Web/Progressive_web_apps/Developer_guide
 original_slug: Web/Progressive_web_apps/Developer_guide
 ---
 

@@ -68,9 +68,7 @@ var cachedResponse = caches.match(event.request).catch(function() {
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-cache-put', 'Cache: put')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

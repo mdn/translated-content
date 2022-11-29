@@ -43,9 +43,7 @@ clients.matchAll(options).then(function(clientList) {
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#clients-matchall', 'Clients: matchall')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

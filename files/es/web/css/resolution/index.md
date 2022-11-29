@@ -1,13 +1,6 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-tags:
-  - CSS
-  - CSS tipo de datos
-  - Diseño
-  - Estilos
-  - Referencia
-translation_of: Web/CSS/resolution
 original_slug: Web/CSS/resolución
 ---
 

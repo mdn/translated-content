@@ -326,7 +326,7 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.input.input-radio")}}
+{{Compat}}
 
 ## 같이 보기
 

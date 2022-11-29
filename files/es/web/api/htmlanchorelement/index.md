@@ -1,12 +1,6 @@
 ---
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
-tags:
-  - API
-  - HTML DOM
-  - Interfaz
-  - Referencia
-translation_of: Web/API/HTMLAnchorElement
 ---
 
 {{APIRef ("HTML DOM")}}

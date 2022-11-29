@@ -124,7 +124,7 @@ While `title`s are used by some browsers to populate error messaging, because br
 
 ## Browser compatibility
 
-{{Compat("html.elements.attributes.pattern")}}
+{{Compat}}
 
 ## See also
 

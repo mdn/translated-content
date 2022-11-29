@@ -1,17 +1,6 @@
 ---
 title: Animation.play()
 slug: Web/API/Animation/play
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Interface
-  - Reference
-  - metodo
-  - play
-  - waapi
-translation_of: Web/API/Animation/play
 ---
 
 {{ APIRef("Web Animations") }}

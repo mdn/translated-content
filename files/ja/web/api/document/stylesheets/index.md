@@ -30,9 +30,7 @@ function getStyleSheet(unique_title) {
 
 ## 仕様
 
-| 仕様                                                                                                                             | ステータス                       | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Shadow DOM','#extensions-to-the-documentorshadowroot-mixin','DocumentOrShadowRoot')}} | {{Spec2('Shadow DOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

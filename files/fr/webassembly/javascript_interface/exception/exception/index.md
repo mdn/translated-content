@@ -12,7 +12,7 @@ Le constructeur **`WebAssembly.Exception()`** permet de créer des objets [`WebA
 
 Le constructeur prend comme arguments une balise [`Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) et un tableau `payload` de champs de données. Les types de données pour chaque élément du tableau `payload` doivent correspondre aux types de données définis par la balise `Tag`.
 
-Il est aussi possible de passer comme argument un objet `options`. Pour cet objet, on peut passer la propriété  `options.traceStack` à `true` (elle vaut `false` par défaut) afin d'indiquer que le code WebAssembly qui lève l'exception peut renseigner la propriété [`stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) de l'exception avec la trace de la pile d'appels.
+Il est aussi possible de passer comme argument un objet `options`. Pour cet objet, on peut passer la propriété `options.traceStack` à `true` (elle vaut `false` par défaut) afin d'indiquer que le code WebAssembly qui lève l'exception peut renseigner la propriété [`stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) de l'exception avec la trace de la pile d'appels.
 
 ## Syntaxe
 

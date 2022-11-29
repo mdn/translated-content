@@ -2,7 +2,7 @@
 title: Firefox 106 for developers
 slug: Mozilla/Firefox/Releases/106
 l10n:
-  sourceCommit: f7750c2c7d2d7b494b8ccd550af5b95c8d2a1843
+  sourceCommit: b326fb5b00ea2f881ae6786338671d7fbd2745b6
 ---
 
 {{FirefoxSidebar}}
@@ -12,6 +12,9 @@ l10n:
 ## ウェブ開発者向けの変更点一覧
 
 ### HTML
+
+- {{HTMLElement("source")}} 要素が、{{HTMLElement("picture")}} 要素の子要素であるときに [`height`](/ja/docs/Web/HTML/Element/source#attr-height) および [`width`](/ja/docs/Web/HTML/Element/source#attr-width) 属性をサポートするようになりました。
+  これは、`dom.picture_source_dimension_attributes.enabled` の [設定](/ja/docs/Mozilla/Firefox/Experimental_features#height_width_attributes_for_source) を使用して有効にする実験的機能です ({{bug(1694741)}})。
 
 #### 廃止
 

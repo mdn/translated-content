@@ -1,17 +1,6 @@
 ---
 title: CacheStorage
 slug: Web/API/CacheStorage
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - TopicStub
-translation_of: Web/API/CacheStorage
 ---
 
 {{APIRef("Service Workers API")}}

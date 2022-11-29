@@ -1,11 +1,6 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - Elementos flexibles
-  - Propiedades CSS
-translation_of: Web/CSS/flex-grow
 ---
 
 {{CSSRef}}

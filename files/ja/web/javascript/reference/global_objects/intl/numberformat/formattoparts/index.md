@@ -119,9 +119,7 @@ console.log(numberString);
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES Int Draft', '#sec-intl.numberformat.prototype.formattoparts', 'Intl.NumberFormat.prototype.formatToParts')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

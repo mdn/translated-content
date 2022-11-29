@@ -104,9 +104,7 @@ class ClearableWeakMap {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakmap-objects', 'WeakMap')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

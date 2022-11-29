@@ -34,9 +34,7 @@ typeof new String('Hello world'); // object
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string-constructor', 'String constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -240,11 +240,7 @@ display.addEventListener('change', function (evt) {
 
 ### Support in Flex layout
 
-{{Compat("css.properties.align-items.flex_context")}}
-
-### Support in Grid layout
-
-{{Compat("css.properties.align-items.grid_context")}}
+{{Compat}}
 
 ## Veja também
 

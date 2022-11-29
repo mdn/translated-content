@@ -46,10 +46,7 @@ slug: Web/API/Gamepad_API
 
 ## 仕様書
 
-| 仕様                                                                             | 状態                                     | コメント                                               |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------ |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | [実験的な Gamepad 拡張](#実験的な_gamepad_拡張) の定義 |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | 初期定義                                               |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

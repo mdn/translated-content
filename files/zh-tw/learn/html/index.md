@@ -5,18 +5,18 @@ slug: Learn/HTML
 
 {{LearnSidebar}}
 
-為了建立網頁，你應該要先知道 {{Glossary('「HTML」')}} — 用來建造網站架構的科技。 HTML 是用來辨認網頁中的內容該如何被解讀，例如說被解讀為:一個段落(paragraph)、清單(list)、文件標題(heading)、連結(link)、圖片(images)、多媒體撥放器(multimedia player)、表單(form)或是任何一個可使用的「元素(elements)」，甚至是你自己定義的新元素。
+為了建立網頁，你應該要先知道 {{Glossary('HTML')}}——用來建造網站架構的科技。 HTML 是用來辨認網頁中的內容該如何被解讀，例如說被解讀為：一個段落（paragraph）、清單（list）、文件標題（heading）、連結（link）、圖片（images）、多媒體撥放器（multimedia player）、表單（form）或是任何一個可使用的「元素（elements）」，甚至是你自己定義的新元素。
 
 ## 學習途徑
 
 理想上，你應該從學習 HTML 開始你的學習旅程。可以先從閱讀 [HTML 介紹(Introduction to HTML)](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 開始。接下來你可以開始閱讀以下的進階主題：
 
-- [CSS](/zh-TW/docs/Learn/CSS), 和如何使用它來美化 HTML (例如改變文字大小和字形、加上邊框與陰影、用多欄位\[columns]來排版你的頁面、增加動畫和視覺效果...)
-- [JavaScript](/zh-TW/docs/Learn/JavaScript), 和如何使用它來為網頁增加互動性的功能 (例如將你的位置顯示在地圖上、點擊按鈕讓 UI 上的元素出現或消失、將用戶的一些資料存放在他們的電腦上... 等等)
+- [CSS](/zh-TW/docs/Learn/CSS), 和如何使用它來美化 HTML （例如改變文字大小和字形、加上邊框與陰影、用多欄位\[columns]來排版你的頁面、增加動畫和視覺效果……）
+- [JavaScript](/zh-TW/docs/Learn/JavaScript), 和如何使用它來為網頁增加互動性的功能（例如將你的位置顯示在地圖上、點擊按鈕讓 UI 上的元素出現或消失、將用戶的一些資料存放在他們的電腦上……等等）
 
-當你開始閱讀這主題時，你至少必須對使用電腦有基礎了解，以及會基本的上網 (諸如網頁瀏覽、了解網頁內容)。而你需要建立一個已安裝基本軟體 (詳細軟體請參閱[Installing basic software](/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software))的基礎工作環境，並且了解如何建立與管理檔案(詳細請參閱[Dealing with files](/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files)) — 這些都包含在新手 [Web 入門](/zh-TW/docs/Learn/Getting_started_with_the_web)的章節裡。
+當你開始閱讀這主題時，你至少必須對使用電腦有基礎了解，以及會基本的上網（諸如網頁瀏覽、了解網頁內容）。而你需要建立一個已安裝基本軟體（詳細軟體請參閱[Installing basic software](/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software)）的基礎工作環境，並且了解如何建立與管理檔案（詳細請參閱[Dealing with files](/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files)）——這些都包含在新手 [Web 入門](/zh-TW/docs/Learn/Getting_started_with_the_web)的章節裡。
 
-建議你在開始學習 HTML 這個項目之前，可以先 [從網際網路開始](/zh-TW/docs/Learn/Getting_started_with_the_web) 瞭解是如何運作的。儘管知道網路的運作不是必要的；大部分的項目都在 [HTML basics](/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics) 的文章中 [Introduction to HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 這個章節更詳盡地介紹 模組 (module), albeit。
+建議你在開始學習 HTML 這個項目之前，可以先[從網際網路開始](/zh-TW/docs/Learn/Getting_started_with_the_web)瞭解是如何運作的。儘管知道網路的運作不是必要的；大部分的項目都在 [HTML basics](/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics) 的文章中[Introduction to HTML](/zh-TW/docs/Learn/HTML/Introduction_to_HTML) 這個章節更詳盡地介紹 模組（module）、albeit。
 
 ## 模組
 

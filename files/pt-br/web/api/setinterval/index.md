@@ -599,7 +599,7 @@ In the above snippet, a named function `loop()` is declared and is immediately e
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.WindowOrWorkerGlobalScope.setInterval")}}
+{{Compat}}
 
 ## See also
 

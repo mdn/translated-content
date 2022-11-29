@@ -198,7 +198,7 @@ if (!Array.prototype.find) {
 }
 ```
 
-Si necesitas dar soporte a motores de JavaScript realmente obsoletos que no soportan [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), es mejor no utilizar el polyfill para los métodos `Array.prototype`, ya que no podrás hacerlos no enumerables.
+Si necesitas dar soporte a motores de JavaScript realmente obsoletos que no soportan [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), es mejor no utilizar el polyfill para los métodos `Array.prototype`, ya que no podrás hacerlos no enumerables.
 
 ## Especificaciones
 

@@ -126,7 +126,7 @@ Lorsque les fonctions sont utilisées une unique fois, on peut utiliser une [« 
 
 Les _IIFE_ sont des expressions de fonction appelées dès que la fonction est déclarée.
 
-### Utiliser une déclaration de fonction génératrice (l'instruction `function*`)
+### Utiliser une déclaration de fonction génératrice (l'instruction function\*)
 
 Il existe une syntaxe spéciale pour déclarer des générateurs (voir la page sur l'instruction {{jsxref('Instructions/function*', 'function*')}} pour plus de détails) :
 
@@ -143,7 +143,7 @@ function* nom([param[, param[, ... param]]]) {
 - `instructions`
   - : Les instructions qui forment le corps de la fonction.
 
-### Utiliser une expression de générateur (l'expression `function*`)
+### Utiliser une expression de générateur (l'expression function\*)
 
 Une expression de générateur est similaire à une déclaration de fonction génératrice et possède presque la même syntaxe (pour plus de détails, consulter la page sur l'expression {{jsxref('Opérateurs/function*', 'function*')}}) :
 
@@ -373,7 +373,7 @@ Cela n'est pas différent du stockage de références avec d'autres objets, mais
 
 ### Imbrication multiple de fonctions
 
-On peut imbriquer plusieurs fonctions : une fonction (A) contien une fonction (B) qui contient une fonction (C). Ici les fonctions B et C forment des fermetures et aisni B peut accéder à A et C peut accéder à B. On peut donc en déduire, puisque C accède à B qui accède à A que C peut accéder à A. On voit donc que les fermetures peuvent contenir différentes portées. Elles peuvent, récursivement, contenir la portée des fonctions qui la contiennent. Ce mécanisme est appelé « chaînage de portée »  (_scope chaining_ en anglais). (Cette dénomination sera expliquée par la suite.)
+On peut imbriquer plusieurs fonctions : une fonction (A) contien une fonction (B) qui contient une fonction (C). Ici les fonctions B et C forment des fermetures et aisni B peut accéder à A et C peut accéder à B. On peut donc en déduire, puisque C accède à B qui accède à A que C peut accéder à A. On voit donc que les fermetures peuvent contenir différentes portées. Elles peuvent, récursivement, contenir la portée des fonctions qui la contiennent. Ce mécanisme est appelé « chaînage de portée » (_scope chaining_ en anglais). (Cette dénomination sera expliquée par la suite.)
 
 On peut l'observer avec l'exemple suivant :
 
@@ -394,7 +394,7 @@ Dans cet exemple, C accède à la variable y de B et à la variable x de A. Cela
 
 1. `B` est une fermeture qui contient `A`, autrement dit `B` peut accéder aux arguments et aux variables de `A`
 2. `C` est une fermeture qui contient `B`
-3. Étant donné que la fermeture de `B` contient `A` et que celle de `C` contient `B`, `C` peut accéder à la fois aux arguments et variables de `B` _et_ `A`. Autrement dit, `C` *enchaîne les portées de*  `B` et `A` dans cet ordre.
+3. Étant donné que la fermeture de `B` contient `A` et que celle de `C` contient `B`, `C` peut accéder à la fois aux arguments et variables de `B` _et_ `A`. Autrement dit, `C` *enchaîne les portées de* `B` et `A` dans cet ordre.
 
 La réciproque n'est pas vraie. `A` ne peut avoir accès à `C`, parce que `A` ne peut accéder ni aux variables ni aux arguments de `B`, or `C` est une variable de `B. C` est donc privé et seulement pour `B`.
 
@@ -426,7 +426,7 @@ Il est possible de définir des méthodes qui sont accesseurs ou des mutateurs s
 - [set](/fr/docs/Web/JavaScript/Reference/Fonctions/set)
   - : Permet de lier une propriété d'un objet à une fonction qui sera appelée lorsqu'on tentera de modifier cette propriété.
 
-### Syntaxe des définitions de méthode ECMAScript **2015**
+### Syntaxe des définitions de méthode ECMAScript 2015
 
 Avec ECMAScript 2015, il est possible de définir des méthodes de façon plus concise (à la façon de ce qui est déjà possible pour les getters et setters). Voir la page sur [les définitions de méthodes](/fr/docs/Web/JavaScript/Reference/Fonctions/Définition_de_méthode) pour plus d'informations.
 

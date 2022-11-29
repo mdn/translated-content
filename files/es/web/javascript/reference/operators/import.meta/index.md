@@ -76,7 +76,7 @@ Tal argumento específico del archivo podria ser complementario al usado en toda
 
 ## Browser compatibility
 
-{{Compat("javascript.statements.import_meta")}}
+{{Compat}}
 
 ## Ver también
 

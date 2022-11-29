@@ -1,15 +1,6 @@
 ---
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
-tags:
-  - API
-  - Necesita Tabla de Compatibilidad
-  - Necesita Trabajo de Markup
-  - Necesita tabla de Especificaciones
-  - Propiedad
-  - Referencia
-  - Vista CSSOM
-translation_of: Web/API/Element/scrollLeft
 ---
 
 {{ APIRef }}

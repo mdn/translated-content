@@ -1,12 +1,6 @@
 ---
 title: Selectores de atributo
 slug: Web/CSS/Attribute_selectors
-tags:
-  - Atributos
-  - CSS
-  - Selectores
-  - Selectores de Atributo
-translation_of: Web/CSS/Attribute_selectors
 original_slug: Web/CSS/Selectores_atributo
 ---
 

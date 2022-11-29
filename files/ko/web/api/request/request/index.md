@@ -3,6 +3,7 @@ title: Request()
 slug: Web/API/Request/Request
 translation_of: Web/API/Request/Request
 ---
+
 {{APIRef("Fetch")}}
 
 **`Request()`** 생성자는 새로운 {{domxref("Request")}} 객체를 생성하도록 도와줍니다.

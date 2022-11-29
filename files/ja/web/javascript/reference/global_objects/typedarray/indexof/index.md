@@ -45,9 +45,7 @@ uint8.indexOf(2, -3); // 0
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.indexof', 'TypedArray.prototype.indexOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

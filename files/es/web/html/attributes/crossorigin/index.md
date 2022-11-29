@@ -22,17 +22,7 @@ Una clave inválida y un string vacío serán gestionados como una clave anónim
 
 ## Compatibilidad de navegadores
 
-### script crossorigin
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### video crossorigin
-
-{{Compat("html.elements.video.crossorigin")}}
-
-### link crossorigin
-
-{{Compat("html.elements.link.crossorigin")}}
+{{Compat}}
 
 ## Ver también
 

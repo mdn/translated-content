@@ -269,7 +269,7 @@ console.log(instance.msg);
 
 ## Браузерная совместимость
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## Смотрите также
 

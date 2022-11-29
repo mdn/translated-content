@@ -5,7 +5,7 @@ slug: Web/CSS/:nth-of-type
 
 {{CSSRef}}
 
-A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:nth-of-type()` **corresponde a um ou mais elementos de um dado tipo, baseado em sua posição entre um grupo de irmãos.
+A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:nth-of-type()`** corresponde a um ou mais elementos de um dado tipo, baseado em sua posição entre um grupo de irmãos.
 
 ```css
 /* Seleciona cada quarto elemento <p>

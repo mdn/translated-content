@@ -1,13 +1,6 @@
 ---
 title: ':empty'
 slug: Web/CSS/:empty
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:empty
 ---
 
 {{ CSSRef() }}

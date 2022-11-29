@@ -1,14 +1,6 @@
 ---
 title: Animation.effect
 slug: Web/API/Animation/effect
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Reference
-  - efecto
-translation_of: Web/API/Animation/effect
 ---
 
  {{ APIRef("Web Animations") }}

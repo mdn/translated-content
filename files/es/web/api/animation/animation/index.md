@@ -1,9 +1,6 @@
 ---
 title: Animation()
 slug: Web/API/Animation/Animation
-tags:
-  - Animacion
-translation_of: Web/API/Animation/Animation
 original_slug: Web/API/Animation/Animación
 ---
 

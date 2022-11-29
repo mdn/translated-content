@@ -1,15 +1,6 @@
 ---
 title: Element.onlostpointercapture
 slug: Web/API/Element/lostpointercapture_event
-tags:
-  - API
-  - Controlador de Eventos
-  - DOM
-  - Eventos Puntero
-  - Propiedad
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/onlostpointercapture
-translation_of_original: Web/API/Element/onlostpointercapture
 original_slug: Web/API/GlobalEventHandlers/onlostpointercapture
 ---
 

@@ -1,60 +1,57 @@
 ---
-title: SpeechRecognition.onaudioend
+title: 'SpeechRecognition: audioend イベント'
 slug: Web/API/SpeechRecognition/audioend_event
 original_slug: Web/API/SpeechRecognition/onaudioend
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}
 
-{{domxref("SpeechRecognition")}}インターフェイスの **`onaudioend`** プロパティは、ユーザーエージェントが音声を取り込んだ後 ({{event("audioend")}}イベントが発生した時) に、実行するイベントハンドラーになります。
+**`audioend`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のイベントで、ユーザーエージェントが音声認識のためのオーディオキャプチャを終了したときに発生します。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('audioend', (event) => { })
+
+onaudioend = (event) => { }
 ```
-mySpeechRecognition.onaudioend = function() { ... };
-```
+
+## イベント型
+
+一般的な {{DOMxRef("Event")}} であり、追加のプロパティはありません。
 
 ## 例
 
+`audioend` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+
 ```js
-var recognition = new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.onaudioend = function() {
-  console.log('音声認識は終了しました。');
+recognition.addEventListener('audioend', () => {
+  console.log('音声認識が終了しました。');
+});
+```
+
+または `onaudioend` イベントハンドラープロパティを使用してください。
+
+```js
+recognition.onaudioend = () => {
+  console.log('Audio capturing ended');
 }
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                 | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Web Speech API', '#dfn-onaudioend', 'onaudioend')}} | {{Spec2('Web Speech API')}} |          |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.SpeechRecognition.onaudioend")}}
-
-### Firefox OS の権限
-
-アプリで音声認識を利用する前に、下記の権限を [manifest](/ja/docs/Web/Apps/Build/Manifest) に追加する必要があります。
-
-```json
-"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}
-```
-
-privileged アプリ権限も必要なので、下記も追加が必要です。
-
-```json
-  "type": "privileged"
-```
+{{Compat}}
 
 ## 関連情報
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)

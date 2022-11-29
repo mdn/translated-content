@@ -1,12 +1,6 @@
 ---
 title: X-Content-Type-Options
 slug: Web/HTTP/Headers/X-Content-Type-Options
-tags:
-  - Encabezado de respuesta
-  - Encabezados HTTP
-  - HTTP
-  - Referencia
-translation_of: Web/HTTP/Headers/X-Content-Type-Options
 ---
 
 {{HTTPSidebar}}

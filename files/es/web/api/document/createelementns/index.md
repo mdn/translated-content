@@ -1,7 +1,6 @@
 ---
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
-translation_of: Web/API/Document/createElementNS
 ---
 
 {{ApiRef("DOM")}}
@@ -30,7 +29,7 @@ var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 ### Valor de Retorno
 
-El nuevo [`Elemento`](/en-US/docs/Web/API/Element).
+El nuevo [`Elemento`](/es/docs/Web/API/Element).
 
 ## Namespace URIs válidos
 

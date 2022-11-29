@@ -253,7 +253,7 @@ Frequentemente você vai se deparar com alguns dados contidos em uma grande e lo
     myNewString;
     ```
 
-5. Outro jeito de converter uma array em uma string é usar o método {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` é indiscutivelmente mais simples `join()` pois não necessita um parâmetro, mas mais limitado. Com `join()` você pode especificar diferentes separadores (tente o passo 4 com um caracter diferente da vírgula).
+5. Outro jeito de converter uma array em uma string é usar o método {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` é indiscutivelmente mais simples que o `join()` pois não necessita um parâmetro, mas mais limitado. Com `join()` você pode especificar diferentes separadores (tente o passo 4 com um caracter diferente da vírgula).
 
     ```js
     var dogNames = ['Rocket','Flash','Bella','Slugger'];

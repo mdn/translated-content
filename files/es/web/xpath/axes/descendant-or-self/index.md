@@ -1,7 +1,6 @@
 ---
 title: descendant-or-self
 slug: Web/XPath/Axes/descendant-or-self
-translation_of: Web/XPath/Axes/descendant-or-self
 original_slug: Web/XPath/Ejes/descendant-or-self
 ---
 

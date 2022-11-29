@@ -1,9 +1,6 @@
 ---
 title: stop-color
 slug: Web/SVG/Attribute/stop-color
-tags:
-  - Atributos SVG
-translation_of: Web/SVG/Attribute/stop-color
 ---
 
 « [SVG Attribute reference hom](/en/SVG/Attribute)e

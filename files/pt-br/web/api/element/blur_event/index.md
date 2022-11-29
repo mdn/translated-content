@@ -9,7 +9,7 @@ O evento `blur` é acionado quando um elemento perde foco. A diferença principa
 ## Informação geral
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-blur)
 - Interface
   - : {{domxref("FocusEvent")}}
 - Borbulha

@@ -43,7 +43,7 @@ _Hérite des méthodesde son parent, {{domxref("ExtendableEvent")}}_.
 
 ## Exemples
 
-Le code suivant est utilisé dans un service worker pour répondre à un message push en envoyant les données reçues via  {{domxref("PushMessageData")}} au contexte principale via un [channel message](/fr/docs/Web/API/Channel_Messaging_API), l'objet d'évènement du `onmessage` sera un `ExtendableMessageEvent`.
+Le code suivant est utilisé dans un service worker pour répondre à un message push en envoyant les données reçues via {{domxref("PushMessageData")}} au contexte principale via un [channel message](/fr/docs/Web/API/Channel_Messaging_API), l'objet d'évènement du `onmessage` sera un `ExtendableMessageEvent`.
 
 ```js
 var port;

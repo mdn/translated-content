@@ -54,8 +54,8 @@ A possível inclusão de nós de texto no DOM deve ser permitida quando navegar 
 
 ## Especificação
 
-- [DOM Level 1 Core: nextSibling](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling)
-- [DOM Level 2 Core: nextSibling](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
+- [DOM Level 1 Core: nextSibling](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-nextSibling)
+- [DOM Level 2 Core: nextSibling](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-6AC54C2F)
 
 ## Veja também
 

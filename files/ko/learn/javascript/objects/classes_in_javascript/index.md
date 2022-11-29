@@ -3,6 +3,7 @@ title: Classes in JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 OOJS에 대한 개념을 설명했으니, 이 글에서는 부모 클래스에서 자식 클래스를 상속하는 방법을 알아봅니다. 덤으로 OOJS를 구현하는데 몇 가지 참고사항도 있습니다.

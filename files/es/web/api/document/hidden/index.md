@@ -1,7 +1,6 @@
 ---
 title: Document.hidden
 slug: Web/API/Document/hidden
-translation_of: Web/API/Document/hidden
 ---
 
 {{ ApiRef("DOM") }}
