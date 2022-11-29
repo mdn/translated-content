@@ -25,7 +25,7 @@ x ** y
 
 例如，`-2 ** 2` 在 Bash 中为 4，但在其他语言（如 Python）中为 -4。这在 JavaScript 中是无效的，因为操作不明确。你必须在两边加上括号——例如，作为 `-(2 ** 2)`——以使意图明确。
 
-请注意，某些编程语言使用插入符号 <kbd>^</kbd> 进行求幂，但 JavaScript 使用该符号表示 [位逻辑异或运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)。
+请注意，某些编程语言使用插入符号 <kbd>^</kbd> 进行求幂，但 JavaScript 使用该符号表示[逻辑异或运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)。
 
 `NaN ** 0`（和等价的 `Math.pow(NaN, 0)`）是 {{jsxref("NaN")}} 不通过数学运算传播的唯一情况——尽管操作数是 `NaN`，但它返回 `1`。此外，`base` 为 1 且 `exponent` 为非有限（±Infinity 或 `NaN`）的行为与 IEEE 754 不同，IEEE 754 指定结果应为 1，而 JavaScript 返回 `NaN` 以保持与其原始行为的向后兼容性。
 
