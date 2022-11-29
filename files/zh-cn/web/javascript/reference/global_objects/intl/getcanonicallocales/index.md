@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 
 {{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}
 
-## Syntax
+## 语法
 
 ```plain
 Intl.getCanonicalLocales(locales)
@@ -20,7 +20,7 @@ Intl.getCanonicalLocales(locales)
 - `locales`
   - : 想要规范化的字符串数组。
 
-### Return value
+### 返回值
 
 一个包含规范区域语言代码的数组。
 
