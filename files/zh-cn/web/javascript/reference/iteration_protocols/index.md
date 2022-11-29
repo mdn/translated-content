@@ -246,7 +246,7 @@ console.log([...myIterable]); // [1, 2, 3]
 
 ### 简单迭代器
 
-迭代器本质上是有状态的。如果您不将其定义为[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*) （如上例所示），你可能需要将状态封装在闭包中。
+迭代器本质上是有状态的。如果你不将其定义为[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)（如上例所示），你可能需要将状态封装在闭包中。
 
 ```js
 function makeIterator(array) {
