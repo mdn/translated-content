@@ -1,15 +1,6 @@
 ---
 title: window.confirm
 slug: Web/API/Window/confirm
-page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
-  - confirm
-browser-compat: api.Window.confirm
 l10n:
   sourceCommit: c575deb5f1775b532360c612a85b35a5ff9525d9
 ---
