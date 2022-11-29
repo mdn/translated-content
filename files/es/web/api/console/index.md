@@ -16,7 +16,7 @@ El objeto `console` puede ser accedido desde cualquier objeto global. {{domxref(
 console.log("Falló al abrir el enlace especificado")
 ```
 
-Esta página documenta los [Métodos](#métodos)  disponibles en el objeto `console` y da algunos ejemplos de [uso](#ejemplos).
+Esta página documenta los [Métodos](#métodos) disponibles en el objeto `console` y da algunos ejemplos de [uso](#ejemplos).
 
 {{AvailableInWorkers}}
 
@@ -230,7 +230,7 @@ Nótese que el nombre del temporizador es mostrado tanto cuando el temporizador 
 
 ### Trazas de pila
 
-El objeto consola tambien soporta la salida de una traza de pila; esto te mostrará  la ruta de llamadas tomadas hasta alcanzar el punto de tu llamada {{domxref("console.trace()")}}. Dado un código como el siguiente:
+El objeto consola tambien soporta la salida de una traza de pila; esto te mostrará la ruta de llamadas tomadas hasta alcanzar el punto de tu llamada {{domxref("console.trace()")}}. Dado un código como el siguiente:
 
 ```js
 function foo() {

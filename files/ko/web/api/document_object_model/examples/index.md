@@ -1,64 +1,71 @@
 ---
 title: Examples
 slug: Web/API/Document_Object_Model/Examples
+page-type: guide
+tags:
+  - DOM
+  - DOM Reference
 ---
-이 장에서는 DOM을 사용한 웹, XML 개발의 긴 예제를 제공합니다. 예제는 문서의 object를 조작하기 위해 가능한 JavaScript의 일반적인 API, 트릭, 패턴을 사용합니다.
+
+{{DefaultAPISidebar("DOM")}}
+
+이 장에서는 DOM을 사용한 웹, XML 개발의 자세한 예제를 제공합니다. 예제는 문서의 객체를 조작하기 위해 가능한 JavaScript의 공통 API, 트릭, 패턴을 사용합니다.
 
 ## 예제 1: 높이와 너비
 
-아래의 예제는 다양한 면적의 이미지를 통해 `height` 와 `width` 속성을 사용하는 방법을 보여줍니다:
+아래의 예제는 다양한 면적의 이미지를 통해 `height` 와 `width` 속성을 사용하는 방법을 보여줍니다.
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>width/height example</title>
-<script>
-function init() {
-  var arrImages = new Array(3);
+<html lang="ko">
+  <head>
+    <title>width/height 예제</title>
+      <script>
+        function init() {
+          var arrImages = new Array(3);
 
-  arrImages[0] = document.getElementById("image1");
-  arrImages[1] = document.getElementById("image2");
-  arrImages[2] = document.getElementById("image3");
+          arrImages[0] = document.getElementById("image1");
+          arrImages[1] = document.getElementById("image2");
+          arrImages[2] = document.getElementById("image3");
 
-  var objOutput = document.getElementById("output");
-  var strHtml = "<ul>";
+          var objOutput = document.getElementById("output");
+          var strHtml = "<ul>";
 
-  for (var i = 0; i < arrImages.length; i++) {
-    strHtml += "<li>image" + (i+1) +
-            ": height=" + arrImages[i].height +
-            ", width=" + arrImages[i].width +
-            ", style.height=" + arrImages[i].style.height +
-            ", style.width=" + arrImages[i].style.width +
-            "<\/li>";
-  }
+          for (var i = 0; i < arrImages.length; i++) {
+            strHtml += "<li>image" + (i+1) +
+              ": height=" + arrImages[i].height +
+              ", width=" + arrImages[i].width +
+              ", style.height=" + arrImages[i].style.height +
+              ", style.width=" + arrImages[i].style.width +
+              "<\/li>";
+          }
+          strHtml += "<\/ul>";
+          objOutput.innerHTML = strHtml;
+        }
+      </script>
+    </head>
+  <body onload="init();">
+    <p>
+      이미지 1: 높이, 너비, 스타일 없음
+      <img 
+        id="image1" 
+        src="http://www.mozilla.org/images/mozilla-banner.gif" />
+    </p>
 
-  strHtml += "<\/ul>";
-
-  objOutput.innerHTML = strHtml;
-}
-</script>
-</head>
-<body onload="init();">
-
-<p>Image 1: no height, width, or style
-  <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif">
-</p>
-
-<p>Image 2: height="50", width="500", but no style
-  <img id="image2"
-       src="http://www.mozilla.org/images/mozilla-banner.gif"
-       height="50" width="500">
-</p>
-
-<p>Image 3: no height, width, but style="height: 50px; width: 500px;"
-  <img id="image3"
-       src="http://www.mozilla.org/images/mozilla-banner.gif"
-       style="height: 50px; width: 500px;">
-</p>
-
-<div id="output"> </div>
-</body>
+    <p>
+      이미지 2: 높이="50", 너비="500", 스타일 없음
+      <img id="image2"
+          src="http://www.mozilla.org/images/mozilla-banner.gif"
+          height="50" width="500" />
+    </p>
+    <p>
+      이미지 3: 높이, 너비 없음, 스타일="height: 50px; width: 500px;"
+      <img id="image3"
+          src="http://www.mozilla.org/images/mozilla-banner.gif"
+          style="height: 50px; width: 500px;" />
+    </p>
+    <div id="output"> </div>
+  </body>
 </html>
 ```
 
@@ -66,68 +73,76 @@ function init() {
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Modifying an image border</title>
+<html lang="ko">
+  <head>
+    <title>이미지 border 수정</title>
 
-<script>
-function setBorderWidth(width) {
-  document.getElementById("img1").style.borderWidth = width + "px";
-}
-</script>
-</head>
+    <script>
+    function setBorderWidth(width) {
+      document.getElementById("img1").style.borderWidth = width + "px";
+    }
+    </script>
+  </head>
 
-<body>
-<p>
-  <img id="img1"
-       src="image1.gif"
-       style="border: 5px solid green;"
-       width="100" height="100" alt="border test">
-</p>
+  <body>
+    <p>
+      <img 
+        id="img1"
+        src="image1.gif"
+        style="border: 5px solid green;"
+        width="100" 
+        height="100" 
+        alt="border 테스트" />
+    </p>
 
-<form name="FormName">
-  <input type="button" value="Make border 20px-wide" onclick="setBorderWidth(20);" />
-  <input type="button" value="Make border 5px-wide"  onclick="setBorderWidth(5);" />
-</form>
-
-</body>
+    <form name="FormName">
+      <input 
+        type="button" 
+        value="border를 20px로 만들기" 
+        onclick="setBorderWidth(20);" />
+      <input 
+        type="button" 
+        value="border를 5px로 만들기"  
+        onclick="setBorderWidth(5);" />
+    </form>
+  </body>
 </html>
 ```
 
 ## 예제 3: 스타일 조작
 
-아래의 간단한 예제에서 HTML 단락 element( `<p>`)의 일부 기본 스타일 속성들은 DOM에서 검색하고 설정할 수 있는 element의 스타일 객체와, 그 객체의 CSS 스타일 속성을 사용해 접근합니다. 이 경우 개별 스타일을 직접 조작합니다. 다음 예제(예제 4)에서는 stylesheet와 해당 규칙을 사용해 전체 문서의 스타일을 변경할 수 있습니다.
+아래의 간단한 예제에서 HTML 요소의 일부 기본 스타일 속성들은 요소의 스타일 객체와 DOM에서 검색하고 설정할 수 있는 해당 객체의 CSS 스타일 속성을 사용하여 접근합니다. 이 경우 개별 스타일을 직접 조작합니다. 다음 예제(예제 4)에서는 stylesheet와 해당 규칙을 사용해 전체 문서의 스타일을 변경할 수 있습니다.
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Changing color and font-size example</title>
+<html lang="ko">
+  <head>
+    <title>색상 및 글꼴 크기 변경</title>
 
-<script>
-function changeText() {
-  var p = document.getElementById("pid");
+    <script>
+      function changeText() {
+        const p = document.getElementById("pid");
 
-  p.style.color = "blue"
-  p.style.fontSize = "18pt"
-}
-</script>
-</head>
-<body>
+        p.style.color = "blue"
+        p.style.fontSize = "18pt"
+      }
+    </script>
+  </head>
+  <body>
+    <p id="pid" onclick="window.location.href = 'http://www.cnn.com/';">
+      linker
+    </p>
 
-<p id="pid" onclick="window.location.href = 'http://www.cnn.com/';">linker</p>
-
-<form>
-  <p><input value="rec" type="button" onclick="changeText();" /></p>
-</form>
-
-</body>
+    <form>
+      <p><input value="rec" type="button" onclick="changeText();" /></p>
+    </form>
+  </body>
 </html>
 ```
 
 ## 예제 4: Stylesheet 사용
 
-document 객체의 styleSheets 속성은 그 문서에서 로드된 stylesheet 목록을 반환합니다. 이 예제에서 설명된대로 stylesheet, 스타일, CSSRule 객체를 사용해 이러한 stylesheet와 규칙에 개별적으로 접근할 수 있습니다. 이 예제는 모든 스타일 규칙 Selector를 콘솔에 출력합니다.
+{{domxref("document")}} 객체의 {{domxref("document.styleSheets", "styleSheets")}} 속성은 그 문서에서 로드된 stylesheet 목록을 반환합니다. 이 예제에서처럼 stylesheet, 스타일, {{domxref("CSSRule")}} 객체를 사용해 이러한 stylesheet와 규칙에 개별적으로 접근할 수 있습니다. 다음 코드는 모든 스타일 규칙의 Selector를 콘솔에 출력합니다.
 
 ```js
 var ss = document.styleSheets;
@@ -139,15 +154,21 @@ for(var i = 0; i < ss.length; i++) {
 }
 ```
 
-아래와 같은 세가지 규칙이 정의된 하나의 stylesheet가 있는 문서의 경우:
+다음과 같이 세가지 규칙이 정의된 stylesheet가 있는 경우, 스크립트의 결과물은 다음과 같습니다
 
 ```css
-body { background-color: darkblue; }
-p { font-face: Arial; font-size: 10pt; margin-left: .125in; }
-#lumpy { display: none; }
+body { 
+  background-color: darkblue; 
+}
+p { 
+  font-face: Arial; 
+  font-size: 10pt; 
+  margin-left: .125in; 
+}
+#lumpy { 
+  display: none; 
+}
 ```
-
-위 스크립트의 결과물은 아래와 같습니다:
 
 ```
 BODY
@@ -157,191 +178,189 @@ P
 
 ## 예제 5: Event 전파
 
-This example demonstrates how events fire and are handled in the DOM in a very simple way. When the BODY of this HTML document loads, an event listener is registered with the top row of the TABLE. The event listener handles the event by executing the function stopEvent, which changes the value in the bottom cell of the table.
+이번 예제에서는 DOM에서 어떻게 이벤트가 실행되고 처리되는지 매우 간단하게 알아보겠습니다. HTML 문서의 BODY가 로드되면, TABLE의 상단 행에 이벤트 수신기가 등록됩니다. 이벤트 수신기는 이벤트를 처리하기 위해 stopEvent 함수를 실행합니다. stopEvent 함수는 테이블의 하단 셀의 값을 변경합니다.
 
-However, stopEvent also calls an event object method, {{domxref("event.stopPropagation")}}, which keeps the event from bubbling any further up into the DOM. Note that the table itself has an {{domxref("element.onclick","onclick")}} event handler that ought to display a message when the table is clicked. But the stopEvent method has stopped propagation, and so after the data in the table is updated, the event phase is effectively ended, and an alert box is displayed to confirm this.
+stopEvent는 이벤트 객체 메서드인 {{domxref("event.stopPropagation")}}도 호출합니다. 이 메서드는 이벤트가 DOM으로 더 이상 버블링(bubbling)되지 않도록 합니다. 테이블이 클릭될 때 메시지를 표시해야 하는 {{domxref("Element.click_event","onclick")}} 이벤트 처리기가 있다는 것에 주의하세요. 하지만 stopEvent 메서드가 전파를 중지했기 때문에 테이블의 데이터가 업데이트된 후 이벤트 단계는 효과적으로 종료되고, 이를 확인하는 alert 창이 표시됩니다.
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Event Propagation</title>
+<html lang="ko">
+  <head>
+    <title>이벤트 전파</title>
 
-<style>
-#t-daddy { border: 1px solid red }
-#c1 { background-color: pink; }
-</style>
+    <style>
+      #t-daddy { border: 1px solid red }
+      #c1 { background-color: pink; }
+    </style>
 
-<script>
-function stopEvent(ev) {
-  c2 = document.getElementById("c2");
-  c2.innerHTML = "hello";
+    <script>
+    function stopEvent(event) {
+      c2 = document.getElementById("c2");
+      c2.innerHTML = "안녕하세요";
 
-  // this ought to keep t-daddy from getting the click.
-  ev.stopPropagation();
-  alert("event propagation halted.");
-}
+      // 이벤트가 t-daddy로 전파되지 않도록 합니다.
+      ev.stopPropagation();
+      alert("이벤트 전파가 중지되었습니다.");
+    }
 
-function load() {
-  elem = document.getElementById("tbl1");
-  elem.addEventListener("click", stopEvent, false);
-}
-</script>
-</head>
+    function load() {
+      elem = document.getElementById("tbl1");
+      elem.addEventListener("click", stopEvent, false);
+    }
+    </script>
+  </head>
 
-<body onload="load();">
+  <body onload="load();">
 
-<table id="t-daddy" onclick="alert('hi');">
-  <tr id="tbl1">
-    <td id="c1">one</td>
-  </tr>
-  <tr>
-    <td id="c2">two</td>
-  </tr>
-</table>
-
-</body>
+    <table id="t-daddy" onclick="alert('안녕하세요.');">
+      <tr id="tbl1">
+        <td id="c1">1</td>
+      </tr>
+      <tr>
+        <td id="c2">2</td>
+      </tr>
+    </table>
+  </body>
 </html>
 ```
 
 ## Example 6: getComputedStyle
 
-This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the `style` attribute or with JavaScript (e.g., `elt.style.backgroundColor="rgb(173, 216, 230)"`). These latter types of styles can be retrieved with the more direct {{domxref("element.style", "elt.style")}} property, whose properties are listed in the [DOM CSS Properties List](/ko/docs/Web/CSS/Reference).
+이번 예제에서는 {{domxref("window.getComputedStyle")}} 메서드가 `style` 속성이나 JavaScript(예시: `elt.style.backgroundColor="rgb(173, 216, 230)"`)를 사용하지 않고 요소의 스타일을 가져오는 방법을 보여줍니다. 후자와 같은 유형의 스타일은 {{domxref("HTMLElement.style", "elt.style")}} 처럼 직접적인 속성으로 가져올 수 있습니다. 자세한 내용은 [DOM CSS Properties List](/ko/docs/Web/CSS/Reference)를 참고하세요.
 
-`getComputedStyle()` returns a `ComputedCSSStyleDeclaration` object, whose individual style properties can be referenced with this object's `getPropertyValue()` method, as the following example document shows.
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<title>getComputedStyle example</title>
-
-<script>
-function cStyles() {
-  var RefDiv = document.getElementById("d1");
-  var txtHeight = document.getElementById("t1");
-  var h_style = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("height");
-
-  txtHeight.value = h_style;
-
-  var txtWidth = document.getElementById("t2");
-  var w_style = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("width");
-
-  txtWidth.value = w_style;
-
-  var txtBackgroundColor = document.getElementById("t3");
-  var b_style = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("background-color");
-
-  txtBackgroundColor.value = b_style;
-}
-</script>
-
-<style>
-#d1 {
-  margin-left: 10px;
-  background-color: rgb(173, 216, 230);
-  height: 20px;
-  max-width: 20px;
-}
-</style>
-
-</head>
-
-<body>
-
-<div id="d1">&nbsp;</div>
-
-<form action="">
-  <p>
-    <button type="button" onclick="cStyles();">getComputedStyle</button>
-    height<input id="t1" type="text" value="1" />
-    max-width<input id="t2" type="text" value="2" />
-    bg-color<input id="t3" type="text" value="3" />
-  </p>
-</form>
-
-</body>
-</html>
-```
-
-## Example 7: Displaying Event Object Properties
-
-This example uses DOM methods to display all the properties of the {{domxref("window.onload")}} {{domxref("event")}} object and their values in a table. It also shows a useful technique of using a for..in loop to iterate over the properties of an object to get their values.
-
-The properties of event objects differs greatly between browsers, the [WHATWG DOM Standard](https://dom.spec.whatwg.org) lists the standard properties, however many browsers have extended these greatly.
-
-Put the following code into a blank text file and load it into a variety of browsers, you'll be surprised at the different number and names of properties. You might also like to add some elements in the page and call this function from different event handlers.
+`getComputedStyle()`은 {{domxref("CSSStyleDeclaration")}} 객체를 반환합니다. 다음 예제에서 알 수 있듯이 이 객체의 개별 스타일 속성은 {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} 메서드를 사용하여 참조할 수 있습니다.
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<title>Show Event properties</title>
+<html lang="ko">
+  <head>
+    <title>getComputedStyle 예제</title>
 
-<style>
-table { border-collapse: collapse; }
-thead { font-weight: bold; }
-td { padding: 2px 10px 2px 10px; }
+    <script>
+      function cStyles() {
+        const RefDiv = document.getElementById("d1");
+        const txtHeight = document.getElementById("t1");
+        const h_style = document.defaultView
+          .getComputedStyle(RefDiv, null)
+          .getPropertyValue("height");
 
-.odd { background-color: #efdfef; }
-.even { background-color: #ffffff; }
-</style>
+        txtHeight.value = h_style;
 
-<script>
+        const txtWidth = document.getElementById("t2");
+        const w_style = document.defaultView
+          .getComputedStyle(RefDiv, null)
+          .getPropertyValue("width");
 
-function showEventProperties(e) {
-  function addCell(row, text) {
-    var cell = row.insertCell(-1);
-    cell.appendChild(document.createTextNode(text));
-  }
+        txtWidth.value = w_style;
 
-  var e = e || window.event;
-  document.getElementById('eventType').innerHTML = e.type;
+        const txtBackgroundColor = document.getElementById("t3");
+        const b_style = document.defaultView
+          .getComputedStyle(RefDiv, null)
+          .getPropertyValue("background-color");
 
-  var table = document.createElement('table');
-  var thead = table.createTHead();
-  var row = thead.insertRow(-1);
-  var lableList = ['#', 'Property', 'Value'];
-  var len = lableList.length;
+        txtBackgroundColor.value = b_style;
+      }
+    </script>
 
-  for (var i=0; i<len; i++) {
-    addCell(row, lableList[i]);
-  }
+    <style>
+      #d1 {
+        margin-left: 10px;
+        background-color: rgb(173, 216, 230);
+        height: 20px;
+        max-width: 20px;
+      }
+    </style>
+  </head>
 
-  var tbody = document.createElement('tbody');
-  table.appendChild(tbody);
+  <body>
+    <div id="d1">&nbsp;</div>
 
-  for (var p in e) {
-    row = tbody.insertRow(-1);
-    row.className = (row.rowIndex % 2)? 'odd':'even';
-    addCell(row, row.rowIndex);
-    addCell(row, p);
-    addCell(row, e[p]);
-  }
-
-  document.body.appendChild(table);
-}
-
-window.onload = function(event){
-  showEventProperties(event);
-}
-</script>
-</head>
-
-<body>
-<h1>Properties of the DOM <span id="eventType"></span> Event Object</h1>
-</body>
-
+    <form action="">
+      <p>
+        <button type="button" onclick="cStyles();">getComputedStyle</button>
+        height<input id="t1" type="text" value="1" />
+        max-width<input id="t2" type="text" value="2" />
+        bg-color<input id="t3" type="text" value="3" />
+      </p>
+    </form>
+  </body>
 </html>
 ```
 
-## Example 8: Using the DOM Table Interface
+## Example 7: 이벤트 객체 속성 표시
 
-The DOM HTMLTableElement interface provides some convenience methods for creating and manipulating tables. Two frequently used methods are {{domxref("HTMLTableElement.insertRow")}} and {{domxref("tableRow.insertCell")}}.
+이번 예제에서는 DOM 메서드를 이용해 {{domxref("window.onload")}} {{domxref("event")}} 객체의 모든 속성과 값들을 테이블에 표시하는 방법과, 객체의 속성을 반복하여 값을 가져오는 [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 루프의 유용한 사용법을 보여줍니다.
 
-To add a row and some cells to an existing table:
+이벤트 객체들의 특성은 브라우저 마다 상당히 다르며, 표준 속성은 [WHATWG DOM Standard](https://dom.spec.whatwg.org)에 있습니다. 하지만 많은 브라우저에서 이 기능을 크게 확장하고 있습니다.
+
+아래의 코드를 빈 텍스트 파일에 넣고 여러 브라우저에서 로드하면 속성의 수와 이름들이 다르다는 사실에 놀랄 것입니다. 페이지에 일부 요소를 추가하고 다른 이벤트 처리기에서 이 함수를 호출할 수도 있습니다.
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8"/>
+    <title>이벤트 속성 표시</title>
+
+    <style>
+      table { border-collapse: collapse; }
+      thead { font-weight: bold; }
+      td { padding: 2px 10px 2px 10px; }
+
+      .odd { background-color: #efdfef; }
+      .even { background-color: #ffffff; }
+    </style>
+
+    <script>
+      function showEventProperties(e) {
+        function addCell(row, text) {
+          const cell = row.insertCell(-1);
+          cell.appendChild(document.createTextNode(text));
+        }
+
+        const event = e || window.event;
+        document.getElementById('eventType').innerHTML = event.type;
+
+        const table = document.createElement('table');
+        const thead = table.createTHead();
+        let row = thead.insertRow(-1);
+        const labelList = ['#', 'Property', 'Value'];
+        const len = labelList.length;
+
+        for (let i = 0; i < len; i++) {
+          addCell(row, labelList[i]);
+        }
+
+        var tbody = document.createElement('tbody');
+        table.appendChild(tbody);
+
+        for (var e in event) {
+          row = tbody.insertRow(-1);
+          row.className = (row.rowIndex % 2)? 'odd':'even';
+          addCell(row, row.rowIndex);
+          addCell(row, e);
+          addCell(row, event[e]);
+        }
+        document.body.appendChild(table);
+      }
+
+      window.onload = (event) => {
+        showEventProperties(event);
+      };
+    </script>
+  </head>
+
+  <body>
+    <h1> DOM의 특성 <span id="eventType"></span> 이벤트 객체 </h1>
+  </body>
+</html>
+```
+
+## Example 8: DOM 테이블 인터페이스 사용하기
+
+DOM {{domxref("HTMLTableElement")}} 인터페이스는 편리하게 테이블을 생성하고 조작해주는 메서드를 제공합니다. 자주 사용되는 메서드는 {{domxref("HTMLTableElement.insertRow")}}와 {{domxref("HTMLTableRowElement.insertCell")}}입니다.
+
+아래 코드에서는 기존 테이블에 행과 셀을 추가하는 방법을 보여줍니다.
 
 ```html
 <table id="table0">
@@ -352,28 +371,23 @@ To add a row and some cells to an existing table:
 </table>
 
 <script>
-var table = document.getElementById('table0');
-var row = table.insertRow(-1);
-var cell,
-    text;
+  const table = document.getElementById('table0');
+  const row = table.insertRow(-1);
+  let cell;
+  let text;
 
-for (var i = 0; i < 2; i++) {
-  cell = row.insertCell(-1);
-  text = 'Row ' + row.rowIndex + ' Cell ' + i;
-  cell.appendChild(document.createTextNode(text));
-}
+  for (var i = 0; i < 2; i++) {
+    cell = row.insertCell(-1);
+    text = 'Row ' + row.rowIndex + ' Cell ' + i;
+    cell.appendChild(document.createTextNode(text));
+  }
 </script>
 ```
 
-### Notes
+### 참고
 
-- A table's {{domxref("element.innerHTML","innerHTML")}} property should never be used to modify a table, although you can use it to write an entire table or the content of a cell.
-- If DOM Core methods {{domxref("document.createElement")}} and {{domxref("Node.appendChild")}} are used to create rows and cells, IE requires that they are appended to a tbody element, whereas other browsers will allow appending to a table element (the rows will be added to the last tbody element).
-- There are a number of other convenience methods belonging to the [table interface](/ko/docs/Web/API/HTMLTableElement#Methods) that can be used for creating and modifying tables.
+- 테이블의 {{domxref("element.innerHTML","innerHTML")}} 속성을 사용하여 테이블을 수정하면 안 됩니다. 단, 테이블 전체나 셀의 내용을 작성할 때는 이 속성을 사용할 수 있습니다.
 
-## Subnav
+- 만약 DOM의 핵심 메서드인 {{domxref("document.createElement")}}와 {{domxref("Node.appendChild")}}를 이용하여 행과 셀을 작성하는데 사용되는 경우, 인터넷 익스플로어(IE)에서는 해당 메서드를 tbody 요소에 추가해야 하지만 다른 브라우저는 테이블 요소에 추가할 수 있습니다(행은 마지막 tbody 요소에 추가됩니다).
 
-- [DOM Reference](/ko/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/ko/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/ko/docs/Web/API/Document_Object_Model/Events)
-- [Examples](/ko/docs/Web/API/Document_Object_Model/Examples)
+- 테이블을 생성하고 수정하는 데 사용할 수 있는 더 많은 편리한 메서드가 [table interface](/ko/docs/Web/API/HTMLTableElement#Methods)에 있습니다.
