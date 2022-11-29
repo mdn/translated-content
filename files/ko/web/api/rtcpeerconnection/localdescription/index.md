@@ -4,7 +4,7 @@ slug: Web/API/RTCPeerConnection/localDescription
 translation_of: Web/API/RTCPeerConnection/localDescription
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 {{SeeCompatTable}}
 

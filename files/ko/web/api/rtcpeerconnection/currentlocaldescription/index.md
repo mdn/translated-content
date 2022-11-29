@@ -16,7 +16,7 @@ tags:
 browser-compat: api.RTCPeerConnection.currentLocalDescription
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 읽기 속성인 `RTCPeerConnection.currentLocalDescription`은 가장 최근에 {{domxref("RTCPeerConnection")}}가 성공적으로 네고시에이션을 마치고 원격 피어와 연결된, 연결인터페이스의 로컬 엔드를 설명하는 {{domxref("RTCSessionDescription")}} 객체를 반환합니다. 이외에도 설명에 의해 offer 혹은 answer가 처음으로 인스턴스화 되면 ICE 에이전트에 의해 이미 생성됬을수도 있는 ICE candidate 목록이 포함되어 있습니다.
 
