@@ -213,7 +213,7 @@ for (const b of obj) {
 // Closing
 ```
 
-[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)（但不是[同步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)）中的 [`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和 [`yield*`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield*) 是与异步迭代交互的唯一方式。在不是同步迭代的异步迭代对象（即它有 `[@@asyncIterator]()` 但没有 `[@@iterator]()`）上使用 `for...of`、数组展开等将抛出 TypeError：x 不可迭代。
+[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)（但不是[同步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)）中的 [`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和 [`yield*`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield*) 是与异步迭代交互的唯一方式。在不是同步迭代的异步迭代对象（即它有 `[@@asyncIterator]()` 但没有 `[@@iterator]()`）上使用 `for...of`、数组展开等将抛出 `TypeError：x is not iterable`。
 
 ### 格式不佳的可迭代对象
 
