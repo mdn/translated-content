@@ -40,11 +40,11 @@ padding-inline-start: unset;
 
 它与 {{cssxref("padding-block-start")}}、{{cssxref("padding-block-end")}} 和 {{cssxref("padding-inline-end")}} 有关，它们定义了该元素的其他边距。
 
-## 正式描述
+## 形式描述
 
 {{cssinfo}}
 
-## 正式语法
+## 形式语法
 
 {{csssyntax}}
 
