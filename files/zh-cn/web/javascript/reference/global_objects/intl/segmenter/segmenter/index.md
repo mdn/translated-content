@@ -1,5 +1,5 @@
 ---
-title: Intl.Segmenter() 构造函数
+title: Intl.Segmenter()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 ---
 
