@@ -26,9 +26,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Permissions API','#widl-PermissionStatus-state','state')}} | {{Spec2('Permissions API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

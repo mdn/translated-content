@@ -6,6 +6,7 @@ tags:
   - Gecko
 translation_of: Web/API/Node/firstChild
 ---
+
 {{ ApiRef() }}
 
 ### 요약

@@ -15,6 +15,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope
 original_slug: Web/API/WindowOrWorkerGlobalScope
 ---
+
 {{ApiRef()}}
 
 O [mixin](https://medium.com/javascript-scene/functional-mixins-composing-software-ffb66d5e731c) WindowOrWorkerGlobalScope descreve vários recursos comuns às interfaces Window e WorkerGlobalScope. Cada uma dessas interfaces pode, obviamente, adicionar mais recursos além dos listados abaixo.

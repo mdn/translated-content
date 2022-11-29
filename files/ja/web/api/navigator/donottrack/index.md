@@ -18,9 +18,7 @@ console.log(navigator.doNotTrack);
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                         | 備考     |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Tracking", "#dom-navigator-donottrack", "Navigator.doNotTrack")}} | {{Spec2("Tracking")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

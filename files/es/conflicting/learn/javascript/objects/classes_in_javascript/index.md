@@ -238,7 +238,7 @@ Esto tiene sentido, pero hay otras formas — se muestran aquí para que te vaya
 
 ### El constructor Object()
 
-Antes que nada, puedes usar el constructor [`Object()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) para crear un nuevo objeto. Si, incluso objetos genéricos tienen un constructor que genera un objeto vacío.
+Antes que nada, puedes usar el constructor [`Object()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object) para crear un nuevo objeto. Si, incluso objetos genéricos tienen un constructor que genera un objeto vacío.
 
 1.  Intenta ingresar este código en la consola JavaScript de tu navegador:
 
@@ -274,7 +274,7 @@ Los constructores te pueden ayudar a ordenar tu código — puedes crear constru
 
 Sin embargo, algunas personas prefieren crear instancias de objetos sin crear antes constructores, especialmente si van a crear solamente pocas instancias de un objeto.
 
-JavaScript tiene un método llamado [`create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) que permite hacer esto. Con este método puedes crear un nuevo objeto basado en cualquier otro objeto existente.
+JavaScript tiene un método llamado [`create()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/create) que permite hacer esto. Con este método puedes crear un nuevo objeto basado en cualquier otro objeto existente.
 
 1.  Con tu ejercicio de la sección anterior cargado en el navegador, prueba esto en tu consola JavaScript
 

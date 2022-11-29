@@ -11,6 +11,7 @@ tags:
 browser-compat: api.console.error
 translation_of: Web/API/Console/error
 ---
+
 {{APIRef("Console API")}}
 
 **`console.error()`** 메서드는 웹 콘솔에 에러 메시지를 출력합니다.

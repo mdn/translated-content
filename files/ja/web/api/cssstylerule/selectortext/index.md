@@ -28,9 +28,7 @@ alert(stylesheet.cssRules[0].selectorText); // body
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 策定状況                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSSOM', '#dom-cssstylerule-selectortext', 'CSSStyleRule.selectorText')}} | {{Spec2('CSSOM')}} |          |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

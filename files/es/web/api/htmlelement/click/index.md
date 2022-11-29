@@ -1,11 +1,6 @@
 ---
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
-tags:
-  - HTMLElement
-  - Referencia
-  - metodo
-translation_of: Web/API/HTMLElement/click
 ---
 
 {{ APIRef("HTML DOM") }}

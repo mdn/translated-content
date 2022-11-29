@@ -11,6 +11,7 @@ tags:
   - minValue
 browser-compat: api.AudioParam.minValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("AudioParam")}} 인터페이스의 읽기 전용 **`minValue`** 속성은 파라미터의 명목상의 (효과적인) 범위에 대한 최소로 가능한 값을 나타냅니다.

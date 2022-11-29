@@ -41,9 +41,7 @@ recognition.onresult = function(event) {
 
 ## Specifications
 
-| Specification                                                                                            | Status                               | Comment |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Speech API', '#speechreco-result', 'SpeechRecognitionResult')}} | {{Spec2('Web Speech API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,12 +1,6 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
-tags:
-  - CSS
-  - Experimental
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/backface-visibility
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

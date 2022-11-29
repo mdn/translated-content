@@ -137,11 +137,7 @@ slug: Web/HTML/Element/li
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考                        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-li-element', '&lt;li&gt;')}}     | {{Spec2('HTML WHATWG')}} |                             |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-li-element', '&lt;li&gt;')}} | {{Spec2('HTML5 W3C')}}     |                             |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.2', '&lt;li&gt;')}}                 | {{Spec2('HTML4.01')}}     | `type` 属性を非推奨にした。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

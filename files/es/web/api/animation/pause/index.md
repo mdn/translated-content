@@ -1,16 +1,6 @@
 ---
 title: Animation.pause()
 slug: Web/API/Animation/pause
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Referencia
-  - pausar
-  - pause
-  - waapi
-translation_of: Web/API/Animation/pause
 ---
 
 {{ APIRef("Web Animations") }}

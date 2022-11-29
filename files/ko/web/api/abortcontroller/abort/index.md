@@ -11,6 +11,7 @@ tags:
   - 실험적
 translation_of: Web/API/AbortController/abort
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 {{domxref("AbortController")}} 인터페이스의 **`abort()`** 메소드는 DOM 요청(Fetch 요청과 같은)이 완료되기 전에 취소한다. 이를 통해 [fetch 요청](/ko/docs/Web/API/WindowOrWorkerGlobalScope/fetch), 모든 응답 {{domxref("Body")}} 소비, 스트림을 취소할 수 있다.

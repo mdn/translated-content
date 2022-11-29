@@ -46,13 +46,7 @@ _このインターフェイスはその親である {{domxref("Node")}} のメ�
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                                         | 備考                                                               |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#interface-documentfragment', 'DocumentFragment')}} | {{Spec2('DOM WHATWG')}}             | コンストラクターと {{domxref("ParentNode")}} の実装を追加。 |
-| {{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}             | {{Spec2('Selectors API Level 1')}} | `querySelector()` と `querySelectorAll()` メソッドを追加。         |
-| {{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}             | {{Spec2('DOM3 Core')}}                 | {{SpecName('DOM2 Core')}} より変更なし                      |
-| {{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}             | {{Spec2('DOM2 Core')}}                 | {{SpecName('DOM1')}} より変更なし                          |
-| {{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}}     | {{Spec2('DOM1')}}                     | 初回定義                                                           |
+{{Specifications}}
 
 ## ブラウザーの対応
 

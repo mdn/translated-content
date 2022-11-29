@@ -16,7 +16,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/create
 
 {{AddonSidebar()}}
 
-Crée un signet ou un dossier en tant qu'enfant de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} avec  `parentId` spécifié. Pour créer un dossier, omettez ou laissez vide le paramètre  {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}}.
+Crée un signet ou un dossier en tant qu'enfant de {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} avec `parentId` spécifié. Pour créer un dossier, omettez ou laissez vide le paramètre {{WebExtAPIRef("bookmarks.CreateDetails", "CreateDetails", "url")}}.
 
 > **Attention :** Si votre extension tente de créer un nouveau signet dans le nœud racine de l'arborescence du signet, une erreur est générée: "_La racine du signet ne peut pas être modifiée_" et le signet ne sera pas créé.
 
@@ -64,7 +64,7 @@ createBookmark.then(onCreated);
 
 > **Note :**
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de  [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/extensions/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 

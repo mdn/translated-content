@@ -31,9 +31,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Permissions API', '#permissions-interface', 'Permissions')}} | {{Spec2('Permissions API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

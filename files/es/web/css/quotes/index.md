@@ -1,13 +1,6 @@
 ---
 title: quotes
 slug: Web/CSS/quotes
-tags:
-  - CSS
-  - Layout
-  - Maquetación
-  - Referencia
-  - Web
-translation_of: Web/CSS/quotes
 ---
 
 {{CSSRef}}

@@ -1,9 +1,6 @@
 ---
 title: IDBObjectStore
 slug: Web/API/IDBObjectStore
-tags:
-  - API
-translation_of: Web/API/IDBObjectStore
 ---
 
 {{APIRef("IndexedDB")}}

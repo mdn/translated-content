@@ -44,10 +44,7 @@ function triggerAlert() {
 
 ## 仕様
 
-| 仕様                                                                         | 状態                                             |
-| ---------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#alert","Alert")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#alert","Alert")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 関連情報
 

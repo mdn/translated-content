@@ -44,7 +44,7 @@ var result = crypto.subtle.generateKey(algo, extractable, keyUsages);
 
 A {{jsxref("Promise")}} é rejeitada quando a seguinte exceção é encontrada:
 
-- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando _`keyUsages`_ está vazia mas a key gerada simetricamente é do tipo `"secret"` ou `"private"` ou o componente privado gerado do par de key assimétrica está vazio.
+- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando `keyUsages` está vazia mas a key gerada simetricamente é do tipo `"secret"` ou `"private"` ou o componente privado gerado do par de key assimétrica está vazio.
 
 ## Especificações
 

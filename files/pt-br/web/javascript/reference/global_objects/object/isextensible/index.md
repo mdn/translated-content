@@ -26,7 +26,7 @@ Um valor booleano ({{jsxref("Boolean")}}) que indica se o objeto pode ser extend
 
 ## Descrição
 
-Objetos são extensíveis por padrão: novas propriedades podem ser adicionadas, e (em ambientes que suportam {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}}) a propriedade \_\_proto\_\_ pode ser modificada. Um objeto pode ser marcado como não extensível usando {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, ou {{jsxref("Object.freeze()")}}.
+Objetos são extensíveis por padrão: novas propriedades podem ser adicionadas, e (em ambientes que suportam [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}}) a propriedade \_\_proto\_\_ pode ser modificada. Um objeto pode ser marcado como não extensível usando {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, ou {{jsxref("Object.freeze()")}}.
 
 ## Exemplos
 

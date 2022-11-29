@@ -1,7 +1,6 @@
 ---
 title: Document.registerElement()
 slug: Web/API/Document/registerElement
-translation_of: Web/API/Document/registerElement
 ---
 
 {{APIRef("DOM")}}{{Deprecated_header}}

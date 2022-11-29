@@ -84,9 +84,7 @@ var destination = audioCtx.createMediaStreamDestination();
 
 ## 仕様
 
-| 仕様書                                                                                                                                                   | 策定状況                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Web Audio API', '#dom-audiocontext-createmediastreamdestination', 'createMediaStreamDestination()')}} | {{Spec2('Web Audio API')}} |          |
+{{Specifications}}
 
 ## ブラウザー互換性
 

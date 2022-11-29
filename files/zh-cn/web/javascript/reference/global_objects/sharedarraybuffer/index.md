@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 
 ### 分配及共享内存
 
-为了将一个 {{jsxref("SharedArrayBuffer")}} 对象从一个用户代理共享到另一个用户代理（另一个页面的主进程或者当前页面的一个 `worker`）从而实现共享内存，我们需要运用  [`postMessage`](/zh-CN/docs/Web/API/Worker/postMessage) 和[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。
+为了将一个 {{jsxref("SharedArrayBuffer")}} 对象从一个用户代理共享到另一个用户代理（另一个页面的主进程或者当前页面的一个 `worker`）从而实现共享内存，我们需要运用 [`postMessage`](/zh-CN/docs/Web/API/Worker/postMessage) 和[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。
 
 结构化克隆算法接收 `SharedArrayBuffers` 对象，或被映射到一个新的 `SharedArrayBuffers` 对象上的 `TypedArrays` 对象。在这两种情况下，这个新的 `SharedArrayBuffer` 对象会被传递到目标用户代理的接收函数上，从而在目标用户代理产生一个新的私有 `SharedArrayBuffer` 对象（正如 {{jsxref("ArrayBuffer")}} 一样）。但是，这两个 `SharedArrayBuffer` 对象指向的共享数据块其实是同一个，所以某一代理对数据块的修改在另一个代理中可见。
 

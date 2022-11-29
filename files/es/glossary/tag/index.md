@@ -18,4 +18,4 @@ En {{Glossary("HTML")}} una etiqueta es usada para crear un {{Glossary("elemento
 
 ### Referencia técnica
 
-- [What are HTML tags & how to use them \[en-US\]](/en-US/Learn/HTML/HTML_tags)
+- [What are HTML tags & how to use them \[en-US\]](/es/Learn/HTML/HTML_tags)

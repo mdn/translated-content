@@ -102,7 +102,7 @@ Chaque objet peut contenir autant d'attributs que de besoin et de quelque type q
 my_field_name = models.CharField(max_length=20, help_text='Enter field documentation')
 ```
 
-Dans l'exemple ci-dessus, le champs est une chaîne de caractères — de type `models.CharField` —  dont le nom est `my_field_name`. Les champs ont des types pré-définis représentés par une classe d'objet Django qui va permettre de caractériser une champ du modèle de données. Cela permet aussi de valider les données qui seront fournies via les formulaires du site web décrits avec le langage HTML. Les classes caractérisant les type de champs peuvent accepter des paramètres pour préciser les contraintes appliquées à ce champ. Dans cet exemple, deux arguments sont indiqués :
+Dans l'exemple ci-dessus, le champs est une chaîne de caractères — de type `models.CharField` — dont le nom est `my_field_name`. Les champs ont des types pré-définis représentés par une classe d'objet Django qui va permettre de caractériser une champ du modèle de données. Cela permet aussi de valider les données qui seront fournies via les formulaires du site web décrits avec le langage HTML. Les classes caractérisant les type de champs peuvent accepter des paramètres pour préciser les contraintes appliquées à ce champ. Dans cet exemple, deux arguments sont indiqués :
 
 - `max_length=20` — Défini que ce champs fait au plus 20 caractères.
 - `help_text='Enter field documentation'` — attribue un label par défaut qui sera affiché dans la page web par le navigateur.
@@ -143,7 +143,7 @@ L'ensemble [des types de champs](https://docs.djangoproject.com/fr/2.2/ref/model
 
 #### Métadonnées
 
-Vous avez la capacité de déclarer des métadonnées à l'aide de la classe  `class Meta`, comme précisé ci-dessous :
+Vous avez la capacité de déclarer des métadonnées à l'aide de la classe `class Meta`, comme précisé ci-dessous :
 
 ```python
 class Meta:
@@ -255,7 +255,7 @@ Le marqueur "double souligné" permet de construire une chaîne de navigation à
 books_containing_genre = Book.objects.filter(genre__name__icontains='fiction')
 ```
 
-> **Note :** Vous pouvez construire une chemin pour naviguer dans autant de niveaux de relation (`ForeignKey`/`ManyToManyField`) que vous en avez besoin en concaténant des noms de champs à l'aide  (\_\_) . Si par exemple vous souhaitez trouver un livre (`Book`) qui possède différents type (`type`) de couvertures (`cover`) identifiées par des noms (`name`) alors le chemin sera du type : `type__cover__name__exact='hard'.`
+> **Note :** Vous pouvez construire une chemin pour naviguer dans autant de niveaux de relation (`ForeignKey`/`ManyToManyField`) que vous en avez besoin en concaténant des noms de champs à l'aide (\_\_) . Si par exemple vous souhaitez trouver un livre (`Book`) qui possède différents type (`type`) de couvertures (`cover`) identifiées par des noms (`name`) alors le chemin sera du type : `type__cover__name__exact='hard'.`
 
 La mise en oeuvre des requêtes est très riches en fonction des modèles et des relations, de sous-ensemble de données, etc. Pour une informations détaillées, vous devez consulter [les requêtes](https://docs.djangoproject.com/fr/2.2/topics/db/queries/) sur le site de référence de Django.
 
@@ -324,7 +324,7 @@ Le genre littéraire est une relation n à n (`ManyToManyField`) car un livre pe
 
 La modélisation des relations entre les objets, c'est le cas pour les deux champs décrits à l'instant, nécessite de manipuler les classes d'objet par leur nom de classe. Vous devez déclarer l'objet par son de classe dans la déclaration de la relation entre les objets, si celui-ci a déjà été déclaré vous pouvez l'utiliser comme un nom d'objet - à l'identique d'une variable Python - ou comme une chaîne de caractère si l'objet n'a pas déjà fait l'objet d'un déclaration. les autres paramètres dans la déclaration des relations permettent de spécifier les comportement des attributs : l'option `null` positionné à `True` permet d'avoir un contenu vide en base de données, la second option `on_delete=models.SET_NULL` qualifie le fonctionnement de cet attribut si l'objet est supprimé en base de données, en l'occurence il peut être positionné à vide en base de données.
 
-Deux méthodes sont déclarées pour cet objet. La méthode `__str__()` obligatoirement requise par Django pour manipuler les instances d'objet et les enregistrements associés en base. La seconde méthode, `get_absolute_url()`, retourne une URL formatée qui peut être utilisée par le cadriciel pour délivrer le détail de chaque instance d'objet de la classe. Le routage d'URL sera associé au nom  `book-detail`, et nous aurons à définir une vue et un gabarit.
+Deux méthodes sont déclarées pour cet objet. La méthode `__str__()` obligatoirement requise par Django pour manipuler les instances d'objet et les enregistrements associés en base. La seconde méthode, `get_absolute_url()`, retourne une URL formatée qui peut être utilisée par le cadriciel pour délivrer le détail de chaque instance d'objet de la classe. Le routage d'URL sera associé au nom `book-detail`, et nous aurons à définir une vue et un gabarit.
 
 ### L'objet BookInstance
 

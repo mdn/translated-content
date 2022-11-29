@@ -6,7 +6,7 @@ translation_of: Web/API/AudioNode
 
 {{ APIRef("Web Audio API") }}
 
-L'interface **`AudioNode`** est une interface générique pour représenter un module de traitement audio tel qu'une source audio {{HTMLElement("audio")}}, un élément {{HTMLElement("video")}}, un {{domxref("OscillatorNode")}}, une sortie audio, ou un module de traitement intermédiaire  (filtres {{domxref("BiquadFilterNode")}} ou {{domxref("ConvolverNode")}}), un contrôle de volume {{domxref("GainNode")}}.
+L'interface **`AudioNode`** est une interface générique pour représenter un module de traitement audio tel qu'une source audio {{HTMLElement("audio")}}, un élément {{HTMLElement("video")}}, un {{domxref("OscillatorNode")}}, une sortie audio, ou un module de traitement intermédiaire (filtres {{domxref("BiquadFilterNode")}} ou {{domxref("ConvolverNode")}}), un contrôle de volume {{domxref("GainNode")}}.
 
 {{InheritanceDiagram}}
 

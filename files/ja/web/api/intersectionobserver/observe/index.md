@@ -30,9 +30,7 @@ IntersectionObserver.observe(targetElement);
 
 ## 仕様
 
-| 仕様書                                                                                                                                       | 策定状況                                     | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-observe','IntersectionObserver.observe()')}} | {{Spec2('IntersectionObserver')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

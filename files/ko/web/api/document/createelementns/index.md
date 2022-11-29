@@ -3,6 +3,7 @@ title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
 translation_of: Web/API/Document/createElementNS
 ---
+
 {{ApiRef("DOM")}}
 
 지정된 네임스페이스 URI와 적합한 이름으로 엘리먼트를 만든다.

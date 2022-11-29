@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Introduccion_a_HTML/Test_your_skills:_Advanced_HTML_te
 
 {{learnsidebar}}
 
-El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras __[formato de texto avanzado](/es/docs//en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)__ articulo.
+El objetivo de esta prueba de habilidad es evaluar si ha entendido nuestras [formato de texto avanzado](/es/docs//en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting) articulo.
 
 > **Nota:** Puede probar soluciones en los editores interactivos a continuación; sin embargo, puede resultar útil descargar el código y utilizar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) trabajar en las tareas.
 >

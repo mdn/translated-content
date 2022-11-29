@@ -2,6 +2,7 @@
 title: CSS 값 과 단위
 slug: Learn/CSS/Building_blocks/Values_and_units
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
 CSS 에 사용된 모든 속성에는 해당 속성에 허용되는 값 이 있으며, MDN 의 속성 페이지를 보면 특성 속성에 유효한 값을 이해하는 데 도움이 됩니다. 이 레슨에서는 가장 일반적인 값 과 사용 단위를 살펴 보겠습니다.

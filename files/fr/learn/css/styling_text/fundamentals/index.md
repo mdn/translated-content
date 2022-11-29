@@ -44,7 +44,7 @@ Dans cet article, nous allons commencer le voyage vers la maîtrise des styles d
 
 Comme vous l'avez déjà vu dans votre apprentissage de HTML et CSS, le texte d'un élément est placé à l'intérieur de la boîte de contenu de cet élément. Il débute en haut à gauche de cette zone (ou en haut à droite, dans le cas des contenus en langues s'écrivant de droite à gauche) et se poursuit vers la fin de la ligne. Arrivé en bout de ligne, il descend à la ligne suivante et continue, puis va à la ligne suivante, jusqu'à ce que tout le contenu ait été placé. Les contenus textuels se comportent comme une suite d'éléments en ligne placés les uns à côté des autres. Aucun saut de ligne n'est créé avant que la fin de la ligne soit atteinte, sauf si vous forcez manuellement le saut de ligne avec l'élément {{htmlelement("br")}}.
 
-> **Note :** si le paragraphe ci‑dessus vous paraît confus,  pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) avant de poursuivre.
+> **Note :** si le paragraphe ci‑dessus vous paraît confus, pas de problème — revenez en arrière et revoyez l'article sur la théorie du [Modèle de boîte](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) avant de poursuivre.
 
 Les propriétés CSS utilisées pour le style de texte appartiennent généralement à deux catégories, que nous verrons séparément dans cet article :
 
@@ -468,7 +468,7 @@ La propriété {{cssxref ("line-height")}} définit la hauteur de chaque ligne d
 line-height: 1.5;
 ```
 
-En appliquant cette règle à l'élément {{htmlelement("p")}}  de l'exemple, nous obtenons :
+En appliquant cette règle à l'élément {{htmlelement("p")}} de l'exemple, nous obtenons :
 
 ```html hidden
 <h1>Tommy le Chat</h1>

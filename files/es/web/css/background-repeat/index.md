@@ -1,14 +1,6 @@
 ---
 title: background-repeat
 slug: Web/CSS/background-repeat
-tags:
-  - CSS
-  - CSS:Referencias
-  - Fondos CSS
-  - Propiedades de CSS
-  - Referências
-  - Todas_las_Categorías
-translation_of: Web/CSS/background-repeat
 ---
 
 {{CSSRef}}

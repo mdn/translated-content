@@ -62,10 +62,7 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                     | コメント                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ----------------------------- |
-| {{SpecName('SVG2', 'shapes.html#EllipseElement', '&lt;ellipse&gt;')}}     | {{Spec2('SVG2')}} | `rx` と `ry` に `auto` を追加 |
-| {{SpecName('SVG1.1', 'shapes.html#EllipseElement', '&lt;ellipse&gt;')}} | {{Spec2('SVG1.1')}} | 最初の定義                    |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

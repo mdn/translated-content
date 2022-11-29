@@ -105,7 +105,7 @@ try {
 }
 ```
 
-这段代码为 `passive` 属性创建了一个带有 getter 函数的 `options` 对象；getter 设定了一个标识  `passiveSupported`，被调用后就会把其设为 `true`。那意味着如果浏览器检查 `options` 对象上的 `passive` 值时，`passiveSupported` 将会被设置为 `true`；否则它将保持 `false`。然后我们调用 `addEventListener()` 去设置一个指定这些选项的空事件处理器，这样如果浏览器将第三个参数认定为对象的话，这些选项值就会被检查。我们再调用 [`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener) 来移除事件处理器（注意：未被调用的事件处理器上的 `handleEvent()` 会被忽略）。
+这段代码为 `passive` 属性创建了一个带有 getter 函数的 `options` 对象；getter 设定了一个标识 `passiveSupported`，被调用后就会把其设为 `true`。那意味着如果浏览器检查 `options` 对象上的 `passive` 值时，`passiveSupported` 将会被设置为 `true`；否则它将保持 `false`。然后我们调用 `addEventListener()` 去设置一个指定这些选项的空事件处理器，这样如果浏览器将第三个参数认定为对象的话，这些选项值就会被检查。我们再调用 [`removeEventListener()`](/zh-CN/docs/Web/API/EventTarget/removeEventListener) 来移除事件处理器（注意：未被调用的事件处理器上的 `handleEvent()` 会被忽略）。
 
 你可以利用这个方法检查 options 之中任一个值。只需使用与上面类似的代码，为选项设定一个 getter。
 

@@ -1,15 +1,6 @@
 ---
 title: File.webkitRelativePath
 slug: Web/API/File/webkitRelativePath
-tags:
-  - Archivo
-  - Entidades Archivo y Directorio de la API
-  - File API
-  - Propiedad
-  - Referencia
-  - Solo lectura
-  - Web
-translation_of: Web/API/File/webkitRelativePath
 ---
 
 {{APIRef("File API")}}{{non-standard_header}}

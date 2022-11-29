@@ -70,7 +70,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
     - `justify`
       - : Insère des espaces dans le contenu textuel afin que le contenu de la cellule soit justifié.
     - `char`
-      - : Aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs  `char` et `charoff`.
+      - : Aligne le contenu textuel de la cellule selon un caractère spécial avec un décalage minimum définis par les attributs `char` et `charoff`.
 
     Si cet attribut n'est pas renseigné, la valeur `left` est prise par défaut.
 

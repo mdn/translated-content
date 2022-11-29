@@ -1,11 +1,6 @@
 ---
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
-tags:
-  - CSS
-  - Grilla CSS
-  - Propiedad CSS
-translation_of: Web/CSS/grid-auto-rows
 ---
 
 La propiedad **`grid-auto-rows`** de CSS especifíca el tamaño de una nueva fila creada de forma implícita.

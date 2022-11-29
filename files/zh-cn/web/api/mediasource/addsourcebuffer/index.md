@@ -27,7 +27,7 @@ addSourceBuffer(mimeType)
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : 如果 `mimeType` 指定的值是一个空字符串而不是有效的媒体（MIME）类型，则抛出异常。
 - `InvalidStateError` {{domxref("DOMException")}}
-  - :  {{domxref("MediaSource.readyState")}} 的状态不是 `"open"`，则抛出异常。
+  - : {{domxref("MediaSource.readyState")}} 的状态不是 `"open"`，则抛出异常。
 - `NotSupportedError` {{domxref("DOMException")}}
   - : 如果{{Glossary("user agent", "用户代理")}}不支持指定的 `mimeType`，或者与媒体源 {{domxref("MediaSource.sourceBuffers", "sourceBuffer")}} 列表中已包含的其他 {{domxref("SourceBuffer")}} 对象的媒体类型不兼容，则抛出异常。
 - `QuotaExceededError` {{domxref("DOMException")}}

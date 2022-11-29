@@ -19,11 +19,11 @@ slug: Web/API/Event/initEvent
 event.initEvent(type, bubbles, cancelable);
 ```
 
-- _`type`_
+- `type`
   - : 一个 {{domxref("DOMString")}} 类型的字段，定义了事件的类型。
-- _`bubbles`_
+- `bubbles`
   - : 一个 {{jsxref("Boolean")}} 值，决定是否事件是否应该向上冒泡。一旦设置了这个值，只读属性{{ domxref("Event.bubbles") }}也会获取相应的值。
-- _`cancelable`_
+- `cancelable`
   - : 一个 {{jsxref("Boolean")}} 值，决定该事件的默认动作是否可以被取消。一旦设置了这个值，只读属性 {{ domxref("Event.cancelable") }} 也会获取相应的值。
 
 ## 范例

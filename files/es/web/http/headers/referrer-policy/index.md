@@ -1,12 +1,6 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
-tags:
-  - Cabecera
-  - HTTP
-  - Respuesta
-  - privacidad
-translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
 
 {{HTTPSidebar}}

@@ -1,23 +1,6 @@
 ---
 title: NavigatorConcurrentHardware
 slug: orphaned/Web/API/NavigatorConcurrentHardware
-tags:
-  - API
-  - Concurrency
-  - HTML DOM
-  - Interface
-  - Navigator
-  - NavigatorCPU
-  - NavigatorConcurrentHardware
-  - NeedsBrowserCompatibility
-  - NeedsTranslation
-  - Reference
-  - Threading
-  - Threads
-  - TopicStub
-  - WorkerNavigator
-  - Workers
-translation_of: Web/API/NavigatorConcurrentHardware
 original_slug: Web/API/NavigatorConcurrentHardware
 ---
 

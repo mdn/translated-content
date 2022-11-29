@@ -3,6 +3,7 @@ title: HTMLCollection.item
 slug: Web/API/HTMLCollection/item
 translation_of: Web/API/HTMLCollection/item
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLCollection")}} 의 메소드 `item()` 은 컬렉션 안의 특정 인덱스에 위치한 노드를 반환합니다.

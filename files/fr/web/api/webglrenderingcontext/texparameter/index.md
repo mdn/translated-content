@@ -140,7 +140,7 @@ Le paramètre `nomp` est un {{domxref("Glenum")}} indiquant le paramètre de tex
     <tr>
       <td><code>gl.TEXTURE_WRAP_R</code></td>
       <td>
-        Fonction d'emballage pour la coordonnée de texture  <code>r</code>
+        Fonction d'emballage pour la coordonnée de texture <code>r</code>
       </td>
       <td>
         <code>gl.REPEAT</code> (valeur par défaut),

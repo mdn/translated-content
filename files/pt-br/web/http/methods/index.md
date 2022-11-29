@@ -37,7 +37,7 @@ O protocolo HTTP define um conjunto de **métodos de requisição** responsávei
 
 ## Compatibilidade com navegadores
 
-{{Compat("http/methods")}}
+{{Compat}}
 
 ## Veja também
 

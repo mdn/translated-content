@@ -14,8 +14,6 @@ original_slug: Web/API/File/Using_files_from_web_applications
 
 Grâce à l'API File ajoutée au DOM avec HTML5, il est maintenant possible depuis une page web de proposer à l'utilisateur de sélectionner des fichiers locaux, puis d'en lire le contenu. Cette sélection est possible en utilisant un élément HTML {{ HTMLElement("input") }} ou par glisser-déposer.
 
-Vous pouvez utiliser si vous le souhaitez l'API DOM File depuis du code chrome d'extensions ou d'un autre navigateur&nbsp;; notez cependant qu'il existe des fonctionnalités additionnelles auxquelles il vous faudra être attentif. Reportez-vous à [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails.
-
 ## Accéder au(x) fichier(s) sélectionné(s)
 
 Examinez ce code HTML&nbsp;:
@@ -271,7 +269,7 @@ Vous pouvez procéder ainsi pour créer un objet URL lorsque vous souhaitez réf
 var objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré&nbsp;; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }}  si votre page les utilise de manière dynamique&nbsp;:
+L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré&nbsp;; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }} si votre page les utilise de manière dynamique&nbsp;:
 
 ```js
 window.URL.revokeObjectURL(objectURL);
@@ -514,10 +512,9 @@ window.URL.revokeObjectURL(obj_url);
 
 ## Voir aussi
 
-- {{ domxref("File") }}
-- {{ domxref("FileList") }}
-- {{ domxref("FileReader") }}
-- [Utiliser XMLHttpRequest](/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)
-- {{ domxref("XMLHttpRequest") }}
-- [jQuery](http://www.jquery.com/) JavaScript library
+- {{DOMxRef("File")}}
+- {{DOMxRef("FileList")}}
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("URL")}}
+- {{DOMxRef("XMLHttpRequest")}}
+- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
