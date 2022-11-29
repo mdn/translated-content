@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/Segmenter
 
 {{JSRef}}
 
-**`Intl.Segmenter()`**构造函数会创建一个 [`Intl.Segmenter`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) 对象，该对象支持语言敏感的文本分割。
+**`Intl.Segmenter()`** 构造函数会创建一个 [`Intl.Segmenter`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) 对象，该对象支持语言敏感的文本分割。
 
 {{EmbedInteractiveExample("pages/js/intl-segmenter.html")}}
 
@@ -22,7 +22,7 @@ new Intl.Segmenter(locales, options)
 ### 参数
 
 - `locales` {{optional_inline}}
-  - : 带有 BCP 47 语言标记的一个字符串, 或者一个这样的字符串数组。对于 `locales` 参数的一般形式和解释, 参见 [语言区域识别和判定](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#语言区域识别和判定)。
+  - : 带有 BCP 47 语言区域标记的一个字符串, 或者一个这样的字符串数组。对于 `locales` 参数的一般形式和解释, 参见 [语言区域识别和判定](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#语言区域识别和判定)。
 - `options` {{optional_inline}}
   - : 带有部分或全部以下选项的一个对象：
     - `granularity` {{optional_inline}}
