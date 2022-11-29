@@ -24,7 +24,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter
 - [`Intl.Segmenter.prototype.resolvedOptions()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions)
   - : 返回一个新的对象，对象的属性反映了这个 `Intl.Segmenter` 实例初始化期间计算的语言环境和粒度选项。
 - [`Intl.Segmenter.prototype.segment()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)
-  - : 返回一个新的 [`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 实例，它是一个可迭代对象，包含了根据当前 `Intl.Segmenter` 实例的语言环境和粒度属性生成的字符串片段。
+  - : 返回一个新的 [`Segments`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) 实例，它是一个可迭代对象，包含了根据当前 `Intl.Segmenter` 实例的语言环境和粒度选项生成的字符串片段。
 
 ## 示例
 
