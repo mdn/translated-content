@@ -47,7 +47,7 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 
 - {{domxref("HTMLInputElement.name", "name")}}
 
-  - : `string`: **Retorna / Define** o atributo [`name`](/pt-BR/docs/Web/HTML/Element/Input#name) do elemento, contendo um nome que identifica o elemento ao enviar o Formato.
+  - : `string`: **Retorna / Define** o atributo [`name`](/pt-BR/docs/Web/HTML/Element/Input#name) do elemento, contendo um nome que identifica o elemento ao enviar o formulário.
 
 - {{domxref("HTMLInputElement.step", "step")}}
 
