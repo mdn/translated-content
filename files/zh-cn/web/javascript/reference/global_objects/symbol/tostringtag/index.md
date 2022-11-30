@@ -27,7 +27,7 @@ Object.prototype.toString.call(null);      // "[object Null]"
 
 ### 内置的 toStringTag symbol
 
-Most built-in objects provide their own `@@toStringTag` property. All built-in objects' `@@toStringTag` property is not writable, not enumerable, and configurable.
+更多内置的对象提供了它们自己的 `@@toStringTag` 属性。所有内置对象的 `@@toStringTag` 属性都是不可写的（writable）、不可枚举的（enumerable）以及不可配置的（configurable）。
 
 ```js
 Object.prototype.toString.call(new Map());       // "[object Map]"
@@ -38,7 +38,7 @@ Object.prototype.toString.call(Promise.resolve()); // "[object Promise]"
 
 ### 有着 toStringTag 的自定义标签
 
-当创建你自己的类时，JavaScript 默认用 “Object” 标签：
+当创建你自己的类时，JavaScript 默认用“Object”标签：
 
 ```js
 class ValidatorClass {}
