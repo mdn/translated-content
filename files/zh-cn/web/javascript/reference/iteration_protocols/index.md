@@ -181,8 +181,8 @@ function* gen() {
 }
 
 console.log(gen().next()); // { value: "a", done: false }
-[a, b, c] = new Set(["a", "b", "c"]);
 
+[a, b, c] = new Set(["a", "b", "c"]);
 console.log(a); // "a"
 ```
 
@@ -206,15 +206,18 @@ const obj = {
     };
   },
 };
+
 const [b] = obj;
 // Returning 1
 // Closing
+
 const [a, b, c] = obj;
 // Returning 1
 // Returning 2
 // Returning 3
 // Already reached the end (the last call returned `done: true`),
 // so `return` is not called
+
 for (const b of obj) {
   break;
 }
@@ -250,6 +253,7 @@ const myIterable = {
     yield 3;
   },
 };
+
 console.log([...myIterable]); // [1, 2, 3]
 ```
 
@@ -273,7 +277,9 @@ function makeIterator(array) {
     },
   };
 }
-const it = makeIterator(["yo", "ya"]);
+
+const it = makeIterator(["yo", "ya"]);\
+
 console.log(it.next().value); // 'yo'
 console.log(it.next().value); // 'ya'
 console.log(it.next().done); // true
@@ -293,7 +299,9 @@ function idMaker() {
     },
   };
 }
+
 const it = idMaker();
+
 console.log(it.next().value); // 0
 console.log(it.next().value); // 1
 console.log(it.next().value); // 2
@@ -309,17 +317,22 @@ function* makeSimpleGenerator(array) {
     yield array[nextIndex++];
   }
 }
+
 const gen = makeSimpleGenerator(["yo", "ya"]);
+
 console.log(gen.next().value); // 'yo'
 console.log(gen.next().value); // 'ya'
 console.log(gen.next().done); // true
+
 function* idMaker() {
   let index = 0;
   while (true) {
     yield index++;
   }
 }
+
 const it = idMaker();
+
 console.log(it.next().value); // 0
 console.log(it.next().value); // 1
 console.log(it.next().value); // 2
@@ -333,14 +346,17 @@ console.log(it.next().value); // 2
 ```js
 class SimpleClass {
   #data;
+
   constructor(data) {
     this.#data = data;
   }
+
   [Symbol.iterator]() {
     // Use a new index for each iterator. This makes multiple
     // iterations over the iterable safe for non-trivial cases,
     // such as use of break or nested looping over the same iterable.
     let index = 0;
+
     return {
       // Note: using an arrow function allows `this` to point to the
       // one of `[@@iterator]()` instead of `next()`
@@ -354,7 +370,9 @@ class SimpleClass {
     };
   }
 }
+
 const simple = new SimpleClass([1, 2, 3, 4, 5]);
+
 for (const val of simple) {
   console.log(val); // 1 2 3 4 5
 }
@@ -369,7 +387,7 @@ const someString = "hi";
 console.log(typeof someString[Symbol.iterator]); // "function"
 ```
 
-`String` 的[默认迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)会逐步地返回字符串的代码点流：
+`String` 的[默认迭代器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)会逐个地返回字符串的代码点：
 
 ```js
 const iterator = someString[Symbol.iterator]();
@@ -384,6 +402,7 @@ console.log(iterator.next()); // { value: undefined, done: true }
 ```js
 // need to construct a String object explicitly to avoid auto-boxing
 const someString = new String("hi");
+
 someString[Symbol.iterator] = function () {
   return {
     // this is the iterator object, returning a single element (the string "bye")
