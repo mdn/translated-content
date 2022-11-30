@@ -1,17 +1,8 @@
 ---
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-tags:
-  - Caixa alta
-  - JavaScript
-  - Letras maúsculas
-  - Método(2)
-  - Protótipo(2)
-  - Referência(2)
-  - String
-  - toUpperCase()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
+
 {{JSRef}}
 
 O método `toUpperCase()` retorna o valor da string original convertido em letras maiúsculas.

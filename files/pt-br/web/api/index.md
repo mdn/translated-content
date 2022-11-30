@@ -1,14 +1,8 @@
 ---
 title: APIs da Web
 slug: Web/API
-tags:
-  - API
-  - DOM
-  - JavaScript
-  - Referencia
-  - Web
-translation_of: Web/API
 ---
+
 Ao escrever código para a Web, há muitas APIs da Web disponíveis. Abaixo está uma lista de todas as APIs e interfaces (tipos de objeto) que você pode usar ao desenvolver seu aplicativo ou site da Web.
 
 As APIs da Web são normalmente usadas com JavaScript, embora isso nem sempre tenha que ser o caso.

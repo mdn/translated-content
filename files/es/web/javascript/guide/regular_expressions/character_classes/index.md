@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres
 ---
+
 {{JsSidebar("Guía de JavaScript")}}
 
 Las clases de caracteres distinguen tipos de caracteres como, por ejemplo, distinguen entre letras y dígitos.
@@ -110,7 +111,7 @@ La siguiente tabla también está duplicada en {{JSxRef("../Guide/Regular_Expres
      <tr>
       <td><code>\c<em>X</em></code></td>
       <td>
-       <p>Coincide con un caracter de control mediante {{Interwiki("wikipedia", "Caret_notation", "notación de intercalación")}}, donde "X" es una letra de la A a la Z (correspondiente a los puntos de código <code>U+0001</code><em>-</em><code>U+001F</code>). Por ejemplo, <code>/\cM/</code> encuentra "\r" en "\r\n".</p>
+       <p>Coincide con un caracter de control mediante [notación de intercalación](https://es.wikipedia.org/wiki/Caret_notation), donde "X" es una letra de la A a la Z (correspondiente a los puntos de código <code>U+0001</code><em>-</em><code>U+001F</code>). Por ejemplo, <code>/\cM/</code> encuentra "\r" en "\r\n".</p>
       </td>
      </tr>
      <tr>
@@ -187,9 +188,7 @@ Nota para los editores de MDN: no intentes agregar ejemplos divertidos con emoji
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-characterclass', 'RegExp: Clases de caracteres')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

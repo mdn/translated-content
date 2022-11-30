@@ -1,7 +1,6 @@
 ---
 title: MutationObserver.MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
-translation_of: Web/API/MutationObserver/MutationObserver
 ---
 {{APIRef("DOM WHATWG")}}
 
@@ -66,7 +65,7 @@ var observer = new MutationObserver(callback);
 observer.observe(targetNode, observerOptions);
 ```
 
-El subárbol deseado se localiza buscando un elemento cuyo ID es "someElement". Un conjunto de opciones para el "observer" es establecido en el registro `observerOptions`. En él, especificamos los valores `true`tanto para `childList` como `attributes`, para obtener la información deseada.
+El subárbol deseado se localiza buscando un elemento cuyo ID es "someElement". Un conjunto de opciones para el "observer" es establecido en el registro `observerOptions`. En él, especificamos los valores `true` tanto para `childList` como `attributes`, para obtener la información deseada.
 
 Posteriormente instanciamos el objeto observer, especificando la función `callback()`, e iniciamos la observación de los nodos del DOM llamando al método `observe()`, pasandole el nodo y las opciones.
 
@@ -74,9 +73,7 @@ Desde este momento y hasta que se llame al método {{domxref("MutationObserver.d
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('DOM WHATWG', '#dom-mutationobserver-mutationobserver', 'MutationObserver()')}} | {{ Spec2('DOM WHATWG') }} |            |
+{{Specifications}}
 
 ## Compatibilidad
 

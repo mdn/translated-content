@@ -1,20 +1,13 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-tags:
-  - CSS
-  - Layout
-  - Necesita Compatibilidad con Navegadores Móviles
-  - Referencia
-  - Tipos de datos CSS
-  - Web
-translation_of: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 ## Resumen
 
-`El tipo de datos`[CSS](/es/docs/Web/CSS)`<color>` denota un color en el [sRGB color space](http://en.wikipedia.org/wiki/SRGB). Un color puede ser descrito de cualquiera de las siguiente maneras:
+El tipo de datos [CSS](/es/docs/Web/CSS) **`<color>`** denota un color en el [sRGB color space](http://en.wikipedia.org/wiki/SRGB). Un color puede ser descrito de cualquiera de las siguiente maneras:
 
 - Usando una _palabra clave_.
 - Usando el sistema [RGB cubic-coordinate](http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation) (usando #-hexadecimal o las notaciones funcionales `rgb()` y `rgba()` )
@@ -30,7 +23,7 @@ Aunque los valores de colores en CSS son definidos de manera precisa existe la p
 
 ## Interpolación
 
-Los valores del tipo de datos CSS `<color>` pueden ser interpolados para lograr animaciones o para crear valores `<gradient>.`En este caso son interpolados en cada uno de sus componentes rojo, verde y azul, conteniendo, cada uno de ellos, un número decimal con coma flotante. Debe tenerse en cuenta que la interpolación del color sucede en el [alpha-premultiplied sRGBA color space](http://www.gimp.org/docs/plug-in/appendix-alpha.html) para evitar que aparezcan grises inesperados. En las animaciones, la velocidad de la interpolación viene determinada por la [timing function](/es/docs/Web/CSS/timing-function) asociada con la animación.
+Los valores del tipo de datos CSS `<color>` pueden ser interpolados para lograr animaciones o para crear valores `<gradient>`. En este caso son interpolados en cada uno de sus componentes rojo, verde y azul, conteniendo, cada uno de ellos, un número decimal con coma flotante. Debe tenerse en cuenta que la interpolación del color sucede en el [alpha-premultiplied sRGBA color space](http://www.gimp.org/docs/plug-in/appendix-alpha.html) para evitar que aparezcan grises inesperados. En las animaciones, la velocidad de la interpolación viene determinada por la [timing function](/es/docs/Web/CSS/timing-function) asociada con la animación.
 
 ## Valores
 
@@ -73,7 +66,7 @@ Hay algunas advertencias a tener en cuenta al usar las palabras clave relativas 
   </thead>
   <tbody>
     <tr style="position: relative">
-      <td rowspan="16">{{SpecName("CSS1")}}</td>
+      <td rowspan="16"><a href="https://www.w3.org/TR/CSS1/">CSS Level 1</a></td>
       <td style="background: #000"></td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>
@@ -170,14 +163,14 @@ Hay algunas advertencias a tener en cuenta al usar las palabras clave relativas 
       <td style="background: aqua"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS2.1")}}</td>
+      <td><a href="https://www.w3.org/TR/CSS2/">CSS Level 2 (Revision 1)</a></td>
       <td style="background: #ffa500"></td>
       <td style="text-align: center"><code>orange</code></td>
       <td><code>#ffa500</code></td>
       <td style="background: orange"></td>
     </tr>
     <tr>
-      <td rowspan="128">{{SpecName("CSS3 Colors")}}</td>
+      <td rowspan="128"><a href="https://drafts.csswg.org/css-color-3/">CSS Color Module Level 3</a></td>
       <td style="background: #f0f8ff"></td>
       <td style="text-align: center"><code>aliceblue</code></td>
       <td><code>#f0f8ff</code></td>
@@ -946,7 +939,7 @@ Hay algunas advertencias a tener en cuenta al usar las palabras clave relativas 
       <td style="background: yellowgreen"></td>
     </tr>
     <tr>
-      <td>{{SpecName("CSS4 Colors")}}</td>
+      <td><a href="https://drafts.csswg.org/css-color/">CSS Color Module Level 4</a></td>
       <td style="background: #639"></td>
       <td style="text-align: center"><code>rebeccapurple</code></td>
       <td><code>#663399</code></td>
@@ -964,7 +957,7 @@ La palaba `transparent` representa un color totalmente transparente, es decir, e
 > **Nota:** **Nota histórica**
 > La palabra clave `transparent` no fue un color en CSS hasta CSS Nivel 2 (Revisión 1). Podía ser usada en lugar de un valor \<color> regular en dos propiedades CSS: {{Cssxref("background")}} y {{Cssxref("border")}}. En esencia fue añadida para permitir sobreescribir valores sólidos heredados.
 >
-> Con el soporte de la opacidad que nos proporcionan los [alpha channels](http://en.wikipedia.org/wiki/Alpha_compositing), `transparent fue redefinido como un color verdadero más en`CSS Nivel 3 permitiendo su use en cualquier sitio donde de requiera un valor`<color>` , como la propiedad {{Cssxref("color")}}.
+> Con el soporte de la opacidad que nos proporcionan los [alpha channels](http://en.wikipedia.org/wiki/Alpha_compositing), `transparent` fue redefinido como un color verdadero más en CSS Nivel 3 permitiendo su use en cualquier sitio donde de requiera un valor `<color>` , como la propiedad {{Cssxref("color")}}.
 
 ### `Palabra clave currentColor`
 
@@ -1169,9 +1162,9 @@ No todos los colores de sistema son soportados por todos los sistemas. {{depreca
 - \-moz-CellHighlightText
   - : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight background` color. See also `-moz-html-CellHighlightText`.
 - \-moz-Combobox
-  - : {{Gecko_minversion_inline("1.9.2")}} Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
+  - : Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
 - \-moz-ComboboxText
-  - : {{Gecko_minversion_inline("1.9.2")}} Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
+  - : Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
 - \-moz-Dialog
   - : Color de fondo para cuadros de diálogo. Debe usarse con el color de frente `-moz-DialogText`
 - \-moz-DialogText
@@ -1180,16 +1173,16 @@ No todos los colores de sistema son soportados por todos los sistemas. {{depreca
 
   \-moz-EvenTreeRow
 
-  - : {{gecko_minversion_inline("1.9")}} Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
+  - : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
 
 - \-moz-Field
   - : Text field background color. Should be used with the `-moz-FieldText` foreground color.
 - \-moz-FieldText
   - : Text field text color. Should be used with the `-moz-Field`, `-moz-EvenTreeRow`, or `-moz-OddTreeRow` background color.
 - \-moz-html-CellHighlight
-  - : {{gecko_minversion_inline("1.9")}} Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
+  - : Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
 - \-moz-html-CellHighlightText
-  - : {{gecko_minversion_inline("1.9")}} Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
+  - : Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
 - \-moz-mac-accentdarkestshadow
 
   \-moz-mac-accentdarkshadow
@@ -1206,11 +1199,9 @@ No todos los colores de sistema son soportados por todos los sistemas. {{depreca
 
   \-moz-mac-chrome-active
 
-  - : {{Gecko_minversion_inline("1.9.1")}}
+  \-moz-mac-chrome-inactive
 
-- \-moz-mac-chrome-inactive
-  - : {{Gecko_minversion_inline("1.9.1")}}
-- \-moz-mac-focusring
+  \-moz-mac-focusring
 
   \-moz-mac-menuselect
 
@@ -1225,26 +1216,26 @@ No todos los colores de sistema son soportados por todos los sistemas. {{depreca
 - \-moz-MenuHoverText
   - : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color.
 - \-moz-MenuBarText
-  - : {{Gecko_minversion_inline("1.9.2")}} Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
+  - : Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
 - \-moz-MenuBarHoverText
   - : Color for hovered text in menu bars. Often similar to `-moz-MenuHoverText`. Should be used on top of `-moz-MenuHover` background.
 - \-moz-nativehyperlinktext
-  - : {{Gecko_minversion_inline("1.9.1")}} Default platform hyperlink color.
+  - : Default platform hyperlink color.
 - \-moz-OddTreeRow
-  - : {{gecko_minversion_inline("1.9")}} Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
+  - : Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
 - \-moz-win-communicationstext
-  - : {{gecko_minversion_inline("1.9")}} Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;`.
+  - : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;`.
 - \-moz-win-mediatext
-  - : {{gecko_minversion_inline("1.9")}} Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox`.
+  - : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox`.
 
 ### Extensiones de Mozilla a las Preferencias de Color
 
 - \-moz-activehyperlinktext
   - : Preferencias de usuario para el color de texto de los enlaces activos. Debe ser usado con el color de fondo por defecto del documento.
 - \-moz-default-background-color
-  - : {{Gecko_minversion_inline("5.0")}} Preferencias de usuario para el color de fondo del documento.
+  - : Preferencias de usuario para el color de fondo del documento.
 - \-moz-default-color
-  - : {{Gecko_minversion_inline("5.0")}} Preferencias de usuario para el color del texto.
+  - : Preferencias de usuario para el color del texto.
 - \-moz-hyperlinktext
   - : Preferencias de usuario para el color del texto de los enlaces sin visitar. Debe ser usado con el color de fondo por defecto del documento.
 - \-moz-visitedhyperlinktext
@@ -1252,12 +1243,7 @@ No todos los colores de sistema son soportados por todos los sistemas. {{depreca
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario                                                                                                             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS4 Colors')}} | Añadido el color `rebeccapurple`.                                                                                      |
-| {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}                 | {{Spec2('CSS3 Colors')}} | Colores de sistema depreciados; añadidos colores SVG; añadidos las notaciones funcionales `rgba()`, `hsl()`, `hsla().` |
-| {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}} | {{Spec2('CSS2.1')}}         | Añadidos el naranja y los colores de sistema.                                                                          |
-| {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}                         | {{Spec2('CSS1')}}         | Definición Inicial                                                                                                     |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 

@@ -1,8 +1,8 @@
 ---
 title: Navigator.getUserMedia
 slug: Web/API/Navigator/getUserMedia
-translation_of: Web/API/Navigator/getUserMedia
 ---
+
 Pide al usuario permiso para usar un dispositivo multimedia como una cámara o micrófono. Si el usuario concede este permiso, el successCallback es invocado en la aplicación llamada con un objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream) como argumento.
 
 ## Sintaxis
@@ -65,7 +65,7 @@ Si el valor o el miembro no es especificado en el objeto, el valor del miembro p
 
 ### successCallback
 
-La función getUserMedia llamará a la función especificada en el `successCallback`con el objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream) que contenga la secuencia multimedia. Puedes asignar el objeto al elemento apropiado y trabajar con él, como se muestra en el siguiente ejemplo:
+La función getUserMedia llamará a la función especificada en el `successCallback` con el objeto [LocalMediaStream](/es/docs/WebRTC/MediaStream_API#LocalMediaStream) que contenga la secuencia multimedia. Puedes asignar el objeto al elemento apropiado y trabajar con él, como se muestra en el siguiente ejemplo:
 
 ```
 function(localMediaStream) {

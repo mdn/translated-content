@@ -1,13 +1,9 @@
 ---
 title: Peticiones condicionales en HTTP
 slug: Web/HTTP/Conditional_requests
-tags:
-  - Guía
-  - HTTP
-  - Peticiones condicionales
-translation_of: Web/HTTP/Conditional_requests
 original_slug: Web/HTTP/Peticiones_condicionales
 ---
+
 {{HTTPSidebar}}
 
 HTTP tiene un concepto de peticiones condicionales, donde el resultado, e incluso el éxito de una petición, se puede cambiar comparando los recursos afectados con el valor de un validador. Dichas peticiones pueden ser útiles para validar el contenido de un caché, y evitar un control inútil, para verificar la integridad de un documento, como al reanudar una descarga, o al evitar perder actualizaciones al cargar o modificar un documento en el servidor.

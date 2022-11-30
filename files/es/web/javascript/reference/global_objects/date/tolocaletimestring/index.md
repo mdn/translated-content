@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toLocaleTimeString
 ---
+
 {{JSRef}}
 
 El método **`toLocaleTimeString()`** devuelve una cadena con una representación de la parte del tiempo de esta fecha sensible al idioma. Los nuevos argumentos `locales` y `options` le permiten a la aplicación especificar el idioma cuyas convenciones de formato deben usarse y personalizan el comportamiento de esta función. En implementaciones antiguas que ignoran los argumentos `locales` y `options` la localidad usada y la forma de la cadena devuelta son completamente dependientes de la implementación.
@@ -125,10 +126,7 @@ Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsx
 
 ## Especificaciones
 
-| Specification                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}}         |
-| {{SpecName('ES Int Draft', '#sup-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

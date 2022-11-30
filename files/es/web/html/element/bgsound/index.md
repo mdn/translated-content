@@ -1,14 +1,9 @@
 ---
 title: <bgsound>
 slug: Web/HTML/Element/bgsound
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/bgsound
 original_slug: Web/HTML/Elemento/bgsound
 ---
+
 {{non-standard_header}}
 
 ## Resumen
@@ -50,4 +45,4 @@ Puedes escribir bgsound con una etiqueta de cierre automático \<bgsound /> . Ah
 
 - {{htmlelement("audio")}}, el cual es el elemento estándar para incrustar audio en un documento.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -3,7 +3,8 @@ title: values
 slug: Web/SVG/Attribute/values
 translation_of: Web/SVG/Attribute/values
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
+
+« [SVG Attribute reference home](/en/SVG/Attribute)
 
 Атрибут `values` имеет два значения в зависимости от используемого контекста.
 
@@ -36,7 +37,7 @@ translation_of: Web/SVG/Attribute/values
 
 | Categories         | _None_                                                                                        |
 | ------------------ | --------------------------------------------------------------------------------------------- |
-| Value              | \<list> \| [\<number>](/en/SVG/Content_type#Number "en/SVG/Content_type#Paint")               |
+| Value              | \<list> \| [\<number>](/en/SVG/Content_type#Number)               |
 | Animatable         | Yes                                                                                           |
 | Normative document | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#feColorMatrixValuesAttribute) |
 
@@ -46,5 +47,5 @@ translation_of: Web/SVG/Attribute/values
 
 The following elements can use the `values` attribute
 
-- [Animation elements](/en/SVG/Element#Animation "en/SVG/Element#Animation") »
+- [Animation elements](/en/SVG/Element#Animation)
 - {{ SVGElement("feColorMatrix") }}

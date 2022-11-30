@@ -4,6 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_usage
 translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 original_slug: Web/HTML/Canvas/Tutorial/Basic_usage
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 {{HTMLElement ( "canvas")}} {{Glossary ( "HTML")}} 엘리먼트를 살펴보는 것으로 이 튜토리얼을 시작해 보겠습니다. 이 페이지의 끝에서 캔버스 2D 컨텍스트를 설정하는 방법을 알게되고, 여러분의 브라우저에서 첫 번째 예제를 그리게 될 것입니다.

@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
-translation_of: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 La interfaz **`CanvasRenderingContext2D`** proporciona el contexto de renderizado 2D para la superficie de dibujo de un elemento {{ HTMLElement("canvas") }}.
@@ -129,7 +129,7 @@ The following methods can be used to manipulate paths of objects.
 - {{domxref("CanvasRenderingContext2D.ellipse()")}} {{experimental_inline}}
   - : Adds an ellipse to the path which is centered at _(x, y)_ position with the radii _radiusX_ and _radiusY_ starting at _startAngle_ and ending at _endAngle_ going in the given direction by _anticlockwise_ (defaulting to clockwise).
 - {{domxref("CanvasRenderingContext2D.rect()")}}
-  - : Creates a path for a rectangle at\_ _position _(x, y)_ with a size that is determined by \_width_ and _height_.
+  - : Creates a path for a rectangle at _position (x, y)_ with a size that is determined by _width_ and _height_.
 
 ## Drawing paths
 
@@ -276,26 +276,26 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 #### Prefixed APIs
 
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
-  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}. {{ gecko_minversion_inline("7.0") }}
+  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : Sets or gets the current inversed transformation matrix. {{ gecko_minversion_inline("7.0") }}
+  - : Sets or gets the current inversed transformation matrix.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozFillRule`
   - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
   - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDash`
-  - : An array which specifies the lengths of alternating dashes and gaps {{ gecko_minversion_inline("7.0") }}. Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.
+  - : An array which specifies the lengths of alternating dashes and gaps. Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDashOffset`
-  - : Specifies where to start a dash array on a line. {{ gecko_minversion_inline("7.0") }}. Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
+  - : Specifies where to start a dash array on a line. Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`
   - : Introduced in in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozDrawText()`
+- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDrawText()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.strokeText()")}} or {{domxref("CanvasRenderingContext2D.fillText()")}} instead.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozMeasureText()`
+- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozMeasureText()`
   - : This method was introduced in Gecko 1.9 and is unimplemented starting with Gecko 7.0. Use {{domxref("CanvasRenderingContext2D.measureText()")}} instead.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozPathText()`
+- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozPathText()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
-- {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozTextAlongPath()`
+- {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextAlongPath()`
   - : This method was introduced in Gecko 1.9 and is removed starting with Gecko 7.0.
 
 #### Internal APIs (chrome-context only)
@@ -312,11 +312,9 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 - {{non-standard_inline}} `CanvasRenderingContext2D.msFillRule`
   - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#2dcontext:canvasrenderingcontext2d", "CanvasRenderingContext2D")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

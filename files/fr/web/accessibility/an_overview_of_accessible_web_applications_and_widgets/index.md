@@ -88,9 +88,12 @@ Les changements représentationnels incluent l'utilisation du CSS pour changer l
 
 Les attributs pour décrire l’état actuel d'un widget sont fournis, par exemple&nbsp;:
 
-- **`aria-checked`** indique l’état d'une case à cocher ou d'un bouton radio,
-- **`aria-disabled`** indique qu’un élément est visible, mais désactivé,
-- **`aria-expanded`** indique qu’un élément est déroulé.
+- `aria-checked`
+  - : indique l’état d'une case à cocher ou d'un bouton radio,
+- `aria-disabled`
+  - : indique qu’un élément est visible, mais désactivé,
+- `aria-expanded`
+  - : indique qu’un élément est déroulé.
 
 La liste n’est pas exhaustive. Pour voir la liste complète, consulter [les spécifications des états et propriétés ARIA)](https://www.w3.org/TR/wai-aria-1.1/#introstates).
 
@@ -138,7 +141,7 @@ var showTip = function(el) {
 
 ARIA permet aux développeurs de déclarer un rôle sémantique pour un élément qui produirait des sémantiques fausses. Par exemple, quand une liste non ordonnée est utilisée pour créer un menu, {{ HTMLElement("ul") }} devrait avoir un **`role`** de `menubar` et chaque {{ HTMLElement("li") }} devrait avoir un **`role`** de `menuitem`. Le **`role`** d'un élément ne doit pas changer. À la place, il faut supprimer l'élément original et le remplacer par un nouveau **`role`**.
 
-Considérons une zone d’écriture, soit une zone qui permet à l’utilisateur d’éditer une partie de son texte, sans changer de contexte. Cette zone a un mode "vue", dans lequel le texte n’est pas éditable, et un mode "édition", dans lequel le texte peut être modifié. Un développeur peut être tenté d’implémenter le mode "vue" avec un texte en lecture seule via l’élément {{ HTMLElement("input") }} et en configurant le  **`role`**  ARIA à  `button`, puis passe au mode "édition" en rendant l’élément écrivable et en supprimant le **`role`** attribué dans le mode "édition" (puisque les éléments de type {{ HTMLElement("input") }} ont leur propre rôle sémantique).
+Considérons une zone d’écriture, soit une zone qui permet à l’utilisateur d’éditer une partie de son texte, sans changer de contexte. Cette zone a un mode "vue", dans lequel le texte n’est pas éditable, et un mode "édition", dans lequel le texte peut être modifié. Un développeur peut être tenté d’implémenter le mode "vue" avec un texte en lecture seule via l’élément {{ HTMLElement("input") }} et en configurant le **`role`** ARIA à `button`, puis passe au mode "édition" en rendant l’élément écrivable et en supprimant le **`role`** attribué dans le mode "édition" (puisque les éléments de type {{ HTMLElement("input") }} ont leur propre rôle sémantique).
 
 Ne faites pas ça. À la place, il vaut mieux implémenter le mode "vue" avec un autre élément, comme {{ HTMLElement("div") }} ou {{ HTMLElement("span") }} avec un **`role`** de `button`, et le mode "édition" avec un élément texte {{ HTMLElement("input") }}.
 

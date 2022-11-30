@@ -4,11 +4,12 @@ slug: Web/HTTP/Headers/If-Match
 translation_of: Web/HTTP/Headers/If-Match
 original_slug: Web/HTTP/Заголовки/If-Match
 ---
+
 {{HTTPSidebar}}
 
 Заголовок HTTP-запроса **`If-Match`** делает запрос условным. Для методов {{HTTPMethod("GET")}} и {{HTTPMethod("HEAD")}} сервер отправляет запрошенный ресурс только в том случае, если он соответствует одному из перечисленных **ETags**. Для {{HTTPMethod("PUT")}} и других небезопасных методов он будет загружать только ресурс в этом случае.
 
-Сравнение с хранимым {{HTTPHeader("ETag")}} использует сильный алгоритм сравнения, то есть два файла считаются одинаковыми байтами только байтом. Это ослабляется, когда префикс **`W/`**используется перед **ETag.**
+Сравнение с хранимым {{HTTPHeader("ETag")}} использует сильный алгоритм сравнения, то есть два файла считаются одинаковыми байтами только байтом. Это ослабляется, когда префикс **`W/`** используется перед **ETag**.
 
 Существует два распространённых варианта использования:
 
@@ -68,5 +69,5 @@ If-Match: *
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-None-Match")}}
-- {{HTTPStatus("416")}}` Range Not Satisfiable`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("416")}} `Range Not Satisfiable`
+- {{HTTPStatus("412")}} `Precondition Failed`

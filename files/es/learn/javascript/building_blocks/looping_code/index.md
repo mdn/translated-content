@@ -1,9 +1,9 @@
 ---
 title: Bucles
 slug: Learn/JavaScript/Building_blocks/Looping_code
-translation_of: Learn/JavaScript/Building_blocks/Looping_code
 original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 Los lenguajes de programación son muy útiles para completar rápidamente tareas repetitivas, desde múltimples cálculos básicos hasta cualquier otra situación en donde tengas un montón de elementos de trabajo similares que completar. Aquí vamos a ver las estructuras de bucles disponibles en JavaScript que pueden manejar tales necesidades.
@@ -802,7 +802,7 @@ We would recommend `for`, at least to begin with, as it is probably the easiest 
 
 This article has revealed to you the basic concepts behind, and different options available when, looping code in JavaScript. You should now be clear on why loops are a good mechanism for dealing with repetitive code, and be raring to use them in your own examples!
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/Learn#Contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/es/Learn#Contact_us) to ask for help.
 
 ## See also
 

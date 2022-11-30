@@ -1,11 +1,8 @@
 ---
 title: clear
 slug: Web/CSS/clear
-tags:
-  - CSS
-  - Reference
-translation_of: Web/CSS/clear
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/CSS) **`clear`** especifica si un elemento puede estar al lado de elementos [flotantes](/es/docs/CSS/float) que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad `clear` aplica a ambos elementos flotantes y no flotantes.
@@ -207,11 +204,7 @@ p {
 
 ## Especificaciones
 
-| Specification                                                                                    | Status                                           | Comment                                                     |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ----------------------------------------------------------- |
-| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Agrega los valores inline-start y inline-end                |
-| {{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}                 | {{Spec2('CSS2.1')}}                         | Sin cambios significativos, aunque se aclaran los detalles. |
-| {{SpecName('CSS1', '#clear', 'clear')}}                                             | {{Spec2('CSS1')}}                         | Definición inicial                                          |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -1,10 +1,8 @@
 ---
 title: min-width
 slug: Web/CSS/min-width
-tags:
-  - Referencia_CSS
-translation_of: Web/CSS/min-width
 ---
+
 {{ CSSRef() }}
 
 ### Sumario
@@ -57,4 +55,4 @@ form{min-width: 0;}
 
 ### Ver también
 
-[box model](es/CSS/box_model), {{ Cssxref("min-height") }}, {{ Cssxref("-moz-box-sizing") }}, {{ Cssxref("width") }}, {{ Cssxref("max-width") }}
+[box model](/es/CSS/box_model), {{ Cssxref("min-height") }}, {{ Cssxref("-moz-box-sizing") }}, {{ Cssxref("width") }}, {{ Cssxref("max-width") }}

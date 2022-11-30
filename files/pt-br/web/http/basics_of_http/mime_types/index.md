@@ -1,9 +1,9 @@
 ---
 title: MIME types
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 original_slug: Web/HTTP/Basico_sobre_HTTP/MIME_types
 ---
+
 {{HTTPSidebar}}
 
 O **MIME type** é o mecanismo para dizer ao cliente a variedade de documentos transmitidos: a extensão de um nome de arquivo não tem significado na web. Portanto, é importante que o servidor esteja configurado corretamente, de modo que o _MIME-type_ correto seja transmitido com cada documento. Os navegadores costumam usar o _MIME-type_ para determinar qual ação usar como padrão para fazer quando um recurso é obtido.

@@ -1,8 +1,8 @@
 ---
 title: for
 slug: Web/JavaScript/Reference/Statements/for
-translation_of: Web/JavaScript/Reference/Statements/for
 ---
+
 {{jsSidebar("Statements")}}
 
 A instrução `for` cria um loop que consiste em três expressões opcionais, dentro de parênteses e separadas por ponto e vírgula, seguidas por uma declaração ou uma sequência de declarações executadas em sequência.

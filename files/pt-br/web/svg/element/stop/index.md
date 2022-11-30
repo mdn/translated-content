@@ -1,12 +1,8 @@
 ---
 title: stop
 slug: Web/SVG/Element/stop
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/stop
 ---
+
 {{SVGRef}}
 
 A rampa de cores para utilizar em um gradiente é definido pelo elemento `stop` que é elemento filho do elemento {{SVGElement("linearGradient")}} ou do elemento {{SVGElement("radialGradient")}}.
@@ -19,7 +15,7 @@ A rampa de cores para utilizar em um gradiente é definido pelo elemento `stop` 
 
 ```html
 <svg width="100%" height="100%" viewBox="0 0 80 40"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="https://www.w3.org/2000/svg">
 
   <defs>
     <linearGradient id="MyGradient">

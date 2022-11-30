@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 
 Элемент {{glossary("Head", "head")}} HTML-документа не отображается на странице в веб-браузере. Он содержит такую информацию, как:
@@ -69,20 +70,20 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 ### Активное изучение: разбор простого примера
 
-1.  Чтобы приступить к активному изучению, скачайте страницу [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) из нашего GitHub-репозитория. Это можно сделать двумя способами:
+1. Чтобы приступить к активному изучению, скачайте страницу [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) из нашего GitHub-репозитория. Это можно сделать двумя способами:
 
-    1.  Скопируйте и вставьте код страницы в новый текстовый файл в своём редакторе кода, затем сохраните его в любом удобном месте.
-    2.  Нажмите на странице кнопку "Raw", нажмите _Файл > Сохранить Как..._ в меню браузера и выберите папку для сохранения.
+    1. Скопируйте и вставьте код страницы в новый текстовый файл в своём редакторе кода, затем сохраните его в любом удобном месте.
+    2. Нажмите на странице кнопку "Raw", нажмите _Файл > Сохранить Как..._ в меню браузера и выберите папку для сохранения.
 
-2.  Откройте файл в браузере. Вы увидите что-то вроде этого:
+2. Откройте файл в браузере. Вы увидите что-то вроде этого:
 
-    ![A simple web page with the title set to <title> element, and the <h1> set to <h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)Теперь должно стать совершенно ясно, в чём разница между `<h1>` и `<title>`!
+    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)Теперь должно стать совершенно ясно, в чём разница между `<h1>` и `<title>`!
 
-3.  Откройте код страницы в редакторе, измените содержимое элементов и обновите страницу в браузере. Развлекайтесь!
+3. Откройте код страницы в редакторе, измените содержимое элементов и обновите страницу в браузере. Развлекайтесь!
 
 Содержимое элемента `<title>` используется и в других местах. Например, при добавлении страницы в избранное (_Bookmarks > Bookmark This Page_ в Firefox), текст из `<title>` предлагается в качестве названия закладки.
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the <title> element ](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
 
 Текст из `<title>` также появляется в результатах поиска, как мы скоро увидим.
 
@@ -137,9 +138,9 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 Описание из `<meta name="description">` используется на страницах поисковой выдачи. Проведём небольшое исследование такого сценария.
 
-1.  Перейдите на[ главную страницу Mozilla Developer Network](https://developer.mozilla.org/en-US/).
-2.  Откройте исходный код страницы (кликните правой кнопкой мыши и выберите _Просмотреть код_ в контекстном меню.)
-3.  Найдите тег meta с описанием. Он выглядит так:
+1. Перейдите на [главную страницу Mozilla Developer Network](/en-US/).
+2. Откройте исходный код страницы (кликните правой кнопкой мыши и выберите _Просмотреть код_ в контекстном меню.)
+3. Найдите тег meta с описанием. Он выглядит так:
 
     ```html
     <meta name="description" content="Веб-документация на MDN
@@ -149,7 +150,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
     для разработчиков о таких продуктах Mozilla, как Инструменты разработчика Firefox.">
     ```
 
-4.  Теперь найдите "Mozilla Developer Network" в своём поисковике (мы использовали Google). Обратите внимание, что описание и название из `<meta>` и `<title>` используется в результатах поиска, — мы не зря указали их!
+4. Теперь найдите "Mozilla Developer Network" в своём поисковике (мы использовали Google). Обратите внимание, что описание и название из `<meta>` и `<title>` используется в результатах поиска, — мы не зря указали их!
 
 ![Результат поиска в Google](https://mdn.mozillademos.org/files/17061/Updated_search_result__ru.jpg)
 
@@ -172,7 +173,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 <meta property="og:title" content="MDN Web Docs">
 ```
 
-Один из результатов добавления этих метаданных в том, что когда вы добавите ссылку MDN Web Docs на facebook, она отобразится с изображением и описанием, улучшая опыт взаимодействия _[(User eXperience, UX](https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D1%8B%D1%82_%D0%B2%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F))\_.
+Один из результатов добавления этих метаданных в том, что когда вы добавите ссылку MDN Web Docs на facebook, она отобразится с изображением и описанием, улучшая опыт взаимодействия _[(User eXperience, UX](https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D1%8B%D1%82_%D0%B2%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F))_.
 
 ![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](https://mdn.mozillademos.org/files/12349/facebook-output.png)У Twitter также есть собственный формат метаданных, с помощью которого создаётся аналогичный эффект, при отображении URL сайта на twitter.com:
 
@@ -188,8 +189,8 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 Чтобы добавить на страницу favicon:
 
-1.  Сохраните изображение в формате `.ico` (многие браузеры поддерживают и в более привычных форматах, таких как `.gif` или `.png`) в папку со своим документом. Старые браузеры, например, Internet Explorer 6, поддерживают только формат `.ico`
-2.  Добавьте ссылку на иконку в `<head>` документа:
+1. Сохраните изображение в формате `.ico` (многие браузеры поддерживают и в более привычных форматах, таких как `.gif` или `.png`) в папку со своим документом. Старые браузеры, например, Internet Explorer 6, поддерживают только формат `.ico`
+2. Добавьте ссылку на иконку в `<head>` документа:
 
     ```html
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -234,9 +235,9 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 ### Активное изучение: добавляем на страницу CSS и JavaScript
 
-1.  Для этого упражнения скачайте файлы [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) и [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) и положите их в одну папку на своём компьютере. Проверьте, что они сохранились с правильными именами и расширениями.
-2.  Откройте HTML в браузере и текстовом редакторе.
-3.  Следуя изученному материалу, добавьте на страницу скрипт и стиль с помощью элементов {{htmlelement("link")}} и {{htmlelement("script")}}.
+1. Для этого упражнения скачайте файлы [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) и [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) и положите их в одну папку на своём компьютере. Проверьте, что они сохранились с правильными именами и расширениями.
+2. Откройте HTML в браузере и текстовом редакторе.
+3. Следуя изученному материалу, добавьте на страницу скрипт и стиль с помощью элементов {{htmlelement("link")}} и {{htmlelement("script")}}.
 
 Если всё получилось, когда вы сохраните HTML и обновите страницу в браузере, вы увидите кое-что новенькое:
 

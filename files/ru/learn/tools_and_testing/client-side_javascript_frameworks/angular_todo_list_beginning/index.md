@@ -16,6 +16,7 @@ translation_of: >-
 original_slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -69,7 +70,7 @@ export interface Item {
 ```
 
 `Item` как `interface` описывает `item` как объект, чтобы приложение могло понимать, что такое `item` и как с ним взаимодействовать.
-Для нашего списка дел,`item` это объект у которого есть описание (description) и он может быть выполнен (done).
+Для нашего списка дел, `item` это объект у которого есть описание (description) и он может быть выполнен (done).
 
 ## Добавление логики в AppComponent
 
@@ -175,7 +176,7 @@ addItem(description: string) {
 }
 ```
 
-Метод `addItem()` принимает элемент, который предоставляет пользователь, и добавляет его в массив, когда пользователь нажимает кнопку **Add**.`addItem()` использует метод массива `unshift()` чтобы добавить новый элемент в начало массива и, соответственно, начало списка.
+Метод `addItem()` принимает элемент, который предоставляет пользователь, и добавляет его в массив, когда пользователь нажимает кнопку **Add**. `addItem()` использует метод массива `unshift()` чтобы добавить новый элемент в начало массива и, соответственно, начало списка.
 Вы можете использовать метод `push()`, который добавит новый элемент в конец массива и, соответственно, конец списка.
 
 Для того, чтобы использовать метод `addItem()`, отредактируйте HTML в шаблоне `AppComponent`.

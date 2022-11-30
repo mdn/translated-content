@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 original_slug: Learn/HTML/Multimedia_and_embedding/заставка_Mozilla
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 В этом задании мы проверим ваши знания приёмов, рассмотренных в статьях этого модуля, через добавление изображений и видео на забавную страницу о Mozilla!
@@ -32,11 +33,11 @@ original_slug: Learn/HTML/Multimedia_and_embedding/заставка_Mozilla
 - `firefox-addons.jpg`
 - `mozilla-dinosaur-head.png`
 
-Назовите их как-нибудь разумно, например `firefoxlogo400.png`и `firefoxlogo120.png`.
+Назовите их как-нибудь разумно, например `firefoxlogo400.png` и `firefoxlogo120.png`.
 
 Вместе с `mdn.svg`, эти изображения будут иконками для ссылок на другие ресурсы внутри секции `further-info`. Вы также дадите ссылку на логотип Firefox в шапке сайта. Сохраните все копии внутри той же папки, что и `index.html`.
 
-Затем создайте фоновую версию `red-panda.jpg `шириной 1200px и портретную версию шириной 600px, которая показывает панду более крупным планом. Снова назовите их разумно, чтобы легко распознавать их. Сохраните обе копии внутри той же папки, что и `index.html`.
+Затем создайте фоновую версию `red-panda.jpg` шириной 1200px и портретную версию шириной 600px, которая показывает панду более крупным планом. Снова назовите их разумно, чтобы легко распознавать их. Сохраните обе копии внутри той же папки, что и `index.html`.
 
 > **Примечание:** Следует обрабатывать JPG и PNG изображения, чтобы делать их как можно меньше по весу, при сохранении хорошего вида. [tinypng.com](https://tinypng.com/) - отличный сервис для этого.
 

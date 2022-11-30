@@ -1,14 +1,8 @@
 ---
 title: IDBDatabase.transaction()
 slug: Web/API/IDBDatabase/transaction
-tags:
-  - Almacenamiento
-  - Base de datos
-  - Referencia
-  - metodo
-  - transacción
-translation_of: Web/API/IDBDatabase/transaction
 ---
+
 {{ APIRef("IndexedDB") }}
 
 El método **`transaction()`** _**`[transacción]`**_ de la interfaz {{domxref("IDBDatabase")}} retorna inmediatamente un objeto de transacción ({{domxref("IDBTransaction")}}) que contiene el método {{domxref("IDBTransaction.objectStore")}}, el cual puedes usar para acceder a tu almacén de objetos.
@@ -31,7 +25,7 @@ Un objeto {{domxref("IDBTransaction")}}.
 
 | Excepción                           | Descripción                                                                                                |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| [`InvalidStateError`](/en-US/docs/) | El método `close()` ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}. |
+| [`InvalidStateError`](/es/docs/) | El método `close()` ha sido llamado previamente en esta instancia de {{domxref("IDBDatabase")}}. |
 | `NotFoundError`                     | Un almacén de objetos especificado en el parámetro `storeNames` ha sido borrado o removido.                |
 | `TypeError`                         | El valor para el parámetro `mode` es inválido.                                                             |
 | `InvalidAccessError`                | La función fue llamada con una lista vacía de nombres de almacenes.                                        |
@@ -96,7 +90,7 @@ var objectStore = transaction.objectStore("toDoList");
 
 - mode
 
-  - : _Opcional_. Los tipos de acceso que pueden desempeñarse en la transacción. Las transacciones son abiertas en uno de tres modos: `readonly [sólo lectura], readwrite [lectura/escritura],` y `readwriteflush [descarga de lectura/escritura]` (no-estándar, sólo para Firefox). El modo `versionchange [cambio de versión]`no puede ser especificado aquí. Si no provees un parámetro, el modo predeterminado será `readonly [sólo lectura]`. Para evitar ralentizar las cosas, no abras una transacción `readwrite [lectura/escritura]` a menos que realmente necesites escribir en la base de datos.
+  - : _Opcional_. Los tipos de acceso que pueden desempeñarse en la transacción. Las transacciones son abiertas en uno de tres modos: `readonly [sólo lectura], readwrite [lectura/escritura],` y `readwriteflush [descarga de lectura/escritura]` (no-estándar, sólo para Firefox). El modo `versionchange [cambio de versión]` no puede ser especificado aquí. Si no provees un parámetro, el modo predeterminado será `readonly [sólo lectura]`. Para evitar ralentizar las cosas, no abras una transacción `readwrite [lectura/escritura]` a menos que realmente necesites escribir en la base de datos.
 
     Si necesitas abrir un almacén de objetos en modo `readwrite` para cambiar los datos, usa lo siguiente:
 
@@ -108,11 +102,9 @@ var objectStore = transaction.objectStore("toDoList");
 
     > **Nota:** En Firefox, si deseas asegurar la durabilidad por alguna razón (por ejemplo, que estés almacenando datos críticos que no puedan ser recalculados después) puedes forzar una transacción a descargar al disco antes de invocar el evento `complete` creando una transacción que use un modo experimental `readwriteflush` (no-estándar) (ver {{domxref("IDBDatabase.transaction")}}). Esto actualmente es experimental, y puede usarse únicamente si la configuración `dom.indexedDB.experimental` es igual a `true` en `about:config`.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                                                                                                   | Estado                       | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-transaction-IDBTransaction-DOMString-sequence-DOMString--storeNames-IDBTransactionMode-mode', 'transaction()')}} | {{Spec2('IndexedDB')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

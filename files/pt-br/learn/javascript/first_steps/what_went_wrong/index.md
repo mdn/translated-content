@@ -1,8 +1,8 @@
 ---
 title: O que deu errado? Resolvendo problemas no JavaScript
 slug: Learn/JavaScript/First_steps/What_went_wrong
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
 Quando você construiu o jogo "Adivinhe o número" no artigo anterior, você talvez tenha descoberto que ele não funcionou. Não tema — este artigo tem como objetivo impedir que você arranque os cabelos por causa desses problemas, fornecendo-lhe algumas dicas simples de como encontrar e corrigir erros nos programas JavaScript.

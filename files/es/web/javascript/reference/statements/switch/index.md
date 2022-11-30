@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Statements/switch
 translation_of: Web/JavaScript/Reference/Statements/switch
 original_slug: Web/JavaScript/Referencia/Sentencias/switch
 ---
+
 {{jsSidebar("Statements")}}
 
 La **declaración** **`switch`** evalúa una [expresión](/es/docs/Web/JavaScript/Guide/Expressions_and_Operators), comparando el valor de esa expresión con una instancia **`case`**, y ejecuta [declaraciones](/es/docs/Web/JavaScript/Referencia/Sentencias) asociadas a ese `case`, así como las declaraciones en los `case` que siguen.
@@ -42,7 +43,7 @@ Si ocurre una coincidencia, el programa ejecuta las declaraciones asociadas corr
 
 El programa primero busca la primer instacia `case` cuya expresión se evalúa con el mismo valor de la expresión de entrada (usando [comparación estricta](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators), `===)` y luego transfiere el control a esa cláusula, ejecutando las declaraciones asociadas. Si no se encuentra una cláusula de `case` coincidente, el programa busca la cláusula `default` opcional, y si se encuentra, transfiere el control a esa instancia, ejecutando las declaraciones asociadas. Si no se encuentra una instancia `default` el programa continúa la ejecución en la instrucción siguiente al final del `switch`. Por convención, la instancia `default` es la última cláusula, pero no tiene que ser así.
 
-La declaración [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) es opcional y está asociada con cada etiqueta de `case` y asegura que el programa salga del `switch` una vez que se ejecute la instrucción coincidente y continúe la ejecución en la instrucción siguiente. Si se omite el `break` el programa continúa la ejecución en la siguiente instrucción en la declaración de `switch` .
+La declaración [`break`](/es/docs/Web/JavaScript/Reference/Statements/break) es opcional y está asociada con cada etiqueta de `case` y asegura que el programa salga del `switch` una vez que se ejecute la instrucción coincidente y continúe la ejecución en la instrucción siguiente. Si se omite el `break` el programa continúa la ejecución en la siguiente instrucción en la declaración de `switch` .
 
 ## Ejemplos
 
@@ -117,7 +118,7 @@ switch (foo) {
 }
 ```
 
-Al estar el `case 1:` a continuación de `default`, y al no haber un `break`de por medio, veremos que la declaración del `case 1:` será ejecutada, apareciendo el resultado `1` en el _log de consola._
+Al estar el `case 1:` a continuación de `default`, y al no haber un `break` de por medio, veremos que la declaración del `case 1:` será ejecutada, apareciendo el resultado `1` en el _log de consola._
 
 ### Metodos para casos con múltiple criterio
 
@@ -148,7 +149,7 @@ switch (Animal) {
 
 #### Operaciones encadenadas con múltiples casos
 
-Este es un ejemplo de una sentencia `switch` secuencial con múltiples operaciones, donde, dependiendo del valor entero dado, se pueden recibir diferentes resultados. Esto demuestra que el algoritmo correrá en el orden en que se coloquen las declaraciones `case`, y que no tiene que ser numéricamente secuencial. En JavaScript, también es posible combinar definiciones con valores \_`"string"` \_dentro de estas declaraciones `case`.
+Este es un ejemplo de una sentencia `switch` secuencial con múltiples operaciones, donde, dependiendo del valor entero dado, se pueden recibir diferentes resultados. Esto demuestra que el algoritmo correrá en el orden en que se coloquen las declaraciones `case`, y que no tiene que ser numéricamente secuencial. En JavaScript, también es posible combinar definiciones con valores `"string"` dentro de estas declaraciones `case`.
 
 ```js
 var foo = 1;

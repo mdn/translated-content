@@ -1,9 +1,9 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-translation_of: Web/HTML/Global_attributes/itemref
 original_slug: Web/HTML/Atributos_Globales/itemref
 ---
+
 ## Resumen
 
 Las propiedades que no son descendientes de un elemento con el atributo `itemscope` pueden ser asociadas con el elemento usando un **itemref** . **Itemref** provee una lista de ids de los elementos (no `itemids`) con propiedades adicionales en otras partes dentro del documento .
@@ -82,7 +82,7 @@ El atributo itemref puede ser solo especificado en elementos que tienen un atrib
 
 ### Resultado
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/HTML/Global_attributes/itemref') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Especificación
 

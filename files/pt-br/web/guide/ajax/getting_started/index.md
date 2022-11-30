@@ -1,16 +1,13 @@
 ---
 title: Primeiros passos
 slug: Web/Guide/AJAX/Getting_Started
-tags:
-  - AJAX
-  - XMLHttpRequest
-translation_of: Web/Guide/AJAX/Getting_Started
 ---
+
 Esse artigo guia você através dos princípios do AJAX e oferece dois exemplos práticos simples para poder começar.
 
 ### O que é AJAX?
 
-AJAX significa Asynchronous JavaScript e XML. Em poucas palavras, é o uso do objeto [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) para se comunicar com os scripts do lado do servidor. Ele pode enviar bem como receber informações em uma variedade de formatos, incluindo JSON, XML, HTML, e até mesmo arquivos de texto. Porém a característica mais atraente do AJAX, é a sua natureza "assíncrona", o que significa que ele pode fazer tudo isso sem a necessidade de atualizar a página. Isso permite a você atualizar partes de uma página com base em eventos do usuário.
+AJAX significa Asynchronous JavaScript e XML. Em poucas palavras, é o uso do objeto [`XMLHttpRequest`](/pt-BR/DOM/XMLHttpRequest) para se comunicar com os scripts do lado do servidor. Ele pode enviar bem como receber informações em uma variedade de formatos, incluindo JSON, XML, HTML, e até mesmo arquivos de texto. Porém a característica mais atraente do AJAX, é a sua natureza "assíncrona", o que significa que ele pode fazer tudo isso sem a necessidade de atualizar a página. Isso permite a você atualizar partes de uma página com base em eventos do usuário.
 
 Os dois recursos em questão que você pode utilizar são:
 
@@ -19,7 +16,7 @@ Os dois recursos em questão que você pode utilizar são:
 
 ### Passo 1 - Como fazer uma requisição HTTP
 
-Para fazer uma requisição [HTTP](/en/HTTP) ao servidor usando JavaScript, você precisa de uma instância de uma classe que fornece essa funcionalidade. Este é o lugar onde o `XMLHttpRequest` entra. Essa classe foi originalmente introduzida no Internet Explorer como um objeto ActiveX chamado `XMLHTTP`. Então, Mozilla, Safari e outros navegadores o seguiram, implementando uma classe `XMLHttpRequest` que suporta os métodos e propriedades do objeto ActiveX original da Microsoft.
+Para fazer uma requisição [HTTP](/pt-BR/HTTP) ao servidor usando JavaScript, você precisa de uma instância de uma classe que fornece essa funcionalidade. Este é o lugar onde o `XMLHttpRequest` entra. Essa classe foi originalmente introduzida no Internet Explorer como um objeto ActiveX chamado `XMLHTTP`. Então, Mozilla, Safari e outros navegadores o seguiram, implementando uma classe `XMLHttpRequest` que suporta os métodos e propriedades do objeto ActiveX original da Microsoft.
 
 Como resultado, a fim de criar uma instância (objeto) compatível com multiplos navegadores da classe requerida, você pode fazer o seguinte:
 
@@ -55,7 +52,7 @@ httpRequest.open('GET', 'http://www.example.org/some.file', true);
 httpRequest.send(null);
 ```
 
-- O primeiro parâmetro da chamada `para open()` é o método da requisição HTTP – GET, POST, HEAD ou qualquer outro método que você deseja usar e que é suportado pelo seu servidor. Mantenha o método em letras maiúsculas de acordo com o padrão HTTP; caso contrário, alguns navegadores (como o Firefox) podem não processar a requisição. Para mais informações sobre os possíveis métodos de requisição HTTP verifique as [especificações do W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
+- O primeiro parâmetro da chamada `para open()` é o método da requisição HTTP – GET, POST, HEAD ou qualquer outro método que você deseja usar e que é suportado pelo seu servidor. Mantenha o método em letras maiúsculas de acordo com o padrão HTTP; caso contrário, alguns navegadores (como o Firefox) podem não processar a requisição. Para mais informações sobre os possíveis métodos de requisição HTTP verifique as [especificações do W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html).
 - O segundo parâmetro é a URL da página que você está requisitando. Como um recurso de segurança, você não pode chamar páginas em domínios de terceiros. Certifique-se de usar o nome exato do domínio em todas as suas páginas ou irá obter um erro de "permissão negada" quando chamar o `open()`. Uma cilada comum é acessar o seu site pelo `domain.tld`, mas tentar chamar páginas com `www.domain.tld`. Se você realmente precisa enviar uma requisição para outro domínio, veja [controle de acesso HTTP](/En/HTTP_access_control).
 - O terceiro parâmetro opcional define se a requisição é assíncrona. Se `TRUE` (o padrão), a execução da função JavaScript irá continuar enquanto a resposta do servidor não chegar. Isso é o A no AJAX.
 
@@ -103,7 +100,7 @@ A lista completa dos valores `readyState` é a seguinte:
 
 ([Fonte](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx))
 
-A próxima coisa a se checar é o [código de resposta](/en/HTTP#HTTP_Response_Codes) do servidor HTTP. Todos os possíveis códigos estão listados no site do [W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). No exemplo a seguir, nós tratamos do retorno bem sucedido ou mal sucedido da requisição HTTP do AJAX, verificando se o código de resposta for [`200`](/en/HTTP/HTTP_response_codes#200).
+A próxima coisa a se checar é o [código de resposta](/pt-BR/HTTP#HTTP_Response_Codes) do servidor HTTP. Todos os possíveis códigos estão listados no site do [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). No exemplo a seguir, nós tratamos do retorno bem sucedido ou mal sucedido da requisição HTTP do AJAX, verificando se o código de resposta for [`200`](/pt-BR/HTTP/HTTP_response_codes#200).
 
 ```js
 if (httpRequest.status === 200) {
@@ -181,9 +178,9 @@ Neste exemplo:
 
 > **Nota:** Se você está enviando uma solicitação para um pedaço de código que retornará XML, ao invés de um arquivo XML estático, é necessário definir alguns cabeçalhos de resposta se a sua página é para trabalhar com o Internet Explorer e com o Mozilla. Se você não definir cabeçalho `Content-Type: application/xml`, o IE irá lançar um erro JavaScript, "Objeto esperado", após a linha onde você tentar acessar um elemento XML..
 
-> **Nota:** **Nota 2**: Se você não definir cabeçalho `Cache-Control: no-cache` o navegador armazenará em cache a resposta e jamais voltará a submeter o pedido, tornando a depuração "desafiadora". Também é possível acrescentar um parâmetro GET adicional sempre diferente, como o timestamp ou um número aleatório (veja [bypassing the cache](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache)).
+> **Nota:** **Nota 2**: Se você não definir cabeçalho `Cache-Control: no-cache` o navegador armazenará em cache a resposta e jamais voltará a submeter o pedido, tornando a depuração "desafiadora". Também é possível acrescentar um parâmetro GET adicional sempre diferente, como o timestamp ou um número aleatório (veja [bypassing the cache](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache)).
 
-> **Nota:** **Nota 3**: Se a variável httpRequest é utilizada globalmente, funções concorrentes chamando `makeRequest()` podem sobrescrever uma à outra, causando uma condição de corrida. Declarando o httpRequest variável local para um [closure](/en/JavaScript/Guide/Closures) contendo as funções AJAX impede a condição de corrida.
+> **Nota:** **Nota 3**: Se a variável httpRequest é utilizada globalmente, funções concorrentes chamando `makeRequest()` podem sobrescrever uma à outra, causando uma condição de corrida. Declarando o httpRequest variável local para um [closure](/pt-BR/JavaScript/Guide/Closures) contendo as funções AJAX impede a condição de corrida.
 
 Caso ocorra um erro de comunicação (tal como a queda de do servidor web), uma exceção será lançada no método onreadystatechange quando o campo status for acessado. Tenha a certeza de envolver sua declaração if...then dentro de um bloco try...catch.
 
@@ -233,7 +230,7 @@ var root_node = xmldoc.getElementsByTagName('root').item(0);
 alert(root_node.firstChild.data);
 ```
 
-Este código pega o objeto `XMLDocument` obtido por `responseXML` e utiliza métodos DOM para acessar alguns dados contidos no documento XML. Você pode ver o `test.xml` [aqui](http://www.w3clubs.com/mozdev/test.xml) e o script de teste atualizado [aqui](http://www.w3clubs.com/mozdev/httprequest_test_xml.html).
+Este código pega o objeto `XMLDocument` obtido por `responseXML` e utiliza métodos DOM para acessar alguns dados contidos no documento XML. Você pode ver o `test.xml` [aqui](https://www.w3clubs.com/mozdev/test.xml) e o script de teste atualizado [aqui](https://www.w3clubs.com/mozdev/httprequest_test_xml.html).
 
 ### Passo 5 – Trabalhando com os dados
 

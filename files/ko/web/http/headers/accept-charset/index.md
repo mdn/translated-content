@@ -3,6 +3,7 @@ title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
 translation_of: Web/HTTP/Headers/Accept-Charset
 ---
+
 {{HTTPSidebar}}
 
 **`Accept-Charset`** 요청 HTTP 헤더는 클라이언트가 이해할 수 있는 캐릭터셋이 무엇인지를 알려줍니다. [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)을 사용하여, 서버는 제안된 것 중 하나를 선택하고, 사용하며 {{HTTPHeader("Content-Type")}} 응답 헤더를 통해 선택된 캐릭터셋을 클라이언트에게 알려줍니다. 브라우저들은 각각의 컨텐츠 타입에 대한 기본 값이 일반적으로 정확하고 그것을 전송하는 것이 더 쉽게 행적을 남기게 될 가능성이 있으므로 이 헤더를 설정하지 않습니다.

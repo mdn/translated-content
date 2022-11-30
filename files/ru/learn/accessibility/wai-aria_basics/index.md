@@ -6,6 +6,7 @@ tags:
 translation_of: Learn/Accessibility/WAI-ARIA_basics
 original_slug: Learn/Доступность/WAI-ARIA_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
 
 Исходя из предыдущей статьи, иногда создание сложных элементов UI, которые включают в себя несемантичный HTML и динамически обновляемый с помощью JavaScript контент, может быть затруднено. WAI-ARIA - это технология, которая может помочь в решении таких проблем, добавляя дополнительную разметку, которую браузеры и вспомогательные технологии могут распознавать и использовать, чтобы пользователи знали, что происходит. В этой статье мы покажем, как использовать эту технологию на базовом уровне для улучшения доступности.
@@ -22,7 +23,7 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 
 С тех пор как веб-приложения стали более сложными и динамичными, появились новые специальные возможности и проблемы.
 
-Например, HTML5 ввёл ряд семантических элементов, чтобы определить общую разметку страниц ( [`<nav>`](/ru/docs/Web/HTML/Element/nav "HTML-элемент <nav> определяет отдельную секцию документа, назначение которой обозначение ссылок навигации (как внутри текущего документа, так и ведущих на другую страницу). В качестве примера такой секции можно привести меню, якорные ссылки."), [`<footer>`](/ru/docs/Web/HTML/Element/footer "HTML-элемент  <footer> представляет нижний колонтитул (футер, подвал) для своего ближайшего элемента секционного контента или секционного корня. Футер обычно содержит информацию об авторе секции, информацию об авторском праве или ссылки на связанные документы.")и т.д.). До того как они были доступны, разработчики просто использовали [`<div>`](/ru/docs/Web/HTML/Element/div 'Элемент разделения контента HTML (<div>) является базовым контейнером для элементов основного потока ( flow content ). Он не влияет на контент или формат пока не стилизован, используя CSS. Являясь "чистым" контейнером, элемент <div> по своему существу не представляет ничего. Между тем, он используется для группировки контента, что позволяет легко его стилизовать, используя ') с идентификаторами или классами, например `<div class="nav">`, но это создавало проблемы, так как не было никакого простого способа найти определённый раздел страницы программным способом.
+Например, HTML5 ввёл ряд семантических элементов, чтобы определить общую разметку страниц ( [`<nav>`](/ru/docs/Web/HTML/Element/nav), [`<footer>`](/ru/docs/Web/HTML/Element/footer)и т.д.). До того как они были доступны, разработчики просто использовали [`<div>`](/ru/docs/Web/HTML/Element/div) с идентификаторами или классами, например `<div class="nav">`, но это создавало проблемы, так как не было никакого простого способа найти определённый раздел страницы программным способом.
 
 Первоначальным решением было добавить одну или несколько скрытых ссылок вверху страницы для ссылки на навигацию (или на что-то ещё), например:
 
@@ -39,7 +40,7 @@ original_slug: Learn/Доступность/WAI-ARIA_basics
 <input type="range">
 ```
 
-Они не очень хорошо поддерживаются в разных браузерах, и их очень сложно стилизовать, что делает их не очень полезными для интеграции с дизайном сайтов. В результате разработчики нередко используют библиотеки JavaScript, которые генерируют такие элементы управления, как последовательность вложенных [`<div>`](/ru/docs/Web/HTML/Element/div "Элемент разделения контента HTML (<div>) является универсальным контейнером для потокового контента. Он не влияет на контент или макет до тех пор, пока не будет стилизован с помощью CSS.")элементов или ячеек таблиц с именами классов, которые затем стилизуются с помощью CSS и управляют с помощью JavaScript.
+Они не очень хорошо поддерживаются в разных браузерах, и их очень сложно стилизовать, что делает их не очень полезными для интеграции с дизайном сайтов. В результате разработчики нередко используют библиотеки JavaScript, которые генерируют такие элементы управления, как последовательность вложенных [`<div>`](/ru/docs/Web/HTML/Element/div)элементов или ячеек таблиц с именами классов, которые затем стилизуются с помощью CSS и управляют с помощью JavaScript.
 
 The problem here is that visually they work, but screenreaders can't make any sense of what they are at all, and their users just get told that they can see a jumble of elements with no semantics to describe what they mean.
 
@@ -61,15 +62,15 @@ An important point about WAI-ARIA attributes is that they don't affect anything 
 
 This is not an easy question to answer. It is difficult to find a conclusive resource that states what features of WAI-ARIA are supported, and where, because:
 
-1.  There are a lot of features in the WAI-ARIA spec.
-2.  There are many combinations of operating system, browser, and screenreader to consider.
+1. There are a lot of features in the WAI-ARIA spec.
+2. There are many combinations of operating system, browser, and screenreader to consider.
 
 This last point is key — To use a screenreader in the first place, your operating system needs to run browsers that have the necessary accessibility APIs in place to expose the information screenreaders need to do their job. Most popular OSes have one or two browsers in place that screenreaders can work with. The Paciello Group has a fairly up-to-date post that provides data for this — see [Rough Guide: browsers, operating systems and screen reader support updated](https://www.paciellogroup.com/blog/2014/10/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/).
 
 Next, you need to worry about whether the browsers in question support ARIA features and expose them via their APIs, but also whether screenreaders recognise that information and present it to their users in a useful way.
 
-1.  Browser support is generally quite good — at the time of writing, [caniuse.com](http://caniuse.com/#feat=wai-aria) stated that global browser support for WAI-ARIA was around 88%.
-2.  Screenreader support for ARIA features isn't quite at this level, but the most popular screenreaders are getting there. You can get an idea of support levels by looking at Powermapper's [WAI-ARIA Screen reader compatibility](http://www.powermapper.com/tests/screen-readers/aria/) article.
+1. Browser support is generally quite good — at the time of writing, [caniuse.com](http://caniuse.com/#feat=wai-aria) stated that global browser support for WAI-ARIA was around 88%.
+2. Screenreader support for ARIA features isn't quite at this level, but the most popular screenreaders are getting there. You can get an idea of support levels by looking at Powermapper's [WAI-ARIA Screen reader compatibility](http://www.powermapper.com/tests/screen-readers/aria/) article.
 
 In this article, we won't attempt to cover every WAI-ARIA feature, and its exact support details. Instead, we will cover the most critical WAI-ARIA features for you to know about; if we don't mention any support details, you can assume that the feature is well-supported. We will clearly mention any exceptions to this.
 
@@ -79,10 +80,10 @@ In this article, we won't attempt to cover every WAI-ARIA feature, and its exact
 
 We talked about some of the problems that prompted WAI-ARIA to be created earlier on, but essentially, there are four main areas that WAI-ARIA is useful in:
 
-1.  **Signposts/Landmarks**: ARIA's `role` attribute values can act as landmarks that either replicate the semantics of HTML5 elements (e.g. {{htmlelement("nav")}}), or go beyond HTML5 semantics to provide signposts to different functional areas, e.g `search`, `tabgroup`, `tab`, `listbox`, etc.
-2.  **Dynamic content updates**: Screenreaders tend to have difficulty with reporting constantly changing content; with ARIA we can use `aria-live` to inform screenreader users when an area of content is updated, e.g. via [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest), or [DOM APIs](/ru/docs/Web/API/Document_Object_Model).
-3.  **Enhancing keyboard accessibility**: There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screenreader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using `tabindex`).
-4.  **Accessibility of non-semantic controls**: When a series of nested `<div>`s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, accessibility can suffer — screenreader users will find it difficult to work out what the feature does if there are no semantics or other clues. In these situations, ARIA can help to provide what's missing with a combination of roles like `button`, `listbox`, or `tabgroup`, and properties like `aria-required` or `aria-posinset` to provide further clues as to functionality.
+1. **Signposts/Landmarks**: ARIA's `role` attribute values can act as landmarks that either replicate the semantics of HTML5 elements (e.g. {{htmlelement("nav")}}), or go beyond HTML5 semantics to provide signposts to different functional areas, e.g `search`, `tabgroup`, `tab`, `listbox`, etc.
+2. **Dynamic content updates**: Screenreaders tend to have difficulty with reporting constantly changing content; with ARIA we can use `aria-live` to inform screenreader users when an area of content is updated, e.g. via [XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest), or [DOM APIs](/ru/docs/Web/API/Document_Object_Model).
+3. **Enhancing keyboard accessibility**: There are built-in HTML elements that have native keyboard accessibility; when other elements are used along with JavaScript to simulate similar interactions, keyboard accessibility and screenreader reporting suffers as a result. Where this is unavoidable, WAI-ARIA provides a means to allow other elements to receive focus (using `tabindex`).
+4. **Accessibility of non-semantic controls**: When a series of nested `<div>`s along with CSS/JavaScript is used to create a complex UI-feature, or a native control is greatly enhanced/changed via JavaScript, accessibility can suffer — screenreader users will find it difficult to work out what the feature does if there are no semantics or other clues. In these situations, ARIA can help to provide what's missing with a combination of roles like `button`, `listbox`, or `tabgroup`, and properties like `aria-required` or `aria-posinset` to provide further clues as to functionality.
 
 One thing to remember though — **you should only use WAI-ARIA when you need to!** Ideally, you should _always_ use [native HTML features](/ru/docs/Learn/Accessibility/HTML) to provide the semantics required by screenreaders to tell their users what is going on. Sometimes this isn't possible, either because you have limited control over the code, or because you are creating something complex that doesn't have an easy HTML element to implement it. In such cases, WAI-ARIA can be a valuable accessibility enhancing tool.
 
@@ -256,15 +257,15 @@ First of all, let's revisit the form example we first looked at in our CSS and J
 
 We could go further with our ARIA usage, and provide some more validation help. How about indicating whether fields are required in the first place, and what range the age should be?
 
-1.  At this point, take a copy of our [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) and [validation.js](https://github.com/mdn/learning-area/blob/master/accessibility/css/validation.js) files, and save them in a local directory.
-2.  Open them both in a text editor and have a look at how the code works.
-3.  First of all, add a paragraph just above the opening `<form>` tag, like the one below, and mark both the form `<label>`s with an asterisk. This is normally how we mark required fields for sighted users.
+1. At this point, take a copy of our [form-validation.html](https://github.com/mdn/learning-area/blob/master/accessibility/css/form-validation.html) and [validation.js](https://github.com/mdn/learning-area/blob/master/accessibility/css/validation.js) files, and save them in a local directory.
+2. Open them both in a text editor and have a look at how the code works.
+3. First of all, add a paragraph just above the opening `<form>` tag, like the one below, and mark both the form `<label>`s with an asterisk. This is normally how we mark required fields for sighted users.
 
     ```html
     <p>Fields marked with an asterisk (*) are required.</p>
     ```
 
-4.  This makes visual sense, but it isn't as easy to understand for screenreader users. Fortunately, WAI-ARIA provides the [`aria-required`](https://www.w3.org/TR/wai-aria-1.1/#aria-required) attribute to give screenreaders hints that they should tell users that form inputs need to be filled in. Update the `<input>` elements like so:
+4. This makes visual sense, but it isn't as easy to understand for screenreader users. Fortunately, WAI-ARIA provides the [`aria-required`](https://www.w3.org/TR/wai-aria-1.1/#aria-required) attribute to give screenreaders hints that they should tell users that form inputs need to be filled in. Update the `<input>` elements like so:
 
     ```html
     <input type="text" name="name" id="name" aria-required="true">
@@ -272,8 +273,8 @@ We could go further with our ARIA usage, and provide some more validation help. 
     <input type="number" name="age" id="age" aria-required="true">
     ```
 
-5.  If you save the example now and test it with a screenreader, you should hear something like "Enter your name star, required, edit text".
-6.  It might also be useful if we give screenreader users and sighted users an idea of what the age value should be. This is often presented as a tooltip, or placeholder inside the form field perhaps. WAI-ARIA does include [`aria-valuemin`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin) and [`aria-valuemax`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax) properties to specify min and max values, but these currently don't seem very well supported; a better supported feature is the HTML5 `placeholder` attribute, which can contain a message that is shown in the input when no value is entered, and is read out by a number of screenreaders. Update your number input like this:
+5. If you save the example now and test it with a screenreader, you should hear something like "Enter your name star, required, edit text".
+6. It might also be useful if we give screenreader users and sighted users an idea of what the age value should be. This is often presented as a tooltip, or placeholder inside the form field perhaps. WAI-ARIA does include [`aria-valuemin`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemin) and [`aria-valuemax`](https://www.w3.org/TR/wai-aria-1.1/#aria-valuemax) properties to specify min and max values, but these currently don't seem very well supported; a better supported feature is the HTML5 `placeholder` attribute, which can contain a message that is shown in the input when no value is entered, and is read out by a number of screenreaders. Update your number input like this:
 
     ```html
     <input type="number" name="age" id="age" placeholder="Enter 1 to 150" aria-required="true">

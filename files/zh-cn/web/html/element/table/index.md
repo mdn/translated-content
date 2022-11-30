@@ -3,7 +3,7 @@ title: <table>
 slug: Web/HTML/Element/table
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 [HTML](/zh-CN/docs/Web/HTML) **`table`** 元素表示表格数据——即通过二维数据表表示的信息。
 

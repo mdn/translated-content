@@ -1,11 +1,9 @@
 ---
 title: Trazado de una tabla HTML mediante JavaScript y la Interface DOM
-slug: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-translation_of: >-
-  Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+slug: Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
 original_slug: Trazado_de_una_tabla_HTML_mediante_JavaScript_y_la_Interface_DOM
 ---
+
 ## Introducción
 
 Este artículo es un resumen de algunos métodos DOM nivel 1 poderosos y fundamentales así como una descripción de cómo utilizarlos utilizando Javascript. Aprenderás a crear, accesar, controlar, y remover elementos HTML dinámicamente. Los métodos DOM presentados aquí no son específicos de HTML; también aplican para XML. Las demostraciones aquí proporcionadas funcionarán en cualquier navegador moderno, incluyendo todas las versiones de Firefox e IE 5+.
@@ -157,15 +155,15 @@ function set_background() {
 
 {{ EmbedLiveSample('Setting_background_of_a_paragraph') }}
 
-En este ejemplo, establecemos la variable `myP` en el objeto DOM para el segundo elemento`p` dentro del body:
+En este ejemplo, establecemos la variable `myP` en el objeto DOM para el segundo elemento `p` dentro del body:
 
 1. Primero, obtendremos una lista de todos los elementos body mediante
 
-    ```
+    ```js
     myBody = document.getElementsByTagName("body")[0]
     ```
 
-    Como en cualquier documento HTML sólo hay un elemento body válido, esta lista tendrá sólo un elemento, que recuperamos seleccionando el primer elemento de esa lista usando `{{mediawiki.external(0)}}`.
+    Como en cualquier documento HTML sólo hay un elemento body válido, esta lista tendrá sólo un elemento, que recuperamos seleccionando el primer elemento de esa lista usando `[0]`.
 
 2. Luego, obtenemos todos los elementos p que son descendientes del body mediante
 
@@ -200,7 +198,7 @@ This means that you have created a node of the type TEXT_NODE (a piece of text) 
 
 ### Inserting Elements with appendChild(..)
 
-So, by calling myP.appendChild({{mediawiki.external('node_element')}}), you are making the element a new child of the second \<p> element.
+So, by calling myP.appendChild([node_element]), you are making the element a new child of the second \<p> element.
 
 ```
 myP.appendChild(myTextNode);
@@ -308,7 +306,7 @@ The basic steps to create the table in sample1.html are:
 
 ### Getting a text node from the table
 
-This example introduces two new DOM attributes. First it uses the `childNodes` attribute to get the list of child nodes of mycel. The `childNodes` list includes all child nodes, regardless of what their name or type is. Like getElementsByTagName(), it returns a list of nodes. The differences are that (a) getElementsByTagName() only returns elements of the specified tag name; and (b) getElementsByTagName() returns descendants at any level, not just immediate children. Once you have the returned list, use `{{mediawiki.external('x')}}` method to retrieve the desired child item. This example stores in myceltext the text node of the second cell in the second row of the table. Then, to display the results in this example, it creates a new text node whose content is the data of myceltext and appends it as a child of the \<body> element.
+This example introduces two new DOM attributes. First it uses the `childNodes` attribute to get the list of child nodes of mycel. The `childNodes` list includes all child nodes, regardless of what their name or type is. Like getElementsByTagName(), it returns a list of nodes. The differences are that (a) getElementsByTagName() only returns elements of the specified tag name; and (b) getElementsByTagName() returns descendants at any level, not just immediate children. Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in myceltext the text node of the second cell in the second row of the table. Then, to display the results in this example, it creates a new text node whose content is the data of myceltext and appends it as a child of the \<body> element.
 
 > **Nota:** If your object is a text node, you can use the data attribute and retrieve the text content of the node.
 

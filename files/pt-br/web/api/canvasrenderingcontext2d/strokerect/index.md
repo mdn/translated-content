@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.strokeRect()
 slug: Web/API/CanvasRenderingContext2D/strokeRect
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/strokeRect
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.strokeRect()`** da API Canvas 2D desenha um retângulo na posição _(x, y)_, que possui uma largura (_width_) _w_ e uma altura (_height_) _h_, e não tem nenhum preenchimento (estilo _stroke_).

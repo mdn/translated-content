@@ -1,13 +1,8 @@
 ---
 title: HTMLSpanElement
 slug: Web/API/HTMLSpanElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - span
-translation_of: Web/API/HTMLSpanElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 A interface **`HTMLSpanElement`** representa um elemento {{HTMLElement("span")}} e deriva de uma interface {{DOMxRef("HTMLElement")}}, mas sem implementar propriedades ou métodos adicionais.

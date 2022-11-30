@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 В этом упражнении мы будем использовать проект прыгающих шаров из предыдущей статьи и добавим в него новые интересные возможности.
@@ -38,11 +39,11 @@ original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 
 Прежде всего, измените существующий конструктор `Ball()` так, чтобы он стал конструктором `Shape()` и добавил новый конструктор `Ball()`:
 
-1.  Конструктор `Shape()` должен определять свойства `x`, `y`, `velX` и `velY`, так же, как и конструктор `Ball()`, но не свойства `color` и `size`.
-2.  Он также должен определить новое свойство`exists`, которое используется для отслеживания наличия шаров в программе (не было съедено злым кругом). Это должно быть логическое (`true` / `false`).
-3.  Конструктор `Ball()` должен наследовать свойства `x`, `y`, `velX`, `velY` и `exists` из конструктора `Shape()`.
-4.  Он также должен определить свойство `color` и `size`, как это сделал оригинальный конструктор `Ball()`.
-5.  Не забудьте установить `prototype` и `constructor` конструктора `Ball()` соответствующим образом.
+1. Конструктор `Shape()` должен определять свойства `x`, `y`, `velX` и `velY`, так же, как и конструктор `Ball()`, но не свойства `color` и `size`.
+2. Он также должен определить новое свойство `exists`, которое используется для отслеживания наличия шаров в программе (не было съедено злым кругом). Это должно быть логическое (`true` / `false`).
+3. Конструктор `Ball()` должен наследовать свойства `x`, `y`, `velX`, `velY` и `exists` из конструктора `Shape()`.
+4. Он также должен определить свойство `color` и `size`, как это сделал оригинальный конструктор `Ball()`.
+5. Не забудьте установить `prototype` и `constructor` конструктора `Ball()` соответствующим образом.
 
 Определения меток шара `draw()`, `update()` и `collisionDetect()` должны быть такими же, как и раньше.
 
@@ -73,8 +74,8 @@ original_slug: Learn/JavaScript/Объекты/Adding_bouncing_balls_features
 
 Этот метод имеет ту же цель, что и метод `draw()` метода `Ball()`: он рисует экземпляр объекта на холсте. Он будет работать очень схожим образом, поэтому вы можете начать с копирования определения `Ball.prototype.draw`. Затем вы должны внести следующие изменения:
 
-- Мы хотим, чтобы злой круг не был заполнен, а скорее имел внешнюю линию (удар). Вы можете добиться этого, обновив [`fillStyle`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) и [`fill()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fill) до [`strokeStyle`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) и s[`stroke()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/stroke).
-- Мы также хотим сделать ход немного толще, так что вы можете увидеть злой круг немного легче. Этого можно добиться, установив значение для [`lineWidth`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) где-нибудь после вызова [`beginPath()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 будем делать).
+- Мы хотим, чтобы злой круг не был заполнен, а скорее имел внешнюю линию (удар). Вы можете добиться этого, обновив [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) и [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) до [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) и s [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke).
+- Мы также хотим сделать ход немного толще, так что вы можете увидеть злой круг немного легче. Этого можно добиться, установив значение для [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) где-нибудь после вызова [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 будем делать).
 
 #### `checkBounds()`
 
@@ -126,8 +127,8 @@ window.onkeydown = function(e) {
 
 Чтобы выполнить счётчик счётчиков, выполните следующие действия:
 
-1.  В своём HTML-файле добавьте элемент {{HTMLElement ("p")}} непосредственно под элементом {{HTMLElement ("h1")}}, содержащим текст «Ball count:».
-2.  В вашем файле CSS добавьте следующее правило внизу:
+1. В своём HTML-файле добавьте элемент {{HTMLElement ("p")}} непосредственно под элементом {{HTMLElement ("h1")}}, содержащим текст «Ball count:».
+2. В вашем файле CSS добавьте следующее правило внизу:
 
     ```css
     p {
@@ -139,7 +140,7 @@ window.onkeydown = function(e) {
     }
     ```
 
-3.  В своём JavaScript сделайте следующие обновления:
+3. В своём JavaScript сделайте следующие обновления:
 
     - Создайте переменную, которая хранит ссылку на абзац.
     - Держите подсчёт количества шаров на экране в некотором роде.

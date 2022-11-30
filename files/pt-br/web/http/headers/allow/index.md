@@ -1,14 +1,8 @@
 ---
 title: Allow
 slug: Web/HTTP/Headers/Allow
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Entidade
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Allow
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta **`Allow`** lista um conjunto de métodos suportados pelo recurso.

@@ -1,10 +1,9 @@
 ---
 title: Navigator.onLine
 slug: orphaned/Web/API/NavigatorOnLine/onLine
-translation_of: Web/API/NavigatorOnLine/onLine
 original_slug: Web/API/NavigatorOnLine/onLine
-browser-compat: api.NavigatorOnLine.onLine
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Retorna el estado en línea del navegador. La propiedad retorna un valor booleano, `true` significa **en línea** y `false` significa **desconectado**. La propiedad envía actualizaciones siempre que el navegador tenga la capacidad de conectarse a los cambios de red. La actualización se produce cuando un usuario sigue un enlace o cuando un script pide una pagina remota. Por ejemplo, la propiedad debe retornar `false` cuando los usuarios hacen clic en un enlace poco después de perder la conexión a internet.

@@ -3,6 +3,7 @@ title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
 translation_of: Web/API/SubtleCrypto/digest
 ---
+
 {{APIRef("Web Crypto API")}}
 
 El método **`digest()`** de la interfaz {{domxref("SubtleCrypto")}} genera un digest de los datos proveidos. Un {{domxref("digest")}} es un valor corto de longitud fija derivado de alguna entrada de longitud variable. Los digest criptográficos deben mostrar resistencia a colisiones, lo que significa que es difícil encontrar dos entradas diferentes que tengan el mismo valor de digest.
@@ -95,9 +96,7 @@ console.log(digestHex);
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                               | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Web Crypto API', '#dfn-SubtleCrypto-method-digest', 'SubtleCrypto.digest()')}} | {{Spec2('Web Crypto API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

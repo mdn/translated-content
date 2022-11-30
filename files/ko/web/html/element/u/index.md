@@ -12,7 +12,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/u
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<u>` 요소**는 글자로 표현하지 않는 주석을 가진 것으로 렌더링 해야 하는 텍스트를 나타냅니다. 기본값에서는 단순한 밑줄로 표시하지만 CSS를 사용해 바꿀 수 있습니다.
 

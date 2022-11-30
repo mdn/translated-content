@@ -1,9 +1,9 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
-translation_of: Web/HTML/Element/input/checkbox
 original_slug: Web/HTML/Elemento/input/checkbox
 ---
+
 El elemento HTML **`<input type="checkbox">`** es un elemento de entrada que te permite insertar un vector o array de valores. El atributo **value** es usado para definr el valor enviado por el **checkbox**. El atributo **checked** se usa para indicar que el elemento está seleccionado. El atributo **indeterminate** se usa para indicar que el **checkbox** esta en un estado indeterminado (en la mayoria de las plataformas, esto dibuja una linea horizontal que atraviesa el **checkbox**).
 
 ## Atributos
@@ -32,13 +32,8 @@ Esto crea dos casillas de verificación, que se ven así:
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estatus                          |     |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --- |
-|                                                                                                                              |                                  |     |
-| {{SpecName('HTML WHATWG', 'forms.html#checkbox-state-(type=checkbox)', '&lt;checkbox&gt;')}} | {{Spec2('HTML WHATWG')}} |     |
-| {{SpecName('HTML5 W3C', 'forms.html#checkbox-state-(type=checkbox)', '&lt;checkbox&gt;')}}     | {{Spec2('HTML5 W3C')}}     |     |
-| {{SpecName('HTML4.01', 'interact/forms.html#checkbox', '&lt;checkbox&gt;')}}                         | {{Spec2('HTML4.01')}}     |     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 
-{{Compat("html.elements.input.input-checkbox")}}
+{{Compat}}

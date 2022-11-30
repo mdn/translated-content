@@ -1,25 +1,6 @@
 ---
 title: Crear hipervínculos
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Aprender
-  - CodingScripting
-  - Guía
-  - HTML
-  - HTTP
-  - Novato
-  - Principiante
-  - Title
-  - URL
-  - enlace
-  - hiperenlaces
-  - hipervínculos
-  - href
-  - referencia absoluta
-  - referencia relativa
-  - título
-  - urls
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 original_slug: Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks
 ---
 
@@ -339,7 +320,7 @@ Veamos un ejemplo que incluye estos campos:
 </a>
 ```
 
-> **Nota:** Los valores de cada campo deben tener la URL codificada, es decir, sin caracteres no imprimibles (caracteres invisibles, tabulaciones, retornos de carro y saltos de página) y espacios con codificación porcentual (%20) {{Interwiki("wikipedia", "Código porciento")}}. También hay que tener en cuenta el uso del signo de interrogación (?) para separar la URL principal de los valores de los campos, y el símbolo ampersand (&) para separar cada campo dentro del enlace `mailto:`. Esta es la notación de consulta URL estándar. Lee [el método GET](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method) para comprender mejor qué notación de consulta URL se usa comúnmente.
+> **Nota:** Los valores de cada campo deben tener la URL codificada, es decir, sin caracteres no imprimibles (caracteres invisibles, tabulaciones, retornos de carro y saltos de página) y espacios con codificación porcentual (%20) [Código porciento](https://es.wikipedia.org/wiki/Código_porciento). También hay que tener en cuenta el uso del signo de interrogación (?) para separar la URL principal de los valores de los campos, y el símbolo ampersand (&) para separar cada campo dentro del enlace `mailto:`. Esta es la notación de consulta URL estándar. Lee [el método GET](/es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data#The_GET_method) para comprender mejor qué notación de consulta URL se usa comúnmente.
 
 A continuación otros ejemplos de utilización de enlaces `mailto`:
 

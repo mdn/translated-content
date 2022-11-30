@@ -1,23 +1,6 @@
 ---
 title: Firefox 1.5 para Desarrolladores
 slug: Mozilla/Firefox/Releases/1.5
-tags:
-  - CSS
-  - Complementos
-  - DOM
-  - Desarrollo_Web
-  - Estándares_Web
-  - HTML
-  - JavaScript
-  - RDF
-  - SVG
-  - Servicios_Web_XML
-  - Todas_las_Categorías
-  - XML
-  - XSLT
-  - XUL
-  - extensiones
-translation_of: Mozilla/Firefox/Releases/1.5
 original_slug: Firefox_1.5_para_Desarrolladores
 ---
 

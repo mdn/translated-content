@@ -5,6 +5,7 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/number
 ---
+
 {{ XsltRef() }}
 
 `number` 함수는 개체를 숫자로 변환하고 그 숫자를 반환합니다.
@@ -17,7 +18,7 @@ number( [object] )
 
 ### 인수
 
-- _`object`_
+- `object`
   (optional)
   - : 숫자로 변환할 개체.
 

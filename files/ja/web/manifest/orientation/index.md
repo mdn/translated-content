@@ -9,7 +9,7 @@ slug: Web/Manifest/orientation
   <tbody>
     <tr>
       <th scope="row">型</th>
-      <td>`String`</td>
+      <td><code>String</code></td>
     </tr>
     <tr>
       <th scope="row">必須</th>

@@ -1,13 +1,8 @@
 ---
 title: Node.previousSibling
 slug: Web/API/Node/previousSibling
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Propiedad
-translation_of: Web/API/Node/previousSibling
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad de sólo-lectura **`Node.previousSibling`** devuelve el nodo inmediatamente anterior al especificado en la lista de nodos {{domxref("Node.childNodes", "childNodes")}} de su padre, o `null` si el nodo especificado es el primero en dicha lista.

@@ -3,9 +3,10 @@ title: WebGLRenderingContext.clear()
 slug: Web/API/WebGLRenderingContext/clear
 translation_of: Web/API/WebGLRenderingContext/clear
 ---
+
 {{APIRef("WebGL")}}
 
-Метод **`WebGLRenderingContext.clear()` **из библиотеки [WebGL API](/ru/docs/Web/API/WebGL_API) очищает буфер заданными значениями.
+Метод **`WebGLRenderingContext.clear()`** из библиотеки [WebGL API](/ru/docs/Web/API/WebGL_API) очищает буфер заданными значениями.
 
 Заданные значения могут быть установлены {{domxref("WebGLRenderingContext.clearColor", "clearColor()")}}, {{domxref("WebGLRenderingContext.clearDepth", "clearDepth()")}} или {{domxref("WebGLRenderingContext.clearStencil", "clearStencil()")}}.
 

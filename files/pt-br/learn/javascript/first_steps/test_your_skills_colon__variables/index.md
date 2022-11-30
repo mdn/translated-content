@@ -1,16 +1,9 @@
 ---
 title: 'Teste suas habilidades: variáveis'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
-tags:
-  - Aprender
-  - Habilidades
-  - Iniciante
-  - JavaScript
-  - Teste suas habilidades
-  - Variáveis
-translation_of: Learn/JavaScript/First_steps/Test_your_skills:_variables
 original_slug: Learn/JavaScript/First_steps/Teste_suas_habilidades:_variaveis
 ---
+
 {{learnsidebar}}
 
 O objetivo deste teste de habilidade é avaliar se você entendeu nosso artigo [Armazenando as informações que você precisa — Variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Vari%C3%A1veis).

@@ -12,6 +12,7 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
+
 {{JSRef}}
 
 Метод **`fill()`** заполняет все элементы массива от начального до конечного индексов одним значением.

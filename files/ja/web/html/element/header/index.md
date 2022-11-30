@@ -3,7 +3,7 @@ title: <header>
 slug: Web/HTML/Element/header
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<header>` 要素**は、導入的なコンテンツ、ふつうは導入部やナビゲーション等のグループを表します。見出し要素だけでなく、ロゴ、検索フォーム、作者名、その他の要素を含むこともできます。
 
@@ -142,10 +142,7 @@ slug: Web/HTML/Element/header
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-header-element', '&lt;header&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sections.html#the-header-element', '&lt;header&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

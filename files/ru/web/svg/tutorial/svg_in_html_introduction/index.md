@@ -3,13 +3,14 @@ title: SVG в HTML. Введение
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
+
 ## Описание
 
 Эта статья содержит пример использования SVG в качестве фонового изображения для формы. В примере демонстрируется, как JavaScript и CSS может быть использован для того, чтобы производить операции с векторным изображением (svg) так, будто вы используете обычный сценарий для XHTML. Необходимо понимать, что пример работоспособен лишь в браузерах, которые поддерживают XHTML (не HTML), а также интеграцию SVG.
 
 ## Код
 
-Демонстрация примера [здесь](/presentations/xtech2005/svg-canvas/SVGDemo.xml "presentations/xtech2005/svg-canvas/SVGDemo.xml"):
+Демонстрация примера [здесь](/presentations/xtech2005/svg-canvas/SVGDemo.xml):
 
 ```html
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -86,17 +87,17 @@ translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 viewBox="0 0 100 100"
 ```
 
-Размер изображения svg (заданный атрибутами width и height), может отличаться от области просмотра. Для регулирования отрисовки такого изображения используется атрибут `preserveAspectRatio. `С его помощью могут быть заданы правила выравнивания и поведения при переполнении (overflow) области просмотра, края svg могут быть обрезаны или вписаны.
+Размер изображения svg (заданный атрибутами width и height), может отличаться от области просмотра. Для регулирования отрисовки такого изображения используется атрибут `preserveAspectRatio`. С его помощью могут быть заданы правила выравнивания и поведения при переполнении (overflow) области просмотра, края svg могут быть обрезаны или вписаны.
 
 ```html
  preserveAspectRatio="alignment [meet | slice]"
 ```
 
-`alignment `- одно из значений `xMinYMin, xMinYMid, xMinYMax, xMidYMin, xMidYMid, xMidYMax, xMaxYMin, xMaxYMid` или `xMaxYMax`.
+`alignment` - одно из значений `xMinYMin, xMinYMid, xMinYMax, xMidYMin, xMidYMid, xMidYMax, xMaxYMin, xMaxYMid` или `xMaxYMax`.
 
-`meet `- сохраняет пропорции, умещая svg в область просмотра
+`meet` - сохраняет пропорции, умещая svg в область просмотра
 
-`slice `- тоже сохраняет пропорции, но масштабирует по максимальной границе области просмотра, обрезая часть изображения, которая не поместилась в область
+`slice` - тоже сохраняет пропорции, но масштабирует по максимальной границе области просмотра, обрезая часть изображения, которая не поместилась в область
 
 Также есть спецификатор `none который означает, что изображение заполнит область путём масштабирования сторон, не сохраняя пропорции (растянет).`
 
@@ -104,10 +105,10 @@ viewBox="0 0 100 100"
  preserveAspectRatio="none"
 ```
 
-Атрибут `style `применяется для определения стиля элемента.
+Атрибут `style` применяется для определения стиля элемента.
 
 ## Ссылки по теме
 
 - Сохранение пропорций [ссылка](http://xiper.net/learn/svg/svg-essentials/preserving-aspect-ratio)
 - Масштабирование и сдвиг [msdn.microsoft](<https://msdn.microsoft.com/ru-ru/library/gg589508(v=vs.85).aspx>)
-- Ещё SVG в XHTML: [пример](/ru/docs/SVG/Namespaces_Crash_Course/Example "SVG/Namespaces_Crash_Course/Example")
+- Ещё SVG в XHTML: [пример](/ru/docs/SVG/Namespaces_Crash_Course/Example)

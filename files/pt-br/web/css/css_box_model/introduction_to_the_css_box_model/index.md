@@ -1,9 +1,9 @@
 ---
 title: Box model
 slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
-translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 original_slug: Web/CSS/box_model
 ---
+
 ## Resumo
 
 Em uma página WEB, cada elemento é representado como um _box_ retangular. Determinar o tamanho, propriedades - como sua cor, fundo, estilo das bordas - e a posição desses _boxes_ é o objetivo do mecanismo de renderização.

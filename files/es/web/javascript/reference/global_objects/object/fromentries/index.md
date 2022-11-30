@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/fromEntries
 ---
+
 {{JSRef}}
 
 El método **`Object.fromEntries()`** transforma una lista de pares con `[clave-valor]` en un objeto.
@@ -76,9 +77,7 @@ console.log(object2);
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado  |
-| ------------------------------------------------------------------------------------------------ | ------- |
-| {{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}} | Etapa 4 |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

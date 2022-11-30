@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/Accessibility/What_is_accessibility
 original_slug: Learn/Доступность/What_is_accessibility
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 
 Данная статья открывает модуль, в котором рассматривается, что такое доступность на самом деле — она включает в себя группы людей, которые нам нужно учитывать и почему, какие инструменты используют разные пользователи для взаимодействия с вебом, и как мы можем сделать доступность частью нашего рабочего процесса веб-разработки.

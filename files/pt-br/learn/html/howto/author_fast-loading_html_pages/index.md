@@ -1,11 +1,9 @@
 ---
 title: Dicas para criar páginas HTML de carregamento rápido
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - Performance
-translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Web/HTML/Dicas_para_criar_páginas_HTML_de_carregamento_rápido
 ---
+
 Estas dicas são baseadas em conhecimento comum e experimentação.
 
 Uma página web otimizada não apenas provê um site mais responsivo aos visitantes, como também reduz a carga sobre os servidores e a conexão com a Internet. Isso pode ser crucial para sites de grande volume ou sites que tenham um pico de tráfego devido a circunstâncias extraordinárias, como plantões de notícias urgentes.
@@ -98,7 +96,7 @@ use tabelas não-aninhadas ou divs, como em
 <TABLE>...</TABLE>
 ```
 
-Veja também: [Especificações do layout multi-colunas CSS3](http://www.w3.org/TR/css3-multicol/) e [layout de caixas flexíveis CSS3](http://www.w3.org/TR/css3-flexbox/)
+Veja também: [Especificações do layout multi-colunas CSS3](https://www.w3.org/TR/css3-multicol/) e [layout de caixas flexíveis CSS3](https://www.w3.org/TR/css3-flexbox/)
 
 ### Especifique tamanhos para imagens e tabelas
 

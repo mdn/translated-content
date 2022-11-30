@@ -37,10 +37,6 @@ SVG — открытый стандарт, разработанный [World Wid
     - [SVG - учебное руководство](/ru/docs/Web/SVG/Tutorial)
     - [SVG в XHTML](/ru/docs/SVG_In_HTML_Introduction)
 
-## Сообщество
-
-- Обращайтесь на форумы Mozilla… {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}
-
 ## Инструменты
 
 - [Набор для тестирования SVG](http://www.w3.org/Graphics/SVG/Test/)
@@ -76,6 +72,6 @@ SVG — открытый стандарт, разработанный [World Wid
 В то время, как маленькие документы SVG могут серьёзно улучшить веб-контент, здесь представлены некоторые примеры тяжёлого использования SVG.
 
 - [Тетрис](http://www.codedread.com/yastframe.php)
-- [Connect 4](https://web.archive.org/web/20131019072450/http://www.treebuilder.de/svg/connect4.svg "Archive link provided because source now requires authentication.")
+- [Connect 4](https://web.archive.org/web/20131019072450/http://www.treebuilder.de/svg/connect4.svg)
 - [Популяционная карта США](http://www.carto.net/papers/svg/us_population/index.html)
 - [jVectorMap](http://jvectormap.com/) (интерактивные карты для визуализации данных)

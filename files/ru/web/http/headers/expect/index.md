@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Expect
 translation_of: Web/HTTP/Headers/Expect
 original_slug: Web/HTTP/Заголовки/Expect
 ---
+
 {{HTTPSidebar}}
 
 Запрос "HTTP Expect" указывает ожидания, которые должен выполнить сервер, чтобы правильно обработать запрос.
@@ -71,5 +72,5 @@ Expect: 100-continue
 
 ## Смотрите также
 
-- {{HTTPStatus("417")}}` Expectation Failed`
-- {{HTTPStatus("100")}}` Continue`
+- {{HTTPStatus("417")}} `Expectation Failed`
+- {{HTTPStatus("100")}} `Continue`

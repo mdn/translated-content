@@ -1,11 +1,8 @@
 ---
 title: Técnicas para desenvolvimento de jogos
 slug: Games/Techniques
-tags:
-  - NeedsTranslation
-  - TopicStub
-translation_of: Games/Techniques
 ---
+
 {{GamesSidebar}}
 
 This page lists essential core techniques for anyone wanting to develop games using open web technologies.

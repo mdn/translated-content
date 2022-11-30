@@ -1,8 +1,8 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-translation_of: Web/CSS/text-transform
 ---
+
 {{CSSRef}}
 
 A propriedade de CSS **`text-transform`** especifica como capitalizar um texto de um elemento. Pode ser usado para que o texto apareça com todas as letras maiúsculas ou todas minúsculas, ou com cada palavra em maiúscula.

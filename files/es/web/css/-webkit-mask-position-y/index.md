@@ -1,14 +1,8 @@
 ---
 title: '-webkit-mask-position-y'
 slug: Web/CSS/-webkit-mask-position-y
-tags:
-  - CSS
-  - Máscaras CSS
-  - No estándar(2)
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/-webkit-mask-position-y
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

@@ -3,7 +3,7 @@ title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux développeurs web d'inclure des données qui ne peuvent pas être vues ou modifiées lorsque le formulaire est envoyé. Cela permet par exemple d'envoyer l'identifiant d'une commande ou un jeton de sécurité unique. Les champs de ce type sont invisibles sur la page.
 

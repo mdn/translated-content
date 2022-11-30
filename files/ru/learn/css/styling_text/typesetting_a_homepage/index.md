@@ -4,6 +4,7 @@ slug: Learn/CSS/Styling_text/Typesetting_a_homepage
 translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 original_slug: Learn/CSS/Styling_text/Задание:_Стилизирование_школьного_сайта
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 В этой оценке мы проверим ваше понимание всех методов стилизации текста, которые мы рассмотрели в этом модуле дав вам задание стилизовать текст домашней страницы общественной школы. Вы можете просто развлечься, выполняя задание.
@@ -75,8 +76,8 @@ original_slug: Learn/CSS/Styling_text/Задание:_Стилизировани
 
 Если вы хотите, чтобы вашу работу оценили, или вы застряли и хотите попросить помощи:
 
-1.  Разместите свою работу в онлайн редакторе в которым можно поделиться работами в таком как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), или [Glitch](https://glitch.com/).
-2.  Напишите пост с просьбой оценки и/или помощи на [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Ваш пост должен включать:
+1. Разместите свою работу в онлайн редакторе в которым можно поделиться работами в таком как [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), или [Glitch](https://glitch.com/).
+2. Напишите пост с просьбой оценки и/или помощи на [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn). Ваш пост должен включать:
 
     - Описательный заголовок такой как "Требуется оценка вёрстки домашней страницы общественный школы".
     - Детали о том, что вы уже попытались сделать и что бы вы хотели, чтобы мы сделали, например, если вы застряли и вам нужна помощь, либо вы хотите оценку.

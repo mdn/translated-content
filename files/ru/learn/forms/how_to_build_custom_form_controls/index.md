@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 
 Существует много случаев, когда возможностей [стандартных виджетов HTML форм](/ru/docs/Learn/HTML/Forms/%D0%A1%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D1%8B%D0%B5_%D0%B2%D0%B8%D0%B4%D0%B6%D0%B5%D1%82%D1%8B_%D1%84%D0%BE%D1%80%D0%BC) недостаточно. Если вы хотите [придать лучший вид](/ru/docs/Advanced_styling_for_HTML_forms) каким-либо виджетам как, например, {{HTMLElement("select")}}, или вы хотите создать особое поведение виджета, то у вас нет другого выбора, кроме как создать собственные виджеты.
@@ -439,12 +440,12 @@ window.addEventListener("load", function () {
 
 Мы планируем использовать следующие функции (от самых рискованных до самых безопасных):
 
-1.  {{domxref("element.classList","classList")}}
-2.  {{domxref("EventTarget.addEventListener","addEventListener")}}
-3.  [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach") (This is not DOM but modern JavaScript)
-4.  {{domxref("element.querySelector","querySelector")}} and {{domxref("element.querySelectorAll","querySelectorAll")}}
+1. {{domxref("element.classList","classList")}}
+2. {{domxref("EventTarget.addEventListener","addEventListener")}}
+3. [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach) (This is not DOM but modern JavaScript)
+4. {{domxref("element.querySelector","querySelector")}} and {{domxref("element.querySelectorAll","querySelectorAll")}}
 
-Помимо доступности этих специфических функций, остаётся ещё одна проблема чтобы начать. Объект возвращаемый функцией {{domxref("element.querySelectorAll","querySelectorAll()")}} имеет тип {{domxref("NodeList")}} что отличается от [`Array`](/en-US/docs/JavaScript/Reference/Global_Objects/Array "/en-US/docs/JavaScript/Reference/Global_Objects/Array"). Это важно потому, что объекты `Array` поддерживают функцию [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach "/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach"), а {{domxref("NodeList")}} не поддерживает. Так как {{domxref("NodeList")}} очень похож на `Array` и нам очень удобно использовать `forEach`, мы можем просто добавить `forEach` к объекту {{domxref("NodeList")}} чтобы облегчить нам жизнь, например так:
+Помимо доступности этих специфических функций, остаётся ещё одна проблема чтобы начать. Объект возвращаемый функцией {{domxref("element.querySelectorAll","querySelectorAll()")}} имеет тип {{domxref("NodeList")}} что отличается от [`Array`](/en-US/docs/JavaScript/Reference/Global_Objects/Array). Это важно потому, что объекты `Array` поддерживают функцию [`forEach`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach), а {{domxref("NodeList")}} не поддерживает. Так как {{domxref("NodeList")}} очень похож на `Array` и нам очень удобно использовать `forEach`, мы можем просто добавить `forEach` к объекту {{domxref("NodeList")}} чтобы облегчить нам жизнь, например так:
 
 ```js
 NodeList.prototype.forEach = function (callback) {
@@ -682,7 +683,7 @@ window.addEventListener('load', function () {
 });
 ```
 
-В приведённом выше коде стоить отметить свойство [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex "/en-US/docs/Web/API/HTMLElement/tabIndex"). Использование этого свойства необходимо чтобы стандартный виджет никогда не получил фокус, и чтобы убедиться, что наш пользовательский виджет получает фокус когда пользователь использует клавиатуру или мышь.
+В приведённом выше коде стоить отметить свойство [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex). Использование этого свойства необходимо чтобы стандартный виджет никогда не получил фокус, и чтобы убедиться, что наш пользовательский виджет получает фокус когда пользователь использует клавиатуру или мышь.
 
 С этим мы закончили! Вот результат:
 
@@ -701,11 +702,11 @@ window.addEventListener('load', function () {
 
 ### Атрибут `role`
 
-Ключевой атрибут используемый в [ARIA](/ru/docs/Accessibility/ARIA) - это [`role`](/ru/docs/Accessibility/ARIA/ARIA_Techniques). Атрибут [`role`](/ru/docs/Accessibility/ARIA/ARIA_Techniques) принимает значение, определяющее для чего используется элемент. Каждая роль определяет свои собственные требования и поведение. В нашем примере мы используем роль [`listbox`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role"). Это "составная роль" ("composite role"), т.е. элементы такой роли имеют потомков, у каждого из которых есть отдельная роль (в данном случае, как минимум один дочерний элемент с ролью `option`).
+Ключевой атрибут используемый в [ARIA](/ru/docs/Accessibility/ARIA) - это [`role`](/ru/docs/Accessibility/ARIA/ARIA_Techniques). Атрибут [`role`](/ru/docs/Accessibility/ARIA/ARIA_Techniques) принимает значение, определяющее для чего используется элемент. Каждая роль определяет свои собственные требования и поведение. В нашем примере мы используем роль [`listbox`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role). Это "составная роль" ("composite role"), т.е. элементы такой роли имеют потомков, у каждого из которых есть отдельная роль (в данном случае, как минимум один дочерний элемент с ролью `option`).
 
 Стоит также отметить что ARIA определяет роли, которые по умолчанию применяются к стандартной разметке HTML. Например, элемент {{HTMLElement("table")}} соответствует роли `grid`, а элемент {{HTMLElement("ul")}} соответствует роли `list`. Так как мы используем элемент {{HTMLElement("ul")}}, то нам необходимо убедиться что роль `listbox` нашего виджета заменит роль `list` элемента {{HTMLElement("ul")}}. С этой целью, мы будем использовать роль `presentation`. Эта роль разработана чтобы можно было отметить, что элемент не имеет особого значения, а используется исключительно чтобы представить информацию. Мы применим его к нашему элементу {{HTMLElement("ul")}}.
 
-Чтобы ввести роль [`listbox`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role "/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role") нам нужно просто внести следующие изменения в HTML:
+Чтобы ввести роль [`listbox`](/en-US/docs/Accessibility/ARIA/ARIA_Techniques/Using_the_listbox_role) нам нужно просто внести следующие изменения в HTML:
 
 ```html
 <!-- Мы добавили атрибут role="listbox" в наш элемент верхнего уровня -->
@@ -756,7 +757,7 @@ function updateValue(select, index) {
 | Пример                                                                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_5")}}                  |
-| [Посмотреть исходный код](/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5 "/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_2") |
+| [Посмотреть исходный код](/ru/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5) |
 
 ## Заключение
 

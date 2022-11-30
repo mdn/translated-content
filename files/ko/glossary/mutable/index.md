@@ -2,6 +2,7 @@
 title: Mutable
 slug: Glossary/Mutable
 ---
+
 "Mutable"은 변경 가능(가변)한 변수의 유형입니다. [JavaScript](/ko/docs/Glossary/JavaScript)에서, [원시 값](/ko/docs/Glossary/Primitive)이 아닌 [객체](/ko/docs/Glossary/Object)와 [배열](/ko/docs/Glossary/array)만이 mutable입니다.
 
 (변수 이름이 새 값을 가리키도록 "만들 수 있지만" 이전 값은 여전히 메모리에 유지됩니다. 따라서 Garbage collection이 필요합니다.)

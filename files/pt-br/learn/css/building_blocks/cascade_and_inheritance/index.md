@@ -1,9 +1,9 @@
 ---
 title: Cascade and inheritance
 slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
-translation_of: Learn/CSS/Building_blocks/Cascade_and_inheritance
 original_slug: Aprender/CSS/Construindo_blocos/Cascade_and_inheritance
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
 
 O objetivo desta lição é desenvolver sua compreensão para alguns dos conceitos mais fundamentais de CSS - cascata, especificidade e herança - que controlam como o CSS é aplicado ao HTML e como os conflitos são resolvidos.

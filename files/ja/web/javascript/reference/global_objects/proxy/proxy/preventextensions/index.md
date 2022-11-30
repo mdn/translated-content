@@ -79,9 +79,7 @@ Object.preventExtensions(p); // TypeError is thrown
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

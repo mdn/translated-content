@@ -4,6 +4,7 @@ slug: Learn/Forms/Styling_web_forms
 translation_of: Learn/Forms/Styling_web_forms
 original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
 
 В этой статье Вы узнает, как использовать CSS с HTML-формами, чтобы сделать их (надеюсь) более красивыми. Удивительно, но это может быть немного сложнее. По историческим и техническим причинам виджеты форм плохо сочетаются с CSS. Из-за этих трудностей многие разработчики предпочитают создавать свои собственные HTML-виджеты, чтобы получить контроль над своим внешним видом. Однако в современных браузерах веб-дизайнеры все больше контролируют дизайн элементов формы. Давайте приступим!
@@ -26,10 +27,10 @@ original_slug: Learn/HTML/Forms/Styling_HTML_forms
 
 Некоторые элементы могут быть стилизованы с небольшим количеством проблем на разных платформах. К ним относятся следующие структурные элементы:
 
-1.  {{HTMLElement("form")}}
-2.  {{HTMLElement("fieldset")}}
-3.  {{HTMLElement("label")}}
-4.  {{HTMLElement("output")}}
+1. {{HTMLElement("form")}}
+2. {{HTMLElement("fieldset")}}
+3. {{HTMLElement("label")}}
+4. {{HTMLElement("output")}}
 
 Сюда также входят все виджеты текстового поля (как однострочные, так и многострочные) и кнопки.
 
@@ -196,16 +197,16 @@ Add the above code into the body of your HTML.
 
 This is where the fun begins! Before we start coding, we need three additional assets:
 
-1.  The postcard [background](/files/4151/background.jpg "The postcard background") — download this image and save it in the same directory as your working HTML file.
-2.  A typewriter font: [The "Secret Typewriter" font from fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — download the TTF file into the same directory as above.
-3.  A handdrawn font: [The "Journal" font from fontsquirrel.com](http://www.fontsquirrel.com/fonts/Journal) — download the TTF file into the same directory as above.
+1. The postcard [background](/files/4151/background.jpg) — download this image and save it in the same directory as your working HTML file.
+2. A typewriter font: [The "Secret Typewriter" font from fontsquirrel.com](http://www.fontsquirrel.com/fonts/Secret-Typewriter) — download the TTF file into the same directory as above.
+3. A handdrawn font: [The "Journal" font from fontsquirrel.com](http://www.fontsquirrel.com/fonts/Journal) — download the TTF file into the same directory as above.
 
 Your fonts need some more processing before you start:
 
-1.  Go to the fontsquirrel [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
-2.  Using the form, upload both your font files and generate a webfont kit. Download the kit to your computer.
-3.  Unzip the provided zip file.
-4.  Inside the unzipped contents you will find two `.woff` files and two `.woff2` files. Copy these four files into a directory called fonts, in the same directory as before. We are using two different files for each font to maximise browser compatibility; see our [Web fonts](/ru/docs/Learn/CSS/Styling_text/Web_fonts) article for a lot more information.
+1. Go to the fontsquirrel [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
+2. Using the form, upload both your font files and generate a webfont kit. Download the kit to your computer.
+3. Unzip the provided zip file.
+4. Inside the unzipped contents you will find two `.woff` files and two `.woff2` files. Copy these four files into a directory called fonts, in the same directory as before. We are using two different files for each font to maximise browser compatibility; see our [Web fonts](/ru/docs/Learn/CSS/Styling_text/Web_fonts) article for a lot more information.
 
 ### The CSS
 
@@ -384,7 +385,7 @@ And voila!
 
 As you can see, as long as we want to build forms with just text fields and buttons, it's easy to style them using CSS. If you want to know more of the little CSS tricks that can make your life easier when working with form widgets, take a look at the form part of [the normalize.css project](http://necolas.github.com/normalize.css).
 
-[In the next article](/ru/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms "/en-US/docs/Advanced_styling_for_HTML_forms"), we will see how to handle form widgets which fall in the "bad" and "ugly" categories.
+[In the next article](/ru/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms), we will see how to handle form widgets which fall in the "bad" and "ugly" categories.
 
 {{PreviousMenuNext("Learn/HTML/Forms/HTML_forms_in_legacy_browsers", "Learn/HTML/Forms/Advanced_styling_for_HTML_forms", "Learn/HTML/Forms")}}
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Typed_arrays
 original_slug: Web/JavaScript/Vectores_tipados
 ---
+
 {{JsSidebar("Advanced")}}
 
 **Los arreglos tipados en JavaScript** son objetos similares a arreglos que proporcionan un mecanismo para leer y escribir datos binarios sin procesar en búferes de memoria. Como ya sabrás, los objetos {{jsxref("Array", "Arreglo")}} crecen y se encogen dinámicamente y pueden tener cualquier valor de JavaScript. Los motores de JavaScript realizan optimizaciones para que estos arreglos sean rápidos.
@@ -148,7 +149,7 @@ let amountDueView = new Float32Array(buffer, 20, 1);
 
 Luego puedes acceder, por ejemplo, al monto adeudado con `amountDueView[0]`.
 
-> **Nota:** La {{interwiki("wikipedia", "Data_structure_alignment")}} en una estructura C depende de la plataforma. Toma precauciones y consideraciones para estas diferencias de relleno.
+> **Nota:** La [Data_structure_alignment](https://es.wikipedia.org/wiki/Data_structure_alignment) en una estructura C depende de la plataforma. Toma precauciones y consideraciones para estas diferencias de relleno.
 
 ### Conversión a arreglos normales
 
@@ -163,9 +164,7 @@ normalArray.constructor === Array;
 
 ## Especificaciones
 
-| Especificación                                                                                   |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

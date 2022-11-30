@@ -43,7 +43,7 @@ Pour envoyer une réponse asynchrone, il existe deux options&nbsp;:
 - Renvoyer `true` à partir de l’écouteur d’événement. Cela permet de conserver la fonction `sendResponse()` après le retour de l’écouteur pour éventuellement l'appeler plus tard. [Voir un exemple](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
 - Renvoyer une `Promise` depuis l’écouteur d’événement, et la résoudre lorsque vous avez la réponse (ou la rejeter en cas d’erreur). [Voir un exemple](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise).
 
-> **Attention :** Retourner une promesse ([`Promise`](fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) est désormais la méthode à privilégier car `sendResponse()` [sera retirée de la spécification W3C](https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219).
+> **Attention :** Retourner une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) est désormais la méthode à privilégier car `sendResponse()` [sera retirée de la spécification W3C](https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219).
 >
 > La bibliothèque populaire [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) a déjà supprimé cette fonction de son implémentation.
 

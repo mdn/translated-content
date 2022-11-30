@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 original_slug: Learn/HTML/Multimedia_and_embedding/Добавление_r_graphics_to_the_Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 Векторная графика очень полезна во многих случаях. Она имеет малые размеры файла и высокую масштабируемость – при увеличении масштаба пиксели не увеличиваются вместе с графикой. В данной статье мы покажем, как встраивать векторную графику на Вашу страницу.
@@ -119,7 +120,7 @@ background-size: contain;
 
 ### Как включить SVG в ваш HTML код
 
-Вы можете открыть файл SVG в текстовом редакторе, скопировать этот код и вставить его в ваш HTML документ — такой приём иногда называют встраиванием SVG (**SVG inline** или **inlining SVG**). Убедитесь, что фрагмент вашего SVG кода начинается и заканчивается с тегов [`<svg></svg>`](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg) (не включайте ничего, кроме них). Вот очень простой пример того, что вы можете вставить в ваш документ:
+Вы можете открыть файл SVG в текстовом редакторе, скопировать этот код и вставить его в ваш HTML документ — такой приём иногда называют встраиванием SVG (**SVG inline** или **inlining SVG**). Убедитесь, что фрагмент вашего SVG кода начинается и заканчивается с тегов [`<svg></svg>`](/en-US/docs/Web/SVG/Element/svg) (не включайте ничего, кроме них). Вот очень простой пример того, что вы можете вставить в ваш документ:
 
 ```html
 <svg width="300" height="200">
@@ -130,7 +131,7 @@ background-size: contain;
 #### Плюсы
 
 - Вставка вашего SVG путём **SVG inline** позволяет сохранить HTTP запросы и, следовательно, может уменьшить время загрузки.
-- Вы можете присваивать `class`-ы и `id` элементам SVG и стилизовать их при помощи CSS, либо в пределах SVG, либо внутри SVG, либо там, где вы размещаете правила стиля CSS для вашего HTML документа. По факту вы можете использовать любой [атрибут представления SVG ](/ru/docs/Web/SVG/Attribute#Presentation_attributes)как свойство CSS.
+- Вы можете присваивать `class`-ы и `id` элементам SVG и стилизовать их при помощи CSS, либо в пределах SVG, либо внутри SVG, либо там, где вы размещаете правила стиля CSS для вашего HTML документа. По факту вы можете использовать любой [атрибут представления SVG](/ru/docs/Web/SVG/Attribute#Presentation_attributes) как свойство CSS.
 - **SVG inline** единственный метод, который позволяет вам использовать CSS-взаимодействия (как `:focus`) и CSS-анимацию на вашем SVG изображении (даже в вашей обычной таблице стилей).
 - Вы можете разметить SVG как гиперссылку, обернув в элемент {{htmlelement("a")}}.
 
@@ -311,7 +312,7 @@ textarea.onkeyup = function(){
 - [Quick tips for responsive SVGs](http://thenewcode.com/744/Making-SVG-Responsive)
 - [Sara Soueidan's tutorial on responsive SVG images](http://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Accessibility benefits of SVG](http://www.w3.org/TR/SVG-access/)
-- [How to scale SVGs ](https://css-tricks.com/scale-svg/)(it's not as simple as raster graphics!)
+- [How to scale SVGs](https://css-tricks.com/scale-svg/) (it's not as simple as raster graphics!)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 

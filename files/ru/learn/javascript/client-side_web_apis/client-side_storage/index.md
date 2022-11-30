@@ -3,6 +3,7 @@ title: Client-side storage
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -67,9 +68,9 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 Посмотрите:
 
-1.  Во-первых, посмотрите наши [web storage шаблоны](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html) на GitHub (откройте в новой вкладке).
-2.  Откройте консоль инструментов JavaScript разработчика вашего браузера.
-3.  Все данные вашего веб-хранилища содержатся в двух объектоподобных структурах внутри браузера: {{domxref("Window.sessionStorage", "sessionStorage")}} и {{domxref("Window.localStorage", "localStorage")}}. Первый сохраняет данные до тех пор, пока браузер открыт (данные теряются при закрытии браузера), а второй сохраняет данные даже после того, как браузер закрыт, а затем снова открыт. Мы будем использовать второй в этой статье, так как он, как правило, более полезен.
+1. Во-первых, посмотрите наши [web storage шаблоны](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/web-storage/index.html) на GitHub (откройте в новой вкладке).
+2. Откройте консоль инструментов JavaScript разработчика вашего браузера.
+3. Все данные вашего веб-хранилища содержатся в двух объектоподобных структурах внутри браузера: {{domxref("Window.sessionStorage", "sessionStorage")}} и {{domxref("Window.localStorage", "localStorage")}}. Первый сохраняет данные до тех пор, пока браузер открыт (данные теряются при закрытии браузера), а второй сохраняет данные даже после того, как браузер закрыт, а затем снова открыт. Мы будем использовать второй в этой статье, так как он, как правило, более полезен.
 
     {{domxref("Storage.setItem()")}} метод позволяет сохранить элемент данных в хранилище - он принимает два параметра: имя элемента и его значение. Попробуйте ввести это в свою консоль JavaScript (измените значение на своё собственное имя, если хотите!):
 
@@ -77,7 +78,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
     localStorage.setItem('name','Chris');
     ```
 
-4.  {{domxref("Storage.getItem()")}} метод принимает один параметр - имя элемента данных, который вы хотите получить - и возвращает значение элемента. Теперь введите эти строки в вашу консоль JavaScript:
+4. {{domxref("Storage.getItem()")}} метод принимает один параметр - имя элемента данных, который вы хотите получить - и возвращает значение элемента. Теперь введите эти строки в вашу консоль JavaScript:
 
     ```js
     var myName = localStorage.getItem('name');
@@ -86,7 +87,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
     После ввода во второй строке вы должны увидеть, что переменная `myName` теперь содержит значение элемента данных `name`.
 
-5.  {{domxref("Storage.removeItem()")}} метод принимает один параметр - имя элемента данных, который вы хотите удалить, - и удаляет этот элемент из веб-хранилища. Введите следующие строки в вашу консоль JavaScript:
+5. {{domxref("Storage.removeItem()")}} метод принимает один параметр - имя элемента данных, который вы хотите удалить, - и удаляет этот элемент из веб-хранилища. Введите следующие строки в вашу консоль JavaScript:
 
     ```js
     localStorage.removeItem('name');
@@ -100,8 +101,8 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 Одной из ключевых особенностей веб-хранилища является то, что данные сохраняются между загрузками страниц (и даже в случае закрытия браузера, в случае `localStorage`). Давайте посмотрим на это в действии.
 
-1.  Снова откройте пустой шаблон нашего веб-хранилища, но на этот раз в другом браузере, отличном от того, в котором вы открыли этот учебник! Так будет удобнее.
-2.  Введите эти строки в консоль JavaScript браузера:
+1. Снова откройте пустой шаблон нашего веб-хранилища, но на этот раз в другом браузере, отличном от того, в котором вы открыли этот учебник! Так будет удобнее.
+2. Введите эти строки в консоль JavaScript браузера:
 
     ```js
     localStorage.setItem('name','Chris');
@@ -111,8 +112,8 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
     Вы должны увидеть возвращённое имя элемента.
 
-3.  Теперь закройте браузер и откройте его снова.
-4.  Введите следующий код:
+3. Теперь закройте браузер и откройте его снова.
+4. Введите следующий код:
 
     ```js
     var myName = localStorage.getItem('name');
@@ -137,9 +138,9 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 
 Давайте создадим пример, чтобы вы могли понять, как он работает.
 
-1.  Во-первых, сделайте локальную копию нашего [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) файла в новом каталоге на вашем компьютере.
-2.  Далее обратите внимание, как наш HTML ссылается на файл JavaScript с именем `index.js` (см. строку 40). Нам нужно создать его, и записать в него наш код JavaScript. Создайте файл `index.js` в том же каталоге, что и ваш HTML-файл.
-3.  Мы начнём с создания ссылок на все функции HTML, которыми мы должны манипулировать в этом примере - мы создадим их все как константы, поскольку эти ссылки не нужно изменять в жизненном цикле приложения. Добавьте следующие строки в ваш файл JavaScript:
+1. Во-первых, сделайте локальную копию нашего [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html) файла в новом каталоге на вашем компьютере.
+2. Далее обратите внимание, как наш HTML ссылается на файл JavaScript с именем `index.js` (см. строку 40). Нам нужно создать его, и записать в него наш код JavaScript. Создайте файл `index.js` в том же каталоге, что и ваш HTML-файл.
+3. Мы начнём с создания ссылок на все функции HTML, которыми мы должны манипулировать в этом примере - мы создадим их все как константы, поскольку эти ссылки не нужно изменять в жизненном цикле приложения. Добавьте следующие строки в ваш файл JavaScript:
 
     ```js
     // create needed constants
@@ -154,7 +155,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
     const personalGreeting = document.querySelector('.personal-greeting');
     ```
 
-4.  Далее нам нужно включить небольшой обработчик событий, чтобы форма фактически не отправляла себя при нажатии кнопки отправки, так как это не то поведение, которое нам нужно. Добавьте этот фрагмент ниже вашего предыдущего кода:
+4. Далее нам нужно включить небольшой обработчик событий, чтобы форма фактически не отправляла себя при нажатии кнопки отправки, так как это не то поведение, которое нам нужно. Добавьте этот фрагмент ниже вашего предыдущего кода:
 
     ```js
     // Stop the form from submitting when a button is pressed
@@ -163,7 +164,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
     });
     ```
 
-5.  Теперь нам нужно добавить обработчик событий, функция-обработчик которого будет запускаться при нажатии кнопки «Say hello». В комментариях подробно объясняется, что делает каждый бит, но в сущности здесь мы берём имя, которое пользователь ввёл в поле ввода текста, и сохраняем его в веб-хранилище с помощью `setItem()`, затем запускаем функцию `nameDisplayCheck()`, которая будет обрабатывать обновление фактического текста сайта. Добавьте это в конец:
+5. Теперь нам нужно добавить обработчик событий, функция-обработчик которого будет запускаться при нажатии кнопки «Say hello». В комментариях подробно объясняется, что делает каждый бит, но в сущности здесь мы берём имя, которое пользователь ввёл в поле ввода текста, и сохраняем его в веб-хранилище с помощью `setItem()`, затем запускаем функцию `nameDisplayCheck()`, которая будет обрабатывать обновление фактического текста сайта. Добавьте это в конец:
 
     ```js
     // run function when the 'Say hello' button is clicked
@@ -176,7 +177,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
     });
     ```
 
-6.  На этом этапе нам также необходим обработчик событий для запуска функции при нажатии кнопки «Forget» — она будет отображена только после того как кнопка «Say hello» будет нажата (две формы состояния для переключения между ними). В этой функции мы удаляем переменную `name` из веб-хранилища используя `removeItem()`, затем снова запускаем `nameDisplayCheck()` для обновления. Добавьте этот код в конец:
+6. На этом этапе нам также необходим обработчик событий для запуска функции при нажатии кнопки «Forget» — она будет отображена только после того как кнопка «Say hello» будет нажата (две формы состояния для переключения между ними). В этой функции мы удаляем переменную `name` из веб-хранилища используя `removeItem()`, затем снова запускаем `nameDisplayCheck()` для обновления. Добавьте этот код в конец:
 
     ```js
     // run function when the 'Forget' button is clicked
@@ -189,7 +190,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
     });
     ```
 
-7.  Самое время для определения самой функции `nameDisplayCheck()`. Здесь мы проверяем была ли переменная `name` сохранена в веб-хранилище с помощью `localStorage.getItem('name')` в качестве условия. Если переменная `name` была сохранена, то вызов вернёт - `true`; если же нет, то - `false`. Если `true`, мы показываем персональное приветствие, отображаем кнопку «Forget», и скрываем кнопку «Say hello». Если же `false`, мы отображаем общее приветствие и делаем обратное. Опять же, добавьте следующий код в конец:
+7. Самое время для определения самой функции `nameDisplayCheck()`. Здесь мы проверяем была ли переменная `name` сохранена в веб-хранилище с помощью `localStorage.getItem('name')` в качестве условия. Если переменная `name` была сохранена, то вызов вернёт - `true`; если же нет, то - `false`. Если `true`, мы показываем персональное приветствие, отображаем кнопку «Forget», и скрываем кнопку «Say hello». Если же `false`, мы отображаем общее приветствие и делаем обратное. Опять же, добавьте следующий код в конец:
 
     ```js
     // define the nameDisplayCheck() function
@@ -214,7 +215,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
     }
     ```
 
-8.  Последнее но не менее важное, нам необходимо запускать функцию `nameDisplayCheck()` при каждой загрузке страницы. Если мы не сделаем этого, персональное приветствие не будет сохранятся после перезагрузки страницы. Добавьте следующий фрагмент в конец вашего кода:
+8. Последнее но не менее важное, нам необходимо запускать функцию `nameDisplayCheck()` при каждой загрузке страницы. Если мы не сделаем этого, персональное приветствие не будет сохранятся после перезагрузки страницы. Добавьте следующий фрагмент в конец вашего кода:
 
     ```js
     document.body.onload = nameDisplayCheck;
@@ -246,15 +247,15 @@ Each note has a title and some body text, each individually editable. The JavaSc
 
 ### Предустановка
 
-1.  First of all, make local copies of our [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css), and [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) files into a new directory on your local machine.
-2.  Have a look at the files. You'll see that the HTML is pretty simple: a web site with a header and footer, as well as a main content area that contains a place to display notes, and a form for entering new notes into the database. The CSS provides some simple styling to make it clearer what is going on. The JavaScript file contains five declared constants containing references to the {{htmlelement("ul")}} element the notes will be displayed in, the title and body {{htmlelement("input")}} elements, the {{htmlelement("form")}} itself, and the {{htmlelement("button")}}.
-3.  Rename your JavaScript file to `index.js`. You are now ready to start adding code to it.
+1. First of all, make local copies of our [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css), and [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) files into a new directory on your local machine.
+2. Have a look at the files. You'll see that the HTML is pretty simple: a web site with a header and footer, as well as a main content area that contains a place to display notes, and a form for entering new notes into the database. The CSS provides some simple styling to make it clearer what is going on. The JavaScript file contains five declared constants containing references to the {{htmlelement("ul")}} element the notes will be displayed in, the title and body {{htmlelement("input")}} elements, the {{htmlelement("form")}} itself, and the {{htmlelement("button")}}.
+3. Rename your JavaScript file to `index.js`. You are now ready to start adding code to it.
 
 ### Настраиваем базу данных
 
 Now let's look at what we have to do in the first place, to actually set up a database.
 
-1.  Below the constant declarations, add the following lines:
+1. Below the constant declarations, add the following lines:
 
     ```js
     // Create an instance of a db object for us to store the open database in
@@ -263,7 +264,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
     Here we are declaring a variable called `db` — this will later be used to store an object representing our database. We will use this in a few places, so we've declared it globally here to make things easier.
 
-2.  Next, add the following to the bottom of your code:
+2. Next, add the following to the bottom of your code:
 
     ```js
     window.onload = function() {
@@ -273,7 +274,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
     We will write all of our subsequent code inside this `window.onload` event handler function, called when the window's {{event("load")}} event fires, to make sure we don't try to use IndexedDB functionality before the app has completely finished loading (it could fail if we don't).
 
-3.  Inside the `window.onload` handler, add the following:
+3. Inside the `window.onload` handler, add the following:
 
     ```js
     // Open our database; it is created if it doesn't already exist
@@ -287,7 +288,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
     > **Примечание:** The version number is important. If you want to upgrade your database (for example, by changing the table structure), you have to run your code again with an increased version number, different schema specified inside the `onupgradeneeded` handler (see below), etc. We won't cover upgrading databases in this simple tutorial.
 
-4.  Now add the following event handlers just below your previous addition — again inside the `window.onload` handler:
+4. Now add the following event handlers just below your previous addition — again inside the `window.onload` handler:
 
     ```js
     // onerror handler signifies that the database didn't open successfully
@@ -311,7 +312,7 @@ Now let's look at what we have to do in the first place, to actually set up a da
 
     The {{domxref("IDBRequest.onsuccess", "request.onsuccess")}} handler on the other hand will run if the request returns successfully, meaning the database was successfully opened. If this is the case, an object representing the opened database becomes available in the {{domxref("IDBRequest.result", "request.result")}} property, allowing us to manipulate the database. We store this in the `db` variable we created earlier for later use. We also run a custom function called `displayData()`, which displays the data in the database inside the {{HTMLElement("ul")}}. We run it now so that the notes already in the database are displayed as soon as the page loads. You'll see this defined later on.
 
-5.  Finally for this section, we'll add probably the most important event handler for setting up the database: {{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupdateneeded")}}. This handler runs if the database has not already been set up, or if the database is opened with a bigger version number than the existing stored database (when performing an upgrade). Add the following code, below your previous handler:
+5. Finally for this section, we'll add probably the most important event handler for setting up the database: {{domxref("IDBOpenDBRequest.onupgradeneeded", "request.onupdateneeded")}}. This handler runs if the database has not already been set up, or if the database is opened with a bigger version number than the existing stored database (when performing an upgrade). Add the following code, below your previous handler:
 
     ```js
     // Setup the database tables if this has not already been done
@@ -533,7 +534,7 @@ To demonstrate how to do it, we've written another example called [IndexedDB vid
 
 Let's walk through the most interesting parts of the example. We won't look at it all — a lot of it is similar to the previous example, and the code is well-commented.
 
-1.  For this simple example, we've stored the names of the videos to fetch in an array of objects:
+1. For this simple example, we've stored the names of the videos to fetch in an array of objects:
 
     ```js
     const videos = [
@@ -546,7 +547,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
     ];
     ```
 
-2.  To start with, once the database is successfully opened we run an `init()` function. This loops through the different video names, trying to load a record identified by each name from the `videos` database.
+2. To start with, once the database is successfully opened we run an `init()` function. This loops through the different video names, trying to load a record identified by each name from the `videos` database.
 
     If each video is found in the database (easily checked by seeing whether `request.result` evaluates to `true` — if the record is not present, it will be `undefined`), its video files (stored as blobs) and the video name are passed straight to the `displayVideo()` function to place them in the UI. If not, the video name is passed to the `fetchVideoFromNetwork()` function to ... you guessed it — fetch the video from the network.
 
@@ -572,7 +573,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
     }
     ```
 
-3.  The following snippet is taken from inside `fetchVideoFromNetwork()` — here we fetch MP4 and WebM versions of the video using two separate {{domxref("fetch()", "WindowOrWorkerGlobalScope.fetch()")}} requests. We then use the {{domxref("blob()", "Body.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.
+3. The following snippet is taken from inside `fetchVideoFromNetwork()` — here we fetch MP4 and WebM versions of the video using two separate {{domxref("fetch()", "WindowOrWorkerGlobalScope.fetch()")}} requests. We then use the {{domxref("blob()", "Body.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.
 
     We have a problem here though — these two requests are both asynchronous, but we only want to try to display or store the video when both promises have fulfilled. Fortunately there is a built-in method that handles such a problem — {{jsxref("Promise.all()")}}. This takes one argument — references to all the individual promises you want to check for fulfillment placed in an array — and is itself promise-based.
 
@@ -595,7 +596,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
     });
     ```
 
-4.  Let's look at `storeVideo()` first. This is very similar to the pattern you saw in the previous example for adding data to the database — we open a `readwrite` transaction and get an object store reference our `videos`, create an object representing the record to add to the database, then simply add it using {{domxref("IDBObjectStore.add()")}}.
+4. Let's look at `storeVideo()` first. This is very similar to the pattern you saw in the previous example for adding data to the database — we open a `readwrite` transaction and get an object store reference our `videos`, create an object representing the record to add to the database, then simply add it using {{domxref("IDBObjectStore.add()")}}.
 
     ```js
     function storeVideo(mp4Blob, webmBlob, name) {
@@ -616,7 +617,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
     };
     ```
 
-5.  Last but not least, we have `displayVideo()`, which creates the DOM elements needed to insert the video in the UI and then appends them to the page. The most interesting parts of this are those shown below — to actually display our video blobs in a `<video>` element, we need to create object URLs (internal URLs that point to the video blobs stored in memory) using the {{domxref("URL.createObjectURL()")}} method. Once that is done, we can set the object URLs to be the vaues of our {{htmlelement("source")}} element's `src` attributes, and it works fine.
+5. Last but not least, we have `displayVideo()`, which creates the DOM elements needed to insert the video in the UI and then appends them to the page. The most interesting parts of this are those shown below — to actually display our video blobs in a `<video>` element, we need to create object URLs (internal URLs that point to the video blobs stored in memory) using the {{domxref("URL.createObjectURL()")}} method. Once that is done, we can set the object URLs to be the vaues of our {{htmlelement("source")}} element's `src` attributes, and it works fine.
 
     ```js
     function displayVideo(mp4Blob, webmBlob, title) {
@@ -727,14 +728,14 @@ self.addEventListener('fetch', function(e) {
 });
 ```
 
-На этом все для нашего простого сервис-воркера. Используя подобный метод, вы можете сделать гораздо больше вещей — для получения доп. информации смотрите [рецепты использования сервис-воркеров](https://serviceworke.rs/). Спасибо Paul Kinlan за его статью [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), которая вдохновила на написание данного примера.
+На этом все для нашего простого сервис-воркера. Используя подобный метод, вы можете сделать гораздо больше вещей — для получения доп. информации смотрите [рецепты использования сервис-воркеров](https://github.com/mdn/serviceworker-cookbook/). Спасибо Paul Kinlan за его статью [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), которая вдохновила на написание данного примера.
 
 #### Тестируем наш пример офлайн
 
 Для тестирования [примера](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/cache-sw/video-store-offline/), вам нужно загрузить его несколько раз, чтобы быть уверенным, что сервис-воркер точно установлен. Когда это сделано, вы можете:
 
 - отключиться от сетевого соединения.
-- нажмите _Файл > Перейти в офлайн,_ если вы используете\_ \_Firefox.
+- нажмите _Файл > Перейти в офлайн,_ если вы используете Firefox.
 - перейдите в инструменты разработчика, выберите _Application > Service Workers_, нажмите галочку _Offline_, если используете Chrome.
 
 Если обновите страницу с примером снова, вы увидите, что все работает как обычно. Все данные хранятся в офлайн хранилище — ресурсы страницы в кеше, а видео в базе данных IndexedDB.

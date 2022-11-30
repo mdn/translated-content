@@ -12,7 +12,7 @@ slug: Web/API/DOMTokenList
 - {{ domxref("DOMTokenList.length") }} {{ReadOnlyInline}}
   - : 一个整数，表示存储在该对象里值的个数。
 - {{domxref("DOMTokenList.value")}}
-  - : 该属性以 {{domxref("DOMString")}} 的形式返回 **`DOMTokenList` **列表的值。
+  - : 该属性以 {{domxref("DOMString")}} 的形式返回 **`DOMTokenList`** 列表的值。
 
 ## 方法
 

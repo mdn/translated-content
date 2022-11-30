@@ -3,6 +3,7 @@ title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
 translation_of: Web/API/Element/scrollIntoView
 ---
+
 {{ APIRef("DOM")}}
 
 Метод **`Element.scrollIntoView()`** интерфейса {{domxref("Element")}} прокручивает контейнер родителя элемента так, чтобы элемент, на котором был вызван `scrollIntoView()`, стал виден пользователю.

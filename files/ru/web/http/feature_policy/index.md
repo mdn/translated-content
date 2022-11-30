@@ -3,6 +3,7 @@ title: Feature Policy
 slug: Web/HTTP/Feature_Policy
 translation_of: Web/HTTP/Feature_Policy
 ---
+
 {{SeeCompatTable}}{{HTTPSidebar}}
 
 Feature Policy позволяет веб-разработчику выборочно включать, отключать и изменять поведение определённых функций и API в браузере. Это похоже на {{Glossary("CSP", "Content Security Policy")}}, но контролирует функции вместо политик безопасности.

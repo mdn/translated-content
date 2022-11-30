@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/Tools_and_testing/GitHub
 original_slug: Learn/Tools_and_testing/GitHub
 ---
+
 {{LearnSidebar}}
 
 Все разработчики используют ту или иную **систему контроля версий (СКВ, VCS)**, инструмент, позволяющий им взаимодействовать с другими разработчиками на проекте без угрозы того, что кто-то перезапишет чужую работу, а также вернуться к предыдущим версиям кода при обнаружении проблем позднее.
@@ -56,7 +57,7 @@ Note that the links below take you to resources on external sites. Eventually we
 - [Mastering issues (from GitHub)](https://guides.github.com/features/issues/)
   - : Issues are like a forum for your GitHub project, where people can ask questions and report problems, and you can manage updates (for example assigning people to fix issues, clarifying the issue, letting people know things are fixed). This articles gives you what you need to know about issues.
 
-> **Примечание:** There is **a lot more** that you can do with Git and GitHub, but we feel that the above represents the minimum you need to know to start using Git effectively. As you get deeper into Git, you'll start to realise that it is easy to go wrong when you start using more complicated commands. Don't worry, even professional web developers find Git confusing sometimes, and often solve problems by searching for solutions on the web, or consulting sites like [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) and[ Dangit, git!](https://dangitgit.com/)
+> **Примечание:** There is **a lot more** that you can do with Git and GitHub, but we feel that the above represents the minimum you need to know to start using Git effectively. As you get deeper into Git, you'll start to realise that it is easy to go wrong when you start using more complicated commands. Don't worry, even professional web developers find Git confusing sometimes, and often solve problems by searching for solutions on the web, or consulting sites like [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) and [Dangit, git!](https://dangitgit.com/)
 
 ## See also
 

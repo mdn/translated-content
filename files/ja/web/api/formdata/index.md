@@ -39,9 +39,7 @@ slug: Web/API/FormData
 
 ## 仕様
 
-| 仕様書                                                                               | 策定状況                             | コメント                     |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------------- |
-| {{SpecName('XMLHttpRequest','#interface-formdata','FormData')}} | {{Spec2('XMLHttpRequest')}} | XHR 仕様書で FormData を定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

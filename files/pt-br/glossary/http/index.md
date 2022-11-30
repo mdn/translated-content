@@ -1,15 +1,9 @@
 ---
 title: HTTP
 slug: Glossary/HTTP
-tags:
-  - Glossário
-  - HTTP
-  - Infraestrutura
-  - Iniciante
-  - Protocolos
-translation_of: Glossary/HTTP
 original_slug: Glossario/HTTP
 ---
+
 HTTP (HyperText Transfer Protocol) é o {{glossary("protocolo")}} básico que habilita a transferência de arquivos na {{glossary("World Wide Web","Web")}}, normalmente entre um navegador e um servidor para que os humanos possam lê-los. A versão atual da especificação HTTP é chamada HTTP / 2.
 
 Como parte de um {{glossary("URI")}}, o "http: //" é chamado de "esquema" e geralmente fica no início de um endereço, por exemplo em "https\://developer.mozilla.org" para indicar ao navegador que solicite o documento usando o protocolo HTTP. O https neste caso refere-se à versão segura do protocolo HTTP, {{glossary("SSL")}} (também chamado TLS).

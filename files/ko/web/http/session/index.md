@@ -3,6 +3,7 @@ title: A typical HTTP session
 slug: Web/HTTP/Session
 translation_of: Web/HTTP/Session
 ---
+
 {{HTTPSidebar}}
 
 HTTP와 같은 클라이언트-서버 프로토콜에서, 세션은 다음의 세 가지 과정으로 이루어집니다:

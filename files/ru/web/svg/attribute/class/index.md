@@ -3,7 +3,8 @@ title: class
 slug: Web/SVG/Attribute/class
 translation_of: Web/SVG/Attribute/class
 ---
-« [Домашняя страница справочника по SVG атрибутам](/en/SVG/Attribute "en/SVG/Attribute")
+
+« [Домашняя страница справочника по SVG атрибутам](/en/SVG/Attribute)
 
 Присвоение класса или набора классов элементу. Вы можете присвоить одинаковые классы/наборы классов любому количеству элементов. Если вы указываете(присваиваете) несколько имён классов, они должны быть разделены символом "пробел".
 
@@ -18,7 +19,7 @@ translation_of: Web/SVG/Attribute/class
 
 | Категория            | None                                                                                               |
 | -------------------- | -------------------------------------------------------------------------------------------------- |
-| Значение             | [\<list-of-class-names>](/en/SVG/Content_type#List-of-Ts "en/SVG/Content type#List-of-Ts")         |
+| Значение             | [\<list-of-class-names>](/en/SVG/Content_type#List-of-Ts)         |
 | Возможна анимация    | Yes                                                                                                |
 | Нормативный документ | [SVG 1.1 (2nd Edition): The class attribute](http://www.w3.org/TR/SVG/styling.html#ClassAttribute) |
 

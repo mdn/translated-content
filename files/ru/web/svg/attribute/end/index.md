@@ -3,7 +3,8 @@ title: end
 slug: Web/SVG/Attribute/end
 translation_of: Web/SVG/Attribute/end
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
+
+« [SVG Attribute reference home](/en/SVG/Attribute)
 
 Этот атрибут определяет конечное значение для анимации, которое может ограничить активную длительность.
 
@@ -25,4 +26,4 @@ translation_of: Web/SVG/Attribute/end
 
 The following elements can use the `end` attribute
 
-- [Animation elements](/en/SVG/Element#Animation "en/SVG/Element#Animation") »
+- [Animation elements](/en/SVG/Element#Animation)

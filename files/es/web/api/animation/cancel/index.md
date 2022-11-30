@@ -1,17 +1,8 @@
 ---
 title: Animation.cancel()
 slug: Web/API/Animation/cancel
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Reference
-  - cancel
-  - metodo
-  - waapi
-translation_of: Web/API/Animation/cancel
 ---
+
 {{ APIRef("Web Animations") }}
 
 El método `cancel()` de la Web Animations API de la interfaz {{domxref("Animation")}} borra todos los {{domxref("KeyframeEffect")}} causados por esta animación y aborta su reproducción.

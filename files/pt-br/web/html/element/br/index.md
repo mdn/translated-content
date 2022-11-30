@@ -1,8 +1,8 @@
 ---
 title: <br>
 slug: Web/HTML/Element/br
-translation_of: Web/HTML/Element/br
 ---
+
 ## Sumário
 
 O elemento HTML _quebra-de-linha_ \<br> produz uma quebra de linha em um texto (carriage-return).É útil para escrever poemas ou um endereço, onde a divisão de linha é significante.
@@ -65,7 +65,7 @@ Este elemento inclue os [Atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
   - : Indica onde começar a próxima linha depois da quebra.
 
-    > **Note:** **Nota de Uso:** Este atributo está obsoleto em {{HTMLVersionInline(5)}} e **Não deve ser usado por autores**. Use a propiedade CSS {{CSSxref('clear')}} em vez disso.
+    > **Nota:** Este atributo está obsoleto em {{HTMLVersionInline(5)}} e **Não deve ser usado por autores**. Use a propriedade CSS {{CSSxref('clear')}} em vez disso.
 
 ## Exemplo
 
@@ -102,4 +102,4 @@ USA
 - O elemento {{HTMLElement("address")}}
 - O elemento {{HTMLElement("p")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

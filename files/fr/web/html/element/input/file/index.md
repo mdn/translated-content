@@ -3,7 +3,7 @@ title: <input type="file">
 slug: Web/HTML/Element/input/file
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs/Web/Guide/HTML/Formulaires) ou grâce à du code JavaScript [via l'API _File_](/fr/docs/Using_files_from_web_applications).
 
@@ -15,7 +15,7 @@ L'attribut {{htmlattrxref("value", "input")}} contient une chaîne de caractère
 
 > **Note :**
 >
-> 1. Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript [grâce à la propriété `FileList`](</en-US/docs/Using_files_from_web_applications#Getting_information_about_selected_file(s)>).
+> 1. Si plusieurs fichiers sont sélectionnés, la chaîne de caractères représente le chemin du premier fichier sélectionné. Il est possible d'accéder aux autres fichiers en JavaScript [grâce à la propriété `FileList`](/fr/docs/Using_files_from_web_applications#getting_information_about_selected_files).
 > 2. Si aucun fichier n'est sélectionné, la chaîne de caractères sera vide (`""`).
 > 3. La chaîne de caractères [est préfixée avec `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly) afin d'éviter la fuite d'informations sensibles concernant la structure des fichiers de l'utilisateur.
 

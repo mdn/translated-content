@@ -1,13 +1,8 @@
 ---
 title: Referencia atributos SVG
 slug: Web/SVG/Attribute
-tags:
-  - Atributo SVG
-  - Dibujo
-  - Gráficos vectoriales
-  - SVG
-translation_of: Web/SVG/Attribute
 ---
+
 {{SVGRef}}
 
 Los elementos SVG pueden ser modificados usando atributos, especificando cómo debe ser manejado o renderizado el elemento A continuación se muestra una lista de todos los atributos disponibles en SVG con sus respectivos enlaces a la documentación de referencia para ayudarte a comprender qué elementos los soportan y cómo funcionan

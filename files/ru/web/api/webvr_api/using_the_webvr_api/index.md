@@ -3,6 +3,7 @@ title: Использование WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
 translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 ---
+
 {{APIRef("WebVR API")}}
 
 WebVR API - фантастическое дополнение к набору инструментов веб-разработчика, позволяющее отображать WebGL сцены на устройствах виртуальной реальности, таких как Oculus Rift и HTC Vive. Но как же начать разработку VR для Веба? Эта статья познакомит вас с основами.

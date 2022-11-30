@@ -1,14 +1,8 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
-tags:
-  - API
-  - Referencia
-  - Rendimiento
-  - Web Performance API
-  - metodo
-translation_of: Web/API/Performance/now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 El método **`performance.now()`** devuelve un {{domxref("DOMHighResTimeStamp")}}, medido en milisegundos, con una precisión de cinco milésimas de segundo (5 microsegundos).
@@ -35,14 +29,11 @@ console.log("La llamada a hacerAlgo tardó " + (t1 - t0) + " milisegundos.");
 
 A diferencia de otros datos de tiempo disponibles en JavaScript (por ejemplo [`Date.now`](/es/docs/JavaScript/Reference/Global_Objects/Date/now)), las marcas de tiempo devueltas por `Performance.now()` no se limitan a resoluciones de un milisegundo. En su lugar, representan tiempos como números en punto flotante con hasta una precisión de microsegundos.
 
-También a diferencia de `Date.now()`, los valores devueltos por `Performance.now()`siempre se incrementan a un ritmo constante, independientemente del sistema de reloj (que podría estar ajustado manualmente o manipulado por software como NTP). De todos modos, `performance.timing.navigationStart + performance.now()`será aproximadamente igual a`Date.now()`.
+También a diferencia de `Date.now()`, los valores devueltos por `Performance.now()`siempre se incrementan a un ritmo constante, independientemente del sistema de reloj (que podría estar ajustado manualmente o manipulado por software como NTP). De todos modos, `performance.timing.navigationStart + performance.now()`será aproximadamente igual a `Date.now()`.
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                       | Comentario                                        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------------------------------------- |
-| {{SpecName('Highres Time Level 2', '#dom-performance-now', 'performance.now()')}} | {{Spec2('Highres Time Level 2')}} | Definiciones más estrictas de interfaces y tipos. |
-| {{SpecName('Highres Time', '#dom-performance-now', 'performance.now()')}}             | {{Spec2('Highres Time')}}             | Definición inicial                                |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

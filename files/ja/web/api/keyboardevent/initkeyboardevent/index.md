@@ -10,9 +10,9 @@ slug: Web/API/KeyboardEvent/initKeyboardEvent
 
 ## 構文
 
-```js
+```js-nolint
 initKeyboardEvent(type, canBubble, cancelable,
-                  view,  key, location, ctrlKey,
+                  view, key, location, ctrlKey,
                   altKey, shiftKey, metaKey)
 ```
 
@@ -25,7 +25,7 @@ initKeyboardEvent(type, canBubble, cancelable,
 - `cancelable` {{optional_inline}}
   - : イベントをキャンセルできるかどうかを示します。既定値は `false` です。
 - `view` {{optional_inline}}
-  - : 関連付けられている {{domxref("WindowProxy")}} を指定します。既定値は `null` です。
+  - : 関連付けられている {{glossary("WindowProxy")}} を指定します。既定値は `null` です。
 - `key` {{optional_inline}}
   - : key 属性の値。既定値は `""` です。
 - `location` {{optional_inline}}

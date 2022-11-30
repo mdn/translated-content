@@ -12,6 +12,7 @@ tags:
   - WebRTC
 translation_of: Web/API/MediaStreamTrack/stop
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack.stop()`** 메서드는 트랙을 정지합니다.

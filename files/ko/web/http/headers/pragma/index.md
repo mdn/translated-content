@@ -10,6 +10,7 @@ tags:
   - 헤더
 translation_of: Web/HTTP/Headers/Pragma
 ---
+
 {{HTTPSidebar}}
 
 HTTP/1.0 의 **`Pragma`** 헤더는 요청-응답 체인에 다양한 영향을 줄 수 있는 구현관련 헤더이다. 이것은 HTTP/1.0 버전에서 HTTP/1.1 버전의 `Cache-Control` 헤더가 생기기 전 그것과 동일한 역할을 하는 대용 헤더로 사용되었다.

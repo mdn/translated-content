@@ -1,9 +1,9 @@
 ---
 title: Control de acceso HTTP (CORS)
 slug: Web/HTTP/CORS
-translation_of: Web/HTTP/CORS
 original_slug: Web/HTTP/Access_control_CORS
 ---
+
 {{HTTPSidebar}}
 
 El Intercambio de Recursos de Origen Cruzado ({{Glossary("CORS")}}) es un mecanismo que utiliza cabeceras {{Glossary("HTTP")}} adicionales para permitir que un {{Glossary("user agent")}} obtenga permiso para acceder a recursos seleccionados desde un servidor, en un origen distinto (dominio) al que pertenece. Un agente crea una petición HTTP de origen cruzado cuando solicita un recurso desde un dominio distinto, un protocolo o un puerto diferente al del documento que lo generó.
@@ -29,7 +29,7 @@ Este [estándar de intercambio de origen cruzado](http://www.w3.org/TR/cors/) es
 - Invocaciones de las APIs [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) o [Fetch](/es/docs/Web/API/Fetch_API) en una manera de sitio cruzado, como se discutió arriba.
 - Fuentes Web (para usos de fuente en dominios cruzados `@font-face` dentro de CSS), [para que los servidores puedan mostrar fuentes TrueType que sólo puedan ser cargadas por sitios cruzados y usadas por sitios web que lo tengan permitido.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - Texturas WebGL.
-- Imágenes dibujadas en patrones usando [`drawImage`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage).
+- Imágenes dibujadas en patrones usando [`drawImage`](/es/docs/Web/API/CanvasRenderingContext2D/drawImage).
 - Hojas de estilo (para acceso [CSSOM](/es/docs/Web/CSS/CSSOM_View)).
 - Scripts (para excepciones inmutadas).
 
@@ -57,7 +57,7 @@ Una solicitud de sitio cruzado es aquella que cumple las siguientes condiciones:
   - HEAD
   - POST.
 
-- Aparte de las cabeceras establecidas automáticamente por el agente usuario (ej. `Connection, User-Agent,`etc.), las únicas cabeceras que están permitidas para establecer manualmente son:
+- Aparte de las cabeceras establecidas automáticamente por el agente usuario (ej. `Connection`, `User-Agent`, etc.), las únicas cabeceras que están permitidas para establecer manualmente son:
 
   - `Accept`
   - `Accept-Language`
@@ -126,10 +126,10 @@ Note que ahora, ningún otro dominio aparte de `http://foo.example` (identificad
 
 A diferencia de las solicitudes simples (discutidas arriba), las solicitudes "verificadas" envían primero una solicitud HTTP por el método `OPTIONS` al recurso en el otro dominio, para determinar si es seguro enviar la verdadera solicitud. Las solicitudes de sitios cruzados son verificadas así ya que pueden tener implicaciones en la información de usuario. En particular, una solicitud es verificada sí:
 
-- Usa métodos **distintos** a `GET, HEAD` `o POST`. También, si `POST` es utilizado para enviar solicitudes de información con Content-Type **distinto** a`application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`, ej. si la solicitud `POST` envía una carga XML al servidor utilizando `application/xml` or `text/xml`, entonces la solicitud **es** verificada.
+- Usa métodos **distintos** a `GET, HEAD` `o POST`. También, si `POST` es utilizado para enviar solicitudes de información con Content-Type **distinto** a `application/x-www-form-urlencoded`, `multipart/form-data`, o `text/plain`, ej. si la solicitud `POST` envía una carga XML al servidor utilizando `application/xml` or `text/xml`, entonces la solicitud **es** verificada.
 - Se establecen encabezados personalizados (ej. la solicitud usa un encabezado como `X-PINGOTHER`)
 
-> **Nota:** Empezando en {{Gecko("2.0")}}, las codificaciones de datos `text/plain`, `application/x-www-form-urlencoded`, y `multipart/form-data` pueden ser enviadas en sitios cruzados sin verificación. Anteriormente, solo`text/plain` podía ser enviado sin verificación.
+> **Nota:** Empezando en {{Gecko("2.0")}}, las codificaciones de datos `text/plain`, `application/x-www-form-urlencoded`, y `multipart/form-data` pueden ser enviadas en sitios cruzados sin verificación. Anteriormente, solo `text/plain` podía ser enviado sin verificación.
 
 Un ejemplo de este tipo de invocación puede ser:
 
@@ -331,7 +331,7 @@ Esta cabecera permite una _whitelist_ de cabeceras del servidor que los explorad
 Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header
 ```
 
-Esto permite a las cabeceras `X-My-Custom-Header` y`X-Another-Custom-Header` ser expuestos al explorador.
+Esto permite a las cabeceras `X-My-Custom-Header` y `X-Another-Custom-Header` ser expuestos al explorador.
 
 ### Access-Control-Max-Age
 
@@ -411,10 +411,7 @@ Ejemplos de esta utilización pueden ser encontrados [arriba](/En/HTTP_access_co
 
 ## Especificaciones
 
-| Especificación                                                   | Estado                   | Comentario                                                              |
-| ---------------------------------------------------------------- | ------------------------ | ----------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | Nueva definición; tiene como objetivo suplantar la especificación CORS. |
-| {{SpecName('CORS')}}                                     | {{Spec2('CORS')}} | Definición inicial.                                                     |
+{{Specifications}}
 
 ## Compatibilidad con Exploradores
 

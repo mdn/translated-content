@@ -1,10 +1,8 @@
 ---
 title: evento
 slug: Web/API/Event
-tags:
-  - para_revisar
-translation_of: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 « [Referencia DOM de Gecko](/es/Referencia_DOM_de_Gecko)
@@ -174,9 +172,9 @@ haga clic en cualquier lugar de esta página.</p>
   - : Inicia un evento del ratón una vez que se ha creado.
 - [event.initUIEvent](/es/DOM/event.initUIEvent)
   - : Inicia un evento de la interfaz de usuario (_UI_) una vez que se ha creado.
-- [event.preventBubble](/es/DOM/event.preventBubble) {{obsolete_inline}}
+- [event.preventBubble](/es/DOM/event.preventBubble) {{deprecated_inline}}
   - : Previene la expansión del evento. Este método es desaconsejado en favor del estándar [stopPropagation](/es/DOM/event.stopPropagation) y ha sido [retirado en Gecko 1.9](/es/Los_cambios_en_Gecko_1.9_afectando_a_los_sitios_web).
-- [event.preventCapture](/es/DOM/event.preventCapture) {{obsolete_inline}}
+- [event.preventCapture](/es/DOM/event.preventCapture) {{deprecated_inline}}
   - : Este método es desaconsejado en favor del estándar [stopPropagation](/es/DOM/event.stopPropagation) y ha sido [retirado en Gecko 1.9](/es/Los_cambios_en_Gecko_1.9_afectando_a_los_sitios_web).
 - [event.preventDefault](/es/DOM/event.preventDefault)
   - : Cancela el evento (si éste es anulable).

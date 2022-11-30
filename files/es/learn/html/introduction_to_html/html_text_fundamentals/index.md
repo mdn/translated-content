@@ -1,20 +1,6 @@
 ---
 title: Fundamentos de texto en HTML
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-tags:
-  - CodingScripting
-  - Encabezados
-  - Estructuras
-  - Guía
-  - HTML
-  - Introducción a HTML
-  - Novato
-  - Principiante
-  - Párrafos
-  - Texto
-  - aprende
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 original_slug: Learn/HTML/Introduccion_a_HTML/texto
 ---
 
@@ -109,7 +95,7 @@ Esto se debe a que no hay elementos que den estructura al contenido, por lo que 
 
 - Los usuarios que miran una página web tienden a escanearla rápidamente para encontrar el contenido relevante que hay en ella y a menudo empiezan por leer los encabezados para comenzar. (Solemos [pasar muy poco tiempo en una página web](http://www.nngroup.com/articles/how-long-do-users-stay-on-web-pages/)). Si no pueden ver nada útil en unos segundos, es probable que se sientan frustrados y se vayan a otro sitio.
 - Los motores de búsqueda que indizan tu página consideran el contenido de los títulos como palabras clave importantes e influyen en la puntuación de búsqueda de la página. Sin encabezados, tu página tendrá un rendimiento bajo en términos de optimización de motores de búsqueda {{Glossary("SEO")}}.
-- Las personas con discapacidad visual severa no suelen leer páginas web: en lugar de ello, las escuchan. Lo hacen con un software llamado {{interwiki("wikipedia", "Lector de pantalla")}}. Este software proporciona acceso rápido a un contenido textual dado. Entre las diversas técnicas que emplean, leen los encabezados para proporcionar un esquema del documento que permite a los usuarios encontrar rápidamente la información que quieren. Si no hay encabezados disponibles, se ven obligados a escuchar el documento entero.
+- Las personas con discapacidad visual severa no suelen leer páginas web: en lugar de ello, las escuchan. Lo hacen con un software llamado [Lector de pantalla](https://es.wikipedia.org/wiki/Lector_de_pantalla). Este software proporciona acceso rápido a un contenido textual dado. Entre las diversas técnicas que emplean, leen los encabezados para proporcionar un esquema del documento que permite a los usuarios encontrar rápidamente la información que quieren. Si no hay encabezados disponibles, se ven obligados a escuchar el documento entero.
 - Para aplicar estilos al contenido con {{Glossary("CSS")}}, o para que haga cosas interesantes con {{Glossary("JavaScript")}}, necesitas tener elementos que delimiten el contenido relevante para que CSS/JavaScript se puedan focalizar en este efectivamente.
 
 Por lo tanto, debemos dar a nuestro contenido una estructura definida.
@@ -1043,7 +1029,7 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 
 ## Resumen
 
-¡Eso es todo por ahora! Este artículo debería haberte dado una buena idea de cómo comenzar a marcar texto en HTML y te ha presentado algunos de los elementos más importantes en este ámbito. Hay muchos más elementos semánticos para desarrollar en esta área, y veremos muchos más en nuestro artículo [Formateo de texto avanzado](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting), más adelante en el curso. En el siguiente artículo, veremos en detalle cómo [crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), posiblemente el más importante elemento en la web.
+¡Eso es todo por ahora! Este artículo debería haberte dado una buena idea de cómo comenzar a marcar texto en HTML y te ha presentado algunos de los elementos más importantes en este ámbito. Hay muchos más elementos semánticos para desarrollar en esta área, y veremos muchos más en nuestro artículo [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting), más adelante en el curso. En el siguiente artículo, veremos en detalle cómo [crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), posiblemente el más importante elemento en la web.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 

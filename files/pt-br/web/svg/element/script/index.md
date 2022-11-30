@@ -1,12 +1,8 @@
 ---
 title: script
 slug: Web/SVG/Element/script
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/script
 ---
+
 Um elemento `script` é equivalente a um elemento [`script`](/pt-BR/HTML/Element/Script) em HTML e, portanto, é o lugar para os scripts (por exemplo, ECMAScript).
 
 Quaisquer funções definidas dentro de qualquer elemento `script` tem um escopo global em todo o documento atual.
@@ -21,7 +17,7 @@ O seguinte trecho de código demonstra o uso da tag `script` do SVG. Neste códi
 
 ```html
 <svg width="100%" height="100%" viewBox="0 0 100 100"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="https://www.w3.org/2000/svg">
   <script type="text/javascript">
     // <![CDATA[
     function change(evt) {

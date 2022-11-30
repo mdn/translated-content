@@ -3,6 +3,7 @@ title: Реализация функции обнаружения
 slug: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Accessibility","Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Обнаружение функций включает определение того, поддерживает ли браузер определённый блок кода, и выполнение другого кода в зависимости от того, поддерживает ли он или нет, так что браузер всегда может обеспечить работу, а не сбой / ошибку в некоторых браузерах. В этой статье подробно описывается, как написать собственное простое обнаружение функций, как использовать библиотеку для ускорения реализации, а также встроенные функции для обнаружения функций, такие как `@supports`.
@@ -43,17 +44,17 @@ if ("geolocation" in navigator) {
 
 Давайте реализуем что-то, что демонстрирует это, хотя мы пока оставим это простым.
 
-1.  Начните с создания локальных копий наших файлов [`css-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect.html), [`flex-layout.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/flex-layout.css), [`float-layout-css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/float-layout.css), и [`basic-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/basic-styling.css). Сохраните их в новой дирекции.
-2.  Мы добавим HTML5 Shiv и в наш пример, чтобы семантические элементы HTML5 правильно стилизовались в старых версиях IE. Загрузите последнюю версию (См. [Ручная установка](https://github.com/aFarkas/html5shiv#manual-installation)), разархивируйте ZIP, скопируйте файлы `html5shiv-printshiv.min.js` и `html5shiv.min.js` в ваш пример дирекции и создайте ссылку на один из файлов, поместив следующее в свой {{htmlelement("title")}} элемент:
+1. Начните с создания локальных копий наших файлов [`css-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/css-feature-detect.html), [`flex-layout.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/flex-layout.css), [`float-layout-css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/float-layout.css), и [`basic-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/basic-styling.css). Сохраните их в новой дирекции.
+2. Мы добавим HTML5 Shiv и в наш пример, чтобы семантические элементы HTML5 правильно стилизовались в старых версиях IE. Загрузите последнюю версию (См. [Ручная установка](https://github.com/aFarkas/html5shiv#manual-installation)), разархивируйте ZIP, скопируйте файлы `html5shiv-printshiv.min.js` и `html5shiv.min.js` в ваш пример дирекции и создайте ссылку на один из файлов, поместив следующее в свой {{htmlelement("title")}} элемент:
 
     ```
     <script src="html5shiv.min.js"></script>
     ```
 
-3.  Посмотрите ваши примеры CSS-файлов - вы увидите, что `basic-styling.css` обрабатывает все стили, которые мы хотим дать каждому браузеру, тогда как два других CSS-файла содержат CSS, который мы хотим выборочно применять к браузеру в зависимости от их уровни поддержки. Вы можете посмотреть на различные эффекты этих двух файлов, вручную изменив CSS-файл, на который ссылается второй элемент {{htmlelement("link")}}, но давайте вместо этого реализуем некоторый JavaScript, чтобы автоматически заменять их при необходимости.
-4.  Сначала удалите содержимое атрибута `href` второго элемента `<link>` . Мы будем заполнять это динамически позже.
-5.  Затем добавьте элемент `<script></script>` внизу вашего контекста (непосредственно перед закрывающим тегом `</body>`).
-6.  Дайте ему следующее содержание:
+3. Посмотрите ваши примеры CSS-файлов - вы увидите, что `basic-styling.css` обрабатывает все стили, которые мы хотим дать каждому браузеру, тогда как два других CSS-файла содержат CSS, который мы хотим выборочно применять к браузеру в зависимости от их уровни поддержки. Вы можете посмотреть на различные эффекты этих двух файлов, вручную изменив CSS-файл, на который ссылается второй элемент {{htmlelement("link")}}, но давайте вместо этого реализуем некоторый JavaScript, чтобы автоматически заменять их при необходимости.
+4. Сначала удалите содержимое атрибута `href` второго элемента `<link>` . Мы будем заполнять это динамически позже.
+5. Затем добавьте элемент `<script></script>` внизу вашего контекста (непосредственно перед закрывающим тегом `</body>`).
+6. Дайте ему следующее содержание:
 
     ```js
     const conditional = document.querySelector('.conditional');
@@ -157,9 +158,9 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 
 Когда вы экспериментируете с Modernizr, вы также можете использовать сборку разработки, которая включает в себя все возможные тесты обнаружения функций. Скачать:
 
-1.  Нажав на ссылку [Сборка разработки](https://modernizr.com/download?do_not_use_in_production).
-2.  Нажав на большую розовую кнопку _Build_ на появившейся странице.
-3.  Нажав на верхнюю ссылку _Download_ в появившемся диалоговом окне.
+1. Нажав на ссылку [Сборка разработки](https://modernizr.com/download?do_not_use_in_production).
+2. Нажав на большую розовую кнопку _Build_ на появившейся странице.
+3. Нажав на верхнюю ссылку _Download_ в появившемся диалоговом окне.
 
 Сохраните его где-нибудь разумно, например, в директории, для которой вы создавали другие примеры в этой статье.
 
@@ -169,20 +170,20 @@ if (window.matchMedia("(max-width: 480px)").matches) {
 
 Давайте посмотрим, как Modernizr работает с точки зрения избирательного применения CSS.
 
-1.  Во-первых, создайте копию [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) и [`supports-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Сохраните их как `modernizr-css.html` и `modernizr-css.css`.
-2.  Обновите ваш элемент {{htmlelement ("link")}} в своём HTML-коде, чтобы он указывал на правильный файл CSS (также следует обновить элемент {{htmlelement ("title")}} на что-то более подходящее!):
+1. Во-первых, создайте копию [`supports-feature-detect.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-feature-detect.html) и [`supports-styling.css`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/supports-styling.css). Сохраните их как `modernizr-css.html` и `modernizr-css.css`.
+2. Обновите ваш элемент {{htmlelement ("link")}} в своём HTML-коде, чтобы он указывал на правильный файл CSS (также следует обновить элемент {{htmlelement ("title")}} на что-то более подходящее!):
 
     ```html
     <link href="modernizr-css.css" rel="stylesheet">
     ```
 
-3.  Над этим элементом `<link>` добавьте элемент {{htmlelement ("script")}}, чтобы применить библиотеку Modernizr к странице, как показано ниже. Это должно быть применено к странице перед любым CSS (или JavaScript), который может её использовать.
+3. Над этим элементом `<link>` добавьте элемент {{htmlelement ("script")}}, чтобы применить библиотеку Modernizr к странице, как показано ниже. Это должно быть применено к странице перед любым CSS (или JavaScript), который может её использовать.
 
     ```html
     <script src="modernizr-custom.js"></script>
     ```
 
-4.  Теперь отредактируйте открывающий тег `<html>`, чтобы он выглядел так:
+4. Теперь отредактируйте открывающий тег `<html>`, чтобы он выглядел так:
 
     ```html
     <html class="no-js">
@@ -261,10 +262,10 @@ Modernizr.fetch
 
 Давайте посмотрим на пример, чтобы показать, как вы бы пользовали эти свойства.
 
-1.  Прежде всего, сделайте локальную копию файла примера [`modernizr-js.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-js.html).
-2.  Присоедините библиотеку Modernizr к HTML, используя элемент `<script>` , как мы делали в предыдущих демонстрациях. Поместите его над существующим элементом `<script>` который прикрепляет API Google Maps к странице.
-3.  Затем заполните текст-заполнитель `YOUR-API-KEY` во втором элементе `<script>` (как он есть сейчас) действительным ключом API Google Maps. Чтобы получить ключ, войдите в учётную запись Google, перейдите на страницу [Получить ключ / Аутентификация](https://developers.google.com/maps/documentation/javascript/get-api-key) затем нажмите синюю кнопку _Get a Key_ и следуйте инструкциям.
-4.  Наконец, добавьте ещё один элемент `<script>` внизу тела HTML (непосредственно перед тегом `</body>` ) и поместите следующий скрипт в теги:
+1. Прежде всего, сделайте локальную копию файла примера [`modernizr-js.html`](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/feature-detection/modernizr-js.html).
+2. Присоедините библиотеку Modernizr к HTML, используя элемент `<script>` , как мы делали в предыдущих демонстрациях. Поместите его над существующим элементом `<script>` который прикрепляет API Google Maps к странице.
+3. Затем заполните текст-заполнитель `YOUR-API-KEY` во втором элементе `<script>` (как он есть сейчас) действительным ключом API Google Maps. Чтобы получить ключ, войдите в учётную запись Google, перейдите на страницу [Получить ключ / Аутентификация](https://developers.google.com/maps/documentation/javascript/get-api-key) затем нажмите синюю кнопку _Get a Key_ и следуйте инструкциям.
+4. Наконец, добавьте ещё один элемент `<script>` внизу тела HTML (непосредственно перед тегом `</body>` ) и поместите следующий скрипт в теги:
 
     ```js
     if (Modernizr.geolocation) {

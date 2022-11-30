@@ -1,10 +1,8 @@
 ---
 title: window.navigator.registerProtocolHandler
 slug: Web/API/Navigator/registerProtocolHandler
-page-type: web-api-instance-method
-translation_of: Web/API/Navigator/registerProtocolHandler
-browser-compat: api.Navigator.registerProtocolHandler
 ---
+
 {{ ApiRef() }}
 
 ### Resumen

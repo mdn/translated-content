@@ -8,6 +8,7 @@ tags:
   - Новичку
 translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
 
 API, которые мы рассмотрели до сих пор, встроены в браузер, но не все API таковы. Многие крупные веб-сайты и сервисы, такие как Google Maps, Twitter, Facebook, PayPal и т. д., Предоставляют API-интерфейсы, позволяющие разработчикам использовать свои данные (например, показывать ваш твиттер-поток в вашем блоге) или сервисы (например, отображение пользовательских карт Google на вашем сайте, или использование логина Facebook для входа в систему ваших пользователей). В этой статье рассматривается различие между API-интерфейсами браузера и сторонними API и показано типичное использование последних.
@@ -80,26 +81,26 @@ https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA
 
 Теперь когда мы рассмотрели пример API Карт Google и посмотрели, как он работает, добавим ещё несколько функций, чтобы показать, как использовать некоторые другие функции API.
 
-1.  Чтобы начать этот раздел, сделайте себе копию [исходного файла Карт Google](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html), в новой папке. Если вы уже [клонировали репозиторий примеров](/ru/docs/Learn#Getting_our_code_examples), у вас уже есть копия этого файла, которую вы можете найти в папке the _javascript/apis/third-party-apis/google-maps_.
-2.  Затем получите свой собственный ключ разработчика, выполнив следующие шаги:
+1. Чтобы начать этот раздел, сделайте себе копию [исходного файла Карт Google](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html), в новой папке. Если вы уже [клонировали репозиторий примеров](/ru/docs/Learn#Getting_our_code_examples), у вас уже есть копия этого файла, которую вы можете найти в папке the _javascript/apis/third-party-apis/google-maps_.
+2. Затем получите свой собственный ключ разработчика, выполнив следующие шаги:
 
-    1.  Перейдите в [панель управления API-интерфейсом Google Cloud Platform](https://console.cloud.google.com/apis/dashboard).
-    2.  Создайте новый проект, если у вас его ещё нет.
-    3.  Нажмите кнопку _Enable API_.
-    4.  Выберите _Google Maps JavaScript API_.
-    5.  Нажмите кнопку _Enable_.
-    6.  Нажмите _Create credentials_, затем выберите _API key_.
-    7.  Скопируйте свой ключ API и замените существующий ключ в первом элементе {{htmlelement ('script')}} примера вашим собственным (фрагмент между `?key=` и меткой закрытия закрытия атрибута (`"`).)
+    1. Перейдите в [панель управления API-интерфейсом Google Cloud Platform](https://console.cloud.google.com/apis/dashboard).
+    2. Создайте новый проект, если у вас его ещё нет.
+    3. Нажмите кнопку _Enable API_.
+    4. Выберите _Google Maps JavaScript API_.
+    5. Нажмите кнопку _Enable_.
+    6. Нажмите _Create credentials_, затем выберите _API key_.
+    7. Скопируйте свой ключ API и замените существующий ключ в первом элементе {{htmlelement ('script')}} примера вашим собственным (фрагмент между `?key=` и меткой закрытия закрытия атрибута (`"`).)
 
     > **Примечание:** Получение ключей API, связанных с Google, может быть немного затруднительным: в Менеджере API Google Cloud Platform много разных экранов, и рабочий процесс может немного отличаться в зависимости от того, как у вас уже установлена ​​учётная запись. Если у вас возникнут проблемы с этим шагом, мы будем рады помочь — [Свяжитесь с нами](/ru/docs/Learn#Contact_us).
 
-3.  Откройте исходный файл Карт Google, найдите строку `INSERT-YOUR-API-KEY-HERE`, и замените её фактическим ключом API, который вы получили из панели управления Google Cloud Platform API Manager.
+3. Откройте исходный файл Карт Google, найдите строку `INSERT-YOUR-API-KEY-HERE`, и замените её фактическим ключом API, который вы получили из панели управления Google Cloud Platform API Manager.
 
 ### Adding a custom marker
 
 Adding a marker (icon) at a certain point on the map is easy — you just need to create a new marker using the `google.maps.Marker()` constructor, passing it an options object containing the position to display the marker at (as a `LatLng` object), and the `Map` object to display it on.
 
-1.  Add the following just below the `var map ...` line:
+1. Add the following just below the `var map ...` line:
 
     ```js
     var marker = new google.maps.Marker({
@@ -110,7 +111,7 @@ Adding a marker (icon) at a certain point on the map is easy — you just need t
 
     Now if you refresh your page, you'll see a nice little marker pop up in the centre of the map. This is cool, but it is not exactly a custom marker — it is using the default marker icon.
 
-2.  To use a custom icon, we need to specify it when we create the marker, using its URL. First of all, add the following line above the previous block you added:
+2. To use a custom icon, we need to specify it when we create the marker, using its URL. First of all, add the following line above the previous block you added:
 
     ```js
     var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
@@ -118,7 +119,7 @@ Adding a marker (icon) at a certain point on the map is easy — you just need t
 
     This defines the base URL where all the official Google Maps icons are stored (you could also specify your own icon location if you wished).
 
-3.  The icon location is specified in the `icon` property of the options object. Update the constructor like so:
+3. The icon location is specified in the `icon` property of the options object. Update the constructor like so:
 
     ```js
     var marker = new google.maps.Marker({
@@ -138,13 +139,13 @@ Adding a marker (icon) at a certain point on the map is easy — you just need t
 
 Another common use case for Google Maps is displaying more information about a place when its name or marker is clicked (popups are called **info windows** in the Google Maps API). This is also very simple to achieve, so let's have a look at it.
 
-1.  First of all, you need to specify a JavaScript string containing HTML that will define the content of the popup. This will be injected into the popup by the API and can contain just about any content you want. Add the following line below the `google.maps.Marker()` constructor definition:
+1. First of all, you need to specify a JavaScript string containing HTML that will define the content of the popup. This will be injected into the popup by the API and can contain just about any content you want. Add the following line below the `google.maps.Marker()` constructor definition:
 
     ```js
     var contentString = '<div id="content"><h2 id="firstHeading" class="firstHeading">Custom info window</h2><p>This is a cool custom info window.</p></div>';
     ```
 
-2.  Next, you need to create a new info window object using the `google.maps.InfoWindow()` constructor. Add the following below your previous line:
+2. Next, you need to create a new info window object using the `google.maps.InfoWindow()` constructor. Add the following below your previous line:
 
     ```js
     var infowindow = new google.maps.InfoWindow({
@@ -154,7 +155,7 @@ Another common use case for Google Maps is displaying more information about a p
 
     There are other properties available (see [Info Windows](https://developers.google.com/maps/documentation/javascript/infowindows)), but here we are just specifying the `content` property in the options object, which points to the source of the content.
 
-3.  Finally, to get the popup to display when the marker is clicked, we use a simple click event handler. Add the following below the `google.maps.InfoWindow()` constructor:
+3. Finally, to get the popup to display when the marker is clicked, we use a simple click event handler. Add the following below the `google.maps.InfoWindow()` constructor:
 
     ```js
     marker.addListener('click', function() {
@@ -164,15 +165,15 @@ Another common use case for Google Maps is displaying more information about a p
 
     Inside the function, we simply invoke the infowindow's `open()` function, which takes as parameters the map you want to display it on, and the marker you want it to appear next to.
 
-4.  Now try reloading the example, and clicking on the marker!
+4. Now try reloading the example, and clicking on the marker!
 
 ### Controlling what map controls are displayed
 
 Inside the original `google.maps.Map()` constructor, you'll see the property `disableDefaultUI: true` specified. This disables all the standard UI controls you usually get on Google Maps.
 
-1.  Try setting its value to `false` (or just removing the line altogether) then reloading your example, and you'll see the map zoom buttons, scale indicator, etc.
-2.  Now undo your last change.
-3.  You can show or hide the controls in a more granular fashion by using other properties that specify single UI features. Try adding the following underneath the `disableDefaultUI: true` (remember to put a comma after `disableDefaultUI: true`, otherwise you'll get an error):
+1. Try setting its value to `false` (or just removing the line altogether) then reloading your example, and you'll see the map zoom buttons, scale indicator, etc.
+2. Now undo your last change.
+3. You can show or hide the controls in a more granular fashion by using other properties that specify single UI features. Try adding the following underneath the `disableDefaultUI: true` (remember to put a comma after `disableDefaultUI: true`, otherwise you'll get an error):
 
     ```js
     zoomControl: true,
@@ -180,7 +181,7 @@ Inside the original `google.maps.Map()` constructor, you'll see the property `di
     scaleControl: true,
     ```
 
-4.  Now try reloading the example to see the effect these properties have. You can find more options to experiment with at the [MapOptions object reference page](https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapOptions).
+4. Now try reloading the example to see the effect these properties have. You can find more options to experiment with at the [MapOptions object reference page](https://developers.google.com/maps/documentation/javascript/3.exp/reference#MapOptions).
 
 That's it for now — have a look around the [Google Maps APIs documentation](https://developers.google.com/maps/documentation/javascript/), and have some more fun playing!
 
@@ -200,9 +201,9 @@ When you want to use a third party API, it is essential to find out where the do
 
 Most APIs require you to use some kind of developer key, for reasons of security and accountability. To sign up for an NYTimes API key, you need to go to <https://developer.nytimes.com/signup>.
 
-1.  Let's request a key for the "Article Search API" — fill in the form, selecting this as the API you want to use.
-2.  Next, wait a few minutes, then get the key from your email.
-3.  Now, to start the example off, make copies of [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) and [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) in a new directory on your computer. If you've already [cloned the examples repository](/ru/docs/Learn#Getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes_ directory. Initially the `<script>` element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
+1. Let's request a key for the "Article Search API" — fill in the form, selecting this as the API you want to use.
+2. Next, wait a few minutes, then get the key from your email.
+3. Now, to start the example off, make copies of [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) and [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) in a new directory on your computer. If you've already [cloned the examples repository](/ru/docs/Learn#Getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes_ directory. Initially the `<script>` element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
 
 The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.
 
@@ -214,7 +215,7 @@ First, you'll need to make a connection between the API, and your app. This is u
 
 In the case of this API, you need to include the API key as a [get](/ru/docs/Web/HTTP/Methods/GET) parameter every time you request data from it.
 
-1.  Find the following line:
+1. Find the following line:
 
     ```js
     var key = 'INSERT-YOUR-API-KEY-HERE';
@@ -222,13 +223,13 @@ In the case of this API, you need to include the API key as a [get](/ru/docs/Web
 
     Replace `INSERT-YOUR-API-KEY-HERE` with the actual API key you got in the previous section.
 
-2.  Add the following line to your JavaScript, below the "`// Event listeners to control the functionality`" comment. This runs a function called `fetchResults()` when the form is submitted (the button is pressed).
+2. Add the following line to your JavaScript, below the "`// Event listeners to control the functionality`" comment. This runs a function called `fetchResults()` when the form is submitted (the button is pressed).
 
     ```js
     searchForm.addEventListener('submit', submitSearch);
     ```
 
-3.  Now add the `submitSearch()` and `fetchResults()` function definitions, below the previous line:
+3. Now add the `submitSearch()` and `fetchResults()` function definitions, below the previous line:
 
     ```js
     function submitSearch(e) {
@@ -376,14 +377,14 @@ To make the pagination buttons work, we will increment (or decrement) the value 
 
 This allows us to easily write a simplistic pagination function.
 
-1.  Below the existing [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
+1. Below the existing [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) call, add these two new ones, which cause the `nextPage()` and `previousPage()` functions to be invoked when the relevant buttons are clicked:
 
     ```js
     nextBtn.addEventListener('click', nextPage);
     previousBtn.addEventListener('click', previousPage);
     ```
 
-2.  Below your previous addition, let's define the two functions — add this code now:
+2. Below your previous addition, let's define the two functions — add this code now:
 
     ```js
     function nextPage(e) {

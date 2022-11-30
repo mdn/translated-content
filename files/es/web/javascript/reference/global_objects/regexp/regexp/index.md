@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/RegExp
 ---
+
 {{JSRef}}
 
 El constructor **`RegExp`** crea un objeto de expresión regular para hacer coincidir el texto con un patrón.
@@ -81,9 +82,7 @@ El constructor del objeto de expresión regular, por ejemplo, `new RegExp('ab+c'
 
 ## Especificaciones
 
-| Especificación                                                                                   |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-regexp-constructor', 'RegExp constructor')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

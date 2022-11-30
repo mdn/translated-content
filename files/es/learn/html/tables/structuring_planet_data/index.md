@@ -1,9 +1,9 @@
 ---
 title: 'Evaluación: Estructurando datos planetarios'
 slug: Learn/HTML/Tables/Structuring_planet_data
-translation_of: Learn/HTML/Tables/Structuring_planet_data
 original_slug: Learn/HTML/Tablas/Structuring_planet_data
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 En nuestra evaluación te proporcionamos datos sobre los planetas de nuestro sistema solar y tu los estructurarás en una tabla HTML.

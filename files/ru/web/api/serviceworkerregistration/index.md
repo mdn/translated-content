@@ -14,6 +14,7 @@ tags:
   - Workers
 translation_of: Web/API/ServiceWorkerRegistration
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 Интерфейс `ServiceWorkerRegistration` ссылается на регистрацию Service Worker. Вы можете зарегистрировать Service Worker, чтобы контролировать одну или несколько страниц на одном домене.

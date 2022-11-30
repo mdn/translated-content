@@ -2,6 +2,7 @@
 title: 'Django Tutorial Part 3: Using models'
 slug: Learn/Server-side/Django/Models
 ---
+
 803{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 이 문서에서는 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 웹사이트의 모델을 어떻게 정의할지 보여줄 것입니다. 모델이라는 것이 무엇인지, 어떻게 선언하는지, 그리고 주된 필드 타입들에 대해서 설명합니다. 그리고 모델의 데이터에 접근할 수 있는 몇몇 방법에 대해서 간단히 보여줄 것입니다.
@@ -228,7 +229,7 @@ record.save()
 all_books = Book.objects.all()
 ```
 
-장고의 `filter()`는 반환된 `QuerySet`이 지정된 문자(**text**) 또는 숫자(**numeric**)\*\* \*\*필드를 특정한 기준에 맞추어 필터링할 수 있게 합니다. 예를 들어서, "wild"를 제목 안에 포함하는 책들을 필터링하여 그 숫자를 세어 보려면, 아래와 같이 하면 됩니다.
+장고의 `filter()`는 반환된 `QuerySet`이 지정된 문자(**text**) 또는 숫자(**numeric**) 필드를 특정한 기준에 맞추어 필터링할 수 있게 합니다. 예를 들어서, "wild"를 제목 안에 포함하는 책들을 필터링하여 그 숫자를 세어 보려면, 아래와 같이 하면 됩니다.
 
 ```python
 wild_books = Book.objects.filter(title__contains='wild')

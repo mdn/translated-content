@@ -1,16 +1,8 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - HTTP
-  - Reference
-  - Referencia
-  - Referenciado
-  - cabeçalho
-  - header
-  - referer
-translation_of: Web/HTTP/Headers/Referer
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição HTTP **`Referer`** contém o endereço da página web anterior do qual a página atual requerida foi chamada. O `Referer` permite aos servidores identificar de onde as pessoas estão visitando eles e pode usar esses dados para análise, log e cacheamento otimizado, por exemplo.

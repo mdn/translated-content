@@ -3,6 +3,7 @@ title: WorkerGlobalScope.importScripts()
 slug: Web/API/WorkerGlobalScope/importScripts
 translation_of: Web/API/WorkerGlobalScope/importScripts
 ---
+
 {{APIRef("Web Workers API")}}
 
 Метод **`importScripts()`** интерфейса {{domxref("WorkerGlobalScope")}} синхронно импортирует один или несколько скриптов, добавляя их в область видимости сервис-воркера.

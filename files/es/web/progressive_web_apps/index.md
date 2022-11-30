@@ -1,14 +1,6 @@
 ---
 title: Aplicaciones Web Progresivas
 slug: Web/Progressive_web_apps
-tags:
-  - Aplicaciones Web
-  - Aplicaciones web modernas
-  - Aplicación Web Progresiva
-  - Aplicación web
-  - PWA
-  - aplicación
-translation_of: Web/Progressive_web_apps
 ---
 
 ![Logotipo de la comunidad PWA](https://mdn.mozillademos.org/files/16742/pwa.png)Las **_aplicaciones web progresivas_** (mejor conocidas como **PWA**s por «_**P**rogressive **W**eb **A**pps_») son aplicaciones web que utilizan APIs y funciones emergentes del navegador web junto a una estrategia tradicional de mejora progresiva para ofrecer una aplicación nativa —como la experiencia del usuario para aplicaciones web multiplataforma. Las aplicaciones web progresivas son un patrón de diseño útil, aunque no son un estándar formalizado. Se puede pensar que PWA es similar a AJAX u otros patrones similares que abarcan un conjunto de atributos de aplicación, incluido el uso de tecnologías y técnicas web específicas. Este conjunto de documentos te dice todo lo que necesitas saber sobre ellas.
@@ -68,7 +60,7 @@ Las siguientes guías te muestran lo que debes hacer para implementar una PWA, e
 - [`sw-precache`](https://github.com/GoogleChrome/sw-precache) — un módulo de `node` para generar código del servicio _worker que precargará recursos específicos._
 - _[workbox](https://github.com/GoogleChrome/workbox): sucesor espiritual de "sw-precache" con estrategias de almacenamiento en caché más avanzadas y sencillas precargas._
 - _[upup](https://www.talater.com/upup/): un diminuto script que garantiza que tu sitio siempre esté disponible para tus usuarios._
-- _[El libro de recetas para servicios worker](https://serviceworke.rs/): una serie de excelentes recetas de servicios worker que muestran cómo implementar una aplicación sin conexión, además de otros muchos concejos._
+- _[El libro de recetas para servicios worker](https://github.com/mdn/serviceworker-cookbook/): una serie de excelentes recetas de servicios worker que muestran cómo implementar una aplicación sin conexión, además de otros muchos concejos._
 - _[Extensión PWA de VS Code](https://marketplace.visualstudio.com/items?itemName=mayeedwin.vscode-pwa): una colección de todos los fragmentos de código esenciales que necesitas para crear aplicaciones web progresivas correctamente allí en tu entorno de VS Code._
 
 <!---->

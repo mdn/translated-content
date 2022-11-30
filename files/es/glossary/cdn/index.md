@@ -1,11 +1,8 @@
 ---
 title: CDN
 slug: Glossary/CDN
-tags:
-  - Estructura
-  - Glosario
-translation_of: Glossary/CDN
 ---
+
 Una **Red de distribución de contenidos** (_CDN en inglés_) es un grupo de servidores distribuidos en muchas ubicaciones. Estos servidores almacenan copias duplicadas de datos para que los servidores puedan cumplir con las solicitudes de datos en función de qué servidores están más cerca de los respectivos usuarios finales. Las CDN hacen que el servicio rápido se vea menos afectado por el alto tráfico.
 
 Los CDN se usan ampliamente para entregar hojas de estilo y archivos Javascript (activos estáticos) de bibliotecas como Bootstrap, jQuery, etc. Es preferible usar CDN para esos archivos de biblioteca por varias razones:

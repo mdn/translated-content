@@ -4,6 +4,7 @@ slug: Learn/Accessibility/Accessibility_troubleshooting
 translation_of: Learn/Accessibility/Accessibility_troubleshooting
 original_slug: Learn/Доступность/Accessibility_troubleshooting
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 In the assessment for this module, we present to you a simple site with a number of accessibility issues that you need to diagnose and fix.
@@ -32,9 +33,9 @@ The text is difficult to read because of the current color scheme. Can you do a 
 
 ### Semantic HTML
 
-1.  The content is still not very accessible — report on what happens when you try to navigate it using a screenreader.
-2.  Can you update the article text to make it easier for screenreader users to navigate?
-3.  The navigation menu part of the site (wrapped in `<div class="nav"></div>`) could be made more accessible by putting it in a proper HTML5 semantic element. Which one should it be updated to? Make the update.
+1. The content is still not very accessible — report on what happens when you try to navigate it using a screenreader.
+2. Can you update the article text to make it easier for screenreader users to navigate?
+3. The navigation menu part of the site (wrapped in `<div class="nav"></div>`) could be made more accessible by putting it in a proper HTML5 semantic element. Which one should it be updated to? Make the update.
 
 > **Примечание:** You'll need to update the CSS rule selectors that style the tags to their proper equivalents for the semantic headings. Once you add paragraph elements, you'll notice the styling looking better.
 
@@ -44,13 +45,13 @@ The images are currently inaccessible to screenreader users. Can you fix this?
 
 ### The audio player
 
-1.  The `<audio>` player isn't accessible to hearing impaired (deaf) people — can you add some kind of accessible alternative for these users?
-2.  The `<audio>` player isn't accessible to those using older browsers that don't support HTML5 audio. How can you allow them to still access the audio?
+1. The `<audio>` player isn't accessible to hearing impaired (deaf) people — can you add some kind of accessible alternative for these users?
+2. The `<audio>` player isn't accessible to those using older browsers that don't support HTML5 audio. How can you allow them to still access the audio?
 
 ### The forms
 
-1.  The `<input>` element in the search form at the top could do with a label, but we don't want to add a visible text label that would potentially spoil the design and isn't really needed by sighted users. How can you add a label that is only accessible to screenreaders?
-2.  The two `<input>` elements in the comment form have visible text labels, but they are not unambiguously associated with their labels — how do you achieve this? Note that you'll need to update some of the CSS rule as well.
+1. The `<input>` element in the search form at the top could do with a label, but we don't want to add a visible text label that would potentially spoil the design and isn't really needed by sighted users. How can you add a label that is only accessible to screenreaders?
+2. The two `<input>` elements in the comment form have visible text labels, but they are not unambiguously associated with their labels — how do you achieve this? Note that you'll need to update some of the CSS rule as well.
 
 ### The show/hide comment control
 

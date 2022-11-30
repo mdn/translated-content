@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/get
 original_slug: Web/JavaScript/Referencia/Funciones/get
 ---
+
 {{jsSidebar("Funciones")}}
 
 Enlaza la propiedad de un objeto con una función que será llamada cuando la propiedad es buscada.
@@ -74,6 +75,6 @@ Sin soporte (notablemente en IE6-8) significa que el script lanzará un error de
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Operators/set", "set")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Defining Getters and Setters](/es/JavaScript/Guide/Working_with_Objects#Defining_Getters_and_Setters) in JavaScript Guide

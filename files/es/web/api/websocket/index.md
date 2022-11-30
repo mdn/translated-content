@@ -3,6 +3,7 @@ title: WebSocket
 slug: Web/API/WebSocket
 translation_of: Web/API/WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}{{SeeCompatTable}}El objeto WebSocket provee la API para la creación y administración de una conexión [WebSocket](/es/docs/Web/API/WebSockets_API)a un servidor, así como también para enviar y recibir datos en la conexión.El constructor de WebSocket acepta un parámetro requerido y otro opcional.
 
 ```
@@ -43,7 +44,7 @@ El constructor puede levantar excepciones:
 | `onclose`        | {{domxref("EventListener")}} | Un monitor de eventos que atiende una llamada cuando la conexión del WebSocket cambia a un estado CERRADO (CLOSED). El monitor recibe un [`CloseEvent`](/es/docs/Web/API/CloseEvent) llamado "cerrado".                                                                                                                                                                           |
 | `onerror`        | {{domxref("EventListener")}} | Un monitor de eventos que es llamado cuando un error ocurre. Esto es un evento simple llamado "error"                                                                                                                                                                                                                                                                             |
 | `onmessage`      | {{domxref("EventListener")}} | Un monitor de eventos que es llamado cuando un mensaje es recibido desde un servidor. El monitor recibe un objeto [`MessageEvent`](/es/docs/Web/API/MessageEvent)llamado "mensaje".                                                                                                                                                                                              |
-| `onopen`         | {{domxref("EventListener")}} | Un monitor de eventos que es llamado cuando el estado `readyState`de la conexión`Websocket`cambia a `OPEN.`Esto indica que la conexión está lista para enviar y recibir datos. El evento es uno simple con el nombre "open".                                                                                                                                                  |
+| `onopen`         | {{domxref("EventListener")}} | Un monitor de eventos que es llamado cuando el estado `readyState` de la conexión `Websocket` cambia a `OPEN`. Esto indica que la conexión está lista para enviar y recibir datos. El evento es uno simple con el nombre "open".                                                                                                                                                  |
 | `protocol`       | {{DOMXref("DOMString")}}     | Una cadena indicando el nombre del sub-protocolo que el servidor ha seleccionado. Este puede ser una de las cadenas especificadas en el parámetro `protocols` cuando se ha creado el objeto Websocket.                                                                                                                                                                            |
 | `readyState`     | `unsigned short`                     | El estado actual de la conexión. Este es uno de [Ready state constants](#ready_state_constants). **Solo lectura.**                                                                                                                                                                                                                                                                |
 | `url`            | {{DOMXref("DOMString")}}     | La URL como la resuelve el constructor. Esto siempre es una URL absoluta. **Solo lectura.**                                                                                                                                                                                                                                                                                       |
@@ -88,7 +89,7 @@ void close(
 - `SYNTAX_ERR`
   - : La `reason` cadena es demasiado larga o continene caracteres no validos.
 
-> **Nota:** En Gecko, este métido no soporta ningun parámetro antes de Gecko 8.0 {{geckoRelease("8.0")}}.
+> **Nota:** En Gecko, este método no soporta ningun parámetro antes de Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
 
 ### send()
 
@@ -120,7 +121,7 @@ void send(
 - `SYNTAX_ERR`
   - : La data tiene caracteres no válidos que no se pueden decodificar.
 
-> **Nota:** La implementación del método `send()`en el motor de renderizado Gecko puede cambiar de la especificación en {{Gecko("6.0")}}; Gecko devuelve un `boolean` indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en {{Gecko("8.0")}}.
+> **Nota:** La implementación del método `send()` en el motor de renderizado Gecko puede cambiar de la especificación en {{Gecko("6.0")}}; Gecko devuelve un `boolean` indicando si la conexión esta todavía abierta (y, por extensión, que los datos son encolados o trasmitidos satisfactoriamente). Esto ha sido corregido en {{Gecko("8.0")}}.
 >
 > A partir de {{Gecko("11.0")}}, implementa {{jsxref("ArrayBuffer")}} pero no tipos de datos {{domxref("Blob")}}.
 
@@ -143,9 +144,7 @@ socket.addEventListener('message', function (event) {
 
 ## Especificaciones
 
-| Specification                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Websockets", "#the-websocket-interface", "WebSocket")}} | {{Spec2("Websockets")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -7,6 +7,7 @@ tags:
   - события
 translation_of: Web/API/Window/resize_event
 ---
+
 {{APIRef}}
 
 Событие **`resize`** срабатывает при изменении размера представления документа (окна).

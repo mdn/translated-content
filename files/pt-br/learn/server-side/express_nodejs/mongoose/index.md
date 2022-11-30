@@ -1,8 +1,8 @@
 ---
 title: 'Tutorial Express Parte 3: Usando um banco de dados (com Mongoose)'
 slug: Learn/Server-side/Express_Nodejs/mongoose
-translation_of: Learn/Server-side/Express_Nodejs/mongoose
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
 Este artigo introduz brevemente bancos de dados e como usá-los com aplicativos Node/Express. Depois demonstra como podemos usar o [Mongoose](http://mongoosejs.com/) para prover acesso ao banco de dados para o website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website). Explica como object schema e modelos são declarados, os principais tipos de campos e validações básicas. Também demonstra brevemente algumas das muitas maneiras em que se pode acessar os dados do modelo.
@@ -97,7 +97,7 @@ O diagrama também mostra o relacionamento entre modelos, incluindo sua cardinal
 
 > **Nota:** Assim como discutido abaixo em [Iniciando com Mongoose](#related_documents) muitas vezes é melhor ter o atributo que define a relação entre os documentos/modelos em apenas um dos modelos( você ainda pode encontrar o relacionamento reverso pesquisando o `_id` associado no outro modelo). Abaixo nós escolhemos definir o modelo Book Schema para armazenar o relacionamento entre Book/Genre e Book/Author, e definimos BookInstance Schema para armazenar o relacionamento entre Book/BookInstance. Esta escolha foi um tanto arbitrária — nós poderíamos igualmente ter declarado esses atributos em outro schema.
 
-![Mongoose Library Model  with correct cardinality](https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png)
+![Mongoose Library Model with correct cardinality](https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png)
 
 > **Nota:** A próxima seção fornece um guia explicando como os modelos são definidos e usados. Ao ler, considere como iremos construir cada um dos modelos no diagrama acima.
 

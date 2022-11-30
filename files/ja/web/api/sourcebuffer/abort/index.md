@@ -47,9 +47,7 @@ Nick Desaulnier の [bufferWhenNeeded デモ](https://github.com/nickdesaulniers
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-abort()', 'abort()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -39,9 +39,9 @@ slug: Web/API/Worklet
     <tr>
       <td>{{domxref("AudioWorklet")}}</td>
       <td>カスタムオーディオノードでの音声処理のために使用します。</td>
-      <td>ウェブ音声レンダリングスレッド</td>
+      <td>ウェブオーディオレンダリングスレッド</td>
       <td>
-        <a href="https://webaudio.github.io/web-audio-api/#AudioWorklet">ウェブ音声 API</a>
+        <a href="https://webaudio.github.io/web-audio-api/#AudioWorklet">ウェブオーディオ API</a>
       </td>
     </tr>
     <tr>

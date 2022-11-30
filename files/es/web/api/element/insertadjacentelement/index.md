@@ -1,8 +1,8 @@
 ---
 title: Element.insertAdjacentElement()
 slug: Web/API/Element/insertAdjacentElement
-translation_of: Web/API/Element/insertAdjacentElement
 ---
+
 {{APIRef}}
 
 El método `insertAdjacentElement()` inserta un elemento nodo dado en una posición dada con respecto al elemento sobre el que se invoca.

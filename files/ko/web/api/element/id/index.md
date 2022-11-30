@@ -3,6 +3,7 @@ title: Element.id
 slug: Web/API/Element/id
 translation_of: Web/API/Element/id
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Element.id`** 속성은 요소의 식별자를 나타내며, HTML의 전역적인 id 속성을 반영합니다.

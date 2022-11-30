@@ -1,9 +1,9 @@
 ---
 title: Elemento substituído
 slug: Web/CSS/Replaced_element
-translation_of: Web/CSS/Replaced_element
 original_slug: Web/CSS/Elemento_substituido
 ---
+
 {{CSSRef()}}
 
 ## Sumario

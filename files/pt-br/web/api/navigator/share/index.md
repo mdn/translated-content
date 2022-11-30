@@ -1,8 +1,8 @@
 ---
 title: Navigator.share()
 slug: Web/API/Navigator/share
-translation_of: Web/API/Navigator/share
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 O método **`navigator.share()`** da API de compartilhamento da Web chama o mecanismo de compartilhamento nativo do dispositivo.

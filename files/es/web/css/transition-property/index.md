@@ -8,6 +8,7 @@ tags:
   - Transiciones CSS
 translation_of: Web/CSS/transition-property
 ---
+
 {{CSSRef("CSS Transitions")}}
 
 La propiedad CSS **`transition-property`** se usa para definir los nombres de las propiedades CSS en las que el efecto de la transición debe aplicarse.
@@ -58,9 +59,7 @@ Hay varios ejemplos de transiciones CSS incluídos en el artículo principal [Tr
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                                   | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Transitions', '#transition-property', 'transition-property')}} | {{Spec2('CSS3 Transitions')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
@@ -68,5 +67,5 @@ Hay varios ejemplos de transiciones CSS incluídos en el artículo principal [Tr
 
 ## Véase también
 
-- [Usando transiciones CSS](/Web/Guide/CSS/Using_CSS_transitions)
+- [Usando transiciones CSS](/es/docs/Web/Guide/CSS/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}}

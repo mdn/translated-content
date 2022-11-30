@@ -157,7 +157,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 
 다만 진짜 강조를 해야하는 상황에는, 따옴표로 강조하고 PR로 소명합니다.
 
-### `:` 쌍점,  `;` 쌍반점 지침
+### `:` 쌍점, `;` 쌍반점 지침
 
 뒤의 문장 예시를 강조하기 위해 쌍점을 사용하는 경우에 `: 쌍점`은 한글 문법에 적합하지 않습니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-964241518)
 
@@ -252,20 +252,6 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
   - 예: 정수 값, 소수 값, 반환 값, 기본 값
   - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
 
-- callout
-
-  ```html
-  <div class="callout">
-    <h4 id="looking_to_become_a_front-end_web_developer">프론트엔드 웹 개발자가 되고자 하시나요?</h4>
-
-    <p>목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.</p>
-
-    <p>
-      <a href="/ko/docs/Learn/Front-end_web_developer"><strong>시작하기</strong></a>
-    </p>
-  </div>
-  ```
-
 ### 용어 지침 `참고 링크` 우선 순위
 
 - 1. 해당 단어에 대한 의견을 나눈 PR 링크
@@ -329,8 +315,22 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
 | Note | 참고 | |
+| Warning | 경고 | |
+| Callout | 알림 | |
 | Objective | 목표 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
 | Prerequisites | 필요한 사전 지식 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
+
+- callout
+
+```markdown
+> **알림:**
+>
+> #### 프론트엔드 웹 개발자가 되고자 하시나요?
+>
+> 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
+>
+> [**시작하기**](/en-US/docs/Learn/Front-end_web_developer)
+```
 
 ## 공통 용어
 

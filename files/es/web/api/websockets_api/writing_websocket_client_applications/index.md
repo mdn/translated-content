@@ -5,6 +5,7 @@ tags:
   - Guía WebSocket WebSockets
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
+
 WebSockets es una tecnología basada en el protocolo ws, este hace posible establecer una conexión continua full-duplex, entre un cliente y servidor. Un cliente websocket podría ser el navegador del usuario, pero el protocolo es una plataforma independiente.
 
 > **Nota:** Tenemos un ejemplo funcional de un sistema de chat/servidor usado para ejemplos de código que estará disponible una vez nuestra infraestructura esté en posición de hospedar ejemplos de WebSocket apropiadamente.
@@ -47,7 +48,7 @@ El constructor puede lanzar excepciones:
 
 ### Errores de conexión
 
-Si ocurre un error al intentar conectar, lo primero que recibiremos será un evento con el nombre de "error" en el objeto `WebSocket`(de este modo se invoca el manejador `onerror`), y luego [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) es enviado al objeto `WebSocket`(de este modo se invoca el manejador `onclose`), para indicar la razón del cierre de la conexión.
+Si ocurre un error al intentar conectar, lo primero que recibiremos será un evento con el nombre de "error" en el objeto `WebSocket` (de este modo se invoca el manejador `onerror`), y luego [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) es enviado al objeto `WebSocket` (de este modo se invoca el manejador `onclose`), para indicar la razón del cierre de la conexión.
 
 A partir de Firefox 11, es normal recibir un mensaje de error descriptivo en la consola de la plataforma Mozilla, y un código de cierre como está definido en el [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) a través de un [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent).
 
@@ -59,7 +60,7 @@ En este ejemplo de crea un nuevo WebSocket, conectandose al servidor `ws://www.e
 var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
 ```
 
-Como respuesta, `exampleSocket`.`readyState` es `CONNECTING`. El `readyState` será `OPEN` una vez que la conexión este lista para transferir información.
+Como respuesta, `exampleSocket.readyState` es `CONNECTING`. El `readyState` será `OPEN` una vez que la conexión este lista para transferir información.
 
 Si se quiere establecer una conexión que soporte varios protocolos, se puede establecer un array de protocolos:
 
@@ -178,7 +179,7 @@ Se usa [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) para
 
 El texto recibido a través de la conexión WebSocket está en formato UTF-8.
 
-Antes de Gecko 9.0 {{ geckoRelease("9.0") }}, algunos no-caracteres que siguen siendo texto UTF-8 válido podrían causar el cierre de la conexión. Ahora Gecko permite esos valores.
+Antes de Gecko 9.0 (Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6), algunos no-caracteres que siguen siendo texto UTF-8 válido podrían causar el cierre de la conexión. Ahora Gecko permite esos valores.
 
 ## Cerrando la conexión
 

@@ -1,21 +1,17 @@
 ---
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`screenX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、グローバル（スクリーン）座標における、マウスポインターの水平方向の座標（オフセット）を示します。
 
 > **メモ:** マルチスクリーン環境では、水平方向に並べられた画面が単一の機器として扱われ、 `screenX` の範囲に画面の幅が加算されることがあります。
 
-## 構文
-
-```js
-var x = instanceOfMouseEvent.screenX
-```
-
-### 返値
+## 値
 
 `double` の浮動小数点値です。
 
@@ -47,7 +43,7 @@ function logKey(e) {
 
 ### 結果
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ### イベントのルーティング
 

@@ -3,6 +3,7 @@ title: Регулярные выражения
 slug: Web/JavaScript/Guide/Regular_Expressions
 translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 Регулярные выражения - это шаблоны, используемые для сопоставления последовательностей символов в строках. В JavaScript регулярные выражения также являются объектами. Эти шаблоны используются в методах [`exec`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/exec) и [`test`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp/test) объекта [`RegExp`](/ru/docs/JavaScript/Reference/Global_Objects/RegExp) а также [`match`](/ru/docs/JavaScript/Reference/Global_Objects/String/match), [`replace`](/ru/docs/JavaScript/Reference/Global_Objects/String/replace), [`search`](/ru/docs/JavaScript/Reference/Global_Objects/String/search), [`split`](/ru/docs/JavaScript/Reference/Global_Objects/String/split) объекта [`String`](/ru/docs/JavaScript/Reference/Global_Objects/String). Данная глава описывает регулярные выражения в JavaScript.
@@ -1019,7 +1020,7 @@ console.log(output.join("\n"));
 
 Внутри незахватывающих скобок `(?:`, регуляное выражение ищет три цифры `\d{3}` ИЛИ `|` открывающую скобку `\(`, затем три цифры `\d{3}`, затем закрывающую скобку `\)`, (закрывающая незахватывающая скобка `)`), затем тире, слеш, или десятичная точка, и когда это выражение найдено, запоминает символ `([-\/\.])`, следующие за ним и запомненные три цифры `\d{3}`, следующее соответствие тире, слеша или десятичной точки `\1`, и следующие четыре цифры `\d{4}`.
 
-Регулярное выражение ищет сначала 0 или одну открывающую скобку `\(?`, затем три цифры `\d{3}`, затем 0 или одну закрывающую скобку `\)?`, потом одно тире, слеш или точка и когда найдёт это, запомнит символ`([-\/\.])`, след. три цифры `\d{3}`, followed by the remembered match of a dash, forward slash, or decimal point `\1`, followed by four digits `\d{4}`.
+Регулярное выражение ищет сначала 0 или одну открывающую скобку `\(?`, затем три цифры `\d{3}`, затем 0 или одну закрывающую скобку `\)?`, потом одно тире, слеш или точка и когда найдёт это, запомнит символ `([-\/\.])`, след. три цифры `\d{3}`, followed by the remembered match of a dash, forward slash, or decimal point `\1`, followed by four digits `\d{4}`.
 
 Событие "Изменить" активируется, когда пользователь подтвердит ввод значения регулярного выражения, нажав клавишу "Enter".
 

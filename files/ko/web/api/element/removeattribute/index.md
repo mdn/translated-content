@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Element/removeAttribute
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.removeAttribute()`** 메서드는 요소에서 주어진 이름의 특성을 제거합니다.

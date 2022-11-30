@@ -3,6 +3,7 @@ title: Create genre form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 translation_of: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 ---
+
 В этом подразделе рассказано, как сделать страницу для создания жанра (`Genre`). Хорошая точка для старта, у жанра всего одно поле - `name`. Как и для любой другой страницы, здесь потребуется внести изменения в соответствующие маршрут, контроллер и шаблон (route, controller, view).
 
 ## Import validation and sanitisation methods
@@ -204,5 +205,5 @@ The only error we validate against server-side is that the genre field must not 
 
 ## Next steps
 
-1.  Return to [Express Tutorial Part 6: Working with forms.](/ru/docs/Learn/Server-side/Express_Nodejs/forms)
-2.  Proceed to the next sub article of part 6: [Create Author form](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form).
+1. Return to [Express Tutorial Part 6: Working with forms.](/ru/docs/Learn/Server-side/Express_Nodejs/forms)
+2. Proceed to the next sub article of part 6: [Create Author form](/ru/docs/Learn/Server-side/Express_Nodejs/forms/Create_author_form).

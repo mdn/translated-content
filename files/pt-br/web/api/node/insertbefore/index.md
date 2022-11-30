@@ -1,11 +1,11 @@
 ---
 title: Node.insertBefore
 slug: Web/API/Node/insertBefore
-translation_of: Web/API/Node/insertBefore
 ---
+
 {{ApiRef("DOM")}}
 
-O método **`Node.insertBefore()` **insere um nó antes do nó de referência como um filho de um nó pai especificado. Se o filho especificado for uma referência a um nó existente no documento, `insertBefore()` o moverá de sua posição atual para a nova posição (não há necessidade de remover o nó de seu nó pai antes de anexá-lo a outro nó).
+O método **`Node.insertBefore()`** insere um nó antes do nó de referência como um filho de um nó pai especificado. Se o filho especificado for uma referência a um nó existente no documento, `insertBefore()` o moverá de sua posição atual para a nova posição (não há necessidade de remover o nó de seu nó pai antes de anexá-lo a outro nó).
 
 Isso significa que um nó não pode estar em dois pontos do documento simultaneamente. Portanto, se o nó já tiver um pai, o nó será removido pela primeira vez e inserido na nova posição. O {{domxref("Node.cloneNode()")}} pode ser usado para fazer uma cópia do nó antes de anexá-lo ao novo pai. Note que as cópias feitas com `cloneNode()` não serão automaticamente mantidas em sincronia.
 
@@ -88,4 +88,4 @@ Quando o elemento não possui o primeiro filho, então `firstChild` é `null`. O
 
 ## Especificação
 
-- [insertBefore](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-952280727)
+- [insertBefore](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-952280727)

@@ -2,6 +2,7 @@
 title: 'Express Tutorial Part 4: Routes and controllers'
 slug: Learn/Server-side/Express_Nodejs/routes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs/Displaying_data", "Learn/Server-side/Express_Nodejs")}}
 
 이 튜토리얼에서 우리는 더미 핸들러 함수를 이용해 최종적으로 [LocalLibrary](/ko/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 웹사이트에 쓰이게 될 모든 리소스 종단점라우팅 모듈 (url 핸들링 코드)를 설정해 볼 것입니다.이 작업을 통해 우리는 향후 문서에 쓰일 함수들을 모듈화된 라우트 핸들링 코드 구조로 제작하는 법을 배울 수 있습니다.또한 Express를 이용해 모듈화된 라우팅방법을 잘 이해할 수 있게 될 것입니다.
@@ -414,7 +415,7 @@ exports.book_update_post = function(req, res) {
 
 Next we create _routes_ for all the URLs [needed by the LocalLibrary website](#local_libary_routes), which will call the controller functions we defined in the previous section.
 
-The skeleton already has a **./routes** folder containing routes for the _index_ and _users_. Create another route file — **catalog.js** — inside this folder, as shown.
+The skeleton already has a **./routes** folder containing routes for the _index_ and _users_. Create another route file — `catalog.js` — inside this folder, as shown.
 
 ```
 /express-locallibrary-tutorial //the project root
@@ -424,7 +425,7 @@ The skeleton already has a **./routes** folder containing routes for the _index_
     catalog.js
 ```
 
-Open **/routes/\*\***catalog.js\*\* and copy in the code below:
+Open `/routes/catalog.js` and copy in the code below:
 
 ```js
 var express = require('express');

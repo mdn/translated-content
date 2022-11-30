@@ -1,8 +1,8 @@
 ---
 title: Math.abs()
 slug: Web/JavaScript/Reference/Global_Objects/Math/abs
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Sumário

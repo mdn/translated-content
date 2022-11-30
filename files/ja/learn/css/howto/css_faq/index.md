@@ -15,7 +15,7 @@ original_slug: Web/CSS/Common_CSS_Questions
 - _Quirks Mode_: 後方互換モードとも呼ばれます。古いウェブページが制作者の意図したとおりにレンダリングされるようにして、古いブラウザーが用いていた非標準のレンダリング規則に従います。 `DOCTYPE` 宣言が不完全、不正確、あるいは存在しない、または 2001 年より前に一般的であった既知の `DOCTYPE` 宣言であるドキュメントは、 Quirks Mode でレンダリングされます。
 - _Standards Mode_: ブラウザーは W3C 標準へ厳密に従おうとします。新しい HTML ページは標準に準拠したブラウザー向けに設計されていると考えられるため、新しい `DOCTYPE` 宣言を持つページは Standards Mode でレンダリングされます。
 
-Gecko ベースのブラウザーには、いくつかの小さな調整のみを行う第 3 のモードであります*[Almost Standards Mode](/ja/docs/Gecko's*"Almost*Standards"\_Mode "Gecko's*\"Almost*Standards\"\_Mode")* があります。
+Gecko ベースのブラウザーには、いくつかの小さな調整のみを行う第 3 のモードであります _[Almost Standards Mode](/ja/docs/Mozilla/Gecko_Almost_Standards_Mode))_ があります。
 
 以下は Standards Mode または Almost Standards Mode になる `DOCTYPE` 宣言で、もっとも一般的に使用されるものの一覧です:
 

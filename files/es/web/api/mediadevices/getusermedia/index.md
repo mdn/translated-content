@@ -1,8 +1,8 @@
 ---
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
-translation_of: Web/API/MediaDevices/getUserMedia
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 El método **`MediaDevices.getUserMedia()`** solicita al usuario permisos para usar un dispositivo de entrada de vídeo y/o uno de audio como una cámara o compartir la pantalla y/o micrófono. Si el usuario proporciona los permisos, entonces le retornará un {{domxref("Promise")}} que es resuelto por el resultado del objeto [`MediaStream`](/en-US/docs/WebRTC/MediaStream_API#LocalMediaStream). Si el usuario niega el permiso, o si el recurso multimedia no es válido, entonces el promise es rechazado con `PermissionDeniedError` o `NotFoundError` respectivamente. Nótese que es posible que el promise retornado no sea ni resuelto ni rechazado, ya que no se requiere que el usuario tome una decisión.
@@ -74,7 +74,7 @@ navigator.mediaDevices.getUserMedia(myConstraints).then(function(mediaStream) {
     }
     ```
 
-    Un valor perteneciente a la propiedad `ideal,`cuando es usada, tiene gravedad, lo que significa que el navegador tratará de encontrar la configuración (una cámara, si tienes más de una), con la distancia de aptitud más pequeña ([fitness distance](http://w3c.github.io/mediacapture-main/#methods-5)) de los valores ideales dados.
+    Un valor perteneciente a la propiedad `ideal`, cuando es usada, tiene gravedad, lo que significa que el navegador tratará de encontrar la configuración (una cámara, si tienes más de una), con la distancia de aptitud más pequeña ([fitness distance](http://w3c.github.io/mediacapture-main/#methods-5)) de los valores ideales dados.
 
     Los valores planos son inherentemente ideales, lo que significa que de los ejemplos mostrados anteriormente, podrían haberse escrito de la siguiente manera:
 
@@ -135,7 +135,7 @@ p.catch(function(err) { console.log(err.name); }); // always check for errors at
 
 ### Ancho y alto
 
-He aquí un ejemplo del uso de `mediaDevices.getUserMedia(),`incluyendo un polyfill para hacer frente a los navegadores más antiguos.
+He aquí un ejemplo del uso de `mediaDevices.getUserMedia()`, incluyendo un polyfill para hacer frente a los navegadores más antiguos.
 
 ```js
 var promisifiedOldGUM = function(constraints, successCallback, errorCallback) {
@@ -225,9 +225,7 @@ Ver [permission: audio-capture](/en-US/Apps/Developing/App_permissions#audio-cap
 
 ## Especificaciones
 
-| Specification                                                                                                                | Status                               | Comment            |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Media Capture', '#dom-mediadevices-getusermedia', 'MediaDevices.getUserMedia()')}} | {{Spec2('Media Capture')}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

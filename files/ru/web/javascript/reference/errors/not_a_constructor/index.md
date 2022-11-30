@@ -7,6 +7,7 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Not_a_constructor
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

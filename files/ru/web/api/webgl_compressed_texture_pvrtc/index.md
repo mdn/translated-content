@@ -3,6 +3,7 @@ title: WEBGL_compressed_texture_pvrtc
 slug: Web/API/WEBGL_compressed_texture_pvrtc
 translation_of: Web/API/WEBGL_compressed_texture_pvrtc
 ---
+
 {{APIRef("WebGL")}}
 
 Расширение **`WEBGL_compressed_texture_pvrtc`** часть [WebGL API](/ru/docs/Web/API/WebGL_API) и представляет четыре [сжатых формата текстур PVRTC](https://en.wikipedia.org/wiki/PVRTC).

@@ -3,6 +3,7 @@ title: user-select
 slug: Web/CSS/user-select
 translation_of: Web/CSS/user-select
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/Web/CSS) **`user-select`** controla si el usuario puede seleccionar el texto. Esto no tiene ningún efecto en el contenido cargado bajo {{Glossary("Chrome", "chrome")}}, excepto en cuadros de texto.
@@ -102,9 +103,7 @@ user-select: unset;
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario                                                                                     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 UI', '#propdef-user-select', 'user-select')}} | {{Spec2('CSS4 UI')}} | Initial definition. Also defines `-webkit-user-select` as a deprecated alias of `user-select`. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

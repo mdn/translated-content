@@ -5,7 +5,7 @@ slug: Web/API/HTMLVideoElement/autoPictureInPicture
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLVideoElement")}} 接口提供的 **`autoPictureInPicture`**  HTML 属性用于指示视频是否应该自动进入或离开画中画模式。
+{{domxref("HTMLVideoElement")}} 接口提供的 **`autoPictureInPicture`** HTML 属性用于指示视频是否应该自动进入或离开画中画模式。
 
 ## 属性
 

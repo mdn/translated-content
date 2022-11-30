@@ -1,13 +1,8 @@
 ---
 title: Element.removeAttribute()
 slug: Web/API/Element/removeAttribute
-tags:
-  - API
-  - DOM
-  - Elemento
-  - Referencia
-translation_of: Web/API/Element/removeAttribute
 ---
+
 {{ APIRef }}
 
 `removeAttribute` elimina un atributo del elemento especificado.

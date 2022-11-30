@@ -1,16 +1,9 @@
 ---
 title: Usando múltiples fondos con CSS
 slug: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-tags:
-  - CSS
-  - Ejemplo
-  - Fondos CSS
-  - Guía
-  - Intermedio
-translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-translation_of_original: Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
 original_slug: Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds
 ---
+
 {{CSSRef}}
 
 Con [CSS3](/es/docs/Web/CSS/CSS3), puedes aplicar **múltiple fondos** a los elementos. Estos se presentan uno encima del otro, poniendo el primer fondo definido hasta arriba, y el último, hasta abajo. Sólo el último fondo puede incluir color de fondo.
@@ -23,7 +16,7 @@ Especificar fondos múltiples es fácil:
 }
 ```
 
-Puedes hacerlo con la propiedad atajo {{ cssxref("background") }} y con las propiedades individuales, excepto {{ cssxref("background-color") }}. Es decir, las siguientes propiedades pueden ser especificadas como lista, una por cada fondo: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }},``{{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
+Puedes hacerlo con la propiedad atajo {{ cssxref("background") }} y con las propiedades individuales, excepto {{ cssxref("background-color") }}. Es decir, las siguientes propiedades pueden ser especificadas como lista, una por cada fondo: {{ cssxref("background") }}, {{ cssxref("background-attachment") }}, {{ cssxref("background-clip") }}, {{ cssxref("background-image") }}, {{ cssxref("background-origin") }}, {{ cssxref("background-position") }}, {{ cssxref("background-repeat") }}, {{ cssxref("background-size") }}.
 
 ## Ejemplo
 

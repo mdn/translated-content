@@ -5,7 +5,7 @@ slug: Web/API/BaseAudioContext/statechange_event
 
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AudioContext") }} 的 `onstatechange` 属性定义了一个事件处理器函数，触发 {{Event("statechange")}} 会被调用，也就是说 audio context 的状态发生变化时会执行。
+{{ domxref("AudioContext") }} 的 `onstatechange` 属性定义了一个事件处理器函数，触发 [`statechange`](/zh-CN/docs/Web/API/RTCIceTransport/statechange_event) 会被调用，也就是说 audio context 的状态发生变化时会执行。
 
 ## 语法
 

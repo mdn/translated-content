@@ -1,9 +1,9 @@
 ---
 title: Depurar el CSS
 slug: Learn/CSS/Building_blocks/Debugging_CSS
-translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 original_slug: Learn/CSS/Building_blocks/Depurar_el_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
 Al escribir CSS te puedes encontrar que, a veces, alguna parte de tu CSS no hace lo que esperas. Tal vez creas que cierto selector debería coincidir con un elemento, pero no sucede nada; o una caja tiene un tamaño diferente al que esperabas. Este artículo te orientará sobre cómo solucionar un problema de CSS y te mostrará cómo las DevTools incluidas en todos los navegadores modernos pueden ayudarte a descubrir qué sucede.

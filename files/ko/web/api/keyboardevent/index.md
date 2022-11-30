@@ -17,6 +17,7 @@ tags:
   - user input
 browser-compat: api.KeyboardEvent
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent`** 객체는 키보드와 사용자의 상호 작용을 나타냅니다. 각 이벤트는 사용자와 키보드의 키(또는 보조 키를 같이 눌렀을 때의 결합)를 나타냅니다. 이벤트 타입 ({{event('keydown')}}, {{event('keypress')}} 또는 {{event('keyup')}})은 키보드에서 어떤 행동이 일어났는지 식별합니다.

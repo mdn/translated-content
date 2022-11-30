@@ -4,6 +4,7 @@ slug: Web/SVG/Tutorial/Basic_Transformations
 translation_of: Web/SVG/Tutorial/Basic_Transformations
 original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 
 Теперь мы готовы начать изменять наши замечательные изображения. Но сначала давайте ознакомимся с {{SVGElement("g")}} элементом. С его помощью вы можете назначить свойства для любого набора элементов. На самом деле, в этом и состоит его единственная цель. Например:
@@ -85,7 +86,7 @@ original_slug: Web/SVG/Tutorial/Базовые_Преобразования
 
 ## Встраивание SVG в SVG
 
-В отличие от HTML, SVG позволяет встраивать другие `svg` элементы без разрыва. Таким образом вы можете запросто создать новую координатную систему используя `viewBox`, `width` и`height` внутреннего `svg` элемента.
+В отличие от HTML, SVG позволяет встраивать другие `svg` элементы без разрыва. Таким образом вы можете запросто создать новую координатную систему используя `viewBox`, `width` и `height` внутреннего `svg` элемента.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">

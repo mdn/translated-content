@@ -1,15 +1,8 @@
 ---
 title: float
 slug: Web/CSS/float
-tags:
-  - CSS
-  - CSS Float
-  - CSS Posicionamiento
-  - CSS Propiedad
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/float
 ---
+
 {{CSSRef}}
 
 La propiedad CSS `float` ubica un elemento al lado izquierdo o derecho de su contenedor, permitiendo a los elementos de texto y en línea aparecer a su costado. El elemento es removido del normal flujo de la página, aunque aún sigue siendo parte del flujo (a diferencia del [posicionamiento absoluto](/es/docs/Web/CSS/position#Absolute_positioning)).
@@ -96,7 +89,7 @@ Como se ha mencionado más arriba, cuando un elemento flota, es removido del flu
 
 En este ejemplo, hay tres cuadrados de color. Dos flotan hacia la izquierda, y uno hacia la derecha. Nota cómo el segundo cuadrado de la izquierda se coloca a la derecha del primero. Si agregamos cuadrados adicionales se continuarían apilando hacia la derecha, hasta que hayan llenado la caja contenedora, y luego rellenarían la siguiente línea.
 
-Un elemento flotante es al menos tan alto como su elemento hijo flotante más alto. En el ejemplo se le da al elemento padre `width: 100%`y la propiedad de flotante para asegurar que es lo suficientemente alto para encajar con sus hijos flotantes, y asegurar que ocupa el ancho -width- del padre de modo de no tener que limpiar su pariente adyacente.
+Un elemento flotante es al menos tan alto como su elemento hijo flotante más alto. En el ejemplo se le da al elemento padre `width: 100%` y la propiedad de flotante para asegurar que es lo suficientemente alto para encajar con sus hijos flotantes, y asegurar que ocupa el ancho -width- del padre de modo de no tener que limpiar su pariente adyacente.
 
 **HTML**
 

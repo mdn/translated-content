@@ -3,18 +3,19 @@ title: Страница с подробностями жанров
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page
 ---
+
 Страница "подробности" (_detail)_ для жанров должна показывать информацию для отдельного жанра по его автоматически генерируем идентификатору `_id`. Должно быть показано название жанра и список книг этого жанра, со ссылками на страницу с детальной информацией для каждой книги.
 
 ## Controller
 
-Откройте файл\_ _**/controllers/genreController.js** и импортируйте модули \_async_ и _Book_ в первых строках файла.
+Откройте файл **/controllers/genreController.js** и импортируйте модули _async_ и _Book_ в первых строках файла.
 
 ```js
 var Book = require('../models/book');
 var async = require('async');
 ```
 
-Найдите экспортируемый метод контроллера ` genre_detail``() ` и замените его следующим кодом:
+Найдите экспортируемый метод контроллера `genre_detail()` и замените его следующим кодом:
 
 ```js
 // Display detail page for a specific Genre.

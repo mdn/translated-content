@@ -30,4 +30,4 @@ _HTML Font 元素_（`<font>`）定義了該內容的字體大小、顏色與表
 
 {{Compat}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -47,4 +47,4 @@ translation_of: Web/SVG/Attribute/shape-rendering
 
 Следующие элементы могут использовать атрибут `shape-rendering`
 
-- [Shape elements](/en/SVG/Element#Shape "en/SVG/Element#Shape") »
+- [Shape elements](/en/SVG/Element#Shape)

@@ -1,12 +1,8 @@
 ---
 title: font-variant
 slug: Web/CSS/font-variant
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/font-variant
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -17,7 +13,9 @@ La propiedad `font-variant` selecciona entre los aspectos `normal` y `small-caps
 
 ## Sintaxis
 
-`font-variant:` {{ mediawiki.external('<code>normal</code> | <code>small-caps</code>') }} ;
+```
+font-variant: [normal | small-caps] ;
+```
 
 ### Valores
 

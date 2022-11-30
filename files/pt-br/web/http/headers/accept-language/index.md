@@ -1,11 +1,8 @@
 ---
 title: Accept-Language
 slug: Web/HTTP/Headers/Accept-Language
-tags:
-  - Cabeçalho HTTP
-  - HTTP
-translation_of: Web/HTTP/Headers/Accept-Language
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho HTTP **`Accept-Language`** anuncia quais linguas o cliente é capaz de entender, e qual é a preferência do variante do Locale. (Por Linguas, queremos dizer linguas como Inglês e portugues) Usando [content negotiation](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor seleciona uma das propostas, usa ela e informa o cliente da sua escolha com o {{HTTPHeader("Content-Language")}} cabeçalho de responsta. Navegadores configuram valores adequados para este cabeçalhos de acordo com a língua configurada pelo usuario.

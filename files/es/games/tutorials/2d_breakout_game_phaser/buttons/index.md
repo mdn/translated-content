@@ -1,18 +1,9 @@
 ---
 title: Botones
 slug: Games/Tutorials/2D_breakout_game_Phaser/Buttons
-tags:
-  - 2D
-  - Botones
-  - JavaScript
-  - Lienzo
-  - Phaser
-  - Principiante
-  - Tutorial
-  - juegos
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Buttons
 original_slug: Games/Tutorials/2D_breakout_game_Phaser/Botones
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Animations_and_tweens", "Games/Workflows/2D_Breakout_game_Phaser/Randomizing_gameplay")}}

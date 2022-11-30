@@ -1,15 +1,9 @@
 ---
 title: ':-moz-user-disabled'
 slug: Web/CSS/:-moz-user-disabled
-tags:
-  - CSS
-  - NeedsCompatTable
-  - NeedsExample
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-user-disabled
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}
+
+{{Non-standard_header}}{{CSSRef}}
 
 ## Resumen
 

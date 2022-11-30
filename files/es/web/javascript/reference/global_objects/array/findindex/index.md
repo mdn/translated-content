@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/findIndex
 ---
+
 {{JSRef}}
 
 El método **`findIndex()`** devuelve el **índice** del **primer elemento** de un array que cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
@@ -153,9 +154,7 @@ Si necesita soporte para motores de JavaScript obsoletos que no soportan [`Objec
 
 ## Especificaciones
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.findindex', 'Array.prototype.findIndex')}} |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

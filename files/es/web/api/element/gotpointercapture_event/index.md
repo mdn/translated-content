@@ -1,21 +1,12 @@
 ---
 title: Element.ongotpointercapture
 slug: Web/API/Element/gotpointercapture_event
-tags:
-  - API
-  - Controlador
-  - DOM
-  - Elemento
-  - Eventos Puntero
-  - Propiedad
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/ongotpointercapture
-translation_of_original: Web/API/Element/ongotpointercapture
 original_slug: Web/API/GlobalEventHandlers/ongotpointercapture
 ---
+
 {{ APIRef }}
 
-`ongotpointercapture` es una propiedad {{event("Event_handlers", "event handler")}} de la interfaz {{domxref("Element")}} que devuelve el controlador de eventos (función) para el evento tipo {{event("gotpointercapture")}}.
+`ongotpointercapture` es una propiedad [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) de la interfaz {{domxref("Element")}} que devuelve el controlador de eventos (función) para el evento tipo [`gotpointercapture`](/es/docs/Web/Reference/Events/gotpointercapture).
 
 ## Síntaxis
 
@@ -58,4 +49,4 @@ function init() {
 
 ## Véase también
 
-- {{ event("gotpointercapture") }}
+- [`gotpointercapture`](/es/docs/Web/Reference/Events/gotpointercapture)

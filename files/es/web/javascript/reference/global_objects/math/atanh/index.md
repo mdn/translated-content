@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atanh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/atanh
 ---
+
 {{JSRef}}
 
 La función **`Math.atanh()`** nos retorna un arco hiperbólico de un numero, eso es:
@@ -58,9 +59,7 @@ Para valores mayores a 1 o menores a -1, {{jsxref("NaN")}} retorna.
 
 ## Especificaciones
 
-| Specification                                                                |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.atanh', 'Math.atanh')}} |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

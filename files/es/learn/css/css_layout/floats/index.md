@@ -1,8 +1,8 @@
 ---
 title: Floats
 slug: Learn/CSS/CSS_layout/Floats
-translation_of: Learn/CSS/CSS_layout/Floats
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout")}}
 
 Originalmente pensada para flotar imágenes dentro de bloques de texto, la propiedad {{cssxref("float")}} se convirtió en una de las herramientas más usadas para crear diseños multicolumna en las páginas web. Con la llegada de Flexbox y Grid ha vuelto ahora a su propósito original, como se explica en este artículo.

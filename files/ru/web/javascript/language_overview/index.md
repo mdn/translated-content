@@ -4,6 +4,7 @@ slug: Web/JavaScript/Language_Overview
 translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
+
 {{jsSidebar}}
 
 Почему повторное введение? Потому что {{Glossary("JavaScript")}} известен тем, что является [самым неправильно понятым языком программирования в мире](http://javascript.crockford.com/javascript.html). Его часто называют игрушкой, но под слоем обманчивой простоты ожидают мощные языковые возможности. В настоящее время JavaScript используется невероятным количеством высококлассных приложений, показывая, что углублённое знание этой технологии является важным навыком для любого веб или мобильного разработчика.
@@ -179,7 +180,7 @@ let a;
 let name = "Simon";
 ```
 
-**`let` **позволяет объявлять переменные, которые доступны только в _**блоке**,_ в котором они объявлены:
+**`let`** позволяет объявлять переменные, которые доступны только в _**блоке**,_ в котором они объявлены:
 
 ```js
 // myLetVariable недоступна здесь
@@ -303,7 +304,7 @@ for (var i = 0; i < 5; i++) {
 }
 ```
 
-JavaScript также содержит две других известных конструкции: [`for`...`of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of)
+JavaScript также содержит две других известных конструкции: [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of)
 
 ```js
 for (let value of array) {
@@ -311,7 +312,7 @@ for (let value of array) {
 }
 ```
 
-и [`for`...`in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in):
+и [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in):
 
 ```js
 for (let property in object) {
@@ -486,7 +487,7 @@ for (var i = 0; i < a.length; i++) {
 }
 ```
 
-ES2015 представляет более краткий [`for`...`of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) способ обхода по итерируемым объектам, в т.ч. массивам:
+ES2015 представляет более краткий [`for...of`](/ru/docs/Web/JavaScript/Reference/Statements/for...of) способ обхода по итерируемым объектам, в т.ч. массивам:
 
 ```
 for (const currentValue of a) {

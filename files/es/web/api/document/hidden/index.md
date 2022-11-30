@@ -1,8 +1,8 @@
 ---
 title: Document.hidden
 slug: Web/API/Document/hidden
-translation_of: Web/API/Document/hidden
 ---
+
 {{ ApiRef("DOM") }}
 
 El **`Document.hidden`** Es una propiedad solo de lectura, retorna un valor Booleano que indica si la pagina esta conciderada oculta o no.

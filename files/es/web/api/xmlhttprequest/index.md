@@ -8,6 +8,7 @@ tags:
   - páginas_a_traducir
 translation_of: Web/API/XMLHttpRequest
 ---
+
 `XMLHttpRequest` es un objeto [JavaScript](/en/JavaScript) que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](http://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
 
 A pesar de su nombre, `XMLHttpRequest` puede ser usado para recibir cualquier tipo de dato, no solo XML, y admite otros formatos además de [HTTP](/en/HTTP) (incluyendo `file` y `ftp`).
@@ -47,7 +48,7 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
     En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.
 
 - `mozResponseArrayBuffer` {{ Non-standard_inline() }}
-  : [`ArrayBuffer`](/en-US/JavaScript_typed_arrays/ArrayBuffer)
+  : [`ArrayBuffer`](/es/JavaScript_typed_arrays/ArrayBuffer)
   - : La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. **Sólo lectura.**
 - `multipart`: `booleano`
 
@@ -80,7 +81,7 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
   - : La respuesta al pedido como texto, o `null` si el pedido no fue exitoso o todavía no se envió. **Sólo lectura.**
 - `responseXML`: `nsIDOMDocument`
 
-  - : La respuesta al pedido como un objeto DOM[`Document`](/en-US/DOM/document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
+  - : La respuesta al pedido como un objeto DOM[`Document`](/es/DOM/document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
 
     > **Nota:** Si el servidor no aplica el encabezado de tipo de contenido `text/xml`, puedes usar `overrideMimeType()` para forzar a `XMLHttpRequest` a analizarlo como XML igualmente.
 
@@ -207,7 +208,7 @@ Inicia la peticion, este metodo est
 
 Inicializa la peticion. Este método se utiliza desde el código nativo, para inicializar una solicitud desde el código JavaScript, utilice `open ()` en su lugar.
 
-> **Nota:** Calling this method an already active request (one for which `open()`or `openRequest()`has already been called) is the equivalent of calling `abort()`.
+> **Nota:** Calling this method an already active request (one for which `open()` or `openRequest()` has already been called) is the equivalent of calling `abort()`.
 
 ```
 void open(
@@ -226,7 +227,7 @@ void open(
 - `url`
   - : The URLto which to send the request.
 - `async`
-  - : An optional boolean parameter, defaulting to `true`, indicating whether or not to perform the operation asynchronously. If this value is `false`, the `send()`method does not return until the response is received. If `true`, notification of a completed transaction is provided using event listeners. This _must_ be true if the `multipart` attribute is `true`, or an exception will be thrown.
+  - : An optional boolean parameter, defaulting to `true`, indicating whether or not to perform the operation asynchronously. If this value is `false`, the `send()` method does not return until the response is received. If `true`, notification of a completed transaction is provided using event listeners. This _must_ be true if the `multipart` attribute is `true`, or an exception will be thrown.
 - `user`
   - : The optional user name to use for authentication purposes; by default, this is an empty string.
 - `password`
@@ -264,17 +265,17 @@ void send(
 ###### Parameters
 
 - `body`
-  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 {{ geckoRelease("2.0") }} you may also specify a [`FormData`](/en/XMLHttpRequest/FormData) object.
+  - : This may be an `nsIDocument`, `nsIInputStream`, or a string (an `nsISupportsString` if called from native code) that is used to populate the body of a POST request. Starting with Gecko 1.9.2, you may also specify an DOM{{ domxref("File") }} , and starting with Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) you may also specify a [`FormData`](/en/XMLHttpRequest/FormData) object.
 
 ###### Notes
 
 If the body is an `nsIDOMDocument`, it is serialized before being sent.
 
-If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()`method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()`method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](</en/XMLHttpRequest#setRequestHeader()>)method prior to calling `send()`.
+If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()` method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()` method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](</en/XMLHttpRequest#setRequestHeader()>)method prior to calling `send()`.
 
 ### sendAsBinary()
 
-A variant of the `send()`method that sends binary data.
+A variant of the `send()` method that sends binary data.
 
 ```
 void sendAsBinary(

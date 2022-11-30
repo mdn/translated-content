@@ -1,11 +1,9 @@
 ---
 title: keygen
 slug: Web/HTML/Element/keygen
-tags:
-  - para_revisar
-translation_of: Web/HTML/Element/keygen
 original_slug: Web/HTML/Elemento/keygen
 ---
+
 El elemento `keygen` de HTML existe para facilitar la generación de llaves, y el envío de la clave pública como parte de un formulario HTML. Este mecanismo está diseñado para utilizarse con sistemas de gestión de certificados basados en la Web. Se espera que el elemento `keygen` se utilice en un formulario HTML, junto con otra información necesaria para la construcción de una solicitud de certificado, y que el resultado del proceso será un certificado firmado.
 
 ### Contexto de uso
@@ -89,5 +87,3 @@ He aquí un ejemplo de envío de formularios, como sería entregado a un program
 | Firefox (Gecko)   | 1.0 (1.0)        |
 | Opera             | 3.0              |
 | Safari (WebKit)   | 1.2 (125)        |
-
-{{ languages ({"fr": "fr/HTML/Element/Keygen","en": "en/HTML/Element/Keygen"}) }}

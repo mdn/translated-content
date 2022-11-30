@@ -1,12 +1,8 @@
 ---
 title: border-bottom-left-radius
 slug: Web/CSS/border-bottom-left-radius
-tags:
-  - Bordes CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/border-bottom-left-radius
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -150,9 +146,7 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                                   | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-bottom-left-radius', 'border-bottom-left-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

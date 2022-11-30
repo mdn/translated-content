@@ -3,7 +3,7 @@ title: <input type="radio">
 slug: Web/HTML/Element/input/radio
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments `<input>` dont l'attribut `type` vaut **`radio`** sont généralement utilisés pour construire des groupes d'options parmi lesquelles on ne peut choisir qu'une valeur. Les « boutons radio » sont représentés par des cercles remplis lorsqu'ils sont sélectionnés.
 

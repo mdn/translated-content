@@ -1,20 +1,8 @@
 ---
 title: nav
 slug: Web/HTML/Element/nav
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Links
-  - Navegação
-  - Rede
-  - Referencia
-  - Seções
-  - Seções HTML
-  - Web
-  - nav
-translation_of: Web/HTML/Element/nav
 ---
+
 ## Sumário
 
 O _Elemento_ _HTML_ _de Navegação_ (`<nav>`) representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação.
@@ -27,7 +15,7 @@ O _Elemento_ _HTML_ _de Navegação_ (`<nav>`) representa uma seção de uma pá
 
 ## Contexto de uso
 
-| Conteúdo permitido       | [Conteúdo de fluxo](/en/HTML/Content_categories#flow_content)                                                  |
+| Conteúdo permitido       | [Conteúdo de fluxo](/pt-BR/HTML/Content_categories#flow_content)                                                  |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de tag           | Nenhuma, tanto a tag de início quanto a de fim são obrigatórias                                                                                          |
 | Elementos-pai permitidos | Quaisquer elementos que permitam conteúdo de fluxo. Note que um elemento `<nav>` não deve descender de um elemento {{ HTMLElement("address") }}. |
@@ -35,11 +23,11 @@ O _Elemento_ _HTML_ _de Navegação_ (`<nav>`) representa uma seção de uma pá
 
 ## Atributos
 
-Este elemento não possui outros atributos além dos [atributos globais](/en/HTML/Global_attributes), comuns a todos os elementos.
+Este elemento não possui outros atributos além dos [atributos globais](/pt-BR/HTML/Global_attributes), comuns a todos os elementos.
 
 ## Interface DOM
 
-Este elemento implementa a interface [`HTMLElement`](/en/DOM/element).
+Este elemento implementa a interface [`HTMLElement`](/pt-BR/DOM/element).
 
 ## Exemplos
 
@@ -62,4 +50,4 @@ Este elemento implementa a interface [`HTMLElement`](/en/DOM/element).
 - Outros elementos relacionados à seções: {{ HTMLElement("body") }}, {{ HTMLElement("article") }}, {{ HTMLElement("section") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};
 - [Seções e esboços de um documento HTML5](/pt-BR/docs/Seções_e_estrutura_HTML5)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

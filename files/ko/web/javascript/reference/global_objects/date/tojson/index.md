@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toJSON
 ---
+
 {{JSRef}}
 
 **`toJSON()`** 메서드는 {{jsxref("Date")}} 객체의 문자열 표현을 반환합니다.

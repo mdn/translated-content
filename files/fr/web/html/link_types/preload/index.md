@@ -1,5 +1,5 @@
 ---
-title: "Types de liens\_: preload"
+title: "Types de liens : preload"
 slug: Web/HTML/Link_types/preload
 translation_of: Web/HTML/Link_types/preload
 browser-compat: html.elements.link.rel.preload

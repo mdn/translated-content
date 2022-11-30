@@ -2,6 +2,7 @@
 title: HTML text fundamentals
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML의 주요 작업 중 하나는 브라우저가 텍스트를 올바르게 표시 할 수 있도록 텍스트 구조와 의미 (시멘틱({{glossary ( "semantics")}})라고도 함)를 제공하는 것입니다.

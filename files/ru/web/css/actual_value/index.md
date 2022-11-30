@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/actual_value
 original_slug: Web/CSS/Действительное_значение
 ---
+
 {{CSSRef}}
 
 ## Описание

@@ -8,6 +8,7 @@ tags:
   - Selectores
 translation_of: Web/CSS/Universal_selectors
 ---
+
 {{CSSRef}}
 
 El **selector universal** CSS (`*`) coincide con elementos de cualquier tipo.
@@ -77,11 +78,7 @@ El asterisco es opcional con selectores simples. Por ejemplo, `*.warning` y `.wa
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentarios                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#the-universal-selector', 'universal selector')}}     | {{Spec2('CSS4 Selectors')}} | Ningún cambio.                                                                                                                                              |
-| {{SpecName('CSS3 Selectors', '#universal-selector', 'universal selector')}}         | {{Spec2('CSS3 Selectors')}} | Define el comportamiento con respecto a los espacios de nombres y agrega la sugerencia de que se permite omitir el selector dentro de los pseudo-elementos. |
-| {{SpecName('CSS2.1', 'selector.html#universal-selector', 'universal selector')}} | {{Spec2('CSS2.1')}}             | Definición Inicial.                                                                                                                                         |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

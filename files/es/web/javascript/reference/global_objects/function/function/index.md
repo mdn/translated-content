@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/Function
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/Función
 ---
+
 {{JSRef("Objetos_globales", "Function")}}
 
 El constructor **`Function`** crea un nuevo **objeto** `Function`. Llamar al constructor directamente puede crear funciones dinámicamente, pero tiene problemas de seguridad y de rendimiento similares (pero mucho menos importantes) para {{jsxref("eval")}}. Sin embargo, a diferencia de eval, el constructor `Function` crea funciones que solo se ejecutan en el ámbito global.
@@ -60,9 +61,7 @@ Los argumentos "`a`" y "`b`" son nombres de argumentos formales que se utilizan 
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-constructor', 'Constructor Function')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

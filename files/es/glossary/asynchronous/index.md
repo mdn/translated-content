@@ -1,14 +1,9 @@
 ---
 title: Asíncrono
 slug: Glossary/Asynchronous
-tags:
-  - Asíncrono
-  - Glosario
-  - Mecánicas de la Web
-  - Web
-translation_of: Glossary/Asynchronous
 original_slug: Glossary/Asíncrono
 ---
+
 El término **asíncrono** se refiere al concepto de que más de una cosa ocurre al mismo tiempo, o múltiples cosas relacionadas ocurren sin esperar a que la previa se haya completado. En informática, la palabra "asíncrono" se usa en los siguientes contextos:
 
 - Redes y comunicaciones
@@ -23,11 +18,11 @@ El término **asíncrono** se refiere al concepto de que más de una cosa ocurre
 
   - : El diseño de software asíncrono amplía el concepto al construir código que permita a un programa solicitar que una tarea se realice al mismo tiempo que la tarea (o tareas) original, sin detenerse a esperar a que la primera se haya completado. Cuando la tarea secundaria se completa, la original es notificada usando un mecanismo acordado, de tal forma que sepa que el trabajo se ha completado y que el resultado, si es que existe, está disponible.
 
-    Existen diversas técnicas de programación para implementar software asíncrono. Vea el artículo [Asynchronous JavaScript](/es/docs/Learn/JavaScript/Asynchronous) para terner una introducción a ellos.
+    Existen diversas técnicas de programación para implementar software asíncrono. Vea el artículo [JavaScript Asíncrono](/es/docs/Learn/JavaScript/Asynchronous) para terner una introducción a ellos.
 
 ## Saber más
 
 ### Referencia técnica
 
-- [Fetching data from the server](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) (Learning Area)
-- {{glossary("Synchronous")}}
+- [Obteniendo datos del servidor](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) (Área de aprendizaje)
+- {{glossary("Synchronous","Sincrónico")}}

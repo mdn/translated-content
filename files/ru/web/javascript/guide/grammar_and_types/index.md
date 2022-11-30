@@ -6,6 +6,7 @@ tags:
   - Руководство
 translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 В данной главе рассматриваются базовая грамматика, объявление переменных, типы данных и литералы.
@@ -536,7 +537,7 @@ var re = /ab+c/;
 "John's cat"
 ```
 
-`​`Вы можете вызвать любой из методов объекта `String` для строкового литерала: JavaScript автоматически преобразует строковой литерал во временный объект `String`, вызовет метод, а затем уничтожит временный объект `String`. Вы также можете использовать свойство `String.length` со строковым литералом:
+Вы можете вызвать любой из методов объекта `String` для строкового литерала: JavaScript автоматически преобразует строковой литерал во временный объект `String`, вызовет метод, а затем уничтожит временный объект `String`. Вы также можете использовать свойство `String.length` со строковым литералом:
 
 ```js
 console.log("John's cat".length);

@@ -1,15 +1,8 @@
 ---
 title: 'Express Tutorial Part 7: Deploying to production'
 slug: Learn/Server-side/Express_Nodejs/deployment
-tags:
-  - Express
-  - Implantação
-  - Iniciante
-  - Node
-  - aprendizado
-  - heroku
-translation_of: Learn/Server-side/Express_Nodejs/deployment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 Now you've created (and tested) an awesome [LocalLibrary](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the Internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.

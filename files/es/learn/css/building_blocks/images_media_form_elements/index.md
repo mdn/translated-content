@@ -1,9 +1,9 @@
 ---
 title: Imágenes, medios y elementos de formulario
 slug: Learn/CSS/Building_blocks/Images_media_form_elements
-translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 original_slug: Learn/CSS/Building_blocks/Imágenes_medios_y_elementos_de_formulario
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
 
 En este artículo vamos a ver cómo se tratan ciertos elementos especiales en CSS. Las imágenes y otros medios y los elementos de formulario presentan un comportamiento algo distinto que otros elementos CSS, como las cajas, en cuanto a aplicación de estilo. Comprender qué es y qué no es posible te ahorrará frustraciones, y en este artículo vamos a destacar algunas de las cuestiones principales que necesitas saber.

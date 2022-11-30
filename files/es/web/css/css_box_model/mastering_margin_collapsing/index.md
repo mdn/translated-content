@@ -1,14 +1,9 @@
 ---
 title: Entendiendo el colapso de margen
 slug: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-tags:
-  - CSS
-  - CSS Box Model
-  - Guía
-  - Referencia
-translation_of: Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 original_slug: Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing
 ---
+
 {{CSSRef}}
 
 Los márgenes [Top](/es/docs/Web/CSS/margin-top) y [bottom](/es/docs/Web/CSS/margin-bottom) de los bloques a veces están combinados (colapsados) en un solo margen cuyo tamaño es el mayor de los márgenes combinados, un comportamiento conocido como **colapso de margen**. Ten en cuenta que los márgenes de [flotantes](/es/docs/Web/CSS/float) y elementos con [posición absoluta](/es/docs/Web/CSS/position) nunca colapsan.
@@ -65,14 +60,9 @@ p {
 
 ## Especificaciones
 
-| Specification                                                                                        | Status                   | Comment            |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------------ |
-| {{SpecName("CSS2.1", "box.html#collapsing-margins", "margin collapsing")}} | {{Spec2("CSS2.1")}} | Initial definition |
+{{Specifications}}
 
 ## También puedes ver
 
 - [CSS Reference](/es/docs/Web/CSS/Referencia_CSS)
-
-<!---->
-
-- {{css_key_concepts}}
+- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/inheritance), the [box](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).

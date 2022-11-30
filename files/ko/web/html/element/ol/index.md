@@ -9,7 +9,8 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/ol
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<ol>` 요소**는 정렬된 목록을 나타냅니다. 보통 숫자 목록으로 표현합니다.
 

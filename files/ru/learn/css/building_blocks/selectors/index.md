@@ -16,6 +16,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Selectors
 original_slug: Learn/CSS/Building_blocks/Селекторы
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 В {{Glossary("CSS")}}-селекторы используются для стилизации {{glossary("HTML")}} элементов на веб-странице. Существует широкий выбор CSS-селекторов, позволяющий максимально точно отбирать элементы для стилизации. В этой статье и её подстатьях мы в мельчайших подробностях рассмотрим разные их типы и увидим, как они работают.
@@ -177,21 +178,21 @@ article > p { }
 
 ## В этом модуле
 
-1.  [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS-селекторы](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS-селекторы](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Селекторы по типу, классу и идентификатору](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Селекторы атрибутов](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Псевдоклассы, псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Комбинации селекторов](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [Блоки в CSS](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Фон и границы](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Изменение направления текста](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Перекрытие содержимого](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Значения свойств CSS](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Изменение размеров в CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Изображения, формы и прочие медиа-элементы](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [Блоки в CSS](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Фон и границы](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Изменение направления текста](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Перекрытие содержимого](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Значения свойств CSS](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Изменение размеров в CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Изображения, формы и прочие медиа-элементы](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Стилизация таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Отладка CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Организация CSS-кода](/ru/docs/Learn/CSS/Building_blocks/Organizing)

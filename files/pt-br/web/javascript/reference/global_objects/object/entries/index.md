@@ -1,14 +1,8 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-tags:
-  - Experimental
-  - JavaScript
-  - Objeto
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
+
 {{JSRef}} {{SeeCompatTable}}
 
 O método **`Object.entries()`** retorna uma array dos próprios pares `[key, value]` enumeráveis de um dado objeto, na mesma ordem dos objetos providos através do loop {{jsxref("Statements/for...in", "for...in")}} (sendo a diferença que o for-in loop enumera também propriedades dispostas na cadeia de prototipagem - _prototype chain_).

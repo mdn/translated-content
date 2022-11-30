@@ -1,13 +1,8 @@
 ---
 title: ime-mode
 slug: Web/CSS/ime-mode
-tags:
-  - CSS
-  - CSS:Referencias
-  - Referencia_CSS
-  - Todas_las_Categorías
-translation_of: Web/CSS/ime-mode
 ---
+
 {{ CSSRef() }}
 
 ### Resumen

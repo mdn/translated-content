@@ -8,9 +8,10 @@ tags:
   - Prototype
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ---
+
 {{JSRef}}
 
-Метод **`Array[@@species]`**возвращает конструктор `Array` .
+Метод **`Array[@@species]`** возвращает конструктор `Array` .
 
 ## Синтаксис
 

@@ -28,7 +28,7 @@ objectURL = URL.createObjectURL(object);
 
 ## 例
 
-[オブジェクト URL で画像を表示](/ja/docs/Web/API/File/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)を参照してください。
+[オブジェクト URL で画像を表示](/ja/docs/Web/API/File_API/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)を参照してください。
 
 ## 使用上のメモ
 
@@ -57,8 +57,8 @@ objectURL = URL.createObjectURL(object);
 
 ## 関連情報
 
-- [Web アプリケーションからファイルを扱う](/ja/docs/Web/API/File/Using_files_from_web_applications)
-- [オブジェクト URL で画像を表示](/ja/docs/Web/API/File/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
+- [オブジェクト URL で画像を表示](/ja/docs/Web/API/File_API/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

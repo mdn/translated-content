@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Element/radialGradient
 original_slug: Web/SVG/Элемент/radialGradient
 ---
+
 {{SVGRef}}
 
 Элемент **`<radialGradient>`** [SVG](/ru/docs/Web/SVG) позволяет авторам определять радиальные градиенты для заполнения или изменения графических элементов.

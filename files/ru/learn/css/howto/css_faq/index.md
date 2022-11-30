@@ -13,25 +13,30 @@ original_slug: Web/CSS/Common_CSS_Questions
 - _Индивидуальный_: его также называют backwards-compatibility mode, даёт возможность устаревшим страницам отображаться так, как планировал автор, следуя уже не стандартным правилам отображения, которые использовались ещё старыми браузерами. Документы с неполной, некорректной или отсутствующий `DOCTYPE` декларацией или с тем видом `DOCTYPE`, который использовался до 2001 года, будет отображён в индивидуальном режиме.
 - _Стандартный_: в этом режиме браузер старается строго следовать стандартам W3C. Ожидается, что современные HTML страницы разработаны для браузеров, следуемых стандартам, и в результате, страницы с современным `DOCTYPE` отображаются уже в стандартом режиме.
 
-Gecko-based browsers, have a third _[Almost Standards Mode](/ru/docs/Gecko's_"Almost*Standards"\_Mode "Gecko's*\"Almost*Standards\"\_Mode")* that has only a few minor quirks.
+Gecko-based browsers, have a third _[Almost Standards Mode](/ru/docs/Mozilla/Gecko_Almost_Standards_Mode))_ that has only a few minor quirks.
 
-This is a list of the most commonly used `DOCTYPE` declarations that will trigger Standards or Almost Standards mode:
+The standard `DOCTYPE` declaration that will trigger standards mode is:
 
+```html
+<!DOCTYPE html>
 ```
-<!DOCTYPE html> /* This is the HTML5 doctype. Given that each modern browser uses an HTML5
-                   parser, this is the recommended doctype */
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+When at all possible, you should just use the above doctype. There are other valid legacy doctypes that will trigger Standards or Almost Standards mode:
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-"http://www.w3.org/TR/html4/strict.dtd">
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+```
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+```
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+```
+
+```html
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 ```
 
 ## Why doesn't my CSS, which is valid, render at all?
@@ -48,13 +53,13 @@ Use a class-specific style when you want to apply the styling rules to many bloc
 
 Stylesheets with fewer rules are usually more performant. It is therefore recommended to use classes as much as possible, and to reserve the use of id for specific uses (like to connect label and form elements or for styling elements that must be semantically unique).
 
-See [CSS selectors](/ru/docs/CSS/Getting_Started/Selectors "CSS/Getting_Started/Selectors")
+See [CSS selectors](/ru/docs/CSS/Getting_Started/Selectors)
 
 ## How do I restore the default value of a property?
 
 Initially CSS didn't provide a "default" keyword and the only way to restore the default value of a property is to explicitly re-declare that property.
 
-This has changed with CSS 2; the keyword [initial](/es/CSS/initial "initial") is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
+This has changed with CSS 2; the keyword [initial](/es/CSS/initial) is now a valid value for a CSS property. It resets it to its default value, which is defined in the CSS specification of the given property.
 
 ## How do I derive one style from another?
 
@@ -79,7 +84,7 @@ If the same property is declared in both rules, the conflict is resolved first t
 
 ## Why don't my style rules work properly?
 
-Style rules that are syntactically correct may not apply in certain situations. You can use [DOM Inspector](/ru/docs/DOM_Inspector "DOM_Inspector")'s _CSS Style Rules_ view to debug problems of this kind, but the most frequent instances of ignored style rules are listed below.
+Style rules that are syntactically correct may not apply in certain situations. You can use [DOM Inspector](/ru/docs/DOM_Inspector)'s _CSS Style Rules_ view to debug problems of this kind, but the most frequent instances of ignored style rules are listed below.
 
 ### HTML elements hierarchy
 
@@ -160,7 +165,7 @@ The use of the \* selector should be minimized as it is a slow selector, especia
 
 ### Specificity in CSS
 
-When multiples rules apply to a certain element, the rule chosen depends on its style [specificity](/ru/docs/CSS/Specificity "Specificity"). Inline style (in HTML `style` attributes) comes first, followed by ID selectors, then class selectors and eventually element-name selectors.
+When multiples rules apply to a certain element, the rule chosen depends on its style [specificity](/ru/docs/CSS/Specificity). Inline style (in HTML `style` attributes) comes first, followed by ID selectors, then class selectors and eventually element-name selectors.
 
 ```
 div { color: black; }
@@ -178,7 +183,7 @@ These properties, called _prefixed properties_, are extensions to the CSS standa
 
 The use of such properties on production websites is not recommended. If nevertheless needed, you are hinted to make a plan for the website evolution: these prefixed properties can be modified or even suppressed when the standard evolves.
 
-Please see the [Mozilla CSS Extensions](/ru/docs/CSS/CSS_Reference/Mozilla_Extensions "CSS Reference/Mozilla Extensions") page for more information on the Mozilla-prefixed CSS properties.
+Please see the [Mozilla CSS Extensions](/ru/docs/CSS/CSS_Reference/Mozilla_Extensions) page for more information on the Mozilla-prefixed CSS properties.
 
 ## How does z-index relate to positioning?
 

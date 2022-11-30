@@ -9,15 +9,13 @@ slug: Web/API/Crypto/subtle
 
 ## 構文
 
-```
+```js
 var crypto = crypto.subtle;
 ```
 
 ## 仕様
 
-| 仕様書                                                                               | 策定状況                                 | 備考       |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ SpecName('Web Crypto API', '#dfn-Crypto', 'Crypto.subtle') }} | {{ Spec2('Web Crypto API') }} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 
@@ -25,7 +23,7 @@ var crypto = crypto.subtle;
 
 ## 関連情報
 
-- {{domxref("Crypto")}}.
-- {{domxref("SubtleCrypto")}}.
-- [Compatibility test page](https://vibornoff.github.io/webcrypto-examples/index.html).
-- [Shim for IE11 and Safari](https://github.com/vibornoff/webcrypto-shim).
+- {{domxref("Crypto")}}。
+- {{domxref("SubtleCrypto")}}。
+- [Compatibility test page](https://vibornoff.github.io/webcrypto-examples/index.html)。
+- [Shim for IE11 and Safari](https://github.com/vibornoff/webcrypto-shim)。

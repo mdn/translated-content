@@ -1,8 +1,8 @@
 ---
 title: unescape()
 slug: Web/JavaScript/Reference/Global_Objects/unescape
-translation_of: Web/JavaScript/Reference/Global_Objects/unescape
 ---
+
 {{jsSidebar("Objects")}}{{Deprecated_header}}A função **unescape()** obsolta computa uma nova string na qual as sequencias hexadecimal são esquecidas com o caractere que representa. As sequências de escape podem ser introduzidas como funções {{jsxref("escape")}}. Porque a função 'unescape' está obsoleta, ao invez disso, use {{jsxref("decodeURI")}} ou {{jsxref("decodeURIComponent")}}.
 
 > **Nota:** Não use `unescape` para decodificar URIs, use `decodeURI` ao invez disso.

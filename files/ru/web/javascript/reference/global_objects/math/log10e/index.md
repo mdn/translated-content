@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Сводка

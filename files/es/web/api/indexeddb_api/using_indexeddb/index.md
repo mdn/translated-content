@@ -1,18 +1,9 @@
 ---
 title: Usando IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
-tags:
-  - API
-  - Almacenamiento
-  - Avanzado
-  - Base de datos
-  - Guía
-  - IndexedDB
-  - Tutorial
-  - jsstore
-translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 original_slug: Web/API/IndexedDB_API/Usando_IndexedDB
 ---
+
 IndexedDB es una manera de almacenar datos dentro del navegador del usuario. Debido a que permite la creación de aplicaciones con habilidades de consulta enriquecidas, con independencia de la disponibilidad de la red, sus aplicaciones pueden trabajar tanto en línea como fuera de línea.
 
 ## Acerca de este documento
@@ -74,7 +65,7 @@ La solicitud de apertura no abre la base de datos o inicia la transacción de in
 
 El segundo parámetro para el método open es la versión de la base de datos. La versión de la base de datos determina el esquema - El almacen de objectos en la base de datos y su estructura. Si la base de datos no existe, es creada y se dispara un evento `onupgradeneeded` de inmediato, permitiéndote proveer una actualización de la estructura e índices en la función que capture dicho evento. Se verá más adelante en [Actualizando la versión de la base de datos](#Updating_the_version_of_the_database).
 
-> **Advertencia:** **Importante**: El número de versión es un `unsigned long`. Por lo tanto significa que puede ser un entero muy grande. También significa que si usas un flotante será convertido en un entero más cercano y la transacción puede no ser iniciada, el evento `upgradeneeded`no se desencadenará. Por ejemplo no use 2.4 como un número de versión ya que será igual que la 2:
+> **Advertencia:** **Importante**: El número de versión es un `unsigned long`. Por lo tanto significa que puede ser un entero muy grande. También significa que si usas un flotante será convertido en un entero más cercano y la transacción puede no ser iniciada, el evento `upgradeneeded` no se desencadenará. Por ejemplo no use 2.4 como un número de versión ya que será igual que la 2:
 >
 > ```js
 > var request = indexedDB.open("MyTestDatabase", 2.4); // Esto no se hace, la versión será redondeada a 2
@@ -150,7 +141,7 @@ Blink / Webkit soportan la versión actual de la especificación, tal como fue l
 
 ### Estructuración de la base de datos
 
-Ahora para estructurar la base de datos. IndexedDB usa almacenes de datos (object stores) en lugar de tablas, y una base de datos puede contener cualquier número de almacenes. Cuando un valor es almacenado, se le asocia con una clave. Existen diversas maneras en que una clave pude ser indicada dependiendo de si el almacén usa una [ruta de clave](https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath) o [generador](https://developer.mozilla.org/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator).
+Ahora para estructurar la base de datos. IndexedDB usa almacenes de datos (object stores) en lugar de tablas, y una base de datos puede contener cualquier número de almacenes. Cuando un valor es almacenado, se le asocia con una clave. Existen diversas maneras en que una clave pude ser indicada dependiendo de si el almacén usa una [ruta de clave](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keypath) o [generador](/en/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_keygenerator).
 
 La siguiente table muetra las distintas formas en que las claves pueden ser indicadas:
 
@@ -216,13 +207,13 @@ Como se indicó previamente, `onupgradeneeded` es el único lugar donde se puede
 
 Los almacenes de datos son creados con una llamada a `createObjectStore()`. El método toma como parámetros el nombre del almacén y un objeto. A pesar de que el segundo parámetro es opcional, es muy importante, porque permite definir propiedades opcionales importantes y refinar el tipo de almacén que se desea crear. En este caso, se pregunta por un almacén llamado "customers" y se define la clave, que es la propiedad que indica que un objeto en el almacén es único. La propiedad en este ejemplo es "ssn" (Social Security Number) ya que los números de seguridad social está garantizado que sea único. "ssn" debe estar presente en cada objeto que se guarda al almacén.
 
-También se solicitó crear un índice llamado "name" que se fija en la propiedad `name`de los objetos almacenados. Así como con `createObjectStore()`, `createIndex()` toma un objeto opcional `options` que refina el tipo de índice que se desea crear. Agregar objetos que no tengan una propiedad `name` funcionará, pero los objetos no aparecerán en el índice "name"
+También se solicitó crear un índice llamado "name" que se fija en la propiedad `name` de los objetos almacenados. Así como con `createObjectStore()`, `createIndex()` toma un objeto opcional `options` que refina el tipo de índice que se desea crear. Agregar objetos que no tengan una propiedad `name` funcionará, pero los objetos no aparecerán en el índice "name"
 
 Ahora se pueden obtener los clientes almacenados usando su `ssn` directamente del almacen, o usando su nombre a través del índice. Para aprender como hacer esto, vea la sección [El uso de un índice](#El_uso_de_un_índice)
 
 ### El uso de un generador de claves
 
-Indicar la bandera `autoIncrement`cuando se crea el almacén habilitará el generador de claves para dicho almacén. Por defecto esta bandera no está marcada.
+Indicar la bandera `autoIncrement` cuando se crea el almacén habilitará el generador de claves para dicho almacén. Por defecto esta bandera no está marcada.
 
 Con el generador de claves, la clave será generada automáticamente a medida que se agreguen valores al almacén. El número actual de un generador de claves siempre se establece en 1 cuando se creal el almacén por primera vez. Básicamente la nueva clave autogenerada es incrementada en 1 basada en la llave anterior. El numero actual para un generador de claves nunca disminuye, salvo como resultado de operaciones de base de datos que sean revertidos, por ejemplo, cuando la transacción de base de datos es abortada. Por lo tanto borrar un registro o incluso borrar todos los registros de un almacén nunca afecta al generador de claves
 
@@ -400,7 +391,7 @@ objectStore.openCursor().onsuccess = function(event) {
 };
 ```
 
-The`openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
+The `openCursor()` function takes several arguments. First, you can limit the range of items that are retrieved by using a key range object that we'll get to in a minute. Second, you can specify the direction that you want to iterate. In the above example, we're iterating over all objects in ascending order. The success callback for cursors is a little special. The cursor object itself is the `result` of the request (above we're using the shorthand, so it's `event.target.result`). Then the actual key and value can be found on the `key` and `value` properties of the cursor object. If you want to keep going, then you have to call `continue()` on the cursor. When you've reached the end of the data (or if there were no entries that matched your `openCursor()` request) you still get a success callback, but the `result` property is `undefined`.
 
 One common pattern with cursors is to retrieve all objects in an object store and add them to an array, like this:
 

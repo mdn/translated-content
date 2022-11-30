@@ -1,16 +1,9 @@
 ---
 title: Relación de Grid Layout con otros métodos de diseño y posicionamiento - CSS
 slug: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
-tags:
-  - CSS
-  - CSS Cuadrícula
-  - CSS Grids
-  - CSS Grilla
-  - CSS Rejilla
-  - Guía
-translation_of: Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
 original_slug: Web/CSS/CSS_Grid_Layout/Relacion_de_Grid_Layout
 ---
+
 CSS Grid Layout ha sido diseñado para trabajar junto con otros elementos de CSS, como parte de un sistema completo para hacer el diseño. En esta guía explicaré cómo se ajusta _Grid_ junto con otras técnicas que ya se estén usando.
 
 > **Nota:** Las traducciones posibles a la palabra Grid en este contexto son: Grilla, Rejilla, Cuadrícula, Malla. Para efecto del contenido será _Grid_.
@@ -179,7 +172,7 @@ El primer ejemplo utiliza flexbox, tengo un contenedor con tres ítems dentro. E
 
 ### Alineación en CSS Grid Layout
 
-En este segundo ejemplo uso Grid para construir el mismo diseño, usando las propiedades de alineación como se aplican en el grid layout. Por eso alineamos a `start` y a `end` en vez de a `flex-start` y`flex-end`. En grid layout alineamos los ítems dentro de su grid area que en este caso es una celda de la rejilla pero puede ser un área formada por múltiples celdas de rejilla.
+En este segundo ejemplo uso Grid para construir el mismo diseño, usando las propiedades de alineación como se aplican en el grid layout. Por eso alineamos a `start` y a `end` en vez de a `flex-start` y `flex-end`. En grid layout alineamos los ítems dentro de su grid area que en este caso es una celda de la rejilla pero puede ser un área formada por múltiples celdas de rejilla.
 
 ```css hidden
 * {box-sizing: border-box;}
@@ -226,7 +219,7 @@ En este segundo ejemplo uso Grid para construir el mismo diseño, usando las pro
 
 ### La unidad `fr` y `flex-basis`
 
-Ya hemos visto que la unidad `fr` asigna a las pistas del grid (tracks) una proporción del espacio disponible en el grid container. La unidad `fr`combinada con la función {{cssxref("minmax()", "minmax")}} permite un comportamiento muy similar al que tienen las propiedades `flex` en Flexbox - y todavía mantenemos la posibilidad de crear un layout de dos dimensiones.
+Ya hemos visto que la unidad `fr` asigna a las pistas del grid (tracks) una proporción del espacio disponible en el grid container. La unidad `fr` combinada con la función {{cssxref("minmax()", "minmax")}} permite un comportamiento muy similar al que tienen las propiedades `flex` en Flexbox - y todavía mantenemos la posibilidad de crear un layout de dos dimensiones.
 
 Si volvemos al ejemplo en el que demostré la diferencia entre layouts de una y de dos dimensiones, puedes ver que hay una diferencia con respecto al modo de funcionamiento responsive en cada una de ellas. En la flex-layout si arrastramos nuestra ventana haciéndola cada vez más pequeña, flex box ajusta el número de ítems en cada fila de acuerdo al espacio disponible. Si tenemos mucho espacio los cinco ítems pueden caber en una fila, pero si tenemos un contenedor muy estrecho podríamos tener espacio solo para uno.
 
@@ -374,7 +367,7 @@ En el ejemplo de abajo tengo un wrapper que contiene cuatro ítems hijos, el ít
 
 {{ EmbedLiveSample('grid_container_como_bloque_contenedor', '500', '330') }}
 
-Puedes ver que el ítem está ocupando el área de la línea 2 a la 4 de la cuadrícula y que empieza después de la línea 1. Luego se desplaza en esa área usando las propiedades `top`y `left`. Sin embargo, se ha sacado del flujo, como ocurre con los objetos en posición absoluta, por lo que las reglas de auto-placement colocan los objetos en ese mismo espacio. El ítem tampoco causa que sea generada la fila adicional para que se extienda a la línea 3.
+Puedes ver que el ítem está ocupando el área de la línea 2 a la 4 de la cuadrícula y que empieza después de la línea 1. Luego se desplaza en esa área usando las propiedades `top` y `left`. Sin embargo, se ha sacado del flujo, como ocurre con los objetos en posición absoluta, por lo que las reglas de auto-placement colocan los objetos en ese mismo espacio. El ítem tampoco causa que sea generada la fila adicional para que se extienda a la línea 3.
 
 Si eliminamos `position:` `absolute` de las reglas de `.box3` podemos ver cómo se mostraría sin el posicionamiento.
 
@@ -456,7 +449,7 @@ Una interacción final con otra especificación de layout que merece la pena des
 
 > “El elemento en sí no genera ninguna caja, pero sus hijos y pseudo-elementos siguen generando cajas como de costumbre. A efectos de generación y layout de cajas, el elemento debe ser tratado como si hubiera sido sustituido por sus hijos y pseudo-elementos en el árbol del documento”
 
-Si configuras un ítem como `display:` `contents` la caja que normalmente crearía desaparece, y las cajas de los elementos hijo aparecen como si hubieran subido de nivel. Esto significa que los hijos de un grid item pueden convertirse en grid items. . ¿Suena raro? He aquí un ejemplo sencillo. En el siguiente marcado tengo un grid, el primer ítem del grid se establece para que se expanda tres pistas de columna. Contiene tres ítems anidados. Como esos hijos no son hijos directos, no forman parte del grid layout y por tanto se muestran como `display`:`block`.
+Si configuras un ítem como `display: contents` la caja que normalmente crearía desaparece, y las cajas de los elementos hijo aparecen como si hubieran subido de nivel. Esto significa que los hijos de un grid item pueden convertirse en grid items. . ¿Suena raro? He aquí un ejemplo sencillo. En el siguiente marcado tengo un grid, el primer ítem del grid se establece para que se expanda tres pistas de columna. Contiene tres ítems anidados. Como esos hijos no son hijos directos, no forman parte del grid layout y por tanto se muestran como `display: block`.
 
 ```css hidden
 * {box-sizing: border-box;}

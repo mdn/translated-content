@@ -1,27 +1,17 @@
 ---
 title: CacheStorage
 slug: Web/API/CacheStorage
-tags:
-  - API
-  - CacheStorage
-  - Experimental
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Service Workers
-  - ServiceWorker
-  - TopicStub
-translation_of: Web/API/CacheStorage
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.
 
 The interface:
 
-- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers, even though the {{SpecName('Service Workers')}} spec defines it).
+- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers, even though the [Service Workers](https://w3c.github.io/ServiceWorker/) spec defines it).
 
-  > **Nota:** [Chrome and Safari only expose \`CacheStorage\` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} will be undefined unless an SSL certificate is configured.
+  > **Nota:** [Chrome and Safari only expose `CacheStorage` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} will be undefined unless an SSL certificate is configured.
 
 - Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.
 
@@ -164,11 +154,9 @@ try {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                        | Status                               | Comment             |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers', '#cachestorage', 'CacheStorage')}} | {{Spec2('Service Workers')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

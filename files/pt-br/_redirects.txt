@@ -454,12 +454,13 @@
 /pt-BR/docs/MDN/Guidelines	/pt-BR/docs/conflicting/MDN/Writing_guidelines
 /pt-BR/docs/MDN/Guidelines/Style_guide	/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide
 /pt-BR/docs/MDN/Guidelines/Writing_style_guide	/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide
-/pt-BR/docs/MDN/Kuma	/pt-BR/docs/MDN/Yari
+/pt-BR/docs/MDN/Kuma	/pt-BR/docs/orphaned/MDN/Yari
 /pt-BR/docs/MDN/Primeiros_Passos	/pt-BR/docs/MDN/Community/Contributing/Getting_started
 /pt-BR/docs/MDN/Structures	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /pt-BR/docs/MDN/Structures/Compatibility_tables	/pt-BR/docs/MDN/Writing_guidelines/Page_structures
 /pt-BR/docs/MDN/Structures/Macros	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
 /pt-BR/docs/MDN/Tools/KumaScript/Solucionando_problemas_de_erros_de_KumaScript	/pt-BR/docs/MDN/Tools/KumaScript/Troubleshooting
+/pt-BR/docs/MDN/Yari	/pt-BR/docs/orphaned/MDN/Yari
 /pt-BR/docs/MDN/guia_usuário	/pt-BR/docs/MDN/Tools
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tema	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/theme
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomia_de_uma_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
@@ -665,7 +666,7 @@
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute	/pt-BR/docs/orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/slider_role
 /pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques/Utilizando_o_alert_role	/pt-BR/docs/Web/Accessibility/ARIA/Roles/alert_role
-/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_07681b5fb66700d2792e86830388177c
+/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Test_Cases	/pt-BR/docs/Web/Accessibility/ARIA
 /pt-BR/docs/Web/Accessibility/ARIA/Guia_para_implementar_o_leitor_de_tela_ARIA	/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 /pt-BR/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
 /pt-BR/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/pt-BR/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
@@ -788,6 +789,7 @@
 /pt-BR/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data
 /pt-BR/docs/Web/Guide/HTML/Using_data_attributes	/pt-BR/docs/Learn/HTML/Howto/Use_data_attributes
 /pt-BR/docs/Web/Guide/Introducao_ao_Desenvolvimento_Web	/pt-BR/docs/Web/Guide/Introduction_to_Web_development
+/pt-BR/docs/Web/Guide/Mobile/Separate_sites	/pt-BR/docs/conflicting/Web/Progressive_web_apps
 /pt-BR/docs/Web/HTML/Applying_color	/pt-BR/docs/Web/CSS/CSS_Colors/Applying_color
 /pt-BR/docs/Web/HTML/CORS_imagens_habilitadas	/pt-BR/docs/Web/HTML/CORS_enabled_image
 /pt-BR/docs/Web/HTML/Canvas	/pt-BR/docs/Web/API/Canvas_API
@@ -842,6 +844,7 @@
 /pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos	/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects
 /pt-BR/docs/Web/JavaScript/Guide/Usando_promises	/pt-BR/docs/Web/JavaScript/Guide/Using_promises
 /pt-BR/docs/Web/JavaScript/Guide/Values,_variables,_and_literals	/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_types
+/pt-BR/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features	/pt-BR/docs/orphaned/Web/JavaScript/Guide/Working_With_Private_Class_Features
 /pt-BR/docs/Web/JavaScript/Language_Resources	/pt-BR/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /pt-BR/docs/Web/JavaScript/Outras_ferramentas_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
@@ -859,6 +862,7 @@
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
+/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Map
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Number/toString
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/toSource	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/toString
@@ -869,9 +873,10 @@
 /pt-BR/docs/Web/JavaScript/Reference/Indice_metodos_js	/pt-BR/docs/Web/JavaScript/Reference
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao	/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Inicializador_Objeto	/pt-BR/docs/Web/JavaScript/Reference/Operators/Object_initializer
+/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator	/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Operador_Condicional	/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
 /pt-BR/docs/Web/JavaScript/Reference/Operators/Operador_Virgula	/pt-BR/docs/Web/JavaScript/Reference/Operators/Comma_Operator
-/pt-BR/docs/Web/JavaScript/Reference/Operators/operador_de_coalescencia_nula	/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator
+/pt-BR/docs/Web/JavaScript/Reference/Operators/operador_de_coalescencia_nula	/pt-BR/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
 /pt-BR/docs/Web/JavaScript/Reference/Properties_Index	/pt-BR/docs/Web/JavaScript/Reference
 /pt-BR/docs/Web/JavaScript/Reference/Statements/funcoes_assincronas	/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function
 /pt-BR/docs/Web/JavaScript/Reference/Statements/import.meta	/pt-BR/docs/Web/JavaScript/Reference/Operators/import.meta
@@ -896,7 +901,7 @@
 /pt-BR/docs/WebSockets/Writing_WebSocket_server	/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_server
 /pt-BR/docs/WebSockets/Writing_WebSocket_servers	/pt-BR/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
 /pt-BR/docs/Web_Development/Mobile/Mobile-friendliness	/pt-BR/docs/Web/Guide/Mobile/Mobile-friendliness
-/pt-BR/docs/Web_Development/Mobile/Sites_separados	/pt-BR/docs/Web/Guide/Mobile/Separate_sites
+/pt-BR/docs/Web_Development/Mobile/Sites_separados	/pt-BR/docs/conflicting/Web/Progressive_web_apps
 /pt-BR/docs/XHTML	/pt-BR/docs/Glossary/XHTML
 /pt-BR/docs/c_temp	/pt-BR/docs/Web/API/Console
 /pt-BR/docs/dez_anos_de_MDN	/pt-BR/docs/MDN/At_ten

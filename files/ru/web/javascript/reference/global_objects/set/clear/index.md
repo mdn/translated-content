@@ -9,6 +9,7 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 ---
+
 {{JSRef}}
 
 Метод **`clear()`** удаляет все элементы из объекта `Set`.

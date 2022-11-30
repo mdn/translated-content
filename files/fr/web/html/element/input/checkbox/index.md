@@ -3,7 +3,7 @@ title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments {{htmlelement("input")}} de type **`checkbox`** sont affichés sous la forme de boîtes à cocher qui sont cochées lorsqu'elles sont activées. Elles permettent de sélectionner une ou plusieurs valeurs dans un formulaire.
 
@@ -46,7 +46,7 @@ En plus des attributs qui sont partagés par l'ensemble des éléments {{HTMLEle
 
 ### {{htmlattrdef("checked")}}
 
-Un attribut booléen qui indique si la case est cochée. Cet attribut n'indique pas si la case est actuellement cochée : si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL `checked`de l'objet {{domxref("HTMLInputElement")}} est mis à jour).
+Un attribut booléen qui indique si la case est cochée. Cet attribut n'indique pas si la case est actuellement cochée : si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL `checked` de l'objet {{domxref("HTMLInputElement")}} est mis à jour).
 
 > **Note :** À la différence des autres champs, les valeurs des cases à cocher ne sont envoyées au serveur que lorsqu'elles sont cochées. Lorsque c'est le cas, c'est la valeur de l'attribut `value` qui est envoyé.
 

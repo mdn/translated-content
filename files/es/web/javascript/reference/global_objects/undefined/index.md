@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 original_slug: Web/JavaScript/Referencia/Objetos_globales/undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumen
@@ -24,7 +25,7 @@ undefined
 
 `undefined` es una propiedad del _objeto global_, es decir, una variable de alcance global. El valor inicial de `undefined` es el valor primitivo `{{Glossary("Undefined", "undefined")}}`.this needs clarification, but that would require explaining primitive values
 
-En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), `undefined`es una propiedad _no-configurable_, _no-grabable_ según la especificación ECMAScript 5. Aún cuando este no sea el caso, evite sobreescribirlo.
+En navegadores modernos (JavaScript 1.8.5 / Firefox 4+), `undefined` es una propiedad _no-configurable_, _no-grabable_ según la especificación ECMAScript 5. Aún cuando este no sea el caso, evite sobreescribirlo.
 
 Una variable a la que no se le ha asignado valor, o no se ha declarado en absoluto (no se declara, no existe) son de tipo `undefined`. Un método o sentencia también devuelve `undefined` si la variable que se está evaluando no tiene asignado un valor. Una función devuelve `undefined` si no se ha {{jsxref("Sentencias/return", "devuelto")}} un valor.
 
@@ -104,12 +105,7 @@ if (y === void 0) {
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario                                          |
-| ------------------------------------------------------------------------ | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES1', '#sec-4.3.9', 'undefined')}}             | {{Spec2('ES1')}}         | Definición inicial. Implementado en JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.1.1.3', 'undefined')}}     | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-undefined', 'undefined')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-undefined', 'undefined')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

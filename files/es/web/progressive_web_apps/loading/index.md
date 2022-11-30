@@ -1,13 +1,6 @@
 ---
 title: Carga progresiva
 slug: Web/Progressive_web_apps/Loading
-tags:
-  - Cargar
-  - PWAs
-  - aplicaciones web progresivas
-  - js13kGames
-  - progresiva
-translation_of: Web/Progressive_web_apps/Loading
 ---
 
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
@@ -158,7 +151,7 @@ Recuerda el enfoque de mejora progresiva: ofrece un producto utilizable sin impo
 
 ## Pensamientos finales
 
-Eso es todo por esta serie de tutoriales: revisamos el [código fuente de la aplicación de ejemplo js13kPWA](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) y aprendimos sobre el uso de funciones de aplicaciones web progresivas, incluida una [Introducción](/es/docs/Web/Progressive_web_apps/Introduction), [estructura PWA](/es/docs/Web/Progressive_web_apps/App_structure), [disponibilidad sin conexión con servicio workers](/es/docs/Web/Progressive_web_apps/Offline_Service_workers), [PWAs instalables](/es/docs/Web/Progressive_web_apps/Installable_PWAs), y finalmente notificaciones. También explicamos el `push` con la ayuda del [Libro de recetas para el servicio _workers_](https://serviceworke.rs/). Y en este artículo, hemos analizado el concepto de carga progresiva, incluido un interesante ejemplo que hace uso de la [API de Intersection Observer](/es/docs/Web/API/Intersection_Observer_API).
+Eso es todo por esta serie de tutoriales: revisamos el [código fuente de la aplicación de ejemplo js13kPWA](https://github.com/mdn/pwa-examples/tree/master/js13kpwa) y aprendimos sobre el uso de funciones de aplicaciones web progresivas, incluida una [Introducción](/es/docs/Web/Progressive_web_apps/Introduction), [estructura PWA](/es/docs/Web/Progressive_web_apps/App_structure), [disponibilidad sin conexión con servicio workers](/es/docs/Web/Progressive_web_apps/Offline_Service_workers), [PWAs instalables](/es/docs/Web/Progressive_web_apps/Installable_PWAs), y finalmente notificaciones. También explicamos el `push` con la ayuda del [Libro de recetas para el servicio _workers_](https://github.com/mdn/serviceworker-cookbook/). Y en este artículo, hemos analizado el concepto de carga progresiva, incluido un interesante ejemplo que hace uso de la [API de Intersection Observer](/es/docs/Web/API/Intersection_Observer_API).
 
 No dudes en experimentar con el código, mejorar tu aplicación existente con funciones de PWA o crear algo completamente nuevo por tu cuenta. Las PWAs ofrecen una gran ventaja sobre las aplicaciones web habituales.
 

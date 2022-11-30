@@ -3,6 +3,7 @@ title: Web Workers API
 slug: Web/API/Web_Workers_API
 translation_of: Web/API/Web_Workers_API
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 **Los Web Workers** hacen posible ejecutar la operación de un script en un hilo en segundo plano separado de la ejecución el hilo principal de la aplicación web. La ventaja de esto es que un proceso laborioso puede actuar en un hilo separado, permitiendo al hilo principal (normlamente la UI) ejecutarse sin ser bloqueado o ralentizado.
@@ -21,7 +22,7 @@ Ademas de los workers dedicados, hay otro tipo de workers:
 
 - Los Shared workers son workers que pueden ser utilizados por multiples scripts corriendo en diferenes ventanas, IFrames, etc., esto siempre que estén en el mismo dominio que el worker. Son un poco más complejos que los workers dedicados— los scripts deben comunicarse a través de un puerto activo. Mira {{domxref("SharedWorker")}} para mas detalles.
 - [ServiceWorkers](/es/docs/Web/API/ServiceWorker_API) esencialmente actuan como servidores proxy que se ubican entre las aplicaciones web, el navegador y la red (cuando están disponibles). Están destinados (entre otras cosas) para poder manejar experiencias y comportamientos offline, interceptando peticiones de red y tomando la acción apropiada tomando en cuenta si la conexión está disponible y actualizando los assets desde el servidor. También notificaciones push y sincronización desde la API en segundo plano.
-- Chrome Workers es un worker solo de Firefox puedes utilizar si estás desarrollando complementos se puede tener acceso a [js-ctypes](https://developer.mozilla.org/en/js-ctypes) en el worker. Mira {{domxref("ChromeWorker")}} para mas detalles.
+- Chrome Workers es un worker solo de Firefox puedes utilizar si estás desarrollando complementos se puede tener acceso a [js-ctypes](/en/js-ctypes) en el worker. Mira {{domxref("ChromeWorker")}} para mas detalles.
 - [Audio Workers](/es/docs/Web/API/Web_Audio_API#Audio_Workers) nos dan la capacidad de procesar audio directamente dentro del contexto del worker.
 
 > **Nota:** Según el [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), los errores del worker no deberían bubujear (mira {{bug(1188141)}}. Esto está implementado en Firefox 42.
@@ -59,9 +60,7 @@ You can find out more information on how these demos work in [Using web workers]
 
 ## Especificaciones
 
-| Specification                                        | Status                           | Comment |
-| ---------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#workers')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## See also
 

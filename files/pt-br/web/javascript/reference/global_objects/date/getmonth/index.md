@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 ---
+
 {{JSRef}}
 
 O método **`getMonth()`** retorna o mês na data especificada de acordo com o horário local, como um valor zero-based (onde o zero indica o primeiro mês do ano).

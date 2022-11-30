@@ -1,22 +1,6 @@
 ---
 title: Estructura web y documentación
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-tags:
-  - CodingScripting
-  - Composición
-  - Diseño
-  - Formato
-  - Guía
-  - HTML
-  - Presentación
-  - Principiante
-  - Sitio
-  - Sitio Web
-  - bloques
-  - pagina
-  - programar
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 original_slug: Learn/HTML/Introduccion_a_HTML/estructura
 ---
 
@@ -73,7 +57,7 @@ El ejemplo no es muy atractivo, pero puede servir para ilustrar un ejemplo de di
 
 La parte visual no lo es todo. Utilizarás diferentes fuentes y colores para llamar la atención de los usuarios sin discapacidad visual de las partes más importantes del contenido, como el menú de navegación y sus enlaces correspondientes, pero ¿qué ocurre con los usuarios con discapacidad visual que no pueden distinguir los colores llamativos o el tamaño grande de las fuentes?
 
-> **Nota:** Los daltónicos representan alrededor del [4% de la población mundial](http://www.color-blindness.com/2006/04/28/colorblind-population/) (aproximadamente 1 de cada 12 hombres y 1 de cada 200 mujeres son daltónicos). Los invidentes y las personas con discapacidad visual representan aproximadamente el 4-5% de la población mundial (en 2012 había {{Interwiki("wikipedia", "Discapacidad visual")}} 285 millones de personas con alguna de estas características en el mundo, mientras que el total de la población estaba {{Interwiki("wikipedia", "World_human_population#/media/File:World_population_history.svg", "alrededor de los 7,000 millones")}}.
+> **Nota:** Los daltónicos representan alrededor del [4% de la población mundial](http://www.color-blindness.com/2006/04/28/colorblind-population/) (aproximadamente 1 de cada 12 hombres y 1 de cada 200 mujeres son daltónicos). Los invidentes y las personas con discapacidad visual representan aproximadamente el 4-5% de la población mundial (en 2012 había [Discapacidad visual](https://es.wikipedia.org/wiki/Discapacidad_visual) 285 millones de personas con alguna de estas características en el mundo, mientras que el total de la población estaba [alrededor de los 7,000 millones](https://es.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg).
 
 En tu código HTML puedes crear secciones de contenido basadas en su _funcionalidad_ — puedes usar elementos que representen sin ambigüedad las diferentes secciones de contenido descritas, de forma que las tecnologías de accesibilidad y los lectores de pantalla puedan reconocer esos elementos y asistir en tareas como «encontrar el menú de navegación», o «encontrar el contenido principal». Como se mencionó anteriormente en el curso, hay una serie de [consecuencias por no usar la estructura de elementos y semántica adecuada para hacer el trabajo correctamente](/es/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Por_qué_necesitamos_estructura).
 

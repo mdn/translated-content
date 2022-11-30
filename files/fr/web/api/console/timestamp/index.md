@@ -31,7 +31,7 @@ console.timeStamp(label);
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.timestamp")}}
+{{Compat}}
 
 ## Voir aussi
 

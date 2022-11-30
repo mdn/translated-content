@@ -3,6 +3,7 @@ title: Введение в CSS вёрстку
 slug: Learn/CSS/CSS_layout/Introduction
 translation_of: Learn/CSS/CSS_layout/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
 
 В этой статье мы рассмотрим некоторые функции макета CSS, которые мы затрагивали в предыдущих статьях, например различные значения свойства {{cssxref("display")}}, и разберём некоторые концепции, которые будут рассмотрены в этой статье.
@@ -54,7 +55,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 Методы CSS, которыми вы можете управлять разметкой элементов:
 
-- **Свойство {{cssxref("display")}}** — Стандартные значения `block`, `inline` или `inline-block `могут изменять поведение элементов в обычном потоке (см.подробнее [Types of CSS boxes](/ru/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)). Также можно менять сами методы разметки такими значениями свойства `display`, как [CSS Grid](/ru/docs/Learn/CSS/CSS_layout/Grids) или [Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox).
+- **Свойство {{cssxref("display")}}** — Стандартные значения `block`, `inline` или `inline-block` могут изменять поведение элементов в обычном потоке (см.подробнее [Types of CSS boxes](/ru/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes)). Также можно менять сами методы разметки такими значениями свойства `display`, как [CSS Grid](/ru/docs/Learn/CSS/CSS_layout/Grids) или [Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox).
 - **Floats** — Применение значения {{cssxref("float")}} типа `left` может заставить элемент блочного типа "прилепить" содержимое к одной стороне элемента, как иногда изображения обволакиваются текстом на газетных страницах.
 - **Свойство {{cssxref("position")}}** — Позволяет точно контролировать положение блоков внутри других блоков. `static` позиционирование является стандартным, но также можно применять другие значения свойства, например фиксированное в углу экрана.
 - **Макет Таблицы** — свойства для разметки таблиц могут быть использованы и для нетабличных элементов, с помощью `display: table` и соответствующих свойств.

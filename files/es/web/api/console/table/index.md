@@ -1,14 +1,9 @@
 ---
 title: Console.table()
 slug: Web/API/Console/table
-tags:
-  - API
-  - Consola
-  - DOM
-  - Depuración
-translation_of: Web/API/Console/table
 original_slug: Web/API/Console/tabla
 ---
+
 {{APIRef("Console API")}}
 
 Muestra datos tabulares como una tabla.
@@ -134,9 +129,7 @@ console.table(data [, columns]);
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                           | Comentario         |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#table", "console.table()")}} | {{Spec2("Console API")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

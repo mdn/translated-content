@@ -3,6 +3,7 @@ title: Стилизация ссылок
 slug: Learn/CSS/Styling_text/Styling_links
 translation_of: Learn/CSS/Styling_text/Styling_links
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 При стилизации ссылок, важно понимать как использовать псевдоклассы, чтобы стилизировать состояния ссылок эффективно, и как стилизировать ссылки для использования в общих разнообразных функциях интерфейса: таких как например навигационное меню и вкладки. Мы рассмотрим все эти темы в этой статье.
@@ -331,7 +332,7 @@ a[href*="http"] {
 
 Ну вот и все — попробуйте посетить секцию активного изучения выше и испытайте этот новый метод!
 
-> **Примечание:** **Обратите внимание**: Не переживайте если вы ещё не знакомы с [фоном ](/ru/docs/Learn/CSS/Building_blocks)и [адаптивным (отзывчивым) веб-дизайном](/ru/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks); это объяснено в других местах
+> **Примечание:** **Обратите внимание**: Не переживайте если вы ещё не знакомы с [фоном](/ru/docs/Learn/CSS/Building_blocks) и [адаптивным (отзывчивым) веб-дизайном](/ru/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks); это объяснено в других местах
 
 ## Стилизация ссылок в виде кнопок
 

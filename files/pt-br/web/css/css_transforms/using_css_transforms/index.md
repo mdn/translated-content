@@ -1,8 +1,8 @@
 ---
 title: Usando CSS transforms
 slug: Web/CSS/CSS_Transforms/Using_CSS_transforms
-translation_of: Web/CSS/CSS_Transforms/Using_CSS_transforms
 ---
+
 {{CSSRef}}
 
 Mudando coordenadas no espaço da tela o **CSS transforms** permite que a posição do conteúdo afetado seja alterada sem afetar o fluxo de informação da página. Elas são implementadas usando um conjunto de propriedades CSS que permitem alterações lineares em elementos HTML. Essas alterações incluem rotação, inclinações, alteração da escala e tradução tanto em 2D quanto em 3D.
@@ -506,4 +506,4 @@ Feito isso, você pode trabalhar com elementos 3D.
 
 ## Veja também
 
-- [Usando deviceorientation com 3D Transforms](/en/Using_Deviceorientation_In_3D_Transforms)
+- [Usando deviceorientation com 3D Transforms](/pt-BR/Using_Deviceorientation_In_3D_Transforms)

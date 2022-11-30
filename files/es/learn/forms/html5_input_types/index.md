@@ -1,9 +1,9 @@
 ---
 title: Tipos de input de HTML5
 slug: Learn/Forms/HTML5_input_types
-translation_of: Learn/Forms/HTML5_input_types
 original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Basic_native_form_controls", "Learn/Forms/Other_form_controls", "Learn/Forms")}}
 
 En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimos el elemento {{htmlelement("input")}} y los valores de su atributo `type`, disponibles desde los inicios de HTML. Ahora veremos en detalle la funcionalidad de los controles de formulario más recientes, incluyendo algunos tipos de input nuevos, los cuales fueron añadidos en HTML5 para permitir la recolección de tipos de datos específicos
@@ -29,7 +29,7 @@ En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimo
   </tbody>
 </table>
 
-> **Nota:** La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/en-US/docs/Web/HTML/Element#Forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Element/input).
+> **Nota:** La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/es/docs/Web/HTML/Element#Forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Element/input).
 
 Debido a que la apariéncia de un control de formulario puede ser algo distinta con respecto a unas especificaciones del diseñador, los desarrolladores web a veces construyen sus propios controles de formulario personalizados. Cubrimos este aspecto en un tutorial avanzado: [Cómo construir widgets de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_widgets).
 
@@ -45,7 +45,7 @@ Cuando se utiliza este valor {{htmlattrxref("type","input")}} , se le obliga al 
 
 ![﻿An invalid email input showing the message "Please enter an email address."](https://mdn.mozillademos.org/files/17027/email_address_invalid.png)
 
-Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) en combinación con el tipo input`email` para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:
+Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) en combinación con el tipo input `email` para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:
 
 ```html
 <input type="email" id="email" name="email" multiple>

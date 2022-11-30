@@ -713,8 +713,10 @@ draw();
 
 다음 두가지 값을 사용할 수 있습니다:
 
-- **`"nonzero`**": [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule) 알고리즘. 기본값.
-- **`"evenodd"`**: [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) 알고리즘.
+- `nonzero`
+  - : [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule) 알고리즘. 기본값.
+- `evenodd`
+  - : [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule) 알고리즘.
 
 In this example we are using the `evenodd` rule.
 

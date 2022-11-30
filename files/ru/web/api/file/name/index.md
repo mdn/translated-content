@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/File/name
 ---
+
 {{APIRef("File API")}}
 
 Возвращает имя файла представленного объектом типа {{domxref("File")}}. По соображениям безопасности не содержит пути к файлу.

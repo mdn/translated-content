@@ -1,18 +1,8 @@
 ---
 title: white-space
 slug: Web/CSS/white-space
-tags:
-  - CSS
-  - Layout
-  - Precisa de Compatibilidade com Navegadores Mobile
-  - Precisa de Exemplos
-  - Propriedade
-  - Referencia
-  - Referência(2)
-  - Textos CSS
-  - Web
-translation_of: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
 ## Resumo

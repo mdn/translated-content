@@ -1,18 +1,9 @@
 ---
 title: Os widgets nativos
 slug: Learn/Forms/Basic_native_form_controls
-tags:
-  - Aprender
-  - Contrôles
-  - Exemplos
-  - Guía
-  - HTML
-  - Iniciantes
-  - Intermediário
-  - Web
-translation_of: Learn/Forms/Basic_native_form_controls
 original_slug: Web/Guide/HTML/Forms/Os_widgets_nativos
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/How_to_structure_an_HTML_form", "Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
 
 Veremos agora, detalhadamente, a funcionalidade dos diferentes widgets dos formulários, observando as opções disponíveis para coletar diferentes tipos de dados. Este guia é um tanto exaustivo, cobrindo todos os widgets de formulários nativos disponíveis.
@@ -266,7 +257,7 @@ Once a data list is affiliated with a form widget, its options are used to auto-
 </datalist>
 ```
 
-> **Nota:** According to [the HTML specification](http://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields.
+> **Nota:** According to [the HTML specification](https://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list), the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields.
 
 ![Screenshots of datalist on several platforms.](/files/4593/all-datalist.png)
 

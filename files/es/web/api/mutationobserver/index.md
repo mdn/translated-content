@@ -1,8 +1,8 @@
 ---
 title: MutationObserver
 slug: Web/API/MutationObserver
-translation_of: Web/API/MutationObserver
 ---
+
 {{APIRef("DOM")}}
 
 `MutationObserver` establece un mecanismo para reaccionar ante cambios en el [DOM](/es/docs/DOM). Ha sido diseñado como un sustituto de los [Mutation Events](/es/docs/DOM/Mutation_events) definidos en las especificaciones de _DOM3 Events_.
@@ -75,7 +75,7 @@ Returns an Array of [`MutationRecord`s](#MutationRecord).
 
 `MutationObserverInit` es un objeto para el que se pueden especificar las siguientes propiedades:
 
-> **Nota:** NOTA: Como mínimo las propiedades `childList`, `attributes`, o `characterData`deben ser `true`. En caso contrario, se producirá un error "An invalid or illegal string was specified"
+> **Nota:** NOTA: Como mínimo las propiedades `childList`, `attributes`, o `characterData` deben ser `true`. En caso contrario, se producirá un error "An invalid or illegal string was specified"
 
 | Propiedad               | Descripción                                                                                                                            |
 | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |

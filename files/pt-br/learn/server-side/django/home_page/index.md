@@ -1,18 +1,8 @@
 ---
 title: 'Django Tutorial Parte 5: Criando nossa home page'
 slug: Learn/Server-side/Django/Home_page
-tags:
-  - Aprender
-  - Artigo
-  - Codificação
-  - Iniciante
-  - Tutorial
-  - django
-  - django templates
-  - django views
-  - lado servidor (server-side)
-translation_of: Learn/Server-side/Django/Home_page
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
 Agora estamos prontos para adicionar o código que exibe nossa primeira página completa - uma home page do site [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website). A página inicial mostrará o número de registros que temos para cada tipo de modelo e fornecerá links de navegação na barra lateral para nossas outras páginas. Ao longo do caminho, obteremos experiência prática ao escrever mapas e visualizações básicos de URL, obter registros do banco de dados e usar modelos.
@@ -65,7 +55,7 @@ As URLs que iremos precisar na nossa página são:
 - `catalog/books/` — Uma lista de todos os livros.
 - `catalog/authors/` — Uma lista de todos os autores.
 - `catalog/book/<id>` — A exibição de detalhes de um livro específico, com uma chave primária de campo `<id>` (o padrão). Por exemplo, o URL do terceiro livro adicionado à lista será `/catalog/book/3`.
-- `catalog/author/<id>` — A exibição de detalhes para o autor específico com um campo de chave primária de _`<id>`. Por exemplo, o URL do 11º autor adicionado à lista será `/catalog/author/11`.
+- `catalog/author/<id>` — A exibição de detalhes para o autor específico com um campo de chave primária de `<id>`. Por exemplo, o URL do 11º autor adicionado à lista será `/catalog/author/11`.
 
 Os três primeiros URLs retornarão a página de índice, a lista de livros e a lista de autores. Esses URLs não codificam nenhuma informação adicional e as consultas que buscam dados no banco de dados sempre serão as mesmas. No entanto, os resultados retornados pelas consultas dependerão do conteúdo do banco de dados.
 

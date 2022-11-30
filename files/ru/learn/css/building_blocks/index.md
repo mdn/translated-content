@@ -13,6 +13,7 @@ tags:
   - состоит
 translation_of: Learn/CSS/Building_blocks
 ---
+
 {{LearnSidebar}}
 
 Этот модуль — продолжение раздела [Введение в CSS](/ru/docs/Learn/CSS/First_steps): вы уже знакомы с синтаксисом языка и опробовали основные функции; пришло время углубиться в CSS. В этом модуле рассматриваются каскады и наследование, все доступные типы селекторов, блоков, изменений размеров, фонов, границ, а также отладка и многое другое.
@@ -23,9 +24,9 @@ translation_of: Learn/CSS/Building_blocks
 
 Перед изучением этого раздела вы должны иметь:
 
-1.  Стандартную рабочую среду ([Установке базового программного обеспечения](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)), а также понимание того, как создавать файлы и работать с ними ([Работа с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files)).
-2.  Общее представление о HTML (модуль [Введение в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML)).
-3.  Общее представление о CSS (модуль [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)).
+1. Стандартную рабочую среду ([Установке базового программного обеспечения](/ru/docs/Learn/Getting_started_with_the_web/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0_%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F)), а также понимание того, как создавать файлы и работать с ними ([Работа с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files)).
+2. Общее представление о HTML (модуль [Введение в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML)).
+3. Общее представление о CSS (модуль [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)).
 
 > **Примечание:** Если вы работаете на компьютере/планшете/другом устройстве, где нет возможности создавать файлы, вы можете опробовать примеры (большую часть) на таких онлайн-программах, как [JSBin](http://jsbin.com/) или [Thimble](https://thimble.mozilla.org/).
 

@@ -1,16 +1,8 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content
-tags:
-  - CSS
-  - CSS Grid
-  - Experimental
-  - Función CSS
-  - Layout
-  - Referencia
-  - Web
-translation_of: Web/CSS/fit-content
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La función [CSS](/es/docs/Web/CSS) **`fit-content()`** ajusta un tamaño dado a un tamaño disponible de acuerdo a la fórmula: `min(maximum size, max(minimum size, argument))`.
@@ -26,7 +18,7 @@ fit-content(100ch)
 fit-content(40%)
 ```
 
-La función se puede usar como un tamaño de track en las propiedades de [CSS Grid](/es/docs/Web/CSS/CSS_Grid_Layout), donde el tamaño máximo es definido por [`max-content`](/en-US/docs/Web/CSS/grid-template-columns#max-content) y el mínimo por [`auto`](/en-US/docs/Web/CSS/grid-template-columns#auto), el cual es calculado por "`auto"` (ej. [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/minmax)), excepto que el tamaño del track se restringe al argumento si éste es mas grande que el "auto" mínimo .
+La función se puede usar como un tamaño de track en las propiedades de [CSS Grid](/es/docs/Web/CSS/CSS_Grid_Layout), donde el tamaño máximo es definido por [`max-content`](/es/docs/Web/CSS/grid-template-columns#max-content) y el mínimo por [`auto`](/es/docs/Web/CSS/grid-template-columns#auto), el cual es calculado por "`auto"` (ej. [`minmax(auto, max-content)`](/es/docs/Web/CSS/minmax)), excepto que el tamaño del track se restringe al argumento si éste es mas grande que el "auto" mínimo .
 
 También puede usarse como tamaño de caja disponible para {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} y {{cssxref("max-height")}}, donde el tamañó máximo se refiere al tamaño máximo contenido y el mínimo al tamaño mínimo contenido.
 
@@ -90,11 +82,8 @@ Función que acepta un `<length>` o un `<percentage>` como un argumento.
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}} | {{Spec2("CSS3 Sizing")}} | Define la función como el tamaño de caja disponible para {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} y {{cssxref("max-height")}}. |
-| {{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}     | {{Spec2("CSS Grid")}}     | Define la función cuando es usada como un tamaño de track.                                                                                                                                                                                                    |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template-columns.fit-content")}}
+{{Compat}}

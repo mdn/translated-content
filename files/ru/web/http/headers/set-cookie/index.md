@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Set-Cookie
 translation_of: Web/HTTP/Headers/Set-Cookie
 original_slug: Web/HTTP/Заголовки/Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 HTTP заголовок **`Set-Cookie`** используется для отправки cookies с сервера на агент пользователя.
@@ -64,7 +65,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     Когда устанавливается срок действия, время и дата устанавливаются не относительно сервера, а относительно клиента, на котором установлено cookie,
 
-- `Max-Age=<number> `{{optional_inline}}
+- `Max-Age=<number>` {{optional_inline}}
   - : Количество секунд, после которого cookie устаревает. Ноль или отрицательное число приводят к моментальному устареванию cookie. Старые браузеры (ie6, ie7, and ie8) не поддерживают Max-Age. Для прочих браузеров, если оба параметра (`Expires` and `Max-Age`) установлены, `Max-Age` будет иметь преимущество.
 - `Domain=<domain-value>` {{optional_inline}}
 
@@ -106,7 +107,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     Allows servers to assert that a cookie ought not to be sent along with cross-site requests, which provides some protection against cross-site request forgery attacks ({{Glossary("CSRF")}}).
 
-    Современные браузеры используют `SameSite=Lax`. Если необходима работа ` SameSite=``None ` cookie должна быть установлена с атрибутом `Secure`.
+    Современные браузеры используют `SameSite=Lax`. Если необходима работа `SameSite=None` cookie должна быть установлена с атрибутом `Secure`.
 
 ## Примеры
 

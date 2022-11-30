@@ -8,6 +8,7 @@ tags:
   - Symbol
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
 ---
+
 {{JSRef}}
 
 Широко известный символ **`Symbol.search`** указывает метод, который вернёт индекс внутри строки, соответствующей регулярному выражению. Эта функция вызывается методом {{jsxref("String.prototype.search()")}}.

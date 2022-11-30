@@ -3,6 +3,7 @@ title: Cache
 slug: Web/API/Cache
 translation_of: Web/API/Cache
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 Интерфейс **`Cache`** представляет собой механизм хранения пары объектов [`Request`](http://fetch.spec.whatwg.org/#request) / `Response,` которые кешируются, например, как часть жизненного цикла {{domxref("ServiceWorker")}}. Заметьте, что интерфейс Cache доступен как в области видимости окна, так и в области видимости воркеров. Не обязательно использовать его вместе с сервис воркерами, даже если интерфейс определён в их спецификации.

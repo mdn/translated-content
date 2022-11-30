@@ -1,8 +1,8 @@
 ---
 title: ImageCapture
 slug: Web/API/ImageCapture
-translation_of: Web/API/ImageCapture
 ---
+
 {{APIRef("MediaStream Image")}}
 
 A interface **`ImageCapture`** da [MediaStream Image Capture API](/pt-BR/docs/Web/API/MediaStream_Image_Capture_API) fornece métodos para permitir a captura de images ou fotos de uma câmera ou de um dispositivo fotográfico. É fornecido uma interface para capturar images de um dispositive fotográfico referenciado por meio de um {{domxref("MediaStreamTrack")}} válido.

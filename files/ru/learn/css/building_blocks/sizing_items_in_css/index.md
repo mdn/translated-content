@@ -3,11 +3,12 @@ title: Изменение размеров в CSS
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
 
 В предыдущих уроках вы познакомились с некоторыми способами изменения размеров элементов на веб-странице с помощью CSS. Понимание того, насколько велики будут различные элементы в вашем дизайне — важно, и в этом уроке мы подведем итог по различным способам задания размеров элементов с помощью CSS и расскажем о некоторых терминах, связанных с размерами, которые помогут вам в будущем.
 
-| Необходимые условия: | Базовая компьютерная грамотность, [Установка базового ПО](https://developer.mozilla.org/ru-RU/Learn/Getting_started_with_the_web/Installing_basic_software), базовые знания [работы с файлами](https://developer.mozilla.org/ru-RU/Learn/Getting_started_with_the_web/Dealing_with_files), основы HTML ([Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), и общее представление о том, как работает CSS ([Введение в CSS](/ru/docs/Learn/CSS/First_steps).) |
+| Необходимые условия: | Базовая компьютерная грамотность, [Установка базового ПО](/ru/Learn/Getting_started_with_the_web/Installing_basic_software), базовые знания [работы с файлами](/ru/Learn/Getting_started_with_the_web/Dealing_with_files), основы HTML ([Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), и общее представление о том, как работает CSS ([Введение в CSS](/ru/docs/Learn/CSS/First_steps).) |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Цель:                | Изучить различные способы задания размеров объектов в CSS.                                                                                                                                                                                                                                                                                                                                                                                                              |
 
@@ -65,7 +66,7 @@ translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 Например, если бы вы установили `width: 100%` для изображения, а его внутренняя ширина была меньше, чем его контейнер, изображение было бы вынуждено растягиваться и становиться больше, в результате чего оно выглядело бы пикселизированным.
 
-Если бы вы вместо этого применили `max-width: 100%`%, и внутренняя ширина изображения была бы меньше, чем его контейнер, изображение не будет принудительно растягиваться и становиться больше, что предотвращает пикселизацию.
+Если бы вы вместо этого применили `max-width: 100%`, и внутренняя ширина изображения была бы меньше, чем его контейнер, изображение не будет принудительно растягиваться и становиться больше, что предотвращает пикселизацию.
 
 В приведенном ниже примере мы использовали одно и то же изображение трижды. Первому изображению было задано `width: 100%` и оно находится в контейнере, который больше его ширины, поэтому он растягивается до ширины контейнера. Второму изображению задано `max-width: 100%`, изображение достигло 100% своей ширины не растягивается, чтобы заполнить контейнер. Третье поле снова содержит то же изображение, также с `max-width: 100%` в этом случае вы можете увидеть, как он уменьшилось, чтобы поместиться в контейнер.
 
@@ -99,21 +100,21 @@ translation_of: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 
 ## В этом модуле
 
-1.  [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [Селекторы CSS](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [Селекторы CSS](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Комбинаторы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [Блочная модель(The box model)](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Фон и границы](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Обработка разных направлений текста](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Переполнение содержимого](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Значения и единицы измерения](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Размеры в CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Элементы изображений, форм и медиа-элементы](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [Блочная модель(The box model)](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Фон и границы](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Обработка разных направлений текста](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Переполнение содержимого](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Значения и единицы измерения](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Размеры в CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Элементы изображений, форм и медиа-элементы](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Стилизация таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Отладка CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Организация вашей CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)

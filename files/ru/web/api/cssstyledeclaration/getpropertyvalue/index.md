@@ -3,6 +3,7 @@ title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
 translation_of: Web/API/CSSStyleDeclaration/getPropertyValue
 ---
+
 {{ APIRef("CSSOM") }}
 
 **CSSStyleDeclaration.getPropertyValue()** интерфейс метода, который возвращает {{domxref('DOMString')}}, указанного CSS-свойства.

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/rightContext
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 La propiedad **rightContext _(No es estándar)_** es una propiedad estática y de solo lectura de expresiones regulares que contiene la subcadena que sigue a la coincidencia más reciente. el alias para esta propiedad es `RegExp.$'`.

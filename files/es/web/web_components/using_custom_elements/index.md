@@ -1,15 +1,8 @@
 ---
 title: Usando elementos personalizados
 slug: Web/Web_Components/Using_custom_elements
-tags:
-  - Autonomos
-  - Clases
-  - Guía
-  - HTML
-  - Preconstruidos
-  - elementos personalizados
-translation_of: Web/Web_Components/Using_custom_elements
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Una de las características claves del estándar de Componentes Web es la capacidad de crear elementos personalizados que encapsulan tu funcionalidad en una página HTML, en vez de tener que hacerlo con una larga lista de elementos anidados que juntos proveen una funcionalidad o característica personalizada en una página. Este artículo presenta el uso del API de Elementos Personalizados.
@@ -81,7 +74,7 @@ class PopUpInfo extends HTMLElement {
 }
 ```
 
-El trozo de código anterior contiene un [`constructor()`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) para la clase, que siempre empieza llamando a [`super()`](/en-US/docs/Web/JavaScript/Reference/Operators/super) de forma que se establezca correctamente el encadenado del prototipo.
+El trozo de código anterior contiene un [`constructor()`](/es/docs/Web/JavaScript/Reference/Classes/constructor) para la clase, que siempre empieza llamando a [`super()`](/es/docs/Web/JavaScript/Reference/Operators/super) de forma que se establezca correctamente el encadenado del prototipo.
 
 Dentro del constructor, definimos toda la funcionalidad que tendrá el elemento cuando se instancie. En este caso, adjuntamos una shadow root al elemento personalizado, mediante manipulación de DOM creamos la estructura interna del shadow DOM del elemento — que se adjunta a su vez a la shadow root — y finalmente añadimos algo de estilos CSS al shadow root.
 

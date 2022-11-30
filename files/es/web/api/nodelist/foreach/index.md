@@ -1,15 +1,8 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
-tags:
-  - DOM
-  - Iterable
-  - Métodos
-  - NodeList
-  - Referencia
-  - Web
-translation_of: Web/API/NodeList/forEach
 ---
+
 {{APIRef("DOM")}}
 
 El método **`forEach()`** de la interfase{{domxref("NodeList")}} llama a la función callback proporcionada como parámetro una vez para cadapar de valores en la lista, en el orden en que se insertaron.
@@ -31,10 +24,10 @@ nodeList.forEach(callback[, thisArg]);
     - `currentIndex`
       - : El índice del elemento que esta siendo procesado en la lista de nodos.
     - _`listObj`_
-      - : El objeto NodeList al que se está aplicando el método`forEach()`.
+      - : El objeto NodeList al que se está aplicando el método `forEach()`.
 
 - `thisArg` {{Optional_inline}}
-  - : Valor a ser usado como {{jsxref("this")}} al ejecutar`callback`.
+  - : Valor a ser usado como {{jsxref("this")}} al ejecutar `callback`.
 
 ### Valor Retornado
 
@@ -101,12 +94,7 @@ El comportamiento ateriror esta implementado en muchos navegadores. NodeList.pro
 
 ## Especificaciones
 
-Especificación
-
-|                                                                                  | Status                           | Comentarios                                |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}} | {{ Spec2('DOM WHATWG') }} | Define`NodeList` como`<Nodo>iterable`      |
-| {{SpecName("WebIDL", "#es-forEach", "forEach")}}                 | {{Spec2("WebIDL")}}         | Define`forEach`en declaraciones`iterables` |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

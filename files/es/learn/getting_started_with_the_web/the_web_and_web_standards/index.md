@@ -1,15 +1,6 @@
 ---
 title: La web y los estándares web
 slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
-tags:
-  - Estándares web
-  - Front-end
-  - Interfáz de Usuario
-  - Novato
-  - Principiante
-  - Web
-  - aprende
-translation_of: Learn/Getting_started_with_the_web/The_web_and_web_standards
 original_slug: Learn/Getting_started_with_the_web/La_web_y_los_estandares_web
 ---
 
@@ -21,17 +12,17 @@ Este artículo proporciona algunos antecedentes útiles sobre la Web — cómo s
 
 Mantendremos esto muy breve, ya que hay muchos artículos (más) detallados de la historia de la web, a los que enlazaremos más adelante (también intenta buscar "historia de la web" en tu motor de búsqueda favorito y ve lo que obtienes, si estás interesado en más detalles).
 
-A fines de la década de 1960, las fuerzas armadas de EE. UU. desarrollaron una red de comunicación llamada {{Glossary("Arpanet")}}. Esta se puede considerar una precursora de la Web, ya que trabajó en la {{interwiki("wikipedia", "conmutación de paquetes")}} y presentó la primera implementación de la {{interwiki("wikipedia", "Familia de protocolos de internet")}} TCP/IP. Estas dos tecnologías forman la base de la infraestructura sobre la que se construye Internet.
+A fines de la década de 1960, las fuerzas armadas de EE. UU. desarrollaron una red de comunicación llamada {{Glossary("Arpanet")}}. Esta se puede considerar una precursora de la Web, ya que trabajó en la [conmutación de paquetes](https://es.wikipedia.org/wiki/conmutación_de_paquetes) y presentó la primera implementación de la [Familia de protocolos de internet](https://es.wikipedia.org/wiki/Familia_de_protocolos_de_internet) TCP/IP. Estas dos tecnologías forman la base de la infraestructura sobre la que se construye Internet.
 
 En 1980, Tim Berners-Lee (a menudo denominado TimBL) escribió un programa de block de notas llamado ENQUIRE, que presentaba el concepto de enlaces entre diferentes nodos. ¿Te suena familiar?
 
 Avanzó rápidamente hasta 1989, y TimBL escribió [Gestión de la información: una propuesta](https://www.w3.org/History/1989/proposal.html) e hipertexto en el CERN; estas dos publicaciones juntas proporcionaron los antecedentes de cómo funcionaría la web. Recibieron una buena cantidad de interés, suficiente para convencer a los jefes de TimBL de que le permitieran seguir adelante y creara un sistema de hipertexto global.
 
-A finales de 1990, TimBL había creado todo lo necesario para ejecutar la primera versión de la web: [HTTP](/es/docs/Web/HTTP), [HTML](/es/docs/Web/HTML), el primer navegador web, que se llamaba {{interwiki("wikipedia", "WorldWideWeb")}}, un servidor HTTP y algunas páginas web para mirar.
+A finales de 1990, TimBL había creado todo lo necesario para ejecutar la primera versión de la web: [HTTP](/es/docs/Web/HTTP), [HTML](/es/docs/Web/HTML), el primer navegador web, que se llamaba [WorldWideWeb](https://es.wikipedia.org/wiki/WorldWideWeb), un servidor HTTP y algunas páginas web para mirar.
 
 En los años siguientes, la web explotó, se lanzaron varios navegadores, se instalaron miles de servidores web y se crearon millones de páginas web. Bien, este es un muy sencillo resumen de lo que sucedió, pero les prometí un breve resumen.
 
-Un último dato importante para compartir es que en 1994, TimBL fundó el {{interwiki("wikipedia", "World Wide Web Consortium")}} (W3C), una organización que reúne a representantes de muchas empresas de tecnología diferentes para trabajar juntos en la creación de especificaciones de tecnología web. Después de eso, siguieron otras tecnologías como [CSS](/es/docs/Web/CSS) y [JavaScript](/es/docs/Web/JavaScript), y la web comenzó a parecerse más a la web que conocemos hoy.
+Un último dato importante para compartir es que en 1994, TimBL fundó el [World Wide Web Consortium](https://es.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), una organización que reúne a representantes de muchas empresas de tecnología diferentes para trabajar juntos en la creación de especificaciones de tecnología web. Después de eso, siguieron otras tecnologías como [CSS](/es/docs/Web/CSS) y [JavaScript](/es/docs/Web/JavaScript), y la web comenzó a parecerse más a la web que conocemos hoy.
 
 ## Estándares web
 
@@ -164,5 +155,5 @@ Encontrarás los siguientes conceptos en algún momento de tus estudios.
 
 ## Ve también
 
-- {{interwiki("wikipedia", "Historia de la World Wide Web")}}
+- [Historia de la World Wide Web](https://es.wikipedia.org/wiki/Historia_de_la_World_Wide_Web)
 - [¿Cómo funciona la internet?](/es/docs/Learn/Common_questions/How_does_the_Internet_work)

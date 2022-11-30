@@ -1,8 +1,8 @@
 ---
 title: Strict mode
 slug: Web/JavaScript/Reference/Strict_mode
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
+
 {{JsSidebar("More")}}
 
 O **strict mode** do [ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm) é uma forma de _optar_ por uma variante restrita do JavaScript. O strict mode não é apenas um subconjunto: ele _intencionalmente_ tem semânticas diferentes do código normal. Navegadores que não suportam strict mode executarão código strict mode com um comportamento diferente dos navegadores que suportam, então não confie no strict mode sem testar o suporte a funcionalidades dos aspectos relevantes do strict mode. Código strict mode e código não-strict mode podem coexistir, então scripts podem optar pelo strict mode incrementalmente.

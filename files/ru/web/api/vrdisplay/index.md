@@ -16,6 +16,7 @@ tags:
   - WebVR
 translation_of: Web/API/VRDisplay
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`VRDisplay`** interface of the [WebVR API](/ru/docs/Web/API/WebVR_API) represents any VR device supported by this API. It includes generic information such as device IDs and descriptions, as well as methods for starting to present a VR scene, retrieving eye parameters and display capabilities, and other important functionality.

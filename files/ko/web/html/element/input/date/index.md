@@ -11,7 +11,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/input/date
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`date`** 유형의 {{HTMLElement("input")}} 요소는 유효성 검증을 포함하는 텍스트 상자 또는 특별한 날짜 선택 인터페이스를 사용해 날짜를 입력할 수 있는 입력 칸을 생성합니다.
 
@@ -477,7 +477,7 @@ daySelect.onchange = function() {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.input.input-date")}}
+{{Compat}}
 
 ## 같이 보기
 

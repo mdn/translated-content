@@ -42,7 +42,7 @@ L'équipement peut également inclure un accéléromètre, un baromètre, ou d'a
 Pour accéder à l'API WebXR à l'intérieur du contexte d'une fenêtre donnée, utiliser la propriété {{domxref("navigator.xr")}}, qui retourne un objet {{domxref("XRSystem")}} au travers duquel toute l'API de périphérique WebXR Device API est alors exposée.
 
 - {{domxref("navigator.xr")}} {{ReadOnlyInline}}
-  - : Cette propriété, ajoutée à l'interface {{domxref("Navigator")}}, retourne l'objet  {{domxref("XRSystem")}} au travers duquel l'API WebXR est exposée. Si cette propriété est missing ou `null`, WebXR n'est pas disponible.
+  - : Cette propriété, ajoutée à l'interface {{domxref("Navigator")}}, retourne l'objet {{domxref("XRSystem")}} au travers duquel l'API WebXR est exposée. Si cette propriété est missing ou `null`, WebXR n'est pas disponible.
 
 ## Les interfaces WebXR
 
@@ -119,7 +119,7 @@ Les guides et didacticiels suivants sont une excellente ressource pour apprendre
 - [Rendering and the WebXR frame animation callback](/fr/docs/Web/API/WebXR_Device_API/Rendering)
   - : En commençant par la planification des images à afficher, ce guide explique ensuite comment déterminer le placement des objets dans la vue et comment les afficher dans la mémoire tampon WebGL utilisée pour chacune des deux vues de la scène pour les deux yeux.
 - [Viewpoints and viewers: Simulating cameras in WebXR](/fr/docs/Web/API/WebXR_Device_API/Cameras)
-  - :  through a world in which the viewer doesn't really move.WebGL (et donc WebXR) n'a pas vraiment de concept de caméra, qui est le concept traditionnel utilisé pour représenter un point de vue dans les graphiques 3D. Dans cet article, nous voyons comment simuler une caméra et comment créer l'illusion de déplacer un spectateur dans un monde même si ce n'est pas le cas.
+  - : through a world in which the viewer doesn't really move.WebGL (et donc WebXR) n'a pas vraiment de concept de caméra, qui est le concept traditionnel utilisé pour représenter un point de vue dans les graphiques 3D. Dans cet article, nous voyons comment simuler une caméra et comment créer l'illusion de déplacer un spectateur dans un monde même si ce n'est pas le cas.
 - [Lighting a WebXR setting](/fr/docs/Web/API/WebXR_Device_API/Lighting)
   - : Le rendu WebXR étant basé sur WebGL, les mêmes techniques d'éclairage utilisées pour toute application 3D sont appliquées aux scènes WebXR. Cependant, il existe des problèmes spécifiques à la création de paramètres de réalité augmentée et virtuelle qui doivent être pris en compte lors de l'écriture de votre code d'éclairage. Cet article traite de ces problèmes.
 - [Using bounded reference spaces](/fr/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces)

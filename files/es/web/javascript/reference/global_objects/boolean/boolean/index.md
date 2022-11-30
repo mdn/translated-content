@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Boolean/Boolean
 ---
+
 {{JSRef}}
 
 El constructor **`Boolean()`** se usa para crear objetos {{jsxref("Boolean")}}.
@@ -53,9 +54,7 @@ var bObjProto = new Boolean({});
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-boolean-constructor', 'Boolean constructor')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

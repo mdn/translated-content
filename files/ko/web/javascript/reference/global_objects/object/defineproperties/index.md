@@ -3,6 +3,7 @@ title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 ---
+
 {{JSRef}}
 
 **`Object.defineProperties()`** 메서드는 객체에 새로운 속성을 정의하거나 기존의 속성을 수정하고, 그 객체를 반환한다.

@@ -3,7 +3,7 @@ title: '<sup>: 上付き文字要素'
 slug: Web/HTML/Element/sup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 HTML の **上付き文字要素** (**`<sup>`**) は、表記上の理由で上付き文字として表示するべき行内文字列を指定します。上付き文字は普通、小さめのテキストを使用して高いベースラインで表示されます。
 
@@ -125,10 +125,7 @@ languages as follows:</p>
 
 ## 仕様書
 
-| 仕様書                                                                                                                                               | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-sub-and-sup-elements', '&lt;sub&gt; and &lt;sup&gt;;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

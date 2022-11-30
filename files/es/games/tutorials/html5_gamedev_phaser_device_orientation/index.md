@@ -1,18 +1,10 @@
 ---
-title: >-
-  Introducción al Desarrollo de Juegos en HTML5 con Phaser y la API de
-  Orientación a Dispositivos
+title: Introducción al Desarrollo de Juegos en HTML5 con Phaser y la API de Orientación
+  a Dispositivos
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-tags:
-  - API Vibración
-  - API orientacion de dispositivos
-  - Canvas
-  - Desarrollo de videojuegos
-  - HTML5
-  - Phaser
-translation_of: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 original_slug: Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation
 ---
+
 {{GamesSidebar}}
 
 ## Introducción
@@ -267,7 +259,7 @@ De esa manera podemos verificar qué tecla es presionada en determinado _frame_ 
 
 #### Implementando la API de Orientación del Dispositivo
 
-Probablemente la parte más interesante del juego es que utiliza la API de Orientación para Dispositivos móviles. Gracias a esto puedes jugar el juego inclinando el dispositivo en la dirección que quieres que la pelota ruede. Aquí está el código de la función `create()`\* \*responsable por esto:
+Probablemente la parte más interesante del juego es que utiliza la API de Orientación para Dispositivos móviles. Gracias a esto puedes jugar el juego inclinando el dispositivo en la dirección que quieres que la pelota ruede. Aquí está el código de la función `create()` responsable por esto:
 
 ```js
 window.addEventListener("deviceorientation", this.handleOrientation, true);

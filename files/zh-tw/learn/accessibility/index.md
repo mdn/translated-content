@@ -21,7 +21,7 @@ When someone describes a site as "accessible," they mean that any user can use a
 
 要理解本模塊的概念，最少理解 [HTML](/zh-TW/docs/Learn/HTML)、[CSS](/zh-TW/docs/Learn/CSS)、[JavaScript](/zh-TW/docs/Learn/JavaScript) 是個好主意。如果在學習相關技術時學習會更好。
 
-> **備註：** 如果使用的設備無法讓你建立自己的文件，可以試著在 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/) 這種程式撰寫網站，執行大多數範例。
+> **備註：** 如果使用的設備無法讓你建立自己的文件，可以試著在 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 這種程式撰寫網站，執行大多數範例。
 
 ## 教學
 

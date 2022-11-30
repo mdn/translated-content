@@ -1,13 +1,8 @@
 ---
 title: Arguments object
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Funções
-  - JavaScript
-  - Referência(2)
-  - argumentos
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
+
 {{jsSidebar("Functions")}}
 
 O objeto **`arguments`** é como um objeto Array correspondendo aos argumentos passados para uma função.

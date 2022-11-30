@@ -1,8 +1,8 @@
 ---
 title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
-translation_of: Web/API/CSSStyleSheet
 ---
+
 {{ ApiRef() }}
 
 This section describes the [CSSStyleSheet](http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleSheet) object, which represents a single CSS stylesheet.

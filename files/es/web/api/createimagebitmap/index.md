@@ -1,17 +1,9 @@
 ---
 title: self.createImageBitmap()
 slug: Web/API/createImageBitmap
-tags:
-  - API
-  - Canvas
-  - DOM
-  - Referencia
-  - WindowOrWorkerGlobalScope
-  - createImageBitmap
-  - metodo
-translation_of: Web/API/WindowOrWorkerGlobalScope/createImageBitmap
 original_slug: Web/API/WindowOrWorkerGlobalScope/createImageBitmap
 ---
+
 {{APIRef("Canvas API")}}
 
 El método **`createImageBitmap()`** crea un _bitmap_ a partir de un recurso especificado, opcionalmente recortado para mostrar únicamente una porción de este. El método existe a nivel global como parte, tanto de las ventanas (_window_), como de los _workers_. Este admite una variedad de tipos de entrada, y devuelve una {{domxref("Promise")}} que es resuelta con un {{domxref("ImageBitmap")}}.
@@ -52,7 +44,7 @@ Una {{domxref("Promise")}} que es resuelta con un objeto {{domxref("ImageBitmap"
 
 ## Ejemplo
 
-### Creando _sprites_ desde un _sprite sheet_
+### Creando sprites desde un sprite sheet
 
 El siguiente ejemplo carga un _sprite sheet_, extrae los _sprites_, y muestra cada uno de ellos en el _canvas_. Un _sprite sheet_ es una imagen que contiene multiples imágenes más pequeñas, que finalmente son utilizadas de manera individual.
 
@@ -80,13 +72,11 @@ image.src = 'sprites.png';
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', "webappapis.html#dom-createimagebitmap", "createImageBitmap")}} | {{Spec2('HTML WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.WindowOrWorkerGlobalScope.createImageBitmap")}}
+{{Compat}}
 
 ## Ver también
 

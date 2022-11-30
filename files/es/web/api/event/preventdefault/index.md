@@ -1,10 +1,8 @@
 ---
 title: event.preventDefault
 slug: Web/API/Event/preventDefault
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Event/preventDefault
 ---
+
 {{ApiRef("DOM")}}
 
 ### Resumen
@@ -89,9 +87,9 @@ var charCode = evt.charCode;
 
 Llamar a `preventDefault` en cualquier momento durante la ejecución, cancela el evento, lo que significa que cualquier acción por defecto que deba producirse como resultado de este evento, no ocurrirá.
 
-Puedes usar [event.cancelable](es/DOM/event.cancelable) para comprobar si el evento es cancelable o no. Llamar a `preventDefault` para un evento no cancelable, no tiene ningún efecto.
+Puedes usar [event.cancelable](/es/DOM/event.cancelable) para comprobar si el evento es cancelable o no. Llamar a `preventDefault` para un evento no cancelable, no tiene ningún efecto.
 
-`preventDefault` no detiene las siguientes llamadas al evento producidas en el DOM. En su lugar debería usarse [event.stopPropagation](es/DOM/event.stopPropagation) para ese propósito.
+`preventDefault` no detiene las siguientes llamadas al evento producidas en el DOM. En su lugar debería usarse [event.stopPropagation](/es/DOM/event.stopPropagation) para ese propósito.
 
 ### Especificación
 

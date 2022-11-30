@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Global_attributes/contenteditable
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`contenteditable`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 사용자가 요소를 편집할 수 있는지 나타내는 열거형 특성입니다.

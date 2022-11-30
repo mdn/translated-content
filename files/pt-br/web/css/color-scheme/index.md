@@ -1,22 +1,8 @@
 ---
 title: color-scheme
 slug: Web/CSS/color-scheme
-translation_of: Web/CSS/color-scheme
-tags:
-  - CSS
-  - CSS Colors
-  - CSS Property
-  - HTML Colors
-  - HTML Styles
-  - Layout
-  - Reference
-  - Styling HTML
-  - Styling text
-  - Web
-  - color-scheme
-  - recipe:css-property
-browser-compat: css.properties.color-scheme
 ---
+
 {{CSSRef}}
 
 A Propriedade CSS **`color-scheme`** possibilita que um elemento possa indicar em qual esquema de cores é mais amigável de ser renderizado.

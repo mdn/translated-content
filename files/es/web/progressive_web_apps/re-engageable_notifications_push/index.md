@@ -1,16 +1,7 @@
 ---
-title: >-
-  Cómo hacer que las PWAs se puedan volver a conectar usando Notificaciones y
+title: Cómo hacer que las PWAs se puedan volver a conectar usando Notificaciones y
   Push
 slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
-tags:
-  - Notificaciones
-  - PWAs
-  - Push
-  - aplicaciones web progresivas
-  - js13kGames
-  - progresiva
-translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
@@ -75,7 +66,7 @@ Se crea una nueva notificación aleatoria cada 30 segundos hasta que se vuelve d
 
 `Push` es más complicado que las notificaciones: necesitamos suscribirnos a un servidor que luego enviará los datos a la aplicación. El servicio _worker_ de la aplicación recibirá datos `push` del servidor, que luego se pueden mostrar usando el sistema de notificaciones u otro mecanismo si lo deseas.
 
-La tecnología aún se encuentra en una etapa muy temprana; algunos ejemplos de uso utilizan la plataforma de mensajería en la nube de Google, pero se están reescribiendo para admitir IDVAP (**Id**entificación **vo**luntaria de la **ap**licación), que ofrece una capa adicional de seguridad para tu aplicación. Puedes examinar los [ejemplos del libro de recetas del servicio _workers_](https://serviceworke.rs/push-payload.html), intenta configurar un servidor de mensajería `push` usando [Firebase](https://firebase.google.com/), o crea tu propio servidor (utilizando Node.js, por ejemplo).
+La tecnología aún se encuentra en una etapa muy temprana; algunos ejemplos de uso utilizan la plataforma de mensajería en la nube de Google, pero se están reescribiendo para admitir IDVAP (**Id**entificación **vo**luntaria de la **ap**licación), que ofrece una capa adicional de seguridad para tu aplicación. Puedes examinar los [ejemplos del libro de recetas del servicio _workers_](https://github.com/mdn/serviceworker-cookbook/push-payload.html), intenta configurar un servidor de mensajería `push` usando [Firebase](https://firebase.google.com/), o crea tu propio servidor (utilizando Node.js, por ejemplo).
 
 Como se mencionó anteriormente, para poder recibir mensajes `push`, debes tener un servicio _worker_, cuyos conceptos básicos ya se explican en [Cómo hacer que las PWAs funcionen sin conexión con el servicio workers](/es/docs/Web/Apps/Progressive/Offline_Service_workers). Dentro del servicio _workers_, se crea un mecanismo de suscripción del servicio `push`.
 
@@ -87,7 +78,7 @@ Una vez que el usuario está suscrito, puede recibir notificaciones automáticas
 
 Desde el lado del servidor, todo el proceso tiene que estar encriptado con claves públicas y privadas por razones de seguridad — permitir que todos envíen mensajes `push` sin seguridad usando tu aplicación sería una idea terrible. Consulta la [página de prueba de encriptación de datos `Push` en la Web](https://jrconlin.github.io/WebPushDataTestPage/) para obtener información detallada sobre cómo proteger el servidor. El servidor almacena toda la información recibida cuando el usuario se suscribió, por lo que los mensajes se pueden enviar más tarde cuando sea necesario.
 
-Para recibir mensajes `push`, podemos escuchar el evento {{event("push")}} en el archivo `Service Worker`:
+Para recibir mensajes `push`, podemos escuchar el evento [`push`](/es/docs/Web/Reference/Events/push) en el archivo `Service Worker`:
 
 ```js
 self.addEventListener("push", function (e) {
@@ -99,7 +90,7 @@ Los datos se pueden recuperar y luego mostrar como una notificación al usuario 
 
 ### Ejemplo `push`
 
-`Push` necesita que la parte del servidor funcione, por lo que no podemos incluirla en el ejemplo js13kPWA alojado en las páginas de GitHub, ya que solo ofrece alojamiento de archivos estáticos. Todo se explica en el [Libro de recetas para servicios _worker_](https://serviceworke.rs/); consulta el [Demo de carga `push`](https://serviceworke.rs/push-payload.html).
+`Push` necesita que la parte del servidor funcione, por lo que no podemos incluirla en el ejemplo js13kPWA alojado en las páginas de GitHub, ya que solo ofrece alojamiento de archivos estáticos. Todo se explica en el [Libro de recetas para servicios _worker_](https://github.com/mdn/serviceworker-cookbook/); consulta el [Demo de carga `push`](https://github.com/mdn/serviceworker-cookbook/push-payload.html).
 
 Esta demostración consta de tres archivos:
 
@@ -217,7 +208,7 @@ if (!process.env.VAPID_PUBLIC_KEY || !process.env.VAPID_PRIVATE_KEY) {
 }
 
 webPush.setVapidDetails(
-  "https://serviceworke.rs/",
+  "https://github.com/mdn/serviceworker-cookbook/",
   process.env.VAPID_PUBLIC_KEY,
   process.env.VAPID_PRIVATE_KEY
 );
@@ -272,9 +263,9 @@ self.addEventListener("push", function (event) {
 });
 ```
 
-Todo lo que hace es agregar un escucha para el evento {{Event("push")}}, crear la variable de carga útil que consiste en el texto tomado de los datos (o crear una cadena para usar si los datos están vacíos), y luego esperar hasta la notificación se muestra al usuario.
+Todo lo que hace es agregar un escucha para el evento [`push`](/es/docs/Web/Reference/Events/push), crear la variable de carga útil que consiste en el texto tomado de los datos (o crear una cadena para usar si los datos están vacíos), y luego esperar hasta la notificación se muestra al usuario.
 
-No dudes en explorar el resto de los ejemplos en el [Libro de recetas para el servicio _workers_](https://serviceworke.rs/) si deseas saber cómo se manejan: el [código fuente completo está disponible en GitHub](https://github.com/mozilla/serviceworker-cookbook/). Hay una gran colección de ejemplos de uso que muestran el uso general, pero también la inserción web, las estrategias de almacenamiento en caché, el rendimiento, el trabajo sin conexión y más.
+No dudes en explorar el resto de los ejemplos en el [Libro de recetas para el servicio _workers_](https://github.com/mdn/serviceworker-cookbook/) si deseas saber cómo se manejan: el [código fuente completo está disponible en GitHub](https://github.com/mozilla/serviceworker-cookbook/). Hay una gran colección de ejemplos de uso que muestran el uso general, pero también la inserción web, las estrategias de almacenamiento en caché, el rendimiento, el trabajo sin conexión y más.
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
 

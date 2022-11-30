@@ -1,17 +1,8 @@
 ---
 title: Element.setAttribute
 slug: Web/API/Element/setAttribute
-tags:
-  - API
-  - DOM
-  - Elemento
-  - NeedsBrowserCompatibility
-  - NeedsSpecTable
-  - Referencia
-  - metodo
-  - setAttribute
-translation_of: Web/API/Element/setAttribute
 ---
+
 {{APIRef}}
 
 Establece el valor de un atributo en el elemento indicado. Si el atributo ya existe, el valor es actualizado, en caso contrario, el nuevo atributo es añadido con el nombre y valor indicado.

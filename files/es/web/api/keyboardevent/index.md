@@ -1,15 +1,13 @@
 ---
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
-tags:
-  - API
-translation_of: Web/API/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 Los objetos **`KeyboardEvent`** describen una interacción del usuario con el teclado. Cada evento describe una tecla; el tipo de evento(`keydown`, `keypress`, o `keyup`) identifica el tipo de acción realizada.
 
-> **Nota:** El `KeyboardEvent` solo indica qué está pasando en una tecla. Cuando necesite manejar la entrada de texto, use el evento [`input`](/en-US/docs/DOM/DOM_event_reference/input) de HTML5 en su lugar. Por ejemplo, si el usuario introduce texto desde un sistema de tipo manuscrito como una tableta, los eventos para teclas no podrán ser lanzados.
+> **Nota:** El `KeyboardEvent` solo indica qué está pasando en una tecla. Cuando necesite manejar la entrada de texto, use el evento [`input`](/es/docs/DOM/DOM_event_reference/input) de HTML5 en su lugar. Por ejemplo, si el usuario introduce texto desde un sistema de tipo manuscrito como una tableta, los eventos para teclas no podrán ser lanzados.
 
 ## Constructor
 
@@ -35,7 +33,7 @@ _Esta interfaz también hereda propiedades de sus padres {{domxref("UIEvent")}} 
 
 - {{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}
 
-  - : Devuelve un {{jsxref("Boolean")}} que será `true` si la tecla <kbd>Alt</kbd> (<kbd>Option</kbd> or  <kbd>⌥</kbd> on OS X) fue activada cuando el evento fue generado.
+  - : Devuelve un {{jsxref("Boolean")}} que será `true` si la tecla <kbd>Alt</kbd> (<kbd>Option</kbd> or <kbd>⌥</kbd> on OS X) fue activada cuando el evento fue generado.
 
 - {{domxref("KeyboardEvent.char")}} {{Non-standard_inline()}}{{Deprecated_inline}}{{Readonlyinline}}
 
@@ -135,7 +133,7 @@ In these environments, unfortunately, there's no way for web content to tell the
 
 #### Auto-repeat handling prior to Gecko 4.0
 
-Before Gecko 4.0 {{geckoRelease('4.0')}}, keyboard handling was less consistent across platforms.
+Before Gecko 4.0, keyboard handling was less consistent across platforms.
 
 - Windows
   - : Auto-repeat behavior is the same as in Gecko 4.0 and later.
@@ -185,13 +183,9 @@ function metaKeyUp (event) {
 </html>
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM3 Events', '#interface-KeyboardEvent', 'KeyboardEvent')}} | {{Spec2('DOM3 Events')}} | Initial definition. |
-
-The `KeyboardEvent` interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, {{domxref("KeyboardEvent.initKeyEvent()")}} by Gecko browsers and the early DOM Events Level 3 version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
+{{Specifications}}
 
 ## Browser compatibility
 

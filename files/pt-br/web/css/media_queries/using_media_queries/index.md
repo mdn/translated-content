@@ -1,13 +1,9 @@
 ---
 title: Usando Media Queries
 slug: Web/CSS/Media_Queries/Using_media_queries
-tags:
-  - CSS
-  - Desenho Responsivo
-  - Design Responsivo
-translation_of: Web/CSS/Media_Queries/Using_media_queries
 original_slug: Web/Guide/CSS/CSS_Media_queries
 ---
+
 Uma **media query** consiste de um _media type_ e pelo menos uma expressão que limita o escopo das folhas de estilo usando _media features_, tal como largura, altura e cor. _Media queries_, adicionadas no [CSS3](/pt-BR/docs/CSS/CSS3), deixam a apresentação do conteúdo adaptado a uma gama especifica de dispositivos não precisando mudar o conteúdo em si.
 
 ## Sintaxe
@@ -36,7 +32,7 @@ A menos que você use os operadores `not` ou `only`, o _media type_ é opcional 
 
 ### Operadores lógicos
 
-Você pode compor _media queries_ complexos usando operadores lógicos, incluindo `not`, `and`, e `only`. O operador `and` é usado para combinar múltiplas _[media features](/pt-BR/docs/Web/Guide/CSS/CSS_Media_queries$edit#Media_features)_ em uma mesma _media query_, requerendo que cada sequência de características, retorne verdadeiro na ordem para que a _query_ seja verdadeiro. O operador `not` é usado para negar uma _media query_ inteira. O operador `only` é usado para aplicar um estilo apenas se a _query_ inteira for igual, útil para previnir que navegadores antigos apliquem os estilos selecionados. Se você usar os operadores `not` ou `only`, você tem que especificar um tipo de _media_ explícito.
+Você pode compor _media queries_ complexos usando operadores lógicos, incluindo `not`, `and`, e `only`. O operador `and` é usado para combinar múltiplas _[media features](#media_features)_ em uma mesma _media query_, requerendo que cada sequência de características, retorne verdadeiro na ordem para que a _query_ seja verdadeiro. O operador `not` é usado para negar uma _media query_ inteira. O operador `only` é usado para aplicar um estilo apenas se a _query_ inteira for igual, útil para previnir que navegadores antigos apliquem os estilos selecionados. Se você usar os operadores `not` ou `only`, você tem que especificar um tipo de _media_ explícito.
 
 Você também pode combinar múltiplas _medias queries_ em uma lista separadas por vírgulas, se qualquer uma das _media queries_ na lista é verdadeira, toda a instrução retorna verdadeira. Isto é equivalente a um operador `or`.
 
@@ -453,7 +449,7 @@ Exemplo:
        (min-resolution: 192dpi)             /* dppx fallback */
 ```
 
-Veja este artigo [CSSWG](http://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) para ccompatibilidade de boas práticas em relação a _`resolution`_ e _`dppx`_.
+Veja este artigo [CSSWG](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/) para ccompatibilidade de boas práticas em relação a _`resolution`_ e _`dppx`_.
 
 > **Note:** **Nota**: Esta _media feature_ é também implementada pelo Webkit e pelo [IE 11 para Windows Phone 8.1](<https://msdn.microsoft.com/en-us/library/ie/dn760733(v=vs.85).aspx>)como -webkit-device-pixel-ratio. Os prefixos min e max implementados pelo Gecko são nomeados min--moz-device-pixel-ratio e max--moz-device-pixel-ratio; mas os mesmos prefixos implementados pelo Webkit são chamados -webkit-min-device-pixel-ratio e -webkit-max-device-pixel-ratio.
 
@@ -594,7 +590,7 @@ Isto é previsto para _skins_ de aplicativo e outro código de aplicações de c
 
 ## See also
 
-- [CSS 3 media query specification](http://www.w3.org/TR/css3-mediaqueries/)
+- [CSS 3 media query specification](https://www.w3.org/TR/css3-mediaqueries/)
 - [Media types](/pt-BR/docs/CSS/@media)
 - [Using media queries from code](/pt-BR/docs/CSS/Using_media_queries_from_code)
 - [List of mobile and tablet viewport sizes with pixel ratios and physical sizes](http://i-skool.co.uk/mobile-development/web-design-for-mobiles-and-tablets-viewport-sizes/)

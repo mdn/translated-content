@@ -4,6 +4,7 @@ slug: Web/API/atob
 translation_of: Web/API/WindowOrWorkerGlobalScope/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
+
 {{APIRef("HTML DOM")}}
 
 Функция **`WindowOrWorkerGlobalScope.atob()`** декодирует строку данных, которая была закодирована с использованием base-64. Вы можете использовать метод {{domxref("WindowOrWorkerGlobalScope.btoa","btoa()")}}, чтобы закодировать и передать данные, которые в исходном виде могут вызвать проблемы передачи, затем отправить их и использовать метод `atob()`, чтобы декодировать данные снова. Например, вы можете закодировать, передать и декодировать управляющие символы, такие как ASCII-значения от 0 до 31.
@@ -37,7 +38,7 @@ var decodedData = window.atob(encodedData); // декодирует строку
 
 ## Смотрите также
 
-- [Base64 encoding and decoding](/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [Base64 encoding and decoding](/ru/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
 - [`data` URIs](/ru/docs/data_URIs)
 - {{domxref("WindowOrWorkerGlobalScope.btoa","window.btoa()")}}
 - [Components.utils.importGlobalProperties](/ru/docs/Components.utils.importGlobalProperties)

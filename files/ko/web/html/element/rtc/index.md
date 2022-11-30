@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/rtc
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<rtc>` 요소**는 {{htmlelement("rb")}} 요소가 표시하는 문자의 의미에 대한 주석을 나타냅니다. `<rb>`는 발음({{htmlelement("rt")}})과 의미(`<rtc>`) 둘 다 가질 수 있습니다.
 

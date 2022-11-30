@@ -5,6 +5,7 @@ tags:
   - тестирование
 translation_of: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 Эта статья начинает модуль с обзора темы кросс-браузерного тестирования, отвечая на такие вопросы как "что такое кросс-браузерное тестирование?", "с какими распространёнными проблемами можно столкнуться?" и "какие основные подходы для тестирования, обнаружения и исправления проблем существуют?"
@@ -91,9 +92,9 @@ Normally your development will involve a combination of the above three approach
 
 After each implementation phase, you will need to test the new functionality. To start with, you should make sure there are no general issues with your code that are stopping your feature from working:
 
-1.  Test it in a couple of stable browsers on your system, like Firefox, Safari, Chrome, or IE/Edge.
-2.  Do some low fi accessibility testing, such as trying to use your site with only the keyboard, or using your site via a screen reader to see if it is navigable.
-3.  Test on a mobile platform, such as Android or iOS.
+1. Test it in a couple of stable browsers on your system, like Firefox, Safari, Chrome, or IE/Edge.
+2. Do some low fi accessibility testing, such as trying to use your site with only the keyboard, or using your site via a screen reader to see if it is navigable.
+3. Test on a mobile platform, such as Android or iOS.
 
 At this point, fix any problems you find with your new code.
 

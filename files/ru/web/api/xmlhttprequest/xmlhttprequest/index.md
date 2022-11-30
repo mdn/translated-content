@@ -11,6 +11,7 @@ tags:
   - Чтение данных
 translation_of: Web/API/XMLHttpRequest/XMLHttpRequest
 ---
+
 #### XMLHttpRequest
 
 Конструктор **`XMLHttpRequest()`** создаёт новый объект {{domxref("XMLHttpRequest")}}.

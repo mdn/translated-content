@@ -3,6 +3,7 @@ title: Cache.put()
 slug: Web/API/Cache/put
 translation_of: Web/API/Cache/put
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 Метод **`put()`** интерфейса {{domxref("Cache")}} позволяет добавлять пары ключ/значение в текущий объект {{domxref("Cache")}}.

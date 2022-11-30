@@ -3,6 +3,7 @@ title: 'Учебник Express часть 5: Отображение данных
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 Теперь мы готовы добавить страницы, на которых будут отображаться книги веб-сайта [LocalLibrary](/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) и другие данные. Страницы будут включать главную страницу, которая показывает сколько записей определённого типа мы имеем и отдельные страницы для детального просмотра записей. Попутно мы приобретём практический опыт в получении записей из баз данных и использовании шаблонов.
@@ -25,15 +26,15 @@ translation_of: Learn/Server-side/Express_Nodejs/Displaying_data
 
 Следующие подразделы проходят процесс добавления различных функций, необходимых для отображения необходимых страниц веб-сайта. Вы должны прочитать и проработать каждый из них по очереди, прежде чем перейти к следующему.
 
-1.  [Асинхронное управление потоками с помощью async](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
-2.  [Пример шаблона](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
-3.  [Базовые шаблоны LocalLibrary](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
-4.  [Домашняя страница](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
-5.  [Страница списка книг](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
-6.  [Страница списка экземпляров книг](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
-7.  [Форматирование даты с момента использования](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
-8.  [Страница списка авторов и страница списка жанров](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
-9.  [Страница сведений о жанре](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
+1. [Асинхронное управление потоками с помощью async](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/flow_control_using_async)
+2. [Пример шаблона](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer)
+3. [Базовые шаблоны LocalLibrary](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template)
+4. [Домашняя страница](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page)
+5. [Страница списка книг](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_list_page)
+6. [Страница списка экземпляров книг](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page)
+7. [Форматирование даты с момента использования](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment)
+8. [Страница списка авторов и страница списка жанров](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page)
+9. [Страница сведений о жанре](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page)
 10. [Страница сведений о книге](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page)
 11. [Страница информации об авторе](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
 12. [Страница сведений об экземпляре книги и вызове](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge)

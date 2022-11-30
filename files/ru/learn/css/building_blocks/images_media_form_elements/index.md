@@ -3,11 +3,12 @@ title: Элементы изображений, медиа и форм
 slug: Learn/CSS/Building_blocks/Images_media_form_elements
 translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
 
 В этом уроке мы рассмотрим, как обрабатываются определённые специальные элементы в CSS. Элементы изображений, других медиа и форм ведут себя иначе при их стилизации в CSS чем обычные блоки. Понимание того, что возможно, а что нет спасут вас от лишних разочарований и этот урок прольёт свет на некоторые из этих основных вещей, которые вам нужно знать.
 
-| Prerequisites: | Basic computer literacy, [basic software installed](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
+| Prerequisites: | Basic computer literacy, [basic software installed](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Objective:     | To understand the way that some elements behave unusually when styled with CSS.                                                                                                                                                                                                                                                                                                                                                                                          |
 
@@ -163,21 +164,21 @@ This lesson has highlighted some of the differences you will encounter when work
 
 ## In this module
 
-1.  [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)

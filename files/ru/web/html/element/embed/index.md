@@ -14,6 +14,7 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/embed
 ---
+
 **HTML-элемент `<embed>` **вставляет расширенный контент в выбранное место документа. Этот контент может быть представлен от внешнего приложения или другого источника интерактивного контента, такого как плагин для браузера, например.
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
@@ -22,7 +23,7 @@ translation_of: Web/HTML/Element/embed
 
 Имейте ввиду, что большинство современных браузеров посчитали устаревшей и удалили поддержку встраивания плагинов, так что использование `<embed>`, как правило, не рекомендуется, если вы хотите, чтобы ваш сайт одинаково работал у всех его пользователей.
 
-| [Категории контента](ru/docs/Web/Guide/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content. |
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content. |
 | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Разрешённое содержимое                                          | Отсутствует, это {{Glossary("empty element")}}.                                                                                                                                     |
 | Пропуск тега                                                    | Должен иметь открывающий тег, закрывающий тег должен быть пропущен                                                                                                                             |
@@ -32,7 +33,7 @@ translation_of: Web/HTML/Element/embed
 
 ## Атрибуты
 
-Атрибуты этого элемента включают все [глобальные атрибуты](ru/docs/Web/HTML/Общие_атрибуты).
+Атрибуты этого элемента включают все [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
 - {{htmlattrdef("height")}}
   - : Отображает высоту ресурса в [CSS пикселях](https://drafts.csswg.org/css-values/#px). Это должно быть абсолютное значение; проценты _не_ допустимы.
@@ -68,4 +69,4 @@ translation_of: Web/HTML/Element/embed
 - Другие элементы, используемые для встраивания различного рода контента: {{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}}, and {{HTMLElement("video")}}.
 - Свойства, для позиционирования и определения размера внедрённого контента в его фрейме: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

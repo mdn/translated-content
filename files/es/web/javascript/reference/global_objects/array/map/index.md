@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/map
 ---
+
 {{JSRef}}
 
 El método **`map()`** crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.
@@ -54,7 +55,7 @@ var nuevo_array = arr.map(function callback(currentValue, index, array) {
       - : El array sobre el que se llama `map.`
 
 - `thisArg`
-  - : Opcional. Valor a usar como `this`al ejecutar `callback`.
+  - : Opcional. Valor a usar como `this` al ejecutar `callback`.
 
 ### Valor devuelto
 
@@ -70,7 +71,7 @@ Si se indica un parámetro `thisArg` a un `map`, se usará como valor de `this` 
 
 `map` no modifica el array original en el que es llamado (aunque `callback`, si es llamada, puede modificarlo).
 
-El rango de elementos procesado por `map` es establecido antes de la primera invocación del `callback`. Los elementos que sean agregados al array después de que la llamada a `map`comience no serán visitados por el `callback`. Si los elementos existentes del array son modificados o eliminados, su valor pasado al `callback` será el valor en el momento que el `map` lo visita; los elementos que son eliminados no son visitados.
+El rango de elementos procesado por `map` es establecido antes de la primera invocación del `callback`. Los elementos que sean agregados al array después de que la llamada a `map` comience no serán visitados por el `callback`. Si los elementos existentes del array son modificados o eliminados, su valor pasado al `callback` será el valor en el momento que el `map` lo visita; los elementos que son eliminados no son visitados.
 
 ## Ejemplos
 
@@ -110,7 +111,7 @@ var reformattedArray = kvArray.map(function(obj){
 
 ### Mapear un array de números usando una función con un argumento
 
-El siguiente código muestra cómo trabaja `map`cuando se utiliza una función que requiere de un argumento. El argumento será asignado automáticamente a cada elemento del arreglo conforme `map`itera el arreglo original.
+El siguiente código muestra cómo trabaja `map` cuando se utiliza una función que requiere de un argumento. El argumento será asignado automáticamente a cada elemento del arreglo conforme `map` itera el arreglo original.
 
 ```js
 var numeros = [1, 4, 9];
@@ -124,7 +125,7 @@ var dobles  = numeros.map(function(num) {
 
 ### Usando `map` de forma genérica
 
-Este ejemplo muestra como usar `map`en {{jsxref("Global_Objects/String", "String")}} para obtener un arreglo de bytes en codifcación ASCII representando el valor de los caracteres:
+Este ejemplo muestra como usar `map` en {{jsxref("Global_Objects/String", "String")}} para obtener un arreglo de bytes en codifcación ASCII representando el valor de los caracteres:
 
 ```js
 var map = Array.prototype.map;
@@ -283,11 +284,7 @@ if (!Array.prototype.map) {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.4.4.19', 'Array.prototype.map')}}                 | {{Spec2('ES5.1')}}     | Definición inicial. Implementado en JavaScript 1.6. |
-| {{SpecName('ES6', '#sec-array.prototype.map', 'Array.prototype.map')}}         | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-array.prototype.map', 'Array.prototype.map')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

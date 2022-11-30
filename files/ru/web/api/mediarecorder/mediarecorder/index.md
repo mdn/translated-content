@@ -3,6 +3,7 @@ title: MediaRecorder.MediaRecorder()
 slug: Web/API/MediaRecorder/MediaRecorder
 translation_of: Web/API/MediaRecorder/MediaRecorder
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder()`** конструктор {{domxref("MediaRecorder")}} объекта который будет делать запись переданного {{domxref("MediaStream")}}.
@@ -17,7 +18,7 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
 
 - **`stream`**
   - : Объект потока {{domxref("MediaStream")}} источника из которого будет производиться запись. Может быть потоком, созданным {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} или {{HTMLElement("audio")}}, {{HTMLElement("video")}} или {{HTMLElement("canvas")}} элементами.
-- **`options` **{{optional_inline}}
+- **`options`** {{optional_inline}}
 
   - : Объект, содержащий следующие свойства:
 

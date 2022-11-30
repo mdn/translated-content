@@ -6,6 +6,7 @@ tags:
 translation_of: Web/CSS/calc()
 original_slug: Web/CSS/calc()
 ---
+
 {{CSSRef}}
 
 `calc()` - это функция CSS, которая даёт возможность рассчитать значения свойств CSS во время их определения. Она может быть использована везде, где применимы {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, или {{cssxref("&lt;integer&gt;")}}.

@@ -5,6 +5,7 @@ tags:
   - метод
 translation_of: Web/API/StorageManager/estimate
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager to obtain quota and usage information for the current origin. This method operates asynchronously, so it returns a {{jsxref("Promise")}} which resolves once the information is available. The promise's fulfillment handler receives as an input a {{domxref("StorageEstimate")}} with the usage and quota data.

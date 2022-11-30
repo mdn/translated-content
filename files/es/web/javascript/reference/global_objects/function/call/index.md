@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/call
 ---
+
 {{JSRef("Objetos_globales", "Function")}}
 
 ## Resumen

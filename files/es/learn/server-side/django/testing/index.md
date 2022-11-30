@@ -1,8 +1,8 @@
 ---
 title: 'Tutorial de Django Parte 10: Probando una aplicación web Django'
 slug: Learn/Server-side/Django/Testing
-translation_of: Learn/Server-side/Django/Testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 
 A medida que crecen los sitios web se vuelven más difíciles de probar a mano — no sólo hay más para probar, sino que además, a medida que las interacciones entre los componentes se vuelven más complejas, un pequeño cambio en un área puede suponer muchas pruebas adicionales para verificar su impacto en otras áreas. Una forma de mitigar estos problemas es escribir tests automatizados, que pueden ser ejecutados de manera fácil y fiable cada vez que hagas un cambio. Este tutorial muestra cómo automatizar la unidad de pruebas de tu sitio web usando el framework de pruebas de Django.
@@ -104,7 +104,7 @@ class Author(models.Model):
         return '%s, %s' % (self.last_name, self.first_name)
 ```
 
-Del mismo modo, debe verificar que los métodos personalizados `get_absolute_url()` y `__str__()`comportarse como sea necesario porque son su código / lógica empresarial. En el caso de `get_absolute_url()` puedes confiar en que el metodo de Django `reverse()` se ha implementado correctamente, por lo que lo que está probando es que la vista asociada se haya definido realmente.
+Del mismo modo, debe verificar que los métodos personalizados `get_absolute_url()` y `__str__()` comportarse como sea necesario porque son su código / lógica empresarial. En el caso de `get_absolute_url()` puedes confiar en que el metodo de Django `reverse()` se ha implementado correctamente, por lo que lo que está probando es que la vista asociada se haya definido realmente.
 
 > **Nota:** Los lectores astutos pueden notar que también querríamos restringir la fecha de nacimiento y muerte a valores sensibles, y comprobar que la muerte viene después del nacimiento. En Django, esta restricción se agregaría a sus clases de formulario (aunque puede definir validadores para los campos, estos parecen usarse solo en el nivel del formulario, no en el nivel del modelo).
 

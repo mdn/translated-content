@@ -1,14 +1,8 @@
 ---
 title: Date.prototype.getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
-tags:
-  - Design
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 ---
+
 {{JSRef}}
 
 A função **`getUTCMonth()`** retorna o mês da data especificada de acordo com o horário universal, como um valor iniciado em zero (aonde zero indica o primeiro mês do ano).

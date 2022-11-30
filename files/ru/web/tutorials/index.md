@@ -47,7 +47,7 @@ translation_of: Web/Tutorials
   - : Codecademy это простой способ изучить JavaScript. Он интерактивный, и вы можете делать это вместе с друзьями
 - [Getting Started with JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
   - : Что такое JavaScript и как он может пригодиться вам?
-- [JavaScript Best Practices](http://dev.opera.com/articles/view/javascript-best-practices/)[ ](http://docs.webplatform.org/wiki/tutorials/javascript_best_practices)(WebPlatform.org)
+- [JavaScript Best Practices](http://dev.opera.com/articles/view/javascript-best-practices/) (WebPlatform.org)
   - : Узнайте о некоторых из очевидных (и не очень очевидных) лучших практиках для написания кода на JavaScript.
 
 ### Средний уровень

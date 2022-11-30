@@ -1,14 +1,8 @@
 ---
 title: Node.replaceChild()
 slug: Web/API/Node/replaceChild
-tags:
-  - API
-  - DOM
-  - Nodo
-  - Referencia
-  - metodo
-translation_of: Web/API/Node/replaceChild
 ---
+
 {{APIRef("DOM")}}
 
 El método **`Node.replaceChild()`** reemplaza un nodo hijo del elemento especificado por otro.

@@ -3,7 +3,7 @@ title: '<rp>: ルビのフォールバック用括弧要素'
 slug: Web/HTML/Element/rp
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML のルビ代替表示用括弧 (`<rp>`) 要素**は、 {{HTMLElement("ruby")}} 要素によるルビの表示に対応していないブラウザー向けの代替表示用括弧を提供するために使用します。 `<rp>` 要素は、注釈の文字列を {{HTMLElement("rt")}} 要素を囲む開き括弧と閉じ括弧をそれぞれ囲む必要があります。
 
@@ -107,10 +107,7 @@ body {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-rp-element', '&lt;rp&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-rp-element', '&lt;rp&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

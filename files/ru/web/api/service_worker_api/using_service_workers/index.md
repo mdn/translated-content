@@ -5,6 +5,7 @@ tags:
   - основы ServiceWorker Workers руководство
 translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
+
 {{ServiceWorkerSidebar}}
 
 В данной статье содержится информация о начале работы с сервис-воркерами, включая базовую архитектуру, процесс регистрации, а также установку и активацию новых сервис-воркеров, обновление существующих сервис-воркеров, управление кешем и настраиваемые ответы и все это в контексте простого приложения с офлайн-функциональностью.
@@ -438,7 +439,7 @@ Firefox также начал реализовывать полезные инс
 
 ## Смотрите также
 
-- [The Service Worker Cookbook](https://serviceworke.rs/)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Готов ли ServiceWorker для использования?](https://jakearchibald.github.io/isserviceworkerready/)
 - Скачать [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
 - [Promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)

@@ -3,7 +3,7 @@ title: <menu>
 slug: Web/HTML/Element/menu
 ---
 
-{{HTMLRef}}{{SeeCompatTable}}
+{{HTMLSidebar}}{{SeeCompatTable}}
 
 **HTML の `<menu>` 要素**は、ユーザーが実行またはアクティブ化できるコマンドのグループを表します。これは画面の上部に現れるリストメニューと、ボタンを押したときにその下部付近に現れるような[コンテキストメニュー](/ja/docs/Web/HTML/Element/menu#context_menu)の両方を含みます。
 
@@ -214,10 +214,7 @@ div {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "grouping-content.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML WHATWG")}} | 最新のスナップショット {{SpecName("HTML5.2")}} から変更なし |
-| {{SpecName("HTML5.1", "interactive-elements.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML5.1")}}     |                                                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

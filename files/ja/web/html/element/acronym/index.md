@@ -47,4 +47,4 @@ slug: Web/HTML/Element/acronym
 
 - HTML の {{HTMLElement("abbr")}} 要素
 
-{{HTMLRef}}
+{{HTMLSidebar}}

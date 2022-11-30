@@ -7,7 +7,8 @@ tags:
   - SVG фильтры
 translation_of: Web/SVG/Attribute/lighting-color
 ---
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
+
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Атрибут `lighting-color` определяет цвет источника света для примитивов фильтров {{ SVGElement("feDiffuseLighting") }} и {{ SVGElement("feSpecularLighting") }}.
 
@@ -15,7 +16,7 @@ translation_of: Web/SVG/Attribute/lighting-color
 
 | Категория            | Атрибут представления                                                                                                                                                        |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Значение             | currentColor \| [\<color>](/en/SVG/Content_type#Color "en/SVG/Content_type#Color") \| [\<icccolor>](/en/SVG/Content_type#ICCColor "en/SVG/Content_type#ICCColor") \| inherit |
+| Значение             | currentColor \| [\<color>](/en/SVG/Content_type#Color) \| [\<icccolor>](/en/SVG/Content_type#ICCColor) \| inherit |
 | Начальное значение   | white                                                                                                                                                                        |
 | Анимация             | Да                                                                                                                                                                           |
 | Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/filters.html#LightingColorProperty)                                                                                       |

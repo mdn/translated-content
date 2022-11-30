@@ -1,8 +1,8 @@
 ---
 title: OfflineAudioContext
 slug: Web/API/OfflineAudioContext
-translation_of: Web/API/OfflineAudioContext
 ---
+
 {{APIRef("Web Audio API")}}A interface `OfflineAudioContext` é uma interface {{domxref("AudioContext")}} que representa um gráfico de processament de áudio construido a partir de conexões entre {{domxref("AudioNode")}}s. Em contraste com o padrão {{domxref("AudioContext")}}, um `OfflineAudioContext` não processa o áudio para o hardware do dispositivo; Em vez disso, ele gera, o mais rápido possível, e exibe o resultado para um {{domxref("AudioBuffer")}}.
 
 {{InheritanceDiagram}}

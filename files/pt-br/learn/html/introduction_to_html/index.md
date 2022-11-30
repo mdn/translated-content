@@ -1,19 +1,9 @@
 ---
 title: Introdução ao HTML
 slug: Learn/HTML/Introduction_to_HTML
-tags:
-  - Codificação de Script
-  - Estrutura
-  - HTML
-  - Introdução ao HTML
-  - Links
-  - Página de destino
-  - Texto
-  - cabeçalho
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML
 original_slug: Aprender/HTML/Introducao_ao_HTML
 ---
+
 {{LearnSidebar}}
 
 Em sua essência, {{glossary("HTML")}} é uma linguagem bastante simples composta de [elementos](/pt-BR/docs/Glossario/Elemento), que podem ser aplicados a pedaços de texto para dar-lhes significado diferente em um documento (é um parágrafo? é uma lista de seleção? é parte de uma tabela?), estrutura um documento em seções lógicas (Possui um cabeçalho? Três colunas de conteúdo? Um menu de navegação?) e incorpora conteúdo como imagens e vídeos em uma página. Este módulo irá introduzir os dois primeiros e apresentar conceitos fundamentais e a sintaxe que você precisa saber para entender o HTML.

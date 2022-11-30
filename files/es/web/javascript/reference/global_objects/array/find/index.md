@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/find
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/find
 ---
+
 {{JSRef}}
 
 El método **`find()`** devuelve el **valor** del **primer elemento** del array que cumple la función de prueba proporcionada.
@@ -197,13 +198,11 @@ if (!Array.prototype.find) {
 }
 ```
 
-Si necesitas dar soporte a motores de JavaScript realmente obsoletos que no soportan [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), es mejor no utilizar el polyfill para los métodos `Array.prototype`, ya que no podrás hacerlos no enumerables.
+Si necesitas dar soporte a motores de JavaScript realmente obsoletos que no soportan [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), es mejor no utilizar el polyfill para los métodos `Array.prototype`, ya que no podrás hacerlos no enumerables.
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.find', 'Array.prototype.find')}} |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

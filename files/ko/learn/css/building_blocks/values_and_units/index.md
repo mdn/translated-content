@@ -2,6 +2,7 @@
 title: CSS 값 과 단위
 slug: Learn/CSS/Building_blocks/Values_and_units
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
 CSS 에 사용된 모든 속성에는 해당 속성에 허용되는 값 이 있으며, MDN 의 속성 페이지를 보면 특성 속성에 유효한 값을 이해하는 데 도움이 됩니다. 이 레슨에서는 가장 일반적인 값 과 사용 단위를 살펴 보겠습니다.
@@ -136,7 +137,7 @@ HTML 은 중첩된 목록의 집합니다 — 총 3개의 목록이 있으며 �
 
 ### 백분율
 
-많은 경우 백분율은 길이와 같은 방식으로 처리됩니다. 백분율이 있는 것은 항상 다른 값에 상대적으로 설정된다는 것입니다. 예를 들어, 요소의 `font-size` 를 백분율로 설정하면요소 무보의 글꼴 크기에 대한 백분율이 됩니다. `width` 값에 백분율을 사용하면, 부모 너비의 백분율이 됩니다.
+많은 경우 백분율은 길이와 같은 방식으로 처리됩니다. 백분율이 있는 것은 항상 다른 값에 상대적으로 설정된다는 것입니다. 예를 들어, 요소의 `font-size` 를 백분율로 설정하면요소 부모의 글꼴 크기에 대한 백분율이 됩니다. `width` 값에 백분율을 사용하면, 부모 너비의 백분율이 됩니다.
 
 아래 예제에서 두 개의 백분율 크기 박스와 두 개의 픽셀 크기 박스는 동일한 class 이름을 갖습니다. 두 세트의 너비는 각각 200px 및 40% 입니다.
 

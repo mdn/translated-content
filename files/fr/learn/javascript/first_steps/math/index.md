@@ -231,7 +231,7 @@ Si vous voulez contourner les règles de précédence des opérateurs, vous pouv
 
 Essayez-le et voyez le résultat obtenu.
 
-> **Note :** La liste complète de tous les opérateurs JavaScript et de leur précédence peut être trouvée dans [la page de référence sur les expressions et les opérateurs](fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#précédence_des_opérateurs).
+> **Note :** La liste complète de tous les opérateurs JavaScript et de leur précédence peut être trouvée dans [la page de référence sur les expressions et les opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#précédence_des_opérateurs).
 
 ## Opérateurs d'incrémentation et de décrémentation
 

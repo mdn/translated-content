@@ -5,11 +5,11 @@ page-type: guide
 translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 
-{{ServiceWorkerSidebar}}
+{{DefaultAPISidebar}}
 
 Este artículo brinda información sobre cómo comenzar con el *service worker*, incluida la arquitectura básica, el registro de un *service worker*, el proceso de instalación y activación de un nuevo *service worker*, la actualización de tu *service worker*, el control de caché y las respuestas personalizadas, todo en el contexto de una aplicación simple, con funcionalidad fuera de línea.
 
-## La premisa del *service worker*
+## La premisa del service worker
 
 Un problema primordial del que los usuarios de la web han adolecido durante años es la pérdida de conectividad. La mejor aplicación web del mundo proporcionará una experiencia de usuario terrible si no la puedes descargar. Ha habido varios intentos de crear tecnologías para resolver este problema, y ​​algunos de los problemas se han resuelto. Pero el problema primordial es que todavía no existe un buen mecanismo de control general para el almacenamiento en caché de activos y las solicitudes de red personalizadas.
 
@@ -19,7 +19,7 @@ El intento anterior, *AppCache*, parecía ser una buena idea porque te permitía
 
 El *service worker* finalmente debería solucionar estos problemas. La sintaxis del *service worker* es más compleja que la de *AppCache*, pero la compensación es que puedes usar JavaScript para controlar su comportamiento implícito en *AppCache* con un buen grado de fina granularidad, lo que te permite manejar este problema y muchos más. Al usar un *service worker*, puedes configurar fácilmente una aplicación para usar activos almacenados en caché primero, proporcionando así una experiencia predeterminada incluso cuando estás desconectado, antes de obtener más datos de la red (comúnmente conocido como [Primero sin conexión](https://offlinefirst.org/)). Esto ya está disponible con las aplicaciones nativas, que es una de las principales razones por las que las aplicaciones nativas a menudo se eligen en lugar de las aplicaciones web.
 
-## Configuración para jugar con el *service worker*
+## Configuración para jugar con el service worker
 
 En estos días, el *service worker* está habilitado de forma predeterminada en todos los navegadores modernos. Para ejecutar código con el *service worker*, deberás entregar tu código a través de HTTPS: el *service worker*, por razones de seguridad, está restringido a ejecutarse a través de HTTPS. Por lo tanto, GitHub es un buen lugar para alojar experimentos, ya que admite HTTPS. Para facilitar el desarrollo local, los navegadores también consideran `localhost` como un origen seguro.
 
@@ -41,7 +41,7 @@ El siguiente gráfico muestra un resumen de los eventos de *service worker* disp
 
 ![install, activate, message, fetch, sync, push](sw-events.png)
 
-## Demostración del *service worker*
+## Demostración del service worker
 
 Para demostrar los conceptos básicos de registro e instalación de un *service worker*, hemos creado una demostración simple llamada [*service worker* simple](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker), que es una simple galería de imágenes de Star Wars Lego. Utiliza una función impulsada por promesas para leer datos de imagen de un objeto JSON y cargar las imágenes usando Ajax, antes de mostrar las imágenes en una línea hacia abajo en la página. Hemos mantenido las cosas estáticas y simples por ahora. También registra, instala y activa un *service worker*, y cuando los navegadores admiten más especificaciones, almacenará en caché todos los archivos necesarios para que funcione sin conexión.
 
@@ -49,7 +49,7 @@ Para demostrar los conceptos básicos de registro e instalación de un *service 
 
 Puedes ver el [código fuente en GitHub](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker) y el [Sencillo *service worker* ejecutándose en vivo](https://bncb2v.csb.app/).
 
-### Registra a tu _worker_
+### Registra a tu worker
 
 El primer bloque de código en el archivo JavaScript de nuestra aplicación, `app.js`, es el siguiente. Este es nuestro punto de entrada en el uso del *service worker*.
 
@@ -90,7 +90,7 @@ Un solo *service worker* puede controlar muchas páginas. Cada vez que se carga 
 
 > **Nota:** Una gran cosa acerca del *service worker* es que si usas la detección de funciones como se muestra arriba, los navegadores que no son compatibles con los *service workers* pueden usar tu aplicación en línea de la manera normal esperada. Además, si usas *AppCache* y <abbr title="ServiceWorker">SW</abbr> en una página, los navegadores que no admiten <abbr title="ServiceWorker">SW</abbr> pero sí *AppCache* lo usarán, y los navegadores que admiten ambos ignorarán *AppCache* y dejarán que <abbr title="ServiceWorker">SW</abbr> tome el control.
 
-#### ¿Por qué mi *service worker*&nbsp;no se registra?
+#### ¿Por qué mi service worker no se registra?
 
 Esto se podría deber a las siguientes razones:
 
@@ -317,7 +317,7 @@ self.addEventListener("fetch", (event) => {
 
 Hemos optado por esta imagen alternativa porque las únicas actualizaciones que probablemente fallarán son las imágenes nuevas, ya que todo lo demás depende de la instalación en el detector de eventos `install` que vimos anteriormente.
 
-## Precarga de navegación del *service worker*
+## Precarga de navegación del service worker
 
 Si está habilitada, la función <a href="/en-US/docs/Web/API/NavigationPreloadManager" class="only-in-en-us" title="Actualmente solo disponible en inglés (US)">precarga de navegación (en-US)</a> comienza a descargar recursos tan pronto como se realiza la solicitud de recuperación y en paralelo con el inicio del *service worker*.
 Esto garantiza que la descarga comience de inmediato al navegar a una página, en lugar de tener que esperar hasta que se inicie el *service worker*.
@@ -441,7 +441,7 @@ Ten en cuenta que en este ejemplo descargamos y almacenamos en caché los mismos
 En su lugar, puedes optar por descargar y almacenar en caché un recurso diferente en la precarga.
 Para obtener más información, consulta <a href="/en-US/docs/Web/API/NavigationPreloadManager#custom_responses" class="only-in-en-us" title="Actualmente solo disponible en inglés (US)">NavigationPreloadManager > Respuestas personalizadas (en-US)</a>.
 
-## Actualizar tu *service worker*
+## Actualizar tu service worker
 
 Si tu *service worker* se instaló anteriormente, pero luego está disponible una nueva versión del trabajador al actualizar o cargar la página, la nueva versión se instala en segundo plano, pero aún no está activada. Solo se activa cuando ya no hay páginas cargadas que todavía estén usando el antiguo *service worker*. Tan pronto como no queden más páginas cargadas, se activa el nuevo *service worker*.
 

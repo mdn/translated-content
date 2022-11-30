@@ -3,7 +3,7 @@ title: '<samp>: サンプル出力要素'
 slug: Web/HTML/Element/samp
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML のサンプル要素** (**`<samp>`**) は、コンピュータープログラムからのサンプル出力を表す行内文字列を含めるために使用されます。内容は普通、ブラウザーの既定の等幅フォント（[Courier](https://ja.wikipedia.org/wiki/Courier_(書体)) や Lucida Console など）を使用して表示されます。
 
@@ -141,11 +141,7 @@ samp > kbd {
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-samp-element', '&lt;samp&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-samp-element', '&lt;samp&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.2.1', '&lt;samp&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -10,6 +10,7 @@ tags:
   - eventos
 translation_of: Web/API/WheelEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 El interface **`WheelEvent`** retrata los eventos que ocurren cuando el usuario mueve la rueda del ratón o de un dispositivo similar.
@@ -27,7 +28,7 @@ El interface **`WheelEvent`** retrata los eventos que ocurren cuando el usuario 
 
 ## Propiedades
 
-_Este interfaz hereda propiedades de estos padres_, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} y {{domxref("Event")}}.\_\_
+_Este interfaz hereda propiedades de estos padres, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} y {{domxref("Event")}}._
 
 - {{domxref("WheelEvent.deltaX")}} {{readonlyinline}}
   - : Devuelve un doble (número de doble precisión) que representa la cantidad de desplazamiento horizontal.
@@ -51,9 +52,7 @@ _Este interfaz no define ningún método, pero hereda métodos de estos padres, 
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                          | Comentario          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM3 Events','#interface-WheelEvent','WheelEvent')}} | {{Spec2('DOM3 Events')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 
@@ -61,7 +60,7 @@ _Este interfaz no define ningún método, pero hereda métodos de estos padres, 
 
 ## Ver también
 
-- {{ event("wheel") }}
+- [`wheel`](/es/docs/Web/Reference/Events/wheel)
 - Interfaces reemplazados por este:
 
   - Objeto del evento de la rueda del ratón legado de la plataforma Gecko: {{ domxref("MouseScrollEvent") }}

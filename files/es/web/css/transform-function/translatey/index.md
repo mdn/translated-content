@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/transform-function/translateY()
 original_slug: Web/CSS/transform-function/translateY()
 ---
+
 {{CSSRef}}
 
 La función **`translateY()`** de [CSS](/es/docs/Web/CSS) reposiciona un elemento verticalmente dentro del plano bidimensional. Su resultado es de tipo {{cssxref("&lt;transform-function&gt;")}}.
@@ -128,13 +129,11 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estatus                              | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName("CSS3 Transforms", "#funcdef-transform-translatey", "translateY()")}} | {{Spec2("CSS3 Transforms")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 
-Por favor, véase el tipo [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para información de compatibilidad.
+Por favor, véase el tipo [`<transform-function>`](/es/docs/Web/CSS/transform-function#Browser_compatibility) para información de compatibilidad.
 
 ## Véase también
 

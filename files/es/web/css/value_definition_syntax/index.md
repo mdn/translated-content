@@ -4,6 +4,7 @@ slug: Web/CSS/Value_definition_syntax
 translation_of: Web/CSS/Value_definition_syntax
 original_slug: Web/CSS/Sintaxis_definición_de_valor
 ---
+
 {{CSSRef()}}
 
 **La sintaxis de definición de valores CSS**, una gramática formal, se utiliza para definir el conjunto de valores válidos para una propiedad o función CSS. Además de esta sintaxis, el conjunto de valores válidos puede restringirse aún más mediante restricciones semánticas (por ejemplo, para que un número sea estrictamente positivo).
@@ -104,7 +105,7 @@ Pero no con:
 - `bold` porque ambos componentes deben aparecer en el valor
 - `bold 1em bold` porque ambos componentes deben aparecer solo una vez
 
-> **Nota:** yuxtaposición tiene precedencia sobre el doble ampersand, esto quiere decir que `bold thin && <length>` es equivalente a `[ bold thin ] && <length>`. Que describe a `bold thin <length>` ó `<length> bold thin` pero no a `bold <length> thin `.
+> **Nota:** yuxtaposición tiene precedencia sobre el doble ampersand, esto quiere decir que `bold thin && <length>` es equivalente a `[ bold thin ] && <length>`. Que describe a `bold thin <length>` ó `<length> bold thin` pero no a `bold <length> thin`.
 
 ### Barra doble
 
@@ -125,7 +126,7 @@ Pero no con:
 - `blue yellow` porque un componente debe aparecer al menos una vez.
 - `bold` porque no es una palabra clave permitida como valor de ninguna de las entidades.
 
-> **Nota:** el doble ampersand tiene precedencia sobre la barra doble, que significa que `bold || thin && <length>` es equivalente a `bold || [ thin && <length> ]`. Describe a `bold`, `thin`, `<length>`, `bold thin`, `<length> bold`, o `thin <length> bold` pero no `bold <length> bold thin` porque bold, si no es omitido debe colocarse antes o después de el componente`thin && <length>`
+> **Nota:** el doble ampersand tiene precedencia sobre la barra doble, que significa que `bold || thin && <length>` es equivalente a `bold || [ thin && <length> ]`. Describe a `bold`, `thin`, `<length>`, `bold thin`, `<length> bold`, o `thin <length> bold` pero no `bold <length> bold thin` porque bold, si no es omitido debe colocarse antes o después de el componente `thin && <length>`
 
 ### Barra simple
 
@@ -354,12 +355,8 @@ Pero no:
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentario                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Values', '#value-defs', 'Value definition syntax') }}             | {{ Spec2('CSS3 Values') }} | Desde {{ SpecName('CSS2.1', 'about.html#value-defs', 'Value definition syntax') }}, añade el multiplicador hash                 |
-| {{ SpecName('CSS2.1', 'about.html#value-defs', 'Value definition syntax') }}         | {{ Spec2('CSS2.1') }}         | Desde {{ SpecName('CSS1', '#notation-for-property-values', 'Value definition syntax') }}, añade el combinador doble ampersand |
-| {{SpecName('CSS1', '#notation-for-property-values', 'Value definition syntax') }} | {{ Spec2('CSS1') }}             | Definición inicial                                                                                                                                      |
+{{Specifications}}
 
 ## Vea también
 
-- {{ CSS_key_concepts() }}
+- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/inheritance), the [box](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).

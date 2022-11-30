@@ -1,15 +1,8 @@
 ---
 title: MediaQueryList
 slug: Web/API/MediaQueryList
-tags:
-  - API
-  - CSSOM Vista
-  - CompatibilidadDeNavegadores
-  - Interface
-  - MediaQueryList
-  - Refetencia
-translation_of: Web/API/MediaQueryList
 ---
+
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
 Un objeto `MediaQueryList` almacena información en un [media query](/es/docs/Web/CSS/Media_Queries) aplicada a un documento y se encarga de enviar notificaciones a los oyentes cuando cambia el estado de consulta de medios (es decir, cuando la prueba de consulta de medios comienza o deja de evaluarse a `true`).
@@ -18,7 +11,7 @@ Esto hace posible observar un documento para detectar cuando sus consultas de me
 
 ## Propiedades
 
-La nueva versión de la interfaz de _`MediaQueryList` \_hereda las propiedades de su interfaz principal, _{{domxref("EventTarget")}}.\_
+La nueva versión de la interfaz de `MediaQueryList` hereda las propiedades de su interfaz principal, {{domxref("EventTarget")}}.
 
 - {{domxref("MediaQueryList.matches")}} {{readonlyInline}}
   - : Un {{domxref("Boolean")}} que devuelve `true` si el
@@ -29,7 +22,7 @@ La nueva versión de la interfaz de _`MediaQueryList` \_hereda las propiedades d
 ### Controladores de eventos
 
 - {{domxref("MediaQueryList.onchange")}}
-  - : Una propiedad de controlador de eventos que representa una función que se invoca cuando se desencadena el evento {{event("change")}}, es decir, cuando cambia el estado del soporte de consulta de medios. El objeto de evento es una instancia {{domxref("MediaQueryListEvent")}}, que se reconoce como una instancia de `MediaListQuery` en navegadores antiguos, para propósitos de compatibilidad con versiones anteriores.
+  - : Una propiedad de controlador de eventos que representa una función que se invoca cuando se desencadena el evento [`change`](/es/docs/Web/Reference/Events/change), es decir, cuando cambia el estado del soporte de consulta de medios. El objeto de evento es una instancia {{domxref("MediaQueryListEvent")}}, que se reconoce como una instancia de `MediaListQuery` en navegadores antiguos, para propósitos de compatibilidad con versiones anteriores.
 
 ## Métodos
 
@@ -70,9 +63,7 @@ mql.addListener(screenTest);
 
 ## Especificaciones
 
-| Especificaciones                                                                                         | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("CSSOM View", "#the-mediaquerylist-interface", "MediaQueryList")}} | {{Spec2("CSSOM View")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

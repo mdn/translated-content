@@ -2,6 +2,7 @@
 title: JavaScript에 발 담그기
 slug: Learn/JavaScript/First_steps/A_first_splash
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
 JavaScript에 관한 약간의 이론과, JavaScript가 할 수 있는 일을 알아봤으니 이제 간단한 JavaScript 프로그램을 만들어보면서 개발 과정이 어떤 느낌인지 알아보겠습니다. "숫자 알아맞히기" 게임을 차근차근 따라 만들어봅시다.
@@ -255,7 +256,7 @@ name2 = name2 + ' says hello!';
       <td>
         <pre class="brush: js">
 6 > 10 // false
-20 > 10  // true</pre
+20 > 10 // true</pre
         >
       </td>
     </tr>

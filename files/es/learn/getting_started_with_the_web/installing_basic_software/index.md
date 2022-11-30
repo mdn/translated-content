@@ -1,19 +1,6 @@
 ---
 title: Instalación de software básico
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-tags:
-  - Aprender
-  - Configuración
-  - Herramientas
-  - Navegadores
-  - Novato
-  - Principiantes
-  - aprende
-  - buscador
-  - editor de textos
-  - instalar
-  - l10n:priority
-translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 original_slug: Learn/Getting_started_with_the_web/Instalacion_de_software_basico
 ---
 
@@ -39,7 +26,7 @@ Esto parece una lista espeluznante pero, afortunadamente, puedes comenzar a trab
 
 ### Instalación de un editor de texto
 
-Probablemente ya tengas un editor de texto básico instalado en tu computadora. De manera predeterminada Windows incluye el {{Interwiki("wikipedia", "Bloc de notas")}} y OS X viene con {{Interwiki("wikipedia", "TextEdit")}}. Las _distros_ (versiones) de Linux varían: Ubuntu viene con {{Interwiki("wikipedia", "Gedit")}}; distribuciones basadas en KDE suelen traer [Kate](http://kate-editor.org/) o [Kwrite](https://es.wikipedia.org/wiki/KWrite).
+Probablemente ya tengas un editor de texto básico instalado en tu computadora. De manera predeterminada Windows incluye el [Bloc de notas](https://es.wikipedia.org/wiki/Bloc_de_notas) y OS X viene con [TextEdit](https://es.wikipedia.org/wiki/TextEdit). Las _distros_ (versiones) de Linux varían: Ubuntu viene con [Gedit](https://es.wikipedia.org/wiki/Gedit); distribuciones basadas en KDE suelen traer [Kate](http://kate-editor.org/) o [Kwrite](https://es.wikipedia.org/wiki/KWrite).
 
 Para el desarrollo Web, probablemente hay cosas mejores que el Bloc de notas o TextEdit. Una recomendación puede ser empezar con [Brackets](http://brackets.io), un editor gratuito que ofrece vistas previas en vivo y sugerencias de código.
 

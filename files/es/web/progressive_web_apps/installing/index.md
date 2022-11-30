@@ -1,23 +1,6 @@
 ---
 title: Instalar y desinstalar aplicaciones web
 slug: Web/Progressive_web_apps/Installing
-tags:
-  - Android
-  - Apps
-  - Chrome
-  - Desinstalar
-  - Firefox
-  - Guía
-  - Lanzar
-  - PWA
-  - Pantalla de inicio
-  - Principiante
-  - Samsung
-  - Web
-  - aplicaciones
-  - aplicaciones web progresivas
-  - instalar
-translation_of: Web/Progressive_web_apps/Developer_guide/Installing
 original_slug: Web/Progressive_web_apps/Developer_guide/Installing
 ---
 
@@ -41,7 +24,7 @@ Hemos escrito un sitio web de ejemplo muy simple ([ve nuestra demostración en v
 
 _La interfaz de usuario para esto varía de un navegador a otro, pero la idea general es la misma. Desafortunadamente, no existe un estándar para los iconos y símbolos utilizados para operaciones como esta._
 
-### _Firefox para Android_
+### Firefox para Android
 
 _En un dispositivo Android que usa Firefox, verás un ícono de "inicio" con un ícono más (+) en su interior; este es el ícono "Agregar a la pantalla de inicio" que se muestra para cualquier sitio que tenga las características necesarias en su lugar._
 
@@ -51,7 +34,7 @@ _Al tocar este, se mostrará un pasquín de confirmación; al presionar el botó
 
 _![Una captura de pantalla de Firefox para Android que solicita confirmación antes de instalar una aplicación web](https://mdn.mozillademos.org/files/17160/fx-a2hs-banner.png)_
 
-### _Navegador de Internet Samsung_
+### Navegador de Internet Samsung
 
 _Si tiene Samsung Internet en tu dispositivo móvil, verás un icono diferente._
 
@@ -59,7 +42,7 @@ _![Una captura de pantalla del navegador de Internet de Samsung que muestra su i
 
 _Tocar ese ícono debería llevarte al mismo pasquín de confirmación que se muestra en Firefox arriba._
 
-### _Google Chrome para Android_
+### Google Chrome para Android
 
 _Si tienes Google Chrome para Android disponible, la experiencia es ligeramente diferente; al cargar nuestro sitio, verás un mensaje de instalación emergente que te preguntará si deseas agregar esta aplicación a tu pantalla de inicio._
 
@@ -69,7 +52,7 @@ _![Captura de pantalla de un pasquín de Chrome que solicita permiso para instal
 
 _Si eliges no agregarlo a tu pantalla de inicio en este momento, los puedes hacer más tarde usando el ícono "Agregar a la pantalla de inicio" en el menú principal de Chrome._
 
-### _Safari para iOS/iPhoneOS/iPadOS_
+### Safari para iOS/iPhoneOS/iPadOS
 
 _En iOS de Apple (incluidos iPhoneOS y iPadOS), el navegador Safari integrado en el dispositivo tiene cierto soporte para aplicaciones web, incluido el soporte para agregar a la función de pantalla de inicio. Para agregar una aplicación web a la pantalla de inicio (también conocida como lanzador o trampolín), toca el botón para compartir (![Icono de compartir cuadrado y flecha desde iOS y macOS](https://mdn.mozillademos.org/files/17156/square.svg)) en la parte inferior de la pantalla:_
 
@@ -85,7 +68,7 @@ _![Una captura de pantalla de iOS Safari que muestra su panel de configuración 
 
 _Al hacer clic en "Agregar", la aplicación se incluye en la pantalla de inicio._
 
-### _La aplicación web instalada_
+### La aplicación web instalada
 
 _Independientemente del navegador y el dispositivo que estés utilizando, cuando eliges agregar la aplicación a tu pantalla de inicio o al iniciador de aplicaciones, aparecerá allí con el mismo aspecto que cualquier aplicación. Normalmente, esto significa que verás el icono de la aplicación junto con un título corto._
 

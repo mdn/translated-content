@@ -3,6 +3,7 @@ title: HTMLFormElement.elements
 slug: Web/API/HTMLFormElement/elements
 translation_of: Web/API/HTMLFormElement/elements
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLFormElement")}} property **`elements`** returns an {{domxref("HTMLFormControlsCollection")}} listing all the form controls contained in the {{HTMLElement("form")}} element. Independently, you can obtain just the number of form controls using the {{domxref("HTMLFormElement.length", "length")}} property.

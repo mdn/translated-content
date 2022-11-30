@@ -10,7 +10,8 @@ tags:
 translation_of: Web/CSS/Specificity
 original_slug: Web/CSS/Especificidad
 ---
-La **especificidad** es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. La especificidad está basada en las reglas de coincidencia que están compuestas por diferentes tipos de [selectores CSS](https://developer.mozilla.org/es/CSS/CSS_Reference#Selectors).
+
+La **especificidad** es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados. La especificidad está basada en las reglas de coincidencia que están compuestas por diferentes tipos de [selectores CSS](/es/CSS/CSS_Reference#Selectors).
 
 ## ¿Cómo se calcula?
 
@@ -126,7 +127,7 @@ C) O reescribe la regla original para evitar el uso de `!important`.
 
 ### La excepción `:not`
 
-La pseudo-clase negación :`not` _no_ es considerada una pseudo-clase para el cálculo de la especificidad. Pero los selectores colocados dentre de ella, si cuentan como selectores normales a la hora de determinar el valor de los [tipos de selectores](/es/docs/Web/CSS/Especificidad#Tipos_de_selectores).
+La pseudo-clase negación `:not` _no_ es considerada una pseudo-clase para el cálculo de la especificidad. Pero los selectores colocados dentre de ella, si cuentan como selectores normales a la hora de determinar el valor de los [tipos de selectores](/es/docs/Web/CSS/Especificidad#Tipos_de_selectores).
 
 Aquí tienes un pedazo de CSS:
 
@@ -243,4 +244,4 @@ Porque el selector `h1` selecciona el objetivo de manera específica, pero el co
 
 - Specificity Calculator: An interactive website to test and understand your own CSS rules - <https://specificity.keegan.st/>
 - CSS3 Selectors Specificity - <http://www.w3.org/TR/selectors/#specificity>
-- {{ CSS_key_concepts() }}
+- CSS Key Concepts: [CSS syntax](/es/docs/Web/CSS/Syntax), [at-rule](/es/docs/Web/CSS/At-rule), [comments](/es/docs/Web/CSS/Comments), [specificity](/es/docs/Web/CSS/Specificity) and [inheritance](/es/docs/Web/CSS/inheritance), the [box](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), [layout modes](/es/docs/Web/CSS/Layout_mode) and [visual formatting models](/es/docs/Web/CSS/Visual_formatting_model), and [margin collapsing](/es/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing), or the [initial](/es/docs/Web/CSS/initial_value), [computed](/es/docs/Web/CSS/computed_value), [resolved](/es/docs/Web/CSS/resolved_value), [specified](/es/docs/Web/CSS/specified_value), [used](/es/docs/Web/CSS/used_value), and [actual](/es/docs/Web/CSS/actual_value) values. Definitions of [value syntax](/es/docs/Web/CSS/Value_definition_syntax), [shorthand properties](/es/docs/Web/CSS/Shorthand_properties) and [replaced elements](/es/docs/Web/CSS/Replaced_element).

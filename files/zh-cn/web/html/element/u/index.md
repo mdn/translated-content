@@ -3,7 +3,7 @@ title: <u>
 slug: Web/HTML/Element/u
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<u>` 元素（表意不清标注元素）**表示一个需要标注为非文本化（non-textual）的内联文本域。默认情况下渲染为一个实线下划线，可以用 CSS 替换。
 
@@ -37,7 +37,7 @@ slug: Web/HTML/Element/u
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}} Gecko 1.9.2 (Firefox 4) 之前（包含）, Firefox 为这个元素实现了 {{domxref("HTMLSpanElement")}}  接口。</td>
+   <td>{{domxref("HTMLElement")}} Gecko 1.9.2 (Firefox 4) 之前（包含）, Firefox 为这个元素实现了 {{domxref("HTMLSpanElement")}} 接口。</td>
   </tr>
  </tbody>
 </table>

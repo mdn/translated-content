@@ -1,17 +1,8 @@
 ---
 title: Blink
 slug: Glossary/Blink
-tags:
-  - Chrome
-  - DOM
-  - Diseño
-  - Glosario
-  - Infraestructura
-  - Navegador
-  - Web
-  - WebKit
-translation_of: Glossary/Blink
 ---
+
 Blink es un motor de renderizado para [navegadores](/es/docs/Glossary/Browser) de código abierto desarrollado por Google, que forma parte de Chromium (y por lo tanto también de [Chrome](/es/docs/Glossary/Google_Chrome)). Concretamente, Blink es una copia de la librería WebCore de [WebKit](/es/docs/Glossary/WebKit), que se encarga del diseño, renderizado, y del [DOM](/es/docs/Glossary/DOM).
 
 ## Para saber más...
@@ -19,5 +10,5 @@ Blink es un motor de renderizado para [navegadores](/es/docs/Glossary/Browser) d
 ### Cultura General
 
 - Página principal de [Blink](http://www.chromium.org/blink)
-- {{interwiki("wikipedia", "Blink")}} en Wikipedia
+- [Blink](https://es.wikipedia.org/wiki/Blink) en Wikipedia
 - [FAQ](http://www.chromium.org/blink/developer-faq) de Blink

@@ -1,17 +1,6 @@
 ---
 title: Estructura de una aplicación web progresiva
 slug: Web/Progressive_web_apps/App_structure
-tags:
-  - Estructura
-  - Intérprete de la aplicación
-  - PWAs
-  - Servicio workers
-  - Streams
-  - Transmisiones
-  - aplicaciones web progresivas
-  - js13kGames
-  - progresiva
-translation_of: Web/Progressive_web_apps/App_structure
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
@@ -51,7 +40,7 @@ Es importante recordar las ventajas de PWA y tenerlas en cuenta al diseñar la a
 - Progresiva: comienza con el "buen, antiguo sitio web básico" y agrega progresivamente nuevas funciones mientras recuerdas detectar si están disponibles en el navegador y manejas con elegancia cualquier error que surja si no hay soporte disponible. Por ejemplo, un modo fuera de línea con la ayuda del servicio _workers_ es solo un rasgo adicional que mejora la experiencia del sitio web, pero aún se puede usar perfectamente sin él.
 - Adaptable: El diseño web adaptable también se aplica a las aplicaciones web progresivas, ya que ambas son principalmente para dispositivos móviles. Hay una gran variedad de dispositivos con navegadores — es importante preparar tu sitio web para que funcione en diferentes tamaños de pantalla, ventanas gráficas o densidades de píxeles, utilizando tecnologías como [metaetiqueta de la ventana gráfica](/es/docs/Mozilla/Mobile/Viewport_meta_tag), [consultas de medios CSS](/es/docs/Web/CSS/Media_Queries/Using_media_queries), [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) y [Rejilla CSS](/es/docs/Web/CSS/CSS_Grid_Layout).
 
-## Concepto diferente: _streams_ o transmisiones
+## Concepto diferente: streams o transmisiones
 
 Se puede lograr un enfoque completamente diferente para la representación del lado del servidor o del cliente con la [API Streams](/es/docs/Web/API/Streams_API). Con un poco de ayuda del servicio _workers_, las transmisiones pueden mejorar en gran medida la forma en que analizamos el contenido.
 
@@ -206,7 +195,7 @@ function randomNotification() {
 }
 ```
 
-### El servicio _worker_
+### El servicio worker
 
 El último archivo que veremos rápidamente es el servicio _worker_: `sw.js` — primero importa datos del archivo `games.js`:
 

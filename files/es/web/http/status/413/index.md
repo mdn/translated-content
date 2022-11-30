@@ -1,9 +1,9 @@
 ---
 title: 413 Payload Too Large
 slug: Web/HTTP/Status/413
-translation_of: Web/HTTP/Status/413
 original_slug: Web/HTTP/Status/8080
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`413 Payload Too Large`** response status code indicates that the request entity is larger than limits defined by server; the server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.

@@ -1,8 +1,6 @@
 ---
 title: Geolocation.getCurrentPosition()
 slug: Web/API/Geolocation/getCurrentPosition
-page-type: web-api-instance-method
-browser-compat: api.Geolocation.getCurrentPosition
 l10n:
   sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
 ---
@@ -32,7 +30,7 @@ getCurrentPosition(success, error, options)
     - `timeout`
       - : Un valor positivo de tipo `long` que representa el tiempo máximo en milisegundos en que el dispositivo tiene permitido recuperar la ubicación. El valor predeterminado es [`Infinity`](/es/docs/Web/JavaScript/Reference/Global_Objects/Infinity), esto significa que `getCurrentPosition()` regresará un valor hasta que la ubicación este disponible.
     - `enableHighAccuracy`
-      - : Un valor de tipo `boolean` que indica que a la aplicación le gustaría obtener el resultado más preciso posible. Si es `true`y el dispositivo es capaz de proveer una ubicación más precisa, lo hará. Tenga en cuenta que este resultado puede necesitar de más tiempo de respuesta o incrementar el consumo de energía (con un chip GPS en un dispositivo móvil por ejemplo). Por otro lado, si es `false`, el dispositivo puede tomarse la libertad de usar menos recursos y responder más rápido y/o usando menos energía. Predeterminado: `false`
+      - : Un valor de tipo `boolean` que indica que a la aplicación le gustaría obtener el resultado más preciso posible. Si es `true` y el dispositivo es capaz de proveer una ubicación más precisa, lo hará. Tenga en cuenta que este resultado puede necesitar de más tiempo de respuesta o incrementar el consumo de energía (con un chip GPS en un dispositivo móvil por ejemplo). Por otro lado, si es `false`, el dispositivo puede tomarse la libertad de usar menos recursos y responder más rápido y/o usando menos energía. Predeterminado: `false`
 
 ### Valor devuelto
 

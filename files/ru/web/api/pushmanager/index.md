@@ -14,6 +14,7 @@ tags:
   - TopicStub
 translation_of: Web/API/PushManager
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 Интерфейс `PushManager` из [Push API](/ru/docs/Web/API/Push_API) предоставляет возможность получать уведомления от сторонних серверов, а также запрашивать URL для push уведомлений.

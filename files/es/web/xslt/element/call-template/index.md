@@ -1,12 +1,9 @@
 ---
 title: call-template
 slug: Web/XSLT/Element/call-template
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/call-template
 original_slug: Web/XSLT/call-template
 ---
+
 {{XsltRef}}
 
 El elemento `<xsl:call-template>` invoca una plantilla con nombre.

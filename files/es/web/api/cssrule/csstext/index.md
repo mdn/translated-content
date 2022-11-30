@@ -1,8 +1,8 @@
 ---
 title: CssRule.cssText
 slug: Web/API/CSSRule/cssText
-translation_of: Web/API/CSSRule/cssText
 ---
+
 {{APIRef}}
 
 Summary

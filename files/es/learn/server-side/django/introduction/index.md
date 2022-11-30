@@ -1,17 +1,9 @@
 ---
 title: Introducción a Django
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Aprendizaje
-  - CodigoScript
-  - Principiante
-  - Programación lado servidor
-  - Python
-  - django
-  - introducción
-translation_of: Learn/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introducción
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 En este primer artículo de Django responderemos la pregunta ¿Qué es Django? y daremos una visión general de lo que hace que este framework sea tan especial. Vamos a delinear las características principales, incluidas algunas de las funcionalidades avanzadas que no tendremos tiempo de cubrir con detalle en este módulo. Tambien mostraremos algunos de los componentes principales de una aplicación de Django. (aunque en este momento no cuentes con un entorno de desarrollo en el cual probarlo).
