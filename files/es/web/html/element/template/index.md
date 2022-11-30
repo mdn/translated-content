@@ -1,9 +1,6 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-tags:
-  - Plantilla
-translation_of: Web/HTML/Element/template
 original_slug: Web/HTML/Elemento/template
 ---
 

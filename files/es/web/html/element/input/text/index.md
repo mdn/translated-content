@@ -1,19 +1,6 @@
 ---
 title: <input type="text">
 slug: Web/HTML/Element/input/text
-tags:
-  - Entrada de texto
-  - Form input
-  - Formulários HTML
-  - HTML
-  - Input
-  - Input Type
-  - Referencia
-  - Text
-  - Texto
-  - formulários
-  - text input
-translation_of: Web/HTML/Element/input/text
 original_slug: Web/HTML/Elemento/input/text
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: bdo
 slug: Web/HTML/Element/bdo
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/bdo
 original_slug: Web/HTML/Elemento/bdo
 ---
 ### Definición

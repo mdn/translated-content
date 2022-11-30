@@ -1,11 +1,6 @@
 ---
-title: "HTML el atributo: multiple"
+title: 'HTML el atributo: multiple'
 slug: Web/HTML/Attributes/multiple
-tags:
-  - Atributos
-  - Resticción de validación
-  - atributo
-translation_of: Web/HTML/Attributes/multiple
 original_slug: Web/HTML/Atributos/multiple
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: tabla
 slug: Web/HTML/Element/table
-translation_of: Web/HTML/Element/table
 original_slug: Web/HTML/Elemento/table
 ---
 

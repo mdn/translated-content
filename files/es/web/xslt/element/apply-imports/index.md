@@ -1,10 +1,6 @@
 ---
 title: apply-imports
 slug: Web/XSLT/Element/apply-imports
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/apply-imports
 original_slug: Web/XSLT/apply-imports
 ---
 

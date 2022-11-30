@@ -1,11 +1,6 @@
 ---
 title: applet
 slug: Web/HTML/Element/applet
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/applet
 original_slug: Web/HTML/Elemento/applet
 ---
 

@@ -1,11 +1,6 @@
 ---
 title: dir
 slug: Web/HTML/Element/dir
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/dir
 original_slug: Web/HTML/Elemento/dir
 ---
 

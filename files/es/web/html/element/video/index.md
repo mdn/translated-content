@@ -1,12 +1,6 @@
 ---
 title: video
 slug: Web/HTML/Element/video
-tags:
-  - HTML
-  - HTML5
-  - Multimedia
-  - para_revisar
-translation_of: Web/HTML/Element/video
 original_slug: Web/HTML/Elemento/video
 ---
 

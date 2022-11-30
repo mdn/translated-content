@@ -1,16 +1,6 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Element/input/color
-tags:
-  - Elemento
-  - Entrada
-  - Formulários HTML
-  - HTML
-  - Referencia
-  - Selector de colores
-  - color
-  - formulários
-translation_of: Web/HTML/Element/input/color
 original_slug: Web/HTML/Elemento/input/color
 ---
 

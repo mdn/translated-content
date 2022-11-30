@@ -1,17 +1,6 @@
 ---
 title: '<iframe>: el elemento Inline Frame'
 slug: Web/HTML/Element/iframe
-tags:
-  - Contenido
-  - Contenido incrustado
-  - Elemento
-  - Embebido
-  - HTML
-  - Incrustado
-  - Marcos
-  - Web
-  - iframe
-translation_of: Web/HTML/Element/iframe
 original_slug: Web/HTML/Elemento/iframe
 ---
 

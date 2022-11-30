@@ -1,11 +1,6 @@
 ---
 title: menu
 slug: Web/HTML/Element/menu
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/menu
 original_slug: Web/HTML/Elemento/menu
 ---
 
