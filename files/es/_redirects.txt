@@ -2191,7 +2191,6 @@
 /es/docs/Web/JavaScript/Guide/Obsolete_Pages/Guía_JavaScript_1.5/Valores	/es/docs/Web/JavaScript/Guide/Grammar_and_types
 /es/docs/Web/JavaScript/Guide/Obsolete_Pages/Guía_JavaScript_1.5/Variables	/es/docs/Web/JavaScript/Guide/Grammar_and_types
 /es/docs/Web/JavaScript/Guide/Obsolete_Pages/Predefined_Functions	/en-US/docs/Web/JavaScript/Guide/Functions
-/es/docs/Web/JavaScript/Guide/Obsolete_Pages/The_Employee_Example	/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Aserciones	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Cuantificadores	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers

@@ -539,7 +539,6 @@
 /zh-TW/docs/Web/API/Coordinates/longitude	/zh-TW/docs/Web/API/GeolocationCoordinates/longitude
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
 /zh-TW/docs/Web/API/DOMString	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String
-/zh-TW/docs/Web/API/Detecting_device_orientation	/en-US/docs/Web/Events/Detecting_device_orientation
 /zh-TW/docs/Web/API/Document/keyup_event	/zh-TW/docs/Web/API/Element/keyup_event
 /zh-TW/docs/Web/API/Document/width	/zh-TW/docs/Web/API/Element/clientWidth
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
@@ -850,7 +849,6 @@
 /zh-TW/docs/Web/性能	/zh-TW/docs/Web/Performance
 /zh-TW/docs/WebAPI	/zh-TW/docs/Web/API
 /zh-TW/docs/WebAPI/Battery_Status	/zh-TW/docs/Web/API/Battery_Status_API
-/zh-TW/docs/WebAPI/Detecting_device_orientation	/en-US/docs/Web/Events/Detecting_device_orientation
 /zh-TW/docs/WebAPI/FileHandle	/zh-TW/docs/Web/API/File_and_Directory_Entries_API
 /zh-TW/docs/WebAPI/Managing_screen_orientation	/zh-TW/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /zh-TW/docs/WebAPI/Network_Information	/zh-TW/docs/Web/API/Network_Information_API
