@@ -1,14 +1,6 @@
 ---
 title: WebAssembly
 slug: conflicting/WebAssembly/JavaScript_interface
-tags:
-  - API
-  - Experimental
-  - JavaScript
-  - Objeto
-  - Referencia
-  - WebAssembly
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly
 ---
 
