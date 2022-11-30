@@ -18,7 +18,7 @@ Promise.allSettled(iterable)
 ### 参数
 
 - `iterable`
-  - : 一个[可迭代的](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代的协议)（例如{{jsxref("Array")}}）promise。
+  - : 一个以 promise 组成的[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代的协议)（例如{{jsxref("Array")}}）对象。
 
 ### 返回值
 
