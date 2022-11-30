@@ -48,9 +48,7 @@ Math.cos(2 * Math.PI); // 1
 
 ## Especificaciones
 
-| Especificación                                                       |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.cos', 'Math.cos')}} |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

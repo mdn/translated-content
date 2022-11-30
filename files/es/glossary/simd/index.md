@@ -1,11 +1,6 @@
 ---
 title: SIMD
 slug: Glossary/SIMD
-tags:
-  - Arquitectura
-  - Glosario
-  - SIMD
-translation_of: Glossary/SIMD
 ---
 
 SIMD (pronunciado "sim-dee" en inglés) son las siglas de **Single Instruction/Multiple Data**, el cual es un tipo de [clasificación de arquitecturas de computadores](https://es.wikipedia.org/wiki/Taxonomía_de_Flynn). SIMD permite realizar la misma operación en distintos datos lo que permite paralelismo mejorando el rendimiento — por ejemplo, en la compresión de gráficos 3D y videos, simulaciones físicas, criptografía y otros entornos.

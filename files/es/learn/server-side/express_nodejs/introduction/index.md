@@ -1,16 +1,6 @@
 ---
 title: Introducción a Express/Node
 slug: Learn/Server-side/Express_Nodejs/Introduction
-tags:
-  - Aprender
-  - Express
-  - MDN
-  - Node
-  - Servidor
-  - javascri
-  - lado del servidor
-  - nodejs
-translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
 
 {{LearnSidebar}}{{NextMenu("Aprendizaje/Lado-Servidor/Express_Nodejs/Ambiente-Desarrollo", "Aprendizaje/Lado-Servidor/Express_Nodejs")}}

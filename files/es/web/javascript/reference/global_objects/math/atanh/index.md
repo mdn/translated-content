@@ -59,9 +59,7 @@ Para valores mayores a 1 o menores a -1, {{jsxref("NaN")}} retorna.
 
 ## Especificaciones
 
-| Specification                                                                |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.atanh', 'Math.atanh')}} |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

@@ -1,7 +1,6 @@
 ---
 title: Controles de formulario originales
 slug: Learn/Forms/Basic_native_form_controls
-translation_of: Learn/Forms/Basic_native_form_controls
 original_slug: Learn/HTML/Forms/The_native_form_widgets
 ---
 

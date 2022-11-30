@@ -61,9 +61,7 @@ Los argumentos "`a`" y "`b`" son nombres de argumentos formales que se utilizan 
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-constructor', 'Constructor Function')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

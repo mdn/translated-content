@@ -1,15 +1,6 @@
 ---
 title: Cómo hacer PWAs instalables
 slug: Web/Progressive_web_apps/Installable_PWAs
-tags:
-  - Instalable
-  - PWAs
-  - aapi
-  - agregar a pantalla de inicio
-  - aplicaciones web progresivas
-  - js13kGames
-  - progresiva
-translation_of: Web/Progressive_web_apps/Installable_PWAs
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}

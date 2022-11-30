@@ -1,16 +1,6 @@
 ---
 title: Rebotar en las paredes
 slug: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
-tags:
-  - 2D
-  - Canvas
-  - JavaScript
-  - Phaser
-  - Principiante
-  - Tutorial
-  - fuerte
-  - juegos
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 original_slug: Games/Tutorials/2D_breakout_game_Phaser/Rebotar_en_las_paredes
 ---
 

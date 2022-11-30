@@ -1,12 +1,6 @@
 ---
 title: Compilar
 slug: Glossary/Compile
-tags:
-  - CodingScripting
-  - Compilador
-  - Glossary
-  - compilar
-translation_of: Glossary/Compile
 l10n:
   sourceCommit: ed947b2c608428b62a60f07d09dc543f732dc09b
 ---

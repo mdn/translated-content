@@ -62,10 +62,8 @@ function obtenerIdNavegador() {
 console.log(obtenerIdNavegador());
 ```
 
-## Especificación
+## Especificaciones
 
-- {{SpecName("HTML5 W3C", "webappapis.html#the-navigator-object","window.navigator")}}
-- {{SpecName("HTML5.1", "webappapis.html#the-navigator-object", "window.navigator")}}
-- {{SpecName("HTML WHATWG", "timers.html#the-navigator-object", "window.navigator")}}
+{{Specifications}}
 
 ## Vea además

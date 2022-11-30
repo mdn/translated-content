@@ -1,24 +1,6 @@
 ---
 title: Estilo de texto
 slug: Learn/CSS/Styling_text
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Fonts
-  - Landing
-  - Links
-  - Module
-  - NeedsTranslation
-  - Text
-  - TopicStub
-  - font
-  - letter
-  - line
-  - lists
-  - shadow
-  - web fonts
-translation_of: Learn/CSS/Styling_text
 ---
 
 {{LearnSidebar}}
@@ -48,5 +30,5 @@ Este módulo contiene los siguientes artículos, los cuales le enseñarán todos
 
 Las siguientes evaluaciones pondrán a prueba su comprensión de las técnicas del diseño de texto cubiertas en las guías anteriores.
 
-- [Escribiendo una página de inicio para la comunidad de la escuela](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Escribiendo una página de inicio para la comunidad de la escuela](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)
   - : En esta evaluación, pondremos a prueba su comprensión del estilo del texto haciendo que redacte el texto de la página principal de la escuela comunitaria.

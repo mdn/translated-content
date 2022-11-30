@@ -1,13 +1,6 @@
 ---
 title: <source>
 slug: Web/HTML/Element/source
-tags:
-  - Elemento
-  - HTML
-  - Media
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/source
 original_slug: Web/HTML/Elemento/source
 ---
 

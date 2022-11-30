@@ -1,12 +1,6 @@
 ---
 title: Atributos globales
 slug: Web/HTML/Global_attributes
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Global_attributes
 original_slug: Web/HTML/Atributos_Globales
 ---
 
@@ -89,7 +83,7 @@ Además de los atributos globales HTML básicos, también existen los siguientes
     - `true`, el cual indica que, si es posible, el elemento se debe revisar para detectar errores ortográficos;
     - `false`, indica que el elemento **no** se debe revisar para detectar errores ortográficos.
 - **`[style](/es/docs/Web/HTML/Global_attributes/style)`**
-  - : Contiene declaraciones de estilo [CSS](/en-US/docs/Web/CSS) que se aplicarán al elemento. Ten en cuenta que se recomienda que los estilos se definan en un archivo o archivos separados. Este atributo y el elemento {{HTMLElement("style")}} principalmente tienen el propósito de permitir un estilo rápido, por ejemplo, con fines de prueba.
+  - : Contiene declaraciones de estilo [CSS](/es/docs/Web/CSS) que se aplicarán al elemento. Ten en cuenta que se recomienda que los estilos se definan en un archivo o archivos separados. Este atributo y el elemento {{HTMLElement("style")}} principalmente tienen el propósito de permitir un estilo rápido, por ejemplo, con fines de prueba.
 - **`[tabindex](/es/docs/Web/HTML/Global_attributes/tabindex)`**
   - : Un atributo entero que indica si el elemento puede tomar el foco de entrada (es _enfocable_), si debe participar en la navegación secuencial del teclado y, de ser así, en qué posición. Puede tomar varios valores:
     - un _valor negativo_ significa que el elemento se debe poder enfocar, pero no debe ser accesible mediante la navegación secuencial del teclado;

@@ -1,11 +1,6 @@
 ---
 title: Conjunto de caracteres
 slug: Glossary/character_set
-tags:
-  - Codificación de caracteres
-  - Conjunto de caracteres
-  - Glosario
-translation_of: Glossary/character_set
 original_slug: Glossary/conjunto_de_caracteres
 ---
 

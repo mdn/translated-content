@@ -202,9 +202,7 @@ Si necesitas dar soporte a motores de JavaScript realmente obsoletos que no sopo
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.find', 'Array.prototype.find')}} |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

@@ -1,10 +1,6 @@
 ---
 title: Famoso juego 2D usando JavaScript puro
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
-tags:
-  - 2D Canvas JavaScript Tutorial
-  - Principiante Juegos
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro
 ---
 

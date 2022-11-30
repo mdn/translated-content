@@ -44,9 +44,7 @@ const y = new Error('¡Fui construido con la palabra clave "new"!')
 
 ## Especificaciones
 
-| Especificación                                                                               |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error-constructor', 'Error constructor')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

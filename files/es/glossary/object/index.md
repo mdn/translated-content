@@ -1,7 +1,6 @@
 ---
 title: Object
 slug: Glossary/Object
-translation_of: Glossary/Object
 original_slug: Glossary/Objecto
 ---
 

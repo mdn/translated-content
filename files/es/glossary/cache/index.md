@@ -1,10 +1,6 @@
 ---
 title: Caché
 slug: Glossary/Cache
-tags:
-  - Glosario
-  - HTTP
-translation_of: Glossary/Cache
 original_slug: Glossary/Caché
 ---
 

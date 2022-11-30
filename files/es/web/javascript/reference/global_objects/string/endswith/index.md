@@ -67,9 +67,7 @@ console.log(str.endsWith('to be', 19))  // true
 
 ## Especificaciones
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}} |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

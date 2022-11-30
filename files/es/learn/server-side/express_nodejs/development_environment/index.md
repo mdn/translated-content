@@ -1,15 +1,6 @@
 ---
 title: Setting up a Node development environment
 slug: Learn/Server-side/Express_Nodejs/development_environment
-tags:
-  - Aprender
-  - Entorno de Desarrollo
-  - Express
-  - JavaScript
-  - Node
-  - nodejs
-  - npm
-translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
@@ -46,7 +37,7 @@ El ambiente de desarrollo _Express_ incluye una instalación de _Nodejs_, el _NP
 
 _Node_ y el administrador de paquetes _NPM_ se instalan juntos desde paquetes binarios, instaladores, administradores de paquetes del sistema operativo o desde los fuentes (como se muestra en las siguientes secciónes). _Express_ es entonces instalado por NPM como una dependencia individual de sus aplicaciones web _Express_ (conjuntamente con otras librerías como motores de plantillas, controladores de bases de datos, middleware de autenticación, middleware para servir archivos estáticos, etc.)
 
-_NPM_ puede ser usado también para (globalmente) instalar el Generador de Aplicaciones de _Express_, una herramienta manual para crear la estructura de las web apps de _Express_ que siguen el [patrón MVC](/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture). El generador de aplicaciones es opcional porque no necesita utilizar esta herramienta para crear apps que usan Express, o construir apps Express que tienen el mismo diseño arquitectónico o dependencias. No obstante estaremos usandolo, porque hace mucho más fácil, y promueve una estrucura modular de aplicación.
+_NPM_ puede ser usado también para (globalmente) instalar el Generador de Aplicaciones de _Express_, una herramienta manual para crear la estructura de las web apps de _Express_ que siguen el [patrón MVC](/es/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture). El generador de aplicaciones es opcional porque no necesita utilizar esta herramienta para crear apps que usan Express, o construir apps Express que tienen el mismo diseño arquitectónico o dependencias. No obstante estaremos usandolo, porque hace mucho más fácil, y promueve una estrucura modular de aplicación.
 
 > **Nota:** A diferencia de otros frameworks web , el ambiente de desarrollo no incluye un servidor web independiente. Una aplicación web _Node_/_Express_ crea y ejecuta su propio servidor web!
 

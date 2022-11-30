@@ -1,13 +1,6 @@
 ---
 title: 'Comprueba tus habilidades: Matematicas.'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
-tags:
-  - JavaScript
-  - Matemática
-  - Principiante
-  - Prueba tus habilidades
-  - aprende
-translation_of: Learn/JavaScript/First_steps/Test_your_skills:_Math
 ---
 
 {{learnsidebar}}

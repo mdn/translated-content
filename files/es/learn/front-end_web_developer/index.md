@@ -1,19 +1,6 @@
 ---
 title: Desarrollo web Front-end
 slug: Learn/Front-end_web_developer
-tags:
-  - Aprender
-  - CSS
-  - De lado del cliente
-  - Estándar Web
-  - Estándares web
-  - Front-end
-  - HTML
-  - Herramientas
-  - JavaScript
-  - Novato
-  - Principiante
-translation_of: Learn/Front-end_web_developer
 original_slug: Learn/Desarrollo_web_Front-end
 ---
 

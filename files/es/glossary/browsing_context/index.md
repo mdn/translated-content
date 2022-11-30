@@ -1,7 +1,6 @@
 ---
 title: Contexto de navegación
 slug: Glossary/Browsing_context
-translation_of: Glossary/Browsing_context
 ---
 
 Un **contexto de navegación** es el entorno en el que un {{glossary("navegador")}} muestra un {{domxref("Documento")}} (normalmente una pestaña, pero posiblemente también una ventana o un marco (_frame_) dentro de una página).

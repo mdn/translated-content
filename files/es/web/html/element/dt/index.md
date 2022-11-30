@@ -1,18 +1,6 @@
 ---
 title: dt
 slug: Web/HTML/Element/dt
-tags:
-  - Contenido agrupado HTML
-  - Definición
-  - Elemento
-  - HTML
-  - Lista de definiciones
-  - Referencia
-  - Término
-  - Término de definición
-  - dt
-  - listas
-translation_of: Web/HTML/Element/dt
 original_slug: Web/HTML/Elemento/dt
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: input
 slug: Web/HTML/Element/input
-translation_of: Web/HTML/Element/input
 original_slug: Web/HTML/Elemento/input
-browser-compat: html.elements.input
 ---
 
 ## Resumen

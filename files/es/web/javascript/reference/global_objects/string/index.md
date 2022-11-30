@@ -294,9 +294,7 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string-objects', 'String')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -1,11 +1,6 @@
 ---
 title: Procesos de documentación
 slug: MDN/Contribute/Processes
-tags:
-  - Landing
-  - MDN Meta
-  - Procesos
-translation_of: MDN/Contribute/Processes
 original_slug: MDN/Contribute/Procesos
 ---
 

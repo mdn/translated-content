@@ -1,13 +1,6 @@
 ---
 title: World Wide Web
 slug: Glossary/World_Wide_Web
-tags:
-  - Glosario
-  - Intro
-  - Principiante
-  - WWW
-  - Web
-translation_of: Glossary/World_Wide_Web
 ---
 
 La _World Wide Web_ —comúnmente conocida como **WWW**, **W3**, o **la Web**— es un sistema interconectado de páginas web públicas accesibles a través de {{Glossary("Internet")}} (art. en inglés). La Web no es lo mismo que el Internet: la Web es una de las muchas aplicaciones construidas sobre Internet.

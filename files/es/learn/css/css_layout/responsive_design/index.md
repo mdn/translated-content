@@ -1,7 +1,6 @@
 ---
 title: Diseño receptivo
 slug: Learn/CSS/CSS_layout/Responsive_Design
-translation_of: Learn/CSS/CSS_layout/Responsive_Design
 original_slug: Learn/CSS/CSS_layout/Diseño_receptivo
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: spellcheck
 slug: Web/HTML/Global_attributes/spellcheck
-tags:
-  - Atributos globales
-  - Experimental
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/spellcheck
 original_slug: Web/HTML/Atributos_Globales/spellcheck
 ---
 

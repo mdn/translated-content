@@ -1,9 +1,7 @@
 ---
 title: Window.onbeforeunload
 slug: conflicting/Web/API/Window/beforeunload_event
-translation_of: Web/API/WindowEventHandlers/onbeforeunload
 original_slug: Web/API/WindowEventHandlers/onbeforeunload
-browser-compat: api.Window.beforeunload_event
 ---
 
 {{ApiRef}}
