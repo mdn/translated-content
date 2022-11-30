@@ -1,11 +1,6 @@
 ---
 title: contextmenu
 slug: Web/HTML/Global_attributes/contextmenu
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/contextmenu
 original_slug: Web/HTML/Atributos_Globales/contextmenu
 ---
 

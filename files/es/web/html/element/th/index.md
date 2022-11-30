@@ -1,7 +1,6 @@
 ---
 title: <th>
 slug: Web/HTML/Element/th
-translation_of: Web/HTML/Element/th
 original_slug: Web/HTML/Elemento/th
 ---
 
@@ -131,7 +130,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
     - `row`: The header relates to all cells of the row it belongs to.
     - `col`: The header relates to all cells of the column it belongs to.
-    - `rowgroup`: The header belongs to a rowgroup and relates to all of its cells. These cells can be placed to the right or the left of the header, depending on the value of the [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute in the {{HTMLElement("table")}} element.
+    - `rowgroup`: The header belongs to a rowgroup and relates to all of its cells. These cells can be placed to the right or the left of the header, depending on the value of the [`dir`](/es/docs/Web/HTML/Global_attributes/dir) attribute in the {{HTMLElement("table")}} element.
     - `colgroup`: The header belongs to a colgroup and relates to all of its cells.
     - `auto`
 

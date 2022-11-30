@@ -73,7 +73,7 @@ Esta puede ser incluida en un docuemnto HTML5 de la siguiente manera:
 
 ## Interfaz DOM
 
-Este elemento implementa [`SVGSVGElement`](/en-US/docs/Web/API/SVGSVGElement) en la interfaz.
+Este elemento implementa [`SVGSVGElement`](/es/docs/Web/API/SVGSVGElement) en la interfaz.
 
 ## Especificaciones
 

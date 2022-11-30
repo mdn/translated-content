@@ -7,7 +7,7 @@ slug: Web/CSS/box-shadow
 
 La propiedad CSS `box-shadow` añade efectos de sombra alrededor del marco de un elemento. Se pueden definir múltiples efectos separados por comas. La caja de la sombra se describe por los desplazamientos en X e Y, los radios de desenfoque y dispersión, y el color relativos al elemento.
 
-La propiedad `box-shadow` permite proyectar una sombra difuminada desde el marco de casi cualquier elemento. Si {{cssxref("border-radius")}} es especificado en un elemento con la propiedad box-shadow, la sombra adopta la misma curva en las esquinas. El z-orden de múltiples cajas de sombra es la misma que de múltiples [sombras de texto](/en-US/CSS/text-shadow) (la primera sombra definida se ubica hasta arriba).
+La propiedad `box-shadow` permite proyectar una sombra difuminada desde el marco de casi cualquier elemento. Si {{cssxref("border-radius")}} es especificado en un elemento con la propiedad box-shadow, la sombra adopta la misma curva en las esquinas. El z-orden de múltiples cajas de sombra es la misma que de múltiples [sombras de texto](/es/CSS/text-shadow) (la primera sombra definida se ubica hasta arriba).
 
 [Generador de Box-shadow](/es/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) es una herramienta interactiva que permite generar una `box-shadow`.
 
@@ -40,7 +40,7 @@ box-shadow: unset;
 
 Especifica una sola box-shadow utilizando:
 
-- Dos, tres, o cuatro valores [`<length>`](/en-US/docs/Web/CSS/length).
+- Dos, tres, o cuatro valores [`<length>`](/es/docs/Web/CSS/length).
 
   - Si solo dos valores son definidos, son interpretados como valores [`<offset-x><offset-y>`](#offset-x).
   - Si un tercer valor es dado, es interpretado como un [`<blur-radius>`](#blur-radius).

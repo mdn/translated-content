@@ -1,9 +1,6 @@
 ---
 title: Anatomía de una extension
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Anatomia_de_una_WebExtension
 ---
 
@@ -85,11 +82,11 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 #### Contenido web
 
-Los scripts en segundo plano no tienen acceso directo a las páginas web. Sin embargo, pueden cargar [scripts de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) en páginas web, y [comunicarse con esos scripts empleando la API de paso de mensajes](/en-US/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts).
+Los scripts en segundo plano no tienen acceso directo a las páginas web. Sin embargo, pueden cargar [scripts de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) en páginas web, y [comunicarse con esos scripts empleando la API de paso de mensajes](/es/Add-ons/WebExtensions/Content_scripts#Communicating_with_background_scripts).
 
 #### Políticas de seguridad para el contenido
 
-Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), a través de la Política de Seguridad del Contenido. Vea la [Política de Seguridad del Contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)para más detalles sobre esto.
+Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de [`eval()`](/es/docs/Web/JavaScript/Reference/Global_Objects/eval), a través de la Política de Seguridad del Contenido. Vea la [Política de Seguridad del Contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)para más detalles sobre esto.
 
 ## Scripts de contenido
 
@@ -115,6 +112,6 @@ Mira el artículo [scripts de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/
 
 Los recursos web accesibles son recursos como imágenes, HTML, CSS y JavaScript que tu puedes incluir en la extensión y los quieres hacer accesible a los scripts en segundo plano y los scripts de las páginas. Los recursos que son hechos accesibles desde la web pueden ser referenciados desde scripts de páginas web y scripts de contenido mediante un esquema especial de URI.
 
-Por ejemplo, si un script de contenido quiere insertar algunas imágenes dentro de páginas web, tu puedes incluirlos en la extensión y hacerlos accesibles desde la web. El script de contenido creará y añadirá las etiquetas [`img`](/en-US/docs/Web/HTML/Element/img) que referencia a las imágenes mediante el atributo `src`.
+Por ejemplo, si un script de contenido quiere insertar algunas imágenes dentro de páginas web, tu puedes incluirlos en la extensión y hacerlos accesibles desde la web. El script de contenido creará y añadirá las etiquetas [`img`](/es/docs/Web/HTML/Element/img) que referencia a las imágenes mediante el atributo `src`.
 
 Para aprender más, vea la documentación para la el parámetro [web_accessible_resource](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) del manifest.json.

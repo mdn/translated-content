@@ -1,13 +1,6 @@
 ---
 title: dl
 slug: Web/HTML/Element/dl
-tags:
-  - Agrupando contenido HTML
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/dl
 original_slug: Web/HTML/Elemento/dl
 ---
 

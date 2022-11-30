@@ -35,7 +35,7 @@ Ejemplo:
 
 El [HTML5 boilerplate project](https://github.com/h5bp/html5-boilerplate) tiene un ejemplo sobre [cómo configurar un servidor Apache para redirigir un dominio a otro](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258).
 
-### `Usando <link rel="canonical">`
+### Usando \<link rel="canonical">
 
 Es posible añadir un elemento especial HTML {{HTMLElement("link")}} a una página para indicar cual es la dirección canónica de la página. Esto no tendrá ningún impacto en la lectura humana, pero le dirá a rastreadores de los motores de búsqueda donde vive actualmente la página. De esta manera, los motores de búsqueda no indexan la misma página varias veces, lo que podría hacer que se considere contenido duplicado o correo no deseado, e incluso eliminar o bajar su página de las páginas de resultados del motor de búsqueda.
 

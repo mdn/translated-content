@@ -7,6 +7,7 @@ tags:
 translation_of: Glossary/TTL
 original_slug: Glossaire/TTL
 ---
+
 TTL peut se référer soit à :
 
 - la durée de vie d'un paquet dans un réseau (avant de pouvoir être libéré)

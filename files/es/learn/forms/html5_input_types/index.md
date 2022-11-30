@@ -1,7 +1,6 @@
 ---
 title: Tipos de input de HTML5
 slug: Learn/Forms/HTML5_input_types
-translation_of: Learn/Forms/HTML5_input_types
 original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 ---
 
@@ -30,7 +29,7 @@ En el [artículo anterior](/es/docs/Learn/Forms/Basic_native_form_controls) vimo
   </tbody>
 </table>
 
-> **Nota:** La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/en-US/docs/Web/HTML/Element#Forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Element/input).
+> **Nota:** La mayoría de las características discutidas en este artículo tienen un amplio soporte en todos los navegadores, anotaremos cualquier excepción. Si quieres más detalles referente al soporte de navegadores, deberías consultar nuestra [referéncia de elementos de formulario HTML](/es/docs/Web/HTML/Element#Forms), y en particular nuestra referéncia extensiva de [Tipos de \<input>](/es/docs/Web/HTML/Element/input).
 
 Debido a que la apariéncia de un control de formulario puede ser algo distinta con respecto a unas especificaciones del diseñador, los desarrolladores web a veces construyen sus propios controles de formulario personalizados. Cubrimos este aspecto en un tutorial avanzado: [Cómo construir widgets de formulario personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_widgets).
 

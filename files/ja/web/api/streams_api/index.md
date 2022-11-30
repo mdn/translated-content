@@ -90,7 +90,7 @@ l10n:
 - [Simple random stream](https://mdn.github.io/dom-examples/streams/simple-random-stream/)（単純なランダムストリーム）: この例は、カスタムストリームを使用してランダムな文字列を生成し、それらをチャンクとしてキューに入れてから、再度読み取る方法を示しています。
 - [Simple tee example](https://mdn.github.io/dom-examples/streams/simple-tee-example/)（単純な tee の例）: この例は、単純なランダムストリームの例を拡張したもので、ストリームを tee 化して、両方の結果のストリームの独立して読み取る方法を示しています。
 - [Simple writer](https://mdn.github.io/dom-examples/streams/simple-writer/)（単純なライター）: この例では、書き込み可能なストリームに書き込み、ストリームをデコードして、コンテンツを UI に書き込む方法を示します。
-- [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/)（PNG のチャンクをアンパックする）: この例は、PNG ファイルのデータを PNG のチャンクのストリームに変換することにより、 [`pipeThrough()`](/ja/docs/Web/API/ReadableStream/pipeThrough) を使用して  ReadableStream を他のデータ型のストリームに変換する方法を示します。
+- [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/)（PNG のチャンクをアンパックする）: この例は、PNG ファイルのデータを PNG のチャンクのストリームに変換することにより、 [`pipeThrough()`](/ja/docs/Web/API/ReadableStream/pipeThrough) を使用して ReadableStream を他のデータ型のストリームに変換する方法を示します。
 
 他の開発者による例
 

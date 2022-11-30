@@ -1,10 +1,6 @@
 ---
 title: Operando
 slug: Glossary/Operand
-tags:
-  - Codificación
-  - Glosario
-translation_of: Glossary/Operand
 original_slug: Glossary/Operando
 ---
 

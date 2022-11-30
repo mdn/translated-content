@@ -1,17 +1,6 @@
 ---
 title: Almacenamiento del lado cliente
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-tags:
-  - API
-  - Almacenaje
-  - Article
-  - CodingScripting
-  - Guía
-  - IndexedDB
-  - JavaScript
-  - Principiante
-  - aprende
-translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
 
 {{LearnSidebar}}

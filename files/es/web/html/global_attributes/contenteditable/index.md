@@ -1,11 +1,6 @@
 ---
 title: contenteditable
 slug: Web/HTML/Global_attributes/contenteditable
-tags:
-  - Atributos globales
-  - HTM
-  - Referencia
-translation_of: Web/HTML/Global_attributes/contenteditable
 original_slug: Web/HTML/Atributos_Globales/contenteditable
 ---
 

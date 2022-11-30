@@ -20,9 +20,7 @@ contain-intrinsic-size: 10%;
 
 ## Specifications
 
-| Specification                                                                        | Status                           | Comment            |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS4 Sizing', '#propdef-contain-intrinsic-size')}} | {{Spec2('CSS4 Sizing')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

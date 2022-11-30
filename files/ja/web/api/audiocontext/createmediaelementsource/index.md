@@ -73,9 +73,7 @@ gainNode.connect(audioCtx.destination);
 
 ## 仕様
 
-| 仕様                                                                                                                                                                                                                         | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-createMediaElementSource-MediaElementAudioSourceNode-HTMLMediaElement-mediaElement', 'createMediaElementSource()')}} | {{Spec2('Web Audio API')}} |          |
+{{Specifications}}
 
 ## ブラウザの互換性
 

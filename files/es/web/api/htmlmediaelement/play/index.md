@@ -74,7 +74,7 @@ function handlePlayButton() {
 }
 ```
 
-En este ejemplo, la reproducción de video se activa y desactiva por la función [`async`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) `playVideo()`. Intenta reproducir el video y, si tiene éxito, establece el nombre de clase del elemento `playButton` en "playing". Si la reproducción no se inicia, la clase del elemento `playButton` se borra, restaurando su apariencia predeterminada. Esto garantiza que el bóton de reproducción coincida con el estado real de reproducción al observar la resolución o el rechazo de {{jsxref("Promise")}} devuelto por el método `play()`.
+En este ejemplo, la reproducción de video se activa y desactiva por la función [`async`](/es/docs/Web/JavaScript/Reference/Statements/async_function) `playVideo()`. Intenta reproducir el video y, si tiene éxito, establece el nombre de clase del elemento `playButton` en "playing". Si la reproducción no se inicia, la clase del elemento `playButton` se borra, restaurando su apariencia predeterminada. Esto garantiza que el bóton de reproducción coincida con el estado real de reproducción al observar la resolución o el rechazo de {{jsxref("Promise")}} devuelto por el método `play()`.
 
 Cuando se ejecuta este ejemplo, comienza recogiendo referencias al elemento {{HTMLElement("video")}}, así como al {{HTMLElement("button")}} utilizado para activar y desactivar la reproducción. Luego configura un controlador de eventos para el evento [`click`](/es/docs/Web/Reference/Events/click) en el botón de alternancia de reproducción e intenta comenzar automáticamente la reproducción llamando al método `playVideo()`.
 

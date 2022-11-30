@@ -18,7 +18,7 @@ myMap[Symbol.iterator]
 
 ### Valor retornado
 
-A função iterativa do map, que é a {{jsxref("Map.prototype.entries()", "entries()")}}  por padrão
+A função iterativa do map, que é a {{jsxref("Map.prototype.entries()", "entries()")}} por padrão
 
 ## Exemplos
 

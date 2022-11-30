@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/X-Frame-Options
 
 {{HTTPSidebar}}
 
-El encabezado de respuesta [HTTP](/es/docs/Web/HTTP) **`X-Frame-Options`** puede ser usado para indicar si debería permitírsele a un navegador renderizar una página en un {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} u {{HTMLElement("object")}}. Las páginas web pueden usarlo para evitar ataques de [click-jacking](/en-US/docs/Web/Security/Types_of_attacks#click-jacking), asegurándose de que su contenido no es embebido en otros sitios.
+El encabezado de respuesta [HTTP](/es/docs/Web/HTTP) **`X-Frame-Options`** puede ser usado para indicar si debería permitírsele a un navegador renderizar una página en un {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} u {{HTMLElement("object")}}. Las páginas web pueden usarlo para evitar ataques de [click-jacking](/es/docs/Web/Security/Types_of_attacks#click-jacking), asegurándose de que su contenido no es embebido en otros sitios.
 
 La seguridad añadida sólo es proporcionada si el usuario que está accediendo al documento está utilizando un navegador que soporte `X-Frame-Options`.
 
@@ -42,11 +42,11 @@ Si especifica `DENY`, fallarán no sólo los intentos de cargar la página en un
 - `SAMEORIGIN`
   - : La página sólo puede ser mostrada en un marco del mismo origen que dicha página.   La especificación deja que los proveedores de navegadores decidan si esta opción se aplica al nivel superior, al padre o a toda la cadena, aunque se argumenta que la opción no es muy útil a menos que todos los padres también estén en el mismo origen (ver {{bug(725490)}}). Consulte también [Browser compatibility](#browser_compatibility) para obtener detalles de soporte.
 - `ALLOW-FROM uri` {{deprecated_inline}}
-  - : Esta es una directiva obsoleta que ya no funciona en navegadores modernos. No usar. En el soporte de navegadores antiguos, una página se puede mostrar en un marco solo en el origen especificado _uri_. Tenga en cuenta que en versiones anteriores de  Firefox esto todavía sufre del mismo problema que `SAMEORIGIN` — no verifica los antecesores del marco para ver si están en el mismo origen. El encabezado HTTP {{HTTPHeader("Content-Security-Policy")}} tiene una directiva  {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} que puede usar en su lugar.
+  - : Esta es una directiva obsoleta que ya no funciona en navegadores modernos. No usar. En el soporte de navegadores antiguos, una página se puede mostrar en un marco solo en el origen especificado _uri_. Tenga en cuenta que en versiones anteriores de Firefox esto todavía sufre del mismo problema que `SAMEORIGIN` — no verifica los antecesores del marco para ver si están en el mismo origen. El encabezado HTTP {{HTTPHeader("Content-Security-Policy")}} tiene una directiva {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} que puede usar en su lugar.
 
 ## Ejemplos
 
-> **Nota:** ¡Configurar X-Frame-Options en el tag {{HTMLElement("meta")}} es inútil!  Por ejemplo, `<meta http-equiv="X-Frame-Options" content="deny">` no tiene efecto. ¡No lo use! `X-Frame-Options` sólo funcionará configurandolo a tráves del encabezado HTTP, como en los ejemplos a continuación.
+> **Nota:** ¡Configurar X-Frame-Options en el tag {{HTMLElement("meta")}} es inútil! Por ejemplo, `<meta http-equiv="X-Frame-Options" content="deny">` no tiene efecto. ¡No lo use! `X-Frame-Options` sólo funcionará configurandolo a tráves del encabezado HTTP, como en los ejemplos a continuación.
 
 ### Configurando Apache
 

@@ -135,7 +135,7 @@ if (!Array.prototype.toLocaleString) {
 }
 ```
 
-Si necesitas soportar motores de JavaScript obsoletos que no compatibilizan con [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), es mejor no utilizar los métodos `Array.prototype`, ya que no se pueden hacer no-enumerables.
+Si necesitas soportar motores de JavaScript obsoletos que no compatibilizan con [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty), es mejor no utilizar los métodos `Array.prototype`, ya que no se pueden hacer no-enumerables.
 
 ## Especificaciones
 

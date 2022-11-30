@@ -1,14 +1,6 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-tags:
-  - Elemento
-  - Formulario(2)
-  - HTML
-  - Referencia
-  - Web
-  - formularios html(2)
-translation_of: Web/HTML/Element/select
 original_slug: Web/HTML/Elemento/select
 ---
 

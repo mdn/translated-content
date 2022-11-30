@@ -1,12 +1,6 @@
 ---
 title: Encriptación
 slug: Glossary/Encryption
-tags:
-  - Criptografía
-  - Glosario
-  - Seguridad
-  - privacidad
-translation_of: Glossary/Encryption
 original_slug: Glossary/Encriptación
 ---
 

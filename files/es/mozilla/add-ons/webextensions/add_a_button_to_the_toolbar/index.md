@@ -1,7 +1,6 @@
 ---
 title: Agregar botón a la barra de herramientas
 slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
-translation_of: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
 ---
 
 {{AddonSidebar}}
@@ -13,8 +12,8 @@ La barra de herramientas es una de las principales componentes UI disponibles pa
 
 Con las APIs de WebExtension, este tipo de botón es se llaman "browser actions", y son configurados de la siguiente manera:
 
-- La clave [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) en manifest.json es usada para definir el botón.
-- La API de JavaScript [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) es usada para escuchar los clicks y cambiar el botón o realizar alguna acción en el codigo.
+- La clave [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) en manifest.json es usada para definir el botón.
+- La API de JavaScript [`browserAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) es usada para escuchar los clicks y cambiar el botón o realizar alguna acción en el codigo.
 
 ## Un simple botón
 
@@ -44,7 +43,7 @@ Primero, crear una nueva carpeta "botón", y crea un archivo con el nombre de "m
 }
 ```
 
-Esto especifica que tenemos un [background script](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) llamado "background.js", y un **browser action** (butón) cuyo icono va a estar en la carpeta "icons".
+Esto especifica que tenemos un [background script](/es/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) llamado "background.js", y un **browser action** (butón) cuyo icono va a estar en la carpeta "icons".
 
 Estos iconos son de [bitsies!](https://www.iconfinder.com/iconsets/bitsies) conjunto de iconos creados por Recep Kütük.
 
@@ -67,7 +66,7 @@ function openPage() {
 browser.browserAction.onClicked.addListener(openPage);
 ```
 
-Esto esta a la espera de de el navegador se de click; cuando el evento se dispara, la funcion `openPage()` comienza a ejecutarse, el cual abre la página especificada usando la API de [`tabs`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs).
+Esto esta a la espera de de el navegador se de click; cuando el evento se dispara, la funcion `openPage()` comienza a ejecutarse, el cual abre la página especificada usando la API de [`tabs`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs).
 
 En este momento la extension debe de mirarse asi:
 
@@ -80,7 +79,7 @@ button/
     manifest.json
 ```
 
-Ahora [instala la extensión](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y da click en el botón:
+Ahora [instala la extensión](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y da click en el botón:
 
 {{EmbedYouTube("kwwTowgT-Ys")}}
 
@@ -203,8 +202,8 @@ Mientras de las acciones del navegaro siembre son mostradas, las acciones de pá
 
 ## Aprende más
 
-- [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
-- [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
+- [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key
+- [`browserAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - Ejemplos de acciones del navegador:
 
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
@@ -213,8 +212,8 @@ Mientras de las acciones del navegaro siembre son mostradas, las acciones de pá
   - [inpage-toolbar-ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
   - [open-my-page-button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
 
-- [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
-- [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
+- [`page_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) manifest key
+- [`pageAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - Ejemplos de Acciones de página:
 
   - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)

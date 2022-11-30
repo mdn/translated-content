@@ -32,9 +32,7 @@ throw e;
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error.prototype.name', 'Error.prototype.name')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

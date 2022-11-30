@@ -1,11 +1,6 @@
 ---
 title: Usa tu nuevo conocimiento
 slug: Learn/CSS/First_steps/Styling_a_biography_page
-tags:
-  - Aprendizaje
-  - CSS
-  - Principiante
-translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
 

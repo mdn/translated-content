@@ -107,9 +107,7 @@ console.log(d == s);    //true
 
 ## Especificaciones
 
-| Especificaciones                                                                                 |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}} |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

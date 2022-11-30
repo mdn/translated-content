@@ -1,17 +1,6 @@
 ---
 title: Estructuración de una Página de contenido
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
-tags:
-  - Aprendizaje
-  - Diseño
-  - Escribir Código
-  - Estructuración
-  - Evaluación
-  - HTML
-  - Principiante
-  - Prototipado
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 original_slug: Learn/HTML/Introduccion_a_HTML/Estructuración_de_una_página_de_contenido
 ---
 

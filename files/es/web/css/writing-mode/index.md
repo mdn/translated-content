@@ -132,7 +132,7 @@ th {background-color: lightgray; }
 
 ## Véase también
 
-- Atributo de SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode)
+- Atributo de SVG [`writing-mode`](/es/docs/Web/SVG/Attribute/writing-mode)
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}

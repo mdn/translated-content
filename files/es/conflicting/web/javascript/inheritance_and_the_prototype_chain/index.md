@@ -1,13 +1,6 @@
 ---
 title: Detalles del modelo de objetos
 slug: conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain
-tags:
-  - Guía
-  - Intermedio
-  - JavaScript
-  - Objeto
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Details_of_the_Object_Model
 original_slug: Web/JavaScript/Guide/Details_of_the_Object_Model
 ---
 

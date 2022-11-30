@@ -46,9 +46,7 @@ var year = today.getFullYear();
 
 ## Especificaciones
 
-| Especificación                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.getfullyear', 'Date.prototype.getFullYear')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

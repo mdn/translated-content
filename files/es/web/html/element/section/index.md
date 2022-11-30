@@ -1,7 +1,6 @@
 ---
 title: section
 slug: Web/HTML/Element/section
-translation_of: Web/HTML/Element/section
 original_slug: Web/HTML/Elemento/section
 ---
 

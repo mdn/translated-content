@@ -1,25 +1,6 @@
 ---
 title: Crear hipervínculos
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Aprender
-  - CodingScripting
-  - Guía
-  - HTML
-  - HTTP
-  - Novato
-  - Principiante
-  - Title
-  - URL
-  - enlace
-  - hiperenlaces
-  - hipervínculos
-  - href
-  - referencia absoluta
-  - referencia relativa
-  - título
-  - urls
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 original_slug: Learn/HTML/Introduccion_a_HTML/Creating_hyperlinks
 ---
 

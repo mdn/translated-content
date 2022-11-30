@@ -1,23 +1,11 @@
 ---
 title: 'Tutorial de Django Parte 8: Autenticación y permisos de Usuario'
 slug: Learn/Server-side/Django/Authentication
-tags:
-  - Aprender
-  - Artículo
-  - Autenticacion de Django
-  - Autenticación
-  - Principiante
-  - Python
-  - Sesiones
-  - Tutorial
-  - django autenticación
-  - permisos
-translation_of: Learn/Server-side/Django/Authentication
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
-En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu sitio con sus propias cuentas, y cómo controlar lo que pueden hacer basándose en si han iniciado sesión o no y sus _permisos_. Como parte de esta demostración extenderemos el sitio web de la [BibliotecaLocal](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de inicio y cierre de sesión, y páginas específicas de usuarios y personal de la biblioteca para ver libros que han sido prestados.
+En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu sitio con sus propias cuentas, y cómo controlar lo que pueden hacer basándose en si han iniciado sesión o no y sus _permisos_. Como parte de esta demostración extenderemos el sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de inicio y cierre de sesión, y páginas específicas de usuarios y personal de la biblioteca para ver libros que han sido prestados.
 
 <table>
   <tbody>
@@ -46,7 +34,7 @@ Django proporciona un sistema de autenticación y autorización ("permisos"), co
 
 > **Nota:** Según Django el sistema de autenticación pretende ser muy genérico, y, por lo tanto, no proporciona algunas características proporcinadas en otros sistemas de autenticación web. Las soluciones para algunos problemas están disponibles como paquetes de terceros. Por ejemplo, regulación de intentos de inicio de sesión y autenticación frente a terceros (por ej. OAuth).
 
-En este tutorial mostraremos cómo habilitar la autenticación de usuarios en el sitio web [BibliotecaLocal](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), crear tus propias páginas de login y logout, añadir permisos a tus modelos, y controlar el acceso a las páginas. Usaremos la autenticación/permisos para desplegar listas de libros que han sido solicitados tanto por los usuarios como por los bibliotecarios.
+En este tutorial mostraremos cómo habilitar la autenticación de usuarios en el sitio web [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), crear tus propias páginas de login y logout, añadir permisos a tus modelos, y controlar el acceso a las páginas. Usaremos la autenticación/permisos para desplegar listas de libros que han sido solicitados tanto por los usuarios como por los bibliotecarios.
 
 El sistema de autenticación es muy flexible, y puedes crear tus URLs, formularios, vistas y plantillas desde el inicio si quieres, simplemente llamando a la API provista para loguear al usuario. Sin embargo, en este artículo vamos a usar las vistas y formularios de autenticación "en stock" de Django para nuestras páginas de login y logout. De todos modos necesitaremos crear algunas plantillas, pero eso es bastante fácil.
 

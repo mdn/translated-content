@@ -1,16 +1,6 @@
 ---
 title: Move the ball
 slug: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
-tags:
-  - 2D
-  - Emocionante
-  - JavaScript
-  - Lienzo
-  - Phaser
-  - Principiante
-  - Tutorial
-  - juegos
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball
 ---
 
 {{GamesSidebar}}

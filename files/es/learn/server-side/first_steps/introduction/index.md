@@ -1,15 +1,6 @@
 ---
 title: Introducción al lado servidor
 slug: Learn/Server-side/First_steps/Introduction
-tags:
-  - Aprendizaje
-  - Codificación de scripts
-  - Guía
-  - Principiante
-  - Programación lado servidor
-  - Servidor
-  - introducción
-translation_of: Learn/Server-side/First_steps/Introduction
 original_slug: Learn/Server-side/Primeros_pasos/Introducción
 ---
 

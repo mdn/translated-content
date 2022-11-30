@@ -187,10 +187,7 @@ ARIA の行を作成するには、コンテナー要素に行ロール (`role="
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                                             |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#row","ARIA row role")}}                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#row","ARIA row role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 関連情報
 

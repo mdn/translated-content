@@ -10,11 +10,11 @@ original_slug: Web/API/Document/documentURIObject
 
 **Read-only**
 
-Devuelve un objeto `nsIURI` que representa la URI de [document](es/DOM/document).
+Devuelve un objeto `nsIURI` que representa la URI de [document](/es/DOM/document).
 
 Esto sólo funciona para programas con privilegios (UniversalXPConnect) incluidas las extensiones. Para páginas web, esta propiedad no tiene significado especial y puede usarse de igual forma que cualquier otra propiedad del usuario.
 
-El código con privilegios, debe tener cuidado de no leer o escribir esta propiedad en un objeto no controlado (e.g. on a `wrappedJSObject` of an [`XPCNativeWrapper`](es/XPCNativeWrapper)). Ver {{ Bug(324464) }}para más detalles.
+El código con privilegios, debe tener cuidado de no leer o escribir esta propiedad en un objeto no controlado (e.g. on a `wrappedJSObject` of an [`XPCNativeWrapper`](/es/XPCNativeWrapper)). Ver {{ Bug(324464) }}para más detalles.
 
 ### Sintaxis
 

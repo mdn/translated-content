@@ -6,6 +6,7 @@ tags:
 translation_of: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 original_slug: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 ---
+
 {{MDNSidebar}}
 
 Ao aprender a web, é importante confiar no conteúdo da aprendizagem ativa. Esse conteúdo é feito para ajudar a aprender algo pró-ativamente. Pode ser exercícios, exemplos de hackeáveis ​​em tempo real, tarefas a realizar, análises, etc. Em suma, qualquer coisa que desejar, ajuda alguém a entender ativamente algo.

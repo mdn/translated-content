@@ -16,9 +16,9 @@ new DOMRectReadOnly(x, y, width, height)
 ### 引数
 
 - _x_
-  - :  `DOMRectReadOnly` の原点の `x` 座標です。
+  - : `DOMRectReadOnly` の原点の `x` 座標です。
 - _y_
-  - :  `DOMRectReadOnly` の原点の `y` 座標です。
+  - : `DOMRectReadOnly` の原点の `y` 座標です。
 
 - _width_
   - : `DOMRectReadOnly` の幅です。

@@ -109,7 +109,7 @@ do
 while (condición);
 ```
 
-_`exposición`_ siempre se ejecuta una vez antes de que se verifique la condición. (Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones).
+`exposición` siempre se ejecuta una vez antes de que se verifique la condición. (Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones).
 
 Si `condición` es `true`, la declaración se ejecuta de nuevo. Al final de cada ejecución, se comprueba la condición. Cuando la condición es `false`, la ejecución se detiene y el control pasa a la declaración que sigue a `do...while`.
 
@@ -128,15 +128,15 @@ while (condición)
   expresión
 ```
 
-Si la _`condición`_ se vuelve `false`, la `instrucción` dentro del bucle se deja de ejecutar y el control pasa a la instrucción que sigue al bucle.
+Si la `condición` se vuelve `false`, la `instrucción` dentro del bucle se deja de ejecutar y el control pasa a la instrucción que sigue al bucle.
 
-La prueba de condición ocurre _antes_ de que se ejecute la `expresión` en el bucle. Si la condición devuelve `true`, se ejecuta la `expresión` y la _`condición`_ se prueba de nuevo. Si la condición devuelve `false`, la ejecución se detiene y el control se pasa a la instrucción que sigue a `while`.
+La prueba de condición ocurre _antes_ de que se ejecute la `expresión` en el bucle. Si la condición devuelve `true`, se ejecuta la `expresión` y la `condición` se prueba de nuevo. Si la condición devuelve `false`, la ejecución se detiene y el control se pasa a la instrucción que sigue a `while`.
 
 Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones.
 
 ### Ejemplo 1
 
-El siguiente ciclo del `while` se repite siempre que _`n`_ sea menor que `3`:
+El siguiente ciclo del `while` se repite siempre que `n` sea menor que `3`:
 
 ```js
 let n = 0;
@@ -272,9 +272,9 @@ while (i < 5) {
 
 ### Ejemplo 2
 
-Una declaración etiquetada _`checkiandj`_ contiene una declaración etiquetada _`checkj`_. Si se encuentra `continue`, el programa termina la iteración actual de _`checkj`_ y comienza la siguiente iteración. Cada vez que se encuentra `continue`, _`checkj`_ reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el resto de la instrucción _`checkiandj`_ se completa y _`checkiandj`_ reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el programa continúa en la declaración que sigue a _`checkiandj`_.
+Una declaración etiquetada `checkiandj` contiene una declaración etiquetada `checkj`. Si se encuentra `continue`, el programa termina la iteración actual de `checkj` y comienza la siguiente iteración. Cada vez que se encuentra `continue`, `checkj` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el resto de la instrucción `checkiandj` se completa y `checkiandj` reitera hasta que su condición devuelve `false`. Cuando se devuelve `false`, el programa continúa en la declaración que sigue a `checkiandj`.
 
-Si `continue` tuviera una etiqueta de _`checkiandj`_, el programa continuaría en la parte superior de la declaración _`checkiandj`_.
+Si `continue` tuviera una etiqueta de `checkiandj`, el programa continuaría en la parte superior de la declaración `checkiandj`.
 
 let i = 0; let j = 10; checkiandj: while (i < 4) { console.log(i); i += 1; checkj: while (j > 4) { console.log(j); j -= 1; if ((j % 2) === 0) { continue checkj; } console.log(j + 'es impar.'); } console.log('i = ' + i); console.log('j = ' + j); }
 

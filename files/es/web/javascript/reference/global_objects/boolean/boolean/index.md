@@ -54,9 +54,7 @@ var bObjProto = new Boolean({});
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-boolean-constructor', 'Boolean constructor')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

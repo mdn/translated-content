@@ -16,9 +16,9 @@ Las actualizaciones del protocolo de comunicación son siempre iniciadas por el 
 
 Específicamente la petición ha de incluir las dos siguientes cabeceras:
 
-- [`Connection: Upgrade`](/en-US/docs/Web/HTTP/Headers/Connection)
+- [`Connection: Upgrade`](/es/docs/Web/HTTP/Headers/Connection)
   - : La cabecera de conexión (`Connection`) ha de tener el valor `"Upgrade"`, para indicar que se está pidiendo una actualización del protocolo.
-- [`Upgrade: protocols`](/en-US/docs/Web/HTTP/Headers/Upgrade)
+- [`Upgrade: protocols`](/es/docs/Web/HTTP/Headers/Upgrade)
   - : La cabecera de actualización (`Upgrade`) indica los protocolos deseados, en orden de preferencia, separados por comas.
 
 Puede que sean necesarias otras cabeceras, dependiendo del protocolo que se pida.; por ejemplo: las actualizaciones a [WebSocket](/es/docs/Web/API/WebSocket) necesitan cabeceras adicionales para definir la configuración de la conexión, así como para detalles de la seguridad. Para más detalles, lea la sección: [Upgrading to a WebSocket connection](#upgrading_to_a_websocket_connection).

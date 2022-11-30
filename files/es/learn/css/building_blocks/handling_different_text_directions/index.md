@@ -1,15 +1,6 @@
 ---
 title: Manejando diferentes direcciones de texto
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
-tags:
-  - Aprendizaje
-  - CSS
-  - Diseño en bloque
-  - Diseño lineal
-  - Modos de escritura
-  - Principiante
-  - Propiedades lógicas
-translation_of: Learn/CSS/Building_blocks/Handling_different_text_directions
 original_slug: Learn/CSS/Building_blocks/Manejando_diferentes_direcciones_de_texto
 ---
 

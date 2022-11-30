@@ -1,12 +1,6 @@
 ---
 title: 'HTML el atributo: min'
 slug: Web/HTML/Attributes/min
-tags:
-  - Atributos
-  - Restricción de validación
-  - atributo
-  - min
-translation_of: Web/HTML/Attributes/min
 original_slug: Web/HTML/Atributos/min
 ---
 

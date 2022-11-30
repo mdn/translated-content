@@ -1,12 +1,6 @@
 ---
 title: <base>
 slug: Web/HTML/Element/base
-tags:
-  - Elemento
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/base
 original_slug: Web/HTML/Elemento/base
 ---
 

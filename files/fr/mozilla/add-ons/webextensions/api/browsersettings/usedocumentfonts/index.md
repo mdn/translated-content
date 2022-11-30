@@ -22,7 +22,7 @@ Par défaut, bien sûr, les pages Web peuvent spécifier les polices qu'ils veul
 Sa valeur sous-jacente est un booléen :
 
 - `true`: utilise les polices spécifiées par la page Web. C'est la valeur par défaut.
-- `false`:  utilise les polices du système.
+- `false`: utilise les polices du système.
 
 ## Compatibilité du navigateur
 

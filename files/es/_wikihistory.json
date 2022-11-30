@@ -8825,10 +8825,6 @@
     "modified": "2019-09-11T09:31:45.916Z",
     "contributors": ["SphinxKnight", "VictorAbdon", "Sheppy"]
   },
-  "Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC": {
-    "modified": "2019-03-23T23:27:02.999Z",
-    "contributors": ["pablocubico", "maedca"]
-  },
   "Web/Guide/CSS/Block_formatting_context": {
     "modified": "2019-03-23T22:32:27.340Z",
     "contributors": ["Enesimus", "javichito"]
@@ -14687,8 +14683,8 @@
     "contributors": ["israelfl"]
   },
   "conflicting/Web/API/WebRTC_API": {
-    "modified": "2019-03-23T23:26:58.291Z",
-    "contributors": ["sebasmagri"]
+    "modified": "2019-03-23T23:27:02.999Z",
+    "contributors": ["pablocubico", "maedca"]
   },
   "conflicting/Web/API/WebSockets_API": {
     "modified": "2019-01-16T13:56:47.847Z",

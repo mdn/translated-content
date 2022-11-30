@@ -55,4 +55,4 @@ form{min-width: 0;}
 
 ### Ver también
 
-[box model](es/CSS/box_model), {{ Cssxref("min-height") }}, {{ Cssxref("-moz-box-sizing") }}, {{ Cssxref("width") }}, {{ Cssxref("max-width") }}
+[box model](/es/CSS/box_model), {{ Cssxref("min-height") }}, {{ Cssxref("-moz-box-sizing") }}, {{ Cssxref("width") }}, {{ Cssxref("max-width") }}

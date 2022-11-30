@@ -109,9 +109,7 @@ console.log(nums);
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-array.prototype.concat', 'Array.prototype.concat')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

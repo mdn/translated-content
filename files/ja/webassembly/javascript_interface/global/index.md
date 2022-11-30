@@ -37,7 +37,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 
 以下の例では新しいグローバルインスタンスは `WebAssembly.Global()` コンストラクターを用いて初期化され、初期値 0 の変更可能な `i32` 型として定義されます。
 
-その後この値は、`Global.value` プロパティを使うことによって `42` に、`global.wasm` モジュールから公開された (どんな値が与えられても 1 を加算して、新しい値を返す)  `incGlobal()` 関数を使うことによって `43` になります。
+その後この値は、`Global.value` プロパティを使うことによって `42` に、`global.wasm` モジュールから公開された (どんな値が与えられても 1 を加算して、新しい値を返す) `incGlobal()` 関数を使うことによって `43` になります。
 
 ```js
 const output = document.getElementById('output');

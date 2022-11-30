@@ -184,9 +184,7 @@ var integrado = [[0,1], [2,3], [4,5]].reduce(function(a,b) {
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-array.prototype.reduce', 'Array.prototype.reduce()')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

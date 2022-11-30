@@ -1,18 +1,6 @@
 ---
 title: Almacenando la información que necesitas - Variables
 slug: Learn/JavaScript/First_steps/Variables
-tags:
-  - Arreglos
-  - Booleanos
-  - Booleans
-  - JavaScript
-  - Numeros
-  - Objetos
-  - Variables
-  - cadenas de texto
-  - l10n:priority
-  - strings
-translation_of: Learn/JavaScript/First_steps/Variables
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}

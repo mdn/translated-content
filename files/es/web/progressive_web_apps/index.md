@@ -1,14 +1,6 @@
 ---
 title: Aplicaciones Web Progresivas
 slug: Web/Progressive_web_apps
-tags:
-  - Aplicaciones Web
-  - Aplicaciones web modernas
-  - Aplicación Web Progresiva
-  - Aplicación web
-  - PWA
-  - aplicación
-translation_of: Web/Progressive_web_apps
 ---
 
 ![Logotipo de la comunidad PWA](https://mdn.mozillademos.org/files/16742/pwa.png)Las **_aplicaciones web progresivas_** (mejor conocidas como **PWA**s por «_**P**rogressive **W**eb **A**pps_») son aplicaciones web que utilizan APIs y funciones emergentes del navegador web junto a una estrategia tradicional de mejora progresiva para ofrecer una aplicación nativa —como la experiencia del usuario para aplicaciones web multiplataforma. Las aplicaciones web progresivas son un patrón de diseño útil, aunque no son un estándar formalizado. Se puede pensar que PWA es similar a AJAX u otros patrones similares que abarcan un conjunto de atributos de aplicación, incluido el uso de tecnologías y técnicas web específicas. Este conjunto de documentos te dice todo lo que necesitas saber sobre ellas.

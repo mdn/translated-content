@@ -20,11 +20,11 @@ Events initialized in this way must have been created with the {{ domxref("Docum
 event.initEvent(type, bubbles, cancelable);
 ```
 
-- _`type`_
+- `type`
   - : {{domxref("DOMString")}}, определяющая тип события.
-- _`bubbles`_
+- `bubbles`
   - : Is a {{jsxref("Boolean")}} deciding whether the event should bubble up through the event chain or not. Once set, the read-only property {{ domxref("Event.bubbles") }} will give its value.
-- _`cancelable`_
+- `cancelable`
   - : Is a {{jsxref("Boolean")}} defining whether the event can be canceled. Once set, the read-only property {{ domxref("Event.cancelable") }} will give its value.
 
 ## Пример

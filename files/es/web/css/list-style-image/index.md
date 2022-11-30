@@ -7,7 +7,7 @@ slug: Web/CSS/list-style-image
 
 ### Resumen
 
-La imagen de lista (`list-style-image`) define la imagen que será utilizada como marcador del [listado](es/HTML/Element/li).
+La imagen de lista (`list-style-image`) define la imagen que será utilizada como marcador del [listado](/es/HTML/Element/li).
 
 - {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("none", "ninguno") }}
 - Se aplica a: elementos con 'display: list-item'

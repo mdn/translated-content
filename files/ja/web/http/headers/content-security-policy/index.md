@@ -126,7 +126,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
   - : DOM XSS インジェクションシンクで [Trusted
     Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) を強制します。
 - {{CSP("trusted-types")}}{{experimental_inline}}
-  - :  [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) ポリシーのホワイトリストを指定するために使用します (Trusted Types は、アプリケーションが DOM XSS インジェクションシンクをロックダウンして、文字列の代わりにスプーフィング不可能な型付きの値のみを受け入れるようにします)。
+  - : [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) ポリシーのホワイトリストを指定するために使用します (Trusted Types は、アプリケーションが DOM XSS インジェクションシンクをロックダウンして、文字列の代わりにスプーフィング不可能な型付きの値のみを受け入れるようにします)。
 - {{CSP("upgrade-insecure-requests")}}
   - : 安全でない URL (HTTP で提供されているもの) をすべて安全な URL (HTTPS で提供されているもの) に置き換えたかのように扱うようにユーザエージェントに指示します。このディレクティブは、書き換えが必要な安全でない古い URL が大量にあるウェブサイトを対象としています。
 

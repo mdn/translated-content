@@ -6,7 +6,7 @@ original_slug: MDN/Contribute/Feedback
 
 <div>{{MDNSidebar}}</div>
 
-<p>Mozilla 개발자 네트워크에 오신것을 환영합니다!  만일 당신이 MDN을 사용하면서 발견한 문제점들이나 바라는 점들을 제안하고 싶다면 이곳은 당신에게 어울리는 장소입니다. 당신이 피드백을 제공함으로써 당신의 Mozilla 커뮤니티에서의 힘은 더 커질 것이고 우리는 당신의 관심에 감사드릴 것입니다.</p>
+<p>Mozilla 개발자 네트워크에 오신것을 환영합니다! 만일 당신이 MDN을 사용하면서 발견한 문제점들이나 바라는 점들을 제안하고 싶다면 이곳은 당신에게 어울리는 장소입니다. 당신이 피드백을 제공함으로써 당신의 Mozilla 커뮤니티에서의 힘은 더 커질 것이고 우리는 당신의 관심에 감사드릴 것입니다.</p>
 
 <p>당신에게는 당신의 통찰력을 제공하기 위한 몇가지 선택사항들이 있으며 이 문서는 당신에게 도움을 줄 것입니다.</p>
 
@@ -47,7 +47,7 @@ original_slug: MDN/Contribute/Feedback
 
 <h3 id="토론_비동기">토론 (비동기)</h3>
 
-<p>장기 토론은 <a href="https://discourse.mozilla-community.org/c/mdn">MDN 토론 포럼</a> 을 사용합니다.  이메일(<a href="mailto://mdn@mozilla-community.org">mdn@mozilla-community.org</a>)을 통해서 포럼에 게시물을 올릴 수 있습니다. 포럼에 합류하면 이메일로 토론 알림을 받을건지 선택할 수 있습니다. </p>
+<p>장기 토론은 <a href="https://discourse.mozilla-community.org/c/mdn">MDN 토론 포럼</a> 을 사용합니다. 이메일(<a href="mailto://mdn@mozilla-community.org">mdn@mozilla-community.org</a>)을 통해서 포럼에 게시물을 올릴 수 있습니다. 포럼에 합류하면 이메일로 토론 알림을 받을건지 선택할 수 있습니다. </p>
 
 <h2 id="문제_보고하기">문제 보고하기</h2>
 

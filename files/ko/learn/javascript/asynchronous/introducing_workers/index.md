@@ -231,7 +231,7 @@ function generatePrimes(quota) {
 다른 유형의 워커도 있습니다.
 
 - [_Shared workers_](/ko/docs/Web/API/SharedWorker)는 서로 다른 창에서 실행되는 여러 스크립트에서 공유될 수 있습니다.
-- [_Service workers_](/ko/docs/Web/API/Service_Worker_API)는 사용자가 오프라인 상태일 때 웹  애플리케이션이 작동할 수 있도록 리소스를 캐싱하는, 마치 프록시 서버처럼 작동합니다. [Progressive Web Apps](/ko/docs/Web/Progressive_web_apps)의 핵심 구성 요소입니다.
+- [_Service workers_](/ko/docs/Web/API/Service_Worker_API)는 사용자가 오프라인 상태일 때 웹 애플리케이션이 작동할 수 있도록 리소스를 캐싱하는, 마치 프록시 서버처럼 작동합니다. [Progressive Web Apps](/ko/docs/Web/Progressive_web_apps)의 핵심 구성 요소입니다.
 
 ## 결론
 

@@ -90,9 +90,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 ## 仕様
 
-| 仕様書                                                           | 策定状況                 | コメント                            |
-| ---------------------------------------------------------------- | ------------------------ | ----------------------------------- |
-| {{SpecName("WebIDL", "#es-forEach", "forEach")}} | {{Spec2("WebIDL")}} | `iterable` 宣言で`forEach` を定義。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

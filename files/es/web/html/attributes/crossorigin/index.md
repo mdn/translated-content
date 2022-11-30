@@ -1,7 +1,6 @@
 ---
 title: Atributos de configuración CORS
 slug: Web/HTML/Attributes/crossorigin
-translation_of: Web/HTML/Attributes/crossorigin
 original_slug: Web/HTML/Atributos_de_configuracion_CORS
 ---
 
