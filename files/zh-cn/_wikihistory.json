@@ -33758,22 +33758,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/JavaScript": {
-    "modified": "2020-03-12T19:36:16.731Z",
-    "contributors": [
-      "Poisonloc",
-      "ziyunfei",
-      "Breezewish",
-      "gelin",
-      "teoli",
-      "Meteormatt",
-      "ethertank",
-      "undercooled"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference": {
-    "modified": "2020-03-12T19:40:27.168Z",
-    "contributors": ["Jack-Q", "lunix01", "qlxiao520", "ziyunfei", "yenshen"]
   }
 }

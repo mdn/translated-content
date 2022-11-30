@@ -147,7 +147,7 @@
 /zh-CN/docs/Controlling_DNS_prefetching	/zh-CN/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
 /zh-CN/docs/Core_JavaScript_1.5_Guide/Objects_and_Properties	/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /zh-CN/docs/Core_JavaScript_1.5_Guide:Objects_and_Properties	/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators
-/zh-CN/docs/Core_JavaScript_1.5_Reference/About	/zh-CN/docs/conflicting/Web/JavaScript/Reference
+/zh-CN/docs/Core_JavaScript_1.5_Reference/About	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Comments	/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Functions	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Functions/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
@@ -179,7 +179,7 @@
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Properties/NaN	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Statements	/zh-CN/docs/Web/JavaScript/Reference/Statements
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Statements/throw	/zh-CN/docs/Web/JavaScript/Reference/Statements/throw
-/zh-CN/docs/Core_JavaScript_1.5_Reference:About	/zh-CN/docs/conflicting/Web/JavaScript/Reference
+/zh-CN/docs/Core_JavaScript_1.5_Reference:About	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Functions:Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Functions:String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Functions:parseInt	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt
@@ -604,7 +604,7 @@
 /zh-CN/docs/IndexedDB/Using_IndexedDB	/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /zh-CN/docs/Introduction_to_using_XPath_in_JavaScript	/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /zh-CN/docs/JS-ref	/zh-CN/docs/Web/JavaScript/Reference
-/zh-CN/docs/JS-ref/About	/zh-CN/docs/conflicting/Web/JavaScript/Reference
+/zh-CN/docs/JS-ref/About	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JS-ref/Array	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
 /zh-CN/docs/JS-ref/Array/Reduce	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /zh-CN/docs/JS-ref/Array/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
@@ -792,7 +792,7 @@
 /zh-CN/docs/JavaScript/Language_Resources	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/JavaScript/Memory_Management	/zh-CN/docs/Web/JavaScript/Memory_Management
 /zh-CN/docs/JavaScript/Reference	/zh-CN/docs/Web/JavaScript/Reference
-/zh-CN/docs/JavaScript/Reference/About	/zh-CN/docs/conflicting/Web/JavaScript/Reference
+/zh-CN/docs/JavaScript/Reference/About	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JavaScript/Reference/Array	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
 /zh-CN/docs/JavaScript/Reference/Array/Reduce	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /zh-CN/docs/JavaScript/Reference/Array/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
@@ -2305,7 +2305,7 @@
 /zh-CN/docs/Web/HTTP/重定向	/zh-CN/docs/Web/HTTP/Redirections
 /zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/Guide/Houdini
 /zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/zh-CN/docs/Web/JavaScript/Language_Overview
-/zh-CN/docs/Web/JavaScript/About_JavaScript	/zh-CN/docs/conflicting/Web/JavaScript
+/zh-CN/docs/Web/JavaScript/About_JavaScript	/zh-CN/docs/Web/JavaScript
 /zh-CN/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /zh-CN/docs/Web/JavaScript/Guide/Closures	/zh-CN/docs/Web/JavaScript/Closures
 /zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -2325,7 +2325,7 @@
 /zh-CN/docs/Web/JavaScript/Guide/可迭代对象	/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols
 /zh-CN/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /zh-CN/docs/Web/JavaScript/Language_Resources	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
-/zh-CN/docs/Web/JavaScript/Reference/About	/zh-CN/docs/conflicting/Web/JavaScript/Reference
+/zh-CN/docs/Web/JavaScript/Reference/About	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Web/JavaScript/Reference/Array	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
 /zh-CN/docs/Web/JavaScript/Reference/Array/Reduce	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /zh-CN/docs/Web/JavaScript/Reference/Array/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
@@ -2508,7 +2508,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/eval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval
 /zh-CN/docs/Web/JavaScript/Reference/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters
 /zh-CN/docs/Web/JavaScript/Reference/template_strings	/zh-CN/docs/Web/JavaScript/Reference/Template_literals
-/zh-CN/docs/Web/JavaScript/Reference/关于	/zh-CN/docs/conflicting/Web/JavaScript/Reference
+/zh-CN/docs/Web/JavaScript/Reference/关于	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
 /zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Web/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
