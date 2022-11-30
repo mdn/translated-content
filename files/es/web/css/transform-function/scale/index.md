@@ -162,10 +162,10 @@ div {
 
 ## Compatibilidad con navegadores
 
-Please see the [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
+Please see the [`<transform-function>`](/es/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
 
 ## También puede ver
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d)
+- [`scale3d()`](/es/docs/Web/CSS/transform-function/scale3d)

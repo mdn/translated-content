@@ -49,7 +49,7 @@ line-height: unset;
 - `normal`
   - : Depende del agente del usuario. Los navegadores de escritorio (incluido Firefox) usan un valor por defecto de apenas **1.2,** dependiendo del `font-family` del elemento.
 - `<número>`
-  - : El valor utilizado es este `<número>` sin unidades multiplicado por el propio tamaño de fuente del elemento. El valor calculado es el mismo que el [`<número>`](/en-US/docs/Web/CSS/number) especificado. En la mayoría de los casos, esta es la forma preferida de establecer `line-height` y evitar resultados inesperados debido a la herencia.
+  - : El valor utilizado es este `<número>` sin unidades multiplicado por el propio tamaño de fuente del elemento. El valor calculado es el mismo que el [`<número>`](/es/docs/Web/CSS/number) especificado. En la mayoría de los casos, esta es la forma preferida de establecer `line-height` y evitar resultados inesperados debido a la herencia.
 - `<longitud>`
   - : La [`<longitud>`](/es/docs/Web/CSS/length) especificada se utiliza en el cálculo de la altura de la casilla encuadrada por líneas. Los valores dados en unidades `em` pueden producir resultados inesperados (ver ejemplo más abajo).
 - `<porcentaje>`

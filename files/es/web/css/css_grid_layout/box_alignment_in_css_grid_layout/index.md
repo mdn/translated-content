@@ -93,7 +93,7 @@ En el siguiente ejemplo, tengo 4 áreas dentro de mi cuadricula (grid). Puedo us
 
 {{ EmbedLiveSample('alignment_1', '500', '450') }}
 
-Ten en mente que una vez establezcas `align-self: start`, la altura de cada hijo `<div>` será determinada por el contenido del `<div>`. Esto está en contraste de omitir [`align-self`](/en-US/docs/Web/CSS/align-self) completamente, en el cual la altura de cada `<div>` se extendería hasta llenar el área de la cuadricula.
+Ten en mente que una vez establezcas `align-self: start`, la altura de cada hijo `<div>` será determinada por el contenido del `<div>`. Esto está en contraste de omitir [`align-self`](/es/docs/Web/CSS/align-self) completamente, en el cual la altura de cada `<div>` se extendería hasta llenar el área de la cuadricula.
 
 La propiedad {{cssxref("align-items")}} establece la propiedad {{cssxref("align-self")}} para todos los elementos hijos de la cuadricula. Esto significa que puedes establecer la propiedad individualmente, usando `align-self` en cada elemento de la cuadricula.
 

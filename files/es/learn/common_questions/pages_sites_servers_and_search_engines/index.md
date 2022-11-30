@@ -55,7 +55,7 @@ Vamos a comparar la biblioteca con un servidor web:
 - Los libros en cada sección son como páginas web. Un sitio web puede tener varias páginas web, por ejemplo, la sección de Ciencias (el sitio web) tendrá libros sobre calor, sonido, termodinámica, estadísticas, etc. (las páginas web). Cada una de las páginas web puede ser encontrada en una ubicación única (URL).
 - El índice de búsqueda es como el motor de búsqueda. Cada libro tiene su propia ubicación única en la biblioteca (dos libros no se pueden mantener en el mismo lugar) que se especifica mediante el número de catálogo.
 
-_No esta disponible aprendizaje activo aun. [Por favor, considere la posibilidad de contribuir](/en-US/docs/MDN/Getting_started)._
+_No esta disponible aprendizaje activo aun. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Getting_started)._
 
 ## Profundizando
 
@@ -63,7 +63,7 @@ Entonces, vamos a profundizar en cómo estos cuatro términos serán relacionado
 
 ### Página web
 
-Una **página web** es un simple documento que puede ser mostrado por un {{Glossary("browser")}}. Estos documentos están escritos en lenguaje {{Glossary("HTML")}} (el que veremos en más detalle en [otros artículos](/en-US/docs/Web/HTML)). Una página web puede incluir una variedad de diferentes tipos de recursos, tales como:
+Una **página web** es un simple documento que puede ser mostrado por un {{Glossary("browser")}}. Estos documentos están escritos en lenguaje {{Glossary("HTML")}} (el que veremos en más detalle en [otros artículos](/es/docs/Web/HTML)). Una página web puede incluir una variedad de diferentes tipos de recursos, tales como:
 
 - _información de estilos_ — para controlar la apariencia de una página
 - _scripts_ — que agrega interactividad a la página
