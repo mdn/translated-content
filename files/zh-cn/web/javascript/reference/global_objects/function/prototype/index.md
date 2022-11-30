@@ -50,6 +50,7 @@ async function asyncFunction() {}
 class Class {}
 function fn() {}
 ```
+
 [bind 方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 不具有 `prototype` 属性，但是可能是可构造的。当它被构造的时候，目标函数将会被构造，如果目标函数是可构造的，将会返回一个普通的实例。
 
 ```js
