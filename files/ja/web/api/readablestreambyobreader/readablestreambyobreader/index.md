@@ -35,9 +35,7 @@ var readableStreamBYOBReader = new ReadableStreamBYOBReader(stream);
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#byob-reader-constructor","ReadableStreamBYOBReader()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

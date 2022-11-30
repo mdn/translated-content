@@ -154,9 +154,7 @@ Si necesita soporte para motores de JavaScript obsoletos que no soportan [`Objec
 
 ## Especificaciones
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.findindex', 'Array.prototype.findIndex')}} |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

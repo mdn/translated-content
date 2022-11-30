@@ -42,7 +42,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     - `'I'` indica algarismos romanos maiúsculos,
     - e `'1'` indica números (padrão).
 
-    O tipo de marcação é usado na lista inteira, a menos que um atributo {{htmlattrxref("type", "li")}} diferente seja utilizado dentro do elemento  {{HTMLElement("li")}}.
+    O tipo de marcação é usado na lista inteira, a menos que um atributo {{htmlattrxref("type", "li")}} diferente seja utilizado dentro do elemento {{HTMLElement("li")}}.
 
     > **Nota:** Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5. A menos que o valor do número na lista seja importante, a propriedade CSS {{cssxref("list-style-type")}} deve ser usada em seu lugar.
 

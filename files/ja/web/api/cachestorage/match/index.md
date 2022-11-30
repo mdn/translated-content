@@ -74,9 +74,7 @@ self.addEventListener('fetch', function(event) {
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-cachestorage-match', 'CacheStorage: match')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

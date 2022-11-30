@@ -23,7 +23,7 @@ var result = crypto.subtle.importKey(format, keyData, algo, extractable, usages)
   - `"jwk"`, a key no formato [JSON Web Key](https://tools.ietf.org/html/draft-ietf-jose-json-web-key-41).
 
 - `keyData` é uma {{domxref("ArrayBuffer")}} ou uma {{domxref("JSONWebKey")}} contendo uma key no formato dado.
-- _`algo`_ é um objeto de dicionário que define o algoritmo que foi utilizado para gerar a key que está sendo importada.
+- `algo` é um objeto de dicionário que define o algoritmo que foi utilizado para gerar a key que está sendo importada.
 - `extractable` é um {{jsxref("Boolean")}} indicando se a key pode ser extraída de um objeto {{domxref("CryptoKey")}} em um estágio mais tardio.
 - `usages` é um {{jsxref("Array")}} que indica o que pode ser feito com a key. Valores possíveis do array são:
 
@@ -44,8 +44,8 @@ var result = crypto.subtle.importKey(format, keyData, algo, extractable, usages)
 
 A promise é rejeitada quando umas das seguintes exceções é encontrada:
 
-- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando _`keyUsages`_ está vazia mas a key desvinculada é do tipo `"secret"` ou `"private"`.
-- {{jsxref("TypeError")}} quando tentando utilizar um formato invalido ou se a _`keyData`_ não é adequada para este formato.
+- [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) quando `keyUsages` está vazia mas a key desvinculada é do tipo `"secret"` ou `"private"`.
+- {{jsxref("TypeError")}} quando tentando utilizar um formato invalido ou se a `keyData` não é adequada para este formato.
 
 ## Especificações
 

@@ -41,7 +41,7 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.nextSibling")}} {{readonlyInline}}
   - : Retourne un {{domxref("Node")}} représentant le nœud suivant dans l'arbre ou `null` s'il n'y en a pas.
 - {{DOMxRef("Node.nodeName")}} {{readonlyInline}}
-  - : Retourne une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom du nœud. La structure du nom diffère du type de nœud. Par exemple, un {{domxref("HTMLElement")}} contiendra le nom de la balise correspondante, comme `'audio'`  pour un {{domxref("HTMLAudioElement")}}, un nœud {{domxref("Text")}} doit avoir la chaîne `'#text'` ou un  {{domxref("Document")}}  doit avoir la chaîne `'#document'.`.
+  - : Retourne une {{domxref("DOMString")}} (_chaîne de caractères_) contenant le nom du nœud. La structure du nom diffère du type de nœud. Par exemple, un {{domxref("HTMLElement")}} contiendra le nom de la balise correspondante, comme `'audio'`  pour un {{domxref("HTMLAudioElement")}}, un nœud {{domxref("Text")}} doit avoir la chaîne `'#text'` ou un {{domxref("Document")}} doit avoir la chaîne `'#document'.`.
 - {{DOMxRef("Node.nodeType")}}{{readonlyInline}}
   - : Retourne un `unsigned short` (_non signé court_) représentant le type du nœud. Les valeurs possibles sont :
 
@@ -63,13 +63,13 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 - {{DOMxRef("Node.nodeValue")}}
   - : Retourne / définit la valeur du nœud courant.
 - {{DOMxRef("Node.ownerDocument")}}{{readonlyInline}}
-  - : Retourne le {{domxref("Document")}}  auquel ce noeud appartient. Si aucun document ne lui est associé, il retourne `null` .
+  - : Retourne le {{domxref("Document")}} auquel ce noeud appartient. Si aucun document ne lui est associé, il retourne `null` .
 - {{DOMxRef("Node.parentNode")}}{{readonlyInline}}
   - : Retourne un {{domxref("Node")}} qui est le parent de ce nœud. S'il n'existe pas, parce qu'il est en haut de l'arbre ou parce qu'il ne participe pas à un arbre, cette propriété retourne `null` .
 - {{DOMxRef("Node.parentElement")}}{{readonlyInline}}
-  - : Retourne un {{domxref("Element")}} qui est le parent de ce nœud. Si le nœud n'a aucun parent ou si ce parent n'est pas un  {{domxref("Element")}} , cette propriété retourne `null`.
+  - : Retourne un {{domxref("Element")}} qui est le parent de ce nœud. Si le nœud n'a aucun parent ou si ce parent n'est pas un {{domxref("Element")}} , cette propriété retourne `null`.
 - {{DOMxRef("Node.previousSibling")}}{{readonlyInline}}
-  - : Retourne un {{domxref("Node")}} représentant le nœud précédent dans l'arbre ou  `null` s'il n'y en a pas.
+  - : Retourne un {{domxref("Node")}} représentant le nœud précédent dans l'arbre ou `null` s'il n'y en a pas.
 - {{DOMxRef("Node.textContent")}}
   - : Retourne / définit le contenu textuel d'un élément et de tous ses descendants.
 
@@ -78,12 +78,12 @@ _Hérite les propriétés de son parent {{domxref("EventTarget")}}_.
 ### Propriétés obsolètes
 
 - {{DOMxRef("Node.localName")}} {{deprecated_inline}}{{readonlyInline}}
-  - : Retourne un {{domxref("DOMString")}}  représentant la partie locale du nom d'un élément.
+  - : Retourne un {{domxref("DOMString")}} représentant la partie locale du nom d'un élément.
 
 > **Note :** Dans Firefox 3.5 et versions antérieures, la propriété saisit le nom local pour les éléments HTML (mais pas les éléments XHTML). Dans les versions ultérieures, cela ne se produit pas, donc la propriété est en minuscule pour HTML et XHTML.
 
 - {{DOMxRef("Node.namespaceURI")}} {{deprecated_inline}}{{readonlyInline}}
-  - : L'URI du "Namespace" de ce nom, ou  `null` s'il n'y en a pas.
+  - : L'URI du "Namespace" de ce nom, ou `null` s'il n'y en a pas.
 
 > **Note :** Dans Firefox 3.5 et versions antérieures, les éléments HTML ne contiennent aucun "namespace". Dans les versions ultérieures, les éléments HTML sont dans le "namespace" [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/) pour HTML et XML.
 
@@ -143,7 +143,7 @@ _Hérite des méthodes de son parent {{domxref("EventTarget")}}_.
 - {{domxref("Node.isSupported()")}} {{deprecated_inline}}
   - : Retourne une marque {{jsxref("Boolean")}} qui contient le résultat d'un test si l'implémentation DOM prend en compte une caractéristique spécifique et si cette fonctionnalité est prise en charge par le nœud spécifique.
 - {{domxref("Node.setUserData()")}} {{deprecated_inline}}
-  - : Permet à un utilisateur d'attacher ou d'enlever  {{domxref("DOMUserData")}} du nœud.
+  - : Permet à un utilisateur d'attacher ou d'enlever {{domxref("DOMUserData")}} du nœud.
 
 ## Exemples
 

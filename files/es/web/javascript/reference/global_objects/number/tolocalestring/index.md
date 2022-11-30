@@ -133,10 +133,7 @@ console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFrac
 
 ## Especificaciones
 
-| Specification                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}     |
-| {{SpecName('ES Int Draft', '#sup-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

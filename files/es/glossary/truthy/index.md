@@ -1,11 +1,6 @@
 ---
 title: Truthy
 slug: Glossary/Truthy
-tags:
-  - CodingScripting
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Truthy
 ---
 
 En {{Glossary("JavaScript")}}, un **valor verdadero** es un valor que se considera `true/verdadero` cuando es evaluado en un contexto {{Glossary("Booleano")}}. Todos los valores son verdaderos a menos que se definan como {{Glossary("Falso", "falso")}} (es decir, excepto `false`, `0`, `""`, `null`, `undefined`, y `NaN`).

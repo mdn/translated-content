@@ -1,12 +1,6 @@
 ---
 title: ¿Cómo funciona Internet?
 slug: Learn/Common_questions/How_does_the_Internet_work
-tags:
-  - Internet
-  - Principiante
-  - Tutorial
-  - Web
-translation_of: Learn/Common_questions/How_does_the_Internet_work
 ---
 
 En este artículo se describe qué es Internet y cómo funciona.
@@ -96,6 +90,6 @@ Como puedes notar, cuando navegamos por la web con un navegador, normalmente uti
 
 ## Próximos pasos
 
-- [Cómo funciona la Web.](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [Cómo funciona la Web.](/es/Learn/Getting_started_with_the_web/How_the_Web_works)
 - [Comprender la diferencia entre una página web, un sitio web, un servidor web y un motor de búsqueda.](/es/docs/Learn/page_vs_site_vs_server_vs_search_engine)
 - [La comprensión de los nombres de dominio.](/es/docs/Learn/Understanding_domain_names)

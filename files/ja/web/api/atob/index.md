@@ -43,11 +43,7 @@ const decodedData = window.atob(encodedData); // 文字列をデコード
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考                                                                                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-atob', 'WindowOrWorkerGlobalScope.atob()')}} | {{Spec2('HTML WHATWG')}} | 最新の仕様で、メソッドを `WindowOrWorkerGlobalScope` ミックスインに移動。                                      |
-| {{SpecName('HTML5.1', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}     | {{Spec2('HTML5.1')}}     | {{SpecName("HTML WHATWG")}} のスナップショット、変更なし。                                            |
-| {{SpecName("HTML5 W3C", "#dom-windowbase64-atob", "WindowBase64.atob()")}} | {{Spec2('HTML5 W3C')}}     | {{SpecName("HTML WHATWG")}} のスナップショット。 `WindowBase64` の作成 (以前の対象だったプロパティ)。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

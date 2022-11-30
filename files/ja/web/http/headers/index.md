@@ -13,7 +13,7 @@ slug: Web/HTTP/Headers
 
 - {{Glossary("Request header", "リクエストヘッダー")}}は、読み込むリソースについての情報や、そのリソースをリクエストしているクライアントに関する詳細な情報を持ちます。
 - {{Glossary("Response header", "レスポンスヘッダー")}}は、レスポンスに関する追加情報、例えば場所や提供しているサーバーに関する情報を保持します。
-- {{Glossary("Representation header", "表現ヘッダー")}}は、リソースの本体に関する情報、例えば  [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)や適用されるエンコード／圧縮方式などについての情報を持ちます。
+- {{Glossary("Representation header", "表現ヘッダー")}}は、リソースの本体に関する情報、例えば [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)や適用されるエンコード／圧縮方式などについての情報を持ちます。
 - {{Glossary("Payload header","ペイロードヘッダー")}}は、転送されるデータの表現から独立した情報、例えばコンテンツの長さや転送に使われるエンコード方式などを持ちます。
 
 またヘッダーは、{{Glossary("Proxy_server", "プロキシーサーバー")}}がどのように扱うかに応じてグループ化されます。

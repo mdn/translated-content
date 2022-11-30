@@ -182,9 +182,7 @@ try {
 
 ## Especificaciones
 
-| Especificación                                                           |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-error-objects', 'Error')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

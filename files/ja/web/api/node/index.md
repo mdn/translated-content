@@ -7,7 +7,7 @@ slug: Web/API/Node
 
 {{Glossary("DOM")}} の **`Node`** インターフェイスは、他の多くの DOM API オブジェクトのベースとなる抽象的な基底クラスです。したがって、これらのオブジェクト型と類似しており、しばしば交換して使用することができます。抽象クラスであるため、単なる `Node` オブジェクトというものは存在しません。 `Node` の機能を実装しているオブジェクトはすべて、何れかのサブクラスに基づいています。最も注目すべきものは、 {{domxref("Document")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}} です。
 
-それに加えて、あらゆる種類の DOM ノードが `Node` を基底とするインターフェイスで表現されます。これには、 {{DOMxRef("Attr")}}, {{DOMxRef("CharacterData")}} ({{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, {{DOMxRef("CDATASection")}},  {{DOMxRef("ProcessingInstruction")}} がすべて基底とするもの), {{DOMxRef("DocumentType")}} があります。
+それに加えて、あらゆる種類の DOM ノードが `Node` を基底とするインターフェイスで表現されます。これには、 {{DOMxRef("Attr")}}, {{DOMxRef("CharacterData")}} ({{DOMxRef("Text")}}, {{DOMxRef("Comment")}}, {{DOMxRef("CDATASection")}}, {{DOMxRef("ProcessingInstruction")}} がすべて基底とするもの), {{DOMxRef("DocumentType")}} があります。
 
 場合によっては、ベースとなる `Node` インターフェイスの特定の機能が子インターフェイスに適用されないことがあります。この場合、継承するノードは状況に応じて `null` を返したり、例外を投げたりします。例えば、子を持てないノード型に子を追加しようとすると、例外が発生します。
 
@@ -166,7 +166,7 @@ function eachNode(rootNode, callback) {
 
 次の例は `eachNode()` 関数の現実世界での使用方法として、ウェブページ上のテキストの検索を示します。
 
-検索には  `grep` というラッパー関数を使用しています。
+検索には `grep` というラッパー関数を使用しています。
 
 ```js
 function grep(parentNode, pattern) {

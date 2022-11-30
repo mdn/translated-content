@@ -1,20 +1,6 @@
 ---
 title: Fundamentos de texto en HTML
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-tags:
-  - CodingScripting
-  - Encabezados
-  - Estructuras
-  - Guía
-  - HTML
-  - Introducción a HTML
-  - Novato
-  - Principiante
-  - Párrafos
-  - Texto
-  - aprende
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 original_slug: Learn/HTML/Introduccion_a_HTML/texto
 ---
 
@@ -1043,7 +1029,7 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 
 ## Resumen
 
-¡Eso es todo por ahora! Este artículo debería haberte dado una buena idea de cómo comenzar a marcar texto en HTML y te ha presentado algunos de los elementos más importantes en este ámbito. Hay muchos más elementos semánticos para desarrollar en esta área, y veremos muchos más en nuestro artículo [Formateo de texto avanzado](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting), más adelante en el curso. En el siguiente artículo, veremos en detalle cómo [crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), posiblemente el más importante elemento en la web.
+¡Eso es todo por ahora! Este artículo debería haberte dado una buena idea de cómo comenzar a marcar texto en HTML y te ha presentado algunos de los elementos más importantes en este ámbito. Hay muchos más elementos semánticos para desarrollar en esta área, y veremos muchos más en nuestro artículo [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting), más adelante en el curso. En el siguiente artículo, veremos en detalle cómo [crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), posiblemente el más importante elemento en la web.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 

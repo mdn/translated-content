@@ -1,7 +1,6 @@
 ---
 title: Nombre de dominio
 slug: Glossary/Domain_name
-translation_of: Glossary/Domain_name
 original_slug: Glossary/Nombre_de_dominio
 ---
 
@@ -12,4 +11,4 @@ Un nombre de dominio es la dirección de un sitio web en {{Glossary("Internet")}
 ### Conocimientos generales
 
 - [Dominio de Internet](https://es.wikipedia.org/wiki/Dominio_de_Internet) en Wikipedia
-- [Entendiendo los nombres de los dominios](/en-US/Learn/Understanding_domain_names)
+- [Entendiendo los nombres de los dominios](/es/Learn/Understanding_domain_names)

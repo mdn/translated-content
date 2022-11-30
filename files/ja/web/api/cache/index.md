@@ -139,9 +139,7 @@ self.addEventListener('fetch', function(event) {
 
 ## 仕様書
 
-| 仕様書                                                               | 状態                                 | 備考     |
-| -------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#cache', 'Cache')}} | {{Spec2('Service Workers')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,12 +1,6 @@
 ---
 title: Función
 slug: Glossary/Function
-tags:
-  - CodingScripting
-  - Glosario
-  - IIFE
-  - JavaScript
-translation_of: Glossary/Function
 original_slug: Glossary/Función
 ---
 
@@ -89,5 +83,5 @@ Si desea obtener más información sobre las IIFE, consulte la siguiente página
 
 ### Referencias técnicas
 
-- [Funciones](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Funciones de flecha](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- [Funciones](/es/docs/Web/JavaScript/Guide/Functions)
+- [Funciones de flecha](/es/docs/Web/JavaScript/Reference/Functions/Arrow_functions)

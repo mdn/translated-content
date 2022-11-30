@@ -1,12 +1,6 @@
 ---
 title: Descifrado
 slug: Glossary/Decryption
-tags:
-  - Criptografía
-  - Glosario
-  - Seguridad
-  - privacidad
-translation_of: Glossary/Decryption
 original_slug: Glossary/Descifrado
 ---
 

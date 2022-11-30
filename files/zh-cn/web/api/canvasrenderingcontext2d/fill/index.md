@@ -22,8 +22,10 @@ void ctx.fill(path, fillRule);
   - : 一种算法，决定点是在路径内还是在路径外。
     允许的值：
 
-    - **`"nonzero`**": [非零环绕规则](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
-    - **`"evenodd"`**: [奇偶环绕规则](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
+    - `nonzero`
+      - : [非零环绕规则](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
+    - `evenodd`
+      - : [奇偶环绕规则](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
 
 - `path`
   - : 需要填充的{{domxref("Path2D")}} 路径。

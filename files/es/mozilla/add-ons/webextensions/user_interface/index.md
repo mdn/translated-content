@@ -1,13 +1,6 @@
 ---
 title: User interface
 slug: Mozilla/Add-ons/WebExtensions/user_interface
-tags:
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - User Interface
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface
 ---
 
 {{AddonSidebar}}

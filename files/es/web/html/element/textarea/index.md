@@ -1,13 +1,6 @@
 ---
 title: <textarea>
 slug: Web/HTML/Element/textarea
-tags:
-  - Elemento
-  - Formularios(2)
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/textarea
 original_slug: Web/HTML/Elemento/textarea
 ---
 

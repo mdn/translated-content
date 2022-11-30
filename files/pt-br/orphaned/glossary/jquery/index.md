@@ -6,6 +6,7 @@ tags:
 translation_of: Glossary/jQuery
 original_slug: Glossary/jQuery
 ---
+
 **jQuery** é uma {{Glossary("Biblioteca")}} {{Glossary("JavaScript")}} que visa a simplificação na manipulação do {{Glossary("DOM")}} , nas chamadas de {{Glossary("AJAX")}} e no gerenciamento de {{Glossary("Eventos")}} . É muito utilizado por desenvolvedores de Javascript.
 
 jQuery usa o formato `$(seletor).acão()` para atribuir um evento a um elemento. Resumindo, `$(seletor)` chamará jQuery, que selecionará elemento(s) com base no 'seletor' e atribuirá um evento {{Glossary("API")}} chamado `.acão()`.

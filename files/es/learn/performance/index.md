@@ -1,7 +1,6 @@
 ---
 title: Rendimiento web
 slug: Learn/Performance
-translation_of: Learn/Performance
 ---
 
 {{LearnSidebar}}
@@ -68,7 +67,7 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
   - : Aprenda cómo perfilar el rendimiento de la aplicación con el generador de perfiles integrado de Firefox.
 - Gráficos de rendimiento de lectura
   - : Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer [tablas de cascada](/es/docs/Tools/Performance/Waterfall), [árboles de llamadas,](/es/docs/Tools/Performance/Call_Tree)Las herramientas del desarrollador proporcionan información sobre el rendimiento, la memoria y las solicitudes de red. Saber leer, [tablas de llamas](/es/docs/Tools/Performance/Flame_Chart), y [localizaciones](/es/docs/Tools/Performance/Allocations) en su navegador, las herramientas de desarrollo lo ayudarán a comprender los gráficos de cascada y llama en otras herramientas de rendimiento.
-- [Rendimiento de animaciones en CSS y JavaScript](/en-US/Apps/Build/Performance/CSS_JavaScript_animation_performance)
+- [Rendimiento de animaciones en CSS y JavaScript](/es/Apps/Build/Performance/CSS_JavaScript_animation_performance)
   - : Las animaciones son críticas para una experiencia de usuario placentera. Este artículo analiza las diferencias de rendimiento entre CSS y animaciones basadas en JavaScript.
 - Analizando paquetes de JavaScript
   - : Sin duda, JavaScript es una gran parte del desarrollo web moderno. Si bien siempre debe esforzarse por reducir la cantidad de JavaScript que utiliza en sus aplicaciones, puede ser difícil saber dónde comenzar. En esta guía, le mostraremos cómo analizar los paquetes de scripts de su aplicación, para que sepa qué está utilizando y cómo detectar si hay scripts duplicados entre paquetes en su aplicación.

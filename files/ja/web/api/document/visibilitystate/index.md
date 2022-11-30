@@ -35,9 +35,7 @@ document.addEventListener("visibilitychange", function() {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                   | 状態                                         | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('Page Visibility API','#visibility-states-and-the-visibilitystate-enum', 'Document.visibilityState')}} | {{Spec2('Page Visibility API')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

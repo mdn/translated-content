@@ -26,7 +26,7 @@ slug: Web/API/DataTransfer
 - {{domxref("DataTransfer.files")}}
   - : データトランスファーが保持していて利用可能なすべてのローカルファイルのリストを保持します。ドラッグ操作がファイルのドラッグによるものではない場合、このプロパティは空のリストになります。
 - {{domxref("DataTransfer.items")}} {{readonlyInline}}
-  - :  全てのドラッグデータのリストである {{domxref("DataTransferItemList")}} オブジェクトを返します。
+  - : 全てのドラッグデータのリストである {{domxref("DataTransferItemList")}} オブジェクトを返します。
 - {{domxref("DataTransfer.types")}} {{readonlyInline}}
   - : 文字列の配列で、 {{domxref("HTMLElement/dragstart_event", "dragstart")}} イベントで設定されたフォーマットを示します。
 

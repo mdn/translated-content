@@ -1,14 +1,6 @@
 ---
 title: WHATWG
 slug: Glossary/WHATWG
-tags:
-  - Community
-  - Glossary
-  - HTML
-  - HTML5
-  - WHATWG
-  - Web
-translation_of: Glossary/WHATWG
 ---
 
 EL ( Grupo de trabajo de tecnología de aplicaciones de hipertexto web) por sus siglas en inglés WHATWG es una organización que mantinene y desarrolla {{Glossary("HTML")}} y {{Glossary("API", "APIs")}} para las aplicaciones Web. Antiguos empleados de Apple, Mozilla y Opera establecieron el WHATWG en el 2004.

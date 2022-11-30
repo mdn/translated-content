@@ -4,6 +4,7 @@ slug: conflicting/Web/HTTP/Status/502
 translation_of: Glossary/502
 original_slug: Glossary/502
 ---
+
 Um erro {{Glossary("HTTP")}} que significa "Bad Gateway".
 
 O {{Glossary("Servidor","Servidor")}} pode agir como um gateway ou proxy (go-between) entre um cliente (como seu navegador web) ou outro, servidor de upstream. Quando sua requisição tenta acessar uma {{Glossary("URL")}}, o servidor de gateway pode retransmitir sua requisição para o servidor de upstream. "502" significa que o servidor de upstream retorou uma resposta inválida.

@@ -1,10 +1,6 @@
 ---
 title: Notas de desarrollo de Firefox
 slug: Mozilla/Firefox/Releases
-tags:
-  - Firefox
-  - TopicStub
-translation_of: Mozilla/Firefox/Releases
 ---
 
 {{FirefoxSidebar}}

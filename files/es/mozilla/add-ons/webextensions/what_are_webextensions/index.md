@@ -1,10 +1,6 @@
 ---
 title: ¿Qué son las extensiones?
 slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
-tags:
-  - WebExtensions
-  - extensiones
-translation_of: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 original_slug: Mozilla/Add-ons/WebExtensions/Que_son_las_WebExtensions
 ---
 
@@ -48,7 +44,7 @@ Ejemplos: [Asteroids in Popup](https://addons.mozilla.org/en-US/firefox/addon/as
 
 **Ejemplos:** [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), and [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
 
-Las extensiones para Firefox se construyen utilizando las [APIs de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions), un sistema multi-navegador para desarrollar extensiones. En gran medida, la API es compatible con la [extension API](https://developer.chrome.com/extensions) soportada por Google Chrome y Opera. Extensiones escritas para estos navegadores en la mayoría de los casos se ejecutan en Firefox o Microsoft Edge con sólo unos pocos [cambios](/es/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). La API es también totalmente compatible con los [multiprocesos de Firefox](/en-US/Firefox/Multiprocess_Firefox).
+Las extensiones para Firefox se construyen utilizando las [APIs de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions), un sistema multi-navegador para desarrollar extensiones. En gran medida, la API es compatible con la [extension API](https://developer.chrome.com/extensions) soportada por Google Chrome y Opera. Extensiones escritas para estos navegadores en la mayoría de los casos se ejecutan en Firefox o Microsoft Edge con sólo unos pocos [cambios](/es/docs/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). La API es también totalmente compatible con los [multiprocesos de Firefox](/es/Firefox/Multiprocess_Firefox).
 
 Si tiene ideas o preguntas, o necesita ayuda para migrar un Add-on heredado a las APIs de WebExtensions, puede comunicarse con nosotros en el[dev-addons mailing list](https://mail.mozilla.org/listinfo/dev-addons) o en [#extdev](irc://irc.mozilla.org/extdev) en [IRC](https://wiki.mozilla.org/IRC).
 

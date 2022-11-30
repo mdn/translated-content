@@ -1,14 +1,6 @@
 ---
 title: Tomando decisiones en tu código — condicionales
 slug: Learn/JavaScript/Building_blocks/conditionals
-tags:
-  - Aprendizaje
-  - Artículo
-  - Codificación
-  - Condicionales
-  - JavaScript
-  - Principiante
-translation_of: Learn/JavaScript/Building_blocks/conditionals
 ---
 
 {{LearnSidebar}}
@@ -31,7 +23,7 @@ Los seres humanos (y otros animales) toman decisiones todo el tiempo que afectan
 
 Echemos un vistazo a la declaración condicional más común que usarás en JavaScript.
 
-— El humilde [`if ... else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)[statement](/es/docs/Web/JavaScript/Reference/Statements/if...else).
+— El humilde [`if ... else`](/es/docs/Web/JavaScript/Reference/Statements/if...else)[statement](/es/docs/Web/JavaScript/Reference/Statements/if...else).
 
 ### Sintaxis if ... else básica.
 
@@ -48,7 +40,7 @@ if (condición) {
 Aquí tenemos:
 
 1. La palabra clave `if` seguida de unos paréntesis.
-2. Una condición a probar, puesta dentro de los paréntesis (típicamente "¿es este valor mayor que este otro valor?", o "¿existe este valor?"). Esta condición usará los [operadores de comparación](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators) que hemos hablado en el módulo anterior y retorna un valor `true` o `false (verdadero o falso)`.
+2. Una condición a probar, puesta dentro de los paréntesis (típicamente "¿es este valor mayor que este otro valor?", o "¿existe este valor?"). Esta condición usará los [operadores de comparación](/es/Learn/JavaScript/First_steps/Math#Comparison_operators) que hemos hablado en el módulo anterior y retorna un valor `true` o `false (verdadero o falso)`.
 3. Un conjunto de llaves, en las cuales tenemos algún código — puede ser cualquier código que deseemos, código que se ejecutará sólamente si la condición retorna `true`.
 4. La palabra clave `else`.
 5. Otro conjunto de llaves, dentro de las cuales tendremos otro código — puede ser cualquier código que deseemos, y sólo se ejecutará si la condición no es `true`.
@@ -147,7 +139,7 @@ function establecerClima() {
 
 ### Una nota en los operadores de comparación
 
-Los operadores de comparación son usados para probar las condiciones dentro de nuestra declaración condicional. Vimos estos operadores en el artículo [Matématica básica en JavaScript — Números y operadores](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators). Nuestras opciones son:
+Los operadores de comparación son usados para probar las condiciones dentro de nuestra declaración condicional. Vimos estos operadores en el artículo [Matématica básica en JavaScript — Números y operadores](/es/Learn/JavaScript/First_steps/Math#Comparison_operators). Nuestras opciones son:
 
 - `===` y `!==` — prueba si un valor es exactamente igual a otro, o sino es indentico a otro valor.
 - `<` y `>` — prueba si un valor es menor o mayor que otro.
@@ -755,11 +747,11 @@ textarea.onkeyup = function(){
 
 ## Conclusión
 
-¡Y eso es todo lo que necesitas saber sobre estructuras condicionales en Javascript ahora mismo! Estoy seguro que habrás entendido estos conceptos y trabajado en los ejemplos con facilidad; si hay algo que no entendiste, sientete libre de repasar este artículo de nuevo, o [contáctanos](/en-US/Learn#Contact_us) para solicitar ayuda.
+¡Y eso es todo lo que necesitas saber sobre estructuras condicionales en Javascript ahora mismo! Estoy seguro que habrás entendido estos conceptos y trabajado en los ejemplos con facilidad; si hay algo que no entendiste, sientete libre de repasar este artículo de nuevo, o [contáctanos](/es/Learn#Contact_us) para solicitar ayuda.
 
 ## Revisa también
 
-- [Comparison operators](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators)
+- [Comparison operators](/es/Learn/JavaScript/First_steps/Math#Comparison_operators)
 - [Conditional statements in detail](/es/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Conditional_statements)
 - [if...else reference](/es/docs/Web/JavaScript/Reference/Statements/if...else)
 - [Conditional (ternary) operator reference](/es/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)

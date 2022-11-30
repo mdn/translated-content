@@ -169,7 +169,7 @@
 /zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology
 /zh-TW/docs/IndexedDB/Using_IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /zh-TW/docs/JavaScript	/zh-TW/docs/Web/JavaScript
-/zh-TW/docs/JavaScript/About_JavaScript	/zh-TW/docs/Web/JavaScript/About_JavaScript
+/zh-TW/docs/JavaScript/About_JavaScript	/zh-TW/docs/Web/JavaScript
 /zh-TW/docs/JavaScript/Guide	/zh-TW/docs/Web/JavaScript/Guide
 /zh-TW/docs/JavaScript/Guide/Details_of_the_Object_Model	/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-TW/docs/JavaScript/Guide/Functions	/zh-TW/docs/Web/JavaScript/Guide/Functions
@@ -539,7 +539,6 @@
 /zh-TW/docs/Web/API/Coordinates/longitude	/zh-TW/docs/Web/API/GeolocationCoordinates/longitude
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
 /zh-TW/docs/Web/API/DOMString	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String
-/zh-TW/docs/Web/API/Detecting_device_orientation	/en-US/docs/Web/Events/Detecting_device_orientation
 /zh-TW/docs/Web/API/Document/keyup_event	/zh-TW/docs/Web/API/Element/keyup_event
 /zh-TW/docs/Web/API/Document/width	/zh-TW/docs/Web/API/Element/clientWidth
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
@@ -696,6 +695,7 @@
 /zh-TW/docs/Web/HTTP/X-Frame-Options	/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options
 /zh-TW/docs/Web/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/zh-TW/docs/Web/JavaScript/Language_Overview
+/zh-TW/docs/Web/JavaScript/About_JavaScript	/zh-TW/docs/Web/JavaScript
 /zh-TW/docs/Web/JavaScript/Guide/Introduction/關於	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_Overview	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀	/zh-TW/docs/Web/JavaScript/Guide/Introduction
@@ -825,7 +825,7 @@
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/zh-TW/docs/Web/JavaScript/Reference/Operators
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/zh-TW/docs/Web/JavaScript/Reference/Operators
 /zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-TW/docs/Web/Security/Same-origin_policy
-/zh-TW/docs/Web/JavaScript/Shells	/zh-TW/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/zh-TW/docs/Web/JavaScript/Shells	/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-TW/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/Typed_arrays/ArrayBuffer/prototype	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/資料結構	/zh-TW/docs/Web/JavaScript/Data_structures
@@ -849,7 +849,6 @@
 /zh-TW/docs/Web/性能	/zh-TW/docs/Web/Performance
 /zh-TW/docs/WebAPI	/zh-TW/docs/Web/API
 /zh-TW/docs/WebAPI/Battery_Status	/zh-TW/docs/Web/API/Battery_Status_API
-/zh-TW/docs/WebAPI/Detecting_device_orientation	/en-US/docs/Web/Events/Detecting_device_orientation
 /zh-TW/docs/WebAPI/FileHandle	/zh-TW/docs/Web/API/File_and_Directory_Entries_API
 /zh-TW/docs/WebAPI/Managing_screen_orientation	/zh-TW/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /zh-TW/docs/WebAPI/Network_Information	/zh-TW/docs/Web/API/Network_Information_API

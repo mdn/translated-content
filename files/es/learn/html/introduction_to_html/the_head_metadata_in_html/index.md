@@ -1,20 +1,6 @@
 ---
 title: ¿Qué hay en la cabecera? Metadatos en HTML
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
-tags:
-  - Cabecera
-  - CodingScripting
-  - Guía
-  - HTML
-  - Meta
-  - Metadatos
-  - Novato
-  - Principiante
-  - favicon
-  - head
-  - lang
-  - metadata
-translation_of: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 original_slug: Learn/HTML/Introduccion_a_HTML/Metados_en
 ---
 
@@ -266,7 +252,7 @@ Los comentarios explican para qué se usa cada icono (estos elementos abarcan si
 
 No te preocupes demasiado sobre la implementación de todos estos tipos de iconos por el momento; se trata de una característica bastante avanzada y no se espera que tengas conocimientos de ello para avanzar en el curso. El propósito principal aquí es darte a conocer estos elementos por si te los encuentras mientras examinas el código fuente de otros sitios web.
 
-> **Nota:** Si tu sitio web utiliza una política de seguridad de contenido (_content security policy o CSP_) para mejorar la seguridad, la política afecta al `favicon`. Si te encuentras con problemas como que el `favicon` no se carga, comprueba que la respuesta a {{HTTPHeader("Content-Security-Policy")}} del `header` para la [directriz `img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) en la cabecera no impide el acceso a este.
+> **Nota:** Si tu sitio web utiliza una política de seguridad de contenido (_content security policy o CSP_) para mejorar la seguridad, la política afecta al `favicon`. Si te encuentras con problemas como que el `favicon` no se carga, comprueba que la respuesta a {{HTTPHeader("Content-Security-Policy")}} del `header` para la [directriz `img-src`](/es/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) en la cabecera no impide el acceso a este.
 
 ## Aplicar CSS y JavaScript a HTML
 
@@ -278,7 +264,7 @@ Prácticamente todos los sitios web usan {{Glossary("CSS")}} para darles un buen
   <link rel="stylesheet" href="my-css-file.css" />
   ```
 
-- El elemento `<script>` también debería ir en el `head`, y debería incluir un atributo `src` con la ruta al JavaScript que quieres cargar, y `defer`, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página, pero esta es «a prueba de bombas» para los navegadores modernos (para el resto de las formas, lee el artículo [Estrategias de carga de scripts](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies)).
+- El elemento `<script>` también debería ir en el `head`, y debería incluir un atributo `src` con la ruta al JavaScript que quieres cargar, y `defer`, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página, pero esta es «a prueba de bombas» para los navegadores modernos (para el resto de las formas, lee el artículo [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies)).
 
   ```html
   <script src="my-js-file.js"></script>

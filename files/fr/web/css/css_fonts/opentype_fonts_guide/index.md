@@ -56,7 +56,7 @@ Le crénage correspond à l'espace entre les caractères pour certaines combinai
 
 Les polices peuvent fournir différentes formes pour différents glyphes. Cette propriété permet d'activer un ensemble de formes alternatives ou une forme alternative spécifique selon la valeur utilisée. Dans l'exemple qui suit, on voit différentes formes d'utilisation des caractères alternatifs. Les polices qui possèdent des glyphes alternatifs peuvent les rendre disponibles sur la grille de caractères ou dans des ensembles stylistiques séparés voire pour des caractères individuels. Dans cet exemple, on utilise deux polices et la règle-@ {{cssxref("@font-feature-values")}}. Cette méthode permet de définir des raccourcis ou des options nommées qui peuvent ensuite être utilisée sur un ensemble de polices. Ainsi, on peut avoir une option appliquée à une police ou appliquée plus généralement.
 
-{{EmbedGHLiveSample("css-examples/font-features/font-variant-alternates.html", '100%', 800)}} Dans ce cas, `@stylistic(alternates)` affichera tous les caractères alternatifs pour chacune des polices. En appliquant uniquement ces règles au mot 'My', seul l'affichage de la lettre 'M' est modifié. Si on applique  `@styleset(alt-a)`, seule l'apparence de la lettre a minuscule changera.
+{{EmbedGHLiveSample("css-examples/font-features/font-variant-alternates.html", '100%', 800)}} Dans ce cas, `@stylistic(alternates)` affichera tous les caractères alternatifs pour chacune des polices. En appliquant uniquement ces règles au mot 'My', seul l'affichage de la lettre 'M' est modifié. Si on applique `@styleset(alt-a)`, seule l'apparence de la lettre a minuscule changera.
 
 Vous pouvez modifier :
 
@@ -131,7 +131,7 @@ Cette caractéristique permet d'accéder à différentes formes alternatives de 
 
 ### Propriété raccourcie ({{Cssxref("font-variant")}})
 
-La propriété raccourcie `font-variant` permet de définir l'ensemble des caractéristiques précédentes. Lorsqu'on utilise la valeur `normal`, toutes les caractéristiques sont réinitialisées et retrouvent leurs valeurs par défaut. En utilisant `none`,  `font-variant-ligatures` vaudra `none` et toutes les autres propriétés récupèreront leurs valeurs initiales (cela signifie entre autres que si le crénage est activé par défaut, il sera toujours activé, même lorsque `none` est fourni).
+La propriété raccourcie `font-variant` permet de définir l'ensemble des caractéristiques précédentes. Lorsqu'on utilise la valeur `normal`, toutes les caractéristiques sont réinitialisées et retrouvent leurs valeurs par défaut. En utilisant `none`, `font-variant-ligatures` vaudra `none` et toutes les autres propriétés récupèreront leurs valeurs initiales (cela signifie entre autres que si le crénage est activé par défaut, il sera toujours activé, même lorsque `none` est fourni).
 
 {{EmbedGHLiveSample("css-examples/font-features/font-variant.html", '100%', 600)}}
 

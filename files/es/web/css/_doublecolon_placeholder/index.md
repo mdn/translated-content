@@ -86,7 +86,7 @@ El radio del color de contraste es determinado al comparar la luminosidad entre 
 
 Un texto temporal con suficiente contraste puede ser interpretado como una entrada. El texto provisional podría desaparecer cuando una persona ingresa contenido en un elemento {{htmlelement("input")}}. Ámbas circunstancias pueden interferir con el correcto llenado de un formulario, especialmente para personas con dificultades cogniticas.
 
-Un acercamiento alternativo para proveer información provisional es incluirla afuera del campo de entrada en proximidad visual, entonces usar [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) para programáticamente asociar la entrada {{HTMLElement("input")}} con su sugerencia.
+Un acercamiento alternativo para proveer información provisional es incluirla afuera del campo de entrada en proximidad visual, entonces usar [`aria-describedby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) para programáticamente asociar la entrada {{HTMLElement("input")}} con su sugerencia.
 
 Con esta implementación, el contenido de la sugerencia, esta disponible incluso cuando información es ingresada en el campo de entrada, y la entrada aparece libre de una _entrada_ preexistente cuando la página ha cargado. Muchas de las tecnologías de lectores de pantalla usan `aria-describedby` para leer la sugerencia después de que la etiqueta de la entrada de texto hay sido anunciada, y la persona utilizando el lector de pantalla puede silenciarla si encuentra la información adicional innecesaria..
 

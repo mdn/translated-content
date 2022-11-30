@@ -256,7 +256,7 @@ name2 = name2 + ' says hello!';
       <td>
         <pre class="brush: js">
 6 > 10 // false
-20 > 10  // true</pre
+20 > 10 // true</pre
         >
       </td>
     </tr>

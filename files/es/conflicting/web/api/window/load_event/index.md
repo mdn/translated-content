@@ -1,9 +1,6 @@
 ---
 title: window.onload
 slug: conflicting/Web/API/Window/load_event
-tags:
-  - window.onload
-translation_of: Web/API/GlobalEventHandlers/onload
 original_slug: Web/API/GlobalEventHandlers/onload
 ---
 

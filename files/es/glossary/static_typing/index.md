@@ -1,11 +1,6 @@
 ---
 title: Tipificación estática
 slug: Glossary/Static_typing
-tags:
-  - CodingScripting
-  - Glossary
-  - Type
-translation_of: Glossary/Static_typing
 original_slug: Glossary/Tipificación_estática
 ---
 

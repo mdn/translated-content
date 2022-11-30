@@ -1,13 +1,6 @@
 ---
 title: Carga progresiva
 slug: Web/Progressive_web_apps/Loading
-tags:
-  - Cargar
-  - PWAs
-  - aplicaciones web progresivas
-  - js13kGames
-  - progresiva
-translation_of: Web/Progressive_web_apps/Loading
 ---
 
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}

@@ -149,14 +149,14 @@ Map オブジェクトに対してオブジェクトプロパティを設定す�
 wrongMap['bla'] = 'blaa'
 wrongMap['bla2'] = 'blaaa2'
 
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }
+console.log(wrongMap) // Map { bla: 'blaa', bla2: 'blaaa2' }
 </pre>
 
 しかし、このようにプロパティを設定すると、 Map データ構造に符合しません。一般的なオブジェクトの機能を使用します。 'bla' の値はクエリを行うための Map に格納されません。データにその他の操作を行うと失敗します。
 
 <pre class="syntaxbox example-bad brush js notranslate">wrongMap.has('bla')    // false
 wrongMap.delete('bla') // false
-console.log(wrongMap)  // Map { bla: 'blaa', bla2: 'blaaa2' }</pre>
+console.log(wrongMap) // Map { bla: 'blaa', bla2: 'blaaa2' }</pre>
 
 Map にデータを格納する正しい方法は、 `set(key, value)` メソッドを使用する方法です。
 

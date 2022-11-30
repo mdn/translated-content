@@ -1,11 +1,6 @@
 ---
 title: footer
 slug: Web/HTML/Element/footer
-tags:
-  - HTML5
-  - footer
-  - para_revisar
-translation_of: Web/HTML/Element/footer
 original_slug: Web/HTML/Elemento/footer
 ---
 

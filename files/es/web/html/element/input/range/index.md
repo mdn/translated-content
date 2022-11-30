@@ -1,19 +1,6 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Element/input/range
-tags:
-  - Elementos
-  - Formulários HTML
-  - HTML etiqueta input
-  - Input
-  - Range
-  - Rango
-  - Referencia
-  - Web
-  - deslizador
-  - formulários
-  - slider
-translation_of: Web/HTML/Element/input/range
 original_slug: Web/HTML/Elemento/input/range
 ---
 
@@ -29,7 +16,7 @@ El elemento {{HTMLElement("input")}} del tipo **`"range"`** permite que el usuar
 
 {{EmbedLiveSample("summary_sample1", 600, 40)}}
 
-Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un input de tipo [`"text"`](/en-US/docs/Web/HTML/Element/input/text).
+Si el navegador del usuario no soporta el tipo `"range"`, será tratado como un input de tipo [`"text"`](/es/docs/Web/HTML/Element/input/text).
 
 <table class="properties">
   <tbody>
@@ -316,4 +303,4 @@ Además de los ejemplos anteriores, encontrarás más ejemplos en los siguientes
 
 - [HTML Forms](/es/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface it's based upon
-- [`<input type="number">`](/en-US/docs/Web/HTML/Element/input/number)
+- [`<input type="number">`](/es/docs/Web/HTML/Element/input/number)

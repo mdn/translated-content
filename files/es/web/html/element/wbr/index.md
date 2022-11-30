@@ -1,12 +1,6 @@
 ---
 title: <wbr>
 slug: Web/HTML/Element/wbr
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/wbr
 original_slug: Web/HTML/Elemento/wbr
 ---
 

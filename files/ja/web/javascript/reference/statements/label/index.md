@@ -166,9 +166,7 @@ L: function* F() {}
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-labelled-statements', 'Labelled statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

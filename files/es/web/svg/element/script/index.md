@@ -92,7 +92,7 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 
     Nota: en Firefox puedes usar características avanzadas tales como let statements y otras características de la última versión de JS, usando type=application/javascript;version=1.8 {{Non-standard_inline}}. Ten cuidado!, esto no es una característica estándar, es decir, probablemente genere conflictos con otros navegadores, en particular aquellos basados en Chromium.
 
-    Para incluir lenguajes de programación exóticos, lee acerca de [Rosetta](/en-US/Ap-ons/Code_snippets/Rosetta).
+    Para incluir lenguajes de programación exóticos, lee acerca de [Rosetta](/es/Ap-ons/Code_snippets/Rosetta).
 
 - {{htmlattrdef("text")}}
   - : Este atributo actúa como el atributo `textContent`, establece el texto contenido del elemento. Pero a diferencia de `textContent`, este atributo se evalúa como ejecutable luego de ser insertado como nodo en el DOM.

@@ -1,7 +1,6 @@
 ---
 title: ¿Cómo se utiliza Github pages?
 slug: Learn/Common_questions/Using_Github_pages
-translation_of: Learn/Common_questions/Using_Github_pages
 original_slug: Learn/Using_Github_pages
 ---
 

@@ -1,23 +1,6 @@
 ---
 title: Instalar y desinstalar aplicaciones web
 slug: Web/Progressive_web_apps/Installing
-tags:
-  - Android
-  - Apps
-  - Chrome
-  - Desinstalar
-  - Firefox
-  - Guía
-  - Lanzar
-  - PWA
-  - Pantalla de inicio
-  - Principiante
-  - Samsung
-  - Web
-  - aplicaciones
-  - aplicaciones web progresivas
-  - instalar
-translation_of: Web/Progressive_web_apps/Developer_guide/Installing
 original_slug: Web/Progressive_web_apps/Developer_guide/Installing
 ---
 

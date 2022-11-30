@@ -1,12 +1,6 @@
 ---
 title: Sincrónico
 slug: Glossary/Synchronous
-tags:
-  - Glosario
-  - Mecánicas
-  - Web
-  - WebMechanics
-translation_of: Glossary/Synchronous
 original_slug: Glossary/Sincronico
 ---
 

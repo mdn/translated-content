@@ -1,7 +1,6 @@
 ---
 title: 'Evaluación: Estructurando datos planetarios'
 slug: Learn/HTML/Tables/Structuring_planet_data
-translation_of: Learn/HTML/Tables/Structuring_planet_data
 original_slug: Learn/HTML/Tablas/Structuring_planet_data
 ---
 

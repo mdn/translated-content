@@ -1,7 +1,6 @@
 ---
 title: XSLT
 slug: Web/XSLT
-translation_of: Web/XSLT
 ---
 
 **[Tutorial XSLT (en)](http://www.w3schools.com/xsl/)**

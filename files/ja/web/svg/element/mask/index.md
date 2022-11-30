@@ -68,10 +68,7 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様書                                                                               | ステータス                   | コメント |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('CSS Masks', '#MaskElement', '&lt;mask&gt;')}}         | {{Spec2('CSS Masks')}} |          |
-| {{SpecName('SVG1.1', 'masking.html#Masking', '&lt;mask&gt;')}} | {{Spec2('SVG1.1')}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザの互換性
 

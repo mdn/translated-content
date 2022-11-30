@@ -1,7 +1,6 @@
 ---
 title: API
 slug: Glossary/API
-translation_of: Glossary/API
 ---
 
 ## Resumen

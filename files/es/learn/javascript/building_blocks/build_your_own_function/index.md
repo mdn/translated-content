@@ -1,16 +1,6 @@
 ---
 title: Construye tu propia función
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
-tags:
-  - Aprender
-  - Artículo
-  - Construir
-  - Funciones
-  - Guía
-  - JavaScript
-  - Principiante
-  - Tutorial
-translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 original_slug: Learn/JavaScript/Building_blocks/Construyendo_tu_propia_funcion
 ---
 
@@ -40,7 +30,7 @@ La función `alert` es limitada: pueder cambiar el mensaje, pero no puedes cambi
 
 Para empezar, vamos a poner juntos una función básica.
 
-> **Nota:** Para las convenciones de nombres de las funciones, debes seguir las mismas reglas que [convecion de nombres de variables](/en-US/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules). Esto está bien, ya que puede distinguirlos: los nombres de las funciones aparecen entre paréntesis después de ellos y las variables no.
+> **Nota:** Para las convenciones de nombres de las funciones, debes seguir las mismas reglas que [convecion de nombres de variables](/es/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules). Esto está bien, ya que puede distinguirlos: los nombres de las funciones aparecen entre paréntesis después de ellos y las variables no.
 
 1. Comience accediendo al archivo [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) y haciendo una copia local. Verás que el HTML es simple — el body unicamente tiene un botón. También hemos propocionado algunos estilos básicos de CSS para customizar el mensaje y un elemento {{htmlelement("script")}} vacío para poner nuestro JavaScript dentro.
 2. Luego añade lo siguiente dentro del elemento `<script>`:

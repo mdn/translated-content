@@ -1,17 +1,6 @@
 ---
 title: Trabajando con JSON
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - Arreglos
-  - Artículo
-  - Guía
-  - JSON
-  - Objetos
-  - Parsing
-  - Principiante
-  - Stringifying
-  - Tutorial
-translation_of: Learn/JavaScript/Objects/JSON
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
@@ -185,7 +174,7 @@ Para obtener el JSON se utilizará un API llamado {{domxref("XMLHttpRequest")}} 
     const request = new XMLHttpRequest();
     ```
 
-3. Ahora es necesario abrir una nueva solicitud utilizando el método [`open()`](/en-US/docs/Web/API/XMLHttpRequest/open). Agregue la siguiente línea:
+3. Ahora es necesario abrir una nueva solicitud utilizando el método [`open()`](/es/docs/Web/API/XMLHttpRequest/open). Agregue la siguiente línea:
 
     ```js
     request.open('GET', requestURL);
@@ -196,7 +185,7 @@ Para obtener el JSON se utilizará un API llamado {{domxref("XMLHttpRequest")}} 
     - El método HTTP a usar cuando se hace una solicitud en red. En este caso `GET` es adecuado, dado que sólo se estan recuperando algunos datos simples.
     - La URL a la que se realiza la solicitud — esta es la URL del archivo que se almacenó antes.
 
-4. Luego, agregue las siguientes dos lineas — establecemos el [`responseType`](/en-US/docs/Web/API/XMLHttpRequest/responseType) a JSON, de esta forma ese XHR sabe que el servidor estará retornando JSON y que esto debería ser convertido en segundo plano en un objeto JavaScript. Entonces se envía la solicitud con el método [`send()`](/en-US/docs/Web/API/XMLHttpRequest/send):
+4. Luego, agregue las siguientes dos lineas — establecemos el [`responseType`](/es/docs/Web/API/XMLHttpRequest/responseType) a JSON, de esta forma ese XHR sabe que el servidor estará retornando JSON y que esto debería ser convertido en segundo plano en un objeto JavaScript. Entonces se envía la solicitud con el método [`send()`](/es/docs/Web/API/XMLHttpRequest/send):
 
     ```js
     request.responseType = 'json';
@@ -215,7 +204,7 @@ Para obtener el JSON se utilizará un API llamado {{domxref("XMLHttpRequest")}} 
 
 En este punto se está almacenando la respuesta a la solicitud (disponible en la propiedad [`response`](/es/docs/Web/API/XMLHttpRequest/response)) en una variable llamada `superHeroes`; esta variable ahora contendrá el objeto JavaScript basado en el JSON. Luego se pasa el objeto como argumento a dos funciones — la primera llenará el `<header>` con los datos correctos, mientras la segunda creará una tarjeta de información para cada héroe en el equipo y la insertará en `<section>`.
 
-Se ha contenido el código en un manejador de eventos que se activa cuando se dispara el evento de carga (ver [`onload`](/en-US/docs/Web/API/XMLHttpRequestEventTarget/onload)) — esto es porque el evento de carga se dispara cuando la respuesta ha sido retornada de forma exitosa; de esta manera se garantiza que `request.response` estará disponible cuando se intente hacer algo con ella.
+Se ha contenido el código en un manejador de eventos que se activa cuando se dispara el evento de carga (ver [`onload`](/es/docs/Web/API/XMLHttpRequestEventTarget/onload)) — esto es porque el evento de carga se dispara cuando la respuesta ha sido retornada de forma exitosa; de esta manera se garantiza que `request.response` estará disponible cuando se intente hacer algo con ella.
 
 ### Poblando el encabezado
 
@@ -233,7 +222,7 @@ function populateHeader(jsonObj) {
 }
 ```
 
-Se ha llamado al parámetro `jsonObj`, para recordar que este es un objeto JavaScript originado desde un JSON. Primero se crea un elemento {{HTMLElement("h1")}} con [`createElement()`](/en-US/docs/Web/API/Document/createElement), se asigna su [`textContent`](/en-US/docs/Web/API/Node/textContent) igual a la propiedad `squadName` del objeto, luego se agrega al encabezado utilizando[`appendChild()`](/en-US/docs/Web/API/Node/appendChild). A continuación se realiza una operación muy parecida en un párrafo: se crea, se asigna su contenido de texto y se agrega al encabezado. La única diferencia es que su texto se asigna a una cadena concatenada que contiene las propiedades `homeTown` y `formed` del objeto.
+Se ha llamado al parámetro `jsonObj`, para recordar que este es un objeto JavaScript originado desde un JSON. Primero se crea un elemento {{HTMLElement("h1")}} con [`createElement()`](/es/docs/Web/API/Document/createElement), se asigna su [`textContent`](/es/docs/Web/API/Node/textContent) igual a la propiedad `squadName` del objeto, luego se agrega al encabezado utilizando[`appendChild()`](/es/docs/Web/API/Node/appendChild). A continuación se realiza una operación muy parecida en un párrafo: se crea, se asigna su contenido de texto y se agrega al encabezado. La única diferencia es que su texto se asigna a una cadena concatenada que contiene las propiedades `homeTown` y `formed` del objeto.
 
 ### Creación de las tarjetas de información del héroe
 
@@ -299,8 +288,8 @@ request.responseType = 'json';
 
 En algunas ocasiones, se recibirá una cadena JSON sin procesar, y será necesario convertirla en un objeto. Y cuando sea necesario enviar un objeto Javascript a través de la red, será necesario convertirlo a un JSON (una cadena) antes de ser enviado. Afortunadamente, estos dos problemas son muy comunes en el desarrollo web por lo que un objeto JSON integrado está disponible en los navegadores, que contiene los siguientes dos métodos:
 
-- [`parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): Acepta una cadena JSON como parámetro, y devuelve el objeto JavaScript correspondiente.
-- [`stringify()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): Acepta un objeto como parámetro, y devuelve la forma de cadena JSON equivalente.
+- [`parse()`](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse): Acepta una cadena JSON como parámetro, y devuelve el objeto JavaScript correspondiente.
+- [`stringify()`](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify): Acepta un objeto como parámetro, y devuelve la forma de cadena JSON equivalente.
 
 El primer método se puede observar en el ejemplo [heroes-finished-json-parse.html](http://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) (vea el [código fuente](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) — que realiza exactamente lo mismo que el ejemplo que se construyó previamente, excepto porque se determinó que el XHR devolviera el texto JSON sin procesar, luego se utiliza `parse()` para convertirlo en un objeto JavaScript. El extracto del código es el siguiente:
 
