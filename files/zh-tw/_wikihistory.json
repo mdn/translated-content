@@ -3848,18 +3848,6 @@
       "kourge"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:35:23.761Z",
-    "contributors": [
-      "Talence0329",
-      "jackblackevo",
-      "irvinfly",
-      "teoli",
-      "ethertank",
-      "Sonrisa",
-      "sycheng"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-08-07T04:58:02.421Z",
     "contributors": [
@@ -5105,6 +5093,18 @@
   "conflicting/Web/CSS": {
     "modified": "2019-03-18T21:16:53.558Z",
     "contributors": ["cvrebert"]
+  },
+  "conflicting/Web/JavaScript": {
+    "modified": "2020-03-12T19:35:23.761Z",
+    "contributors": [
+      "Talence0329",
+      "jackblackevo",
+      "irvinfly",
+      "teoli",
+      "ethertank",
+      "Sonrisa",
+      "sycheng"
+    ]
   },
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:45:29.748Z",
