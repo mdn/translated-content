@@ -1,16 +1,6 @@
 ---
 title: LGPL
 slug: Glossary/LGPL
-tags:
-  - Compartir
-  - Free
-  - Free Software Foundation
-  - GNU
-  - GPL
-  - Licencia
-  - Open Source
-  - Software Libre
-translation_of: Glossary/LGPL
 ---
 
 _LGPL_ (GNU Lesser General Public License en español **Licencia Pública General Reducida de GNU**) es una licencia de software libre publicada por la _Free Software Foundation_. LGPL es una alternativa más permisiva que la estricta licencia [copyleft](/es/docs/Glossary/copyleft) [GPL](/es/docs/Glossary/GPL).

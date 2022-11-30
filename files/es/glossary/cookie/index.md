@@ -1,10 +1,6 @@
 ---
 title: Cookie
 slug: Glossary/Cookie
-tags:
-  - Glosario
-  - TecnologíasWeb
-translation_of: Glossary/Cookie
 ---
 
 Una cookie es una pequeña información enviada por un sitio web que se almacena en el navegador del ordenador del usuario.

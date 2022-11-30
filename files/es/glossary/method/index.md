@@ -1,10 +1,6 @@
 ---
 title: Método
 slug: Glossary/Method
-tags:
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Method
 original_slug: Glossary/Método
 ---
 

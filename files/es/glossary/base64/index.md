@@ -1,7 +1,6 @@
 ---
 title: Base64 codificando y decodificando
 slug: Glossary/Base64
-translation_of: Glossary/Base64
 original_slug: Web/API/WindowBase64/Base64_codificando_y_decodificando
 ---
 

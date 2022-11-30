@@ -1,13 +1,6 @@
 ---
 title: POP3
 slug: Glossary/POP
-tags:
-  - Correo
-  - Glosario
-  - Infraestructura
-  - Principiante
-  - Protocolo
-translation_of: Glossary/POP
 ---
 
 **POP3** (Protocolo de Oficina de Correo por sus siglas en inglés) es un [protocolo](/es/docs/Glossary/Protocol) muy común para obtener correos desde un servidor de correos por medio de una conexión [TCP](/es/docs/Glossary/TCP). POP3 no soporta directorios, a diferencia del más reciente [IMAP4](/es/docs/Glossary/IMAP), el cual es más difícil de implementar dada su extructura más compleja.

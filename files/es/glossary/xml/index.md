@@ -1,18 +1,6 @@
 ---
 title: XML
 slug: Glossary/XML
-tags:
-  - Bases de datos
-  - Datos
-  - Glosario
-  - HTML
-  - Lenguaje
-  - Tags
-  - Web
-  - XML
-  - l10n:priority
-  - lenguaje de marcado
-translation_of: Glossary/XML
 ---
 
 _XML_ (eXtensible Markup Language en español **Lenguaje de Marcado eXtensible**) es un lenguaje de marcado genérico especificado por la W3C. La industria de tecnologías de la información (_IT Industry_) utiliza muchos lenguajes de descripción de datos (_data-description language_) que están basados en XML.

@@ -1,10 +1,6 @@
 ---
 title: Hoisting
 slug: Glossary/Hoisting
-tags:
-  - JavaScript
-  - hoisting
-translation_of: Glossary/Hoisting
 ---
 
 Hoisting es un término que _no_ encontrará utilizado en ninguna especificación previa a [ECMAScript® 2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/index.html). El concepto de Hoisting fue pensado como una manera general de referirse a cómo funcionan los contextos de ejecución en JavaScript (específicamente las fases de creación y ejecución). Sin embargo, el concepto puede ser un poco confuso al principio.

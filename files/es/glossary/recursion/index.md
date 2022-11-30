@@ -1,10 +1,6 @@
 ---
 title: Recursión
 slug: Glossary/Recursion
-tags:
-  - CodingScripting
-  - Glosario
-translation_of: Glossary/Recursion
 original_slug: Glossary/Recursión
 ---
 

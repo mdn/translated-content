@@ -1,12 +1,6 @@
 ---
 title: Criptografía
 slug: Glossary/Cryptography
-tags:
-  - Criptografía
-  - Glosario
-  - Seguridad
-  - privacidad
-translation_of: Glossary/Cryptography
 original_slug: Glossary/Criptografía
 ---
 

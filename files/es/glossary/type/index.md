@@ -1,11 +1,6 @@
 ---
 title: Type
 slug: Glossary/Type
-tags:
-  - CodingScripting
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Type
 ---
 
 El **tipo** (_type_ o _data type_) es una característica of una {{glossary("value", "valor")}} que afecta al tipo de datos que puede almacenar; por ejemplo, en JavaScript un {{domxref("Boolean")}} solo tiene valores `true`/`false`, mientras que un {{domxref("String")}} contiene cadenas de texto, un {{domxref("Number")}} contiene números de cualquier tipo, y así sucesivamente.
