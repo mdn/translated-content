@@ -47,7 +47,7 @@ async function name(param0, param1, /* … ,*/ paramN) {
 
 ## 描述
 
-`async function` 表达式与{{jsxref('Statements/async_function', '异步函数语句')}}非常相似，语法也基本相同。异步 `function` 表达式和异步 `function` 语句之间的主要区别在于*函数名称*，它可以在 `async function` 表达式中省略，从而创建一个*匿名*函数。`async function` 表达式可以用作 [IIFE](/zh-CN/docs/Glossary/IIFE)（立即执行函数表达式，Immediately Invoked Function Expression），它在定义后立即运行。另请参见[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)章节以获取更多信息。
+`async function` 表达式与{{jsxref("Statements/async_function", "异步函数语句", "", 1)}}非常相似，语法也基本相同。异步 `function` 表达式和异步 `function` 语句之间的主要区别在于*函数名称*，它可以在 `async function` 表达式中省略，从而创建一个*匿名*函数。`async function` 表达式可以用作 [IIFE](/zh-CN/docs/Glossary/IIFE)（立即执行函数表达式，Immediately Invoked Function Expression），它在定义后立即运行。参见[函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)章节以获取更多信息。
 
 ## 示例
 
@@ -62,7 +62,7 @@ function resolveAfter2Seconds(x) {
   });
 }
 
-//  赋值给变量的异步函数表达式
+// 赋值给变量的异步函数表达式
 const add = async function (x) {
   const a = await resolveAfter2Seconds(20);
   const b = await resolveAfter2Seconds(30);
@@ -93,6 +93,6 @@ add(10).then((v) => {
 
 ## 参见
 
-- {{jsxref("Statements/async_function", "异步函数")}}
+- {{jsxref("Statements/async_function", "异步函数", "", 1)}}
 - {{jsxref("AsyncFunction")}} 对象
 - {{jsxref("Operators/await", "await")}}
