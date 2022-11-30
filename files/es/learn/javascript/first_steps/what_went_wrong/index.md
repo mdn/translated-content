@@ -1,22 +1,6 @@
 ---
 title: ¿Qué ha salido mal? Corrigiendo JavaScript
 slug: Learn/JavaScript/First_steps/What_went_wrong
-tags:
-  - Aprender
-  - Artículo
-  - CodingScripting
-  - Debugging
-  - Depurando
-  - Error
-  - Herramientas de Desarrollador
-  - JavaScript
-  - Novato
-  - Principiante
-  - Tutorial
-  - console.log
-  - depurar
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}

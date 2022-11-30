@@ -1,20 +1,6 @@
 ---
 title: Matemáticas básicas en JavaScript — números y operadores
 slug: Learn/JavaScript/First_steps/Math
-tags:
-  - Aprender
-  - Artículo
-  - Guía
-  - JavaScript
-  - Matemáticas
-  - Math
-  - Novato
-  - Operadores
-  - Principiante
-  - incremento
-  - l10n:priority
-  - modulo
-translation_of: Learn/JavaScript/First_steps/Math
 original_slug: Learn/JavaScript/First_steps/Matemáticas
 ---
 

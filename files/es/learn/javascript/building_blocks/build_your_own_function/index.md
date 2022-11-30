@@ -1,16 +1,6 @@
 ---
 title: Construye tu propia función
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
-tags:
-  - Aprender
-  - Artículo
-  - Construir
-  - Funciones
-  - Guía
-  - JavaScript
-  - Principiante
-  - Tutorial
-translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 original_slug: Learn/JavaScript/Building_blocks/Construyendo_tu_propia_funcion
 ---
 

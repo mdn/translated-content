@@ -1,18 +1,6 @@
 ---
 title: Imágenes en HTML
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
-tags:
-  - Aprendiz
-  - Article
-  - HTML
-  - Imagenes
-  - captions
-  - figcaption
-  - img
-  - pie de imagen
-  - subtítulos
-  - texto alt
-translation_of: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
 
 {{LearnSidebar}}

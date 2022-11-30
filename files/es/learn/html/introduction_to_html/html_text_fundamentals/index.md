@@ -1,20 +1,6 @@
 ---
 title: Fundamentos de texto en HTML
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
-tags:
-  - CodingScripting
-  - Encabezados
-  - Estructuras
-  - Guía
-  - HTML
-  - Introducción a HTML
-  - Novato
-  - Principiante
-  - Párrafos
-  - Texto
-  - aprende
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 original_slug: Learn/HTML/Introduccion_a_HTML/texto
 ---
 

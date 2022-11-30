@@ -1,7 +1,6 @@
 ---
 title: Tipos de input de HTML5
 slug: Learn/Forms/HTML5_input_types
-translation_of: Learn/Forms/HTML5_input_types
 original_slug: Learn/HTML/Forms/Tipos_input_HTML5
 ---
 

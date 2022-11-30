@@ -1,17 +1,6 @@
 ---
 title: Trabajando con JSON
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - Arreglos
-  - Artículo
-  - Guía
-  - JSON
-  - Objetos
-  - Parsing
-  - Principiante
-  - Stringifying
-  - Tutorial
-translation_of: Learn/JavaScript/Objects/JSON
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

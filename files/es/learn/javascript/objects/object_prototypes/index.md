@@ -1,17 +1,6 @@
 ---
 title: Prototipos de objetos
 slug: Learn/JavaScript/Objects/Object_prototypes
-tags:
-  - Aprender
-  - Artículo
-  - Cadena de Prototipos
-  - Constructor
-  - JavaScript
-  - Objetos
-  - Principiante
-  - Prototipo
-  - create()
-translation_of: Learn/JavaScript/Objects/Object_prototypes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}

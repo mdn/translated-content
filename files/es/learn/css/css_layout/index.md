@@ -1,22 +1,6 @@
 ---
 title: Diseño CSS
 slug: Learn/CSS/CSS_layout
-tags:
-  - Aprender
-  - CSS
-  - Floating
-  - Grids
-  - Guía
-  - Landing
-  - Layout
-  - Module
-  - Multiple column
-  - Positioning
-  - Principiante
-  - TopicStub
-  - flexbox
-  - float
-translation_of: Learn/CSS/CSS_layout
 ---
 
 {{LearnSidebar}}

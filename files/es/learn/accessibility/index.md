@@ -1,19 +1,6 @@
 ---
 title: Accesibilidad
 slug: Learn/Accessibility
-tags:
-  - ARIA
-  - Accesibilidad
-  - Aprender
-  - Artículos
-  - Aterrizaje
-  - CSS
-  - CodificaciónDeSecuenciasDeComandos
-  - HTML
-  - JavaScript
-  - Principiantes
-  - modulo
-translation_of: Learn/Accessibility
 ---
 
 {{LearnSidebar}}

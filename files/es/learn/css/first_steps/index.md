@@ -1,13 +1,6 @@
 ---
 title: Primeros pasos en CSS
 slug: Learn/CSS/First_steps
-tags:
-  - Aprender
-  - CSS
-  - Principiante
-  - modulo
-  - primeros pasos
-translation_of: Learn/CSS/First_steps
 ---
 
 {{LearnSidebar}}

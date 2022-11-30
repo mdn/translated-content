@@ -1,24 +1,6 @@
 ---
 title: Conceptos básicos de los objetos JavaScript
 slug: Learn/JavaScript/Objects/Basics
-tags:
-  - API
-  - Aprender
-  - Artículo
-  - JavaScript
-  - Novato
-  - Object
-  - Objeto
-  - Principiante
-  - Sintaxis
-  - instancia
-  - l10n:priority
-  - notación de corchetes
-  - notación de punto
-  - objeto literal
-  - tehoría
-  - this
-translation_of: Learn/JavaScript/Objects/Basics
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}

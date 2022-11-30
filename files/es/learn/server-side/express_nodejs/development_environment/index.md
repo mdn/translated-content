@@ -1,15 +1,6 @@
 ---
 title: Setting up a Node development environment
 slug: Learn/Server-side/Express_Nodejs/development_environment
-tags:
-  - Aprender
-  - Entorno de Desarrollo
-  - Express
-  - JavaScript
-  - Node
-  - nodejs
-  - npm
-translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}

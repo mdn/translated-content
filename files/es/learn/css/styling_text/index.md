@@ -1,24 +1,6 @@
 ---
 title: Estilo de texto
 slug: Learn/CSS/Styling_text
-tags:
-  - Beginner
-  - CSS
-  - CodingScripting
-  - Fonts
-  - Landing
-  - Links
-  - Module
-  - NeedsTranslation
-  - Text
-  - TopicStub
-  - font
-  - letter
-  - line
-  - lists
-  - shadow
-  - web fonts
-translation_of: Learn/CSS/Styling_text
 ---
 
 {{LearnSidebar}}

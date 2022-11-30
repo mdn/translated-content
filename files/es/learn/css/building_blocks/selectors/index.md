@@ -1,7 +1,6 @@
 ---
 title: Selectores CSS
 slug: Learn/CSS/Building_blocks/Selectors
-translation_of: Learn/CSS/Building_blocks/Selectors
 original_slug: Learn/CSS/Building_blocks/Selectores_CSS
 ---
 

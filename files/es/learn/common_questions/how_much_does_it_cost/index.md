@@ -1,14 +1,6 @@
 ---
 title: ¿Cuánto cuesta hacer algo en la Web?
 slug: Learn/Common_questions/How_much_does_it_cost
-tags:
-  - Comenzando
-  - Herramientas de desarrollo web
-  - Principiante
-  - alojamiento
-  - costo
-  - hosting
-translation_of: Learn/Common_questions/How_much_does_it_cost
 original_slug: Learn/Common_questions/Cuanto_cuesta
 ---
 

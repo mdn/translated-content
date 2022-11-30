@@ -1,14 +1,6 @@
 ---
 title: Empezar con HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Atributos
-  - Elemento
-  - Guía
-  - HTML
-  - Principiante
-  - comentários
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 original_slug: Learn/HTML/Introduccion_a_HTML/iniciar
 ---
 
