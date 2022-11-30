@@ -169,7 +169,7 @@
 /zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology
 /zh-TW/docs/IndexedDB/Using_IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /zh-TW/docs/JavaScript	/zh-TW/docs/Web/JavaScript
-/zh-TW/docs/JavaScript/About_JavaScript	/zh-TW/docs/conflicting/Web/JavaScript
+/zh-TW/docs/JavaScript/About_JavaScript	/zh-TW/docs/Web/JavaScript
 /zh-TW/docs/JavaScript/Guide	/zh-TW/docs/Web/JavaScript/Guide
 /zh-TW/docs/JavaScript/Guide/Details_of_the_Object_Model	/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-TW/docs/JavaScript/Guide/Functions	/zh-TW/docs/Web/JavaScript/Guide/Functions
@@ -696,7 +696,7 @@
 /zh-TW/docs/Web/HTTP/X-Frame-Options	/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options
 /zh-TW/docs/Web/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/zh-TW/docs/Web/JavaScript/Language_Overview
-/zh-TW/docs/Web/JavaScript/About_JavaScript	/zh-TW/docs/conflicting/Web/JavaScript
+/zh-TW/docs/Web/JavaScript/About_JavaScript	/zh-TW/docs/Web/JavaScript
 /zh-TW/docs/Web/JavaScript/Guide/Introduction/關於	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_Overview	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀	/zh-TW/docs/Web/JavaScript/Guide/Introduction

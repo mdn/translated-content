@@ -5094,18 +5094,6 @@
     "modified": "2019-03-18T21:16:53.558Z",
     "contributors": ["cvrebert"]
   },
-  "conflicting/Web/JavaScript": {
-    "modified": "2020-03-12T19:35:23.761Z",
-    "contributors": [
-      "Talence0329",
-      "jackblackevo",
-      "irvinfly",
-      "teoli",
-      "ethertank",
-      "Sonrisa",
-      "sycheng"
-    ]
-  },
   "orphaned/Glossary/Bootstrap": {
     "modified": "2020-05-23T17:07:57.268Z",
     "contributors": ["iigmir"]
