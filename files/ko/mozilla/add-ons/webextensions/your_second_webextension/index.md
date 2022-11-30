@@ -36,7 +36,6 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 [GitHub 예제 소스코드](https://github.com/mdn/webextensions-examples/tree/master/beastify).
 
-
 ## Writing the extension
 
 새 디렉토리를 생성하고 들어갑니다.
