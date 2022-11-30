@@ -93,6 +93,23 @@ HTML 规范同时还约束了元素之间的关系，例如无序列表 [`<ul>`]
 
 非浏览器环境（如 Node.js）通常不提供 DOM API——因为它们不与文档进行交互，但它们仍然会实现很多 web API，例如 [`fetch()`](/zh-CN/docs/Web/API/fetch) 和 [`setTimeout()`](/zh-CN/docs/Web/API/setTimeout)。
 
+## 有哪些 JavaScript 的实现？
+
+mozilla.org 上托管了两个 JavaScript 实现。**首个** JavaScript 由网景公司的 Brendan Eich 创建，并不断地更新以符合 ECMA-262 Edition 5 及其之后的标准版本。这个引擎，代号 [SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey) ，是由 C/C++ 语言开发的。而 [Rhino](/zh-CN/docs/Rhino) 引擎，主要由 Norris Boyd（同样也是在网景公司）创建，则是一个 Java 语言开发的 JavaScript 实现。与 SpiderMonkey 类似，Rhino 符合 ECMA-262 Edition 5 标准。
+
+有很多优化技术如 TraceMonkey (Firefox 3.5)、JägerMonkey (Firefox 4) 和 IonMonkey 被不断添加到了 SpiderMonkey JavaScript 引擎。并且提升 JavaScript 执行效率的工作一直在进行。
+
+除了以上实现，还有其他一些流行的 JavaScript 引擎，如：
+
+- Google 的 [V8](http://code.google.com/p/v8/)，在 Google Chrome 浏览器和较新的 Opera 浏览器中使用。这同时也是[Node.js](https://nodejs.org/en/)使用的引擎。
+- [JavaScriptCore](http://www.webkit.org/projects/javascript/index.html) (SquirrelFish/Nitro)，被用在了一些 WebKit 浏览器如 Apple Safari。
+- [Carakan](http://my.opera.com/ODIN/blog/carakan-faq)，用在旧版本 Opera 中。
+- [Chakra](http://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29) 引擎，用在 Internet Explorer 中（尽管它实现的语言被正式地称作为“JScript”来避免商标问题）。
+
+每个 mozilla.org 的 JavaScript 引擎都提供了 公用 API 使程序开发者能将其 JavaScript 嵌入自己的软件中。目前最常见的 JavaScript 宿主环境是网页浏览器。浏览器一般通过 API 创建“宿主对象”来负责将[DOM](http://www.w3.org/DOM/) 反射到 JavaScript 中。
+
+另一个常见的 JavaScript 应用是作为服务端脚本语言。JavaScript 服务器提供宿主对象代表 HTTP 请求和响应，随后可以通过 JavaScript 程序来动态的生成 Web 页面。[Node.js](https://nodejs.org/en/)便是一个流行的例子。
+
 ## Shell
 
 JavaScript shell 允许你快速测试代码片段或 JavaScript 代码，而无需重载 web 页面。其在开发和代码调试中非常有用。
@@ -102,7 +119,6 @@ JavaScript shell 允许你快速测试代码片段或 JavaScript 代码，而无
 以下 JavaScript shell 是与 Perl 或 Python 类似的独立的环境：
 
 - [Node.js](https://nodejs.org/)——Node.js 是用于构建快速、可扩展的网络应用的平台。
-- [GraalJS](https://www.graalvm.org/)——一个高效实现 JavaScript 的平台，由 Oracle Labs 在 GraalVM 上构建。
 - [ShellJS](https://github.com/shelljs/shelljs)——用于 Node.js 的便携式 Unix shell 命令。
 
 ### 基于浏览器的 JavaScript shell
@@ -112,3 +128,28 @@ JavaScript shell 允许你快速测试代码片段或 JavaScript 代码，而无
 - Firefox 有一个[内置的 JavaScript 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html)，支持多行编辑。
 - [Babel 交互式解释器](https://babeljs.io/repl)——一个基于浏览器的、用于试验下一代 JavaScript 特性的[交互式解释器](https://zh.wikipedia.org/wiki/读取﹣求值﹣输出循环)。
 - [TypeScript playground](https://www.typescriptlang.org/play)——一个基于浏览器的在线运行环境，用于试验新的 JavaScript 特性（通过 tsc 编译器）和 TypeScript 语法。
+
+## 工具和资源
+
+用于编写和调试 JavaScript 代码的实用工具。
+
+- [Firefox 开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : 包括 [Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript Profiler](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 等。
+- [JavaScript Shell](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview#shell)
+  - : Javascript Shell 使你可以即时测试 JavaScript 代码片段。
+- [TogetherJS](https://togetherjs.com/)
+  - : 添加 TogetherJS 到你的网站，让用户实时互助，协作更简单。
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/javascript)
+  - : 你可以在 StackOverflow 查看或者发布带有 JavaScript 标签的问题。
+- [JSFiddle](https://jsfiddle.net/)
+  - : 编辑 JavaScript、CSS 和 HTML 并获得实时结果。使用外置资源，并同你的团队在线合作。
+- [Plunker](https://plnkr.co/)
+  - : Plunker 是一个在线社区，用于创建、协作和共享您的 Web 开发创意。编辑您的 JavaScript、CSS 和 HTML 文件并获取实时结果和文件结构。
+- [JSBin](https://jsbin.com/)
+  - : JS Bin 是一个开源的协作式的 web 开发调试工具。
+- [Codepen](https://codepen.io/)
+  - : Codepen 也是一个 Web 协作工具，可用作展示实时结果的 playground。
+- [StackBlitz](https://stackblitz.com/)
+  - : StackBlitz 同样是一个支持调试的在线 playground，它支持部署使用了 React、Angular 等技术的全栈应用
+- [RunJS](https://runjs.app/)
+  - : RunJS 是一个桌面端便笺式 playground，可提供实时执行结果并支持调用 Node 与浏览器 API。
