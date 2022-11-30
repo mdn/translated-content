@@ -37,7 +37,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 - {{jsxref("Intl/Locale/hourCycle", "Intl.Locale.prototype.hourCycle")}}
   - : このロケールが使用している時刻保持書式の規則を返します。
 - {{jsxref("Intl/Locale/hourCycles", "Intl.Locale.prototype.hourCycles")}}
-  - :  {{jsxref("Array")}} で 12 時制 ("h11", "h12") または 24 時制 ("h23", "h24") を示す時周期識別子を返します。
+  - : {{jsxref("Array")}} で 12 時制 ("h11", "h12") または 24 時制 ("h23", "h24") を示す時周期識別子を返します。
 - {{jsxref("Intl/Locale/language", "Intl.Locale.prototype.language")}}
   - : このロケールに関連づけられた言語を返します。
 - {{jsxref("Intl/Locale/numberingSystem", "Intl.Locale.prototype.numberingSystem")}}
@@ -51,7 +51,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 - {{jsxref("Intl/Locale/script", "Intl.Locale.prototype.script")}}
   - : このロケールで使われている特定の言語を書く際に使用する文字体系を返します。
 - {{jsxref("Intl/Locale/textInfo", "Intl.Locale.prototype.textInfo")}}
-  - :  `ltr` （左書き）または `rtl` （右書き）で、文字の並び順を示す部分を返します。
+  - : `ltr` （左書き）または `rtl` （右書き）で、文字の並び順を示す部分を返します。
 - {{jsxref("Intl/Locale/timeZones", "Intl.Locale.prototype.timeZones")}}
   - : `Locale` に関連付けられたタイムゾーン識別子の {{jsxref("Array")}} を返します。
 - {{jsxref("Intl/Locale/weekInfo", "Intl.Locale.prototype.weekInfo")}}

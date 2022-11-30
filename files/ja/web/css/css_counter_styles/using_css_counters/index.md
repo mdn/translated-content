@@ -19,7 +19,7 @@ original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 カウンターを使用するには、最初に必ず {{cssxref("counter-reset")}} プロパティで値を初期化する必要があります。
 このプロパティを使用して、カウンターの値を特定の数値に変更することもできます。
 
-下記の例では、 `section` という名前のカウンターを既定値  (0) に初期化しています。
+下記の例では、 `section` という名前のカウンターを既定値 (0) に初期化しています。
 
 ```css
 counter-reset: section;

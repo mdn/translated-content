@@ -36,14 +36,14 @@ l10n:
 > - **title**
 >   - : タイトルの見出しは、ページの最上部に表示されます。
 >     形式は "_インターフェイス名_**:** _イベント名_ **イベント**" です。
->     例えば、 [Element](/ja/docs/Web/API/Element) インターフェイスの [animationcancel](/ja/docs/Web/API/Element/animationcancel_event) イベントには  `Window: animationcancel イベント` というタイトルを付けます。
+>     例えば、 [Element](/ja/docs/Web/API/Element) インターフェイスの [animationcancel](/ja/docs/Web/API/Element/animationcancel_event) イベントには `Window: animationcancel イベント` というタイトルを付けます。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/API/インターフェイス名/イベント名_event` のような形式になります。
 > - **page-type**
 >   - : `page-type` キーは、 Web/API イベントでは常に `web-api-event` です。
 > - **tags**
->   - : 常に **API**, **Reference**, **Event**,  _イベント名_, _インターフェイス名_ （**Window** など）のタグを含めてください。
+>   - : 常に **API**, **Reference**, **Event**, _イベント名_, _インターフェイス名_ （**Window** など）のタグを含めてください。
 >
 >     必要に応じて以下のタグを入れてください。
 >     - 技術状態: **Experimental** （この技術が[実験的](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#実験的)である場合）、 **Deprecated** （[非推奨](/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#非推奨と廃止)である場合）、 **Non-standard** （標準化過程にない場合）

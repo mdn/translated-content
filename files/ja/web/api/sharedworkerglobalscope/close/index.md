@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Workers API")}}
 
-**`close()`** は {{domxref("SharedWorkerGlobalScope")}} インターフェイスのメソッドで、  `SharedWorkerGlobalScope` のイベントループにキューイングされているタスクを破棄し、この具体的なスコープを効果的に閉じます。
+**`close()`** は {{domxref("SharedWorkerGlobalScope")}} インターフェイスのメソッドで、 `SharedWorkerGlobalScope` のイベントループにキューイングされているタスクを破棄し、この具体的なスコープを効果的に閉じます。
 
 ## 構文
 

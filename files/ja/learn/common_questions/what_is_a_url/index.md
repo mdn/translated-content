@@ -87,7 +87,7 @@ URL の最初の部分は**スキーム**で、ブラウザーがリソースを
 
 ブラウザーのアドレスバーの中に正しく URL を入力すれば、それに対応するリソースを得ることができます。しかし、これは氷山の一角にすぎません。
 
-{{Glossary("HTML")}} 言語では — [後述しますが](/ja/docs/Learn/HTML/Introduction_to_HTML)  —  URL を幅広く使用しています。
+{{Glossary("HTML")}} 言語では — [後述しますが](/ja/docs/Learn/HTML/Introduction_to_HTML) — URL を幅広く使用しています。
 
 - {{HTMLElement("a")}} 要素により、他の文書へのリンクを生成する
 - {{HTMLElement("link")}} や {{HTMLElement("script")}} のような様々な要素を介して、文書を関連するリソースと結びつける

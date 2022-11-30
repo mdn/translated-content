@@ -47,7 +47,7 @@ var dict = Object.setPrototypeOf({}, null);
 
 ## Полифил
 
-Используя старое свойство {{jsxref("Object.proto", "Object.prototype.__proto__")}}, мы можем легко определить `Object.setPrototypeOf()`, если он ещё не доступен:
+Используя старое свойство [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto), мы можем легко определить `Object.setPrototypeOf()`, если он ещё не доступен:
 
 ```js
 if (!Object.setPrototypeOf) {
@@ -73,7 +73,7 @@ if (!Object.setPrototypeOf) {
 
 ## Добавление цепочки прототипов
 
-Сочетание метода `Object.getPrototypeOf()` и свойства {{jsxref("Object.proto", "Object.prototype.__proto__")}} позволяет добавить целую цепочку прототипов к новому прототипу объекта:
+Сочетание метода `Object.getPrototypeOf()` и свойства [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) позволяет добавить целую цепочку прототипов к новому прототипу объекта:
 
 ```js
 /**
@@ -193,4 +193,4 @@ george(); // 'Привет, парни!!'
 
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

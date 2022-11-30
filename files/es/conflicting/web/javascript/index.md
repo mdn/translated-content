@@ -1,10 +1,10 @@
 ---
 title: Acerca de JavaScript
-slug: Web/JavaScript/About_JavaScript
+slug: conflicting/Web/JavaScript
 tags:
   - JavaScript
 translation_of: Web/JavaScript/About_JavaScript
-original_slug: Web/JavaScript/Acerca_de_JavaScript
+original_slug: Web/JavaScript/About_JavaScript
 ---
 
 {{JsSidebar}}

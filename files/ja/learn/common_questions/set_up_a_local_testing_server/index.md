@@ -50,7 +50,7 @@ slug: Learn/Common_questions/set_up_a_local_testing_server
 
     - [python.org](https://www.python.org/) に進みます
     - ダウンロードセクションの下で、 Python "3.xxx" のリンクをクリックします
-    - ページ下部の  _Windows Installer_ を選択してダウンロードします
+    - ページ下部の _Windows Installer_ を選択してダウンロードします
     - ダウンロードしたら、実行します
     - インストーラーの最初のページで、 "Add Python 3.xxx to PATH" チェックボックスをオンにします
     - [インストール]をクリックし、インストールが完了したら[閉じる]をクリックします

@@ -102,7 +102,7 @@ _画像提供: [超タコ足コンセント](https://www.flickr.com/photos/easy-
 
 ### オブジェクトベース
 
-コードは 1 つ以上の  [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects)を使用して API と対話します。オブジェクトは API が使用するデータ（オブジェクトプロパティに含まれる）、および API が利用可能にする機能（オブジェクトメソッドに含まれる）のコンテナーとして機能します。
+コードは 1 つ以上の [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects)を使用して API と対話します。オブジェクトは API が使用するデータ（オブジェクトプロパティに含まれる）、および API が利用可能にする機能（オブジェクトメソッドに含まれる）のコンテナーとして機能します。
 
 > **メモ:** もし、まだオブジェクトがどのように動作するのかよくわからない場合は、先に進む前に [JavaScript オブジェクト](/ja/docs/Learn/JavaScript/Objects)モジュールに戻って練習をしてください。
 
