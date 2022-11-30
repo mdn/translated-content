@@ -1,16 +1,6 @@
 ---
 title: Collision detection
 slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
-tags:
-  - 2D
-  - Deteccion de colision
-  - JavaScript
-  - Lienzo
-  - Phaser
-  - Principiante
-  - Tutorial
-  - juegos
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
 ---
 
 {{GamesSidebar}}

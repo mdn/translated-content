@@ -1,11 +1,6 @@
 ---
 title: Introduccion para desarrollo de juegos para la Web
 slug: Games/Introduction
-tags:
-  - Firefox OS
-  - juegos
-  - moviles
-translation_of: Games/Introduction
 original_slug: Games/Introduccion
 ---
 
