@@ -47,9 +47,7 @@ Math.floor(3 / 2) // 1
 
 ## Especificaciones
 
-| Specification                                                                                            |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-multiplicative-operators', 'Division operator')}} |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

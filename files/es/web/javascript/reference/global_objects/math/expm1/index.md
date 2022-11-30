@@ -59,9 +59,7 @@ Math.expm1 = Math.expm1 || function(x) {
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

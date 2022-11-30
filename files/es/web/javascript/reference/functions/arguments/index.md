@@ -217,9 +217,7 @@ func(); // undefined
 
 ## Especificaciones
 
-| Especificación                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Objectos arguments exóticos')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

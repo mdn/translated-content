@@ -77,9 +77,7 @@ console.log(object2);
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado  |
-| ------------------------------------------------------------------------------------------------ | ------- |
-| {{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}} | Etapa 4 |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 
