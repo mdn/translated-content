@@ -50,7 +50,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 `next` 方法可以接受一个值，该值将提供给方法体。任何内置的语言特征都将不会传递任何值。传递给[生成器](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator) `next` 方法的值将成为相应 `yield` 表达式的值。
 
-可选地，迭代器也实现了 **`return(value)`** 和 **`throw(exception)`** 方法，这些方法在调用时告诉迭代器，调用者已经完成迭代，并且可以执行任何必要的清理（例如关闭数据库）。
+可选地，迭代器也实现了 **`return(value)`** 和 **`throw(exception)`** 方法，这些方法在调用时告诉迭代器，调用者已经完成迭代，并且可以执行任何必要的清理（例如关闭数据库连接）。
 
 - `return(value)` {{optional_inline}}
   - : 无参数或者接受一个参数的函数，并返回符合 `IteratorResult` 接口的对象，其 `value` 通常等价于传递的 `value`，并且 `done` 等于 `true`。调用这个方法表明迭代器的调用者不打算调用更多的 `next()`，并且可以进行清理工作。
@@ -73,7 +73,7 @@ const myIterator = {
 };
 ```
 
-这种对象被称为*可迭代迭代器*。这样做可以让迭代器被被期望可迭代的各种语法使用——因此，在不实现迭代的情况下，实现迭代器协议很少有用。（事实上，几乎所有的语法和 API 都期待*可迭代的对象，而不是迭代器*。）[生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)是一个例子：
+这种对象被称为*可迭代迭代器*。这样做可以让期望可迭代对象的各类语法使用此类迭代器——因此，在不实现可迭代协议的情况下，仅实现迭代器协议的作用很小。（事实上，几乎所有的语法和 API 都期待*可迭代对象，而不是迭代器*。）[生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)是一个例子：
 
 ```js
 const aGeneratorObject = (function* () {
@@ -81,10 +81,13 @@ const aGeneratorObject = (function* () {
   yield 2;
   yield 3;
 })();
+
 console.log(typeof aGeneratorObject.next);
 // "function"——它有 next 方法（返回正确的值），所以它是迭代器 
+
 console.log(typeof aGeneratorObject[Symbol.iterator]);
 // "function"——它有 @@iterator 方法（返回正确的迭代器），所以它是可迭代的
+
 console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
 // true——它的 @@iterator 方法返回自身（一个迭代器），所以它是一个可迭代的迭代器
 ```
@@ -111,11 +114,11 @@ console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
 
 ## 语言和迭代协议之间的交互
 
-该语言指定了产生或使用可迭代和迭代器的 API。
+JavaScript 语言指定了产生或使用可迭代对象和迭代器的 API。
 
 ### 内置的可迭代对象
 
-{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}} 以及 {{jsxref("Intl.Segments")}} 都是内置的可迭代对象，因为它们的每个 `prototype` 对象都实现了 `@@iterator` 方法。此外，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象和一些 DOM 集合类型，如 {{domxref("NodeList")}} 也是可迭代的。目前，没有内置异步可迭代对象.
+{{jsxref("String")}}、{{jsxref("Array")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}} 以及 {{jsxref("Intl.Segments")}} 都是内置的可迭代对象，因为它们的每个 `prototype` 对象都实现了 `@@iterator` 方法。此外，[`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象和一些 DOM 集合类型，如 {{domxref("NodeList")}} 也是可迭代的。目前，没有内置的异步可迭代对象.
 
 [生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)返回[生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)，它们是可迭代的迭代器。[异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)返回[异步生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator)，它们是异步可迭代的迭代器。
 
@@ -123,6 +126,7 @@ console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
 
 ```
 console.log([][Symbol.iterator]());
+
 Array Iterator {}
   [[Prototype]]: Array Iterator     ==> This is the prototype shared by all array iterators
     next: ƒ next()
@@ -148,6 +152,7 @@ Array Iterator {}
 
 ```js
 const myObj = {};
+
 new WeakSet(
   (function* () {
     yield {};
@@ -168,12 +173,16 @@ for (const value of ["a", "b", "c"]) {
 // "a"
 // "b"
 // "c"
+
 console.log([..."abc"]); // ["a", "b", "c"]
+
 function* gen() {
   yield* ["a", "b", "c"];
 }
+
 console.log(gen().next()); // { value: "a", done: false }
 [a, b, c] = new Set(["a", "b", "c"]);
+
 console.log(a); // "a"
 ```
 
