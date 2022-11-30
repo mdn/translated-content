@@ -397,7 +397,7 @@ select.onchange = function() {
 
 {{ EmbedLiveSample('Ternary_operator_example', '100%', 300) }}
 
-在这里，我们有一个[`<select>`](/zh-CN/docs/Web/HTML/Element/select)选择主题（黑色或白色）的元素，加上一个简单[`<h1>`](/zh-CN/docs/Web/HTML/Element/h1)的显示网站标题。我们也有一个函数叫做`update()`，它将两种颜色作为参数（输入）。网站的背景颜色设置为第一个提供的颜色，其文本颜色设置为第二个提供的颜色。
+在这里，我们有一个 [`<select>`](/zh-CN/docs/Web/HTML/Element/select) 选择主题（黑色或白色）的元素，加上一个简单 [`<h1>`](/zh-CN/docs/Web/HTML/Element/h1) 的显示网站标题。我们也有一个函数叫做 `update()`，它将两种颜色作为参数（输入）。网站的背景颜色设置为第一个提供的颜色，其文本颜色设置为第二个提供的颜色。
 
 最后，我们还有一个[onchange](/zh-CN/docs/Web/API/GlobalEventHandlers/onchange)事件监听器，用于运行一个包含三元运算符的函数。它以测试条件开始`select.value === 'black'`。如果这返回`true`，我们运行`update()`带有黑色和白色参数的函数，这意味着我们最终得到黑色的背景颜色和白色的文字颜色。如果返回`false`，我们运行`update()`带有白色和黑色参数的函数，这意味着站点颜色被反转。
 
