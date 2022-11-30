@@ -37,7 +37,7 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 
   - : {{domxref("NodeList")}} array: **Retorna** uma lista de elementos {{ HTMLElement("label") }} que são rótulos para este elemento.
 
-- {{domxref("HTMLInputElement.list", "lista")}} {{ReadOnlyInline}}
+- {{domxref("HTMLInputElement.list", "list")}} {{ReadOnlyInline}}
 
   - : {{domxref("HTMLElement")}}: **Retorna** o elemento apontado pelo atributo [`list`](/pt-BR/docs/Web/HTML/Element/Input#list). A propriedade pode ser `null` se nenhum elemento HTML for encontrado na mesma árvore.
 
