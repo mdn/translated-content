@@ -10451,18 +10451,6 @@
       "RJacinto"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-09-12T13:33:01.910Z",
-    "contributors": [
-      "Nachec",
-      "fscholz",
-      "teoli",
-      "arpunk",
-      "inma_610",
-      "RickieesES",
-      "StripTM"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-04-08T19:26:44.700Z",
     "contributors": [
@@ -10937,10 +10925,6 @@
       "Nathymig",
       "Mgjbot"
     ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:36:12.769Z",
-    "contributors": ["fscholz", "teoli", "Garf", "Sheppy"]
   },
   "Web/JavaScript/Reference/Classes": {
     "modified": "2020-08-20T12:39:55.631Z",
@@ -14889,6 +14873,18 @@
     "modified": "2019-03-23T22:37:47.150Z",
     "contributors": ["pekechis"]
   },
+  "conflicting/Web/JavaScript": {
+    "modified": "2020-09-12T13:33:01.910Z",
+    "contributors": [
+      "Nachec",
+      "fscholz",
+      "teoli",
+      "arpunk",
+      "inma_610",
+      "RickieesES",
+      "StripTM"
+    ]
+  },
   "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
     "modified": "2020-08-17T15:38:30.288Z",
     "contributors": [
@@ -14915,6 +14911,10 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
     "modified": "2020-03-12T19:44:40.392Z",
     "contributors": ["davidenriq11", "mamptecnocrata"]
+  },
+  "conflicting/Web/JavaScript/Reference": {
+    "modified": "2020-03-12T19:36:12.769Z",
+    "contributors": ["fscholz", "teoli", "Garf", "Sheppy"]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2019-03-23T22:08:25.338Z",

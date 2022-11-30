@@ -869,7 +869,7 @@
 /es/docs/Introducción_a_XML	/es/docs/Web/XML/XML_introduction
 /es/docs/Introduction_to_using_XPath_in_JavaScript	/es/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /es/docs/JavaScript	/es/docs/Web/JavaScript
-/es/docs/JavaScript/Acerca_de_JavaScript	/es/docs/Web/JavaScript/About_JavaScript
+/es/docs/JavaScript/Acerca_de_JavaScript	/es/docs/conflicting/Web/JavaScript
 /es/docs/JavaScript/Guide	/es/docs/Web/JavaScript/Guide
 /es/docs/JavaScript/Guide/AcercaDe	/es/docs/Web/JavaScript/Guide/Introduction
 /es/docs/JavaScript/Guide/Closures	/es/docs/Web/JavaScript/Closures
@@ -965,7 +965,7 @@
 /es/docs/JavaScript/Reference/Operators/in	/es/docs/Web/JavaScript/Reference/Operators/in
 /es/docs/JavaScript/Reference/Operators/this	/es/docs/Web/JavaScript/Reference/Operators/this
 /es/docs/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
-/es/docs/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
+/es/docs/JavaScript/Referencia/Acerca_de	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/JavaScript/Referencia/Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/JavaScript/Referencia/Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/JavaScript/Referencia/Funciones	/es/docs/Web/JavaScript/Reference/Functions
@@ -1276,7 +1276,7 @@
 /es/docs/Referencia_DOM_de_Gecko:Ejemplos	/es/docs/Web/API/Document_Object_Model/Examples
 /es/docs/Referencia_DOM_de_Gecko:Introducción	/es/docs/Web/API/Document_Object_Model/Introduction
 /es/docs/Referencia_de_JavaScript_1.5	/es/docs/Web/JavaScript/Reference
-/es/docs/Referencia_de_JavaScript_1.5/Acerca_de	/es/docs/Web/JavaScript/Reference/About
+/es/docs/Referencia_de_JavaScript_1.5/Acerca_de	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/Referencia_de_JavaScript_1.5/Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Referencia_de_JavaScript_1.5/Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Referencia_de_JavaScript_1.5/Funciones	/es/docs/Web/JavaScript/Reference/Functions
@@ -1401,7 +1401,7 @@
 /es/docs/Referencia_de_JavaScript_1.5/Sentencias/try...catch	/es/docs/Web/JavaScript/Reference/Statements/try...catch
 /es/docs/Referencia_de_JavaScript_1.5/Sentencias/var	/es/docs/Web/JavaScript/Reference/Statements/var
 /es/docs/Referencia_de_JavaScript_1.5/Sentencias/while	/es/docs/Web/JavaScript/Reference/Statements/while
-/es/docs/Referencia_de_JavaScript_1.5:Acerca_de	/es/docs/Web/JavaScript/Reference/About
+/es/docs/Referencia_de_JavaScript_1.5:Acerca_de	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/Referencia_de_JavaScript_1.5:Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Referencia_de_JavaScript_1.5:Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Referencia_de_JavaScript_1.5:Funciones	/es/docs/Web/JavaScript/Reference/Functions
@@ -2099,7 +2099,8 @@
 /es/docs/Web/HTTP/mecanismo_actualizacion_protocolo	/es/docs/Web/HTTP/Protocol_upgrade_mechanism
 /es/docs/Web/HTTP/recursos_y_especificaciones	/es/docs/Web/HTTP/Resources_and_specifications
 /es/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/es/docs/Web/JavaScript/Language_Overview
-/es/docs/Web/JavaScript/Acerca_de_JavaScript	/es/docs/Web/JavaScript/About_JavaScript
+/es/docs/Web/JavaScript/About_JavaScript	/es/docs/conflicting/Web/JavaScript
+/es/docs/Web/JavaScript/Acerca_de_JavaScript	/es/docs/conflicting/Web/JavaScript
 /es/docs/Web/JavaScript/Descripción_de_las_tecnologías_JavaScript	/es/docs/Web/JavaScript/JavaScript_technologies_overview
 /es/docs/Web/JavaScript/Gestion_de_Memoria	/es/docs/Web/JavaScript/Memory_Management
 /es/docs/Web/JavaScript/Guide/AcercaDe	/es/docs/Web/JavaScript/Guide/Introduction
@@ -2207,6 +2208,7 @@
 /es/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/es/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /es/docs/Web/JavaScript/Language_Resources	/es/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /es/docs/Web/JavaScript/Primeros_Pasos	/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+/es/docs/Web/JavaScript/Reference/About	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion	/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 /es/docs/Web/JavaScript/Reference/Errors/Indicador_regexp_no-val	/es/docs/Web/JavaScript/Reference/Errors/Bad_regexp_flag
 /es/docs/Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos	/es/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
@@ -2225,7 +2227,7 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
 /es/docs/Web/JavaScript/Reference/Statements/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
-/es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
+/es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Referencia/Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Referencia/Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Referencia/Classes	/es/docs/Web/JavaScript/Reference/Classes
