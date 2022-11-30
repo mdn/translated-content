@@ -1,9 +1,6 @@
 ---
 title: MDN en 10
 slug: MDN/At_ten
-tags:
-  - MDN
-translation_of: MDN_at_ten
 original_slug: MDN_en_diez
 ---
 
