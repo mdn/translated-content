@@ -1,12 +1,6 @@
 ---
 title: Firefox 66 para desarrolladores
 slug: Mozilla/Firefox/Releases/66
-tags:
-  - "66"
-  - Firefox
-  - Lanzamiento
-  - Mozilla
-translation_of: Mozilla/Firefox/Releases/66
 ---
 
 {{FirefoxSidebar}}

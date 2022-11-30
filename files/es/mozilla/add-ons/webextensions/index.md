@@ -1,13 +1,6 @@
 ---
 title: Extensiones del navegador
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Complementos
-  - Dónde empezar
-  - Manifiesto
-  - WebExtensions
-  - extensiones
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
 
 {{AddonSidebar}}

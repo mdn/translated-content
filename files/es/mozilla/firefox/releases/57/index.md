@@ -1,11 +1,6 @@
 ---
 title: Firefox Quantum 57 para programadores
 slug: Mozilla/Firefox/Releases/57
-tags:
-  - "57"
-  - Firefox
-  - Notas de publicación
-translation_of: Mozilla/Firefox/Releases/57
 ---
 
 {{FirefoxSidebar}}

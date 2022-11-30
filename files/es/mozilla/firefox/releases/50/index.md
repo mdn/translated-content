@@ -1,10 +1,6 @@
 ---
 title: Firefox 50 para desarrolladores
 slug: Mozilla/Firefox/Releases/50
-tags:
-  - Firefox
-  - Release Notes
-translation_of: Mozilla/Firefox/Releases/50
 ---
 
 {{FirefoxSidebar}}
