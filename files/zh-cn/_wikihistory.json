@@ -24785,19 +24785,6 @@
       "lins05"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:36:16.731Z",
-    "contributors": [
-      "Poisonloc",
-      "ziyunfei",
-      "Breezewish",
-      "gelin",
-      "teoli",
-      "Meteormatt",
-      "ethertank",
-      "undercooled"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-10-14T01:19:42.853Z",
     "contributors": [
@@ -25798,10 +25785,6 @@
       "CHiENiUS",
       "kovchou"
     ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:40:27.168Z",
-    "contributors": ["Jack-Q", "lunix01", "qlxiao520", "ziyunfei", "yenshen"]
   },
   "Web/JavaScript/Reference/Classes": {
     "modified": "2020-11-21T07:35:29.331Z",
@@ -33775,5 +33758,22 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/Web/JavaScript": {
+    "modified": "2020-03-12T19:36:16.731Z",
+    "contributors": [
+      "Poisonloc",
+      "ziyunfei",
+      "Breezewish",
+      "gelin",
+      "teoli",
+      "Meteormatt",
+      "ethertank",
+      "undercooled"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference": {
+    "modified": "2020-03-12T19:40:27.168Z",
+    "contributors": ["Jack-Q", "lunix01", "qlxiao520", "ziyunfei", "yenshen"]
   }
 }

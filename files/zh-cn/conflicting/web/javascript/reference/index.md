@@ -1,6 +1,7 @@
 ---
 title: 关于该参考
-slug: Web/JavaScript/Reference/About
+slug: conflicting/Web/JavaScript/Reference
+original_slug: Web/JavaScript/Reference/About
 ---
 
 {{JsSidebar}}
