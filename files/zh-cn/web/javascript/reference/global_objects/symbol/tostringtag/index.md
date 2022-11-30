@@ -46,7 +46,7 @@ class ValidatorClass {}
 Object.prototype.toString.call(new ValidatorClass()); // "[object Object]"
 ```
 
-现在，在 `toStringTag` 的帮助下，您可以设置自己的自定义标签：
+现在，在 `toStringTag` 的帮助下，你可以设置自己的自定义标签：
 
 ```js
 class ValidatorClass {
