@@ -76,9 +76,9 @@ JavaScript 所採用的標準是 [ECMAScript](/docs/JavaScript/Language_Resource
 
 有用的工具和資源幫助你更好的撰寫及除錯 **JavaScript** 程式碼。
 
-- [Firefox 開發工具](/zh-TW/docs/Tools)
-  - : [程式碼速記本 (Scratchpad)](/zh-TW/docs/Tools/Scratchpad)、[網頁主控台 (Web Console)](/zh-TW/docs/Tools/Web_Console)、[JavaScript 效能分析器(JavaScript Profiler)](/zh-TW/docs/Tools/Profiler)、[除錯器 (Debugger)](/zh-TW/docs/Tools/Debugger) 等等。
-- [JavaScript Shell](/zh-TW/docs/Web/JavaScript/Shells)
+- [Firefox 開發工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+  - : [網頁主控台 (Web Console)](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript 效能分析器(JavaScript Profiler)](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[除錯器 (Debugger)](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 等等。
+- [JavaScript Shell](/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview#shell)
   - : JavaScript Shell 讓你更快的測試片段的 JavaScript。
 - [TogetherJS](https://togetherjs.com/)Paste
   - : 合作更簡單了。藉著在你的網站增加 TogetherJS，你的用戶們能在網站上互助 in real time！
