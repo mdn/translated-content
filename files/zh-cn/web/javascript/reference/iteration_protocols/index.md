@@ -73,7 +73,7 @@ const myIterator = {
 };
 ```
 
-这种对象被称为*可迭代迭代器*。这样做可以让迭代器被被期望可迭代的各种语法使用——因此，在不实现迭代的情况下，实现迭代器协议很少有用。（事实上，几乎所有的语法和 API 都期待*可迭代，而不是迭代器*。）[生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)是一个例子：
+这种对象被称为*可迭代迭代器*。这样做可以让迭代器被被期望可迭代的各种语法使用——因此，在不实现迭代的情况下，实现迭代器协议很少有用。（事实上，几乎所有的语法和 API 都期待*可迭代的对象，而不是迭代器*。）[生成器对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Generator)是一个例子：
 
 ```js
 const aGeneratorObject = (function* () {
@@ -159,7 +159,7 @@ new WeakSet(
 
 ### 期待迭代对象的语法
 
-一些语句和表达式期望可迭代，例如 {{jsxref("Statements/for...of", "for...of")}} 循环、[数组和参数扩展](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}} 和[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)：
+一些语句和表达式期望可迭代对象，例如 {{jsxref("Statements/for...of", "for...of")}} 循环、[数组和参数扩展](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}} 和[数组解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)：
 
 ```js
 for (const value of ["a", "b", "c"]) {
@@ -215,9 +215,9 @@ for (const b of obj) {
 
 [异步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function*)（但不是[同步生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)）中的 [`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环和 [`yield*`](/zh-CN/docs/Web/JavaScript/Reference/Operators/yield*) 是与异步迭代交互的唯一方式。在不是同步迭代的异步迭代对象（即它有 `[@@asyncIterator]()` 但没有 `[@@iterator]()`）上使用 `for...of`、数组展开等将抛出 `TypeError：x is not iterable`。
 
-### 格式不佳的可迭代对象
+### 不符合标准的可迭代对象
 
-如果一个可迭代对象的 `@@iterator` 方法不能返回迭代器对象，那么可以认为它是一个*格式不佳的*（Non-well-formed）可迭代对象。
+如果一个可迭代对象的 `@@iterator` 方法不能返回迭代器对象，那么可以认为它是一个*不符合标准的*（Non-well-formed）可迭代对象。
 
 使用这样的可迭代对象很可能会导致如下的运行时异常，或者不可预料的表现：
 
@@ -388,7 +388,7 @@ someString[Symbol.iterator] = function () {
 };
 ```
 
-注意重新定义 `@@iterator` 如何影响使用迭代协议的内置结构的行为：
+注意，如何使用迭代协议重新定义 `@@iterator` 以影响内置结构的行为：
 
 ```js
 console.log([...someString]); // ["bye"]
