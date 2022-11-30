@@ -7,11 +7,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
 
 一个 {{jsxref("Function")}} 对象在使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符来作为构造函数时，会用到它的 **`prototype`** 属性。它将成为新对象的原型。
 
-> **备注：** 并不是所有的 {{jsxref("Function")}} 对象都拥有 `prototype` 属性 — 参见 [描述](#描述)。
+> **备注：** 并不是所有的 {{jsxref("Function")}} 对象都拥有 `prototype` 属性 — 参见[描述](#描述)。
 
 {{js_property_attributes(1, 0, 0)}}
 
-> **备注：**  [类](/zh-CN/docs/Web/JavaScript/Reference/Classes) 的 `prototype` 属性是不可编辑的。
+> **备注：** [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的 `prototype` 属性是不可编辑的。
 
 ## 描述
 
@@ -23,7 +23,7 @@ const inst = new Ctor();
 console.log(Object.getPrototypeOf(inst) === Ctor.prototype); // true
 ```
 
-关于构造函数的 `prototype` 属性与结果对象的原型之间的相互作用，你可以查看 [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#constructors) 来了解更多。
+关于构造函数的 `prototype` 属性与结果对象的原型之间的相互作用，你可以查看[继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#constructors)来了解更多。
 
 一个具有 `prototype` 属性的函数也并不代表其有资格作为构造函数。例如，[function*](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*) 拥有 `prototype` 属性，但它不能通过 `new` 操作符来调用。
 
@@ -36,7 +36,7 @@ function* generatorFunction() {}
 
 另外，一些函数也可能在通过 `new` 操作符调用的情况下无条件抛出，即便它们可能具有 `prototype`。例如，[`Symbol()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol) 和 [`BigInt()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) 函数会在它们通过 `new` 操作符来调用时抛出，因为 `Symbol.prototype` and `BigInt.prototype` 只是用来为原始值提供方法的，这时不应该直接构建包装器对象。
 
-下列的函数不具有 `prototype`属性，因此不能成为构造函数，即便后续手动赋予了 `prototype` 属性：
+下列的函数不具有 `prototype` 属性，因此不能成为构造函数，即便后续手动赋予了 `prototype` 属性：
 
 ```js
 const method = { foo() {} }.foo;
@@ -51,7 +51,7 @@ class Class {}
 function fn() {}
 ```
 
-[bind 方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) 不具有 `prototype` 属性，但是可能是可构造的。当它被构造的时候，目标函数将会被构造，如果目标函数是可构造的，将会返回一个普通的实例。
+[bind 方法](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)不具有 `prototype` 属性，但是可能是可构造的。当它被构造的时候，目标函数将会被构造，如果目标函数是可构造的，将会返回一个普通的实例。
 
 ```js
 const boundFunction = function () {}.bind(null);
@@ -82,7 +82,7 @@ console.log(p2.prop); // 1
 
 ### 将非函数属性添加到类的原型中
 
-[公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields) 会为每一个实例都添加属性。类方法可以在原型中定义 _函数_ 属性。但是，无法将非函数属性添加到原型中。假如你希望在所有实例之间共享静态数据（例如， [`Error.prototype.name`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/name) 在所有 Error 类的实例中都是相同的），那么你可以在类的原型中进行手动添加。
+[公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)会为每一个实例都添加属性。类方法可以在原型中定义 _函数_ 属性。但是，无法将非函数属性添加到原型中。假如你希望在所有实例之间共享静态数据（例如，[`Error.prototype.name`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error/name) 在所有 Error 类的实例中都是相同的），那么你可以在类的原型中进行手动添加。
 
 ```js
 class Dog {
@@ -96,7 +96,7 @@ Dog.prototype.species = "dog";
 console.log(new Dog("Jack").species); // "dog"
 ```
 
-使用 [静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks) 可以让这个操作更符合直觉。这些块会在类初始化的时候进行调用。
+使用[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)可以让这个操作更符合直觉。这些块会在类初始化的时候进行调用。
 
 ```js
 class Dog {
@@ -118,4 +118,4 @@ console.log(new Dog("Jack").species); // "dog"
 ## 参见
 
 - {{jsxref("Function")}}
-- [Inheritance and the prototype chain](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#constructors)
+- [继承与原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#constructors)
