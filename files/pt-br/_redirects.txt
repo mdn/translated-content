@@ -334,7 +334,7 @@
 /pt-BR/docs/JSON	/pt-BR/docs/Glossary/JSON
 /pt-BR/docs/JavaScript	/pt-BR/docs/Web/JavaScript
 /pt-BR/docs/JavaScript/A_re-introduction_to_JavaScript	/pt-BR/docs/Web/JavaScript/Language_Overview
-/pt-BR/docs/JavaScript/About_JavaScript	/pt-BR/docs/Web/JavaScript/About_JavaScript
+/pt-BR/docs/JavaScript/About_JavaScript	/pt-BR/docs/conflicting/Web/JavaScript
 /pt-BR/docs/JavaScript/Data_structures	/pt-BR/docs/Web/JavaScript/Data_structures
 /pt-BR/docs/JavaScript/Guide	/pt-BR/docs/Web/JavaScript/Guide
 /pt-BR/docs/JavaScript/Guide/About	/pt-BR/docs/Web/JavaScript/Guide/Introduction
@@ -351,7 +351,7 @@
 /pt-BR/docs/JavaScript/JavaScript_technologies_overview	/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview
 /pt-BR/docs/JavaScript/Outras_ferramentas_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /pt-BR/docs/JavaScript/Reference	/pt-BR/docs/Web/JavaScript/Reference
-/pt-BR/docs/JavaScript/Reference/About	/pt-BR/docs/Web/JavaScript/Reference/About
+/pt-BR/docs/JavaScript/Reference/About	/pt-BR/docs/conflicting/Web/JavaScript/Reference
 /pt-BR/docs/JavaScript/Reference/Global_Objects	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects
 /pt-BR/docs/JavaScript/Reference/Global_Objects/Array	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
 /pt-BR/docs/JavaScript/Reference/Global_Objects/Array/concat	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
@@ -826,6 +826,7 @@
 /pt-BR/docs/Web/HTTP/Mensagens	/pt-BR/docs/Web/HTTP/Messages
 /pt-BR/docs/Web/HTTP/Redirecionamento	/pt-BR/docs/Web/HTTP/Redirections
 /pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/pt-BR/docs/Web/JavaScript/Language_Overview
+/pt-BR/docs/Web/JavaScript/About_JavaScript	/pt-BR/docs/conflicting/Web/JavaScript
 /pt-BR/docs/Web/JavaScript/Enumerabilidade_e_posse_de_propriedades	/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
 /pt-BR/docs/Web/JavaScript/Guide/About	/pt-BR/docs/Web/JavaScript/Guide/Introduction
 /pt-BR/docs/Web/JavaScript/Guide/Closures	/pt-BR/docs/Web/JavaScript/Closures
@@ -847,6 +848,7 @@
 /pt-BR/docs/Web/JavaScript/Guide/Working_With_Private_Class_Features	/pt-BR/docs/orphaned/Web/JavaScript/Guide/Working_With_Private_Class_Features
 /pt-BR/docs/Web/JavaScript/Language_Resources	/pt-BR/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /pt-BR/docs/Web/JavaScript/Outras_ferramentas_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
+/pt-BR/docs/Web/JavaScript/Reference/About	/pt-BR/docs/conflicting/Web/JavaScript/Reference
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/pt-BR/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Fata_parênteses_após_lista_argumento	/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 /pt-BR/docs/Web/JavaScript/Reference/Errors/Fecha_chaves_esquecida_apos_lista_propriedades	/pt-BR/docs/Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
