@@ -1,13 +1,8 @@
 ---
 title: Utiliser les Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
-tags:
-  - Guide
-  - Service
-  - ServiceWorker
-  - Workers
-  - basics
-translation_of: Web/API/Service_Worker_API/Using_Service_Workers
+l10n:
+  sourceCommit: 1a2274453f55f4305809e0463fea71bd266b1bf8
 ---
 
 {{ServiceWorkerSidebar}}
