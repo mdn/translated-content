@@ -127,7 +127,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
      alt="Elva dressed as a fairy" />
 ```
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)在这个例子中，下面的 CSS 会应用在图片上，所以它的宽度在屏幕上是 320 像素（也称作 CSS 像素）：
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png) 在这个例子中，下面的 CSS 会应用在图片上，所以它的宽度在屏幕上是 320 像素（也称作 CSS 像素）：
 
 ```css
 img {
@@ -141,7 +141,7 @@ img {
 
 回顾一下，**美术设计问题**涉及到更改显示的图像以适应不同的显示尺寸。例如，如果在桌面浏览器上的一个网站上显示一张大的、横向的照片，照片中央有个人，然后当在移动端浏览器上浏览这个网站时，照片会缩小，这时照片上的人会变得非常小，看起来会很糟糕。这种情况可能在移动端显示一个更小的、聚焦到这个人的肖像图会更好。{{htmlelement("picture")}} 元素允许我们这样实现。
 
-回到我们最初的例子 [not-responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) ，我们有一张图片需要进行美术设计：
+回到我们最初的例子 [not-responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html)，我们有一张图片需要进行美术设计：
 
 ```html
 <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
@@ -169,7 +169,7 @@ img {
 
 ### 为什么我们不用 CSS 或 JavaScript 来实现？
 
-当浏览器开始加载一个页面，它会在主解析器开始加载和解析页面的 CSS 和 JavaScript 之前先下载 (预加载) 任意的图片。这种有用的机制总体上会减少页面加载时间，但是它对响应式图片没有帮助，所以需要类似 `srcset` 的实现方法。因为你不能先加载好 {{htmlelement("img")}} 元素后，再用 JavaScript 检测可视窗口的宽度，如果觉得大小不合适，再动态地加载小的图片替换已经加载好的图片，这样的话，原始的图像已经被加载了，然后你又加载了小的图像，这反而更不“响应”了。
+当浏览器开始加载一个页面，它会在主解析器开始加载和解析页面的 CSS 和 JavaScript 之前先下载（预加载）任意的图片。这种有用的机制总体上会减少页面加载时间，但是它对响应式图片没有帮助，所以需要类似 `srcset` 的实现方法。因为你不能先加载好 {{htmlelement("img")}} 元素后，再用 JavaScript 检测可视窗口的宽度，如果觉得大小不合适，再动态地加载小的图片替换已经加载好的图片，这样的话，原始的图像已经被加载了，然后你又加载了小的图像，这反而更不“响应”了。
 
 ### 大胆的使用现代图像格式
 
@@ -211,7 +211,7 @@ img {
 ## 参见
 
 - [Jason Grigsby 对响应式图片的出色介绍](http://blog.cloudfour.com/responsive-images-101-definitions)
-- [响应式图片：如果你只是改变分辨率，就用 srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — 包含了更多关于浏览器如何选择显示图片的解释
+- [响应式图片：如果你只是改变分辨率，就用 srcset](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/)——包含了更多关于浏览器如何选择显示图片的解释
 - {{htmlelement("img")}}
 - {{htmlelement("picture")}}
 - {{htmlelement("source")}}
