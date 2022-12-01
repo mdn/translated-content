@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/toString
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Método(2)
-  - Objeto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperties
 ---
 

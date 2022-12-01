@@ -1,11 +1,6 @@
 ---
 title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
-tags:
-  - Function
-  - JavaScript
-  - isFinite()
-translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 original_slug: Web/JavaScript/Referencia/Objetos_globales/isFinite
 ---
 
