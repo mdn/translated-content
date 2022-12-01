@@ -1,38 +1,41 @@
 ---
 title: windows.WindowState
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
+l10n:
+  sourceCommit: 4b10cb28d5eee0e952b2d84bd1b23cc53daa93b7
 ---
 
 {{AddonSidebar()}}
 
-ブラウザウィンドウの状態。
+ブラウザーウィンドウの状態です。
 
 ## 型
 
-値の方は`strings`です。可能な値は以下:
+この値の型は `strings` です。可能な値は以下のとおりです。
 
 - `"normal"`
-  - : ウィンドウはデフォルトかユーザ指定のサイズ。
+  - : このウィンドウは既定のサイズまたはユーザー指定のサイズです。
 - `"minimized"`
-  - : ウィンドウはアイコンとしてタスクバーの中に表示(最小化)。
+  - : このウィンドウはアイコンとしてタスクバーの中にだけ表示されています。
 - `"maximized"`
-  - : ウィンドウはシステムエリアや OS による予約なしに画面を満たしている(最大化)。
+  - : このウィンドウはオペレーティングシステムによって予約されている画面領域を除く画面全体を埋め尽くしています。
 - `"fullscreen"`
-  - : ウィンドウはフルスクリーンアプリケーションとして稼働しているか、タブの内容が[Fullscreen API](/ja/docs/Web/API/Fullscreen_API)を利用している(全画面)。
+  - : ウィンドウは全画面アプリケーションとして動作しているか、タブのコンテンツが[全画面 API](/ja/docs/Web/API/Fullscreen_API)を利用しています。。
 - `"docked"`
   - : ドックされたウィンドウは、同じアプリケーションで所有されている他のウィンドウとの相対的な位置が固定されます。
 
-macOSとの互換性: macOS 10.10 から、ウィンドウのデフォルトの最大化動作が変更され、アプリケーションを「ズーム」ウィンドウではなくフルスクリーンアプリケーションとして実行するようになりました。 「フルスクリーン」は、フルスクリーンアプリケーションとして実行されているブラウザと、タブ内のコンテンツがフルスクリーン API を使用する場合の両方を指します。
+macOS の互換性: macOS 10.10 から、ウィンドウの既定の最大化動作が変更され、アプリケーションを「ズーム」ウィンドウではなく全画面アプリケーションとして実行するようになりました。全画面 (`fullscreen`) は、全画面アプリケーションとして実行されているブラウザーと、全画面 API を使用しているタブ内のコンテンツの両方を指します。
 
 ## ブラウザーの互換性
 
-{{Compat("webextensions.api.windows.WindowState")}}
+{{Compat}}
 
 {{WebExtExamples}}
 
-> **メモ:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** この API は Chromium の [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#type-WindowState) API に基づいています。この記事は Chromium コードの [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) から派生しています。
 
-<pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -59,4 +62,4 @@ macOSとの互換性: macOS 10.10 から、ウィンドウのデフォルトの�
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre>
+-->
