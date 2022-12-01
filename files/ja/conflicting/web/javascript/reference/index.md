@@ -1,6 +1,7 @@
 ---
 title: JavaScript リファレンスについて
-slug: Web/JavaScript/Reference/About
+slug: conflicting/Web/JavaScript/Reference
+original_slug: Web/JavaScript/Reference/About
 ---
 
 {{JsSidebar}}

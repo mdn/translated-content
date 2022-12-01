@@ -1,6 +1,7 @@
 ---
 title: 短いアンケートの実施プロセス
-slug: MDN/Contribute/Processes/Short_surveys
+slug: conflicting/MDN/Contribute
+original_slug: MDN/Contribute/Processes/Short_surveys
 ---
 
 {{MDNSidebar}}

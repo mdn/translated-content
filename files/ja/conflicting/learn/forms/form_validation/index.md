@@ -1,6 +1,7 @@
 ---
 title: 制約検証 API
-slug: Web/API/Constraint_validation
+slug: conflicting/Learn/Forms/Form_validation
+original_slug: Web/API/Constraint_validation
 ---
 
 {{apiref()}}

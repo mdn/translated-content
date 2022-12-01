@@ -1,8 +1,8 @@
 ---
 title: Intl.Segments.prototype.containing()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing
-l10n:
-  sourceCommit: 46c0f5269f597ad055d0b6322f736f5c70996c4c
+slug: >-
+  Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
+original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing
 ---
 
 {{JSRef}}
