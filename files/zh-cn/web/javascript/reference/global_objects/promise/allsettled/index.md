@@ -38,7 +38,7 @@ Promise.allSettled(iterable)
 
 ## 描述
 
-`Promise.allSettled()` 方法是 [promise 并发性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency)方法的其中之一。`Promise.allSettled()` 通常用于你有多个不依赖于彼此成功完成的异步任务时，或者你总是想知道每个 promise 的结果。
+`Promise.allSettled()` 方法是 [promise 并发性](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency)方法的其中之一。在你有多个不依赖于彼此成功完成的异步任务时，或者你总是想知道每个 promise 的结果时，使用 `Promise.allSettled()` 。
 
 相比之下，如果任务相互依赖，或者如果你想立即拒绝其中任何任务，{{jsxref("Promise.all()")}} 返回的 Promise 可能更合适。
 
