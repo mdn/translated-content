@@ -14,8 +14,6 @@
       "spaces_per_tab": 2
     },
     "MD013": false,
-    // Fixed upstream, needs PRs in this repo
-    "MD023": false,
     // Fixed upstream with "allow_different_nesting": true
     "MD024": false,
     "MD025": {
