@@ -107,7 +107,7 @@
 /ja/docs/ARIA:_Accessible_Rich_Internet_Applications	/ja/docs/Web/Accessibility/ARIA
 /ja/docs/A_re-introduction_to_JavaScript	/ja/docs/Web/JavaScript/Language_Overview
 /ja/docs/Aardvark_(external)	https://addons.mozilla.org/ja/firefox/addon/4111
-/ja/docs/About_JavaScript	/ja/docs/conflicting/Web/JavaScript
+/ja/docs/About_JavaScript	/ja/docs/Web/JavaScript
 /ja/docs/About_WOFF	/ja/docs/Web/Guide/WOFF
 /ja/docs/About_the_Document_Object_Model	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Accessibility	/ja/docs/Web/Accessibility
@@ -654,7 +654,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide:Working_with_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects
 /ja/docs/Core_JavaScript_1.5_Guide:Writing_a_Regular_Expression_Pattern	/ja/docs/orphaned/Web/JavaScript/Guide/Writing_a_Regular_Expression_Pattern
 /ja/docs/Core_JavaScript_1.5_Reference	/ja/docs/Web/JavaScript/Reference
-/ja/docs/Core_JavaScript_1.5_Reference/About	/ja/docs/conflicting/Web/JavaScript/Reference
+/ja/docs/Core_JavaScript_1.5_Reference/About	/ja/docs/Web/JavaScript/Reference
 /ja/docs/Core_JavaScript_1.5_Reference/About/Formatting_Conventions	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/Core_JavaScript_1.5_Reference/Comments	/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /ja/docs/Core_JavaScript_1.5_Reference/Comments/comment	/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
@@ -896,7 +896,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Statements/while	/ja/docs/Web/JavaScript/Reference/Statements/while
 /ja/docs/Core_JavaScript_1.5_Reference/Statements/with	/ja/docs/Web/JavaScript/Reference/Statements/with
 /ja/docs/Core_JavaScript_1.5_Reference/arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
-/ja/docs/Core_JavaScript_1.5_Reference:About	/ja/docs/conflicting/Web/JavaScript/Reference
+/ja/docs/Core_JavaScript_1.5_Reference:About	/ja/docs/Web/JavaScript/Reference
 /ja/docs/Core_JavaScript_1.5_Reference:About:Formatting_Conventions	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/Core_JavaScript_1.5_Reference:Comments	/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /ja/docs/Core_JavaScript_1.5_Reference:Comments:comment	/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
@@ -2093,8 +2093,8 @@
 /ja/docs/JavaScript	/ja/docs/Web/JavaScript
 /ja/docs/JavaScript/A_re-introduction_to_JavaScript	/ja/docs/Web/JavaScript/Language_Overview
 /ja/docs/JavaScript/A_re-introduction_to_JavaScript-redirect-1	/ja/docs/Web/JavaScript/Language_Overview
-/ja/docs/JavaScript/About_JavaScript	/ja/docs/conflicting/Web/JavaScript
-/ja/docs/JavaScript/About_JavaScript-redirect-1	/ja/docs/conflicting/Web/JavaScript
+/ja/docs/JavaScript/About_JavaScript	/ja/docs/Web/JavaScript
+/ja/docs/JavaScript/About_JavaScript-redirect-1	/ja/docs/Web/JavaScript
 /ja/docs/JavaScript/Data_structures	/ja/docs/Web/JavaScript/Data_structures
 /ja/docs/JavaScript/Guide	/ja/docs/Web/JavaScript/Guide
 /ja/docs/JavaScript/Guide-redirect-1	/ja/docs/Web/JavaScript/Guide
@@ -2184,7 +2184,7 @@
 /ja/docs/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/JavaScript/Reference	/ja/docs/Web/JavaScript/Reference
 /ja/docs/JavaScript/Reference-redirect-1	/ja/docs/Web/JavaScript/Reference
-/ja/docs/JavaScript/Reference/About	/ja/docs/conflicting/Web/JavaScript/Reference
+/ja/docs/JavaScript/Reference/About	/ja/docs/Web/JavaScript/Reference
 /ja/docs/JavaScript/Reference/About/Formatting_Conventions	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/JavaScript/Reference/Comments/comment	/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /ja/docs/JavaScript/Reference/Deprecated_Features	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -2724,7 +2724,7 @@
 /ja/docs/MDN/Contribute/Markdown_in_MDN	/ja/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /ja/docs/MDN/Contribute/Open_source_etiquette	/ja/docs/MDN/Community/Open_source_etiquette
 /ja/docs/MDN/Contribute/Processes/Content_bug_triage	/ja/docs/MDN/Community/Issues/Issue_triage
-/ja/docs/MDN/Contribute/Processes/Short_surveys	/ja/docs/conflicting/MDN/Contribute
+/ja/docs/MDN/Contribute/Processes/Short_surveys	/ja/docs/MDN/Contribute
 /ja/docs/MDN/Contribute/Structures	/ja/docs/MDN/Writing_guidelines/Page_structures
 /ja/docs/MDN/Contribute/Structures/API_references	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /ja/docs/MDN/Contribute/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
@@ -3167,7 +3167,7 @@
 /ja/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility	/ja/docs/orphaned/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility
 /ja/docs/Web/API/CloseEvent/initCloseEvent	/ja/docs/conflicting/Web/API/CloseEvent
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/Console/error
-/ja/docs/Web/API/Constraint_validation	/ja/docs/conflicting/Learn/Forms/Form_validation
+/ja/docs/Web/API/Constraint_validation	/ja/docs/Learn/Forms/Form_validation
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
 /ja/docs/Web/API/DOMString	/ja/docs/Glossary/String
 /ja/docs/Web/API/DOMString/Binary	/ja/docs/Web/API/btoa
@@ -4477,7 +4477,7 @@
 /ja/docs/Web/HTTP/X-Frame-Options	/ja/docs/Web/HTTP/Headers/X-Frame-Options
 /ja/docs/Web/Houdini	/ja/docs/Web/Guide/Houdini
 /ja/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/ja/docs/Web/JavaScript/Language_Overview
-/ja/docs/Web/JavaScript/About_JavaScript	/ja/docs/conflicting/Web/JavaScript
+/ja/docs/Web/JavaScript/About_JavaScript	/ja/docs/Web/JavaScript
 /ja/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /ja/docs/Web/JavaScript/Getting_Started	/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /ja/docs/Web/JavaScript/Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
@@ -4543,7 +4543,7 @@
 /ja/docs/Web/JavaScript/Language_Resources	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/Web/JavaScript/Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
-/ja/docs/Web/JavaScript/Reference/About	/ja/docs/conflicting/Web/JavaScript/Reference
+/ja/docs/Web/JavaScript/Reference/About	/ja/docs/Web/JavaScript/Reference
 /ja/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/ja/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_type
@@ -4679,7 +4679,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Set/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Set
-/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
+/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes	/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd
@@ -4777,7 +4777,7 @@
 /ja/docs/Web/JavaScript/Shells	/ja/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d
 /ja/docs/Web/JavaScript/Strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
 /ja/docs/Web/JavaScript/Strict_mode/Transitioning_to_strict_mode	/ja/docs/Web/JavaScript/Reference/Strict_mode
-/ja/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
+/ja/docs/Web/JavaScript/The_performance_hazards_of_prototype_mutation	/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /ja/docs/Web/JavaScript/Tutorials	/ja/docs/Web/JavaScript
 /ja/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
 /ja/docs/Web/JavaScript/Typed_arrays/ArrayBufferView	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
@@ -5124,7 +5124,7 @@
 /ja/docs/counters	/ja/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters
 /ja/docs/data_URIs	/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /ja/docs/dummySlug/Reference	/ja/docs/Web/JavaScript/Reference
-/ja/docs/dummySlug/Reference/About	/ja/docs/conflicting/Web/JavaScript/Reference
+/ja/docs/dummySlug/Reference/About	/ja/docs/Web/JavaScript/Reference
 /ja/docs/dummySlug/Reference/About/Formatting_Conventions	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/dummySlug/Reference/Deprecated_Features	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/dummySlug/Reference/Functions	/ja/docs/Web/JavaScript/Reference/Functions

@@ -31188,20 +31188,6 @@
     "modified": "2020-08-12T12:42:41.854Z",
     "contributors": ["mfuji09", "tamura4278"]
   },
-  "conflicting/Web/JavaScript": {
-    "modified": "2020-03-12T19:36:54.957Z",
-    "contributors": [
-      "isdh",
-      "yyss",
-      "ethertank",
-      "sii",
-      "99corps",
-      "Mgjbot",
-      "Okome",
-      "Yama",
-      "Shimono"
-    ]
-  },
   "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
     "modified": "2020-10-21T02:00:03.457Z",
     "contributors": [
@@ -31246,20 +31232,6 @@
       "Mgjbot",
       "Taken",
       "electrolysis"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference": {
-    "modified": "2020-03-12T19:36:05.864Z",
-    "contributors": [
-      "ambi",
-      "teoli",
-      "yyss",
-      "ethertank",
-      "saneyuki_s",
-      "Potappo",
-      "Mgjbot",
-      "Yuichirou",
-      "Taken"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
