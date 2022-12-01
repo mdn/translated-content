@@ -638,7 +638,7 @@ Finalmente, podemos excluir a página anexando _delete_ ao final da URL da visua
 
 Crie alguns _forms_ para criar, editar e excluir registros de `Book`. Você pode utilizar exatamente a mesma estrutura que a de `Authors`. Se seu _template_ **book_form.html** é apenas uma cópia renomeada de **author_form.html** , então a nova página "criar livro" será semelhante a captura de tela abaixo:
 
-![](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Forms/forms_example_create_book.png)
+![](forms_example_create_book.png)
 
 ## Resumo
 
