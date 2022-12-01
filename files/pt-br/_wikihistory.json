@@ -7521,10 +7521,6 @@
       "tauame"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:38:41.483Z",
-    "contributors": ["fcard", "teoli", "kuni71"]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-04-07T04:11:27.586Z",
     "contributors": [
@@ -7896,10 +7892,6 @@
   "Web/JavaScript/Reference": {
     "modified": "2019-03-23T23:33:55.653Z",
     "contributors": ["Gutemberg", "teoli", "ggviana", "ethertank"]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:38:32.625Z",
-    "contributors": ["alissonbovenzo", "teoli", "ggviana"]
   },
   "Web/JavaScript/Reference/Classes": {
     "modified": "2020-10-15T21:39:06.651Z",
@@ -11232,6 +11224,10 @@
     "modified": "2019-03-23T22:47:23.868Z",
     "contributors": ["raduq"]
   },
+  "conflicting/Web/JavaScript": {
+    "modified": "2020-03-12T19:38:41.483Z",
+    "contributors": ["fcard", "teoli", "kuni71"]
+  },
   "conflicting/Web/JavaScript/Equality_comparisons_and_sameness": {
     "modified": "2019-03-23T23:25:15.038Z",
     "contributors": ["teoli", "fernando.karpinski"]
@@ -11258,6 +11254,10 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:43:20.868Z",
     "contributors": ["christophergomes", "Danilson_Veloso"]
+  },
+  "conflicting/Web/JavaScript/Reference": {
+    "modified": "2020-03-12T19:38:32.625Z",
+    "contributors": ["alissonbovenzo", "teoli", "ggviana"]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:10.197Z",
