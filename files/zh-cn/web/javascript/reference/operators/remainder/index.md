@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Remainder
 
 {{jsSidebar("Operators")}}
 
-当一个操作数除以第二个操作数时，**取余**（**`%`**）运算符返回剩余的余数。它总是与被除数的符号保持一致。
+**取余**（**`%`**）运算符返回左侧操作数除以右侧操作数的余数。它总是与被除数的符号保持一致。
 
 {{EmbedInteractiveExample("pages/js/expressions-remainder.html")}}
 
