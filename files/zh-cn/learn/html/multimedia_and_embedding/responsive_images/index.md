@@ -13,7 +13,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
       <th scope="row">预备知识：</th>
       <td>
         你应该知道
-        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 基础</a>以及如何<a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">在网站上添加静态图片</a>.
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 基础</a>以及如何<a href="/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">在网站上添加静态图片</a>。
       </td>
     </tr>
     <tr>
@@ -43,11 +43,11 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 一个改进的方法是，当网站在狭窄的屏幕上观看时，显示一张只含重要细节的裁剪版本的图片，在像平板电脑这样的中等宽度的屏幕设备上显示时，显示另一张裁剪的图片。但为各种布局提供不同版本的裁剪图片，会产生众所周知的**美术设计问题**。
 
-此外，如果是在小屏手机屏幕上显示网页，那么没有必要在网页上嵌入这样大的图片，反过来说，一张小的[位图](/zh-CN/docs/Gloggary/Raster_image)，如果它的显示尺寸大于原始尺寸，看起来就会有颗粒感（位图有固定数量的像素宽，固定数量的像素高，与[矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)外观相同，但本质不同）。这被称之为**分辨率切换问题**。
+此外，如果是在小屏手机屏幕上显示网页，那么没有必要在网页上嵌入这样大的图片，反过来说，一张小的[位图](/zh-CN/docs/Glossary/Raster_image)，如果它的显示尺寸大于原始尺寸，看起来就会有颗粒感（位图有固定数量的像素宽，固定数量的像素高，与[矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)外观相同，但本质不同）。这被称之为**分辨率切换问题**。
 
 换言之，没有必要把一张大图显示在比它的实际尺寸小得多的屏幕上，这样做会浪费带宽——当可以在设备上使用小图像时，手机用户尤其不愿意因为下载用于桌面的大图像而浪费带宽。理想的情况是用户浏览器有不同分辨率的图片可用，这样可以根据不同设备的屏幕大小载入合适分辨率的图片。
 
-让事情变得复杂的是，有些设备有很高的分辨率，为了显示的更出色，可能需要超出你预料的更大的图片。这在本质上是一样的问题，但在具体场景中有所不同。
+让事情变得复杂的是，有些设备有很高的分辨率，为了显示得更出色，可能需要超出你预料的更大的图片。这在本质上是一样的问题，但在具体场景中有所不同。
 
 你可能会认为矢量图形能解决这些问题，在某种程度上是这样的——它们无论是文件大小还是比例都合适，无论在哪里你都应该尽可能地使用它们。然而，它们并不适合所有的图片类型，虽然在简单图形、图案、界面元素等方面较好，但如果是有大量的细节的照片，创建矢量图像会变得非常复杂。像 JPEG 这样格式的位图会更适合用作上面例子中的图片来显示。
 
@@ -57,7 +57,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 ## 如何创建响应式图片？
 
-在这一部分中，我们会探究上面提出的两个问题，演示如何用 HTML 的响应式图片来解决。需要注意的是，如以上示例所示，在本节中我们将专注于 HTML 的 {{htmlelement("img")}} 元素，但网站头部的图片仅是装饰性的，实际上应该要用 CSS 的背景图片来实现。[CSS 是比 HTML 更好的响应式设计的工具](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/)，我们会在未来的 CSS 模块中讨论。
+在这一部分中，我们会探究上面提出的两个问题，演示如何用 HTML 的响应式图片来解决。需要注意的是，如以上示例所示，在本节中我们将专注于 HTML 的 {{htmlelement("img")}} 元素，但网站头部的图片仅是装饰性的，实际上应该要用 CSS 的背景图片来实现。[CSS 是比 HTML 更好的响应式设计的工具](https://cloudfour.com/thinks/responsive-images-101-part-8-css-images/)，我们会在未来的 CSS 模块中讨论。
 
 ### 分辨率切换：不同的尺寸
 
@@ -96,7 +96,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 **`sizes`** 定义了一组媒体条件（例如屏幕宽度）并且指明当某些媒体条件为真时，什么样的图片尺寸是最佳选择——这就是我们之前提到的提示。上面的示例中，在每个逗号之前，我们写：
 
-1. 一个**媒体条件**（`(max-width:600px)`）——你会在 [CSS topic](/zh-CN/docs/Learn/CSS) 中学到更多，这里我们说一个媒体条件描述了一种屏幕可能处于的状态。上面示例中，我们说“当视口的宽度小于等于 600px 时”。
+1. 一个**媒体条件**（`(max-width:600px)`）——你会在 [CSS 主题](/zh-CN/docs/Learn/CSS)中学到更多相关的知识，这里我们说一个媒体条件描述了一种屏幕可能处于的状态。上面示例中，我们说“当视口的宽度小于等于 600px 时”。
 2. 一个空格
 3. 当媒体条件为真时，图像将填充的**槽的宽度**（`480px`）
 
@@ -115,7 +115,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 不支持这些特性的旧版本浏览器，会忽略这些属性，它们直接越过并按常规加载 {{htmlattrxref("src", "img")}} 属性引用的图像文件。
 
-> **备注：** 在 HTML 文件中的 {{htmlelement("head")}} 标签里，你将会找到这一行代码 `<meta name="viewport" content="width=device-width">`： 这行代码会强制让手机浏览器采用它们真实可视窗口的宽度来加载网页（有些手机浏览器会提供不真实的可视窗口宽度，用比真实视口更大的宽度加载网页，然后再缩小加载的页面，这样的做法对响应式图片或其他响应式设计，没有任何帮助）。
+> **备注：** 在 HTML 文件中的 {{htmlelement("head")}} 标签里，你将会找到这一行代码 `<meta name="viewport" content="width=device-width">`：这行代码会强制让手机浏览器采用它们真实可视窗口的宽度来加载网页（有些手机浏览器会提供不真实的可视窗口宽度，用比真实视口更大的宽度加载网页，然后再缩小加载的页面，这样的做法对响应式图片或其他响应式设计，没有任何帮助）。
 
 ### 分辨率切换：相同的尺寸，不同的分辨率
 
@@ -127,7 +127,9 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
      alt="Elva dressed as a fairy" />
 ```
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png) 在这个例子中，下面的 CSS 会应用在图片上，所以它的宽度在屏幕上是 320 像素（也称作 CSS 像素）：
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)
+
+在这个例子中，下面的 CSS 会应用在图片上，所以它的宽度在屏幕上是 320 像素（也称作 CSS 像素）：
 
 ```css
 img {
@@ -135,7 +137,7 @@ img {
 }
 ```
 
-在这种情况下，就不用到 `sizes` 属性——浏览器计算出正在显示的显示器的分辨率，然后显示 `srcset` 引用的最适合的图片。因此，如果访问页面的设备具有标准/低分辨率显示，用一个设备像素表示一个 CSS 像素，那么会加载 `elva-fairy-320w.jpg`（1x 是默认值，所以你不需要写出来）。如果设备有高分辨率，用两个或更多的设备像素表示一个 CSS 像素，会加载 `elva-fairy-640w.jpg` 。640px 的图像大小为 93KB，320px 的图像的大小仅仅有 39KB。
+在这种情况下，就不用到 `sizes` 属性——浏览器计算出正在显示的显示器的分辨率，然后显示 `srcset` 引用的最适合的图片。因此，如果访问页面的设备具有标准/低分辨率显示，用一个设备像素表示一个 CSS 像素，那么会加载 `elva-fairy-320w.jpg`（1x 是默认值，所以你不需要写出来）。如果设备有高分辨率，用两个或更多的设备像素表示一个 CSS 像素，会加载 `elva-fairy-640w.jpg`。640px 的图像大小为 93KB，320px 的图像的大小仅仅有 39KB。
 
 ### 美术设计
 
