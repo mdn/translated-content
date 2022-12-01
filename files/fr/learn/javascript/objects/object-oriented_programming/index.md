@@ -75,7 +75,7 @@ classe Enseignant
 
 Ce constructeur prend deux paramètres afin d'initialiser les propriétés `nom` et `matière` lorsqu'on crée un nouvel enseignant.
 
-Maintenant que nous disposons d'un constructeur, nous pouvons créer des enseignants. Les langages de programmation utilisent souvent le mot-clé  `new` afin d'indiquer qu'un constructeur est appelé.
+Maintenant que nous disposons d'un constructeur, nous pouvons créer des enseignants. Les langages de programmation utilisent souvent le mot-clé `new` afin d'indiquer qu'un constructeur est appelé.
 
 ```js
 guillaume = new Enseignant("Guillaume", "Psychologie");
