@@ -8,19 +8,20 @@ tags:
 translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 original_slug: Contrôles_DHTML_personnalisés_navigables_au_clavier
 ---
+
 ### Le problème&nbsp;: les pages DHTML actuelles ne sont pas accessibles au clavier
 
-Un nombre croissant d'applications Web utilise [JavaScript](fr/JavaScript) pour imiter des contrôles (
+Un nombre croissant d'applications Web utilise [JavaScript](/fr/JavaScript) pour imiter des contrôles (
 _widgets_
 ) applicatifs comme des menus, des vues arborescentes, des champs de texte enrichis et des panneaux à onglets. Les développeurs Web innovent constamment et les applications futures contiendront des éléments complexes et interactifs comme des feuilles de calcul, des calendriers, des graphes organisationnels et plus encore. Jusqu'à présent, les développeurs désirant rendre leurs contrôles basés sur des `<div>` et autres `<span>` stylés ne disposaient pas des techniques nécessaires. Pourtant, l'accessibilité au clavier fait partie des nécessités dont tout développeur Web devrait tenir compte.
 
-Prenons un exemple concret&nbsp;: la plupart des menus [DHTML](fr/DHTML) ne se comportent pas comme des menus normaux en ce qui concerne l'accès au clavier. Même s'il y a moyen d'accéder au menu avec le clavier, une erreur courante est de placer chaque élément du menu dans l'ordre de tabulation (souvent réalisé implicitement en faisant de chaque choix du menu un élément `<a>`). En réalité, le comportement correct d'un menu est que le menu entier doit figurer une seule fois dans l'ordre de tabulation, et les flèches doivent être utilisées pour se déplacer de choix en choix au sein du menu. Ceci vaut également pour les autres contrôles de «&nbsp;navigation groupée&nbsp;» comme les vues arborescentes, tableaux et panneaux à onglets.
+Prenons un exemple concret&nbsp;: la plupart des menus [DHTML](/fr/DHTML) ne se comportent pas comme des menus normaux en ce qui concerne l'accès au clavier. Même s'il y a moyen d'accéder au menu avec le clavier, une erreur courante est de placer chaque élément du menu dans l'ordre de tabulation (souvent réalisé implicitement en faisant de chaque choix du menu un élément `<a>`). En réalité, le comportement correct d'un menu est que le menu entier doit figurer une seule fois dans l'ordre de tabulation, et les flèches doivent être utilisées pour se déplacer de choix en choix au sein du menu. Ceci vaut également pour les autres contrôles de «&nbsp;navigation groupée&nbsp;» comme les vues arborescentes, tableaux et panneaux à onglets.
 
-Il est à présent possible pour les auteurs HTML de faire les choses correctement. La manière de rendre ces contrôles compatibles avec les technologies d'assistance est détaillée dans&nbsp;: [ARIA : Applications riches Internet accessibles](fr/ARIA/Applications_riches_Internet_accessibles).
+Il est à présent possible pour les auteurs HTML de faire les choses correctement. La manière de rendre ces contrôles compatibles avec les technologies d'assistance est détaillée dans&nbsp;: [ARIA : Applications riches Internet accessibles](/fr/ARIA/Applications_riches_Internet_accessibles).
 
 ### La solution&nbsp;: modifier le comportement standard de `tabindex`
 
-Firefox 1.5 suit l'exemple de Microsoft Internet Explorer en étendant l'attribut `tabindex` pour permettre à n'importe quel élément d'obtenir ou non le focus. En suivant le [système d'IE pour `tabindex`](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/tabindex.asp), il devient possible de permettre aux contrôles [DHTML](fr/DHTML), déjà accessibles au clavier dans IE, de l'être également dans Firefox 1.5. Les règles doivent subir quelques petites entorses afin de permettre aux auteurs de rendre leurs contrôles personnalisés accessibles.
+Firefox 1.5 suit l'exemple de Microsoft Internet Explorer en étendant l'attribut `tabindex` pour permettre à n'importe quel élément d'obtenir ou non le focus. En suivant le [système d'IE pour `tabindex`](http://msdn.microsoft.com/workshop/author/dhtml/reference/properties/tabindex.asp), il devient possible de permettre aux contrôles [DHTML](/fr/DHTML), déjà accessibles au clavier dans IE, de l'être également dans Firefox 1.5. Les règles doivent subir quelques petites entorses afin de permettre aux auteurs de rendre leurs contrôles personnalisés accessibles.
 
 Le tableau qui suit décrit le nouveau comportement de `tabindex`&nbsp;:
 
@@ -45,7 +46,7 @@ N'oubliez pas que ceci ne fait pas encore partie d'un standard W3C ou autre orga
 
 #### Utilisation d'`onfocus` pour suivre le focus
 
-Les attributs de gestion d'évènements `onfocus` et `onblur` peuvent à présent être utilisés sur tous les éléments. Il n'y a pas d'interface [DOM](fr/DOM) standard pour obtenir l'élément ayant actuellement le focus dans le document, par conséquent il est nécessaire d'utiliser une variable [JavaScript](fr/JavaScript) pour le suivre.
+Les attributs de gestion d'évènements `onfocus` et `onblur` peuvent à présent être utilisés sur tous les éléments. Il n'y a pas d'interface [DOM](/fr/DOM) standard pour obtenir l'élément ayant actuellement le focus dans le document, par conséquent il est nécessaire d'utiliser une variable [JavaScript](/fr/JavaScript) pour le suivre.
 
 Ne supposez pas que tous les changements de focus viendront des évènements clavier ou souris, car les technologies d'assistance, comme les lecteurs d'écran, peuvent donner le focus à n'importe quel élément pouvant en disposer et cela doit être traité élégamment par le contrôle JavaScript.
 
@@ -67,7 +68,7 @@ Il ne sera pas possible d'utiliser `:focus` ou des sélecteurs d'attribut pour s
 
 #### Toujours dessiner le focus pour les éléments avec `tabindex="-1"` et qui reçoivent le focus par programmation
 
-IE ne dessinera pas automatiquement l'encadrement du focus pour les éléments qui reçoivent le focus de manière programmée. Choisissez entre changer la couleur de fond via quelque chose comme `this.style.backgroundColor = "gray";` ou ajoutez une bordure pointillée via `this.style.border = "1px dotted invert"`. Dans le cas d'une bordure pointillée, il sera nécessaire de s'assurer que ces éléments aient une bordure invisible de \<tt>1px\</tt> au départ, afin que l'élément ne change pas de taille lorsque le style de bordure est appliqué (les bordures prennent de la place et IE n'implémente pas les encadrements CSS).
+IE ne dessinera pas automatiquement l'encadrement du focus pour les éléments qui reçoivent le focus de manière programmée. Choisissez entre changer la couleur de fond via quelque chose comme `this.style.backgroundColor = "gray";` ou ajoutez une bordure pointillée via `this.style.border = "1px dotted invert"`. Dans le cas d'une bordure pointillée, il sera nécessaire de s'assurer que ces éléments aient une bordure invisible de `1px` au départ, afin que l'élément ne change pas de taille lorsque le style de bordure est appliqué (les bordures prennent de la place et IE n'implémente pas les encadrements CSS).
 
 #### Utilisation de `onkeydown` pour les évènements clavier, plutôt que `onkeypress`
 

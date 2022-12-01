@@ -2,6 +2,7 @@
 title: 関数式
 slug: Web/JavaScript/Reference/Operators/function
 ---
+
 {{jsSidebar("Operators")}}
 
 **`function`** キーワードは、式の中で関数を定義するために使用されます。

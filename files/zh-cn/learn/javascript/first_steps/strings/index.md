@@ -2,6 +2,7 @@
 title: 文本处理 — JavaScript 中的字符串
 slug: Learn/JavaScript/First_steps/Strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
 接下来，我们将把注意力转向文本片段——也就是编程中所说的**字符串**。在本文中，我们将了解在学习 JavaScript 时，您应该了解的关于字符串的所有常见事项，例如创建字符串、在字符串中转义引号，和连接字符串。
@@ -216,7 +217,7 @@ let bigmouth = 'I\'ve got no right to take my place...';
 bigmouth;
 ```
 
-这回正常了。你可以用别的方式来达到一样的目的， 例如. `\",` 除此之外有一些特殊的代码 。更多细节请参见[转义符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#Parameters)。
+这回正常了。你可以用别的方式来达到一样的目的，例如。`\",` 除此之外有一些特殊的代码。更多细节请参见[转义符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#Parameters)。
 
 ## 连接字符串
 
@@ -231,7 +232,7 @@ bigmouth;
 
     变量 `joined` 的值的结果，它包含的值为 "Hello, how are you?"。
 
-2. 最后一个例子中， 我们只是把两个字符串连接在一起，但是你可以喜欢连接多少就多少个， 只需要在它们之间加上 + 操作符。试试这个：
+2. 最后一个例子中，我们只是把两个字符串连接在一起，但是你可以喜欢连接多少就多少个，只需要在它们之间加上 + 操作符。试试这个：
 
     ```js
     let multiple = one + one + one + one + two;
@@ -268,7 +269,7 @@ button.onclick = function() {
 
 这里我们使用的是第 4 行中的 {{domxref("window.prompt()", "window.prompt()")}} 函数，它要求用户通过一个弹出对话框回答一个问题然后将他们输入的文本存储在一个给定的变量中 — 在这个例子中是就是 `name` 变量。然后，我们在第 5 行中使用 {{domxref("window.alert()","window.alert()")}} 函数来显示另一个弹出窗口，其中包含一个字符串，我们用两个字符串常量和 name 变量通过连接进行组合。
 
-### 数字与字符
+### 数字与字符串
 
 1. 当我们尝试添加 (或连接) 一个字符串和一个数字时，会发生什么？
     让我们在我们的控制台中尝试一下：

@@ -2,6 +2,7 @@
 title: VRFieldOfView
 slug: Web/API/VRFieldOfView
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 [WebVR API](/ja/docs/Web/API/WebVR_API) の **`VRFieldOfView`** インターフェイスは，中心点からの視野を示す 4 つの角度で定義される視界を表現します．

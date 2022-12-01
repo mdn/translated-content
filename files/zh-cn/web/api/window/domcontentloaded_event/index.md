@@ -2,7 +2,8 @@
 title: DOMContentLoaded
 slug: Web/API/Window/DOMContentLoaded_event
 ---
-当初始的 **HTML** 文档被完全加载和解析完成之后，**`DOMContentLoaded` **事件被触发，而无需等待样式表、图像和子框架的完全加载。
+
+当初始的 **HTML** 文档被完全加载和解析完成之后，**`DOMContentLoaded`** 事件被触发，而无需等待样式表、图像和子框架的完全加载。
 
 模拟的 css 文件：CSS.php
 
@@ -97,9 +98,9 @@ document.addEventListener('DOMContentLoaded',function(){
 
 ## 相关事件
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event)
+- [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event)
+- [`load`](/zh-CN/docs/Web/API/Window/load_event)
+- [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/zh-CN/docs/Web/API/Window/unload_event)
 - [DOMContentLoaded demo](https://codepen.io/gildata/pen/VrzXOb)

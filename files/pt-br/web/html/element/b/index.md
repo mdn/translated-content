@@ -1,13 +1,8 @@
 ---
 title: <b>
 slug: Web/HTML/Element/b
-tags:
-  - Elemento
-  - HTML
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/b
 ---
+
 ## Resumo
 
 O **elemento HTML \<b>** representa um intervalo de texto estilísticamente diferente do texto normal, sem transmitir qualquer importância ou relevância. Ele é geralmente usado para destacar palavras-chaves em um resumo, nomes de produtos em um comentário ou outros vãos de texto cuja a apresentação típica seria negrito. Outro exemplo de seu uso é como marcação da frase principal de cada paragrafo de um artigo.
@@ -18,17 +13,17 @@ O **elemento HTML \<b>** representa um intervalo de texto estilísticamente dife
 > - Também não é recomendado marcar títulos de cabeçalhos usando o elemento \<b>. Para isso, use as tags {{HTMLElement("h1")}} até {{HTMLElement("h6")}}. usando essas tags você terá liberdade de mudar o estilo padrão dos elementos e não ficará preso ao negrito do elemento \<b>.
 > - É uma boa prática usar o atributo de classe \<b>, a fim de transmitir informação semântica adicional. Isso facilita o desenvolvimento de várias "stylings" de um documento web, sem a necessidade de alterar o seu código HTML.
 > - Historicamente, o elemento \<b> foi criado para fazer o texto ficar em negrito. Porém as informações de estilo ficou obsoleta desde o HTML4, de modo que significado da tag \<b> foi alterado.
-> - Se não a propósito semântico sobre o uso do elemento \<b>, usar a propriedade css [font-weight](/pt-BR/docs/CSS/font-weight "font-weight") com algum volume seria uma escolha melhor para fazer o texto ficar em negrito.
+> - Se não a propósito semântico sobre o uso do elemento \<b>, usar a propriedade css [font-weight](/pt-BR/docs/CSS/font-weight) com algum volume seria uma escolha melhor para fazer o texto ficar em negrito.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"), palpable content.
-- _Permitted content_ [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), palpable content.
+- _Permitted content_ [Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
-- _DOM interface_ {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the [`HTMLSpanElement`](/pt-BR/docs/DOM/span "DOM/span") interface for
+- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
+- _DOM interface_ {{domxref("HTMLElement")}} Up to Gecko 1.9.2 (Firefox 4) inclusive, Firefox implements the [`HTMLSpanElement`](/pt-BR/docs/DOM/span) interface for
 
 ## Atributos
 
-Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+Este elemento só inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Exemplo
 
@@ -59,7 +54,7 @@ Palavras-chave são exibidas com o estilo padrão do elemento \<b>, provavelment
 
 ## Veja Também
 
-- Outros elementos de transporte [text-level semantics](/pt-BR/docs/HTML/Text_level_semantics_conveying_elements "HTML/Text level semantics conveying elements"): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("abbr")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
-- [Using \<b> and \<i> elements (W3C)](http://www.w3.org/International/questions/qa-b-and-i-tags)
+- Outros elementos de transporte [text-level semantics](/pt-BR/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("abbr")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
+- [Using \<b> and \<i> elements (W3C)](https://www.w3.org/International/questions/qa-b-and-i-tags)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

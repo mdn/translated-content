@@ -5,6 +5,7 @@ original_slug: MDN/Structures/Macros/Commonly-used_macros
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
+
 {{MDNSidebar}}
 
 このページには MDN で使うために作られた汎用のマクロの大部分が掲載されています。
@@ -188,7 +189,7 @@ MDN の特定の参照領域（Javascript、CSS、HTML 要素、SVG など）の
 典型的には、リファレンス、ガイド、チュートリアルでメインページに戻るためのリンク (パンくずリストではできないことがある) を提供し、記事を適切なカテゴリーに配置します。
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) は CSS リファレンスページのサイドバーを生成します。
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) は HTML リファレンスページのサイドバーを生成します。
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs) は HTML リファレンスページのサイドバーを生成します。
 - [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) は Web API リファレンスページのサイドバーを生成します。
 
 ## 汎用的な書式化

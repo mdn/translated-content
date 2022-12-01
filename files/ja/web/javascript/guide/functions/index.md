@@ -1,14 +1,8 @@
 ---
 title: 関数
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Beginner
-  - Functions
-  - Guide
-  - JavaScript
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Functions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 
 関数は、 JavaScript の基本的な構成要素のひとつです。 JavaScript の関数は、プロシージャに似ています。 — タスクを実行したり値を計算したりする一連の文ですが、プロシージャが関数として認められるためには、何らかの入力を受け取り、入力と出力の間に何らかの明白な関係がある出力を返す必要があります。関数を使用するには、呼び出したいスコープのどこかで関数を定義する必要があります。
@@ -146,7 +140,7 @@ function square(n) { return n * n }
 
 関数のスコープは自身が宣言された関数内、あるいは最上位で宣言されたのであればプログラム全体になります。
 
-> **Note:** **注:** この動作は、上記の構文 (すなわち `function funcName(){}`) を用いて関数を定義したときに限ることに注意してください。次のコードは動作しません。
+> **メモ:** この動作は、上記の構文 (すなわち `function funcName(){}`) を用いて関数を定義したときに限ることに注意してください。次のコードは動作しません。
 >
 > これは、関数の巻き上げが*関数式*ではなく*関数宣言*でしか機能しないことを意味しています。
 >
@@ -482,7 +476,7 @@ var getCode = (function() {
 getCode();    // シークレットコードを返す
 ```
 
-> **Note:** **注:** クロージャを使用する際に注意すべき落とし穴がいくつかあります。
+> **メモ:** クロージャを使用する際に注意すべき落とし穴がいくつかあります。
 >
 > 取り囲まれている関数で外部スコープの変数と同じ名前の変数を定義した場合、外部スコープにある変数を再び参照する方法がなくなります。 (プログラムが内部スコープを終了するまで、内部スコープ変数は外部変数を「上書き」します。)
 >
@@ -535,7 +529,7 @@ myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah');
 myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 ```
 
-> **Note:** **注:** 変数 `arguments` は「配列風の変数」であり、配列ではありません。添字が数値であることと `length` プロパティがあることで、配列風となってはいます。しかし、配列操作のメソッドのすべてを持っているわけではありません。
+> **メモ:** 変数 `arguments` は「配列風の変数」であり、配列ではありません。添字が数値であることと `length` プロパティがあることで、配列風となってはいます。しかし、配列操作のメソッドのすべてを持っているわけではありません。
 
 さらなる情報については、JavaScript リファレンスの {{jsxref("Function")}} オブジェクトをご覧ください。
 

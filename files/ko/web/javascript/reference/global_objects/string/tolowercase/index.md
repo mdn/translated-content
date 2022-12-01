@@ -9,6 +9,7 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 ---
+
 {{JSRef}}**`toLowerCase()`** 메서드는 문자열을 소문자로 변환해 반환합니다.{{EmbedInteractiveExample("pages/js/string-tolowercase.html")}}
 
 ## 구문

@@ -2,6 +2,7 @@
 title: 'AudioTrackList: addtrack イベント'
 slug: Web/API/AudioTrackList/addtrack_event
 ---
+
 {{APIRef}}
 
 `addtrack` イベントは、トラックが {{domxref("AudioTrackList")}} に追加されたときに発生します。
@@ -57,9 +58,7 @@ videoElement.audioTracks.onaddtrack = (event) => {
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                             |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'media.html#event-media-addtrack', 'addtrack')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

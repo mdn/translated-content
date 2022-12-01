@@ -2,6 +2,7 @@
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
+
 {{JSRef}}
 
 **`Object.isExtensible()`** メソッドは、オブジェクトが拡張可能であるか (新しいプロパティを追加することができるかどうか) を判定します。
@@ -63,9 +64,7 @@ Object.isExtensible(1);
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.isextensible', 'Object.isExtensible')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

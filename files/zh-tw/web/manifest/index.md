@@ -2,6 +2,7 @@
 title: Web App Manifest
 slug: Web/Manifest
 ---
+
 {{SeeCompatTable}}
 
 Web App manifest 是一個 JSON 格式的文件，它提供了應用程式相關的資訊（像是名稱、作者、圖示、描述）。 manifest 的功用是將 Web 應用程式安裝到設備的主畫面，為使用者提供更快速的訪問和更豐富的體驗。
@@ -82,7 +83,7 @@ Web app manifest 的部署只需要在 HTML 文件中的 [head](/zh-TW/docs/Web/
 
 ### `dir`
 
-指定一個對於 `name`、` short_name、``description ` 等成員的主要書寫方向。 包含 `lang` 成員，其能夠為右至左書寫的語言提供幫助。
+指定一個對於 `name`、`short_name`、`description` 等成員的主要書寫方向。 包含 `lang` 成員，其能夠為右至左書寫的語言提供幫助。
 
 ```json
 "dir": "rtl",

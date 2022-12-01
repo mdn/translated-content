@@ -2,6 +2,7 @@
 title: WEBGL_lose_context
 slug: Web/API/WEBGL_lose_context
 ---
+
 {{APIRef("WebGL")}}
 
 **WEBGL_lose_context** 是属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一个扩展 API，它提供一组方法用来模拟一个 {{domxref("WebGLRenderingContext")}} 上下文的丢失和恢复。
@@ -19,7 +20,7 @@ WebGL 扩展可以通过 {{domxref("WebGLRenderingContext.getExtension()")}} 方
 
 ## 示例
 
-使用这个扩展，你可以模拟 {{Event("webglcontextlost")}} 和 {{Event("webglcontextrestored")}} 事件：
+使用这个扩展，你可以模拟 [`webglcontextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event) 和 [`webglcontextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event) 事件：
 
 ```js
 var canvas = document.getElementById('canvas');
@@ -40,9 +41,9 @@ gl.getExtension('WEBGL_lose_context').loseContext();
 
 ## 浏览器兼容性
 
-{{Compat("api.WEBGL_lose_context.loseContext")}}
+{{Compat}}
 
-## 参阅
+## 参见
 
 - {{domxref("WebGLRenderingContext.isContextLost()")}}
-- 事件：{{Event("webglcontextlost")}}, {{Event("webglcontextrestored")}}, {{Event("webglcontextcreationerror")}}
+- 事件：[`webglcontextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)、[`webglcontextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)、[`webglcontextcreationerror`](/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)

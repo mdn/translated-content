@@ -2,6 +2,7 @@
 title: 元素：click 事件
 slug: Web/API/Element/click_event
 ---
+
 {{APIRef}}
 
 当定点设备的按钮（通常是鼠标的主键）在一个元素上被按下和放开时，`click` 事件就会被触发。

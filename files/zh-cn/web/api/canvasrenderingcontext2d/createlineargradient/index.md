@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.createLinearGradient()
 slug: Web/API/CanvasRenderingContext2D/createLinearGradient
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.createLinearGradient()`**方法创建一个沿参数坐标指定的直线的渐变。
@@ -117,13 +118,13 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.createLinearGradient")}}
+{{Compat}}
 
 ### Gecko 特性说明
 
-- 自 Gecko 2.0 {{geckoRelease("2.0")}}开始，参数指定了极值会抛出`NOT_SUPPORTED_ERR` 而不再是之前的 `SYNTAX_ERR`异常。
+- 自 Gecko 2.0 开始，参数指定了极值会抛出`NOT_SUPPORTED_ERR` 而不再是之前的 `SYNTAX_ERR`异常。
 
-## <br>参见
+## 参见
 
 - 接口定义： {{domxref("CanvasRenderingContext2D")}}
 - {{domxref("CanvasRenderingContext2D.createRadialGradient()")}}

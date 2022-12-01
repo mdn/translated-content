@@ -2,6 +2,7 @@
 title: TypedArray.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 ---
+
 {{JSRef}}
 
 **`every()`** メソッドは、型付き配列内のすべての要素が提供された関数で実装されたテストに合格するかどうかをテストします。このメソッドのアルゴリズムは {{jsxref("Array.prototype.every()")}} と同じです。ここで _TypedArray_ は、[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの 1 つです。
@@ -69,9 +70,7 @@ new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.every', 'TypedArray.prototype.every')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: Blob.arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} インターフェイスの **`arrayBuffer()`** メソッドは、{{domxref("ArrayBuffer")}} 内のバイナリデータとして Blob の内容を解決する {{jsxref("Promise")}} を返します。
@@ -34,9 +35,7 @@ Blob のデータをバイナリ形式で含む {{domxref("ArrayBuffer")}} で�
 
 ## 仕様
 
-| 仕様書                                                                                           | ステータス                   | コメント |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("File API", "#dom-blob-arraybuffer", "Blob.arrayBuffer()")}} | {{Spec2("File API")}} |          |
+{{Specifications}}
 
 ## ブラウザの互換性
 

@@ -2,6 +2,7 @@
 title: Gamepad.axes
 slug: Web/API/Gamepad/axes
 ---
+
 {{APIRef("Gamepad API")}}
 
 {{domxref("Gamepad") }} インターフェイスの **`Gamepad.axes`** プロパティはデバイス上に存在する軸を持つコントロールを表す配列を返します。 (例 : アナログスティック)。
@@ -47,9 +48,7 @@ function gameLoop() {
 
 ## 仕様書
 
-| 仕様                                                                             | 状態                         | コメント |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#widl-Gamepad-axes", "Gamepad.axes")}} | {{Spec2("Gamepad")}} | 初版     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

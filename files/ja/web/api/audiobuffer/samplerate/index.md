@@ -2,6 +2,7 @@
 title: AudioBuffer.sampleRate
 slug: Web/API/AudioBuffer/sampleRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`sampleRate`** は {{ domxref("AudioBuffer") }} インターフェイスのプロパティで、バッファーに格納された PCM データの 1 秒あたりのサンプル数を、サンプルレートとして float で返します。
@@ -47,4 +48,4 @@ button.onclick = function() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

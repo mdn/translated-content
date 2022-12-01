@@ -2,6 +2,7 @@
 title: Blob.type
 slug: Web/API/Blob/type
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} オブジェクトの **`type`** プロパティは、ファイルの {{Glossary("MIME type")}} を返します。
@@ -42,9 +43,7 @@ for (i = 0; i < files.length; i++) {
 
 ## 仕様
 
-| 仕様書                                                               | ステータス                   | コメント |
-| -------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('File API', '#dfn-type', 'Blob.type')}} | {{Spec2('File API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザの互換性
 
@@ -53,4 +52,4 @@ for (i = 0; i < files.length; i++) {
 ## あわせて参照
 
 - {{domxref("Blob")}}
-- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

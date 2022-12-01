@@ -1,59 +1,69 @@
 ---
-title: SpeechRecognition.onerror
+title: 'SpeechRecognition: error イベント'
 slug: Web/API/SpeechRecognition/error_event
 original_slug: Web/API/SpeechRecognition/onerror
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-{{domxref("SpeechRecognition")}}インターフェイスの **`onerror`** プロパティは、音声の認識でエラーが発生した場合([error](/ja/docs/Web/Events/error_%28SpeechRecognitionError%29) イベントが発生した時) に、実行するイベントハンドラーになります。
+{{APIRef("Web Speech API")}}
+
+**`error`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) の
+{{domxref("SpeechRecognition")}} オブジェクトのイベントで、音声認識のエラーが発生した時に発生します。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('error', (event) => { })
+
+onerror = (event) => { }
 ```
-mySpeechRecognition.onerror = function() { ... };
-```
+
+## イベント型
+
+{{domxref("SpeechRecognitionErrorEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("SpeechRecognitionErrorEvent")}}
+
+## イベントプロパティ
+
+_以下に列挙したプロパティに加えて、親インターフェイスである {{domxref("Event")}} から継承したプロパティも利用できます。_
+
+- {{domxref("SpeechRecognitionErrorEvent.error")}} {{ReadOnlyInline}}
+  - : 発生したエラーの種類を示します。
+- {{domxref("SpeechRecognitionErrorEvent.message")}} {{ReadOnlyInline}}
+  - : エラーの詳細を説明するメッセージを返します。
 
 ## 例
 
+`error` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+
 ```js
-var recognition = new SpeechRecognition();
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
 
-recognition.onerror = function(event) {
-  console.log('音声を認識する際にエラーが発生しました：' + event.error);
+recognition.addEventListener('error', (event) => {
+  console.error(`音声認識エラーが発生しました: ${event.error}`);
+});
+```
+
+または `onerror` イベントハンドラープロパティを使用してください。
+
+```js
+recognition.onerror = (event) => {
+  console.error(`音声認識エラーが発生しました: ${event.error}`);
 }
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                         | 状態                                 | コメント |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Web Speech API', '#dfn-onerror', 'onerror')}} | {{Spec2('Web Speech API')}} |          |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.SpeechRecognition.onerror")}}
-
-### Firefox OS の権限
-
-アプリで音声認識を利用する前に、下記の権限を [manifest](/ja/docs/Web/Apps/Build/Manifest) に追加する必要があります。
-
-```json
-"permissions": {
-  "audio-capture" : {
-    "description" : "Audio capture"
-  },
-  "speech-recognition" : {
-    "description" : "Speech recognition"
-  }
-}
-```
-
-privileged アプリ権限も必要なので、下記も追加が必要です。
-
-```json
-  "type": "privileged"
-```
+{{Compat}}
 
 ## 関連情報
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)

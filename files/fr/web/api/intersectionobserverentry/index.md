@@ -9,6 +9,7 @@ tags:
   - IntersectionObserverEntry
 translation_of: Web/API/IntersectionObserverEntry
 ---
+
 {{SeeCompatTable}}{{APIRef("Intersection Observer API")}}
 
 L'interface **`IntersectionObserverEntry`** de l'[API Intersection Observer](/fr/docs/Web/API/Intersection_Observer_API) décrit l'intersection entre l'élément cible et son conteneur (appelé racine) à un moment spécifique de transition.
@@ -24,7 +25,7 @@ Les instances de `IntersectionObserverEntry` sont délivrées à une fonction de
 - {{domxref("IntersectionObserverEntry.intersectionRect")}} {{readonlyinline}}
   - : Retourne un {{domxref("DOMRectReadOnly")}} représentant la partie visible de l'élément cible.
 - {{domxref("IntersectionObserverEntry.isIntersecting")}} {{ReadOnlyInline}}
-  - : Retourne une valeur booléenne valant `true` si l'élément cible s'entrecoupe avec la zone d'intersection de l'élément racine. S'il vaut `true`, alors `IntersectionObserverEntry` décrit une transition vers un état d'intersection ;  S'il vaut `false`, alors la transition se fait d'un état d'intersection à un état de non-intersection.
+  - : Retourne une valeur booléenne valant `true` si l'élément cible s'entrecoupe avec la zone d'intersection de l'élément racine. S'il vaut `true`, alors `IntersectionObserverEntry` décrit une transition vers un état d'intersection ; S'il vaut `false`, alors la transition se fait d'un état d'intersection à un état de non-intersection.
 - {{domxref("IntersectionObserverEntry.rootBounds")}} {{readonlyinline}}
   - : Retourne un {{domxref("DOMRectReadOnly")}} pour la zone d'intersection de l'élément racine.
 - {{domxref("IntersectionObserverEntry.target")}} {{ReadOnlyInline}}

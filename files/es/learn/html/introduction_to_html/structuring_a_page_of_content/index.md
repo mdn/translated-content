@@ -1,19 +1,9 @@
 ---
 title: Estructuración de una Página de contenido
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
-tags:
-  - Aprendizaje
-  - Diseño
-  - Escribir Código
-  - Estructuración
-  - Evaluación
-  - HTML
-  - Principiante
-  - Prototipado
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 original_slug: Learn/HTML/Introduccion_a_HTML/Estructuración_de_una_página_de_contenido
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 La estructuración de una página de contenido lista para su uso mediante CSS es una habilidad muy importante para dominar, por lo que en esta evaluación verá su capacidad para pensar en cómo podría finalizar una página buscando y eligiendo la semántica estructural adecuada para construir un diseño en la parte superior.

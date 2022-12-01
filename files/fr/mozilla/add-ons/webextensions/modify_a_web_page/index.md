@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
+
 {{AddonSidebar}}
 
 L'un des cas d'utilisation les plus courants pour un complément de navigateur est de modifier une page Web. Par exemple, une extension pourrait vouloir modifier le style appliqué à une page, cacher des nœuds DOM particuliers ou injecter des nœuds DOM supplémentaires dans la page.
@@ -43,7 +44,7 @@ Tout d'abord, créez un nouveau répertoire intitulé "modify-page". Dans ce ré
 }
 ```
 
-La clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)  est la façon dont vous chargez les scripts dans des pages qui correspondent aux modèles d'URL. Dans ce cas, les instructions `content_scripts demandent au navigateur de charger un script appelé`  "page-eater.js" dans toutes les pages sous [https://developer.mozilla.org/](/).
+La clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) est la façon dont vous chargez les scripts dans des pages qui correspondent aux modèles d'URL. Dans ce cas, les instructions `content_scripts demandent au navigateur de charger un script appelé`  "page-eater.js" dans toutes les pages sous [https://developer.mozilla.org/](/).
 
 > **Note :** Puisque la propriété "js" de content_scripts est un tableau, vous pouvez l'utiliser pour injecter plus d'un script dans des pages correspondantes. Si vous faites cela, les pages partagent la même portée, tout comme les scripts multiples chargés par une page, et ils sont chargés dans l'ordre dans lequel ils sont répertoriés dans le tableau.
 
@@ -127,7 +128,7 @@ Maintenant [rechargeons la WebExtension](/fr/Add-ons/WebExtensions/Temporary_Ins
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 
-> **Note :** Bien que cette vidéo montre le script de contenu fonctionnant dans  [addons.mozilla.org](/fr/firefox/), les scripts de contenu sont actuellement bloqués pour ce site.
+> **Note :** Bien que cette vidéo montre le script de contenu fonctionnant dans [addons.mozilla.org](/fr/firefox/), les scripts de contenu sont actuellement bloqués pour ce site.
 
 ## Messagerie
 

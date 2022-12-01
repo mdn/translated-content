@@ -2,6 +2,7 @@
 title: Screen
 slug: Web/API/Screen
 ---
+
 {{APIRef("CSSOM View")}}
 
 `Screen` 接口表示一个屏幕窗口，往往指的是当前正在被渲染的 window 对象，可以使用 `window.screen` 获取它。
@@ -40,7 +41,7 @@ slug: Web/API/Screen
 ### Events handler
 
 - {{domxref("Screen.onorientationchange")}}
-  - : 对{{event("orientationchange")}} 事件的时间处理器。
+  - : 对[`orientationchange`](/zh-CN/docs/Web/API/Window/orientationchange_event) 事件的时间处理器。
 
 ## 方法
 

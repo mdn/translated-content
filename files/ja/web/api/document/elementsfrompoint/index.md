@@ -3,6 +3,7 @@ title: DocumentOrShadowRoot.elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementsFromPoint
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 **`elementsFromPoint()`** は {{domxref("DocumentOrShadowRoot")}} インターフェイスのメソッドで、指定された座標 (ビューポートからの相対) にあるすべての要素の配列を返します。
@@ -61,10 +62,7 @@ if (document.elementsFromPoint) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                             |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Shadow DOM','#dom-documentorshadowroot-elementsfrompoint','elementsFromPoint()')}} | {{Spec2('Shadow DOM')}} |
-| {{SpecName('CSSOM View', '#dom-document-elementsfrompoint', 'elementsFromPoint()')}}             | {{Spec2('CSSOM View')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

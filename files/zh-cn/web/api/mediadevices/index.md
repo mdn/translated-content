@@ -2,6 +2,7 @@
 title: MediaDevices
 slug: Web/API/MediaDevices
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaDevices`** 接口提供访问连接媒体输入的设备，如照相机和麦克风，以及屏幕共享等。它可以使你取得任何硬件资源的媒体数据。
@@ -12,13 +13,12 @@ _从父类{{domxref("EventTarget")}}中继承的属性。_
 
 ## 事件
 
-- {{domxref("MediaDevices.devicechange_event", "devicechange")}}
-  - : 返回 {{event("devicechange")}} 事件类型的事件处理程序。
-    也可通过 {{domxref("MediaDevices/ondevicechange", "ondevicechange")}} 访问
+- {{domxref("MediaDevices/devicechange_event", "devicechange")}}
+  - : 当媒体输入或输出设备连接到用户计算机或从用户计算机移除时触发。
 
 ## 方法
 
-_从其父项继承方法 {{domxref("EventTarget")}}._
+_从其父项继承方法 {{domxref("EventTarget")}}。_
 
 - {{ domxref("MediaDevices.enumerateDevices()") }}
   - : 获取有关系统中可用的媒体输入和输出设备的一系列信息。
@@ -79,7 +79,7 @@ function errorMsg(msg, error) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices")}}
+{{Compat}}
 
 ## 参见
 

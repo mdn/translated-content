@@ -7,6 +7,7 @@ tags:
   - Obsolete
 translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
+
 {{JsSidebar("More")}}
 
 본 페이지는 자바스크립트의 제외 예정인(즉, 아직 사용할 수 있지만 제거 계획이 있는) 기능과 제외된(즉, 더 이상 사용할 수 없는) 기능을 나열합니다.
@@ -146,7 +147,7 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 ### String methods
 
-- [HTML wrapper methods](https://developer.mozilla.org/en-US/docs/tag/HTML%20wrapper%20methods) like {{jsxref("String.prototype.fontsize")}} and {{jsxref("String.prototype.big")}}.
+- [HTML wrapper methods](/en-US/docs/tag/HTML%20wrapper%20methods) like {{jsxref("String.prototype.fontsize")}} and {{jsxref("String.prototype.big")}}.
 - {{jsxref("String.prototype.quote")}} is removed from Firefox 37.
 - non standard `flags` parameter in {{jsxref("String.prototype.search")}}, {{jsxref("String.prototype.match")}}, and {{jsxref("String.prototype.replace")}} are deprecated.
 

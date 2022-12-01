@@ -2,6 +2,7 @@
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 ---
+
 {{JSRef}}
 
 JavaScript の関数は、実際にはすべて `Function` オブジェクトです。これは、 `(function(){}).constructor === Function` というコードが true を返すことで確認することができます。
@@ -70,9 +71,7 @@ console.log(f2());          // 20
 
 ## 仕様書
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-objects', 'Function')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: CSS 排版
 slug: Learn/CSS/CSS_layout
 ---
+
 {{LearnSidebar}}
 
 基於我們已經看過了 CSS 基本原理：如何將文字賦予樣式、如何該便樣式或操作你的文字內容所處的 box 模型。現在是時候看看如何將你的 box 模型在視圖中放置於相對應的正確位置。我們已經涵蓋了必要的先備知識，接下來我們可以深入 CSS 排版，看一些不同的顯示方式，如現代的排版方式——彈性盒子、CSS 網格及定位，當然還有一些舊式的技術你可能會想要理解。
@@ -14,7 +15,7 @@ slug: Learn/CSS/CSS_layout
 2. 熟悉 CSS 基本原理，如 [CSS 簡介](/zh-TW/docs/Learn/CSS/Introduction_to_CSS)中所述。
 3. 了解如何 [樣式框](/zh-TW/docs/Learn/CSS/Styling_boxes)。
 
-> **備註：** 如果你正在使用的電腦/平板/其他設備讓你無法建立自己的文件，你可以透過線上工具如 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/) 編輯並嘗試（大部分的）範例程式碼。
+> **備註：** 如果你正在使用的電腦/平板/其他設備讓你無法建立自己的文件，你可以透過線上工具如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/) 編輯並嘗試（大部分的）範例程式碼。
 
 ## 指導
 

@@ -2,6 +2,7 @@
 title: CSS.supports()
 slug: Web/API/CSS/supports
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSS.supports()`** 静态方法返回一个{{domxref("Boolean")}}值，用来校验浏览器是否支持一个给定的 CSS 特性。
@@ -46,7 +47,7 @@ result = CSS.supports("( transform-style: preserve ) or ( -moz-transform-style: 
 
 ## 浏览器兼容性
 
-{{Compat("api.CSS.supports")}}
+{{Compat}}
 
 ## 参见
 

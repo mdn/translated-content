@@ -2,6 +2,7 @@
 title: 'Window: copy イベント'
 slug: Web/API/Window/copy_event
 ---
+
 {{APIRef}}
 
 **`copy`** イベントは、ユーザーがブラウザーのユーザーインターフェイスからコピー操作を実行したときに発生します。
@@ -45,7 +46,7 @@ window.addEventListener('copy', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.copy_event")}}
+{{Compat}}
 
 ## 関連情報
 

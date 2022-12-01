@@ -2,6 +2,7 @@
 title: ruby-align
 slug: Web/CSS/ruby-align
 ---
+
 {{CSSRef}}
 
 **`ruby-align`** は CSS のプロパティで、ベースに対するさまざまなルビの配分を定義します。

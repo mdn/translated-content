@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.caseFirst
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.caseFirst`** プロパティは、ロケールの照合規則に大文字小文字を考慮するかどうかを返すアクセサープロパティです。

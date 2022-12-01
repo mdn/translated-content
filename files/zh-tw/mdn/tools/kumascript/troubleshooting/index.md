@@ -2,6 +2,7 @@
 title: 修復 KumaScript 錯誤
 slug: MDN/Tools/KumaScript/Troubleshooting
 ---
+
 {{MDNSidebar}}
 
 網頁上出現一塊又大又醜的 [KumaScript](/zh-TW/docs/MDN/Kuma/Introduction_to_KumaScript) 錯誤會惹惱讀者，好險任何擁有 MDN 帳號的人，可以編輯文件來修復錯誤。當一個頁面出現錯誤的時候，該面會被列在[有錯誤的文件](/zh-TW/docs/with-errors)裡面。網站編輯者會透過這份清單，找出並修復錯誤。這篇文章列出 KumaScript 錯誤的四種類型，還有解決他們的步驟。

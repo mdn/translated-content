@@ -10,6 +10,7 @@ tags:
   - Types CSS
 translation_of: Web/CSS/Reference
 ---
+
 {{CSSRef}}
 
 Cette **référence CSS** fournit un **[index alphabétique](#index_des_mots-clés)** de toutes les propriétés [CSS](/fr/docs/Web/CSS) standards, des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes), des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements), des [types de données](/fr/docs/Web/CSS/CSS_Types) et des [règles @](/fr/docs/Web/CSS/At-rule). Vous pouvez également trouver une liste alphabétique de tous les **[sélecteurs CSS par type](#sélecteurs)** et une liste des **[concepts clés de CSS](#concepts)**. Enfin est inclus un bref sommaire de **[référence sur DOM-CSS / CSSOM](#dom-css_cssom)**.
@@ -52,11 +53,11 @@ div.menu-bar li:hover > ul {
 
 Pour une introduction à la syntaxe des sélecteurs CSS, consultez [ce tutoriel](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/La_syntaxe). Soyez conscient que n’importe quelle erreur de [syntaxe CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured) dans une définition de règle l’invalide entièrement. Les règles non validées sont ignorées par le navigateur. Note : les définitions de règles CSS sont intégralement [basées sur du texte](https://www.w3.org/TR/css-syntax-3/#intro) (ASCII) alors que DOM-CSS / CSSOM (le système de gestion des règles) est [basé sur des objets](https://www.w3.org/TR/cssom/#introduction).
 
-### **Syntaxe des règles @**
+### Syntaxe des règles @
 
 Comme la structure des règles @ varie grandement, veuillez consulter [règle @](/fr/docs/Web/CSS/At-rule) pour trouver la syntaxe que vous souhaitez.
 
-## **Index des mots-clés**
+## Index des mots-clés
 
 > **Note :** Les noms de propriétés de cet index n’incluent **pas** les [noms de l’API DOM JavaScript](/fr/docs/Web/CSS/CSS_Properties_Reference) lorsqu’ils sont différents des noms standards CSS.
 

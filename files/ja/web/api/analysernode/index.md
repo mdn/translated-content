@@ -2,6 +2,7 @@
 title: AnalyserNode
 slug: Web/API/AnalyserNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AnalyserNode`** インタフェースはリアルタイム時間領域/周波数領域分析情報を表現します。{{domxref("AudioNode")}}は、入力から出力の流れにおいて audio stream そのものは変えず、データ加工や音声の可視化をすることができます。
@@ -43,7 +44,7 @@ slug: Web/API/AnalyserNode
 
 ## Properties
 
-_以下は、\_\_{{domxref("AudioNode")}}からプロパティを継承する_.
+_以下は、{{domxref("AudioNode")}}からプロパティを継承する_.
 
 - {{domxref("AnalyserNode.fftSize")}}
   - : 符号なしの long 型の値で FFT（[高速フーリエ変換](http://en.wikipedia.org/wiki/Fast_Fourier_transform)）において周波数領域を決定するために使われているサイズを表している。
@@ -77,7 +78,7 @@ _{{domxref("AudioNode")}}からメソッドを継承する_.
 
 ## Examples
 
-> **Note:** オーディオヴィジュアライゼーションのための Web Audio API を使ったヴィジュアライゼーションガイドを御覧ください。
+> **メモ:** オーディオヴィジュアライゼーションのための Web Audio API を使ったヴィジュアライゼーションガイドを御覧ください。
 
 ### Basic usage
 
@@ -138,9 +139,7 @@ function draw() {
 
 ## Specifications
 
-| Specification                                                                                        | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#the-analysernode-interface', 'AnalyserNode')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

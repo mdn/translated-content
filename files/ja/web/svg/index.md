@@ -2,6 +2,7 @@
 title: 'SVG: スケーラブルベクターグラフィック'
 slug: Web/SVG
 ---
+
 {{SVGRef}}
 
 ## SVG を始めましょう

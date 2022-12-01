@@ -1,19 +1,13 @@
 ---
 title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experimental
-  - Reference
-translation_of: Web/CSS/animation-iteration-count
 ---
+
 {{ CSSRef() }}{{ SeeCompatTable() }}
 
 ## Resumen
 
-La propiedad [CSS](/en/CSS "CSS") `animation-iteration-count` define el numero de veces que un ciclo de animación debe ser ejecutado antes de detenerse.
+La propiedad [CSS](/en/CSS) `animation-iteration-count` define el numero de veces que un ciclo de animación debe ser ejecutado antes de detenerse.
 
 A menudo es conveniente utilizar la propiedad {{ cssxref("animation") }} para ajustar todas las propiedades de animación a la vez.
 
@@ -21,13 +15,15 @@ A menudo es conveniente utilizar la propiedad {{ cssxref("animation") }} para aj
 
 ## Sintaxis
 
-    Sintaxis formal: {{csssyntax("animation-iteration-count")}}
+```
+Sintaxis formal: {{csssyntax("animation-iteration-count")}}
 
-    animation-iteration-count: infinite;
-    animation-iteration-count: 3;
-    animation-iteration-count: 2.3;
+animation-iteration-count: infinite;
+animation-iteration-count: 3;
+animation-iteration-count: 2.3;
 
-    animation-iteration-count: 2, 0, infinite;
+animation-iteration-count: 2, 0, infinite;
+```
 
 ### Valores
 
@@ -42,9 +38,7 @@ Ver ejemplos [CSS animations](/es/docs/CSS/Using_CSS_animations).
 
 ## Especificaciones
 
-| Especificaciones                                                                                                             | Estado                                   | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation-iteration-count', 'animation-iteration-count') }} | {{ Spec2('CSS3 Animations') }} |            |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 
@@ -52,5 +46,5 @@ Ver ejemplos [CSS animations](/es/docs/CSS/Using_CSS_animations).
 
 ## Ver también
 
-- [Usando animaciones CSS](/es/docs/CSS/Tutorials/Using_CSS_animations "Tutorial about CSS animations")
+- [Usando animaciones CSS](/es/docs/CSS/Tutorials/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

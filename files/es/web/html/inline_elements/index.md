@@ -1,16 +1,9 @@
 ---
 title: Elementos en línea
 slug: Web/HTML/Inline_elements
-tags:
-  - Guía
-  - HTML
-  - HTML5
-  - Principiante
-  - Web
-  - desarrollo
-translation_of: Web/HTML/Inline_elements
 original_slug: Web/HTML/Elementos_en_línea
 ---
+
 Los elementos en HTML (lenguaje de marcas de hipertexto - **Hypertext Markup Language**) usualmente son elementos "en línea" o [elementos "en bloque"](/es/docs/Web/HTML/Block-level_elements). Un elemento en línea ocupa sólo el espacio delimitado por las etiquetas que definen el elemento en línea. El siguiente ejemplo demuestra la influencia de los elementos en línea:
 
 ## Ejemplo en línea

@@ -2,6 +2,7 @@
 title: FetchEvent.resultingClientId
 slug: Web/API/FetchEvent/resultingClientId
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("FetchEvent")}} インターフェイスの **`resultingClientId`** 読み取り専用プロパティは、ページナビゲーション中に前のクライアントを置き換える{{domxref("Client", "クライアント")}}の {{domxref("Client.id", "id")}} です。
@@ -30,9 +31,7 @@ self.addEventListener('fetch', function(event) {
 
 ## 仕様
 
-| 仕様                                                                                                                     | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-fetchevent-resultingclientid', 'resultingClientId')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -3,6 +3,7 @@ title: scaleX()
 slug: Web/CSS/transform-function/scaleX
 original_slug: Web/CSS/transform-function/scaleX()
 ---
+
 {{CSSRef}}
 
 **`scaleX()`** CSS 函数将每个元素点的横坐标修改为一个常数因子，除了该比例因子为 1，在这种情况下，函数是身份变换。缩放不是各向同性的，并且元素的角度不保守。
@@ -13,7 +14,7 @@ original_slug: Web/CSS/transform-function/scaleX()
 
 > **备注：** Note:
 >
-> **`scaleX(-1)` **定义一个 [轴向对称性 (axial symmetry)](http://en.wikipedia.org/wiki/Axial_symmetry) ，它具有一个垂直轴通过原点 (由 {{cssxref("transform-origin")}} 属性规定)。
+> **`scaleX(-1)`** 定义一个 [轴向对称性 (axial symmetry)](http://en.wikipedia.org/wiki/Axial_symmetry) ，它具有一个垂直轴通过原点 (由 {{cssxref("transform-origin")}} 属性规定)。
 
 ## Syntax
 

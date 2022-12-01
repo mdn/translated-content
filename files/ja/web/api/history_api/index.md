@@ -2,6 +2,7 @@
 title: History API
 slug: Web/API/History_API
 ---
+
 {{DefaultAPISidebar("History API")}}
 
 DOM の {{DOMxRef("Window")}} オブジェクトは、ブラウザーのセッション履歴 ([WebExtensions history](/ja/docs/Mozilla/Add-ons/WebExtensions/API/history) と混同しないように) へのアクセスを {{DOMxRef("Window.history","history")}} オブジェクトを介して提供しています。このオブジェクトは、ユーザーの履歴の中を前のページや後のページへ移動したり、履歴スタックの中を操作したりするのに便利なメソッドやプロパティが提供されています。
@@ -84,10 +85,7 @@ history.go(2)  // alerts "location: http://example.com/example.html?page=3, stat
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考                                          |
-| ------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------- |
-| {{SpecName("HTML WHATWG", "browsers.html#history", "History")}} | {{Spec2("HTML WHATWG")}} | {{SpecName("HTML5 W3C")}} から変更なし |
-| {{SpecName("HTML5 W3C", "browsers.html#history", "History")}}     | {{Spec2("HTML5 W3C")}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -11,6 +11,7 @@ tags:
   - domainLookupStart
 translation_of: Web/API/PerformanceResourceTiming/domainLookupStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`domainLookupStart`** retourne le [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement avant que le navigateur ne commence la recherche du nom de domaine pour la ressource.

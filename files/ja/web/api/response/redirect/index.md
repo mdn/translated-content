@@ -1,55 +1,59 @@
 ---
 title: Response.redirect()
 slug: Web/API/Response/redirect
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
+
 {{APIRef("Fetch")}}
 
-{{domxref("Response")}} インターフェイスの **`redirect()`** メソッドは、指定された URL へのレダイレクトをもたらす `Response` を返します。
+**`redirect()`** は {{domxref("Response")}} インターフェイスのメソッドで、指定された URL へのリダイレクトをもたらす `Response` を返します。
 
-> **Note:** これは主に [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API) に関連しています。制御 service worker は、ページのリクエストを中断し、必要に応じてリダイレクトできます。もし Service worker が上流に送信を行うと、実際に本当のリダイレクトが発生します。
+> **メモ:** これは主に[サービスワーカー API](/ja/docs/Web/API/Service_Worker_API) に関連しています。
+> 制御するサービスワーカーは、ページのリクエストに介入し、希望通りにリダイレクトすることができます。
+> もしサービスワーカーが上流に送信を行うと、実際に本当のリダイレクトが発生します。
 
 ## 構文
 
-```
-var response = Response.redirect(url, status);
+```js-nolint
+redirect(url)
+redirect(url, status)
 ```
 
 ### 引数
 
 - `url`
-  - : 新しい reponse の発信元 URL。
+  - : 新しいレスポンスの発信元 URL。
 - `status` {{optional_inline}}
-  - : response のオプションのステータスコード (例 `302` )
+  - : response のオプションのステータスコード (例 `302`)
 
-### 返り値
+### 返値
 
-{{domxref("Response")}} オブジェクト
+{{domxref("Response")}} オブジェクト。
 
 ### 例外
 
-| 例外         | 説明                                                         |
-| ------------ | ------------------------------------------------------------ |
-| `RangeError` | 指定されたステータスはリダイレクトステータスではありません。 |
-| `TypeError`  | 指定された URL は無効です。                                  |
+- {{jsxref("RangeError")}}
+  - : 指定されたステータスがリダイレクトステータスではない場合。
+- {{jsxref("TypeError")}}
+  - : 指定された URL が不正な場合。
 
 ## 例
 
 ```js
-responseObj.redirect('https://www.example.com', 302);
+Response.redirect('https://www.example.com', 302);
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                             | 状態                     | コメント |
-| -------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('Fetch','#dom-response-redirect','redirect()')}} | {{Spec2('Fetch')}} |          |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.Response.redirect")}}
+{{Compat}}
 
-## 関連項目
+## 関連情報
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

@@ -2,6 +2,7 @@
 title: '@namespace'
 slug: Web/CSS/@namespace
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -56,4 +57,4 @@ svg|a {}
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.namespace")}}
+{{Compat}}

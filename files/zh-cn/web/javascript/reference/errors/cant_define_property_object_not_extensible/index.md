@@ -2,6 +2,7 @@
 title: 'TypeError: can''t define property "x": "obj" is not extensible'
 slug: Web/JavaScript/Reference/Errors/Cant_define_property_object_not_extensible
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示
@@ -21,7 +22,7 @@ TypeError: Cannot define property: "x", object is not extensible. (Chrome)
 
 ## 示例
 
-在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，向已经标记为不可扩展的对象添加新属性会报 TypeError 错误。而在非严格模式下，添加属性 “x” 会被静默忽略。
+在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下，向已经标记为不可扩展的对象添加新属性会报 TypeError 错误。而在非严格模式下，添加属性“x”会被静默忽略。
 
 ```js example-bad
 'use strict';

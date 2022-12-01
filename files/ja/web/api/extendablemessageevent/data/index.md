@@ -2,6 +2,7 @@
 title: ExtendableMessageEvent.data
 slug: Web/API/ExtendableMessageEvent/data
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ExtendableMessageEvent")}} インターフェイスの **`data`** 読み取り専用プロパティは、イベントのデータを返します。 任意のデータ型を使用できます。
@@ -41,9 +42,7 @@ self.onmessage = function(e) {
 
 ## 仕様
 
-| 仕様                                                                                                                                 | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-extendablemessageevent-data', 'ExtendableMessageEvent.data')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: Document.createComment()
 slug: Web/API/Document/createComment
 ---
+
 {{APIRef("DOM")}}
 
 **`createComment()`** は新たにコメントノードを作成し、返します。
@@ -31,9 +32,7 @@ alert(new XMLSerializer().serializeToString(docu));
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#dom-document-createcomment', 'document.createComment')}} | {{Spec2('DOM WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

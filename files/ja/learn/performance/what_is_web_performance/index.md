@@ -2,6 +2,7 @@
 title: ウェブパフォーマンスとは
 slug: Learn/Performance/What_is_web_performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}
 
 ウェブパフォーマンスとは、遅い処理を速く*見せる*ことも含めて、ウェブサイトを速くすることです。サイトがすぐに読み込まれるか、ユーザーがすぐに操作を始めることができるか、何かの読み込みに時間がかかっている場合には安心感のあるフィードバック (ローディングスピナーなど) を提供しているか。スクロールやアニメーションはスムーズか。この記事では、客観的で測定可能なウェブパフォーマンス\*について簡単に紹介し、ウェブの最適化にどのような技術、テクニック、ツールが必要なのかを見ていきます。
@@ -24,7 +25,7 @@ _\* 次の記事で扱う主観的な[知覚パフォーマンス](/ja/docs/Lear
 
 まとめると、たくさんの要素がパフォーマンスに影響を与えます。レイテンシー、アプリケーションのサイズ、DOM ノードの数、リクエストされるリソースの数、JavaScript の性能、CPU 負荷、その他いろいろです。それらの読み込みとレスポンスの時間を小さくすることが重要です。それから、ユーザーの体験上後で必要になる部分を同期で読み込むなどして、サイトが利用可能になる時間をできる限り早くすることでレイテンシーを感じさせないようにするといった追加の要素も重要です。
 
-> **Note:** ウェブのパフォーマンスには、Time to load、Frames per second、[Time to interactive](/ja/docs/Glossary/Time_to_interactive) のような客観的や測定結果とコンテンツの読み込みがどれくらい長く感じられるかといった主観的な経験の両方が含まれます。
+> **メモ:** ウェブのパフォーマンスには、Time to load、Frames per second、[Time to interactive](/ja/docs/Glossary/Time_to_interactive) のような客観的や測定結果とコンテンツの読み込みがどれくらい長く感じられるかといった主観的な経験の両方が含まれます。
 
 ## コンテンツはどのように描画されるか
 

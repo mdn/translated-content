@@ -1,13 +1,8 @@
 ---
 title: 요소
 slug: Glossary/Element
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-  - 엘리먼트
-translation_of: Glossary/Element
 ---
+
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 
 **요소**(element)는 웹 페이지를 구성합니다. {{glossary("XML")}}과 {{glossary("HTML")}}에서, 요소는 데이터 항목, 텍스트 한 묶음, 이미지를 담을 수 있고, 아무것도 담지 않을 수도 있습니다. 일반적인 요소는 여는 태그와 몇 가지 {{glossary("attribute", "특성")}}, 내부의 텍스트 콘텐츠, 닫는 태그로 구성됩니다.

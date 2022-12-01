@@ -15,6 +15,7 @@ translation_of: >-
 original_slug: >-
   Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/resolvedOptions
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.RelativeTimeFormat.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de format et de locale pour les valeurs temporelles relatives, calculées pendant l'initialisation de l'objet {{jsxref("RelativeTimeFormat")}}.
@@ -49,7 +50,7 @@ L'objet renvoyé par cette méthode possèdera les propriétés suivantes :
 
   - : Le format du message produit. Les valeurs possibles sont :
 
-    - `"always"` : la valeur par défaut (par exemple  `1 day ago`),
+    - `"always"` : la valeur par défaut (par exemple `1 day ago`),
     - `"auto"` : cette valeur indique qu'il n'est pas nécessaire d'utiliser de valeur numérique dans le message produit (par exemple `yesterday`).
 
 - `numberingSystem`

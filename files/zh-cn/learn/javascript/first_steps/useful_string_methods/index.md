@@ -2,9 +2,10 @@
 title: 有用的字符串方法
 slug: Learn/JavaScript/First_steps/Useful_string_methods
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
-现在我们学习基本的字符串语法， 让我们开始思考一下我们可以对内置方法的字符串做什么有用的操作，例如查找文本字符串的长度，加入和分割字符串，将字符串中的一个字符替换为另一个字符。
+现在我们学习基本的字符串语法，让我们开始思考一下我们可以对内置方法的字符串做什么有用的操作，例如查找文本字符串的长度，加入和分割字符串，将字符串中的一个字符替换为另一个字符。
 
 <table class="learn-box standard-table">
   <tbody>
@@ -34,7 +35,7 @@ let string = 'This is my string';
 
 **可能现在你的大脑开始迷糊了，不要担心！** 在你的学习进程中你真的不需要过早地理解大部分这方面知识，但是接下来我们这儿要看的是你要经常使用的一些知识。
 
-现在我们在控制台中加些示例 ，我们已经提供了以下示例（你可在单独打开控制台标签或窗口，或者选择使用[浏览器开发者控制台](/zh-CN/docs/Learn/Discover_browser_developer_tools)）
+现在我们在控制台中加些示例，我们已经提供了以下示例（你可在单独打开控制台标签或窗口，或者选择使用[浏览器开发者控制台](/zh-CN/docs/Learn/Discover_browser_developer_tools)）
 
 ```html hidden
 <!DOCTYPE html>

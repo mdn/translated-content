@@ -2,6 +2,7 @@
 title: 左シフト代入 (<<=)
 slug: Web/JavaScript/Reference/Operators/Left_shift_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 左シフト代入演算子 (`<<=`) は、指定された数だけビットを左に移動し、結果を変数に代入します。

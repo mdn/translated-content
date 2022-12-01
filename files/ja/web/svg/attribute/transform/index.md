@@ -2,6 +2,7 @@
 title: transform
 slug: Web/SVG/Attribute/transform
 ---
+
 {{SVGRef}}
 
 **`transform`** 属性は、要素とその要素の子に適用される変換定義のリストを定義します。
@@ -26,7 +27,7 @@ html,body,svg { height:100% }
 
 {{EmbedLiveSample('topExample', '100%', 200)}}
 
-> **Note:** SVG2 では、 `transform` はプレゼンテーション属性であり、 CSS プロパティとして使用することができます。ただし、 CSS プロパティとこの属性との間には構文の違いがあるので注意が必要です。その場合に使用する具体的な構文については、 CSS プロパティの {{cssxref('transform')}} のドキュメントを参照してください。
+> **メモ:** SVG2 では、 `transform` はプレゼンテーション属性であり、 CSS プロパティとして使用することができます。ただし、 CSS プロパティとこの属性との間には構文の違いがあるので注意が必要です。その場合に使用する具体的な構文については、 CSS プロパティの {{cssxref('transform')}} のドキュメントを参照してください。
 
 プレゼンテーション属性ですので、 **`transform`** はあらゆる要素で使用することができます (SVG 1.1 では、 {{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('defs')}}, {{SVGElement('ellipse')}}, {{SVGElement('foreignObject')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('switch')}}, {{SVGElement('text')}}, {{SVGElement('use')}} の 16 要素でのみ使用することができました。)。
 
@@ -39,9 +40,9 @@ html,body,svg { height:100% }
 
 ## 変換関数
 
-以下の変換関数は、 `transform` 属性の _`<transform-list>`_ で使用することができます。
+以下の変換関数は、 `transform` 属性の `<transform-list>` で使用することができます。
 
-> **Warning:** **警告:** 仕様書によれば、 CSS の[変換関数](/ja/docs/Web/CSS/transform-function)も使用することができます。しかし、互換性は保証されていません。
+> **警告:** 仕様書によれば、 CSS の[変換関数](/ja/docs/Web/CSS/transform-function)も使用することができます。しかし、互換性は保証されていません。
 
 ### Matrix
 
@@ -227,9 +228,5 @@ html,body,svg { height:100% }
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                                     | 備考     |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('CSS Transforms 2', '#svg-transform', 'transform')}}         | {{Spec2('CSS Transforms 2')}} |          |
-| {{SpecName('CSS3 Transforms', '#svg-transform', 'transform')}}         | {{Spec2('CSS3 Transforms')}}     |          |
-| {{SpecName("SVG2", "coords.html#TransformProperty", "transform")}}     | {{Spec2("SVG2")}}                 |          |
-| {{SpecName("SVG1.1", "coords.html#TransformAttribute", "transform")}} | {{Spec2("SVG1.1")}}                 | 初回定義 |
+{{Specifications}}
+

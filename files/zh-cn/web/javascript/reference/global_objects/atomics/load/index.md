@@ -2,6 +2,7 @@
 title: Atomics.load()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
 ---
+
 {{JSRef}}
 
 静态方法 **`Atomics.load()`** 返回一个数组当中给定位置的值。

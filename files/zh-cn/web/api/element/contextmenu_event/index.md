@@ -2,6 +2,7 @@
 title: 'Element: contextmenu event'
 slug: Web/API/Element/contextmenu_event
 ---
+
 {{APIRef}}
 
 **`contextmenu`** 事件会在用户尝试打开上下文菜单时被触发。该事件通常在鼠标点击右键或者按下键盘上的菜单键时被触发，如果使用菜单键，该上下文菜单会被展示 到所聚焦元素的左下角，但是如果该元素是一棵 DOM 树的话，上下文菜单便会展示在当前这一行的左下角。
@@ -62,15 +63,15 @@ noContext.addEventListener('contextmenu', e => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.contextmenu_event")}}
+{{Compat}}
 
 ## 参见
 
-- [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- {{event("auxclick")}}
-- {{event("click")}}
-- {{event("dblclick")}}
-- {{event("mousedown")}}
-- {{event("mouseup")}}
-- {{event("pointerdown")}}
-- {{event("pointerup")}}
+- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/pointerdown_event", "pointerdown")}}
+- {{domxref("Element/pointerup_event", "pointerup")}}

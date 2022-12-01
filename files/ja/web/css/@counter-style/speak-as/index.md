@@ -1,15 +1,8 @@
 ---
 title: speak-as
 slug: Web/CSS/@counter-style/speak-as
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.speak-as
-translation_of: Web/CSS/@counter-style/speak-as
 ---
+
 {{CSSRef}}
 
 **`speak-as`** 記述子は、与えられた {{cssxref('@counter-style')}} で構築されたカウンター記号が、どのように話し言葉で表現されるかを指定します。例えば、カウンター記号を数値として話すか、あるいは単にオーディオキューで表現するかを指定することができます。

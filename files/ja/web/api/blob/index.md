@@ -2,6 +2,7 @@
 title: Blob
 slug: Web/API/Blob
 ---
+
 {{APIRef("File API")}}
 
 **`Blob`** オブジェクトは blob、すなわち不変の生データであるファイルのようなオブジェクトを表します。テキストやバイナリーデータとして読み込んだり、{{DOMxRef("ReadableStream")}} に変換してそのメソッドを使ったデータ処理をしたりすることができます。
@@ -130,4 +131,4 @@ const text = await blob.text();
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("URL.createObjectURL")}}
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

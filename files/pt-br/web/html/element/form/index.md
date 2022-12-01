@@ -1,23 +1,23 @@
 ---
 title: <form>
 slug: Web/HTML/Element/form
-translation_of: Web/HTML/Element/form
 ---
+
 ## Resumo
 
 O **elemento HTML `<form>` **representa uma seção de um documento que contém controles interativos que permitem ao usuário submeter informação a um determinado servidor web.
 
 É possível utilizar as pseudo-classes de CSS {{cssxref(':valid')}} e{{cssxref(':invalid')}} para aplicar estilo a um elemento `<form>`.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), palpable content.
-- _Permitted content_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), but with no contained `<form>` elements.
+- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), palpable content.
+- _Permitted content_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), but with no contained `<form>` elements.
 - _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content").
+- _Permitted parent elements_ Any element that accepts [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content).
 - _DOM interface_ {{domxref("HTMLFormElement")}}
 
 ## Atributos
 
-Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("accept")}} {{HTMLVersionInline(4)}} {{obsolete_inline}}
 
@@ -51,10 +51,10 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes "H
 
 - {{htmlattrdef("method")}}
 
-  - : O [HTTP](/pt-BR/docs/HTTP "http://www.w3.org/Protocols/rfc2616/rfc2616.html") method that the browser uses to submit the form. Possible values are:
+  - : O [HTTP](/pt-BR/docs/HTTP) method that the browser uses to submit the form. Possible values are:
 
-    - `post`: Corresponds to the HTTP [POST method](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; the data from the form is included in the body of the form and is sent to the server.
-    - `get`: Corresponds to the HTTP [GET method](http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); the data from the form are appended to the `action` attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
+    - `post`: Corresponds to the HTTP [POST method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; the data from the form is included in the body of the form and is sent to the server.
+    - `get`: Corresponds to the HTTP [GET method](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3); the data from the form are appended to the `action` attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.
 
     This value can be overridden by a {{htmlattrxref("formmethod", "button")}} attribute on a {{HTMLElement("button")}} or {{HTMLElement("input")}} element.
 
@@ -117,4 +117,4 @@ Este elemento inclue os [Atributos global](/pt-BR/docs/HTML/Global_attributes "H
 - [HTML forms guide](/pt-BR/docs/Web/Guide/HTML/Forms)
 - Other elements that are used for creating forms: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

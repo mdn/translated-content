@@ -2,6 +2,7 @@
 title: 典型的 HTTP 会话
 slug: Web/HTTP/Session
 ---
+
 {{HTTPSidebar}}
 
 在像 HTTP 这样的 Client-Server（客户端 - 服务器）协议中，会话分为三个阶段：

@@ -1,8 +1,8 @@
 ---
 title: <input>
 slug: Web/HTML/Element/Input
-translation_of: Web/HTML/Element/input
 ---
+
 O **elemento HTML `<input>`** é usado para criar controles interativos para formulários baseados na web para receber dados do usuário. A semântica de um `<input>` varia consideravelmente dependendo do valor de seu atributo `type`.
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Categorias_de_conteúdo)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_de_fluxo), listado, enviável, resetável, elemento associado a formulário, [conteúdo fraseado](/pt-BR/docs/HTML/Categorias_de_conteúdo#Conteúdo_fraseado).
@@ -22,7 +22,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
     - `button`: Um botão sem comportamento padrão.
     - `checkbox`: Uma caixa de marcação. Você deve usar o atributo **value** para definir o valor enviado por este item. Use o atributo **checked** para indicar se o item está selecionado por padrão. Você também pode usar o atributo **indeterminate** para indicar que a caixa de marcação está em um estado indeterminado (na maioria das plataformas, isso desenha uma linha horizontal cortando a caixa).
-    - `color`: {{HTMLVersionInline("5")}} Um controle para especificar cores. A interface de um seletor de cores não tem nenhuma funcionalidade obrigatória a não ser aceitar cores simples em texto ([mais informações — em inglês](<http://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
+    - `color`: {{HTMLVersionInline("5")}} Um controle para especificar cores. A interface de um seletor de cores não tem nenhuma funcionalidade obrigatória a não ser aceitar cores simples em texto ([mais informações — em inglês](<https://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
     - `date`: {{HTMLVersionInline("5")}} Um controle para inserir uma data (ano, mês e dia, sem horário).
     - `datetime`: {{HTMLVersionInline("5")}} Um controle para inserir data e horário (hora, minuto, segundo e fração de segundo) baseado no fuso horário UTC.
     - `datetime-local`: {{HTMLVersionInline("5")}} Um controle para inserir data e horário, sem fuso horário.
@@ -138,7 +138,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 
   - : Se o elemento for um botão ou uma imagem de envio de formulário, este atributo é um nome ou palavra-chave indicando onde mostrar a resposta recebida após a submissão do formulário. Este é o nome de, ou palavra-chave para, um _contexto de navegação_ (por exemplo aba, janela ou frame inline). Se especificado, este atributo sobrescreve o atributo {{htmlattrxref("target", "form")}} do formulário dono do elemento. As seguintes palavras-chave têm significado especial:
 
-    - \_`self`: Carrega a resposta nom mesmo contexto de navegação que o atual. Este é o valor padrão se o atributo não for especificado.
+    - `_self`: Carrega a resposta nom mesmo contexto de navegação que o atual. Este é o valor padrão se o atributo não for especificado.
     - `_blank`: Carrega a resposta num novo contexto de navegação anônimo.
     - `_parent`: Carrega a resposta no contexto de navegação pai do atual. Se não houver pai, esta opção tem o mesmo comportamento de `_self`.
     - `_top`: Carrega a resposta no contexto de navegação raiz (isto é, o contexto de navegação que é ancestral do atual e não tem pai). Se não houver pai, esta opção tem o mesmo comportamento de `_self`.
@@ -168,11 +168,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Atributos_globais).
 - {{htmlattrdef("max")}} {{HTMLVersionInline("5")}}
   - : O valor máximo (numérico ou data) para este item, que não deve ser menor que seu valor mínimo (atributo **min**).
 - {{htmlattrdef("maxlength")}}
-  - : Se o valor do atributo **type** for `text`, `email`,` search`, `password`, `tel` ou `url`, este atributo especifica o número máximo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado. Seu valor pode exceder o do atributo **size**. Se não for especificado, o usuário pode inserir uma quantidade ilimitada de caracteres. Especificar um valor negativo resulta no comportamento padrão, isto é, o usuário vai poder inserir um número ilimitado de caracteres. Esta regra só é validada quando o valor do atributo é modificado.
+  - : Se o valor do atributo **type** for `text`, `email`, `search`, `password`, `tel` ou `url`, este atributo especifica o número máximo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado. Seu valor pode exceder o do atributo **size**. Se não for especificado, o usuário pode inserir uma quantidade ilimitada de caracteres. Especificar um valor negativo resulta no comportamento padrão, isto é, o usuário vai poder inserir um número ilimitado de caracteres. Esta regra só é validada quando o valor do atributo é modificado.
 - {{htmlattrdef("min")}} {{HTMLVersionInline("5")}}
   - : O valor mínimo (númerico ou data) para este item, que não deve ser maior do que seu máximo (atributo **max**).
 - {{htmlattrdef("minlength")}} {{HTMLVersionInline("5")}}
-  - : Se o valor do atributo **type** for `text`, `email`,` search`, `password`, `tel` ou `url`, este atributo especifica o número mínimo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado.
+  - : Se o valor do atributo **type** for `text`, `email`, `search`, `password`, `tel` ou `url`, este atributo especifica o número mínimo de caracteres (em pontos de código Unicode) que o usuário pode inserir; para outros tipos de controle, este atributo é ignorado.
 - {{htmlattrdef("multiple")}} {{HTMLVersionInline("5")}}
   - : Este atributo booleano indica se o usuário pode inserir mais de um valor. Ele é aplicado quando o atributo **type** está definido como `email` ou `file`; em outros casos, é ignorado.
 - {{htmlattrdef("name")}}
@@ -284,4 +284,4 @@ Você pode usar o atributo {{htmlattrxref("mozactionhint", "input")}} para espec
 - Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

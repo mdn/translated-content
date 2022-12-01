@@ -2,11 +2,12 @@
 title: <em>
 slug: Web/HTML/Element/em
 ---
+
 ## 简介
 
 **HTML 着重元素** (**`<em>`**) 标记出需要用户着重阅读的内容， `<em>` 元素是可以嵌套的，嵌套层次越深，则其包含的内容被认定为越需要着重阅读。
 
-> **备注：** 通常地，该元素会被浏览器展示为斜体文本， 但是，它不应该仅仅用于应用斜体样式；为此目的，请使用 CSS 样式。使用 {{HTMLElement("cite")}} 元素标记作品的标题（书籍，戏剧，歌曲等）；它通常也采用斜体样式，但具有不同的含义。使用 {{HTMLElement("strong")}} 元素标记比周围文本更重要的文本。
+> **备注：** 通常地，该元素会被浏览器展示为斜体文本，但是，它不应该仅仅用于应用斜体样式；为此目的，请使用 CSS 样式。使用 {{HTMLElement("cite")}} 元素标记作品的标题（书籍，戏剧，歌曲等）；它通常也采用斜体样式，但具有不同的含义。使用 {{HTMLElement("strong")}} 元素标记比周围文本更重要的文本。
 
 - _内容类别_
   流内容，推辞内容，可触及内容
@@ -51,10 +52,10 @@ In HTML 5, what was previously called _block-level_ content is now called _flow_
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.em")}}
+{{Compat}}
 
 ## 了解更多
 
 - {{HTMLElement("i")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

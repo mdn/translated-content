@@ -3,6 +3,7 @@ title: WindowOrWorkerGlobalScope.origin
 slug: Web/API/origin
 original_slug: Web/API/WindowOrWorkerGlobalScope/origin
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 {{domxref("WindowOrWorkerGlobalScope")}} インターフェイスの読み取り専用プロパティ **`origin`** は、グローバルスコープの文字列としてシリアライズされた origin を返します。
@@ -31,10 +32,8 @@ onmessage = function() {
 
 ## 仕様
 
-| 仕様                                                                                                                         | ステータス                       | コメント   |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-origin', 'WindowOrWorkerGlobalScope.origin')}} | {{Spec2('HTML WHATWG')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザ互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.origin")}}
+{{Compat}}

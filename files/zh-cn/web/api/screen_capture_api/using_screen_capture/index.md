@@ -2,6 +2,7 @@
 title: 使用屏幕捕获 API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 在这篇文章中，我们将研究如何使用屏幕捕获 API 和它的{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}方法来捕获部分或全部屏幕进行流媒体传输，通过[WebRTC](/zh-CN/docs/Web/API/WebRTC_API)录制或分享。
@@ -90,7 +91,7 @@ For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}
 
 While display capture is in effect, the machine which is sharing screen contents will display some form of indicator so the user is aware that sharing is taking place.
 
-> **备注：** For privacy and security reasons, screen sharing sources are not enumerable using {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Related to this, the {{event("devicechange")}} event is never sent when there are changes to the sources available for `getDisplayMedia()`.
+> **备注：** For privacy and security reasons, screen sharing sources are not enumerable using {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Related to this, the {{domxref("MediaDevices/devicechange_event", "devicechange")}} event is never sent when there are changes to the sources available for `getDisplayMedia()`.
 
 ### Capturing shared audio
 

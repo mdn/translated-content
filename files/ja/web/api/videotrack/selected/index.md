@@ -2,6 +2,7 @@
 title: VideoTrack.selected
 slug: Web/API/VideoTrack/selected
 ---
+
 {{APIRef("HTML DOM")}}
 
 **{{domxref("VideoTrack")}}** の **`selected`** プロパティは、特定の動画トラックがアクティブかどうかを制御します。

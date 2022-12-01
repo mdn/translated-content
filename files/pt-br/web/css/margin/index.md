@@ -1,16 +1,11 @@
 ---
 title: margin
 slug: Web/CSS/margin
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/margin
-translation_of_original: Web/CSS/margin-new
 ---
+
 {{CSSRef}}
 
-A propriedade **`margin`** do [CSS](/pt-BR/docs/Web/CSS "CSS") define a [área de margem](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, e {{cssxref("margin-left")}}.
+A propriedade **`margin`** do [CSS](/pt-BR/docs/Web/CSS) define a [área de margem](/pt-BR/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, e {{cssxref("margin-left")}}.
 
 {{EmbedInteractiveExample("pages/css/margin.html")}}
 
@@ -35,7 +30,7 @@ margin: initial;
 margin: unset;
 ```
 
-A propriedade `margin` pode ser especificada usando um, dois, três ou quatro valores. Cada valor deve ser um [`<length>`](#<length>), uma [`<percentage>`](#<percentage>), ou a palavra-chave [`auto`](#auto). Cada valor pode ser positivo, zero ou negativo.
+A propriedade `margin` pode ser especificada usando um, dois, três ou quatro valores. Cada valor deve ser um [`<length>`](#length), uma [`<percentage>`](#percentage), ou a palavra-chave [`auto`](#auto). Cada valor pode ser positivo, zero ou negativo.
 
 - Quando **um** valor é especificado, a mesma margem é aplicada para **todos os quatro lados**.
 - Quando **dois** valores são especificados, a primeira margem é aplicada aos **lados** **superior e inferior,** e a segunda aos **lados** **esquerdo e direito**.
@@ -140,5 +135,5 @@ Contudo, em navegadores antigos, como IE8-9 que não suporta layout flexbox, est
 
 ## Veja também
 
-- [CSS Box Model](/en/CSS/box_model "en/CSS/box model")
-- [Margin collapsing](/en/CSS/margin_collapsing "en/CSS/margin collapsing")
+- [CSS Box Model](/pt-BR/CSS/box_model)
+- [Margin collapsing](/pt-BR/CSS/margin_collapsing)

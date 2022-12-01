@@ -8,6 +8,7 @@ tags:
   - flexbox
 translation_of: Web/CSS/Layout_cookbook/Pagination
 ---
+
 {{CSSRef}}
 
 Dans cette recette, nous verrons comment utiliser une méthode de navigation où l'utilisateur peut passer d'une page à une autre pour un ensemble donné via les numéros de ces pages (généralement affichés en bas de page).

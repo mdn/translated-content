@@ -2,6 +2,7 @@
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 ---
+
 {{jsSidebar("Functions")}}
 
 The **`arguments.callee`** property contains the currently executing function.

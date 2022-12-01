@@ -2,6 +2,7 @@
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
 ---
+
 {{jsSidebar("Statements")}}
 
 **`for...in`** **语句**以任意顺序迭代一个对象的除[Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)以外的[可枚举](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)属性，包括继承的可枚举属性。
@@ -82,7 +83,7 @@ for (var prop in obj) {
 
 ## 兼容性：初始化函数表达式
 
-在 SpiderMonkey 40 {{geckoRelease(40)}} 版本之前，可以在使用一个初始化表达式（`i=0`）在一个`for...in`循环中：
+在 SpiderMonkey 40 版本之前，可以在使用一个初始化表达式（`i=0`）在一个`for...in`循环中：
 
 ```js example-bad
 var obj = {a: 1, b: 2, c: 3};
@@ -96,7 +97,7 @@ for (var i = 0 in obj) {
 
 这个非标准行为现在在版本 40 及更高版本中被忽略，并将在严格模式（{{bug(748550)}} 和 {{bug(1164741)}}）中呈现{{jsxref("SyntaxError")}}（"[for-in loop head declarations may not have initializers](/zh-CN/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer)"）错误。
 
-像其他引擎 V8(Chrome)，Chakra (IE/Edge)， JSC (WebKit/Safari) 正在研究去除这种不标准的行为。
+像其他引擎 V8(Chrome)，Chakra (IE/Edge)，JSC (WebKit/Safari) 正在研究去除这种不标准的行为。
 
 ## 相关链接
 

@@ -2,6 +2,7 @@
 title: SpeechSynthesisUtterance.voice
 slug: Web/API/SpeechSynthesisUtterance/voice
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`voice`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the voice that will be used to speak the utterance.
@@ -53,7 +54,7 @@ inputForm.onsubmit = function(event) {
 
 ## Browser compatibility
 
-{{Compat("api.SpeechSynthesisUtterance.voice")}}
+{{Compat}}
 
 ## See also
 

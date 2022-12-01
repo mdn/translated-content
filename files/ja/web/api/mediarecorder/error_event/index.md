@@ -2,6 +2,7 @@
 title: 'MediaRecorder: error イベント'
 slug: Web/API/MediaRecorder/error_event
 ---
+
 {{APIRef}}
 
 {{domxref("MediaRecorder")}} インターフェイスの `error` イベントは、エラーが発生したときに発生します。 例えば、記録が許可されていない、またはサポートされていないコーデックを使用して試みられたなどです。
@@ -67,9 +68,7 @@ record();
 
 ## 仕様
 
-| 仕様                                                                             | 状態                                         |
-| -------------------------------------------------------------------------------- | -------------------------------------------- |
-| {{SpecName('MediaStream Recording', '#errorevent-section')}} | {{Spec2('MediaStream Recording')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

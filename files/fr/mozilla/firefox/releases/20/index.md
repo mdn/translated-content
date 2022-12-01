@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/20
 original_slug: Mozilla/Firefox/Versions/20
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changements dans Firefox 20 qui sont utiles aux développeurs.
@@ -39,7 +40,7 @@ Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changeme
 - Les méthodes `parseFromStream` et `parseFromBuffer` de {{domxref("DOMParser")}} ne sont plus disponibles à partir de contenu web ({{bug(816410)}}).
 - La méthode `serializeToStream` de [`XMLSerializer`](/fr/docs/XMLSerializer) n'est plus disponible à partir de contenu web ({{bug(816410)}}).
 - Les interfaces `TextDecoder` et `TextEncoder` sont désormais disponibles dans Workers ({{bug(795542)}}).
-- Le support de la méthode `CSS.supports()`a été ajouté ({{bug(779917)}}).
+- Le support de la méthode `CSS.supports()` a été ajouté ({{bug(779917)}}).
 - Le support pour UndoManager a été ajouté ({{bug(617532)}}).
 - L'interface {{domxref("CaretPosition")}} a été implémentée dans la méthode CSSOM {{domxref("document.caretPositionFromPoint")}}.
 

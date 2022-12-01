@@ -6,6 +6,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/str/tokenize
 ---
+
 {{ XsltRef() }}
 
 `str:tokenize()` divise une chaîne en utilisant un ensemble de caractère comme délimiteur qui détermine l'endroit où doivent être fait les séparations, en retournant un ensemble de nœuds contenant les chaînes résultantes.

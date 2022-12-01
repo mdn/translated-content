@@ -2,6 +2,7 @@
 title: Gamepad API
 slug: Web/API/Gamepad_API
 ---
+
 {{DefaultAPISidebar("Gamepad API")}}
 
 **Gamepad API** は開発者に様々な種類のゲームパッドや単純で一貫した異なるゲームのコントローラーと接続する方法を提供しています。これには、ゲームパッドの接続や切断、ゲームパッドに関するその他の情報へのアクセス、現在押されているボタンやその他のコントロールなど、3 つのインターフェイス、2 つのイベントと 1 つの特別な機能が含まれています。
@@ -45,10 +46,7 @@ slug: Web/API/Gamepad_API
 
 ## 仕様書
 
-| 仕様                                                                             | 状態                                     | コメント                                               |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------ |
-| {{SpecName("GamepadExtensions")}}                                     | {{Spec2("GamepadExtensions")}} | [実験的な Gamepad 拡張](#実験的な_gamepad_拡張) の定義 |
-| {{SpecName("Gamepad", "", "The Gamepad API specification")}} | {{Spec2("Gamepad")}}             | 初期定義                                               |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

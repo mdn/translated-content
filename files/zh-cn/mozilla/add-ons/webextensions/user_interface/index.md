@@ -2,6 +2,7 @@
 title: User interface
 slug: Mozilla/Add-ons/WebExtensions/user_interface
 ---
+
 {{AddonSidebar}}
 
 为了能给用户提供在不同场景下都具有价值的功能，WebExtensions 提供了许多的用户界面选项。下面是这些选项的摘要，在本章中将会对每个选项做出更详细的说明。
@@ -37,7 +38,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions"
           >带有弹出面板的工具栏按钮</a
         >
       </td>
@@ -73,7 +74,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         带有<a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
           >弹出面板</a
         >的地址栏菜单按钮
       </td>
@@ -103,7 +104,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
           >侧边栏</a
         >
       </td>
@@ -124,7 +125,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
           >选项页面</a
         >
       </td>
@@ -141,7 +142,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Bundled_web_pages"
           >扩展页面</a
         >
       </td>
@@ -178,7 +179,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
           >地址栏建议</a
         >
       </td>
@@ -193,7 +194,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
+          href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
           >开发者工具面板</a
         >
       </td>

@@ -3,6 +3,7 @@ title: Document：dragend 事件
 slug: Web/API/HTMLElement/dragend_event
 original_slug: Web/API/Document/dragend_event
 ---
+
 {{APIRef}}
 
 `dragend` 事件在拖放操作结束时触发（通过释放鼠标按钮或单击 escape 键）。

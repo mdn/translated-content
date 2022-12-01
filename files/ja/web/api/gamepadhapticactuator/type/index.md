@@ -2,6 +2,7 @@
 title: GamepadHapticActuator.type
 slug: Web/API/GamepadHapticActuator/type
 ---
+
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
 {{domxref("GamepadHapticActuator")}} インターフェイスの **`type`** 読み取り専用プロパティは、触覚ハードウェアの型を表す列挙型を返します。
@@ -24,9 +25,7 @@ TBC
 
 ## 仕様書
 
-| 仕様                                                                                                                             | ステータス                               | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#dom-gamepadhapticactuatortype', 'GamepadHapticActuatorType')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

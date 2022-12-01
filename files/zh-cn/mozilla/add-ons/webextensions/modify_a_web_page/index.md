@@ -2,6 +2,7 @@
 title: 修改 web 页面
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
+
 {{AddonSidebar}}
 
 浏览器附加组件 ( add-on ) 常被用于修改网页。例如更改页面的样式，隐藏特定的 DOM 节点或把 DOM 节点注入到页面中。
@@ -141,14 +142,14 @@ modify-page/
       <th scope="row">发送消息</th>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime#sendMessage()"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime#sendMessage()"
             >browser.runtime.sendMessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/Tabs/sendMessage"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/Tabs/sendMessage"
             >browser.tabs.sendMessage()</a
           ></code
         >
@@ -158,14 +159,14 @@ modify-page/
       <th scope="row">接收消息</th>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime/onMessage"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime/onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/en-US/Add-ons/WebExtensions/API/runtime#onMessage"
+          ><a href="/zh-CN/Add-ons/WebExtensions/API/runtime#onMessage"
             >browser.runtime.onMessage</a
           ></code
         >
@@ -205,7 +206,7 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
 });
 ```
 
-注入 "page-eater.js"后，通过使用 [`tabs.query()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) 获取当前活动标签页，然后使用[`tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) 将消息发送到该标签页中的内容脚本。该消息的内容 `{replacement: "Message from the add-on!"}。`
+注入 "page-eater.js"后，通过使用 [`tabs.query()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) 获取当前活动标签页，然后使用[`tabs.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) 将消息发送到该标签页中的内容脚本。该消息的内容 `{replacement: "Message from the add-on!"}`。
 
 接下来，修改 "page-eater.js" 如下：
 

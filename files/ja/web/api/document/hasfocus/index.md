@@ -2,11 +2,12 @@
 title: document.hasFocus()
 slug: Web/API/Document/hasFocus
 ---
+
 {{APIRef}}
 
 **`hasFocus()`** は {{domxref("Document")}} インターフェイスのメソッドで、 {{jsxref("Boolean")}} の値を返し、文書または文書内の何れかの要素がフォーカスを持っているかどうかを示します。このメソッドは、文書内のアクティブな要素がフォーカスを持っているかどうかを特定するために使用することができます。
 
-> **Note:** 文書を見ている時、文書内でフォーカスを持つ要素は常に[アクティブ要素](/ja/docs/Web/API/DocumentOrShadowRoot/activeElement)ですが、アクティブ要素がフォーカスを持っているとは限りません。例えば、フォアグラウンドになっていないポップアップウィンドウ内のアクティブ要素はフォーカスを持ちません。
+> **メモ:** 文書を見ている時、文書内でフォーカスを持つ要素は常に[アクティブ要素](/ja/docs/Web/API/DocumentOrShadowRoot/activeElement)ですが、アクティブ要素がフォーカスを持っているとは限りません。例えば、フォアグラウンドになっていないポップアップウィンドウ内のアクティブ要素はフォーカスを持ちません。
 
 ## 構文
 
@@ -60,9 +61,7 @@ setInterval(checkPageFocus, 300);
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                             | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'interaction.html#dom-document-hasfocus', 'Document.hasFocus()')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

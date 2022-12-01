@@ -2,6 +2,7 @@
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.cloneNode()`** 方法會回傳一個呼叫此方法之節點物件的拷貝。
@@ -19,7 +20,7 @@ var dupNode = node.cloneNode(deep);
 - _deep {{optional_inline}}_
   - : `true` if the children of the node should also be cloned, or `false` to clone only the specified node.
 
-> **備註：** In the DOM4 specification (as implemented in Gecko 13.0 {{geckoRelease(13)}}), `deep` is an optional argument. If omitted, the method acts as if the value of `deep` was **`true`**, defaulting to using deep cloning as the default behavior. To create a shallow clone, `deep` must be set to `false`.This behavior has been changed in the latest spec, and if omitted, the method will act as if the value of `deep` was **`false`**. Though It's still optional, you should always provide the `deep` argument both for backward and forward compatibility. With Gecko 28.0 {{geckoRelease(28)}}), the console warned developers not to omit the argument. Starting with Gecko 29.0 {{geckoRelease(29)}}), a shallow clone is defaulted instead of a deep clone.
+> **備註：** In the DOM4 specification (as implemented in Gecko 13.0), `deep` is an optional argument. If omitted, the method acts as if the value of `deep` was **`true`**, defaulting to using deep cloning as the default behavior. To create a shallow clone, `deep` must be set to `false`.This behavior has been changed in the latest spec, and if omitted, the method will act as if the value of `deep` was **`false`**. Though It's still optional, you should always provide the `deep` argument both for backward and forward compatibility. With Gecko 28.0), the console warned developers not to omit the argument. Starting with Gecko 29.0), a shallow clone is defaulted instead of a deep clone.
 
 ## 範例
 
@@ -50,4 +51,4 @@ To clone a node for appending to a different document, use {{domxref("Document.i
 
 ## 瀏覽器相容性
 
-{{Compat("api.Node.cloneNode")}}
+{{Compat}}

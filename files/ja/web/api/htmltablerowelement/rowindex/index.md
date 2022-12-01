@@ -2,6 +2,7 @@
 title: HTMLTableRowElement.rowIndex
 slug: Web/API/HTMLTableRowElement/rowIndex
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTableRowElement.rowIndex`** は読み取り専用プロパティで、表 ({{HtmlElement("table")}}) 全体に対する行の相対的な位置を表します。

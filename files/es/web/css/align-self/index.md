@@ -1,21 +1,17 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
-tags:
-  - Cajas Flexibles CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/align-self
 ---
+
 {{CSSRef}}
 
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS "CSS") **`align-self`** alinea los elementos flexibles de la línea flexible actual, reemplazando el valor de {{cssxref("align-items")}}. Si el límite transversal de alguno de los elementos está definido como `auto`, el valor de `align-self` es ignorado.
+La propiedad [CSS](/es/docs/CSS) **`align-self`** alinea los elementos flexibles de la línea flexible actual, reemplazando el valor de {{cssxref("align-items")}}. Si el límite transversal de alguno de los elementos está definido como `auto`, el valor de `align-self` es ignorado.
 
 {{cssinfo}}
 
-Véase [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS "/en/CSS/Using_CSS_flexible_boxes") para más propiedades e información.
+Véase [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS) para más propiedades e información.
 
 ## Sintaxis
 
@@ -55,9 +51,7 @@ align-self: unset;
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                                       | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{ SpecName('CSS3 Box Alignment', '#align-self-property', 'align-self') }} | {{ Spec2('CSS3 Box Alignment') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 
@@ -65,4 +59,4 @@ align-self: unset;
 
 ## Véase también
 
-- [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS "CSS/Using_CSS_flexible_boxes")
+- [Usando las cajas flexibles CSS](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Usando_las_cajas_flexibles_CSS)

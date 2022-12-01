@@ -2,6 +2,7 @@
 title: Proximity
 slug: Web/API/Proximity_Events
 ---
+
 {{ SeeCompatTable }}
 
 ## 摘要
@@ -14,7 +15,7 @@ slug: Web/API/Proximity_Events
 
 只要近距感測器測得「裝置」與「物體」之間的距離改變時，就會通知瀏覽器這項變化。而只要瀏覽器獲得通知，隨即啟動 [`DeviceProximityEvent`](/zh-TW/docs/Web/API/DeviceProximityEvent) 以因應任何變化；或啟動 [`UserProximityEvent`](/zh-TW/docs/Web/API/UserProximityEvent) 以因應簡單的變化。
 
-透過 [`addEventListener`](/zh-TW/docs/Web/API/EventTarget.addEventListener) 函式 (使用 {{event("deviceproximity")}} 或 {{event("userproximity")}} 事件名稱)；或將事件處理器 (Event handler) 附掛至 [`window.ondeviceproximity`](/zh-TW/docs/Web/API/window.ondeviceproximity) 或 [`window.onuserproximity`](/zh-TW/docs/Web/API/window.onuserproximity) 屬性，均可於 `window 物件層級就擷取到此事件。`
+透過 [`addEventListener`](/zh-TW/docs/Web/API/EventTarget.addEventListener) 函式 (使用 {{domxref("DeviceProximityEvent", "deviceproximity")}} 或 {{domxref("UserProximityEvent", "userproximity")}} 事件名稱)；或將事件處理器 (Event handler) 附掛至 [`window.ondeviceproximity`](/zh-TW/docs/Web/API/window.ondeviceproximity) 或 [`window.onuserproximity`](/zh-TW/docs/Web/API/window.onuserproximity) 屬性，均可於 `window 物件層級就擷取到此事件。`
 
 在擷取事件之後，事件物件將可存取不同的資訊：
 
@@ -43,5 +44,5 @@ window.addEventListener('userproximity', function(event) {
 
 - {{domxref("DeviceProximityEvent")}}
 - {{domxref("UserProximityEvent")}}
-- {{event("deviceproximity")}}
-- {{event("userproximity")}}
+- {{domxref("DeviceProximityEvent")}}
+- {{domxref("UserProximityEvent")}}

@@ -2,6 +2,7 @@
 title: SourceBuffer
 slug: Web/API/SourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 **`SourceBuffer`** インターフェイスは、{{domxref("MediaSource")}} オブジェクトを介して {{domxref("HTMLMediaElement")}} に渡されて再生されるメディアのチャンク（大きな塊）を表します。 これは、1 つまたは複数のメディアセグメントで構成できます。
@@ -112,9 +113,7 @@ function fetchAB (url, cb) {
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#sourcebuffer', 'SourceBuffer')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

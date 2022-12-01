@@ -2,7 +2,8 @@
 title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
-{{JSRef}}**`Math.random()`** 函数返回一个浮点数， 伪随机数在范围从**0 到**小于**1**，也就是说，从 0（包括 0）往上，但是不包括 1（排除 1），然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。
+
+{{JSRef}}**`Math.random()`** 函数返回一个浮点数，伪随机数在范围从**0 到**小于**1**，也就是说，从 0（包括 0）往上，但是不包括 1（排除 1），然后您可以缩放到所需的范围。实现将初始种子选择到随机数生成算法;它不能被用户选择或重置。
 
 {{EmbedInteractiveExample("pages/js/math-random.html")}}
 
@@ -20,7 +21,7 @@ Math.random()
 
 ## 示例
 
-请注意，由于 JavaScript 中的数字是 IEEE 754 浮点数字，具有最近舍入（ round-to-nearest-even）的行为，因此以下函数的范围 (不包括`Math.random()` 本身) 并不准确。如果选择了非常大的边界 (2^53 或更高), 在极罕见的情况下会计算通常 - 排除（usually-excluded）的上界。（注：round-to-nearest-even 采用最近舍入的去偶数舍入的方式，对.5 的舍入上，采用取偶数的方式）
+请注意，由于 JavaScript 中的数字是 IEEE 754 浮点数字，具有最近舍入（round-to-nearest-even）的行为，因此以下函数的范围 (不包括`Math.random()` 本身) 并不准确。如果选择了非常大的边界 (2^53 或更高), 在极罕见的情况下会计算通常 - 排除（usually-excluded）的上界。（注：round-to-nearest-even 采用最近舍入的去偶数舍入的方式，对.5 的舍入上，采用取偶数的方式）
 
 ### 得到一个大于等于 0，小于 1 之间的随机数
 

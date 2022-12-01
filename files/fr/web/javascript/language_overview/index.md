@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/A_re-introduction_to_JavaScript
 original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
+
 {{jsSidebar}}
 
 Pourquoi une réintroduction ? Parce que JavaScript est connu pour être source d'incompréhensions. Bien que souvent raillé comme étant un simple jouet, derrière sa simplicité désarmante se cachent certaines fonctionnalités de langage très puissantes. JavaScript est maintenant utilisé par un nombre incroyable d'applications de haut rang, ce qui montre qu'une connaissance approfondie de cette technologie est une compétence importante pour toute développeuse ou développeur web ou mobile.
@@ -342,7 +343,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-JavaScript permet également d'utiliser deux autres types de boucles : [`for`...`of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) :
+JavaScript permet également d'utiliser deux autres types de boucles : [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) :
 
 ```js
 for (let element of tableau) {
@@ -351,7 +352,7 @@ for (let element of tableau) {
 }
 ```
 
-et [`for`...`in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) :
+et [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) :
 
 ```js
 for (let propriete in objet) {
@@ -562,7 +563,7 @@ for (let i = 0; i < a.length; i++) {
 }
 ```
 
-ES2015 a introduit la boucle plus concise [`for`...`of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) pour les objets itérables tels que les tableaux :
+ES2015 a introduit la boucle plus concise [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) pour les objets itérables tels que les tableaux :
 
 ```js
 for (const currentValue of a) {
@@ -570,7 +571,7 @@ for (const currentValue of a) {
 }
 ```
 
-Vous pourriez également itérer sur un tableau en utilisant une boucle [`for`...`in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in), cependant cela n'itère pas sur les éléments du tableau, mais sur les indices du tableau. De plus, si quelqu'un ajoutait de nouvelles propriétés à `Array.prototype`, elles seraient également parcourues par une telle boucle. Par conséquent, ce type de boucle n'est pas recommandé pour les tableaux.
+Vous pourriez également itérer sur un tableau en utilisant une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in), cependant cela n'itère pas sur les éléments du tableau, mais sur les indices du tableau. De plus, si quelqu'un ajoutait de nouvelles propriétés à `Array.prototype`, elles seraient également parcourues par une telle boucle. Par conséquent, ce type de boucle n'est pas recommandé pour les tableaux.
 
 Une autre façon d'itérer sur un tableau qui a été ajoutée avec ECMAScript 5 est [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) :
 
@@ -672,7 +673,7 @@ moyenne(2, 3, 4, 5); // 3.5
 
 Avec le reste des paramètres, dans l'exemple précédent, `args` contient tous les arguments passés à la fonction.
 
-Il est important de noter que, quel que soit l'endroit où est écrit l'opérateur du reste des paramètres au sein de la déclaration de fonction, il stockera tous les arguments écrits _après_ mais pas avant. Autrement dit, _function avg(**premiereValeur,** ...args)_ stockera la première valeur passée à la fonction dans la variable **firstValue** et les autres arguments iront dans **args**.
+Il est important de noter que, quel que soit l'endroit où est écrit l'opérateur du reste des paramètres au sein de la déclaration de fonction, il stockera tous les arguments écrits _après_ mais pas avant. Autrement dit, _function avg(**premiereValeur,** ...args)_ stockera la première valeur passée à la fonction dans la variable **premiereValeur** et les autres arguments iront dans **args**.
 
 C'est très pratique, mais on rencontre un nouveau problème. La fonction `moyenne()` reçoit une liste de valeurs séparées par des virgules, mais comment fait-on si on souhaite trouver la moyenne des valeurs d'un tableau ?
 

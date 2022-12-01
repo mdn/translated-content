@@ -2,6 +2,7 @@
 title: AudioTrackList
 slug: Web/API/AudioTrackList
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`AudioTrackList`** インターフェイスは、所与の HTML メディア要素内に含まれる音声トラックのリストを表すために使用します。 各トラックはリスト内の別々の {{domxref("AudioTrack")}} オブジェクトで表します。
@@ -73,10 +74,7 @@ function updateTrackCount(event) {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'media.html#audiotracklist', 'AudioTrackList')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#audiotracklist', 'AudioTrackList')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

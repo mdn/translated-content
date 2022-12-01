@@ -2,6 +2,7 @@
 title: AnalyserNode.getByteFrequencyData()
 slug: Web/API/AnalyserNode/getByteFrequencyData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AnalyserNode") }} 介面的 **`getByteFrequencyData()`** 方法會將當前的頻率資料複製到 {{domxref("Uint8Array")}} （無號 byte 陣列）。

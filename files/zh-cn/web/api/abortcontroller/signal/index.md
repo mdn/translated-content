@@ -2,6 +2,7 @@
 title: AbortController.signal
 slug: Web/API/AbortController/signal
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("AbortController")}} 接口的只读属性 **`signal`** 返回一个 {{domxref("AbortSignal")}} 实例对象，该对象可以根据需要处理 DOM 请求通信，既可以建立通信，也可以终止通信。
@@ -16,7 +17,7 @@ slug: Web/API/AbortController/signal
 
 首先通过 {{domxref("AbortController.AbortController","AbortController()")}} 构造函数来创建一个 controller 实例，然后通过 {{domxref("AbortController.signal")}} 属性获取到它的关联对象 {{domxref("AbortSignal")}} 的引用。
 
-当 [fetch request](/zh-CN/docs/Web/API/fetch) 初始化后，将 `AbortSignal` 作为一个选项传入请求的 options 对象中（如下 `{signal}`）。这将 signal 和 controller 与 fetch 请求关联起来，允许我们通过调用 {{domxref("AbortController.abort()")}} 来取消 fetch 请求，正如下第二个事件监听器所示。
+当 [fetch 请求](/zh-CN/docs/Web/API/fetch)初始化时，我们将 `AbortSignal` 作为一个选项传递进入请求的选项对象中（下面的 `{signal}`）。这将 signal 和 controller 与 fetch 请求相关联，并且允许我们通过调用 {{domxref("AbortController.abort()")}} 去中止它，如下面的第二个事件监听器。
 
 ```js
 const controller = new AbortController();

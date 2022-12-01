@@ -2,6 +2,7 @@
 title: AudioContext.close()
 slug: Web/API/AudioContext/close
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioContext") }}インターフェースの`close()`メソッドは、オーディオコンテキストを閉じて使っていたシステムのオーディオリソースを全て解放します。
@@ -38,9 +39,7 @@ stopBtn.onclick = function() {
 
 ## 仕様
 
-| Specification                                                                                                | Status                               | Comment |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-close-Promise-void', 'close()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

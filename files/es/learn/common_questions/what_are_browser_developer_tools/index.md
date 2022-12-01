@@ -1,19 +1,7 @@
 ---
 title: ¿Cuáles son las herramientas de desarrollo del navegador?
 slug: Learn/Common_questions/What_are_browser_developer_tools
-tags:
-  - CSS
-  - CodingScripting
-  - HTML
-  - Herramientas para el desarrollador
-  - JavaScript
-  - Navegador
-  - Novato
-  - Principiante
-  - aprende
-translation_of: Learn/Common_questions/What_are_browser_developer_tools
 ---
-{{IncludeSubnav("/es/Learn")}}
 
 Todos los navegadores web modernos incluyen un potente conjunto de herramientas para desarrolladores. Estas herramientas hacen una variedad de cosas, desde inspeccionar HTML, CSS y JavaScript actualmente cargados, hasta mostrar qué activos ha solicitado la página y cuánto tiempo tardaron en cargarse. Este artículo explica cómo utilizar las funciones básicas de las herramientas de desarrollo de tu navegador.
 
@@ -116,7 +104,7 @@ Notarás una serie de pestañas en las que se puede hacer clic en la parte super
 
 Obtén más información sobre el Inspector en diferentes navegadores:
 
-- [Inspector de páginas de Firefox.](https://developer.mozilla.org/es/docs/Tools/Page_Inspector)
+- [Inspector de páginas de Firefox.](/es/docs/Tools/Page_Inspector)
 - [Explorador del DOM de Edge.](https://docs.microsoft.com/es-es/microsoft-edge/)
 - [inspector del DOM de Chrome.](https://developers.google.com/web/tools/chrome-devtools/inspect-styles?utm_source=dcc&utm_medium=redirect&utm_campaign=2016q3) (el inspector de Opera funciona igual que este)
 - [Safari inspector y explorador de estilos.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
@@ -228,7 +216,7 @@ Comenzarás a ver el tipo de errores que devuelve el navegador. A menudo, estos 
 
 Obtén más información sobre la consola de JavaScript en diferentes navegadores:
 
-- [Consola Web de Firefox.](https://developer.mozilla.org/en-US/docs/Tools/Web_Console)
+- [Consola Web de Firefox.](/es/docs/Tools/Web_Console)
 - [Consola de JavaScript Edge.](https://docs.microsoft.com/es-es/microsoft-edge/devtools-guide-chromium)
 - [Consola JavaScript de Chrome.](https://developer.chrome.com/devtools/docs/console) (el inspector de Opera funciona de la misma manera)
 - [Consola en Safari.](https://developer.apple.com/library/safari/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html#//apple_ref/doc/uid/TP40007874-CH6-SW1)

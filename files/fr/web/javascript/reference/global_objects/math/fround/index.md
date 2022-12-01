@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/fround
 ---
+
 {{JSRef}}
 
 La fonction **`Math.fround()`** renvoie le nombre flottant à [précision simple](https://en.wikipedia.org/wiki/Single_precision) sur 32 bits qui est le plus proche du nombre fourni.
@@ -57,14 +58,11 @@ Math.fround(NaN);   // NaN
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-math.fround', 'Math.fround')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-math.fround', 'Math.fround')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.fround")}}
+{{Compat}}
 
 ## Voir aussi
 

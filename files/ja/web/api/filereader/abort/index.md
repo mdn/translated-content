@@ -2,6 +2,7 @@
 title: FileReader.abort()
 slug: Web/API/FileReader/abort
 ---
+
 {{APIRef("File API")}}
 
 **`abort`** メソッドは読み取り操作を中止します。戻る時に、 {{domxref("FileReader.readyState","readyState")}} が `DONE` になります。
@@ -19,9 +20,7 @@ instanceOfFileReader.abort();
 
 ## 仕様
 
-| 仕様書                                                                               | 状態                         | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザの互換性
 

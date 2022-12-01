@@ -9,6 +9,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications
 ---
+
 {{AddonSidebar}}
 
 Afficher les notifications à l'utilisateur, en utilisant le mécanisme de notification du système d'exploitation sous-jacent. Étant donné que cette API utilise le mécanisme de notification du système d'exploitation, les détails de l'apparence et du comportement des notifications peuvent varier en fonction du système d'exploitation et des paramètres de l'utilisateur.
@@ -31,7 +32,7 @@ La notification est identique sur tous les systèmes d'exploitation de bureau. Q
 - {{WebExtAPIRef("notifications.clear()")}}
   - : Effacer une notification spécifique, compte tenu de son identifiant.
 - {{WebExtAPIRef("notifications.create()")}}
-  - :  Créez et affichez une nouvelle notification.
+  - : Créez et affichez une nouvelle notification.
 - {{WebExtAPIRef("notifications.getAll()")}}
   - : Recevez toutes les notifications
 - {{WebExtAPIRef("notifications.update()")}}

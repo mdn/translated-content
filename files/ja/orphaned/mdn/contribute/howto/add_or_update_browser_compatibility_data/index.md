@@ -3,6 +3,7 @@ title: ブラウザーの互換性データを追加したり更新したりす�
 slug: orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 original_slug: MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 ---
+
 {{MDNSidebar}}
 
 ウェブ機能のブラウザーの互換性に関する情報を知っている場合、もしくは調査や実験を行う意思と能力がある場合は、 MDN の[ブラウザー互換性データ](https://github.com/mdn/browser-compat-data/) (BCD) の更新を手伝っていただくことができます。

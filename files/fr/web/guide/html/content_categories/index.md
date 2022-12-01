@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Guide/HTML/Content_categories
 original_slug: Web/Guide/HTML/Catégories_de_contenu
 ---
+
 Chaque élément [HTML](/fr/docs/Web/HTML) est membre d'un certain nombre de catégories de contenu qui regroupent des éléments partageant un ensemble de caractéristiques. Ceci est un regroupement lâche, en ce sens qu'il ne crée pas réellement de relation entre les éléments de ces types, mais il aide à définir et à décrire leur comportement et les règles associées qu'ils doivent respecter, en particulier lorsque l'on entre dans leurs détails complexes. Il est également possible que les éléments ne soient membres d'aucune de ces catégories.
 
 Il y a trois types différents de catégories de contenu :
@@ -62,7 +63,7 @@ Les éléments appartenant à cette catégorie sont {{HTMLElement("h1")}}, {{HTM
 
 Le contenu phrasé définit le texte et le balisage qu'il contient. Des séquences de contenu phrasé constituent des paragraphes.
 
-Les éléments appartenant à cette catégorie sont  {{HTMLElement("abbr")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("command")}} {{deprecated_inline}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("dfn")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("kbd")}}, {{HTMLElement("keygen")}}{{deprecated_inline()}}, {{HTMLElement("label")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("meter")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("picture")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} et du texte brut (n'étant pas une simple suite de blancs).
+Les éléments appartenant à cette catégorie sont {{HTMLElement("abbr")}}, {{HTMLElement("audio")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("br")}}, {{HTMLElement("button")}}, {{HTMLElement("canvas")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("command")}} {{deprecated_inline}}, {{HTMLElement("data")}}, {{HTMLElement("datalist")}}, {{HTMLElement("dfn")}}, {{HTMLElement("em")}}, {{HTMLElement("embed")}}, {{HTMLElement("i")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("input")}}, {{HTMLElement("kbd")}}, {{HTMLElement("keygen")}}{{deprecated_inline()}}, {{HTMLElement("label")}}, {{HTMLElement("mark")}}, {{MathMLElement("math")}}, {{HTMLElement("meter")}}, {{HTMLElement("noscript")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("picture")}}, {{HTMLElement("progress")}}, {{HTMLElement("q")}}, {{HTMLElement("ruby")}}, {{HTMLElement("samp")}}, {{HTMLElement("script")}}, {{HTMLElement("select")}}, {{HTMLElement("small")}}, {{HTMLElement("span")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{SVGElement("svg")}}, {{HTMLElement("textarea")}}, {{HTMLElement("time")}}, {{HTMLElement("var")}}, {{HTMLElement("video")}}, {{HTMLElement("wbr")}} et du texte brut (n'étant pas une simple suite de blancs).
 
 Quelques autres éléments appartiennent à cette catégorie mais seulement selon certaines conditions :
 
@@ -97,7 +98,7 @@ Un contenu peut être dit tangible lorsqu'il n'est ni vide ni caché. Les élém
 
 ### Contenu associé aux formulaires
 
-Le contenu associé aux formulaires contient les éléments possédés par un formulaire, exposé avec un attribut **form**. Être possédé par un formulaire signifie être descendant d'un élément  {{HTMLElement("form")}} ou de l'élément dont l'identifiant est référencé par la valeur de l'attribut **form**.
+Le contenu associé aux formulaires contient les éléments possédés par un formulaire, exposé avec un attribut **form**. Être possédé par un formulaire signifie être descendant d'un élément {{HTMLElement("form")}} ou de l'élément dont l'identifiant est référencé par la valeur de l'attribut **form**.
 
 Cette catégorie contient les éléments :
 
@@ -118,7 +119,7 @@ Cette catégorie peut être subdivisée en plusieurs sous-catégories.
 - listed (éléments listés)
   - : Les éléments étant listés sont les ensembles IDL [form.elements](/fr/docs/DOM/form.elements) et fieldset.elements. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}}{{deprecated_inline()}} , {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, et {{HTMLElement("textarea")}}.
 - labelable (éléments étiquetables)
-  - : Les éléments pouvant être associés avec des éléments  {{HTMLElement("label")}}. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}}{{deprecated_inline()}} , {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
+  - : Les éléments pouvant être associés avec des éléments {{HTMLElement("label")}}. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}}{{deprecated_inline()}} , {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
 - submittable (éléments participants à l'envoi du formulaire)
   - : Les éléments pouvant être utilisés pour construire les données du formulaires quand celui-ci est envoyé. Ce sont : {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}}{{deprecated_inline()}} , {{HTMLElement("object")}}, {{HTMLElement("select")}} et {{HTMLElement("textarea")}}.
 - resettable (éléments de ré-initialisation)

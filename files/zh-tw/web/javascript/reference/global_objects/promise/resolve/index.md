@@ -2,6 +2,7 @@
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
+
 {{JSRef}}
 
 **`Promise.resolve(value)`** 方法回傳一個以 value 判定結果的 {{jsxref("Promise")}} 物件。若 value 是個 thenable (例如，具有 {{jsxref("Promise.then", "\"then\"方法")}})，則回傳的 promise 將依其結果採取其最終狀態；若 value 是 promise，則作為呼叫 Promise.resolve 之結果；其他情形都將回傳以 value 實現的 promise。
@@ -115,7 +116,7 @@ p3.then(function(v) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise.resolve")}}
+{{Compat}}
 
 ## 參見
 

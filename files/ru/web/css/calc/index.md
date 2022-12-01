@@ -6,6 +6,7 @@ tags:
 translation_of: Web/CSS/calc()
 original_slug: Web/CSS/calc()
 ---
+
 {{CSSRef}}
 
 `calc()` - это функция CSS, которая даёт возможность рассчитать значения свойств CSS во время их определения. Она может быть использована везде, где применимы {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, или {{cssxref("&lt;integer&gt;")}}.
@@ -34,7 +35,9 @@ original_slug: Web/CSS/calc()
 
 ### Формальный синтаксис
 
-    calc(expression)
+```
+calc(expression)
+```
 
 ## Примеры
 
@@ -102,12 +105,14 @@ input {
 
 Вы также можете использовать `calc()` с CSS переменными. Рассмотрим пример кода:
 
-    .foo {
-      --widthA: 100px;
-      --widthB: calc(var(--widthA) / 2);
-      --widthC: calc(var(--widthB) / 2);
-      width: var(--widthC);
-    }
+```css
+.foo {
+  --widthA: 100px;
+  --widthB: calc(var(--widthA) / 2);
+  --widthC: calc(var(--widthB) / 2);
+  width: var(--widthC);
+}
+```
 
 ## Спецификации
 
@@ -119,4 +124,4 @@ input {
 
 ## Смотрите также
 
-- [Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2010/06/css3-calc/ "Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog")
+- [Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog](https://hacks.mozilla.org/2010/06/css3-calc/)

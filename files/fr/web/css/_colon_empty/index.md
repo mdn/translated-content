@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:empty
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:empty`** correspond à un élément qui n'a aucun enfant. Seules les feuilles de l'arbre et le texte (espaces inclus) sont pris en compte. Les commentaires, les attributs ou le contenu généré en CSS avec {{cssxref("content")}} n'ont pas d'influence sur le contenu de l'élément (autrement dit, si un élément ne contient que des commentaires, il sera considéré comme vide).
@@ -19,7 +20,7 @@ div:empty {
 }
 ```
 
-> **Note :** Avec {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}}, le sélecteur `:empty` a été modifié afin de se comporter comme {{CSSxRef(":-moz-only-whitespace")}} mais, à l'heure actuelle, aucun navigateur ne prend en charge cette fonctionnalité.
+> **Note :** Avec CSS4 Selectors, le sélecteur `:empty` a été modifié afin de se comporter comme {{CSSxRef(":-moz-only-whitespace")}} mais, à l'heure actuelle, aucun navigateur ne prend en charge cette fonctionnalité.
 
 ## Syntaxe
 
@@ -78,14 +79,11 @@ Le texte fournissant le nom accessible peut être masqué grâce [à des propri�
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires                                                                                 |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Selectors", "#the-empty-pseudo", ":empty")}} | {{Spec2('CSS4 Selectors')}} | Modifier afin d'obtenir le comportement de {{CSSxRef(":-moz-only-whitespace")}}. |
-| {{SpecName("CSS3 Selectors", "#empty-pseudo", ":empty")}}     | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                                         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.empty")}}
+{{Compat}}
 
 ## Voir aussi
 

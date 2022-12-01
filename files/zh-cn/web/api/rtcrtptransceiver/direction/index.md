@@ -2,6 +2,7 @@
 title: RTCRtpTransceiver.direction
 slug: Web/API/RTCRtpTransceiver/direction
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpTransceiver")}} property **`direction`** is a string which indicates the transceiver's preferred directionality. Its value must be one of the strings defined by the {{domxref("RTCRtpTransceiverDirection")}} enumeration.
@@ -31,7 +32,7 @@ When setting the value of `direction`, the following exceptions can occur:
 
 When you change the value of `direction`, an `InvalidStateError` exception will occur if the connection is closed or the receiver is stopped.
 
-If the new value of `direction` is in fact different from the existing value, renegotiation of the connection is required, so a {{event("negotiationneeded")}} event is sent to the {{domxref("RTCPeerConnection")}}.
+If the new value of `direction` is in fact different from the existing value, renegotiation of the connection is required, so a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event is sent to the {{domxref("RTCPeerConnection")}}.
 
 ### Effect on offers and answers
 
@@ -47,7 +48,7 @@ a=sendrecv
 
 ## Browser compatibility
 
-{{Compat("api.RTCRtpTransceiver.direction")}}
+{{Compat}}
 
 ## See also
 

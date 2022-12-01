@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toGMTString
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 La méthode **`toGMTString()`** convertit une date en une chaîne de caractères, en utilisant les conventions Internet pour GMT. Le format exact de la valeur renvoyée par `toGMTString()` varie en fonction de la plateforme et du navigateur web. En général, le texte produit est formaté pour être lisible par un humain.
@@ -42,16 +43,11 @@ console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                                                                                |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale et déjà déclarée comme dépréciée. Implémentée avec JavaScript 1.0.      |
-| {{SpecName('ES5.1', '#sec-B.2.6', 'Date.prototype.toGMTString')}}                             | {{Spec2('ES5.1')}}     | Définie dans l'annexe informative sur la compatibilité.                                     |
-| {{SpecName('ES6', '#sec-date.prototype.togmtstring', 'Date.prototype.toGMTString')}}     | {{Spec2('ES6')}}         | Définie dans l'annexe normative sur les fonctionnalités additionnelles des navigateurs web. |
-| {{SpecName('ESDraft', '#sec-date.prototype.togmtstring', 'Date.prototype.toGMTString')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe normative sur les fonctionnalités additionnelles des navigateurs web. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.toGMTString")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,35 +1,36 @@
 ---
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
-tags:
-  - CSS
-  - CSS Animations
-  - CSS Property
-  - Experimental
-  - Reference
-translation_of: Web/CSS/animation-fill-mode
 ---
+
 {{ CSSRef() }}{{ SeeCompatTable() }}
 
 ## Definición
 
-La propiedad [CSS](/en/CSS "CSS") `animation-fill-mode` especifica el modo en que una animación CSS aplica sus estilos, estableciendo su persistencia y estado final tras su ejecución.
+La propiedad [CSS](/en/CSS) `animation-fill-mode` especifica el modo en que una animación CSS aplica sus estilos, estableciendo su persistencia y estado final tras su ejecución.
 
 {{cssinfo}}
 
 ## Sintaxis
 
-    Formal syntax: {{csssyntax("animation-fill-mode")}}
+```css
+/* Single animation */
+animation-fill-mode: none;
+animation-fill-mode: forwards;
+animation-fill-mode: backwards;
+animation-fill-mode: both;
 
-    animation-fill-mode: none
-    animation-fill-mode: forwards
-    animation-fill-mode: backwards
-    animation-fill-mode: both
+/* Multiple animations */
+animation-fill-mode: none, backwards;
+animation-fill-mode: both, forwards, none;
 
-    El caracter # indica que pueden darse varios valores separados por comas.
-    Cada uno de los valores se aplicará en el mismo orden en que se ha declarado en la propiedad 'animation'
-    animation-fill-mode: none, backwards
-    animation-fill-mode: both, forwards, none
+/* Global values */
+animation-fill-mode: inherit;
+animation-fill-mode: initial;
+animation-fill-mode: revert;
+animation-fill-mode: revert-layer;
+animation-fill-mode: unset;
+```
 
 ### Valores
 
@@ -44,7 +45,7 @@ La propiedad [CSS](/en/CSS "CSS") `animation-fill-mode` especifica el modo en qu
     | `alternate`           | even                        | `0%` or `from`              |
     | `alternate`           | odd                         | `100%` or `to`              |
     | `alternate-reverse`   | even                        | `100%` or `to`              |
-    |  `alternate-reverse`  | odd                         | `0%` or `from`              |
+    | `alternate-reverse`  | odd                         | `0%` or `from`              |
 - `backwards`
   - : La animación aplicará los valores definidos en el primer [keyframe](/es/docs/CSS/@keyframes) tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}:
     | `animation-direction`           | primer keyframe |
@@ -104,9 +105,7 @@ CSS
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                   | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation-fill-mode', 'animation-fill-mode') }} | {{ Spec2('CSS3 Animations') }} |            |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 
@@ -114,5 +113,5 @@ CSS
 
 ## Ver también
 
-- [Usando CSS Animations](/es/docs/CSS/Tutorials/Using_CSS_animations "Tutorial about CSS animations")
+- [Usando CSS Animations](/es/docs/CSS/Tutorials/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

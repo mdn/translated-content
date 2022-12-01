@@ -3,6 +3,7 @@ title: Building up a basic demo with Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 translation_of: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 ---
+
 {{GamesSidebar}}
 
 Une scène 3D dans un jeu - même la plus simple - contient des éléments standard comme des formes situées dans un système de coordonnées, une caméra pour les voir réellement, des lumières et des matériaux pour amelioré son esthétique, des animations pour la rendre vivante, etc. **Three.js**, comme avec toute autre bibliothèque 3D, fournit des fonctions d'assistance intégrées pour vous aider à implémenter plus rapidement les fonctionnalités 3D courantes. Dans cet article, nous vous expliquerons les bases de l'utilisation de Three, notamment la configuration d'un environnement de développement, la structuration du code HTML nécessaire, les objets fondamentaux de Three et la manière de créer une démonstration de base.
@@ -157,7 +158,7 @@ We've now created a cube, using the geometry and material defined earlier. The l
 scene.add(cube);
 ```
 
-If you save, and refresh your Web browser, our object will now look like a square, because it's facing the camera. The good thing about objects, is that we can move them on the scene, however we want. For example, rotating and scaling as we like. Let's apply a little rotation to the cube, so we can see more than one face.  Again, adding our code below the previous:
+If you save, and refresh your Web browser, our object will now look like a square, because it's facing the camera. The good thing about objects, is that we can move them on the scene, however we want. For example, rotating and scaling as we like. Let's apply a little rotation to the cube, so we can see more than one face. Again, adding our code below the previous:
 
 ```js
 cube.rotation.set(0.4, 0.2, 0);
@@ -251,7 +252,7 @@ t += 0.01;
 torus.scale.y = Math.abs(Math.sin(t));
 ```
 
-We use `Math.sin`, ending up with quite an interesting result. This scales the torus, repeating the process, as `sin` is a periodic function. We're wrapping the scale value in `Math.abs`, to pass the absolute values, greater or equal to 0. As sin is between -1 and 1,  negative values might render out torus in unexpected way. In this case it looks black half the time.
+We use `Math.sin`, ending up with quite an interesting result. This scales the torus, repeating the process, as `sin` is a periodic function. We're wrapping the scale value in `Math.abs`, to pass the absolute values, greater or equal to 0. As sin is between -1 and 1, negative values might render out torus in unexpected way. In this case it looks black half the time.
 
 Now, onto movement.
 

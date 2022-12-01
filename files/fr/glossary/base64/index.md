@@ -15,6 +15,7 @@ tags:
 translation_of: Glossary/Base64
 original_slug: Web/API/WindowBase64/Décoder_encoder_en_base64
 ---
+
 **Base64** est un groupe de schéma pour encoder des données binaires sous forme d'un texte au format ASCII grâce à la représentation de ces données en base 64. Le terme base64 vient à l'origine de l'encodage utilisé pour transférer certains [contenus MIME](https://fr.wikipedia.org/wiki/Multipurpose_Internet_Mail_Extensions#Content-Transfer-Encoding).
 
 Les schémas d'encodage en base64 sont principalement utilisés lorsqu'il s'agit d'enregistrer ou d'envoyer des données binaires via un media qui a été conçu pour gérer du texte. Cette transformation permet de conserver l'intégrité et la véracité des données envoyées lors du transport. Base64 est utilisé par plusieurs applications, notamment celles qui gèrent les courriels avec [MIME](https://fr.wikipedia.org/wiki/MIME), et le stockage de données complexes en [XML](/fr/docs/XML).
@@ -52,7 +53,7 @@ Les deux méthodes, `atob()` et `btoa()`, fonctionnent sur des chaînes de carac
 
 ## Outils
 
-- [Réécrire `atob()`et `btoa()` en utilisant des `TypedArray`s et l'UTF-8](<#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)
+- [Réécrire `atob()` et `btoa()` en utilisant des `TypedArray`s et l'UTF-8](<#Solution_.232_.E2.80.93_rewriting_atob()_and_btoa()_using_TypedArrays_and_UTF-8>)
 - [`StringView` – une représentation des chaînes de caractères semblable à celle du langage C, basée sur les tableaux typés.](/fr/docs/Web/JavaScript/Typed_arrays/StringView)
 
 ## Sujets connexes
@@ -75,7 +76,7 @@ Les objets [`DOMString`](/fr/docs/Web/API/DOMString) sont des chaînes de caract
 
 Voici ces deux méthodes :
 
-### Première solution  – échapper la chaîne avant de l'encoder
+### Première solution – échapper la chaîne avant de l'encoder
 
 ```js
 function utf8_to_b64( str ) {

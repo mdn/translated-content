@@ -2,6 +2,7 @@
 title: Using WebGL extensions
 slug: Web/API/WebGL_API/Using_Extensions
 ---
+
 {{WebGLSidebar}}
 
 WebGL，像它的姐妹 API (OpenGL and OpenGL ES)，支持使用扩展（extensions）。一份完整的扩展列表可在 [khronos webgl extension registry](http://www.khronos.org/registry/webgl/extensions/)。
@@ -33,10 +34,10 @@ The feature flags are:
 
 WebGL extensions are prefixed with "ANGLE", "OES", "EXT" or "WEBGL". These prefixes reflect origin and intent:
 
-- ANGLE\_: Extensions that are written by the [ANGLE library](https://en.wikipedia.org/wiki/ANGLE_%28software%29) authors.
-- OES\_: Extensions that mirror functionality from OpenGL ES or OpenGL API extensions approved by the respective architecture review boards.
-- EXT\_: Extensions that mirror other OpenGL ES or OpenGL API extensions.
-- WEBGL\_: Extensions that are WebGL-specific and intended to be compatible with multiple web browsers. It should also be used for extensions which originated with the OpenGL ES or OpenGL APIs, but whose behavior has been significantly altered.
+- `ANGLE_`: Extensions that are written by the [ANGLE library](https://en.wikipedia.org/wiki/ANGLE_%28software%29) authors.
+- `OES_`: Extensions that mirror functionality from OpenGL ES or OpenGL API extensions approved by the respective architecture review boards.
+- `EXT_`: Extensions that mirror other OpenGL ES or OpenGL API extensions.
+- `WEBGL_`: Extensions that are WebGL-specific and intended to be compatible with multiple web browsers. It should also be used for extensions which originated with the OpenGL ES or OpenGL APIs, but whose behavior has been significantly altered.
 
 ## 查询可用的扩展程序
 

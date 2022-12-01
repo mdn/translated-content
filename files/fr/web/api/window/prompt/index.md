@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/prompt
 ---
+
 {{ApiRef("Window")}}
 
 La méthode `Window.prompt()` affiche une boîte de dialogue, éventuellement avec un message, qui invite l'utilisateur à saisir un texte.

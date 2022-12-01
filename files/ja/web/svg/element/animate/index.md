@@ -2,6 +2,7 @@
 title: <animate>
 slug: Web/SVG/Element/animate
 ---
+
 {{SVGRef}}
 
 SVG の **`<animate>`** 要素は、時間の経過に応じて要素の属性を変化させる方法を提供します。
@@ -60,10 +61,7 @@ html,body,svg { height:100%; margin:0; padding:0; }
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                                     | 備考     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName("SVG Animations 2", "#AnimateElement", "&lt;animate&gt;")}}     | {{Spec2("SVG Animations 2")}} | 変更なし |
-| {{SpecName("SVG1.1", "animate.html#AnimateElement", "&lt;animate&gt;")}} | {{Spec2("SVG1.1")}}                 | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,9 +2,10 @@
 title: Event.composedPath()
 slug: Web/API/Event/composedPath
 ---
+
 {{APIRef("Shadow DOM")}}
 
-**`composedPath()`** 是 {{domxref("Event")}} 接口的一个方法，当对象数组调用该侦听器时返回事件路径。 如果影子根节点被创建并且{{domxref("ShadowRoot.mode")}}是关闭的，那么该路径不包括影子树中的节点。
+**`composedPath()`** 是 {{domxref("Event")}} 接口的一个方法，当对象数组调用该侦听器时返回事件路径。如果影子根节点被创建并且{{domxref("ShadowRoot.mode")}}是关闭的，那么该路径不包括影子树中的节点。
 
 ## 语法
 
@@ -58,7 +59,7 @@ document.querySelector('html').addEventListener('click',function(e) {
 });
 ```
 
-当你先后点击 `<open-shadow>` 和 `<closed-shadow>` 这两个元素，你将会注意到两件事情。第一， `composed` 这个属性返回值为 `true` 因为 `click` 事件总能够在影子边界中传播。 第二，你将注意到两个元素中`composedPath` 的值的不同。 `<open-shadow>` 元素的组成路径是这个：
+当你先后点击 `<open-shadow>` 和 `<closed-shadow>` 这两个元素，你将会注意到两件事情。第一， `composed` 这个属性返回值为 `true` 因为 `click` 事件总能够在影子边界中传播。第二，你将注意到两个元素中`composedPath` 的值的不同。 `<open-shadow>` 元素的组成路径是这个：
 
 ```js
 Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]
@@ -78,4 +79,4 @@ Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-compon
 
 ## 浏览器兼容性
 
-{{Compat("api.Event.composedPath")}}
+{{Compat}}

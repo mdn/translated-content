@@ -2,6 +2,7 @@
 title: 编译 C/C++ 为 WebAssembly
 slug: WebAssembly/C_to_wasm
 ---
+
 {{WebAssemblySidebar}}
 
 当你在用 C/C++ 之类的语言编写模块时，你可以使用[Emscripten](/zh-CN/docs/Mozilla/Projects/Emscripten)来将它编译到 WebAssembly。让我们来看看它是如何工作的。
@@ -145,13 +146,13 @@ emsdk_env.bat
     - 我们使用了 `-o hello2.html`，这意味编译器将仍然输出 js 胶水代码 和 html 文件。
     - 我们还使用了 `--shell-file html_template/shell_minimal.html`，这指定了您要运行的例子使用 HTML 页面模板。
 
-4. 下面让我们来运行这个例子。上面的命令已经生成了 hello2.html，内容和我们使用的模板非常相像，只不过多加了一些 js 胶水和加载 wasm 文件的代码。 在浏览器中打开它，你会看到与上一个例子相同的输出。
+4. 下面让我们来运行这个例子。上面的命令已经生成了 hello2.html，内容和我们使用的模板非常相像，只不过多加了一些 js 胶水和加载 wasm 文件的代码。在浏览器中打开它，你会看到与上一个例子相同的输出。
 
 > **备注：** 通过用.js 取代.htm(l) 作为文件后缀名，你就可以得到只有 JavaScript 的输出文件，而不再是完整的 HTML 文件。例如：`emcc -o hello2.js hello2.c -O3 -s WASM=1`. 你可以完全从零开始创建你自己的 HTML 文件。尽管如此，不推荐这样做。因为 Emscripten 需要大量的 JavaScript“胶水”代码从而能够 处理内存分配、内存泄漏以及大量的其他问题。这些问题都已经在提供的模板中得到了处理。使用模板要比自己编写模板要容易得多。不过，当对模板所做的事情越来越熟悉的时候，你就能够按照自己的需要创建定制化的模板了。
 
 ## 调用一个定义在 C 中的自定义方法
 
-如果需要调用一个在 C 语言自定义的函数，你可以使用 Emscripten 中的 `ccall()` 函数，以及 `EMSCRIPTEN_KEEPALIVE` 声明 （将你的函数添加到导出函数列表中（详见 [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)））。
+如果需要调用一个在 C 语言自定义的函数，你可以使用 Emscripten 中的 `ccall()` 函数，以及 `EMSCRIPTEN_KEEPALIVE` 声明（将你的函数添加到导出函数列表中（详见 [Why do functions in my C/C++ source code vanish when I compile to JavaScript, and/or I get No functions to process?](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)））。
 
 接下来让我们看看这是怎么实现的。
 

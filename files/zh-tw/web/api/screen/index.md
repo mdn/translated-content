@@ -2,6 +2,7 @@
 title: Screen
 slug: Web/API/Screen
 ---
+
 {{APIRef("CSSOM View")}}
 
 `Screen` 介面表示了一個用戶端螢幕，通常是指呈現目前頁面的視窗。
@@ -40,7 +41,7 @@ slug: Web/API/Screen
 ### 事件處理器
 
 - {{domxref("Screen.onorientationchange")}}
-  - : A handler for the {{event("orientationchange")}} events.
+  - : A handler for the [`orientationchange`](/zh-TW/docs/Web/API/Window/orientationchange_event) events.
 
 ## 方法
 

@@ -2,6 +2,7 @@
 title: Navigator.productSub
 slug: Web/API/Navigator/productSub
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 **`Navigator.productSub`** プロパティは読み取り専用で、現在のブラウザーのビルド番号を返します。
@@ -36,9 +37,7 @@ Google Chrome および Apple Safari では、このプロパティは常に `20
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-navigator-productsub', 'NavigatorID: productSub')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

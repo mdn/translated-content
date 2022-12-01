@@ -1,8 +1,8 @@
 ---
 title: <display-inside>
 slug: Web/CSS/display-inside
-translation_of: Web/CSS/display-inside
 ---
+
 {{CSSRef}}
 
 Essas palavras-chave especificam o interior do elemento{{CSSxRef("display")}} type, que define o tipo de contexto de formatação que apresenta seu conteúdo (supondo que seja um elemento não substituído). Essas palavras-chave são usadas como valores do `display` e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-outside&gt;")}} palavras-chave.

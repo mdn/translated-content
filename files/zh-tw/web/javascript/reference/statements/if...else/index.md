@@ -2,6 +2,7 @@
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
 ---
+
 {{jsSidebar("Statements")}}
 
 當條件成立的時候會執行 if 陳述式裡的程式，而不成立時則執行另外一個陳述式。
@@ -121,7 +122,7 @@ if ((x = y)) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.if_else")}}
+{{Compat}}
 
 ## 參見
 

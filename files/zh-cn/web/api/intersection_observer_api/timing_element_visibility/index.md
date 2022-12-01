@@ -2,6 +2,7 @@
 title: Timing element visibility with the Intersection Observer API
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
 ---
+
 {{APIRef("Intersection Observer API")}}交叉点观察者 API 使得当感兴趣的元素或多或少被共享祖先节点或元素遮蔽时，可以方便地异步通知，包括 {{domxref("Document")}}本身。
 
 The Intersection Observer API makes it easy to be asynchronously notified when elements of interest become more or less obscured by a shared ancestor node or element, including the {{domxref("Document")}} itself. In this article, we'll build a mock blog which has a number of ads interspersed among the contents of the page, then use the Intersection Observer API to track how much time each ad is visible to the user. When an ad exceeds one minute of visible time, it will be replaced with a new one.
@@ -244,7 +245,7 @@ function startup() {
 }
 ```
 
-First, a reference to the content wrapping {{HTMLElement("main")}} element is obtained, so we can insert our content into it. Then we set up an event listener for the {{event("visibilitychange")}} event. This event is sent when the document becomes hidden or visible, such as when the user switches tabs in their browser. The Intersection Observer API doesn't take this into account when detecting intersection, since intersection isn't affected by page visibility. Therefore, we need to pause our timers while the page is tabbed out; hence this event listener.
+First, a reference to the content wrapping {{HTMLElement("main")}} element is obtained, so we can insert our content into it. Then we set up an event listener for the [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) event. This event is sent when the document becomes hidden or visible, such as when the user switches tabs in their browser. The Intersection Observer API doesn't take this into account when detecting intersection, since intersection isn't affected by page visibility. Therefore, we need to pause our timers while the page is tabbed out; hence this event listener.
 
 Next we set up the options for the {{domxref("IntersectionObserver")}} which will monitor target elements (ads, in our case) for intersection changes relative to the document. The options are configured to watch for intersections with the document's viewport (by setting `root` to `null`). We have no margins to extend or contract the intersection root's rectangle; we want to match the boundaries of the document's viewport exactly for intersection purposes. And the `threshold` is set to an array containing the values 0.0 and 0.75; this will cause our callback to execute whenever a targeted element becomes completely obscured or first starts to become unobscured (intersection ratio 0.0) or passes through 75% visible in either direction (intersection ratio 0.75).
 
@@ -256,7 +257,7 @@ Finally, we set up an interval which triggers once a second to handle any necess
 
 ### Handling document visibility changes
 
-Let's take a look at the handler for the {{event("visibilitychange")}} event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the [Page Visibility API](/zh-CN/docs/Web/API/Page_Visibility_API) to detect these tab switches and disable our timers for the duration.
+Let's take a look at the handler for the [`visibilitychange`](/zh-CN/docs/Web/API/Document/visibilitychange_event) event. Our script receives this event when the document itself becomes visible or invisible. The most important scenario here is when the user switches tabs. Since Intersection Observer only cares about the intersection between the targeted elements and the intersection root, and not the tab's visibility (which is a different issue entirely), we need to use the [Page Visibility API](/zh-CN/docs/Web/API/Page_Visibility_API) to detect these tab switches and disable our timers for the duration.
 
 ```js
 function handleVisibilityChange() {

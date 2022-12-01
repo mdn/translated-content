@@ -2,6 +2,7 @@
 title: CSSValueList
 slug: Web/API/CSSValueList
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 
 The **`CSSValueList`** 接口继承自 {{domxref("CSSValue")}} 接口，提供一个经过排序的 CSS 值的抽象集合。

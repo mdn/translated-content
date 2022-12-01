@@ -2,6 +2,7 @@
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
+
 {{JSRef}}
 
 **`Array.isArray()`** 用于确定传递的值是否是一个 {{jsxref("Array")}}。

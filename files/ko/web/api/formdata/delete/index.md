@@ -5,6 +5,7 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.delete
 translation_of: Web/API/FormData/delete
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 {{domxref("FormData")}} 인터페이스의 **`delete()`** 메서드는 `FormData` 객체에서 key와 그 값에 해당하는 것을 지웁니다.

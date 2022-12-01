@@ -3,6 +3,7 @@ title: SpeechRecognitionError
 slug: Web/API/SpeechRecognitionErrorEvent
 original_slug: Web/API/SpeechRecognitionError
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechRecognitionError`** インターフェイスは、認識サービスからのエラーメッセージを表します。
@@ -29,13 +30,11 @@ recognition.onerror = function(event) {
 
 ## 仕様
 
-| 仕様書                                                                                                   | 策定状況                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---- |
-| {{SpecName('Web Speech API', '#speechreco-error', 'SpeechRecognitionError')}} | {{Spec2('Web Speech API')}} |      |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 
-{{Compat("api.SpeechRecognitionError")}}
+{{Compat}}
 
 ### Firefox OS の許可設定
 

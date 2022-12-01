@@ -2,6 +2,7 @@
 title: 'FileReader: load イベント'
 slug: Web/API/FileReader/load_event
 ---
+
 {{APIRef}}
 
 `load` イベントは、ファイルが正常に読み込めたときに発生します。
@@ -137,9 +138,7 @@ fileInput.addEventListener('change', handleSelected);
 
 ## 仕様書
 
-| 仕様書                                                   | 状態                         |
-| -------------------------------------------------------- | ---------------------------- |
-| {{SpecName('File API', '#dfn-load-event')}} | {{Spec2('File API')}} |
+{{Specifications}}
 
 ## ブラウザーの対応
 

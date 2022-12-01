@@ -2,6 +2,7 @@
 title: height
 slug: Web/SVG/Attribute/height
 ---
+
 « [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 该属性在用户坐标系统中标识了一个垂直长度。该坐标的确切效果依赖于每个元素。大多数时候，它体现引用元素的矩形区域的高度（请阅读每个元素的文档以了解例外情况）。

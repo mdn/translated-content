@@ -2,6 +2,7 @@
 title: 'ReferenceError: invalid assignment left-hand side'
 slug: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

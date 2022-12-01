@@ -2,6 +2,7 @@
 title: border-top-color
 slug: Web/CSS/border-top-color
 ---
+
 {{CSSRef}}
 
 **`border-top-color`** は CSS のプロパティで、要素の上側の[境界線](/ja/docs/Web/CSS/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-top")}} でも設定することができます。

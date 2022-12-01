@@ -3,6 +3,7 @@ title: Request.mode
 slug: Web/API/Request/mode
 translation_of: Web/API/Request/mode
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 La propriété **`mode`** (en lecture seule) de l’interface {{domxref("Request")}} contient le mode de la requête (e.g., `cors`, `no-cors`, `cors-with-forced-preflight`, `same-origin`, or `navigate`.) Ceci est utilisé pour déterminer si les requêtes différentes de l’origine (cross-origin) mèneront à des réponses valides, et quelles propriétés de la réponse seront lisibles:
@@ -24,7 +25,7 @@ Une valeur {{domxref("RequestMode")}}.
 
 ## Exemple
 
-Dans le bout de code suivant, nous créons une nouvelle requête en utilisant le constructeur {{domxref("Request.Request()")}}  (pour une image située dans le même répertoire que le script), puis on stocke le mode de la requête dans une variable:
+Dans le bout de code suivant, nous créons une nouvelle requête en utilisant le constructeur {{domxref("Request.Request()")}} (pour une image située dans le même répertoire que le script), puis on stocke le mode de la requête dans une variable:
 
 ```js
 var myRequest = new Request('flowers.jpg');

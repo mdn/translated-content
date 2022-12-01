@@ -10,6 +10,7 @@ tags:
   - step
 translation_of: Web/HTML/Attributes/step
 ---
+
 {{HTMLSidebar}}
 
 L'attribut **`step`** est un nombre qui indique l'incrément que la valeur doit suivre ou le mot-clé `any`. Il est valable pour les types de saisie numérique, notamment les [`date`](/fr/docs/Web/HTML/Element/Input/date), [`month`](/fr/docs/Web/HTML/Element/Input/month), [`week`](/fr/docs/Web/HTML/Element/Input/week), [`time`](/fr/docs/Web/HTML/Element/Input/time), [`datetime-local`](/fr/docs/Web/HTML/Element/Input/datetime-local), [`number`](/fr/docs/Web/HTML/Element/Input/number) et [`range`](/fr/docs/Web/HTML/Element/Input/range).

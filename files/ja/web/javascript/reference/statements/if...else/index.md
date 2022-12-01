@@ -2,6 +2,7 @@
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
 ---
+
 {{jsSidebar("Statements")}}
 
 **`if` 文**は、指定された条件が {{Glossary("truthy")}} ならば文を実行します。条件が {{Glossary("falsy")}} なら、もう一方の文を実行することができます。
@@ -120,9 +121,7 @@ if ((x = y)) {
 
 ## 仕様書
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-if-statement', 'if statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

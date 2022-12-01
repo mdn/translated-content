@@ -1,10 +1,6 @@
 ---
 title: 정규식
 slug: Glossary/Regular_expression
-tags:
-  - 문법
-  - 정규표현식
-translation_of: Glossary/Regular_expression
 ---
 정규식(Regular expressions or _regex_)은 연속적인 문자들을 검색하는 제어방법입니다.
 

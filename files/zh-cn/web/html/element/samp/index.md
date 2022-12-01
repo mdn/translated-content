@@ -2,6 +2,7 @@
 title: <samp>
 slug: Web/HTML/Element/samp
 ---
+
 ## 概述
 
 \<samp> 元素用于标识计算机程序输出，通常使用浏览器缺省的 monotype 字体（例如 Lucida Console）。
@@ -63,4 +64,4 @@ Regular text. `This is sample text.` Regular text.
 
 - [HTML Code Element](/zh-CN/HTML/Element/code)
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

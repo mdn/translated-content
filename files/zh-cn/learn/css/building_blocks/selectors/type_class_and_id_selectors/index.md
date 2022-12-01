@@ -2,6 +2,7 @@
 title: 类型、类和 ID 选择器
 slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
 
 本节课中，我们看下可用的最简单的选择器，在你的工作中，它们很有可能会是最常用到的。

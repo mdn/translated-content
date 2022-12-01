@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 original_slug: Apprendre/Commencer_avec_le_web/Publier_votre_site_web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}
 
 Une fois que vous avez fini d'écrire le code et d'organiser les fichiers qui composent votre site, vous devez mettre le site en ligne, ainsi d'autres personnes pourront le trouver. Cet article décrit comment mettre votre extrait de code en ligne avec peu d'efforts.

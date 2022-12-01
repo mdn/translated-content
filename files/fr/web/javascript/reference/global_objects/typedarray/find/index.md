@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/find
 ---
+
 {{JSRef}}
 
 La méthode **`find()`** renvoie une **valeur** du tableau typé si un élément du tableau remplit la condition définie par la fonction de test fournie. Si aucun élément ne remplit la condition, la valeur {{jsxref("undefined")}} sera renvoyée. Pour la suite de cet article _TypedArray_ correspond à l'un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
@@ -81,14 +82,11 @@ console.log(uint8.find(estPremier)); // 5
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.find', '%TypedArray%.prototype.find')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.find', '%TypedArray%.prototype.find')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.find")}}
+{{Compat}}
 
 ## Voir aussi
 

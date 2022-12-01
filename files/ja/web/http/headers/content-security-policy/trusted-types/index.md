@@ -2,6 +2,7 @@
 title: 'CSP: trusted-types'
 slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`trusted-types`** {{experimental_inline}} ディレクティブは、既知の DOM XSS シンクの使用を、文字列の代わりにスプーフィング不可能な型付きの値のみを受け入れる定義済みの関数のセットに制限するようにユーザエージェントに指示します。

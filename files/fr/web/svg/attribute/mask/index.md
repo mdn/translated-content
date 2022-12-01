@@ -3,6 +3,7 @@ title: mask
 slug: Web/SVG/Attribute/mask
 translation_of: Web/SVG/Attribute/mask
 ---
+
 {{SVGRef}}
 
 L'attribut `mask` est un attribut de présentation principalement utilisé pour appliquer un trou (défini par un élément {{ SVGElement("mask") }}) sur l'élément qui possède cet attribut.

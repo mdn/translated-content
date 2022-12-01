@@ -2,11 +2,12 @@
 title: TextTrack.mode
 slug: Web/API/TextTrack/mode
 ---
+
 {{APIRef("WebVTT")}}
 
 {{domxref("TextTrack")}} インターフェイスの **`mode`** プロパティは、テキストトラックのモードを指定して制御する `disabled`, `hidden`, `showing` のいずれかの文字列です。この値を読み取って現在のモードを決定したり、この値を変更してモードを切り替えることができます。
 
-> **Note:** さらに、 Safari でサブタイトルのキューを表示するには、独自のビデオプレーヤーコントロールを実装する際に、 **`default`** 論理値属性を true に設定する必要があります。
+> **メモ:** さらに、 Safari でサブタイトルのキューを表示するには、独自のビデオプレーヤーコントロールを実装する際に、 **`default`** 論理値属性を true に設定する必要があります。
 
 ## 構文
 
@@ -63,9 +64,7 @@ window.addEventListener("load", event => {
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                                 | 備考 |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ---- |
-| {{ SpecName('HTML WHATWG', '#dom-texttrack-mode', 'mode') }} | {{ Spec2('HTML WHATWG') }} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

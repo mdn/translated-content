@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.globalCompositeOperation
 slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 ---
+
 {{APIRef}}
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.globalCompositeOperation`** 属性设置要在绘制新形状时应用的合成操作的类型，其中 type 是用于标识要使用的合成或混合模式操作的字符串。
@@ -97,7 +98,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.globalCompositeOperation")}}
+{{Compat}}
 
 ### WebKit/Blink-specific 注解
 

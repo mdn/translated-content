@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feDisplacementMap
 ---
+
 {{SVGRef}}
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feDisplacementMap>`** utilise les valeurs de pixel de l'image de {{SVGAttr("in2")}} pour déplacer spatialement l'image de {{SVGAttr("in")}}.

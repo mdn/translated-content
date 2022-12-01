@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
 translation_of: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
 browser-compat: javascript.builtins.EvalError.EvalError
 ---
+
 {{JSRef}}
 
 Le **constructeur `EvalError()`** permet de créer un objet représentant une erreur concernant la fonction globale [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Cette exception n'est plus déclenchée par les moteurs JavaScript désormais, toutefois l'objet `EvalError` reste présent à des fins de compatibilité.

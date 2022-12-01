@@ -2,6 +2,7 @@
 title: WeakMap.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/set
 ---
+
 {{JSRef}}
 
 **`set()`** メソッドは、指定されたキーと値をもつ新しい要素を `WeakMap` オブジェクトへ追加します。
@@ -42,9 +43,7 @@ wm.set(obj, 'baz');
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.set', 'WeakMap.prototype.set')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

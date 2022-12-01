@@ -1,9 +1,9 @@
 ---
 title: matrix()
 slug: Web/CSS/transform-function/matrix
-translation_of: Web/CSS/transform-function/matrix()
 original_slug: Web/CSS/transform-function/matrix()
 ---
+
 {{CSSRef}}
 
 A função CSS **`matrix()`** define uma matriz de transformação 2D homogênea. Isso resulta em um dado do tipo {{cssxref("&lt;transform-function&gt;")}} .
@@ -130,11 +130,11 @@ div {
 
 ## Compatibilidade com navegadores
 
-Please see the [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
+Please see the [`<transform-function>`](/pt-BR/docs/Web/CSS/transform-function#Browser_compatibility) data type for compatibility info.
 
 ## See also
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`matrix3d()`](/en-US/docs/Web/CSS/transform-function/matrix3d)
+- [`matrix3d()`](/pt-BR/docs/Web/CSS/transform-function/matrix3d)
 - [Understanding the CSS Transforms Matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

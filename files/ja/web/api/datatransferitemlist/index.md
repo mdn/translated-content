@@ -2,6 +2,7 @@
 title: DataTransferItemList
 slug: Web/API/DataTransferItemList
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItemList`** object is a list of {{domxref("DataTransferItem")}} objects representing items being dragged. During a _drag operation_, each {{domxref("DragEvent")}} has a {{domxref("DragEvent.dataTransfer","dataTransfer")}} property and that property is a `DataTransferItemList`.
@@ -30,11 +31,7 @@ Each of this interface's methods and properties has a reference page, and each r
 
 ## Specifications
 
-| Specification                                                                                                            | Status                           | Comment                                                |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', 'interaction.html#datatransferitemlist','DataTransferItemList')}} | {{Spec2('HTML WHATWG')}} |                                                        |
-| {{SpecName('HTML5.1', 'editing.html#datatransferitemlist','DataTransferItemList')}}         | {{Spec2('HTML5.1')}}     | Not included in W3C HTML5 {{Spec2('HTML5 W3C')}} |
-|                                                                                                                          |                                  |                                                        |
+{{Specifications}}
 
 ## Browser compatibility
 

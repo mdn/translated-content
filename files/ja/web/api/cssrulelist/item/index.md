@@ -2,6 +2,7 @@
 title: CSSRuleList.item()
 slug: Web/API/CSSRuleList/item
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`item()`** は {{domxref("CSSRuleList")}} インターフェイスのメソッドで、 `index` で指定された {{domxref("CSSRule")}} オブジェクトを返します。指定された `index` が存在しなければ `null` を返します。

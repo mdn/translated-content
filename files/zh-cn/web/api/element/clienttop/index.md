@@ -2,6 +2,7 @@
 title: Element.clientTop
 slug: Web/API/Element/clientTop
 ---
+
 {{ APIRef("DOM") }}
 
 一个元素顶部边框的宽度（以像素表示）。不包括顶部外边距或内边距。`clientTop` 是只读的。

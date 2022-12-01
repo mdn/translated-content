@@ -2,6 +2,7 @@
 title: PerformanceMark
 slug: Web/API/PerformanceMark
 ---
+
 {{APIRef("User Timing API")}}
 
 **`PerformanceMark`** は {{domxref("PerformanceEntry.entryType","entryType")}} の "`mark`" を持つ{{domxref("PerformanceEntry")}} オブジェクトの抽象インターフェイスです。
@@ -32,10 +33,7 @@ slug: Web/API/PerformanceMark
 
 ## 仕様書
 
-| 仕様書                                                                                               | ステータス                                   | コメント     |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------ |
-| {{SpecName('User Timing Level 2', '#performancemark', 'PerformanceMark')}} | {{Spec2('User Timing Level 2')}} |              |
-| {{SpecName('User Timing', '#performancemark', 'PerformanceMark')}}             | {{Spec2('User Timing')}}             | 基本的な定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

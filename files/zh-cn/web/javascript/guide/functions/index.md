@@ -2,9 +2,10 @@
 title: 函数
 slug: Web/JavaScript/Guide/Functions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 
-函数是 JavaScript 中的基本组件之一。 一个函数是 JavaScript 过程 — 一组执行任务或计算值的语句。要使用一个函数，你必须将其定义在你希望调用它的作用域内。
+函数是 JavaScript 中的基本组件之一。一个函数是 JavaScript 过程 — 一组执行任务或计算值的语句。要使用一个函数，你必须将其定义在你希望调用它的作用域内。
 
 一个 JavaScript 函数用`function`关键字定义，后面跟着函数名和圆括号。
 
@@ -113,7 +114,7 @@ if (num == 0){
 }
 ```
 
-除了上述的定义函数方法外，你也可以在运行时用 {{jsxref("Function")}} 构造器由一个字符串来创建一个函数 ，很像 {{jsxref("Global_Objects/eval", "eval()")}} 函数。
+除了上述的定义函数方法外，你也可以在运行时用 {{jsxref("Function")}} 构造器由一个字符串来创建一个函数，很像 {{jsxref("Global_Objects/eval", "eval()")}} 函数。
 
 当一个函数是一个对象的属性时，称之为**方法**。了解更多关于对象和方法的知识 [使用对象](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects)。
 
@@ -646,9 +647,9 @@ JavaScript 语言有好些个顶级的内建函数：
 - {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
   - : **`uneval()`**方法创建的一个{{jsxref("Object")}}的源代码的字符串表示。
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-  - : **`isFinite()`**函数判断传入的值是否是有限的数值。 如果需要的话，其参数首先被转换为一个数值。
+  - : **`isFinite()`**函数判断传入的值是否是有限的数值。如果需要的话，其参数首先被转换为一个数值。
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : **`isNaN()`**函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：`isNaN`函数内部的[`强制转换规则`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description)十分有趣； 另一个可供选择的是 ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)来判断数值类型。
+  - : **`isNaN()`**函数判断一个值是否是{{jsxref("Global_Objects/NaN", "NaN")}}。注意：`isNaN`函数内部的[`强制转换规则`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description)十分有趣；另一个可供选择的是 ECMAScript 6 中定义{{jsxref("Number.isNaN()")}} , 或者使用 [`typeof`](/zh-CN/docs/Web/JavaScript/Reference/Operators/typeof)来判断数值类型。
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - : **`parseFloat()`** 函数解析字符串参数，并返回一个浮点数。
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}

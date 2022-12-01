@@ -2,6 +2,7 @@
 title: X-Forwarded-For
 slug: Web/HTTP/Headers/X-Forwarded-For
 ---
+
 {{HTTPSidebar}}
 
 **`X-Forwarded-For`** (XFF) 在客户端访问服务器的过程中如果需要经过 HTTP 代理或者负载均衡服务器，可以被用来获取最初发起请求的客户端的 IP 地址，这个消息首部成为事实上的标准。在消息流从客户端流向服务器的过程中被拦截的情况下，服务器端的访问日志只能记录代理服务器或者负载均衡服务器的 IP 地址。如果想要获得最初发起请求的客户端的 IP 地址的话，那么 X-Forwarded-For 就派上了用场。

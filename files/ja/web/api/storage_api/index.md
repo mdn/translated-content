@@ -2,6 +2,7 @@
 title: Storage API
 slug: Web/API/Storage_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}}
 
 ストレージ標準（Storage Standard）は、個々のウェブサイトのコンテンツがアクセス可能なデータを格納するすべての API およびテクノロジーで使用する、共通の共有ストレージシステムを定義しています。Storage API は、どのくらいのスペースを使用できるかや、すでにどのくらいのスペースを使用しているかを調べたり、{{Glossary("user agent","ユーザーエージェント")}}が他のもののための場所を空けるためにサイトデータを処分する前に、警告する必要があるかどうかを制御したりといった機能を、サイトのコードに提供します。
@@ -46,7 +47,7 @@ slug: Web/API/Storage_API
 
 サイトやアプリに **`"persistent-storage"`** 機能のパーミッションがある場合は、{{domxref("StorageManager.persist()")}} メソッドを使用して、そのボックスを永続的にすることを要求できます。また利用特性や他の測定基準により、ユーザーエージェントがサイトのストレージユニットを永続的にすることを決定することも可能です。`"persistent-storage"` 機能のパーミッション関連のフラグ、アルゴリズム、およびタイプはすべてパーミッションの標準デフォルトに設定されています。ただし、**パーミッションの状態**（permission state）はオリジン全体で同じでなければならず、パーミッションの状態が `"granted"` （付与）されていない場合（何らかの理由で永続的ストレージ機能へのアクセスが拒否された場合）、そのオリジンのサイトストレージユニットのボックスモードは常に `"best-effort"` になります。
 
-> **Note:** **注**: パーミッションの取得と管理の詳細については、[Permissions API の使用](/ja/docs/Web/API/Permissions_API/Using_the_Permissions_API)を参照してください。
+> **メモ:** パーミッションの取得と管理の詳細については、[Permissions API の使用](/ja/docs/Web/API/Permissions_API/Using_the_Permissions_API)を参照してください。
 
 サイトストレージユニットを消去するとき、オリジンのボックスは単一の実体として扱われます。ユーザーエージェントがそれを消去する必要があり、ユーザーが承認した場合、個々の API からデータのみを消去する手段を提供するのではなく、データストア全体を消去します。
 
@@ -73,9 +74,7 @@ navigator.storage.estimate().then(estimate => {
 
 ## 仕様
 
-| 仕様                             | 状態                         | コメント |
-| -------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Storage')}} | {{Spec2('Storage')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

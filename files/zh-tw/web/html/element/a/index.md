@@ -2,6 +2,7 @@
 title: <a>
 slug: Web/HTML/Element/a
 ---
+
 **HTML `<a>` 元素**（意為 Anchor）建立了通往其他頁面、檔案、Email 地址、或其他 URL 的超連結。
 
 | [內容類型](/zh-TW/docs/HTML/Content_categories) | [流型內容](/zh-TW/docs/HTML/Content_categories#Flow_content)、[phrasing content](/zh-TW/docs/HTML/Content_categories#Phrasing_content), [interactive content](/zh-TW/docs/Web/Guide/HTML/Content_categories#interactive_content), palpable content.                                                                                                                                                                           |
@@ -215,10 +216,10 @@ Whether clicking on an {{HTMLElement("a")}} causes it to become focused varies b
 
 ## Browser compatibility
 
-{{Compat("html.elements.a")}}
+{{Compat}}
 
 ## See also
 
 - Other elements conveying [text-level semantics](/zh-TW/docs/HTML/Text_level_semantics_conveying_elements): {{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

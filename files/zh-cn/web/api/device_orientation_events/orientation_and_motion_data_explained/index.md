@@ -3,11 +3,12 @@ title: Orientation 和 motion 数据解释
 slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 original_slug: Web/Events/Orientation_and_motion_data_explained
 ---
+
 ## 总言
 
 当我们要使用 orientation 和 motion 事件时，理解浏览器给我们的相关值是什么意思就显的相当重要了。这篇文章会详细介绍在用的坐标系统并会教你如何全用它们。
 
-> **警告：** 目前，Firefox 和 Chrome 处理坐标的方式不同。 在使用它们的时候要多加注意。
+> **警告：** 目前，Firefox 和 Chrome 处理坐标的方式不同。在使用它们的时候要多加注意。
 
 ## 坐标系
 
@@ -51,7 +52,7 @@ alpha 为 0° 时表示设备的顶部正指北极方向，当设备向左旋转
 
 ![beta.png](beta2.png)
 
-当 beta 为 0° 时表示设备顶部和底部与地表面的距离是一样的，当设备向前翻转时，beta 递增到 180°，向后翻转递减到-180°。
+当 beta 为 0° 时表示设备顶部和底部与地表面的距离是一样的，当设备向前翻转时，beta 递增到 180°，向后翻转递减到 -180°。
 
 ### Gamma
 
@@ -59,4 +60,4 @@ alpha 为 0° 时表示设备的顶部正指北极方向，当设备向左旋转
 
 ![gamma.png](gamma.png)
 
-gamma 等于 0° 表示设备左右两边与地表面的距离相等，当设备向右翻转时，gamma 递增到 90° ，向左翻转时，递减到-90°。
+gamma 等于 0° 表示设备左右两边与地表面的距离相等，当设备向右翻转时，gamma 递增到 90° ，向左翻转时，递减到 -90°。

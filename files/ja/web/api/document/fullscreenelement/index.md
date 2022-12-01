@@ -1,21 +1,18 @@
 ---
-title: DocumentOrShadowRoot.fullscreenElement
+title: Document.fullscreenElement
 slug: Web/API/Document/fullscreenElement
 original_slug: Web/API/DocumentOrShadowRoot/fullscreenElement
+l10n:
+  sourceCommit: 23aea0fbb04893c64890c89a634250283e2beb71
 ---
+
 {{ApiRef("Fullscreen API")}}
 
-**`DocumentOrShadowRoot.fullscreenElement`** プロパティは読み取り専用で、この文書内で現在全画面モードで表示されている {{ domxref("Element") }} を返し、全画面モードを使用していない場合は `null` を返します。
+**`Document.fullscreenElement`** プロパティは読み取り専用で、この文書内で現在全画面モードで表示されている {{ domxref("Element") }} を返し、全画面モードを使用していない場合は `null` を返します。
 
-このプロパティは読み取り専用ですが、変更されても (strict モードでも) 例外は発生しません。設定しても何もせず、無視されます。
+このプロパティは読み取り専用ですが、変更されても（厳格モードでも）例外は発生しません。設定しても何もせず、無視されます。
 
-## 構文
-
-```
-var element = document.fullscreenElement;
-```
-
-### 返値
+## 返値
 
 現在全画面モードになっている {{domxref("Element")}} オブジェクト。全画面モードがこの `document` で使用されていない場合、返値は `null` です。
 
@@ -25,7 +22,7 @@ var element = document.fullscreenElement;
 
 ```js
 function isVideoInFullscreen() {
-  if (document.fullscreenElement && document.fullscreenElement.nodeName == 'VIDEO') {
+  if (document.fullscreenElement?.nodeName === 'VIDEO') {
     return true;
   }
   return false;
@@ -34,9 +31,7 @@ function isVideoInFullscreen() {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName("Fullscreen", "#dom-document-fullscreenelement", "Document.fullscreenElement")}} | {{Spec2("Fullscreen")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -44,8 +39,8 @@ function isVideoInFullscreen() {
 
 ## 関連情報
 
-- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
-- [Fullscreen API ガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
+- [全画面 API](/ja/docs/Web/API/Fullscreen_API)
+- [全画面 API ガイド](/ja/docs/Web/API/Fullscreen_API/Guide)
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ cssxref(":fullscreen") }} and {{cssxref("::backdrop")}}

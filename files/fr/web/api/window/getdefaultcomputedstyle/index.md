@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/window/getDefaultComputedStyle
 ---
+
 {{APIRef("CSSOM")}}{{Non-standard_header}}
 
 `getDefaultComputedStyle()` fournit les valeurs calculées par défaut de toutes les propriétés CSS d'un élément, en ignorant la mise en forme de l'auteur. C'est-à-dire que seules les mises en forme de l'agent utilisateur et de l'utilisateur sont pris en compte.

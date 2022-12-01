@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/hourCycle
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.hourCycle`** est une propriété accessible via un accesseur qui renvoie la convention pour le format des heures utilisée par la locale courante.

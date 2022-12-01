@@ -2,6 +2,7 @@
 title: 什么是网络服务器？
 slug: Learn/Common_questions/What_is_a_web_server
 ---
+
 在这篇文章中我们会重温什么是网络服务器，它们如何工作，以及为什么它们很重要。
 
 <table class="learn-box standard-table">
@@ -53,7 +54,7 @@ _还没有可用的资料。请考虑为此投稿 \[[Please, consider contributi
 
 ### 托管文件
 
-一个网络服务器首先需要存储这个网站的文件，也就是说所有的 HTML 文档和它们的相关资源（related assets），包括图片，CSS 样式表，JavaScript 文件，字形（fonts） 以及影像。
+一个网络服务器首先需要存储这个网站的文件，也就是说所有的 HTML 文档和它们的相关资源（related assets），包括图片，CSS 样式表，JavaScript 文件，字形（fonts）以及影像。
 
 严格来说，你可以在你自己的计算机上托管所有的这些文件，但是在一个专用的网络服务器上存储它们会方便得多，因为它
 
@@ -73,7 +74,7 @@ _还没有可用的资料。请考虑为此投稿 \[[Please, consider contributi
 一个*{{Glossary("Protocol", "协议")}}*是一套为了在两台计算机间交流而制定的规则。HTTP 是一个文本化的（textual），无状态的（stateless）协议。
 
 - 文本化
-  - : 所有的命令都是纯文本的（plain-text） 和人类可读的（human-readable）。
+  - : 所有的命令都是纯文本的（plain-text）和人类可读的（human-readable）。
 - 无状态
   - : 无论是服务器还是客户都不会记住之前的交流。举个例子，仅依靠 HTTP，一个服务器不能记住你输入的密码或者你正处于业务中的哪一步。你需要一个应用服务器来进行这样的工作。（我们会在日后的文章中涵盖这类的技术。）
 
@@ -83,7 +84,7 @@ HTTP 为客户和服务器间的如何沟通提供清晰的规则。我们会在
 - 当通过 HTTP 请求一个文件时，客户必须提供这个文件的{{Glossary("URL")}}。
 - 网络服务器*必须应答*每一个 HTTP 请求，至少也要回复一个错误信息。
 
-[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/zh-CN/docs/Web/HTTP/Status/404)在一个网络服务器上，HTTP 服务器负责处理和应答传入的请求。
+[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/zh-CN/docs/Web/HTTP/Status/404) 在一个网络服务器上，HTTP 服务器负责处理和应答传入的请求。
 
 1. 当收到一个请求时，HTTP 服务器首先要检查所请求的 URL 是否与一个存在的文件相匹配。
 2. 如果是，网络服务器会传送文件内容回到浏览器。如果不是，一个应用服务器会建立必要的文件。

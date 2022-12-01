@@ -2,9 +2,10 @@
 title: WorkerGlobalScope
 slug: Web/API/WorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
-[Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) 的 **`WorkerGlobalScope`** 接口 是一个代表了任何 scope of worker 的接口. Workers 没有浏览内容；这个 scope 包含的信息总是通过 {{domxref("Window")}} objects 传递 — 比如 event handlers, the console or the associated {{domxref("WorkerNavigator")}} object。每个 `WorkerGlobalScope` 都有自己的事件循环。
+[Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) 的 **`WorkerGlobalScope`** 接口 是一个代表了任何 scope of worker 的接口。Workers 没有浏览内容；这个 scope 包含的信息总是通过 {{domxref("Window")}} objects 传递 — 比如 event handlers, the console or the associated {{domxref("WorkerNavigator")}} object。每个 `WorkerGlobalScope` 都有自己的事件循环。
 
 每个 worker type 都有专门的这个接口：{{domxref("DedicatedWorkerGlobalScope")}} for dedicated workers, {{domxref("SharedWorkerGlobalScope")}} for shared workers, and {{domxref("ServiceWorkerGlobalScope")}} for [ServiceWorker](/zh-CN/docs/Web/API/ServiceWorker_API). `self` 属性返回每个内容的专门 scope.
 
@@ -35,15 +36,15 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowTimers")}}, and {{domxref("WindowBase64")}}._
 
 - {{domxref("WorkerGlobalScope.onerror")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("error")}} event is raised.
+  - : Is an event handler representing the code to be called when the [`error`](/zh-CN/docs/Web/API/Element/error_event) event is raised.
 - {{domxref("WorkerGlobalScope.onoffline")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("offline")}} event is raised.
+  - : Is an event handler representing the code to be called when the [`offline`](/zh-CN/docs/Web/API/Window/offline_event) event is raised.
 - {{domxref("WorkerGlobalScope.ononline")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("online")}} event is raised.
+  - : Is an event handler representing the code to be called when the [`online`](/zh-CN/docs/Web/API/Window/online_event) event is raised.
 - {{domxref("WorkerGlobalScope.onlanguagechange")}}
-  - : An {{event("Event_handlers", "event handler")}} fired at the global/worker scope object when the user's preferred languages change.
+  - : An event handler fired at the global/worker scope object when the user's preferred languages change.
 - {{domxref("WorkerGlobalScope.onclose")}} {{non-standard_inline}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("close")}} event is raised.
+  - : Is an event handler representing the code to be called when the `close` event is raised.
 - {{domxref("WorkerGlobalScope.onrejectionhandled")}} {{non-standard_inline}}
   - : An event handler for handled [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) rejection events.
 - {{domxref("WorkerGlobalScope.onunhandledrejection")}} {{non-standard_inline}}
@@ -101,7 +102,7 @@ console.log(navigator);
 
 ## Browser compatibility
 
-{{Compat("api.WorkerGlobalScope")}}
+{{Compat}}
 
 ## See also
 

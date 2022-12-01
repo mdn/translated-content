@@ -5,6 +5,7 @@ tags:
   - CSS
 translation_of: Web/CSS/overscroll-behavior
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`overscroll-behavior`** — это сокращение для свойств {{cssxref("overscroll-behavior-x")}} и {{cssxref("overscroll-behavior-y")}}, которые позволяют управлять поведением прокрутки при достижении границы области прокрутки.

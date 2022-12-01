@@ -2,6 +2,7 @@
 title: Gamepad
 slug: Web/API/Gamepad
 ---
+
 {{APIRef("Gamepad API")}}
 
 [Gamepad API](/ja/docs/Web/API/Gamepad_API) の **`Gamepad`** インターフェイスはそれぞれのゲームパッドやその他のコントローラーを定義し、ボタンのプッシュや軸位置や ID といった情報にアクセスできるようにします。
@@ -50,11 +51,7 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## 仕様書
 
-| 仕様                                                                                                             | 状態                                     | コメント                                                                         |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------- |
-| {{SpecName("Gamepad", "#gamepad-interface", "Gamepad")}}                                     | {{Spec2("Gamepad")}}             | 初期定義                                                                         |
-| {{SpecName('WebVR 1.1', '#gamepad-getvrdisplays-attribute', 'displayId')}}             | {{Spec2("WebVR 1.1")}}             | {{domxref("Gamepad.displayId")}} プロパティの定義。                  |
-| {{SpecName("GamepadExtensions", "#partial-gamepad-interface", "Gamepad extensions")}} | {{Spec2("GamepadExtensions")}} | [Experimental extensions to Gamepad](#experimental_extensions_to_gamepad) の定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

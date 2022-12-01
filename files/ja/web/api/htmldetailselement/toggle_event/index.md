@@ -2,6 +2,7 @@
 title: 'HTMLDetailsElement: toggle イベント'
 slug: Web/API/HTMLDetailsElement/toggle_event
 ---
+
 {{APIRef}}
 
 **`toggle`** イベントは、 {{HtmlElement("details")}} 要素の `open`/`closed` の状態がトグル切り替えされたときに発生します。
@@ -102,9 +103,7 @@ chapters.forEach((chapter) => {
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-toggle', 'toggle event')}} | {{Spec2("HTML WHATWG")}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

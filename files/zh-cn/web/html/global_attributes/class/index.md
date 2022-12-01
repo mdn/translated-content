@@ -2,9 +2,10 @@
 title: class
 slug: Web/HTML/Global_attributes/class
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
-[全局属性](/zh-CN/docs/Web/HTML/Global_attributes) **class** 的值是一个以空格分隔的元素的类名（classes ）列表，它允许 CSS 和 Javascript 通过类选择器 ([class selectors](/zh-CN/docs/Web/CSS/Class_selectors)) 或 DOM 方法 ( {{domxref("document.getElementsByClassName")}}) 来选择和访问特定的元素。
+[全局属性](/zh-CN/docs/Web/HTML/Global_attributes) **class** 的值是一个以空格分隔的元素的类名（classes）列表，它允许 CSS 和 Javascript 通过类选择器 ([class selectors](/zh-CN/docs/Web/CSS/Class_selectors)) 或 DOM 方法 ( {{domxref("document.getElementsByClassName")}}) 来选择和访问特定的元素。
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-class.html","tabbed-standard")}}
 

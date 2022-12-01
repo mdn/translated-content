@@ -2,6 +2,7 @@
 title: HTML DOM API
 slug: Web/API/HTML_DOM_API
 ---
+
 {{DefaultAPISidebar("HTML DOM")}}
 
 **HTML DOM API** は、{{Glossary("HTML")}} の各{{Glossary("element", "要素")}}の機能を定義するインターフェイスと、それらが依存する補助的な型やインターフェイスから構成されています。
@@ -352,12 +353,7 @@ nameField.addEventListener("input", event => {
 
 ## 仕様書
 
-| 仕様書                        | 状態                           | 備考                                         |
-| ------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('HTML WHATWG')}} | {{Spec2('HTML WHATWG')}} | WHATWG HTML 仕様書                       |
-| {{SpecName('HTML5 W3C')}}     | {{Spec2('HTML5 W3C')}}     | {{SpecName("DOM2 HTML")}} から変更なし |
-| {{SpecName('DOM2 HTML')}}     | {{Spec2('DOM2 HTML')}}     | {{SpecName("DOM1")}} から変更なし   |
-| {{SpecName('DOM1')}}         | {{Spec2('DOM1')}}         | 初回定義                             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

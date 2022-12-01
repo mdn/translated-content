@@ -9,6 +9,7 @@ tags:
   - Sélecteur
 translation_of: Web/CSS/:has
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:has()`** permet de cibler un élément si au moins un des sélecteurs passés en paramètre correspond à l'élément (selon la portée, {{cssxref(":scope")}}, de l'élément).
@@ -50,10 +51,8 @@ h1:has(+ p)
 
 ## Spécifications
 
-| Spécification                                                            | État                                 | Commentaires        |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#relational", ":has()")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.has")}}
+{{Compat}}

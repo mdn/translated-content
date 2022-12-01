@@ -2,6 +2,7 @@
 title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("CacheStorage")}} インターフェイスの **`has()`** メソッドは、{{domxref("Cache")}} オブジェクトが `cacheName` と一致する場合に `true` に解決される {{jsxref("Promise")}} を返します。
@@ -45,9 +46,7 @@ caches.has('v1').then(function(hasCache) {
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#cache-storage-has', 'CacheStorage: has')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

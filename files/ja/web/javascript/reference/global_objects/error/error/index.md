@@ -2,6 +2,7 @@
 title: Error() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 ---
+
 {{JSRef}}
 
 **`Error`** コンストラクターは、エラーオブジェクトを生成します。
@@ -37,9 +38,7 @@ const y = new Error('"new" キーワードによって生成されました。')
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error-constructor', 'Error constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

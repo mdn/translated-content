@@ -9,6 +9,7 @@ tags:
 translation_of: Learn/Common_questions/What_are_hyperlinks
 original_slug: Apprendre/Le_fonctionnement_des_liens_sur_le_Web
 ---
+
 Dans cet article, nous verrons ce que sont les liens et en quoi ils sont importants pour la structure du Web.
 
 <table class="standard-table">

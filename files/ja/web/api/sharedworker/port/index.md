@@ -2,6 +2,7 @@
 title: SharedWorker.port
 slug: Web/API/SharedWorker/port
 ---
+
 {{APIRef("Web Workers API")}}
 
 {{domxref("SharedWorker")}} インターフェースの **`port`** プロパティは、shared worker を制御したり通信したりするために使用する {{domxref("MessagePort")}} オブジェクトを返します。
@@ -29,9 +30,7 @@ myWorker.port.start();
 
 ## 仕様
 
-| 仕様                                                                                                     | ステータス                       | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "#dom-sharedworker-port", "AbstractWorker.onerror")}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

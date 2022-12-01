@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/toLocaleLowerCase
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleLowerCase()`** renvoie la chaîne de caractères qui appelle la méthode en une chaîne de caractères représentées en minuscules, en tenant compte des correspondances de caractères propres aux différentes locales.
@@ -57,17 +58,11 @@ La méthode `toLocaleLowerCase()` renvoie la valeur de la chaîne de caractères
 
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                             | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                                         | {{Spec2('ES3')}}             | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.17', 'String.prototype.toLocaleLowerCase')}}                                         | {{Spec2('ES5.1')}}         |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}             | {{Spec2('ES6')}}             |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}     | {{Spec2('ESDraft')}}     |                                                       |
-| {{SpecName('ES Int Draft', '#sup-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}} | {{Spec2('ES Int Draft')}} | Ajout du paramètre `locale` dans ES Intl 2017         |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.toLocaleLowerCase")}}
+{{Compat}}
 
 ## Voir aussi
 

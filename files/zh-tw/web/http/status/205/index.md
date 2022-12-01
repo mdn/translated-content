@@ -2,6 +2,7 @@
 title: 205 Reset Content
 slug: Web/HTTP/Status/205
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`205 Reset Content`** 狀態碼用來通知客戶端重置文件視圖，例如：清除表單內容、重置畫布狀態或刷新使用者界面。

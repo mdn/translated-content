@@ -2,6 +2,7 @@
 title: 遞增運算子 (++)
 slug: Web/JavaScript/Reference/Operators/Increment
 ---
+
 {{jsSidebar("Operators")}}
 
 遞增運算子 (`++`) 遞增（加一）它的運算元並將結果回傳。

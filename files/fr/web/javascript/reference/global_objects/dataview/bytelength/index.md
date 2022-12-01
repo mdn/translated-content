@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/byteLength
 ---
+
 {{JSRef}}
 
 L'accesseur **`byteLength`** est une propriété représentant la longueur, exprimée en octets, de cette vue depuis le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.
@@ -45,14 +46,11 @@ dataview3.byteLength; // 6 (en raison du décalage (offset) pour la construction
 
 ## Spécifications
 
-| Spécification                                                                                                                        | Statut                       | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.byteLength")}}
+{{Compat}}
 
 ## Voir aussi
 

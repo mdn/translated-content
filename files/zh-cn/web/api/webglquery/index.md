@@ -2,6 +2,7 @@
 title: WebGLQuery
 slug: Web/API/WebGLQuery
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 **`WebGLQuery`** 接口是 [WebGL 2](/zh-CN/docs/Web/API/WebGL_API) API 的一部分，并且提供几种异步查询信息的方法。缺省情况下，遮蔽查询和图元查询是可用的。
@@ -34,7 +35,7 @@ var query = gl.createQuery();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLQuery")}}
+{{Compat}}
 
 ## 参见
 

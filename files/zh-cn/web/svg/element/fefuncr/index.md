@@ -2,6 +2,7 @@
 title: feFuncR
 slug: Web/SVG/Element/feFuncR
 ---
+
 {{SVGRef}}
 
 该滤镜为它的父{{SVGElement("feComponentTransfer")}}元素的输入图形的红色成分定义了变换函数。
@@ -24,7 +25,7 @@ slug: Web/SVG/Element/feFuncR
 
 ## DOM 接口
 
-该元素实现了`SVGFEFuncRElement接口。`
+该元素实现了 `SVGFEFuncRElement` 接口。
 
 ## 参见
 

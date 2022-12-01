@@ -3,6 +3,7 @@ title: JavaScript のコード例を整形するためのガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript
 original_slug: MDN/Guidelines/Code_guidelines/JavaScript
 ---
+
 {{MDNSidebar}}
 
 以下のガイドラインは、 MDN Web Docs における JavaScript のコード例の書き方について述べています。これは、できるだけ多くの人に理解されるような簡潔な例を書くためのシンプルなリストです。もし、もっと詳しく説明したものが欲しければ、 [AirBnB JavaScript Style Guide](https://github.com/airbnb/javascript) をお勧めします。これは、私たちのガイドラインと概ね互換性があります。
@@ -426,7 +427,7 @@ let thisIsaveryLONGVariableThatRecordsPlayerscore345654 = 0;
 let s = d/t;
 ```
 
-> **Note:** 人間が読める意味のある名前を使わなくても良いのは、ループの反復子に `i` や `j` などを使用するような、非常に一般的に認識されている慣習が存在する場合だけです。
+> **メモ:** 人間が読める意味のある名前を使わなくても良いのは、ループの反復子に `i` や `j` などを使用するような、非常に一般的に認識されている慣習が存在する場合だけです。
 
 ### 変数の宣言
 
@@ -477,5 +478,5 @@ let s = d/t;
   - [`fetch()` の例](/ja/docs/Web/API/fetch#例)
   - [`fillRect()` の例](/ja/docs/Web/API/CanvasRenderingContext2D/fillRect#例) （Canvas 2D の例は、古いスタイルの `var` をまだ使用していますが、概ね良好です）。
   - [Payment Request API の `show()`](/ja/docs/Web/API/PaymentRequest/show) （{{DOMxRef("PaymentRequest")}} の例は、全般的にかなり良いものです）。
-  - [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) （HTML、CSS、JavaScript の一般的な良い実践と、スニペットを使用する方法の良いデモと、他の場所での完全な例へのリンク）。
+  - [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) （HTML、CSS、JavaScript の一般的な良い実践と、スニペットを使用する方法の良いデモと、他の場所での完全な例へのリンク）。
   - [メディア能力 API の使用](/ja/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API) （ガイドでコードスニペットを使用するための、より一般的な良い実践）。

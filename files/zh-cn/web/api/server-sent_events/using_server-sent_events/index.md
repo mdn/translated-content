@@ -2,6 +2,7 @@
 title: 使用服务器发送事件
 slug: Web/API/Server-sent_events/Using_server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 开发一个使用服务器发送的事件的 Web 应用程序是很容易的。你需要在服务器上的一些代码将事件流传输到 Web 应用程序，但 Web 应用程序端的事情几乎完全相同，处理任何其他类型的事件。
@@ -24,7 +25,7 @@ const evtSource = new EventSource("ssedemo.php");
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 ```
 
-一旦你成功初始化了一个事件源，就可以对 {{event("message")}} 事件添加一个处理函数开始监听从服务器发出的消息了：
+一旦你成功初始化了一个事件源，就可以对 [`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event) 事件添加一个处理函数开始监听从服务器发出的消息了：
 
 ```js
 evtSource.onmessage = function(event) {
@@ -112,7 +113,7 @@ evtSource.close();
 
 ## 事件流格式
 
-事件流仅仅是一个简单的文本数据流，文本应该使用 [UTF-8](/zh-CN/docs/Glossary/UTF-8) 格式的编码。每条消息后面都由一个空行作为分隔符.以冒号开头的行为注释行，会被忽略。
+事件流仅仅是一个简单的文本数据流，文本应该使用 [UTF-8](/zh-CN/docs/Glossary/UTF-8) 格式的编码。每条消息后面都由一个空行作为分隔符。以冒号开头的行为注释行，会被忽略。
 
 > **备注：** 注释行可以用来防止连接超时，服务器可以定期发送一条消息注释行，以保持连接不断。
 
@@ -185,4 +186,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ## 浏览器兼容性
 
-{{Compat("api.EventSource")}}
+{{Compat}}

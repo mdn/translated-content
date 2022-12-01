@@ -2,6 +2,7 @@
 title: Number.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは {{jsxref("Number")}} オブジェクトがラップしているプリミティブ値を返します。

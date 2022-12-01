@@ -2,6 +2,7 @@
 title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ---
+
 {{JSRef}}
 
 **`TypedArray[@@species]`** アクセッサプロパティは、[typed array](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) のコンストラクタを返します。
@@ -35,9 +36,7 @@ class MyTypedArray extends Uint8Array {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%-@@species', 'get %TypedArray% [ @@species ]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

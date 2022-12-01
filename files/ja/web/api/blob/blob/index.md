@@ -2,6 +2,7 @@
 title: Blob()
 slug: Web/API/Blob/Blob
 ---
+
 {{APIRef("File API")}}
 
 **`Blob()`** コンストラクターは、新たな {{domxref("Blob")}} オブジェクトを返します。その blob の中身は、引数 `array` で与えられた値を連結したものから構成されています。
@@ -38,9 +39,7 @@ var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // blob
 
 ## 仕様
 
-| 仕様書                                                                   | 状態                         | 備考     |
-| ------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('File API', '#constructorBlob', 'Blob()')}} | {{Spec2('File API')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザの互換性
 

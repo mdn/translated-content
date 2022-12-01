@@ -2,11 +2,12 @@
 title: KeyboardEvent
 slug: Web/API/KeyboardEvent
 ---
+
 {{APIRef("DOM Events")}}
 
-**`KeyboardEvent`** 对象描述了用户与键盘的交互。 每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型`keydown`， `keypress` 与 `keyup` 用于识别不同的键盘活动类型。
+**`KeyboardEvent`** 对象描述了用户与键盘的交互。每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型`keydown`， `keypress` 与 `keyup` 用于识别不同的键盘活动类型。
 
-> **备注：** `KeyboardEvent` 只在低级别提示用户与一个键盘按键的交互是什么，不涉及这个交互的上下文含义。 当你需要处理文本输入的时候，使用 {{event("input")}} 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板， 键盘事件可能不会触发。
+> **备注：** `KeyboardEvent` 只在低级别提示用户与一个键盘按键的交互是什么，不涉及这个交互的上下文含义。当你需要处理文本输入的时候，使用 [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event) 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板，键盘事件可能不会触发。
 
 ## 构造函数
 
@@ -158,7 +159,7 @@ The following events are based on the `KeyboardEvent` type. They can be delivere
 
 ## 用法说明
 
-There are three types of keyboard events: {{event("keydown")}}, {{event("keypress")}}, and {{event("keyup")}}. For most keys, Gecko dispatches a sequence of key events like this:
+There are three types of keyboard events: [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event), [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event), and [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event). For most keys, Gecko dispatches a sequence of key events like this:
 
 1. When the key is first pressed, the `keydown` event is sent.
 2. If the key is not a modifier key, the `keypress` event is sent.
@@ -202,7 +203,7 @@ In these environments, unfortunately, there's no way for web content to tell the
 
 #### Auto-repeat handling prior to Gecko 5.0
 
-Before Gecko 5.0 {{geckoRelease('5.0')}}, keyboard handling was less consistent across platforms.
+Before Gecko 5.0, keyboard handling was less consistent across platforms.
 
 - Windows
   - : Auto-repeat behavior is the same as in Gecko 4.0 and later.
@@ -265,7 +266,7 @@ The `KeyboardEvent` interface specification went through numerous draft versions
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent")}}
+{{Compat}}
 
 ### 兼容性说明
 

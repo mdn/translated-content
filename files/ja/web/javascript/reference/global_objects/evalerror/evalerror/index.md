@@ -2,6 +2,7 @@
 title: EvalError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/EvalError/EvalError
 ---
+
 {{JSRef}}
 
 **`EvalError`** コンストラクターは、グローバルの {{jsxref("Global_Objects/eval", "eval()")}} 関数に関する新しいエラーを生成します。この例外はもう JavaScript からは使用されていませんが、 `EvalError` オブジェクトは互換性のために残っています。object
@@ -43,9 +44,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-nativeerror-constructors', 'NativeError constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: arguments.length
 slug: Web/JavaScript/Reference/Functions/arguments/length
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments.length`** プロパティは、関数に渡された引数の数が入ります。
@@ -26,7 +27,7 @@ function adder(base /*, n2, ... */) {
 }
 ```
 
-> **Note:** {{jsxref("Function.length")}} と arguments.length の違いに注意してください。
+> **メモ:** {{jsxref("Function.length")}} と arguments.length の違いに注意してください。
 
 ## 仕様書
 

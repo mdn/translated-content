@@ -2,6 +2,7 @@
 title: Gamepad.index
 slug: Web/API/Gamepad/index
 ---
+
 {{APIRef("Gamepad API")}}
 
 {{domxref("Gamepad") }} インターフェイスの **`Gamepad.index`** プロパティは、現在システムに接続されているそれぞれの機器の整数の固有番号 (自動更新) の整数を返します。
@@ -29,9 +30,7 @@ A {{jsxref("number") }}.
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                         | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#widl-Gamepad-index", "Gamepad.index")}} | {{Spec2("Gamepad")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: Django 介绍
 slug: Learn/Server-side/Django/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 在这第一 Django 文章中，我们将回答“什么是 Django”这个问题，并概述这个网络框架有什么特性。我们将描述主要功能，包括一些高级功能，但我们并不会在本单元中详细介绍。我们还会展示一些 Django 应用程序的主要构建模块（尽管此时你还没有要测试的开发环境）。
@@ -12,11 +13,11 @@ slug: Learn/Server-side/Django/Introduction
       <th scope="row">先决条件：</th>
       <td>
         基本的电脑知识。对
-        <a href="/en-US/docs/Learn/Server-side/First_steps"
+        <a href="/zh-CN/docs/Learn/Server-side/First_steps"
           >服务器端网站编程的一般了解</a
         >, 特别是
         <a
-          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/zh-CN/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >网站中客户端 - 服务器交互的机制</a
         >.
       </td>
@@ -104,7 +105,7 @@ Django 网络应用程序通常将处理每个步骤的代码分组到单独的�
 
 - **Templates:** 模板 是定义文件（例如 HTML 页面）的结构或布局的文本文件，用于表示实际内容的占位符。一个视图可以使用 HTML 模板，从数据填充它动态地创建一个 HTML 页面模型。可以使用模板来定义任何类型的文件的结构; 它不一定是 HTML！
 
-> **备注：** Django 将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 [Model View Controller](/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 架构有许多相似之处.
+> **备注：** Django 将此组织称为“模型视图模板（MVT）”架构。它与更加熟悉的 [Model View Controller](/zh-CN/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture) 架构有许多相似之处。
 
 以下部分将为您提供 Django 应用程序的这些主要部分的想法（稍后我们将在进一步详细介绍后，我们将在开发环境中进行更详细的介绍）。
 
@@ -121,7 +122,7 @@ urlpatterns = [
 
 > **备注：** 一点点 Python:
 >
-> - 该 `urlpatterns` 对象的列表 url() 功能。在 Python 中，使用方括号定义列表。项目以逗号分隔，并可能有一个 [可选的逗号](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). 例如: `[item1, item2, item3,]`.
+> - 该 `urlpatterns` 对象的列表 url() 功能。在 Python 中，使用方括号定义列表。项目以逗号分隔，并可能有一个 [可选的逗号](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). 例如：`[item1, item2, item3,]`.
 > - 该模式的奇怪的语法称为正则表达式。我们将在后面的文章中讨论这些内容！
 > - 第二个参数 url() 是当模式匹配时，将被调用的另一个函数。符号 views.index 表示该函数被调用，index() 并且可以在被调用的模块中找到 views（即在一个名为 views.py 的文件中）。
 
@@ -145,9 +146,7 @@ def index(request):
 
 > **备注：** 一点点 Python:
 >
-> - [Python 模块](https://docs.python.org/3/tutorial/modules.html) 是函数的“库”，存储在单独的文件中，我们可能想在我们的代码中使用它们。在这里我们只从 django.http 模块导入了 HttpResponse 对象，使我们可以在视图中使用它：
->   from django.http import HttpResponse。
->   还有其他方法可以从模块导入一些或所有对象。
+> - [Python 模块](https://docs.python.org/3/tutorial/modules.html) 是函数的“库”，存储在单独的文件中，我们可能想在我们的代码中使用它们。在这里我们只从 django.http 模块导入了 HttpResponse 对象，使我们可以在视图中使用它：`from django.http import HttpResponse` 还有其他方法可以从模块导入一些或所有对象。
 > - 如上所示，使用`def`关键字声明函数，在函数名称后面的括号中列出命名参数；整行以冒号结尾。注意下一行是否都进行了**缩进**。缩进很重要，因为它指定代码行在该特定块内 (强制缩进是 Python 的一个关键特征，也是 Python 代码很容易阅读的一个原因)。
 
 视图通常存储在一个名为 **views.py** 的文件中。
@@ -184,7 +183,7 @@ class Team(models.Model):
 
 Django 模型提供了一个用于搜索数据库的简单查询 API。这可以使用不同的标准（例如，精确，不区分大小写，大于等等）来匹配多个字段，并且可以支持复杂语句（例如，您可以在拥有一个团队的 **U11** 团队上指定搜索名称以“Fr”开头或以“al”结尾）。
 
-代码片段显示了一个视图函数（资源处理程序），用于显示我们所有的 **U09** 团队。粗体显示如何使用模型查询 API 过滤所有记录，其中该 **team_level** 字段具有正确的文本“**U09**”（请注意，该条件如何 filter() 作为参数传递给该函数，该字段名称和匹配类型由双下划线： **team_level\_\_exact**）
+代码片段显示了一个视图函数（资源处理程序），用于显示我们所有的 **U09** 团队。粗体显示如何使用模型查询 API 过滤所有记录，其中该 **team_level** 字段具有正确的文本“**U09**”（请注意，该条件如何 filter() 作为参数传递给该函数，该字段名称和匹配类型由双下划线： **`team_level__exact`**）。
 
 ```python
 ## filename: views.py

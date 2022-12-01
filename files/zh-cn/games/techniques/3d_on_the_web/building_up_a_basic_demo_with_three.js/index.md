@@ -2,6 +2,7 @@
 title: Building up a basic demo with Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
 ---
+
 {{GamesSidebar}}
 
 游戏中一个典型的 3D 场景 (最简单的那种) 包含标准的物品比如在坐标轴中的形状，一个实际可看到他们的摄像机，灯光和材质让其看起来不错，动画使其生动等等。 **Three.js**, 和其他 3D 库一样，提供内置的 helper 函数来帮助你尽可能快地实现通用的 3D 功能 . 在这篇文章我们会带你了解使用 Three 的基本知识，包含设置开发者环境，必要的 HTML 结构，Three.js 对象基础，以及如何创建一个基本的 demo.

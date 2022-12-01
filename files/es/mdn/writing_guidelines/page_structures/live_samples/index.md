@@ -1,13 +1,9 @@
 ---
 title: Cómo convertir códigos de demostración para que estén "en vivo"
 slug: MDN/Writing_guidelines/Page_structures/Live_samples
-tags:
-  - Código
-  - Demostración
-  - Sample
-translation_of: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 original_slug: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 ---
+
 {{MDNSidebar}}
 
 MDN tiene ahora un sistema de "ejemplos en vivo", donde el código de demostración que aparece en la página se usa directamente para mostrar el resultado de dicho ejemplo. Sin embargo, muchos artículos existentes tienen ejemplos que todavía no usan este sistema y necesitan ser convertidos.

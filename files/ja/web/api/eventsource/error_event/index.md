@@ -2,43 +2,56 @@
 title: 'EventSource: error イベント'
 slug: Web/API/EventSource/error_event
 original_slug: Web/API/EventSource/onerror
+l10n:
+  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---
+
 {{APIRef}}
 
-{{domxref("EventSource")}} インターフェースの **`onerror`** プロパティは、エラーが発生し、`EventSource` オブジェクトに対して {{event("error")}} が送出されたときに呼び出される {{event("Event_handlers", "event handler")}} です。
+`error` は {{domxref("EventSource")}} API のイベントで、イベントソースとのコネクションを開くのに失敗した場合に発生します。
+
+このイベントはキャンセル不可で、バブリングしません。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('error', (event) => { });
+
+onerror = (event) => { };
 ```
-eventSource.onerror = function
-```
+
+## イベント型
+
+一般的な {{domxref("Event")}} です。
 
 ## 例
 
 ```js
-evtSource.onerror = function() {
-  console.log("EventSource failed.");
+const evtSource = new EventSource('sse.php');
+
+// addEventListener 版
+evtSource.addEventListener('error', (e) => {
+  console.log("An error occurred while attempting to connect.");
+});
+
+// onerror 版
+evtSource.onerror = (e) => {
+  console.log("An error occurred while attempting to connect.");
 };
 ```
 
-> **Note:** **メモ**: 完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
+## 仕様書
 
-## 仕様
+{{Specifications}}
 
-| 仕様                                                                                                         | ステータス                       | コメント |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "comms.html#handler-eventsource-onerror", "onerror")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
-
-## ブラウザ互換性
-
-{{Compat("api.EventSource.onerror")}}
-
-## 関連情報
+## ブラウザーの互換性
 
 {{Compat}}
 
-## See also
+## 関連情報
 
-- [Using server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
-- [`open`](/en-US/docs/Web/API/EventSource/open_event)
-- [`message`](/en-US/docs/Web/API/EventSource/message_event)
+- [サーバー送信イベントの使用](/ja/docs/Web/API/Server-sent_events/Using_server-sent_events)
+- [`open`](/ja/docs/Web/API/EventSource/open_event)
+- [`message`](/ja/docs/Web/API/EventSource/message_event)

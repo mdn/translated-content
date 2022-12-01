@@ -3,6 +3,7 @@ title: 小贴士：如何制作快速加载的 HTML 页面
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 ---
+
 以下技巧都是基于通用的知识和经验。
 
 一个好的页面不仅要给访客提供一个更有交互性的站点，同时也需要降低你的服务器压力和网络请求。后者对于那些高访问量的站点，或在有爆炸性新闻出现等特殊情况下会出现流量突增的站点来说尤为关键。

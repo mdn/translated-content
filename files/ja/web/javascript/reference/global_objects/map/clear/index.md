@@ -2,6 +2,7 @@
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 ---
+
 {{JSRef}}
 
 **`clear()`** メソッドは `Map` オブジェクトからすべての要素を削除します。
@@ -38,9 +39,7 @@ myMap.has('bar')  // false
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.clear', 'Map.prototype.clear')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

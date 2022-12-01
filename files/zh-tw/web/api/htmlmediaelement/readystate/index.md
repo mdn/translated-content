@@ -2,7 +2,10 @@
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
 ---
-{{APIRef("HTML DOM")}}**`HTMLMediaElement.readyState` **屬性回傳目前媒體的就緒狀態。
+
+{{APIRef("HTML DOM")}}
+
+**`HTMLMediaElement.readyState`** 屬性回傳目前媒體的就緒狀態。
 
 ## 語法
 
@@ -50,7 +53,7 @@ obj.addEventListener('loadeddata', function() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLMediaElement.readyState")}}
+{{Compat}}
 
 ## 也參考看看
 

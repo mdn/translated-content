@@ -1,16 +1,8 @@
 ---
 title: <filter-function>
 slug: Web/CSS/filter-function
-tags:
-  - CSS
-  - CSS Data Type
-  - Filter Effects
-  - NeedsCompatTable
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/filter-function
 ---
+
 {{cssref}}
 
 The **`<filter-function>`** [CSS](/pt-BR/docs/Web/CSS) [data type](/pt-BR/docs/Web/CSS/CSS_Types) represents a graphical effect that can change the appearance of an input image. It is used in the {{cssxref("filter")}} and {{cssxref("backdrop-filter")}} properties.
@@ -19,25 +11,25 @@ The **`<filter-function>`** [CSS](/pt-BR/docs/Web/CSS) [data type](/pt-BR/docs/W
 
 The `<filter-function>` data type is specified using one of the filter functions listed below. Each function requires an argument which, if invalid, results in no filter being applied.
 
-- [`blur()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/blur)
+- [`blur()`](/pt-BR/docs/Web/CSS/filter-function/blur)
   - : Blurs the image.
-- [`brightness()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/brightness)
+- [`brightness()`](/pt-BR/docs/Web/CSS/filter-function/brightness)
   - : Makes the image brighter or darker.
-- [`contrast()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/contrast)
+- [`contrast()`](/pt-BR/docs/Web/CSS/filter-function/contrast)
   - : Increases or decreases the image's contrast.
-- [`drop-shadow()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow)
+- [`drop-shadow()`](/pt-BR/docs/Web/CSS/filter-function/drop-shadow)
   - : Applies a drop shadow behind the image.
-- [`grayscale()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/grayscale)
+- [`grayscale()`](/pt-BR/docs/Web/CSS/filter-function/grayscale)
   - : Converts the image to grayscale.
-- [`hue-rotate()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/hue-rotate)
+- [`hue-rotate()`](/pt-BR/docs/Web/CSS/filter-function/hue-rotate)
   - : Changes the overall hue of the image.
-- [`invert()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/invert)
+- [`invert()`](/pt-BR/docs/Web/CSS/filter-function/invert)
   - : Inverts the colors of the image.
-- [`opacity()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/opacity)
+- [`opacity()`](/pt-BR/docs/Web/CSS/filter-function/opacity)
   - : Makes the image transparent.
-- [`saturate()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/saturate)
+- [`saturate()`](/pt-BR/docs/Web/CSS/filter-function/saturate)
   - : Super-saturates or desaturates the input image.
-- [`sepia()`](https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/sepia)
+- [`sepia()`](/pt-BR/docs/Web/CSS/filter-function/sepia)
   - : Converts the image to sepia.
 
 ## Specification

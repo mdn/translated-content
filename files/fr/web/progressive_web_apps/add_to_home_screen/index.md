@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Progressive_web_apps/Add_to_home_screen
 original_slug: Web/Progressive_web_apps/ajouter_a_lecran_daccueil_a2hs
 ---
+
 Ajouter à l’écran d’accueil (A2HS en abrégé) est une fonctionnalité disponible dans les navigateurs pour smartphones modernes qui permet aux développeurs d’ajouter facilement et rapidement un raccourci à leur écran d’accueil, représentant leur application Web. Ce guide explique comment utiliser A2HS et ce que vous devez faire en tant que développeur pour permettre à vos utilisateurs d’en tirer parti.
 
 ## Pourquoi A2HS?
@@ -179,7 +180,7 @@ Ici il faut:
 
 - Appeler `Event.preventDefault()` pour empêcher Chrome 67 et les versions antérieures d'appeler automatiquement l'invite d'installation (ce comportement a été modifié dans Chrome 68).
 - Stocker l'objet événement dans la variable `deferredPrompt` afin qu'il puisse être utilisé ultérieurement pour effectuer l'installation réelle.
-- Configurer le bouton  `display: block` afin qu'il apparaisse dans l'interface utilisateur sur laquelle l'utilisateur peut cliquer.
+- Configurer le bouton `display: block` afin qu'il apparaisse dans l'interface utilisateur sur laquelle l'utilisateur peut cliquer.
 - Définir un gestionnaire de `click` pour le bouton.
 
 Le gestionnaire de clics contient les étapes suivantes:

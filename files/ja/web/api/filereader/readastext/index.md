@@ -2,11 +2,12 @@
 title: FileReader.readAsText()
 slug: Web/API/FileReader/readAsText
 ---
+
 {{APIRef("File API")}}
 
 **`readAsText()`** メソッドは、指定された {{domxref("Blob")}} または {{domxref("File")}} の内容を読み取るために使用します。読み取り操作が完了すると、 {{domxref("FileReader.readyState","readyState")}} が `DONE` に変わり、 {{event("loadend")}} イベントが発生し、 {{domxref("FileReader.result","result")}} プロパティにはファイルの内容が文字列として格納されます。
 
-> **Note:** **より新しい API が利用できます** > {{domxref("Blob.text()")}} メソッドは、ファイルをテキストとして読み取るための新しい Promise ベースの API です。
+> **メモ:** **より新しい API が利用できます** > {{domxref("Blob.text()")}} メソッドは、ファイルをテキストとして読み取るための新しい Promise ベースの API です。
 
 ## 構文
 
@@ -23,9 +24,7 @@ instanceOfFileReader.readAsText(blob[, encoding]);
 
 ## 仕様
 
-| 仕様書                                                                               | 状態                         | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザの互換性
 

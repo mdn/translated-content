@@ -1,18 +1,8 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - CSS Property
-  - NeedsBrowserCompatibility
-  - NeedsMobileBrowserCompatibility
-  - PrecisaDeCompatibilidadeDeNavegador
-  - PrecisadeCompatibilidadeMobile
-  - Propriedade CSS
-  - Reference
-  - Referencia
-translation_of: Web/CSS/width
 ---
+
 {{CSSRef}}
 
 ## Resumo
@@ -54,7 +44,7 @@ width: unset;
   - : Veja {{cssxref("&lt;length&gt;")}} para possíveis unidades.
 - `<percentage>`
   - : Especificado como {{cssxref("&lt;percentage&gt;")}} da largura do bloco contido. Se a largura do bloco contido depender da largura do elemento, o layout resultante é indefinido.
-- `border-box `{{experimental_inline}}
+- `border-box` {{experimental_inline}}
   - : Se presente, o precedente {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado para o border box do elemento.
 - `content-box` {{experimental_inline}}
   - : Se presente, o precedente {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado para o content box do elemento.

@@ -1,14 +1,9 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-tags:
-  - CSS
-  - Função CSS
-  - Referencia
-  - Transformações CSS
-translation_of: Web/CSS/transform-function/translate()
 original_slug: Web/CSS/transform-function/translate()
 ---
+
 {{CSSRef}}
 
 A função [CSS](/pt-BR/docs/Web/CSS) **`translate()`** reposiciona um elemento na direção horizontal e/ou vertical. O seu resultado é um tipo de dado {{cssxref("&lt;transform-function&gt;")}}.
@@ -172,7 +167,7 @@ div {
 
 ## Compatibilidade com navegadores
 
-Verifique o tipo de dado [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
+Verifique o tipo de dado [`<transform-function>`](/pt-BR/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
 
 ## Veja também
 

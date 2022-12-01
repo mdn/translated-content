@@ -2,6 +2,7 @@
 title: String.prototype.trim()
 slug: Web/JavaScript/Reference/Global_Objects/String/trim
 ---
+
 {{JSRef}}
 
 **`trim()`** メソッドは、文字列の両端の空白を削除します。このコンテクストでの空白には、空白文字（スペースやタブ、ノーブレークスペースなど）とすべての改行文字（LF や CR など）を含みます。
@@ -52,9 +53,7 @@ console.log(orig.trim()); // 'foo'
 
 ## 仕様
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.trim', 'String.prototype.trim')}} |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

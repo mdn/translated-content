@@ -2,6 +2,7 @@
 title: PromiseRejectionEvent()
 slug: Web/API/PromiseRejectionEvent/PromiseRejectionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`PromiseRejectionEvent()`** コンストラクタは、JavaScript の {{jsxref("Promise")}} が拒否されたときに発火するイベントを表す {{domxref("PromiseRejectionEvent")}} を新しく生成し返します。
@@ -28,9 +29,7 @@ _`PromiseRejectionEvent()`_ _コンストラクタは、{{domxref("Event.Event",
 
 ## 仕様
 
-| 仕様                                                                                                                             | ステータス                       | コメント   |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#promiserejectionevent', 'PromiseRejectionEvent()')}} | {{Spec2('HTML WHATWG')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

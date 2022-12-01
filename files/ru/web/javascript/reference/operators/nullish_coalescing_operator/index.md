@@ -9,6 +9,7 @@ tags:
   - nullish coalescing
 browser-compat: javascript.operators.nullish_coalescing
 ---
+
 {{JSSidebar("Operators")}}
 
 **Оператор нулевого слияния (`??`)** — это логический оператор, возвращающий значение правого операнда, если значение левого операнда содержит {{jsxref("null")}} или {{jsxref("undefined")}}, в противном случае возвращается значение левого операнда.
@@ -137,6 +138,6 @@ console.log(foo.someBarProp?.toUpperCase() ?? "нет значения"); // "н
 
 ## Смотрите также
 
-- [Оператор опциональной последовательности](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [Оператор логического ИЛИ (`||`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [Параметры по умолчанию функций](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
+- [Оператор опциональной последовательности](/ru/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Оператор логического ИЛИ (`||`)](/ru/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [Параметры по умолчанию функций](/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters)

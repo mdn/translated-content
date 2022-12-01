@@ -2,9 +2,10 @@
 title: IDBTransaction
 slug: Web/API/IDBTransaction
 ---
+
 {{APIRef("IndexedDB")}}
 
-**`IDBTransaction`** は [IndexedDB API](/ja/docs/IndexedDB) のインターフェイスで、イベントハンドラー属性を使用してデータベース上の静的で非同期のトランザクションを提供します。すべてのデータの読み書きはトランザクション内で行われます。 {{domxref("IDBDatabase")}} を使用してトランザクションを開始し、 {{domxref("IDBTransaction")}} を使用してトランザクションのモードを設定し (例 `readonly` または `readwrite`)、 {{domxref("IDBObjectStore")}} にアクセスしてリクエストを作成します。 `IDBTransaction` オブジェクトを使用してトランザクションを中止することもできます。
+**`IDBTransaction`** は [IndexedDB API](/ja/docs/IndexedDB) のインターフェイスで、イベントハンドラー属性を使用してデータベース上の静的で非同期のトランザクションを提供します。すべてのデータの読み書きはトランザクション内で行われます。{{domxref("IDBDatabase")}} を使用してトランザクションを開始し、{{domxref("IDBTransaction")}} を使用してトランザクションのモードを設定し (例 `readonly` または `readwrite`)、{{domxref("IDBObjectStore")}} にアクセスしてリクエストを作成します。`IDBTransaction` オブジェクトを使用してトランザクションを中止することもできます。
 
 {{AvailableInWorkers}}
 
@@ -25,72 +26,72 @@ objectStore1.put("1", "key");
 
 ## トランザクションの失敗
 
-トランザクションは一定数の理由で失敗することがあり、 (ユーザーエージェントのクラッシュを除いて) すべての場合に abort コールバックを起動します。
+トランザクションは一定数の理由で失敗することがあり、(ユーザーエージェントのクラッシュを除いて) すべての場合に `abort` コールバックを起動します。
 
-- Abort due to bad requests, e.g. trying to `add()` the same key twice, or `put()` with the same index key with a uniqueness constraint. This causes an error on the request, which can bubble up to an error on the transaction, which aborts the transaction. This can be prevented by using `preventDefault()` on the error event on the request.
-- An explicit `abort()` call from script.
-- An uncaught exception in the request's `success`/`error` handler.
-- An I/O error (e.g. an actual failure to write to disk, or other OS/hardware failure).
-- Quota exceeded.
-- A user agent crash.
+- 不正な要求による失敗。例えば、`add()` で同じキーを 2 回追加しようとしたり、`put()` で一意性制約に反して同じインデックスキーを追加しようとした場合。これは要求のエラーを起こし、このエラーはトランザクションのエラーとして伝搬し、これによりトランザクションがアボートします。これは、要求の `error` イベントで `preventDefault()` を用いることで回避できます。
+- スクリプトによる明示的な `abort()` の呼び出し。
+- 要求の `success` / `error` ハンドラー内での補足されない例外。
+- I/O エラー (ディスクへの書き込みの失敗や、他の OS / ハードウェアのエラーなど)
+- 制限の超過。
+- ユーザーエージェントのクラッシュ。
 
-## Firefox durability guarantees
+## Firefox における永続性の保証
 
-Note that as of Firefox 40, IndexedDB transactions have relaxed durability guarantees to increase performance (see {{Bug("1112702")}}.) Previously in a `readwrite` transaction {{domxref("IDBTransaction.oncomplete")}} was fired only when all data was guaranteed to have been flushed to disk. In Firefox 40+ the `complete` event is fired after the OS has been told to write the data but potentially before that data has actually been flushed to disk. The `complete` event may thus be delivered quicker than before, however, there exists a small chance that the entire transaction will be lost if the OS crashes or there is a loss of system power before the data is flushed to disk. Since such catastrophic events are rare, most consumers should not need to concern themselves further.
+Firefox 40 以降、IndexedDB のトランザクションはパフォーマンスを向上させるために永続性の保証が緩くなりました。({{Bug("1112702")}} を参照してください) これまでは、`readwrite` のトランザクションでは {{domxref("IDBTransaction.oncomplete")}} は全てのデータがディスクに書き込まれたことが保証されてからのみ発火していました。Firefox 40+ では、`complete` イベントは OS にデータの書き込みを指示した後発火しますが、データが実際にディスクに書き込まれるより前の可能性があります。`complete` イベントは以前より早く通知されますが、データがディスクに書き込まれるより前にシステムの電源が失われたり、OS がクラッシュしたりすると、小さい確率でトランザクション全体が失われます。このような壊滅的な事象はほとんど起こらないため、ほとんどの利用者は心配しなくていいでしょう。
 
-If you must ensure durability for some reason (e.g. you're storing critical data that cannot be recomputed later) you can force a transaction to flush to disk before delivering the `complete` event by creating a transaction using the experimental (non-standard) `readwriteflush` mode (see {{domxref("IDBDatabase.transaction")}}.
+何らかの理由で永続性を保証する必要がある場合 (たとえば、後で再計算できない重要なデータを保存しようとしている場合) 実験的な (標準でない) `readwriteflush` モードを利用してトランザクションを生成することで、`complete` イベントを通知する前にディスクへ書き込むことを強制することができます。({{domxref("IDBDatabase.transaction")}} を参照してください)
 
-## プロパティ
+## インスタンスプロパティ
 
 - {{domxref("IDBTransaction.db")}} {{readonlyInline}}
-  - : The database connection with which this transaction is associated.
+  - : このトランザクションが紐づいているデータベースへの接続です。
 - {{domxref("IDBTransaction.error")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMException")}} indicating the type of error that occured when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the{{domxref("IDBTransaction.abort()")}} function.
+  - : トランザクションが失敗したとき、発生したエラーの種類を表す {{domxref("DOMException")}} を返します。トランザクションが完了していないとき、完了して正常にコミットしたとき、{{domxref("IDBTransaction.abort()")}} 関数によりアボートされたときは `null` です。
 - {{domxref("IDBTransaction.mode")}} {{readonlyInline}}
-  - : The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is [`readonly`](#const_read_only).
+  - : トランザクションの対象のオブジェクトストア内のデータへのアクセスを隔離するためのモードです。デフォルト値は [`readonly`](#const_read_only) です。
 - {{domxref("IDBTransaction.objectStoreNames")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects associated with the transaction.
+  - : トランザクションに関連付いた {{domxref("IDBObjectStore")}} の名前を格納した {{domxref("DOMStringList")}} を返します。
 
-## メソッド
+## インスタンスメソッド
 
-Inherits from: {{domxref("EventTarget")}}
+{{domxref("EventTarget")}} から継承します。
 
 - {{domxref("IDBTransaction.abort()")}}
-  - : Rolls back all the changes to objects in the database associated with this transaction. If this transaction has been aborted or completed, this method fires an error event.
+  - : このトランザクションに関連付いたデータベース内のオブジェクトへの変更をロールバックします。このトランザクションがアボート済または完了済のときは、このメソッドは `error` イベントを発火します。
 - {{domxref("IDBTransaction.objectStore()")}}
-  - : Returns an {{domxref("IDBObjectStore")}} object representing an object store that is part of the scope of this transaction.
+  - : このトランザクションの対象に含まれるオブジェクトストアを表す {{domxref("IDBObjectStore")}} オブジェクトを返します。
 - {{domxref("IDBTransaction.commit()")}}
-  - : For an active transaction, commits the transaction. Note that this doesn't normally _have_ to be called — a transaction will automatically commit when all outstanding requests have been satisfied and no new requests have been made. `commit()` can be used to start the commit process without waiting for events from outstanding requests to be dispatched.
+  - : 進行中のトランザクションをコミットします。なお、このメソッドは通常呼ばれる _必要_ はありません。進行中の要求が全て満たされ、新しい要求がなされなかったとき、トランザクションは自動的にコミットされます。`commit()` は、進行中の要求からのイベントが処理されるのを待たずにコミット処理を開始するために使用できます。
 
 ## イベント
 
-Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
+`addEventListener()` を用いるか、このインターフェイスの `oneventname` プロパティにイベントリスナーを代入することにより、これらのイベントをリッスンします。
 
 - [`abort`](/ja/docs/Web/API/IDBTransaction/abort_event)
-  - : Fired when an `IndexedDB` transaction is aborted.
-    Also available via the [`onabort`](/ja/docs/Web/API/IDBTransaction/onabort) property.
+  - : `IndexedDB` のトランザクションがアボートされたとき発火します。
+    [`onabort`](/ja/docs/Web/API/IDBTransaction/onabort) プロパティからも利用可能です。
 - [`complete`](/ja/docs/Web/API/IDBTransaction/complete_event)
-  - : Fired when a transaction successfully completes.
-    Also available via the [`oncomplete`](/ja/docs/Web/API/IDBTransaction/oncomplete) property.
+  - : トランザクションが正常に完了したとき発火します。
+    [`oncomplete`](/ja/docs/Web/API/IDBTransaction/oncomplete) プロパティからも利用可能です。
 - [`error`](/ja/docs/Web/API/IDBTransaction/error_event)
-  - : Fired when a request returns an error and the event bubbles up to the transaction object.
-    Also available via the [`onerror`](/ja/docs/Web/API/IDBTransaction/onerror) property.
+  - : 要求がエラーを返し、イベントがトランザクションオブジェクトに伝搬したとき発火します。
+    [`onerror`](/ja/docs/Web/API/IDBTransaction/onerror) プロパティからも利用可能です。
 
-## Mode constants
+## モード定数
 
 {{ deprecated_header(13) }}
 
-> **Warning:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})
+> **警告:** これらの定数はもう利用可能ではありません。Gecko 25 で削除されました。かわりに、これらの文字列定数を直接使用するべきです。({{ bug(888598) }})
 
-Transactions can have one of three modes:
+トランザクションはこれらの 3 種類のモードのうち 1 個を持つことができます。
 
 | 定数                 | 値                           | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | -------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`READ_ONLY`]()      | "readonly"(0 in Chrome)      | Allows data to be read but not changed.                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| [`READ_WRITE`]()     | "readwrite"(1 in Chrome)     | Allows reading and writing of data in existing data stores to be changed.                                                                                                                                                                                                                                                                                                                                                                                              |
-| [`VERSION_CHANGE`]() | "versionchange"(2 in Chrome) | Allows any operation to be performed, including ones that delete and create object stores and indexes. This mode is for updating the version number of transactions that were started using the [`setVersion()`](/ja/docs/IndexedDB/IDBDatabase#setVersion) method of [IDBDatabase](/ja/docs/IndexedDB/IDBDatabase) objects. Transactions of this mode cannot run concurrently with other transactions. Transactions in this mode are known as "upgrade transactions." |
+| [`READ_ONLY`]()      | `"readonly"`(Chrome では 0)      | データの読み取りができますが、変更はできません。                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| [`READ_WRITE`]()     | `"readwrite"` (Chrome では 1)     | 変更対象のデータストア内のデータの読み書きができます。                                                                                                                                                                                                                                                                                                                                                                                              |
+| [`VERSION_CHANGE`]() | `"versionchange"` (Chrome では 2) | オブジェクトストアやインデックスの作成や削除を含む任意の操作を行えます。このモードは、{{domxref("IDBDatabase")}} オブジェクトの [`setVersion()`](/ja/docs/Web/API/IDBDatabase#setVersion) メソッドにより開始されたトランザクションでバージョン番号を更新する用です。このモードのトランザクションは、他のトランザクションと並行で実行することはできません。このモードのトランザクションは、"upgrade transactions" と呼ばれます。 |
 
-Even if these constants are now deprecated, you can still use them to provide backward compatibility if required (in Chrome [the change was made in version 21](http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)). You should code defensively in case the object is not available anymore:
+これらの定数は現在非推奨ですが、後方互換性を維持するために必要に応じてこれらの定数を使用することができます。(Chrome では、[バージョン 21 で変更がありました](http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)) これらのオブジェクトが利用できなくなっている場合に備え、以下のような保守的なコードを書くべきです。
 
 ```js
 var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || { READ_WRITE: "readwrite" };
@@ -98,60 +99,57 @@ var myIDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || {
 
 ## 例
 
-In the following code snippet, we open a read/write transaction on our database and add some data to an object store. Note also the functions attached to transaction event handlers to report on the outcome of the transaction opening in the event of success or failure. For a full working example, see our [To-do Notifications](https://github.com/mdn/to-do-notifications/) app ([view example live](http://mdn.github.io/to-do-notifications/).)
+次のコードスニペットでは、我々のデータベース上で読み書きのトランザクションを開き、オブジェクトストアにデータを追加します。成功または失敗した時にトランザクションの結果を知らせるため、トランザクションにアタッチしている関数にも注目してください。動く例全体は、[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) アプリケーション ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/)) を見てください｡
 
 ```js
-// Let us open our database
+// 我々のデータベースを開きましょう
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = function(event) {
-  note.innerHTML += '<li>Database initialised.</li>';
+  note.innerHTML += '<li>データベースを初期化しました。</li>';
 
-  // store the result of opening the database in the db
-  // variable. This is used a lot below
+  // データベースを開いた結果を変数 db に保存します｡
+  // これは後でたくさん使います｡
   db = DBOpenRequest.result;
 
-  // Add the data to the database
+  // データベースにデータを追加します
   addData();
 };
 
 function addData() {
-  // Create a new object to insert into the IDB
+  // IDB に挿入する新しいオブジェクトを作成します
   var newItem = [ { taskTitle: "Walk dog", hours: 19, minutes: 30, day: 24, month: "December", year: 2013, notified: "no" } ];
 
-  // open a read/write db transaction, ready to add data
+  // 読み書きのトランザクションを開き、データの追加の準備をします
   var transaction = db.transaction(["toDoList"], "readwrite");
 
-  // report on the success of opening the transaction
+  // トランザクションを開くことに成功したら報告します
   transaction.oncomplete = function(event) {
-    note.innerHTML += '<li>Transaction completed: database modification finished.</li>';
+    note.innerHTML += '<li>トランザクション完了 : データベースの変更が完了しました。</li>';
   };
 
 
   transaction.onerror = function(event) {
-  note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+  note.innerHTML += '<li>トランザクションはエラーのため開けませんでした。重複するアイテムは許されません。</li>';
   };
 
-  // create an object store on the transaction
+  // トランザクション上でオブジェクトストアを生成します
   var objectStore = transaction.objectStore("toDoList");
 
-  // add our newItem object to the object store
+  // オブジェクトストアに newItem オブジェクトを加えます
   var objectStoreRequest = objectStore.add(newItem[0]);
 
   objectStoreRequest.onsuccess = function(event) {
-    // report the success of the request (this does not mean the item
-    // has been stored successfully in the DB - for that you need transaction.oncomplete)
-    note.innerHTML += '<li>Request successful.</li>';
+    // 要求の成功を報告します (これは DB に項目が正常に保存されたという
+    // ことではありません。これの確認には、transaction.oncomplete が必要です)
+    note.innerHTML += '<li>要求に成功しました。</li>';
   };
 };
 ```
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                             | 備考     |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('IndexedDB', '#transaction', 'IDBTransaction')}} | {{Spec2('IndexedDB')}}     | 初回定義 |
-| {{SpecName("IndexedDB 2", "#transaction", "IDBTransaction")}} | {{Spec2("IndexedDB 2")}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -160,9 +158,9 @@ function addData() {
 ## 関連情報
 
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- トランザクションの開始: {{domxref("IDBDatabase")}}
-- トランザクションの仕様: {{domxref("IDBTransaction")}}
-- キーの範囲の設定: {{domxref("IDBKeyRange")}}
-- データの受け取りや変更: {{domxref("IDBObjectStore")}}
-- カーソルの使用: {{domxref("IDBCursor")}}
-- リファレンスの例: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- トランザクションの開始 : {{domxref("IDBDatabase")}}
+- トランザクションの使用 : {{domxref("IDBTransaction")}}
+- キーの範囲の設定 : {{domxref("IDBKeyRange")}}
+- データの受け取りや変更 : {{domxref("IDBObjectStore")}}
+- カーソルの使用 : {{domxref("IDBCursor")}}
+- リファレンスの例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

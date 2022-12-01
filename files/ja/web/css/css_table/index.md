@@ -2,6 +2,7 @@
 title: CSS 表
 slug: Web/CSS/CSS_Table
 ---
+
 {{CSSRef}}
 
 **CSS 表** (CSS Table) は CSS のモジュールの一つで、表データをレイアウトする方法を定義します。
@@ -19,6 +20,5 @@ slug: Web/CSS/CSS_Table
 
 ## 仕様書
 
-| 仕様書                                | 状態                | 備考     |
-| ------------------------------------- | ------------------- | -------- |
-| {{SpecName("CSS2.1", "tables.html")}} | {{Spec2("CSS2.1")}} | 初回定義 |
+{{Specifications}}
+

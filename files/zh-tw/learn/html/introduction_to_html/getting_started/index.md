@@ -2,6 +2,7 @@
 title: Getting started with HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 本文將探討 HTML 最基本的部分。首先，我們將會定義元素(elements)、屬性(attributes)以及其它你可能聽過的重要名詞，然後講解該如何使用它們。我們也會告訴你典型的 HTML 頁面以及其中的元素是如何構成的，以及解釋其他重要的基礎語言特性。在此過程中，我們會撰寫一些 HTML 來引發你的興趣！
@@ -259,9 +260,12 @@ textarea.onkeyup = function(){
 
 我們再舉另外一個元素的例子 {{htmlelement("a")}} 代表 anchor (錨)，而這個元素會讓被它包裹住的內容變成一個超連結。它可以和很多種屬性搭配，以下僅列出幾種：
 
-- **`href`**: 這個屬性的值為你想要連到的網址，當連結被點擊時，瀏覽器就會導向到該網站。例如: `href="https://www.mozilla.org/"`。
-- **`title`**: `title` 屬性用來附加有關連結的其他資訊，像是連結到的網站名稱。例如: `title="The Mozilla homepage"` 。當游標移動到連結上時，就會以提示的方式顯示。
-- **`target`**: `target` 屬性用來指定要在哪裡打開網頁。例如: `target="_blank"` 會開啟新分頁。如果你想要在目前的分頁開啟網站，只要忽略這個屬性即可。
+- `href`
+  - : 這個屬性的值為你想要連到的網址，當連結被點擊時，瀏覽器就會導向到該網站。例如: `href="https://www.mozilla.org/"`。
+- `title`
+  - : `title` 屬性用來附加有關連結的其他資訊，像是連結到的網站名稱。例如: `title="The Mozilla homepage"` 。當游標移動到連結上時，就會以提示的方式顯示。
+- `target`
+  - : `target` 屬性用來指定要在哪裡打開網頁。例如: `target="_blank"` 會開啟新分頁。如果你想要在目前的分頁開啟網站，只要忽略這個屬性即可。
 
 請編輯下面輸入區的文字，使它變成一個通往你最喜歡的網站的連結。
 

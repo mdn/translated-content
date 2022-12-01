@@ -2,6 +2,7 @@
 title: 'CSP: child-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/child-src
 ---
+
 {{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`child-src`** directive defines the valid sources for [web workers](/zh-CN/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}. For workers, non-compliant requests are treated as fatal network errors by the user agent.

@@ -1,23 +1,13 @@
 ---
 title: '::-webkit-slider-thumb'
 slug: Web/CSS/::-webkit-slider-thumb
-tags:
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - No estándar(2)
-  - Pseudo-elemento
-  - Pseudo-elemento CSS
-  - Referencia
-translation_of: Web/CSS/::-webkit-slider-thumb
 ---
+
 admi{{CSSRef}}{{Non-standard_header}}
 
 ## Resumen
 
-El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements)`CSS `**`::-webkit-slider-thumb`** representa el selector que el usuario puede mover a lo largo de la ranura de un elemento {{HTMLElement("input")}} con `type="range"` para modificar su valor numérico.
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-webkit-slider-thumb`** representa el selector que el usuario puede mover a lo largo de la ranura de un elemento {{HTMLElement("input")}} con `type="range"` para modificar su valor numérico.
 
 ## Especificaciones
 

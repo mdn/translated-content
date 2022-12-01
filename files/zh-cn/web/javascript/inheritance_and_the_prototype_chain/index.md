@@ -2,11 +2,12 @@
 title: 继承与原型链
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
+
 {{jsSidebar("Advanced")}}
 
 对于使用过基于类的语言 (如 Java 或 C++) 的开发者们来说，JavaScript 实在是有些令人困惑 —— JavaScript 是动态的，本身不提供一个 `class` 的实现。即便是在 ES2015/ES6 中引入了 `class` 关键字，但那也只是语法糖，JavaScript 仍然是基于原型的。
 
-当谈到继承时，JavaScript 只有一种结构：对象。每个实例对象（object）都有一个私有属性（称之为 \_\_proto\_\_ ）指向它的构造函数的原型对象（**prototype**）。该原型对象也有一个自己的原型对象（\_\_proto\_\_），层层向上直到一个对象的原型对象为 `null`。根据定义，`null` 没有原型，并作为这个**原型链**中的最后一个环节。
+当谈到继承时，JavaScript 只有一种结构：对象。每个实例对象（object）都有一个私有属性（称之为 \_\_proto\_\_）指向它的构造函数的原型对象（**prototype**）。该原型对象也有一个自己的原型对象（\_\_proto\_\_），层层向上直到一个对象的原型对象为 `null`。根据定义，`null` 没有原型，并作为这个**原型链**中的最后一个环节。
 
 几乎所有 JavaScript 中的对象都是位于原型链顶端的 {{jsxref("Object")}} 的实例。
 
@@ -18,7 +19,7 @@ slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 
 JavaScript 对象是动态的属性“包”（指其自己的属性）。JavaScript 对象有一个指向一个原型对象的链。当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及该对象的原型的原型，依次层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。
 
-> **备注：** 遵循 ECMAScript 标准，`someObject.[[Prototype]]` 符号是用于指向 `someObject` 的原型。从 ECMAScript 6 开始，`[[Prototype]]` 可以通过 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 访问器来访问。这个等同于 JavaScript 的非标准但许多浏览器实现的属性 `__proto__`。但它不应该与构造函数 `func` 的 `prototype` 属性相混淆。被构造函数创建的实例对象的 `[[Prototype]]` 指向 `func` 的 `prototype` 属性。**`Object.prototype` **属性表示 {{jsxref("Object")}} 的原型对象。
+> **备注：** 遵循 ECMAScript 标准，`someObject.[[Prototype]]` 符号是用于指向 `someObject` 的原型。从 ECMAScript 6 开始，`[[Prototype]]` 可以通过 {{jsxref("Object.getPrototypeOf()")}} 和 {{jsxref("Object.setPrototypeOf()")}} 访问器来访问。这个等同于 JavaScript 的非标准但许多浏览器实现的属性 `__proto__`。但它不应该与构造函数 `func` 的 `prototype` 属性相混淆。被构造函数创建的实例对象的 `[[Prototype]]` 指向 `func` 的 `prototype` 属性。**`Object.prototype`** 属性表示 {{jsxref("Object")}} 的原型对象。
 
 这里演示当尝试访问属性时会发生什么：
 
@@ -104,7 +105,7 @@ console.log(p.m()); // 5
 
 ## 在 JavaScript 中使用原型
 
-接下去，来仔细分析一下这些应用场景下， JavaScript 在背后做了哪些事情。
+接下去，来仔细分析一下这些应用场景下，JavaScript 在背后做了哪些事情。
 
 正如之前提到的，在 JavaScript 中，函数（function）是允许拥有属性的。所有的函数会有一个特别的属性 —— `prototype` 。请注意，以下的代码是独立的（出于严谨，假定页面没有其他的 JavaScript 代码）。为了最佳的学习体验，我们强烈建议阁下打开浏览器的控制台（在 Chrome 和火狐浏览器中，按 Ctrl+Shift+I 即可），进入“console”选项卡，然后把如下的 JavaScript 代码复制粘贴到窗口中，最后通过按下回车键运行代码。
 
@@ -199,7 +200,7 @@ console.log( doSomeInstancing );
 
 否则，如果 `doSomeInstancing` 中 `__proto__` 不具有该属性，则检查`doSomeInstancing` 的 `__proto__` 的 `__proto__` 是否具有该属性。默认情况下，任何函数的原型属性 `__proto__` 都是 `window.Object.prototype.` 因此，通过 `doSomeInstancing` 的 `__proto__` 的 `__proto__` ( 同 doSomething.prototype 的 `__proto__` (同 `Object.prototype`)) 来查找要搜索的属性。
 
-如果属性不存在 `doSomeInstancing` 的 `__proto__` 的 `__proto__` 中， 那么就会在`doSomeInstancing` 的 `__proto__` 的 `__proto__` 的 `__proto__` 中查找。然而，这里存在个问题：`doSomeInstancing` 的 `__proto__` 的 `__proto__` 的 `__proto__` 其实不存在。因此，只有这样，在 `__proto__` 的整个原型链被查看之后，这里没有更多的 `__proto__` ， 浏览器断言该属性不存在，并给出属性值为 `undefined` 的结论。
+如果属性不存在 `doSomeInstancing` 的 `__proto__` 的 `__proto__` 中，那么就会在`doSomeInstancing` 的 `__proto__` 的 `__proto__` 的 `__proto__` 中查找。然而，这里存在个问题：`doSomeInstancing` 的 `__proto__` 的 `__proto__` 的 `__proto__` 其实不存在。因此，只有这样，在 `__proto__` 的整个原型链被查看之后，这里没有更多的 `__proto__` ，浏览器断言该属性不存在，并给出属性值为 `undefined` 的结论。
 
 让我们在控制台窗口中输入更多的代码，如下：
 
@@ -364,7 +365,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 
 ## `prototype` 和 `Object.getPrototypeOf`
 
-对于从 Java 或 C++ 转过来的开发人员来说，JavaScript 会有点让人困惑，因为它完全是动态的，都是运行时，而且不存在类（class）。所有的都是实例（对象）。即使我们模拟出的 “类”，也只是一个函数对象。
+对于从 Java 或 C++ 转过来的开发人员来说，JavaScript 会有点让人困惑，因为它完全是动态的，都是运行时，而且不存在类（class）。所有的都是实例（对象）。即使我们模拟出的“类”，也只是一个函数对象。
 
 你可能已经注意到我们的 function A 有一个叫做 `prototype` 的特殊属性。该特殊属性可与 JavaScript 的 `new` 操作符一起使用。对原型对象的引用被复制到新实例的内部 `[[Prototype]]` 属性。例如，当执行 `var a1 = new A();` 时，JavaScript（在内存中创建对象之后，和在运行函数 `A()` 把 `this` 指向对象之前）设置 `a1.[[Prototype]] = A.prototype;`。然后当您访问实例的属性时，JavaScript 首先会检查它们是否直接存在于该对象上，如果不存在，则会 `[[Prototype]]` 中查找。这意味着你在 `prototype` 中定义的所有内容都可以由所有实例有效地共享，你甚至可以稍后更改部分 `prototype`，并在所有现有实例中显示更改（如果有必要的话）。
 
@@ -372,7 +373,7 @@ console.log(g.__proto__.hasOwnProperty('addVertex'));
 
 简而言之， `prototype` 是用于类的，而 `Object.getPrototypeOf()` 是用于实例的（instances），两者功能一致。
 
-`[[Prototype]]` 看起来就像**递归**引用， 如 `a1.doSomething`、`Object.getPrototypeOf(a1).doSomething`、`Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething` 等等等， 直到它被找到或 `Object.getPrototypeOf` 返回 `null`。
+`[[Prototype]]` 看起来就像**递归**引用，如 `a1.doSomething`、`Object.getPrototypeOf(a1).doSomething`、`Object.getPrototypeOf(Object.getPrototypeOf(a1)).doSomething` 等等等，直到它被找到或 `Object.getPrototypeOf` 返回 `null`。
 
 因此，当你执行：
 

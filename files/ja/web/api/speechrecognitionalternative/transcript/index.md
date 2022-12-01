@@ -2,6 +2,7 @@
 title: SpeechRecognitionAlternative.transcript
 slug: Web/API/SpeechRecognitionAlternative/transcript
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 {{domxref("SpeechRecognitionResult")}} インターフェースの **`transcript`** 読み取り専用プロパティは、認識したワードの記録を含む文字列を返します。
@@ -40,9 +41,7 @@ recognition.onresult = function(event) {
 
 ## 仕様
 
-| 仕様                                                                                 | ステータス                           | コメント |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Web Speech API', '#dfn-transcript', 'transcript')}} | {{Spec2('Web Speech API')}} |          |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

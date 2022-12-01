@@ -2,6 +2,7 @@
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 响应标头 **`Set-Cookie`** 被用来由服务器端向用户代理发送 cookie，所以用户代理可再后续的请求中将其发送回服务器。服务器要发送多个 cookie，则应该在同一响应中发送多个 **`Set-Cookie`** 标头。

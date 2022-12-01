@@ -2,6 +2,7 @@
 title: HTMLTableElement.bgColor
 slug: Web/API/HTMLTableElement/bgColor
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`HTMLTableElement.bgcolor`** プロパティは、この表の背景色を表します。

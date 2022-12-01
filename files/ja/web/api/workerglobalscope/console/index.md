@@ -4,6 +4,7 @@ slug: Web/API/WorkerGlobalScope/console
 l10n:
   sourceCommit: cc1f5c3bd1a9976a0668eeee016f6afc144533b0
 ---
+
 {{APIRef("Web Workers API")}}{{Non-standard_header}}
 
 **`console`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、このワーカーのブラウザーコンソールへのアクセスをアクセスを提供する {{domxref("console")}} オブジェクトを返します。

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/wait
 ---
+
 {{JSRef}}
 
 La méthode statique **`Atomics.wait()`** permet de vérifier qu'un emplacement d'un tableau {{jsxref("Int32Array")}} contient toujours une valeur donnée et, si c'est le cas, l'agent dort en attendant un réveil ou un délai d'expiration. La méthode renvoie une chaîne qui vaut `"ok"`, `"not-equal"` ou `"timed-out"`.
@@ -68,13 +69,11 @@ Atomics.notify(int32, 0, 1);
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires                     |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.wait', 'Atomics.wait')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.wait")}}
+{{Compat}}
 
 ## Voir aussi
 

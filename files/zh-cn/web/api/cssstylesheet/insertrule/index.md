@@ -2,9 +2,10 @@
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 ---
+
 {{ APIRef("CSSOM") }}
 
-**`CSSStyleSheet.insertRule()` **方法用来给当前样式表插入新的样式规则（[CSS rule](/zh-CN/docs/Web/API/CSSRule)），并且包含一些[限制](/zh-CN/docs/Web/API/CSSStyleSheet/insertRule$edit#Restrictions)。
+**`CSSStyleSheet.insertRule()`** 方法用来给当前样式表插入新的样式规则（[CSS rule](/zh-CN/docs/Web/API/CSSRule)），并且包含一些[限制](#限制)。
 
 > **备注：** 尽管 `insertRule()` 是 {{domxref("CSSStyleSheet")}} 的一个方法，但它实际插入的地方是 `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 的内部 {{domxref("CSSRuleList")}}。
 
@@ -24,7 +25,7 @@ stylesheet.insertRule(rule [, index])
     - **[at-rules](/zh-CN/docs/Web/CSS/At-rule) 类型**（以 `@` 开头的规则，如 `@import, @media` 等）**，**需要 at-identifier 和规则内容。
 
 - `index` {{optional_inline}}
-  - : 一个小于或等于 `stylesheet.cssRules.length` 的正整数，表示新插入的规则在`{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 中的位置。默认值是 `0`。（在过去的实现中，这个参数是必需的，详情参见[浏览器兼容性](/zh-CN/docs/Web/API/CSSStyleSheet/insertRule$edit#Browser_compatibility)。)
+  - : 一个小于或等于 `stylesheet.cssRules.length` 的正整数，表示新插入的规则在`{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 中的位置。默认值是 `0`。（在过去的实现中，这个参数是必需的，详情参见[浏览器兼容性](#浏览器兼容性)。）
 
 ### 返回值
 
@@ -150,11 +151,11 @@ function addStylesheetRules (decls) {
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSStyleSheet.insertRule")}}
+{{Compat}}
 
 ### 传统浏览器支持
 
-为了支持 Internet Explorer 8 和更早版本，请使用: `addRule(selector, rule [, index]);`。例如：`addRule('pre', 'font: 14px verdana'); // add rule at end`
+为了支持 Internet Explorer 8 和更早版本，请使用：`addRule(selector, rule [, index]);`。例如：`addRule('pre', 'font: 14px verdana'); // add rule at end`
 
 另外注意非标准的 [`removeRule()`](http://www.quirksmode.org/dom/w3c_css.html#change) 和 [`.rules`](http://www.quirksmode.org/dom/w3c_css.html#access) 方法分别用 {{domxref("CSSStyleSheet.deleteRule","deleteRule()")}} 和{{domxref("CSSStyleSheet",".cssRules")}} 代替。
 

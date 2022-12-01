@@ -2,6 +2,7 @@
 title: Encoding API
 slug: Web/API/Encoding_API
 ---
+
 {{DefaultAPISidebar("Encoding API")}}{{SeeCompatTable}}
 
 **Encoding API** はレガシーな非{{Glossary("UTF-8")}}エンコーディングを含む様々な{{Glossary("character encoding", "文字エンコーディング")}}のテキストを扱うメカニズムを提供します。
@@ -22,9 +23,7 @@ slug: Web/API/Encoding_API
 
 ## 仕様書
 
-| 仕様書                           | 状態                         | 備考     |
-| -------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Encoding")}} | {{Spec2("Encoding")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

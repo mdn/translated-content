@@ -2,7 +2,8 @@
 title: <nav>
 slug: Web/HTML/Element/nav
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<nav>`元素**表示页面的一部分，其目的是在当前文档或其他文档中提供导航链接。导航部分的常见示例是菜单，目录和索引。
 
@@ -69,6 +70,6 @@ slug: Web/HTML/Element/nav
 
 ## 更多
 
-- 其他部分相关元素: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
+- 其他部分相关元素：{{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [HTML5 的文档节段和纲要](/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document).
 - [ARIA: Navigation role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Navigation_Role)

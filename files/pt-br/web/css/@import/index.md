@@ -1,13 +1,13 @@
 ---
 title: '@import'
 slug: Web/CSS/@import
-translation_of: Web/CSS/@import
 ---
+
 {{CSSRef}}
 
 ## Sumário
 
-A [Regra Atribuída (at-rule) ](/pt-BR/docs/Web/CSS/At-rule)[CSS](/pt-BR/docs/Web/CSS) **`@import `**é usado para importar regras de estilo de outras folhas de estilo. Estas regras devem preceder todos os outros tipos de regras, exceto as regrasde [@charset](/pt-BR/docs/Web/CSS/@charset) ; uma vez que não é um [Declaração aninhada](/pt-BR/docs/Web/CSS/Syntax#nested_statements), `@import não pode ser usado dentro do` [grupo condicional de regras atribuídas (at-rules)](/pt-BR/docs/Web/CSS/At-rule#Conditional_Group_Rules).
+A [Regra Atribuída (at-rule)](/pt-BR/docs/Web/CSS/At-rule) [CSS](/pt-BR/docs/Web/CSS) **`@import`** é usado para importar regras de estilo de outras folhas de estilo. Estas regras devem preceder todos os outros tipos de regras, exceto as regrasde [@charset](/pt-BR/docs/Web/CSS/@charset) ; uma vez que não é um [Declaração aninhada](/pt-BR/docs/Web/CSS/Syntax#nested_statements), `@import não pode ser usado dentro do` [grupo condicional de regras atribuídas (at-rules)](/pt-BR/docs/Web/CSS/At-rule#Conditional_Group_Rules).
 
 Assim como os agentes do usuário podem evitar a recuperação de recursos para os tipos de mídia incompatíveis, os autores podem especificar regras @import dependentes de mídia. Estas importações condicionais devem ter [media queries](/pt-BR/docs/Web/CSS/Media_Queries/Using_media_queries) separadas por vírgulas após a URI. Na ausência de qualquer consulta de mídia (media queries), a importação é incondicional. Especificando todos para o médio tem o mesmo efeito.
 

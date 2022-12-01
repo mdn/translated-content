@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Animations/Tips
 original_slug: Web/CSS/Animations_CSS/Conseils
 ---
+
 {{CSSRef}}
 
 Les animations CSS permettent de réaliser réaliser des effets incroyables en mainpulant les éléments de vos documents et applications.. Cependant, il est parfois compliqué d'obtenir l'effet désiré. Dans cet article, on explorera différents conseils visant à simplifier la réalisation d'animations.
@@ -107,7 +108,7 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 
 Si on retire la propriété {{cssxref("animation-name")}} appliquée à un élément, l'animation s'arrêtera au prochain état défini. Si on souhaite plutôt que l'animation se termine et parvienne à un point d'arrêt, il faudra utiliser une autre approche. Voici quelques pistes :
 
-1. L'animation doit être la plus isolée possible et on ne doit pas reposer sur  `animation-direction: alternate`. Il faut une animation explicitement séquencée qui parcourt l'ensemble de l'animation en un cycle.
+1. L'animation doit être la plus isolée possible et on ne doit pas reposer sur `animation-direction: alternate`. Il faut une animation explicitement séquencée qui parcourt l'ensemble de l'animation en un cycle.
 2. Utiliser JavaScript pour retirer l'animation lorsque l'évènement `animationiteration` se déclenche.
 
 Ces pistes sont utilisées dans la démonstration suivante :

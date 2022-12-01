@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty
 ---
+
 {{JSRef}}
 
 La méthode **`hasOwnProperty()`** retourne un booléen indiquant si l'objet possède la propriété spécifiée "en propre", sans que celle-ci provienne de la chaîne de prototypes de l'objet.
@@ -68,7 +69,7 @@ o.hasOwnProperty('hasOwnProperty');
 
 ### Parcourir les propriétés d'un objet
 
-L'exemple suivant montre comment parcourir les propriétés d'un objet sans traiter les propriétés héritées. On notera que la boucle  {{jsxref("Instructions/for...in", "for...in")}} ne prend en compte que les éléments énumérables. Il ne faut donc pas déduire de l'absence de propriétés non-énumérables dans la boucle, que `hasOwnProperty()` est elle-même strictement restreinte aux éléments énumérables (comme c'est le cas pour {{jsxref("Object.getOwnPropertyNames()")}}) .
+L'exemple suivant montre comment parcourir les propriétés d'un objet sans traiter les propriétés héritées. On notera que la boucle {{jsxref("Instructions/for...in", "for...in")}} ne prend en compte que les éléments énumérables. Il ne faut donc pas déduire de l'absence de propriétés non-énumérables dans la boucle, que `hasOwnProperty()` est elle-même strictement restreinte aux éléments énumérables (comme c'est le cas pour {{jsxref("Object.getOwnPropertyNames()")}}) .
 
 ```js
 var bidule = {
@@ -115,16 +116,11 @@ La dernière version utilisée permet de ne pas créer d'objet supplémentaire.
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.5. |
-| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.hasOwnProperty")}}
+{{Compat}}
 
 ## Voir aussi
 

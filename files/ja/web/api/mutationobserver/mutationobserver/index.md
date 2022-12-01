@@ -2,6 +2,7 @@
 title: MutationObserver.MutationObserver()
 slug: Web/API/MutationObserver/MutationObserver
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 **MutationObserver()** コンストラクタ ({{domxref("MutationObserver")}} インターフェースの一部) は、指定されたコールバックを DOM イベントが発生したときに実行するオブザーバを作成して返します。DOM の監視はすぐに開始されるわけではありません。最初に {{domxref("MutationObserver.observe", "observe()")}} メソッドを呼び出し、DOM のどの部分を監視し、どのような変更を監視するかを決めなければなりません。
@@ -73,9 +74,7 @@ observer.observe(targetNode, observerOptions);
 
 ## 仕様書
 
-| Specification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('DOM WHATWG', '#dom-mutationobserver-mutationobserver', 'MutationObserver()')}} | {{ Spec2('DOM WHATWG') }} |         |
+{{Specifications}}
 
 ## 各ブラウザの対応状況
 

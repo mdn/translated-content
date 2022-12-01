@@ -2,6 +2,7 @@
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 ---
+
 {{JSRef}}
 
 **`Symbol.split`** ウェルノウンシンボルは、正規表現に一致する位置で文字列を分割するメソッドを指定します。この関数は {{jsxref("String.prototype.split()")}} メソッドによって呼び出されます。
@@ -28,9 +29,7 @@ console.log('Another one bites the dust'.split(new ReverseSplit()));
 
 ## 仕様書
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

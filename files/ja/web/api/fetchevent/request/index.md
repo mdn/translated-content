@@ -2,6 +2,7 @@
 title: FetchEvent.request
 slug: Web/API/FetchEvent/request
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("FetchEvent")}} インターフェイスの **`request`** 読み取り専用プロパティは、イベントハンドラーをトリガーした {{domxref("Request")}} を返します。
@@ -53,9 +54,7 @@ self.addEventListener('fetch', function(event) {
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#fetch-event-request', 'request')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

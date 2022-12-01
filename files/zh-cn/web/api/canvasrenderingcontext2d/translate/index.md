@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.translate()
 slug: Web/API/CanvasRenderingContext2D/translate
 ---
+
 {{APIRef}}
 
 Canvas 2D API 的 **`CanvasRenderingContext2D.translate()`** 方法对当前网格添加平移变换的方法。
@@ -96,7 +97,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.translate")}}
+{{Compat}}
 
 ## 参见
 

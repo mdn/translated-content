@@ -2,9 +2,10 @@
 title: <math>
 slug: Web/MathML/Element/math
 ---
+
 {{MathMLRef}}
 
-MathML 的顶级元素是`<math>`。所有有效的 MathML 实例必须被包括在 `<math>` 标记中。另外不可以在一个 `<math>` 元素中嵌套第二个 `<math>` 元素，但是 `<math>` 元素中可以有任意多的子元素 。
+MathML 的顶级元素是`<math>`。所有有效的 MathML 实例必须被包括在 `<math>` 标记中。另外不可以在一个 `<math>` 元素中嵌套第二个 `<math>` 元素，但是 `<math>` 元素中可以有任意多的子元素。
 
 ## 属性
 
@@ -123,7 +124,7 @@ MathML 的顶级元素是`<math>`。所有有效的 MathML 实例必须被包括
 
 ## Gecko-specific 注释
 
-Gecko 7.0 {{ geckoRelease("7.0") }} 添加了对所有 MathML 属性在顶级 math 元素上的支持。 (也就是说和添加一个{{ MathMLElement("mstyle") }}元素效果一样)。然而，`displaystyle` 属性直到 Gecko 8.0 {{ geckoRelease("8.0") }} 才 [被添加进实现](https://bugzilla.mozilla.org/show_bug.cgi?id=669719)。
+Gecko 7.0 添加了对所有 MathML 属性在顶级 math 元素上的支持。 (也就是说和添加一个{{ MathMLElement("mstyle") }}元素效果一样)。然而，`displaystyle` 属性直到 Gecko 8.0 才 [被添加进实现](https://bugzilla.mozilla.org/show_bug.cgi?id=669719)。
 
 纯文本的 fall-back (`alttext`) 或者指定替代图像的属性`altimg`, `altimg-width`, `altimg-height` 或 `altimg-valign` 目前都还没有在 Gecko 中实现。
 

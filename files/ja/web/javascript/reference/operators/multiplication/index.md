@@ -2,6 +2,7 @@
 title: 乗算 (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
 ---
+
 {{jsSidebar("Operators")}}
 
 乗算演算子 (`*`) はオペランドの積を生成します。

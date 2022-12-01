@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLShadowElement
 ---
+
 {{APIRef("Web Components")}}{{Deprecated_header}}
 
 L'interface **`HTMLShadowElement`** représente un élement HTML {{HTMLElement("shadow")}}, utililisé dans le [Shadow DOM](/fr/docs/Web/Web_Components/Shadow_DOM).

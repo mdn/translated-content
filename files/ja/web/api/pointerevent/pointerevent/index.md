@@ -1,44 +1,58 @@
 ---
-title: PointerEvent.PointerEvent()
+title: PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
+l10n:
+  sourceCommit: 2b8f5d9a29f00aea5d2edfa78d1fb90c51752858
 ---
+
 {{APIRef("Pointer Events")}}
 
-**`PointerEvent()`** コンストラクタは、新しい信頼できない合成 {{domxref("PointerEvent")}} オブジェクトのインスタンスを作成します。
+**`PointerEvent()`** コンストラクターは、新しい信頼できない合成 {{domxref("PointerEvent")}} オブジェクトのインスタンスを作成します。
 
 ## 構文
 
-```
- event = new PointerEvent(type, PointerEventInit);
+```js-nolint
+new PointerEvent(type)
+new PointerEvent(type, options)
 ```
 
 ### 引数
 
-- _type_
-  - : イベントの名前を表す {{domxref("DOMString")}} です（[`PointerEvent` のイベントタイプ](/Web/API/PointerEvent#Pointer_event_types)を参照）。
-- _PointerEventInit_{{optional_inline}}
+- `type`
+  - : 文字列で、イベントの名前を表します（[PointerEvent のイベントの種類](/ja/docs/Web/API/PointerEvent#ポインターイベントの種類)を参照）。
+- `options` {{optional_inline}}
+  - : オブジェクトで、_{{domxref("MouseEvent/MouseEvent", "MouseEvent()")}} で定義されているプロパティに加え_、以下のプロパティを設定することができます。
+    - `pointerId`
+      - : 数値で、既定値は `0` であり、インスタンスの {{domxref("PointerEvent.pointerId")}} の値を設定します。
+    - `width`
+      - : 数値で、既定値は `1` であり、インスタンスの {{domxref("PointerEvent.width")}} の値を設定します。
+    - `height`
+      - : 数値で、既定値は `1` であり、インスタンスの {{domxref("PointerEvent.height")}} の値を設定します。
+    - `pressure`
+      - : 数値で、既定値は `0` であり、インスタンスの {{domxref("PointerEvent.pressure")}} の値を設定します。
+    - `tangentialPressure`
+      - : 数値で、既定値は `0` であり、インスタンスの {{domxref("PointerEvent.tangentialPressure")}} の値を設定します。
+    - `tiltX`
+      - : 数値で、既定値は `0` であり、インスタンスの {{domxref("PointerEvent.tiltX")}} の値を設定します。
+    - `tiltY`
+      - : 数値で、既定値は `0` であり、インスタンスの {{domxref("PointerEvent.tiltY")}} の値を設定します。
+    - `twist`
+      - : 数値で、既定値は `0` であり、インスタンスの {{domxref("PointerEvent.twist")}} の値を設定します。
+    - `pointerType`
+      - : 文字列で、既定値は `""` であり、インスタンスの {{domxref("PointerEvent.pointerType")}} の値を設定します。
+    - `isPrimary`
+      - : 論理値で、既定値は `false` であり、インスタンスの {{domxref("PointerEvent.isPrimary")}} の値を設定します。
 
-  - : 次のフィールドを持つ `PointerEventInit` ディクショナリです。
+### 返値
 
-    - `pointerId` — インスタンスの {{domxref("PointerEvent.pointerId")}} の値を設定する `long` 型のオプションで、デフォルトは `0` です。
-    - `width` — インスタンスの {{domxref("PointerEvent.width")}} の値を設定する `double` 型のオプションで、デフォルトは `1` です。
-    - `height` — インスタンスの {{domxref("PointerEvent.height")}} の値を設定する `double` 型のオプションで、デフォルトは `1` です。
-    - `pressure` — インスタンスの {{domxref("PointerEvent.pressure")}} の値を設定する `float` 型のオプションで、デフォルトは `0` です。
-    - `tangentialPressure` — インスタンスの {{domxref("PointerEvent.tangentialPressure")}} の値を設定する `float` 型のオプションで、デフォルトは `0` です。
-    - `tiltX` — インスタンスの {{domxref("PointerEvent.tiltX")}} の値を設定する `long` 型のオプションで、デフォルトは `0` です。
-    - `tiltY` — インスタンスの {{domxref("PointerEvent.tiltY")}} の値を設定する `long` 型のオプションで、デフォルトは `0` です。
-    - `twist` — インスタンスの {{domxref("PointerEvent.twist")}} の値を設定する `long` 型のオプションで、デフォルトは `0` です。
-    - `pointerType` — インスタンスの {{domxref("PointerEvent.pointerType")}} の値を設定する {{domxref("DOMString")}} 型のオプションで、デフォルトは `""` です。
-    - `isPrimary` — インスタンスの {{domxref("PointerEvent.isPrimary")}} の値を設定する {{jsxref("Boolean")}} 型のオプションで、デフォルトは `false` です。
-
-    > **Note:** **注**: `PointerEventInit` ディクショナリは、{{domxref("MouseEvent.MouseEvent","MouseEvent")}}、{{domxref("UIEvent.UIEvent", "UIEventInit")}}、および {{domxref("Event.Event", "EventInit")}} ディクショナリからのフィールドも受け入れます。
+新しい {{domxref("PointerEvent")}} オブジェクトです。
 
 ## 例
 
 ```js
-var moveEvent = new PointerEvent("pointermove");
+const moveEvent = new PointerEvent("pointermove");
 
-var downEvent = new PointerEvent("pointerdown",
+const downEvent = new PointerEvent("pointerdown",
    {pointerId: 1,
     bubbles: true,
     cancelable: true,
@@ -49,6 +63,10 @@ var downEvent = new PointerEvent("pointerdown",
    });
 ```
 
+## 仕様書
+
+{{Specifications}}
+
 ## ブラウザーの互換性
 
-{{Compat("api.PointerEvent.PointerEvent")}}
+{{Compat}}

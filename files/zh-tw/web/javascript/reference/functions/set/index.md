@@ -2,6 +2,7 @@
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
 ---
+
 {{jsSidebar("Functions")}}
 
 **`set`** 語法會在物件屬性被嘗試定義時，將其屬性綁定到要呼叫的函式內。
@@ -101,13 +102,13 @@ console.log(obj.baz); // "baz"
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.functions.set")}}
+{{Compat}}
 
 ## 參見
 
 - [getter](/zh-TW/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - JavaScript 教學的[定義 Getters 與 Setters](/zh-TW/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

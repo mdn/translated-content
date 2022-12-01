@@ -2,6 +2,7 @@
 title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
 ---
+
 « [SVG 属性参考](/zh-CN/SVG/Attribute)
 
 这个属性表示动画将发生的次数。

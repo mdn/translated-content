@@ -2,6 +2,7 @@
 title: File.webkitRelativePath
 slug: Web/API/File/webkitRelativePath
 ---
+
 {{APIRef("File API")}}{{non-standard_header}}
 
 **`File.webkitRelativePath`** 是只读属性，包含 {{domxref("USVString")}}，它规定了文件的路径，相对于用户在 {{HTMLElement("input")}} 元素中选择的目录，这个元素设置了 {{htmlattrxref("webkitdirectory", "input")}} 属性。
@@ -18,7 +19,7 @@ slug: Web/API/File/webkitRelativePath
 
 ## 示例
 
-这个示例展示了目录选择器，它让用户选择一个或多个目录。{{event("change")}} 事件触发时，所选目录包含的所有文件的列表，会生成并展示，带有所选目录的层次结构。
+这个示例展示了目录选择器，它让用户选择一个或多个目录。[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件触发时，所选目录包含的所有文件的列表，会生成并展示，带有所选目录的层次结构。
 
 ### HTML 内容
 
@@ -56,7 +57,7 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ## 浏览器兼容性
 
-{{Compat("api.File.webkitRelativePath")}}
+{{Compat}}
 
 ## 另见
 

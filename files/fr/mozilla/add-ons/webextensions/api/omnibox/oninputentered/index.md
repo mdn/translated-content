@@ -12,6 +12,7 @@ tags:
   - onInputEntered
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque l'utilisateur a sélectionné l'une des suggestions que votre extension a ajoutées à la liste déroulante de la barre d'adresse.
@@ -40,7 +41,7 @@ Les événements ont trois fonctions :
 
 ## Syntaxe addListener
 
-La fonction d'écouteur recevra deux paramètres: une chaine de `text`, et un  {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
+La fonction d'écouteur recevra deux paramètres: une chaine de `text`, et un {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
 
 ### Paramètres
 

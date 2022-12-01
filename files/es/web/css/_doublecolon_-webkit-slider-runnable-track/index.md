@@ -1,25 +1,15 @@
 ---
 title: '::-webkit-slider-runnable-track'
 slug: Web/CSS/::-webkit-slider-runnable-track
-tags:
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - No estándar(2)
-  - Pseudo-elemento
-  - Pseudo-elemento CSS
-  - Referencia
-translation_of: Web/CSS/::-webkit-slider-runnable-track
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}
 
 ## Resumen
 
-El [pseudo-elemento ](/es/CSS/Pseudo-elements "en/CSS/Pseudo-elements")CSS **`::-webkit-slider-runnable-track`** representa el trayecto (la ranura sobre la que se desliza el indicador) de un {{HTMLElement("input")}} con `type="range"`.
+El [pseudo-elemento](/es/CSS/Pseudo-elements) CSS **`::-webkit-slider-runnable-track`** representa el trayecto (la ranura sobre la que se desliza el indicador) de un {{HTMLElement("input")}} con `type="range"`.
 
 ## Especificaciones
 

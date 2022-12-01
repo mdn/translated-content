@@ -2,6 +2,7 @@
 title: <xsl:otherwise>
 slug: Web/XSLT/Element/otherwise
 ---
+
 {{ XsltRef() }}
 
 `<xsl:otherwise>` 要素は `<xsl:when>` 条件のいずれも適用されない場合に実行されるアクションを定義するために使用されます。他のプログラミング言語の `else` または `default` の場合と似ています。

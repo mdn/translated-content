@@ -3,6 +3,7 @@ title: AnimationEvent.initAnimationEvent()
 slug: Web/API/AnimationEvent/AnimationEvent
 original_slug: Web/API/AnimationEvent/initAnimationEvent
 ---
+
 {{ apiref("Web Animations API") }}
 
 ## Summary
@@ -46,7 +47,7 @@ animationEvent.initAnimationEvent(typeArg, canBubbleArg, cancelableArg, animatio
 
 ## Browser compatibility
 
-{{Compat("api.AnimationEvent.AnimationEvent")}}
+{{Compat}}
 
 ## See also
 

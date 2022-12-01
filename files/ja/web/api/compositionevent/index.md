@@ -2,6 +2,7 @@
 title: CompositionEvent
 slug: Web/API/CompositionEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 DOM **`CompositionEvent`** は間接的なテキストの入力によって発生するイベントを表します。
@@ -31,10 +32,7 @@ _このインターフェイスは、親である {{domxref("UIEvent")}} およ�
 
 ## 仕様
 
-| 仕様書                                                                                               | 策定状況                         | コメント |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('UI Events', '#interface-compositionevent', 'CompositionEvent')}} | {{Spec2('UI Events')}}     |          |
-| {{SpecName('DOM3 Events', '#idl-compositionevent', 'CompositionEvent')}}     | {{Spec2('DOM3 Events')}} |          |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

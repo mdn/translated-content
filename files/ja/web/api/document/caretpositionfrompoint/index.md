@@ -3,6 +3,7 @@ title: DocumentOrShadowRoot.caretPositionFromPoint()
 slug: Web/API/Document/caretPositionFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/caretPositionFromPoint
 ---
+
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
 {{domxref("DocumentOrShadowRoot")}} インターフェイスの **`caretPositionFromPoint()`** プロパティは、 DOM ノードを含む {{domxref('CaretPosition')}} オブジェクトを、そのノード内のキャレットとキャレットの文字オフセットと共に返します。
@@ -77,9 +78,7 @@ window.onload = function (){
 
 ## 仕様
 
-| 仕様                                                                                                                         | ステータス                       | 備考                |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSSOM View','#dom-document-caretpositionfrompoint','caretPositionFromPoint()')}} | {{Spec2('CSSOM View')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,11 +2,12 @@
 title: 'CSP: referrer'
 slug: Web/HTTP/Headers/Content-Security-Policy/referrer
 ---
+
 {{HTTPSidebar}} {{deprecated_header}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`referrer`** ディレクティブは、ページから離れたリンクの {{HTTPHeader("Referer")}} ヘッダー (元の仕様書の綴りミスのため `r` は単一) の情報を指定するために使用されます。この API は非推奨であり、ブラウザーから削除されました。
 
-> **Note:** 代わりに {{HTTPHeader("Referrer-Policy")}} ヘッダーを使用してください。
+> **メモ:** 代わりに {{HTTPHeader("Referrer-Policy")}} ヘッダーを使用してください。
 
 ## 構文
 

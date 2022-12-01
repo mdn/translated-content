@@ -4,6 +4,7 @@ title: >-
   ‘Access-Control-Allow-Origin’ is ‘*’
 slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ---
+
 {{HTTPSidebar}}
 
 ## 原因
@@ -27,5 +28,5 @@ slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ## 另请参见
 
 - [CORS errors](/zh-CN/docs/Web/HTTP/CORS/Errors)
-- 术语: {{Glossary("CORS")}}
+- 术语：{{Glossary("CORS")}}
 - [CORS introduction](/zh-CN/docs/Web/HTTP/CORS)

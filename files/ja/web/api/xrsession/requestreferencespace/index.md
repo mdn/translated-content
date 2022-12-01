@@ -3,6 +3,7 @@ title: XRReferenceSpaceType
 slug: Web/API/XRSession/requestReferenceSpace
 original_slug: Web/API/XRReferenceSpaceType
 ---
+
 {{APIRef("WebXR Device API")}}
 
 **`XRReferenceSpaceType`** 列挙型は、WebXR がサポートしている参照空間のタイプを識別する文字列を定義します。 このタイプは、{{domxref("XRSession.requestReferenceSpace", "requestReferenceSpace()")}} メソッドを呼び出して {{domxref("XRSession")}} の参照空間を取得するときに使用します。
@@ -25,10 +26,8 @@ original_slug: Web/API/XRReferenceSpaceType
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                     | コメント |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#enumdef-xrreferencespacetype','XRReferenceSpaceType')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XRReferenceSpaceType")}}
+{{Compat}}

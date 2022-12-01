@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: suspend イベント'
 slug: Web/API/HTMLMediaElement/suspend_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `suspend` イベントは、メディアデータの読み込みが中断されたときに発生します。
@@ -97,4 +98,4 @@ video.onsuspend = (event) => {
 
 <!---->
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)

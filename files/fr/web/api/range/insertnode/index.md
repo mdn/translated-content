@@ -3,6 +3,7 @@ title: Range.insertNode()
 slug: Web/API/Range/insertNode
 translation_of: Web/API/Range/insertNode
 ---
+
 {{ApiRef("DOM")}}
 
 La méthode **`Range.insertNode()`** insère un nœud au début du {{domxref("Range")}}.

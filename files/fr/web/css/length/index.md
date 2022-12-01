@@ -8,6 +8,7 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/length
 ---
+
 {{CSSRef}}
 
 Le type de données CSS **`<length>`** correspond à une mesure de distance.
@@ -162,16 +163,11 @@ Les valeurs du type `<length>` peuvent être interpolées de manière à rendre 
 
 ## Spécifications
 
-| Spécification                                                                                | État                             | Commentaires                                                                                     |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------ |
-| {{SpecName('CSS4 Values', '#lengths', '&lt;length&gt;')}}                 | {{Spec2('CSS4 Values')}} | Ajout des unités `vi`, `vb`, `ic`, `lh` et `rlh`.                                                |
-| {{SpecName('CSS3 Values', '#lengths', '&lt;length&gt;')}}                 | {{Spec2('CSS3 Values')}} | Ajout des unités `ch`, `rem`, `vw`, `vh`, `vmin`, `vmax`                                         |
-| {{SpecName('CSS2.1', 'syndata.html#length-units', '&lt;length&gt;')}} | {{Spec2('CSS2.1')}}         | Définition explicite des unités `em`, `pt`, `pc`, `px` (la définition était implicite pour CSS1) |
-| {{SpecName('CSS1', '#length-units', '&lt;length&gt;')}}                     | {{Spec2('CSS1')}}         | Définition initiale. Définition implicite des unités `em`, `pt`, `pc` et `px`.                   |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.length")}}
+{{Compat}}
 
 ## Voir aussi
 

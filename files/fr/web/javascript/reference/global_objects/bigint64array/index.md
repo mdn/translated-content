@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt64Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt64Array
 ---
+
 {{JSRef}}
 
 Le tableau typé **`BigInt64Array`** permet de représenter un tableau d'entiers signés représentés sur 64 bits, où l'ordre des octets correspond à celui de la plateforme utilisée. Si on souhaite contrôler l'ordre des octets utilisé (le « boutisme »), on utilisera un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0n`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).

@@ -4,6 +4,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 original_slug: Web/API/notification/Using_Web_Notifications
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 L'[API Notifications](/fr/docs/Web/API/Notifications_API) permet à une application ou à une page web d'envoyer des notifications affichées en dehors de la page par le système sous-jacent. Cela permet aux applications web d'envoyer des informations aux utilisatrices et utilisateurs même lorsque l'application est en veille ou en arrière-plan. Dans cet article, nous verrons les bases de cette API afin de vous permettre de l'utiliser dans vos propres applications.

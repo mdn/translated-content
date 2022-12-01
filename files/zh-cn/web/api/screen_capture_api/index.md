@@ -2,6 +2,7 @@
 title: 屏幕捕捉 API
 slug: Web/API/Screen_Capture_API
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 屏幕捕获 API 对现有的媒体捕获和流 API 进行了补充，让用户选择一个屏幕或屏幕的一部分（如一个窗口）作为媒体流进行捕获。然后，该流可以被记录或通过网络与他人共享。
@@ -87,7 +88,7 @@ See [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Pol
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaDevices.getDisplayMedia")}}
+{{Compat}}
 
 ## 参见
 

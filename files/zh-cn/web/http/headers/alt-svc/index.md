@@ -2,7 +2,10 @@
 title: Alt-Svc
 slug: Web/HTTP/Headers/Alt-Svc
 ---
-**`Alt-Svc`** 全称为“Alternative-Service”，直译为“备选服务”。该头部列举了当前站点备选的访问方式列表。一般用于在提供 “QUIC” 等新兴协议支持的同时，实现向下兼容。
+
+{{HTTPSidebar}}
+
+**`Alt-Svc`** 全称为“Alternative-Service”，直译为“备选服务”。该头部列举了当前站点备选的访问方式列表。一般用于在提供“QUIC”等新兴协议支持的同时，实现向下兼容。
 
 ## 语法
 

@@ -2,6 +2,7 @@
 title: 'AudioTrackList: change イベント'
 slug: Web/API/AudioTrackList/change_event
 ---
+
 {{APIRef}}
 
 `change` イベントは、音声トラックが有効または無効になったとき（トラックの [`enabled`](/ja/docs/Web/API/AudioTrack/enabled) プロパティを変更したときなど）に発生します。
@@ -65,9 +66,7 @@ toggleTrackButton.addEventListener('click', () => {
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             |
-| -------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'media.html#event-media-change', 'change')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

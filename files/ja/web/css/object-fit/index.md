@@ -2,6 +2,7 @@
 title: object-fit
 slug: Web/CSS/object-fit
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`object-fit`** プロパティは、[置換要素](/ja/docs/Web/CSS/Replaced_element)、例えば {{HTMLElement("img")}} や {{HTMLElement("video")}} などの中身を、コンテナーにどのようにはめ込むかを設定します。

@@ -2,6 +2,7 @@
 title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
 ---
+
 {{jsSidebar("Objects")}}
 
 グローバルプロパティ **`NaN`** は非数 (Not-A-Number) を表す値です。

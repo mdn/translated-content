@@ -3,6 +3,7 @@ title: self.createImageBitmap()
 slug: Web/API/createImageBitmap
 original_slug: Web/API/WindowOrWorkerGlobalScope/createImageBitmap
 ---
+
 {{APIRef("Canvas API")}}
 
 **`createImageBitmap()`** メソッドは、指定されたソースからビットマップを作成します。このメソッドは、windows と worker の両方のグローバルスコープに存在します。このメソッドは、さまざまな異なる画像ソースを受け付け、{{domxref("Promise")}} を返し、{{domxref("ImageBitmap")}} に解決します。
@@ -71,13 +72,11 @@ image.src = 'sprites.png';
 
 ## 仕様
 
-| 仕様書                                                                                                                   | ステータス                       | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "webappapis.html#dom-createimagebitmap", "createImageBitmap")}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザの互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.createImageBitmap")}}
+{{Compat}}
 
 ## あわせて参照
 

@@ -2,6 +2,7 @@
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
 ---
+
 {{HTTPSidebar}}
 
 HTTP 协议中的 **`Authorization`** 请求消息头含有服务器用于验证用户代理身份的凭证，通常会在服务器返回{{HTTPStatus("401")}} `Unauthorized` 状态码以及{{HTTPHeader("WWW-Authenticate")}} 消息头之后在后续请求中发送此消息头。
@@ -19,7 +20,7 @@ Authorization: <type> <credentials>
 ## 指令
 
 - \<type>
-  - : [验证类型](/zh-CN/docs/Web/HTTP/Authentication#Authentication_schemes)。 常见的是 ["基本验证（Basic）"](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme) 。其他类型包括：
+  - : [验证类型](/zh-CN/docs/Web/HTTP/Authentication#Authentication_schemes)。常见的是 ["基本验证（Basic）"](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme) 。其他类型包括：
 
     - [在 IANA 机构注册的验证方案](http://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
     - [AWS 服务器的验证方案 (`AWS4-HMAC-SHA256`)](http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)

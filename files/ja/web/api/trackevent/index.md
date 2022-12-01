@@ -2,6 +2,7 @@
 title: TrackEvent
 slug: Web/API/TrackEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTML DOM 仕様の一部である **`TrackEvent`** インターフェイスは、HTML メディア要素で使用可能なトラックのセットに対する変更を表すイベントに使用されます。 これらのイベントは {{event("addtrack")}} と {{event("removetrack")}} です。 `TrackEvent` を {{domxref("RTCPeerConnection")}} の一部であるトラックに使用される {{domxref("RTCTrackEvent")}} インターフェイスと混同しないでください。
@@ -72,10 +73,7 @@ function handleTrackEvent(event) {
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "media.html#the-trackevent-interface", "TrackEvent")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#trackevent", "TrackEvent")}}     | {{Spec2('HTML5 W3C')}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,7 +2,8 @@
 title: <meter>
 slug: Web/HTML/Element/meter
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<meter>元素用来显示已知范围的标量值或者分数值。`**
 

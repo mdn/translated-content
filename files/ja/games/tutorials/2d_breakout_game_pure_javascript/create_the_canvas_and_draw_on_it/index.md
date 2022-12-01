@@ -3,6 +3,7 @@ title: キャンバスを作ってその上に描画する
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
@@ -100,7 +101,7 @@ ctx.closePath();
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/x62h15e2/","","395")}}
 
-> **Note:** 与えられた図形の大きさや色を変えてみましょう。
+> **メモ:** 与えられた図形の大きさや色を変えてみましょう。
 
 ## 次のステップ
 

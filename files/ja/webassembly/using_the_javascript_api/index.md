@@ -4,17 +4,18 @@ slug: WebAssembly/Using_the_JavaScript_API
 i10n:
   sourceCommit: 754a5590dd7d8d1e231ed0443a5a3feacc9ad4c0
 ---
+
 {{WebAssemblySidebar}}
 
 これまでに [Emscripten などのツールを使用して他の言語からモジュールをコンパイルしたり](/ja/docs/WebAssembly/C_to_wasm)、[自分自身のコードを読み込んでして実行したりしました](/ja/docs/WebAssembly/Loading_and_running)。次のステップは他の WebAssembly JavaScript API の使い方について学ぶことです。この記事では知る必要があることを説明します。
 
-> **Note:** もし、この記事で説明している基本的な概念がよくわからない場合、 [WebAssembly の概要](/ja/docs/WebAssembly/Concepts)を先に読んでからこの記事に戻ってきてください。
+> **メモ:** もし、この記事で説明している基本的な概念がよくわからない場合、 [WebAssembly の概要](/ja/docs/WebAssembly/Concepts)を先に読んでからこの記事に戻ってきてください。
 
 ## シンプルな例
 
 WebAssembly JavaScript API の使用方法と、wasm モジュールを読み込んでウェブページ内で使用する方法を、ステップバイステップの例を通して実行してみましょう。
 
-> **Note:** サンプルコードは [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub リポジトリーから参照してください。
+> **メモ:** サンプルコードは [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub リポジトリーから参照してください。
 
 ### 例の準備
 
@@ -54,7 +55,7 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 この結果、エクスポートした WebAssembly の `exported_func` 関数を呼び出し、インポートした JavaScript の `imported_func` 関数を呼び出し、WebAssembly インスタンスの中で提供した値 (42) をコンソールに記録することになりました。サンプルのコードを保存して、WebAssembly に対応しているブラウザーで読み込むと、これが実際に動作しているのがわかります。
 
-> **Note:** これは複雑で長い例のほんの一部ですが、ウェブアプリケーション内で WebAssembly をどのように JavaScript と組み合わせて動作させることができるかを説明しています。別の場所でも言及していますが、 WebAssembly は JavaScript の置き換えを目指しているわけではありません。両方が協力して、お互いの強みを活かすことができます。
+> **メモ:** これは複雑で長い例のほんの一部ですが、ウェブアプリケーション内で WebAssembly をどのように JavaScript と組み合わせて動作させることができるかを説明しています。別の場所でも言及していますが、 WebAssembly は JavaScript の置き換えを目指しているわけではありません。両方が協力して、お互いの強みを活かすことができます。
 
 ### ストリーミングせずに wasm モジュールを読み込む
 
@@ -87,7 +88,7 @@ WebAssembly の低レベルのメモリーモデルでは、メモリーは[線�
 
 しかし、利用可能なメモリー範囲がプロセス全体に及ぶネイティブの C/C++ プログラムとは異なり、特定の WebAssembly インスタンスがアクセスできるメモリーは、 WebAssembly Memory オブジェクトが含む特定の（潜在的に非常に小さな）範囲に制限されています。これにより、単一のウェブアプリで複数の独立したライブラリー（それぞれが内部で WebAssembly を使用している）を使用し、互いに完全に分離された個別のメモリーを持つことができます。さらに、新しい実装では[共有メモリー](/ja/docs/WebAssembly/Understanding_the_text_format#共有メモリー)を作成することもでき、これは [`postMessage()`](/ja/docs/Web/API/Window/postMessage) によってウィンドウとワーカーコンテキスト間で転送して複数の場所で使用することが可能です。
 
-JavaScript では、Memory インスタンスはリサイズ可能な  [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (または共有メモリーの場合は [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)) とみなすことができます。`ArrayBuffer` と同様に、単一のウェブアプリケーションで多くの独立した Memory オブジェクトを作成することができます。Memory オブジェクトは初期サイズと最大サイズ (省略可) を指定して、{{jsxref("WebAssembly.Memory()")}} コンストラクターから作成することができます。
+JavaScript では、Memory インスタンスはリサイズ可能な [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) (または共有メモリーの場合は [`SharedArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer)) とみなすことができます。`ArrayBuffer` と同様に、単一のウェブアプリケーションで多くの独立した Memory オブジェクトを作成することができます。Memory オブジェクトは初期サイズと最大サイズ (省略可) を指定して、{{jsxref("WebAssembly.Memory()")}} コンストラクターから作成することができます。
 
 簡単な例を見ながら、探索を始めましょう。
 
@@ -134,7 +135,7 @@ Memory インスタンスの作成時に最大値が指定していて、この�
 
 1. `memory.wasm` のローカルコピーを以前と同じディレクトリーに作成します。
 
-    > **Note:** モジュールのテキスト表現は [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) を参照してください。
+    > **メモ:** モジュールのテキスト表現は [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat) を参照してください。
 
 2. `memory.html` サンプルファイルに戻って、以前と同じように wasm モジュールを読み取り、コンパイル、インスタンス化します。以下のものをスクリプトの最後に追加してください。
 
@@ -166,7 +167,7 @@ Memory オブジェクト自体でなく、Memory オブジェクトの buffer (
 - モジュールをコンパイルする前、もしくは並行して、メモリーの初期コンテンツを JavaScript で読み取り、または作成することができます。
 - 単一の Memory オブジェクトを複数のモジュールインスタンスにインポートすることができます。これは WebAssembly で動的リンクを実装するための重要な構成要素です。
 
-> **Note:** 完全なデモは [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) を参照してください。
+> **メモ:** 完全なデモは [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) を参照してください。
 
 ## テーブル
 
@@ -186,7 +187,7 @@ WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセ�
 
 1. `table.wasm` をローカルの新しいディレクトリーにコピーします。
 
-    > **Note:** このモジュールのテキスト表現は [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) を参照してください。
+    > **メモ:** このモジュールのテキスト表現は [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) を参照してください。
 
 2. [HTML template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) を `table.html` という名前で同じディレクトリーにコピーします。
 3. 前と同じように、wasm モジュールを読み取り、コンパイル、インスタンス化します。次のコードを HTML の body の末尾の {{htmlelement("script")}} 要素に追加してください。
@@ -207,7 +208,7 @@ WebAssembly Table は JavaScript と WebAssembly コードの両方でアクセ�
 
 このコードはテーブルに格納されている各関数参照に順番にアクセスし、内包した値をコンソールに書き出すためにインスタンス化します。 [`Table.prototype.get()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get) で各関数参照を取得した後、関数を実行するためには括弧を追加することに注意してください。
 
-> **Note:** 完全なデモは [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)) を参照してください。
+> **メモ:** 完全なデモは [table.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) ([動作例](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)) を参照してください。
 
 ## グローバル値
 
@@ -263,7 +264,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **Note:** [GitHub の動作例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) を見ることができます。[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)も見てください。
+> **メモ:** [GitHub の動作例](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) を見ることができます。[ソースコード](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html)も見てください。
 
 ## 多重性
 

@@ -2,6 +2,7 @@
 title: Workflows for different game types
 slug: Games/Tutorials
 ---
+
 {{GamesSidebar}}
 
 This page contains articles that highlight different workflows for effectively creating different types of web games, whether you want to create a 2D or 3D game from scratch, or port a C++ or Flash game over to open web technologies.

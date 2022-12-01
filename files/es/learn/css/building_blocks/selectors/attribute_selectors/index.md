@@ -1,9 +1,9 @@
 ---
 title: Selectores de atributo
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
-translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Selectores_de_atributos
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
 
 Como ya explicamos en los artículos de HTML, los elementos pueden tener atributos que proporcionan un nivel de detalle mayor sobre el elemento que delimitan. En el CSS puedes utilizar selectores de atributo para seleccionar elementos definidos con unos atributos determinados. En este artículo veremos cómo utilizar estos selectores tan útiles.

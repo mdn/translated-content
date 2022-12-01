@@ -1,13 +1,8 @@
 ---
 title: イテレーターとジェネレーター
 slug: Web/JavaScript/Guide/Iterators_and_Generators
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
 
 コレクション内の各アイテムに対する処理は非常に一般的な操作です。JavaScript では簡単な {{jsxref("Statements/for","for")}} ループから {{jsxref("Global_Objects/Array/map","map()")}}、{{jsxref("Global_Objects/Array/filter","filter()")}} にいたるまで、コレクションに対する反復処理の複数の方法を提供します。
@@ -75,7 +70,7 @@ while (!result.done) {
 console.log("Iterated over sequence of size: ", result.value); // [5 numbers returned, that took interval in between: 0 to 10]
 ```
 
-> **Note:** **メモ:** 特定のオブジェクトがイテレーターであるかどうかは考えても知ることはできません。それが必要な場合は、[反復可能オブジェクト](#Iterables)を使用してください。
+> **メモ:** 特定のオブジェクトがイテレーターであるかどうかは考えても知ることはできません。それが必要な場合は、[反復可能オブジェクト](#Iterables)を使用してください。
 
 ## ジェネレーター関数
 
@@ -199,7 +194,7 @@ a;
 
 ジェネレーターの内部状態を変更するのための値を {{jsxref("Global_Objects/Generator/next","next()")}} メソッドで受け入れることもできます。`next()` に渡された値は `yield` が受け取ります。最初 `next()` の呼び出しに値を渡しても常に無視されることに注意してください。
 
-> **Note:** **メモ:** `next()` の*最初の*呼び出しに渡された値は常に無視されます。
+> **メモ:** `next()` の*最初の*呼び出しに渡された値は常に無視されます。
 
 以下のフィボナッチ数列ジェネレーターでは数列を再起動するのに `next(x)` を使っています:
 

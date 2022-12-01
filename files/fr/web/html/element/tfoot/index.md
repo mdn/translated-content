@@ -4,7 +4,8 @@ slug: Web/HTML/Element/tfoot
 translation_of: Web/HTML/Element/tfoot
 browser-compat: html.elements.tfoot
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<tfoot>`** permet de définir un ensemble de lignes qui résument les colonnes d'un tableau.
 

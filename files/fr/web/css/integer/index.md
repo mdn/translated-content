@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/integer
 ---
+
 {{CSSRef}}
 
 Le type de donnée CSS **`<integer>`** permet de représenter des nombres entiers positifs ou négatifs. Aucune unité n'est liée à la valeur. Les entiers sont utilisés dans de nombreuses propriétés CSS comme {{cssxref("z-index")}}, {{cssxref("line-height")}}, {{cssxref("counter-increment")}}, {{cssxref("column-count")}}, {{cssxref("grid-row")}}, {{cssxref("repeat()")}}. Ce type est un sous-type de {{cssxref("number")}}.
@@ -50,16 +51,11 @@ _5          Les caractères spéciaux ne sont pas acceptés
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires                                                                    |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Values', '#integers', '&lt;integer&gt;')}}         | {{Spec2('CSS4 Values')}} | Aucune modification significative.                                              |
-| {{SpecName('CSS3 Values', '#integers', '&lt;integer&gt;')}}         | {{Spec2('CSS3 Values')}} | Aucune modification depuis la spécification CSS de niveau 2 (première révision) |
-| {{SpecName('CSS2.1', 'syndata.html#numbers', '&lt;integer&gt;')}} | {{Spec2('CSS2.1')}}         | Définition implicite.                                                           |
-| {{SpecName('CSS1', '', '&lt;integer&gt;')}}                                 | {{Spec2('CSS1')}}         | Définition implicite.                                                           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.integer")}}
+{{Compat}}
 
 ## Voir aussi
 

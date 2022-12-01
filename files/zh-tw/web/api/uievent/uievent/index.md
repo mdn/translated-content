@@ -2,6 +2,7 @@
 title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`UIEvent()`** constructor 是用來建立新的 {{domxref("UIEvent")}}。

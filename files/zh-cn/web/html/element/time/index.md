@@ -1,12 +1,15 @@
 ---
-title: <time>
+title: <time>：（日期）时间元素
 slug: Web/HTML/Element/time
 ---
+
+{{HTMLSidebar}}
+
 ## 概述
 
 HTML _time_ 标签 (`<time>`) 用来表示 24 小时制时间或者[公历日期](http://en.wikipedia.org/wiki/Gregorian_calendar)，若表示日期则也可包含时间和时区。
 
-此元素意在以机器可读的格式表示日期和时间。 有安排日程表功能的应用可以利用这一点。
+此元素意在以机器可读的格式表示日期和时间。有安排日程表功能的应用可以利用这一点。
 
 > **备注：** 如果给定的日期不是正常日期或者在公历中最早的日期之前，请不要使用此元素。
 
@@ -22,7 +25,7 @@ HTML _time_ 标签 (`<time>`) 用来表示 24 小时制时间或者[公历日期
   </tr>
   <tr>
    <td>可包含内容</td>
-   <td><a href="/zh-cn/HTML/Content_categories#Phrasing_content">Phrasing content</a>， 但不能包含子 <code>time</code> 元素。</td>
+   <td><a href="/zh-cn/HTML/Content_categories#Phrasing_content">Phrasing content</a>，但不能包含子 <code>time</code> 元素。</td>
   </tr>
   <tr>
    <td>标签可省略？</td>
@@ -44,7 +47,7 @@ HTML _time_ 标签 (`<time>`) 用来表示 24 小时制时间或者[公历日期
 像所有其他元素一样，此元素拥有可以使用 [通用属性](/zh-CN/HTML/Global_attributes)。
 
 - {{ htmlattrdef("datetime") }}
-  - : 该属性表示此元素的时间和日期，并且属性值必须是一个[有效的日期格式，并可包含时间](http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time)。 如果此值不能被解析为日期，元素不会有一个关联的时间戳。
+  - : 该属性表示此元素的时间和日期，并且属性值必须是一个[有效的日期格式，并可包含时间](http://www.w3.org/TR/html5/common-microsyntaxes.html#valid-date-string-with-optional-time)。如果此值不能被解析为日期，元素不会有一个关联的时间戳。
 - {{ htmlattrdef("pubdate") }}
   - : (该属性仍在被 WHATWG 和 W3C 组织设计和讨论中.) This Boolean attribute specifies that the date and time given by the element is the publication date of a document. The document it applies to is either the nearest ancestor article element or the document as a whole (if there is no ancestor [article](/zh-CN/HTML/Element/article) element). If true, the `time` element must have a corresponding date. Additionally, each `time` element indicating a publication date must be the only `time` element that does so for that document.
 

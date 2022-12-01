@@ -2,6 +2,7 @@
 title: StorageManager.persisted()
 slug: Web/API/StorageManager/persisted
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}{{SeeCompatTable}}
 
 {{domxref("StorageManager")}} インターフェイスの **`persisted()`** メソッドは、サイトのストレージに対してボックスモードが永続的であれば `true` に解決される {{jsxref("Promise")}} を返します。
@@ -34,9 +35,7 @@ if (navigator.storage && navigator.storage.persist)
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Storage','#dom-storagemanager-persisted','persisted')}} | {{Spec2('Storage')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -11,6 +11,7 @@ tags:
   - débogage
 translation_of: Web/API/Console/time
 ---
+
 {{APIRef("Console API")}}
 
 Chronomètre une opération. Chaque "timer" doit avoir un nom unique. Il peut y avoir jusqu'à 10000 "timers" sur une même page. En appelant {{ domxref("console.timeEnd()") }} avec le même nom, le navigateur affichera le temps d'execution en millisecondes dans la console.

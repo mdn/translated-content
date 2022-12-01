@@ -2,6 +2,7 @@
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("FetchEvent")}} インターフェイスの **`respondWith()`** メソッドは、ブラウザー既定の fetch ハンドリングを抑止して、あなたが {{domxref("Response")}} 用の Promise を提供できるようにします。
@@ -71,9 +72,7 @@ addEventListener('fetch', event => {
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                                 | コメント   |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Service Workers', '#fetch-event-respondwith-method', 'respondWith()')}} | {{Spec2('Service Workers')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

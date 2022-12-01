@@ -2,6 +2,7 @@
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
+
 {{JSRef}}
 
 **`Math.ceil()`** 関数は、引数として与えた数以上の最小の整数を返します。
@@ -119,9 +120,7 @@ Math.ceil10(-59, 1);       // -50
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.ceil', 'Math.ceil')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

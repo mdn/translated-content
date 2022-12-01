@@ -3,9 +3,10 @@ title: flex-flow
 slug: Web/CSS/flex-flow
 translation_of: Web/CSS/flex-flow
 ---
+
 {{ CSSRef}}
 
-**`flex-flow`** [CSS](/ru/docs/CSS "CSS") свойство, которое является сокращением для отдельных свойств `flex-direction` и `flex-wrap`.
+**`flex-flow`** [CSS](/ru/docs/CSS) свойство, которое является сокращением для отдельных свойств `flex-direction` и `flex-wrap`.
 
 ```css
 /* flex-flow: <'flex-direction'> */
@@ -38,7 +39,7 @@ flex-flow: unset;
 
 ### Значения
 
-Смотрите [`flex-direction`](/ru/docs/CSS/flex-direction "en-US/docs/CSS/flex-direction") и [`flex-wrap`](/ru/docs/CSS/flex-wrap "flex-wrap").
+Смотрите [`flex-direction`](/ru/docs/CSS/flex-direction) и [`flex-wrap`](/ru/docs/CSS/flex-wrap).
 
 ### Формальный синтаксис
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substring
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/substring
 ---
+
 {{JSRef}}
 
 La méthode **`substring()`** retourne une sous-chaîne de la chaîne courante, entre un indice de début et un indice de fin.
@@ -140,16 +141,11 @@ Pour plus d'exemples sur l'utilisation d'arguments négatifs, voir la page {{jsx
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires                     |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.4.15', 'String.prototype.substring')}}                         | {{Spec2('ES5.1')}}     |                                  |
-| {{SpecName('ES6', '#sec-string.prototype.substring', 'String.prototype.substring')}}     | {{Spec2('ES6')}}         |                                  |
-| {{SpecName('ESDraft', '#sec-string.prototype.substring', 'String.prototype.substring')}} | {{Spec2('ESDraft')}} |                                  |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.substring")}}
+{{Compat}}
 
 ## Voir aussi
 

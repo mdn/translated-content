@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 original_slug: Web/JavaScript/Reference/Opérateurs/Initialisateur_objet
 ---
+
 {{JsSidebar("Operators")}}
 
 Il est possible d'initialiser un objet en utilisant les notations [`new Object()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object), `Object.create()`, ou grâce à un littéral (appelée initialisateur). Un initialisateur d'objet est une liste contenant plusieurs (éventuellement 0) propriétés, séparées par des virgules, et leurs valeurs associées, cette liste étant entourée d'accolades (`{}`).
@@ -282,16 +283,11 @@ La notation utilisant un littéral objet n'est pas identique à celle utilisée 
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                         | {{Spec2('ES1')}}         | Définition initiale.                                                                                                                                       |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | [Ajout des _getter_ et](/fr/docs/Web/JavaScript/Reference/Functions/get) _[setter](/fr/docs/Web/JavaScript/Reference/Functions/set)_ (accesseur/mutateur). |
-| {{SpecName('ES2015', '#sec-object-initializer', 'Object Initializer')}} | {{Spec2('ES2015')}}     | Ajout des raccourcis pour les noms de méthodes et propriétés et des noms de propriétés calculés.                                                           |
-| {{SpecName('ESDraft', '#sec-object-initializer', 'Object Initializer')}} | {{Spec2('ESDraft')}} |                                                                                                                                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.object_initializer")}}
+{{Compat}}
 
 ## Voir aussi
 

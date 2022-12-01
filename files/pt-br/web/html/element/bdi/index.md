@@ -1,8 +1,8 @@
 ---
 title: <bdi>
 slug: Web/HTML/Element/bdi
-translation_of: Web/HTML/Element/bdi
 ---
+
 ## Resumo
 
 O HTML \<bdi>elemento (ou elemento de isolamento de Bi-direcional) isola um trechode texto que pode ser formatado em uma direção diferente de outro texto fora dela.
@@ -11,10 +11,10 @@ Este elemento é útil ao incorporar o texto com uma direção desconhecida, de 
 
 Apesar do mesmo efeito visual pode ser alcançado usando a regra de CSS{{cssxref("unicode-bidi")}}: isolar um {{HTMLElement("span")}} ou outro elemento de formatação de texto, o significado semântico só é transportado pelo elemento de\<bdi>. Especialmente, os navegadores podem ignorar estilos CSS. Nesse caso, o texto seria ainda corretamente exibido usando o elemento HTML, mas se tornará lixo quando usando o estilo CSS para transmitir semântica.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content"), palpable content.
-- _Permitted content_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Flow_content").
+- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), palpable content.
+- _Permitted content_[Phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Flow_content").
+- _Permitted parent elements_ Any element that accepts [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _DOM interface_ {{domxref("HTMLElement")}}
 
 ## Atributos
@@ -43,4 +43,4 @@ Como todos os outros elementos do HTML, este elemento tem os atributos globais, 
 - Related HTML element: {{HTMLElement("bdo")}}
 - Related HTML properties: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

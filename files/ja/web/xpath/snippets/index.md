@@ -1,14 +1,8 @@
 ---
 title: XPath スニペット
 slug: Web/XPath/Snippets
-tags:
-  - XML
-  - XPath
-  - XSLT
-  - スニペット
-  - 例
-translation_of: Web/XPath/Snippets
 ---
+
 この記事ではいくつか XPath コードスニペットを提供します。それは XPath 機能を JavaScript コードに公開する[DOM Level 3 XPath 仕様](http://www.w3.org/TR/DOM-Level-3-XPath/)の標準インタフェースに基づく簡単なユーティリティ関数の簡単な例です。スニペットは実際にあなた自身のコードの中で使用できる関数です。
 
 ### ノード指定の評価関数

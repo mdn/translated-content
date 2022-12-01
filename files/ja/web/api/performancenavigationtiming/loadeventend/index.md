@@ -2,6 +2,7 @@
 title: PerformanceNavigationTiming.loadEventEnd
 slug: Web/API/PerformanceNavigationTiming/loadEventEnd
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 **`loadEventEnd`** 読み取り専用プロパティは、現在のドキュメントのロードイベントが完了した時刻と同じ{{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
@@ -46,9 +47,7 @@ function print_nav_timing_data() {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | ステータス                                           | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | -------- |
-| {{SpecName('Navigation Timing Level 2', '#widl-PerformanceNavigationTiming-loadEventEnd', 'loadEventEnd')}} | {{Spec2('Navigation Timing Level 2')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

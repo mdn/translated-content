@@ -2,6 +2,7 @@
 title: HTMLMediaElement
 slug: Web/API/HTMLMediaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement`** interface adds to {{domxref("HTMLElement")}} the properties and methods needed to support basic media-related capabilities that are common to audio and video. The {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} elements both inherit this interface.
@@ -114,7 +115,7 @@ These attributes are obsolete and should not be used, even if a browser still su
 ### Obsolete event handlers
 
 - {{domxref("HTMLMediaElement.onmozinterruptbegin")}} {{non-standard_inline}} {{Deprecated_Inline}}
-  - : Sets the {{event("Event_handlers", "event handler")}} called when the media element is interrupted because of the Audio Channel manager. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
+  - : Sets the event handler called when the media element is interrupted because of the Audio Channel manager. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
 - {{domxref("HTMLMediaElement.onmozinterruptend")}} {{non-standard_inline}} {{Deprecated_Inline}}
   - : Sets the {{domxref('EventHandler')}} called when the interruption is concluded. This was Firefox-specific, having been implemented for Firefox OS, and was removed in Firefox 55.
 
@@ -162,7 +163,7 @@ These methods are obsolete and should not be used, even if a browser still suppo
 
 ## Browser compatibility
 
-{{Compat("api.HTMLMediaElement")}}
+{{Compat}}
 
 ## See also
 

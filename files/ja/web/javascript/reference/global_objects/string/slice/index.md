@@ -2,6 +2,7 @@
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
+
 {{JSRef}}
 
 **`slice()`** メソッドは、元の文字列を変更せず、文字列の一部分を取り出し、それを新しい文字列として返します。

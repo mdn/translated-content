@@ -1,12 +1,8 @@
 ---
 title: <dfn>
 slug: Web/HTML/Element/dfn
-tags:
-  - Elemento
-  - HTML semântico nível texto
-  - Referencia
-translation_of: Web/HTML/Element/dfn
 ---
+
 ## Resumo
 
 O elemento **HTML `<dfn>` **(ou _Elemento Definição_ _HTML_) representa uma instância de definição de um termo.
@@ -15,19 +11,19 @@ O elemento **HTML `<dfn>` **(ou _Elemento Definição_ _HTML_) representa uma in
 >
 > - O valor exato do termo a ser definido é determinado pelas seguintes regras:
 >
->   1.  Se o elemento \<dfn> tiver um atributo title, então o termo é o valor deste atributo.
->   2.  Senão, se contiver somente um elemento {{HTMLElement("abbr")}} com um atributo {{htmlattrxref("title", "abbr")}}, então o termo é o valor deste atributo.
->   3.  Caso contrário, o conteúdo do texto do elemento `<dfn>` é o termo a ser definido.
+>   1. Se o elemento \<dfn> tiver um atributo title, então o termo é o valor deste atributo.
+>   2. Senão, se contiver somente um elemento {{HTMLElement("abbr")}} com um atributo {{htmlattrxref("title", "abbr")}}, então o termo é o valor deste atributo.
+>   3. Caso contrário, o conteúdo do texto do elemento `<dfn>` é o termo a ser definido.
 
-- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"), conetúdo palpável.
-- _Conteúdo permitido_ [Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content"), mas um elemento {{HTMLElement("dfn")}} não deve ser um descendente.
+- _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content), conetúdo palpável.
+- _Conteúdo permitido_ [Conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content), mas um elemento {{HTMLElement("dfn")}} não deve ser um descendente.
 - _Omissão de tag_ {{no_tag_omission}}
-- \_Elementos pais permitidos_Qualquer elemento que aceite [conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content").
+- _Elementos pais permitidos_ Qualquer elemento que aceite [conteúdo de fraseamento](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _Interface DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos
 
-Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+Esse elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 No HTML5, o atributo **title** tem um significado especial, como mencionado acima.
 
@@ -79,4 +75,4 @@ _A Internet_ é um sistema global de redes interconectadas que usam o Internet P
 - Elementos relacionados à lista de definições: {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, {{HTMLElement("dd")}}
 - {{HTMLElement("abbr")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

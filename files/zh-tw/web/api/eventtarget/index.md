@@ -2,6 +2,7 @@
 title: EventTarget
 slug: Web/API/EventTarget
 ---
+
 {{ ApiRef("DOM Events") }}
 
 **`EventTarget`** 介面定義了其實作的物件具有接收事件的能力，也可能擁有處理事件的監聽器。
@@ -79,7 +80,7 @@ EventTarget.prototype.dispatchEvent = function(event) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.EventTarget")}}
+{{Compat}}
 
 ## 參見
 

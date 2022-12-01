@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Child_combinator
 original_slug: Web/CSS/Sélecteurs_enfant
 ---
+
 {{CSSRef("Selectors")}}
 
 Le combinateur `>` sépare deux sélecteurs et cible seulement les éléments correspondant au second sélecteur qui sont des enfants **directs** des éléments ciblés par le premier sélecteur.
@@ -60,15 +61,11 @@ div > span {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS4 Selectors', '#child-combinators', 'child combinator')}}     | {{Spec2('CSS4 Selectors')}} |                      |
-| {{SpecName('CSS3 Selectors', '#child-combinators', 'child combinators')}}     | {{Spec2('CSS3 Selectors')}} | Aucune modification. |
-| {{SpecName('CSS2.1', 'selector.html#child-selectors', 'child selectors')}} | {{Spec2('CSS2.1')}}             | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.child")}}
+{{Compat}}
 
 ## Voir aussi
 

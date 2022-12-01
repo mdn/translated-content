@@ -2,6 +2,7 @@
 title: opacity
 slug: Web/SVG/Attribute/opacity
 ---
+
 « [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 opacity 属性指定了一个对象或一组对象的透明度，也就是说，元素后面的背景的透过率。

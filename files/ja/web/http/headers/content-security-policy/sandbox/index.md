@@ -2,6 +2,7 @@
 title: 'CSP: sandbox'
 slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`sandbox`** ディレクティブは、 {{HTMLElement("iframe")}} の {{htmlattrxref("sandbox", "iframe")}} 属性と同様に、要求されたリソースに対してサンドボックスを有効にします。これは、ポップアップの防止、プラグインやスクリプトの実行の防止、同一オリジンポリシーの強制などを含むページ操作の制限を適用します。
@@ -62,7 +63,7 @@ Content-Security-Policy: sandbox <value>;
 - `allow-top-navigation-by-user-activation`
   - : ユーザーの指示で開始された場合に限り、リソースが最上位の閲覧コンテキストを移動させます。
 - `allow-top-navigation-to-custom-protocols`
-  - :  非フェッチスキームへのナビゲーションを外部ソフトウェアに引き渡せるようにします。
+  - : 非フェッチスキームへのナビゲーションを外部ソフトウェアに引き渡せるようにします。
 
 ## 例
 

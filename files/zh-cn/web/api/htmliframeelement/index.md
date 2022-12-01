@@ -2,6 +2,7 @@
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLIFrameElement`** 接口提供了除 {{domxref("HTMLElement")}} 之外的一些特殊属性和方法（当然也包括了继承自 {{domxref("HTMLElement")}} 的部分）。这些方法用于操作内联 frame 元素的布局和展示。
@@ -126,7 +127,7 @@ In order to manage the browser {{HTMLElement("iframe")}}'s content, many new eve
 - {{domxref("HTMLIFrameElement.sendTouchEvent()")}}
   - : Sends a {{domxref("TouchEvent")}} to the {{HTMLElement("iframe")}}'s content. Note that this method is available for touch enabled devices only.
 - {{domxref("HTMLIFrameElement.addNextPaintListener()")}}
-  - : Defines a handler to listen for the next {{event("MozAfterPaint")}} event in the browser {{HTMLElement("iframe")}}.
+  - : Defines a handler to listen for the next `MozAfterPaint` event in the browser {{HTMLElement("iframe")}}.
 - {{domxref("HTMLIFrameElement.removeNextPaintListener()")}}
   - : Removes a handler previously set with {{domxref("HTMLIFrameElement.addNextPaintListener","addNextPaintListener()")}}.
 
@@ -153,7 +154,7 @@ Last, there are some utility methods, useful for apps that host a browser {{HTML
 
 ## Browser compatibility
 
-{{Compat("api.HTMLIFrameElement")}}
+{{Compat}}
 
 ## See also
 

@@ -1,8 +1,8 @@
 ---
 title: Compiling an Existing C Module to WebAssembly
 slug: WebAssembly/existing_C_to_wasm
-translation_of: WebAssembly/existing_C_to_wasm
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly의 핵심 Use-case는 기존의 C 라이브러리 생태계를 사용하고 개발자가 웹에서 사용할 수 있도록하는 것입니다.
@@ -12,7 +12,7 @@ WebAssembly의 핵심 Use-case는 기존의 C 라이브러리 생태계를 사�
 예를 들어, WebP 용 인코더를 컴파일 해 봅시다. WebP(웹용 이미지 포맷) 코덱의 소스는 C로 작성되었으며 [GitHub에서 사용가능](https://github.com/webmproject/libwebp)할뿐 아니라 광범위한 [API documentation](https://developers.google.com/speed/webp/docs/api)로도 제공됩니다. 꽤 좋은 출발점입니다.
 
 ```bash
-$ git clone https://github.com/webmproject/libwebp
+git clone https://github.com/webmproject/libwebp
 ```
 
 간단히 시작하려면 `webp.c`라는 C 파일을 작성하여 `encode.h`의 `WebPGetEncoderVersion()` 을 JavaScript로 노출 시키십시오.
@@ -56,7 +56,7 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
 
 [output](https://googlechrome.github.io/samples/webassembly/version.html)에 라이브러리의 버전 번호가 정확히 표시됩니다.
 
-![  Screenshot of the DevTools console showing the correct versionnumber.](https://mdn.mozillademos.org/files/15913/version.png)
+![Screenshot of the DevTools console showing the correct versionnumber.](https://mdn.mozillademos.org/files/15913/version.png)
 
 > **참고:**libwebp는 현재 버전 인 a.b.c를 16 진수 0xabc로 반환합니다. 예를 들어 v0.6.1은 0x000601 = 1537로 인코딩됩니다.
 

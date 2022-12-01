@@ -2,6 +2,7 @@
 title: Vue resources
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Now we'll round off our study of Vue by giving you a list of resources that you can use to go further in your learning, plus some other useful tips.
@@ -12,12 +13,12 @@ Now we'll round off our study of Vue by giving you a list of resources that you 
       <th scope="row">Prerequisites:</th>
       <td>
         <p>
-          Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-          <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages,
+          Familiarity with the core <a href="/zh-CN/docs/Learn/HTML">HTML</a>,
+          <a href="/zh-CN/docs/Learn/CSS">CSS</a>, and
+          <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> languages,
           knowledge of the
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >.
         </p>

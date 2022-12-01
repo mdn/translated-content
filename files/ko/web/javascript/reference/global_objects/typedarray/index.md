@@ -2,9 +2,10 @@
 title: TypedArray
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 ---
+
 {{JSRef}}
 
-**_TypedArray_** 객체는 [이진 데이터 버퍼](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)에 기초하여 배열과 같은 보기를 만들어냅니다. 
+**_TypedArray_** 객체는 [이진 데이터 버퍼](/ko/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)에 기초하여 배열과 같은 보기를 만들어냅니다.
 하지만 `TypedArray`라는 전역 속성은 존재하지 않으며, 직접 볼 수 있는 `TypedArray` 생성자도 존재하지 않습니다. 대신 아래에 있는 특정 요소 유형에 대한 형식화 배열 생성자를 가지는 다양한 전역 속성을 사용할 수 있습니다. 다음 페이지에서는 모든 유형의 요소를 포함하는 모든 유형의 배열에서 사용할 수 있는 공통 속성과 메서드를 살펴보겠습니다.
 
 {{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
@@ -56,13 +57,12 @@ new TypedArray(buffer, byteOffset, length)
 - `length`
   - : `length` 인수와 함께 호출되면, `length`에 _`BYTES_PER_ELEMENT`_ 바이트를 **곱한** 크기의 0으로 채워진 내부 배열 버퍼가 메모리에 생성됩니다.
 - `typedArray`
-  - : `typedArray` 인수를 사용하여 호출하면, `typedArray`가 새 형식화 배열에 복사됩니다. **non-{{glossary("bigint")}}**  `TypedArray`의 경우, `typedArray` 매개변수는 오직 **non**-{{glossary("bigint")}} 종류의 형식화 배열 객체만(예: {{JSxRef("Int32Array")}}) 될 수 있습니다. 마찬가지로 **{{glossary("bigint")}}** `TypedArray`의 경우, `typedArray` 매개변수는 {{glossary("bigint")}} 형식화 배열 종류의 객체(예: {{JSxRef("BigInt64Array")}})만 될 수 있습니다. `typedArray`의 각 값은 새 배열에 복사되기 전에 해당 생성자의 형식으로 변환됩니다. 새로운 형식화 배열의 길이는 `typedArray` 인수의 길이와 동일합니다.
+  - : `typedArray` 인수를 사용하여 호출하면, `typedArray`가 새 형식화 배열에 복사됩니다. **non-{{glossary("bigint")}}** `TypedArray`의 경우, `typedArray` 매개변수는 오직 **non**-{{glossary("bigint")}} 종류의 형식화 배열 객체만(예: {{JSxRef("Int32Array")}}) 될 수 있습니다. 마찬가지로 **{{glossary("bigint")}}** `TypedArray`의 경우, `typedArray` 매개변수는 {{glossary("bigint")}} 형식화 배열 종류의 객체(예: {{JSxRef("BigInt64Array")}})만 될 수 있습니다. `typedArray`의 각 값은 새 배열에 복사되기 전에 해당 생성자의 형식으로 변환됩니다. 새로운 형식화 배열의 길이는 `typedArray` 인수의 길이와 동일합니다.
 - `object`
   - : `object` 인수를 사용하여 호출하면, `TypedArray.from()` 메서드에서와 같이 새로운 형식화 배열이 생성됩니다.
 - `buffer`, `byteOffset`,
   `length`
   - : `buffer`와 선택적으로 전달할 수 있는 `byteOffset` 및 `length` 인수가 함께 호출되면, 지정된 {{jsxref("ArrayBuffer")}}를 보는 새로운 형식화 배열 뷰가 생성됩니다. `byteOffset` 및 `length` 매개변수는 형식화 배열 보기에 의해 노출될 메모리 범위를 지정합니다. 둘 다 생략하면 모든 버퍼가 표시되고, `length`만 생략하면 `buffer`의 나머지 부분이 표시됩니다.
-
 
 ## 정적 속성
 

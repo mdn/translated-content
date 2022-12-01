@@ -3,6 +3,7 @@ title: Mathématiques de base en JavaScript — nombres et opérateurs
 slug: Learn/JavaScript/First_steps/Math
 translation_of: Learn/JavaScript/First_steps/Math
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 À ce point du didacticiel, nous parlerons des mathématiques en JavaScript, de comment utiliser les [opérateurs](/fr/docs/Glossary/Operator) et d'autres fonctionnalités pour manipuler les nombres à notre guise.
@@ -230,7 +231,7 @@ Si vous voulez contourner les règles de précédence des opérateurs, vous pouv
 
 Essayez-le et voyez le résultat obtenu.
 
-> **Note :** La liste complète de tous les opérateurs JavaScript et de leur précédence peut être trouvée dans [la page de référence sur les expressions et les opérateurs](fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#précédence_des_opérateurs).
+> **Note :** La liste complète de tous les opérateurs JavaScript et de leur précédence peut être trouvée dans [la page de référence sur les expressions et les opérateurs](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#précédence_des_opérateurs).
 
 ## Opérateurs d'incrémentation et de décrémentation
 

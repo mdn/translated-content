@@ -1,16 +1,9 @@
 ---
 title: Elementos block-level
 slug: Web/HTML/Block-level_elements
-tags:
-  - Desenvolvimento
-  - Guía
-  - HTML
-  - HTML5
-  - Iniciante
-  - Web
-translation_of: Web/HTML/Block-level_elements
 original_slug: Web/HTML/Elementos_block-level
 ---
+
 Elementos HTML **(Linguagem de marcação de hipertexto)** historicamente foram categorizados como “nível de bloco” ou [elementos “em linha”](/pt-BR/docs/HTML/Inline_elements). Um elemento em nível de bloco ocupa todo o espaço de seu elemento pai (container), criando assim um “bloco”. Este artigo ajuda a explicar o que isso significa.
 
 Navegadores normalmente mostram o elemento em nível de bloco com uma nova linha antes e depois do elemento. O exemplo a seguir demonstra a influência desse elemento em nível de bloco:
@@ -70,9 +63,6 @@ A seguir, é apresentada uma lista completa de todos os elementos no nível de b
   - : Lista de descrição.
 - {{ HTMLElement("fieldset") }}
   - : Rótulo de conjunto de campos.
-
-<!---->
-
 - {{ HTMLElement("figcaption") }} {{ HTMLVersionInline(5) }}
   - : Legenda da figura.
 - {{ HTMLElement("figure") }} {{ HTMLVersionInline(5) }}
@@ -95,9 +85,6 @@ A seguir, é apresentada uma lista completa de todos os elementos no nível de b
   - : Contains the central content unique to this document.
 - {{ HTMLElement("nav") }}
   - : Contains navigation links.
-
-<!---->
-
 - {{ HTMLElement("ol") }}
   - : Ordered list.
 - {{ HTMLElement("p") }}
@@ -117,4 +104,4 @@ A seguir, é apresentada uma lista completa de todos os elementos no nível de b
 
 ### Veja também
 
-- [Elementos Emlinha](/pt-BR/docs/Web/HTML/Inline_elements "en/HTML/Inline_elements")
+- [Elementos Emlinha](/pt-BR/docs/Web/HTML/Inline_elements)

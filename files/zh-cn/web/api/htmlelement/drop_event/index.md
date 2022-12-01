@@ -2,6 +2,7 @@
 title: HTMLElement：drop 事件
 slug: Web/API/HTMLElement/drop_event
 ---
+
 {{APIRef}}
 
 **`drop`** 事件在元素或选中的文本被放置在有效的放置目标上时被触发。

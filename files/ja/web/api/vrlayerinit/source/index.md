@@ -3,11 +3,12 @@ title: VRLayerInit.source
 slug: Web/API/VRLayerInit/source
 original_slug: Web/API/VRLayer/source
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`source`** は {{domxref("VRLayerInit")}} インターフェイス（辞書）のプロパティで、 {{domxref("VRDisplay")}} によってコンテンツが表示されるキャンバスを定義します。
 
-> **Note:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
+> **メモ:** このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。
 
 ## 値
 

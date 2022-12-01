@@ -2,6 +2,7 @@
 title: HTMLImageElement.alt
 slug: Web/API/HTMLImageElement/alt
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} の **`alt`** プロパティは、 {{HTMLElement("img")}} 要素で指定された画像が読み込まれない場合に表示する予備（代替）テキストを指定します。

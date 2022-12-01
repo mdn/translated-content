@@ -2,6 +2,7 @@
 title: 'Feature-Policy: battery'
 slug: Web/HTTP/Headers/Feature-Policy/battery
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `battery` ディレクティブは、現在の文書で {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} で得られる {{DOMxRef("BatteryManager")}} インターフェイスを通じて、端末のバッテリーに関する情報の収集を許可するかどうかを制御します。
@@ -13,7 +14,7 @@ Feature-Policy: battery <allowlist>;
 ```
 
 - \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
+  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#%E6%A7%8B%E6%96%87) を参照してください。
 
 ## 既定のポリシー
 

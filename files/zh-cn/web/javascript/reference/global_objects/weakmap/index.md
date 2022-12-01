@@ -2,6 +2,7 @@
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 ---
+
 {{JSRef}}
 
 **`WeakMap`** 对象是一组键/值对的集合，其中的键是弱引用的。其键必须是对象，而值可以是任意的。

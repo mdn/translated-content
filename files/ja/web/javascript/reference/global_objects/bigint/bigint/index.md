@@ -2,6 +2,7 @@
 title: BigInt() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 ---
+
 {{JSRef}}
 
 **`BigInt()`** コンストラクターは **bigint** 型の値を返します。
@@ -17,7 +18,7 @@ BigInt(value);
 - `value`
   - : 作成しようとしているオブジェクトの数値。文字列または整数にすることができます。
 
-> **Note:** `BigInt()` は {{JSxRef("Operators/new", "new")}} 演算子と共には使用されません。
+> **メモ:** `BigInt()` は {{JSxRef("Operators/new", "new")}} 演算子と共には使用されません。
 
 ## 例
 

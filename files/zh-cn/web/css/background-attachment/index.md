@@ -2,6 +2,7 @@
 title: background-attachment
 slug: Web/CSS/background-attachment
 ---
+
 {{CSSRef}}
 
 **`background-attachment`** [CSS](/zh-CN/docs/CSS) 属性决定背景图像的位置是在{{glossary("视口")}}内固定，或者随着包含它的区块滚动。
@@ -109,7 +110,7 @@ p {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-attachment")}}
+{{Compat}}
 
 ## 参见
 

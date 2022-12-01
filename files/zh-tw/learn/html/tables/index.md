@@ -2,6 +2,7 @@
 title: HTML 表格
 slug: Learn/HTML/Tables
 ---
+
 {{LearnSidebar}}
 
 HTML 的常見任務就是建構表格資料，某些元素與屬性正是為此目的而生。HTML 以及用於樣式化的 [CSS](/zh-TW/docs/Learn/CSS) 能方便顯示諸如讀書計劃、附近游泳池的開放時間、分析最喜歡的恐龍或足球隊……之類的表格資訊。本模塊將帶你認識建構 HTML 表格資料所需的一切。
@@ -10,7 +11,7 @@ HTML 的常見任務就是建構表格資料，某些元素與屬性正是為此
 
 開始本模塊之前，你要理解基本的 HTML：請參見 [HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)。
 
-> **備註：** 如果你用的電腦或平板之類的設備，無法允許建立自己的檔案，你可以把大部分的例子放在線上程式網站，例如 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/)。
+> **備註：** 如果你用的電腦或平板之類的設備，無法允許建立自己的檔案，你可以把大部分的例子放在線上程式網站，例如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)。
 
 ## 教學
 

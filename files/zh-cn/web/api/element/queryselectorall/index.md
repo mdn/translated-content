@@ -2,6 +2,7 @@
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 返回一个 non-live 的[`NodeList`](NodeList), 它包含所有元素的非活动节点，该元素来自与其匹配指定的 CSS 选择器组的元素。(基础元素本身不包括，即使它匹配。)
@@ -43,7 +44,7 @@ const refs = [...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`
 // const refs = [...document.querySelectorAll(`[class~="funnel-chart-percent"]`)];
 ```
 
-下面的例子返回了 HTML 文档中的`body`元素的所有`p后代`元素：
+下面的例子返回了 HTML 文档中的 `body` 元素的所有 `p` 后代元素：
 
 ```js
 var matches = document.body.querySelectorAll('p');
@@ -72,7 +73,7 @@ var matches = el.querySelectorAll('iframe[data-src]');
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.querySelectorAll")}}
+{{Compat}}
 
 ## 规范
 

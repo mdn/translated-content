@@ -1,15 +1,8 @@
 ---
 title: Modo Quirks y Modo Estándar
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-tags:
-  - Desarrollo web
-  - Estándar Web
-  - Gecko
-  - Guía
-  - HTML
-  - XHTML
-translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
+
 En los viejos días de la web, las páginas eran comúnmente escritas de dos formas: Una para navegador Netscape y otra para Microsoft Internet Explorer. Cuando los estándares de la web fueron creador por W3C, los navegadores no sólo empezaron a utilizarlos, tan pronto lo hicieron romperían los más existentes sitios en la Web. Sin embargo los navegadores introdujeron dos modos para tratar los nuevos estándares que cumplan que los sitios diferentemente de los viejos legados de sitios.
 
 Ahora hay tres modos usados por los motores de diseño en los navegadores web: modo quirks (_caprichoso_), modo casi estándar, y modo estándar completo. En el modo quirks, el diseño emula el comportamiento no estandar de Navigator 4 e Internet Explorer 5 para Windows que es lo requerido para no romper contenido ya existente en la Web. En modo estándar completo, el comportamiento es (o debería ser) el descrito en las especificaciones HTML y CSS. En modo casi estándar, hay implementados sólo algunos ajustes (quirks) pero no todos.
@@ -52,4 +45,4 @@ En Internet Explorer, pulsa _F12_, y buscar _Modo de Documento_ (Document Mode)
 
 ## ¿Cuáles son las diferencias entre los modos?
 
-Lee la [lista de quirks](/es/docs/Mozilla_Quirks_Mode_Behavior) y [modo casi estándar](/es/docs/Gecko's_"Almost_Standards"_Mode "Gecko%27s_%22Almost_Standards%22_Mode") para ver las diferencias entre los modos.
+Lee la [lista de quirks](/es/docs/Mozilla_Quirks_Mode_Behavior) y [modo casi estándar](/es/docs/Gecko's_"Almost_Standards"_Mode) para ver las diferencias entre los modos.

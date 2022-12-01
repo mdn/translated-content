@@ -2,7 +2,8 @@
 title: <details>：详细信息展现元素
 slug: Web/HTML/Element/details
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<details>`元素**可创建一个挂件，仅在被切换成展开状态时，它才会显示内含的信息。{{HTMLElement("summary")}} 元素可为该部件提供概要或者标签。
 
@@ -66,7 +67,7 @@ Fully standards-compliant implementations automatically apply the CSS `{{cssxref
 
 ## 事件
 
-In addition to the usual events supported by HTML elements, the `<details>` element supports the {{event("toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent _after_ the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
+In addition to the usual events supported by HTML elements, the `<details>` element supports the {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event, which is dispatched to the `<details>` element whenever its state changes between open and closed. It is sent _after_ the state is changed, although if the state changes multiple times before the browser can dispatch the event, the events are coalesced so that only one is sent.
 
 You can listen for the `toggle` event to detect when the widget changes state:
 
@@ -244,7 +245,7 @@ details > p {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.details")}}
+{{Compat}}
 
 ## 参见
 

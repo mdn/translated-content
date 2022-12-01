@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/offsetParent
 translation_of: Web/API/HTMLElement/offsetParent
 browser-compat: api.HTMLElement.offsetParent
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété en lecture seule **`HTMLElement.offsetParent`** fournit une référence vers le plus proche élément ancêtre positionné (plus proche selon la hiérarchie). S'il n'y a pas d'élément ancêtre positionné, c'est le plus proche ancêtre `td`, `th`, `table` qui sera renvoyé, ou `body` s'il n'y a non plus pas d'élément de tableau comme ancêtre.

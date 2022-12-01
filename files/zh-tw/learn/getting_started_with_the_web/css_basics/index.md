@@ -2,6 +2,7 @@
 title: CSS 基本
 slug: Learn/Getting_started_with_the_web/CSS_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 **階層樣式表** (Cascading Stylesheets；CSS) 可用以塑造網站的特殊風格。例如這段文字要用一般的黑色，或是改用紅色標明重點？某段重要內容應該置於畫面的何處？想用什麼背景圖片及顏色裝飾你的網站？〈[CSS 基本概念](/zh-TW/Learn/Getting_started_with_the_web/CSS_basics)〉帶你入門。
@@ -167,7 +168,7 @@ p,li,h1 {
 
 4. 現在我們將會在 HTML body 中為包含文字的元素設置字體大小，`<h1>`,`<li>`,`<p>`。我們也設置標題居中，並在正文內容上設置一些行高和間距，使其更具可讀性
 
-5. ```css
+    ```css
     h1 {
       font-size: 60px;
       text-align: center;

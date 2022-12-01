@@ -2,6 +2,7 @@
 title: 'Feature-Policy: midi'
 slug: Web/HTTP/Headers/Feature-Policy/midi
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `midi` ディレクティブは、現在の文書が [Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("Navigator.requestMIDIAccess()")}} から返却された {{jsxref("Promise")}} が `DOMException` で拒否されます。
@@ -13,7 +14,7 @@ Feature-Policy: midi <allowlist>;
 ```
 
 - \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
+  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#%E6%A7%8B%E6%96%87) を参照してください。
 
 ## 既定のポリシー
 

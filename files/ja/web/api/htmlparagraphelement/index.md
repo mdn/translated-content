@@ -2,6 +2,7 @@
 title: HTMLParagraphElement
 slug: Web/API/HTMLParagraphElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLParagraphElement`** インターフェイスはインターフェイスは、（通常の {{domxref("HTMLElement")}} から継承によって利用できるものに加えて） {{HTMLElement("p")}} 要素を操作するためのプロパティやメソッドを提供します。

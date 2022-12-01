@@ -3,6 +3,7 @@ title: Element.prepend()
 slug: Web/API/Element/prepend
 original_slug: Web/API/ParentNode/prepend
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.prepend()`** メソッドは、一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトをこの {{domxref("Element")}} の最初の子の前に挿入します。 {{domxref("DOMString")}} オブジェクトは、同等の {{domxref("Text")}} ノードとして挿入されます。

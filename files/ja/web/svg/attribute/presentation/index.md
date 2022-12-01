@@ -2,6 +2,7 @@
 title: SVG プレゼンテーション属性
 slug: Web/SVG/Attribute/Presentation
 ---
+
 SVG プレゼンテーション属性は、SVG 要素の属性として使用される CSS プロパティです。
 
 - [alignment-baseline](#attr-alignment-baseline)

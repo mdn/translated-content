@@ -2,6 +2,7 @@
 title: RTCDataChannelEvent
 slug: Web/API/RTCDataChannelEvent
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCDataChannelEvent`** インタフェースは{{domxref("RTCPeerConnection")}}へ{{domxref("RTCDataChannel")}}をアタッチしている時に発生するイベントを表現します。イベントタイプは、{{event("datachannel")}}です。
@@ -34,9 +35,7 @@ pc.ondatachannel = function( ev ) {
 
 ## 仕様
 
-| Specification                                                                                                    | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('WebRTC 1.0', '#idl-def-RTCDataChannelEvent', 'RTCDataChannelEvent') }} | {{Spec2('WebRTC 1.0')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザ互換性
 

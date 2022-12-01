@@ -1,13 +1,8 @@
 ---
 title: ':-moz-first-node'
 slug: Web/CSS/:-moz-first-node
-tags:
-  - CSS
-  - NeedsCompatTable
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-first-node
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Resumen
@@ -18,7 +13,9 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-mo
 
 ## Síntaxis
 
-    span:-moz-first-node { propiedades del estilo }
+```
+span:-moz-first-node { propiedades del estilo }
+```
 
 ## Ejemplo
 

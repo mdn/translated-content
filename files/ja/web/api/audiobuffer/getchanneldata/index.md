@@ -2,6 +2,7 @@
 title: AudioBuffer.getChannelData()
 slug: Web/API/AudioBuffer/getChannelData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`getChannelData()`** は {{ domxref("AudioBuffer") }} インターフェイスのメソッドで、 channel 引数（0 が最初のチャンネル）で定義されたチャンネルに結び付けられた PCM データを {{jsxref("Float32Array")}} で返します。
@@ -75,4 +76,4 @@ button.onclick = function() {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

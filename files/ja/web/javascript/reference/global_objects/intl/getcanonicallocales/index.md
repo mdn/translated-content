@@ -2,6 +2,7 @@
 title: Intl.getCanonicalLocales()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 ---
+
 {{JSRef}}
 
 **`Intl.getCanonicalLocales()`** メソッドは、正規のロケール名を含む配列を返します。重複は省略され、要素は構造的に有効な言語タグとして検証されます。
@@ -37,9 +38,7 @@ Intl.getCanonicalLocales('EN_US');
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES Int Draft', '#sec-intl.getcanonicallocales', 'Intl.getCanonicalLocales')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

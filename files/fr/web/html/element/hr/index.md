@@ -8,7 +8,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/hr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<hr>`** représente un changement thématique entre des éléments de paragraphe (par exemple, un changement de décor dans un récit, un changement de sujet au sein d'une section).
 

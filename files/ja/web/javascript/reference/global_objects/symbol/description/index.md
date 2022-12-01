@@ -2,6 +2,7 @@
 title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
 ---
+
 {{JSRef}}
 
 読み取り専用 **`description`** プロパティは、 {{JSxRef("Symbol")}} オブジェクトのオプションの説明を返す文字列です。
@@ -33,9 +34,7 @@ Symbol.for('foo').description; // "foo"
 
 ## 仕様
 
-| 仕様                                                                                                                             |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("ESDraft", "#sec-symbol.prototype.description", "get Symbol.prototype.description")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

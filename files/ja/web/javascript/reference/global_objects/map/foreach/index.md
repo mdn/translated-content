@@ -2,6 +2,7 @@
 title: Map.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 ---
+
 {{JSRef}}
 
 **`forEach()`** メソッドは、指定された関数を `Map` オブジェクト内にあるキーと値のペアそれぞれに対して 1 回ずつ、挿入順に実行します。
@@ -67,9 +68,7 @@ new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

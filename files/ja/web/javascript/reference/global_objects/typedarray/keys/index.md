@@ -2,6 +2,7 @@
 title: TypedArray.prototype.keys()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 ---
+
 {{JSRef}}
 
 **`keys()`** メソッドは、配列内の各インデックスに対するキーを含む新しい配列イテレーターオブジェクトを返します。
@@ -46,9 +47,7 @@ console.log(eArr.next().value); // 4
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.keys', '%TypedArray%.prototype.keys()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

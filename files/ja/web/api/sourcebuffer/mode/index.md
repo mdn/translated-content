@@ -2,6 +2,7 @@
 title: SourceBuffer.mode
 slug: Web/API/SourceBuffer/mode
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`mode`** プロパティは、メディアセグメントを `SourceBuffer` に任意の順序で追加できるか、厳密な順序で追加できるかを制御します。
@@ -51,9 +52,7 @@ if (curMode == 'segments') {
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                                             | コメント |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-mode', 'mode')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 ---
+
 {{JSRef}}
 
 **`toLocaleLowerCase()`** メソッドは、呼び出した文字列の値を、ロケールに依存した対応付けに基づいて小文字にに変換して返します。
@@ -50,10 +51,7 @@ let locales = ['tr', 'TR', 'tr-TR', 'tr-u-co-search', 'tr-x-turkish'];
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}}     |
-| {{SpecName('ES Int Draft', '#sup-string.prototype.tolocalelowercase', 'String.prototype.toLocaleLowerCase')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

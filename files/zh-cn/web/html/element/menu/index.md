@@ -2,7 +2,8 @@
 title: <menu>
 slug: Web/HTML/Element/menu
 ---
-{{HTMLRef}}{{SeeCompatTable}}
+
+{{HTMLSidebar}}{{SeeCompatTable}}
 
 **HTML `<menu>` 元素**呈现了一组用户可执行或激活的命令。这既包含了可能出现在屏幕顶端的列表菜单，也包含了那些隐藏在按钮之下、当点击按钮后显示出来的文本菜单。
 
@@ -58,7 +59,7 @@ An HTML menu can be used to create context menus (typically activated by right-c
 
 [Toolbar menus](#toolbar) consist of a `<menu>` element whose content is described in one of two ways: either as an unordered list of items represented by {{HTMLElement("li")}} elements (each representing a command or option the user can utilize), or (if there are no `<li>` elements), [flow content](/zh-CN/docs/Web/HTML/Content_categories#Flow_content) describing the available commands and options.
 
-这个元素在 HTML4 中被弃用，但在 HTML 5.1 和 HTML living standard 中被重新推荐使用。 这份文档描述的是当前 Firefox 上的实现。根据 HTML 5.1 的规定，{{HTMLElement("list")}} 元素的类型可能会更改为{{HTMLElement("toolbar")}}。
+这个元素在 HTML4 中被弃用，但在 HTML 5.1 和 HTML living standard 中被重新推荐使用。这份文档描述的是当前 Firefox 上的实现。根据 HTML 5.1 的规定，{{HTMLElement("list")}} 元素的类型可能会更改为{{HTMLElement("toolbar")}}。
 
 ## 例子
 
@@ -160,11 +161,11 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.menu")}}
+{{Compat}}
 
 ## 参见
 
 - Other list-related HTML Elements: {{HTMLElement("ol")}}, {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("hr")}}, and the obsolete {{HTMLElement("dir")}}.
 - The [`contextmenu`](/zh-CN/docs/Web/HTML/Global_attributes#attr-contextmenu) [global attribute](/zh-CN/docs/Web/HTML/Global_attributes) can be used on an element to refer to the `id` of a `menu` with {{HTMLAttrxRef("type", "menu", 'type="context"')}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

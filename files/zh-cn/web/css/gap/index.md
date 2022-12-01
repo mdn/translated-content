@@ -2,6 +2,7 @@
 title: gap (grid-gap)
 slug: Web/CSS/gap
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`gap`** 属性是用来设置网格行与列之间的间隙（{{glossary("gutters")}}），该属性是 {{cssxref("row-gap")}} 和 {{cssxref("column-gap")}} 的简写形式。

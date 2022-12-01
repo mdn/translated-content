@@ -2,6 +2,7 @@
 title: 'FileReader: loadend イベント'
 slug: Web/API/FileReader/loadend_event
 ---
+
 {{APIRef}}
 
 `loadend` イベントは、ファイル読み込みが、成功したかどうかにかかわらず完了したときに発生します。
@@ -137,9 +138,7 @@ fileInput.addEventListener('change', handleSelected);
 
 ## 仕様書
 
-| 仕様書                                                       | 状態                         |
-| ------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('File API', '#dfn-loadend-event')}} | {{Spec2('File API')}} |
+{{Specifications}}
 
 ## ブラウザーの対応
 

@@ -2,6 +2,7 @@
 title: 媒体追踪约束
 slug: Web/API/MediaTrackConstraints
 ---
+
 {{APIRef("媒体捕获与媒体流")}}
 
 The **`MediaTrackConstraints`** dictionary is used to describe a set of capabilities and the value or values each can take on. A constraints dictionary is passed into {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.

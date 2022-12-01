@@ -13,6 +13,7 @@ translation_of: >-
 original_slug: >-
   Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.RelativeTimeFormat.supportedLocalesOf()`** renvoie un tableau contenant l'ensemble des locales, parmi celles fournies en argument, qui sont prises en charge pour le formatage internationalisé du temps relatif, sans avoir à utiliser la locale par défaut de l'environnement d'exécution.

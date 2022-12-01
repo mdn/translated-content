@@ -2,6 +2,7 @@
 title: ウェブページで JavaScript を使う方法
 slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
 ---
+
 Take your webpages to the next level by harnessing JavaScript. Learn in this article how to trigger JavaScript right from your HTML documents.
 
 | 前提条件: | [基本的な HTML 文書の作成](/ja//Learn/HTML/Write_a_simple_page_in_HTML)方法を習熟している必要があります。 |
@@ -12,7 +13,7 @@ Take your webpages to the next level by harnessing JavaScript. Learn in this art
 
 {{Glossary("JavaScript")}} はウェブページをインタラクティブにするための、主にクライアントサイドで使われるプログラミング言語です。 JavaScript を使わなくてもすばらしいウェブページを作ることが*できます*が、JavaScript は全く新しいレベルの可能性を開きます。
 
-> **Note:** In this article we're going over the HTML code you need to make JavaScript take effect. If you want to learn JavaScript itself, you can start with our [JavaScript basics](/ja//Learn/Getting_started_with_the_web/JavaScript_basics) article. If you already know something about JavaScript or if you have a background with other プログラミング言語 s, we suggest you jump directly into our [JavaScript Guide](/ja//docs/Web/JavaScript/Guide).
+> **メモ:** In this article we're going over the HTML code you need to make JavaScript take effect. If you want to learn JavaScript itself, you can start with our [JavaScript basics](/ja//Learn/Getting_started_with_the_web/JavaScript_basics) article. If you already know something about JavaScript or if you have a background with other プログラミング言語 s, we suggest you jump directly into our [JavaScript Guide](/ja//docs/Web/JavaScript/Guide).
 
 ## HTML から JavaScript を起動する方法
 
@@ -26,7 +27,7 @@ Usually, you'll be writing scripts in their own .js files. If you want to execut
 <script src="path/to/my/script.js"></script>
 ```
 
-> **Note:** **Pro tip:** In many cases it's a good idea to put your {{HTMLElement('script')}} elements at the end of your HTML document (right before the `</body>` closing {{Glossary("tag")}}).
+> **メモ:** **Pro tip:** In many cases it's a good idea to put your {{HTMLElement('script')}} elements at the end of your HTML document (right before the `</body>` closing {{Glossary("tag")}}).
 >
 > Loading and running scripts is blocking and immediate. That means, every time the browser comes across a `<script>` element, the browser stops reading the HTML and instead loads and runs the script. The browser continues reading and rendering the HTML code after running the script.
 >

@@ -2,6 +2,7 @@
 title: HTMLDialogElement
 slug: Web/API/HTMLDialogElement
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 **`HTMLDialogElement`** インターフェイスは {{HTMLElement("dialog")}} 要素を操作するメソッドを提供します。 {{domxref("HTMLElement")}} インターフェースからプロパティとメソッドを継承しています。
@@ -93,14 +94,11 @@ _親である {{domxref("HTMLElement")}} からメソッドを継承していま
   </script>
 ```
 
-> **Note:** **メモ**: この例は GitHub 上の [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([ライブで表示](https://mdn.github.io/dom-examples/htmldialogelement-basic/)) として見つけることができます。
+> **メモ:** この例は GitHub 上の [htmldialogelement-basic](https://github.com/mdn/dom-examples/blob/master/htmldialogelement-basic/index.html) ([ライブで表示](https://mdn.github.io/dom-examples/htmldialogelement-basic/)) として見つけることができます。
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "#htmlinputelement", "HTMLInputElement")}}                             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5.1', 'interactive-elements.html#the-dialog-element', '&lt;dialog&gt;')}} | {{Spec2('HTML5.1')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

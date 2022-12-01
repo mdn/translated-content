@@ -3,6 +3,7 @@ title: dragstart
 slug: Web/API/HTMLElement/dragstart_event
 original_slug: Web/API/Document/dragstart_event
 ---
+
 当用户开始拖动一个元素或者一个选择文本的时候 `dragstart` 事件就会触发。
 
 ## 基本信息
@@ -156,15 +157,14 @@ original_slug: Web/API/Document/dragstart_event
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.dragstart_event")}}
+{{Compat}}
 
 ## 相关事件
 
-- {{event("drag")}}
-- {{event("dragstart")}}
-- {{event("dragend")}}
-- {{event("dragover")}}
-- {{event("dragenter")}}
-- {{event("dragleave")}}
-- {{event("dragexit")}}
-- {{event("drop")}}
+- [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event)
+- [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)
+- [`dragend`](/zh-CN/docs/Web/API/HTMLElement/dragend_event)
+- [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event)
+- [`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event)
+- [`dragleave`](/zh-CN/docs/Web/API/HTMLElement/dragleave_event)
+- [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event)

@@ -10,6 +10,7 @@ tags:
   - Plugins
 translation_of: Web/API/Plugin
 ---
+
 {{ApiRef("HTML DOM")}}
 
 L'interface `Plugin` fournit des informations à propos d'un [plugin](/fr/docs/Mozilla/Add-ons/Plugins) du navigateur.

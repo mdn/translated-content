@@ -4,6 +4,7 @@ slug: Web/CSS/image/paint
 translation_of: Web/CSS/image/paint
 browser-compat: css.types.image.paint
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`paint()`** définit une valeur de type [`image`](/fr/docs/Web/CSS/image) générée avec un `PaintWorklet`.

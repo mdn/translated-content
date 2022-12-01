@@ -2,6 +2,7 @@
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
 ---
+
 {{JSRef}}
 
 **`Math.asinh()`** 返回一个数值的反双曲正弦值，即：

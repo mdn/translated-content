@@ -3,6 +3,7 @@ title: counters()
 slug: Web/CSS/counters
 original_slug: Web/CSS/counters()
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 函数 **`counters()`** 是一个嵌套计数器，返回表示指定计数器当前值的连接字符串。`counters()` 函数有两种形式：`counters(name, string)` 或 `counters(name, string, style)`。它通常和伪元素搭配使用，但是理论上可以在支持[`<string>`](/zh-CN/docs/Web/CSS/string)值的任何地方使用。生成的文本是具有给定名称的所有计数器的值，从最外层到最内层，之间由指定字符串分隔。计数器以指示的样式呈现，如果未指定样式，则默认为十进制。
@@ -154,7 +155,7 @@ li::before {
 
 ## Browser compatibility
 
-{{Compat("css.types.counters")}}
+{{Compat}}
 
 ## See also
 

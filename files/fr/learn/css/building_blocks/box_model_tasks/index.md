@@ -6,6 +6,7 @@ tags:
   - CSS
 translation_of: Learn/CSS/Building_blocks/Box_Model_Tasks
 ---
+
 {{LearnSidebar}}
 
 L'objectif de cet exercice est de vous aider à vérifier votre compréhension du modèle de boîte CSS.

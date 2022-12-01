@@ -1,36 +1,57 @@
 ---
-title: SpeechRecognition.onspeechend
+title: 'SpeechRecognition: speechend イベント'
 slug: Web/API/SpeechRecognition/speechend_event
 original_slug: Web/API/SpeechRecognition/onspeechend
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-{{domxref("SpeechRecognition")}} インターフェイスの **`onspeechend`** プロパティは、認識できる音声が検出し終えた時に ([`speechend`](/ja/docs/Web/API/SpeechRecognition/speechend_event) イベントが発生した時)、実行されるイベントハンドラーになります。
+{{APIRef("Web Speech API")}}
+
+**`speechend`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のイベントで、音声認識サービスで認識された音声が検出されなくなったときに発行されます。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('speechend', (event) => { })
+
+onspeechend = (event) => { }
 ```
-mySpeechRecognition.onspeechend = function() { ... };
-```
+
+## イベント型
+
+一般的な {{DOMxRef("Event")}} であり、追加のプロパティはありません。
 
 ## 例
 
+`speechend` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+
 ```js
-recognition.onspeechend = function() {
-  console.log('音声の検出が終わりました。');
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+
+recognition.addEventListener('speechend', () => {
+  console.log('音声が検出されなくなりました');
+});
+```
+
+または `onspeechend` イベントハンドラープロパティを使用してください。
+
+```js
+recognition.onspeechend = () => {
+  console.log('音声が検出されなくなりました');
 }
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                     | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Web Speech API', '#dfn-onspeechend', 'onspeechend')}} | {{Spec2('Web Speech API')}} |          |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.SpeechRecognition.onspeechend")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)

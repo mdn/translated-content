@@ -2,6 +2,7 @@
 title: ArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 ---
+
 {{JSRef}}
 
 **`byteLength`** アクセサープロパティは、{{jsxref("ArrayBuffer")}} の長さをバイト単位で表します。
@@ -23,9 +24,7 @@ buffer.byteLength; // 8
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-arraybuffer.prototype.bytelength', 'ArrayBuffer.prototype.byteLength')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

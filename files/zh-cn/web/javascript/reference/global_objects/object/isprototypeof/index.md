@@ -2,6 +2,7 @@
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
+
 {{JSRef}}
 
 **`isPrototypeOf()`** 方法用于测试一个对象是否存在于另一个对象的原型链上。
@@ -75,4 +76,4 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

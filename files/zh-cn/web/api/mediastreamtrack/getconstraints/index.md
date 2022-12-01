@@ -2,6 +2,7 @@
 title: MediaStreamTrack.getConstraints()
 slug: Web/API/MediaStreamTrack/getConstraints
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaStreamTrack")}} 接口的 **`getConstraints()`** 方法接口返回 {{domxref("MediaTrackConstraints")}} 包含集使用现有呼叫最近的轨道建立约束来 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}。这些约束指示网站或应用程序指定的值和值范围对于包含的可约束属性是必需的或可接受的。
@@ -42,4 +43,4 @@ function switchCameras(track，camera){
 
 ## 浏览器兼容性
 
-{{COMPAT( "api.MediaStreamTrack.getConstraints")}}
+{{Compat}}

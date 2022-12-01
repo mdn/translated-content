@@ -7,9 +7,8 @@ tags:
 translation_of: Mozilla/Firefox/Releases/2
 original_slug: Mozilla/Firefox/Versions/2
 ---
-{{FirefoxSidebar}}
 
-''Une grande partie du contenu de cette page est juste là pour boucher les trous. Voyez la [version anglaise de cette page](/en/Firefox_2_for_developers) pour savoir comment la compléter.''
+{{FirefoxSidebar}}
 
 ## Nouvelles fonctionnalités pour les développeurs dans Firefox 2
 

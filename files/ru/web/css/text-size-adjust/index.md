@@ -5,6 +5,7 @@ tags:
   - Экспериментально
 translation_of: Web/CSS/text-size-adjust
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Свойство **`text-size-adjust`** контролирует алгоритм увеличения текста, используемый на некоторых смартфонах и планшетах. Другие браузеры будут игнорировать это свойство.
@@ -21,7 +22,7 @@ But when the user zoomed in until the text becomes readable, an horizontal scrol
 
 The `text-size-adjust` property allows Web authors to opt out from this behavior, as Web pages designed to handle small screen widths do not need it.
 
-> **Примечание:** **Предупреждения\*\***:\*\*\* Это свойство является нестандартным. In order to use it, Web authors have to duplicate, or even triplicate it, prefixed for each engine supporting it.
+> **Предупреждение**: Это свойство является нестандартным. In order to use it, Web authors have to duplicate, or even triplicate it, prefixed for each engine supporting it.
 >
 > - Its behavior, and even the syntax, is slightly different from one browser engine to the other. Web developers should read the browser compatibility section with the required attention.
 > - **Это свойство работает только на смартфонах.** As there is no inflation algorithm on desktop browsers, and on some tablet browsers like the iPad, the property is not supported there (and ignored). This property is only designed to opt out, or to cancel this opt-out, of the inflating behavior, _not to opt in_.

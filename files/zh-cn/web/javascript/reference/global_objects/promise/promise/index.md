@@ -2,6 +2,7 @@
 title: Promise() 构造器
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** 构造器主要用于包装不支持 promise（返回值不是 `Promise`）的函数。

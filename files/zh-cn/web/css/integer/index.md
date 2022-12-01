@@ -2,6 +2,7 @@
 title: 整型
 slug: Web/CSS/integer
 ---
+
 {{CSSRef}}
 
 The **`<integer>`** [CSS](/zh-CN/docs/Web/CSS) [data type](/zh-CN/docs/Web/CSS/CSS_Types) is a special type of {{cssxref("number")}} that represents a whole number, whether positive or negative. Integers can be used in numerous CSS properties, such as {{cssxref("column-count")}}, {{cssxref("counter-increment")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, and {{cssxref("z-index")}}.
@@ -10,7 +11,7 @@ The **`<integer>`** css 数据类型是一种特殊的\<number>类型，它表�
 ## 语法
 
 The `<integer>` data type consists of one or several decimal digits, 0 through 9 inclusive, optionally preceded by a single `+` or `-` sign. There is no unit associated with integers.
-\<integer>数据类型由一个或多个十进制数字组成，包括 0 到 9，可以选择前面加一个 + 或-号。没有与整数关联的单位。
+\<integer>数据类型由一个或多个十进制数字组成，包括 0 到 9，可以选择前面加一个 + 或 - 号。没有与整数关联的单位。
 
 > **备注：** There is no official range of valid `<integer>` values. Opera 12.1 supports values up to 215-1, IE up to 220-1, and other browsers even higher. During the CSS3 Values cycle there was a lot of discussion about setting a minimum range to support: the latest decision, [in April 2012 during the LC phase](http://lists.w3.org/Archives/Public/www-style/2012Apr/0633.html), was \[-227-1; 227-1], but other values like 224-1 and 230-1 [were also proposed](http://lists.w3.org/Archives/Public/www-style/2012Apr/0530.html). However, the latest spec doesn't specify a range anymore.
 > 注意：没有有效的\<integer>值的正式范围。Opera12.1 支持高达 215-1 的值，IE 高达 220-1 的值，其他浏览器支持更高的值。在 CSS3 值周期中，有很多关于设置最小支持范围的讨论：2012 年 4 月在 LC 阶段的最新决定是 \[-227-1; 227-1],，但也提出了 224-1 and 230 等其他值。但是，最新的规范不再指定范围。
@@ -52,7 +53,7 @@ _5          Special characters are not allowed.
 
 ## 浏览器兼容性
 
-{{Compat("css.types.integer")}}
+{{Compat}}
 
 ## 参考
 

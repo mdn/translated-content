@@ -2,6 +2,7 @@
 title: FetchEvent.respondWith()
 slug: Web/API/FetchEvent/respondWith
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("FetchEvent")}} 接口的 **`respondWith()`** 方法阻止浏览器默认的 fetch 操作，并且允许由你自己为 {{domxref("Response")}} 提供一个 promise。

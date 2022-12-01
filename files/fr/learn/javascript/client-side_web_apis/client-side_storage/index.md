@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -772,7 +773,7 @@ self.addEventListener('fetch', function(e) {
 3. Pour construire la réponse, on utilise d'abord {{domxref("CacheStorage.match()")}} afin de vérifier si la requête est en cache (qu'une requête correspond à l'URL demandée est en cache).
 4. Si elle est trouvée, la promesse se résout avec la réponse correspondante; sinon, avec `undefined`. Dans ce cas, on récupère la réponse à partir du réseau, en utilisant `fetch()`, et on retourne le résultat.
 
-C'est tout pour notre service worker. Il y a tout un tas de choses que vous pouvez faire avec — pour plus de détails, consultez le [service worker cookbook](https://serviceworke.rs/). Et merci à Paul Kinlan pour son article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), qui a inspiré cet exemple.
+C'est tout pour notre service worker. Il y a tout un tas de choses que vous pouvez faire avec — pour plus de détails, consultez le [service worker cookbook](https://github.com/mdn/serviceworker-cookbook/). Et merci à Paul Kinlan pour son article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), qui a inspiré cet exemple.
 
 ### Tester l'exemple hors-ligne
 

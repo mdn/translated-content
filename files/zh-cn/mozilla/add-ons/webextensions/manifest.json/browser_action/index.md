@@ -2,6 +2,7 @@
 title: browser_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -154,7 +155,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
         </p>
         <p>
           与普通网页不同，弹窗中运行的 JavaScript 能访问所有的
-          <a href="/en-US/Add-ons/WebExtensions/API">WebExtension APIs</a
+          <a href="/zh-CN/Add-ons/WebExtensions/API">WebExtension APIs</a
           >（当然，仅对于拥有适当<a
             href="/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"
             >权限</a
@@ -252,4 +253,4 @@ Firefox 中：
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.manifest.browser_action", 10)}}
+{{Compat}}

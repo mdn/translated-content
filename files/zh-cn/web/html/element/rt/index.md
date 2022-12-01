@@ -2,13 +2,14 @@
 title: <rt>
 slug: Web/HTML/Element/rt
 ---
+
 **HTML Ruby 文本 (`<rt>`) 元素**包含字符的发音，字符在 ruby 注解中出现，它用于描述东亚字符的发音。这个元素始终在 {{ HTMLElement("ruby") }} 元素中使用。
 
 <table class="properties">
  <tbody>
   <tr>
    <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td>无  </td>
+   <td>无</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -16,7 +17,7 @@ slug: Web/HTML/Element/rt
   </tr>
   <tr>
    <th scope="row">标签省略</th>
-   <td>如果 {{HTMLElement("rt")}} 元素紧紧跟随  {{HTMLElement("rt")}} 或者 {{HTMLElement("rp")}} 元素，或者父元素中没有更多内容了，结束标签可以省略。</td>
+   <td>如果 {{HTMLElement("rt")}} 元素紧紧跟随 {{HTMLElement("rt")}} 或者 {{HTMLElement("rp")}} 元素，或者父元素中没有更多内容了，结束标签可以省略。</td>
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
@@ -52,7 +53,7 @@ slug: Web/HTML/Element/rt
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.rt")}}
+{{Compat}}
 
 ## 另见
 
@@ -61,4 +62,4 @@ slug: Web/HTML/Element/rt
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

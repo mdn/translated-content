@@ -2,6 +2,7 @@
 title: HTTP ヘッダー
 slug: Web/HTTP/Headers
 ---
+
 {{HTTPSidebar}}
 
 **HTTP ヘッダー**により、 HTTP リクエストやレスポンスでクライアントやサーバーが追加情報を渡すことができます。 HTTP ヘッダーは、大文字小文字を区別しないヘッダー名とそれに続くコロン (`:`)、 値で構成されます。値の前にある{{Glossary("Whitespace", "ホワイトスペース")}}は無視されます。
@@ -12,7 +13,7 @@ slug: Web/HTTP/Headers
 
 - {{Glossary("Request header", "リクエストヘッダー")}}は、読み込むリソースについての情報や、そのリソースをリクエストしているクライアントに関する詳細な情報を持ちます。
 - {{Glossary("Response header", "レスポンスヘッダー")}}は、レスポンスに関する追加情報、例えば場所や提供しているサーバーに関する情報を保持します。
-- {{Glossary("Representation header", "表現ヘッダー")}}は、リソースの本体に関する情報、例えば  [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)や適用されるエンコード／圧縮方式などについての情報を持ちます。
+- {{Glossary("Representation header", "表現ヘッダー")}}は、リソースの本体に関する情報、例えば [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)や適用されるエンコード／圧縮方式などについての情報を持ちます。
 - {{Glossary("Payload header","ペイロードヘッダー")}}は、転送されるデータの表現から独立した情報、例えばコンテンツの長さや転送に使われるエンコード方式などを持ちます。
 
 またヘッダーは、{{Glossary("Proxy_server", "プロキシーサーバー")}}がどのように扱うかに応じてグループ化されます。
@@ -66,7 +67,7 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 サーバーは、 {{HTTPHeader("Accept-CH")}} を使用して、クライアントが関心を持っているクライアントヒントヘッダーを積極的に要求します。クライアントは、要求されたヘッダーを後続のリクエストに含めることがあります。
 
 - {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
-  - : サーバーはクライアントヒントに対応していることを、 `Accept-CH` ヘッダーフィールドまたは HTML の `<meta>` 要素の [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#attr-http-equiv) 属性で同等の指定をすることで広報することができます。
+  - : サーバーはクライアントヒントに対応していることを、 `Accept-CH` ヘッダーフィールドまたは HTML の `<meta>` 要素の [`http-equiv`](/ja/docs/Web/HTML/Element/meta#attr-http-equiv) 属性で同等の指定をすることで広報することができます。
 - {{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}} {{deprecated_inline}}
   - : サーバーは、指定された期間サーバーが対応する一連のクライアントヒントを記憶するようクライアントに依頼し、そのサーバーのオリジンに対するその後のリクエストでクライアントヒントを配信できるようにすることができます。
 
@@ -174,7 +175,7 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 - {{HTTPHeader("Origin")}}
   - : どこから読み込みが発生したかを示します。
 - {{HTTPHeader("Timing-Allow-Origin")}}
-  - : [Resource Timing API](/en-US/docs/Web/API/Resource_Timing_API) の機能を通じて受け取った属性の値を見ることができるオリジンを指定します。そうでなければオリジン間の制約によってゼロとして報告されます。
+  - : [Resource Timing API](/ja/docs/Web/API/Resource_Timing_API) の機能を通じて受け取った属性の値を見ることができるオリジンを指定します。そうでなければオリジン間の制約によってゼロとして報告されます。
 
 ## ダウンロード
 
@@ -382,7 +383,7 @@ HTTP の{{Glossary("Client_hints", "クライアントヒント")}}とは、端�
 
 ## 協力
 
-[新しい記事を書いたり](/en-US/docs/MDN/Contribute/Howto/Document_an_HTTP_header)、既存のものを改善したりすることにご協力ください。
+[新しい記事を書いたり](/ja/docs/MDN/Contribute/Howto/Document_an_HTTP_header)、既存のものを改善したりすることにご協力ください。
 
 ## 関連情報
 

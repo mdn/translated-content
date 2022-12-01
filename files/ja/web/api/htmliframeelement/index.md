@@ -2,6 +2,7 @@
 title: HTMLIFrameElement
 slug: Web/API/HTMLIFrameElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLIFrameElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて）インラインフレーム要素を操作するための特別なプロパティを提供します。

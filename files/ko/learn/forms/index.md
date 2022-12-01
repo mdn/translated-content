@@ -3,6 +3,7 @@ title: HTML 폼 가이드
 slug: Learn/Forms
 original_slug: Learn/HTML/Forms
 ---
+
 이 가이드는 HTML 폼을 숙달 시키는데 도움이 되는 문서입니다. HTML 폼은 사용자와 상호작용할 수 있는 매우 강력한 도구입니다. 그러나 역사적으로 나 기술적인 이유로 사용자에게 항상 명확하게 기능을 제공할 수 있는 것은 아닙니다. 이 가이드에서 HTML 폼 관점에서 스타일 구조, 사용자 위젯으로 데이터 다루기 등 모든 것을 다룰 것입니다. 이러한 강력한 기술들을 즐기길 바랍니다!
 
 ## 항목
@@ -41,7 +42,7 @@ original_slug: Learn/HTML/Forms
 | {{HTMLElement("legend")}}     | {{domxref("HTMLLegendElement")}} | `legend` 요소는 상위 요소인 {{ HTMLElement("fieldset") }} 컨텐츠를 위한 캡션을 나타냅니다.                                                                                                          |
 | {{HTMLElement("meter")}}     | {{domxref("HTMLMeterElement")}}     | `meter` 요소는 알려진 범위 안에 정해 저 있는 스칼라 값이나 소수 값 주 하나를 나타냅니다.                                                                                                                       |
 | {{HTMLElement("optgroup")}} | {{domxref("HTMLOptGroupElement")}} | `optgroup` 요소는 {{ HTMLElement("select") }} 요소 안에 있는 옵션 그룹을 생성합니다.                                                                                                                  |
-| {{HTMLElement("option")}}     | {{domxref("HTMLOptionElement")}} | HTML\_ \_`option` 요소는 {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }} 또는 {{ HTMLElement("datalist") }}요소 안에 항목을 나타내는 컨트롤을 생성하는데 사용됩니다. |
+| {{HTMLElement("option")}}     | {{domxref("HTMLOptionElement")}} | HTML `option` 요소는 {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }} 또는 {{ HTMLElement("datalist") }}요소 안에 항목을 나타내는 컨트롤을 생성하는데 사용됩니다. |
 | {{HTMLElement("output")}}     | {{domxref("HTMLOutputElement")}} | `output` 요소는 계산 결과를 나타냅니다.                                                                                                                                                                        |
 | {{HTMLElement("progress")}} | {{domxref("HTMLProgressElement")}} | `progress` 요소는 작업 완료 진행 상태를 나타내는데 사용됩니다.                                                                                                                                                 |
 | {{HTMLElement("select")}}     | {{domxref("HTMLSelectElement")}} | `select` 요소는 옵션 메뉴를 제공하는 컨트롤을 나타냅니다.                                                                                                                                                      |

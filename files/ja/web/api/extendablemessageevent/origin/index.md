@@ -2,6 +2,7 @@
 title: ExtendableMessageEvent.origin
 slug: Web/API/ExtendableMessageEvent/origin
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ExtendableMessageEvent")}} インターフェイスの **`origin`** 読み取り専用プロパティは、メッセージを送信した {{domxref("Client")}} のオリジンを返します。
@@ -41,9 +42,7 @@ self.onmessage = function(e) {
 
 ## 仕様
 
-| 仕様                                                                                                                                     | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-extendablemessageevent-origin', 'ExtendableMessageEvent.origin')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

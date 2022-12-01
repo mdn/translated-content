@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-mask-attachment
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Si la propriété {{cssxref("-webkit-mask-image")}} est définie, **`-webkit-mask-attachment`** permet de déterminer si la position de l'image est fixe par rapport à la zone d'affichage ou si elle défile avec le bloc qui l'englobe.

@@ -2,6 +2,7 @@
 title: CSS 基础框盒模型介绍
 slug: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 ---
+
 {{CSSRef}}
 
 当对一个文档进行布局（lay out）的时候，浏览器的渲染引擎会根据标准之一的 **CSS 基础框盒模型**（**CSS basic box model**），将所有元素表示为一个个矩形的盒子（box）。CSS 决定这些盒子的大小、位置以及属性（例如颜色、背景、边框尺寸…）。

@@ -3,6 +3,7 @@ title: fullscreenchange
 slug: Web/API/Document/fullscreenchange_event
 translation_of: Web/API/Document/fullscreenchange_event
 ---
+
 L'événement **`onfullscreenchange`** est déclenché lorsque le navigateur alterne entre le mode fenêtré et plein écran.
 
 ## Informations générales

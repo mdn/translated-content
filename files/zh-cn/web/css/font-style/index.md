@@ -2,15 +2,14 @@
 title: font-style
 slug: Web/CSS/font-style
 ---
+
 {{CSSRef}}
 
 **`font-style`** CSS 属性允许你选择 {{cssxref("font-family")}} 字体下的 `italic` 或 `oblique` 样式。
 
 {{EmbedInteractiveExample("pages/css/font-style.html")}}
 
-**Italic** 样式一般是指书写体，相比无样式的字体，通常会占用较少的高度，而 **oblique** 字形一般只是常规字形的倾斜版本。斜体（italic）和倾斜体（oblique）都是通过人工倾斜常规字体的字形来模拟的（使用 {{cssxref("font-synthesis")}} 对此进行控制）。
-
-**Italic** font faces are generally cursive in nature, usually using less horizontal space than their unstyled counterparts, while **oblique** faces are usually just sloped versions of the regular face. When the specified style is not available, both italic and oblique faces are simulated by artificially sloping the glyphs of the regular face (use {{cssxref("font-synthesis")}} to control this behavior).
+**Italic** 字体一般是现实生活中的草书，相比无样式的字体，通常会占用较少的水平空间，而 **oblique** 字体一般只是常规字形的倾斜版本。如果当前字体没有对应的斜体，那么斜体（italic）和倾斜体（oblique）都会通过人工倾斜常规字体的字形来模拟（使用 {{cssxref("font-synthesis")}} 对此进行控制）。
 
 ## 语法
 
@@ -184,6 +183,6 @@ Large sections of text set with a `font-style` value of `italic` may be difficul
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-style")}}
+{{Compat}}
 
 \[1] 在 Firefox 44 之前，Gecko 并不对 `oblique` 和 `italic` 字形做出区分。在那之后，如果有可用的字形，它将使用正确的字形。

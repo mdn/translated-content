@@ -2,6 +2,7 @@
 title: 图像文件类型与格式指南
 slug: Web/Media/Formats/Image_types
 ---
+
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 在本指南中，我们将介绍网页浏览器普遍支持的图像文件类型，并提供一些关于他们的信息与见解，帮助您为您的网站选择最合适的图像格式。
@@ -23,7 +24,7 @@ slug: Web/Media/Formats/Image_types
 | [TIFF](#tiff_tagged_image_file_format)               | Tagged Image File Format 标签图像文件格式                  | `image/tiff`    | `.tif`, `.tiff`                            | Safari                                                  |
 | [WebP](#webp_image)                                  | Web Picture format 万维网图像格式                          | `image/webp`    | `.webp`                                    | Chrome, Edge, Firefox, Opera, Safari                    |
 
-每一种格式缩写都有一个详细说明，其功能以及详细的浏览器兼容信息， 包括哪个版本引入支持以及以后可能会引入的特殊功能。
+每一种格式缩写都有一个详细说明，其功能以及详细的浏览器兼容信息，包括哪个版本引入支持以及以后可能会引入的特殊功能。
 
 ## 图像文件格式详介
 

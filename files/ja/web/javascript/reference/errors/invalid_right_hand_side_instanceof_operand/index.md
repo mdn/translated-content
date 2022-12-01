@@ -2,6 +2,7 @@
 title: 'TypeError: invalid ''instanceof'' operand ''x'''
 slug: Web/JavaScript/Reference/Errors/invalid_right_hand_side_instanceof_operand
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "invalid 'instanceof' operand" は、 [`instanceof` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/instanceof)の右側のオペランドにコンストラクターオブジェクト、すなわち `prototype` を持ち呼び出すことができるものが使用されなかった場合に発生します。

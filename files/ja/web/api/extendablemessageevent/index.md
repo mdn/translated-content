@@ -2,6 +2,7 @@
 title: ExtendableMessageEvent
 slug: Web/API/ExtendableMessageEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 [Service Worker API](/ja/docs/Web/API/Service_Worker_API) の **`ExtendableMessageEvent`** インターフェイスは、（別のコンテキストからのメッセージを {{domxref("ServiceWorkerGlobalScope")}} で受信した時に）サービスワーカーで発生する {{event("message_(ServiceWorker)","message")}} イベントのイベントオブジェクトを表し、このようなイベントの存続期間を延長します。
@@ -68,9 +69,7 @@ addEventListener('message', event => {
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#extendablemessageevent', 'ExtendableMessageEvent')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

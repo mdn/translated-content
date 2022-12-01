@@ -2,6 +2,7 @@
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
+
 {{JSRef}}
 
 **`TypeError`** オブジェクトは、演算が実行できなくなった時の新しいエラーを表します。特に値が期待された型ではなかった場合です (ただし、それに限りません)。
@@ -68,9 +69,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

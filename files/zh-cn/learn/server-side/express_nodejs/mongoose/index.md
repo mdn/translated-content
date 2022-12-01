@@ -2,6 +2,7 @@
 title: Express 教程 3：使用数据库  (Mongoose)
 slug: Learn/Server-side/Express_Nodejs/mongoose
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
 本文简要介绍了数据库以及 Node/Express 应用的数据库集成。然后演示了 [Mongoose](http://mongoosejs.com/) 为 [LocalLibrary](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 提供数据库访问的方式。还讲解了对象模式（Schema）和模型（Model）的声明方式、主要域的类型、基础验证机制。同时还简短演示了访问模型数据的一些方法。
@@ -92,7 +93,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 
 > **备注：** 正如下文 [Mongoose 入门](#) 中所讲，通常应该把定义文档/模型关系的字段置于同一模型中（仍可通过在搜索相关 `_id` 来回寻模型间的关系）。以下的 Book 模式中定义了 Book/Genre 和 Book/Author 关系，BookInstance 模式中定义了 Book/BookInstance 关系。这样做是简便起见，但稍存歧义，让这些字段存在于其他模式中也是可以的。
 
-![Mongoose Library Model  with correct cardinality](library_website_-_mongoose_express.png)
+![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
 > **备注：** 下面是一段入门知识，讲解如何定义和使用模型。请在阅读时想想将如何构建上图中的模型。
 
@@ -464,7 +465,7 @@ Story
 >   .exec(function (err, stories) {
 >     if (err) {
 >       return handleError(err);
->     } // 返回所有 author 字段的值为 司马迁id 的简介
+>     } // 返回所有 author 字段的值为 司马迁 id 的简介
 >   });
 > ```
 
@@ -735,7 +736,7 @@ module.exports = mongoose.model('BookInstance', BookInstanceSchema);
 
     > **备注：** 无需深究 [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)，它只是为数据库添加一些示例数据。
     >
-    > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”， 请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
+    > 译注：针对 node.js3.0 及以后版本，mlab 使用“mongodb+srv://”链接而非“mongodb://”，请对[populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/master/populatedb.js)源码酌情修改，否则会报错而添加数据失败。
 
 2. 在项目根目录运行以下命令，以安装脚本所需的异步模块（后续教程再展开讲）
 

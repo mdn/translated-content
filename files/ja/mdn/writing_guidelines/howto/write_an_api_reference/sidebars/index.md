@@ -3,6 +3,7 @@ title: API リファレンスサイドバー
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
 original_slug: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 ---
+
 {{MDNSidebar}}
 
 API リファレンスページにカスタムサイドバーを追加して、関連するインターフェイス、チュートリアル、およびその API に関連する他のリソースへのリンクを表示することができます。この記事ではその方法を説明します。
@@ -12,7 +13,7 @@ API リファレンスページにカスタムサイドバーを追加して、�
 API サイドバーを作成するには、次の 3 つの手順を実行する必要があります。
 
 1. API リファレンスページを作成します。
-2. 特定の API の項目を  [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) ファイルに追加します。
+2. 特定の API の項目を [`GroupData.json`](https://github.com/mdn/content/blob/main/files/jsondata/GroupData.json) ファイルに追加します。
 3. [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) マクロを使用して、表示したい各ページにサイドバーを挿入します。
 
 これらのステップを順番に実行しましょう。この記事で参照する例は、[Fetch API](/ja/docs/Web/API/Fetch_API) です。
@@ -97,7 +98,7 @@ API サイドバーを作成するには、次の 3 つの手順を実行する�
     一般的に、特別な意味がある場合や、複数のページから参照する必要がある場合を除き、複数のプロパティやメソッドで使用される辞書のみをここにリストアップすべきです。
     "CryptoKeyPair" は [https://developer.mozilla.org/ja/docs/Web/API/CryptoKeyPair](/ja/docs/Web/API/CryptoKeyPair) へのリンクの結果をです。
 8. `"types"` — API で定義されている型定義子と列挙型の配列。リストを短くするために、特別に重要なものや複数のページから参照されるものだけをリストアップすることもできます。
-   > **Note:** MDN は型定義子を個別に文書化することから脱却しつつあります。
+   > **メモ:** MDN は型定義子を個別に文書化することから脱却しつつあります。
    > 可能な限り、これらが使用されている箇所で値として記述されるようになりました。
 9. `"callbacks"` — 値は、その API で定義されているすべてのコールバック型のリストを含む配列です。コールバック型を含む API であっても、このグループを使用する必要はないと思われるかもしれません。
     コールバック型を含むAPIでも、このグループを全く使用する必要がないと感じるかもしれません。なぜなら、コールバック型は個別にドキュメント化しても意味がないことが多いからです。

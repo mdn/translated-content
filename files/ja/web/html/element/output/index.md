@@ -2,7 +2,8 @@
 title: '<output>: 出力要素'
 slug: Web/HTML/Element/output
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の出力要素** (**`<output>`**) は、サイトやアプリが計算結果やユーザー操作の結果を挿入することができるコンテナー要素です。
 
@@ -100,10 +101,7 @@ slug: Web/HTML/Element/output
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-output-element', '&lt;output&gt;')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-output-element', '&lt;output&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

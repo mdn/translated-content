@@ -2,6 +2,7 @@
 title: FileSystem
 slug: Web/API/FileSystem
 ---
+
 {{APIRef("File System API")}}{{SeeCompatTable}}
 
 File and Directory Entries API インターフェイスの **`FileSystem`** は、ファイルシステムを表現するために使用されます。これらのオブジェクトは、任意のファイルシステムエントリの {{domxref("FileSystemEntry.filesystem", "filesystem")}} プロパティから取得できます。ブラウザによっては、ファイルシステムを作成・管理するための追加の API を提供しているものもあり、例えば Chrome の {{domxref("Window.requestFileSystem", "requestFileSystem()")}} メソッドのようなものがあります。
@@ -24,9 +25,7 @@ File and Directory Entries API インターフェイスの **`FileSystem`** は�
 
 ## 仕様
 
-| 仕様書                                                                                   | ステータス                           | コメント |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('File System API', '#api-domfilesystem', 'FileSystem')}} | {{Spec2('File System API')}} |          |
+{{Specifications}}
 
 ## ブラウザの互換性
 

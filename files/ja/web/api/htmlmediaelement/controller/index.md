@@ -2,6 +2,7 @@
 title: HTMLMediaElement.controller
 slug: Web/API/HTMLMediaElement/controller
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`HTMLMediaElement.controller`** プロパティは、要素に割り当てられたメディアコントローラーを表します。

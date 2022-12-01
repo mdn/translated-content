@@ -1,8 +1,8 @@
 ---
 title: padding
 slug: Web/CSS/padding
-translation_of: Web/CSS/padding
 ---
+
 {{CSSRef}}
 
 A propriedade **`padding`** define uma a distância entre o conteúdo de um elemento e suas bordas. É um atalho que evita definir uma distância para cada lado separadamente (`padding-top`, `padding-right`, `padding-bottom`, `padding-left`).
@@ -30,7 +30,7 @@ padding: unset;
 
 ## Sintaxe
 
-A propriedade `padding` pode ser utilizada usando um, dois, três ou todos os quatro valores. Cada valor é um [`<comprimento>`](#<length>) ou uma [`<porcentagem>`](#<percentage>).
+A propriedade `padding` pode ser utilizada usando um, dois, três ou todos os quatro valores. Cada valor é um [`<comprimento>`](#length) ou uma [`<porcentagem>`](#percentage).
 
 - Quando **um** único é valor utilizado, ele se aplica a todos os **quatro lados**.
 - Se **Dois** valores forem utilizados o primeiro se aplica às bordas verticais (**superior e inferior**) e o segundo se aplica às bordas horizontais (**esquerda e direita**).
@@ -117,4 +117,4 @@ h3{
 
 ## Veja também
 
-- [CSS Box Model](/en/CSS/box_model "en/CSS/box model")
+- [CSS Box Model](/pt-BR/CSS/box_model)

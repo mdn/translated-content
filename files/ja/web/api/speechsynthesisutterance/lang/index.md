@@ -2,6 +2,7 @@
 title: SpeechSynthesisUtterance.lang
 slug: Web/API/SpeechSynthesisUtterance/lang
 ---
+
 {{APIRef("Web Speech API")}} {{SeeCompatTable}}
 {{domxref("SpeechSynthesisUtterance")}}インターフェースの**lang**プロパティは、発話の言語を取得、設定します。
 
@@ -49,9 +50,7 @@ inputForm.onsubmit = function(event) {
 
 ## Specifications
 
-| Specification                                                                    | Status                               | Comment |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Speech API', '#dfn-utterancelang', 'lang')}} | {{Spec2('Web Speech API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

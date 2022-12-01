@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/getOwnPropertyDescriptor
 ---
+
 {{JSRef}}
 
 La méthode **`handler.getOwnPropertyDescriptor()`** est une trappe pour intercepter {{jsxref("Object.getOwnPropertyDescriptor()")}}.
@@ -92,14 +93,11 @@ Object.getOwnPropertyDescriptor(p, "a"); // Une exception TypeError est renvoyé
 
 ## Spécifications
 
-| Spécification                                                                                                                                                    | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p', '[[GetOwnProperty]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p', '[[GetOwnProperty]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.getOwnPropertyDescriptor")}}
+{{Compat}}
 
 ## Voir aussi
 

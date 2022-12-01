@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/resolvedOptions
 browser-compat: javascript.builtins.Intl.Segmenter.resolvedOptions
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Segmenter.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent la locale et les options de granularité calculées lors de l'initialisation de cet objet [`Intl.Segmenter`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter).

@@ -2,6 +2,7 @@
 title: MediaRecorder.pause()
 slug: Web/API/MediaRecorder/pause
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.pause()`** メソッド（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、メディアストリームの記録を一時停止するために使用します。
@@ -43,9 +44,7 @@ MediaRecorder.pause()
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                                         | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-pause-void", "MediaRecorder.pause()")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

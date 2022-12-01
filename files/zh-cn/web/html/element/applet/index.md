@@ -2,6 +2,7 @@
 title: <applet>
 slug: Web/HTML/Element/applet
 ---
+
 {{deprecated_header}}
 
 ## 概要
@@ -15,7 +16,7 @@ HTML 中的 Applet 元素 (`<applet>`) 标志着包含了 Java 的 applet。
 - {{htmlattrdef("align")}}
   - : 该属性被用来定义网页上 applet 相对于周围内容的对齐方式。HTML4.01 规范定义了 bottom, left, middle, right 和 top 的值，而 Microsoft（微软）和 Netscaple（网景）也可能支持**absbottom**, **absmiddle**, **baseline**, **center**和**texttop。**
 - {{htmlattrdef("alt")}}
-  - : 该属性造成在不支持 Java 的浏览器上显示出一段替代的描述性文字。 页面设计者应该记住在`<applet>` 元素中封闭的内容也可以呈现为替代性文本。
+  - : 该属性造成在不支持 Java 的浏览器上显示出一段替代的描述性文字。页面设计者应该记住在`<applet>` 元素中封闭的内容也可以呈现为替代性文本。
 - {{htmlattrdef("archive")}}
   - : 该属性涉及到 applet 的存档或压缩版本及其相关类文件，这可能会减少下载时间。
 - {{htmlattrdef("code")}}
@@ -37,7 +38,7 @@ HTML 中的 Applet 元素 (`<applet>`) 标志着包含了 Java 的 applet。
 - {{htmlattrdef("object")}}
   - : 该属性指定一个序列化表示的 applet 的 URL。
 - {{htmlattrdef("src")}}
-  - : 为 Internet Explorer 4 及更高版本制定，该属性为 applet 相关文件指定一个 URL。 该定义及使用是不明确的，也不属于 HTML 标准。
+  - : 为 Internet Explorer 4 及更高版本制定，该属性为 applet 相关文件指定一个 URL。该定义及使用是不明确的，也不属于 HTML 标准。
 - {{htmlattrdef("vspace")}}
   - : 该属性指定了保存在 applet 以上或以下的额外垂直空间，以像素为单位。
 - {{htmlattrdef("width")}}
@@ -54,10 +55,10 @@ HTML 中的 Applet 元素 (`<applet>`) 标志着包含了 Java 的 applet。
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.applet")}}
+{{Compat}}
 
 ## 注意
 
 W3C 规范不鼓励使用`<applet>，更`倾向于使用{{HTMLElement("object")}}标签。因为 HTML 4.01 的严格定义，这个元素已经完全过时，在 HTML5 中不再被使用。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

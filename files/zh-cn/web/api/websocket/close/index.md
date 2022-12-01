@@ -2,9 +2,10 @@
 title: WebSocket.close()
 slug: Web/API/WebSocket/close
 ---
+
 {{APIRef("Web Sockets API")}}
 
-**`WebSocket.close()`** 方法关闭 {{domxref("WebSocket")}} 连接或连接尝试（如果有的话）。 如果连接已经关闭，则此方法不执行任何操作。
+**`WebSocket.close()`** 方法关闭 {{domxref("WebSocket")}} 连接或连接尝试（如果有的话）。如果连接已经关闭，则此方法不执行任何操作。
 
 ## 语法
 
@@ -26,7 +27,7 @@ WebSocket.close();
 - `SYNTAX_ERR`
   - : `reason` 字符串太长（超过 123 字节）
 
-> **备注：** 在 Gecko 8.0 {{geckoRelease("8.0")}}之前版本的 Gecko 里，这个方法不支持传参数。
+> **备注：** 在 Gecko 8.0 之前版本的 Gecko 里，这个方法不支持传参数。
 
 ## Specifications
 
@@ -34,4 +35,4 @@ WebSocket.close();
 
 ## Browser compatibility
 
-{{Compat("api.WebSocket.close")}}
+{{Compat}}

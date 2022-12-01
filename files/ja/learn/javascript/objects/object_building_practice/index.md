@@ -2,6 +2,7 @@
 title: オブジェクト構築の練習
 slug: Learn/JavaScript/Objects/Object_building_practice
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 ここまでの記事で JavaScript オブジェクトの根幹部に関する理論と文法の詳細についてすべてを見てきて、始めていくのに十分な基礎固めをしました。この記事では実練習を行ない、独自の JavaScript オブジェクトを作っていくための実践をしていきましょう — 楽しくてカラフルなものを。
@@ -261,7 +262,7 @@ Ball.prototype.update = function() {
 
 4. 保存とデモのリフレッシュをして、ボールがぶつかった時に色が変わるのを見てください!
 
-> **Note:** この例題を動かすのに困った時は、あなたの JavaScript コードを私たちの[完成版](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js)と比べてみてください([ライブ実行版](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)も見られます)。
+> **メモ:** この例題を動かすのに困った時は、あなたの JavaScript コードを私たちの[完成版](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js)と比べてみてください([ライブ実行版](http://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)も見られます)。
 
 ## まとめ
 

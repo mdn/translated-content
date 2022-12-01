@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/findIndex
 ---
+
 {{JSRef}}
 
 La méthode **`findIndex()`** renvoie un **indice** d'un élément d'un tableau typé si cet élément remplit une condition définie par une fonction de test donnée. S'il n'y a aucun élément satisfaisant, -1 sera renvoyé.
@@ -82,14 +83,11 @@ console.log(uint16.findIndex(estPremier)); // 2
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.findIndex")}}
+{{Compat}}
 
 ## Voir aussi
 

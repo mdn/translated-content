@@ -1,13 +1,9 @@
 ---
 title: Entidad
 slug: Glossary/Entity
-tags:
-  - Caractères
-  - HTML
-  - entidad
-translation_of: Glossary/Entity
 original_slug: Glossary/Entidad
 ---
+
 Una **entidad** {{glossary("HTML")}} es un conjunto de caracteres ("string") que comienza con un ampersand (`&`) y termina con un punto y coma (`;`) . Las entidades son utilizadas frecuentemente para imprimir en pantalla caracteres reservados (aquellos que serían interpretados como HTML por el navegador) o invisibles (cómo tabulaciones). También pueden usarse para representar caracteres que no existan en algunos teclados, por ejemplo caracterés con tilde o diéresis.
 
 > **Nota:** Muchos caracteres tienen entidades con nombres fáciles de recordar, como las vocales con tilde (`á`) es `&aacute;`, (`é`) es `&eacute;` y así sucesivamente. Otro ejempo es el simbolo de copyright, (`©`) representado por la entidad `&copy;`. Al lidiar con entidades menos representativas de los caracteres que representan, es de gran ayuda utilizar una [tabla de referencia](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references) o un [decodificador](https://mothereff.in/html-entities).

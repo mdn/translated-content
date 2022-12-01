@@ -2,6 +2,7 @@
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 ---
+
 {{JSRef}}
 
 **`Set`** 物件可讓你儲存任何類型的唯一值（unique），不論是{{Glossary("Primitive", "基本型別（primitive）值")}}或物件參考（references）。
@@ -208,7 +209,7 @@ mySet.size;  // 5
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set")}}
+{{Compat}}
 
 ## 參見
 

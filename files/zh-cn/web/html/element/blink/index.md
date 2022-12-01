@@ -2,6 +2,7 @@
 title: <blink>
 slug: Web/HTML/Element/blink
 ---
+
 {{Deprecated_header}}
 
 HTML Blink Element (`<blink>`) 不是标准元素，它会使包含其中的文本闪烁。
@@ -20,7 +21,7 @@ HTML Blink Element (`<blink>`) 不是标准元素，它会使包含其中的文�
 
 ### 结果 (淡化！)
 
-![Image:HTMLBlinkElement.gif](/@api/deki/files/247/=HTMLBlinkElement.gif)
+![Image:HTMLBlinkElement.gif](htmlblinkelement.gif)
 
 ## 规范
 
@@ -28,7 +29,7 @@ HTML Blink Element (`<blink>`) 不是标准元素，它会使包含其中的文�
 
 ## 浏览器兼容
 
-{{Compat("html.elements.blink")}}
+{{Compat}}
 
 ## 参见
 
@@ -37,4 +38,4 @@ HTML Blink Element (`<blink>`) 不是标准元素，它会使包含其中的文�
 - {{htmlelement("marquee")}}, another similar non-standard element.
 - [CSS animations](/zh-CN/docs/Web/Guide/CSS/Using_CSS_animations) are the way to go to create such an effect.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -2,6 +2,7 @@
 title: FileReader.error
 slug: Web/API/FileReader/error
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("FileReader")}} の **`error`** プロパティは、ファイルの読み取り中に発生したエラーを返します。
@@ -18,9 +19,7 @@ var error = instanceOfFileReader.error
 
 ## 仕様
 
-| 仕様書                                                                               | 状態                         | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザの互換性
 

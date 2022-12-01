@@ -2,6 +2,7 @@
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
 ---
+
 {{APIRef}}
 
 {{domxref("Window")}} の **`innerWidth`** プロパティは読み取り専用で、ウィンドウの内部の幅をピクセル単位で返します。これには垂直スクロールバーがある場合、その幅を含みます。

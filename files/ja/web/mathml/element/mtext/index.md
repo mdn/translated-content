@@ -2,6 +2,7 @@
 title: <mtext>
 slug: Web/MathML/Element/mtext
 ---
+
 {{MathMLRef}}
 
 MathML \<mtext> 要素は、コメントや注釈などの表記の意味を*もたない*任意のテキストをレンダリングするために使用されます。
@@ -129,10 +130,7 @@ MathML \<mtext> 要素は、コメントや注釈などの表記の意味を*も
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                         | コメント   |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mtext', 'mtext') }} | {{ Spec2('MathML3') }} | 現在の仕様 |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mtext', 'mtext') }} | {{ Spec2('MathML2') }} | 初期の仕様 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

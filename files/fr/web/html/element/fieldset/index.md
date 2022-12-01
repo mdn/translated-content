@@ -11,7 +11,8 @@ tags:
 translation_of: Web/HTML/Element/fieldset
 browser-compat: html.elements.fieldset
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<fieldset>`** est utilisé afin de regrouper plusieurs contrôles interactifs ainsi que des étiquettes ([`<label>`](/fr/docs/Web/HTML/Element/Label)) dans un formulaire HTML.
 

@@ -2,6 +2,7 @@
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} 的 **`response`** 属性返回响应的正文。返回的类型为 {{domxref("ArrayBuffer")}}、{{domxref("Blob")}}、{{domxref("Document")}}、JavaScript {{jsxref("Object")}} 或字符串中的一个。这取决于请求的 {{domxref("XMLHttpRequest.responseType", "responseType")}} 属性。

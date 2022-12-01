@@ -2,6 +2,7 @@
 title: Number.MIN_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MIN_VALUE
 ---
+
 {{JSRef}}
 
 **`Number.MIN_VALUE`** プロパティは、 JavaScript において表すことが可能な最小の正の数値です。

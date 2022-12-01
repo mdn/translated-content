@@ -2,6 +2,7 @@
 title: IntersectionObserver.observe()
 slug: Web/API/IntersectionObserver/observe
 ---
+
 {{APIRef("Intersection Observer API")}}{{SeeCompatTable}}
 
 {{domxref("IntersectionObserver")}} の **`observe()`** メソッドは、要素を `IntersectionObserver` によって監視される対象要素に追加します。各オブザーバーはそれぞれ個別の閾値とルートを持っていますが、複数の対象要素について可視部分の変化を監視できます。要素の監視を停止するには、{{domxref("IntersectionObserver.unobserve()")}} を呼び出します。
@@ -29,9 +30,7 @@ IntersectionObserver.observe(targetElement);
 
 ## 仕様
 
-| 仕様書                                                                                                                                       | 策定状況                                     | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-observe','IntersectionObserver.observe()')}} | {{Spec2('IntersectionObserver')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

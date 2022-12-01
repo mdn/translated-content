@@ -2,6 +2,7 @@
 title: vertical-align
 slug: Web/CSS/vertical-align
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) 的属性 **`vertical-align`** 用来指定行内元素（inline）或表格单元格（table-cell）元素的垂直对齐方式。
@@ -200,7 +201,7 @@ img.middle { vertical-align: middle; }
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.vertical-align")}}
+{{Compat}}
 
 ## 参见
 

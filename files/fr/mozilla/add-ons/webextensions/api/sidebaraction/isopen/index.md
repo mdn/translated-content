@@ -12,6 +12,7 @@ tags:
   - slidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen
 ---
+
 {{AddonSidebar()}}
 
 Renvoie `true` si la barre latérale de l'extension est ouverte dans une fenêtre donnée.
@@ -38,7 +39,7 @@ let gettingIsOpen = browser.sidebarAction.isOpen(
   - : `object`. Un objet contenant éventuellement le `windowId` à vérifier.
 
     - `windowId` {{optional_inline}}
-      - : `integer`. ID d'une fenêtre de navigateur à vérifier. Si omis par défaut, il s'agit de  {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}, qui fait référence à la fenêtre du navigateur la plus haute.
+      - : `integer`. ID d'une fenêtre de navigateur à vérifier. Si omis par défaut, il s'agit de {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}, qui fait référence à la fenêtre du navigateur la plus haute.
 
 ### Valeur retournée
 

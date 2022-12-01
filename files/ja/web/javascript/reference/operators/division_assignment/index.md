@@ -2,6 +2,7 @@
 title: 除算代入 (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 除算代入演算子 (`/=`) は変数を右オペランドの値で除算し、結果をその変数に代入します。

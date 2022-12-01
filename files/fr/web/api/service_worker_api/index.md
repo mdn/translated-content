@@ -9,6 +9,7 @@ tags:
   - hors-ligne
 translation_of: Web/API/Service_Worker_API
 ---
+
 {{ServiceWorkerSidebar}}
 
 {{ SeeCompatTable() }}
@@ -91,7 +92,7 @@ Les service workers sont aussi destinés à être utilisés pour des choses tell
 - {{domxref("ExtendableEvent") }}
   - : Étend la durée de vie des événements `install` et `activate` envoyés au {{domxref("ServiceWorkerGlobalScope")}} comme partie du cycle de vie d'un service worker. Cela garantit que tout événement fonctionnel (comme {{domxref("FetchEvent")}}) n'est pas envoyé au {{domxref("ServiceWorker")}} avant qu'il ne mette à jour des schémas de base de données, supprime des entrées de cache obsolètes, etc.
 - {{domxref("ExtendableMessageEvent") }}
-  - : L'objet événement d'un événement {{event("message_(ServiceWorker)","message")}} déclenché sur un service worker (lorsqu'un message est reçu par le {{domxref("ServiceWorkerGlobalScope")}} à partir d'un autre contexte) — étend la durée de vie de tels événements.
+  - : L'objet événement d'un événement [`message`](/fr/docs/Web/API/ServiceWorkerGlobalScope/message_event) déclenché sur un service worker (lorsqu'un message est reçu par le {{domxref("ServiceWorkerGlobalScope")}} à partir d'un autre contexte) — étend la durée de vie de tels événements.
 - {{domxref("FetchEvent") }}
   - : Le paramètre passé au gestionnaire {{domxref("ServiceWorkerGlobalScope.onfetch")}}, l'interface `FetchEvent` représente une action de recherche qui est envoyée au {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}. Il contient des informations à propos de la requête et de la réponse résultante, et fournit la méthode {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}, qui nous permet de produire une réponse arbitraire en retour à la page contrôlée.
 - {{domxref("InstallEvent") }}
@@ -101,7 +102,7 @@ Les service workers sont aussi destinés à être utilisés pour des choses tell
 - {{domxref("NotificationEvent") }}
   - : Le paramètre passé au gestionnaire {{domxref("ServiceWorkerGlobalScope.onnotificationclick", "onnotificationclick")}}, l'interface `NotificationEvent` représente un événement de notification au clic qui est envoyé au {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}.
 - {{domxref("PeriodicSyncEvent")}} {{non-standard_inline}}
-  - : Le paramètre passé au gestionnaire sync, l'interface SyncEvent représente une action de synchronisation périodique qui est envoyée au  {{domxref("ServiceWorkerGlobalScope")}} d'un ServiceWorker.
+  - : Le paramètre passé au gestionnaire sync, l'interface SyncEvent représente une action de synchronisation périodique qui est envoyée au {{domxref("ServiceWorkerGlobalScope")}} d'un ServiceWorker.
 - {{domxref("PeriodicSyncManager")}} {{non-standard_inline}}
   - : Fournit une interface pour l'enregistrement et la récupération des objets {{domxref("PeriodicSyncRegistration")}}.
 - {{domxref("PeriodicSyncRegistration")}} {{non-standard_inline}}
@@ -131,7 +132,7 @@ Les service workers sont aussi destinés à être utilisés pour des choses tell
 
 ## Voir aussi
 
-- [ServiceWorker Cookbook](https://serviceworke.rs)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Utilisation des Service Workers](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Exemple basique de Service workers](https://github.com/mdn/sw-test)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)

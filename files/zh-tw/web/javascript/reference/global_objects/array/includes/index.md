@@ -2,6 +2,7 @@
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
+
 {{JSRef}}
 
 **`includes()`** 方法會判斷陣列是否包含特定的元素，並以此來回傳 `true` 或 `false`。
@@ -137,7 +138,7 @@ If you need to support truly obsolete JavaScript engines that don't support [`Ob
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.includes")}}
+{{Compat}}
 
 ## 參見
 

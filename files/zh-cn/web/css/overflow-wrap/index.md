@@ -3,6 +3,7 @@ title: overflow-wrap
 slug: Web/CSS/overflow-wrap
 original_slug: Web/CSS/word-wrap
 ---
+
 {{CSSRef}}
 
 {{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}

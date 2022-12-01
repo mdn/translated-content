@@ -6,6 +6,7 @@ tags:
   - TopicStub
 translation_of: Mozilla/Firefox/Releases/26
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 26 est sorti le 10 Décembre 2013. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais également pour les développeurs Firefox et Gecko ainsi que pour les développeurs de modules complémentaires.
@@ -57,7 +58,7 @@ L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_
 
 ### MathML
 
-- Les rendus incohérents de {{MathMLElement("mmultiscripts")}},  {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}} ont été unifiés et la gestion des erreurs de ces éléments a été améliorée ({{bug("827713")}}).
+- Les rendus incohérents de {{MathMLElement("mmultiscripts")}}, {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}} ont été unifiés et la gestion des erreurs de ces éléments a été améliorée ({{bug("827713")}}).
 
 ### SVG
 

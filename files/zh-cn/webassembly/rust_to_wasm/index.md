@@ -2,6 +2,7 @@
 title: 编译 Rust 为 WebAssembly
 slug: WebAssembly/Rust_to_wasm
 ---
+
 {{WebAssemblySidebar}}
 
 如果你写了一些 Rust 代码，你可以把它编译成 WebAssembly！这份教程将带你编译 Rust 项目为 wasm 并在一个现存的 web 应用中使用它。
@@ -169,7 +170,7 @@ pub fn greet(name: &str) {
 
 我们又看到了 `#[wasm_bindgen]` 属性。在这里，它并非定义一个 `extern` 块，而是 `fn，`这代表我们希望能够在 JavaScript 中使用这个 Rust 函数。这和 `extern` 正相反：我们并非引入函数，而是要把函数给外部世界使用。
 
-这个函数的名字是 `greet`，它需要一个参数，一个字符串 （写作 `&str`）。它调用了我们前面在 `extern` 块中引入的 `alert` 函数。它传递了一个让我们串联字符串的 `format!` 宏的调用。
+这个函数的名字是 `greet`，它需要一个参数，一个字符串（写作 `&str`）。它调用了我们前面在 `extern` 块中引入的 `alert` 函数。它传递了一个让我们串联字符串的 `format!` 宏的调用。
 
 `format!` 在这里有两个参数，一个格式化字符串和一个要填入的变量。格式化字符串是 `"Hello, {}!"` 部分。它可以包含一个或多个 `{}`，变量将会被填入其中。传递的变量是 `name`，也就是这个函数的参数。所以当我们调用 `greet("Steve")`时我们就能看到 `"Hello, Steve!"`。
 
@@ -317,7 +318,7 @@ npm install
 npm run serve
 ```
 
-这将启动一个 Web 服务器。访问 [http://localhost:8080](http://localhost:8080)，您应该会在屏幕上看到一个警告框，其中包含 `Hello, WebAssembly!` ！我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。
+这将启动一个 Web 服务器。访问 `http://localhost:8080`，你应该会在屏幕上看到一个内容为 `Hello, WebAssembly!` 的警告框。我们已经成功地从 JavaScript 调用了 Rust，并从 Rust 调用了 JavaScript。
 
 ## 结论
 

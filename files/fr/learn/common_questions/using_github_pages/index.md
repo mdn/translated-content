@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Common_questions/Using_Github_pages
 original_slug: Apprendre/Utiliser_les_pages_GitHub
 ---
+
 [GitHub](https://github.com/) est un site de partage de code, sur lequel on peut publier des projets dont le code est géré avec le système de gestion de version [Git](http://git-scm.com/)**.** Par défaut, le système est _open source_, ce qui signifie que tout le monde peut consulter le code, l'utiliser pour apprendre ou l'améliorer et collaborer aux projets. Vous pouvez donc participer à d'autres projets ou, à l'inverse, des personnes peuvent collaborer à vos projets ! Dans cet article, nous verrons comment publier du contenu sur le web en utilisant les « pages GitHub » (aussi appelées _gh-pages_) qui sont une des fonctionnalités de GitHub.
 
 ## Publier du contenu
@@ -50,7 +51,7 @@ La meilleure façon d'envoyer votre code sur GitHub est d'utiliser l'interface e
 
 > **Note :** Il existe également des [interfaces graphiques pour Git](http://git-scm.com/downloads/guis) qui permettent de faire la même chose. N'hésitez pas à les utiliser si vous ne vous sentez pas à l'aise avec la ligne de commande.
 
-Chaque système d'exploitation possède sa propre interface en ligne de commande  :
+Chaque système d'exploitation possède sa propre interface en ligne de commande :
 
 - **Windows** : **l'invite de commande**. Celle-ci peut être lancée en utilisant la touche Windows et en tapant _Invite de commande_ avant de sélectionner l'option dans la liste qui apparaît. Windows utilise certaines conventions différentes de celles choisies par Linux et OS X, les commandes peuvent donc varier légèrement (par exemple, dans Windows, on utilisera `\` pour indiquer un sous-répertoire alors que Linux et OS X utiliseront `/`).
 - **OS X** : **le terminal**. On le trouvera dans _Applications > Utilitaires_.
@@ -104,6 +105,6 @@ git commit -m 'Un autre commit'
 git push
 ```
 
-Vous pouvez utiliser un autre message que « un autre commit »  pour indiquer les changements que vous avez effectués.
+Vous pouvez utiliser un autre message que « un autre commit » pour indiquer les changements que vous avez effectués.
 
 Dans cet article, nous n'avons fait qu'effleurer la surface de Git. Pour en savoir plus, n'hésitez pas à utiliser les [pages d'aide de GitHub](https://help.github.com/index.html) (en anglais) ou encore [le manuel Pro Git](http://git-scm.com/book/fr/v1) (en français).

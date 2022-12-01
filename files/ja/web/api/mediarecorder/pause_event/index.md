@@ -3,6 +3,7 @@ title: MediaRecorder.onpause
 slug: Web/API/MediaRecorder/pause_event
 original_slug: Web/API/MediaRecorder/onpause
 ---
+
 {{APIRef("Media Recorder API")}}
 
 **`MediaRecorder.onpause`** イベントハンドラ（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は `pause` イベントを処理します。 これにより、一時停止中のメディアの記録に応答してコードを実行できます。
@@ -50,13 +51,11 @@ MediaRecorder.addEventListener('pause', function(event) { ... })
 
 ## 仕様
 
-| 仕様                                                                                                                         | 状態                                         | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-onpause", "MediaRecorder.onpause")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.onpause")}}
+{{Compat}}
 
 ## 関連情報
 

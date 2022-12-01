@@ -3,6 +3,7 @@ title: 'Document: transitionrun イベント'
 slug: Web/API/Element/transitionrun_event
 original_slug: Web/API/Document/transitionrun_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`transitionrun`** イベントは、 [CSS トランジション](/ja/docs/CSS/Using_CSS_transitions)が最初に生成されたとき、すなわち {{cssxref("transition-delay")}} が始まる前に発生します。
@@ -54,9 +55,7 @@ document.ontransitionrun = () => {
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('CSS3 Transitions', '#transitionrun', 'transitionrun')}} | {{Spec2('CSS3 Transitions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -8,6 +8,7 @@ tags:
   - graphique
 translation_of: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}
 
 L'interface **CanvasRenderingContext2D** est utilisée pour dessiner des rectangles, du texte, des images et d'autres objets sur l'élément canvas. Il fournit le contexte de rendu 2D pour la surface de dessin d'un élément {{HTMLElement("canvas")}}.
@@ -124,7 +125,7 @@ The following methods can be used to manipulate paths of objects.
 - {{domxref("CanvasRenderingContext2D.lineTo()")}}
   - : Connects the last point in the subpath to the `x, y` coordinates with a straight line.
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo()")}}
-  - : Adds a cubic Bézier curve to the path. It requires three points. The first two points are control points and the third one is the end point. The starting point is the last point in the current path, which can be changed using `moveTo()`before creating the Bézier curve.
+  - : Adds a cubic Bézier curve to the path. It requires three points. The first two points are control points and the third one is the end point. The starting point is the last point in the current path, which can be changed using `moveTo()` before creating the Bézier curve.
 - {{domxref("CanvasRenderingContext2D.quadraticCurveTo()")}}
   - : Adds a quadratic Bézier curve to the current path.
 - {{domxref("CanvasRenderingContext2D.arc()")}}
@@ -175,7 +176,7 @@ Objects in the `CanvasRenderingContext2D` rendering context have a current trans
 ## Compositing
 
 - {{domxref("CanvasRenderingContext2D.globalAlpha")}}
-  - : Alpha value that is applied to shapes and images before they are composited onto the canvas. Default `1.0`(opaque).
+  - : Alpha value that is applied to shapes and images before they are composited onto the canvas. Default `1.0` (opaque).
 - {{domxref("CanvasRenderingContext2D.globalCompositeOperation")}}
   - : With `globalAlpha` applied this sets how shapes and images are drawn onto the existing bitmap.
 

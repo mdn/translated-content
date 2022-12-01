@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/instanceof
 original_slug: Web/JavaScript/Reference/Opérateurs/instanceof
 ---
+
 {{jsSidebar("Operators")}}
 
 L'**opérateur `instanceof`** permet de tester si un objet possède, dans sa chaîne de prototype, la propriété `prototype` d'un certain constructeur.
@@ -125,16 +126,11 @@ Pour tester qu'un objet n'est pas une instance d'un constructeur donné, on pour
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-relational-operators', 'Opérateurs relationnels')}} | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-11.8.6', 'Opérateur instanceof')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES3', '#sec-11.8.6', 'Opérateur instanceof')}}                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.4. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.instanceof")}}
+{{Compat}}
 
 ## Voir aussi
 

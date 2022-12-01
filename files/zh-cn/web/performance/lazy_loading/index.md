@@ -2,7 +2,8 @@
 title: Lazy loading
 slug: Web/Performance/Lazy_loading
 ---
-**延迟加载 (懒加载)** 是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。 这是一种缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)长度的方法，可以缩短页面加载时间。
+
+**延迟加载 (懒加载)** 是一种将资源标识为非阻塞（非关键）资源并仅在需要时加载它们的策略。这是一种缩短[关键渲染路径](/zh-CN/docs/Web/Performance/Critical_rendering_path)长度的方法，可以缩短页面加载时间。
 
 延迟加载可以在应用程序的不同时刻发生，但通常会在某些用户交互（例如滚动和导航）上发生。
 
@@ -70,7 +71,7 @@ Include this polyfill to provide support for older and currently incompatible br
 [loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
 
 **交叉观察者 API**
-[Intersection Observers](/zh-CN/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser’s viewport.
+[Intersection Observers](/zh-CN/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser's viewport.
 
 **事件处理程序**
 当浏览器的兼容性至关重要时，有以下几种选择：

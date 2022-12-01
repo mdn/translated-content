@@ -2,13 +2,14 @@
 title: Cache.keys()
 slug: Web/API/Cache/keys
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Cache")}} インターフェイスの **`keys()`** メソッドは、{{domxref("Cache")}} キーの配列に解決される {{jsxref("Promise")}} を返します。
 
 リクエストは、挿入されたのと同じ順序で返されます。
 
-> **Note:** **注**: レスポンスに `VARY` ヘッダーが設定されている場合、URL が重複しているがヘッダーが異なるリクエストを返すことができます。
+> **メモ:** レスポンスに `VARY` ヘッダーが設定されている場合、URL が重複しているがヘッダーが異なるリクエストを返すことができます。
 
 ## 構文
 
@@ -49,9 +50,7 @@ caches.open('v1').then(function(cache) {
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-cache-keys', 'Cache: keys')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

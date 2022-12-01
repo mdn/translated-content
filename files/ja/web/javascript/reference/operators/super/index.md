@@ -2,6 +2,7 @@
 title: super
 slug: Web/JavaScript/Reference/Operators/super
 ---
+
 {{jsSidebar("Operators")}}
 
 **super** キーワードは、オブジェクトの親の関数を呼び出すために使用できます。

@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/18
 original_slug: Mozilla/Firefox/Versions/18
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résume les principaux changements dans Firefox 18 qui sont utiles aux développeurs.
@@ -57,7 +58,7 @@ Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résum
 - `nsIEditor`
   - : `addEditorObserver()` a été supprimé, utilisez `setEditorObserver()` à la place, `removeEditorObserver()` ne prend plus le paramètre `nsIEditorObserver`. ({{bug("785091")}})
 - `nsIHttpProtocolHandler`
-  - : Il n'y a plus de garantie que les observateurs `http-on-modify-request` soit appelés de manière synchrone au cours de `nsIChannel.asyncOpen().` Pour les observateurs qui ont besoin d'être appelés pendant `asyncOpen`(), le nouvel observateur `http-on-opening-request` a été ajouté. {{bug("800799")}}
+  - : Il n'y a plus de garantie que les observateurs `http-on-modify-request` soit appelés de manière synchrone au cours de `nsIChannel.asyncOpen().` Pour les observateurs qui ont besoin d'être appelés pendant `asyncOpen()`, le nouvel observateur `http-on-opening-request` a été ajouté. {{bug("800799")}}
 - `nsIProtocolProxyService`
   - : La méthode `resolve` a été retirée. Maintenant, seule la méthode `asyncResolve` peut être utilisée. Voir ({{bug("769764")}}).
 

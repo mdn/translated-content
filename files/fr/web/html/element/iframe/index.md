@@ -17,7 +17,8 @@ tags:
 translation_of: Web/HTML/Element/iframe
 browser-compat: html.elements.iframe
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<iframe>`** représente un [contexte de navigation](/fr/docs/Glossary/Browsing_context) imbriqué qui permet en fait d'obtenir une page HTML intégrée dans la page courante.
 

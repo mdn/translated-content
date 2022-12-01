@@ -2,6 +2,7 @@
 title: Math.sign()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sign
 ---
+
 {{JSRef}}
 
 **`Math.sign()`** 関数は、引数として渡された数値の符号が**正**か**負**かを表す +/- 1 を返します。 `Math.sign()` に渡された数が 0 であれば、 +/- 0 を返します。なお、数値が正である場合、明示的な (+) は返され**ません**。
@@ -75,9 +76,7 @@ Math.sign();      // NaN
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

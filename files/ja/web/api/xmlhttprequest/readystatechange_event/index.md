@@ -1,36 +1,43 @@
 ---
-title: XMLHttpRequest.onreadystatechange
+title: 'XMLHttpRequest: readystatechange イベント'
 slug: Web/API/XMLHttpRequest/readystatechange_event
 original_slug: Web/API/XMLHttpRequest/onreadystatechange
+l10n:
+  sourceCommit: 073f70e052ff92ab715df3c20678c11c9b51747f
 ---
+
 {{APIRef}}
 
-[イベントハンドラー](/ja/docs/Web/Events/Event_handlers) で、 `readyState` 属性が変化するたびに呼び出されます。コールバックはユーザーインターフェイスのスレッドから呼び出されます。 **`XMLHttpRequest.onreadystatechange`** プロパティは、 {{domxref("XMLHttpRequest/readystatechange_event", "readystatechange")}} イベントが発行されるたびに、つまり {{domxref("XMLHttpRequest")}} の {{domxref("XMLHttpRequest.readyState", "readyState")}} が変化するたびに呼び出されるイベントハンドラーを保持します。
+`readystatechange` イベントは、 {{domxref("XMLHttpRequest")}} の {{domxref("XMLHttpRequest.readyState", "readyState")}} プロパティが変化するたびに発生します。
 
-> **Warning:** これは同期リクエストで使用してはいけません。また、ネイティブコードから使用してはいけません。
+> **警告:** これは同期リクエストで使用してはいけません。また、ネイティブコードから使用してはいけません。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
 ```js
-XMLHttpRequest.onreadystatechange = callback;
+addEventListener('readystatechange', (event) => { })
+
+onreadystatechange = (event) => { }
 ```
 
-### 値
+## イベント型
 
-- `callback` は `readyState` が変化したときに実行される関数です。
+一般的な {{DOMxRef("Event")}} であり、追加のプロパティはありません。
 
 ## 例
 
 ```js
-const xhr = new XMLHttpRequest(),
-    method = "GET",
-    url = "https://developer.mozilla.org/";
+const xhr = new XMLHttpRequest();
+const method = "GET";
+const url = "https://developer.mozilla.org/";
 
 xhr.open(method, url, true);
-xhr.onreadystatechange = function () {
+xhr.onreadystatechange = () => {
   // ローカルファイルでは、 Mozilla Firefox で成功するとステータスは0になります
-  if(xhr.readyState === XMLHttpRequest.DONE) {
-    var status = xhr.status;
+  if (xhr.readyState === XMLHttpRequest.DONE) {
+    const status = xhr.status;
     if (status === 0 || (status >= 200 && status < 400)) {
       // リクエストが正常に終了した
       console.log(xhr.responseText);

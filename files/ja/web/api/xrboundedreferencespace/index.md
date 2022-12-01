@@ -2,6 +2,7 @@
 title: XRBoundedReferenceSpace
 slug: Web/API/XRBoundedReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
 .[WebXR Device API](/ja/docs/Web/API/WebXR_Device_API) の **`XRBoundedReferenceSpace`** インターフェイスは、事前設定された境界を持つ仮想世界の[参照空間](/ja/docs/Web/API/WebXR_Device_API/Geometry)を記述します。 これは {{domxref("XRReferenceSpace")}} を拡張して、ビューアーの位置の周囲の本質的に制限のない空間を記述します。 これらの境界は、点の配列を使用して定義し、各点は、ユーザーがその中で移動することができる多角形の頂点を定義します。
@@ -21,9 +22,7 @@ _`XRBoundedReferenceSpace` は、その親インターフェイスである {{do
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                     | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#xrboundedreferencespace-interface','XRBoundedReferenceSpace')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

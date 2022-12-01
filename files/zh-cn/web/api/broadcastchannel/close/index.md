@@ -2,6 +2,7 @@
 title: BroadcastChannel.close()
 slug: Web/API/BroadcastChannel/close
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 通过调用 **`BroadcastChannel.close()`** 方法，可以马上断开其与对应频道的关联，并让其被垃圾回收。这是必要的步骤，因为浏览器没有其它方式知道频道不再被需要。
@@ -32,7 +33,7 @@ bc.close();
 
 ## 浏览器兼容性
 
-{{Compat("api.BroadcastChannel.close")}}
+{{Compat}}
 
 ## 另见
 

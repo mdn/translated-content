@@ -6,6 +6,7 @@ tags:
   - 창
 translation_of: Web/API/Window/toolbar
 ---
+
 {{APIRef}}
 
 ## 요약

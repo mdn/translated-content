@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/vertexAttribPointer
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.vertexAttribPointer()`** de l'[API WebGL](/fr/docs/Web/API/WebGL_API) spécifie la disposition en mémoire de l'objet de tampon vertex. Elle doit être appelée une fois pour chaque attribut de sommet.
@@ -58,9 +59,9 @@ Aucune.
 ### Exceptions
 
 - Une erreur `gl.INVALID_VALUE` est déclenchée si `decalage` est négatif.
-- Une erreur `gl.INVALID_OPERATION` est déclenchée si  `pas` et `decalage` ne sont pas des multiples de la taille du type de données.
-- Une erreur  `gl.INVALID_OPERATION` est déclenchée si aucun WebGLBuffer n'est lié à la cible ARRAY_BUFFER.
-- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, une erreur  `gl.INVALID_OPERATION` est déclenchée si l'attribut du sommet est défini comme entier dans le shader de sommet (par ex., `uvec4` or `ivec4`, iau lieu de `vec4`).
+- Une erreur `gl.INVALID_OPERATION` est déclenchée si `pas` et `decalage` ne sont pas des multiples de la taille du type de données.
+- Une erreur `gl.INVALID_OPERATION` est déclenchée si aucun WebGLBuffer n'est lié à la cible ARRAY_BUFFER.
+- Lors de l'utilisation d'un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, une erreur `gl.INVALID_OPERATION` est déclenchée si l'attribut du sommet est défini comme entier dans le shader de sommet (par ex., `uvec4` or `ivec4`, iau lieu de `vec4`).
 
 ## Description
 

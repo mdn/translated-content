@@ -140,7 +140,7 @@
 /zh-TW/docs/Glossary/404	/zh-TW/docs/Web/HTTP/Status/404
 /zh-TW/docs/Glossary/502	/zh-TW/docs/Web/HTTP/Status/502
 /zh-TW/docs/Glossary/Bootstrap	/zh-TW/docs/orphaned/Glossary/Bootstrap
-/zh-TW/docs/Glossary/jQuery	/zh-TW/docs/orphaned/Glossary/jQuery
+/zh-TW/docs/Glossary/Empty_element	/zh-TW/docs/Glossary/Void_element
 /zh-TW/docs/Glossary/偽元素	/zh-TW/docs/Glossary/Pseudo-element
 /zh-TW/docs/Glossary/字元	/zh-TW/docs/Glossary/Character
 /zh-TW/docs/Glossary/字元編碼	/zh-TW/docs/Glossary/character_encoding
@@ -169,7 +169,7 @@
 /zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB	/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology
 /zh-TW/docs/IndexedDB/Using_IndexedDB	/zh-TW/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /zh-TW/docs/JavaScript	/zh-TW/docs/Web/JavaScript
-/zh-TW/docs/JavaScript/About_JavaScript	/zh-TW/docs/Web/JavaScript/About_JavaScript
+/zh-TW/docs/JavaScript/About_JavaScript	/zh-TW/docs/Web/JavaScript
 /zh-TW/docs/JavaScript/Guide	/zh-TW/docs/Web/JavaScript/Guide
 /zh-TW/docs/JavaScript/Guide/Details_of_the_Object_Model	/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 /zh-TW/docs/JavaScript/Guide/Functions	/zh-TW/docs/Web/JavaScript/Guide/Functions
@@ -454,8 +454,9 @@
 /zh-TW/docs/MDN/Getting_started	/zh-TW/docs/MDN/Community/Contributing/Getting_started
 /zh-TW/docs/MDN/Guidelines	/zh-TW/docs/MDN/Writing_guidelines
 /zh-TW/docs/MDN/Guidelines/Writing_style_guide	/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide
-/zh-TW/docs/MDN/Kuma	/zh-TW/docs/MDN/Yari
+/zh-TW/docs/MDN/Kuma	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-TW/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	/zh-TW/docs/MDN/Tools/KumaScript/Troubleshooting
+/zh-TW/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-TW/docs/MDN_at_ten	/zh-TW/docs/MDN/At_ten
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome	https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/
 /zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications	/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
@@ -538,7 +539,6 @@
 /zh-TW/docs/Web/API/Coordinates/longitude	/zh-TW/docs/Web/API/GeolocationCoordinates/longitude
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
 /zh-TW/docs/Web/API/DOMString	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String
-/zh-TW/docs/Web/API/Detecting_device_orientation	/en-US/docs/Web/Events/Detecting_device_orientation
 /zh-TW/docs/Web/API/Document/keyup_event	/zh-TW/docs/Web/API/Element/keyup_event
 /zh-TW/docs/Web/API/Document/width	/zh-TW/docs/Web/API/Element/clientWidth
 /zh-TW/docs/Web/API/DocumentTemp	/zh-TW/docs/Web/API/Document
@@ -603,7 +603,8 @@
 /zh-TW/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/zh-TW/docs/conflicting/Web/Accessibility/ARIA
 /zh-TW/docs/Web/Apps/Progressive	/zh-TW/docs/Web/Progressive_web_apps
 /zh-TW/docs/Web/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/border-image
-/zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/Web/CSS/@viewport
+/zh-TW/docs/Web/CSS/@viewport	/zh-TW/docs/conflicting/Web/CSS
+/zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/conflicting/Web/CSS
 /zh-TW/docs/Web/CSS/CSS_Background_and_Borders	/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /zh-TW/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /zh-TW/docs/Web/CSS/CSS_Box_Model/理解邊界重疊的原因	/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
@@ -694,6 +695,7 @@
 /zh-TW/docs/Web/HTTP/X-Frame-Options	/zh-TW/docs/Web/HTTP/Headers/X-Frame-Options
 /zh-TW/docs/Web/HTTP/data_URIs	/zh-TW/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/zh-TW/docs/Web/JavaScript/Language_Overview
+/zh-TW/docs/Web/JavaScript/About_JavaScript	/zh-TW/docs/Web/JavaScript
 /zh-TW/docs/Web/JavaScript/Guide/Introduction/關於	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_Overview	/zh-TW/docs/Web/JavaScript/Guide/Introduction
 /zh-TW/docs/Web/JavaScript/Guide/JavaScript_概觀	/zh-TW/docs/Web/JavaScript/Guide/Introduction
@@ -823,7 +825,7 @@
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/zh-TW/docs/Web/JavaScript/Reference/Operators
 /zh-TW/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/zh-TW/docs/Web/JavaScript/Reference/Operators
 /zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-TW/docs/Web/Security/Same-origin_policy
-/zh-TW/docs/Web/JavaScript/Shells	/zh-TW/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
+/zh-TW/docs/Web/JavaScript/Shells	/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-TW/docs/Web/JavaScript/Typed_arrays/ArrayBuffer	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/Typed_arrays/ArrayBuffer/prototype	/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /zh-TW/docs/Web/JavaScript/資料結構	/zh-TW/docs/Web/JavaScript/Data_structures
@@ -847,7 +849,6 @@
 /zh-TW/docs/Web/性能	/zh-TW/docs/Web/Performance
 /zh-TW/docs/WebAPI	/zh-TW/docs/Web/API
 /zh-TW/docs/WebAPI/Battery_Status	/zh-TW/docs/Web/API/Battery_Status_API
-/zh-TW/docs/WebAPI/Detecting_device_orientation	/en-US/docs/Web/Events/Detecting_device_orientation
 /zh-TW/docs/WebAPI/FileHandle	/zh-TW/docs/Web/API/File_and_Directory_Entries_API
 /zh-TW/docs/WebAPI/Managing_screen_orientation	/zh-TW/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /zh-TW/docs/WebAPI/Network_Information	/zh-TW/docs/Web/API/Network_Information_API

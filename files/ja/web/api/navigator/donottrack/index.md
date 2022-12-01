@@ -2,6 +2,7 @@
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`Navigator.doNotTrack`** プロパティは、ユーザーの Do Not Track 設定を返します。これは、ユーザーがウェブサイトと広告主に対して追跡しないよう要求しているかどうかを示します。
@@ -17,9 +18,7 @@ console.log(navigator.doNotTrack);
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                         | 備考     |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Tracking", "#dom-navigator-donottrack", "Navigator.doNotTrack")}} | {{Spec2("Tracking")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

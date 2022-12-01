@@ -2,6 +2,7 @@
 title: 客戶端 web APIs
 slug: Learn/JavaScript/Client-side_web_APIs
 ---
+
 {{LearnSidebar}}
 
 在為網站或應用程序編寫客戶端 JavaScript 時，您將很快遇到應用程式介面（API）。 API 是應用程式介面，用於操作運行站點的瀏覽器和操作系統的不同方面，或操縱來自其他網站或服務的資料。 在本單元中，我們將探討 API 是什麼，以及如何使用您在開發工作中經常遇到的一些最常見的 API。
@@ -12,7 +13,7 @@ To get the most out of this module, you should have worked your way through the 
 
 了解 [HTML](/zh-TW/docs/Learn/HTML) 和 [CSS](/zh-TW/docs/Learn/CSS) 的基礎知識也會有所幫助。
 
-> **備註：** 假如你正在使用 電腦/平板/其他裝置，你不需要建立自己的檔案，你可以嘗試線上程式撰寫系統來撰寫範例程式，像是[JSBin](http://jsbin.com/) or [Thimble](https://thimble.mozilla.org/).
+> **備註：** 假如你正在使用 電腦/平板/其他裝置，你不需要建立自己的檔案，你可以嘗試線上程式撰寫系統來撰寫範例程式，像是 [JSBin](http://jsbin.com/) or [Glitch](https://glitch.com/)。
 
 ## 概觀
 

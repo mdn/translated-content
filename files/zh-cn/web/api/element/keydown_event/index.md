@@ -2,11 +2,12 @@
 title: 'Element:  键盘按下事件'
 slug: Web/API/Element/keydown_event
 ---
+
 {{APIRef}}
 
 **`keydown`**事件触发于键盘按键按下的时候。
 
-与{{Event("keypress")}} 事件不同的是，所有按键均会触发`keydown`事件，无论这些按键是否会产生字符值。
+与[`keypress`](/zh-CN/docs/Web/API/Element/keypress_event) 事件不同的是，所有按键均会触发`keydown`事件，无论这些按键是否会产生字符值。
 
 <table class="properties">
   <thead></thead>
@@ -83,7 +84,7 @@ input.onkeydown = logKey;
 
 ## Browser compatibility
 
-{{Compat("api.Element.keydown_event")}}
+{{Compat}}
 
 ## See also
 

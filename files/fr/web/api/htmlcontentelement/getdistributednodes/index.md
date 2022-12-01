@@ -8,6 +8,7 @@ tags:
   - Web Components
 translation_of: Web/API/HTMLContentElement/getDistributedNodes
 ---
+
 {{ APIRef("Web Components") }}
 
 La méthode **`HTMLContentElement.getDistributedNodes()`** retourne un {{domxref("NodeList")}} statique du {{glossary("distributed nodes")}} associé avec l'élément `<content>`.

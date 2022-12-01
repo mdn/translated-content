@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/WebGL_API/By_example/Raining_rectangles
 original_slug: Web/API/WebGL_API/By_example/Une_pluie_de_rectangle
 ---
+
 {{PreviousNext("Apprendre/WebGL/Par_exemple/Créer_une_animation_avec_découpe_et_applique","Apprendre/WebGL/Par_exemple/Hello_GLSL")}}
 
 Cet exemple permet de créer un jeu simple qui illustre ce qu'il est possible de faire avec du « découpage », des animations et des interactions utilisateur.
@@ -23,7 +24,7 @@ Voici un jeu simple où il faut essayer de cliquer sur les rectangles qui tomben
 
 Dans cet exemple, on combine l'applique de couleurs unis dans le tampon de dessin et des opérations de découpe. C'est un aperçu d'une application graphique complète qui manipule les différentes phases des processus {{Glossary("WebGL")}} et de son automate.
 
-De plus, cet exmple illustre comment intégrer des fonctions WebGL dans une boucle de jeu. La boucle de jeu est responsable du dessin pour l'animation, de la gestion des entrées utilisateur et de la réactivité de l'ensemble. Voici comment la boucle de jeu est implémentée avec des  `setTimeout`.
+De plus, cet exmple illustre comment intégrer des fonctions WebGL dans une boucle de jeu. La boucle de jeu est responsable du dessin pour l'animation, de la gestion des entrées utilisateur et de la réactivité de l'ensemble. Voici comment la boucle de jeu est implémentée avec des `setTimeout`.
 
 ```html hidden
 <p>Vous en avez attrapé

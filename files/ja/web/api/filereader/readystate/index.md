@@ -2,6 +2,7 @@
 title: FileReader.readyState
 slug: Web/API/FileReader/readyState
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("FileReader")}} の **`readyState`** プロパティは、 `FileReader` がいる読み取り操作の現在の状態を提供します。 `FileReader` は以下のいずれかの状態にあります。
@@ -37,9 +38,7 @@ reader.onloadend = function () {
 
 ## 仕様
 
-| 仕様書                                                                               | 状態                         | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザの互換性
 

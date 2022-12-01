@@ -1,8 +1,8 @@
 ---
 title: Signature (functions)
 slug: Glossary/Signature/Function
-translation_of: Glossary/Signature/Function
 ---
+
 **함수 시그니처**(_타입_ 시그니처, _메소드_ 시그니처)는 {{Glossary("Function", "functions")}} 그리고 {{Glossary("Method", "methods")}}의 입력과 출력을 정의합니다.
 
 시그니처는 다음을 포함합니다:

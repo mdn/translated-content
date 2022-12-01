@@ -2,6 +2,7 @@
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
 ---
+
 {{HTTPSidebar}}
 
 **`Forwarded`** ヘッダーは、[リバースプロキシサーバー](/ja/docs/Web/HTTP/Proxy_servers_and_tunneling)からの情報を含みます。リクエストの経路にプロキシーが介在している場合には、変更されたり失われたりします。

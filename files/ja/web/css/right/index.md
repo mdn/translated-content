@@ -2,6 +2,7 @@
 title: right
 slug: Web/CSS/right
 ---
+
 {{CSSRef}}
 
 **`right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の水平位置の決定に関与します。位置指定されていない要素には効果はありません。

@@ -1,39 +1,34 @@
 ---
 title: PointerEvent.pointerType
 slug: Web/API/PointerEvent/pointerType
+l10n:
+  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
 ---
+
 {{ APIRef("Pointer Events") }}
 
-{{domxref("PointerEvent")}} インターフェイスの **`pointerType`** 読み取り専用プロパティは、特定のポインタイベントを引き起こしたデバイスタイプ（マウス、ペン、またはタッチ）を示します。
+**`pointerType`** は {{domxref("PointerEvent")}} インターフェイスの読み取り専用プロパティで、特定のポインターイベントを引き起こした機器の種類（マウス、ペン、またはタッチ）を示します。
 
-## 構文
+## 値
 
-```
-var pType = pointerEvent.pointerType;
-```
+このイベントのポインターの種類です。対応している値は以下の文字列です。
 
-### 戻り値
+- `"mouse"`
+  - : このイベントはマウス機器によって生成されました。
+- `"pen"`
+  - : このイベントはペン機器またはスタイラス機器によって生成されました。
+- `"touch"`
+  - : このイベントは指などのタッチによって生成されました。
 
-- `pType`
-
-  - : イベントのポインタタイプ。 サポートする値は次の文字列です。
-
-    - `"mouse"`
-      - : イベントはマウスデバイスによって生成されました。
-    - `"pen"`
-      - : イベントはペンデバイスまたはスタイラスデバイスによって生成されました。
-    - `"touch"`
-      - : イベントは指などのタッチによって生成されました。
-
-デバイスタイプがブラウザーで検出できない場合、値は空の文字列（`""`）になります。 ブラウザーが上記以外のポインタデバイスタイプをサポートしている場合は、異なるタイプのデバイスと名前が競合しないように、値に *{{glossary("Vendor Prefix","ベンダー接頭辞")}}を付ける* 必要があります。
+機器の種類がブラウザーで検出できない場合、値は空の文字列 (`""`) になります。 ブラウザーが上記以外のポインター機器の種類に対応している場合は、他の種類の機器と名前が競合しないように、値に *ベンダー接頭辞* をつける必要があります。
 
 ## 例
 
-この例は、`pointerType` プロパティの値を使用して適切なポインタタイプ処理関数を呼び出す方法を示しています。
+この例は、`pointerType` プロパティの値を使用して適切なポインターの種類の処理関数を呼び出す方法を示しています。
 
 ```js
-targetElement.addEventListener('pointerdown', function(event) {
-  // 適切なポインタタイプのハンドラを呼び出す
+targetElement.addEventListener('pointerdown', (event) => {
+  // 適切なポインターの種類のハンドラーを呼び出す
   switch (event.pointerType) {
     case 'mouse':
       process_pointer_mouse(event);
@@ -45,19 +40,15 @@ targetElement.addEventListener('pointerdown', function(event) {
       process_pointer_touch(event);
       break;
     default:
-      console.log(`pointerType ${event.pointerType} はサポートしていません`);
+      console.log(`pointerType ${event.pointerType} には対応していません`);
   }
 }, false);
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                         | 状態                                     | コメント                                                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Pointer Events', '#dom-pointerevent-pointertype', 'pointerType')}}     | {{Spec2('Pointer Events')}}     | 初期定義                                                                                                                                                                                       |
-| {{SpecName('Pointer Events 2','#dom-pointerevent-pointertype', 'pointerType')}}     | {{Spec2('Pointer Events 2')}} | 不安定版                                                                                                                                                                                       |
-| {{SpecName('CSSOM View','#extensions-to-the-mouseevent-interface', 'MouseEvent')}} | {{Spec2('CSSOM View')}}         | {{domxref("MouseEvent")}} を `long` 型から `double` 型に再定義します。 これは、`pointerType` がマウスである {{domxref("PointerEvent")}} が `double` 型になることを意味します。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.PointerEvent.pointerType", 2)}}
+{{Compat}}

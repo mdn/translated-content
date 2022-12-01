@@ -2,6 +2,7 @@
 title: Video and audio content
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 Now that we are comfortable with adding simple images to a webpage, the next step is to start adding video and audio players to your HTML documents! In this article we'll look at doing just that with the {{htmlelement("video")}} and {{htmlelement("audio")}} elements; we'll then finish off by looking at how to add captions/subtitles to your videos.
@@ -204,7 +205,7 @@ mediaElem.load();
 
 ### Detecting track addition and removal (requires JavaScript)
 
-You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the {{event("addtrack")}} event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:
+You can monitor the track lists within a media element to detect when tracks are added to or removed from the element's media. For example, you can watch for the [`addtrack`](/zh-TW/docs/Web/API/RTCPeerConnection/addTrack) event being fired on the associated {{domxref("AudioTrackList")}} object (retrieved via {{domxref("HTMLMediaElement.audioTracks")}}) to be informed when audio tracks are added to the media:
 
 ```js
 const mediaElem = document.querySelector("video");

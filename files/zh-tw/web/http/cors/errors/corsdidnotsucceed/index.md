@@ -2,6 +2,7 @@
 title: 原因：CORS 請求未成功
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
+
 {{HTTPSidebar}}
 
 ## 原因

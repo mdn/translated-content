@@ -1,13 +1,6 @@
 ---
 title: ':target'
 slug: Web/CSS/:target
-tags:
-  - CSS
-  - Layout
-  - Pseudo clase CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/:target
 ---
 {{CSSRef}}
 
@@ -22,7 +15,9 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:target`** de [CSS](/es/do
 
 Por ejemplo, la siguiente URL tiene un fragmento (indicado por el signo #) que apunta a un elemento llamado `section2`:
 
-    http://www.example.com/index.html#section2
+```
+http://www.example.com/index.html#section2
+```
 
 El siguiente elemento sería seleccionado por un selector `:target` cuando la URL actual sea igual a la anterior:
 
@@ -185,11 +180,7 @@ Puede usar la pseudo-clase `:target` para crear un lightbox sin usar JavaScript.
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentarios                             |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------- |
-| {{SpecName("HTML WHATWG", "browsers.html#selector-target", ":target")}} | {{Spec2("HTML WHATWG")}}     | Define la semántica específica de HTML. |
-| {{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}             | {{Spec2("CSS4 Selectors")}} | Ningún cambio.                          |
-| {{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}                 | {{Spec2("CSS3 Selectors")}} | Definición Inicial.                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

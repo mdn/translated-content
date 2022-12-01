@@ -2,6 +2,7 @@
 title: 'WebSocket: close イベント'
 slug: Web/API/WebSocket/close_event
 ---
+
 {{APIRef}}
 
 `close` イベントは、 `WebSocket` の接続が閉じられたときに発生します。

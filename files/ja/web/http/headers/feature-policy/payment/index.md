@@ -2,6 +2,7 @@
 title: 'Feature-Policy: payment'
 slug: Web/HTTP/Headers/Feature-Policy/payment
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーフィールドにおける `payment` ディレクティブは、現在の文書が [Payment Request API](/ja/docs/Web/API/Payment_Request_API) を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{DOMxRef("PaymentRequest()")}} コンストラクターで `SyntaxError` の {{domxref("DOMException")}} が発生します。
@@ -13,7 +14,7 @@ Feature-Policy: payment <allowlist>;
 ```
 
 - \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
+  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#%E6%A7%8B%E6%96%87) を参照してください。
 
 ## 既定のポリシー
 
@@ -21,10 +22,7 @@ Feature-Policy: payment <allowlist>;
 
 ## 仕様書
 
-| 仕様書                         | 状態                        | 備考                                                                                                   |
-| ------------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Payment')}}        | {{Spec2('Payment')}}        | [Section 16. Feature Policy integration](https://w3c.github.io/payment-request/#feature-policy) を参照 |
-| {{SpecName('Feature Policy')}} | {{Spec2('Feature Policy')}} | 初回定義                                                                                               |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

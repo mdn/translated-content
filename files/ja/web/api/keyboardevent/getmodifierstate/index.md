@@ -1,14 +1,17 @@
 ---
 title: KeyboardEvent.getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
+l10n:
+  sourceCommit: b7556b71e1fc3e89057671b372871e9f33d3f0b8
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.getModifierState()`** メソッドは、指定された修飾キーの現在の状態を返します。修飾キーが有効な場合（すなわち修飾キーが押されているかロックされている場合）は `true`、そうでなければ `false` になります。
 
 ## 構文
 
-```js
+```js-nolint
 getModifierState(key)
 ```
 
@@ -53,7 +56,7 @@ Gecko で `getModifierState()` が true を返すときです。
       <th scope="row"><code>"AltGraph"</code></th>
       <td>
         <p>
-          <kbd>Alt</kbd> と <kbd>Ctrl</kbd> の両方のキーが押されている、または  <kbd>AltGr</kbd> キーが押されている
+          <kbd>Alt</kbd> と <kbd>Ctrl</kbd> の両方のキーが押されている、または <kbd>AltGr</kbd> キーが押されている
         </p>
       </td>
       <td>
@@ -176,7 +179,7 @@ Gecko で `getModifierState()` が true を返すときです。
 
 ## `"Accel"` 仮想修飾子
 
-> **Note:** `"Accel"` 仮想修飾子は、 DOM3 Events 仕様の現在のドラフトでは、事実上**非推奨**とされています。
+> **メモ:** `"Accel"` 仮想修飾子は、 DOM3 Events 仕様の現在のドラフトでは、事実上**非推奨**とされています。
 
 `getModifierState()` は `"Accel"` という名前の非推奨の仮想修飾子も受け入れます。`event.getModifierState("Accel")` は {{domxref("KeyboardEvent.ctrlKey")}} または {{domxref("KeyboardEvent.metaKey")}} の少なくともどちらかが `true` である場合に `true` を返します。
 
@@ -187,72 +190,74 @@ Gecko で `getModifierState()` が true を返すときです。
 ## 例
 
 ```js
-// Ignore if following modifier is active.
-if (event.getModifierState("Fn") ||
-    event.getModifierState("Hyper") ||
-    event.getModifierState("OS") ||
-    event.getModifierState("Super") ||
-    event.getModifierState("Win") /* hack for IE */) {
-  return;
-}
-
-// Also ignore if two or more modifiers except Shift are active.
-if (event.getModifierState("Control") +
-    event.getModifierState("Alt") +
-    event.getModifierState("Meta") > 1) {
-  return;
-}
-
-// Handle shortcut key with standard modifier
-if (event.getModifierState("Accel")) {
-  switch (event.key.toLowerCase()) {
-    case "c":
-      if (event.getModifierState("Shift")) {
-        // Handle Accel + Shift + C
-        event.preventDefault(); // consume the key event
-      }
-      break;
-    case "k":
-      if (!event.getModifierState("Shift")) {
-        // Handle Accel + K
-        event.preventDefault(); // consume the key event
-      }
-      break;
+function handleKeyboardEvent(event) {
+  // Ignore if following modifier is active.
+  if (event.getModifierState("Fn") ||
+      event.getModifierState("Hyper") ||
+      event.getModifierState("OS") ||
+      event.getModifierState("Super") ||
+      event.getModifierState("Win") /* hack for IE */) {
+    return;
   }
-  return;
-}
 
-// Do something different for arrow keys if ScrollLock is locked.
-if ((event.getModifierState("ScrollLock") ||
-       event.getModifierState("Scroll") /* hack for IE */) &&
-    !event.getModifierState("Control") &&
-    !event.getModifierState("Alt") &&
-    !event.getModifierState("Meta")) {
-  switch (event.key) {
-    case "ArrowDown":
-    case "Down": // hack for IE and old Gecko
-      event.preventDefault(); // consume the key event
-      break;
-    case "ArrowLeft":
-    case "Left": // hack for IE and old Gecko
-      // Do something different if ScrollLock is locked.
-      event.preventDefault(); // consume the key event
-      break;
-    case "ArrowRight":
-    case "Right": // hack for IE and old Gecko
-      // Do something different if ScrollLock is locked.
-      event.preventDefault(); // consume the key event
-      break;
-    case "ArrowUp":
-    case "Up": // hack for IE and old Gecko
-      // Do something different if ScrollLock is locked.
-      event.preventDefault(); // consume the key event
-      break;
+  // Also ignore if two or more modifiers except Shift are active.
+  if (event.getModifierState("Control") +
+      event.getModifierState("Alt") +
+      event.getModifierState("Meta") > 1) {
+    return;
+  }
+
+  // Handle shortcut key with standard modifier
+  if (event.getModifierState("Accel")) {
+    switch (event.key.toLowerCase()) {
+      case "c":
+        if (event.getModifierState("Shift")) {
+          // Handle Accel + Shift + C
+          event.preventDefault(); // consume the key event
+        }
+        break;
+      case "k":
+        if (!event.getModifierState("Shift")) {
+          // Handle Accel + K
+          event.preventDefault(); // consume the key event
+        }
+        break;
+    }
+    return;
+  }
+
+  // Do something different for arrow keys if ScrollLock is locked.
+  if ((event.getModifierState("ScrollLock") ||
+        event.getModifierState("Scroll") /* hack for IE */) &&
+      !event.getModifierState("Control") &&
+      !event.getModifierState("Alt") &&
+      !event.getModifierState("Meta")) {
+    switch (event.key) {
+      case "ArrowDown":
+      case "Down": // hack for IE and old Gecko
+        event.preventDefault(); // consume the key event
+        break;
+      case "ArrowLeft":
+      case "Left": // hack for IE and old Gecko
+        // Do something different if ScrollLock is locked.
+        event.preventDefault(); // consume the key event
+        break;
+      case "ArrowRight":
+      case "Right": // hack for IE and old Gecko
+        // Do something different if ScrollLock is locked.
+        event.preventDefault(); // consume the key event
+        break;
+      case "ArrowUp":
+      case "Up": // hack for IE and old Gecko
+        // Do something different if ScrollLock is locked.
+        event.preventDefault(); // consume the key event
+        break;
+    }
   }
 }
 ```
 
-> **Note:** この例は `.getModifierState()` を `"Alt"`,
+> **メモ:** この例は `.getModifierState()` を `"Alt"`,
 > `"Control"`, `"Meta"`, `"Shift"` で使用していますが、
 > `event.altKey`, `event.ctrlKey`, `event.metaKey`,
 > `event.shiftKey` の方がよりお勧めです。

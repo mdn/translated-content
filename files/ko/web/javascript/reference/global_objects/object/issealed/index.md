@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 ---
+
 {{JSRef}}
 
 **`Object.isSealed()`** 메서드는 객체가 봉인됐는지 판별합니다.

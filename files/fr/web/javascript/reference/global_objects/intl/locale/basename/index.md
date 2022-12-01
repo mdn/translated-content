@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/baseName
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.baseName`** renvoie un extrait de la chaîne de caractères représentant l'objet `Locale`. Cet extrait contient les informations essentielles à propos de l'objet `Locale`.

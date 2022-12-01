@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/compare
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.Collator.prototype.compare()`** compare deux chaînes de caractères en tenant compte des options spécifiées pour la locale et l'ordre de tri dans l'objet {{jsxref("Collator")}}.
@@ -65,15 +66,11 @@ console.log(matches.join(", "));
 
 ## Spécifications
 
-| Spécification                                                                                                                            | Statut                           | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('ES Int 1.0', '#sec-10.3.2', 'Intl.Collator.prototype.compare')}}                                     | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-10.3.2', 'Intl.Collator.prototype.compare')}}                                     | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#sec-Intl.Collator.prototype.compare', 'Intl.Collator.prototype.compare')}} | {{Spec2('ES Int Draft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.Collator.compare")}}
+{{Compat}}
 
 ## Voir aussi
 

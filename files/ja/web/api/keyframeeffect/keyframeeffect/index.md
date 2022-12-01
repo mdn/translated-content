@@ -3,6 +3,7 @@ title: EffectTiming
 slug: Web/API/KeyframeEffect/KeyframeEffect
 original_slug: Web/API/EffectTiming
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
 The **`EffectTiming`** dictionary, part of the [Web Animations API](/ja/docs/Web/API/Web_Animations_API), is used by {{domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly", "KeyframeEffectReadOnly()")}}, and {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}} to describe timing properties for animation effects. These properties are all optional, although without setting a `duration` the animation will not play.
@@ -30,13 +31,11 @@ Simply put, these properties describe how the {{Glossary("user agent")}} should 
 
 ## Specifications
 
-| Specification                                                                                            | Status                               | Comment            |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Web Animations', '#the-effecttiming-dictionary', 'EffectTiming' )}} | {{Spec2('Web Animations')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 
-{{Compat("api.EffectTiming")}}
+{{Compat}}
 
 ## See also
 

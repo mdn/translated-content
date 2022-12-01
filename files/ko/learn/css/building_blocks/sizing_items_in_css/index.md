@@ -2,6 +2,7 @@
 title: CSS 에서 항목 크기 조정
 slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
 
 지금까지 다양한 수업에서는 CSS 를 사용하여 웹 페이지의 항목 크기를 조정하는 여러가지 방법을 살펴 보았습니다. 디자인의 다양한 기능이 얼마나 큰지 이해하는 것이 중요하며, 이 수업에서는 CSS 를 통해 요소의 크기를 결정하는 다양한 방법을 요약하고 크기 조정과 관련하여 향후 도움이 될 몇 가지 용어를 정의합니다.

@@ -2,6 +2,7 @@
 title: Web Components
 slug: Web/Web_Components
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Web Components 是一套不同的技术，允许您创建可重用的定制元素（它们的功能封装在您的代码之外）并且在您的 web 应用中使用它们。
@@ -19,7 +20,7 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 实现 web component 的基本方法通常如下所示：
 
 1. 创建一个类或函数来指定 web 组件的功能，如果使用类，请使用 ECMAScript 2015 的类语法 (参阅[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)获取更多信息)。
-2. 使用 {{domxref("CustomElementRegistry.define()")}} 方法注册您的新自定义元素 ，并向其传递要定义的元素名称、指定元素功能的类、以及可选的其所继承自的元素。
+2. 使用 {{domxref("CustomElementRegistry.define()")}} 方法注册您的新自定义元素，并向其传递要定义的元素名称、指定元素功能的类、以及可选的其所继承自的元素。
 3. 如果需要的话，使用{{domxref("Element.attachShadow()")}} 方法将一个 shadow DOM 附加到自定义元素上。使用通常的 DOM 方法向 shadow DOM 中添加子元素、事件监听器等等。
 4. 如果需要的话，使用 {{htmlelement("template")}} 和{{htmlelement("slot")}} 定义一个 HTML 模板。再次使用常规 DOM 方法克隆模板并将其附加到您的 shadow DOM 中。
 5. 在页面任何您喜欢的位置使用自定义元素，就像使用常规 HTML 元素那样。
@@ -95,10 +96,10 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 - CSS pseudo-elements
   - : slots 特别相关的伪元素：
     - {{cssxref("::slotted")}}：匹配任何已经插入一个 slot 的内容。
-- {{event("slotchange")}} event
+- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event
   - : 当插槽中的节点改变时在 {{domxref("HTMLSlotElement")}} 实例（[`<slot>`](/zh-CN/docs/Web/HTML/Element/slot) 元素）上触发。
 
-## 例子
+## 示例
 
 在 [web-components-examples](https://github.com/mdn/web-components-examples)，我们正在构建一些例子。以后会添加更多。
 

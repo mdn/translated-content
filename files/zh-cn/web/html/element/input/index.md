@@ -2,7 +2,8 @@
 title: <input>：输入（表单输入）元素
 slug: Web/HTML/Element/Input
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<input>` 元素**用于为基于 Web 的表单创建交互式控件，以便接受来自用户的数据; 可以使用各种类型的输入数据和控件小部件，具体取决于设备和{{Glossary("user agent", "用户代理")}}。
 
@@ -12,7 +13,7 @@ slug: Web/HTML/Element/Input
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/HTML/Content_categories">内容分类</a>
       </th>
       <td>
         流式元素；短语元素；交互元素（若 type 属性不处于隐藏
@@ -463,7 +464,7 @@ slug: Web/HTML/Element/Input
     - `photo`：Photograph, icon, or other image corresponding to the company, person, address, or contact information in the other fields associated with this field
     - 参考 [WHATWG 标准](https://html.spec.whatwg.org/multipage/forms.html#autofill) 获取更多详细内容。如果 `<input>` 元素上没有 **autocomplete** 属性，浏览器可使用包含该 input 元素的表单（`<form>`）或通过 input 的 **form** 属性指定的表单的 **autocomplete** 属性值。更多信息请参见 {{ HTMLElement("form") }} 的 `autocomplete` 属性。与其他浏览器不同，**autocomplete** 还控制着 Firefox 浏览器对 \<input> 持久化动态禁用状态和（如果适用）跨页面加载的动态检查。持久化特性默认是开启的。设置 **autocomplete** 的值为 **off** 可以关闭该特性。即使 autocomplete 属性通常不应用于 \<input> 的 type，它也可以工作。具体可以查看 {{bug(654072)}}。
 - {{ htmlattrdef("autofocus") }}
-  - : 这个布尔属性允许您指定的表单控件在页面加载时具有焦点（自动获得焦点），除非用户将其覆盖，例如通过键入不同的控件。文档中只有一个表单元素可以具有 autofocus 属性，它是一个布尔值。 如果 type 属性设置为隐藏则不能应用（即您不能自动获得焦点的属性设置为隐藏的控件）。
+  - : 这个布尔属性允许您指定的表单控件在页面加载时具有焦点（自动获得焦点），除非用户将其覆盖，例如通过键入不同的控件。文档中只有一个表单元素可以具有 autofocus 属性，它是一个布尔值。如果 type 属性设置为隐藏则不能应用（即您不能自动获得焦点的属性设置为隐藏的控件）。
 - {{htmlattrdef("capture")}}
   - : Introduced in the HTML Media Capture specification and valid for the `file` input type only, the `capture` attribute defines which media—microphone, video, or camera—should be used to capture a new file for upload with `file` upload control in supporting scenarios. See the {{HTMLElement("input/file", "file")}} input type.
 - {{ htmlattrdef("checked") }}
@@ -484,7 +485,7 @@ slug: Web/HTML/Element/Input
     When the form above is submitted, the input cause both the `name` / `value` pair of `fruit=cherry` and the `dirname` / direction pair of `fruit.dir=ltr` to be sent.
 
 - {{ htmlattrdef("disabled") }}
-  - : 这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， `click` 事件 [将不会被分发](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls) 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 **type** 属性为 hidden，此属性将被忽略。
+  - : 这个布尔属性表示此表单控件不可用。特别是在禁用的控件中， `click` 事件 [将不会被分发](http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls) 。并且，禁用的控件的值在提交表单时也不会被提交。如果 **type** 属性为 hidden，此属性将被忽略。
 
 > **备注：** Although not required by the specification, Firefox will by default [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.
 
@@ -591,7 +592,7 @@ See the {{htmlelement('datalist')}} element.
 - {{ htmlattrdef("placeholder") }}
   - : 提示用户输入框的作用。用于提示的占位符文本不能包含回车或换行。仅在 **type** 属性为 text、search、tel、url 或 email 时生效，否则将被忽略。
 
-    > **备注：** 请不要用 `placeholder` 属性替换 {{ HTMLElement("label") }} 元素。他们的作用不同: {{ HTMLElement("label") }} 属性描述表单元素的角色; 也就是说，它展示预期的信息，而 `placeholder` 属性是提示用户内容的输入格式。某些情况下 `placeholder` 属性对用户不可见，所以当没有它时也需要保证 form 能被理解。
+    > **备注：** 请不要用 `placeholder` 属性替换 {{ HTMLElement("label") }} 元素。他们的作用不同：{{ HTMLElement("label") }} 属性描述表单元素的角色; 也就是说，它展示预期的信息，而 `placeholder` 属性是提示用户内容的输入格式。某些情况下 `placeholder` 属性对用户不可见，所以当没有它时也需要保证 form 能被理解。
 - {{ htmlattrdef("readonly") }}
   - : 这个布尔属性用于指明用户无法修改控件的值。如果控件的 **type** 属性为 hidden、range、color、checkbox、radio、file，此属性将被忽略。
 - {{ htmlattrdef("required") }}
@@ -941,17 +942,17 @@ Firefox uses the following heuristics to determine the locale to validate the us
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >, listed, submittable, resettable, form-associated element,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >. If the
         <code
-          ><a href="/en-US/docs/Web/HTML/Element/input#attr-type">type</a></code
+          ><a href="/zh-CN/docs/Web/HTML/Element/input#attr-type">type</a></code
         >
         is not <code>hidden</code>, then labelable element, palpable content.
       </td>
@@ -960,7 +961,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <th scope="row">Permitted content</th>
       <td>
         None, it is an
-        <a href="/en-US/docs/Glossary/empty_element">empty element</a>.
+        <a href="/zh-CN/docs/Glossary/empty_element">empty element</a>.
       </td>
     </tr>
     <tr>
@@ -971,7 +972,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -1055,7 +1056,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
     <tr>
       <th scope="row">DOM interface</th>
       <td>
-        <a href="/en-US/docs/Web/API/HTMLInputElement"
+        <a href="/zh-CN/docs/Web/API/HTMLInputElement"
           ><code>HTMLInputElement</code></a
         >
       </td>

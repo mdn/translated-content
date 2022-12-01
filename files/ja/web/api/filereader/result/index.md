@@ -2,6 +2,7 @@
 title: FileReader.result
 slug: Web/API/FileReader/result
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("FileReader")}} の **`result`** プロパティは、ファイルの内容を返します。このプロパティは、読み取り操作が完了した後でのみ有効で、データの形式は、読み取り操作を開始するために使用されたメソッドによって異なります。
@@ -48,9 +49,7 @@ function read(callback) {
 
 ## 仕様
 
-| 仕様書                                                                               | 状態                         | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName("File API", "#FileReader-interface", "FileReader")}} | {{Spec2("File API")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザの互換性
 

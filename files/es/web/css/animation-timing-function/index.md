@@ -1,15 +1,15 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
-translation_of: Web/CSS/animation-timing-function
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Resumen
 
-La propiedad [CSS](/es/docs/CSS "CSS") **`animation-timing-function`** especifica cómo una animación CSS debe avanzar sobre la duración de cada ciclo. Los posibles valores son una o varias {{cssxref("&lt;timing-function&gt;")}}.
+La propiedad [CSS](/es/docs/CSS) **`animation-timing-function`** especifica cómo una animación CSS debe avanzar sobre la duración de cada ciclo. Los posibles valores son una o varias {{cssxref("&lt;timing-function&gt;")}}.
 
-Para animaciones con keyframes, la timing function se aplica entre los [keyframes](/es/docs/Web/CSS/@keyframes "/en-US/docs/CSS/@keyframes") en lugar de sobre toda la animación. Es decir, se aplica al comienzo del keyframe y al final del mismo.
+Para animaciones con keyframes, la timing function se aplica entre los [keyframes](/es/docs/Web/CSS/@keyframes) en lugar de sobre toda la animación. Es decir, se aplica al comienzo del keyframe y al final del mismo.
 
 Una timing function definida dentro de un keyframe afecta a ese keyframe. Si no está definida para el keyframe, se aplica la timing function para la animación en general.
 
@@ -53,21 +53,17 @@ animation-timing-function: unset;
 
 ## Ejemplos
 
-Visita [animaciones CSS](https://developer.mozilla.org/es/CSS/Usando_animaciones_CSS "en/CSS/CSS_animations") para ver algunos ejemplos.
+Visita [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                               | Comentario        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{SpecName('CSS3 Animations', '#animation-timing-function', 'animation-timing-function')}} | {{Spec2('CSS3 Animations')}} | Definición incial |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 
 {{Compat("css.properties.animation-timing-function")}}
 
-##
-
 ## Consulte también
 
-- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS developer guide about CSS animations")
+- [Usando animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

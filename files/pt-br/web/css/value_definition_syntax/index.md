@@ -1,14 +1,9 @@
 ---
 title: Sintexe do valor
 slug: Web/CSS/Value_definition_syntax
-tags:
-  - CSS
-  - Guía
-  - Iniciante
-  - Web
-translation_of: Web/CSS/Value_definition_syntax
 original_slug: Web/CSS/Sintexe_valor
 ---
+
 {{CSSRef}}
 
 **CSS value definition syntax**, a formal grammar, is used for defining the set of valid values for a CSS property or function. In addition to this syntax, the set of valid values can be further restricted by semantic constraints (for example, for a number to be strictly positive).
@@ -156,7 +151,7 @@ But not:
 - `center 3%`, as only one of the components must be present.
 - `3em 4.5em`, as a component must be present at most one time.
 
-> **Note:** the double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length> `but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
+> **Note:** the double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length>` but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
 
 ## Component value multipliers
 
@@ -388,7 +383,3 @@ But not:
 | {{SpecName("CSS3 Values", "#value-defs", "Value definition syntax")}}                 | {{Spec2("CSS3 Values")}} | Adds the hash mark multiplier.        |
 | {{SpecName("CSS2.1", "about.html#value-defs", "Value definition syntax")}}         | {{Spec2("CSS2.1")}}         | Adds the double ampersand combinator. |
 | {{SpecName("CSS1", "#notation-for-property-values", "Value definition syntax")}} | {{Spec2("CSS1")}}         | Initial definition                    |
-
-## See also
-
-- {{CSS_key_concepts}}

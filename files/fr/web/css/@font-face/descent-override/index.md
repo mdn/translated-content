@@ -4,6 +4,7 @@ slug: Web/CSS/@font-face/descent-override
 translation_of: Web/CSS/@font-face/descent-override
 browser-compat: css.at-rules.font-face.descent-override
 ---
+
 {{CSSRef}}
 
 Le descripteur CSS **`descent-override`** définit la mesure du jambage inférieur (descendant) de la police (voir la [définition de jambage](https://fr.wikipedia.org/wiki/Jambage)). La mesure du jambage inférieur correspond à la distance verticale par rapport à la hauteur d'X (hauteur du caractère bas de casse, à l'exclusion des jambages inférieurs et supérieurs) que CSS doit utiliser pour agencer les boîtes dans un contexte de formatage en ligne.

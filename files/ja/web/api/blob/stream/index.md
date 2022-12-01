@@ -2,6 +2,7 @@
 title: Blob.stream()
 slug: Web/API/Blob/stream
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} インターフェイスの **`stream()`** メソッドは、{{domxref("ReadableStream")}} を返します。これは、読み取り時に、`Blob` に含まれるデータを返します。
@@ -31,9 +32,7 @@ var stream = blob.stream();
 
 ## 仕様
 
-| 仕様書                                                                           | ステータス                   | コメント |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("File API", "#dom-blob-stream", "Blob.stream()")}} | {{Spec2("File API")}} |          |
+{{Specifications}}
 
 ## ブラウザの互換性
 

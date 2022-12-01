@@ -1,12 +1,8 @@
 ---
 title: Firefox 104 for developers
 slug: Mozilla/Firefox/Releases/104
-tags:
-  - '104'
-  - Firefox
-  - Mozilla
-  - Release
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 104 の変更点をまとめています。Firefox 104 は、2022 年 8 月 23 日にリリースされました。
@@ -45,6 +41,10 @@ tags:
   ブラウザーの実装でアクセシビリティが向上すると判断した場合に、フォーカスした要素へ自動的に視覚的な表示を行う可能性があることに注意してください。
   (詳しくは {{bug(1765083)}} をご覧ください)
 
+#### Canvas
+
+- `fontKerning` プロパティを [`CanvasRenderingContext2D`](/ja/docs/Web/API/CanvasRenderingContext2D/fontKerning) および [`OffscreenCanvasRenderingContext2D`](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D) でサポートしました。canvas やオフスクリーン canvas で、文字を描画するときにカーニングをどのように使用するかを開発者が指定できます ({{bug(1778908)}})。
+
 #### Media、WebRTC、Web Audio
 
 #### SVG
@@ -78,7 +78,7 @@ tags:
 
 ## アドオン開発者向けの変更点一覧
 
-#### 廃止
+### 廃止
 
 ### その他
 

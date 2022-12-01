@@ -1,8 +1,8 @@
 ---
 title: text-decoration-style
 slug: Web/CSS/text-decoration-style
-translation_of: Web/CSS/text-decoration-style
 ---
+
 {{CSSRef}}
 
 ## Resumo
@@ -42,7 +42,7 @@ text-decoration-style: unset;
     | `dotted`                                      | Draws a dotted line |                                                                                           |
     | `dashed`                                      | Draws a dashed line |                                                                                           |
     | `wavy`                                        | Draws a wavy line   |                                                                                           |
-    | `-moz-none`{{ non-standard_inline }}`` | Do not draw a line  | **Do not use** **:** use {{ cssxref("text-decoration-line") }}`: none` instead |
+    | `-moz-none` {{ non-standard_inline }} | Do not draw a line  | **Do not use** **:** use {{ cssxref("text-decoration-line") }}`: none` instead |
 
 - `inherit`
   - : É uma palavra-chave indicando a reutilizar o valor calculado sobre o elemento pai.

@@ -4,6 +4,7 @@ slug: Web/Web_Components/Using_templates_and_slots
 translation_of: Web/Web_Components/Using_templates_and_slots
 original_slug: Web/Web_Components/Utilisation_des_templates_et_des_slots
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 Cet article explique comment utiliser les éléments [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot) pour créer un modèle (<i lang="en">template</i>) flexible qui peut ensuite être utilisé pour alimenter le Shadow DOM d'un composant web.

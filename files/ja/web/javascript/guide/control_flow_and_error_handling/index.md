@@ -1,19 +1,8 @@
 ---
 title: 制御フローとエラー処理
 slug: Web/JavaScript/Guide/Control_flow_and_error_handling
-tags:
-  - Beginner
-  - Decision making
-  - Error Handling
-  - Flow control
-  - Guide
-  - JavaScript
-  - Logic
-  - control
-  - l10n:priority
-  - statements
-translation_of: Web/JavaScript/Guide/Control_flow_and_error_handling
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}
 
 JavaScript は、特に制御フロー文についてはコンパクトな文のセットに対応しており、アプリケーションに多様な対話的機能を組み込むために利用することができます。この節ではこれらの文の概要を説明します。
@@ -47,7 +36,7 @@ while (x < 10) {
 
 ここでは `{ x++; }` がブロック文となります。
 
-> **Note:** **重要**: ECMAScript 2015 (6th edition) より前の JavaScript にはブロックスコープが**ありません**。古い JavaScript では、ブロック内で導入された変数のスコープは、そのブロックがある関数やスクリプトになり、それらの変数を設定した影響は、そのブロックを越えて持続します。つまり、*ブロック文はスコープを定義しない*ということです。
+> **メモ:** ECMAScript 2015 (6th edition) より前の JavaScript にはブロックスコープが**ありません**。古い JavaScript では、ブロック内で導入された変数のスコープは、そのブロックがある関数やスクリプトになり、それらの変数を設定した影響は、そのブロックを越えて持続します。つまり、*ブロック文はスコープを定義しない*ということです。
 >
 > 「単独の」ブロックも正しい構文ですが、C や Java のブロックで提供されるものとは異なる結果をもたらします。例えば、
 >
@@ -147,7 +136,7 @@ if ((x = y)) {
 
 上記以外の—オブジェクトを含む—すべての値は、条件文に渡されると `true` と評価されます。
 
-> **Note:** **注意:** プリミティブな真偽値の `true` と `false` を、{{jsxref("Boolean")}} オブジェクトの true や false という値と混同しないでください。
+> **メモ:** プリミティブな真偽値の `true` と `false` を、{{jsxref("Boolean")}} オブジェクトの true や false という値と混同しないでください。
 >
 > 例:
 >
@@ -269,7 +258,7 @@ throw true;       // 論理型
 throw {toString: function() { return "これはオブジェクトです！"; } };
 ```
 
-> **Note:** **メモ:** 例外を投げる際にオブジェクトを指定することができます。そして、`catch` ブロックでそのオブジェクトのプロパティを参照することができます。
+> **メモ:** 例外を投げる際にオブジェクトを指定することができます。そして、`catch` ブロックでそのオブジェクトのプロパティを参照することができます。
 
 ```js
 // UserException というオブジェクト型を作成
@@ -345,7 +334,7 @@ catch (err) {
 }
 ```
 
-> **Note:** **ベストプラクティス:** `catch` ブロック内でコンソールにエラーをログ出力する場合は、`console.log()` よりも `console.error()` がデバッグ目的では推奨されています。これはメッセージをエラーとして書式化し、ページによって生成されたエラーメッセージの一覧に追加します。
+> **メモ:** **ベストプラクティス:** `catch` ブロック内でコンソールにエラーをログ出力する場合は、`console.log()` よりも `console.error()` がデバッグ目的では推奨されています。これはメッセージをエラーとして書式化し、ページによって生成されたエラーメッセージの一覧に追加します。
 
 #### `finally` ブロック
 

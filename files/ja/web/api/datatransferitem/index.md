@@ -2,6 +2,7 @@
 title: DataTransferItem
 slug: Web/API/DataTransferItem
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransferItem`** オブジェクトは、1 つのドラッグデータ項目を表します。*ドラッグ操作*中、各 {{domxref("DragEvent", "drag event")}}は {{domxref("DragEvent.dataTransfer", "dataTransfer")}} プロパティを持ち、このプロパティにはドラッグデータ項目の {{domxref("DataTransferItemList", "list")}} を含みます。リスト内の各項目は `DataTransferItem` オブジェクトです。
@@ -30,11 +31,7 @@ slug: Web/API/DataTransferItem
 
 ## 仕様
 
-| 仕様書                                                                                                                                               | ステータス                           | コメント                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'interaction.html#datatransferitem','DataTransferItem')}}                                     | {{Spec2('HTML WHATWG')}}     | 初期定義                                                                                                                                |
-| {{SpecName('HTML5.1', 'editing.html#datatransferitem','DataTransferItem')}}                                                 | {{Spec2('HTML5.1')}}         | WHATWG の W3C スナップショット                                                                                                          |
-| {{SpecName('File System API', '#dom-datatransferitem-webkitgetasentry', 'DataTransferItem.webkitGetAsEntry()')}} | {{Spec2('File System API')}} | [ファイルおよびディレクトリ エントリ API](/ja/docs/Web/API/File_and_Directory_Entries_API) の一部としての `webkitGetAsEntry()` の定義。 |
+{{Specifications}}
 
 ## ブラウザの互換性
 

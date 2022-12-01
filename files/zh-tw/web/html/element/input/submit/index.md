@@ -2,7 +2,8 @@
 title: <input type="submit">
 slug: Web/HTML/Element/input/submit
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 元素的 **`"submit"`** 類型會被視為提交按鈕（submit button）——點選的話就能把表單提交到伺服器。
 
@@ -14,7 +15,7 @@ slug: Web/HTML/Element/input/submit
 
 | **[值](#值)**      | 用作按鈕 label 的 {{domxref("DOMString")}}                                           |
 | ------------------ | -------------------------------------------------------------------------------------------- |
-| **事件**           | {{event("click")}}                                                                     |
+| **事件**           | [`click`](/zh-TW/docs/Web/API/Element/click_event)                                                                     |
 | **常見的支援屬性** | {{htmlattrxref("type", "input")}} 與 {{htmlattrxref("value", "input")}} |
 | **IDL 屬性**       | `value`                                                                                      |
 | **方法**           | 無                                                                                           |

@@ -2,6 +2,7 @@
 title: 'Element: scroll イベント'
 slug: Web/API/Element/scroll_event
 ---
+
 {{APIRef}}
 
 **`scroll`** イベントは、要素がスクロールしたときに発行されます。
@@ -29,7 +30,7 @@ slug: Web/API/Element/scroll_event
   </tbody>
 </table>
 
-> **Note:** **注:** iOS の UIWebViews では、 `scroll` イベントはスクロールしている最中には発行されません。スクロールが完了した後に発行されます。 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202) を参照してください。 Safari と WKWebViews はこのバグの影響を受けません。
+> **メモ:** iOS の UIWebViews では、 `scroll` イベントはスクロールしている最中には発行されません。スクロールが完了した後に発行されます。 [Bootstrap issue #16202](https://github.com/twbs/bootstrap/issues/16202) を参照してください。 Safari と WKWebViews はこのバグの影響を受けません。
 
 ## 例
 
@@ -63,13 +64,11 @@ window.addEventListener('scroll', function(e) {
 });
 ```
 
-> **Note:** **注**: それ以外例が {{domxref("Document/resize_event", "resize")}} イベントページにあります。
+> **メモ:** それ以外例が {{domxref("Document/resize_event", "resize")}} イベントページにあります。
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSSOM View', '#scrolling-events')}} | {{Spec2('CSSOM View')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

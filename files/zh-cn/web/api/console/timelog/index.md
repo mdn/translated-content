@@ -2,6 +2,7 @@
 title: Console.timeLog()
 slug: Web/API/Console/timeLog
 ---
+
 {{APIRef("Console API")}}在控制台输出计时器的值，该计时器必须已经通过 {{domxref("console.time()")}} 启动。
 
 参阅文档中的 [Timers](/zh-CN/docs/Web/API/console#Timers) 部分获取详细说明和示例。
@@ -38,13 +39,13 @@ label: 1242ms
 如果计时器未启动， `timeLog()` 会返回一个警告：
 
 ```plain
-Timer “default” doesn’t exist.
+Timer "default" doesn't exist.
 ```
 
 如果传入的 label 索引没有与之对应的计时器，则返回如下警告：
 
 ```plain
-Timer “timer name” doesn’t exist.
+Timer "timer name" doesn't exist.
 ```
 
 ## 示例

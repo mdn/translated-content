@@ -3,6 +3,7 @@ title: Autoplay guide for media and Web Audio APIs
 slug: Web/Media/Autoplay_guide
 original_slug: Web/媒体/Autoplay_guide
 ---
+
 网页加载完成后立即播放音频（或带有音频轨道的视频）可能会意外地打扰到用户。尽管自动播放媒体文件是一个很实用的功能，但是我们也应该谨慎地使用它，保证只有在它被需要的时候才使用。为了让用户拥有控制权，通常浏览器会提供各种方式禁用自动播放音频功能。在这篇文章中，我们将介绍各种媒体和 Web Audio APIs 的自动播放功能，包括关于如何使用自动播放功能、如何优雅的处理阻止自动播放功能的一些简短的介绍。
 
 Autoplay blocking is _not_ applied to {{HTMLElement("video")}} elements when the source media does not have an audio track, or if the audio track is muted. Media with an active audio track are considered to be **audible**, and autoplay blocking applies to them. **Inaudible** media are not affected by autoplay blocking.
@@ -71,7 +72,7 @@ audioElement.play();
 
 如果你依靠自动播放功能去做一些重要的事情，或者自动播放失败会以任何方式影响你的应用程序，那你可能会想知道自动播放什么时候没有开始。不幸的是，对于{{htmlattrxref("autoplay", "audio")}}属性，识别自动播放是否成功开始是很棘手的。自动播放失败时**不会触发**任何事件。也没有抛出异常或可以设置回调，甚至在媒体元素上都没有标记来告诉你自动播放是否起作用。你实际能做的就是检查一些值，然后根据这些值猜测自动播放是否起作用。
 
-如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的{{event("play")}}事件来轻松实现此目的。
+如果您能够调整查看内容的方向，那么更好的方法是，依靠知道媒体播放已成功开始，而不是在媒体启动失败时知道。您可以通过侦听要在媒体元素上触发的[`play`](/zh-CN/docs/Web/API/HTMLMediaElement/play_event)事件来轻松实现此目的。
 
 The `play` event is sent both when the media is resumed after being paused _and_ when autoplay occurs. That means that the first time the `play` event is fired, you know your media is being started for the first time after the page is opened.
 

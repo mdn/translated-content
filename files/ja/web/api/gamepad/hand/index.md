@@ -2,6 +2,7 @@
 title: Gamepad.hand
 slug: Web/API/Gamepad/hand
 ---
+
 {{APIRef("Gamepad")}}{{SeeCompatTable}}
 
 {{domxref("Gamepad")}} インターフェイスの **`hand`** 読み取り専用プロパティは、コントローラが握られている手または、握られている可能性が最も高い手を定義する列挙型を返します。
@@ -26,9 +27,7 @@ TBC
 
 ## 仕様書
 
-| 仕様                                                                                 | ステータス                               | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('GamepadExtensions', '#dom-gamepad-hand', 'hand')}} | {{Spec2('GamepadExtensions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

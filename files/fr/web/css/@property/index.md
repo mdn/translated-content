@@ -4,6 +4,7 @@ slug: Web/CSS/@property
 translation_of: Web/CSS/@property
 browser-compat: css.at-rules.property
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La règle {{cssxref("at-rule")}} [CSS](/fr/docs/Web/CSS) **`@property`** fait partie du panel d'API [CSS Houdini](/fr/docs/Web/Houdini), qui permet de définir explicitement leurs propriétés CSS personnalisées (voir {{cssxref('--*', 'CSS custom properties')}}). Cela permet la vérification des types de propriétés, de leur donner des valeurs par défaut et de déterminer si une propriété peut hériter ses valeurs ou non.

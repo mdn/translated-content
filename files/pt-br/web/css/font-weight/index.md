@@ -1,13 +1,13 @@
 ---
 title: font-weight
 slug: Web/CSS/font-weight
-translation_of: Web/CSS/font-weight
 ---
+
 {{CSSRef}}
 
 ## Resumo
 
-A propriedade [CSS ](/pt-BR/docs/CSS "CSS")`font-weight` especifica o peso ou a intensidade da fonte (ex.: negrito). Algumas fontes oferecem apenas as opções `normal` e negrito.
+A propriedade [CSS](/pt-BR/docs/CSS) `font-weight` especifica o peso ou a intensidade da fonte (ex.: negrito). Algumas fontes oferecem apenas as opções `normal` e negrito.
 
 {{cssinfo}}
 

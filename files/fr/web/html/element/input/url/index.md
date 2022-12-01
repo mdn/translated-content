@@ -4,7 +4,8 @@ slug: Web/HTML/Element/input/url
 translation_of: Web/HTML/Element/input/url
 browser-compat: html.elements.input.input-url
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`url`** sont employées afin de permettre à une utilisatrice ou un utilisateur de saisir ou d'éditer une URL.
 

@@ -2,6 +2,7 @@
 title: 溢出的内容
 slug: Learn/CSS/Building_blocks/Overflowing_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
 本节课，我们来了解一下 CSS 中另外一个重要的概念——**溢出**。溢出是在盒子无法容纳下太多的内容的时候发生的。在这篇教程里面，你将会学习到什么是溢出，以及如何控制它。
@@ -19,10 +20,10 @@ slug: Learn/CSS/Building_blocks/Overflowing_content
           href="/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
           >处理文件</a
         >的基础知识，HTML 基础（学习
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >），对 CSS 的工作原理有所了解（学习
-        <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)
+        <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS first steps</a>.)
       </td>
     </tr>
     <tr>

@@ -2,6 +2,7 @@
 title: Firefox 10 技術文件
 slug: Mozilla/Firefox/Releases/10
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
@@ -19,7 +20,7 @@ This documentation is not yet complete. Want to help document Firefox 10? See th
 
 ### JavaScript
 
-- The method `WeakMap.set()` now returns _`undefined`_, instead of itself.
+- The method `WeakMap.set()` now returns `undefined`, instead of itself.
 - A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See {{ bug(683838) }} if you want the gory details.
 - You can no longer use [E4X](/zh-TW/E4X) syntax while in [ECMAScript 5 strict mode](/zh-TW/JavaScript/Reference/Functions_and_function_scope/Strict_mode) (that is, after `"use strict;"`).
 

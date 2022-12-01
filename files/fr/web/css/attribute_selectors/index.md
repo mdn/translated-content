@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Attribute_selectors
 original_slug: Web/CSS/Sélecteurs_d_attribut
 ---
+
 {{CSSRef}}
 
 Les sélecteurs d'attribut permettent de cibler un élément selon la présence d'un attribut ou selon la valeur donnée d'un attribut.
@@ -211,15 +212,11 @@ ol[type="A" s] {
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                 | Commentaires                                                                                |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS4 Selectors')}} | Ajout du modification pour la sélection des valeurs d'attribut ASCII insensible à la casse. |
-| {{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS3 Selectors')}} |                                                                                             |
-| {{SpecName('CSS2.1', 'selector.html#attribute-selectors', 'attribute selectors')}} | {{Spec2('CSS2.1')}}             | Définition initiale.                                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.attribute")}}
+{{Compat}}
 
 ## Voir aussi
 

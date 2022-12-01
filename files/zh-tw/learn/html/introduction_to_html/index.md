@@ -2,6 +2,7 @@
 title: HTML介紹
 slug: Learn/HTML/Introduction_to_HTML
 ---
+
 {{LearnSidebar}}
 
 本質上，{{glossary("HTML")}} 是一種非常簡單的語言，由元素所組成。元素可以賦予文字片段不同的意義 (比方說，將它們描述成段落、項目清單，或是表格的一部分)、將文件組織成不同的邏輯區段 (如標頭(header)、三行的內文，或是導覽目錄)，以及在網頁中嵌入圖片或影片等內容。在這個主題中我們將介紹前面兩項，並介紹基本概念以及語法以讓你了解 HTML。
@@ -10,7 +11,7 @@ slug: Learn/HTML/Introduction_to_HTML
 
 在開始閱讀之前，你並不需要具備任何 HTML 知識，你只要能夠操作電腦、瀏覽網頁並消化其中的內容即可。你需要[建立一個基礎工作環境](/zh-TW/docs/Learn/Getting_started_with_the_web/Installing_basic_software)，並且了解[如何建立與管理檔案](/zh-TW/docs/Learn/Getting_started_with_the_web/Dealing_with_files)── 這些都屬於我們 [Web 入門](/zh-TW/docs/Learn/Getting_started_with_the_web) 的一部分。
 
-> **備註：** 如果您是在某些無法建立個人檔案的電腦/平板/其他裝置上進行，您可以在一些線上 coding program (如 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/)) 上測試程式碼範例。
+> **備註：** 如果您是在某些無法建立個人檔案的電腦/平板/其他裝置上進行，您可以在一些線上 coding program（如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)）上測試程式碼範例。
 
 ## 導覽
 

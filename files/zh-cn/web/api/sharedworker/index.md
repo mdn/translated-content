@@ -2,7 +2,10 @@
 title: SharedWorker
 slug: Web/API/SharedWorker
 ---
-{{APIRef("Web Workers API")}}**`SharedWorker`** 接口代表一种特定类型的 worker，可以从几个浏览上下文中*访问*，例如几个窗口、iframe 或其他 worker。它们实现一个不同于普通 worker 的接口，具有不同的全局作用域，{{domxref("SharedWorkerGlobalScope")}} 。
+
+{{APIRef("Web Workers API")}}
+
+**`SharedWorker`** 接口代表一种特定类型的 worker，可以从几个浏览上下文中*访问*，例如几个窗口、iframe 或其他 worker。它们实现一个不同于普通 worker 的接口，具有不同的全局作用域，{{domxref("SharedWorkerGlobalScope")}} 。
 
 > **备注：** 如果要使 **SharedWorker** 连接到多个不同的页面，这些页面必须是同源的（相同的协议、host 以及端口）。
 
@@ -13,7 +16,7 @@ slug: Web/API/SharedWorker
 
 ## 属性
 
-_继承自其父类 {{domxref("EventTarget")}}，并实现 {{domxref("AbstractWorker")}} 中的属性 。_
+_继承自其父类 {{domxref("EventTarget")}}，并实现 {{domxref("AbstractWorker")}} 中的属性。_
 
 - {{domxref("AbstractWorker.onerror")}}
   - : 一个 {{domxref("EventListener")}}，当 {{domxref("ErrorEvent")}} 类型的 `error` 冒泡到 worker 时触发。
@@ -22,11 +25,11 @@ _继承自其父类 {{domxref("EventTarget")}}，并实现 {{domxref("AbstractWo
 
 ## 方法
 
-继承自其*父类 {{domxref("EventTarget")}}，并实现 {{domxref("AbstractWorker")}} 中的方法 。*
+继承自其*父类 {{domxref("EventTarget")}}，并实现 {{domxref("AbstractWorker")}} 中的方法。*
 
 ## 示例
 
-在这个 [shared worker](https://github.com/mdn/simple-shared-worker) 例子中 ([运行 shared worker](http://mdn.github.io/simple-shared-worker/))， 我们有两个 HTML 页面， 每个页面中使用一些 JavaScript 来执行简单的计算。 这些脚本使用相同的 shared worker 来执行计算 — 都可以访问这个 worker，即使脚本在不同窗口的两个页面内运行。
+在这个 [shared worker](https://github.com/mdn/simple-shared-worker) 例子中 ([运行 shared worker](http://mdn.github.io/simple-shared-worker/))，我们有两个 HTML 页面，每个页面中使用一些 JavaScript 来执行简单的计算。这些脚本使用相同的 shared worker 来执行计算 — 都可以访问这个 worker，即使脚本在不同窗口的两个页面内运行。
 
 下面的代码展示了如何通过 {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} 方法来创建一个共享进程对象。
 
@@ -40,7 +43,7 @@ var myWorker = new SharedWorker("worker.js");
 myWorker.port.start();
 ```
 
-当启动端口时，两个脚本都会向 worker 发送消息， 然后使用 `port.postMessage()`和 `port.onmessage` 处理从 worker 返回的消息：
+当启动端口时，两个脚本都会向 worker 发送消息，然后使用 `port.postMessage()`和 `port.onmessage` 处理从 worker 返回的消息：
 
 ```js
 first.onchange = function() {
@@ -59,7 +62,7 @@ first.onchange = function() {
   }
 ```
 
-在 worker 中我们使用 {{domxref("SharedWorkerGlobalScope.onconnect")}} 处理程序连接到上面讨论的相同端口。可以在 {{event("connect")}} 事件的 `ports` 属性中获取到与该 worker 相关联的端口 — 然后我们使用 {{domxref("MessagePort")}} `start()` 方法来启动端口，然后 `onmessage` 处理程序处理来自主线程的消息。
+在 worker 中我们使用 {{domxref("SharedWorkerGlobalScope.onconnect")}} 处理程序连接到上面讨论的相同端口。可以在 {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} 事件的 `ports` 属性中获取到与该 worker 相关联的端口——然后我们使用 {{domxref("MessagePort")}} `start()` 方法来启动端口，然后 `onmessage` 处理程序处理来自主线程的消息。
 
 ```js
 onconnect = function(e) {
@@ -80,7 +83,7 @@ onconnect = function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.SharedWorker")}}
+{{Compat}}
 
 ## 更多
 

@@ -2,6 +2,7 @@
 title: HTMLMapElement
 slug: Web/API/HTMLMapElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLMapElement`** インターフェイスは、map 要素のレイアウトと表示を操作するための特別なプロパティとメソッド (継承によっても利用可能な通常のオブジェクト {{domxref("HTMLElement")}} インターフェイスを超えるもの) を提供します。
@@ -23,12 +24,7 @@ _特定のメソッドはありません。親である {{domxref("HTMLElement")
 
 ## 仕様書
 
-| 仕様書                                                                                                               | ステータス                       | コメント                                              |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#htmlmapelement", "HTMLMapElement")}}                                 | {{Spec2('HTML WHATWG')}} |                                                       |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#the-map-element", "HTMLMapElement")}} | {{Spec2('HTML5 W3C')}}     | `images` プロパティを追加します。                     |
-| {{SpecName('DOM2 HTML', 'html.html#ID-94109203', 'HTMLAreaElement')}}                         | {{Spec2('DOM2 HTML')}}     | {{SpecName("DOM1")}} からの変更はありません。 |
-| {{SpecName('DOM1', 'level-one-html.html#ID-94109203', 'HTMLAreaElement')}}                 | {{Spec2('DOM1')}}         | 初期定義                                              |
+{{Specifications}}
 
 ## ブラウザの互換性
 

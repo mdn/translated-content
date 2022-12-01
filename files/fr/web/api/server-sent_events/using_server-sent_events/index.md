@@ -12,6 +12,7 @@ tags:
   - messaging
 translation_of: Web/API/Server-sent_events/Using_server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 Développer une application web qui utilise des [évènements envoyés par le serveur](/fr/docs/Web/API/Server-sent_events) (_server-sent events_ en anglais) est relativement simple. Côté serveur, on aura besoin d'un bout de code qui puisse transmettre des évènements à l'application web&nbsp;; côté client, le fonctionnement est quasi identique à celui qu'on utilise pour les [websockets](/fr/docs/Web/API/WebSockets_API) et notamment la gestion d'évènements entrants. Il s'agit d'une connexion unidirectionnelle : on ne peut pas envoyer d'évènements du client vers le serveur.
@@ -134,7 +135,7 @@ Chaque message consiste en une ou plusieurs lignes de texte décrivant les champ
 
 ### Champs
 
-Chaque message reçu contient un ou plusieurs de ces champs, un par ligne  :
+Chaque message reçu contient un ou plusieurs de ces champs, un par ligne :
 
 - `event`
   - : Une chaîne identifiant le type d'évènement décrit. S'il est spécifié, un évènement sera envoyé dans le navigateur à l'écouteur défini pour l'évènement spécifié. Le code source de l'application doit utiliser `addEventListener()` pour écouter des évènements nommés. Le gestionnaire `onmessage` est appelé si aucun nom d'évènement n'est spécifié dans un message.

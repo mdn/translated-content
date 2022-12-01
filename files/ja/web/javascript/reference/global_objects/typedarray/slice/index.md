@@ -2,6 +2,7 @@
 title: TypedArray.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/slice
 ---
+
 {{JSRef}}
 
 **`slice()`** メソッドは、元の型付き配列の部分的なコピーを含む新しい型付き配列 (新しいバッファーによる) を返します。このメソッドは {{jsxref("Array.prototype.slice()")}} と同じアルゴリズムを持ちます。 _TypedArray_ は、ここでは[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)の一つです。
@@ -75,9 +76,7 @@ if (!Uint8Array.prototype.slice) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.slice', '%TypedArray%.prototype.slice')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

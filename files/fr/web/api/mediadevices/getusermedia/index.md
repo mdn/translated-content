@@ -3,6 +3,7 @@ title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
 translation_of: Web/API/MediaDevices/getUserMedia
 ---
+
 {{APIRef("WebRTC")}}
 
 La méthode **`MediaDevices.getUserMedia()`** invite l'utilisateur à autoriser l'utilisation d'une entrée multimédia qui produit un {{domxref("MediaStream")}} avec des pistes contenant les types de médias demandés. Ce flux peut inclure, par exemple, une piste vidéo (produite par une source matérielle ou vidéo virtuelle telle qu'une caméra, un dispositif d'enregistrement vidéo, un service de partage d'écran, etc.), une piste audio (de la même manière, produite par une source physique ou Source audio virtuelle comme un microphone, convertisseur A / D ou similaire) et éventuellement d'autres types de piste.
@@ -112,7 +113,7 @@ Un {{jsxref("Promise")}} qui reçoit en objet {{domxref("MediaStream")}} lorsque
 
 ### Erreurs
 
-Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un objet erreur [`DOMException`](https://translate.googleusercontent.com/translate_c?depth=1&hl=fr&prev=search&rurl=translate.google.fr&sl=en&sp=nmt4&u=https://developer.mozilla.org/en-US/docs/Web/API/DOMException&usg=ALkJrhgnRUAs3RQR8I7ulOitmhRQUlVEUA) au gestionnaire d'erreurs. Les erreurs possibles sont:
+Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un objet erreur [`DOMException`](/fr/docs/Web/API/DOMException) au gestionnaire d'erreurs. Les erreurs possibles sont:
 
 - `AbortError`
   - : Bien que l'utilisateur et le système d'exploitation aient tous deux accédé à l'équipement matériel, et qu'aucun problème de matériel ne causerait un `NotReadableError` , un problème s'est produit, ce qui a empêché l'utilisation du périphérique.
@@ -137,11 +138,11 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 - `TypeError`
   - : La liste des contraintes spécifiées est vide ou toutes les contraintes sont définies comme `false` .
 
-## **Exemple**s
+## Exemples
 
 ### Largeur et hauteur
 
-Cet exemple donne une préférence pour la résolution de la caméra et attribue l'objet [`MediaStream`](https://translate.googleusercontent.com/translate_c?depth=1&hl=fr&prev=search&rurl=translate.google.fr&sl=en&sp=nmt4&u=https://developer.mozilla.org/en-US/docs/Web/API/MediaStream&usg=ALkJrhipdR5n2jQ-BGrPTomESH_A7nof4g) résultant à un élément vidéo.
+Cet exemple donne une préférence pour la résolution de la caméra et attribue l'objet [`MediaStream`](/fr/docs/Web/API/MediaStream) résultant à un élément vidéo.
 
 ```js
 // Prefer camera resolution nearest to 1280x720.
@@ -160,7 +161,7 @@ navigator.mediaDevices.getUserMedia(constraints)
 
 ### Utilisation de la nouvelle API dans les navigateurs plus anciens
 
-Voici un exemple d'utilisation de `navigator.mediaDevices.getUserMedia()` , avec un adaptateur pour faire face aux navigateurs plus anciens. Notez que cet adaptater ne corrige pas les différences existantes dans la syntaxe des contraintes, ce qui signifie que les contraintes ne fonctionneront pas bien dans les navigateurs. Il est recommandé d'utiliser l'adaptateur [adapter.js](https://github.com/webrtc/adapter)  a la place, qui gère les contraintes.
+Voici un exemple d'utilisation de `navigator.mediaDevices.getUserMedia()` , avec un adaptateur pour faire face aux navigateurs plus anciens. Notez que cet adaptater ne corrige pas les différences existantes dans la syntaxe des contraintes, ce qui signifie que les contraintes ne fonctionneront pas bien dans les navigateurs. Il est recommandé d'utiliser l'adaptateur [adapter.js](https://github.com/webrtc/adapter) a la place, qui gère les contraintes.
 
 ```js
 // Older browsers might not implement mediaDevices at all, so we set an empty object first
@@ -230,7 +231,7 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
 
 ## Permissions
 
-Pour utiliser `getUserMedia()` dans une application installable (par exemple, une [application Firefox OS](https://translate.googleusercontent.com/translate_c?depth=1&hl=fr&prev=search&rurl=translate.google.fr&sl=en&sp=nmt4&u=https://developer.mozilla.org/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial&usg=ALkJrhjjqOGYUEn75gZx3AcoQDArrosa9Q) ), vous devez spécifier un ou les deux champs suivants dans votre fichier manifeste:
+Pour utiliser `getUserMedia()` dans une application installable (par exemple, une [application Firefox OS](/fr/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial) ), vous devez spécifier un ou les deux champs suivants dans votre fichier manifeste:
 
 ```js
 "permissions": {

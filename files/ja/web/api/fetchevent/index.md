@@ -2,6 +2,7 @@
 title: FetchEvent
 slug: Web/API/FetchEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 これは、{{domxref("ServiceWorkerGlobalScope", "サービスワーカーのグローバルスコープ", "", 1)}}にディスパッチされる `fetch` イベント用のイベント型です。 これには、リクエストや、受け手がどうレスポンスを扱うのかといった、フェッチに関する情報が含まれています。 これは、このフェッチへのレスポンスを提供できるようにする {{domxref("FetchEvent.respondWith", "event.respondWith()")}} メソッドを提供します。
@@ -66,9 +67,7 @@ self.addEventListener('fetch', event => {
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-fetchevent-fetchevent', 'FetchEvent()')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

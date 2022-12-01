@@ -1,11 +1,8 @@
 ---
 title: starts-with
 slug: Web/XPath/Functions/starts-with
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/starts-with
 ---
+
 {{ XsltRef() }}
 
 `starts-with` 関数は第 1 引数の文字列が第 2 引数の文字列で始まるかどうかを調べ、true または false を返します。
@@ -18,14 +15,14 @@ starts-with(haystack, needle)
 
 ### 引数
 
-- _`haystack`_
+- `haystack`
   - : 検索される文字列。
-- _`needle`_
+- `needle`
   - : 検索する文字列。
 
 ### 返値
 
-*`haystack`* が *`needle`* で始まれば `true`。 そうでなければ `false`。
+`haystack` が `needle` で始まれば `true`。 そうでなければ `false`。
 
 ### 定義
 

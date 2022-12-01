@@ -10,9 +10,10 @@ tags:
   - Service Workers
 translation_of: Web/API/ExtendableMessageEvent
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
-L'interface **`ExtendableMessageEvent`** de {{domxref("ServiceWorker_API", "ServiceWorker API")}} représentes un objet d'évenement qu'un évènement {{event("message_(ServiceWorker)","message")}} lance pour un service worker (quand un canal de message est reçu sur le {{domxref("ServiceWorkerGlobalScope")}} depuis un autre context) — étends la durée de vie de ces évènements.
+L'interface **`ExtendableMessageEvent`** de {{domxref("ServiceWorker_API", "ServiceWorker API")}} représentes un objet d'évenement qu'un évènement [`message`](/fr/docs/Web/API/ServiceWorkerGlobalScope/message_event) lance pour un service worker (quand un canal de message est reçu sur le {{domxref("ServiceWorkerGlobalScope")}} depuis un autre context) — étends la durée de vie de ces évènements.
 
 Cette interface hérite de l'interface {{domxref("ExtendableEvent")}}.
 
@@ -42,7 +43,7 @@ _Hérite des méthodesde son parent, {{domxref("ExtendableEvent")}}_.
 
 ## Exemples
 
-Le code suivant est utilisé dans un service worker pour répondre à un message push en envoyant les données reçues via  {{domxref("PushMessageData")}} au contexte principale via un [channel message](/fr/docs/Web/API/Channel_Messaging_API), l'objet d'évènement du `onmessage` sera un `ExtendableMessageEvent`.
+Le code suivant est utilisé dans un service worker pour répondre à un message push en envoyant les données reçues via {{domxref("PushMessageData")}} au contexte principale via un [channel message](/fr/docs/Web/API/Channel_Messaging_API), l'objet d'évènement du `onmessage` sera un `ExtendableMessageEvent`.
 
 ```js
 var port;

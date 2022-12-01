@@ -2,6 +2,7 @@
 title: JavaScript 对象基础
 slug: Learn/JavaScript/Objects/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 在这学习 JavaScript 的对象的首篇文章中，我们将会学习有关对象基础的语法，并且回顾一些之前学过的 JavaScript 的一些特点，使你明白你所使用过的一些功能实际上是由对象提供的。
@@ -13,9 +14,9 @@ slug: Learn/JavaScript/Objects/Basics
       <td>
         基础计算机基础，了解基础的 HTML 和 CSS, 熟悉 JavaScript 基础
         (基础知识看这里
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a>
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a>
         和这里
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >).
       </td>
@@ -36,16 +37,18 @@ slug: Learn/JavaScript/Objects/Basics
 
 首先，将 [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html) 文件复制到本地。此文件包含非常少 — 一个供我们写源代码的 {{HTMLElement("script")}} 标签，一个供我们输入示例指令的 {{HTMLElement("input")}} 标签，当页面被渲染时，一些变量定义，一个输出任何输入到{{HTMLElement("input")}}的内容输出到{{HTMLElement("p")}}标签的函数。我们用这个文件做为基础探索对象的基础语法。
 
-如同 Javascript 中的很多东西一样，创建一个对象通常先定义初始化变量。 尝试在您已有的文件中 JavaScript 代码下面输入以下内容，保存刷新页面：
+如同 Javascript 中的很多东西一样，创建一个对象通常先定义初始化变量。尝试在您已有的文件中 JavaScript 代码下面输入以下内容，保存刷新页面：
 
 ```js
 var person = {};
 ```
 
-如果你在浏览器控制台输入 person，然后按下 Enter(确认) 键，你会得到如下结果：
+如果你在浏览器的 [JavaScript 控制台](/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools#javascript_控制台)输入 `person`，然后按下 Enter（确认）键，你可能会得到以下结果中的一种：
 
 ```js
 [object Object]
+Object { }
+{ }
 ```
 
 恭喜，你刚创建了你的第一个对象。干的漂亮！但这是一个空对象，所以我们做不了更多的事情。像下面一样更新下我们的对象：

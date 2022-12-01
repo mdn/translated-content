@@ -2,6 +2,7 @@
 title: perspective
 slug: Web/CSS/perspective
 ---
+
 {{CSSRef}}
 
 **`perspective`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 z=0 の平面とユーザーとの間の距離を定めて三次元に配置された要素に遠近感を与えます。

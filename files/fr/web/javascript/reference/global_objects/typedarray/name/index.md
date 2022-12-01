@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/name
 ---
+
 {{JSRef}}
 
 La propriété **`TypedArray.name`** est une chaîne de caractères représentant le nom du constructeur du tableau typé.
@@ -42,14 +43,11 @@ Float64Array.name;      // "Float64Array"
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-properties-of-the-typedarray-constructors', 'TypedArray.name')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-properties-of-the-typedarray-constructors', 'TypedArray.name')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.name")}}
+{{Compat}}
 
 ## Voir aussi
 

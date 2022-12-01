@@ -2,6 +2,7 @@
 title: String.prototype.normalize()
 slug: Web/JavaScript/Reference/Global_Objects/String/normalize
 ---
+
 {{JSRef}}
 
 **normalize()** 方法会按照指定的一种 Unicode 正规形式将当前字符串规范化。（如果该值不是字符串，则首先将其转换为一个字符串）。

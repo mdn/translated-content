@@ -2,6 +2,7 @@
 title: 'Django 튜토리얼 파트 9: 폼(form)으로 작업하기'
 slug: Learn/Server-side/Django/Forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
 이 튜토리얼에서 우리는 Django에서 HTML Form 작업 방법을 보여주고 특히 model Instance를 생성,수정,제거 하는 Form을 작성하는 가장 쉬운 방법을 보여줄 것이다. 이 예제의 일부분으로 우리는 도서관직원이 (admin 앱을 이용하기 보다) 우리가 만든 form을 이용하여 책 대여기간을 연장하거나 작가 정보를 생성,수정,제거할 수 있도록 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 웹사이트를 확장할 것이다.
@@ -573,7 +574,7 @@ Create the template file **locallibrary/catalog/templates/catalog/author_form.ht
 
 This is similar to our previous forms, and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
-The "delete" view expects to find a template named with the format _model_name_**\_confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete\*\***.html\*\* and copy in the text below.
+The "delete" view expects to find a template named with the format _model_name_**\_confirm_delete.html** (again, you can change the suffix using `template_name_suffix` in your view). Create the template file **locallibrary/catalog/templates/catalog/author_confirm_delete.html** and copy in the text below.
 
 ```html
 {% extends "base_generic.html" %}
@@ -618,11 +619,11 @@ Then navigate to the author create page: <http://127.0.0.1:8000/catalog/author/c
 
 ![Form Example: Create Author](https://mdn.mozillademos.org/files/14223/forms_example_create_author.png)
 
-Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like _http\://127.0.0.1:8000/catalog/author/10_.
+Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
 
-You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/update/_) — we don't show a screenshot, because it looks just like the "create" page!
+You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/update/`) — we don't show a screenshot, because it looks just like the "create" page!
 
-Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django should display the delete page shown below. Press **Yes, delete.** to remove the record and be taken to the list of all authors.
+Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press **Yes, delete.** to remove the record and be taken to the list of all authors.
 
 ![](https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png)
 

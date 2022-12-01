@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Precision_range
 original_slug: Web/JavaScript/Reference/Erreurs/Precision_range
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

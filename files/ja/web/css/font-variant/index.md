@@ -2,6 +2,7 @@
 title: font-variant
 slug: Web/CSS/font-variant
 ---
+
 {{CSSRef}}
 
 **`font-variant`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、フォントのすべての変化形を設定することができます。

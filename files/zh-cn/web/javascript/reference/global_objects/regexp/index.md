@@ -2,6 +2,7 @@
 title: RegExp(正则表达式)
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
+
 {{JSRef}}
 
 **`RegExp`** 对象用于将文本与一个模式匹配。
@@ -185,11 +186,11 @@ let text = "Образец text на русском языке";
 let regex = /[\u0400-\u04FF]+/g;
 
 let match = regex.exec(text);
-console.log(match[1]);  // prints "Образец"
+console.log(match[0]);  // prints "Образец"
 console.log(regex.lastIndex);  // prints "7"
 
 let match2 = regex.exec(text);
-console.log(match2[1]);  // prints "на" [did not print "text"]
+console.log(match2[0]);  // prints "на" [did not print "text"]
 console.log(regex.lastIndex);  // prints "15"
 
 // and so on

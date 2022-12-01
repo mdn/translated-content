@@ -2,6 +2,7 @@
 title: Math.LN2
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
 ---
+
 {{JSRef}}
 
 **`Math.LN2`** プロパティは 2 の自然対数、およそ 0.693 を表します。
@@ -30,9 +31,7 @@ getNatLog2(); // 0.6931471805599453
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.ln2', 'Math.LN2')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/16
 original_slug: Mozilla/Firefox/Versions/16
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 16, basé sur Gecko 16.0, est sorti le 9 octobre 2012. Cette page résume les principaux changements dans Firefox 15 qui sont utiles aux développeurs.

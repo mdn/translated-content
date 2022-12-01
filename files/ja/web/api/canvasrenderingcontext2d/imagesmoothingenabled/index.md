@@ -2,13 +2,14 @@
 title: CanvasRenderingContext2D.imageSmoothingEnabled
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 ---
+
 {{APIRef}}
 
 **`imageSmoothingEnabled`** は {{domxref("CanvasRenderingContext2D")}} インターフェイスのプロパティで、キャンバス 2D API の一部です。スケーリングされた画像を平滑化するか (`true`、既定値) またはしないか (`false`) を決定します。 `imageSmoothingEnabled` プロパティを取得すると、最後に設定された値が返されます。
 
 このプロパティは、ピクセルアートを使用するゲームやその他のアプリで有用です。画像を拡大するとき、既定のリサイズアルゴリズムではピクセルがぼけてしまいます。このプロパティを `false` に設定すると、ピクセルの鮮明さを維持します。
 
-> **Note:** 平滑化の品質は、  {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}} プロパティで調整することができます。
+> **メモ:** 平滑化の品質は、 {{domxref("CanvasRenderingContext2D.imageSmoothingQuality", "imageSmoothingQuality")}} プロパティで調整することができます。
 
 ## 構文
 

@@ -2,6 +2,7 @@
 title: 通常フロー
 slug: Learn/CSS/CSS_layout/Normal_Flow
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}

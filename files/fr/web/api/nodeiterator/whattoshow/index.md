@@ -10,6 +10,7 @@ tags:
   - Propriétés
 translation_of: Web/API/NodeIterator/whatToShow
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`NodeIterator.whatToShow`** est un `unsigned integer` (_entier non signé_) représentant un masque de bits désignant le type de noeuds qui doit être renvoyé par le {{domxref("NodeIterator")}}.

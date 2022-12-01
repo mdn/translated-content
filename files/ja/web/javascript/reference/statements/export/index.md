@@ -2,6 +2,7 @@
 title: export
 slug: Web/JavaScript/Reference/Statements/export
 ---
+
 {{jsSidebar("Statements")}}
 
 **`export`** 文は JavaScript モジュールを作成するときに使用され、モジュールから関数、オブジェクト、またはプリミティブ値へのライブバインディングのエクスポートを行い、{{jsxref("Statements/import", "import")}} 文を使用した他のプログラムが使用できるようにします。インポートされたモジュールは読み取り専用で、エクスポートされたモジュールが変更されるたびに値が更新されます。
@@ -120,7 +121,7 @@ export { function1, function2 };
 
 現在のモジュール内で `function1` と `function2` が利用できない場合。
 
-> **Note:** **メモ:** 以下は、インポートに相当するにもかかわらず、構文的に無効です。
+> **メモ:** 以下は、インポートに相当するにもかかわらず、構文的に無効です。
 
 ```js
 import DefaultExport from 'bar.js'; // 有効
@@ -243,9 +244,7 @@ import { myFunction, myVariable, myClass } from 'parentModule.js'
 
 ## 仕様
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-exports', 'Exports')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

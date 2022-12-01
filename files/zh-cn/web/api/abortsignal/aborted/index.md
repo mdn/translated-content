@@ -2,6 +2,7 @@
 title: AbortSignal.aborted
 slug: Web/API/AbortSignal/aborted
 ---
+
 {{APIRef("DOM")}}
 
 **`aborted`** 是一个只读属性，它返回一个 {{domxref("Boolean")}} 表示与之通信的请求是否被终止（`true`）或未终止（`false`）

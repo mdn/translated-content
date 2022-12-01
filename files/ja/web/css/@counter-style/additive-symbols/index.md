@@ -1,16 +1,8 @@
 ---
 title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.additive-symbols
-translation_of: Web/CSS/@counter-style/additive-symbols
 ---
+
 {{CSSRef}}
 
 **`additive-symbols`** 記述子は、カウンターの {{cssxref('system')}} 記述子が加算的 (`additive`) な場合の記号を指定することができます。 `additive-symbols` 記述子では*加算的なタプル*を、それぞれ記号と非負数の整数による重みの組で定義します。加算的なシステムは、ローマ数字のような [sign-value numbering](http://en.wikipedia.org/wiki/Sign-value_notation) を構築するために使われます。

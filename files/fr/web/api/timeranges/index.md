@@ -13,6 +13,7 @@ tags:
   - Référence(2)
 translation_of: Web/API/TimeRanges
 ---
+
 {{ APIRef }}
 
 L'interface TimeRanges est utilisée pour représenter un ensemble de plages de temps, principalement dans le but de savoir quelles portions du média ont été mises en mémoire tampon lors du chargement avec les éléments {{ HTMLElement("audio") }} et {{ HTMLElement("video") }}.

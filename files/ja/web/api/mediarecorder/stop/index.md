@@ -2,6 +2,7 @@
 title: MediaRecorder.stop()
 slug: Web/API/MediaRecorder/stop
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorder.stop()`** メソッド（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は、メディアキャプチャを停止するために使用します。
@@ -38,9 +39,7 @@ slug: Web/API/MediaRecorder/stop
 
 ## 仕様
 
-| 仕様                                                                                                                         | 状態                                         | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-stop-void", "MediaRecorder.stop()")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

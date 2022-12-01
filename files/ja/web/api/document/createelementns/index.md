@@ -2,6 +2,7 @@
 title: Document.createElementNS()
 slug: Web/API/Document/createElementNS
 ---
+
 {{APIRef("DOM")}}
 
 指定された名前空間 URI と修飾名を持つ要素を生成します。
@@ -24,7 +25,7 @@ var element = document.createElementNS(namespaceURI, qualifiedName[, options]);
 
   - : 任意の `ElementCreationOptions` オブジェクトで、 `is` という名前の単一のプロパティを持ち、その値として以前に `customElements.define()` を使用して定義されたカスタム要素のタグ名を設定します。
     以前のバージョンの [Custom Elements specification](https://www.w3.org/TR/custom-elements/) との後方互換性のため、ブラウザーによってはここにオブジェクトの代わりに、文字列を渡すことができ、その文字列の値はカスタム要素のタグ名になります。
-    この引数の使い方について詳しい情報は、  [Extending native HTML elements](https://web.dev/web-components/)  を参照してください。
+    この引数の使い方について詳しい情報は、 [Extending native HTML elements](https://web.dev/web-components/) を参照してください。
 
     新しい要素には `is` 属性が与えられ、値はカスタム要素のタグ名になります。カスタム要素は一部のブラウザーのみで利用できる試行的な機能です。
 
@@ -80,13 +81,11 @@ The new {{DOMxRef("Element")}}.
 </page>
 ```
 
-> **Note:** 上記の例は XHTML 文書では推奨されていないインラインスクリプトを使用しています。この部分的な例は実際には XUL 文書に埋め込んだ XHTML があるものですが、それでもこの推奨事項は適用されます。
+> **メモ:** 上記の例は XHTML 文書では推奨されていないインラインスクリプトを使用しています。この部分的な例は実際には XUL 文書に埋め込んだ XHTML があるものですが、それでもこの推奨事項は適用されます。
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName("DOM WHATWG", "#dom-document-createelementns", "Document.createElementNS()")}} | {{Spec2("DOM WHATWG")}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

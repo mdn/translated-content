@@ -2,6 +2,7 @@
 title: DOMRect()
 slug: Web/API/DOMRect/DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMRect()`** コンストラクターは、新しい {{domxref("DOMRect")}} オブジェクトを作成します。

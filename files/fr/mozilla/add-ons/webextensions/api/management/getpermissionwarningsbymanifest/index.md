@@ -11,6 +11,7 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
 ---
+
 {{AddonSidebar()}}Lorsque l'utilisateur installe ou met à jour une extension, la navigateur peut avertir l'utilisateur des [permissions](/fr/Add-ons/WebExtensions/manifest.json/permissions) obligatoires. Toutes les permissions ne donnent pas lieu à des avertissements, et cela n'est pas normalisé dans les navigateurs.
 
 Compte tenu du texte du fichier [manifest.json](/fr/Add-ons/WebExtensions/manifest.json), cette fonction retourne les avertisseurs de permissions qui seraient donnés pour l'extension comme un ensemble de chaines.
@@ -74,7 +75,8 @@ gettingWarnings.then(gotWarnings, gotError);
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,4 +103,4 @@ gettingWarnings.then(gotWarnings, gotError);
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

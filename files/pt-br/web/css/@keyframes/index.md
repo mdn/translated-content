@@ -1,8 +1,8 @@
 ---
 title: '@keyframes'
 slug: Web/CSS/@keyframes
-translation_of: Web/CSS/@keyframes
 ---
+
 {{CSSRef}}
 
 The **`@keyframes`** CSS [at-rule](/pt-BR/docs/Web/CSS/At-rule) controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence. This gives more control over the intermediate steps of the animation sequence than [transitions](/pt-BR/docs/Web/CSS/CSS_Transitions).
@@ -123,9 +123,9 @@ See [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animatio
 
 ## Notes
 
-1.  `@keyframes` unsupported in scoped stylesheets in Firefox ({{bug(830056)}}).
+1. `@keyframes` unsupported in scoped stylesheets in Firefox ({{bug(830056)}}).
 
 ## See also
 
-- [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
 - {{domxref("AnimationEvent")}}

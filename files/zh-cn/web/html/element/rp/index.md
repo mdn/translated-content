@@ -2,6 +2,7 @@
 title: <rp>
 slug: Web/HTML/Element/rp
 ---
+
 **HTML `<rp>` 元素**用于为那些不能使用 {{HTMLElement("ruby") }} 元素展示 ruby 注解的浏览器，提供随后的圆括号。
 
 <table class="properties">
@@ -56,7 +57,7 @@ slug: Web/HTML/Element/rp
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.rp")}}
+{{Compat}}
 
 ## 另见
 
@@ -65,4 +66,4 @@ slug: Web/HTML/Element/rp
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

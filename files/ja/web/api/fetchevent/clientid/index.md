@@ -2,6 +2,7 @@
 title: FetchEvent.clientId
 slug: Web/API/FetchEvent/clientId
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("FetchEvent")}}インターフェイスの **`clientId`** 読み取り専用プロパティは、現在のサービスワーカーが制御している {{domxref("Client")}} の id を返します。
@@ -28,9 +29,7 @@ self.addEventListener('fetch', function(event) {
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-fetchevent-clientid', 'clientId')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

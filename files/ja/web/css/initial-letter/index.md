@@ -2,6 +2,7 @@
 title: initial-letter
 slug: Web/CSS/initial-letter
 ---
+
 {{CSSRef}}
 
 `initial-letter` は CSS のプロパティで、頭文字をドロップキャップにしたり、上げたり、下げたりすることを設定します。
@@ -80,9 +81,7 @@ initial-letter: unset;
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('CSS3 Inline', '#sizing-drop-initials', 'initial-letter')}} | {{Spec2('CSS3 Inline')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

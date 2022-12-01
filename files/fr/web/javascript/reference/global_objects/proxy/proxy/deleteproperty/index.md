@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/deleteProperty
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/deleteProperty
 ---
+
 {{JSRef}}
 
 La méthode **`handler.deleteProperty()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
@@ -72,14 +73,11 @@ delete p.a; // "appelée sur : a"
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-delete-p', '[[Delete]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-delete-p', '[[Delete]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.deleteProperty")}}
+{{Compat}}
 
 ## Voir aussi
 

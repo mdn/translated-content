@@ -1,29 +1,20 @@
 ---
-title: window.applicationCache
+title: Window.applicationCache
 slug: Web/API/Window/applicationCache
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
-> **Warning:** **重要**: アプリケーションキャッシュは Firefox 44 で非推奨となり、 Firefox 60 以降では安全ではないコンテキストでは利用できなくなりました ({{bug(1354175)}}、現在は Nightly/Beta のみ)。ウェブサイトをオフラインで利用するために使用しないでください。 — 代わりに[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)の利用を検討してください。
 
-{{APIRef}}
+{{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}{{SecureContext_Header}}
 
-## 概要
+> **警告:** アプリケーションキャッシュはウェブプラットフォームから削除中です。代わりに[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)の使用を検討してください。
 
 ウィンドウのアプリケーションキャッシュオブジェクトへの参照を返します。
 
-## 構文
+## 値
 
-```
-cache = window.applicationCache
-```
+`OfflineResourceList` へのオブジェクト参照です。
 
-### 引数
+## ブラウザーの互換性
 
-- `cache` : `OfflineResourceList` へのオブジェクト参照です。
-
-## 仕様書
-
-- {{spec("http://www.w3.org/TR/2008/WD-html5-20080122/#appcache","HTML 5","WD")}}
-
-## 関連情報
-
-- [アプリケーションキャッシュの使用](/ja/docs/HTML/Using_the_application_cache)
+{{Compat}}

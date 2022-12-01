@@ -3,6 +3,7 @@ title: 2 つめの拡張機能
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Walkthrough
 ---
+
 {{AddonSidebar}}
 
 [初めての拡張機能](/ja/Add-ons/WebExtensions/Your_first_WebExtension)を一通り読んでいる場合、既に拡張機能の書き方を知っていることと思います。この記事では、API の使い方をより詳しく説明するため、前回よりも少し複雑なアドオンを書いてみます。

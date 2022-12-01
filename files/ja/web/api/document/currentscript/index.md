@@ -1,18 +1,19 @@
 ---
 title: Document.currentScript
 slug: Web/API/Document/currentScript
+l10n:
+  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
+
 {{APIRef("DOM")}}
 
-**`Document.currentScript`** プロパティは、現在処理中で、 [JavaScript モジュールではない](https://github.com/whatwg/html/issues/997)スクリプトの {{HTMLElement("script")}} 要素を返します。 (モジュールの場合は代わりに {{JSxRef("Statements/import%2Emeta", "import.meta")}} を使用してください。
+**`Document.currentScript`** プロパティは、現在処理中で、 [JavaScript モジュールではない](https://github.com/whatwg/html/issues/997)スクリプトの {{HTMLElement("script")}} 要素を返します。（モジュールの場合は代わりに [`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta) を使用してください。）
 
 重要なことですが、スクリプト内のコードがコールバックまたはイベントハンドラーとして呼び出されている場合は、 {{HTMLElement("script")}} 要素を参照しないことに注意してください。初期化時に処理されている要素のみを参照します。
 
-## 構文
+## 値
 
-```
-var curScriptElement = document.currentScript;
-```
+{{domxref("HTMLScriptElement")}} または null です。
 
 ## 例
 
@@ -26,13 +27,11 @@ if (document.currentScript.async) {
 }
 ```
 
-[実際の表示を確認](/samples/html/currentScript.html)
+[実際の表示を確認](https://media.prod.mdn.mozit.cloud/samples/html/currentScript.html)
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                             | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "dom.html#dom-document-currentscript", "Document.currentScript")}} | {{Spec2("HTML WHATWG")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -40,7 +39,7 @@ if (document.currentScript.async) {
 
 ## 関連情報
 
-- {{JSxRef("Statements/import%2Emeta", "import.meta")}}
+- [`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta)
 - {{HTMLElement("script")}}
-- {{DOMxRef("document.onafterscriptexecute")}}
-- {{DOMxRef("document.onbeforescriptexecute")}}
+- {{DOMxRef("document.afterscriptexecute_event")}}
+- {{DOMxRef("document.beforescriptexecute_event")}}

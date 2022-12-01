@@ -9,9 +9,10 @@ tags:
   - origine
 translation_of: Web/API/Document/origin
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-La propriété en lecture seule **`Document.origin`** renvoie l'origine du document. Dans la plupart des cas, cette propriété est équivalente à  `document.defaultView.location.origin`.
+La propriété en lecture seule **`Document.origin`** renvoie l'origine du document. Dans la plupart des cas, cette propriété est équivalente à `document.defaultView.location.origin`.
 
 ## Exemples
 

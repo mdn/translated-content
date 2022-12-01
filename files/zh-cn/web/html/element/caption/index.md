@@ -2,9 +2,10 @@
 title: <caption>
 slug: Web/HTML/Element/caption
 ---
+
 ## 简介
 
-**HTML `<caption>` 元素** (or _HTML 表格标题元素_) 展示一个表格的标题， 它常常作为 {{HTMLElement("table")}} 的第一个子元素出现，同时显示在表格内容的最前面，但是，它同样可以被 CSS 样式化，所以，它同样可以出现在任何一个一个相对于表格的做任意位置。
+**HTML `<caption>` 元素** (or _HTML 表格标题元素_) 展示一个表格的标题，它常常作为 {{HTMLElement("table")}} 的第一个子元素出现，同时显示在表格内容的最前面，但是，它同样可以被 CSS 样式化，所以，它同样可以出现在任何一个一个相对于表格的做任意位置。
 
 <table class="properties">
  <tbody>
@@ -59,13 +60,13 @@ slug: Web/HTML/Element/caption
 
 ## Browser compatibility
 
-{{Compat("html.elements.caption")}}
+{{Compat}}
 
 ## See also
 
-- 其他与 table 相关的 HTML 元素: {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
+- 其他与 table 相关的 HTML 元素：{{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
 - 可能对{{HTMLElement("caption")}} 元素有用的 CSS 属性：
 
   - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,14 +1,8 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - Atributos
-  - Atributos globais
-  - HTML
-  - Referências
-  - itemprop
-translation_of: Web/HTML/Global_attributes/itemprop
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 O atributo global **`itemprop`** é usado para adicionar propriedades para um item. Todo elemento HTML pode ter um atributo `itemprop` especificado, e um `itemprop` consiste em um par de nome e valor. Cada par de nome e valor é chamado de **propriedade,** e um grupo de uma ou mais propriedades forma um **item**. Os valores das propriedades são ou um texto ou uma URL e pode ser associada a uma grande variedade de elementos incluindo {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, and {{HTMLElement("video")}}.
@@ -287,15 +281,15 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
 **Tokens** are either strings or URL's. An item is called a **typed item** if it is a URL. Otherwise, it is a string. Strings cannot contain a period or a colon (see below).
 
-1.  If the item is a typed item it must be either:
+1. If the item is a typed item it must be either:
 
-    1.  A defined property name, or
-    2.  A valid URL, which refers to the vocabulary definition, or
-    3.  A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
+    1. A defined property name, or
+    2. A valid URL, which refers to the vocabulary definition, or
+    3. A valid URL that is used as a proprietary item property name (i.e. one not defined in a public specification), or
 
-2.  If the item is not a typed item it must be:
+2. If the item is not a typed item it must be:
 
-    1.  A string that contains no "**.**" (U+002E FULL STOP) characters and no "**:**" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
+    1. A string that contains no "**.**" (U+002E FULL STOP) characters and no "**:**" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
 > **Note:** the rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
 

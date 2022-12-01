@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RangeError
 translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 browser-compat: javascript.builtins.RangeError
 ---
+
 {{JSRef}}
 
 El objeto **`RangeError`** indica un error cuando un valor no se encuentra dentro de un rango de valores permitidos.

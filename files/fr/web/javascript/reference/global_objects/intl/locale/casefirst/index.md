@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/caseFirst
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.caseFirst`** est une propriété (via un accesseur) qui renvoie si la casse est prise en compte par la locale pour ses règles de collation (celles qui permettent d'ordonner des chaînes de caractères entre elles).

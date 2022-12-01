@@ -2,6 +2,7 @@
 title: 圆括号运算符
 slug: Web/JavaScript/Reference/Operators/Grouping
 ---
+
 {{jsSidebar("Operators")}}
 
 圆括号运算符 `( )` 用于控制表达式中的运算优先级。

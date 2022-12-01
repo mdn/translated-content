@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/acosh
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/acosh
 ---
+
 {{JSRef}}
 
 La fonction **`Math.acosh()`** renvoie l'arc cosinus hyperbolique d'un nombre.Elle est définie par :
@@ -35,7 +36,7 @@ L'arc cosinus hyperbolique du nombre en argument. Si le nombre est inférieur à
 
 ## Description
 
-`acos`h étant une méthode statique de `Math`, il faut l'utiliser avec `Math.acosh()`, plutôt qu'en faisant appel à une méthode d'un autre objet créé (`Math` n'est pas un constructeur).
+`acosh` étant une méthode statique de `Math`, il faut l'utiliser avec `Math.acosh()`, plutôt qu'en faisant appel à une méthode d'un autre objet créé (`Math` n'est pas un constructeur).
 
 ## Exemple
 
@@ -63,14 +64,11 @@ function acosh(x) {
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires        |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.acosh', 'Math.acosh')}}         | {{Spec2('ES6')}}         | Définition initiale |
-| {{SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.acosh")}}
+{{Compat}}
 
 ## Voir aussi
 

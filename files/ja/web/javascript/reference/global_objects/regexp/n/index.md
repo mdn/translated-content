@@ -2,6 +2,7 @@
 title: RegExp.$1-$9
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/n
 ---
+
 {{JSRef}}
 
 旧来の **$1, $2, $3, $4, $5, $6, $7, $8, $9** プロパティは、正規表現の静的かつ読み取り専用プロパティで、括弧で括られた部分文字列に一致したものを含みます。
@@ -42,9 +43,7 @@ number; // "24"
 
 ## 仕様書
 
-| 仕様書                                               |
-| ---------------------------------------------------- |
-| {{SpecName('Legacy RegExp features')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

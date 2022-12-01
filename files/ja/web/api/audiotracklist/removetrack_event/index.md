@@ -2,6 +2,7 @@
 title: 'AudioTrackList: removetrack イベント'
 slug: Web/API/AudioTrackList/removetrack_event
 ---
+
 {{APIRef}}
 
 `removeTrack` イベントは、トラックが {{domxref("AudioTrackList")}} から取り除かれたときに発生します。
@@ -57,9 +58,7 @@ videoElement.audioTracks.onremovetrack = (event) => {
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                             |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'media.html#event-media-removetrack', 'removetrack')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,17 +1,8 @@
 ---
 title: Programación lado servidor
 slug: Learn/Server-side
-tags:
-  - Aprendizaje
-  - Aterrizaje
-  - Codificación de scripts
-  - Principiante
-  - Programación lado servidor
-  - Servidor
-  - Tema
-  - introducción
-translation_of: Learn/Server-side
 ---
+
 {{LearnSidebar}}
 
 El tema **_Páginas Dinámicas – Programación lado servidor_** contiene una serie de módulos en los que se enseña como crear sitios web dinámicos, sitios que entregan información personalizada como respuesta a las peticiones HTTP. El modulo ofrece una introducción generica a la programación de lado servidor además de guías para principiantes sobre como usar frameworks como Django (Python) y Express(Node.js/JavaScript) para crear aplicaciones web basicas.

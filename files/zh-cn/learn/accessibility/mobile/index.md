@@ -2,6 +2,7 @@
 title: 移动设备上的无障碍
 slug: Learn/Accessibility/Mobile
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 随着通过手机设备访问网络越来越受欢迎，例如 iOS 和 Android 等流行的平台都拥有了完善的无障碍工具，在这些平台上考虑你网页的无障碍访问性是一件很重要事情。本文将着重介绍移动端无障碍的注意事项。
@@ -12,7 +13,7 @@ slug: Learn/Accessibility/Mobile
       <th scope="row">前置条件：</th>
       <td>
         基本的计算机素养，对 Javascript,html,css 有基本的认识，对<a
-          href="/en-US/docs/Learn/Accessibility"
+          href="/zh-CN/docs/Learn/Accessibility"
           >之前的课程</a
         >有一定的理解。
       </td>

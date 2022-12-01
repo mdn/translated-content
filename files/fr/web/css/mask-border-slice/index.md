@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-border-slice
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété CSS **`mask-border-slice`** permet de découper l'image source, fournie par {{cssxref("mask-border-source")}}, en différentes régions. Ces régions sont utilisées pour former les composants du [masque de la bordure](/fr/docs/Web/CSS/mask-border).
@@ -22,7 +23,7 @@ Le diagramme ci-avant illustre l'emplacement de chaque région.
 - Les zones 5 à 8 sont les zones de côtés. Ces zones peuvent être [répétées, redimensionnées, ou modifiées](/fr/docs/Web/CSS/mask-border-repeat) afin que le masque de bordule final aient les mêmes dimensions que l'élément.
 - La zone 9 est la zone centrale. Par défaut, elle n'est pas utilisée mais elle pourra être utilisée comme image d'arrière-plan si le mot-clé `fill` est utilisé.
 
-Les propriétés {{cssxref("mask-border-repeat")}}, {{cssxref("mask-border-width")}} et  {{cssxref("mask-border-outset")}} déterminent la façon dont ces régions sont utilisées pour construire le masque final.
+Les propriétés {{cssxref("mask-border-repeat")}}, {{cssxref("mask-border-width")}} et {{cssxref("mask-border-outset")}} déterminent la façon dont ces régions sont utilisées pour construire le masque final.
 
 ## Syntaxe
 
@@ -66,21 +67,21 @@ La valeur optionnelle `fill` peut être utilisée et placée à n'importe quel e
 - `fill`
   - : La zone centrale est conservée ; sa largeur et sa hauteur correspondent aux dimensions utilisées pour les régions haute et gauche.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS Masks", "#propdef-mask-border-slice", "mask-border-slice")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-TBD
+{{Compat}}
 
 ## Voir aussi
 

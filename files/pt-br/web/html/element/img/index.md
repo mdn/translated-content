@@ -1,8 +1,8 @@
 ---
 title: <img>
 slug: Web/HTML/Element/img
-translation_of: Web/HTML/Element/img
 ---
+
 ## Resumo
 
 O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserção de imagem no documento, sendo implementado também pelo HTML5 para uma melhor experiência com o elemento {{HTMLElement("figure")}} e {{HTMLElement("figcaption")}}.
@@ -19,7 +19,7 @@ O **elemento** **HTML `<img>` **(or _HTML Image Element_) representa a inserçã
 > **Note:** **Usage note:**
 > Navegadores nem sempre exibem a imagem referenciada pelo elemento. Este é o caso para navegadores não gráficos (incluindo aqueles usados por pessoas com deficiência de visão), ou se o usuário optar por não exibir imagens ou se o navegador não conseguir exibir a imagem porque é inválido ou um tipo não suportado. Nesses casos, o navegador pode substituir a imagem pelo texto definido no atributo **alt** deste elemento.
 
-- _[Content categories](/pt-BR/docs/HTML/Content_categories "HTML/Content_categories")_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content"), embedded content, palpable content. If the element has a {{htmlattrxref("usemap", "img")}} attribute, it also is a part of the interactive content category.
+- _[Content categories](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), [phrasing content](/pt-BR/docs/HTML/Content_categories#Phrasing_content), embedded content, palpable content. If the element has a {{htmlattrxref("usemap", "img")}} attribute, it also is a part of the interactive content category.
 - _Permitted content_ None, it is an {{Glossary("empty element")}}.
 - _Tag omission_ Must have a start tag and must not have an end tag.
 - _Permitted parent elements_ Any element that accepts embedded content.
@@ -33,7 +33,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
   - : The alignment of the image with respect to its surrounding context.
 - {{htmlattrdef("alt")}}
 
-  - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](/pt-BR/docs/Web/HTML/Element/img$edit#Supported_image_formats) ou até a imagem ser baixada .
+  - : Este atributo define um texto alternativo que descreve a imagem. Os Usuários irão ver o texto se a URL da imagem estiver errado, a imagem não está em um dos [formatos suportados](#supported_image_formats) ou até a imagem ser baixada .
 
     > **Note:** **Usage note:** Omitting this attribute indicates that the image _is_ a key part of the content, but no textual equivalent is available. Setting this attribute to the empty string indicates that this image is _not_ a key part of the content; non-visual browsers may omit it from rendering.
 
@@ -41,14 +41,14 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
   - : The width of a border around the image.
 - {{htmlattrdef("crossorigin")}} {{HTMLVersionInline(5)}}
 
-  - : This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. [CORS-enabled images](/pt-BR/docs/CORS_Enabled_Image "CORS_Enabled_Image") can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
+  - : This enumerated attribute indicates if the fetching of the related image must be done using CORS or not. [CORS-enabled images](/pt-BR/docs/CORS_Enabled_Image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
 
     - anonymous
       - : A cross-origin request (i.e. with `Origin:` HTTP header) is performed. But no credential is sent (i.e. no cookie, no X.509 certificate and no HTTP Basic authentication is sent). If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_ and its usage restricted..
     - use-credentials
       - : A cross-origin request (i.e. with `Origin:` HTTP header) performed with credential is sent (i.e. a cookie, a certificate and HTTP Basic authentication is performed). If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.
 
-    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted usage in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/pt-BR/docs/HTML/CORS_settings_attributes "CORS settings attributes") for additional information.
+    When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted usage in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/pt-BR/docs/HTML/CORS_settings_attributes) for additional information.
 
 - {{htmlattrdef("height")}}
   - : The height of the image in {{HTMLVersionInline(5)}} CSS pixels, or {{HTMLVersionInline(4)}} in pixels or as a percentage.
@@ -70,9 +70,9 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
 
   - : A list of one or more strings separated by commas indicating a set of possible images for the user agent to use. Each string is composed of:
 
-    1.  one URL to an image,
-    2.  a width descriptor, that is a positive integer directly followed by `'w'`. The default value, if missing, is the infinity.
-    3.  a pixel density descriptor, that is a positive floating number directly followed by `'x'`. The default value, if missing, is `1x`.
+    1. one URL to an image,
+    2. a width descriptor, that is a positive integer directly followed by `'w'`. The default value, if missing, is the infinity.
+    3. a pixel density descriptor, that is a positive floating number directly followed by `'x'`. The default value, if missing, is `1x`.
 
     Each string in the list must have at least a width descriptor or a pixel density descriptor to be valid. Among the list, there must be only one string containing the same tuple of width descriptor and pixel density descriptor.
     The browser chooses the most adequate image to display at a given point of time.
@@ -81,7 +81,7 @@ Este Elemeto inlcui o [atributo global](/pt-BR/docs/Web/HTML/Global_attributes).
   - : The width of the image in pixels or percent.
 - {{htmlattrdef("usemap")}}
 
-  - : The partial URL (starting with '#') of an [image map](/pt-BR/docs/HTML/Element/map "HTML/Element/Map") associated with the element.
+  - : The partial URL (starting with '#') of an [image map](/pt-BR/docs/HTML/Element/map) associated with the element.
 
     > **Note:** **Usage note:** You cannot use this attribute if the `<img>` element is a descendant of an {{htmlelement("a")}} or {{HTMLElement("button")}} element.
 
@@ -95,11 +95,11 @@ O padrão HTML não fornece uma lista de formatos de imagem que devem ser suport
 - [JPEG](http://en.wikipedia.org/wiki/JPEG)
 - [GIF](http://en.wikipedia.org/wiki/Graphics_Interchange_Format), incluindo GIFs animados
 - [PNG](http://en.wikipedia.org/wiki/Portable_Network_Graphics)
-- [APNG](/pt-BR/docs/Animated_PNG_graphics "Animated PNG graphics") {{gecko_minversion_inline("1.9.2")}}
-- [SVG](/pt-BR/docs/SVG "SVG") {{gecko_minversion_inline("2.0")}}
+- [APNG](/pt-BR/docs/Animated_PNG_graphics)
+- [SVG](/pt-BR/docs/SVG)
 - [BMP](http://en.wikipedia.org/wiki/BMP_file_format)
 - [BMP ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
-- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29) {{gecko_minversion_inline("9.0")}}
+- [PNG ICO](http://en.wikipedia.org/wiki/ICO_%28file_format%29)
 
 ## Interação com CSS
 
@@ -151,9 +151,9 @@ As imagens exibidas dependerão do tipo de tela.
 
 Antes de cada vírgula nós escrevemos:
 
-1.  Um **nome do arquivo da imagem** (`mdn-logo-HD.png`).
-2.  Um espaço.
-3.  A **largura da imagem** ou **sua densidade de pixels**.
+1. Um **nome do arquivo da imagem** (`mdn-logo-HD.png`).
+2. Um espaço.
+3. A **largura da imagem** ou **sua densidade de pixels**.
 
 ## Acessibilidade
 
@@ -185,7 +185,7 @@ Quando o atributo `alt` não estiver presente em uma imagem, alguns programas le
 
 O atributo {{htmlattrxref("title")}} não é um substituto aceitável para o atributo `alt`. Além disso, evite duplicar o valor do atributo `alt` no atributo `title` para uma mesma imagem. Isso pode fazer com que alguns programas leitores de tela narrem duas vezes a descrição, o que pode criar uma experiência confusa para usuários.
 
-Evite usar o atributo `title` como uma forma suplementar de legenda para a descrição do `alt`. Caso a imagem precise de uma legenda, prefisa os elementos [`figure`](/en-US/docs/Web/HTML/Element/figure) e [`figcaption`](/en-US/docs/Web/HTML/Element/figcaption).
+Evite usar o atributo `title` como uma forma suplementar de legenda para a descrição do `alt`. Caso a imagem precise de uma legenda, prefisa os elementos [`figure`](/pt-BR/docs/Web/HTML/Element/figure) e [`figcaption`](/pt-BR/docs/Web/HTML/Element/figcaption).
 
 O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, que aparece após o usuário parar o cursor sobre a imagem. Apesar de _poder_ _prover_ informações adicionais ao usuário, não se deve assumir todos os usuários vão vê-lo, pois o mesmo pode possuir apenas um teclado ou uma tela de toque (touchscreen). Se você considera a informação particularmente importante para o usuário, prefira o uso de elementos inline.
 
@@ -207,4 +207,4 @@ O valor do atributo `title` é geralmente mostrado ao usuário como uma dica, qu
 
 - {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements
 
-{{HTMLRef}}
+{{HTMLSidebar}}

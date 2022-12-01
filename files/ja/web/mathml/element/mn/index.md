@@ -2,6 +2,7 @@
 title: <mn>
 slug: Web/MathML/Element/mn
 ---
+
 {{MathMLRef}}
 
 MathML の `<mn>` 要素は、通常は可能な区切り記号（ピリオドかカンマ）をもつ数字列である、数値リテラルを表します。しかし、「eleven」のような数量を表す任意のテキストを書くこともできます。
@@ -130,10 +131,7 @@ MathML の `<mn>` 要素は、通常は可能な区切り記号（ピリオド�
 
 ## 仕様
 
-| Specification                                                                | Status                       | Comment    |
-| ---------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mn', 'mn') }} | {{ Spec2('MathML3') }} | 現在の仕様 |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mn', 'mn') }} | {{ Spec2('MathML2') }} | 初期の仕様 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

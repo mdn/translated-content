@@ -2,7 +2,8 @@
 title: <data>
 slug: Web/HTML/Element/data
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<data>` 元素**将一个指定内容和机器可读的翻译联系在一起。但是，如果内容是与时间或者日期相关的，则一定要使用 {{HTMLElement("time")}}。
 
@@ -38,7 +39,7 @@ slug: Web/HTML/Element/data
 该元素支持[全局属性](/zh-CN/docs/HTML/Global_attributes)。
 
 - {{htmlattrdef("value")}}
-  - : 该属性指定元素内容所对应的数据，或者说 “机器可读的翻译”。
+  - : 该属性指定元素内容所对应的数据，或者说“机器可读的翻译”。
 
 ## 示例
 
@@ -59,7 +60,7 @@ slug: Web/HTML/Element/data
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.data")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,13 +2,14 @@
 title: mousewheel
 slug: Web/API/Element/mousewheel_event
 ---
+
 {{ Non-standard_header() }}
 
 The `mousewheel` event is fired asynchronously when a mouse wheel or similar device is operated. It's represented by the {{ domxref("MouseWheelEvent") }} interface.
 
 > **备注：** **Do not use this wheel event.**
 >
-> This interface is non-standard and deprecated. It was used in non-Gecko browsers only. Instead use the standard _{{event("wheel")}} event._
+> This interface is non-standard and deprecated. It was used in non-Gecko browsers only. Instead use the standard _[`wheel`](/zh-CN/docs/Web/API/Element/wheel_event) event._
 
 - _Interface_: {{ domxref('MouseWheelEvent') }}
 - _Synchronicity_: asynchronous
@@ -23,7 +24,7 @@ The document in MSDN: [onmousewheel event](http://msdn.microsoft.com/en-us/libra
 
 ## Browser compatibility
 
-{{Compat("api.Element.mousewheel_event")}}
+{{Compat}}
 
 ## detail value
 
@@ -62,8 +63,6 @@ If the device supports continuous scroll (e.g., trackpad of MacBook or mouse whe
 If the device does **not** support continuous scroll (typically, old mouse wheel which cannot be turned smoothly), the value is computed from non-accelerated scroll amount (120 per notch). In this case, the value is different from Safari.
 
 This difference makes a serious issue for web application developers. That is, web developers cannot know if `mousewheel` event is caused by which device.
-
-See `WebInputEventFactory::mouseWheelEvent` of the [Chromium's source code](http://mxr.mozilla.org/chromium/source/src/third_party/WebKit/Source/web/WebInputEventFactoryMac.mm) for the detail.
 
 ### Safari
 

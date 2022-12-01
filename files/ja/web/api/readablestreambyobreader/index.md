@@ -2,6 +2,7 @@
 title: ReadableStreamBYOBReader
 slug: Web/API/ReadableStreamBYOBReader
 ---
+
 {{APIRef("Streams")}}{{SeeCompatTable}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の `ReadableStreamBYOBReader` インターフェイスは、開発者が提供するストリームデータ（カスタムの {{domxref("ReadableStream.ReadableStream","ReadableStream()")}} コンストラクターなど）の読み取りに使用できる BYOB（"bring your own buffer"）リーダーを表します。
@@ -31,9 +32,7 @@ slug: Web/API/ReadableStreamBYOBReader
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                         | コメント |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('Streams','#byob-reader-class','ReadableStreamBYOBReader')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,55 +1,81 @@
 ---
-title: GlobalEventHandlers.onpointerleave
+title: 'Element: pointerleave イベント'
 slug: Web/API/Element/pointerleave_event
-original_slug: Web/API/GlobalEventHandlers/onpointerleave
+original_slug: Web/API/Document/pointerleave_event
+l10n:
+  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
 ---
-{{APIRef("HTML DOM")}}
 
-{{domxref("HTMLElement/pointerleave_event", "pointerleave")}} イベントの{{domxref("GlobalEventHandlers","グローバルイベントハンドラー", "", 1)}}で、ポインター (マウスカーソル、指先など) がヒットテスト領域を出ると (例えば、カーソルが {{domxref("Element")}} や {{domxref("Window")}} のコンテンツ領域を出ると)、{{domxref("Node")}} に配信されます。このイベントは [Pointer Events API](/ja/docs/Web/API/Pointer_events) の一部です。
+{{APIRef}}
+
+`pointerleave` イベントは、ポインティングデバイスが要素のヒットテスト領域を出たときに発生します。ペンデバイスでは、このイベントはデジタイザーが検出可能なホバー範囲をスタイラスが離れたときに発生します。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('pointerleave', (event) => {});
+
+onpointerleave = (event) => { };
 ```
-EventTarget.onpointerleave = leaveHandler;
 
-var leaveHandler = EventTarget.onpointerleave;
-```
+## イベント型
 
-### 値
+{{domxref("PointerEvent")}} です。 {{domxref("Event")}} を継承しています。
 
-- `leaveHandler`
-  - : {{domxref("EventListener")}} で、ターゲットに送信された {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} イベントを処理するために呼び出されます。
+{{InheritanceDiagram("PointerEvent")}}
+
+## イベントプロパティ
+
+_このインターフェイスは {{domxref("MouseEvent")}} および {{domxref("Event")}} からプロパティを継承しています。_
+
+- {{ domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
+  - : イベントを発生させたポインターの固有の識別子です。
+- {{ domxref('PointerEvent.width')}} {{ReadOnlyInline}}
+  - : ポインターが接触するジオメトリーの幅（X 軸の大きさ、CSS ピクセル単位）。
+- {{ domxref('PointerEvent.height')}} {{ReadOnlyInline}}
+  - : ポインターが接触するジオメトリーの高さ（Y 軸の大きさ、CSS ピクセル単位）。
+- {{ domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
+  - : ポインター入力の正規化された圧力で、範囲は `0` から `1` です。ここで `0` と `1` は、それぞれハードウェアが検出可能な最小圧力と最大圧力を表します。
+- {{ domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
+  - : ポインタ入力の正規化された接線圧力（バレル圧力またはシリンダー応力（[cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)）とも呼ばれます）で、 `-1` から `1` の範囲であり、 `0` はコントロールの中立位置です。
+- {{ domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
+  - : Y-Z 平面と、ポインター（ペンスタイラスなど）の軸と Y 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
+- {{ domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
+  - : X-Z 平面と、ポインター（ペンスタイラスなど）の軸と X 軸の両方を含む平面との間の平面角度（度単位、 `-90` から `90` の範囲）。
+- {{ domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
+  - : ポインター（ペンスタイラスなど）の長軸を中心とした時計回りの回転の度数（`0` から `359` の範囲の値）。
+- {{ domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
+  - : イベントの原因となった機器の種類（マウス、ペン、タッチなど）を示します。
+- {{ domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
+  - : このポインターがこのポインター種別の主ポインターを表すかどうかを示します。
 
 ## 例
 
-この例では、`onpointerleave` を使用して要素の `pointerleave` イベントハンドラーを設定する 2 つの方法を示します。
+`addEventListener()` を使用した例です。
 
 ```js
-<html>
-<script>
-function leaveHandler(ev) {
- // pointerleave イベントの処理
-}
-function init() {
- var el=document.getElementById("target1");
- el.onpointerleave = leaveHandler;
-}
-</script>
-<body onload="init();">
-<div id="target1"> Touch me ... </div>
-<div id="target2" onpointerleave="leaveHandler(event)"> Touch me ... </div>
-</body>
-</html>
+const para = document.querySelector('p');
+
+para.addEventListener('pointerleave', (event) => {
+  console.log('Pointer left element');
+});
 ```
 
-詳細については、[Pointer Events の使用](/ja/docs/Web/API/Pointer_events/Using_Pointer_Events)を参照してください。
+`onpointerleave` イベントハンドラープロパティを使用した例です。
+
+```js
+const para = document.querySelector('p');
+
+para.onpointerleave = (event) => {
+  console.log('Pointer left element');
+};
+```
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#dom-globaleventhandlers-onpointerleave', 'onpointerleave')}} | {{Spec2('Pointer Events 2')}} | 不安定版 |
-| {{SpecName('Pointer Events', '#widl-GlobalEventHandlers-onpointerleave', 'onpointerleave')}} | {{Spec2('Pointer Events')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -57,7 +83,14 @@ function init() {
 
 ## 関連情報
 
-- [ポインターイベント](/ja/docs/Web/API/Pointer_events)
-- [ポインターイベントの使用](/ja/docs/Web/API/Pointer_events/Using_Pointer_Events)
-- [`Document: pointerleave`](/ja/docs/Web/API/Document/pointerleave_event) イベント
-- [`HTMLElement: pointerleave`](/ja/docs/Web/API/HTMLElement/pointerleave_event) イベント
+- 関連イベント
+
+  - [`gotpointercapture`](/ja/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/ja/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/ja/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/ja/docs/Web/API/Element/pointerenter_event)
+  - [`pointerdown`](/ja/docs/Web/API/Element/pointerdown_event)
+  - [`pointermove`](/ja/docs/Web/API/Element/pointermove_event)
+  - [`pointerup`](/ja/docs/Web/API/Element/pointerup_event)
+  - [`pointercancel`](/ja/docs/Web/API/Element/pointercancel_event)
+  - [`pointerout`](/ja/docs/Web/API/Element/pointerout_event)

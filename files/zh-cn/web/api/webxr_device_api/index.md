@@ -2,6 +2,7 @@
 title: WebXR 设备 接口参考
 slug: Web/API/WebXR_Device_API
 ---
+
 **WebXR** 是一组支持将渲染 3D 场景用来呈现虚拟世界（虚拟现实，也称作 VR）或将图形图像添加到现实世界（增强现实，也称作 AR）的标准。 **WebXR 设备 API** 实现了 WebXR 功能集的核心，管理输出设备的选择，以适当的帧速率将 3D 场景呈现给所选设备，并管理使用输入控制器创建的运动矢量。
 
 WebXR-兼容性设备包括沉浸式 3D 运动和定位跟踪耳机，通过框架覆盖在真实世界场景之上的眼镜，以及手持移动电话，它们通过用摄像机捕捉世界来增强现实，并通过计算机生成的图像增强场景。
@@ -17,7 +18,7 @@ WebXR-兼容性设备包括沉浸式 3D 运动和定位跟踪耳机，通过框�
 
 由于 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 用于将 3D 世界渲染到 WebXR 会话中，因此您首先应该熟悉 WebGL 的一般用法以及 3D 图形的基本知识。您很可能不会直接使用 WebGL API，而是利用在 WebGL 之上构建的框架或库之一来使其使用更加方便。其中最流行的是[three.js](https://threejs.org/)。
 
-使用库而不是直接使用 WebGL API 的一个特殊好处是，库取向于实现虚拟相机函数性的接口。OpenGL（ WebGL 的扩展）不直接提供照相机视图，使用库模拟一个的话可以使您的工作变得非常非常容易，特别是在构建允许在虚拟世界中自由移动的代码时。
+使用库而不是直接使用 WebGL API 的一个特殊好处是，库取向于实现虚拟相机函数性的接口。OpenGL（WebGL 的扩展）不直接提供照相机视图，使用库模拟一个的话可以使您的工作变得非常非常容易，特别是在构建允许在虚拟世界中自由移动的代码时。
 
 ## 重要的健康和安全提示
 
@@ -48,7 +49,7 @@ WebXR-兼容性设备包括沉浸式 3D 运动和定位跟踪耳机，通过框�
 1. 检查用户的设备和浏览器是否都能够呈现您想要提供的 XR 体验。
 
     1. 确保 WebXR API 可用；如果 {{domxref("navigator.xr")}} 未定义，则可以判断用户的浏览器和/或设备不支持 WebXR。如果不支持，请禁用用于激活 XR 功能的任何用户界面，并中止任何进入 XR 模式的尝试。
-    2. 调用 {{DOMxRef("XR.isSessionSupported","navigator.xr.isSessionSupported()")}}, 指定要提供的 WebXR 体验模式: `inline`, `immersive-vr`, 或 `immersive-ar`, 以确定您希望提供的会话类型是否可用。
+    2. 调用 {{DOMxRef("XR.isSessionSupported","navigator.xr.isSessionSupported()")}}, 指定要提供的 WebXR 体验模式：`inline`, `immersive-vr`, 或 `immersive-ar`, 以确定您希望提供的会话类型是否可用。
     3. 如果要使用的会话类型可用，请向用户提供适当的界面以允许他们激活它。
 
 2. 当用户通过上述的界面开启了 WebXR 功能后，通过调用 {{DOMxRef("XR.requestSession","navigator.xr.requestSession()")}}，也是指定使用的模式为以下三种之一： `inline`, `immersive-vr`, 或 `immersive-ar`后，可以将一个 {{DOMxRef("XRSession")}} 设定在期望的模式下。

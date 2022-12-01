@@ -2,6 +2,7 @@
 title: CSSKeyframeRule
 slug: Web/API/CSSKeyframeRule
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`CSSKeyframeRule`** インターフェイスは、指定された keyframe のスタイルセットを表すオブジェクトを提供します。[アット規則](/ja/docs/CSS/At-rule) の {{cssxref("@keyframes")}} の 1 つのキーフレームに対応しています。これはタイプ値 8 (`CSSRule.KEYFRAME_RULE`) の {{domxref("CSSRule")}} インターフェイスを実装しています。
@@ -21,9 +22,7 @@ slug: Web/API/CSSKeyframeRule
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                                 | コメント   |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('CSS3 Animations', '#CSSKeyframeRule-interface', 'CSSKeyframeRule')}} | {{Spec2('CSS3 Animations')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

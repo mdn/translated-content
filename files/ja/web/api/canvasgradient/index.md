@@ -2,6 +2,7 @@
 title: CanvasGradient
 slug: Web/API/CanvasGradient
 ---
+
 **`CanvasGradient`** インターフェイスは、グラデーションを記述する[不透明オブジェクト](https://en.wikipedia.org/wiki/Opaque_data_type)を表します。 {{domxref("CanvasRenderingContext2D.createLinearGradient()")}} または {{domxref("CanvasRenderingContext2D.createRadialGradient()")}} メソッドから返されます。
 
 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} または {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} として使用することができます。
@@ -19,9 +20,7 @@ _継承されたメソッドはありません。_
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', "the-canvas-element.html#canvasgradient", "CanvasGradient")}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの対応
 

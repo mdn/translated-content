@@ -3,6 +3,7 @@ title: 從物件到iframe - 其他嵌入技術
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 original_slug: Learn/HTML/Multimedia_and_embedding/其他_嵌入_技術
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 到現在為止，您應該真正掌握了將內容嵌入網頁的方法，包括圖片，影片和聲音。在這一點上，我們想採取一些橫向的措施，尋找一些元素，使您可以將各種內容類型嵌入到網頁中： {{htmlelement("iframe")}}, {{htmlelement("embed")}} 和 {{htmlelement("object")}} 元素。`<iframe>`用於嵌入其他網頁，另外兩個用於嵌入 PDF，SVG 甚至是 Flash（這項技術正在淘汰，但您仍會半定期看到）。

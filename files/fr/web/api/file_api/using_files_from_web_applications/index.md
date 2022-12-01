@@ -9,11 +9,10 @@ tags:
 translation_of: Web/API/File/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
+
 {{APIRef("File API")}}
 
 Grâce à l'API File ajoutée au DOM avec HTML5, il est maintenant possible depuis une page web de proposer à l'utilisateur de sélectionner des fichiers locaux, puis d'en lire le contenu. Cette sélection est possible en utilisant un élément HTML {{ HTMLElement("input") }} ou par glisser-déposer.
-
-Vous pouvez utiliser si vous le souhaitez l'API DOM File depuis du code chrome d'extensions ou d'un autre navigateur&nbsp;; notez cependant qu'il existe des fonctionnalités additionnelles auxquelles il vous faudra être attentif. Reportez-vous à [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code) pour plus de détails.
 
 ## Accéder au(x) fichier(s) sélectionné(s)
 
@@ -144,7 +143,7 @@ function updateSize() {
 
 ## Utiliser des éléments _input_ masqués de type _file_ avec l'événement `click`
 
-Il est possible depuis Gecko 2.0 {{ geckoRelease("2.0") }} de masquer l'élément {{ HTMLElement("input") }} de type file, généralement considéré comme laid, et de présenter votre propre interface pour l'ouverture du sélecteur de fichiers et l'affichage du ou des fichiers sélectionnés par l'utilisateur. Vous devez pour cela attribuer à votre élément `input` un style incluant `display:none` et gérer l'événement `click` sur votre élément {{ HTMLElement("input") }}.
+Il est possible depuis Gecko 2.0 de masquer l'élément {{ HTMLElement("input") }} de type file, généralement considéré comme laid, et de présenter votre propre interface pour l'ouverture du sélecteur de fichiers et l'affichage du ou des fichiers sélectionnés par l'utilisateur. Vous devez pour cela attribuer à votre élément `input` un style incluant `display:none` et gérer l'événement `click` sur votre élément {{ HTMLElement("input") }}.
 
 Examinez cet extrait de code HTML&nbsp;:
 
@@ -196,7 +195,7 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-Dans cet exemple, l'élément portant l'ID `dropbox` devient notre zone de dépôt en y ajoutant les gestionnaires d'écoute des événements {{event('dragenter')}}, {{event('dragover')}}, et {{event('drop')}}.
+Dans cet exemple, l'élément portant l'ID `dropbox` devient notre zone de dépôt en y ajoutant les gestionnaires d'écoute des événements [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event), [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event), et [`drop`](/fr/docs/Web/API/HTMLElement/drop_event).
 
 Nous n'avons pas vraiment besoin dans notre cas de gérer les événements `dragenter` et `dragover`. Les deux fonctions associées restent donc assez simples, elle ne servent qu'à stopper la propagation de l'événement et empêcher le déclenchement de l'action par défaut&nbsp;:
 
@@ -256,13 +255,13 @@ function handleFiles(files) {
 
 La boucle qui manipule dans notre cas les fichiers sélectionnés par l'utilisateur examine l'attribut type de chaque fichier et contrôle qu'il s'agit bien d'une image (en utilisant une expression régulière pour vérifier la correspondance du type MIME avec la chaîne "`image/*`"). Nous créons un nouvel élément img pour chaque fichier image. Vous pouvez utiliser du CSS pour définir d'agréables bordures ou effets d'ombres ou encore pour préciser la taille de l'image \[de l'élément `img`, NDT], même si cela n'est pas nécessaire ici.
 
-La classe CSS ob`j` est ajoutée à chaque élément image afin de faciliter sa recherche dans l'arbre du DOM, ainsi qu'un attribut `file` spécifiant le {{ domxref("File") }} correspondant et qui nous permettra de récupérer les fichiers images lors du téléchargement effectif vers le serveur. Nous utilisons {{ domxref("Node.appendChild()") }} pour ajouter la nouvelle miniature à la zone de prévisualisation de notre document.
+La classe CSS `obj` est ajoutée à chaque élément image afin de faciliter sa recherche dans l'arbre du DOM, ainsi qu'un attribut `file` spécifiant le {{ domxref("File") }} correspondant et qui nous permettra de récupérer les fichiers images lors du téléchargement effectif vers le serveur. Nous utilisons {{ domxref("Node.appendChild()") }} pour ajouter la nouvelle miniature à la zone de prévisualisation de notre document.
 
 Nous définissons ensuite le {{ domxref("FileReader") }} qui gérera le chargement asynchrone de l'image et son lien à l'élément `img`. Après avoir créé le nouvel objet `FileReader`, nous définissons sa fonction `onload` pouis nous appelons `readAsDataURL()` pour démarrer l'opération de lecture en tâche de fond. Lorsque le chargement du fichier image est complètement terminé, son contenu est converti en `data`&nbsp;: c'est l'URL transmise à la fonction de rappel `onload`. Notre implémentation de cette procédure définit l'image chargée comme valeur de l'attribut `src` de l'élement `img`, faisant ainsi apparaître l'image dans la miniature à l'écran.
 
 ## Utiliser un objet URLs
 
-Gecko 2.0 {{ geckoRelease("2.0") }} introduit la prise en charge des méthodes du DOM {{ domxref("window.URL.createObjectURL()") }} et {{ domxref("window.URL.revokeObjectURL()") }}. Elles vous permettent de créer des chaînes d'URL simples qui peuvent être utilisées pour repérer n'importe quelle donnée pouvant être référencée à l'aide d'un objet DOM {{ domxref("File") }}, y compris des fichiers locaux sur l'ordinateur de l'utilisateur.
+Gecko 2.0 introduit la prise en charge des méthodes du DOM {{ domxref("window.URL.createObjectURL()") }} et {{ domxref("window.URL.revokeObjectURL()") }}. Elles vous permettent de créer des chaînes d'URL simples qui peuvent être utilisées pour repérer n'importe quelle donnée pouvant être référencée à l'aide d'un objet DOM {{ domxref("File") }}, y compris des fichiers locaux sur l'ordinateur de l'utilisateur.
 
 Vous pouvez procéder ainsi pour créer un objet URL lorsque vous souhaitez référencer un objet {{ domxref("File") }} par URL depuis HTML&nbsp;:
 
@@ -270,7 +269,7 @@ Vous pouvez procéder ainsi pour créer un objet URL lorsque vous souhaitez réf
 var objectURL = window.URL.createObjectURL(fileObj);
 ```
 
-L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré&nbsp;; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }}  si votre page les utilise de manière dynamique&nbsp;:
+L'objet URL est une chaîne identifiant l'objet {{ domxref("File") }}. Un objet URL unique est créé à chaque fois que vous appelez {{ domxref("window.URL.createObjectURL()") }}, même si vous avez déjà créé un objet URL pour ce fichier. Chacun d'eux doit être libéré&nbsp;; bien qu'ils soient automatiquement libérés lorsque le document est déchargé, vous devez explicitement les libérer en appelant {{ domxref("window.URL.revokeObjectURL()") }} si votre page les utilise de manière dynamique&nbsp;:
 
 ```js
 window.URL.revokeObjectURL(objectURL);
@@ -413,7 +412,7 @@ Il est nécessaire de prévoir quelques étapes préparatoires avant le téléch
 5. L'objet `FileReader` est utilisé pour la conversion du fichier en chaîne binaire.
 6. La fonction `send()` du XMLHttpRequest est appelée en dernier pour télécharger le contenu du fichier complètement chargé.
 
-> **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }}&nbsp;; utilisez plutôt la méthode standard `send(Blob data)`.
+> **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31&nbsp;; utilisez plutôt la méthode standard `send(Blob data)`.
 
 ### Gérer le processus de téléchargement d'un fichier de manière asynchrone
 
@@ -513,10 +512,9 @@ window.URL.revokeObjectURL(obj_url);
 
 ## Voir aussi
 
-- {{ domxref("File") }}
-- {{ domxref("FileList") }}
-- {{ domxref("FileReader") }}
-- [Utiliser XMLHttpRequest](/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest)
-- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)
-- {{ domxref("XMLHttpRequest") }}
-- [jQuery](http://www.jquery.com/) JavaScript library
+- {{DOMxRef("File")}}
+- {{DOMxRef("FileList")}}
+- {{DOMxRef("FileReader")}}
+- {{DOMxRef("URL")}}
+- {{DOMxRef("XMLHttpRequest")}}
+- [Utiliser `XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)

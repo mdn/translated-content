@@ -3,6 +3,7 @@ title: Subgrid
 slug: Web/CSS/CSS_Grid_Layout/Subgrid
 translation_of: Web/CSS/CSS_Grid_Layout/Subgrid
 ---
+
 {{CSSRef}}
 
 2 уровень спецификации CSS Grid включает в себя значение `subgrid` для свойств [grid-template-columns](/ru/docs/Web/CSS/grid-template-columns) и [grid-template-rows](/ru/docs/Web/CSS/grid-template-rows). Это руководство содержит описание принципа работы subgrid и показывает некоторые примеры использования этой функции.

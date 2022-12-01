@@ -2,6 +2,7 @@
 title: Window.name
 slug: Web/API/Window/name
 ---
+
 {{APIRef}}
 
 获取/设置窗口的名称。
@@ -42,4 +43,4 @@ window.name = Symbol.for('foo').toString(); // "Symbol(foo)"
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.name")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: Gamepad.buttons
 slug: Web/API/Gamepad/buttons
 ---
+
 {{APIRef("Gamepad API")}}
 
 {{domxref("Gamepad") }} インターフェイスの **`Gamepad.buttons`** プロパティはデバイス上に存在するボタンを表すオブジェクトの配列を返します。
@@ -62,9 +63,7 @@ function gameLoop() {
 
 ## 仕様書
 
-| 仕様                                                                                     | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#widl-Gamepad-buttons", "Gamepad.buttons")}} | {{Spec2("Gamepad")}} | 初版     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

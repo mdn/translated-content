@@ -2,13 +2,14 @@
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
+
 {{JSRef}}
 
 **`Boolean`** オブジェクトは論理値のオブジェクトラッパーです。
 
 ## 解説
 
-最初の引数に渡された値は、必要に応じて論理値に変換されます。値が省略された場合や、値が `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}},  空文字列 (`""`) であった場合、オブジェクトは `false` の初期値を持ちます。それ以外のあらゆる値は、オブジェクトや空の配列 (`[]`)、"`false`" という文字列も含めて、 `true` の初期値を持つオブジェクトを生成します。
+最初の引数に渡された値は、必要に応じて論理値に変換されます。値が省略された場合や、値が `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, 空文字列 (`""`) であった場合、オブジェクトは `false` の初期値を持ちます。それ以外のあらゆる値は、オブジェクトや空の配列 (`[]`)、"`false`" という文字列も含めて、 `true` の初期値を持つオブジェクトを生成します。
 
 {{Glossary("Primitive", "プリミティブ")}}の `Boolean` 値である `true` や `false` を、 `true` や `false` の値を持った `Boolean` オブジェクトと混同しないでください。
 
@@ -49,7 +50,7 @@ var s = Boolean(myString);      // 初期値は true
 
 `Boolean` プリミティブの代わりに `Boolean` オブジェクトを使用しないでください。
 
-> **Note:** 標準外の [`document.all`](/ja/docs/Web/API/Document#properties) プロパティがこのコンストラクターの引数として使用された場合、結果は `Boolean` オブジェクトで値は `false` となります。このプロパティは古く、標準外で、使用するべきではありません。
+> **メモ:** 標準外の [`document.all`](/ja/docs/Web/API/Document#properties) プロパティがこのコンストラクターの引数として使用された場合、結果は `Boolean` オブジェクトで値は `false` となります。このプロパティは古く、標準外で、使用するべきではありません。
 
 `==` を使用して緩い比較でオブジェクトと boolean プリミティブを比較した場合、実際にはどのように比較が行われるのかを明確に理解することが重要です。以下の例を考えてみてください。
 

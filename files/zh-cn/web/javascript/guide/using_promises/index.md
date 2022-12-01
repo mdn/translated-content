@@ -2,6 +2,7 @@
 title: 使用 Promise
 slug: Web/JavaScript/Guide/Using_promises
 ---
+
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 {{jsxref("Promise")}} 是一个对象，它代表了一个异步操作的最终完成或者失败。因为大多数人仅仅是使用已创建的 Promise 实例对象，所以本教程将首先说明怎样使用 Promise，再说明如何创建 Promise。
@@ -15,12 +16,12 @@ slug: Web/JavaScript/Guide/Using_promises
 ```js
 // 成功的回调函数
 function successCallback(result) {
-  console.log("音频文件创建成功: " + result);
+  console.log("音频文件创建成功：" + result);
 }
 
 // 失败的回调函数
 function failureCallback(error) {
-  console.log("音频文件创建失败: " + error);
+  console.log("音频文件创建失败：" + error);
 }
 
 createAudioFileAsync(audioSettings, successCallback, failureCallback)
@@ -223,7 +224,7 @@ window.addEventListener("unhandledrejection", event => {
 
 ## 在旧式回调 API 中创建 Promise
 
-可以通过 Promise 的构造器从零开始创建 {{jsxref("Promise")}}。 这种方式（通过构造器的方式）应当只在封装旧 API 的时候用到。
+可以通过 Promise 的构造器从零开始创建 {{jsxref("Promise")}}。这种方式（通过构造器的方式）应当只在封装旧 API 的时候用到。
 
 理想状态下，所有的异步函数都已经返回 Promise 了。但有一些 API 仍然使用旧方式来传入的成功（或者失败）的回调。典型的例子就是 {{domxref("WindowTimers.setTimeout", "setTimeout()")}} 函数：
 

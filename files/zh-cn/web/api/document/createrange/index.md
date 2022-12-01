@@ -2,6 +2,7 @@
 title: Document.createRange()
 slug: Web/API/Document/createRange
 ---
+
 {{APIRef("DOM")}}
 
 返回一个 {{domxref("Range")}} 对象。

@@ -2,6 +2,7 @@
 title: 高阶文字排版
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/文件和网站结构", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML 中有许多其他元素可以用于格式化文本，我们没有在[HTML 文字处理基础](/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)中提到它们。本文中所描述的元素虽然少有人知，但仍然值得去学习（尽管仍然不是完整的列表）。在这里你将了解标记引文、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。

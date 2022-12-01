@@ -3,6 +3,7 @@ title: HTMLAnchorElement.pathname
 slug: Web/API/HTMLAnchorElement/pathname
 original_slug: Web/API/HTMLHyperlinkElementUtils/pathname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLAnchorElement.pathname`** プロパティは、最初の `'/'` とその後に続く URL のパスが入った文字列（または、パスがない場合は空の文字列）です。

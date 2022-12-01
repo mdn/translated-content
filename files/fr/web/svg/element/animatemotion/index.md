@@ -7,6 +7,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Element/animateMotion
 ---
+
 {{SVGRef}}
 
 L'élément **`<animateMotion>`** permet d'animer un élément le long d'un chemin donné.

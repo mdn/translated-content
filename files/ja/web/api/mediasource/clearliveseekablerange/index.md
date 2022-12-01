@@ -2,6 +2,7 @@
 title: MediaSource.clearLiveSeekableRange()
 slug: Web/API/MediaSource/clearLiveSeekableRange
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} インターフェイスの **`clearLiveSeekableRange()`** メソッドは、{{domxref("MediaSource.setLiveSeekableRange()","setLiveSeekableRange()")}} の呼び出しで以前に設定されたシーク可能な範囲をクリアします。
@@ -22,9 +23,7 @@ mediaSource.clearLiveSeekableRange()
 
 ## 仕様
 
-| 仕様                                                                                                                                             | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions','#dom-mediasource-clearliveseekablerange','clearLiveSeekableRange()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

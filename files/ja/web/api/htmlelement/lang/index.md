@@ -2,6 +2,7 @@
 title: HTMLElement.lang
 slug: Web/API/HTMLElement/lang
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.lang`** プロパティは、要素の属性値とテキストコンテンツの基本言語を取得または設定します。

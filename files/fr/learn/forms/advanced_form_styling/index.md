@@ -4,6 +4,7 @@ slug: Learn/Forms/Advanced_form_styling
 translation_of: Learn/Forms/Advanced_form_styling
 original_slug: Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
 Dans cet article, nous verrons comment utiliser CSS pour mettre en forme les contrôles de formulaires qui sont les plus compliqués à mettre en forme. Comme abordé [dans l'article précédent](/fr/docs/Learn/Forms/Styling_web_forms), les champs texte et les boutons sont plutôt simples à mettre en forme. Nous verrons ici le changement de style pour les éléments de formulaire plus problématiques.
@@ -408,7 +409,7 @@ Les champs pour les dates et heures ([`datetime-local`](/fr/docs/Web/HTML/Elemen
 
 Toutefois, les parties internes du contrôle (le calendrier qui s'affiche pour sélectionner la date, le sélecteur pour incrémenter/décrémenter les valeurs) ne sont pas du tout personnalisables et on ne peut pas s'en débarrasser avec `appearance: none;`. Si vous devez maîtriser la forme de 1 à Z, vous devrez utiliser une bibliothèque tierce ou construire votre propre contrôle.
 
-> **Note :** On notera que [`<input type="number">`](/fr/docs/Web/HTML/Element/Input/number)  peut souffrir du même problème quant au mécanisme d'incrémentation/décrémentation. Toutefois, on peut contourner certains problèmes, lorsque les données collectées par le contrôle sont simples, en utilisant un champ de type `text` à la place.
+> **Note :** On notera que [`<input type="number">`](/fr/docs/Web/HTML/Element/Input/number) peut souffrir du même problème quant au mécanisme d'incrémentation/décrémentation. Toutefois, on peut contourner certains problèmes, lorsque les données collectées par le contrôle sont simples, en utilisant un champ de type `text` à la place.
 
 ### Les champs d'intervalle
 

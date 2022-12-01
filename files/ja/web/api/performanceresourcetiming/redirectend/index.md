@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.redirectEnd
 slug: Web/API/PerformanceResourceTiming/redirectEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`redirectEnd`** 読み取り専用プロパティは、最後のリダイレクトのレスポンスの最後のバイトを受信した直後に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
@@ -57,9 +58,7 @@ function print_start_and_end_properties(perfEntry) {
 
 ## 仕様書
 
-| 仕様                                                                                                                         | ステータス                           | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-redirectEnd', 'redirectEnd')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

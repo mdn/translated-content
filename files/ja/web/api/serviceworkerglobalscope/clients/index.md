@@ -1,35 +1,30 @@
 ---
 title: ServiceWorkerGlobalScope.clients
 slug: Web/API/ServiceWorkerGlobalScope/clients
+l10n:
+  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-{{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`clients`** 読み取り専用プロパティは、service worker に関連する [`Clients`](/ja/docs/Web/API/Clients) オブジェクトを返します。
+{{APIRef("Service Workers API")}}
 
-## 構文
+**`clients`** は {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、サービスワーカーに関連付けられた [`Clients`](/ja/docs/Web/API/Clients) オブジェクトを返します。
 
-```
-swClients = self.clients
-```
+## 値
 
-### 値
+指定されたワーカーに関連付けられた {{domxref("Clients")}} オブジェクト。
 
-指定した worker に関連した {{domxref("Clients")}} オブジェクト。
+## 仕様書
 
-## 仕様
-
-| 仕様                                                                                                                                             | ステータス                           | コメント   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---------- |
-| {{SpecName('Service Workers', '#service-worker-global-scope-clients', 'ServiceWorkerRegistration.clients')}} | {{Spec2('Service Workers')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.ServiceWorkerGlobalScope.clients")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Using Service Workers](/ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
+- [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [サービスワーカーの基本的なコード例](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web workers](/ja/docs/Web/Guide/Performance/Using_web_workers)
+- [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)

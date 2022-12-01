@@ -2,7 +2,8 @@
 title: window.location
 slug: Web/API/Window/location
 ---
-{{ ApiRef() }}
+
+{{APIRef}}
 
 ### Summary
 
@@ -317,4 +318,4 @@ var showBookmark = (function () {
 
 ### Browser compatibility
 
-{{Compat("api.Window.location")}}
+{{Compat}}

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/toLowerCase
 ---
+
 {{JSRef}}
 
 La méthode **`toLowerCase()`** retourne la chaîne de caractères courante en minuscules.
@@ -38,16 +39,11 @@ console.log( "ALPHABET".toLowerCase() ); // "alphabet"
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.5.4.16', 'String.prototype.toLowerCase')}}                             | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}}         | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.tolowercase', 'String.prototype.toLowerCase')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.toLowerCase")}}
+{{Compat}}
 
 ## Voir aussi
 

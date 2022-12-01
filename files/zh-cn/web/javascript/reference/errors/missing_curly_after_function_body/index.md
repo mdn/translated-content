@@ -2,6 +2,7 @@
 title: 'SyntaxError: missing } after function body'
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_function_body
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 错误提示

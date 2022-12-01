@@ -9,6 +9,7 @@ tags:
   - manifest.json
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
 ---
+
 {{AddonSidebar}}
 
 Utilisez la clé `chrome_settings_overrides` pour remplacer certains paramètres du navigateur. Deux paramètres sont disponibles :

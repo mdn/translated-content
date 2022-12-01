@@ -2,6 +2,7 @@
 title: PerformanceTiming.connectEnd
 slug: Web/API/PerformanceTiming/connectEnd
 ---
+
 {{APIRef("Navigation Timing")}}
 
 ## Summary

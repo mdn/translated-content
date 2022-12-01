@@ -1,13 +1,8 @@
 ---
 title: Pseudo-classes
 slug: Web/CSS/Pseudo-classes
-tags:
-  - CSS
-  - CSS Referência
-  - Intermediário
-  - Seletores
-translation_of: Web/CSS/Pseudo-classes
 ---
+
 {{ CSSRef() }}
 
 Uma _**pseudo-classe**_ CSS é uma palavra-chave adicionada a seletores que especifica um estado especial do elemento selecionado. Por exemplo, {{Cssxref(":hover")}} pode ser usado para alterar a cor de um botão quando o usuário passar o cursor sobre ele.

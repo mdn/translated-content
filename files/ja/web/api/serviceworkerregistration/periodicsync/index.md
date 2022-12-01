@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration.periodicSync
 slug: Web/API/ServiceWorkerRegistration/periodicSync
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`periodicSync`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、定期的なバックグラウンド同期プロセスを管理する {{domxref('PeriodicSyncManager')}} インターフェイスへの参照を返します。

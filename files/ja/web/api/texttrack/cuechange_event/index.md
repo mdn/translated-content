@@ -2,6 +2,7 @@
 title: 'TextTrack: cuechange イベント'
 slug: Web/API/TextTrack/cuechange_event
 ---
+
 {{APIRef}}
 
 **`cuechange`** イベントは、 {{domxref("TextTrack")}} が現在表示しているキューが変更されたときに発生します。このイベントは、もし表示されているものがあれば、 `TextTrack` _および_ {{domxref("HTMLTrackElement")}} の両方に発生します。
@@ -73,9 +74,7 @@ textTrackElem.oncuechange = (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                             |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', '#event-media-cuechange', 'cuechange')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

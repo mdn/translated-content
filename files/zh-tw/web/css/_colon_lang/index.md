@@ -2,6 +2,7 @@
 title: ':lang()'
 slug: Web/CSS/:lang
 ---
+
 {{CSSRef}}
 
 **`:lang()`** 是一種 [CSS](/zh-TW/docs/Web/CSS) [偽類 ( pseudo-class )](/zh-TW/docs/Web/CSS/Pseudo-classes)。它會根據括號中指定的語系，來選擇使用的元素。
@@ -56,7 +57,7 @@ p:lang(en) {
 
 ## 瀏覽器兼容性 Browser compatibility
 
-{{Compat("css.selectors.lang")}}
+{{Compat}}
 
 ## 其他參考 See also
 

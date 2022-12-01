@@ -2,6 +2,7 @@
 title: 漸層
 slug: Web/SVG/Tutorial/Gradients
 ---
+
 {{ PreviousNext("SVG/Tutorial/Fills_and_Strokes", "SVG/Tutorial/Patterns") }}
 
 除了基本的 fill 和 stroke 之外，我們還有一個更令人興奮的功能：給邊框和填充設置漸層。

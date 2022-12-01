@@ -2,6 +2,7 @@
 title: font-family
 slug: Web/CSS/font-family
 ---
+
 {{CSSRef}}
 
 CSS 属性 `font-family` 允许您通过给定一个有先后顺序的，由字体名或者字体族名组成的列表来为选定的元素设置字体。
@@ -183,4 +184,4 @@ font-family: Hawaii 5-0, sans-serif;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.font-family")}}
+{{Compat}}

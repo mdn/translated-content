@@ -4,6 +4,7 @@ slug: Web/CSS/forced-color-adjust
 translation_of: Web/CSS/forced-color-adjust
 browser-compat: css.properties.forced-color-adjust
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`forced-color-adjust`** permet aux auteurs de ne pas activer les modes de couleurs forcées sur certains éléments. Cela restaure la possibilité de contrôler ces valeurs en CSS.

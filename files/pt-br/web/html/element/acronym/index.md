@@ -1,16 +1,8 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Obsoleto
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/acronym
 ---
+
 {{obsolete_header}}
 
 ## Resumo
@@ -21,7 +13,7 @@ O Elemento HTML Acrônimo (`<acronym>)` permite à autores claramente indicar qu
 
 ## Atributos
 
-Este elemento não possui qualquer outro atributo além dos [atributos globais](/pt-BR/docs/HTML/global_attributes "HTML/global attributes"), comuns à todos os elementos.
+Este elemento não possui qualquer outro atributo além dos [atributos globais](/pt-BR/docs/HTML/global_attributes), comuns à todos os elementos.
 
 ## Interface DOM
 
@@ -53,4 +45,4 @@ Embo is purely for the convenira o propósito desta tag seja meramente a conveni
 
 - O elemento HTML {{HTMLElement("abbr")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -2,6 +2,7 @@
 title: 使用 Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
 ---
+
 Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行程式，而不干擾使用者介面運行，另外，Worker 也可以利用 [XMLHttpRequest](/zh-TW/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)；一個 worker 可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。
 
 ## Web Workers API
@@ -14,7 +15,7 @@ Dedicated worker (專有 worker) 是一般 worker，只能被產生它的檔案�
 
 基本上 worker 能夠執行任何事情，比如說 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)、[IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)、和 Firefox OS 特有的 [Data Store API](/zh-TW/docs/Web/API/Data_Store_API) ，然而直接存取 DOM 或是 {{domxref("window")}} 物件的一些方法和屬性則不被允許，更多細節請見 [worker 可存取知函數和類別](/zh-TW/docs/Web/API/Worker/Functions_and_classes_available_to_workers)。
 
-主執行緒和 worker 執行緒之間用 postMessage() 方法發送訊息，然後透過 `onmessage` 事件接受訊息 (訊息存在 {{event("Message")}} 事件的 data 屬性之中)，其中被傳送的資料並非共享而是複製一份後傳送。
+主執行緒和 worker 執行緒之間用 postMessage() 方法發送訊息，然後透過 `onmessage` 事件接受訊息 (訊息存在 {{domxref("Worker/message_event", "message")}} 事件的 data 屬性之中)，其中被傳送的資料並非共享而是複製一份後傳送。
 
 worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 [XMLHttpRequest](/zh-TW/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)。
 
@@ -84,7 +85,7 @@ myWorker.onmessage = function(e) {
 
 拿到存在事件 data 中的計算值後，我們接著將值以 `textContent` 顯示出來。
 
-> **備註：** `建構 Worker` 的 URI 必須遵從[same-origin policy](/zh-TW/docs/Web/Security/Same-origin_policy)。目前各家瀏覽器在這方面存有歧異，Gecko 10.0 {{geckoRelease("10.0")}} 以後允許 data URI 而 Internet Explorer 10 不允許 Blob URI。
+> **備註：** `建構 Worker` 的 URI 必須遵從[same-origin policy](/zh-TW/docs/Web/Security/Same-origin_policy)。目前各家瀏覽器在這方面存有歧異，Gecko 10.0 以後允許 data URI 而 Internet Explorer 10 不允許 Blob URI。
 
 > **備註：** 在主執行緒中存取 `onmessage` `與 postMessage` 需要主動掛在 worker 物件上，在 worker 執行緒則不用，這是因為 worker 執行緒的全域物件便是 worker 物件。
 

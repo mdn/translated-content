@@ -2,6 +2,7 @@
 title: HTMLDivElement
 slug: Web/API/HTMLDivElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLDivElement`** 接口提供了一些特殊属性（它也继承了通常的 {{domxref("HTMLElement")}} 接口）来操作 {{HtmlElement("div")}} 元素。
@@ -25,7 +26,7 @@ _没有特有的方法；方法继承自父类，{{domxref("HTMLElement")}}。_
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLDivElement")}}
+{{Compat}}
 
 ## 参见
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/isView
 ---
+
 {{JSRef}}
 
 La méthode **`ArrayBuffer.isView()`** renvoie `true` si l'argument passé est une des vues `ArrayBuffer`, comme par exemple [un tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray) ou une {{jsxref("DataView")}} ; `false` sinon.
@@ -52,15 +53,11 @@ ArrayBuffer.isView(dv); // true
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires                               |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------ |
-| {{SpecName('Typed Array')}}                                                             | {{Spec2('Typed Array')}} | Remplacée par ECMAScript 2015              |
-| {{SpecName('ES2015', '#sec-arraybuffer.isview', 'ArrayBuffer.isView')}} | {{Spec2('ES2015')}}         | Définition initiale dans un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-arraybuffer.isview', 'ArrayBuffer.isView')}} | {{Spec2('ESDraft')}}     |                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.ArrayBuffer.isView")}}
+{{Compat}}
 
 ## Voir aussi
 

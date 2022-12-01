@@ -1,48 +1,43 @@
 ---
 title: Request.redirect
 slug: Web/API/Request/redirect
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
+
 {{APIRef("Fetch")}}
 
-{{domxref("Request")}} インターフェイスの **`redirect`** 読み取り専用プロパティには、リダイレクトの処理方法モードが含まれています。
+**`redirect`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リダイレクトを処理する方法のモードを保持します。
 
-## 構文
+## 値
 
-```js
-var myRedirect = request.redirect;
-```
-
-### 値
-
-`RequestRedirect` 列挙値、次の文字列のいずれかになります:
+`RequestRedirect` 列挙値で、以下の文字列のいずれかになります。
 
 - `follow`
 - `error`
 - `manual`
 
-request の作成時に指定されない場合、デフォルト値の `follow` になります。
+リクエストの作成時に指定されなかった場合は、既定値の `follow` になります。
 
 ## 例
 
-次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクタを使用して新しい request を作成し ( script と同じディレクトリにある画像ファイルの場合)、 request の `redirect` 値を変数に保存します:
+次のスニペットでは、 {{domxref("Request.Request()")}} コンストラクターを使用して（スクリプトと同じディレクトリにある画像ファイルのために）新しいリクエストを作成し、そのリクエストの `redirect` の値を変数に保存します。
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myCred = myRequest.redirect;
+const myRequest = new Request('flowers.jpg');
+const myCred = myRequest.redirect;
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                         | 状態                     | コメント   |
-| ---------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('Fetch','#dom-request-redirect','redirect')}} | {{Spec2('Fetch')}} | 初回定義。 |
+{{Specifications}}
 
-## ブラウザーの実装状況
+## ブラウザーの互換性
 
-{{Compat("api.Request.redirect")}}
+{{Compat}}
 
 ## 関連項目
 
-- [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/ja/docs/Web/HTTP/Access_control_CORS)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

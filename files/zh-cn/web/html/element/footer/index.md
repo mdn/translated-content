@@ -2,9 +2,10 @@
 title: <footer>
 slug: Web/HTML/Element/footer
 ---
-{{HTMLRef}}
 
-**HTML \<footer> 元素**表示最近一个[章节内容](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Defining_Sections_in_HTML5)或者[根节点](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root)（sectioning root ）元素的页脚。一个页脚通常包含该章节作者、版权数据或者与文档相关的链接等信息。
+{{HTMLSidebar}}
+
+**HTML \<footer> 元素**表示最近一个[章节内容](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Defining_Sections_in_HTML5)或者[根节点](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root)（sectioning root）元素的页脚。一个页脚通常包含该章节作者、版权数据或者与文档相关的链接等信息。
 
 {{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
 
@@ -41,6 +42,6 @@ slug: Web/HTML/Element/footer
 
 ## 参见
 
-- 其他 section 相关的元素: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
+- 其他 section 相关的元素：{{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("section")}}, {{HTMLElement("address")}};
 - [Sections and outlines of an HTML5 document](/zh-CN/docs/Sections_and_Outlines_of_an_HTML5_document).
 - [ARIA: Contentinfo role](/zh-CN/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)

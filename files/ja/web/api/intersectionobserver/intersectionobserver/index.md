@@ -2,6 +2,7 @@
 title: IntersectionObserver.IntersectionObserver()
 slug: Web/API/IntersectionObserver/IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 **`IntersectionObserver()`** コンストラクターは、新しい {{domxref("IntersectionObserver")}} オブジェクトを生成します。 `rootMargin` は、指定されていた場合は構文が正しいかが確認され、閾値は、0.0 から 1.0 の間であるか確認され、閾値のリストは昇順に並べ替えられます。閾値のリストが空の場合、 \[0.0] の配列に設定されます。
@@ -56,9 +57,7 @@ let observer = new IntersectionObserver(myObserverCallback,
 
 ## 仕様
 
-| 仕様書                                                                                                                                                           | 策定状況                                     | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-intersectionobserver','IntersectionObserver constructor')}} | {{Spec2('IntersectionObserver')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

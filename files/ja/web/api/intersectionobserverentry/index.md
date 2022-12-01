@@ -2,6 +2,7 @@
 title: IntersectionObserverEntry
 slug: Web/API/IntersectionObserverEntry
 ---
+
 {{SeeCompatTable}}{{APIRef("Intersection Observer API")}}
 
 [Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API) の **`IntersectionObserverEntry`** インターフェイスは、特定の遷移時点でのターゲット要素とそのルートコンテナ間の共通部分を記述します。 `IntersectionObserverEntry` のインスタンスは、その `entries` パラメータで {{domxref("IntersectionObserver")}} コールバックに渡されます。それ以外の場合、これらのオブジェクトは {{domxref("IntersectionObserver.takeRecords()")}} を呼び出すことによってのみ取得できます。
@@ -29,9 +30,7 @@ _このインタフェースにはメソッドがありません。_
 
 ## 仕様
 
-| 仕様書                                                                                                                           | ステータス                                   | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('IntersectionObserver','#intersection-observer-entry','IntersectionObserverEntry')}} | {{Spec2('IntersectionObserver')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザの互換性
 

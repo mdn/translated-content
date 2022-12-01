@@ -3,6 +3,7 @@ title: Générateur d'histoires absurdes
 slug: Learn/JavaScript/First_steps/Silly_story_generator
 translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 Dans cette évaluation, vous aurez pour tâche d'utiliser les connaissances que vous avez apprises dans les articles de ce module et de les appliquer dans le but de créer une appli ludique qui génère des histoires absurdes au hasard. Amusez-vous bien !

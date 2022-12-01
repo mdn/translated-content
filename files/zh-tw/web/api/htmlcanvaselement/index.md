@@ -2,6 +2,7 @@
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement`** 介面提供控制 canvas 元素的屬性和方法. `HTMLCanvasElement` 介面也繼承了 {{domxref("HTMLElement")}} 介面的屬性和方法.
@@ -42,7 +43,7 @@ _從父代繼承的方法,_ _{{domxref("HTMLElement")}}._
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLCanvasElement")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: Navigator.vibrate()
 slug: Web/API/Navigator/vibrate
 ---
+
 {{APIRef("Vibration API")}}
 
 **`Navigator.vibrate()`** メソッドは、端末のバイブレーションハードウェアがあればパルスを送ります。端末がバイブレーションに対応していない場合は、このメソッドは効果はありません。このメソッドが呼び出されたときに、すでにバイブレーションパターンが進行中であった場合は、前のパターンが停止され、代わりに新しいパターンが始まります。
@@ -28,9 +29,7 @@ window.navigator.vibrate([100,30,100,30,100,30,200,30,200,30,200,30,100,30,100,3
 
 ## 仕様書
 
-| 仕様書                                   | 状態                                 | 備考                                                               |
-| ---------------------------------------- | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('Vibration API')}} | {{Spec2('Vibration API')}} | Linked to spec is the latest editor's draft; W3C version is a REC. |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

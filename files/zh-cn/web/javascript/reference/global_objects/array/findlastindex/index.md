@@ -2,6 +2,7 @@
 title: Array.prototype.findLastIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 ---
+
 {{JSRef}}
 
 **`findLastIndex()`** 方法返回数组中满足提供的测试函数条件的最后一个元素的索引。若没有找到对应元素，则返回 -1。

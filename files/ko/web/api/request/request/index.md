@@ -3,6 +3,7 @@ title: Request()
 slug: Web/API/Request/Request
 translation_of: Web/API/Request/Request
 ---
+
 {{APIRef("Fetch")}}
 
 **`Request()`** 생성자는 새로운 {{domxref("Request")}} 객체를 생성하도록 도와줍니다.
@@ -33,7 +34,7 @@ var myRequest = new Request(input, init);
 
 | **타입**    | **내용**                                                                                                                                                          |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TypeError` | [Firefox 43](/ko/docs/Mozilla/Firefox/Releases/43)부터, http://user:password@example.com와 같인 credential을 포함하는 경우 `Request()` 는 타입 에러를 반환합니다. |
+| `TypeError` | [Firefox 43](/ko/docs/Mozilla/Firefox/Releases/43)부터, `http://user:password@example.com` 와 같인 credential을 포함하는 경우 `Request()` 는 타입 에러를 반환합니다. |
 
 ## 예시
 

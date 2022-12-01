@@ -2,6 +2,7 @@
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
+
 {{JSRef}}
 
 **`Object.getPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部プロパティ `[[Prototype]]` の値) を返します。
@@ -46,9 +47,7 @@ Object.getPrototypeOf('foo');
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getprototypeof', 'Object.getPrototypeOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

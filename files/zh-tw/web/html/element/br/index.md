@@ -2,7 +2,8 @@
 title: <br>（斷行元素）
 slug: Web/HTML/Element/br
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<br>` 元素**會產生文字的斷行（carriage-return、CR 或是確認鍵）。此元素主要用於斷行有所意義的時候，像是寫詩或寫住址。
 
@@ -63,12 +64,10 @@ USA
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.br")}}
+{{Compat}}
 
 ## 參見
 
 - {{HTMLElement("address")}} 元素
 - {{HTMLElement("p")}} 元素
 - {{HTMLElement("wbr")}} 元素
-
-{{HTMLRef}}

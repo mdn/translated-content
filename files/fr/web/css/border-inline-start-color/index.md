@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-inline-start-color
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`border-inline-start-color`** définit la couleur de la bordure pour le côté du début de l'élément orienté dans l'axe de lecture. Elle correspond à une propriété physique selon le mode d'écriture de l'élément, sa directionnalité et l'orientation du texte. Autrement dit, elle correspond à l'une des propriétés {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}} ou {{cssxref("border-left-color")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
@@ -34,9 +35,13 @@ border-inline-start-color: rgb(200, 0, 0);
 - `<'border-color'>`
   - : La couleur de la bordure, voir {{cssxref("border-color")}} et {{cssxref("&lt;color&gt;")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -70,15 +75,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline-start-color", "border-inline-start-color")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-inline-start-color")}}
+{{Compat}}
 
 ## Voir aussi
 

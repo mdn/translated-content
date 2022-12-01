@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-left
 ---
+
 {{CSSRef}}
 
 La propriété **`margin-left`** d'un élément définit l'espace horizontal à gauche qui formera la marge à gauche de l'élément. On peut avoir une marge gauche négative qui rapproche l'élément de ses voisins ou une marge positive qui l'en écarte.
@@ -140,9 +141,13 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
       </tbody>
     </table>
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -180,16 +185,8 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 
 ## Spécifications
 
-| Spécification                                                                            | État                                     | Commentaires                                                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------- |
-| {{SpecName('CSS3 Box', '#the-margin', 'margin-left')}}                 | {{Spec2('CSS3 Box')}}             | Pas de modification significative depuis CSS 2.1.                       |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-left')}} | {{Spec2('CSS3 Transitions')}} | `margin-left` peut désormais être animée.                               |
-| {{SpecName('CSS3 Flexbox', '#item-margins', 'margin-left')}}         | {{Spec2('CSS3 Flexbox')}}         | Le comportement de `margin-left` sur les éléments flexibles est défini. |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-left')}} | {{Spec2('CSS2.1')}}                 | L'effet sur les éléments en ligne (_inline_) est retiré.                |
-| {{SpecName('CSS1', '#margin-left', 'margin-left')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.                                                    |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin-left")}}
+{{Compat}}

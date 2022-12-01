@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/@@iterator
 ---
+
 {{JSRef}}
 
 La valeur initiale de la propriété **`@@iterator`** correspond à la valeur initiale fournie par l'itérateur {{jsxref("Array.prototype.values()", "values")}}.
@@ -55,14 +56,11 @@ console.log(eArr.next().value); // p
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype-@@iterator', 'Array.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.@@iterator")}}
+{{Compat}}
 
 ## Voir aussi
 

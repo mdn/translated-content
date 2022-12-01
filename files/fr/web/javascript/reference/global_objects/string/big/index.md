@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/big
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`big()`** crée un élément HTML {{HTMLElement("big")}} qui affichera la chaine de caractères avec une taille de police importante.
@@ -52,14 +53,11 @@ document.getElementById('idÉlément').style.fontSize = '2em'
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.big', 'String.prototype.big')}}     | {{Spec2('ES6')}}         | Définition initiale. Implémentée dans JavaScript 1.0. Définie dans l'annexe normative pour les fonctionnalités supplémentaires des navigateurs web. |
-| {{SpecName('ESDraft', '#sec-string.prototype.big', 'String.prototype.big')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript supplémentaires des navigateurs web.                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.big")}}
+{{Compat}}
 
 ## Voir aussi
 

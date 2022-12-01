@@ -2,6 +2,7 @@
 title: <ratio>
 slug: Web/CSS/ratio
 ---
+
 {{CSSRef}}
 
 **`<ratio>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、[アスペクト比](/ja/docs/Web/CSS/@media/aspect-ratio)を[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)内で記述するために使用し、2 つの単位のない値で比率を記述します。
@@ -31,10 +32,7 @@ slug: Web/CSS/ratio
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                                     | 備考     |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------- |
-| {{SpecName('CSS4 Media Queries', '#values', '&lt;ratio&gt;')}} | {{Spec2('CSS4 Media Queries')}} |          |
-| {{SpecName('CSS3 Media Queries', '#values', '&lt;ratio&gt;')}} | {{Spec2('CSS3 Media Queries')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

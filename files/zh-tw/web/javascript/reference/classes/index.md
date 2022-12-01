@@ -2,6 +2,7 @@
 title: Classes
 slug: Web/JavaScript/Reference/Classes
 ---
+
 {{JsSidebar("Classes")}}
 
 類別 (class) 是在 ECMAScript 6 中引入，用來作為建立新物件的模板。它能將程式碼封裝起來便於處理。

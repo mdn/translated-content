@@ -2,6 +2,7 @@
 title: MessageChannel()
 slug: Web/API/MessageChannel/MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessageChannel")}} インターフェースの `MessageChannel()` コンストラクタは、2 つの新しい {{domxref("MessagePort")}} オブジェクトを持つ新しい {{domxref("MessageChannel")}} オブジェクトを返します。
@@ -45,10 +46,7 @@ function handleMessage(e) {
 
 ## 仕様
 
-| 仕様書                                                                                                   | 策定状況                                     | 備考                                                            |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-messagechannel','MessageChannel()')}}             | {{Spec2('HTML WHATWG')}}             | {{SpecName("HTML5 Web Messaging")}} との差異なし。 |
-| {{SpecName('HTML5 Web Messaging', '#dom-messagechannel','MessageChannel()')}} | {{Spec2('HTML5 Web Messaging')}} | 仕様の W3C バージョン。                                         |
+{{Specifications}}
 
 ## ブラウザの実装状況
 

@@ -2,6 +2,7 @@
 title: scroll-snap-destination
 slug: Web/CSS/scroll-snap-destination
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 摘要

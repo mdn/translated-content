@@ -2,12 +2,13 @@
 title: 'Reason: Multiple CORS header ''Access-Control-Allow-Origin'' not allowed'
 slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 ---
+
 {{HTTPSidebar}}
 
 ## 原因
 
 ```plain
-原因：不允许出现多个 ‘Access-Control-Allow-Origin’ CORS 头信息。
+原因：不允许出现多个‘Access-Control-Allow-Origin’CORS 头信息。
 ```
 
 ## 为什么会出现该问题？

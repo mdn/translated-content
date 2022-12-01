@@ -2,6 +2,7 @@
 title: <display-legacy>
 slug: Web/CSS/display-legacy
 ---
+
 {{CSSRef}}
 
 CSS 2 では `display` プロパティで単一のキーワードによる構文を採用しており、同じレイアウトモードのブロックレベルとインラインレベルで別々のキーワードが必要でした。このページではこれらの値を詳しく紹介します。
@@ -70,9 +71,7 @@ Not a flex item
 
 ## 仕様書
 
-| 仕様書                                                                                    | 状態                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('CSS3 Display', '#typedef-display-legacy', 'display-legacy')}} | {{Spec2('CSS3 Display')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

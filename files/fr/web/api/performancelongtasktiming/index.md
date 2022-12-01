@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/PerformanceLongTaskTiming
 ---
+
 {{SeeCompatTable}}{{APIRef("Long Tasks")}}
 
 L'interface **`PerformanceLongTaskTiming`** de [l'API _Long Tasks_](/fr/docs/Web/API/Long_Tasks_API) signale les instances de tâches longues.

@@ -2,6 +2,7 @@
 title: Math.SQRT2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT2
 ---
+
 {{JSRef}}
 
 **`Math.SQRT2`** プロパティは、 2 の平方根、約 1.414 を表します。
@@ -30,9 +31,7 @@ getRoot2(); // 1.4142135623730951
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.sqrt2', 'Math.SQRT2')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

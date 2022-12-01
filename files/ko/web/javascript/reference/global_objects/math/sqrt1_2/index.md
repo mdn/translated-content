@@ -3,6 +3,7 @@ title: Math.SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 ---
+
 {{JSRef}}
 
 **`Math.SQRT1_2`** 프로퍼티는 약 0.707의 값을 나타내는 루트 1/2을 나타냅니다:

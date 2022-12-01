@@ -2,6 +2,7 @@
 title: HTMLInputElement.stepUp()
 slug: Web/API/HTMLInputElement/stepUp
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.stepUp()`** メソッドは、数値型の {{HTMLElement("input")}} 要素の値を
@@ -173,4 +174,4 @@ input:invalid {
 - {{domxref("HTMLInputElement")}}
 - {{domxref("HTMLInputElement.stepDown")}}
 - [`step`](/ja/docs/Web/HTML/Attributes/step),
-  [`min`](/ja/docs/Web/HTML/Attributes/min),  [`max`](/ja/docs/Web/HTML/Attributes/max) 属性
+  [`min`](/ja/docs/Web/HTML/Attributes/min), [`max`](/ja/docs/Web/HTML/Attributes/max) 属性

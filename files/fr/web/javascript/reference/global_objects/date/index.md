@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date
 ---
+
 {{JSRef}}
 
 Les objets JavaScript **`Date`** représentent un instant donné sur l'axe du temps dans un format indépendant de la plateforme utilisée. Les objets `Date` contiennent un nombre (`Number`) qui représente le nombre de millisecondes écoulées depuis le premier janvier 1970 sur l'échelle [UTC](https://fr.wikipedia.org/wiki/Temps_universel_coordonn%C3%A9).
@@ -227,13 +228,11 @@ Dans ce cas, on renvoie un entier et c'est pour ça qu'on utilise {{jsxref("Math
 
 ## Spécifications
 
-| Spécification                                                        |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date-objects', 'Date')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date", 3)}}
+{{Compat}}
 
 ## Voir aussi
 

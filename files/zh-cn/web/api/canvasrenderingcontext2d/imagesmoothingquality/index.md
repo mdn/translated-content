@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.imageSmoothingQuality
 slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 **CanvasRenderingContext2D.imageSmoothingQuality** 是 Canvas 2D API，用于设置图像平滑度的属性。
@@ -103,7 +104,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.imageSmoothingQuality")}}
+{{Compat}}
 
 ## 参见
 

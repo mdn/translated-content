@@ -4,6 +4,7 @@ slug: Web/CSS/transform-function/skew
 translation_of: Web/CSS/transform-function/skew()
 original_slug: Web/CSS/transform-function/skew()
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) функция **`skew()`** трансформирует элемент, наклоняя его в 2D-пространстве.
@@ -16,9 +17,11 @@ original_slug: Web/CSS/transform-function/skew()
 
 Функция `skew()` задаётся одним или двумя значениями которые отображают наклон в каждом из направлений.
 
-    skew(ax)
+```
+skew(ax)
 
-    skew(ax, ay)
+skew(ax, ay)
+```
 
 ### Значения
 

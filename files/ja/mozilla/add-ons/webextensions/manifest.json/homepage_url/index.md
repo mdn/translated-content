@@ -2,6 +2,7 @@
 title: homepage_url
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

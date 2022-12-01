@@ -1,18 +1,11 @@
 ---
 title: prefers-reduced-data
 slug: Web/CSS/@media/prefers-reduced-data
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.prefers-reduced-data
-translation_of: Web/CSS/@media/prefers-reduced-data
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-> **Note:** この特性は、どのユーザーエージェントも対応しておらず、その仕様が変更される可能性があります。
+> **メモ:** この特性は、どのユーザーエージェントも対応しておらず、その仕様が変更される可能性があります。
 
 **`prefers-reduced-data`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/Media_Queries/Using_media_queries#メディア特性)で、ユーザーがウェブコンテンツのインターネット通信を削減するようリクエストしていることを検出するために使用します。
 
@@ -29,7 +22,7 @@ translation_of: Web/CSS/@media/prefers-reduced-data
 
 ## 例
 
-> **Note:** 現在、この特性を実装しているブラウザーはありませんので、以下の例は動作しません。
+> **メモ:** 現在、この特性を実装しているブラウザーはありませんので、以下の例は動作しません。
 
 この例では、 `montserrat-regular.woff2` フォントファイルは先読みもダウンロードもされません。もしユーザーがデータを削減従っているのであれば、この場合「[システムフォントスタック](https://css-tricks.com/snippets/css/system-font-stack/)」が予備フォントとして機能することになります。
 

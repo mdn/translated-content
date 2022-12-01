@@ -2,11 +2,12 @@
 title: GlobalEventHandlers.onauxclick
 slug: Web/API/Element/auxclick_event
 ---
+
 {{SeeCompatTable}}{{ ApiRef("HTML DOM") }}
 
-**onauxclick** 属性是一个 {{event("Event_handlers", "event handler")}}，当 {{event("auxclick")}} 事件发生时被调用，例如按下了输入设备上的非主按钮 (e.g. 鼠标中键)。
+**`auxclick`** 事件在输入设备的非主按钮（除主按钮——通常是左键外的任何按钮）在同一个 {{domxref("Element")}} 上按下并释放时触发。
 
-实现该属性的一个目标是，提高浏览器与按钮行为之间的兼容性 - 事件行为正在更新，以便 {{Event("click")}} 只触发主按钮点击（例如，鼠标左键）。然后开发人员可以使用 {{Event("auxclick")}} 来为非主按钮点击提供明确的行为。在此之前，{{Event("click")}} 通常会针对所有输入设备按钮点击，浏览器行为有些不一致。
+实现该属性的一个目标是，提高浏览器与按钮行为之间的兼容性 - 事件行为正在更新，以便 [`click`](/zh-CN/docs/Web/API/Element/click_event) 只触发主按钮点击（例如，鼠标左键）。然后开发人员可以使用 `auxclick` 事件来为非主按钮点击提供明确的行为。在此之前，[`click`](/zh-CN/docs/Web/API/Element/click_event) 通常会针对所有输入设备按钮点击，浏览器行为有些不一致。
 
 ## 语法
 
@@ -53,4 +54,4 @@ button.onauxclick = function() {
 
 ## Browser Compatibility
 
-{{Compat("api.GlobalEventHandlers.onauxclick")}}
+{{Compat}}

@@ -3,6 +3,7 @@ title: Node.contains()
 slug: Web/API/Node/contains
 translation_of: Web/API/Node/contains
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.contains()`** 메소드는 주어진 인자가 node 의 자손인지, 아닌지에 대한 {{jsxref("Boolean")}} 값을 리턴합니다.

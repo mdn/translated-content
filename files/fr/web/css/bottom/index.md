@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/bottom
 ---
+
 {{CSSRef}}
 
 La propriété **`bottom`** contribue à la définition de l'emplacement vertical des [éléments positionnés](/fr/docs/Web/CSS/position). Elle n'a aucun effet pour les éléments non-positionnés.
@@ -62,9 +63,13 @@ bottom: unset;
 - `inherit`
   - : Cette valeur indique que la valeur est la même que la valeur calculée pour l'élément parent (qui peut ne pas être le bloc englobant). Cette valeur calculée est gérée comme si elle était une longueur, un pourcentage ou le mot-clé `auto`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -120,17 +125,11 @@ div#fix {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires                                                       |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------ |
-| {{SpecName('CSS2.1', 'visuren.html#choose-position', 'bottom')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                               |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'bottom')}}     | {{Spec2('CSS3 Transitions')}} | `bottom` peut désormais être animée.                               |
-| {{SpecName('CSS3 Positioning', '#propdef-bottom', 'bottom')}}     | {{Spec2('CSS3 Positioning')}} | Décrit le comportement pour le positionnement adhérent (_sticky_). |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.bottom")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: HTML의 이미지
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 초창기의 웹에는 텍스트만 있었고 조금 지루했습니다. 다행히도 웹 페이지 안에 이미지 (및 보다 흥미로운 유형의 컨텐츠)를 삽입하는 기능이 추가되기까지는 오래 걸리지 않았습니다. 시작해볼 수 있는 다른 유형의 멀티미디어가 있지만 단순한 이미지를 웹 페이지에 삽입하는 데 사용되는 {{htmlelement ( "img")}} 요소로 쉽게 시작해 보겠습니다. 이 글에서는 기초내용 부터 심층적으로 사용하는 방법, {{htmlelement("figure")}}를 사용하여 캡션을 주석으로 추가하는 방법, {{htmlelement("CSS")}}배경 이미지와 관련된 사용 방법을 자세히 설명합니다.
@@ -39,7 +40,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 
 이미지를 웹사이트에 넣기위해서 {{htmlelement("img")}} 요소를 사용합니다. 이것은 텍스트 내용이나 클로징 태그를 갖지 않는 {{glossary("비어있는 요소 (empty element)")}}이며, 적어도 `src`(풀네임인 source라고 불리곤 합니다)라는 속성 하나는 사용되어야합니다. `src` 속성은 당신이 페이지에 삽입하고자 하는 이미지를 가리키는 경로를 포함합니다. 그 경로는 {{htmlelement("a")}} 요소의 `href` 속성 값처럼 상대경로여도, 절대경로여도 됩니다.
 
-> **참고:** **노트**: 계속하기 전에 절대경로, 상대경로에 대해 복습하기 위해 [A quick primer on URLs and paths](https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)를 읽어보세요.
+> **참고:** **노트**: 계속하기 전에 절대경로, 상대경로에 대해 복습하기 위해 [A quick primer on URLs and paths](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#A_quick_primer_on_URLs_and_paths)를 읽어보세요.
 
 예를 들어, 당신의 이미지 파일 이름이 `dinosaur.jpg` 이고, 당신의 HTML 페이지와 같은 디렉토리 아래에 위치한다면 이런 식으로 이미지를 삽입할 수 있습니다:
 
@@ -137,7 +138,7 @@ alt는 왜 굳이 사용되거나 필요한걸까? alt는 여러가지 이유로
 
 ### Image titles
 
-As [with links](https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_%3Ctitle%3E), you can also add `title` attributes to images, to provide further supporting information if needed. In our example, we could do this:
+As [with links](/en-US/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#Adding_supporting_information_with_%3Ctitle%3E), you can also add `title` attributes to images, to provide further supporting information if needed. In our example, we could do this:
 
 ```html
 <img src="images/dinosaur.jpg"
@@ -158,7 +159,9 @@ Image titles aren't essential to include. It is often better to include such sup
 
 It is now your turn to play! This active learning section will have you up and running with a simple embedding exercise. You are provided with a basic {{htmlelement("img")}} tag; we'd like you to embed the image located at the following URL:
 
-https\://raw\.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
+https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
+```
 
 Earlier we said to never hotlink to images on other servers, but this is just for learning purposes, so we'll let you off this one time.
 

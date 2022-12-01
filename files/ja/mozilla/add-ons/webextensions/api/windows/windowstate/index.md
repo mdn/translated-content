@@ -2,6 +2,7 @@
 title: windows.WindowState
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 ---
+
 {{AddonSidebar()}}
 
 ブラウザウィンドウの状態。
@@ -29,7 +30,7 @@ macOSとの互換性: macOS 10.10 から、ウィンドウのデフォルトの�
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/extensions/windows#type-WindowState) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

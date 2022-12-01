@@ -2,6 +2,7 @@
 title: CSS 名前空間
 slug: Web/CSS/CSS_Namespaces
 ---
+
 {{CSSRef}}
 
 **CSS 名前空間** (CSS Namespaces) は、 CSS の中で [XML 名前空間](/ja/docs/Namespaces)を指定できるようにするための CSS モジュールです。
@@ -14,9 +15,7 @@ slug: Web/CSS/CSS_Namespaces
 
 ## 仕様書
 
-| 仕様書                          | 状態                         | 備考     |
-| ------------------------------- | ---------------------------- | -------- |
-| {{SpecName("CSS3 Namespaces")}} | {{Spec2("CSS3 Namespaces")}} | 関連情報 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

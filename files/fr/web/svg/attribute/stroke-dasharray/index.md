@@ -4,6 +4,7 @@ slug: Web/SVG/Attribute/stroke-dasharray
 translation_of: Web/SVG/Attribute/stroke-dasharray
 browser-compat: svg.attributes.presentation.stroke-dasharray
 ---
+
 {{SVGRef}}
 
 L'attribut **`stroke-dasharray`** est un attribut de présentation qui définit le motif des traits et des espaces utilisés pour dessiner le contour de la forme.
@@ -32,7 +33,7 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 30 10" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 30 12" xmlns="http://www.w3.org/2000/svg">
   <!-- Pas de tirets ou d'espaces -->
   <line x1="0" y1="1" x2="30" y2="1" stroke="black" />
 
@@ -51,6 +52,10 @@ html,body,svg { height:100% }
   <!-- Traits et espaces de tailles différentes avec un nombre pair de valeurs -->
   <line x1="0" y1="9" x2="30" y2="9" stroke="black"
           stroke-dasharray="4 1 2 3" />
+
+  <!-- Traits commençant par un espace -->
+  <line x1="0" y1="11" x2="30" y2="11" stroke="black"
+          stroke-dasharray="0 4 0" />
 </svg>
 ```
 

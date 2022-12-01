@@ -1,9 +1,9 @@
 ---
 title: Introducción a KumaScript
 slug: MDN/Tools/KumaScript
-translation_of: MDN/Tools/KumaScript
 original_slug: MDN/Tools/Introduction_to_KumaScript
 ---
+
 {{MDNSidebar}}
 
 ## Vistazo general
@@ -593,21 +593,6 @@ Carriage returns added here and there for clarity.
 <% } else { %>
 <p>DOM Level 0. Not part of any standard.</p>
 <% } %>
-```
-
-```js
-// From ReleaseChannelInfo() template
-// Before:
-web.html("<p>Firefox " + $0 + ", based on Gecko " + $1 + ", will ship in " + $2 + ". This article provides information about the changes in this release that will affect developers. Nightly builds of what will become Firefox " + $0 + " are " + web.link(url, "currently available") + " on the " + string.ToUpperFirst($3) + " channel.</p>");
-```
-
-```js
-// After:
-<p>Firefox <%= $0 %>, based on Gecko <%= $1 %>, will ship in <%= $2 %>. This
- article provides information about the changes in this release that will
- affect developers. Nightly builds of what will become Firefox <%= $0 %>
- are <%- web.link(url, "currently available")%>  on the
- <%= string.ToUpperFirst($3) %> channel.</p>
 ```
 
 ```js

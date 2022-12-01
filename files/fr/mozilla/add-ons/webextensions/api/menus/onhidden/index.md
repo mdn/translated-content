@@ -12,6 +12,7 @@ tags:
   - onHidden
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque le navigateur cesse d'afficher un menu: par exemple, parce que l'utilisateur a cliqué à l'extérieur ou sélectionné un élément.

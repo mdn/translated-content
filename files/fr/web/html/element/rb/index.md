@@ -8,7 +8,8 @@ tags:
   - Ruby
 translation_of: Web/HTML/Element/rb
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément de **base ruby (`<rb>`)** est utilisé afin de délimiter le composant texte de base d'une annotation {{HTMLElement("ruby")}}. Autrement dit, le texte qui est annoté. Un élément `<rb>` devrait encadrer chaque segment atomique du texte de base.
 

@@ -2,6 +2,7 @@
 title: Storage
 slug: Web/API/Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 [Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API) 中的 **`Storage`** 介面提供了存取特定 domain session 及本機儲存的方法。舉例而言，它能夠對存取的資料進行新增、刪除、修改，
@@ -69,7 +70,7 @@ function setStyles() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Storage")}}
+{{Compat}}
 
 ## See also
 

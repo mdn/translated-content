@@ -2,6 +2,7 @@
 title: 使用 Web Notifications
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 ---
+
 {{APIRef("Web Notifications")}}
 
 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 允许网页或应用程序在系统级别发送在页面外部显示的通知;这样即使应用程序空闲或在后台，Web 应用程序也会向用户发送信息。本文将介绍在您自己的应用程序中使用此 API 的基础知识。
@@ -83,13 +84,13 @@ window.addEventListener('load', function () {
 
 一旦通知被创建出来，它会立即被显示出来。为了跟踪通知当前的状态，在 {{domxref("Notification")}} 实例层面上会有 4 个事件被触发：
 
-- {{event("show")}}
+- {{domxref("Notification.show_event","show")}}
   - : 当通知被显示给用户时触发。
-- {{event("click")}}
+- {{domxref("Notification.click_event","click")}}
   - : 当用户点击通知时触发。
-- {{event("close")}}
+- {{domxref("Notification.close_event","close")}}
   - : 当通知被关闭时触发。
-- {{event("error")}}
+- {{domxref("Notification.error_event","error")}}
   - : 当通知发生错误的时候触发。这通常是因为通知由于某些原因而无法显示。
 
 这些事件可以通过事件处理跟踪 {{domxref("Notification.onshow","onshow")}}、{{domxref("Notification.onclick","onclick")}}、{{domxref("Notification.onclose","onclose")}} 和 {{domxref("Notification.onerror","onerror")}}。因为 {{domxref("Notification")}} 同样继承自 {{domxref("EventTarget")}}，因此可以对它调用 {{domxref("EventTarget.addEventListener","addEventListener()")}} 方法。
@@ -245,7 +246,7 @@ window.addEventListener('load', function () {
 
 实际效果如下：
 
-{{ EmbedLiveSample('Tag_example', '100%', 30) }}
+{{ EmbedLiveSample('使用标记的例子', '100%', 30) }}
 
 ## 接收点击应用通知的通知
 
@@ -262,7 +263,7 @@ window.addEventListener('load', function () {
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## 参考
 

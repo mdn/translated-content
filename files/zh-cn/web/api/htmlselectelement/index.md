@@ -2,6 +2,7 @@
 title: HTMLSelectElement
 slug: Web/API/HTMLSelectElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement`** 接口表示一个 {{HTMLElement("select")}} HTML 元素。这个元素也通过 {{domxref("HTMLElement")}} 接口从其他 HTML 元素共享所有属性和方法。
@@ -107,7 +108,7 @@ A better way to track changes to the user's selection is to watch for the {{domx
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSelectElement")}}
+{{Compat}}
 
 ## 参见
 

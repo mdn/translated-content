@@ -1,14 +1,6 @@
 ---
 title: URL.hash
 slug: Web/API/URL/hash
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-browser-compat: api.URL.hash
 ---
 
 {{ APIRef("URL API") }}
@@ -27,7 +19,7 @@ Uma {{domxref("USVString")}}.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/href#Examples"
+  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/href#Examples"
 );
 console.log(url.hash); // Logs: '#Examples'
 ```

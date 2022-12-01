@@ -2,6 +2,7 @@
 title: JavaScript 是什麼?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 歡迎來到 MDN 的 JavaScript 初學者課程！我們將在這個章節綜觀 JavaScript ，回答一些像是「它什麼？」和「可以使用它作什麼？」之的問題，並確保你了解 JavaScript 的特性。
@@ -83,7 +84,7 @@ JavaScript 語言的核心包含了很多常用的程式功能供你使用，如
 
 - 將有用的值存儲在變數中。例如上述例子，我們要求輸入一個新名字，然後將該名字存在名為`name`的變數裡。
 - 對文本片段的操作（在程式裡稱作"字串"）。在上述例子中，我們拿了字串 "Player 1: " 並將其與 `name` 變數連接來創造完整文本標籤，如：''Player 1: Chris"。
-- 執行程式碼，回應網頁上發生的某些事件。在上述例子中，我們使用 {{Event("click")}} 事件，當按鈕被點擊時，便執行更新文本標籤的程式碼。
+- 執行程式碼，回應網頁上發生的某些事件。在上述例子中，我們使用 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件，當按鈕被點擊時，便執行更新文本標籤的程式碼。
 - 以及其他更多更多的功能！
 
 然而，更令人興奮的是那些基於用戶端的 JavaScript 語言構建的功能。也就是所謂的 **應用程式介面**（**API**），提供 JavaScript 程式額外的超能力。

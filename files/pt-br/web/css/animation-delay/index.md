@@ -1,10 +1,8 @@
 ---
 title: animation-delay
 slug: Web/CSS/animation-delay
-tags:
-  - Animação
-translation_of: Web/CSS/animation-delay
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`animation-delay`** especifíca quando uma animação deve começar. Você pode começar a animação no futuro, imediatamente ou desde o início, ou imediatamente e parcialmente através do ciclo de animação.
@@ -43,7 +41,7 @@ Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}
 
 ## Exemplos
 
-Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations "CSS/CSS_animations") para exemplos.
+Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations) para exemplos.
 
 ## Especificação
 
@@ -57,5 +55,5 @@ Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations "CSS/CSS_animations") para 
 
 ## Veja também
 
-- [Using CSS animations](/pt-BR/docs/CSS/Tutorials/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/pt-BR/docs/CSS/Tutorials/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

@@ -2,6 +2,7 @@
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
+
 {{JSRef}}
 
 `apply()` 方法调用一个具有给定 `this` 值的函数，以及以一个数组（或一个[类数组对象](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)）的形式提供的参数。
@@ -23,7 +24,7 @@ apply(thisArg, argsArray)
 
 - `argsArray` {{optional_inline}}
 
-  - : 一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 `func` 函数。如果该参数的值为 {{jsxref("null")}} 或  {{jsxref("undefined")}}，则表示不需要传入任何参数。从 ECMAScript 5 开始可以使用类数组对象。[浏览器兼容性](#浏览器兼容性)请参阅本文底部内容。
+  - : 一个数组或者类数组对象，其中的数组元素将作为单独的参数传给 `func` 函数。如果该参数的值为 {{jsxref("null")}} 或 {{jsxref("undefined")}}，则表示不需要传入任何参数。从 ECMAScript 5 开始可以使用类数组对象。[浏览器兼容性](#浏览器兼容性)请参阅本文底部内容。
 
 ### 返回值
 
@@ -33,13 +34,13 @@ apply(thisArg, argsArray)
 
 > **备注：** 虽然这个函数的语法与 {{jsxref("Function.call", "call()")}} 几乎相同，但根本区别在于，`call()` 接受一个**参数列表**，而 `apply()` 接受一个**参数的单数组**。
 
-> **备注：** 当第一个参数为 {{jsxref("null")}} 或  {{jsxref("undefined")}} 时，可以使用数组[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)实现类似的结果。
+> **备注：** 当第一个参数为 {{jsxref("null")}} 或 {{jsxref("undefined")}} 时，可以使用数组[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)实现类似的结果。
 
 在调用一个存在的函数时，你可以为其指定一个 `this` 对象。`this` 指当前对象，也就是正在调用这个函数的对象。使用 `apply`，你可以只写一次这个方法然后在另一个对象中继承它，而不用在新对象中重复写该方法。
 
 `apply` 与 {{jsxref("Function.call", "call()")}} 非常相似，不同之处在于提供参数的方式。`apply` 使用参数数组而不是一组参数列表。`apply` 可以使用数组字面量（array literal），如 `fun.apply(this, ['eat', 'bananas'])`，或数组对象，如 `fun.apply(this, new Array('eat', 'bananas'))`。
 
-你也可以使用 {{jsxref("Functions/arguments", "arguments")}} 对象作为 `argsArray` 参数。`arguments` 是一个函数的局部变量。 它可以被用作被调用对象的所有未指定的参数。这样，你在使用 apply 函数的时候就不需要知道被调用对象的所有参数。你可以使用 arguments 来把所有的参数传递给被调用对象。被调用对象接下来就负责处理这些参数。
+你也可以使用 {{jsxref("Functions/arguments", "arguments")}} 对象作为 `argsArray` 参数。`arguments` 是一个函数的局部变量。它可以被用作被调用对象的所有未指定的参数。这样，你在使用 apply 函数的时候就不需要知道被调用对象的所有参数。你可以使用 arguments 来把所有的参数传递给被调用对象。被调用对象接下来就负责处理这些参数。
 
 从 ECMAScript 第 5 版开始，可以使用任何种类的类数组对象，就是说只要有一个 `length` 属性和 `(0..length-1)` 范围的整数属性。例如现在可以使用 {{domxref("NodeList")}} 或一个自己定义的类似 `{'length': 2, '0': 'eat', '1': 'bananas'}` 形式的对象。
 
@@ -111,7 +112,7 @@ let min = minOfArray([5, 6, 2, 3, 7]);
 
 ### 使用 apply 来链接构造器
 
-你可以使用 apply 来链接一个对象{{jsxref("Operators/new", "构造器", "", 1)}}，类似于 Java。在接下来的例子中我们会创建一个全局 {{jsxref("Global_Objects/Function")}} 对象的 `construct` 方法 ，来使你能够在构造器中使用一个类数组对象而非参数列表。
+你可以使用 apply 来链接一个对象{{jsxref("Operators/new", "构造器", "", 1)}}，类似于 Java。在接下来的例子中我们会创建一个全局 {{jsxref("Global_Objects/Function")}} 对象的 `construct` 方法，来使你能够在构造器中使用一个类数组对象而非参数列表。
 
 ```js
 Function.prototype.construct = function (aArgs) {

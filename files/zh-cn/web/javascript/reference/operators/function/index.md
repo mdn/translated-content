@@ -2,6 +2,7 @@
 title: 函数表达式
 slug: Web/JavaScript/Reference/Operators/function
 ---
+
 {{jsSidebar("Operators")}}
 
 **`function`** 关键字可以用来在一个表达式中定义一个函数。
@@ -21,7 +22,7 @@ let function_expression = function [name]([param1[, param2[, ..., paramN]]]) {
 ### 参数
 
 - `name`
-  - : 函数名称。可被省略，此种情况下的函数是匿名函数（_anonymous_）。 函数名称只是函数体中的一个本地变量。
+  - : 函数名称。可被省略，此种情况下的函数是匿名函数（_anonymous_）。函数名称只是函数体中的一个本地变量。
 - `paramN`
   - : 被传递给函数的一个参数名称。一个函数至多拥有 255 个参数。
 - `statements`

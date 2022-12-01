@@ -3,6 +3,7 @@ title: brightness()
 slug: Web/CSS/filter-function/brightness
 original_slug: Web/CSS/filter-function/brightness()
 ---
+
 {{CSSRef}}
 
 **`brightness()`** は [CSS](/ja/docs/Web/CSS) の関数で、入力画像に線形乗算を適用し、明るくしたり暗くしたりします。その結果は {{cssxref("&lt;filter-function&gt;")}} です。

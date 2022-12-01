@@ -1,13 +1,8 @@
 ---
 title: ':-moz-drag-over'
 slug: Web/CSS/:-moz-drag-over
-tags:
-  - CSS
-  - NeedsCompatTable
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-drag-over
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Resumen
@@ -16,7 +11,9 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-mo
 
 ## Síntaxis
 
-    element:-moz-drag-over { propiedades del estilo }
+```
+element:-moz-drag-over { propiedades del estilo }
+```
 
 ## Ejemplo
 

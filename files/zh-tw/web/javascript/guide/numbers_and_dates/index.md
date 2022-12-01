@@ -2,6 +2,7 @@
 title: 數字與日期
 slug: Web/JavaScript/Guide/Numbers_and_dates
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 這個章節將介紹如何在 JavaScript 中處理數字與日期。

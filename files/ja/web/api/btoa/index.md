@@ -3,6 +3,7 @@ title: WindowOrWorkerGlobalScope.btoa()
 slug: Web/API/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`WindowOrWorkerGlobalScope.btoa()`** メソッドは、 {{glossary("Base64")}} でエンコードされた ASCII 文字列を[バイナリ文字列](/ja/docs/Web/API/DOMString/Binary) (例えば {{jsxref("String")}} オブジェクトのうち、文字列中のすべての文字がバイナリデータのバイトとして扱うことができるもの) から生成します。
@@ -96,15 +97,11 @@ console.log(original);                // ☸☹☺☻☼☾☿
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-btoa', 'WindowOrWorkerGlobalScope.btoa()')}} | {{Spec2('HTML WHATWG')}} | 最新の仕様で、メソッドを `WindowOrWorkerGlobalScope` ミックスインに移動。                                                   |
-| {{SpecName('HTML5.1', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}     | {{Spec2('HTML5.1')}}     | {{SpecName("HTML WHATWG")}} のスナップショット、変更なし。                                                         |
-| {{SpecName("HTML5 W3C", "#dom-windowbase64-btoa", "WindowBase64.btoa()")}} | {{Spec2('HTML5 W3C')}}     | {{SpecName("HTML WHATWG")}} のスナップショット。 `WindowBase64` の作成 (properties where on the target before it). |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.btoa")}}
+{{Compat}}
 
 ## 関連情報
 

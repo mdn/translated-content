@@ -16,6 +16,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 original_slug: Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML")}}
 
@@ -131,7 +132,7 @@ Il y a aussi deux répertoires dans la racine — `pdfs` et `projects`. Chacun d
   Voyez comment faire sur notre page <a href="contacts.html">Contacts</a>.</p>
   ```
 
-- **Descendre dans les sous-répertoires** : si vous désirez inclure un hyperlien dans `index.html` (`celui` de plus haut niveau) pointant vers `projects/index.html`, vous avez besoin de descendre dans le dossier`projects` avant d'indiquer le fichier auquel vous voulez vous lier. Cela se fait en indiquant le nom du dossier, suivi d'une barre oblique normale, puis le nom du fichier. Donc l'URL à utiliser sera `projects/index.html` :
+- **Descendre dans les sous-répertoires** : si vous désirez inclure un hyperlien dans `index.html` (`celui` de plus haut niveau) pointant vers `projects/index.html`, vous avez besoin de descendre dans le dossier `projects` avant d'indiquer le fichier auquel vous voulez vous lier. Cela se fait en indiquant le nom du dossier, suivi d'une barre oblique normale, puis le nom du fichier. Donc l'URL à utiliser sera `projects/index.html` :
 
   ```html
   <p>Visitez la <a href="projects/index.html">page d'accueil</a> de mon projet.</p>

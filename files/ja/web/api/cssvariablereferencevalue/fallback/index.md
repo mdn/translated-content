@@ -2,6 +2,7 @@
 title: CSSVariableReferenceValue.fallback
 slug: Web/API/CSSVariableReferenceValue/fallback
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`fallback`** は {{domxref("CSSVariableReferenceValue")}} インターフェイスの読み取り専用プロパティで、組み込み CSS 値のカスタム名を返します。
@@ -18,9 +19,7 @@ var variable = CSSVariableReferenceValue.variable;
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                     | 備考     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSSOM','#dom-cssvariablereferencevalue-fallback','fallback')}} | {{Spec2('CSSOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

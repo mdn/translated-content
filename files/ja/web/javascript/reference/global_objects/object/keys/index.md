@@ -2,6 +2,7 @@
 title: Object.keys()
 slug: Web/JavaScript/Reference/Global_Objects/Object/keys
 ---
+
 {{JSRef}}
 
 **`Object.keys()`** メソッドは、指定されたオブジェクトが持つプロパティの **名前**の配列を、通常のループで取得するのと同じ順序で返します。
@@ -124,9 +125,7 @@ if (!Object.keys) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: AudioNode
 slug: Web/API/AudioNode
 ---
+
 {{ APIRef("Web Audio API") }} {{SeeCompatTable}}
 
 ![AudioNodes participating in an AudioContext create a audio routing graph.](webaudiobasics.png)**`AudioNode`** 接口是一个处理音频的通用模块，比如一个音频源 (e.g. 一个 HTML {{HTMLElement("audio")}} or {{HTMLElement("video")}} 元素), 一个音频地址或者一个中间处理模块 (e.g. 一个过滤器如 {{domxref("BiquadFilterNode")}}, 或一个音量控制器如 {{domxref("GainNode")}}).
@@ -10,7 +11,7 @@ slug: Web/API/AudioNode
 
 处理多个 `AudioNode` 时，一般来说，一个模块读取它的输入，做一些处理。后输出新生成的结果。
 
-不同的模块可以连接在一起构建一个处理图。 这样一个处理图包含 {{domxref("AudioContext")}}。 每个 `AudioNode` 只有一个这样的上下文。
+不同的模块可以连接在一起构建一个处理图。这样一个处理图包含 {{domxref("AudioContext")}}。每个 `AudioNode` 只有一个这样的上下文。
 
 一个 `AudioNode` 可以作为事件的目标，所以它实现了 {{domxref("EventTarget")}} 接口。
 
@@ -19,9 +20,9 @@ slug: Web/API/AudioNode
 - {{domxref("AudioNode.context")}} {{readonlyInline}}
   - : 链接到关联的 {{domxref("AudioContext")}}，处理图中模块的上下文对象。
 - {{domxref("AudioNode.numberOfInputs")}} {{readonlyInline}}
-  - : 返回这个 node 需要的输入数量. Source nodes are defined as nodes having a `numberOfInputs` attributes with a value of `0`.
+  - : 返回这个 node 需要的输入数量。Source nodes are defined as nodes having a `numberOfInputs` attributes with a value of `0`.
 - {{domxref("AudioNode.numberOfOutputs")}} {{readonlyInline}}
-  - : 返回这个 node 的输出数量. Destination nodes, like `AudioDestinationNode`, have a value of `0` for this attribute.
+  - : 返回这个 node 的输出数量。Destination nodes, like `AudioDestinationNode`, have a value of `0` for this attribute.
 - {{domxref("AudioNode.channelCount")}}
   - : Represents an integer used in determining how many channels outputs must contains. Its usage and precise definition depends of the value of `AudioNode.channelCountMode`: it is ignored if the value is `"max"`, used as a maximum value for `"clamped-max"`, or used as the effective value for `"explicit"`.
 - {{domxref("AudioNode.channelCountMode")}}
@@ -274,7 +275,7 @@ _Also implements methods from the interface_ {{domxref("EventTarget")}}.
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioNode")}}
+{{Compat}}
 
 ## 相关内容
 

@@ -3,13 +3,16 @@ title: Смежные селекторы
 slug: Web/CSS/Adjacent_sibling_combinator
 translation_of: Web/CSS/Adjacent_sibling_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 Указывает на смежный или следующий селектор. Обеспечивает выбор только элемента расположенного непосредственно за определённым в первой части элементом.
 
 ## Синтаксис
 
-    former_element + target_element { style properties }
+```
+former_element + target_element { style properties }
+```
 
 ## Пример
 

@@ -2,6 +2,7 @@
 title: document.implementation
 slug: Web/API/Document/implementation
 ---
+
 {{ApiRef}}
 
 ## 概要
@@ -52,4 +53,4 @@ W3C 的 DOM1 级建议值规定了一种检测浏览器对某个 DOM 模型是�
 
 ## Gecko 引擎的特别说明
 
-- 从 Gecko 19.0 {{geckoRelease("19.0")}}开始{{domxref("DOMImplementation.hasFeature","hasFeature")}}方法总是返回 true。
+- 从 Gecko 19.0 开始{{domxref("DOMImplementation.hasFeature","hasFeature")}}方法总是返回 true。

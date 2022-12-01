@@ -6,6 +6,7 @@ translation_of_original: Web/API/Document/activeElement
 original_slug: Web/API/DocumentOrShadowRoot/activeElement
 browser-compat: api.Document.activeElement
 ---
+
 {{APIRef("Shadow DOM")}}
 
 La propriété en lecture seule **`activeElement`**, rattachée à l'interface [`Document`](/fr/docs/Web/API/Document), renvoie l'élément (l'objet [`Element`](/fr/docs/Web/API/Element) qui lui correspond) contenu dans le DOM et qui a le focus à cet instant.

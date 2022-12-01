@@ -3,6 +3,7 @@ title: 'Document: transitionend イベント'
 slug: Web/API/Element/transitionend_event
 original_slug: Web/API/Document/transitionend_event
 ---
+
 {{APIRef}}
 
 **`transitionend`** イベントは、 [CSS トランジション](/ja/docs/CSS/Using_CSS_transitions)が完了したときに発生します。トランジションが完了前に削除された場合、例えば {{cssxref("transition-property")}} が削除されたり、 {{cssxref("display")}} が `none` に設定されたりした場合、イベントは生成されません。
@@ -56,9 +57,7 @@ document.ontransitionend = () => {
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName("CSS3 Transitions", "#transitionend", "transitionend")}} | {{Spec2('CSS3 Transitions')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: Comparison of Event Targets
 slug: Web/API/Event/Comparison_of_Event_Targets
 ---
+
 {{ ApiRef() }}
 
 ### Event targets
@@ -103,7 +104,7 @@ There are 5 targets to consider:
         {{ Non-standard_inline() }} The original target of the event,
         before any retargetings. See
         <a
-          href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
+          href="/zh-CN/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
           >Anonymous Content#Event_Flow_and_Targeting</a
         >
         for details.

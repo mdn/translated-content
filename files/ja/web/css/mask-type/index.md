@@ -2,6 +2,7 @@
 title: mask-type
 slug: Web/CSS/mask-type
 ---
+
 {{CSSRef}}
 
 **`mask-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 SVG の {{svgElement("mask")}} 要素を*輝度*マスクと*アルファ*マスクのどちらとして扱うかを設定します。これは `<mask>` 要素自身に設定します。

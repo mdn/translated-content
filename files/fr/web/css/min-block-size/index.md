@@ -8,13 +8,14 @@ tags:
   - Reference
 translation_of: Web/CSS/min-block-size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`min-block-size`** définit la taille minimale horizontale ou verticale d'un élément de bloc (_block_) selon le mode d'écriture utilisé. Cette propriété « logique » correspond à la propriété {{cssxref("min-width")}} ou {{cssxref("min-height")}} selon la valeur utilisée pour {{cssxref("writing-mode")}}.
 
 {{EmbedInteractiveExample("pages/css/min-block-size.html")}}
 
-Si le mode d'écriture est orienté verticalement, `min-block-size` fait référence à la hauteur minimale de l'élément. Sinon, elle fait référence à la largeur minimale de l'élément.  to the minimal height of the element, otherwise it relates to the minimal width of the element. La propriété {{cssxref("min-inline-size")}} peut être utilisée pour les éléments en ligne.
+Si le mode d'écriture est orienté verticalement, `min-block-size` fait référence à la hauteur minimale de l'élément. Sinon, elle fait référence à la largeur minimale de l'élément. to the minimal height of the element, otherwise it relates to the minimal width of the element. La propriété {{cssxref("min-inline-size")}} peut être utilisée pour les éléments en ligne.
 
 ## Syntaxe
 
@@ -45,9 +46,13 @@ min-block-size: unset;
 
 La propriété `min-block-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -74,15 +79,11 @@ La propriété `min-block-size` peut prendre les mêmes valeurs que les proprié
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                                           | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-min-block-size", "min-block-size")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.min-block-size")}}
+{{Compat}}
 
 ## Voir aussi
 

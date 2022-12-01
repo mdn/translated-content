@@ -2,6 +2,7 @@
 title: 一般的な問題解決に HTML を使う
 slug: Learn/HTML/Howto
 ---
+
 {{LearnSidebar}}
 
 下記のリンクは、日常の解決すべき問題を HTML を使って解決する解決法を指しています。
@@ -22,7 +23,7 @@ HTML は文書の意味的な情報を提供することに特化しているの
 - [コンテンツを強調する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#強調と重要性)
 - [テキストが重要だと示す方法](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#強調と重要性)
 - [HTML でコンピュータコードを表示する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型#Representing_computer_code)
-- [画像やグラフィックに注釈を付ける方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#Annotating_images_with_figures_and_figure_captions)
+- [画像やグラフィックに注釈を付ける方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#図表と図表のキャプションで画像に注釈を付ける)
 - [略語をマークして理解しやすくする方法](/ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型#Abbreviations)
 - [Web ページに引用を追加する方法](/ja/docs/Learn/HTML/Introduction_to_HTML/高度なテキスト成型#Quotations)
 - [HTML で用語を定義する方法](/ja/docs/Learn/HTML/Howto/Define_terms_with_HTML)
@@ -36,7 +37,7 @@ HTML のための主な理由は {{Glossary("hyperlink", "ハイパーリンク"
 
 ### 画像とマルチメディア
 
-- [Web ページに画像を追加する方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage)
+- [Web ページに画像を追加する方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#ウェブページに画像を置くにはどうするのか)
 - [Web ページにビデオコンテンツを追加する方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 
 ### スクリプトとスタイリング
@@ -49,7 +50,7 @@ HTML は文書の構造だけを解決します。表現の問題は {{glossary(
 ### 埋め込みコンテンツ
 
 - [Web ページに他の Web ページを埋め込む方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
-- [Web ページに Flash コンテンツを追加する方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_embed_and_object_elements)
+- [Web ページに Flash コンテンツを追加する方法](/ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#embed_要素と_object_要素)
 
 ## あまりない、または上級の問題
 

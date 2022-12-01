@@ -3,6 +3,7 @@ title: Document.createDocumentFragment()
 slug: Web/API/Document/createDocumentFragment
 translation_of: Web/API/Document/createDocumentFragment
 ---
+
 {{ApiRef("DOM")}}
 
 새로운 빈 {{domxref("DocumentFragment")}} 를 생성합니다.

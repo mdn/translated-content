@@ -2,6 +2,7 @@
 title: 'RangeError: precision is out of range'
 slug: Web/JavaScript/Reference/Errors/Precision_range
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "precision is out of range" は、 `toFixed` または `toPrecision` に 0 から 20 (または 21) までの範囲外の数値が渡された場合に発生します。

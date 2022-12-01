@@ -1,8 +1,8 @@
 ---
 title: 'Recipe: Media objects'
 slug: Web/CSS/Layout_cookbook/Media_objects
-translation_of: Web/CSS/Layout_cookbook/Media_objects
 ---
+
 {{CSSRef}}
 
 O _Media Object_ (Objeto de Mídia) é um padrão que vemos em toda web. [Nomeado por Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) refere-se a uma caixa de duas colunas com uma imagem de um lado e texto descritivo do outro, por ex. uma postagem no facebook ou tweet.
@@ -27,7 +27,7 @@ O Padrão Media Object precisa de algumas ou todas as seguintes características
 
 ## Escolhas feitas
 
-Eu escolhi usar o [Layout de Grade ](/pt-BR/docs/Web/CSS/CSS_Grid_Layout)para o Media Object (Objeto de Layout), pois ele permite controlar o layout em duas dimensões quando preciso. Isso significa que, quando temos um rodapé, com conteúdo curto acima, o rodapé pode ser empurrado para a parte inferior do Media Object (Objeto de Layout).
+Eu escolhi usar o [Layout de Grade](/pt-BR/docs/Web/CSS/CSS_Grid_Layout) para o Media Object (Objeto de Layout), pois ele permite controlar o layout em duas dimensões quando preciso. Isso significa que, quando temos um rodapé, com conteúdo curto acima, o rodapé pode ser empurrado para a parte inferior do Media Object (Objeto de Layout).
 
 Outro motivo para usar o Layout de Gride é para que eu possa usar {{cssxref("fit-content")}} para o tamanho da faixa de imagem. Usando `fit-content` com um tamanho máximo de 200 pixels, quando temos uma imagem pequena como o ícone, a faixa fica tão grande quanto o tamanho dessa imagem — o tamanho `max-content`. Se a imagem for maior, a faixa para de crescer em 200 pixels e, como a imagem possui {{cssxref("max-width ")}} de 100% aplicado, ele diminui para que continue a caber dentro da coluna.
 

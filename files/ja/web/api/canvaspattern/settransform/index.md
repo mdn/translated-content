@@ -2,6 +2,7 @@
 title: CanvasPattern.setTransform()
 slug: Web/API/CanvasPattern/setTransform
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`CanvasPattern.setTransform()`** メソッドは、パターンの変換マトリックスとして {{domxref("SVGMatrix")}} オブジェクトを使用し、パターンにこれを実行します。
@@ -103,9 +104,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 仕様
 
-| 仕様                                                                                                                                         | ステータス                       | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvaspattern-settransform", "CanvasPattern.setTransform")}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

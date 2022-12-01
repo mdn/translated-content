@@ -2,6 +2,7 @@
 title: ruby-position
 slug: Web/CSS/ruby-position
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 CSS 的 **`ruby-position`** 屬性定義了 ruby 元素與該基礎元素（base element）相關聯的位置。它能在元素上方（`over`）、下方（`under`）、兩個字符之間、抑或右方（`inter-character`）。
@@ -90,7 +91,7 @@ ruby {
 
 ## 瀏覽器相容性
 
-{{Compat("css.properties.ruby-position")}}
+{{Compat}}
 
 ## 參見
 

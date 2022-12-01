@@ -2,6 +2,7 @@
 title: PromiseRejectionEvent.reason
 slug: Web/API/PromiseRejectionEvent/reason
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("PromiseRejectionEvent")}}の **`reason`** 読み取り専用プロパティは、{{jsxref("Promise.reject()")}} に渡される理由を提供する任意の JavaScript 値、または {{jsxref("Object")}} です。理論的には promise が拒否された理由についての情報を提供します。
@@ -26,9 +27,7 @@ window.onunhandledrejection = function(e) {
 
 ## 仕様
 
-| 仕様                                                                                                                                                 | ステータス                           | コメント   |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-promiserejectionevent-reason', 'PromiseRejectionEvent.reason')}} | {{ Spec2('HTML WHATWG') }} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

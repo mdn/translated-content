@@ -2,6 +2,7 @@
 title: 实践对象构造
 slug: Learn/JavaScript/Objects/Object_building_practice
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 在前面的文章中，我们学习了 JavaScript 的面向对象理论和基本的语法知识，为之后的学习建立了良好的基础。这篇文章中我们将进行一次实战演练，通过构造 JavaScript 对象得到生动有趣的成果！

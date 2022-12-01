@@ -3,6 +3,7 @@ title: 411 Length Required
 slug: Web/HTTP/Status/411
 translation_of: Web/HTTP/Status/411
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse d'erreur HTTP **`411 Length Required`** indique que le serveur refuse d'accepter la requête si celle-ci ne contient pas d'en-tête [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length).

@@ -2,13 +2,14 @@
 title: 文本格式化
 slug: Web/JavaScript/Guide/Text_formatting
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
 
 本章介绍在 Javascript 中如何使用字符串与文本内容。
 
 ## 字符串
 
-JavaScript 中的 {{Glossary("String")}} 类型用于表示文本型的数据。它是由无符号整数值（16bit）作为元素而组成的集合。字符串中的每个元素在字符串中占据一个位置. 第一个元素的 index 值是 0，下一个元素的 index 值是 1，以此类推。字符串的长度就是字符串中所含的元素个数.你可以通过 String 字面值或者 String 对象两种方式创建一个字符串。
+JavaScript 中的 {{Glossary("String")}} 类型用于表示文本型的数据。它是由无符号整数值（16bit）作为元素而组成的集合。字符串中的每个元素在字符串中占据一个位置。第一个元素的 index 值是 0，下一个元素的 index 值是 1，以此类推。字符串的长度就是字符串中所含的元素个数。你可以通过 String 字面值或者 String 对象两种方式创建一个字符串。
 
 ### String 字面量
 
@@ -56,13 +57,13 @@ Unicode 转义序列在\u 之后需要至少 4 个字符。
 
 ```js
 const foo = new String('foo'); // 创建一个 String 对象
-console.log(foo); // 输出: [String: 'foo']
+console.log(foo); // 输出：[String: 'foo']
 typeof foo; // 返回 'object'
 ```
 
 你可以在 String 字面值上使用 String 对象的任何方法—JavaScript 自动把 String 字面值转换为一个临时的 String 对象，然后调用其相应方法，最后丢弃此临时对象。在 String 字面值上也可以使用 String.length 属性。
 
-除非必要， 应该尽量使用 String 字面值，因为 String 对象的某些行为可能并不与直觉一致。举例：
+除非必要，应该尽量使用 String 字面值，因为 String 对象的某些行为可能并不与直觉一致。举例：
 
 ```js
 const firstString = '2 + 2'; //创建一个字符串字面量
@@ -80,7 +81,7 @@ hello[0] = 'L'; // 无效，因为字符串是不变的
 hello[0]; // 返回 "H"
 ```
 
-Characters whose Unicode scalar values are greater than U+FFFF (such as some rare Chinese/Japanese/Korean/Vietnamese characters and some emoji) are stored in UTF-16 with two surrogate code units each. For example, a string containing the single character U+1F600 "Emoji grinning face" will have length 2. Accessing the individual code units in such a string using brackets may have undesirable consequences such as the formation of strings with unmatched surrogate code units, in violation of the Unicode standard. (Examples should be added to this page after MDN bug 857438 is fixed.) See also {{jsxref("String.fromCodePoint()")}} or {{jsxref("String.prototype.codePointAt()")}}.
+Unicode 标量值（Unicode scalar value）大于 U+FFFF 的字符（比如中文、日文、韩文、越南语中的一些不常用的文字或者 emoji 表情）使用 2 个代理码点存储在 UTF-16 中。比如，一个包含 U+20BB7“𠮷”字符的字符串，其长度为 2。使用括号访问单个码点的时候，可能不会得到你所期望的结果，你得到的可能是一个不匹配字符串位置的代理码点，并且其违反了 Unicode 规范。请参阅 {{jsxref("String.fromCodePoint()")}} 或 {{jsxref("String.prototype.codePointAt()")}}。
 
 `String`对象有许多方法：举例来说有些方法返回字符串本身的变体，如 `substring` 和`toUpperCase`.
 
@@ -106,7 +107,7 @@ Characters whose Unicode scalar values are greater than U+FFFF (such as some rar
 
 模板字符串是一种允许内嵌表达式的 String 字面值。可以用它实现多行字符串或者字符串内插等特性。
 
-模板字符串使用反勾号 (\` \`) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) 包裹内容而不是单引号或双引号。模板字符串可以包含占位符. 占位符用美元符号和花括号标识 (`${expression}`).
+模板字符串使用反勾号 (\` \`) ([grave accent](https://en.wikipedia.org/wiki/Grave_accent)) 包裹内容而不是单引号或双引号。模板字符串可以包含占位符。占位符用美元符号和花括号标识 (`${expression}`).
 
 #### 多行
 
@@ -152,11 +153,11 @@ console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 
 ## 国际化
 
-{{jsxref("Intl")}} 对象是 ECMAScript 国际化 API 的命名空间，它提供了语言敏感的字符串比较，数字格式化和日期时间格式化功能. {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是`Intl`对象的属性。
+{{jsxref("Intl")}} 对象是 ECMAScript 国际化 API 的命名空间，它提供了语言敏感的字符串比较，数字格式化和日期时间格式化功能。{{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, 和 {{jsxref("DateTimeFormat")}} 对象的构造函数是`Intl`对象的属性。
 
 ### 日期和时间格式化
 
-{{jsxref("DateTimeFormat")}} 对象在日期和时间的格式化方面很有用。下面的代码把一个日期格式化为美式英语格式. (不同时区结果不同.)
+{{jsxref("DateTimeFormat")}} 对象在日期和时间的格式化方面很有用。下面的代码把一个日期格式化为美式英语格式。(不同时区结果不同.)
 
 ```js
 const msPerDay = 24 * 60 * 60 * 1000;
@@ -194,7 +195,7 @@ console.log(hanDecimalRMBInChina.format(1314.25)); // ￥ 一，三一四。二�
 
 {{jsxref("Collator")}} 对象在字符串比较和排序方面很有用。
 
-举例，德语中*有两种不同的排序方式 电话本（phonebook）* 和 字典（_dictionary）_. 电话本排序强调发音，比如在排序前 “ä”, “ö”等被扩展为 “ae”, “oe”等发音。
+举例，德语中*有两种不同的排序方式 电话本（phonebook）* 和 字典（_dictionary）_. 电话本排序强调发音，比如在排序前“ä”, “ö”等被扩展为“ae”, “oe”等发音。
 
 ```js
 var names = ["Hochberg", "Hönigswald", "Holzman"];

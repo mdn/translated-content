@@ -2,6 +2,7 @@
 title: FileReader
 slug: Web/API/FileReader
 ---
+
 {{APIRef("File API")}}
 
 **`FileReader`** オブジェクトを使用すると、ウェブアプリケーションは、ユーザーのコンピュータに保存されているファイル (または生データ バッファ) の内容を非同期に読み取ることができます。{{domxref("File")}} または {{domxref("Blob")}} オブジェクトを使用して、読み込むファイルまたはデータを指定します。
@@ -19,7 +20,7 @@ File オブジェクトは、{{HTMLElement("input")}} 要素を使用してフ�
 - {{domxref("FileReader.FileReader", "FileReader()")}}
   - : 新しく作成された `FileReader` を返します。
 
-詳細や例については[ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)を参照してください。
+詳細や例については[ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)を参照してください。
 
 ## プロパティ
 
@@ -78,7 +79,7 @@ File オブジェクトは、{{HTMLElement("input")}} 要素を使用してフ�
 
 ## 関連情報
 
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{domxref("File")}}
 - {{domxref("Blob")}}
 - {{domxref("FileReaderSync")}}

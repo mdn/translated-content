@@ -2,6 +2,7 @@
 title: String.prototype.small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`small()`** メソッドは、文字列が小さなフォントで表示されるように HTML の {{HTMLElement("small")}} 要素を生成します。

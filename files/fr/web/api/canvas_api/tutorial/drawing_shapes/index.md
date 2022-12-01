@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}
 
 Maintenant que nous avons défini notre [environnement de canevas](/fr/docs/Tutoriel_canvas/Utilisation_de_base), nous pouvons entrer dans les détails de la façon de dessiner sur le canevas. A la fin de cet article, vous aurez appris à tracer des rectangles, des triangles, des lignes, des arcs et des courbes, vous rendant ainsi familier avec certaines des formes de base. Le travail avec les trajets est essentiel lors du dessin d'objets sur le canevas, et nous verrons comment cela peut être fait.
@@ -305,7 +306,7 @@ La différence entre ces deux méthodes est mieux décrite par l'image à droite
 
 ![](canvas_curves.png)
 
-Les paramètres `x` et `y` de ces deux méthodes sont les coordonnées du point d'arrivée. `cp1x` et `cp1y` sont les coordonnées du premier point de contrôle, et  `cp2x` et `cp2y` sont les coordonnées du second point de contrôle.
+Les paramètres `x` et `y` de ces deux méthodes sont les coordonnées du point d'arrivée. `cp1x` et `cp1y` sont les coordonnées du premier point de contrôle, et `cp2x` et `cp2y` sont les coordonnées du second point de contrôle.
 
 Utiliser des courbes quadratiques et cubiques de Bézier peut constituer un certain défi, car à la différence d'un logiciel de tracé des vecteurs comme _Adobe Illustrator_, nous n'avons pas de retour visuel direct concernant ce que nous faisons. Cela rend passablement difficile le dessin de formes complexes. Dans l'exemple suivant, nous allons dessiner quelques formes naturelles simples, mais si vous avez du temps et - surtout - de la patience, des formes bien plus complexes peuvent être créées.
 
@@ -490,7 +491,7 @@ L'image résultante ressemble à ce qui suit&nbsp;:
 
 {{EmbedLiveSample("Combiner_les_possibilités", 160, 160)}}
 
-Nous ne l'expliquerons pas plus en détails, du fait que c'est étonnament simple. Les choses les plus importantes à noter sont l'utilisation de la propriété `fillStyle` sur le contexte du dessin, et l'utilisation d'une fonction utilitaire dans ce cas, rectArrondi`())`. L'utilisation de fonctions utilitaires pour des éléments de dessin que vous faites souvent peut être très utile, et peut réduire la quantité de code dont vous avez besoin, ainsi que sa complexité.
+Nous ne l'expliquerons pas plus en détails, du fait que c'est étonnament simple. Les choses les plus importantes à noter sont l'utilisation de la propriété `fillStyle` sur le contexte du dessin, et l'utilisation d'une fonction utilitaire dans ce cas, `rectArrondi()`. L'utilisation de fonctions utilitaires pour des éléments de dessin que vous faites souvent peut être très utile, et peut réduire la quantité de code dont vous avez besoin, ainsi que sa complexité.
 
 Nous reviendrons sur `fillStyle` plus en détail plus loin dans ce tutoriel. Pour l'instant, tout ce que nous faisons est de l'utiliser pour changer en blanc la couleur pour les trajets depuis la couleur noire par défaut, et inversement ensuite.
 
@@ -551,7 +552,7 @@ function draw() {
 
 Une autre fonctionnalité puissante de la nouvelle API `Path2D` de canevas est l'utilisation de [données de trajet SVG](/fr-FR/docs/Web/SVG/Tutorial/Paths) pour initialiser des trajets sur votre canevas. Cela peut vous permettre de faire circuler des données de trajet et les réutiliser, à la fois en SVG et dans un canevas.
 
-Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur P`ath2D`](/fr/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
+Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur `Path2D`](/fr/docs/Web/API/Path2D.Path2D#Using_SVG_paths).
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

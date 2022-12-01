@@ -2,6 +2,7 @@
 title: 'RegExp: lastIndex'
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex
 ---
+
 {{JSRef}}
 
 **`lastIndex`** は {{jsXref("RegExp")}} インスタンスの読み書き可能なプロパティで、次の一致を開始する位置を指定します。

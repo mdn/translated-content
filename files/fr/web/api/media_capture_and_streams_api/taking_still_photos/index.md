@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/WebRTC_API/Taking_still_photos
 original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
+
 ## Introduction et demo
 
 Ceci est un tutoriel rapide pour apprendre comment accéder à la caméra sur votre ordinateur et prendre des photos avec. Vous pouvez voir [le code final en action dans JSFiddle](http://jsfiddle.net/codepo8/agaRe/4/). Il y a aussi une version plus avancée pour charger des photos sur **imgur** en JavaScript, disponible en [code source sur GitHub](https://github.com/codepo8/interaction-cam/) ou [en demo](http://codepo8.github.com/interaction-cam/).
@@ -182,7 +183,7 @@ Maintenant nous devons capturer la photo en utilisant le canvas. Nous assignons 
   }, false);
 ```
 
-Dans cette fonction nous re-assignons la taille du canvas à la taille de la vidéo, ce qui l'efface,  et nous obtenons une image de la vidéo que nous copions sur le canvas. Ensuite nous devons transformer les données du canvas en une URI de données avec un entête PNG, et positionner l'attribut src de la photo à cette URL.
+Dans cette fonction nous re-assignons la taille du canvas à la taille de la vidéo, ce qui l'efface, et nous obtenons une image de la vidéo que nous copions sur le canvas. Ensuite nous devons transformer les données du canvas en une URI de données avec un entête PNG, et positionner l'attribut src de la photo à cette URL.
 
 ```js
   function takepicture() {

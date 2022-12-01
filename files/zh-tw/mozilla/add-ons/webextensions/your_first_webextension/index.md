@@ -2,6 +2,7 @@
 title: 你的第一個 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
+
 {{AddonSidebar}}
 
 我們會在這篇文章詳細講解 Firefox 的 WebExtension 的製作。這支附加元件會在 "mozilla.org" 網域底下的所有網頁，增加紅色外框。

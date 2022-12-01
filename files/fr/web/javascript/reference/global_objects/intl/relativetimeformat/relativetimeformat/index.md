@@ -3,6 +3,7 @@ title: Constructeur Intl.RelativeTimeFormat()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
 browser-compat: javascript.builtins.Intl.RelativeTimeFormat.RelativeTimeFormat
 ---
+
 {{JSRef}}
 
 Le constructeur **`Intl.RelativeTimeFormat()`** permet de créer des objets [`Intl.RelativeTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat) pour exprimer des valeurs temporelles relatives selon une locale et des paramètres donnés.

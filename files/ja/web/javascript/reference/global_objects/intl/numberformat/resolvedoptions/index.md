@@ -2,6 +2,7 @@
 title: Intl.NumberFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 ---
+
 {{JSRef}}
 
 **`Intl.NumberFormat.prototype.resolvedOptions()`** メソッドは、この {{jsxref("NumberFormat")}} オブジェクトの初期化時に計算されたロケールと数値整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
@@ -68,9 +69,7 @@ usedOptions.useGrouping;           // true
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES Int Draft', '#sec-intl.numberformat.prototype.resolvedoptions', 'Intl.NumberFormat.prototype.resolvedOptions')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

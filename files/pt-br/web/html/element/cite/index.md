@@ -1,21 +1,21 @@
 ---
 title: <cite>
 slug: Web/HTML/Element/cite
-translation_of: Web/HTML/Element/cite
 ---
+
 O **elemento** **HTML \<cite>** representa uma referência a um trabalho artístico. Deve incluir o título do trabalho ou uma URL de referência, que pode ser em uma forma abreviada de acordo com as convenções usadas para a adição dos metadados de citação.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Content categories</a>
+        <a href="/pt-BR/docs/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >,
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >, palpable content.
       </td>
@@ -23,7 +23,7 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >Phrasing content</a
         >.
       </td>
@@ -36,7 +36,7 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -58,7 +58,7 @@ O **elemento** **HTML \<cite>** representa uma referência a um trabalho artíst
 
 ## Atributos
 
-Este elemento inclui apenas [atributos globais](/pt-BR/docs/HTML/Global_attributes "HTML/Global attributes").
+Este elemento inclui apenas [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## Notas
 
@@ -94,4 +94,4 @@ Mais informações podem ser encontradas em \[ISO-0000].
 - O elemento {{HTMLElement("blockquote")}} é para citações longas.
 - O elemento {{HTMLElement("q")}} é para citações curtas ou na mesma linha.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -2,6 +2,7 @@
 title: MouseEvent.metaKey
 slug: Web/API/MouseEvent/metaKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.metaKey`** 为只读属性，返回一个{{jsxref("Boolean", "布尔值")}}，在鼠标事件发生时，用于指示 <kbd>Meta</kbd> 键是按下状态（`true`），还是释放状态（`false`）。
@@ -38,7 +39,7 @@ var metaKeyPressed = instanceOfMouseEvent.metaKey
 
 ## 浏览器兼容性
 
-{{Compat("api.MouseEvent.metaKey")}}
+{{Compat}}
 
 ## 相关链接
 

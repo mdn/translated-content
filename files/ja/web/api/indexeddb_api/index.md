@@ -2,13 +2,14 @@
 title: IndexedDB API
 slug: Web/API/IndexedDB_API
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB は、ファイルや blob を含む大量の構造化データをクライアント側で保存するための低レベル API です。この API はインデックスを使用して、高パフォーマンスなデータの検索を行うことができます。[Web Storage](/ja/docs/Web/API/Web_Storage_API) は比較的少量のデータを保存するのに有用ではありますが、構造化された非常に多くのデータを扱うには不十分です。IndexedDB が解決策を提供します。ここでは、完全な API リファレンスと使用ガイド、ブラウザーの対応の詳細、および重要な概念の説明へのリンクを提供します。
 
 {{AvailableInWorkers}}
 
-> **Note:** **メモ**: IndexedDB API は強力ですが、シンプルな用途にはとても複雑に見えるかもしれません。シンプルな API が好ましいのであれば、[関連情報](#see_also)の節にある IndexedDB をプログラマーにとって扱いやすくするライブラリーを試してみてください。
+> **メモ:** IndexedDB API は強力ですが、シンプルな用途にはとても複雑に見えるかもしれません。シンプルな API が好ましいのであれば、[関連情報](#%E9%96%A2%E9%80%A3%E6%83%85%E5%A0%B1)の節にある IndexedDB をプログラマーにとって扱いやすくするライブラリーを試してみてください。
 
 ## 主要概念と使用法
 
@@ -18,11 +19,11 @@ IndexedDB は SQL ベースの RDBMS に似たトランザクショナルデー�
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)のガイドで、で、非同期的に IndexedDB を使用する方法を基本原理から学びます。
 - データをオフラインで保存するための IndexedDB と、資産をオフラインで保存するためのサービスワーカーを組み合わせる方法は、 [サービスワーカーにより PWA をオフラインで動作させる](/ja/docs/Web/Progressive_web_apps/Offline_Service_workers)で概説しています。
 
-> **Note:** **メモ**: たいていのウェブストレージ技術と同様に、IndexedDB も[同一オリジンポリシー](https://www.w3.org/Security/wiki/Same_Origin_Policy)に従います。よって、保存済みデータは同一ドメイン内からアクセスできますが、異なるドメインにまたがってデータへアクセスすることはできません。
+> **メモ:** たいていのウェブストレージ技術と同様に、IndexedDB も[同一オリジンポリシー](https://www.w3.org/Security/wiki/Same_Origin_Policy)に従います。よって、保存済みデータは同一ドメイン内からアクセスできますが、異なるドメインにまたがってデータへアクセスすることはできません。
 
 ### 同期と非同期
 
-IndexedDB を扱う操作は非同期に実行しますので、他のアプリケーションを妨げません。 IndexedDB は元々同期 API と非同期 API の両方を提供していました。同期 API は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)内でのみの使用を意図していましたが、必要性に疑問があったため仕様から削除されました。ただし、同期 API はウェブ開発者から十分な要望がある場合は、将来再び導入される可能性があります。
+IndexedDB を扱う操作は非同期に実行しますので、他のアプリケーションを妨げません。IndexedDB は元々同期 API と非同期 API の両方を提供していました。同期 API は[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)内でのみの使用を意図していましたが、必要性に疑問があったため仕様から削除されました。ただし、同期 API はウェブ開発者から十分な要望がある場合は、将来再び導入される可能性があります。
 
 ### ストレージの上限と破棄基準
 
@@ -98,9 +99,7 @@ IndexedDB を扱う操作は非同期に実行しますので、他のアプリ�
 
 ## 仕様書
 
-| 仕様書                                                   |
-| -------------------------------------------------------- |
-| [Indexed Database API](https://w3c.github.io/IndexedDB/) |
+{{Specifications}}
 
 ## 関連情報
 

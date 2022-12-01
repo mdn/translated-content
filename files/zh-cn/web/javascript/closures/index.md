@@ -2,6 +2,7 @@
 title: 闭包
 slug: Web/JavaScript/Closures
 ---
+
 {{jsSidebar("Intermediate")}}
 
 **闭包**（closure）是一个函数以及其捆绑的周边环境状态（**lexical environment**，**词法环境**）的引用的组合。换而言之，闭包让开发者可以从内部函数访问外部函数的作用域。在 JavaScript 中，闭包会随着函数的创建而被同时创建。
@@ -27,7 +28,7 @@ init();
 
 ## **闭包**
 
-现在来考虑以下例子 ：
+现在来考虑以下例子：
 
 ```js
 function makeFunc() {

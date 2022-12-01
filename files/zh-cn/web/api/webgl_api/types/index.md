@@ -2,6 +2,7 @@
 title: WebGL types
 slug: Web/API/WebGL_API/Types
 ---
+
 {{WebGLSidebar}}
 
 以下是[WebGL](/zh-CN/docs/Web/API/WebGL_API)提供的接口中用到的变量类型。

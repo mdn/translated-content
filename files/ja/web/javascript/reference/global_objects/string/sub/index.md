@@ -2,6 +2,7 @@
 title: String.prototype.sub()
 slug: Web/JavaScript/Reference/Global_Objects/String/sub
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`sub()`** メソッドは、文字列が下付き文字として表示されるように HTML の {{HTMLElement("sub")}} 要素を生成します。
@@ -39,9 +40,7 @@ console.log('これは' + subText.sub() + 'の見え方を示しています。'
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.sub', 'String.prototype.sub')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

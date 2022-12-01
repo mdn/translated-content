@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/DataView
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView
 browser-compat: javascript.builtins.DataView
 ---
+
 {{JSRef}}
 
 La vue **`DataView`** fournit une interface de bas niveau pour lire et écrire des données de différents types numériques dans un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), quel que soit le [«&nbsp;boutisme&nbsp;» (<i lang="en">endianness</i>)](https://fr.wikipedia.org/wiki/Boutisme) de la plateforme.

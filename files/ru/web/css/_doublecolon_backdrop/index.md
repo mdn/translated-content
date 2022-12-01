@@ -14,6 +14,7 @@ tags:
   - полноэкранный режим
 translation_of: Web/CSS/::backdrop
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [псевдо-элемент](/ru/docs/Web/CSS/Pseudo-elements) **`::backdrop`** это прямоугольник с размерами {{Glossary("viewport", "окна")}}, который отрисовывается сразу же после отрисовки любого элемента в полноэкранном режиме. Это включает элементы, установленные в полноэкранный режим с помощью [Fullscreen API](/ru/docs/DOM/Using_fullscreen_mode) и элементы {{HTMLElement("dialog")}}.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/FileRequest/lockedFile
 original_slug: Web/API/FileRequest/lockedFile
 ---
+
 {{APIRef("File System API")}} {{non-standard_header}}
 
 ## Résumé

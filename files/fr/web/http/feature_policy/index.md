@@ -17,6 +17,7 @@ tags:
   - permission
 translation_of: Web/HTTP/Feature_Policy
 ---
+
 {{HTTPSidebar}}
 
 Feature Policy ("réglementation des fonctionnalités" en français) permet aux développeurs web d'activer, de modifier ou de désactiver spécifiquement le comportement de certaines fonctionnalités et API dans le navigateur. Elle est similaire à {{Glossary("CSP", "Content Security Policy")}} mais contrôle les fonctionnalités plus que la sécurité.
@@ -123,13 +124,11 @@ Les fonctionnalités incluent (voir la [liste des Features](/fr/docs/Web/HTTP/He
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                               | Commentaire                                                                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("Feature Policy","#feature-policy-http-header-field","Feature-Policy")}} | {{Spec2("Feature Policy")}} | Définition initiale. Définit l'en-tête {{httpheader("Feature-Policy")}}. Les directives sont définies dans la spécification pour les fonctionnalités qu'elles contrôlent. Voir les pages individuelles des directives pour plus de détails. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.Feature-Policy")}}
+{{Compat}}
 
 ## Voir aussi
 

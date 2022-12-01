@@ -1,12 +1,8 @@
 ---
 title: background
 slug: Web/CSS/background
-tags:
-  - Fundo CSS
-  - Propriedades CSS
-  - Referencia
-translation_of: Web/CSS/background
 ---
+
 {{CSSRef ( "CSS Background")}}
 
 ## Resumo

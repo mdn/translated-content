@@ -2,6 +2,7 @@
 title: HTMLSelectElement.options
 slug: Web/API/HTMLSelectElement/options
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLSelectElement.options`** は読み取り専用のプロパティで、{{domxref("HTMLOptionsCollection")}} で {{HTMLElement("select")}} 要素に含まれる {{HTMLElement("option")}} 要素を返します。

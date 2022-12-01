@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.workerStart
 slug: Web/API/PerformanceResourceTiming/workerStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 {{domxref("PerformanceResourceTiming")}} インターフェイスの **`workerStart`** 読み取り専用プロパティは、Service Worker スレッドが既に実行されている場合は {{domxref("FetchEvent")}} を送出する直前、または Service Worker スレッドがまだ実行されていない場合は開始される直前に {{domxref("DOMHighResTimeStamp")}} を返します。リソースが Service Worker によってインターセプトされない場合、このプロパティは常に 0 を返します。
@@ -56,9 +57,7 @@ function print_start_and_end_properties(perfEntry) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | ステータス                           | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-workerStart', 'workerStart')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

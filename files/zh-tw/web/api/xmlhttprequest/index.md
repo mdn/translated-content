@@ -2,6 +2,7 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 ---
+
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
 藉由 `XMLHttpRequest`（XHR）物件的方式來存取伺服器端的資料，可以讓你直接經由指定的 URL 擷取資料卻不用刷新整個網頁。這樣一來當想要更新網頁中的部分資料時，不再需要藉由刷新整個頁面的方法而中斷使用者的操作。在{{Glossary("AJAX")}}應用中 `XMLHttpRequest` 被大量的使用。
@@ -22,7 +23,7 @@ slug: Web/API/XMLHttpRequest
 _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("EventTarget")}} 的屬性。_
 
 - {{domxref("XMLHttpRequest.onreadystatechange")}}
-  - : 一個 {{event("Event_handlers", "event handler")}}（事件處理器）函式，會於 `readyState` 屬性之狀態改變時被呼叫。
+  - : 一個事件處理器函式，會於 `readyState` 屬性之狀態改變時被呼叫。
 - {{domxref("XMLHttpRequest.readyState")}} {{readonlyinline}}
   - : 回傳一個無符號短整數（`unsigned short`）代表請求之狀態。
 - {{domxref("XMLHttpRequest.response")}} {{readonlyinline}}
@@ -45,7 +46,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 - {{domxref("XMLHttpRequest.timeout")}}
   - : 為一無符號長整數（`unsigned long`），代表一個請求在逾時而被自動中止前的可等待時間（毫秒）。
 - {{domxref("XMLHttpRequestEventTarget.ontimeout")}}
-  - : 為一 {{event("Event_handlers", "event handler")}} 物件，會於請求逾時時被呼叫。
+  - : 為一 event handler 物件，會於請求逾時時被呼叫。
 - {{domxref("XMLHttpRequest.upload")}} {{readonlyinline}}
   - : 為一 {{domxref("XMLHttpRequestUpload")}} 物件，代表上傳的進度。
 - {{domxref("XMLHttpRequest.withCredentials")}}
@@ -109,7 +110,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 
 ## 瀏覽器相容性
 
-{{Compat("api.XMLHttpRequest")}}
+{{Compat}}
 
 ## 參見
 

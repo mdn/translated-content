@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 original_slug: Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML/Debugging_HTML","Apprendre/HTML/Introduction_à_HTML")}}
 
@@ -52,7 +53,7 @@ De même que HTML est utilisé pour définir les diverses parties indépendantes
   </tbody>
 </table>
 
-## **Principales parties d'un document**
+## Principales parties d'un document
 
 Les pages web peuvent sembler assez différentes les unes des autres, mais elles ont toutes tendance à partager des composantes standard similaires, sauf si la page affiche une vidéo ou un jeu en plein écran, relève d'une sorte de projet artistique ou... est simplement mal structurée :
 

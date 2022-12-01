@@ -5,6 +5,7 @@ translation_of: Web/API/GlobalEventHandlers/onkeydown
 original_slug: Web/API/GlobalEventHandlers/onkeydown
 browser-compat: api.GlobalEventHandlers.onkeydown
 ---
+
 {{ApiRef("HTML DOM")}}
 
 La propriété **`onkeydown`**, rattachée au mixin [`GlobalEventHandlers`](/fr/docs/Web/API/GlobalEventHandlers), est [un gestionnaire d'évènements](/fr/docs/Web/Events/Event_handlers) qui permet de traiter les évènements [`keydown`](/fr/docs/Web/API/Document/keydown_event).

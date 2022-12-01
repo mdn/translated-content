@@ -9,6 +9,7 @@ tags:
   - Variables CSS
 translation_of: Web/CSS/--*
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Les noms des propriétés qui sont préfixés par deux tirets : `--` (par exemple : `--nom-exemple`) représentent des propriétés personnalisées (_custom properties_) qui peuvent contenir une valeur qui pourra être réutilisée dans le document grâce à la fonction {{cssxref("var")}}.
@@ -66,13 +67,11 @@ La portée des propriétés personnalisées est celle des éléments sur lesquel
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS3 Variables", "#defining-variables", "--*")}} | {{Spec2("CSS3 Variables")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
 ## Voir aussi
 

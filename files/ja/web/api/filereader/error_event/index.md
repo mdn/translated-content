@@ -2,6 +2,7 @@
 title: 'FileReader: error イベント'
 slug: Web/API/FileReader/error_event
 ---
+
 {{APIRef}}
 
 `error` イベントは、エラーによって読み取りが失敗したとき (例えば、ファイルが見つからなかった場合や読み取り可能ではなかった場合) に発生します。
@@ -54,9 +55,7 @@ fileInput.addEventListener('change', handleSelected);
 
 ## 仕様書
 
-| 仕様書                                                       | 状態                         |
-| ------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('File API', '#dfn-error-event')}} | {{Spec2('File API')}} |
+{{Specifications}}
 
 ## ブラウザーの対応
 

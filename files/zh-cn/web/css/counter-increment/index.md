@@ -2,6 +2,7 @@
 title: counter-increment
 slug: Web/CSS/counter-increment
 ---
+
 {{CSSRef}}
 
 ## 概要
@@ -62,7 +63,7 @@ h1 {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.counter-increment")}}
+{{Compat}}
 
 ## 参考
 

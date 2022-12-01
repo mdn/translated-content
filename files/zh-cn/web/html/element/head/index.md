@@ -2,6 +2,7 @@
 title: <head>
 slug: Web/HTML/Element/head
 ---
+
 ## 概述
 
 **HTML head 元素** 规定文档相关的配置信息（元数据），包括文档的标题，引用的文档样式和脚本等。
@@ -43,6 +44,6 @@ slug: Web/HTML/Element/head
 
 ## 相关链接
 
-- 可用于\<head>元素内的元素有: {{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}, {{HTMLElement("command")}}
+- 可用于\<head>元素内的元素有：{{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}, {{HTMLElement("command")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

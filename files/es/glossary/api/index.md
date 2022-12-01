@@ -1,8 +1,8 @@
 ---
 title: API
 slug: Glossary/API
-translation_of: Glossary/API
 ---
+
 ## Resumen
 
 Una **_Interfaz de Programación de Aplicaciones_** (API, por sus siglas en inglés) define un conjunto de directivas que pueden ser usadas para tener una pieza de software funcionando con algunas otras.

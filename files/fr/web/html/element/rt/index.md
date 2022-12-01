@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/rt
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément HTML **`<rt>`** indique la composante texte d'une annotation Ruby, il est notamment utilisé pour la prononciation, la traduction ou la translitération des caractères d'Asie orientale. Cet élément est toujours contenu dans un élément {{HTMLElement("ruby")}}.
 

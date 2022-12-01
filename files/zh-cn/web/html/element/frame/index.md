@@ -2,6 +2,7 @@
 title: <frame>
 slug: Web/HTML/Element/frame
 ---
+
 {{Deprecated_header}}
 
 ## 概述
@@ -43,4 +44,4 @@ slug: Web/HTML/Element/frame
 - {{HTMLElement("frameset")}}
 - {{HTMLElement("iframe")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

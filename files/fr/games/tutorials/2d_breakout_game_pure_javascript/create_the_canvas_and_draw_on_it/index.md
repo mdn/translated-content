@@ -15,6 +15,7 @@ translation_of: >-
 original_slug: >-
   Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball")}}
@@ -50,7 +51,7 @@ La structure de la page HTML est vraiment simple, car tout le jeu sera contenu d
 </html>
 ```
 
-Dans l'en-tête, nous avons défini l'encodage des caractères (`charset`), le titre  {{htmlelement("title")}} et quelques règles CSS très simples. Le corps contient les éléments {{htmlelement("canvas")}} et {{htmlelement("script")}}. L'élément {{htmlelement("canvas")}} contiendra le rendu du jeu et l'élément {{htmlelement("script")}} l'emplacement du code JavaScript pour contrôler le jeu. L'élément {{htmlelement("canvas")}} a un identifiant nommé `myCanvas` qui permettra de le retrouver facilement en JavaScript, et possède des dimensions de 480 pixels de longueur et 320 pixels de hauteur. Tout le code JavaScript que nous allons écrire dans ce tutoriel sera contenu entre la balise ouvrante `<script>` et la balise fermante `</script>`.
+Dans l'en-tête, nous avons défini l'encodage des caractères (`charset`), le titre {{htmlelement("title")}} et quelques règles CSS très simples. Le corps contient les éléments {{htmlelement("canvas")}} et {{htmlelement("script")}}. L'élément {{htmlelement("canvas")}} contiendra le rendu du jeu et l'élément {{htmlelement("script")}} l'emplacement du code JavaScript pour contrôler le jeu. L'élément {{htmlelement("canvas")}} a un identifiant nommé `myCanvas` qui permettra de le retrouver facilement en JavaScript, et possède des dimensions de 480 pixels de longueur et 320 pixels de hauteur. Tout le code JavaScript que nous allons écrire dans ce tutoriel sera contenu entre la balise ouvrante `<script>` et la balise fermante `</script>`.
 
 ## Les bases de Canvas
 
@@ -73,7 +74,7 @@ ctx.fill();
 ctx.closePath();
 ```
 
-Toutes les instructions sont entre les méthodes  {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} et {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} . Nous définissons un rectangle en utilisant {{domxref("CanvasRenderingContext2D.rect()","rect()")}} : les deux premières valeurs spécifient les coordonnées du coin supérieur gauche du rectangle tandis que les deux suivantes spécifient la largeur et la hauteur du rectangle. Dans notre cas, le rectangle est peint à 20 pixels du côté gauche de l'écran et à 40 pixels du haut, et a une largeur de 50 pixels et une hauteur de 50 pixels, ce qui en fait un carré parfait. La propriété {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} stocke une couleur qui sera utilisée par la méthode {{domxref("CanvasRenderingContext2D.fill()","fill()")}} pour peindre le carré en rouge.
+Toutes les instructions sont entre les méthodes {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} et {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} . Nous définissons un rectangle en utilisant {{domxref("CanvasRenderingContext2D.rect()","rect()")}} : les deux premières valeurs spécifient les coordonnées du coin supérieur gauche du rectangle tandis que les deux suivantes spécifient la largeur et la hauteur du rectangle. Dans notre cas, le rectangle est peint à 20 pixels du côté gauche de l'écran et à 40 pixels du haut, et a une largeur de 50 pixels et une hauteur de 50 pixels, ce qui en fait un carré parfait. La propriété {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} stocke une couleur qui sera utilisée par la méthode {{domxref("CanvasRenderingContext2D.fill()","fill()")}} pour peindre le carré en rouge.
 
 Nous ne sommes pas limités aux rectangles, voici un code pour imprimer un cercle vert. Essayez d'ajouter ceci au bas de votre JavaScript, puis sauvegardez et rafraîchissez :
 
@@ -87,10 +88,10 @@ ctx.closePath();
 
 Comme nous pouvons le voir, nous utilisons à nouveau les méthodes {{domxref("CanvasRenderingContext2D.beginPath()","beginPath()")}} et {{domxref("CanvasRenderingContext2D.closePath()","closePath()")}} . Entre elles, la partie la plus importante du code ci-dessus est la méthode {{domxref("CanvasRenderingContext2D.arc()","arc()")}} . Elle comporte six paramètres :
 
-- les coordonnées `x` et`y` du centre de l'arc
+- les coordonnées `x` et `y` du centre de l'arc
 - rayon de l'arc
 - l'angle de départ et l'angle de fin (pour finir de dessiner le cercle, en radiant)
-- direction du dessin (`false`_(faux)_ pour le sens des aiguilles d'une montre, la valeur par défaut, ou `true` (vrai) pour le sens inverse). Ce dernier paramètre est facultatif.
+- direction du dessin (`false` _(faux)_ pour le sens des aiguilles d'une montre, la valeur par défaut, ou `true` (vrai) pour le sens inverse). Ce dernier paramètre est facultatif.
 
 La propriété {{domxref("CanvasRenderingContext2D.fillStyle","fillStyle")}} semble différente par rapport à l'exemple précédent. C'est parce que, tout comme avec CSS, la couleur peut être spécifiée sous la forme d'une valeur hexadécimale, d'un mot-clé, de la fonction `rgba ()` _(RVBA)_ ou de toute autre méthode disponible pour les couleurs.
 

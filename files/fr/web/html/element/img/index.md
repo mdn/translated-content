@@ -4,7 +4,8 @@ slug: Web/HTML/Element/Img
 translation_of: Web/HTML/Element/img
 browser-compat: html.elements.img
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image dans un document.
 
@@ -73,7 +74,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 
 - `crossorigin`
 
-  - : Indique que la récupération de l'image doit être effectuée avec une requête CORS. Les données provenant d'une [image chargée via une requête CORS](/fr/docs/Web/HTML/CORS_enabled_image)  peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sans que celui-ci soit considéré comme [corrompu (<i lang="en">tainted</i>)](/fr/docs/Web/HTML/CORS_enabled_image#canevas_corrompu_et_sécurité).
+  - : Indique que la récupération de l'image doit être effectuée avec une requête CORS. Les données provenant d'une [image chargée via une requête CORS](/fr/docs/Web/HTML/CORS_enabled_image) peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sans que celui-ci soit considéré comme [corrompu (<i lang="en">tainted</i>)](/fr/docs/Web/HTML/CORS_enabled_image#canevas_corrompu_et_sécurité).
 
     Si l'attribut `crossorigin` _n'est pas_ indiqué, une requête sans CORS sera effectuée (c'est-à-dire sans l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Headers/Origin)) et le navigateur marquera la page comme potentiellement corrompue, empêchant d'accéder aux données de l'image et empêchant son utilisation dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
 

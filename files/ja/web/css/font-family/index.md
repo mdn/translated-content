@@ -2,6 +2,7 @@
 title: font-family
 slug: Web/CSS/font-family
 ---
+
 {{CSSRef}}
 
 CSS の **`font-family`** プロパティは、選択した要素に対して、フォントファミリー名や総称ファミリー名の優先順位リストを指定することができます。

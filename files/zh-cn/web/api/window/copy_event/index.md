@@ -2,6 +2,7 @@
 title: 'Window: copy event'
 slug: Web/API/Window/copy_event
 ---
+
 {{APIRef}}
 
 当用户通过浏览器的用户界面启动复制操作时，将触发 **`copy`** 事件。
@@ -27,7 +28,7 @@ slug: Web/API/Window/copy_event
   </tbody>
 </table>
 
-此事件的原始目标是 {{domxref("Element")}} 它是复制操作的预期目标。您可以在 {{domxref("Window")}} 界面上监听此事件，以在捕获或冒泡阶段对其进行处理。 有关此事件的完整详细信息，请参见 [Element: copy event](/zh-CN/docs/Web/API/Element/copy_event).
+此事件的原始目标是 {{domxref("Element")}} 它是复制操作的预期目标。您可以在 {{domxref("Window")}} 界面上监听此事件，以在捕获或冒泡阶段对其进行处理。有关此事件的完整详细信息，请参见 [Element: copy event](/zh-CN/docs/Web/API/Element/copy_event).
 
 ## 示例
 
@@ -43,7 +44,7 @@ window.addEventListener('copy', (event) => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.copy_event")}}
+{{Compat}}
 
 ## 参考
 

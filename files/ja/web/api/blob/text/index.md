@@ -2,6 +2,7 @@
 title: Blob.text()
 slug: Web/API/Blob/text
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} インターフェイスの **`text()`** メソッドは {{jsxref("Promise")}} を返しますが、それは Blob の内容を含む文字列で解決され、UTF-8 として解釈されます。
@@ -33,9 +34,7 @@ Blob のデータをテキスト文字列として含む {{domxref("USVString")}
 
 ## 仕様
 
-| 仕様書                                                                       | ステータス                   | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("File API", "#dom-blob-text", "Blob.text()")}} | {{Spec2("File API")}} |          |
+{{Specifications}}
 
 ## ブラウザの互換性
 

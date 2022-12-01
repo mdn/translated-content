@@ -3,6 +3,7 @@ title: MediaRecorder.onresume
 slug: Web/API/MediaRecorder/resume_event
 original_slug: Web/API/MediaRecorder/onresume
 ---
+
 {{APIRef("Media Recorder API")}}
 
 **`MediaRecorder.onresume`** イベントハンドラ（[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) の一部）は `resume` イベントを処理します。 これにより、一時停止後にメディアの記録が再開されたことに応答してコードを実行できます。
@@ -50,13 +51,11 @@ MediaRecorder.addEventListener('resume', function(event) { ... })
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                                         | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-onresume", "MediaRecorder.onresume")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.onresume")}}
+{{Compat}}
 
 ## 関連情報
 

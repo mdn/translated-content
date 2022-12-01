@@ -2,6 +2,7 @@
 title: HTTP/1.x 的连接管理
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
 ---
+
 {{HTTPSidebar}}
 
 连接管理是一个 HTTP 的关键话题：打开和保持连接在很大程度上影响着网站和 Web 应用程序的性能。在 HTTP/1.x 里有多种模型：_短连接_, _长连接_, 和 _HTTP 流水线。_
@@ -38,7 +39,7 @@ TCP 协议握手本身就是耗费时间的，所以 TCP 可以保持更多的�
 
 长连接也还是有缺点的；就算是在空闲状态，它还是会消耗服务器资源，而且在重负载时，还有可能遭受 {{glossary("DoS attack", "DoS attacks")}} 攻击。这种场景下，可以使用非长连接，即尽快关闭那些空闲的连接，也能对性能有所提升。
 
-HTTP/1.0 里默认并不使用长连接。把 {{HTTPHeader("Connection")}} 设置成 `close` 以外的其它参数都可以让其保持长连接，通常会设置为 `retry-after。`
+HTTP/1.0 里默认并不使用长连接。把 {{HTTPHeader("Connection")}} 设置成 `close` 以外的其它参数都可以让其保持长连接，通常会设置为 `retry-after`。
 
 在 HTTP/1.1 里，默认就是长连接的，协议头都不用再去声明它 (但我们还是会把它加上，万一某个时候因为某种原因要退回到 HTTP/1.0 呢)。
 

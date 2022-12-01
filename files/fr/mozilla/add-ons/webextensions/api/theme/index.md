@@ -8,6 +8,7 @@ tags:
   - add-on
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme
 ---
+
 {{AddonSidebar}}
 
 Permet aux extensions du navigateur de mettre à jour le thème du navigateur.

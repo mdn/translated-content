@@ -8,6 +8,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/getElementsByTagName
 ---
+
 {{ ApiRef("DOM") }}
 
 Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise donné. Le document complet est recherché, y compris le nœud racine. Le `HTMLCollection` renvoyée est en direct, ce qui signifie qu'elle se met à jour automatiquement pour rester synchronisée avec l'arborescence DOM sans avoir à rappeler document.getElementsByTagName ().
@@ -21,7 +22,7 @@ var elements = document.getElementsByTagName(name);
 - `elements` est une liste de nœuds (`NodeList`) des éléments trouvés dans l'ordre dans lequel ils apparaissent dans l'arbre.
 - `nom` est une chaîne représentant le nom des éléments. La chaîne spéciale `"*"` représente «&nbsp;tous les éléments&nbsp;».
 
-> **Note :** [La dernière spécification W3C](https://dom.spec.whatwg.org/) dit que  `elements` est une   `HTMLCollection` ; cependant cette méthode renvoie une  {{domxref("NodeList")}} dans les navigateurs WebKit. Voir  {{bug(14869)}} pour plus de détails.
+> **Note :** [La dernière spécification W3C](https://dom.spec.whatwg.org/) dit que `elements` est une   `HTMLCollection` ; cependant cette méthode renvoie une {{domxref("NodeList")}} dans les navigateurs WebKit. Voir {{bug(14869)}} pour plus de détails.
 
 ## Exemple
 

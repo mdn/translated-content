@@ -2,6 +2,7 @@
 title: Array() 构造器
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 ---
+
 {{JSRef}}
 
 **`Array()`** 构造器用于创建 {{jsxref("Array")}} 对象。
@@ -23,12 +24,12 @@ Array(arrayLength)
 - `elementN`
   - : `Array` 构造器会根据给定的元素创建一个 JavaScript 数组，但是当仅有一个参数且为数字时除外（详见下面的 `arrayLength` 参数）。注意，后者仅适用于用 Array 构造器创建数组，而不适用于用方括号创建的数组字面量。
 - `arrayLength`
-  - : 如果传递给 `Array` 构造函数的唯一参数是 0到 2<sup>32</sup> - 1（包括）之间的整数，这将返回一个新的 JavaScript 数组，其 `length` 属性设置为该数字（注意：这意味着一个 `arrayLength` 空槽数组，而不是具有实际 `undefined` 值的槽——参见[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)）。
+  - : 如果传递给 `Array` 构造函数的唯一参数是 0 到 2<sup>32</sup> - 1（包括）之间的整数，这将返回一个新的 JavaScript 数组，其 `length` 属性设置为该数字（注意：这意味着一个 `arrayLength` 空槽数组，而不是具有实际 `undefined` 值的槽——参见[稀疏数组](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)）。
 
 ### 异常
 
 - {{jsxref("RangeError")}}
-  - : 如果只有一个参数（`arrayLength`）且其值不在 0 到 2<sup>32</sup> - 1（包括） 之间，则会触发异常。
+  - : 如果只有一个参数（`arrayLength`）且其值不在 0 到 2<sup>32</sup> - 1（包括）之间，则会触发异常。
 
 ## 示例
 

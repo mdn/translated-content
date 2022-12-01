@@ -2,6 +2,7 @@
 title: WebGLContextEvent
 slug: Web/API/WebGLContextEvent
 ---
+
 {{APIRef("WebGL")}}
 
 **WebContextEvent** 接口属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，同时也是生成用来对 WebGL 渲染上下文作响应的事件接口。
@@ -25,7 +26,7 @@ _此接口本身并没有定义任何方法，而是从它的父接口 {{domxref
 
 ## 示例
 
-使用 {{domxref("WEBGL_lose_context")}} 插件， 你可以模拟 {{Event("webglcontextlost")}} 和 {{Event("webglcontextrestored")}} 事件：
+使用 {{domxref("WEBGL_lose_context")}} 插件，你可以模拟 {{domxref("HTMLCanvasElement/webglcontextlost_event", "webglcontextlost")}} 和 {{domxref("HTMLCanvasElement/webglcontextrestored_event", "webglcontextrestored")}} 事件：
 
 ```js
 var canvas = document.getElementById('canvas');
@@ -46,7 +47,7 @@ gl.getExtension('WEBGL_lose_context').loseContext();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLContextEvent")}}
+{{Compat}}
 
 ## 相关内容
 

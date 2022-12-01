@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/inset-block
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`inset-block`** définit le décalage d'un élément par rapport au début et à la fin de l'axe de bloc de l'élément. Cette propriété logique correspond à une propriété physique donnée selon le mode d'écriture de l'élément, sa direction et l'orientation de son texte. Autrement dit, cette propriété peut correspondre à {{cssxref("top")}} et {{cssxref("bottom")}} ou à {{cssxref("right")}} et {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
@@ -42,9 +43,13 @@ Pour gérer les décalages sur la dimension orthogonale, on pourra utiliser la p
 
 La propriété `inset-block` peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -79,15 +84,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-inset-block", "inset-block")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.inset-block")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: MouseEvent.screenX
 slug: Web/API/MouseEvent/screenX
 ---
+
 {{APIRef("DOM Events")}}
 
 **`screenX`** 是 {{domxref("MouseEvent")}} 的只读属性，提供鼠标在全局（屏幕）中的水平坐标（偏移量）。
@@ -20,7 +21,7 @@ var x = instanceOfMouseEvent.screenX
 
 ## 示例
 
-这个例子展示了当触发 {{Event("mousemove")}} 事件时鼠标的坐标。
+这个例子展示了当触发 [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event) 事件时鼠标的坐标。
 
 #### HTML
 

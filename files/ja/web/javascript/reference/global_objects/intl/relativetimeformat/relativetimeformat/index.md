@@ -2,6 +2,7 @@
 title: Intl.RelativeTimeFormat() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat
 ---
+
 {{JSRef}}
 
 **`Intl.RelativeTimeFormat()`** コンストラクターは、 {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} オブジェクトを生成します。
@@ -81,9 +82,7 @@ rtf.format(1, "day");
 
 ## 仕様書
 
-| 仕様書                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES Int Draft', '#sec-intl-relativetimeformat-constructor', 'RelativeTimeFormat()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: 使用影像
 slug: Web/API/Canvas_API/Tutorial/Using_images
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 使用影像是{{HTMLElement("canvas")}}另一個有趣的功能，這個功能可以用來動態組合圖片或作為背景等等。任何瀏覽器支援的外部圖片格式都可以使用，例如 PNG, GIF, 或 JPEG，甚至也可以利用同一份頁面上其他畫布元素產生的影像.

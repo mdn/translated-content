@@ -2,6 +2,7 @@
 title: Media Source Extensions API
 slug: Web/API/Media_Source_Extensions_API
 ---
+
 {{DefaultAPISidebar("Media Source Extensions")}}
 
 **Media Source Extensions API**（MSE、メディアソース拡張機能 API）は、プラグイン不要で Web ベースのストリーミングメディアを可能にする機能を提供します。 MSE を使用すると、メディアストリームを JavaScript で作成し、{{htmlelement("audio")}} 要素 や {{htmlelement("video")}} 要素で再生できます。
@@ -58,9 +59,7 @@ DASH の 2 つの最も一般的な使用例では、コンテンツを「オン
 
 ## 仕様
 
-| 仕様                                                 | 状態                                             | コメント |
-| ---------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

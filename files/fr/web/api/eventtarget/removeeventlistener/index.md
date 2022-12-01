@@ -12,6 +12,7 @@ tags:
   - Écouteurs
 translation_of: Web/API/EventTarget/removeEventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 La méthode **`EventTarget.removeEventListener()`** supprime d'une {{domxref("EventTarget")}} (_cible_) un écouteur d'évènements précédemment enregistré avec {{domxref("EventTarget.addEventListener()")}}. L'écouteur d'évènements à supprimer est identifié en utilisant la combinaison du type d'évènement, la fonction "event listener" elle-même et diverses options factultatives qui peuvent affecter le processus de correspondance ; voir la section _Correspondance utilisée pour la suppression d'écouteurs d'événements_ ci-après.
@@ -28,7 +29,7 @@ target.removeEventListener(type, listener[, useCapture]);
 - `type`
   - : Une chaîne représentant le type d'événement pour lequel supprimer un écouteur d'évènements.
 - `listener`
-  - : La fonction  {{domxref("EventListener")}}  du gestionnaire d'évènements à retirer de la cible d'évènements.
+  - : La fonction {{domxref("EventListener")}} du gestionnaire d'évènements à retirer de la cible d'évènements.
 - `options` {{optional_inline}}
 
   - : Un objet d'options qui spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :

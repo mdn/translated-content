@@ -2,6 +2,7 @@
 title: HTMLMediaElement.defaultPlaybackRate
 slug: Web/API/HTMLMediaElement/defaultPlaybackRate
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.defaultPlaybackRate`** プロパティは、メディアの既定の再生速度を示します。

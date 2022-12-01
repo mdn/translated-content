@@ -2,6 +2,7 @@
 title: PositionError
 slug: Web/API/GeolocationPositionError
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`PositionError`** 接口表示当定位设备位置时发生错误的原因。
@@ -33,7 +34,7 @@ _`PositionError` 接口没有继承任何属性。_
 
 ## 浏览器兼容性
 
-{{Compat("api.GeolocationPositionError")}}
+{{Compat}}
 
 ## 请参见
 

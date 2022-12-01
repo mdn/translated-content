@@ -6,6 +6,7 @@ tags:
 translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 original_slug: Web/HTTP/Basics_of_HTTP/Identifier_des_ressources_sur_le_Web
 ---
+
 {{HTTPSidebar}}
 
 La cible d'une requête HTTP est appelée une "ressource", elle ne possède pas de type particulier. Il peut s'agir d'un document, d'une photo ou de n'importe quoi d'autre. Chaque ressource est identifiée à l'aide d'une _Uniform Resource Identifier_ ({{Glossary("URI")}}) utilisé au sein de HTTP pour identifier les ressources.

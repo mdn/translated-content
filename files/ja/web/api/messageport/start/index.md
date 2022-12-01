@@ -2,6 +2,7 @@
 title: MessagePort.start()
 slug: Web/API/MessagePort/start
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("MessagePort")}} インターフェイスの **`start()`** メソッドは、ポート上のキューに置かれたメッセージの送信を開始します。このメソッドは、{{domxref("EventTarget.addEventListener")}} を使用する場合のみ必要になります。これは、{{domxref("MessageChannel.onmessage")}} を使用する場合は包含されています。
@@ -47,9 +48,7 @@ channel.port1.start();
 
 ## 仕様
 
-| 仕様書                                                                                                       | 策定状況                         | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'web-messaging.html#dom-messageport-start', 'start()')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザの実装状況
 

@@ -2,6 +2,7 @@
 title: 交差オブザーバー API
 slug: Web/API/Intersection_Observer_API
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 交差オブザーバー API (Intersection Observer API) は、ターゲットとなる要素が、祖先要素または文書の最上位の{{Glossary("viewport", "ビューポート")}}と交差する変化を非同期的に監視する方法を提供します。
@@ -569,9 +570,7 @@ function handleIntersect(entries, observer) {
 
 ## 仕様書
 
-| 仕様書                                    | 状態                                       | 備考 |
-| ------------------------------------------------ | -------------------------------------------- | ------- |
-| {{SpecName('IntersectionObserver')}} | {{Spec2('IntersectionObserver')}} |         |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

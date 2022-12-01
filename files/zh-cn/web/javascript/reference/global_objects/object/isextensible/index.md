@@ -2,6 +2,7 @@
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## 概述
@@ -25,7 +26,7 @@ Object.isExtensible(obj)
 
 ## 描述
 
-默认情况下，对象是可扩展的：即可以为他们添加新的属性。以及它们的 {{jsxref("Object.proto", "__proto__")}}{{deprecated_inline}} 属性可以被更改。{{jsxref("Object.preventExtensions")}}，{{jsxref("Object.seal")}} 或 {{jsxref("Object.freeze")}} 方法都可以标记一个对象为不可扩展（non-extensible）。
+默认情况下，对象是可扩展的：即可以为他们添加新的属性。以及它们的 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} 属性可以被更改。{{jsxref("Object.preventExtensions")}}，{{jsxref("Object.seal")}} 或 {{jsxref("Object.freeze")}} 方法都可以标记一个对象为不可扩展（non-extensible）。
 
 ## 例子
 
@@ -49,7 +50,7 @@ Object.isExtensible(frozen); // === false
 
 ## 注意
 
-在 ES5 中，如果参数不是一个对象类型，将抛出一个 {{jsxref("TypeError")}} 异常。在 ES6 中， non-object 参数将被视为一个不可扩展的普通对象，因此会返回 false 。
+在 ES5 中，如果参数不是一个对象类型，将抛出一个 {{jsxref("TypeError")}} 异常。在 ES6 中，non-object 参数将被视为一个不可扩展的普通对象，因此会返回 false。
 
 ```plain
 Object.isExtensible(1);

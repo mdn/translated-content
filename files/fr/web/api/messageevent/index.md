@@ -12,6 +12,7 @@ tags:
   - messaging
 translation_of: Web/API/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`MessageEvent`** représente un message reçu par un objet cible.
@@ -26,7 +27,7 @@ Il est utilisé pour représenter les messages en :
 - [Canaux de diffusion](/fr/docs/Web/API/Broadcast_Channel_API) (voir {{domxref("Broadcastchannel.postMessage()")}}) et {{domxref("BroadcastChannel.onmessage")}}).
 - Les canaux de données WebRTC (voir {{domxref("RTCDataChannel.onmessage")}}).
 
-L'action déclenchée par cet événement est définie dans une fonction définie comme gestionnaire d'événement pour l'événement {{event("message")}} correspondant (par exemple, en utilisant un gestionnaire `onmessage` comme indiqué ci-dessus).
+L'action déclenchée par cet événement est définie dans une fonction définie comme gestionnaire d'événement pour l'événement `message` correspondant (par exemple, en utilisant un gestionnaire `onmessage` comme indiqué ci-dessus).
 
 {{AvailableInWorkers}}
 
@@ -94,7 +95,7 @@ myWorker.port.onmessage = function(e) {
 }
 ```
 
-À l'intérieur du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour nous connecter au même port que celui mentionné ci-dessus. Les ports associés à ce worker sont accessibles dans la propriété `ports` de l'événement {{event("connect")}} - nous utilisons ensuite {{domxref("MessagePort")}} La méthode `start()` pour démarrer le port, et le handler `onmessage` pour gérer les messages envoyés par les processus principaux.
+À l'intérieur du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour nous connecter au même port que celui mentionné ci-dessus. Les ports associés à ce worker sont accessibles dans la propriété `ports` de l'événement [`connect`](/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event) - nous utilisons ensuite {{domxref("MessagePort")}} La méthode `start()` pour démarrer le port, et le handler `onmessage` pour gérer les messages envoyés par les processus principaux.
 
 ```js
 onconnect = function(e) {

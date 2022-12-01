@@ -3,9 +3,10 @@ title: margin-inline-end
 slug: Web/CSS/margin-inline-end
 translation_of: Web/CSS/margin-inline-end
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-[CSS](/ru/docs/Web/CSS "CSS") Свойство **`margin-inline-end `**определяет отступ логического края элемента, который сопоставляется с физическим отступом в зависимости от режима написания, направленности и расположения текста. То есть оно соответствует {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} или {{cssxref("margin-left")}} свойству в зависимости от числа определяющего {{cssxref("writing-mode")}}, {{cssxref("direction")}}, и {{cssxref("text-orientation")}}.
+[CSS](/ru/docs/Web/CSS) Свойство **`margin-inline-end`** определяет отступ логического края элемента, который сопоставляется с физическим отступом в зависимости от режима написания, направленности и расположения текста. То есть оно соответствует {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} или {{cssxref("margin-left")}} свойству в зависимости от числа определяющего {{cssxref("writing-mode")}}, {{cssxref("direction")}}, и {{cssxref("text-orientation")}}.
 
 {{EmbedInteractiveExample("pages/css/margin-inline-end.html")}}
 

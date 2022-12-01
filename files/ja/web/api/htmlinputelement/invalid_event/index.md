@@ -2,6 +2,7 @@
 title: 'HTMLInputElement: invalid イベント'
 slug: Web/API/HTMLInputElement/invalid_event
 ---
+
 {{APIRef}}
 
 **`invalid`** イベントは、送信可能な要素が制約の検証を受け、制約を満たしていない場合に発行されます。

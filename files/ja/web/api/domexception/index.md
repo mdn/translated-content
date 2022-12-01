@@ -2,6 +2,7 @@
 title: DOMException
 slug: Web/API/DOMException
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMException`** インターフェイスは、Web API のメソッドの呼び出しやプロパティへのアクセスによって異常なイベント (**例外**と呼ばれます) が発生したことを表します。これは基本的に、Web API 内部のエラーの状態を示すものです。
@@ -26,7 +27,7 @@ slug: Web/API/DOMException
 
 これは、一般的なエラー名の一覧です。独自にエラー名のセットを定義している API がありますので、これは必ずしも完全なリストではありません。
 
-> **Note:** **注記**: 歴史的にエラーは、エラーの値を持つように定義した名前付き変数と、それに対応する値で識別されてきたため、一部の項目では過去に使用されたレガシーコードや定数名も記載します。
+> **メモ:** 歴史的にエラーは、エラーの値を持つように定義した名前付き変数と、それに対応する値で識別されてきたため、一部の項目では過去に使用されたレガシーコードや定数名も記載します。
 
 - `IndexSizeError`
   - : インデックスが許可された範囲から外れています。例えば、{{domxref("Range")}} オブジェクトで発生することがあります。(レガシーコード: `1`、レガシー定数名: `INDEX_SIZE_ERR`)
@@ -93,13 +94,7 @@ slug: Web/API/DOMException
 
 ## 仕様
 
-| 仕様書                                                                                           | 策定状況                     | コメント                                                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WebIDL', '#es-DOMException-call', 'constructor')}}             | {{Spec2('WebIDL')}}     | `DOMException` クラスのコンストラクターを追加。値 `NotReadableError`, `UnknownError`, `ConstraintError`, `DataError`, `TransactionInactiveError`, `ReadOnlyError`, `VersionError`, `OperationError`, `NotAllowedError` を追加。 |
-| {{SpecName('DOM4', '#exception-domexception', 'DOMException')}}             | {{Spec2('DOM4')}}     | `SECURITY_ERR`, `NETWORK_ERR`, `ABORT_ERR`, `URL_MISMATCH_ERR`, `QUOTA_EXCEEDED_ERR`, `TIMEOUT_ERR`, `INVALID_NODE_TYPE_ERR`, `DATA_CLONE_ERR` を追加。例外値のプロパティ `code` を非推奨に変更。値 `EncodingError` を追加。    |
-| {{SpecName('DOM3 Core', 'core.html#ID-17189187', 'DOMException')}}         | {{Spec2('DOM3 Core')}} | `VALIDATION_ERR` および `TYPE_MISMATCH_ERR` を追加。                                                                                                                                                                            |
-| {{SpecName('DOM2 Core', 'core.html#ID-17189187', 'DOMException')}}         | {{Spec2('DOM2 Core')}} | `INVALID_STATE_ERR`, `SYNTAX_ERR`, `INVALID_MODIFICATION_ERR`, `NAMESPACE_ERR`, `INVALID_ACCESS_ERR` を追加。                                                                                                                   |
-| {{SpecName('DOM1', 'level-one-core.html#ID-17189187', 'DOMException')}} | {{Spec2('DOM1')}}     | 最初期の定義                                                                                                                                                                                                                    |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

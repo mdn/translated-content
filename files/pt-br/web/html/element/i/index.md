@@ -1,25 +1,23 @@
 ---
 title: <i>
 slug: Web/HTML/Element/i
-tags:
-  - i
-translation_of: Web/HTML/Element/i
 ---
+
 O **elemento HTML `<i>` **representa uma parte do texto que é destacada do restante por algum motivo, por exemplo, termos técnicos, expressões de outros idiomas ou pensamentos de personagens fictícios. Normalmente, é apresentado com o uso do tipo "itálico".
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Conteúdo de fluxo (flow content)</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >conteúdo com texto (phrasing content)</a
         >, conteúdo palpável (palpable content).
       </td>
@@ -27,7 +25,7 @@ O **elemento HTML `<i>` **representa uma parte do texto que é destacada do rest
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >Conteúdo com texto (phrasing content)</a
         >.
       </td>
@@ -40,7 +38,7 @@ O **elemento HTML `<i>` **representa uma parte do texto que é destacada do rest
       <th scope="row">Pais permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >conteúdo com texto (phrasing content)</a
         >.
       </td>
@@ -77,7 +75,7 @@ A expressão em latim _Veni, vidi, vici_ é frequentemente mencionada na música
 
 ## Notas
 
-Nas primeiras versões das especificações HTML, a tag `<i>` era usada apenas para apresentar textos em itálico, assim como a tag `<b>` tag era usada para mostrar textos em negrito. Isso não é mais verdade, já que, atualmente, essas tags definem a semântica, e não mais aparência tipográfica.` A tag <i>` pode representar uma parte do texto com uma diferença semântica, na qual a representação tipográfica padrão é no tipo itálico. Isso significa que os navegadores continuarão a apresentar o conteúdo em itálico, mas, de acordo com o que é definido, isso não é mais requerido.
+Nas primeiras versões das especificações HTML, a tag `<i>` era usada apenas para apresentar textos em itálico, assim como a tag `<b>` tag era usada para mostrar textos em negrito. Isso não é mais verdade, já que, atualmente, essas tags definem a semântica, e não mais aparência tipográfica. A tag `<i>` pode representar uma parte do texto com uma diferença semântica, na qual a representação tipográfica padrão é no tipo itálico. Isso significa que os navegadores continuarão a apresentar o conteúdo em itálico, mas, de acordo com o que é definido, isso não é mais requerido.
 
 Use esse elemento somente quando não existir mais nenhum outro elemento com semântica apropriada. Por exemplo:
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Link_types
 original_slug: Web/HTML/Types_de_lien
 ---
+
 {{HTMLSidebar}}
 
 En HTML, les types de lien indiquent la relation entre deux documents, reliés ensemble grâce à un élément [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area), [`<form>`](/fr/docs/Web/HTML/Element/Form) ou [`<link>`](/fr/docs/Web/HTML/Element/link).

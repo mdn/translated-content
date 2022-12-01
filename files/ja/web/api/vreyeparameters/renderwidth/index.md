@@ -2,6 +2,7 @@
 title: VREyeParameters.renderWidth
 slug: Web/API/VREyeParameters/renderWidth
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VREyeParameters")}} インターフェイスの **`renderWidth`** 読取専用プロパティは，各眼のビューポートの推奨レンダーターゲット幅をピクセル値で表します．

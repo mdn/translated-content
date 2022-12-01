@@ -2,6 +2,7 @@
 title: JavaScript中的基本數學 - 數字和運算符
 slug: Learn/JavaScript/First_steps/Math
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 在本課程的這一點上，我們將討論 JavaScript 中的數學 - 我們如何使用{{Glossary("Operator","operators")}} 和其他功能來成功操縱數字來進行我們的出價。
@@ -37,7 +38,7 @@ slug: Learn/JavaScript/First_steps/Math
 
 - **二進位** —計算機的最底層語言；0 和 1。
 - **八進位** —以 8 為單位，每列使用 0–7。
-- **十六進位** —以 16 為單位，在每列中使用 0–9，然後使用 a–f。[在 CSS 中](https://translate.googleusercontent.com/translate_c?depth=1&pto=aue&rurl=translate.google.com.tw&sl=en&sp=nmt4&tl=zh-TW&u=https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units&usg=ALkJrhjxtle73XLvao6e9e-CZv6u2Hq68g#Hexadecimal_values)設置[顏色](https://translate.googleusercontent.com/translate_c?depth=1&pto=aue&rurl=translate.google.com.tw&sl=en&sp=nmt4&tl=zh-TW&u=https://developer.mozilla.org/en-US/Learn/CSS/Introduction_to_CSS/Values_and_units&usg=ALkJrhjxtle73XLvao6e9e-CZv6u2Hq68g#Hexadecimal_values)之前，您可能已經遇到過這些數字。
+- **十六進位** —以 16 為單位，在每列中使用 0–9，然後使用 a–f。你之前在 CSS 中設置[顏色](/zh-TW/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values)時，可能已經遇到過這些數字。
 
 **在開始擔心大腦融化之前，先等等！**首先，我們將在整個課程中完全使用十進位數；您很少會想到其他類型的需求，如果有的話。
 

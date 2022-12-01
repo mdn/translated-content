@@ -2,6 +2,7 @@
 title: JavaScript 基礎
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
 JavaScript 是一個可以幫您在網站裡加入互動功能的程式語言（舉例來說，一個遊戲可能會在按鈕按下或資料被輸入表單內時回應、動態更改樣式、以及展示動畫等）。這篇文章會幫助您踏上學習這個令人興奮的語言的旅程，並展示她可以實現的所有可能。
@@ -272,7 +273,7 @@ if (iceCream === 'chocolate') {
 }
 ```
 
-在 `if ( ... )` 裡面的陳述式就是一個測試—這將會使用到等價運算子（如先前所描述的）來比較變數 `iceCream` 和字串 `chocolate` 兩者是否相等，如果在比較之後回傳了 `true`，接著就執行第一個區塊內的程式碼。如果不是，就略過第一個區塊的程式碼並轉而執行寫在執行在 `else 之後、`第二個區塊內的程式碼。
+在 `if ( ... )` 裡面的陳述式就是一個測試—這將會使用到等價運算子（如先前所描述的）來比較變數 `iceCream` 和字串 `chocolate` 兩者是否相等，如果在比較之後回傳了 `true`，接著就執行第一個區塊內的程式碼。如果不是，就略過第一個區塊的程式碼並轉而執行寫在執行在 `else` 之後、第二個區塊內的程式碼。
 
 ### 函式（Functions）
 

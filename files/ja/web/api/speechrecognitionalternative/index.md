@@ -2,6 +2,7 @@
 title: SpeechRecognitionAlternative
 slug: Web/API/SpeechRecognitionAlternative
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechRecognitionAlternative`** インターフェイスは、音声認識サービスにより認識されている一つの単語を表します。
@@ -35,9 +36,7 @@ recognition.onresult = function(event) {
 
 ## 仕様
 
-| 仕様書                                                                                                                   | 策定状況                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
-| {{SpecName('Web Speech API', '#speechreco-alternative', 'SpeechRecognitionAlternative')}} | {{Spec2('Web Speech API')}} |      |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

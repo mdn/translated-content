@@ -2,6 +2,7 @@
 title: Path2D
 slug: Web/API/Path2D
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 The **`Path2D`** interface of the Canvas 2D API is used to declare paths that are then later used on {{domxref("CanvasRenderingContext2D")}} objects. The [path methods](/ja/docs/Web/API/CanvasRenderingContext2D#Paths) of the `CanvasRenderingContext2D` interface are present on this interface as well and are allowing you to create paths that you can retain and replay as required on a canvas.
@@ -32,13 +33,11 @@ The **`Path2D`** interface of the Canvas 2D API is used to declare paths that ar
 - {{domxref("CanvasRenderingContext2D.ellipse()", "Path2D.ellipse()")}}
   - : Adds an ellipse to the path which is centered at _(x, y)_ position with the radii _radiusX_ and _radiusY_ starting at _startAngle_ and ending at _endAngle_ going in the given direction by _anticlockwise_ (defaulting to clockwise).
 - {{domxref("CanvasRenderingContext2D.rect()", "Path2D.rect()")}}
-  - : Creates a path for a rectangle at\_ _position _(x, y)_ with a size that is determined by \_width_ and _height_.
+  - : Creates a path for a rectangle at position _(x, y)_ with a size that is determined by _width_ and _height_.
 
 ## Specifications
 
-| Specification                                                                            | Status                           | Comment |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-path2d", "Path2D")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

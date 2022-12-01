@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 translation_of: Web/JavaScript/Reference/Global_Objects/URIError/URIError
 browser-compat: javascript.builtins.URIError.URIError
 ---
+
 {{JSRef}}
 
 Le constructeur **`URIError()`** permet de créer une erreur lorsqu'une fonction de gestion d'un URI a été utilisée de façon incorrecte.

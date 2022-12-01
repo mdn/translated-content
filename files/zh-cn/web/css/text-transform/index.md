@@ -2,6 +2,7 @@
 title: text-transform
 slug: Web/CSS/text-transform
 ---
+
 {{CSSRef}}
 
 ## **概要**
@@ -103,7 +104,7 @@ This demonstrates text capitalization.
 ### 首字母大写 (标点)
 
 ```plain
-<p>Initial String <strong>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</strong> </p> <p>text-transform: capitalize <strong><span>(this) “is” [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</span></strong> </p>
+<p>Initial String <strong>(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</strong> </p> <p>text-transform: capitalize <strong><span>(this) "is" [a] –short– -test- «for» *the* _css_ ¿capitalize? ?¡transform!</span></strong> </p>
 ```
 
 ```plain

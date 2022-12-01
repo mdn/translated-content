@@ -2,6 +2,7 @@
 title: PromiseRejectionEvent
 slug: Web/API/PromiseRejectionEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`PromiseRejectionEvent`** インターフェイスは、 JavaScript の {{jsxref("Promise")}} が拒否されたときにグローバルスクリプトコンテキストに送信されるイベントを表します。これらのイベントは、測定やデバッグ目的に使用すると特に有益です。
@@ -41,9 +42,7 @@ window.onunhandledrejection = function(e) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                                 | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#promiserejectionevent', 'PromiseRejectionEvent')}} | {{ Spec2('HTML WHATWG') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

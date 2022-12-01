@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.clip()
 slug: Web/API/CanvasRenderingContext2D/clip
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.clip()`** 是 Canvas 2D API 将当前创建的路径设置为当前剪切路径的方法。
@@ -23,8 +24,10 @@ void ctx.clip(path, fillRule);
   - : 这个算法判断一个点是在路径内还是在路径外。
     允许的值：
 
-    - **`"nonzero`**": [非零环绕原则](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的原则。
-    - **`"evenodd"`**: [奇偶环绕原则](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
+    - `nonzero`
+      - : [非零环绕原则](http://en.wikipedia.org/wiki/Nonzero-rule)，默认的原则。
+    - `evenodd`
+      - : [奇偶环绕原则](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
 
 - `path`
   - : 需要剪切的 {{domxref("Path2D")}} 路径。
@@ -102,7 +105,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.clip")}}
+{{Compat}}
 
 ## 参见
 

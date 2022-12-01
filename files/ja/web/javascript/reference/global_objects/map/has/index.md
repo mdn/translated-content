@@ -2,6 +2,7 @@
 title: Map.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Map/has
 ---
+
 {{JSRef}}
 
 **`has()`** メソッドは、指定されたキーに対する要素が存在するかどうかを示す論理値を返します。
@@ -37,9 +38,7 @@ myMap.has('baz')   // returns false
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.has', 'Map.prototype.has')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

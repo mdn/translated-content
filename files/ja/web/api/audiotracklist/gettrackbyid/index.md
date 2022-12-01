@@ -2,6 +2,7 @@
 title: AudioTrackList.getTrackById()
 slug: Web/API/AudioTrackList/getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 **{{domxref("AudioTrackList")}}** の **`getTrackById()`** メソッドは、指定された文字列と {{domxref("AudioTrack.id", "id")}} が一致するトラックリストから最初の {{domxref("AudioTrack")}} オブジェクトを返します。 ID 文字列がわかっていれば、これで特定のトラックを見つけることができます。
@@ -37,10 +38,7 @@ function disableCharacter(videoElem, characterName) {
 
 ## 仕様
 
-| 仕様                                                                                                                                                         | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-audiotracklist-gettrackbyid', 'AudioTrackList.getTrackById()')}}                             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotracklist-getTrackById', 'AudioTrackList.getTrackById()')}} | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: 作者詳情頁面
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 ---
+
 作者細節頁面，需要呈現指定作者 `Author` 的信息，使用 `_id` 欄位的值（自動產生）識別，接著是這個作者 `Author`的所有書本物件 `Book`的列表。
 
 ## Controller 控制器

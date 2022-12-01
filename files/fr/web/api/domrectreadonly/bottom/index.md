@@ -10,6 +10,7 @@ tags:
   - Rectangle
 translation_of: Web/API/DOMRectReadOnly/bottom
 ---
+
 {{APIRef("DOM")}}{{ SeeCompatTable() }}
 
 La propriété en lecture seule **`bottom`** d'une interface **`DOMRectReadOnly`** renvoie la valeur des coordonnées du pied du `DOMRect` (a la même valeur que `y + height` _(y + hauteur)_, ou `y` si `height` est négative).

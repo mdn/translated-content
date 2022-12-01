@@ -2,6 +2,7 @@
 title: DOMPoint.y
 slug: Web/API/DOMPoint/y
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** 的 **`y`** 属性表示该点的垂直坐标。`y` 值增加表示向下偏移，减小表示向上偏移，除非改变了默认轴方向。
@@ -22,7 +23,7 @@ var yPos = DOMPoint.y;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMPointReadOnly.y")}}
+{{Compat}}
 
 ## 相关链接
 

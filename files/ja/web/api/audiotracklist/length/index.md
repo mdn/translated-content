@@ -2,6 +2,7 @@
 title: AudioTrackList.length
 slug: Web/API/AudioTrackList/length
 ---
+
 {{APIRef("HTML DOM")}}
 
 読み取り専用の **{{domxref("AudioTrackList")}}** の **`length`** プロパティは、`AudioTrackList` 内のエントリ数を返します。 各エントリは、メディア要素内の 1 つの音声トラックを表す {{domxref("AudioTrack")}} です。 値 0 は、メディアに音声トラックがないことを示します。
@@ -33,10 +34,7 @@ if (videoElem.audioTracks) {
 
 ## 仕様
 
-| 仕様                                                                                                                                     | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'media.html#dom-audiotracklist-length', 'AudioTrackList.length')}}             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotracklist-length', 'AudioTrackList.length')}} | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
