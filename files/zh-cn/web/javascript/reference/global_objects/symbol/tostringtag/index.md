@@ -60,7 +60,7 @@ Object.prototype.toString.call(new ValidatorClass()); // "[object Validator]"
 
 ### toStringTag 适用于所有 DOM 原型对象
 
-由于 2020 年年中 [WebIDL规范的变化](https://github.com/whatwg/webidl/pull/357)，浏览器正在向所有 DOM 原型对象添加 `Symbol.toStringTag` 属性。例如，要访问 {{domxref("HTMLButtonElement")}} 上的 `Symbol.toStringTag` 属性：
+由于 2020 年年中 [WebIDL 规范的变化](https://github.com/whatwg/webidl/pull/357)，浏览器正在向所有 DOM 原型对象添加 `Symbol.toStringTag` 属性。例如，要访问 {{domxref("HTMLButtonElement")}} 上的 `Symbol.toStringTag` 属性：
 
 ```js
 const test = document.createElement('button');
