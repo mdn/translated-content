@@ -82,7 +82,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 **`srcset`** 定义了浏览器可选择的图片设置以及每个图片的大小，每张图片信息的设置和前一个用逗号隔开，每个设置要写：
 
-1. 一个**文件名** (`elva-fairy-480w.jpg`.)
+1. 一个**文件名**（`elva-fairy-480w.jpg`）
 2. 一个空格
 3. **图片的固有宽度**（以像素为单位）（480w）。注意，这里使用宽度描述符 `w`，而非你可能期望的 `px`。图片的[固有宽度](/zh-CN/docs/Glossary/Intrinsic_Size)是它的真实大小，可以通过检查你电脑上的图片文件找到（例如，在 Mac 上，你可以在 Finder 上选择这个图片，然后按
 
@@ -109,7 +109,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 3. 查看给予该媒体查询的槽大小
 4. 加载 `srcset` 列表中引用的最接近所选的槽大小的图像
 
-就是这样！所以在这里，如果支持浏览器以 480px 的视口来加载页面，那么`(max-width: 600px)`的媒体条件为真，因此 `480px` 的槽会被选择，所以 `elva-fairy-480w.jpg` 将加载，因为它的固有宽度（`480w`）最接近于槽宽度。800px 的照片大小为 128KB 而 480px 版本仅有 63KB 大小——节省了 65KB。现在想象一下，如果这是一个有很多图片的页面，使用这种技术会节省移动端用户的大量带宽。
+就是这样！所以在这里，如果支持浏览器以 480px 的视口来加载页面，那么 `(max-width: 600px)` 的媒体条件为真，因此 `480px` 的槽会被选择，所以 `elva-fairy-480w.jpg` 将加载，因为它的固有宽度（`480w`）最接近于槽宽度。800px 的照片大小为 128KB 而 480px 版本仅有 63KB 大小——节省了 65KB。现在想象一下，如果这是一个有很多图片的页面，使用这种技术会节省移动端用户的大量带宽。
 
 > **备注：** 在桌面端浏览器测试上面的示例时，如果你把浏览器设到最小宽度，却没有加载更小的图片，请检查一下此时的视口是什么（你可以打开浏览器的 JavaScript 控制台，输入 `document.querySelector('html').clientWidth` 来获得近似视口宽度）。不同的浏览器设置了窗口可以缩小到的最小宽度，它可能比你想的更宽一点。使用移动端浏览器测试时，可以使用类似 Firefox 的 `about:debugging` 页这样的工具，使用桌面端开发者工具检查在移动端加载的页面。你可以在 Firefox 开发者工具中的 [Network 标签](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)中查看加载了哪张图片。
 
@@ -201,7 +201,7 @@ img {
 
 ## 小结
 
-这章节中充满了响应式图像——我们希望你学习新技术的过程是享受的。总而言之，我们讨论了两个不同的问题：
+这章节中充满了响应式图像——希望你享受学习新技术的过程。总而言之，我们讨论了两个不同的问题：
 
 - **美术设计**：当你想为不同布局提供不同剪裁的图片——比如在桌面布局上显示完整的、横向图片，而在手机布局上显示一张剪裁过的、突出重点的纵向图片，可以用 {{htmlelement("picture")}} 元素来实现。
 - **分辨率切换**：当你想要为窄屏提供更小的图片时，因为小屏幕不需要像桌面端显示那么大的图片；以及你想为高/低分辨率屏幕提供不同分辨率的图片时，都可以通过[矢量图](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)(SVG 图片)、{{htmlattrxref("srcset", "img")}} 以及 {{htmlattrxref("sizes", "img")}} 属性来实现。
