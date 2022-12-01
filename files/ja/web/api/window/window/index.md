@@ -47,4 +47,3 @@ Yet another reason to use this property is for libraries which wish to offer OOP
 ## 仕様
 
 {{Specifications}}
-

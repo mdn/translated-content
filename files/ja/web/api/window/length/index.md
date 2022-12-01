@@ -28,4 +28,3 @@ if (window.length) {
 ## 仕様
 
 {{Specifications}}
-

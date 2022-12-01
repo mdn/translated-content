@@ -57,4 +57,3 @@ window.scroll({
 ## 仕様
 
 {{Specifications}}
-
