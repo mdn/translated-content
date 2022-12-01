@@ -131,6 +131,13 @@
     "MD052": false,
     "search-replace": {
       "rules": [
+        {
+          "name": "nbsp",
+          "message": "Don't use no-break spaces",
+          "searchPattern": "/ /g",
+          "replace": " ",
+          "skipCode": false
+        },
         // This will be replaced with Prettier in the long run
         {
           "name": "double-spaces",
