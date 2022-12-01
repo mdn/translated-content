@@ -1,8 +1,8 @@
 ---
 title: Intl.Segments.prototype[@@iterator]()
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator
-l10n:
-  sourceCommit: 6dfc15fbe7a8679ec06140d7cdb37d6908512426
+slug: >-
+  Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
+original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator
 ---
 
 {{JSRef}}
