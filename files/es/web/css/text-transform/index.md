@@ -1,13 +1,6 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-tags:
-  - CSS
-  - Layout
-  - Propiedad CSS
-  - Referencia
-  - Texto
-translation_of: Web/CSS/text-transform
 ---
 
 {{CSSRef}}

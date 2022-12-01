@@ -1,10 +1,6 @@
 ---
 title: API de WebRTC
 slug: Web/API/WebRTC_API
-tags:
-  - API
-  - WebRTC
-translation_of: Web/API/WebRTC_API
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

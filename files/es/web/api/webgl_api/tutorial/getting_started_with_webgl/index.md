@@ -1,11 +1,6 @@
 ---
 title: Primeros pasos con WebGL
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
-tags:
-  - Intro
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
 
 {{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}

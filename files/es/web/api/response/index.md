@@ -1,14 +1,6 @@
 ---
 title: Response
 slug: Web/API/Response
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Interface
-  - Referencia
-  - Respuesta
-translation_of: Web/API/Response
 ---
 
 {{APIRef("Fetch API")}}
