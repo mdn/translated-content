@@ -36,4 +36,3 @@ slug: Web/CSS/CSS_Basic_User_Interface
 ## 仕様書
 
 {{Specifications}}
-

@@ -33,4 +33,3 @@ slug: Web/API/Credential_Management_API
 ## 仕様書
 
 {{Specifications}}
-

@@ -29,4 +29,3 @@ slug: Web/CSS/CSS_Pages
 ## 仕様書
 
 {{Specifications}}
-

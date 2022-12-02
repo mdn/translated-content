@@ -34,4 +34,3 @@ slug: Web/CSS/CSS_Transforms
 ## 仕様書
 
 {{Specifications}}
-
