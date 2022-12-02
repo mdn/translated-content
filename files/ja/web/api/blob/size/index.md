@@ -1,47 +1,64 @@
 ---
 title: Blob.size
 slug: Web/API/Blob/size
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
 {{APIRef("File API")}}
 
-{{domxref("Blob")}} インターフェイスの **`size`** プロパティは、{{domxref("Blob")}} または {{domxref("File")}} のサイズをバイト単位で返します。
-
-## シンタックス
-
-```
-var sizeInBytes = blob.size
-```
+{{domxref("Blob")}} インターフェイスの **`size`** プロパティは、 {{domxref("Blob")}} または {{domxref("File")}} の大きさをバイト単位で返します。
 
 ### 値
 
-`Blob` (または `Blob` ベースのオブジェクト、例えば{{domxref("File")}}) 内に含まれるデータのバイト数。
+`Blob` （または `Blob` ベースのオブジェクト、例えば {{domxref("File")}}）内に含まれるデータのバイト数です。
 
 ## 例
 
-この例では、`file` 型の {{HTMLElement("input")}} 要素を使用して、ユーザーにファイルのグループを尋ね、それらのファイルを繰り返し処理して、その名前と長さをバイト単位で出力しています。
+この例では、 {{HTMLElement("input")}} 要素の `file` 型を使用して、ユーザーにファイルのグループを尋ね、それらのファイルを繰り返し処理して、その名前と長さをバイト単位で出力しています。
 
-```js
-// fileInputは HTMLInputElement <input type="file" multiple id="myfileinput"> です。
-var fileInput = document.getElementById("myfileinput");
+### HTML
 
-// files は FileList オブジェクトです (NodeList に似ています)。
-var files = fileInput.files;
+```html
+<input type="file" id="input" multiple />
+<output id="output">ファイルを選択してください…</output>
+```
 
-for (var i = 0; i < files.length; i++) {
-  console.log(files[i].name + " has a size of " + files[i].size + " Bytes");
+```css hidden
+output {
+  display: block;
+  margin-top: 16px;
 }
 ```
 
-## 仕様
+### JavaScript
+
+```js
+const input = document.getElementById("input");
+const output = document.getElementById("output");
+
+input.addEventListener("change", (event) => {
+  output.innerText = "";
+
+  for (const file of event.target.files) {
+    output.innerText += `${file.name} の大きさは ${file.size} バイトです。\n`;
+  }
+});
+```
+
+### 結果
+
+{{EmbedLiveSample("Examples")}}
+
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
-{{Compat("api.Blob.size")}}
+{{Compat}}
 
-## あわせて参照
+## 関連情報
 
 - {{domxref("Blob")}}
-- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
