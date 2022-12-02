@@ -73,4 +73,3 @@ html,body,svg { height:100% }
 ## Specification
 
 {{Specifications}}
-

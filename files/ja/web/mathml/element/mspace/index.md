@@ -7,7 +7,7 @@ l10n:
 
 {{MathMLRef}}
 
-**`<mspace>`** は [MathML](/ja/docs/Web/MathML)  の要素で、空白を作るために使われます。空白のサイズは属性で指定します。
+**`<mspace>`** は [MathML](/ja/docs/Web/MathML) の要素で、空白を作るために使われます。空白のサイズは属性で指定します。
 
 ## 属性
 

@@ -229,4 +229,3 @@ html,body,svg { height:100% }
 ## 仕様書
 
 {{Specifications}}
-

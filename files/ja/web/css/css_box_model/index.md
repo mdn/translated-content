@@ -76,4 +76,3 @@ CSS のボックスは、テキスト、画像、その他の HTML 要素が表�
 ## 仕様書
 
 {{Specifications}}
-

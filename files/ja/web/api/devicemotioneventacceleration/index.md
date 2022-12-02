@@ -20,4 +20,3 @@ original_slug: Web/API/DeviceAcceleration
 ## 仕様
 
 {{Specifications}}
-
