@@ -965,10 +965,7 @@ Constants passed to {{domxref("WebGLRenderingContext.texParameteri()")}}, {{domx
 
 ## Specifications
 
-| Specification                                                                | Status                   | Comment                       |
-| ---------------------------------------------------------------------------- | ------------------------ | ----------------------------- |
-| {{SpecName('WebGL', "#5.14", "WebGLRenderingContext")}}     | {{Spec2('WebGL')}} | Initial definition            |
-| {{SpecName('WebGL2', "#3.7", "WebGL2RenderingContext")}} | {{Spec2('WebGL2')}} | Defines additional constants. |
+{{Specifications}}
 
 ## See also
 

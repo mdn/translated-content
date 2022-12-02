@@ -1,11 +1,6 @@
 ---
 title: Resuelva problemas comunes en su código JavaScript
 slug: Learn/JavaScript/Howto
-tags:
-  - Aprendizaje
-  - JavaScript
-  - Principante
-translation_of: Learn/JavaScript/Howto
 ---
 
 {{LearnSidebar}}

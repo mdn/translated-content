@@ -1,13 +1,6 @@
 ---
 title: ':nth-of-type'
 slug: Web/CSS/:nth-of-type
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:nth-of-type
 ---
 
 {{CSSRef}}

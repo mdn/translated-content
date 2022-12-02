@@ -1,16 +1,6 @@
 ---
 title: Depurar el HTML
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
-tags:
-  - Error
-  - Guía
-  - HTML
-  - Principiante
-  - Validación
-  - Validador
-  - depurar
-  - programar
-translation_of: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 original_slug: Learn/HTML/Introduccion_a_HTML/Debugging_HTML
 ---
 

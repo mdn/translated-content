@@ -82,7 +82,7 @@ Web サイト自体に選択肢をハードコーディングするのではな�
 
 > **メモ:** 下記の Mongoose 入門書で説明されているように、1 つのモデルだけで documents/models 間の関係を定義するフィールドがあるほうがよいでしょう (他のモデルで関連する `_id` を検索することによって逆の関係を見つけることができます)。以下では、Book スキーマの Book/Genre と Book/Author の関係、および BookInstance スキーマの Book/BookInstance の関係を定義します。この選択は多少恣意的でした - 他のスキーマでも同じようにフィールドを持つことができました。
 
-![Mongoose Library Model  with correct cardinality](Library%20Website%20-%20Mongoose_Express.png)
+![Mongoose Library Model with correct cardinality](Library%20Website%20-%20Mongoose_Express.png)
 
 > **メモ:** 次のセクションでは、モデルの定義方法と使用方法を説明する基本的な入門書を提供します。お読みになったところで、上の図の各モデルをどのように構築するかを検討してください。
 

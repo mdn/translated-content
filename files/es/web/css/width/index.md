@@ -1,8 +1,6 @@
 ---
 title: width
 slug: Web/CSS/width
-translation_of: Web/CSS/width
-browser-compat: css.properties.width
 ---
 
 {{CSSRef}}

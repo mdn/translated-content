@@ -55,7 +55,7 @@ original_slug: learn/Server-side/Django/主页构建
 - `catalog/` — 主页
 - `catalog/books/` — 书单页
 - `catalog/authors/` — 作者页
-- `catalog/book/<id>` — 主键字段 ID 的具体书（默认） —详细视图。如下例子 `／catalog／book／3`，第三本书。
+- `catalog/book/<id>` — 主键字段 ID 的具体书（默认） —详细视图。如下例子 `/catalog/book/3`，第三本书。
 - `catalog/author/<id>` — 主键字段 ID 的具体作者（默认） —详细视图。如下例子 `/catalog/author/11`，第 11 个作者。
 
 前三个 URL 用于列出索引，书籍和作者。这些不会对任何附加信息进行编码，而返回的结果将取决于数据库中的内容，运行获取信息的查询将始终保持一致。

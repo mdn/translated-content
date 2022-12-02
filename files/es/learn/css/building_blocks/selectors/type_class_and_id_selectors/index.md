@@ -1,7 +1,6 @@
 ---
 title: Selectores de tipo, clase e ID
 slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
-translation_of: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Selectores_de_tipo_clase_e_ID
 ---
 

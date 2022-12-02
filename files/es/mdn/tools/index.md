@@ -1,12 +1,6 @@
 ---
 title: Herramientas de MDN y Utilidades
 slug: MDN/Tools
-tags:
-  - Documentacion(2)
-  - Documentación
-  - MDN
-  - Proyecto MDC
-translation_of: MDN/Tools
 ---
 
 {{MDNSidebar}}
@@ -28,6 +22,6 @@ MDN ofrece un número de características que hacen fácil seguir el progreso, g
 
 Estos son enlaces directos a herramientas útiles MDN.
 
-- [Panel de Revisión](/en-US/dashboards/revisions)
-- [Panel de Localización](/en-US/dashboards/localization)
+- [Panel de Revisión](/es/dashboards/revisions)
+- [Panel de Localización](/es/dashboards/localization)
 - [Estado del servidor](/es/docs/Project:MDN/ServerCharts)

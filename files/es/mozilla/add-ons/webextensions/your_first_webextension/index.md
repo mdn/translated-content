@@ -1,10 +1,6 @@
 ---
 title: Tu primera extensión
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
-tags:
-  - Guía
-  - WebExtension
-translation_of: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Tu_primera_WebExtension
 ---
 
@@ -54,9 +50,9 @@ Ahora crearemos un archivo nuevo llamado "manifest.json" directamente en la carp
 }
 ```
 
-- Los primeros 3 parámetros:[`manifest_version`](/en-US/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/Add-ons/WebExtensions/manifest.json/name), y [`version`](/en-US/Add-ons/WebExtensions/manifest.json/version), son obligatorios, y contienen metadatos básicos para la extensión.
-- [`description`](/en-US/Add-ons/WebExtensions/manifest.json/description) es opcional, pero se recomienda: Se muestra en el Administrador de Add-ons.
-- [`icons`](/en-US/Add-ons/WebExtensions/manifest.json/icons) es opcional, pero recomendado: permite especificar un ícono para la extensión, se mostrará en el Administrador de Add-ons.
+- Los primeros 3 parámetros:[`manifest_version`](/es/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/es/Add-ons/WebExtensions/manifest.json/name), y [`version`](/es/Add-ons/WebExtensions/manifest.json/version), son obligatorios, y contienen metadatos básicos para la extensión.
+- [`description`](/es/Add-ons/WebExtensions/manifest.json/description) es opcional, pero se recomienda: Se muestra en el Administrador de Add-ons.
+- [`icons`](/es/Add-ons/WebExtensions/manifest.json/icons) es opcional, pero recomendado: permite especificar un ícono para la extensión, se mostrará en el Administrador de Add-ons.
 
 El parámetro más interesante aquí es [`content_scripts`](/es/Add-ons/WebExtensions/manifest.json/content_scripts), el cual le dice a Firefox que cargue el script en las páginas Web, cuyas URL coincidan con un patrón especifico. En este caso, le estamos pidiendo a Firefox que cargue el script llamado "borderify.js" en todas las paginas HTTP o HTTPS cargadas desde "mozilla.org" o cualquiera de sus subdominios.
 

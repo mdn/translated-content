@@ -1,30 +1,26 @@
 ---
 title: PublicKeyCredential.rawId
 slug: Web/API/PublicKeyCredential/rawId
+l10n:
+  sourceCommit: b7cd76af245c330c6a1a9f489602015fa0714044
 ---
 
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
-**`rawId`** は {{domxref("PublicKeyCredential")}} インターフェイスの読み取り専用プロパティで、証明書の識別子が入った {{jsxref("ArrayBuffer")}} オブジェクトです。
+**`rawId`** は {{domxref("PublicKeyCredential")}} インターフェイスの読み取り専用プロパティで、資格情報の識別子が入った {{jsxref("ArrayBuffer")}} オブジェクトです。
 
-{{domxref("PublicKeyCredential.id")}} プロパティはこの識別子が [base64url エンコード](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)されたものです。
+{{domxref("PublicKeyCredential.id")}} プロパティはこの識別子が [base64url エンコード](/ja/docs/Glossary/Base64)されたものです。
 
-> **メモ:** このプロパティは最上位のコンテキストでしか使えない可能性があり、例えば {{HTMLElement("iframe")}} の中では利用できません。
-
-## 構文
-
-```
-rawId = publicKeyCredential.rawId
-```
+> **メモ:** このプロパティは最上位のコンテキストでしか使えません。例えば {{HTMLElement("iframe")}} の中では利用できません。
 
 ### 値
 
-{{jsxref("ArrayBuffer")}} で、証明書の識別子が入っています。この識別子はグローバルに固有で、現在の `PublicKeyCredential` および関連する {{domxref("AuthenticatorAssertionResponse")}} を指しています。
+{{jsxref("ArrayBuffer")}} で、資格情報の識別子が入っています。この識別子はグローバルに固有で、現在の `PublicKeyCredential` および関連する {{domxref("AuthenticatorAssertionResponse")}} を指しています。
 
 ## 例
 
 ```js
-var options = {
+const options = {
   challenge: new Uint8Array(26) /* from the server */,
   rp: {
     name: "Example CORP",
@@ -32,8 +28,8 @@ var options = {
   },
   user: {
     id: new Uint8Array(26), /* To be changed for each user */
-    name: "jdoe@example.com",
-    displayName: "John Doe",
+    name: "canand@example.com",
+    displayName: "Carina Anand",
   },
   pubKeyCredParams: [
     {
@@ -43,21 +39,19 @@ var options = {
   ]
 };
 
-navigator.credentials.create({  publickey: options })
-  .then(function (pubKeyCredential) {
-    var rawId = pubKeyCredential.rawId;
+navigator.credentials.create({  publicKey: options })
+  .then((pubKeyCredential) => {
+    const rawId = pubKeyCredential.rawId;
     // Do something with rawId
-}).catch(function (err) {
+}).catch((err) => {
   // Deal with any error
 });
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                         | 備考     |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('WebAuthn','#dom-publickeycredential-rawid','rawId')}} | {{Spec2('WebAuthn')}} | 初回定義 |
+{{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.PublicKeyCredential.rawId")}}
+{{Compat}}

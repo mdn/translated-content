@@ -33,7 +33,4 @@ slug: Web/CSS/CSS_Transforms
 
 ## 仕様書
 
-| 仕様書                             | 状態                            | 備考                   |
-| ---------------------------------- | ------------------------------- | ---------------------- |
-| {{ SpecName('CSS Transforms 2') }} | {{ Spec2('CSS Transforms 2') }} | 独立した座標変換を追加 |
-| {{ SpecName('CSS3 Transforms') }}  | {{ Spec2('CSS3 Transforms') }}  | 初回定義               |
+{{Specifications}}

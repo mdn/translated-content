@@ -2,6 +2,7 @@
 title: URL
 slug: Glossary/URL
 ---
+
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 
 **URL**(Uniform Resource Locator)은 인터넷에서 웹 페이지, 이미지, 비디오 등 리소스의 위치를 가리키는 문자열입니다.

@@ -218,7 +218,7 @@ worker 要做的第一件事情就是开始监听来自主脚本的消息。这�
 
 ## 其他类型的 worker
 
-我们刚刚创建的 worker 被称为 _delicated worker_。这意味着它由一个脚本实例使用。
+我们刚刚创建的 worker 被称为 _dedicated worker_。这意味着它由一个脚本实例使用。
 
 不过，还有其他类型的 worker：
 

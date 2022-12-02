@@ -4,6 +4,7 @@ slug: conflicting/MDN/Writing_guidelines/Page_structures/Live_samples
 translation_of: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 original_slug: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 ---
+
 <div>{{MDNSidebar}}</div>
 
 <div>{{IncludeSubnav("/en-US/docs/MDN")}}</div>
@@ -171,7 +172,7 @@ document.addEventListener('keyup', function () {
 
 <p>The previous example is okay if you want to embed basic active learning content. However, if you want to deal with complex code, it can become a bit awkward to deal with that <code>hidden</code> class wrapper.</p>
 
-<p>So another option is to write the code of your learning content on an MDN page and then embed it into another page. To do this we can use the {{TemplateLink("EmbedDistLiveSample")}} macro instead of the {{TemplateLink("EmbedLiveSample")}} macro.</p>
+<p>So another option is to write the code of your learning content on an MDN page and then embed it into another page. To do this we can use the <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs">EmbedLiveSample</a> macro instead of the {{TemplateLink("EmbedLiveSample")}} macro.</p>
 
 <p>Let's how that sample looks when configured as if it were being embedded from a remote origin:</p>
 

@@ -1,10 +1,6 @@
 ---
 title: for-each
 slug: Web/XSLT/Element/for-each
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/for-each
 original_slug: Web/XSLT/for-each
 ---
 

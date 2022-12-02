@@ -1,19 +1,6 @@
 ---
 title: Agregar Gráficos Vectoriales a la Web
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
-tags:
-  - Aprender
-  - Guía
-  - HTML
-  - Imagenes
-  - Principiante
-  - Raster
-  - SVG
-  - Vector
-  - graficos
-  - iframe
-  - img
-translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

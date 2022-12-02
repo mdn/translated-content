@@ -1,14 +1,6 @@
 ---
 title: CSS
 slug: Web/CSS
-tags:
-  - CSS
-  - Diseño
-  - Estilo
-  - Hojas de Estilo en Cascada
-  - Hojas de estilo
-  - Referencia
-translation_of: Web/CSS
 ---
 
 **Hojas de Estilo en Cascada** (del inglés _**C**ascading **S**tyle **S**heets_) o **CSS** es el lenguaje de [estilos](/es/docs/Web/API/StyleSheet) utilizado para describir la presentación de documentos [HTML](/es/docs/HTML) o [XML](/es/docs/XML) (incluyendo varios languages basados en XML como [SVG](/es/docs/Web/SVG), [MathML](/es/docs/Web/MathML) o {{Glossary("XHTML")}}). CSS describe como debe ser renderizado el elemento estructurado en la pantalla, en papel, en el habla o en otros medios.

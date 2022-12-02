@@ -1,7 +1,6 @@
 ---
 title: Ejercicio práctico de construcción de objetos
 slug: Learn/JavaScript/Objects/Object_building_practice
-translation_of: Learn/JavaScript/Objects/Object_building_practice
 original_slug: Learn/JavaScript/Objects/Ejercicio_práctico_de_construcción_de_objetos
 ---
 
@@ -40,7 +39,7 @@ var width = canvas.width = window.innerWidth;
 var height = canvas.height = window.innerHeight;
 ```
 
-Este script obtiene una referencia del elemento `<canvas>`, luego llama al método [`getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) para definir un contexto en el cual se pueda comenzar a dibujar. El resultado de la variable (`ctx`) es el objeto que representa directamente el área de dibujo del `<canvas>` y permite dibujar elementos 2D en él.
+Este script obtiene una referencia del elemento `<canvas>`, luego llama al método [`getContext()`](/es/docs/Web/API/HTMLCanvasElement/getContext) para definir un contexto en el cual se pueda comenzar a dibujar. El resultado de la variable (`ctx`) es el objeto que representa directamente el área de dibujo del `<canvas>` y permite dibujar elementos 2D en él.
 
 A continuación se da valor a las variables `width` and `height` que corresponden al ancho y alto del elemento _canvas_ (representado por las propiedades `canvas.width` y `canvas.height`), de manera que el alto y ancho coincidan con el alto y ancho del navegador (_viewport_) cuyos valores se obtienen directamente de las propiedades _window\.innerWidth_ y _window\.innerHeight_.
 
@@ -96,15 +95,15 @@ Ball.prototype.draw = function() {
 
 Con esta función cada objeto pelota `Ball()` puede dibujarse en la pantalla utilizando el contexto 2D definido anteriormente (`ctx`)
 
-- Primero usamos [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) para declarar que empezaremos a dibujar una forma en el _canvas_.
-- A continuación usamos el [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) para definir el color de la forma. Haremos que coincida con la propiedad `color.`
-- A continuación con el método [`arc()`](/en-US/docs/Web/API/CanvasRenderingContext2D/arc) se traza un arco. Sus parámetros son:
+- Primero usamos [`beginPath()`](/es/docs/Web/API/CanvasRenderingContext2D/beginPath) para declarar que empezaremos a dibujar una forma en el _canvas_.
+- A continuación usamos el [`fillStyle`](/es/docs/Web/API/CanvasRenderingContext2D/fillStyle) para definir el color de la forma. Haremos que coincida con la propiedad `color.`
+- A continuación con el método [`arc()`](/es/docs/Web/API/CanvasRenderingContext2D/arc) se traza un arco. Sus parámetros son:
 
   - La posición `x` e `y` del centro del arco. Corresponderán a las coordenadas del centro de la pelota.
   - El radio del arco - que vendrá dado por la propiedad de tamaño `size` de la pelota.
   - Los últimos dos parámetros especifican el comienzo y final del arco en radianes. En este caso se especifican 0 y `2*PI` . Que corresponden a 0 y 360 grados. Esto es un circulo completo. Si se quisiese especificar únicamente medio círculo, 180 grados, se especificaría `PI`.
 
-- Por último con el método [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) se finaliza el dibujo, y rellena el área de la curva especificada, según se indico con el [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle).
+- Por último con el método [`fill()`](/es/docs/Web/API/CanvasRenderingContext2D/fill) se finaliza el dibujo, y rellena el área de la curva especificada, según se indico con el [`fillStyle`](/es/docs/Web/API/CanvasRenderingContext2D/fillStyle).
 
 Ya se puede empezar a testear el objeto.
 

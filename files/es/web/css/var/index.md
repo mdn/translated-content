@@ -1,7 +1,6 @@
 ---
 title: var()
 slug: Web/CSS/var
-translation_of: Web/CSS/var()
 original_slug: Web/CSS/var()
 ---
 

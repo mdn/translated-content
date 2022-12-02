@@ -1,14 +1,6 @@
 ---
 title: Añadiendo características a nuestra demo de bouncing balls
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-tags:
-  - Aprender
-  - Evaluación
-  - JavaScript
-  - Objetos
-  - Orientado a objetos
-  - Principiante
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
@@ -78,8 +70,8 @@ Otra vez, recuerda definir tus propiedades heredadas como parámetros en el cons
 
 Este método tiene el mismo propósito que el método `draw()` de `Ball()`: Se encarga de dibujar la instancia del objeto en el lienzo. Funcionarán de una forma muy similar, así que puedes empezar copiando la definición de `Ball.prototype.draw`. Luego deberías hacer los siguientes cambios.:
 
-- Queremos que el círculo del mal no se complete, sino que simplemente tenga una línea exterior (trazo). Puedes lograr esto actualizando [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) y [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill) a [`strokeStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/strokeStyle) y [`stroke()`](/en-US/docs/Web/API/CanvasRenderingContext2D/stroke).
-- También queremos que el trazo sea un poco más grueso, para que puedas ver el círculo malvado con mayor facilidad. Podemos lograr esto configurando un valor para [`lineWidth`](/en-US/docs/Web/API/CanvasRenderingContext2D/lineWidth) en algún lugar después de la llamada [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 hará).
+- Queremos que el círculo del mal no se complete, sino que simplemente tenga una línea exterior (trazo). Puedes lograr esto actualizando [`fillStyle`](/es/docs/Web/API/CanvasRenderingContext2D/fillStyle) y [`fill()`](/es/docs/Web/API/CanvasRenderingContext2D/fill) a [`strokeStyle`](/es/docs/Web/API/CanvasRenderingContext2D/strokeStyle) y [`stroke()`](/es/docs/Web/API/CanvasRenderingContext2D/stroke).
+- También queremos que el trazo sea un poco más grueso, para que puedas ver el círculo malvado con mayor facilidad. Podemos lograr esto configurando un valor para [`lineWidth`](/es/docs/Web/API/CanvasRenderingContext2D/lineWidth) en algún lugar después de la llamada [`beginPath()`](/es/docs/Web/API/CanvasRenderingContext2D/beginPath) (3 hará).
 
 #### `checkBounds()`
 

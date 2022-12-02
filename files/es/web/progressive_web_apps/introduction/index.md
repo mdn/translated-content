@@ -1,18 +1,6 @@
 ---
 title: Introducción a  aplicaciones web progresivas
 slug: Web/Progressive_web_apps/Introduction
-tags:
-  - Aplicaciones web prograsivas
-  - Guía
-  - Intermedio
-  - Intruducción
-  - PWA
-  - Servicio Worker
-  - aplicaciones
-  - js13kGames
-  - manifiesto web
-  - progresiva
-translation_of: Web/Progressive_web_apps/Introduction
 ---
 
 {{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}

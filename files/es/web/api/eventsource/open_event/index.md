@@ -1,7 +1,6 @@
 ---
 title: EventSource.onopen
 slug: Web/API/EventSource/open_event
-translation_of: Web/API/EventSource/onopen
 original_slug: Web/API/EventSource/onopen
 ---
 
@@ -31,7 +30,7 @@ evtSource.onopen = function() {
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.EventSource.onopen")}}
+{{Compat}}
 
 ## Mira también
 

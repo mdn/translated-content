@@ -1,18 +1,6 @@
 ---
 title: 'Tutorial Django Parte 4: Sitio de Administración de Django'
 slug: Learn/Server-side/Django/Admin_site
-tags:
-  - Aplicación web
-  - Artículo
-  - Codificación
-  - Django Admin
-  - Principiante
-  - Python
-  - Tutorial
-  - django
-  - django_admin
-  - programacion
-translation_of: Learn/Server-side/Django/Admin_site
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}

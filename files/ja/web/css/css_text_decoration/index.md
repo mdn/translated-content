@@ -75,9 +75,4 @@ _なし。_
 
 ## 仕様書
 
-| 仕様書                                    | 状態                                       | 備考            |
-| ------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS4 Text Decoration')}} | {{Spec2('CSS4 Text Decoration')}} |                    |
-| {{SpecName('CSS3 Text Decoration')}} | {{Spec2('CSS3 Text Decoration')}} |                    |
-| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}                     |                    |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}                     | 初回定義 |
+{{Specifications}}

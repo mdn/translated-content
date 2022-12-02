@@ -1,12 +1,6 @@
 ---
 title: <bgsound>
 slug: Web/HTML/Element/bgsound
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/bgsound
 original_slug: Web/HTML/Elemento/bgsound
 ---
 

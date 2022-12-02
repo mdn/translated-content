@@ -1,10 +1,6 @@
 ---
 title: Arrastrar y soltar
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - HTML5
-  - XUL
-translation_of: Web/API/HTML_Drag_and_Drop_API
 original_slug: DragDrop/Drag_and_Drop
 ---
 

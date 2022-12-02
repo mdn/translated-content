@@ -1,19 +1,6 @@
 ---
 title: Cómo funciona la web
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
-tags:
-  - Cliente
-  - DNS
-  - HTTP
-  - IP
-  - Infraestructura
-  - Internet
-  - Principiante
-  - Protocolos
-  - Servidor
-  - TCP
-  - Web
-translation_of: Learn/Getting_started_with_the_web/How_the_Web_works
 original_slug: Learn/Getting_started_with_the_web/Cómo_funciona_la_Web
 ---
 

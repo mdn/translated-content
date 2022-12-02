@@ -1,15 +1,7 @@
 ---
 title: Primeros pasos en React
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-tags:
-  - Aprender
-  - Aprendiz
-  - Principiante
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-original_slug: >-
-  Learn/Herramientas_y_pruebas/Lado-del-cliente_JavaScript_frameworks/React_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+original_slug: Learn/Herramientas_y_pruebas/Lado-del-cliente_JavaScript_frameworks/React_getting_started
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
@@ -78,9 +70,9 @@ React utiliza características modernas de JavaScript para muchos de sus patrone
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-Esta constante "heading" se conoce como una **expresión JSX**. React puede usarla para representar la etiqueta [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) en nuestra aplicación.
+Esta constante "heading" se conoce como una **expresión JSX**. React puede usarla para representar la etiqueta [`<h1>`](/es/docs/Web/HTML/Element/Heading_Elements) en nuestra aplicación.
 
-Supongamos que, por razones semánticas, queremos envolver nuestro encabezado en una etiqueta [`<header>`](/en-US/docs/Web/HTML/Element/header). El enfoque JSX nos permite anidar nuestros elementos entre sí, tal como lo hacemos con HTML:
+Supongamos que, por razones semánticas, queremos envolver nuestro encabezado en una etiqueta [`<header>`](/es/docs/Web/HTML/Element/header). El enfoque JSX nos permite anidar nuestros elementos entre sí, tal como lo hacemos con HTML:
 
 ```jsx
 const header = (
@@ -99,7 +91,7 @@ const header = (
 > </header>
 > ```
 >
-> Sin embargo, esto luce un poco raro, ya que la etiqueta [`<header>`](/en-US/docs/Web/HTML/Element/header) que inicia la expresión no tiene sangría en la misma posición que su correspondiente etiqueta de cierre.
+> Sin embargo, esto luce un poco raro, ya que la etiqueta [`<header>`](/es/docs/Web/HTML/Element/header) que inicia la expresión no tiene sangría en la misma posición que su correspondiente etiqueta de cierre.
 
 Por supuesto, tu navegador no puede leer JSX sin ayuda. Al compilarla (usando una herramienta como [Babel](https://babeljs.io/) o [Parcel](https://parceljs.org/)), nuestra expresión de encabezado se vería así:
 
@@ -119,7 +111,7 @@ Para leer más sobre JSX, consulta el artículo [JSX en profundidad](https://es.
 
 Hay muchas maneras de usar React, pero usaremos la herramienta create-react-app de la interfaz de línea de comandos (CLI, por sus siglas en inglés), como se mencionó anteriormente, la cual acelera el proceso de desarrollo de una aplicación React al instalar algunos paquetes y crear algunos archivos por ti, manejando las herramientas descritas anteriormente.
 
-Es posible [agregar React a un sitio website sin usar create-react-app](https://es.reactjs.org/docs/add-react-to-a-website.html) copiando algunos elementos [`<script>`](/en-US/docs/Web/HTML/Element/script) en un archivo HTML, pero la CLI de create-react-app es un punto de partida común para las aplicaciones React. Su uso te permitirá dedicar más tiempo a crear tu aplicación y menos a preocuparte por la configuración.
+Es posible [agregar React a un sitio website sin usar create-react-app](https://es.reactjs.org/docs/add-react-to-a-website.html) copiando algunos elementos [`<script>`](/es/docs/Web/HTML/Element/script) en un archivo HTML, pero la CLI de create-react-app es un punto de partida común para las aplicaciones React. Su uso te permitirá dedicar más tiempo a crear tu aplicación y menos a preocuparte por la configuración.
 
 ### Requerimientos
 
@@ -191,7 +183,7 @@ moz-todo-react
 
 La carpeta **`src`** es donde pasaremos la mayor parte de nuestro tiempo, ya que es donde reside el código fuente de nuestra aplicación.
 
-La carpeta **`public`** contiene archivos que serán leidos por tu navegador mientras desarrollas la aplicación; el más importante de ellos es `index.html`. React introduce tu código en este archivo de manera que tu navegador pueda ejecutarlo. Hay alguno que otro marcado que ayuda a create-react-app a funcionar, así que ten cuidado de no editarlo a menos que sepas lo que estás haciendo. Deberías cambiar el texto dentro del elemento [`<title>`](/en-US/docs/Web/HTML/Element/title) en este archivo para reflejar el título de tu aplicación. ¡Los títulos de página precisos son importantes para la accesibilidad!
+La carpeta **`public`** contiene archivos que serán leidos por tu navegador mientras desarrollas la aplicación; el más importante de ellos es `index.html`. React introduce tu código en este archivo de manera que tu navegador pueda ejecutarlo. Hay alguno que otro marcado que ayuda a create-react-app a funcionar, así que ten cuidado de no editarlo a menos que sepas lo que estás haciendo. Deberías cambiar el texto dentro del elemento [`<title>`](/es/docs/Web/HTML/Element/title) en este archivo para reflejar el título de tu aplicación. ¡Los títulos de página precisos son importantes para la accesibilidad!
 
 La carpeta `public` también será publicada cuando crees y despliegues una versión para producción de tu aplicación. No cubriremos el despliegue en este tutorial, pero deberías poder usar una solución similar a la descrita en nuestro tutorial [Despliegue de nuestra aplicación](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
 
@@ -231,7 +223,7 @@ function App() {
 export default App;
 ```
 
-El archivo `App.js` se compone de tres partes principales: algunas declaraciones [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) en la parte superior, el componente `App` en el medio, y una declaración [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) en la parte inferior. La mayoría de los componentes de React siguen este patrón.
+El archivo `App.js` se compone de tres partes principales: algunas declaraciones [`import`](/es/docs/Web/JavaScript/Reference/Statements/import) en la parte superior, el componente `App` en el medio, y una declaración [`export`](/es/docs/Web/JavaScript/Reference/Statements/export) en la parte inferior. La mayoría de los componentes de React siguen este patrón.
 
 ### Declaraciones `import`
 
@@ -282,9 +274,9 @@ function App() {
 
 La función `App` devuelve una expresión JSX. Esta expresión define lo que tu navegador presenta en última instancia al DOM.
 
-Algunos elementos de la expresión tienen atributos, los cuales se escriben igual que en HTML, siguiendo un patrón de `atributo="valor"`. En la línea 3, la etiqueta de apertura [`<div>`](/en-US/docs/Web/HTML/Element/div) tiene un atributo `className`. Este es equivalente al atributo [`class`](/en-US/docs/Web/HTML/Global_attributes/class) de HTML, pues dado que JSX es JavaScript, no podemos usar la palabra `class` —la cual está reservada—, lo que significa que JavaScript ya la usa para un propósito específico y causaría problemas en nuestro código. Algunos otros atributos HTML también se escriben de manera diferente en JSX (de como se escriben en HTML), por el mismo tipo de razón. Los revisaremos a medida que nos crucemos con estos.
+Algunos elementos de la expresión tienen atributos, los cuales se escriben igual que en HTML, siguiendo un patrón de `atributo="valor"`. En la línea 3, la etiqueta de apertura [`<div>`](/es/docs/Web/HTML/Element/div) tiene un atributo `className`. Este es equivalente al atributo [`class`](/es/docs/Web/HTML/Global_attributes/class) de HTML, pues dado que JSX es JavaScript, no podemos usar la palabra `class` —la cual está reservada—, lo que significa que JavaScript ya la usa para un propósito específico y causaría problemas en nuestro código. Algunos otros atributos HTML también se escriben de manera diferente en JSX (de como se escriben en HTML), por el mismo tipo de razón. Los revisaremos a medida que nos crucemos con estos.
 
-Tómate un momento para cambiar la etiqueta [`<p>`](/en-US/docs/Web/HTML/Element/p) en la línea 6 para que diga "¡Hola, mundo!", luego guarda los cambios. Notarás que este cambio se procesa inmediatamente en el servidor de desarrollo que se ejecuta en `http://localhost:3000` en tu navegador. Ahora elimina la etiqueta [`<a>`](/en-US/docs/Web/HTML/Element/a) y guarda los cambios; el enlace "Learn React" habrá desaparecido.
+Tómate un momento para cambiar la etiqueta [`<p>`](/es/docs/Web/HTML/Element/p) en la línea 6 para que diga "¡Hola, mundo!", luego guarda los cambios. Notarás que este cambio se procesa inmediatamente en el servidor de desarrollo que se ejecuta en `http://localhost:3000` en tu navegador. Ahora elimina la etiqueta [`<a>`](/es/docs/Web/HTML/Element/a) y guarda los cambios; el enlace "Learn React" habrá desaparecido.
 
 Ahora, tu componente `App` debería lucir así:
 

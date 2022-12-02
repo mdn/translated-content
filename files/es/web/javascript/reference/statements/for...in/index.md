@@ -105,9 +105,7 @@ for (const prop in obj) {
 
 ## Especificaciones
 
-| Especificación                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'declaración for...in')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

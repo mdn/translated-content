@@ -11,6 +11,7 @@ tags:
   - Web Audio
   - Web Audio API
 ---
+
 {{APIRef("Web Audio API")}}
 
 이 글은 다수의 파라미터가 같은 값을 공유하도록 파라미터들을 함께 연결하기 위해 어떻게 {{domxref("ConstantSourceNode")}}를 사용하는지를 설명합니다. 이 값은 {{domxref("ConstantSourceNode.offset")}} 파라미터의 값을 설정함으로써 변경될 수 있습니다.

@@ -1,7 +1,6 @@
 ---
 title: Rebota en las paredes
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off_the_walls
 ---
 

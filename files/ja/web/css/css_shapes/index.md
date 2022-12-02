@@ -45,6 +45,4 @@ slug: Web/CSS/CSS_Shapes
 
 ## 仕様書
 
-| 仕様書                     | 状態                    | 備考     |
-| -------------------------- | ----------------------- | -------- |
-| {{SpecName("CSS Shapes")}} | {{Spec2("CSS Shapes")}} | 初回定義 |
+{{Specifications}}

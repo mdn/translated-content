@@ -14,6 +14,7 @@ tags:
   - scrollHeight
 browser-compat: api.Element.getClientRects
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} 인터페이스의 **`getClientRects()`** 메서드는 클라이언트에 있는 각 [CSS 테두리 박스](/ko/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)에 대한 경계 사각형을 나타내는 {{DOMxRef("DOMRect")}} 객체의 컬렉션을 반환합니다.

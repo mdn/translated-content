@@ -1,10 +1,6 @@
 ---
 title: Number
 slug: Glossary/Number
-tags:
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Number
 original_slug: Glossary/Numero
 ---
 
@@ -18,5 +14,5 @@ En {{Glossary("JavaScript")}}, **Number** es un tipo de datos numérico ([double
 
 ### Referencia Técnica
 
-- La estructura de datos de JavaScript: [Number](/en-US/docs/Web/JavaScript/Data_structures#Number_type)
+- La estructura de datos de JavaScript: [Number](/es/docs/Web/JavaScript/Data_structures#Number_type)
 - El objeto global de JavaScript: {{jsxref("Number")}}

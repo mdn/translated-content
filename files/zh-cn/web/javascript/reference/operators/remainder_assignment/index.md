@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 
 {{jsSidebar("Operators")}}
 
-取余赋值运算符（`%=`）将变量除以右操作数的值，并将余数赋值给该变量。
+**取余赋值**（**`%=`**）运算符将变量除以右操作数的值，并将余数赋值给该变量。
 
 {{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}
 
@@ -20,12 +20,11 @@ x %= y // x = x % y
 ### 使用取余赋值
 
 ```js
-// 假设以下变量
-//  bar = 5
+let bar = 5;
 
-bar %= 2     // 1
-bar %= 'foo' // NaN
-bar %= 0     // NaN
+bar %= 2; // 1
+bar %= 'foo'; // NaN
+bar %= 0; // NaN
 ```
 
 ## 规范

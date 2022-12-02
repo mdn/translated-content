@@ -1,14 +1,6 @@
 ---
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
-tags:
-  - API
-  - Experimental
-  - Method
-  - URL
-  - URL API
-  - createObjectURL
-translation_of: Web/API/URL/createObjectURL
 ---
 
 {{ApiRef("URL")}}{{SeeCompatTable}}

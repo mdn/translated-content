@@ -2,6 +2,7 @@
 title: 반응형 이미지
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 
 이 글에서 우리는 반응형 이미지(Responsive images)의 — 해상도, 스크린 크기 등이 다른 수많은 기기들에서 정상적으로 표시되는 이미지 — 개념과 구현을 위해 HTML에서 제공하는 도구에 대해 배울 것이다. 반응형 이미지는, 이후에 여러분이 배워야 할 CSS 과정 중 [반응형 웹 디자인](/ko/docs/Learn/CSS)의 일부이다.

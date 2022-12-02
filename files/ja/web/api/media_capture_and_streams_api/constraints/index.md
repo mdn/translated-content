@@ -526,9 +526,7 @@ function handleError(reason) {
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Media Capture', '#constrainable-interface', 'Constrainable pattern')}} | {{Spec2('Media Capture')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

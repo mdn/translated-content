@@ -25,10 +25,7 @@ slug: Web/API/TouchList
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 | 備考                |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Touch Events 2','#touchlist-interface')}} | {{Spec2('Touch Events 2')}} | Non-stable version. |
-| {{SpecName('Touch Events', '#touchlist-interface')}}     | {{Spec2('Touch Events')}}     | 初回定義            |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

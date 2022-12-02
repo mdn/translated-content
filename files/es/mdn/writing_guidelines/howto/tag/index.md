@@ -1,14 +1,6 @@
 ---
 title: Cómo etiquetar correctamente las páginas
 slug: MDN/Writing_guidelines/Howto/Tag
-tags:
-  - Colaborar
-  - Etiquetas
-  - Guia(2)
-  - Guía
-  - MDN
-  - Principiante
-translation_of: MDN/Contribute/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
 

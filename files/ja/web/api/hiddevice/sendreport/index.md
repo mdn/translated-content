@@ -20,7 +20,7 @@ sendReport(reportId, data)
 ### 引数
 
 - `reportId`
-  - :8 ビットのレポート ID です。HID デバイスがレポート ID を使わない場合、`0` を送信します。
+  - : 8 ビットのレポート ID です。HID デバイスがレポート ID を使わない場合、`0` を送信します。
 - `data`
   - : {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}} のいずれかで表されるバイト列です。
 
@@ -44,7 +44,7 @@ const enableVibrationData = [1, 0, 1, 64, 64, 0, 1, 64, 64, 0x48, 0x01];
 await device.sendReport(0x01, new Uint8Array(enableVibrationData));
 
 // 次に、Joy-Con デバイスを鳴らすコマンドを送信します。
-// 実際のバイト列は以下のサンプルにあります。
+// 実際のバイト列はサンプル中にあります。
 const rumbleData = [ /* … */ ];
 await device.sendReport(0x10, new Uint8Array(rumbleData));
 ```

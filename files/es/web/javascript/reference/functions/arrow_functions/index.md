@@ -542,9 +542,7 @@ setTimeout( () => {
 
 ## Especificaciones
 
-| Especificación                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Definición de función flecha')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

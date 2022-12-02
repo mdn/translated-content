@@ -77,9 +77,7 @@ console.log(object1 === object1);  // true
 
 ## Especificaciones
 
-| Specification                                                                                    |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}} |
+{{Specifications}}
 
 ## Compatibilidad entre exploradores
 

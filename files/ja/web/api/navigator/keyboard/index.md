@@ -19,9 +19,7 @@ var keyboard = navigator.keyboard
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('Keyboard Map','#navigator-interface','keyboard')}} | {{Spec2('Keyboard Map')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

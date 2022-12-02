@@ -1,17 +1,6 @@
 ---
 title: Prototipos de objetos
 slug: Learn/JavaScript/Objects/Object_prototypes
-tags:
-  - Aprender
-  - Artículo
-  - Cadena de Prototipos
-  - Constructor
-  - JavaScript
-  - Objetos
-  - Principiante
-  - Prototipo
-  - create()
-translation_of: Learn/JavaScript/Objects/Object_prototypes
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
@@ -32,7 +21,7 @@ Bien, para ser exactos, los métodos y propiedades son definidos en la propiedad
 
 En JavaScript, se establece un enlace entre la instancia del objeto y su prototipo (su propiedad `__proto__`, la cual es derivada de la propiedad `prototype` sobre el constructor), y las propiedades y metodos son encontrados recorriendo la cadena de prototipos.
 
-**Nota:** Es importante entender que, tanto el prototipo de la instancia de un objeto (al cual se accede mediante [`Object.getPrototypeOf(obj)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), o a través de la propiedad [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)) como el prototipo que contiene el constructor (que se encuentra en la propiedad `prototype` del constructor) hacen referencia al mismo objeto.
+**Nota:** Es importante entender que, tanto el prototipo de la instancia de un objeto (al cual se accede mediante [`Object.getPrototypeOf(obj)`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), o a través de la propiedad [`__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)) como el prototipo que contiene el constructor (que se encuentra en la propiedad `prototype` del constructor) hacen referencia al mismo objeto.
 
 Vamos a echar un vistazo a algunos ejemplos para intentar aclarar estos conceptos.
 
@@ -118,13 +107,13 @@ Verá otros ejemplos de herencia de cadena de prototipos en todo JavaScript - in
 var myString = 'Esto es mi String.';
 ```
 
-`myString` inmediatamente tiene una serie de métodos útiles disponibles en él, como [`split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
+`myString` inmediatamente tiene una serie de métodos útiles disponibles en él, como [`split()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
 
 > **Advertencia:** **Importante**: La propiedad `prototype` es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this` apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype` es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
 
 ## Revisando create()
 
-Anteriormente mostramos cómo [`Object.create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) crea una nueva instancia de objeto.
+Anteriormente mostramos cómo [`Object.create()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/create) crea una nueva instancia de objeto.
 
 1. Por ejemplo, pruebe esto en la consola JavaScript de su ejemplo anterior:
 
@@ -173,7 +162,7 @@ Como verá en la siguiente sección, las propiedades definidas en la propiedad P
 
 Esto funciona. No se necesita usarlo con frecuencia, pero puede ser realmente útil cuando se quiera crear una instancia nueva y por alguna razón no se tenga disponible fácilmente una referencia al constructor original.
 
-La propiedad [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) tiene otros usos. Por ejemplo, si se tiene una instancia y se quiere devolver el nombre del que el constructor es una instancia, se puede usar lo siguiente:
+La propiedad [`constructor`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) tiene otros usos. Por ejemplo, si se tiene una instancia y se quiere devolver el nombre del que el constructor es una instancia, se puede usar lo siguiente:
 
 ```js
 instanceName.constructor.name
@@ -185,7 +174,7 @@ Intente esto, por ejemplo:
 person1.constructor.name
 ```
 
-> **Nota:** El valor de `constructor.name` puede cambiar (debido a herencia de prototipos, binding, preprocesores, transpiladores, etc.), por lo que para ejemplos más complejos es preferible usar el operador [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) en su lugar.
+> **Nota:** El valor de `constructor.name` puede cambiar (debido a herencia de prototipos, binding, preprocesores, transpiladores, etc.), por lo que para ejemplos más complejos es preferible usar el operador [`instanceof`](/es/docs/Web/JavaScript/Reference/Operators/instanceof) en su lugar.
 
 ## Modificando prototipos
 

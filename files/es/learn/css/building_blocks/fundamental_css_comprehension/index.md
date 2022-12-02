@@ -1,17 +1,6 @@
 ---
 title: Comprensión de los fundamentos de CSS
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-tags:
-  - CSS
-  - Estilo
-  - Evaluación
-  - Modelo de Caja
-  - Principiante
-  - Selectores
-  - Sintaxis
-  - comentários
-  - reglas
-translation_of: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
 original_slug: Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension
 ---
 

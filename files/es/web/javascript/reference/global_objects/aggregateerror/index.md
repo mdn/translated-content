@@ -59,9 +59,7 @@ try {
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Promise.any', '#sec-aggregate-error-objects', 'AggregateError')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

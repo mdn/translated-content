@@ -1,7 +1,6 @@
 ---
 title: Lenguaje de programación dinámico
 slug: orphaned/Glossary/Dynamic_programming_language
-translation_of: Glossary/Dynamic_programming_language
 original_slug: Glossary/Dynamic_programming_language
 ---
 

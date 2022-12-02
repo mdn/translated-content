@@ -1,15 +1,6 @@
 ---
 title: Acerca de MDN
 slug: MDN/Writing_guidelines
-tags:
-  - Colaboración
-  - Comunidad
-  - Derechos de Autor
-  - Documentación
-  - Guía
-  - Licencias
-  - MDN Meta
-translation_of: MDN/About
 original_slug: MDN/About
 ---
 

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/AnimationEvent/initAnimationEvent
 original_slug: Web/API/AnimationEvent/initAnimationEvent
 ---
+
 {{obsolete_header}}{{non-standard_header}}{{ apiref("Web Animations API") }}
 
 ## Sumário

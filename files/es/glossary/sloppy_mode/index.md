@@ -1,13 +1,6 @@
 ---
 title: Modo poco riguroso — Sloppy
 slug: Glossary/Sloppy_mode
-tags:
-  - CodingScripting
-  - Glosario
-  - JavaScript
-  - Scripting
-  - Sloppy
-translation_of: Glossary/Sloppy_mode
 ---
 
 {{Glossary("ECMAScript")}} 5 y versiones posteriores permiten que los scripts opten por un nuevo {{jsxref("Strict_mode", "Modo estricto", "", 1)}}, que modifica la semántica de JavaScript de varias formas para mejorar su capacidad de recuperación y facilitar la comprensión de lo que sucede cuando hay problemas.

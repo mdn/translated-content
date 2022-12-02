@@ -1,7 +1,6 @@
 ---
 title: Fuentes web
 slug: Learn/CSS/Styling_text/Web_fonts
-translation_of: Learn/CSS/Styling_text/Web_fonts
 original_slug: Learn/CSS/Styling_text/Fuentes_web
 ---
 
@@ -190,4 +189,4 @@ Ahora que has leído nuestros artículos sobre nociones de aplicación de estilo
 - [Dar estilo a las listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Dar estilo a los enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
 - [Las fuentes web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Composición tipográfica de una página de inicio de una escuela comunitaria](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Composición tipográfica de una página de inicio de una escuela comunitaria](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)

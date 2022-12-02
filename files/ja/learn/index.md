@@ -110,6 +110,6 @@ MDN のこのエリアの目的は、あなたを「初心者」から「エキ�
 - [freeCodeCamp.org](https://www.freecodecamp.org/)
   - : ウェブ開発を学習するチュートリアルやプロジェクトのあるインタラクティブなサイト。
 - [Web literacy map](https://learning.mozilla.org/web-literacy/)
-  - : 入門レベルのウェブリテラシーや  21 世紀のスキル向けのフレームワークで、カテゴリーごとにソートされた教科にもアクセスできます。
+  - : 入門レベルのウェブリテラシーや 21 世紀のスキル向けのフレームワークで、カテゴリーごとにソートされた教科にもアクセスできます。
 - [Edabit](https://edabit.com/challenges)
   - : 数千のインタラクティブな JavaScript チャレンジ。

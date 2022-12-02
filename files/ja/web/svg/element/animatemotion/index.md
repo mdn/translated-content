@@ -71,10 +71,7 @@ html,body,svg { height:100%; margin: 0; padding: 0; display:block; }
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName("SVG Animations 2", "#AnimateMotionElement", "&lt;animateMotion&gt;")}}     | {{Spec2("SVG Animations 2")}} | 変更なし |
-| {{SpecName('SVG1.1', 'animate.html#AnimateMotionElement', '&lt;animateMotion&gt;')}} | {{Spec2('SVG1.1')}}                 | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

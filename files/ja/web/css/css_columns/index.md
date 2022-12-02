@@ -55,9 +55,7 @@ slug: Web/CSS/CSS_Columns
 
 ## 仕様書
 
-| 仕様書                        | 状態                       | 備考     |
-| ----------------------------- | -------------------------- | -------- |
-| {{SpecName('CSS3 Multicol')}} | {{Spec2('CSS3 Multicol')}} | 初回定義 |
+{{Specifications}}
 
 ## 関連情報
 

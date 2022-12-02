@@ -1,14 +1,6 @@
 ---
 title: font-style
 slug: Web/CSS/font-style
-tags:
-  - CSS
-  - Propiedad de CSS
-  - Referencia
-  - Tipos de letra de CSS
-  - Web
-  - tipo de letra
-translation_of: Web/CSS/font-style
 ---
 
 {{CSSRef}}

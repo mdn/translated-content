@@ -67,7 +67,7 @@ multiply(5, undefined)  // 5
 }
 
 test()           // 'number' (num は 1 に設定)
-test(undefined)  // 'number' (こちらも num は 1 に設定)
+test(undefined) // 'number' (こちらも num は 1 に設定)
 
 // 他の偽値での検査
 test('')         // 'string' (num は '' に設定)

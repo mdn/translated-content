@@ -1,7 +1,6 @@
 ---
 title: Cómo crear un DOM tree
 slug: Web/API/Document_object_model/How_to_create_a_DOM_tree
-translation_of: Web/API/Document_object_model/How_to_create_a_DOM_tree
 original_slug: How_to_create_a_DOM_tree
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: GlobalEventHandlers.onclose
 slug: Web/API/HTMLDialogElement/close_event
-tags:
-  - Propiedad
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/onclose
 original_slug: Web/API/GlobalEventHandlers/onclose
 ---
 
@@ -34,4 +30,4 @@ window.onclose = resetThatServerThing;
 
 ## Compatibilidad con Navegadores
 
-{{Compat("api.GlobalEventHandlers.onclose")}}
+{{Compat}}

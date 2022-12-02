@@ -19,7 +19,7 @@ Firefox 29 est sorti le 29 Avril, 2014. Cet article répertorie les modification
 Les principaux changements comprennent:
 
 - Console web largement améliorée - Les tableaux sont affichés en lgne sans cliquer pour faire apparaître l'inspecteur de droite, les objets de fenêtre affichent leur URL, etc.
-- Ajout de l'[API console](/docs/Web/API/console) aux Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Vous pouvez désormais consigner les messages dans la console Web à partir de Web Workers.
+- Ajout de l'[API console](/fr/docs/Web/API/console) aux Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Vous pouvez désormais consigner les messages dans la console Web à partir de Web Workers.
 - L'outil [Moniteur réseau](/fr/docs/Outils/Moniteur_réseau) affiche désormais des statistiques de performances à l'aide de graphiques à secteurs ({{bug(846601)}}).
 - Sur l'[inspecteur](/fr/docs/Outils/Inspecteur), des info-bulles d'aperçu des transformations CSS sont désormais disponibles ({{bug(726427)}}).
 - Les éléments DOM vus dans le débogueur et la console peuvent être supprimés ou inspectés directement, via les nouveaux boutons à droite de la liste des variables.
@@ -34,7 +34,7 @@ _Consultez l'[article du blog Mozilla Hacks](https://hacks.mozilla.org/2014/02/c
 - Les Flexbox prennent désormais en charge {{cssxref("visibility")}}`: collapse` ({{bug(783470)}}).
 - La propriété {{cssxref("box-sizing")}} n'a pas de préfixe ({{bug(243412)}}).
 - La propriété {{cssxref("will-change")}}, un indice indiquant que quelque chose va s'animer a été ajoutée. La préférence `layout.css.will-change.enabled` doit être définie sur `true` pour l'activer. ({{bug(940842)}})
-- La notation exponentielle scientifique, comme `3e1` ou `10e+0`, est désormais prise en charge pour les valeurs et les dérivés {{cssxref("&lt;number&gt;")}}, comme {{cssxref("&lt;percentage&gt;")}} et les valeurs unitaires, mais pas {{cssxref("&lt;integer&gt;")}}  ({{bug(964529)}}).
+- La notation exponentielle scientifique, comme `3e1` ou `10e+0`, est désormais prise en charge pour les valeurs et les dérivés {{cssxref("&lt;number&gt;")}}, comme {{cssxref("&lt;percentage&gt;")}} et les valeurs unitaires, mais pas {{cssxref("&lt;integer&gt;")}} ({{bug(964529)}}).
 - Les images de type {{cssxref("&lt;gradient&gt;")}} sont désormais prises en charge dans {{cssxref("border-image")}} ({{bug(709587)}}).
 - La propriété {{cssxref("touch-action")}} a été mise en implémenté. Il n'est pas activé par défaut; le pref de `layout.css.touch_action.enabled` le contrôle. ({{bug(795567)}})
 - Supprimez le style par défaut redondant pour l'élément \<pre> de quirk.css ({{bug(948914)}}).

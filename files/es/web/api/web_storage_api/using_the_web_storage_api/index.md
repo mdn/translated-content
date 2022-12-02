@@ -1,13 +1,6 @@
 ---
 title: Usando la API de almacenamiento web
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
-tags:
-  - API
-  - API de almacenamiento web
-  - Guía
-  - localStorage
-  - sessionStorage
-translation_of: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 original_slug: Web/API/API_de_almacenamiento_web/Usando_la_API_de_almacenamiento_web
 ---
 
@@ -31,8 +24,8 @@ localStorage.setItem('colorSetting', '#a4509b');
 
 Los dos mecanismos en el almacenamiento web son los siguientes:
 
-- **`sessionStorage`** mantiene un área de almacenamiento separada para cada origen que está disponible mientras dure la sesión de la página (mientras el navegador esté abierto, incluyendo recargas de página y restablecimientos).
-- **`localStorage`** hace lo mismo, pero persiste incluso cuando el navegador se cierre y se reabra.
+- `sessionStorage` mantiene un área de almacenamiento separada para cada origen que está disponible mientras dure la sesión de la página (mientras el navegador esté abierto, incluyendo recargas de página y restablecimientos).
+- `localStorage` hace lo mismo, pero persiste incluso cuando el navegador se cierre y se reabra.
 
 Estos mecanismos están disponibles mediante las propiedades [`Window.sessionStorage`](/es/docs/Web/API/Window/sessionStorage) y [`Window.localStorage`](/es/docs/Web/API/Window/localStorage) (dicho con más precisión, en navegadores con soporte, el objeto `Window` implementa los objetos `WindowLocalStorage` y `WindowSessionStorage`, en los cuales se basan las propiedades `localStorage` y `sessionStorage`). Al invocar uno de éstos, se creará una instancia del objeto [`Storage`](/es/docs/Web/API/Storage), a través del cual los datos pueden ser creados, recuperados y eliminados. sessionStorage y localStorage utilizan un objeto de almacenamiento diferente según su origen — funcionan y son controlados por separado.
 

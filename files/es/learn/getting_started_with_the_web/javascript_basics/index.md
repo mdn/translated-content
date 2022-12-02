@@ -1,15 +1,6 @@
 ---
 title: Fundamentos de JavaScript
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
-tags:
-  - Aprender
-  - CodingScripting
-  - JavaScript
-  - Novato
-  - Principiante
-  - Web
-  - l10n:priority
-translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext( "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web/Publishing_your_website","Learn/Getting_started_with_the_web")}}

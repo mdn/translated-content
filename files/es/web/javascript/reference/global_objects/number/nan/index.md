@@ -38,9 +38,7 @@ See [Testing against NaN](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN#T
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.nan', 'Number.NaN')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

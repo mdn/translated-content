@@ -1,7 +1,6 @@
 ---
 title: Funcion de primera clase
 slug: Glossary/First-class_Function
-translation_of: Glossary/First-class_Function
 original_slug: Glossary/Funcion_de_primera_clase
 ---
 

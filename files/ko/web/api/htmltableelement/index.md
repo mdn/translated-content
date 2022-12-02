@@ -7,6 +7,7 @@ tags:
   - Gecko DOM Reference
 translation_of: Web/API/HTMLTableElement
 ---
+
 {{ ApiRef() }}
 
 ### HTML Table 요소 인터페이스

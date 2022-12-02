@@ -1,7 +1,6 @@
 ---
 title: Atributos de configuración CORS
 slug: Web/HTML/Attributes/crossorigin
-translation_of: Web/HTML/Attributes/crossorigin
 original_slug: Web/HTML/Atributos_de_configuracion_CORS
 ---
 
@@ -22,17 +21,7 @@ Una clave inválida y un string vacío serán gestionados como una clave anónim
 
 ## Compatibilidad de navegadores
 
-### script crossorigin
-
-{{Compat("html.elements.script.crossorigin")}}
-
-### video crossorigin
-
-{{Compat("html.elements.video.crossorigin")}}
-
-### link crossorigin
-
-{{Compat("html.elements.link.crossorigin")}}
+{{Compat}}
 
 ## Ver también
 

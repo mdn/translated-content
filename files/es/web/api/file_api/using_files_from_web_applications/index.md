@@ -1,16 +1,6 @@
 ---
 title: Utilizar ficheros desde aplicaciones web
 slug: Web/API/File_API/Using_files_from_web_applications
-tags:
-  - Basura
-  - Ficheros
-  - HTML5
-  - HacerNavegadorAgnóstico
-  - Intermedio
-  - NecesitaActualizar
-  - Subir
-  - ajax actualización
-translation_of: Web/API/File/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: Empezar con HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Atributos
-  - Elemento
-  - Guía
-  - HTML
-  - Principiante
-  - comentários
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 original_slug: Learn/HTML/Introduccion_a_HTML/iniciar
 ---
 
@@ -279,9 +271,12 @@ Un atributo debería tener:
 
 Otro ejemplo de un elemento es {{htmlelement("a")}}. Esto significa _ancla_. Una ancla puede convertir el texto que encierra en un hipervínculo. Las anclas pueden tener varios atributos, pero varios son como sigue:
 
-- **`href`**: El valor de este atributo indica la dirección web a la que se quiere que apunte el enlace, que será hacia donde nos lleve el navegador cuando se haga clic sobre el elemento. Por ejemplo, `href="https://www.mozilla.org/"`.
-- **`title`**: El atributo `title` añade información adicional sobre el enlace, como puede ser el título de la página que vinculas. Por ejemplo, `title="La página de inicio de Mozilla"`. Esta información aparecerá cuando se le pase el ratón por encima.
-- **`target`**: El atributo `target` especifica el contexto de navegación que va a usar para mostrar el enlace. Por ejemplo, `target="_blank"` abrirá el enlace en una nueva pestaña. Si quieres mostrar el enlace en la pestaña activa, simplemente omite este atributo.
+- `href`
+  - : El valor de este atributo indica la dirección web a la que se quiere que apunte el enlace, que será hacia donde nos lleve el navegador cuando se haga clic sobre el elemento. Por ejemplo, `href="https://www.mozilla.org/"`.
+- `title`
+  - : El atributo `title` añade información adicional sobre el enlace, como puede ser el título de la página que vinculas. Por ejemplo, `title="La página de inicio de Mozilla"`. Esta información aparecerá cuando se le pase el ratón por encima.
+- `target`
+  - : El atributo `target` especifica el contexto de navegación que va a usar para mostrar el enlace. Por ejemplo, `target="_blank"` abrirá el enlace en una nueva pestaña. Si quieres mostrar el enlace en la pestaña activa, simplemente omite este atributo.
 
 Edita la línea de abajo en el área de _Entrada_ para convertirlo en un enlace a tu sitio web favorito.
 

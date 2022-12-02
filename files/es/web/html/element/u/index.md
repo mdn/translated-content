@@ -1,11 +1,6 @@
 ---
 title: u
 slug: Web/HTML/Element/u
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/u
 original_slug: Web/HTML/Elemento/u
 ---
 
@@ -14,15 +9,15 @@ original_slug: Web/HTML/Elemento/u
 - Muestra el texto subrayado.
   - : **Sus etiquetas son**: \<u> y \</u> (Ambas obligatorias)
   
-    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
     - **Está definido como**
 
-      - : [de estilo de fuente](es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
+      - : [de estilo de fuente](/es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
 
-         [Desaprobado](es/HTML/Elemento/Tipos_de_elementos#Desaprobado)
+         [Desaprobado](/es/HTML/Elemento/Tipos_de_elementos#Desaprobado)
 
-    **Puede contener**: cero o más elementos [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: cero o más elementos [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 ##### Atributos Genéricos
 

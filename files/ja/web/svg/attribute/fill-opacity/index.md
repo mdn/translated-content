@@ -51,7 +51,4 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様書                                                                                               | 策定状況                 | コメント                     |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------- |
-| {{SpecName("SVG2", "painting.html#FillOpacityProperty", "fill-opacity")}}     | {{Spec2("SVG2")}} | 図形とテキスト向けの定義     |
-| {{SpecName("SVG1.1", "painting.html#FillOpacityProperty", "fill-opacity")}} | {{Spec2("SVG1.1")}} | 図形とテキスト向けの初期定義 |
+{{Specifications}}

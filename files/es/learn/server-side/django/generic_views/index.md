@@ -1,14 +1,6 @@
 ---
 title: 'Tutorial de Django Parte 6: Listas genéricas y vistas de detalle'
 slug: Learn/Server-side/Django/Generic_views
-tags:
-  - Aprender
-  - Principiante
-  - Tutorial
-  - django
-  - plantillas django
-  - vistas django
-translation_of: Learn/Server-side/Django/Generic_views
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
@@ -629,7 +621,7 @@ Los enlaces de paginación se muestran en la parte de abajo, con enlaces de next
 El reto en este artículo es crear las vistas de lista y detalle para autores, que se requieren para completar el proyecto. Estas deberían estar disponibles en las siguientes URLs:
 
 - `catalog/authors/` — La lista de todos los autores.
-- `catalog/author/<id>` — La vista de detalle para el autor específico con un valor en el campo de clave primaria de _`<id>`_
+- `catalog/author/<id>` — La vista de detalle para el autor específico con un valor en el campo de clave primaria de `<id>`
 
 El código requerido para los mapeadores URL y las vistas debería ser virtualmente idéntico a las vistas de lista y detalle para `Book` que creamos arriba. Las plantillas serán diferentes, pero tendrán un comportamiento similar.
 

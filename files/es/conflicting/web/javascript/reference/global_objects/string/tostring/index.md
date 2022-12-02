@@ -1,14 +1,6 @@
 ---
 title: String.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/String/toString
-tags:
-  - Cadena
-  - JavaScript
-  - No estandar
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/String/toSource
 ---
 

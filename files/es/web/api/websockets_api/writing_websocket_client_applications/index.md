@@ -1,9 +1,6 @@
 ---
 title: Escribiendo aplicaciones con WebSockets
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
-tags:
-  - Guía WebSocket WebSockets
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 ---
 
 WebSockets es una tecnología basada en el protocolo ws, este hace posible establecer una conexión continua full-duplex, entre un cliente y servidor. Un cliente websocket podría ser el navegador del usuario, pero el protocolo es una plataforma independiente.

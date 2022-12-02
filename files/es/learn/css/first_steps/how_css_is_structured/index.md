@@ -1,7 +1,6 @@
 ---
 title: Cómo se estructura el CSS
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 original_slug: Learn/CSS/First_steps/Como_se_estructura_CSS
 ---
 

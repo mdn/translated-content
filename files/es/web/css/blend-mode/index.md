@@ -1,13 +1,6 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-tags:
-  - Composición
-  - Composición CSS
-  - Modos de mezcla
-  - Referencia
-  - Tipo de Dato CSS
-translation_of: Web/CSS/blend-mode
 ---
 
 {{CSSRef}}

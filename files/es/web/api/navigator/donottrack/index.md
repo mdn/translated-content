@@ -1,13 +1,6 @@
 ---
 title: Navigator.doNotTrack
 slug: Web/API/Navigator/doNotTrack
-tags:
-  - API
-  - DOM
-  - Experimental
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Navigator/doNotTrack
 ---
 
 {{ApiRef("HTML DOM")}}{{SeeCompatTable}}

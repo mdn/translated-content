@@ -1,11 +1,6 @@
 ---
 title: small
 slug: Web/HTML/Element/small
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/small
 original_slug: Web/HTML/Elemento/small
 ---
 

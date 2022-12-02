@@ -19,9 +19,7 @@ var containerType = TaskAttributionTiming.containerType;
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Long Tasks','#dom-taskattributiontiming-containertype','containerType')}} | {{Spec2('Long Tasks')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

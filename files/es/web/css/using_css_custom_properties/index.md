@@ -1,13 +1,6 @@
 ---
 title: Uso de propiedades personalizadas (variables) en CSS
 slug: Web/CSS/Using_CSS_custom_properties
-tags:
-  - CSS
-  - Guía
-  - Propiedades personalizadas CSS
-  - Varables CSS
-  - Web
-translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 
 {{cssref}}

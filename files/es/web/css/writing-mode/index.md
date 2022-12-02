@@ -1,12 +1,6 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
-tags:
-  - CSS
-  - Disposición
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/writing-mode
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -132,7 +126,7 @@ th {background-color: lightgray; }
 
 ## Véase también
 
-- Atributo de SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode)
+- Atributo de SVG [`writing-mode`](/es/docs/Web/SVG/Attribute/writing-mode)
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}

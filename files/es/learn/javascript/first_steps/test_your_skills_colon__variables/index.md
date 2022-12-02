@@ -1,13 +1,6 @@
 ---
 title: '¡Pon a prueba tus habilidades!: Variables'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_variables
-tags:
-  - JavaScript
-  - Principiante
-  - Tus habilidades con texto
-  - Variables
-  - aprende
-translation_of: Learn/JavaScript/First_steps/Test_your_skills:_variables
 ---
 
 {{learnsidebar}}

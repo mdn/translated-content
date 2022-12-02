@@ -32,11 +32,11 @@ for (const variable in object) {
 
 `for...in`문은 열거 가능한 non-Symbol 속성에 대해서만 반복합니다.
 
- `Array`나 `Object` 등 내장 constructor를 통해 만들어진 객체는  {{jsxref("String")}}의 {{jsxref("String.indexOf", "indexOf()")}}, {{jsxref("Object")}}의 {{jsxref("Object.toString", "toString()")}}와 같이 `Object.prototype`, `String.prototype` 로부터 열거가 가능하지 않은 속성들을 상속해왔습니다. `for...in`문은 객체 자체의 모든 열거 가능한 속성들과 프로토타입 체인으로부터 상속받은 속성들에 대해 반복할 것입니다. (더 가까운 프로토타입의 속성들이 프로토타입 체인 객체로부터 더 멀리 떨어진 프로토 타입의 속성보다 더 우선합니다.)
+ `Array`나 `Object` 등 내장 constructor를 통해 만들어진 객체는 {{jsxref("String")}}의 {{jsxref("String.indexOf", "indexOf()")}}, {{jsxref("Object")}}의 {{jsxref("Object.toString", "toString()")}}와 같이 `Object.prototype`, `String.prototype` 로부터 열거가 가능하지 않은 속성들을 상속해왔습니다. `for...in`문은 객체 자체의 모든 열거 가능한 속성들과 프로토타입 체인으로부터 상속받은 속성들에 대해 반복할 것입니다. (더 가까운 프로토타입의 속성들이 프로토타입 체인 객체로부터 더 멀리 떨어진 프로토 타입의 속성보다 더 우선합니다.)
 
 ### 속성의 삭제, 추가, 수정
 
-<code>for..in</code> 문은 임의의 순서로 객체의 속성들에 대해 반복합니다. (적어도 <code>cross-browser</code> 설정에서는 왜 표면적으로 보이는 반복의 순서를 따를 수 없는지에 대해서  {{jsxref("Operators/delete", "delete")}} 를 참고하십시오.)
+<code>for..in</code> 문은 임의의 순서로 객체의 속성들에 대해 반복합니다. (적어도 <code>cross-browser</code> 설정에서는 왜 표면적으로 보이는 반복의 순서를 따를 수 없는지에 대해서 {{jsxref("Operators/delete", "delete")}} 를 참고하십시오.)
 
 만약 한 반복으로 속성이 수정된 후에 방문하는 경우, 반복문에서의 그 값은 나중의 값으로 정해집니다. 방문하기 전에 삭제된 속성에 대해서는 이후에 방문하지 않습니다. 반복이 발생하는 객체에 추가된 속성은 방문하거나 반복에서 생략할 수 있습니다.
 
@@ -52,11 +52,11 @@ for (const variable in object) {
 
 ### 자체 속성만 반복
 
-만약 당신이 객체의 프로토타입이 아닌 객체 자체에 연결된 속성만 고려한다면 {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}}나 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}를 사용하십시오.({{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable()")}} 또한 가능합니다.)  또는 외부적인 코드 간섭이 없다면 체크 메서드로 내장 프로토타입을 확장할 수 있습니다.
+만약 당신이 객체의 프로토타입이 아닌 객체 자체에 연결된 속성만 고려한다면 {{jsxref("Object.getOwnPropertyNames", "getOwnPropertyNames()")}}나 {{jsxref("Object.prototype.hasOwnProperty", "hasOwnProperty()")}}를 사용하십시오.({{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable()")}} 또한 가능합니다.) 또는 외부적인 코드 간섭이 없다면 체크 메서드로 내장 프로토타입을 확장할 수 있습니다.
 
 ## 왜 for...in을 사용합니까?
 
-`for...in`이 객체의 반복을 위해 만들어졌지만, 배열의 반복을 위해서는 추천되지 않고,  `Array.prototype.forEach()`, `for...of`가 이미 존재합니다. 그러면 for...in은 어떻게 사용하는 것이 좋을까요?
+`for...in`이 객체의 반복을 위해 만들어졌지만, 배열의 반복을 위해서는 추천되지 않고, `Array.prototype.forEach()`, `for...of`가 이미 존재합니다. 그러면 for...in은 어떻게 사용하는 것이 좋을까요?
 
 이것은 쉽게 객체의 속성을 확인(콘솔이나 다른 방법으로 출력)할 수 있기 때문에 실질적으로 디버깅을 위해 사용될 수 있습니다. 배열이 데이터의 저장에 있어서는 더 실용적이지만, 키-값 쌍이 선호되는 데이터의 경우(속성이 "key"의 역할을 함) 특정 값을 가진 키가 있는지 확인하려는 경우에 for...in을 사용할 수 있습니다.
 
