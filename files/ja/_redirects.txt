@@ -2746,9 +2746,9 @@
 /ja/docs/MDN/Contribute/Structures/Specification_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /ja/docs/MDN/Contribute/Structures/Syntax_sections	/ja/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /ja/docs/MDN/Contribute/Structures/マクロ	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros
-/ja/docs/MDN/Contribute/Tools	/ja/docs/orphaned/MDN/Tools
-/ja/docs/MDN/Contribute/Tools/KumaScript	/ja/docs/orphaned/MDN/Tools/KumaScript
-/ja/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/ja/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
+/ja/docs/MDN/Contribute/Tools	https://github.com/mdn/yari/tree/main/docs
+/ja/docs/MDN/Contribute/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
+/ja/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md
 /ja/docs/MDN/Contribute/Where_is_everything	/ja/docs/MDN/Community/Contributing/Our_repositories
 /ja/docs/MDN/Feedback	/ja/docs/MDN/Community
 /ja/docs/MDN/Getting_started	/ja/docs/MDN/Community/Contributing/Getting_started
@@ -2781,10 +2781,10 @@
 /ja/docs/MDN/Structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
 /ja/docs/MDN/Structures/Specification_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /ja/docs/MDN/Structures/Syntax_sections	/ja/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
-/ja/docs/MDN/Tools	/ja/docs/orphaned/MDN/Tools
-/ja/docs/MDN/Tools/KumaScript	/ja/docs/orphaned/MDN/Tools/KumaScript
-/ja/docs/MDN/Tools/KumaScript/Troubleshooting	/ja/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
-/ja/docs/MDN/User_guide	/ja/docs/orphaned/MDN/Tools
+/ja/docs/MDN/Tools	https://github.com/mdn/yari/tree/main/docs
+/ja/docs/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
+/ja/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/blob/main/docs/kumascript/troubleshooting-errors.md
+/ja/docs/MDN/User_guide	https://github.com/mdn/yari/tree/main/docs
 /ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute
