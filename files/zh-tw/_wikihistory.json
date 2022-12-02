@@ -1415,24 +1415,6 @@
     "modified": "2019-01-16T20:46:52.062Z",
     "contributors": ["wbamberg", "ArvinH", "klez"]
   },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:55:39.074Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "jackblackevo"]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:55:39.461Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "jackblackevo"]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:55:39.606Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jackblackevo",
-      "iigmir",
-      "alk03073135"
-    ]
-  },
   "MDN/Writing_guidelines": {
     "modified": "2019-09-10T08:57:06.612Z",
     "contributors": [
