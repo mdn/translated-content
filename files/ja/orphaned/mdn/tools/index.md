@@ -1,6 +1,7 @@
 ---
 title: MDN のツール
-slug: MDN/Tools
+slug: orphaned/MDN/Tools
+original_slug: MDN/Tools
 ---
 
 {{MDNSidebar}}

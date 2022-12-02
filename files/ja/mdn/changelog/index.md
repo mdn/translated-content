@@ -1,6 +1,7 @@
 ---
 title: MDN への貢献の変更履歴
-slug: MDN/Contribute/Changelog
+slug: MDN/Changelog
+original_slug: MDN/Contribute/Changelog
 ---
 
 {{MDNSidebar}}

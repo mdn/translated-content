@@ -2682,6 +2682,7 @@
 /ja/docs/MDN/Community/Doc_sprints	/ja/docs/orphaned/MDN/Community/Doc_sprints
 /ja/docs/MDN/Community/Whats_happening	/ja/docs/orphaned/MDN/Community/Whats_happening
 /ja/docs/MDN/Community/Working_in_community	/ja/docs/orphaned/MDN/Community/Working_in_community
+/ja/docs/MDN/Contribute/Changelog	/ja/docs/MDN/Changelog
 /ja/docs/MDN/Contribute/Content	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Content/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ja/docs/MDN/Contribute/Content/Does_this_belong_on_MDN	/ja/docs/MDN/Writing_guidelines/What_we_write
@@ -2745,9 +2746,9 @@
 /ja/docs/MDN/Contribute/Structures/Specification_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /ja/docs/MDN/Contribute/Structures/Syntax_sections	/ja/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /ja/docs/MDN/Contribute/Structures/マクロ	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros
-/ja/docs/MDN/Contribute/Tools	/ja/docs/MDN/Tools
-/ja/docs/MDN/Contribute/Tools/KumaScript	/ja/docs/MDN/Tools/KumaScript
-/ja/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/ja/docs/MDN/Tools/KumaScript/Troubleshooting
+/ja/docs/MDN/Contribute/Tools	/ja/docs/orphaned/MDN/Tools
+/ja/docs/MDN/Contribute/Tools/KumaScript	/ja/docs/orphaned/MDN/Tools/KumaScript
+/ja/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/ja/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
 /ja/docs/MDN/Contribute/Where_is_everything	/ja/docs/MDN/Community/Contributing/Our_repositories
 /ja/docs/MDN/Feedback	/ja/docs/MDN/Community
 /ja/docs/MDN/Getting_started	/ja/docs/MDN/Community/Contributing/Getting_started
@@ -2780,7 +2781,10 @@
 /ja/docs/MDN/Structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
 /ja/docs/MDN/Structures/Specification_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /ja/docs/MDN/Structures/Syntax_sections	/ja/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
-/ja/docs/MDN/User_guide	/ja/docs/MDN/Tools
+/ja/docs/MDN/Tools	/ja/docs/orphaned/MDN/Tools
+/ja/docs/MDN/Tools/KumaScript	/ja/docs/orphaned/MDN/Tools/KumaScript
+/ja/docs/MDN/Tools/KumaScript/Troubleshooting	/ja/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
+/ja/docs/MDN/User_guide	/ja/docs/orphaned/MDN/Tools
 /ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute
