@@ -29,7 +29,7 @@ console.log("An error occurred while loading the content");
 console.dir(someObject);
 ```
 
-より詳細な例については{{SectionOnPage("/ja/docs/Web/API/Console", "Usage")}}をご参照下さい。
+より詳細な例については [`console`](/ja/docs/Web/API/console) の記事内の[例](/ja/docs/Web/API/console#%E4%BE%8B)をご参照ください。
 
 ## 仕様書
 

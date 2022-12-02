@@ -30,4 +30,3 @@ slug: Web/CSS/CSS_Text
 ## 仕様書
 
 {{Specifications}}
-
