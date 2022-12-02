@@ -156,7 +156,7 @@ for (var i=0; i<5; i++) {
 console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue; padding: 2px;");
 ```
 
-![](https://mdn.mozillademos.org/files/12527/CSS-styling.png)
+![](css-styling.png)
 
 > **Примечание:** Поддерживается довольно много свойств стилей CSS; но вам необходимо поэкспериментировать и посмотреть, что окажется более полезным.
 
@@ -222,7 +222,7 @@ function foo() {
 
 Вывод в консоль будет похож на этот:
 
-![](https://mdn.mozillademos.org/files/7167/api-trace2.png)
+![](api-trace2.png)
 
 ## Замечания
 

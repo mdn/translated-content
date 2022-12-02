@@ -79,19 +79,19 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 
 Когда пользователь посещает PWA с помощью браузера, поддерживающего технологию, должен отобразиться значок, указывающий на возможность установки приложения в качестве PWA.
 
-![Add to Home screen popup of js13kPWA.](https://mdn.mozillademos.org/files/15928/js13kpwa-icon.png)
+![Add to Home screen popup of js13kPWA.](js13kpwa-icon.png)
 
 После того, как пользователь кликнет на иконку, отобразится баннер установки. Информация в баннере генерируется на основе файла-манифеста — имя и значок отображаются в приглашении.
 
-![Install banner of js13kPWA.](https://mdn.mozillademos.org/files/15927/js13kpwa-banner.png)
+![Install banner of js13kPWA.](js13kpwa-banner.png)
 
 Если пользователь нажимает кнопку, появляется окно, на котором изображены ярлык приложения и кнопки для подтверждения действий.
 
-![Add to Home screen popup of js13kPWA.](https://mdn.mozillademos.org/files/15926/js13kpwa-add.png)
+![Add to Home screen popup of js13kPWA.](js13kpwa-add.png)
 
 При подтверждении ярлык будет добавлен на рабочий стол.
 
-![](https://mdn.mozillademos.org/files/15834/js13kpwa-installed.png)
+![](js13kpwa-installed.png)
 
 После этого пользователь может запустить приложение и сразу начать его использовать. Обратите внимание, иногда у PWA (в зависимости от браузера и/или операционной системы) в правом нижнем углу отображается иконка браузера, чтобы пользователи понимали, что работают с веб-приложением.
 
@@ -99,7 +99,7 @@ translation_of: Web/Progressive_web_apps/Installable_PWAs
 
 В некоторых браузерах, на основе информации из манифеста, создаётся заставка, отображаемая при запуске PWA
 
-![](https://mdn.mozillademos.org/files/15835/js13kpwa-splash.png)
+![](js13kpwa-splash.png)
 
 Иконка и фоновый цвет использовались для создания заставки.
 

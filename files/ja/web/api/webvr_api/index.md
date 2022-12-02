@@ -13,7 +13,7 @@ WebVR は，バーチャルリアリティデバイス — 例えば Oculus Rift
 
 コンピュータに接続されている VR 装置は {{DOMxRef("Navigator.getVRDisplays()")}} メソッドによって返されます。それぞれの装置は {{DOMxRef("VRDisplay")}} オブジェクトで表されます。
 
-![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](https://mdn.mozillademos.org/files/11035/hw-setup.png)
+![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](hw-setup.png)
 
 {{DOMxRef("VRDisplay")}} VRDisplay は WebVR API の中心的なインターフェイスであり、そのプロパティとメソッドを介して、以下の機能にアクセスすることができます。
 

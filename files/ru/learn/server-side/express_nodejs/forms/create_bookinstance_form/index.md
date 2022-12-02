@@ -149,7 +149,7 @@ The view structure and behaviour is almost the same as for the **book_form.pug**
 
 Запустите приложение и откройте в браузере <http://localhost:3000/>. Затем выберите ссылку _Create new book instance (copy)_. Если все настроено правильно, ваш сайт должен выглядеть примерно так, как показано на скриншоте. После того, как вы отправите валидный `BookInstance`, он должен быть сохранён, и вы попадёте на страницу сведений.
 
-![](https://mdn.mozillademos.org/files/14490/LocalLibary_Express_BookInstance_Create_Empty.png)
+![](locallibary_express_bookinstance_create_empty.png)
 
 ## Next steps
 

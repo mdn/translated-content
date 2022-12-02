@@ -114,7 +114,7 @@ th {background-color: lightgray; }
 
 ### Resultado efectivo
 
-![](https://mdn.mozillademos.org/files/12201/writing-mode-actual-result.png)
+![](writing-mode-actual-result.png)
 
 ## Especificaciones
 

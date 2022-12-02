@@ -187,7 +187,7 @@ Disponibilizamos nossos dados JSON em nosso GitHub, em<https://mdn.github.io/lea
 
 Vamos carregá-lo em nossa página e usar algumas manipulações de DOM nifty para exibi-lo, assim:
 
-![](https://mdn.mozillademos.org/files/13857/json-superheroes.png)
+![](json-superheroes.png)
 
 ### Obtendo o JSON
 

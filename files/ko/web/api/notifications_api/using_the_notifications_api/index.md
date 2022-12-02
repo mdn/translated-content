@@ -11,7 +11,7 @@ original_slug: WebAPI/Using_Web_Notifications
 
 일반적으로 시스템 알림은 운영 체계의 표준 알림 메커니즘을 말합니다. 예를 들어 일반적인 데스크톱 시스템이나 모바일 장치의 브로드캐스트 알림을 생각해봅시다.
 
-![](https://mdn.mozillademos.org/files/10959/android-notification.png)
+![](android-notification.png)
 
 물론 시스템 알림 시스템은 플랫폼 및 브라우저에 따라 다양하지만 괜찮습니다. 알림 API는 범용적으로 작성돼서 대부분의 시스템 알림 시스템과 호환됩니다.
 

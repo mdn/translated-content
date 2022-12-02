@@ -17,7 +17,7 @@ A _live_ version of the examples is available on [Github](https://mdn.github.io/
 
 An application can get timestamps for the various phases of resource loading such as redirection, DNS lookup, and TCP connection setup. Those phases and their property names are illustrated in Figure 1.
 
-![Graphic of Resource Timing timestamps](https://mdn.mozillademos.org/files/12093/ResourceTiming-TimeStamps.jpg)
+![Graphic of Resource Timing timestamps](resourcetiming-timestamps.jpg)
 Figure 1. Resource timing properties
 
 An application developer can use the property values to calculate the length of time a phase takes and that information can help diagnose performance issues.

@@ -138,6 +138,6 @@ Para comenzar, daremos un vistazo a un simple ejemplo que dibuja dos rectangulos
 
 Este ejemplo quedaría así:
 
-{{EmbedLiveSample("Un_simple_ejemplo", 160, 160, "https://mdn.mozillademos.org/files/228/canvas_ex1.png")}}
+{{EmbedLiveSample("Un_simple_ejemplo", 160, 160, "canvas_ex1.png")}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial", "Web/Guide/HTML/Canvas_tutorial/Dibujando_formas")}}

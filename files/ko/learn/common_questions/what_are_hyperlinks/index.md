@@ -40,7 +40,7 @@ slug: Learn/Common_questions/What_are_hyperlinks
 
 기본적으로 파란색으로 밑줄이 된 링크는 주위 텍스트에서 보여진다. 활성화하기 위해 링크를 클릭하거나 Tab키로 링크를 선택하고 Enter키나 Space바를 누르면 된다.
 
-![Example of a basic display and effect of a link in a web page](https://mdn.mozillademos.org/files/8625/link-1.png)
+![Example of a basic display and effect of a link in a web page](link-1.png)
 
 링크는 웹을 유용하고 성공적으로 만든 돌파구이다. 이 글의 나머지엔, 다양한 유형의 링크와 현대 웹 디자인의 중요성을 얘기할 것이다.
 
@@ -65,7 +65,7 @@ slug: Learn/Common_questions/What_are_hyperlinks
 
 대부분의 링크는 두 개의 웹사이트를 연결한다. **앵커**는한 문서에서 다른 부분들을 연결한다. 앵커가 가리키는 링크를 따라가면, 브라우저는 새 문서를 불러오는 것 대신에 현재 문서의 다른 부분으로 이동한다. 그러나 다른 링크과 같은 방식으로 만들고 사용한다.
 
-![Example of a basic display and effect of an anchor in a web page](https://mdn.mozillademos.org/files/8627/link-2.png)
+![Example of a basic display and effect of an anchor in a web page](link-2.png)
 
 ### 링크와 검색엔진
 

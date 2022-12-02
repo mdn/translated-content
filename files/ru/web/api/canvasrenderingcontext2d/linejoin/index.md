@@ -26,7 +26,7 @@ ctx.lineJoin = "bevel" || "round" || "miter";
 
 Свойство может принимать три значения: `round`, `bevel` и `miter`. По умолчанию установлено значение `miter`. Имейте ввиду, что свойство никак не повлияет на линии направленные в одну сторону, потому что не будет создана зона пересечения.
 
-![](https://mdn.mozillademos.org/files/237/Canvas_linejoin.png)
+![](canvas_linejoin.png)
 
 - `round`
   - : Скругляет углы за счёт добавления сектора с центром в точке пересечения линий и радиусом равным толщине линии.
@@ -92,7 +92,7 @@ for (let i = 0; i < lineJoin.length; i++) {
 }
 ```
 
-{{EmbedLiveSample("Разница_между_значениями_lineJoin", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
+{{EmbedLiveSample("Разница_между_значениями_lineJoin", "180", "180", "canvas_linejoin.png")}}
 
 ## Спецификации
 

@@ -42,7 +42,7 @@ window.personalbar.visible = !window.personalbar.visible;
 ## 注記
 
 上記の例のページを読み込んだとき、ブラウザは、以下のダイアログを表示するでしょう。
-![](https://mdn.mozillademos.org/files/1574/Modify_any_open_window_dialog.png)
+![](modify_any_open_window_dialog.png)
 
 バーの表示を切り替えるには、上記の例のように、スクリプトの実行と特権要求を許可しなければなりません。また、様々なツールバーの表示の動的な変更は、ウィンドウのサイズをかなり劇的に変化させることがあり、ページのレイアウトに影響する可能性があることに注意してください。
 

@@ -186,7 +186,7 @@ En este punto tenemos un esqueleto completo de nuestro proyecto. El sitio web no
 
 Debería ver una página parecida a esta:
 
-![Browser for default Express app generator website](https://mdn.mozillademos.org/files/14375/ExpressGeneratorSkeletonWebsite.png)
+![Browser for default Express app generator website](expressgeneratorskeletonwebsite.png)
 
 Tiene una aplicación Express funcional, ejecutandose en _localhost:3000_.
 

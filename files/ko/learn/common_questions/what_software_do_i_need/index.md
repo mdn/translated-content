@@ -51,11 +51,11 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 
 이것은 하나의 고급 텍스트 에디터의 스크린샷입니다:
 
-![Screenshot of Notepad++.](https://mdn.mozillademos.org/files/8221/NotepadPlusPlus.png)
+![Screenshot of Notepad++.](notepadplusplus.png)
 
 이것은 온라인 텍스트 에디터의 스크린샷입니다:
 
-![Screenshot of ShiftEdit](https://mdn.mozillademos.org/files/15837/shiftedit.png)
+![Screenshot of ShiftEdit](shiftedit.png)
 
 ### 웹에 파일 업로드하기
 

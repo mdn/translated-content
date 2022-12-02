@@ -85,7 +85,7 @@ WASM 코드를 작성하기위한 많은 옵션 중 두 가지는 온라인 Wasm
 
 Emscripten 도구를 사용하면 C/C++ 소스코드를 가져와서 .wasm 모듈로 컴파일하고, 이 모듈을 불러와서 돌리는데 필요한 자바스크립트 "접착제(glue)" 코드를 끼워넣고, HTML 문서에 코드의 실행결과를 출력할 수도 있습니다.
 
-![](https://mdn.mozillademos.org/files/14647/emscripten-diagram.png)
+![](emscripten-diagram.png)
 
 핵심만 요약하면 절차는 다음과 같습니다:
 

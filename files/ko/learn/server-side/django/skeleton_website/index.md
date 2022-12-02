@@ -341,7 +341,7 @@ python3 manage.py runserver
 
 서버가 실행된다면 로컬 웹 브라우저에서 `http://127.0.0.1:8000/` 으로 이동하여 사이트를 볼 수 있습니다. 아래와 같은 사이트 에러 페이지가 뜰 겁니다:
 
-![Django Debug page for Django 2.0](https://mdn.mozillademos.org/files/15729/django_404_debug_page.png)
+![Django Debug page for Django 2.0](django_404_debug_page.png)
 
 걱정 마세요! 예상된 에러 페이지입니다. 그 이유는 아직(사이트의 루트에 대한 URL을 가져올 때 리다이렉트되는) `catalogs.urls` 모듈 안에 정의된 page/url들이 없기 때문입니다.
 

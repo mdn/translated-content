@@ -90,7 +90,7 @@ slug: Web/HTML/Element/content
 
 ブラウザーで表示した場合、以下のように表示されます。
 
-![content example](https://mdn.mozillademos.org/files/10077/content-example.png)
+![content example](content-example.png)
 
 ## 仕様書
 

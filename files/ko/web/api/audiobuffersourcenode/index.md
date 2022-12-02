@@ -11,7 +11,7 @@ translation_of: Web/API/AudioBufferSourceNode
 
 여러번 실행을 하면 `AudioBufferSourceNode.stop()`을 통해 정지가 가능하다. 가장 최근의 실행된것이 이전의 것으로 대체가 되어 `AudioBufferSourceNode`버퍼의 마지막에 도착하지 않은 상태가 된다.
 
-![The AudioBufferSourceNode takes the content of an AudioBuffer and m](https://mdn.mozillademos.org/files/9717/WebAudioAudioBufferSourceNode.png)
+![The AudioBufferSourceNode takes the content of an AudioBuffer and m](webaudioaudiobuffersourcenode.png)
 
 | Number of inputs  | `0`                                                            |
 | ----------------- | -------------------------------------------------------------- |

@@ -54,7 +54,7 @@ overflow: unset;
 
 В нашем примере [overscroll-поведения](https://mdn.github.io/css-examples/overscroll-behavior/) (см. также код по ссылке [](https://github.com/mdn/css-examples/tree/master/overscroll-behavior)) представлен полностраничный список поддельных контактов и диалоговое окно с чатом.
 
-![](https://mdn.mozillademos.org/files/15778/example.png)
+![](example.png)
 
 Обе эти области прокручиваются; обычно, если вы прокручиваете окно чата до тех пор, пока не достигнете границы прокрутки, нижележащее окно контактов тоже начнёт прокручиваться, что нежелательно. Предотвратить такое поведение можно, используя `overscroll-behavior-y` (`overscroll-behavior` также подойдет) для окна чата, как показано ниже:
 

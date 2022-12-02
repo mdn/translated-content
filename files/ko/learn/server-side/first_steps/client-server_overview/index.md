@@ -202,7 +202,7 @@ Content-Length: 0
 
 어떻게 작동하는지 다시 살펴보겠습니다, 마지막 기사에서 살펴본 정적 사이트의 아키텍쳐는다이어그램을 다시 살펴보면
 
-![A simplified diagram of a static web server.](https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png)
+![A simplified diagram of a static web server.](basic_static_app_server.png)
 
 유저가 페이지를 탐색하기를 원할 때, 브라우저는 지정된 HTML 페이지의 URL에 HTTP `GET` request를 보냅니다. 서버는 요청한 문서를 파일 시스템에서 탐색하고 문서와[HTTP Response status code](/ko/docs/Web/HTTP/Status) "`200 OK`" (성공을 알려주는)를 포함하는 HTTP응답을 반환합니다. 만약 서버가 다른 상태 코드를 반환한다면, 예를들면 "`404 Not Found`"는 파일이 서버에 없는 경우이고 "`301 Moved Permanently`"는 파일은 존재하지만 다른 위치로 리다이렉트된 경우입니다 .
 
@@ -224,7 +224,7 @@ HTML 템플릿을 통해 HTML 구조를 매우 쉽게 바꿀 수 있도록 만�
 
 아래 다이어그램은 "팀 코치"웹 사이트의 주요 요소와 코치가 "최고의 팀"목록에 액세스 할 때 일련의 작업 순서에 대한 번호가 매겨진 레이블을 보여줍니다. _사이트를 동적으로 만드는 부분들은_ 웹 애플리케이션(이것은 HTTP 요청을 처리하고 HTTP 응답을 반환하는 서버 측 코드를 참조하는 방법입니다), 선수의 정보나 팀 코치의 정보를 포함한 데이터베이스 그리고 _HTML 템플릿입니다_.
 
-![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](https://mdn.mozillademos.org/files/13829/Web%20Application%20with%20HTML%20and%20Steps.png)
+![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](web_application_with_html_and_steps.png)
 
 코치가 팀 이름과 플레이어의 수를 포함한 폼을 전송하면 작업 시퀀스는 다음과 같습니다:
 

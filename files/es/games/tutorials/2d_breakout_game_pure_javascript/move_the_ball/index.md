@@ -83,7 +83,7 @@ function draw() {
 
 Guarda el código de nuevo y pruébalo en tu navegador. Esto funciona bien, aunque parece que la bola está dejando un rastro detrás de ella:
 
-![](https://mdn.mozillademos.org/files/10430/ball-trail.png)
+![](ball-trail.png)
 
 ## Borrar el lienzo antes de cada fotograma
 

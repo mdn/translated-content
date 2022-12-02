@@ -15,7 +15,7 @@ HTTP сообщения - это обмен данными между серве
 
 Веб разработчики не создают текстовые сообщения HTTP самостоятельно - это делает программа, браузер, прокси или веб-сервер. Они обеспечивают создание HTTP сообщений через конфигурационные файлы (для прокси и серверов), APIs (для браузеров) или другие интерфейсы.
 
-![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](https://mdn.mozillademos.org/files/13825/HTTPMsg2.png)
+![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](httpmsg2.png)
 
 Механизм бинарного фрагментирования в HTTP/2 разработан так, чтобы не потребовалось вносить изменения в имеющиеся APIs и конфигурационные файлы: он вполне прозрачен для пользователя.
 
@@ -28,7 +28,7 @@ HTTP запросы и ответы имеют близкую структуру
 
 Стартовую строку вместе с заголовками сообщения HTTP называют _головой_ запроса, а его данные - _телом_.
 
-![Requests and responses share a common structure in HTTP](https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png)
+![Requests and responses share a common structure in HTTP](httpmsgstructure2.png)
 
 ## Запросы HTTP
 
@@ -59,7 +59,7 @@ HTTP запросы - это сообщения, отправляемые кли
 - _Основные заголовки (General headers_), например, {{HTTPHeader("Via")}}, относящиеся к сообщению в целом
 - _Заголовки запроса (Request headers_), например, {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, уточняющие запрос (как, например, {{HTTPHeader("Accept-Language")}}), придающие контекст (как {{HTTPHeader("Referer")}}), или накладывающие ограничения на условия (like {{HTTPHeader("If-None")}}).
 - _Заголовки сущности_, например {{HTTPHeader("Content-Length")}}, относящиеся к телу сообщения. Как легко понять, они отсутствуют, если у запроса нет тела.
-- ![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+- ![Example of headers in an HTTP request](http_request_headers2.png)
 
 ### Тело
 
@@ -92,7 +92,7 @@ HTTP запросы - это сообщения, отправляемые кли
 - _Заголовки ответа (Response headers_), например, {{HTTPHeader("Vary")}} и {{HTTPHeader("Accept-Ranges")}}, сообщающие дополнительную информацию о сервере, которая не уместилась в строку состояния.
 - _Заголовки сущности (Entity headers_), например, {{HTTPHeader("Content-Length")}}, относящиеся к телу ответа. Отсутствуют, если у запроса нет тела.
 
-![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![Example of headers in an HTTP response](http_response_headers2.png)
 
 ### Тело
 
@@ -114,7 +114,7 @@ HTTP запросы - это сообщения, отправляемые кли
 
 HTTP/2 переходит на новый уровень: он делит сообщения HTTP/1.x на фреймы, которые внедряются в поток. Фреймы данных из заголовков отделены друг от друга, что позволяет сжимать заголовки. Несколько потоков можно объединять друг с другом - такой процесс называется мультиплексированием - что позволяет более эффективно использовать TCP-соединения.
 
-![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](https://mdn.mozillademos.org/files/13819/Binary_framing2.png)
+![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](binary_framing2.png)
 
 Фреймы HTTP сейчас прозрачны для веб-разработчиков. Это дополнительный шаг, который HTTP/2 делает по отношению к сообщениям HTTP/1.1 и лежащему в основе транспортному протоколу. Для реализации фреймов HTTP веб-разработчикам не требуется вносить изменения в имеющиеся APIs; если HTTP/2 доступен и на сервере, и на клиенте, он включается и используется.
 

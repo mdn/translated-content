@@ -154,7 +154,7 @@ ol {
 
 This gives us the following look:
 
-![an ordered list with the bullet points set to appear outside the list item text.](https://mdn.mozillademos.org/files/12962/outer-bullets.png)
+![an ordered list with the bullet points set to appear outside the list item text.](outer-bullets.png)
 
 You can find a lot more options by checking out the {{cssxref("list-style-type")}} reference page.
 
@@ -171,7 +171,7 @@ ol {
 }
 ```
 
-![an ordered list with the bullet points set to appear inside the list item text.](https://mdn.mozillademos.org/files/12958/inner-bullets.png)
+![an ordered list with the bullet points set to appear inside the list item text.](inner-bullets.png)
 
 ### Using a custom bullet image
 
@@ -215,7 +215,7 @@ Here we've done the following:
 
 This gives us the following result:
 
-![an unordered list with the bullet points set as little star images](https://mdn.mozillademos.org/files/16226/list_formatting.png)
+![an unordered list with the bullet points set as little star images](list_formatting.png)
 
 ### list-style shorthand
 

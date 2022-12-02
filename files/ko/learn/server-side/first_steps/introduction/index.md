@@ -36,7 +36,7 @@ MDN의 초심자용 서버측 프로그래밍 코스에 오신 것을 환영합�
 
 _아래의 다이어그램은 정적사이트의 기본적인 웹 구조를 보여주고 있습니다_(정적 사이트는 특별한 리소스 요청이 들어올 때 서버에서 하드 코딩된 동일한 콘텐츠를 반환합니다). 사용자가 페이지를 탐색하거나, 브라우저가 지정된 URL에 HTTP "GET"요청을 보낼 때 서버는 파일 시스템에서 요청한 문서를 검색하고 문서와 [success status](/ko/docs/Web/HTTP/Status#Successful_responses) (보통 200 OK)를 포함한 HTTP응답을 반환 합니다. 만약 어떠한 이유 때문에 파일을 검색하면 error status([client error responses](/ko/docs/Web/HTTP/Status#Client_error_responses) 그리고 [server error responses](/ko/docs/Web/HTTP/Status#Server_error_responses)를 참고 하십시오)가 반환됩니다.
 
-![A simplified diagram of a static web server.](https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png)
+![A simplified diagram of a static web server.](basic_static_app_server.png)
 
 ### 동적 웹 사이트(Dynamic sites)
 
@@ -46,7 +46,7 @@ _아래의 다이어그램은 정적사이트의 기본적인 웹 구조를 보�
 
 아래의 다이어그램은 동적 웹 사이트의 간단한 구조를 보여주고 있습니다. 이전 다이어 그램과 같이, 브라우저는 HTTP 요청을 서버에 보내고, 서버는 요청을 처리하고 적절한 HTTP응답을 반환합니다. 정적 리소스의 요청은 정적 사이트와 같은 방법으로 처리 합니다(정적 파일은 변하지 않는 파일입니다 — 전형적으로: CSS, JavaScript, Images, pre-created PDF files 등등).
 
-![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](https://mdn.mozillademos.org/files/13839/Web%20Application%20with%20HTML%20and%20Steps.png)
+![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](web_application_with_html_and_steps.png)
 
 동적 리소스를 위한 요청은 (2) 서버측 코드에 대신 전달 됩니다(_다이어그램에서_ *Web Application*으로 보이는 부분). "동적 응답"을 위해 서버는 응답을 해석하여 필요한 정보를 데이터 베이스에서 읽고(3), 탐색한 데이터와 HTML템플릿을 결합하고(4), 생성된 HTML을 포함한 응답을 다시 보내줍니다(5,6).
 

@@ -18,7 +18,7 @@ HTTP 메시지는 ASCII로 인코딩된 텍스트 정보이며 여러 줄로 되
 
 웹 개발자, 또는 웹 마스터가 손수 HTTP 메시지를 텍스트로 작성하는 경우는 드뭅니다. 대신에 소프트웨어, 브라우저, 프록시, 또는 웹 서버가 그 일을 합니다. HTTP 메시지는 설정 파일(프록시 혹은 서버의 경우), API(브라우저의 경우), 혹은 다른 인터페이스를 통해 제공됩니다.
 
-![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](https://mdn.mozillademos.org/files/13825/HTTPMsg2.png)
+![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](httpmsg2.png)
 
 HTTP/2의 이진 프레이밍 메커니즘(binary framing mechanism)은 사용 중인 API나 설정 파일 등을 변경하지 않아도 되도록 설계 되었기 때문에, 사용자가 보고 이해하기 쉽습니다.
 
@@ -31,7 +31,7 @@ HTTP 요청과 응답의 구조는 서로 닮았으며, 그 구조는 다음과 
 
 HTTP 메시지의 시작 줄과 HTTP 헤더를 묶어서 요청 _헤드(head)라고 부르며_, 이와 반대로 HTTP 메시지의 페이로드는 *본문(body)*이라고 합니다.
 
-![Requests and responses share a common structure in HTTP](https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png)
+![Requests and responses share a common structure in HTTP](httpmsgstructure2.png)
 
 ## HTTP 요청
 
@@ -63,7 +63,7 @@ HTTP 요청은 서버가 특정 동작을 취하게끔 만들기 위해 클라�
 - Request 헤더: {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}와 같은 헤더는 요청의 내용을 좀 더 구체화 시키고({{HTTPHeader("Accept-Language")}}), 컨텍스를 제공하기도 하며({{HTTPHeader("Referer")}}), 조건에 따른 제약 사항을 가하기도 하면서({{HTTPHeader("If-None")}}) 요청 내용을 수정합니다.
 - Entity 헤더: {{HTTPHeader("Content-Length")}}와 같은 헤더는 요청 본문에 적용됩니다. 당연히 요청 내에 본문이 없는 경우 entity 헤더는 전송되지 않습니다.
 
-![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+![Example of headers in an HTTP request](http_request_headers2.png)
 
 ### 본문
 
@@ -96,7 +96,7 @@ HTTP 응답의 시작 줄은 *상태 줄(status line)*이라고 불리며, 다�
 - Response 헤더: {{HTTPHeader("Vary")}}와 {{HTTPHeader("Accept-Ranges")}}와 같은 헤더는 상태 줄에 미처 들어가지 못했던 서버에 대한 추가 정보를 제공합니다.
 - Entity 헤더: {{HTTPHeader("Content-Length")}}와 같은 헤더는 요청 본문에 적용됩니다. 당연히 요청 내에 본문이 없는 경우 entity 헤더는 전송되지 않습니다.
 
-![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![Example of headers in an HTTP response](http_response_headers2.png)
 
 ### 본문
 
@@ -118,7 +118,7 @@ HTTP/1.x 메시지는 성능상의 결함을 몇가지 내포하고 있습니다
 
 HTTP/2에서는 추가적인 단계가 도입되었습니다. HTTP/1.x 메시지를 프레임으로 나누어 스트림에 끼워 넣는 것입니다. 데이터와 헤더 프레임이 분리 되었기 때문에 헤더를 압축할 수 있습니다. 스트림 여러개를 하나로 묶을 수 있어서(이러한 과정을 멀티플렉싱이라 합니다), 기저에서 수행되는 TCP 연결이 좀 더 효율적이게 이루어집니다.
 
-![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](https://mdn.mozillademos.org/files/13819/Binary_framing2.png)
+![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](binary_framing2.png)
 
 이제 웹 개발자 입장에서는 HTTP 프레임을 매우 쉽게 살펴볼 수 있게 되었습니다. HTTP 프레임은 HTTP/2에서 추가된 단계이며, HTTP/1.1 메시지와 그 기저를 이루는 전송 프로토콜 사이를 메워주는 존재입니다. 그렇다고 해서 HTTP 프레임 때문에 개발자들이 API를 바꿔야 할 필요는 없습니다. 브라우저와 서버 둘 다 모두 HTTP 프레임을 받아 들일 수 있다면, HTTP/2가 활성화 된 후에 사용될 것입니다.
 

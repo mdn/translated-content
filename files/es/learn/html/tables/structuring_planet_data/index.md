@@ -39,7 +39,7 @@ Estás trabajando en la escuela; tus estudiantes están estudiando los planetas 
 
 La tabla finalizada debería de verse así:
 
-![](https://mdn.mozillademos.org/files/14609/assessment-table.png)
+![](assessment-table.png)
 
 También puedes ver el ejemplo [aquí](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no mires el código fuente — ¡no hagas trampas!)
 

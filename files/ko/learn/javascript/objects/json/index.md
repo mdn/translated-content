@@ -181,7 +181,7 @@ JSON 데이터를 다음 깃허브 링크에서 가져올수 있습니다. <http
 
 페이지에 JSON 데이터를 로딩하고 DOM 조작을 통해 아래와 같이 만들어 봅시다. :
 
-![](https://mdn.mozillademos.org/files/13857/json-superheroes.png)
+![](json-superheroes.png)
 
 ### JSON 가져오기
 

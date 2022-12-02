@@ -21,7 +21,7 @@ El elemento circle es una forma básica de SVG, usada para crear circulos a part
 </svg>
 ```
 
-» [circulo.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
+» [circulo.svg](circle2.svg)
 
 ## Atributos
 

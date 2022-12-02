@@ -83,7 +83,7 @@ function draw() {
 
 여러분의 코드를 다시 저장하고, 브라우저를 열어 실행해보세요. 공은 잘 움직이는군요. 뒤에 흔적이 남기는 하지만 말이죠.
 
-![](https://mdn.mozillademos.org/files/10430/ball-trail.png)
+![](ball-trail.png)
 
 ## 다음 프레임 전에 캔버스를 지우기
 

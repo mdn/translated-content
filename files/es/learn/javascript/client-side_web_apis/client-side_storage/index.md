@@ -123,7 +123,7 @@ Apliquemos este conocimiento recién descubierto escribiendo un sencillo ejemplo
 
 Puede encontrar el HTML de ejemplo en [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html): contiene un sitio web simple con un encabezado, contenido y pie de página, y un formulario para ingresar tu nombre.
 
-![Ejemplo de almacenamiento](https://mdn.mozillademos.org/files/15735/web-storage-demo.png)
+![Ejemplo de almacenamiento](web-storage-demo.png)
 
 Construyamos el ejemplo para que puedas entender cómo funciona.
 
@@ -232,7 +232,7 @@ Aquí, mostraremos un ejemplo que te permite almacenar notas en tu navegador y v
 
 La aplicación se parece a esta:
 
-![IDB en acción](https://mdn.mozillademos.org/files/15744/idb-demo.png)
+![IDB en acción](idb-demo.png)
 
 Cada nota tiene un título y un cuerpo de texto, cada uno editable individualmente. El código JavaScript que veremos a continuación tiene comentarios detallados para ayudarte a comprender lo que está sucediendo.
 
@@ -640,7 +640,7 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
 
 El ejemplo anterior ya muestra cómo crear una aplicación que almacenará grandes activos en una base de datos `IndexedDB`, evitando la necesidad de descargarlos más de una vez. Esto ya es una gran mejora para la experiencia del usuario, pero todavía falta una cosa: los archivos HTML, CSS y JavaScript principales aún se deben descargar cada vez que se accede al sitio, lo cual significa que no funcionará cuando no haya conexión de red.
 
-![Fuera de línea](https://mdn.mozillademos.org/files/15759/ff-offline.png)
+![Fuera de línea](ff-offline.png)
 
 Aquí es donde entran el [servicio workers](/es/docs/Web/API/Service_Worker_API) y la [API de caché](/es/docs/Web/API/Cache).
 

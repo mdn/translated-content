@@ -118,7 +118,7 @@ Pointer Lock が有効であるとき、標準 {{domxref("MouseEvent")}} のプ�
 
 Pointer Lock の使用方法やシンプルな制御システムの設定方法を示すため、[シンプルな Pointer Lock のデモ](https://mdn.github.io/dom-examples/pointer-lock/) を作成しました ([ソースコードを確認する](https://github.com/mdn/dom-examples/tree/master/pointer-lock))。デモは以下のようなものです:
 
-![A red circle on top of a black background.](https://mdn.mozillademos.org/files/7953/pointer-lock.png)
+![A red circle on top of a black background.](pointer-lock.png)
 
 このデモでは、JavaScript を使用して {{htmlelement("canvas")}} 要素上にボールを描画します。canvas をクリックすると Pointer Lock がマウスポインターを取り除いて、マウスを使用してボールを直接動かすことができます。このデモの仕組みを見ていきましょう。
 

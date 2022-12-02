@@ -12,7 +12,7 @@ translation_of: >-
 
 캡션이 포함된 영상 플레이어를 예시로 설명하기 위하여 [Blender Foundation](http://www.blender.org/foundation/)에서 만든 [Sintel open movie](http://www.sintel.org/)를 발췌하여 사용할 것입니다.
 
-![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
 > **참고:** [소스코드](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)는 Github 에서 받을 수 있으며 [데모](http://iandevlin.github.io/mdn/video-player-with-captions/) 또한 확인해보실 수 있습니다.
 

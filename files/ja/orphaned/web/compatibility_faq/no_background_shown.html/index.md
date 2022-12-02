@@ -11,7 +11,7 @@ original_slug: Web/Compatibility_FAQ/No_Background_Shown.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9981/0201.jpg)
+![](0201.jpg)
 
 ## 要因
 

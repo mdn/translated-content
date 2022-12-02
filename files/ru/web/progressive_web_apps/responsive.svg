@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="12.417778mm" height="12.629297mm" viewBox="0 0 44.000001 44.749478" id="svg41987" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="responsive.svg">
+  <defs id="defs41989">
+    <symbol id="symbol47940">
+      <title id="title47942">Stay Current Landscape</title>
+      <path d="M 2.02,14 2,34 c 0,2.21 1.79,4 4,4 l 36,0 c 2.21,0 4,-1.79 4,-4 l 0,-20 c 0,-2.21 -1.79,-4 -4,-4 L 6,10 c -2.21,0 -3.98,1.79 -3.98,4 z m 35.98,0 0,20 -28,0 0,-20 28,0 z" style="stroke:none" id="path47944" inkscape:connector-curvature="0"/>
+    </symbol>
+  </defs>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="2.8" inkscape:cx="-93.036669" inkscape:cy="-85.950681" inkscape:document-units="px" inkscape:current-layer="use60504-3" showgrid="false" inkscape:window-width="2560" inkscape:window-height="1391" inkscape:window-x="1280" inkscape:window-y="1" inkscape:window-maximized="1" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0"/>
+  <metadata id="metadata41992">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1" transform="translate(-423.67773,-579.64844)">
+    <g id="use60504" style="fill:#000000;stroke:#000000" transform="translate(421.71429,585.50506)">
+      <title id="title60520">Stay Current Landscape</title>
+    </g>
+    <g id="use60504-3" style="fill:#000000;stroke:#000000" transform="matrix(0,-1,1,0,413.67857,625.64792)">
+      <title id="title60520-4">Stay Current Landscape</title>
+      <path style="fill:#b2b2b2;fill-opacity:1;fill-rule:nonzero;stroke:none" d="m 427.67773,579.64844 c -2.21,0 -4,1.79 -4,4 l 0,36 c 0,2.21 1.79,3.97851 4,3.97851 l 20,0.0215 c 2.21,0 4,-1.79 4,-4 l 0,-36 c 0,-2.21 -1.79,-4 -4,-4 l -20,0 z m 0,8 20,0 0,28 -20,0 0,-28 z" transform="matrix(0,1,-1,0,625.64792,-413.67857)" id="path78843" inkscape:connector-curvature="0"/>
+    </g>
+    <path id="path60522" style="fill:#000000;stroke:none" d="m 423.69773,600.39792 -0.02,20 c 0,2.21 1.79,4 4,4 l 36,0 c 2.21,0 4,-1.79 4,-4 l 0,-20 c 0,-2.21 -1.79,-4 -4,-4 l -36,0 c -2.21,0 -3.98,1.79 -3.98,4 z m 35.98,0 0,20 -28,0 0,-20 28,0 z" inkscape:connector-curvature="0"/>
+  </g>
+</svg>

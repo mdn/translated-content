@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="10.16mm" height="12.417778mm" viewBox="0 0 35.999999 44.000001" id="svg22392" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="safe.svg">
+  <defs id="defs22394">
+    <symbol id="symbol27729">
+      <title id="title27731">Verified User</title>
+      <path d="M 24,2 6,10 6,22 C 6,33.11 13.67,43.47 24,46 34.33,43.47 42,33.11 42,22 L 42,10 24,2 Z M 20,34 12,26 14.83,23.17 20,28.34 33.17,15.17 36,18 20,34 Z" style="stroke:none" id="path27733" inkscape:connector-curvature="0"/>
+    </symbol>
+  </defs>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.35" inkscape:cx="-631.28572" inkscape:cy="-66.571425" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="2560" inkscape:window-height="1391" inkscape:window-x="1280" inkscape:window-y="1" inkscape:window-maximized="1"/>
+  <metadata id="metadata22397">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1" transform="translate(-287.71429,-421.79078)">
+    <g id="use41937" style="fill:#000000;stroke:#000000" transform="translate(281.71429,419.79078)">
+      <title id="title41953">Verified User</title>
+      <path id="path41955" style="stroke:none" d="M 24,2 6,10 6,22 C 6,33.11 13.67,43.47 24,46 34.33,43.47 42,33.11 42,22 L 42,10 24,2 Z M 20,34 12,26 14.83,23.17 20,28.34 33.17,15.17 36,18 20,34 Z" inkscape:connector-curvature="0"/>
+    </g>
+  </g>
+</svg>

@@ -197,7 +197,7 @@ _Статический сайт_ — это тот, который возвра
 
 Давайте вспомним, как это работает, снова взглянув на диаграмму архитектуры статического сайта, на которую мы смотрели в последней статье.
 
-![A simplified diagram of a static web server.](https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png)
+![A simplified diagram of a static web server.](basic_static_app_server.png)
 
 Когда пользователь хочет перейти на страницу, браузер отправляет HTTP-запрос `GET` с указанием URL-адреса его HTML-страницы. Сервер извлекает запрошенный документ из своей файловой системы и возвращает HTTP-ответ, содержащий документ и код состояния [HTTP Response status code](/ru/docs/Web/HTTP/Status) `200 OK` (успех). Сервер может вернуть другой код состояния, например, «`404 Not Found`», если файл отсутствует на сервере или «`301 Moved Permanently`», если файл существует, но был перемещён в другое место.
 
@@ -219,7 +219,7 @@ _Динамический сайт_ — это тот, который может
 
 На приведённой ниже диаграмме показаны основные элементы веб-сайта «team coach», а также пронумерованные ярлыки для последовательности операций, когда тренер обращается к списку «лучших команд». Частями сайта, которые делают его динамичным, являются _веб-приложение_ (так мы будем ссылаться на серверный код, обрабатывающий HTTP-запросы и возвращающие HTTP-ответы), _база данных_, которая содержит информацию об игроках, командах, тренерах и их отношениях, и _HTML-шаблоны_.
 
-![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](https://mdn.mozillademos.org/files/13829/Web%20Application%20with%20HTML%20and%20Steps.png)
+![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](web_application_with_html_and_steps.png)
 
 После того, как тренер отправит форму с именем команды и количеством игроков, последовательность операций будет следующей:
 

@@ -116,7 +116,7 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #99f repeat-y fixed;
+  background: url("starsolid.gif") #99f repeat-y fixed;
 }
 ```
 

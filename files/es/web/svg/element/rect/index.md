@@ -26,7 +26,7 @@ También podría ser usada para crear rectángulos con esquinas redondeadas.
 </svg>
 ```
 
-» [rect-1.svg](https://mdn.mozillademos.org/files/8893/rect-1.svg)
+» [rect-1.svg](rect-1.svg)
 
 ### `rect` con esquinas redondeados
 
@@ -43,7 +43,7 @@ También podría ser usada para crear rectángulos con esquinas redondeadas.
 </svg>
 ```
 
-» [rect-2.svg](https://mdn.mozillademos.org/files/8897/rect-2.svg)
+» [rect-2.svg](rect-2.svg)
 
 ## Atributos
 

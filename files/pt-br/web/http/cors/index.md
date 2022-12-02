@@ -12,7 +12,7 @@ Um exemplo de requisição _cross-origin_: o código JavaScript _frontend_ de um
 
 Por motivos de segurança, navegadores restringem requisições _cross-origin_ HTTP iniciadas por scripts. Por exemplo, `XMLHttpRequest` e [Fetch API](/pt-BR/docs/Web/API/Fetch_API) seguem a [política de mesma origem](/pt-BR/docs/Web/Security/Same-origin_policy) (_same-origin policy_). Isso significa que um aplicativo web que faz uso dessas APIs só poderá fazer solicitações para recursos de mesma origem da qual o aplicativo foi carregado, a menos que a resposta da outra origem inclua os cabeçalhos CORS corretos.
 
-![](https://mdn.mozillademos.org/files/14295/CORS_principle.png)
+![](cors_principle.png)
 
 O mecânismo CORS suporta requisições seguras do tipo _cross-origin e_ transferências de dados entre navegadores e servidores web. Navegadores modernos usam o CORS em uma API contêiner, como `XMLHttpRequest` ou [Fetch](/pt-BR/docs/Web/API/Fetch_API), para ajudar a reduzir os riscos de requisições _cross-origin_ HTTP.
 
@@ -96,7 +96,7 @@ function callOtherDomain() {
 
 Isso fará uma troca simples entre cliente e servidor, utilizando o cabeçalho CORS para tratar os privilégios.
 
-![](https://mdn.mozillademos.org/files/14293/simple_req.png)
+![](simple_req.png)
 
 Neste caso, vamos ver o que o navegador enviará ao servidor e vamos olhar como o servidor responde:
 
@@ -194,7 +194,7 @@ function callOtherDomain(){
 
 No exemplo acima, a linha 3 cria um XML para enviar com a requisição `POST` da linha 8. Também, na linha 9, é definido um cabeçalho de uma requisição HTTP "personalizada" (non-standard) com (`X-PINGOTHER: pingpong`). Tais cabeçalhos não fazem parte do protocolo HTTP/1.1, mas podem ser usados para aplicações web. Já que a requisição usa um Content-Type do tipo `application/xml` e como é uma requisição personalizada, esta requisição faz um pré-envio.
 
-![](https://mdn.mozillademos.org/files/14289/prelight.png)
+![](prelight.png)
 
 (Observação: conforme descrito abaixo, a requisição POST real não inclui os cabeçalhos Access-Control-Request- \*; eles são necessários apenas para a requisição OPTIONS.)
 
@@ -333,7 +333,7 @@ function callOtherDomain(){
 
 Line 7 shows the flag on {{domxref("XMLHttpRequest")}} that has to be set in order to make the invocation with Cookies, namely the `withCredentials` boolean value. By default, the invocation is made without Cookies. Since this is a simple `GET` request, it is not preflighted, but the browser will **reject** any response that does not have the {{HTTPHeader("Access-Control-Allow-Credentials")}}: `true` header, and **not** make the response available to the invoking web content.
 
-![](https://mdn.mozillademos.org/files/14291/cred-req.png)
+![](cred-req.png)
 
 Here is a sample exchange between client and server:
 

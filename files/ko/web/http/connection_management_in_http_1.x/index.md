@@ -13,7 +13,7 @@ HTTP는 클라이언트와 서버 사이의 커넥션을 제공하는 TCP를 전
 
 HTTP/1.1에서 두 가지 모델이 추가되었습니다. 영속적인 커넥션 모델은 연속적인 요청 사이에 커넥션을 유지하여 새 커넥션을 여는데 필요한 시간을 줄입니다. HTTP 파이프라이닝은 한 단계 더 나아가, 응답조차도 기다리지 않고 연속적인 요청을 보내서 네트워크 지연을 더욱 줄입니다.
 
-![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](https://mdn.mozillademos.org/files/13727/HTTP1_x_Connections.png)
+![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
 > **참고:** HTTP/2는 커넥션 관리의 몇가지 모델을 더 추가합니다.
 
@@ -69,7 +69,7 @@ HTTP/1.0 커넥션은 기본적으로 영속적이지 않습니다. {{HTTPHeader
 
 서버가 더 빠른 웹 사이트나 애플리케이션 반응을 원한다면, 서버가 더 많은 커넥션을 열도록 강제할 수 있습니다. 예를 들어, `www.example.com` 라는 하나의 도메인에서 모든 리소스를 가져오는 대신, `www1.example.com`, `www2.example.com`, `www3.example.com`와 같이 몇 개의 도메인으로 분할할 수 있습니다. 이런 각각의 도메인들은 _동일한_ 서버로 연결되고, 브라우저는 그런 각각의 도메인마다 6개의 커넥션을 맺을 것입니다(예제에서는 총 18개로 늘어납니다). 이러한 기법을 *도메인 샤딩*이라고 부릅니다.
 
-![](https://mdn.mozillademos.org/files/13783/HTTPSharding.png)
+![](httpsharding.png)
 
 ## 결론
 

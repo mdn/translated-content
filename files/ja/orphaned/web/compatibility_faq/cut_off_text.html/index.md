@@ -11,7 +11,7 @@ original_slug: Web/Compatibility_FAQ/Cut_Off_Text.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9967/0108.png)
+![](0108.png)
 
 ## 要因
 

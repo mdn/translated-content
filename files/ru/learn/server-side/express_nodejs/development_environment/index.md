@@ -347,7 +347,7 @@ DEBUG=helloworld:* npm start
 
 Откройте браузер и перейдите по адресу `http://127.0.0.1:3000/`, чтобы увидеть страницу приветствия Express по умолчанию.
 
-![Express - Generated App Default Screen](https://mdn.mozillademos.org/files/14331/express_default_screen.png)
+![Express - Generated App Default Screen](express_default_screen.png)
 
 Мы поговорим больше о сгенерированном приложении, когда перейдём к статье о создании каркасного приложения.
 

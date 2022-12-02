@@ -37,8 +37,8 @@ object-position: unset;
 #### Ejemplo de HTML
 
 ```html
-<img id="object-position-1" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/>
-<img id="object-position-2" src="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn_logo_only_color.png" alt="MDN Logo"/>
+<img id="object-position-2" src="mdn_logo_only_color.png" alt="MDN Logo"/>
 ```
 
 #### Ejemplo de CSS

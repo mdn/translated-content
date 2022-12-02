@@ -37,8 +37,8 @@ VR アプリケーションの入力を扱うことは興味深いトピック�
 
 主に，モバイルタイプとコンピュータ接続タイプの 2 種類のセットアップがあります．最小のハードウェアセットアップは次のようなものです:
 
-- モバイル: Google Cardboard のように VR マウントにスマートフォン — スマートフォンは VR ディスプレイとして機能する — をマウントして作られるヘッドマウントディスプレイ (HMD) で，モバイルスクリーンをステレオビジョンへ投影するのに必要なレンズが含まれています．![Mobile based VR setup](https://mdn.mozillademos.org/files/11085/mobileBasedVRSetup.png)
-- コンピュータ接続: コンピュータに接続する VR セットアップです — 右目と左目の両方に表示される映像を映す高解像度の横向きスクリーンを持つ HMD で構成されています．HMD は右目と左目のシーン（ステレオビジョン）を分割するためのレンズも備えています．セットアップは分離型の位置センサも含まれています．位置センサは頭の位置/向き/速度/加速度を取得して，コンピュータへ絶えずその情報を渡します．![Computer based VR Setup](https://mdn.mozillademos.org/files/11089/computerBasedVRSetup.png)
+- モバイル: Google Cardboard のように VR マウントにスマートフォン — スマートフォンは VR ディスプレイとして機能する — をマウントして作られるヘッドマウントディスプレイ (HMD) で，モバイルスクリーンをステレオビジョンへ投影するのに必要なレンズが含まれています．![Mobile based VR setup](mobilebasedvrsetup.png)
+- コンピュータ接続: コンピュータに接続する VR セットアップです — 右目と左目の両方に表示される映像を映す高解像度の横向きスクリーンを持つ HMD で構成されています．HMD は右目と左目のシーン（ステレオビジョン）を分割するためのレンズも備えています．セットアップは分離型の位置センサも含まれています．位置センサは頭の位置/向き/速度/加速度を取得して，コンピュータへ絶えずその情報を渡します．![Computer based VR Setup](computerbasedvrsetup.png)
 
 > **メモ:** コンピュータ接続システムは位置センサーを含んでいない場合もありますが，通常は含まれています．
 
@@ -54,7 +54,7 @@ VR アプリケーションの入力を扱うことは興味深いトピック�
 
 前述のように，位置センサは HMD に関する情報を検出して常にそれを出力しているので，頭の動きや回転などに追従してシーンを連続的に更新することができます．しかしその情報とは正確には何でしょうか？
 
-![Position and Orientation VR setup](https://mdn.mozillademos.org/files/11083/positionOrientationVR.png)
+![Position and Orientation VR setup](positionorientationvr.png)
 
 出力情報は，4 つのカテゴリに分類できます:
 
@@ -75,7 +75,7 @@ VR アプリケーションの入力を扱うことは興味深いトピック�
 
 視界 (FOV; field of view) は，ユーザの各目で見られる（と期待されている）範囲です．その形状は，おおよそピラミッド型になっていて，（前後の）側面はユーザの頭の内部を頂点として，残りはユーザの目の位置から広がっています（訳注； 原文では eminate と書かれていますが，emanate の誤字と判断しました）． それぞれの目は固有の FOV を持っていて，もう一方にわずかに重なっています．
 
-![FOV related properties](https://mdn.mozillademos.org/files/11091/FOVrelatedProperties.png)
+![FOV related properties](fovrelatedproperties.png)
 
 FOV は次の値で定義されています:
 
@@ -100,7 +100,7 @@ FOV は次の値で定義されています:
 
 立体視は，人間や（おそらく）動物が持つ通常のビジョンで，（両目のそれぞれから見える）僅かに異なる 2 つの画像を 1 つの画像として知覚するものです．結果として奥行きを認識でき，見事な 3D の世界を見る手助けをしています．VR アプリでこれを再現するには，ユーザが HMD を使っている時に左右の目のそれぞれに与える，本当にわずかに異なるビューを横に並べた画像をレンダリングする必要があります．
 
-![How to create stereoscopic 3D images](https://mdn.mozillademos.org/files/11095/createStereoscopicImages.png)
+![How to create stereoscopic 3D images](createstereoscopicimages.png)
 
 ### ヘッドトラッキング Head tracking
 

@@ -7,7 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
 
 Эта возможность пользовательского интерфейса позволяет добавлять новые элементы в контекстное меню браузера, появляющееся при нажатии правой кнопки мыши. Вкладки браузера также имеют контекстное меню доступное через [browser.menus API](/en-US/Add-ons/WebExtensions/API/menus).
 
-![Example of content menu items added by a WebExtension, from the context-menu-demo example](https://mdn.mozillademos.org/files/15756/context_menu_example.png)
+![Example of content menu items added by a WebExtension, from the context-menu-demo example](context_menu_example.png)
 
 Возможность добавления элементов в контекстное меню позволяет предоставлять пользователю различные функции в зависимости от его действий на странице или в браузере. Например, можно отобразить элемент, который открывает графический редактор, если пользователь нажимает на изображение, или же предложить функцию для сохранения содержимого страницы, если выбрана некоторая её часть. Элементы могут представлять из себя не только текст, но и, например, кнопку-переключатель или разделитель (см. [типы элементов меню](/ru/docs/Mozilla/Add-ons/WebExtensions/API/menus/ItemType)). После того, как элемент контекстного меню был добавлен с помощью {{WebExtAPIRef("contextMenus.create")}}, он отображается во всех вкладках браузера, но вы можете удалить его при помощи {{WebExtAPIRef("contextMenus.remove")}}.
 

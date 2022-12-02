@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" style="background-color: rgb(255, 255, 255);" xmlns:xlink="http://www.w3.org/1999/xlink" width="630px" height="360px" version="1.1">
+	<defs/>
+	<g transform="translate(0.5,0.5)">
+		<ellipse cx="294" cy="248" rx="110" ry="110" fill="#ffffff" stroke="#000000" stroke-dasharray="3 3" pointer-events="none"/>
+		<path d="M 199 248 L 389 248" fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" pointer-events="none"/>
+		<rect x="247" y="188" width="94" height="24" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+		<rect x="247" y="212" width="94" height="24" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+		<rect x="247" y="236" width="94" height="24" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+		<rect x="247" y="258" width="94" height="24" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+		<rect x="247" y="282" width="94" height="24" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+		<path d="M 189 248 L 309 248" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" transform="rotate(90,249,248)" pointer-events="none"/>
+		<path d="M 283 248 L 403 248" fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" transform="rotate(90,343,248)" pointer-events="none"/>
+		<rect x="284" y="180" width="24" height="16" fill="#ffffff" stroke="#000000" pointer-events="none"/><g transform="translate(293,183)">
+		<text x="3" y="9" fill="#000000" text-anchor="middle" font-size="8px" font-family="Helvetica">L</text>
+	</g>
+	<rect x="284" y="203" width="24" height="16" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+	<g transform="translate(293,206)">
+		<text x="4" y="9" fill="#000000" text-anchor="middle" font-size="8px" font-family="Helvetica">R</text>
+	</g>
+	<rect x="284" y="227" width="24" height="16" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+	<g transform="translate(290,230)">
+		<text x="7" y="9" fill="#000000" text-anchor="middle" font-size="8px" font-family="Helvetica">SL</text>
+	</g>
+	<rect x="284" y="250" width="24" height="16" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+	<g transform="translate(289,253)">
+		<text x="7" y="9" fill="#000000" text-anchor="middle" font-size="8px" font-family="Helvetica">SR</text>
+	</g>
+	<rect x="284" y="274" width="24" height="16" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+	<g transform="translate(293,277)">
+		<text x="4" y="9" fill="#000000" text-anchor="middle" font-size="8px" font-family="Helvetica">C</text>
+	</g>
+	<rect x="284" y="298" width="24" height="16" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+	<g transform="translate(287,301)">
+		<text x="10" y="9" fill="#000000" text-anchor="middle" font-size="8px" font-family="Helvetica">LFE</text>
+	</g>
+	<path d="M 9 27 L 128.9 27" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+	<path d="M 135.65 27 L 126.65 31.5 L 128.9 27 L 126.65 22.5 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+	<path d="M 74 47 L 203 182" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="none"/>
+	<path d="M 278 26 L 397.9 26" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+	<path d="M 404.65 26 L 395.65 30.5 L 397.9 26 L 395.65 21.5 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+	<path d="M 278 49 L 333.5 49 Q 343.5 49 343.5 59 L 343.5 106 Q 343.5 116 353.5 116 L 398.9 116" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+	<path d="M 405.65 116 L 396.65 120.5 L 398.9 116 L 396.65 111.5 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+	<path d="M 549 25 L 608.9 25" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+	<path d="M 615.65 25 L 606.65 29.5 L 608.9 25 L 606.65 20.5 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+	<g transform="translate(421,216)">
+		<text x="0" y="22" fill="#000000" text-anchor="left" font-size="10px" font-family="Helvetica">
+			Chaque entrée / sortie est
+			<tspan x="0" dy="1.5em">composée de plusieurs canaux.</tspan>
+			<tspan x="0" dy="1.5em">Ici on voit une configuration  5.1</tspan>
+		</text>
+	</g>
+	<rect x="151" y="13" width="118" height="50" fill="#719fd0" stroke="#000000" pointer-events="none"/>
+	<g transform="translate(176,32)">
+		<text x="34" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Noeud audio</text>
+	</g>
+	<path d="M 9 47 L 128.9 47" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+	<path d="M 135.65 47 L 126.65 51.5 L 128.9 47 L 126.65 42.5 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="none"/>
+	<rect x="419" y="1" width="118" height="50" fill="#719fd0" stroke="#000000" pointer-events="none"/>
+	<g transform="translate(444,20)">
+		<text x="34" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Noeud audio</text>
+	</g>
+	<rect x="419" y="91" width="118" height="50" fill="#719fd0" stroke="#000000" pointer-events="none"/>
+	<g transform="translate(444,110)">
+		<text x="34" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica">Noeud audio</text>
+	</g>
+	<g transform="translate(41,12)">
+		<text x="19" y="10" fill="#000000" text-anchor="middle" font-size="10px" font-family="Helvetica">Sources</text>
+	</g>
+	<g transform="translate(308,11)">
+		<text x="24" y="10" fill="#000000" text-anchor="middle" font-size="10px" font-family="Helvetica">Destination</text>
+	</g>
+</g>
+</svg>

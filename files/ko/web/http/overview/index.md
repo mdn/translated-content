@@ -25,7 +25,7 @@ HTTP는 클라이언트-서버 프로토콜입니다. 요청은 하나의 개체
 
 각각의 개별적인 요청들은 서버로 보내지며, 서버는 요청을 처리하고 *response*라고 불리는 응답을 제공합니다. 이 요청과 응답 사이에는 여러 개체들이 있는데, 예를 들면 다양한 작업을 수행하는 게이트웨이 또는 {{glossary("Cache", "캐시")}} 역할을 하는 {{glossary("Proxy_server", "프록시")}} 등이 있습니다.
 
-![](https://mdn.mozillademos.org/files/13679/Client-server-chain.png)
+![](client-server-chain.png)
 
 실제로는 브라우저와 요청을 처리하는 서버 사이에는 좀 더 많은 컴퓨터들이 존재합니다: 라우터, 모뎀 등이 있죠. 웹의 계층적인 설계 덕분에, 이들은 네트워크와 전송 계층 내로 숨겨집니다. HTTP은 애플리케이션 계층의 최상위에 있습니다. 네트워크 문제를 진단하는 것도 중요하지만, 기본 레이어들은 HTTP의 명세와는 거의 관련이 없습니다.
 
@@ -139,7 +139,7 @@ HTTP 메시지의 두 가지 타입인 요청(requests)과 응답(responses)은 
 
 HTTP 요청의 예:
 
-![A basic HTTP request](https://mdn.mozillademos.org/files/13687/HTTP_Request.png)
+![A basic HTTP request](http_request.png)
 
 요청은 다음의 요소들로 구성됩니다:
 
@@ -153,7 +153,7 @@ HTTP 요청의 예:
 
 응답의 예:
 
-![](https://mdn.mozillademos.org/files/13691/HTTP_Response.png)
+![](http_response.png)
 
 응답은 다음의 요소들로 구성됩니다:
 

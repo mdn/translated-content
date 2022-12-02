@@ -41,7 +41,7 @@ Escribir HTML es fácil, pero ¿qué pasa si algo va mal y desconocemos dónde e
 
 Cuando escribimos cualquier tipo de código, normalmente todo va bien, hasta ese fatídico momento en el que ocurre un error, hemos hecho algo mal y el código no funciona, o no funciona del todo, no lo suficientemente bien. Por ejemplo, el dibujo siguiente muestra un error de {{glossary("compile","compilación")}} de un programa sencillo escrito en lenguaje [Rust](https://www.rust-lang.org/).
 
-![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](https://mdn.mozillademos.org/files/12435/error-message.png)En el ejemplo, el mensaje de error es fácilmente comprensible: "unterminated double quote string" (comillas sin cerrar en el texto). Si analizamos el listado de código, observamos que en `println!(Hello, world!");` faltan una comillas. Pero, los mensajes de error pueden complicarse con facilidad y su interpretación ser menos sencilla a medida que los programas aumentan en tamaño, e incluso casos sencillo pueden llegar a intimidar a alguien que no sabe nada de Rust.
+![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](error-message.png)En el ejemplo, el mensaje de error es fácilmente comprensible: "unterminated double quote string" (comillas sin cerrar en el texto). Si analizamos el listado de código, observamos que en `println!(Hello, world!");` faltan una comillas. Pero, los mensajes de error pueden complicarse con facilidad y su interpretación ser menos sencilla a medida que los programas aumentan en tamaño, e incluso casos sencillo pueden llegar a intimidar a alguien que no sabe nada de Rust.
 
 Sin embargo, la depuración no nos debe asustar; la clave para sentirnos cómodos con la escritura y la depuración de cualquier lenguaje o código es la familiaridad, tanto con el lenguaje como con las herramientas.
 
@@ -65,7 +65,7 @@ HTML en sí mismo no suele producir errores sintácticos porque los navegadores 
 Es hora de estudiar la naturaleza permisiva del código HTML por nosotros mismos.
 
 1. En primer lugar, hagamos una copia de nuestro [ejemplo-demo a depurar](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/debugging-html/debug-example.html) y guardémoslo de forma local. Está escrito para generar diversos errores que deberemos descubrir (se dice que el marcado de HTML está **mal formado**, en contraposición a un marcado **bien formado**).
-2. A continuación, abrámoslo en un navegador; veremos lo siguiente:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](https://mdn.mozillademos.org/files/12437/badly-formed-html.png)
+2. A continuación, abrámoslo en un navegador; veremos lo siguiente:![A simple HTML document with a title of HTML debugging examples, and some information about common HTML errors, such as unclosed elements, badly nested elements, and unclosed attributes. ](badly-formed-html.png)
 3. No parece que esté bien; veamos el código fuente para ver qué podemos hacer (solo mostramos el contenido del \<body>):
 
     ```html
@@ -95,7 +95,7 @@ Es hora de estudiar la naturaleza permisiva del código HTML por nosotros mismos
     - Al valor del atributo {{htmlattrxref("href","a")}} le faltan las comillas de cierre. Esto parece haber causado el problema más grave: el enlace ha desaparecido totalmente.
 
 5. Ahora veamos lo que el navegador ha mostrado en contraposición al código fuente. Para ello podemos usar las herramientas de desarrollo del navegador. Si no estamos familiarizados con el uso de estas herramientas, echemos un vistazo rápido a [Descubrir las herramientas de desarrollo del navegador](/es/docs/Learn/Common_questions/What_are_browser_developer_tools), y luego continuaremos.
-6. En el inspector de objetos (DOM), puedes comprobar la apariencia de cada elemento: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](https://mdn.mozillademos.org/files/12439/html-inspector.png)
+6. En el inspector de objetos (DOM), puedes comprobar la apariencia de cada elemento: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 7. Vamos a explorar nuestro código en detalle con el inspector de objetos DOM para ver cómo el navegador ha arreglado nuestros errores de código HTML (lo hemos hecho con Firefox; otros navegadores modernos deberían conducir al mismo resultado):
 
     - Se han añadido etiquetas de cierre a los párrafos y las líneas de las listas.
@@ -124,7 +124,7 @@ Con el ejemplo anterior podemos asegurarnos de que nuestro HTML está bien forma
 
 La mejor estrategia es comenzar por pasar tu página HTML por el [servicio de validación de etiquetas](https://validator.w3.org/); fue creado y está mantenido por el W3C, organización que se encarga de definir las especificaciones de HTML, CSS y otras tecnologías web. Esta página web toma un documento HTML como entrada, lo procesa, y genera un informe de dónde están los errores en el documento.
 
-![The HTML validator homepage](https://mdn.mozillademos.org/files/12441/validator.png)
+![The HTML validator homepage](validator.png)
 
 Para validar el HTML, podemos proporcionar al validador una dirección web a la que apuntar, subirle un archivo HTML, o directamente introducirle el código HTML que queremos que revise.
 
@@ -139,7 +139,7 @@ Vamos a probar de validar nuestro [documento ejemplo](https://github.com/mdn/lea
 
 Esto debería proporcionar una lista de errores y otras informaciones:
 
-![A list of of HTML validation results from the W3C markup validation service](https://mdn.mozillademos.org/files/12443/validation-results.png)
+![A list of of HTML validation results from the W3C markup validation service](validation-results.png)
 
 #### Interpretación de los mensajes de error
 
@@ -162,7 +162,7 @@ No debemos preocuparnos si no podemos corregir todos los mensajes de error; es p
 
 Sabremos que todos los errores están arreglados cuando veamos el mensaje siguiente:
 
-![Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."](https://mdn.mozillademos.org/files/12445/valid-html-banner.png)
+![Banner that reads "The document validates according to the specified schema(s) and to additional constraints checked by the validator."](valid-html-banner.png)
 
 ## Resumen
 

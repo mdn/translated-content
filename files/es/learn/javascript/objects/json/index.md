@@ -156,7 +156,7 @@ Los datos JSON se encuentran disponibles en GitHub en el siguiente enlace: <http
 
 Los datos se cargarán en esta página y se desplegarán a través de la manipulación del DOM de esta forma:
 
-![](https://mdn.mozillademos.org/files/13857/json-superheroes.png)
+![](json-superheroes.png)
 
 ### Obteniendo el JSON
 

@@ -7,7 +7,7 @@ translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 Навигация по хлебным крошкам помогает пользователю понять своё местоположение на веб-сайте, обеспечивая обратный путь к начальной странице.
 
-![Links displayed inline with separators](https://mdn.mozillademos.org/files/16228/breadcrumb-navigation.png)
+![Links displayed inline with separators](breadcrumb-navigation.png)
 
 ## Требование
 

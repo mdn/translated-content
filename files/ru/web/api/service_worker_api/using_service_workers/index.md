@@ -43,11 +43,11 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 6. Далее следует активация. После того как воркер установлен, он получает событие `onactivate`, которое обычно используется для очистки ресурсов, задействованных в предыдущей версии скрипта сервис-воркера.
 7. Сервис-воркер здесь может контролировать страницы, но только в случае, если те открыты после успешного вызова `register()`. То есть документ может начать жизнь с сервис-воркером или даже без него и продолжать нормально работать. Поэтому документы должны быть перезагружены, чтобы действительно быть подконтрольными сервис-воркеру.
 
-![](https://mdn.mozillademos.org/files/12636/sw-lifecycle.png)
+![](sw-lifecycle.png)
 
 Следующий рисунок кратко показывает доступные события Service Worker:
 
-![install, activate, message, fetch, sync, push](https://mdn.mozillademos.org/files/12632/sw-events.png)
+![install, activate, message, fetch, sync, push](sw-events.png)
 
 ### Промисы
 
@@ -140,7 +140,7 @@ imgLoad('myLittleVader.jpg').then((response) => {
 
 Чтобы продемонстрировать только базовые моменты регистрации и установки сервис-воркеров, мы создали простое демо-приложение, названое [sw-test](https://github.com/mdn/sw-test). Это простая галерея изображений "Star wars Lego". Оно использует промис-функции, чтобы прочитать из JSON-объекта и загрузить, используя технологию Ajax, изображения, находящиеся далее нижнего края страницы, до того как они будут показаны. В приложении также ещё регистрируется, устанавливается и активируется сервис-воркер, и, в случае если браузер поддерживает спецификацию Service Worker, запрашиваемые ресурсы будут закешированы, и приложение будет работать в офлайн-режиме!
 
-![](https://mdn.mozillademos.org/files/8243/demo-screenshot.png)
+![](demo-screenshot.png)
 
 Вы можете посмотреть [исходный код на GitHub](https://github.com/mdn/sw-test/), а также [этот живой пример](https://mdn.github.io/sw-test/). Единственное, что мы тут рассмотрим, это промис (смотрите [app.js строки 22-47](https://github.com/mdn/sw-test/blob/gh-pages/app.js#L22-L47)), модифицированная версия того, о котором вы читали выше в разделе [Тестовая демонстрация промисов](https://github.com/mdn/promises-test). Разница в следующем:
 
@@ -191,7 +191,7 @@ if ('serviceWorker' in navigator) {
 2. Путь к сервис-воркеру указан некорректно — он должен быть написан относительно origin запроса, а не вашей корневой директории с приложением. В нашем примере воркер расположен в `https://mdn.github.io/sw-test/sw.js`, корневая папка — `https://mdn.github.io/sw-test/`. Но в качестве пути к сервис-воркеру нужно указывать `/sw-test/sw.js`, а не `/sw.js`.
 3. Origin сервис-воркера отличается от origin вашего приложения. Это также запрещено.
 
-![](https://mdn.mozillademos.org/files/12630/important-notes.png)
+![](important-notes.png)
 
 Также обратите внимание:
 
@@ -243,7 +243,7 @@ self.addEventListener('install', (event) => {
 
 Теперь ресурсы вашего сайта находятся в кеше и вам необходимо указать сервис-воркеру, что делать с этим контентом. Это легко сделать, обработав событие `fetch`.
 
-![](https://mdn.mozillademos.org/files/12634/sw-fetch.png)
+![](sw-fetch.png)
 
 Событие `fetch` возникает каждый раз, когда запрашиваются любые подконтрольные сервис-воркеру ресурсы, к которым относятся документы из области видимости и другие ресурсы, связанные с этими документами (например, если в index.html происходит кросс-доменный запрос для загрузки изображения, то он тоже попадёт в сервис-воркер).
 
@@ -441,6 +441,6 @@ Firefox также начал реализовывать полезные инс
 
 - [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Готов ли ServiceWorker для использования?](https://jakearchibald.github.io/isserviceworkerready/)
-- Скачать [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
+- Скачать [Service Workers 101 cheatsheet](sw101.png).
 - [Promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Using web workers](/ru/docs/Web/Guide/Performance/Using_web_workers)

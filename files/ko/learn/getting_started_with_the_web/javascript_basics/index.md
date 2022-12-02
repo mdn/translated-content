@@ -46,7 +46,7 @@ slug: Learn/Getting_started_with_the_web/JavaScript_basics
     myHeading.textContent = 'Hello world!';
     ```
 
-5. 끝으로, HTML과 자바스크립트 파일이 저장되었는지 확인하시고, 브라우저에서 `index.html`를 열어보세요. 여러분은 다음과 같은 것을 보게 될 것입니다:![](https://mdn.mozillademos.org/files/9543/hello-world.png)
+5. 끝으로, HTML과 자바스크립트 파일이 저장되었는지 확인하시고, 브라우저에서 `index.html`를 열어보세요. 여러분은 다음과 같은 것을 보게 될 것입니다:![](hello-world.png)
 
 > **참고:** {{htmlelement("script")}} 요소를 HTML 파일의 맨 아래쪽 근처에 둔 이유는 HTML은 파일 내에 나타나는 순서대로 브라우저에 로드(load)되기 때문입니다. 만약 자바스크립트가 먼저 로드되고 자신의 아래 쪽에 있는 HTML에 영향을 준다고 하면, 영향을 줄 HTML 보다 먼저 자바스크립트가 로드되기 때문에 작동하지 않을 것입니다. 따라서, HTML 페이지의 맨 아래쪽 근처에 자바스크립트를 두는 것이 최고의 전략입니다.
 
@@ -342,7 +342,7 @@ function setUserName() {
 
 이 글의 모든 설명을 따라오셨다면, 이와 같이 보이는 페이지가 되실 겁니다. ([여기서](https://mdn.github.io/beginner-html-site-scripted/) 확인하실 수도 있습니다):
 
-![](https://mdn.mozillademos.org/files/9539/website-screen-scripted.png)
+![](website-screen-scripted.png)
 
 혹시 막히셨다면, 여러분의 코드와 Github에 있는 우리의 [예제 코드](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js)와 항상 비교해보세요.
 

@@ -37,7 +37,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 일반적인 웹 사이트를 떠올려 보라. 헤더 이미지가 있을 것이고, 헤더 이후 본문에는 이미지가 몇 개 있을 것이다. 헤더 이미지는 헤더의 전체 가로 너비를 자치할 것이고, 본문 이미지는 본문 영역 안에서 어느 정도를 차지할 것이다. 아래 사이트의 이미지 처럼 말이다.
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
 노트북이나 데스크톱처럼 화면이 넓은 기기에서는 잘 작동할 것이다([실제 예시는 여기에 있고](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html), Github에서 [소스코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html)를 볼 수 있다.) CSS에 대해 너무 깊이 들어가고 싶진 않지만, 이정도는 이야기하자.
 
@@ -47,7 +47,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 그러나, 좁은 화면 기기로 사이트를 보기 시작하면 문제가 생긴다. 헤더는 괜찮아 보이지만, 모바일 기기에서는 화면 높이를 너무 많이 차지하기 시작한다. 이 사이즈에서는, 본문 첫번째 사진의 사람들이 나타나기 어렵다.
 
-![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](https://mdn.mozillademos.org/files/12936/non-responsive-narrow.png)
+![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](non-responsive-narrow.png)
 
 개선책은 좁은 화면에서 사이트를 볼 때 이미지의 중요한 상세를 보여 주는 자른 이미지를 보여 주는 것이다. 또 다르게 자른 이미지를 태블릿처럼 중간 정도 너비 화면의 기기에서 보여줄 수 있을 것이다. 이를 보통 **아트 디렉션 문제(art direction problem)**라고 한다. \[아트 디렉션은 ‘연출 방향’ 정도로 번역할 수 있을 듯한데, 보통은 용어를 그대로 사용한다. 반응형 이미지에서는 이미지의 의도가 제대로 전달되도록 기기에 따라 사진의 핵심을 확대해서 보여 주거나 하는 방식을 의미한다. - 역자 주]
 
@@ -130,13 +130,13 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 나는 뷰포트 너비를 320px로 했다가 480px로 한다. 각 너비에서 나는 [DOM 검사기](/ko/docs/%EB%8F%84%EA%B5%AC%EB%93%A4/Page_Inspector)로 가서, 확인하고 싶은 {{htmlelement("img")}} 요소를 클릭한다. 그리고 화면의 오른쪽에 있는 박스 모델 뷰 탭에서 크기를 확인한다. 이렇게 하면 필요한 고유 너비를 알 수 있다.
 
-![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](https://mdn.mozillademos.org/files/12932/box-model-devtools.png)
+![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](box-model-devtools.png)
 
 다음으로 원하는 뷰포트 너비를 설정해서 어떤 `srcset`이 작동하는지 체크할 수 있다(예컨대, 좁게 설정할 수 있다). 네트워크 검사기(도구 > 웹 개발 도구 > 네트워크)를 열고, 페이지를 새로 고침 한다. 웹페이지를 만들기 위해 다운로드한 항목들을 보여 주는데, 따라서 어떤 이미지가 사용됐는지 여기서 확인할 수 있다.
 
 > **참고:** **알림:** 크롬에서 테스트할 때 캐시를 비활성화하라. 개발자 도구를 열고, **Network** 탭의 체크박스들 중 **Disable cache**에 체크하라. 이렇게 하지 않으면 크롬은 최적의 이미지보다 캐시된 이미지를 선호할 것이다.
 
-![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](https://mdn.mozillademos.org/files/12934/network-devtools.png)
+![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](network-devtools.png)
 
 ### 해상도 전환: 같은 크기, 다른 해상도
 
@@ -149,7 +149,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
      src="elva-fairy-640w.jpg" alt="요정 옷을 입은 엘바">
 ```
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](https://mdn.mozillademos.org/files/12942/resolution-example.png)이 예에서, 다음 CSS가 이미지에 적용되고, 따라서 화면에서 너비는 320px이 된다(CSS 픽셀이라고 부르기도 한다).
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)이 예에서, 다음 CSS가 이미지에 적용되고, 따라서 화면에서 너비는 320px이 된다(CSS 픽셀이라고 부르기도 한다).
 
 ```css
 img {
@@ -185,7 +185,7 @@ img {
 
 이 코드는 넓은 화면과 좁은 화면 둘 다에서 적절한 이미지를 표시하게 해 준다. 아래를 보자.
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](https://mdn.mozillademos.org/files/12938/picture-element-narrow.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](picture-element-narrow.png)
 
 > **참고:** **알림**: 미디어 속성은 아트 디렉션 시나리오에서만 사용하라. 만약 미디어를 사용한다면, 미디어 조건문을 사이즈 속성에 넣지 마라.
 

@@ -15,7 +15,7 @@ translation_of: Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 
 하나의 박스는 네 부분(영역)으로 이루어집니다. 각 영역을 콘텐츠 영역, 안쪽 여백(패딩) 영역, 테두리 영역, 그리고 바깥 여백(마진) 영역이라고 부릅니다.
 
-![CSS Box model](<https://mdn.mozillademos.org/files/8685/boxmodel-(3).png>)
+![CSS Box model](<boxmodel-(3).png>)
 
 **콘텐츠 영역**(content area)은 콘텐츠 경계(content edge)가 감싼 영역으로, 글이나 이미지, 비디오 등 요소의 실제 내용을 포함합니다. 콘텐츠 영역의 크기는 콘텐츠 너비(콘텐츠 박스 너비)와 콘텐츠 높이(콘텐츠 박스 높이)입니다. 배경색과 배경 이미지를 가지고 있기도 합니다.
 

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="11.288889mm" height="5.6444445mm" viewBox="0 0 40 20" id="svg98700" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="linkable.svg">
+  <defs id="defs98702">
+    <symbol id="symbol104821">
+      <title id="title104823">Link</title>
+      <path d="m 7.8,24 c 0,-3.42 2.78,-6.2 6.2,-6.2 l 8,0 0,-3.8 -8,0 C 8.48,14 4,18.48 4,24 4,29.52 8.48,34 14,34 l 8,0 0,-3.8 -8,0 C 10.58,30.2 7.8,27.42 7.8,24 Z m 8.2,2 16,0 0,-4 -16,0 0,4 z m 18,-12 -8,0 0,3.8 8,0 c 3.42,0 6.2,2.78 6.2,6.2 0,3.42 -2.78,6.2 -6.2,6.2 l -8,0 0,3.8 8,0 C 39.52,34 44,29.52 44,24 44,18.48 39.52,14 34,14 Z" style="stroke:none" id="path104825" inkscape:connector-curvature="0"/>
+    </symbol>
+  </defs>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.35" inkscape:cx="-835" inkscape:cy="-278.57142" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="2560" inkscape:window-height="1391" inkscape:window-x="1280" inkscape:window-y="1" inkscape:window-maximized="1"/>
+  <metadata id="metadata98705">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1" transform="translate(-491.42857,-233.79078)">
+    <g id="use117058" style="fill:#000000;stroke:#000000" transform="translate(487.42857,219.79078)">
+      <title id="title117074">Link</title>
+      <path id="path117076" style="stroke:none" d="m 7.8,24 c 0,-3.42 2.78,-6.2 6.2,-6.2 l 8,0 0,-3.8 -8,0 C 8.48,14 4,18.48 4,24 4,29.52 8.48,34 14,34 l 8,0 0,-3.8 -8,0 C 10.58,30.2 7.8,27.42 7.8,24 Z m 8.2,2 16,0 0,-4 -16,0 0,4 z m 18,-12 -8,0 0,3.8 8,0 c 3.42,0 6.2,2.78 6.2,6.2 0,3.42 -2.78,6.2 -6.2,6.2 l -8,0 0,3.8 8,0 C 39.52,34 44,29.52 44,24 44,18.48 39.52,14 34,14 Z" inkscape:connector-curvature="0"/>
+    </g>
+  </g>
+</svg>

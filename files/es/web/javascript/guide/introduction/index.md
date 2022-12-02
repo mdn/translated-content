@@ -95,7 +95,7 @@ Para abrir la Consola web (<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>I</kbd> en Win
 
 La consola web aparece en la parte inferior de la ventana del navegador. En la parte inferior de la consola hay una línea de entrada que puedes usar para ingresar JavaScript, y la salida aparece en el panel de arriba:
 
-![Consola web](https://mdn.mozillademos.org/files/16569/2019-04-04_00-15-29.png)
+![Consola web](2019-04-04_00-15-29.png)
 
 La consola funciona exactamente de la misma manera que `eval`: devuelve la última expresión ingresada. En aras de la simplicidad, te puedes imaginar que cada vez que ingresas algo en la consola, en realidad estás rodeado por `console.log` alrededor de `eval`, así:
 

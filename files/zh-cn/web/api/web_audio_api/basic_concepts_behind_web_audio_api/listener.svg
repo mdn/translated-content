@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="719.5px"
+	 height="248.722px" viewBox="0 0 719.5 248.722" enable-background="new 0 0 719.5 248.722" xml:space="preserve">
+<g id="Calque_2">
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="191.75" y1="122.152" x2="503.714" y2="155.387"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="51.833" y1="183.75" x2="170.677" y2="129.257"/>
+	<line fill="none" stroke="#797A7D" stroke-miterlimit="10" x1="51.542" y1="156.042" x2="51.542" y2="184.042"/>
+	<line fill="none" stroke="#797A7D" stroke-miterlimit="10" x1="51" y1="184.042" x2="83.667" y2="184.042"/>
+	<line fill="none" stroke="#797A7D" stroke-miterlimit="10" x1="51.542" y1="184.042" x2="71.208" y2="164.083"/>
+	<polygon fill="#010101" points="167.161,124.414 184.839,122.152 172.201,134.565 	"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="192.78" y1="118.25" x2="308.916" y2="58.203"/>
+	<polygon fill="#010101" points="305.175,53.531 322.726,50.436 310.689,63.433 	"/>
+	<polygon fill="#797A7D" points="48.238,156.042 51.602,146.209 54.847,156.016 	"/>
+	<polygon fill="#797A7D" points="83.154,180.738 92.987,184.102 83.18,187.347 	"/>
+	<polygon fill="#797A7D" points="68.347,162.271 77.413,157.19 73.287,166.662 	"/>
+	<polygon fill="#010101" points="499.591,149.274 515.748,156.796 498.436,160.549 	"/>
+	<text transform="matrix(1 0 0 1 45.5 197.25)" fill="#797A7D" font-family="'ArialMT'" font-size="12">0</text>
+	<line fill="none" stroke="#719FD0" x1="102.5" y1="42" x2="136" y2="137.75"/>
+	<line fill="none" stroke="#719FD0" x1="365.597" y1="99" x2="217.176" y2="119.2"/>
+	<line fill="none" stroke="#719FD0" x1="322.726" y1="58.203" x2="408.5" y2="50.046"/>
+	<line fill="none" stroke="#719FD0" x1="299.5" y1="141.808" x2="259" y2="184.042"/>
+	<circle fill="#010101" stroke="#719FD0" cx="188.583" cy="120.917" r="4.667"/>
+	<polyline fill="none" stroke="#000000" stroke-miterlimit="10" points="198.616,115.232 210.562,117.312 200.583,123.168 	"/>
+</g>
+<g id="Calque_4">
+	<text transform="matrix(1 0 0 1 413.5967 54.124)" font-family="'ArialMT'" font-size="12">Vecteur de direction haut</text>
+	<text transform="matrix(1 0 0 1 373 101)" font-family="'ArialMT'" font-size="12">Les deux vecteurs forment un angle droit (90°)</text>
+	<text transform="matrix(1 0 0 1 202.5625 199.6152)" font-family="'ArialMT'" font-size="12">Vecteur de direction face</text>
+	<text transform="matrix(1 0 0 1 16.7378 34.75)" font-family="'ArialMT'" font-size="12">Vecteur de positionnement plaçant la source dans l’espace</text>
+</g>
+</svg>

@@ -15,7 +15,7 @@ translation_of: Web/CSS/Containing_block
 3. Border область или область границы (border area).
 4. Margin область или область внешнего поля (margin area).
 
-![Diagram of the box model](https://mdn.mozillademos.org/files/16558/box-model.png)
+![Diagram of the box model](box-model.png)
 
 Многие разработчики верят, что содержащий блок элемента - это всегда content область его родителя, но это не всегда является правдой. Давайте исследуем факторы, которые определяют, что представляет собой содержащий элемент блок.
 

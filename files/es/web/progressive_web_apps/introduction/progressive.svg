@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="11.288889mm" height="6.7733335mm" viewBox="0 0 40 24.000001" id="svg117097" version="1.1" inkscape:version="0.91 r13725" sodipodi:docname="progressive.svg">
+  <defs id="defs117099">
+    <symbol id="symbol122416">
+      <title id="title122418">Trending Up</title>
+      <path d="m 32,12 4.59,4.59 -9.76,9.75 -8,-8 L 4,33.17 6.83,36 l 12,-12 8,8 L 39.41,19.41 44,24 44,12 Z" style="stroke:none" id="path122420" inkscape:connector-curvature="0"/>
+    </symbol>
+  </defs>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.35" inkscape:cx="-895" inkscape:cy="-202.28571" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="false" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" inkscape:window-width="2560" inkscape:window-height="1391" inkscape:window-x="1280" inkscape:window-y="1" inkscape:window-maximized="1"/>
+  <metadata id="metadata117102">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g inkscape:label="Capa 1" inkscape:groupmode="layer" id="layer1" transform="translate(-551.42857,-306.07649)">
+    <g id="use135831" style="fill:#000000;stroke:#000000" transform="translate(547.42857,294.07649)">
+      <title id="title135847">Trending Up</title>
+      <path id="path135849" style="stroke:none" d="m 32,12 4.59,4.59 -9.76,9.75 -8,-8 L 4,33.17 6.83,36 l 12,-12 8,8 L 39.41,19.41 44,24 44,12 Z" inkscape:connector-curvature="0"/>
+    </g>
+  </g>
+</svg>

@@ -13,7 +13,7 @@ Mas isto nunca esteve disponível para JavaScript antes. Anteriormente, se quis�
 
 Com o Streams disponível para JavaScript, tudo isso muda - agora você pode começar a processar dados brutos com JavaScript bit a bit assim que estiverem disponíveis no lado do cliente, sem a necessidade de gerar um buffer, string ou blob.
 
-![](https://mdn.mozillademos.org/files/15817/Concept.png)
+![](concept.png)
 
 Também há mais vantagens - você pode detectar quando os fluxos começam ou terminam, encadeia os fluxos juntos, trata os erros e cancela os fluxos quando necessário e reage à velocidade em que o fluxo está sendo lido.
 

@@ -37,7 +37,7 @@ original_slug: Learn/CSS/First_steps/O_que_e_CSS
 
 No módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML) vimos o que é HTML, e como ele é usado para fazer marcação de documentos. Estes documentos serão legíveis em um navegador web. Títulos serão mais largos do que textos comuns, parágrafos quebram em uma nova linha e tendo espaços entre eles. Links são coloridos e sublinhados para distingui-los do resto do texto. O que você está vendo é o estilo padrão do navegador - vários estilos básicos que o navegador aplica ao HTML, para garantir que ele será legível mesmo se não for explicitamente estilizado pelo autor da página web.
 
-![The default styles used by a browser](https://mdn.mozillademos.org/files/16493/html-example.png)
+![The default styles used by a browser](html-example.png)
 
 No entanto, a web seria um lugar chato se todos os web sites tivessem estilos iguais ao mostrado na imagem acima. Usando CSS você pode controlar exatamente a aparência dos elementos HTML no navegador, apresentando a sua marcação com o design que desejar.
 

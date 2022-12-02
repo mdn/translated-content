@@ -31,23 +31,23 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 메뉴 항목을 하나 이상 만들면 그 항목들은 서버메뉴로 표시되고, 상위메뉴의 라벨은 확장의 이름이 된다. 예를 들어, "Menu demo"라는 확장이 있고, 그것이 두 개의 콘텍스트 메뉴 항목을 추가했다면:
 
-![](https://mdn.mozillademos.org/files/15431/menus-1.png)
+![](menus-1.png)
 
 ## 아이콘
 
 ["icons" manifest 키](/en-US/Add-ons/WebExtensions/manifest.json/icons)로 확장이 아이콘을 가졌으면, 콘텍스트 메뉴 항목은 라벨 옆에 아이콘을 함께 표시한다. 보통의 경우 16x16 픽셀이 표시되고, 고해상도이면 32x32 픽셀의 아이콘이 표시된다.
 
-![](https://mdn.mozillademos.org/files/15433/menus-2.png)
+![](menus-2.png)
 
 서버메뉴에 대해서만 {{WebExtAPIRef("menus.create()")}}에 `icons` 옵션을 전달해서 아이콘을 지정할 수 있다.
 
-![](https://mdn.mozillademos.org/files/15435/menus-3.png)
+![](menus-3.png)
 
 ## 예제
 
 아래 콘텍스트 메뉴에는 4개 항목이 있다: 보통 항목 하나, 위-아래가 구분선인 두 개의 라디오 항목, 그리고 체크박스 항목 하나다. 라디오 항목에는 따로 아이콘이 지정되었다.
 
-![](https://mdn.mozillademos.org/files/15437/menus-4.png)이 서버메뉴는 아래 코드로 만들 수 있다:
+![](menus-4.png)이 서버메뉴는 아래 코드로 만들 수 있다:
 
 ```js
 browser.menus.create({

@@ -166,7 +166,7 @@ update();
 
 请注意，不是所有的字体都有确切的 `oblique` 和 `italic` 字形，即便如此，浏览器也会通过使用现有的字形来模拟所缺少的字形。下面是一个使用这两种字形渲染字体的示例：
 
-![](https://mdn.mozillademos.org/files/12049/Screen%20Shot%202015-12-05%20at%2008.41.03.png)
+![](screen_shot_2015-12-05_at_08.41.03.png)
 
 ## 无障碍问题
 

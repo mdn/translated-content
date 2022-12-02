@@ -14,7 +14,7 @@ translation_of: Web/API/CanvasRenderingContext2D/rotate
 void ctx.rotate(angle);
 ```
 
-![](https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png)
+![](canvas_grid_rotate.png)
 
 ### Parameters
 

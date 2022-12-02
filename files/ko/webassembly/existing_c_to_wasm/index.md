@@ -56,7 +56,7 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
 
 [output](https://googlechrome.github.io/samples/webassembly/version.html)에 라이브러리의 버전 번호가 정확히 표시됩니다.
 
-![Screenshot of the DevTools console showing the correct versionnumber.](https://mdn.mozillademos.org/files/15913/version.png)
+![Screenshot of the DevTools console showing the correct versionnumber.](version.png)
 
 > **참고:**libwebp는 현재 버전 인 a.b.c를 16 진수 0xabc로 반환합니다. 예를 들어 v0.6.1은 0x000601 = 1537로 인코딩됩니다.
 
@@ -164,7 +164,7 @@ api.free_result(resultPointer);
 
 이미지의 크기에 따라, wasm이 입력 및 출력 이미지를 모두 수용할 만큼 메모리를 늘릴 수 없는 오류가 발생할 수 있습니다.
 
-![Screenshot of the DevTools console showing an error.](https://mdn.mozillademos.org/files/15922/error.png)
+![Screenshot of the DevTools console showing an error.](error.png)
 
 다행히도 이 문제에 대한 해결책은 오류 메시지에 있습니다. 컴파일 명령에 `-s ALLOW_MEMORY_GROWTH=1`을 추가하기 만하면됩니다.
 
@@ -180,4 +180,4 @@ document.body.appendChild(img)
 
 보거라! 새로운 WebP 이미지의 영광을. :) [Demo](https://googlechrome.github.io/samples/webassembly/image.html) | [Full Code](/ko/docs/)
 
-![DevToolsâ network panel and the generated image.](https://mdn.mozillademos.org/files/15914/result.jpg)
+![DevToolsâ network panel and the generated image.](result.jpg)

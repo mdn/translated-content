@@ -121,7 +121,7 @@ export default {
 
 렌더링된 앱을 다시 확인해보면 체크박스와 레이블로 구성된 `ToDoItem` 이 보일 것입니다.
 
-![The current rendering state of the app, which includes a title of To-Do List, and a single checkbox and label](https://mdn.mozillademos.org/files/17243/rendered-todoitem.png)
+![The current rendering state of the app, which includes a title of To-Do List, and a single checkbox and label](rendered-todoitem.png)
 
 ## props를 사용해 컴포넌트를 동적으로 만들기
 

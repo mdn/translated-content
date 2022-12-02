@@ -24,7 +24,7 @@ Para começar, você deve responder às seguintes questões:
 
 Em seguida, pegue papel e caneta e faça um rascunho de como você deseja que seu site seja. Para sua primeira página simples, não há muito o que rascunhar, mas você deve criar o hábito desde o começo. Realmente ajuda — você não precisa ser um Van Gogh!
 
-![](https://mdn.mozillademos.org/files/9239/website-drawing-scan.png)
+![](website-drawing-scan.png)
 
 > **Nota:** Mesmo em sites reais e complexos, os times de design geralmente começam pelo rascunho em papel e depois constroem a versão digital usando um editor gráfico ou tecnologias da web.
 >
@@ -42,7 +42,7 @@ Você deve ter seu título e parágrafos desde antes. Mantenha eles por perto.
 
 Para escolher a cor, vá ao [Seletor de Cores](/pt-BR/docs/Web/CSS/CSS_Colors/seletor_de_cores) e escolha a cor que preferir. Quando escolher a cor, você verá uma sequência de seis caracteres, como `#660066`. Isso é chamado um _código hex(adecimal)_, e representa sua cor. Copie esse código em algum lugar seguro por enquanto.
 
-![](https://mdn.mozillademos.org/files/8975/Screenshot%20from%202014-11-03%2017:40:49.png)
+![](screenshot_from_2014-11-03_17-40-49.png)
 
 ### Imagens
 
@@ -51,11 +51,11 @@ Para escolher uma imagens, vá no [Google Imagens](https://www.google.com/imghp?
 1. Quando você achar a imagem que você quer, clique nela para obter uma visão ampliada dela.
 2. Clique com o botão direito na imagem (Ctrl + click no Mac) escolha _Salvar imagem como..._ e escolha um local seguro para salvar sua imagem. Como alternativa, copie o endereço web da imagem da barra de endereço do navegador, para uso posterior.
 
-![](https://mdn.mozillademos.org/files/16599/updated-google-images.png)
+![](updated-google-images.png)
 
 Observe que a maioria das imagens na Web, inclusive no Imagens do Google, é protegida por direitos autorais. Para reduzir a probabilidade de violar direitos autorais, você pode usar o filtro de licenças do Google. Clique no botão _Ferramentas_ e, em seguida, na opção _Direitos de uso_ resultante que aparece abaixo. Você deve escolher uma opção como _Marcada para reutilização_.
 
-![](https://mdn.mozillademos.org/files/16598/updated-google-images-licensing.png)
+![](updated-google-images-licensing.png)
 
 ### Fonte
 
@@ -66,9 +66,9 @@ Para escolher uma fonte:
 3. Clique no botão "\* Família Selecionada" no painel na parte inferior da página ("\*" depende de quantas fontes você selecionou).
 4. Na caixa pop-up, você pode ver e copiar as linhas de código que o Google oferece em seu editor de texto para salvar posteriormente.
 
-![](https://mdn.mozillademos.org/files/13871/font1.png)
+![](font1.png)
 
-![](https://mdn.mozillademos.org/files/13873/font2.png)
+![](font2.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 

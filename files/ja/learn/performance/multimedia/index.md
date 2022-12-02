@@ -12,7 +12,7 @@ This change means that the aspect ratio of the image is calculated by the browse
 
 In the olden days of web development, it was always seen as a good practice to add `width` and `height` attributes to your HTML {{htmlelement("img")}} elements, so that when browsers first loaded the page, they could put a correctly-sized placeholder box in the layout for each image to appear in when it finally loads.
 
-![Two screenshots the first without an image but with space reserved, the second showing the image loaded into the reserved space.](https://mdn.mozillademos.org/files/16945/ar-guide.jpg)
+![Two screenshots the first without an image but with space reserved, the second showing the image loaded into the reserved space.](ar-guide.jpg)
 
 Without the `width` and `height` attributes, no placeholder space would be created, and when the image finally loaded you would get a noticeable jank in the page layout. This wasn't an attractive thing for your users to see, and could also result in performance issues due to the repainting required after each image loads, hence adding the attributes being a good idea.
 
