@@ -43,4 +43,5 @@ jobs:
       - name: Lint markdown files
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          yarn markdownlint-cli2 ${{ env.DIFF_DOCUMENTS }}
+          files_to_lint="${{ env.DIFF_DOCUMENTS }}"
+          yarn markdownlint-cli2 ${files_to_lint}
