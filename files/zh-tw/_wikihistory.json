@@ -5083,9 +5083,5 @@
   "orphaned/MDN/Tools": {
     "modified": "2020-09-30T16:55:39.074Z",
     "contributors": ["chrisdavidmills", "wbamberg", "jackblackevo"]
-  },
-  "orphaned/MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:55:39.461Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "jackblackevo"]
   }
 }

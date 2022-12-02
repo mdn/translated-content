@@ -449,7 +449,7 @@
 /zh-TW/docs/MDN/Contribute/Howto/Tag	/zh-TW/docs/MDN/Writing_guidelines/Howto/Tag
 /zh-TW/docs/MDN/Contribute/Howto/編輯審查	/zh-TW/docs/MDN/Contribute/Howto
 /zh-TW/docs/MDN/Contribute/Tools	/zh-TW/docs/orphaned/MDN/Tools
-/zh-TW/docs/MDN/Contribute/Tools/KumaScript	/zh-TW/docs/orphaned/MDN/Tools/KumaScript
+/zh-TW/docs/MDN/Contribute/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /zh-TW/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /zh-TW/docs/MDN/Getting_started	/zh-TW/docs/MDN/Community/Contributing/Getting_started
 /zh-TW/docs/MDN/Guidelines	/zh-TW/docs/MDN/Writing_guidelines
@@ -457,7 +457,7 @@
 /zh-TW/docs/MDN/Kuma	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-TW/docs/MDN/Kuma/Troubleshooting_KumaScript_errors	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /zh-TW/docs/MDN/Tools	/zh-TW/docs/orphaned/MDN/Tools
-/zh-TW/docs/MDN/Tools/KumaScript	/zh-TW/docs/orphaned/MDN/Tools/KumaScript
+/zh-TW/docs/MDN/Tools/KumaScript	https://github.com/mdn/yari/tree/main/docs/kumascript
 /zh-TW/docs/MDN/Tools/KumaScript/Troubleshooting	https://github.com/mdn/yari/tree/main/docs/kumascript/troubleshooting-errors.md
 /zh-TW/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /zh-TW/docs/MDN_at_ten	/zh-TW/docs/MDN/At_ten
