@@ -1,7 +1,7 @@
 ---
 title: Introducción a KumaScript
-slug: MDN/Tools/KumaScript
-original_slug: MDN/Tools/Introduction_to_KumaScript
+slug: orphaned/MDN/Tools/KumaScript
+original_slug: MDN/Tools/KumaScript
 ---
 
 {{MDNSidebar}}
@@ -578,7 +578,7 @@ Carriage returns added here and there for clarity.
 <span class="lang lang-ja" lang="ja">DOM Level 0。どの標準にも属しません。 </span>
 <span class="lang lang-pl" lang="pl">DOM Level 0. Nie jest częścią żadnego standardu. </span>
 <span class="lang lang-zh-cn" lang="zh-cn">DOM Level 0 不属于任何标准.</span></p>
- 
+
 // After: Kumascript version
 <% if ("fr" == env.locale) { %>
 <p>DOM Level 0. Ne fait partie d'aucune spécification.</p>
