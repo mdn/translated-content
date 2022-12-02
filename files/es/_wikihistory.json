@@ -2654,26 +2654,6 @@
     "modified": "2019-01-17T02:12:44.469Z",
     "contributors": ["wbamberg", "astrapotro"]
   },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:48:18.728Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Jeremie",
-      "Arudb79",
-      "atlas7jean"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:48:19.117Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "velizluisma",
-      "Jeremie",
-      "LeoHirsch"
-    ]
-  },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-03T01:47:58.469Z",
     "contributors": [
@@ -15403,6 +15383,26 @@
       "BubuAnabelas",
       "SphinxKnight",
       "FranciscoImanolSuarez"
+    ]
+  },
+  "orphaned/MDN/Tools": {
+    "modified": "2020-09-30T16:48:18.728Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Jeremie",
+      "Arudb79",
+      "atlas7jean"
+    ]
+  },
+  "orphaned/MDN/Tools/KumaScript": {
+    "modified": "2020-09-30T16:48:19.117Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "velizluisma",
+      "Jeremie",
+      "LeoHirsch"
     ]
   },
   "orphaned/MDN/Tools/Page_regeneration": {
