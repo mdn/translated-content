@@ -16,7 +16,7 @@ l10n:
 - {{domxref("BatteryManager")}}
   - : システムのバッテリー充電レベルに関する情報を提供します。
 - {{domxref("navigator.getBattery()")}} {{ReadOnlyInline}}
-  - : {{JSxRef("Promise")}} を返します。これは {{DOMxRef("BatteryManager")}} オブジェクトで解決します。 
+  - : {{JSxRef("Promise")}} を返します。これは {{DOMxRef("BatteryManager")}} オブジェクトで解決します。
 
 ## 例
 
