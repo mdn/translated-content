@@ -1,12 +1,6 @@
 ---
 title: window
 slug: Web/API/Window
-tags:
-  - API
-  - DOM
-  - Window
-  - páginas_a_traducir
-translation_of: Web/API/Window
 ---
 
 {{APIRef}}

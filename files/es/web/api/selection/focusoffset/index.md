@@ -1,9 +1,6 @@
 ---
 title: focusOffset
 slug: Web/API/Selection/focusOffset
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/focusOffset
 ---
 
 {{ ApiRef("DOM") }}

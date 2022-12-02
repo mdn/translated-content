@@ -1,11 +1,6 @@
 ---
 title: Utilizando texturas en WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-tags:
-  - Texturas
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL
 ---
 

@@ -1,9 +1,6 @@
 ---
 title: collapseToStart
 slug: Web/API/Selection/collapseToStart
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/collapseToStart
 ---
 
 {{ ApiRef("DOM") }}

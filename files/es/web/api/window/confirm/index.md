@@ -1,7 +1,6 @@
 ---
 title: Window.confirm()
 slug: Web/API/Window/confirm
-translation_of: Web/API/Window/confirm
 ---
 
 {{ApiRef("Window")}}

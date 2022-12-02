@@ -1,7 +1,6 @@
 ---
 title: Stylesheet.title
 slug: Web/API/StyleSheet/title
-translation_of: Web/API/StyleSheet/title
 ---
 
 {{ ApiRef() }}
