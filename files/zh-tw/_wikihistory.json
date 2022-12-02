@@ -5079,9 +5079,5 @@
   "orphaned/Glossary/Bootstrap": {
     "modified": "2020-05-23T17:07:57.268Z",
     "contributors": ["iigmir"]
-  },
-  "orphaned/MDN/Tools": {
-    "modified": "2020-09-30T16:55:39.074Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "jackblackevo"]
   }
 }
