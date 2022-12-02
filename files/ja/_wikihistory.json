@@ -7469,6 +7469,10 @@
     "modified": "2020-10-15T22:15:21.525Z",
     "contributors": ["mfuji09"]
   },
+  "Web/API/Document/pointerlockerror_event": {
+    "modified": "2020-10-15T22:15:23.341Z",
+    "contributors": ["mfuji09"]
+  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2020-10-16T14:05:35.162Z",
     "contributors": ["mfuji09"]
@@ -31344,10 +31348,6 @@
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2020-09-27T12:30:54.835Z",
     "contributors": ["mfuji09", "dskmori", "keeponbeat", "mikamikuh"]
-  },
-  "orphaned/Web/API/Element/pointerlockerror_event": {
-    "modified": "2020-10-15T22:15:23.341Z",
-    "contributors": ["mfuji09"]
   },
   "orphaned/Web/API/Frame_Timing_API": {
     "modified": "2019-06-07T11:58:30.872Z",
