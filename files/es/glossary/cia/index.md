@@ -1,10 +1,6 @@
 ---
 title: CID
 slug: Glossary/CIA
-tags:
-  - Glosario
-  - Seguridad
-translation_of: Glossary/CIA
 original_slug: Glossary/CID
 ---
 

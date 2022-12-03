@@ -1,7 +1,6 @@
 ---
 title: Elemento vacío
 slug: Glossary/Void_element
-translation_of: Glossary/Empty_element
 original_slug: Glossary/Empty_element
 ---
 

@@ -2,6 +2,7 @@
 title: Advanced text formatting
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
 텍스트 서식에 있어서 [HTML text fundamentals](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 에서 이야기 하지 않은 수많은 요소들이 있습니다. 이 글에서 설명하는 요소들은 비교적 많이 알려져 있지않지만 여전히 유용합니다. (그리고 이것은 완전한 목록이 아닙니다.). 이 글에서 여러분은 인용구, 서술문, 컴퓨터 코드 및 관력 텍스트, 첨자, 위첨자, 연락처 정보 등을 표시하는 방법에 대해 알아봅시다.

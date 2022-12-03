@@ -1,7 +1,6 @@
 ---
 title: 'Tutorial de Django Parte 5: Creación de tu página de inicio'
 slug: Learn/Server-side/Django/Home_page
-translation_of: Learn/Server-side/Django/Home_page
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
@@ -62,7 +61,7 @@ Las URL que vamos a necesitar para nuestras páginas son:
 - `catalog/books/` — La lista de todos los libros.
 - `catalog/authors/` — La lista de todos los autores.
 - `catalog/book/<id>` — La vista detallada para el libro específico con un campo de clave primaria de `<id>` (el valor por defecto). Así por ejemplo, `/catalog/book/3`, para el tercer libro añadido.
-- `catalog/author/<id>` — La vista detallada para el autor específico con un campo de clave primaria llamada _`<id>`_. Así por ejemplo, `/catalog/author/11`, para el 11vo autor añadido.
+- `catalog/author/<id>` — La vista detallada para el autor específico con un campo de clave primaria llamada `<id>`. Así por ejemplo, `/catalog/author/11`, para el 11vo autor añadido.
 
 La tres primeras URLs son usadas para listar el índice, los libros y autores. Esto no codifica ninguna información adicional, y mientras los resultados retornados dependerán del contenido en la base de datos, las consultas que se ejecutan para obtener la información siempre serán las mismas.
 

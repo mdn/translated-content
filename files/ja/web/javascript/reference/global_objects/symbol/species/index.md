@@ -35,9 +35,7 @@ console.log(mapped instanceof Array);   // true
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-symbol.species', 'Symbol.species')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

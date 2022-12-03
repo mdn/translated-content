@@ -1,7 +1,6 @@
 ---
 title: Address bar button
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
-translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
 ---
 
 {{AddonSidebar}}
@@ -23,7 +22,7 @@ Las diferencias son:
 
 - **La visibilidad del botón:**
 
-  - La acción de página esta oculta por defecto (sin embargo esto puede ser cambiado en la propiedades `show_matches` y `hide_matches` [manifest key](/en-US/Add-ons/WebExtensions/manifest.json/page_action)), y tu puedes llamar [`pageAction.show()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show) y [`pageAction.hide()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide) para mostrar o ocultar esto en pestañas especificas.
+  - La acción de página esta oculta por defecto (sin embargo esto puede ser cambiado en la propiedades `show_matches` y `hide_matches` [manifest key](/es/Add-ons/WebExtensions/manifest.json/page_action)), y tu puedes llamar [`pageAction.show()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/show) y [`pageAction.hide()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/PageAction/hide) para mostrar o ocultar esto en pestañas especificas.
   - La acción del navegador siempre esta mostrada.
 
 Usa una página de acción cuando cuando la acción este relacionada a la página en curso, y una acción de navegador cuando cuando la acción este relacionada a todas o a muchas páginas. Por ejemplo:
@@ -35,7 +34,7 @@ Usa una página de acción cuando cuando la acción este relacionada a la págin
 
 ## Specifying the page action
 
-You define the page action's properties using the [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key in manifest.json:
+You define the page action's properties using the [`page_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) key in manifest.json:
 
 ```json
 "page_action": {
@@ -50,7 +49,7 @@ You define the page action's properties using the [`page_action`](/en-US/docs/Mo
 
 The only mandatory key is `default_icon`.
 
-There are two ways to specify a page action: with or without a [popup](/en-US/Add-ons/WebExtensions/Popups).
+There are two ways to specify a page action: with or without a [popup](/es/Add-ons/WebExtensions/Popups).
 
 - **Without a popup:** When the user clicks the button, an event is dispatched to the extension, which the extension listens for using [`pageAction.onClicked`](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked):
 
@@ -58,11 +57,11 @@ There are two ways to specify a page action: with or without a [popup](/en-US/Ad
   browser.pageAction.onClicked.addListener(handleClick);
   ```
 
-- **With a popup:** the `click` event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the [Popup](/en-US/Add-ons/WebExtensions/Popups)article for more details on creating and managing popups.
+- **With a popup:** the `click` event is not dispatched. Instead, the popup appears when the user clicks the button. The user then interacts with the popup. When the user clicks outside of the popup, it closes automatically. See the [Popup](/es/Add-ons/WebExtensions/Popups)article for more details on creating and managing popups.
 
 Note that your extension can have one-page action only.
 
-You can change any of the page action properties programmatically using the [`pageAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API.
+You can change any of the page action properties programmatically using the [`pageAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API.
 
 ## Icons
 

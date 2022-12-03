@@ -1,7 +1,6 @@
 ---
 title: Otras macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Other
-translation_of: MDN/Structures/Macros/Other
 original_slug: MDN/Structures/Macros/Other
 ---
 

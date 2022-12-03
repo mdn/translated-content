@@ -18,7 +18,7 @@ Quelle est donc la démarche à suivre pour obtenir cet array buffer et le compi
 
 ## En utilisant Fetch
 
-[Fetch](/fr/docs/Web/API/Fetch_API)  est une API qui facilite la récupération de ressources sur le réseau.
+[Fetch](/fr/docs/Web/API/Fetch_API) est une API qui facilite la récupération de ressources sur le réseau.
 
 La façon la plus rapide et la plus efficace de récupérer un module wasm (webassembly) est d'utiliser la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}, qui accepte comme premier argument un appel de fonction `fetch()`, et s'occupe de récupérer, compiler, et instancier le module en une seule et même étape, en accedant directement au flux de code binaire provenant du serveur:
 

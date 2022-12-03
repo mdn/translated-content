@@ -1,12 +1,6 @@
 ---
 title: Texto Cifrado
 slug: Glossary/Ciphertext
-tags:
-  - Cryptography
-  - Glossary
-  - Privacy
-  - Security
-translation_of: Glossary/Ciphertext
 original_slug: Glossary/TextoCifrado
 ---
 

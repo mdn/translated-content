@@ -1,7 +1,6 @@
 ---
 title: Document.dir
 slug: Web/API/Document/dir
-translation_of: Web/API/Document/dir
 ---
 
 {{ApiRef("DOM")}}

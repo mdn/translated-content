@@ -47,9 +47,7 @@ Access-Control-Allow-Methods: *
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                     | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('Fetch','#http-access-control-allow-methods', 'Access-Control-Allow-Methods')}} | {{Spec2("Fetch")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

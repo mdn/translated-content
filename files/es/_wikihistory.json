@@ -2654,26 +2654,6 @@
     "modified": "2019-01-17T02:12:44.469Z",
     "contributors": ["wbamberg", "astrapotro"]
   },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:48:18.728Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Jeremie",
-      "Arudb79",
-      "atlas7jean"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:48:19.117Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "velizluisma",
-      "Jeremie",
-      "LeoHirsch"
-    ]
-  },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-03T01:47:58.469Z",
     "contributors": [
@@ -8825,10 +8805,6 @@
     "modified": "2019-09-11T09:31:45.916Z",
     "contributors": ["SphinxKnight", "VictorAbdon", "Sheppy"]
   },
-  "Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC": {
-    "modified": "2019-03-23T23:27:02.999Z",
-    "contributors": ["pablocubico", "maedca"]
-  },
   "Web/Guide/CSS/Block_formatting_context": {
     "modified": "2019-03-23T22:32:27.340Z",
     "contributors": ["Enesimus", "javichito"]
@@ -10455,18 +10431,6 @@
       "RJacinto"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-09-12T13:33:01.910Z",
-    "contributors": [
-      "Nachec",
-      "fscholz",
-      "teoli",
-      "arpunk",
-      "inma_610",
-      "RickieesES",
-      "StripTM"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-04-08T19:26:44.700Z",
     "contributors": [
@@ -10941,10 +10905,6 @@
       "Nathymig",
       "Mgjbot"
     ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:36:12.769Z",
-    "contributors": ["fscholz", "teoli", "Garf", "Sheppy"]
   },
   "Web/JavaScript/Reference/Classes": {
     "modified": "2020-08-20T12:39:55.631Z",
@@ -14687,8 +14647,8 @@
     "contributors": ["israelfl"]
   },
   "conflicting/Web/API/WebRTC_API": {
-    "modified": "2019-03-23T23:26:58.291Z",
-    "contributors": ["sebasmagri"]
+    "modified": "2019-03-23T23:27:02.999Z",
+    "contributors": ["pablocubico", "maedca"]
   },
   "conflicting/Web/API/WebSockets_API": {
     "modified": "2019-01-16T13:56:47.847Z",
@@ -14893,6 +14853,18 @@
     "modified": "2019-03-23T22:37:47.150Z",
     "contributors": ["pekechis"]
   },
+  "conflicting/Web/JavaScript": {
+    "modified": "2020-09-12T13:33:01.910Z",
+    "contributors": [
+      "Nachec",
+      "fscholz",
+      "teoli",
+      "arpunk",
+      "inma_610",
+      "RickieesES",
+      "StripTM"
+    ]
+  },
   "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
     "modified": "2020-08-17T15:38:30.288Z",
     "contributors": [
@@ -14919,6 +14891,10 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
     "modified": "2020-03-12T19:44:40.392Z",
     "contributors": ["davidenriq11", "mamptecnocrata"]
+  },
+  "conflicting/Web/JavaScript/Reference": {
+    "modified": "2020-03-12T19:36:12.769Z",
+    "contributors": ["fscholz", "teoli", "Garf", "Sheppy"]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Array/toString": {
     "modified": "2019-03-23T22:08:25.338Z",
@@ -15407,6 +15383,26 @@
       "BubuAnabelas",
       "SphinxKnight",
       "FranciscoImanolSuarez"
+    ]
+  },
+  "orphaned/MDN/Tools": {
+    "modified": "2020-09-30T16:48:18.728Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Jeremie",
+      "Arudb79",
+      "atlas7jean"
+    ]
+  },
+  "orphaned/MDN/Tools/KumaScript": {
+    "modified": "2020-09-30T16:48:19.117Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "velizluisma",
+      "Jeremie",
+      "LeoHirsch"
     ]
   },
   "orphaned/MDN/Tools/Page_regeneration": {

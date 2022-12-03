@@ -1,14 +1,6 @@
 ---
 title: Arreglos (Matrices)
 slug: Glossary/array
-tags:
-  - Arreglos
-  - CodificaciónScripting
-  - Glosario
-  - JavaScript
-  - Matriz
-  - programacion
-translation_of: Glossary/array
 original_slug: Glossary/Arreglos
 ---
 

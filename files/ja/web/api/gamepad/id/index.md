@@ -37,9 +37,7 @@ window.addEventListener("gamepadconnected", function() {
 
 ## 仕様書
 
-| 仕様                                                                         | 状態                         | コメント |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#widl-Gamepad-id", "Gamepad.id")}} | {{Spec2("Gamepad")}} | 初版     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

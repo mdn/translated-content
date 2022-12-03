@@ -1,11 +1,6 @@
 ---
 title: Que es un servidor WEB?
 slug: Learn/Common_questions/What_is_a_web_server
-tags:
-  - Infraestructura
-  - Principiante
-  - necesitaEsquema
-translation_of: Learn/Common_questions/What_is_a_web_server
 original_slug: Learn/Common_questions/Que_es_un_servidor_WEB
 ---
 
@@ -71,7 +66,7 @@ Técnicamente, puede alojar todos esos archivos en su propia computadora, pero e
 - tiene la misma dirección IP todo el tiempo.
 - es mantenido por un proveedor externo.
 
-Por todas estas razones, encontrar un buen proveedor de alojamiento es una parte clave del desarrollo de su sitio web. Investigue a través de los diversos servicios que ofrecen las compañías y elija uno que se ajuste a sus necesidades y a su presupuesto (los servicios van desde los gratuitos hasta los miles de dólares al mes). Puede encontrar mas información [en este artículo](/en-US/Learn/How_much_does_it_cost#Hosting).
+Por todas estas razones, encontrar un buen proveedor de alojamiento es una parte clave del desarrollo de su sitio web. Investigue a través de los diversos servicios que ofrecen las compañías y elija uno que se ajuste a sus necesidades y a su presupuesto (los servicios van desde los gratuitos hasta los miles de dólares al mes). Puede encontrar mas información [en este artículo](/es/Learn/How_much_does_it_cost#Hosting).
 
 Una vez que configura una solución de alojamiento web, solo tiene que [cargar sus archivos en su servidor web](/es/docs/Learn/Upload_files_to_a_web_server).
 
@@ -86,13 +81,13 @@ Un _protocolo_ es un conjunto de reglas para la comunicación entre dos computad
 - Sin estado
   - : Ni el servidor ni el cliente recuerdan las comunicaciones anteriores. Por ejemplo, al confiar solo en HTTP, un servidor no puede recordar la contraseña que ingresó ni el paso que está realizando en una transacción. Necesita un servidor de aplicaciones para tareas como esa. (Cubriremos ese tipo de tecnología en otros artículos).
 
-HTTP proporciona reglas claras sobre cómo se comunican un cliente y un servidor. Cubriremos el propio HTTP en un [artículo técnico](/en-US/docs/Web/HTTP) más adelante. Por ahora, sólo sé consciente de estas cosas:
+HTTP proporciona reglas claras sobre cómo se comunican un cliente y un servidor. Cubriremos el propio HTTP en un [artículo técnico](/es/docs/Web/HTTP) más adelante. Por ahora, sólo sé consciente de estas cosas:
 
 - Solo los clientes pueden hacer solicitudes HTTP a los servidores. Los servidores solo pueden responder a la solicitud HTTP de un cliente.
 - Al solicitar un archivo a través de HTTP, los clientes deben proporcionar la URL del archivo.
 - El servidor web debe responder a todas las solicitudes HTTP, al menos con un mensaje de error.
 
-[![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](/en-US/404) En un servidor web, el servidor HTTP es responsable de procesar y responder las solicitudes entrantes.
+[![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](/es/404) En un servidor web, el servidor HTTP es responsable de procesar y responder las solicitudes entrantes.
 
 1. Al recibir una solicitud, un servidor HTTP primero verifica si la URL solicitada coincide con un archivo existente.
 2. Si es así, el servidor web envía el contenido del archivo de nuevo al navegador. Si no, un servidor de aplicaciones construye el archivo necesario.

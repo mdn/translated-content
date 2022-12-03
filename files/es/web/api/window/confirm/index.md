@@ -1,7 +1,6 @@
 ---
 title: Window.confirm()
 slug: Web/API/Window/confirm
-translation_of: Web/API/Window/confirm
 ---
 
 {{ApiRef("Window")}}
@@ -27,13 +26,13 @@ if (window.confirm("Do you really want to leave?")) {
 
 Da como resultado:
 
-![firefox confirm](https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png)
+![Firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
 
 ## Notas
 
 The following text is shared between this article, DOM:window\.prompt and DOM:window\.alert Las cajas de diálogo son ventanas modales - ello impide al usuario continuar accediendo al resto del interfaz del programa hasta que la ventana modal haya sido cerrada. Por esta razón no se debería usar en exceso funciones que creen cajas de diálogo (o ventanas modales). No obstante, hay muy buenas razones para [evitar el uso de cajas de diálogo para confirmaciones](http://alistapart.com/article/neveruseawarning).
 
-Los usuarios de [Mozilla Chrome](/en-US/Chrome) users (e.g. Firefox extensions) deberían usar métodos de `nsIPromptService` en vez de cajas de diálogo.
+Los usuarios de [Mozilla Chrome](/es/Chrome) users (e.g. Firefox extensions) deberían usar métodos de `nsIPromptService` en vez de cajas de diálogo.
 
 A partir de la versión 46.0 de Chrome este método es bloqueado dentro de un {{htmlelement("iframe")}} a no ser que el atributo sandbox tenga el valor `allow-modal`.
 

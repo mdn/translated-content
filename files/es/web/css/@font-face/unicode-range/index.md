@@ -1,12 +1,6 @@
 ---
 title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
-tags:
-  - CSS
-  - Experimental
-  - Layout
-  - Reference
-translation_of: Web/CSS/@font-face/unicode-range
 ---
 
 {{cssref}}

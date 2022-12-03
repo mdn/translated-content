@@ -9,7 +9,7 @@ slug: Web/API/Resource_Timing_API
 
 **`Resource Timing API`**为网络事件 (如重定向的开始和结束事件，DNS 查找的开始和结束事件，请求开始，响应开始和结束时间等) 生成有高分辨率时间戳 ( {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} ) 的资源加载时间线，并提供了资源大小和资源类型。
 
-本文档是 Resource Timing API 的概述。更多详细信息，请查阅每个接口的参考说明，[Using Resource Timing](/Web/API/Resource_Timing/Using_Resource_Timing) 和 [参见](#参见) 的参考链接。有关资源时序处理模型的图示，请参阅 [resource timing phases](https://w3c.github.io/resource-timing/#process) .
+本文档是 Resource Timing API 的概述。更多详细信息，请查阅每个接口的参考说明，[Using Resource Timing](/zh-CN/docs/Web/API/Resource_Timing/Using_Resource_Timing) 和 [参见](#参见) 的参考链接。有关资源时序处理模型的图示，请参阅 [resource timing phases](https://w3c.github.io/resource-timing/#process) .
 
 `PerformanceResourceTiming` 接口只统计{{domxref("PerformanceEntry","performance entries", "", 1)}} 中 {{domxref("PerformanceEntry.entryType","entryType")}} 为"`resource`"类型的 {{domxref("PerformanceEntry")}}
 
@@ -53,7 +53,7 @@ The {{domxref("PerformanceResourceTiming")}} interface's {{domxref("PerformanceR
 
 ## Implementation status
 
-As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/Web/API/PerformanceResourceTiming#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
+As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/zh-CN/docs/Web/API/PerformanceResourceTiming#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
 
 To test your browser's support for these interfaces, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 

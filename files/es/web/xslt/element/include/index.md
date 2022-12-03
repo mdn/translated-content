@@ -1,10 +1,6 @@
 ---
 title: include
 slug: Web/XSLT/Element/include
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/include
 original_slug: Web/XSLT/include
 ---
 

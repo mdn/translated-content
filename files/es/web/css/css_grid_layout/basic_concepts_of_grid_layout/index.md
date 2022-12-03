@@ -1,12 +1,6 @@
 ---
 title: Basic concepts of grid layout
 slug: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
-tags:
-  - CSS
-  - Guía
-  - Posicionamiento
-  - Rejillas CSS
-translation_of: Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout
 original_slug: Web/CSS/CSS_Grid_Layout/Conceptos_Básicos_del_Posicionamiento_con_Rejillas
 ---
 

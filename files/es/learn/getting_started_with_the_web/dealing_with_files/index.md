@@ -1,17 +1,6 @@
 ---
 title: Manejo de archivos
 slug: Learn/Getting_started_with_the_web/Dealing_with_files
-tags:
-  - Archivos
-  - Guía
-  - HTML
-  - Novato
-  - Principiante
-  - Scripting
-  - Sitios Web
-  - l10n:priority
-  - teorias
-translation_of: Learn/Getting_started_with_the_web/Dealing_with_files
 original_slug: Learn/Getting_started_with_the_web/Manejando_los_archivos
 ---
 

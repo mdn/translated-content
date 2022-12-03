@@ -1,14 +1,6 @@
 ---
 title: SubtleCrypto.digest()
 slug: Web/HTTP/Headers/Digest
-tags:
-  - API
-  - Encriptación
-  - Referencia
-  - SubtleCrypto
-  - Web Crypto API
-  - encrypt
-translation_of: Web/HTTP/Headers/Digest
 original_slug: Web/API/SubtleCrypto/encrypt
 ---
 
@@ -108,7 +100,7 @@ console.log(digestHex);
 
 ## Compatibilidad del navegador
 
-{{Compat("api.SubtleCrypto.digest")}}
+{{Compat}}
 
 > **Nota:** En Chrome 60, se añadió una característica que deshabilita crypto.subtle para conexiones no TLS.
 

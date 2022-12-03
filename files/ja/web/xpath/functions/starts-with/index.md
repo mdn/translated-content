@@ -15,14 +15,14 @@ starts-with(haystack, needle)
 
 ### 引数
 
-- _`haystack`_
+- `haystack`
   - : 検索される文字列。
-- _`needle`_
+- `needle`
   - : 検索する文字列。
 
 ### 返値
 
-*`haystack`* が *`needle`* で始まれば `true`。 そうでなければ `false`。
+`haystack` が `needle` で始まれば `true`。 そうでなければ `false`。
 
 ### 定義
 

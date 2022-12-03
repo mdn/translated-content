@@ -194,7 +194,7 @@ new ClassWithPrivateAccessor();
 
 ## Совместимость с браузерами
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## Смотрите также
 

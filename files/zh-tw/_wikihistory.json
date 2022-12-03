@@ -1415,24 +1415,6 @@
     "modified": "2019-01-16T20:46:52.062Z",
     "contributors": ["wbamberg", "ArvinH", "klez"]
   },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:55:39.074Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "jackblackevo"]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:55:39.461Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "jackblackevo"]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:55:39.606Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "jackblackevo",
-      "iigmir",
-      "alk03073135"
-    ]
-  },
   "MDN/Writing_guidelines": {
     "modified": "2019-09-10T08:57:06.612Z",
     "contributors": [
@@ -3848,18 +3830,6 @@
       "kourge"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:35:23.761Z",
-    "contributors": [
-      "Talence0329",
-      "jackblackevo",
-      "irvinfly",
-      "teoli",
-      "ethertank",
-      "Sonrisa",
-      "sycheng"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-08-07T04:58:02.421Z",
     "contributors": [
@@ -5105,10 +5075,6 @@
   "conflicting/Web/CSS": {
     "modified": "2019-03-18T21:16:53.558Z",
     "contributors": ["cvrebert"]
-  },
-  "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
-    "modified": "2020-03-12T19:45:29.748Z",
-    "contributors": ["JianHuaHe"]
   },
   "orphaned/Glossary/Bootstrap": {
     "modified": "2020-05-23T17:07:57.268Z",

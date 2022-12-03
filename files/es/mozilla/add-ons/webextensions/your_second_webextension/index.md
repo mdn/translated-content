@@ -1,9 +1,6 @@
 ---
 title: Tu segunda extensión
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 original_slug: Mozilla/Add-ons/WebExtensions/Tutorial
 ---
 
@@ -88,17 +85,17 @@ Ahora crea un archivo llamado "manifest.json", y agrega el siguiente contenido:
 }
 ```
 
-- Las tres primeras llaves: [`manifest_version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version) , [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) , y [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) , son obligatorias y contienen los metadatos básicos para la extensión.
-- [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) y [`homepage_url`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) son opcionales, pero recomendadas: proporcionan información útil acerca de la extensión.
-- [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) es opcional, pero recomedada: permite la especificación de un ícono para la extensión, que será mostrada en el Administrador de Complementos.
-- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lista los permisos que la extensión necesita. Aquí solo se pide el permiso de [`activeTab` permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
-- [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) especifica el botón de la barra de herramientas. Nosotros proveemos tres piezas de información aquí:
+- Las tres primeras llaves: [`manifest_version`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version) , [`name`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) , y [`version`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) , son obligatorias y contienen los metadatos básicos para la extensión.
+- [`description`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) y [`homepage_url`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) son opcionales, pero recomendadas: proporcionan información útil acerca de la extensión.
+- [`icons`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) es opcional, pero recomedada: permite la especificación de un ícono para la extensión, que será mostrada en el Administrador de Complementos.
+- [`permissions`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lista los permisos que la extensión necesita. Aquí solo se pide el permiso de [`activeTab` permission](/es/Add-ons/WebExtensions/manifest.json/permissions#activeTab_permission).
+- [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) especifica el botón de la barra de herramientas. Nosotros proveemos tres piezas de información aquí:
 
   - `default_icon` es obligatorio y enlaza al icono para el botón
   - `default_title` es opcional y será mostrado como descripción
   - `default_popup` es usado su tu quieres una ventana emergente que será mostrada cuando el usuario de clic en el botón. Lo hacemos y hemos incluido esta llave que apunta a un archivo HTML de la extensión.
 
-- [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) lista los archivos que queremos hacer accesibles a las páginas web. Como la extensión reemplaza imágenes en una página con imágenes que hemos empaquetado, necesitamos hacer estas imágenes accesibles a la página.
+- [`web_accessible_resources`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) lista los archivos que queremos hacer accesibles a las páginas web. Como la extensión reemplaza imágenes en una página con imágenes que hemos empaquetado, necesitamos hacer estas imágenes accesibles a la página.
 
 Nota que todas las rutas dadas son relativas a manifest.json.
 
@@ -311,7 +308,7 @@ browser.tabs.executeScript({file: "/content_scripts/beastify.js"})
 .catch(reportExecuteScriptError);
 ```
 
-Empecemos por la linea 96. La ventana emergente ejecuta un script de contenido en la pestaña activa tan pronto como se termina de cargar, usando la API [`browser.tabs.executeScript()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Si la ejecución del script de contenido es exitosa, este quedará cargado en la página hasta que sea cerrada la pestaña o hasta que el usuario navegue hacia una página distinta.
+Empecemos por la linea 96. La ventana emergente ejecuta un script de contenido en la pestaña activa tan pronto como se termina de cargar, usando la API [`browser.tabs.executeScript()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Si la ejecución del script de contenido es exitosa, este quedará cargado en la página hasta que sea cerrada la pestaña o hasta que el usuario navegue hacia una página distinta.
 
 > **Nota:** Un motivo común por el cual el llamado a `browser.tabs.executeScript()` puede fallar, es porque no es posible ejecutar scripts de contenido en todas las páginas, por ejemplo, en páginas de navegador privilegiadas como about:debugging, o páginas del dominio [addons.mozilla.org](https://addons.mozilla.org/), no es posible hacerlo.
 
@@ -325,12 +322,12 @@ Si la ejecución del script de contenido es exitosa, se llamará a `listenForCli
 La función `beastify()` hace tres cosas:
 
 - map the button clicked to a URL pointing to an image of a particular beast
-- Oculta todo el contenido de la página al insertar CSS con la API [`browser.tabs.insertCSS()`](/en-US/Add-ons/WebExtensions/API/tabs/insertCSS)
-- Envía un mensaje "beastify" al script de contenido usando la API [`browser.tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage), solicitándole "bestificar" la página, y enviándole la URL de la imagen.
+- Oculta todo el contenido de la página al insertar CSS con la API [`browser.tabs.insertCSS()`](/es/Add-ons/WebExtensions/API/tabs/insertCSS)
+- Envía un mensaje "beastify" al script de contenido usando la API [`browser.tabs.sendMessage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage), solicitándole "bestificar" la página, y enviándole la URL de la imagen.
 
 La función `reset()` deshace lo hecho por `beastify()`:
 
-- Remueve el CSS que agregó, usando la API [`browser.tabs.removeCSS()`](/en-US/Add-ons/WebExtensions/API/tabs/removeCSS)
+- Remueve el CSS que agregó, usando la API [`browser.tabs.removeCSS()`](/es/Add-ons/WebExtensions/API/tabs/removeCSS)
 - Envía un mensaje de "reset" al script de contenido, solicitándole que resetee la página
 
 ### El script de contenido
@@ -390,9 +387,9 @@ Crea una carpeta nueva bajo la raíz del complemento llamada "content_scripts" y
 
 Lo primero que hace el script de contenido es revisar la variable global `window.hasRun`: si está inicializada termina su ejecución, sino, la inicializa y continúa. La razón por la que hacemos esto es porque cada vez que el usuario abre la ventana emergente, se vuelve a ejecutar el script de contenido en la pestaña activa, por lo que podríamos tener múltiples instancias del script ejecutandose en una sola pestaña. Si esto sucede, necesitamos asegurarnos de que sea sólo la primera instancia la que vaya a realizar cambios.
 
-Luego, en la linea 40, donde el script de contenido atiende mensajes provenientes de la ventana emergente (usando la API [`browser.runtime.onMessage`](/en-US/Add-ons/WebExtensions/API/runtime/onMessage)), vemos que ésta puede enviar dos mensajes diferentes: "beastify" y "reset".
+Luego, en la linea 40, donde el script de contenido atiende mensajes provenientes de la ventana emergente (usando la API [`browser.runtime.onMessage`](/es/Add-ons/WebExtensions/API/runtime/onMessage)), vemos que ésta puede enviar dos mensajes diferentes: "beastify" y "reset".
 
-- si el mensaje es "beastify", esperamos que contenga la URL de la imagen. Removemos el contenido que ha sido agregado por el anterior llamado a "beastify", y luego construimos y añadimos un elemento [`<img>`](/en-US/docs/Web/HTML/Element/img) cuyo atributo `src` contiene la URL de la imagen.
+- si el mensaje es "beastify", esperamos que contenga la URL de la imagen. Removemos el contenido que ha sido agregado por el anterior llamado a "beastify", y luego construimos y añadimos un elemento [`<img>`](/es/docs/Web/HTML/Element/img) cuyo atributo `src` contiene la URL de la imagen.
 - si el mensaje es "reset", simplemente removemos cualquier imagen que haya sido agregada antes.
 
 ### Las bestias

@@ -1,7 +1,6 @@
 ---
 title: IndexedDB
 slug: Web/API/IndexedDB_API
-translation_of: Web/API/IndexedDB_API
 ---
 
 {{ SeeCompatTable() }}

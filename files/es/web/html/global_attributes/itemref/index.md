@@ -1,7 +1,6 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-translation_of: Web/HTML/Global_attributes/itemref
 original_slug: Web/HTML/Atributos_Globales/itemref
 ---
 

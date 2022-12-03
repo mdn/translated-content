@@ -63,9 +63,7 @@ function getBaseLog(x, y) {
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.log', 'Math.log')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,13 +1,6 @@
 ---
 title: Puerto
 slug: Glossary/Port
-tags:
-  - Glosario
-  - Intro
-  - Puerto
-  - Seguridad
-  - red de computadoras
-translation_of: Glossary/Port
 ---
 
 Para un ordenador conectado a una red con una [dirección IP](/es/docs/Glossary/IP_address), un **puerto** es el destino de la comunicación. Los puertos están designados por números, por debajo de 1024 cada puerto está asociado por defecto con un [protocolo](/es/docs/Glossary/Protocol) específico.

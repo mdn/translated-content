@@ -27,7 +27,4 @@ slug: Web/CSS/CSS_Positioning
 
 ## 仕様書
 
-| 仕様書                                   | 状態                            | 備考 |
-| ---------------------------------------- | ------------------------------- | ---- |
-| {{ SpecName('CSS3 Positioning') }}       | {{ Spec2('CSS3 Positioning') }} |      |
-| {{ SpecName('CSS2.1', 'visuren.html') }} | {{ Spec2('CSS2.1') }}           |      |
+{{Specifications}}

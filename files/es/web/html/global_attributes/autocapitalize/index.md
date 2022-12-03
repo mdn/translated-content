@@ -1,13 +1,6 @@
 ---
 title: autocapitalización
 slug: Web/HTML/Global_attributes/autocapitalize
-tags:
-  - Atributos globales
-  - HTML
-  - Reference
-  - Referencia
-  - autocapitalización
-translation_of: Web/HTML/Global_attributes/autocapitalize
 original_slug: Web/HTML/Atributos_Globales/autocapitalize
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: ':first-of-type'
 slug: Web/CSS/:first-of-type
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:first-of-type
 ---
 
 {{CSSRef}}

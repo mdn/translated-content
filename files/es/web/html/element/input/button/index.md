@@ -1,12 +1,6 @@
 ---
 title: <input type ="button">
 slug: Web/HTML/Element/input/button
-tags:
-  - Elemento
-  - Elemento Input
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Element/input/button
 original_slug: Web/HTML/Elemento/input/Botón
 ---
 
@@ -182,7 +176,7 @@ Se crea un nuevo input tipo botón con el valor 'Click me'.
 
 ## Compatibilidad entre navegadores
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## Ver también
 

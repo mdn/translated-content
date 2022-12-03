@@ -629,7 +629,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
 
 ### 数字
 
-参见  `{{htmlelement("input/number", "number")}}` input 类型。没有一种标准的方式改变数字字段的样式，值得注意的是 Safari 上的数字字段不在这个范围内。
+参见 `{{htmlelement("input/number", "number")}}` input 类型。没有一种标准的方式改变数字字段的样式，值得注意的是 Safari 上的数字字段不在这个范围内。
 
 <table>
   <thead>
@@ -1084,7 +1084,7 @@ slug: Learn/Forms/Property_compatibility_table_for_form_controls
 
 ### 选择框（单行）
 
-参见 `{{htmlelement("select")}}`、`{{htmlelement("optgroup")}}` 和  `{{htmlelement("option")}}` 元素。
+参见 `{{htmlelement("select")}}`、`{{htmlelement("optgroup")}}` 和 `{{htmlelement("option")}}` 元素。
 
 <table>
   <thead>

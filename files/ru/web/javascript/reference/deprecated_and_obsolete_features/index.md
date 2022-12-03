@@ -67,7 +67,7 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 - {{jsxref("Object.watch", "watch")}} and {{jsxref("Object.unwatch", "unwatch")}} are deprecated. Use {{jsxref("Proxy")}} instead.
 - `__iterator__` устарел.
-- {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} is deprecated. Use {{jsxref("Proxy")}} instead.
+- `Object.prototype.__noSuchMethod__` is deprecated. Use {{jsxref("Proxy")}} instead.
 
 ### Методы даты
 
@@ -109,8 +109,8 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 
 | Свойство                                                                                 | Описание                                                                       |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| {{jsxref("Global_Objects/Object/count", "__count__")}}                 | Returns the number of enumerable properties directly on a user-defined object. |
-| {{jsxref("Global_Objects/Object/Parent", "__parent__")}}             | Points to an object's context.                                                 |
+| {{jsxref("Global_Objects/Object/count", "**count**")}}                 | Returns the number of enumerable properties directly on a user-defined object. |
+| {{jsxref("Global_Objects/Object/Parent", "**parent**")}}             | Points to an object's context.                                                 |
 | {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Evaluates a string of JavaScript code in the context of the specified object.  |
 | {{jsxref("Object.observe()")}}                                                 | Asynchronously observing the changes to an object.                             |
 | {{jsxref("Object.unobserve()")}}                                             | Remove observers.                                                              |

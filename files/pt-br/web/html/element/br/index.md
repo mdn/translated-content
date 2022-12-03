@@ -65,7 +65,7 @@ Este elemento inclue os [Atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
   - : Indica onde começar a próxima linha depois da quebra.
 
-    > **Note:** **Nota de Uso:** Este atributo está obsoleto em {{HTMLVersionInline(5)}} e **Não deve ser usado por autores**. Use a propiedade CSS {{CSSxref('clear')}} em vez disso.
+    > **Nota:** Este atributo está obsoleto em {{HTMLVersionInline(5)}} e **Não deve ser usado por autores**. Use a propriedade CSS {{CSSxref('clear')}} em vez disso.
 
 ## Exemplo
 

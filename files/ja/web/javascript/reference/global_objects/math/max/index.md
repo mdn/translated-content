@@ -72,9 +72,7 @@ var max = Math.max(...arr);
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.max', 'Math.max')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

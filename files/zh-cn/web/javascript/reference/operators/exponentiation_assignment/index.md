@@ -1,42 +1,40 @@
 ---
-title: Exponentiation assignment (**=)
+title: 幂赋值（**=）
 slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-The exponentiation assignment operator (`**=`) raises the value of a variable to the power of the right operand.
+**幂赋值**（**`**=`**）运算符将左侧变量的值设置为右操作数的幂次方。
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}
 
 ## 语法
 
-```plain
-Operator: x **= y
-Meaning:  x  = x ** y
+```js-nolint
+x **= y // x = x ** y
 ```
 
-## Examples
+## 示例
 
-### Using exponentiation assignment
+### 使用幂赋值
 
 ```js
-// Assuming the following variable
-//  bar = 5
+let bar = 5;
 
-bar **= 2     // 25
-bar **= 'foo' // NaN
+bar **= 2; // 25
+bar **= "foo"; // NaN
 ```
 
-## Specifications
+## 规范
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Exponentiation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [JS 指南中的赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#赋值运算符)
+- [幂运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)

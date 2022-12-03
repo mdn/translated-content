@@ -44,7 +44,7 @@ Aucun.
 
     - `single`
       - : Numérote de façon séquentielle les nœuds descendants d'un même parent, à la manière des éléments d'une
-        liste. Le processeur va au premier nœud dans l'axe [`ancestor-or-self`](fr/XPath/Axes/ancestor-or-self) qui correspond à l'attribut
+        liste. Le processeur va au premier nœud dans l'axe [`ancestor-or-self`](/fr/XPath/Axes/ancestor-or-self) qui correspond à l'attribut
         `count`, puis compte ce nœud ainsi que tous les nœuds précédents issus de son parent (il
         s'arrête lorsqu'il rencontre une référence à l'attribut `from`, si il en trouve une) qui
         correspond également à l'attribut `count`. Si aucune correspondance n'est trouvée, la
@@ -52,7 +52,7 @@ Aucun.
     - `multiple`
       - : Numérote les nœuds avec une séquence composite qui reflète la position hiérarchique du nœud, par exemple
         1.2.2.5. (le format peut être défini avec l'attribut `format`, par exemple A.1.1). Le
-        processeur vérifie tous les [`ancestors`](fr/XPath/Axes/ancestor) du nœud courant
+        processeur vérifie tous les [`ancestors`](/fr/XPath/Axes/ancestor) du nœud courant
         ainsi que le nœud lui-même, il s'arrête lorsqu'il rencontre une correspondance avec l'attribut
         `from`, si il y en a une. Pour chaque nœud de la liste qui vérifie l'attribut
         `count`, le processeur compte combien il possède de frères vérifiant également cet attribut,
@@ -60,7 +60,7 @@ Aucun.
         une liste vide.
     - `any` (Non supporté à l'heure actuelle)
       - : Numérote tous les nœuds vérifiant `count` de façon séquentielle, sans considération de
-        niveau. Les axes [`ancestor`](fr/XPath/Axes/ancestor), [`self`](fr/XPath/Axes/self) et [`preceding`](fr/XPath/Axes/preceding) sont tous pris en compte. Le processeur
+        niveau. Les axes [`ancestor`](/fr/XPath/Axes/ancestor), [`self`](/fr/XPath/Axes/self) et [`preceding`](/fr/XPath/Axes/preceding) sont tous pris en compte. Le processeur
         débute au nœud courant et continue dans l'ordre inverse du document, s'arrêtant s'il rencontre une
         correspondance avec un attribut `from`. Si aucune correspondance avec l'attribut
         `count` n'est trouvé,e la séquence produite sera une liste vide. Ce niveau n'est pas supporté

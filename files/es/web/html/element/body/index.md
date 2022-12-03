@@ -1,14 +1,6 @@
 ---
 title: '<body>: El elemento body del documento'
 slug: Web/HTML/Element/body
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Seleccionar el elemento raíz
-  - Web
-  - secciones
-translation_of: Web/HTML/Element/body
 original_slug: Web/HTML/Elemento/body
 ---
 

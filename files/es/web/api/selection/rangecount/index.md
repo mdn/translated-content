@@ -1,9 +1,6 @@
 ---
 title: rangeCount
 slug: Web/API/Selection/rangeCount
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/rangeCount
 ---
 
 {{ ApiRef("DOM") }}

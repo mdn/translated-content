@@ -61,9 +61,7 @@ for (const [key, value] of myMap) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype-@@iterator', 'Map.prototype[@@iterator]()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

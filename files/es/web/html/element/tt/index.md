@@ -1,11 +1,6 @@
 ---
 title: tt
 slug: Web/HTML/Element/tt
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/tt
 original_slug: Web/HTML/Elemento/tt
 ---
 
@@ -14,11 +9,11 @@ original_slug: Web/HTML/Elemento/tt
 - Muestra el texto marcado con una fuente de ancho fijo.
   - : **Sus etiquetas son**: \<tt> y \</tt> (Ambas obligatorias)
   
-    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**: [Elemento de estilo de fuente](es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
+    **Está definido como**: [Elemento de estilo de fuente](/es/HTML/Elemento/Tipos_de_elementos#de_estilo_de_fuente).
 
-    **Puede contener**: cero o más elementos [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: cero o más elementos [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 ##### Atributos Genéricos
 

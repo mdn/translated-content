@@ -1,7 +1,6 @@
 ---
 title: Stylesheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
-translation_of: Web/API/StyleSheet/parentStyleSheet
 ---
 
 {{ ApiRef() }}

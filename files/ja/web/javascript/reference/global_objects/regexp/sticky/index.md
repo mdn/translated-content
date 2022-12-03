@@ -52,9 +52,7 @@ regex2.test('.\nfoo'); // true - index 2 is the beginning of a line
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-regexp.prototype.sticky', 'RegExp.prototype.sticky')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

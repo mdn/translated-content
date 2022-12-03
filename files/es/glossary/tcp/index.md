@@ -1,14 +1,6 @@
 ---
 title: TCP
 slug: Glossary/TCP
-tags:
-  - Datos
-  - Glosario
-  - Infraestructura
-  - Protocolo de Control de Transmisión
-  - TCP
-  - red
-translation_of: Glossary/TCP
 ---
 
 **TCP** (**Protocolo de Control de Transmisión**, por sus siglas en inglés _Transmission Control Protocol_) es {{Glossary("protocol","protocolo")}} de red importante que permite que dos anfitriones (_hosts_) se conecten e intercambien flujos de datos. TCP garantiza la entrega de datos y {{Glossary("Packet","paquetes")}} en el mismo orden en que se enviaron. Vint Cerf y Bob Kahn, científicos de DARPA por aquél entonces, diseñaron TCP en la década de los 70.

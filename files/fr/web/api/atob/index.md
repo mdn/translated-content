@@ -43,7 +43,7 @@ donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
 
 ## Voir aussi
 
-- [Base64 encoding and decoding](/Web/API/WindowBase64/Base64_encoding_and_decoding)
+- [Base64 encoding and decoding](/fr/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)
 - [Les URL de `données`](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
 - [`btoa()`](/fr/docs/Web/API/btoa)
 - [Components.utils.importGlobalProperties](/fr-FR/docs/Components.utils.importGlobalProperties)

@@ -2,6 +2,7 @@
 title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
+
 {{AddonSidebar}}
 
 WebExtensions 을 통해 사용자가 브라우저를 사용하는 동안 축적된 데이터를 삭제할 수 있는 기능을 제공합니다.

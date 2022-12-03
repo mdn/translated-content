@@ -1,12 +1,6 @@
 ---
 title: Console.dirxml()
 slug: Web/API/Console/dirxml
-tags:
-  - API
-  - DOM
-  - Depuración
-  - metodo
-translation_of: Web/API/Console/dirxml
 ---
 
 {{APIRef("Console API")}}{{Non-standard_header}}

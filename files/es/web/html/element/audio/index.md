@@ -1,7 +1,6 @@
 ---
 title: Audio
 slug: Web/HTML/Element/audio
-translation_of: Web/HTML/Element/audio
 original_slug: Web/HTML/Elemento/audio
 ---
 

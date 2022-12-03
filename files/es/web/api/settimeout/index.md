@@ -1,12 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.setTimeout
 slug: Web/API/setTimeout
-tags:
-  - API
-  - HTML DOM
-  - WindowOrWorkerGlobalScope
-  - setTimeout
-translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
 
@@ -226,11 +220,11 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 s
 
 No hay soluciones nativas _ad hoc_ a este problema.
 
-> **Nota:** JavaScript 1.8.5 introduce el método [`Function.prototype.bind(`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind), que permite especificar el valor que debería usarse como `this` para todas las llamadas a una función dada. Esto permite evitar fácilmente los problemas en los que no es claro que será, dependiendo del contexto desde el cual la función sea llamada.
+> **Nota:** JavaScript 1.8.5 introduce el método [`Function.prototype.bind(`](/es/docs/JavaScript/Reference/Global_Objects/Function/bind), que permite especificar el valor que debería usarse como `this` para todas las llamadas a una función dada. Esto permite evitar fácilmente los problemas en los que no es claro que será, dependiendo del contexto desde el cual la función sea llamada.
 
 ## Notas
 
-Puede cancelar el temporizador usando [`window.clearTimeout()`](/en-US/docs/DOM/window.clearTimeout). Si desea tener una función llamada repetidamente (p.e., cada N milisegundos), considere usar [`window.setInterval()`](/en-US/docs/DOM/window.setInterval).
+Puede cancelar el temporizador usando [`window.clearTimeout()`](/es/docs/DOM/window.clearTimeout). Si desea tener una función llamada repetidamente (p.e., cada N milisegundos), considere usar [`window.setInterval()`](/es/docs/DOM/window.setInterval).
 
 Es importante notar que la función o fragmento de código no puede ser ejecutado hasta que el hilo que llamó `setTimeout()` haya terminado.
 

@@ -1,12 +1,6 @@
 ---
 title: Microdatos
 slug: Web/HTML/Microdata
-tags:
-  - HTML
-  - Microdatos
-  - Referencia
-  - busquedas
-translation_of: Web/HTML/Microdata
 original_slug: Web/HTML/Microdatos
 ---
 

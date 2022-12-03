@@ -3,6 +3,7 @@ title: Tips for Authoring Fast-loading HTML Pages
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Tips_for_Authoring_Fast-loading_HTML_Pages
 ---
+
 Summary: Learn common-sense tips for producing HTML pages which load quickly and provide visitor satisfaction. 여기에 나온 팁들은 상식과 실험에 바탕을 두고 있습니다. 만약 당신이 페이지 불러오기 성능을 향상시킬 수 있는 팁을 알고 있다면 이 글의 토론 페이지에 조언해 주시기 바랍니다.
 
 최적화된 웹 페이지는 사이트 방문자들에게 즉각적인 응답을 해줄 뿐만 아니라, 웹 서버의 부담을 덜어주고 인터넷 연결의 부하를 줄여줍니다. 이것은 커다란 사이트나 뉴스 속보와 같은 특별한 상황에서 트래픽이 급격히 증가하는 사이트에 있어서 아주 중요합니다.

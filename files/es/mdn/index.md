@@ -1,11 +1,6 @@
 ---
 title: El proyecto MDN
 slug: MDN
-tags:
-  - Comunidad
-  - Landing
-  - MDN Meta
-translation_of: MDN
 ---
 
 {{MDNSidebar}}

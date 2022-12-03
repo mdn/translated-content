@@ -414,9 +414,7 @@ da como resultado:
 
 ## Especificaciones
 
-| Especificación                                                           | Publicación inicial |
-| ------------------------------------------------------------------------ | ------------------- |
-| {{SpecName('ESDraft', '#sec-array-objects', 'Array')}} | ECMAScript 1        |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

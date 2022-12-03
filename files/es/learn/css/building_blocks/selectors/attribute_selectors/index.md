@@ -1,7 +1,6 @@
 ---
 title: Selectores de atributo
 slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
-translation_of: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
 original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Selectores_de_atributos
 ---
 

@@ -1,14 +1,9 @@
 ---
 title: max-height
 slug: Web/CSS/max-height
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/max-height
 ---
 
-<< [Volver](es/Gu%c3%ada_de_referencia_de_CSS)
+<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen
 

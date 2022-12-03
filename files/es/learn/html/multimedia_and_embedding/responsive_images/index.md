@@ -1,7 +1,6 @@
 ---
 title: Imágenes adaptables
 slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
-translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
@@ -116,7 +115,7 @@ Entonces, con estos atributos establecidos, el navegador:
 
 ¡Y eso es todo! Hasta este punto, si un navegador compatible con un ancho de ventana de 480px carga la página, la condición de medios `(max-width: 480px)` se cumplirá, por lo que la ranura de `440px` será elegida y se cargará el archivo de imagen `elva-fairy-480w.jpg`, ya que el ancho inherente (`480w`) es el más cercano a `440px`. La imagen de 800px tiene 128KB en disco mientras que la versión de 480px tiene solo 63KB — un ahorro de 65KB. Ahora imagine si esta fuera una página que tuviera muchas imágenes. Usar esta técnica puede ahorrarle a los usuarios de dispositivos móviles mucho ancho de banda.
 
-> **Nota:** Al probar esto con un navegador de escritorio, si el navegador no carga las imágenes más estrechas cuando tiene su ventana configurada en el ancho más estrecho, eche un vistazo a cuál es la ventana gráfica (puede aproximarla yendo a la __Consola JavaScript__ del navegador y escribiendo `document.querySelector('html').clientWidth`). Los diferentes navegadores tienen tamaños mínimos a los que te permitirán reducir el ancho de la ventana y pueden ser más anchos de lo que piensas. Al probarlo con un navegador móvil, puede usar herramientas como la página de depuración de Firefox `about:debugging` para inspeccionar la página cargada en el dispositivo móvil usando las herramientas de desarrollo de escritorio. Para ver qué imágenes se cargaron, puede usar la pestaña [Monitor de red](/es/docs/Tools/Network_Monitor) en las herramientas del desarrollador de Firefox.
+> **Nota:** Al probar esto con un navegador de escritorio, si el navegador no carga las imágenes más estrechas cuando tiene su ventana configurada en el ancho más estrecho, eche un vistazo a cuál es la ventana gráfica (puede aproximarla yendo a la **Consola JavaScript** del navegador y escribiendo `document.querySelector('html').clientWidth`). Los diferentes navegadores tienen tamaños mínimos a los que te permitirán reducir el ancho de la ventana y pueden ser más anchos de lo que piensas. Al probarlo con un navegador móvil, puede usar herramientas como la página de depuración de Firefox `about:debugging` para inspeccionar la página cargada en el dispositivo móvil usando las herramientas de desarrollo de escritorio. Para ver qué imágenes se cargaron, puede usar la pestaña [Monitor de red](/es/docs/Tools/Network_Monitor) en las herramientas del desarrollador de Firefox.
 
 Los navegadores más antiguos que no soportan estas características solo las ignorarán y seguirán adelante con la carga de la imagen referenciada en el atributo {{htmlattrxref("src", "img")}} como lo hacen habitualmente.
 

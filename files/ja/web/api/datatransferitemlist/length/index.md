@@ -109,11 +109,7 @@ div {
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                                                      |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'interaction.html#dom-datatransferitemlist-length','length')}} | {{Spec2('HTML WHATWG')}} |                                                           |
-| {{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-length','length')}}         | {{Spec2('HTML5.1')}}     | W3C HTML5 {{Spec2('HTML5 W3C')}} には含まれていない |
-|                                                                                                                      |                                  |                                                           |
+{{Specifications}}
 
 ## ブラウザーの対応
 

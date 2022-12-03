@@ -1,7 +1,6 @@
 ---
 title: Request.headers
 slug: Web/API/Request/headers
-translation_of: Web/API/Request/headers
 ---
 
 {{APIRef("Fetch")}}

@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/resizeTo
 ---
+
 {{APIRef}}
 
 **`Window.resizeTo()`** 메서드는 동적으로 창의 크기를 변경합니다.

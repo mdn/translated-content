@@ -364,9 +364,7 @@ La mayoría de los navegadores ya implementan el modo estricto. Sin embargo, no 
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-strict-mode-code', 'Código en modo estricto')}} |
+{{Specifications}}
 
 ## Ve también
 

@@ -1,12 +1,6 @@
 ---
 title: Document.createAttribute()
 slug: Web/API/Document/createAttribute
-tags:
-  - Atributos
-  - Crear Atributo
-  - JavaScript
-  - Métodos
-translation_of: Web/API/Document/createAttribute
 original_slug: Web/API/Document/crearAtributo
 ---
 

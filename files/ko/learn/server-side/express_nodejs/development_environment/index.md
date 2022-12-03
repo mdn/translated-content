@@ -3,6 +3,7 @@ title: Node 개발 환경을 설치하기
 slug: Learn/Server-side/Express_Nodejs/development_environment
 original_slug: Learn/Server-side/Express_Nodejs/개발_환경
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 이제 Express에 관한 내용을 알았으니, Windows, Linux (Ubuntu), 그리고 macOS 에서의 Node/Express 개발 환경을 설정하고 테스트하는 법을 보여드리겠습니다. 사용중인 운영 체제가 무엇이든 간에, 이 글은 당신에게 Express 앱 개발을 시작할 수 있도록 필요한 내용을 제공합니다.

@@ -28,7 +28,7 @@ var p = new Proxy(cible, {
 
 ### Paramètres
 
-Les paramètres suivants sont passés à la méthode `construct`.  `this` est ici lié au gestionnaire (_handler_).
+Les paramètres suivants sont passés à la méthode `construct`. `this` est ici lié au gestionnaire (_handler_).
 
 - `cible`
   - : L'objet cible.

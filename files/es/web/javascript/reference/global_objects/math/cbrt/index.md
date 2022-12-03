@@ -65,9 +65,7 @@ Math.cbrt(2);  // 1.2599210498948732
 
 ## Especificaciones
 
-| Especificación                                                           |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.cbrt', 'Math.cbrt')}} |
+{{Specifications}}
 
 ## Compatibilidad
 

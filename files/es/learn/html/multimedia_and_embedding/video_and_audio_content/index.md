@@ -1,7 +1,6 @@
 ---
 title: Contenido de audio y video
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
@@ -97,7 +96,7 @@ Por ejemplo:
 
 Un reproductor de audio tenderá a reproducir directamente un track de audio. Por ejemplo un archivo MP3 u Ogg. No necesitan contenedores.
 
-> **Nota:** No es tan simple como se ve en nuestra [tabla de compatibilidad de codecs audio-video](/en-US/docs/Web/HTML/Supported_media_formats#Browser_compatibility). Además, muchos browsers de plataformas móviles pueden reproducir un formato no soportado entregándoselo al reproductor multimedia del sistema subyacente para que lo reproduzca. Pero esto servirá por ahora.
+> **Nota:** No es tan simple como se ve en nuestra [tabla de compatibilidad de codecs audio-video](/es/docs/Web/HTML/Supported_media_formats#Browser_compatibility). Además, muchos browsers de plataformas móviles pueden reproducir un formato no soportado entregándoselo al reproductor multimedia del sistema subyacente para que lo reproduzca. Pero esto servirá por ahora.
 
 Los formatos anteriores existen para comprimir los archivos de audio y video volviéndolos manejables (el tamaño sin comprimir es muy grande). Los browsers contienen diferentes **{{Glossary("Codec","Codecs")}}**, como Vorbis o H.264, los cuales son usados para convertir el sonido y video comprimidos en binario y viceversa. Pero desafortunadamente, como indicamos antes, no todos los browsers soportan los mismos codecs, por lo tanto, habrá que proveer varios archivos para cada producción multimedia. Si te falta el codec correcto para decodificar el medio, simplemente no se reproducirá.
 
@@ -260,7 +259,7 @@ This will result in a video that has subtitles displayed, kind of like this:
 
 ![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
 
-For more details, please read [Adding captions and subtitles to HTML5 video](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can [find the example](http://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on Github, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
+For more details, please read [Adding captions and subtitles to HTML5 video](/es/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can [find the example](http://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on Github, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 
 > **Nota:** Text tracks also help you with {{glossary("SEO")}}, since search engines especially thrive on text. Text tracks even allow search engines to link directly to a spot partway through the video.
 
@@ -290,7 +289,7 @@ And that's a wrap; we hope you had fun playing with video and audio in web pages
 - {{htmlelement("video")}}
 - {{htmlelement("source")}}
 - {{htmlelement("track")}}
-- [Adding captions and subtitles to HTML5 video](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [Adding captions and subtitles to HTML5 video](/es/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
 - [Audio and Video delivery](/es/docs/Web/Apps/Fundamentals/Audio_and_video_delivery): A LOT of detail about putting audio and video onto web pages using HTML and JavaScript.
 - [Audio and Video manipulation](/es/docs/Web/Apps/Fundamentals/Audio_and_video_manipulation): A LOT of detail about manipulating audio and video using JavaScript (for example adding filters.)
 - Automated options to [translate multimedia](http://www.inwhatlanguage.com/blog/translate-video-audio/).

@@ -255,7 +255,7 @@ console.log(instance.msg)
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## 関連情報
 

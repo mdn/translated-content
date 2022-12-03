@@ -1,16 +1,6 @@
 ---
 title: IDBCursor.continue()
 slug: Web/API/IDBCursor/continue
-tags:
-  - API
-  - Almacen
-  - Basededatos
-  - Continuar
-  - CursorIDB
-  - IndexadoIDB
-  - Referencia
-  - metodo
-translation_of: Web/API/IDBCursor/continue
 ---
 
 {{APIRef("IndexedDB")}}

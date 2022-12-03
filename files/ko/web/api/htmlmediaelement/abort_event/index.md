@@ -11,6 +11,7 @@ translation_of: Web/API/HTMLMediaElement/abort_event
 translation_of_original: Web/Events/abort
 original_slug: Web/Events/abort
 ---
+
 **`abort`** 이벤트는 리소스의 로딩이 중단되었을 때, 발생합니다.
 
 ## 개요

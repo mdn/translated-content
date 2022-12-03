@@ -7,7 +7,7 @@ slug: Web/API/Fetch_API/Using_Fetch
 
 [Fetch API](/zh-CN/docs/Web/API/Fetch_API) 提供了一个 JavaScript 接口，用于访问和操纵 HTTP 管道的一些具体部分，例如请求和响应。它还提供了一个全局 {{domxref("fetch()")}} 方法，该方法提供了一种简单，合理的方式来跨网络异步获取资源。
 
-这种功能以前是使用 {{domxref("XMLHttpRequest")}} 实现的。Fetch 提供了一个更理想的替代方案，可以很容易地被其他技术使用，例如  {{domxref("Service_Worker_API", "Service Workers")}}。Fetch 还提供了专门的逻辑空间来定义其他与 HTTP 相关的概念，例如 [CORS](/zh-CN/docs/Web/HTTP/CORS) 和 HTTP 的扩展。
+这种功能以前是使用 {{domxref("XMLHttpRequest")}} 实现的。Fetch 提供了一个更理想的替代方案，可以很容易地被其他技术使用，例如 {{domxref("Service_Worker_API", "Service Workers")}}。Fetch 还提供了专门的逻辑空间来定义其他与 HTTP 相关的概念，例如 [CORS](/zh-CN/docs/Web/HTTP/CORS) 和 HTTP 的扩展。
 
 请注意，`fetch` 规范与 `jQuery.ajax()` 主要有以下的不同：
 

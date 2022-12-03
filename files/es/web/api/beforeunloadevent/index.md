@@ -1,7 +1,6 @@
 ---
 title: BeforeUnloadEvent
 slug: Web/API/BeforeUnloadEvent
-translation_of: Web/API/BeforeUnloadEvent
 ---
 
 {{APIRef}}

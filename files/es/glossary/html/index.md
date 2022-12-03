@@ -1,10 +1,6 @@
 ---
 title: HTML
 slug: Glossary/HTML
-tags:
-  - Glosario
-  - HTML
-translation_of: Glossary/HTML
 ---
 
 HTML (Lenguaje de marcado de hipertexto o HyperText Markup Language por sus siglas en inglés) es un lenguaje descriptivo que especifica la estructura de las páginas web.

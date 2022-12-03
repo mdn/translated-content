@@ -59,9 +59,7 @@ Try editing the text inside the `<div>` and see what happens.
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                         | 備考 |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ---- |
-| {{SpecName('UI Events','#dom-inputevent-inputtype','inputType')}} | {{Spec2('UI Events')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

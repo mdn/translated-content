@@ -37,7 +37,7 @@ _从它的父接口 {{domxref("EventTarget")}} 继承方法。_
 - {{domxref("SourceBuffer.abort()")}}
   - : 中止当前片段并且重置片段解析器。
 - {{domxref("SourceBuffer.appendBuffer()")}}
-  - : 将来自 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 对象的媒体片段数据附加到  `SourceBuffer`。
+  - : 将来自 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}} 对象的媒体片段数据附加到 `SourceBuffer`。
 - {{domxref("SourceBuffer.appendBufferAsync()")}} {{experimental_inline}}
   - : 启动异步进程，将指定缓冲数据附加到 `SourceBuffer`。返回一个 {{jsxref("Promise")}}，一旦添加了缓冲数据，该 promise 将会兑现。
 - {{domxref("SourceBuffer.appendStream()")}}

@@ -194,10 +194,7 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                                             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#listbox","ARIA listbox role")}}                     | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#Listbox","Listbox Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

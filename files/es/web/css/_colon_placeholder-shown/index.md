@@ -1,12 +1,6 @@
 ---
 title: ':placeholder-shown'
 slug: Web/CSS/:placeholder-shown
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-clase
-  - Referencia
-translation_of: Web/CSS/:placeholder-shown
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

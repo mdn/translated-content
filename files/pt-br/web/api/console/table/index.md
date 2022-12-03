@@ -134,4 +134,4 @@ console.table(data [, columns]);
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Console.table")}}
+{{Compat}}

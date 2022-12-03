@@ -1,12 +1,6 @@
 ---
 title: Sintaxis
 slug: Web/CSS/Syntax
-tags:
-  - CSS
-  - Guía
-  - Principiante
-  - Web
-translation_of: Web/CSS/Syntax
 ---
 {{cssref}}
 

@@ -413,7 +413,7 @@ function setTime() {
 2. 次に、さらに二つの変数、 `minuteValue` と `secondValue` を初期化します。 {{jsxref("String/padStart", "padStart()")}} を使用して、たとえ数値が一桁であっても、それぞれの値を2文字の長さにしています。
 3. 実際に表示する時刻の値は、 `minuteValue` ＋コロン文字＋ `secondValue` と設定する。
 4. タイマーの {{domxref("Node.textContent")}} 値に時間の値を設定し、UIに表示します。
-5. 内側の `<div>` に設定すべき長さは、まず外側の `<div>` の幅を計算し（任意の要素の  {{domxref("Element.clientWidth", "clientWidth")}} プロパティにその長さが入ります）、それを {{domxref("HTMLMediaElement.currentTime")}} で割ってメディアの合計 {{domxref("HTMLMediaElement.duration")}} に乗じることによって計算されます。
+5. 内側の `<div>` に設定すべき長さは、まず外側の `<div>` の幅を計算し（任意の要素の {{domxref("Element.clientWidth", "clientWidth")}} プロパティにその長さが入ります）、それを {{domxref("HTMLMediaElement.currentTime")}} で割ってメディアの合計 {{domxref("HTMLMediaElement.duration")}} に乗じることによって計算されます。
 6. 内側の`<div>`の幅は、計算されたバーの長さに "px" を加えたものに設定します。
 
 #### 再生と一時停止の修正

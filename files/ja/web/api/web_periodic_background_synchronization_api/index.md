@@ -95,9 +95,7 @@ self.addEventListener('periodicsync', event => {
 
 ## Specifications
 
-| Specification                                        | Status                                           | Comment             |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName('Periodic Background Sync')}} | {{Spec2('Periodic Background Sync')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

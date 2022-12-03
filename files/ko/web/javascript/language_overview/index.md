@@ -400,7 +400,7 @@ switch(a) {
 }
 ```
 
-default 절은 선택사항입니다. switch와 case 부분에서 둘 다 표현식을 사용할 수도 있습니다. switch 부분과 case 부분의 표현식은  `===` 연산자로 비교합니다.
+default 절은 선택사항입니다. switch와 case 부분에서 둘 다 표현식을 사용할 수도 있습니다. switch 부분과 case 부분의 표현식은 `===` 연산자로 비교합니다.
 
 ```js
 switch(1 + 3){
@@ -896,7 +896,7 @@ s.reversed(); // nomiS
 "This can now be reversed".reversed(); // desrever eb won nac sihT
 ```
 
-기존에 언급한 바와 같이, 프로토타입은 체인의 한 부분을 이룹니다. 해당 체인의 최상위에는  `Object.prototype`이 있으며 `toString()` 메서드를 가지고 있습니다. 이 메서드는 객체를 문자열로 나타내려할 때 호출되며, 우리의 `Person` 객체의 디버깅에 유용합니다.
+기존에 언급한 바와 같이, 프로토타입은 체인의 한 부분을 이룹니다. 해당 체인의 최상위에는 `Object.prototype`이 있으며 `toString()` 메서드를 가지고 있습니다. 이 메서드는 객체를 문자열로 나타내려할 때 호출되며, 우리의 `Person` 객체의 디버깅에 유용합니다.
 
 ```js
 var s = new Person("Simon", "Willison");

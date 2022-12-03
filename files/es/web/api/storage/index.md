@@ -1,15 +1,6 @@
 ---
 title: Almacenamiento
 slug: Web/API/Storage
-tags:
-  - API
-  - Almacenamiento
-  - Almacenamiento web
-  - Interface
-  - Reference
-  - TopicStub
-  - data
-translation_of: Web/API/Storage
 ---
 {{APIRef("Web Storage API")}}
 

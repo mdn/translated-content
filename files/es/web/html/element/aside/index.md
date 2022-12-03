@@ -1,13 +1,6 @@
 ---
 title: aside
 slug: Web/HTML/Element/aside
-tags:
-  - HTML
-  - HTML5
-  - HTML:Elemento
-  - HTML:Referencia_de_elementos
-  - para_revisar
-translation_of: Web/HTML/Element/aside
 original_slug: Web/HTML/Elemento/aside
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: Contenido desbordado
 slug: Learn/CSS/Building_blocks/Overflowing_content
-translation_of: Learn/CSS/Building_blocks/Overflowing_content
 original_slug: Learn/CSS/Building_blocks/Contenido_desbordado
 ---
 

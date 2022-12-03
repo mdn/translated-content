@@ -540,9 +540,7 @@ a + b;
 
 ## Especificaciones
 
-| Especificación                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-lexical-grammar', 'Gramática léxica')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

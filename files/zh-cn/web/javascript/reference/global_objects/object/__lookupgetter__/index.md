@@ -67,9 +67,9 @@ Object.getOwnPropertyDescriptor(prototype, "foo").get
 
 ## 相关链接
 
-- {{jsxref("Object.__lookupSetter__", "Object.prototype.__lookupSetter__()")}}
+- [`Object.prototype.__lookupGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
 - {{jsxref("Operators/get", "get")}} 运算符
 - {{jsxref("Object.getOwnPropertyDescriptor()")}} 和 {{jsxref("Object.getPrototypeOf()")}}
-- {{jsxref("Object.__defineGetter__", "Object.prototype.__defineGetter__()")}}
-- {{jsxref("Object.__defineSetter__", "Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [JS 指南：定义访问器属性](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

@@ -71,9 +71,7 @@ rtf.formatToParts(100, "day");
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態      | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | --------- | ---- |
-| {{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}} | 第 4 段階 |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

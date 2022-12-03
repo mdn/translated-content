@@ -1,13 +1,6 @@
 ---
 title: Generador de historias absurdas
 slug: Learn/JavaScript/First_steps/Silly_story_generator
-tags:
-  - Arreglos
-  - Cadenas
-  - JavaScript
-  - Numeros
-  - Principiante
-translation_of: Learn/JavaScript/First_steps/Silly_story_generator
 original_slug: Learn/JavaScript/First_steps/Generador_de_historias_absurdas
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: Elementos en línea
 slug: Web/HTML/Inline_elements
-tags:
-  - Guía
-  - HTML
-  - HTML5
-  - Principiante
-  - Web
-  - desarrollo
-translation_of: Web/HTML/Inline_elements
 original_slug: Web/HTML/Elementos_en_línea
 ---
 

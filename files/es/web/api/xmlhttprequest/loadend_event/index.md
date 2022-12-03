@@ -1,9 +1,6 @@
 ---
 title: loadend
 slug: Web/API/XMLHttpRequest/loadend_event
-tags:
-  - eventos
-translation_of: Web/API/XMLHttpRequest/loadend_event
 original_slug: Web/Events/loadend
 ---
 
