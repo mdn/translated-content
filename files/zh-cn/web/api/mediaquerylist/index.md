@@ -3,7 +3,7 @@ title: MediaQueryList
 slug: Web/API/MediaQueryList
 ---
 
-{{APIRef("CSSOM View")}}{{SeeCompatTable}}
+{{APIRef("CSSOM")}}
 
 一个 `MediaQueryList` 对象在一个 {{DOMxRef("document")}} 上维持着一系列的[媒体查询](/zh-CN/docs/CSS/Media_queries)，并负责处理当媒体查询在其 document 上发生变化时向监听器进行通知的发送。
 
@@ -65,7 +65,7 @@ void removeListener(
 
 {{Compat}}
 
-## 请参阅
+## 参见
 
 - [CSS 媒体查询](/zh-CN/docs/CSS/Media_queries)
 - [通过代码使用媒体查询](/zh-CN/docs/DOM/Using_media_queries_from_code)
