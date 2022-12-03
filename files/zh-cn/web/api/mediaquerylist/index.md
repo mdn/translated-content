@@ -5,7 +5,7 @@ slug: Web/API/MediaQueryList
 
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
-一个 `MediaQueryList` 对象在一个{{ domxref("document") }}上维持着一系列的[媒体查询](/zh-CN/docs/CSS/Media_queries)，并负责处理当媒体查询在其 document 上发生变化时向监听器进行通知的发送。
+一个 `MediaQueryList` 对象在一个 {{DOMxRef("document")}} 上维持着一系列的[媒体查询](/zh-CN/docs/CSS/Media_queries)，并负责处理当媒体查询在其 document 上发生变化时向监听器进行通知的发送。
 
 如果你需要以编程方式来检测一个 document 上的媒体查询的值的变化，这个 `MediaQueryList` 对象使得通过观察其 document 而检测它的媒体查询的值的变化成为可能，而不是周期性地对这些媒体查询的值进行检查。
 
@@ -69,5 +69,5 @@ void removeListener(
 
 - [CSS 媒体查询](/zh-CN/docs/CSS/Media_queries)
 - [通过代码使用媒体查询](/zh-CN/docs/DOM/Using_media_queries_from_code)
-- {{ DOMxRef("window.matchMedia()") }}
-- {{ DOMxRef("MediaQueryListListener") }}
+- {{DOMxRef("window.matchMedia()")}}
+- {{DOMxRef("MediaQueryListListener")}}
