@@ -1,14 +1,6 @@
 ---
 title: Array.from()
 slug: Web/JavaScript/Reference/Global_Objects/Array/from
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Referencia
-  - Vector
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/from
 ---
 
