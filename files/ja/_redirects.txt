@@ -3279,8 +3279,6 @@
 /ja/docs/Web/API/FileSystemEntrySync	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/File_Handle_API	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/FormDataEntryValue	/ja/docs/conflicting/Web/API/FormData
-/ja/docs/Web/API/Frame_Timing_API	/ja/docs/orphaned/Web/API/Frame_Timing_API
-/ja/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API	/ja/docs/orphaned/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API
 /ja/docs/Web/API/Geolocation.clearWatch	/ja/docs/Web/API/Geolocation/clearWatch
 /ja/docs/Web/API/Geolocation.getCurrentPosition	/ja/docs/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/Geolocation.watchPosition	/ja/docs/Web/API/Geolocation/watchPosition
@@ -3509,7 +3507,6 @@
 /ja/docs/Web/API/Notification/onerror	/ja/docs/Web/API/Notification/error_event
 /ja/docs/Web/API/Notification/onshow	/ja/docs/Web/API/Notification/show_event
 /ja/docs/Web/API/Performance/onresourcetimingbufferfull	/ja/docs/Web/API/Performance/resourcetimingbufferfull_event
-/ja/docs/Web/API/PerformanceFrameTiming	/ja/docs/orphaned/Web/API/PerformanceFrameTiming
 /ja/docs/Web/API/PermissionStatus/onchange	/ja/docs/Web/API/PermissionStatus/change_event
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
