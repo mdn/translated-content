@@ -1,6 +1,8 @@
 ---
 title: 交差オブザーバー API
 slug: Web/API/Intersection_Observer_API
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
 
 {{DefaultAPISidebar("Intersection Observer API")}}
@@ -78,7 +80,7 @@ observer.observe(target);
 
 ```js
 let callback = (entries, observer) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     // それぞれのエントリーは、観測された 1 つの対象要素の交差状態の変化を示している。
     //   entry.boundingClientRect
     //   entry.intersectionRatio
@@ -99,7 +101,7 @@ let callback = (entries, observer) => {
 
 ### 交差の計算方法
 
-交差オブザーバー API によって考慮される領域はすべて矩形です。不規則に整形された要素は、要素全体を囲む最小の矩形で占有しているとみなされます。同様に、要素の可視部分が矩形ではない場合、要素が交差する矩形は要素の可視部分全体を含む最小の矩形であると解釈されます。
+交差オブザーバー API によって考慮される領域はすべて矩形です。不規則に整形された要素は、要素全体を囲む最小の矩形で占有しているとみなされます。同様に、要素の可視部分が矩形ではない場合、要素が交差する矩形は要素の可視部分全体を含む最小の矩形であると見なされます。
 
 {{domxref("IntersectionObserverEntry")}} オブジェクトによって提供される様々なプロパティがどのように交差を表現しているかを知るともっと役に立つでしょう。
 
@@ -129,7 +131,7 @@ let callback = (entries, observer) => {
 
 閾値の仕組みを感じ取るには、下のボックスをスクロールして見てください。その中にある各色のボックスには四隅全てにパーセント値が表示されています。コンテナーをスクロールする時にこれらのパーセント値が変化することが分かります。各ボックスには異なる閾値が設定されています。
 
-- 最初のボックスは可視点の各パーセント値がセットされています。つまり{{domxref("IntersectionObserver.thresholds")}} の配列は `[0.00, 0.01, 0.02, ..., 0.99, 1.00]` となります。
+- 最初のボックスは可視点の各パーセント値がセットされています。つまり{{domxref("IntersectionObserver.thresholds")}} の配列は `[0.00, 0.01, 0.02, /*…,*/ 0.99, 1.00]` となります。
 - 2 つ目のボックスには単一の閾値が、 50% の位置にあります。
 - 3 つ目のボックスは可視率が 10% 毎の閾値があります (0%, 10%, 20%...)
 - 最後のボックスの閾値は 25% 毎です。
@@ -146,8 +148,7 @@ let callback = (entries, observer) => {
 
 <main>
   <div class="contents">
-    <div class="wrapper">
-    </div>
+    <div class="wrapper"></div>
   </div>
 </main>
 ```
@@ -256,7 +257,7 @@ startup = () => {
 
   for (let i=0; i<4; i++) {
     let template = document.querySelector("#boxTemplate").content.cloneNode(true);
-    let boxID = "box" + (i+1);
+    let boxID = `box${i + 1}`;
     template.querySelector(".sampleBox").id = boxID;
     wrapper.appendChild(document.importNode(template, true));
 
@@ -264,7 +265,7 @@ startup = () => {
 
     observerOptions.threshold = thresholdSets[i];
     observers[i] = new IntersectionObserver(intersectionCallback, observerOptions);
-    observers[i].observe(document.querySelector("#" + boxID));
+    observers[i].observe(document.querySelector(`#${boxID}`));
   }
 
   // 開始位置までスクロール
@@ -276,7 +277,7 @@ startup = () => {
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
     let box = entry.target;
-    let visiblePct = (Math.floor(entry.intersectionRatio * 100)) + "%";
+    let visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
 
     box.querySelector(".topLeft").innerHTML = visiblePct;
     box.querySelector(".topRight").innerHTML = visiblePct;
@@ -296,7 +297,7 @@ startup();
 
 1. ターゲット要素の境界矩形（つまり、要素を構成するすべてのコンポーネントの境界ボックスを完全に囲む最小の矩形）は、ターゲットに対して {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} を呼び出すことによって取得されます。これは、交差する矩形の最大の大きさです。残りの手順では、交差しない部分を削除します。
 2. ターゲットの直接の親ブロックから始まり、外側に向かって移動し、それぞれの包含ブロックのクリッピングが（存在すれば）交差する長方形に適用されます。ブロックのクリッピングは、 2 つのブロックの交差と、 {{cssxref("overflow")}} プロパティで（存在すれば）指定されたクリッピングモードに基づいて決定されます。 `overflow` に `visible` 以外を設定すると、クリッピングが行われます。
-3. 包含する要素の1つがネストされた閲覧コンテキストのルートである場合 ({{HTMLElement("iframe")}} に含まれる文書など)、交差する矩形は含まれているコンテキストのビューポートで切り取られ、コンテナー群を通して上方に再帰的にコンテナーの包含ブロックを続けます。ですから、最上位の `<iframe>` に到達したら、交差矩形はフレームのビューポートに切り取られ、フレームの親要素が次のブロックとなり、交差ルートに向けて再帰が行われます。
+3. 包含する要素の1つがネストされた閲覧コンテキストのルートである場合（{{HTMLElement("iframe")}} に含まれる文書など）、交差する矩形は含まれているコンテキストのビューポートで切り取られ、コンテナー群を通して上方に再帰的にコンテナーの包含ブロックを続けます。ですから、最上位の `<iframe>` に到達したら、交差矩形はフレームのビューポートに切り取られ、フレームの親要素が次のブロックとなり、交差ルートに向けて再帰が行われます。
 4. 上方への再帰が交差ルートに達すると、結果の矩形が交差ルートの座標空間に対応付けられます。
 5. 結果の矩形はそれから[ルート交差矩形](#root-intersection-rectangle)と交差することで更新されます。
 6. この矩形は、最終的に、ターゲットの {{domxref("document")}} の座標空間に対応付けられます。
@@ -310,8 +311,8 @@ startup();
 以下のコードスニペットでは、要素がルートと交差していない状態から 75% 以上交差する状態に遷移した回数をカウントするコールバックを示しています。しきい値 0.0 （既定値）の場合、コールバックは[およそ](https://www.w3.org/TR/intersection-observer/#dom-intersectionobserverentry-isintersecting) {{domxref("IntersectionObserverEntry.isIntersecting", "isIntersecting")}} の論理値が遷移した時に呼び出されます。このスニペットでは、まず遷移が正の値であることを確認し、次に {{domxref("IntersectionObserverEntry.intersectionRatio", "intersectionRatio")}} が 75% 以上かどうかを判断し、その場合はカウンターをインクリメントしています。
 
 ```js
-intersectionCallback(entries) => {
-  entries.forEach(entry => {
+const intersectionCallback = (entries) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       let elem = entry.target;
 
@@ -340,9 +341,7 @@ intersectionCallback(entries) => {
 
 ```html
 <div id="box">
-  <div class="vertical">
-    Welcome to <strong>The Box!</strong>
-  </div>
+  <div class="vertical">Welcome to <strong>The Box!</strong></div>
 </div>
 ```
 
@@ -352,7 +351,7 @@ intersectionCallback(entries) => {
 
 ```css
 #box {
-  background-color: rgba(40, 40, 190, 255);
+  background-color: rgba(40, 40, 190, 1);
   border: 4px solid rgb(20, 20, 120);
   transition: background-color 1s, border 1s;
   width: 350px;
@@ -413,7 +412,7 @@ window.addEventListener("load", (event) => {
 - `decreasingColor`
   - : 同様に、可視率が減少していく時に適用する色を定義する文字列です。
 
-{{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} を呼び出して{{domxref("Window/load_event", "load")}} イベントの待ち受けを開始します。ページの読み込みが完了すると、{{domxref("Document.querySelector", "querySelector()")}} を使用して ID が `"box"` 要素への参照を取得し、 `createObserver()` メソッドを呼び出して交差オブザーバーの設定とインストール処理を開始します。
+{{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} を呼び出して {{domxref("Window/load_event", "load")}} イベントの待ち受けを開始します。ページの読み込みが完了すると、{{domxref("Document.querySelector", "querySelector()")}} を使用して ID が `"box"` 要素への参照を取得し、 `createObserver()` メソッドを呼び出して交差オブザーバーの設定とインストール処理を開始します。
 
 #### 交差オブザーバーの作成
 
@@ -574,10 +573,10 @@ function handleIntersect(entries, observer) {
 
 ## ブラウザーの互換性
 
-{{Compat("api.IntersectionObserver")}}
+{{Compat}}
 
 ## 関連情報
 
 - [交差オブザーバーのポリフィル](https://github.com/w3c/IntersectionObserver)
 - [交差オブザーバー API を使用したタイミング要素の可視性](/ja/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
-- {{domxref("IntersectionObserver")}} と {{domxref("IntersectionObserverEntry")}}
+- {{domxref("IntersectionObserver")}} オヨビ {{domxref("IntersectionObserverEntry")}}
