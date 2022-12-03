@@ -1,11 +1,6 @@
 ---
 title: CSS Tutorials
 slug: Web/CSS/Tutorials
-tags:
-  - CSS
-  - Guía
-  - Tutorial
-translation_of: Web/CSS/Tutorials
 ---
 
 Aprender CSS puede ser una tarea desalentadora. Para ayudarte, hemos escrito numerosos **tutoriales acerca de CSS.** Algunos estan dirigidos a principiantes, y mientras que otros presentan complejas características para ser usadas por usuarios mas avanzados.

@@ -1,18 +1,6 @@
 ---
 title: Express Web Framework (Node.js/JavaScript)
 slug: Learn/Server-side/Express_Nodejs
-tags:
-  - Aplicaciones Web
-  - Aprendizaje
-  - Express
-  - Express.js
-  - JavaScript
-  - Node
-  - Novato
-  - Programación del lado del Servidor
-  - introducción
-  - programacion
-translation_of: Learn/Server-side/Express_Nodejs
 ---
 
 {{LearnSidebar}}

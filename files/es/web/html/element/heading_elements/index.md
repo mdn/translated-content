@@ -1,14 +1,6 @@
 ---
 title: Elementos títulos
 slug: Web/HTML/Element/Heading_Elements
-tags:
-  - HTML
-  - HTML:Elemento
-  - Referencia
-  - Secciones HTML
-  - Todas_las_Categorías
-  - Web
-translation_of: Web/HTML/Element/Heading_Elements
 original_slug: Web/HTML/Elemento/Elementos_títulos
 ---
 

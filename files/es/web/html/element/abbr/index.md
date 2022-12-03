@@ -1,11 +1,6 @@
 ---
 title: <abbr>
 slug: Web/HTML/Element/abbr
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/abbr
 original_slug: Web/HTML/Elemento/abbr
 ---
 
@@ -17,7 +12,7 @@ El **elemento HTML `<abbr>`** (_o Elemento de Abreviación HTML_) representa una
 <p>I do <abbr title="Hypertext Markup Language">HTML</abbr></p>
 ```
 
-El artículo [Cómo marcar abreviaciones y hacerlas entendibles](/en-US/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable) es una guía para aprender a usar `<abbr>` y elementos relacionados.
+El artículo [Cómo marcar abreviaciones y hacerlas entendibles](/es/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable) es una guía para aprender a usar `<abbr>` y elementos relacionados.
 
 | Interfaz DOM                                                               | {{domxref("HTMLElement")}}                                                                                                                                                                                         |
 | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,5 +46,5 @@ El propósito de este elemento es puramente para la conveniencia del autor y por
 
 ## Ver también
 
-- [Utilizando el elemento \<abbr>](/en-US/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable)
+- [Utilizando el elemento \<abbr>](/es/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable)
 - Otros elementos de nivel semántico de texto: {{HTMLElement("a")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.

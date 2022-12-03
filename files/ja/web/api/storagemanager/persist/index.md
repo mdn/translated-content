@@ -35,9 +35,7 @@ if (navigator.storage && navigator.storage.persist)
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                         | コメント |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('Storage','#dom-storagemanager-persist','persist')}} | {{Spec2('Storage')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -169,11 +169,7 @@ This section defines and explains terms used in the File and Directory Entries A
 
 ## Specifications
 
-| Specification                            | Status                               | Comment               |
-| ---------------------------------------- | ------------------------------------ | --------------------- |
-| {{SpecName('File System API')}} | {{Spec2('File System API')}} | Draft of proposed API |
-
-This API has no official W3C or WHATWG specification.
+{{Specifications}}
 
 ## Browser compatibility
 

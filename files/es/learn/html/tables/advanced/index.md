@@ -1,7 +1,6 @@
 ---
 title: Funciones avanzadas de las tablas HTML y accesibilidad
 slug: Learn/HTML/Tables/Advanced
-translation_of: Learn/HTML/Tables/Advanced
 original_slug: Learn/HTML/Tablas/Funciones_avanzadas_de_las_tablas_HTML_y_accesibilidad
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: Criptografía
 slug: Glossary/Cryptography
-tags:
-  - Criptografía
-  - Glosario
-  - Seguridad
-  - privacidad
-translation_of: Glossary/Cryptography
 original_slug: Glossary/Criptografía
 ---
 
@@ -18,4 +12,4 @@ Criptografía, o criptología, es la ciencia que estudia como codificar y transm
 
 - [Criptografía](https://es.wikipedia.org/wiki/Criptografía) en Wikipedia
 - {{glossary("Cryptanalysis")}}
-- [Tutorial de seguridad de la información](/en-US/docs/Web/Security/Information_Security_Basics)
+- [Tutorial de seguridad de la información](/es/docs/Web/Security/Information_Security_Basics)

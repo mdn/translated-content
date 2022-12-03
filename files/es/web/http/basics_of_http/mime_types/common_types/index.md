@@ -1,18 +1,6 @@
 ---
 title: Lista completa de tipos MIME
 slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-tags:
-  - Archivos
-  - Audio
-  - HTTP
-  - MIME
-  - Referencia
-  - Texto
-  - Tipos
-  - Tipos MIME
-  - Tipos de archivo
-  - Video
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ---
 
 {{HTTPSidebar}}

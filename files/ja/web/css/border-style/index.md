@@ -77,7 +77,7 @@ border-style: unset;
     - `double`
       - : 2 本の直線を表示し、幅の合計は {{cssxref("border-width")}} で定義したピクセル数になります。
     - `groove`
-      - :  凹んだように見える境界線を表示します。 `ridge` の逆です。
+      - : 凹んだように見える境界線を表示します。 `ridge` の逆です。
     - `ridge`
       - : 出っ張ったように見える境界線を表示します。 `groove` の逆です。
     - `inset`

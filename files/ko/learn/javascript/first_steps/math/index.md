@@ -2,6 +2,7 @@
 title: 자바스크립트의 기본적인 연산 - 숫자와 연산자
 slug: Learn/JavaScript/First_steps/Math
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 이 장은 자바스크립트의 연산에 대해 다룹니다. 능숙하게 숫자를 다루기 위해 어떻게 {{Glossary("Operator","operators")}} 와 그 외 기능을 사용하는지 알아봅니다.
@@ -23,7 +24,7 @@ slug: Learn/JavaScript/First_steps/Math
 
 ## 모두가 수학을 좋아합니다
 
-좋아요, 아닐수도 있습니다. 일부는 좋아하겠죠. 몇몇 사람들은 구구단을 배울 때부터 싫어했을 겁니다. 그리고 몇몇은 이 사이 어딘가 있겠죠. 그러나 누구도 수학이 삶을 살아가는데 필수적 요소라는건 부정할 수 없을겁니다. 우리가 자바스크립트(혹은 다른 프로그래밍 언어)를 배울때 특히 그렇습니다.  우리가 하는 일의 상당 부분은 수치형 데이터를 처리하고, 값을 계산하거나 하는 일에 의지합니다.
+좋아요, 아닐수도 있습니다. 일부는 좋아하겠죠. 몇몇 사람들은 구구단을 배울 때부터 싫어했을 겁니다. 그리고 몇몇은 이 사이 어딘가 있겠죠. 그러나 누구도 수학이 삶을 살아가는데 필수적 요소라는건 부정할 수 없을겁니다. 우리가 자바스크립트(혹은 다른 프로그래밍 언어)를 배울때 특히 그렇습니다. 우리가 하는 일의 상당 부분은 수치형 데이터를 처리하고, 값을 계산하거나 하는 일에 의지합니다.
 
 이 장은 당장 알아야 하는 부분만 다룹니다.
 
@@ -38,7 +39,7 @@ slug: Learn/JavaScript/First_steps/Math
 자바스크립트는 심지어 다른 숫자 타입을 지원합니다. 10진수는 10을 기준으로 합니다. (숫자 0\~9을 쓴다는 뜻입니다.), 하지만 자바스크립트는 아래와 같은 데이터 타입을 지원합니다.
 
 - **2진수** — 10진수를 0과 1를 이용해 나타내는 데이터 타입입니다.
-- **8진수** —  10진수를 0부터 7까지의 수를 이용해 나타내는 데이터 타입입니다.
+- **8진수** — 10진수를 0부터 7까지의 수를 이용해 나타내는 데이터 타입입니다.
 - **16진수** — 10진수를 0부터 15까지의 수를 이용해 나타내는 데이터 타입입니다.(1\~10, A\~F) . [CSS의 색상](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values)을 지정할 때 쉽게 볼 수 있습니다.
 
 **어려워서 힘들다고 느끼기 전에, 잠시 멈추세요!** 시작하기 위해서 우리는 이제부터 10진수만 사용하도록 하겠습니다. 다른 유형에 대해 생각할 필요가 없습니다.
@@ -66,7 +67,7 @@ slug: Learn/JavaScript/First_steps/Math
     typeof myFloat;
     ```
 
-    `"number"` 는 정수와 실수인 경우에 나옵니다. — 이것들은 정수와 실수가 다른 데이터 타입일 때 보다 다루기 쉽게 해줍니다.  그리고 다른 데이터 타입일 때 다른 방법으로 다뤄야만 합니다. 호우\~!
+    `"number"` 는 정수와 실수인 경우에 나옵니다. — 이것들은 정수와 실수가 다른 데이터 타입일 때 보다 다루기 쉽게 해줍니다. 그리고 다른 데이터 타입일 때 다른 방법으로 다뤄야만 합니다. 호우\~!
 
 ## 산술 연산자
 
@@ -118,7 +119,7 @@ slug: Learn/JavaScript/First_steps/Math
   </tbody>
 </table>
 
-<div class="note"><p><strong>팁</strong>:  연산에 관계된 수를 피연산자라고 부릅니다.<br>참고 - {{Glossary("Operand", "operands")}}.</p></div>
+> **팁:** 연산에 관계된 수를 피연산자라고 부릅니다. 참고 - {{Glossary("Operand", "operands")}}.
 
 아직 수학을 공부할 필요는 없습니다. 하지만 우리는 문법 확인을 해야합니다. 아래의 명령어들을 [developer tools JavaScript console](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 에 입력해주세요.
 
@@ -161,7 +162,7 @@ As a human being, you may read this as _"50 plus 10 equals 60"_, then _"8 plus 2
 
 But the browser does _"10 divided by 8 equals 1.25"_, then _"50 plus 1.25 plus 2 equals 53.25"_.
 
-This is because of **operator precedence** — some operators will be applied before others when calculating the result of a sum (referred to as an expression, in programming).  Operator precedence in JavaScript is the same as is taught in math classes in school — Multiply and divide are always done first, then add and subtract (the sum is always evaluated from left to right).
+This is because of **operator precedence** — some operators will be applied before others when calculating the result of a sum (referred to as an expression, in programming). Operator precedence in JavaScript is the same as is taught in math classes in school — Multiply and divide are always done first, then add and subtract (the sum is always evaluated from left to right).
 
 If you want to override operator precedence, you can put parentheses round the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:
 
@@ -175,7 +176,7 @@ Try it and see.
 
 ## Increment and decrement operators
 
-Sometimes you'll want to repeatedly add or subtract one to/from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement(`--`) operators. We used `++` in our  "Guess the number" game back in our [first splash into JavaScript](/ko/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
+Sometimes you'll want to repeatedly add or subtract one to/from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement(`--`) operators. We used `++` in our "Guess the number" game back in our [first splash into JavaScript](/ko/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
 
 ```js
 guessCount++;
@@ -357,7 +358,7 @@ function updateBtn() {
 
 **[Open in new window](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html)**
 
-You can see the equality operator being used just inside the `updateBtn()` function. In this case, we are not testing if two mathemetical expressions have the same value — we are testing whether the text content of a button contains a certain string — but it is still the same principle at work. If the button is currently saying "Start machine" when it is pressed, we change its label to  "Stop machine", and update the label as appropriate. If the button is currently saying "Stop machine" when it is pressed, we swap the display back again.
+You can see the equality operator being used just inside the `updateBtn()` function. In this case, we are not testing if two mathemetical expressions have the same value — we are testing whether the text content of a button contains a certain string — but it is still the same principle at work. If the button is currently saying "Start machine" when it is pressed, we change its label to "Stop machine", and update the label as appropriate. If the button is currently saying "Stop machine" when it is pressed, we swap the display back again.
 
 > **Note:** Such a control that swaps between two states is generally referred to as a **toggle**. It toggles between one state and another — light on, light off, etc.
 

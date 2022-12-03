@@ -175,7 +175,7 @@ video::cue(b) {
 }
 ```
 
-Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`.  De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Element/b) auront la couleur `"peachpuff"`.
+Avec ce fragment CSS, tous les sous-titres des éléments vidéo utilisent un dégradé linéaire de gris comme arrière-plan et une couleur de premier plan `"papayawhip"`. De plus, les textes mis en gras avec l'élément [`<b>`](/fr/docs/Web/HTML/Element/b) auront la couleur `"peachpuff"`.
 
 Le fragment de HTML suivant s'occupe quant à lui de gérer l'affichage du média.
 

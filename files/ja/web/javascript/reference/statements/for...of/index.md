@@ -298,9 +298,7 @@ for (const i of iterable) {
 
 ## 仕様
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'for...of statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -28,7 +28,7 @@ objectURL = URL.createObjectURL(object);
 
 ## 例
 
-[オブジェクト URL で画像を表示](/ja/docs/Web/API/File/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)を参照してください。
+[オブジェクト URL で画像を表示](/ja/docs/Web/API/File_API/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)を参照してください。
 
 ## 使用上のメモ
 
@@ -46,10 +46,7 @@ objectURL = URL.createObjectURL(object);
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                                             | 備考                                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('File API', '#dfn-createObjectURL', 'createObjectURL()')}}         | {{Spec2('File API')}}                     | 初回定義                                                                                                                                                      |
-| {{SpecName('Media Source Extensions', '#dom-url-createobjecturl', 'URL')}} | {{Spec2('Media Source Extensions')}} | MediaSource 拡張 Older versions of this specification used `createObjectURL()` for {{domxref("MediaStream")}} objects; this is no longer supported. |
+{{Specifications}}
 
 ## ブラウザーの対応
 
@@ -57,8 +54,8 @@ objectURL = URL.createObjectURL(object);
 
 ## 関連情報
 
-- [Web アプリケーションからファイルを扱う](/ja/docs/Web/API/File/Using_files_from_web_applications)
-- [オブジェクト URL で画像を表示](/ja/docs/Web/API/File/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
+- [オブジェクト URL で画像を表示](/ja/docs/Web/API/File_API/Using_files_from_web_applications#例_オブジェクト_url_で画像を表示)
 - {{domxref("URL.revokeObjectURL()")}}
 - {{domxref("HTMLMediaElement.srcObject")}}
 - {{domxref("FileReader.readAsDataURL()")}}

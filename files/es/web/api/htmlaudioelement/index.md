@@ -1,12 +1,6 @@
 ---
 title: HTMLAudioElement
 slug: Web/API/HTMLAudioElement
-tags:
-  - DOM
-  - HTML
-  - Media
-  - para_revisar
-translation_of: Web/API/HTMLAudioElement
 ---
 
 {{APIRef("HTML DOM")}}

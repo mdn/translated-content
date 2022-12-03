@@ -61,7 +61,7 @@ Une [prothèse d'émulation pour les Trusted Types](https://github.com/w3c/webap
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.trusted-types")}}
+{{Compat}}
 
 ## Voir aussi
 

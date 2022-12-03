@@ -77,9 +77,7 @@ rtf.formatToParts(100, "day");
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | ------ | ---------- |
-| {{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}} |        |            |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

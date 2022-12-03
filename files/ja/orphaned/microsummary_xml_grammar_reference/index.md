@@ -8,11 +8,11 @@ original_slug: Microsummary_XML_grammar_reference
 
 マイクロサマリジェネレータとは、ウェブページから特定の情報を抜き出し、そのページの内容に基づいてそのタイトルが変わるブックマークとして概要を表示するための方法を記述した XML 文書のことです。
 
-この記事では各要素とその属性について説明しつつ、マイクロサマリジェネレータの組み立てに使用する XML の文法に関する詳細情報を提供します。マイクロサマリの作成方法についての入門記事は [マイクロサマリの作成](ja/Creating_a_Microsummary) です。
+この記事では各要素とその属性について説明しつつ、マイクロサマリジェネレータの組み立てに使用する XML の文法に関する詳細情報を提供します。マイクロサマリの作成方法についての入門記事は [マイクロサマリの作成](/ja/Creating_a_Microsummary) です。
 
 ## 例
 
-[マイクロサマリの作成](ja/Creating_a_Microsummary) のチュートリアルで作成したマイクロサマリジェネレータは次のものです。
+[マイクロサマリの作成](/ja/Creating_a_Microsummary) のチュートリアルで作成したマイクロサマリジェネレータは次のものです。
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -79,7 +79,7 @@ _なし。_
 - `<stylesheet>` または `<transform>`（必須）
   - : 変換を行う XSLT スタイルシート。
 
-各 [XSLT](ja/XSLT) について、`<stylesheet>` あるいは `<transform>` タグのどちらかを用いたスタイルシート子要素を指定します。これらはどちらも同じ機能を果たします。
+各 [XSLT](/ja/XSLT) について、`<stylesheet>` あるいは `<transform>` タグのどちらかを用いたスタイルシート子要素を指定します。これらはどちらも同じ機能を果たします。
 
 > **メモ:** \<template> 要素は必ずマイクロサマリ名前空間 (`http://www.mozilla.org/microsummaries/0.1`) 内になければなりませんが、その `<stylesheet>`/`<transform>` 子要素は必ず XSLT 名前空間 (`http://www.w3.org/1999/XSL/Transform`) 内になければなりません。
 
@@ -117,7 +117,7 @@ _なし。_
 
 > **メモ:** マッチさせたい URL をただ含んでいるだけの URL にマッチしてしまわないようにするためにも、ページの URL の先頭にマッチさせたい正規表現はキャレット (^) から始めなければなりません。例えば、`http://www\.example\.com/` という正規表現は `http://www.example.com/` という URL にも `http://www.evil.com/http://www.example.com/` という URL にもマッチします。しかし、`^http://www\.example\.com/` という正規表現は前者の URL にしかマッチしません。
 
-ジェネレータにとって妥当な正規表現の構文の詳細については [Core_JavaScript_1.5_Reference:Global_Objects:RegExp](ja/Core_JavaScript_1.5_Reference/Global_Objects/RegExp) のリファレンスを参照してください。また、[マイクロサマリジェネレータ用正規表現の作成](ja/Creating_regular_expressions_for_a_microsummary_generator) では URL にマッチする正規表現の書き方を一歩一歩解説しています。
+ジェネレータにとって妥当な正規表現の構文の詳細については [Core_JavaScript_1.5_Reference:Global_Objects:RegExp](/ja/Core_JavaScript_1.5_Reference/Global_Objects/RegExp) のリファレンスを参照してください。また、[マイクロサマリジェネレータ用正規表現の作成](/ja/Creating_regular_expressions_for_a_microsummary_generator) では URL にマッチする正規表現の書き方を一歩一歩解説しています。
 
 ## `<include>` 要素
 
@@ -181,5 +181,5 @@ _なし。_
 
 ## 関連項目
 
-- [マイクロサマリの作成](ja/Creating_a_Microsummary)
-- [XSLT](ja/XSLT)
+- [マイクロサマリの作成](/ja/Creating_a_Microsummary)
+- [XSLT](/ja/XSLT)

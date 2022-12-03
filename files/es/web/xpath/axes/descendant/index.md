@@ -1,7 +1,6 @@
 ---
 title: descendant
 slug: Web/XPath/Axes/descendant
-translation_of: Web/XPath/Axes/descendant
 original_slug: Web/XPath/Ejes/descendant
 ---
 

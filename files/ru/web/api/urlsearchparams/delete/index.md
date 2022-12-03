@@ -5,7 +5,7 @@ translation_of: Web/API/URLSearchParams/delete
 ---
 {{ApiRef("URL API")}}
 
-Метод **`delete()` **интерфейса {{domxref("URLSearchParams")}} удаляет все указанные параметры и все связанные с ним значения из списка найденных параметров.
+Метод **`delete()`** интерфейса {{domxref("URLSearchParams")}} удаляет все указанные параметры и все связанные с ним значения из списка найденных параметров.
 
 {{availableinworkers}}
 

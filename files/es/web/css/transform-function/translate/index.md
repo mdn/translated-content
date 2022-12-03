@@ -1,13 +1,6 @@
 ---
 title: translate()
 slug: Web/CSS/transform-function/translate
-tags:
-  - CSS
-  - CSS Function
-  - CSS Transforms
-  - Función CSS
-  - Referencia
-translation_of: Web/CSS/transform-function/translate()
 original_slug: Web/CSS/transform-function/translate()
 ---
 
@@ -164,7 +157,7 @@ div {
 
 ## Compatibilidad con navegadores
 
-Ver el tipo de datos [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para la información de compatibilidad.
+Ver el tipo de datos [`<transform-function>`](/es/docs/Web/CSS/transform-function#Browser_compatibility) para la información de compatibilidad.
 
 ## Véase también
 

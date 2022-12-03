@@ -1,16 +1,6 @@
 ---
 title: <input type="hidden">
 slug: Web/HTML/Element/input/hidden
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML Form
-  - Input
-  - Tipos de Input
-  - formulários
-  - hidden
-translation_of: Web/HTML/Element/input/hidden
 original_slug: Web/HTML/Elemento/input/hidden
 ---
 
@@ -149,7 +139,7 @@ A pesar de que los hiden input no se pueden ver en absoluto, sus datos se siguen
 
 ## Compatibilidad con el navegador
 
-{{Compat("html.elements.input.input-hidden")}}
+{{Compat}}
 
 ## Ver también
 

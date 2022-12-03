@@ -14,7 +14,7 @@ L'une des particularités de la Web Audio API est qu'elle n'a pas de limites au 
 
 Afin d'expliquer l'utilisation de la Web Audio API, nous avons créé un certain nombre d'exemples qui seront étoffés au fur et à mesure. N'hésitez pas à en ajouter d'autres et à suggérer des améliorations !
 
-Notre premier exemple est [Voice-change-O-matic](http://github.com/mdn/voice-change-o-matic), une application web de déformation de la voix, qui permet de choisir différents effets et modes de visualisation. Cette application est rudimentaire, mais elle permet de montrer l'utilisation de plusieurs fonctionnalités de la Web Audio API combinées ensemble  ([run the Voice-change-O-matic live](http://mdn.github.io/voice-change-o-matic/)).
+Notre premier exemple est [Voice-change-O-matic](http://github.com/mdn/voice-change-o-matic), une application web de déformation de la voix, qui permet de choisir différents effets et modes de visualisation. Cette application est rudimentaire, mais elle permet de montrer l'utilisation de plusieurs fonctionnalités de la Web Audio API combinées ensemble ([run the Voice-change-O-matic live](http://mdn.github.io/voice-change-o-matic/)).
 
 ![Une boîte à rythme avec des contrôles pour la lecture, le volume et le pan](boombox.png)
 
@@ -28,7 +28,7 @@ Les noeuds audio sont reliés au niveau de leurs entrées et sorties. Ils formen
 
 1. Création d'un contexte audio
 2. Dans ce contexte, création des sources — telles que `<audio>`, oscillateur, flux
-3. Création des noeuds d'effets, tels que réverb, filtres biquad, balance,  compresseur
+3. Création des noeuds d'effets, tels que réverb, filtres biquad, balance, compresseur
 4. Choix final de la sortie audio, par exemple les enceintes du système
 5. Connection des sources aux effets, et des effets à la sortie.
 
@@ -99,7 +99,7 @@ Ce code créerait le graphe audio suivant :
 
 Il est possible de connecter plusieurs noeuds à un seul noeud, par exemple pour mixer plusieurs sources ensemble, et les passer dans un seul noeud d'effet, tel qu'un noeud de gain.
 
-> **Note :** Depuis Firefox 32, les outils de développement intégrés incluent un [éditeur audio](/fr/docs/Tools/Web_Audio_Editor),  très utile pour débugger les graphes audio.
+> **Note :** Depuis Firefox 32, les outils de développement intégrés incluent un [éditeur audio](/fr/docs/Tools/Web_Audio_Editor), très utile pour débugger les graphes audio.
 
 ### Lecture du son et définition du pitch
 
@@ -242,7 +242,7 @@ function genererCourbeDistortion(amount) {
 };
 ```
 
-L'exemple suivant, qui vient de [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic), connecte un noeud de  `distortion` à un graphe audio, puis applique l'algorithme de forme d'onde précédent au noeud de distortion :
+L'exemple suivant, qui vient de [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic), connecte un noeud de `distortion` à un graphe audio, puis applique l'algorithme de forme d'onde précédent au noeud de distortion :
 
 ```js
 source.connect(analyser);

@@ -61,9 +61,7 @@ if (!Uint8Array.prototype.fill) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.fill', 'TypedArray.prototype.fill')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -869,7 +869,7 @@
 /es/docs/Introducción_a_XML	/es/docs/Web/XML/XML_introduction
 /es/docs/Introduction_to_using_XPath_in_JavaScript	/es/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /es/docs/JavaScript	/es/docs/Web/JavaScript
-/es/docs/JavaScript/Acerca_de_JavaScript	/es/docs/Web/JavaScript/About_JavaScript
+/es/docs/JavaScript/Acerca_de_JavaScript	/es/docs/conflicting/Web/JavaScript
 /es/docs/JavaScript/Guide	/es/docs/Web/JavaScript/Guide
 /es/docs/JavaScript/Guide/AcercaDe	/es/docs/Web/JavaScript/Guide/Introduction
 /es/docs/JavaScript/Guide/Closures	/es/docs/Web/JavaScript/Closures
@@ -965,7 +965,7 @@
 /es/docs/JavaScript/Reference/Operators/in	/es/docs/Web/JavaScript/Reference/Operators/in
 /es/docs/JavaScript/Reference/Operators/this	/es/docs/Web/JavaScript/Reference/Operators/this
 /es/docs/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
-/es/docs/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
+/es/docs/JavaScript/Referencia/Acerca_de	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/JavaScript/Referencia/Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/JavaScript/Referencia/Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/JavaScript/Referencia/Funciones	/es/docs/Web/JavaScript/Reference/Functions
@@ -1215,7 +1215,7 @@
 /es/docs/MDN/Contribute/Guidelines/Content_blocks	/es/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN
 /es/docs/MDN/Contribute/Guidelines/Convenciones_y_definiciones	/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /es/docs/MDN/Contribute/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Writing_guidelines/Writing_style_guide
-/es/docs/MDN/Contribute/Herramientas	/es/docs/MDN/Tools
+/es/docs/MDN/Contribute/Herramientas	/es/docs/orphaned/MDN/Tools
 /es/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /es/docs/MDN/Contribute/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto/Tag
 /es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
@@ -1235,7 +1235,7 @@
 /es/docs/MDN/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Guidelines/Writing_style_guide	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Kuma	/es/docs/orphaned/MDN/Yari
-/es/docs/MDN/Kuma/Introduction_to_KumaScript	/es/docs/MDN/Tools/KumaScript
+/es/docs/MDN/Kuma/Introduction_to_KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
 /es/docs/MDN/Structures	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Compatibility_tables	/es/docs/MDN/Writing_guidelines/Page_structures
 /es/docs/MDN/Structures/Ejemplos_ejecutables	/es/docs/conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
@@ -1245,7 +1245,9 @@
 /es/docs/MDN/Structures/Macros/Other	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Macros/Otras	/es/docs/MDN/Writing_guidelines/Page_structures/Macros/Other
 /es/docs/MDN/Structures/Tablas_de_compatibilidad	/es/docs/MDN/Writing_guidelines/Page_structures
-/es/docs/MDN/Tools/Introduction_to_KumaScript	/es/docs/MDN/Tools/KumaScript
+/es/docs/MDN/Tools	/es/docs/orphaned/MDN/Tools
+/es/docs/MDN/Tools/Introduction_to_KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
+/es/docs/MDN/Tools/KumaScript	/es/docs/orphaned/MDN/Tools/KumaScript
 /es/docs/MDN/Yari	/es/docs/orphaned/MDN/Yari
 /es/docs/MDN_en_diez	/es/docs/MDN/At_ten
 /es/docs/Manipular_video_por_medio_de_canvas	/es/docs/Web/API/Canvas_API/Manipulating_video_using_canvas
@@ -1276,7 +1278,7 @@
 /es/docs/Referencia_DOM_de_Gecko:Ejemplos	/es/docs/Web/API/Document_Object_Model/Examples
 /es/docs/Referencia_DOM_de_Gecko:Introducción	/es/docs/Web/API/Document_Object_Model/Introduction
 /es/docs/Referencia_de_JavaScript_1.5	/es/docs/Web/JavaScript/Reference
-/es/docs/Referencia_de_JavaScript_1.5/Acerca_de	/es/docs/Web/JavaScript/Reference/About
+/es/docs/Referencia_de_JavaScript_1.5/Acerca_de	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/Referencia_de_JavaScript_1.5/Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Referencia_de_JavaScript_1.5/Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Referencia_de_JavaScript_1.5/Funciones	/es/docs/Web/JavaScript/Reference/Functions
@@ -1401,7 +1403,7 @@
 /es/docs/Referencia_de_JavaScript_1.5/Sentencias/try...catch	/es/docs/Web/JavaScript/Reference/Statements/try...catch
 /es/docs/Referencia_de_JavaScript_1.5/Sentencias/var	/es/docs/Web/JavaScript/Reference/Statements/var
 /es/docs/Referencia_de_JavaScript_1.5/Sentencias/while	/es/docs/Web/JavaScript/Reference/Statements/while
-/es/docs/Referencia_de_JavaScript_1.5:Acerca_de	/es/docs/Web/JavaScript/Reference/About
+/es/docs/Referencia_de_JavaScript_1.5:Acerca_de	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/Referencia_de_JavaScript_1.5:Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Referencia_de_JavaScript_1.5:Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Referencia_de_JavaScript_1.5:Funciones	/es/docs/Web/JavaScript/Reference/Functions
@@ -1880,6 +1882,7 @@
 /es/docs/Web/Guide/AJAX/Comunidad	/es/docs/Web/Guide/AJAX/Community
 /es/docs/Web/Guide/AJAX/Primeros_Pasos	/es/docs/Web/Guide/AJAX/Getting_Started
 /es/docs/Web/Guide/API/Vibration	/es/docs/Web/API/Vibration_API
+/es/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/conflicting/Web/API/WebRTC_API
 /es/docs/Web/Guide/CSS	/es/docs/Learn/CSS
 /es/docs/Web/Guide/HTML	/es/docs/Learn/HTML
 /es/docs/Web/Guide/HTML/Canvas_tutorial	/es/docs/Web/API/Canvas_API/Tutorial
@@ -2098,7 +2101,8 @@
 /es/docs/Web/HTTP/mecanismo_actualizacion_protocolo	/es/docs/Web/HTTP/Protocol_upgrade_mechanism
 /es/docs/Web/HTTP/recursos_y_especificaciones	/es/docs/Web/HTTP/Resources_and_specifications
 /es/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/es/docs/Web/JavaScript/Language_Overview
-/es/docs/Web/JavaScript/Acerca_de_JavaScript	/es/docs/Web/JavaScript/About_JavaScript
+/es/docs/Web/JavaScript/About_JavaScript	/es/docs/conflicting/Web/JavaScript
+/es/docs/Web/JavaScript/Acerca_de_JavaScript	/es/docs/conflicting/Web/JavaScript
 /es/docs/Web/JavaScript/Descripción_de_las_tecnologías_JavaScript	/es/docs/Web/JavaScript/JavaScript_technologies_overview
 /es/docs/Web/JavaScript/Gestion_de_Memoria	/es/docs/Web/JavaScript/Memory_Management
 /es/docs/Web/JavaScript/Guide/AcercaDe	/es/docs/Web/JavaScript/Guide/Introduction
@@ -2190,7 +2194,6 @@
 /es/docs/Web/JavaScript/Guide/Obsolete_Pages/Guía_JavaScript_1.5/Valores	/es/docs/Web/JavaScript/Guide/Grammar_and_types
 /es/docs/Web/JavaScript/Guide/Obsolete_Pages/Guía_JavaScript_1.5/Variables	/es/docs/Web/JavaScript/Guide/Grammar_and_types
 /es/docs/Web/JavaScript/Guide/Obsolete_Pages/Predefined_Functions	/en-US/docs/Web/JavaScript/Guide/Functions
-/es/docs/Web/JavaScript/Guide/Obsolete_Pages/The_Employee_Example	/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Aserciones	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 /es/docs/Web/JavaScript/Guide/Regular_Expressions/Cuantificadores	/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers
@@ -2206,6 +2209,7 @@
 /es/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/es/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /es/docs/Web/JavaScript/Language_Resources	/es/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview
 /es/docs/Web/JavaScript/Primeros_Pasos	/es/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+/es/docs/Web/JavaScript/Reference/About	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion	/es/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 /es/docs/Web/JavaScript/Reference/Errors/Indicador_regexp_no-val	/es/docs/Web/JavaScript/Reference/Errors/Bad_regexp_flag
 /es/docs/Web/JavaScript/Reference/Errors/Strict_y_parámetros_complejos	/es/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params
@@ -2224,7 +2228,7 @@
 /es/docs/Web/JavaScript/Reference/Global_Objects/null	/es/docs/Web/JavaScript/Reference/Operators/null
 /es/docs/Web/JavaScript/Reference/Statements/import.meta	/es/docs/Web/JavaScript/Reference/Operators/import.meta
 /es/docs/Web/JavaScript/Referencia	/es/docs/Web/JavaScript/Reference
-/es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/Web/JavaScript/Reference/About
+/es/docs/Web/JavaScript/Referencia/Acerca_de	/es/docs/conflicting/Web/JavaScript/Reference
 /es/docs/Web/JavaScript/Referencia/Características_Desaprobadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Referencia/Características_Despreciadas	/es/docs/web/javascript/reference/deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Referencia/Classes	/es/docs/Web/JavaScript/Reference/Classes
@@ -2730,7 +2734,7 @@
 /es/docs/WebGL	/es/docs/Web/API/WebGL_API
 /es/docs/WebRTC/Introduction	/es/docs/Web/API/WebRTC_API/Session_lifetime
 /es/docs/WebRTC/MediaStream_API	/es/docs/Web/API/Media_Capture_and_Streams_API
-/es/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/Web/Guide/API/WebRTC/Peer-to-peer_communications_with_WebRTC
+/es/docs/WebRTC/Peer-to-peer_communications_with_WebRTC	/es/docs/conflicting/Web/API/WebRTC_API
 /es/docs/WebRTC/Taking_webcam_photos	/es/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /es/docs/WebSockets-840092-dup	/es/docs/Web/API/WebSockets_API
 /es/docs/WebSockets-840092-dup/Escribiendo_servidor_WebSocket	/es/docs/Web/API/WebSockets_API/Writing_WebSocket_server

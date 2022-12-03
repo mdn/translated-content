@@ -39,9 +39,7 @@ var oMyBlob = new Blob(aFileParts, {type : 'text/html'}); // blob
 
 ## 仕様
 
-| 仕様書                                                                   | 状態                         | 備考     |
-| ------------------------------------------------------------------------ | ---------------------------- | -------- |
-| {{SpecName('File API', '#constructorBlob', 'Blob()')}} | {{Spec2('File API')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザの互換性
 

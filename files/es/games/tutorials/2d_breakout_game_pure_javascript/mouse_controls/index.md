@@ -1,7 +1,6 @@
 ---
 title: Controles del ratón
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Controles_raton
 ---
 

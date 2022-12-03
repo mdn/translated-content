@@ -81,9 +81,7 @@ Si bien este código funciona en los navegadores web, `f1()` producirá un `Refe
 
 ## Especificaciones
 
-| Especificación                                                                   |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-objects', 'Function')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

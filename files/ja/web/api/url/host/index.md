@@ -36,9 +36,7 @@ var result = url.host // "developer.mozilla.org:4097"
 
 ## 仕様
 
-| 仕様                                                             | 状態                 | コメント |
-| ---------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-host', 'URL.host')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

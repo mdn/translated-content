@@ -477,7 +477,7 @@ Dans React&nbsp;:
 ## Dans ce module
 
 - [Introduction aux <i lang="en">frameworks</i> côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Fonctionnalités principales des  <i lang="en">frameworks</i>](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [Fonctionnalités principales des <i lang="en">frameworks</i>](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
   - [Démarrer avec React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)

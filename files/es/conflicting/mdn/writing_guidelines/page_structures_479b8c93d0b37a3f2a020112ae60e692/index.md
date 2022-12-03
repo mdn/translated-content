@@ -1,8 +1,6 @@
 ---
 title: Ejemplos ejecutables
-slug: >-
-  conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
-translation_of: MDN/Structures/Live_samples
+slug: conflicting/MDN/Writing_guidelines/Page_structures_479b8c93d0b37a3f2a020112ae60e692
 original_slug: MDN/Structures/Live_samples
 ---
 
@@ -34,10 +32,10 @@ El sistema de ejemplos ejecutables tiene muchas opciones disponibles, trataremos
 
 Hay dos macros que puedes usar para desplegar ejemplos ejecutables:
 
-- [`EmbedLiveSample`](/en-US/docs/Template:EmbedLiveSample) despliega el ejemplo ejecutable en un frame embebido dentro de la misma página
-- [`LiveSampleLink`](/en-US/docs/Template:LiveSampleLink) crea un link que abre el ejemplo ejecutable en una página nueva
+- [`EmbedLiveSample`](/es/docs/Template:EmbedLiveSample) despliega el ejemplo ejecutable en un frame embebido dentro de la misma página
+- [`LiveSampleLink`](/es/docs/Template:LiveSampleLink) crea un link que abre el ejemplo ejecutable en una página nueva
 
-En muchos casos, tienes la posibilidad de agregar la macro [`EmbedLiveSample`](/en-US/docs/Template:EmbedLiveSample) o la [`LiveSampleLink`](/en-US/docs/Template:LiveSampleLink) con ¡poco o nada de trabajo adicional! Mientras el ejemplo pueda ser identificado por un ID de un header o esté en un bloque de contenido con un ID que puedas usar, simplemente agregar la macro será suficiente.
+En muchos casos, tienes la posibilidad de agregar la macro [`EmbedLiveSample`](/es/docs/Template:EmbedLiveSample) o la [`LiveSampleLink`](/es/docs/Template:LiveSampleLink) con ¡poco o nada de trabajo adicional! Mientras el ejemplo pueda ser identificado por un ID de un header o esté en un bloque de contenido con un ID que puedas usar, simplemente agregar la macro será suficiente.
 
 #### Macro EmbedLiveSample
 
@@ -150,7 +148,7 @@ MDN tiene montontes de ejemplos viejos que aun no usan el sistema de ejemplos ej
 
 - Empieza por darle un vistazo a esto [lista de páginas etiquetadas con "NeedsLiveSample"](/es/docs/tag/NeedsLiveSample). Estas son las páginas que los usuarios han marcadado como que necesitan actualizarse. Deberías agregar esta etiqueta tu mismo, si ves una página que necesita ser actualizada para usar ejemplos ejecutables pero no tienes tiempo de arreglarla enseguida.
 - Navega por ligas de documentación que es probable que incluyan ejemplos, como [JavaScript Guide](/es/docs/Web/JavaScript/Guide), [HTML documentation](/es/docs/Web/HTML), y [CSS reference](/es/docs/Web/CSS/Reference).
-- Busca término como "[example](/en-US/search?q=example)" o "[sample](/en-US/search?q=sample)" y revisar los resultados para páginas que actualizar.
+- Busca término como "[example](/es/search?q=example)" o "[sample](/es/search?q=sample)" y revisar los resultados para páginas que actualizar.
 
 ## Demo de ejemplo ejecutable
 

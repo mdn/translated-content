@@ -42,13 +42,11 @@ MediaRecorder.addEventListener('stop', function(event) { ... })
 
 ## 仕様
 
-| 仕様                                                                                                                     | 状態                                         | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-onstop", "MediaRecorder.onstop")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.onstop")}}
+{{Compat}}
 
 ## 関連情報
 

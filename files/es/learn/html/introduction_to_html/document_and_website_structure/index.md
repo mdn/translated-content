@@ -1,22 +1,6 @@
 ---
 title: Estructura web y documentación
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-tags:
-  - CodingScripting
-  - Composición
-  - Diseño
-  - Formato
-  - Guía
-  - HTML
-  - Presentación
-  - Principiante
-  - Sitio
-  - Sitio Web
-  - bloques
-  - pagina
-  - programar
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 original_slug: Learn/HTML/Introduccion_a_HTML/estructura
 ---
 

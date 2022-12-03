@@ -1,12 +1,6 @@
 ---
 title: Selectores de hermanos adyacentes
 slug: Web/CSS/Adjacent_sibling_combinator
-tags:
-  - CSS
-  - NeedsMobileBrowserCompatibility
-  - Referencia CSS
-  - Selectores
-translation_of: Web/CSS/Adjacent_sibling_combinator
 original_slug: Web/CSS/Selectores_hermanos_adyacentes
 ---
 

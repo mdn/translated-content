@@ -51,13 +51,11 @@ MediaRecorder.addEventListener('pause', function(event) { ... })
 
 ## 仕様
 
-| 仕様                                                                                                                         | 状態                                         | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-onpause", "MediaRecorder.onpause")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.onpause")}}
+{{Compat}}
 
 ## 関連情報
 

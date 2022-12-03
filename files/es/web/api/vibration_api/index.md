@@ -1,16 +1,6 @@
 ---
 title: Vibración API
 slug: Web/API/Vibration_API
-tags:
-  - API
-  - Firefox OS
-  - Mobile
-  - Principiante
-  - Vibración
-  - Vibrado
-  - Vibrar
-  - WebAPI
-translation_of: Web/API/Vibration_API
 original_slug: Web/Guide/API/Vibration
 ---
 

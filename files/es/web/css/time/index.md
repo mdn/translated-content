@@ -1,13 +1,6 @@
 ---
 title: <time>
 slug: Web/CSS/time
-tags:
-  - CSS
-  - Presentación
-  - Referencia
-  - Tipo de Dato CSS
-  - Web
-translation_of: Web/CSS/time
 ---
 
 {{CSSRef}}

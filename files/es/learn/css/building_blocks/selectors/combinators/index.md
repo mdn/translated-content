@@ -1,7 +1,6 @@
 ---
 title: Combinadores
 slug: Learn/CSS/Building_blocks/Selectors/Combinators
-translation_of: Learn/CSS/Building_blocks/Selectors/Combinators
 original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Combinadores
 ---
 

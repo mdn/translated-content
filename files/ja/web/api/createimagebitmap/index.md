@@ -72,13 +72,11 @@ image.src = 'sprites.png';
 
 ## 仕様
 
-| 仕様書                                                                                                                   | ステータス                       | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "webappapis.html#dom-createimagebitmap", "createImageBitmap")}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザの互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.createImageBitmap")}}
+{{Compat}}
 
 ## あわせて参照
 

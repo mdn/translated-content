@@ -155,7 +155,7 @@ p2.then(function (value) {
 
 ## Compatibilidad de navegadores
 
-{{Compat("javascript.builtins.promise.catch")}}
+{{Compat}}
 
 ## Vea también
 

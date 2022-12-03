@@ -36,7 +36,7 @@ l10n:
 
 - 非標準のプロパティ {{cssxref("-moz-math-display")}} および {{cssxref("-moz-window-shadow")}} は、ウェブコンテンツで使用できなくなりました ({{bug(1207002)}}、{{bug(1211040)}}、{{bug(1212607)}})。
 - {{cssxref("font-style")}} で、`oblique` と `italic` の両方を使用できる場合は、両者を区別するようになりました ({{bug(543715)}})。
-- 未対応であるにもかかわらず {{cssxref("marks")}}、{{cssxref("orphans")}}、{{cssxref("page")}}、{{cssxref("size")}}、{{cssxref("widows")}} の各プロパティがパースされ、{{cssxref("@supports")}} で誤って対応済みであると報告していました。この問題を修正してパースしないように、また対応済みとしないようになりました ({{bug(1215702)}})。
+- 未対応であるにもかかわらず {{cssxref("@page/marks")}}、{{cssxref("orphans")}}、{{cssxref("page")}}、{{cssxref("size")}}、{{cssxref("widows")}} の各プロパティがパースされ、{{cssxref("@supports")}} で誤って対応済みであると報告していました。この問題を修正してパースしないように、また対応済みとしないようになりました ({{bug(1215702)}})。
 - 内部で使用する値 `-moz-mac-unified-toolbar` を、{{cssxref("appearance")}} プロパティで使用できる値から外しました ({{bug(1206468)}})。
 - いくつかの `-webkit` 接頭辞付きプロパティおよび値を、ウェブ互換性のために対応しました。設定項目 `layout.css.prefixes.webkit` で制御しており、既定値は `false` です ({{bug(837211)}})。
 
@@ -105,7 +105,7 @@ l10n:
 - 廃止した `DocumentType.internalSubset` プロパティを削除しました ({{bug(801545)}})。
 - 既存のサイトとの互換性を確保するため {{domxref("Window.orientation")}} プロパティ、{{domxref("Window.onorientationchange")}} プロパティおよび {{domxref("Window.orientationchange_event", "orientationchange")}} イベントを実装しました ({{bug(920734)}})。
 - 明示的に全画面表示を要求した {{HTMLElement("iframe")}} は、暗黙的に全画面表示が解除されないようになりました ({{bug(1187801)}})。
-- イベント {{domxref("Element/mouseover_event", "mouseover")}}, {{domxref("Element/mouseout_event", "mouseout")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mouseleave_event", "mouseleave")}}, {{domxref("HTMLElement/pointermove_event", "pointermove")}}, {{domxref("HTMLElement/pointerover_event", "pointerover")}}, {{domxref("HTMLElement/pointerout_event", "pointerout")}}, {{domxref("HTMLElement/pointerenter_event", "pointerenter")}}, {{domxref("HTMLElement/pointerleave_event", "pointerleave")}} が、無効化したフォーム要素で発生するようになりました ({{bug(218093)}})。
+- イベント {{domxref("Element/mouseover_event", "mouseover")}}, {{domxref("Element/mouseout_event", "mouseout")}}, {{domxref("Element/mouseenter_event", "mouseenter")}}, {{domxref("Element/mouseleave_event", "mouseleave")}}, {{domxref("Element/pointermove_event", "pointermove")}}, {{domxref("Element/pointerover_event", "pointerover")}}, {{domxref("Element/pointerout_event", "pointerout")}}, {{domxref("Element/pointerenter_event", "pointerenter")}}, {{domxref("Element/pointerleave_event", "pointerleave")}} が、無効化したフォーム要素で発生するようになりました ({{bug(218093)}})。
 - 相互運用性を高めるため、{{domxref("Element.webkitMatchesSelector()")}} メソッドを追加しました ({{bug(1216193)}})。
 - 仕様書に合致させるため、{{domxref("Document.createAttribute()")}} は入力内容を小文字に変換するようになりました ({{bug(1176313)}})。
 - {{domxref("Window.open()")}} の非標準機能である `dialog` はウェブコンテンツで使用できなくなりました。拡張機能や chrome 特権を持つコードでは引き続き使用可能です ({{bug(1095236)}})。
@@ -125,7 +125,7 @@ l10n:
 
 #### IndexedDB
 
-- {{domxref("IDBIndex.getAll()")}} および {{domxref("IDBIndex.getAllKeys()")}} を、既定で有効にしました ({{bug(1196841)}})。
+- {{domxref("IDBIndex.getAll()")}} および {{domxref("IDBIndex.getAllKeys()")}}、それに反対側の {{domxref("IDBObjectStore")}} を既定で有効にしました ({{bug(1196841)}})。
 
 #### サービスワーカー
 
@@ -149,7 +149,7 @@ l10n:
   - `mozRTCIceCandidate` が {{domxref("RTCIceCandidate")}} になりました。
   - `mozRTCSessionDescription` が {{domxref("RTCSessionDescription")}} になりました。
 
-- {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}}、{{domxref("RTCDataChannel.onbufferedamountlow")}} プロパティおよび {{event("bufferedamountlow")}} イベントを実装しました ({{bug(1178091)}})。
+- {{domxref("RTCDataChannel.bufferedAmountLowThreshold")}} プロパティおよび {{domxref("RTCDataChannel.bufferedamountlow_event", "bufferedamountlow")}} イベントを実装しました ({{bug(1178091)}})。
 - {{domxref("RTCPeerConnection.canTrickleIceCandidates")}} 属性を追加して、非標準メソッド {{domxref("RTCPeerConnection.updateIce()")}} を削除しました ({{bug(1209744)}})。
 - {{domxref("MediaStream")}} インターフェイスで {{domxref("MediaStream.addTrack()")}} および {{domxref("MediaStream.removeTrack()")}} メソッドに対応しました ({{bug(1103188)}})。
 - {{domxref("MediaStream.MediaStream", "MediaStream()")}} コンストラクタを実装しました ({{bug(1070216)}})。

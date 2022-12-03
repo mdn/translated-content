@@ -1,11 +1,6 @@
 ---
 title: Bloques de contenido
 slug: MDN/Writing_guidelines/Howto/Markdown_in_MDN
-tags:
-  - MDN
-  - Meta
-translation_of: MDN/Guidelines/CSS_style_guide
-translation_of_original: MDN/Structures/Content_blocks
 original_slug: MDN/Contribute/Markdown_in_MDN
 ---
 
@@ -20,9 +15,9 @@ Permite tener un par de tarjetas cercanas entre sí para llamar a contenidos esp
 - Refetencia CSS
   - Una [referencia exhaustiva](/es/docs/Web/CSS/Reference) para _desarrolladores Web expertos_ describiendo cada propiedad y concepto de CSS.
 - Tutorial CSS
-  - Una [introduccion paso a paso](/en-US/docs/Learn/CSS/First_steps) para ayudar a los _principiantes_. Presenta todos los fundamentos necesarios.
+  - Una [introduccion paso a paso](/es/docs/Learn/CSS/First_steps) para ayudar a los _principiantes_. Presenta todos los fundamentos necesarios.
 - CSS3 Demos
-  - A [collection of demos](/en-US/docs/Web/Demos) showing the _latest CSS technologies_ in action: a boost for the creativity.
+  - A [collection of demos](/es/docs/Web/Demos) showing the _latest CSS technologies_ in action: a boost for the creativity.
 
 ## Dos columnas
 
@@ -34,7 +29,7 @@ Columna 2
 
 ## Columnas con la misma altura
 
-Se usa en la página de destino de [Firefox OS](/en-US/Firefox_OS) para envolver las columnas que deberían tener el mismo alto. Clase de CSS: `.equalColumnHeights` (L 25 - 38 in CustomCSS).
+Se usa en la página de destino de [Firefox OS](/es/Firefox_OS) para envolver las columnas que deberían tener el mismo alto. Clase de CSS: `.equalColumnHeights` (L 25 - 38 in CustomCSS).
 
 <div class="zone-callout">Un Texo<br>y nueva linea<br></div>
 

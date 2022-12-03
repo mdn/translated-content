@@ -1,11 +1,6 @@
 ---
 title: Entidad
 slug: Glossary/Entity
-tags:
-  - Caractères
-  - HTML
-  - entidad
-translation_of: Glossary/Entity
 original_slug: Glossary/Entidad
 ---
 

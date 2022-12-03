@@ -5,7 +5,7 @@ slug: Web/API/IDBDatabase/close
 
 {{ APIRef("IDBDatabase") }}
 
-{{domxref("IDBDatabase")}}インターフェイスの`close()は、`ただちに戻り、別スレッドで接続を閉じます。
+{{domxref("IDBDatabase")}} インターフェイスの **`close()`** は、ただちに戻り、別スレッドで接続を閉じます。
 
 実際には、この接続を使用していて生成されたすべてのトランザクションが完了するまで、接続は閉じられません。一度このメソッドが呼び出されたら、この接続では、新しいトランザクションを生成することはできません。終了処理がペンディングされている場合は、トランザクションを生成するメソッドは、例外を発生させます。
 
@@ -15,48 +15,46 @@ slug: Web/API/IDBDatabase/close
 db.close();
 ```
 
-### 戻り値
+### 返値
 
-Void。
+なし。
 
 ## 例
 
 ```js
-// Let us open our database
+// 我々のデータベースを開きましょう。
   var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
-  // these two event handlers act on the database being opened successfully, or not
+  // これら 2 個のイベントハンドラーは､データベースが正常に開かれたか､失敗した時に動作します｡
   DBOpenRequest.onerror = function(event) {
-    note.innerHTML += '<li>Error loading database.</li>';
+    note.innerHTML += '<li>データベースの読み込みに失敗しました｡</li>';
   };
 
   DBOpenRequest.onsuccess = function(event) {
-    note.innerHTML += '<li>Database initialised.</li>';
+    note.innerHTML += '<li>データベースを初期化しました｡</li>';
 
-    // store the result of opening the database in the db variable.
+    // データベースを開いた結果を変数 db に保存します｡
     db = DBOpenRequest.result;
 
-    // now let's close the database again!
+    // さあ、データベースを再び閉じましょう！
     db.close();
   }
 ```
 
-## 仕様
+## 仕様書
 
-| Specification                                                                                | Status                       | Comment |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------- |
-| {{SpecName('IndexedDB', '#widl-IDBDatabase-close-void', 'close()')}} | {{Spec2('IndexedDB')}} |         |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.IDBDatabase.close")}}
 
 ## 関連項目
 
-- [Using IndexedDB](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)
+- [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- トランザクションの開始 : {{domxref("IDBDatabase")}}
+- トランザクションの使用 : {{domxref("IDBTransaction")}}
+- キーの範囲の設定 : {{domxref("IDBKeyRange")}}
+- データの取得と変更 : {{domxref("IDBObjectStore")}}
+- カーソルの使用 : {{domxref("IDBCursor")}}
+- リファレンス例 : [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([動く例を見る](https://mdn.github.io/dom-examples/to-do-notifications/))

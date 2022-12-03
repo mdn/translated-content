@@ -3,6 +3,7 @@ title: CSS 기초
 slug: Learn/Getting_started_with_the_web/CSS_basics
 original_slug: Learn/Getting_started_with_the_web/CSS_기본
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 CSS (Cascading Style Sheets)는 웹페이지를 꾸미려고 작성하는 코드입니다. _CSS 기초_ 에서 여러분이 처음 시작하며 필요한 내용을 익히도록 도와드립니다. 저희는 다음과 같은 질문에 관한 답을 드리겠습니다. 어떻게 하면 글자색을 검정이나 빨갛게 할 수 있을까? 어떻게 하면 콘텐츠를 화면의 이런 저런 곳에 보이게 할 수 있을까? 어떻게 하면 배경 이미지와 색상들로 웹페이지를 꾸밀 수 있을까?

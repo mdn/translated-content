@@ -1,14 +1,6 @@
 ---
 title: 'HTML el atributo: accept'
 slug: Web/HTML/Attributes/accept
-tags:
-  - Accept
-  - Archivo
-  - Entrada
-  - Input
-  - Referencia
-  - atributo
-translation_of: Web/HTML/Attributes/accept
 original_slug: Web/HTML/Atributos/accept
 ---
 
@@ -146,7 +138,7 @@ div {
 
 ## Compatibilidad del navegador
 
-{{Compat("html.elements.attribute.accept")}}
+{{Compat}}
 
 ## Ve también
 

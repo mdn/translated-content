@@ -1,7 +1,6 @@
 ---
 title: Web Audio API
 slug: Web/API/Web_Audio_API
-translation_of: Web/API/Web_Audio_API
 original_slug: Web_Audio_API
 ---
 

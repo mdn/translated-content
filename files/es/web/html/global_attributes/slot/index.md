@@ -1,11 +1,6 @@
 ---
 title: slot
 slug: Web/HTML/Global_attributes/slot
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/slot
 original_slug: Web/HTML/Atributos_Globales/slot
 ---
 

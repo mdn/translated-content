@@ -1,15 +1,6 @@
 ---
 title: IDBObjectStore.add
 slug: Web/API/IDBObjectStore/add
-tags:
-  - API
-  - Add
-  - Almacenamiento
-  - Base de datos
-  - IDBObjectStore
-  - IndexedDB
-  - Referencia
-translation_of: Web/API/IDBObjectStore/add
 ---
 
 {{ APIRef("IDBObjectStore") }}

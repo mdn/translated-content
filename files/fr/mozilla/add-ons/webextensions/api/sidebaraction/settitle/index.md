@@ -19,11 +19,11 @@ Définit le titre de la barre latérale. Le titre est affiché n'importe où dan
 
 ## Types de titres
 
-Votre extension doit spécifier un titre pour la barre latérale dans la clé de manifest  [sidebar_action](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle le _"titre du manifest"_. Si vous ne spécifiez pas le titre du manifest, il sera par défaut le nom de l'extension
+Votre extension doit spécifier un titre pour la barre latérale dans la clé de manifest [sidebar_action](/fr/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle le _"titre du manifest"_. Si vous ne spécifiez pas le titre du manifest, il sera par défaut le nom de l'extension
 
 Si vous définissez un nouveau titre à l'aide de `setTitle()`, et incluez l'option `tabId` le titre est défini uniquement pour l'onglet donné. Ce titre est appelé _"titre spécifique à l'onglet"_.
 
-Si vous définissez un nouveau titre à l'aide de `setTitle()`,  et incluez l'option `windowId`, alors le titre est défini uniquement pour la fenêtre donnée. Ce titre est appelé _"titre spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas de titre spécifique à un onglet.
+Si vous définissez un nouveau titre à l'aide de `setTitle()`, et incluez l'option `windowId`, alors le titre est défini uniquement pour la fenêtre donnée. Ce titre est appelé _"titre spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas de titre spécifique à un onglet.
 
 Si vous définissez un nouveau titre à l'aide de `setTitle()`, et omettre les options `tabId` et `windowId`, alors ceci définit le _"titre global"_. Le titre global apparaîtra alors dans tous les onglets qui n'ont pas de titre spécifique à un onglet et dont la fenêtre n'a pas de titre spécifique à une fenêtre.
 

@@ -253,9 +253,7 @@ let x = 1;
 
 ## 仕様
 
-| 仕様                                                                                                                 |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Let and Const Declarations')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

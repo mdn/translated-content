@@ -1,25 +1,6 @@
 ---
 title: Página de bienvenida de Mozilla
 slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
-tags:
-  - Codificación de Secuencia de comandos
-  - CodingScripting
-  - Evaluación
-  - HTML
-  - Imagenes
-  - Inserción
-  - JPEG
-  - Medidas
-  - Multimedia
-  - PNG
-  - Principiante
-  - Video
-  - iframe
-  - img
-  - receptivo
-  - src
-  - srcset
-translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}

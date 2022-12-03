@@ -1,17 +1,6 @@
 ---
 title: Estructura de una aplicación web progresiva
 slug: Web/Progressive_web_apps/App_structure
-tags:
-  - Estructura
-  - Intérprete de la aplicación
-  - PWAs
-  - Servicio workers
-  - Streams
-  - Transmisiones
-  - aplicaciones web progresivas
-  - js13kGames
-  - progresiva
-translation_of: Web/Progressive_web_apps/App_structure
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}

@@ -324,7 +324,7 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
       </td>
       <td>
         <p>
-          Une classe de caractères.  Correspond à n'importe lequel des caractères entre crochets. Il est possible d'indiquer un intervalle de caractères en utilisant un tiret. Toutefois, si le tiret apparaît comme premier ou dernier caractère entre les crochets, il sera interprété littéralement.
+          Une classe de caractères. Correspond à n'importe lequel des caractères entre crochets. Il est possible d'indiquer un intervalle de caractères en utilisant un tiret. Toutefois, si le tiret apparaît comme premier ou dernier caractère entre les crochets, il sera interprété littéralement.
         </p>
         <p>
           Ainsi, <code>[abcd]</code> est équivalent à <code>[a-d]</code> et trouve "b" comme correspondance dans "bonnet", et "c" comme correspondance dans "côté".
@@ -437,7 +437,7 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
       </td>
       <td>
         <p>
-          Correspond à l'élément précédent "x" 0 ou plusieurs fois. Ainsi, <code>/bo*/</code> correspondra à  "buuuuu" dans "Il a marqué un buuuuut" et à "b" dans "Un bateau gazouilla", mais à rien dans "Un fromage de chèvre".
+          Correspond à l'élément précédent "x" 0 ou plusieurs fois. Ainsi, <code>/bo*/</code> correspondra à "buuuuu" dans "Il a marqué un buuuuut" et à "b" dans "Un bateau gazouilla", mais à rien dans "Un fromage de chèvre".
         </p>
       </td>
     </tr>
@@ -549,6 +549,6 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
     Voir aussi [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
 
 - ValeurPropriétéUnicode
-  - : L'une des valeurs indiquées dans la section "Values". De nombreuses valeurs ont des alias ou des noms raccourcis (par exemple, la valeur `Decimal_Number`, de la propriété `General_Category`, peut être écrite `Nd`, `digit`, ou encore `Decimal_Number`). Pour la plupart des valeurs, la partie *`NomPropriétéUnicode`* et le signe égal peuvent être omis. Si *`NomPropriétéUnicode`* est indiqué, la valeur doit correspondre au type de propriété indiquée.
+  - : L'une des valeurs indiquées dans la section "Values". De nombreuses valeurs ont des alias ou des noms raccourcis (par exemple, la valeur `Decimal_Number`, de la propriété `General_Category`, peut être écrite `Nd`, `digit`, ou encore `Decimal_Number`). Pour la plupart des valeurs, la partie `NomPropriétéUnicode` et le signe égal peuvent être omis. Si `NomPropriétéUnicode` est indiqué, la valeur doit correspondre au type de propriété indiquée.
 
 > **Note :** Il existe de nombreuses propriétés et valeurs disponibles. Il serait laborieux de les lister ici de façon exhaustive.

@@ -20,7 +20,7 @@ var domException = new DOMException(message, name);
 - `message` {{optional_inline}}
   - : 对异常的描述。如果不存在，使用空字符串 `''` .
 - `name` {{optional_inline}}
-  - : 返回一个 {{domxref("DOMString")}} 包含与 [error constant](Web/API/DOMException#Error_constants) 错误相关的字符串常数之一。
+  - : 返回一个 {{domxref("DOMString")}} 包含与 [error constant](/zh-CN/docs/Web/API/DOMException#Error_constants) 错误相关的字符串常数之一。
 
 ### 返回值
 

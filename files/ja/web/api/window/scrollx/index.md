@@ -53,9 +53,7 @@ var y = (window.pageYOffset !== undefined)
 
 ## 仕様
 
-| 仕様                                                                                         | 状況                             | 備考 |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{ SpecName('CSSOM View', '#dom-window-scrollx', 'window.scrollX') }} | {{ Spec2('CSSOM View') }} |      |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

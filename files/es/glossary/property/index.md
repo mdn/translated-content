@@ -1,10 +1,6 @@
 ---
 title: Propiedad
 slug: Glossary/property
-tags:
-  - Desambiguación
-  - Glosario
-translation_of: Glossary/property
 original_slug: Glossary/propiedad
 ---
 

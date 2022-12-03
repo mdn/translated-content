@@ -188,9 +188,7 @@ Nota para los editores de MDN: no intentes agregar ejemplos divertidos con emoji
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-characterclass', 'RegExp: Clases de caracteres')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -20,10 +20,8 @@ performanceData = window.performance;
 
 ## 仕様
 
-| 仕様                                                                                                         | ステータス                       | コメント                |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------- |
-| {{SpecName('Highres Time', '#the-performance-interface', 'window.performance')}} | {{Spec2('Highres Time')}} | Defines `now()` method. |
+{{Specifications}}
 
 ## ブラウザの互換性
 
-{{Compat("api.Window.performance")}}
+{{Compat}}

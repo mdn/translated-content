@@ -7,7 +7,7 @@ slug: Web/API/Performance_Timeline
 
 The **Performance Timeline** API defines extensions to the {{domxref("Performance")}} interface to support client-side latency measurements within applications. The extensions provide interfaces to retrieve {{domxref("PerformanceEntry","performance entry metrics", '', 'true')}} based on specific filter criteria. The standard also includes interfaces that allow an application to define [_performance observer_](#performance_observers) callbacks that are notified when specific performance events are added to the browser's _performance timeline_.
 
-This document provides an overview of the standard's interfaces. For more details about the interfaces, see the reference pages and [Using Performance Timeline](/Web/API/Performance_Timeline/Using_Performance_Timeline).
+This document provides an overview of the standard's interfaces. For more details about the interfaces, see the reference pages and [Using Performance Timeline](/zh-CN/docs/Web/API/Performance_Timeline/Using_Performance_Timeline).
 
 ## Performance extensions
 
@@ -51,9 +51,9 @@ Performance observers were added to the `Level 2` version of the standard and we
 
 A summary of the interfaces' implementation status is provided below, including a link to more detailed information.
 
-- Performance interface extensions: As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
-- PerformanceEntry: As shown in the {{domxref("PerformanceEntry")}} interface's [Browser Compatibility](/Web/API/PerformanceEntry#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
-- Performance Observers {{experimental_inline}}: As shown in the {{domxref("PerformanceObserver")}} interface's [Browser Compatibility](/Web/API/PerformanceObserver#Browser_compatibility) table, this interface has no shipping implementations.
+- Performance interface extensions: As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/zh-CN/docs/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
+- PerformanceEntry: As shown in the {{domxref("PerformanceEntry")}} interface's [Browser Compatibility](/zh-CN/docs/Web/API/PerformanceEntry#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
+- Performance Observers {{experimental_inline}}: As shown in the {{domxref("PerformanceObserver")}} interface's [Browser Compatibility](/zh-CN/docs/Web/API/PerformanceObserver#Browser_compatibility) table, this interface has no shipping implementations.
 
 To test your browser's support for these interfaces, run the [`perf-api-support`](http://mdn.github.io/web-performance/perf-api-support.html) application.
 

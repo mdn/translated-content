@@ -1019,9 +1019,4 @@ slug: Web/Events
 
 ## 仕様書
 
-| 仕様書                                                                                                            | 状態                           | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#event-handler-attributes', 'event handlers')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'webappapis.html#event-handler-attributes', 'event handlers')}}     | {{Spec2('HTML5 W3C')}}     |         |
-
-<section id="Quick_links"><ul><li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></ul>{{ListSubpages}}</section>
+{{Specifications}}

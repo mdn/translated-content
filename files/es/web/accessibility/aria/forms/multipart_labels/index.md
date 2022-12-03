@@ -1,19 +1,7 @@
 ---
-title: >-
-  Etiquetas complejas: Utilizando ARIA para etiquetas con campos embebidos
-  dentro de ellos
+title: 'Etiquetas complejas: Utilizando ARIA para etiquetas con campos embebidos dentro
+  de ellos'
 slug: Web/Accessibility/ARIA/forms/Multipart_labels
-tags:
-  - ARIA
-  - Accesibilidad
-  - Firefox
-  - Guía
-  - HTML
-  - NeedsContent
-  - aria-labelledby
-  - etiqueta
-  - label
-translation_of: Web/Accessibility/ARIA/forms/Multipart_labels
 original_slug: Web/Accessibility/ARIA/forms/Etiquetas_complejas
 ---
 

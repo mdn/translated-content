@@ -1,12 +1,6 @@
 ---
 title: ':-moz-focusring'
 slug: Web/CSS/:-moz-focusring
-tags:
-  - CSS
-  - NeedsLiveSample
-  - No estándar(2)
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-focusring
 ---
 
 {{Non-standard_header}}{{CSSRef}}

@@ -1,17 +1,6 @@
 ---
 title: display-mode
 slug: Web/CSS/@media/display-mode
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Referencia
-  - características de medio
-  - consultas de medio
-  - display
-  - display-mode
-  - media feature
-translation_of: Web/CSS/@media/display-mode
 ---
 
 {{cssref}}

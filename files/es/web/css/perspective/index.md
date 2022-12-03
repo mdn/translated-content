@@ -1,15 +1,6 @@
 ---
 title: perspective
 slug: Web/CSS/perspective
-tags:
-  - CSS
-  - Capas
-  - Propiedad CSS
-  - Referencia
-  - Transformaciones CSS
-  - Web
-  - graficos
-translation_of: Web/CSS/perspective
 ---
 
 {{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}

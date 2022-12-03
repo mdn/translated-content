@@ -31,9 +31,7 @@ xrReferenceSpace = refSpace.getOffsetReferenceSpace(
 
 ## 仕様
 
-| 仕様                                                                                                                 | 状態                     | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("WebXR","#dom-xrrigidtransform-orientation","XRRigidTransform.orientation")}} | {{Spec2("WebXR")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

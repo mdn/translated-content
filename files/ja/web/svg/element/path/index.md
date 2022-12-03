@@ -57,11 +57,7 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様                                                                                 | 状態                         | コメント   |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName("SVG Paths", "#PathElement", "&lt;path&gt;")}}         | {{Spec2("SVG Paths")}} |            |
-| {{SpecName("SVG2", "paths.html#PathElement", "&lt;path&gt;")}} | {{Spec2("SVG2")}}     |            |
-| {{SpecName("SVG1.1", "paths.html#PathElement", "&lt;path&gt;")}} | {{Spec2("SVG1.1")}}     | 最初の定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

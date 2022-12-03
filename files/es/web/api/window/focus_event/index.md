@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onfocus
 slug: Web/API/Window/focus_event
-translation_of: Web/API/GlobalEventHandlers/onfocus
 original_slug: Web/API/GlobalEventHandlers/onfocus
 ---
 
@@ -29,4 +28,4 @@ A diferencia de MSIE, en que casi toda clase de elemento puede recibir el evento
 
 ## Compatibilidad con los Navegadores
 
-{{Compat("api.GlobalEventHandlers.onfocus")}}
+{{Compat}}

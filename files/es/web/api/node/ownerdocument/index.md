@@ -1,13 +1,6 @@
 ---
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
-tags:
-  - API
-  - DOM
-  - Nodo
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Node/ownerDocument
 ---
 
 {{APIRef("DOM")}}

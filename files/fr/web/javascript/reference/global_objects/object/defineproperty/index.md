@@ -71,7 +71,7 @@ Un descripteur d'accesseur possède les propriétés optionnelles suivantes :
 
 Si un descripteur ne possède aucune des clés `value`, `writable`, `get` ou `set`, il est considéré comme un descripteur de données. Si un descripteur possède à la fois une propriété `value` ou `writable` et une propriété `get` ou `set`, un exception sera déclenchée.
 
-Il faut garder à l'esprit que ces options ne sont pas nécessairement les descripteurs des propriétés propres. Elles peuvent être héritées et faire partie de la chaine des prototypes. Afin de s'assurer que les valeur par défaut sont préservées, on peut d'abord geler le prototype {{jsxref("Object.prototype")}}, définir toutes les options explicitement ou faire pointer la propriété {{jsxref("Object.prototype.__proto__", "__proto__")}} vers {{jsxref("null")}} (par exemple avec {{jsxref("Object.create","Object.create(null)")}}).
+Il faut garder à l'esprit que ces options ne sont pas nécessairement les descripteurs des propriétés propres. Elles peuvent être héritées et faire partie de la chaine des prototypes. Afin de s'assurer que les valeur par défaut sont préservées, on peut d'abord geler le prototype {{jsxref("Object.prototype")}}, définir toutes les options explicitement ou faire pointer la propriété [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) vers {{jsxref("null")}} (par exemple avec {{jsxref("Object.create","Object.create(null)")}}).
 
 ```js
 var obj = {};
@@ -164,7 +164,7 @@ Object.defineProperty(o, "conflit", { value: 0x9f91102,
 
 ### Modifier une propriété existante
 
-Quand une propriété existe d'ores et déjà pour un objet, `Object.defineProperty()` tentera de modifier la propriété pour qu'elle corresponde aux valeurs indiquées dans le descripteur et à la configuration de l'objet courant. Si l'ancien descripteur avait `configurable` à  `false` (la propriété est dite non-configurable), aucun attribut, à l'exception de `writable`, ne peut être changé. Dans ce cas, il n'est pas possible de changer entre les types de descripteur.
+Quand une propriété existe d'ores et déjà pour un objet, `Object.defineProperty()` tentera de modifier la propriété pour qu'elle corresponde aux valeurs indiquées dans le descripteur et à la configuration de l'objet courant. Si l'ancien descripteur avait `configurable` à `false` (la propriété est dite non-configurable), aucun attribut, à l'exception de `writable`, ne peut être changé. Dans ce cas, il n'est pas possible de changer entre les types de descripteur.
 
 Si une propriété est non-configurable, son attribut `writable` ne peut être mis qu'à `false`.
 

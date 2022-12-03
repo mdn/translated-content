@@ -1,12 +1,6 @@
 ---
 title: ':in-range'
 slug: Web/CSS/:in-range
-tags:
-  - CSS
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:in-range
 ---
 
 {{CSSRef}}

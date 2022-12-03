@@ -1,7 +1,6 @@
 ---
 title: Uso de la Web Speech API
 slug: Web/API/Web_Speech_API/Using_the_Web_Speech_API
-translation_of: Web/API/Web_Speech_API/Using_the_Web_Speech_API
 original_slug: Web/API/Web_Speech_API/Uso_de_la_Web_Speech_API
 ---
 

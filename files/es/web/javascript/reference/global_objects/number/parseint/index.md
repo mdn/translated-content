@@ -52,11 +52,9 @@ if (Number.parseInt === undefined) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                            |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.parseint', 'Number.parseInt')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

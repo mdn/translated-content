@@ -1,11 +1,6 @@
 ---
 title: span
 slug: Web/HTML/Element/span
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/span
 original_slug: Web/HTML/Elemento/span
 ---
 

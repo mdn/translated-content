@@ -1,10 +1,6 @@
 ---
 title: Valor especificado
 slug: Web/CSS/specified_value
-tags:
-  - CSS
-  - Referencia CSS
-translation_of: Web/CSS/specified_value
 ---
 
 {{CSSRef}}

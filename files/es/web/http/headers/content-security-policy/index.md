@@ -1,12 +1,6 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
 
 {{HTTPSidebar}}
@@ -190,7 +184,7 @@ See [Mozilla Web Security Guidelines](https://wiki.mozilla.org/Security/Guidelin
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.headers.csp.Content-Security-Policy")}}
+{{Compat}}
 
 ## Mirar tambien
 

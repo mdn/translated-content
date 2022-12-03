@@ -74,9 +74,7 @@ console.log(str.startsWith('Esa es la', 16)); // true
 
 ## Especificaciones
 
-| Especificación                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

@@ -1,15 +1,6 @@
 ---
 title: Visión General Cliente-Servidor
 slug: Learn/Server-side/First_steps/Client-Server_overview
-tags:
-  - Aprendizaje
-  - Codificación de scripts
-  - Guía
-  - Principiante
-  - Programación lado servidor
-  - Servidor
-  - introducción
-translation_of: Learn/Server-side/First_steps/Client-Server_overview
 original_slug: Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor
 ---
 

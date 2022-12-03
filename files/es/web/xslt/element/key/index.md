@@ -1,10 +1,6 @@
 ---
 title: key
 slug: Web/XSLT/Element/key
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/key
 original_slug: Web/XSLT/key
 ---
 

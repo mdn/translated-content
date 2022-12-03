@@ -1,11 +1,6 @@
 ---
 title: translateY()
 slug: Web/CSS/transform-function/translateY
-tags:
-  - Funciones CSS
-  - Referencia
-  - Transformaciones CSS
-translation_of: Web/CSS/transform-function/translateY()
 original_slug: Web/CSS/transform-function/translateY()
 ---
 
@@ -133,7 +128,7 @@ div {
 
 ## Compatibilidad de navegadores
 
-Por favor, véase el tipo [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para información de compatibilidad.
+Por favor, véase el tipo [`<transform-function>`](/es/docs/Web/CSS/transform-function#Browser_compatibility) para información de compatibilidad.
 
 ## Véase también
 

@@ -121,10 +121,4 @@ For compatibility reasons, the legacy {{cssxref("page-break-after")}} property s
 
 ## Browser compatibility
 
-### Support in multi-column layout
-
-{{Compat("css.properties.break-after.multicol_context")}}
-
-### Support in paged media
-
-{{Compat("css.properties.break-after.paged_context")}}
+{{Compat}}

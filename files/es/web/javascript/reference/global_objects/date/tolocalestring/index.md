@@ -137,12 +137,9 @@ For this reason you cannot expect to be able to compare the results of `toLocale
 
 When formatting large numbers of dates, it is better to create an {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}} property.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}         |
-| {{SpecName('ES Int Draft', '#sup-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

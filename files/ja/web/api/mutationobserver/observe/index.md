@@ -75,9 +75,7 @@ observer.observe(elementToObserve, {subtree: true, childList: true});
 
 ## 仕様
 
-| Specification                                                                                                            | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('DOM WHATWG', '#dom-mutationobserver-observe', 'MutationObserver.observe()')}} | {{ Spec2('DOM WHATWG') }} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

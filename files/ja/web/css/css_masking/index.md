@@ -34,7 +34,4 @@ slug: Web/CSS/CSS_Masking
 
 ## 仕様書
 
-| 仕様書                                                                    | 状態                       | 備考            |
-| -------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS Masks")}}                                                 | {{Spec2("CSS Masks")}} |                    |
-| {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}} | {{Spec2('SVG1.1')}}     | 初回定義 |
+{{Specifications}}

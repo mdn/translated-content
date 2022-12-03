@@ -1,13 +1,6 @@
 ---
 title: ':-moz-only-whitespace'
 slug: Web/CSS/:-moz-only-whitespace
-tags:
-  - CSS
-  - NeedsCompatTable
-  - No estandar
-  - Pseudo-clase
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-only-whitespace
 ---
 
 {{Non-standard_header}}{{CSSRef}}

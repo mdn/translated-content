@@ -1,16 +1,6 @@
 ---
 title: Uso de la API de WebVR
 slug: Web/API/WebVR_API/Using_the_WebVR_API
-tags:
-  - '1.1'
-  - API
-  - Canvas
-  - Realidad Virtual
-  - Tutorial
-  - VR
-  - WebGL
-  - WebVR
-translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 ---
 
 {{APIRef("WebVR API")}}

@@ -1,20 +1,6 @@
 ---
 title: Primeros pasos en la Web
 slug: Learn/Getting_started_with_the_web
-tags:
-  - CSS
-  - Diseño
-  - Guía
-  - HTML
-  - Index
-  - Novato
-  - Principiante
-  - edición
-  - editor
-  - l10n:priority
-  - teoria
-  - Índice
-translation_of: Learn/Getting_started_with_the_web
 ---
 
 {{LearnSidebar}}

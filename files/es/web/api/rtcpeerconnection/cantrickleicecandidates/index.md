@@ -1,7 +1,6 @@
 ---
 title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
-translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
 
 {{APIRef("WebRTC")}}

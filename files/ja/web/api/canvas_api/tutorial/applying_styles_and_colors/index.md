@@ -759,8 +759,10 @@ font` プロパティと `fillText` メソッドについては、次の章の [
 
 2 つの値が可能です。
 
-- **`"nonzero"`**: [非ゼロワインディングルール](https://en.wikipedia.org/wiki/Nonzero-rule)です。こちらが既定のルールです。
-- **`"evenodd"`**: [偶奇ワインディングルール](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)です。
+- `nonzero`
+  - : [非ゼロワインディングルール](https://en.wikipedia.org/wiki/Nonzero-rule)です。こちらが既定のルールです。
+- `evenodd`
+  - : [偶奇ワインディングルール](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)です。
 
 この例では `evenodd` ルールを使用しています。
 

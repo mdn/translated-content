@@ -1,12 +1,11 @@
 ---
 title: 'Tutorial de Django Parte 9: Trabajo con formularios'
 slug: Learn/Server-side/Django/Forms
-translation_of: Learn/Server-side/Django/Forms
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).
+En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web [LocalLibrary](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).
 
 <table>
   <tbody>

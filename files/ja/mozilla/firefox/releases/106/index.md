@@ -45,7 +45,7 @@ l10n:
 
 #### DOM
 
-- [`HTMLMetaElement.media`](/ja/docs/Web/API/HTMLMetaElement/media) プロパティをサポートしました。このプロパティは、`media` の値 (例:  `max-width: 600px`) に応じてさまざまなテーマカラーを設定できます。
+- [`HTMLMetaElement.media`](/ja/docs/Web/API/HTMLMetaElement/media) プロパティをサポートしました。このプロパティは、`media` の値 (例: `max-width: 600px`) に応じてさまざまなテーマカラーを設定できます。
   `media` プロパティを持つ meta 要素を使用すると、ブラウザーは指定したメディアクエリー向けのページまたは UI の色を設定するために、`theme-color` と合わせて `content` の値を使用できます ({{bug(1706179)}})。
 
 #### Media、WebRTC、Web Audio

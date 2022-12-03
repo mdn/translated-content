@@ -5,7 +5,7 @@ slug: Web/JavaScript
 
 {{JsSidebar}}
 
-**JavaScript** (**JS**) は軽量で、インタープリター型、あるいは[実行時](https://ja.wikipedia.org/wiki/%E5%AE%9F%E8%A1%8C%E6%99%82%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9)コンパイルされる、{{Glossary("First-class Function", "第一級関数")}}を備えたプログラミング言語です。ウェブページでよく使用されるスクリプト言語として知られ、[多くの非ブラウザー環境](https://ja.wikipedia.org/wiki/JavaScript#その他の環境での利用)、例えば {{Glossary("Node.js")}} や  [Apache CouchDB](https://couchdb.apache.org/) や [Adobe Acrobat](https://www.adobe.com/devnet/acrobat/javascript.html) などでも使用されています。 JavaScript は{{Glossary("Prototype-based programming", "プロトタイプベース")}}で、シングルスレッドで、動的型付けを持ち、そしてオブジェクト指向、命令型、宣言型 (関数プログラミングなど) といったスタイルをサポートするマルチパラダイムのスクリプト言語です。詳しくは [JavaScript について](/ja/docs/Web/JavaScript/About_JavaScript)をお読みください。
+**JavaScript** (**JS**) は軽量で、インタープリター型、あるいは[実行時](https://ja.wikipedia.org/wiki/%E5%AE%9F%E8%A1%8C%E6%99%82%E3%82%B3%E3%83%B3%E3%83%91%E3%82%A4%E3%83%A9)コンパイルされる、{{Glossary("First-class Function", "第一級関数")}}を備えたプログラミング言語です。ウェブページでよく使用されるスクリプト言語として知られ、[多くの非ブラウザー環境](https://ja.wikipedia.org/wiki/JavaScript#その他の環境での利用)、例えば {{Glossary("Node.js")}} や [Apache CouchDB](https://couchdb.apache.org/) や [Adobe Acrobat](https://www.adobe.com/devnet/acrobat/javascript.html) などでも使用されています。 JavaScript は{{Glossary("Prototype-based programming", "プロトタイプベース")}}で、シングルスレッドで、動的型付けを持ち、そしてオブジェクト指向、命令型、宣言型 (関数プログラミングなど) といったスタイルをサポートするマルチパラダイムのスクリプト言語です。詳しくは [JavaScript について](/ja/docs/Web/JavaScript/About_JavaScript)をお読みください。
 
 この章では JavaScript 言語自体について、すなわちウェブページや他のホスト環境に限定されないコアの部分に限定して解説しています。ウェブページ特有の {{Glossary("API")}} 群の情報を得たい場合は [Web API](/ja/docs/Web/API) と {{Glossary("DOM")}} を参照してください。
 

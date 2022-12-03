@@ -37,9 +37,7 @@ gainNode.connect(audioCtx.destination);
 
 ## 使用
 
-| Specification                                                                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioDestinationNode-maxChannelCount', 'maxChannelCount')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

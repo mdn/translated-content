@@ -3,6 +3,7 @@ title: RTCPeerConnection.setLocalDescription()
 slug: Web/API/RTCPeerConnection/setLocalDescription
 translation_of: Web/API/RTCPeerConnection/setLocalDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection.setLocalDescription()`** 메소드는 연결 인터페이스와 관련이 있는 로컬 설명 (local description)을 변경합니다. 로컬 설명은 미디어 형식을 포함하는 연결의 로컬 엔드에 대한 속성을 명시합니다.

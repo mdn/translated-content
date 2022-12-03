@@ -317,7 +317,7 @@ draw();
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## Veja também
 

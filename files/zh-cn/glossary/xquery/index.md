@@ -7,11 +7,5 @@ slug: Glossary/XQuery
 
 ## 了解更多
 
-### 基本信息
-
 - [Official website](https://www.w3.org/XML/Query/)
 - 维基百科上的[XQuery](https://zh.wikipedia.org/wiki/XQuery)
-
-### 技术参考
-
-- [Discussion about using XQuery from Firefox](/zh-CN/docs/XQuery)

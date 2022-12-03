@@ -1,12 +1,6 @@
 ---
 title: opacity
 slug: Web/CSS/opacity
-tags:
-  - CSS
-  - CSS Reference
-  - CSS3
-  - css3-color
-translation_of: Web/CSS/opacity
 ---
 
 {{ CSSRef() }}

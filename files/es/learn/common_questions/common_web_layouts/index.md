@@ -1,14 +1,6 @@
 ---
 title: ¿Qué contienen los diseños web comunes?
 slug: Learn/Common_questions/Common_web_layouts
-tags:
-  - CSS
-  - Común
-  - Diseño
-  - Diseño Común
-  - HTML
-  - Principiante
-translation_of: Learn/Common_questions/Common_web_layouts
 original_slug: Learn/Common_questions/diseños_web_comunes
 ---
 

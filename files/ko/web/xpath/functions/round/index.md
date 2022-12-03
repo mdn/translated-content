@@ -18,7 +18,7 @@ round(decimal )
 
 ### 인수
 
-- _`decimal`_
+- `decimal`
   - : 정수 처리(round)될 10진수.
 
 ### 반환
