@@ -24,7 +24,7 @@ slug: Web/API/Performance_API
 ## インターフェイス
 
 - {{domxref("EventCounts")}}
-  - :  {{domxref("performance.eventCounts")}} によって返される、イベント種別毎に発送されたイベント数を保持する読み取り専用のマップです。
+  - : {{domxref("performance.eventCounts")}} によって返される、イベント種別毎に発送されたイベント数を保持する読み取り専用のマップです。
 - {{domxref("LargestContentfulPaint")}}
   - : ビューポート内に表示される最大の画像またはテキストブロックのレンダリング時間を、ページの最初の読み込みを開始した時点から記録して測定します。
 - {{domxref("Performance")}}
