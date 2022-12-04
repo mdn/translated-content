@@ -39,8 +39,8 @@ DOM Level 0. Ne fait partie d'aucune spécification.
 
 ## Voir aussi
 
-- [Selection API](../Selection_API)
-- [`Selection`](../Selection)
-- [`Range`](../Range)
-- [`Document.getSelection()`](../Document/getSelection)
-- [`HTMLInputElement.setSelectionRange()`](../HTMLInputElement/setSelectionRange)
+- [Selection API](/fr/docs/Web/API/Selection)
+- {{domxref("Selection")}}
+- {{domxref("Range")}}
+- {{domxref("Document.getSelection()")}}
+- {{domxref("HTMLInputElement.setSelectionRange()")}}

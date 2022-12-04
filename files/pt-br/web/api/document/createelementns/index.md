@@ -74,6 +74,7 @@ Para criar um elemento sem especificar seu namespace URI, use o método [createE
 
 ## Veja também
 
-- [document.createElement](createElement)
-- [document.createTextNode](createTextNode)
-- [Node.namespaceURI](../Node/namespaceURI)
+- {{DOMxRef("document.createElement()")}}
+- {{DOMxRef("document.createTextNode()")}}
+- {{DOMxRef("Element.namespaceURI")}}
+- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)

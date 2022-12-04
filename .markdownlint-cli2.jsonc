@@ -136,6 +136,12 @@
           "replace": " ",
           "skipCode": false
         },
+        {
+          "name": "relative-link-path",
+          "message": "Don't use relative paths",
+          "search": "](..",
+          "skipCode": true
+        },
         // This will be replaced with Prettier in the long run
         {
           "name": "double-spaces",
