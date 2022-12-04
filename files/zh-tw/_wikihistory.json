@@ -1411,10 +1411,6 @@
       "emmanuelodenyire"
     ]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2019-01-16T20:46:52.062Z",
-    "contributors": ["wbamberg", "ArvinH", "klez"]
-  },
   "MDN/Writing_guidelines": {
     "modified": "2019-09-10T08:57:06.612Z",
     "contributors": [
@@ -5067,6 +5063,10 @@
   "WebAssembly": {
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": ["Aries0d0f"]
+  },
+  "conflicting/MDN/Contribute": {
+    "modified": "2019-01-16T20:46:52.062Z",
+    "contributors": ["wbamberg", "ArvinH", "klez"]
   },
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T22:50:58.911Z",
