@@ -4812,10 +4812,6 @@
       "Sheppy"
     ]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2020-10-15T15:37:40.278Z",
-    "contributors": ["我不会算命", "wbamberg", "maksyuki", "ziyunfei", "Sheppy"]
-  },
   "MDN/MDN_Product_Advisory_Board": {
     "modified": "2019-01-17T01:56:35.044Z",
     "contributors": ["wbamberg", "pluwen", "liminjun"]
@@ -33758,5 +33754,9 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/MDN/Contribute": {
+    "modified": "2020-10-15T15:37:40.278Z",
+    "contributors": ["我不会算命", "wbamberg", "maksyuki", "ziyunfei", "Sheppy"]
   }
 }
