@@ -1,19 +1,4 @@
 ---
-title: "Reason: CORS header 'Origin' cannot be added"
-slug: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
-tags:
-  - CORS
-  - CORSOriginHeaderNotAdded
-  - Cross-Origin
-  - HTTP
-  - HTTPS
-  - 메세지
-  - 문제해결
-  - 보안
-  - 에러
-  - 이유
-  - 콘솔
-translation_of: Web/HTTP/CORS/Errors/CORSOriginHeaderNotAdded
 ---
 
 {{HTTPSidebar}}
@@ -31,7 +16,7 @@ Reason: CORS header 'Origin' cannot be added
 
 예를 들어, JavaScript 코드가 여러 도메인의 콘텐츠에 접근할 수 있는 향상된 권한으로 실행되는 경우에 발생할 수 있습니다.
 
-## See also
+## 같이 보기
 
 - [CORS 에러](/en-US/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
