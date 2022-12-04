@@ -8,7 +8,7 @@ HTML5 では、履歴項目を追加および変更するための {{DOMxRef("Hi
 
 ## 履歴項目の追加と修正
 
-{{DOMxRef("History.pushState","pushState()")}} を使うことで、履歴の状態を変更した後に生成される {{domxref("XMLHttpRequest")}} オブジェクトの HTTP ヘッダー中のリファラも変更されます。リファラは {{domxref("XMLHttpRequest")}} オブジェクトが生成された時点での `this` となるウィンドウの持つドキュメントの URL となります。
+{{DOMxRef("History.pushState","pushState()")}} を使うことで、履歴の状態を変更した後に生成される {{domxref("XMLHttpRequest")}} オブジェクトの HTTP ヘッダー中のリファラも変更されます。リファラは {{domxref("XMLHttpRequest")}} オブジェクトが生成された時点での `this` となるウィンドウの持つドキュメントの URL となります。
 
 ### pushState() の例
 
@@ -22,13 +22,13 @@ let stateObj = {
 history.pushState(stateObj, "page 2", "bar.html")
 ```
 
-これにより URL バーには `https://mozilla.org/bar.html` と表示されますが、ブラウザーは `bar.html` を読み込むことはなくまたその存在をチェックすることはありません。
+これにより URL バーには `https://mozilla.org/bar.html` と表示されますが、ブラウザーは `bar.html` を読み込むことはなくまたその存在をチェックすることはありません。
 
-ユーザーが `https://google.com` へ移動し、それから**戻る**ボタンをクリックしたとします。このとき、 URL バーは `https://mozilla.org/bar.html` を表示し、`history.state` は `stateObj` になります。`popstate` イベントはページが再読み込みされたために発行されません。ページそれ自体は `bar.html` のように見えます。
+ユーザーが `https://google.com` へ移動し、それから**戻る**ボタンをクリックしたとします。このとき、 URL バーは `https://mozilla.org/bar.html` を表示し、`history.state` は `stateObj` になります。`popstate` イベントはページが再読み込みされたために発行されません。ページそれ自体は `bar.html` のように見えます。
 
-再び**戻る**ボタンをクリックすると、URL は `https://mozilla.org/foo.html` へ変化し、 `popstate` イベントが発行され、状態は null オブジェクトとなります。ここでもまた、`popstate` イベントを受け取って手動でコンテンツを変更することは可能ですが、戻るという操作によって戻る前のコンテンツが変更されるわけではありません。
+再び**戻る**ボタンをクリックすると、URL は `https://mozilla.org/foo.html` へ変化し、 `popstate` イベントが発行され、状態は null オブジェクトとなります。ここでもまた、`popstate` イベントを受け取って手動でコンテンツを変更することは可能ですが、戻るという操作によって戻る前のコンテンツが変更されるわけではありません。
 
-### pushState() メソッド
+### pushState() メソッド
 
 `pushState()` は、 **状態オブジェクト**、**title** （今は無視されます）、（任意で） **URL** の 3 つの引数を使用します。
 
@@ -57,7 +57,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 他の文書では、 `null` の名前空間 URI を持つ要素を作成します。
 
-### replaceState() メソッド
+### replaceState() メソッド
 
 `history.replaceState()` はちょうど `history.pushState()` のように動作しますが、 `replaceState()` は新しく履歴項目を作成するのではなく、現在の履歴項目を修正します。ただし、グローバルなブラウザー履歴に新しい項目が作成されるのを防ぐものではありません。
 
@@ -82,9 +82,9 @@ history.pushState(stateObj, "page 2", "bar.html")
 history.replaceState(stateObj, "page 3", "bar2.html")
 ```
 
-これによって URL バーには `https://mozilla.org/bar2.html` が表示されますが、ブラウザーは `bar2.html` の読み込みを行わず、 `bar2.html` が存在するかどうかもチェックしません。
+これによって URL バーには `https://mozilla.org/bar2.html` が表示されますが、ブラウザーは `bar2.html` の読み込みを行わず、`bar2.html` が存在するかどうかもチェックしません。
 
-仮に今、ユーザーが `https://www.microsoft.com` へ移動し、**戻る**ボタンを押したとします。この時点で URL バーには `https://mozilla.org/bar2.html` が表示されています。もしユーザーが再び**戻る**ボタンを押すと、 URL バーには `https://mozilla.org/foo.html` が表示され、`bar.html` を完全に回避します。
+仮に今、ユーザーが `https://www.microsoft.com` へ移動し、**戻る**ボタンを押したとします。この時点で URL バーには `https://mozilla.org/bar2.html` が表示されています。もしユーザーが再び**戻る**ボタンを押すと、 URL バーには `https://mozilla.org/foo.html` が表示され、`bar.html` を完全に回避します。
 
 ### popstate イベント
 
