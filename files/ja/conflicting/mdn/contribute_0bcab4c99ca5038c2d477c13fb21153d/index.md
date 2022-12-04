@@ -1,6 +1,7 @@
 ---
 title: 'MDN web docs: How-to ガイド'
-slug: MDN/Contribute/Howto
+slug: conflicting/MDN/Contribute_0bcab4c99ca5038c2d477c13fb21153d
+original_slug: MDN/Contribute/Howto
 ---
 
 {{MDNSidebar}}
