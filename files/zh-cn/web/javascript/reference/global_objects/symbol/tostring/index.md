@@ -37,7 +37,7 @@ Object(Symbol("foo")).toString() + "bar"
 ```js
 Symbol("desc").toString();   // "Symbol(desc)"
 
-// 内置通用的（well-known）symbol
+// 内置通用（well-known）symbol
 Symbol.iterator.toString();  // "Symbol(Symbol.iterator)
 
 // global symbols
