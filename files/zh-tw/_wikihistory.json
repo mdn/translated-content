@@ -5063,9 +5063,5 @@
   "WebAssembly": {
     "modified": "2020-10-15T22:04:56.309Z",
     "contributors": ["Aries0d0f"]
-  },
-  "conflicting/Web/Accessibility/ARIA": {
-    "modified": "2019-03-23T22:50:58.911Z",
-    "contributors": ["PatrickTaiwan", "Shiyou", "alk03073135"]
   }
 }
