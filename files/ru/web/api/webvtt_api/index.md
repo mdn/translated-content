@@ -159,7 +159,7 @@ A comment consists of three parts:
 
 ## Styling WebVTT cues
 
-You can style WebVTT cues by looking for elements which match the {{cssxref("::cue")}} pseudo-element.
+Реплики WebVTT можно стилизовать, используя псевдоэлемент {{cssxref("::cue")}}.
 
 ### Within site CSS
 
@@ -174,9 +174,9 @@ video::cue(b) {
 }
 ```
 
-Here, all video elements are styled to use a gray linear gradient as their backgrounds, with a foreground color of `"papayawhip"`. In addition, text boldfaced using the {{HTMLElement("b")}} element are colored `"peachpuff"`.
+В данном примере фоном видео будет серый градиент, с цветом текста `"papayawhip"`. Также, текст, выделенный жирным шрифтом с помощью элемента {{HTMLElement("b")}}, имеет цвет `"peachpuff"`.
 
-The HTML snippet below actually handles displaying the media itself.
+Фрагмент HTML, приведённый ниже, отображает видео.
 
 ```html
 <video controls autoplay src="video.webm">
