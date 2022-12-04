@@ -61,7 +61,7 @@ JavaScript는 심지어 다른 숫자 타입을 지원합니다. 10진수는 10�
     myFloat;
     ```
 
-2. 숫자는 따옴표(" 또는 ')가 없습니다. — 계속 하기 전에 여러 개의 변수를 선언하고 숫자를 초기화 해주세요.
+2. 숫자는 따옴표(" 또는 ')가 없습니다. 계속 하기 전에 여러 개의 변수를 선언하고 숫자를 초기화 해주세요.
 3. 우리들의 변수들의 데이터 타입을 확인합니다. JavaScript에서는 데이터 타입을 확인하기 위해 {{jsxref("Operators/typeof", "typeof")}} 라는 키워드를 사용합니다. 아래와 같이 입력해 주세요:
 
     ```js
@@ -70,6 +70,46 @@ JavaScript는 심지어 다른 숫자 타입을 지원합니다. 10진수는 10�
     ```
 
     `"number"` 는 정수와 실수인 경우에 나옵니다. — 이것들은 정수와 실수가 다른 데이터 타입일 때 보다 다루기 쉽게 해줍니다. 그리고 다른 데이터 타입일 때 다른 방법으로 다뤄야만 합니다. 호우\~!
+
+### 유용한 Number 메서드들
+
+JavaScript에서 모든 표준 숫자를 나타내는 [`Number`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number) 객체에는 숫자를 조작하는 데 사용할 수 있는 많은 유용한 메서드가 있습니다. 간단한 소개만 하기 위해 이 문서에서는 이러한 메서드에 대해 자세히 설명하지 않고 기본적인 내용만 다룹니다. 하지만 객체 참조 페이지를 방문해서 사용 가능한 메서드에 대해 더 알아볼 가치는 있습니다.
+
+예를 들어, 숫자를 고정된 소수점 자리수로 반올림하려면 `toFixed()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) 메서드를 사용합니다. 다음 코드를 [브라우저 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)에서 실행시켜 보세요.
+
+```js
+const lotsOfDecimal = 1.766584958675746364;
+lotsOfDecimal;
+
+const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+twoDecimalPlaces;
+```
+
+### 숫자 데이터 타입으로 변환하기
+
+때로는 계산을 수행하기 어렵게 문자열 형식으로 숫자가 저장된 경우가 있습니다. 주로 [입력 폼]((/ko/docs/Learn/Forms)의 [입력 타입이 텍스트](/ko/docs/Web/HTML/Element/input/text)인 경우에 발생합니다. 이러한 경우에는 문자열 값을 [`Number()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 생성자로 전달하면 같은 숫자를 나타내는 숫자 데이터 타입으로 변환할 수 있습니다.
+
+예를 들어, 콘솔에 다음과 같이 입력해보세요.
+
+```js
+let myNumber = "74";
+myNumber += 3;
+```
+
+실행하면 `77`이 아닌 `743`이 출력됩니다. 이는 `myNumber`가 문자열이기 때문입니다. 다음 코드를 입력하면 타입을 볼 수 있습니다.
+
+```js
+typeof myNumber;
+```
+
+올바른 계산 결과를 얻기 위해서는 다음과 같이 하면 됩니다.
+  
+```js
+let myNumber = "74";
+myNumber = Number(myNumber) + 3;
+```
+
+정상적으로 `77`이 출력됩니다.
 
 ## 산술 연산자
 
@@ -82,8 +122,11 @@ JavaScript는 심지어 다른 숫자 타입을 지원합니다. 10진수는 10�
 | `*` | 곱하기 | 두 개의 숫자를 곱합니다. | `3 * 7` |
 | `/` | 나누기 | 왼쪽의 숫자를 오른쪽 숫자로 나눠서 몫을 구합니다. | `10 / 5` |
 | `%` | 나머지 (또는 모듈로) | 왼쪽의 숫자를 오른쪽 숫자로 나눠서 나머지를 구합니다. | `8 % 3` ( 2를 반환합니다, 8을 3으로 나눴을 때 몫이 2이기 때문입니다.) |
+| `**` | 지수 | 왼쪽의 숫자를 오른쪽 숫자만큼 제곱합니다. | `5 ** 2` ( 5의 제곱이기 때문에 25를 반환합니다.) |
 
 > **참고:** 연산에 관계된 수를 {{Glossary("Operand", "피연산자")}}라고 부릅니다.
+
+> **참고:** 지수를 계산할 때 {{jsxref("Math.pow()")}} 메서드를 사용할 수도 있고 `**`와 매우 비슷한 동작을 합니다. 예를 들어, `Math.pow(7, 3)`의 경우 `7`은 밑, `3`은 지수이므로 `343`을 반환합니다. 이 결과는 `7 ** 3`과 같습니다.
 
 아직 수학을 공부할 필요는 없습니다. 하지만 우리는 문법 확인을 해야합니다. 아래의 명령어들을 [developer tools JavaScript console](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 에 입력해주세요.
 
@@ -98,8 +141,8 @@ JavaScript는 심지어 다른 숫자 타입을 지원합니다. 10진수는 10�
 2. 또한 변수 내부의 값을 선언하거나 초기화 할 수 있으며, 이를 계산에 이용할 수도 있습니다. 즉, 변수는 계산을 위해 가지고 있는 값과 정확히 동일하게 작동합니다. 예를 들어
 
     ```js
-    var num1 = 10;
-    var num2 = 50;
+    const num1 = 10;
+    const num2 = 50;
     9 * num1;
     num2 / num1;
     ```
@@ -210,7 +253,7 @@ x *= y;    // 이제 x의 값은 12입니다.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html", '100%', 520)}}
 
-**[전체 화면](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html)**
+**[새 창에서 보기](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html)**
 
 이 예제에서는 주석으로 표시된 두 줄을 수정하여 박스의 크기를 특정 크기로 조정하고, 각각의 경우에 특정 연산자와/또는 값을 사용하도록 하겠습니다. 다음처럼 수정해 보세요.
 
@@ -238,7 +281,7 @@ Reset 버튼을 눌러서 되돌릴 수 있기 때문에 코드가 동작하지 
 
 > **참고:** 일부 사람들은 `==`와 `!=`를 동등성과 불일치성을 테스트하는 데 사용합니다. 이 연산자들은 JavaScript에서 유효한 연산자이지만, `===`/`!==`와는 다릅니다. 전자는 값이 동일한지는 테스트하지만, 값의 데이터 유형이 동일한지의 여부는 테스트하지 않습니다. 후자의 경우 엄격한 버전은 값과 값의 데이터 유형의 동일성을 모두 테스트합니다. 엄격한 버전이 오류가 적은 편이기 때문에, 이를 사용하는 것을 권장합니다.
 
-만약 콘솔에 값들을 입력한다면 `true`/`false` 값이 반환되는걸 볼 수 있습니다. 이는 이전 글에서 본 것 처럼 불리언(boolean)입니다. 코드에서 결정을 내리거나, 어떤 선택을 할 때마다 사용하기 때문에 불리언은 상당히 유용합니다. 불리언을 사용 예는 다음과 같습니다.
+만약 콘솔에 값들을 입력한다면 `true`/`false` 값이 반환되는걸 볼 수 있습니다. 이는 이전 글에서 본 것 처럼 불리언(boolean)입니다. 코드에서 결정을 내리거나, 어떤 선택을 할 때마다 사용하기 때문에 불리언은 상당히 유용합니다. 불리언을 사용하는 예는 다음과 같습니다.
 
 - 기능이 켜져있는지 꺼져있는지에 따라 버튼의 텍스트 라벨을 표시합니다.
 - 게임을 결과에 따라 게임 오버나 승리 메시지를 표시합니다.
@@ -271,15 +314,15 @@ function updateBtn() {
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/conditional.html", '100%', 100)}}
 
-**[전체 화면](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html)**
+**[새 창에서 보기](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html)**
 
 `updateBtn()` 함수 내부에서 동등 연산자가 사용되는걸 볼 수 있습니다. 원리는 동일하지만, 이 경우엔 두 수식이 같은 값을 가지고 있는지 테스트하는 것이 아닌 버튼의 텍스트 콘텐츠가 특정 문자열을 포함하고 있는지를 테스트합니다. 버튼이 "Start machine"이라고 표시되어 있을 때 누르면 "Stop machine"으로 바꾸고 라벨을 변경합니다. 버튼이 "Stop machine"이라고 표시되어 있을 때 누르면 다시 표시를 바꿉니다.
 
-> **참고:** 위와 같은 두 상태를 전환하는 조작을 일반적으로 **토글(toggle)** 이라고 불립니다.
+> **참고:** 위와 같은 두 상태를 전환하는 조작을 일반적으로 **토글(toggle)** 이라고 부릅니다.
 
 ## 요약
 
-이번 글에서는 JavaScript에서 숫자를 다루는 기본적인 내용을 다뤘습니다. 앞으로도 숫자는 JavaScript를 배우는 동안 계속해서 사용할 것이므로 익숙해지는게 좋습니다. 수학을 좋아하지 않는 사람에겐 이번 글이 짧아서 다행이였겠군요.
+이번 글에서는 JavaScript에서 숫자를 다루는 기본적인 내용을 다뤘습니다. 앞으로도 숫자는 JavaScript를 배우는 동안 계속해서 사용할 것이므로 익숙해지는게 좋습니다. 수학을 좋아하지 않는 사람에겐 이번 글이 짧아서 다행이었겠군요.
 
 다음 글에서는 텍스트와 JavaScript에서 텍스트를 조작하는 방법에 대해 알아보겠습니다.
 
@@ -291,7 +334,7 @@ function updateBtn() {
 
 - [JavaScript가 뭔가요?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - [JavaScript에 발 담그기](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [뭐가 잘못됐을까요? JavaScript 문제 해경](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
 - [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
 - [JavaScript 기초 수학 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
 - [텍스트 다루기 — JavaScript의 문자열](/ko/docs/Learn/JavaScript/First_steps/Strings)
