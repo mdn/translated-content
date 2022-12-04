@@ -58,13 +58,13 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### maxlength
 
-用户可以在搜索字段中输入的最大字符数（以 UTF-16 码点为单位）。必须为 0 或更高的整数。如果未指定 `maxlength` 或指定了无效值，则搜索字段没有最大长度。此值还必须大于或等于 `minlength` 的值。
+用户可以在搜索字段中输入的最大字符数（UTF-16 代码单元）。必须为 0 或更高的整数。如果未指定 `maxlength` 或指定了无效值，则搜索字段没有最大长度。此值还必须大于或等于 `minlength` 的值。
 
 如果输入到字段中的文本的长度大于 `maxlength` UTF-16 代码单元的长度，则输入无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。
 
 ### minlength
 
-用户可以在搜索字段中输入的最小字符数（以 UTF-16 码点为单位）。该值必须是小于或等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效值，则搜索输入没有最小长度。
+用户可以在搜索字段中输入的最小字符数（UTF-16 代码单元）。该值必须是小于或等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效值，则搜索输入没有最小长度。
 
 如果在字段中输入的文本的长度小于 `minlength` UTF-16 代码单元的长度，则搜索字段将无法通过[约束验证](/zh-CN/docs/Web/Guide/HTML/Constraint_validation)。
 
@@ -94,7 +94,7 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 
 ### size
 
-`size` 属性是一个数字值，指示输入字段应有多少个字符宽。该值必须是一个大于零的数字，默认值是 20。由于字符宽度各不相同，这可能是也可能不是精确的，不应依赖于此；结果输入可能比指定的字符数更窄或更宽，这取决于字符和字体（{{cssxref("font")}}使用中的设置）。
+`size` 属性是一个数字值，指示输入字段应有多少个字符宽。该值必须是一个大于零的数字，默认值是 20。由于字符宽度各不相同，这可能是也可能不是精确的，不应依赖于此；结果输入可能比指定的字符数更窄或更宽，这取决于字符和字体（正在使用的 {{cssxref("font")}} 设置）。
 
 这并*不*限制用户可以在该字段中输入多少个字符，仅能指定一次可以看到多少个。要设置输入数据长度的上限，请使用 [`maxlength`](#maxlength) 属性。
 
@@ -156,7 +156,7 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
 <form>
   <div>
     <input type="search" id="mySearch" name="q" />
-    <button>查找</button>
+    <button>搜索</button>
   </div>
 </form>
 ```
@@ -190,8 +190,8 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
       type="search"
       id="mySearch"
       name="q"
-      placeholder="站内查找..." />
-    <button>查找</button>
+      placeholder="站内搜索..." />
+    <button>搜索</button>
   </div>
 </form>
 ```
@@ -218,9 +218,9 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
       type="search"
       id="mySearch"
       name="q"
-      placeholder="站内查找..."
-      aria-label="在全站内容中查找" />
-    <button>查找</button>
+      placeholder="站内搜索..."
+      aria-label="在全站内容中搜索" />
+    <button>搜索</button>
   </div>
 </form>
 ```
@@ -244,9 +244,9 @@ Mozilla 扩展，它提供了一个提示，提示用户在编辑字段时按 <k
       type="search"
       id="mySearch"
       name="q"
-      placeholder="站内查找..."
+      placeholder="站内搜索..."
       size="30" />
-    <button>查找</button>
+    <button>搜索</button>
   </div>
 </form>
 ```
@@ -292,9 +292,9 @@ input:valid ~ span::after {
       type="search"
       id="mySearch"
       name="q"
-      placeholder="站内查找..."
+      placeholder="站内搜索..."
       required />
-    <button>查找</button>
+    <button>搜索</button>
     <span class="validity"></span>
   </div>
 </form>
@@ -425,7 +425,7 @@ input:valid ~ span::after {
 
 ## 例子
 
-可以在我们的网站 [website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) 示例中看到一个在上下文中使用搜索表单的一个好例子（[试试现场运行它](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
+可以在我们的网站 [website-aria-roles](https://github.com/mdn/learning-area/tree/master/accessibility/aria/website-aria-roles) 示例中看到一个在上下文中使用搜索表单的一个好例子（[试试在线运行它](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)）。
 
 ## 规范
 
