@@ -38,7 +38,7 @@ const p = new Proxy(obj, {
 
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}
-- {{jsxref("Object/proto", "__proto__")}}
+- [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Operators/instanceof", "instanceof")}}
 

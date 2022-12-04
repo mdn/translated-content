@@ -1,15 +1,6 @@
 ---
 title: Generador
 slug: Web/JavaScript/Reference/Global_Objects/Generator
-tags:
-  - ECMAScript2015
-  - ECMAScript6
-  - Generador
-  - Generador Legado
-  - Iterador Legado
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador
 ---
 

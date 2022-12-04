@@ -1,12 +1,6 @@
 ---
 title: scale()
 slug: Web/CSS/transform-function/scale
-tags:
-  - CSS Scale
-  - scale()
-  - scaleX()
-  - scaleY()
-translation_of: Web/CSS/transform-function/scale()
 original_slug: Web/CSS/transform-function/scale()
 ---
 

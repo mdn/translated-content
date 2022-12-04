@@ -14,4 +14,3 @@ slug: Web/CSS/CSS_Variables
 ## 仕様
 
 {{Specifications}}
-

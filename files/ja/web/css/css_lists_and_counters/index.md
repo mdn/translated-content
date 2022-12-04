@@ -26,4 +26,3 @@ slug: Web/CSS/CSS_Lists_and_Counters
 ## 仕様書
 
 {{Specifications}}
-

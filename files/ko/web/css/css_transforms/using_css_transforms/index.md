@@ -31,7 +31,7 @@ CSS 변형을 정의할 때 중요한 두 가지 속성은 {{cssxref("transform"
 
 다음 이미지는 변형하지 않은 MDN 로고입니다.
 
-![MDN Logo](https://mdn.mozillademos.org/files/12539/Screen%20Shot%202016-02-16%20at%2015.53.54.png)
+![MDN Logo](logo.png)
 
 ### 회전
 
@@ -40,7 +40,7 @@ MDN 로고를 90도 회전합니다.
 ```html
 <img style="transform: rotate(90deg);
             transform-origin: bottom left;"
-     src="https://mdn.mozillademos.org/files/12539/Screen%20Shot%202016-02-16%20at%2015.53.54.png">
+     src="logo.png">
 ```
 
 {{EmbedLiveSample('회전', 'auto', 240) }}
@@ -52,7 +52,7 @@ MDN 로고를 10도 비틀고 X축으로 150픽셀 옮깁니다.
 ```html
 <img style="transform: skewx(10deg) translatex(150px);
             transform-origin: bottom left;"
-     src="https://mdn.mozillademos.org/files/12539/Screen%20Shot%202016-02-16%20at%2015.53.54.png">
+     src="logo.png">
 ```
 
 {{EmbedLiveSample('비틀고_옮기기') }}

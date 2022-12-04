@@ -1,17 +1,6 @@
 ---
 title: Worker
 slug: Web/API/Worker
-tags:
-  - API
-  - DOM
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web Workers
-  - Worker
-  - Workers
-translation_of: Web/API/Worker
 ---
 
 {{APIRef("Web Workers API")}}

@@ -1,12 +1,6 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
-tags:
-  - CSS
-  - NeedsCompatTable
-  - Referencia
-  - Transformaciones CSS
-translation_of: Web/CSS/transform-function/rotate()
 original_slug: Web/CSS/transform-function/rotate()
 ---
 

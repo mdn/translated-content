@@ -1,7 +1,6 @@
 ---
 title: WebRTC protocols
 slug: Web/API/WebRTC_API/Protocols
-translation_of: Web/API/WebRTC_API/Protocols
 ---
 
 {{DefaultAPISidebar("WebRTC")}}

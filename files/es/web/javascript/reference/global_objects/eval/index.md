@@ -1,10 +1,6 @@
 ---
 title: eval
 slug: Web/JavaScript/Reference/Global_Objects/eval
-tags:
-  - JavaScript
-  - eval
-translation_of: Web/JavaScript/Reference/Global_Objects/eval
 original_slug: Web/JavaScript/Referencia/Objetos_globales/eval
 ---
 

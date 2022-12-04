@@ -77,4 +77,3 @@ The offset is usually expressed in user units resolved against the {{SVGAttr('pa
 ## Specification
 
 {{Specifications}}
-

@@ -1,7 +1,6 @@
 ---
 title: Document.async
 slug: Web/API/XMLDocument/async
-translation_of: Web/API/XMLDocument/async
 original_slug: Web/API/Document/async
 ---
 

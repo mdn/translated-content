@@ -79,7 +79,7 @@ for (const letter of values) {
 // undefined
 ```
 
-[`break`](/ja/docs/Web/JavaScript/Reference/Statements/break) 文を使用して早めに反復処理委を終了した場合、反復処理を継続する際に反復子で現在の位置から再開することができます。
+[`break`](/ja/docs/Web/JavaScript/Reference/Statements/break) 文を使用して早めに反復処理を終了した場合、反復処理を継続する際に反復子で現在の位置から再開することができます。
 
 ```js
 const arr = ["a", "b", "c", "d", "e"];

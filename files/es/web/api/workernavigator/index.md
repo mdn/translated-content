@@ -1,8 +1,6 @@
 ---
 title: WorkerNavigator
 slug: Web/API/WorkerNavigator
-translation_of: Web/API/WorkerNavigator
-browser-compat: api.WorkerNavigator
 ---
 
 {{APIRef("Web Workers API")}}

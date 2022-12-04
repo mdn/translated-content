@@ -48,10 +48,7 @@ window.personalbar.visible = !window.personalbar.visible;
 
 ## 仕様
 
-| 仕様                                                                                                                     | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-personalbar', 'Window.personalbar')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-personalbar', 'Window.personalbar')}}     | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## 関連情報
 

@@ -1,12 +1,6 @@
 ---
 title: Selectores de tipo
 slug: Web/CSS/Type_selectors
-tags:
-  - CSS
-  - Principiante
-  - Referencia CSS
-  - Selectores
-translation_of: Web/CSS/Type_selectors
 ---
 
 {{CSSRef}}El selector de tipo CSS selecciona elementos por nombre de nodo. En otras palabras, selecciona todos los elementos del tipo dado dentro de un documento.

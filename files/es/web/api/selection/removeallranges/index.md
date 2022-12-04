@@ -1,9 +1,6 @@
 ---
 title: removeAllRanges
 slug: Web/API/Selection/removeAllRanges
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/removeAllRanges
 ---
 
 {{ ApiRef("DOM") }}

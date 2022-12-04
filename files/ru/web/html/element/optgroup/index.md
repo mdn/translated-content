@@ -20,7 +20,7 @@ translation_of: Web/HTML/Element/optgroup
 | Допустимые ARIA-роли                                   | Нет                                                                                                                                                                                |
 | DOM-интерфейс                                          | {{domxref("HTMLOptGroupElement")}}                                                                                                                                       |
 
-{{Note("Элементы optgroup не могут быть вложенными друг в друга.")}}
+> **Примечание:** Элементы optgroup не могут быть вложенными друг в друга.
 
 ## Атрибуты
 

@@ -1,9 +1,6 @@
 ---
 title: Function.caller
 slug: Web/JavaScript/Reference/Global_Objects/Function/caller
-tags:
-  - Función Javascript No-standard Propiedad
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/caller
 ---
 

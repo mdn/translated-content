@@ -52,7 +52,7 @@ The `{{domxref("Performance.navigation","navigation")}}` property returns a {{do
 
 ## 実装状況
 
-As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers.
+As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/ja/docs/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers.
 
 To test your browser's support for the {{domxref("Performance")}} interface, run the [`perf-api-support`](http://mdn.github.io/web-performance/perf-api-support.html) application.
 

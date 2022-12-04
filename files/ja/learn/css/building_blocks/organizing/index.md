@@ -15,7 +15,7 @@ slug: Learn/CSS/Building_blocks/Organizing
         基本的なコンピューターリテラシー、
         <a href="/ja/Learn/Getting_started_with_the_web/Installing_basic_software">基本的なソフトウェアがインストールされている</a>こと、
         <a href="/ja/Learn/Getting_started_with_the_web/Dealing_with_files">ファイルの扱い</a>、
-        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ていること。
+        HTML の基本（<a href="/ja/docs/Learn/HTML/Introduction_to_HTML">HTML 入門</a>）および CSS に関するアイデア（<a href="/ja/docs/Learn/CSS/First_steps">CSS の第一歩</a>）に関する基本的な知識を得ていること。
       </td>
     </tr>
     <tr>

@@ -76,4 +76,3 @@ _なし。_
 ## 仕様書
 
 {{Specifications}}
-

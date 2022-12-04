@@ -440,9 +440,9 @@
 /pt-BR/docs/MDN/Contribute/Howto/Tag	/pt-BR/docs/MDN/Writing_guidelines/Howto/Tag
 /pt-BR/docs/MDN/Contribute/Open_source_etiquette	/pt-BR/docs/MDN/Community/Open_source_etiquette
 /pt-BR/docs/MDN/Contribute/Processos	/pt-BR/docs/MDN/Contribute/Processes
-/pt-BR/docs/MDN/Contribute/Tools	/pt-BR/docs/MDN/Tools
-/pt-BR/docs/MDN/Contribute/Tools/KumaScript	/pt-BR/docs/MDN/Tools/KumaScript
-/pt-BR/docs/MDN/Contribute/Tools/KumaScript/Solucionando_problemas_de_erros_de_KumaScript	/pt-BR/docs/MDN/Tools/KumaScript/Troubleshooting
+/pt-BR/docs/MDN/Contribute/Tools	/pt-BR/docs/orphaned/MDN/Tools
+/pt-BR/docs/MDN/Contribute/Tools/KumaScript	/pt-BR/docs/orphaned/MDN/Tools/KumaScript
+/pt-BR/docs/MDN/Contribute/Tools/KumaScript/Solucionando_problemas_de_erros_de_KumaScript	/pt-BR/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
 /pt-BR/docs/MDN/Contribute/Where_is_everything	/pt-BR/docs/MDN/Community/Contributing/Our_repositories
 /pt-BR/docs/MDN/Contribute/criando_e_editando_paginas	/pt-BR/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /pt-BR/docs/MDN/Contribute/guia	/pt-BR/docs/MDN/Contribute/Howto
@@ -459,9 +459,12 @@
 /pt-BR/docs/MDN/Structures	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures
 /pt-BR/docs/MDN/Structures/Compatibility_tables	/pt-BR/docs/MDN/Writing_guidelines/Page_structures
 /pt-BR/docs/MDN/Structures/Macros	/pt-BR/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7
-/pt-BR/docs/MDN/Tools/KumaScript/Solucionando_problemas_de_erros_de_KumaScript	/pt-BR/docs/MDN/Tools/KumaScript/Troubleshooting
+/pt-BR/docs/MDN/Tools	/pt-BR/docs/orphaned/MDN/Tools
+/pt-BR/docs/MDN/Tools/KumaScript	/pt-BR/docs/orphaned/MDN/Tools/KumaScript
+/pt-BR/docs/MDN/Tools/KumaScript/Solucionando_problemas_de_erros_de_KumaScript	/pt-BR/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
+/pt-BR/docs/MDN/Tools/KumaScript/Troubleshooting	/pt-BR/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
 /pt-BR/docs/MDN/Yari	/pt-BR/docs/orphaned/MDN/Yari
-/pt-BR/docs/MDN/guia_usuário	/pt-BR/docs/MDN/Tools
+/pt-BR/docs/MDN/guia_usuário	/pt-BR/docs/orphaned/MDN/Tools
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tema	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/theme
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomia_de_uma_WebExtension	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 /pt-BR/docs/Mozilla/Add-ons/WebExtensions/O_que_vem_a_seguir_	/pt-BR/docs/Mozilla/Add-ons/WebExtensions/What_next_

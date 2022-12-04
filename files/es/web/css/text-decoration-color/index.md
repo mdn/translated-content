@@ -1,11 +1,6 @@
 ---
 title: text-decoration-color
 slug: Web/CSS/text-decoration-color
-tags:
-  - Propiedad CSS
-  - Referencia
-  - Texto CSS
-translation_of: Web/CSS/text-decoration-color
 ---
 
 {{ CSSRef }}

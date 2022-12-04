@@ -45,4 +45,3 @@ slug: Web/CSS/CSS_Images
 ## 仕様書
 
 {{Specifications}}
-

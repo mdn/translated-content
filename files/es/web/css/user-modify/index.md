@@ -1,11 +1,6 @@
 ---
 title: '-moz-user-modify'
 slug: Web/CSS/user-modify
-tags:
-  - CSS
-  - No estándar(2)
-  - Referencia CSS
-translation_of: Web/CSS/user-modify
 original_slug: Web/CSS/-moz-user-modify
 ---
 

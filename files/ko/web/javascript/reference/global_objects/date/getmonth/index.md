@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 
 {{JSRef}}
 
-**`getMonth()` **메서드는 `Date` 객체의 월 값을 현지 시간에 맞춰 반환합니다. 월은 0부터 시작합니다.
+**`getMonth()`** 메서드는 `Date` 객체의 월 값을 현지 시간에 맞춰 반환합니다. 월은 0부터 시작합니다.
 
 {{EmbedInteractiveExample("pages/js/date-getmonth.html")}}
 

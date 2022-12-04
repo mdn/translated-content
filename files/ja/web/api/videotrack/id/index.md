@@ -21,9 +21,7 @@ var trackID = VideoTrack.id;
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-videotrack-id', 'VideoTrack: id')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
