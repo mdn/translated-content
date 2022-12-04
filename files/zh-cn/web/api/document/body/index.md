@@ -1,5 +1,5 @@
 ---
-title: document.body
+title: Document.body
 slug: Web/API/Document/body
 ---
 
@@ -7,14 +7,15 @@ slug: Web/API/Document/body
 
 ## 概述
 
-返回当前文档中的`<body>元素`或者`<frameset>元素`.
+**`Document.body`** 表示当前文档中的 {{HTMLElement("body")}} 元素或者 {{HTMLElement("frameset")}} 元素，或 `null` 如果不存在此类元素。
 
-## 语法
+## 值
 
-```plain
-var objRef = document.body;
-document.body = objRef;
-```
+以下之一：
+
+- {{HTMLElement("body")}}
+- {{HTMLElement("frameset")}}
+- `null`
 
 ## 示例
 
@@ -37,4 +38,12 @@ alert(document.body.id); // "newBodyElement"
 
 ## 规范
 
-- [DOM Level 2 HTML: HTMLDocument.body](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{domxref("document.head")}}
