@@ -68,6 +68,6 @@ function f() {
 }
 ```
 
-## 相关页面
+## 参见
 
 - {{jsxref("Statements/return", "自动插入分号", "#自动插入分号", 1)}}
