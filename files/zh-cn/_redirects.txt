@@ -1120,7 +1120,7 @@
 /zh-CN/docs/MDN/Contribute/Feedback	/zh-CN/docs/MDN/Community
 /zh-CN/docs/MDN/Contribute/Fixing_MDN_content_bugs	/zh-CN/docs/MDN/Community/MDN_content
 /zh-CN/docs/MDN/Contribute/Getting_started	/zh-CN/docs/MDN/Community/Contributing/Getting_started
-/zh-CN/docs/MDN/Contribute/Howto	/zh-CN/docs/conflicting/MDN/Contribute
+/zh-CN/docs/MDN/Contribute/Howto	/zh-CN/docs/MDN/Contribute
 /zh-CN/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /zh-CN/docs/MDN/Contribute/Howto/Compatibility_tables	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
