@@ -31,7 +31,7 @@ slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ## 实例属性
 
 - `ArrayBuffer.prototype[@@toStringTag]`
-  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是 `"ArrayBuffer"` 字符串。该属性在 {{jsxref("Object.prototype.toString()")}} 使用。
+  - : [`@@toStringTag`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是 `"ArrayBuffer"` 字符串。该属性在 {{jsxref("Object.prototype.toString()")}} 中被使用。
 - {{jsxref("ArrayBuffer.prototype.byteLength")}}
   - : `ArrayBuffer` 的只读大小（以字节为单位）。这时在数组构建时确定的，无法更改。
 
