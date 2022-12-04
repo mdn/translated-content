@@ -10,7 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/output
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<output>` 요소**는 웹 사이트나 앱에서 계산이나 사용자 행동의 결과를 삽입할 수 있는 컨테이너 요소입니다.
 
@@ -65,7 +65,7 @@ translation_of: Web/HTML/Element/output
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("for")}}
   - : 스페이스로 구분한, 다른 여러 요소 {{htmlattrxref("id")}}의 목록. 목록에 포함된 요소가 출력 결과에 공헌했거나 영향을 주었음을 나타냅니다.

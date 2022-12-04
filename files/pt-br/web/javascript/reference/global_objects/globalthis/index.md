@@ -1,13 +1,8 @@
 ---
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
-tags:
-  - JavaScript
-  - Reference
-  - global
-  - globalThis
-translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
+
 {{jsSidebar("Objects")}}
 
 A propriedade global **`globalThis`** retorna um objeto global de nível superior.
@@ -22,10 +17,10 @@ globalThis
 
 ## Descrição
 
-Historicamente, o acesso ao escopo global exigiu uma sintaxe diferente em diferentes ambientes JavaScript. Na web você pode usar [`window`](/en-US/docs/Web/API/Window/window), [`self`](/en-US/docs/Web/API/Window/self) ou [`frames`](/en-US/docs/Web/API/Window/frames) - porém em [Web Workers](/pt-BR/docs/Web/API/Worker) somente `self` funcionará. Em Node.js nada disso funciona e você deve usar `global`.
+Historicamente, o acesso ao escopo global exigiu uma sintaxe diferente em diferentes ambientes JavaScript. Na web você pode usar [`window`](/pt-BR/docs/Web/API/Window/window), [`self`](/pt-BR/docs/Web/API/Window/self) ou [`frames`](/pt-BR/docs/Web/API/Window/frames) - porém em [Web Workers](/pt-BR/docs/Web/API/Worker) somente `self` funcionará. Em Node.js nada disso funciona e você deve usar `global`.
 A palavra-chave `this` poderia ser usada dentro de funções em execução no modo _sloppy_, mas `this` será `undefined` em módulos, e dentro de funções em execução no _strict mode_.
 
-A propriedade `globalThis` fornece uma maneira padrão de acessar o objeto global entre ambientes. Ao contrário de propriedades semelhantes, como [`window`](/en-US/docs/Web/API/Window/window) e [`self`](/en-US/docs/Web/API/Window/self), é garantido que funcione em contextos _window_ e _non-window_. Dessa forma, você pode acessar o objeto global de maneira consistente sem precisar saber em qual ambiente o código está sendo executado.
+A propriedade `globalThis` fornece uma maneira padrão de acessar o objeto global entre ambientes. Ao contrário de propriedades semelhantes, como [`window`](/pt-BR/docs/Web/API/Window/window) e [`self`](/pt-BR/docs/Web/API/Window/self), é garantido que funcione em contextos _window_ e _non-window_. Dessa forma, você pode acessar o objeto global de maneira consistente sem precisar saber em qual ambiente o código está sendo executado.
 
 Para ajudá-lo a lembrar o nome, lembre-se que no escopo global, o valor de `this` é `globalThis`.
 

@@ -3,6 +3,7 @@ title: HTTP 쿠키
 slug: Web/HTTP/Cookies
 translation_of: Web/HTTP/Cookies
 ---
+
 {{HTTPSidebar}}
 
 HTTP 쿠키(웹 쿠키, 브라우저 쿠키)는 서버가 사용자의 웹 브라우저에 전송하는 작은 데이터 조각입니다. 브라우저는 그 데이터 조각들을 저장해 놓았다가, 동일한 서버에 재 요청 시 저장된 데이터를 함께 전송합니다. 쿠키는 두 요청이 동일한 브라우저에서 들어왔는지 아닌지를 판단할 때 주로 사용합니다. 이를 이용하면 사용자의 로그인 상태를 유지할 수 있습니다. 상태가 없는([stateless](/ko/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless)) HTTP 프로토콜에서 상태 정보를 기억시켜주기 때문입니다.
@@ -16,7 +17,7 @@ HTTP 쿠키(웹 쿠키, 브라우저 쿠키)는 서버가 사용자의 웹 브�
 - 트래킹(Tracking)
   - : 사용자 행동을 기록하고 분석하는 용도
 
-과거엔 클라이언트 측에 정보를 저장할 때 쿠키를 주로 사용하곤 했습니다. 쿠키를 사용하는 게 데이터를 클라이언트 측에 저장할 수 있는 유일한 방법이었을 때는 이 방법이 타당했지만, 지금은modern storage APIs를 사용해 정보를 저장하는 걸 권장합니다. 모든 요청마다 쿠키가 함께 전송되기 때문에, (특히 mobile data connections에서) 성능이 떨어지는 원인이 될 수 있습니다. 정보를 클라이언트 측에 저장하려면 Modern APIs의 종류인 [웹 스토리지 API](/ko/docs/Web/API/Web_Storage_API "DOM Storage") (`localStorage`와 `sessionStorage`) 와[ IndexedDB](/ko/docs/Web/API/IndexedDB_API)를 사용하면 됩니다.
+과거엔 클라이언트 측에 정보를 저장할 때 쿠키를 주로 사용하곤 했습니다. 쿠키를 사용하는 게 데이터를 클라이언트 측에 저장할 수 있는 유일한 방법이었을 때는 이 방법이 타당했지만, 지금은modern storage APIs를 사용해 정보를 저장하는 걸 권장합니다. 모든 요청마다 쿠키가 함께 전송되기 때문에, (특히 mobile data connections에서) 성능이 떨어지는 원인이 될 수 있습니다. 정보를 클라이언트 측에 저장하려면 Modern APIs의 종류인 [웹 스토리지 API](/ko/docs/Web/API/Web_Storage_API) (`localStorage`와 `sessionStorage`) 와 [IndexedDB](/ko/docs/Web/API/IndexedDB_API) 를 사용하면 됩니다.
 
 > **참고:** 저장된 쿠키(그리고 웹 페이지가 사용할 수 있는 다른 스토리지)를 보려면, 개발자 도구에서 [Storage Inspector(스토리지 검사기)](/ko/docs/Tools/Storage_Inspector)를 활성화하고 스토리지 트리에서 쿠키 스토리지를 선택하면 됩니다.
 
@@ -169,7 +170,7 @@ EU 전역의 쿠키에 대한 요구사항은 유럽 의회의 [Directive 2009/1
 
 ### 좀비 쿠키와 Evercookies
 
-쿠키에 대한 좀 더 급진적인 해결책은 삭제 이후에 다시 생성되는 좀비 쿠키 혹은 "Evercookies"이며 의도적으로 영원히 제거하는 것이 어려운 쿠키입니다. 그들은 쿠키가 존재 여부와 관계없이 그들 자신을 다시 만들어내기 위해 [웹 스토리지 API](/ko/docs/Web/API/Web_Storage_API "DOM Storage"), Flash 로컬 공유 객체 그리고 다른 기술들을 사용하고 있습니다.
+쿠키에 대한 좀 더 급진적인 해결책은 삭제 이후에 다시 생성되는 좀비 쿠키 혹은 "Evercookies"이며 의도적으로 영원히 제거하는 것이 어려운 쿠키입니다. 그들은 쿠키가 존재 여부와 관계없이 그들 자신을 다시 만들어내기 위해 [웹 스토리지 API](/ko/docs/Web/API/Web_Storage_API), Flash 로컬 공유 객체 그리고 다른 기술들을 사용하고 있습니다.
 
 - [Samy Kamkar의 Evercookie](https://github.com/samyk/evercookie)
 - [좀비 쿠키에 대한 위키피디아](https://en.wikipedia.org/wiki/Zombie_cookie)

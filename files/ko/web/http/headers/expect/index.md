@@ -3,6 +3,7 @@ title: Expect
 slug: Web/HTTP/Headers/Expect
 translation_of: Web/HTTP/Headers/Expect
 ---
+
 {{HTTPSidebar}}
 
 **`Expect`** HTTP 요청 헤더는 요청을 적절하게 처리하기 위해 서버가 반환할 기대값을 나타냅니다.
@@ -68,5 +69,5 @@ No common browsers are known to send this header.
 
 ## See also
 
-- {{HTTPStatus("417")}}` Expectation Failed`
-- {{HTTPStatus("100")}}` Continue`
+- {{HTTPStatus("417")}} `Expectation Failed`
+- {{HTTPStatus("100")}} `Continue`

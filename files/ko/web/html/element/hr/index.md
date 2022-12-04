@@ -8,7 +8,8 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/hr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<hr>` 요소**는 이야기 장면 전환, 구획 내 주제 변경 등, 문단 레벨 요소에서 주제의 분리를 나타냅니다.
 
@@ -62,7 +63,7 @@ translation_of: Web/HTML/Element/hr
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("align")}} {{deprecated_inline}}
   - : 줄의 정렬을 지정합니다. 기본값은 `left`입니다.

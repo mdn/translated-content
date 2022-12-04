@@ -5,27 +5,27 @@ slug: Web/API/PushEvent/PushEvent
 
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-**`PushEvent()`** コンストラクタは、新しい {{domxref("PushEvent")}} オブジェクトを生成します。このコンストラクタは、service worker にのみ公開されていることに注意してください。
+**`PushEvent()`** コンストラクターは、新しい {{domxref("PushEvent")}} オブジェクトを生成します。このコンストラクターは、サービスワーカーにのみ公開されていることに注意してください。
 
 ## 構文
 
-```
+```js-nolint
 var myPushEvent = new PushEvent(type, eventInitDict);
 ```
 
-### パラメーター
+## 引数
 
-- _type_
+- `type`
   - : `PushEvent` の型を定義する {{domxref("DOMString")}}。{{event("push")}} か {{event("pushsubscriptionchange")}} を設定可能。
-- _eventInitDict_ {{optional_inline}}
+- `eventInitDict` {{optional_inline}}
 
   - : `PushEvent` オブジェクトに設定するいずれかの初期データを含むオプションオブジェクト。オプションは次のとおり：
 
-    - `data`： `PushEvent` に含ませる何らかのデータ。コンストラクタが呼び出された際、結果オブジェクトの {{domxref("PushEvent.data")}} プロパティは、`eventInitDict データ`メンバーから抽出されたバイトを含む新しい {{domxref("PushMessageData")}} オブジェクトを設定する。
+    - `data`： `PushEvent` に含ませる何らかのデータ。コンストラクタが呼び出された際、結果オブジェクトの {{domxref("PushEvent.data")}} プロパティは、`eventInitDict` データメンバーから抽出されたバイトを含む新しい {{domxref("PushMessageData")}} オブジェクトを設定する。
 
 ## 例
 
-```
+```js
 var dataInit = {
                 data : 'Some sample text'
               }
@@ -35,13 +35,11 @@ var myPushEvent = new PushEvent('push', dataInit);
 myPushEvent.data.text(); // 'Some sample text' を返す
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                     | 状態                         | コメント   |
-| ------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('Push API','#the-push-event','PushEvent')}} | {{Spec2('Push API')}} | 初期定義。 |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.PushEvent.PushEvent")}}
 

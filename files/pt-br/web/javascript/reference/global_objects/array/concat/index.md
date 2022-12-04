@@ -1,13 +1,15 @@
 ---
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Sumário
 
-O método concat() retorna um novo array contendo todos os arrays ou valores passados como parâmetro
+O método concat() retorna um novo array contendo todos os arrays ou valores passados como parâmetro.
+
+{{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}
 
 ## Sintaxe
 
@@ -58,7 +60,7 @@ var nums = num1.concat(num2, num3);
 
 ### Exemplo: Concatenando valores ao array
 
-O código a seguir une três valores ao array
+O código a seguir une três valores ao array:
 
 ```js
 var alpha = ['a', 'b', 'c'];

@@ -1,8 +1,8 @@
 ---
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
-translation_of: Web/API/Window/scrollBy
 ---
+
 {{ APIRef() }}
 
 ## Resumo

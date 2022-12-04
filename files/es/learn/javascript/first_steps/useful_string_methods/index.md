@@ -1,14 +1,8 @@
 ---
 title: Métodos útiles con cadenas
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-tags:
-  - Artículo
-  - Cadenas
-  - JavaScript
-  - Métodos
-  - Principiante
-translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 Ahora que hemos analizado los conceptos básicos de las cadenas, aumentemos la velocidad y comencemos a pensar qué operaciones útiles podemos hacer en cadenas con métodos integados, como encontrar la longitud de una cadena de texto, unir y dividir cadenas, sustituyendo un caracter de una cadena por otro, y más.
@@ -148,7 +142,7 @@ browserType.length;
 
 Esto debería devolver el número 7, porque "mozilla" tiene 7 caracteres. Esto es útil por muchas razones; por ejemplo, es posible que quieras buscar las longitudes de una serie de nombres para que puedas mostrarlos en orden de su longitud, o dejar que un usuario sepa que un nombre ingresado en un campo de formulario es demasiado largo o si tiene una longitud determinada.
 
-### Extrayendo un específico caracter de la cadena
+### Extrayendo un caracter específico de la cadena
 
 En una nota relacionada, puedes devolver cualquier carácter de una cadena usando la **notación de corchetes** — esto significa que incluyes corchetes (`[]`) al final del nombre de tu variable. Dentro de los corchetes, incluye el número del caracter que deseas extraer, así que, por ejemplo, para extraer la primera letra harías esto:
 

@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/data
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<data>` 요소**는 주어진 콘텐츠를 기계가 읽을 수 있는 해석본과 연결합니다. 콘텐츠가 시간 혹은 날짜 관련 정보라면 대신 {{htmlelement("time")}} 요소를 사용하세요.
 
@@ -63,7 +63,7 @@ translation_of: Web/HTML/Element/data
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다
 
 - {{htmlattrdef("value")}}
   - : 기계가 읽을 수 있는 형태의 콘텐츠 해석본.

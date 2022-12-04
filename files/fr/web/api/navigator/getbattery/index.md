@@ -56,7 +56,7 @@ updateBatteryStatus();
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Navigator.battery")}}
+{{Compat}}
 
 ## Voir aussi
 

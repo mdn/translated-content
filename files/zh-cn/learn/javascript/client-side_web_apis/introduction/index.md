@@ -55,7 +55,7 @@ _图片来自：[Overloaded plug socket](https://www.flickr.com/photos/easy-pics
 
 如上所述，我们讨论了什么是客户端 JavaScript API，以及它们与 JavaScript 语言的关系。让我们回顾一下，使其更清晰，并提及其他 JavaScript 工具的适用位置：
 
-- JavaScript — 一种内置于浏览器的高级脚本语言，您可以用来实现 Web 页面/应用中的功能。注意 JavaScript 也可用于其他象[Node](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction)这样的的编程环境。但现在您不必考虑这些。
+- JavaScript——一种内置于浏览器的高级脚本语言，你可以用来实现 Web 页面/应用中的功能。注意 JavaScript 也可用于其他像 [Node](/zh-CN/docs/Learn/Server-side/Express_Nodejs/Introduction) 这样的的编程环境。但现在你不必考虑这些。
 - 客户端 API — 内置于浏览器的结构程序，位于 JavaScript 语言顶部，使您可以更容易的实现功能。
 - 第三方 API — 置于第三方普通的结构程序（例如 Twitter，Facebook），使您可以在自己的 Web 页面中使用那些平台的某些功能（例如在您的 Web 页面显示最新的 Tweets）。
 - JavaScript 库 — 通常是包含具有[特定功能](/zh-CN/docs/Learn/JavaScript/Building_blocks/Functions#Custom_functions)的一个或多个 JavaScript 文件，把这些文件关联到您的 Web 页以快速或授权编写常见的功能。例如包含 jQuery 和 Mootools

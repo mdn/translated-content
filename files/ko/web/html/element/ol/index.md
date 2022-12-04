@@ -9,7 +9,8 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/ol
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<ol>` 요소**는 정렬된 목록을 나타냅니다. 보통 숫자 목록으로 표현합니다.
 
@@ -71,7 +72,7 @@ translation_of: Web/HTML/Element/ol
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("reversed")}}
   - : 목록의 순서 역전 여부. 즉, 내부에 지정한 항목이 역순으로 배열된 것인지 나타냅니다.

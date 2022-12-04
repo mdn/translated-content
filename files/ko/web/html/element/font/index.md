@@ -6,6 +6,7 @@ tags:
   - 폐기됨
 translation_of: Web/HTML/Element/font
 ---
+
 ## 개요
 
 _HTML에서의 Font 요소_ (`<font>`) 는 본문의 글자 크기, 색상과 및면을 정의합니다.
@@ -14,13 +15,13 @@ _HTML에서의 Font 요소_ (`<font>`) 는 본문의 글자 크기, 색상과 �
 >
 > **이 요소를 사용하지 마세요!** HTML 3.2에서 정규화되었지만, HTML 4.01에서는 사용되지 않는 요소로 지정되었으며, 동시에 스타일링과 관련된 모든 요소가 HTML5에서 폐기되었습니다.
 >
-> Starting with HTML 4, HTML does not convey styling information anymore (outside the {{HTMLElement("style")}} element or the **style** attribute of each element). For any new web development, styling should be written using [CSS](/ko/docs/CSS "CSS") only.
+> Starting with HTML 4, HTML does not convey styling information anymore (outside the {{HTMLElement("style")}} element or the **style** attribute of each element). For any new web development, styling should be written using [CSS](/ko/docs/CSS) only.
 >
 > The former behavior of the {{HTMLElement("font")}} element can be achieved, and even better controlled using the [CSS Fonts](/ko/docs/Web/CSS/CSS_Fonts) CSS properties.
 
 ## 속성
 
-다른 HTML 요소들과 같게, 이 요소도 [공용 속성](/ko/docs/HTML/Global_attributes "HTML/Global attributes")을 지원합니다.
+다른 HTML 요소들과 같게, 이 요소도 [공용 속성](/ko/docs/HTML/Global_attributes)을 지원합니다.
 
 - {{htmlattrdef("color")}}
   - : This attribute sets the text color using either a named color or a color specified in the hexadecimal #RRGGBB format.
@@ -37,4 +38,4 @@ This element implements the {{domxref("HTMLFontElement")}} interface.
 
 {{Compat("html.elements.font")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

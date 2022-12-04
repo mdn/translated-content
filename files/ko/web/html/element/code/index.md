@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/code
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<code>` 요소**는 짧은 코드 조각을 나타내는 스타일을 사용해 자신의 콘텐츠를 표시합니다. 기본 스타일은 {{glossary("user agent", "사용자 에이전트")}}의 고정폭 글씨체입니다.
 
@@ -63,7 +64,7 @@ translation_of: Web/HTML/Element/code
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## 예제
 

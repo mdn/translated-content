@@ -3,6 +3,7 @@ title: RTCPeerConnection.currentRemoteDescription
 slug: Web/API/RTCPeerConnection/currentRemoteDescription
 translation_of: Web/API/RTCPeerConnection/currentRemoteDescription
 ---
+
 {{WebRTCSidebar}}
 
 읽기 속성인 **`RTCPeerConnection.currentRemoteDescription`**은 마지막 {{domxref("RTCPeerConnection")}} 이후 가장 최근에 원격 유저와의 네고시에이션 및 연결을 성공적으로 마친 연결의 원격 엔드 포인트를 알려주는 {{domxref("RTCSessionDescription")}} 객체를 반환합니다. 추가적으로 이 속성은 description에 의해 표현되는 마지막 offer 및 answer가 처음 시작되면 ICE 에이전트에 의해 생성이 되었을 수도 있는 모든 ICE candidate들의 리스트를 포함합니다.

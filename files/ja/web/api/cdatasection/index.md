@@ -31,9 +31,4 @@ CDATA セクション自体は固有のプロパティやメソッドは持ち�
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                             | コメント                                                                    |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#dom-core-changes', 'CDATASection')}}             | {{Spec2('DOM WHATWG')}} | [issue #295](https://github.com/whatwg/dom/pull/295) のため再度追加された。 |
-| {{SpecName('DOM3 Core', 'core.html#ID-667469212', 'CDATASection')}}         | {{Spec2('DOM3 Core')}}     | {{SpecName('DOM2 Core')}} からの変更なし。                           |
-| {{SpecName('DOM2 Core', 'core.html#ID-667469212', 'CDATASection')}}         | {{Spec2('DOM2 Core')}}     | {{SpecName('DOM1')}} からの変更なし。                               |
-| {{SpecName('DOM1', 'level-one-core.html#ID-667469212', 'CDATASection')}} | {{Spec2('DOM1')}}         | 最初の定義                                                                  |
+{{Specifications}}

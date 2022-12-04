@@ -1,14 +1,9 @@
 ---
 title: embed
 slug: Web/HTML/Element/embed
-tags:
-  - HTML
-  - HTML5
-  - HTML:Elemento
-  - para_revisar
-translation_of: Web/HTML/Element/embed
 original_slug: Web/HTML/Elemento/embed
 ---
+
 > **Nota:** este tema documenta sólo el elemento \<embed> que se define como parte de HTML5. No trata las implementaciones anteriores no estandarizadas del elemento `<embed>`.
 
 El _Elemento HTML Embed_ ( `<embed>` ) representa un punto de integración para una aplicación externa o de contenido interactivo (en otras palabras, un plug-in).
@@ -41,5 +36,3 @@ Este elemento admite los siguientes atributos además de los [atributos globales
 ## Consulta también
 
 Otros elementos que se utilizan para incrustar el contenido de varios tipos incluyen {{ HTMLElement("audio") }}, {{ HTMLElement("canvas") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("math") }}, {{ HTMLElement("object") }}, {{ HTMLElement("svg") }} y {{ HTMLElement("video") }}.
-
-{{ languages ( { "en": "en/HTML/Element/embed" } ) }}

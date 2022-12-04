@@ -33,4 +33,4 @@ slug: Web/HTML/Element/dt
 
 - {{HTMLElement("dd")}}, {{HTMLElement("dl")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

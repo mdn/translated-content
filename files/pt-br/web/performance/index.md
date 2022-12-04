@@ -1,24 +1,8 @@
 ---
 title: Web Performance
 slug: Web/Performance
-tags:
-  - API
-  - App
-  - App Performance
-  - HTML
-  - JavaScript
-  - Landing
-  - Mobile
-  - Mobile Performance
-  - NeedsTranslation
-  - Performance
-  - Performance Budget
-  - Start-Up Performance
-  - TopicStub
-  - Web
-  - Web Performance
-translation_of: Web/Performance
 ---
+
 Web performance is the objective measurements and the perceived user experience of load time and runtime. Web performance is how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions - is the scrolling smooth? are buttons clickable? Are pop-ups quick to load and display, and do they animate smoothly as they do so? Web performance includes both objective measurements like time to load, frames per second, and time to become interactive, and subjective experiences of how long it felt like it took the content to load.
 
 The longer it takes for a site to respond, the more users will abandon the site. It is important to minimize the loading and response times and add additional features to conceal latency by making the experience as available and interactive as possible, as soon as possible, while asynchronously loading in the longer tail parts of the experience.
@@ -65,7 +49,7 @@ The MDN [Web Performance Learning Area](/pt-BR/docs/Learn/Performance) contains 
 - [User Timing API](/pt-BR/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
   - : Create application specific timestamps using the [user timing API](/pt-BR/docs/Web/API/User_Timing_API)'s "mark" and "measure" entry types - that are part of the browser's performance timeline.
 - [Frame Timing API](/pt-BR/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)
-  - : The [`PerformanceFrameTiming`](/en-US/docs/Web/API/PerformanceFrameTiming) interface provides _frame_ timing data about the browser's event loop.
+  - : The [`PerformanceFrameTiming`](/pt-BR/docs/Web/API/PerformanceFrameTiming) interface provides _frame_ timing data about the browser's event loop.
 - [Beacon API](/pt-BR/docs/Web/API/Beacon_API/Using_the_Beacon_API)
   - : The [Beacon](/pt-BR/docs/Web/API/Beacon_API) interface schedules an asynchronous and non-blocking request to a web server.
 - [Intersection Observer API](/pt-BR/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

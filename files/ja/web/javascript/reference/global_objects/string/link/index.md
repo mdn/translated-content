@@ -44,9 +44,7 @@ console.log('Click to return to ' + hotText.link(URL));
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.link', 'String.prototype.link')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

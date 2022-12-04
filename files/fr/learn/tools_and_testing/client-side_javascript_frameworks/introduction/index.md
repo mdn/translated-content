@@ -168,7 +168,7 @@ Read more about the JavaScript used in this section:
 
 Every JavaScript framework offers a way to write user interfaces more _declaratively_. That is, they allow you to write code that describes how your UI should look, and the framework makes it happen in the DOM behind the scenes.
 
-The vanilla JavaScript approach to building out new DOM elements in repetition was difficult to understand at a glance.  By contrast, the following block of code illustrates the way you might use Vue to describe our list of tasks:
+The vanilla JavaScript approach to building out new DOM elements in repetition was difficult to understand at a glance. By contrast, the following block of code illustrates the way you might use Vue to describe our list of tasks:
 
 ```html
 <ul>

@@ -1962,24 +1962,6 @@
     "modified": "2019-01-16T19:51:57.687Z",
     "contributors": ["wbamberg", "-"]
   },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:52:54.238Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "alipseight",
-      "-",
-      "jswisher"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-11-30T12:49:15.264Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "AndreDea"]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:52:54.520Z",
-    "contributors": ["chrisdavidmills", "wbamberg", "GPrimola"]
-  },
   "MDN/Writing_guidelines": {
     "modified": "2019-09-11T08:06:52.705Z",
     "contributors": [
@@ -2054,10 +2036,6 @@
       "RobMota",
       "-"
     ]
-  },
-  "MDN/Yari": {
-    "modified": "2019-09-09T15:53:42.526Z",
-    "contributors": ["SphinxKnight", "wbamberg", "richellyitalo"]
   },
   "Mozilla": {
     "modified": "2019-03-23T23:37:34.048Z",
@@ -5840,10 +5818,6 @@
     "modified": "2019-03-23T23:28:21.815Z",
     "contributors": ["clebermatheus1"]
   },
-  "Web/Guide/Mobile/Separate_sites": {
-    "modified": "2019-03-23T23:28:15.359Z",
-    "contributors": ["clebermatheus1"]
-  },
   "Web/Guide/Performance": {
     "modified": "2019-03-18T20:49:01.451Z",
     "contributors": ["ssamuel645", "KelviDalmazo"]
@@ -7529,10 +7503,6 @@
       "tauame"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:38:41.483Z",
-    "contributors": ["fcard", "teoli", "kuni71"]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-04-07T04:11:27.586Z",
     "contributors": [
@@ -7904,10 +7874,6 @@
   "Web/JavaScript/Reference": {
     "modified": "2019-03-23T23:33:55.653Z",
     "contributors": ["Gutemberg", "teoli", "ggviana", "ethertank"]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:38:32.625Z",
-    "contributors": ["alissonbovenzo", "teoli", "ggviana"]
   },
   "Web/JavaScript/Reference/Classes": {
     "modified": "2020-10-15T21:39:06.651Z",
@@ -10132,7 +10098,7 @@
     "modified": "2020-03-12T19:39:46.309Z",
     "contributors": ["SphinxKnight", "cirocosta"]
   },
-  "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {
+  "Web/JavaScript/Reference/Operators/Nullish_coalescing": {
     "modified": "2020-10-15T22:27:35.360Z",
     "contributors": ["mateusvelleda", "yagoag", "marlonveiga-santos"]
   },
@@ -11167,10 +11133,6 @@
     "modified": "2019-03-23T22:29:34.759Z",
     "contributors": ["Aschlla", "caio.rrs"]
   },
-  "conflicting/Web/Accessibility/ARIA_07681b5fb66700d2792e86830388177c": {
-    "modified": "2019-03-23T23:03:31.037Z",
-    "contributors": ["hannahlere"]
-  },
   "conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122": {
     "modified": "2019-03-23T22:27:11.984Z",
     "contributors": ["Aschlla"]
@@ -11244,6 +11206,10 @@
     "modified": "2019-03-23T22:47:23.868Z",
     "contributors": ["raduq"]
   },
+  "conflicting/Web/JavaScript": {
+    "modified": "2020-03-12T19:38:41.483Z",
+    "contributors": ["fcard", "teoli", "kuni71"]
+  },
   "conflicting/Web/JavaScript/Equality_comparisons_and_sameness": {
     "modified": "2019-03-23T23:25:15.038Z",
     "contributors": ["teoli", "fernando.karpinski"]
@@ -11270,6 +11236,10 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview": {
     "modified": "2020-03-12T19:43:20.868Z",
     "contributors": ["christophergomes", "Danilson_Veloso"]
+  },
+  "conflicting/Web/JavaScript/Reference": {
+    "modified": "2020-03-12T19:38:32.625Z",
+    "contributors": ["alissonbovenzo", "teoli", "ggviana"]
   },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:10.197Z",
@@ -11396,8 +11366,8 @@
     "contributors": ["alefesouza"]
   },
   "conflicting/Web/Progressive_web_apps": {
-    "modified": "2020-08-27T09:35:40.497Z",
-    "contributors": ["bermarques", "clebermatheus1"]
+    "modified": "2019-03-23T23:28:15.359Z",
+    "contributors": ["clebermatheus1"]
   },
   "conflicting/Web/SVG/Element/animate": {
     "modified": "2019-03-23T22:57:25.579Z",
@@ -11539,9 +11509,31 @@
     "modified": "2020-09-30T15:43:15.730Z",
     "contributors": ["chrisdavidmills", "soarescamila"]
   },
+  "orphaned/MDN/Tools": {
+    "modified": "2020-09-30T16:52:54.238Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "alipseight",
+      "-",
+      "jswisher"
+    ]
+  },
+  "orphaned/MDN/Tools/KumaScript": {
+    "modified": "2020-11-30T12:49:15.264Z",
+    "contributors": ["chrisdavidmills", "wbamberg", "AndreDea"]
+  },
+  "orphaned/MDN/Tools/KumaScript/Troubleshooting": {
+    "modified": "2020-09-30T16:52:54.520Z",
+    "contributors": ["chrisdavidmills", "wbamberg", "GPrimola"]
+  },
   "orphaned/MDN/Tools/Page_regeneration": {
     "modified": "2020-09-30T16:52:54.361Z",
     "contributors": ["chrisdavidmills", "wbamberg", "-", "juniorgarcia"]
+  },
+  "orphaned/MDN/Yari": {
+    "modified": "2019-09-09T15:53:42.526Z",
+    "contributors": ["SphinxKnight", "wbamberg", "richellyitalo"]
   },
   "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
     "modified": "2019-03-18T21:15:50.836Z",

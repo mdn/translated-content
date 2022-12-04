@@ -1,18 +1,15 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - Aprender
-  - JavaScript
-translation_of: Web/JavaScript
 ---
+
 {{JsSidebar}}
 
 **JavaScript®** (às vezes abreviado para **JS**) é uma linguagem leve, interpretada e baseada em objetos com _[funções de primeira classe](http://en.wikipedia.org/wiki/First-class_function),_ mais conhecida como a linguagem de script para páginas Web, mas usada também em [vários outros ambientes sem browser](http://en.wikipedia.org/wiki/JavaScript#Uses_outside_web_pages), tais como [node.js](http://nodejs.org/), [Apache CouchDB](http://couchdb.apache.org/) e Adobe Acrobat. O JavaScript é uma linguagem [baseada em protótipos](https://en.wikipedia.org/wiki/Prototype-based), [multi-paradigma](https://en.wikipedia.org/wiki/Programming_paradigm) e dinâmica, suportando estilos de orientação a objetos, imperativos e declarativos (como por exemplo a programação funcional). Saiba mais [sobre o JavaScript](/pt-BR/docs/Web/JavaScript/About_JavaScript).
 
 Essa seção do site é dedicada à linguagem JavaScript e não às partes que são específicas para páginas Web e outros ambientes. Para mais informações sobre as {{Glossary("API", "APIs")}} específicas para páginas Web, por favor consulte as seções [Web APIs](/pt-BR/docs/Web/API) e [DOM](/pt-BR/docs/Glossary/DOM).
 
-O padrão JavaScript é [ECMAScript](/en/JavaScript/Language_Resources). Desde 2012, todos os [navegadores modernos](http://kangax.github.io/compat-table/es5/) possuem suporte total ao ECMAScript 5.1. Navegadores mais antigos suportam pelo menos ECMAScript 3. Em 17 de Junho de 2015, a [ECMA International](http://www.ecma-international.org/) publicou a sexta versão do ECMAScript, que é oficialmente chamado de ECMAScript 2015, e foi inicialmente conhecido como ECMAScript 6 ou ES6. Desde então, as especificações do ECMAScript são lançadas anualmente. Essa documentação faz referência à última versão de referência, que atualmente é a [ECMAScript 2018](https://tc39.github.io/ecma262/).
+O padrão JavaScript é [ECMAScript](/pt-BR/JavaScript/Language_Resources). Desde 2012, todos os [navegadores modernos](http://kangax.github.io/compat-table/es5/) possuem suporte total ao ECMAScript 5.1. Navegadores mais antigos suportam pelo menos ECMAScript 3. Em 17 de Junho de 2015, a [ECMA International](http://www.ecma-international.org/) publicou a sexta versão do ECMAScript, que é oficialmente chamado de ECMAScript 2015, e foi inicialmente conhecido como ECMAScript 6 ou ES6. Desde então, as especificações do ECMAScript são lançadas anualmente. Essa documentação faz referência à última versão de referência, que atualmente é a [ECMAScript 2018](https://tc39.github.io/ecma262/).
 
 Não se deve confundir o JavaScript com a [linguagem de programação Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>). Tanto _Java_ quanto _JavaScript_ são marcas registradas da Oracle nos Estados Unidos da América e em outros países. No entanto, as duas linguagens de programação possuem sintaxe, semânticas e usos muito diferentes.
 

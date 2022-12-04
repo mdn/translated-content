@@ -3,15 +3,16 @@ title: flex
 slug: Web/CSS/flex
 translation_of: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 ## Описание
 
-Свойство [CSS](/ru/docs/CSS "CSS") **`flex`** - это [сокращённое свойство](/ru/docs/Web/CSS/Shorthand_properties), определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства. Это свойство устанавливает [flex-grow](/ru/docs/Web/CSS/flex-grow), [flex-shrink](/ru/docs/Web/CSS/flex-shrink) и [flex-basis](/ru/docs/Web/CSS/flex-basis).
+Свойство [CSS](/ru/docs/CSS) **`flex`** - это [сокращённое свойство](/ru/docs/Web/CSS/Shorthand_properties), определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства. Это свойство устанавливает [flex-grow](/ru/docs/Web/CSS/flex-grow), [flex-shrink](/ru/docs/Web/CSS/flex-shrink) и [flex-basis](/ru/docs/Web/CSS/flex-basis).
 
 {{cssinfo}}
 
-Для более полной информации читайте [Использование flex-контейнеров CSS](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes "CSS/Using_CSS_flexible_boxes").
+Для более полной информации читайте [Использование flex-контейнеров CSS](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes).
 
 ## Синтаксис
 
@@ -61,19 +62,19 @@ flex: unset;
 
 ```css
 #flex-container {
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-direction: row;
-	flex-direction: row;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
 }
 
 #flex-container > .flex-item {
-	-webkit-flex: auto;
-	flex: auto;
+  -webkit-flex: auto;
+  flex: auto;
 }
 
 #flex-container > .raw-item {
-	width: 5rem;
+  width: 5rem;
 }
 ```
 
@@ -88,23 +89,23 @@ flex: unset;
 var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
 flex.addEventListener("click", function() {
-	raw.style.display = raw.style.display == "none" ? "block" : "none";
+  raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
 ```
 
 ```css hidden
 #flex-container {
-	width: 100%;
-	font-family: Consolas, Arial, sans-serif;
+  width: 100%;
+  font-family: Consolas, Arial, sans-serif;
 }
 
 #flex-container > div {
-	border: 1px solid #f00;
-	padding: 1rem;
+  border: 1px solid #f00;
+  padding: 1rem;
 }
 
 #flex-container > .raw-item {
-	border: 1px solid #000;
+  border: 1px solid #000;
 }
 ```
 
@@ -122,4 +123,4 @@ flex.addEventListener("click", function() {
 
 ## Смотрите также
 
-- [Using CSS flexible boxes](/ru/docs/Web/Guide/CSS/Flexible_boxes "CSS/Using_CSS_flexible_boxes")
+- [Using CSS flexible boxes](/ru/docs/Web/Guide/CSS/Flexible_boxes)

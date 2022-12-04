@@ -1,14 +1,8 @@
 ---
 title: '::-moz-page'
 slug: Web/CSS/::-moz-page
-tags:
-  - CSS
-  - NeedsCompatTable
-  - NeedsE
-  - No estándar(2)
-  - Referencia CSS
-translation_of: Web/CSS/::-moz-page
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Resumen

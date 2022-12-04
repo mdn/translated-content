@@ -1,18 +1,9 @@
 ---
 title: mask
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - Compatibilidade Mobile
-  - Internet
-  - Layout
-  - Referencia
-  - SVG
-  - Web
-  - máscaras
-translation_of: Web/CSS/mask
 original_slug: mask
 ---
+
 {{CSSRef}}
 
 ## Resumo

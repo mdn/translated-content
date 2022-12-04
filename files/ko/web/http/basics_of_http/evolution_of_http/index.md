@@ -7,6 +7,7 @@ tags:
   - 가이드
 translation_of: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 ---
+
 {{HTTPSidebar}}
 
 **HTTP**는 월드 와이드 웹에 내재된 프로토콜입니다. Tim Berners-Lee에 의해 1989년부터 1991년에 발명된 HTTP는, 본래의 단순함의 대부분을 지키면서 확장성 위에서 만들어지도록, 많은 수정을 거쳐왔습니다. HTTP는 의사-신뢰도가 있는 실험실 환경에서 파일을 교환하는 프로토콜에서 높은 수준의 분석과 3D 내에서 이미지와 비디오를 실어나르는 현대 인터넷 정글로 진화해 왔습니다.

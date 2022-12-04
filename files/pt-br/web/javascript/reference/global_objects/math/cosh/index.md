@@ -1,8 +1,8 @@
 ---
 title: Math.cosh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cosh
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 ---
+
 {{JSRef}}
 
 A função **`Math.cosh()`** retorna o cosseno hiperbólico de um número, que pode ser expressada usando {{jsxref("Math.E", "constante e", "", 1)}}:

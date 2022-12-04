@@ -1,16 +1,8 @@
 ---
 title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
-tags:
-  - Date
-  - JavaScript
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
 ---
+
 {{JSRef}}
 
 O método **`setHours()`** atribui as horas para uma data especificada de acordo com a hora local e retorna o número de milissegundos desde do dia 1 de Janeiro de 1970 00:00:00 UTC até o tempo representado pela instância {{jsxref("Date")}} atualizada.

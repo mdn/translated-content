@@ -10,7 +10,8 @@ tags:
   - 메타데이터
 translation_of: Web/HTML/Element/meta/name
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 {{htmlelement("meta")}} 요소는 {{htmlattrxref("name", "meta")}} 특성을 메타데이터 이름으로, {{htmlattrxref("content", "meta")}} 특성을 값으로 하여 문서 메타데이터를 이름-값 쌍의 형태로 제공할 때 사용할 수 있습니다.
 
@@ -89,16 +90,16 @@ CSS Device Adaptation 명세는 다음과 같은 메타데이터 이름을 정�
   >
   > - 장치와 브라우저마다 기본값이 다를 수 있습니다.
 
-  ##### Accessibility concerns with viewport scaling
+##### Accessibility concerns with viewport scaling
 
-  `user-scalable`을 `no`로 지정해 확대 기능을 비활성화하면 저시력 사용자가 페이지의 내용을 읽고 이해하는 것을 방해합니다.
+`user-scalable` 을 `no` 로 지정해 확대 기능을 비활성화하면 저시력 사용자가 페이지의 내용을 읽고 이해하는 것을 방해합니다.
 
-  - [MDN Understanding WCAG, Guideline 1.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-  - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-  ##### 같이 보기
+##### 같이 보기
 
-  CSS {{cssxref("@viewport")}} @-규칙
+CSS {{cssxref("@viewport")}} @-규칙
 
 ### 다른 메타데이터 이름
 

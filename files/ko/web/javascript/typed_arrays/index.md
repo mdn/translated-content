@@ -6,6 +6,7 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Typed_arrays
 ---
+
 {{JsSidebar("Advanced")}}
 
 JavaScript 형식화 배열(typed array)은 배열같은 객체이고 원시(raw) 이진 데이터에 액세스하기 위한 메커니즘을 제공합니다. 이미 아시다시피, {{jsxref("Array")}} 객체는 동적으로 늘었다 줄고 어떤 JavaScript 값이든 가질 수 있습니다. JavaScript 엔진은 이러한 배열이 빨라지도록 최적화를 수행합니다. 그러나, audio 및 video 조작과 같은 기능 추가, WebSocket을 사용한 원시 데이터에 액세스 등 웹 어플리케이션이 점점 더 강력해짐에 따라, 빠르고 쉽게 형식화 배열의 원시 이진 데이터를 조작할 수 있게 하는 것이 JavaScript 코드에 도움이 될 때가 있음이 분명해 졌습니다.
@@ -110,11 +111,11 @@ int16View[0] = 32;
 console.log("Entry 0 in the 32-bit array is now " + int32View[0]);
 ```
 
-이로부터 출력은 "Entry 0 in the 32-bit array is now 32"입니다. 즉, 두 배열은 확실히 그저 같은 데이터 버퍼 상의 뷰입니다, 버퍼를 서로 다른 형식으로 다루는. 모든 [뷰 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects "Typed array subclasses")으로 이를 할 수 있습니다.
+이로부터 출력은 "Entry 0 in the 32-bit array is now 32"입니다. 즉, 두 배열은 확실히 그저 같은 데이터 버퍼 상의 뷰입니다, 버퍼를 서로 다른 형식으로 다루는. 모든 [뷰 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)으로 이를 할 수 있습니다.
 
 ### 복잡한 데이터 구조(체)와 작업하기
 
-단일 버퍼를 서로 다른 형인 여러 뷰(버퍼 내 서로 다른 오프셋에서 시작하는)와 결합시켜, 여러 데이터 형을 포함하는 데이터 객체와 상호 작용할 수 있습니다. 예를 들어, 이는 [WebGL](/ko/docs/Web/WebGL "WebGL"), 데이터 파일 또는 [js-ctypes](/ko/docs/Mozilla/js-ctypes "js-ctypes")를 쓰는 동안 사용해야 하는 C 구조체에서 복잡한 데이터 구조와 상호 작용케 합니다.
+단일 버퍼를 서로 다른 형인 여러 뷰(버퍼 내 서로 다른 오프셋에서 시작하는)와 결합시켜, 여러 데이터 형을 포함하는 데이터 객체와 상호 작용할 수 있습니다. 예를 들어, 이는 [WebGL](/ko/docs/Web/WebGL), 데이터 파일 또는 [js-ctypes](/ko/docs/Mozilla/js-ctypes)를 쓰는 동안 사용해야 하는 C 구조체에서 복잡한 데이터 구조와 상호 작용케 합니다.
 
 이 C 구조체를 생각해 보세요:
 
@@ -140,7 +141,7 @@ var amountDueView = new Float32Array(buffer, 20, 1);
 
 그런 뒤, 예를 들어 `amountDueView[0]`로 지불할 요금(amount due)을 액세스할 수 있습니다.
 
-> **참고:** **주의:** C 구조체에서 [데이터 구조 정렬](http://en.wikipedia.org/wiki/Data_structure_alignment "data structure alignment")은 플랫폼에 의존합니다. 이러한 패딩(padding) 차이에 대해 조심하고 고려하세요.
+> **참고:** **주의:** C 구조체에서 [데이터 구조 정렬](http://en.wikipedia.org/wiki/Data_structure_alignment)은 플랫폼에 의존합니다. 이러한 패딩(padding) 차이에 대해 조심하고 고려하세요.
 
 ### 보통 배열로 변환
 
@@ -159,8 +160,8 @@ normalArray.constructor === Array;
 
 ## 참조
 
-- [*Base64*로 인코딩된 문자열에서 `ArrayBuffer` 또는 형식화 배열 얻기](/ko/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer "Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer")
+- [*Base64*로 인코딩된 문자열에서 `ArrayBuffer` 또는 형식화 배열 얻기](/ko/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
 - [`StringView` - 형식화 배열에 기반을 둔 문자열의 C-like 표현](/ko/docs/Code_snippets/StringView)
-- [형식화 배열로 빠른 Canvas 픽셀 조작](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays "Faster Canvas Pixel Manipulation with Typed Arrays")
+- [형식화 배열로 빠른 Canvas 픽셀 조작](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
 - [형식화 배열: 브라우저에서 이진 데이터](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

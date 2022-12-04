@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Operators/Optional_chaining
 translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 original_slug: Web/JavaScript/Referencia/Operadores/Encadenamiento_opcional
 ---
+
 {{JSSidebar("Operators")}}
 
 El operador de **encadenamiento opcional** **`?.`** permite leer el valor de una propiedad ubicada dentro de una cadena de objetos conectados sin tener que validar expresamente que cada referencia en la cadena sea válida. El operador `?.` funciona de manera similar a el operador de encadenamiento `.`, excepto que en lugar de causar un error si una referencia es [casi-nula](/es/docs/Glossary/nullish) ({{JSxRef("null")}} o {{JSxRef("undefined")}}), la expresión hace una evaluación de circuito corto con un valor de retorno de `undefined`. Cuando se usa con llamadas a funciones, devuelve `undefined` si la función dada no existe.
@@ -58,7 +59,7 @@ El uso de encadenamiento opcional con llamadas a funciones hace que la expresió
 let result = someInterface.customMethod?.();
 ```
 
-> **Nota:** Si hay una propiedad con ese nombre y que no es una función, usar `?.` aún levantará una excepción {{JSxRef("TypeError")}} (` x.y`` is not a function `).
+> **Nota:** Si hay una propiedad con ese nombre y que no es una función, usar `?.` aún levantará una excepción {{JSxRef("TypeError")}} (`x.y is not a function`).
 
 #### Manejo de callbacks opcionales o manejadores de eventos
 
@@ -169,9 +170,7 @@ console.log(customerCity); // Unknown city
 
 ## Especificaciones
 
-| Specification                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#prod-OptionalExpression', 'optional expression')}} |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

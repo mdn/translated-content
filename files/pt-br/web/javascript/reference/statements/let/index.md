@@ -1,13 +1,8 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Variable declaration
-  - Variables
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 Declara uma variável local no escopo do bloco atual, opcionalmente iniciando-a com um valor.
@@ -51,7 +46,7 @@ let (var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]]) statement;
 
 Variáveis declaradas com `let` são "içadas" para começo do bloco em que elas são definidas (isso é conhecido também pelo termo, hoisting).
 
-Redeclaração de uma mesma variável num mesmo escopo de bloco causa um [`TypeError`](/en-US/docs/JavaScript/Reference/Global_Objects/TypeError).
+Redeclaração de uma mesma variável num mesmo escopo de bloco causa um [`TypeError`](/pt-BR/docs/JavaScript/Reference/Global_Objects/TypeError).
 
 ```js
 if (x) {
@@ -69,7 +64,7 @@ function do_something() {
 }
 ```
 
-> **Aviso:** **Atenção:** Os rascunhos do ECMAScript 6 (desde abril de 2012) tornam este comportamento ilegal. Isso significa, provavelmente, que as futuras versões do JavaScript levantarão um [`TypeError`](/en-US/docs/JavaScript/Reference/Global_Objects/TypeError). Então, se você faz isso, deveria evitar essa prática!
+> **Aviso:** **Atenção:** Os rascunhos do ECMAScript 6 (desde abril de 2012) tornam este comportamento ilegal. Isso significa, provavelmente, que as futuras versões do JavaScript levantarão um [`TypeError`](/pt-BR/docs/JavaScript/Reference/Global_Objects/TypeError). Então, se você faz isso, deveria evitar essa prática!
 
 Você pode encontrar erros em instruções [`switch`](/pt-BR/docs/JavaScript/Reference/Statements/switch) porque existe apenas um bloco subjacente.
 

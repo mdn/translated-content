@@ -56,7 +56,7 @@ Le code HTML suivant démontre l'utilisation de la propriété `stack`.
 
 En supposant que ce code a été enregistré comme `C:\exemple.html` sur un système de fichier Windows, il produira un message d'alerte dans une nouvelle fenêtre avec le texte suivant :
 
-À partir de Firefox 30 et ultérieur, ce message contiendra le numéro de colonne  ({{bug(762556)}}) :
+À partir de Firefox 30 et ultérieur, ce message contiendra le numéro de colonne ({{bug(762556)}}) :
 
 ```html
 trace@file:///C:/exemple.html:9:17
@@ -86,7 +86,7 @@ a("premier appel, premierarg")@file:///C:/exemple.html:19
 
 ### Pile d'un code evalué
 
-À partir de Firefox 30 {{geckoRelease("30")}}, la pile d'erreur du code dans les appels à `Function()` et `eval()` produit désormais des piles avec des informations plus détaillées sur les numéros de lignes et de colonnes dans ces appels. Les appels de fonction sont indiqués par `"> Function"` et les appels d'`eval` par `"> eval"`. Voir {{bug("332176")}}.
+À partir de Firefox 30, la pile d'erreur du code dans les appels à `Function()` et `eval()` produit désormais des piles avec des informations plus détaillées sur les numéros de lignes et de colonnes dans ces appels. Les appels de fonction sont indiqués par `"> Function"` et les appels d'`eval` par `"> eval"`. Voir {{bug("332176")}}.
 
 ```js
 try {

@@ -1,9 +1,9 @@
 ---
 title: Herencia en JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-translation_of: Learn/JavaScript/Objects/Inheritance
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 Con la mayoría de los detalles internos de OOJS (_JavaScript Orientado a Objetos)_ explicados, este artículo muestra cómo crear clases "hijo" (constructores) que heredan características de sus clases "padre". Además, presentamos algunos consejos sobre cuándo y dónde puedes usar OOJS y cómo se crean las clases con la sintaxis moderna de ECMAScript.
@@ -51,7 +51,7 @@ Digamos que quisieramos crear una clase de `Profesor`, como la que describimos e
 
 ## Definiendo un constructor Profesor()
 
-Lo primero que tenemos que hacer es crear el constructor Profesor`()` — añadimos lo siguiente tras el código existente:
+Lo primero que tenemos que hacer es crear el constructor `Profesor()` — añadimos lo siguiente tras el código existente:
 
 ```js
 function Profesor(nombrePila, apellido, edad, genero, intereses, materia) {
@@ -119,9 +119,9 @@ Todo va bien hasta ahora, pero tenemos un problema. Definimos un nuevo construct
     Profesor.prototype = Object.create(Persona.prototype);
     ```
 
-    Aquí es cuando nuestro amigo [`create()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) sale al rescate de nuevo. En este caso lo estamos usando para crear un nuevo objeto y hacerlo el valor de `Profesor.prototype.` El nuevo objeto tiene `Persona.prototype` como su prototipo y por lo tanto heredará, si y cuando lo necesite, todos los métodos disponibles en `Persona.prototype`.
+    Aquí es cuando nuestro amigo [`create()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/create) sale al rescate de nuevo. En este caso lo estamos usando para crear un nuevo objeto y hacerlo el valor de `Profesor.prototype.` El nuevo objeto tiene `Persona.prototype` como su prototipo y por lo tanto heredará, si y cuando lo necesite, todos los métodos disponibles en `Persona.prototype`.
 
-2. Necesitamos hacer una cosa más antes de proseguir. Después de agregar la última línea, la propiedad `constructor`de `Profesor.prototype` es ahora igual a `Persona()`, debido a que acabamos de asignar `Profesor.prototype` para que haga referencia a un objeto que hereda sus propiedades de `Persona.prototype`! Ahora prueba guardando tu código, carga la página en un explorador e intenta verificar en la consola el valor de `Profesor.prototype.constructor`.
+2. Necesitamos hacer una cosa más antes de proseguir. Después de agregar la última línea, la propiedad `constructor` de `Profesor.prototype` es ahora igual a `Persona()`, debido a que acabamos de asignar `Profesor.prototype` para que haga referencia a un objeto que hereda sus propiedades de `Persona.prototype`! Ahora prueba guardando tu código, carga la página en un explorador e intenta verificar en la consola el valor de `Profesor.prototype.constructor`.
 3. Esto puede volverse un problema, así que necesitamos corregirlo. Puedes hacerlo regresando a tu código y agregando la siguiente línea al final:
 
     ```js
@@ -162,7 +162,7 @@ Ahora que ha ingresado todo el código, intente creando una instancia de objeto 
 var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');
 ```
 
-Ahora guarde y actualice, e intente accediendo a las propiedades y metodos de su nuevo`teacher1` objecto, por ejemplo:
+Ahora guarde y actualice, e intente accediendo a las propiedades y metodos de su nuevo `teacher1` objecto, por ejemplo:
 
 ```js
 teacher1.name.first;
@@ -173,7 +173,7 @@ teacher1.greeting();
 teacher1.farewell();
 ```
 
-Esto deberia trabajar bien. Las consultas de las líneas 1, 2, 3, y 6 acceden a miembros heredados del genérico`Person()` constructor (clase). La consulta de la línea 4 accede un miembro que es disponible solamente en el mas especializado`Teacher()` constructor (clase). La consulta de la línea 5 accedería a un miembro desde`Person()`, excepto por el hecho que `Teacher()` tiene sus propios miembros con el mismo nombre, entonces la consulta accede a ese miembro.
+Esto deberia trabajar bien. Las consultas de las líneas 1, 2, 3, y 6 acceden a miembros heredados del genérico `Person()` constructor (clase). La consulta de la línea 4 accede un miembro que es disponible solamente en el mas especializado `Teacher()` constructor (clase). La consulta de la línea 5 accedería a un miembro desde `Person()`, excepto por el hecho que `Teacher()` tiene sus propios miembros con el mismo nombre, entonces la consulta accede a ese miembro.
 
 > **Nota:** Si tiene problemas con el funcionamiento, compare su código con nuestra [versión final](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-inheritance-finished.html) (vea [corriendo en vivo](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-inheritance-finished.html) también).
 
@@ -181,7 +181,7 @@ La técnica que mostramos aquí no es la única para crear herencia de clases en
 
 También estará interesado en verificar algo de las nuevas características de {{glossary("ECMAScript")}} que nos permiten hacer herencia mas claramente en JavaScript (véase [Classes](/es/docs/Web/JavaScript/Reference/Classes)). No se cubrió todo aquí, como tampoco es soportado aún por todos los navegadores. Todo el otro código de constructores que se discutió aquí en estos artículos son soportados por IE9 o superior, y hay caminos para lograr superiores soportes que estos.
 
-Un simple camino es usar una librería de JavaScript — la mayoría de las opciones mas populares tienen un facil ajuste de funcionalidad disponible para hacer herencia mas facil y rápido. [CoffeeScript](http://coffeescript.org/#classes) por ejemplo provee`class`, `extends`, etc.
+Un simple camino es usar una librería de JavaScript — la mayoría de las opciones mas populares tienen un facil ajuste de funcionalidad disponible para hacer herencia mas facil y rápido. [CoffeeScript](http://coffeescript.org/#classes) por ejemplo provee `class`, `extends`, etc.
 
 ## Un ejercicio mas allá
 
@@ -194,7 +194,7 @@ En nuestra [Sección teórica de POO](/es/docs/Learn/JavaScript/Objects/Object-o
 To summarize, you've basically got three types of property/method to worry about:
 
 1. Those defined inside a constructor function that are given to object instances. These are fairly easy to spot — in your own custom code, they are the members defined inside a constructor using the `this.x = x` type lines; in built in browser code, they are the members only available to object instances (usually created by calling a constructor using the `new` keyword, e.g. `var myInstance = new myConstructor()`).
-2. Those defined directly on the constructor themselves, that are available only on the constructor. These are commonly only available on built-in browser objects, and are recognized by being chained directly onto a constructor, _not_ an instance. For example, [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
+2. Those defined directly on the constructor themselves, that are available only on the constructor. These are commonly only available on built-in browser objects, and are recognized by being chained directly onto a constructor, _not_ an instance. For example, [`Object.keys()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/keys).
 3. Those defined on a constructor's prototype, which are inherited by all instances and inheriting object classes. These include any member defined on a Constructor's prototype property, e.g. `myConstructor.prototype.x()`.
 
 If you are not sure which is which, don't worry about it just yet — you are still learning, and familiarity will come with practice.
@@ -231,7 +231,7 @@ class Person {
 
 The [class](/es/docs/Web/JavaScript/Reference/Statements/class) statement indicates that we are creating a new class. Inside this block, we define all the features of the class:
 
-- The [`constructor()`](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) method defines the constructor function that represents our `Person` class.
+- The [`constructor()`](/es/docs/Web/JavaScript/Reference/Classes/constructor) method defines the constructor function that represents our `Person` class.
 - `greeting()` and `farewell()` are class methods. Any methods you want associated with the class are defined inside it, after the contructor. In this example, we've used [template literals](/es/docs/Web/JavaScript/Reference/Template_literals) rather than string concatenation to make the code easier to read.
 
 We can now instantiate object instances using the [`new` operator](/es/docs/Web/JavaScript/Reference/Operators/new), in just the same way as we did before:
@@ -331,7 +331,7 @@ class Teacher extends Person {
 }
 ```
 
-In our class above we have a getter and setter for the `subject` property. We use **`_` **to create a separate value in which to store our name property. Without using this convention, we would get errors every time we called get or set. At this point:
+In our class above we have a getter and setter for the `subject` property. We use **`_`** to create a separate value in which to store our name property. Without using this convention, we would get errors every time we called get or set. At this point:
 
 - To show the current value of the `_subject` property of the `snape` object we can use the `snape.subject` getter method.
 - To assign a new value to the `_subject` property we can use the `snape.subject="new value"` setter method.

@@ -8,7 +8,8 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/dt
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<dt>` 요소**는 설명 혹은 정의 리스트에서 용어를 나타냅니다. {{htmlelement("dl")}} 요소 안에 위치해야 합니다. 보통 {{htmlelement("dd")}} 요소가 뒤따르지만, 여러 개의 \<dt> 요소를 연속해 배치하면 바로 다음 {{htmlelement("dd")}} 요소로 한꺼번에 서술할 수 있습니다.
 
@@ -73,7 +74,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## 예제
 

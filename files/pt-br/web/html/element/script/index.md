@@ -1,26 +1,26 @@
 ---
 title: <script>
 slug: Web/HTML/Element/script
-translation_of: Web/HTML/Element/script
 ---
+
 O **elemento HTML `<script>`** é usado para incluir ou referenciar um script executável.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
           >Conteúdo de metadados</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Fluxo de conteúdo</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >Conteúdo fraseado</a
         >.
       </td>
@@ -37,10 +37,10 @@ O **elemento HTML `<script>`** é usado para incluir ou referenciar um script ex
       <th scope="row">Pais permitidos</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
           >conteúdo de metadados</a
         >, ou qualquer elemento que aceite
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >conteúdo fraseado</a
         >.
       </td>
@@ -100,7 +100,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     Note that in Firefox you can use advanced features such as let statements and other features in later JS versions, by using `type=application/javascript;version=1.8` {{Non-standard_inline}}. Beware, however, that as this is a non-standard feature, this will most likely break support for other browsers, in particular Chromium-based browsers.
 
-    For how to include _exotic programming languages_, read about [Rosetta](/en-US/Add-ons/Code_snippets/Rosetta).
+    For how to include _exotic programming languages_, read about [Rosetta](/pt-BR/Add-ons/Code_snippets/Rosetta).
 
 ### Atributos obsoletos
 
@@ -143,4 +143,4 @@ The script should be served with the `text/javascript` MIME type, but browsers a
 - {{domxref("document.currentScript")}}
 - [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pie.gd/test/script-link-events/)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

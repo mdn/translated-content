@@ -1,16 +1,8 @@
 ---
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 A interface HTMLInputElement fornece propriedades e métodos especiais (além da interface regular {{domxref ("HTMLElement")}}) que também tem disponível por herança) para manipular o layout e a apresentação dos elementos de entrada.
@@ -611,14 +603,14 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
       <td><code>void</code></td>
       <td>
         Sets the files selected on the input to the given array of
-        <code><a href="/en-US/docs/Web/API/File">File</a></code> objects. This
+        <code><a href="/pt-BR/docs/Web/API/File">File</a></code> objects. This
         is an alternative to <code>mozSetFileNameArray</code> which can be used
         in frame scripts: a chrome script can
-        <a href="/en-US/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
+        <a href="/pt-BR/docs/Extensions/Using_the_DOM_File_API_in_chrome_code"
           >open files as <code>File</code> objects</a
         >
         and send them via
-        <a href="/en-US/Firefox/Multiprocess_Firefox/The_message_manager"
+        <a href="/pt-BR/Firefox/Multiprocess_Firefox/The_message_manager"
           >message manager</a
         >.
       </td>
@@ -648,7 +640,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
       <td>
         Sets the filenames for the files selected on the input. Not for use in
         <a
-          href="/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts"
+          href="/pt-BR/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts"
           >frame scripts</a
         >, because it accesses the filesystem.
       </td>

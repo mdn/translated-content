@@ -3,6 +3,7 @@ title: Math.round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/round
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/round
 ---
+
 {{JSRef}}
 
 **`Math.round()`** 함수는 입력값을 반올림한 수와 가장 가까운 정수 값을 반환합니다.

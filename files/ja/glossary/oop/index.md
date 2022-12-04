@@ -11,5 +11,5 @@ slug: Glossary/OOP
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "オブジェクト指向プログラミング")}}
+- Wikipedia の [オブジェクト指向プログラミング](https://ja.wikipedia.org/wiki/オブジェクト指向プログラミング)
 - [JavaScript によるオブジェクト指向入門](/ja/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)

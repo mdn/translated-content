@@ -10,6 +10,7 @@ tags:
   - length
 translation_of: Web/CSS/length
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`<length>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 거리 값을 나타냅니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, {{Cssxref("text-shadow")}} 등 다양한 속성에 사용할 수 있습니다.

@@ -3,7 +3,7 @@ title: <title>
 slug: Web/HTML/Element/title
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<title>` 元素** 定义文档的标题，显示在{{glossary("Browser", "浏览器")}}的标题栏或标签页上。它只应该包含文本，若是包含有标签，则它包含的任何标签都将被忽略。
 

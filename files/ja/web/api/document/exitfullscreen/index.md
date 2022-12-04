@@ -1,6 +1,8 @@
 ---
 title: Document.exitFullscreen()
 slug: Web/API/Document/exitFullscreen
+l10n:
+  sourceCommit: 4e233c16c6f0d347972c5c762f5b836318a46124
 ---
 
 {{ApiRef("Fullscreen API")}}
@@ -9,8 +11,8 @@ slug: Web/API/Document/exitFullscreen
 
 ## 構文
 
-```
-exitPromise = document.exitFullscreen();
+```js-nolint
+exitFullscreen()
 ```
 
 ### 引数
@@ -19,31 +21,29 @@ exitPromise = document.exitFullscreen();
 
 ### 返値
 
-{{Glossary("user agent", "ユーザーエージェント")}}が全画面モードから完全に抜けたら解決される {{jsxref("Promise")}} です。全画面モードから抜けようとしてエラーが発生したら、 Promise の `catch()` ハンドラーが呼び出されます。
+{{Glossary("user agent", "ユーザーエージェント")}}が全画面モードから完全に抜けたら解決される {{jsxref("Promise")}} です。全画面モードから抜けようとしてエラーが発生したら、プロミスの `catch()` ハンドラーが呼び出されます。
 
 ## 例
 
 この例ではマウスボタンで中をクリックするたびに、現在の文書が全画面表示になったり戻ったりします。
 
-```
-document.onclick = function (event) {
+```js
+document.onclick = (event) => {
   if (document.fullscreenElement) {
     document.exitFullscreen()
-      .then(() => console.log("Document Exited form Full screen mode"))
+      .then(() => console.log("Document Exited from Full screen mode"))
       .catch((err) => console.error(err))
   } else {
-    document.documentElement.requestFullscreen()
+    document.documentElement.requestFullscreen();
   }
 }
 ```
 
-> **メモ:** もっと完全な例については、{{SectionOnPage("/ja/docs/Web/API/Element/requestFullScreen", "例")}}をご覧ください。
+> **メモ:** もっと完全な例については、{{SectionOnPage("/ja/docs/Web/API/Element/requestFullscreen", "例")}}をご覧ください。
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("Fullscreen", "#dom-document-exitfullscreen", "Document.exitFullscreen()")}} | {{Spec2("Fullscreen")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

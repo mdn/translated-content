@@ -1,13 +1,9 @@
 ---
 title: Etiquetas de texto y nombres
 slug: Web/Accessibility/Understanding_WCAG/Text_labels_and_names
-tags:
-  - Accesibilidad
-  - Etiquetas de texto
-  - WCAG
-translation_of: Web/Accessibility/Understanding_WCAG/Text_labels_and_names
 original_slug: Web/Accesibilidad/Understanding_WCAG/Etiquetas_de_texto_y_nombres
 ---
+
 Hay muchas situaciones en las cuales un control, dialogo o cualquier otra característica de un sitio web deberían recibir un nombre o etiqueta descriptiva para permitir a los usuarios de técnologías asistivas entender cual es su propósito y ser capaz de entenderlo y operarlo correctamente. Hay un número de diferentes tipos de problemas en esta categoría, dependientes del contexto, y cada uno tiene su propia solución. Los diferentes problemas y soluciones son discutidas en las secciones posteriores.
 
 ## Utilizar el atributo alt para etiquetar elementos que ocupen un área que tiene el atributo href
@@ -41,7 +37,7 @@ Ver la [página de referencia del elemento](/es/docs/Web/HTML/Element/area) [`<a
 
 Para cualquier contenedor cuyo contenido actue como una caja de diálogo (por ejemplo, un modal preguntando al usuario realizar una elección o responder a una acción siendo tomada), debe tener una etiqueta descriptiva o nombre, para que la tecnología asistiva le permita al usuario descrubir fácilmente cual es su propósito.
 
-Una caja de diálogo es generalmente denominada con un ARIA [`role="dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) o [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role); se puede usar tanto el atributo [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) o [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) para proporcionar una etiqueta.
+Una caja de diálogo es generalmente denominada con un ARIA [`role="dialog"`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role) o [`role="alertdialog"`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role); se puede usar tanto el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) o [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) para proporcionar una etiqueta.
 
 ### Ejemplos
 
@@ -67,10 +63,10 @@ Si la caja de diálogo no tiene un encabezado, se puede usar `aria-label` para c
 
 ### Ver también
 
-- [`role="dialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-- [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
-- [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
+- [`role="dialog"`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role)
+- [`role="alertdialog"`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+- [`aria-label`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
+- [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
 - [WAI-ARIA: dialog role](https://www.w3.org/TR/wai-aria-1.2/#dialog)
 - [Dialog authoring practices](https://www.w3.org/TR/wai-aria-practices/#dialog_roles_states_props)
 
@@ -231,7 +227,7 @@ Proporcionar un texto descriptivo para todas las imágenes y elementos parecidos
 
 ## Elementos interactivos deben ser etiquetados
 
-Si un elemento esta destinado para que los usuarios interactúen con él, debe estar etiquetado. Los elementos interactivos incluyen enlaces ({{htmlelement("a")}}), elementos de un formulario, botones, y cualquier elemento que tenga manejadores de eventos para ratón o teclado. La forma para etiquetar un elemento depende de su tipo: para elementos de un formulario, utilizar un {{htmlelement("label")}}; para enlaces, botones y elementos sobre los que se puede hacere click, el contenido del texto del elemento suele proporcionar la etiqueta. Si no existe otra opción para etiquetar un elemento, utilizar el atributo [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute).
+Si un elemento esta destinado para que los usuarios interactúen con él, debe estar etiquetado. Los elementos interactivos incluyen enlaces ({{htmlelement("a")}}), elementos de un formulario, botones, y cualquier elemento que tenga manejadores de eventos para ratón o teclado. La forma para etiquetar un elemento depende de su tipo: para elementos de un formulario, utilizar un {{htmlelement("label")}}; para enlaces, botones y elementos sobre los que se puede hacere click, el contenido del texto del elemento suele proporcionar la etiqueta. Si no existe otra opción para etiquetar un elemento, utilizar el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute).
 
 ## Usar el atributo label en elementos optgroup
 
@@ -259,7 +255,7 @@ En este ejemplo, el atributo `label` en los elementos `<optgroup>` da un nombre 
 
 ## Las barras de herramientas deben ser etiquetadas cuando haya más de una barra
 
-Si se define más una barra de herramientas en una aplicación web utilizando el rol ARIA `toolbar`, se debe usar el atributo [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) para etiquetar cada una de ellas de manera que pueda ser descrita por la tecnología de asistencia. Es una buena práctica etiquetar una barra de herramientas aún cuando solo haya una en la página
+Si se define más una barra de herramientas en una aplicación web utilizando el rol ARIA `toolbar`, se debe usar el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) para etiquetar cada una de ellas de manera que pueda ser descrita por la tecnología de asistencia. Es una buena práctica etiquetar una barra de herramientas aún cuando solo haya una en la página
 
 ### Ver también
 

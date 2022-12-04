@@ -1,13 +1,9 @@
 ---
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
-tags:
-  - Matemáticas
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tan
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tan
 ---
+
 {{JSRef}}
 
 La función **`Math.tan()`** retorna la tangente de un número.
@@ -56,9 +52,7 @@ function getTanDeg(deg) {
 
 ## Especificaciones
 
-| Especificación                                                       |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.tan', 'Math.tan')}} |
+{{Specifications}}
 
 ## Compatibilidad con el navegador
 

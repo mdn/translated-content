@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/frame
 
 ## 속성(=Attributes)
 
-다른 모든 HTML elments와 마찬가지로, \<frame> element는 전역속성([global attributes](/ko/docs/HTML/Global_attributes "HTML/Global attributes"))이 적용된다.
+다른 모든 HTML elments와 마찬가지로, \<frame> element는 전역속성([global attributes](/ko/docs/HTML/Global_attributes))이 적용된다.
 
 - {{htmlattrdef("src")}}
   - : 이 속성은 frame으로 표시될 문서를 기입합니다.
@@ -25,7 +25,7 @@ translation_of: Web/HTML/Element/frame
   - : 이 속성은 사용자가 프레임크기를 조정할수 없게합니다.
 
 - {{htmlattrdef("scrolling")}}
-  - :&#x20;
+  - : &#x20;
     이 속성은 스크롤바의 유무를 결정합니다. 이 속성을 사용하지않으면 특정상황에서 자동으로 브라우져에 스크롤바가 생깁니다.
     두가지를 선택할 수 있습니다. "yes"면 항상 스크롤바를 보여주고 "no"면 항상 스크롤바를 보여주지 않습니다.
 - {{htmlattrdef("marginheight")}}
@@ -49,4 +49,4 @@ translation_of: Web/HTML/Element/frame
 - {{HTMLElement("frameset")}}
 - {{HTMLElement("iframe")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

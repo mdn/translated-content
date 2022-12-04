@@ -3,6 +3,7 @@ title: ':defined'
 slug: Web/CSS/:defined
 translation_of: Web/CSS/:defined
 ---
+
 {{ CSSRef }}
 
 [CSS](/ru/docs/Web/CSS) [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:defined`** находит любой элемент, который был определён, включая любой стандартный элемент, встроенный в браузер, и [пользовательские элементы](/ru/docs/Web/Web_Components/Использование_пользовательских_элементов) (то есть определённые с помощью метода {{domxref("CustomElementRegistry.define()")}}).
@@ -100,7 +101,7 @@ simple-custom:defined {
 
 ## Смотрите также
 
-- [Веб-компоненты](ru/docs/Web/Web_Components)
+- [Веб-компоненты](/ru/docs/Web/Web_Components)
 - {{cssxref(":host")}}
 - {{cssxref(":host()")}}
 - {{cssxref(":host-context()")}}

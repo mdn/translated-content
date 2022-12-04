@@ -9,7 +9,7 @@ translation_of: Web/HTML/Global_attributes/data-*
 ---
 {{HTMLSidebar("Global_attributes")}}
 
-**`data-*`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 **사용자 지정 데이터 특성**(custom data attributes)이라는 특성 클래스를 형성함으로써 임의의 데이터를 스크립트로 [HTML](/ko/docs/Web/HTML "en/HTML")과 [DOM](/ko/docs/Web/API/Document_Object_Model "en/DOM") 사이에서 교환할 수 있는 방법입니다.
+**`data-*`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 **사용자 지정 데이터 특성**(custom data attributes)이라는 특성 클래스를 형성함으로써 임의의 데이터를 스크립트로 [HTML](/ko/docs/Web/HTML)과 [DOM](/ko/docs/Web/API/Document_Object_Model) 사이에서 교환할 수 있는 방법입니다.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-data.html","tabbed-standard")}}
 
@@ -25,7 +25,7 @@ translation_of: Web/HTML/Global_attributes/data-*
 
 ### 용도
 
-`data-*`\*_ \*\*속성을 추가함으로써, 평범한 HTML 요소조차 복잡하고 강력한 프로그램 객체가 될 수 있습니다. 예컨대, 게임의 우주선 스프라이트는 단순한 {{htmlelement("img")}} 태그와 [`class`](/ko/docs/Web/HTML/Global_attributes/class) 특성, 그리고 여러 `data-_` 특성으로 나타낼 수 있습니다.
+`data-*` 속성을 추가함으로써, 평범한 HTML 요소조차 복잡하고 강력한 프로그램 객체가 될 수 있습니다. 예컨대, 게임의 우주선 스프라이트는 단순한 {{htmlelement("img")}} 태그와 [`class`](/ko/docs/Web/HTML/Global_attributes/class) 특성, 그리고 여러 `data-*` 특성으로 나타낼 수 있습니다.
 
 ```html
 <img class="spaceship cruiserX3" src="shipX3.png"

@@ -1,19 +1,15 @@
 ---
 title: String.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
-tags:
-  - JavaScript
-  - Prototipo
-  - Reference
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Sumário
 
 O método `slice()` extrai uma parte de uma string e a retorna como uma nova string, sem modificar a string original.
+
+{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}
 
 ## Sintaxe
 

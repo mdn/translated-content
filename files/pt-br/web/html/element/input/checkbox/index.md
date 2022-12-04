@@ -1,9 +1,9 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/Input/checkbox
-translation_of: Web/HTML/Element/input/checkbox
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 {{htmlelement ("input")}} elementos do tipo **`checkbox`** são renderizados por padrão como caixas quadradas que são marcadas (com uma marca de verificação) quando ativadas, como as que você veria em um formulário do governo. A aparência exata depende de da configuração de sistema operacional sobre o qual o navegador está sendo executado. Caixas de seleção permitem que você selecione valores únicos para envio em um formulário (ou não).
 
@@ -180,7 +180,7 @@ Portanto, neste caso, o `indeterminate`estado é usado para afirmar que a coleta
 
 ## Validação
 
-As caixas de seleção suportam [validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation) (oferecidas para todos os [`<input>`](/pt-BR/docs/Web/HTML/Element/input)s). No entanto, a maioria dos {{domxref ("ValidityState")}} s sempre será `false`. Se a caixa de seleção tiver o [`required`](/en-US/docs/Web/HTML/Element/input#attr-required) atributo, mas não estiver marcada, ela [`ValidityState.valueMissing`](/en-US/docs/Web/API/ValidityState/valueMissing) será `true`.
+As caixas de seleção suportam [validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation) (oferecidas para todos os [`<input>`](/pt-BR/docs/Web/HTML/Element/input)s). No entanto, a maioria dos {{domxref ("ValidityState")}} s sempre será `false`. Se a caixa de seleção tiver o [`required`](/pt-BR/docs/Web/HTML/Element/input#attr-required) atributo, mas não estiver marcada, ela [`ValidityState.valueMissing`](/pt-BR/docs/Web/API/ValidityState/valueMissing) será `true`.
 
 ## Exemplos
 
@@ -281,7 +281,7 @@ otherCheckbox.onchange = function () {
 
 ## Compatibilidade com navegadores
 
-{{Compat ("html.elements.input.input-checkbox")}}
+{{Compat}}
 
 ## Veja também
 

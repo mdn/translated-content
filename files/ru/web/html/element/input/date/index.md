@@ -3,7 +3,7 @@ title: <input type="date">
 slug: Web/HTML/Element/Input/date
 translation_of: Web/HTML/Element/input/date
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Элементы {{htmlelement("input")}} типа **`date`** создают поля ввода и позволяют пользователю ввести дату, либо использовать _text box_ для автоматической проверки контента или использовать специальный интерфейс _date picker_. Возвращаемое значение включает год, месяц, день, но _не_ время. Используйте поля ввода {{HTMLElement("input/time", "time")}} или {{HTMLElement("input/datetime-local", "datetime-local")}}, чтобы вводить время или дату+время соответственно.
 
@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/input/date
 
 ![Datepicker UI in firefox](https://mdn.mozillademos.org/files/15644/firefox_datepicker.png)
 
-| **[Value](#value)**         | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**,\*\* **или **пустую строку\*\*                                                                                                         |
+| [Value](#value)         | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку**                                                                                                         |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **События**                 | {{event("change")}} и {{event("input")}}                                                                                                                                                                  |
 | **Поддерживаемые атрибуты** | {{htmlattrxref("autocomplete", "input")}}, {{htmlattrxref("list", "input")}}, {{htmlattrxref("readonly", "input")}}, and {{htmlattrxref("step", "input")}}           |

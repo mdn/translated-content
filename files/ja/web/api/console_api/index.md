@@ -36,13 +36,11 @@ console.log(myString)
 
 ## 仕様
 
-| 仕様                                 | 状態                             | コメント |
-| ------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('Console API')}} | {{Spec2('Console API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Console")}}
+{{Compat}}
 
 ## 関連情報
 

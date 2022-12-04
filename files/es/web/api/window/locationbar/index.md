@@ -1,8 +1,8 @@
 ---
 title: Window.locationbar
 slug: Web/API/Window/locationbar
-translation_of: Web/API/Window/locationbar
 ---
+
 {{APIRef}}
 
 Devuelve el objeto `locationbar`, del cual se puede comprobar su visibilidad.
@@ -37,10 +37,7 @@ var visible = window.locationbar.visible;
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'browsers.html#dom-window-locationbar', 'Window.locationbar')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-locationbar', 'Window.locationbar')}}     | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Ver también
 

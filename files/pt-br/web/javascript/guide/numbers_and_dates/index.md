@@ -1,9 +1,9 @@
 ---
 title: Números e datas
 slug: Web/JavaScript/Guide/Numbers_and_dates
-translation_of: Web/JavaScript/Guide/Numbers_and_dates
 original_slug: Web/JavaScript/Guide/Numeros_e_datas
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Expressions_and_Operators", "Web/JavaScript/Guide/Text_formatting")}}
 
 Este capítulo apresenta como utilizar números e datas em JavaScript.
@@ -30,7 +30,7 @@ Note que literais decimais podem começar com zero (`0`) seguido por outro digit
 
 ### Números Binários
 
-A sintaxe para números Binários, usa um zero à esquerda seguido de uma letra minúscula ou maiúscula "B" (`0b` or `0B`). Se os dígitos depois de 0b não forem 0 ou 1, a seguinte exceção [`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) é lançada: "Missing binary digits after 0b".
+A sintaxe para números Binários, usa um zero à esquerda seguido de uma letra minúscula ou maiúscula "B" (`0b` or `0B`). Se os dígitos depois de 0b não forem 0 ou 1, a seguinte exceção [`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) é lançada: "Missing binary digits after 0b".
 
 ```js
 var FLT_SIGNBIT  = 0b10000000000000000000000000000000; // 2147483648
@@ -55,7 +55,7 @@ var a = 0o10; // ES6: Octal
 
 ### Numeros hexadecimais
 
-A sintaxe numérica Hexadecimal usa um 0 na frente seguido por uma letra "X" maiúscula ou minúscula (`0x` ou `0X)`. Se os dígidos depois do 0x estiverem fora do alcance (0123456789ABCDF), o seguinte erro de sintaxe ([`SyntaxError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)) ocorrerá: "Identifier starts immediately after numeric literal" (O identificador começa imediatamente depois do literal numérico).
+A sintaxe numérica Hexadecimal usa um 0 na frente seguido por uma letra "X" maiúscula ou minúscula (`0x` ou `0X)`. Se os dígidos depois do 0x estiverem fora do alcance (0123456789ABCDF), o seguinte erro de sintaxe ([`SyntaxError`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError)) ocorrerá: "Identifier starts immediately after numeric literal" (O identificador começa imediatamente depois do literal numérico).
 
 ```js
 0xFFFFFFFFFFFFFFFFF // 295147905179352830000

@@ -1,9 +1,9 @@
 ---
 title: <meta>
 slug: Web/HTML/Element/meta
-translation_of: Web/HTML/Element/meta
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O elemento **HTML `<meta>` **define qualquer informação de metadados que não podem ser definidos por outros elementos **HTML.** ({{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} ou {{HTMLElement("title")}}).
 
@@ -11,17 +11,17 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
   <tbody>
     <tr>
       <th>
-        <a href="/en-US/docs/Web/HTML/Content_categories">Categoria</a> de
+        <a href="/pt-BR/docs/Web/HTML/Content_categories">Categoria</a> de
         conteúdo
       </th>
       <td>
         Conteúdo de metadado. Se o
         {{htmlattrxref("itemprop", "meta")}} atributo estiver
         presente:
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>

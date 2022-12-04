@@ -10,6 +10,7 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Box_Model
 ---
+
 {{CSSRef}}
 
 **CSS Box Model** is a CSS module that defines the rectangular boxes, including their padding and margin, that are generated for elements and laid out according to the visual formatting model.

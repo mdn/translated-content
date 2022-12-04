@@ -1,15 +1,9 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/splice
 ---
+
 {{JSRef}}
 
 El método **`splice()`** cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
@@ -28,9 +22,9 @@ array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
   - : Índice donde se comenzará a cambiar el array (con 0 como origen). Si es mayor que la longitud del array, el punto inicial será la longitud del array. Si es negativo, empezará esa cantidad de elementos contando desde el final.
 - `deleteCount` {{optional_inline}}
   - : Un entero indicando el número de elementos a eliminar del array antiguo.
-  
+
     Si `deleteCount` se omite, o si su valor es mayor que `arr.length - start` (esto significa, si es mayor que el número de elementos restantes del array, comenzando desde `start`), entonces todos los elementos desde `start` hasta el final del array serán eliminados.
-    
+
     Si `deleteCount` es igual a 0 o negativo, no se eliminará ningún elemento. En este caso, se debe especificar al menos un nuevo elemento (ver más abajo).
 - `item1, item2, ...` {{optional_inline}}
   - : Los elementos que se agregarán al array, empezando en el índice `start`. Si no se especifica ningún elemento, `splice()` solamente eliminará elementos del array.
@@ -117,12 +111,7 @@ var removed = myFish.splice(2);
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario                                         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Initial definition. Implemented in JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.12', 'Array.prototype.splice')}}                     | {{Spec2('ES5.1')}}     |                                                    |
-| {{SpecName('ES6', '#sec-array.prototype.splice', 'Array.prototype.splice')}}         | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-array.prototype.splice', 'Array.prototype.splice')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -1,14 +1,8 @@
 ---
 title: Device-Memory
 slug: Web/HTTP/Headers/Device-Memory
-tags:
-  - Cabeçalho HTTP
-  - Client hints
-  - Device Memory API
-  - HTTP
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Device-Memory
 ---
+
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
 O cabeçalho **`Device-Memory`** é um cabeçalho da [Device Memory API](/pt-BR/docs/Web/API/Device_Memory_API) que funciona como os cabeçalhos [Client Hints](/pt-BR/docs/Glossary/Client_hints) que representão a quantidade aproximada de RAM que o dispositivo do cliente possui.

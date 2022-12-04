@@ -1,10 +1,6 @@
 ---
 title: WebAssembly
 slug: WebAssembly
-tags:
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
 {{WebAssemblySidebar}}{{SeeCompatTable}}
 
@@ -12,7 +8,7 @@ O WebAssembly é um novo tipo de código que pode ser executado em browsers mode
 
 ## Em poucas palavras
 
-O WebAssembly tem enormes implicações para a plataforma web — ele irá fornecer uma maneira de executar na web código escrito em diversas linguagens em velocidade quase nativa, com apps que não conseguiriam fazer isso antes.
+O WebAssembly tem enormes aplicações para a plataforma web — ele irá fornecer uma maneira de executar na web código escrito em diversas linguagens em velocidade quase nativa, com apps que não conseguiriam fazer isso antes.
 
 O WebAssembly foi projetado para complementar e executar lado a lado com JavaScript — usando as APIs JavaScript do WebAssembly, você pode carregar módulos WebAssembly em um aplicativo JavaScript e compartilhar funcionalidade entre ambos. Isso permite que você aproveite o desempenho e poder da WebAssembly e a expressividade e flexibilidade do JavaScript nos mesmos aplicativos, mesmo que você não saiba como escrever código de WebAssembly.
 

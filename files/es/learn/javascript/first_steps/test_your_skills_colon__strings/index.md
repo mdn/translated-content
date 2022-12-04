@@ -1,17 +1,9 @@
 ---
 title: 'Prueba tus habilidades: Strings'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Strings
-tags:
-  - Cadenas
-  - JavaScript
-  - Novato
-  - Principiante
-  - Prueba tus habilidades
-  - aprende
-  - strings
-translation_of: Learn/JavaScript/First_steps/Test_your_skills:_Strings
 original_slug: Learn/JavaScript/First_steps/Prueba_tus_habilidades:_Strings
 ---
+
 {{learnsidebar}}
 
 El objetivo de esta prueba de habilidad es evaluar si has entendido nuestros artículos [Manejo de texto — cadenas en JavaScript](/es/docs/Learn/JavaScript/First_steps/Strings) y [Métodos de cadena útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods).

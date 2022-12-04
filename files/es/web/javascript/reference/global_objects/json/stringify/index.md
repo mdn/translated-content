@@ -1,14 +1,9 @@
 ---
 title: JSON.stringify()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
-tags:
-  - JSON
-  - JavaScript
-  - Method
-  - stringify
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 original_slug: Web/JavaScript/Referencia/Objetos_globales/JSON/stringify
 ---
+
 {{JSRef}}
 
 El método **`JSON.stringify()`** convierte un objeto o valor de JavaScript en una cadena de texto JSON, opcionalmente reemplaza valores si se indica una función de reemplazo, o si se especifican las propiedades mediante un array de reemplazo.
@@ -42,7 +37,7 @@ Lanza una excepción {{JSxRef("TypeError")}} ("cyclic object value") cuando encu
 
 `JSON.stringify` convierte un valor a notación JSON representándolo:
 
-- Si el valor tiene un método [toJSON()](</es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON/stringify$edit#toJSON()_behavior>), es responsable de definir qué será serializado.
+- Si el valor tiene un método [toJSON()](</es/docs/Web/JavaScript/Referencia/Objetos_globales/JSON/stringify#toJSON()_behavior>), es responsable de definir qué será serializado.
 - Los objetos {{JSxRef("Boolean")}}, {{JSxRef("Number")}}, and {{JSxRef("String")}} se convierten a sus valores primitivos, de acuerdo con la conversión semántica tradicional.
 - Si durante la conversión se encuentra un {{JSxRef("undefined")}}, una {{JSxRef("Function")}}, o un {{JSxRef("Symbol")}} se omite (cuando se encuentra en un objeto) o se censura a {{JSxRef("null")}} (cuando se encuentra en un array). `JSON.stringify()` puede devolver `undefined` cuando se pasan valores "puros" como `JSON.stringify(function(){}`) o `JSON.stringify(undefined)`.
 - Todas las propiedades que utilicen {{JSxRef("Symbol")}} en los nombres de la clave se ignoran por completo, incluso si utilizan una función `replacer`.
@@ -226,11 +221,7 @@ console.log(restoredSession);
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                       | Comentario                                         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------- |
-| {{SpecName('ES5.1', '#sec-15.12.3', 'JSON.stringify')}}             | {{Spec2('ES5.1')}}     | Definición incial. Implementada en JavaScript 1.7. |
-| {{SpecName('ES6', '#sec-json.stringify', 'JSON.stringify')}}     | {{Spec2('ES6')}}         |                                                    |
-| {{SpecName('ESDraft', '#sec-json.stringify', 'JSON.stringify')}} | {{Spec2('ESDraft')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

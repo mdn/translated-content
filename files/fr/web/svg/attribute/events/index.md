@@ -6,6 +6,7 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/Events
 ---
+
 Tout attribut d'événement a un nom qui commence par "on" suivit du nom de l'événement auquel il est rattaché. Ces attributs spécifient quel script exécuter lorsque l'événement du type donné est déclenché sur l'élément.
 
 SVG prend en charge tous les types d'événement pris en charge par le navigateur, en suivant les mêmes spécifications que les attributs d'événement HTML.
@@ -38,4 +39,4 @@ Tous les attributs d'événements _ne peuvent pas être animés._
 
 ## Compatibilité des navigateurs
 
-{{Compat("svg.attributes.events")}}
+{{Compat}}

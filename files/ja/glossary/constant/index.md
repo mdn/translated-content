@@ -1,5 +1,5 @@
 ---
-title: Constant
+title: Constant (定数)
 slug: Glossary/Constant
 original_slug: Glossary/Constant(定数)
 ---
@@ -12,4 +12,4 @@ original_slug: Glossary/Constant(定数)
 
 ### 基礎知識
 
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "定数_(プログラミング)", "定数 (プログラミング)")}}」
+- Wikipedia 上の記事「[定数 (プログラミング)](https://ja.wikipedia.org/wiki/定数_(プログラミング))」

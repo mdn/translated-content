@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 original_slug: Web/JavaScript/enumeracion_y_propietario_de_propiedades
 ---
+
 {{JsSidebar("Más")}}
 
 Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable interno se establece en `true`, que es el valor predeterminado para las propiedades creadas mediante una asignación simple o mediante un iniciador de propiedad (propiedades definidas mediante {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty")}} y tal valor enumerable predeterminado a `false`). Se muestran numerosas propiedades en bucles {{jsref("Statements/for...in", "for...in")}} a menos que la clave de la propiedad sea {{jsxref("Global_Objects/Symbol", "Symbol")}}. La posesión de las propiedades está determinada por si la propiedad pertenece directamente al objeto y no a su cadena prototipo. Las propiedades de un objeto también se pueden recuperar en total. Hay varios medios incorporados para detectar, iterar/enumerar y recuperar propiedades de objetos, y el gráfico que se muestra a continuación está disponible. A continuación, se muestra un código de muestra que demuestra cómo obtener las categorías faltantes.
@@ -18,7 +19,7 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
 
 - Funcionalidad
 
-  - :&#x20;
+  - : &#x20;
 
     - Detección
 
@@ -35,7 +36,7 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
         | No disponible sin código adicional | No disponible sin código adicional | {{jsxref("Operators/in", "in")}} |
 
         **Solo en cadena prototipo**
-        
+
         No disponible sin código adicional
 
     - Recuperación
@@ -47,11 +48,11 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
         | {{jsxref("Global_Objects/Object/keys", "Object.keys")}}{{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}, {{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} — filtrado para excluir enumerables usando {{jsxref("Global_Objects/Object/propertyIsEnumerable", "propertyIsEnumerable")}} | {{jsxref("Global_Objects/Object/getOwnPropertyNames", "getOwnPropertyNames")}}{{jsxref("Global_Objects/Object/getOwnPropertySymbols", "getOwnPropertySymbols")}} |
 
         **Propia del Objeto y su cadena prototipo**
-        
+
         No disponible sin código adicional
-        
+
         **Solo en cadena prototipo**
-        
+
         No disponible sin código adicional
 
     - Iterable
@@ -69,7 +70,7 @@ Las propiedades enumerables son aquellas propiedades cuyo indicador enumerable i
         | {{jsxref("Statements/for...in", "for..in")}}(no incluye símbolos) | No disponible sin código adicional | No disponible sin código adicional |
 
         **Solo en cadena prototipo**
-        
+
         No disponible sin código adicional
 
 ## Obtención de propiedades por enumerabilidad/posesión

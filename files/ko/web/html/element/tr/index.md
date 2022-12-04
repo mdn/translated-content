@@ -3,13 +3,14 @@ title: <tr>
 slug: Web/HTML/Element/tr
 translation_of: Web/HTML/Element/tr
 ---
+
 ## 개요
 
 The _HTML Table Row Element_ (`<tr>`) defines a row of cells in a table. Those can be a mix of {{HTMLElement("td")}} and {{HTMLElement("th")}} elements.
 
 ## 사용 문맥
 
-| [콘텐츠 범주](/ko/docs/HTML/Content_categories "HTML/Content categories") | None.                                                                                                                                                                                                                                                                                                                                              |
+| [콘텐츠 범주](/ko/docs/HTML/Content_categories) | None.                                                                                                                                                                                                                                                                                                                                              |
 | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 허용되는 콘텐츠                                                           | Zero or more {{HTMLElement("td")}} or {{HTMLElement("th")}} elements, or a mix of them                                                                                                                                                                                                                                               |
 | 태그 생략                                                                 | The start tag is mandatory. The end tag may be omitted if the {{HTMLElement("tr")}} element is immediately followed by a {{HTMLElement("tr")}} element, or if the parent table group ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}}) element doesn't have any more content. |
@@ -18,7 +19,7 @@ The _HTML Table Row Element_ (`<tr>`) defines a row of cells in a table. Those c
 
 ## 속성
 
-This element includes the [global attributes](/ko/docs/HTML/Global_attributes "HTML/Global attributes").
+This element includes the [global attributes](/ko/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("align")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
 
@@ -40,9 +41,9 @@ This element includes the [global attributes](/ko/docs/HTML/Global_attributes "H
 
 - {{htmlattrdef("bgcolor")}} {{deprecatedGeneric("inline","html4.01")}}, {{deprecated_inline}}
 
-  - : This attribute defines the background color of each cell of the row. It can be either an [#RRGGBB code](/ko/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords "CSS/color value#HTML.2fSVG.2fX11.c2.a0 Color Keywords") or an [SVG color keyword](/#HTML.2fSVG.2fX11.c2.a0_Color_Keywords "#HTML.2fSVG.2fX11.c2.a0 Color Keywords").
+  - : This attribute defines the background color of each cell of the row. It can be either an [#RRGGBB code](/ko/docs/CSS/color_value#HTML.2fSVG.2fX11.c2.a0_Color_Keywords) or an [SVG color keyword](/#HTML.2fSVG.2fX11.c2.a0_Color_Keywords).
 
-    > **참고:** **Usage note:** the {{HTMLElement("tr")}} element should be styled using [CSS](/ko/docs/CSS "CSS"). To give a similar effect to the **bgcolor** attribute, use the [CSS](/ko/docs/CSS "CSS") property {{cssxref("background-color")}}.
+    > **참고:** **Usage note:** the {{HTMLElement("tr")}} element should be styled using [CSS](/ko/docs/CSS). To give a similar effect to the **bgcolor** attribute, use the [CSS](/ko/docs/CSS) property {{cssxref("background-color")}}.
 
 <!---->
 
@@ -93,4 +94,4 @@ See {{HTMLElement("table")}} for examples on `<tr>`.
   - the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;
   - the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.<
 
-{{HTMLRef}}
+{{HTMLSidebar}}

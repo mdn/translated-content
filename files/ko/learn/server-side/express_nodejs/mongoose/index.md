@@ -2,6 +2,7 @@
 title: 'Express Tutorial Part 3: Using a Database (with Mongoose)'
 slug: Learn/Server-side/Express_Nodejs/mongoose
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
 이번에는 데이터베이스를 간단히 소개하고, Node/Express 어플리케이션으로 데이터베이스를 어떻게 다루는 지 알아보겠습니다. 그리고 [LocalLibrary](/ko/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) 웹사이트를 위한 데이터베이스 접근을 제공하는 [Mongoose](http://mongoosejs.com/)를 어떻게 사용할 수 있는지 보여줄 것입니다. 오브젝트 스키마와 모델을 선언하는 방법, 주요 필드 타입, 기본 유효성 검사를 설명합니다. 또한 당신이 모델 데이터에 접근할 수 있는 주요한 몇가지 방법들을 소개할 것입니다.
@@ -90,7 +91,7 @@ The diagram also shows the relationships between the models, including their _mu
 
 > **참고:** As discussed in our [Mongoose primer](#related_documents) below it is often better to have the field that defines the relationship between the documents/models in just _one_ model (you can still find the reverse relationship by searching for the associated `_id` in the other model). Below we have chosen to define the relationship between Book/Genre and Book/Author in the Book schema, and the relationship between the Book/BookInstance in the BookInstance Schema. This choice was somewhat arbitrary — we could equally well have had the field in the other schema.
 
-![Mongoose Library Model  with correct cardinality](https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png)
+![Mongoose Library Model with correct cardinality](https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png)
 
 > **참고:** The next section provides a basic primer explaining how models are defined and used. As you read it, consider how we will construct each of the models in the diagram above.
 

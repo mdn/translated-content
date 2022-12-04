@@ -8,7 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/object
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<object>` 요소**는 이미지나, 중첩된 브라우저 컨텍스트, 플러그인에 의해 다뤄질수 있는 리소스와 같은 외부 리소스를 나타냅니다.
 
@@ -22,7 +22,7 @@ translation_of: Web/HTML/Element/object
 
 ## 속성
 
-이 속성은 [전역 속성](/ko/docs/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 속성은 [전역 속성](/ko/docs/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("archive")}} {{deprecated_inline}}
   - : A space-separated list of URIs for archives of resources for the object.

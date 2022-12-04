@@ -1,11 +1,8 @@
 ---
 title: Conceitos do WebAssembly
 slug: WebAssembly/Concepts
-tags:
-  - conceitos
-  - plataforma web
-translation_of: WebAssembly/Concepts
 ---
+
 {{WebAssemblySidebar}}
 
 Este artigo explica os conceitos por trás de como o WebAssembly funciona, incluindo seus objetivos, os problemas que ele resolve e como ele roda dentro do mecanismo de renderização de um browser.

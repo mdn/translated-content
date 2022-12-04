@@ -10,7 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/rp
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<rp>` 요소**는 {{htmlelement("ruby")}} 요소를 사용한 루비 주석을 지원하지 않는 경우 보여줄 괄호를 제공할 때 사용합니다. {{htmlelement("rt")}} 요소를 감싸는 여는 괄호와 닫는 괄호를 각각의 `<rp>` 요소로 나타내야 합니다.
 
@@ -57,7 +57,7 @@ translation_of: Web/HTML/Element/rp
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만을 포함합니다.
 
 ## 사용 일람
 

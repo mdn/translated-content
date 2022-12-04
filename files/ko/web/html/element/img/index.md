@@ -13,7 +13,8 @@ tags:
 translation_of: Web/HTML/Element/img
 browser-compat: html.elements.img
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<img>` 요소**는 문서에 이미지를 넣습니다.
 
@@ -25,7 +26,6 @@ browser-compat: html.elements.img
 - `alt` 특성은 이미지의 텍스트 설명이며 필수는 아니지만, 스크린 리더가 `alt`의 값을 읽어 사용자에게 이미지를 설명하므로, 접근성 차원에서 **매우 유용**합니다. 또한 네트워크 오류, 콘텐츠 차단, 죽은 링크 등 이미지를 표시할 수 없는 경우에도 이 속성의 값을 대신 보여줍니다.
 
 다양한 목적을 위한 많은 수의 속성이 더 존재합니다.
-
 
 - [Referrer](/ko/docs/Web/HTTP/Headers/Referrer-Policy) {{glossary("CORS")}} control for security and privacy: see {{htmlattrxref("crossorigin", "img")}} and {{htmlattrxref("referrerpolicy", "img")}}.
 - Setting an {{glossary("intrinsic size")}} using {{htmlattrxref("width", "img")}}, {{htmlattrxref("height", "img")}}, and {{htmlattrxref("intrinsicsize", "img")}}: this sets the space taken up by an image to ensure the page layout is stable before it loads.
@@ -47,7 +47,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("alt")}}
   - : 이미지의 대체 텍스트 설명.
@@ -118,7 +118,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
   
     - [미디어 조건](/ko/docs/Web/Guide/CSS/Media_queries#구문). 마지막 항목에서는 생략해야 합니다.
     - 소스 크기 값.
-    
+
   미디어 조건은 이미지의 속성이 아니라** {{glossary("viewport", "뷰포트")}}** 속성을 가리킵니다. 예를 들어, `(max-height: 500px) 1000px`은 1000px 너비의 소스를 사용하려면 **뷰포트**가 500px 이하여야 한다는 뜻입니다.
   
   소스 크기는 의도한 이미지 표시 크기를 지정합니다. {{glossary("user agent", "사용자 에이전트")}}는 현재 소스 크기를 사용해, 너비(`w`) 서술자를 사용한 `srcset` 특성의 소스 중 하나를 선택합니다. 선택한 소스 크기는 이미지의 {{glossary("intrinsic size", "고유 크기")}}({{glossary("CSS")}} 스타일을 입히지 않은 경우 이미지의 표시 크기)에 영향을 줍니다. `srcset`이 비어있거나 너비 서술자를 사용하지 않은 경우, `sizes` 특성은 아무 효과도 없습니다.
@@ -127,13 +127,12 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 - {{htmlattrdef("srcset")}}
   - : {{glossary("user agent", "사용자 에이전트")}}가 사용할 수 있는 이미지 소스의 후보. 쉼표로 구분하는 한 개 이상의 문자열 목록입니다. 각각의 문자열은 다음 구성요소로 이루어집니다.
   
-
     - 이미지의 {{glossary("URL")}}.
     - 선택적으로, 공백과 함께 그 뒤를 잇는...
   
     - 너비 서술자(양의 정수와 바로 뒤의 '`w`' 문자). 너비 서술자의 값을 `sizes` 특성으로 지정한 소스 크기로 나눠서 픽셀 밀도를 구합니다.
     - 픽셀 밀도 서술자(양의 실수와 바로 뒤의 '`x`' 문자).
-    
+
   서술자를 포함하지 않은 경우 기본값인 `1x`로 간주합니다.
   
   같은 `srcset` 특성에 너비와 픽셀 밀도 서술자를 함께 사용하거나, 동일한 서술자를 두 개 이상 사용하는건 유효하지 않습니다.

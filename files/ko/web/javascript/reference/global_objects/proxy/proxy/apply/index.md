@@ -9,6 +9,7 @@ tags:
 browser-compat: javascript.builtins.Proxy.handler.apply
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 ---
+
 {{JSRef}}
 
 **`handler.apply()`** 메서드는 함수 호출에 대한 트랩입니다.

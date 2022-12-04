@@ -1,14 +1,8 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript 2015
-  - ECMAScript6
-  - JavaScript
-  - Referência(2)
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/for...of
 ---
+
 {{jsSidebar("Statements")}}
 
 O loop **`for...of`** percorre [objetos iterativos](/pt-BR/docs/Web/JavaScript/Guide/iterable) (incluindo {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, o objeto [arguments](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments) e assim por diante), chamando uma função personalizada com instruções a serem executadas para o valor de cada objeto distinto.
@@ -213,7 +207,7 @@ for (var value of iterable) {
 
 ### Diferença entre `for...of` e `for...in`
 
-O loop [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) irá iterar sobre todas as propriedades enumeráveis de um objeto.
+O loop [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in) irá iterar sobre todas as propriedades enumeráveis de um objeto.
 
 A sintaxe do `for...of` é específica para **coleções**, ao invés de todos os objetos. Ela irá iterar desta maneira sobre os elementos de qualquer coleção que tiver uma propriedade `[Symbol.iterator]`.
 

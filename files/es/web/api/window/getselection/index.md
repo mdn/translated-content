@@ -1,10 +1,8 @@
 ---
 title: window.getSelection
 slug: Web/API/Window/getSelection
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Window/getSelection
 ---
+
 {{ ApiRef() }}
 
 ### Resumen

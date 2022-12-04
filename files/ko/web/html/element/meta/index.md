@@ -10,7 +10,8 @@ tags:
   - metadata
 translation_of: Web/HTML/Element/meta
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<meta>` 요소**는 {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}과 같은 다른 메타관련 요소로 나타낼 수 없는 {{glossary("Metadata", "메타데이터")}}를 나타냅니다.
 
@@ -89,7 +90,7 @@ translation_of: Web/HTML/Element/meta
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 > **참고:** {{htmlattrxref("name", "meta")}} 특성은 `<meta>` 요소에 대해 특정한 의미를 가집니다. 하나의 `<meta>` 요소에서, {{htmlattrxref("itemprop", "meta")}} 특성을 {{htmlattrxref("name", "meta")}}, {{htmlattrxref("http-equiv", "meta")}} 또는 {{htmlattrxref("charset", "meta")}} 특성과 함께 설정할 수 없습니다.
 
@@ -117,20 +118,20 @@ translation_of: Web/HTML/Element/meta
 
       지정할 경우, `content` 특성의 값은 반드시 "`IE=edge`"여야 합니다. 사용자 에이전트는 이 프래그마를 무시해야 합니다.
 
-    - `refresh`다음을 지정합니다.
+    - `refresh` 다음을 지정합니다.
 
       - {{htmlattrxref("content", "meta")}} 특성에 양의 정수 값을 설정한 경우, 페이지를 다시 불러오기 전까지의 초 단위 대기시간.
       - {{htmlattrxref("content", "meta")}} 특성이 양의 정수 값을 가지고 그 뒤를 문자열 `;url=`과 유효한 URL이 뒤따른다면, 해당 URL로 이동하기 전까지의 초 단위 대기시간.
 
-      ##### 접근성 고려사항
-
-      `refresh` 값을 지정한 페이지의 경우 새로고침 사이 간격이 너무 짧을 우려가 있습니다. 스크린 리더 등의 보조 기술로 탐색하는 사용자는 자동 새로고침 이전에 페이지의 내용을 읽고 이해하지 못할 수 있습니다. 또한 저시력 사용자에게 있어, 갑작스럽고 사전 안내도 없는 콘텐츠 업데이트는 어지러울 수 있습니다.
-
-      - [MDN Understanding WCAG, Guideline 2.1 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_—_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
-      - [MDN Understanding WCAG, Guideline 3.1 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.2_—_Predictable_Make_Web_pages_appear_and_operate_in_predictable_ways)
-      - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
-      - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
-      - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
+      > > **경고:**
+      >
+      > `refresh` 값을 지정한 페이지의 경우 새로고침 사이 간격이 너무 짧을 우려가 있습니다. 스크린 리더 등의 보조 기술로 탐색하는 사용자는 자동 새로고침 이전에 페이지의 내용을 읽고 이해하지 못할 수 있습니다. 또한 저시력 사용자에게 있어, 갑작스럽고 사전 안내도 없는 콘텐츠 업데이트는 어지러울 수 있습니다.
+      >
+      > - [MDN Understanding WCAG, Guideline 2.1 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_—_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
+      > - [MDN Understanding WCAG, Guideline 3.1 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Understandable#Guideline_3.2_—_Predictable_Make_Web_pages_appear_and_operate_in_predictable_ways)
+      > - [Understanding Success Criterion 2.2.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html)
+      > - [Understanding Success Criterion 2.2.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html)
+      > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
 - {{htmlattrdef("name")}}
 

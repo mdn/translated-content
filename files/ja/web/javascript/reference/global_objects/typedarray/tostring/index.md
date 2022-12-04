@@ -41,9 +41,7 @@ numbers.toString(); // "[object Uint8Array]"
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.tostring', 'Array.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,8 +1,8 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
-translation_of: Web/HTTP/Headers/Content-Location
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Content-Location`** indica uma localização alternativa para os dados retornados. O principal uso é para indicar o URL de um recurso transmitido como resultado de uma [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation).
@@ -77,7 +77,7 @@ Content-Location: /meu-primeiro-post-no-blog
 
 ### Indicando a URL do resultado de uma transação
 
-Digamos que você tem um [`<form>`](/en-US/docs/Web/HTML/Element/form) para enviar dinheiro para outro usuário do de um site.
+Digamos que você tem um [`<form>`](/pt-BR/docs/Web/HTML/Element/form) para enviar dinheiro para outro usuário do de um site.
 
 ```html
 <form action="/mandar-pagamento" method="post">

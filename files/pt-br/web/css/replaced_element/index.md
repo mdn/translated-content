@@ -1,9 +1,9 @@
 ---
 title: Elemento substituído
 slug: Web/CSS/Replaced_element
-translation_of: Web/CSS/Replaced_element
 original_slug: Web/CSS/Elemento_substituido
 ---
+
 {{CSSRef()}}
 
 ## Sumario
@@ -29,7 +29,3 @@ Objects inserted using the CSS {{cssxref("content")}} properties are _anonymous 
 CSS handles replaced elements specifically in some cases, like when calculating margins and some `auto` values.
 
 Note that some replaced elements, but not all, have intrinsic dimensions or a defined baseline, which is used by some CSS properties like {{cssxref("vertical-align")}}.
-
-## Veja também
-
-- {{CSS_key_concepts()}}

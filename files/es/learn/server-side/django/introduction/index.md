@@ -1,17 +1,9 @@
 ---
 title: Introducción a Django
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Aprendizaje
-  - CodigoScript
-  - Principiante
-  - Programación lado servidor
-  - Python
-  - django
-  - introducción
-translation_of: Learn/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introducción
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 En este primer artículo de Django responderemos la pregunta ¿Qué es Django? y daremos una visión general de lo que hace que este framework sea tan especial. Vamos a delinear las características principales, incluidas algunas de las funcionalidades avanzadas que no tendremos tiempo de cubrir con detalle en este módulo. Tambien mostraremos algunos de los componentes principales de una aplicación de Django. (aunque en este momento no cuentes con un entorno de desarrollo en el cual probarlo).
@@ -188,7 +180,7 @@ class Team(models.Model):
 
 El modelo de Django proporciona una API de consulta simple para buscar en la base de datos. Esta puede buscar concidencias contra varios campos al mismo tiempo usando diferentes criterios (ej. exacto, insensible a las mayúsculas, mayor que, etc.), y puede soportar sentencias complejas (por ejemplo, puedes especificar que se busque equipos U11 que tengan un nombre de equipo que empiece por "Fr" o termine con "al").
 
-El fragmento de código de más abajo muestra una función de visualización (manejador de recursos) para presentar en pantalla todos nuestros equipos U09. La línea en negrilla muestra como podemos usar la API de consulta del modelo para filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate como este criterio se pasa como argumento a la función `filter()` con el nombre del campo y tipo de coincidencia separados por un doble guion bajo: **team_level\_\_exact**).
+El fragmento de código de más abajo muestra una función de visualización (manejador de recursos) para presentar en pantalla todos nuestros equipos U09. La línea en negrilla muestra como podemos usar la API de consulta del modelo para filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate como este criterio se pasa como argumento a la función `filter()` con el nombre del campo y tipo de coincidencia separados por un doble guion bajo: **`team_level__exact`**).
 
 ```python
 ## filename: views.py

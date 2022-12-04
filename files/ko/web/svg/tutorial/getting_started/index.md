@@ -9,6 +9,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Getting_Started
 original_slug: Web/SVG/Tutorial/시작하기
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
 ### 간단한 예제
@@ -30,7 +31,7 @@ original_slug: Web/SVG/Tutorial/시작하기
 </svg>
 ```
 
-코드를 복사하여 demo1.svg로 저장하고, 파이어폭스 에서 실행해 봅시다. 아래와 같은 화면이 그려질 것입니다.(파이어 폭스 사용자 : [링크](https://developer.mozilla.org/@api/deki/files/4571/=svgdemo1.xml))
+코드를 복사하여 demo1.svg로 저장하고, 파이어폭스 에서 실행해 봅시다. 아래와 같은 화면이 그려질 것입니다.(파이어 폭스 사용자 : [링크](/@api/deki/files/4571/=svgdemo1.xml))
 
 ![svgdemo1.png](/@api/deki/files/4928/=svgdemo1.png)
 

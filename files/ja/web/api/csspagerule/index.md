@@ -33,10 +33,7 @@ interface CSSPageRule : CSSRule {
 
 ## 仕様
 
-| 仕様書                                                                                       | 策定状況                         | 備考                                                |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
-| {{SpecName('CSSOM', '#the-csspagerule-interface', 'CSSPageRule')}}     | {{Spec2('CSSOM')}}         | {{SpecName('DOM2 Style')}} からの変更なし |
-| {{SpecName('DOM2 Style', 'css.html#CSS-CSSPageRule', 'CSSPageRule')}} | {{Spec2('DOM2 Style')}} | 初期定義                                            |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

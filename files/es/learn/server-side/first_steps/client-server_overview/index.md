@@ -1,17 +1,9 @@
 ---
 title: Visión General Cliente-Servidor
 slug: Learn/Server-side/First_steps/Client-Server_overview
-tags:
-  - Aprendizaje
-  - Codificación de scripts
-  - Guía
-  - Principiante
-  - Programación lado servidor
-  - Servidor
-  - introducción
-translation_of: Learn/Server-side/First_steps/Client-Server_overview
 original_slug: Learn/Server-side/Primeros_pasos/Vision_General_Cliente_Servidor
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 Ahora que conoces el propósito y los beneficios potenciales de la programación de lado-servidor vamos a examinar en detalle lo que ocurre cuando un servidor recibe una "petición dinámica" desde un explorador web. Ya que el código de lado servidor de la mayoría de los sitios web gestiona peticiones y respuestas de formas similares, este artículo te ayudará a entender lo que necesitas hacer para escribir la mayor parte de tu propio código.

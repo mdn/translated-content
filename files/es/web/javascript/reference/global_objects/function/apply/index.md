@@ -1,15 +1,9 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Function
-  - JavaScript
-  - Method
-  - función
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/apply
 ---
+
 {{JSRef("Objetos_globales", "Function")}}
 
 ## Resumen
@@ -45,11 +39,11 @@ Puede también utilizarse {{jsxref("Functions/arguments", "arguments")}} como pa
 
 Desde la 5ta edición de ECMAScript se puede utilizar también cualquier tipo de objeto similar a un arreglo, que en términos prácticos significa que tendrá una propiedad `length` y propiedades integer en el rango (`0...length)`. Por ejemplo, ahora puede utilizarse un {{domxref("NodeList")}} o un objeto personalizado como: `{'length': 2, '0': 'eat', '1': 'bananas'}`.
 
-{{ note("La mayoría de los navegadores, incluidos Chrome 14 e Internet Explorer 9, aún no soportan el uso de objetos similares a un array y arrojarán una excepción.") }}
+> **Nota:** La mayoría de los navegadores, incluidos Chrome 14 e Internet Explorer 9, aún no soportan el uso de objetos similares a un array y arrojarán una excepción.
 
 ## Ejemplos
 
-### Utilizando **`apply`** para encadenar constructores
+### Utilizando `apply` para encadenar constructores
 
 Puedes utilizar `apply` para encadenar {{jsxref("Operators/new", "constructors")}} para un objeto, similar a Java. En el ejemplo siguiente se crea un método global a {{jsxref("Function")}} llamado `construct`, en cual posibilita el uso de un objeto similar a un arreglo en un constructor en lugar de una lista de argumentos.
 
@@ -80,9 +74,9 @@ alert(myInstance.constructor); // alerts "MyConstructor"
 
 > **Nota:** El método `Function.construct` no nativo no funcionará con algunos constructores nativos (como {{jsxref("Date")}}, por ejemplo). En estos casos se deberá utilizar el método {{jsxref("Function.bind")}} (por ejemplo, supóngase un arreglo como el siguiente para utilizar con el constructor `Date`: `[2012, 11, 4]`; en este caso se tendría que escribir algo como: `new (Function.prototype.bind.apply(Date, [null].concat([2012, 11, 4])))()` – de cualquier manera, ésta no es la mejor manera de hacerlo y probablemente no debería utilizarse en ningún entorno en producción).
 
-### **`apply`** y funciones **built-in**
+### `apply` y funciones built-in
 
-El uso inteligente de **`apply`** permite utilizar funciones built-in para algunas tareas que, de otra manera, habrían sido escritas recorriendo los valores del arreglo dentro de un bucle. Como ejemplo, vamos a utilizar `Math.max`/`Math.min`para encontrar el máximo/mínimo valor en un arreglo.
+El uso inteligente de **`apply`** permite utilizar funciones built-in para algunas tareas que, de otra manera, habrían sido escritas recorriendo los valores del arreglo dentro de un bucle. Como ejemplo, vamos a utilizar `Math.max`/`Math.min` para encontrar el máximo/mínimo valor en un arreglo.
 
 ```js
 /* min/max number in an array */
@@ -125,7 +119,7 @@ var min = minOfArray([5, 6, 2, 3, 7]);
 
 (Reemplazando de manera dinámica los argumentos en tiempo de ejecución)
 
-`apply`puede ser la mejor manera de reemplazar dinámicamente una función 'built-in' de Firefox, o de una librería de JavaScript. Dada una función `someobject.foo`, puedes modificar la función de una forma 'hacker', como ésta:
+`apply` puede ser la mejor manera de reemplazar dinámicamente una función 'built-in' de Firefox, o de una librería de JavaScript. Dada una función `someobject.foo`, puedes modificar la función de una forma 'hacker', como ésta:
 
 ```js
 var originalfoo = someobject.foo;
@@ -142,12 +136,7 @@ Este método es especialmente útil cuando quieres depurar eventos, o interfaces
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                       | Comentario                                          |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                         | {{Spec2('ES3')}}         | Definición Inicial. Implementada in JavaScript 1.3. |
-| {{SpecName('ES5.1', '#sec-15.3.4.3', 'Function.prototype.apply')}}                         | {{Spec2('ES5.1')}}     |                                                     |
-| {{SpecName('ES6', '#sec-function.prototype.apply', 'Function.prototype.apply')}}     | {{Spec2('ES6')}}         |                                                     |
-| {{SpecName('ESDraft', '#sec-function.prototype.apply', 'Function.prototype.apply')}} | {{Spec2('ESDraft')}} |                                                     |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

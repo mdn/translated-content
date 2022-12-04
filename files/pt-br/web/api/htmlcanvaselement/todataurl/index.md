@@ -1,13 +1,8 @@
 ---
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Imagens
-translation_of: Web/API/HTMLCanvasElement/toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 O método **`HTMLCanvasElement.toDataURL()`** retorna uma [data URI](/pt-BR/docs/Web/HTTP/data_URIs), contendo uma representação da imagem no formato especificado pelo parâmetro `type` (por padrão, esse valor é [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). A resolução da imagem retornada é de 96 dpi.

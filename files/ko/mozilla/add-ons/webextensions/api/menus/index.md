@@ -3,6 +3,7 @@ title: contextMenus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 ---
+
 {{AddonSidebar}}
 
 브라우저의 메뉴 시스템에 항목을 추가한다.
@@ -13,7 +14,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 
 이 API를 사용하려면 '`menus`' [권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)이 필요하다. `menus` 대신에 `contextMenus`를 사용해도 된다. `contextMenus`를 사용했으면 API도 `browser.contextMenus`를 써야 한다.
 
-콘텐트 스크립트에서는 [`menus.getTargetElement()`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement)만 사용할 수 있다.
+콘텐트 스크립트에서는 [`menus.getTargetElement()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement)만 사용할 수 있다.
 
 ## 메뉴 항목 만들기
 

@@ -1,8 +1,6 @@
 ---
 title: Desigualdade (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
-browser-compat: javascript.operators.inequality
-translation_of: Web/JavaScript/Reference/Innequality
 ---
 
 {{jsSidebar("Operators")}}
@@ -33,7 +31,7 @@ Para obter detalhes do algoritmo de comparação, consulte a página do [operado
 3 != "3"; // false
 ```
 
-Para evitar isso e exigir que diferentes tipos sejam considerados diferentes, use o operador de [desigualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators/Strict_inequality)  em vez disso:
+Para evitar isso e exigir que diferentes tipos sejam considerados diferentes, use o operador de [desigualdade estrita](/pt-BR/docs/Web/JavaScript/Reference/Operators/Strict_inequality) em vez disso:
 
 ```js
 3 !== "3"; // true

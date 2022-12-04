@@ -2,6 +2,7 @@
 title: 하이퍼링크 만들기
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 하이퍼 링크는 중요하다. — 웹을 웹답게 만들기 때문이다. 이 글에서는 링크를 만드는데 필요한 구문을 보여주고 링크의 모범 사례를 설명한다.
@@ -87,7 +88,7 @@ A basic link is created by wrapping the text (or other content, see [Block level
 
 ### Block level 링크들
 
-이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](https://developer.mozilla.org/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, `<a> 와 </a>` 사이에 그 이미지를 넣으시기만 하시면 됩니다.
+이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, `<a> 와 </a>` 사이에 그 이미지를 넣으시기만 하시면 됩니다.
 
 ```html
 <a href="https://www.mozilla.org/en-US/">

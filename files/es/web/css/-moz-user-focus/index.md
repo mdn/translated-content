@@ -1,12 +1,8 @@
 ---
 title: '-moz-user-focus'
 slug: Web/CSS/-moz-user-focus
-tags:
-  - CSS
-  - CSS:Extensiones Mozilla
-  - Referencia CSS
-translation_of: Web/CSS/-moz-user-focus
 ---
+
 {{Non-standard_header}}
 
 ## Resumen

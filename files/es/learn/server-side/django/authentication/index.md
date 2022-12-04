@@ -1,22 +1,11 @@
 ---
 title: 'Tutorial de Django Parte 8: Autenticación y permisos de Usuario'
 slug: Learn/Server-side/Django/Authentication
-tags:
-  - Aprender
-  - Artículo
-  - Autenticacion de Django
-  - Autenticación
-  - Principiante
-  - Python
-  - Sesiones
-  - Tutorial
-  - django autenticación
-  - permisos
-translation_of: Learn/Server-side/Django/Authentication
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Sessions", "Learn/Server-side/Django/Forms", "Learn/Server-side/Django")}}
 
-En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu sitio con sus propias cuentas, y cómo controlar lo que pueden hacer basándose en si han iniciado sesión o no y sus _permisos_. Como parte de esta demostración extenderemos el sitio web de la [BibliotecaLocal](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de inicio y cierre de sesión, y páginas específicas de usuarios y personal de la biblioteca para ver libros que han sido prestados.
+En este tutorial mostraremos cómo permitir a los usuarios iniciar sesión en tu sitio con sus propias cuentas, y cómo controlar lo que pueden hacer basándose en si han iniciado sesión o no y sus _permisos_. Como parte de esta demostración extenderemos el sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de inicio y cierre de sesión, y páginas específicas de usuarios y personal de la biblioteca para ver libros que han sido prestados.
 
 <table>
   <tbody>
@@ -45,7 +34,7 @@ Django proporciona un sistema de autenticación y autorización ("permisos"), co
 
 > **Nota:** Según Django el sistema de autenticación pretende ser muy genérico, y, por lo tanto, no proporciona algunas características proporcinadas en otros sistemas de autenticación web. Las soluciones para algunos problemas están disponibles como paquetes de terceros. Por ejemplo, regulación de intentos de inicio de sesión y autenticación frente a terceros (por ej. OAuth).
 
-En este tutorial mostraremos cómo habilitar la autenticación de usuarios en el sitio web [BibliotecaLocal](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website), crear tus propias páginas de login y logout, añadir permisos a tus modelos, y controlar el acceso a las páginas. Usaremos la autenticación/permisos para desplegar listas de libros que han sido solicitados tanto por los usuarios como por los bibliotecarios.
+En este tutorial mostraremos cómo habilitar la autenticación de usuarios en el sitio web [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), crear tus propias páginas de login y logout, añadir permisos a tus modelos, y controlar el acceso a las páginas. Usaremos la autenticación/permisos para desplegar listas de libros que han sido solicitados tanto por los usuarios como por los bibliotecarios.
 
 El sistema de autenticación es muy flexible, y puedes crear tus URLs, formularios, vistas y plantillas desde el inicio si quieres, simplemente llamando a la API provista para loguear al usuario. Sin embargo, en este artículo vamos a usar las vistas y formularios de autenticación "en stock" de Django para nuestras páginas de login y logout. De todos modos necesitaremos crear algunas plantillas, pero eso es bastante fácil.
 
@@ -96,7 +85,7 @@ Ya creaste tu primer usuario cuando revisamos el [sitio de administración de Dj
 
 A continuación, primero crearemos un grupo y luego un usuario. Aunque no tengamos ningún permiso aún para otorgar a los miembros de nuestra biblioteca, si lo necesitamos para más adelante, será mucho más fácil otorgarlo una vez al grupo que individualmente a cada miembro.
 
-Inicia el servidor de desarrollo y navega hasta el sitio de administracion en tu navegador web local (<http://127.0.0.1:8000/admin/>). Ingresa al sitio usando las credenciales de la cuenta de tu superusuario. El nivel superior del sitio de administracion "Admin site" muestra todos tus modelos, ordenados por la aplicacion por defecto de Django "django application". Desde la seccion de **Autenticación y Autorización** puedes dar click en los enlaces de **Usuarios** "Users" y **Grupos** "Groups" para ver todos sus registros existentes.
+Inicia el servidor de desarrollo y navega hasta el sitio de administracion en tu navegador web local (`http://127.0.0.1:8000/admin/`). Ingresa al sitio usando las credenciales de la cuenta de tu superusuario. El nivel superior del sitio de administracion "Admin site" muestra todos tus modelos, ordenados por la aplicacion por defecto de Django "django application". Desde la seccion de **Autenticación y Autorización** puedes dar click en los enlaces de **Usuarios** "Users" y **Grupos** "Groups" para ver todos sus registros existentes.
 
 ![Admin site - add groups or users](https://mdn.mozillademos.org/files/14091/admin_authentication_add.png)
 
@@ -143,7 +132,7 @@ urlpatterns += [
 ]
 ```
 
-Navega hasta la URL <http://127.0.0.1:8000/accounts/> (¡Nota la barra inclinada hacia adelante!) y Django mostrara un error, diciendo que no puede encontrar esta URL, y listando todas las URL's que ha intentado. Aqui puedes ver las URL's que funcionaran, por ejemplo:
+Navega hasta la URL `http://127.0.0.1:8000/accounts/` (¡Nota la barra inclinada hacia adelante!) y Django mostrara un error, diciendo que no puede encontrar esta URL, y listando todas las URL's que ha intentado. Aqui puedes ver las URL's que funcionaran, por ejemplo:
 
 > **Nota:** Usando el metodo anterior, añade las siguientes URL's con sus respectivos nombres entre corchetes, los cuales pueden ser usados para revertir "reverse" el mapeado de las URL's. No necesitas implementar nada mas, el anterior mapeado de URL's asigna automaticamente las mencionadas URL's.
 >
@@ -158,7 +147,7 @@ Navega hasta la URL <http://127.0.0.1:8000/accounts/> (¡Nota la barra inclinada
 > ^accounts/reset/done/$ [name='password_reset_complete']
 > ```
 
-Ahora intenta navegar a la URL de inicio de sesion "login"(<http://127.0.0.1:8000/accounts/login/>). Esto fallara de nuevo, pero ahora con un error diciendote que no encuentra la plantilla "template" requerida (**registration/login.html**) por el buscador de directorios de plantillas . Veras el las siguientes lineas en la seccion amarilla en la parte superior:
+Ahora intenta navegar a la URL de inicio de sesion "login"(`http://127.0.0.1:8000/accounts/login/`). Esto fallara de nuevo, pero ahora con un error diciendote que no encuentra la plantilla "template" requerida (**registration/login.html**) por el buscador de directorios de plantillas . Veras el las siguientes lineas en la seccion amarilla en la parte superior:
 
 ```python
 Exception Type:    TemplateDoesNotExist
@@ -244,11 +233,11 @@ Crea un nuevo archivo HTML llamado /**locallibrary/templates/registration/login.
 
 Estas plantillas comparten algunas similitudes con algunas que hemos visto antes — extiende nuestra plantilla base y sobreescribe el bloque `content`. El resto del código es un código de manejo de formularios bastante estándar, que trataremos en un tutorial posterior. Todo lo que necesitas saber por ahora es que esto mostrará un formulario en el que puedes introducir tu usuario y contraseña, y que si introduces valores inválidos se te pedirá que ingreses los valores correctos cuando la página refresque.
 
-Navega de vuelta a la página de inicio sesión (<http://127.0.0.1:8000/accounts/login/>) una vez que hayas guardado tu plantilla, y deberías ver algo como esto:
+Navega de vuelta a la página de inicio sesión (`http://127.0.0.1:8000/accounts/login/`) una vez que hayas guardado tu plantilla, y deberías ver algo como esto:
 
 ![Library login page v1](https://mdn.mozillademos.org/files/14101/library_login.png)
 
-Si intentas iniciar sesión tendrá éxito y serás redirigido a otra página (por defecto será <http://127.0.0.1:8000/accounts/profile/>). El problema aquí es que, por defecto, Django espera que después de iniciar sesión seas llevado a una página de perfil (que podrá ser el caso o no). Como no has definido esta página todavía, ¡obtendrás otro error!
+Si intentas iniciar sesión tendrá éxito y serás redirigido a otra página (por defecto será `http://127.0.0.1:8000/accounts/profile/`). El problema aquí es que, por defecto, Django espera que después de iniciar sesión seas llevado a una página de perfil (que podrá ser el caso o no). Como no has definido esta página todavía, ¡obtendrás otro error!
 
 Abre la configuración del proyecto (**/locallibrary/locallibrary/settings.py**) y añade al final el texto de abajo. Ahora cuando inicies sesión deberías ser redirigido a la página de inicio por defecto.
 
@@ -259,7 +248,7 @@ LOGIN_REDIRECT_URL = '/'
 
 ### Plantilla cierre de sesión "logout"
 
-Si navegas a la url de cierre de sesión (<http://127.0.0.1:8000/accounts/logout/>) verás un extraño comportamiento — tu usuario cerrará la sesión, pero serás llevado a la página de cierre de sesión del **Administrador**. Eso no es lo que quieres, aunque sólo sea porque el enlace de inicio de sesión de esa página te lleva a la pantalla del inicio de sesión del Administrador (y eso sólo está disponible a los usuarios que tienen el permiso `is_staff`).
+Si navegas a la url de cierre de sesión (`http://127.0.0.1:8000/accounts/logout/`) verás un extraño comportamiento — tu usuario cerrará la sesión, pero serás llevado a la página de cierre de sesión del **Administrador**. Eso no es lo que quieres, aunque sólo sea porque el enlace de inicio de sesión de esa página te lleva a la pantalla del inicio de sesión del Administrador (y eso sólo está disponible a los usuarios que tienen el permiso `is_staff`).
 
 Crea y abre el fichero /**locallibrary/templates/registration/logged_out.html**. Copia en él el siguiente texto:
 
@@ -380,8 +369,8 @@ Ahora que has añadido la configuración URL y creado todas estas plantillas, ¡
 
 Puedes probar las nuevas páginas de autenticación intentando iniciar sesión y entonces cerrar sesión con tu cuenta de super administrador usando estas URLs:
 
-- <http://127.0.0.1:8000/accounts/login/>
-- <http://127.0.0.1:8000/accounts/logout/>
+- `http://127.0.0.1:8000/accounts/login/`
+- `http://127.0.0.1:8000/accounts/logout/`
 
 Serás capaz de probar la funcionalidad de reinicio de contraseña desde el enlace de la página de inicio de sesión. **¡Ten cuidado con el hecho de que Django solamente enviará correos de reinicio a las direcciones (usuarios) que ya están almacenadas en la base de datos!**
 
@@ -586,7 +575,7 @@ Ahora todo lo que necesitamos hacer para esta página es añadir una plantilla. 
 
 Esta plantilla es muy similar a esas que hemos creado previamente para los objetos `Book` y `Author`. La única "cosa" nueva aquí es que comprobamos el método que hemos añadido en el modelo `(bookinst.is_overdue`) y lo usamos para cambiar el color de los elementos atrasados.
 
-Cuando el servidor de desarrollo esté en ejecución, deberías ser capaz de ver la lista de los usuarios que han iniciado sesión en tu navegador en <http://127.0.0.1:8000/catalog/mybooks/>. Prueba esto con tu usuario iniciado en la sesión y cerrado en la sesión (en el segundo caso, deberías ser redirigido a la página de inicio).
+Cuando el servidor de desarrollo esté en ejecución, deberías ser capaz de ver la lista de los usuarios que han iniciado sesión en tu navegador en `http://127.0.0.1:8000/catalog/mybooks/`. Prueba esto con tu usuario iniciado en la sesión y cerrado en la sesión (en el segundo caso, deberías ser redirigido a la página de inicio).
 
 ### Añadir la lista a la barra lateral
 

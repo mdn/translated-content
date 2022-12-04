@@ -1,20 +1,15 @@
 ---
 title: GlobalEventHandlers.onerror
 slug: Web/API/Window/error_event
-tags:
-  - API
-  - HTML DOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/onerror
 original_slug: Web/API/GlobalEventHandlers/onerror
 ---
+
 {{ApiRef("HTML DOM")}}
 
-Um [event handler](/pt-BR/docs/Web/Guide/Events/Event_handlers) para o evento [`error`](/en-US/docs/Web/Events/error) . Eventos de erro são disparados contra diversos tipos de alvos, para diferentes tipos de erros:
+Um [event handler](/pt-BR/docs/Web/Guide/Events/Event_handlers) para o evento [`error`](/pt-BR/docs/Web/Events/error) . Eventos de erro são disparados contra diversos tipos de alvos, para diferentes tipos de erros:
 
-- Quando um **erro de execução (runtime error) de JavaScript** (incluindo erros de sintaxe) ocorrem, um evento [`error`](/en-US/docs/Web/Events/error) usando a interface {{domxref("ErrorEvent")}} é disparado no {{domxref("window")}} e `window.onerror()` é invocado.
-- Quando um recurso (como um {{HTMLElement("img")}} ou {{HTMLElement("script")}}) **falha na inicialização**, um evento [`error`](/en-US/docs/Web/Events/error) usando a interface {{domxref("Event")}} é disparado no elemento , que inicializa o load e o `onerror()` handler do elemento é invocado. Esse evento de erro emergem para a janela, mas (pelo menos no Firefox) pode ser manipulado com uma captura única {{domxref("window.addEventListener")}}.
+- Quando um **erro de execução (runtime error) de JavaScript** (incluindo erros de sintaxe) ocorrem, um evento [`error`](/pt-BR/docs/Web/Events/error) usando a interface {{domxref("ErrorEvent")}} é disparado no {{domxref("window")}} e `window.onerror()` é invocado.
+- Quando um recurso (como um {{HTMLElement("img")}} ou {{HTMLElement("script")}}) **falha na inicialização**, um evento [`error`](/pt-BR/docs/Web/Events/error) usando a interface {{domxref("Event")}} é disparado no elemento , que inicializa o load e o `onerror()` handler do elemento é invocado. Esse evento de erro emergem para a janela, mas (pelo menos no Firefox) pode ser manipulado com uma captura única {{domxref("window.addEventListener")}}.
 
 Instalando um manipulador de eventos de erro global é útil para compilação automatizada de relatórios de erro.
 
@@ -33,8 +28,8 @@ Parâmetros da função:
 - `message`: mensagem de erro (string). Disponível como `event` (sic!) no manipulador HTML `onerror=""` .
 - `source`: URL do script onde o erro foi disparado(string)
 - `lineno`: Número da linha onde o evento foi disparado (number)
-- `colno`: Número da coluna para a linha onde o evento ocorreu (number) {{gecko_minversion_inline("31.0")}}
-- `error`: [Error Object](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error) (object) {{gecko_minversion_inline("31.0")}}
+- `colno`: Número da coluna para a linha onde o evento ocorreu (number)
+- `error`: [Error Object](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Error) (object)
 
 Quando a função retorna verdadeira, ela evita o disparo do manipulador de evento padrão
 

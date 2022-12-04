@@ -167,9 +167,7 @@ console.log(newInstance.name); //Polygon
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-static-semantics-constructormethod', 'Constructor Method')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

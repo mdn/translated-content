@@ -1,8 +1,8 @@
 ---
 title: Content-Disposition
 slug: Web/HTTP/Headers/Content-Disposition
-translation_of: Web/HTTP/Headers/Content-Disposition
 ---
+
 {{HTTPSidebar}}
 
 En una respuesta HTTP regular, el encabezado **`Content-Disposition`** indica si el contenido se espera que se muestre en línea en el navegador, esto es, como una o como parte de una página web, o como un archivo adjunto, que se puede descargar y guardar localmente.

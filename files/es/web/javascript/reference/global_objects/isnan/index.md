@@ -1,12 +1,12 @@
 ---
 title: isNaN
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
-translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 original_slug: Web/JavaScript/Referencia/Objetos_globales/isNaN
 ---
+
 {{jsSidebar("Objects")}}
 
-La función **`isNaN()`** determina cuando el valor es {{jsxref("NaN")}} o no. Tenga presente que la coerción dentro de la función `isNaN` tiene reglas [interesantes](/es/docs/Web/JavaScript/Referencia/Objetos_globales/isNaN$edit#Description); tal vez quieras usar de forma alternativa **[`Number.isNaN()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/isNaN)**, como fue definido en ECMAScript 2015.
+La función **`isNaN()`** determina cuando el valor es {{jsxref("NaN")}} o no. Tenga presente que la coerción dentro de la función `isNaN` tiene reglas [interesantes](/es/docs/Web/JavaScript/Referencia/Objetos_globales/isNaN#Description); tal vez quieras usar de forma alternativa **[`Number.isNaN()`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number/isNaN)**, como fue definido en ECMAScript 2015.
 
 {{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
 
@@ -44,12 +44,7 @@ isNaN(12) //devuelve false
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario         |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Definición inicial |
-| {{SpecName('ES5.1', '#sec-15.1.2.4', 'isNaN')}}         | {{Spec2('ES5.1')}}     |                    |
-| {{SpecName('ES6', '#sec-isnan-number', 'isNaN')}}         | {{Spec2('ES6')}}         |                    |
-| {{SpecName('ESDraft', '#sec-isnan-number', 'isNaN')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

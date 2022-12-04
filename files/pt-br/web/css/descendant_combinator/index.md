@@ -1,12 +1,8 @@
 ---
 title: Descendant combinator
 slug: Web/CSS/Descendant_combinator
-tags:
-  - CSS
-  - Reference
-  - Selectors
-translation_of: Web/CSS/Descendant_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 O **combinador descendente** - normalmente representado por um caractere de espaço simples (" ") - combina dois seletores para que os elementos correspondidos pelo segundo seletor sejam selecionados se eles tiverem um elemento ancestral (pai, pai ou mãe, pai ou mãe, etc.) correspondente ao primeiro seletor. Os seletores que utilizam um combinador descendente são chamados de seletores descendentes.

@@ -1,12 +1,9 @@
 ---
 title: Desarrollo Web Móvil
 slug: Web/Guide/Mobile
-tags:
-  - Intermedio
-  - NecesitaEjemplo
-translation_of: Web/Guide/Mobile
 original_slug: Web/Guide/Movil
 ---
+
 Esta página proporciona una visión general de algunas de las principales técnicas necesarias para diseñar sitios web que funcionen bien en dispositivos móviles. Si está buscando información sobre el proyecto Firefox OS de Mozilla, consulte la página de [Firefox OS](/en/Mozilla/Firefox_OS). O podría estar interesado en detalles sobre [Firefox para Android](/en/Mozilla/Firefox_for_Android).
 
 Hemos organizado esta documentación en dos secciones, [diseñando para dispositivos móviles](#DisenandoParaDispositivosMoviles) y [desarrollo para diferentes navegadores](#DesarrolloParaDiferentesNavegadores). Vea también la guía a la [amigabilidad móvil](/es/docs/Web_Development/Mobile/Mobile-friendliness) para desarrolladores web de Jason Grlicky.
@@ -42,7 +39,7 @@ Finalmente, puede aprovechar las nuevas posibilidades ofrecidas por los disposit
 
 ## Desarrollo para diferentes navegadores
 
-### Escribir código para diferentes navegadores (_cross-browser_)
+### Escribir código para diferentes navegadores (cross-browser)
 
 Para crear sitios web que funcionen aceptablemente en diferentes navegadores móviles:
 
@@ -56,7 +53,7 @@ Vea esta [lista de propiedades específicas para Gecko](/es/docs/Web/CSS/Referen
 
 Usar herramientas como [CSS Lint](http://csslint.net/) puede ayudar a encontrar problemas como este en el código y preprocesadores como [SASS](http://sass-lang.com/) y [LESS](http://lesscss.org/) pueden ser de ayuda para crear código compatible con diferentes navegadores.
 
-### Precaución al husmear el agente de usuario (_user agent_)
+### Precaución al husmear el agente de usuario (user agent)
 
 Es preferible para los sitios web usar las técnicas enumeradas anteriormente con el objetivo de detectar características específicas del dispositivo, como el tamaño de pantalla y las pantallas táctiles, y adaptarse a ellas adecuadamente. Pero a veces esto no es práctico y los sitios web recurren a analizar la cadena de agente de usuario del navegador (_user agent_) para intentar distinguir entre ordenadores de escritorio, tabletas y teléfonos, y servir diferente contenido a cada tipo de dispositivo.
 

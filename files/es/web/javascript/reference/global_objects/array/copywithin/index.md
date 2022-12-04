@@ -1,17 +1,9 @@
 ---
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/copyWithin
 ---
+
 {{JSRef}}
 
 El método **`copyWithin()`** transfiere una copia plana de una sección a otra dentro del mismo array ( o contexto similar ), sin modificar su propiedad length y lo devuelve.
@@ -65,7 +57,7 @@ En los siguientes ejemplos céntrate en los siguientes aspectos:
 - El tamaño del contexto en el que se aplica no cambia. En los ejemplos el array parte con cinco elementos y siempre mantiene cinco elementos.
 - `start` y `end` trabajan juntos para decidir qué se copiará. Siempre tienen valor por defecto aunque omitas `end`, o `start` y `end`.
 - `target` trabaja solo y debe especificarse. Indica el lugar para en el que la copia comenzará a sobreescribir datos existentes. Debe estar dentro de los límites en el contexto que se aplique.
-- escribir `arr.copyWithin( n )`es lo mismo que `arr.copyWithin( n, 0, arr.length)`
+- escribir `arr.copyWithin( n )` es lo mismo que `arr.copyWithin( n, 0, arr.length)`
 
 ```js
 [1, 2, 3, 4, 5].copyWithin(-2);
@@ -142,10 +134,7 @@ if (!Array.prototype.copyWithin) {
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-array.prototype.copyWithin', 'Array.prototype.copyWithin')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

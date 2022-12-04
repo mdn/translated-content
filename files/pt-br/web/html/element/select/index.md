@@ -1,8 +1,8 @@
 ---
 title: <select>
 slug: Web/HTML/Element/select
-translation_of: Web/HTML/Element/select
 ---
+
 ## Sumário
 
 O elemento HTML _select_ (\<select>) representa um controle que apresenta um menu de opções. As opções dentro do menu são representadas pelo elemento {{HTMLElement("option")}}, que podem ser agrupados por elementos `{{HTMLElement("optgroup")}}`. As opções podem ser pré-selecionadas para o usuário.
@@ -75,4 +75,4 @@ A seguir um exemplo de como simular uma lista de seleção com opções editáve
 
 - Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} e {{HTMLElement("meter")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

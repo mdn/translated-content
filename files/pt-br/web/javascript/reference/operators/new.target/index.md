@@ -1,13 +1,8 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-tags:
-  - Classes
-  - ECMAScript6
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators/new.target
 ---
+
 {{JSSidebar("Operators")}}
 
 A propriedade `new.target` permite que você detecte quando uma função ou construtor foi chamado utilizando o operador new. Em construtores e funções instaciadas com o operador [new](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) , `new.target` retorna a referência ao construtor ou função. Em chamadas normais de funções , `new.target` é {{jsxref("undefined")}}.
@@ -80,5 +75,5 @@ A partir do exemplo acima das classes C e D, mostra que new\.target aponta para 
 
 - [funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
 - [Classes](/pt-BR/docs/Web/JavaScript/Reference/Classes)
-- [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)
-- [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [`new`](/pt-BR/docs/Web/JavaScript/Reference/Operators/new)
+- [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this)

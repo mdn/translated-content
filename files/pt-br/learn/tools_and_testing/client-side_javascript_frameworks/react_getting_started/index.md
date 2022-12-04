@@ -1,11 +1,9 @@
 ---
 title: Começando com React
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Comecando_com_React
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Neste artigo mostraremos como dizer Olá para o React. Descobriremos um pouco sobre e os casos de usos, configurar uma React toolchain no computador localmente, e criar e usar um app simples como partida, aprendendo um pouco sobre como os processos do React funcionam.
@@ -58,7 +56,7 @@ Enquanto React pode ser utilizado por [pequenos pedaços de interface](https://r
 
 Além disso, muitos dos beneficios da experiencias de desenvolvimento de uma aplicação React, tais como escrever interfaces com JSX, requerem um processo de compilação. Adicionar um compilador como o Babel em um website faz o código funcionar lentamente, então os desenvolvedores geralmente configuram algumas ferramentas para fazer compilações em etapas. React, sem duvídas, tem um grande ecossistema de ferramentas, mas isso pode ser aprendido.
 
-Este artigo será focado no caso de uso do React para renderizar toda a interface do usuario de um aplicativo, usando ferramentas fornecidas pelo prórpio [create-react-app](https://create-react-app.dev/) do Facebook.
+Este artigo será focado no caso de uso do React para renderizar toda a interface do usuario de um aplicativo, usando ferramentas fornecidas pelo próprio [create-react-app](https://create-react-app.dev/) do Facebook.
 
 ## Como React usa JavaScript?
 

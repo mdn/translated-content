@@ -1,9 +1,9 @@
 ---
 title: Error.prototype.lineNumber
 slug: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/lineNumber
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/lineNumber
 ---
+
 No es una norma
 
 Esta característica no es una norma y no está en la lista de normas. No la utilice en sitios de producción que enfrenta la Web: no va a funcionar para todos los usuarios. También puede haber grandes incompatibilidades entre implementaciones y el comportamiento puede cambiar en el futuro.
@@ -49,8 +49,6 @@ Tabla de compatibilidad
 | Caracteristica | Android       | Chorme para Android | Firefox Móvil (Gecko) | IE Móvil      | Opera Móvil   | Safari Móvil  |
 | -------------- | ------------- | ------------------- | --------------------- | ------------- | ------------- | ------------- |
 | Soporte básico | No compatible | No compatible       | Compatible            | No compatible | No compatible | No compatible |
-
-##
 
 ## Vea también:
 

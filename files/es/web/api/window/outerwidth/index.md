@@ -1,8 +1,8 @@
 ---
 title: Window.outerWidth
 slug: Web/API/Window/outerWidth
-translation_of: Web/API/Window/outerWidth
 ---
+
 {{APIRef}}
 
 ## Sumario
@@ -29,11 +29,9 @@ Para obtener el ancho exterior de la ventana, i.e. el ancho de la pagina despleg
 
 {{Compat("api.Window.outerWidth")}}
 
-## Specificaciones
+## Especificaciones
 
-| Specification                                                                                        | Status                           | Comment             |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }} | {{ Spec2('CSSOM View') }} | Initial definition. |
+{{Specifications}}
 
 ## Ver también
 

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Using_promises
 original_slug: Web/JavaScript/Guide/Usar_promesas
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Una {{jsxref("Promise")}} (promesa en castellano) es un objeto que representa la terminación o el fracaso de una operación asíncrona. Dado que la mayoría de las personas consumen `promises` ya creadas, esta guía explicará primero cómo consumirlas, y luego cómo crearlas.
@@ -314,7 +315,7 @@ console.log(1); // 1, 2, 3, 4
 
 ## Anidamiento
 
-Las cadenas de promesas simples se mantienen planas sin anidar, ya que el anidamiento puede ser el resultado de una composición descuidada. Vea [errores comunes](/es/docs/Web/JavaScript/Guide/Usar_promesas$edit#Common_mistakes).
+Las cadenas de promesas simples se mantienen planas sin anidar, ya que el anidamiento puede ser el resultado de una composición descuidada. Vea [errores comunes](/es/docs/Web/JavaScript/Guide/Usar_promesas#Common_mistakes).
 
 El anidamiento es una estructura de control para limitar el alcance de las sentencias `catch`. Específicamente, un `catch` anidado sólo captura fallos dentro de su contexto y por debajo, no captura errores que están más arriba en la cadena fuera del alcance del anidamiento. Cuando se usa correctamente, da mayor precisión en la recuperación de errores:
 
@@ -366,7 +367,7 @@ Nota que `() => x` es un atajo para `() => { return x; }`.
 
 Ahora tenemos una cadena determinística simple con un manejador de error adecuado.
 
-El uso de [async / await](/es/docs/Web/JavaScript/Reference/Statements/async_function) aborda la mayoría, si no todos estos problemas, la desventaja es que el error más común con esa sintaxis es olvidar la palabra clave [await](/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
+El uso de [async / await](/es/docs/Web/JavaScript/Reference/Statements/async_function) aborda la mayoría, si no todos estos problemas, la desventaja es que el error más común con esa sintaxis es olvidar la palabra clave [await](/es/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ## Vea también
 

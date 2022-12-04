@@ -2,6 +2,8 @@
 title: Firefox 3 のためのウェブアプリケーションの更新
 slug: Mozilla/Firefox/Releases/3/Updating_web_applications
 original_slug: Updating_web_applications_for_Firefox_3
+l10n:
+  sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
 ---
 
 {{FirefoxSidebar}}
@@ -10,29 +12,28 @@ original_slug: Updating_web_applications_for_Firefox_3
 
 ## DOM の変更
 
-外部ドキュメントからのノードは、現在のドキュメントに挿入する前に [`document.importNode()`](/ja/docs/Web/API/Document/importNode) を使ってクローンを作る (あるいは [`document.adoptNode()`](/ja/docs/Web/API/Document/adoptNode) を使って取り込む) べきです。[`Node.ownerDocument`](/ja/docs/Web/API/Node/ownerDocument) 問題の詳細については [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc) を参照してください。
+外部の文書から移入したノードは、現在の文書に挿入する前に [`document.importNode()`](/ja/docs/Web/API/Document/importNode) を使ってクローンを作る (あるいは [`document.adoptNode()`](/ja/docs/Web/API/Document/adoptNode) を使って取り込む) べきです。[`Node.ownerDocument`](/ja/docs/Web/API/Node/ownerDocument) 問題の詳細については [W3C DOM FAQ](https://www.w3.org/DOM/faq.html#ownerdoc) を参照してください。
 
-Firefox では現在このルールを強制していません。Firefox 3 の開発中には強制していた時期もありましたが、このルールを強制すると多くのサイトが機能しなくなってしまうため取りやめになりました。
-将来的な互換性を高めるため、ウェブ開発者にはこのルールに従ってコードを修正することを推奨します。
+Firefox では現在このルールを強制していません。Firefox 3 の開発中には強制していた時期もありましたが、このルールを強制すると多くのサイトが機能しなくなってしまうため取りやめになりました。将来的な互換性を高めるため、ウェブ開発者にはこのルールに従ってコードを修正することを推奨します。
 
 ## HTML の変更
 
 ### 文字セット継承に対する変更
 
-Firefox 3 では、frame や iframe が親の文字セットを継承できてしまうセキュリティ上のバグが修正されています。これにより、場合によっては問題が起こる可能性があります。フレームが親文字タセットを継承できるのは、フレームと親がともに同じサーバーから読み込まれている場合に限られます。もしあなたのページが、他のサーバーから読み込まれたフレームが同じ文字セットを継承することを前提に作られているなら、フレームの HTML を更新して文字セットを明確に指定するべきです。
+Firefox 3 では、frame や iframe が親の文字セットを継承できてしまうセキュリティ上のバグが修正されています。これにより、場合によっては問題が起こる可能性があります。フレームが親の文字セットを継承できるのは、フレームと親がともに同じサーバーから読み込まれている場合に限られます。もしあなたのページが、他のサーバーから読み込まれたフレームが同じ文字セットを継承することを前提に作られているなら、フレームの HTML を更新して文字セットを明確に指定するべきです。
 
 ### SCRIPT 要素に対する変更
 
-`text/html` 文書における `<script>` 要素は、たとえ 間に内容を含めなくても、HTML 4 文書における 閉じ タグである `</script>` を必要とするようになりました。以前のバージョンの Firefox では、以下のようにすることが可能でした。：
+`text/html` 文書における `<script>` 要素は、たとえ 間に内容を含めなくても、HTML 4 文書における閉じタグである `</script>` を必要とするようになりました。以前のバージョンの Firefox では、以下のようにすることが可能でした。
 
-```
-<script ... />
+```html
+<script … />
 ```
 
-今バージョンからマークアップは HTML の仕様に従わなければならず (それが実際に HTML である場合)、以下のように実際に閉じなければなりません。
+マークアップは HTML の仕様に従わなければならず (それが実際に HTML である場合)、以下のように実際に閉じなければならなくなりました。
 
-```
-<script ...></script>
+```html
+<script …></script>
 ```
 
 これは互換性とセキュリティの両方を改善します。
@@ -45,15 +46,15 @@ em、ex 単位での font-size の値はユーザの最小フォントサイズ�
 
 em 及び ex 単位での font-size の値は、ユーザの最小フォントサイズの影響を受けることなく、"意図されたフォントサイズ" に基づくようになりました。言い換えれば、フォントサイズは常にデザイナーの意図に従って計算され、その後に最小フォントサイズのための調整が行われるようになったということです。
 
-{{Bug(434718)}}、特にその [添付ファイル 322943](https://bugzilla.mozilla.org/attachment.cgi?id=322943) をデモとしてを参照してください (違いを見るためには、最小フォントサイズ >= 6 で見る必要があります)。 (これはバグテンプレートについて言っているのではありません。このリンクは Bugzilla のバグではなく、Bugzilla の添付ファイルを指しています。添付ファイルの番号をバグ番号として使用すると、意味を成しません。) Firefox 2 では、em ベースのフォントサイズが最小フォントサイズに「跳ね返る」ため、2 つのボックスカスケードの動作が異なります)。
+{{Bug(434718)}}、特にその [添付ファイル 322943](https://bug434718.bmoattachments.org/attachment.cgi?id=322943) をデモとしてを参照してください (違いを見るためには、最小フォントサイズ >= 6 で見る必要があります)。 (これはバグテンプレートについて言っているのではありません。このリンクは Bugzilla のバグではなく、Bugzilla の添付ファイルを指しています。添付ファイルの番号をバグ番号として使用すると、意味を成しません。) Firefox 2 では、em ベースのフォントサイズが最小フォントサイズに「跳ね返る」ため、2 つのボックスカスケードの動作が異なります)。
 
 ## セキュリティに関する変更
 
 ### クロームへのアクセス
 
-Firefox のこれまでのバージョンでは、ウェブページは `chrome://` プロトコルを使ってクロームからスクリプトや画像を読み込むことが可能でした。特に、このような仕様によって、アドオンがインストールされているかどうかをサイトが判別することが可能でした。これは、ブラウザにセキュリティ機能を追加するアドオンを回避して、ユーザのセキュリティを侵害するのに利用される恐れがありました。
+Firefox のこれまでのバージョンでは、ウェブページは `chrome://` プロトコルを使ってクロームからスクリプトや画像を読み込むことが可能でした。特に、このような仕様によって、アドオンがインストールされているかどうかをサイトが判別することが可能でした。これは、ブラウザーにセキュリティ機能を追加するアドオンを回避して、ユーザのセキュリティを侵害するのに利用される恐れがありました。
 
-Firefox 3 では、ウェブコンテンツは [`chrome://browser/`]() および [`chrome://toolkit/`]() 以下にあるコンテンツに限ってアクセスできます。これらのファイルはウェブコンテンツからアクセスされることを意図したものです。他のクロームコンテンツはすべて、ウェブからのアクセスが禁止されます。
+Firefox 3 では、ウェブコンテンツは `chrome://browser/` および `chrome://toolkit/` 以下にあるコンテンツに限ってアクセスできます。これらのファイルはウェブコンテンツからアクセスされることを意図したものです。他のクロームコンテンツはすべて、ウェブからのアクセスが禁止されます。
 
 ただし、拡張機能が、内部のコンテンツをウェブからアクセス可能にする方法があります。その方法とは、以下のように、`chrome.manifest` ファイルに特別なフラグを指定することです。
 
@@ -68,8 +69,6 @@ content mypackage location/ contentaccessible=yes
 > content mypackage location/ contentaccessible=yes
 >
 > ```
->
-> ```
 
 ### ファイルアップロードフィールド
 
@@ -77,11 +76,11 @@ Firefox のこれまでのバージョンでは、ユーザがファイルをア
 
 ### フレーム内でのリモート JAR の使用
 
-他のドメインから読み込んだ JAR ファイル内のコードの使用は、フレーム内では許可されなくなりました。これによって[潜在的な攻撃ベクトル](https://www.mozilla.org/security/announce/2008/mfsa2008-23.html)を軽減することができます。
+他のドメインから読み込んだ JAR ファイル内のコードの使用は、フレーム内では許可されなくなりました。これによって[潜在的な攻撃ベクトル](https://www.mozilla.org/en-US/security/advisories/mfsa2008-23/)を軽減することができます。
 
 ### file: URI の同一オリジンポリシーの変更
 
-file: URI の同一オリジンポリシーが Firefox 3 で変更されました。これはコンテンツに影響する可能性があります。詳しくは [file: URI の同一オリジンポリシー](/ja/docs/Same-origin_policy_for_file:_URIs)を参照してください。
+file: URI の同一オリジンポリシーが Firefox 3 で変更されました。これはコンテンツに影響する可能性があります。詳しくは [file: URI の同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy#file_origins)を参照してください。
 
 ## JavaScript の変更
 
@@ -91,4 +90,4 @@ Firefox 3 は [JavaScript 1.8](/ja/docs/New_in_JavaScript_1.8) をサポート�
 
 - [開発者向け Firefox 3](/ja/docs/Mozilla/Firefox/Releases/3)
 - [JavaScript 1.8 の新機能](/ja/docs/New_in_JavaScript_1.8)
-- [Updating extensions for Firefox 3 のための拡張機能の更新](/ja/docs/Mozilla/Firefox/Releases/3/Updating_extensions)
+- [Firefox 3 のための拡張機能の更新](/ja/docs/Mozilla/Firefox/Releases/3/Updating_extensions)

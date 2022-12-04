@@ -56,4 +56,4 @@ Finally, `srcObject` is set to `null` to sever the link to the {{domxref("MediaS
 
 - {{domxref("MediaStreamTrack")}}，它所属的接口。
 - {{domxref("MediaStreamTrack.readyState")}}
-- {{event("ended")}}
+- [`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event)

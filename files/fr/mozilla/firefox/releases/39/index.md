@@ -44,7 +44,7 @@ Points forts:
 ### JavaScript
 
 - Le [constructeur `RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) ne se lance plus lorsque le premier argument est un `RegExp` et que le second argument `flags` est présent ({{bug(1108949)}}).
-- La propriété {{jsxref("Object.noSuchMethod", "Object.prototype.__noSuchMethod__")}} est désormais obsolète et émet un avertissement de console (voir {{bug(1140428)}} et cette [annonce de plate-forme](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
+- La propriété `Object.prototype.__noSuchMethod__` est désormais obsolète et émet un avertissement de console (voir {{bug(1140428)}} et cette [annonce de plate-forme](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
 - L'implémentation de l'objet {{jsxref("Proxy")}} a été mise à jour pour se conformer davantage à la spécification ES6 :
 
   - Les gestionnaires {{jsxref("Global_Objects/Proxy/handler/defineProperty", "defineProperty")}} et {{jsxref("Global_Objects/Proxy/handler/set", "set")}} doivent maintenant renvoyer explicitement `true` pour réussir, sinon une exception {{jsxref("TypeError")}} sera lancée en mode strict ({{bug(1132522)}}).

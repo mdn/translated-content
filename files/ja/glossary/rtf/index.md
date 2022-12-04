@@ -11,7 +11,7 @@ RTF (リッチテキストフォーマット) は書式設定 (例：太字、�
 
 ### 基礎知識
 
-- Wikipedia の {{Interwiki("wikipedia", "Rich Text Format")}}
+- Wikipedia の [Rich Text Format](https://ja.wikipedia.org/wiki/Rich_Text_Format)
 
 ### 技術リファレンス
 

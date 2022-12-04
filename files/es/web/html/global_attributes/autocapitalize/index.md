@@ -1,18 +1,12 @@
 ---
 title: autocapitalización
 slug: Web/HTML/Global_attributes/autocapitalize
-tags:
-  - Atributos globales
-  - HTML
-  - Reference
-  - Referencia
-  - autocapitalización
-translation_of: Web/HTML/Global_attributes/autocapitalize
 original_slug: Web/HTML/Atributos_Globales/autocapitalize
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
-El {{web.link("/es/docs/Web/HTML/Global_attributes", "atributo global")}} {{HTMLAttrxRef("autocapitalize", "input")}} es un atributo enumerado que controla si la entrada de texto se escribe en mayúsculas automáticamente a medida que el usuario la introduce/edita. El atributo debe tomar uno de los siguientes valores:
+El [atributo global](/es/docs/Web/HTML/Global_attributes) {{HTMLAttrxRef("autocapitalize", "input")}} es un atributo enumerado que controla si la entrada de texto se escribe en mayúsculas automáticamente a medida que el usuario la introduce/edita. El atributo debe tomar uno de los siguientes valores:
 
 - `off` o `none`, no se aplica capitalización automática (todas las letras están predeterminadas en minúsculas)
 - `on` o `sentences`, la primera letra de cada oración de manera predeterminada tiene una letra mayúscula; todas las demás letras están predeterminadas en minúsculas
@@ -25,9 +19,7 @@ El atributo {{HTMLAttrDef("autocapitalize")}} nunca hace que se habilite la auto
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                               | Comentario |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', "interaction.html#autocapitalization", "autocapitalize")}} | {{ Spec2('HTML WHATWG') }} |            |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

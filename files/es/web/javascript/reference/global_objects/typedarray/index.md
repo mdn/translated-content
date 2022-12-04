@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray
 original_slug: Web/JavaScript/Referencia/Objetos_globales/TypedArray
 ---
+
 {{JSRef}}
 
 Un objeto **_TypedArray_** describe una vista similar a un arreglo de un [búfer de datos binarios subyacente](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). No existe una propiedad global denominada `TypedArray`, ni existe un constructor `TypedArray` directamente visible. En cambio, hay una serie de diferentes propiedades globales, cuyos valores son constructores de arreglos tipados para tipos de elementos específicos, que se enumeran a continuación. En las siguientes páginas, encontrarás propiedades y métodos comunes que se pueden utilizar con cualquier arreglo tipado que contenga elementos de cualquier tipo.
@@ -20,7 +21,7 @@ La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. S
 
 ## Descripción
 
-ECMAScript 2015 define un constructor `TypedArray` que sirve como `[[Prototype]]` de todos los constructores `TypedArray`. Este constructor no está expuesto directamente: no existe una propiedad global `%TypedArray%` o `TypedArray`. Solo es accesible directamente a través de `Object.getPrototypeOf(Int8Array)` y similares. Todos los constructores de `TypedArray` heredan propiedades comunes de la función constructora `%TypedArray%`. Además, todos los prototipos de arreglos con tipo (` TypedArray.``prototype `) tienen `%TypedArray%.prototype` como su `[[Prototype]]`.
+ECMAScript 2015 define un constructor `TypedArray` que sirve como `[[Prototype]]` de todos los constructores `TypedArray`. Este constructor no está expuesto directamente: no existe una propiedad global `%TypedArray%` o `TypedArray`. Solo es accesible directamente a través de `Object.getPrototypeOf(Int8Array)` y similares. Todos los constructores de `TypedArray` heredan propiedades comunes de la función constructora `%TypedArray%`. Además, todos los prototipos de arreglos con tipo (`TypedArray.prototype`) tienen `%TypedArray%.prototype` como su `[[Prototype]]`.
 
 El constructor `%TypedArray%` por sí solo no es particularmente útil. Llamarlo o usarlo en una expresión `new` arrojará un {{jsxref("TypeError")}}, excepto cuando se usa durante la creación de objetos en motores JS que admiten subclases. Actualmente no existen tales motores, por lo que `%TypedArray%` solo es útil para rellenar funciones o propiedades en todos los constructores `TypedArray`.
 
@@ -194,9 +195,7 @@ Int8Array.prototype.foo = 'bar';
 
 ## Especificaciones
 
-| Especificación                                                                                   |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -39,7 +39,7 @@ _继承自父类的属性，{{domxref("HTMLElement")}}._
 _这个元素继承了 {{domxref("HTMLElement")}} 的属性。_
 
 - {{domxref("HTMLFormElement.checkValidity()")}}
-  - : Returns a {{jsxref("Boolean")}} that is `true` if the element's child controls are subject to constraint validation and satify those contraints, or `false` if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
+  - : Returns a {{jsxref("Boolean")}} that is `true` if the element's child controls are subject to constraint validation and satify those contraints, or `false` if some controls do not satisfy their constraints. Fires an event named [`invalid`](/zh-CN/docs/Web/API/HTMLInputElement/invalid_event) at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to `false`.
 - {{domxref("HTMLFormElement.item()")}}
   - : Gets the item in the `elements` collection at the specified index, or null if there is no item at that index. You can also specify the index in array-style brackets or parentheses after the form object name, without calling this method explicitly.
 - {{domxref("HTMLFormElement.namedItem()")}}

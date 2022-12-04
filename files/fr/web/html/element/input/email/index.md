@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/input/email
 browser-compat: html.elements.input.input-email
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`email`** permettent à une utilisatrice ou un utilisateur de saisir et d'éditer une adresse mail ou, si l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) est indiqué, une liste d'adresses mail. La valeur saisie est automatiquement validée afin de vérifier que le champ est vide ou que l'adresse (ou la liste d'adresses) est correcte. Les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid) sont appliquées automatiquement selon le cas.
 
@@ -316,7 +316,7 @@ C'est pour cela qu'on indique la chaîne de caractères «&nbsp;Merci de fournir
 
 ## Exemples
 
-Dans l'exemple qui suit, on peut saisir une adresse électronique qui contient au plus 256 caractères. La boîte de saisie affichera au plus 64 caractères et contiendra le texte  `"user@example.gov"` comme indication lorsque le champ est vide. On trouve également l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) qui permet de saisir zéro ou plusieurs adresses séparées par des virgules (cf. ci-avant). Enfin, l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) utilisé indique un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) dont les éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) déterminent les valeurs suggérées qui peuvent être sélectionnées par l'utilisatrice ou l'utilisateur.
+Dans l'exemple qui suit, on peut saisir une adresse électronique qui contient au plus 256 caractères. La boîte de saisie affichera au plus 64 caractères et contiendra le texte `"user@example.gov"` comme indication lorsque le champ est vide. On trouve également l'attribut [`multiple`](/fr/docs/Web/HTML/Attributes/multiple) qui permet de saisir zéro ou plusieurs adresses séparées par des virgules (cf. ci-avant). Enfin, l'attribut [`list`](/fr/docs/Web/HTML/Element/Input#attr-list) utilisé indique un identifiant d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) dont les éléments [`<option>`](/fr/docs/Web/HTML/Element/Option) déterminent les valeurs suggérées qui peuvent être sélectionnées par l'utilisatrice ou l'utilisateur.
 
 L'élément [`<label>`](/fr/docs/Web/HTML/Element/Label) qui précède l'élément `<input>` permettra d'afficher un libellé avant la boîte de saisie. Le lien entre les deux est fait grâce à l'attribut `for` qui contient `"emailAddress"` qui est l'identifiant de l'élément [`<input>`](/fr/docs/Web/HTML/Element/Input). Grâce à cette association, cliquer sur l'étiquette permettra de placer le focus sur le champ de saisie.
 

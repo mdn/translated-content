@@ -10,6 +10,7 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript
 ---
+
 {{JsSidebar}}
 
 **JavaScript** (**JS**)는 가벼운, 인터프리터 혹은 [just-in-time](https://ko.wikipedia.org/wiki/JIT_%EC%BB%B4%ED%8C%8C%EC%9D%BC) 컴파일 프로그래밍 언어로, {{Glossary("First-class Function", "일급 함수")}}를 지원합니다. 웹 페이지를 위한 스크립트 언어로 잘 알려져 있지만, {{Glossary("Node.js")}}, [Apache CouchDB](https://couchdb.apache.org/), [Adobe Acrobat](https://www.adobe.com/devnet/acrobat/javascript.html)처럼 [많은 비 브라우저 환경](https://en.wikipedia.org/wiki/JavaScript#Other_usage)에서도 사용하고 있습니다. JavaScript는 {{Glossary("Prototype-based programming", "프로토타입 기반")}}, 다중 패러다임, 단일 스레드, 동적 언어로, 객체지향형, 명령형, 선언형(함수형 프로그래밍 등) 스타일을 지원합니다. 자세한 내용은 [JavaScript에 대하여](/ko/docs/Web/JavaScript/About_JavaScript)를 참고하세요.
@@ -40,10 +41,10 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
   - : 비동기 JavaScript가 중요한 이유와, 비동기적 코드를 사용해 서버에서 리소스 가져오기 등 블록킹 연산을 효율적으로 처리하는 방법에 대해 알아봅니다.
 - [클라이언트측 웹 API](/ko/docs/Learn/JavaScript/Client-side_web_APIs)
   - : API란 무엇인지 탐색해보고, 개발 작업에서 자주 접하게 될 가장 일반적인 API를 사용하는 방법을 알아봅니다.
-- ### JavaScript 안내서
 
-  [JavaScript 가이드](/ko/docs/Web/JavaScript/Guide)
+### JavaScript 안내서
 
+- [JavaScript 가이드](/ko/docs/Web/JavaScript/Guide)
   - : JavaScript 또는 다른 언어로 프로그래밍 경험이 있는 독자들을 대상으로한 JavaScript 언어에 대한 상세 가이드입니다.
 
 ### 중급
@@ -79,7 +80,7 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 - [표준 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects)
   - : {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}} 등 표준 내장 객체 알아가기.
 - [표현식 및 연산자](/ko/docs/Web/JavaScript/Reference/Operators)
-  - : JavaScript 연산자 {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}의 동작, [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence "operator precedence") 등에 대해 더 알아보기.
+  - : JavaScript 연산자 {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}의 동작, [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) 등에 대해 더 알아보기.
 - [명령문 및 선언문](/ko/docs/Web/JavaScript/Reference/Statements)
   - : {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} 등의 JavaScript의 구문 및 키워드 작동법 배우기.
 - [함수](/ko/docs/Web/JavaScript/Reference/Functions)

@@ -1,11 +1,15 @@
 ---
 title: WritableStream
 slug: Web/API/WritableStream
+l10n:
+  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
-[Streams API](/ja/docs/Web/API/Streams_API) の **`WritableStream`** インターフェイスは、ストリーミングデータをシンクと呼ばれる宛先に書き込むための標準的な抽象化を提供します。 このオブジェクトには、バックプレッシャーとキューイングが組み込まれています。
+**`WritableStream`** は[ストリーム API](/ja/docs/Web/API/Streams_API) のインターフェイスで、ストリーミングデータをシンクと呼ばれる宛先に書き込むための標準的な抽象化を提供します。 このオブジェクトには、背圧とキューイングが組み込まれています。
+
+`WritableStream` は{{glossary("Transferable objects","移譲可能オブジェクト")}}です。
 
 ## コンストラクター
 
@@ -14,8 +18,8 @@ slug: Web/API/WritableStream
 
 ## プロパティ
 
-- {{domxref("WritableStream.locked")}} {{readonlyinline}}
-  - : `WritableStream` がライターにロックされているかどうかを示すブール値。
+- {{domxref("WritableStream.locked")}} {{ReadOnlyInline}}
+  - : 論理値で、 `WritableStream` がライターにロックされているかどうかを示します。
 
 ## メソッド
 
@@ -28,7 +32,7 @@ slug: Web/API/WritableStream
 
 ## 例
 
-次の例は、このインターフェイスのいくつかの機能を示しています。 カスタムのシンクと API 提供のキューイング戦略を使用した `WritableStream` の作成を示しています。 次に、`sendMessage()` という関数を呼び出し、新しく作成したストリームと文字列を渡します。 この関数内で、{{domxref("WritableStreamDefaultWriter")}} のインスタンスを返すストリームの `getWriter()` メソッドを呼び出します。 `forEach()` 呼び出しを使用して、文字列の各チャンクをストリームに書き込みます。 最後に、`write()` および `close()` は、チャンクとストリームの成功または失敗に対処するための promise を返します。
+次の例は、このインターフェイスのいくつかの機能を示しています。 カスタムのシンクと API 提供のキューイング戦略を使用した `WritableStream` の作成を示しています。 次に、`sendMessage()` という関数を呼び出し、新しく作成したストリームと文字列を渡します。 この関数内で、{{domxref("WritableStreamDefaultWriter")}} のインスタンスを返すストリームの `getWriter()` メソッドを呼び出します。 `forEach()` 呼び出しを使用して、文字列の各チャンクをストリームに書き込みます。 最後に、`write()` および `close()` は、チャンクとストリームの成功または失敗に対処するためのプロミスを返します。
 
 ```js
 const list = document.querySelector('ul');
@@ -40,9 +44,7 @@ function sendMessage(message, writableStream) {
   const encoded = encoder.encode(message, { stream: true });
   encoded.forEach((chunk) => {
     defaultWriter.ready
-      .then(() => {
-        return defaultWriter.write(chunk);
-      })
+      .then(() => defaultWriter.write(chunk))
       .then(() => {
         console.log("Chunk written to sink.");
       })
@@ -71,20 +73,20 @@ const writableStream = new WritableStream({
   // シンクの実装
   write(chunk) {
     return new Promise((resolve, reject) => {
-      var buffer = new ArrayBuffer(2);
-      var view = new Uint16Array(buffer);
+      const buffer = new ArrayBuffer(1);
+      const view = new Uint8Array(buffer);
       view[0] = chunk;
-      var decoded = decoder.decode(view, { stream: true });
-      var listItem = document.createElement('li');
-      listItem.textContent = "Chunk decoded: " + decoded;
+      const decoded = decoder.decode(view, { stream: true });
+      const listItem = document.createElement('li');
+      listItem.textContent = `Chunk decoded: ${decoded}`;
       list.appendChild(listItem);
       result += decoded;
       resolve();
     });
   },
   close() {
-    var listItem = document.createElement('li');
-    listItem.textContent = "[MESSAGE RECEIVED] " + result;
+    const listItem = document.createElement('li');
+    listItem.textContent = `[MESSAGE RECEIVED] ${result}`;
     list.appendChild(listItem);
   },
   abort(err) {
@@ -97,23 +99,22 @@ sendMessage("Hello, world.", writableStream);
 
 完全なコードは、[単純なライターの例](https://mdn.github.io/dom-examples/streams/simple-writer/)にあります。
 
-### バックプレッシャー
+### 背圧
 
-API でのバックプレッシャーのサポート方法により、コードでの実装は明白ではありません。 バックプレッシャーがどのように実装されているかを確認するには、3 つのことを探します。
+[背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)が API でどのように対応しているかによるため、コードでの実装はあまり明白ではないかもしれません。
+背圧がどのように実装されているかを確認するためには、次の 3 つのことを確認してください。
 
-- カウント戦略の作成時に設定される `highWaterMark` プロパティ（行 35）は、`WritableStream` インスタンスが 1 回の `write()` 操作で処理するデータの最大量を設定します。 この例では、`defaultWriter.write()` に送信できるデータの最大量です（11 行目）。
-- `defaultWriter.ready` プロパティは、シンク（`WritableStream` コンストラクターの最初のプロパティ）がデータの書き込みを完了すると解決するプロミスを返します。 データソースは、さらにデータを書き込む（11 行目）か、`close()` （24 行目）を呼び出すことができます。 `close()` の呼び出しが早すぎると、データの書き込みが妨げられる可能性があります。 このため、この例では `defaultWriter.ready` を 2 回呼び出しています（9 行目と 22 行目）。
+- カウント戦略の作成時に設定される `highWaterMark` プロパティ（35 行目）は、`WritableStream` インスタンスが 1 回の `write()` 操作で処理するデータの最大量を設定します。 この例では、`defaultWriter.write()` に送信できるデータの最大量です（11 行目）。
+- `defaultWriter.ready` プロパティは、シンク（`WritableStream` コンストラクターの最初のプロパティ）がデータの書き込みを完了すると解決するプロミスを返します。 データソースは、さらにデータを書き込む（11 行目）か、 `close()` （24 行目）を呼び出すことができます。 `close()` の呼び出しが早すぎると、データの書き込みが妨げられる可能性があります。 このため、この例では `defaultWriter.ready` を 2 回呼び出しています（9 行目と 22 行目）。
 - シンクの `write()` メソッドによって返される {{jsxref("Promise")}}（40 行目）は、`WritableStream` とそのライターに、いつ `defaultWriter.ready` を解決するかを伝えます。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                 | 状態                         | コメント |
-| -------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams','#ws-class','WritableStream')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WritableStream")}}
+{{Compat}}
 
 ## 関連情報
 

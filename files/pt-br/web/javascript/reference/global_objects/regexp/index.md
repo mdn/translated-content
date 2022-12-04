@@ -1,14 +1,8 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Construtor
-  - Expressões Regulares
-  - JavaScript
-  - Referencia
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
+
 {{JSRef("Global_Objects", "RegExp")}}
 
 ## Sumário
@@ -680,23 +674,19 @@ var re = new RegExp('\\w+');
 - `RegExp.length`
   - : O valor of `RegExp.length` é 2.
 
-{{jsOverrides("Function", "Properties", "prototype")}}
-
 ## Métodos
 
 O objeto global `RegExp não possui métodos próprios, no entanto, herda alguns métodos através da cadeia de prototype.`
-
-{{jsOverrides("Function", "Methods", "prototype")}}
 
 ## Objetos e instancias
 
 ### Propriedades
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Properties')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Properties')}}
 
 ### Métodos
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype', 'Methods')}}
 
 ## Exemplos
 

@@ -10,7 +10,8 @@ tags:
   - 쓰기 방향
 translation_of: Web/HTML/Element/bdo
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<bdo>` 요소**는 현재 텍스트의 쓰기 방향을 덮어쓰고 다른 방향으로 렌더링 할 때 사용합니다.
 
@@ -75,7 +76,7 @@ translation_of: Web/HTML/Element/bdo
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("dir")}}
 

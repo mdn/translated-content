@@ -1,9 +1,9 @@
 ---
 title: Atribuição via desestruturação (destructuring assignment)
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 original_slug: Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao
 ---
+
 {{jsSidebar("Operators")}}
 
 A sintaxe de **atribuição via desestruturação (destructuring assignment)** é uma expressão JavaScript que possibilita extrair dados de arrays ou objetos em variáveis distintas.
@@ -149,13 +149,13 @@ console.log(b); // [2, 3]
 
 ### Extraindo valores do resultado de uma expressão regular
 
-Quando o método de expressão regular [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) encontra um resultado, ele retorna um array que contém primeiro toda a porção resultante da string e depois cada uma das porções da string resultante envolvidas por parênteses na expressão regular. A atribuição via desestruturação lhe permite extrair as partes desses array facilmente, ignorando a porção resultante completa se não precisar.
+Quando o método de expressão regular [`exec()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) encontra um resultado, ele retorna um array que contém primeiro toda a porção resultante da string e depois cada uma das porções da string resultante envolvidas por parênteses na expressão regular. A atribuição via desestruturação lhe permite extrair as partes desses array facilmente, ignorando a porção resultante completa se não precisar.
 
 ```js
-var url = "https://developer.mozilla.org/en-US/Web/JavaScript";
+var url = "https://developer.mozilla.org/pt-BR/Web/JavaScript";
 
 var parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
-console.log(parsedURL); // ["https://developer.mozilla.org/en-US/Web/JavaScript", "https", "developer.mozilla.org", "en-US/Web/JavaScript"]
+console.log(parsedURL); // ["https://developer.mozilla.org/pt-BR/Web/JavaScript", "https", "developer.mozilla.org", "en-US/Web/JavaScript"]
 
 var [, protocol, fullhost, fullpath] = parsedURL;
 
@@ -261,7 +261,7 @@ var metadata = {
         title: "JavaScript-Umgebung"
        }
     ],
-    url: "/en-US/docs/Tools/Scratchpad"
+    url: "/pt-BR/docs/Tools/Scratchpad"
 };
 
 var { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;

@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 translation_of: Web/CSS/border-spacing
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border-spacing`** 속성은 인접한 표 칸의 테두리 간격을 지정합니다. {{cssxref("border-collapse")}}가 `separate`여야 적용됩니다.

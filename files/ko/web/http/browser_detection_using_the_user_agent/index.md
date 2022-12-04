@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 original_slug: Web/HTTP/User_agent를_이용한_브라우저_감지
 ---
+
 {{HTTPSidebar}}
 
 보통 브라우저마다 다른 웹 페이지 또는 서비스를 제공하는 것은 나쁜 생각입니다. 웹은 사용자가 어떤 브라우저나 디바이스를 사용하고 있는지 개의치 않고 모두에게 접근성이 용이해야 하기 때문입니다. 따라서 특정 브라우저를 타겟으로 개발하는 것보다 가용적인 기능들 (예를 들어 Web API 등)을 이용하여 당신의 웹 사이트를 개선하는 것을 추천합니다.
@@ -31,7 +32,7 @@ original_slug: Web/HTTP/User_agent를_이용한_브라우저_감지
 
 user agent 감지를 피하는 몇 가지 방법이 있습니다!
 
- - `기능 탐지` 기능 탐지는 어떤 브라우저가 당신의 페이지를 렌더링하는지를 알아내려고 할 때가 아니라, 어떤 특정한 기능을 당신이 사용가능한지를 확인할 때 사용합니다. 그렇지 않다면, 대비책을 사용하세요. 브라우저 간의 차이점을 찾는 몇 안되는 경우에서는 user agent 문자열을 사용하는 대신, 브라우저가 API를 구현하는 방법을 탐지하고 API를 사용하는 방법을 결정하는 테스트를 구현하는 것이 좋습니다. 아래는 기능탐지의 좋은 최신 예시 입니다. 최근 크롬은[experimental lookbehind support to regular expressions](https://www.chromestatus.com/feature/5668726032564224)을 추가했지만, 다른 브라우저들은 이를 지원하지 않습니다. 그러므로 당신은 이와 같이 해야 한다고 잘못 생각하고 있을 것입니다.
+- `기능 탐지` 기능 탐지는 어떤 브라우저가 당신의 페이지를 렌더링하는지를 알아내려고 할 때가 아니라, 어떤 특정한 기능을 당신이 사용가능한지를 확인할 때 사용합니다. 그렇지 않다면, 대비책을 사용하세요. 브라우저 간의 차이점을 찾는 몇 안되는 경우에서는 user agent 문자열을 사용하는 대신, 브라우저가 API를 구현하는 방법을 탐지하고 API를 사용하는 방법을 결정하는 테스트를 구현하는 것이 좋습니다. 아래는 기능탐지의 좋은 최신 예시 입니다. 최근 크롬은[experimental lookbehind support to regular expressions](https://www.chromestatus.com/feature/5668726032564224)을 추가했지만, 다른 브라우저들은 이를 지원하지 않습니다. 그러므로 당신은 이와 같이 해야 한다고 잘못 생각하고 있을 것입니다.
 
  ```js
  // 아래 코드 조각은 한 문자열을 특별한 표기법으로 쪼갭니다.
@@ -64,6 +65,7 @@ console.log(splitUpString("jQWhy")); // ["jQ", "W", "hy"]
 - 가장 중요한 점은, 다른 모든 브라우저들이 look-behind를 지원할 것이라고 가정했습니다. 다른 브라우저들도 look-behind 기능을 지원하는 버전이 모두 다를텐데, 이 코드는 이를 무시하고 코드를 진행합니다.
 
 look-behind 지원여부 자체를 테스트함으로써 이 문제들을 회피할 수 있습니다.
+
 ```js
 var isLookBehindSupported = false;
 
@@ -96,6 +98,7 @@ return str.replace(/[A-Z]/g,"z$1").split(/z(?=[A-Z])/g);
 - Mobile device detection
 
   - : Arguably the most common use and misuse of user agent sniffing is to detect if the device is a mobile device. However, people too often overlook what they are really after. People use user agent sniffing to detect if the users' device is touch-friendly and has a small screen so they can optimize their website accordingly. While user agent sniffing can sometimes detect these, not all devices are the same: some mobile devices have big screen sizes, some desktops have a small touchscreen, some people use smart TV's which are an entirely different ballgame altogether, and some people can dynamically change the width and height of their screen by flipping their tablet on its side! So, user agent sniffing is definitely not the way to go. Thankfully, there are much better alternatives. Use [Navigator.maxTouchPoints](/en-US/docs/Web/API/Navigator/maxTouchPoints) to detect if the user's device has a touchscreen. Then, default back to checking the user agent screen only _if (!("maxTouchPoints" in navigator)) { /\*Code here\*/}_. Using this information of whether the device has a touchscreen, do not change the entire layout of the website just for touch devices: you will only create more work and maintenance for yourself. Rather, add in touch conveniences such as bigger, more easily clickable buttons (you can do this using CSS by increasing the font size). Here is an example of code that increases the padding of #exampleButton to 1em on mobile devices.
+
 ```js
 let hasTouchScreen = false;
 if ("maxTouchPoints" in navigator) {

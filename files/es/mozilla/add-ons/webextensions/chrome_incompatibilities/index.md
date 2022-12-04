@@ -1,10 +1,8 @@
 ---
 title: Incompatibilidades con Chrome
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
-tags:
-  - WebExtensions
-translation_of: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 ---
+
 WebExtensions está diseñado para ser compatible con las extensiones de Chrome y Opera: en la medida de lo posible, las extensiones escritas para esos navegadores deberían ejecutarse en Firefox con cambios mínimos.
 
 Sin embargo, Firefox cuenta actualmente con soporte para sólo un conjunto limitado de funciones y API compatibles con Chrome y Opera. Estamos trabajando en agregar más soporte, pero muchas características aún no son compatibles, y es posible que nunca admitamos algunas.
@@ -17,15 +15,15 @@ Es seguro asumir que las funciones y las API que no se enumeran aquí en absolut
 
 ### Claves completamente compatibles
 
-- [`applications`](/en-US/Add-ons/WebExtensions/manifest.json/applications)
-- [`browser_action`](/en-US/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`page_action`](/en-US/Add-ons/WebExtensions/manifest.json/page_action)
-- [`default_locale`](/en-US/Add-ons/WebExtensions/manifest.json/default_locale)
-- [`description`](/en-US/Add-ons/WebExtensions/manifest.json/description)
-- [`manifest_version`](/en-US/Add-ons/WebExtensions/manifest.json/manifest_version)
-- [`name`](/en-US/Add-ons/WebExtensions/manifest.json/name)
-- [`version`](/en-US/Add-ons/WebExtensions/manifest.json/version)
-- [`web_accessible_resources`](/en-US/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
+- [`applications`](/es/Add-ons/WebExtensions/manifest.json/applications)
+- [`browser_action`](/es/Add-ons/WebExtensions/manifest.json/browser_action)
+- [`page_action`](/es/Add-ons/WebExtensions/manifest.json/page_action)
+- [`default_locale`](/es/Add-ons/WebExtensions/manifest.json/default_locale)
+- [`description`](/es/Add-ons/WebExtensions/manifest.json/description)
+- [`manifest_version`](/es/Add-ons/WebExtensions/manifest.json/manifest_version)
+- [`name`](/es/Add-ons/WebExtensions/manifest.json/name)
+- [`version`](/es/Add-ons/WebExtensions/manifest.json/version)
+- [`web_accessible_resources`](/es/Add-ons/WebExtensions/manifest.json/web_accessible_resources)
 
 ### Claves parcialmente admitidas
 
@@ -53,7 +51,7 @@ Firefox aún no admite los siguientes permisos:
 - `nativeMessaging`
 - `unlimitedStorage`
 
-Obviamente, también no admite permisos para las [APIs que no son compatibles](/en-US/Add-ons/WebExtensions/API#Chrome_incompatibilities).
+Obviamente, también no admite permisos para las [APIs que no son compatibles](/es/Add-ons/WebExtensions/API#Chrome_incompatibilities).
 
 ## APIs JavaScript
 
@@ -96,7 +94,7 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### cookies
 
 - eventos onChanged pueden ser subtely diferentes
-- Creación de cookies de sesión `set`podría fallar
+- Creación de cookies de sesión `set` podría fallar
 - `getAllCookieStores` siempre devuelve un almacén predeterminado y sin pestañas
 - el acceso a las cookies desde pestañas privadas es imposible
 
@@ -130,7 +128,7 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
   - `getAll()`.
 
 - El único evento soportado es `onClosed`.
-- Firefox no proporciona `byUser`datos.
+- Firefox no proporciona `byUser` datos.
 
 #### Tiempo de ejecución
 
@@ -147,7 +145,7 @@ Obviamente, también no admite permisos para las [APIs que no son compatibles](/
 #### Almacenamiento
 
 - El único área de almacenamiento que soporta Firefox es `local`.
-- Firefox no soporta `getBytesInUse()`o `clear))`.
+- Firefox no soporta `getBytesInUse()` o `clear))`.
 
 #### tabs
 
@@ -235,4 +233,4 @@ We resolve URLs in injected CSS files relative to the CSS file itself, rather th
 ### Miscellaneous incompatibilities
 
 - Chrome allows any optional arguments to be omitted, even if followed by other arguments. Firefox currently supports this only under specific circumetances. We recommend only omitting optional arguments at the end of the arguments list, and using `null` for all other cases.
-- Firefox currently [does not allow](https://bugzil.la/932513) the `{{jsxref("Statements/let", "let")}}` or `{{jsxref("Statements/const", "const")}}` statement in ordinary web pages or Web Extensions. While it is possible to enable support for Firefox's variant of the statement using a special `<script>` tag, this is not recommended. Instead, if your extension code uses `let` or `const` statements, we recommend that you [transpile them using Babel](/en-US/Add-ons/WebExtensions/Tips#Using_advanced_JavaScript_features_from_ECMAScript_6_and_7) until support is turned on globally.
+- Firefox currently [does not allow](https://bugzil.la/932513) the `{{jsxref("Statements/let", "let")}}` or `{{jsxref("Statements/const", "const")}}` statement in ordinary web pages or Web Extensions. While it is possible to enable support for Firefox's variant of the statement using a special `<script>` tag, this is not recommended. Instead, if your extension code uses `let` or `const` statements, we recommend that you [transpile them using Babel](/es/Add-ons/WebExtensions/Tips#Using_advanced_JavaScript_features_from_ECMAScript_6_and_7) until support is turned on globally.

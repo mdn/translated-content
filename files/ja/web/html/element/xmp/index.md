@@ -36,4 +36,4 @@ slug: Web/HTML/Element/xmp
 - 代替となり得る要素: {{ HTMLElement("pre") }} 要素、 {{ HTMLElement("code") }} 要素
 - {{HTMLElement("plaintext")}} 要素と {{ HTMLElement("listing") }} 要素も廃止となっています。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

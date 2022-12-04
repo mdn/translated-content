@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/colgroup
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<colgroup>` 요소**는 표의 열을 묶는 그룹을 정의합니다.
 
@@ -66,7 +67,7 @@ translation_of: Web/HTML/Element/colgroup
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
 

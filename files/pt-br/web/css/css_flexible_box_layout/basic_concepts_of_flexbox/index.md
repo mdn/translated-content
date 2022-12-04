@@ -1,17 +1,9 @@
 ---
 title: Conceitos básicos de flexbox
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-tags:
-  - CSS
-  - Flex
-  - Tutorial
-  - conceitos
-  - conteiner
-  - eixos
-  - flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Conceitos_Basicos_do_Flexbox
 ---
+
 {{CSSRef}}
 
 O _Flexible Box Module_, geralmente chamado de _flexbox_, foi projetado tanto como um modelo de _layout_ unidimensional quanto como um método capaz de organizar espacialmente os elementos em uma interface, além de possuir capacidades avançadas de alinhamento. Este artigo fornece um resumo das principais funcionalidades do _flexbox_, as quais exploraremos com mais detalhes no restante deste guia.

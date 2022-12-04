@@ -1,11 +1,9 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-tags:
-  - Arreglo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/slice
 ---
+
 {{JSRef}}
 
 `El método slice()` devuelve una copia de una parte del array dentro de un nuevo array empezando por _inicio_ hasta _fin_ (_fin_ no incluido). El array original no se modificará.
@@ -23,7 +21,7 @@ arr.slice([inicio [, fin]])
 - `inicio`
   - : Índice donde empieza la extracción. El primer elemento corresponde con el índice 0.
 
-    Si el índice especificado es negativo, indica un desplazamiento desde el final del array.`slice(-2)`extrae los dos últimos elementos del array
+    Si el índice especificado es negativo, indica un desplazamiento desde el final del array.`slice(-2)` extrae los dos últimos elementos del array
 
     Si `inicio` es omitido el valor por defecto es `0`.
 
@@ -37,7 +35,7 @@ arr.slice([inicio [, fin]])
     Con un índice negativo, `fin` indica un desplazamiento desde el final de la secuencia. `slice(2,-1)` extrae desde el tercer hasta el penúltimo elemento en la secuencia.
 
     Si `fin` es omitido, slice extrae hasta el final de la secuencia (`arr.length`)`.`
-    
+
     Si `fin` es mayor a la longitud del array, `slice` extrae hasta el final de la secuencia (`arr.length`)`.`
 
 ### `Valor de retorno`
@@ -209,11 +207,7 @@ El _shim_ también soluciona que IE pueda tratar con el caso de que el segundo a
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                   | Observaciones                                      |
-| -------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 3ª edición                                                                                    | Estandar                 | Definición inicial Implementado en JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}                     | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES2015', '#sec-array.prototype.slice', 'Array.prototype.slice')}} | {{Spec2('ES2015')}} |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

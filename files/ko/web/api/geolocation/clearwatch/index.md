@@ -11,6 +11,7 @@ tags:
   - 위치정보
 translation_of: Web/API/Geolocation/clearWatch
 ---
+
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 
 **`Geolocation.clearWatch()`** 메서드는 {{domxref("Geolocation.watchPosition()")}}로 등록한 위치 변화 감지 콜백을 해제합니다.

@@ -1,14 +1,8 @@
 ---
 title: rect
 slug: Web/SVG/Element/rect
-tags:
-  - Elemento
-  - Gráficos SVG
-  - Referencia
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/rect
 ---
+
 {{SVGRef}}
 
 O elemento **`<rect>`** é uma [forma SVG básica](/pt-BR/docs/Web/SVG/Tutorial/Basic_Shapes) que desenha retângulos, definidos por sua posição, largura e altura. Os retângulos podem ter seus cantos arredondados.
@@ -18,7 +12,7 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 220 100" xmlns="https://www.w3.org/2000/svg">
   <!-- Simple rectangle -->
   <rect width="100" height="100" />
 

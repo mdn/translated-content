@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/Heading_Elements
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<h1>`–`<h6>` 요소**는 6단계의 구획 제목을 나타냅니다. 구획 단계는 `<h1>`이 가장 높고 `<h6>`은 가장 낮습니다.
 
@@ -72,7 +72,7 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 - 사용자 에이전트가 제목의 정보를 사용해 자동으로 문서 콘텐츠의 표를 만드는 등의 작업을 수행할 수 있습니다.
 - 글씨 크기를 위해 제목 태그를 사용하지 마세요. 대신 {{glossary("CSS")}}의 {{cssxref("font-size")}} 속성을 사용하세요.
-- 제목 단계를 건너뛰는 것을 피하세요. 언제나 `<h1>`로 시작해서, ` <h2>``, ` 순차적으로 기입하세요.
+- 제목 단계를 건너뛰는 것을 피하세요. 언제나 `<h1>`로 시작해서, `<h2>`, 순차적으로 기입하세요.
 - 페이지 당 하나의 `<h1>`만 사용하세요. 여러 개를 써도 오류는 나지 않겠지만, 단일 `<h1>`이 모범 사례로 꼽힙니다. 논리적으로 생각했을 때도, `<h1>`은 가장 중요한 제목이므로 전체 페이지의 목적을 설명해야 할 것입니다. 두 개의 제목을 가진 책이나, 여러 개의 이름을 가진 영화는 볼 수 없죠! 또한 스크린 리더 사용자와 {{glossary("SEO")}}에도 더 적합합니다.
 
 ## 예제
@@ -140,31 +140,31 @@ translation_of: Web/HTML/Element/Heading_Elements
 
 하위 구획으로 제목을 중첩해 콘텐츠의 구조를 나타낼 수 있습니다. 대부분의 스크린 리더는 페이지의 제목을 정렬한 목록도 생성해 제공하므로, 사용자가 빠르게 콘텐츠 구조를 파악할 수 있도록 도와줍니다.
 
-1.  `h1` Beetles
+1. `h1` Beetles
 
-    1.  `h2` Etymology
-    2.  `h2` Distribution and Diversity
-    3.  `h2` Evolution
+    1. `h2` Etymology
+    2. `h2` Distribution and Diversity
+    3. `h2` Evolution
 
-        1.  `h3` Late Paleozoic
-        2.  `h3` Jurassic
-        3.  `h3` Cretaceous
-        4.  `h3` Cenozoic
+        1. `h3` Late Paleozoic
+        2. `h3` Jurassic
+        3. `h3` Cretaceous
+        4. `h3` Cenozoic
 
-    4.  `h2` External Morphology
+    4. `h2` External Morphology
 
-        1.  `h3` Head
+        1. `h3` Head
 
-            1.  `h4` Mouthparts
+            1. `h4` Mouthparts
 
-        2.  `h3` Thorax
+        2. `h3` Thorax
 
-            1.  `h4` Prothorax
-            2.  `h4` Pterothorax
+            1. `h4` Prothorax
+            2. `h4` Pterothorax
 
-        3.  `h3` Legs
-        4.  `h3` Wings
-        5.  `h3` Abdomen
+        3. `h3` Legs
+        4. `h3` Wings
+        5. `h3` Abdomen
 
 중첩 제목에서, 하위 구획을 닫을 땐 제목 단계를 위로 "건너뛸" 수 있습니다.
 

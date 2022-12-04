@@ -1,13 +1,8 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
-tags:
-  - CSS
-  - Layout
-  - Propriedade CSS
-  - Referencia
-translation_of: Web/CSS/writing-mode
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`writing-mode`** define se as linhas do texto são dispostas horizontalmente ou verticalmente e a direção que os blocos seguem
@@ -179,7 +174,7 @@ Essa é uma imagem mostrando o que o resultado deve parecer, no caso do suporte 
 
 ## See also
 
-- SVG [`writing-mode`](/en-US/docs/Web/SVG/Attribute/writing-mode) attribute
+- SVG [`writing-mode`](/pt-BR/docs/Web/SVG/Attribute/writing-mode) attribute
 - {{Cssxref("direction")}}
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}

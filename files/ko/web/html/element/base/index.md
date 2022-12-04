@@ -9,7 +9,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/base
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<base>` 요소**는 문서 안의 모든 상대 {{glossary("URL")}}이 사용할 기준 URL을 지정합니다. 문서에는 하나의 `<base>` 요소만 존재할 수 있습니다.
 
@@ -61,10 +61,9 @@ translation_of: Web/HTML/Element/base
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 > **경고:** 다음 특성 중 하나라도 지정한 경우, 상대 URL을 특성에 사용한 모든 요소보다 `<base>`가 앞에 위치해야 합니다.
-
 
 - {{htmlattrdef("href")}}
   - : 문서 내 상대 URL이 사용할 기준 URL. 절대 및 상대 URL을 사용할 수 있습니다.
@@ -88,9 +87,9 @@ translation_of: Web/HTML/Element/base
 
 `<a href="#some-id">`처럼, 문서 프래그먼트를 가리키는 링크 주소도 `<base>`를 사용해 처리하므로, 기준 URL 뒤에 프래그먼트를 붙인 주소로 HTTP 요청을 유발합니다. 예를 들어,
 
-1.  `<base href="https://example.com">`을 가정
-2.  `<a href="#anchor">Anker</a>`를 가정
-3.  2번의 링크는 `https://example.com/#anchor`를 가리킵니다.
+1. `<base href="https://example.com">`을 가정
+2. `<a href="#anchor">Anker</a>`를 가정
+3. 2번의 링크는 `https://example.com/#anchor`를 가리킵니다.
 
 ### Open Graph
 

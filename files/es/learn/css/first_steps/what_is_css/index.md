@@ -1,17 +1,9 @@
 ---
 title: ¿Qué es el CSS?
 slug: Learn/CSS/First_steps/What_is_CSS
-tags:
-  - Beginner
-  - CSS
-  - Introduction to CSS
-  - Learn
-  - Modules
-  - Specifications
-  - Syntax
-translation_of: Learn/CSS/First_steps/What_is_CSS
 original_slug: Learn/CSS/First_steps/Qué_es_CSS
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 Las hojas de estilo en cascada (**{{Glossary("CSS")}}**, cascading style sheets) permiten crear páginas web atractivas. Pero ¿cómo funcionan realmente? En este artículo explicaremos qué es el CSS con un ejemplo de sintaxis sencillo y describiremos algunos términos clave sobre este lenguaje.

@@ -1,15 +1,9 @@
 ---
 title: Connection
 slug: Web/HTTP/Headers/Connection
-tags:
-  - Cabeçalhos
-  - HTTP
-  - Reference
-  - Referencia
-  - Web
-translation_of: Web/HTTP/Headers/Connection
 original_slug: Web/HTTP/Headers/Conexão
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho **`Connection`** controla se a conexão se mantém aberta ou não após o término da transação atual. Se o valor for `keep-alive`, a conexão é persistente e não fecha, permitindo que requisições futuras ao mesmo servidor sejam feitas.

@@ -1,14 +1,8 @@
 ---
 title: Expires
 slug: Web/HTTP/Headers/Expires
-tags:
-  - Cache
-  - Expires
-  - HTTP
-  - Respuesta
-  - encabezado
-translation_of: Web/HTTP/Headers/Expires
 ---
+
 {{HTTPSidebar}}
 
 El encabezado **`Expires`** contiene la fecha y hora en la que se considerará la respuesta caducada.

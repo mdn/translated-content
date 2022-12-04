@@ -1,9 +1,9 @@
 ---
 title: Guia de estilo de escrita
 slug: MDN/Writing_guidelines/Writing_style_guide
-translation_of: MDN/Guidelines/Writing_style_guide
 original_slug: MDN/Guidelines/Writing_style_guide
 ---
+
 {{MDNSidebar}}
 
 Em um esforço para apresentar a documentação de maneira organizada, padronizada e fácil de ler a guia de estilo MDN Web Docs descreve como o texto deve ser organizado, escrito, formatado, e assim por diante. Estas sao orientações mais do que regras estritas. Nos estamos mais interessados em conteúdo do que em formatação, então não se sinta obrigado a aprender a guia de estilo antes de contribuir. Não fique chateado/a ou surpreso/a caso algum/a voluntário/a trabalhador/a edite o seu trabalho de acordo com esta guia.
@@ -12,7 +12,7 @@ Se você esta procurando por coisas específicas sobre como determinado tipo de 
 
 Os aspetos relacionado a linguagem desta guia aplicam-se principalmente a documentação em Inglês. Outras idiomas devem ter (e são bem-vindos a criar) seu próprio guia de estilo. Estes devem ser publicados como sub-páginas da página do time de localização.
 
-Para os estilos padrão que se aplicam ao conteúdo escrito por outros sites que não sejam a MDN, referir-se a [guia de estilo Única Mozilla](http://www.mozilla.org/en-US/styleguide/).
+Para os estilos padrão que se aplicam ao conteúdo escrito por outros sites que não sejam a MDN, referir-se a [guia de estilo Única Mozilla](http://www.mozilla.org/pt-BR/styleguide/).
 
 ## Básico
 
@@ -56,7 +56,7 @@ Quando estiver escrevendo qualquer documento é importante conhecer o quanto fal
 
 ### Seções, parágrafos e novas linhas
 
-Use os níveis de cabeçalho em ordem decrescente na hierarquia: {{HTMLElement("h2")}} depois {{HTMLElement("h3")}} depois {{HTMLElement("h4")}}, sem pular níveis. {{HTMLElement("h2")}} é o maior nível permitido, pois {{HTMLElement("h1")}} está reservado para o título da página. Se perceber que precisará de mais de 3 ou 4 níveis de cabeçalho, considere fragmentar seu artigo em artigos menores, ou colocando uma landing page, linkando estes com o {{TemplateLink("Next")}}, {{TemplateLink("Previous")}}, e {{TemplateLink("PreviousNext")}} macros.
+Use os níveis de cabeçalho em ordem decrescente na hierarquia: {{HTMLElement("h2")}} depois {{HTMLElement("h3")}} depois {{HTMLElement("h4")}}, sem pular níveis. {{HTMLElement("h2")}} é o maior nível permitido, pois {{HTMLElement("h1")}} está reservado para o título da página. Se perceber que precisará de mais de 3 ou 4 níveis de cabeçalho, considere fragmentar seu artigo em artigos menores, ou colocando uma landing page, linkando estes com o [Next](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs), [Previous](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs), e [PreviousNext](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) macros.
 
 O Enter (ou Return) do seu teclado inicia um novo parágrafo. Para inserir uma nova linha sem espaço, faça Shift + Enter.
 
@@ -296,7 +296,7 @@ In running text, use commas only in five-digit and larger numbers.
 - **Correct**: I will travel on trains, planes, and automobiles.
 - **Incorrect**: I will travel on trains, planes and automobiles.
 
-> **Nota:** This is in contrast to the [One Mozilla style guide](http://www.mozilla.org/en-US/styleguide/), which specifies that the serial comma is not to be used. MDN is an exception to this rule.
+> **Nota:** This is in contrast to the [One Mozilla style guide](http://www.mozilla.org/pt-BR/styleguide/), which specifies that the serial comma is not to be used. MDN is an exception to this rule.
 
 ### Spelling
 

@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/q
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<q>`요소**는 둘러싼 텍스트가 짧은 인라인 인용문이라는것을 나타냅니다. 대부분의 브라우저에서는 앞과 뒤에 따옴표를 붙여 표현합니다. `<q>`는 줄 바꿈이 없는 짧은 경우에 적합합니다. 긴 인용문은 {{htmlelement("blockquote")}} 요소를 사용하세요.
 
@@ -65,7 +65,7 @@ translation_of: Web/HTML/Element/q
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("cite")}}
   - : 인용문의 출처 문서나 메시지를 가리키는 URL. 인용문의 맥락 혹은 출처 정보를 가리킬 용도입니다.

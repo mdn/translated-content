@@ -3,7 +3,8 @@ title: Using Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
-{{ServiceWorkerSidebar}}
+
+{{DefaultAPISidebar("Service Workers API")}}
 
 {{ SeeCompatTable() }}
 
@@ -11,7 +12,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 ## 서비스 워커에 앞서서...
 
-웹 사용자들이 몇 년 동안 겪었던 가장 중요한 문제 중 하나는 인터넷 연결이 끊어지면 작동하지 않는겁니다. 세계 최고의 웹 앱조차 연결이 없을 때는 끔찍한 사용자 경험을 제공합니다. 우리의 [오프라인](https://developer.mozilla.org/en-US/Apps/Build/Offline) 페이지가 보여주듯이, 이 문제를 해결하기 위한 기술을 개발하기 위한 여러가지 시도가 있었고, 일부 문제는 해결되었습니다. 그러나 가장 중요한 문제는 리소스 캐싱과 커스텀 네트워크(예를 들어 WebSocket등을 이용한 리소스 로드) 통신 제어 메커니즘이 여전히 좋지 않다는 점입니다.
+웹 사용자들이 몇 년 동안 겪었던 가장 중요한 문제 중 하나는 인터넷 연결이 끊어지면 작동하지 않는겁니다. 세계 최고의 웹 앱조차 연결이 없을 때는 끔찍한 사용자 경험을 제공합니다. 우리의 [오프라인](/en-US/Apps/Build/Offline) 페이지가 보여주듯이, 이 문제를 해결하기 위한 기술을 개발하기 위한 여러가지 시도가 있었고, 일부 문제는 해결되었습니다. 그러나 가장 중요한 문제는 리소스 캐싱과 커스텀 네트워크(예를 들어 WebSocket등을 이용한 리소스 로드) 통신 제어 메커니즘이 여전히 좋지 않다는 점입니다.
 
 직전의 시도였던 [AppCache](/ko/docs/Web/HTML/Using_the_application_cache) 는 캐싱할 리소스를 쉽게 지정할 수 있었기 때문에 좋은 생각이였던것 처럼 보였지만, 당신이 지정한 동작에 대한 가정을 앱이 정확하게 따르지 않을 경우 앱이 끔찍하게 망가집니다. 자세히 알고 싶으면 Jake Archibald의 [Application Cache is a Douchebag](http://alistapart.com/article/application-cache-is-a-douchebag) 을 참고하세요.
 
@@ -41,11 +42,11 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 6. 다음은 활성(activation) 이벤트입니다. 서비스 워커가 설치되면, 활성 이벤트를 받게 됩니다. `onactivate` 는 이전 버전의 서비스 워커 스크립트에서 사용된 리소스들을 삭제하는 용도로서 주로 사용됩니다.
 7. 이제 서비스 워커가 페이지들을 제어하게 될 것이지만, 오직 `register()` 가 성공적으로 수행된 후에 페이지들이 열리게 될 것입니다. 즉, 문서는 서비스 워커와 함께, 또는 없이도 라이프를 시작하고 유지합니다. 따라서 문서는 실제로 서비스 워커에 제어되기 위해서 재시작 되어야 할 것입니다.
 
-![](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers/sw-lifecycle.png)
+![](sw-lifecycle.png)
 
 The below graphic shows a summary of the available service worker events:
 
-![install, activate, message, fetch, sync, push](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers/sw-events.png)
+![install, activate, message, fetch, sync, push](sw-events.png)
 
 ### Promises
 
@@ -82,7 +83,7 @@ Now for a real example — what if we wanted to load images dynamically, but we 
 
 Instead, we could build our own promise to handle this kind of case. (See our [Promises test](https://github.com/mdn/promises-test) example for the source code, or [look at it running live](https://mdn.github.io/promises-test/).)
 
-<div class="notecard note">A real service worker implementation would use caching and onfetch rather than the deprecated XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.<p></p></div>
+> **Note:** A real service worker implementation would use caching and onfetch rather than the deprecated XMLHttpRequest API. Those features are not used here so that you can focus on understanding Promises.
 
 ```js
 function imgLoad(url) {
@@ -434,7 +435,7 @@ Firefox has also started to implement some useful tools related to service worke
 
 ## See also
 
-- [The Service Worker Cookbook](https://serviceworke.rs/)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Download the [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
 - [Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)

@@ -1,8 +1,8 @@
 ---
 title: 'Tutorial de Django Parte 10: Probando una aplicación web Django'
 slug: Learn/Server-side/Django/Testing
-translation_of: Learn/Server-side/Django/Testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Forms", "Learn/Server-side/Django/Deployment", "Learn/Server-side/Django")}}
 
 A medida que crecen los sitios web se vuelven más difíciles de probar a mano — no sólo hay más para probar, sino que además, a medida que las interacciones entre los componentes se vuelven más complejas, un pequeño cambio en un área puede suponer muchas pruebas adicionales para verificar su impacto en otras áreas. Una forma de mitigar estos problemas es escribir tests automatizados, que pueden ser ejecutados de manera fácil y fiable cada vez que hagas un cambio. Este tutorial muestra cómo automatizar la unidad de pruebas de tu sitio web usando el framework de pruebas de Django.
@@ -56,7 +56,7 @@ Hay numeroso tipos, niveles y clasificaciones de pruebas y enfoques de pruebas. 
 
 Probar un sitio web es una tarea compleja, porque está compuesto por varias capas de lógica, desde el manejo de solicitudes a nivel HTTP, modelos de consultas, hasta la validación y procesamiento de formularios y la representación de plantillas.
 
-Django proporciona un marco de prueba con una pequeña jerarquía de clases que se basan en la libreria [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest "(in Python v3.5)") estándar Python. A pesar del nombre, este marco de prueba es adecuado tanto para pruebas unitarias como de integración. El marco de Django agrega métodos y herramientas API para ayudar a probar el comportamiento web y específico de Django. Estos le permiten simular solicitudes, insertar datos de prueba e inspeccionar la salida de su aplicación. Django también proporciona una API([LiveServerTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#liveservertestcase)) y herramientas para [usar diferentes frameworks de pruebas](https://docs.djangoproject.com/en/1.10/topics/testing/advanced/#other-testing-frameworks) , por ejemplo, puede integrarse con el popular framework [Selenium](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) para simular la interacción de un usuario con un navegador en vivo.
+Django proporciona un marco de prueba con una pequeña jerarquía de clases que se basan en la libreria [`unittest`](https://docs.python.org/3/library/unittest.html#module-unittest) estándar Python. A pesar del nombre, este marco de prueba es adecuado tanto para pruebas unitarias como de integración. El marco de Django agrega métodos y herramientas API para ayudar a probar el comportamiento web y específico de Django. Estos le permiten simular solicitudes, insertar datos de prueba e inspeccionar la salida de su aplicación. Django también proporciona una API([LiveServerTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#liveservertestcase)) y herramientas para [usar diferentes frameworks de pruebas](https://docs.djangoproject.com/en/1.10/topics/testing/advanced/#other-testing-frameworks) , por ejemplo, puede integrarse con el popular framework [Selenium](/es/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment) para simular la interacción de un usuario con un navegador en vivo.
 
 Para escribir una prueba, se deriva de cualquiera de las clases base de prueba de Django (o unittest)([SimpleTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#simpletestcase), [TransactionTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#transactiontestcase), [TestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#testcase), [LiveServerTestCase](https://docs.djangoproject.com/en/1.10/topics/testing/tools/#liveservertestcase)) y luego escribir métodos separados para verificar que la funcionalidad específica funcione como se esperaba (las pruebas usan métodos "assert" para probar que las expresiones dan valores `True` o `False`, o que dos valores son iguales, etc.) Cuando inicia una ejecución de prueba, el marco ejecuta los métodos de prueba elegidos en sus clases derivadas. Los métodos de prueba se ejecutan de forma independiente, con un comportamiento común de configuración y / o desmontaje definido en la clase, como se muestra a continuación.
 
@@ -104,7 +104,7 @@ class Author(models.Model):
         return '%s, %s' % (self.last_name, self.first_name)
 ```
 
-Del mismo modo, debe verificar que los métodos personalizados `get_absolute_url()` y `__str__()`comportarse como sea necesario porque son su código / lógica empresarial. En el caso de `get_absolute_url()` puedes confiar en que el metodo de Django `reverse()` se ha implementado correctamente, por lo que lo que está probando es que la vista asociada se haya definido realmente.
+Del mismo modo, debe verificar que los métodos personalizados `get_absolute_url()` y `__str__()` comportarse como sea necesario porque son su código / lógica empresarial. En el caso de `get_absolute_url()` puedes confiar en que el metodo de Django `reverse()` se ha implementado correctamente, por lo que lo que está probando es que la vista asociada se haya definido realmente.
 
 > **Nota:** Los lectores astutos pueden notar que también querríamos restringir la fecha de nacimiento y muerte a valores sensibles, y comprobar que la muerte viene después del nacimiento. En Django, esta restricción se agregaría a sus clases de formulario (aunque puede definir validadores para los campos, estos parecen usarse solo en el nivel del formulario, no en el nivel del modelo).
 
@@ -114,7 +114,7 @@ Con eso en mente, comencemos a ver cómo definir y ejecutar pruebas.
 
 Antes de entrar en los detalles de "qué probar", primero veamos brevemente dónde y cómo se definen las pruebas..
 
-Django utiliza el descubrimiento de pruebas integrado del módulo unittest ([built-in test discovery)](https://docs.python.org/3/library/unittest.html#unittest-test-discovery "(in Python v3.5)"), que descubrirá pruebas en el directorio de trabajo actual en cualquier archivo nombrado con el patrón **test\*.py**. Siempre que asigne un nombre a los archivos de forma adecuada, puede utilizar la estructura que desee. Le recomendamos que cree un módulo para su código de prueba y que tenga archivos separados para modelos, vistas, formularios y cualquier otro tipo de código que necesite probar. Por ejemplo:
+Django utiliza el descubrimiento de pruebas integrado del módulo unittest ([built-in test discovery)](https://docs.python.org/3/library/unittest.html#unittest-test-discovery), que descubrirá pruebas en el directorio de trabajo actual en cualquier archivo nombrado con el patrón **test\*.py**. Siempre que asigne un nombre a los archivos de forma adecuada, puede utilizar la estructura que desee. Le recomendamos que cree un módulo para su código de prueba y que tenga archivos separados para modelos, vistas, formularios y cualquier otro tipo de código que necesite probar. Por ejemplo:
 
 ```
 catalog/

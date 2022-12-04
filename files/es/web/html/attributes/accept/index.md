@@ -1,16 +1,9 @@
 ---
 title: 'HTML el atributo: accept'
 slug: Web/HTML/Attributes/accept
-tags:
-  - Accept
-  - Archivo
-  - Entrada
-  - Input
-  - Referencia
-  - atributo
-translation_of: Web/HTML/Attributes/accept
 original_slug: Web/HTML/Atributos/accept
 ---
+
 El atributo **`accept`** toma como valor una lista separada por comas de uno o más tipos de archivos, o [especificadores de tipo de archivo únicos](#especificadores_de_tipo_de_archivo_únicos), que describen qué tipos de archivo permitir. La propiedad «_accept_» es un atributo del tipo {{HTMLElement("input/file", "file")}} {{HTMLElement("input")}}. Se admitía en el elemento {{HTMLElement("form")}}, pero se eliminó a favor de {{HTMLElement("input/file", "file")}} en HTML5.
 
 Debido a que un determinado tipo de archivo se puede identificar de más de una manera, es útil proporcionar un conjunto completo de especificadores de tipo cuando necesiten archivos de un tipo específico, o usar el comodín para indicar que un tipo de cualquier formato es aceptable.
@@ -73,7 +66,7 @@ El atributo `accept` toma como valor una cadena que contiene uno o más de estos
 <input type="file" accept="image/*,.pdf">
 ```
 
-## Usar *input*s de archivo
+## Usar inputs de archivo
 
 ### Un ejemplo básico
 
@@ -141,16 +134,13 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                               |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| {{SpecName('HTML WHATWG', 'input.html#attr-input-accept', 'atributo accept')}} | {{ Spec2('HTML WHATWG') }} |
-| {{SpecName('HTML5.1', 'sec-forms.html#attr-input-accept', 'Atributo accept')}} | {{Spec2('HTML5.1')}}         |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 
-{{Compat("html.elements.attribute.accept")}}
+{{Compat}}
 
 ## Ve también
 
-- {{web.link("/es/docs/Using_files_from_web_applications", "Uso de archivos de aplicaciones web")}}
-- {{web.link("/es/docs/Web/API/File", "API de File")}}
+- [Uso de archivos de aplicaciones web](/es/docs/Using_files_from_web_applications)
+- [API de File](/es/docs/Web/API/File)

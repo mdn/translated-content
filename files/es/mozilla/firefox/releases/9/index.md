@@ -1,13 +1,6 @@
 ---
 title: Firefox 9 for developers
 slug: Mozilla/Firefox/Releases/9
-tags:
-  - Firefox
-  - Firefox 9
-  - Gecko 9
-  - NeedsTranslation
-  - TopicStub
-translation_of: Mozilla/Firefox/Releases/9
 ---
 
 Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9.0.1, which fixed a crashing bug discovered at the last minute, were released on December 21, 2011.
@@ -53,7 +46,7 @@ _No change._
 - A new response type, "`moz-json`", has been added to `XMLHttpRequest`, letting `XMLHttpRequest` automatically parse [JSON](/es/docs/JSON) strings for you; when you request this type, a returned JSON string is parsed, so that the value of the `response` property is the resulting JavaScript object.
 - [`XMLHttpRequest` "progress" events](/es/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress) are now reliably sent for every chunk of data received; in the past it was possible for the last chunk of data received to not fire a "progress" event. Now you can track progress by following only "progress" events, instead of also having to monitor "load" events to detect the receipt of the last chunk of data.
 - In the past, calling [`addEventListener()`](/es/docs/DOM/element.addEventListener) with a `null` listener would throw an exception. Now it returns without error and with no effect.
-- The new [`navigator.doNotTrack`](/es/docs/Web/API/Navigator/doNotTrack 'Devuelve los ajustes de do-not-track del usuario. Esto es "1" si el usuario ha solicitado no ser rastreado por sitios web, contenidos, o anuncios.') property lets your content easily determine whether or not the user has enabled their do-no-track preference; if this value is "yes", you should not track the user.
+- The new [`navigator.doNotTrack`](/es/docs/Web/API/Navigator/doNotTrack) property lets your content easily determine whether or not the user has enabled their do-no-track preference; if this value is "yes", you should not track the user.
 - [`Range`](/es/docs/Web/API/Range) and [`Selection`](/es/docs/Web/API/Selection) objects now behave according to their specifications when [`splitText()`](/es/docs/Web/API/Text/splitText) and [`normalize()`](/es/docs/Web/API/Node/normalize) are called.
 - The value of [`Node.ownerDocument`](/es/docs/Web/API/Node/ownerDocument) for doctype nodes is now the document on which [`createDocumentType()`](/es/docs/DOM/DOMImplementation.createDocumentType) was called to create the node, instead of `null`.
 - `window.navigator.taintEnabled` has been removed; it has not been supported in many years.

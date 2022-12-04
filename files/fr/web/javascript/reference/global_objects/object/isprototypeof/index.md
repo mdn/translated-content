@@ -87,4 +87,4 @@ if (Toto.prototype.isPrototypeOf(bidule)) {
 - {{jsxref("Opérateurs/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

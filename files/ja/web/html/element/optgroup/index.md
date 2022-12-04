@@ -3,7 +3,7 @@ title: '<optgroup>: 選択肢グループ要素'
 slug: Web/HTML/Element/optgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<optgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("select")}} 要素内の選択肢 ({{HTMLElement("option")}}) のグループを作成します。
 

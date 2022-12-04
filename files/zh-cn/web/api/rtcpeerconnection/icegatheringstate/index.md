@@ -21,7 +21,7 @@ slug: Web/API/RTCPeerConnection/iceGatheringState
 
 {{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCIceGatheringState enum", 0, 1)}}
 
-## 例子
+## 示例
 
 ```plain
 var pc = new RTCPeerConnection();
@@ -36,7 +36,7 @@ var state = pc.iceGatheringState;
 
 {{Compat}}
 
-## See also
+## 参见
 
-- {{event("icegatheringstatechange")}}
+- {{DOMxRef("RTCPeerConnection/icegatheringstatechange_event", "icegatheringstatechange")}}
 - [WebRTC](/zh-CN/docs/Web/Guide/API/WebRTC)

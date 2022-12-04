@@ -1,18 +1,15 @@
 ---
 title: Códec
 slug: Glossary/Codec
-tags:
-  - Glosario
-  - TecnologíasWeb
-translation_of: Glossary/Codec
 ---
+
 Un _códec_ (acrónimo de "***co***dificador-***dec***odificador") es un programa, algoritmo, o dispositivo que codifica o decodifica un flujo de datos. Cada códec sabe cómo tratar un estándar específico de codificado o compresión.
 
 ## Saber más
 
 ### Conocimiento general
 
-- {{Interwiki("wikipedia", "Códec")}} en Wikipedia
+- [Códec](https://es.wikipedia.org/wiki/Códec) en Wikipedia
 
 ### Referencias técnicas
 

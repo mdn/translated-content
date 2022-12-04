@@ -10,7 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/pre
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<pre>` 요소**는 미리 서식을 지정한 텍스트를 나타내며, HTML에 작성한 내용 그대로 표현합니다. 텍스트는 보통 고정폭 글꼴을 사용해 렌더링하고, 요소 내 공백문자를 그대로 유지합니다.
 
@@ -63,7 +63,7 @@ translation_of: Web/HTML/Element/pre
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 <div class="hidden"><dl><dt>{{htmlattrdef("cols")}} {{non-standard_inline}} {{deprecated_inline}}</dt><dd>Contains the <em>preferred</em> count of characters that a line should have. It was a non-standard synonym of {{htmlattrxref("width", "pre")}}. To achieve such an effect, use CSS styling instead.</dd><dt>{{htmlattrdef("width")}} {{deprecated_inline}}</dt><dd>Contains the <em>preferred</em> count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS styling instead.</dd><dt>{{htmlattrdef("wrap")}} {{non-standard_inline}}</dt><dd>Is a <em>hint</em> indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS styling instead.</dd></dl></div>
 

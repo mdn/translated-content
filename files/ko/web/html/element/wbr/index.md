@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/wbr
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<wbr>` 요소**는 현재 요소의 줄 바꿈 규칙을 무시하고 브라우저가 줄을 바꿀 수 있는 위치를 나타냅니다.
 
@@ -75,7 +76,7 @@ translation_of: Web/HTML/Element/wbr
 
 ## 참고
 
-UTF-8 인코딩을 사용한 페이지의 `<wbr>`은 ` U+200B`` ZERO-WIDTH SPACE ` 코드 포인트처럼 동작합니다. 특히, {{glossary("Unicode")}} bidi BN 코드 포인트처럼 행동하므로 {{glossary("bidi")}} 정렬의 영향을 받지 않습니다. 즉 `<div dir=rtl>123,<wbr>456</div>`의 줄이 바뀌지 않은 경우, `456,123`이 아니라 `123,456`으로 나타납니다.
+UTF-8 인코딩을 사용한 페이지의 `<wbr>` 은 `U+200B ZERO-WIDTH SPACE` 코드 포인트처럼 동작합니다. 특히, {{glossary("Unicode")}} bidi BN 코드 포인트처럼 행동하므로 {{glossary("bidi")}} 정렬의 영향을 받지 않습니다. 즉 `<div dir=rtl>123,<wbr>456</div>`의 줄이 바뀌지 않은 경우, `456,123`이 아니라 `123,456`으로 나타납니다.
 
 같은 이유로 인해 `< wbr >` 요소로 인한 줄바꿈으로는 붙임표가 나타나지 않습니다. 줄의 끝에 하이픈이 필요한 경우 소프트 하이픈 문자 개체(soft hyphen character entity, `& shy;`)를 사용하세요.
 

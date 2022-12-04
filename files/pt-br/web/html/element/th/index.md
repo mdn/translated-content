@@ -1,9 +1,9 @@
 ---
 title: <th>
 slug: Web/HTML/Element/th
-translation_of: Web/HTML/Element/th
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O **elemento** **HTML `<th>` **define uma célula cabeçalho do grupo de células de sua tabela. A exatidão natural deste grupo é definida pelos atributos {{htmlattrxref("scope", "th")}} e {{htmlattrxref("headers", "th")}}.
 
@@ -13,7 +13,7 @@ O **elemento** **HTML `<th>` **define uma célula cabeçalho do grupo de célula
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories"
           >Categorias do conteúdo</a
         >
       </th>
@@ -22,7 +22,7 @@ O **elemento** **HTML `<th>` **define uma célula cabeçalho do grupo de célula
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#Flow_content"
           >Conteúdo de fluxo</a
         >, mas sem descendentes de cabeçalho, rodapé, conteúdo de seção ou
         conteúdo de cabeçalho.
@@ -71,7 +71,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
     - `row`: O cabeçalho se relaciona com todas as células da linha a que pertence.
     - `col`: O cabeçalho se relaciona com todas as células da coluna a que pertence.
-    - `rowgroup`: O cabeçalho pertence a um grupo de linhas e se relaciona com todas as suas células. Essas células podem ser colocadas à direita ou à esquerda do cabeçalho, dependendo do valor do atributo [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) no elemento {{HTMLElement("table")}}.
+    - `rowgroup`: O cabeçalho pertence a um grupo de linhas e se relaciona com todas as suas células. Essas células podem ser colocadas à direita ou à esquerda do cabeçalho, dependendo do valor do atributo [`dir`](/pt-BR/docs/Web/HTML/Global_attributes/dir) no elemento {{HTMLElement("table")}}.
     - `colgroup`: O cabeçalho pertence a um grupo de colgroup e se relaciona com todas as suas células.
     - `auto`
 

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Functions/set
 translation_of: Web/JavaScript/Reference/Functions/set
 original_slug: Web/JavaScript/Referencia/Funciones/set
 ---
+
 {{jsSidebar("Funciones")}}
 
 La sintaxis **`set`** asocia la propiedad de un objeto a una función que será llamada cuando haya un intento de asignar valor a esa propiedad.
@@ -100,11 +101,7 @@ console.log(obj.baz); // "baz"
 
 ## Especificaciones
 
-| Specification                                                                                    | Status                       | Comment                               |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------- |
-| {{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}                     | {{Spec2('ES5.1')}}     | Definición inicial.                   |
-| {{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}     | {{Spec2('ES6')}}         | Se añaden las propiedades computadas. |
-| {{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}} | {{Spec2('ESDraft')}} |                                       |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
@@ -120,6 +117,6 @@ console.log(obj.baz); // "baz"
 - [getter](/es/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Definiendo Getters y Setters](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) en la Guía JavaScript

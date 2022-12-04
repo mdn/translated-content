@@ -11,13 +11,14 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/repeat
 ---
+
 {{JSRef}}
 
 El método **`repeat()`** construye y devuelve una nueva cadena que contiene el número especificado de copias de la cadena en la cual fue llamada, concatenados.
 
 ## Sintáxis
 
-```
+```js
 str.repeat(count)
 ```
 
@@ -99,10 +100,7 @@ if (!String.prototype.repeat) {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentarios         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-string.prototype.repeat', 'String.prototype.repeat')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

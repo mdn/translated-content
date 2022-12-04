@@ -1,8 +1,8 @@
 ---
 title: Date.prototype.toLocaleDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
 ---
+
 {{JSRef}}
 
 O método **`toLocaleDateString()`** retorna uma string com a representação de parte da data baseando-se no idioma. Os novos argumentos `locales` e `options` deixam as aplicações especificarem o idioma cujas convenções de formatação devem ser usadas e permitem customizar o comportamento da função. Em implementações antigas, nas quais ignoram os argumentos `locales` e `options`, o locale usado e a forma da string retornada são inteiramente dependente da implementação nativa.
@@ -17,7 +17,7 @@ dateObj.toLocaleDateString([locales [, options]])
 
 Verifique a seção [Compatibilidade entre navegadores](#compatibilidade_entre_navegadores) para ver quais navegadores dão suporte aos argumentos `locales` e `options`, e o [Example: Verificação para suporte dos argumentos `locales` e `options`](#Example:_Checking_for_support_for_locales_and_options_arguments) para detectar a funcionalidade.
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters')}}O valor padrão para cada propriedade do componente date-time é {{jsxref("undefined")}}, mas se as propriedades `weekday`, `year`, `month`, `day` são todas {{jsxref("undefined")}}, então `year`, `month` and `day` são assumidos como "`numeric`".
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters')}}O valor padrão para cada propriedade do componente date-time é {{jsxref("undefined")}}, mas se as propriedades `weekday`, `year`, `month`, `day` são todas {{jsxref("undefined")}}, então `year`, `month` and `day` são assumidos como "`numeric`".
 
 ### Return value
 

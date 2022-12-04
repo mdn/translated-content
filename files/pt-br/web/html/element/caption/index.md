@@ -1,13 +1,8 @@
 ---
 title: <caption>
 slug: Web/HTML/Element/caption
-tags:
-  - Elementos
-  - Tabela HTML
-  - Título de tabela
-  - título
-translation_of: Web/HTML/Element/caption
 ---
+
 ## Sumário
 
 O **Elemento** **HTML `<caption>` (**ou _Elemento HTML Subtitulo de Tabela_) representa o título de uma tabela. Embora ele seja sempre o primeiro filho de um {{HTMLElement("table")}}, seu estilo, usando CSS pode colocar ele em qualquer lugar relativo a tabela.
@@ -19,7 +14,7 @@ O **Elemento** **HTML `<caption>` (**ou _Elemento HTML Subtitulo de Tabela_) rep
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/HTML/Content_categories"
+          href="/pt-BR/docs/HTML/Content_categories"
           >Categoria de conteúdo</a
         >
       </th>
@@ -29,7 +24,7 @@ O **Elemento** **HTML `<caption>` (**ou _Elemento HTML Subtitulo de Tabela_) rep
       <th scope="row">Conteúdo permitido</th>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories#Flow_content"
+          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >.
       </td>
@@ -131,4 +126,4 @@ table, th, td {
 
   - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,8 +1,8 @@
 ---
 title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ---
+
 {{JSRef}}
 
 O símbolo **`Symbol.toStringTag`** é uma propriedade com valor string que é usada para a criação de uma descrição de string de um objeto padrão. É acessado internalmente pelo método {{jsxref("Object.prototype.toString()")}}.

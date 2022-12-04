@@ -1,11 +1,9 @@
 ---
 title: Infinity
 slug: Web/JavaScript/Reference/Global_Objects/Infinity
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Infinity
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Infinity
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumen
@@ -30,11 +28,7 @@ Para la especificación ECMAScript 5, `Infinity` es de solo lectura (implementad
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                   | Comentario                                         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1ra edición.                                                                                              | Estándar                 | Definición inicial. Implementada en JavaScript 1.3 |
-| {{SpecName('ES5.1', '#sec-15.1.1.2', 'Infinity')}}                                                 | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-infinity', 'Infinity')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

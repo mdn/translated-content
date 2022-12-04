@@ -22,9 +22,9 @@ someNodeList.forEach(callback[, thisArg]);
     - `currentValue`
       - : 現在 `someNodeList` で処理されている要素です。
     - `currentIndex` {{Optional_inline}}
-      - : 現在 `someNodeList`\_ \_で処理されている `currentValue` の添字です。
+      - : 現在 `someNodeList` で処理されている `currentValue` の添字です。
     - `listObj` {{Optional_inline}}
-      - : `forEach()` を適用しようとしている `someNodeList`\_ \_です。
+      - : `forEach()` を適用しようとしている `someNodeList` です。
 
 - `thisArg` {{Optional_inline}}
   - : `callback` 内で [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) として使う値です。
@@ -90,9 +90,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 ## 仕様
 
-| 仕様書                                                           | 策定状況                 | コメント                            |
-| ---------------------------------------------------------------- | ------------------------ | ----------------------------------- |
-| {{SpecName("WebIDL", "#es-forEach", "forEach")}} | {{Spec2("WebIDL")}} | `iterable` 宣言で`forEach` を定義。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

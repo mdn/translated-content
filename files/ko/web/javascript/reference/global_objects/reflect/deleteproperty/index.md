@@ -9,9 +9,10 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 ---
+
 {{JSRef}}
 
-**`Reflect`\*\***`.deleteProperty()`\*\* 정적 메서드는 속성을 제거할 수 있습니다. [`delete` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/delete)의 함수판이라고 할 수 있습니다.
+**`Reflect.deleteProperty()`** 정적 메서드는 속성을 제거할 수 있습니다. [`delete` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/delete)의 함수판이라고 할 수 있습니다.
 
 {{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
 

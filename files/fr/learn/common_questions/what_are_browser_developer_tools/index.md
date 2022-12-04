@@ -4,6 +4,7 @@ slug: Learn/Common_questions/What_are_browser_developer_tools
 l10n:
   sourceCommit: 8c6aa8bde7beff52a5cb3351b764be0a49218ed1
 ---
+
 Tous les navigateurs web modernes possèdent un ensemble d'outils de développement. Ces outils permettent de réaliser différentes actions&nbsp;: inspecter le code HTML, CSS ou JavaScript chargé à la volée dans la page, montrer les fichiers téléchargés et leur temps de chargement, etc. Dans cet article, nous verrons comment utiliser les fonctionnalités basiques des outils de développements d'un navigateur (aussi souvent appelés par l'anglicisme «&nbsp;<i lang="en">devtools</i>&nbsp;»).
 
 > **Note :** Avant de poursuivre avec les exemples présentés ci-après, nous vous conseillons d'utiliser [l'exemple construit](https://mdn.github.io/beginner-html-site-scripted/) dans la série d'articles [Commencer avec le Web](/fr/docs/Learn/Getting_started_with_the_web) et d'ouvrir le site dans votre navigateur pour poursuivre avec les étapes suivantes.
@@ -172,35 +173,35 @@ Vous verrez alors quelque chose comme ceci à l'écran&nbsp;:
 
 Pour voir ce qui se passe, essayez de saisir les fragments de code suivants dans la console, un à un en pressant <kbd>Entrée</kbd> entre chaque&nbsp;:
 
-1. ```js
-    alert('Coucou !');
-    ```
+```js
+alert('Coucou !');
+```
 
-2. ```js
-    document.querySelector('html').style.backgroundColor = 'purple';
-    ```
+```js
+document.querySelector('html').style.backgroundColor = 'purple';
+```
 
-3. ```js
-    const logoWikipedia = document.createElement('img');
-    logoWikipedia.setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png');
-    document.querySelector('h1').appendChild(logoWikipedia);
-    ```
+```js
+const logoWikipedia = document.createElement('img');
+logoWikipedia.setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png');
+document.querySelector('h1').appendChild(logoWikipedia);
+```
 
 Désormais, essayez de saisir ces versions incorrectes pour voir le résultat.
 
-1. ```js example-bad
-    alert('Coucou !);
-    ```
+```js example-bad
+alert('Coucou !);
+```
 
-2. ```js example-bad
-    document.cheeseSelector('html').style.backgroundColor = 'purple';
-    ```
+```js example-bad
+document.cheeseSelector('html').style.backgroundColor = 'purple';
+```
 
-3. ```js example-bad
-    const logoWikipedia = document.createElement('img');
-    myBanana.setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png');
-    document.querySelector('h1').appendChild(logoWikipedia);
-    ```
+```js example-bad
+const logoWikipedia = document.createElement('img');
+myBanana.setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo.png');
+document.querySelector('h1').appendChild(logoWikipedia);
+```
 
 Vous pourrez voir les erreurs que renvoie le navigateur. Il arrive que ces erreurs soient plutôt incompréhensibles, mais comprendre l'origine du problème en relisant le code devrait être jouable&nbsp;!
 

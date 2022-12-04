@@ -14,7 +14,8 @@ tags:
   - 페이지 제목
 translation_of: Web/HTML/Element/title
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<title>` 요소**는 브라우저의 제목 표시줄이나 페이지 탭에 보이는 문서 제목을 정의합니다. 텍스트만 포함할 수 있으며 태그를 포함하더라도 무시합니다.
 
@@ -68,7 +69,7 @@ translation_of: Web/HTML/Element/title
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 

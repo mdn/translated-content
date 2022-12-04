@@ -2,6 +2,7 @@
 title: pageAction
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 ---
+
 {{AddonSidebar}}
 
 [페이지 액션](/ko/docs/Mozilla/Add-ons/WebExtensions/Page_actions)은 브라우저의 주소창에 있는 아이콘이다.

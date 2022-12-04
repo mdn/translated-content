@@ -86,9 +86,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## 仕様書
 
-| 仕様書                       | 状態                     | 備考     |
-| ---------------------------- | ------------------------ | -------- |
-| {{SpecName('HSTS')}} | {{Spec2('HSTS')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -99,6 +97,6 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 - ブログ記事: [HTTP Strict Transport Security has landed!](http://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html)
 - ブログ記事: [HTTP Strict Transport Security (force HTTPS)](http://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/)
 - OWASP の記事: [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
-- Wikipedia: {{interwiki("wikipedia", "HTTP Strict Transport Security")}}
+- Wikipedia: [HTTP Strict Transport Security](https://ja.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
 - ブラウザー試験サイト: [HSTS and HPKP test](https://projects.dm.id.lv/Public-Key-Pins_test)
 - [安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)

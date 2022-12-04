@@ -13,7 +13,7 @@ IE は多くのリリースを行っており、現在、バージョン 11.0.12
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "Internet Explorer")}}
+- Wikipedia 上の [Internet Explorer](https://ja.wikipedia.org/wiki/Internet_Explorer)
 - Wikipedia 上の [Internet Explorer の歴史](https://en.wikipedia.org/wiki/History_of_Internet_Explorer) (英語)
 - Wikipedia 上の [Internet Explorer のバージョン](https://en.wikipedia.org/wiki/Internet_Explorer_version_history) (英語)
 

@@ -1,9 +1,9 @@
 ---
 title: El modelo de caja
 slug: Learn/CSS/Building_blocks/The_box_model
-translation_of: Learn/CSS/Building_blocks/The_box_model
 original_slug: Learn/CSS/Building_blocks/El_modelo_de_caja
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
 Todo en CSS tiene una caja alrededor, y comprender estas cajas es clave para poder crear diseños con CSS o para alinear elementos con otros elementos. En este artículo, echaremos un vistazo más de cerca al _modelo de cajas_ en CSS con el que vas a poder crear diseños de compaginación más complejos con una comprensión de cómo funciona y la terminología relacionada.

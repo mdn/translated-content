@@ -1,12 +1,7 @@
 ---
 title: Utilizando Políticas de Segurança de Conteúdo
 slug: Web/HTTP/CSP
-tags:
-  - Política de Segurança de Conteúdo
-  - Segurança
-translation_of: Web/HTTP/CSP
 ---
-{{ gecko_minversion_header("2.0") }}
 
 **Content Security Policy** (Política de Segurança de Conteúdo, também conhecida como {{Glossary("CSP")}}) é uma camada adicional de segurança que facilita a detecção e mitigação de certos tipos de ataques, incluindo Cross Site Scripting ({{Glossary("XSS")}}) e ataques de injeção de dados. Esses ataques são utilizados para diversos fins, e eles vão desde roubo de dados até desfiguração do site para distribuição de malware.
 
@@ -44,13 +39,13 @@ Você pode usar o `Content-Security-Policy` HTTP header para especificar sua pol
 Content-Security-Policy: policy
 ```
 
-A política é uma string contendo as [diretivas de políticas](/en/Security/CSP/CSP_policy_directives) descrevendo seu Content Security Policy.
+A política é uma string contendo as [diretivas de políticas](/pt-BR/Security/CSP/CSP_policy_directives) descrevendo seu Content Security Policy.
 
 ## Escrevendo uma política
 
 Uma politica é descrita usando uma série de [diretivas de políticas](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives), cada uma descrevendo uma política para certos tipos de recursos ou áreas de política. Sua política deve incluir uma diretiva de política padrão `default-src`, que cobre os outros tipos de recursos quando eles não possuem política própria. (Para uma lista completa, veja a descrição da diretiva default-src.) Uma política precisa incluir uma diretiva `default-src` ou script-src para evitar que scripts inline sejam executados, assim como bloquear o uso de `eval()`. Uma política precisa incluir uma diretiva `default-src` ou `style-src`para restringir estilos inline de serem aplicados a partir de um elemento `<style>` ou um `.style` atributo.
 
-A sintaxe para uma política é uma string de diretivas separadas por ponto e vírgula `;`, cada seguindo a sintaxe descrita em [Diretivas de políticas suportadas](/en/Security/CSP/CSP_policy_directives#Supported_policy_directives).
+A sintaxe para uma política é uma string de diretivas separadas por ponto e vírgula `;`, cada seguindo a sintaxe descrita em [Diretivas de políticas suportadas](/pt-BR/Security/CSP/CSP_policy_directives#Supported_policy_directives).
 
 ## Exemplos: Casos de uso comuns
 
@@ -104,11 +99,11 @@ A web site administrator of a web mail site wants to allow HTML in email, as wel
 Content-Security-Policy: default-src 'self' *.mailsite.com; img-src *
 ```
 
-Note that this example doesn't specify a [`script-src`](/en/Security/CSP/CSP_policy_directives#script-src); with the example CSP, this site uses the setting specified by the [`default-src`](/en/Security/CSP/CSP_policy_directives#allow) directive, which means that scripts can be loaded only from the originating server.
+Note that this example doesn't specify a [`script-src`](/pt-BR/Security/CSP/CSP_policy_directives#script-src); with the example CSP, this site uses the setting specified by the [`default-src`](/pt-BR/Security/CSP/CSP_policy_directives#allow) directive, which means that scripts can be loaded only from the originating server.
 
 ## Testando sua política
 
-To ease deployment, CSP can be deployed in ["report-only" mode](http://www.w3.org/TR/CSP/#content-security-policy-report-only-header-field). The policy is not enforced, but any violations are reported to a provided URI. Additionally, a report-only header can be used to test a future revision to a policy without actually deploying it.
+To ease deployment, CSP can be deployed in ["report-only" mode](https://www.w3.org/TR/CSP/#content-security-policy-report-only-header-field). The policy is not enforced, but any violations are reported to a provided URI. Additionally, a report-only header can be used to test a future revision to a policy without actually deploying it.
 
 You can use the `Content-Security-Policy-Report-Only` HTTP header to specify your policy, like this:
 
@@ -124,7 +119,7 @@ The [UserCSP Addon](https://addons.mozilla.org/en-us/firefox/addon/newusercspdes
 
 ## Veja também
 
-- [Introducing Content Security Policy](/en/Security/CSP/Introducing_Content_Security_Policy)
-- [CSP policy directives](/en/Security/CSP/CSP_policy_directives)
-- [Using CSP violation reports](/en/Security/CSP/Using_CSP_violation_reports)
+- [Introducing Content Security Policy](/pt-BR/Security/CSP/Introducing_Content_Security_Policy)
+- [CSP policy directives](/pt-BR/Security/CSP/CSP_policy_directives)
+- [Using CSP violation reports](/pt-BR/Security/CSP/Using_CSP_violation_reports)
 - [Content Security Policy recommendation bookmarklet](http://brandon.sternefamily.net/posts/2010/10/content-security-policy-recommendation-bookmarklet/)

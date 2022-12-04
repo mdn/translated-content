@@ -1,13 +1,9 @@
 ---
 title: Function.prototype.call()
 slug: Web/JavaScript/Reference/Global_Objects/Function/call
-tags:
-  - Function
-  - JavaScript
-  - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/call
 ---
+
 {{JSRef("Objetos_globales", "Function")}}
 
 ## Resumen
@@ -33,9 +29,9 @@ function.call(thisArg[, arg1[, arg2[, ...]]])
 - `arg1, arg2, ...`
   - : Argumentos para el objeto.
 
-- ### Valor de retorno
+### Valor de retorno
 
-  - : El resultado de llamar a la función con el `this` especificado y los argumentos.
+El resultado de llamar a la función con el `this` especificado y los argumentos.
 
 ## Descripción
 

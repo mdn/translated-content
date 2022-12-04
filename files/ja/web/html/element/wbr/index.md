@@ -3,7 +3,7 @@ title: <wbr>
 slug: Web/HTML/Element/wbr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<wbr>` 要素**は、改行可能位置 — テキスト内でブラウザーが任意で改行してよい位置を表しますが、この改行規則は必要のない場合は改行を行いません。
 
@@ -79,10 +79,7 @@ _[The Yahoo Style Guide](https://web.archive.org/web/20121105171040/http://style
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-wbr-element', '&lt;wbr&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-wbr-element', '&lt;wbr&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

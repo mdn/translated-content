@@ -8,13 +8,14 @@ tags:
   - Углы
 translation_of: Web/CSS/border-radius
 ---
+
 {{CSSRef}}
 
 **`border-radius`** — это [CSS](/ru/docs/Web/CSS)-свойство, позволяющее разработчикам определять, как скругляются границы блока. Закруглённость каждого угла определяется с помощью одного или двух радиусов, определяя его форму: круг или эллипс.
 
 {{EmbedInteractiveExample("pages/css/border-radius.html")}}
 
-Это свойство является [короткой записью](/ru/docs/Web/CSS/Shorthand_properties "ru/CSS/Shorthand_properties") для четырёх свойств {{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}} и{{Cssxref("border-bottom-left-radius")}}.
+Это свойство является [короткой записью](/ru/docs/Web/CSS/Shorthand_properties) для четырёх свойств {{Cssxref("border-top-left-radius")}}, {{Cssxref("border-top-right-radius")}}, {{Cssxref("border-bottom-right-radius")}} и{{Cssxref("border-bottom-left-radius")}}.
 
 Скругление применяется ко всему {{Cssxref ("background")}}, даже если элемент не имеет границ, точное положение отсечения определяется свойством {{Cssxref ("background-clip")}}.
 

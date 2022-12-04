@@ -1,8 +1,8 @@
 ---
 title: Console
 slug: Web/API/Console
-translation_of: Web/API/Console
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 O objeto `console` fornece acesso ao console de debug do navegador (por exemplo, o [Web Console](/pt-BR/docs/Tools/Web_Console) do Firefox). O seu funcionamento específico varia de navegador para navegador, mas existe um conjunto de ferramentas que na prática são fornecidas normalmente.
@@ -207,7 +207,7 @@ The output in the console looks something like this:
 - [Tools](/pt-BR/docs/Tools)
 - [Web Console](/pt-BR/docs/Tools/Web_Console) - how the Web Console in Firefox handles console API calls
 - [Remote debugging](/pt-BR/docs/Tools/Remote_Debugging) - how to see console output when the debugging target is a mobile device
-- [Debugging apps on Firefox OS](/en-US/Firefox_OS/Using_the_App_Manager) - using the App Manager to debug apps running on Firefox OS
+- [Debugging apps on Firefox OS](/pt-BR/Firefox_OS/Using_the_App_Manager) - using the App Manager to debug apps running on Firefox OS
 - [On-device console logging](/pt-BR/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging) - how to do logging on Firefox OS devices
 
 ### Other implementations

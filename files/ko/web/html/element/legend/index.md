@@ -10,7 +10,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/legend
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<legend>` 요소**는 부모 {{HTMLElement("fieldset")}} 콘텐츠의 설명을 나타냅니다.
 
@@ -58,7 +59,7 @@ translation_of: Web/HTML/Element/legend
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## 예제
 

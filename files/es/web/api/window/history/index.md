@@ -1,8 +1,8 @@
 ---
 title: Window.history
 slug: Web/API/Window/history
-translation_of: Web/API/Window/history
 ---
+
 {{ APIRef }}
 
 La propiedad de solo lectura **`Window.history`** regresa una referencia al objeto {{domxref("History")}}, quien provee una interfaz para manipular el historial de _sesión del navegador_ (páginas visitadas en el tab o marco de la pagina actual cargada).

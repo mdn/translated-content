@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/col
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<col>` 요소**는 표의 열을 나타내며, 열에 속하는 칸에 공통된 의미를 부여할 때 사용합니다. {{htmlelement("colgroup")}} 안에서 찾을 수 있습니다.
 
@@ -108,7 +108,6 @@ The following attributes are deprecated and should not be used. They are documen
 
 - {{htmlattrdef("width")}} {{deprecated_inline}}
   - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` also can be used.
-
 
 ## 예제
 

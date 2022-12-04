@@ -1,13 +1,8 @@
 ---
 title: 'RangeError: precision is out of range'
 slug: Web/JavaScript/Reference/Errors/Precision_range
-tags:
-  - Erro
-  - Erros
-  - JavaScript
-  - RangeError
-translation_of: Web/JavaScript/Reference/Errors/Precision_range
 ---
+
 {{jsSidebar("Errors")}}
 
 A exceção JavaScript "precision is out of range" (precisão fora de alcance) ocorre quando um número que está fora do intervalo que vai de 0 à 20 (ou 21) foi passado para `toFixed` ou `toPrecision`.

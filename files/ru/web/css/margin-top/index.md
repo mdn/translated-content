@@ -8,9 +8,10 @@ tags:
   - справочник
 translation_of: Web/CSS/margin-top
 ---
+
 {{CSSRef}}
 
-Свойство **`margin-top`** [CSS](/ru/CSS "CSS") определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) в верхней части элемента. Положительное значение поместит элемент дальше от соседних элементов, чем обычно, а отрицательное значение поместит его ближе.
+Свойство **`margin-top`** [CSS](/ru/CSS) определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) в верхней части элемента. Положительное значение поместит элемент дальше от соседних элементов, чем обычно, а отрицательное значение поместит его ближе.
 
 {{EmbedInteractiveExample("pages/css/margin-top.html")}}
 

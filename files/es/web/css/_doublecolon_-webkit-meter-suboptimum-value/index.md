@@ -1,13 +1,8 @@
 ---
 title: '::-webkit-meter-suboptimum-value'
 slug: Web/CSS/::-webkit-meter-suboptimum-value
-tags:
-  - CSS
-  - No estándar(2)
-  - Pseudo-elemento
-  - Referencia
-translation_of: Web/CSS/::-webkit-meter-suboptimum-value
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

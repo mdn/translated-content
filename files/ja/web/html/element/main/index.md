@@ -3,7 +3,7 @@ title: <main>
 slug: Web/HTML/Element/main
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<main>` 要素**は、文書の {{HTMLElement("body")}} の主要な内容を表します。主要な内容とは、文書の中心的な主題、またはアプリケーションの中心的な機能に直接関連または拡張した内容の範囲のことです。
 
@@ -143,11 +143,7 @@ slug: Web/HTML/Element/main
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#the-main-element', '&lt;main&gt;')}}                             | {{Spec2('HTML WHATWG')}} |                                               |
-| {{SpecName('HTML5.1', 'grouping-content.html#the-main-element', '&lt;main&gt;')}}     | {{Spec2('HTML5.1')}}     | {{SpecName('HTML5 W3C')}} から変更なし |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-main-element', '&lt;main&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

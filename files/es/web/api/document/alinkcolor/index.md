@@ -1,8 +1,8 @@
 ---
 title: document.alinkColor
 slug: Web/API/Document/alinkColor
-translation_of: Web/API/Document/alinkColor
 ---
+
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 
 Devuelve o define el color que tendrán los vínculos activos en el cuerpo (elemento `body` del documento. Un vínculo está activo durante el tiempo entre los eventos `mousedown` (cuando se presiona el botón izquierdo del "mouse" sobre el vínculo) y `mouseup` (cuando se deja de presionar el vínculo al soltar el botón izquierdo del "mouse").

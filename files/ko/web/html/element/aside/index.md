@@ -10,7 +10,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/aside
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<aside>` 요소**는 문서의 주요 내용과 간접적으로만 연관된 부분을 나타냅니다. 주로 사이드바 혹은 콜아웃 박스로 표현합니다.
 
@@ -87,7 +88,7 @@ translation_of: Web/HTML/Element/aside
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 

@@ -1,8 +1,8 @@
 ---
 title: ':out-of-range'
 slug: Web/CSS/:out-of-range
-translation_of: Web/CSS/:out-of-range
 ---
+
 {{CSSRef}}
 
 A [pseudo classe](/pt-BR/docs/CSS/Pseudo-classes) de [CSS](/pt-BR/docs/Web/CSS) **`:out-of-range`** representa um elemento de {{htmlelement("entrada")}} cujo valor atual esta fora dos limites especificados pelo {{htmlattrxref("min", "entrada")}} e {{htmlattrxref("max","entrada")}} atributos

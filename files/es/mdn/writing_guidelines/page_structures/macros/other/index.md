@@ -1,9 +1,9 @@
 ---
 title: Otras macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Other
-translation_of: MDN/Structures/Macros/Other
 original_slug: MDN/Structures/Macros/Other
 ---
+
 {{MDNSidebar}}
 
 A diferencia de las macros enumeradas en [Macros de uso común](/es/docs/MDN/Structures/Macros/Commonly-used_macros), las macros documentadas en este artículo se usan con poca frecuencia o solo en contextos específicos, o están obsoletas.
@@ -12,7 +12,6 @@ A diferencia de las macros enumeradas en [Macros de uso común](/es/docs/MDN/Str
 
 Estas macros se usan solo con contextos particulares, como una referencia de API específica.
 
-- [`Interwiki`](https://github.com/mdn/yari/blob/main/kumascript/macros/Interwiki.ejs) facilita la creación de enlaces _interwiki_. Actualmente admite enlaces a Wikipedia y Wikimo. El primer parámetro es el nombre de la wiki ("wikipedia" o "wikimo"), y el segundo es la ruta del artículo. Por ejemplo, `\{\{interwiki("wikipedia", "Firefox")\}\}` aparece como {{ interwiki("wikipedia", "Firefox") }}. Esta plantilla detecta automáticamente el idioma de la página y dirige al mismo idioma en Wikipedia, por ejemplo.
 - [`RFC`](https://github.com/mdn/yari/blob/main/kumascript/macros/RFC.ejs) crea un enlace al RFC especificado, dado su número. La sintaxis es: `\{\{RFC(número)\}\}`. Por ejemplo, `\{\{RFC(2616)\}\}` se convierte en {{ RFC(2616) }}.
 
 ### Componentes de la página destino

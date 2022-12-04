@@ -1,14 +1,9 @@
 ---
 title: Error.prototype.fileName
 slug: Web/JavaScript/Reference/Global_Objects/Error/fileName
-tags:
-  - JavaScript
-  - No estandar
-  - Propiedad
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/fileName
 ---
+
 {{jsRef}} {{non-standard_header}}
 
 La propiedad **`fileName`** contiene la ruta al archivo que generó este error.

@@ -1,13 +1,9 @@
 ---
 title: Usa tu nuevo conocimiento
 slug: Learn/CSS/First_steps/Styling_a_biography_page
-tags:
-  - Aprendizaje
-  - CSS
-  - Principiante
-translation_of: Learn/CSS/First_steps/Using_your_new_knowledge
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Con las cosas que has aprendido en las últimas lecciones, puedes darle formato a documentos de texto simple utilizando CSS para agregar tu propio estilo a ellos. Esta evaluación te da una posibilidad de hacer eso.

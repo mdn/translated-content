@@ -13,6 +13,7 @@ translation_of: Web/JavaScript/Reference/Statements/let
 original_slug: Web/JavaScript/Referencia/Sentencias/let
 browser-compat: javascript.statements.let
 ---
+
 {{jsSidebar("Statements")}}
 
 La instrucción **`let`** declara una variable de alcance local con ámbito de bloque([block](/es/docs/Web/JavaScript/Referencia/Sentencias/block)scope), la cual, opcionalmente, puede ser inicializada con algún valor.
@@ -36,9 +37,9 @@ let var1 [= valor1] [, var2 [= valor2]] [, ..., varN [= valorN]];
 
 **`let`** te permite declarar variables limitando su alcance (_scope_) al bloque, declaración, o expresión donde se está usando.a diferencia de la palabra clave `var` la cual define una variable global o local en una función sin importar el ámbito del bloque. La otra diferencia entre `var` y `let` es que este último se inicializa a un valor sólo cuando un analizador lo evalúa (ver abajo).
 
-Al igual que `const`, `let`no crea propiedades del objeto se declara globalmente (en el alcance más alto).
+Al igual que `const`, `let` no crea propiedades del objeto se declara globalmente (en el alcance más alto).
 
-### Alcance (_scope_) a nivel de bloque con `let`
+### Alcance (scope) a nivel de bloque con `let`
 
 Usar la palabra reservada `let` para definir variables dentro de un bloque.
 
@@ -114,7 +115,7 @@ La salida de este código desplegaría "global" una vez.
 
 ### Zona muerta temporal y errores con `let`
 
-La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
+La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
 
 ```js
 if (x) {
@@ -127,7 +128,7 @@ if (x) {
 }
 ```
 
-En ECMAScript 2015, `let` [no eleva](/es/docs/Web/JavaScript/Referencia/Sentencias/var#Description) la variable a la parte superior del bloque. Si se hace una referencia a la variable declarada con `let` (`let foo`) antes de su declaración, terminaríamos con un error de tipo `ReferenceError`(al contrario de la variable declarada con `var`, que tendrá el valor `undefined`), esto porque la variables vive en una "zona muerta temporal" desde el inicio del bloque hasta que la declaración ha sido procesada.
+En ECMAScript 2015, `let` [no eleva](/es/docs/Web/JavaScript/Referencia/Sentencias/var#Description) la variable a la parte superior del bloque. Si se hace una referencia a la variable declarada con `let` (`let foo`) antes de su declaración, terminaríamos con un error de tipo `ReferenceError` (al contrario de la variable declarada con `var`, que tendrá el valor `undefined`), esto porque la variables vive en una "zona muerta temporal" desde el inicio del bloque hasta que la declaración ha sido procesada.
 
 ```
 function do_something() {
@@ -153,13 +154,13 @@ switch (x) {
 }
 ```
 
-### Otro ejemplo de zona muerta temporal combinada con [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments)
+### Otro ejemplo de zona muerta temporal combinada con ámbito léxico
 
-Debido al alcance léxico, el identificador `num` dentro de la expresión (`num + 55`) se evalúa como `num` del bloque `if`, y no como la variable `num` con el valor 33 que esta por encima
+Debido al [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments), el identificador `num` dentro de la expresión (`num + 55`) se evalúa como `num` del bloque `if`, y no como la variable `num` con el valor 33 que esta por encima
 
-En esa misma línea, el `num`del bloque `if` ya se ha creado en el ámbito léxico, pero aún no ha alcanzado (y **terminado**) su inicialización (que es parte de la propia declaración): todavía está en la zona muerta temporal.
+En esa misma línea, el `num` del bloque `if` ya se ha creado en el ámbito léxico, pero aún no ha alcanzado (y **terminado**) su inicialización (que es parte de la propia declaración): todavía está en la zona muerta temporal.
 
-```
+```js
 function prueba(){
    var num = 33;
    if (true) {
@@ -205,7 +206,7 @@ console.log(i); // ReferenceError: i is not defined
 
 ## Extensiones `let` no-estandar
 
-### Bloques`let`
+### Bloques `let`
 
 > **Advertencia:** La **sintaxis del bloque y expresion** `let` es no-estandar y sera deshechado en un futuro. ¡No deben ser usados! ver [error 1023609](https://bugzilla.mozilla.org/show_bug.cgi?id=1023609) y [error 1167029](https://bugzilla.mozilla.org/show_bug.cgi?id=1167029) para mas detalles.
 

@@ -11,6 +11,7 @@ tags:
   - 컨셉
 translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 ---
+
 오디오가 어떻게 여러분의 앱을 통해서 전송(route)되는지를 설계하는 동안 여러분이 적절한 결정을 내리는 것을 돕기 위해, 이 문서는 Web Audio API의 기능이 어떻게 동작하는가를 뒷받침하는 얼마간의 오디오 이론을 설명합니다. 이 문서를 읽는다고 해서 여러분이 숙련된 사운드 엔지니어가 될 수는 없지만, 왜 Web Audio API가 이렇게 동작하는지를 이해하기에 충분한 배경지식을 줄 것입니다.
 
 ## 오디오 그래프
@@ -25,7 +26,7 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 4. 사용자의 컴퓨터 스피커와 같이, 오디오의 최종 도착지를 선택합니다.
 5. 오디오 소스로부터 0 또는 더 많은 효과를 거쳐 연결(connection)을 확립하는데, 마지막으로는 앞서 선택된 도착지에서 끝납니다.
 
-<div class="notecard note"><h4>채널 표기법</h4><p>한 신호에서 사용 가능한 오디오 채널의 숫자는 종종 숫자 형식으로 표현되는데, 예를 들자면 2.0 또는 5.1과 같습니다. 이것은 <a href="https://en.wikipedia.org/wiki/Surround_sound#Channel_notation">채널 표기법</a>이라고 불립니다. 첫번째 숫자는 신호가 포함하는 전체 주파수 범위 오디오 채널의 숫자입니다. 마침표 뒤의 숫자는 저주파 효과(LFE) 출력에 대해 비축된 채널의 수를 나타냅니다; 이 숫자는 종종 <strong>서브 우퍼</strong>(subwoofer)로 불립니다.</p></div>
+> **참고:** 한 신호에서 사용 가능한 오디오 채널의 숫자는 종종 숫자 형식으로 표현되는데, 예를 들자면 2.0 또는 5.1과 같습니다. 이것은 [채널 표기법](https://en.wikipedia.org/wiki/Surround_sound#Channel_notation)이라고 불립니다. 첫번째 숫자는 신호가 포함하는 전체 주파수 범위 오디오 채널의 숫자입니다. 마침표 뒤의 숫자는 저주파 효과(LFE) 출력에 대해 비축된 채널의 수를 나타냅니다; 이 숫자는 종종 **서브 우퍼**(subwoofer)로 불립니다.
 
 ![오디오 컨텍스트라고 써진 외부 상자와 소스, 효과, 목적지라고 써진 세 개의 내부 상자를 가진 하나의 간단한 도표. 세 개의 내부 상자는 좌에서 우를 향하는 화살표를 사이에 가지고 있는데, 이는 오디오 정보의 흐름을 나타냅니다.](webaudioapi_en.svg)
 

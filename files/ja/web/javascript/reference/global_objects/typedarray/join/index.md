@@ -52,9 +52,7 @@ if (!Uint8Array.prototype.join) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.join', 'TypedArray.prototype.join')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

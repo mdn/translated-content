@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/dfn
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<dfn>` 요소**는 현재 맥락이나 문장에서 정의하고 있는 용어를 나타냅니다. `<dfn>`에서 가장 가까운 {{htmlelement("p")}}, {{htmlelement("dt")}}/{{htmlelement("dd")}} 쌍, {{htmlelement("section")}} 조상 요소를 용어 정의로 간주합니다.
 
@@ -67,7 +68,7 @@ translation_of: Web/HTML/Element/dfn
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
@@ -77,9 +78,9 @@ translation_of: Web/HTML/Element/dfn
 
 다음 규칙을 따라 현재 용어가 어느건지 판별합니다.
 
-1.  `<dfn>` 요소가 {{htmlattrxref("title")}} 특성을 가지고 있으면 그 값을 현재 정의 중인 용어로 간주합니다. `<dfn>`은 여전히 텍스트 콘텐츠를 가지고 있겠지만, 완전한 용어 대신 준말({{htmlelement("abbr")}})을 넣을 수도 있고, 다른 대체 형태일 수도 있습니다.
-2.  `<dfn>`이 다른 텍스트는 없이 하나의 자식만 가지는데, 그 자식이 `title` 특성을 가진{{htmlelement("abbr")}}인 경우, 자식 `<abbr>`의 `title` 특성 값을 현재 용어로 간주합니다.
-3.  모두 아닌 경우 `<dfn>`의 텍스트 콘텐츠를 현재 용어로 간주합니다. [아래의 첫 번째 예제](#기본적인_용어_식별)에서 확인할 수 있습니다.
+1. `<dfn>` 요소가 {{htmlattrxref("title")}} 특성을 가지고 있으면 그 값을 현재 정의 중인 용어로 간주합니다. `<dfn>`은 여전히 텍스트 콘텐츠를 가지고 있겠지만, 완전한 용어 대신 준말({{htmlelement("abbr")}})을 넣을 수도 있고, 다른 대체 형태일 수도 있습니다.
+2. `<dfn>`이 다른 텍스트는 없이 하나의 자식만 가지는데, 그 자식이 `title` 특성을 가진{{htmlelement("abbr")}}인 경우, 자식 `<abbr>`의 `title` 특성 값을 현재 용어로 간주합니다.
+3. 모두 아닌 경우 `<dfn>`의 텍스트 콘텐츠를 현재 용어로 간주합니다. [아래의 첫 번째 예제](#기본적인_용어_식별)에서 확인할 수 있습니다.
 
 > **참고:** `<dfn>` 요소가 `title` 특성을 가진 경우, 그 값은 정의 중인 용어여야 하며 다른 텍스트는 들어가선 안됩니다.
 

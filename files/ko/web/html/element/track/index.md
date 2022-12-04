@@ -13,7 +13,7 @@ tags:
   - 자막
 translation_of: Web/HTML/Element/track
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<track>` 요소**는 미디어 요소({{HTMLElement("audio")}}, {{HTMLElement("video")}})의 자식으로서, 자막 등 시간별 텍스트 트랙(시간 기반 데이터)를 지정할 때 사용합니다. 트랙은 [WebVTT](/ko/docs/Web/API/WebVTT_API)(Web Video Text Tracks, `.vtt` 파일) 또는 [Timed Text Markup Language(TTML)](https://w3c.github.io/ttml2/index.html)형식을 사용해야 합니다.
 
@@ -62,7 +62,7 @@ translation_of: Web/HTML/Element/track
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("default")}}
   - : 사용자 설정이 다른 자막을 가리키지 않는다면 활성화할 기본 트랙을 나타냅니다. 하나의 미디어 요소 당 하나의 `<track>` 요소에만 사용할 수 있습니다.

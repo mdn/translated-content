@@ -1,15 +1,8 @@
 ---
 title: BiquadFilterNode
 slug: Web/API/BiquadFilterNode
-tags:
-  - API
-  - BiquadFilterNode
-  - CompatibilidadeNavegadorCelular
-  - Interface
-  - Referencia
-  - Web Audio API
-translation_of: Web/API/BiquadFilterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 A interface `BiquadFilterNode` representa um filtro simples de ordem baixa, e é criada utilizando o método {{ domxref("AudioContext.createBiquadFilter()") }} . É o {{domxref("AudioNode")}} que pode representar diferentes tipos de filtros, dispositivo de controle de timbre, e equalizadores gráficos. Um `BiquadFilterNode` sempre tem exatamente uma entrada e uma saída.
@@ -80,7 +73,7 @@ _Herda os métodos de seu pai,_ _{{domxref("AudioNode")}}_.
 
 ## Exemplo
 
-{{page("/en-US/docs/Web/API/AudioContext.createBiquadFilter","Example")}}
+{{page("/pt-BR/docs/Web/API/AudioContext.createBiquadFilter","Example")}}
 
 ## Especificações
 

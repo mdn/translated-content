@@ -1,16 +1,10 @@
 ---
 title: Sobre o MDN
 slug: MDN/Writing_guidelines
-tags:
-  - Colaboração
-  - Comunidade
-  - Guia(2)
-  - Licenças
-  - MDN Meta
-translation_of: MDN/About
 original_slug: MDN/About
 ---
-{{MDNSidebar}}{{IncludeSubNav("/pt-BR/docs/MDN")}}
+
+{{MDNSidebar}}
 
 A Rede de Desenvolvedores da Mozilla (MDN) é uma plataforma de aprendizagem em evolução para tecnologias da Web e o software que alimenta a Web, incluindo:
 
@@ -22,7 +16,7 @@ A Rede de Desenvolvedores da Mozilla (MDN) é uma plataforma de aprendizagem em 
 
 A missão da MDN é simples: prover uma completa, exata e útil documentação para tudo sobre a open Web, sendo ele construído, suportado ou não pela Mozilla. Se é uma tecnologia aberta e Web, queremos documentá-lo.
 
-Além disso, podemos fornecer a documentação sobre como [desenvolver e contribuir com os projetos da Mozilla](/pt-BR/docs/Mozilla), [Firefox OS](/en-US/Firefox_OS) e [desenvolvimento de Web app](/en-US/Apps).
+Além disso, podemos fornecer a documentação sobre como [desenvolver e contribuir com os projetos da Mozilla](/pt-BR/docs/Mozilla), [Firefox OS](/pt-BR/Firefox_OS) e [desenvolvimento de Web app](/pt-BR/Apps).
 
 Se você não tem certeza se um tópico específico deve ser abordado no MDN leia: [Isso pertence ao MDN?](/pt-BR/docs/Project:MDN/Contributing/Does_this_belong)
 
@@ -103,8 +97,8 @@ Naturalmente, nossa comunidade de escrita é atarefada, então às vezes a forma
 
 O projeto Mozilla Developer Network (a.k.a. Mozilla Developer Center (MDC), a.k.a. _Devmo_) começou no início de 2005, quando a [Mozilla Foundation](http://www.mozillafoundation.org) obteve uma licença da AOL para utilizar o conteúdo original [DevEdge](/Project:en/DevEdge). Os materiais ainda úteis foram extraídos do conteúdo DevEdge, e então migrados por voluntários para essa wiki, pra que a manutenção e atualização fossem mais fáceis.
 
-Desde então, o projeto continuou a crescer e agora forma um nexo central para toda a documentação para desenvolvedores relacionada ao Mozilla Project e tecnologias abertas da web. Em 2010, o nome mudou para Mozilla Developer Network; 2011 viu a adição do [Demo Studio](http://developer.mozilla.org/en-US/demos) para desenvolvedores web compartilharem e exibirem seu código, e páginas [Learning](http://developer.mozilla.org/en-US/learn) para fornecer links de tutoriais. (O nome MDC ainda vive como "MDN Doc Center" para a seção de documentação.) A tempo, espera-se que a Mozilla Developer Network se torne um recurso que web designers, desenvolvedores de aplicações, e escritores de extensões e temas visitam regularmente.
+Desde então, o projeto continuou a crescer e agora forma um nexo central para toda a documentação para desenvolvedores relacionada ao Mozilla Project e tecnologias abertas da web. Em 2010, o nome mudou para Mozilla Developer Network; 2011 viu a adição do [Demo Studio](http://developer.mozilla.org/pt-BR/demos) para desenvolvedores web compartilharem e exibirem seu código, e páginas [Learning](http://developer.mozilla.org/pt-BR/learn) para fornecer links de tutoriais. (O nome MDC ainda vive como "MDN Doc Center" para a seção de documentação.) A tempo, espera-se que a Mozilla Developer Network se torne um recurso que web designers, desenvolvedores de aplicações, e escritores de extensões e temas visitam regularmente.
 
 ## Sobre a Mozilla
 
-Se você quer saber mais sobre quem somos, como fazer parte da Mozilla ou apenas onde nos encontrar, você veio ao lugar certo. Para descobrir o que nos impulsiona e nos torna diferentes, visite nossa página de [missão](http://www.mozilla.org/en-US/mission/).
+Se você quer saber mais sobre quem somos, como fazer parte da Mozilla ou apenas onde nos encontrar, você veio ao lugar certo. Para descobrir o que nos impulsiona e nos torna diferentes, visite nossa página de [missão](http://www.mozilla.org/pt-BR/mission/).

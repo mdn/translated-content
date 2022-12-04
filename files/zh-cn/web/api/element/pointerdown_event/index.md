@@ -5,7 +5,7 @@ slug: Web/API/Element/pointerdown_event
 
 {{ApiRef("HTML DOM")}}
 
-{{event("pointerdown")}} 事件的 {{domxref("GlobalEventHandlers","全局事件处理程序")}}
+**`pointerdown`** 事件的 {{domxref("GlobalEventHandlers","全局事件处理程序")}}
 
 ## 语法
 
@@ -44,10 +44,20 @@ function init() {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- {{ event("pointerdown") }}
+- 相关事件
+
+  - [`gotpointercapture`](/zh-CN/docs/Web/API/Element/gotpointercapture_event)
+  - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
+  - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
+  - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)
+  - [`pointermove`](/zh-CN/docs/Web/API/Element/pointermove_event)
+  - [`pointercancel`](/zh-CN/docs/Web/API/Element/pointercancel_event)
+  - [`pointerup`](/zh-CN/docs/Web/API/Element/pointerup_event)
+  - [`pointerout`](/zh-CN/docs/Web/API/Element/pointerout_event)
+  - [`pointerleave`](/zh-CN/docs/Web/API/Element/pointerleave_event)

@@ -10,6 +10,7 @@ tags:
   - Video
 translation_of: Web/Guide/Audio_and_video_delivery
 ---
+
 We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web based media and compatibility with popular browsers.
 
 ## The Audio and Video Elements
@@ -302,7 +303,7 @@ window.onload = function() {
 }
 ```
 
-You can [try this example out here](http://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player).
+You can [try this example out here](http://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player).
 
 ## Other tips for audio/video
 

@@ -40,13 +40,11 @@ window.addEventListener('copy', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-copy')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.copy_event")}}
+{{Compat}}
 
 ## 関連情報
 

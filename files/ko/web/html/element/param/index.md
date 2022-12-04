@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/param
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<param>` 요소**는 {{HTMLElement("object")}} 요소의 매개변수를 정의합니다.
 
@@ -54,7 +55,7 @@ translation_of: Web/HTML/Element/param
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("name")}}
   - : 매개변수의 이름.

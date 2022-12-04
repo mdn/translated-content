@@ -886,7 +886,7 @@ HSL 色は関数表記の `hsl()` および `hsla()` を通して表現されま
 
   - : `H` (色相) は色相環の{{cssxref("&lt;angle&gt;", "角度")}}を {{SpecName("CSS4 Colors","#the-hsl-notation")}} で定義されている `deg`、 `rad`、 `grad`、 `turn` の単位で与えます。単位のない{{cssxref("&lt;number&gt;", "数値")}}の場合は、 {{SpecName("CSS3 Colors", "#hsl-color")}} で定められている通り deg (度) として扱われます。定義では、赤=0deg=360deg であり、他の色は、緑=120deg、 青=240deg、 などのように色相環を回ります。 `<angle>` は暗黙的に周回するので、 -120deg=240deg、 480deg=120deg、 -1turn=1turn のようになります。
 
-    `S` (彩度) と `L` (明度) はパーセント表記です。**彩度**`100%`は完全に鮮やかな色で、彩度`0%`は完全に薄い色 (灰色) です。**明度**`100%`は白で、明度`0%`は黒で、明度`50%`は「普通」です。
+    `S` (彩度) と `L` (明度) はパーセント表記です。**彩度** `100%` は完全に鮮やかな色で、彩度`0%`は完全に薄い色 (灰色) です。**明度**`100%`は白で、明度`0%`は黒で、明度`50%`は「普通」です。
 
     `A` (アルファ)は`0`と`1`の間の{{cssxref("&lt;number&gt;")}}、または{{cssxref("&lt;percentage&gt;")}}で、数値`1`が`100%` (不透明) です。
 
@@ -1402,52 +1402,7 @@ hsla(240 100% 50% / 5%)       /*   5% 半透明の青 */
 
 ## 仕様書
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSS4 Colors', '#changes-from-3')}}</td>
-      <td>{{Spec2('CSS4 Colors')}}</td>
-      <td>
-        LCH および Lab の色、<code>color()</code> 関数表記、<code>rebeccapurple</code>、4 桁 (<code>#RGBA</code>) および 8 桁 (<code>#RRGGBBAA</code>) の 16 進表記を追加し、<code>rgba()</code> および <code>hsla()</code> を <code>rgb()</code> および <code>hsl()</code> の別名とし (引数の構文を共通化)、関数の空白区切りの引数をカンマの代替とし、アルファ値にパーセント値を追加し、<code>hsl()</code> 色の色相の角度表記を追加。
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('CSS3 Colors', '#colorunits', '&lt;color&gt;')}}
-      </td>
-      <td>{{Spec2('CSS3 Colors')}}</td>
-      <td>
-        システム色を非推奨化。 SVG 色を追加。<code>rgba()</code>,
-        <code>hsl()</code>, <code>hsla()</code> 関数表記を追加。
-      </td>
-    </tr>
-    <tr style="vertical-align: top">
-      <td style="vertical-align: top">
-        {{SpecName('CSS2.1', 'syndata.html#value-def-color', '&lt;color&gt;')}}
-      </td>
-      <td style="vertical-align: top">{{Spec2('CSS2.1')}}</td>
-      <td style="vertical-align: top">
-        <code>orange</code> キーワードとシステム色を追加。
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top">
-        {{SpecName('CSS1', '#color-units', '&lt;color&gt;')}}
-      </td>
-      <td style="vertical-align: top">{{Spec2('CSS1')}}</td>
-      <td style="vertical-align: top">
-        初回定義。基本 16 色のキーワードを含む。
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## ブラウザーの互換性
 

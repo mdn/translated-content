@@ -1,8 +1,8 @@
 ---
 title: Allow
 slug: Web/HTTP/Headers/Allow
-translation_of: Web/HTTP/Headers/Allow
 ---
+
 {{HTTPSidebar}}
 
 La cabecera **`Allow`** enumera el conjunto de métodos admitidos por un recurso.
@@ -15,7 +15,7 @@ Esta cabecera debe ser enviada si el servidor responde con un estado {{HTTPStatu
 
 ## Sintáxis
 
-```
+```js
 Allow: <http-methods>
 ```
 

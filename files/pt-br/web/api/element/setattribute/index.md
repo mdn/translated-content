@@ -1,14 +1,8 @@
 ---
 title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
-tags:
-  - Elemento
-  - IPA
-  - MOD
-  - Referencia
-  - metodo
-translation_of: Web/API/Element/setAttribute
 ---
+
 {{APIRef("DOM")}}
 
 Adiciona um novo atributo ou modifica o valor de um atributo existente num elemento específico.
@@ -44,7 +38,7 @@ Quando chamado em um documento HTML, `setAttribute` lower-cases its attribute na
 
 Se um atributo especificado já existe, então o valor do atributo é mudado para o valor passado para a função. Se não existe, então o atributo é criado.
 
-Apesar de [`getAttribute()`](/en-US/docs/DOM/element.getAttribute) retornar `null` para atributos ausentes, você precisa usar [`removeAttribute()`](/en-US/docs/DOM/element.removeAttribute) ao invés de `elt.setAttribute(attr, null)` para remover o atributo. Este último forçará o valor `null` para a string `"null"`, o que não é provavelmente o que você quer.
+Apesar de [`getAttribute()`](/pt-BR/docs/DOM/element.getAttribute) retornar `null` para atributos ausentes, você precisa usar [`removeAttribute()`](/pt-BR/docs/DOM/element.removeAttribute) ao invés de `elt.setAttribute(attr, null)` para remover o atributo. Este último forçará o valor `null` para a string `"null"`, o que não é provavelmente o que você quer.
 
 Usar `setAttribute()` para modificar certos atributos, mais notavelmente valor em XUL, funciona inconsistentemente, como atributos específicos de valor padrão. Para acessar ou modificar os valores atuais, você deve usar as propriedades. Por exemplo, use `elt.value` ao invés de `elt.setAttribute('value', val)`.
 
@@ -54,5 +48,5 @@ Para definir um atributo que não leva valor, assim como o atributo `autoplay` d
 
 ## Especificação
 
-- [DOM Level 2 Core: setAttribute](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) (introduzido em [DOM Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute))
+- [DOM Level 2 Core: setAttribute](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-F68F082) (introduzido em [DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-setAttribute))
 - [HTML5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/#apis-in-html-documents)

@@ -1,8 +1,8 @@
 ---
 title: in operator
 slug: Web/JavaScript/Reference/Operators/in
-translation_of: Web/JavaScript/Reference/Operators/in
 ---
+
 {{jsSidebar("Operators")}}
 
 O **operador** **`in`** retorna `true` se a propriedade especificada estiver no objeto especificado ou na sua cadeia de protótipo (prototype chain) desde objeto.
@@ -57,7 +57,7 @@ var color2 = 'coral';
 
 ### Usando `in` com propriedade removida ou undefined
 
-Se você remover uma propriedade com o operador [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete) , o operador `in` retorna `false` para essa propriedade.
+Se você remover uma propriedade com o operador [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete) , o operador `in` retorna `false` para essa propriedade.
 
 ```js
 var mycar = {make: 'Honda', model: 'Accord', year: 1998};
@@ -106,8 +106,8 @@ O operador `in` retorna `true` para propriedades que estão na cadeida de protó
 
 ## Ver também
 
-- [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
-- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [`for...in`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in)
+- [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
 - [Enumerability and ownership of properties](/pt-BR/docs/Enumerability_and_ownership_of_properties)

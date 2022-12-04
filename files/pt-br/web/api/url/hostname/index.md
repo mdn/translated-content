@@ -1,14 +1,6 @@
 ---
 title: URL.hostname
 slug: Web/API/URL/hostname
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-browser-compat: api.URL.hostname
 ---
 
 {{ApiRef("URL API")}}
@@ -25,7 +17,7 @@ Uma {{domxref("USVString")}}.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/hostname"
+  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/hostname"
 );
 console.log(url.hostname); // Logs: 'developer.mozilla.org'
 ```

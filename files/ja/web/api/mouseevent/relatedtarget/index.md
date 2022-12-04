@@ -1,9 +1,11 @@
 ---
 title: MouseEvent.relatedTarget
 slug: Web/API/MouseEvent/relatedTarget
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
 **`MouseEvent.relatedTarget`** は読み取り専用プロパティで、もしあれば、マウスイベントの副ターゲットを表します。
 
@@ -55,7 +57,7 @@ slug: Web/API/MouseEvent/relatedTarget
       </td>
     </tr>
     <tr>
-      <td>{{Event("dragenter")}}</td>
+      <td>{{domxref("HTMLElement/dragenter_event", "dragenter")}}</td>
       <td>
         ポインティングデバイスが入った {{domxref("EventTarget")}}
       </td>
@@ -64,7 +66,7 @@ slug: Web/API/MouseEvent/relatedTarget
       </td>
     </tr>
     <tr>
-      <td>{{Event("dragleave")}}</td>
+      <td>{{domxref("HTMLElement/dragleave_event", "dragleave")}}</td>
       <td>
         ポインティングデバイスが離れた {{domxref("EventTarget")}}
       </td>
@@ -146,13 +148,13 @@ function outListener(event) {
 function overListener(event) {
   let related = event.relatedTarget ? event.relatedTarget.id : "unknown";
 
-  log.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
+  mouseoutLog.innerText = `\ninto ${event.target.id} from ${related} ${mouseoutLog.innerText}`;
 }
 ```
 
 ### 結果
 
-{{EmbedLiveSample("Example", 700, 280)}}
+{{EmbedLiveSample("Examples", 700, 280)}}
 
 ## 仕様書
 

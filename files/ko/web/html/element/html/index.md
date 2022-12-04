@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/html
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<html>` 요소**는 HTML 문서의 루트(최상단 요소)를 나타내며, "루트 요소"라고도 부릅니다. 모든 다른 요소는 `<html>` 요소의 후손이어야 합니다.
 
@@ -61,7 +61,7 @@ translation_of: Web/HTML/Element/html
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("manifest")}} {{deprecated_inline}}
   - : 지역적으로 캐시되어야하는 리소스를 가리키는 매니페스트 리소스의 URI를 나타냅니다. 자세한 내용은 [애플리케이션 캐시 사용하기](/ko/docs/HTML/Using_the_application_cache)를 보세요.

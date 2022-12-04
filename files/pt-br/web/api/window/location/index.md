@@ -1,8 +1,8 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
-translation_of: Web/API/Window/location
 ---
+
 {{APIRef}}
 
 O **`Window.location`**é uma propriedade de leitura que retorna um objeto {{domxref("Location")}} com informações de localização do documento atual.
@@ -21,7 +21,7 @@ location = newLocation;
 ### Exemplo básico
 
 ```js
-alert(location); // alerta "https://developer.mozilla.org/en-US/docs/Web/API/Window.location"
+alert(location); // alerta "https://developer.mozilla.org/pt-BR/docs/Web/API/Window.location"
 ```
 
 ### Exemplo #1: Navegando para uma nova página
@@ -198,5 +198,5 @@ var showBookmark = (function () {
 
 - The interface of the returned value, {{domxref("Location")}}.
 - A similar information, but attached to the {{Glossary("browsing context")}}, {{domxref("Document.location")}}.
-- [Manipulating the browser history](/en/DOM/Manipulating_the_browser_history)
+- [Manipulating the browser history](/pt-BR/DOM/Manipulating_the_browser_history)
 - [hashchange](/pt-BR/docs/DOM/Mozilla_event_reference/hashchange)

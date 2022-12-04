@@ -6,6 +6,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Subtraction
 original_slug: Web/JavaScript/Referencia/Operadores/Sustracción
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador de sustracción (`-`) sustrae dos operandos, produciendo su diferencia.
@@ -35,9 +36,7 @@ Operator: x - y
 
 ## Especificaciones
 
-| Specification                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-subtraction-operator-minus', 'Subtraction operator')}} |
+{{Specifications}}
 
 ## Compatibilidad entre exploradores
 

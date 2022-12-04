@@ -3,17 +3,17 @@ title: <option>
 slug: Web/HTML/Element/option
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-**HTML 元素\_ _`<option>`_ \_**用于定义在 {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} 或 {{HTMLElement("datalist")}} 元素中包含的项。`<option>` 可以在弹出窗口和 HTML 文档中的其他项目列表中表示菜单项。
+**HTML 元素 _`<option>`_** 用于定义在 {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} 或 {{HTMLElement("datalist")}} 元素中包含的项。`<option>` 可以在弹出窗口和 HTML 文档中的其他项目列表中表示菜单项。
 
 {{EmbedInteractiveExample("pages/tabbed/option.html", "tabbed-standard")}}
 
 - _[内容类别](/zh-CN/docs/Web/HTML/Content_categories)_ 无
 - *允许的内容*带有最终转义字符（例如 `&eacute;`）的文本
 - _标记省略_ 开始标记是必需的。如果此元素紧接着是另一个 `<option>` 元素或{{HTMLElement("optgroup")}}, 或者父元素没有其他内容，则结束标记是可选的。
-- _Implicit ARIA role_{{ARIARole("option")}}
-- \_Permitted ARIA roles_No `role` permitted
+- _Implicit ARIA role_ {{ARIARole("option")}}
+- _Permitted ARIA roles_ No `role` permitted
 - _允许的父元素_ A {{HTMLElement("select")}}, an {{HTMLElement("optgroup")}} or a {{HTMLElement("datalist")}} element.
 - _DOM 接口_ {{domxref("HTMLOptionElement")}}
 

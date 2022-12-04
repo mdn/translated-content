@@ -44,9 +44,7 @@ const writableStream = new WritableStream({
 
 ## 仕様
 
-| 仕様                                                                                                                 | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams','#ws-default-controller-class','WritableStreamDefaultController')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

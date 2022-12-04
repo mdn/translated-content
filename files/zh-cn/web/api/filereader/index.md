@@ -40,17 +40,17 @@ slug: Web/API/FileReader
 ### 事件处理
 
 - {{domxref("FileReader.onabort")}}
-  - : 处理{{event("abort")}}事件。该事件在读取操作被中断时触发。
+  - : 处理[`abort`](/zh-CN/docs/Web/API/HTMLMediaElement/abort_event)事件。该事件在读取操作被中断时触发。
 - {{domxref("FileReader.onerror")}}
-  - : 处理{{event("error")}}事件。该事件在读取操作发生错误时触发。
+  - : 处理[`error`](/zh-CN/docs/Web/API/Element/error_event)事件。该事件在读取操作发生错误时触发。
 - {{domxref("FileReader.onload")}}
-  - : 处理{{event("load")}}事件。该事件在读取操作完成时触发。
+  - : 处理[`load`](/zh-CN/docs/Web/API/Window/load_event)事件。该事件在读取操作完成时触发。
 - {{domxref("FileReader.onloadstart")}}
-  - : 处理{{event("loadstart")}}事件。该事件在读取操作开始时触发。
+  - : 处理[`loadstart`](/zh-CN/docs/Web/API/XMLHttpRequest/loadstart_event)事件。该事件在读取操作开始时触发。
 - {{domxref("FileReader.onloadend")}}
-  - : 处理{{event("loadend")}}事件。该事件在读取操作结束时（要么成功，要么失败）触发。
+  - : 处理[`loadend`](/zh-CN/docs/Web/API/XMLHttpRequest/loadend_event)事件。该事件在读取操作结束时（要么成功，要么失败）触发。
 - {{domxref("FileReader.onprogress")}}
-  - : 处理{{event("progress")}}事件。该事件在读取{{domxref("Blob")}}时触发。
+  - : 处理[`progress`](/zh-CN/docs/Web/API/XMLHttpRequest/progress_event)事件。该事件在读取{{domxref("Blob")}}时触发。
 
 > **备注：** 因为 `FileReader` 继承自{{domxref("EventTarget")}}，所以所有这些事件也可以通过{{domxref("EventTarget.addEventListener()","addEventListener")}}方法使用。
 

@@ -10,9 +10,9 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/footer
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
-**HTML-элемент** **`<footer>` **представляет собой нижний колонтитул (футер, подвал) для своего ближайшего [секционного контента](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Задание_разделов_в_HTML5) или [секционного корня](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Корни_задания_разделов). Футер обычно содержит информацию об авторе раздела, информацию об авторском праве или ссылки на связанные документы.
+**HTML-элемент** **`<footer>`** представляет собой нижний колонтитул (футер, подвал) для своего ближайшего [секционного контента](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Задание_разделов_в_HTML5) или [секционного корня](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Корни_задания_разделов). Футер обычно содержит информацию об авторе раздела, информацию об авторском праве или ссылки на связанные документы.
 
 {{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
 
@@ -31,7 +31,7 @@ translation_of: Web/HTML/Element/footer
 ## Примечание
 
 - Заключите информацию об авторе в элемент {{HTMLElement("address")}}, который может быть добавлен в элемент `<footer>`.
-- Элемент `<footer>` не относится к секционному контенту, а значит не создаёт новый раздел в [структуре HTML-документа](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document "Разделы и структура документа HTML5").
+- Элемент `<footer>` не относится к секционному контенту, а значит не создаёт новый раздел в [структуре HTML-документа](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).
 
 ## Примеры
 

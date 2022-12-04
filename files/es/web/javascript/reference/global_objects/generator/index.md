@@ -1,17 +1,9 @@
 ---
 title: Generador
 slug: Web/JavaScript/Reference/Global_Objects/Generator
-tags:
-  - ECMAScript2015
-  - ECMAScript6
-  - Generador
-  - Generador Legado
-  - Iterador Legado
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador
 ---
+
 {{JSRef}}
 
 El objeto `Generator` es retornado por una {{jsxref("Statements/function*", "función generator", "", 1)}} y es conformado tanto el protocolo iterable como el protocolo iterador.
@@ -103,12 +95,7 @@ console.log(it.next());   // throws StopIteration (as the generator is now close
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                       | Comentario         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES2015', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ES2015')}}     | Definición inicial |
-| {{SpecName('ESDraft', '#sec-generator-objects', 'Generator objects')}} | {{Spec2('ESDraft')}} |                    |
-|                                                                                              |                              |                    |
-|                                                                                              |                              |                    |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

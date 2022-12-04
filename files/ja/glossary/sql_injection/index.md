@@ -65,5 +65,5 @@ $id = $_GET['id']
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "SQL injection")}}
+- Wikipedia の [SQL インジェクション](https://ja.wikipedia.org/wiki/SQLインジェクション)
 - [Explanation of SQL injection](https://www.owasp.org/index.php/SQL_Injection) on OWASP (Open Web Application Security Project)

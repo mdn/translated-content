@@ -1,12 +1,8 @@
 ---
 title: EventSource
 slug: Web/API/EventSource
-tags:
-  - API
-  - Interface
-  - eventos
-translation_of: Web/API/EventSource
 ---
+
 {{APIRef("Websockets API")}}
 
 A interface `EventSource` é usada para receber eventos enviados pelo servidor ([server-sent events](/pt-BR/docs/Web/API/Server-sent_events)). Ele se conecta via HTTP em um servidor e recebe eventos com o formato `text/event-stream`. A conexão permanece aberta até ser fechada chamando {{domxref("EventSource.close()")}}.

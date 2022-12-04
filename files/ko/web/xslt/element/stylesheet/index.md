@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/stylesheet
 original_slug: Web/XSLT/stylesheet
 ---
+
 {{ XsltRef() }}
 
 `<xsl:stylesheet>`(나 동등한 `<xsl:transform>`) 요소는 스타일시트의 최외곽 요소입니다.
@@ -18,12 +19,12 @@ pseudo 속성은 XSLT 스타일시트로 문서를 식별하기 위해 필요합
 
 ```
 <xsl:stylesheet
-	version=NUMBER
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	id=NAME
-	extension-element-prefixes=LIST-OF-NAMES
-	exclude-result-prefixes=LIST-OF-NAMES>
-		ENTIRE STYLESHEET
+  version=NUMBER
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  id=NAME
+  extension-element-prefixes=LIST-OF-NAMES
+  exclude-result-prefixes=LIST-OF-NAMES>
+    ENTIRE STYLESHEET
 </xsl:stylesheet>
 ```
 
@@ -34,7 +35,7 @@ pseudo 속성은 XSLT 스타일시트로 문서를 식별하기 위해 필요합
 
 ### 선택 속성
 
-- `id `(7.0 현재 오직 inline DTD가 명시하여 호출하는 경우만 지원함.)
+- `id` (7.0 현재 오직 inline DTD가 명시하여 호출하는 경우만 지원함.)
   - : 이 스타일시트에 `id`를 지정합니다. 이는 스타일시트를 다른 XML 문서에 포함할 때 가장 자주 씁니다.
 - extension-element-prefixes (지원 안 함.)
   - : 이 문서의 확장 요소에 빈칸으로 구분한 이름공간 접두사를 지정합니다.

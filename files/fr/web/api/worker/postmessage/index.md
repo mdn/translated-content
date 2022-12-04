@@ -32,7 +32,7 @@ Vide.
 
 ## Exemple
 
-L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}. Quand les deux champs de formulaire (`fisrt` et `second`) ont été changés, les évènements {{event("change")}} invoquent `postMessage()` pour envoyer la valeur des deux entrées au _worker_ courant.
+L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}. Quand les deux champs de formulaire (`fisrt` et `second`) ont été changés, les évènements [`change`](/fr/docs/Web/API/HTMLElement/change_event) invoquent `postMessage()` pour envoyer la valeur des deux entrées au _worker_ courant.
 
 ```js
 var myWorker = new Worker('worker.js');

@@ -1,17 +1,9 @@
 ---
 title: Tutorials
 slug: Games/Tutorials
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-  - NeedsTranslation
-  - TopicStub
-  - Web
-  - Workflows
-translation_of: Games/Tutorials
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+
+{{GamesSidebar}}
 
 This page contains multiple tutorial series that highlight different workflows for effectively creating different types of web games.
 

@@ -1,8 +1,8 @@
 ---
 title: try...catch
 slug: Web/JavaScript/Reference/Statements/try...catch
-translation_of: Web/JavaScript/Reference/Statements/try...catch
 ---
+
 {{jsSidebar("Statements")}}
 
 As declarações **try...catch** marcam um bloco de declarações para testar (**try**), e especifica uma resposta, caso uma exceção seja lançada.
@@ -112,7 +112,7 @@ try {
 
 ### O identificador de exceção
 
-Quando uma exceção é lançada no bloco `try`, _`exception_var`_ (ex. o `e` dentro de `catch (e)`) armazena o valor especificado pela declaração `throw`. Você pode usar esse identificador para conseguir informação sobre a exceção que foi lançanda.
+Quando uma exceção é lançada no bloco `try`, `exception_var` (ex. o `e` dentro de `catch (e)`) armazena o valor especificado pela declaração `throw`. Você pode usar esse identificador para conseguir informação sobre a exceção que foi lançanda.
 
 Esse identificador é local para a cláusula `catch`. Ou seja, é criado quando a cláusula `catch` é introduzida e após terminar sua excecução o identificador não se torna mais disponível.
 
@@ -240,5 +240,5 @@ O "oops" externo não é lançado devido ao retorno do bloco `finally`. O mesmo 
 
 ## Vejam também
 
-- [throw](/en/JavaScript/Reference/Statements/throw)
-- [Error](/en/JavaScript/Reference/Global_Objects/Error)
+- [throw](/pt-BR/JavaScript/Reference/Statements/throw)
+- [Error](/pt-BR/JavaScript/Reference/Global_Objects/Error)

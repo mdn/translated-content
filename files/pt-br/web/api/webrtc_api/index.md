@@ -1,20 +1,8 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
-tags:
-  - API
-  - Audio
-  - Landing
-  - Media
-  - NeedsTranslation
-  - Networking
-  - TopicStub
-  - Video
-  - WebRTC
-  - WebRTC API
-  - streaming
-translation_of: Web/API/WebRTC_API
 ---
+
 {{APIRef("WebRTC")}}
 
 **WebRTC** (Web Real-Time Communications) é uma tecnologia que permite aplicativos e sites da Web a capturarem e opcionalmente transmitirem mídia de áudio e/ou vídeo, assim como trocar informação arbitrária entre navegadores sem a necessidade de um intermediador. O conjunto de padrões que abrangem WebRTC possibilita o compartilhamento de informação e a realização de teleconferência peer-to-peer, dispensando a instalação de _plug-ins_ ou quaisquer softwares de terceiros.

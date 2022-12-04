@@ -1,11 +1,11 @@
 ---
 title: Especificidade
 slug: Web/CSS/Specificity
-translation_of: Web/CSS/Specificity
 ---
+
 ## O Conceito
 
-A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na composição de diferentes tipos de [seletores](/en/CSS/CSS_Reference#Selectors).
+A especificação é a maneira de como os navegadores definem quais valores de propriedades são os mais relevantes para o elemento a ser utilizado. A especificação é baseada apenas nas regras impostas na composição de diferentes tipos de [seletores](/pt-BR/CSS/CSS_Reference#Selectors).
 
 ## Como isso é calculado?
 
@@ -119,5 +119,4 @@ Aqui está o título!
 
 ## Veja Também
 
-- Espcificação de Seletores CSS - <http://www.w3.org/TR/selectors/#specificity>
-- {{ CSS_key_concepts() }}
+- Espcificação de Seletores CSS - <https://www.w3.org/TR/selectors/#specificity>

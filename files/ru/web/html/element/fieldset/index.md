@@ -3,6 +3,9 @@ title: '<fieldset>: The Field Set element'
 slug: Web/HTML/Element/fieldset
 translation_of: Web/HTML/Element/fieldset
 ---
+
+{{HTMLSidebar}}
+
 **HTML-элемент `<fieldset>`** используется для группировки нескольких элементов управления в веб-форме.
 
 {{EmbedInteractiveExample("pages/tabbed/fieldset.html", "tabbed-standard")}}
@@ -18,7 +21,8 @@ translation_of: Web/HTML/Element/fieldset
 - {{htmlattrdef("form")}} {{HTMLVersionInline(5)}}
   - : Этот атрибут принимает значение атрибута `id` элемента {{HTMLElement("form")}}, с которой вам нужно связать `<fieldset>`, даже если он находится вне формы.
 - {{htmlattrdef("name")}} {{HTMLVersionInline(5)}}
-  - : Имя, связанное с группой.> **Примечание:** Заголовок для \<fieldset> устанавливается первым {{HTMLElement("legend")}} внутри него.
+  - : Имя, связанное с группой.
+    > **Примечание:** Заголовок для \<fieldset> устанавливается первым {{HTMLElement("legend")}} внутри него.
 
 ## Стилизация с CSS
 
@@ -104,5 +108,3 @@ translation_of: Web/HTML/Element/fieldset
   - {{HTMLElement("output")}}
   - {{HTMLElement("progress")}}
   - {{HTMLElement("meter")}}
-
-{{HTMLRef}}

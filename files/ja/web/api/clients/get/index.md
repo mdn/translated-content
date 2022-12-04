@@ -34,9 +34,7 @@ self.clients.get(id).then(function(client) {
 
 ## 仕様
 
-| 仕様                                                                             | 状態                                 | コメント |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-clients-get', 'get()')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

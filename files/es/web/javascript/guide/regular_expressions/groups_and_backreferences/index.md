@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Los grupos y rangos indican grupos y rangos de caracteres de expresión.
@@ -75,9 +76,7 @@ do {
 
 ## Especificaciones
 
-| Especificación                                                                   |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-classranges', 'RegExp: Ranges')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -1,8 +1,8 @@
 ---
 title: Document.registerElement()
 slug: Web/API/Document/registerElement
-translation_of: Web/API/Document/registerElement
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 El **`Document.registerElement()`** registra un nuevo [elemento personalizado](/es/docs/Web/Web_Components/Custom_Elements) en el navegador y devuelve un constructor para el nuevo elemento.

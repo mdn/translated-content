@@ -9,6 +9,7 @@ tags:
   - 레퍼런스
 translation_of: Web/HTTP/Headers
 ---
+
 {{HTTPSidebar}}
 
 HTTP 헤더는 클라이언트와 서버가 요청 또는 응답으로 부가적인 정보를 전송할 수 있도록 해줍니다. HTTP 헤더는 대소문자를 구분하지 않는 이름과 콜론 '`:`' 다음에 오는 값(줄 바꿈 없이)으로 이루어져있습니다. 값 앞에 붙은 빈 문자열은 무시됩니다.
@@ -73,7 +74,7 @@ HTTP 클라이언트 힌트는 작업중에 있습니다. 실제 문서는 [HTTP
   - : `DPR` 요청 헤더 필드는 레이아웃 뷰포트(Section 9.1.1 of [\[CSS2\]](https://httpwg.org/http-extensions/client-hints.html#CSS2))의 CSS px(Section 5.2 of [\[CSSVAL\]](https://httpwg.org/http-extensions/client-hints.html#CSSVAL))를 통한 물리적 픽셀 비율인 클라이언트의 현재 기기 픽셀 비율(DPR)을 나타내는 숫자입니다.
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
 
-  - :&#x20;
+  - : &#x20;
 
     <a class="internalDFN" href="https://wicg.github.io/netinfo/#dom-networkinformation-savedata"><code>SaveData</code></a>
 
@@ -168,8 +169,6 @@ _[여기](CORS)에서 CORS에 대해 더 알아보세요._
   - : 실제 요청이 있을 때 사용될 HTTP 헤더를 서버에 알리기 위한 preflight 요청을 보낼 때 사용됩니다.
 - {{HTTPHeader("Access-Control-Request-Method")}}
   - : 실제 요청이 있을 때 사용될 [HTTP 메소드](/ko/docs/Web/HTTP/Methods)를 서버에 알리기 위한 preflight 요청을 보낼 때 사용됩니다.
-
-
 - {{HTTPHeader("Origin")}}
   - : 페치가 시작된 위치를 나타냅니다.
 - {{HTTPHeader("Timing-Allow-Origin")}}
@@ -263,24 +262,16 @@ _[여기](CORS)에서 CORS에 대해 더 알아보세요._
   - : 사이트가 잘못 발급된 인증서의 사용이 눈에 띄지 않게 넘어가는것을 방지해주는 인증서 투명성(Certificate Transparency) 요구 보고 및/또는 시행을 옵트인할 수 있게 해줍니다. 사이트가 Expect-CT 헤더를 사용할 때, 사이트는 공개 CT 로그에 나타난 사이트에 대한 모든 인증서를 Chrome이 확인하도록 요청합니다.
 - {{HTTPHeader("Feature-Policy")}}
   - : 소유한 프레임 및 내장된 iframe에서 브라우저 기능의 사용을 허용 및 거부하기위한 메커니즘을 제공합니다.
-
-
 - {{HTTPHeader("Public-Key-Pins")}} ({{Glossary("HPKP")}})
   - : 위조된 인증서를 사용한 {{Glossary("MITM")}} 공격의 위험을 줄이기 위해 특정 웹 서버에 특정 암호화 공개 키를 연결합니다.
 - {{HTTPHeader("Public-Key-Pins-Report-Only")}}
   - : 헤더에 지정된 report-uri로 보고를 전송하고 피닝을 위반하더라도 클라이언트가 서버에 접속하는 것을 계속 허용합니다.
-
-
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : HTTP 대신 HTTPS를 사용하여 통신하도록 강제합니다.
 - {{HTTPHeader("Upgrade-Insecure-Requests")}}
   - : 암호화된 응답과 인증된 응답에 대한 클라이언트의 설정을 나타내는 신호를 서버에 전송하며, {{CSP("upgrade-insecure-requests")}} 지시자를 성공적으로 처리할 수 있습니다.
-
-
 - {{HTTPHeader("X-Content-Type-Options")}}
   - : MIME 스니핑을 비활성화하고 브라우저가 {{HTTPHeader("Content-Type")}}에 주어진 타입을 사용하도록 강제합니다.
-
-
 - {{HTTPHeader("X-Download-Options")}}
   - : 브라우저(인터넷 익스플로러)가 파일을 통한 피싱 공격을 방지하기 위해 애플리케이션으로부터 다운로드된 파일에 "열기" 옵션을 표시하면 안되는지 여부를 나타냅니다. 피싱 공격을 방지하지 못할 경우 파일을 애플리케이션의 컨텍스트에서 실행할 권한을 얻게됩니다.
 
@@ -337,8 +328,6 @@ _[여기](CORS)에서 CORS에 대해 더 알아보세요._
   - : [`Link`](https://tools.ietf.org/html/rfc5988#section-5) 엔티티 헤더 필드는 HTTP 헤더내의 하나 이상의 링크를 직렬화하기위한 수단을 제공합니다. HTML {{HTMLElement("link")}} 엘리먼트와 의미상으로 동일합니다.
 - {{HTTPHeader("Push-Policy")}} {{experimental_inline}}
   - : [`Push-Policy`](https://tools.ietf.org/html/draft-ruellan-http-accept-push-policy-00#section-3.2)는 요청을 처리할 때 푸시에 관련된 서버의 동작을 정의합니다.
-
-
 - {{HTTPHeader("Retry-After")}}
   - : 유저 에이전트가 다음 요청을 생성하기전에 얼마나 기다려야하는지를 나타냅니다.
 - {{HTTPHeader("Signature")}} {{experimental_inline}}

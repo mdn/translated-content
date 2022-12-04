@@ -1,11 +1,8 @@
 ---
 title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-tags:
-  - Internacionalização
-  - Intl
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 ---
+
 {{JSRef}}
 
 O objeto **`Intl.RelativeTimeFormat`** é um construtor de objetos que permitem uma formatação de tempo relativa sensível ao idioma.
@@ -59,13 +56,13 @@ new Intl.RelativeTimeFormat([locales[, options]])
 
 Instâncias `RelativeTimeFormat` herdam as seguintes propriedades do seu protótipo:
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype', 'Properties')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype', 'Properties')}}
 
 ### Métodos
 
 Instâncias `RelativeTimeFormat` herdam as seguintes propriedades do seu protótipo:
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RelativeTimeFormat/prototype', 'Methods')}}
 
 ## Exemplos
 

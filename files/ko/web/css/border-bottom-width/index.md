@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 translation_of: Web/CSS/border-bottom-width
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border-bottom-width`** 속성은 요소의 아래 테두리 너비를 지정합니다.

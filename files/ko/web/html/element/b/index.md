@@ -11,7 +11,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/b
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<b>` 요소**는 독자의 주의를 요소의 콘텐츠로 끌기 위한 용도로 사용합니다. 그 외의 다른 특별한 중요도는 주어지지 않습니다. 원래는 "굵은 글씨 요소"로 불렸으며, 대부분의 브라우저도 여전히 텍스트를 굵은 글씨체로 강조합니다. 그러나 `<b>`를 사용해 텍스트를 꾸미면 안됩니다. 대신 CSS {{cssxref("font-weight")}}를 사용해 굵은 글씨체를 적용하거나, {{htmlelement("strong")}} 요소를 사용해 특별히 중요한 텍스트를 나타내세요.
 
@@ -73,11 +73,9 @@ translation_of: Web/HTML/Element/b
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## 사용 일람
-
-
 
 - 요약 키워드, 리뷰의 제품명 등, 특별한 중요성을 가지고 있지는 않지만 굵게 표시할 부분에 `&#x3C;b>`를 사용하세요.
 

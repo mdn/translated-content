@@ -40,7 +40,7 @@ html,body,svg { height:100% }
 
 ## Transform functions
 
-`transform` 属性 *`<transform-list>`* 可以使用以下的所有 `transform` 函数
+`transform` 属性 `<transform-list>` 可以使用以下的所有 `transform` 函数
 
 **警告：** 根据规范，您还应该能够使用 CSS {{cssxref('transform-function', 'transform functions')}}，但是，这不能保证兼容性。
 

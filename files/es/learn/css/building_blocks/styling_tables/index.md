@@ -1,8 +1,8 @@
 ---
 title: Estilizando tablas
 slug: Learn/CSS/Building_blocks/Styling_tables
-translation_of: Learn/CSS/Building_blocks/Styling_tables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 Aplicar estilos a una tabla HTML no es el trabajo más interesante del mundo, pero a veces hay que hacerlo. Este artículo proporciona una guía para hacer que las tablas HTML presenten un aspecto agradable, para ello usaremos algunas de las características específicas para tablas que hemos destacado en artículos anteriores.

@@ -1,9 +1,9 @@
 ---
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/asinh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/asinh
 ---
+
 {{JSRef}}
 
 La función **`Math.asinh()`** retorna el arcoseno hyperbólico de un número, es decir
@@ -12,7 +12,7 @@ La función **`Math.asinh()`** retorna el arcoseno hyperbólico de un número, e
 
 ## Sintáxis
 
-```
+```js
 Math.asinh(x)
 ```
 
@@ -56,10 +56,7 @@ Been formally correct it suffers from a number of issues related to floating poi
 
 ## Especificaciones
 
-| Specification                                                                | Status                       | Comment             |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.asinh', 'Math.asinh')}}         | {{Spec2('ES6')}}         | Initial definition. |
-| {{SpecName('ESDraft', '#sec-math.asinh', 'Math.asinh')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidades de buscadores
 

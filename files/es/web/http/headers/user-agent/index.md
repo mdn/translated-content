@@ -1,11 +1,10 @@
 ---
 title: User-Agent
 slug: Web/HTTP/Headers/User-Agent
-translation_of: Web/HTTP/Headers/User-Agent
-browser-compat: http.headers.User-Agent
 l10n:
   sourceCommit: 281e3b21178946c8301232a8eb50d11770ee8450
 ---
+
 {{HTTPSidebar}}
 
 El **User-Agent** {{Glossary("request header")}} es una cadena característica que le permite a los servidores y servicios de red identificar la aplicación, sistema operativo, compañía, y/o la versión del {{Glossary("user agent")}} que hace la petición.
@@ -55,7 +54,7 @@ Mozilla/5.0 (platform; rv:geckoversion) Gecko/geckotrail Firefox/firefoxversion
 ```
 
 1. `Mozilla/5.0` es el token general que indica que el navegador es compatible con Mozilla. Por razones históricas, prácticamente todos los navegadores actuales lo envían.
-2. **_platform_** describe la plataforma nativa en la que está corriendo el navegador  (Windows, Mac, Linux, Android, etc.) y si es un teléfono móvil. Los teléfonos con {{Glossary("Firefox OS")}} dicen `Mobile` — la web es la plataforma. Nótese que  **_platform_** puede consistir de múltiples tokens separados por "`;`". Léase debajo para más detalles y ejemplos.
+2. **_platform_** describe la plataforma nativa en la que está corriendo el navegador (Windows, Mac, Linux, Android, etc.) y si es un teléfono móvil. Los teléfonos con {{Glossary("Firefox OS")}} dicen `Mobile` — la web es la plataforma. Nótese que **_platform_** puede consistir de múltiples tokens separados por "`;`". Léase debajo para más detalles y ejemplos.
 3. **rv:_geckoversion_** indica la versión de Gecko (como "_17.0_"). En navegadores recientes, **_geckoversion_** es lo mismo que **_firefoxversion_**.
 4. **_Gecko/geckotrail_** indica que el navegador está basado en Gecko. (En el escritorio, **_geckotrail_** siempre es la cadena fija `20100101`.)
 5. **_Firefox/firefoxversion_** indica que el navegador es Firefox y provee la versión (como "_17.0"_).

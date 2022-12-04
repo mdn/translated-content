@@ -8,9 +8,10 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isInteger
 ---
+
 {{JSRef}}
 
-**`Number.isInteger()` **메서드는 주어진 값이 정수인지 판별합니다.
+**`Number.isInteger()`** 메서드는 주어진 값이 정수인지 판별합니다.
 
 {{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
 

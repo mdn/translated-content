@@ -2,6 +2,7 @@
 title: TTL
 slug: Glossary/TTL
 ---
+
 TTL には以下の意味があります。
 
 - ネットワーク内でパケットが破棄されるまで存在できる時間
@@ -20,7 +21,7 @@ TTL には以下の意味があります。
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "Time to live", "TTL")}}
+- Wikipedia の [TTL](https://en.wikipedia.org/wiki/Time_to_live)
 
 ### 技術リファレンス
 

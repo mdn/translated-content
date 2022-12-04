@@ -2,6 +2,7 @@
 title: Vue 시작하기
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 이제 우리가 배울 세 번째 프레임워크인 Vue를 소개하겠습니다. 이 글에서 우리는 Vue에 대한 간단한 배경지식을 얻고, Vue를 설치하고 새로운 프로젝트를 만드는 방법을 배웁니다. 또한 전체 프로젝트와 컴포넌트의 주요 구조를 공부하고, 로컬에서 프로젝트를 실행하는 방법을 살펴본 후 예제 프로젝트를 구성해봅니다.

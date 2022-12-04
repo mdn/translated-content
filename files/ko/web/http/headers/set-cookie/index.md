@@ -9,6 +9,7 @@ tags:
   - 헤더
 translation_of: Web/HTTP/Headers/Set-Cookie
 ---
+
 {{HTTPSidebar}}
 
 **`Set-Cookie`** HTTP 응답 헤더는 서버에서 사용자 브라우저에 쿠키를 전송하기 위해 사용됩니다.
@@ -54,7 +55,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     - `<cookie-name>` 는 제어 문자 및 공백, 탭(\t)를 제외한 아스키 문자로 구성되어야 합니다. 또한, "( ) < > @ , ; : \ " / \[ ] ? = { }" 같은 문자도 포함할 수 없습니다.
     - A `<cookie-value>` 는 필요하다면 쌍 따운표로 묶여질 수 있고 아스키 코드 문자로 구성되어야 하고, `<cookie-name>`처럼 제어 문자, 공백, 쌍 따운표, 콤마, 세미콜론, 역 슬래쉬(\\)는 사용할 수 없습니다. **엔코딩**: 쿠기 값에 대해서 URL 엔코딩을 사용하는 구현 기법들이 많지만, RFC 명세에서 요구하는 것은 아닙니다. 단지, \<cookie-value>에 허용된 문자에 대한 요구사항을 만족시킬 뿐이죠.
-    - **`__Secure-` 프리픽스**:` __Secure-` (대쉬는 프리픽스의 일부입니다)로 시작되는 쿠키 이름은 반드시 `secure` 플래그가 설정되어야 하고, 보안 페이지(HTTPS)여야 합니다.
+    - **`__Secure-` 프리픽스**: `__Secure-` (대쉬는 프리픽스의 일부입니다)로 시작되는 쿠키 이름은 반드시 `secure` 플래그가 설정되어야 하고, 보안 페이지(HTTPS)여야 합니다.
     - **`__Host-` 프리픽스**: `__Host-` 로 시작되는 쿠키들은 `secure` 플래그가 설정되어야 하며, 마찬가지로 보안 페이지(HTTPS)여야 하고, 도메인이 지정되지 않아야 합니다. (따라서 서브 도메인에 쿠키를 공유할 수 없습니다) 그리고, 경로는 반드시 "/"여야 합니다.
 
 - Expires=\<date> {{optional_inline}}

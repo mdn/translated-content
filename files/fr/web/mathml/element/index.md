@@ -169,8 +169,8 @@ La locution « **élement de présentation** » est utilisée pour décrire l'or
 
 ## Annotations sémantiques
 
-- [`<annotation>`](Web/MathML/Element/semantics#annotation)
-- [`<annotation-xml>`](Web/MathML/Element/semantics#annotation-xml)
+- [`<annotation>`](/fr/docs/Web/MathML/Element/semantics#annotation)
+- [`<annotation-xml>`](/fr/docs/Web/MathML/Element/semantics#annotation-xml)
 - {{MathMLElement("semantics")}}
 
 ## Voir aussi

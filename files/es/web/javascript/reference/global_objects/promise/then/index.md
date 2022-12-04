@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Promise/then
 ---
+
 {{JSRef}}
 
 El método **`then()`** retorna una {{domxref("Promesa")}}. Recibe dos argumentos: funciones callback para los casos de éxito y fallo de [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise).
@@ -33,7 +34,7 @@ p.then(function(value) {
 Retorna un `Promise` el cual es determinado por las funciones input:
 
 - Si `alCumplir` o `enRechazo` arroja un error, o retorna un [`Promise`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Promise) rechazado, `then` retorna un `Promise` rechazado.
-- Si `alCumplir` o `enRechazo` retorna un `Promise` que resuelve, o retorna cualquier otro valor, `then` retorna un `Promise`resuelto.
+- Si `alCumplir` o `enRechazo` retorna un `Promise` que resuelve, o retorna cualquier otro valor, `then` retorna un `Promise` resuelto.
 
 <!-- -->
 
@@ -259,7 +260,7 @@ p3.then(funcion(v) {
 
 ### `window.setImmediate` estilo polyfill basado en promesas
 
-Usar un método {{jsxref("Function.prototype.bind()")}}`Reflect.apply` ({{jsxref("Reflect.apply()")}}) para crear un (non-cancellable) setImmediate-style function.
+Usar un método {{jsxref("Function.prototype.bind()")}} `Reflect.apply` ({{jsxref("Reflect.apply()")}}) para crear un (non-cancellable) setImmediate-style function.
 
 ```js
 const nextTick = (() => {
@@ -281,10 +282,7 @@ const nextTick = (() => {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                       | Comentario                              |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | --------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.prototype.then', 'Promise.prototype.then')}}     | {{Spec2('ES2015')}}     | Definición inicial en el estándar ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}} | {{Spec2('ESDraft')}} |                                         |
+{{Specifications}}
 
 ## Compatibilidad en navegador
 

@@ -1,9 +1,9 @@
 ---
 title: ¿Qué es la accesibilidad?
 slug: Learn/Accessibility/What_is_accessibility
-translation_of: Learn/Accessibility/What_is_accessibility
 original_slug: Learn/Accessibility/Qué_es_la_accesibilidad
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 
 En este artículo se inicia el módulo con una explicación ampliada sobre qué es la accesibilidad. Esta visión general incluye qué grupos de personas necesitamos tener en cuenta y por qué, qué herramientas utilizan estas personas para interactuar con la web y cómo podemos hacer que la accesibilidad sea parte de nuestro flujo de trabajo de desarrollo web.

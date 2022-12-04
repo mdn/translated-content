@@ -1,9 +1,9 @@
 ---
 title: Prática de construção de objetos
 slug: Learn/JavaScript/Objects/Object_building_practice
-translation_of: Learn/JavaScript/Objects/Object_building_practice
 original_slug: Aprender/JavaScript/Objetos/Object_building_practice
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
 
 Nos artigos anteriores, analisamos todos os detalhes essenciais da teoria e da sintaxe do objeto JavaScript, fornecendo uma base sólida para começar. Neste artigo, vamos mergulhar em um exercício prático, dando a você mais prática na construção de objetos JavaScript personalizados, com um resultado divertido e colorido.

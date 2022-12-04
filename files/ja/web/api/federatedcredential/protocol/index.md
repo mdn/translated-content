@@ -25,9 +25,7 @@ var protocol = FederatedCredential.protocol
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                                         | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('Credential Management','#dom-federatedcredential-protocol','protocol')}} | {{Spec2('Credential Management')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

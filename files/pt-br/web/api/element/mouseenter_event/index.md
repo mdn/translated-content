@@ -1,8 +1,8 @@
 ---
 title: mouseenter
 slug: Web/API/Element/mouseenter_event
-translation_of: Web/API/Element/mouseenter_event
 ---
+
 {{APIRef}}
 
 O evento `mouseenter` é disparado quando um dispositivo de apontamento (geralmente um mouse) se move sobre um elemento (para dentro do mesmo).
@@ -18,7 +18,7 @@ Combinado ao comportamento do seu evento simétrico, `mouseleave`, o evento DOM 
 ## Informações Gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseenter)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-mouseenter)
 - Interface
   - : {{domxref('MouseEvent')}}
 - Sincronismo

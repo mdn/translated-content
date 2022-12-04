@@ -1,8 +1,8 @@
 ---
 title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/parse
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 ## Resumo
@@ -38,7 +38,7 @@ Dada uma string representando um tempo, `parse()` retorna o valor temporal. É a
 
 ### Suporte ao formato ECMAScript 5 ISO-8601
 
-_Astring_ Data e hora pode ser no formato [ISO 8601](http://www.w3.org/TR/NOTE-datetime). Por exemplo, `"2011-10-10"` (apenas data) ou `"2011-10-10T14:48:00"` (data e hora) podem ser passados ou convertidos. O fuso horario UTC é usado para interpretar argumentos no formato [ISO 8601](http://www.w3.org/TR/NOTE-datetime) que não contenham informação de fuso horário (note que [ECMAScript ed 6 draft](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-date-time-string-format) especifica que a _string_ do tipo data e hora sem um fuso horário são tratados como data local, não UTC).
+_Astring_ Data e hora pode ser no formato [ISO 8601](https://www.w3.org/TR/NOTE-datetime). Por exemplo, `"2011-10-10"` (apenas data) ou `"2011-10-10T14:48:00"` (data e hora) podem ser passados ou convertidos. O fuso horario UTC é usado para interpretar argumentos no formato [ISO 8601](https://www.w3.org/TR/NOTE-datetime) que não contenham informação de fuso horário (note que [ECMAScript ed 6 draft](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-date-time-string-format) especifica que a _string_ do tipo data e hora sem um fuso horário são tratados como data local, não UTC).
 
 While time zone specifiers are used during date string parsing to interpret the argument, the value returned is always the number of milliseconds between January 1, 1970 00:00:00 UTC and the point in time represented by the argument.
 

@@ -1,19 +1,9 @@
 ---
 title: Publicando seu site
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
-tags:
-  - Codificação em Script
-  - FTP
-  - GitHub
-  - Iniciante
-  - Motor de Apps do Google
-  - Web
-  - l10n:prioridade
-  - publicação
-  - servidor web
-translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 original_slug: Aprender/Getting_started_with_the_web/Publicando_seu_site
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}

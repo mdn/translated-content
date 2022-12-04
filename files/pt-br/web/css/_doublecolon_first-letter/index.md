@@ -1,8 +1,8 @@
 ---
 title: '::first-letter (:first-letter)'
 slug: Web/CSS/::first-letter
-translation_of: Web/CSS/::first-letter
 ---
+
 {{ CSSRef() }}
 
 ## Sumário

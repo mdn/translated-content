@@ -183,7 +183,7 @@ target / context = result
 
 ```css
 img {
-  max-width: 100%:
+  max-width: 100%;
 }
 ```
 
@@ -282,8 +282,6 @@ h1 {
 - `user-scalable`：如果设为`no`的话阻止缩放。
 
 你应该避免使用`minimum-scale`、`maximum-scale`，尤其是将`user-scalable`设为`no`。用户应该有权力尽可能大或小地进行缩放，阻止这种做法会引起访问性问题。
-
-> **备注：** 有一个 CSS @规则是被设计用来替换掉视口元标签的——[@viewport](/zh-CN/docs/Web/CSS/@viewport)——但是浏览器对它的支持太差了。它是在 IE 和 Edge 中引入的，但自从 Chromium 内核的 Edge 发布以后，它就不再受到 Edge 浏览器支持了。
 
 ## 小结
 

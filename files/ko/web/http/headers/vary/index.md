@@ -3,6 +3,7 @@ title: Vary
 slug: Web/HTTP/Headers/Vary
 translation_of: Web/HTTP/Headers/Vary
 ---
+
 {{HTTPSidebar}}
 
 **`Vary`** 헤더는 캐시 된 응답을 향후 요청들에서 오리진 서버로 새로운 요청 헤더를 요청하는 대신 사용할 수 있는지 여부를 결정합니다. 이것은 서버에서 [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation) 알고리즘에 어떤 리소스를 선택을 할 것인지를 가르킵니다.
@@ -57,7 +58,7 @@ Vary: User-Agent
 
 {{Compat("http.headers.Vary")}}
 
-## <span class="trans_txt">호환성 노트</span>
+## 호환성 노트
 
 - [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
 
@@ -65,4 +66,4 @@ Vary: User-Agent
 
 - [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
 - [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Content negotiation](https://developer.mozilla.org/docs/Web/HTTP/Content_negotiation)
+- [Content negotiation](/ko/docs/Web/HTTP/Content_negotiation)

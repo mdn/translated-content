@@ -9,7 +9,7 @@ slug: Glossary/ECMAScript
 
 ### 基礎知識
 
-- Wikipedia 上の記事「{{Interwiki("wikipedia", "ECMAScript")}}」
+- Wikipedia 上の記事「[ECMAScript](https://ja.wikipedia.org/wiki/ECMAScript)」
 
 ### 技術リファレンス
 

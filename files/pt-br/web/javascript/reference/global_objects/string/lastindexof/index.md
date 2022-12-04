@@ -1,15 +1,8 @@
 ---
 title: String.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - lastIndexOf
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 ---
+
 {{JSRef}}
 
 O método `lastIndexOf()` retorna o índice da última ocorrência do valor especificado encontrado na {{jsxref("String")}}. Quando `fromIndex` é especificado, a pesquisa é realizada de trás para frente. Retorna `-1` se o valor não for encontrado.

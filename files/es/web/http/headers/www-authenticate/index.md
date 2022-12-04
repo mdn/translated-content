@@ -1,8 +1,8 @@
 ---
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
-translation_of: Web/HTTP/Headers/WWW-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 La cabezera de la respuesta HTTP **`WWW-Authenticate`** define el método de autentificación que debe ser utilizado para acceder al recurso solicitado.

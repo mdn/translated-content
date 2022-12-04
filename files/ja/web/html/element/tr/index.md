@@ -3,7 +3,7 @@ title: '<tr>: 表の行要素'
 slug: Web/HTML/Element/tr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<tr>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内でセルの行を定義します。行のセルには {{HTMLElement("td")}} （データセル）および {{HTMLElement("th")}} （見出しセル）要素をを混在させることができます。
 
@@ -63,7 +63,7 @@ slug: Web/HTML/Element/tr
   - : 文字列で、行の各セルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
 
     - `baseline`
-      - : 異なるフォントやフォントサイズの文字列を、その行で使用されているフォントの{{interwiki("wikipedia", "en:baseline", "ベースライン")}}に沿って整列させることによって処理します。もし行の全ての文字が同じサイズであれば、効果は `bottom` と同じになります。
+      - : 異なるフォントやフォントサイズの文字列を、その行で使用されているフォントの[ベースライン](https://en.wikipedia.org/wiki/Baseline_(typography))に沿って整列させることによって処理します。もし行の全ての文字が同じサイズであれば、効果は `bottom` と同じになります。
     - `bottom`
       - : 行の各セル内のテキストを、セルの下辺に可能な限り近づけて描画します。
     - `middle`

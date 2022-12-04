@@ -7,6 +7,7 @@ tags:
   - errores
 translation_of: Web/JavaScript/Reference/Errors/Invalid_date
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensaje
@@ -21,7 +22,7 @@ RangeError: Provided date is not in valid range (Chrome)
 
 {{jsxref("RangeError")}}
 
-## ¿Cuál es el problema?[Edit](/es/docs/Web/JavaScript/Reference/Errors/Invalid_array_length$edit#¿Cuál_es_el_problema)
+## ¿Cuál es el problema?
 
 Se ha proporcionado una cadena con una fecha no válida para {{jsxref("Date")}} o {{jsxref("Date.parse()")}}.
 

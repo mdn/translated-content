@@ -229,7 +229,7 @@ Une adresse au Japon est généralement **écrite sur une ligne**, dans un ordre
 
 « 〒 » et les sept chiffres suivants indiquent le code postal.
 
-`address-level1` est utilisé pour les préfectures ou la métropole de Tokyo ; « 長野県 » (préfecture de Nagano) dans ce cas. `address-level2` est généralement utilisé pour les villes, les comtés, les communes et les villages ; « 長野市 » (ville de Nagano) dans ce cas. « 某町 123 » est`address-line1` qui se compose d'un nom de zone et d'un numéro de colis.
+`address-level1` est utilisé pour les préfectures ou la métropole de Tokyo ; « 長野県 » (préfecture de Nagano) dans ce cas. `address-level2` est généralement utilisé pour les villes, les comtés, les communes et les villages ; « 長野市 » (ville de Nagano) dans ce cas. « 某町 123 » est `address-line1` qui se compose d'un nom de zone et d'un numéro de colis.
 
 ## Spécifications
 

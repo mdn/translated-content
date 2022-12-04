@@ -1,9 +1,9 @@
 ---
 title: Pseudoclases y pseudoelementos
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
-translation_of: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 original_slug: Learn/CSS/Building_blocks/Selectores_CSS/Pseudo-clases_y_pseudo-elementos
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
 
 El conjunto de selectores que estudiaremos en este artículo se conocen como **pseudoclases** y **pseudoelementos**. Hay muchos y a menudo sirven para fines muy específicos. Una vez que sepas cómo usarlos, puedes echar un vistazo a la lista para ver si alguno sirve para la página que quieres crear. Una vez más, la página correspondiente de MDN resulta muy útil para conocer qué navegadores los admiten o no.

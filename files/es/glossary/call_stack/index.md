@@ -1,13 +1,9 @@
 ---
 title: Pila de llamadas
 slug: Glossary/Call_stack
-tags:
-  - Glosario
-  - JavaScript
-  - Pila de llamadas
-translation_of: Glossary/Call_stack
 original_slug: Glossary/Pila_llamadas
 ---
+
 Una **pila de llamadas** es un mecanismo para que un intérprete (como el intérprete de JavaScript en un navegador web) realice un seguimiento de en que lugar se llama a múltiples {{glossary("function","funciones")}}, qué función se esta ejecutando actualmente y qué funciones son llamadas desde esa función, etc.
 
 - Cuando un script llama a una función, el intérprete la añade a la pila de llamadas y luego empieza a ejecutar la función.

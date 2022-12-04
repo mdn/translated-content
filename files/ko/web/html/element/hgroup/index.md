@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/hgroup
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<hgroup>` 요소**는 문서 구획의 다단계 제목을 나타냅니다. 다수의 `{{htmlelement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}}` 요소를 묶을 때 사용합니다.
 
@@ -63,7 +64,7 @@ translation_of: Web/HTML/Element/hgroup
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
@@ -97,4 +98,4 @@ translation_of: Web/HTML/Element/hgroup
 ## 같이 보기
 
 - 구획 관련 다른 요소: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("aside")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
-- [HTML5 문서의 구획과 개요](/ko/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document").
+- [HTML5 문서의 구획과 개요](/ko/docs/Sections_and_Outlines_of_an_HTML5_document).

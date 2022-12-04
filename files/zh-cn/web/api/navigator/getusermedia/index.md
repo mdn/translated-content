@@ -7,7 +7,7 @@ slug: Web/API/Navigator/getUserMedia
 
 {{APIRef}}{{deprecated_header}}
 
-**Navigator.getUserMedia()** 方法提醒用户需要使用音频（0 或者 1）和（0 或者 1）视频输入设备，比如相机，屏幕共享，或者麦克风。如果用户给予许可，**successCallback** 回调就会被调用，{{domxref("MediaStream")}} 对象作为回调函数的参数。如果用户拒绝许可或者没有媒体可用，**errorCallback** 就会被调用，类似的，**`PermissionDeniedError` **或者** `NotFoundError`** 对象作为它的参数。注意，有可能以上两个回调函数都不被调用，因为不要求用户一定作出选择（允许或者拒绝）。
+**Navigator.getUserMedia()** 方法提醒用户需要使用音频（0 或者 1）和（0 或者 1）视频输入设备，比如相机，屏幕共享，或者麦克风。如果用户给予许可，**successCallback** 回调就会被调用，{{domxref("MediaStream")}} 对象作为回调函数的参数。如果用户拒绝许可或者没有媒体可用，**errorCallback** 就会被调用，类似的，**`PermissionDeniedError`** 或者 **`NotFoundError`** 对象作为它的参数。注意，有可能以上两个回调函数都不被调用，因为不要求用户一定作出选择（允许或者拒绝）。
 
 ## 语法
 

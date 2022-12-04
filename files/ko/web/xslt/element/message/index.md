@@ -14,7 +14,7 @@ original_slug: Web/XSLT/message
 
 ```
 <xsl:message terminate="yes" | "no" >
-	TEMPLATE
+  TEMPLATE
 </xsl:message>
 ```
 

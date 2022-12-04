@@ -40,11 +40,11 @@ And so will this line.</p>
 
 ## 메모
 
-Applying {{Cssxref("text-align")}}`:center` to a` `{{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the _contents_ of those elements while leaving their overall dimensions unchanged.
+Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the _contents_ of those elements while leaving their overall dimensions unchanged.
 
 ## 더 보기
 
 - {{Cssxref("text-align")}}
 - {{Cssxref("display")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,16 +1,8 @@
 ---
 title: HTMLContentElement
 slug: Web/API/HTMLContentElement
-tags:
-  - ContentElement
-  - Deprecated_header
-  - HTMLContentElement
-  - HTMLElement
-  - Web Components
-  - elemento depreciado
-  - shadow dom
-translation_of: Web/API/HTMLContentElement
 ---
+
 {{ APIRef("Web Components") }}
 
 {{Deprecated_header}}

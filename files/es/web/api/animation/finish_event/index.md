@@ -1,20 +1,12 @@
 ---
 title: Animation.onfinish
 slug: Web/API/Animation/finish_event
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Reference
-  - onfinish
-  - waapi
-translation_of: Web/API/Animation/onfinish
 original_slug: Web/API/Animation/onfinish
 ---
+
 {{ APIRef("Web Animations") }}
 
-La propiedad `onfinish` de la interfaz {{domxref("Animation")}} (de la [Web Animations API](/es/docs/Web/API/Web_Animations_API)) es el manejador de eventos para el evento {{event("finish")}}. Este evento se envía cuando la animación termina de reproducirse.
+La propiedad `onfinish` de la interfaz {{domxref("Animation")}} (de la [Web Animations API](/es/docs/Web/API/Web_Animations_API)) es el manejador de eventos para el evento [`finish`](/es/docs/Web/Reference/Events/finish). Este evento se envía cuando la animación termina de reproducirse.
 
 El evento `finish` ocurre cuando la reproducción se completa de forma natural, así como cuando se llama al método {{domxref("Animation.finish()")}} para que la animación termine inmediatamente.
 
@@ -30,7 +22,7 @@ Animation.onfinish = finishHandler;
 
 ### Valor
 
-Una función que debe ser llamada para manejar el evento {{event("finish")}}, o `null` si no se establece ningún manejador para el evento `finish`.
+Una función que debe ser llamada para manejar el evento [`finish`](/es/docs/Web/Reference/Events/finish), o `null` si no se establece ningún manejador para el evento `finish`.
 
 ## Ejemplos
 

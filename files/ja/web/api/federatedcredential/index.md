@@ -50,9 +50,7 @@ navigator.credentials.store(cred)
 
 ## 仕様書
 
-| 仕様書                                           | 状態                                         | 備考     |
-| ------------------------------------------------ | -------------------------------------------- | -------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

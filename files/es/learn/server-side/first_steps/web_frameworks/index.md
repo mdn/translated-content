@@ -1,18 +1,9 @@
 ---
 title: Frameworks Web de lado servidor
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - Aprendizaje
-  - Codificación de scripts
-  - Frameworks web
-  - Guía
-  - Principiante
-  - Programación lado servidor
-  - Servidor
-  - introducción
-translation_of: Learn/Server-side/First_steps/Web_frameworks
 original_slug: Learn/Server-side/Primeros_pasos/Web_frameworks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps/Website_security", "Learn/Server-side/First_steps")}}
 
 El artículo anterior te mostró que pinta tiene la comunicación entre los clientes web y los servidores, la naturaleza de las peticiones y respuestas HTTP, y lo que necesita hacer una aplicación web de lado servidor para responder a las peticiones de un explorador web. Con este conocimiento en nuestra mochila, es hora de explorar cómo los frameworks web pueden simplificar estas tareas, y darte una idea de cómo escogerías un framework para tu primera aplicación web de lado servidor.
@@ -138,7 +129,7 @@ class Team(models.Model):
 
 El modelo de Django proporciona una API de consulta simple para buscar en la base de datos. Ésta puede comprobar coincidencias contra un gran número de campos al mismo tiempo usando diferentes criterios (ej. exacto, insensible a las mayúsculas, mayor que, etc.), y puede soportar sentencias complejas (por ejemplo, puedes especificar una búsqueda de equipos U11 que tengan un nombre de equipo que empiece por "Fr" or finalice con "al").
 
-El segundo fragmento de código muestra una función de visualización (manejador de recurso) para mostrar en pantalla todos nuestros equipos U09. En este caso especificamos que queremos filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate debajo cómo este criterio se pasa como argumento a la función `filter()` con el nombre de campo y tipo de coincidencia separados por guiones bajos dobles: **team_level\_\_exact**).
+El segundo fragmento de código muestra una función de visualización (manejador de recurso) para mostrar en pantalla todos nuestros equipos U09. En este caso especificamos que queremos filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate debajo cómo este criterio se pasa como argumento a la función `filter()` con el nombre de campo y tipo de coincidencia separados por guiones bajos dobles: **`team_level__exact`**).
 
 ```python
 #best/views.py

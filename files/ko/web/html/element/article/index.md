@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/article
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<article>` 요소**는 문서, 페이지, 애플리케이션, 또는 사이트 안에서 독립적으로 구분해 배포하거나 재사용할 수 있는 구획을 나타냅니다. 사용 예제로 게시판과 블로그 글, 매거진이나 뉴스 기사 등이 있습니다.
 
@@ -90,7 +90,7 @@ translation_of: Web/HTML/Element/article
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 

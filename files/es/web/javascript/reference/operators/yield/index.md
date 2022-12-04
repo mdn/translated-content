@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/yield
 original_slug: Web/JavaScript/Referencia/Operadores/yield
 ---
+
 {{jsSidebar("Operadores")}}
 
 La palabra clave `yield` se usa para pausar y reanudar una función generadora ({{jsxref("Statements/function*", "function*")}} o {{jsxref("Statements/Legacy_generator_function", "función generadora heredada")}}).
@@ -100,9 +101,7 @@ console.log(generatorFunc.next(10).value); // 26
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#prod-YieldExpression', 'Yield')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

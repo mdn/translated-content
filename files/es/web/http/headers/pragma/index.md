@@ -1,13 +1,13 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-translation_of: Web/HTTP/Headers/Pragma
 ---
+
 {{HTTPSidebar}}
 
-El **`Pragma`** encabezado general HTTP / 1.0 es un encabezado específico de la implementación que puede tener varios efectos a lo largo de la cadena de solicitud-respuesta. Se utiliza para la compatibilidad con versiones anteriores de las memorias caché HTTP / 1.0 en las que el `Cache-Control`encabezado HTTP / 1.1 aún no está presente.
+El **`Pragma`** encabezado general HTTP / 1.0 es un encabezado específico de la implementación que puede tener varios efectos a lo largo de la cadena de solicitud-respuesta. Se utiliza para la compatibilidad con versiones anteriores de las memorias caché HTTP / 1.0 en las que el `Cache-Control` encabezado HTTP / 1.1 aún no está presente.
 
-> **Nota:** `Pragma`no se especifica para las respuestas HTTP y, por lo tanto, no es un reemplazo confiable para el `Cache-Control`encabezado HTTP / 1.1 general , aunque se comporta de la misma manera que `Cache-Control: no-cache`, si el `Cache-Control`campo del encabezado se omite en una solicitud. Utilice `Pragma`solo para compatibilidad con versiones anteriores con clientes HTTP / 1.0.
+> **Nota:** `Pragma` no se especifica para las respuestas HTTP y, por lo tanto, no es un reemplazo confiable para el `Cache-Control` encabezado HTTP / 1.1 general , aunque se comporta de la misma manera que `Cache-Control: no-cache`, si el `Cache-Control` campo del encabezado se omite en una solicitud. Utilice `Pragma`solo para compatibilidad con versiones anteriores con clientes HTTP / 1.0.
 
 <table class="properties">
   <tbody>

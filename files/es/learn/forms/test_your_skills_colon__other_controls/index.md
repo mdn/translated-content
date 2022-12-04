@@ -1,9 +1,9 @@
 ---
 title: 'Prueba tus habilidades: Otros controles'
 slug: Learn/Forms/Test_your_skills:_Other_controls
-translation_of: Learn/Forms/Test_your_skills:_Other_controls
 original_slug: Learn/HTML/Forms/Prueba_tus_habilidades:_Otros_controles
 ---
+
 {{learnsidebar}}
 
 El objetivo de esta pueba de habilidad es evaluar si has comprendido nuestro artículo [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls).

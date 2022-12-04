@@ -1,15 +1,8 @@
 ---
 title: Desenvolvimento de jogos
 slug: Games
-tags:
-  - Aplicativos
-  - Desenvolvimento de Jogos
-  - Gamedev
-  - Jogos Web
-  - Jogos em HTML5
-  - Jogos em JavaScript
-translation_of: Games
 ---
+
 {{GamesSidebar}}
 
 Jogar é uma das atividades mais populares em computadores. Novas tecnologias aparecem, constantemente, para tornar possível o desenvolvimento de jogos melhores e mais poderosos, que podem ser executados em qualquer navegador compatível com os padrões web.

@@ -1,8 +1,8 @@
 ---
 title: scroll
 slug: Web/API/Document/scroll_event
-translation_of: Web/API/Document/scroll_event
 ---
+
 {{ ApiRef() }}
 
 El evento **`scroll`** se produce cuando la vista del documento o un elemento es deslizado.
