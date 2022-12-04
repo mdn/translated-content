@@ -39,11 +39,11 @@ Warning: String.trimRight         is deprecated; use String.prototype.trimRight 
 
 ## 错误类型
 
-警告。JavaScript 引擎不会停止运行。
+警告。JavaScript 的执行不会停止。
 
 ## 哪里出错了？
 
-非标准的泛型 {{jsxref("String")}} 方法已经被废弃，已经在 Firefox 68 及更新版本移除。String 泛型在 `String` 对象上提供了一系列的 `String` 实例方法，使得这些方法可以应用于任何类型的对象。
+非标准的泛型 {{jsxref("String")}} 方法已经被废弃，已经在 Firefox 68 及更新版本中移除。String 泛型在 `String` 对象上提供了一系列的 `String` 实例方法，使得这些方法可以应用于任何类型的对象。
 
 ## 示例
 
