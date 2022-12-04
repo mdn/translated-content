@@ -509,10 +509,10 @@
 /zh-TW/docs/Tools/Page_Inspector/How_to	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/index.html
 /zh-TW/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html
 /zh-TW/docs/Tools/Performance	https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
-/zh-TW/docs/Tools/Performance/Allocations	https://firefox-source-docs.mozilla.org/devtools-user/performance/allocations/index.html
-/zh-TW/docs/Tools/Performance/Frame_rate	https://firefox-source-docs.mozilla.org/devtools-user/performance/frame_rate/index.html
-/zh-TW/docs/Tools/Remote_Debugging	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html
-/zh-TW/docs/Tools/Remote_Debugging/Firefox_for_Android	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/firefox_for_android/index.html
+/zh-TW/docs/Tools/Performance/Allocations	https://profiler.firefox.com/docs/
+/zh-TW/docs/Tools/Performance/Frame_rate	https://profiler.firefox.com/docs/
+/zh-TW/docs/Tools/Remote_Debugging	https://profiler.firefox.com/docs/
+/zh-TW/docs/Tools/Remote_Debugging/Firefox_for_Android	https://profiler.firefox.com/docs/
 /zh-TW/docs/Tools/Responsive_Design_Mode	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
 /zh-TW/docs/Tools/Settings	https://firefox-source-docs.mozilla.org/devtools-user/settings/index.html
 /zh-TW/docs/Tools/Style_Editor	https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html
