@@ -1,38 +1,43 @@
 ---
-title: CompositionEvent.CompositionEvent()
+title: CompositionEvent()
 slug: Web/API/CompositionEvent/CompositionEvent
+l10n:
+  sourceCommit: da88b2f3a23b9d93f083003f13c06f9d96073f6a
 ---
 
-{{APIRef("DOM Events")}}
+{{APIRef("UI Events")}}
 
-**`CompositionEvent()`** コンストラクターは新しい {{domxref("CompositionEvent")}} オブジェクトのインスタンスを作成します。
+**`CompositionEvent()`** コンストラクターは、新しい {{domxref("CompositionEvent")}} オブジェクトのインスタンスを作成します。
 
 ## 構文
 
-```
- myEvent = new CompositionEvent(typeArg, CompositionEventInit)
+```js-nolint
+new CompositionEvent(type)
+new CompositionEvent(type, options)
 ```
 
 ### 値
 
-- _typeArg_
-  - : イベントの名前を表す {{domxref("DOMString")}}。
-- _CompositionEventInit_{{optional_inline}}
+- `type`
+  - : イベントの名前を表す文字列です。
+    大文字小文字の区別があり、ブラウザーは `compositionstart`, `compositionupdate`, `compositionend` の何れかに設定します。
+- `options` {{optional_inline}}
+  - : _{{domxref("UIEvent/UIEvent", "UIEvent()")}} で定義されているプロパティに加えて_、以下のプロパティがあるオブジェクトです。
+    - `data` {{optional_inline}}
+      - : 文字列で、新しい {{domxref("CompositionEvent")}} の {{domxref("CompositionEvent.data", "data")}} プロパティを初期化するために使用されます。ブラウザーで生成されたイベントでは、 IME の変換で生成された文字に設定されます。
 
-  - : `CompositionEventInit` 辞書オブジェクトは、次のメンバーを含むことができます:
+### 返値
 
-    - `data`: {{domxref("CompositionEvent")}} オブジェクトの {{domxref("CompositionEvent.data", "data")}} 属性を IME コンポジションにより生成された文字に初期化します。
+新しい {{domxref("CompositionEvent")}} オブジェクトです。
 
-    > **メモ:** `CompositionEventInit` 辞書は、{{domxref("UIEvent.UIEvent", "UIEventInit")}} 辞書から継承するため、そこで定義されたメンバーも受け入れます。
-
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.CompositionEvent.CompositionEvent")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{domxref("CompositionEvent")}}、これを構築するオブジェクトのインターフェイス。
+- {{domxref("CompositionEvent")}}: これが構築するオブジェクトのインターフェイス。
