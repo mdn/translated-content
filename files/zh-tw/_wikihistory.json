@@ -5067,9 +5067,5 @@
   "conflicting/Web/Accessibility/ARIA": {
     "modified": "2019-03-23T22:50:58.911Z",
     "contributors": ["PatrickTaiwan", "Shiyou", "alk03073135"]
-  },
-  "conflicting/Web/CSS": {
-    "modified": "2019-03-18T21:16:53.558Z",
-    "contributors": ["cvrebert"]
   }
 }

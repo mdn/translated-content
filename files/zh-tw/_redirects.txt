@@ -606,8 +606,8 @@
 /zh-TW/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/zh-TW/docs/conflicting/Web/Accessibility/ARIA
 /zh-TW/docs/Web/Apps/Progressive	/zh-TW/docs/Web/Progressive_web_apps
 /zh-TW/docs/Web/CSS/-moz-border-image	/zh-TW/docs/Web/CSS/border-image
-/zh-TW/docs/Web/CSS/@viewport	/zh-TW/docs/conflicting/Web/CSS
-/zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/conflicting/Web/CSS
+/zh-TW/docs/Web/CSS/@viewport	/zh-TW/docs/Web/CSS
+/zh-TW/docs/Web/CSS/@viewport/height	/zh-TW/docs/Web/CSS
 /zh-TW/docs/Web/CSS/CSS_Background_and_Borders	/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders
 /zh-TW/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/zh-TW/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /zh-TW/docs/Web/CSS/CSS_Box_Model/理解邊界重疊的原因	/zh-TW/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
