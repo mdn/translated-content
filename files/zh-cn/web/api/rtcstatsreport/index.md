@@ -17,7 +17,7 @@ slug: Web/API/RTCStatsReport
 
 ### 所有统计类别共有的属性
 
-所有 WebRTC 统计对象都基于 {{domxref("RTCStats")}} 字典，该字典提供了最基本的信息：时间戳、统计类型字符串和唯一标识数据源的 ID：
+所有 WebRTC 统计对象都基于 {{domxref("RTCStats")}} 字典，该字典提供了最基本的信息：时间戳、统计类型字符串和唯一标识数据源的 ID。
 
 ### 统计类别
 
@@ -35,4 +35,4 @@ slug: Web/API/RTCStatsReport
 
 - [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection")}}
-- {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}, and {{domxref("RTCRtpSender.getStats()")}}
+- {{domxref("RTCPeerConnection.getStats()")}}、{{domxref("RTCRtpReceiver.getStats()")}} 和 {{domxref("RTCRtpSender.getStats()")}}
