@@ -22,7 +22,7 @@ Streaming은 네트워크를 통해 받은 리소스를 작은 조각으로 나�
 
 With Javascript에 Stream이 도입된 후에는 모든 것이 바뀌었는데, 이제 Buffer, String 또는 blob 없이도 Javascript를 통해 Raw Data를 비트 단위로 처리할 수 있습니다.
 
-![](https://mdn.mozillademos.org/files/15817/Concept.png)
+![](concept.png)
 
 장점은 또 있습니다 — Stream의 시작 또는 종료를 감지할 수 있으며, 여러 stream을 엮어서 에러를 처리하거나 필요한 경우 stream을 취소할 수도 있습니다. 또한 stream이 읽어들이는 속도에 따라 반응할 수도 있지요.
 

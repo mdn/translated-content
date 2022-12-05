@@ -69,7 +69,7 @@ HTTP/1.0 커넥션은 기본적으로 영속적이지 않습니다. {{HTTPHeader
 
 서버가 더 빠른 웹 사이트나 애플리케이션 반응을 원한다면, 서버가 더 많은 커넥션을 열도록 강제할 수 있습니다. 예를 들어, `www.example.com` 라는 하나의 도메인에서 모든 리소스를 가져오는 대신, `www1.example.com`, `www2.example.com`, `www3.example.com`와 같이 몇 개의 도메인으로 분할할 수 있습니다. 이런 각각의 도메인들은 동일한 서버로 연결되고, 브라우저는 그런 각각의 도메인마다 6개의 커넥션을 맺을 것입니다(예제에서는 총 18개로 늘어납니다). 이러한 기법을 **도메인 샤딩**이라고 부릅니다.
 
-![](https://mdn.mozillademos.org/files/13783/HTTPSharding.png)
+![](httpsharding.png)
 
 ## 결론
 

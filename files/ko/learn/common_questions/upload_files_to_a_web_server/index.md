@@ -81,7 +81,7 @@ To publish to this account, please connect through FTP with the following creden
 
 먼저 이곳을 봅시다. `http://demozilla.examplehostingprovider.net/` — 보시다시피 아직 아무런 정보도 없습니다.
 
-![Our demozilla personal website, seen in a browser: it's empty](https://mdn.mozillademos.org/files/9615/demozilla-empty.png)
+![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
 > **참고:** 보이는 화면은 여러분의 호스팅 제공자에 따라 다릅니다. 대부분은 “This website is hosted by \[Hosting Service].”과 같은 페이지를 보게될 것입니다.
 
@@ -115,7 +115,7 @@ To publish to this account, please connect through FTP with the following creden
 
 지금까지는 좋습니다. 하지만 여러분의 브라우저에서 `http://demozilla.examplehostingprovider.net/` 주소로 이동하여 재확인 해봅시다.
 
-![Here we go: our website is live!](https://mdn.mozillademos.org/files/9627/here-we-go.png)
+![Here we go: our website is live!](here-we-go.png)
 
 맙소사! 우리의 웹사이트가 잘 올라와있습니다!
 

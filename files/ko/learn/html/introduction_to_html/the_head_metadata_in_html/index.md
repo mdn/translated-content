@@ -72,13 +72,13 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 
 2. 이제 당신의 브라우저에서 받은 파일을 여십시오.아래와 같이 보일 것입니다:
 
-    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)\<h1>컨텐츠가 보이는 곳이 어디인지 이제 명백할 것입니다. 그리고 `<title>` 컨텐츠도 어디에 있는지 알 수 있습니다!
+    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)\<h1>컨텐츠가 보이는 곳이 어디인지 이제 명백할 것입니다. 그리고 `<title>` 컨텐츠도 어디에 있는지 알 수 있습니다!
 
 3. 텍스트 편집기에서도 이것을 열 수 있습니다. 이 요소들을 변경해보고, 페이지 새로고침하면서 즐겨보십시오.
 
 `<title>` 요소는 다른 방식으로 사용될 수도 있는데, 예를 들면 브라우저에서 사이트를 북마크할 때, `<title>`의 내용물을 추천하는 북마크 이름으로 사용하기도 합니다.
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](bookmark-example.png)
 
 `<title>`은 아래에서 보는것 처럼 검색결과로 사용되기도 합니다.
 
@@ -96,9 +96,9 @@ HTML {{htmlelement("head")}} 요소의 내용입니다. — 페이지를 열 때
 
 이 요소는 문서의 character—문서에서 허용하는 문자 집합(character set)— encoding에 대해서 간단히 표시합니다 . `utf-8` 은 전세계적인 character 집합으로 많은 언어들을 문자들을 포함합니다. 이는 웹 페이지에서 어떤 문자라도 취급할 수 있다는 것을 의미합니다. 따라서 당신이 작성할 모든 페이지에서 character 집합을 utf-8로 지정하는것은 좋은 생각입니다! 예를 들어서 당신의 웹페이지는 영어나 일본어 모두 허용합니다:
 
-![a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine,](https://mdn.mozillademos.org/files/12343/correct-encoding.png)예시로, 만약 (라틴 알파벳 사용을 위해서) `ISO-8859-1`로 characterset을 설정한다면, 페이지가 엉망으로 렌더링 될 것입니다:
+![a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine,](correct-encoding.png)예시로, 만약 (라틴 알파벳 사용을 위해서) `ISO-8859-1`로 characterset을 설정한다면, 페이지가 엉망으로 렌더링 될 것입니다:
 
-![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](https://mdn.mozillademos.org/files/12341/bad-encoding.png)
+![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](bad-encoding.png)
 
 > **참고:** 크롬과 같은 어떤 브라우저는 자동으로 잘못된 인코딩을 고치기 때문에, 어떤 브라우저를 사용하는가에 따라 이 문제를 겪지 않을 수도 있습니다. 그래도 다른 브라우저에서 있을 잠재적인 문제를 피하기 위하여 인코딩을 `utf-8` 으로 설정해야 합니다.
 
@@ -173,7 +173,7 @@ and HTML5 Apps. It also documents Mozilla products, like Firefox OS.">
 
 Facebook에서 MDN에 링크를 하면, 이미지와 설명이 함께 나타난다. 사용자에게는 더 좋은 정보를 보여줄 수 있는 것이다.
 
-![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](https://mdn.mozillademos.org/files/12349/facebook-output.png)Twitter 에서도 유사한 형태의 독점적인 자체 메타데이터를 가지고 있는데, 특정 웹사이트의 url이 twitter.com에 표시 될 때와 유사한 효과가 있다.
+![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)Twitter 에서도 유사한 형태의 독점적인 자체 메타데이터를 가지고 있는데, 특정 웹사이트의 url이 twitter.com에 표시 될 때와 유사한 효과가 있다.
 
 ```html
 <meta name="twitter:title" content="Mozilla Developer Network">
@@ -196,7 +196,7 @@ favicon은 다음과 같이 너의 사이트에 추가할 수 있다:
 
 북마크 페널의 페비콘이 그 예시이다:
 
-![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](https://mdn.mozillademos.org/files/12351/bookmark-favicon.png)
+![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](bookmark-favicon.png)
 
 요즘은 많은 다른 아이콘 타입이 있다. 예를 들어서 MDN 홈페이지에서 다음과 같은 것을 발견할 것이다:
 
@@ -243,7 +243,7 @@ favicon은 다음과 같이 너의 사이트에 추가할 수 있다:
 
 HTML을 저장하고 브라우저를 새로 고치면 올바르게 변경된 것이다:
 
-![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](https://mdn.mozillademos.org/files/12359/js-and-css.png)
+![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](js-and-css.png)
 
 - JavaScript가 빈 목록을 페이지에 추가했다. 이제 목록의 아무 곳이나 클릭하면 새 목록 항목에 대한 텍스트를 입력하라는 대화 상자가 나타난다. OK 버튼을 누르면 새로운 목록 아이템이 추가된다. 기존에 있던 목록의 아이템을 클릭하면 해당 아이템의 텍스트를 변경 할 수 있는 대화 상자가 나타난다.
 - CSS에 의해 배경이 녹색으로 변하고 텍스트가 커진다. 그리고 javaScript가 페이지에 추가 한 일부 스타일도 적용된다(검은색 테두리가 있는 빨간색 공간).
