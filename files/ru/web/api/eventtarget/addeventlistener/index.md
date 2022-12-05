@@ -486,7 +486,7 @@ elem.addEventListener(
 
 {{Compat("api.EventTarget.addEventListener", 3)}}
 
-## Дополнительная информация 
+## Дополнительная информация
 
 - {{domxref("EventTarget.removeEventListener()")}}
 - [Creating and triggering custom events](/ru/docs/Web/Guide/Events/Creating_and_triggering_events)
