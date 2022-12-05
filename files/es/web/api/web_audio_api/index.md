@@ -24,7 +24,7 @@ Un diagrama de flujo simple y típico para el audio web se vería algo como esto
 4. Escoge el destino final del audio, por ejemplo tu sistema de altavoces
 5. Conecta las fuentes a los efectos, y los efectos al destino.
 
-![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](https://mdn.mozillademos.org/files/12241/webaudioAPI_en.svg)
+![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](audio-context_.png)
 
 El tiempo es controlado con alta precisión baja latencia, permitiendo a los desarrolladores escribir código que responda con precisión a los eventos y sea capaz de apuntar a muestras específicas, incluso en una alta frecuencia de muestreo. Por lo tanto, las aplicaciones como las cajas de ritmos y los secuenciadores están a su alcance.
 

@@ -59,7 +59,7 @@ posteriormente las cuatro caja se defines las cajas que especifican los segmento
 
 ```css
 #box1 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 0%, 50%, 50%, 0%);
+  background-image: -moz-image-rect(url(firefox.png), 0%, 50%, 50%, 0%);
   width:133px;
   height:136px;
   position:absolute;
@@ -70,7 +70,7 @@ Esta es la esquina superior izquierda de la imagen. Define un rectángulo que co
 
 ```css
 #box2 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 0%, 100%, 50%, 50%);
+  background-image: -moz-image-rect(url(firefox.png), 0%, 100%, 50%, 50%);
   width:133px;
   height:136px;
   position:absolute;
@@ -83,13 +83,13 @@ Las otras dos siguen un patrón similar:
 
 ```css
 #box3 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 50%, 50%, 100%, 0%);
+  background-image: -moz-image-rect(url(firefox.png), 50%, 50%, 100%, 0%);
   width:133px;
   height:136px;
   position:absolute;
 }
 #box4 {
-  background-image: -moz-image-rect(url(https://mdn.mozillademos.org/files/12053/firefox.png), 50%, 100%, 100%, 50%);
+  background-image: -moz-image-rect(url(firefox.png), 50%, 100%, 100%, 50%);
   width:133px;
   height:136px;
   position:absolute;
