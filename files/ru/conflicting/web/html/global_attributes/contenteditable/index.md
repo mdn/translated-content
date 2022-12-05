@@ -1,11 +1,13 @@
 ---
 title: Создание контента для редактирования
-slug: Web/Guide/HTML/Editable_content
+slug: conflicting/Web/HTML/Global_attributes/contenteditable
 tags:
   - HTML5
   - contenteditable
 translation_of: Web/Guide/HTML/Editable_content
+original_slug: Web/Guide/HTML/Editable_content
 ---
+
 В HTML любой элемент может быть доступен для редактирования. Используя некоторые обработчики событий JavaScript, вы можете превратить свою веб-страницу в полноценный и быстрый текстовый редактор. В этой статье содержится некоторая информация об этой функции.
 
 ## Как это работает?

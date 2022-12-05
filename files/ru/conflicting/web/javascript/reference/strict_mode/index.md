@@ -1,11 +1,13 @@
 ---
 title: Переход к строгому режиму
-slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+slug: conflicting/Web/JavaScript/Reference/Strict_mode
 tags:
   - Advanced
   - JavaScript
 translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
+original_slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 ---
+
 {{jsSidebar("More")}}
 
 В ECMAScript 5 введён {{jsxref('Strict_mode', 'строгий режим')}}, который реализован во всех основных браузерах (включая IE10). В то время как включение интерпретации браузерами кода в строгом режиме делается очень просто (достаточно добавить `"use strict";` в верхней части вашего исходного кода), для адаптации уже существующего кода к строгому режиму потребуется немного больше работы.

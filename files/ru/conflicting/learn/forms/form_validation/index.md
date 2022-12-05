@@ -1,12 +1,14 @@
 ---
 title: Constraint validation API
-slug: Web/API/Constraint_validation
+slug: conflicting/Learn/Forms/Form_validation
 tags:
   - API
   - Валидация ограничений
   - Landing
   - Reference
+original_slug: Web/API/Constraint_validation
 ---
+
 {{apiref()}}
 
 Constraint Validation API позволяет проверять значения, которые пользователи вводят в элементы формы, перед отправкой на сервер.

@@ -1,6 +1,6 @@
 ---
 title: Решение проблем с ошибками в KumaScript
-slug: MDN/Tools/KumaScript/Troubleshooting
+slug: orphaned/MDN/Tools/KumaScript/Troubleshooting
 tags:
   - Errors
   - KumaScript
@@ -10,8 +10,9 @@ tags:
   - Руководство
   - инструменты
 translation_of: MDN/Tools/KumaScript/Troubleshooting
-original_slug: MDN/Kuma/Troubleshooting_KumaScript_errors
+original_slug: MDN/Tools/KumaScript/Troubleshooting
 ---
+
 {{MDNSidebar}}
 
 Ошибки [KumaScript](/ru/docs/MDN/Kuma/Introduction_to_KumaScript), появляющиеся на странице, могут быть очень неудобными для читателей, из-за больших страшных красных ящиков, но, к счастью, любой человек с учётной записью MDN может отредактировать документ, чтобы исправить эту ошибку. При возникновении ошибки страница добавляется в список [документов с ошибками](/ru/docs/with-errors). Редакторы сайта регулярно просматривают этот список, чтобы находить и исправлять ошибки. В этой статье подробно описываются четыре типа ошибок KumaScript и некоторые шаги, которые можно предпринять для их исправления.
