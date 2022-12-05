@@ -186,7 +186,7 @@ The [Built-in Gecko Profiler](/es/docs/Performance/Profiling_with_the_Built-in_P
 
 Using [YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) (which requires [Firebug](https://getfirebug.com/)) provides extremely helpful recommendations for improving performance. Many of the identified problems and suggested solutions are especially useful for mobile browsers. You should definitely run YSlow and follow its recommendations.
 
-![A YSlow window showing a set of tips for improving performance, the top one being make fewer http requests.](https://mdn.mozillademos.org/files/6843/yslow.png)
+![A YSlow window showing a set of tips for improving performance, the top one being make fewer http requests.](yslow.png)
 
 In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Simply downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](http://www.slideshare.net/firt/mobile-web-high-performance) talk.
 
