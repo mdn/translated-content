@@ -147,7 +147,7 @@ Há vários outros recursos que você pode incluir em um vídeo HTML5. Dê uma o
 
 Isso nos dará uma saída parecida com esta:
 
-![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](https://mdn.mozillademos.org/files/12796/extra-video-features.png)Os novos recursos são:
+![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](extra-video-features.png)Os novos recursos são:
 
 - {{htmlattrxref("width","video")}} and {{htmlattrxref("height","video")}}
   - : Você pode controlar o tamanho do vídeo com esses atributos ou com {{Glossary("CSS")}}. Nos dois casos, os vídeos mantêm sua proporção largura-altura nativa - conhecida como **proporção de tela**. Se a proporção não for mantida pelos tamanhos definidos, o vídeo aumentará para preencher o espaço horizontalmente, e o espaço não preenchido receberá apenas uma cor sólida de fundo por padrão.
