@@ -449,7 +449,7 @@ function outside() {
 result = outside()(20); // 10 대신 20을 반환합니다
 ```
 
-이름 충돌은 `x * 2`를 반환하는 부분에서 발생하며, `inside`의 매개 변수 `x`와 `outside`의 매개 변수 `x` 사이에서 발생합니다. 여기에서 스코프 체이닝은 `{`inside`, `outside`, 전역 객체}`로 이루어집니다. 따라서 `inside`의 `x`는 `outside`의 `x`보다 높은 우선순위를 갖게 되고, 20(`inside`의 `x`)이 10(`outside`의 `x`) 대신에 반환됩니다.
+이름 충돌은 `x * 2`를 반환하는 부분에서 발생하며, `inside`의 매개 변수 `x`와 `outside`의 매개 변수 `x` 사이에서 발생합니다. 여기에서 스코프 체이닝은 {`inside`, `outside`, `전역 객체`}로 이루어집니다. 따라서 `inside`의 `x`는 `outside`의 `x`보다 높은 우선순위를 갖게 되고, 20(`inside`의 `x`)이 10(`outside`의 `x`) 대신에 반환됩니다.
 
 ## 클로저
 
