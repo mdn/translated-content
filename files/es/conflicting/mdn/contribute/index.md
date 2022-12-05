@@ -1,6 +1,7 @@
 ---
 title: Guías prácticas
-slug: MDN/Contribute/Howto
+slug: conflicting/MDN/Contribute
+original_slug: MDN/Contribute/Howto
 ---
 
 {{MDNSidebar}}
