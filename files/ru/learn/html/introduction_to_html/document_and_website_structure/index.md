@@ -38,7 +38,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Структура_докум
 
 "Типичный веб-сайт" может быть структурирован примерно так:
 
-![](https://mdn.mozillademos.org/files/17069/Sample_website__ru.png)
+![](sample_website__ru.png)
 
 ## HTML для структурирования содержимого
 
