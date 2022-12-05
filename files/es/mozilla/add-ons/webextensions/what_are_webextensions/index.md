@@ -28,7 +28,7 @@ Una extensión agrega características y funciones a un explorador. Se ha creado
 
 **Agregar herramientas y nuevas funciones de navegación**: añada nuevas funciones a un taskboard o genere imágenes de código QR a partir de URLs, hipervínculos o texto de página. Con opciones de interfaz de usuario flexibles y la potencia de las [APIs de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions), puede añadir fácilmente nuevas funcionalidades a un navegador. Usted puede realzar casi cualquier característica o funcionalidad de sitios web, no tiene que ser su web.
 
-**![](qr_code_image_generator_add_on.png)**
+![](qr_code_image_generator_add_on.png)
 
 **Ejemplos: [QR Code Image Generator](https://addons.mozilla.org/en-US/firefox/addon/qr-code-image-generator/), [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/swimlanes-for-trello/), y [Tomato Clock](https://addons.mozilla.org/en-US/firefox/addon/tomato-clock/)**
 
