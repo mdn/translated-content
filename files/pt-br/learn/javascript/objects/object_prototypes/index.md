@@ -72,11 +72,11 @@ var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
 
 Se você digitar "`person1.`" em seu console JavaScript, você deve ver o navegador tentar concluir automaticamente isso com os nomes de membros disponíveis neste objeto:
 
-![](https://mdn.mozillademos.org/files/13853/object-available-members.png)
+![](object-available-members.png)
 
 Nesta lista, você verá os membros definidos no construtor de `person1`'s constructor — `Person()` — `name`, `age`, `gender`, `interests`, `bio`, e `greeting`. No entanto, você também verá alguns outros membros — `watch`, `valueOf`, etc — estes estão definidos no objeto de protótipo do `Person()`, que é [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
 
-![](https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png)
+![](mdn-graphics-person-person-object-2.png)
 
 O que acontece se você chamar um método em `person1`, que é realmente definido em `Object`? Por exemplo:
 

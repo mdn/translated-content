@@ -194,7 +194,7 @@ function foo() {
 
 The output in the console looks something like this:
 
-![](https://mdn.mozillademos.org/files/7167/api-trace2.png)
+![](api-trace2.png)
 
 ## Notes
 

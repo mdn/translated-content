@@ -9,7 +9,7 @@ O WebVR oferece suporte para expor dispositivos de realidade virtual - por exemp
 
 ## Conceitos e uso
 
-![Sketch of a person in a chair with wearing goggles labelled Head mounted display (HMD) facing a monitor with a webcam labelled Position sensor ](https://mdn.mozillademos.org/files/11035/hw-setup.png)
+![Sketch of a person in a chair with wearing goggles labelled Head mounted display (HMD) facing a monitor with a webcam labelled Position sensor ](hw-setup.png)
 
 Todos os dispositivos VR ligados ao computador serão devolvidos pelo {{domxref("Navigator.getVRDisplays()")}} método. Que retorna uma matriz de objetos para representar os dispositivos conectados, que herdam do objeto geral {{domxref("VRDevice")}} Geralmente o display usado na cabeça terá dois dispositivos - o próprio display montado na cabeça, representado por {{domxref("HMDVRDevice")}}, e uma câmera com sensor na posição que manterá o controle de sua posição de cabeça, representada por {{domxref("PositionSensorVRDevice")}}.
 

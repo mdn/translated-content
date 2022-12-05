@@ -26,7 +26,7 @@ function codigoPotencialmenteBugado() {
 
 Quando o depurador é invocado, a execução é parada na declaração debugger. É como um breakpoint no código-fonte.
 
-[![Paused at a debugger statement.](https://mdn.mozillademos.org/files/6963/Screen%20Shot%202014-02-07%20at%209.14.35%20AM.png)](<https://mdn.mozillademos.org/files/6963/Screen Shot 2014-02-07 at 9.14.35 AM.png>)
+[![Paused at a debugger statement.](screen_shot_2014-02-07_at_9.14.35_am.png)](<screen_shot_2014-02-07_at_9.14.35_am.png>)
 
 ## Especificações
 

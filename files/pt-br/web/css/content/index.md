@@ -216,7 +216,7 @@ a::after {
 }
 
 #mdn::before {
-  content: url("https://mdn.mozillademos.org/files/7691/mdn-favicon16.png") ;
+  content: url("mdn-favicon16.png") ;
 }
 
 li {

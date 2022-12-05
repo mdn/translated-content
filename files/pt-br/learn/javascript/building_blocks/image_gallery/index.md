@@ -53,7 +53,7 @@ Você recebeu alguns recursos de HTML, CSS e imagem e algumas linhas de código 
 
 O exemplo é assim:
 
-![](https://mdn.mozillademos.org/files/13787/gallery.png)
+![](gallery.png)
 
 As partes mais interessantes do arquivo CSS do exemplo:
 

@@ -67,7 +67,7 @@ Outra coisa especial sobra as variáveis é que elas podem conter praticamente q
 
 > **Nota:** Perceba que dissemos que as variáveis contém valores. Essa é uma distinção importante a se fazer. Elas não são os valores; e sim os containers para eles. Você pode pensar nelas sendo pequenas caixas de papelão nas quais você pode guardar coisas..
 
-![](https://mdn.mozillademos.org/files/13506/boxes.png)
+![](boxes.png)
 
 ## Declarando uma variável
 

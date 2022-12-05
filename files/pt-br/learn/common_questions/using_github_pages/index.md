@@ -38,7 +38,7 @@ The other thing you need to do before moving on is to initialise your code direc
 
 The best way to upload your code to Github is via the command line — this is a window where you type in commands to do things like create files and run programs, rather than clicking inside a user interface. It will look something like this:
 
-![](https://mdn.mozillademos.org/files/9483/command-line.png)
+![](command-line.png)
 
 > **Nota:** You could also consider using a [Git graphical user interface](http://git-scm.com/downloads/guis) to do the same work, if you feel uncomfortable with the command line.
 
@@ -55,9 +55,9 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
 1. Next, you need to create a new repo for your files to go in. Click Plus (+) in the top right of the GitHub homepage, then choose _New Repository_.
 2. On this page, in the _Repository name_ box, enter a name for your code repository, for example _my-repository_.
 3. Also fill in a description to say what your repository is going to contain. Your screen should look like this:
-    ![](https://mdn.mozillademos.org/files/12143/create-new-repo.png)
+    ![](create-new-repo.png)
 4. Click _Create repository_; this should bring you to the following page:
-    ![](https://mdn.mozillademos.org/files/12141/github-repo.png)
+    ![](github-repo.png)
 
 ### Uploading your files to GitHub
 

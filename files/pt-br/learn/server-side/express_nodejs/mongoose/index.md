@@ -97,7 +97,7 @@ O diagrama também mostra o relacionamento entre modelos, incluindo sua cardinal
 
 > **Nota:** Assim como discutido abaixo em [Iniciando com Mongoose](#related_documents) muitas vezes é melhor ter o atributo que define a relação entre os documentos/modelos em apenas um dos modelos( você ainda pode encontrar o relacionamento reverso pesquisando o `_id` associado no outro modelo). Abaixo nós escolhemos definir o modelo Book Schema para armazenar o relacionamento entre Book/Genre e Book/Author, e definimos BookInstance Schema para armazenar o relacionamento entre Book/BookInstance. Esta escolha foi um tanto arbitrária — nós poderíamos igualmente ter declarado esses atributos em outro schema.
 
-![Mongoose Library Model with correct cardinality](https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png)
+![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
 > **Nota:** A próxima seção fornece um guia explicando como os modelos são definidos e usados. Ao ler, considere como iremos construir cada um dos modelos no diagrama acima.
 
@@ -512,29 +512,29 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
     - Click the **Create Cluster** button (creation of the cluster will take some minutes).
 
 3. You will return to the _Cluster Overview_ screen.
-    ![Setup a collection on MongoDB Atlas.](https://mdn.mozillademos.org/files/16517/MongoDB_Atlas_-_CreateCollection.jpg)
+    ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
 
     - Click the **Collections** button.
 
 4. This will open the _Collections_ section.
-    ![Create a database on MongoDB Atlas.](https://mdn.mozillademos.org/files/16518/MongoDB_Atlas_-_CreateDatabase.jpg)
+    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
 
     - Click the **Create Database** button.
 
 5. This will open the _Create Database_ screen.
-    ![Details during database creation on MongoDB Atlas.](https://mdn.mozillademos.org/files/16520/MongoDB_Atlas_-_DatabaseDetails.jpg)
+    ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
 
     - Enter the name for the new database as `local_library`.
     - Enter the name of the collection as Collection0.
     - Click the **Create** button to create the database.
 
 6. You will return to the Collection screen with your database created.
-    ![Database creation confirmation on MongoDB Atlas.](https://mdn.mozillademos.org/files/16519/MongoDB_Atlas_-_DatabaseCreated.jpg)
+    ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
 
     - Click the _Overview_ tab to return the cluster overview.
 
 7. From the Cluster0 Overview screen click the **Connect** button.
-    ![Configure a connection when after setting up a cluster in MongoDB Atlas.](https://mdn.mozillademos.org/files/16512/MongoDB_Atlas_-_Connectbutton.jpg)
+    ![Configure a connection when after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 8. This will open the Connect to Cluster screen.
     ![Setup a connection when using MongoDB Atlas.](mongodb_atlas_-_connectcluster.jpg)
 
@@ -550,12 +550,12 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
     - Click the **Choose a connection method** button.
 
 9. This will access the _Choose a connection_ method tab.
-    ![Choose a connection type when connecting with MongoDB Atlas.](https://mdn.mozillademos.org/files/16510/MongoDB_Atlas_-_ChooseAConnectionMethod.jpg)
+    ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
 
     - Click the **Connect Your Application** option.
 
 10. This will open the _Connect_ screen.
-    ![Choose the Short SRV connection when settinup a connection on MongoDB Atalas.](https://mdn.mozillademos.org/files/16514/MongoDB_Atlas_-_ConnectForShortSRV.jpg)
+    ![Choose the Short SRV connection when settinup a connection on MongoDB Atalas.](mongodb_atlas_-_connectforshortsrv.jpg)
 
     - Click the **Short SRV connection string** option to copy the connection string.
 

@@ -36,7 +36,7 @@ Nos artigos anteriores, analisamos todos os detalhes essenciais da teoria e da s
 
 ## Vamos saltitar algumas bolas
 
-Neste artigo, vamos escrever uma demo clássica de "bolas saltitantes", para mostrar o quão úteis os objetos podem ser em JavaScript. Nossas bolinhas vão saltar pela tela e mudam de cor quando se tocam. O exemplo acabado vai parecer um pouco assim:![](https://mdn.mozillademos.org/files/13865/bouncing-balls.png)
+Neste artigo, vamos escrever uma demo clássica de "bolas saltitantes", para mostrar o quão úteis os objetos podem ser em JavaScript. Nossas bolinhas vão saltar pela tela e mudam de cor quando se tocam. O exemplo acabado vai parecer um pouco assim:![](bouncing-balls.png)
 
 Este exemplo fará uso da [Canvas API](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics), para desenhar as bolas na tela, e da [requestAnimationFrame](/pt-BR/docs/Web/API/window/requestAnimationFrame) API para animar toda a exibição — você não precisa ter nenhum conhecimento prévio dessas APIs e esperamos que, no momento em que você terminar este artigo, você esteja interessado em explorá-los mais. Ao longo do caminho, faremos uso de alguns objetos bacanas, e mostraremos algumas técnicas legais, como bolas quicando nas paredes, e verificando se elas se chocaram (também conhecidas como **detecção de colisão**).
 

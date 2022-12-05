@@ -426,11 +426,11 @@ Nesse ponto, deveríamos ter criado tudo o necessário para exibir a lista de li
 
 Clique no link **All books** para exibir a lista de livros.
 
-![Book List Page](https://mdn.mozillademos.org/files/14049/book_list_page_no_pagination.png)
+![Book List Page](book_list_page_no_pagination.png)
 
 Em seguida, clique no link de um dos seus livros. Se tudo estiver configurado corretamente, você deverá ver algo como a seguinte captura de tela.
 
-![Book Detail Page](https://mdn.mozillademos.org/files/14051/book_detail_page_no_pagination.png)
+![Book Detail Page](book_detail_page_no_pagination.png)
 
 ## Paginação
 
@@ -490,7 +490,7 @@ A captura de tela abaixo mostra a aparência da paginação - se você não inse
 
 Os links de paginação são exibidos na parte inferior, com os links seguinte/anterior, dependendo da página em que você está.
 
-![Book List Page - paginated](https://mdn.mozillademos.org/files/14057/book_list_paginated.png)
+![Book List Page - paginated](book_list_paginated.png)
 
 ## Challenge yourself
 
@@ -512,9 +512,9 @@ The code required for the URL mappers and the views should be virtually identica
 
 When you are finished, your pages should look something like the screenshots below.
 
-![Author List Page](https://mdn.mozillademos.org/files/14053/author_list_page_no_pagination.png)
+![Author List Page](author_list_page_no_pagination.png)
 
-![Author Detail Page](https://mdn.mozillademos.org/files/14055/author_detail_page_no_pagination.png)
+![Author Detail Page](author_detail_page_no_pagination.png)
 
 ## Summary
 
