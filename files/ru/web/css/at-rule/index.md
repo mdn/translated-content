@@ -70,4 +70,3 @@ translation_of: Web/CSS/At-rule
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
   - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
   - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)
-

@@ -66,7 +66,7 @@ Hay algunas advertencias a tener en cuenta al usar las palabras clave relativas 
   </thead>
   <tbody>
     <tr style="position: relative">
-      <td rowspan="16"><a href="https://www.w3.org/TR/CSS1/">CSS Level 1</a></td>
+      <td rowspan="16"><a href="https://www.w3.org/TR/CSS1/">CSS Level 1</a></td>
       <td style="background: #000"></td>
       <td style="text-align: center"><code>black</code></td>
       <td><code>#000000</code></td>

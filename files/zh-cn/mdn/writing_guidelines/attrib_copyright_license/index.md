@@ -33,7 +33,7 @@ MDN 的内容是免费的，并在开源协议下提供。
 
 如果你想对 MDN Web 文档作出贡献，你必须在 Attribution-ShareAlike license（或者在你编辑的页面已经指定的其它版权许可）下发布你的文档，在 [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/)（专用于公有领域）下发布你的示例代码。
 
-> **警告：** 请不要在新建的页面使用其它版权许可。
+> **警告：** 请不要在新建的页面使用其它版权许可。
 
 **贡献的内容的版权在作者未授予他人之前归原作者所有**。
 
