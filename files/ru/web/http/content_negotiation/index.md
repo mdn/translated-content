@@ -27,7 +27,7 @@ translation_of: Web/HTTP/Content_negotiation
 
 В _согласовании на стороне сервера_ или _упреждающем согласовании_, браузер (или любое другое клиентское приложение) посылает несколько заголовков HTTP наряду с URL. Эти заголовки описывают предпочтения пользователя. Сервер использует их в качестве подсказок для внутреннего алгоритма, который выбирает наиболее подходящее представление ресурса, чтобы предоставить его клиенту. Реализация алгоритма в стандарт не входит и полностью зависит от сервера. Для примера, смотрите [алгоритм согласования Apache 2.2](http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm).
 
-![](https://mdn.mozillademos.org/files/13791/HTTPNegoServer.png)
+![](httpnegoserver.png)
 
 Стандарт HTTP/1.1 определяет список стандартных заголовков которые используются в этом механизме согласования – ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Хотя, строго говоря, {{HTTPHeader("User-Agent")}} не находится в этом списке, в некоторых случаях он используется, чтобы послать определённое представление запрошенного ресурса, несмотря на то, что это и не является хорошей практикой. Сервер использует заголовок {{HTTPHeader("Vary")}} чтобы обозначить, какие заголовки он использовал для согласования (точнее, ассоциированные с ними заголовки ответа), чтобы [кеширование](/ru/docs/Web/HTTP/Caching) работало оптимально.
 
@@ -100,6 +100,6 @@ Server-driven negotiation suffers from a few downsides: it doesn't scale well. T
 
 From the beginnings of HTTP, the protocol allowed another negotiation type: _agent-driven negotiation_ or _reactive negotiation_. In this negotiation, when facing an ambiguous request, the server sends back a page containing links to the available alternative resources. The user is presented the resources and choose the one to use.
 
-![](https://mdn.mozillademos.org/files/13795/HTTPNego3.png)
+![](httpnego3.png)
 
 Unfortunately, the HTTP standard does not specify the format of the page allowing to choose between the available resource, which prevents to easily automatize the process. Besides falling back to the _server-driven negotiation_, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.

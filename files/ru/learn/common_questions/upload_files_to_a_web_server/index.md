@@ -21,7 +21,7 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 Откройте приложение FileZilla; вы должны увидеть что-то вроде этого:
 
-![](https://mdn.mozillademos.org/files/15767/filezilla-ui.png)
+![](filezilla-ui.png)
 
 ### Вход в систему
 
@@ -47,7 +47,7 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 Давайте сначала посмотрим на `http://demozilla.examplehostingprovider.net/` — как вы можете видеть, то здесь пока ничего нет:
 
-![Our demozilla personal website, seen in a browser: it's empty](https://mdn.mozillademos.org/files/9615/demozilla-empty.png)
+![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
 > **Примечание:** В зависимости от вашего хостинг-провайдера, когда вы впервые заходите на свой веб-адрес, большую часть времени вы будете видеть страницу, на которой написано что-то вроде этого: “This website is hosted by \[Hosting Service].”
 
@@ -61,7 +61,7 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 Ваше окно должно выглядеть как показано ниже:
 
-![](https://mdn.mozillademos.org/files/15769/site-manager.png)
+![](site-manager.png)
 
 Теперь нажмите _Connect_ для подключения к SFTP-серверу.
 
@@ -69,7 +69,7 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 ### Здесь и там: локальный и удалённый просмотр
 
-После подключения ваш экран должен выглядеть примерно так (мы подключились к нашему собственному примеру, чтобы дать вам представление):![](https://mdn.mozillademos.org/files/15768/connected.png)
+После подключения ваш экран должен выглядеть примерно так (мы подключились к нашему собственному примеру, чтобы дать вам представление):![](connected.png)
 
 Давайте посмотрим, что вы видите:
 
@@ -87,7 +87,7 @@ translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 
 Пока все хорошо, но действительно ли файлы в сети? Вы можете перепроверить, перейдя на ваш сайт (например, `http://demozilla.examplehostingprovider.net/`) в вашем браузере:
 
-![Here we go: our website is live!](https://mdn.mozillademos.org/files/9627/here-we-go.png)
+![Here we go: our website is live!](here-we-go.png)
 
 И вуаля! Наш сайт работает!
 

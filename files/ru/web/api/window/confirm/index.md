@@ -26,7 +26,7 @@ if (window.confirm("Do you really want to leave?")) {
 
 Результат:
 
-![firefox confirm](https://mdn.mozillademos.org/files/7163/firefoxcomfirmdialog_zpsf00ec381.png)
+![firefox confirm](firefoxcomfirmdialog_zpsf00ec381.png)
 
 ## Примечания
 

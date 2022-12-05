@@ -17,7 +17,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 
 _Внутренняя ось (inline axis)_ проходит по оси блока, это направление, в котором выполняется регулярный поток строк. В спецификации CSS Grid Layout его иногда называют осью строки, являющейся осью, по которой идут наши дорожки.
 
-![Image demonstrating the Inline or Row axis location.](https://mdn.mozillademos.org/files/14727/7_Inline_Axis.png)
+![Image demonstrating the Inline or Row axis location.](7_inline_axis.png)
 
 Мы можем выровнять содержимое внутри областей сетки и сетка отслеживает себя на этих двух осях.
 
@@ -488,7 +488,7 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 
 В приведённом ниже изображении я поместил сетку с `align-content`, со значением `start` рядом с сеткой, когда значение `align-content` имеет значение `space-between`. Вы можете видеть, как элементы 1 и 2, которые охватывают два ряда дорожек, взяты на дополнительной высоте, поскольку они получают дополнительное пространство, добавленное к промежутку между этими двумя дорожками:
 
-![Demonstrating how items become larger if we use space-between.](https://mdn.mozillademos.org/files/14729/7_space-between.png)
+![Demonstrating how items become larger if we use space-between.](7_space-between.png)
 
 ## Justifying the grid tracks on the row axis
 
@@ -619,7 +619,7 @@ _Внутренняя ось (inline axis)_ проходит по оси бло�
 
 Вы можете видеть, как элемент выравнивается с помощью [Firefox Grid Highlighter](/ru/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts):
 
-![Image showing auto-margins using the Grid Highlighter.](https://mdn.mozillademos.org/files/14731/7_auto_margins.png)
+![Image showing auto-margins using the Grid Highlighter.](7_auto_margins.png)
 
 ## Alignment and Writing Modes
 

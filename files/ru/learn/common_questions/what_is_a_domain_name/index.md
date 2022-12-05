@@ -33,7 +33,7 @@ _В данный момент нет обучающего курса . Но вы
 
 Доменное имя имеет простую структуру, состоящую из нескольких частей (частей может быть бесконечное количество, но на практике число уровней обычно невелико), разделённых точками и **читаемых справа налево**:
 
-![Anatomy of the MDN domain name](https://mdn.mozillademos.org/files/11229/structure.png)
+![Anatomy of the MDN domain name](structure.png)
 
 Каждая из этих частей предоставляет специфическую информацию о доменном имени.
 
@@ -121,7 +121,7 @@ NOT FOUND
 3. Если же ваш компьютер не знает, какой IP-адрес соответствует доменному имени `mozilla.org`, он запрашивает DNS-сервер, чья задача - сообщить вашему компьютеру какой IP-адрес соответствует запрошенному доменному имени.
 4. Теперь ваш компьютер знает соответствие и может взаимодействовать с сервером.
 
-![Explanation of the steps needed to obtain the result to a DNS request](https://mdn.mozillademos.org/files/8961/2014-10-dns-request2.png)
+![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
 
 ## Следующие шаги
 

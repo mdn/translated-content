@@ -21,7 +21,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 Для извлечения максимальной пользы из этой серии статей необходимо иметь средние (или хотя бы базовые) знания языка [JavaScript](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics). После прохождения этого урока вы сможете создавать собственные простые браузерные игры.
 
-![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](https://mdn.mozillademos.org/files/10383/mdn-breakout-gameplay.png)
+![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](mdn-breakout-gameplay.png)
 
 ## Детали к урокам
 

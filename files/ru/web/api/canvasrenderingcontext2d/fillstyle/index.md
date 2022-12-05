@@ -82,7 +82,7 @@ for (let i = 0; i < 6; i++) {
 
 #### Результат:
 
-{{EmbedLiveSample("Использование_fillStyle_в_циклах_for", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("Использование_fillStyle_в_циклах_for", 160, 160, "canvas_fillstyle.png")}}
 
 ## Спецификации
 

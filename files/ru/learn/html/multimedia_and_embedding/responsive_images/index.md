@@ -16,7 +16,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 Какую проблему мы пытаемся решить адаптивными изображениями? Давайте рассмотрим типичный сценарий. Обычный веб-сайт может содержать изображение в заголовке, для улучшения визуального восприятия пользователем, а также несколько изображений в контенте под ним. Вы, вероятно, захотите, чтобы изображение в заголовке занимало всю ширину окна, а изображения в контенте размещались где-то внутри колонки с контентом. Давайте посмотрим на следующий простой пример:
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
 Такая вёрстка хорошо выглядит на широкоформатных экранах ноутбуков и настольных ПК, (вы можете посмотреть [посмотреть демо-пример](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) и найти [исходный код](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) на Github.) Мы не будем подробно рассматривать CSS, скажем только следующее:
 
@@ -26,7 +26,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 Всё хорошо, однако проблемы начинаются, когда вы просматриваете сайт на устройстве с небольшим экраном – шапка внизу выглядит нормально, но теперь она занимает значительную высоту экрана; первое изображение в контенте напротив, выглядит ужасно – при таком размере едва можно рассмотреть людей!
 
-![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](https://mdn.mozillademos.org/files/12936/non-responsive-narrow.png)
+![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](non-responsive-narrow.png)
 
 Было бы намного лучше показывать обрезанную версию изображения, на котором видны важные детали снимка, когда сайт отображается на узком экране, и, возможно, что-то среднее между обрезанным и оригинальным изображениями для экранов средней ширины, таких как планшеты – это известно как **art direction problem**.
 
@@ -124,7 +124,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
      src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
 ```
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](https://mdn.mozillademos.org/files/12942/resolution-example.png)В данном примере, к изображению применяется CSS таким образом, что оно имеет ширину в 320 пикселей на экране (также называемое CSS-пикселями):
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)В данном примере, к изображению применяется CSS таким образом, что оно имеет ширину в 320 пикселей на экране (также называемое CSS-пикселями):
 
 ```css
 img {
@@ -160,7 +160,7 @@ img {
 
 Этот код позволяет нам выводить отзывчивое изображение и на широких, и на узких экранах, как показано ниже:
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-narrow.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images/picture-element-narrow.png)
 
 > **Примечание:** вам следует использовать атрибут `media` только при художественном оформлении; когда вы используете `media`, не применяйте медиа-условия с атрибутом `sizes`.
 

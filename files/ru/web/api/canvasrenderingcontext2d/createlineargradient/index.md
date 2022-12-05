@@ -13,7 +13,7 @@ translation_of: Web/API/CanvasRenderingContext2D/createLinearGradient
 
 Метод **`CanvasRenderingContext2D.createLinearGradient()`**, предоставляемый Canvas 2D API, создаёт градиент вдоль линии, соединённой двумя точками с заданными координатами.
 
-![](https://mdn.mozillademos.org/files/14681/mdn-canvas-linearGradient.png)
+![](mdn-canvas-lineargradient.png)
 
 Этот метод возвращает линейный {{domxref("CanvasGradient")}}. Для того, чтобы быть добавленным к фигуре, градиент должен быть задан свойством {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} или {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}}.
 

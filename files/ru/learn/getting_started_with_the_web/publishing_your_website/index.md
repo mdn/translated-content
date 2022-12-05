@@ -33,7 +33,7 @@ translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 
 Кроме того, вам потребуется {{Glossary("FTP", "File Transfer Protocol (FTP)")}}-клиент (более подробно см. [Сколько это стоит: программное обеспечение](/en-US/Learn/How_much_does_it_cost#Software)), чтобы передать файлы веб-сайта на сервер. Существует множество FTP-клиентов, но, как правило, вам нужно войти на веб-сервер, используя данные, предоставленные вашей хостинговой компанией (например: имя пользователя (логин), пароль, имя хоста). Затем FTP-клиент отобразит файлы на вашем компьютере в одной половине окна и файлы на хостинговом сервере в другой половине, так вы сможете перетаскивая копировать файлы с вашего компьютера на сервер и обратно.
 
-![](https://mdn.mozillademos.org/files/9469/ftp.jpg)
+![](ftp.jpg)
 
 #### Советы по поиску хостингов и доменов
 
@@ -62,7 +62,7 @@ translation_of: Learn/Getting_started_with_the_web/Publishing_your_website
 - [JSBin](http://jsbin.com/)
 - [CodePen](https://codepen.io/)
 
-![](https://mdn.mozillademos.org/files/9471/jsbin-screen.png)
+![](jsbin-screen.png)
 
 ## Публикация с помощью GitHub
 

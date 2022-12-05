@@ -149,7 +149,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
       <td>
         <img
           alt="Screenshot of a plain slider control on macOS"
-          src="https://mdn.mozillademos.org/files/14989/macslider-plain.png"
+          src="macslider-plain.png"
           style="height: 28px; width: 184px"
         />
       </td>
@@ -192,7 +192,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
       <td>
         <img
           alt="Screenshot of a plain slider control on macOS"
-          src="https://mdn.mozillademos.org/files/14991/macslider-ticks.png"
+          src="macslider-ticks.png"
           style="height: 28px; width: 184px"
         />
       </td>
@@ -235,7 +235,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
       <td>
         <img
           alt="Screenshot of a plain slider control on macOS"
-          src="https://mdn.mozillademos.org/files/14993/macslider-labels.png"
+          src="macslider-labels.png"
           style="height: 44px; width: 184px"
         />
       </td>
@@ -257,7 +257,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 <input type="range" id="volume" min="0" max="11" value="7" step="1">
 ```
 
-{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}
+{{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}
 
 Это горизонтальный контроллер (по крайне мере на большинстве основных браузеров, другие могут отличаться).
 
@@ -282,7 +282,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 #### Результат
 
-{{EmbedLiveSample("Orientation_sample2", 200, 200, "https://mdn.mozillademos.org/files/14985/Orientation_sample2.png")}}
+{{EmbedLiveSample("Orientation_sample2", 200, 200, "orientation_sample2.png")}}
 
 К сожалению, большинство браузеров сейчас не поддерживают вертикальные контроллы напрямую.
 
@@ -327,7 +327,7 @@ defaultValue = (rangeElem.max < rangeElem.min) ? rangeElem.min
 
 Размеры контроллера это набор из 150 пикселей длины и 20 пикселей высоты. Маржинги установлены на 0 и {{cssxref("transform-origin")}} смещается в середину пространства, на котором вращается слайдер; поскольку слайдер имеет ширину 150 пикселей, он вращается через прямоугольник по 150 пикселей с каждой стороны. Смещение начала координат на 75px по каждой оси означает, что мы будем вращаться вокруг центра этого пространства. Наконец, мы поворачиваем против часовой стрелки на 90°. Результат: инпут range, который вращается таким образом, что максимальное значение находится сверху, а минимальное снизу.
 
-{{EmbedLiveSample("Orientation_sample3", 200, 200, "https://mdn.mozillademos.org/files/14987/Orientation_sample3.png")}}
+{{EmbedLiveSample("Orientation_sample3", 200, 200, "orientation_sample3.png")}}
 
 ### appearance property
 

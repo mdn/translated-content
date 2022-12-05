@@ -51,7 +51,7 @@ This element implements the [`SVGImageElement`](/en-US/docs/Web/API/SVGImageElem
 ```html
 <svg width="200" height="200"
   xmlns="http://www.w3.org/2000/svg">
-  <image href="https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png" height="200" width="200"/>
+  <image href="mdn_logo_only_color.png" height="200" width="200"/>
 </svg>
 ```
 

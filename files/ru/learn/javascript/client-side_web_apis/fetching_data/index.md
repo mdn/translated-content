@@ -262,7 +262,7 @@ fetch(url).then(function(response) {
 
 Чтобы завершить статью, мы рассмотрим несколько более сложный пример, который показывает более интересные применения Fetch. Мы создали образец сайта под названием The Can Store - это вымышленный супермаркет, который продаёт только консервы. Вы можете найти этот пример [в прямом эфире на GitHub](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/) и [посмотреть исходный код](https://github.com/mdn/learning-area/tree/master/javascript/apis/fetching-data/can-store).
 
-![A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column.](https://mdn.mozillademos.org/files/14779/can-store.png)
+![A fake ecommerce site showing search options in the left hand column, and product search results in the right hand column.](can-store.png)
 
 По умолчанию на сайте отображаются все продукты, но вы можете использовать элементы управления формы в столбце слева, чтобы отфильтровать их по категориям, поисковому запросу или и тому и другому.
 

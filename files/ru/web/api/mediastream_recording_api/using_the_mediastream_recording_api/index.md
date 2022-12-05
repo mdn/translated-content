@@ -10,7 +10,7 @@ translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recordin
 
 ## Пример приложения: Веб диктофон
 
-![An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back.](https://mdn.mozillademos.org/files/7885/web-dictaphone.png)
+![An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back.](web-dictaphone.png)
 
 Для демонстрации основной функциональности интерфейса `MediaRecorder API`, мы создали веб диктофон, позволяющий записывать отрывки аудио и проигрывать их после записи. Он визуализирует устройства ввода звука, используя интерфейс `Web Audio API`. В этой статье будем концентрироваться на функциональности записи и воспроизведения.
 

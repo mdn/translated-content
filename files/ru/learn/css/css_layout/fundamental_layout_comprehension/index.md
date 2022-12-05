@@ -21,7 +21,7 @@ translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 
 Вам предоставили некоторый html, базовый css и изображения — ваша задача, создать раскладку для дизайна, который должен выглядеть как на изображении ниже.
 
-![](https://mdn.mozillademos.org/files/16076/layout-task-complete.png)
+![](layout-task-complete.png)
 
 ### Базовые настройки
 
@@ -31,7 +31,7 @@ translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 
 Эта отправная точка и всё содержимое отображается браузером в нормальном потоке.
 
-![](https://mdn.mozillademos.org/files/16075/layout-task-start.png)
+![](layout-task-start.png)
 
 ### Ваши задачи
 

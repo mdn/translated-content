@@ -15,7 +15,7 @@ translation_of: Web/Performance/Navigation_and_resource_timings
 
 [PerformanceTiming API](/ru/docs/Web/API/PerformanceTiming) предоставляет собой read only данные в виде объекта, где значениями полей являются числа, указывающие на количество миллисекунд, которые прошли к моменту срабатывания того или иного события. Как показано на изображении ниже, процесс навигации можно разбить на следующие этапы: [`navigationStart`](/en-US/docs/Web/API/PerformanceTiming/navigationStart), [`unloadEventStart`](/en-US/docs/Web/API/PerformanceTiming/unloadEventStart), [`unloadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/unloadEventEnd), [`redirectStart`](/en-US/docs/Web/API/PerformanceTiming/redirectStart), [`redirectEnd`](/en-US/docs/Web/API/PerformanceTiming/redirectEnd), [`fetchStart`](/en-US/docs/Web/API/PerformanceTiming/fetchStart), [`domainLookupStart`](/en-US/docs/Web/API/PerformanceTiming/domainLookupStart), [`domainLookupEnd`](/en-US/docs/Web/API/PerformanceTiming/domainLookupEnd), [`connectStart`](/en-US/docs/Web/API/PerformanceTiming/connectStart), [`connectEnd`](/en-US/docs/Web/API/PerformanceTiming/connectEnd), [`secureConnectionStart`](/en-US/docs/Web/API/PerformanceTiming/secureConnectionStart), [`requestStart`](/en-US/docs/Web/API/PerformanceTiming/requestStart), [`responseStart`](/en-US/docs/Web/API/PerformanceTiming/responseStart), [`responseEnd`](/en-US/docs/Web/API/PerformanceTiming/responseEnd), [`domLoading`](/en-US/docs/Web/API/PerformanceTiming/domLoading), [`domInteractive`](/en-US/docs/Web/API/PerformanceTiming/domInteractive), [`domContentLoadedEventStart`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventStart), [`domContentLoadedEventEnd`](/en-US/docs/Web/API/PerformanceTiming/domContentLoadedEventEnd), [`domComplete`](/en-US/docs/Web/API/PerformanceTiming/domComplete), [`loadEventStart`](/en-US/docs/Web/API/PerformanceTiming/loadEventStart), и [`loadEventEnd`](/en-US/docs/Web/API/PerformanceTiming/loadEventEnd).
 
-![Navigation Timing event metrics](https://mdn.mozillademos.org/files/16620/Screen_Shot_2019-05-03_at_1.06.27_PM.png)
+![Navigation Timing event metrics](screen_shot_2019-05-03_at_1.06.27_pm.png)
 
 Благодаря этим метрикам и небольшим вычислениям мы можем определить важные показатели, например [время до первого байта (time to first byte](/ru/docs/Glossary/time_to_first_byte)), скорость загрузки страницы, поиска записи dns и даже узнать, является ли соединение безопасным.
 
@@ -27,7 +27,7 @@ let time = window.performance.timing
 
 Мы можем использовать эти данные, чтобы понять, как быстро работает приложение:
 
-![entering window.performance.timing in the console lists all the timings in the PerformanceNavigationTiming interface](https://mdn.mozillademos.org/files/16824/navigatortiming.png)
+![entering window.performance.timing in the console lists all the timings in the PerformanceNavigationTiming interface](navigatortiming.png)
 
 Описание показателей:
 
@@ -148,7 +148,7 @@ let navigationTimings = performance.getEntriesByType('navigation');
 
 Метод `performance.getEntriesByType('navigation')` возвращает массив [PerformanceEntry](/ru/docs/Web/API/PerformanceEntry), в котором содержатся объекты Navigation Timing.
 
-![The results of when performance.getEntriesByType('navigation'); is entered into the console for this document](https://mdn.mozillademos.org/files/16825/perfgentrybytypenavigation.png)
+![The results of when performance.getEntriesByType('navigation'); is entered into the console for this document](perfgentrybytypenavigation.png)
 
 Из этих данных можно многое извлечь. На изображении выше вы видите, что помимо самих таймингов, данные содержат имя документа и некоторую другую полезную информацию.
 
@@ -184,7 +184,7 @@ let compressionSavings = 1 - (timing.encodedBodySize / timing.decodedBodySize)
 
 Для сравнение, мы можем посмотреть на вкладку Network, где увидим, что было передано 22.04KB для файла, который в разархивированном виде занимает 87.24KB.
 
-![View of the bytes transferred and the size via the network tab](https://mdn.mozillademos.org/files/16826/bytesdownloaded.png)
+![View of the bytes transferred and the size via the network tab](bytesdownloaded.png)
 
 Если мы проверим вычисления, то результат получится схожим: `1 - (22.04 / 87.24) = 0.747`. Тайминги навигации позволяют нам получить такие данные программно.
 
@@ -224,7 +224,7 @@ DOMContentLoaded = timing.domContentLoadedEventEnd - timing.domContentLoadedEven
 
 В то время, как тайминги навигации измеряют производительность загрузки и парсинга основного файла HTML, этот файл служит лишь точкой входа для загрузки других ресурсов. Поэтому нам так же важно знать, как быстро загружаются дополнительные ресурсы. Для измерения этих данных нужно использовать Resource Timing. Большая часть измерений в этом объекте похожи: здесь и поиск домена в DNS, и TCP установка соединения и т.д.
 
-![Graphic of Resource Timing timestamps](https://mdn.mozillademos.org/files/12093/ResourceTiming-TimeStamps.jpg)
+![Graphic of Resource Timing timestamps](resourcetiming-timestamps.jpg)
 
 Для того, чтобы получить эти данные, выполните команду:
 

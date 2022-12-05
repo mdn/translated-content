@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Typed_arrays
 
 Для достижения максимальной гибкости и производительности, реализация типизированных массивов в JavaScript разделена на **буферы** и **представления**. Буфер ([`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)) –– это объект, представляющий из себя набор данных. Он не имеет формата и не предоставляет возможности доступа к своему содержимому. Для доступа к памяти буфера вам нужно использовать представление. Представление предоставляет контекст: тип данных, начальную позицию в буфере и количество элементов. Это позволяет представить данные в виде типизированного массива.
 
-![Typed arrays in an ArrayBuffer](https://mdn.mozillademos.org/files/8629/typed_arrays.png)
+![Typed arrays in an ArrayBuffer](typed_arrays.png)
 
 ### ArrayBuffer
 

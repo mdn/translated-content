@@ -43,7 +43,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 Встроенное видео будет выглядеть примерно так:
 
-![A simple video player showing a video of a small white rabbit](https://mdn.mozillademos.org/files/12794/simple-video.png)
+![A simple video player showing a video of a small white rabbit](simple-video.png)
 
 Вы можете [посмотреть живой пример](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) (взгляните также на [исходный код](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)).
 
@@ -147,7 +147,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 В браузере это вызывает следующее:
 
-![A simple audio player with a play button, timer, volume control, and progress bar](https://mdn.mozillademos.org/files/12798/audio-player.png)
+![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
 > **Примечание:** Примечание: вы можете запустить [аудио-демо](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) в Github (см. также [исходный код аудиоплеера](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
@@ -212,7 +212,7 @@ WEBVTT
 
 Это приведёт к просмотру видео с субтитрами, таким как:
 
-![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
 Подробнее читайте в разделе [добавление титров и субтитров к видео HTML5](/ru/docs/Web/Guide/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Вы можете [найти пример](http://iandevlin.github.io/mdn/video-player-with-captions/), который соответствует этой статье в Github, написанной Яном Девлином (см. также [исходный код](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)). В этом примере используется JavaScript, позволяющий пользователям выбирать между различными субтитрами. Обратите внимание, что для включения субтитров вам нужно нажать кнопку «CC» и выбрать вариант - английский, немецкий или испанский.
 

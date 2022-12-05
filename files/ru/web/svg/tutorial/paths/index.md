@@ -197,7 +197,7 @@ m dx dy
 
 Третий параметр описывает поворот дуги. См. пример ниже
 
-![SVGArcs_XAxisRotation_with_grid](https://mdn.mozillademos.org/files/10409/SVGArcs_XAxisRotation_with_grid.png)
+![SVGArcs_XAxisRotation_with_grid](svgarcs_xaxisrotation_with_grid.png)
 
 ```xml
 <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">
@@ -214,7 +214,7 @@ m dx dy
 
 Четыре разных пути, упомянутых выше определяются с помощью двух аргументов-флагов. Как упоминалось ранее, есть ещё два возможных эллипса для обхода пути и два разных возможных пути на обоих эллипсах, что даёт четыре возможных пути. Первый аргумент - _large-arc-flag._ Он определяет, должна ли дуга быть больше или меньше 180 градусов. В конечном счёте этот флаг определяет, в каком направлении дуга будет обходить данный круг. Второй аргумент - _sweep-flag._ Он определяет, должна дуга двигаться по отрицательным углам или по положительным, т.е. по сути определяет по какому из двух кругов она будет идти. Пример ниже показывает все четыре возможные комбинации.
 
-![Show the 4 arcs on the Ellipse example](https://mdn.mozillademos.org/files/15822/SVGArcs_XAxisRotation_with_grid_ellipses.png)
+![Show the 4 arcs on the Ellipse example](svgarcs_xaxisrotation_with_grid_ellipses.png)
 
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" width="320" height="320">

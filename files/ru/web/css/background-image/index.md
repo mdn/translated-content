@@ -74,7 +74,7 @@ pre, p {
 }
 
 div {
-  background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+  background-image: url("mdn_logo_only_color.png");
 }
 
 p {
@@ -82,8 +82,8 @@ p {
 }
 
 .catsandstars {
-  background-image:  url("https://mdn.mozillademos.org/files/11991/startransparent.gif"),
-                     url("https://mdn.mozillademos.org/files/7693/catfront.png");
+  background-image:  url("startransparent.gif"),
+                     url("catfront.png");
   background-color: transparent;
 }
 ```

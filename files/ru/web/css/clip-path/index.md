@@ -524,7 +524,7 @@ svg text.em {
 ### HTML
 
 ```html
-<img id="clipped" src="https://mdn.mozillademos.org/files/12668/MDN.svg"
+<img id="clipped" src="mdn.svg"
     alt="MDN logo">
 <svg height="0" width="0">
   <defs>

@@ -48,7 +48,7 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 У вас должно получиться примерно как-то так:
 
-![Screenshot of how the example should look after completing the assessment.](https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png)
+![Screenshot of how the example should look after completing the assessment.](learn-css-basics-assessment.png)
 
 После этого попробуйте использовать селекторы, не указанные здесь, но описанные в [Руководстве по CSS](/ru/docs/Web/CSS/Reference). Не бойтесь ошибок — практикуйтесь!
 

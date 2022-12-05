@@ -67,31 +67,31 @@ python3 manage.py runserver
 
 В этой части сайта отображаются все наши модели, сгруппированные по установленному приложению. Вы можете кликнуть на названии модели, чтобы получить список всех связанных записей, далее можете кликнуть на этих записях, для их редактирования . Также можно непосредственно кликнуть на ссылку **Add**, расположенную рядом с каждой моделью, чтобы начать создание записи этого типа.
 
-![Admin Site - Home page](https://mdn.mozillademos.org/files/13975/admin_home.png)
+![Admin Site - Home page](admin_home.png)
 
 Кликните на ссылке **Add** справа от _Books_, чтобы создать новую книгу (появится диалоговое окно как на картинке внизу). Заметьте, что заголовок каждого поля - это тип используемого виджета, и `help_text` (если есть) совпадает со значением, которое вы указали в модели.
 
 Введите значение для полей. Вы можете создавать новых авторов или жанры, нажимая на значок "+ ", расположенный рядом с соответствующим полем (или выберите существующее значение из списков, если вы уже создали их). Когда вы закончили, нажмите на **SAVE,** **Save and add another**, или **Save and continue editing,** чтобы сохранить записи.
 
-![Admin Site - Book Add](https://mdn.mozillademos.org/files/13979/admin_book_add.png)
+![Admin Site - Book Add](admin_book_add.png)
 
 > **Примечание:** А сейчас, хотелось бы, чтобы вы добавили несколько книг, авторов и жанров (например, Фэнтези) в ваше приложение. Удостоверьтесь, что каждый автор и жанр включает пару различных книг (позже, когда мы реализуем представления "list" и "detail", это сделает их более интересными).
 
 После того, когда книги добавлены, для перехода на главную страницу админ-панели кликните на ссылке **Home** в верхней части страницы. Потом кликните на ссылке **Books** для отображения текущего списка книг (или на одной из других ссылок, чтобы увидеть список соответствующей модели). После добавления нескольких книг список может выглядеть наподобие скриншота ниже. Отображается название каждой из книг. Его возвращает метод `__str__()` в модели Book, созданной в предыдущей статье.
 
-![Admin Site - List of book objects](https://mdn.mozillademos.org/files/13935/admin_book_list.png)
+![Admin Site - List of book objects](admin_book_list.png)
 
 Для удаления книги из этого списка выберите чекбокс рядом с ней и действие _delete..._ из выпадающего списка _Action_, а затем нажмите кнопку **Go**. Также можно добавить новую книгу, нажав на кнопку **ADD BOOK**.
 
 Вы можете редактировать книгу, кликнув по ссылке с её названием. Страница редактирования книги, приведённая ниже, практически идентична странице добавления новой книги. Основные отличия - это заголовок страницы (_Change book_) и наличие кнопок **Delete**, **HISTORY** и **VIEW ON SITE.** Последняя присутствует, так как мы определили метод `get_absolute_url()` в нашей модели.
 
-![Admin Site - Book Edit](https://mdn.mozillademos.org/files/13977/admin_book_modify.png)
+![Admin Site - Book Edit](admin_book_modify.png)
 
 Теперь перейдите назад на страницу **Home** (используя ссылку _Home_ в навигационной цепочке вверху страницы) и просмотрите списки **Author** и **Genre**. В них уже должно быть несколько элементов, созданных при добавлении новых книг. Если хотите, добавьте ещё.
 
 Однако у вас не будет ни одного экземпляра книги, потому что они не создаются из модели `Book` (хотя можно создать книгу из модели `BookInstance` — такова природа поля `ForeignKey`). Для отображения страницы _Add book instance_ (см. рисунок ниже) вернитесь на страницу _Home_ и нажмите кнопку **Add**. Обратите внимание на длинный уникальный Id для идентификации конкретного экземпляра книги в библиотеке.
 
-![Admin Site - BookInstance Add](https://mdn.mozillademos.org/files/13981/admin_bookinstance_add.png)
+![Admin Site - BookInstance Add](admin_bookinstance_add.png)
 
 Создайте несколько экземпляров для каждой из ваших книг. Установите статус _Available (доступен)_ для некоторых экземпляров и _On loan (выдан)_ для остальных. Если статус экземпляра **not** _Available (недоступен)_, то также установите дату возврата (_Due back)_.
 
@@ -180,7 +180,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 Перезапустите сайт и перейдите к списку авторов. Указанные поля должны отображаться следующим образом:
 
-![Admin Site - Improved Author List](https://mdn.mozillademos.org/files/14023/admin_improved_author_list.png)
+![Admin Site - Improved Author List](admin_improved_author_list.png)
 
 Для нашей модели `Book` добавим отображение полей `author` и `genre`. Поле `author` - это внешний ключ (`ForeignKey` ) связи один к одному, поэтому оно будет представлено значением `__str()__` для связанной записи. Замените класс `BookAdmin` на версию, приведённую ниже.
 
@@ -206,7 +206,7 @@ class BookAdmin(admin.ModelAdmin):
 
 После сохранения модели и обновления админ-панели, перезапустите её и перейдите на страницу списка _Books_. Вы должны увидеть список книг, наподобие приведённого ниже:
 
-![Admin Site - Improved Book List](https://mdn.mozillademos.org/files/14025/admin_improved_book_list.png)
+![Admin Site - Improved Book List](admin_improved_book_list.png)
 
 Модель `Genre` (и модель `Language`, если вы её определили) имеет единственное поле. Поэтому нет необходимости создания для них дополнительных моделей с целью отображения дополнительных полей.
 
@@ -223,7 +223,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 Представление списка теперь будет содержать панель фильтрации справа. Обратите внимание, как выбирать даты и статус для фильтрации:
 
-![Admin Site - BookInstance List Filters](https://mdn.mozillademos.org/files/14037/admin_improved_bookinstance_list_filters.png)
+![Admin Site - BookInstance List Filters](admin_improved_bookinstance_list_filters.png)
 
 ### Формирование макета с подробным представлением
 
@@ -245,7 +245,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 Перезагрузите приложение и перейдите к подробному представлению автора - он должен теперь отображаться, как показано ниже:
 
-![Admin Site - Improved Author Detail](https://mdn.mozillademos.org/files/14027/admin_improved_author_detail.png)
+![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
 > **Примечание:** Так же, вы можете использовать `exclude` атрибут для объявления списка атрибутов, которые будут исключены из формы (все остальные атрибуты в модели, будут отображаться).
 
@@ -274,7 +274,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 Перезапустите сайт и перейдите к списку экземпляров; форма должна отображаться следующим образом:
 
-![Admin Site - Improved BookInstance Detail with sections](https://mdn.mozillademos.org/files/14029/admin_improved_bookinstance_detail_sections.png)
+![Admin Site - Improved BookInstance Detail with sections](admin_improved_bookinstance_detail_sections.png)
 
 ### Встроенное редактирование связанных записей
 
@@ -294,7 +294,7 @@ class BookAdmin(admin.ModelAdmin):
 
 Попробуйте перезапустить приложение, а затем взгляните на представление книги — внизу вы должны увидеть экземпляры книги, относящиеся к этой книге:
 
-![Admin Site - Book with Inlines](https://mdn.mozillademos.org/files/14033/admin_improved_book_detail_inlines.png)
+![Admin Site - Book with Inlines](admin_improved_book_detail_inlines.png)
 
 В этом случае, всё, что мы сделали - объявили наш встроенный класс tablular, который просто добавляет все поля из _встроенной_ модели. Вы можете указать все виды дополнительной информации для макета, включая отображаемые поля, их порядок, независимо от того, являются ли они только для чтения или нет, и т. д. (См. [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) для получения дополнительной информации).
 

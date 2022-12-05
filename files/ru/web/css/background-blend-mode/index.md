@@ -87,7 +87,7 @@ background-blend-mode: unset;
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),url('tr.png');
     background-blend-mode: screen;
 }
 ```
