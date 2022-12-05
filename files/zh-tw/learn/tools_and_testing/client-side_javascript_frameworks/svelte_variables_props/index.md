@@ -170,7 +170,7 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
    export let todos = []
    ```
 
-   起初這可能會讓你覺得有點奇怪。這不像在 JavaScript 模組中使用 `export` 的常見方式！但這就是 Svelte 透過採用有效語法並賦予其新用途來「擴展」JavaScript 的作法。在這種情況下，Svelte 使用 `export` 關鍵字將變數宣告標記為屬性，這意味著元件的消費者可以存取它。
+   起初這可能會讓你覺得有點奇怪。這不像在 JavaScript 模組中使用 `export` 的常見方式！但這就是 Svelte 透過採用有效語法並賦予其新用途藉此來「擴展」JavaScript 的作法。在這種情況下，Svelte 使用 `export` 關鍵字將變數宣告標記為屬性，這意味著元件的消費者可以存取它。
 
    你也可以為屬性指定預設初始值。如果元件的消費者沒有在元件上指定屬性時，則將使用此預設初始值——或者如果它的初始值未定義——在實例化元件時。
 
@@ -201,11 +201,11 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 
 此時，你的待辦事項呈現應該如同以往，除了現在我們是從 `App.svelte` 元件來傳遞它們之外。
 
-## Toggling and removing to-dos
+## 切換和刪除​​待辦事項
 
-Let's add some functionality to toggle the task status. Svelte has the `on:eventname` directive for listening to DOM events. Let's add a handler to the `on:click` event of the checkbox input to toggle the completed value.
+讓我們新增一些功能性來切換任務狀態。Svelte 具有用於監聽 DOM 事件的 `on:eventname` 指令。讓我們為勾選框的 `on:click` 事件新增一個處理器來切換已完成的數值。
 
-1. Update the `<input type="checkbox">` element inside `src/components/Todos.svelte` as follows:
+1. 更新 `src/components/Todos.svelte` 中的 `<input type="checkbox">` 元素，如下：
 
    ```html
    <input type="checkbox" id="todo-{todo.id}"
@@ -214,7 +214,7 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
    />
    ```
 
-2. Next we'll add a function to remove a to-do from our `todos` array. At the bottom of the `Todos.svelte` `<script>` section, add the `removeTodo()` function like so:
+2. 接下來我們將新增一個函式來從我們的 `todos` 陣列中刪除一個待辦事項。在 `Todos.svelte` 中 `<script>` 區塊的底部，新增 `removeTodo()` 函式，如下：
 
    ```js
    function removeTodo(todo) {
@@ -222,7 +222,7 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
    }
    ```
 
-3. We'll call it via the _Delete_ button. Update it with a `click` event, like so:
+3. 我們將透過 _Delete_ 按鈕呼叫它。更新 `click` 事件，如下：
 
    ```html
    <button type="button" class="btn btn__danger"
@@ -232,13 +232,13 @@ Let's add some functionality to toggle the task status. Svelte has the `on:event
    </button>
    ```
 
-   A very common mistake with handlers in Svelte is to pass the result of executing a function as a handler, instead of passing the function. For example, if you specify `on:click={removeTodo(todo)}`, it will execute `removeTodo(todo)` and the result will be passed as a handler, which is not what we had in mind.
+   Svelte 中處理器的一個常見錯誤是將執行函式的結果作為處理器傳遞，而不是傳遞函式。舉例來說，假如你指定 `on:click={removeTodo(todo)}`，它會執行 `removeTodo(todo)` 並把結果作為處理器傳遞，但這不是我們要的。
 
-   In this case you have to specify `on:click={() => removeTodo(todo)}` as the handler. If `removeTodo()` received no params, you could use `on:event={removeTodo}`, but not `on:event={removeTodo()}`. This is not some special Svelte syntax — here we are just using regular JavaScript [arrow functions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+   在這種情況下，您必須指定 `on:click={() => removeTodo(todo)}` 作為處理器。如果 `removeTodo()` 沒有接收參數，你可以使用 `on:event={removeTodo}`，但不能使用  `on:event={removeTodo()}`。這並不是 Svelte 中的特殊語法——這裡我們只是使用常規的 JavaScript [箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
-Again, this is good progress — at this point, we can now delete tasks. When a to-do item's _Delete_ button is pressed, the relevant to-do is removed from the `todos` array, and the UI updates to no longer show it. In addition, we can now check the checkboxes, and the completed status of the relevant to-dos will now update in the `todos` array.
+這是不錯的進展——此時，我們現在能刪除任務了。當一個待辦事項的 _Delete_ 按鈕被按下時，相關的待辦事項會從 `todos` 陣列中被移除並且更新使用者介面讓它不再顯示。此外，我們現在能勾選勾選框，相關待辦事項的已完成狀態將在 `todos` 陣列中被更新。
 
-However, the "x out of y items completed" heading is not being updated. Read on to find out why this is happening and how we can solve it.
+然而，「x out of y items completed」標頭並未被更新。繼續閱讀以了解為什麼會發生這種情況以及我們如何解決它。
 
 ## Reactive to-dos
 
