@@ -38,7 +38,7 @@ Los hipervínculos son una de las innovaciones más interesantes que ofrece la W
 
 El sitio web de la BBC, por ejemplo, contiene una gran cantidad de enlaces que apuntan a multitud de noticias en diferentes zonas de el sitio (funcionalidad de navegación), zonas de acceso/registro (herramientas de usuario) y otras.
 
-![Portada de bbc.co.uk, que muestra muchas noticias y la funcionalidad del menú de navegación](https://mdn.mozillademos.org/files/12405/bbc-homepage.png)
+![Portada de bbc.co.uk, que muestra muchas noticias y la funcionalidad del menú de navegación](updated-bbc-website.png)
 
 ## Anatomía de un enlace
 

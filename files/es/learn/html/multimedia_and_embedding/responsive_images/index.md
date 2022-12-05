@@ -121,18 +121,6 @@ Los navegadores más antiguos que no soportan estas características solo las ig
 
 > **Nota:** En el {{htmlelement("head")}} del documento usted hallará la línea `<meta name="viewport" content="width=device-width">`: esto fuerza a los dispositivos móviles a adoptar su ancho real de ventana para cargar las páginas web (algunos navegadores móviles mienten sobre el ancho de su ventana gráfica y, en su lugar, cargan páginas con un ancho de ventana más grande y luego reducen la página cargada, lo que no es muy útil para imágenes o diseño receptivos).
 
-### Useful developer tools
-
-There are some useful [developer tools](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) in browsers to help with working out the necessary slot widths, etc, that you need to use. When I was working them out, I first loaded up the non-responsive version of my example (`not-responsive.html`), then went into [Responsive Design View](/es/docs/Tools/Responsive_Design_Mode) (_Tools > Web Developer > Responsive Design View_), which allows you to look at your web page layouts as if they were being viewed through a variety of different device screen sizes.
-
-I set the viewport width to 320px then 480px; for each one I went into the [DOM Inspector](/es/docs/Tools/Page_Inspector), clicked on the {{htmlelement("img")}} element we are interested in, then looked at its size in the Box Model view tab on the right hand side of the display. This should give you the inherent image widths you need.
-
-![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](https://mdn.mozillademos.org/files/12932/box-model-devtools.png)
-
-Next, you can check whether the `srcset` is working by setting the viewport width to what you want (set it to a narrow width, for example), opening the Network Inspector (_Tools > Web Developer > Network_), then reloading the page. This should give you a list of the assets that were downloaded to make up the webpage, and here you can check which image file was chosen for download.
-
-![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](https://mdn.mozillademos.org/files/12934/network-devtools.png)
-
 ### Resolution switching: Same size, different resolutions
 
 If you're supporting multiple display resolutions, but everyone sees your image at the same real-world size on the screen, you can allow the browser to choose an appropriate resolution image by using `srcset` with x-descriptors and without `sizes` — a somewhat easier syntax! You can find an example of what this looks like in [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (see also [the source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):

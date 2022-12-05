@@ -84,7 +84,7 @@ Repasemos la terminología rápidamente. Formatos como MP3, MP4 y WebM son llama
 
 Un archivo WebM contiene una película que tiene una pista principal de video y otra pista con un ángulo alternativo, junto con audio en inglés y español, además de una pista con comentarios en inglés, lo que puede ser conceptualizado en el siguiente diagrama. También se incluyeron pistas de texto que contienen los subtítulos de la película en inglés, español y para el comentario.
 
-![](https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg)
+![](containersandtracks.png)
 
 Las pistas de audio y video dentro del contenedor mantienen los datos en un formato adecuado para el codec usado para codificar ese medio. Se usan diferentes formatos para pistas de audio versus de video. Cada pista de audio es codificada usando un codec de audio mientras que las pistas de video son codificadas (como probablemente ya has adivinado) usando un codec de video. Así como hemos hablado previamente, diferentes navegadores soportan diferentras formatos de audio y video, y diferentes formatos contenedores (como MP3, MP4 y WebM, que pueden contener diferentes tipos de video y audio).
 
@@ -134,7 +134,9 @@ Hay varias otras características que puede incluir en un vídeo HTML5. Eche un 
 
 Esto nos dará un resultado que se parece a esto:
 
-![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](https://mdn.mozillademos.org/files/12796/extra-video-features.png)Las nuevas características son:
+![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](poster_screenshot_updated.png)
+
+Las nuevas características son:
 
 - {{htmlattrxref("width","video")}} y {{htmlattrxref("height","video")}}
   - : Puede controlar el tamanño con estos atributos o con [CSS](/es/docs/Glossary/CSS). En ambos casos, los vídeos mantienen su relación **anchura - altura nativa**. Si la relación de aspecto no se mantiene con los tamañis establecidos, el vídeo crecerá para rellenar el espacio horizontalmente y el el espacio sin rellenar sólo recibirá un color de fondo sólido de forma predeterminada.

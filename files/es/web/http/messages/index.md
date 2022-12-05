@@ -56,7 +56,7 @@ Hay bastantes cabeceras posibles. Estas se pueden clasificar en varios grupos:
 - Cabeceras de petición, ('_Request headers_' en inglés), como {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, modifican la petición especificándola en mayor detalle ( como: {{HTTPHeader("Accept-Language")}}, o dándole un contexto, como: {{HTTPHeader("Referer")}}, o restringiéndola condicionalmente, como: {{HTTPHeader("If-None")}}.
 - _Cabeceras de entidad, ('Entity headers'_ en ingles), como {{HTTPHeader("Content-Length")}} las cuales se aplican al cuerpo de la petición. Por supuesto, esta cabecera no necesita ser transmitida si el mensaje no tiene cuerpo ('_body_' en inglés).
 
-![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+![Example of headers in an HTTP request](http_request_headers3.png)
 
 ### Cuerpo
 
@@ -89,7 +89,7 @@ Existen varias cabeceras posibles. Estas se puede dividir en distintos grupos:
 - Cabeceras de petición, ('_Request headers_' en inglés), como {{HTTPHeader("Vary")}} , {{HTTPHeader("Accept-Ranges")}}, dan información adicional sobre el servidor, que no tiene espacio en la línea de estado.
 - _Cabeceras de entidad, ('Entity headers'_ en ingles), como {{HTTPHeader("Content-Length")}} las cuales se aplican al cuerpo de la petición. Por supuesto, esta cabecera no necesita ser transmitida si el mensaje no tiene cuerpo ('_body_' en inglés).
 
-\*![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![Example of headers in an HTTP response](http_response_headers3.png)
 
 ### Cuerpo
 

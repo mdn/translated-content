@@ -89,7 +89,7 @@ Para responder a esta cuestión, echemos un vistazo a [text-start.html](https://
 
 Sin embargo, cuando abres el documento en tu navegador, verás que el texto aparece... ¡como una masa enorme!
 
-![Una página web que muestra un muro de texto sin formato, porque no hay elementos en la página para estructurarlo.](https://mdn.mozillademos.org/files/12972/text-no-formatting.png)
+![Una página web que muestra un muro de texto sin formato, porque no hay elementos en la página para estructurarlo.](screen_shot_2017-03-29_at_09.20.35.png)
 
 Esto se debe a que no hay elementos que den estructura al contenido, por lo que el navegador no sabe qué es un encabezado y qué es un párrafo. Además:
 
