@@ -119,7 +119,7 @@ function draw() {
 init();
 ```
 
-{{EmbedLiveSample("An_animated_solar_system", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}
+{{EmbedLiveSample("An_animated_solar_system", "310", "310", "canvas_animation1.png")}}
 
 #### 時鐘動畫
 
@@ -235,7 +235,7 @@ function clock(){
 init();
 ```
 
-{{EmbedLiveSample("An_animated_clock", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}
+{{EmbedLiveSample("An_animated_clock", "180", "180", "canvas_animation2.png")}}
 
 #### 循環景色
 

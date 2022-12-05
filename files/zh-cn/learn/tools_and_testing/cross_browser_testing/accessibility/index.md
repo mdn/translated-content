@@ -276,7 +276,7 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 2. 使用[bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)示例测试，输入链接地址并按下*Analyse Your Webpage（译者注：开始分析你的网页）。*
 3. 下滑，直到你看到错误/描述部分，如下图。
 
-![](https://mdn.mozillademos.org/files/14217/tenon-screenshot.png)
+![](tenon-screenshot.png)
 
 你还可以探索一些选项（请参阅页面顶部附近的*Show Options（译者注：显示选项）*链接），或者使用 Tenon 的 API。
 

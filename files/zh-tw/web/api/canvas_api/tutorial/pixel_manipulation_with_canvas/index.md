@@ -81,7 +81,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ```js
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 img.onload = function() {
@@ -134,7 +134,7 @@ In this example we iterate over all pixels to change their values, then we put t
 
 ```js
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 img.onload = function() {
   draw(this);
 };
@@ -204,7 +204,7 @@ Because anti-aliasing is enabled by default, we might want to disable the smooth
 
 ```js
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 img.onload = function() {
   draw(this);
 };

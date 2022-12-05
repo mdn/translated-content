@@ -57,10 +57,10 @@ slug: Web/HTML/Element/map
 The live example above should appear similar to the following images (when using your keyboard tab key):
 
 _For the `left.html` link:_
-![](https://mdn.mozillademos.org/files/14595/Screen%20Shot%202017-02-02%20at%2010.48.40%20PM.png)
+![](screen_shot_2017-02-02_at_10.48.40_pm.png)
 
 _For the `right.html` link_
-![](https://mdn.mozillademos.org/files/14597/Screen%20Shot%202017-02-02%20at%2010.49.04%20PM.png)
+![](screen_shot_2017-02-02_at_10.49.04_pm.png)
 
 ## 规范
 

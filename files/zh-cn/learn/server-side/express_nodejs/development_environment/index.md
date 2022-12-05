@@ -348,11 +348,11 @@ DEBUG=helloworld:* npm start
 
 DEBUG 命令可以展示应用运行时返回的有用的日志信息，如下所示：
 
-![设置 DEBUG 命令显示的日志信息](https://mdn.mozillademos.org/files/16404/debug.png)
+![设置 DEBUG 命令显示的日志信息](debug.png)
 
 打开浏览器并访问 <http://127.0.0.1:3000/> 将看到 Express 的默认欢迎页面。
 
-![生成应用的默认主页](https://mdn.mozillademos.org/files/16405/express.png)
+![生成应用的默认主页](express.png)
 
 稍后在创建应用框架一节中将讨论生成应用的具体细节。
 
