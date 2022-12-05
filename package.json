@@ -26,7 +26,7 @@
     "node": "^16.0.0 || >=18.0.0"
   },
   "dependencies": {
-    "husky": "8.0.1",
+    "husky": "8.0.2",
     "lint-staged": "13.0.3",
     "markdownlint-cli2": "0.5.1",
     "markdownlint-rule-search-replace": "1.0.5",
