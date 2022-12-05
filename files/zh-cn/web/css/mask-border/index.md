@@ -70,7 +70,7 @@ div {
   padding: 10px;
 
   mask-border:
-    url("https://mdn.mozillademos.org/files/15836/mask-border-diamonds.png")  /* source */
+    url("mask-border-diamonds.png")  /* source */
     30 /         /* slice */
     36px 18px    /* width */
     round;       /* repeat */
