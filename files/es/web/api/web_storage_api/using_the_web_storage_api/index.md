@@ -88,11 +88,11 @@ Aquí puedes ver una [breve historia de la detección de la característica loca
 
 Para ilustrar un uso típico de almacenamiento web, creamos un ejemplo simple que llamamos **Demo de almacenamiento web**. La [página de inicio](https://mdn.github.io/dom-examples/web-storage/) proporciona unos controles que se pueden usar para personalizar el color, la tipografía y la imagen decorativa:
 
-![](https://mdn.mozillademos.org/files/9685/landing.png)Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en `localStorage`, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.
+![](landing.png)Cuando seleccionas una opción diferente, la página se actualiza instantáneamente; además, tus opciones se almacenan en `localStorage`, de forma que si abandonas la página y la vuelves a cargar, tus opciones son recordadas.
 
 También creamos una [página de salida del evento](https://mdn.github.io/dom-examples/web-storage/event.html) — si cargas esta página en otra pestaña y luego haces cambios a tus opciones en la página de inicio, verás que se muestra la información almacenada actualizada puesto que se dispara un {{domxref("StorageEvent")}}.
 
-![](https://mdn.mozillademos.org/files/9687/event-output.png)
+![](event-output.png)
 
 > **Nota:** Puedes ver las páginas de ejemplo usando los links de arriba y también puedes [ver el código fuente.](https://github.com/mdn/dom-examples/tree/master/web-storage)
 

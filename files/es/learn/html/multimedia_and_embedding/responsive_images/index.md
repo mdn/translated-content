@@ -40,7 +40,7 @@ Las imágenes adaptables son solo una parte del diseño web responsivo, un tema 
 
 Examinemos un escenario típico. Un sitio web típico puede contener una imagen de encabezado y algunas imágenes de contenido debajo del encabezado. Es probable que la imagen del encabezado abarque todo el ancho del encabezado y la imagen del contenido quepa en algún lugar dentro de la columna de contenido. He aquí un ejemplo sencillo:
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
 Esto funciona bien en un dispositivo de pantalla ancha, como una computadora portatil o de escritorio (puedes [ver el ejemplo en vivo](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) y encontrar el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) en Github.) No hablaremos mucho del CSS en esta lección, excepto para decir que:
 
@@ -50,7 +50,7 @@ Esto funciona bien en un dispositivo de pantalla ancha, como una computadora por
 
 Sin embargo, surgen problemas cuando comienza a ver el sitio en un dispositivo de pantalla estrecha — el encabezado de abajo está bien, pero empieza a ocupar gran parte de la altura de la pantalla de un dispositivo móvil. ¡A este tamaño es difícil ver a las personas que aparecen en la foto!
 
-![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](https://mdn.mozillademos.org/files/12936/non-responsive-narrow.png)
+![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](non-responsive-narrow.png)
 
 Una mejora sería mostrar una versión recortada de la imagen que muestra los detalles importantes de la imagen cuando el sitio se ve en una pantalla estrecha. Se podría mostrar una segunda imagen recortada para un dispositivo de pantalla de ancho medio, como una tableta. A esto se le conoce comúnmente como **el problema de cambio de resolución.**
 
@@ -144,7 +144,7 @@ If you're supporting multiple display resolutions, but everyone sees your image 
      src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
 ```
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](https://mdn.mozillademos.org/files/12942/resolution-example.png)In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):
 
 ```css
 img {
@@ -180,7 +180,7 @@ Let's fix this, with {{htmlelement("picture")}}! Like [`<video>` and `<audio>`](
 
 This code allows us to display a suitable image on both wide screen and narrow screen displays, as shown below:
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](https://mdn.mozillademos.org/files/12938/picture-element-narrow.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](picture-element-narrow.png)
 
 > **Nota:** You should use the `media` attribute only in art direction scenarios; when you do use `media`, don't also offer media conditions within the `sizes` attribute.
 

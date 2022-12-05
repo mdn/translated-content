@@ -70,7 +70,7 @@ Las características a notar son:
 
 El video incrustado se verá así:
 
-![A simple video player showing a video of a small white rabbit](https://mdn.mozillademos.org/files/12794/simple-video.png)
+![A simple video player showing a video of a small white rabbit](simple-video.png)
 
 Puedes [probar el ejemplo](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) aquí (también el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html)).
 
@@ -170,7 +170,7 @@ El elemento {{htmlelement("audio")}} funciona exactamente de la misma forma que 
 
 Esto produce algo como lo siguiente en un navegador:
 
-![A simple audio player with a play button, timer, volume control, and progress bar](https://mdn.mozillademos.org/files/12798/audio-player.png)
+![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
 > **Nota:** Puedes [reproducir este ejemplo de audio](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) en Github (también, puedes ver el [código fuente del reproductor de audio](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
@@ -257,7 +257,7 @@ Here's an example:
 
 This will result in a video that has subtitles displayed, kind of like this:
 
-![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
 For more details, please read [Adding captions and subtitles to HTML5 video](/es/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can [find the example](http://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on Github, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 

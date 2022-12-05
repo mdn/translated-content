@@ -128,7 +128,7 @@ Para implementar estos tipos de letra en tu ejemplo de demostración, sigue esto
 
 Con tu ejemplo de demostración, deberías obtener una página con unos agradables tipos de letra. Debido a que los tipos de letra se crean en diferentes tamaños, es posible que tengas que ajustar el tamaño, el espaciado, etc., para conseguir una apariencia más ordenada.
 
-![](https://mdn.mozillademos.org/files/12984/web-font-example.png)
+![](web-font-example.png)
 
 > **Nota:** Si tienes problemas para lograr que esto funcione, no dudes en comparar tu versión con nuestros archivos terminados, consulta [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) y [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([ejecuta el ejemplo terminado en vivo](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
 

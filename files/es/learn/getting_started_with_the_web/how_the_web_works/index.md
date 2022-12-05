@@ -25,7 +25,7 @@ El cliente y el servidor que describimos anteriormente, no cuentan toda la histo
 
 Por ahora, imaginemos que la web es un camino. En un extremo de la carretera, está el cliente, que es como tu casa. En el extremo opuesto del camino, está el servidor, que es una tienda en la que deseas comprar algo.
 
-![](https://mdn.mozillademos.org/files/9749/road.jpg)
+![](road.jpg)
 
 Además del cliente y el servidor, también tenemos que saludar a:
 

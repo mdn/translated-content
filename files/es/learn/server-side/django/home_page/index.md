@@ -47,7 +47,7 @@ Los principales elementos que necesitamos crear son:
 - Funciones de vista para obtener los datos solicitados desde los modelos, crear una página HTML que muestre los datos, y devolverlo al usuario para que lo vea en el navegador.
 - Plantillas usadas por las vistas para renderizar los datos.
 
-![](https://mdn.mozillademos.org/files/13931/basic-django.png)
+![](basic-django.png)
 
 Como verás en la siguiente sección, vamos a tener 5 páginas para mostrar, que es mucho que documentar en un artículo. Por lo tanto, en la mayor parte de este artículo nos concentraremos en mostrar como implementar solo la página de inicio (nos moverermos a otras páginas en un artículo subsecuente). Esto debe darte un buen entendimiento de extremo a extremo sobre como los mapeadores URL, vistas y modelos funcionan en la práctica.
 
@@ -357,7 +357,7 @@ TEMPLATES = [
 
 En este punto deberíamos haber creado todo lo necesario para desplegar la página index. Corre el servidor (`python3 manage.py runserver`) y dirige tu navegador a `http://127.0.0.1:8000/`. Si todo se configuró correctamente, tu sitio debería verse similar a la siguiente captura de pantalla.
 
-![Index page for LocalLibrary website](https://mdn.mozillademos.org/files/14045/index_page_ok.png)
+![Index page for LocalLibrary website](index_page_ok.png)
 
 > **Nota:** Aún no podrás usar los enlaces **All books** y **All authors** porque las URLs, vistas y plantillas para dichas páginas no se han definido (al momento solo hemos insertado marcadores de posición para esos enlaces en la plantilla `base_generic.html`).
 

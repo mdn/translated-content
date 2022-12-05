@@ -29,7 +29,7 @@ Una vez que tengas todo montado, puedes probar si tu configuración funciona con
 
 Para ilustrar cómo funciona la API de WebVR, estudiaremos nuestro ejemplo raw-webgl-example, que se parece un poco a esto:
 
-![](https://mdn.mozillademos.org/files/15121/Capture1.png)
+![](capture1.png)
 
 > **Nota:** **Nota:** Puedes encontrar el [código fuente de nuestra demo](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) en GitHub, y [verlo en vivo](https://mdn.github.io/webvr-tests/raw-webgl-example/)también.
 
@@ -226,7 +226,7 @@ To stop the VR presentation when the button is subsequently pressed, we call {{d
 
 Una vez iniciada la presentación, podrás ver la vista estereoscópica que se muestra en el navegador:
 
-![](https://mdn.mozillademos.org/files/15123/Capture2.png)
+![](capture2.png)
 
 A continuación, aprenderá cómo se produce realmente la vista estereoscópica.
 

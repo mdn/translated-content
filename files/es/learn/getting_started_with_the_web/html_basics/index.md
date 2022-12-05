@@ -220,7 +220,7 @@ Ahora agrega un vínculo a tu página, si es que aún no lo hiciste.
 
 Si lograste seguir todas las instrucciones de este artículo, deberías terminar con una página que se vea así (también puedes [verla aquí](http://mdn.github.io/beginner-html-site/)):
 
-![Una captura de pantalla de la página web que muestra el logo de Firefox, un encabezado que dice «mozilla es genial» y dos párrafos de texto de relleno.](https://mdn.mozillademos.org/files/9351/finished-test-page-small.png)
+![Una captura de pantalla de la página web que muestra el logo de Firefox, un encabezado que dice «mozilla es genial» y dos párrafos de texto de relleno.](finished-test-page-small.png)
 
 Si te estancas en algún paso, puedes comparar tu trabajo con el [código de ejemplo terminado](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) en Github.
 

@@ -32,7 +32,7 @@ Una de las principales funciones de HTML es dar al texto estructura y significad
 
 La mayor parte del texto estructurado está compuesto por encabezados y párrafos, independientemente de si lees una historia, un periódico, un libro de texto, una revista, etc.
 
-![Un ejemplo de la portada de un periódico, que muestra el uso de un encabezado, subtítulos y párrafos de nivel superior.](https://mdn.mozillademos.org/files/12371/newspaper_small.jpg)
+![Un ejemplo de la portada de un periódico, que muestra el uso de un encabezado, subtítulos y párrafos de nivel superior.](newspaper_small.jpg)
 
 El contenido estructurado simplifica la experiencia en la lectura y se disfruta más.
 
