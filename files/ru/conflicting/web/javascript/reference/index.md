@@ -1,8 +1,8 @@
 ---
 title: Об этой справке
-slug: Web/JavaScript/Reference/About
+slug: conflicting/Web/JavaScript/Reference
 translation_of: Web/JavaScript/Reference/About
-original_slug: Web/JavaScript/Reference/Об
+original_slug: Web/JavaScript/Reference/About
 ---
 
 {{JsSidebar}}

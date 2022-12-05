@@ -1,6 +1,6 @@
 ---
 title: URL-суффиксы
-slug: MDN/Tools/Unsupported_GET_API
+slug: conflicting/MDN
 tags:
   - HTTP
   - Kuma
@@ -9,8 +9,9 @@ tags:
   - Параметры URL
   - инструменты
 translation_of: MDN/Tools/Document_parameters
-original_slug: MDN/Tools/URL-suffix
+original_slug: MDN/Tools/Unsupported_GET_API
 ---
+
 {{MDNSidebar}}
 
 Вики-платформа MDN Kuma не имеет центрального API. Вместо этого наш общий подход заключается в том, чтобы предложить способы превращения доступных для человека ресурсов в удобные для машин данные.

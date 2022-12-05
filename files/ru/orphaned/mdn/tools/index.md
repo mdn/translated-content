@@ -1,10 +1,11 @@
 ---
 title: MDN tools
-slug: MDN/Tools
+slug: orphaned/MDN/Tools
 tags:
   - Landing
   - MDN Meta
 translation_of: MDN/Tools
+original_slug: MDN/Tools
 ---
 
 {{MDNSidebar}}{{IncludeSubnav("/ru/docs/MDN")}}

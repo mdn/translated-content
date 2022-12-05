@@ -1,6 +1,6 @@
 ---
 title: О JavaScript
-slug: Web/JavaScript/About_JavaScript
+slug: conflicting/Web/JavaScript
 tags:
   - Beginner
   - Introduction
@@ -8,8 +8,9 @@ tags:
   - Вступление
   - Новичку
 translation_of: Web/JavaScript/About_JavaScript
-original_slug: Web/JavaScript/О_JavaScript
+original_slug: Web/JavaScript/About_JavaScript
 ---
+
 {{JsSidebar()}}
 
 ## Что такое JavaScript?
