@@ -1,6 +1,8 @@
 ---
 title: Firefox 66 for developers
 slug: Mozilla/Firefox/Releases/66
+l10n:
+  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
 {{FirefoxSidebar}}
@@ -11,8 +13,8 @@ Firefox 66 は、米国時間 2019 年 3 月 19 日 にリリースされまし�
 
 ### 開発者ツール
 
-- [ウェブコンソール](/ja/docs/Tools/Web_Console) のオートコンプリートのポップアップから、JavaScript の getter を実行できるようになりました ({{bug(1499289)}})。
-- [レスポンシブデザインモード](/ja/docs/Tools/Responsive_Design_Mode) で動作しなくなっていた、Window の {{domxref("Window.alert()", "alert()")}}、{{domxref("Window.prompt()","prompt()")}}、{{domxref("Window.confirm()","confirm()")}} メソッドが再び動作するようになりました ({{bug(1273997)}})。
+- [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) の自動補完のポップアップから、JavaScript のゲッターを実行できるようになりました ({{bug(1499289)}})。
+- Window の {{domxref("Window.alert()", "alert()")}}、{{domxref("Window.prompt()","prompt()")}}、{{domxref("Window.confirm()","confirm()")}} メソッドが[レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で動作しなくなっていたのを、再び動作するようになりました ({{bug(1273997)}})。
 - コンソールの出力を右クリックして "**表示メッセージをクリップボードにエクスポートする**" を選択すると、コンソールの出力をクリップボードにコピーできます。
 
 ### HTML
@@ -21,11 +23,11 @@ Firefox 66 は、米国時間 2019 年 3 月 19 日 にリリースされまし�
 
 #### 廃止
 
-- {{HTMLElement("input")}} 要素から `x-moz-errormessage` 属性を削除しました ({{bug(1513890)}})。独自の検証メッセージを実装するには、代わりに {{domxref("Constraint_validation", "Constraint validation 機能", "", "1")}} を使用してください。
+- {{HTMLElement("input")}} 要素から `x-moz-errormessage` 属性を削除しました ({{bug(1513890)}})。独自の検証メッセージを実装するには、代わりに{{domxref("Constraint_validation", "制約検証機能", "", "1")}}を使用してください。
 
 ### CSS
 
-- [Scroll anchoring](https://drafts.csswg.org/css-scroll-anchoring/) を、デスクトップ版 Firefox に実装しました (モバイル版は未実装です)。{{cssxref("overflow-anchor")}} プロパティを含みます ({{bug(1305957)}})。
+- [スクロールアンカリング](https://drafts.csswg.org/css-scroll-anchoring/)を、デスクトップ版 Firefox に実装しました (モバイル版は未実装です)。{{cssxref("overflow-anchor")}} プロパティを含みます ({{bug(1305957)}})。
 - [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) で、大文字・小文字の区別に関する修飾子 `s` をサポートしました ({{Bug(1512386)}})。
 - いくつかの [論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) ショートハンドと、フローに関係する border radius プロパティを実装しました:
 
@@ -61,7 +63,7 @@ _変更なし。_
 
 #### 廃止
 
-- [`xml:base`](/ja/docs/XML_introduction/xml:base) 属性のサポートを廃止しました ({{Bug(903372)}})。
+- `xml:base` 属性のサポートを廃止しました ({{Bug(903372)}})。
 
 ### JavaScript
 
@@ -82,11 +84,11 @@ _変更なし。_
 
 - {{domxref("InputEvent.inputType")}} プロパティを実装しました ({{bug(1447239)}})。
 - {{domxref("Window.event")}} および {{domxref("Event.returnValue")}} プロパティ (元は IE の独自機能であり、互換性の理由でほかのブラザーもサポートしました) を、Firefox 66 で再導入しました。それぞれバージョン 63 や 64 で追加した後、互換性の問題で再び削除していました。
-- バージョン 66 より、{{event("keypress")}} イベントオブジェクトの {{domxref("KeyboardEvent.keyCode")}} プロパティが 0 であるとき、値が {{domxref("KeyboardEvent.charCode")}} と同じになります。逆に `charCode` が 0 であるときは、`keyCode` と同じ値になります。このミラーリング動作はほかのブラウザーと一致しており、これに関連する互換性の問題のほとんどが解決すると思われます。ただし 一部の JavaScript ライブラリーで、ブラウザー検出によって新たな問題が発生する可能性があります。仕様書の用語では、_split model_ から _conflated model_ に切り替えました (UI Event 仕様書の [How to determine keyCode for keypress events](https://w3c.github.io/uievents/#determine-keypress-keyCode) をご覧ください)。
+- バージョン 66 より、{{domxref("Element/keypress_event", "keypress")}} イベントオブジェクトの {{domxref("KeyboardEvent.keyCode")}} プロパティが 0 であるとき、値が {{domxref("KeyboardEvent.charCode")}} と同じになります。逆に `charCode` が 0 であるときは、`keyCode` と同じ値になります。このミラーリング動作はほかのブラウザーと一致しており、これに関連する互換性の問題のほとんどが解決すると思われます。ただし 一部の JavaScript ライブラリーで、ブラウザー検出によって新たな問題が発生する可能性があります。仕様書の用語では、_split model_ から _conflated model_ に切り替えました (UI Event 仕様書の [How to determine keyCode for keypress events](https://w3c.github.io/uievents/#determine-keypress-keyCode) をご覧ください)。
 
-#### メディア、Web Audio、WebRTC
+#### メディア、ウェブオーディオ、WebRTC
 
-- 新しい [AV1 動画コーデック](/ja/docs/Web/Media/Formats/Video_codecs#AV1) を macOS および Windows (Intel プロセッサー用) で、デフォルトで有効にしました。Linux は Firefox 67 でサポートする予定です ({{bug(1521181)}}、{{bug(1452146)}}、{{bug(1534814)}})。
+- 新しい [AV1 動画コーデック](/ja/docs/Web/Media/Formats/Video_codecs#av1) を macOS および Windows (Intel プロセッサー用) で、デフォルトで有効にしました。Linux は Firefox 67 でサポートする予定です ({{bug(1521181)}}、{{bug(1452146)}}、{{bug(1534814)}})。
 - {{domxref("MediaDevices")}} の {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッド (`navigator.mediaDevices.getDisplayMedia()` として使用可能) を追加して、仕様書に一致させました。このメソッドは、スクリーンまたはスクリーンの一部を {{domxref("MediaStream")}} として取得して、操作または共有できます ({{bug(1321221)}})。
 - スクリーンやウィンドウの内容を取得するための、Firefox 独自の {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} に基づくメソッドを最終的に非推奨にする取り組みの一部として、非標準の `mediaSource` 定数を値 `screen` および `window` と同等に扱うようになりました。どちらも、ユーザーが選択するスクリーンやウィンドウのリストを提供します ({{bug(1474376)}})。
 - ローカル出力の {{domxref("RTCRTPStreamStats")}} オブジェクトに {{domxref("RTCRtpStreamStats.qpSum", "qpSum")}} を追加しました。これは、ビデオトラックで送受信するすべてのフレームの量子化パラメーターの合計を表します。この値が高ければ、ストリームはより圧縮されていると考えられます ({{bug(1347070)}})。
@@ -112,8 +114,8 @@ _変更なし。_
 
 #### API の変更点
 
-- 新しいブラウジングコンテキストを開く操作をサポートするため `WebDriver:NewWindow` を追加しました。ウィンドウまたはタブのいずれかを開くことができます ({{bug(1504756)}})。
-- 指定した要素が現在のブラウジングコンテキストに含まれていない場合に、`WebDriver:SwitchToFrame` で `no such element` エラーが発生するようになりました ({{bug(1517196)}})。
+- 新しい閲覧コンテキストを開く操作をサポートするため `WebDriver:NewWindow` を追加しました。ウィンドウまたはタブのいずれかを開くことができます ({{bug(1504756)}})。
+- 指定した要素が現在の閲覧コンテキストに含まれていない場合に、`WebDriver:SwitchToFrame` で `no such element` エラーが発生するようになりました ({{bug(1517196)}})。
 - `WebDriver:ExecuteScript` および `WebDriver:ExecuteAsyncScript` が、仕様書に準拠しない `scriptTimeout` 引数をサポートしないようになりました。代わりに `WebDriver:SetTimeout` または `timeouts` 機能を使用してください ({{bug(1510929)}})。
 
   - さらに、不定のスクリプトタイムアウトをサポートしました ({{bug(1128997)}})。
@@ -131,27 +133,7 @@ _変更なし。_
 
 #### メニュー
 
-- {{WebExtAPIRef("menus.ContextType", "type")}} が "bookmark" である拡張機能のメニュー項目が、ブックマークサイドバー (
-
-  <kbd>Ctrl</kbd>
-
-  &#x20;\+&#x20;
-
-  <kbd>B</kbd>
-
-  ) およびライブラリーウィンドウ (
-
-  <kbd>Ctrl</kbd>
-
-  &#x20;\+&#x20;
-
-  <kbd>Shift</kbd>
-
-  &#x20;\+&#x20;
-
-  <kbd>B</kbd>
-
-  ) にも表示されるようになりました ({{bug(1419195)}})。
+- {{WebExtAPIRef("menus.ContextType", "type")}} が "bookmark" である拡張機能のメニュー項目が、ブックマークサイドバー (`Ctrl` + `B`) およびライブラリーウィンドウ (`Ctrl` + `Shift` + `B`) にも表示されるようになりました ({{bug(1419195)}})。
 
 ### マニフェストの変更点
 
@@ -159,7 +141,7 @@ _変更なし。_
 
 ## 関連情報
 
-- [Firefox 66.0, See All New Features, Updates and Fixes](https://www.mozilla.org/en-US/firefox/66.0/releasenotes/)
+- [Firefox 66: The Sound of Silence](https://hacks.mozilla.org/2019/03/firefox-66-the-sound-of-silence/)
 
 ## 過去のバージョン
 

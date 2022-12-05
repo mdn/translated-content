@@ -113,4 +113,3 @@ html,body,svg { height:100% }
 ## 仕様
 
 {{Specifications}}
-

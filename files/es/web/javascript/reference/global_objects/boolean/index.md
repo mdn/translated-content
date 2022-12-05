@@ -1,14 +1,6 @@
 ---
 title: Booleano
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-tags:
-  - Boolean
-  - Clase
-  - Class
-  - Constructor
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Boolean
 ---
 

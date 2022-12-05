@@ -9,7 +9,7 @@ slug: Web/API/User_Timing_API
 
 **`mark`** events are _named_ by the application and can be set at any location in an application. **`measure`** events are also _named_ by the application but they are placed between two marks thus they are effectively a _midpoint_ between two marks.
 
-This document provides an overview of the `mark` and `measure` {{domxref("PerformanceEntry.entryType","performance event types")}} including the four `User Timing` methods that extend the {{domxref("Performance")}} interface. For more details and example code regarding these two performance event types and the methods, see [Using the User Timing API](/Web/API/User_Timing_API/Using_the_User_Timing_API).
+This document provides an overview of the `mark` and `measure` {{domxref("PerformanceEntry.entryType","performance event types")}} including the four `User Timing` methods that extend the {{domxref("Performance")}} interface. For more details and example code regarding these two performance event types and the methods, see [Using the User Timing API](/ja/docs/Web/API/User_Timing_API/Using_the_User_Timing_API).
 
 ## Performance `marks`
 
@@ -73,7 +73,7 @@ To remove a specific measure from the performance timeline, call `performance.cl
 
 ## Interoperability
 
-As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/Web/API/Performance#Browser_compatibility) table, the `User Timing` methods are broadly implemented by desktop and mobile browsers (the only exceptions are Desktop Safari and Mobile Safari, however [the Safari Technology Preview 24 has support](https://developer.apple.com/safari/technology-preview/release-notes/#r24)).
+As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/ja/docs/Web/API/Performance#Browser_compatibility) table, the `User Timing` methods are broadly implemented by desktop and mobile browsers (the only exceptions are Desktop Safari and Mobile Safari, however [the Safari Technology Preview 24 has support](https://developer.apple.com/safari/technology-preview/release-notes/#r24)).
 
 To test your browser's support for this API, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 

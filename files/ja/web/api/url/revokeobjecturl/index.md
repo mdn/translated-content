@@ -32,9 +32,7 @@ window.URL.revokeObjectURL(objectURL);
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('File API', '#dfn-revokeObjectURL', 'revokeObjectURL()')}} | {{Spec2('File API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

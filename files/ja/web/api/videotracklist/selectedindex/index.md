@@ -19,9 +19,7 @@ var index = VideoTrackList.selectedIndex;
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-videotracklist-selectedindex', 'VideoTrackList: selectedIndex')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

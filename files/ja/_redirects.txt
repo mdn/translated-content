@@ -2682,6 +2682,7 @@
 /ja/docs/MDN/Community/Doc_sprints	/ja/docs/orphaned/MDN/Community/Doc_sprints
 /ja/docs/MDN/Community/Whats_happening	/ja/docs/orphaned/MDN/Community/Whats_happening
 /ja/docs/MDN/Community/Working_in_community	/ja/docs/orphaned/MDN/Community/Working_in_community
+/ja/docs/MDN/Contribute/Changelog	/ja/docs/MDN/Changelog
 /ja/docs/MDN/Contribute/Content	/ja/docs/MDN/Writing_guidelines
 /ja/docs/MDN/Contribute/Content/Best_practices	/ja/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /ja/docs/MDN/Contribute/Content/Does_this_belong_on_MDN	/ja/docs/MDN/Writing_guidelines/What_we_write
@@ -2705,6 +2706,7 @@
 /ja/docs/MDN/Contribute/Guidelines/Video	/ja/docs/MDN/Writing_guidelines/Howto/Images_media
 /ja/docs/MDN/Contribute/Guidelines/Writing_style_guide	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
 /ja/docs/MDN/Contribute/Help_beginners	/ja/docs/MDN/Community/Learn_forum
+/ja/docs/MDN/Contribute/Howto	/ja/docs/conflicting/MDN/Contribute_0bcab4c99ca5038c2d477c13fb21153d
 /ja/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	/ja/docs/orphaned/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 /ja/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /ja/docs/MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web	/ja/docs/MDN/Writing_guidelines/Page_structures/Live_samples
@@ -2715,6 +2717,7 @@
 /ja/docs/MDN/Contribute/Howto/Migrate_external_content_to_MDN	/ja/docs/MDN/Community/Issues/Content_suggestions_feature_proposals
 /ja/docs/MDN/Contribute/Howto/Report_a_problem	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Contribute/Howto/Tag	/ja/docs/MDN/Writing_guidelines/Howto/Tag
+/ja/docs/MDN/Contribute/Howto/Update_the_CSS_JSON_DB	/ja/docs/orphaned/MDN/Contribute/Howto/Update_the_CSS_JSON_DB
 /ja/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/ja/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 /ja/docs/MDN/Contribute/Howto/Write_an_API_reference	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference
 /ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file	/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file
@@ -2745,9 +2748,9 @@
 /ja/docs/MDN/Contribute/Structures/Specification_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /ja/docs/MDN/Contribute/Structures/Syntax_sections	/ja/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
 /ja/docs/MDN/Contribute/Structures/マクロ	/ja/docs/MDN/Writing_guidelines/Page_structures/Macros
-/ja/docs/MDN/Contribute/Tools	/ja/docs/MDN/Tools
-/ja/docs/MDN/Contribute/Tools/KumaScript	/ja/docs/MDN/Tools/KumaScript
-/ja/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/ja/docs/MDN/Tools/KumaScript/Troubleshooting
+/ja/docs/MDN/Contribute/Tools	/ja/docs/orphaned/MDN/Tools
+/ja/docs/MDN/Contribute/Tools/KumaScript	/ja/docs/orphaned/MDN/Tools/KumaScript
+/ja/docs/MDN/Contribute/Tools/KumaScript/Troubleshooting	/ja/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
 /ja/docs/MDN/Contribute/Where_is_everything	/ja/docs/MDN/Community/Contributing/Our_repositories
 /ja/docs/MDN/Feedback	/ja/docs/MDN/Community
 /ja/docs/MDN/Getting_started	/ja/docs/MDN/Community/Contributing/Getting_started
@@ -2780,7 +2783,10 @@
 /ja/docs/MDN/Structures/Quicklinks	/ja/docs/MDN/Writing_guidelines/Page_structures/Quicklinks
 /ja/docs/MDN/Structures/Specification_tables	/ja/docs/MDN/Writing_guidelines/Page_structures/Specification_tables
 /ja/docs/MDN/Structures/Syntax_sections	/ja/docs/MDN/Writing_guidelines/Page_structures/Syntax_sections
-/ja/docs/MDN/User_guide	/ja/docs/MDN/Tools
+/ja/docs/MDN/Tools	/ja/docs/orphaned/MDN/Tools
+/ja/docs/MDN/Tools/KumaScript	/ja/docs/orphaned/MDN/Tools/KumaScript
+/ja/docs/MDN/Tools/KumaScript/Troubleshooting	/ja/docs/orphaned/MDN/Tools/KumaScript/Troubleshooting
+/ja/docs/MDN/User_guide	/ja/docs/orphaned/MDN/Tools
 /ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute

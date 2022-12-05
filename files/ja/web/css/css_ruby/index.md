@@ -17,4 +17,3 @@ slug: Web/CSS/CSS_Ruby
 ## 仕様書
 
 {{Specifications}}
-

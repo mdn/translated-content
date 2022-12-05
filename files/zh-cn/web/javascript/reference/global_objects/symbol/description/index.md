@@ -29,7 +29,7 @@ Symbol('desc').description;  // "desc"
 Symbol('').description;      // ""
 Symbol().description;        // undefined
 
-// well-known symbols
+// 内置通用（well-known）symbol
 Symbol.iterator.toString();  // "Symbol(Symbol.iterator)"
 Symbol.iterator.description; // "Symbol.iterator"
 

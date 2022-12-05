@@ -74,4 +74,3 @@ slug: Web/CSS/CSS_Backgrounds_and_Borders
 ## 仕様書
 
 {{Specifications}}
-

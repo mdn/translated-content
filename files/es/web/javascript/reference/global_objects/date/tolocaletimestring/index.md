@@ -1,15 +1,6 @@
 ---
 title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-tags:
-  - Date
-  - Fecha
-  - Internacionalizacion
-  - JavaScript
-  - Method
-  - Prototype
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toLocaleTimeString
 ---
 

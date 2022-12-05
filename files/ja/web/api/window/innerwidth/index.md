@@ -45,9 +45,7 @@ var intOuterFramesetWidth = top.innerWidth;
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('CSSOM View', '#dom-window-innerwidth', 'window.innerWidth')}} | {{Spec2('CSSOM View')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
