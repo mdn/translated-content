@@ -1,7 +1,6 @@
 ---
 title: isNaN
 slug: Web/JavaScript/Reference/Global_Objects/isNaN
-translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 original_slug: Web/JavaScript/Referencia/Objetos_globales/isNaN
 ---
 
