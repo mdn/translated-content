@@ -9,9 +9,9 @@ original_slug: Web/Compatibility_FAQ/Misaligned_Icon.html
 アイコンや画像の表示位置がずれて表示されてしまいます。
 他のブラウザと比較した場合、上下左右にずれて表示されたり、横並びに表示されるべきアイコンや画像が縦並びに表示されたりします。
 
-![](https://mdn.mozillademos.org/files/9973/0104_1.png)
+![](0104_1.png)
 
-![](https://mdn.mozillademos.org/files/9975/0104_2.png)
+![](0104_2.png)
 
 ## 要因
 
