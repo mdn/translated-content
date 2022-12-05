@@ -120,7 +120,7 @@ console.log("Hello world");
 
 JavaScript 的解释器会把它视为普通注释——只有当脚本直接在 shell 中运行时，它对 shell 才有语义意义。
 
-> **警告：** 如果你想让脚本直接在 shell 环境中运行，请用不含 [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) 的 UTF-8 编码。虽然 BOM 不会对在浏览器中运行的代码造成任何问题——在 UTF-8 解码过程中，分析源文本之前，BOM就已经被剥离了——但如果前面有一个 BOM 字符，Unix/Linux shell就不会识别该注释。
+> **警告：** 如果你想让脚本直接在 shell 环境中运行，请用不含 [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) 的 UTF-8 编码。虽然 BOM 不会对在浏览器中运行的代码造成任何问题——在 UTF-8 解码过程中，分析源文本之前，BOM 就已经被剥离了——但如果前面有一个 BOM 字符，Unix/Linux shell 就不会识别该注释。
 
 你只能使用 `#!` 注释样式以指定 JavaScript 解释器。在所有其他情况下，只需使用 `//` 注释（或多行注释）。
 
