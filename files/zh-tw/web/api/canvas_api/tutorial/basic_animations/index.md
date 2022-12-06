@@ -119,7 +119,7 @@ function draw() {
 init();
 ```
 
-{{EmbedLiveSample("An_animated_solar_system", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}
+{{EmbedLiveSample("太陽系動畫", "310", "340")}}
 
 #### 時鐘動畫
 

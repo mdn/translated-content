@@ -311,7 +311,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Art_gallery_example", 725, 400, "https://mdn.mozillademos.org/files/205/Canvas_art_gallery.jpg")}}
+{{EmbedLiveSample("畫廊範例", 725, 400)}}
 
 ## 控制影像縮放行為
 
