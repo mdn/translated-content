@@ -1,41 +1,38 @@
 ---
 title: DeviceProximityEvent
 slug: Web/API/DeviceProximityEvent
+l10n:
+  sourceCommit: 5f80944f03f785c729c12ac143cf88a1c12e72cd
 ---
 
-{{APIRef("Proximity Events")}}{{SeeCompatTable}}
+{{APIRef("Proximity Events")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-`DeviceProximityEvent` インターフェースは、端末の近接センサーを使用して近くの物理オブジェクトの距離についての情報を提供します。
+> **警告:** `DeviceProximityEvent` は現在の主要なブラウザーがどれも対応しておらず、使用すべきではありません。
 
-## プロパティ
+**`DeviceProximityEvent`** インターフェイスは、端末の近接センサーを使用して近くの物理オブジェクトの距離についての情報を提供します。
 
-- {{domxref("DeviceProximityEvent.max")}} {{readonlyinline}}
+## インスタンスプロパティ
+
+- `DeviceProximityEvent.max` {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : センサーが報告できる最大検出距離 (センチメートル単位)。
-- {{domxref("DeviceProximityEvent.min")}} {{readonlyinline}}
+- `DeviceProximityEvent.min` {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : センサーが報告できる最小検出距離 (センチメートル単位)。通常は 0。
-- {{domxref("DeviceProximityEvent.value")}} {{readonlyinline}}
+- `DeviceProximityEvent.value` {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 現在の端末近接度 (センチメートル単位)
 
 ## 例
 
 ```js
-window.addEventListener('deviceproximity', function(event) {
-  console.log("value: " + event.value, "max: " + event.max, "min: " + event.min);
+window.addEventListener('deviceproximity', (event) => {
+  console.log(`value: ${event.value}`, `max: ${event.max}`, `min: ${event.min}`);
 });
 ```
 
-## 仕様書
+## ブラウザーの互換性
 
-| 仕様書                                                                       | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{ SpecName('Proximity Events', '', 'Proximity Events') }} | {{ Spec2('Proximity Events') }} | 初回定義 |
-
-## ブラウザーの対応
-
-{{Compat("api.DeviceProximityEvent")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{event("deviceproximity")}}
 - {{domxref("UserProximityEvent")}}
-- [Proximity API](/ja/docs/WebAPI/Proximity)
+- [近接 API](/ja/docs/Web/API/Proximity_Events)
