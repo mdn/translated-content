@@ -1,29 +1,35 @@
 ---
 title: UserProximityEvent
 slug: Web/API/UserProximityEvent
+l10n:
+  sourceCommit: 579788ba8fe61b6c7dddaec09dee7b33d6548a4d
 ---
 
-{{APIRef("Proximity Events")}}{{SeeCompatTable}}
+{{APIRef("Proximity Events")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-`UserProximityEvent` は、端末の近接センサーによって、端末の近くに物体が存在するかどうかを示します。
+> **警告:** `UserProximityEvent` は現在の主要なブラウザーがどれも対応しておらず、使用すべきではありません。
+
+**`UserProximityEvent`** は、端末の近接センサーによって、端末の近くに物体が存在するかどうかを示します。
 
 ## プロパティ
 
-- {{domxref("UserProximityEvent.near")}}
-  - : 端末が近くの物体を検知したかどうかを示す真偽値を返す
+- `UserProximityEvent.near` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : 端末が近くの物体を検知したかどうかを示します。
 
-## 仕様書
+## Examples
 
-| 仕様書                                                                       | 状態                                     | 備考     |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Proximity Events', '', 'Proximity Events')}} | {{Spec2('Proximity Events')}} | 初回定義 |
+```js
+window.addEventListener('userproximity', (event) => {
+  // if not near, power off the screen
+  navigator.mozPower.screenEnabled = !event.near;
+});
+```
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.UserProximityEvent")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{event("userproximity")}}
+- [近接イベント](/ja/docs/Web/API/Proximity_Events)
 - {{domxref("DeviceProximityEvent")}}
-- [Proximity Events](/ja/docs/WebAPI/Proximity)
