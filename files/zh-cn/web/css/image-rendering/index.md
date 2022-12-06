@@ -48,9 +48,9 @@ image-rendering: unset;
 
 ```html hidden
 <div>
-  <img class="auto" alt="auto" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
-  <img class="pixelated" alt="pixelated" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
-  <img class="crisp-edges" alt="crisp-edges" src="https://mdn.mozillademos.org/files/2765/blumen.jpg" />
+  <img class="auto" alt="auto" src="blumen.jpg" />
+  <img class="pixelated" alt="pixelated" src="blumen.jpg" />
+  <img class="crisp-edges" alt="crisp-edges" src="blumen.jpg" />
 </div>
 ```
 

@@ -29,7 +29,7 @@ domRect = element.getBoundingClientRect();
 
 Данный метод возвращает объект {{domxref("DOMRect")}}, который является объединением прямоугольников, возвращаемых методом {{domxref("Element.getClientRects", "getClientRects()")}} для данного элемента, т. е. CSS border-boxes (css-коробок в рамках), связанных с этим элементом. Результатом является самый маленький прямоугольник, в котором содержится весь элемент с read-only `left`, `top`, `right`, `bottom`, `x`, `y`, `width` и `height` свойствами, описывающие это в пикселях. Все свойства, кроме `width` и `height`, являются относительными к верхнему левому углу viewport-а.
 
-![Explanation of DOMRect values](https://mdn.mozillademos.org/files/15087/rect.png)
+![Explanation of DOMRect values](rect.png)
 
 Пустые border-box полностью игнорируются. Если border-box элемента пуст, прямоугольник возвращается с нулевыми `width` и `height`, а `top` и `left` берутся у следующего CSS элемента (в порядке контента).
 

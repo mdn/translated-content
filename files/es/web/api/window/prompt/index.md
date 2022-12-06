@@ -37,7 +37,7 @@ Cuando el usuario hace clic en el botón OK, el valor introducido en el campo de
 
 El ejemplo anterior muestra el siguiente cuadro de diálogo (en Chrome en OS X):
 
-[![prompt() dialog in Chrome on OS X](https://mdn.mozillademos.org/files/11303/prompt.png)](https://mdn.mozillademos.org/files/11303/prompt.png)
+[![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
 
 ## Notas
 

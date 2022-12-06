@@ -28,17 +28,17 @@ _La interfaz de usuario para esto varía de un navegador a otro, pero la idea ge
 
 _En un dispositivo Android que usa Firefox, verás un ícono de "inicio" con un ícono más (+) en su interior; este es el ícono "Agregar a la pantalla de inicio" que se muestra para cualquier sitio que tenga las características necesarias en su lugar._
 
-_**![Una captura de pantalla de un navegador web que muestra el ícono Agregar a la pantalla de inicio en la parte superior](<https://mdn.mozillademos.org/files/17158/android-a2hs-icon.png >)**_
+![Una captura de pantalla de un navegador web que muestra el ícono Agregar a la pantalla de inicio en la parte superior](android-a2hs-icon.png)
 
 _Al tocar este, se mostrará un pasquín de confirmación; al presionar el botón grande "+ AGREGAR A LA PANTALLA DE INICIO", se completa la acción y se agrega la aplicación a la pantalla de inicio. Ten en cuenta que en Android 8 y versiones posteriores, se mostrará primero un cuadro de diálogo de permiso "Agregar a la pantalla de inicio" a nivel del sistema._
 
-_![Una captura de pantalla de Firefox para Android que solicita confirmación antes de instalar una aplicación web](https://mdn.mozillademos.org/files/17160/fx-a2hs-banner.png)_
+![Una captura de pantalla de Firefox para Android que solicita confirmación antes de instalar una aplicación web](fx-a2hs-banner.png)
 
 ### Navegador de Internet Samsung
 
 _Si tiene Samsung Internet en tu dispositivo móvil, verás un icono diferente._
 
-_![Una captura de pantalla del navegador de Internet de Samsung que muestra su icono Agregar a la pantalla de inicio](https://mdn.mozillademos.org/files/17161/samsung-internet-add-app.png)_
+![Una captura de pantalla del navegador de Internet de Samsung que muestra su icono Agregar a la pantalla de inicio](samsung-internet-add-app.png)
 
 _Tocar ese ícono debería llevarte al mismo pasquín de confirmación que se muestra en Firefox arriba._
 
@@ -46,7 +46,7 @@ _Tocar ese ícono debería llevarte al mismo pasquín de confirmación que se mu
 
 _Si tienes Google Chrome para Android disponible, la experiencia es ligeramente diferente; al cargar nuestro sitio, verás un mensaje de instalación emergente que te preguntará si deseas agregar esta aplicación a tu pantalla de inicio._
 
-_![Captura de pantalla de un pasquín de Chrome que solicita permiso para instalar la aplicación de muestra Foxes](https://mdn.mozillademos.org/files/17159/chrome-a2hs-banner.png)_
+![Captura de pantalla de un pasquín de Chrome que solicita permiso para instalar la aplicación de muestra Foxes](chrome-a2hs-banner.png)
 
 > **Nota:** Puedes obtener más información sobre los mensajes de instalación de Chrome en el artículo [Mensajes de instalación de aplicaciones web](https://developers.google.com/web/fundamentals/app-install-banners/).
 
@@ -54,17 +54,17 @@ _Si eliges no agregarlo a tu pantalla de inicio en este momento, los puedes hace
 
 ### Safari para iOS/iPhoneOS/iPadOS
 
-_En iOS de Apple (incluidos iPhoneOS y iPadOS), el navegador Safari integrado en el dispositivo tiene cierto soporte para aplicaciones web, incluido el soporte para agregar a la función de pantalla de inicio. Para agregar una aplicación web a la pantalla de inicio (también conocida como lanzador o trampolín), toca el botón para compartir (![Icono de compartir cuadrado y flecha desde iOS y macOS](https://mdn.mozillademos.org/files/17156/square.svg)) en la parte inferior de la pantalla:_
+_En iOS de Apple (incluidos iPhoneOS y iPadOS), el navegador Safari integrado en el dispositivo tiene cierto soporte para aplicaciones web, incluido el soporte para agregar a la función de pantalla de inicio. Para agregar una aplicación web a la pantalla de inicio (también conocida como lanzador o trampolín), toca el botón para compartir (![Icono de compartir cuadrado y flecha desde iOS y macOS](square.svg)) en la parte inferior de la pantalla:_
 
-_![Captura de pantalla que muestra la ubicación del botón Compartir en Safari en iOS 13](https://mdn.mozillademos.org/files/17163/safari-ios-a2hs-icon.png)_
+![Captura de pantalla que muestra la ubicación del botón Compartir en Safari en iOS 13](safari-ios-a2hs-icon.png)
 
 _Esto llama al panel para compartir. Entre las opciones debe estar la opción "Agregar a la pantalla de inicio", a menos que el usuario la haya eliminado específicamente de la lista al editar las opciones mostradas:_
 
-_![Captura de pantalla del panel para compartir de Safari iOS, que muestra la opción](https://mdn.mozillademos.org/files/17165/safari-ios-share-menu.png)_
+![Captura de pantalla del panel para compartir de Safari iOS, que muestra la opción](safari-ios-share-menu.png)
 
 _Al elegir "Agregar a la pantalla de inicio" aquí se presenta el cuadro de diálogo de confirmación, que no solo confirma que el usuario desea agregar la aplicación a la pantalla de inicio, sino que también le permite personalizar su nombre._
 
-_![Una captura de pantalla de iOS Safari que muestra su panel de configuración y confirmación "Agregar a la pantalla de inicio"](https://mdn.mozillademos.org/files/17167/safari-ios-a2hs-banner.png)_
+![Una captura de pantalla de iOS Safari que muestra su panel de configuración y confirmación "Agregar a la pantalla de inicio"](safari-ios-a2hs-banner.png)
 
 _Al hacer clic en "Agregar", la aplicación se incluye en la pantalla de inicio._
 
@@ -72,6 +72,6 @@ _Al hacer clic en "Agregar", la aplicación se incluye en la pantalla de inicio.
 
 _Independientemente del navegador y el dispositivo que estés utilizando, cuando eliges agregar la aplicación a tu pantalla de inicio o al iniciador de aplicaciones, aparecerá allí con el mismo aspecto que cualquier aplicación. Normalmente, esto significa que verás el icono de la aplicación junto con un título corto._
 
-_![Captura de pantalla de una pantalla de inicio de Android con la aplicación "Foxes" mostrada](https://mdn.mozillademos.org/files/17157/a2hs-on-home-screen.png)_
+![Captura de pantalla de una pantalla de inicio de Android con la aplicación "Foxes" mostrada](a2hs-on-home-screen.png)
 
 _Cuando tocas el icono de la aplicación web en la pantalla de inicio, se abre en un entorno web de pantalla completa, sin la interfaz de usuario del navegador a su alrededor._

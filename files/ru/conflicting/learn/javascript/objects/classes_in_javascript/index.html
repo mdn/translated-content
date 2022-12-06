@@ -47,7 +47,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 <p>Вернёмся к объекту Person из нашей статьи <a href="/ru/docs/Learn/JavaScript/Объекты/Основы">Основы объектов</a>, который определяет общие сведения и функциональные возможности человека. Есть много вещей, которые вы <em>можете</em> узнать о человеке (его адрес, рост, размер обуви, профиль ДНК, номер паспорта, значимые черты личности ...), но в данном случае нас интересует только имя, возраст, пол и интересы, а также мы хотим иметь возможность написать краткую информацию о нём, основываясь на этих данных, и сделать так, чтобы он поздоровался. Это известно как <strong>абстракция</strong> — создание простой модели более сложной сущности, которая представляет её наиболее важные аспекты таким образом, чтобы с ней было удобно работать для выполнения целей нашей программы.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13889/person-diagram.png" style="display: block; height: 219px; margin: 0px auto; width: 610px;"></p>
+<p><img alt="" src="person-diagram.png" style="display: block; height: 219px; margin: 0px auto; width: 610px;"></p>
 
 <p>В некоторых языках ООП, это общее определение типа объекта называется <strong>class</strong> (JavaScript использует другой механизм и терминологию, как вы увидите ниже) — это на самом деле не объект, а шаблон, который определяет, какие характеристики должен иметь объект.</p>
 
@@ -55,7 +55,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 <p>Из нашего класса мы можем создать <strong>экземпляры объектов</strong> — объекты, содержащие данные и функциональные возможности, определённые в классе. Из нашего класса Person мы теперь можем создавать модели реальных людей:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13883/MDN-Graphics-instantiation-2.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="mdn-graphics-instantiation-2.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
 
 <p>Когда экземпляр объекта создаётся из класса, для его создания выполняется <strong>функция-конструктор </strong>класса. Этот процесс создания экземпляра объекта из класса называется <strong>создание экземпляра (instantiation)</strong> — из класса <strong>создаётся</strong> экземпляр объекта.</p>
 
@@ -63,7 +63,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 <p>В нашем случае нам не нужны все люди — нам требуются учителя и ученики, которые являются более конкретными типами людей. В ООП мы можем создавать новые классы на основе других классов — эти новые <strong>дочерние классы</strong> могут быть созданы для <strong>наследования</strong> данных и характеристик <strong>родительского класса</strong>, так чтобы можно было использовать функциональные возможности, общие для всех типов объекта, вместо того чтобы дублировать их. Когда функциональность различается между классами, можно по мере необходимости определять специализированные функции непосредственно на них.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="mdn-graphics-inherited-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
 
 <p>Это действительно полезно — преподаватели и студенты имеют много общих характеристик, таких как имя, пол и возраст, и удобно определить их только один раз. Вы можете также задать одну и ту же характеристику отдельно в разных классах, поскольку каждое определение этой характеристики будет находиться в отдельном пространстве имён. Например, приветствие студента может быть в форме "Yo, I'm [firstName]" (например <em>Yo, I'm Sam</em>), в то время как учитель может использовать что-то более формальное, такое как "Hello, my name is [Prefix] [lastName], and I teach [Subject]." (например <em>Hello, My name is Mr Griffiths, and I teach Chemistry</em>).</p>
 
@@ -73,7 +73,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 <p>Теперь вы можете создавать экземпляры объекта из дочерних классов. Например:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
+<p><img alt="" src="mdn-graphics-instantiation-teacher-3.png" style="display: block; height: 743px; margin: 0px auto; width: 700px;"></p>
 
 <p>Далее мы рассмотрим, как ООП теорию можно применить на практике в JavaScript.</p>
 

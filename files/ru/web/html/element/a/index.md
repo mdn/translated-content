@@ -170,7 +170,7 @@ HTML-элемент `<a>` определяет гиперссылку для п�
 
 ```html
 <a href="https://developer.mozilla.org/ru/" target="_blank">
-  <img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png" alt="MDN logo">
+  <img src="mdn_logo.png" alt="MDN logo">
 </a>
 ```
 

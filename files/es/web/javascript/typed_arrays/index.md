@@ -21,7 +21,7 @@ Sin embargo, los arreglos tipados _no_ se deben confundir con los arreglos norma
 
 Para lograr la máxima flexibilidad y eficiencia, los arreglos de JavaScript dividen la implementación en _búferes_ y _vistas_. Un búfer (implementado por el objeto {{jsxref("ArrayBuffer")}} es un objeto que representa una porción de datos; no tiene ningún formato del que hablar y no ofrece ningún mecanismo para acceder a su contenido. Para acceder a la memoria contenida en un búfer, necesitas usar una vista. Una vista proporciona un contexto — es decir, un tipo de dato, un desplazamiento inicial y el número de elementos — que convierte los datos en un arreglo tipado.
 
-![Arreglos tipados en ArrayBuffer](https://mdn.mozillademos.org/files/8629/typed_arrays.png)
+![Arreglos tipados en ArrayBuffer](typed_arrays.png)
 
 ### `ArrayBuffer`
 

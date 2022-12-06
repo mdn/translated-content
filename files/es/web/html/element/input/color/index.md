@@ -72,20 +72,6 @@ Si la implementación del elemento {{HTMLElement("input")}} del tipo «`color`»
 muestrario.select();
 ```
 
-### Variaciones de apariencia
-
-Como se mencionó anteriormente, cuando un navegador no admite una interfaz de selección de colores, su implementación de las entradas de color viene en forma de un cuadro de texto que valida su contenido automáticamente para garantizar que el valor esté en el formato adecuado. Por ejemplo, en Safari 10.1 verá algo como esto:
-
-![Screenshot of the example taken in Safari.](https://mdn.mozillademos.org/files/14899/input-color-safari.png)
-
-El mismo contenido luce así en Firefox 55:
-
-![Screenshot of the example taken in Firefox 55 for macOS](https://mdn.mozillademos.org/files/14901/input-color-firefox.png)
-
-En este caso, al pulsar en el muestrario de colores aparecerá el selector de la plataforma desde el cual elegir un color (en el ejemplo, el selector de macOS):
-
-![Screenshot of the element with the color picker open in Firefox Mac.](https://mdn.mozillademos.org/files/14903/input-with-picker-firefox-mac.png)
-
 ## Validación
 
 El valor de una entrada de colores se considera no válido si el {{Glossary("user agent")}} no es capaz de convertir la entrada del usuario en la notación hexadecimal de siete caracteres minúsculos. Cuando se da esta situación, se aplica la pseudoclase {{cssxref(":invalid")}} al elemento.

@@ -137,6 +137,6 @@ if (canvas.getContext){
 
 例子看起来像是这样：:
 
-{{EmbedLiveSample("一个简单例子", 160, 160, "https://mdn.mozillademos.org/files/228/canvas_ex1.png")}}
+{{EmbedLiveSample("一个简单例子", 160, 160, "canvas_ex1.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
