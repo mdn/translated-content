@@ -405,7 +405,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
  line-height: 1em;
 
  background-color: #888;
- background-image: url("https://mdn.mozillademos.org/files/5683/disabled.png");
+ background-image: url("disabled.png");
  background-position: center center;
  background-repeat: no-repeat;
 
@@ -431,7 +431,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
 }
 
 .ui-checkbox > input:checked + label {
- background-image: url("https://mdn.mozillademos.org/files/5681/checked.png");
+ background-image: url("checked.png");
  background-color: #379B4A;
 }
 
@@ -546,29 +546,29 @@ body {
 }
 
 #layer_manager [data-type='add'] {
- background-image: url("https://mdn.mozillademos.org/files/5685/add-black.png");
+ background-image: url("add-black.png");
 }
 
 #layer_manager [data-type='add']:hover {
- background-image: url("https://mdn.mozillademos.org/files/5687/add-white.png");
+ background-image: url("add-white.png");
 }
 
 #layer_manager [data-type='move-up'] {
- background-image: url("https://mdn.mozillademos.org/files/5697/up-black.png");
+ background-image: url("up-black.png");
  margin-left: 5%;
  margin-right: 5%;
 }
 
 #layer_manager [data-type='move-up']:hover {
- background-image: url("https://mdn.mozillademos.org/files/5709/up-white.png");
+ background-image: url("up-white.png");
 }
 
 #layer_manager [data-type='move-down'] {
- background-image: url("https://mdn.mozillademos.org/files/5693/down-black.png");
+ background-image: url("down-black.png");
 }
 
 #layer_manager [data-type='move-down']:hover {
- background-image: url("https://mdn.mozillademos.org/files/5695/down-white.png");
+ background-image: url("down-white.png");
 }
 
 /* shadows classes */
@@ -619,7 +619,7 @@ body {
  height: 100%;
  float: right;
  border-radius: 3px;
- background-image: url("https://mdn.mozillademos.org/files/5689/delete-white.png");
+ background-image: url("delete-white.png");
  background-position: center center;
  background-repeat: no-repeat;
  position: absolute;
@@ -629,7 +629,7 @@ body {
 }
 
 #layer_manager .delete:hover {
- background-image: url("https://mdn.mozillademos.org/files/5691/delete-yellow.png");
+ background-image: url("delete-yellow.png");
 }
 
 #layer_manager .node:hover .delete {
@@ -689,7 +689,7 @@ body {
  height: 100%;
  float: right;
  border-radius: 3px;
- background-image: url("https://mdn.mozillademos.org/files/5689/delete-white.png");
+ background-image: url("delete-white.png");
  background-position: center center;
  background-repeat: no-repeat;
  position: absolute;
@@ -699,7 +699,7 @@ body {
 }
 
 #layer_menu .delete:hover {
- background-image: url("https://mdn.mozillademos.org/files/5691/delete-yellow.png");
+ background-image: url("delete-yellow.png");
 }
 
 #layer_menu .button:hover .delete {
@@ -899,7 +899,7 @@ body {
  width: 200px;
  height: 200px;
  margin: 5px;
- background: url("https://mdn.mozillademos.org/files/5707/picker_mask_200.png");
+ background: url("picker_mask_200.png");
  background: -moz-linear-gradient(bottom, #000 0%, rgba(0, 0, 0, 0) 100%),
     -moz-linear-gradient(left, #FFF 0%, rgba(255, 255, 255, 0) 100%);
  background: -webkit-linear-gradient(bottom, #000 0%, rgba(0, 0, 0, 0) 100%),
@@ -912,7 +912,7 @@ body {
  width: 200px;
  height: 30px;
  margin: 5px;
- background: url("https://mdn.mozillademos.org/files/5701/hue.png");
+ background: url("hue.png");
  background: -moz-linear-gradient(left, #F00 0%, #FF0 16.66%, #0F0 33.33%, #0FF 50%,
     #00F 66.66%, #F0F 83.33%, #F00 100%);
  background: -webkit-linear-gradient(left, #F00 0%, #FF0 16.66%, #0F0 33.33%, #0FF 50%,
@@ -926,7 +926,7 @@ body {
  margin: 5px;
  border: 1px solid #CCC;
  float: left;
- background: url("https://mdn.mozillademos.org/files/5705/alpha.png");
+ background: url("alpha.png");
 
  -moz-box-sizing: border-box;
  -webkit-box-sizing: border-box;
@@ -936,7 +936,7 @@ body {
 #colorpicker #alpha {
  width: 100%;
  height: 100%;
- background: url("https://mdn.mozillademos.org/files/5703/alpha_mask.png");
+ background: url("alpha_mask.png");
  background: -moz-linear-gradient(left, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 1) 100%);
 }
 
@@ -1000,7 +1000,7 @@ body {
 #colorpicker .preview {
  margin: 5px;
  border: 1px solid #CCC;
- background-image: url("https://mdn.mozillademos.org/files/5705/alpha.png");
+ background-image: url("alpha.png");
 
  -moz-box-sizing: border-box;
  -webkit-box-sizing: border-box;

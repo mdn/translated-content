@@ -235,7 +235,7 @@ function clock(){
 init();
 ```
 
-{{EmbedLiveSample("An_animated_clock", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}
+{{EmbedLiveSample("時鐘動畫", "180", "200")}}
 
 #### 循環景色
 
