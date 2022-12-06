@@ -1216,6 +1216,7 @@
 /es/docs/MDN/Contribute/Guidelines/Convenciones_y_definiciones	/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /es/docs/MDN/Contribute/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Contribute/Herramientas	/es/docs/orphaned/MDN/Tools
+/es/docs/MDN/Contribute/Howto	/es/docs/conflicting/MDN/Contribute
 /es/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /es/docs/MDN/Contribute/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto/Tag
 /es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary

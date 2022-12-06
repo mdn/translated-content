@@ -12,9 +12,9 @@ translation_of: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
 
 Цветовой контраст между фоном и содержимым переднего плана (обычно текстом) должен быть минимальным, чтобы обеспечить удобство чтения. Хорошо иметь крутой дизайн на своём сайте, но он бесполезен, если ваши пользователи не могут прочитать контент.
 
-Пример хорошего контраста:![An example of good color contrast consisting of the words good contrast with a light purple background.](https://mdn.mozillademos.org/files/16466/Screen_Shot_2019-02-04_at_5.31.23_PM.png)
+Пример хорошего контраста:![An example of good color contrast consisting of the words good contrast with a light purple background.](screen_shot_2019-02-04_at_5.31.23_pm.png)
 
-Пример плохого контраста:![An example of bad color contrast consisting of the words bad contrast with a dark purple background.](https://mdn.mozillademos.org/files/16467/Screen_Shot_2019-02-04_at_5.31.34_PM.png)
+Пример плохого контраста:![An example of bad color contrast consisting of the words bad contrast with a dark purple background.](screen_shot_2019-02-04_at_5.31.34_pm.png)
 
 Наличие хорошего цветового контраста на вашем сайте принесёт пользу всем вашим пользователям, но в особенности будет полезно пользователям с определёнными типами дальтонизма и другими подобными условиями, которые испытывают затруднения при распознавании похожих цветов.
 

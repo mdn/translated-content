@@ -133,7 +133,7 @@ if (sendToClients) {
 
 假设 Naomi 和 Priya 正在使用聊天软件进行讨论，Naomi 决定在两人之间打开一个视频通话。以下是预期的事件顺序：
 
-[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](https://mdn.mozillademos.org/files/12363/WebRTC%20-%20Signaling%20Diagram.svg)
+[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](webrtc_-_signaling_diagram.svg)
 
 在本文的整个过程中，我们将看到更详细的信息。
 
@@ -141,7 +141,7 @@ if (sendToClients) {
 
 当每端的 ICE 层开始发送候选时，它会在链中的各个点之间进行交换，如下所示：
 
-[![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)](https://mdn.mozillademos.org/files/12365/WebRTC%20-%20ICE%20Candidate%20Exchange.svg)
+[![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)](webrtc_-_ice_candidate_exchange.svg)
 
 每一端从本地的 ICE 层接收候选时，都会将其发送给另一方；不存在轮流或成批的候选。一旦两端就一个候选达成一致，双方就都可以用此候选来交换媒体数据，媒体数据就开始流动。即使在媒体数据已经开始流动之后，每一端都会继续向候选发送消息，直到他们没有选择的余地。这样做是为了找到比最初选择的更好的选择。
 

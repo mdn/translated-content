@@ -207,7 +207,7 @@ Most APIs require you to use some kind of developer key, for reasons of security
 
 The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.
 
-![](https://mdn.mozillademos.org/files/14821/nytimes-search.png)
+![](nytimes-search.png)
 
 ### Connect the API to your app
 

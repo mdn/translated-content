@@ -37,7 +37,7 @@ Con "Servidor web" podemos referirnos a hardware o software, o a ambos trabajand
 
 Al nivel más básico, cuando un navegador necesita un archivo que está almacenado en un servidor web, el navegador requerirá el archivo al servidor mediante el protocolo HTTP. Cuando la petición alcanza al servidor web correcto (hardware), el _servidor HTTP_ (software) acepta la solicitud, encuentra el documento requerido y lo envía de regreso al navegador, tambien a través de HTTP. (Si el servidor no encuentra el documento requerido, devuelve una respuesta [404](/es/docs/Web/HTTP/Status/404) en su lugar.)
 
-![Representación básica de una conexión cliente/servidor a través de HTTP](https://mdn.mozillademos.org/files/8659/web-server.svg)
+![Representación básica de una conexión cliente/servidor a través de HTTP](web-server.svg)
 
 Para publicar un sitio web, necesitarás un servidor web estático o dinámico.
 
@@ -87,7 +87,7 @@ HTTP proporciona reglas claras sobre cómo se comunican un cliente y un servidor
 - Al solicitar un archivo a través de HTTP, los clientes deben proporcionar la URL del archivo.
 - El servidor web debe responder a todas las solicitudes HTTP, al menos con un mensaje de error.
 
-[![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](/es/404) En un servidor web, el servidor HTTP es responsable de procesar y responder las solicitudes entrantes.
+[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/es/404) En un servidor web, el servidor HTTP es responsable de procesar y responder las solicitudes entrantes.
 
 1. Al recibir una solicitud, un servidor HTTP primero verifica si la URL solicitada coincide con un archivo existente.
 2. Si es así, el servidor web envía el contenido del archivo de nuevo al navegador. Si no, un servidor de aplicaciones construye el archivo necesario.

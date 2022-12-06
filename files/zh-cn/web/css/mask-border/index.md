@@ -3,9 +3,9 @@ title: mask-border
 slug: Web/CSS/mask-border
 ---
 
-{{cssref}}{{SeeCompatTable}}
+{{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`mask-border`** 允许你创建一个紧贴元素边框边缘的 mask.
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`mask-border`** 允许你创建一个紧贴元素边框边缘的 mask。
 
 该属性为以下属性的[简写](/zh-CN/docs/Web/CSS/Shorthand_properties): {{cssxref("mask-border-source")}}, {{cssxref("mask-border-slice")}}, {{cssxref("mask-border-width")}}, {{cssxref("mask-border-outset")}}, {{cssxref("mask-border-repeat")}}, and {{cssxref("mask-border-mode")}}. 与其他简写的属性一样，任何一个漏写的子属性，将会被设置为他们的[初始值](/zh-CN/docs/Web/CSS/initial_value).
 
@@ -70,7 +70,7 @@ div {
   padding: 10px;
 
   mask-border:
-    url("https://mdn.mozillademos.org/files/15836/mask-border-diamonds.png")  /* source */
+    url("mask-border-diamonds.png")  /* source */
     30 /         /* slice */
     36px 18px    /* width */
     round;       /* repeat */

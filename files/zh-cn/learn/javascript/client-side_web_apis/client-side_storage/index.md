@@ -50,7 +50,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 客户端存储的概念已经存在很长一段时间了。从早期的网络时代开始，网站就使用 [cookies](/zh-CN/docs/Web/HTTP/Cookies) 来存储信息，以在网站上提供个性化的用户体验。它们是网络上最早最常用的客户端存储形式。
 因为在那个年代，有许多问题——无论是从技术上的还是用户体验的角度——都是困扰着 cookies 的问题。这些问题非常重要，以至于当第一次访问一个网站时，欧洲居民会收到消息，告诉他们是否会使用 cookies 来存储关于他们的数据，而这是由一项被称为[欧盟 Cookie 条例](/zh-CN/docs/Web/HTTP/Cookies#%E6%AC%A7%E7%9B%9FCookie%E6%8C%87%E4%BB%A4)的欧盟法律导致的。
 
-![](https://mdn.mozillademos.org/files/15734/cookies-notice.png)
+![](cookies-notice.png)
 
 由于这些原因，我们不会在本文中教你如何使用 cookie。毕竟它过时、存在各种[安全问题](/zh-CN/docs/Web/HTTP/Cookies#安全)，而且无法存储复杂数据，而且有更好的、更现代的方法可以在用户的计算机上存储种类更广泛的数据。
 cookie 的唯一优势是它们得到了非常旧的浏览器的支持，所以如果您的项目需要支持已经过时的浏览器（比如 Internet Explorer 8 或更早的浏览器），cookie 可能仍然有用，但是对于大多数项目（很明显不包括本站）来说，您不需要再使用它们了。其实 cookie 也没什么好说的，[`document.cookie`](/zh-CN/docs/Web/API/Document/cookie)一把梭就完事了。
