@@ -2646,10 +2646,6 @@
       "Mars"
     ]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2019-01-16T18:56:52.965Z",
-    "contributors": ["wbamberg", "0zxo", "astrapotro", "MauricioGil", "Sheppy"]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2019-01-17T02:12:44.469Z",
     "contributors": ["wbamberg", "astrapotro"]
@@ -14490,6 +14486,10 @@
       "anyruizd",
       "Michelangeur"
     ]
+  },
+  "conflicting/MDN/Contribute": {
+    "modified": "2019-01-16T18:56:52.965Z",
+    "contributors": ["wbamberg", "0zxo", "astrapotro", "MauricioGil", "Sheppy"]
   },
   "conflicting/MDN/Contribute/Getting_started": {
     "modified": "2019-01-16T18:56:38.941Z",

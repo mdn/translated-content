@@ -42,13 +42,13 @@ En un momento de la historia, solo tenías dos opciones al diseñar un sitio web
 
 Estos dos enfoques tendían a dar como resultado un sitio web que se veía mejor ¡en la pantalla de la persona que diseñaba el sitio! El sitio líquido dio como resultado un diseño encogido en las pantallas que eran más pequeñas (como se ve a continuación) o longitudes de línea interminables en las pantallas que eran más grandes.
 
-![Un diseño de página con dos columnas encogidas en una ventana gráfica del tamaño de un teléfono móvil.](https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png)
+![Un diseño de página con dos columnas encogidas en una ventana gráfica del tamaño de un teléfono móvil.](mdn-rwd-liquid.png)
 
 > **Nota:** Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html) de un diseño líquido sencillo. Amplía o reduce la ventana del navegador y observa cómo cambia su aspecto en diferentes tamaños.
 
 El sitio de ancho fijo se arriesgaba a una barra de desplazamiento horizontal en pantallas que eran más pequeñas que el ancho del sitio (como se ve a continuación), y a un gran espacio en blanco en los bordes del diseño en las pantallas que eran más grandes.
 
-![Un diseño con una barra de desplazamiento horizontal en una ventana de teléfono móvil.](https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png)
+![Un diseño con una barra de desplazamiento horizontal en una ventana de teléfono móvil.](mdn-rwd-fixed.png)
 
 > **Nota:** Observa este [ejemplo](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html) y su [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html) de un diseño sencillo con un ancho fijo. Nuevamente, cambia el tamaño de la ventana del navegador y observa el resultado.
 
@@ -120,11 +120,11 @@ Este enfoque se encuentra hoy en muchos lugares de la web, y aquí está documen
 
 El ejemplo siguiente muestra un diseño responsivo sencillo que utiliza consultas a los medios y una cuadrícula flexible. En pantallas estrechas, el diseño de página muestra las cajas en columna una encima de la otra:
 
-![Una vista de un dispositivo móvil con un diseño de página con cajas en columna vertical una encima de la otra.](https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png)
+![Una vista de un dispositivo móvil con un diseño de página con cajas en columna vertical una encima de la otra.](mdn-rwd-mobile.png)
 
 En pantallas más anchas se pasa a dos columnas:
 
-![Una vista de un dispositivo de escritorio con un diseño a dos columnas.](https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png)
+![Una vista de un dispositivo de escritorio con un diseño a dos columnas.](mdn-rwd-desktop.png)
 
 > **Nota:** Puedes encontrar el [ejemplo en vivo](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html) y el [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html) de este ejemplo en GitHub.
 
@@ -225,11 +225,11 @@ Hemos editado nuestro ejemplo anterior de cuadrícula responsiva para incluir ta
 
 En la versión para dispositivo móvil, el encabezado es más pequeño:
 
-![Un diseño de elementos apilados en columna con un tamaño de título de encabezado pequeño.](https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png)
+![Un diseño de elementos apilados en columna con un tamaño de título de encabezado pequeño.](mdn-rwd-font-mobile.png)
 
 Sin embargo, en las versiones de escritorio vemos un tamaño de título de encabezado más grande:
 
-![Un diseño en dos columnas con un título grande.](https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png)
+![Un diseño en dos columnas con un título grande.](mdn-rwd-font-desktop.png)
 
 > **Nota:** Observa este ejemplo en: [ejemplo](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [código fuente](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 

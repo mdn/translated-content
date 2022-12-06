@@ -7,7 +7,7 @@ slug: Web/CSS/content
 
 ## 概要
 
-CSS 的 `content` CSS 属性用于在元素的 {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用`content` 属性插入的内容都是匿名的*[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)。*
+CSS 的 `content` CSS 属性用于在元素的 {{ cssxref("::before") }} 和 {{ cssxref("::after") }} 伪元素中插入内容。使用 `content` 属性插入的内容都是匿名的[*可替换元素*](/zh-CN/docs/Web/CSS/Replaced_element)。
 
 {{cssinfo}}
 
@@ -206,11 +206,7 @@ a::after {
 }
 
 #mdn::before {
-    content:url(https://mdn.mozillademos.org/files/7691/mdn-favicon16.png) ;
-}
-
-#w3c::before {
-    content:url(http://w3c.org/2008/site/images/favicon.ico) ;
+    content:url(mdn-favicon16.png) ;
 }
 
 li {

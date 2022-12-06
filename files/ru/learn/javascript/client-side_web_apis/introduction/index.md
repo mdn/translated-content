@@ -234,7 +234,7 @@ request.onload = function() {
 
 К тому же, некоторые WebAPI запрашивают разрешение от пользователя, как только к ним происходит вызов в коде. В качестве примера, вы, возможно, встречали такое диалоговое окно при загрузке нашего примера [Geolocation](/ru/docs/Web/API/Geolocation) ранее:
 
-![](https://mdn.mozillademos.org/files/14313/location-permission.png)
+![](location-permission.png)
 
 [Notifications API](/ru/docs/Web/API/Notifications_API) запрашивает разрешение подобным образом:
 

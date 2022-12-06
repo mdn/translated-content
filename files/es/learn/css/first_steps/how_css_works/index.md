@@ -52,7 +52,7 @@ Cuando un navegador muestra un documento, ha de combinar el contenido con la inf
 
 El siguiente diagrama ofrece una visión sencilla de este proceso.
 
-![](https://mdn.mozillademos.org/files/11781/rendering.svg)
+![](rendering.svg)
 
 ## Acerca del DOM
 

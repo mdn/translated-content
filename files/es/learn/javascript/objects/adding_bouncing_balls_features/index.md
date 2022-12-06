@@ -23,7 +23,7 @@ Nuestra demostración de la pelota hinchable es divertida, pero ahora queremos q
 
 La siguiente captura de pantalla te da una idea de cómo debería verse el programa final.
 
-![](https://mdn.mozillademos.org/files/13875/bouncing-evil-circle.png)
+![](bouncing-evil-circle.png)
 
 Para darle una idea eche un vistazo al [ejemplo final](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (¡no mire el código fuente!)
 

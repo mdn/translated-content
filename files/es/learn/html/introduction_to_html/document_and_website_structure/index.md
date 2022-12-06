@@ -49,7 +49,7 @@ Las páginas web pueden y se deben diferenciar las unas de las otras, pero todas
 
 Una página web «típica» se podría parecer a esta:
 
-![Un ejemplo de estructura de sitio web simple con un encabezado principal, menú de navegación, contenido principal, barra lateral y pie de página.](https://mdn.mozillademos.org/files/12417/sample-website.png)
+![Un ejemplo de estructura de sitio web simple con un encabezado principal, menú de navegación, contenido principal, barra lateral y pie de página.](sample-website.png)
 
 ## HTML para dar estructura al contenido
 
@@ -290,23 +290,23 @@ Una vez has planificado el contenido de una página web sencilla, el paso lógic
 
 1. Ten en cuenta que habrá varios elementos comunes en muchas (si no en todas las) páginas, tal como el menú de navegación y el contenido del pie de página. Si la web está dedicada a un negocio, por ejemplo, sería una buena idea disponer de la información de contacto en el pie de página en todas las páginas. Anota lo que deseas tener en común en cada página.
 
-   ![las características comunes del sitio de viajes para ir en cada página: título y logotipo, contacto, derechos de autor, términos y condiciones, selección de idioma, política de accesibilidad](https://mdn.mozillademos.org/files/12423/common-features.png)
+   ![las características comunes del sitio de viajes para ir en cada página: título y logotipo, contacto, derechos de autor, términos y condiciones, selección de idioma, política de accesibilidad](common-features.png)
 
 2. A continuación, esboza un esquema sencillo de cuál podría ser la estructura deseada de la apariencia de cada página (podría ser algo tan sencillo como el siguiente dibujo). Anota los bloques principales.
 
-   ![Un diagrama simple de una estructura de sitio de ejemplo, con un encabezado, un área de contenido principal, dos barras laterales opcionales y un pie de página](https://mdn.mozillademos.org/files/12429/site-structure.png)
+   ![Un diagrama simple de una estructura de sitio de ejemplo, con un encabezado, un área de contenido principal, dos barras laterales opcionales y un pie de página](site-structure.png)
 
 3. Ahora, elabora una lista completa con todo el resto del contenido de tu sitio web que no sea común a todas las páginas.
 
-   ![Una larga lista de todas las funciones que podrías incluir en tu sitio de viajes, desde buscar, hasta ofertas especiales e información específica del país](https://mdn.mozillademos.org/files/12425/feature-list.png)
+   ![Una larga lista de todas las funciones que podrías incluir en tu sitio de viajes, desde buscar, hasta ofertas especiales e información específica del país](feature-list.png)
 
 4. A continuación, trata de ordenar todo este contenido por grupos, para hacerte una idea de las partes que podrían ir juntas en las diferentes páginas. Esto es muy similar a una técnica llamada {{Glossary("Clasificación de tarjetas")}}.
 
-   ![Los elementos que deberían aparecer en un sitio de vacaciones ordenados en 5 categorías: Búsqueda, Especiales, Información específica del país, Resultados de búsqueda y Compra cosas](https://mdn.mozillademos.org/files/12421/card-sorting.png)
+   ![Los elementos que deberían aparecer en un sitio de vacaciones ordenados en 5 categorías: Búsqueda, Especiales, Información específica del país, Resultados de búsqueda y Compra cosas](card-sorting.png)
 
 5. Ahora trata de esquematizar un mapa de tu sitio — dibuja un globo para cada página de tu sitio web y dibuja líneas que identifiquen el flujo de datos entre las distintas páginas. La página de inicio normalmente estará ubicada en el centro y enlazará con el resto de páginas; la mayoría de las páginas de una web sencilla estarán enlazadas desde el menú de navegación principal, aunque puede haber excepciones. También puedes incluir notas sobre cómo se pueden presentar las cosas.
 
-   ![Un mapa del sitio que muestra la página de inicio, la página del país, los resultados de búsqueda, la página de ofertas especiales, la página de pago y la página de compra](https://mdn.mozillademos.org/files/12427/site-map.png)
+   ![Un mapa del sitio que muestra la página de inicio, la página del país, los resultados de búsqueda, la página de ofertas especiales, la página de pago y la página de compra](site-map.png)
 
 ### Aprendizaje activo: Creación de un mapa del sitio web
 

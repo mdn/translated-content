@@ -37,7 +37,7 @@ progress {
 
 Una barra de progreso que use el estilo especificado anteriormente tendrá una apariencia similar a la siguiente::
 
-![](https://mdn.mozillademos.org/files/13492/-webkit-progress-inner-element%20example.png)
+![](-webkit-progress-inner-element_example.png)
 
 ## Especificaciones
 

@@ -70,9 +70,9 @@ var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init(){
-  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  sun.src = 'canvas_sun.png';
+  moon.src = 'canvas_moon.png';
+  earth.src = 'canvas_earth.png';
   setInterval(draw,100);
 }
 
@@ -119,7 +119,7 @@ function draw() {
 init();
 ```
 
-{{EmbedLiveSample("An_animated_solar_system", "310", "310", "canvas_animation1.png")}}
+{{EmbedLiveSample("太陽系動畫", "310", "340")}}
 
 #### 時鐘動畫
 

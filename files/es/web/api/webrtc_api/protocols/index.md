@@ -17,7 +17,7 @@ Este artículo presenta los protocolos sobre los cuales se construye la API WebR
 
 El cliente enviará una solicitud a un servidor STUN en Internet que responderá con la dirección pública del cliente y si el cliente está accesible detrás del NAT del enrutador.
 
-![An interaction between two users of a WebRTC application involving a STUN server.](https://mdn.mozillademos.org/files/6115/webrtc-stun.png)
+![An interaction between two users of a WebRTC application involving a STUN server.](webrtc-stun.png)
 
 ## NAT
 
@@ -31,7 +31,7 @@ Algunos enrutadores que utilizan NAT emplean una restricción llamada "NAT simé
 
 [Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) está destinado a eludir la restricción NAT simétrica al abrir una conexión con un servidor TURN y transmitir toda la información a través de ese servidor. Crearía una conexión con un servidor TURN y le diría a todos los pares que envíen paquetes al servidor que luego se le reenviarán. Obviamente, esto conlleva algunos gastos generales, por lo que solo se usa si no hay otras alternativas.
 
-![An interaction between two users of a WebRTC application involving STUN and TURN servers.](https://mdn.mozillademos.org/files/6117/webrtc-turn.png)
+![An interaction between two users of a WebRTC application involving STUN and TURN servers.](webrtc-turn.png)
 
 ## SDP
 

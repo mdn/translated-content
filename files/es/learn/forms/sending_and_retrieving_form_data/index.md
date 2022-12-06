@@ -112,7 +112,7 @@ Considere la siguiente forma:
 
 Dado que el método `GET` ha conseguido el recurso, verá en la URL lo siguiente en la barra de direcciones del navegador `www.foo.com/?say=Hi&to=Mom` cuando se envía el formulario.
 
-![](https://mdn.mozillademos.org/files/14685/url-parameters.png)
+![](url-parameters.png)
 
 Los datos se añaden a la URL como una serie de pares de nombre / valor. Después que la dirección web URL ha terminado, se incluye un signo de interrogación ( `?`) seguido de los pares de nombre / valor, cada uno separado por un signo ( `&`). En este caso estamos pasando dos piezas de datos en el servidor:
 
@@ -169,7 +169,7 @@ La cabecera `Content-Length` indica el tamaño del cuerpo, y la cabecera `Conten
 
 Las peticiones HTTP nunca se muestran al usuario (si quieres verlos, es necesario utilizar herramientas como el [Monitor de red Firefox](/es/docs/Tools/Network_Monitor) o las [herramientas de desarrollo de Chrome](https://developers.google.com/chrome-developer-tools/) ). A modo de ejemplo, los datos del formulario se muestran a continuación en la pestaña de Chrome red:
 
-![](https://mdn.mozillademos.org/files/14691/network-monitor.png)
+![](network-monitor.png)
 
 Lo único que se muestra al usuario es la dirección URL llamada. Como mencionamos anteriormente, con una petición `GET` del usuario,se verán los datos en su barra de direcciones, pero con una petición `POST` no será de esta manera. Esto puede ser muy importante por dos razones:
 
@@ -197,7 +197,7 @@ Sea cual sea el método HTTP que elija, el servidor recibe una cadena que será 
 
 Este ejemplo muestra una página con los datos que enviamos. Esto se puede ver en acción en nuestro archivo ejemplo [php-example.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.html) - que contiene un ejemplo similar en forma como el que hemos visto antes, con un `method` con parámetro `post` y un `action` con parámetro `php-example.php` Cuando se envía, envía los datos del formulario al script [php-ejemplo.php](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/php-example.php) , que contiene el código de PHP que se ha visto en el bloque anterior. Cuando se ejecuta este código, la salida en el navegador es `Hi Mom`.
 
-![](https://mdn.mozillademos.org/files/14693/php-result.png)
+![](php-result.png)
 
 > **Nota:** Este ejemplo no funcionará cuando se carga en un navegador localmente - los navegadores no pueden interpretar código PHP, por lo que cuando se envía el formulario en el navegador sólo se puede ofrecer la descarga del archivo PHP para usted. Para conseguir que funcione, es necesario ejecutar el ejemplo a través de un servidor PHP de algún tipo. Buenas opciones para probar PHP locales son [MAMP](https://www.mamp.info/en/downloads/) (Mac y Windows) y [AMPPS](http://ampps.com/download) (Mac, Windows, Linux).
 
