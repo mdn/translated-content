@@ -81,16 +81,12 @@ Cross-Origin Resource Sharing ({{Glossary("CORS")}}) — механизм, ис�
 Например, представьте, что содержимое домена `http://foo.example` хочет обратиться к содержимому `http://bar.other`. На домене foo.example может использоваться следующий Javascript код:
 
 ```js
-var invocation = new XMLHttpRequest();
-var url = 'http://bar.other/resources/public-data/';
+const xhr = new XMLHttpRequest();
+const url = "https://bar.other/resources/public-data/";
 
-function callOtherDomain() {
-  if(invocation) {
-    invocation.open('GET', url, true);
-    invocation.onreadystatechange = handler;
-    invocation.send();
-  }
-}
+xhr.open("GET", url);
+xhr.onreadystatechange = someHandler;
+xhr.send();
 ```
 
 Это приведёт к простому обмену запросами между клиентом и сервером, используя CORS заголовки для обработки привилегий:
