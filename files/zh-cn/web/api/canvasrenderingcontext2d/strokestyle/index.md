@@ -112,7 +112,7 @@ for (var i=0;i<6;i++){
 
 结果如下显示：
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
 
 ## 规范描述
 
