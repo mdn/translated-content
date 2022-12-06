@@ -27727,10 +27727,6 @@
     "modified": "2020-10-15T21:28:24.093Z",
     "contributors": ["fscholz", "teoli", "AlexChao"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/toGMTString": {
-    "modified": "2020-10-15T21:28:14.066Z",
-    "contributors": ["fscholz", "AlexChao"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/toISOString": {
     "modified": "2020-10-15T21:28:16.900Z",
     "contributors": ["fscholz", "AlexChao"]
@@ -33754,5 +33750,9 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString": {
+    "modified": "2020-10-15T21:28:14.066Z",
+    "contributors": ["fscholz", "AlexChao"]
   }
 }
