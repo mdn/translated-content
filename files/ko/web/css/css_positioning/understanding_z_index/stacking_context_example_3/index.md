@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 ---
 « [CSS](/ko/CSS) « [CSS z-index 이해하기](/ko/CSS/Understanding_z-index)
 
-### 쌓임 맥락 예제3
+## 쌓임 맥락 예제3
 
 마지막 예제는 멀티 레벨 HTML 계층 구조에서 z-index 속성 값을 지정할때 생기는 문제에 대해 다룰 것이다.
 
@@ -42,7 +42,7 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 
 > **참고:** **노트:** 소스 코드에는 두번째 레벨 메뉴와 세번째 레벨 메뉴들이 position 속성이 absolute로 지정된 컨테이너에 싸여있는 것을 볼 수 있다. 이는 여러개의 엘리먼트들의 위치를 한꺼번에 지정하는데 유용하다.
 
-### 예제
+## 예제
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -153,6 +153,7 @@ div.lev3 {
 ```
 
 ## 결과
+
 {{ EmbedLiveSample('예제', '320', '330') }}
 
 ### See also
