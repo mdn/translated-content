@@ -14,7 +14,7 @@ Esta teoría no es esencial para escribir código web a corto plazo, pero en poc
 
 Las computadoras conectadas a la web se llaman **clientes** y **servidores**. Un diagrama simplificado de cómo interactúan se vería así:
 
-![](https://mdn.mozillademos.org/files/17299/Cliente-Servidor.png)
+![](simple-client-server.png)
 
 - Los clientes son dispositivos de los usuarios conectados a Internet (por ejemplo, tu ordenador conectado a la red Wi-Fi o el teléfono conectado a la red de telefonía móvil) y el software que se encuentra disponible y permite acceder a Internet en dichos dispositivos (normalmente, un navegador web como Firefox o Chrome).
 - Los servidores son computadores que almacenan páginas web, sitios o aplicaciones. Cuando un dispositivo cliente quiere acceder a una página web, una copia de la página web se descarga desde el servidor en el equipo cliente y se muestra en el navegador web del usuario.
@@ -25,7 +25,7 @@ El cliente y el servidor que describimos anteriormente, no cuentan toda la histo
 
 Por ahora, imaginemos que la web es un camino. En un extremo de la carretera, está el cliente, que es como tu casa. En el extremo opuesto del camino, está el servidor, que es una tienda en la que deseas comprar algo.
 
-![](https://mdn.mozillademos.org/files/9749/road.jpg)
+![](road.jpg)
 
 Además del cliente y el servidor, también tenemos que saludar a:
 
@@ -55,8 +55,6 @@ Las direcciones webs reales no son las agradables y fácilmente recordables secu
 Lo anterior se llama [dirección IP](/es/docs/Glossary/IP_Address) y representa un lugar único en la web. Sin embargo, no es muy fácil de recordar, ¿verdad? Por eso se inventaron los servidores de nombres de dominio. Estos son servidores especiales que hacen coincidir una dirección web tecleada desde tu navegador («mozilla.org», por ejemplo) con la dirección real del sitio web (IP).
 
 Los sitios webs se pueden acceder directamente a través de sus direcciones IP. Intenta acceder a la página web de Mozilla escribiendo **`63.245.217.105`** en la barra de dirección de una nueva pestaña en tu navegador. Puedes encontrar la dirección IP de un sitio web escribiendo su dominio en una herramienta como [DNS lookup](https://www.nslookup.io/website-to-ip-lookup/).
-
-![Un nombre de dominio es más que otra forma de una dirección IP](https://mdn.mozillademos.org/files/8405/dns-ip.png)
 
 ## Explicación de los paquetes
 

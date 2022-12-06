@@ -87,31 +87,31 @@ Para iniciar sesión en el sitio, ve a la URL _/admin_ (e.j. `http://127.0.0.1:8
 
 Esta parte del sitio muestra todos tus modelos, agrupados por aplicación instalada. Puedes hacer click en un nombre de modelo para ir a una pantalla que lista todos los registros asociados, y además puedes hacer click sobre esos registros para editarlos. También puedes hacer click directamente sobre el vínculo **Añadir** a continuación de cada modelo para comenzar a crear un registro de ese tipo.
 
-![Admin Site - Home page](https://mdn.mozillademos.org/files/13975/admin_home.png)
+![Admin Site - Home page](admin_home.png)
 
 Haz click sobre el vínculo **Añadir** a la derecha de _Books_ para crear un nuevo libro, esto mostrará un diálogo parecido al de abajo). Nota como los títulos de cada campo, el tipo de widget usado, y el `help_text` (si existe) corresponde con el valor que especificaste en el modelo.
 
 Ingresa valores para los campos. Puede crear nuevos autores o géneros presionandoel botón **+** a continuación del campo respectivo ( o seleccionar un valor existente de las listas si ya las tenías creadas). Cuando termines puedes presionar **Grabar**, **Grabar y añadir otro**, o **Grabar y continuar editando** para guardar el registro.
 
-![Admin Site - Book Add](https://mdn.mozillademos.org/files/13979/admin_book_add.png)
+![Admin Site - Book Add](admin_book_add.png)
 
 > **Nota:** En este punto nos gustaría que pasaras algún tiempo añadiendo unos pocos libros, autores, y géneros (ej. Fantasía) a tu aplicación. Asegúrate de que cada autor y género incluye un par de libros diferentes (esto hará tus vistas de lista y detalle más interesantes cuando las implementemos más tarde en la serie de artículos).
 
 Cuando hayas terminado de añadir libros, haz click en el enlace **Home** en el separador de arriba para regresar a la página principal de administración. Luego haz click en el enlace **Books** para desplegar la lista actual de libros (o en alguno de los otros enlaces para ver las listas de otros modelos). Ahora que haz añadido unos cuantos libros, la lista debería lucir similar a la captura de pantalla de abajo. Se muestra el título de cada libro; que es el valor devuelto por el método `__str__()` del modelo Book que especificamos en el artículo anterior.
 
-![Admin Site - List of book objects](https://mdn.mozillademos.org/files/13935/admin_book_list.png)
+![Admin Site - List of book objects](admin_book_list.png)
 
 Desde esta lista puedes eliminar libros marcando la casilla de verificación junto al libro que no deseas y seleccionando la acción _delete..._ en la lista de selección _Action_, y luego presionando el botón **Go**. Puedes también añadir nuevos libros presionando el botón **ADD BOOK**.
 
 Puedes editar un libro haciendo click en su nombre en la lista. La página de edición para un libro, como se muestra abajo, es casi idéntica a la página "Add". Las principales diferencias son el título de la página (_Change book_) y la adición de los botones **Delete**, **HISTORY** y **VIEW ON SITE** (este último aparece porque definimos el método `get_absolute_url()` en nuestro modelo).
 
-![Admin Site - Book Edit](https://mdn.mozillademos.org/files/13977/admin_book_modify.png)
+![Admin Site - Book Edit](admin_book_modify.png)
 
 Ahora regresa a la página **Home** (usando el enlace _Home_ de la barra superior) y observa las listas **Author** y **Genre** -- ya deberías tener algunos registros creados de cuando añadiste los nuevos libros, pero puedes crear algunos más.
 
 Lo que no vas a tener es _BookInstances_, porque estas no se crean de los libros (si bien puedes crear un `Book` desde una `BookInstance` -- esta es la naturaleza de los campos `ForeignKey`). Regresa a la página _Home_ y presiona el botón **Add** relacionado para desplegar la pantalla _Add book instance_, como se muestra abajo. Nota el largo y globalmente único Id, que puede ser usado para identificar inequívocamente una única copia de un libro dentro de la biblioteca.
 
-![Admin Site - BookInstance Add](https://mdn.mozillademos.org/files/13981/admin_bookinstance_add.png)
+![Admin Site - BookInstance Add](admin_bookinstance_add.png)
 
 Crea algunos de estos registros para cada uno de tus libros. Establece el status en _Available_ para al menos algunos registros y en _On loan_ para otros. Si el status es **diferente** de _Available_, especifica también una fecha de _Due back_ (devolución).
 
@@ -200,7 +200,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 Recarga el sitio y navega hacia la lista de autores. Ahora deberían desplegarse los campos de arriba, así:
 
-![Admin Site - Improved Author List](https://mdn.mozillademos.org/files/14023/admin_improved_author_list.png)
+![Admin Site - Improved Author List](admin_improved_author_list.png)
 
 Para nuestro modelo `Book` desplegaremos adicionalmente el `author` y `genre`. El `author` es un campo de relación tipo `ForeignKey` (uno a uno), y por tanto estará representado por el valor `__str__()` del registro asociado. Reemplaza la clase BookAdmin con la versión de abajo.
 
@@ -226,7 +226,7 @@ display_genre.short_description = 'Genre'
 
 Después de guardar el modelo y actualizar admin, recarga el sitio y ve a la página de lista de _Books_ (libros), deberías ver una lista de libros como la de abajo:
 
-![Admin Site - Improved Book List](https://mdn.mozillademos.org/files/14025/admin_improved_book_list.png)
+![Admin Site - Improved Book List](admin_improved_book_list.png)
 
 El modelo `Genre` (y el modelo `Language`, si lo definiste) tiene un solo campo, por lo que no tiene sentido crear un modelo adicional para el mismo para desplegar campos adicionales.
 
@@ -243,7 +243,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
 
 La vista de lista incluirá ahora un cuadro de filtrado a la derecha. Nota como puedes elegir fechas y estados para filtrar los valores:
 
-![Admin Site - BookInstance List Filters](https://mdn.mozillademos.org/files/14037/admin_improved_bookinstance_list_filters.png)
+![Admin Site - BookInstance List Filters](admin_improved_bookinstance_list_filters.png)
 
 ### Organizar el diseño de vista detallada
 
@@ -265,7 +265,7 @@ El atributo `fields` lista solo los campos que se van a desplegar en el formular
 
 Reinicia tu aplicación y ve a la vista de detalle de autor -- ahora debería aparecer como se muestra abajo:
 
-![Admin Site - Improved Author Detail](https://mdn.mozillademos.org/files/14027/admin_improved_author_detail.png)
+![Admin Site - Improved Author Detail](admin_improved_author_detail.png)
 
 > **Nota:** Puedes también usar el atributo `exclude` para declarar una lista de atributos que se excluirán del formulario (todos los demás atributos en el modelo se desplegarán).
 
@@ -294,7 +294,7 @@ Cada sección tiene su propio título (o `None`, si no quieres un título) y una
 
 Reinicia y navega a una vista de instancia de libro (book instance); el formulario debería aparecer como se muestra abajo:
 
-![Admin Site - Improved BookInstance Detail with sections](https://mdn.mozillademos.org/files/14029/admin_improved_bookinstance_detail_sections.png)
+![Admin Site - Improved BookInstance Detail with sections](admin_improved_bookinstance_detail_sections.png)
 
 ### Edición en cadena de registros asociados
 
@@ -314,7 +314,7 @@ class BookAdmin(admin.ModelAdmin):
 
 Prueba recargando tu aplicación y observando la vista para un libro -- ahora deberías ver al final las instancias relacionadas a este libro (inmediatamente debajo de los campos de género del libro):
 
-![Admin Site - Book with Inlines](https://mdn.mozillademos.org/files/14033/admin_improved_book_detail_inlines.png)
+![Admin Site - Book with Inlines](admin_improved_book_detail_inlines.png)
 
 En este caso, todo lo que hemos hecho es declarar nuestra clase encadenada tabular, que simplemente añade todos los campos del modelo _encadenado_. Puedes especificar toda clase de información adicional para el diseño incluyendo los campos a mostrar, su órden, si son solo de lectura o no, etc. (ve [TabularInline](https://docs.djangoproject.com/en/dev/ref/contrib/admin/#django.contrib.admin.TabularInline) para más información).
 

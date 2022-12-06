@@ -15,12 +15,12 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 
         <div id="gallery">
             <div id="image-gallery">
-                <img class="image" src="https://mdn.mozillademos.org/files/6007/border-image-1.png" data-stateID="border1"/>
-                <img class="image" src="https://mdn.mozillademos.org/files/6009/border-image-2.png" data-stateID="border2"/>
-                <img class="image" src="https://mdn.mozillademos.org/files/6011/border-image-3.png" data-stateID="border3"/>
-                <img class="image" src="https://mdn.mozillademos.org/files/6013/border-image-4.png" data-stateID="border4"/>
-                <img class="image" src="https://mdn.mozillademos.org/files/6015/border-image-5.png" data-stateID="border5"/>
-                <img class="image" src="https://mdn.mozillademos.org/files/6017/border-image-6.svg" data-stateID="border6"/>
+                <img class="image" src="border-image-1.png" data-stateID="border1"/>
+                <img class="image" src="border-image-2.png" data-stateID="border2"/>
+                <img class="image" src="border-image-3.png" data-stateID="border3"/>
+                <img class="image" src="border-image-4.png" data-stateID="border4"/>
+                <img class="image" src="border-image-5.png" data-stateID="border5"/>
+                <img class="image" src="border-image-6.svg" data-stateID="border6"/>
             </div>
         </div>
 
@@ -284,11 +284,11 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 .ui-input-slider-left, .ui-input-slider-right {
   width: 16px;
   cursor: pointer;
-  background: url("https://mdn.mozillademos.org/files/5679/arrows.png") center left no-repeat;
+  background: url("arrows.png") center left no-repeat;
 }
 
 .ui-input-slider-right {
-  background: url("https://mdn.mozillademos.org/files/5679/arrows.png") center right no-repeat;
+  background: url("arrows.png") center right no-repeat;
 }
 
 .ui-input-slider-name {
@@ -328,7 +328,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
   font-size: 12px;
 
-  background-image: url("https://mdn.mozillademos.org/files/6037/drop_arrow_icon.png");
+  background-image: url("drop_arrow_icon.png");
   background-position: right center;
   background-repeat: no-repeat;
   background-color: #359740;
@@ -460,7 +460,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
   line-height: 1em;
 
   background-color: #888;
-  background-image: url("https://mdn.mozillademos.org/files/5683/disabled.png");
+  background-image: url("disabled.png");
   background-position: center center;
   background-repeat: no-repeat;
 
@@ -486,7 +486,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 }
 
 .ui-checkbox > input:checked + label {
-  background-image: url("https://mdn.mozillademos.org/files/5681/checked.png");
+  background-image: url("checked.png");
   background-color: #379B4A;
 }
 
@@ -504,7 +504,7 @@ body {
 
   font-family: "Segoe UI", Arial, Helvetica, sans-serif;
 
-  /*background: url("https://mdn.mozillademos.org/files/6025/grain.png");*/
+  /*background: url("grain.png");*/
   border: 1px solid #EEE;
 
   -moz-box-sizing: border-box;
@@ -597,7 +597,7 @@ body[data-move='Y'] {
   margin: 10px;
   color: #FFF;
 
-  background-image: url('https://mdn.mozillademos.org/files/6005/arrow-up-white.png');
+  background-image: url('arrow-up-white.png');
   background-repeat: no-repeat;
   background-position: top 4px center;
   background-color: #888888 !important;
@@ -611,12 +611,12 @@ body[data-move='Y'] {
 }
 
 #toggle-gallery[data-action='show'] {
-  background-image: url('https://mdn.mozillademos.org/files/6001/arrow-down-white.png');
+  background-image: url('arrow-down-white.png');
   background-color: #888888 !important;
 }
 
 #toggle-gallery[data-action='hide'] {
-  background-image: url('https://mdn.mozillademos.org/files/6005/arrow-up-white.png');
+  background-image: url('arrow-up-white.png');
 }
 
 .button {
@@ -643,7 +643,7 @@ body[data-move='Y'] {
 
 #load-remote {
   width: 30px;
-  background-image: url('https://mdn.mozillademos.org/files/6003/arrow-right-white.png');
+  background-image: url('arrow-right-white.png');
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -825,7 +825,7 @@ body[data-move='Y'] {
 #preview .resize-handle {
   width: 10px;
   height: 10px;
-  background: url("https://mdn.mozillademos.org/files/6027/resize.png") center center no-repeat;
+  background: url("resize.png") center center no-repeat;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -981,7 +981,7 @@ body[data-move='Y'] {
   width: 20px;
   height: 20px;
   float: left;
-  background: url("https://mdn.mozillademos.org/files/6021/config.png") center center no-repeat;
+  background: url("config.png") center center no-repeat;
   opacity: 0.5;
 }
 
@@ -1125,7 +1125,7 @@ body[data-move='Y'] {
 #unit-settings .close {
   width: 16px;
   height: 16px;
-  background: url('https://mdn.mozillademos.org/files/6019/close.png') no-repeat center center;
+  background: url('close.png') no-repeat center center;
   background-size: 75%;
 
   position: absolute;
@@ -2117,7 +2117,7 @@ var BorderImage = (function BorderImage() {
       InputSliderManager.subscribe('scale', setScale);
       InputSliderManager.setValue('scale', scale);
       imgState = 'border1';
-      loadRemoteImage('https://mdn.mozillademos.org/files/6007/border-image-1.png');
+      loadRemoteImage('border-image-1.png');
       toggleGallery();
     };
 

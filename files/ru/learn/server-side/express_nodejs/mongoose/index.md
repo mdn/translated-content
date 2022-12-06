@@ -488,9 +488,9 @@ SomeModel.find(callback_function);
 
 После входа в систему вы увидите главную страницу [home](https://mlab.com/home):
 
-1. Щёлкните **Create New** в разделе _MongoDB Deployments_ для создания новой БД.![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
+1. Щёлкните **Create New** в разделе _MongoDB Deployments_ для создания новой БД.![](mlabcreatenewdeployment.png)
 2. Откроется экран _Cloud Provider Selection - раздела провайдера облака_.
-    ![MLab - screen for new deployment](https://mdn.mozillademos.org/files/15661/mLab_new_deployment_form_v2.png)
+    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
 
     - Выберите план SANDBOX (Free) из раздела Plan Type (тип плана).
     - Выберите любого провайдера в разделе _Cloud Provider (провайдер облака)_. Разные провайдеры обслуживают разные регионы (показаны под выбранным типом плана).
@@ -498,7 +498,7 @@ SomeModel.find(callback_function);
 
 3. Откроется экран выбора региона _Select Region_.
 
-    ![Select new region screen](https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png)
+    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
 
     - Выберите ближайший к вам регион и щёлкните кнопку **Continue**.
 
@@ -507,18 +507,18 @@ SomeModel.find(callback_function);
     - Введите имя новой базы - `local_library` и нажмите **Continue**.
 
 5. Откроется экран подтверждения заказа _Order Confirmation_.
-    ![Order confirmation screen](https://mdn.mozillademos.org/files/15664/mLab_new_deployment_order_confirmation.png)
+    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
 
     - Щёлкните **Submit Order** (подтвердить заказ), чтобы создать БД.
 
 6. Вы вернётесь на главный (home) экран. Щёлкните по вновь созданной базе, чтобы открыть экран с детальной информацией. Как видно, в БД нет коллекций (данных).
-    ![mLab - Database details screen](https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png)
+    ![mLab - Database details screen](mlab_new_deployment_database_details.png)
 
     На форме выше обведён URL для соединения с вашей БДthat you need to use to access your database is displayed on the form above (shown for this database circled above). Чтобы его использовать, необходимо создать пользователя БД, который позже введёт этот URL.
 
 7. Щёлкните по вкладке **Users** и выберите кнопку **Add database user** (добавить пользователя БД).
 8. Введите имя пользователя и пароль (дважды), затем нажмите **Create** (создать). Не отмечайте _Make read only_ (только для чтения)!
-    ![](https://mdn.mozillademos.org/files/14454/mLab_database_users.png)
+    ![](mlab_database_users.png)
 
 Теперь БД создана, и для доступа к ней есть URL, имя пользователя и пароль. Это должно выглядеть примерно так: `mongodb://your_user_namer:your_password@ds119748.mlab.com:19748/local_library`.
 

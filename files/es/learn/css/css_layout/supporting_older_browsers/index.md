@@ -43,7 +43,7 @@ También debes considerar el tipo de dispositivos y la forma en que las personas
 
 Una vez conozcas qué tipo de navegadores utiliza la gente que accede a tu sitio, puedes evaluar cualquier tecnología que desees utilizar según su compatibilidad y con qué facilidad es posible proporcionar una alternativa a los visitantes que no disponen de esa tecnología. Tratamos de facilitarte esta experiencia proporcionando información de compatibilidad de los navegadores en cada una de las páginas que detallan una propiedad CSS. Por ejemplo, echa un vistazo a la página de {{cssxref ("grid-template-columns")}}. En la parte inferior de esta página hay una tabla que enumera los navegadores principales, junto con la versión en la que comenzaron a admitir esta propiedad.
 
-![](https://mdn.mozillademos.org/files/16047/browser-table.png)
+![](browser-table.png)
 
 Otra forma popular de averiguar la compatibilidad de una característica es el sitio web [Can I Use](https://caniuse.com/). Este sitio enumera la mayoría de las características de la Plataforma Web con información sobre el estado de compatibilidad de tu navegador. Puedes ver las estadísticas de uso por ubicación, cosa que resulta útil si trabajas en un sitio cuyos usuarios son de un territorio particular. Incluso puedes vincular tu cuenta de Google Analytics para obtener un análisis basado en tus datos de usuario.
 

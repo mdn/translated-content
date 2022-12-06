@@ -82,7 +82,7 @@ imagesToLoad.forEach((img) => {
 
 Para que todo el proceso sea más atractivo visualmente, el marcador de posición se difumina en CSS.
 
-![Captura de pantalla de imágenes de marcador de posición en la aplicación js13kPWA.](https://mdn.mozillademos.org/files/15992/js13kpwa-placeholders.png)
+![Captura de pantalla de imágenes de marcador de posición en la aplicación js13kPWA.](js13kpwa-placeholders.png)
 
 Renderizamos las imágenes con un desenfoque al principio, por lo que se puede lograr una transición hacia la nitidez:
 

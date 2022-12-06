@@ -37,7 +37,7 @@ Las hojas de estilo en cascada (**{{Glossary("CSS")}}**, cascading style sheets)
 
 En el módulo [Introducción al HTML](/es/docs/Learn/HTML/Introduccion_a_HTML), exponemos qué es el HTML y cómo se usa para definir documentos destinados a leerse en un navegador web. Los títulos se verán más grandes que el texto y los párrafos empezarán en una línea nueva y habrá un espacio entre ellos. Los enlaces aparecerán en un color diferente y subrayados para distinguirlos del resto del texto. Vienen predeterminados por el navegador y, en la práctica, son estilos muy básicos que el navegador aplica al HTML para asegurarse, básicamente, de que sean legibles incluso si el autor de la página no especifica un estilo explícito.
 
-![Los estilos predeterminados utilizados por el navegador](https://mdn.mozillademos.org/files/16493/html-example.png)
+![Los estilos predeterminados utilizados por el navegador](html-example.png)
 
 Sin embargo, Internet sería un lugar muy aburrido si todas las páginas web se vieran así. Usando CSS se pueden controlar con precisión cómo se ven los elementos HTML en el navegador, que presentará para las etiquetas de marcado el diseño que cada uno desee.
 

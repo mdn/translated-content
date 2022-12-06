@@ -27,7 +27,7 @@ Web audio API позволяет обрабатывать операции на�
 4. Выберем конечную точку аудио сигнала, например ваши системные звуковые устройства
 5. Привяжем наши источники к эффектам, и эффекты к конечному сигналу.
 
-![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](https://mdn.mozillademos.org/files/7893/web-audio-api-flowchart.png)
+![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](web-audio-api-flowchart.png)
 
 Распределение времени контролируется с высокой точностью и низкими задержками, позволяя разработчикам писать код, что точно реагирует на события и в состоянии обработать образец даже на высокой оценке образцов (sample rate). Так что такие приложения как ритм-компьютер и программный автомат всегда под рукой.
 

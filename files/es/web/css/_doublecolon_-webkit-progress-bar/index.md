@@ -41,7 +41,7 @@ progress {
 
 Una barra de progreso que use el estilo indicado anteriormente será similar a la siguiente:
 
-![](https://mdn.mozillademos.org/files/13488/progress-bar.png)
+![](progress-bar.png)
 
 ## Compatibilidad con los distintos navegadores
 
