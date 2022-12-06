@@ -1,34 +1,36 @@
 ---
 title: HTMLShadowElement
 slug: Web/API/HTMLShadowElement
+l10n:
+  sourceCommit: 066257cb0d23e29e269703450e4b1216a65e3b26
 ---
 
-{{ APIRef("Web Components") }}
+{{APIRef("Web Components")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-**`HTMLShadowElement`** インターフェースは、[Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM) で使用される {{HTMLElement("shadow")}} HTML 要素を表します。
+**`HTMLShadowElement`** インターフェイスは HTML の {{HTMLElement("shadow")}} 要素を表します。これは[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) で使用されます。
 
-## プロパティ
+{{InheritanceDiagram}}
 
-_このインターフェースは、{{domxref("HTMLElement")}} のプロパティを継承しています。_
+## インスタンスプロパティ
 
-## メソッド
+_このインターフェイスは {{domxref("HTMLElement")}} のプロパティを継承しています。_
 
-_このインターフェースは、{{domxref("HTMLElement")}} のメソッドを継承しています。_
+## インスタンスメソッド
 
-- {{domxref("HTMLShadowElement.getDistributedNodes()")}}
-  - : `<shadow>` 要素に関連した {{glossary("distributed nodes")}} の静的な {{domxref("NodeList")}} を返す。
+_このインターフェイスは {{domxref("HTMLElement")}} のメソッドを継承しています。_
+
+- {{domxref("HTMLShadowElement.getDistributedNodes()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : この `<shadow>` 要素に関連した {{glossary("distributed nodes")}} の静的な {{domxref("NodeList")}} を返します。
 
 ## 仕様書
 
-| 仕様                                                                             | 状態                             | コメント |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Shadow DOM', '#the-shadow-element', 'shadow')}} | {{Spec2('Shadow DOM')}} |          |
+この機能はどの仕様にも含まれなくなりました。
 
 ## ブラウザーの互換性
 
-{{Compat("api.HTMLShadowElement")}}
+{{Compat}}
 
 ## 関連情報
 
-- このインターフェースを実装している {{HTMLElement("shadow")}} 要素。
-- [Shadow DOM](/ja/docs/Web/Web_Components/Shadow_DOM)
+- このインターフェイスを実装している {{HTMLElement("shadow")}} 要素。
+- [シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM)
