@@ -1,12 +1,6 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Objeto
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/getPrototypeOf
 ---
 
@@ -63,5 +57,5 @@ String.prototype                   // ES6 code
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}} {{experimental_inline}}
 - John Resig's post on [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/)
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Reflect.getPrototypeOf()")}}

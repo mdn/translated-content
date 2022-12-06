@@ -1,14 +1,6 @@
 ---
 title: Math.expm1()
 slug: Web/JavaScript/Reference/Global_Objects/Math/expm1
-tags:
-  - JavaScript
-  - Matemáticas
-  - Math
-  - Method
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/expm1
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/expm1
 ---
 
@@ -59,9 +51,7 @@ Math.expm1 = Math.expm1 || function(x) {
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.expm1', 'Math.expm1')}} |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

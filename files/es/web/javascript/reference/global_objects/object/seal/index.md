@@ -1,7 +1,6 @@
 ---
 title: Object.seal()
 slug: Web/JavaScript/Reference/Global_Objects/Object/seal
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/seal
 ---
 
@@ -24,7 +23,7 @@ Object.seal(obj)
 
 Por defecto, los objetos son {{jsxref("Object.isExtensible()", "extensibles", "", 1)}} (pueden añadirse nuevas propiedades a los mismos). Sellar un objeto previene que nuevas propiedades puedan ser añadidas y marca todas las propiedades existentes como no-configurables. Esto tiene el efecto de hacer fijo e inmutable el juego de propiedades del objeto. Al hacer todas las propiedades no-configurables previene también que se puedan convertir propiedades de datos en propiedades de acceso y viceversa, pero no evita que los valores de las propiedades de datos puedan ser modificados. Intentar eliminar o añadir propiedades a un objeto sellado, o convertir una propiedad de datos en una propiedad de acceso fallará, bien silenciadamente o bien produciendo un {{jsxref("TypeError")}} (más frecuentemente, aunque no exclusivamente, con código en {{jsxref("Strict_mode", "modo estricto", "", 1)}}).
 
-La cadena de prototiado permanece inalterada. No obstante, la propiedad {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} es también sellada.
+La cadena de prototiado permanece inalterada. No obstante, la propiedad [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} es también sellada.
 
 Retorna una referencia al Objeto pasado.
 

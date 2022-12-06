@@ -1,7 +1,6 @@
 ---
 title: Cabecera general
 slug: Glossary/General_header
-translation_of: Glossary/General_header
 original_slug: Glossary/Cabecera_general
 ---
 

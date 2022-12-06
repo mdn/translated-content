@@ -1,16 +1,6 @@
 ---
 title: Aprende sobre desarrollo web
 slug: Learn
-tags:
-  - Ayuda
-  - CSS
-  - HTML
-  - Inicio
-  - Landing
-  - Principiante
-  - TopicStub
-  - Web
-translation_of: Learn
 ---
 
 {{LearnSidebar}}

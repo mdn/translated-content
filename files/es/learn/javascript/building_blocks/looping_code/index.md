@@ -1,7 +1,6 @@
 ---
 title: Bucles
 slug: Learn/JavaScript/Building_blocks/Looping_code
-translation_of: Learn/JavaScript/Building_blocks/Looping_code
 original_slug: Learn/JavaScript/Building_blocks/Bucle_codigo
 ---
 
@@ -803,7 +802,7 @@ We would recommend `for`, at least to begin with, as it is probably the easiest 
 
 This article has revealed to you the basic concepts behind, and different options available when, looping code in JavaScript. You should now be clear on why loops are a good mechanism for dealing with repetitive code, and be raring to use them in your own examples!
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/en-US/Learn#Contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/es/Learn#Contact_us) to ask for help.
 
 ## See also
 

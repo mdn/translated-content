@@ -1,13 +1,6 @@
 ---
 title: Fin del juego
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
-tags:
-  - Canvas
-  - Fin del juego
-  - JavaScript
-  - Tutorial
-  - graficos
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego
 ---
 
@@ -15,7 +8,7 @@ original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_ju
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques")}}
 
-Este es el quinto paso de 10 del [Gamedev Canvas tutorial](/en-US/docs/Games/Workflows/Breakout_game_from_scratch). Puedes ver como debería quedar el código fuente después de completar esta lección en [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).
+Este es el quinto paso de 10 del [Gamedev Canvas tutorial](/es/docs/Games/Workflows/Breakout_game_from_scratch). Puedes ver como debería quedar el código fuente después de completar esta lección en [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).
 
 Es divertido ver la bola rebotando en las paredes y ser capaz de mover la pala pero, aparte de eso, el juego no hace nada y no tiene ningún progreso ni un objetivo final.Sería bueno desde el punto de vista del juego poder perder. La lógica asociada a perder en este juego es fácil de entender: si se te escapa la bola y alcanza el borde inferior de la pantalla, pierdes y se acabó el juego.
 

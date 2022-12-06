@@ -1,11 +1,6 @@
 ---
 title: Caracter
 slug: Glossary/Character
-tags:
-  - CodingScripting
-  - Glosario
-  - String
-translation_of: Glossary/Character
 original_slug: Glossary/Caracter
 ---
 

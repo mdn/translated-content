@@ -19,11 +19,11 @@ translation_of: Web/HTML/Element/embed
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-{{Note("Этот раздел посвящён только элементу, который является частью стандарта HTML5, и никак не касается ранних, нестандартизированных его реализаций.")}}
+> **Примечание:** Этот раздел посвящён только элементу, который является частью стандарта HTML5, и никак не касается ранних, нестандартизированных его реализаций.
 
 Имейте ввиду, что большинство современных браузеров посчитали устаревшей и удалили поддержку встраивания плагинов, так что использование `<embed>`, как правило, не рекомендуется, если вы хотите, чтобы ваш сайт одинаково работал у всех его пользователей.
 
-| [Категории контента](ru/docs/Web/Guide/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content. |
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), embedded content, interactive content, palpable content. |
 | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Разрешённое содержимое                                          | Отсутствует, это {{Glossary("empty element")}}.                                                                                                                                     |
 | Пропуск тега                                                    | Должен иметь открывающий тег, закрывающий тег должен быть пропущен                                                                                                                             |
@@ -33,7 +33,7 @@ translation_of: Web/HTML/Element/embed
 
 ## Атрибуты
 
-Атрибуты этого элемента включают все [глобальные атрибуты](ru/docs/Web/HTML/Общие_атрибуты).
+Атрибуты этого элемента включают все [глобальные атрибуты](/ru/docs/Web/HTML/Общие_атрибуты).
 
 - {{htmlattrdef("height")}}
   - : Отображает высоту ресурса в [CSS пикселях](https://drafts.csswg.org/css-values/#px). Это должно быть абсолютное значение; проценты _не_ допустимы.

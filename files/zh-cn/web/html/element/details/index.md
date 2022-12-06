@@ -15,11 +15,11 @@ A disclosure widget is typically presented onscreen using a small triangle which
 
 同一个 `<details>` 组件只能处于两种状态之一。The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`). This might look like the following:
 
-![Screenshot of closed <details> widget. A black left-pointing triangle sits to the right of the text “System Requirements”.](https://mdn.mozillademos.org/files/15717/details-closed.png)
+![Screenshot of closed <details> widget. A black left-pointing triangle sits to the right of the text “System Requirements”.](details-closed.png)
 
 Here we see a standard disclosure widget with the label "System Requirements", in its default closed state. When the user clicks on the widget, or focuses it then presses the space bar, it "twists" open, revealing its contents:
 
-![Screenshot of open <details> widget. The triangle now points downward, and a detailed description of what “System Requirements” means is shown.](https://mdn.mozillademos.org/files/15718/details-open.png)
+![Screenshot of open <details> widget. The triangle now points downward, and a detailed description of what “System Requirements” means is shown.](details-open.png)
 
 From there, you can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its {{htmlattrxref("open", "details")}} attribute.
 

@@ -76,9 +76,7 @@ function updateTrackCount(event) {
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#videotracklist', 'VideoTrackList')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -57,9 +57,7 @@ Infinity % Infinity // NaN
 
 ## Especificaciones
 
-| Especificación                                                                                           |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-multiplicative-operators', 'Remainder operator')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

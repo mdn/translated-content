@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
-tags:
-  - Array
-  - Arreglo
-  - Callback
-  - ECMAScript5
-  - Polifill
-  - Prototype
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/map
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/map
 ---
 

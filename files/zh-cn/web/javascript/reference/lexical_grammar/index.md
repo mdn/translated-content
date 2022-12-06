@@ -45,11 +45,13 @@ slug: Web/JavaScript/Reference/Lexical_grammar
 
 ## 注释
 
-注释用来在源码中增加提示、笔记、建议、警告等信息，可以帮助阅读和理解源码。在调试时，可以用来将一段代码屏蔽掉，防止其运行。
+注释用来在源码中增加提示、笔记、建议、警告等信息，可以帮助阅读和理解源码。在调试时，可以用来将一段代码屏蔽掉，防止其运行；这也是一个有价值的调试工具。
 
-在 JavaScript 中，有两种添加注释的方法。
+在 JavaScript 中，有两种常见的添加注释的方法：行注释和块注释。另外，也有一种特殊的 hashbang 注释语法。
 
-第一种是**单行注释（**single-line comment），使用 `//`，会将该行中符号以后的文本都视为注释：
+### 行注释
+
+第一种是 `//` 风格的注释；会将该行中符号以后的文本都视为注释：
 
 ```js
 function comment() {
@@ -59,13 +61,15 @@ function comment() {
 comment();
 ```
 
-第二种是**多行注释（**multiple-line comment），使用 `/* */` ，这种方式更加灵活：
+### 块注释
+
+第二种是 `/* */` 风格的注释，这种方式更加灵活：
 
 比如，可以在单行内使用多行注释：
 
 ```js
 function comment() {
-  /* 单行注释 */
+  /* 这是单行注释 */
   console.log("Hello world!");
 }
 comment();
@@ -75,8 +79,8 @@ comment();
 
 ```js
 function comment() {
-  /* 多行注释，
-     直到终止符号才结束 */
+  /* 这是多行注释，
+     注意在写完注释前无需终止注释 */
   console.log("Hello world!");
 }
 comment();
@@ -100,15 +104,13 @@ function comment() {
 comment();
 ```
 
-注释中的 `console.log()` 的调用始终无效。这种方式可以屏蔽任意多行的代码，也可以屏蔽一行代码的一部分。
+这种情况下，注释中的 `console.log()` 的调用始终无效。这种方式可以屏蔽任意多行的代码，也可以屏蔽一行代码的一部分。
 
-## Hashbang 注释
+包含至少一个行结束符的块状注释的行为与[自动分号插入](#自动插入分号)中的[行结束符](#行结束符)相似。
 
-专门的第三个注释语法，**hashbang 注释**正在 ECMAScript 中标准化（参见 [Hashbang 语法建议](https://github.com/tc39/proposal-hashbang)）。
+### Hashbang 注释
 
-Hashbang 注释的行为与单行（`//`）注释完全相同，但它以 `#!` 开头且**仅在脚本或模块的绝对开头有效**。还要注意，在 `#!` 之前不允许有任何类型的空格。注释由 `#!` 之后的所有字符组成直到第一行的末尾；只允许有一条这样的注释。
-
-Hashbang 注释指定特定 JavaScript 解释器的路径要用于执行脚本。示例如下：
+**Hashbang 注释**是一种特殊的注释语法，其行为与单行注释（`//`）完全一样，只是它以 `#!` 开头，并且**只在脚本或模块的最开始处有效**。注意，`#!` 标志之前不能有任何空白字符。注释由 `#!` 之后的所有字符组成直到第一行的末尾；只允许有一条这样的注释。JavaScript 中的 hashbang 注释类似于 [Unix 中的 shebang](https://zh.wikipedia.org/wiki/Shebang)，它提供了一个特定的 JavaScript 解释器的路径，你想用它来执行这个脚本。在 hashbang 注释标准化之前，它已经在非浏览器主机（如 Node.js）中得到了事实上的实现，在那里，它在被传递给引擎之前被从源文本中剥离。示例如下：
 
 ```js
 #!/usr/bin/env node
@@ -116,11 +118,11 @@ Hashbang 注释指定特定 JavaScript 解释器的路径要用于执行脚本�
 console.log("Hello world");
 ```
 
-> **备注：** JavaScript 中的 hashbang 注释模仿 [Unix 中的 shebangs](<https://en.wikipedia.org/wiki/Shebang_(Unix)>)，用于指定适当的解释器运行文件。
+JavaScript 的解释器会把它视为普通注释——只有当脚本直接在 shell 中运行时，它对 shell 才有语义意义。
 
-> **警告：** 尽管在 hashbang 注释之前的 [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) 在浏览器中能工作，但不建议在具有 hashbang 的脚本中使用 BOM。当您尝试在 Unix/Linux 中运行脚本时，有 BOM 将不工作。因此，如果要直接从 shell 运行脚本，请使用没有 BOM 的 UTF-8。
+> **警告：** 如果你想让脚本直接在 shell 环境中运行，请用不含 [BOM](https://en.wikipedia.org/wiki/Byte_order_mark) 的 UTF-8 编码。虽然 BOM 不会对在浏览器中运行的代码造成任何问题——在 UTF-8 解码过程中，分析源文本之前，BOM 就已经被剥离了——但如果前面有一个 BOM 字符，Unix/Linux shell 就不会识别该注释。
 
-您只能使用 `#!` 注释样式以指定 JavaScript 解释器。在所有其他情况下，只需使用 `//` 注释（或多行注释）。
+你只能使用 `#!` 注释样式以指定 JavaScript 解释器。在所有其他情况下，只需使用 `//` 注释（或多行注释）。
 
 ## 关键字
 

@@ -1,15 +1,6 @@
 ---
 title: Window.print()
 slug: Web/API/Window/print
-tags:
-  - API
-  - Compatibilidad
-  - Compatibilidad en móviles
-  - DOM
-  - Referencia
-  - Window
-  - metodo
-translation_of: Web/API/Window/print
 ---
 
 {{ ApiRef() }}

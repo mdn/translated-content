@@ -1,11 +1,6 @@
 ---
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
-tags:
-  - Ejemplo
-  - itemscope
-  - itemtype
-translation_of: Web/HTML/Global_attributes/itemscope
 original_slug: Web/HTML/Atributos_Globales/itemscope
 ---
 

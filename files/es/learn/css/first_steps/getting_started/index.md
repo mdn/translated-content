@@ -1,17 +1,6 @@
 ---
 title: Empezar con CSS
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - Aprender
-  - CSS
-  - Clases
-  - Ejemplo
-  - Elementos
-  - Estado
-  - Principiante
-  - Selectores
-  - Sintaxis
-translation_of: Learn/CSS/First_steps/Getting_started
 original_slug: Learn/CSS/First_steps/Comenzando_CSS
 ---
 

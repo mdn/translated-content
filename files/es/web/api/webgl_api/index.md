@@ -1,9 +1,6 @@
 ---
 title: WebGL
 slug: Web/API/WebGL_API
-tags:
-  - WebGL
-translation_of: Web/API/WebGL_API
 ---
 
 {{WebGLSidebar}}

@@ -1,14 +1,6 @@
 ---
 title: Top
 slug: Web/CSS/top
-tags:
-  - CSS
-  - CSS Reference
-  - Referencia_CSS
-  - Todas_las_Categorías
-  - para_revisar
-  - páginas_a_traducir
-translation_of: Web/CSS/top
 ---
 
 {{ CSSRef() }}

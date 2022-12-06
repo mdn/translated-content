@@ -76,7 +76,7 @@ This value must be less than or equal to the value of the `max` attribute.
 
 Mobile browsers further help with the user experience by showing a special keyboard more suited for entering numbers when the user tries to enter a value. The following screenshot is taken from Firefox for Android:
 
-![](https://mdn.mozillademos.org/files/14963/number-keyboard-fxa.png)
+![](number-keyboard-fxa.png)
 
 ### A simple number input
 

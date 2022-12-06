@@ -1,17 +1,6 @@
 ---
 title: 'HTML: Lenguaje de etiquetas de hipertexto'
 slug: Web/HTML
-tags:
-  - Avanzado
-  - Guía
-  - HTML
-  - HTML5
-  - Hipertexto
-  - Intermedio
-  - Principiante
-  - Referencia
-  - Web
-translation_of: Web/HTML
 ---
 
 {{HTMLSidebar}}

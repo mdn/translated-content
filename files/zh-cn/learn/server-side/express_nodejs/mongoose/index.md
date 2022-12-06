@@ -93,7 +93,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 
 > **备注：** 正如下文 [Mongoose 入门](#) 中所讲，通常应该把定义文档/模型关系的字段置于同一模型中（仍可通过在搜索相关 `_id` 来回寻模型间的关系）。以下的 Book 模式中定义了 Book/Genre 和 Book/Author 关系，BookInstance 模式中定义了 Book/BookInstance 关系。这样做是简便起见，但稍存歧义，让这些字段存在于其他模式中也是可以的。
 
-![Mongoose Library Model  with correct cardinality](library_website_-_mongoose_express.png)
+![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
 > **备注：** 下面是一段入门知识，讲解如何定义和使用模型。请在阅读时想想将如何构建上图中的模型。
 
@@ -517,9 +517,9 @@ SomeModel.find(callback_function);
 
 登录后将进入 [mLab 主屏幕](https://mlab.com/home)：
 
-1. 单击 _MongoDB Deployments_（MongoDB 部署）部分中的 **Create New（新建）**。![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
+1. 单击 _MongoDB Deployments_（MongoDB 部署）部分中的 **Create New（新建）**。![](mlabcreatenewdeployment.png)
 2. 将打开 Cloud Provider（云服务提供商）选择屏幕。
-    ![MLab - screen for new deployment](https://mdn.mozillademos.org/files/15661/mLab_new_deployment_form_v2.png)
+    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
 
     - 在 Plan Type（方案类型）部分中，选择 SANDBOX（Free）免费沙箱方案。
     - 从 _Cloud Provider_（云服务提供商）部分选择任意提供商。不同地区适用不同提供商（显示在选定的计划类型下面）。
@@ -527,29 +527,29 @@ SomeModel.find(callback_function);
 
 3. 此时将打开 _Select Region_（选择区域）屏幕。
 
-    ![Select new region screen](https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png)
+    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
 
     - 选择离你最近的地区，然后 **Continue**。
 
 4. 将打开 Final Details（最后的细节）屏幕。
-    ![New deployment database name](https://mdn.mozillademos.org/files/15663/mLab_new_deployment_final_details.png)
+    ![New deployment database name](mlab_new_deployment_final_details.png)
 
     - 输入新数据库的名称 `local_library`，然后 **Continue**。
 
 5. 将打开 _Order Confirmation_（订单确认）屏幕。
-    ![Order confirmation screen](https://mdn.mozillademos.org/files/15664/mLab_new_deployment_order_confirmation.png)
+    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
 
     - 点击 **Submit Order（提交订单）**以创建数据库。
 
 6. 将返回到主屏幕。点击刚创建的新数据库可以打开详细信息屏幕。当前数据库还没有任何数据。
 
-    ![mLab - Database details screen](https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png)
+    ![mLab - Database details screen](mlab_new_deployment_database_details.png)
 
     表单显示了访问数据库的 URL（上图的红框）。此时可以创建一个用户，并在 URL 中指定用户名，就可以访问这个 URL 了。
 
 7. 点击 **Users** 选项卡，点击 **Add database user** 按钮。
 8. 输入用户名和密码（两次），然后按 **Create**。不要选择 Make _read-only_。
-    ![](https://mdn.mozillademos.org/files/14454/mLab_database_users.png)
+    ![](mlab_database_users.png)
 
 现在数据库已经创建好了，并且有一个可访问的 URL（带有用户名和密码）：`mongodb://<dbuser>:<dbpassword>@ds019038.mlab.com:19038/local_library`
 

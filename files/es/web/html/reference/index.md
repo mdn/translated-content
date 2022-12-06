@@ -1,11 +1,6 @@
 ---
 title: Referencia HTML
 slug: Web/HTML/Reference
-tags:
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Reference
 original_slug: Web/HTML/Referencia
 ---
 

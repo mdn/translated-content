@@ -51,19 +51,19 @@ background: no-repeat center/80% url("../img/image.png");
 
 下面的一个或多个值，可以按任意顺序放置：
 
-- ">`<attachment>`
+- `<attachment>`
   - : 参见 {{ cssxref("background-attachment") }}
-- ">`<box>`
+- `<box>`
   - : 参见 {{ cssxref("background-clip") }} 和 {{cssxref("background-origin")}}
-- ">`<background-color>`
+- `<background-color>`
   - : 参见 {{ cssxref("background-color") }}
-- ">`<bg-image>`
+- `<bg-image>`
   - : 参见 {{ Cssxref("background-image") }}
-- ">`<position>`
+- `<position>`
   - : 参见 {{ cssxref("background-position") }}
-- ">`<repeat-style>`
+- `<repeat-style>`
   - : 参见 {{ cssxref("background-repeat") }}
-- ">`<bg-size>`
+- `<bg-size>`
   - : 参见 {{ cssxref("background-size") }}。
 
 ### 标准语法
@@ -91,13 +91,13 @@ background: no-repeat center/80% url("../img/image.png");
 }
 
 .topbanner {
-  background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #99f repeat-y fixed;
+  background: url("starsolid.gif") #99f repeat-y fixed;
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 

@@ -336,7 +336,7 @@ function consoleLogString(offset, length) {
 
 > **メモ:** 上記の 2 重のセミコロン構文 (`;;`) は WebAssembly ファイル内でコメントを書くためのものです。
 
-ここで、JavaScript から  1 ページ分のサイズを持つ Memory を作成してそれに渡すことができます。結果としてコンソールに "Hi" と出力されます。
+ここで、JavaScript から 1 ページ分のサイズを持つ Memory を作成してそれに渡すことができます。結果としてコンソールに "Hi" と出力されます。
 
 ```js
 var memory = new WebAssembly.Memory({initial:1});

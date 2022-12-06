@@ -147,7 +147,7 @@
 /zh-CN/docs/Controlling_DNS_prefetching	/zh-CN/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
 /zh-CN/docs/Core_JavaScript_1.5_Guide/Objects_and_Properties	/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /zh-CN/docs/Core_JavaScript_1.5_Guide:Objects_and_Properties	/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators
-/zh-CN/docs/Core_JavaScript_1.5_Reference/About	/zh-CN/docs/Web/JavaScript/Reference/About
+/zh-CN/docs/Core_JavaScript_1.5_Reference/About	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Comments	/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Functions	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Functions/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
@@ -179,7 +179,7 @@
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Global_Properties/NaN	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Statements	/zh-CN/docs/Web/JavaScript/Reference/Statements
 /zh-CN/docs/Core_JavaScript_1.5_Reference/Statements/throw	/zh-CN/docs/Web/JavaScript/Reference/Statements/throw
-/zh-CN/docs/Core_JavaScript_1.5_Reference:About	/zh-CN/docs/Web/JavaScript/Reference/About
+/zh-CN/docs/Core_JavaScript_1.5_Reference:About	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Functions:Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Functions:String	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/Core_JavaScript_1.5_Reference:Global_Functions:parseInt	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt
@@ -604,7 +604,7 @@
 /zh-CN/docs/IndexedDB/Using_IndexedDB	/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB
 /zh-CN/docs/Introduction_to_using_XPath_in_JavaScript	/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /zh-CN/docs/JS-ref	/zh-CN/docs/Web/JavaScript/Reference
-/zh-CN/docs/JS-ref/About	/zh-CN/docs/Web/JavaScript/Reference/About
+/zh-CN/docs/JS-ref/About	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JS-ref/Array	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
 /zh-CN/docs/JS-ref/Array/Reduce	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /zh-CN/docs/JS-ref/Array/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
@@ -792,7 +792,7 @@
 /zh-CN/docs/JavaScript/Language_Resources	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/JavaScript/Memory_Management	/zh-CN/docs/Web/JavaScript/Memory_Management
 /zh-CN/docs/JavaScript/Reference	/zh-CN/docs/Web/JavaScript/Reference
-/zh-CN/docs/JavaScript/Reference/About	/zh-CN/docs/Web/JavaScript/Reference/About
+/zh-CN/docs/JavaScript/Reference/About	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/JavaScript/Reference/Array	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
 /zh-CN/docs/JavaScript/Reference/Array/Reduce	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /zh-CN/docs/JavaScript/Reference/Array/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
@@ -1120,6 +1120,7 @@
 /zh-CN/docs/MDN/Contribute/Feedback	/zh-CN/docs/MDN/Community
 /zh-CN/docs/MDN/Contribute/Fixing_MDN_content_bugs	/zh-CN/docs/MDN/Community/MDN_content
 /zh-CN/docs/MDN/Contribute/Getting_started	/zh-CN/docs/MDN/Community/Contributing/Getting_started
+/zh-CN/docs/MDN/Contribute/Howto	/zh-CN/docs/MDN/Contribute
 /zh-CN/docs/MDN/Contribute/Howto/Add_or_update_browser_compatibility_data	https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md
 /zh-CN/docs/MDN/Contribute/Howto/Compatibility_tables	/zh-CN/docs/MDN/Writing_guidelines/Page_structures
 /zh-CN/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples
@@ -1218,7 +1219,7 @@
 /zh-CN/docs/Server-sent_events/Using_server-sent_events	/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events
 /zh-CN/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
-/zh-CN/docs/Tools-840092-dup/Remote_Debugging	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html
+/zh-CN/docs/Tools-840092-dup/Remote_Debugging	https://profiler.firefox.com/docs/
 /zh-CN/docs/Tools-840092-dup/Tools_Toolbox	https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html
 /zh-CN/docs/Tools/3D_View	https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html
 /zh-CN/docs/Tools/Accessibility_inspector	https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html
@@ -1266,14 +1267,14 @@
 /zh-CN/docs/Tools/Page_Inspector/How_to/Work_with_animations	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html
 /zh-CN/docs/Tools/Page_Inspector/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html
 /zh-CN/docs/Tools/Performance	https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html
-/zh-CN/docs/Tools/Performance/Call_Tree	https://firefox-source-docs.mozilla.org/devtools-user/performance/call_tree/index.html
-/zh-CN/docs/Tools/Performance/Frame_rate	https://firefox-source-docs.mozilla.org/devtools-user/performance/frame_rate/index.html
-/zh-CN/docs/Tools/Performance/UI_Tour	https://firefox-source-docs.mozilla.org/devtools-user/performance/ui_tour/index.html
-/zh-CN/docs/Tools/Performance/Waterfall	https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html
-/zh-CN/docs/Tools/Remote_Debugging	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html
-/zh-CN/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/debugging_firefox_for_android_with_webide/index.html
-/zh-CN/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/debugging_firefox_for_android_with_webide/index.html
-/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android	https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/firefox_for_android/index.html
+/zh-CN/docs/Tools/Performance/Call_Tree	https://profiler.firefox.com/docs/
+/zh-CN/docs/Tools/Performance/Frame_rate	https://profiler.firefox.com/docs/
+/zh-CN/docs/Tools/Performance/UI_Tour	https://profiler.firefox.com/docs/
+/zh-CN/docs/Tools/Performance/Waterfall	https://profiler.firefox.com/docs/
+/zh-CN/docs/Tools/Remote_Debugging	https://profiler.firefox.com/docs/
+/zh-CN/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE	https://profiler.firefox.com/docs/
+/zh-CN/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone	https://profiler.firefox.com/docs/
+/zh-CN/docs/Tools/Remote_Debugging/Firefox_for_Android	https://profiler.firefox.com/docs/
 /zh-CN/docs/Tools/Responsive_Design_Mode	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
 /zh-CN/docs/Tools/Responsive_Design_View	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
 /zh-CN/docs/Tools/Rulers	https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html
@@ -1290,7 +1291,7 @@
 /zh-CN/docs/Tools/Web音频编辑器	https://firefox-source-docs.mozilla.org/devtools-user/web_audio_editor/index.html
 /zh-CN/docs/Tools/Working_with_iframes	https://firefox-source-docs.mozilla.org/devtools-user/working_with_iframes/index.html
 /zh-CN/docs/Tools/about:debugging	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html
-/zh-CN/docs/Tools/about:debugging/about:debugging_before_Firefox_68	https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/about_colon_debugging_before_firefox_68/index.html
+/zh-CN/docs/Tools/about:debugging/about:debugging_before_Firefox_68	https://profiler.firefox.com/docs/
 /zh-CN/docs/Tools/不推荐的工具	https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html
 /zh-CN/docs/Tools/响应式设计视图	https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html
 /zh-CN/docs/Tools/存储查看器	https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html
@@ -2305,6 +2306,7 @@
 /zh-CN/docs/Web/HTTP/重定向	/zh-CN/docs/Web/HTTP/Redirections
 /zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/Guide/Houdini
 /zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/zh-CN/docs/Web/JavaScript/Language_Overview
+/zh-CN/docs/Web/JavaScript/About_JavaScript	/zh-CN/docs/Web/JavaScript
 /zh-CN/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /zh-CN/docs/Web/JavaScript/Guide/Closures	/zh-CN/docs/Web/JavaScript/Closures
 /zh-CN/docs/Web/JavaScript/Guide/Details_of_the_Object_Model	/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -2324,6 +2326,7 @@
 /zh-CN/docs/Web/JavaScript/Guide/可迭代对象	/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols
 /zh-CN/docs/Web/JavaScript/Introduction_to_using_XPath_in_JavaScript	/zh-CN/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /zh-CN/docs/Web/JavaScript/Language_Resources	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
+/zh-CN/docs/Web/JavaScript/Reference/About	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Web/JavaScript/Reference/Array	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array
 /zh-CN/docs/Web/JavaScript/Reference/Array/Reduce	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
 /zh-CN/docs/Web/JavaScript/Reference/Array/concat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
@@ -2387,6 +2390,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBufferView	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DisplayNames	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
@@ -2506,7 +2510,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/eval	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval
 /zh-CN/docs/Web/JavaScript/Reference/rest_parameters	/zh-CN/docs/Web/JavaScript/Reference/Functions/Rest_parameters
 /zh-CN/docs/Web/JavaScript/Reference/template_strings	/zh-CN/docs/Web/JavaScript/Reference/Template_literals
-/zh-CN/docs/Web/JavaScript/Reference/关于	/zh-CN/docs/Web/JavaScript/Reference/About
+/zh-CN/docs/Web/JavaScript/Reference/关于	/zh-CN/docs/Web/JavaScript/Reference
 /zh-CN/docs/Web/JavaScript/Same_origin_policy_for_JavaScript	/zh-CN/docs/Web/Security/Same-origin_policy
 /zh-CN/docs/Web/JavaScript/Shells	/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview
 /zh-CN/docs/Web/JavaScript/Strict_mode	/zh-CN/docs/Web/JavaScript/Reference/Strict_mode

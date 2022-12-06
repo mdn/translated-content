@@ -82,9 +82,7 @@ El constructor del objeto de expresión regular, por ejemplo, `new RegExp('ab+c'
 
 ## Especificaciones
 
-| Especificación                                                                                   |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-regexp-constructor', 'RegExp constructor')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

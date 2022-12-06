@@ -1,11 +1,6 @@
 ---
 title: dfn
 slug: Web/HTML/Element/dfn
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/dfn
 original_slug: Web/HTML/Elemento/dfn
 ---
 
@@ -14,11 +9,11 @@ original_slug: Web/HTML/Elemento/dfn
 - Sirve para marcar el término que se quiere definir.
   - : **Sus etiquetas son**: \<dfn> y \</dfn> (ambas obligatorias)
   
-    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
 
-    **Puede contener**: cero o más elementos [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: cero o más elementos [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 #### Atributos
 

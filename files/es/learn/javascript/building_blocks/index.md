@@ -1,23 +1,6 @@
 ---
 title: Elementos básicos de JavaScript
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - CodingScripting
-  - Condicionales
-  - Evaluación
-  - Funciones
-  - Guía
-  - JavaScript
-  - Landing
-  - NeedsTranslation
-  - Principiante
-  - TopicStub
-  - bucles
-  - eventos
-  - introducción
-  - l10n:priority
-  - modulo
-translation_of: Learn/JavaScript/Building_blocks
 ---
 
 {{LearnSidebar}}

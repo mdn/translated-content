@@ -109,10 +109,7 @@ slug: Web/Accessibility/ARIA/Roles/Form_Role
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                                             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#form","ARIA Form Role")}}                                 | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_form","Role Form")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

@@ -1,7 +1,6 @@
 ---
 title: ¿Cómo se utiliza Github pages?
 slug: Learn/Common_questions/Using_Github_pages
-translation_of: Learn/Common_questions/Using_Github_pages
 original_slug: Learn/Using_Github_pages
 ---
 
@@ -39,7 +38,7 @@ La otra cosa que necesitas hacer antes de seguir adelante es inicializar el dire
 
 La mejor manera de subir tu código a Github es mediante la linea de comandos — esta es una ventana donde tú escribe comandos para hacer cosas como crear archivos y ejecutar programas, en lugar de hacer clic dentro de una interfaz de usuario. Se verá algo como esto:
 
-![](https://mdn.mozillademos.org/files/9483/command-line.png)
+![](command-line.png)
 
 > **Nota:** Tú también podrías considerar una [interfaz gráfica de usuario de Git](http://git-scm.com/downloads/guis) para hacer el mismo trabajo, si te sientes incómodo con la linea de comandos.
 
@@ -56,9 +55,9 @@ Esto puede parecer un poco espantoso al principio, pero no te preocupes — que 
 1. A continuación, tu necesitas crear un nuevo repositorio para colocar tus archivos en el. Has clic en el signo más (+) en la parte superior derecha de la página de inicio de GitHub, luego escoge _Nuevo Repositorio_.
 2. En esta página, en la caja _Nombre del Repositorio_, digita el nombre para tu repositorio de código, por ejemplo _my-repository_.
 3. También llena una descripción para decir lo que tu repositorio va a contener. Tu pantalla debe mostrar algo como esto:
-    ![](https://mdn.mozillademos.org/files/12143/create-new-repo.png)
+    ![](create-new-repo.png)
 4. Has Clic en _Crear repositorio_; Esto debería llevarte a la siguiente página:
-    ![](https://mdn.mozillademos.org/files/12141/github-repo.png)
+    ![](github-repo.png)
 
 ### Subiendo tus archivos a GitHub
 

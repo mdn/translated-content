@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Headers/Content-Range
 ---
 {{HTTPSidebar}}
 
-**`Content-Range` **HTTP 응답 헤더는 전체 바디 메시지에 속한 부분 메시지의 위치를 알려줍니다.
+**`Content-Range`** HTTP 응답 헤더는 전체 바디 메시지에 속한 부분 메시지의 위치를 알려줍니다.
 
 <table class="properties">
   <tbody>

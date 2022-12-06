@@ -1,165 +1,335 @@
 ---
-title: General asynchronous programming concepts
+title: Introducción a JavaScript asíncrono
 slug: Learn/JavaScript/Asynchronous/Introducing
-tags:
-  - Aprender
-  - Hilos
-  - JavaScript
-  - Promesas
-  - Threads
-  - bloques
-translation_of: Learn/JavaScript/Asynchronous/Concepts
 original_slug: Learn/JavaScript/Asynchronous/Concepts
+l10n:
+  sourceCommit: 05d8b0eb3591009b6b7fee274bb7ed1bc5638f1805d8b0eb3591009b6b7fee274bb7ed1bc5638f18
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}
+{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
-En este artículo, repasaremos una serie de conceptos importantes relacionados con la programación asincrónica y cómo se ve esto en los navegadores web y JavaScript. Debe comprender estos conceptos antes de trabajar con los demás artículos del módulo.
+En este artículo, explicaremos qué es la programación asíncrona, por qué la necesitamos, y discutiremos brevemente algunas de las formas en que las funciones asíncronas se han implementado históricamente en JavaScript.
 
-| Pre-requisitos: | Literatura básica de computadora, un razonable entendimiento de los fundamentos de JavaScript.                                   |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:       | Entender los conceptos básicos detrás de la programación asincrónica, y cómo se manifiesta en los exploradores web y JavaScript. |
+<table>
+  <tbody>
+    <tr>
+      <th scope="row">Requisitos previos</th>
+      <td>
+        Conocimientos básicos de informática así como una comprensión razonable de los fundamentos de JavaScript, incluyendo funciones y manejadores de eventos.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Objetivo:</th>
+      <td>
+        Familiarizarse con lo que es JavaScript asíncrono, en qué se diferencia de JavaScript síncrono y por qué lo necesitamos.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-## ¿Asincrónico?
+La programación asíncrona es una técnica que permite a tu programa iniciar una tarea de larga duración y seguir respondiendo a otros eventos mientras esa tarea se ejecuta, en lugar de tener que esperar hasta que esa tarea haya terminado.
+Una vez que dicha tarea ha finalizado, tu programa presenta el resultado.
 
-Normalmente, el código de un programa determinado se ejecuta directamente, y solo sucede una cosa a la vez. Si una función se basa en el resultado de otra función, tiene que esperar a que la otra función termine y regrese, y hasta que eso suceda, todo el programa se detiene esencialmente desde la perspectiva del usuario.
+Muchas de las funciones proporcionadas por los navegadores, especialmente las más interesantes, pueden tardar mucho tiempo en ejecutarse. Es precisamente por eso por lo que esas funciones son asíncronas. Por ejemplo:
 
-Los usuarios de Mac, por ejemplo, a veces experimentan esto como un cursor giratorio multicolor (o "beachball" - "bola de playa" - como es llamado frecuentemente). Este cursor es la manera que tiene el sistema operativo de decir "el actual programa que está usando tiene que parar y esperar que algo termine, y está tomando tanto tiempo que me preocupa que pienses qué está sucediendo."
+- Realizar peticiones HTTP utilizando {{domxref("fetch()")}}
+- Acceder a la cámara o micrófono de un usuario mediante {{domxref("MediaDevices/getUserMedia", "getUserMedia()")}}
+- Pedir a un usuario que seleccione archivos usando {{domxref("window/showOpenFilePicker", "showOpenFilePicker()")}}
 
-![Multi-colored macOS beachball busy spinner](https://mdn.mozillademos.org/files/16577/beachball.jpg)
+Por lo tanto, aunque no tenga que implementar sus propias funciones asíncronas muy a menudo, necesitará utilizarlas correctamente.
 
-Esto es una experiencia frustrante y no es un buen uso del poder de procesamiento de una computadora - especialmente en una era donde las computadoras tienen múltiples procesadores disponibles. No tiene sentido sentarse allí a esperar algo cuando podrías dejar que la otra tarea se ejecute en otro procesador y le notifique cuando termine. Mientras tanto, esto le permitiría terminar otros trabajos, lo cual es la base de la **programación asincrónica**. Depende del entorno de programación que esté usando (exploradores web, en caso de desarrollo web) proveer de APIs que le permitan ejecutar dichas tareas de manera asincrónica.
+En este artículo, comenzaremos viendo el problema de las funciones síncronas de larga duración, que hacen que la programación asíncrona sea una necesidad.
 
-## Código de bloqueo (Blocking)
+## Programación síncrona
 
-Las técnicas asincrónicas son muy útiles, particularmente en programación web. Cuando una app web se ejecuta en el navegador y ejecuta un gran bloque de código sin retornar el control al navegador, este mismo puede parecer que se congela. Esto es llamado **blocking**; el navegador es bloqueado para que el usuario pueda seguir interactuando y realizando otras tareas hasta que la app web retorne el control sobre el procesador.
-
-Vamos a ver algunos ejemplos que muestren lo que significa blocking.
-
-En nuestro ejemplo [simple-sync.html](https://github.com/mdn/learning-area/tree/master/javascript/asynchronous/introducing/simple-sync.html) ([véalo en vivo](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync.html)), agregamos un detector del evento click ("click event listener") a un botón con el fin de que cuando sea clickeado, ejecute una operación de un gran consumo de tiempo (calcula 10 millones de fechas y luego muestra la última en la consola) y luego agrega un párrafo al DOM:
+Considere el siguiente código:
 
 ```js
-const btn = document.querySelector('button');
-btn.addEventListener('click', () => {
-  let myDate;
-  for(let i = 0; i < 10000000; i++) {
-    let date = new Date();
-    myDate = date
+const name = 'Miriam';
+const greeting = `¡Hola, mi nombre es ${name}!`;
+console.log(greeting);
+// "¡Hola, mi nombre es Miriam!"
+```
+
+Este código:
+
+1. Declara una cadena (string) con el nombre `name`.
+2. Declara otra cadena con el nombre `greeting`, que utiliza `name`.
+3. Envía a la consola JavaScript el saludo.
+
+Debemos notar aquí que el navegador recorre el programa línea a línea, en el mismo orden en que nosotros lo escribimos. En cada punto, el navegador espera a que la línea termine su trabajo antes de pasar a la siguiente línea. Tiene que hacer esto porque cada línea depende del trabajo realizado en las líneas precedentes.
+
+Esto hace que este sea un **programa síncrono**. Seguiría siendo síncrono incluso si llamáramos a una función separada, como aquí:
+
+```js
+function makeGreeting(name) {
+  return `¡Hola, mi nombre es ${name}!`;
+}
+
+const name = 'Miriam';
+const greeting = makeGreeting(name);
+console.log(greeting);
+// "¡Hola, mi nombre es Miriam!"
+```
+
+En este caso, `makeGreeting` es una **función síncrona** porque quién la llama (`greeting`) tiene que esperar a que la función termine su trabajo y devuelva un valor antes poder continuar.
+
+### Una función síncrona de larga duración
+
+¿Y si la función síncrona tarda mucho tiempo?
+
+El programa que se muestra a continuación utiliza un algoritmo muy ineficiente para generar múltiples números primos grandes cuando un usuario hace clic en el botón "Generar números primos". Cuanto mayor sea la cantidad de números primos que especifique el usuario, más tardará la operación.
+
+```html
+<label for="quota">Cantidad de números primos:</label>
+<input type="text" id="quota" name="quota" value="1000000" />
+
+<button id="generate">Generar números primos</button>
+<button id="reload">Recargar</button>
+
+<div id="output"></div>
+```
+
+```js
+const MAX_PRIME = 1000000;
+
+function isPrime(n) {
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
   }
+  return n > 1;
+}
 
-  console.log(myDate);
+const random = (max) => Math.floor(Math.random() * max); 
 
-  let pElem = document.createElement('p');
-  pElem.textContent = 'This is a newly-added paragraph.';
-  document.body.appendChild(pElem);
+function generatePrimes(quota) {
+  const primes = [];
+  while (primes.length < quota) {
+    const candidate = random(MAX_PRIME);
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
+  }
+  return primes;
+}
+
+const quota = document.querySelector('#quota');
+const output = document.querySelector('#output');
+
+document.querySelector('#generate').addEventListener('click', () => {
+  const primes = generatePrimes(quota.value);
+  output.textContent = `¡Finalizado! se han generado ${quota.value} números primos`;
+});
+
+document.querySelector('#reload').addEventListener('click', () => {
+  document.location.reload();
 });
 ```
 
-Cuando ejecute el ejemplo, abra su consola de JavaScript y haga click en el botón — notará que el párrafo no aparece hasta que las fechas hayan sido calculadas en su totalidad y el mensaje en la consola haya sido logueado. EL código se ejecuta en el orden en que aparece (de arriba hacia abajo), y la última operación no se ejecuta hasta que la anterior haya terminado.
+{{EmbedLiveSample("A long-running synchronous function", 600, 120)}}
 
-> **Nota:** El ejemplo anterior es poco realista. ¡Nunca se van a calcular 10 millones de fechas en una app web real! Sin embargo, sirve para dar una idea básica.
+Pruebe a hacer clic en "Generar números primos". Dependiendo de la velocidad de su ordenador, es probable que el programa tarde unos segundos en mostrar el mensaje "¡Finalizado!"
 
-En nuestro segundo ejemplo, [simple-sync-ui-blocking.html](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-ui-blocking.html) ([véalo en vivo](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-ui-blocking.html)), se simula algo un poco más realista con el que se puede encontrar en una página real. Se bloquea la interacción del usuario con la carga ("rendering") de la UI. En este ejemplo, se tienen dos botones:
+### El problema de las funciones sincrónicas de larga duración
 
-- Un botón "Fill canvas" que cuando es clickeado llena con 1 millón de círculos azules al {{htmlelement("canvas")}} disponible.
-- Un botón "Click me for alert" que cuando es clickeado muestra un mensaje de alerta.
+El siguiente ejemplo es igual que el anterior, excepto que hemos añadido un cuadro de texto para que escriba en él. Esta vez, haga clic en "Generar primos", y trate de escribir en el cuadro de texto inmediatamente después.
 
-```js
-function expensiveOperation() {
-  for(let i = 0; i < 1000000; i++) {
-    ctx.fillStyle = 'rgba(0,0,255, 0.2)';
-    ctx.beginPath();
-    ctx.arc(random(0, canvas.width), random(0, canvas.height), 10, degToRad(0), degToRad(360), false);
-    ctx.fill()
+Verás que mientras nuestra función `generatePrimes()` se está ejecutando, nuestro programa no responde en absoluto: no puedes escribir nada, ni hacer clic, ni nada más.
+
+```html hidden
+<label for="quota">Cantidad de números primos:</label>
+<input type="text" id="quota" name="quota" value="1000000" />
+
+<button id="generate">Generar números primos</button>
+<button id="reload">Recargar</button>
+
+<textarea id="user-input" rows="5" cols="62">
+  Prueba a escribir algo aquí inmediatamente después de presionar el botón "Generar números primos"
+</textarea>
+
+<div id="output"></div>
+```
+
+```css hidden
+textarea {
+  display: block;
+  margin: 1rem 0;
+}
+```
+
+```js hidden
+const MAX_PRIME = 1000000;
+
+function isPrime(n) {
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
   }
+  return n > 1;
 }
 
-fillBtn.addEventListener('click', expensiveOperation);
+const random = (max) => Math.floor(Math.random() * max);
 
-alertBtn.addEventListener('click', () =>
-  alert('You clicked me!')
-);
+function generatePrimes(quota) {
+  const primes = [];
+  while (primes.length < quota) {
+    const candidate = random(MAX_PRIME);
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
+  }
+  return primes;
+}
+
+const quota = document.querySelector('#quota');
+const output = document.querySelector('#output');
+
+document.querySelector('#generate').addEventListener('click', () => {
+  const primes = generatePrimes(quota.value);
+  output.textContent = `¡Finalizado! se han generado ${quota.value} números primos`;
+});
+
+document.querySelector('#reload').addEventListener('click', () => {
+  document.location.reload();
+});
 ```
 
-Si se clickea el primer botón y rápidamente se clickea el segundo, se verá que la alerta no aparece hasta que los círculos hayan terminado de representarse. La primer operación blockea a la segunda hasta que esta haya terminado de ejecutarse.
+{{EmbedLiveSample("The trouble with long-running synchronous functions", 600, 200)}}
 
-> **Nota:** OK, nuestro caso es feo y estamos fingiendo el efecto de bloqueo, pero es un problema común con el que los desarrolladores de aplicaciones reales batallan todo el tiempo.
+Este es el problema básico de las funciones síncronas de larga duración. Necesitamos buscar una forma de que nuestro programa:
 
-¿Por qué es esto? La respuesta es porque JavaScript, en general, es de **"un solo hilo" (single-threaded)**. En este punto, se tiene que introduce el concepto de **"hilos" (threads)**.
+1. Inicie una operación de larga duración llamando a una función.
+2. Haga que esa función inicie la operación y regrese inmediatamente, de manera que nuestro programa pueda seguir respondiendo a otros eventos.
+3. Notifique el resultado de la operación cuando se complete.
 
-## Threads
+Eso es precisamente lo que pueden hacer las funciones asíncronas. El resto de este módulo explica cómo se implementan en JavaScript.
 
-Un **hilo (thread)** es básicamente un proceso simple que un programa puede usar para completar tareas ("tasks"). Cada hilo solo puede realizar una tarea a la vez:
+## Manejador de eventos
 
-```
-Task A --> Task B --> Task C
-```
+La descripción que acabamos de ver de las funciones asíncronas podría recordarte a los manejadores de eventos, y si es así, tendrías razón. Los manejadores de eventos son, en realidad, una forma de programación asíncrona: proporcionas una función (el manejador de eventos) que será llamada, no de inmediato, sino cuando ocurra el evento. Si "el evento" es: "la operación asíncrona se ha completado", entonces ese evento podría usarse para notificar el resultado de una llamada a una función asíncrona.
 
-Cada tarea se va a ejecutar secuencialmente; una tarea tiene que completarse antes de que la próxima empiece.
+Algunas de las primeras APIs asíncronas utilizaban eventos de esta manera. La API {{domxref("XMLHttpRequest")}} le permite hacer peticiones HTTP a un servidor remoto usando JavaScript. Dado que esto puede llevar mucho tiempo, esta es una API asíncrona, y se le notifica el progreso y la finalización de una solicitud adjuntando oyentes de eventos al objeto `XMLHttpRequest`.
 
-Como se dijo previamente, muchas computadores actualmente tienen múltiples procesadores, por lo que pueden realizar múltiples tareas a la vez. Los lenguajes de programación que pueden manejar múltiples hilos pueden usar múltiples procesadores para completar múltiples tareas en simultáneo.
+El siguiente ejemplo muestra esto en acción. Pulsamos "Pulse para iniciar la solicitud" para enviar una petición. Creamos un nuevo {{domxref("XMLHttpRequest")}} y escuchamos su evento {{domxref("XMLHttpRequest/loadend_event", "loadend")}}. El manejador registra un mensaje "¡Finalizado!" junto con el código de estado.
 
-```
-Thread 1: Task A --> Task B
-Thread 2: Task C --> Task D
-```
+Después de añadir el escuchador de eventos enviamos la petición. Obsérvese que después de esto, podemos registrar "Inicio de la solicitud XHR": es decir, nuestro programa puede seguir ejecutándose mientras la petición está en marcha, y nuestro manejador de eventos será llamado cuando la petición se complete.
 
-### JavaScript es single-threaded
+```html
+<button id="xhr">Pulse para iniciar la solicitud</button>
+<button id="reload">Recargar</button>
 
-JavScript es tradicionalmente single-threaded. Aún con múltiples procesadores, solo se puede ejecutar tareas en un solo hilo, llamado el **hilo principal (main thread)**. El ejemplo de arriba se ejecuta de la siguiente manera:
-
-```
-Main thread: Render circles to canvas --> Display alert()
+<pre readonly class="event-log"></pre>
 ```
 
-Después de un tiempo, JavaScript ganó algunas herramientas que ayudaron con dichos problemas. [Web workers](/es/docs/Web/API/Web_Workers_API) permiten que se envíe parte del procesamiento de JavaScript a un hilo separado, llamado worker con el fin de que puedan ejecutar múltiples pedazos de JavaScript en simultáneo. Generalmente se usará un worker para ejectuar procesos de mucho consumo del hilo principal (main thread) con el fin de que no se bloquee la interacción del usuario.
-
-```
-  Main thread: Task A --> Task C
-Worker thread: Expensive task B
-```
-
-Con esto en mente, miremos el ejemplo [simple-sync-worker.html](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/introducing/simple-sync-worker.html) ([véalo ejecutándose en vivo](https://mdn.github.io/learning-area/javascript/asynchronous/introducing/simple-sync-worker.html)) nuevamente con la consola de JavaScript del navegador abierta. Esto es una re-escritura del ejemplo anterior que calculaba 10 millones de fechas en hilos worker separados. Ahora si se clickea el botón, el navegador tiene permitido mostrar el párrafo antes de que las fechas haya terminado de calcularse. La primer operación ya no bloquea a la segunda.
-
-## Código asincrónico
-
-Los web workers son muy útiles, pero tienen limitaciones. La mayor es que no pueden acceder al {{Glossary("DOM")}} — no se puede logar que un worker modifique directamente algo de la UI. No se puede representar 1 millón de círculos azules en un worker; básicamente solo puede hacer el cálculo numérico.
-
-El segundo problema es que a pesar de que el código se ejecuta en un worker no es bloqueador, es simplemente sincrónico. Esto se convierte en un problema cuando una función depender en los resultados de múltiples procesos previos para funcionar. Considere el siguiente diagrama de hilos:
-
-```
-Main thread: Task A --> Task B
+```css hidden
+pre {
+  display: block;
+  margin: 1rem 0;
+}
 ```
 
-En este caso, digamos que la Tarea A (Task A) está haciendo algo como buscando una imagen de un servidor y la Tarea B (Task B) luego hace algo con la imagen, como aplicarle un filtro. Si se ejecuta la Tarea A y luego inmediatamente se trata de ejecutar la Tarea B, se obtendrá un error, porque la imagen todavía no estará disponible.
+```js
+const log = document.querySelector('.event-log');
 
+document.querySelector('#xhr').addEventListener('click', () => {
+  log.textContent = '';
+
+  const xhr = new XMLHttpRequest();
+
+  xhr.addEventListener('loadend', () => {
+    log.textContent = `${log.textContent}Finalizado con el estado: ${xhr.status}`;
+  });
+
+  xhr.open('GET', 'https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json');
+  xhr.send();
+  log.textContent = `${log.textContent}Inicio de la solicitud XHR\n`;});
+
+document.querySelector('#reload').addEventListener('click', () => {
+  log.textContent = '';
+  document.location.reload();
+});
 ```
-  Main thread: Task A --> Task B --> |Task D|
-Worker thread: Task C -----------> |      |
+
+{{EmbedLiveSample("Event handlers", 600, 120)}}
+
+Esto es igual que los [manejadores de eventos que hemos encontrado en un módulo anterior](/es-US/docs/Learn/JavaScript/Building_blocks/Events), excepto que en lugar de que el evento sea una acción del usuario, como que el usuario haga clic en un botón, el evento es un cambio en el estado de algún objeto.
+
+## Callbacks (devoluciones de llamada)
+
+Un manejador de eventos es un tipo particular de devolución de llamada. Un _callback_ es simplemente una función que se pasa a otra función, con la expectativa de que el _callback_ sea llamado en el momento apropiado. Como acabamos de ver, las devoluciones de llamada solían ser la principal forma de implementar funciones asíncronas en JavaScript.
+
+Sin embargo, el código basado en _callbacks_ puede volverse difícil de entender cuando el propio _callback_ tiene que llamar a funciones que aceptan un _callback_. Esta es una situación común si necesitas realizar alguna operación que se descompone en una serie de funciones asíncronas. Por ejemplo, considere lo siguiente:
+
+```js
+function doStep1(init) {
+  return init + 1;
+}
+
+function doStep2(init) {
+  return init + 2;
+}
+
+function doStep3(init) {
+  return init + 3;
+}
+
+function doOperation() {
+  let result = 0;
+  result = doStep1(result);
+  result = doStep2(result);
+  result = doStep3(result);
+  console.log(`resultado: ${result}`);
+}
+
+doOperation();
 ```
 
-En este caso, digamos que la Tarea D hace uso de los resultados de la Tarea B y la Tarea C. Se se puede garantizar que esos resultados estarán disponibles al mismo tiempo, entonces tal vez estemos OK, pero es poco probable. Si la Tarea D trata de ejecutarse cuando uno de sus inputs no está disponible, disparará un error.
+Aquí tenemos una sola operación que se divide en tres pasos, donde cada paso depende del último. En nuestro ejemplo, el primer paso añade 1 a la entrada, el segundo añade 2 y el tercero añade 3. Partiendo de una entrada de 0, el resultado final es 6 (0 + 1 + 2 + 3). Como programa síncrono, esto es muy sencillo. ¿Pero qué pasaría si implementáramos los pasos utilizando callbacks?
 
-Para arreglar dichos problemas, los navegadores nos permiten ejecutar ciertas operaciones asincrónicamente. Características como las [Promises](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) (Promesas) permiten establecer la ejecución de una operación (por ejemplo, buscar una imagen desde un servidor), y luego esperar hasta que el resultado sea retornado antes de ejecutar otra operación.
+```js
+function doStep1(init, callback) {
+  const result = init + 1;
+  callback(result);
+}
 
+function doStep2(init, callback) {
+  const result = init + 2;
+  callback(result);
+}
+
+function doStep3(init, callback) {
+  const result = init + 3;
+  callback(result);
+}
+
+function doOperation() {
+  doStep1(0, (result1) => {
+    doStep2(result1, (result2) => {
+      doStep3(result2, (result3) => {
+        console.log(`resultado: ${result3}`);
+      });
+    });
+  });
+}
+
+doOperation();
 ```
-Main thread: Task A                   Task B
-    Promise:      |__async operation__|
-```
 
-Como la operación está sucediendo en otro lugar, el hilo principal no está bloqueado mientras la operación asincrónica está siendo procesada.
+Debido a que tenemos que llamar a _callbacks_ dentro de _callbacks_, obtenemos una función `doOperation()` profundamente anidada, que es mucho más difícil de leer y depurar. Esto, a veces es llamado "callback hell" (el infierno de las devoluciones de llamada) o la "pirámide de la perdición" (porque la indentación parece una pirámide de lado).
 
-Vamos a empezar a ver cómo se puede escribir código asincrónico en el próximo artículo. Cosas emocionantes, ¿eh? ¡Siga leyendo!
+Cuando anidamos devoluciones de llamada de esta manera, también puede ser muy difícil manejar errores: a menudo tienes que manejar los errores en cada nivel de la "pirámide", en lugar de poder manejarlos sólo una vez en el nivel superior.
 
-## Conclusión
+Por estas razones, la mayoría de las APIs asíncronas modernas no utilizan _callbacks_. En su lugar, la base de la programación asíncrona en JavaScript es la {{jsxref("Promise")}}, y ese es el tema del siguiente artículo.
 
-El diseño del software moderno gira cada más entorno a la programación asincrónica, para permiterle a los programas hacer más de una cosa a la vez. A medida que use nuevas y más poderosas APIs, encontrará más casos donde la única forma de realizar las cosas es asincrónicamente. Era muy difícil escribir el código asincrónico. Todavía lleva tiempo acostumbrarse, pero se ha vuelto mucho más sencillo. En el resto de este módulo, exploraremos porqué el código asincrónico importa y cómo diseñar código que evite algunos de los problemas que hemos descrito en este artículo.
+{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
 ## En este módulo
 
-- [Conceptos generales de programación asincrónica](/es/docs/Learn/JavaScript/Asynchronous/Concepts)
-- [Introducción a JavaScript asincrónico](/es/docs/Learn/JavaScript/Asynchronous/Introducing)
-- [JavaScript asincrónico cooperativo: Timeouts e intervalos](/es/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
-- [Programación asincrónica elegante con Promesas](/es/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Programación asincrónica más sencilla con async y await](/es/docs/Learn/JavaScript/Asynchronous/Async_await)
-- [Eligiendo el correcto enfoque](/es/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach)
+- **Introducción a JavaScript asíncrono**
+- [Como utilizar las promesas](/es/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Implementación de una API basada en promesas](/es/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
+- [Introducción a los workers](/es/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
+- [Evaluación: animación secuencial](/es/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)

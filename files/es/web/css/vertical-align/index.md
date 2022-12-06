@@ -1,7 +1,6 @@
 ---
 title: vertical-align
 slug: Web/CSS/vertical-align
-translation_of: Web/CSS/vertical-align
 ---
 
 {{ CSSRef() }}
@@ -34,7 +33,7 @@ La mayoría de los valores de alinean verticalmente el elemento de forma relativ
   - : Aligns the bottom of the element with the bottom of the parent element's font.
 - `middle`
   - : Aligns the middle of the element with the middle of lowercase letters in the parent.
-- [`<length>`](/en-US/docs/CSS/length)
+- [`<length>`](/es/docs/CSS/length)
   - : Aligns the baseline of the element at the given length above the baseline of its parent.
 - `<percentage>`
 

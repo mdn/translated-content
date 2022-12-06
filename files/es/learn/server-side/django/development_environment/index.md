@@ -1,16 +1,6 @@
 ---
 title: Puesta en marcha de un entorno de desarrollo Django
 slug: Learn/Server-side/Django/development_environment
-tags:
-  - Aprendizaje
-  - Codificación de scripts
-  - Entorno de Desarrollo
-  - Principiante
-  - Python
-  - django
-  - instalación
-  - introducción
-translation_of: Learn/Server-side/Django/development_environment
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
@@ -197,7 +187,7 @@ pip3 list
 
 ## Uso de Django dentro de un entorno virtual de Python
 
-Las bibliotecas que usaremos para crear nuestros entornos virtuales están en [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and Mac OS X) y [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), que utilizan a su vez la herramienta [virtualenv](/en-US/docs/Python/Virtualenv). Las herramientas wrapper crean una interfaz consistente para la gestión de interfaces en todas las plataformas.
+Las bibliotecas que usaremos para crear nuestros entornos virtuales están en [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and Mac OS X) y [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), que utilizan a su vez la herramienta [virtualenv](/es/docs/Python/Virtualenv). Las herramientas wrapper crean una interfaz consistente para la gestión de interfaces en todas las plataformas.
 
 ### Instalación del software del entorno virtual
 

@@ -1,11 +1,6 @@
 ---
 title: url()
 slug: Web/CSS/url
-tags:
-  - CSS
-  - Referencia
-translation_of: Web/CSS/url()
-translation_of_original: Web/CSS/filter-function/url
 original_slug: Web/CSS/url()
 ---
 

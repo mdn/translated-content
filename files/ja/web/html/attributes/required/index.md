@@ -59,11 +59,7 @@ slug: Web/HTML/Attributes/required
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'forms.html#attr-input-required', 'required attribute')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'forms.html#attr-input-required', 'required attribute')}}         | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML5.1', 'sec-forms.html#the-required-attribute', 'required attribute')}} | {{Spec2('HTML5.1')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

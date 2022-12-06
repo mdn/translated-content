@@ -68,9 +68,7 @@ toggleTrackButton.addEventListener('click', () => {
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                             |
-| -------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'media.html#event-media-change', 'change')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

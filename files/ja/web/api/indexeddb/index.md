@@ -32,10 +32,7 @@ function openDB() {
 
 ## 仕様
 
-| 仕様書                                                                                                           | 策定状況                         | 備考                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}} | {{Spec2('IndexedDB 2')}} | Defined in a `WindowOrWorkerGlobalScope` partial in the newest spec. |
-| {{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}                 | {{Spec2('IndexedDB')}}     | 初期定義。                                                           |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

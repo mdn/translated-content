@@ -1,12 +1,6 @@
 ---
 title: WCAG
 slug: Glossary/WCAG
-tags:
-  - Accesibilidad
-  - Glosario
-  - Pautas Web
-  - WCAG
-translation_of: Glossary/WCAG
 ---
 
 Las _Pautas de Accesibilidad para el Contenido Web_ (**WCAG**, por us siglas en inglés) son una recomendación publicada por el grupo {{Glossary("WAI","Web Accessibility Initiative")}} en el {{Glossary("W3C")}}. Describen un conjunto de pautas para hacer que el contenido sea accesible principalmente para personas con discapacidades, pero también para dispositivos de recursos limitados, como los teléfonos móviles.
@@ -27,5 +21,5 @@ WCAG uses three levels of conformance:
 
 ### Technical knowledge
 
-- [Información sobre accesibilidad en MDN](/en-US/docs/Web/Accessibility/Information_for_Web_authors)
+- [Información sobre accesibilidad en MDN](/es/docs/Web/Accessibility/Information_for_Web_authors)
 - [Las recomendaciones del WCAG 2.0 en el W3C](http://www.w3.org/TR/WCAG20/)

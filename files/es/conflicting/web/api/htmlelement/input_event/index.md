@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.oninput
 slug: conflicting/Web/API/HTMLElement/input_event
-translation_of: Web/API/GlobalEventHandlers/oninput
 original_slug: Web/API/GlobalEventHandlers/oninput
 ---
 

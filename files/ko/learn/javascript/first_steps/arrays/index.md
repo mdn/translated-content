@@ -2,6 +2,7 @@
 title: 배열(Arrays)
 slug: Learn/JavaScript/First_steps/Arrays
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
 이 모듈의 이 마지막 문서에서, 우리는 배열을 살펴볼 것입니다. 배열이란 하나의 변수명 아래에 데이터 아이템의 리스트를 저장하는 간편한 방법입니다. 여기서 우리는 왜 배열이 유용한지 보고, 어떻게 배열을 만들고, 검색하고(retrieve), 추가하고, 그리고 배열에 저장된 원소들(items)을 삭제하는지, 그리고 그 외의 많은 것을 탐구합니다.

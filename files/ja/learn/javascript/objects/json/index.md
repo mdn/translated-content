@@ -97,7 +97,7 @@ superHeroes['members'][1]['powers'][2]
 1. まず、変数名 `superHeroes` を指定します。
 2. その中の `members` プロパティへアクセスしたいので、 `["members"]` と指定します。
 3. `members` にはオブジェクトの配列が格納されています. ここでは、配列内の 2 番目のオブジェクトへアクセスするので、 `[1]` を指定します。
-4. そのオブジェクト内で、 `powers` プロパティへアクセスするため,  `["powers"]` と指定します。
+4. そのオブジェクト内で、 `powers` プロパティへアクセスするため, `["powers"]` と指定します。
 5. `powers` プロパティは選択したヒーローの能力を含んだ配列となっており、その中の 3 番目が欲しいので、 `[2]` と記述します。
 
 > **メモ:** 上記の JSON は [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) で参照することができます（ページ内の[ソースコード](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)を参照してください）。ページを読み込んで見て、ブラウザーのコンソールで変数内のデータにアクセスしてみてください。

@@ -1,41 +1,35 @@
 ---
-title: 求幂 (**)
+title: 幂（**）
 slug: Web/JavaScript/Reference/Operators/Exponentiation
 ---
 
 {{jsSidebar("Operators")}}
 
-求幂运算符（`**`）返回将第一个操作数加到第二个操作数的幂的结果。它等效于`Math.pow`，不同之处在于它也接受 BigInts 作为操作数。
+**幂**（**`**`**）运算符返回第一个操作数取第二个操作数的幂的结果。它等价于 {{jsxref("Math.pow()")}}，不同之处在于，它还接受 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 作为操作数。
 
 {{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
 
 ## 语法
 
-```plain
-Operator: var1 ** var2
+```js-nolint
+x ** y
 ```
 
-## 简介
+## 描述
 
-求幂运算符是是**右结合的**: `a ** b ** c` 等于 `a ** (b ** c)`.
+幂运算符是右结合的：`a ** b ** c` 等于 `a ** (b ** c)`。
 
-在大多数语言里，比如 PHP、Python 等那些有一个幂运算符 (`**`) 的语言，幂运算符被定义有一个比一元运算符，比如一元的 `+` 和一元的 `-` 更高的运算顺序，但有一些例外。在 Bash 语言里，`**` 运算符被定义有一个比一元运算符更低的运算顺序。
+在大多数语言里，比如 PHP、Python 等那些有幂运算符（`**`）的语言，幂运算符被定义有一个比一元运算符，比如一元的 `+` 和一元的 `-` 更高的运算顺序，但有一些例外。在 Bash 语言里，`**` 运算符被定义有一个比一元运算符更低的运算顺序。
 
-在 JavaScript 里，你不可能写出一个不明确的求幂表达式。这就是说，你不能立刻将一个一元运算符（`+/-/~/!/delete/void/typeof`）放在基数前，这样做只会导致一个语法错误。
+在 JavaScript 中，不可能写出模棱两可的幂表达式。也就是说，你不能将一元运算符（`+/-/~/!/delete/void/typeof`）放在底数之前；[这样做会导致语法错误](/zh-CN/docs/Web/JavaScript/Reference/Errors/Unparenthesized_unary_expr_lhs_exponentiation)。
 
-```js
--2 ** 2;
-// 4 in Bash, -4 in other languages.
-// This is invalid in JavaScript, as the operation is ambiguous.
+例如，`-2 ** 2` 在 Bash 中为 4，但在其他语言（如 Python）中为 -4。这在 JavaScript 中是无效的，因为操作不明确。你必须在两边加上括号——例如，作为 `-(2 ** 2)`——以使意图明确。
 
+请注意，某些编程语言使用插入符号 <kbd>^</kbd> 进行求幂，但 JavaScript 使用该符号表示[逻辑异或运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)。
 
--(2 ** 2);
-// -4 in JavaScript and the author's intention is unambiguous.
-```
+`NaN ** 0`（和等价的 `Math.pow(NaN, 0)`）是 {{jsxref("NaN")}} 不通过数学运算传播的唯一情况——尽管操作数是 `NaN`，但它返回 `1`。此外，`base` 为 1 且 `exponent` 为非有限（±Infinity 或 `NaN`）的行为与 IEEE 754 不同，IEEE 754 指定结果应为 1，而 JavaScript 返回 `NaN` 以保持与其原始行为的向后兼容性。
 
-注意有些编程语言用扬抑符 <kbd>^</kbd> 做乘方运算，但是 JavaScript 将这个符号作为了[XOR 位逻辑运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators#Bitwise_XOR)。
-
-## 例子
+## 示例
 
 ### 基本求幂
 
@@ -45,9 +39,11 @@ Operator: var1 ** var2
 3 ** 2.5 // 15.588457268119896
 10 ** -1 // 0.1
 NaN ** 2 // NaN
+NaN ** 0 // 1
+1 ** Infinity // NaN
 ```
 
-### 结合
+### 结合性
 
 ```js
 2 ** 3 ** 2   // 512
@@ -55,15 +51,15 @@ NaN ** 2 // NaN
 (2 ** 3) ** 2 // 64
 ```
 
-### 与一元运算符的用法
+### 与一元运算符一起使用
 
-取求幂表达式的值的相反数：
+取幂表达式的值的相反数：
 
 ```js
 -(2 ** 2) // -4
 ```
 
-将求幂表达式的底数转化为一个负数：
+将幂表达式的底数转化为一个负数：
 
 ```js
 (-2) ** 2 // 4
@@ -77,14 +73,14 @@ NaN ** 2 // NaN
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Addition operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
-- [Subtraction operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [Division operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
-- [Multiplication operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [Remainder operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [Increment operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
-- [Decrement operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [Unary negation operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [Unary plus operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [加法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)
+- [减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [除法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
+- [乘法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [取余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [自增运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
+- [自减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [一元减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [一元加运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)

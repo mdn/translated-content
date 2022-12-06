@@ -1,10 +1,6 @@
 ---
 title: UIEvent
 slug: Web/API/UIEvent
-tags:
-  - API
-translation_of: Web/API/UIEvent
-browser-compat: api.UIEvent
 ---
 
 {{APIRef("DOM Events")}}

@@ -108,7 +108,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
   - : Contiene un fragmento de HTML que no es renderizado cuando se carga inicialmente un documento que lo contiene, pero puede ser desplegado en tiempo de ejecución usando JavaScript, principalmente usado como la base de la estructura de los elementos personalizados. La interfaz DOM asociada es {{domxref("HTMLTemplateElement")}}.
 - {{htmlelement("slot")}}
   - : Un espacio termporal dentro de un componente web que se puede llenar con una plantilla de marcado propia, lo que permite crear árboles DOM separados y presentarlos juntos. La interfaz DOM asociada es {{domxref("HTMLSlotElement")}}.
-- El atributo global HTML [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot)
+- El atributo global HTML [`slot`](/es/docs/Web/HTML/Global_attributes/slot)
   - : Asigna un slot en un _shadow tree_ de un _shadow DOM_ shadow tree a un elemento.
 - {{domxref("Slotable")}}
   - : Un mixin implementado tanto por los nodos {{domxref("Element")}} y {{domxref("Text")}}, definiendo características que les permiten convertirse en el contenido de un elemento {{htmlelement("slot")}}. El mixin define un atributo, {{domxref("Slotable.assignedSlot")}}, el cual retorna una referencia al nodo del slot donde esta insertado.

@@ -1,12 +1,6 @@
 ---
 title: Firefox 66 para desarrolladores
 slug: Mozilla/Firefox/Releases/66
-tags:
-  - "66"
-  - Firefox
-  - Lanzamiento
-  - Mozilla
-translation_of: Mozilla/Firefox/Releases/66
 ---
 
 {{FirefoxSidebar}}
@@ -67,7 +61,7 @@ _No hay adicionales._
 
 #### Removido
 
-- Eliminamos el soporte para [`xml:base`](/en-US/docs/XML_introduction/xml:base) atributo ({{Bug(903372)}}).
+- Eliminamos el soporte para [`xml:base`](/es/docs/XML_introduction/xml:base) atributo ({{Bug(903372)}}).
 
 ### JavaScript
 

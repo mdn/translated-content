@@ -32,10 +32,7 @@ stop();
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG','browsers.html#dom-window-stop','Window.stop()')}} | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window-stop', 'Window.stop')}}     | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## 互換性
 

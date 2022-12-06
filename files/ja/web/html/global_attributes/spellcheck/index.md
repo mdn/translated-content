@@ -22,10 +22,7 @@ slug: Web/HTML/Global_attributes/spellcheck
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "interaction.html#spelling-and-grammar-checking", "spellcheck")}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし |
-| {{SpecName('HTML5.1', "editing.html#spelling-and-grammar-checking", "spellcheck")}}         | {{Spec2('HTML5.1')}}     | {{SpecName('HTML WHATWG')}}、初回定義のスナップショット           |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

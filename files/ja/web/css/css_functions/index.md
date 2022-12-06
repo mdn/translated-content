@@ -261,13 +261,7 @@ selector {
 
 ## 仕様書
 
-| 仕様書                        | 状態                           | 備考                                                                                                                                                                                                                                                               |
-| ------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Values")}} | {{Spec2("CSS4 Values")}} | `toggle()`, `attr()`, `calc()`, `min()`, `max()`, `clamp()`, `round()`, `mod()`, `rem()`, `mod()`, `sin()`, `cos()`, `tan()`, `asin()`, `acos()`, `atan()`, `atan2()`, `pow()`, `sqrt()`, `hypot()`, `log()`, `exp()`, `abs()`, `sign()` の関数表記を追加。 |
-| {{SpecName("CSS3 Values")}} | {{Spec2("CSS3 Values")}} | `calc()` の関数表記を追加。 |
-| {{SpecName("CSS4 Colors")}} | {{Spec2("CSS4 Colors")}} | `rgb()`, `rgba()`, `hsl()`, `hsla()` の関数表記にカンマなしの構文を追加。 `rgb()` と `hsl()` にアルファ値を許可し、 `rgba()` と `hsla()` をそれらの (非推奨の) 別名とした。 `hwb()`, `device-cmyk()`, `color()` 関数を追加。 |
-| {{SpecName("CSS3 Colors")}} | {{Spec2("CSS3 Colors")}} | `rgba()`, `hsl()`, `hsla()` の関数表記を追加。 |
-| {{SpecName("CSS4 Images")}} | {{Spec2("CSS4 Images")}} | `element()`, `image()`, `image-set()`, `conic-gradient()` の関数表記を追加。 |
+{{Specifications}}
 
 ## 関連情報
 

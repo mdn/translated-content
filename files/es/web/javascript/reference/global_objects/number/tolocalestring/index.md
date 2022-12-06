@@ -1,11 +1,6 @@
 ---
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
-tags:
-  - Internacionalizacion
-  - JavaScript
-  - Número
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/toLocaleString
 ---
 
@@ -133,10 +128,7 @@ console.log(num.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFrac
 
 ## Especificaciones
 
-| Specification                                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}}     |
-| {{SpecName('ES Int Draft', '#sup-number.prototype.tolocalestring', 'Number.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

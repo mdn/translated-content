@@ -1,11 +1,6 @@
 ---
 title: kbd
 slug: Web/HTML/Element/kbd
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/kbd
 original_slug: Web/HTML/Elemento/kbd
 ---
 
@@ -14,11 +9,11 @@ original_slug: Web/HTML/Elemento/kbd
 - Marca el texto que debe introducir el usuario.
   - : **Sus etiquetas son**: \<kbd> y \</kbd> (ambas obligatorias)
   
-    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
 
-    **Puede contener**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 #### Atributos
 

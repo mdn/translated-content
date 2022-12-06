@@ -1,7 +1,6 @@
 ---
 title: Introducción al diseño en CSS
 slug: Learn/CSS/CSS_layout/Introduction
-translation_of: Learn/CSS/CSS_layout/Introduction
 original_slug: Learn/CSS/CSS_layout/Introducción
 ---
 

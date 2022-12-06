@@ -1,7 +1,6 @@
 ---
 title: 'Prueba tus habilidades: Otros controles'
 slug: Learn/Forms/Test_your_skills:_Other_controls
-translation_of: Learn/Forms/Test_your_skills:_Other_controls
 original_slug: Learn/HTML/Forms/Prueba_tus_habilidades:_Otros_controles
 ---
 

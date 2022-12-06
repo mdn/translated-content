@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toLocaleString
 ---
 
@@ -137,12 +136,9 @@ For this reason you cannot expect to be able to compare the results of `toLocale
 
 When formatting large numbers of dates, it is better to create an {{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}} object and use the function provided by its {{jsxref("DateTimeFormat.prototype.format", "format")}} property.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}         |
-| {{SpecName('ES Int Draft', '#sup-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

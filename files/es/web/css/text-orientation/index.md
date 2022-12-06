@@ -1,13 +1,6 @@
 ---
 title: text-orientation
 slug: Web/CSS/text-orientation
-tags:
-  - CSS
-  - Formas de Escritura CSS
-  - Orientacion del Texto CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/text-orientation
 ---
 
 {{CSSRef}}

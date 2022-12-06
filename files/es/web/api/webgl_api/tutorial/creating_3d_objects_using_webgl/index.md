@@ -1,12 +1,6 @@
 ---
 title: Creación de objetos 3D utilizando WebGL
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-tags:
-  - Cubo 3D
-  - Objetos 3D
-  - Tutorial
-  - WebGL
-translation_of: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 original_slug: Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL
 ---
 

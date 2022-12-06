@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.lastIndexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
-tags:
-  - Array
-  - Arreglo
-  - ECMAScript 5
-  - JavaScript
-  - Matriz
-  - Prototipo
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/lastIndexOf
 ---
 

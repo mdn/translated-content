@@ -1,12 +1,6 @@
 ---
 title: ArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
-tags:
-  - ArrayBuffer
-  - JavaScript
-  - Propiedad
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 original_slug: Web/JavaScript/Referencia/Objetos_globales/ArrayBuffer/byteLength
 ---
 

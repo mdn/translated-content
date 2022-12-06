@@ -1,7 +1,6 @@
 ---
 title: Function.name
 slug: Web/JavaScript/Reference/Global_Objects/Function/name
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/name
 ---
 
@@ -92,7 +91,7 @@ foo.bind({}).name; // "bound foo"
 
 ### Nombres de funciones getters y setters
 
-Cuando se usan [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) y `set,`"get" y "set" aparecerán en el nombre de la función.
+Cuando se usan [`get`](/es/docs/Web/JavaScript/Reference/Functions/get) y `set,`"get" y "set" aparecerán en el nombre de la función.
 
 ```js
 var o = {

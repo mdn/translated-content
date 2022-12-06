@@ -1,14 +1,6 @@
 ---
 title: <content>
 slug: Web/HTML/Element/content
-tags:
-  - Deprecado
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-  - Web Components
-translation_of: Web/HTML/Element/content
 original_slug: Web/HTML/Elemento/content
 ---
 

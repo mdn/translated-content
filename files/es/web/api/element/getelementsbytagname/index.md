@@ -7,7 +7,7 @@ slug: Web/API/Element/getElementsByTagName
 
 ## Resumen
 
-Devuelve una lista de elementos que tienen un [tag name](es/DOM/element.tagName) determinado. Se explora el árbol por debajo del elemento dado, excluyendo el propio elemento.
+Devuelve una lista de elementos que tienen un [tag name](/es/DOM/element.tagName) determinado. Se explora el árbol por debajo del elemento dado, excluyendo el propio elemento.
 
 ## Sintaxis
 
@@ -21,7 +21,7 @@ elements =element.getElementsByTagName(tagName)
 
 > **Nota:** En Firefox 2 (Gecko 1.8.1) y anteriores, este método no funcionaba correctamente si el árbol contenía algún elemento con etiqueta de nombre conteniendo espacios. (Ver {{ Bug(206053) }} para más detalles).
 >
-> Es recomendable usar [DOM:document.getElementsByTagNameNS](es/DOM/document.getElementsByTagNameNS) cuando se manejan documentos con "multi-namespace".
+> Es recomendable usar [DOM:document.getElementsByTagNameNS](/es/DOM/document.getElementsByTagNameNS) cuando se manejan documentos con "multi-namespace".
 
 ## Ejemplo
 
@@ -39,7 +39,7 @@ for (var i = 0; i < cells.length; i++) {
 
 ## Notas
 
-`element.getElementsByTagName` es similar a [document.getElementsByTagName](es/DOM/document.getElementsByTagName), excepto por que su búsqueda está restringida a los elementos que descienden del elemento especificado.
+`element.getElementsByTagName` es similar a [document.getElementsByTagName](/es/DOM/document.getElementsByTagName), excepto por que su búsqueda está restringida a los elementos que descienden del elemento especificado.
 
 ## Especificaciones
 

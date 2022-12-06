@@ -1,11 +1,6 @@
 ---
 title: cite
 slug: Web/HTML/Element/cite
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/cite
 original_slug: Web/HTML/Elemento/cite
 ---
 
@@ -14,11 +9,11 @@ original_slug: Web/HTML/Elemento/cite
 - **cite** -_cita_ . Marca una referencia a una fuente, o el autor de un texto citado.
   - : **Sus etiquetas son**: \<cite> y \</cite> (ambas obligatorias)
   
-    **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#defrase), y por lo tanto [en línea](es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#defrase), y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
 
     **Crea una caja**: En línea.
 
-    **Puede contener**: Text y/o cero o más elementos [en línea](es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **Puede contener**: Text y/o cero o más elementos [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
 
 #### Atributos
 
@@ -219,7 +214,7 @@ En los navegadores basados en Mozilla (y en otros) el contenido de cite es mostr
 
 ### Notas
 
-- Está bastante estendido el mal uso de este elemento, mucha gente lo usa para marcar el texto de las citas en vez del autor, para marcar el texto están los elementos [q](es/HTML/Elemento/q) (en línea) y [blockquote](es/HTML/Elemento/blockquote) (en bloque).
+- Está bastante estendido el mal uso de este elemento, mucha gente lo usa para marcar el texto de las citas en vez del autor, para marcar el texto están los elementos [q](/es/HTML/Elemento/q) (en línea) y [blockquote](/es/HTML/Elemento/blockquote) (en bloque).
 
 ### Referencia
 

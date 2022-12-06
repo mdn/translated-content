@@ -3,6 +3,7 @@ title: 'HTML: 접근성을 위한 기초'
 slug: Learn/Accessibility/HTML
 original_slug: Learn/접근성/HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 HTML 요소가 늘 올바른 목적을 가지고 쓰이는지 확인하는 것만으로도, 수많은 웹 콘텐츠는 접근성이 향상됩니다. 이 문서에는 접근성을 최대한으로 보장하기 위해 HTML을 어떻게 사용해야 하는지 자세히 설명합니다.

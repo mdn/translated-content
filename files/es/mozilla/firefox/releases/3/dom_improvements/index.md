@@ -1,11 +1,6 @@
 ---
 title: Mejoras DOM en Firefox 3
 slug: Mozilla/Firefox/Releases/3/DOM_improvements
-tags:
-  - DOM
-  - Firefox 3
-  - Todas_las_Categorías
-translation_of: Mozilla/Firefox/Releases/3/DOM_improvements
 original_slug: Mejoras_DOM_en_Firefox_3
 ---
 

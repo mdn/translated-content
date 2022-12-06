@@ -57,7 +57,7 @@ border-image-repeat: unset;
   height: 80px;
   margin-bottom: 10px;
   border: 30px solid;
-  border-image: url("https://mdn.mozillademos.org/files/4127/border.png") 27;
+  border-image: url("border.png") 27;
   border-image-repeat: stretch; /* Puede ser modificado en el ejemplo en vivo */
 }
 ```

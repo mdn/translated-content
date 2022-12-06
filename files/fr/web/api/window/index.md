@@ -252,7 +252,7 @@ _Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}}
   - : Annule la capture des évènements d'un certain type par la fenêtre.
 - {{domxref("Window.requestAnimationFrame()")}}
   - : Indique au navigateur qu'une animation est en cours, en demandant au navigateur de planifier une redessinage de la fenêtre lors de l'image d'animation suivante.
-- {{domxref("Window.requestIdleCallback()")}}  {{experimental_inline}}
+- {{domxref("Window.requestIdleCallback()")}} {{experimental_inline}}
   - : Active la planification de tâches pendant les périodes d'inactivité du navigateur.
 - {{domxref("Window.resizeBy()")}}
   - : Redimensionne la fenêtre en cours d'une certaine quantité.

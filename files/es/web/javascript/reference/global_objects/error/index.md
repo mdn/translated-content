@@ -1,10 +1,6 @@
 ---
 title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
-tags:
-  - Error
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/Error
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error
 ---
 
@@ -182,9 +178,7 @@ try {
 
 ## Especificaciones
 
-| Especificación                                                           |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-error-objects', 'Error')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

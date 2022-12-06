@@ -3811,18 +3811,6 @@
       "Mars"
     ]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2020-08-12T14:04:14.458Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "hamasaki",
-      "5ara5treamer",
-      "mamodayo",
-      "klez"
-    ]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2020-07-22T12:19:59.681Z",
     "contributors": ["wbamberg", "hamasaki", "jswisher"]
@@ -3830,39 +3818,6 @@
   "MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-08-06T03:36:58.834Z",
     "contributors": ["mfuji09", "silverskyvicto", "wbamberg"]
-  },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:50:20.175Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "silverskyvicto",
-      "Uemmra3",
-      "hamasaki"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:50:20.340Z",
-    "contributors": [
-      "chrisdavidmills",
-      "eltociear",
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "hamasaki",
-      "ethertank"
-    ]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:50:20.455Z",
-    "contributors": [
-      "chrisdavidmills",
-      "eltociear",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3"
-    ]
   },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-10T05:09:00.798Z",
@@ -23065,20 +23020,6 @@
       "RxOrca"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:36:54.957Z",
-    "contributors": [
-      "isdh",
-      "yyss",
-      "ethertank",
-      "sii",
-      "99corps",
-      "Mgjbot",
-      "Okome",
-      "Yama",
-      "Shimono"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-10-23T16:43:01.449Z",
     "contributors": [
@@ -23539,20 +23480,6 @@
       "Okome",
       "Takenbot",
       "RxOrca"
-    ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:36:05.864Z",
-    "contributors": [
-      "ambi",
-      "teoli",
-      "yyss",
-      "ethertank",
-      "saneyuki_s",
-      "Potappo",
-      "Mgjbot",
-      "Yuichirou",
-      "Taken"
     ]
   },
   "Web/JavaScript/Reference/Classes": {
@@ -30928,6 +30855,18 @@
       "sii"
     ]
   },
+  "conflicting/MDN/Contribute_0bcab4c99ca5038c2d477c13fb21153d": {
+    "modified": "2020-08-12T14:04:14.458Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "wbamberg",
+      "hamasaki",
+      "5ara5treamer",
+      "mamodayo",
+      "klez"
+    ]
+  },
   "conflicting/MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-03-14T06:36:03.749Z",
     "contributors": ["mfuji09", "silverskyvicto"]
@@ -31297,6 +31236,39 @@
   "orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo": {
     "modified": "2020-09-30T09:07:30.169Z",
     "contributors": ["chrisdavidmills", "mfuji09", "silverskyvicto"]
+  },
+  "orphaned/MDN/Tools": {
+    "modified": "2020-09-30T16:50:20.175Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "wbamberg",
+      "silverskyvicto",
+      "Uemmra3",
+      "hamasaki"
+    ]
+  },
+  "orphaned/MDN/Tools/KumaScript": {
+    "modified": "2020-09-30T16:50:20.340Z",
+    "contributors": [
+      "chrisdavidmills",
+      "eltociear",
+      "mfuji09",
+      "silverskyvicto",
+      "wbamberg",
+      "hamasaki",
+      "ethertank"
+    ]
+  },
+  "orphaned/MDN/Tools/KumaScript/Troubleshooting": {
+    "modified": "2020-09-30T16:50:20.455Z",
+    "contributors": [
+      "chrisdavidmills",
+      "eltociear",
+      "silverskyvicto",
+      "wbamberg",
+      "Uemmra3"
+    ]
   },
   "orphaned/Microsummary_XML_grammar_reference": {
     "modified": "2019-03-23T23:42:58.294Z",

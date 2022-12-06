@@ -1,7 +1,6 @@
 ---
 title: Generator.prototype.next()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/next
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/next
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/next
 ---
 
@@ -81,5 +80,5 @@ g.next(2);
 
 ## See also
 
-- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*`](/es/docs/Web/JavaScript/Reference/Statements/function*)
 - [Iterators and generators](/es/docs/Web/JavaScript/Guide/Iterators_and_Generators)

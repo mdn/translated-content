@@ -1,9 +1,7 @@
 ---
 title: '<a>: El elemento ancla'
 slug: Web/HTML/Element/a
-translation_of: Web/HTML/Element/a
 original_slug: Web/HTML/Elemento/a
-browser-compat: html.elements.a
 ---
 
 {{HTMLSidebar}}

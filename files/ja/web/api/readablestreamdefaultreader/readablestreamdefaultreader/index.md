@@ -66,9 +66,7 @@ function fetchStream() {
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#default-reader-constructor","ReadableStreamDefaultReader()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

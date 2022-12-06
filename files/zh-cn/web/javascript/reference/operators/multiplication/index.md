@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Multiplication
 
 {{jsSidebar("Operators")}}
 
-乘法运算符（`*`）计算操作数的乘积。
+**乘法**（**`*`**）运算符计算操作数的乘积。
 
 {{EmbedInteractiveExample("pages/js/expressions-multiplication.html")}}
 
@@ -51,7 +51,7 @@ Infinity * Infinity  // Infinity
 - [减法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Subtraction)
 - [除法运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
 - [取余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [取余运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [幂运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
 - [自增运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
 - [自减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
 - [一元减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)

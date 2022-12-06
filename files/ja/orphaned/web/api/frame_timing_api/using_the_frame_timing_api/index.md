@@ -10,7 +10,7 @@ The **`PerformanceFrameTiming`** interface provides _frame_ timing data about th
 
 An application can register a {{domxref("PerformanceObserver")}} for "`frame`" {{domxref("PerformanceEntry","performance entry types")}} and the observer will have data about the duration of each frame event. This data can be used to help identify areas that take too long to provide a good user experience.
 
-This document describes how to use the {{domxref("PerformanceFrameTiming")}} interfaces including example code. For an overview of these interfaces see [Frame Timing API](/Web/API/Frame_Timing_API).
+This document describes how to use the {{domxref("PerformanceFrameTiming")}} interfaces including example code. For an overview of these interfaces see [Frame Timing API](/ja/docs/Web/API/Frame_Timing_API).
 
 ## フレームオブザーバー
 

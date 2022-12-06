@@ -2,6 +2,7 @@
 title: Signature
 slug: Glossary/Signature
 ---
+
 The term **signature** can have several meanings depending on the context. It may refer to:
 
 {{GlossaryDisambiguation}}
