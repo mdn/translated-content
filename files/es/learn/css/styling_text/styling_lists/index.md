@@ -217,7 +217,7 @@ Aquí hemos hecho lo siguiente:
 
 Esto nos da el resultado siguiente:
 
-![an unordered list with the bullet points set as little star images](image-bullets.png)
+![an unordered list with the bullet points set as little star images](list_formatting.png)
 
 ### Propiedad abreviada list-style
 

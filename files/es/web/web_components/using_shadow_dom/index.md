@@ -35,7 +35,7 @@ Este fragmento produce la siguientre estructura de DOM:
 
 _Shadow_ DOM permite adjuntar arboles DOM ocultos a elementos en el arbol DOM regular — este arbol shadow DOM comienza con un elemento **shadow root,** debajo del cual se puede adjuntar cualquier elemento que desee, de la misma manera que el DOM normal.
 
-![](shadow-dom.png)
+![](shadowdom.svg)
 
 Hay algunos conceptos de Shadow DOM que deben ser tomados en cuenta:
 
