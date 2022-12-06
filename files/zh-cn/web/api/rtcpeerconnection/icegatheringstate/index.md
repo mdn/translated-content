@@ -18,7 +18,7 @@ slug: Web/API/RTCPeerConnection/iceGatheringState
 - `gathering`
   - : ICE 代理正在收集候选的连接。
 - `complete`
-  - : ICE 代理完成了候选的收集。如果发生了需要新的状态的收集，例如一个新的借口增加或者一个新的 ICE 服务器增加，状态将恢复到 `gathering`，并去收集这些候选。
+  - : ICE 代理完成了候选的收集。如果发生了需要收集的新候选，例如一个新接口的增加或者一个新的 ICE 服务器的增加，状态将恢复到 `gathering`，并去收集这些候选。
 
 ## 示例
 
