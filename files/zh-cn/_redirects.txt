@@ -2390,7 +2390,7 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBufferView	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Collator	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
+/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DisplayNames	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames

@@ -33750,9 +33750,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString": {
-    "modified": "2020-10-15T21:28:14.066Z",
-    "contributors": ["fscholz", "AlexChao"]
   }
 }
