@@ -44,7 +44,7 @@ invoiceRef = "myinvoice02";
 console.log(returnLast(invoiceRef)); // '2'
 ```
 
-### 메서스 비교하기
+### 메서드 비교하기
 
 여기서 {{jsxref('String')}}의 끝에서 두 번째 문자를 선택하는 다양한 방법을 비교하겠습니다. 아래의 모든 방법이 유효하며, 싱대적으로 `at()`의 간결함과 가독성이 돋보입니다.
 
