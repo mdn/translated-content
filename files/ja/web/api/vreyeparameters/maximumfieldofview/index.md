@@ -1,27 +1,19 @@
 ---
-title: VREyeParameters.offset
-slug: Web/API/VREyeParameters/offset
+title: VREyeParameters.maximumFieldOfView
+slug: Web/API/VREyeParameters/maximumFieldOfView
 l10n:
   sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-**`offset`** は {{domxref("VREyeParameters")}} インターフェイスの読み取り専用プロパティで、は、ユーザーの目と目の間の中心点から目の中心までのオフセットを表します。単位はメートルです。
+**`maximumFieldOfView`** は {{domxref("VREyeParameters")}} インターフェイスの読み取り専用プロパティで、現在の目における最大の視野を示します。
 
 > **メモ:** このプロパティは古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。これは [WebXR 機器 API](https://immersive-web.github.io/webxr/) に置き換えられました。
 
-この値は、ユーザーの瞳孔間距離（IPD）の半分で あるべきですが、指定された目のヘッドセットの中心点からレンズの中心点までの距離を表してもかまいません。
+## 値
 
-### 値
-
-ユーザーの目と目の間の中心点から目の中心までのオフセットをメートル単位で記述したベクトルを表す {{jsxref("Float32Array")}} です。
-
-> **メモ:** 左目の値は負の値、右目の値は正の値になります。
-
-## 例
-
-コード例については [`VRFieldOfView`](/en-US/docs/Web/API/VRFieldOfView#例) を参照してください。
+{{domxref("VRFieldOfView")}} オブジェクトです。
 
 ## 仕様書
 
@@ -36,4 +28,5 @@ l10n:
 ## 関連情報
 
 - [WebVR API ホームページ](/ja/docs/Web/API/WebVR_API)
+- {{domxref("VRFieldOfView")}}
 - <https://mixedreality.mozilla.org/> — Mozilla VR チームが提供するデモ、ダウンロード、その他のリソース。
