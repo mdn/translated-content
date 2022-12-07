@@ -1,6 +1,7 @@
 ---
 title: Date.prototype.toGMTString()
-slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
+slug: conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
+original_slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 ---
 
 {{JSRef}} {{deprecated_header}}
