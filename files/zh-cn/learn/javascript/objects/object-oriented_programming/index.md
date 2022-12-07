@@ -8,7 +8,7 @@ tags:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
 
-面向对象编程（OOP）是如今多种编程语言所实现的一种编程范式，包括 Java、C++。在本文中，我们会简要介绍面向对象编程（OOP）的基本概念，其中包括三个主要概念：**类与实例**、**继承**、**封装**。现在，我们会脱离特定的 JavaScript 代码来探讨这些概念，所有提及到的例子将会 {{Glossary("Pseudocode", "伪代码")}} 的形式描述。
+面向对象编程（OOP）是如今多种编程语言所实现的一种编程范式，包括 Java、C++。在本文中，我们会简要介绍面向对象编程（OOP）的基本概念，其中包括三个主要概念：**类与实例**、**继承**、**封装**。现在，我们会脱离特定的 JavaScript 代码来探讨这些概念，所有提及到的例子将会以{{Glossary("Pseudocode", "伪代码")}}的形式描述。
 
 > **备注：** 准确地说，本文所提及到的特性是一种特别的面向对象编程方式，即**基于类的面向对象编程**（class-based OPP）。当人们谈论面向对象编程时，通常来说是指基于类的面向对象编程。
 
