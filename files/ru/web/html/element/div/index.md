@@ -1,5 +1,5 @@
 ---
-title: '<div>: Элемент разделения контента'
+title: '<div>: обычный блочный элемент'
 slug: Web/HTML/Element/div
 tags:
   - Element
