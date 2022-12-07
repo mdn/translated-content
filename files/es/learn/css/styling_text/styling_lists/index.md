@@ -155,7 +155,7 @@ ol {
 
 Esto nos da el aspecto siguiente:
 
-![Una lista ordenada con las viñetas establecidas para aparecer fuera del texto del elemento de lista.](https://mdn.mozillademos.org/files/12962/outer-bullets.png)
+![Una lista ordenada con las viñetas establecidas para aparecer fuera del texto del elemento de lista.](outer-bullets.png)
 
 Puedes encontrar muchas más opciones si echas un vistazo a la página de referencia de {{cssxref("list-style-type")}}.
 
@@ -172,7 +172,7 @@ ol {
 }
 ```
 
-![an ordered list with the bullet points set to appear inside the list item text.](https://mdn.mozillademos.org/files/12958/inner-bullets.png)
+![an ordered list with the bullet points set to appear inside the list item text.](inner-bullets.png)
 
 ### Uso de una imagen personalizada como viñeta
 
@@ -217,7 +217,7 @@ Aquí hemos hecho lo siguiente:
 
 Esto nos da el resultado siguiente:
 
-![an unordered list with the bullet points set as little star images](https://mdn.mozillademos.org/files/12956/image-bullets.png)
+![an unordered list with the bullet points set as little star images](list_formatting.png)
 
 ### Propiedad abreviada list-style
 

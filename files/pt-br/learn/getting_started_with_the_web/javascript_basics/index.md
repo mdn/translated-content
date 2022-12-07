@@ -26,7 +26,7 @@ Está fora do escopo deste artigo — como uma introdução leve ao JavaScript �
 
 A seção abaixo apresenta alguns aspectos da linguagem principal e também oferece uma oportunidade de jogar com alguns recursos da API do navegador. Divirta-se!
 
-## Um "Olá, mundo!" exemplo
+## Um exemplo "Olá, mundo!"
 
 JavaScript é uma das tecnologias da web modernas mais populares! À medida que suas habilidades em JavaScript aumentam, seus sites entrarão em uma nova dimensão de poder e criatividade.
 
@@ -53,7 +53,7 @@ No entanto, familiarizar-se com JavaScript é mais desafiador do que familiariza
 
 ![Título "hello world" acima de um logotipo do firefox](hello-world.png)
 
-> **Nota:** A razão pela qual as instruções (acima) colocam o elemento {{htmlelement("script")}} perto da parte inferior do arquivo HTML é que **o navegador lê o código na ordem em que aparece no arquivo **.
+> **Nota:** A razão pela qual as instruções (acima) colocam o elemento {{htmlelement("script")}} perto da parte inferior do arquivo HTML é que o navegador lê o código na ordem em que aparece no arquivo.
 >
 > Se o JavaScript carregar primeiro e supostamente afetar o HTML que ainda não foi carregado, pode haver problemas. Colocar JavaScript perto da parte inferior de uma página HTML é uma maneira de acomodar essa dependência. Para saber mais sobre abordagens alternativas, consulte [Estratégias de carregamento de script](/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies).
 

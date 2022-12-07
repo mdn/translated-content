@@ -56,7 +56,7 @@ Há numerosos cabeçalhos de requisição disponíveis. Eles podem ser divididos
 - _Cabeçalhos de requisição_, como {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, modificam a requisição, especificando-a mais (como {{HTTPHeader("Accept-Language")}}), dando-a contexto (como {{HTTPHeader("Referer")}}), ou restringindo-a condicionalmente (como {{HTTPHeader("If-None")}}).
 - _Cabeçalhos de entidade_, como {{HTTPHeader("Content-Length")}} que se aplicam ao corpo da mensagem. Obviamente este cabeçalho não será transmitido se não houver corpo na requisição.
 
-![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+![Example of headers in an HTTP request](http_request_headers2.png)
 
 ### Corpo
 
@@ -89,7 +89,7 @@ Há numerosos cabeçalhos de resposta disponíveis. Eles podem ser divididos em 
 - _Cabeçalhos de resposta_, como {{HTTPHeader("Vary")}} e {{HTTPHeader("Accept-Ranges")}}, dão informação adicional sobre o servidor, que não cabe na linha de status.
 - _Cabeçalhos de entidade_, como {{HTTPHeader("Content-Length")}}, aplicam-se ao corpo da resposta. Obviamente este cabeçalho não será transmitido se não houver corpo na resposta.
 
-![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![Example of headers in an HTTP response](http_response_headers2.png)
 
 ### Corpo
 

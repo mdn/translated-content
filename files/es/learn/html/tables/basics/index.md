@@ -30,13 +30,13 @@ Este artículo te ayudará a comenzar con las tablas HTML. Vamos a exponer conce
 
 Una tabla es un conjunto estructurado de datos distribuidos en filas y columnas (**datos tabulados**). Una tabla permite buscar con rapidez y facilidad valores entre diferentes tipos de datos que indiquen algún tipo de conexión. Por ejemplo, una persona y su edad, o un día de la semana o el horario de una piscina municipal.
 
-![Una tabla de datos de ejemplo que muestra los nombres y las edades de algunas personas: Chris 38, Dennis 45, Sarah 29, Karen 47.](https://mdn.mozillademos.org/files/14583/numbers-table.png)
+![Una tabla de datos de ejemplo que muestra los nombres y las edades de algunas personas: Chris 38, Dennis 45, Sarah 29, Karen 47.](numbers-table.png)
 
-![Una tabla de datos que muestra unos horarios de clases natación](https://mdn.mozillademos.org/files/14587/swimming-timetable.png)
+![Una tabla de datos que muestra unos horarios de clases natación](swimming-timetable.png)
 
 Las tablas se utilizan con mucha frecuencia en la sociedad desde hace años, como lo demuestra este documento censal de los EUA de 1800:
 
-![Un pergamino muy antiguo; cuesta un poco leer los datos, pero muestra con claridad que las tablas de datos ya se utilizaban en 1800.](https://mdn.mozillademos.org/files/14585/1800-census.jpg)
+![Un pergamino muy antiguo; cuesta un poco leer los datos, pero muestra con claridad que las tablas de datos ya se utilizaban en 1800.](1800-census.jpg)
 
 Por lo tanto, no es de extrañar que los creadores de HTML proporcionen un medio con el que estructurar y presentar datos en tablas en la web.
 

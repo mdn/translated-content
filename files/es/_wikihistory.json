@@ -2646,33 +2646,9 @@
       "Mars"
     ]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2019-01-16T18:56:52.965Z",
-    "contributors": ["wbamberg", "0zxo", "astrapotro", "MauricioGil", "Sheppy"]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2019-01-17T02:12:44.469Z",
     "contributors": ["wbamberg", "astrapotro"]
-  },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:48:18.728Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Jeremie",
-      "Arudb79",
-      "atlas7jean"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:48:19.117Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "velizluisma",
-      "Jeremie",
-      "LeoHirsch"
-    ]
   },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-03T01:47:58.469Z",
@@ -14511,6 +14487,10 @@
       "Michelangeur"
     ]
   },
+  "conflicting/MDN/Contribute": {
+    "modified": "2019-01-16T18:56:52.965Z",
+    "contributors": ["wbamberg", "0zxo", "astrapotro", "MauricioGil", "Sheppy"]
+  },
   "conflicting/MDN/Contribute/Getting_started": {
     "modified": "2019-01-16T18:56:38.941Z",
     "contributors": ["wbamberg", "MauricioGil", "LeoHirsch"]
@@ -15403,6 +15383,26 @@
       "BubuAnabelas",
       "SphinxKnight",
       "FranciscoImanolSuarez"
+    ]
+  },
+  "orphaned/MDN/Tools": {
+    "modified": "2020-09-30T16:48:18.728Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "Jeremie",
+      "Arudb79",
+      "atlas7jean"
+    ]
+  },
+  "orphaned/MDN/Tools/KumaScript": {
+    "modified": "2020-09-30T16:48:19.117Z",
+    "contributors": [
+      "chrisdavidmills",
+      "wbamberg",
+      "velizluisma",
+      "Jeremie",
+      "LeoHirsch"
     ]
   },
   "orphaned/MDN/Tools/Page_regeneration": {

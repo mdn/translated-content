@@ -1,12 +1,6 @@
 ---
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/tanh
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/tanh
 ---
 

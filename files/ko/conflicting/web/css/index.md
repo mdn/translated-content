@@ -16,7 +16,7 @@ original_slug: Web/CSS/@viewport
 
 {{SeeCompatTable}}{{CSSRef}}
 
-The** `@viewport`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) lets you configure the {{glossary("viewport")}} through which the document is viewed. It's primarily used for mobile devices, but is also used by desktop browsers that support features like "snap to edge" (such as Microsoft Edge).
+The **`@viewport`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) lets you configure the {{glossary("viewport")}} through which the document is viewed. It's primarily used for mobile devices, but is also used by desktop browsers that support features like "snap to edge" (such as Microsoft Edge).
 
 Lengths specified as percentages are calculated relative to the **initial viewport**, which is the viewport before any user agent or authored styles have had an opportunity to adjust the viewport. This is typically based on the size of the window on desktop browsers that aren't in full screen mode.
 

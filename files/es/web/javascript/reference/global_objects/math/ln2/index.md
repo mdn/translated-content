@@ -1,12 +1,6 @@
 ---
 title: Math.LN2
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN2
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/LN2
 ---
 

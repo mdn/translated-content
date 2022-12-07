@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/log
 
 <math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>></mo><mn>0</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.log</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique</mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mspace width="thickmathspace"></mspace><mtext>such that</mtext><mspace width="thickmathspace"></mspace><msup><mi>e</mi><mi>y</mi></msup><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x > 0, \mathtt{\operatorname{Math.log}(x)} = \ln(x) = \text{고유값} \; y \; \text{같이} \; e^y = x</annotation></semantics></math>
 
-자바스크립트 **`Math.log()` **함수는 _ln(x)_ 수학적으로 같습니다.
+자바스크립트 **`Math.log()`** 함수는 _ln(x)_ 수학적으로 같습니다.
 
 ## 문법
 

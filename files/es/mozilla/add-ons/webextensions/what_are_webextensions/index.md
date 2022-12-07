@@ -10,37 +10,37 @@ Una extensión agrega características y funciones a un explorador. Se ha creado
 
 **Mejore o complemente un sitio**: Use un Add-on para ofrecer funciones adicionales en el navegador o información de su sitio Web. Permita a los usuarios recopilar detalles de las páginas que visitan para mejorar el servicio que ofrecen.
 
-![](https://mdn.mozillademos.org/files/15808/Amazon_add_on.png)
+![](amazon_add_on.png)
 
 **Ejemplos:** [El asistente de Amazon para Firefox](https://addons.mozilla.org/en-US/firefox/addon/amazon-browser-bar/), [OneNote Web Clipper](https://addons.mozilla.org/en-US/firefox/addon/onenote-clipper/) y [Grammarly para Firefox](https://addons.mozilla.org/en-US/firefox/addon/grammarly-1/)
 
 **Permita que los usuarios demuestren su personalidad**: Las extensiones del navegador pueden manipular el contenido de las páginas; por ejemplo, permite a los usuarios agregar su logo favorito o imágen como un fondo de pantalla acada página que visitan. Las extensiones permiten también al usuario actualizar el aspecto de la IU de Firefox, de la misma manera que lo hacen los [complementos de temas](/es/docs/Temas/Theme_concepts).
 
-![](https://mdn.mozillademos.org/files/15809/MyWeb_New_Tab_add_on.png)
+![](myweb_new_tab_add_on.png)
 
 **Ejemplos:** [MyWeb New Tab](https://addons.mozilla.org/en-US/firefox/addon/myweb-new-tab/), [Tabliss](https://addons.mozilla.org/en-US/firefox/addon/tabliss/) y [VivaldiFox](https://addons.mozilla.org/en-US/firefox/addon/vivaldifox/)
 
 **Agregar o quitar contenido de las páginas web**: es posible que desee ayudar a los usuarios a bloquear los anuncios intrusivos de las páginas web, proporcionar acceso a una guía de viajes siempre que un país o ciudad se menciona en una página web, o reformatear el contenido de la página para ofrecer una experiencia de lectura consistente. Con la capacidad de acceder y actualizar tanto HTML como CSS de una página, las extensiones pueden ayudar a los usuarios a ver la Web de la manera que quieren.
 
-![](https://mdn.mozillademos.org/files/15807/ublock_origin_add_on.png)
+![](ublock_origin_add_on.png)
 
 **Ejemplos:** [Origen uBlock](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/), [Lector](https://addons.mozilla.org/en-US/firefox/addon/reader/) y [Caja de Herramientas para Google Play Store™](https://addons.mozilla.org/en-US/firefox/addon/toolbox-google-play-store/)
 
 **Agregar herramientas y nuevas funciones de navegación**: añada nuevas funciones a un taskboard o genere imágenes de código QR a partir de URLs, hipervínculos o texto de página. Con opciones de interfaz de usuario flexibles y la potencia de las [APIs de WebExtensions](/es/docs/Mozilla/Add-ons/WebExtensions), puede añadir fácilmente nuevas funcionalidades a un navegador. Usted puede realzar casi cualquier característica o funcionalidad de sitios web, no tiene que ser su web.
 
-**![](https://mdn.mozillademos.org/files/15806/QR_Code_Image_Generator_add_on.png)**
+![](qr_code_image_generator_add_on.png)
 
 **Ejemplos: [QR Code Image Generator](https://addons.mozilla.org/en-US/firefox/addon/qr-code-image-generator/), [Swimlanes for Trello](https://addons.mozilla.org/en-US/firefox/addon/swimlanes-for-trello/), y [Tomato Clock](https://addons.mozilla.org/en-US/firefox/addon/tomato-clock/)**
 
 **Juegos**: ofrecer juegos de ordenador tradicionales, con características de juego fuera de línea, pero también explorar nuevas posibilidades de juego, por ejemplo, mediante la incorporación de gameplay en la navegación cotidiana.
 
-![](https://mdn.mozillademos.org/files/15805/Asteroids_in_Popup_add_on%20.png)
+![](asteroids_in_popup_add_on_.png)
 
 Ejemplos: [Asteroids in Popup](https://addons.mozilla.org/en-US/firefox/addon/asteroids-in-popup/), [Solitaire Card Game New Tab](https://addons.mozilla.org/en-US/firefox/addon/solitaire-card-game-new-tab/), and [2048 Prime](https://addons.mozilla.org/en-US/firefox/addon/2048-prime/).
 
 **Agregar herramientas de desarrollo**: puede proporcionar herramientas de desarrollo web como su negocio o ha desarrollado una técnica útil o un enfoque para el desarrollo web que desea compartir. De cualquier manera, puede mejorar las herramientas de desarrollo de Firefox incorporadas añadiendo una nueva ficha a la barra de herramientas del desarrollador.
 
-![](https://mdn.mozillademos.org/files/15804/aXe_Developer_Tools_add_on.png)
+![](axe_developer_tools_add_on.png)
 
 **Ejemplos:** [Web Developer](https://addons.mozilla.org/en-US/firefox/addon/web-developer/), [Web React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/), and [aXe Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/)
 

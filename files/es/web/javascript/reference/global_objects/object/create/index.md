@@ -1,15 +1,6 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
-tags:
-  - ECMAScript5
-  - JavaScript
-  - 'Null'
-  - Objeto
-  - Referencia
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/create
 ---
 

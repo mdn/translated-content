@@ -3811,18 +3811,6 @@
       "Mars"
     ]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2020-08-12T14:04:14.458Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "hamasaki",
-      "5ara5treamer",
-      "mamodayo",
-      "klez"
-    ]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2020-07-22T12:19:59.681Z",
     "contributors": ["wbamberg", "hamasaki", "jswisher"]
@@ -3830,39 +3818,6 @@
   "MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-08-06T03:36:58.834Z",
     "contributors": ["mfuji09", "silverskyvicto", "wbamberg"]
-  },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:50:20.175Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "silverskyvicto",
-      "Uemmra3",
-      "hamasaki"
-    ]
-  },
-  "MDN/Tools/KumaScript": {
-    "modified": "2020-09-30T16:50:20.340Z",
-    "contributors": [
-      "chrisdavidmills",
-      "eltociear",
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "hamasaki",
-      "ethertank"
-    ]
-  },
-  "MDN/Tools/KumaScript/Troubleshooting": {
-    "modified": "2020-09-30T16:50:20.455Z",
-    "contributors": [
-      "chrisdavidmills",
-      "eltociear",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3"
-    ]
   },
   "MDN/Writing_guidelines": {
     "modified": "2020-05-10T05:09:00.798Z",
@@ -30904,6 +30859,18 @@
       "sii"
     ]
   },
+  "conflicting/MDN/Contribute_0bcab4c99ca5038c2d477c13fb21153d": {
+    "modified": "2020-08-12T14:04:14.458Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto",
+      "wbamberg",
+      "hamasaki",
+      "5ara5treamer",
+      "mamodayo",
+      "klez"
+    ]
+  },
   "conflicting/MDN/MDN_Product_Advisory_Board": {
     "modified": "2020-03-14T06:36:03.749Z",
     "contributors": ["mfuji09", "silverskyvicto"]
@@ -31192,20 +31159,6 @@
     "modified": "2020-08-12T12:42:41.854Z",
     "contributors": ["mfuji09", "tamura4278"]
   },
-  "conflicting/Web/JavaScript": {
-    "modified": "2020-03-12T19:36:54.957Z",
-    "contributors": [
-      "isdh",
-      "yyss",
-      "ethertank",
-      "sii",
-      "99corps",
-      "Mgjbot",
-      "Okome",
-      "Yama",
-      "Shimono"
-    ]
-  },
   "conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain": {
     "modified": "2020-10-21T02:00:03.457Z",
     "contributors": [
@@ -31252,20 +31205,6 @@
       "electrolysis"
     ]
   },
-  "conflicting/Web/JavaScript/Reference": {
-    "modified": "2020-03-12T19:36:05.864Z",
-    "contributors": [
-      "ambi",
-      "teoli",
-      "yyss",
-      "ethertank",
-      "saneyuki_s",
-      "Potappo",
-      "Mgjbot",
-      "Yuichirou",
-      "Taken"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
@@ -31301,6 +31240,39 @@
   "orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo": {
     "modified": "2020-09-30T09:07:30.169Z",
     "contributors": ["chrisdavidmills", "mfuji09", "silverskyvicto"]
+  },
+  "orphaned/MDN/Tools": {
+    "modified": "2020-09-30T16:50:20.175Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "wbamberg",
+      "silverskyvicto",
+      "Uemmra3",
+      "hamasaki"
+    ]
+  },
+  "orphaned/MDN/Tools/KumaScript": {
+    "modified": "2020-09-30T16:50:20.340Z",
+    "contributors": [
+      "chrisdavidmills",
+      "eltociear",
+      "mfuji09",
+      "silverskyvicto",
+      "wbamberg",
+      "hamasaki",
+      "ethertank"
+    ]
+  },
+  "orphaned/MDN/Tools/KumaScript/Troubleshooting": {
+    "modified": "2020-09-30T16:50:20.455Z",
+    "contributors": [
+      "chrisdavidmills",
+      "eltociear",
+      "silverskyvicto",
+      "wbamberg",
+      "Uemmra3"
+    ]
   },
   "orphaned/Microsummary_XML_grammar_reference": {
     "modified": "2019-03-23T23:42:58.294Z",
@@ -31349,21 +31321,9 @@
     "modified": "2020-09-27T12:30:54.835Z",
     "contributors": ["mfuji09", "dskmori", "keeponbeat", "mikamikuh"]
   },
-  "orphaned/Web/API/Frame_Timing_API": {
-    "modified": "2019-06-07T11:58:30.872Z",
-    "contributors": ["teoli"]
-  },
-  "orphaned/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API": {
-    "modified": "2019-06-07T11:59:50.878Z",
-    "contributors": ["silverskyvicto"]
-  },
   "orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items": {
     "modified": "2019-03-24T00:06:18.208Z",
     "contributors": ["Piro", "drry"]
-  },
-  "orphaned/Web/API/PerformanceFrameTiming": {
-    "modified": "2020-10-15T22:19:50.630Z",
-    "contributors": ["silverskyvicto"]
   },
   "orphaned/Web/Accessibility/ARIA/Roles/Role_Img": {
     "modified": "2019-03-18T21:22:07.955Z",

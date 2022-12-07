@@ -1,12 +1,6 @@
 ---
 title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
-tags:
-  - Date
-  - Metodo getTime()
-  - Referencia
-  - getTime
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTime
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/getTime
 ---
 

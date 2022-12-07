@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/flat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/flat
 ---
 

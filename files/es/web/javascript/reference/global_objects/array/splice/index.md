@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
-tags:
-  - Array
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/splice
 ---
 

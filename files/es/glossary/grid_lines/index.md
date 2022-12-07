@@ -48,7 +48,7 @@ color: #d9480f;
 
 Podemos referenciar a **Las Líneas** de nuestra plantilla usando su número de línea. De manera izquierda-a-derecha y de arriba-a-abajo; la línea 1 de la columna 1 estará en la izquierda de la cuadrícula, la línea 1 de la fila 1 estará al inicio de la cuadrícula. Los números de líneas siguen el tipo de "[modo de escritura](/es/docs/Web/CSS/CSS_Writing_Modes)" de el documento, por ejemplo, si es de derecha-a-izquierda, la columna 1 estará a la derecha de la cuadrícula. La imagen de abajo muestra, en fondo gris los números de línea, asumiendo que el "modo de escritura" es de izquierda-a-derecha.
 
-![Diagrama mostrando la cuadrícula con líneas numeradas.](https://mdn.mozillademos.org/files/14763/1_diagram_numbered_grid_lines.png)
+![Diagrama mostrando la cuadrícula con líneas numeradas.](1_diagram_numbered_grid_lines.png)
 
 Las líneas también se crean en la cuadrícula _implícita_ cuando se crean pistas implícitas para mantener el contenido posicionado fuera de la _cuadrícula explícita_, sin embargo, estas líneas no se pueden abordar mediante un número.
 

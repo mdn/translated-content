@@ -32,7 +32,7 @@ Una de las principales funciones de HTML es dar al texto estructura y significad
 
 La mayor parte del texto estructurado está compuesto por encabezados y párrafos, independientemente de si lees una historia, un periódico, un libro de texto, una revista, etc.
 
-![Un ejemplo de la portada de un periódico, que muestra el uso de un encabezado, subtítulos y párrafos de nivel superior.](https://mdn.mozillademos.org/files/12371/newspaper_small.jpg)
+![Un ejemplo de la portada de un periódico, que muestra el uso de un encabezado, subtítulos y párrafos de nivel superior.](newspaper_small.jpg)
 
 El contenido estructurado simplifica la experiencia en la lectura y se disfruta más.
 
@@ -89,7 +89,7 @@ Para responder a esta cuestión, echemos un vistazo a [text-start.html](https://
 
 Sin embargo, cuando abres el documento en tu navegador, verás que el texto aparece... ¡como una masa enorme!
 
-![Una página web que muestra un muro de texto sin formato, porque no hay elementos en la página para estructurarlo.](https://mdn.mozillademos.org/files/12972/text-no-formatting.png)
+![Una página web que muestra un muro de texto sin formato, porque no hay elementos en la página para estructurarlo.](screen_shot_2017-03-29_at_09.20.35.png)
 
 Esto se debe a que no hay elementos que den estructura al contenido, por lo que el navegador no sabe qué es un encabezado y qué es un párrafo. Además:
 

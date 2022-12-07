@@ -51,9 +51,9 @@ Besides the {{domxref("PerformanceObserver","PerformanceObserver's")}} interface
 
 A summary of the interfaces' implementation status is provided below, including a link to more detailed information.
 
-- Performance interface extensions: As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
-- PerformanceEntry: As shown in the {{domxref("PerformanceEntry")}} interface's [Browser Compatibility](/Web/API/PerformanceEntry#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
-- Performance Observers {{experimental_inline}}: As shown in the {{domxref("PerformanceObserver")}} interface's [Browser Compatibility](/Web/API/PerformanceObserver#Browser_compatibility) table, this interface has no shipping implementations.
+- Performance interface extensions: As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/ja/docs/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
+- PerformanceEntry: As shown in the {{domxref("PerformanceEntry")}} interface's [Browser Compatibility](/ja/docs/Web/API/PerformanceEntry#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers and have less support on mobile devices.
+- Performance Observers {{experimental_inline}}: As shown in the {{domxref("PerformanceObserver")}} interface's [Browser Compatibility](/ja/docs/Web/API/PerformanceObserver#Browser_compatibility) table, this interface has no shipping implementations.
 
 To test your browser's support for these interfaces, run the [`perf-api-support`](http://mdn.github.io/web-performance/perf-api-support.html) application.
 

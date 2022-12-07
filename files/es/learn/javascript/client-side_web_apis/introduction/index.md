@@ -18,7 +18,7 @@ Las Interfaces de Programacion de Aplicaciones (APIs por sus siglas en inglés) 
 
 Como ejemplo, piensa en el suministro de electricidad de tu casa, apartamento, o cualquier otro edificio. Si quieres usar un electrodoméstico, simplemente lo conectas en un enchufe y funciona. No intentas conectarlo directamente a la fuente de alimentación — hacerlo sería muy ineficiente y, si no eres electricista, dificil y peligroso.
 
-![](https://mdn.mozillademos.org/files/14317/plug-socket.png)
+![](plug-socket.png)
 
 _Fuente de la imagen: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/9518184890/in/photostream/lightbox/) por [The Clear Communication People](https://www.flickr.com/photos/easy-pics/), en Flickr._
 
@@ -33,7 +33,7 @@ JavaScript del lado cliente, particularmente, tiene muchas APIs disponibles — 
 - **Las APIs de navegador** están integradas en tu navegador web y pueden exponer datos del navegador y del entorno informático circundante y hacer cosas complejas y útiles con él. Por ejemplo, la API de Geolocalización proporciona algunas construcciones simples de JavaScript para obtener datos de ubicación con los que, por ejemplo, trazar tu ubicación en un mapa de Google. Realmente, el navegador está haciendo uso de códigos de bajo nivel complejos en segundo plano (por ejemplo, C++) para comunicarse con el hardware GPS del dispositivo (o lo que esté disponible para determinar los datos de posición), recuperar datos de posición y devolverlos al entorno del navegador para su uso en tu código. Pero una vez más, la API se encarga de abstraer esta complejidad.
 - **Las APIs de terceros** no están incluídas por defecto en el navegador, y por lo general es necesario obtener el código e información desde algún lugar de la Web. Por ejemplo, [la API de Twitter](https://dev.twitter.com/overview/documentation) permite hacer cosas como mostrar tus últimos tweets en un sitio web. Proporciona un conjunto especial de construcciones que puedes usar para consultar el servicio de Twitter y devolver información específica.
 
-![](https://mdn.mozillademos.org/files/13508/browser.png)
+![](browser.png)
 
 ### Relacion entre JavaScript, APIs, y otras herramientas de JavaScript
 
@@ -231,11 +231,11 @@ Las características de las WebAPI están sujetas a las mismas consideraciones d
 
 Además, algunas WebAPIs solicitarán permiso al usuario para ser activadas cuando se produzcan las llamadas desde el código. Como ejemplo, habrás observado un cuadro de diálogo como éste al probar nuestro ejemplo anterior de [Geolocalización](/es/docs/Web/API/Geolocation):
 
-![](https://mdn.mozillademos.org/files/14313/location-permission.png)
+![](location-permission.png)
 
 La [Notifications API](/es/docs/Web/API/Notifications_API) solicita los permisos de una forma parecida:
 
-![](https://mdn.mozillademos.org/files/14315/notification-permission.png)
+![](notification-permission.png)
 
 Estos diálogos solicitando permiso se muestran al usuario por motivos de seguridad — si no estuvieran, los sitios podrían rastrear la localización sin que el usuario lo supiera o bombardearlo con un montón de notificaciones molestas.
 

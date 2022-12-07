@@ -61,17 +61,17 @@ Una URL está compuesta de diferentes partes, algunas obligatorias y otras opcio
 http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
 ```
 
-- ![Protocol](https://mdn.mozillademos.org/files/15766/mdn-url-protocol@x2_update.png)
+- ![Protocol](mdn-url-protocol@x2_update.png)
   - : `http` es el protocolo. La primera parte de la URL indica qué protocolo debe usar el navegador. Un protocolo es un método establecido para intercambiar o transferir datos alrededor de una red informática. Por lo general, para sitios web es el protocolo HTTP o su versión segura, HTTPS. La Web requiere uno de estos dos, pero los navegadores también saben cómo manejar otros protocolos como mailto: (para abrir un cliente de correo) o ftp: para manejar la transferencia de archivos, así que no se sorprenda si ve tales protocolos.
-- ![Domaine Name](https://mdn.mozillademos.org/files/8015/mdn-url-domain@x2.png)
+- ![Domaine Name](mdn-url-domain@x2.png)
   - : `www.example.com` es el nombre de dominio. Indica qué servidor web se solicita. Alternativamente, es posible usar directamente un {{Glossary("dirección IP")}}, pero debido a que es menos conveniente, no se usa con frecuencia en la Web.
-- ![Port](https://mdn.mozillademos.org/files/8017/mdn-url-port@x2.png)
+- ![Port](mdn-url-port@x2.png)
   - : `:80` es el puerto. Indica la "puerta" técnica utilizada para acceder a los recursos en el servidor web. Por lo general, se omite si el servidor web utiliza los puertos estándar del protocolo HTTP (80 para HTTP y 443 para HTTPS) para otorgar acceso a sus recursos. De lo contrario es obligatorio.
-- ![Path to the file](https://mdn.mozillademos.org/files/8019/mdn-url-path@x2.png)
+- ![Path to the file](mdn-url-path@x2.png)
   - : `/path/to/myfile.html` es la ruta al recurso en el servidor web. En los primeros días de la Web, una ruta como esta representaba la ubicación de un archivo físico en el servidor web. Hoy en día, es principalmente una abstracción manejada por servidores web sin ninguna realidad física.
-- ![Parameters](https://mdn.mozillademos.org/files/8021/mdn-url-parameters@x2.png)
+- ![Parameters](mdn-url-parameters@x2.png)
   - : `?key1=value1&key2=value2` son parámetros adicionales proporcionados al servidor web. Esos parámetros son una lista de pares clave/valor separados con el símbolo &. El servidor web puede usar esos parámetros para hacer cosas adicionales antes de devolver el recurso. Cada servidor web tiene sus propias reglas con respecto a los parámetros, y la única forma confiable de saber si un servidor web específico está manejando parámetros es preguntando al propietario del servidor web.
-- ![Anchor](https://mdn.mozillademos.org/files/8023/mdn-url-anchor@x2.png)
+- ![Anchor](mdn-url-anchor@x2.png)
   - : `#SomewhereInTheDocument` es un ancla para otra parte del recurso en sí. Un ancla representa una especie de "marcador" dentro del recurso, dando al navegador las instrucciones para mostrar el contenido ubicado en ese lugar "marcado". En un documento HTML, por ejemplo, el navegador se desplazará hasta el punto donde se define el ancla; en un video o documento de audio, el navegador intentará ir a la hora que representa el ancla. Vale la pena señalar que la parte después del #, también conocido como el identificador de fragmento, nunca se envía al servidor con la solicitud.
 
 > **Nota:** Existen [algunas partes extras y reglas extras](http://en.wikipedia.org/wiki/Uniform_Resource_Locator") con respecto a las URL, pero no son relevantes para usuarios habituales o desarrolladores web. No se preocupe por esto, no necesita conocerlos para construir y usar URL completamente funcionales.
