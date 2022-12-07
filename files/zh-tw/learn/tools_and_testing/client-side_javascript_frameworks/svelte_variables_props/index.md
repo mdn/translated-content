@@ -240,33 +240,33 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 
 然而，「x out of y items completed」標頭並未被更新。繼續閱讀以了解為什麼會發生這種情況以及我們如何解決它。
 
-## Reactive to-dos
+## 待辦事項反應性
 
-As we've already seen, every time the value of a component top-level variable is modified, Svelte knows how to update the UI. In our app, the `todos` array value is updated directly every time a to-do is toggled or deleted, and so Svelte will update the DOM automatically.
+正如我們所看到的，每次元件頂層變數的數值被修改時，Svelte 都知道如何更新使用者介面。在我們的應用程式中，每次切換或刪除待辦事項時都會直接地更新 `todos` 陣列數值，所以 Svelte 會自動地更新 DOM 。
 
-The same is not true for `totalTodos` and `completedTodos`, however. In the following code they are assigned a value when the component is instantiated and the script is executed, but after that, their values are not modified:
+然而，對於 `totalTodos` 和 `completedTodos` 來說情況並非如此。在下面的程式碼中，當元件被實例化且腳本被執行時，它們會被指定一個數值，但是在那之後，它們的數值不會被改變：
 
 ```js
 let totalTodos = todos.length
 let completedTodos = todos.filter((todo) => todo.completed).length
 ```
 
-We could recalculate them after toggling and removing to-dos, but there's an easier way to do it.
+我們可以在切換和刪除​​待辦事項後重新計算它們，但有一種更簡單的方式可以做到。
 
-We can tell Svelte that we want our `totalTodos` and `completedTodos` variables to be reactive by prefixing them with `$:`. Svelte will generate the code to automatically update them whenever data they depend on is changed.
+可以告訴 Svelte 我們想要 `totalTodos` 和 `completedTodos` 等變數藉由前綴 `$:`，使其具有反應性。Svelte 將產生程式碼以在它們相依的資料發生變化時自動更新它們。
 
-> **Note:** Svelte uses the `$:` [JavaScript label statement syntax](/zh-TW/docs/Web/JavaScript/Reference/Statements/label) to mark reactive statements. Just like the `export` keyword being used to declare props, this may look a little alien. This is another example in which Svelte takes advantage of valid JavaScript syntax and gives it a new purpose — in this case to mean "re-run this code whenever any of the referenced values change". Once you get used to it, there's no going back.
+> **注意：** Svelte 使用 `$:` [JavaScript 標記陳述語法](/zh-TW/docs/Web/JavaScript/Reference/Statements/label)來標記反應性陳述。像是用於宣告屬性的 `export` 關鍵字一樣，這可能看起來會有點陌生。但這是 Svelte 利用有效 JavaScript 語法並賦予其新用途的另一個例子——在這種情況下，意味著「每當任何參考的數值有變化時，則會重新執行此程式碼」。一旦習慣了，就無法回頭了。
 
-Update your `totalTodos` and `completedTodos` variable definitions inside `src/components/Todos.svelte` to look like so:
+更新 `src/components/Todos.svelte` 中的 `totalTodos` 和 `completedTodos` 變數定義，如下：
 
 ```js
 $: totalTodos = todos.length
 $: completedTodos = todos.filter((todo) => todo.completed).length
 ```
 
-If you check your app now, you'll see that the heading's numbers are updated when to-dos are completed or deleted. Nice!
+如果你現在檢查你的應用程式，當待辦事項完成或被刪除時，你將會看到標頭的數字被更新。做得好！
 
-Behind the scenes the Svelte compiler will parse and analyze our code to make a dependency tree, and then it will generate the JavaScript code to re-evaluate each reactive statement whenever one of their dependencies is updated. Reactivity in Svelte is implemented in a very lightweight and performant way, without using listeners, setters, getters, or any other complex mechanism.
+Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹，接著它會產生 JavaScript 程式碼以在其中一個相依項目被更新時，來重新評估每個反應性陳述。Svelte 的反應性以非常輕量和高性能的方法來實現，無須使用監聽器（listener）、設定器（setter）、取得器（getter）或任何其它複雜的機制。
 
 ## Adding new to-dos
 
