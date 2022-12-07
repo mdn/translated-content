@@ -8817,16 +8817,6 @@
       "lalo2013"
     ]
   },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2020-09-06T09:32:45.431Z",
-    "contributors": [
-      "Nachec",
-      "BrayanAvian",
-      "raecillacastellana",
-      "eljonims",
-      "eliasrodeloso"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-03-23T22:48:50.706Z",
     "contributors": ["miguelsp"]
@@ -8930,6 +8920,16 @@
   "Web/HTML/CORS_enabled_image": {
     "modified": "2019-03-23T22:46:06.691Z",
     "contributors": ["MrCesar107", "antoiba86", "vltamara"]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2020-09-06T09:32:45.431Z",
+    "contributors": [
+      "Nachec",
+      "BrayanAvian",
+      "raecillacastellana",
+      "eljonims",
+      "eliasrodeloso"
+    ]
   },
   "Web/HTML/Element": {
     "modified": "2020-07-13T03:12:39.708Z",
