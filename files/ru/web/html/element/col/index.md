@@ -63,23 +63,22 @@ translation_of: Web/HTML/Element/col
 {{htmlattrdef("span")}}
   - Этот атрибут содержит положительное целое число, указывающее количество последовательных столбцов, которые охватывает элемент `<col>`. Если он отсутствует, то его значение по умолчанию равно `1`.
 - {{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
-  - This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
-    - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
-    - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
-    - `middle`, which will center the text in the cell;
-    - and `top`, which will put the text as close to the top of the cell as it is possible.
-      > **Примечание:** Do not use this attribute as it is obsolete (and not supported) in the latest standard:
-      - Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
+  - Этот атрибут определяет выравнивание текста по вертикали в каждой ячейке столбца. Возможныу значения для этого атрибута:
+    - `baseline`, который поместит текст как можно ближе к нижней части ячейки, но выровняет его по [базовой](https://en.wikipedia.org/wiki/Baseline_%28typography%29) линии символов, а не по их нижней части. Если все символы имеют одинаковый размер, это имеет тот же эффект как `bottom`.
+    - `bottom`, который поместит текст как можно ближе к нижней части ячейки, насколько это возможно;
+    - `middle`, который будет центрировать текст в ячейке;
+    - и `top`, который поместит текст как можно ближе к верхней части ячейки, насколько это возможно.
+      > **Примечание:** Не используйте этот атрибут, поскольку он устарел (и не поддерживается) в последнем стандарте:
+      - Не пытайтесь установить {{cssxref("vertical-align")}} свойство на селекторе, дающее {{HTMLElement("col")}} элемент. Потому что {{HTMLElement("td")}} элементы не являются потомками {{HTMLElement("col")}} элементом, они не унаследуют это.
       >
-      > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("vertical-align")}} property can be used.
-      > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+      > - Если в таблице не используется {{htmlattrxref("colspan", "td")}} атрибут, используйте `td:nth-child(an+b)` CSS селектор где a - общее количество столбцов в таблице, а b - порядковое положение столбца в таблице. Только после этого селектора {{cssxref("vertical-align")}} свойство может быть использовано.
+      > - Если в таблице используется {{htmlattrxref("colspan", "td")}} атрибут, эффект может быть достигнут путем объединения соответствующих селекторов атрибутов CSS, таких как `[colspan= n]`, хотя это и не тривиально.
 
 - {{htmlattrdef("width")}} {{obsolete_inline("html5")}}
-  - This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `0.5*` also can be used.
-
+  - Этот атрибут определяет ширину по умолчанию для каждого столбца в текущей группе столбцов. В дополнение к стандартным значениям в пикселях и процентах, этот атрибут может принимать специальную форму `0*`, что означает, что ширина каждого столбца в группе должна быть минимальной шириной, необходимой для размещения содержимого столбца. Также можно использовать относительную ширину, такую как "0,5*".
 ## Пример
 
-Please see the {{HTMLElement("table")}} page for examples on `<col>`.
+Смотри {{HTMLElement("table")}} для примеров на `<col>`.
 
 ## Спецификации
 
