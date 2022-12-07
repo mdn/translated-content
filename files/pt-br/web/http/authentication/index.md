@@ -10,7 +10,7 @@ O HTTP fornece uma estrutura geral para controle de acesso e autenticação. A a
 
 {{RFC("7235")}} define a estrutura de autenticação HTTP que pode ser usada por um servidor para definir uma solicitação ("{{glossary("challenge")}}") do cliente e para um cliente fornecer informações de autenticação. A pergunta e resposta segue um caminho como esse: O servidor responde ao cliente com uma mensagem do tipo {{HTTPStatus("401")}} (Não autorizado) e fornece informações de como autorizar com um cabeçalho de resposta {{HTTPHeader("WWW-Authenticate")}} contendo ao menos uma solicitação. Um cliente que deseja autenticar-se com um servidor pode fazer isso incluindo um campo de cabeçalho de solicitação {{HTTPHeader("WWW-Authenticate")}} com as credenciais. Usualmente um cliente apresentará uma solicitação de senha ao usuário e, em seguida, emitirá uma solicitação incluindo o cabeçalho `Authorization` correto.
 
-![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](https://mdn.mozillademos.org/files/14689/HTTPAuth.png)
+![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](httpauth.png)
 
 No caso de uma autorização "Basic" (como a mostrada na figura), a troca **deve** acontecer por meio de uma conexão HTTP (TLS) para ser segura.
 

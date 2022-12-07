@@ -69,7 +69,7 @@ slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ### Date 对象的方法
 
 - {{jsxref("Global_Objects/Date/getYear", "getYear")}} 方法和 {{jsxref("Global_Objects/Date/setYear", "setYear")}} 方法受千年虫问题（Year-2000-Problem）影响，已被 {{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} 方法和 {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}} 方法代替。
-- 应当使用 {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} 方法代替已废弃的 {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} 方法。
+- 应当使用 {{jsxref("Global_Objects/Date/toISOString", "toISOString")}} 方法代替已废弃的 `toGMTString` 方法。
 - {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} 已被废弃。
 
 ### 函数

@@ -33,7 +33,7 @@ Loops, loops, loops. Além de estarem associados a [populares cereais matinais](
 
 Vamos considerar o caso de um agricultor que quer se certificar de que ele terá comida suficiente para alimentar sua família durante a semana. Ele pode usar o seguinte loop para conseguir isso:
 
-![](https://mdn.mozillademos.org/files/13755/loop_js-02-farm.png)
+![](loop_js-02-farm.png)
 
 Um loop geralmente possui um ou mais dos seguintes itens:
 
