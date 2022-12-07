@@ -1,5 +1,5 @@
 ---
-title: <a>: элемент ссылки
+title: <a> - элемент ссылки
 slug: Web/HTML/Element/A
 tags:
   - HTML
