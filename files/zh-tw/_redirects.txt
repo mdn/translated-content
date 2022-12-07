@@ -669,6 +669,7 @@
 /zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Using_images
 /zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/基礎動畫	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 /zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/最佳化_canvas	/zh-TW/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
+/zh-TW/docs/Web/Guide/HTML/Content_categories	/zh-TW/docs/Web/HTML/Content_categories
 /zh-TW/docs/Web/Guide/HTML/Drag_and_drop	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API
 /zh-TW/docs/Web/Guide/HTML/Drag_operations	/zh-TW/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
 /zh-TW/docs/Web/Guide/HTML/Event_attributes	/zh-TW/docs/Learn/JavaScript/Building_blocks/Events
