@@ -4,6 +4,8 @@ slug: Web/HTML/Content_categories
 original_slug: Web/Guide/HTML/Content_categories
 ---
 
+{{HTMLSidebar}}
+
 每個 HTML 元素都要遵從該元素可擁有何種內容規則，這些規則被歸為幾種常用的內容模型（content model）。每個 HTML 元素都屬於零個、一個、或數個內容的模型，所有元素內容的設置規則都要遵從 HTML 一致性文件。
 
 內容類型有三種類型：
