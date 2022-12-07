@@ -1,11 +1,11 @@
 ---
-title: <blockquote>
+title: <blockquote> - элемент цитаты
 slug: Web/HTML/Element/blockquote
 translation_of: Web/HTML/Element/blockquote
 ---
 ## Описание
 
-**HTML-элемент `<blockquote>` **(от англ. _Block Quotation_) указывает на то, что заключённый в нем текст является развёрнутой цитатой. Обычно он (текст) визуально выделяется наклонным (смотри [Примечание](/ru/docs/HTML/Element/blockquote#Notes), где говорится о том, как это изменить). URI на источник цитаты можно указать в атрибуте **cite**, тогда как текстовое представление источника может быть задано элементом {{HTMLElement("cite")}}.
+**HTML-элемент `<blockquote>`** (от англ. _Block Quotation_) указывает на то, что заключённый в нем текст является развёрнутой цитатой. Обычно он (текст) визуально выделяется наклонным (смотри [Примечание](/ru/docs/HTML/Element/blockquote#Notes), где говорится о том, как это изменить). URI на источник цитаты можно указать в атрибуте **cite**, тогда как текстовое представление источника может быть задано элементом {{HTMLElement("cite")}}.
 
 {{EmbedInteractiveExample("pages/tabbed/blockquote.html","tabbed-standard")}}
 
