@@ -87,7 +87,7 @@ El encabezamiento del documento:
 
 The following screenshot shows an example of what the letter might look like after being marked up.
 
-![](https://mdn.mozillademos.org/files/12291/letter-screengrab.png)
+![](letter-update.png)
 
 ## Evaluación
 

@@ -182,8 +182,6 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
   - : 将指定 {{jsxref("Date")}} 对象转换成 ISO 格式表述的字符串并返回。
 - {{jsxref("Date.prototype.toJSON()")}}
   - : 返回指定 {{jsxref("Date")}} 对象调用 {{jsxref("Date.prototype.toISOString()", "toISOString()")}} 方法的返回值。在 {{jsxref("JSON.stringify()")}} 中使用。
-- {{jsxref("Date.prototype.toGMTString()")}}
-  - : 基于 GMT (UTC) 时区来返回一个表述指定 {{jsxref("Date")}} 对象的字符串形式。请改用 {{jsxref("Date.prototype.toUTCString()", "toUTCString()")}}。
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : 返回一个表述指定 {{jsxref("Date")}} 对象的日期部分字符串。该字符串格式因不同语言而不同。
 - {{jsxref("Date.prototype.toLocaleString()")}}

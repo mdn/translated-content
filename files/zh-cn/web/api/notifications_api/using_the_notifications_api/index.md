@@ -13,7 +13,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 
 ![](android-notification.png)
 
-![](https://mdn.mozillademos.org/files/10961/mac-notification.png)
+![](mac-notification.png)
 
 系统通知系统当然会因平台和浏览器而异，但无需担心，通知 API 被编写为通用的，足以与大多数系统通知系统兼容。
 
