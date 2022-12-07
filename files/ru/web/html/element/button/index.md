@@ -1,5 +1,5 @@
 ---
-title: <button>
+title: <button> - элемент кнопки
 slug: Web/HTML/Element/button
 tags:
   - Element
@@ -55,15 +55,15 @@ original_slug: Web/HTML/Element/кнопка
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same way as `_self`.
 - {{htmlattrdef("name")}}
-  - : The name of the button, which is submitted with the form data.
+  - : Название кнопки, которая отправляется вместе с данными формы.
 - {{htmlattrdef("type")}}
-  - : The type of the button. Possible values are:
-    - `submit`: The button submits the form data to the server. This is the default if the attribute is not specified, or if the attribute is dynamically changed to an empty or invalid value.
-    - `reset`: The button resets all the controls to their initial values.
-    - `button`: The button has no default behavior. It can have client-side scripts associated with the element's events, which are triggered when the events occur.
-    - menu: The button opens a popup menu defined via its designated {{HTMLElement("menu")}} element.
+  - : Устанавливает тип кнопки. Достпуные значения:
+    - `submit`: Кнопка отправляет данные формы на сервер. Это значение по умолчанию, если атрибут не указан или если атрибут динамически изменен на пустое или недопустимое значение.
+    - `reset`: Кнопка сбрасывает все элементы управления к их начальным значениям. Удаляет данные, введенные в форму.
+    - `button`: Кнопка не имеет поведения по умолчанию. У него могут быть сценарии на стороне клиента, связанные с событиями элемента, которые запускаются при возникновении событий.
+    - `menu`: Кнопка открывает всплывающее меню, определяемое с помощью соответствующего {{HTMLElement("menu")}} элемента.
 - {{htmlattrdef("value")}}
-  - : The initial value of the button.
+  - : Начальное значение кнопки.
 
 ## Пример
 
