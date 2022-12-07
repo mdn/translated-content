@@ -3,7 +3,7 @@ title: Compositing and clipping
 slug: Web/API/Canvas_API/Tutorial/Compositing
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 En todos nuestros [ejemplos a](/es/docs/Web/API/Canvas_API/Tutorial/Transformations)nteriores, las formas siempre fueron dibujadas una encima de la anterior. Estos es más que adecuado para la mayoría de las situaciones pero se limita al orden compuesto de las figuras. Podemos, sin embargo, cambiar este comportamiento estableciendo el valor de la propiedad `globalCompositeOperation`. Además, la proeidad `clip` nos permite ocultar partes de figuras que no queremos mostrar.
 
