@@ -1,5 +1,5 @@
 ---
-title: <col>
+title: '<col> - элемент стобца страницы'
 slug: Web/HTML/Element/col
 tags:
   - HTML
@@ -35,17 +35,17 @@ translation_of: Web/HTML/Element/col
     - `justify`, вставляет пробелы в текстовый контент так, чтобы контент был выравнен по ширине
     - `char`, выравнивает текстовый контент по специальному символу с минимальным смещением, определяемым атрибутами {{htmlattrxref("char", "col")}} и {{htmlattrxref("charoff", "col")}} {{unimplemented_inline(2212)}}.Если этот атрибут не установлен, его значение будет переопределено от {{htmlattrxref("align", "colgroup")}} элемента {{HTMLElement("colgroup")}}, к которому этот элемент принадлежит. Если его также нет, предполагается значение `left`.
 
-      > **Примечание:**Не используйте этот атрибут, поскольку он устарел (не поддерживается) в последнем стандарте.
+      > **Примечание:** Не используйте этот атрибут, поскольку он устарел (не поддерживается) в последнем стандарте.
       > To achieve the same effect as the `left`, `center`, `right` or `justify` values:
       >
-      > - Do not try to set the {{cssxref("text-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
-      > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector. Set `a` to zero and `b` to the position of the column in the table, e.g. `td:nth-child(2) { text-align: right; }` to right-align the second column.
-      > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
+      > - Не пытайтесь установить {{cssxref("text-align")}} свойство на селекторе, дающем {{HTMLElement("col")}} элемент. Потому что {{HTMLElement("td")}} элементы не являются потомками {{HTMLElement("col")}} элемента, они не унаследуют его.
+      > - Если таблица не использует {{htmlattrxref("colspan", "td")}} атрибут, используйте `td:nth-child(an+b)` CSS селектор. Установите `a` равным 0, а `b` - положению столбца в таблице, например, пример `td:nth-child(2) { text-align: right; }` тобы выровнять второй столбец по правому краю.
+      > - Если таблица использует {{htmlattrxref("colspan", "td")}} атрибут, эффект может быть достигнут путем объединения соответствующих атрибутов CSS `[colspan=n]`, хотя это и не тривиально.
       >
-      > - To achieve the same effect as the `char` value, in CSS3, you can use the value of the {{htmlattrxref("char", "col")}} as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+      > - Чтобы достичь того же эффекта, что `char` значение, в CSS3, вы можете использовать значение {{htmlattrxref("char", "col")}} в качестве значения {{cssxref("text-align")}} свойства {{unimplemented_inline}}.
 
 - {{htmlattrdef("bgcolor")}} {{Non-standard_inline}}
-  - | : Этот атрибут определяет цвет фона каждой ячейки столбца. Это один из 6-и значных кодов в шестнадцатеричной системе счисления, определённый как [sRGB](https://www.w3.org/Graphics/Color/sRGB) с префиксом '#'. Можно использовать одну из шестнадцати предопределённых строк: |                       | `black` = "#000000" |                      | `green` = "#008000"                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+  - | This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If align is not set to char, this attribute is ignored. Этот атрибут определяет цвет фона каждой ячейки столбца. Это один из 6-и значных кодов в шестнадцатеричной системе счисления, определённый как [sRGB](https://www.w3.org/Graphics/Color/sRGB) с префиксом '#'. Можно использовать одну из шестнадцати предопределённых строк: |                       | `black` = "#000000" |                      | `green` = "#008000"                                                                                                                                                                                                                                                                                                                                                                                                                                          |
     | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
     |                                                                                                                                                                                                                                                                                 | `silver` = "#C0C0C0"  |                     | `lime` = "#00FF00"   |
     |                                                                                                                                                                                                                                                                                 | `gray` = "#808080"    |                     | `olive` = "#808000"  |
@@ -55,27 +55,27 @@ translation_of: Web/HTML/Element/col
     |                                                                                                                                                                                                                                                                                 | `purple` = "#800080"  |                     | `teal` = "#008080"   |
     |                                                                                                                                                                                                                                                                                 | `fuchsia` = "#FF00FF" |                     | `aqua` = "#00FFFF"   | > **Примечание:** **Замечание по использованию:** Не используй этот атрибут, поскольку он нестандартный и реализован только в некоторых версиях Microsoft Internet Explorer: элемент {{HTMLElement("col")}} должно быть стилизован с использованием [CSS](/ru/docs/CSS). Для получения подобного эффекта, используй свойство [CSS](/ru/docs/CSS) {{cssxref("background-color")}}, для соответствующих элементов {{HTMLElement("td")}}. |
 - {{htmlattrdef("char")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
-  - : This attribute is used to set the character to align the cells in a column on. Typical values for this include a period (.) when attempting to align numbers or monetary values. If {{htmlattrxref("align", "col")}} is not set to `char`, this attribute is ignored.
-    > **Примечание:**Do not use this attribute as it is obsolete (and not supported) in the latest standard. To achieve the same effect as the {{htmlattrxref("char", "col")}}, in CSS3, you can use the character set using the {{htmlattrxref("char", "col")}} attribute as the value of the {{cssxref("text-align")}} property {{unimplemented_inline}}.
+  - Этот атрибут используется для установки символа для выравнивания ячеек в столбце по. Типичные значения для этого включают точку (.) при попытке выровнять цифры или денежные значения. Если {{htmlattrxref("align", "col")}} не задано значение `char`, этот атрибут игнорируется.
+    > **Примечание:** Не используйте этот атрибут, поскольку он устарел (и не поддерживается) в последнем стандарте. Для достижения того же эффекта, что и {{htmlattrxref("char", "col")}}, в CSS3 вы можете использовать набор символов, используя атрибут {{htmlattrxref("char", "col")}} в качестве значения {{cssxref("text-выровнять")}} свойство {{unimplemented_inline}}.
 - {{htmlattrdef("charoff")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
-  - : This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
-    > **Примечание:**Do not use this attribute as it is obsolete (and not supported) in the latest standard.
-- {{htmlattrdef("span")}}
-  - : This attribute contains a positive integer indicating the number of consecutive columns the `<col>` element spans. If not present, its default value is `1`.
+  - This attribute is used to indicate the number of characters to offset the column data from the alignment characters specified by the **char** attribute.
+    > **Примечание:** Не используйте этот атрибут, поскольку он устарел (и не поддерживается) в последнем стандарте.
+{{htmlattrdef("span")}}
+  - Этот атрибут содержит положительное целое число, указывающее количество последовательных столбцов, которые охватывает элемент `<col>`. Если он отсутствует, то его значение по умолчанию равно `1`.
 - {{htmlattrdef("valign")}} {{Deprecated_inline("html4.01")}}, {{obsolete_inline("html5")}}
-  - : This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
+  - This attribute specifies the vertical alignment of the text within each cell of the column. Possible values for this attribute are:
     - `baseline`, which will put the text as close to the bottom of the cell as it is possible, but align it on the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom of them. If characters are all of the size, this has the same effect as `bottom`.
     - `bottom`, which will put the text as close to the bottom of the cell as it is possible;
     - `middle`, which will center the text in the cell;
     - and `top`, which will put the text as close to the top of the cell as it is possible.
-      > **Примечание:**Do not use this attribute as it is obsolete (and not supported) in the latest standard:
+      > **Примечание:** Do not use this attribute as it is obsolete (and not supported) in the latest standard:
       - Do not try to set the {{cssxref("vertical-align")}} property on a selector giving a {{HTMLElement("col")}} element. Because {{HTMLElement("td")}} elements are not descendant of the {{HTMLElement("col")}} element, they won't inherit it.
       >
       > - If the table doesn't use a {{htmlattrxref("colspan", "td")}} attribute, use the `td:nth-child(an+b)` CSS selector where a is the total number of the columns in the table and b is the ordinal position of the column in the table. Only after this selector the {{cssxref("vertical-align")}} property can be used.
       > - If the table does use a {{htmlattrxref("colspan", "td")}} attribute, the effect can be achieved by combining adequate CSS attribute selectors like `[colspan=n]`, though this is not trivial.
 
 - {{htmlattrdef("width")}} {{obsolete_inline("html5")}}
-  - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `0.5*` also can be used.
+  - This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `0.5*` also can be used.
 
 ## Пример
 
