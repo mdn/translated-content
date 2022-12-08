@@ -3,7 +3,7 @@ title: 使用着色器将颜色应用于 WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
 在[之前的展示](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)中我们已经创建好了一个正方形，接下来我们要做的就是给它添加一抹色彩。添加颜色可以通过修改着色器来实现。
 
