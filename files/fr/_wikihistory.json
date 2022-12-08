@@ -3637,17 +3637,9 @@
       "jswisher"
     ]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2019-01-16T18:23:52.592Z",
-    "contributors": ["wbamberg", "Porkepix", "Baball", "Sheppy"]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2020-09-03T03:23:25.806Z",
     "contributors": ["Voulto", "wbamberg", "jswisher"]
-  },
-  "MDN/Tools": {
-    "modified": "2020-09-30T16:48:32.947Z",
-    "contributors": ["chrisdavidmills", "Voulto", "wbamberg", "jswisher"]
   },
   "MDN/Writing_guidelines": {
     "modified": "2019-03-24T00:12:46.908Z",
@@ -19683,17 +19675,6 @@
       "darnuria"
     ]
   },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2020-03-31T11:01:50.986Z",
-    "contributors": [
-      "tristantheb",
-      "SphinxKnight",
-      "loella16",
-      "marie-ototoi",
-      "tregagnon",
-      "xaky"
-    ]
-  },
   "Web/Guide/Introduction_to_Web_development": {
     "modified": "2019-03-24T00:03:04.501Z",
     "contributors": ["Jeremie", "fscholz", "BenoitL"]
@@ -19793,6 +19774,17 @@
   "Web/HTML/CORS_enabled_image": {
     "modified": "2019-04-04T15:03:02.054Z",
     "contributors": ["SphinxKnight", "Lotfire", "tregagnon"]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2020-03-31T11:01:50.986Z",
+    "contributors": [
+      "tristantheb",
+      "SphinxKnight",
+      "loella16",
+      "marie-ototoi",
+      "tregagnon",
+      "xaky"
+    ]
   },
   "Web/HTML/Date_and_time_formats": {
     "modified": "2019-07-21T04:39:30.291Z",
@@ -21994,23 +21986,6 @@
       "Mario"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:36:54.184Z",
-    "contributors": [
-      "SphinxKnight",
-      "Dralyab",
-      "Gasperowicz",
-      "tregagnon",
-      "teoli",
-      "Jeremie",
-      "Delapouite",
-      "fscholz",
-      "Mgjbot",
-      "BenoitL",
-      "Extra-Nitro",
-      "VincentN"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-03-14T03:08:28.899Z",
     "contributors": [
@@ -22381,10 +22356,6 @@
       "Mortys",
       "matteodelabre"
     ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:38:26.136Z",
-    "contributors": ["SphinxKnight", "teoli", "pchantry", "Goofy"]
   },
   "Web/JavaScript/Reference/Classes": {
     "modified": "2020-10-15T21:33:49.394Z",
@@ -23695,10 +23666,6 @@
   "Web/JavaScript/Reference/Global_Objects/Date/toDateString": {
     "modified": "2020-10-15T21:27:17.686Z",
     "contributors": ["SphinxKnight", "edspeedy", "teoli", "tregagnon"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Date/toGMTString": {
-    "modified": "2020-10-15T21:27:18.821Z",
-    "contributors": ["SphinxKnight", "teoli", "tregagnon"]
   },
   "Web/JavaScript/Reference/Global_Objects/Date/toISOString": {
     "modified": "2020-10-15T21:27:16.901Z",
@@ -28042,5 +28009,38 @@
       "si0ls",
       "dattaz"
     ]
+  },
+  "conflicting/MDN/Contribute": {
+    "modified": "2019-01-16T18:23:52.592Z",
+    "contributors": ["wbamberg", "Porkepix", "Baball", "Sheppy"]
+  },
+  "conflicting/Web/JavaScript": {
+    "modified": "2020-03-12T19:36:54.184Z",
+    "contributors": [
+      "SphinxKnight",
+      "Dralyab",
+      "Gasperowicz",
+      "tregagnon",
+      "teoli",
+      "Jeremie",
+      "Delapouite",
+      "fscholz",
+      "Mgjbot",
+      "BenoitL",
+      "Extra-Nitro",
+      "VincentN"
+    ]
+  },
+  "conflicting/Web/JavaScript/Reference": {
+    "modified": "2020-03-12T19:38:26.136Z",
+    "contributors": ["SphinxKnight", "teoli", "pchantry", "Goofy"]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString": {
+    "modified": "2020-10-15T21:27:18.821Z",
+    "contributors": ["SphinxKnight", "teoli", "tregagnon"]
+  },
+  "orphaned/MDN/Tools": {
+    "modified": "2020-09-30T16:48:32.947Z",
+    "contributors": ["chrisdavidmills", "Voulto", "wbamberg", "jswisher"]
   }
 }

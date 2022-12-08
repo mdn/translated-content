@@ -1,11 +1,11 @@
 ---
 title: À propos de cette référence
-slug: Web/JavaScript/Reference/About
+slug: conflicting/Web/JavaScript/Reference
 tags:
   - JavaScript
   - Reference
 translation_of: Web/JavaScript/Reference/About
-original_slug: Web/JavaScript/Reference/A_propos
+original_slug: Web/JavaScript/Reference/About
 ---
 
 {{JsSidebar}}

@@ -1,13 +1,13 @@
 ---
 title: Catégories de contenu
-slug: Web/Guide/HTML/Content_categories
+slug: Web/HTML/Content_categories
 tags:
   - Avancé
   - Contenus
   - Guide
   - HTML
 translation_of: Web/Guide/HTML/Content_categories
-original_slug: Web/Guide/HTML/Catégories_de_contenu
+original_slug: Web/Guide/HTML/Content_categories
 ---
 
 Chaque élément [HTML](/fr/docs/Web/HTML) est membre d'un certain nombre de catégories de contenu qui regroupent des éléments partageant un ensemble de caractéristiques. Ceci est un regroupement lâche, en ce sens qu'il ne crée pas réellement de relation entre les éléments de ces types, mais il aide à définir et à décrire leur comportement et les règles associées qu'ils doivent respecter, en particulier lorsque l'on entre dans leurs détails complexes. Il est également possible que les éléments ne soient membres d'aucune de ces catégories.

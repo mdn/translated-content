@@ -1,10 +1,11 @@
 ---
 title: Guides "Comment faire"
-slug: MDN/Contribute/Howto
+slug: conflicting/MDN/Contribute
 tags:
   - Landing
   - MDN Meta
 translation_of: MDN/Contribute/Howto
+original_slug: MDN/Contribute/Howto
 ---
 
 {{MDNSidebar}}

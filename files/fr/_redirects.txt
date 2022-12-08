@@ -1825,7 +1825,7 @@
 /fr/docs/HTML/Attributes	/fr/docs/Web/HTML/Attributes
 /fr/docs/HTML/Attributs	/fr/docs/Web/HTML/Attributes
 /fr/docs/HTML/Canvas	/fr/docs/Web/API/Canvas_API
-/fr/docs/HTML/Catégorie_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
+/fr/docs/HTML/Catégorie_de_contenu	/fr/docs/Web/HTML/Content_categories
 /fr/docs/HTML/Contenu_editable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/HTML/Element	/fr/docs/Web/HTML/Element
@@ -2075,7 +2075,7 @@
 /fr/docs/Introduction_à_la_cryptographie_à_clef_publique:Signatures_numériques	/fr/docs/Glossary/Signature/Security
 /fr/docs/JSON	/fr/docs/Glossary/JSON
 /fr/docs/JavaScript	/fr/docs/Web/JavaScript
-/fr/docs/JavaScript/A_propos	/fr/docs/Web/JavaScript/About_JavaScript
+/fr/docs/JavaScript/A_propos	/fr/docs/conflicting/Web/JavaScript
 /fr/docs/JavaScript/A_re-introduction_to_JavaScript	/fr/docs/Web/JavaScript/Language_Overview
 /fr/docs/JavaScript/Autres_outils_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /fr/docs/JavaScript/Gestion_de_la_mémoire	/fr/docs/Web/JavaScript/Memory_Management
@@ -2148,7 +2148,7 @@
 /fr/docs/JavaScript/Language_Resources	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
 /fr/docs/JavaScript/Les_différents_tests_d_égalité_comment_les_utiliser	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/JavaScript/Reference	/fr/docs/Web/JavaScript/Reference
-/fr/docs/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference/About
+/fr/docs/JavaScript/Reference/A_propos	/fr/docs/conflicting/Web/JavaScript/Reference
 /fr/docs/JavaScript/Reference/A_propos/Conventions_d_écriture	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Reference/Annexes	/fr/docs/Web/JavaScript/Reference
 /fr/docs/JavaScript/Reference/Annexes/Annexe_-_Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
@@ -2298,7 +2298,7 @@
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/setUTCSeconds	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/setYear	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/setYear
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/toDateString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString
-/fr/docs/JavaScript/Reference/Objets_globaux/Date/toGMTString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString
+/fr/docs/JavaScript/Reference/Objets_globaux/Date/toGMTString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/toISOString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/toJSON	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON
 /fr/docs/JavaScript/Reference/Objets_globaux/Date/toLocaleDateString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
@@ -2637,10 +2637,10 @@
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Propriétés_globales/Infinity	/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Propriétés_globales/NaN	/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /fr/docs/JavaScript/Reference/Référence_JavaScript/Propriétés_globales/undefined	/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
-/fr/docs/JavaScript/Reference/Référence_JavaScript/À_propos	/fr/docs/Web/JavaScript/About_JavaScript
+/fr/docs/JavaScript/Reference/Référence_JavaScript/À_propos	/fr/docs/conflicting/Web/JavaScript
 /fr/docs/JavaScript/Reference/Référence_JavaScript/À_propos/Conventions_d'écriture	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Référence_JavaScript	/fr/docs/Web/JavaScript/Reference
-/fr/docs/JavaScript/Référence_JavaScript/A_propos	/fr/docs/Web/JavaScript/Reference/About
+/fr/docs/JavaScript/Référence_JavaScript/A_propos	/fr/docs/conflicting/Web/JavaScript/Reference
 /fr/docs/JavaScript/Référence_JavaScript/Annexes	/fr/docs/Web/JavaScript/Reference
 /fr/docs/JavaScript/Référence_JavaScript/Annexes/Annexe_-_Mots_réservés	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords
 /fr/docs/JavaScript/Référence_JavaScript/Annexes/Fonctionnalités_dépréciées	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
@@ -2860,7 +2860,7 @@
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Propriétés_globales/Infinity	/fr/docs/Web/JavaScript/Reference/Global_Objects/Infinity
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Propriétés_globales/NaN	/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/Propriétés_globales/undefined	/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined
-/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos	/fr/docs/Web/JavaScript/About_JavaScript
+/fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos	/fr/docs/conflicting/Web/JavaScript
 /fr/docs/JavaScript/Référence_JavaScript/Référence_JavaScript/À_propos/Conventions_d'écriture	/fr/docs/Web/JavaScript
 /fr/docs/JavaScript/Same_origin_policy_for_JavaScript	/fr/docs/Web/Security/Same-origin_policy
 /fr/docs/JavaScript/Shells	/fr/docs/Web/JavaScript/JavaScript_technologies_overview
@@ -3032,6 +3032,7 @@
 /fr/docs/MDN/Contribute/GitHub_best_practices	/fr/docs/MDN/Community/Issues
 /fr/docs/MDN/Contribute/GitHub_cheatsheet	/fr/docs/MDN/Community/Issues
 /fr/docs/MDN/Contribute/Help_beginners	/fr/docs/MDN/Community/Learn_forum
+/fr/docs/MDN/Contribute/Howto	/fr/docs/conflicting/MDN/Contribute
 /fr/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/fr/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /fr/docs/MDN/Contribute/Howto/Create_and_edit_pages	/fr/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /fr/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/fr/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
@@ -3040,7 +3041,7 @@
 /fr/docs/MDN/Contribute/Open_source_etiquette	/fr/docs/MDN/Community/Open_source_etiquette
 /fr/docs/MDN/Contribute/Structures/Macros	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-/fr/docs/MDN/Contribute/Tools	/fr/docs/MDN/Tools
+/fr/docs/MDN/Contribute/Tools	/fr/docs/orphaned/MDN/Tools
 /fr/docs/MDN/Contribute/Where_is_everything	/fr/docs/MDN/Community/Contributing/Our_repositories
 /fr/docs/MDN/Débuter_sur_MDN	/fr/docs/MDN/Community/Contributing/Getting_started
 /fr/docs/MDN/Feedback	/fr/docs/MDN/Community
@@ -3062,7 +3063,8 @@
 /fr/docs/MDN/Structures/Live_samples	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/MDN/Structures/Macros	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/MDN/Structures/Macros/Commonly-used_macros	/fr/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
-/fr/docs/MDN/User_guide	/fr/docs/MDN/Tools
+/fr/docs/MDN/Tools	/fr/docs/orphaned/MDN/Tools
+/fr/docs/MDN/User_guide	/fr/docs/orphaned/MDN/Tools
 /fr/docs/MDN/Yari	https://github.com/mdn/yari/tree/main/docs/what-yari-does.md
 /fr/docs/MDN_a_dix_ans	/fr/docs/MDN/At_ten
 /fr/docs/MDN_a_dix_ans/Contribuer_à_MDN	/fr/docs/MDN/Contribute
@@ -3354,7 +3356,7 @@
 /fr/docs/Précis_CSS_2:Tout_en_un	/fr/docs/Web/CSS/Reference
 /fr/docs/Référence_DOM_Gecko	/fr/docs/Glossary/DOM
 /fr/docs/Référence_de_JavaScript_1.5_Core	/fr/docs/Web/JavaScript/Reference
-/fr/docs/Référence_de_JavaScript_1.5_Core/A_propos_de_cette_reference	/fr/docs/Web/JavaScript/Reference/About
+/fr/docs/Référence_de_JavaScript_1.5_Core/A_propos_de_cette_reference	/fr/docs/conflicting/Web/JavaScript/Reference
 /fr/docs/Référence_de_JavaScript_1.5_Core/Fonctions_et_portee_des_fonctions	/fr/docs/Web/JavaScript/Reference/Functions
 /fr/docs/Référence_de_JavaScript_1.5_Core/Fonctions_et_portee_des_fonctions/Strict_mode	/fr/docs/Web/JavaScript/Reference/Strict_mode
 /fr/docs/Référence_de_JavaScript_1.5_Core/Fonctions_et_portee_des_fonctions/arguments	/fr/docs/Web/JavaScript/Reference/Functions/arguments
@@ -4618,7 +4620,8 @@
 /fr/docs/Web/Guide/Graphics/Dessiner_avec_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/Guide/HTML	/fr/docs/Learn/HTML
 /fr/docs/Web/Guide/HTML/Astuces_de_création_de_pages_HTML_à_affichage_rapide	/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
-/fr/docs/Web/Guide/HTML/Catégories_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
+/fr/docs/Web/Guide/HTML/Catégories_de_contenu	/fr/docs/Web/HTML/Content_categories
+/fr/docs/Web/Guide/HTML/Content_categories	/fr/docs/Web/HTML/Content_categories
 /fr/docs/Web/Guide/HTML/Editable_content	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/Guide/HTML/Formulaires	/fr/docs/Learn/Forms
 /fr/docs/Web/Guide/HTML/Formulaires/Advanced_styling_for_HTML_forms	/fr/docs/Learn/Forms/Advanced_form_styling
@@ -4701,7 +4704,7 @@
 /fr/docs/Web/HTML/Attributs_universels/x-ms-acceleratorkey	/fr/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey
 /fr/docs/Web/HTML/Attributs_universels/x-ms-format-detection	/fr/docs/Web/HTML/Global_attributes/x-ms-format-detection
 /fr/docs/Web/HTML/Canvas	/fr/docs/Web/API/Canvas_API
-/fr/docs/Web/HTML/Catégorie_de_contenu	/fr/docs/Web/Guide/HTML/Content_categories
+/fr/docs/Web/HTML/Catégorie_de_contenu	/fr/docs/Web/HTML/Content_categories
 /fr/docs/Web/HTML/Contenu_editable	/fr/docs/Web/HTML/Global_attributes/contenteditable
 /fr/docs/Web/HTML/Controler_la_verification_de_orthographe_dans_les_formulaires_HTML	/fr/docs/Web/HTML/Global_attributes/spellcheck
 /fr/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/fr/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
@@ -4778,8 +4781,9 @@
 /fr/docs/Web/HTTP/Méthode/TRACE	/fr/docs/Web/HTTP/Methods/TRACE
 /fr/docs/Web/HTTP/Public_Key_Pinning	/fr/docs/Web/Security/Certificate_Transparency
 /fr/docs/Web/HTTP/Requêtes_conditionnelles	/fr/docs/Web/HTTP/Conditional_requests
-/fr/docs/Web/JavaScript/A_propos	/fr/docs/Web/JavaScript/About_JavaScript
+/fr/docs/Web/JavaScript/A_propos	/fr/docs/conflicting/Web/JavaScript
 /fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/fr/docs/Web/JavaScript/Language_Overview
+/fr/docs/Web/JavaScript/About_JavaScript	/fr/docs/conflicting/Web/JavaScript
 /fr/docs/Web/JavaScript/Autres_outils_JavaScript	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement	/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
 /fr/docs/Web/JavaScript/Concurrence_et_boucle_des_événements	/fr/docs/Web/JavaScript/EventLoop
@@ -4831,7 +4835,8 @@
 /fr/docs/Web/JavaScript/Les_différents_tests_d_égalité	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/Web/JavaScript/Les_différents_tests_d_égalité_comment_les_utiliser	/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /fr/docs/Web/JavaScript/Performance_les_dangers_liés_à_la_modification_de_Prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-/fr/docs/Web/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference/About
+/fr/docs/Web/JavaScript/Reference/A_propos	/fr/docs/conflicting/Web/JavaScript/Reference
+/fr/docs/Web/JavaScript/Reference/About	/fr/docs/conflicting/Web/JavaScript/Reference
 /fr/docs/Web/JavaScript/Reference/Classes/Class_fields	/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /fr/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/fr/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /fr/docs/Web/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
@@ -4937,12 +4942,16 @@
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Collator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/toString
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
+/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segments/containing	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/containing
 /fr/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag	/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl
 /fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource	/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toString
@@ -5195,7 +5204,7 @@
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/setUTCSeconds	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/setYear	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/setYear
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toDateString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toDateString
-/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toGMTString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toGMTString
+/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toGMTString	/fr/docs/conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toISOString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toJSON	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toJSON
 /fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toLocaleDateString	/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
@@ -6232,8 +6241,7 @@
 /fr/docs/conflicting/Learn_6767a192c90d2c9c5179cf004fce2ee8	/fr/docs/Learn
 /fr/docs/conflicting/MDN/Community/Contributing/Getting_started	/fr/docs/MDN/Community/Contributing/Getting_started
 /fr/docs/conflicting/MDN/Community/Issues	/fr/docs/MDN/Community/Issues
-/fr/docs/conflicting/MDN/Contribute	/fr/docs/MDN/Contribute
-/fr/docs/conflicting/MDN/Tools	/fr/docs/MDN/Tools
+/fr/docs/conflicting/MDN/Tools	/fr/docs/orphaned/MDN/Tools
 /fr/docs/conflicting/MDN/Writing_guidelines	/fr/docs/MDN/Writing_guidelines
 /fr/docs/conflicting/MDN/Writing_guidelines/Page_structures	/fr/docs/MDN/Writing_guidelines/Page_structures
 /fr/docs/conflicting/MDN/Writing_guidelines/Page_structures_978c99f4f82eae196d51ce675e5181c7	/fr/docs/MDN/Writing_guidelines/Page_structures
@@ -6540,6 +6548,6 @@
 /fr/docs/valeur_reelle	/fr/docs/Web/CSS/actual_value
 /fr/docs/window.closed	/fr/docs/Web/API/Window/closed
 /fr/docs/zineb_chengab_bonjour_bonsoir_merci	/fr/docs/Web
-/fr/docs/À_propos_de_JavaScript	/fr/docs/Web/JavaScript/About_JavaScript
+/fr/docs/À_propos_de_JavaScript	/fr/docs/conflicting/Web/JavaScript
 /fr/docs/À_propos_du_Document_Object_Model	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Évènements_online_et_offline	/fr/docs/Web/API/Navigator/onLine
