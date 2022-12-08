@@ -28,10 +28,10 @@ console.log(obj.duration); // NaN
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关内容
+## 参见
 
-- 定义它的接口， {{domxref("HTMLMediaElement")}}.
+- 定义它的接口，{{domxref("HTMLMediaElement")}}。

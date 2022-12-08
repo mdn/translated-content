@@ -248,7 +248,7 @@ getComputedStyle(element).getPropertyValue("--my-var");
 element.style.setProperty("--my-var", jsVar + 4);
 ```
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
