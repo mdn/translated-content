@@ -63,7 +63,7 @@ HTTP 요청은 서버가 특정 동작을 취하게끔 만들기 위해 클라�
 - Request 헤더: {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}와 같은 헤더는 요청의 내용을 좀 더 구체화 시키고({{HTTPHeader("Accept-Language")}}), 컨텍스를 제공하기도 하며({{HTTPHeader("Referer")}}), 조건에 따른 제약 사항을 가하기도 하면서({{HTTPHeader("If-None")}}) 요청 내용을 수정합니다.
 - Entity 헤더: {{HTTPHeader("Content-Length")}}와 같은 헤더는 요청 본문에 적용됩니다. 당연히 요청 내에 본문이 없는 경우 entity 헤더는 전송되지 않습니다.
 
-![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+![Example of headers in an HTTP request](http_request_headers2.png)
 
 ### 본문
 
@@ -96,7 +96,7 @@ HTTP 응답의 시작 줄은 *상태 줄(status line)*이라고 불리며, 다�
 - Response 헤더: {{HTTPHeader("Vary")}}와 {{HTTPHeader("Accept-Ranges")}}와 같은 헤더는 상태 줄에 미처 들어가지 못했던 서버에 대한 추가 정보를 제공합니다.
 - Entity 헤더: {{HTTPHeader("Content-Length")}}와 같은 헤더는 요청 본문에 적용됩니다. 당연히 요청 내에 본문이 없는 경우 entity 헤더는 전송되지 않습니다.
 
-![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![Example of headers in an HTTP response](http_response_headers2.png)
 
 ### 본문
 
