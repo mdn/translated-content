@@ -28009,38 +28009,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/MDN/Contribute": {
-    "modified": "2019-01-16T18:23:52.592Z",
-    "contributors": ["wbamberg", "Porkepix", "Baball", "Sheppy"]
-  },
-  "conflicting/Web/JavaScript": {
-    "modified": "2020-03-12T19:36:54.184Z",
-    "contributors": [
-      "SphinxKnight",
-      "Dralyab",
-      "Gasperowicz",
-      "tregagnon",
-      "teoli",
-      "Jeremie",
-      "Delapouite",
-      "fscholz",
-      "Mgjbot",
-      "BenoitL",
-      "Extra-Nitro",
-      "VincentN"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference": {
-    "modified": "2020-03-12T19:38:26.136Z",
-    "contributors": ["SphinxKnight", "teoli", "pchantry", "Goofy"]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString": {
-    "modified": "2020-10-15T21:27:18.821Z",
-    "contributors": ["SphinxKnight", "teoli", "tregagnon"]
-  },
-  "orphaned/MDN/Tools": {
-    "modified": "2020-09-30T16:48:32.947Z",
-    "contributors": ["chrisdavidmills", "Voulto", "wbamberg", "jswisher"]
   }
 }
