@@ -5,7 +5,7 @@ slug: Web/API/HTMLElement/dragenter_event
 
 {{APIRef}}
 
-当可拖动的元素或者被选择的文本进入一个有效的放置目标，触发 `dragenter` 事件。
+`dragenter` 事件在可拖动的元素或者被选择的文本进入一个有效的放置目标时触发。
 
 目标对象是*用户直接选择的范围*（由用户直接指示作为放置目标的元素），或者 {{HTMLElement("body")}} 元素。
 
