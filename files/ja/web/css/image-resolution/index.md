@@ -1,6 +1,8 @@
 ---
 title: image-resolution
 slug: Web/CSS/image-resolution
+l10n:
+  sourceCommit: fb2af1f15456199685a9f4fbaf8c9d003a2bf91f
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -17,10 +19,11 @@ image-resolution: 300dpi;
 image-resolution: from-image 300dpi;
 image-resolution: 300dpi snap;
 
-/* Global values */
+/* グローバル値 */
 image-resolution: inherit;
 image-resolution: initial;
 image-resolution: revert;
+image-resolution: revert-layer;
 image-resolution: unset;
 ```
 
@@ -73,7 +76,7 @@ image-resolution: unset;
 
 ## ブラウザーの互換性
 
-{{Compat}}
+このプロパティに対応しているブラウザーは今のところありません。
 
 ## 関連情報
 
