@@ -11,7 +11,7 @@ slug: Web/API/HTMLElement/dragenter_event
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置一个事件属性。
+在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
 addEventListener('dragenter', (event) => {});
