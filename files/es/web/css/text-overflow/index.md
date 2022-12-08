@@ -28,21 +28,21 @@ Cada valor se especificará como una de las siguientes opciones:
 - La función [`fade()`](<#fade( \<length\> | \<percentage\> )>), que recibe {{cssxref("&lt;length&gt;")}} o {{cssxref("&lt;percentage&gt;")}} para controlar la distancia de desvanecimiento
 - Un [`<string>`](#string).
 
-### Values
+### Valores
 
 - `clip`
-  - : Este es el valor predeterminado para esta propiedad. El valor de la palabra clave truncará el texto en el límite de la [content area](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), por lo tanto el corte puede darse en medio de una palabra. Para recortar justo en la transición entre cracteres se puede especificar con `text-overflow` como una cadena vacía, si eso es compatible con sus navegadores: `text-overflow: '';`.
+  - : Este es el valor predeterminado para esta propiedad. El valor de la palabra clave truncará el texto en el límite del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), por lo tanto el corte puede darse en medio de una palabra. Para recortar justo en la transición entre caracteres se puede especificar con `text-overflow` como una cadena vacía, si eso es compatible con sus navegadores: `text-overflow: '';`.
 - `ellipsis`
-  - : El valor de la palabra clave mostrará puntos suspensivos (`'…'`, `U+2026 Horizontal Ellipsis`) para representar texto recortado. Los puntos suspensivos se muestran dentro de la [content area](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), disminuyendo la cantidad de texto mostrado. Si no hay suficiente esacio para mostrar lso puntos suspensivos, se recorta.
+  - : El valor de la palabra clave mostrará puntos suspensivos (`'…'`, `U+2026 Horizontal Ellipsis`) para representar texto recortado. Los puntos suspensivos se muestran dentro del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), disminuyendo la cantidad de texto mostrado. Si no hay suficiente espacio para mostrar los puntos suspensivos, se recorta.
 - `<string>` {{experimental_inline}}
-  - : El {{cssxref("&lt;string&gt;")}} será utilizado para representar texto cortado. El string se muestra dentro de la [content area](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), disminuyendo el tamaño del texto mostrado. Si no hay suficiente espacio para mostrar el string, se recorta.
+  - : El {{cssxref("&lt;string&gt;")}} que será utilizado para representar texto recortado. La cadena se muestra dentro del [área de contenido](/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model), disminuyendo el tamaño del texto mostrado. Si no hay suficiente espacio para mostrar la cadena, se recorta.
 - `fade` {{experimental_inline}}
-  - : El valor de esta palabra clave recorta el contenido inline del texto que se desborda y aplica un efecto de atenuación (fade-out) cerca del borde de la linea del cuadro con total transparencia en el borde.
+  - : El valor de esta palabra clave recorta el contenido en línea del texto que se desborda y aplica un efecto de atenuación cerca del borde de la linea de la caja con total transparencia en el borde.
 - `fade( <length> | <percentage> )` {{experimental_inline}}
 
-  - : Esta función recorta el contenido desbordante en línea (inline) y aplica un efecto de atenuación (fade-out) cerca del límite de la caja con total transparencia en el borde.
+  - : Esta función recorta el contenido desbordante en línea y aplica un efecto de atenuación cerca del límite de la caja con total transparencia en el borde.
 
-    El argumento determina la distancia sobre la que se aplica el efecto de fundido. El {{cssxref("&lt;percentage&gt;")}} se revuelve contra la anchura de la línea de la caja. Los valore menores que `0` se cortan a `0`. Los valores mayores que el ancho del cuadro de línea se recortan al ancho del cuadro de línea.
+    El argumento determina la distancia sobre la que se aplica el efecto de atenuación. El {{cssxref("&lt;percentage&gt;")}} se revuelve contra la anchura de la línea de la caja. Los valore menores que `0` se truncan a `0`. Los valores mayores que el ancho de la caja se recortan al ancho de la caja.
 
 ### Formal syntax
 
