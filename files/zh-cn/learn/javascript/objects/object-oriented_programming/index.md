@@ -1,9 +1,6 @@
 ---
 title: 面向对象编程基本概念
 slug: Learn/JavaScript/Objects/Object-oriented_programming
-tags:
-  - JavaScript
-  - Learn
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
@@ -12,22 +9,22 @@ tags:
 
 > **备注：** 准确地说，本文所提及到的特性是一种特别的面向对象编程方式，即**基于类的面向对象编程**（class-based OPP）。当人们谈论面向对象编程时，通常来说是指基于类的面向对象编程。
 
-在本文的最后，我们会探讨 JavaScript 中的构造器和原型链是如何与面向对象编程中的概念产生联系的，以及它们与面向对象编程中的概念又有何不同。在下一篇文章中，我们会学习 JavaScript 中一些附加的特性，这些特性使得实现面向对象编程变得更加容易。
+在本文的最后，我们会探讨 JavaScript 中的构造函数和原型链是如何与面向对象编程中的概念产生联系的，以及它们与面向对象编程中的概念又有何不同。在下一篇文章中，我们会学习 JavaScript 中一些附加的特性，这些特性使得实现面向对象编程变得更加容易。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">预备知识:</th>
+      <th scope="row">预备知识：</th>
       <td>
         理解 JavaScript 函数，熟悉 JavaScript 基础
-        （参见 
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a> 和
-        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
+        （参见
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a>和<a
+          href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >创建 JavaScript 代码块</a
-        >），熟悉对象基础概念（参见 
+        >），熟悉对象基础概念（参见
         <a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics"
           >JavaScript 对象基础</a
-        > 和 <a href="/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes">对象原型</a>）。
+        >和<a href="/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes">对象原型</a>）。
       </td>
     </tr>
     <tr>
@@ -39,7 +36,7 @@ tags:
   </tbody>
 </table>
 
-面向对象编程将一个系统抽象为许多对象的集合，每一个对象代表了这个系统的特定方面。对象包括函数（方法）和数据。一个对象可以向其他部分的代码提供一个公共接口，而其他部分的代码可以通过公共接口执行该对象的特定操作，系统的其他部分不需要关心对象内部是如何完成任务的，这样保持了对象自己内部状态的私有性（译者注：也就是说，外部代码无法随意修改对象的内部状态）。
+面向对象编程将一个系统抽象为许多对象的集合，每一个对象代表了这个系统的特定方面。对象包括函数（方法）和数据。一个对象可以向其他部分的代码提供一个公共接口，而其他部分的代码可以通过公共接口执行该对象的特定操作，系统的其他部分不需要关心对象内部是如何完成任务的，这样保持了对象自己内部状态的私有性。
 
 ## 类与实例
 
@@ -64,9 +61,9 @@ class Professor
 - 两个属性：姓名 `name` 和所教的课程 `teaches`
 - 两个方法：`grade()` 方法用于为学生的论文打分；`introduceSelf()` 方法用于介绍自己。
 
-就其本身而言，类并不做任何事情，类只是一种用于创建具体对象的模板。`Professor` 类可以创建一个具体的教授，我们称这样创建出来的具体教授为 `Professor` 类的**实例**。由类创建实例的过程是由一个特别的函数——构造器所完成的。开发人员将类所需要的值传入构造器，构造器即可根据传入的值初始化实例的内部状态。
+就其本身而言，类并不做任何事情，类只是一种用于创建具体对象的模板。`Professor` 类可以创建一个具体的教授，我们称这样创建出来的具体教授为 `Professor` 类的**实例**。由类创建实例的过程是由一个特别的函数——构造函数所完成的。开发人员将类所需要的值传入构造函数，构造函数即可根据传入的值初始化实例的内部状态。
 
-通常来说，需要将构造器作为类定义的一部分明确声明，并且构造器通常具有和类名相同的函数名。
+通常来说，需要将构造函数作为类定义的一部分明确声明，并且构造函数通常具有和类名相同的函数名。
 
 ```
 class Professor
@@ -80,9 +77,9 @@ class Professor
         introduceSelf()
 ```
 
-在这个例子中，构造器需要两个参数，因此，我们可以在创建新实例时初始化实例的 `name` 属性和 `teaches` 属性。
+在这个例子中，构造函数需要两个参数，因此，我们可以在创建新实例时初始化实例的 `name` 属性和 `teaches` 属性。
 
-当我们定义构造器后，我们就可以创建出具体的教授了。编程语言通常使用 `new` 关键字来表示执行构造器。
+当我们定义构造函数后，我们就可以创建出具体的教授了。编程语言通常使用 `new` 关键字来表示执行构造函数。
 
 ```js
 walsh = new Professor("沃尔什", "心理学");
@@ -114,7 +111,7 @@ class Student
         introduceSelf()
 ```
 
-如果我们可以用某种特别的方式共享教授和学生中相同属性的声明，那么这会节省我们不少的精力。更准确的说，在某种层级上，二者实际上是 _同种事物_（译者注：教授和学生都是人），他们能够具有相同的属性也是合理的。继承（Inheritance）可以帮助我们完成这一操作。
+如果我们可以用某种特别的方式共享教授和学生中相同属性的声明，那么这会节省我们不少的精力。更准确的说，在某种层级上，二者实际上是*同种事物*，他们能够具有相同的属性也是合理的。继承（Inheritance）可以帮助我们完成这一操作。
 
 很容易注意到教授和学生都是人，而人是具有姓名，并且可以介绍自己的。我们可以将人定义为一个新类，即 `Person` 类，在 `Person` 类中，我们可以定义所有作为人的通用属性。接下来，我们可以定义 `Professor` 类和 `Student` 类由 `Person` 类**派生**（derive）而来，在伪代码中定义如下：
 
@@ -145,7 +142,7 @@ class Student : extends Person
         introduceSelf()
 ```
 
-在这种情况下，我们称 `Person` 类是 `Professor` 类和 `Student` 类的**超类**（superclass）或 **父类**（parent class）。反之，我们称 `Professor` 类和 `Student` 类是 `Person` 类的**子类**（subclasses or child classes）。
+在这种情况下，我们称 `Person` 类是 `Professor` 类和 `Student` 类的**超类**（superclass）或**父类**（parent class）。反之，我们称 `Professor` 类和 `Student` 类是 `Person` 类的**子类**（subclass 或 child class）。
 
 你可能注意到了我们在三个类中都定义了 `introduceSelf()` 方法。这么做的原因如下：尽管所有人都想要介绍他们自己，但是他们可能会以不同的方式去做这件事。
 
@@ -223,25 +220,25 @@ student.year // 错误：'year'是学生类的私有属性
 
 在本文中，我们所描述的这些基本特性都属于基于类的面向对象编程方式，像是 Java、C++ 这些编程语言都实现了这些特性。
 
-在先前的两篇文章中，我们探讨了 JavaScript 中的一对核心特性：[构造器](/zh-CN/docs/Learn/JavaScript/Objects/Basics) 和 [原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)。毫无疑问，这些特性完全可以描述面向对象编程的这些概念。
+在先前的两篇文章中，我们探讨了 JavaScript 中的一对核心特性：[构造函数](/zh-CN/docs/Learn/JavaScript/Objects/Basics)和[原型](/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes)。毫无疑问，这些特性完全可以描述面向对象编程的这些概念。
 
-- **构造器**：在 JavaScript 中，构造器可以实现类的定义，帮助我们在一个地方描述类的“形状”，包括定义类的方法。不过，原型也可以用于实现类的定义。例如，如果一个方法定义于构造器的 `prototype` 属性中，那么所有由该构造器创造出来的对象都可以通过原型使用该方法，而我们也不再需要将它定义在构造器中。
+- **构造函数**：在 JavaScript 中，构造函数可以实现类的定义，帮助我们在一个地方描述类的“形状”，包括定义类的方法。不过，原型也可以用于实现类的定义。例如，如果一个方法定义于构造函数的 `prototype` 属性中，那么所有由该构造函数创造出来的对象都可以通过原型使用该方法，而我们也不再需要将它定义在构造函数中。
 
 - **原型链**：原型链很自然地实现了继承特性。例如，如果我们由 `Person` 原型构造了一个 `Student` 类，那么我们可以继承 `Person` 类的 `name` 属性，重写 `introduceSelf()` 方法。
 
 理解 JavaScript 的这一对特性与基于类的面向对象编程之间有什么不同，这一点也是十分重要的，这里我们将简要探讨二者的区别。
 
-首先，在基于类的面向对象编程中，类与对象是两个不同的概念，对象通常是由类创造出来的实例。由此，定义类的方式（定义类的语法）和实例化对象的方式（构造器）也是不同的。而在 JavaScript 中，我们经常会使用函数或对象字面量创建对象，也就是说，JavaScript 可以在没有特定的类定义的情况下创建对象（译者注：JavaScript 是基于原型的语言，类与对象的结构并不是完全分离的，某种意义上可以认为其只有一种结构：对象）。相对于基于类的面向对象编程来说，这种方式更为轻量，帮助我们更为方便地使用对象。
+首先，在基于类的面向对象编程中，类与对象是两个不同的概念，对象通常是由类创造出来的实例。由此，定义类的方式（定义类的语法）和实例化对象的方式（构造函数）也是不同的。而在 JavaScript 中，我们经常会使用函数或对象字面量创建对象，也就是说，JavaScript 可以在没有特定的类定义的情况下创建对象。相对于基于类的面向对象编程来说，这种方式更为轻量，帮助我们更为方便地使用对象。
 
 其次，尽管原型链看起来很像是继承的层级结构，并且在某些方面，原型链的行为与继承的行为也很类似，但是在其他方面，二者之间仍然存在区别。在继承方式下，当一个子类完成继承时，由该子类所创建的对象既具有其子类中单独定义的属性，又具有其父类中定义的属性（以及父类的父类，依此类推）。而在原型链中，每一个层级都代表了一个不同的对象，不同的对象之间通过 `__proto__` 属性链接起来。原型链的行为并不太像是继承，而更像是**委派**（delegation）。委派同样是对象中的一种编程模式。当我们要求对象执行某项任务时，在委派模式下，对象可以自己执行该项任务，或者要求另一个对象（委派的对象）以其自己的方式执行这项任务。在许多方面，相对于继承来说，委派可以更为灵活地在许多对象之间建立联系（例如，委派模式可以在程序运行时改变、甚至完全替换委派对象）。
 
-尽管如此，构造器和原型仍然可以在 JavaScript 中实现基于类的面向对象编程特性。但是直接使用构造器和原型去实现这些特性（例如继承）仍是棘手的，因此，JavaScript 提供了一些额外的特性，这些特性在原型这一模型之上又抽象出一层模型，将基于类的面向对象编程中的概念映射到原型中，从而能够更为直接地在 JavaScript 中使用基于类的面向对象编程中的概念。这些额外的特性将是下一篇文章的主题。
+尽管如此，构造函数和原型仍然可以在 JavaScript 中实现基于类的面向对象编程特性。但是直接使用构造函数和原型去实现这些特性（例如继承）仍是棘手的，因此，JavaScript 提供了一些额外的特性，这些特性在原型这一模型之上又抽象出一层模型，将基于类的面向对象编程中的概念映射到原型中，从而能够更为直接地在 JavaScript 中使用基于类的面向对象编程中的概念。这些额外的特性将是下一篇文章的主题。
 
 ## 总结
 
-本文探讨了基于类的面向对象编程中的基本特性，并且简要对比了 JavaScript 中的构造器与原型和这些概念的联系与区别。
+本文探讨了基于类的面向对象编程中的基本特性，并且简要对比了 JavaScript 中的构造函数与原型和这些概念的联系与区别。
 
-在下一页中，我们会关注 JavaScript 所提供的其他关于类的特性，这些特性用于支持基于类的面向对象编程。
+在下一篇文章中，我们会关注 JavaScript 所提供的其他关于类的特性，这些特性用于支持基于类的面向对象编程。
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/Classes_in_JavaScript", "Learn/JavaScript/Objects")}}
 
@@ -252,5 +249,5 @@ student.year // 错误：'year'是学生类的私有属性
 - **面向对象编程基本概念**
 - [JavaScript 中的类](/zh-CN/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
 - [使用 JSON 数据](/zh-CN/docs/Learn/JavaScript/Objects/JSON)
-- [对象构建实践](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [测验：为弹球示例新增功能](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+- [对象构建实践](/zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice)
+- [测验：为弹球示例新增功能](/zh-CN/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
