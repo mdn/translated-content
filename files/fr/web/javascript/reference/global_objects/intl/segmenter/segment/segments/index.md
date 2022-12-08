@@ -1,7 +1,8 @@
 ---
 title: Intl.Segments
-slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments
+slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Segments
+original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments
 browser-compat: javascript.builtins.Intl.Segments
 ---
 
