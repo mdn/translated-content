@@ -1,13 +1,13 @@
 ---
 title: JavaScript에 대하여
-slug: Web/JavaScript/About_JavaScript
+slug: conflicting/Web/JavaScript
 tags:
   - Beginner
   - Guide
   - Introduction
   - JavaScript
 translation_of: Web/JavaScript/About_JavaScript
-original_slug: Web/JavaScript/About
+original_slug: Web/JavaScript/About_JavaScript
 ---
 
 {{JsSidebar}}
