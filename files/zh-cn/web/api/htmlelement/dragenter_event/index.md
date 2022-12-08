@@ -1,5 +1,5 @@
 ---
-title: 'HTMLElement: dragenter event'
+title: HTMLElement：dragenter 事件
 slug: Web/API/HTMLElement/dragenter_event
 ---
 
