@@ -12,7 +12,7 @@ tags:
 translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
 WebGL은 OpenGL 표준과는 다르게 자체적인 조명 효과를 제공하지 않습니다. 따라서 WebGL에서의 조명 효과는 개발자 스스로 만들어야 합니다. 다행스럽게도 조명 효과를 만드는 것이 아주 어려운 일은 아니며, 이 글을 통해 몇 가지 기초적인 부분을 이해할 수 있을 것입니다.
 
