@@ -13,7 +13,7 @@ slug: Web/SVG/Attribute/accent-height
 
 ## font-face
 
-For {{SVGElement("font-face")}}, `accent-height` defines the distance from the origin to the top of accent characters, measured by a distance within the font coordinate system.
+对于 {{SVGElement("font-face")}} 元素，`accent-height` 定义从原点到重音字符顶部的距离，通过字体坐标系内的距离测量。
 
 <table class="properties">
   <tbody>
