@@ -242,7 +242,7 @@ HTML 沒有表達邏輯的方式——像是條件和迴圈。但 Svelte 做到�
 
 ## 待辦事項反應性
 
-正如我們所看到的，每次元件頂層變數的數值被修改時，Svelte 都知道如何更新使用者介面。在我們的應用程式中，每次切換或刪除待辦事項時都會直接地更新 `todos` 陣列數值，所以 Svelte 會自動地更新 DOM 。
+正如我們所看到的，每次元件頂層變數的數值被修改時，Svelte 都知道如何更新使用者介面。在我們的應用程式中，每次切換或刪除待辦事項時都會直接地更新 `todos` 陣列數值，所以 Svelte 會自動地更新 DOM。
 
 然而，對於 `totalTodos` 和 `completedTodos` 來說情況並非如此。在下面的程式碼中，當元件被實例化且腳本被執行時，它們會被指定一個數值，但是在那之後，它們的數值不會被改變：
 
@@ -266,33 +266,33 @@ $: completedTodos = todos.filter((todo) => todo.completed).length
 
 如果你現在檢查你的應用程式，當待辦事項完成或被刪除時，你將會看到標頭的數字被更新。做得好！
 
-Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹，接著它會產生 JavaScript 程式碼以在其中一個相依項目被更新時，來重新評估每個反應性陳述。Svelte 的反應性以非常輕量和高性能的方法來實現，無須使用監聽器（listener）、設定器（setter）、取得器（getter）或任何其它複雜的機制。
+Svelte 編譯器在背後會解析和分析我們的程式碼以產生相依樹，接著它會產生 JavaScript 程式碼以在其中一個相依項目被更新時，來重新評估每個反應性陳述。Svelte 的反應性以非常輕量和高性能的方式來實現，無須使用監聽器（listener）、設定器（setter）、取得器（getter）或任何其它複雜的機制。
 
-## Adding new to-dos
+## 加入新的待辦事項
 
-Now on to the next major task for this article — let's add some functionality for adding new to-dos.
+目前此文章的下一個主要任務——讓我們新增一些功能性來加入新的待辦事項。
 
-1. First we'll create a variable to hold the text of the new to-do. Add this declaration to the `<script>` section of `Todos.svelte` file:
+1. 首先，我們將建立一個變數來保存新待辦事項的文字。將此宣告新增到 `Todos.svelte` 檔案的 `<script>` 區塊中：
 
    ```js
    let newTodoName = ''
    ```
 
-2. Now we will use this value in the `<input>` for adding new tasks. To do that we need to bind our `newTodoName` variable to the `todo-0` input, so that the `newTodoName` variable value stays in sync with the input's `value` property. We could do something like this:
+2. 我們將使用 `<input>` 中的數值來加入新任務。為此我們需要將 `newTodoName` 變數綁定到 `todo-0` 輸入框，以便 `newTodoName` 變數數值與輸入框的 `value` 屬性保持同步。我們可以這樣做：
 
    ```html
    <input value={newTodoName} on:keydown={(e) => newTodoName = e.target.value} />
    ```
 
-   Whenever the value of the variable `newTodoName` changes, it will be reflected in the `value` attribute of the input, and whenever a key is pressed in the input, we will update the contents of the variable `newTodoName`.
+   每當變數 `newTodoName` 的數值發生變化時，它將被反映在 `value` 輸入框的屬性中且每當在輸入框按下某個鍵時，我們將會更新變數 `newTodoName` 的內容。
 
-   This is a manual implementation of two-way data binding for an input box. But we don't need to do this — Svelte provides an easier way to bind any property to a variable, using the [`bind:property`](https://svelte.dev/docs#bind_element_property) directive:
+   這是對輸入框雙向資料綁定的手動實作。但是我們不需要這樣做—— Svelte 提供了一種更簡單的方式來將任何屬性綁定到變數，使用 [`bind:property`](https://svelte.dev/docs#bind_element_property) 指令：
 
    ```html
    <input bind:value={newTodoName} />
    ```
 
-   So, let's implement this. Update the `todo-0` input like so:
+   所以，讓我們來實作它。更新 `todo-0` 輸入框如下：
 
    ```html
    <input
@@ -303,16 +303,16 @@ Now on to the next major task for this article — let's add some functionality 
      class="input input__lg" />
    ```
 
-3. An easy way to test that this works is to add a reactive statement to log the contents of `newTodoName`. Add this snippet at the end of the `<script>` section:
+3. 測試是否有效的一個簡單方式是新增一個反應性陳述來記錄 `newTodoName` 的內容。在 `<script>` 區塊的末端新增此程式碼片段：
 
    ```js
    $: console.log('newTodoName: ', newTodoName)
    ```
 
-   > **Note:** As you may have noticed, reactive statements aren't limited to variable declarations. You can put _any_ JavaScript statement after the `$:` sign.
+   > **注意：** 你可能已經注意到了，反應性陳述不僅限於變數宣告。你可以在 `$:` 符號之後放上 _任何_ JavaScript 陳述。
 
-4. Now try going back to `localhost:5042`, pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> to open your browser console and typing something into the input field. You should see your entries logged. At this point, you can delete the reactive `console.log()` if you wish.
-5. Next up we'll create a function to add the new to-do — `addTodo()` — which will push a new `todo` object onto the `todos` array. Add this to the bottom of your `<script>` block inside `src/components/Todos.svelte`:
+4. 現在嘗試回到 `localhost:5042`，按下 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> 來打開瀏覽器控制台並在輸入框中輸入一些內容。你應該就會看到你的輸入被記錄了。此時，你可以視情況刪除反應性 `console.log()`。
+5. 接下來，我們將建立一個函式來加入新的待辦事項—— `addTodo()` ——它會將一個新的 `todo` 物件塞入到 `todos` 陣列中。將此函式新增到 `src/components/Todos.svelte` 中 `<script>` 區塊的底部：
 
    ```js
    function addTodo() {
@@ -321,23 +321,23 @@ Now on to the next major task for this article — let's add some functionality 
    }
    ```
 
-   > **Note:** For the moment we are just assigning the same `id` to every to-do, but don't worry, we will fix that soon.
+   > **注意：** 目前我們為每個待辦事項都指定相同的 `id`，別擔心，我們會盡快解決這個問題。
 
-6. Now we want to update our HTML so that we call `addTodo()` whenever the form is submitted. Update the NewTodo form's opening tag like so:
+6. 現在我們要更新我們的 HTML，以便每當表單被提交時來呼叫 `addTodo()`。更新新增待辦事項（NewTodo）表單的起始標籤如下：
 
    ```html
    <form on:submit|preventDefault={addTodo}>
    ```
 
-   The [`on:eventname`](https://svelte.dev/docs#on_element_event) directive supports adding modifiers to the DOM event with the `|` character. In this case, the `preventDefault` modifier tells Svelte to generate the code to call `event.preventDefault()` before running the handler. Explore the previous link to see what other modifiers are available.
+   [`on:eventname`](https://svelte.dev/docs#on_element_event) 指令支援使用 `|` 字元向 DOM 事件加入修飾詞（modifier）。在這種情況下，`preventDefault` 修飾詞告訴 Svelte 在運行處理器之前，產生呼叫 `event.preventDefault()` 的程式碼。瀏覽前一個連結以查看其它可以用的修飾詞有哪些。
 
-7. If you try adding new to-dos at this point, the new to-dos are added to the to-dos array, but our UI is not updated. Remember that in Svelte [reactivity is triggered with assignments](https://svelte.dev/docs#2_Assignments_are_reactive). That means that the `addTodo()` function is executed, the element is added to the `todos` array, but Svelte won't detect that the push method modified the array, so it won't refresh the tasks `<ul>`.
+7. 假如你現在嘗試加入新的待辦事項，新的待辦事項會被加入到待辦事項陣列中，但我們的使用者介面不會被更新。記住在 Svelte 中[反應性是由指定來觸發](https://svelte.dev/docs#2_Assignments_are_reactive)。這意味著 `addTodo()` 函式被執行，元素被新增到 `todos` 陣列中，但 Svelte 不會檢測到推入（push）方法修改了陣列，所以它也不會刷新任務 `<ul>`。
 
-   Just adding `todos = todos` to the end of the `addTodo()` function would solve the problem, but it seems strange to have to include that at the end of the function. Instead, we'll take out the `push()` method and use [spread syntax](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to achieve the same result: we'll assign a value to the `todos` array equal to the `todos` array plus the new object.
+   只要將 `todos = todos` 新增到 `addTodo()` 函式的末端就能解決這個問題，但是必須在函式末端包含它似乎很奇怪。取而代之，我們將拿掉 `push()` 方法並使用[展開語法](/zh-TW/docs/Web/JavaScript/Reference/Operators/Spread_syntax)來達到相同的結果：我們將為 `todos` 陣列指定一個等於 `todos` 陣列加上新物件的數值。
 
-   > **Note:** `Array` has several mutable operations: [`push()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/push), [`pop()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/pop), [`splice()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/splice), [`shift()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/shift), [`unshift()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift), [`reverse()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse), and [`sort()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort). Using them often causes side effects and bugs that are hard to track. By using the spread syntax instead of `push()` we avoid mutating the array, which is considered a good practice.
+   > **注意：** `陣列` 有幾個可變的操作：[`push()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/push)、[`pop()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)、[`splice()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)、[`shift()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)、[`unshift()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)、[`reverse()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) 和 [`sort()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)。使用它們常會導致難以追蹤的副作用和錯誤。透過使用展開語法而不是 `push()`，我們可以避免改變陣列本身，這被認為是一種好的做法。
 
-   Update your `addTodo()` function like so:
+   更新你的 `addTodo()` 函式如下：
 
    ```js
    function addTodo() {
