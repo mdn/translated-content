@@ -15,11 +15,11 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/findIndex
 
 {{JSRef}}
 
-La méthode **`findIndex()`** renvoie l'**indice** du **premier élément** du tableau qui satisfait une condition donnée par une fonction. Si la fonction renvoie faux pour tous les éléments du tableau, le résultat vaut -1.
+La méthode **`findIndex()`** renvoie l'**index** du **premier élément** du tableau qui satisfait une condition donnée par une fonction. Si la fonction renvoie faux pour tous les éléments du tableau, le résultat vaut -1.
 
 {{EmbedInteractiveExample("pages/js/array-findindex.html")}}
 
-Voir également la méthode {{jsxref("Array.find", "find()")}} qui renvoie la **valeur** (et non l'indice) d'un des éléments trouvés.
+Voir également la méthode {{jsxref("Array.find", "find()")}} qui renvoie la **valeur** (et non l'index) d'un des éléments trouvés.
 
 ## Syntaxe
 
@@ -35,8 +35,8 @@ arr.findIndex(callback(element[, index[, tableau]])[, thisArg])
 
     - `élément`
       - : L'élément du tableau qui doit être traité.
-    - `indice`{{optional_inline}}
-      - : L'indice de l'élément du tableau en cours de traitement.
+    - `index`{{optional_inline}}
+      - : L'index de l'élément du tableau en cours de traitement.
     - `tableau`{{optional_inline}}
       - : Le tableau sur lequel a été appelé `findIndex`.
 
@@ -45,25 +45,25 @@ arr.findIndex(callback(element[, index[, tableau]])[, thisArg])
 
 ### Valeur de retour
 
-Un indice d'un élément du tableau qui réussit le test décrit, -1 sinon.
+Un index d'un élément du tableau qui réussit le test décrit, -1 sinon.
 
 ## Description
 
-La méthode `findIndex` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau (le tableau est parcouru entre les indices `0` et `length-1` compris) jusqu'à ce que `callback` renvoie une valeur vraie.
+La méthode `findIndex` exécute la fonction `callback` une fois pour chaque élément présent dans le tableau (le tableau est parcouru entre les index `0` et `length-1` compris) jusqu'à ce que `callback` renvoie une valeur vraie.
 
-S'il existe un tel élément, `findIndex` renverra immédiatement l'indice de l'élément concerné. Sinon, `findIndex` renverra -1. À la différence des autres méthodes liées aux tableaux comme `some()`, `callback` est également appelée pour les indices du tableau pour lesquels aucun élément n'est défini.
+S'il existe un tel élément, `findIndex` renverra immédiatement l'index de l'élément concerné. Sinon, `findIndex` renverra -1. À la différence des autres méthodes liées aux tableaux comme `some()`, `callback` est également appelée pour les index du tableau pour lesquels aucun élément n'est défini.
 
-`callback` possède trois arguments : la valeur de l'élément, l'indice de l'élément et l'objet Array qui est parcouru
+`callback` possède trois arguments : la valeur de l'élément, l'index de l'élément et l'objet Array qui est parcouru
 
 Si l'argument `argumentThis` est fourni à la méthode `findIndex`, il sera utilisé comme « contexte » [`this`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this) pour chaque appel de `callback`. S'il n'est pas fourni, {{jsxref("undefined")}} sera utilisé.
 
-`findIndex` ne modifie pas le tableau sur laquelle elle est appelée. Les éléments qui seront traités par `findIndex` sont « récoltés » avant le premier appel de `callback`. Tout élément qui sera ajouté au tableau après l'appel de `findIndex` ne sera pas utilisé avec `callback`. Si un élément existant, pas encore visité, est modifié par `callback`, la valeur qui sera passé au `callback` pour cet élément modifié sera celle que `findIndex` utilise lorsqu'elle utilise l'indice de l'élément en question. Les éléments supprimés sont bien parcourus.
+`findIndex` ne modifie pas le tableau sur laquelle elle est appelée. Les éléments qui seront traités par `findIndex` sont « récoltés » avant le premier appel de `callback`. Tout élément qui sera ajouté au tableau après l'appel de `findIndex` ne sera pas utilisé avec `callback`. Si un élément existant, pas encore visité, est modifié par `callback`, la valeur qui sera passé au `callback` pour cet élément modifié sera celle que `findIndex` utilise lorsqu'elle utilise l'index de l'élément en question. Les éléments supprimés sont bien parcourus.
 
 ## Exemples
 
-### Trouver l'indice d'un nombre premier dans un tableau
+### Trouver l'index d'un nombre premier dans un tableau
 
-L'exemple qui suit illustre comment trouver l'indice d'un élément qui est un nombre premier dans un tableau (ou qui renvoie -1 s'il n'y a pas de nombre premier).
+L'exemple qui suit illustre comment trouver l'index d'un élément qui est un nombre premier dans un tableau (ou qui renvoie -1 s'il n'y a pas de nombre premier).
 
 ```js
 function estPremier(élément, index, array) {
@@ -82,16 +82,16 @@ console.log([4, 6, 8, 12].findIndex(estPremier)); // -1, aucun trouvé
 console.log([4, 6, 7, 12].findIndex(estPremier)); // 2
 ```
 
-### Trouver un indice avec une fonction fléchée
+### Trouver un index avec une fonction fléchée
 
-Dans cet exemple, on utilise [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) pour trouver l'indice d'un élément :
+Dans cet exemple, on utilise [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) pour trouver l'index d'un élément :
 
 ```js
 const fruits = ["pomme", "banane", "melon", "fraise", "raisin"];
 
-const indice = fruits.findIndex(fruit => fruit === "fraise");
-console.log(indice); // 3
-console.log(fruits[indice]); // fraise 
+const index = fruits.findIndex(fruit => fruit === "fraise");
+console.log(index); // 3
+console.log(fruits[index]); // fraise 
 ```
 
 ## Prothèse d'émulation (_polyfill_)
