@@ -145,7 +145,7 @@ let duration = vacations.trip?.getTime?.();
 
 Оператор {{JSxRef("Operators/Nullish_Coalescing_Operator", "??", '', 1)}} может использоваться после опциональной последовательности для установления значения по умолчанию:
 
-```
+```js
 let customer = {
   name: "Carl",
   details: { age: 82 }
