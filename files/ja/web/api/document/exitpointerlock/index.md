@@ -1,19 +1,29 @@
 ---
 title: Document.exitPointerLock()
 slug: Web/API/Document/exitPointerLock
+l10n:
+  sourceCommit: d4619276d67ca1ee02bd964d884ec52c2aa2ad4b
 ---
 
-{{APIRef("DOM")}} {{seeCompatTable}}
+{{APIRef("DOM")}}
 
-**`exitPointerLock()`** メソッドは、以前 {{domxref("Element.requestPointerLock")}} でリクエストされたポインターロックを非同期に解放します。
+**`exitPointerLock()`** メソッドは、以前 {{domxref("Element.requestPointerLock()")}} でリクエストされたポインターロックを非同期に解放します。
 
-リクエストが成功したか失敗したかを追跡するには、 {{event("pointerlockchange")}} および {{event("pointerlockerror")}} イベントを待ち受けする必要があります。
+リクエストが成功したか失敗したかを追跡するには、 {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} および {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} イベントを待ち受けする必要があります。
 
 ## 構文
 
+```js-nolint
+exitPointerLock()
 ```
-document.exitPointerLock();
-```
+
+### 引数
+
+なし。
+
+### 返値
+
+なし ({{jsxref("undefined")}})。
 
 ## 仕様書
 
