@@ -45,7 +45,7 @@ Les groupes permettent de regrouper différents motifs ensemble et les groupes d
       <td><code>(?&lt;Nom&gt;x)</code></td>
       <td>
         <p>
-          <strong>Groupe de capture nommé&nbsp;:</strong> correspond à <code>x</code> et enregistre cette correspondance dans la propriété <code>groups</code> des correspondances renvoyées aevc le nom fourni <code>&lt;Nom&gt;</code>. Les chevrons (<code>&lt;</code>
+          <strong>Groupe de capture nommé&nbsp;:</strong> correspond à <code>x</code> et enregistre cette correspondance dans la propriété <code>groups</code> des correspondances renvoyées avec le nom fourni <code>&lt;Nom&gt;</code>. Les chevrons (<code>&lt;</code>
           and <code>&gt;</code>) sont nécessaire pour indiquer le nom du groupe.
         </p>
         <p>
