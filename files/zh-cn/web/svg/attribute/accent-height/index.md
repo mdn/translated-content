@@ -29,7 +29,7 @@ slug: Web/SVG/Attribute/accent-height
     </tr>
     <tr>
       <th scope="row">可变性</th>
-      <td>无</td>
+      <td>否</td>
     </tr>
   </tbody>
 </table>
