@@ -8,7 +8,7 @@ original_slug: Web/CSS/transform-function/translate()
 
 **`translate()`** 这个 [CSS](/zh-CN/docs/Web/CSS) 函数在水平和/或垂直方向上重新定位元素。其结果是 {{cssxref("&lt;transform-function&gt;")}} 类型。
 
-![](https://mdn.mozillademos.org/files/12121/translate.png)
+![](translate.png)
 
 该变换由二维向量构成。它的坐标定义了元素在每个方向上移动了多少。
 

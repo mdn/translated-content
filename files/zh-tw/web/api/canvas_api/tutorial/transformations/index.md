@@ -3,7 +3,7 @@ title: 變形效果
 slug: Web/API/Canvas_API/Tutorial/Transformations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 ## 畫布狀態儲存與復原
 
@@ -130,7 +130,7 @@ function drawSpirograph(ctx,R,r,O){
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "330", "330", "https://mdn.mozillademos.org/files/256/Canvas_translate.png")}}
+{{EmbedLiveSample("A_translate_example", "330", "330", "canvas_translate.png")}}
 
 ## 旋轉
 
@@ -176,7 +176,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "180", "180", "https://mdn.mozillademos.org/files/248/Canvas_rotate.png")}}
+{{EmbedLiveSample("A_rotate_example", "180", "180", "canvas_rotate.png")}}
 
 ## 縮放
 
@@ -278,7 +278,7 @@ draw();
 
 第二排藍色圖案我們只改變 Y 軸的縮放倍率，X 軸維持不變，因而產生一個比一個更扁的橢圓圖形。同理，第三排綠色圖案改變 X 軸的縮放倍率，Y 軸維持不變。
 
-{{EmbedLiveSample("A_scale_example", "330", "330", "https://mdn.mozillademos.org/files/250/Canvas_scale.png")}}
+{{EmbedLiveSample("A_scale_example", "330", "330", "canvas_scale.png")}}
 
 ## 變形
 

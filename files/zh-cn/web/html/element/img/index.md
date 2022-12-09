@@ -201,9 +201,9 @@ You can use the {{cssxref("object-position")}} property to position the image wi
       sizes="(max-width: 600px) 200px, 50vw">
 ```
 
-{{EmbedLiveSample("Using_the_srcset_and_sizes_attributes", "100%", 350)}}
+{{EmbedLiveSample("使用 srcset 和 sizes 属性", "100%", 350)}}
 
-> **备注：** 若要看到大小调整的效果，请{{LiveSampleLink('Using_the_srcset_and_sizes_attributes', '打开单独的页面查看示例')}}，以便拖动窗口，调整内容区域的大小。
+> **备注：** 若要看到大小调整的效果，请{{LiveSampleLink('使用 srcset 和 sizes 属性', '打开单独的页面查看示例')}}，以便拖动窗口，调整内容区域的大小。
 
 ## 安全与隐私方面的考量
 

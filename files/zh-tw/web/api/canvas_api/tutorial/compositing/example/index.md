@@ -3,7 +3,7 @@ title: Compositing example
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 This sample program demonstrates a number of [compositing operations](/zh-TW/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). The output looks like this:
 

@@ -11,7 +11,7 @@ The Notifications API allows web pages to control the display of system notifica
 
 On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initialises, using the {{domxref("Notification.requestPermission()")}} method. This will spawn a request dialog, along the following lines:
 
-![](https://mdn.mozillademos.org/files/10819/notification-bubble.png)
+![](screen_shot_2019-12-11_at_9.59.14_am.png)
 
 From here the user can choose to allow notifications from this origin, block notifications from this origin, or not choose at this point. Once a choice has been made, the setting will generally persist for the current session.
 
