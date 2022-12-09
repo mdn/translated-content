@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 
 ## Синтаксис
 
-```
+```js
 obj?.prop
 obj?.[expr]
 arr?.[index]
@@ -43,7 +43,7 @@ let nestedProp = obj.first?.second;
 
 Это эквивалентно следующему (кроме создания временной переменной):
 
-```
+```js
 let temp = obj.first;
 let nestedProp = ((temp === null || temp === undefined) ? undefined : temp.second);
 ```
