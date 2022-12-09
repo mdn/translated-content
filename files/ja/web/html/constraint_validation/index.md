@@ -1,7 +1,7 @@
 ---
 title: 制約検証
-slug: Web/Guide/HTML/Constraint_validation
-original_slug: Web/Guide/HTML/HTML5/Constraint_validation
+slug: Web/HTML/Constraint_validation
+original_slug: Web/Guide/HTML/Constraint_validation
 ---
 
 ウェブフォームの作成は常に複雑な作業でした。フォーム自体をマークアップすること自体は簡単ですが、それぞれの入力欄が妥当で一貫しているかどうかをチェックすることはもっと難しく、問題をユーザーに伝えることは頭痛がするかもしれません。[HTML5](/ja/docs/Glossary/HTML5) では、フォームに新しい仕組みが導入されました。 {{ HTMLElement("input") }} 要素に意味を持つ新しい型と、クライアント側でフォームの内容をチェックする作業を簡単にする*制約検証*が追加されました。基本的な、よくある制約は、JavaScript を必要とせずに、新しい属性を設定することでチェックできます。もっと複雑な制約は[制約検証 API](/ja/docs/Web/API/Constraint_validation) を使用して検査することができます。

@@ -20715,26 +20715,6 @@
     "modified": "2019-10-11T10:49:15.066Z",
     "contributors": ["mfuji09", "silverskyvicto", "Uemmra3", "Marsf"]
   },
-  "Web/Guide/HTML/Constraint_validation": {
-    "modified": "2020-10-16T13:41:03.752Z",
-    "contributors": ["mfuji09", "Uemmra3"]
-  },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2020-10-18T10:43:23.129Z",
-    "contributors": [
-      "mfuji09",
-      "ambi",
-      "yt6t6t",
-      "tgfjt",
-      "SphinxKnight",
-      "ethertank",
-      "Potappo"
-    ]
-  },
-  "Web/Guide/HTML/XHTML": {
-    "modified": "2020-05-04T01:56:10.076Z",
-    "contributors": ["mfuji09"]
-  },
   "Web/Guide/Houdini": {
     "modified": "2020-07-24T06:19:03.585Z",
     "contributors": ["Wind1808"]
@@ -20894,6 +20874,22 @@
       "himrock922",
       "teoli",
       "myakura"
+    ]
+  },
+  "Web/HTML/Constraint_validation": {
+    "modified": "2020-10-16T13:41:03.752Z",
+    "contributors": ["mfuji09", "Uemmra3"]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2020-10-18T10:43:23.129Z",
+    "contributors": [
+      "mfuji09",
+      "ambi",
+      "yt6t6t",
+      "tgfjt",
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
     ]
   },
   "Web/HTML/Date_and_time_formats": {
@@ -25120,10 +25116,6 @@
   "Web/JavaScript/Reference/Global_Objects/Date/toDateString": {
     "modified": "2020-10-25T02:36:41.280Z",
     "contributors": ["mfuji09", "segayuu", "Marsf", "shide55"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Date/toGMTString": {
-    "modified": "2020-10-25T02:23:05.410Z",
-    "contributors": ["mfuji09", "YujiSoftware", "Marsf", "shide55"]
   },
   "Web/JavaScript/Reference/Global_Objects/Date/toISOString": {
     "modified": "2020-10-25T02:16:58.464Z",
@@ -30842,6 +30834,10 @@
     "modified": "2020-07-17T23:22:13.809Z",
     "contributors": ["papparapa", "silverskyvicto"]
   },
+  "conflicting/Glossary/XHTML": {
+    "modified": "2020-05-04T01:56:10.076Z",
+    "contributors": ["mfuji09"]
+  },
   "conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript": {
     "modified": "2020-12-06T14:17:48.495Z",
     "contributors": [
@@ -31204,6 +31200,10 @@
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString": {
+    "modified": "2020-10-25T02:23:05.410Z",
+    "contributors": ["mfuji09", "YujiSoftware", "Marsf", "shide55"]
   },
   "conflicting/Web/SVG/Element/animate": {
     "modified": "2020-10-15T21:27:02.463Z",
