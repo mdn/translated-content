@@ -496,9 +496,9 @@ You will first need to [create an account](https://mlab.com/signup/) with mLab (
 
 After logging in, you'll be taken to the [home](https://mlab.com/home) screen:
 
-1. Click **Create New** in the _MongoDB Deployments_ section.![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
+1. Click **Create New** in the _MongoDB Deployments_ section.![](mlabcreatenewdeployment.png)
 2. This will open the _Cloud Provider Selection_ screen.
-    ![MLab - screen for new deployment](https://mdn.mozillademos.org/files/15661/mLab_new_deployment_form_v2.png)
+    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
 
     - Select the SANDBOX (Free) plan from the Plan Type section.
     - Select any provider from the _Cloud Provider_ section. Different providers offer different regions (displayed below the selected plan type).
@@ -506,28 +506,28 @@ After logging in, you'll be taken to the [home](https://mlab.com/home) screen:
 
 3. This will open the _Select Region_ screen.
 
-    ![Select new region screen](https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png)
+    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
 
     - Select the region closest to you and then **Continue**.
 
 4. This will open the _Final Details_ screen.
-    ![New deployment database name](https://mdn.mozillademos.org/files/15663/mLab_new_deployment_final_details.png)
+    ![New deployment database name](mlab_new_deployment_final_details.png)
 
     - Enter the name for the new database as `local_library` and then select **Continue**.
 
 5. This will open the _Order Confirmation_ screen.
-    ![Order confirmation screen](https://mdn.mozillademos.org/files/15664/mLab_new_deployment_order_confirmation.png)
+    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
 
     - Click **Submit Order** to create the database.
 
 6. You will be returned to the home screen. Click on the new database you just created to open its details screen. As you can see the database has no collections (data).
-    ![mLab - Database details screen](https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png)
+    ![mLab - Database details screen](mlab_new_deployment_database_details.png)
 
     The URL that you need to use to access your database is displayed on the form above (shown for this database circled above). In order to use this you need to create a database user that you can specify in the URL.
 
 7. Click the **Users** tab and select the **Add database user** button.
 8. Enter a username and password (twice), and then press **Create**. Do not select _Make read only_.
-    ![](https://mdn.mozillademos.org/files/14454/mLab_database_users.png)
+    ![](mlab_database_users.png)
 
 You now have now created the database, and have an URL (with username and password) that can be used to access it. This will look something like: `mongodb://your_user_namer:your_password@ds119748.mlab.com:19748/local_library`.
 

@@ -26,7 +26,7 @@ original_slug: Web/SVG/Элемент/circle
 </svg>
 ```
 
-» [circle.svg](https://mdn.mozillademos.org/files/7707/circle2.svg)
+» [circle.svg](circle2.svg)
 
 ## Атрибуты
 

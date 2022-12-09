@@ -1,11 +1,6 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math
 ---
 

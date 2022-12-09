@@ -138,7 +138,7 @@ HTML
 ```
 
 Captura de pantalla
-![Screenshot of a plain slider control on macOS](https://mdn.mozillademos.org/files/14989/macslider-plain.png)
+![Screenshot of a plain slider control on macOS](macslider-plain.png)
 
 ##### Un control rango con marcas
 
@@ -165,7 +165,7 @@ HTML
 ```
 
 Captura de pantalla
-![Screenshot of a plain slider control on macOS](https://mdn.mozillademos.org/files/14991/macslider-ticks.png)
+![Screenshot of a plain slider control on macOS](macslider-ticks.png)
 
 ##### Un control rango con marcas y etiquetas
 
@@ -192,7 +192,7 @@ HTML
 ```
 
 Captura de pantalla
-![Screenshot of a plain slider control on macOS](https://mdn.mozillademos.org/files/14993/macslider-labels.png)
+![Screenshot of a plain slider control on macOS](macslider-labels.png)
 
 > **Nota:** Actualmente, ningún navegador soporta todas estas características. Firefox no soporta ni marcas ni etiquetas, mientras que Chrome soporta las marcas pero no las etiquetas.
 
@@ -208,7 +208,7 @@ Si tenemos el siguiente control range:
 <input type="range" id="volume" min="0" max="11" value="7" step="1">
 ```
 
-{{EmbedLiveSample("Orientation_sample1", 200, 200, "https://mdn.mozillademos.org/files/14983/Orientation_sample1.png")}}
+{{EmbedLiveSample("Orientation_sample1", 200, 200, "orientation_sample1.png")}}
 
 Dicho control se muestra en horizontal (al menos en los principales navegadores, o otros puede variar). Presentarlo en vertical es tan simple como añadir CSS para cambiar las dimensiones del control, de la siguiente manera:
 
@@ -229,7 +229,7 @@ Dicho control se muestra en horizontal (al menos en los principales navegadores,
 
 #### Result
 
-{{EmbedLiveSample("Orientation_sample2", 200, 200, "https://mdn.mozillademos.org/files/14985/Orientation_sample2.png")}}
+{{EmbedLiveSample("Orientation_sample2", 200, 200, "orientation_sample2.png")}}
 
 **En la actualidad, ninguno de los navegadores principales soporta la creación de inputs range usando este CSS, incluso a perar de que la especificación recomienda que lo hagan.**
 
@@ -274,7 +274,7 @@ El tamaño del range es 150 pixeles de ancho por 20 pixeles de alto. Ponemos los
 
 #### Result
 
-{{EmbedLiveSample("Orientation_sample3", 200, 200, "https://mdn.mozillademos.org/files/14987/Orientation_sample3.png")}}
+{{EmbedLiveSample("Orientation_sample3", 200, 200, "orientation_sample3.png")}}
 
 ## Validación
 

@@ -12,7 +12,7 @@ Todo navegador web moderno inclui um poderoso conjunto de ferramentas para desen
 
 O devtools está inserido no navegador em uma janela semelhante a esta:
 
-![](https://mdn.mozillademos.org/files/9561/Screenshot%20from%202014-11-25%2012:32:57.png)
+![](screenshot_from_2014-11-25_12-32-57.png)
 
 Como você acessa? Três modos:
 
@@ -23,20 +23,20 @@ Como você acessa? Três modos:
 
 - _**Menu bar.**_
 
-  - **Firefox.** Menu ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ ![](https://mdn.mozillademos.org/files/9639/Screenshot%20from%202014-11-26%2014:24:56.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
+  - **Firefox.** Menu ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ ![](screenshot_from_2014-11-26_14-24-56.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
   - **Chrome.** _View ➤ Developer ➤ Developer Tools_
   - **Safari.** _Develop ➤ Show Web Inspector._ Se você não consegue ver o _menu Desenvolvedor_ , vá para _Safari ➤ Preferências ➤ Avançado_ e confira o _Show Develop menu no menu bar_ checkbox.
   - **Opera**. _Developer ➤ Web Inspector_
 
 - **_Context menu._** Pressione-e-segure/botão-direito no item da webpage (Ctrl-click on the Mac), e escolha _Inspect Element no_ menu de contexto que aparece. (_An added bonus:_ this method straight-away highlights the code of the element you right-clicked.)
 
-![](https://mdn.mozillademos.org/files/9605/inspect-element-option.png)
+![](inspect-element-option.png)
 
 ## O Inspetor: DOM explorer e editor CSS
 
 O devtools usualmente abre por padrão o inspetor, que se parece com a imagem abaixo. Esta ferramenta permite que você veja o resultado do HTML num site em execução, bem como o CSS aplicado en cada elemento na página. Ele também lhe mostra as mudanças efetuadas no HTML e CSS e os resultados são produzidos imediatamente, ao vivo, na janela do navegador.
 
-![](https://mdn.mozillademos.org/files/9607/inspector.png)
+![](inspector.png)
 
 Se você não vê o inspector,
 
@@ -57,7 +57,7 @@ Se você não vê o inspector,
 
 Para começar tente pressionar o botão direito do mouse sobre um elemento HTML no inspetor do DOM e olhe para o menu de contexto. As opções do menu variam nos navegadores, mas os mais importantes são os mesmos.
 
-![](https://mdn.mozillademos.org/files/9609/dev-tool-context-menu.png)
+![](dev-tool-context-menu.png)
 
 - **Delete Node** (às vezes Delete _Element_). Exclui o elemento atual.
 - **Edit as HTML** (às vezes _Add attribute_/_Edit text_). Permite alterar o HTML e ver os resultados na hora. Muito útil para depuração e teste.
@@ -71,7 +71,7 @@ Tente editar alguns dos seus DOM agora. Clique duas vezes em um elemento ou cliq
 
 Por padrão, o editor CSS exibe as regras CSS aplicadas ao elemento atualmente selecionado:
 
-![](https://mdn.mozillademos.org/files/9631/css-viewer-2.png)
+![](css-viewer-2.png)
 
 Esses recursos são especialmente úteis:
 
@@ -155,7 +155,7 @@ No Firefox o atalho é <kbd>ctrl</kbd> + <kbd>shift</kbd>+ <kbd>k</kbd> ou no me
 
 Aparecerá uma janela como a seguinte:
 
-![](https://mdn.mozillademos.org/files/9541/console.png)
+![](console.png)
 
 Para ver o que acontece, tente inserir os seguintes trechos de código no console, um por um (e, em seguida, pressione Enter):
 

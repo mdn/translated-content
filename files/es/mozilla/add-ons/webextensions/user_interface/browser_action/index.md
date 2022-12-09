@@ -7,7 +7,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/user_interface/Accion_navegador
 {{AddonSidebar}}
 
 Generalmente referidas como [acciones de navegador](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), esta opción de interfaz de usuario corresponde a un botón agregado a la barra de herramientas del navegador. Los usuarios pueden hacer click en el botón para interactuar con tu extensión.
-![](https://mdn.mozillademos.org/files/15751/browser-action.png)
+![](browser-action.png)
 
 El botón de la barra de herramientas (acción de navegador) es muy parecido al botón de la barra de direcciones (acción de página). Para conocer las diferencias y obtener consejo en cuándo usar qué tipo de botón, te recomendamos ver [Acciones de página y acciones de navegador](/es/Add-ons/WebExtensions/user_interface/Page_actions#Page_actions_and_browser_actions).
 

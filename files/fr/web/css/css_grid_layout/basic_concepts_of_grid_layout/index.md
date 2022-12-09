@@ -92,7 +92,7 @@ Pour que notre exemple ressemble vraiment à une grille nous devons ajouter des 
 
 Les propriétés {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}} permettent de définir des colonnes et des rangées. Celles-ci définissent les pistes. Une _piste_ est l'espace entre deux lignes adjacentes d'une grille. L'image ci-dessous colore une piste de la grille, correspondant à la première rangée de la grille.
 
-![Une boite avec 3 éléments de grille. Au-dessus des trois éléments, une zone de même longueur est mise en valeur : il s’agit de la piste.](1_grid_track.png)
+![Une boite avec 3 éléments de grille. Au-dessus des trois éléments, une zone de même longueur est mise en valeur : il s’agit de la piste.](1_grid_track.png)
 
 Les pistes sont définies dans la grille explicite à l’aide des propriétés `grid-template-columns` et `grid-template-rows`, ou des propriétés raccourcies `grid` ou `grid-template`. Les pistes sont aussi créées dans la grille implicite en positionnant un élément de grille en dehors des pistes créées dans la grille explicite.
 
@@ -606,7 +606,7 @@ Dans ce cas la grille imbriquée n'est pas liée à la grille qui la contient. E
 
 Dans le brouillon de travail pour la spécification de niveau 2 pour CSS Grid, il existe une fonctionnalité nommée _sous-grille_ qui permet de créer des grilles imbriquées qui utilisent la définition de la grille parent.
 
-> **Note :** Cette fonctionnalité apparaît dans Firefox 71, le seul navigateur pour le moment à la prendre en charge.
+> **Note :** Cette fonctionnalité apparaît dans Firefox 71, le seul navigateur pour le moment à la prendre en charge.
 
 Selon la version actuelle de la spécification, il faudrait modifier l'exemple de grille imbriquée précédent et remplacer `grid-template-columns: repeat(3, 1fr)` en `grid-template-columns: subgrid`. La grille imbriquée utilisera alors la grille parente pour inscrire ses éléments dans le document.
 

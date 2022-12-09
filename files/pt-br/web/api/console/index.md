@@ -128,7 +128,7 @@ You can use the `"%c"` directive to apply a CSS style to console output:
 console.log("%cMy stylish message", "color: red; font-style: italic");
 ```
 
-![](https://mdn.mozillademos.org/files/7739/console-style.png)
+![](console-style.png)
 
 ### Usando grupos no console
 

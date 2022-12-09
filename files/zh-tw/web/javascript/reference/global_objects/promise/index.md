@@ -65,11 +65,19 @@ new Promise( /* executor */ function(resolve, reject) { ... } );
 
 ### 屬性
 
-{{page('zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype','屬性')}}
+- `Promise.prototype[@@toStringTag]`
+  - : The initial value of the [`@@toStringTag`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ### 方法
 
-{{page('zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise/prototype','方法')}}
+See the [Microtask guide](/zh-TW/docs/Web/API/HTML_DOM_API/Microtask_guide) to learn more about how these methods use the Microtask queue and services.
+
+- {{jsxref("Promise.prototype.catch()")}}
+  - : Appends a rejection handler callback to the promise, and returns a new promise resolving to the return value of the callback if it is called, or to its original fulfillment value if the promise is instead fulfilled.
+- {{jsxref("Promise.prototype.then()")}}
+  - : Appends fulfillment and rejection handlers to the promise, and returns a new promise resolving to the return value of the called handler, or to its original settled value if the promise was not handled (i.e. if the relevant handler `onFulfilled` or `onRejected` is not a function).
+- {{jsxref("Promise.prototype.finally()")}}
+  - : Appends a handler to the promise, and returns a new promise that is resolved when the original promise is resolved. The handler is called when the promise is settled, whether fulfilled or rejected.
 
 ## 建立 Promise
 

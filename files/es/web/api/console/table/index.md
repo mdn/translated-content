@@ -26,7 +26,11 @@ El argumento `data` puede ser un array o un objeto.
 console.table(["apples", "oranges", "bananas"]);
 ```
 
-![](https://mdn.mozillademos.org/files/8567/console-table-array.png)
+| (index) | Values    |
+|---------|-----------|
+| 0       | 'apples'  |
+| 1       | 'oranges' |
+| 2       | 'bananas' |
 
 ```js
 // un objeto cuyas propiedades son strings
@@ -36,12 +40,15 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
-var me = new Person("John", "Smith");
+var me = new Person("Tyrone", "Jones");
 
 console.table(me);
 ```
 
-![](https://mdn.mozillademos.org/files/8559/console-table-simple-object.png)
+| (index)   | Values   |
+|-----------|----------|
+| firstName | 'Tyrone' |
+| lastName  | 'Jones'  |
 
 ### Colecciones de tipos compuestos
 
@@ -50,11 +57,19 @@ Si los elementos en el array, o propiedades en el objeto, son también arrays u 
 ```js
 // un array de arrays
 
-var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
+const people = [
+  ["Tyrone", "Jones"],
+  ["Janet", "Smith"],
+  ["Maria", "Cruz"],
+];
 console.table(people);
 ```
 
-![Table displaying array of arrays](https://mdn.mozillademos.org/files/8561/console-table-array-of-array.png)
+| (index) | 0        | 1       |
+|---------|----------|---------|
+| 0       | 'Tyrone' | 'Jones' |
+| 1       | 'Janet'  | 'Smith' |
+| 2       | 'Maria'  | 'Cruz'  |
 
 ```js
 // un array de objetos
@@ -64,30 +79,38 @@ function Person(firstName, lastName) {
   this.lastName = lastName;
 }
 
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
+const tyrone = new Person("Tyrone", "Jones");
+const janet = new Person("Janet", "Smith");
+const maria = new Person("Maria", "Cruz");
 
-console.table([john, jane, emily]);
+console.table([tyrone, janet, maria]);
 ```
 
 Tenga en cuenta que si el array contiene objetos, las columnas se etiquetarán con el nombre de la propiedad.
 
-![Table displaying array of objects](https://mdn.mozillademos.org/files/8563/console-table-array-of-objects.png)
+| (index) | firstName | lastName |
+|---------|-----------|----------|
+| 0       | 'Tyrone'  | 'Jones'  |
+| 1       | 'Janet'   | 'Smith'  |
+| 2       | 'Maria'   | 'Cruz'   |
 
 ```js
 // un objeto cuyas propiedades son objetos
 
-var family = {};
+const family = {};
 
-family.mother = new Person("Jane", "Smith");
-family.father = new Person("John", "Smith");
-family.daughter = new Person("Emily", "Smith");
+family.mother = new Person("Janet", "Jones");
+family.father = new Person("Tyrone", "Jones");
+family.daughter = new Person("Maria", "Jones");
 
 console.table(family);
 ```
 
-![Table displaying object of objects](https://mdn.mozillademos.org/files/8565/console-table-object-of-objects.png)
+| (index)  | firstName | lastName |
+|----------|-----------|----------|
+| daughter | 'Maria'   | 'Jones'  |
+| father   | 'Tyrone'  | 'Jones'  |
+| mother   | 'Janet'   | 'Jones'  |
 
 ### Restringiendo las columnas mostradas
 
@@ -100,15 +123,17 @@ function Person(firstName, lastName) {
   this.firstName = firstName;
   this.lastName = lastName;
 }
-
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
-
-console.table([john, jane, emily], ["firstName"]);
+const tyrone = new Person("Tyrone", "Jones");
+const janet = new Person("Janet", "Smith");
+const maria = new Person("Maria", "Cruz");
+console.table([tyrone, janet, maria], ["firstName"]);
 ```
 
-![Table displaying array of objects with filtered output](https://mdn.mozillademos.org/files/8569/console-table-array-of-objects-firstName-only.png)
+| (index) | firstName |
+|---------|-----------|
+| 0       | 'Tyrone'  |
+| 1       | 'Janet'   |
+| 2       | 'Maria'   |
 
 ### Ordenando columnas
 

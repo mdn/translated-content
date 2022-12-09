@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setMonth
 ---
 

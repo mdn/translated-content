@@ -1216,6 +1216,7 @@
 /es/docs/MDN/Contribute/Guidelines/Convenciones_y_definiciones	/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete
 /es/docs/MDN/Contribute/Guidelines/Project:Guía_de_estilo	/es/docs/MDN/Writing_guidelines/Writing_style_guide
 /es/docs/MDN/Contribute/Herramientas	/es/docs/orphaned/MDN/Tools
+/es/docs/MDN/Contribute/Howto	/es/docs/conflicting/MDN/Contribute
 /es/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live	/es/docs/MDN/Writing_guidelines/Page_structures/Live_samples
 /es/docs/MDN/Contribute/Howto/Tag	/es/docs/MDN/Writing_guidelines/Howto/Tag
 /es/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary	/es/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
@@ -1892,13 +1893,14 @@
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Dibujando_formas	/es/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Optimizing_canvas
 /es/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/es/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
+/es/docs/Web/Guide/HTML/Content_categories	/es/docs/Web/HTML/Content_categories
 /es/docs/Web/Guide/HTML/Editable_content	/es/docs/conflicting/Web/HTML/Global_attributes/contenteditable
 /es/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form	/es/docs/Learn/Forms/How_to_structure_a_web_form
 /es/docs/Web/Guide/HTML/Forms/My_first_HTML_form	/es/docs/Learn/Forms/Your_first_form
 /es/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data	/es/docs/Learn/Forms/Sending_and_retrieving_form_data
 /es/docs/Web/Guide/HTML/Forms/Styling_HTML_forms	/es/docs/Learn/Forms/Styling_web_forms
 /es/docs/Web/Guide/HTML/Introduction_alhtml	/es/docs/Learn/HTML/Introduction_to_HTML
-/es/docs/Web/Guide/HTML/categorias_de_contenido	/es/docs/Web/Guide/HTML/Content_categories
+/es/docs/Web/Guide/HTML/categorias_de_contenido	/es/docs/Web/HTML/Content_categories
 /es/docs/Web/Guide/Movil	/es/docs/Web/Guide/Mobile
 /es/docs/Web/Guide/Performance/Usando_web_workers	/es/docs/Web/API/Web_Workers_API/Using_web_workers
 /es/docs/Web/Guide/Usando_Objetos_FormData	/es/docs/Web/API/FormData/Using_FormData_Objects

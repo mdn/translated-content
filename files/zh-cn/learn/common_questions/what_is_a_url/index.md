@@ -60,9 +60,9 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 - ![Protocol](mdn-url-protocol@x2_update.png)
   - : `http` 是协议。它表明了浏览器必须使用何种协议。它通常都是 HTTP 协议或是 HTTP 协议的安全版，即 HTTPS。Web 需要它们二者之一，但浏览器也知道如何处理其他协议，比如 `mailto:`（打开邮件客户端）或者 `ftp:`（处理文件传输），所以当你看到这些协议时，不必惊讶。
-- ![Domaine Name](https://mdn.mozillademos.org/files/8015/mdn-url-domain@x2.png)
+- ![Domaine Name](mdn-url-domain@x2.png)
   - : `www.example.com` 是域名。它表明正在请求哪个 Web 服务器。或者，可以直接使用{{Glossary("IP address")}}, 但是因为它不太方便，所以它不经常在网络上使用。.
-- ![Port](https://mdn.mozillademos.org/files/8017/mdn-url-port@x2.png)
+- ![Port](mdn-url-port@x2.png)
   - : `:80` 是端口。它表示用于访问 Web 服务器上的资源的技术“门”。如果 Web 服务器使用 HTTP 协议的标准端口（HTTP 为 80，HTTPS 为 443）来授予其资源的访问权限，则通常会被忽略。否则是强制性的。
 - ![Path to the file](mdn-url-path@x2.png)
   - : `/path/to/myfile.html` 是网络服务器上资源的路径。在 Web 的早期阶段，像这样的路径表示 Web 服务器上的物理文件位置。如今，它主要是由没有任何物理现实的 Web 服务器处理的抽象。

@@ -46,7 +46,7 @@ Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentir
     miTitulo.textContent = '¡Hola mundo!';
     ```
 
-5. Finalmente, asegúrate de que has guardado los archivos HTML y JavaScript, y abre `index.html` en el navegador. Deberías ver algo así: ![](https://mdn.mozillademos.org/files/9543/hello-world.png)
+5. Finalmente, asegúrate de que has guardado los archivos HTML y JavaScript, y abre `index.html` en el navegador. Deberías ver algo así: ![](hello-world.png)
 
 > **Nota:** la razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.
 >
@@ -465,7 +465,7 @@ En el lenguaje humano, esto significa que si `miNombre` no tiene ningún valor, 
 
 Si has seguido las instrucciones en este artículo, tendrás una página que luzca como esta (también puede [ver nuestra versión aquí](http://mdn.github.io/beginner-html-site-scripted/)):
 
-![](https://mdn.mozillademos.org/files/9539/website-screen-scripted.png)
+![](website-screen-scripted.png)
 
 Si tuviste problemas, siempre puedes comparar su trabajo con el [código terminado del ejemplo en GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js).
 

@@ -1,12 +1,6 @@
 ---
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/E
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/E
 ---
 

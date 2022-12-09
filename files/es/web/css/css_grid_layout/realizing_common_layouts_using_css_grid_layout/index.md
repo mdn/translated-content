@@ -9,7 +9,7 @@ Para completar este conjunto de guías de CSS Grid Layout, voy a recorrer alguno
 
 Muchos sitios web son una variación de este tipo de diseño: contenido, barras laterales, un encabezado y un pie de página. En diseños responsivos, es posible que quieras mostrar el diseño en una sola columna, agregando una barra lateral en un punto de interrupción determinado y luego incorporar un diseño de tres columnas para pantallas más amplias.
 
-![Image of the three different layouts created by redefining our grid at two breakpoints.](https://mdn.mozillademos.org/files/14749/11-responsive-areas.png)
+![Image of the three different layouts created by redefining our grid at two breakpoints.](11-responsive-areas.png)
 
 Voy a crear este layout usando la propiedad _named template areas_ que aprendimos en la guía _[Grid template areas](/es/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)_.
 
@@ -207,7 +207,7 @@ Como se describe en la [guía de líneas con nombre](/es/docs/Web/CSS/CSS_Grid_L
 
 En lugar de establecer el número de la línea final, he elegido decir cuántas pistas debe expandir este elemento, utilizando la palabra clave span. Me gusta este enfoque, ya que cuando trabajamos con un sistema de diseño de múltiples columnas normalmente pensamos en bloques en términos del número de vías de la cuadrícula que atraviesan, y los ajustamos para diferentes puntos de ruptura. Para ver cómo se alinean los bloques con las vías, utiliza el [Firefox Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts). Muestra claramente cómo se colocan nuestros ítems.
 
-![Showing the items placed on the grid with grid tracks highlighted.](https://mdn.mozillademos.org/files/14753/11-grid-inspector-12col.png)
+![Showing the items placed on the grid with grid tracks highlighted.](11-grid-inspector-12col.png)
 
 Existen algunas diferencias clave sobre cómo funciona un diseño de cuadrícula en los sistemas de cuadrícula que se pueden haber utilizado anteriormente. Como puedes ver, no necesitamos añadir ningún marcado para crear una fila, los sistemas de cuadrícula necesitan hacer esto para evitar que los elementos salten a la fila de arriba. Con CSS Grid Layout, podemos colocar las cosas en filas, sin peligro de que suban a la fila de arriba si se dejan vacías. Debido a esta _estricta_ colocación de columnas y filas, también podemos dejar fácilmente espacio en blanco en nuestro diseño. Tampoco necesitamos clases especiales que tiren o empujen cosas, para que se introduzcan en la rejilla. Todo lo que tenemos que hacer es especificar la línea de inicio y final del ítem.
 
@@ -334,7 +334,7 @@ Finalmente vamos a la versión de tres columnas de este diseño. El encabezado c
 
 Una vez más el Grid Inspector [Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) es útil para ayudarnos a ver cómo ha tomado forma nuestro diseño.
 
-![Showing the layout with grid tracks highlighted by the grid inspector.](https://mdn.mozillademos.org/files/14755/11-grid-inspector-12col-layout.png)
+![Showing the layout with grid tracks highlighted by the grid inspector.](11-grid-inspector-12col-layout.png)
 
 Algo a tener en cuenta a la hora de crear este diseño es que no hemos necesitado posicionar explícitamente cada elemento en la cuadrícula en cada punto de ruptura. Hemos sido capaces de heredar la colocación establecida para puntos de ruptura anteriores - una ventaja de trabajar " mobile first ". También podemos aprovechar la colocación automática de la rejilla. Al mantener los elementos en un orden lógico, la colocación automática realiza una gran cantidad de trabajo por nosotros al colocar los elementos en la cuadrícula. En el último ejemplo de esta guía crearemos un diseño que se basa totalmente en la colocación automática
 
@@ -437,7 +437,7 @@ Esta es realmente una de las razones clave por las que usaría flexbox en lugar 
 
 Todo esto se ve bastante completo ahora, sin embargo, a veces tenemos unas cartas que contienen mucho más contenido que las otras. Podría ser bueno hacer que se expandan a lo largo de dos pistas, y entonces no serán tan altas. Tengo una clase `wide` en mi ítem más grande, y añado una regla {{cssxref("grid-column-end")}} con el valor `span 2`. Ahora cuando la rejilla llegue a este ítem, le asignará dos pistas. En algunos puntos de ruptura, esto significa que obtendremos un hueco en la cuadrícula - donde no haya espacio para colocar un elemento de dos pistas.
 
-![The layout has gaps as there is not space to layout a two track item.](https://mdn.mozillademos.org/files/14751/11-grid-auto-flow-sparse.png)
+![The layout has gaps as there is not space to layout a two track item.](11-grid-auto-flow-sparse.png)
 
 #### Usando `grid-auto-flow: dense`
 
