@@ -115,11 +115,11 @@ _此接口不继承任何方法。_
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - {{domxref("Crypto")}} 和 {{domxref("Crypto.subtle")}}.
 - [Crypto 101](https://www.crypto101.io/): an introductory course on cryptography.

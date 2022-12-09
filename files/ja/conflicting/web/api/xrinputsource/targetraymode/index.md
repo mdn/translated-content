@@ -12,7 +12,7 @@ original_slug: Web/API/XRTargetRayMode
 
 <figcaption><strong>ハンドコントローラーから放出されるターゲット光線。</strong></figcaption>
 
-![ハンドコントローラーから放出されるターゲット光線を示すスクリーンショット](https://mdn.mozillademos.org/files/17089/example-target-ray.gif)
+![ハンドコントローラーから放出されるターゲット光線を示すスクリーンショット](example-target-ray.gif)
 
 ターゲット光線は、単純な線（理想的には距離とともにフェードする）から、上のスクリーンショットに示されているサイエンスフィクションの「フェイザー」スタイルなどのアニメーション効果まで、何でもかまいません。
 

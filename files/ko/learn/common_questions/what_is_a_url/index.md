@@ -58,9 +58,9 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 - ![Protocol](https://mdn.mozillademos.org/files/15766/mdn-url-protocol@x2_update.png)
   - : `http` 는 프로토콜(규약)입니다. URL의 첫 파트는 브라우저가 어떤 규약을 사용해야 하는 지를 나타냅니다. 프로토콜은 컴퓨터 네트워크에서 데이터를 교환하거나 전송하기 위한 방법들의 세트입니다. 보통 웹사이트들을 위해, 이것은 HTTP 프로토콜이나 HTTP 프로토콜의 보안 버전입니다. 웹은 이 두 가지 중 하나를 요구합니다, 그러나 브라우저는 `mailto:` (메일 클라이언트를 열기 위한) 또는 파일을 전송하기 위해 `ftp:` 와 같은 다른 프로토콜들을 다루는 법 또한 알고 있습니다, 그러므로 만약 이런 프로토콜들을 보더라도 놀라지 마십시오.
-- ![Domaine Name](https://mdn.mozillademos.org/files/8015/mdn-url-domain@x2.png)
+- ![Domaine Name](mdn-url-domain@x2.png)
   - : `www.example.com` 은 도메인 이름입니다. 이것은 어떤 웹 서버가 요구되는 것인 지를 가리킵니다. 대안으로, 직접 {{Glossary("IP address")}}를 사용하는 것도 가능합니다, 그러나 덜 편리하기 때문에, 그것은 웹에서 주로 사용되지는 않습니다.
-- ![Port](https://mdn.mozillademos.org/files/8017/mdn-url-port@x2.png)
+- ![Port](mdn-url-port@x2.png)
   - : `:80` 은 포트입니다. 이것은 기술적으로 웹서버에서 자원을 접근하기 위해 사용하는 "관문(gate)"을 가리킵니다. 만약 웹서버가 자원의 접근 하기 위해 표준 HTTP 포트 (HTTP를 위한 80, HTTPS를 위한 443)를 사용한다면, 포트 번호는 보통 생략합니다. 그렇지 않으면 포트 번호는 필수입니다.
 - ![Path to the file](https://mdn.mozillademos.org/files/8019/mdn-url-path@x2.png)
   - : `/path/to/myfile.html` 은 웹서버에서 자원에 대한 경로입니다. 초기의 웹에서는, 웹서버상에서 물리적 파일 위치를 나타냈습니다. 요즘에는, 실제 물리적 경로를 나타내지 않고, 웹 서버에서 추상화하여 보여줍니다.

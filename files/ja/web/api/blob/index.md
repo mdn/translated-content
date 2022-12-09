@@ -1,6 +1,8 @@
 ---
 title: Blob
 slug: Web/API/Blob
+l10n:
+  sourceCommit: 418f9cf461de0c7845665c0c677ad0667740f52a
 ---
 
 {{APIRef("File API")}}
@@ -22,9 +24,9 @@ Blob が表現することができるデータは必ずしも JavaScript ネイ
 
 ## インスタンスプロパティ
 
-- {{DOMxRef("Blob.prototype.size")}} {{readonlyinline}}
-  - : `Blob` オブジェクトに含まれるデータのサイズ (バイト単位)。
-- {{DOMxRef("Blob.prototype.type")}} {{readonlyinline}}
+- {{DOMxRef("Blob.prototype.size")}} {{ReadOnlyInline}}
+  - : `Blob` オブジェクトに含まれるデータのサイズ（バイト単位）。
+- {{DOMxRef("Blob.prototype.type")}} {{ReadOnlyInline}}
   - : `Blob` に含まれるデータの MIME タイプを示す文字列。タイプが不明な場合、この文字列は空です。
 
 ## インスタンスメソッド
@@ -36,7 +38,7 @@ Blob が表現することができるデータは必ずしも JavaScript ネイ
 - {{DOMxRef("Blob.prototype.stream()")}}
   - : `Blob` の内容を読み込むために使用できる {{DOMxRef("ReadableStream")}} を返します。
 - {{DOMxRef("Blob.prototype.text()")}}
-  - : UTF-8 テキストとして解釈された Blob の内容全体を含む {{DOMxRef("USVString")}} で解決する Promise を返します。
+  - : UTF-8 テキストとして解釈された Blob の内容全体を含む文字列で解決するプロミスを返します。
 
 ## 例
 
@@ -45,49 +47,68 @@ Blob が表現することができるデータは必ずしも JavaScript ネイ
 {{DOMxRef("Blob.Blob", "Blob()")}} コンストラクターは、他のオブジェクトから Blob を作成することができます。たとえば、JSON 文字列から Blob を作成するには、次のようにします。
 
 ```js
-const obj = {hello: 'world'};
-const blob = new Blob([JSON.stringify(obj, null, 2)], {type : 'application/json'});
+const obj = { hello: "world" };
+const blob = new Blob([JSON.stringify(obj, null, 2)], {
+  type: "application/json",
+});
 ```
 
 ### 型付き配列の内容を表す URL の作成
 
-<p>次のコードは、JavaScript の[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)を作成し、型付き配列のデータを含む新しい `Blob` を作成します。次に、{{DOMxRef("URL.createObjectURL()")}} を呼び出して、Blob を {{glossary("URL")}} に変換します。
+次のコードは、 JavaScript の[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)を作成し、型付き配列のデータを含む新しい `Blob` を作成します。次に、{{DOMxRef("URL.createObjectURL()")}} を呼び出して、Blob を {{glossary("URL")}} に変換します。
 
 #### HTML
 
 ```html
-<p>この例では、スペース文字から文字 Z までの ASCII コードを含む型付けされた配列を作成し、それをオブジェクト URL に変換します。
-そのオブジェクト URL を開くためのリンクが作成されます。
-リンクをクリックすると、デコードされたオブジェクト URL が表示されます。</p>
+<p>
+  この例では、スペース文字から文字 Z までの ASCII コードを含む型付けされた配列を作成し、それをオブジェクト URL に変換します。そのオブジェクト URL を開くためのリンクが作成されます。リンクをクリックすると、デコードされたオブジェクト URL が表示されます。
+</p>
 ```
 
 #### JavaScript
 
-このコードの例示のための主要な部分は `typedArrayToURL()` 関数で、与えられた型付き配列から `Blob` を作成し、それに対するオブジェクト URL を返します。データをオブジェクト URL に変換した後は、要素の {{HTMLElement("img")}} 属性の値として含む、さまざまな方法で使用することができます (もちろん、データに画像が含まれていることを前提としています)。
+このコードの例の主要な部分は `typedArrayToURL()` 関数で、与えられた型付き配列から `Blob` を作成し、それに対するオブジェクト URL を返します。データをオブジェクト URL に変換した後は、要素の {{HTMLElement("img")}} 属性の値として含む、さまざまな方法で使用することができます（もちろん、データに画像が含まれていることを前提としています）。
 
 ```js
-function typedArrayToURL(typedArray, mimeType) {
-  return URL.createObjectURL(new Blob([typedArray.buffer], {type: mimeType}))
+function showViewLiveResultButton() {
+  if (window.self !== window.top) {
+    // この文書がフレーム内にある場合、最初にユーザーに独自のタブ
+    // またはウィンドウで開くよう指示します。そうでなければ、
+    // この例はうまく動作しません。
+    const p = document.querySelector("p");
+    p.textContent = "";
+    const button = document.createElement("button");
+    button.textContent = "上記のコード例の結果をライブで見る";
+    p.append(button);
+    button.addEventListener("click", () => window.open(location.href));
+    return true;
+  }
+  return false;
 }
 
-const bytes = new Uint8Array(59);
+if (!showViewLiveResultButton()) {
+  function typedArrayToURL(typedArray, mimeType) {
+    return URL.createObjectURL(
+      new Blob([typedArray.buffer], { type: mimeType })
+    );
+  }
+  const bytes = new Uint8Array(59);
 
-for(let i = 0; i < 59; i++) {
-  bytes[i] = 32 + i;
+  for (let i = 0; i < 59; i++) {
+    bytes[i] = 32 + i;
+  }
+
+  const url = typedArrayToURL(bytes, "text/plain");
+
+  const link = document.createElement("a");
+  link.href = url;
+  link.innerText = "Open the array URL";
+
+  document.body.appendChild(link);
 }
-
-const url = typedArrayToURL(bytes, 'text/plain');
-
-const link = document.createElement('a');
-link.href = url;
-link.innerText = 'Open the array URL';
-
-document.body.appendChild(link);
 ```
 
 #### 結果
-
-例のリンクをクリックすると、ブラウザーがオブジェクトの URL をデコードしているのがわかります。
 
 {{EmbedLiveSample("Creating_a_URL_representing_the_contents_of_a_typed_array", 600, 200)}}
 
@@ -97,7 +118,7 @@ document.body.appendChild(link);
 
 ```js
 const reader = new FileReader();
-reader.addEventListener('loadend', () => {
+reader.addEventListener("loadend", () => {
    // reader.result には blob の内容が型付き配列として格納されます。
 });
 reader.readAsArrayBuffer(blob);
@@ -106,7 +127,7 @@ reader.readAsArrayBuffer(blob);
 `Blob` から内容を読み込む別の方法としては、 {{domxref("Response")}} を使用する方法があります。次のコードは、`Blob` の内容をテキストとして読み取るものです。
 
 ```js
-const text = await (new Response(blob)).text();
+const text = await new Response(blob).text();
 ```
 
 または、{{DOMxRef("Blob.prototype.text()")}} を使用します。
@@ -127,7 +148,6 @@ const text = await blob.text();
 
 ## 関連情報
 
-- {{DOMxRef("BlobBuilder")}}
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("URL.createObjectURL")}}

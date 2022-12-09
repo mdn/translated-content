@@ -37,10 +37,10 @@ Xxx.xxx()
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 看看这里
+## 参见
 
-- 接口定义： {{domxref("HTMLMediaElement")}}.
+- 接口定义：{{domxref("HTMLMediaElement")}}。

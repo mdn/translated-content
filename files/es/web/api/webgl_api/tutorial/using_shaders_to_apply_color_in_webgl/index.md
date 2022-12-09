@@ -3,7 +3,7 @@ title: Utilizar los shaders para aplicar color en WebGL
 slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
 Habiendo creado un cuadrado en la [demostración anterior](/es/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context), el siguiente paso es agregar algo de color. Nosotros podemos hacer esto a través de los shaders.
 

@@ -8,7 +8,7 @@ original_slug: Web/Compatibility_FAQ/No_Border_Line_Shown.html
 
 他ブラウザで表示されている罫線が、Firefox で表示されない場合があります。
 
-![](https://mdn.mozillademos.org/files/9983/0302.jpg)
+![](0302.jpg)
 
 ## 要因
 
