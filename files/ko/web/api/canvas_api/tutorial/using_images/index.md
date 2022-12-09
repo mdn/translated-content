@@ -11,7 +11,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Using_images
 original_slug: Web/HTML/Canvas/Tutorial/Using_images
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 지금까지 우리는 Canvas를 가지고 스스로 [도형](/ko/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)을 만들고 그 도형에 [스타일 적용](/ko/docs/Web/HTML/Canvas/Tutorial/Applying_styles_and_colors) 해 보았습니다. 이미지를 사용 하는 기능은 {{HTMLElement("canvas")}}의 가장 흥미로운 기능중 하나입니다. 이 기능은 게임의 그래픽 배경이나 혹은 다이나믹한 사진 도음들을 위해 사용 될 수 있습니다. PNG,GIF, JPEG등 브라우저에서 지원되는 포맷형태라면 어떠한 외부 이미지라도 사용 될 수 있습니다. 같은 페이지 소스에서 다른 Canvas요소로 만들어진 이미지 또한 사용할수 있습니다!
 

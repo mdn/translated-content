@@ -10,7 +10,7 @@ translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 original_slug: Web/HTML/Canvas/Manipulating_video_using_canvas
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 비디오에서 다양한 시각적 효과를 보여주기 위해,`캔버스`와 [`비디오`](/ko/docs/Web/HTML/Element/video)의 기능을 결합하여 실시간으로 비디오 데이터를 조작할 수 있습니다. 이 튜토리얼에서는 자바스크립트 코드로 어떻게 크로마 키잉(chroma-keying, 또한 "녹색 스크린 효과, green screen effect")을 구현할 수 있는지 보여줍니다.
 
