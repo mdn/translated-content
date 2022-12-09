@@ -2843,7 +2843,7 @@
 /ja/docs/SVG/Element-redirect-1	/ja/docs/Web/SVG/Element
 /ja/docs/SVG/Element/a	/ja/docs/Web/SVG/Element/a
 /ja/docs/SVG/Element/animate	/ja/docs/Web/SVG/Element/animate
-/ja/docs/SVG/Element/animateColor	/ja/docs/conflicting/Web/SVG/Element/animate
+/ja/docs/SVG/Element/animateColor	/ja/docs/Web/SVG/Element/animate
 /ja/docs/SVG/Element/animateMotion	/ja/docs/Web/SVG/Element/animateMotion
 /ja/docs/SVG/Element/animateTransform	/ja/docs/Web/SVG/Element/animateTransform
 /ja/docs/SVG/Element/circle	/ja/docs/Web/SVG/Element/circle
@@ -3227,7 +3227,7 @@
 /ja/docs/Web/API/Document/selectstart_event	/ja/docs/Web/API/Node/selectstart_event
 /ja/docs/Web/API/Document/touchcancel_event	/ja/docs/conflicting/Web/API/Element/touchcancel_event
 /ja/docs/Web/API/Document/touchend_event	/ja/docs/conflicting/Web/API/Element/touchend_event
-/ja/docs/Web/API/Document/touchmove_event	/ja/docs/conflicting/Web/API/Element/touchmove_event
+/ja/docs/Web/API/Document/touchmove_event	/ja/docs/Web/API/Element/touchmove_event
 /ja/docs/Web/API/Document/touchstart_event	/ja/docs/conflicting/Web/API/Element/touchstart_event
 /ja/docs/Web/API/Document/transitioncancel_event	/ja/docs/Web/API/Element/transitioncancel_event
 /ja/docs/Web/API/Document/transitionend_event	/ja/docs/Web/API/Element/transitionend_event
@@ -3511,11 +3511,11 @@
 /ja/docs/Web/API/PermissionStatus/onchange	/ja/docs/Web/API/PermissionStatus/change_event
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
-/ja/docs/Web/API/PositionOptions	/ja/docs/conflicting/Web/API/Geolocation/getCurrentPosition
+/ja/docs/Web/API/PositionOptions	/ja/docs/Web/API/Geolocation/getCurrentPosition
 /ja/docs/Web/API/ProgressEvent/initProgressEvent	/ja/docs/conflicting/Web/API/ProgressEvent
-/ja/docs/Web/API/PublicKeyCredentialCreationOptions	/ja/docs/conflicting/Web/API/CredentialsContainer/create_18148a708412fc42b1affe2f08eab270
+/ja/docs/Web/API/PublicKeyCredentialCreationOptions	/ja/docs/Web/API/CredentialsContainer/create
 /ja/docs/Web/API/PublicKeyCredentialCreationOptions/authenticatorSelection	/ja/docs/Web/API/CredentialsContainer/create
-/ja/docs/Web/API/PublicKeyCredentialCreationOptions/excludeCredentials	/ja/docs/conflicting/Web/API/CredentialsContainer/create
+/ja/docs/Web/API/PublicKeyCredentialCreationOptions/excludeCredentials	/ja/docs/Web/API/CredentialsContainer/create
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
 /ja/docs/Web/API/RTCConfiguration	/ja/docs/Web/API/RTCPeerConnection/RTCPeerConnection
 /ja/docs/Web/API/RandomSource	/ja/docs/Web/API/Crypto/getRandomValues
@@ -3531,7 +3531,7 @@
 /ja/docs/Web/API/Range1/startContainer	/ja/docs/Web/API/Range/startContainer
 /ja/docs/Web/API/Range1/startOffset	/ja/docs/Web/API/Range/startOffset
 /ja/docs/Web/API/Screen/onorientationchange	/ja/docs/Web/API/Screen/orientationchange_event
-/ja/docs/Web/API/ScrollToOptions	/ja/docs/conflicting/Web/API/Window/scroll
+/ja/docs/Web/API/ScrollToOptions	/ja/docs/Web/API/Window/scroll
 /ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
 /ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/Web/API/ServiceWorkerContainer/error_event
 /ja/docs/Web/API/ServiceWorkerContainer/onmessage	/ja/docs/Web/API/ServiceWorkerContainer/message_event
@@ -3561,7 +3561,7 @@
 /ja/docs/Web/API/SpeechRecognition/onspeechstart	/ja/docs/Web/API/SpeechRecognition/speechstart_event
 /ja/docs/Web/API/SpeechRecognition/onstart	/ja/docs/Web/API/SpeechRecognition/start_event
 /ja/docs/Web/API/SpeechRecognitionError	/ja/docs/Web/API/SpeechRecognitionErrorEvent
-/ja/docs/Web/API/StorageEstimate	/ja/docs/conflicting/Web/API/StorageManager/estimate
+/ja/docs/Web/API/StorageEstimate	/ja/docs/Web/API/StorageManager/estimate
 /ja/docs/Web/API/SyncEvent/registration	/ja/docs/conflicting/Web/API/SyncEvent
 /ja/docs/Web/API/Text/replaceWholeText	/ja/docs/conflicting/Web/API/Text
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
@@ -3690,12 +3690,12 @@
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onload	/ja/docs/Web/API/XMLHttpRequest/load_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onloadstart	/ja/docs/Web/API/XMLHttpRequest/loadstart_event
 /ja/docs/Web/API/XMLHttpRequestEventTarget/onprogress	/ja/docs/Web/API/XMLHttpRequest/progress_event
-/ja/docs/Web/API/XRHandedness	/ja/docs/conflicting/Web/API/XRInputSource/handedness
+/ja/docs/Web/API/XRHandedness	/ja/docs/Web/API/XRInputSource/handedness
 /ja/docs/Web/API/XRReferenceSpaceEventInit	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 /ja/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 /ja/docs/Web/API/XRReferenceSpaceEventInit/transform	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 /ja/docs/Web/API/XRReferenceSpaceType	/ja/docs/Web/API/XRSession/requestReferenceSpace
-/ja/docs/Web/API/XRTargetRayMode	/ja/docs/conflicting/Web/API/XRInputSource/targetRayMode
+/ja/docs/Web/API/XRTargetRayMode	/ja/docs/Web/API/XRInputSource/targetRayMode
 /ja/docs/Web/API/console.dir	/ja/docs/Web/API/Console/dir
 /ja/docs/Web/API/console.log	/ja/docs/Web/API/Console/log
 /ja/docs/Web/API/console.time	/ja/docs/Web/API/Console/time
@@ -3932,7 +3932,6 @@
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role	/ja/docs/Web/Accessibility/ARIA/Roles/slider_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_status_role	/ja/docs/Web/Accessibility/ARIA/Roles/status_role
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_toolbar_role	/ja/docs/Web/Accessibility/ARIA/Roles/toolbar_role
-/ja/docs/Web/Accessibility/ARIA/Roles/Role_Img	/ja/docs/orphaned/Web/Accessibility/ARIA/Roles/Role_Img
 /ja/docs/Web/Accessibility/ARIA/Web_applications_and_ARIA_FAQ	/ja/docs/conflicting/Web/Accessibility/ARIA_184f054b1090ff5cd518146ac4e09122
 /ja/docs/Web/Accessibility/ARIA/forms/Basic_form_hints	/ja/docs/conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
 /ja/docs/Web/Accessibility/ARIA/forms/alerts	/ja/docs/conflicting/Web/Accessibility/ARIA
@@ -4836,7 +4835,7 @@
 /ja/docs/Web/Reference/Events/vrdisplayconnected	/ja/docs/Web/API/Window/vrdisplayconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
-/ja/docs/Web/SVG/Element/animateColor	/ja/docs/conflicting/Web/SVG/Element/animate
+/ja/docs/Web/SVG/Element/animateColor	/ja/docs/Web/SVG/Element/animate
 /ja/docs/Web/SVG/Element/hatchpath	/ja/docs/orphaned/Web/SVG/Element/hatchpath
 /ja/docs/Web/SVG/Index	/ja/docs/Web/SVG
 /ja/docs/Web/SVG/Other_Resources	/ja/docs/orphaned/Web/SVG/Other_Resources
@@ -4869,7 +4868,7 @@
 /ja/docs/Web/WebGL/Using_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ja/docs/Web/WebGL/WebGL_best_practices	/ja/docs/Web/API/WebGL_API/WebGL_best_practices
 /ja/docs/Web/Web_Components/Custom_Elements	/ja/docs/Web/Web_Components/Using_custom_elements
-/ja/docs/Web/Web_Components/HTML_Imports	/ja/docs/conflicting/Web/Web_Components
+/ja/docs/Web/Web_Components/HTML_Imports	/ja/docs/Web/Web_Components
 /ja/docs/Web/Web_Components/Status_in_Firefox	/ja/docs/orphaned/Web/Web_Components/Status_in_Firefox
 /ja/docs/Web/XPath/Index	/ja/docs/Web/XPath
 /ja/docs/Web/XSLT/Elements	/ja/docs/Web/XSLT/Element
