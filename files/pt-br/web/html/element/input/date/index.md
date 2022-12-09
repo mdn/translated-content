@@ -16,15 +16,15 @@ A interface do usuário do controle varia geralmente de navegador para navegador
 
 Entre os navegadores que suportam uma interface personalizada para selecionar datas é o controle de data do Chrome/Opera, que se parece com:
 
-![](https://mdn.mozillademos.org/files/14909/date-picker-chrome.png)
+![](date-picker-chrome.png)
 
 O controle de data do Edge se parece assim:
 
-![](https://mdn.mozillademos.org/files/14911/date-picker-edge.png)
+![](date-picker-edge.png)
 
 O controle de data do Firefox se parece assim:
 
-![Datepicker UI in firefox](https://mdn.mozillademos.org/files/15644/firefox_datepicker.png)
+![Datepicker UI in firefox](firefox_datepicker.png)
 
 <table class="properties">
   <tbody>
@@ -173,7 +173,7 @@ Se você tentar submeter o formulário com uma data imcompleta (ou com uma data 
 
 Aqui tem uma captura de tela que mostra o resultado se seu navegador não suporta:
 
-![](https://mdn.mozillademos.org/files/14913/date-picker-chrome-error-message.png)
+![](date-picker-chrome-error-message.png)
 
 Aqui tem o CSS utilizado no exemplo acima. Nós usamos as propriedades CSS {{cssxref(":valid")}} e {{cssxref(":invalid")}} para estilizar a caixa de texto dependendo se o valor atual é válido ou não. Colocamos ícones num {{htmlelement("span")}} próximo a caixa de entrada, não dentro da caixa, porque no Chrome o conteúdo gerado é colocado dentro do controle do formulário, e não seria estilzado ou mostrado eficientemente.
 
@@ -206,7 +206,7 @@ input:valid+span:after {
 
 Como mencionado acima, o maior problema em usar caixas de entrada de data em tempo de escrita é o [suporte do navegador](#browser_compatibility). Por exemplo, o selecionador de data no Firefox para Android se parece com isso:
 
-![](https://mdn.mozillademos.org/files/14915/date-picker-fxa.png)
+![](date-picker-fxa.png)
 
 Navegadores que não suportam graciosamente rebaixa para uma caixa de texto comum, mas criam problemas em termos de consistência da interface do usuário (o controle apresentado será diferente) e a manipulação do dado.
 

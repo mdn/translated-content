@@ -134,7 +134,7 @@ Description of Same-Page Links
 
 ```html
 <a href="https://developer.mozilla.org/en-US/">
-  <img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png"
+  <img src="mdn_logo.png"
        alt="MDN logo" />
 </a>
 ```

@@ -91,7 +91,7 @@ Así que asegurate que la distinción de sintaxis de los bloques {{HTMLElement("
 
 Una vez que el código está en su lugar y propiamente configurado para identificar cada bloque de lenguaje, necesitas insertar la macro que crea el frame.
 
-1.  Haz clic en el botón **Insert Live Code Sample iFrame** en la barra de herramientas; luce así: ![](https://mdn.mozillademos.org/files/5383/insert-live-sample-btn.png). Esto abre un cuadro de diálogo para configurar el frame de tu ejemplo ejecutable: ![](https://mdn.mozillademos.org/files/5385/sample-finder.png)
+1.  Haz clic en el botón **Insert Live Code Sample iFrame** en la barra de herramientas; luce así: ![](insert-live-sample-btn.png). Esto abre un cuadro de diálogo para configurar el frame de tu ejemplo ejecutable: ![](sample-finder.png)
 2.  Bajo **Document**, ingresa el título del artículo que contiene el ejemplo que deseas desplegar. Por default, es el artículo que estás editando, pero puedes escoger un artículo en otra parte de MDN. Esto hace posible reusar ejemplos en múltiples páginas si es necesario. (Si escribes un texto nuevo en este campo, aparecerá un menú de coincidencias parciales; selecciona el título de la página que desees.)
 3.  En el menú **Sections in Document**, selecciona la sección en el artículo que contiene los bloques de código del ejemplo que quieres desplegar.
 4.  Haz clic en el botón **OK** para generar e insertar la macro que crea el frame del ejemplo. La macro luce algo así:
@@ -102,7 +102,7 @@ Una vez que el código está en su lugar y propiamente configurado para identifi
 Si estás escribiendo una página nueva, y quieres insertar código que deseas mostrar como ejemplo ejecutable, ¡aun más del trabajo puede ser realizado por el editor para ti!
 
 1.  Haz clic el botón **Insert Code Sample Template** en la barra de herramientas, luce así: ![](/files/4265/live-sample-button.png). Esto presenta un simple cuadro de diálogo pidiéndote que nombres a tu ejemplo ejecutable:
-    ![](https://mdn.mozillademos.org/files/5387/insert-live-sample-template.png)
+    ![](insert-live-sample-template.png)
 2.  Ingresa el nombre del ejemplo; esto es usado como el header para el ejemplo. Asegúrate que tu título sea coherente con la pagína que escribes.
 3.  Haz clic en **OK**. Se creó un header nuevo con el título que elegiste, con sub-headers y bloques de código vacios para HTML, CSS y JavaScript.
 4.  Elimina cualquier sub-header y bloque de código que no necesites.

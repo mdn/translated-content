@@ -67,7 +67,7 @@ background-size: unset;
   margin: 8px;
   padding: 5px;
   background-color: white;
-  background-image: url("https://mdn.mozillademos.org/files/15195/eagle.jpg");
+  background-image: url("eagle.jpg");
   background-repeat: no-repeat;
   color: white;
   font-family: monospace;

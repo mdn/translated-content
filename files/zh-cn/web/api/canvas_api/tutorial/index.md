@@ -3,7 +3,7 @@ title: Canvas 教程
 slug: Web/API/Canvas_API/Tutorial
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 [**`<canvas>`**](/zh-CN/docs/Web/HTML/Element/canvas)是一个可以使用脚本 (通常为[JavaScript](/zh-CN/docs/JavaScript)) 来绘制图形的 [HTML](/zh-CN/docs/HTML) 元素。例如，它可以用于绘制图表、制作图片构图或者制作简单的动画。右边的图片展示了一些 `<canvas>` 的实现示例，在这个教程后面我们将看到。
 

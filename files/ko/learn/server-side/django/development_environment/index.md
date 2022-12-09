@@ -384,7 +384,7 @@ Quit the server with CONTROL-C.
 
 일단 서버가 실행중이면 당신 시스템의 웹 브라우저로 아래 URL에 가서 만들어진 사이트를 볼 수 있습니다: `http://127.0.0.1:8000/`. 방문한 사이트에서 아래와 같은 모습이 보여야 합니다:
 
-![Django Skeleton App Homepage](https://mdn.mozillademos.org/files/15728/Django_Skeleton_Website_Homepage.png)
+![Django Skeleton App Homepage](django_skeleton_website_homepage.png)
 
 ## 요약
 

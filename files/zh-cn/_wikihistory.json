@@ -21697,23 +21697,6 @@
       "Hikerpig"
     ]
   },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2019-09-24T00:45:30.074Z",
-    "contributors": [
-      "Metaloe",
-      "gnepnaiL-oahZ",
-      "unclesamnumberone",
-      "jizhi77",
-      "ZeroJsus",
-      "huozicheng",
-      "AllenYangFly",
-      "arya0822",
-      "kevinfszu",
-      "pantao",
-      "LuyaoWang",
-      "FredWe"
-    ]
-  },
   "Web/Guide/Houdini": {
     "modified": "2020-11-21T05:08:58.458Z",
     "contributors": ["xusy", "bingoYB", "cutefcc", "sunfeel", "xgqfrms"]
@@ -21856,6 +21839,23 @@
       "kmc947373",
       "ziyunfei",
       "Breezewish"
+    ]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2019-09-24T00:45:30.074Z",
+    "contributors": [
+      "Metaloe",
+      "gnepnaiL-oahZ",
+      "unclesamnumberone",
+      "jizhi77",
+      "ZeroJsus",
+      "huozicheng",
+      "AllenYangFly",
+      "arya0822",
+      "kevinfszu",
+      "pantao",
+      "LuyaoWang",
+      "FredWe"
     ]
   },
   "Web/HTML/Element": {
@@ -27726,10 +27726,6 @@
   "Web/JavaScript/Reference/Global_Objects/Date/toDateString": {
     "modified": "2020-10-15T21:28:24.093Z",
     "contributors": ["fscholz", "teoli", "AlexChao"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Date/toGMTString": {
-    "modified": "2020-10-15T21:28:14.066Z",
-    "contributors": ["fscholz", "AlexChao"]
   },
   "Web/JavaScript/Reference/Global_Objects/Date/toISOString": {
     "modified": "2020-10-15T21:28:16.900Z",

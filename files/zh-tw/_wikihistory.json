@@ -3339,10 +3339,6 @@
     "modified": "2019-04-23T04:21:07.806Z",
     "contributors": ["jackblackevo", "pytseng"]
   },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2019-03-23T22:28:17.896Z",
-    "contributors": ["iigmir"]
-  },
   "Web/Guide/Introduction_to_Web_development": {
     "modified": "2019-04-23T03:25:16.725Z",
     "contributors": ["jackblackevo", "khhyoshida", "happysadman"]
@@ -3392,6 +3388,10 @@
   "Web/HTML/Block-level_elements": {
     "modified": "2019-03-23T22:04:44.255Z",
     "contributors": ["jackblackevo", "yimingxym"]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2019-03-23T22:28:17.896Z",
+    "contributors": ["iigmir"]
   },
   "Web/HTML/Element": {
     "modified": "2020-06-01T13:13:14.618Z",

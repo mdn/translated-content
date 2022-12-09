@@ -66,13 +66,13 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 3. 가입을 하셨다면, github.com 에 여러분의 유저 이름과 암호로 로그인하세요.
 4. 그리고나서, 여러분의 파일들이 들어가게될 새로운 repo 를 생성해야 합니다. GitHub 홈페이지의 오른쪽 상단에 있는 플러스 (+) 를 클릭하고, _New Repository_ 를 선택하세요.
 5. 이 페이지에서, _Repository name_ 박스 안에, _username_.github.io 를 입력하세요, _username_ 가 있는 곳이 여러분의 유저 이름입니다. 그러니까 예를 들어, 우리 친구 bobsmith 는 _bobsmith.github.io_ 를 입력할 것입니다.![](https://mdn.mozillademos.org/files/9479/github-create-repo.png)
-6. _Create repository_ 를 클릭하세요. 다음과 같은 페이지로 이동하실 겁니다:![](https://mdn.mozillademos.org/files/9481/github-populate-repo.png)
+6. _Create repository_ 를 클릭하세요. 다음과 같은 페이지로 이동하실 겁니다:![](github-populate-repo.png)
 
 ### GitHub 에 파일 올리기
 
 이것은 GitHub 에 있는 우리의 repository 를 놓기 위해 사용해볼 커맨드 라인입니다. 커맨드 라인은 파일을 생성하거나 프로그램을 실행하는 것 같은 일을 하기 위해 유저 인터페이스 안에서 클릭을 하는 것 대신 명령어를 입력하는 창입니다. 이렇게 생긴 것입니다:
 
-![](https://mdn.mozillademos.org/files/9483/command-line.png)
+![](command-line.png)
 
 > **참고:** **노트**: 만약 커맨드라인이 불편하시다면, 같은 일을 하기 위해서 [Git graphical user interface](http://git-scm.com/downloads/guis) 를 사용하는것도 고려해 볼 수 있습니다.
 
@@ -137,7 +137,7 @@ _another commit_ 대신에 여러분이 막 변경했던 것을 설명할 수 �
 
 이 지점에서, 특정 웹 주소에서 여러분의 예시 웹사이트를 사용하실 수 있을 것입니다. 수고하셨습니다!
 
-![](https://mdn.mozillademos.org/files/9485/hosted-final-site.png)
+![](hosted-final-site.png)
 
 ## 더 읽을거리
 

@@ -80,19 +80,19 @@ Un manifiesto web mínimo debe tener al menos un `name` y un campo `icons` con a
 
 Cuando el usuario visita la PWA con un navegador móvil compatible, debe mostrar una notificación (como un pasquín o un cuadro de diálogo) que indique que es posible instalar la aplicación como una PWA.
 
-![Agregar a la ventana emergente de la pantalla de inicio de js13kPWA.](https://mdn.mozillademos.org/files/15928/js13kpwa-icon.png)
+![Agregar a la ventana emergente de la pantalla de inicio de js13kPWA.](js13kpwa-icon.png)
 
 Una vez que el usuario indica que desea continuar con la instalación, se muestra el pasquín de instalación. Ese pasquín es creado automáticamente por el navegador, basado en la información del archivo de manifiesto. Por ejemplo, el mensaje incluye el nombre y el icono de la aplicación.
 
-![Pancarta de instalación de js13kPWA.](https://mdn.mozillademos.org/files/15927/js13kpwa-banner.png)
+![Pancarta de instalación de js13kPWA.](js13kpwa-banner.png)
 
 Si el usuario hace clic en el botón, hay un paso final que muestra cómo se verá la aplicación y permite que el usuario elija si definitivamente desea agregar la aplicación.
 
-![Agregar a la ventana emergente de la pantalla de inicio de js13kPWA.](https://mdn.mozillademos.org/files/15926/js13kpwa-add.png)
+![Agregar a la ventana emergente de la pantalla de inicio de js13kPWA.](js13kpwa-add.png)
 
 Cuando se confirme, la aplicación se instalará en la pantalla de inicio.
 
-![Pantalla de inicio](https://mdn.mozillademos.org/files/15834/js13kpwa-installed.png)
+![Pantalla de inicio](js13kpwa-installed.png)
 
 Ahora el usuario puede iniciar y utilizar la aplicación web como cualquier otra aplicación en su dispositivo. Dependiendo del dispositivo y el sistema operativo, el icono de la aplicación web puede tener una insignia con un pequeño icono que indica que se trata de una aplicación web. En la captura de pantalla anterior, por ejemplo, la aplicación tiene un pequeño icono de Firefox, lo cual indica que es una aplicación web que usa el entorno de ejecución de Firefox.
 
@@ -100,7 +100,7 @@ Ahora el usuario puede iniciar y utilizar la aplicación web como cualquier otra
 
 En algunos navegadores, también se genera una pantalla de bienvenida a partir de la información del manifiesto, que se muestra cuando se inicia la PWA y mientras se carga.
 
-![Pantalla de bienvenida](https://mdn.mozillademos.org/files/15835/js13kpwa-splash.png)
+![Pantalla de bienvenida](js13kpwa-splash.png)
 
 El icono y los colores del tema y fondo se utilizan para crear esta pantalla.
 

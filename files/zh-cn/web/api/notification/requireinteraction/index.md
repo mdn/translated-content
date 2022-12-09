@@ -29,7 +29,7 @@ function spawnNotification(theTitle,theBody,shouldRequireInteraction) {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 

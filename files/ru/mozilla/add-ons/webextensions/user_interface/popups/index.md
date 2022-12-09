@@ -8,7 +8,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 
 A popup is a dialog that's associated with a [toolbar button](/en-US/Add-ons/WebExtensions/Browser_action) or [address bar button](/en-US/Add-ons/WebExtensions/Page_actions).
 
-![](https://mdn.mozillademos.org/files/14039/popup-shadow.png)
+![](popup-shadow.png)
 
 When the user clicks the button, the popup is shown. When the user clicks anywhere outside the popup, the popup is closed. The popup can be closed programmatically by calling [`window.close()`](/en-US/docs/Web/API/Window/close) from a script running in the popup. However, you can't open the popup programmatically from an extension's JavaScript: it can only be opened in response to a user action.
 

@@ -65,11 +65,11 @@ Con el siguiente ejemplo quedará más claro. Si tienes dos cajas que contengan 
 
 Cuando cambiamos el modo de escritura, estamos cambiando que dirección es en bloque y cuál es lineal. En un modo de escritura `horizontal-tb` La direccion del bloque va de arriba abajo; en un modo de escritura `vertical-rl` el bloque corre de derecha a izquierda horizontalmente. De esta forma la **dimensión del bloque** es siempre la direccion en la que se muestran los bloques en el modo de escritura en uso. La **dimensión lineal**, es siempre la dirección en que fluye una frase.
 
-Este dibujo muestra las dos dimensiones en un modo de escritura horizontal.![Showing the block and inline axis for a horizontal writing mode.](https://mdn.mozillademos.org/files/16574/horizontal-tb.png)
+Este dibujo muestra las dos dimensiones en un modo de escritura horizontal.![Showing the block and inline axis for a horizontal writing mode.](horizontal-tb.png)
 
 Este dibujo muestra las dos dimensiones en un modo de escritura vertical.
 
-![Showing the block and inline axis for a vertical writing mode.](https://mdn.mozillademos.org/files/16575/vertical.png)
+![Showing the block and inline axis for a vertical writing mode.](vertical.png)
 
 Una vez que empieces a observar el diseño CSS, y en particular los nuevos métodos de diseño, esta idea de bloque y lineal cobra mayor importancia. Será revisado más adelante.
 

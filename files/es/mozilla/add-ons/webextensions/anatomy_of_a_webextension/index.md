@@ -18,7 +18,7 @@ Toda extensión debe contener un archivo llamado ["manifest.json"](/es/Add-ons/W
 - [archivos de la barra lateral](/es/Add-ons/WebExtensions/user_interface/Sidebars): Agregue una barra lateral al navegador.
 - [Recursos Web accesibles](/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Recursos_web_accesibles): Hace posible que el contenido empaquetado acceda a páginas web y scripts.
 
-![](https://mdn.mozillademos.org/files/13669/webextension-anatomy.png)
+![](webextension-anatomy.png)
 
 ## manifest.json
 

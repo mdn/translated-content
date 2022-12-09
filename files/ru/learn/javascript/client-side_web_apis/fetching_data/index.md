@@ -23,7 +23,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 Первоначальная загрузка страницы в Интернете была простой - вы отправляли запрос на сервер web-сайта, и если всё работает, как и должно, то вся необходимая информация о странице будет загружена и отображена на вашем компьютере.
 
-![A basic representation of a web site architecture](https://mdn.mozillademos.org/files/6475/web-site-architechture@2x.png)
+![A basic representation of a web site architecture](web-site-architechture@2x.png)
 
 Проблема с этой моделью заключается в том, что всякий раз, когда вы хотите обновить любую часть страницы, например, чтобы отобразить новый набор продуктов или загрузить новую страницу, вам нужно снова загрузить всю страницу. Это очень расточительно и приводит к плохому пользовательскому опыту, особенно по мере того, как страницы становятся все более сложными.
 
@@ -35,7 +35,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 > **Примечание:** Вначале эта общая техника была известна как Асинхронный JavaScript и XML (Ajax), поскольку она, как правило, использовала {{domxref("XMLHttpRequest")}} для запроса данных XML. В наши дни это обычно не так (вы, скорее всего, будете использовать `XMLHttpRequest` или Fetch для запроса JSON), но результат все тот же, и термин «Ajax» по-прежнему часто используется для описания этой техники.
 
-![A simple modern architecture for web sites](https://mdn.mozillademos.org/files/6477/moderne-web-site-architechture@2x.png)
+![A simple modern architecture for web sites](moderne-web-site-architechture@2x.png)
 
 Модель Ajax предполагает использование веб-API в качестве прокси для более разумного запроса данных, а не просто для того, чтобы браузер перезагружал всю страницу. Давайте подумаем о значении этого:
 
@@ -49,7 +49,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 Чтобы ускорить работу, некоторые сайты также сохраняют необходимые файлы и данные на компьютере пользователя при первом обращении к сайту, а это означает, что при последующих посещениях они используют локальные версии вместо загрузки свежих копий, как при первой загрузке страницы. Содержимое загружается с сервера только при его обновлении.
 
-![A basic web app data flow architecture](https://mdn.mozillademos.org/files/6479/web-app-architecture@2x.png)
+![A basic web app data flow architecture](web-app-architecture@2x.png)
 
 ## Основной запрос Ajax
 

@@ -34,12 +34,6 @@ var p = new Proxy(target, handler);
 - {{jsxref("Proxy.revocable()")}}
   - : Creates a revocable `Proxy` object.
 
-## Methods of the handler object
-
-The handler object is a placeholder object which contains traps for `Proxy`.
-
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler', 'Methods') }}
-
 ## 範例
 
 ### Basic example

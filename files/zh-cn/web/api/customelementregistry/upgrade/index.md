@@ -42,6 +42,6 @@ console.assert(el instanceof SpiderMan);    // upgraded!
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}

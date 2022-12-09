@@ -9,7 +9,7 @@
 /ko/docs/AJAX:Getting_Started	/ko/docs/Web/Guide/AJAX/Getting_Started
 /ko/docs/A_Basic_RayCaster	/ko/docs/orphaned/Web/API/Canvas_API/A_basic_ray-caster
 /ko/docs/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_Overview
-/ko/docs/About_JavaScript	/ko/docs/Web/JavaScript/About_JavaScript
+/ko/docs/About_JavaScript	/ko/docs/conflicting/Web/JavaScript
 /ko/docs/About_the_Document_Object_Model	/ko/docs/Web/API/Document_Object_Model
 /ko/docs/Accessibility	/ko/docs/Web/Accessibility
 /ko/docs/Accessibility/ARIA	/ko/docs/Web/Accessibility/ARIA
@@ -84,8 +84,8 @@
 /ko/docs/Consistent_List_Indentation	/ko/docs/Web/CSS/CSS_Lists_and_Counters/Consistent_list_indentation
 /ko/docs/Core_JavaScript_1.5_Guide	/ko/docs/Web/JavaScript/Guide
 /ko/docs/Core_JavaScript_1.5_Reference	/ko/docs/Web/JavaScript/Reference
-/ko/docs/Core_JavaScript_1.5_Reference/About	/ko/docs/Web/JavaScript/Reference/About
-/ko/docs/Core_JavaScript_1.5_Reference/About/Formatting_Conventions	/ko/docs/Web/JavaScript/Reference/About
+/ko/docs/Core_JavaScript_1.5_Reference/About	/ko/docs/conflicting/Web/JavaScript/Reference
+/ko/docs/Core_JavaScript_1.5_Reference/About/Formatting_Conventions	/ko/docs/conflicting/Web/JavaScript/Reference
 /ko/docs/Core_JavaScript_1.5_Reference/Global_Functions	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Core_JavaScript_1.5_Reference/Global_Objects	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array	/ko/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -110,8 +110,8 @@
 /ko/docs/Core_JavaScript_1.5_Reference/Reserved_Words	/ko/docs/Web/JavaScript/Reference/Lexical_grammar#키워드
 /ko/docs/Core_JavaScript_1.5_Reference/Statements	/ko/docs/Web/JavaScript/Reference/Statements
 /ko/docs/Core_JavaScript_1.5_Reference/Statements/for...in	/ko/docs/Web/JavaScript/Reference/Statements/for...in
-/ko/docs/Core_JavaScript_1.5_Reference:About	/ko/docs/Web/JavaScript/Reference/About
-/ko/docs/Core_JavaScript_1.5_Reference:About:Formatting_Conventions	/ko/docs/Web/JavaScript/Reference/About
+/ko/docs/Core_JavaScript_1.5_Reference:About	/ko/docs/conflicting/Web/JavaScript/Reference
+/ko/docs/Core_JavaScript_1.5_Reference:About:Formatting_Conventions	/ko/docs/conflicting/Web/JavaScript/Reference
 /ko/docs/Core_JavaScript_1.5_Reference:Global_Functions	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Core_JavaScript_1.5_Reference:Global_Objects	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array	/ko/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -240,8 +240,8 @@
 /ko/docs/JavaScript/Guide/Values,_variables,_and_literals	/ko/docs/Web/JavaScript/Guide/Grammar_and_types
 /ko/docs/JavaScript/Memory_Management	/ko/docs/Web/JavaScript/Memory_Management
 /ko/docs/JavaScript/Reference	/ko/docs/Web/JavaScript/Reference
-/ko/docs/JavaScript/Reference/About	/ko/docs/Web/JavaScript/Reference/About
-/ko/docs/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/Web/JavaScript/Reference/About
+/ko/docs/JavaScript/Reference/About	/ko/docs/conflicting/Web/JavaScript/Reference
+/ko/docs/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/conflicting/Web/JavaScript/Reference
 /ko/docs/JavaScript/Reference/Global_Functions	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/JavaScript/Reference/Global_Objects	/ko/docs/Web/JavaScript/Reference/Global_Objects
 /ko/docs/JavaScript/Reference/Global_Objects/Array	/ko/docs/Web/JavaScript/Reference/Global_Objects/Array
@@ -337,6 +337,7 @@
 /ko/docs/MDN/Contribute/Getting_started	/ko/docs/MDN/Community/Contributing/Getting_started
 /ko/docs/MDN/Contribute/Guidelines/Code_guidelines/CSS	/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS
 /ko/docs/MDN/Contribute/Guidelines/Code_guidelines/Code_guidelines	/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
+/ko/docs/MDN/Contribute/Howto	/ko/docs/conflicting/MDN/Contribute
 /ko/docs/MDN/Contribute/Howto/Create_and_edit_pages	/ko/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting
 /ko/docs/MDN/Contribute/Howto/Report_a_problem	/ko/docs/MDN/Community/Issues
 /ko/docs/MDN/Contribute/Howto/Tag	/ko/docs/MDN/Writing_guidelines/Howto/Tag
@@ -647,8 +648,9 @@
 /ko/docs/Web/Guide/DOM/Using_full_screen_mode	/ko/docs/Web/API/Fullscreen_API
 /ko/docs/Web/Guide/HTML	/ko/docs/Learn/HTML
 /ko/docs/Web/Guide/HTML/Content_Editable	/ko/docs/conflicting/Web/HTML/Global_attributes/contenteditable
+/ko/docs/Web/Guide/HTML/Content_categories	/ko/docs/Web/HTML/Content_categories
 /ko/docs/Web/Guide/HTML/Editable_content	/ko/docs/conflicting/Web/HTML/Global_attributes/contenteditable
-/ko/docs/Web/Guide/HTML/컨텐트_카테고리	/ko/docs/Web/Guide/HTML/Content_categories
+/ko/docs/Web/Guide/HTML/컨텐트_카테고리	/ko/docs/Web/HTML/Content_categories
 /ko/docs/Web/Guide/HTML/폼	/ko/docs/Learn/Forms
 /ko/docs/Web/Guide/HTML/폼/HTML_폼_구성_방법	/ko/docs/Learn/Forms/How_to_structure_a_web_form
 /ko/docs/Web/Guide/HTML/폼/My_first_HTML_form	/ko/docs/Learn/Forms/Your_first_form
@@ -697,7 +699,8 @@
 /ko/docs/Web/HTTP/User_agent를_이용한_브라우저_감지	/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent
 /ko/docs/Web/HTTP/상태_코드	/ko/docs/Web/HTTP/Status
 /ko/docs/Web/JavaScript/A_re-introduction_to_JavaScript	/ko/docs/Web/JavaScript/Language_Overview
-/ko/docs/Web/JavaScript/About	/ko/docs/Web/JavaScript/About_JavaScript
+/ko/docs/Web/JavaScript/About	/ko/docs/conflicting/Web/JavaScript
+/ko/docs/Web/JavaScript/About_JavaScript	/ko/docs/conflicting/Web/JavaScript
 /ko/docs/Web/JavaScript/Guide/About	/ko/docs/Web/JavaScript/Guide/Introduction
 /ko/docs/Web/JavaScript/Guide/Closures	/ko/docs/Web/JavaScript/Closures
 /ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -712,7 +715,8 @@
 /ko/docs/Web/JavaScript/Guide/정규식/Assertions	/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions
 /ko/docs/Web/JavaScript/Guide/정규식/Groups_and_Ranges	/ko/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
 /ko/docs/Web/JavaScript/Guide/함수	/ko/docs/Web/JavaScript/Guide/Functions
-/ko/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/Web/JavaScript/Reference/About
+/ko/docs/Web/JavaScript/Reference/About	/ko/docs/conflicting/Web/JavaScript/Reference
+/ko/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ko/docs/conflicting/Web/JavaScript/Reference
 /ko/docs/Web/JavaScript/Reference/Classes/Class_fields	/ko/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ko/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/ko/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션	/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions
