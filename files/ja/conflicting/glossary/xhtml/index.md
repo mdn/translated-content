@@ -1,6 +1,7 @@
 ---
 title: XHTML
-slug: Web/Guide/HTML/XHTML
+slug: conflicting/Glossary/XHTML
+original_slug: Web/Guide/HTML/XHTML
 ---
 
 **XHTML** は、 [HTML](/ja/docs/Web/HTML) 文書のうち {{Glossary("XML")}} の構文規則に適合して書かれたものを指すために歴史的に使用されてきた用語です。
