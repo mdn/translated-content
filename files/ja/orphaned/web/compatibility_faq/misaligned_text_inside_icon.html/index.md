@@ -10,7 +10,7 @@ original_slug: Web/Compatibility_FAQ/Misaligned_Text_Inside_Icon.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9979/0103.jpg)
+![](0103.jpg)
 
 ## 要因
 

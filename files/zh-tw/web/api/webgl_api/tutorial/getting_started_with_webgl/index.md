@@ -3,7 +3,7 @@ title: WebGL 入門
 slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
+{{DefaultAPISidebar("WebGL")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
 [WebGL](http://www.khronos.org/webgl/) 讓網頁內容能藉由一種基於 [OpenGL ES](http://www.khronos.org/opengles/) 2.0 的 API 的幫助，於支援此 API 的瀏覽器環境中，不需使用外掛程式就能在 HTML 的 [`canvas`](/zh-TW/docs/Web/API/Canvas_API) 元素中實現二維及三維渲染。 WebGL 程式包含了由 JavaSrcipt 及著色器(GLSL)撰寫的控制碼以及在電腦的圖形處理器( GPU )上執行的特效程式碼(著色器程式碼)。WebGL 元素可以加入其他 HTML 元素之中並與網頁或網頁背景的其他部分混合。
 

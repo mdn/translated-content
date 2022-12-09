@@ -3,7 +3,7 @@ title: WebGL best practices
 slug: Web/API/WebGL_API/WebGL_best_practices
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 WebGL 是一个复杂的 API，通常我们不能明显的知道它的推荐使用方式。该页面涵盖了各种专业知识的建议，不仅仅是列举出什么该做，什么不该做，还有详细的解释为什么要这样做。你可以将本文档作为指导你选择的方法，确保你无论在何种浏览器以及硬件上都使用了正确的技巧。
 

@@ -11,7 +11,7 @@ original_slug: Web/Compatibility_FAQ/Misaligned_Text.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9977/0109.jpg)
+![](0109.jpg)
 
 ## 要因
 

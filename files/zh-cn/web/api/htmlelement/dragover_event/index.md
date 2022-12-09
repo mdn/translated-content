@@ -70,11 +70,11 @@ original_slug: Web/API/Document/dragover_event
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 相关
+## 参见
 
 - [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event)
 - [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)
