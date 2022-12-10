@@ -79,15 +79,15 @@ function updateButton() {
 
 ### Добавление сочетаний клавиш на кнопки
 
-Keyboard shortcuts, also known as access keys and keyboard equivalents, let the user trigger a button using a key or combination of keys on the keyboard. To add a keyboard shortcut to a button — just as you would with any {{HTMLElement("input")}} for which it makes sense — you use the {{htmlattrxref("accesskey")}} global attribute.
+Сочетания клавиш, также известные как клавиши доступа и их эквиваленты на клавиатуре, позволяют пользователю активировать кнопку с помощью клавиши или комбинации клавиш на клавиатуре. Чтобы добавить сочетание клавиш к кнопке — точно так же, как вы сделали бы с любым {{HTMLElement("input")}}, для которого это имеет смысл, — вы используете глобальный атрибут {{htmlattrxref("accesskey")}}.
 
-In this example, <kbd>s</kbd> is specified as the access key (you'll need to press <kbd>s</kbd> plus the particular modifier keys for your browser/OS combination; see [accesskey](/ru/docs/Web/HTML/Global_attributes/accesskey) for a useful list of those).
+В этом примере, <kbd>s</kbd> указывается в качестве ключа доступа (вам нужно нажать <kbd>s</kbd> плюс конкретные клавиши-модификаторы для вашей комбинации браузера / операционной системы; см. [accesskey](/ru/docs/Web/HTML/Global_attributes/accesskey) для получения полезного списка из них).
 
 ```html
 <form>
-  <input type="button" value="Start machine" accesskey="s">
+  <input type="button" value="Выключить ПК" accesskey="s">
 </form>
-<p>The machine is stopped.</p>
+<p>ПК выключен.</p>
 ```
 
 ```js hidden
@@ -109,17 +109,16 @@ function updateButton() {
 
 {{EmbedLiveSample("Добавление_сочетаний_клавиш_на_кнопки", 650, 100)}}
 
-> **Примечание:** The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't intefere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
+> **Примечание:** Проблема с приведенным выше примером, конечно, заключается в том, что пользователь не будет знать, что такое ключ доступа! На реальном сайте вам пришлось бы предоставлять эту информацию таким образом, чтобы это не противоречило дизайну сайта (например, путем предоставления легкодоступной ссылки, которая указывает на информацию о том, что такое ключи доступа к сайту).
 
-### Disabling and enabling a button
+### Отключение и включение кнопки
 
-To disable a button, simply specify the {{htmlattrxref("disabled")}} global attribute on it, like so:
+Чтобы отключить кнопку, просто укажите на ней глобальный атрибут {{htmlattrxref("disabled")}}, например:
 
 ```html
 <input type="button" value="Disable me" disabled>
 ```
-
-You can enable and disable buttons at run time by simply setting `disabled` to `true` or `false`. In this example our button starts off enabled, but if you press it, it is disabled using `button.disabled = true`. A {{domxref("WindowTimers.setTimeout","setTimeout()")}} function is then used to reset the button back to its enabled state after two seconds.
+Вы можете включать и отключать кнопки во время выполнения, просто установив для параметра `disabled` на `true` или `false`. В этом примере наша кнопка запускается включенной, но если вы нажмете на нее, она будет отключена с помощью `button.disabled = true`. Затем используется функция {{domxref("WindowTimers.setTimeout","setTimeout()")}} для возврата кнопки в включенное состояние через две секунды.
 
 ```html hidden
 <input type="button" value="Enabled">
@@ -142,9 +141,9 @@ function disableButton() {
 
 {{EmbedLiveSample("Hidden_code_1", 650, 60)}}
 
-If the `disabled` attribute isn't specified, the button inherits its `disabled` state from its parent element. This makes it possible to enable and disable groups of elements all at once by enclosing them in a container such as a {{HTMLElement("fieldset")}} element, and then setting `disabled` on the container.
+Если атрибут `disabled` не указан, кнопка наследует свое `disabled` состояние от своего родительского элемента. Это позволяет включать и отключать группы элементов одновременно, заключая их в контейнер, такой как элемент {{HTMLElement("fieldset")}}, а затем устанавливая значение `disabled` в контейнере.
 
-The example below shows this in action. This is very similar to the previous example, except that the `disabled` attribute is set on the `<fieldset>` when the first button is pressed — this causes all three buttons to be disabled until the two second timeout has passed.
+Приведенный ниже пример показывает это в действии. Это очень похоже на предыдущий пример, за исключением того, что атрибут `disabled` устанавливается в `<fieldset>` при нажатии первой кнопки — это приводит к отключению всех трех кнопок до истечения двухсекундного тайм-аута.
 
 ```html hidden
 <fieldset>
@@ -171,15 +170,15 @@ function disableButton() {
 
 {{EmbedLiveSample("Hidden_code_2", 650, 60)}}
 
-> **Примечание:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the {{htmlattrxref("autocomplete","button")}} attribute to control this feature.
+> **Примечание:** Firefox, в отличие от других браузеров, [по умолчанию сохраняет динамическое отключенное состояние](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) {{HTMLElement("button")}} при загрузке страницы. Используйте атрибут {{htmlattrxref("autocomplete","button")}} для управления этой функцией.
 
-## Validation
+## Валидация
 
-Buttons don't participate in constraint validation; they have no real value to be constrained.
+Кнопки не участвуют в проверке ограничений; у них нет значения, которое можно было ограничить.
 
-## Examples
+## Примеры
 
-The below example shows a very simple drawing app created using a {{htmlelement("canvas")}} element and some simple CSS and JavaScript (we'll hide the CSS for brevity). The top two controls allow you to choose the color and size of the drawing pen. The button, when clicked, invokes a function that clears the canvas.
+Приведенный ниже пример показывает очень простое приложение для рисования, созданное с использованием элемента {{html element ("canvas")}} и некоторых простых CSS и JavaScript (мы скроем CSS для краткости). Два верхних элемента управления позволяют выбрать цвет и размер пера для рисования. Кнопка при нажатии вызывает функцию, которая очищает холст.
 
 ```html
 <div class="toolbar">
@@ -237,23 +236,23 @@ var sizePicker = document.querySelector('input[type="range"]');
 var output = document.querySelector('.output');
 var clearBtn = document.querySelector('input[type="button"]');
 
-// covert degrees to radians
+// переводим градусы в радианы
 function degToRad(degrees) {
   return degrees * Math.PI / 180;
 };
 
-// update sizepicker output value
+// обновляем выходное значение sizepicker
 
 sizePicker.oninput = function() {
   output.textContent = sizePicker.value;
 }
 
-// store mouse pointer coordinates, and whether the button is pressed
+// сохраняйте координаты указателя мыши и то, нажата ли кнопка
 var curX;
 var curY;
 var pressed = false;
 
-// update mouse pointer coordinates
+// обновить координаты указателя мыши
 document.onmousemove = function(e) {
   curX = (window.Event) ? e.pageX : e.clientX + (document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft);
   curY = (window.Event) ? e.pageY : e.clientY + (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
@@ -288,7 +287,7 @@ draw();
 
 {{EmbedLiveSample("Examples", '100%', 600)}}
 
-## Specifications
+## Спецификации
 
 | Specification                                                                                                                        | Status                           | Comments |
 | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
@@ -299,8 +298,8 @@ draw();
 
 {{Compat}}
 
-## See also
+## Смотри также
 
-- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-- The more modern {{HTMLElement("button")}} element.
-- [Compatibility of CSS properties](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- {{HTMLElement("input")}} и {{domxref("HTMLInputElement")}} интерфейс, который его реализует.
+- Более современный элемент {{HTMLElement("button")}}.
+- [Совместимость свойств CSS](/ru/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
