@@ -34,7 +34,7 @@ toLocaleString(locales, options)
 const uint = new Uint32Array([2000, 500, 8123, 12, 4212]);
 
 uint.toLocaleString();
-// 如果在 de-DE 区域下运行
+// 如果在 de-DE 区域设置下运行
 // "2.000,500,8.123,12,4.212"
 
 uint.toLocaleString("en-US");
