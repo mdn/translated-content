@@ -19,19 +19,19 @@ slug: Web/JavaScript/Reference/Global_Objects/InternalError
 
 ## 实例属性
 
-- {{jsxref("Error.prototype.message")}} 
-  - : 错误消息。继承自 {{jsxref("Error")}}。 
-- {{jsxref("Error.prototype.name")}} 
-  - : 错误名称。继承自 {{jsxref("Error")}}。 
-- {{jsxref("Error.prototype.cause")}} 
-  - : 表示导致当前错误被抛出的原因。继承自 {{jsxref("Error")}}。 
-- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}} 
-  - : 引发此错误的文件的路径。继承自 {{jsxref("Error")}}。 
-- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}} 
-  - : 引发此错误的代码所在的文件的行号。继承自 {{jsxref("Error")}}。 
-- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}} 
-  - : 引发此错误的代码在文件中所在行的列号。继承自 {{jsxref("Error")}}。 
-- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}} 
+- {{jsxref("Error.prototype.message")}}
+  - : 错误消息。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.name")}}
+  - : 错误名称。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.cause")}}
+  - : 表示导致当前错误被抛出的原因。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+  - : 引发此错误的文件的路径。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码所在的文件的行号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
+  - : 引发此错误的代码在文件中所在行的列号。继承自 {{jsxref("Error")}}。
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
   - : 堆栈跟踪。继承自 {{jsxref("Error")}}。
 
 ## 示例
