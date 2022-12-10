@@ -9,7 +9,7 @@ tags:
 translation_of: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
 [앞 단원의 예제](/ko/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context)에서 정사각형을 그려봤으니, 이제 정사각형에 색을 칠해 보겠습니다. 셰이더를 조금 수정하면 색을 칠할 수 있습니다.
 
