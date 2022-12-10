@@ -399,7 +399,7 @@ Negotiation 프로세스를 시작하기 위해, 우리가 연결하고자 하�
 
 `createOffer()`이나 다른 fulfillment 핸들러에서 에러가 발생한다면, `reportError()`함수가 실행되어 에러를 보고한다.
 
-`setLocalDescription()`의 fulfillment 핸들러가 실행되면, ICE agent는 [`icecandidate`](/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event)event들을 처리하기 시작한다.
+`setLocalDescription()`의 fulfillment 핸들러가 실행되면, ICE agent는 [`icecandidate`](/ko/docs/Web/API/RTCPeerConnection/icecandidate_event)event들을 처리하기 시작한다.
 
 #### Session negotiation
 
