@@ -375,7 +375,7 @@ Si eliminamos `position:` `absolute` de las reglas de `.box3` podemos ver cómo 
 
 Si el hijo absolutamente posicionado tiene un grid container como padre pero ese container no crea un nuevo contexto de posicionamiento, entonces se saca del flujo como en el ejemplo anterior. El contexto de posicionamiento será el elemento que cree un contexto de posicionamiento como es común a otros métodos de diseño. En nuestro caso, si eliminamos `position:` `relative` del wrapper de arriba, el contexto de posicionamiento es de la ventana de visualización, como se muestra en esta imagen.
 
-![Image of grid container as parent](https://mdn.mozillademos.org/files/14661/2_abspos_example.png)
+![Image of grid container as parent](2_abspos_example.png)
 
 Una vez más, el ítem ya no participa en el diseño de la cuadrícula en términos de tamaño o cuando otros ítems se colocan automáticamente.
 

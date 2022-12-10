@@ -3,7 +3,9 @@ title: Console.timeLog()
 slug: Web/API/Console/timeLog
 ---
 
-{{APIRef("Console API")}}在控制台输出计时器的值，该计时器必须已经通过 {{domxref("console.time()")}} 启动。
+{{APIRef("Console API")}}
+
+在控制台输出计时器的值，该计时器必须已经通过 {{domxref("console.time()")}} 启动。
 
 参阅文档中的 [Timers](/zh-CN/docs/Web/API/console#Timers) 部分获取详细说明和示例。
 
@@ -60,7 +62,7 @@ console.timeEnd("answer time");
 
 上例中的输出分别显示了用户从打开页面到关闭第一个 alert 和第二个 alert 框的时间间隔：
 
-[![](timer_output.png)](https://mdn.mozillademos.org/files/16741/timer_output.png)
+![Timer output in Firefox console](timer_output.png)
 
 注意：使用 `timelog()` 输出计时器的值会显示计时器名称。使用 `timeEnd()` 停止也会显示计时器名称和输出计时器的值，并且，最后的 " - timer ended" 可以清楚的显示计时器不再计时的信息。
 

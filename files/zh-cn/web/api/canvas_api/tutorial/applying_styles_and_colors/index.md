@@ -3,7 +3,7 @@ title: 使用样式和颜色
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}在[绘制图形](/zh-CN/Canvas_tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}在[绘制图形](/zh-CN/Canvas_tutorial/Drawing_shapes)的章节里，我只用到默认的线条和填充样式。而在这一章里，我们将会探讨 canvas 全部的可选项，来绘制出更加吸引人的内容。
 
 ## 色彩 Colors
 
@@ -55,7 +55,7 @@ draw();
 
 结果如下：
 
-{{EmbedLiveSample("A_fillStyle_example", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("A_fillStyle_example", 160, 160, "canvas_fillstyle.png")}}
 
 ### `strokeStyle` 示例
 
@@ -86,7 +86,7 @@ draw();
 
 结果如下：
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
 
 ## 透明度 Transparency
 
@@ -145,7 +145,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}
+{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
 
 ### `rgba()` 示例
 
@@ -183,7 +183,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("An_example_using_rgba", "180", "180", "https://mdn.mozillademos.org/files/246/Canvas_rgba.png")}}
+{{EmbedLiveSample("An_example_using_rgba", "180", "180", "canvas_rgba.png")}}
 
 ## 线型 Line styles
 
@@ -235,7 +235,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineWidth_example", "180", "180", "https://mdn.mozillademos.org/files/239/Canvas_linewidth.png")}}
+{{EmbedLiveSample("A_lineWidth_example", "180", "180", "canvas_linewidth.png")}}
 
 想要获得精确的线条，必须对线条是如何描绘出来的有所理解。见下图，用网格来代表 canvas 的坐标格，每一格对应屏幕上一个像素点。在第一个图中，填充了 (2,1) 至 (5,5) 的矩形，整个区域的边界刚好落在像素边缘上，这样就可以得到的矩形有着清晰的边缘。
 
@@ -296,7 +296,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("A_lineCap_example", "180", "180", "canvas_linecap.png")}}
 
 #### `lineJoin` 属性的例子
 
@@ -330,7 +330,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
+{{EmbedLiveSample("A_lineJoin_example", "180", "180", "canvas_linejoin.png")}}
 
 #### `miterLimit` 属性的演示例子
 
@@ -405,7 +405,7 @@ document.getElementById('miterLimit').value = document.getElementById('canvas').
 draw();
 ```
 
-{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "500", "240", "https://mdn.mozillademos.org/files/240/Canvas_miterlimit.png")}}
+{{EmbedLiveSample("A_demo_of_the_miterLimit_property", "500", "240", "canvas_miterlimit.png")}}
 
 ### 使用虚线
 
@@ -440,7 +440,7 @@ function march() {
 march();
 ```
 
-{{EmbedLiveSample("Using_line_dashes", "120", "120", "https://mdn.mozillademos.org/files/9853/marching-ants.png")}}
+{{EmbedLiveSample("Using_line_dashes", "120", "120", "marching-ants.png")}}
 
 ## 渐变 Gradients
 
@@ -511,7 +511,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "https://mdn.mozillademos.org/files/235/Canvas_lineargradient.png")}}
+{{EmbedLiveSample("A_createLinearGradient_example", "180", "180", "canvas_lineargradient.png")}}
 
 ### `createRadialGradient` 的例子
 
@@ -566,7 +566,7 @@ draw();
 
 4 个径向渐变效果的最后一个色标都是透明色。如果想要两色标直接的过渡柔和一些，只要两个颜色值一致就可以了。代码里面看不出来，是因为我用了两种不同的颜色表示方法，但其实是相同的，`#019F62 = rgba(1,159,98,1)`。
 
-{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "https://mdn.mozillademos.org/files/244/Canvas_radialgradient.png")}}
+{{EmbedLiveSample("A_createRadialGradient_example", "180", "180", "canvas_radialgradient.png")}}
 
 ## 图案样式 Patterns
 
@@ -597,7 +597,7 @@ function draw() {
 
   // 创建新 image 对象，用作图案
   var img = new Image();
-  img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+  img.src = 'canvas_createpattern.png';
   img.onload = function() {
 
     // 创建图案
@@ -619,7 +619,7 @@ draw();
 
 The result looks like this:
 
-{{EmbedLiveSample("createPattern_的例子", "180", "180", "https://mdn.mozillademos.org/files/222/Canvas_createpattern.png")}}
+{{EmbedLiveSample("createPattern_的例子", "180", "180", "canvas_createpattern.png")}}
 
 ## 阴影 Shadows
 
@@ -659,7 +659,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}
+{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "shadowed-string.png")}}
 
 我们可以通过下一章来了解文字属性和 fillText 方法相关的内容。
 
@@ -694,6 +694,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "https://mdn.mozillademos.org/files/9855/fill-rule.png")}}
+{{EmbedLiveSample("Canvas_fill_rules", "110", "110", "fill-rule.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}

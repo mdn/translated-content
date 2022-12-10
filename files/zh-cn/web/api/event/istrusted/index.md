@@ -31,6 +31,6 @@ if (e.isTrusted) {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}

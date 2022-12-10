@@ -3,7 +3,7 @@ title: Compositing 示例
 slug: Web/API/Canvas_API/Tutorial/Compositing/Example
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 这个案例程序演示了一些[图像合成操作](/zh-CN/docs/Web/API/CanvasRenderingContext2D.globalCompositeOperation)，其结果如下所示：
 

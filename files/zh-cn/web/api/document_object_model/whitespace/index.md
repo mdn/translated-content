@@ -27,7 +27,7 @@ slug: Web/API/Document_Object_Model/Whitespace
 </html>
 ```
 
-![](https://mdn.mozillademos.org/files/854/whitespace_tree.png)
+![](whitespace_tree.png)
 
 这么一来，要使用 DOM 游走于节点结构间又不想要无用的空白符时，会有点困难。
 

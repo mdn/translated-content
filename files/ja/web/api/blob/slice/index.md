@@ -1,6 +1,8 @@
 ---
 title: Blob.slice()
 slug: Web/API/Blob/slice
+l10n:
+  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
 ---
 
 {{APIRef("File API")}}
@@ -9,32 +11,35 @@ slug: Web/API/Blob/slice
 
 ## 構文
 
-```
-var newBlob = blob.slice(start, end, contentType);
+```js-nolint
+slice()
+slice(start)
+slice(start, end)
+slice(start, end, contentType)
 ```
 
-### パラメータ
+### 引数
 
 - `start` {{optional_inline}}
-  - : 新しい {{domxref("Blob")}} に含める最初のバイトを示す {{domxref("Blob")}} へのインデックス。負の値を指定すると、{{domxref("Blob")}} の末尾から先頭へのオフセットとして扱われます。例えば、-10 は {{domxref("Blob")}} の最後のバイトから 10 番目になります。デフォルト値は 0 です。`start` にもとの {{domxref("Blob")}} のサイズよりも大きい値を指定すると、返される {{domxref("Blob")}} のサイズは 0 で、データは何も含まれません。
+  - : 新しい {{domxref("Blob")}} に入れる最初のバイトを示す {{domxref("Blob")}} 内の位置です。負の値を指定すると、{{domxref("Blob")}} の末尾から先頭へのオフセットとして扱われます。例えば、 -10 は {{domxref("Blob")}} の最後のバイトから 10 番目になります。既定値は 0 です。`start` にもとの {{domxref("Blob")}} のサイズよりも大きい値を指定すると、返される {{domxref("Blob")}} のサイズは 0 で、データは何も含まれません。
 - `end` {{optional_inline}}
-  - : 新しい {{domxref("Blob")}} に**含まれない**最初のバイトを示す {{domxref("Blob")}} へのインデックス。(つまり、このインデックスに正確に位置するバイトは含まれません)。負の値を指定すると、{{domxref("Blob")}} の末尾から先頭へのオフセットとして扱われます。例えば、-10 は {{domxref("Blob")}} の最後のバイトから 10 番目になります。デフォルト値は `size` です。
+  - : 新しい {{domxref("Blob")}} に**含まれない**最初のバイトを示す {{domxref("Blob")}} 内の位置です（つまり、ちょうどこの位置にあるバイトは含まれません）。負の値を指定すると、{{domxref("Blob")}} の末尾から先頭へのオフセットとして扱われます。例えば、-10 は {{domxref("Blob")}} の最後のバイトから 10 番目になります。既定値は `size` です。
 - `contentType` {{optional_inline}}
-  - : 新しい {{domxref("Blob")}} に割り当てるコンテンツの型。これはその `type` プロパティの値になります。デフォルト値は空の文字列です。
+  - : 新しい {{domxref("Blob")}} に割り当てるコンテンツの型。これはその `type` プロパティの値になります。既定値は空文字列です。
 
-### 戻り値
+### 返値
 
-このメソッドが呼び出された Blob 内に含まれるデータの指定されたサブセットを含む新しい {{domxref("Blob")}} オブジェクト。元の Blob は変更されません。
+このメソッドが呼び出された Blob 内に含まれるデータの指定されたサブセットを含む新しい {{domxref("Blob")}} オブジェクトです。元の Blob は変更されません。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
 ## ブラウザの実装状況
 
-{{Compat("api.Blob.slice")}}
+{{Compat}}
 
-## あわせて参照
+## 関連情報
 
 - {{domxref("Blob")}}
-- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

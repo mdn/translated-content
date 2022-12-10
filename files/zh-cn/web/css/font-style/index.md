@@ -47,98 +47,26 @@ For TrueType or OpenType variable fonts, the `"slnt"` variation is used to imple
 
 For the example below to work, you'll need a browser that supports the CSS Fonts Level 4 syntax in which `font-style: oblique` can accept an `<angle>`.
 
-{{EmbedLiveSample("variable-font-example", 1200, 180, "", "", "example-outcome-frame")}}
+{{EmbedGHLiveSample("css-examples/variable-fonts/oblique.html", '100%', 860)}}
 
-#### HTML
+## 无障碍问题
 
-```html
-<header>
-    <input type="range" id="slant" name="slant" min="-90" max="90" />
-    <label for="slant">Slant</label>
-</header>
-<div class="container">
-    <p class="sample">...it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.</p>
-</div>
-```
+Large sections of text set with a `font-style` value of `italic` may be difficult for people with cognitive concerns such as Dyslexia to read.
 
-#### CSS
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
-```css
-/*
-AmstelvarAlpha-VF 由 David Berlow 制作：https://github.com/TypeNetwork/Amstelvar
-在此使用时，遵循此开源协议：
-https://github.com/TypeNetwork/Amstelvar/blob/master/OFL.txt
-*/
+## 形式定义
 
-@font-face {
-  src: url('https://mdn.mozillademos.org/files/16044/AmstelvarAlpha-VF.ttf');
-  font-family:'AmstelvarAlpha';
-  font-style: normal;
-}
+{{cssinfo}}
 
-label {
-  font: 1rem monospace;
-}
-
-.container {
-  max-height: 150px;
-  overflow: scroll;
-}
-
-.sample {
-  font: 2rem 'AmstelvarAlpha', sans-serif;
-}
-```
-
-```css hidden
-html, body {
-  max-height: 100vh;
-  max-width: 100vw;
-  overflow: hidden;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-header {
-  margin-bottom: 1.5rem;
-}
-
-.container {
-  flex-grow: 1;
-}
-
-.container > p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-```
-
-#### JavaScript
-
-```js
-let slantLabel = document.querySelector('label[for="slant"]');
-let slantInput = document.querySelector('#slant');
-let sampleText = document.querySelector('.sample');
-
-function update() {
-  let slant = `oblique ${slantInput.value}deg`;
-  slantLabel.textContent = `font-style: ${slant};`;
-  sampleText.style.fontStyle = slant;
-}
-
-slantInput.addEventListener('input', update);
-
-update();
-```
-
-### 形式化语法
+## 形式语法
 
 {{csssyntax}}
 
 ## 示例
+
+### 字体样式
 
 示例展示了不同的 `font-style` 值。CSS 看起来像这样：
 
@@ -162,27 +90,18 @@ update();
 }
 ```
 
-{{ EmbedLiveSample('Font_styles') }}
-
-请注意，不是所有的字体都有确切的 `oblique` 和 `italic` 字形，即便如此，浏览器也会通过使用现有的字形来模拟所缺少的字形。下面是一个使用这两种字形渲染字体的示例：
-
-![](https://mdn.mozillademos.org/files/12049/Screen%20Shot%202015-12-05%20at%2008.41.03.png)
-
-## 无障碍问题
-
-Large sections of text set with a `font-style` value of `italic` may be difficult for people with cognitive concerns such as Dyslexia to read.
-
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
+{{ EmbedLiveSample('字体样式') }}
 
 ## 规范
 
 {{Specifications}}
 
-{{cssinfo}}
-
 ## 浏览器兼容性
 
 {{Compat}}
 
-\[1] 在 Firefox 44 之前，Gecko 并不对 `oblique` 和 `italic` 字形做出区分。在那之后，如果有可用的字形，它将使用正确的字形。
+## 参见
+
+- {{cssxref("font-family")}}
+- {{cssxref("font-weight")}}
+- [基本文本和字体样式](/zh-CN/docs/Learn/CSS/Styling_text/Fundamentals)

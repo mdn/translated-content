@@ -64,7 +64,7 @@ Otra cosa especial acerca de las variables es que pueden contener casi cualquier
 
 > **Nota:** Decimos que las variables contienen valores. Ésta es una importante distinción que debemos reconocer. Las variables no son los valores en sí mismos; son contenedores de valores. Puedes pensar en ellas como pequeñas cajas de cartón en las que puedes guardar cosas.
 
-![](https://mdn.mozillademos.org/files/13506/boxes.png)
+![](boxes.png)
 
 ## Declarar una variable
 

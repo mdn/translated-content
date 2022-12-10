@@ -25,7 +25,7 @@ O argumento `data` pode ser um array ou um objeto.
 console.table(["apples", "oranges", "bananas"]);
 ```
 
-![](https://mdn.mozillademos.org/files/8567/console-table-array.png)
+![](console-table-array.png)
 
 ```js
 // um objeto cujas propriedades são strings
@@ -40,7 +40,7 @@ var me = new Person("John", "Smith");
 console.table(me);
 ```
 
-![](https://mdn.mozillademos.org/files/8559/console-table-simple-object.png)
+![](console-table-simple-object.png)
 
 ### Coleções de tipos compostos
 
@@ -53,7 +53,7 @@ var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
 console.table(people);
 ```
 
-![Table displaying array of arrays](https://mdn.mozillademos.org/files/8561/console-table-array-of-array.png)
+![Table displaying array of arrays](console-table-array-of-array.png)
 
 ```js
 // um array de objetos
@@ -72,7 +72,7 @@ console.table([john, jane, emily]);
 
 Observe que, se a matriz contiver objetos, as colunas serão rotuladas com o nome da propriedade.
 
-![Table displaying array of objects](https://mdn.mozillademos.org/files/8563/console-table-array-of-objects.png)
+![Table displaying array of objects](console-table-array-of-objects.png)
 
 ```js
 // um objeto cujas propriedades são objetos
@@ -86,7 +86,7 @@ family.daughter = new Person("Emily", "Smith");
 console.table(family);
 ```
 
-![Table displaying object of objects](https://mdn.mozillademos.org/files/8565/console-table-object-of-objects.png)
+![Table displaying object of objects](console-table-object-of-objects.png)
 
 ### Restringindo as colunas exibidas
 
@@ -107,7 +107,7 @@ var emily = new Person("Emily", "Jones");
 console.table([john, jane, emily], ["firstName"]);
 ```
 
-![Table displaying array of objects with filtered output](https://mdn.mozillademos.org/files/8569/console-table-array-of-objects-firstName-only.png)
+![Table displaying array of objects with filtered output](console-table-array-of-objects-firstname-only.png)
 
 ### Classificando colunas
 

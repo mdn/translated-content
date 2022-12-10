@@ -108,7 +108,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-    background-image: url(https://mdn.mozillademos.org/files/12005/starsolid.gif);
+    background-image: url(starsolid.gif);
     width: 160px;
     height: 70px;
 }
@@ -135,8 +135,8 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image:  url(https://mdn.mozillademos.org/files/12005/starsolid.gif),
-                     url(https://developer.mozilla.org/static/img/favicon32.png);
+  background-image:  url(starsolid.gif),
+                     url(favicon32.png);
   background-repeat: repeat-x,
                      repeat-y;
   height: 144px;

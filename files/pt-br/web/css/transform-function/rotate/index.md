@@ -8,7 +8,7 @@ original_slug: Web/CSS/transform-function/rotate()
 
 A função [CSS](/pt-BR/docs/Web/CSS) **`rotate()`** define uma transformação que gira um elemento em torno de um ponto fixo no plano 2D, sem deformá-lo. O resultado é um tipo de dados {{cssxref("&lt;transform-function&gt;")}}.
 
-![](https://mdn.mozillademos.org/files/12113/rotate.png)
+![](rotate.png)
 
 O eixo de rotação passa por uma origem, definido pela propriedade CSS {{ cssxref("transform-origin") }}.
 

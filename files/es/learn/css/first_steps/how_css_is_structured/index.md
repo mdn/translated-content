@@ -255,15 +255,15 @@ En su nivel más básico, el CSS consta de dos componentes básicos:
 
 La siguiente imagen resalta una sola propiedad y valor. El nombre de la propiedad es `color` y el valor `blue`.
 
-![Una declaración resaltada en el CSS](https://mdn.mozillademos.org/files/16498/declaration.png)
+![Una declaración resaltada en el CSS](declaration.png)
 
 Una propiedad emparejada con un valor se denomina _declaración CSS_. Las declaraciones CSS se colocan dentro de los _bloques de declaración CSS_. La siguiente imagen muestra nuestro CSS con el bloque de declaración resaltado.
 
-![Un bloque de declaración resaltado](https://mdn.mozillademos.org/files/16499/declaration-block.png)
+![Un bloque de declaración resaltado](declaration-block.png)
 
 Finalmente, los bloques de declaración CSS se combinan con _selectores_ para producir _conjuntos de reglas CSS_ (o _reglas CSS_). Nuestra imagen contiene dos reglas, una para el selector `h1` y otra para el selector `p`. La regla para `h1` está resaltada.
 
-![La regla para h1 resaltada](https://mdn.mozillademos.org/files/16500/rules.png)
+![La regla para h1 resaltada](rules.png)
 
 Establecer las propiedades de CSS según valores específicos es la función principal del lenguaje CSS. El motor CSS calcula qué declaraciones se aplican a cada elemento de una página para darle la compaginación y los estilos adecuados.
 

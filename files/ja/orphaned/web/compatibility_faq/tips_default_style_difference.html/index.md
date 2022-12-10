@@ -23,12 +23,12 @@ original_slug: Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
     }
     ```
 
-    ![](https://mdn.mozillademos.org/files/10007/ex2_3.png)
+    ![](ex2_3.png)
 
 2. **テキストの太さが異なる**
     見出しのテキストで使用する h 要素ですが、同様の要素(h2 要素など)で指定しても、ブラウザによっては僅かな差異が発生する場合があります。
 
-    ![](https://mdn.mozillademos.org/files/9997/ex2_1.png)
+    ![](ex2_1.png)
 
 3. **チェックボックスのデザインが異なる**
     チェックボックスの表示がブラウザ間で異なる場合があります。
@@ -37,12 +37,12 @@ original_slug: Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
 
     <p class="attention">注意：2014/12現在、mobile版Firefoxでは、ブラウザ側のスタイルをリセットする<a href="https://developer.mozilla.org/ja/docs/Web/CSS/-moz-appearance">appearance</a>プロパティが使用できない不具合があります。</p>
 
-    ![](https://mdn.mozillademos.org/files/9999/ex2_2.png)
+    ![](ex2_2.png)
 
 4. **プルダウンメニューのデザインが異なる**
     プルダウンメニューに関しても、チェックボックスのデザインと同様に、ブラウザ毎でデザインが異なる場合があります。
 
-    ![](https://mdn.mozillademos.org/files/10003/ex2_4.png)
+    ![](ex2_4.png)
 
 ブラウザ毎で独自の CSS が適応されていますが、下記のような方法でデザインを指定することで、統一することも可能です。
 

@@ -29,7 +29,7 @@ Para começar, veja:
 
 Para uma lista de exemplos de jogos web, veja a nossa [página de exemplos](/pt-BR/docs/Games/Examples). Também dê uma olhada em [openwebgames.com](http://www.openwebgames.com/) para mais exemplos e recursos úteis!
 
-[![](https://mdn.mozillademos.org/files/12790/owg-logo-dark.svg)](http://www.openwebgames.com)
+[![](owg-logo-dark.svg)](http://www.openwebgames.com)
 
 ## Veja também
 
