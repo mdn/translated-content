@@ -3,7 +3,7 @@ title: 变形 Transformations
 slug: Web/API/Canvas_API/Tutorial/Transformations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
 
 在本教程前面的部分中，我们已经了解了 Canvas 网格和坐标空间。到目前为止，我们只是根据我们的需要使用默认的网格，改变整个画布的大小。变形是一种更强大的方法，可以将原点移动到另一点、对网格进行旋转和缩放。
 
@@ -34,7 +34,7 @@ Canvas 状态存储在栈中，每当`save()`方法被调用后，当前的状�
 
 当第二次调用 `restore` 时，已经恢复到最初的状态，因此最后是再一次绘制出一个黑色的四方形。
 
-{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "https://mdn.mozillademos.org/files/249/Canvas_savestate.png")}}
+{{EmbedLiveSample("A_save_and_restore_canvas_state_example", "180", "180", "canvas_savestate.png")}}
 
 ```js
 function draw() {
@@ -107,7 +107,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_translate_example", "160", "160", "https://mdn.mozillademos.org/files/9857/translate.png")}}
+{{EmbedLiveSample("A_translate_example", "160", "160", "translate.png")}}
 
 ## 旋转 Rotating
 
@@ -136,7 +136,7 @@ draw();
 draw();
 ```
 
-{{EmbedLiveSample("A_rotate_example", "310", "210", "https://mdn.mozillademos.org/files/9859/rotate.png")}}
+{{EmbedLiveSample("A_rotate_example", "310", "210", "rotate.png")}}
 
 ```js
 function draw() {
@@ -199,7 +199,7 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("A_scale_example", "160", "160", "https://mdn.mozillademos.org/files/9861/scale.png")}}
+{{EmbedLiveSample("A_scale_example", "160", "160", "scale.png")}}
 
 ## 变形 Transforms
 
@@ -264,6 +264,6 @@ function draw() {
 draw();
 ```
 
-{{EmbedLiveSample("transform_setTransform_的例子", "230", "280", "https://mdn.mozillademos.org/files/255/Canvas_transform.png")}}
+{{EmbedLiveSample("transform_setTransform_的例子", "230", "280", "canvas_transform.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}

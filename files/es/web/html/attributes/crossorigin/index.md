@@ -23,6 +23,7 @@ Una clave inválida y un string vacío serán gestionados como una clave anónim
 
 {{Compat}}
 
-## Ver también
+## Véase también
 
-- [HTTP access control](/En/HTTP_access_control)
+- [Control de acceso HTTP (CORS)](https://developer.mozilla.org/es/docs/Web/HTTP/CORS)
+- [Atributo HTML: `rel`](https://developer.mozilla.org/es/docs/Web/HTML/Attributes/rel)

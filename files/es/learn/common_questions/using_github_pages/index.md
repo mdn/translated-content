@@ -38,7 +38,7 @@ La otra cosa que necesitas hacer antes de seguir adelante es inicializar el dire
 
 La mejor manera de subir tu código a Github es mediante la linea de comandos — esta es una ventana donde tú escribe comandos para hacer cosas como crear archivos y ejecutar programas, en lugar de hacer clic dentro de una interfaz de usuario. Se verá algo como esto:
 
-![](https://mdn.mozillademos.org/files/9483/command-line.png)
+![](command-line.png)
 
 > **Nota:** Tú también podrías considerar una [interfaz gráfica de usuario de Git](http://git-scm.com/downloads/guis) para hacer el mismo trabajo, si te sientes incómodo con la linea de comandos.
 
@@ -55,9 +55,9 @@ Esto puede parecer un poco espantoso al principio, pero no te preocupes — que 
 1. A continuación, tu necesitas crear un nuevo repositorio para colocar tus archivos en el. Has clic en el signo más (+) en la parte superior derecha de la página de inicio de GitHub, luego escoge _Nuevo Repositorio_.
 2. En esta página, en la caja _Nombre del Repositorio_, digita el nombre para tu repositorio de código, por ejemplo _my-repository_.
 3. También llena una descripción para decir lo que tu repositorio va a contener. Tu pantalla debe mostrar algo como esto:
-    ![](https://mdn.mozillademos.org/files/12143/create-new-repo.png)
+    ![](create-new-repo.png)
 4. Has Clic en _Crear repositorio_; Esto debería llevarte a la siguiente página:
-    ![](https://mdn.mozillademos.org/files/12141/github-repo.png)
+    ![](github-repo.png)
 
 ### Subiendo tus archivos a GitHub
 
@@ -81,8 +81,6 @@ Esto puede parecer un poco espantoso al principio, pero no te preocupes — que 
     ```
 
 4. Ahora necesitas crear la rama gh-pages de tu repositorio; actualiza la página actual y verá una página del repositorio algo así como la de abajo. Tú necesitas presionar el boton que dice _Branch: **master**_, digita _gh-pages_ en el campo de texto, luego presiona el boton azul que dice _Create branch: gh-pages_. Esto crea una rama de código especial llamada gh-pages que es publicada en una ubicación especial. La URL toma la forma _username.github.io/my-repository-name_, asi en mi caso de ejemplo, la URL debería ser `https://chrisdavidmills.github.io/my-repository`. La página mostrada es la página index.html.
-
-    ![](https://mdn.mozillademos.org/files/12145/repo-site.png)
 
 5. Navega tu dirección web de GitHub pages en un nuevo ta del navegador, y tu deberias ver tu sitio en linea! Mandalo por correo electrónico a tus amigos y muestra tu dominio.
 

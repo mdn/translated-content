@@ -3,7 +3,7 @@ title: WebGL tutorial
 slug: Web/API/WebGL_API/Tutorial
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 [WebGL](http://www.khronos.org/webgl/) 讓網頁內容可以使用一個基於 [OpenGL ES](http://www.khronos.org/opengles/) 2.0 的 API 以在 HTML {{HTMLElement("canvas")}}中執行 3D 渲染，且瀏覽器無需使用任何 plug-in。WebGL programs 由 JavaScript 撰寫的指令碼以及透過電腦的 Graphics Processing Unit (GPU)上運行的特殊效果程式碼(shader code)組成。WebGL 元件可與其他 HTML 元件混合，並與該頁的其他部分或該頁背景組合使用。
 

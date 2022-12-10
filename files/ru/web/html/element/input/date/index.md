@@ -13,15 +13,15 @@ translation_of: Web/HTML/Element/input/date
 
 Среди браузеров со своим интерфейсом для выбора даты, есть интерфейс браузеров Chrome и Opera, который выглядит так:
 
-![](https://mdn.mozillademos.org/files/14909/date-picker-chrome.png)
+![](date-picker-chrome.png)
 
 В Edge он выглядит так:
 
-![](https://mdn.mozillademos.org/files/14911/date-picker-edge.png)
+![](date-picker-edge.png)
 
 А в Firefox выглядит так:
 
-![Datepicker UI in firefox](https://mdn.mozillademos.org/files/15644/firefox_datepicker.png)
+![Datepicker UI in firefox](firefox_datepicker.png)
 
 | [Value](#value)         | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку**                                                                                                         |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -158,7 +158,7 @@ If you try to submit the form with an incomplete date (or with a date outside th
 
 Here's a screenshot for those of you who aren't using a supporting browser:
 
-![](https://mdn.mozillademos.org/files/14913/date-picker-chrome-error-message.png)
+![](date-picker-chrome-error-message.png)
 
 Here's the CSS used in the above example. Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether or not the current value is valid. We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
 
@@ -191,7 +191,7 @@ input:valid+span:after {
 
 As mentioned above, the major problem with using date inputs at the time of writing is [browser support](#browser_compatibility). As an example, the date picker on Firefox for Android looks like this:
 
-![](https://mdn.mozillademos.org/files/14915/date-picker-fxa.png)
+![](date-picker-fxa.png)
 
 Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 

@@ -52,9 +52,7 @@ div {
 }
 ```
 
-### Reultado
-
-![What the example should looks like if your browser supports it.](https://mdn.mozillademos.org/files/6043/Refresult.png)
+{{EmbedLiveSample}}
 
 ## Especificaciones
 

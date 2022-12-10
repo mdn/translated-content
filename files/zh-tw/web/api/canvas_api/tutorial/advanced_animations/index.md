@@ -3,7 +3,7 @@ title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}
 
 在上一章節，我們做了一些[基礎動畫](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Basic_animations)且知道它的移動方式。在這部分我們更仔細的介紹它的動畫效果且並增加一些特效，使它看起來更高級。
 

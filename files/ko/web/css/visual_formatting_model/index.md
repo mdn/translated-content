@@ -88,7 +88,7 @@ CSS 선택기는 해당 상자에 이름을 부여하거나 스타일링을 할 
 
 두 개의 무명 블록 상자가 생성되었습니다. 스팬 요소 이전의 텍스트(`일부 인라인 텍스트`) 하나와 그 뒤의 텍스트(`그 뒤를 잇는 추가 인라인 텍스트`) 하나가 있는데 이로써 다음과 같은 블록 구조가 주어졌습니다:
 
-![](https://mdn.mozillademos.org/files/13625/anonymous_block_box_break.png)
+![](anonymous_block_box_break.png)
 
 이 것의 결과는:
 

@@ -3,7 +3,7 @@ title: 使用canvas繪製文字
 slug: Web/API/Canvas_API/Tutorial/Drawing_text
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}
 
 [`canvas`](/zh-TW/HTML/Canvas)元素支援在[標準 HTML 5 特色](http://www.whatwg.org/specs/web-apps/current-work/#text-0)以及少許實驗性的 Mozilla 方法和功能上繪製文字。
 

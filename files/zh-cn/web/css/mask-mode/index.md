@@ -53,7 +53,7 @@ mask-mode: unset;
   width: 227px;
   height: 200px;
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.mozillademos.org/files/12668/MDN.svg);
+  mask-image: url(mdn.svg);
   mask-mode: alpha; /* Can be changed in the live sample */
 }
 ```

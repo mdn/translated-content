@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
 {{JSRef}}
 
-**`WebAssembly.validate()` **함수는 바이트가 유효한 wasm 모듈을 형성하는지 (`true`) 또는 생성하지 않는지 (`false`)를 반환하여 WebAssembly 바이너리 코드의 지정된 [typed array](/ko/docs/Web/JavaScript/Typed_arrays)의 유효성을 검사합니다.
+**`WebAssembly.validate()`** 함수는 바이트가 유효한 wasm 모듈을 형성하는지 (`true`) 또는 생성하지 않는지 (`false`)를 반환하여 WebAssembly 바이너리 코드의 지정된 [typed array](/ko/docs/Web/JavaScript/Typed_arrays)의 유효성을 검사합니다.
 
 ## Syntax
 

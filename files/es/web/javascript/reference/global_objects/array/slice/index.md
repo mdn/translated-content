@@ -1,9 +1,6 @@
 ---
 title: Array.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
-tags:
-  - Arreglo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/slice
 ---
 

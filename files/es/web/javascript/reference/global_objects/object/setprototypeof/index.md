@@ -1,13 +1,6 @@
 ---
 title: Object.setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
-tags:
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Método(2)
-  - Objeto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/setPrototypeOf
 ---
 

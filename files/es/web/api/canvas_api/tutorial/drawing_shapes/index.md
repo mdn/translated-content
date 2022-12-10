@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 411e3bb536f858a9d58600b4017979c79b2a4408
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 Ahora que hemos preparado nuestro [entorno canvas](/es/docs/Web/API/Canvas_API/Tutorial/Basic_usage), podemos entrar en detalles de cómo dibujar en el canvas. Al final de este artículo, habrás aprendido cómo dibujar rectángulos, triángulos, líneas, arcos y curvas, familiarizándote con algunas de las formas básicas. Trabajar con trazados es esencial a la hora de dibujar objetos en el canvas y veremos cómo hacerlo.
 

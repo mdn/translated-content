@@ -1,13 +1,6 @@
 ---
 title: Object.isFrozen()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Objeto
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isFrozen
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isFrozen
 ---
 

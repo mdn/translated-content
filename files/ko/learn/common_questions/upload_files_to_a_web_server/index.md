@@ -51,12 +51,12 @@ _아직 좋은 예제가 없습니다. 누군가 나서 주세요([Please, consi
 
 FireFTP를 새로운 탭에서 열어보세요. 파이어폭스에서 열기 위한 방법도 두가지 있습니다.
 
-1. **Firefox menu ![](https://mdn.mozillademos.org/files/9633/2014-01-10-13-08-08-f52b8c.png) ➤ ![Developer](https://mdn.mozillademos.org/files/9635/Screenshot%20from%202014-11-26%2014:24:56.png) ➤ FireFTP**
+1. **Firefox menu ![](2014-01-10-13-08-08-f52b8c.png) ➤ ![Developer](screenshot_from_2014-11-26_14-24-56.png) ➤ FireFTP**
 2. **Tools** ➤ **Web Develope**r ➤ **FireFTP**
 
 이제 다음과 같이 보이게 될겁니다.
 
-![FireFTP : the interface, not connected to a server](https://mdn.mozillademos.org/files/9613/fireftp-default.png)
+![FireFTP : the interface, not connected to a server](fireftp-default.png)
 
 ### 로그인 하기
 
@@ -87,13 +87,13 @@ To publish to this account, please connect through FTP with the following creden
 
 이제 우리의 FTP 클라이언트를 멀리 떨어진 서버에 접속하기 위해 _"Create an account..." 버튼을 누릅니다._ 그리고 호스팅제공자로 부터 받은 정보를 해당 필드에 채워줍니다.
 
-![FireFTP: creating an account](https://mdn.mozillademos.org/files/9617/fireftp-createlogin.png)
+![FireFTP: creating an account](fireftp-createlogin.png)
 
 ### 이곳과 "저곳" : 로컬 과 원격 화면
 
 이제 새로 만든 계정으로 접속을 해봅시다.
 
-![The FTP interface, once logged](https://mdn.mozillademos.org/files/9619/fireftp-logged.png)
+![The FTP interface, once logged](fireftp-logged.png)
 
 어떤 것이 보이는지 조사해봅시다.
 
@@ -105,11 +105,11 @@ To publish to this account, please connect through FTP with the following creden
 
 여러분이 기억하듯이, 우리의 호스팅제공자는 우리에게 `Public/htdocs` 디렉토리에 파일을 저장해야한다고 했습니다. 오른쪽 패널에서 해당 디렉토리로 이동해봅시다.
 
-![Changing to the htdocs folder on the remote server](https://mdn.mozillademos.org/files/9623/remote-htdocs-empty.png)
+![Changing to the htdocs folder on the remote server](remote-htdocs-empty.png)
 
 이제, 여러분의 파일을 서버에 업로드하기 위해서 드래그-앤-드롭하여 파일들을 왼쪽에서 오른쪽 패널로 이동합니다.
 
-![The files show in the remote view: they have been pushed to the server](https://mdn.mozillademos.org/files/9625/files-dropped-onto-the-server.png)
+![The files show in the remote view: they have been pushed to the server](files-dropped-onto-the-server.png)
 
 ### 우리가 올린 것이 진짜로 온라인으로 되어있나요?
 

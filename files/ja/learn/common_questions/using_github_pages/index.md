@@ -13,7 +13,7 @@ GitHub は非常に重要で役に立つコミュニティの一つで、Git / G
 
 1. 初めに、システムに [Git をインストール](http://git-scm.com/downloads)してください。これは GitHub が動作する基盤となるバージョン管理システムのソフトウェアです。
 2. 次に、[GitHub アカウント](https://github.com/join)に[サインアップ](/ja/docs/Web)します。それは単純かつ簡単です。
-3. サインアップしたら、ユーザー名とパスワードを使って [github.com](https://github.com)  にログインします。
+3. サインアップしたら、ユーザー名とパスワードを使って [github.com](https://github.com) にログインします。
 
 ### ソースコードのアップロード準備
 

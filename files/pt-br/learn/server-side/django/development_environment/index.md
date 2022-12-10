@@ -384,7 +384,7 @@ Quit the server with CONTROL-C.
 > **Nota:** Acima foi mostrado o comando em Linux/macOS. Você já pode ignorar o aviso sobre "15 unapplied migration(s)"!
 
 Uma vez que o servidor está operando, você pode acessar o site colocando a seguinte URL no seu navegador local:`http://127.0.0.1:8000/`. Você deveria ver um site como esse:
-![Django Skeleton App Homepage - Django 2.0](https://mdn.mozillademos.org/files/16288/Django_Skeleton_Website_Homepage_2_1.png)
+![Django Skeleton App Homepage - Django 2.0](django_skeleton_website_homepage_2_1.png)
 
 ## Resumo
 

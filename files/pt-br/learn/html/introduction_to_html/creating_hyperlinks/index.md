@@ -45,7 +45,7 @@ Os hiperlinks são uma das inovações mais interessantes que a Web oferece. Bem
 
 A página inicial da BBC, por exemplo, contém um grande número de links que apontam não apenas para várias notícias, mas também diferentes áreas do site (funcionalidade de navegação), páginas de login/registro (ferramentas do usuário) e muito mais.
 
-![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](https://mdn.mozillademos.org/files/12405/bbc-homepage.png)
+![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](bbc-homepage.png)
 
 ## Anatomia de um link
 

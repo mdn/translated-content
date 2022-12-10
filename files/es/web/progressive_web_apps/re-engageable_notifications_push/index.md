@@ -35,7 +35,7 @@ button.addEventListener("click", function (e) {
 
 Esto muestra una ventana emergente usando el propio servicio de notificaciones del sistema operativo:
 
-![Notificación de js13kPWA.](https://mdn.mozillademos.org/files/15930/js13kpwa-notification.png)
+![Notificación de js13kPWA.](js13kpwa-notification.png)
 
 Cuando el usuario confirma recibir notificaciones, la aplicación las puede mostrar. El resultado de la acción del usuario puede ser predeterminada, otorgada o denegada. La opción predeterminada se elige cuando el usuario no hace una elección, y las otras dos se establecen cuando el usuario hace clic en sí o no, respectivamente.
 

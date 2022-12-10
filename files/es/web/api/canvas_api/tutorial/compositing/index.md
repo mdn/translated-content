@@ -3,7 +3,7 @@ title: Compositing and clipping
 slug: Web/API/Canvas_API/Tutorial/Compositing
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 En todos nuestros [ejemplos a](/es/docs/Web/API/Canvas_API/Tutorial/Transformations)nteriores, las formas siempre fueron dibujadas una encima de la anterior. Estos es más que adecuado para la mayoría de las situaciones pero se limita al orden compuesto de las figuras. Podemos, sin embargo, cambiar este comportamiento estableciendo el valor de la propiedad `globalCompositeOperation`. Además, la proeidad `clip` nos permite ocultar partes de figuras que no queremos mostrar.
 
@@ -20,7 +20,7 @@ Vea [ejemplos de composición](/es/docs/Web/API/Canvas_API/Tutorial/Compositing/
 
 ## Trazado de Recorte
 
-![](https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png)Un trazado de recoirte es como una figura normal en el lienzo pero actúa como una máscara para ocultar las partes de la misma que no se quieren mostrar. Este efecto se muestra en la figura de la derecha. La estrella roja es nuestro trazado de recorte. Todo lo que cae fuera de este trazado no se dibujará en el lienzo.
+![](canvas_clipping_path.png)Un trazado de recoirte es como una figura normal en el lienzo pero actúa como una máscara para ocultar las partes de la misma que no se quieren mostrar. Este efecto se muestra en la figura de la derecha. La estrella roja es nuestro trazado de recorte. Todo lo que cae fuera de este trazado no se dibujará en el lienzo.
 
 Si comparamos el trazado de recorte con la propiedad `globalCompositeOperation` que hemos visto antes, vemos dos modos compuestos que logran mas o menos los mismos efectos en `source-in` y `source-atop`. Las diferencias mas importantes entre éstos dos son que el trazado de recorte no dibujan nunca en el lienzo y que nunca se afecta por agregar nuevas figuras. Esto vuelve al trazado de recorte ideal para dibujar múltiples figuras en un área delimitada.
 

@@ -7,7 +7,7 @@ slug: Web/CSS/margin-bottom
 
 ## Summary
 
-![The effect of the CSS margin-bottom property on the element box](https://mdn.mozillademos.org/files/12980/margin-bottom%20explained.svg)
+![The effect of the CSS margin-bottom property on the element box](margin-bottom_explained.svg)
 
 CSS 的 `margin-bottom` 属性用于设置元素的底部外边距，允许设置负数值。一个正数值将让它相对于正常流与邻近块更远，而负数值将使得更近。
 
