@@ -4,44 +4,33 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - "files/zh-cn/**"
 
 jobs:
   lint:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: "30"
-
-      - name: Config git core.quotePath
-        run: |
-          # If you don't do this, the get-diff-action won't be able to
-          # notice files that contain non-ascii characters.
-          # I.e.
-          #
-          #    ▶ git status
-          #    Changes not staged for commit:
-          #    ...
-          #   modified:   "files/en-us/glossary/b\303\251zier_curve/index.html"
-          #
-          # But after you set `core.quotePath` you get:
-          #
-          #    ▶ git status
-          #    Changes not staged for commit:
-          #    ...
-          #   modified:   "files/en-us/glossary/bézier_curve/index.html"
-          #
-          # Now, this gets used by the `git diff ...` inside get-diff-action.
-          git config --global core.quotePath false
+      - uses: actions/checkout@v3
 
       - name: Get changed files
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          GIT_DIFF_FILTERED=$(git diff --diff-filter=AM --name-only ${{ github.event.pull_request.base.sha }} -- files/zh-cn/ | tr "\n" " ")
-          echo "GIT_DIFF_FILTERED=$GIT_DIFF_FILTERED" >> $GITHUB_ENV
+          # Use the GitHub API to get the list of changed files
+          # documenation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
+            --paginate \
+            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
+          # filter out files that are not markdown
+          DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/zh-cn/" | xargs)
+          echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
 
       - name: AutoCorrect changed content
-        if: ${{ env.GIT_DIFF_FILTERED }}
-        uses: huacnlee/autocorrect-action@v2.3.2
+        if: ${{ env.DIFF_DOCUMENTS }}
+        uses: huacnlee/autocorrect-action@v2.5.4
         with:
-          args: ${{ env.GIT_DIFF_FILTERED }} --lint
+          args: ${{ env.DIFF_DOCUMENTS }} --lint
