@@ -117,4 +117,3 @@ source.addEventListener("dragend", (event) => {
   - {{domxref("Window")}}：{{domxref("Window/dragover_event", "dragover")}} 事件
   - {{domxref("Document")}}：{{domxref("Document/dragover_event", "dragover")}} 事件
   - {{domxref("SVGElement")}}：{{domxref("SVGElement/dragover_event", "dragover")}} 事件
-
