@@ -44,7 +44,7 @@ _除了以下的属性，来自父接口 {{domxref("Event")}} 的属性也是可
 - 在目标容器的 `dragover` 事件处理程序中，我们调用 `event.preventDefault()`，这使它能够接收 `drop` 事件。
 - 在放置区域的 `drop` 事件处理程序中，我们将可拖动的元素从原始区域移动到可放置区域。
 
-关于更多拖放完整的示例，请参见 [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件。
+关于更完整的拖放示例，请参见 [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件。
 
 #### HTML
 

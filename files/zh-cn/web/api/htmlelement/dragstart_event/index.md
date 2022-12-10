@@ -32,13 +32,13 @@ _除了以下的属性，来自父接口 {{domxref("Event")}} 的属性也是可
 
 ## 示例
 
-### 在拖动开始设置透明度
+### 在拖动开始时设置透明度
 
 在该示例中，我们在容器中有一个可拖动的元素。尝试抓住元素，拖动它进入另一个容器，然后释放它。
 
 我们监听 `dragstart` 事件，使元素在拖动时半透明。
 
-关于拖放的完整示例，请参见 [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件这页。
+关于更完整的拖放示例，请参见 [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件。
 
 #### HTML
 
@@ -91,7 +91,7 @@ source.addEventListener("dragend", (event) => {
 
 #### 结果
 
-{{EmbedLiveSample('Setting opacity on drag start')}}
+{{EmbedLiveSample('在拖动开始时设置透明度')}}
 
 ## 规范
 
