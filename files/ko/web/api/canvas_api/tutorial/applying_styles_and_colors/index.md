@@ -8,7 +8,8 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 original_slug: Web/HTML/Canvas/Tutorial/Applying_styles_and_colors
 ---
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
+
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 [도형 그리기](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes) 장에서는 기본 선과 채우기 스타일만 사용했습니다. 여기서 우리는 그리기를 조금 더 매력적으로 만들 수있는 캔버스 옵션을 살펴볼 것입니다. 그리기에 다른 색상, 선 스타일, 그라디언트, 패턴 및 그림자를 추가하는 방법을 배우게됩니다.
 

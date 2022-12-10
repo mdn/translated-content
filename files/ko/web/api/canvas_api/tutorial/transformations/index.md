@@ -14,7 +14,9 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 original_slug: Web/HTML/Canvas/Tutorial/변형
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}이 튜토리얼에 앞서 [canvas 그리드](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes)와 **좌표 공간**에 대해 알아 보았습니다. 지금까지는 기본적인 그리드를 사용해 요구에 맞추어 전체 canvas의 크기를 바꾸기만 했습니다. Transformation(변형)에는 그리드를 원점에서 다른 위치로 옮기고, 회전하며, 확대·축소까지 하는 더 강력한 방법들이 있습니다.
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}
+
+이 튜토리얼에 앞서 [canvas 그리드](/ko/docs/Web/HTML/Canvas/Tutorial/Drawing_shapes)와 **좌표 공간**에 대해 알아 보았습니다. 지금까지는 기본적인 그리드를 사용해 요구에 맞추어 전체 canvas의 크기를 바꾸기만 했습니다. Transformation(변형)에는 그리드를 원점에서 다른 위치로 옮기고, 회전하며, 확대·축소까지 하는 더 강력한 방법들이 있습니다.
 
 ## 상태(state)의 저장과 복원
 

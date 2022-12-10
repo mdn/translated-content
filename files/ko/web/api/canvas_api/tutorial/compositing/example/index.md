@@ -10,7 +10,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing/Example
 original_slug: Web/HTML/Canvas/Tutorial/Compositing/Example
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 이 샘플 프로그램에서는 여러 가지 [도형 합성 방법](/ko/docs/Web/API/CanvasRenderingContext2D.globalCompositeOperation)을 보여줍니다. 출력은 다음과 같습니다:
 
