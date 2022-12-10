@@ -2,18 +2,6 @@
 title: RTCPeerConnection.currentLocalDescription
 slug: Web/API/RTCPeerConnection/currentLocalDescription
 translation_of: Web/API/RTCPeerConnection/currentLocalDescription
-page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - currentLocalConnection
-browser-compat: api.RTCPeerConnection.currentLocalDescription
 ---
 
 {{APIRef("WebRTC")}}
@@ -66,4 +54,4 @@ else {
 
 - {{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}
 - {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)
