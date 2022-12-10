@@ -3,7 +3,7 @@ title: 基礎動畫
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 控制{{HTMLElement("canvas")}}元素來產生互動式動畫不是一件難事，當然，如果產生的動畫越複雜越需要多費一些力氣，未來如果有機會我們將說明這一塊。
 
@@ -70,9 +70,9 @@ var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init(){
-  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  sun.src = 'canvas_sun.png';
+  moon.src = 'canvas_moon.png';
+  earth.src = 'canvas_earth.png';
   setInterval(draw,100);
 }
 
@@ -119,7 +119,7 @@ function draw() {
 init();
 ```
 
-{{EmbedLiveSample("An_animated_solar_system", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}
+{{EmbedLiveSample("太陽系動畫", "310", "340")}}
 
 #### 時鐘動畫
 
@@ -235,7 +235,7 @@ function clock(){
 init();
 ```
 
-{{EmbedLiveSample("An_animated_clock", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}
+{{EmbedLiveSample("時鐘動畫", "180", "200")}}
 
 #### 循環景色
 

@@ -13,7 +13,7 @@ La propiedad {{ Cssxref("font") }} permite establecer de una sola vez los valore
 
 ## Sintaxis
 
-`font:` \[ <[font-style](es/CSS/font-style)> || <[font-variant](es/CSS/font-variant)> || <[font-weight](es/CSS/font-weight)> ]? <[font-size](es/CSS/font-size)> \[ / <[line-height](es/CSS/line-height)> ]? <[font-family](es/CSS/font-family)>
+`font:` \[ <[font-style](/es/CSS/font-style)> || <[font-variant](/es/CSS/font-variant)> || <[font-weight](/es/CSS/font-weight)> ]? <[font-size](/es/CSS/font-size)> \[ / <[line-height](/es/CSS/line-height)> ]? <[font-family](/es/CSS/font-family)>
 
 `font:` `caption` | `icon` | `menu` | `message-box` | `small-caption` | `status-bar` | `-moz-window` | `-moz-document` | `-moz-workspace` | `-moz-desktop` | `-moz-info` | `-moz-dialog` | `-moz-button` | `-moz-pull-down-menu` | `-moz-list` | `-moz-field`
 

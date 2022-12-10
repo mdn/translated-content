@@ -1,7 +1,6 @@
 ---
 title: Estilizando formularios HTML
 slug: Learn/Forms/Styling_web_forms
-translation_of: Learn/Forms/Styling_web_forms
 original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
 

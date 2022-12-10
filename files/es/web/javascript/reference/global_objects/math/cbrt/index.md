@@ -1,7 +1,6 @@
 ---
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/cbrt
 ---
 
@@ -65,9 +64,7 @@ Math.cbrt(2);  // 1.2599210498948732
 
 ## Especificaciones
 
-| Especificación                                                           |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.cbrt', 'Math.cbrt')}} |
+{{Specifications}}
 
 ## Compatibilidad
 

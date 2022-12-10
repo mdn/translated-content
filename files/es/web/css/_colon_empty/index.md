@@ -3,9 +3,11 @@ title: ':empty'
 slug: Web/CSS/:empty
 ---
 
-{{ CSSRef() }}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:empty`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco). Los comentarios o las instrucciones de procesamiento no afectan si un elemento se considera vacío.
+{{ CSSRef() }}
 
-> **Nota:** En {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} la pseudo-clase `:empty` fue modificada para actuar como {{CSSxRef(":-moz-only-whitespace")}}, pero ningún navegador actualmente suporta aún esto.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:empty`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento que no tenga hijos. Los hijos pueden ser nodos de elemento o texto (incluido el espacio en blanco). Los comentarios o las instrucciones de procesamiento no afectan si un elemento se considera vacío.
+
+> **Nota:** En [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) la pseudo-clase `:empty` fue modificada para actuar como {{CSSxRef(":-moz-only-whitespace")}}, pero ningún navegador actualmente suporta aún esto.
 
 ```css
 /* Selecciona cualquier <div> que no contenga contenido */

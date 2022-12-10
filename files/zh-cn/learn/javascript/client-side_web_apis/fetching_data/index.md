@@ -33,7 +33,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 最初加载页面很简单 -- 你为网站发送一个请求到服务器，只要没有出错你将会获取资源并显示网页到你的电脑上。
 
-![A basic representation of a web site architecture](https://mdn.mozillademos.org/files/6475/web-site-architechture@2x.png)
+![A basic representation of a web site architecture](web-site-architechture@2x.png)
 
 这个模型的问题是当你想更新网页的任何部分，例如显示一套新的产品或者加载一个新的页面，你需要再一次加载整个页面。这是非常浪费的并且导致了差的用户体验尤其是现在的页面越来越大且越来越复杂。
 
@@ -45,7 +45,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 
 > **备注：** 在早期，这种通用技术被称为 Asynchronous JavaScript and XML**（Ajax），** 因为它倾向于使用{{domxref("XMLHttpRequest")}} 来请求 XML 数据。但通常不是这种情况 (你更有可能使用 `XMLHttpRequest` 或 Fetch 来请求 JSON), 但结果仍然是一样的，术语“Ajax”仍然常用于描述这种技术。
 
-![A simple modern architecture for web sites](https://mdn.mozillademos.org/files/6477/moderne-web-site-architechture@2x.png)
+![A simple modern architecture for web sites](moderne-web-site-architechture@2x.png)
 
 Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不仅仅是让浏览器重新加载整个页面。让我们来思考这个意义：
 
@@ -59,7 +59,7 @@ Ajax 模型包括使用 Web API 作为代理来更智能地请求数据，而不
 
 为了进一步提高速度，有些网站还会在首次请求时将资产和数据存储在用户的计算机上，这意味着在后续访问中，他们将使用本地版本，而不是在首次加载页面时下载新副本。内容仅在更新后从服务器重新加载。
 
-![A basic web app data flow architecture](https://mdn.mozillademos.org/files/6479/web-app-architecture@2x.png)
+![A basic web app data flow architecture](web-app-architecture@2x.png)
 
 本文不会涉及这种存储技术。我们稍后会在模块中讨论它。
 

@@ -1,13 +1,6 @@
 ---
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
-tags:
-  - JavaScript
-  - Matemática
-  - Math
-  - Method
-  - Trigonometría
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/atan
 ---
 

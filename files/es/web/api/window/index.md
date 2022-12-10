@@ -1,12 +1,6 @@
 ---
 title: window
 slug: Web/API/Window
-tags:
-  - API
-  - DOM
-  - Window
-  - páginas_a_traducir
-translation_of: Web/API/Window
 ---
 
 {{APIRef}}
@@ -50,7 +44,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : An {{domxref("OfflineResourceList")}} object providing access to the offline resources for the window.
 - {{domxref("Window.closed")}} {{Non-standard_inline}}{{readOnlyInline}}
   - : Esta propiedad indica si la actual ventana esta cerrada o abierta.
-- [`Window.Components`](/en-US/docs/Components_object) {{Non-standard_inline}}
+- [`Window.Components`](/es/docs/Components_object) {{Non-standard_inline}}
   - : El punto de acceso a muchas propiedades [XPCOM](/es/docs/XPCOM). Algunas propiedades, ej. [classes](/es/docs/Components.classes), son disponibles solamente a codigo suficientemente privilegiado. **El codigo Web no deberia usar esta propiedad.**
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Retorna una referencia al objeto de la consola proveyendo acceso a la consola debugger del navegador.

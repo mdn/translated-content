@@ -1,12 +1,6 @@
 ---
 title: Boolean() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
-tags:
-  - Booleano
-  - Constructor
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Boolean/Boolean
 ---
 
@@ -54,9 +48,7 @@ var bObjProto = new Boolean({});
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-boolean-constructor', 'Boolean constructor')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

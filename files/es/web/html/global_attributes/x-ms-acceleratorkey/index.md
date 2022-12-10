@@ -1,7 +1,6 @@
 ---
 title: x-ms-acceleratorkey
 slug: Web/HTML/Global_attributes/x-ms-acceleratorkey
-translation_of: Web/HTML/Global_attributes/x-ms-acceleratorkey
 original_slug: Web/HTML/Atributos_Globales/x-ms-acceleratorkey
 ---
 

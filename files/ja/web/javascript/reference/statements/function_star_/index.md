@@ -217,9 +217,7 @@ for(let power of powers(2)){
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

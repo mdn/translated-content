@@ -47,11 +47,9 @@ false + false // 0
 'fut' + false // "futfalse"
 ```
 
-## Especificación
+## Especificaciones
 
-| Specification                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-addition-operator-plus', 'Addition operator')}} |
+{{Specifications}}
 
 ## Compatibilidad de Explorador
 

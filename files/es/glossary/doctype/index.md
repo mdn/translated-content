@@ -1,7 +1,6 @@
 ---
 title: Doctype
 slug: Glossary/Doctype
-translation_of: Glossary/Doctype
 ---
 
 `<!DOCTYPE>` informa al {{Glossary("navegador")}} qué versión de {{Glossary("HTML")}} (o {{glossary("XML")}}) se usó para escribir el documento. Doctype es una declaración no una {{Glossary("etiqueta")}}. Además, podemos referirnos a ella como "document type declaration" o por las siglas "DTD".

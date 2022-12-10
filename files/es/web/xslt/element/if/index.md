@@ -1,10 +1,6 @@
 ---
 title: if
 slug: Web/XSLT/Element/if
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/if
 original_slug: Web/XSLT/if
 ---
 

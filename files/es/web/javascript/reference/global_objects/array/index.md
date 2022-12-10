@@ -1,13 +1,6 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - JavaScript
-  - Matriz unidimensional
-  - Referencia
-  - Vector
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array
 ---
 
@@ -414,9 +407,7 @@ da como resultado:
 
 ## Especificaciones
 
-| Especificación                                                           | Publicación inicial |
-| ------------------------------------------------------------------------ | ------------------- |
-| {{SpecName('ESDraft', '#sec-array-objects', 'Array')}} | ECMAScript 1        |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

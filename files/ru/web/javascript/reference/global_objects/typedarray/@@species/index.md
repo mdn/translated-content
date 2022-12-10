@@ -31,7 +31,7 @@ Float64Array
 
 ## Описание
 
-Свойство **`species` **возвращает конструктор "по умолчанию" для объектов [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects). Конструкторы подкласса могут его переопределить.
+Свойство **`species`** возвращает конструктор "по умолчанию" для объектов [типизированного массива](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects). Конструкторы подкласса могут его переопределить.
 
 ## Примеры
 

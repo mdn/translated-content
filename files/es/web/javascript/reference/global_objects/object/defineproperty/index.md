@@ -1,13 +1,6 @@
 ---
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Método(2)
-  - Objeto
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/defineProperty
 ---
 
@@ -71,7 +64,7 @@ Un descriptor de acceso además tiene las siguientes claves opcionales:
   - : Una función que recibe como único argumento el nuevo valor que se desea asignar a la propiedad y que devuelve el valor que se almacenará finalmente en el objeto.
     **Defaults to {{jsxref("Objetos_Globales/undefined", "undefined")}}.**
 
-Hay que tener en cuenta que estas opciones también pueden heredarse; es decir, las opciones de la propiedad se han podido establecer en el prototipo de una clase de la que hereda el objeto. De modo que si queremos asegurarnos unos valores por defecto tenemos tres opciones: fijar el {{jsxref("Object.prototype")}} con {{jsxref("Object.freeze")}}, definir todas las opciones explicitamente, o establecer a {{jsxref("Objetos_Globales/null", "null")}} la propiedad {{jsxref("Object.prototype.__proto__", "__proto__")}}.
+Hay que tener en cuenta que estas opciones también pueden heredarse; es decir, las opciones de la propiedad se han podido establecer en el prototipo de una clase de la que hereda el objeto. De modo que si queremos asegurarnos unos valores por defecto tenemos tres opciones: fijar el {{jsxref("Object.prototype")}} con {{jsxref("Object.freeze")}}, definir todas las opciones explicitamente, o establecer a {{jsxref("Objetos_Globales/null", "null")}} la propiedad [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto).
 
 ```js
 // Usando __proto__

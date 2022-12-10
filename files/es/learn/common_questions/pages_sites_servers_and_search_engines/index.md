@@ -1,8 +1,7 @@
 ---
-title: ¿Cuál es la diferencia entre la página web, el sitio web, el servidor web y el
-  motor de búsqueda?
+title: ¿Cuál es la diferencia entre la página web, el sitio web, el servidor web
+  y el motor de búsqueda?
 slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
-translation_of: Learn/Common_questions/Pages_sites_servers_and_search_engines
 ---
 
 En este artículo se describen varios conceptos referidos a la web: Páginas web, sitios web, servidores web, y motores de búsqueda. Estos términos con frecuencia son confundidos por recién llegados a la web, o son incorrectamente usados. ¡Vamos a aprender qué significa cada uno!
@@ -56,7 +55,7 @@ Vamos a comparar la biblioteca con un servidor web:
 - Los libros en cada sección son como páginas web. Un sitio web puede tener varias páginas web, por ejemplo, la sección de Ciencias (el sitio web) tendrá libros sobre calor, sonido, termodinámica, estadísticas, etc. (las páginas web). Cada una de las páginas web puede ser encontrada en una ubicación única (URL).
 - El índice de búsqueda es como el motor de búsqueda. Cada libro tiene su propia ubicación única en la biblioteca (dos libros no se pueden mantener en el mismo lugar) que se especifica mediante el número de catálogo.
 
-_No esta disponible aprendizaje activo aun. [Por favor, considere la posibilidad de contribuir](/en-US/docs/MDN/Getting_started)._
+_No esta disponible aprendizaje activo aun. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Getting_started)._
 
 ## Profundizando
 
@@ -64,7 +63,7 @@ Entonces, vamos a profundizar en cómo estos cuatro términos serán relacionado
 
 ### Página web
 
-Una **página web** es un simple documento que puede ser mostrado por un {{Glossary("browser")}}. Estos documentos están escritos en lenguaje {{Glossary("HTML")}} (el que veremos en más detalle en [otros artículos](/en-US/docs/Web/HTML)). Una página web puede incluir una variedad de diferentes tipos de recursos, tales como:
+Una **página web** es un simple documento que puede ser mostrado por un {{Glossary("browser")}}. Estos documentos están escritos en lenguaje {{Glossary("HTML")}} (el que veremos en más detalle en [otros artículos](/es/docs/Web/HTML)). Una página web puede incluir una variedad de diferentes tipos de recursos, tales como:
 
 - _información de estilos_ — para controlar la apariencia de una página
 - _scripts_ — que agrega interactividad a la página
@@ -74,13 +73,13 @@ Una **página web** es un simple documento que puede ser mostrado por un {{Gloss
 
 Todas las páginas web disponibles en la red son accesibles mediante una dirección única. Para acceder a una página, simplemente escribe su direcciones en la barra de búsqueda de tu navegador:
 
-![Example of a web page address in the browser address bar](https://mdn.mozillademos.org/files/8529/web-page.jpg)
+![Example of a web page address in the browser address bar](web-page.jpg)
 
 Un _sitio web_ es una colección de páginas web vinculadas (más sus recursos asociados) que comparten un único nombre de dominio. Cada página web de un sitio web determinado proporciona enlaces explícitos —habitualmente en forma de porciones del texto en que se puede hacer clic— que permiten al usuario moverse de una página del sitio a otra.
 
 Para acceder a un sitio web, escribe su nombre de dominio en la barra de direcciones de tu buscador, y él te mostrará la página principal del sitio web, o _homepage_ (informalmente denominada "el home"):
 
-![Example of a web site domain name in the browser address bar](https://mdn.mozillademos.org/files/8531/web-site.jpg)
+![Example of a web site domain name in the browser address bar](web-site.jpg)
 
 _Página web_ y _sitio web_ son especialmente fáciles de confundir cuando un _sitio_ contiene una única _página web_ Tales sitios son denominados _sitios de una sola página._
 
@@ -100,7 +99,7 @@ Muchos principiantes en la web confunden motores de búsqueda con navegadores. A
 
 Aquí hay una instancia de Firefox que muestra un cuadro de búsqueda de Google como su página de inicio predeterminada:
 
-![Example of Firefox nightly displaying a custom Google page as default](https://mdn.mozillademos.org/files/8533/search-engine.jpg)
+![Example of Firefox nightly displaying a custom Google page as default](search-engine.jpg)
 
 ## Próximos pasos
 

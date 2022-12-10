@@ -212,9 +212,114 @@ The following is a shim to provide support to non-supporting browsers:
 
 ### Properties
 
-{{page('en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Properties')}}
+- {{jsxref("String.prototype.length")}}
+  - : Reflects the `length` of the string. Read-only.
 
-{{page('en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype', 'Methods')}}
+### Methods
+
+- {{jsxref("String.prototype.at()")}}
+  - : Returns the character (exactly one UTF-16 code unit) at the specified `index`. Accepts negative integers, which count back from the last string character.
+- {{jsxref("String.prototype.charAt()")}}
+  - : Returns the character (exactly one UTF-16 code unit) at the specified
+    `index`.
+- {{jsxref("String.prototype.charCodeAt()")}}
+  - : Returns a number that is the UTF-16 code unit value at the given
+    `index`.
+- {{jsxref("String.prototype.codePointAt()")}}
+  - : Returns a nonnegative integer Number that is the code point value of the UTF-16
+    encoded code point starting at the specified `pos`.
+- {{jsxref("String.prototype.concat()")}}
+  - : Combines the text of two (or more) strings and returns a new string.
+- {{jsxref("String.prototype.includes()")}}
+  - : Determines whether the calling string contains `searchString`.
+- {{jsxref("String.prototype.endsWith()")}}
+  - : Determines whether a string ends with the characters of the string
+    `searchString`.
+- {{jsxref("String.prototype.indexOf()")}}
+  - : Returns the index within the calling {{jsxref("String")}} object of the first
+    occurrence of `searchValue`, or `-1` if not found.
+- {{jsxref("String.prototype.lastIndexOf()")}}
+  - : Returns the index within the calling {{jsxref("String")}} object of the last
+    occurrence of `searchValue`, or `-1` if not found.
+- {{jsxref("String.prototype.localeCompare()")}}
+  - : Returns a number indicating whether the reference string
+    `compareString` comes before, after, or is equivalent to the
+    given string in sort order.
+- {{jsxref("String.prototype.match()")}}
+  - : Used to match regular expression `regexp` against a string.
+- {{jsxref("String.prototype.matchAll()")}}
+  - : Returns an iterator of all `regexp`'s matches.
+- {{jsxref("String.prototype.normalize()")}}
+  - : Returns the Unicode Normalization Form of the calling string value.
+- {{jsxref("String.prototype.padEnd()")}}
+  - : Pads the current string from the end with a given string and returns a new string of
+    the length `targetLength`.
+- {{jsxref("String.prototype.padStart()")}}
+  - : Pads the current string from the start with a given string and returns a new string
+    of the length `targetLength`.
+- {{jsxref("String.prototype.repeat()")}}
+  - : Returns a string consisting of the elements of the object repeated
+    `count` times.
+- {{jsxref("String.prototype.replace()")}}
+  - : Used to replace occurrences of `searchFor` using
+    `replaceWith`. `searchFor` may be a string
+    or Regular Expression, and `replaceWith` may be a string or
+    function.
+- {{jsxref("String.prototype.replaceAll()")}}
+  - : Used to replace all occurrences of `searchFor` using
+    `replaceWith`. `searchFor` may be a string
+    or Regular Expression, and `replaceWith` may be a string or
+    function.
+- {{jsxref("String.prototype.search()")}}
+  - : Search for a match between a regular expression `regexp` and
+    the calling string.
+- {{jsxref("String.prototype.slice()")}}
+  - : Extracts a section of a string and returns a new string.
+- {{jsxref("String.prototype.split()")}}
+  - : Returns an array of strings populated by splitting the calling string at occurrences
+    of the substring `sep`.
+- {{jsxref("String.prototype.startsWith()")}}
+  - : Determines whether the calling string begins with the characters of string
+    `searchString`.
+- {{jsxref("String.prototype.substring()")}}
+  - : Returns a new string containing characters of the calling string from (or between)
+    the specified index (or indices).
+- {{jsxref("String.prototype.toLocaleLowerCase()")}}
+
+  - : The characters within a string are converted to lowercase while respecting the
+    current locale.
+
+    For most languages, this will return the same as
+    {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
+
+- {{jsxref("String.prototype.toLocaleUpperCase()",
+    "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
+
+  - : The characters within a string are converted to uppercase while respecting the
+    current locale.
+
+    For most languages, this will return the same as
+    {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}.
+
+- {{jsxref("String.prototype.toLowerCase()")}}
+  - : Returns the calling string value converted to lowercase.
+- {{jsxref("String.prototype.toString()")}}
+  - : Returns a string representing the specified object. Overrides the
+    {{jsxref("Object.prototype.toString()")}} method.
+- {{jsxref("String.prototype.toUpperCase()")}}
+  - : Returns the calling string value converted to uppercase.
+- {{jsxref("String.prototype.trim()")}}
+  - : Trims whitespace from the beginning and end of the string.
+- {{jsxref("String.prototype.trimStart()")}}
+  - : Trims whitespace from the beginning of the string.
+- {{jsxref("String.prototype.trimEnd()")}}
+  - : Trims whitespace from the end of the string.
+- {{jsxref("String.prototype.valueOf()")}}
+  - : Returns the primitive value of the specified object. Overrides the
+    {{jsxref("Object.prototype.valueOf()")}} method.
+- {{jsxref("String.prototype.@@iterator()", "String.prototype[@@iterator]()")}}
+  - : Returns a new iterator object that iterates over the code points of a String value,
+    returning each code point as a String value.
 
 ## Examples
 

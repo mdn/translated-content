@@ -1,11 +1,6 @@
 ---
 title: acronym
 slug: Web/HTML/Element/acronym
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/acronym
 original_slug: Web/HTML/Elemento/acronym
 ---
 ### Definición
@@ -15,11 +10,11 @@ original_slug: Web/HTML/Elemento/acronym
 - Es el encargado para marcar estas formas abreviadas (modem, AJAX...). Además, gracias al atributo `title` podemos indicar la versión extendida del término.
   - : **Sus etiquetas son**: \<abbr> y \</abbr> (ambas obligatorias).
 
-    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
 
-    **Puede contener**: cero o más elementos [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: cero o más elementos [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 #### Atributos
 
@@ -236,7 +231,7 @@ En Firefox se resalta con un "subrayado" punteado fino. vea el ejemplo:
 
 ```
 
-Cabe destacar que [abbr](es/HTML/Elemento/abbr) y [acronym](es/HTML/Elemento/acronym) comparten estilo predeterminado.
+Cabe destacar que [abbr](/es/HTML/Elemento/abbr) y [acronym](/es/HTML/Elemento/acronym) comparten estilo predeterminado.
 
 ### Soporte
 
@@ -244,7 +239,7 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ### Notas
 
-El tema de las abreviaturas y acrónimos puede ser un tanto lioso. En castellano a veces cuesta saber si tal 'palabra' es una [abreviatura](http://es.wikipedia.org/wiki/Abreviatura), un [acrónimo](http://es.wikipedia.org/wiki/Acr%C3%B3nimo) una sigla o un símbolo. Para complicarlo un poco más, resulta que el estándar html está en inglés y parece ser que las gramáticas castellana e inglesa no definen exactamente igual conceptos como [abreviatura](es/HTML/Elemento/abbr) o [acrónimo](es/HTML/Elemento/acronym).
+El tema de las abreviaturas y acrónimos puede ser un tanto lioso. En castellano a veces cuesta saber si tal 'palabra' es una [abreviatura](http://es.wikipedia.org/wiki/Abreviatura), un [acrónimo](http://es.wikipedia.org/wiki/Acr%C3%B3nimo) una sigla o un símbolo. Para complicarlo un poco más, resulta que el estándar html está en inglés y parece ser que las gramáticas castellana e inglesa no definen exactamente igual conceptos como [abreviatura](/es/HTML/Elemento/abbr) o [acrónimo](/es/HTML/Elemento/acronym).
 
 ### Referencia
 

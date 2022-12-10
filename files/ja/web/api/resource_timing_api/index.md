@@ -53,7 +53,7 @@ The {{domxref("PerformanceResourceTiming")}} interface's {{domxref("PerformanceR
 
 ## 実装状況
 
-As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/Web/API/PerformanceResourceTiming#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
+As shown in the {{domxref("PerformanceResourceTiming")}} interface's [Browser Compatibility](/ja/docs/Web/API/PerformanceResourceTiming#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers. However, note that some properties have little to no implementation so see each property's "Browser compatibility" section for more specific interoperability data.
 
 To test your browser's support for these interfaces, run the [`perf-api-support`](https://mdn.github.io/dom-examples/performance-apis/perf-api-support.html) application.
 

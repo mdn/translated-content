@@ -1,11 +1,6 @@
 ---
 title: meta
 slug: Web/HTML/Element/meta
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/meta
 original_slug: Web/HTML/Elemento/meta
 ---
 
@@ -14,13 +9,13 @@ original_slug: Web/HTML/Elemento/meta
 - **meta** de "metainformation" - metainformación. Sirve para aportar información sobre el documento..
   - : **Sus etiquetas son**: `<meta>` (solo tiene una).
   
-    **Está definido como**: Elemento [de cabecera](es/HTML/Elemento/Tipos_de_elementos#de_cabecera).
+    **Está definido como**: Elemento [de cabecera](/es/HTML/Elemento/Tipos_de_elementos#de_cabecera).
 
     **Crea una caja**: No.
 
     **Puede contener**: Nada.
 
-    **Puede ser contenido por**: Elementos [head](es/HTML/Elemento/head)
+    **Puede ser contenido por**: Elementos [head](/es/HTML/Elemento/head)
 
 #### Atributos
 

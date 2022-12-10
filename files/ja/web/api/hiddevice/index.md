@@ -24,7 +24,7 @@ l10n:
 - {{domxref("HIDDevice.productName")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : この HID デバイスの製品名の文字列を返します。
 - {{domxref("HIDDevice.collections")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - :この HID デバイスのレポート形式の配列を返します。
+  - : この HID デバイスのレポート形式の配列を返します。
 
 ### イベント
 

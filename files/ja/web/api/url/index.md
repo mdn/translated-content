@@ -99,10 +99,7 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                         | 備考                                                                       |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------------------------------------------------------------- |
-| {{SpecName('File API', '#creating-revoking', 'URL')}} | {{Spec2('File API')}} | 静的メソッドの `URL.createObjectURL()` と `URL.revokeObjectURL()` の追加。 |
-| {{SpecName('URL', '#api', 'API')}}                             | {{Spec2('URL')}}         | 初回定義 (`URLUtils` を実装)。                                             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

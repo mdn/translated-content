@@ -20,9 +20,7 @@ slug: Web/API/SyncManager
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                                 | コメント            |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------- |
-| {{SpecName('Background Sync','#sync-manager-interface','SyncManager')}} | {{Spec2('Background Sync')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザの互換性
 

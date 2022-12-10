@@ -1,7 +1,6 @@
 ---
 title: <input type="checkbox">
 slug: Web/HTML/Element/input/checkbox
-translation_of: Web/HTML/Element/input/checkbox
 original_slug: Web/HTML/Elemento/input/checkbox
 ---
 

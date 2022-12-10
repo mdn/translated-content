@@ -1,15 +1,6 @@
 ---
 title: Array.prototype.findIndex()
 slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
-tags:
-  - Array
-  - ECMAScript 2015
-  - JavaScript
-  - Protitipo
-  - Referencia
-  - metodo
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/findIndex
 ---
 
@@ -154,9 +145,7 @@ Si necesita soporte para motores de JavaScript obsoletos que no soportan [`Objec
 
 ## Especificaciones
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-array.prototype.findindex', 'Array.prototype.findIndex')}} |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

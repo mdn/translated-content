@@ -1,13 +1,6 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-tags:
-  - JavaScript
-  - Objeto
-  - Prototipo
-  - Prototype
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/__defineGetter__
 ---
 
@@ -72,11 +65,11 @@ console.log(o.gimmeFive); // 5
 
 ## Mira también
 
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - {{jsxref("Operators/get", "get")}} operator
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
+- [`Object.prototype.__lookupGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+- [`Object.prototype.__lookupSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
 - [JS Guide: Defining Getters and Setters](/es/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
 - [\[Blog Post\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](http://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/)
 - {{bug(647423)}}

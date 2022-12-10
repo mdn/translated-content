@@ -30,9 +30,7 @@ console.log(gp.timestamp);
 
 ## 仕様書
 
-| 仕様                                                                                         | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Gamepad", "#dom-gamepad-timestamp", "Gamepad.timestamp")}} | {{Spec2("Gamepad")}} | 初版     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,12 +1,6 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-tags:
-  - AJAX
-  - Todas_las_Categorías
-  - XMLHttpRequest
-  - páginas_a_traducir
-translation_of: Web/API/XMLHttpRequest
 ---
 
 `XMLHttpRequest` es un objeto [JavaScript](/en/JavaScript) que fue diseñado por Microsoft y adoptado por Mozilla, Apple y Google. Actualmente es un [estándar de la W3C](http://www.w3.org/TR/XMLHttpRequest/). Proporciona una forma fácil de obtener información de una URL sin tener que recargar la página completa. Una página web puede actualizar sólo una parte de la página sin interrumpir lo que el usuario está haciendo. `XMLHttpRequest` es ampliamente usado en la programación AJAX.
@@ -48,7 +42,7 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
     En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.
 
 - `mozResponseArrayBuffer` {{ Non-standard_inline() }}
-  : [`ArrayBuffer`](/en-US/JavaScript_typed_arrays/ArrayBuffer)
+  : [`ArrayBuffer`](/es/JavaScript_typed_arrays/ArrayBuffer)
   - : La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. **Sólo lectura.**
 - `multipart`: `booleano`
 
@@ -81,7 +75,7 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
   - : La respuesta al pedido como texto, o `null` si el pedido no fue exitoso o todavía no se envió. **Sólo lectura.**
 - `responseXML`: `nsIDOMDocument`
 
-  - : La respuesta al pedido como un objeto DOM[`Document`](/en-US/DOM/document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
+  - : La respuesta al pedido como un objeto DOM[`Document`](/es/DOM/document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
 
     > **Nota:** Si el servidor no aplica el encabezado de tipo de contenido `text/xml`, puedes usar `overrideMimeType()` para forzar a `XMLHttpRequest` a analizarlo como XML igualmente.
 

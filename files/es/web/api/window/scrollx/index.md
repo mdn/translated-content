@@ -1,7 +1,6 @@
 ---
 title: Window.scrollX
 slug: Web/API/Window/scrollX
-translation_of: Web/API/Window/scrollX
 ---
 
 {{ APIRef() }}

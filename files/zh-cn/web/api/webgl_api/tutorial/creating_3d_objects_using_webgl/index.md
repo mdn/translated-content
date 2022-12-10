@@ -3,7 +3,7 @@ title: Creating 3D objects using WebGL
 slug: Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL")}}
 
 现在让我们给之前的正方形添加五个面从而可以创建一个三维的立方体。最简单的方式就是通过调用方法 {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} 使用顶点数组列表来替换之前的通过方法{{domxref("WebGLRenderingContext.drawArrays()", "gl.drawArrays()")}} 直接使用顶点数组。而顶点数组列表里保存着将会被引用到一个个独立的顶点。
 

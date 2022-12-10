@@ -1,15 +1,6 @@
 ---
 title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-tags:
-  - Date
-  - Fecha
-  - Internacionalizacion
-  - JavaScript
-  - Method
-  - Prototype
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toLocaleTimeString
 ---
 
@@ -126,10 +117,7 @@ Cuando se da formato a un gran número de fechas, es mejor crear un objeto {{jsx
 
 ## Especificaciones
 
-| Specification                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}}         |
-| {{SpecName('ES Int Draft', '#sup-date.prototype.tolocaletimestring', 'Date.prototype.toLocaleTimeString')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

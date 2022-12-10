@@ -1,9 +1,6 @@
 ---
 title: getRangeAt
 slug: Web/API/Selection/getRangeAt
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/getRangeAt
 ---
 
 {{ ApiRef("DOM") }}
@@ -21,12 +18,12 @@ range = sel.getRangeAt(index)
 ### Parámetros
 
 - _`range`_
-  - : El objeto [range](es/DOM/range) (rango) que será devuelto.
+  - : El objeto [range](/es/DOM/range) (rango) que será devuelto.
 
 <!---->
 
 - _`index`_
-  - : El exponente (basado en cero) del rango a devolver. Un número negativo o un número mayor o igual a [rangeCount](es/DOM/Selection/rangeCount) provocará un error.
+  - : El exponente (basado en cero) del rango a devolver. Un número negativo o un número mayor o igual a [rangeCount](/es/DOM/Selection/rangeCount) provocará un error.
 
 ### Ejemplos
 

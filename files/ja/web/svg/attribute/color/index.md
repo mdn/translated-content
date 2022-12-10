@@ -54,31 +54,7 @@ html, body, svg {
 
 ## 仕様書
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">仕様書</th>
-      <th scope="col">状態</th>
-      <th scope="col">備考</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName("SVG2", "painting.html#ColorProperty", "color")}}
-      </td>
-      <td>{{Spec2("SVG2")}}</td>
-      <td>適用先の要素の制約を削除。</td>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("SVG1.1", "color.html#ColorProperty", "color")}}
-      </td>
-      <td>{{Spec2("SVG1.1")}}</td>
-      <td>初回定義</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## ブラウザーの互換性
 

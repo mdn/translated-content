@@ -56,7 +56,7 @@ Quando estiver escrevendo qualquer documento é importante conhecer o quanto fal
 
 ### Seções, parágrafos e novas linhas
 
-Use os níveis de cabeçalho em ordem decrescente na hierarquia: {{HTMLElement("h2")}} depois {{HTMLElement("h3")}} depois {{HTMLElement("h4")}}, sem pular níveis. {{HTMLElement("h2")}} é o maior nível permitido, pois {{HTMLElement("h1")}} está reservado para o título da página. Se perceber que precisará de mais de 3 ou 4 níveis de cabeçalho, considere fragmentar seu artigo em artigos menores, ou colocando uma landing page, linkando estes com o {{TemplateLink("Next")}}, {{TemplateLink("Previous")}}, e {{TemplateLink("PreviousNext")}} macros.
+Use os níveis de cabeçalho em ordem decrescente na hierarquia: {{HTMLElement("h2")}} depois {{HTMLElement("h3")}} depois {{HTMLElement("h4")}}, sem pular níveis. {{HTMLElement("h2")}} é o maior nível permitido, pois {{HTMLElement("h1")}} está reservado para o título da página. Se perceber que precisará de mais de 3 ou 4 níveis de cabeçalho, considere fragmentar seu artigo em artigos menores, ou colocando uma landing page, linkando estes com o [Next](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs), [Previous](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs), e [PreviousNext](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) macros.
 
 O Enter (ou Return) do seu teclado inicia um novo parágrafo. Para inserir uma nova linha sem espaço, faça Shift + Enter.
 
@@ -111,7 +111,7 @@ Method names should be followed by a pair of parentheses: `doSomethingUseful()`.
 
 #### Syntax highlighting
 
-![Screenshot of the "syntax highlighting" menu.](https://mdn.mozillademos.org/files/7857/syntax-highlighting-menu.png)Entire lines (or multiple lines) of code should be formatted using syntax highlighting rather than the {{HTMLElement("code")}} element. Click the "pre" button in the toolbar to create the preformatted content box in which you'll then write your code. Then, with the text entry cursor inside the code box, select the appropriate language from the language list button to the right of the "pre" button, as seen in the screenshot to the right. The following example shows text with JavaScript formatting:
+![Screenshot of the "syntax highlighting" menu.](syntax-highlighting-menu.png)Entire lines (or multiple lines) of code should be formatted using syntax highlighting rather than the {{HTMLElement("code")}} element. Click the "pre" button in the toolbar to create the preformatted content box in which you'll then write your code. Then, with the text entry cursor inside the code box, select the appropriate language from the language list button to the right of the "pre" button, as seen in the screenshot to the right. The following example shows text with JavaScript formatting:
 
 ```js
 for (var i = 0, j = 9; i <= 9; i++, j--)
@@ -364,7 +364,7 @@ Tags provide meta information about a page and/or indicate that a page has speci
 
 The tagging interface lives at the bottom of a page while you're in edit mode, and looks something like this:
 
-![Screenshot of the UX for adding and removing tags on MDN](https://mdn.mozillademos.org/files/7859/tag-interface.png)
+![Screenshot of the UX for adding and removing tags on MDN](tag-interface.png)
 
 To add a tag, click in the edit box at the end of the tag list and type the tag name you wish to add. Tags will autocomplete as you type. Press enter (or return) to submit the new tag. Each article may have as many tags as needed. For example, an article about using JavaScript in AJAX programming might have both "JavaScript" and "AJAX" as tags.
 

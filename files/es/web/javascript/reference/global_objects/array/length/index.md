@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
-tags:
-  - Array
-  - JavaScript
-  - Propiedad
-  - Referencia
-  - Vector
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/length
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/length
 ---
 

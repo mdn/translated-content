@@ -1,9 +1,7 @@
 ---
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
-translation_of: Web/JavaScript/Reference/Global_Objects/Object
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object
-browser-compat: javascript.builtins.Object
 ---
 
 {{JSRef}}
@@ -84,19 +82,19 @@ No hay ningún método en un Objeto que sirva para borrar sus propiedades (como 
 
 - {{jsxref("Object.prototype.constructor")}}
   - : Especifica la función que crea el prototipo de un objeto.
-- {{jsxref("Object/proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__proto__)
   - : Apunta al objeto que fue usado como prototipo cuando el objeto fue instanciado.
 
 ## Métodos de instancia
 
-- {{jsxref("Object.prototype.__defineGetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
   - : Asocia una función a una propiedad que, cuando es accedida, ejecuta la función y retorna su valor de retorno.
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
   - : Asocia una función a una propiedad que, cuando es estipulada, ejecuta la función que modificará dicha propiedad.
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-  - : Devuelve la función asociada a la propiedad establecida por el método {{jsxref("Object.prototype.__defineGetter__()", "__defineGetter__()")}}.
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
-  - : Devuelve la función asociada a la propiedad establecida por el método {{jsxref("Object.prototype.__defineSetter__()", "__defineSetter__()")}}.
+- [`Object.prototype.__lookupGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : Devuelve la función asociada a la propiedad establecida por el método [`Object.prototype.__defineGetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__).
+- [`Object.prototype.__lookupSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : Devuelve la función asociada a la propiedad establecida por el método [`Object.prototype.__defineSetter__()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__).
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
   - : Devuelve un booleano que indica si el objeto contiene una propiedad determinada como una propiedad directa del objeto y que no haya sido heredada a través de la cadena de prototipos.
 - {{jsxref("Object.prototype.isPrototypeOf()")}}

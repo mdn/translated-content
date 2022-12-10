@@ -1,12 +1,6 @@
 ---
 title: ISP
 slug: Glossary/ISP
-tags:
-  - Glosario
-  - ISP
-  - Proveedor de servicios de Internet
-  - Web
-translation_of: Glossary/ISP
 ---
 
 Un ISP (del inglés _Internet Service Provider_, Proveedor de servicios de Internet) es una empresa (en su mayoría compañías telefónicas) que vende acceso a Internet y, a veces, correo electrónico, alojamiento de páginas web y voz sobre IP, ya sea mediante una conexión de marcación a través de una línea telefónica (antes más común), o a través de una conexión de banda ancha como un módem de cable o un servicio DSL.

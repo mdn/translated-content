@@ -1,15 +1,6 @@
 ---
 title: WebKit
 slug: Glossary/WebKit
-tags:
-  - Glosario
-  - HTML
-  - Intro
-  - LGPL
-  - Navegador
-  - Web
-  - WebKit
-translation_of: Glossary/WebKit
 ---
 
 _WebKit_ es un _framework_ (marco o interfaz) que proporciona páginas web "bien formadas" basadas es su lenguaje de marcado. El principal navegador que utiliza este framework es [Safari](/es/docs/Glossary/Apple_Safari), aunque también lo hacen muchos otros navegadores web para dispositivos móviles (debido a que WebKit es muy portable y customizable).
@@ -26,4 +17,4 @@ WebKit es una marca registrada de Apple, y es distribuido bajo la licencia BSD. 
 
 ### Referencia técnica
 
-- [WebKit CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_Extensions)
+- [WebKit CSS extensions](/es/docs/Web/CSS/Reference/Webkit_Extensions)

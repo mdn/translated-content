@@ -1,11 +1,6 @@
 ---
 title: id
 slug: Web/HTML/Global_attributes/id
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/id
 original_slug: Web/HTML/Atributos_Globales/id
 ---
 {{HTMLSidebar("Global_attributes")}}

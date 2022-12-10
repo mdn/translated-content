@@ -1,10 +1,6 @@
 ---
 title: Solución de problemas comunes de HTML
 slug: Learn/HTML/Howto
-tags:
-  - CodificacióndeSecuenciadeComandos
-  - HTML
-translation_of: Learn/HTML/Howto
 original_slug: Learn/HTML/como
 ---
 

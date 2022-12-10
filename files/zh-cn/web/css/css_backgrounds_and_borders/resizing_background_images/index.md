@@ -23,7 +23,7 @@ Let's consider a large image, a 2982x2808 Firefox logo image. We want (for some 
 
 ```css
 .tiledBackground {
-  background-image: url(https://mdn.mozillademos.org/files/8971/firefox_logo.png);
+  background-image: url(firefox_logo.png);
   background-size: 150px;
   width: 300px;
   height: 300px;
@@ -46,13 +46,13 @@ background-size: 300px 150px;
 
 The result looks like this:
 
-![](https://mdn.mozillademos.org/files/8967/ss2.png)
+![](ss2.png)
 
 ## Scaling an image up
 
 On the other end of the spectrum, you can scale an image up in the background. Here we scale a 32x32 pixel favicon to 300x300 pixels:
 
-![](https://mdn.mozillademos.org/files/8969/ss3.png)
+![](ss3.png)
 
 ```css
 .square2 {
@@ -88,7 +88,7 @@ The `contain` value specifies that, regardless of the size of the containing box
 
 ```css
 .bgSizeContain {
-  background-image: url(https://mdn.mozillademos.org/files/8971/firefox_logo.png);
+  background-image: url(firefox_logo.png);
   background-size: contain;
   width: 160px;
   height: 160px;
@@ -119,7 +119,7 @@ The `cover` value specifies that the background image should be sized so that it
 
 ```css
 .bgSizeCover {
-  background-image: url(https://mdn.mozillademos.org/files/8971/firefox_logo.png);
+  background-image: url(firefox_logo.png);
   background-size: cover;
   width: 160px;
   height: 160px;

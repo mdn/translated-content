@@ -1,12 +1,6 @@
 ---
 title: Herramientas para desarrolladores de juegos
 slug: Games/Tools
-tags:
-  - NeedsContent
-  - NeedsTranslation
-  - aplicaciones
-  - juegos
-translation_of: Games/Tools
 original_slug: Games/Herramients
 ---
 

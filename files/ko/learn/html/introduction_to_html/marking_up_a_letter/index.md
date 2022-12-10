@@ -88,7 +88,7 @@ The head of the document:
 
 The following screenshot shows an example of what the letter might look like after being marked up.
 
-![Example](https://mdn.mozillademos.org/files/15811/Letter%20screengrab%202.png)
+![Example](letter_screengrab_2.png)
 
 ## 프로젝트
 

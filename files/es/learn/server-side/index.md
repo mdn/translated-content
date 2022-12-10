@@ -1,16 +1,6 @@
 ---
 title: Programación lado servidor
 slug: Learn/Server-side
-tags:
-  - Aprendizaje
-  - Aterrizaje
-  - Codificación de scripts
-  - Principiante
-  - Programación lado servidor
-  - Servidor
-  - Tema
-  - introducción
-translation_of: Learn/Server-side
 ---
 
 {{LearnSidebar}}

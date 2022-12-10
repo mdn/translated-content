@@ -1,11 +1,6 @@
 ---
 title: SCV
 slug: Glossary/SCM
-tags:
-  - CodingScripting
-  - Glosario
-  - SCV
-translation_of: Glossary/SCM
 original_slug: Glossary/SCV
 ---
 

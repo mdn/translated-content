@@ -1,11 +1,6 @@
 ---
 title: Java
 slug: Glossary/Java
-tags:
-  - Glosario
-  - Java
-  - Lenguaje de programación
-translation_of: Glossary/Java
 ---
 
 Java es un lenguaje de {{Glossary("computer programming", "programación")}} semi-compilado, {{glossary("OOP", "orientado a objetos")}} y portable.

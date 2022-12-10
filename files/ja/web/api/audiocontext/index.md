@@ -72,9 +72,7 @@ var finish = audioCtx.destination;
 
 ## 仕様
 
-| 仕様書                                                                               | 策定状況                             | コメント |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Web Audio API', '#AudioContext', 'AudioContext')}} | {{Spec2('Web Audio API')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

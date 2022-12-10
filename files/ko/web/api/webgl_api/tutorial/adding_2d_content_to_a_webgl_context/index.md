@@ -7,7 +7,7 @@ tags:
 translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}
 
 일단 성공적으로 [WebGL컨텍스트를 생성](/en/WebGL/Getting_started_with_WebGL)하면 그 안에 렌더링을 시작할 수 있습니다. 가장 간단히 해볼 수 있는 것은 텍스쳐가 없는 2D 객체를 렌더링 하는 것입니다. 한번 사각형을 그리는 코드를 작성하는 것으로 시작해봅시다.
 

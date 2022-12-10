@@ -47,10 +47,10 @@ genRandomNumbers = function getRandomNumbers() {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - The {{domxref("Window")}} global object

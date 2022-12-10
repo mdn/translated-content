@@ -1,13 +1,6 @@
 ---
 title: Identificador
 slug: Glossary/Identifier
-tags:
-  - Campartir
-  - CodingScripting
-  - Glosario
-  - Novato
-  - Principiante
-translation_of: Glossary/Identifier
 original_slug: Glossary/Identificador
 ---
 

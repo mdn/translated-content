@@ -56,9 +56,7 @@ function recordStream(stream) {
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{ SpecName('MediaStream Recording', '#errorevent-section', 'MediaRecorderErrorEvent.error') }} | {{ Spec2('MediaStream Recording') }} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

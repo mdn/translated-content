@@ -1,7 +1,6 @@
 ---
 title: Cómo funciona CSS
 slug: Learn/CSS/First_steps/How_CSS_works
-translation_of: Learn/CSS/First_steps/How_CSS_works
 original_slug: Learn/CSS/First_steps/Como_funciona_CSS
 ---
 
@@ -53,7 +52,7 @@ Cuando un navegador muestra un documento, ha de combinar el contenido con la inf
 
 El siguiente diagrama ofrece una visión sencilla de este proceso.
 
-![](https://mdn.mozillademos.org/files/11781/rendering.svg)
+![](rendering.svg)
 
 ## Acerca del DOM
 

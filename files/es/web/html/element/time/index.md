@@ -1,15 +1,6 @@
 ---
 title: time
 slug: Web/HTML/Element/time
-tags:
-  - Elemento
-  - Fecha
-  - HTML
-  - HTML5
-  - Hora
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/time
 original_slug: Web/HTML/Elemento/time
 ---
 
