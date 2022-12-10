@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/InternalError
 
 **`InternalError` 对象**表示出现在 JavaScript 引擎内部的错误。通常描述某种数量过多的情况，例如：
 
-- "too many switch cases"（过多`case`子句）；
+- "too many switch cases"（过多 `case` 子句）；
 - "too many parentheses in regular expression"（正则表达式中括号过多）；
 - "array initializer too large"（数组初始化器过大）；
 - "too much recursion"（递归过深）。
