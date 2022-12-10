@@ -8,7 +8,7 @@ translation_of: MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 original_slug: MDN/Contribute/Howto/Add_or_update_browser_compatibility_data
 ---
 
-{{MDNSidebar}}{{IncludeSubnav("/ru/docs/MDN")}}
+{{MDNSidebar}}
 
 Если вы знаете информацию о браузерной совместимости с веб-функциями — или вы хотите помочь и можете провести некоторые исследования или эксперименты — вы можете помочь обновить MDN [База данных о браузерной совместимости](https://github.com/mdn/browser-compat-data/) (BCD).
 

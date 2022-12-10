@@ -5,7 +5,7 @@ translation_of: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_lear
 original_slug: MDN/Contribute/Howto/Create_an_interactive_exercise_to_help_learning_the_web
 ---
 
-{{MDNSidebar}}{{IncludeSubnav("/en-US/docs/MDN")}}
+{{MDNSidebar}}
 
 При изучении веба, важно полагаться на активном обучающем контенте. Такой контент создан для помощи в изучении чего-либо проактивно. Это может быть упражнения, живые взламываемые примеры, задачи к исполнению, оценки и т.д. Вкратце, всё что может помочь кому-либо в активном понимании чего-либо.
 
