@@ -12,27 +12,27 @@ slug: Web/JavaScript/Reference/Global_Objects/InternalError
 - "array initializer too large"（数组初始化器过大）；
 - "too much recursion"（递归过深）。
 
-## 构造器
+## 构造函数
 
 - {{jsxref("InternalError/InternalError", "InternalError()")}} {{Non-standard_Inline}}
   - : 创建一个新的 `InternalError` 对象。
 
 ## 实例属性
 
-- {{jsxref("Error.prototype.message", "InternalError.prototype.message")}}
-  - : 错误信息。从 {{jsxref("Error")}} 继承。
-- {{jsxref("Error.prototype.name", "InternalError.prototype.name")}}
-  - : 错误名称。从 {{jsxref("Error")}} 继承。
-- {{jsxref("Error.prototype.cause", "InternalError.prototype.cause")}}
-  - : 错误原因。从 {{jsxref("Error")}} 继承。
-- {{jsxref("Error.prototype.fileName", "InternalError.prototype.fileName")}} {{Non-standard_Inline}}
-  - : 引起错误的文件路径。从 {{jsxref("Error")}} 继承。
-- {{jsxref("Error.prototype.lineNumber", "InternalError.prototype.lineNumber")}} {{Non-standard_Inline}}
-  - : 引起错误位置的行编号。从 {{jsxref("Error")}} 继承。
-- {{jsxref("Error.prototype.columnNumber", "InternalError.prototype.columnNumber")}} {{Non-standard_Inline}}
-  - : 引起错误位置的列编号。从 {{jsxref("Error")}} 继承。
-- {{jsxref("Error.prototype.stack", "InternalError.prototype.stack")}} {{Non-standard_Inline}}
-  - : 堆栈跟踪信息。从 {{jsxref("Error")}} 继承。
+- {{jsxref("Error.prototype.message")}} 
+  - : 错误消息。继承自 {{jsxref("Error")}}。 
+- {{jsxref("Error.prototype.name")}} 
+  - : 错误名称。继承自 {{jsxref("Error")}}。 
+- {{jsxref("Error.prototype.cause")}} 
+  - : 表示导致当前错误被抛出的原因。继承自 {{jsxref("Error")}}。 
+- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}} 
+  - : 引发此错误的文件的路径。继承自 {{jsxref("Error")}}。 
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}} 
+  - : 引发此错误的代码所在的文件的行号。继承自 {{jsxref("Error")}}。 
+- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}} 
+  - : 引发此错误的代码在文件中所在行的列号。继承自 {{jsxref("Error")}}。 
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}} 
+  - : 堆栈跟踪。继承自 {{jsxref("Error")}}。
 
 ## 示例
 
