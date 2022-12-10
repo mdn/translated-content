@@ -1,19 +1,6 @@
 ---
 title: 'Reason: Multiple CORS header ''Access-Control-Allow-Origin'' not allowed'
 slug: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
-tags:
-  - CORS
-  - CORSMultipleAllowOriginNotAllowed
-  - Cross-Origin
-  - HTTP
-  - HTTPS
-  - 메세지
-  - 문제해결
-  - 보안
-  - 에러
-  - 이유
-  - 콘솔
-translation_of: Web/HTTP/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 ---
 
 {{HTTPSidebar}}
@@ -30,7 +17,7 @@ Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed
 
 서버에 접근할 수 있는 경우 `Access-Control-Allow-Origin` 헤더의 오리진을 다시 보낼 수 있도록 구현을 변경할 수 있습니다. 브라우저는 하나의 오리진 또는 null 값만 허용하므로 오리진 목록을 보낼 수 없습니다.
 
-## See also
+## 같이보기
 
 - [CORS 에러](/en-US/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
