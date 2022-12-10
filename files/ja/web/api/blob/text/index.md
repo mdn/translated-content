@@ -1,47 +1,45 @@
 ---
 title: Blob.text()
 slug: Web/API/Blob/text
+l10n:
+  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
 ---
 
 {{APIRef("File API")}}
 
-{{domxref("Blob")}} インターフェイスの **`text()`** メソッドは {{jsxref("Promise")}} を返しますが、それは Blob の内容を含む文字列で解決され、UTF-8 として解釈されます。
+**`text()`** は {{domxref("Blob")}} インターフェイスのメソッドで、 {{jsxref("Promise")}} を返しますが、それは Blob の内容を含む文字列で解決され、 UTF-8 として解釈されます。
 
-## シンタックス
+## 構文
 
-```
-var textPromise = blob.text();
-
-blob.text().then(text => /* テキストに対して処理をする */);
-
-var text = await blob.text();
+```js-nolint
+text()
 ```
 
-### パラメータ
+### 引数
 
-なし
+なし。
 
-### 戻り値
+### 返値
 
-Blob のデータをテキスト文字列として含む {{domxref("USVString")}} で解決する Promise。データは*常に* UTF-8 形式であると推定されます。
+Blob のデータをテキスト文字列として含む文字列で解決するプロミス。データは*常に* UTF-8 形式であると推定されます。
 
 ## 使用上のメモ
 
-{{domxref("FileReader")}} メソッド {{domxref("FileReader.readAsText", "readAsText()")}} は、同様の機能を実行する古いメソッドです。これは、`Blob` と {{domxref("File")}} オブジェクトの両方で動作します。主な違いは 2 つあります。
+{{domxref("FileReader")}} の {{domxref("FileReader.readAsText", "readAsText()")}} メソッドは、同様の機能を実行する古いメソッドです。これは、`Blob` と {{domxref("File")}} オブジェクトの両方で動作します。主な違いは 2 つあります。
 
-- `Blob.text()` が Promise を返すのに対し、`FileReader.readAsText()` はイベントベースの API です
-- `Blob.text()` は常にエンコーディングとして UTF-8 を使用しますが、`FileReader.readAsText()` は Blob のタイプと指定されたエンコーディング名に応じて異なるエンコーディングを使用することができます
+- `Blob.text()` がプロミスを返すのに対し、 `FileReader.readAsText()` はイベントベースの API です
+- `Blob.text()` は常にエンコーディングとして UTF-8 を使用しますが、`FileReader.readAsText()` は Blob の種類と指定されたエンコーディング名に応じて、異なるエンコーディングを使用することができます
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザの互換性
+## ブラウザーの互換性
 
-{{Compat("api.Blob.text")}}
+{{Compat}}
 
-## あわせて参照
+## 関連情報
 
-- {{domxref("Body.text()")}}
-- [Streams API](/ja/docs/Web/API/Streams_API)
+- {{domxref("Response.text()")}}
+- [ストリーム API](/ja/docs/Web/API/Streams_API)
 - {{domxref("FileReader.readAsText()")}}

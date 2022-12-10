@@ -1,32 +1,42 @@
 ---
 title: 'FileReader: error イベント'
 slug: Web/API/FileReader/error_event
+l10n:
+  sourceCommit: 1511e914c6b1ce6f88056bfefd48a6aa585cebce
 ---
 
 {{APIRef}}
 
 `error` イベントは、エラーによって読み取りが失敗したとき (例えば、ファイルが見つからなかった場合や読み取り可能ではなかった場合) に発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル可能</th>
-      <td>いいえ</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("ProgressEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>{{domxref("FileReader.onerror")}}</td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('error', (event) => { });
+
+onerror = (event) => { };
+```
+
+## イベント型
+
+{{domxref("ProgressEvent")}} です。 {{domxref("Event")}} から継承しています。
+
+{{InheritanceDiagram("ProgressEvent")}}
+
+## イベントプロパティ
+
+_親である {{domxref("Event")}} からプロパティを継承しています。_
+
+- {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
+  - : 論理値で、このプロセスで行われる作業の合計と、すでに行われた作業の量が計算可能かどうかを示す。言い換えれば、進捗が計測可能かどうかを示します。
+- {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
+  - : 64 ビット符号なし整数値で、このプロセスで既に作業を行った量を示します。作業した比率は、`total` をこのプロパティの値で割ることで算出できます。 HTTP を使用してリソースをダウンロードする場合、これは HTTP メッセージの本文のみをカウントし、ヘッダーやその他のオーバーヘッドは含まれません。
+- {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
+  - : 64 ビット符号なし整数で、基礎となるプロセスが実行中の作業の総量を表します。 HTTP を使用してリソースをダウンロードする場合、これは `Content-Length` （メッセージの本文のサイズ）であり、ヘッダーやその他のオーバーヘッドは含まれません。
 
 ## 例
 
@@ -57,9 +67,9 @@ fileInput.addEventListener('change', handleSelected);
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
-{{Compat("api.FileReader.error_event")}}
+{{Compat}}
 
 ## 関連情報
 

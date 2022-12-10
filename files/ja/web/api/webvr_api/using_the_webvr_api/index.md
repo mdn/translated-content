@@ -23,7 +23,7 @@ WebVR を始めるには，VR ハードウェアのマニュアルに従った�
 
 WebVR のデモは [MozVR team repo](https://github.com/MozVR/) や [MDN webvr-tests repo](https://github.com/mdn/webvr-tests) にたくさんありますが、この記事では、主に[positionsensorvrdevice](https://github.com/mdn/webvr-tests/tree/gh-pages/positionsensorvrdevice) について ([動作しているデモ](http://mdn.github.io/webvr-tests/positionsensorvrdevice/)) を例に解説します。
 
-![](https://mdn.mozillademos.org/files/10797/vrpositionsensor-demo.png)
+![](vrpositionsensor-demo.png)
 
 これは簡単な 2.5D のデモで，[HTML5 Canvas](/ja/docs/Web/HTML/Element/canvas) にレンダリングされた Firefox ロゴが右目と左目のビューに表示されるものです．VR HMD でデモを見ているときにキャンバスをクリックすると、デモはフルスクリーンになり、Firefox ロゴに近づけるようになります。あなたが動くと頭の動きに合わせて上下左右や回転してリアルに動きます。
 
