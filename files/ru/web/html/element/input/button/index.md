@@ -118,6 +118,7 @@ function updateButton() {
 ```html
 <input type="button" value="Disable me" disabled>
 ```
+
 Вы можете включать и отключать кнопки во время выполнения, просто установив для параметра `disabled` на `true` или `false`. В этом примере наша кнопка запускается включенной, но если вы нажмете на нее, она будет отключена с помощью `button.disabled = true`. Затем используется функция {{domxref("WindowTimers.setTimeout","setTimeout()")}} для возврата кнопки в включенное состояние через две секунды.
 
 ```html hidden
