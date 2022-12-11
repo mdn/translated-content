@@ -100,12 +100,7 @@ var el = document.getElementById('testqq'); // el は null になります
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                       |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------- |
-| {{SpecName('DOM1','level-one-html.html#method-getElementById','getElementById')}}         | {{Spec2('DOM1')}}         | インターフェイスの初回定義 |
-| {{SpecName('DOM2 Core','core.html#ID-getElBId','getElementById')}}                             | {{Spec2('DOM2 Core')}}     | DOM 1 の置き換え           |
-| {{SpecName('DOM3 Core','core.html#ID-getElBId','getElementById')}}                             | {{Spec2('DOM3 Core')}}     | DOM 2 の置き換え           |
-| {{SpecName('DOM WHATWG','#dom-nonelementparentnode-getelementbyid','getElementById')}} | {{Spec2('DOM WHATWG')}} | DOM 3 を置き換える予定     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

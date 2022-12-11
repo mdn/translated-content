@@ -56,7 +56,7 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
 
 [output](https://googlechrome.github.io/samples/webassembly/version.html)에 라이브러리의 버전 번호가 정확히 표시됩니다.
 
-![  Screenshot of the DevTools console showing the correct versionnumber.](https://mdn.mozillademos.org/files/15913/version.png)
+![Screenshot of the DevTools console showing the correct versionnumber.](https://mdn.mozillademos.org/files/15913/version.png)
 
 > **참고:**libwebp는 현재 버전 인 a.b.c를 16 진수 0xabc로 반환합니다. 예를 들어 v0.6.1은 0x000601 = 1537로 인코딩됩니다.
 

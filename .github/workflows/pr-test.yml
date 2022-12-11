@@ -10,10 +10,16 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - ".github/workflows/pr-test.yml"
+      - "files/**"
 
 jobs:
   tests:
     runs-on: ubuntu-latest
+    env:
+      BASE_SHA: ${{ github.event.pull_request.base.sha }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
 
     steps:
       - uses: actions/checkout@v3
@@ -39,32 +45,24 @@ jobs:
         run: |
           yarn --frozen-lockfile
 
-      - name: Config git core.quotePath
+      - name: Get changed files
         run: |
-          # If you don't do this, the get-diff-action won't be able to
-          # notice files that contain non-ascii characters.
-          # I.e.
-          #
-          #    ▶ git status
-          #    Changes not staged for commit:
-          #    ...
-          #   modified:   "files/en-us/glossary/b\303\251zier_curve/index.html"
-          #
-          # But after you set `core.quotePath` you get:
-          #
-          #    ▶ git status
-          #    Changes not staged for commit:
-          #    ...
-          #   modified:   "files/en-us/glossary/bézier_curve/index.html"
-          #
-          # Now, this gets used by the `git diff ...` inside get-diff-action.
-          git config --global core.quotePath false
+          # Use the GitHub API to get the list of changed files
+          # documenation: https://docs.github.com/rest/commits/commits#compare-two-commits
+          DIFF_DOCUMENTS=$(gh api repos/{owner}/{repo}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }} \
+            --paginate \
+            --jq '.files | .[] | select(.status|IN("added", "modified", "renamed", "copied", "changed")) | .filename')
 
-      - uses: technote-space/get-diff-action@v6
-        id: git_diff_content
-        with:
-          PATTERNS: files/**/*.+(html|md)
-          SET_ENV_NAME: GIT_DIFF_CONTENT
+          # filter out files that are not markdown or html
+          GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(html|md)$" | xargs)
+          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> $GITHUB_ENV
+
+          # filter out files that are not attachments
+          # note that we should get the absolute path of the changed attachments
+          GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs readlink -e | xargs)
+          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build changed content
         if: ${{ env.GIT_DIFF_CONTENT }}
@@ -122,7 +120,7 @@ jobs:
           # Save the PR number into the build
           echo ${{ github.event.number }} > $BUILD_OUT_ROOT/NR
 
-      - name: Generate the diff file
+      - name: Download the diff file
         if: ${{ env.GIT_DIFF_CONTENT }}
         env:
           # This must match what we set in the "Build changed content" step above
@@ -132,7 +130,7 @@ jobs:
           # directory.
           # The purpose of this is for the PR Review Companion to later
           # be able to use this raw diff file for the benefit of analyzing.
-          git diff --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} > $BUILD_OUT_ROOT/DIFF
+          wget https://github.com/${{ github.repository }}/compare/${{ env.BASE_SHA }}...${{ env.HEAD_SHA }}.diff -O $BUILD_OUT_ROOT/DIFF
 
       - name: Merge static assets with built documents
         if: ${{ env.GIT_DIFF_CONTENT }}
@@ -160,12 +158,6 @@ jobs:
         with:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
-
-      - uses: technote-space/get-diff-action@v6
-        with:
-          PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
-          ABSOLUTE: true
-          SET_ENV_NAME: GIT_DIFF_FILES
 
       - name: Check changed files
         if: ${{ env.GIT_DIFF_FILES }}

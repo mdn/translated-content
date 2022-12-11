@@ -143,11 +143,11 @@ When representing dates, the best choice is to use the built-in [`Date` utility]
 
 ### Indexed collections: Arrays and typed Arrays
 
-[Arrays](/zh-TW/docs/JavaScript/Reference/Global_Objects/Array) are regular objects for which there is a particular relationship between integer-key-ed properties and the 'length' property. Additionally, arrays inherit from `Array.prototype` which provides to them a handful of convenient methods to manipulate arrays. For example, [`indexOf`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (searching a value in the array) or [`push`](/zh-TW/docs/JavaScript/Reference/Global_Objects/Array/push) (adding an element to the array), etc. This makes Arrays a perfect candidate to represent lists or sets.
+[Arrays](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array) are regular objects for which there is a particular relationship between integer-keyed properties and the `length` property.
 
-[Typed Arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays) are new to JavaScript with ECMAScript Edition 6 and present an array-like view of an underlying binary data buffer. The following table helps you to find the equivalent C data types:
+Additionally, arrays inherit from `Array.prototype`, which provides a handful of convenient methods to manipulate arrays. For example, [`indexOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) searches a value in the array and [`push()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/push) appends an element to the array. This makes Arrays a perfect candidate to represent ordered lists.
 
-{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects", "", 0, 3)}}
+[Typed Arrays](/zh-TW/docs/Web/JavaScript/Typed_arrays) present an array-like view of an underlying binary data buffer, and offer many methods that have similar semantics to the array counterparts. "Typed array" is an umbrella term for a range of data structures, including `Int8Array`, `Float32Array`, etc. Check the [typed array](/zh-TW/docs/Web/JavaScript/Typed_arrays) page for more information. Typed arrays are often used in conjunction with {{jsxref("ArrayBuffer")}} and {{jsxref("DataView")}}.
 
 ### Keyed collections: Maps, Sets, WeakMaps, WeakSets
 

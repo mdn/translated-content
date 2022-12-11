@@ -7,14 +7,14 @@ slug: Web/CSS/cursor
 
 ### Resumen
 
-La propiedad [CSS:cursor](es/CSS/cursor) especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.
+La propiedad [CSS:cursor](/es/CSS/cursor) especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.
 
-- [CSS:Valor_inicial](es/CSS/Valor_inicial): `CSS:auto`
+- [CSS:Valor_inicial](/es/CSS/Valor_inicial): `CSS:auto`
 - Se aplica a: todos los elementos
-- [CSS:inheritance](es/CSS/inheritance): Si
+- [CSS:inheritance](/es/CSS/inheritance): Si
 - Porcentaje: N/A
-- Media: [CSS:Media:Visual](es/CSS/Media/Visual), [CSS:Media:Interactivo](es/CSS/Media/Interactivo)
-- [CSS:Valor_calculado](es/CSS/Valor_calculado):como sea especificado con URLs relativos convertidos a URLs absolutos.
+- Media: [CSS:Media:Visual](/es/CSS/Media/Visual), [CSS:Media:Interactivo](/es/CSS/Media/Interactivo)
+- [CSS:Valor_calculado](/es/CSS/Valor_calculado):como sea especificado con URLs relativos convertidos a URLs absolutos.
 
 ### Sintaxis
 
@@ -29,7 +29,7 @@ cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
 ### Values
 
 - \<url> [ ]?
-  - : URL del cursor seleccionado mas posición opcional. Mas de un URL puede provocar problemas, in caso de que algunos tipode de imágenes de cursor no puedan ser usados.vea [Uso_de_URL_como_valor_de_la_propiedad_cursor](es/Uso_de_URL_como_valor_de_la_propiedad_cursor) para mas detalles.
+  - : URL del cursor seleccionado mas posición opcional. Mas de un URL puede provocar problemas, in caso de que algunos tipode de imágenes de cursor no puedan ser usados.vea [Uso_de_URL_como_valor_de_la_propiedad_cursor](/es/Uso_de_URL_como_valor_de_la_propiedad_cursor) para mas detalles.
 - \<std-cursor-name>
   - : Algunos nombres de cursores se encuentra en la siguiente tabla.
 
@@ -200,15 +200,15 @@ cursor: [<url> [<x> <y>]?,]*  <std-cursor-name> ;
 
 | CSS name                                        | Description                                                                                                                   | Deprecation |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| [`-moz-alias`](es/CSS/-moz-alias)               | replaced by standard value `alias` as described in the previous table                                                         | Gecko 1.8a6 |
-| [`-moz-cell`](es/CSS/-moz-cell)                 | replaced by standard value `cell` as described in the previous table                                                          | Gecko 1.8a6 |
-| [`-moz-context-menu`](es/CSS/-moz-context-menu) | replaced by standard value `context-menu` as described in the previous table                                                  | Gecko 1.8a6 |
-| [`-moz-copy`](es/CSS/-moz-copy)                 | replaced by standard value `copy` as described in the previous table                                                          | Gecko 1.8a6 |
-| [`-moz-grab`](es/CSS/-moz-grab)                 | a cursor value that should indicate that an element or an object in a webpage can be grabbed                                  |             |
-| [`-moz-grabbing`](es/CSS/-moz-grabbing)         | a cursor value that should indicate that an element or an object is currently being grabbed                                   |             |
-| [`-moz-spinning`](es/CSS/-moz-spinning)         | replaced by standard value `progress` as described in the previous table                                                      | Gecko 1.7.1 |
-| [`-moz-zoom-in`](es/CSS/-moz-zoom-in)           | used to indicate that an element or an object in a webpage is actually being resized, enlarged or is actually being magnified |             |
-| [`-moz-zoom-out`](es/CSS/-moz-zoom-out)         | used to indicate that an element or an object in a webpage is actually being resized, reduced or is actually being zoomed out |             |
+| [`-moz-alias`](/es/CSS/-moz-alias)               | replaced by standard value `alias` as described in the previous table                                                         | Gecko 1.8a6 |
+| [`-moz-cell`](/es/CSS/-moz-cell)                 | replaced by standard value `cell` as described in the previous table                                                          | Gecko 1.8a6 |
+| [`-moz-context-menu`](/es/CSS/-moz-context-menu) | replaced by standard value `context-menu` as described in the previous table                                                  | Gecko 1.8a6 |
+| [`-moz-copy`](/es/CSS/-moz-copy)                 | replaced by standard value `copy` as described in the previous table                                                          | Gecko 1.8a6 |
+| [`-moz-grab`](/es/CSS/-moz-grab)                 | a cursor value that should indicate that an element or an object in a webpage can be grabbed                                  |             |
+| [`-moz-grabbing`](/es/CSS/-moz-grabbing)         | a cursor value that should indicate that an element or an object is currently being grabbed                                   |             |
+| [`-moz-spinning`](/es/CSS/-moz-spinning)         | replaced by standard value `progress` as described in the previous table                                                      | Gecko 1.7.1 |
+| [`-moz-zoom-in`](/es/CSS/-moz-zoom-in)           | used to indicate that an element or an object in a webpage is actually being resized, enlarged or is actually being magnified |             |
+| [`-moz-zoom-out`](/es/CSS/-moz-zoom-out)         | used to indicate that an element or an object in a webpage is actually being resized, reduced or is actually being zoomed out |             |
 
 ### Examples
 

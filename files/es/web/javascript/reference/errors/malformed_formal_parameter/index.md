@@ -57,6 +57,6 @@ var f = function(x) { return x; };
 
 ## Ver tambien
 
-- [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- [`Function()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - [Sobre functions](/es/docs/Web/JavaScript/Guide/Functions)
 - [_Frankenstein_ por Mary Wollstonecraft Shelley, texto completo en línea](https://www.gutenberg.org/ebooks/84) ("Maldito (aunque me maldiga a mí mismo) ¡sé las manos que te formaron! Me has hecho miserable más allá de toda expresión. No me has dejado ningún poder para considerar si soy justo para ti o no. ¡Fuera! Aléjame de la vista de tu forma detestada ")

@@ -1,9 +1,6 @@
 ---
 title: Clausura
 slug: Glossary/Closure
-tags:
-  - Glosario
-translation_of: Glossary/Closure
 original_slug: Glossary/Clausura
 ---
 

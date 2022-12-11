@@ -1,50 +1,52 @@
 ---
-title: 자바스크립트의 기본적인 연산 - 숫자와 연산자
+title: JavaScript의 기본적인 연산 - 숫자와 연산자
 slug: Learn/JavaScript/First_steps/Math
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
-이 장은 자바스크립트의 연산에 대해 다룹니다. 능숙하게 숫자를 다루기 위해 어떻게 {{Glossary("Operator","operators")}} 와 그 외 기능을 사용하는지 알아봅니다.
+이 장은 JavaScript의 연산에 대해 다룹니다. 능숙하게 숫자를 다루기 위해 어떻게 {{Glossary("Operator","연산자")}} 와 그 외 기능을 사용하는지 알아봅니다.
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">필요한 사전 지식:</th>
+      <th scope="row">필요한 사전 지식</th>
       <td>
-        기본적인 커퓨터 지식, HTML과 CSS에 대한 기본적인 이해, JavaScript의 이해
+        기본적인 컴퓨터 지식, HTML과 CSS에 대한 기본적인 이해, JavaScript의 이해
       </td>
     </tr>
     <tr>
-      <th scope="row">목표:</th>
-      <td>자바스크립트 연산에 익숙해지기</td>
+      <th scope="row">목표</th>
+      <td>JavaScript 연산에 익숙해지기</td>
     </tr>
   </tbody>
 </table>
 
 ## 모두가 수학을 좋아합니다
 
-좋아요, 아닐수도 있습니다. 일부는 좋아하겠죠. 몇몇 사람들은 구구단을 배울 때부터 싫어했을 겁니다. 그리고 몇몇은 이 사이 어딘가 있겠죠. 그러나 누구도 수학이 삶을 살아가는데 필수적 요소라는건 부정할 수 없을겁니다. 우리가 자바스크립트(혹은 다른 프로그래밍 언어)를 배울때 특히 그렇습니다.  우리가 하는 일의 상당 부분은 수치형 데이터를 처리하고, 값을 계산하거나 하는 일에 의지합니다.
+좋아요, 아닐수도 있습니다. 일부는 좋아하겠죠. 몇몇 사람들은 구구단을 배울 때부터 싫어했을 겁니다. 그리고 몇몇은 이 사이 어딘가 있겠죠. 그러나 누구도 수학이 삶을 살아가는데 필수적 요소라는건 부정할 수 없을겁니다. 우리가 JavaScript(또는 다른 프로그래밍 언어)를 배울 때 특히 그렇습니다. 우리가 하는 일의 상당 부분은 수치형 데이터를 처리하고, 값을 계산하거나 하는 일입니다.
 
 이 장은 당장 알아야 하는 부분만 다룹니다.
 
 ### 숫자의 종류
 
-프로그래밍에서, 우리가 잘 알고있는 십진법 체계라도 당신이 생각한 것보다 복잡합니다.
+프로그래밍에서는 우리가 잘 알고있는 십진법 체계도 생각보다 복잡합니다.
 
 - **정수**는 10, 400, 혹은 -5 같은 모든 숫자입니다.
 - **부동소수점 실수**(*float*)는 12.5, 6.7786543과 같이 소수점과 소수 자릿수가 있습니다.
-- **배정밀도 부동소수점 실수**(*double*)는 IEEE 754 표준 부동소수점보다 더 정확한 정밀도를 가지고 있는 특별한 데이터 타입입니다. (**Doubles**은 **Floats** 보다 더 많은 소수 자릿수를 표현할 수 있어서 소수점 표현에는 **Doubles**가 더 정확합니다.).
+- **배정밀도 부동소수점 실수**(*double*)는 IEEE 754 표준 부동소수점보다 더 정확한 정밀도를 가지고 있는 특별한 데이터 타입입니다. (**Doubles**은 **Floats** 보다 더 많은 소수 자릿수를 표현할 수 있어서 소수점 표현에는 **Doubles**가 더 정확합니다).
 
-자바스크립트는 심지어 다른 숫자 타입을 지원합니다. 10진수는 10을 기준으로 합니다. (숫자 0\~9을 쓴다는 뜻입니다.), 하지만 자바스크립트는 아래와 같은 데이터 타입을 지원합니다.
+JavaScript는 심지어 다른 숫자 타입을 지원합니다. 10진수는 10을 기준으로 합니다. (숫자 0\~9을 쓴다는 뜻입니다.) 하지만 JavaScript는 아래와 같은 데이터 타입을 지원합니다.
 
 - **2진수** — 10진수를 0과 1를 이용해 나타내는 데이터 타입입니다.
-- **8진수** —  10진수를 0부터 7까지의 수를 이용해 나타내는 데이터 타입입니다.
-- **16진수** — 10진수를 0부터 15까지의 수를 이용해 나타내는 데이터 타입입니다.(1\~10, A\~F) . [CSS의 색상](/ko/Learn/CSS/Introduction_to_CSS/Values_and_units#Hexadecimal_values)을 지정할 때 쉽게 볼 수 있습니다.
+- **8진수** — 10진수를 0부터 7까지의 수를 이용해 나타내는 데이터 타입입니다.
+- **16진수** — 10진수를 0부터 15까지의 수(1\~10, A\~F)를 이용해 나타내는 데이터 타입입니다. [CSS의 색상](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#hexadecimal_values)을 지정할 때 쉽게 볼 수 있습니다.
 
 **어려워서 힘들다고 느끼기 전에, 잠시 멈추세요!** 시작하기 위해서 우리는 이제부터 10진수만 사용하도록 하겠습니다. 다른 유형에 대해 생각할 필요가 없습니다.
 
-두 번째 좋은 소식은 다른 프로그래밍 언어와 달리, 자바스크립트는 실수와 정수 모두 {{jsxref("Number")}}라는 하나의 데이터 타입만 사용합니다. 실수와 정수 모두 같은 데이터 타입이기 때문에 하나의 방법으로 동작하게 할 수 있다는 뜻입니다.
+두 번째 좋은 소식은 다른 프로그래밍 언어와 달리, JavaScript는 실수와 정수 모두 {{jsxref("Number")}}라는 하나의 데이터 타입만 사용합니다. 실수와 정수 모두 같은 데이터 타입이기 때문에 하나의 방법으로 동작하게 할 수 있다는 뜻입니다.
+
+> **참고:** 사실 JavaScript에는 {{jsxref("BigInt")}}라는 또 다른 숫자 타입이 있습니다. 정수를 나타내는 데 사용되는 데이터 타입이지만 이 글에서는 다루지 않습니다.
 
 ### 나를 위한 숫자들
 
@@ -59,67 +61,72 @@ slug: Learn/JavaScript/First_steps/Math
     myFloat;
     ```
 
-2. 숫자는 따옴표(" 또는 ')가 없습니다. — 계속 하기 전에 여러 개의 변수를 선언하고 숫자를 초기화 해주세요.
-3. 우리들의 변수들의 데이터 타입을 확인합니다. 자바스크립트에서는 데이터 타입을 확인하기 위해 {{jsxref("Operators/typeof", "typeof")}} 라는 키워드를 사용합니다. 아래와 같이 입력해 주세요:
+2. 숫자는 따옴표(" 또는 ')가 없습니다. 계속 하기 전에 여러 개의 변수를 선언하고 숫자를 초기화 해주세요.
+3. 우리들의 변수들의 데이터 타입을 확인합니다. JavaScript에서는 데이터 타입을 확인하기 위해 {{jsxref("Operators/typeof", "typeof")}} 라는 키워드를 사용합니다. 아래와 같이 입력해 주세요:
 
     ```js
     typeof myInt;
     typeof myFloat;
     ```
 
-    `"number"` 는 정수와 실수인 경우에 나옵니다. — 이것들은 정수와 실수가 다른 데이터 타입일 때 보다 다루기 쉽게 해줍니다.  그리고 다른 데이터 타입일 때 다른 방법으로 다뤄야만 합니다. 호우\~!
+    `"number"` 는 정수와 실수인 경우에 나옵니다. — 이것들은 정수와 실수가 다른 데이터 타입일 때 보다 다루기 쉽게 해줍니다. 그리고 다른 데이터 타입일 때 다른 방법으로 다뤄야만 합니다. 호우\~!
+
+### 유용한 Number 메서드들
+
+JavaScript에서 모든 표준 숫자를 나타내는 [`Number`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number) 객체에는 숫자를 조작하는 데 사용할 수 있는 많은 유용한 메서드가 있습니다. 간단한 소개만 하기 위해 이 문서에서는 이러한 메서드에 대해 자세히 설명하지 않고 기본적인 내용만 다룹니다. 하지만 객체 참조 페이지를 방문해서 사용 가능한 메서드에 대해 더 알아볼 가치는 있습니다.
+
+예를 들어, 숫자를 고정된 소수점 자리수로 반올림하려면 [`toFixed()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed) 메서드를 사용합니다. 다음 코드를 [브라우저 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)에서 실행시켜 보세요.
+
+```js
+const lotsOfDecimal = 1.766584958675746364;
+lotsOfDecimal;
+
+const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+twoDecimalPlaces;
+```
+
+### 숫자 데이터 타입으로 변환하기
+
+때로는 계산을 수행하기 어렵게 문자열 형식으로 숫자가 저장된 경우가 있습니다. 주로 [입력 폼](/ko/docs/Learn/Forms)의 [입력 타입이 텍스트](/ko/docs/Web/HTML/Element/input/text)인 경우에 발생합니다. 이러한 경우에는 문자열 값을 [`Number()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 생성자로 전달하면 같은 숫자를 나타내는 숫자 데이터 타입으로 변환할 수 있습니다.
+
+예를 들어, 콘솔에 다음과 같이 입력해보세요.
+
+```js
+let myNumber = "74";
+myNumber += 3;
+```
+
+실행하면 `77`이 아닌 `743`이 출력됩니다. 이는 `myNumber`가 문자열이기 때문입니다. 다음 코드를 입력하면 타입을 볼 수 있습니다.
+
+```js
+typeof myNumber;
+```
+
+올바른 계산 결과를 얻기 위해서는 다음과 같이 하면 됩니다.
+  
+```js
+let myNumber = "74";
+myNumber = Number(myNumber) + 3;
+```
+
+정상적으로 `77`이 출력됩니다.
 
 ## 산술 연산자
 
 산술연산자들의 기본적인 용도는 덧셈을 할 때 입니다.
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Operator</th>
-      <th scope="col">Name</th>
-      <th scope="col">Purpose</th>
-      <th scope="col">Example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>+</code></td>
-      <td>Addition</td>
-      <td>두 개의 숫자를 더합니다.</td>
-      <td><code>6 + 9</code></td>
-    </tr>
-    <tr>
-      <td><code>-</code></td>
-      <td>Subtraction</td>
-      <td>왼쪽에 있는 수를 오른쪽 수로 뺍니다.</td>
-      <td><code>20 - 15</code></td>
-    </tr>
-    <tr>
-      <td><code>*</code></td>
-      <td>Multiplication</td>
-      <td>두 개의 숫자를 곱합니다.</td>
-      <td><code>3 * 7</code></td>
-    </tr>
-    <tr>
-      <td><code>/</code></td>
-      <td>Division</td>
-      <td>왼쪽의 숫자를 오른쪽 숫자로 나눠서 몫을 구합니다.</td>
-      <td><code>10 / 5</code></td>
-    </tr>
-    <tr>
-      <td><code>%</code></td>
-      <td>Remainder (sometimes called modulo)</td>
-      <td><p>왼쪽의 숫자를 오른쪽 숫자로 나눠서 나머지를 구합니다.</p></td>
-      <td>
-        <code>8 % 3</code><br />( 2를 반환합니다, 8을 3으로 나눴을 때 몫이 2이기
-        때문입니다.)
-      </td>
-    </tr>
-  </tbody>
-</table>
+| 연산자 | 이름 | 목적 | 예시 |
+| --- | --- | --- | --- |
+| `+` | 더하기 | 두 개의 숫자를 더합니다. | `6 + 9` |
+| `-` | 빼기 | 왼쪽에 있는 수를 오른쪽 수로 뺍니다. | `20 - 15` |
+| `*` | 곱하기 | 두 개의 숫자를 곱합니다. | `3 * 7` |
+| `/` | 나누기 | 왼쪽의 숫자를 오른쪽 숫자로 나눠서 몫을 구합니다. | `10 / 5` |
+| `%` | 나머지 (또는 모듈로) | 왼쪽의 숫자를 오른쪽 숫자로 나눠서 나머지를 구합니다. | `8 % 3` ( 2를 반환합니다, 8을 3으로 나눴을 때 몫이 2이기 때문입니다.) |
+| `**` | 지수 | 왼쪽의 숫자를 오른쪽 숫자만큼 제곱합니다. | `5 ** 2` ( 5의 제곱이기 때문에 25를 반환합니다.) |
 
-<div class="note"><p><strong>팁</strong>:  연산에 관계된 수를 피연산자라고 부릅니다.<br>참고 - {{Glossary("Operand", "operands")}}.</p></div>
+> **참고:** 연산에 관계된 수를 {{Glossary("Operand", "피연산자")}}라고 부릅니다.
+
+> **참고:** 지수를 계산할 때 {{jsxref("Math.pow()")}} 메서드를 사용할 수도 있고 `**`와 매우 비슷한 동작을 합니다. 예를 들어, `Math.pow(7, 3)`의 경우 `7`은 밑, `3`은 지수이므로 `343`을 반환합니다. 이 결과는 `7 ** 3`과 같습니다.
 
 아직 수학을 공부할 필요는 없습니다. 하지만 우리는 문법 확인을 해야합니다. 아래의 명령어들을 [developer tools JavaScript console](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools) 에 입력해주세요.
 
@@ -131,16 +138,16 @@ slug: Learn/JavaScript/First_steps/Math
     60 % 3
     ```
 
-2. You can also try declaring and initializing some numbers inside variables, and try using those in the sums — the variables will behave exactly like the values they hold for the purposes of the sum. For example:
+2. 또한 변수 내부의 값을 선언하거나 초기화 할 수 있으며, 이를 계산에 이용할 수도 있습니다. 즉, 변수는 계산을 위해 가지고 있는 값과 정확히 동일하게 작동합니다. 예를 들어
 
     ```js
-    var num1 = 10;
-    var num2 = 50;
+    const num1 = 10;
+    const num2 = 50;
     9 * num1;
     num2 / num1;
     ```
 
-3. Last for this section, try entering some more complex expressions, such as:
+3. 마지막으로 다음과 같은 복잡한 식을 입력해보세요.
 
     ```js
     5 + 10 * 3;
@@ -148,60 +155,58 @@ slug: Learn/JavaScript/First_steps/Math
     num2 + num1 / 8 + 2;
     ```
 
-Some of this last set of sums might not give you quite the result you were expecting; the below section might well give the answer as to why.
+몇몇 계산은 예상과 꽤 다르게 나옵니다. 아래의 문단에서 왜 그런지 이유를 알아보죠.
 
-### Operator precedence
+### 연산자 우선순위
 
-Let's look at the last example from above, assuming that `num2` holds the value 50 and `num1` holds the value 10 (as originally stated above):
+위의 예제를 살펴보겠습니다. 위와 동일하게 `num2` 가 `50`을 `num1` 이 `10`을 가지고 있다고 가정하겠습니다.
 
 ```js
 num2 + num1 / 8 + 2;
 ```
 
-As a human being, you may read this as _"50 plus 10 equals 60"_, then _"8 plus 2 equals 10"_, and finally _"60 divided by 10 equals 6"_.
+아마 "50 더하기 10은 60이고, 8 더하기 2는 10이니, 60 나누기 10은 6이다."라고 계산했을 겁니다.
 
-But the browser does _"10 divided by 8 equals 1.25"_, then _"50 plus 1.25 plus 2 equals 53.25"_.
+하지만 브라우저는 "10 나누기 8은 1.25이고, 50 더하기 1.25 더하기 2는 53.25이다."라고 계산합니다.
 
-This is because of **operator precedence** — some operators will be applied before others when calculating the result of a sum (referred to as an expression, in programming).  Operator precedence in JavaScript is the same as is taught in math classes in school — Multiply and divide are always done first, then add and subtract (the sum is always evaluated from left to right).
+이것은 **연산자 우선순위** 때문입니다. 연산자 우선순위는 어떤 연산자를 먼저 계산할지 결정합니다. JavaScript에서의 연산자 우선순위는 학교 수학 수업에서 배웠던 것과 같습니다. 곱하기와 나누기는 먼저 계산되고, 더하기와 빼기는 나중에 계산됩니다. (합은 항상 왼쪽에서 오른쪽으로 계산됩니다)
 
-If you want to override operator precedence, you can put parentheses round the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:
+만약 연산자 우선순위를 무시하고 싶다면 괄호를 사용하여 먼저 계산할 부분을 지정할 수 있습니다. 다음과 같이 하면 `6`이라는 결과를 얻을 수 있습니다.
 
 ```js
 (num2 + num1) / (8 + 2);
 ```
 
-Try it and see.
+> **참고:** JavaScript의 연산자와 연산자 우선순위에 대해 더 알고 싶다면 [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators) 문서를 참고하세요.
 
-> **참고:** A full list of all JavaScript operators and their precedence can be found in [Expressions and operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#연산자_우선순위).
+## 증감 연산자
 
-## Increment and decrement operators
-
-Sometimes you'll want to repeatedly add or subtract one to/from a numeric variable value. This can be conveniently done using the increment (`++`) and decrement(`--`) operators. We used `++` in our  "Guess the number" game back in our [first splash into JavaScript](/ko/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) article, when we added 1 to our `guessCount` variable to keep track of how many guesses the user has left after each turn.
+가끔은 반복해서 숫자 변수의 값을 `1`씩 더하거나 빼고 싶을 때가 있습니다. 이럴 때는 증가(`++`) 연산자와 감소(`--`) 연산자를 사용하면 편리합니다. 우리는 [JavaScript 첫 입문](/ko/docs/Learn/JavaScript/Introduction_to_JavaScript_1/A_first_splash) 문서에서 `guessCount` 변수에 `1`씩 더해 사용자가 매 차례마다 남은 추측 횟수를 볼 수 있도록 했습니다.
 
 ```js
 guessCount++;
 ```
 
-Let's try playing with these in your console. For a start, note that you can't apply these directly to a number, which might seem strange, but we are assigning a variable a new updated value, not operating on the value itself. The following will return an error:
+콘솔에서 이것을 사용해 보겠습니다. 우선, 숫자에 직접 쓸 수 없다는 것을 알아두세요. 이상하겠지만 값 자체를 계산하는 것이 아니라 변수에 새로운 업데이트된 값을 할당하는 것입니다. 다음은 오류를 반환합니다.
 
 ```js
 3++;
 ```
 
-So, you can only increment an existing variable. Try this:
+다음처럼 변수만 증가시킬 수 있습니다.
 
 ```js
 var num1 = 4;
 num1++;
 ```
 
-Okay, strangeness number 2! When you do this, you'll see a value of 4 returned — this is because the browser returns the current value, _then_ increments the variable. You can see that it's been incremented if you return the variable value again:
+또 이상한 일이 일어났습니다! 이렇게 하면 `4`가 반환됩니다. 왜냐하면 브라우저가 현재 값을 반환한 뒤에 변수를 증가시키기 때문입니다. 변수 값을 다시 반환하면 증가했음을 알 수 있습니다.
 
 ```js
 num1;
 ```
 
-The same is true of `--` : try the following
+`--`에서도 똑같이 작동합니다.
 
 ```js
 var num2 = 6;
@@ -209,128 +214,81 @@ num2--;
 num2;
 ```
 
-> **참고:** You can make the browser do it the other way round — increment/decrement the variable _then_ return the value — by putting the operator at the start of the variable instead of the end. Try the above examples again, but this time use `++num1` and `--num2`.
+> **참고:** 변수 앞에 연산자를 사용하면 브라우저가 변수를 먼저 증가/감소시키고 값을 반환합니다. 이번에는 `++num1`과 `--num2`를 사용하고 위의 예제를 다시 실행해 보세요.
 
-## Assignment operators
+## 대입 연산자
 
-Assignment operators are operators that assign a value to a variable. We have already used the most basic one, `=`, loads of times — it simply assigns the variable on the left the value stated on the right:
-
-```js
-var x = 3; // x contains the value 3
-var y = 4; // y contains the value 4
-x = y; // x now contains the same value y contains, 4
-```
-
-But there are some more complex types, which provide useful shortcuts to keep your code neater and more efficient. The most common are listed below:
-
-<table class="standard-table no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Operator</th>
-      <th scope="col">Name</th>
-      <th scope="col">Purpose</th>
-      <th scope="col">Example</th>
-      <th scope="col">Shortcut for</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>+=</code></td>
-      <td>Addition assignment</td>
-      <td>
-        Adds the value on the right to the variable value on the left, then
-        returns the new variable value
-      </td>
-      <td><code>x += 4;</code></td>
-      <td><code>x = x + 4;</code></td>
-    </tr>
-    <tr>
-      <td><code>-=</code></td>
-      <td>Subtraction assignment</td>
-      <td>
-        Subtracts the value on the right from the variable value on the left,
-        and returns the new variable value
-      </td>
-      <td><code>x -= 3;</code></td>
-      <td><code>x = x - 3;</code></td>
-    </tr>
-    <tr>
-      <td><code>*=</code></td>
-      <td>Multiplication assignment</td>
-      <td>
-        Multiplies the variable value on the left by the value on the right, and
-        returns the new variable value
-      </td>
-      <td><code>x *= 3;</code></td>
-      <td><code>x = x * 3;</code></td>
-    </tr>
-    <tr>
-      <td><code>/=</code></td>
-      <td>Division assignment</td>
-      <td>
-        Divides the variable value on the left by the value on the right, and
-        returns the new variable value
-      </td>
-      <td><code>x /= 5;</code></td>
-      <td><code>x = x / 5;</code></td>
-    </tr>
-  </tbody>
-</table>
-
-Try typing some of the above examples into your console, to get an idea of how they work. In each case, see if you can guess what the value is before you type in the second line.
-
-Note that you can quite happily use other variables on the right hand side of each expression, for example:
+대입 연산자는 변수에 값을 대입하는 연산자입니다. 우리는 이미 기본적인 `=` 연산자를 많이 사용했습니다. 이 연산자는 변수 오른쪽에 있는 값을 대입합니다.
 
 ```js
-var x = 3; // x contains the value 3
-var y = 4; // y contains the value 4
-x *= y; // x now contains the value 12
+var x = 3; // x의 값은 3입니다.
+var y = 4; // y의 값은 4입니다.
+x = y;     // 이제 x의 값은 y와 같은 4입니다.
 ```
 
-> **참고:** There are lots of [other assignment operators available](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자), but these are the basic ones you should learn now.
+추가로 코드를 더 깔끔하고 효율적으로 쓸 수 있게 해주는 짧은 형태의 연산자들이 있습니다. 대표적인건 다음과 같습니다.
 
-## Active learning: sizing a canvas box
+| 연산자 | 이름 | 목적 | 예시 | 의미 |
+| --- | --- | --- | --- | --- |
+| `+=` | 더하기 대입 | 오른쪽의 값을 왼쪽 변수 값에 더하고 새 변수 값을 반환합니다. | `x += 4;` | `x = x + 4;` |
+| `-=` | 빼기 대입 | 오른쪽의 값을 왼쪽 변수 값에서 빼고 새 변수 값을 반환합니다. | `x -= 3;` | `x = x - 3;` |
+| `*=` | 곱하기 대입 | 오른쪽의 값을 왼쪽 변수 값에 곱하고 새 변수 값을 반환합니다. | `x *= 3;` | `x = x * 3;` |
+| `/=` | 나누기 대입 | 오른쪽의 값을 왼쪽 변수 값에 나누고 새 변수 값을 반환합니다. | `x /= 5;` | `x = x / 5;` |
 
-In this exercise, you will manipulate some numbers and operators to change the size of a box. The box is drawn using a browser API called the {{domxref("Canvas API", "", "", "true")}}. There is no need to worry about how this works — just concentrate on the math for now. The width and height of the box (in pixels) are defined by the variables `x` and `y`, which are initially both given a value of 50.
+위의 예제들을 콘솔에 입력해 보면서 어떻게 작동하는지 알아보세요. 그리고 두 번째 줄을 입력하기 전에 어떤 값이 나올지 예측해 보세요.
+
+또한 오른쪽 표현식에서 다른 변수를 사용할 수 있습니다. 예를 들어
+
+```js
+var x = 3; // x는 3입니다.
+var y = 4; // y는 4입니다.
+x *= y;    // 이제 x의 값은 12입니다.
+```
+
+> **참고:** 더 많은 [연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#할당_연산자)가 있지만, 지금은 이것만 시용해도 충분합니다.
+
+## 실전 예제: 캔버스 크기 바꾸기
+
+이번 실습에서는 숫자와 연산자를 조작하여 박스의 크기를 바꿔보겠습니다. 박스는 {{domxref("Canvas API", "", "", "true")}}라는 브라우저 API를 사용하여 그려집니다. 이것이 어떻게 작동하는지는 신경 쓸 필요가 없습니다. 일단은 수학에 집중하세요. 박스의 너비와 높이(픽셀 단위)는 변수 `x`와 `y`에 의해 정의되며, 이 변수들은 처음에 각각 `50`의 값을 가집니다.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html", '100%', 520)}}
 
-**[Open in new window](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html)**
+**[새 창에서 보기](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/editable_canvas.html)**
 
-In the editable code box above, there are two lines marked with a comment that we'd like you to update to make the box grow/shrink to certain sizes, using certain operators and/or values in each case. Let's try the following:
+이 예제에서는 주석으로 표시된 두 줄을 수정하여 박스의 크기를 특정 크기로 조정하고, 각각의 경우에 특정 연산자와/또는 값을 사용하도록 하겠습니다. 다음처럼 수정해 보세요.
 
-- Change the line that calculates x so the box is still 50px wide, but the 50 is calculated using the numbers 43 and 7 and an arithmetic operator.
-- Change the line that calculates y so the box is 75px high, but the 75 is calculated using the numbers 25 and 3 and an arithmetic operator.
-- Change the line that calculates x so the box is 250px wide, but the 250 is calculated using two numbers and the remainder (modulo) operator.
-- Change the line that calculates y so the box is 150px high, but the 150 is calculated using three numbers and the subtraction and division operators.
-- Change the line that calculates x so the box is 200px wide, but the 200 is calculated using the number 4 and an assignment operator.
-- Change the line that calculates y so the box is 200px high, but the 200 is calculated using the numbers 50 and 3, the multiplication operator, and the addition assignment operator.
+- `x`를 계산하는 줄을 변경하여 박스의 너비는 여전히 50px이지만, 50은 43과 7, 그리고 산술 연산자를 사용하여 계산되도록 합니다.
+- `y`를 계산하는 줄을 변경하여 박스의 높이는 75px이지만, 75는 25와 3, 그리고 산술 연산자를 사용하여 계산되도록 합니다.
+- `x`를 계산하는 줄을 변경하여 박스의 너비는 250px이지만, 250은 두 개의 숫자와 나머지(모듈로) 연산자를 사용하여 계산되도록 합니다.
+- `y`를 계산하는 줄을 변경하여 박스의 높이는 150px이지만, 150은 세 개의 숫자와 뺄셈과 나눗셈 연산자를 사용하여 계산되도록 합니다.
+- `x`를 계산하는 줄을 변경하여 박스의 너비는 200px이지만, 200은 숫자 4와 할당 연산자를 사용하여 계산되도록 합니다.
+- `y`를 계산하는 줄을 변경하여 박스의 높이는 200px이지만, 200은 숫자 50과 3, 곱셈 연산자, 그리고 덧셈 할당 연산자를 사용하여 계산되도록 합니다.
 
-Don't worry if you totally mess the code up. You can always press the Reset button to get things working again. After you've answered all the above questions correctly, feel free to play with the code some more or create your own challenges.
+Reset 버튼을 눌러서 되돌릴 수 있기 때문에 코드가 동작하지 않아도 괜찮습니다. 위의 질문을 모두 통과했다면 코드를 자유롭게 수정하거나, 자신만의 도전을 해보세요.
 
-## Comparison operators
+## 비교 연산자
 
-Sometimes we will want to run true/false tests, then act accordingly depending on the result of that test — to do this we use **comparison operators**.
+가끔은 참/거짓 테스트를 실행한 결과에 따라 다르게 처리하고 싶을 때가 있습니다. 이럴 땐 **비교 연산자**를 사용합니다.
 
-| Operator | Name                     | Purpose                                                                      | Example       |
-| -------- | ------------------------ | ---------------------------------------------------------------------------- | ------------- |
-| `===`    | Strict equality          | Tests whether the left and right values are identical to one another         | `5 === 2 + 4` |
-| `!==`    | Strict-non-equality      | Tests whether the left and right values are **not** identical to one another | `5 !== 2 + 3` |
-| `<`      | Less than                | Tests whether the left value is smaller than the right one.                  | `10 < 6`      |
-| `>`      | Greater than             | Tests whether the left value is greater than the right one.                  | `10 > 20`     |
-| `<=`     | Less than or equal to    | Tests whether the left value is smaller than or equal to the right one.      | `3 <= 2`      |
-| `>=`     | Greater than or equal to | Tests whether the left value is greater than or equal to the right one.      | `5 >= 4`      |
+| 연산자 | 이름 | 목적 | 예시 |
+| --- | --- | --- | --- |
+| `===`| 일치 연산자 | 왼쪽과 오른쪽의 값이 완전히 동일한지 테스트합니다. | `5 === 2 + 4` |
+| `!==` | 불일치 연산자 | 왼쪽과 오른쪽 값이 서로 동일하지 않은지 테스트합니다. | `5 !== 2 + 3` |
+| `<` | ~보다 작음| 왼쪽 값이 오른쪽 값보다 작은지 테스트합니다.| `10 < 6`|
+| `>` | ~보다 큼| 왼쪽 값이 오른쪽 값보다 큰지 테스트합니다.| `10 > 20`|
+| `<=` | ~보다 작거나 같음 | 왼쪽 값이 오른쪽 값보다 작거나 같은지 여부를 테스트합니다.| `3 <= 2` |
+| `>=` | ~보다 크거나 같음| 왼쪽 값이 오른쪽 값보다 크거나 같은지 여부를 테스트합니다. | `5 >= 4` |
 
-> **Note:** You may see some people using `==` and `!=` in their tests for equality and non-equality. These are valid operators in JavaScript, but they differ from `===`/`!==`. The former versions test whether the values are the same but not whether the values' datatypes are the same. The latter, strict versions test the equality of both the values and their datatypes. The strict versions tend to result in fewer errors, so we recommend you use them.
+> **참고:** 일부 사람들은 `==`와 `!=`를 동등성과 불일치성을 테스트하는 데 사용합니다. 이 연산자들은 JavaScript에서 유효한 연산자이지만, `===`/`!==`와는 다릅니다. 전자는 값이 동일한지는 테스트하지만, 값의 데이터 유형이 동일한지의 여부는 테스트하지 않습니다. 후자의 경우 엄격한 버전은 값과 값의 데이터 유형의 동일성을 모두 테스트합니다. 엄격한 버전이 오류가 적은 편이기 때문에, 이를 사용하는 것을 권장합니다.
 
-If you try entering some of these values in a console, you'll see that they all return `true`/`false` values — those booleans we mentioned in the last article. These are very useful, as they allow us to make decisions in our code, and they are used every time we want to make a choice of some kind. For example, booleans can be used to:
+만약 콘솔에 값들을 입력한다면 `true`/`false` 값이 반환되는걸 볼 수 있습니다. 이는 이전 글에서 본 것 처럼 불리언(boolean)입니다. 코드에서 결정을 내리거나, 어떤 선택을 할 때마다 사용하기 때문에 불리언은 상당히 유용합니다. 불리언을 사용하는 예는 다음과 같습니다.
 
-- Display the correct text label on a button depending on whether a feature is turned on or off
-- Display a game over message if a game is over or a victory message if the game has been won
-- Display the correct seasonal greeting depending what holiday season it is
-- Zoom a map in or out depending on what zoom level is selected
+- 기능이 켜져있는지 꺼져있는지에 따라 버튼의 텍스트 라벨을 표시합니다.
+- 게임을 결과에 따라 게임 오버나 승리 메시지를 표시합니다.
+- 연휴에 따라 적절한 인사말을 표시합니다.
+- 확대 레벨에 따라 지도를 확대하거나 축소합니다.
 
-We'll look at how to code such logic when we look at conditional statements in a future article. For now, let's look at a quick example:
+지금은 간단한 예제를 살펴보고, 조건문은 다음 글에서 다뤄보겠습니다
 
 ```html
 <button>Start machine</button>
@@ -356,30 +314,30 @@ function updateBtn() {
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/maths/conditional.html", '100%', 100)}}
 
-**[Open in new window](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html)**
+**[새 창에서 보기](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/maths/conditional.html)**
 
-You can see the equality operator being used just inside the `updateBtn()` function. In this case, we are not testing if two mathemetical expressions have the same value — we are testing whether the text content of a button contains a certain string — but it is still the same principle at work. If the button is currently saying "Start machine" when it is pressed, we change its label to  "Stop machine", and update the label as appropriate. If the button is currently saying "Stop machine" when it is pressed, we swap the display back again.
+`updateBtn()` 함수 내부에서 동등 연산자가 사용되는걸 볼 수 있습니다. 원리는 동일하지만, 이 경우엔 두 수식이 같은 값을 가지고 있는지 테스트하는 것이 아닌 버튼의 텍스트 콘텐츠가 특정 문자열을 포함하고 있는지를 테스트합니다. 버튼이 "Start machine"이라고 표시되어 있을 때 누르면 "Stop machine"으로 바꾸고 라벨을 변경합니다. 버튼이 "Stop machine"이라고 표시되어 있을 때 누르면 다시 표시를 바꿉니다.
 
-> **Note:** Such a control that swaps between two states is generally referred to as a **toggle**. It toggles between one state and another — light on, light off, etc.
+> **참고:** 위와 같은 두 상태를 전환하는 조작을 일반적으로 **토글(toggle)** 이라고 부릅니다.
 
-## Summary
+## 요약
 
-In this article we have covered the fundamental information you need to know about numbers in JavaScript, for now. You'll see numbers used again and again, all the way through your JavaScript learning, so it's a good idea to get this out of the way now. If you are one of those people that doesn't enjoy math, you can take comfort in the fact that this chapter was pretty short.
+이번 글에서는 JavaScript에서 숫자를 다루는 기본적인 내용을 다뤘습니다. 앞으로도 숫자는 JavaScript를 배우는 동안 계속해서 사용할 것이므로 익숙해지는게 좋습니다. 수학을 좋아하지 않는 사람에겐 이번 글이 짧아서 다행이었겠군요.
 
-In the next article, we'll explore text and how JavaScript allows us to manipulate it.
+다음 글에서는 텍스트와 JavaScript에서 텍스트를 조작하는 방법에 대해 알아보겠습니다.
 
-> **Note:** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators) articles.
+> **참고:** 만약 수학을 좋아하고 JavaScript에서 수학이 어떻게 구현되었는지에 대해 더 알고 싶다면, [숫자와 날짜](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates)와 [표현식과 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators)를 참고하세요.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
-## In this module
+## 이 과정은
 
-- [What is JavaScript?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/ko/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/ko/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/ko/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Arrays](/ko/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [JavaScript가 뭔가요?](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [JavaScript에 발 담그기](/ko/docs/Learn/JavaScript/First_steps/A_first_splash)
+- [뭐가 잘못됐을까요? JavaScript 문제 해결](/ko/docs/Learn/JavaScript/First_steps/What_went_wrong)
+- [필요한 정보를 저장하기 — 변수](/ko/docs/Learn/JavaScript/First_steps/Variables)
+- [JavaScript 기초 수학 — 숫자와 연산자](/ko/docs/Learn/JavaScript/First_steps/Math)
+- [텍스트 다루기 — JavaScript의 문자열](/ko/docs/Learn/JavaScript/First_steps/Strings)
+- [유용한 문자열 메서드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods)
+- [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)
+- [평가: 바보같은 이야기 생성기](/ko/docs/Learn/JavaScript/First_steps/Silly_story_generator)

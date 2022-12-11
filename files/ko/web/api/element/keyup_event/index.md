@@ -17,7 +17,7 @@ original_slug: Web/API/Document/keyup_event
 
 {{domxref ( "Document / keydown_event", "keydown")}} 및 `keyup`이벤트는 어떤 키를 눌렀는지 나타내는 코드를 제공하고 {{domxref ( "Document / keypress_event", "keypress")}} 는 입력 된 _문자를_ 나타냅니다. . 예를 들어, 소문자 "a"는 `keydown`및 `keyup`에서는 65로보고 되지만에서는 97 로보고 됩니다 `keypress`. 모든 이벤트에서 대문자 "A"는 65로보고됩니다.
 
-> **참고 :** 입력 값의 변경에 대응하는 방법을 찾고 있다면 `[input event](/en-US/docs/Web/API/HTMLElement/input_event)`를  사용해야합니다. `keyup` 예를 들어 컨텍스트 메뉴의 텍스트를 텍스트 입력에 붙여 넣는 등의 일부 변경 사항은에서 감지 할 수 없습니다.
+> **참고 :** 입력 값의 변경에 대응하는 방법을 찾고 있다면 `[input event](/en-US/docs/Web/API/HTMLElement/input_event)`를 사용해야합니다. `keyup` 예를 들어 컨텍스트 메뉴의 텍스트를 텍스트 입력에 붙여 넣는 등의 일부 변경 사항은에서 감지 할 수 없습니다.
 
 ```js
 eventTarget.addEventListener ( "keyup", event => {

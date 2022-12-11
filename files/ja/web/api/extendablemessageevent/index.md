@@ -69,9 +69,7 @@ addEventListener('message', event => {
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#extendablemessageevent', 'ExtendableMessageEvent')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,15 +1,6 @@
 ---
 title: '<nav>: El elemento de sección de navegación'
 slug: Web/HTML/Element/nav
-tags:
-  - Elemento
-  - HTML5
-  - menu
-  - nav
-  - navegación
-  - programacion
-  - sección
-translation_of: Web/HTML/Element/nav
 original_slug: Web/HTML/Elemento/nav
 ---
 
@@ -32,7 +23,7 @@ Este elemento sólo incluye [atributos globales](/es/docs/Web/HTML/Atributos_Glo
 ## Notas de uso
 
 - No es necesario que todos los enlaces estén contenidos en un elemento `<nav>`. `<nav>` está destinado sólo para el bloque principal de enlaces de navegación; por lo general, el elemento {{HTMLElement("footer")}} a menudo tiene una lista de enlaces que no necesitan estar en un elemento {{HTMLElement("nav")}}.
-- Un documento puede tener varios elementos {{HTMLElement("nav")}}, por ejemplo, uno para la navegación del sitio y otro para la navegación dentro de la página. [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) puede ser utilizado en tal caso para promover la accesibilidad, ver [ejemplo](/es/docs/Web/HTML/Element/Heading_Elements#Labeling_section_content).
+- Un documento puede tener varios elementos {{HTMLElement("nav")}}, por ejemplo, uno para la navegación del sitio y otro para la navegación dentro de la página. [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) puede ser utilizado en tal caso para promover la accesibilidad, ver [ejemplo](/es/docs/Web/HTML/Element/Heading_Elements#Labeling_section_content).
 - Los agentes de usuario, como los lectores de pantalla dirigidos a usuarios con discapacidades, pueden usar este elemento para determinar si se omite la representación inicial del contenido de solo navegación.
 
 ## Ejemplo

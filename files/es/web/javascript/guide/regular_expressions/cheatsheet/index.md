@@ -349,6 +349,6 @@ Si deseas contribuir a este documento, edita también [el artículo original](/e
 Consulta también [PropertyValueAliases.txt](https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt)
 
 - UnicodePropertyValue
-  - : Uno de los fragmentos enumerados en la sección Valores, más adelante. Muchos valores tienen alias o abreviaturas (por ejemplo, el valor `Decimal_Number` para la propiedad `General_Category` se puede escribir cómo `Nd`, `digit`, o `Decimal_number`). Para la mayoría de los valores, la parte _`UnicodePropertyName`_ y el signo igual se pueden omitir. Si se especifica un _`UnicodePropertyName`_, el valor debe corresponder al tipo de propiedad proporcionado.
+  - : Uno de los fragmentos enumerados en la sección Valores, más adelante. Muchos valores tienen alias o abreviaturas (por ejemplo, el valor `Decimal_Number` para la propiedad `General_Category` se puede escribir cómo `Nd`, `digit`, o `Decimal_number`). Para la mayoría de los valores, la parte `UnicodePropertyName` y el signo igual se pueden omitir. Si se especifica un `UnicodePropertyName`, el valor debe corresponder al tipo de propiedad proporcionado.
 
 > **Nota:** Puesto que hay muchas propiedades y valores disponibles, no las describiremos exhaustivamente aquí, sino que proporcionaremos varios ejemplos.

@@ -101,9 +101,7 @@ console.log(generatorFunc.next(10).value); // 26
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#prod-YieldExpression', 'Yield')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

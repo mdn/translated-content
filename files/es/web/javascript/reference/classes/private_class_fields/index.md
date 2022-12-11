@@ -182,11 +182,9 @@ new ClassWithPrivateAccessor();
 // expected output: "✨hello worl​d✨"
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

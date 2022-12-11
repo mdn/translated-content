@@ -5,7 +5,7 @@ slug: WebAssembly/C_to_wasm
 
 {{WebAssemblySidebar}}
 
-당신이 C/C++ 같은 언어로 새로운 모듈을 작성하고 있다면, 당신은 [Emscripten](/ko/docs/Mozilla/Projects/Emscripten)같은 툴을 이용해서 WebAssembly로 컴파일 할 수 있습니다. 이것이 어떻게 가능한지 봅시다.
+당신이 C/C++ 같은 언어로 새로운 모듈을 작성하고 있다면, 당신은 [Emscripten](https://emscripten.org/)같은 툴을 이용해서 WebAssembly로 컴파일 할 수 있습니다. 이것이 어떻게 가능한지 봅시다.
 
 ## Emscripten 환경 준비하기
 

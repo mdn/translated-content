@@ -4,7 +4,7 @@ slug: Web/API/WebRTC_API/Protocols
 translation_of: Web/API/WebRTC_API/Protocols
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 이 글은 WebRTC API에 대한 프로토콜을 소개하기 위해 작성 되었습니다.
 

@@ -282,7 +282,7 @@ function App() {
 
 ### Export 문
 
-`App.js` 파일의 최하단에 있는  `export default App`라는 명령문은 `App` 컴포넌트들을 다른 모듈에서 사용할 수 있게 합니다.
+`App.js` 파일의 최하단에 있는 `export default App`라는 명령문은 `App` 컴포넌트들을 다른 모듈에서 사용할 수 있게 합니다.
 
 ## Interrogating the index
 

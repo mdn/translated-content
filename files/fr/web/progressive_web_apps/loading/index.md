@@ -13,7 +13,7 @@ Dans les articles précédents, nous avons abordé les APIs qui nous aident à f
 
 ## Première visualisation signifiante
 
-Il est important de fournir quelque chose qui ait du sens pour l'utilisateur dès que possible  — plus il attend que la page se charge, plus il y a de chances qu'il s'en aille plutôt que d'attendre que tout soit fini. Nous devrions être capable de lui montrer au moins une vue basique de la page qu'il veut voir avec des emplacements où du contenu supplémentaire sera chargé à un moment donné.
+Il est important de fournir quelque chose qui ait du sens pour l'utilisateur dès que possible — plus il attend que la page se charge, plus il y a de chances qu'il s'en aille plutôt que d'attendre que tout soit fini. Nous devrions être capable de lui montrer au moins une vue basique de la page qu'il veut voir avec des emplacements où du contenu supplémentaire sera chargé à un moment donné.
 
 Ceci peut être réalisé grâce au chargement progressif — également appelé [Lazy loading](https://en.wikipedia.org/wiki/Lazy_loading). Tout ceci consiste en retardant autant que possible le plus de ressources que possible (HTML, CSS, JavaScript), et ne charger immédiatement que celles qui sont réellement nécessaire pour la toute première expérience.
 

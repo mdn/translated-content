@@ -73,9 +73,7 @@ if (isNaN(nLastVisit) || nLastModif > nLastVisit) {
 
 ## 仕様書
 
-| Specification                                                                                                | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', '#dom-document-lastmodified', 'document.lastModified')}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

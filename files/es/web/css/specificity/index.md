@@ -1,13 +1,6 @@
 ---
 title: Especificidad
 slug: Web/CSS/Specificity
-tags:
-  - CSS
-  - Ejemplo
-  - Guía
-  - Principiante
-  - Web
-translation_of: Web/CSS/Specificity
 original_slug: Web/CSS/Especificidad
 ---
 

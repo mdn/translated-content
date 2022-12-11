@@ -5,7 +5,7 @@ slug: Web/CSS/tab-size
 
 {{CSSRef}}{{SeeCompatTable}}
 
-CSS 属性** `tab-size`** 用于自定义制表符 (`U+0009`) 的宽度。
+CSS 属性 **`tab-size`** 用于自定义制表符 (`U+0009`) 的宽度。
 
 ```css
 /* <integer> values */

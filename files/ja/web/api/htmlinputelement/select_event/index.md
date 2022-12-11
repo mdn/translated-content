@@ -69,9 +69,7 @@ input.onselect = logSelection;
 
 ## 仕様書
 
-| 仕様書                                                                       | 状態                         |
-| ---------------------------------------------------------------------------- | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-select', 'select')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

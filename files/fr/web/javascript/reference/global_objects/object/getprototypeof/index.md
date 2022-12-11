@@ -63,6 +63,6 @@ Object.getPrototypeOf("toto");
 
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - Le billet de John Resig sur [getPrototypeOf](http://ejohn.org/blog/objectgetprototypeof/) (en anglais)
 - {{jsxref("Reflect.getPrototypeOf()")}}

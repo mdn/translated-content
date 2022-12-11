@@ -4,6 +4,7 @@ slug: conflicting/Web/API/Window/popstate_event
 translation_of: Web/API/WindowEventHandlers/onpopstate
 original_slug: Web/API/WindowEventHandlers/onpopstate
 ---
+
 {{APIRef}}
 
 ## Sumário

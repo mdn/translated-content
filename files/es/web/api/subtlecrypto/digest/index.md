@@ -1,7 +1,6 @@
 ---
 title: SubtleCrypto.digest()
 slug: Web/API/SubtleCrypto/digest
-translation_of: Web/API/SubtleCrypto/digest
 ---
 
 {{APIRef("Web Crypto API")}}

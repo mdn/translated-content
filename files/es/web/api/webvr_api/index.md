@@ -1,17 +1,6 @@
 ---
 title: WebVR API
 slug: Web/API/WebVR_API
-tags:
-  - API
-  - Experimental
-  - Landing
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - VR
-  - Virtual Reality
-  - WebVR
-translation_of: Web/API/WebVR_API
 ---
 
 {{SeeCompatTable}}{{APIRef("WebVR API")}}
@@ -22,7 +11,7 @@ WebVR proporciona soporte para la exposición de dispositivos de realidad virtua
 
 Any VR devices attached to your computer will be returned by the {{domxref("Navigator.getVRDisplays()")}} method; each one will be represented by a {{domxref("VRDisplay")}} object.
 
-![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](https://mdn.mozillademos.org/files/11035/hw-setup.png)
+![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](hw-setup.png)
 
 {{domxref("VRDisplay")}} is the central interface in the WebVR API — via its properties and methods you can access functionality to:
 

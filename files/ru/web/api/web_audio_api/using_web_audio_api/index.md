@@ -99,7 +99,7 @@ gainNode.connect(audioCtx.destination);
 
 This would create an audio graph like this:
 
-![](https://mdn.mozillademos.org/files/7949/voice-change-o-matic-graph.png)You can also link multiple nodes to one node, for example if you wanted to mix multiple audio sources together, passing them all through a single effect node, like a gain node.
+![](voice-change-o-matic-graph.png)You can also link multiple nodes to one node, for example if you wanted to mix multiple audio sources together, passing them all through a single effect node, like a gain node.
 
 > **Примечание:** From Firefox 32 onwards, the integrated Firefox Developer Tools include a [Web Audio Editor](/ru/docs/Tools/Web_Audio_Editor), which is very useful for debugging web audio graphs.
 

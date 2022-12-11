@@ -13,7 +13,7 @@ translation_of: Web/API/IDBTransaction/objectStore
 
 La méthode **`objectStore()`**, rattachée à l'interface {{domxref("IDBTransaction")}}, renvoie l'accès à un des magasins d'objets liés à la transation sous la forme d'un objet {{domxref("IDBObjectStore")}}.
 
-Si cette méthode est appelée plusieurs fois sur la même transaction et avec le même nom de magasin, elle renverra la même instance de  {{domxref("IDBObjectStore")}}. Si cette méthode est appelée sur une autre transaction, elle renverra une instance différente.
+Si cette méthode est appelée plusieurs fois sur la même transaction et avec le même nom de magasin, elle renverra la même instance de {{domxref("IDBObjectStore")}}. Si cette méthode est appelée sur une autre transaction, elle renverra une instance différente.
 
 {{AvailableInWorkers}}
 
@@ -41,7 +41,7 @@ Un objet {{domxref("IDBObjectStore")}} qui permet d'accéder au magasin d'objets
 
 ## Exemple
 
-Dans le code qui suit, on ouvre une connexion à la base de données. Sur cette connexion, on démarre une transaction (cf.  {{domxref("IDBTransaction")}}) en lecture/écriture afin d'accéder au magasin d'objets `"toDoList"` pour y ajouter un enregistrement (via la méthode {{domxref("IDBObjectStore.add")}}). On notera également l'utilisation des gestionnaires d'événement {{domxref("IDBTransaction.oncomplete")}} et {{domxref("IDBTransaction.onerror")}} de la transaction qui permettent d'afficher la résultat de la transaction sur la page.
+Dans le code qui suit, on ouvre une connexion à la base de données. Sur cette connexion, on démarre une transaction (cf. {{domxref("IDBTransaction")}}) en lecture/écriture afin d'accéder au magasin d'objets `"toDoList"` pour y ajouter un enregistrement (via la méthode {{domxref("IDBObjectStore.add")}}). On notera également l'utilisation des gestionnaires d'événement {{domxref("IDBTransaction.oncomplete")}} et {{domxref("IDBTransaction.onerror")}} de la transaction qui permettent d'afficher la résultat de la transaction sur la page.
 
 La méthode **`objectStore()`** permet d'accéder au magasin d'objets `"toDoList"`.
 

@@ -83,7 +83,7 @@ Every method and property listed in this document has its own reference page and
 
 ## 參見
 
-- [Drag and drop](/Web/Guide/HTML/Drag_and_drop)
-- [Drag Operations](/Web/Guide/HTML/Drag_operations)
-- [Recommended Drag Types](/Web/Guide/HTML/Recommended_Drag_Types)
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [Drag and drop](/zh-TW/docs/Web/Guide/HTML/Drag_and_drop)
+- [Drag Operations](/zh-TW/docs/Web/Guide/HTML/Drag_operations)
+- [Recommended Drag Types](/zh-TW/docs/Web/Guide/HTML/Recommended_Drag_Types)
+- [Dragging and Dropping Multiple Items](/zh-TW/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)

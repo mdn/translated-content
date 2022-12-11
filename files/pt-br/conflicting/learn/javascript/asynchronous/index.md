@@ -4,6 +4,7 @@ slug: conflicting/Learn/JavaScript/Asynchronous
 translation_of: Learn/JavaScript/Asynchronous/Choosing_the_right_approach
 original_slug: Learn/JavaScript/Asynchronous/Choosing_the_right_approach
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
 
 To finish this module off, we'll provide a brief discussion of the different coding techniques and features we've discussed throughout, looking at which one you should use when, with recommendations and reminders of common pitfalls where appropriate. We'll probably add to this resource as time goes on.

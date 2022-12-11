@@ -8,6 +8,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_attribute
 ---
+
 ### Descrição
 
 O atributo [`aria-required`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-required) é usado para indicar que a entrada do usuário é obrigatória em um elemento antes que um formulário possa ser enviado. Este atributo pode ser usado com qualquer elemento de formulário HTML típico; não se limita a elementos que têm uma `role` atribuída.

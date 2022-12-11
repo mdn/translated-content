@@ -502,9 +502,9 @@ SomeModel.find(callback_function);
 
 登錄後，您將進入[mLab 主](https://mlab.com/home)畫面:
 
-1. 單擊*MongoDB Deployments*部分中的**Create New。**![](https://mdn.mozillademos.org/files/14446/mLabCreateNewDeployment.png)
+1. 單擊*MongoDB Deployments*部分中的**Create New。**![](mlabcreatenewdeployment.png)
 2. 這將打開“雲提供商”Cloud Provider 選擇畫面。
-    ![MLab - screen for new deployment](https://mdn.mozillademos.org/files/15661/mLab_new_deployment_form_v2.png)
+    ![MLab - screen for new deployment](mlab_new_deployment_form_v2.png)
 
     - 從“計劃類型”Plan Type 部分中，選擇“SANDBOX（免費）”計劃。
     - 從“雲提供商” *Cloud Provider*部分，選擇任意提供商。不同的提供商，提供不同的地區（顯示在選定的計劃類型下面）。
@@ -512,26 +512,26 @@ SomeModel.find(callback_function);
 
 3. 這將打開“選擇區域” _Select Region_ 畫面。
 
-    ![Select new region screen](https://mdn.mozillademos.org/files/15662/mLab_new_deployment_select_region_v2.png)
+    ![Select new region screen](mlab_new_deployment_select_region_v2.png)
 
     - 選擇離您最近的地區，然後選擇繼續**Continue** .
 
 4. 這將打開 Final Details 畫面。
-    ![New deployment database name](https://mdn.mozillademos.org/files/15663/mLab_new_deployment_final_details.png)
+    ![New deployment database name](mlab_new_deployment_final_details.png)
 
     - 輸入新數據庫的名稱`local_library`，然後選擇繼續**Continue**。
 
 5. 這將打開訂單確認畫面。
-    ![Order confirmation screen](https://mdn.mozillademos.org/files/15664/mLab_new_deployment_order_confirmation.png)
+    ![Order confirmation screen](mlab_new_deployment_order_confirmation.png)
 
     - 單擊“提交訂單” **Submit Order**以創建數據庫。
 
 6. 您將返回到主畫面。單擊剛剛創建的新數據庫，以打開其詳細訊息畫面。正如你所看到的，數據庫沒有集合（數據）。
-    ![mLab - Database details screen](https://mdn.mozillademos.org/files/15665/mLab_new_deployment_database_details.png)
+    ![mLab - Database details screen](mlab_new_deployment_database_details.png)
     您需要用來訪問數據庫的 URL，顯示在上面的表單中（如上圖所示）。為了使用它，您需要創建一個可以在 URL 中指定的數據庫用戶。
 7. 單擊用戶**Users**選項卡，並選擇添加數據庫用戶按鈕**Add database user**。
 8. 輸入用戶名和密碼（兩次），然後按創建**Create**。不要選擇只讀*read-only*。
-    ![](https://mdn.mozillademos.org/files/14454/mLab_database_users.png)
+    ![](mlab_database_users.png)
 
 您現在已經創建了數據庫，並且有一個可以用來訪問它的 URL（帶有用戶名和密碼）。這看起來像是這樣的：`mongodb://your_user_namer:your_password@ds119748.mlab.com:19748/local_library`.
 

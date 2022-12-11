@@ -26,7 +26,7 @@ _{{domxref("EventTarget")}} からもプロパティを継承しています。_
 - {{domxref("IDBRequest.error")}} {{readonlyInline}}
   - : 要求が失敗したとき {{domxref("DOMException")}} を返し、何が失敗したのかを示します。
 - {{domxref("IDBRequest.result")}} {{readonlyInline}}
-  - : 要求の結果を返します。要求に失敗し、結果が得られない場合は、`InvalidStateError` 例外が投げられます。
+  - : 要求の結果を返します。要求が完了していない場合は結果は参照できず、`InvalidStateError` 例外が投げられます。
 - {{domxref("IDBRequest.source")}} {{readonlyInline}}
   - : {{domxref("IDBIndex")}} や {{domxref("IDBObjectStore")}} などの要求元です。({{domxref("IDBFactory.open")}} を呼んだときなど) 要求元が存在しない場合は `null` を返します。
 - {{domxref("IDBRequest.readyState")}} {{readonlyInline}}

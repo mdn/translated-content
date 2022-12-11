@@ -9,7 +9,6 @@ l10n:
 
 {{domxref("PushSubscription")}} インターフェイスの **`expirationTime`** 読み取り専用プロパティは、プッシュサブスクリプションに関連付いたサブスクリプション期限切れ時間を表す {{domxref("DOMHighResTimeStamp")}} を返します。存在しなければ `null` を返します。
 
-
 ## 値
 
 {{domxref("DOMHighResTimeStamp")}} です。

@@ -19,10 +19,7 @@ track = TrackEvent.track;
 
 ## 仕様
 
-| 仕様                                                                                                                         | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "media.html#dom-trackevent-track", "TrackEvent.track")}}                 | {{Spec2('HTML WHATWG')}} | 初期定義 |
-| {{SpecName('HTML5 W3C', "embedded-content-0.html#dom-trackevent-track", "TrackEvent.track")}} | {{Spec2('HTML5 W3C')}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

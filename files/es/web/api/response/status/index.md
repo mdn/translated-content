@@ -1,15 +1,6 @@
 ---
 title: Response.status
 slug: Web/API/Response/status
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - status
-translation_of: Web/API/Response/status
 ---
 
 {{APIRef("Fetch")}}

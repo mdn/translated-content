@@ -97,13 +97,7 @@ slug: Web/HTML/Global_attributes/accesskey
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                                                                                                                                                                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML5.2', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.2')}}     | 現実の実装のためにもっと現実的な振る舞いを記述。                                                                                                                                                                                                                                   |
-| {{SpecName('HTML WHATWG', "interaction.html#the-accesskey-attribute", "accesskey")}} | {{Spec2('HTML WHATWG')}} | 最新の W3C の {{SpecName('HTML5.1')}} から変更なし。                                                                                                                                                                                                                      |
-| {{SpecName('HTML5.1', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.1')}}     | {{SpecName('HTML5 W3C')}} から変更なし。                                                                                                                                                                                                                                    |
-| {{SpecName('HTML5 W3C', "editing.html#the-accesskey-attribute", "accesskey")}}         | {{Spec2('HTML5 W3C')}}     | {{SpecName('HTML4.01')}} から `accesskey` に設定できる文字が増えました。また、任意の要素に設定できるようになりました。                                                                                                                                                     |
-| {{SpecName('HTML4.01', "interact/forms.html#h-17.11.2", "accesskey")}}                     | {{Spec2('HTML4.01')}}     | {{ HTMLElement("a") }}, {{ HTMLElement("area") }}, {{ HTMLElement("button") }}, {{ HTMLElement("input") }}, {{ HTMLElement("label") }}, {{ HTMLElement("legend") }} and {{ HTMLElement("textarea") }} 要素のみ対応。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

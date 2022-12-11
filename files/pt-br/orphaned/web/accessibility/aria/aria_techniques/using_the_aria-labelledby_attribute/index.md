@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
 ---
+
 ### Descrição
 
 Essa técnica demonstra como usar o atributo [`aria-labelledby`](https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby).

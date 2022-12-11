@@ -243,9 +243,7 @@ Lee la [página de referencia](/es/docs/Web/JavaScript/Reference/Operators/typeo
 
 ## Especificaciones
 
-| Especificación                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-ecmascript-data-types-and-values', 'Tipos Data y Values ECMAScript')}} |
+{{Specifications}}
 
 ## Ve también
 

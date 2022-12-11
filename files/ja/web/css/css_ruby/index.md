@@ -16,6 +16,4 @@ slug: Web/CSS/CSS_Ruby
 
 ## 仕様書
 
-| 仕様書                    | 状態                   | 備考     |
-| ------------------------- | ---------------------- | -------- |
-| {{SpecName('CSS3 Ruby')}} | {{Spec2('CSS3 Ruby')}} | 初回定義 |
+{{Specifications}}

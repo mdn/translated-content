@@ -57,7 +57,7 @@ new TypedArray(buffer, byteOffset, length)
 - `length`
   - : `length` 인수와 함께 호출되면, `length`에 _`BYTES_PER_ELEMENT`_ 바이트를 **곱한** 크기의 0으로 채워진 내부 배열 버퍼가 메모리에 생성됩니다.
 - `typedArray`
-  - : `typedArray` 인수를 사용하여 호출하면, `typedArray`가 새 형식화 배열에 복사됩니다. **non-{{glossary("bigint")}}**  `TypedArray`의 경우, `typedArray` 매개변수는 오직 **non**-{{glossary("bigint")}} 종류의 형식화 배열 객체만(예: {{JSxRef("Int32Array")}}) 될 수 있습니다. 마찬가지로 **{{glossary("bigint")}}** `TypedArray`의 경우, `typedArray` 매개변수는 {{glossary("bigint")}} 형식화 배열 종류의 객체(예: {{JSxRef("BigInt64Array")}})만 될 수 있습니다. `typedArray`의 각 값은 새 배열에 복사되기 전에 해당 생성자의 형식으로 변환됩니다. 새로운 형식화 배열의 길이는 `typedArray` 인수의 길이와 동일합니다.
+  - : `typedArray` 인수를 사용하여 호출하면, `typedArray`가 새 형식화 배열에 복사됩니다. **non-{{glossary("bigint")}}** `TypedArray`의 경우, `typedArray` 매개변수는 오직 **non**-{{glossary("bigint")}} 종류의 형식화 배열 객체만(예: {{JSxRef("Int32Array")}}) 될 수 있습니다. 마찬가지로 **{{glossary("bigint")}}** `TypedArray`의 경우, `typedArray` 매개변수는 {{glossary("bigint")}} 형식화 배열 종류의 객체(예: {{JSxRef("BigInt64Array")}})만 될 수 있습니다. `typedArray`의 각 값은 새 배열에 복사되기 전에 해당 생성자의 형식으로 변환됩니다. 새로운 형식화 배열의 길이는 `typedArray` 인수의 길이와 동일합니다.
 - `object`
   - : `object` 인수를 사용하여 호출하면, `TypedArray.from()` 메서드에서와 같이 새로운 형식화 배열이 생성됩니다.
 - `buffer`, `byteOffset`,

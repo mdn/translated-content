@@ -27,7 +27,7 @@ DOMString dataTransfer.getData(format);
 
 ### 注意
 
-[HTML5 拖放规范](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) 规定了一个 `drag data store mode`。这可能会导致预期外的结果，即 **`DataTransfer.getData()` **没有返回预期值。
+[HTML5 拖放规范](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode) 规定了一个 `drag data store mode`。这可能会导致预期外的结果，即 **`DataTransfer.getData()`** 没有返回预期值。
 
 ## 示例
 

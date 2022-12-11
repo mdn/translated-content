@@ -1,11 +1,6 @@
 ---
 title: Window.outerHeight
 slug: Web/API/Window/outerHeight
-tags:
-  - API
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Window/outerHeight
 ---
 
 {{APIRef}}

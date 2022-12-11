@@ -5,7 +5,7 @@ slug: Web/API/Document/DOMContentLoaded_event
 
 {{APIRef}}
 
-当纯 HTML 被完全加载以及解析时，**`DOMContentLoaded` **事件会被触发，而不必等待样式表，图片或者子框架完成加载。
+当纯 HTML 被完全加载以及解析时，**`DOMContentLoaded`** 事件会被触发，而不必等待样式表，图片或者子框架完成加载。
 
 <table class="properties">
   <tbody>

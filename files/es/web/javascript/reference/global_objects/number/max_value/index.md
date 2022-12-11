@@ -1,7 +1,6 @@
 ---
 title: Number.MAX_VALUE
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number/MAX_VALUE
 ---
 

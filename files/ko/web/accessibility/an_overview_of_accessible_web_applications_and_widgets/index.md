@@ -32,7 +32,7 @@ Example 1: 탭 위젯을 ARIA 레이블링 없이 만든 마크업. 마크업에
 </div>
 ```
 
-Example 2: 탭 위젯의 렌더링 화면. 유저는 비주얼로 확인 가능하지만, 보조기술과 같은 기계들은 읽지 못합니다.  [Screenshot of the tabs widget](/@api/deki/files/4926/=Tabs_Widget.png)
+Example 2: 탭 위젯의 렌더링 화면. 유저는 비주얼로 확인 가능하지만, 보조기술과 같은 기계들은 읽지 못합니다. [Screenshot of the tabs widget](/@api/deki/files/4926/=Tabs_Widget.png)
 
 ## ARIA
 
@@ -77,9 +77,12 @@ Dynamic presentational changes include using CSS to change the appearance of con
 
 ARIA provides attributes for declaring the current state of a UI widget. Examples include (but are certainly not limited to):
 
-- **aria-checked**: indicates the state of a checkbox or radio button
-- **aria-disabled**: indicates that an element is visible, but not editable or otherwise operable
-- **aria-grabbed**: indicates the 'grabbed' state of an object in a drag-and-drop operation
+- `aria-checked`
+  - : indicates the state of a checkbox or radio button
+- `aria-disabled`
+  - : indicates that an element is visible, but not editable or otherwise operable
+- `aria-grabbed`
+  - : indicates the 'grabbed' state of an object in a drag-and-drop operation
 
 (For a full list of ARIA states, consult the [ARIA list of states and properties](http://www.w3.org/TR/wai-aria/states_and_properties).)
 

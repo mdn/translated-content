@@ -170,9 +170,7 @@ console.log(customerCity); // Unknown city
 
 ## Especificaciones
 
-| Specification                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#prod-OptionalExpression', 'optional expression')}} |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

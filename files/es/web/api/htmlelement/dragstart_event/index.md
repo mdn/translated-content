@@ -37,7 +37,7 @@ En este ejemplo, tenemos un elemento arrastrable dentro de un contenedor. Intent
 
 Escuchamos el evento `dragstart` para hacer que el elemento sea medio transparente mientras se arrastra.
 
-For a more complete example of [drag](/en-US/docs/Web/API/HTMLElement/drag_event) and drop, see the page for the drag event.
+For a more complete example of [drag](/es/docs/Web/API/HTMLElement/drag_event) and drop, see the page for the drag event.
 
 #### HTML
 

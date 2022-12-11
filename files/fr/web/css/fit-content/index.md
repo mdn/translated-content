@@ -12,7 +12,7 @@ translation_of: Web/CSS/fit-content
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La fonction CSS **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donnée (en utilisant la formule  `min(taille maximale, max(taille minimale, argument))`.
+La fonction CSS **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donnée (en utilisant la formule `min(taille maximale, max(taille minimale, argument))`.
 
 ```css
 /* Valeurs de type <length> */

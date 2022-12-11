@@ -5,7 +5,7 @@ slug: Web/API/Range/surroundContents
 
 {{ ApiRef("Range") }}
 
-**`Range.surroundContents()` **方法将 {{ domxref("Range") }} 对象的内容移动到一个新的节点，并将新节点放到这个范围的起始处。
+**`Range.surroundContents()`** 方法将 {{ domxref("Range") }} 对象的内容移动到一个新的节点，并将新节点放到这个范围的起始处。
 
 这个方法与 `newNode.appendChild(range.extractContents()); range.insertNode(newNode)` 等价。应用以后， `newNode` 包含在 `range` 的边界点中。
 

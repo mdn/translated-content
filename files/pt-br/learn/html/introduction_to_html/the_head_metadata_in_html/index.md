@@ -162,7 +162,7 @@ A descrição também é usada nas páginas de resultados do mecanismo de pesqui
 
 4. Agora, procure por "Mozilla Developer Network" no seu motor de busca favorito (Utilizamos o Yahoo.) Você notará a descrição `<meta>` e `<title>` elemento usado no resultado da pesquisa — definitivamente vale a pena ter!
 
-    ![A Yahoo search result for "Mozilla Developer Network"](https://mdn.mozillademos.org/files/12347/search-result.png)
+    ![A Yahoo search result for "Mozilla Developer Network"](search-result.png)
 
 > **Nota:** No Google, você verá algumas subpáginas relevantes do MDN listadas abaixo do principal link da página inicial do MDN — estes são chamados de sitelinks e são configuráveis nas [Ferramentas para webmasters do Google](http://www.google.com/webmasters/tools/) — uma maneira de melhorar os resultados de pesquisa do seu site no mecanismo de pesquisa do Google.
 

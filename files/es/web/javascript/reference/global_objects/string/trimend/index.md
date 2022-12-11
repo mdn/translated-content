@@ -60,9 +60,7 @@ console.log(str);        // '   foo'
 
 ## Especificaciones
 
-| Especificación                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.trimend', 'String.prototype.trimEnd')}} |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

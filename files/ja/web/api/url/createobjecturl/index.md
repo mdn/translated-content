@@ -46,10 +46,7 @@ objectURL = URL.createObjectURL(object);
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                                             | 備考                                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('File API', '#dfn-createObjectURL', 'createObjectURL()')}}         | {{Spec2('File API')}}                     | 初回定義                                                                                                                                                      |
-| {{SpecName('Media Source Extensions', '#dom-url-createobjecturl', 'URL')}} | {{Spec2('Media Source Extensions')}} | MediaSource 拡張 Older versions of this specification used `createObjectURL()` for {{domxref("MediaStream")}} objects; this is no longer supported. |
+{{Specifications}}
 
 ## ブラウザーの対応
 

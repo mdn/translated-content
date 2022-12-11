@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean
 
 ## 解説
 
-最初の引数に渡された値は、必要に応じて論理値に変換されます。値が省略された場合や、値が `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}},  空文字列 (`""`) であった場合、オブジェクトは `false` の初期値を持ちます。それ以外のあらゆる値は、オブジェクトや空の配列 (`[]`)、"`false`" という文字列も含めて、 `true` の初期値を持つオブジェクトを生成します。
+最初の引数に渡された値は、必要に応じて論理値に変換されます。値が省略された場合や、値が `0`, `-0`, {{jsxref("null")}}, `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, 空文字列 (`""`) であった場合、オブジェクトは `false` の初期値を持ちます。それ以外のあらゆる値は、オブジェクトや空の配列 (`[]`)、"`false`" という文字列も含めて、 `true` の初期値を持つオブジェクトを生成します。
 
 {{Glossary("Primitive", "プリミティブ")}}の `Boolean` 値である `true` や `false` を、 `true` や `false` の値を持った `Boolean` オブジェクトと混同しないでください。
 

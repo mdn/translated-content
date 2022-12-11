@@ -38,7 +38,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 
 ## 프로젝트에 대한 간략한 설명
 
-이제 프로젝트 시작을 위해 가공하지 않은 HTML/CSS 그리고 몇몇 텍스트를  만들고 확인했습니다. 이제 아래와 같은 기능을 하는 프로그램을 만들기 위해 JavaScript를 코딩해야 합니다.
+이제 프로젝트 시작을 위해 가공하지 않은 HTML/CSS 그리고 몇몇 텍스트를 만들고 확인했습니다. 이제 아래와 같은 기능을 하는 프로그램을 만들기 위해 JavaScript를 코딩해야 합니다.
 
 - "랜덤한 이야기 만들기('Generate random story') 버튼를 누를 때 마다 꾸며진 이야기(silly stories)를 만들어야 합니다.
 - "Enter custome name" 필드에 값이 입력되어있지 않을 경우 기본 이름을 Bob으로 지정합니다. "랜덤한 이야기 만들기('Generate random story')" 버튼을 클릭 하면 아래 사진에서 "Chris saw the \~.." 로 시작하는 문장이 "Bob saw the \~.."로 표시되게 합니다.
@@ -64,7 +64,7 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 초기 변수와 함수:
 
 1. 가공 전의 텍스트 파일에서, "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" 바로 밑의 코드를 모두 복사해서 `main.js` 파일의 맨 위에 붙여넣습니다. 이 내용은 세 개의 변수 제공하는데, `customName` 변수는 "Enter custom name" 텍스트 필드 값을 저장하고, `randomize` 변수에는 "Generate random story" 버튼 오브젝트를 저장하고, HTML 바디에 끝에 있는 클래스가 `story`인 [\<p>](/ko/docs/Web/HTML/Element/p) 엘리먼트는 story 변수에 저장하며 해당 엘리먼트에는 랜덤한 이야기가 복사됩니다. 또한, randomValueFromArray() 함수는 배열을 가져와서 배열이 가진 항목 중 하나를 랜덤하게 반환합니다.
-2. 가공전 텍스트 파일의 두번째 섹션 "2. RAW TEXT STRINGS"에는 프로그램에 자동으로 입력되어 랜덤 이야기 엘리먼트에 출력하는 문자열이 포함되어 있습니다.  `main.js` 에 아래 설명대로 변수를 만듭니다:
+2. 가공전 텍스트 파일의 두번째 섹션 "2. RAW TEXT STRINGS"에는 프로그램에 자동으로 입력되어 랜덤 이야기 엘리먼트에 출력하는 문자열이 포함되어 있습니다. `main.js` 에 아래 설명대로 변수를 만듭니다:
 
     1. 먼저 `storyText`변수에 가장 긴 문자열("It was 94 fahrenheit outside, so \~\~" 로 시작하는 문장)을 저장합니다.
     2. `insertX` 배열에 세 개의 문자열 집단의 첫번째(Willy the Goblin, Big Daddy, Father Christmas)를 저장합니다.
@@ -82,15 +82,15 @@ slug: Learn/JavaScript/First_steps/Silly_story_generator
 `result()` 함수 완성하기:
 
 1. `newStory`라 불리는 새 변수를 만들고, 이것의 값(value)를 `storyText` 와 똑같이 설정하세요. 이것은 버튼을 누르고 함수가 수행(run)될 때 마다 새 이야기('story')가 랜덤하게 만들어 질 수 있게 합니다. `storyText`를 직접 변경했다면, 새로운 이야기('story')를 한번만 만들 수 있습니다(함수를 통해서 하지 않으면 정적인 값만 유지한다는 의미).
-2. 세 개의 새로운  변수  `xItem`, `yItem`, 와 `zItem`를 만들고 이 세 개의 변수는 `randomValueFromArray()` 를 반환 결과인 세개의 배열과 같도록 만듭니다(각 경우의 호출 결과는 각 배열에 임의의 아이템). 예를 들어 `randomValueFromArray(insertX)`함수를 호출하면 `insertX` 에서 문자열의 하나를 랜덤하게 가질 수 있다.
-3. 그 다음으로  `newStory` 문자열에 있는 세 개의 placeholders— `:insertx:`, `:inserty:`, `:insertz:` —저장된 `xItem`, `yItem`와 `zItem` 문자열을 이용하여 로 변환하세요. 여기서 특정 문자열 함수가 도움될 것입니다. 이 함수는 각 경우에 `newStory`와 같게되며(대입), 호출 시 마다 `newStory` 의 원래 값과 동일하지만 대체 될 수 있습니다(랜덤으로 값이 변경되는 것을 표현하는 것으로 추정됨) 그러므로 버튼이 눌러질때마다, 이  placeholder는 꾸며진('silly') 문자열로 랜덤하게 교체되게 됩니다. 추가적인 힌트로, 이 문제의 함수는 하위 문자열에서 찾아진 첫번째 인스턴스만 변경되므로, 아마도 두번 이상 이 함수를 호출해야 할 수도 있습니다.
+2. 세 개의 새로운 변수 `xItem`, `yItem`, 와 `zItem` 를 만들고 이 세 개의 변수는 `randomValueFromArray()` 를 반환 결과인 세개의 배열과 같도록 만듭니다(각 경우의 호출 결과는 각 배열에 임의의 아이템). 예를 들어 `randomValueFromArray(insertX)`함수를 호출하면 `insertX` 에서 문자열의 하나를 랜덤하게 가질 수 있다.
+3. 그 다음으로 `newStory` 문자열에 있는 세 개의 placeholders— `:insertx:`, `:inserty:`, `:insertz:` —저장된 `xItem`, `yItem`와 `zItem` 문자열을 이용하여 로 변환하세요. 여기서 특정 문자열 함수가 도움될 것입니다. 이 함수는 각 경우에 `newStory`와 같게되며(대입), 호출 시 마다 `newStory` 의 원래 값과 동일하지만 대체 될 수 있습니다(랜덤으로 값이 변경되는 것을 표현하는 것으로 추정됨) 그러므로 버튼이 눌러질때마다, 이 placeholder는 꾸며진('silly') 문자열로 랜덤하게 교체되게 됩니다. 추가적인 힌트로, 이 문제의 함수는 하위 문자열에서 찾아진 첫번째 인스턴스만 변경되므로, 아마도 두번 이상 이 함수를 호출해야 할 수도 있습니다.
 4. 첫번째 `if` 블록에서, `newStory` 의 'Bob'이라는 이름을 `name` 변수를 사용하여 변환하는 함수를 추가하세요. 이 블록에서 말하는 내용은 "만약 `customName` 텍스트 입력에 값이 들어가 있다면, 이야기속의 Bob을 사용자가 정의한 이름으로 바꾸세요" 라는 의미입니다.
-5. 두번째  `if` 블록에서는 `uk` 라디오 버튼이 선택되었는지 확인합시다. `uk` 라디오 버튼이 눌려졌다면, 이야기('story') 상의 무게('weight')와 온도('temperature') 값 들인  파운드('pounds')와 화씨온도(Fahrenheit) 를 'stones'과 섭씨온도('centigrade')를 바꾸어야 합니다. 필요한 것은 아래와 같습니다:
+5. 두번째 `if` 블록에서는 `uk` 라디오 버튼이 선택되었는지 확인합시다. `uk` 라디오 버튼이 눌려졌다면, 이야기('story') 상의 무게('weight')와 온도('temperature') 값 들인 파운드('pounds')와 화씨온도(Fahrenheit) 를 'stones'과 섭씨온도('centigrade')를 바꾸어야 합니다. 필요한 것은 아래와 같습니다:
 
-    1. 파운드(pound)를  stone, 화씨온도(Fahrenheit) 를 섭씨온도(centigrade)로 변환하는 공식을 참조하라.
+    1. 파운드(pound)를 stone, 화씨온도(Fahrenheit) 를 섭씨온도(centigrade)로 변환하는 공식을 참조하라.
     2. `weight` 변수를 정의하는 라인에서는, 300를 300 파운드를 stones 변환하라. 변환 결과값을 `Math.round()` 를 실행한 결과값 끝에 `' stone'` 을 결합한다(문자열 더하기 연산 또는 concat())
-    3. `temperature` 변수를 정의하는 라인에서는, 94를  화씨(Fahrenheit) 94도를 섭씨온도(centigrade)로 변환하라. 변환 결과값을 `Math.round()` 를 실행한 결과값 끝에 `' centigrade'`을 결합한다(문자열 더하기 연산 또는 concat())
-    4. 두 변수 정의 바로 밑에, '94 화씨온도('farenheit')로  `temperature` 변수의 내용을 변환하는 것과,  '300 pounds'을 `weight` 변수의 내용을 바꾸는 두줄의 문자열 변환라인을 추가한다 .
+    3. `temperature` 변수를 정의하는 라인에서는, 94를 화씨(Fahrenheit) 94도를 섭씨온도(centigrade)로 변환하라. 변환 결과값을 `Math.round()` 를 실행한 결과값 끝에 `' centigrade'`을 결합한다(문자열 더하기 연산 또는 concat())
+    4. 두 변수 정의 바로 밑에, '94 화씨온도('farenheit')로 `temperature` 변수의 내용을 변환하는 것과, '300 pounds'을 `weight` 변수의 내용을 바꾸는 두줄의 문자열 변환라인을 추가한다 .
 
 6. 마지막으로, 함수의 끝 두 줄에 `story` 변수의 `textContent` 속성(property)을 `newStory`와 같게 만드세요.
 

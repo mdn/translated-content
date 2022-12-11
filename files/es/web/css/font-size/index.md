@@ -25,8 +25,8 @@ La propiedad `font-size` especifica la dimensión de la letra. Este tamaño pued
   - : un grupo de palabras clave de dimensión absoluta en relación al que determina el usuario como tamaño por defecto (que es `medium`). De forma parecida a las sentencias HTML `<font size="1">` hasta `<font size="7">` donde el tamaño por defecto es `<font size="3">`.
 - larger, smaller
   - : más grande o más pequeño que el tamaño de letra del elemento padre, con aproximadamente el mismo ratio que el mencionado anteriormente.
-- [\<longitud>](es/CSS/length)
-  - : una unidad positiva de [longitud](es/CSS/length).
+- [\<longitud>](/es/CSS/length)
+  - : una unidad positiva de [longitud](/es/CSS/length).
 
 <!---->
 

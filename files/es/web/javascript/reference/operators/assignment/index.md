@@ -39,9 +39,7 @@ x = n = z // x = n (es decir 10) y z pisa el valor total remplazandolo por 25
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-assignment-operators', 'Assignment operators')}} |
+{{Specifications}}
 
 ## Compatibilidad con Navegadores
 

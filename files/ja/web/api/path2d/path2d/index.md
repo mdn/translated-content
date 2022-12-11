@@ -70,9 +70,7 @@ ctx.fill(p);
 
 ## 仕様
 
-| Specification                                                            | Status                           | Comment             |
-| ------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#dom-path2d', 'Path2D()')}} | {{Spec2('HTML WHATWG')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

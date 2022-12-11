@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/HTMLOrForeignElement/blur
 original_slug: Web/API/HTMLOrForeignElement/blur
 ---
+
 {{ APIRef("HTML DOM") }}
 
 O método **`HTMLElement.blur()`** remove o foco do teclado no elemento corrente.

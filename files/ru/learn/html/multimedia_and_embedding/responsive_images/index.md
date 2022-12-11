@@ -107,11 +107,11 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 Я устанавливал viewport width на 320px, затем на 480px; для каждой я обращался к [DOM Inspector,](/ru/docs/Tools/Page_Inspector) кликал по элементу {{htmlelement("img")}} в котором мы заинтересованы, далее смотрел размер во вкладке Box Model с правой стороны дисплея. Это должно дать вам необходимую ширину изображения
 
-![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](https://mdn.mozillademos.org/files/12932/box-model-devtools.png)
+![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](box-model-devtools.png)
 
 А дальше вы можете проверить работает ли `srcset` если установить значение viewport width таким каким вы хотите (например, установить узкую ширину), открыв Network Inspector (_Tools > Web Developer > Network_) и затем перезагрузить страницу. Это должно дать вам перечень ресурсов которые были загружены чтобы составить (собрать) web-страницу, и тут вы можете проверить какой файл изображения был выбран для загрузки.
 
-![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](https://mdn.mozillademos.org/files/12934/network-devtools.png)
+![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](network-devtools.png)
 
 ### Переключения разрешений: Одинаковый размер, разные разрешения
 

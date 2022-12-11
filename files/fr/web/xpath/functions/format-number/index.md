@@ -30,7 +30,7 @@ format-number( nombre , motif [, format-décimal] )
 <!---->
 
 - `format-décimal` (optionnel)
-  - : Le nom d'un élément [`xsl:decimal-format`](fr/XSLT/decimal-format) qui définit le format de nombre à utiliser. Si il est omis, le format décimal par défaut est utilisé.
+  - : Le nom d'un élément [`xsl:decimal-format`](/fr/XSLT/decimal-format) qui définit le format de nombre à utiliser. Si il est omis, le format décimal par défaut est utilisé.
 
 ### Retour
 

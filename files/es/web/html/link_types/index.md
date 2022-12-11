@@ -1,7 +1,6 @@
 ---
 title: Tipos de enlaces
 slug: Web/HTML/Link_types
-translation_of: Web/HTML/Link_types
 original_slug: Web/HTML/Tipos_de_enlaces
 ---
 
@@ -24,7 +23,7 @@ En HTML, los siguientes tipos de enlaces indican la relación entre dos document
       <td><code>alternate</code></td>
       <td>
        <ul>
-        <li>Si el elemento es {{HTMLElement("link")}} y el atributo  {{htmlattrxref("rel", "link")}} tambien contiene el tipo <code>stylesheet</code>, el enlace define una <a href="/en-US/docs/Alternative_style_sheets">hoja de estilo alternativa</a>; en ese caso el atributo {{htmlattrxref("title", "link")}} deberá estar presente y no ser una cadena vacia.</li>
+        <li>Si el elemento es {{HTMLElement("link")}} y el atributo {{htmlattrxref("rel", "link")}} tambien contiene el tipo <code>stylesheet</code>, el enlace define una <a href="/en-US/docs/Alternative_style_sheets">hoja de estilo alternativa</a>; en ese caso el atributo {{htmlattrxref("title", "link")}} deberá estar presente y no ser una cadena vacia.</li>
         <li>Si el atributo {{htmlattrxref("type","link")}} es puesto a <code>application/rss+xml</code> o <code>application/atom+xml</code>, el enlace define un <a href="/en-US/docs/RSS/Getting_Started/Syndicating">feed de distribución</a>. El primero de ellos definido en la pagina es el tomado por default.</li>
         <li>De otra forma, el enlace define una pagina alternativa, de uno de los siguientes tipos:
          <ul>

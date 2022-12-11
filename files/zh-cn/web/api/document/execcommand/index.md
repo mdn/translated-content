@@ -5,7 +5,7 @@ slug: Web/API/Document/execCommand
 
 {{ApiRef("DOM")}}{{deprecated_header}}
 
-当一个 HTML 文档切换到设计模式时，`document`暴露 **`execCommand` **方法，该方法允许运行命令来操纵[可编辑内容区域](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)的元素。
+当一个 HTML 文档切换到设计模式时，`document`暴露 **`execCommand`** 方法，该方法允许运行命令来操纵[可编辑内容区域](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)的元素。
 
 大多数命令影响`document`的 [selection](/zh-CN/docs/Web/API/Selection)（粗体，斜体等），当其他命令插入新元素（添加链接）或影响整行（缩进）。当使用`contentEditable`时，调用 `execCommand()` 将影响当前活动的可编辑元素。
 

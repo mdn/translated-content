@@ -13,7 +13,7 @@ translation_of: Web/API/ImageCapture/takePhoto
 
 {{APIRef("MediaStream Image")}}
 
-{{domxref("ImageCapture")}} 인터페이스의** `takePhoto()`** 메서드는 {{domxref("MediaStreamTrack")}}을 제공하는 비디오 캡처 장치를 사용해 단일 노출 촬영을 하고, 그 데이터를 담은 {{domxref("Blob")}}으로 이행하는 {{jsxref("Promise")}}를 반환합니다.
+{{domxref("ImageCapture")}} 인터페이스의 **`takePhoto()`** 메서드는 {{domxref("MediaStreamTrack")}}을 제공하는 비디오 캡처 장치를 사용해 단일 노출 촬영을 하고, 그 데이터를 담은 {{domxref("Blob")}}으로 이행하는 {{jsxref("Promise")}}를 반환합니다.
 
 ## 구문
 

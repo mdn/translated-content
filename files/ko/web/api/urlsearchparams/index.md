@@ -29,7 +29,7 @@ for (const [key, value] of mySearchParams.entries()) {}
 ## 생성자
 
 - {{domxref("URLSearchParams.URLSearchParams", 'URLSearchParams()')}}
-  - :  `URLSearchParams` 객체 인스턴스를 반환합니다.
+  - : `URLSearchParams` 객체 인스턴스를 반환합니다.
 
 ## 메서드
 

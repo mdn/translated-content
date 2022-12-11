@@ -12,7 +12,7 @@ original_slug: Web/Compatibility_FAQ/Invalid_Icon_Size.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9971/0105.jpg)
+![](0105.jpg)
 
 ## 要因
 

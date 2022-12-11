@@ -1,14 +1,6 @@
 ---
 title: Marcando una Carta
 slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
-tags:
-  - Cabecera
-  - Codificación
-  - Enlaces
-  - Evaluación
-  - Principiante
-  - Texto
-translation_of: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
 original_slug: Learn/HTML/Introduccion_a_HTML/Marking_up_a_letter
 ---
 
@@ -95,7 +87,7 @@ El encabezamiento del documento:
 
 The following screenshot shows an example of what the letter might look like after being marked up.
 
-![](https://mdn.mozillademos.org/files/12291/letter-screengrab.png)
+![](letter-update.png)
 
 ## Evaluación
 

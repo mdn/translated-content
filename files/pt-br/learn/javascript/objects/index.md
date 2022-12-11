@@ -22,7 +22,7 @@ Antes de iniciar este módulo, você deve ter alguma familiaridade com {{Glossar
 
 Você também deve ter alguma familiaridade com os fundamentos do JavaScript antes de examinar os objetos JavaScript em detalhes. Antes de tentar este módulo, trabalhe nas [primeiras etapas do JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps) e nos [blocos de construção do JavaScript](/pt-BR/docs/Learn/JavaScript/Building_blocks).
 
-> **Nota:** Se você estiver trabalhando em um computador/tablet/outros dispositivos nos quais não é possível criar seus próprios arquivos, experimente (a maioria) os exemplos de código em um programa de codificação on-line, como [JSBin ](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> **Nota:** Se você estiver trabalhando em um computador/tablet/outros dispositivos nos quais não é possível criar seus próprios arquivos, experimente (a maioria) os exemplos de código em um programa de codificação on-line, como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guias
 

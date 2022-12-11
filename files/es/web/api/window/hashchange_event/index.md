@@ -1,11 +1,6 @@
 ---
 title: hashchange
 slug: Web/API/Window/hashchange_event
-tags:
-  - Referencia
-  - URL
-  - Web
-translation_of: Web/API/Window/hashchange_event
 ---
 
 {{ APIRef }}

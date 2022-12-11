@@ -26,9 +26,7 @@ var theTrack = VideoTrackList.getTrackById(id);
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-videotracklist-gettrackbyid', 'VideoTrackList.getTrackById()')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

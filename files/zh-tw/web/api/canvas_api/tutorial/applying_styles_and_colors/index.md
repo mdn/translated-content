@@ -3,7 +3,7 @@ title: 套用樣式與顏色
 slug: Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_shapes", "Web/API/Canvas_API/Tutorial/Drawing_text")}}
 
 在[繪畫圖形](/zh-TW/docs//zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Drawing_shapes)章節中，我們只用了預設的線條與填滿樣式，而在本章，我們將進一步看看所有可用的樣式選項，畫出更吸引人的圖。
 

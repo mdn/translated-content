@@ -1,10 +1,6 @@
 ---
 title: window.fullScreen
 slug: Web/API/Window/fullScreen
-tags:
-  - Referencia_DOM_de_Gecko
-  - páginas_a_traducir
-translation_of: Web/API/Window/fullScreen
 ---
 
 {{APIRef}}

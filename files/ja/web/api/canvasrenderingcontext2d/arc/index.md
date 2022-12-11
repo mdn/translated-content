@@ -28,7 +28,7 @@ void ctx.arc(x, y, radius, startAngle, endAngle [, counterclockwise]);
 - `endAngle`
   - : 円弧の終わりの角度を、 X 軸の正の方向から時計回りに定められるラジアン角で表します。
 - `counterclockwise` {{optional_inline}}
-  - : 省略可能な論理値です。 `true` の場合、円弧を反時計回りに始まりから終わりの角度に向けて描きます。既定値は `fale` （時計回り）です。
+  - : 省略可能な論理値です。 `true` の場合、円弧を反時計回りに始まりから終わりの角度に向けて描きます。既定値は `false` （時計回り）です。
 
 ## 例
 

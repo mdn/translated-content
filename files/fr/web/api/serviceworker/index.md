@@ -14,9 +14,9 @@ translation_of: Web/API/ServiceWorker
 
 {{APIRef("Service Workers API")}}
 
-L'interface **`ServiceWorker`** de l'[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API) met à disposition une référence vers un service worker. Plusieurs  {{glossary("browsing context", "contextes de navigations")}} (par exemple une page, un _worker_, etc.) peuvent être associés au même service worker, chacun à travers un unique objet `ServiceWorker`.
+L'interface **`ServiceWorker`** de l'[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API) met à disposition une référence vers un service worker. Plusieurs {{glossary("browsing context", "contextes de navigations")}} (par exemple une page, un _worker_, etc.) peuvent être associés au même service worker, chacun à travers un unique objet `ServiceWorker`.
 
-Un objet `ServiceWorker` est disponible dans les propriétés  {{domxref("ServiceWorkerRegistration.active")}} et {{domxref("ServiceWorkerContainer.controller")}} — c'est un service worker qui a été activé et qui contrôle la page (ce service worker a été bien enregistré, et la page contrôlée a été rechargée).
+Un objet `ServiceWorker` est disponible dans les propriétés {{domxref("ServiceWorkerRegistration.active")}} et {{domxref("ServiceWorkerContainer.controller")}} — c'est un service worker qui a été activé et qui contrôle la page (ce service worker a été bien enregistré, et la page contrôlée a été rechargée).
 
 L'interface `ServiceWorker` est distribuée à travers différents évènements de son cycle de vie — `install` et `activate` — et d'utilisation, comme `fetch`. Un objet `ServiceWorker` a un état associé {{domxref("ServiceWorker.state")}}, lié à son cycle de vie.
 
@@ -25,7 +25,7 @@ L'interface `ServiceWorker` est distribuée à travers différents évènements 
 _L'interface `ServiceWorker` hérite des propriétés de son parent, le {{domxref("Worker")}}._
 
 - {{domxref("ServiceWorker.scriptURL")}} {{readonlyinline}}
-  - : Retourne la `scriptURL` sérialisée du `ServiceWorker`, définie comme une partie du {{domxref("ServiceWorkerRegistration")}}. Cette URL doit avoir la même origine que le document qui enregistre le  `ServiceWorker`.
+  - : Retourne la `scriptURL` sérialisée du `ServiceWorker`, définie comme une partie du {{domxref("ServiceWorkerRegistration")}}. Cette URL doit avoir la même origine que le document qui enregistre le `ServiceWorker`.
 - {{domxref("ServiceWorker.state")}} {{readonlyinline}}
   - : Retourne le status du service worker. Il retourne l'une des valeurs suivantes : `installing`, `installed,` `activating`, `activated`, or `redundant`.
 

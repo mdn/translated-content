@@ -80,7 +80,7 @@ slug: Learn/JavaScript/First_steps/Strings
     var badQuotes = 'What on earth?";
     ```
 
-3. 브라우저는 다른종류의 따옴표가 감싸고 있어 문자열이 아직 끝나지 않았다고 생각합니다.  예를 들어, 아래 두 가지 모두 괜찮습니다.
+3. 브라우저는 다른종류의 따옴표가 감싸고 있어 문자열이 아직 끝나지 않았다고 생각합니다. 예를 들어, 아래 두 가지 모두 괜찮습니다.
 
     ```js
     var sglDbl = 'Would you eat a "fish supper"?';

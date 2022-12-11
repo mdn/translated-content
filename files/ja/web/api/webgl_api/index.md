@@ -1,15 +1,17 @@
 ---
 title: 'WebGL: ウェブの 2D および 3D グラフィック'
 slug: Web/API/WebGL_API
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
 
 {{WebGLSidebar}}
 
-WebGL (Web Graphics Library) は、互換性があるウェブブラウザーでプラグインを使用せずにインタラクティブな 3D グラフィックスや 2D グラフィックスをレンダリングするための JavaScript API です。HTML5 {{HTMLElement("canvas")}} 要素へ OpenGL ES 2.0 に密接に従った API を導入することにより、WebGL を実現します。これにより、ユーザーの端末が提供するハードウェアのグラフィックアクセラレーションを API で利用することが可能になります。
+WebGL (Web Graphics Library) は、互換性があるウェブブラウザーでプラグインを使用せずにインタラクティブな 3D グラフィックや 2D グラフィックをレンダリングするための JavaScript API です。HTML の {{HTMLElement("canvas")}} 要素へ OpenGL ES 2.0 に密接に従った API を導入することにより、WebGL を実現します。これにより、ユーザーの端末が提供するハードウェアのグラフィックアクセラレーションを API で利用することが可能になります。
 
-WebGL は [Firefox](/ja/Firefox) 4 以降、[Google Chrome](https://www.google.com/chrome/) 9 以降、[Opera](https://www.opera.com/) 12 以降、[Safari](https://www.apple.com/jp/safari/) 5.1 以降、[Internet Explorer](http://windows.microsoft.com/ja-jp/internet-explorer/browser-ie) 11 以降、[Microsoft Edge](https://www.microsoft.com/ja-jp/edge) build 10240 以降でサポートしていますが、ユーザーの端末がこの機能をサポートするハードウェアであることも必要です。
+WebGL は [Firefox](/ja/docs/Mozilla/Firefox) 4 以降、[Google Chrome](https://www.google.com/chrome/) 9 以降、[Opera](https://www.opera.com/) 12 以降、[Safari](https://www.apple.com/safari/) 5.1 以降、[Internet Explorer](https://support.microsoft.com/en-us/windows/internet-explorer-help-23360e49-9cd3-4dda-ba52-705336cc0de2) 11 以降、[Microsoft Edge](https://www.microsoft.com/ja-jp/edge) build 10240 以降でサポートしていますが、ユーザーの端末がこの機能をサポートするハードウェアであることも必要です。
 
-{{HTMLElement("canvas")}} 要素は、ウェブページで 2D グラフィックスを表示する [Canvas 2D](/ja/docs/Web/API/Canvas_API) でも使用します。
+WebGL 2](#webgl_2) API は OpenGL ES 3.0 の機能セットの大部分に対応しています。このインターフェイスは {{domxref("WebGL2RenderingContext")}} インターフェイスを通して提供されています。
 
 ウェブページ上の 2D グラフィックを実現するには、 {{HTMLElement("canvas")}} 要素で [Canvas API](/ja/docs/Web/API/Canvas_API) を使用する方法もあります。
 
@@ -44,11 +46,13 @@ WebGL は [Firefox](/ja/Firefox) 4 以降、[Google Chrome](https://www.google.c
 - {{domxref("EXT_disjoint_timer_query")}}
 - {{domxref("EXT_float_blend")}} {{experimental_inline}}
 - {{domxref("EXT_frag_depth")}}
-- {{domxref("EXT_sRGB")}}
 - {{domxref("EXT_shader_texture_lod")}}
+- {{domxref("EXT_sRGB")}}
 - {{domxref("EXT_texture_compression_bptc")}}
 - {{domxref("EXT_texture_compression_rgtc")}}
 - {{domxref("EXT_texture_filter_anisotropic")}}
+- {{domxref("EXT_texture_norm16")}}
+- {{domxref("KHR_parallel_shader_compile")}}
 - {{domxref("OES_element_index_uint")}}
 - {{domxref("OES_fbo_render_mipmap")}}
 - {{domxref("OES_standard_derivatives")}}
@@ -60,7 +64,6 @@ WebGL は [Firefox](/ja/Firefox) 4 以降、[Google Chrome](https://www.google.c
 - {{domxref("OVR_multiview2")}}
 - {{domxref("WEBGL_color_buffer_float")}}
 - {{domxref("WEBGL_compressed_texture_astc")}}
-- {{domxref("WEBGL_compressed_texture_atc")}}
 - {{domxref("WEBGL_compressed_texture_etc")}}
 - {{domxref("WEBGL_compressed_texture_etc1")}}
 - {{domxref("WEBGL_compressed_texture_pvrtc")}}
@@ -71,6 +74,7 @@ WebGL は [Firefox](/ja/Firefox) 4 以降、[Google Chrome](https://www.google.c
 - {{domxref("WEBGL_depth_texture")}}
 - {{domxref("WEBGL_draw_buffers")}}
 - {{domxref("WEBGL_lose_context")}}
+- {{domxref("WEBGL_multi_draw")}}
 
 ### イベント
 
@@ -88,14 +92,14 @@ WebGL は [Firefox](/ja/Firefox) 4 以降、[Google Chrome](https://www.google.c
 WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによって提供される、WebGL の大規模なアップデートです。これは OpenGL ES 3.0 に基づいており、以下の新機能を含みます:
 
 - [3D テクスチャ](/ja/docs/Web/API/WebGL2RenderingContext/texImage3D)、
-- [Sampler object](/ja/docs/Web/API/WebGLSampler)、
-- [Uniform Buffer object](/ja/docs/Web/API/WebGL2RenderingContext#Uniform_buffer_objects)、
-- [Sync object](/ja/docs/Web/API/WebGLSync)、
-- [Query object](/ja/docs/Web/API/WebGLQuery)、
-- [Transform Feedback object](/ja/docs/Web/API/WebGLTransformFeedback)、
-- WebGL 2 のコア機能に昇格した拡張: [Vertex Array object](/ja/docs/Web/API/WebGLVertexArrayObject)、[instancing](/ja/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced)、[Multiple Render Targets](/ja/docs/Web/API/WebGL2RenderingContext/drawBuffers)、[fragment depth](/ja/docs/Web/API/EXT_frag_depth)。
+- [Sampler オブジェクト](/ja/docs/Web/API/WebGLSampler)、
+- [Uniform Buffer オブジェクト](/ja/docs/Web/API/WebGL2RenderingContext#uniform_buffer_objects)、
+- [Sync オブジェクト](/ja/docs/Web/API/WebGLSync)、
+- [Query オブジェクト](/ja/docs/Web/API/WebGLQuery)、
+- [Transform Feedback オブジェクト](/ja/docs/Web/API/WebGLTransformFeedback)、
+- WebGL 2 のコア機能に昇格した拡張: [Vertex Array オブジェクト](/ja/docs/Web/API/WebGLVertexArrayObject)、[instancing](/ja/docs/Web/API/WebGL2RenderingContext/drawArraysInstanced)、[Multiple Render Targets](/ja/docs/Web/API/WebGL2RenderingContext/drawBuffers)、[fragment depth](/ja/docs/Web/API/EXT_frag_depth)。
 
-["WebGL 2 lands in Firefox"](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/) のブログ記事や、[webglsamples.org/WebGL2Samples](http://webglsamples.org/WebGL2Samples/) のデモもご覧ください。
+["WebGL 2 lands in Firefox"](https://hacks.mozilla.org/2017/01/webgl-2-lands-in-firefox/) のブログ記事や、[webglsamples.org/WebGL2Samples](https://webglsamples.org/WebGL2Samples/) のデモもご覧ください。
 
 ## ガイドとチュートリアル
 
@@ -105,7 +109,7 @@ WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによ
 
 - [WebGL でのデータ](/ja/docs/Web/API/WebGL_API/Data)
   - : 変数、バッファ、その他の WebGL コードを書く時に使うデータタイプのガイド
-- [WebGL ベストプラクティス](/ja/docs/Web/API/WebGL_API/WebGL_best_practices)
+- [WebGL のベストプラクティス](/ja/docs/Web/API/WebGL_API/WebGL_best_practices)
   - : WebGL のコンテンツの品質、パフォーマンス、信頼性を改善するためのヒントと提案です
 - [拡張機能](/ja/docs/Web/API/WebGL_API/Using_Extensions)
   - : WebGL で利用可能な拡張機能の使用方法です
@@ -127,57 +131,47 @@ WebGL 2 は {{domxref("WebGL2RenderingContext")}} インターフェイスによ
 - [WebGL model view projection](/ja/docs/Web/API/WebGL_API/WebGL_model_view_projection)
   - : 3D オブジェクトビューを表現するためによく使用する 3 つの主要な行列 (モデル行列、ビュー行列、プロジェクション行列) について、詳しく説明します
 - [Matrix math for the web](/ja/docs/Web/API/WebGL_API/Matrix_math_for_the_web)
-  - : 3D 変換行列がどのように働くか、および Web (WebGL の演算や、CSS3 Transform) でどのように使用できるかのガイドです
+  - : 3D 変換行列がどのように働くか、およびウェブ (WebGL の演算や、CSS 座標変換) でどのように使用できるかのガイドです
 
 ## リソース
 
-- [Raw WebGL: An introduction to WebGL](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage): WebGL の基礎を Nick Desaulniers が紹介します。低レベルのグラフィックスプログラミングを行ったことがない方におすすめします。
-- [Khronos WebGL サイト](http://www.khronos.org/webgl/): Khronos Group の WebGL についてのメインサイト
-- [WebGL Fundamentals](http://www.html5rocks.com/en/tutorials/webgl/webgl_fundamentals/): WebGL の基礎と、基本的なチュートリアルがあります。
+- [Khronos WebGL サイト](https://www.khronos.org/webgl/): Khronos Group の WebGL についてのメインサイト
+- [WebGL Fundamentals](https://web.dev/webgl-fundamentals/): WebGL の基礎と、基本的なチュートリアルがあります。
+- [Raw WebGL: An introduction to WebGL](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) Nick Desaulniers による、 WebGL の基本的な部分を紹介する講演です。
 - [WebGL playground](http://webglplayground.net): WebGL プロジェクトの作成と共有ができるオンラインツール。迅速なプロトタイピングや実験に最適です。
 - [WebGL Academy](http://www.webglacademy.com): WebGL プログラミングの基礎を学ぶチュートリアルがある、 HTML/JavaScript エディターです。
 - [WebGL Stats](http://webglstats.com/): さまざまなプラットフォームのブラウザーについて、WebGL の機能性の状況を示すサイトです。
 
 ### ライブラリー
 
-- [glMatrix](https://github.com/toji/gl-matrix): 高性能 WebGL アプリ製作のための、行列とベクトルの JavaScript ライブラリー
-- [PhiloGL](http://senchalabs.github.com/philogl/) is a WebGL framework for data visualization, creative coding, and game development.
-- [Pixi.js](http://www.pixijs.com/) is a fast, open-source 2D WebGL renderer.
-- [PlayCanvas](https://playcanvas.com/) is an open-source game engine.
-- [Sylvester](http://sylvester.jcoglan.com/): ベクトルや行列を操作するためのオープンソースライブラリー。WebGL 用として最適化されたものではありませんが、非常に堅牢です。
-- [three.js](https://threejs.org/) is an open-source, fully featured 3D WebGL library.
-- [Phaser](https://phaser.io/) is a fast, free and fun open source framework for Canvas and WebGL powered browser games.
-- [RedGL](https://github.com/redcamel/RedGL2) is an open-source 3D WebGL library.
-- [vtk.js](https://kitware.github.io/vtk-js/) is a JavaScript library for scientific visualization in your browser.
+- [three.js](https://threejs.org/) はオープンソースでフル機能の 3D WebGL ライブラリーです。
+- [Babylon.js](https://www.babylonjs.com) は、パワフルで単純、かつオープンなゲームおよび 3D レンダリングエンジンで、分かりやすい JavaScript フレームワークにまとめられています。
+- [Pixi.js](https://pixijs.com/) は、高速でオープンソースの 2D WebGL レンダラーです。
+- [Phaser](https://phaser.io/) は、キャンバスや WebGL を使ったブラウザーゲームのための、高速で、無料で、楽しいオープンソースのフレームワークです。
+- [PlayCanvas](https://playcanvas.com/) は、オープンソースのゲームエンジンです。
+- [glMatrix](https://github.com/toji/gl-matrix) は、高性能な WebGL アプリケーションのための JavaScript の行列およびベクトルライブラリーです。
+- [twgl](https://twgljs.org) は、webgl の冗長性を減らすためのライブラリーです。
+- [RedGL](https://github.com/redcamel/RedGL2) は、オープンソースの 3D WebGL ライブラリです。
+- [vtk.js](https://kitware.github.io/vtk-js/) は、ブラウザー上で科学的な可視化を行うための JavaScript ライブラリーです。
+- [webgl-lint](https://greggman.github.io/webgl-lint/) は、 WebGLコードのエラーを探し、有益な情報を提供するのに役立ちます。
 
 ## 仕様書
 
-| 仕様書                                   | 状態                                 | 備考                                         |
-| ---------------------------------------- | ------------------------------------ | -------------------------------------------- |
-| {{SpecName('OpenGL ES 3.0')}} | {{Spec2('OpenGL ES 3.0')}} |                                              |
-| {{SpecName('OpenGL ES 2.0')}} | {{Spec2('OpenGL ES 2.0')}} |                                              |
-| {{SpecName('WebGL2')}}             | {{Spec2('WebGL2')}}             | WebGL 1 の上に構築。OpenGL ES 3.0 に基づく。 |
-| {{SpecName('WebGL')}}             | {{Spec2('WebGL')}}             | 初回定義。OpenGL ES 2.0 に基づく。           |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-### WebGL 1
-
-{{Compat("api.WebGLRenderingContext", 0)}}
-
-### WebGL 2
-
-{{Compat("api.WebGL2RenderingContext", 0)}}
+{{Compat}}
 
 ### 互換性に関する注記
 
 ブラウザだけでなく、GPU も機能をサポートしていなければなりません。よって、例えば S3 Texture Compression (S3TC) は Tegra ベースのタブレットでしか使用できません。ほとんどのブラウザーでは WebGL コンテキストを、コンテキスト名 `webgl` で作成しますが、古いブラウザーでは `experimental-webgl` も必要です。さらに将来の [WebGL 2](/ja/docs/Web/API/WebGL2RenderingContext) では完全な下位互換性があり、コンテキスト名 `webgl2` を持ちます。
 
-### Gecko に関する注記
+### Gecko に関するメモ
 
 #### WebGL のデバッグおよびテスト
 
-Gecko 10.0 {{geckoRelease("10.0")}} 以降には、テストなどの目的で WebGL の機能を制限する 2 つの設定項目があります。
+Firefox では、テストなどの目的で WebGL の機能を制限する 2 つの設定項目があります。
 
 - `webgl.min_capability_mode`
   - : この論理属性に `true` を指定すると、最小互換性モードが有効となります。このモードでは、必要最低限の機能セットと WebGL の仕様で指定された機能のみが使用可能です。このモードで動作確認を行うことにより、より多くの閲覧環境での動作を保証することができます。初期値は `false` です。

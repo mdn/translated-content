@@ -76,9 +76,7 @@ do {
 
 ## Especificaciones
 
-| Especificación                                                                   |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-classranges', 'RegExp: Ranges')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

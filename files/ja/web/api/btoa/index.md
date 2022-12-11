@@ -97,11 +97,7 @@ console.log(original);                // ☸☹☺☻☼☾☿
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-btoa', 'WindowOrWorkerGlobalScope.btoa()')}} | {{Spec2('HTML WHATWG')}} | 最新の仕様で、メソッドを `WindowOrWorkerGlobalScope` ミックスインに移動。                                                   |
-| {{SpecName('HTML5.1', '#dom-windowbase64-btoa', 'WindowBase64.btoa()')}}     | {{Spec2('HTML5.1')}}     | {{SpecName("HTML WHATWG")}} のスナップショット、変更なし。                                                         |
-| {{SpecName("HTML5 W3C", "#dom-windowbase64-btoa", "WindowBase64.btoa()")}} | {{Spec2('HTML5 W3C')}}     | {{SpecName("HTML WHATWG")}} のスナップショット。 `WindowBase64` の作成 (properties where on the target before it). |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

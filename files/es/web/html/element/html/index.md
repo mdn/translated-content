@@ -1,18 +1,6 @@
 ---
 title: <html>
 slug: Web/HTML/Element/html
-tags:
-  - Element
-  - Elemento
-  - HTML
-  - HTML Root Element
-  - HTML elemento raiz
-  - HTML:Elemento
-  - Reference
-  - Referencia
-  - Todas_las_Categorías
-  - Web
-translation_of: Web/HTML/Element/html
 original_slug: Web/HTML/Elemento/html
 ---
 

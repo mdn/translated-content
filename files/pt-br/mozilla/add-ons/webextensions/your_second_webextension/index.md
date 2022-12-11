@@ -23,7 +23,7 @@ Para implementar esse extensão, será necessário:
 
 Você pode visualizar toda a estrutura da extensão da seguinte forma:
 
-![](https://mdn.mozillademos.org/files/11467/beastify-anatomy.svg)
+![](beastify-anatomy.svg)
 
 É uma extensão extremamente simples, mas mostra muitos conceitos básicos da API de Extensões:
 

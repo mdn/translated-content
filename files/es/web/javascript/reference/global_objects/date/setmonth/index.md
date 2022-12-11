@@ -1,7 +1,6 @@
 ---
 title: Date.prototype.setMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setMonth
 ---
 
@@ -54,9 +53,7 @@ console.log(endOfMonth); //Wed Mar 02 2016 00:00:00
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-date.prototype.setmonth', 'Date.prototype.setMonth')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

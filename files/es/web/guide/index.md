@@ -28,7 +28,7 @@ Este artículo proporciona información para ayudarte a hacer uso de tecnología
 
 <!---->
 
-- [Progressive Web Apps (PWA)](/en-US/Apps/Progressive#Core_PWA_guides)
+- [Progressive Web Apps (PWA)](/es/Apps/Progressive#Core_PWA_guides)
   - : Las aplicaciones web progresivas usan APIs Web modernas junto con mejoras progresivas estratégicas para crear aplicaciones multi-plataforma. Estas aplicaciones funcionan donde sea y proporcionan muchas características que brindan la misma experiencia de usuario que una aplicación nativa. Este conjunto de documentos y guías te indican sobre todo lo que debes saber de las PWAs.
 - [Optimización y Rendimiento](/es/docs/Web/Guide/Performance)
   - : Cuando creamos modernas Web apps y páginas web, es importante hacer que tu contenido rinda bien. Eso es, hacer que funcione de forma rápida y eficiente. Esto permite trabajar de forma más efectiva tanto a los usuarios de potentes equipos de sobremesa como a los que utilizan dispositivos portátiles con menos potencia.

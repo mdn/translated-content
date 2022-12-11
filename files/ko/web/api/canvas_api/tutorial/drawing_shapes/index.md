@@ -11,7 +11,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/HTML/Canvas/Tutorial/Drawing_shapes
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 앞서 캔버스 환경 설정([canvas environment](/ko/docs/Web/API/Canvas_API/Tutorial/Basic_usage))을 완료 하였다면, 이제 어떻게 캔버스에 그릴수 있는지에 대하여 자세하게 알아봅시다. 이 글을 끝내고 난 후, 여러분은 어떻게 사각형, 삼각형, 선, 아치, 곡선 등 의 기본적인 도형을 그릴수 있는지 익히실 수 있을 것 입니다. 캔버스 위에 물체를 그릴 때에는 path를 사용하는것이 필수적이므로 우리는 이것이 어떻게 사용되는지 볼 것입니다.
 

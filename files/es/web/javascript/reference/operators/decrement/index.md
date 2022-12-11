@@ -52,9 +52,7 @@ b = --a;
 
 ## Especificaciones
 
-| Especificaciones                                                                                             |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-postfix-decrement-operator', 'Decrement operator')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

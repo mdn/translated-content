@@ -47,7 +47,7 @@ Feature-Policy: <directive> <allowlist>
     - `'none'`&nbsp;: La fonctionnalité est désactivée pour le document (niveau le plus haut) et les contextes de navigation imbriqués.
     - `<origin(s)>`&nbsp;: La fonctionnalité est autorisée pour des origines distinctes (par exemple, `https://example.com`). Lorsqu'on indique plusieurs origines, celles-ci doivent être séparées par un espace.
 
-    Les valeurs  `*` (autorisation pour toutes les origines) ou `'none'` (désactivation pour toutes les origines) peuvent être utilisées seules. `'self'` et `'src'` peuvent, quant à elles, être utilisées avec une ou plusieurs origines.
+    Les valeurs `*` (autorisation pour toutes les origines) ou `'none'` (désactivation pour toutes les origines) peuvent être utilisées seules. `'self'` et `'src'` peuvent, quant à elles, être utilisées avec une ou plusieurs origines.
 
     Chaque fonctionnalité en question possède une liste d'autorisation par défaut qui est&nbsp;: `*`, `'self'`, ou `'none'`.
 
@@ -76,7 +76,7 @@ Feature-Policy: <directive> <allowlist>
 - [`fullscreen`](/fr/docs/Web/HTTP/Headers/Feature-Policy/fullscreen)
   - : Contrôle si le document courant est autorisé à utiliser [`Element.requestFullScreen()`](/fr/docs/Web/API/Element/requestFullScreen). Quand cette directive est désactivée, la promesse retournée sera rejetée avec une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
 - [`gamepad`](/fr/docs/Web/HTTP/Headers/Feature-Policy/gamepad)
-  - : Contrôle si le document courant peut utiliser l'[API Gamepad](/fr/docs/Web/API/Gamepad_API). Lorsque cette fonctionnalité n'est pas autorisée, [`Navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) lèvera une exception ([`DOMException`](/fr/docs/Web/API/DOMException))  `SecurityError`, et les évènements [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) et [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event) ne seront pas déclenchés.
+  - : Contrôle si le document courant peut utiliser l'[API Gamepad](/fr/docs/Web/API/Gamepad_API). Lorsque cette fonctionnalité n'est pas autorisée, [`Navigator.getGamepads()`](/fr/docs/Web/API/Navigator/getGamepads) lèvera une exception ([`DOMException`](/fr/docs/Web/API/DOMException)) `SecurityError`, et les évènements [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) et [`gamepaddisconnected`](/fr/docs/Web/API/Window/gamepaddisconnected_event) ne seront pas déclenchés.
 - [`geolocation`](/fr/docs/Web/HTTP/Headers/Feature-Policy/geolocation)
   - : Contrôle si le document courant est autorisé à utiliser l'interface [`Geolocation`](/fr/docs/Web/API/Geolocation). Quand cette directive est désactivée, les appels à [`getCurrentPosition()`](/fr/docs/Web/API/Geolocation/getCurrentPosition) et [`watchPosition()`](/fr/docs/Web/API/Geolocation/watchPosition) causeront un appel de leurs fonctions de rappel avec une exception [`PositionError`](/fr/docs/Web/API/PositionError) dont le code est `PERMISSION_DENIED`.
 - [`gyroscope`](/fr/docs/Web/HTTP/Headers/Feature-Policy/gyroscope)

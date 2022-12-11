@@ -157,7 +157,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 
 다만 진짜 강조를 해야하는 상황에는, 따옴표로 강조하고 PR로 소명합니다.
 
-### `:` 쌍점,  `;` 쌍반점 지침
+### `:` 쌍점, `;` 쌍반점 지침
 
 뒤의 문장 예시를 강조하기 위해 쌍점을 사용하는 경우에 `: 쌍점`은 한글 문법에 적합하지 않습니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-964241518)
 

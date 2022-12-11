@@ -1,9 +1,6 @@
 ---
 title: toString
 slug: Web/API/Selection/toString
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/toString
 ---
 
 {{ ApiRef("DOM") }}
@@ -28,7 +25,7 @@ Ninguno.
 
 Este método devuelve el texto seleccionado.
 
-En [JavaScript](es/JavaScript), este método es llamado automáticamente cuando una función, a la cual es pasado como parámetro el objeto de selección, requiere una cadena de caracteres (texto):
+En [JavaScript](/es/JavaScript), este método es llamado automáticamente cuando una función, a la cual es pasado como parámetro el objeto de selección, requiere una cadena de caracteres (texto):
 
 ```
 alert(window.getSelection()) // Lo que se llama.
@@ -37,4 +34,4 @@ alert(window.getSelection().toString())  // Lo que está siendo efectivamente ll
 
 ### Ver también
 
-- [Object.toString](es/Core_JavaScript_1.5_Reference/Objects/Object/toString)
+- [Object.toString](/es/Core_JavaScript_1.5_Reference/Objects/Object/toString)

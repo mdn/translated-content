@@ -1,12 +1,6 @@
 ---
 title: DOM
 slug: Glossary/DOM
-tags:
-  - API
-  - DOM
-  - Glosario
-  - scripts
-translation_of: Glossary/DOM
 ---
 
 El _DOM_ (Document Object Model, en español **Modelo de Objetos del Documento**) es una [API](/es/docs/Glossary/API) definida para representar e interactuar con cualquier documento [HTML](/es/docs/Glossary/HTML) o [XML](/es/docs/Glossary/XML). El DOM es un modelo de documento que se carga en el [navegador web](/es/docs/Glossary/Browser) y que representa el documento como un árbol de nodos, en donde cada nodo representa una parte del documento (puede tratarse de un [elemento](/es/docs/Glossary/element), una cadena de texto o un comentario).

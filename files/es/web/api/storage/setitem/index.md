@@ -1,14 +1,6 @@
 ---
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
-tags:
-  - API
-  - Almacenamiento
-  - Almacenamiento web
-  - Storage
-  - Web Storage
-  - metodo
-translation_of: Web/API/Storage/setItem
 ---
 
 {{APIRef("Web Storage API")}}

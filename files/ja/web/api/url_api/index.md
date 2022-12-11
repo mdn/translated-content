@@ -92,9 +92,7 @@ function fillTableWithParameters(tbl) {
 
 ## 仕様書
 
-| 仕様書                   | 状態                 | 備考     |
-| ------------------------ | -------------------- | -------- |
-| {{SpecName('URL')}} | {{Spec2('URL')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

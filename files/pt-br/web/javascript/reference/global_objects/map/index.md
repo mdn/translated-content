@@ -157,7 +157,7 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
         <p>
           (Mas você pode construir sua própria serialização e conversão para o <code>Map</code> usando o
           {{jsxref("JSON.stringify()")}} como o argumento <em>replacer</em>,
-          e usando o  {{jsxref("JSON.parse()")}} com o argumento <em>reviver</em>.
+          e usando o {{jsxref("JSON.parse()")}} com o argumento <em>reviver</em>.
           Veja a questão no Stack Overflow     <a href="https://stackoverflow.com/q/29085197/"
             >How do you JSON.stringify an ES6 Map?</a
           >).

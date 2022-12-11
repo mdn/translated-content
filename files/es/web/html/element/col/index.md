@@ -1,11 +1,6 @@
 ---
 title: col
 slug: Web/HTML/Element/col
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/col
 original_slug: Web/HTML/Elemento/col
 ---
 
@@ -16,7 +11,7 @@ original_slug: Web/HTML/Elemento/col
   
     **Crea una caja**: No.
 
-    **Está definido como**: Elemento [para tablas.](es/HTML/Elemento/Tipos_de_elementos#para_tablas).
+    **Está definido como**: Elemento [para tablas.](/es/HTML/Elemento/Tipos_de_elementos#para_tablas).
 
     **Puede contener**: Nada.
 

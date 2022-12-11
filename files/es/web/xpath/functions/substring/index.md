@@ -16,13 +16,13 @@ substring( string , start [, length] )
 
 ### Argumentos
 
-- _`string`_
+- `string`
   - : La cadena a evaluar.
 
-- _`start`_
-  - : La posición dentro de _`string`_ donde comienza la subcadena.
+- `start`
+  - : La posición dentro de `string` donde comienza la subcadena.
 
-- _`length`_ (opcional)
+- `length` (opcional)
   - : La longitud de la subcadena. Si se omite, la cadena devuelta contendrá todos los carácteres desde la posición _`start`_ hasta el final de _`string`_.
 
 ### Devuelve

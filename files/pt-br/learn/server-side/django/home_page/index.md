@@ -55,7 +55,7 @@ As URLs que iremos precisar na nossa página são:
 - `catalog/books/` — Uma lista de todos os livros.
 - `catalog/authors/` — Uma lista de todos os autores.
 - `catalog/book/<id>` — A exibição de detalhes de um livro específico, com uma chave primária de campo `<id>` (o padrão). Por exemplo, o URL do terceiro livro adicionado à lista será `/catalog/book/3`.
-- `catalog/author/<id>` — A exibição de detalhes para o autor específico com um campo de chave primária de _`<id>`. Por exemplo, o URL do 11º autor adicionado à lista será `/catalog/author/11`.
+- `catalog/author/<id>` — A exibição de detalhes para o autor específico com um campo de chave primária de `<id>`. Por exemplo, o URL do 11º autor adicionado à lista será `/catalog/author/11`.
 
 Os três primeiros URLs retornarão a página de índice, a lista de livros e a lista de autores. Esses URLs não codificam nenhuma informação adicional e as consultas que buscam dados no banco de dados sempre serão as mesmas. No entanto, os resultados retornados pelas consultas dependerão do conteúdo do banco de dados.
 

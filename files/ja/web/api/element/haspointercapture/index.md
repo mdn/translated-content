@@ -56,9 +56,7 @@ targetElement.hasPointerCapture(pointerId);
 
 ## 仕様
 
-| 仕様                                                                                                                 | 状態                                     | コメント |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2','#dom-element-haspointercapture', 'hasPointerCapture()')}} | {{Spec2('Pointer Events 2')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

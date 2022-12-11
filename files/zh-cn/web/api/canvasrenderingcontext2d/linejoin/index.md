@@ -128,7 +128,7 @@ for (var i = 0; i < lineJoin.length; i++) {
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-{{EmbedLiveSample("A_lineJoin_example", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}
+{{EmbedLiveSample("A_lineJoin_example", "180", "180", "canvas_linejoin.png")}}
 
 ## 规范描述
 
