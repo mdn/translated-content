@@ -1,8 +1,8 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Status/200
-translation_of: Web/HTTP/Status/200
 ---
+
 {{HTTPSidebar}}
 
 O código HTTP **`200 OK`** é a resposta de status de sucesso que indica que a requisição foi bem sucedida. Uma resposta 200 é cacheável por padrão.

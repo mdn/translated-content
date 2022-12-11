@@ -1,8 +1,8 @@
 ---
 title: Document.doctype
 slug: Web/API/Document/doctype
-translation_of: Web/API/Document/doctype
 ---
+
 {{ApiRef("DOM")}}
 
 Retorna a declaração do tipo de documento(Document Type Declaration (DTD)) associado ao documento atual. O objeto retornado implementa a interface {{domxref("DocumentType")}}. Use {{domxref("DOMImplementation.createDocumentType()")}} para criar um `DocumentType`.

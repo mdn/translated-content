@@ -302,7 +302,7 @@ if (!Function.prototype.bind) (function(){
 このアルゴリズムと仕様上のアルゴリズムとの間には、いくつか大きな違いがあります (真剣に網羅することを目指したわけではないので、他にも差はあるかもしれません)。
 
 - この部分的な実装は、 {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}}, {{jsxref("Function.prototype.apply()")}} という、それぞれオリジナルの値を持つ組み込みメソッドに依存している。
-- この不完全な実装では、不変の「毒薬」のような {{jsxref("Function.caller", "caller")}} および `arguments` プロパティを作成し、取得、設定、削除の際に {{jsxref("Global_Objects/TypeError", "TypeError")}} を発生させます。 (これは実装が ({{jsxref("Object.defineProperty")}} に対応している場合は追加され、 {{jsxref("Object.__defineGetter__", "__defineGetter__")}} と {{jsxref("Object.__defineSetter__", "__defineSetter__")}} に対応している実装では部分的に \[削除時に例外を発生しない形で] 実装されています。)
+- この不完全な実装では、不変の「毒薬」のような {{jsxref("Function.caller", "caller")}} および `arguments` プロパティを作成し、取得、設定、削除の際に {{jsxref("Global_Objects/TypeError", "TypeError")}} を発生させます。 (これは実装が ({{jsxref("Object.defineProperty")}} に対応している場合は追加され、[`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) と [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) に対応している実装では部分的に \[削除時に例外を発生しない形で] 実装されています。)
 - この部分的な実装では、 (正規のバインドされた関数には存在しない) `prototype` プロパティを持つ関数を生成します。
 - この部分的な実装では、 {{jsxref("Function.length", "length")}} プロパティが ECMA-262 で示されているものと一致しないバインドされた関数を生成します。これは `length` が `0` である関数を生成します。完全な実装では、ターゲット関数の長さとあらかじめ定義された引数の数によりますが、 length が 0 でないものを返すことがあります。
 - この部分的な実装では、生成されたバインドされた関数の {{jsxref("Function.name", "name")}} プロパティが元の関数名から派生したものではありません。 ECMA-262 によれば、返されるバインドされた関数の名前は "bound " + ターゲット関数の名前です (空白文字に注意してください)。

@@ -1,13 +1,8 @@
 ---
 title: DNT
 slug: Web/HTTP/Headers/DNT
-tags:
-  - DNT
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/DNT
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição **`DNT`** (**D**o **N**ot **T**rack) indica a preferência do usuário de permitir ser "seguido". Ele indica se o usuário prefere privacidade ao invés de conteúdo personalizado.

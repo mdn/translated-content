@@ -1,15 +1,6 @@
 ---
 title: Estilizando texto
 slug: Learn/CSS/Styling_text
-tags:
-  - CSS
-  - Fontes
-  - Iniciante
-  - Links
-  - Texto
-  - listas
-  - web fontes
-translation_of: Learn/CSS/Styling_text
 original_slug: Aprender/CSS/Estilizando_texto
 ---
 {{LearnSidebar}}

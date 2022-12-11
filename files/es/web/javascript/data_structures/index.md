@@ -8,6 +8,7 @@ tags:
   - Tipado
 translation_of: Web/JavaScript/Data_structures
 ---
+
 {{jsSidebar("More", "Más")}}
 
 Todos los lenguajes de programación tienen estructuras de datos integradas, pero estas a menudo difieren de un lenguaje a otro. Este artículo intenta enumerar las estructuras de datos integradas disponibles en JavaScript y las propiedades que tienen. Estas se pueden utilizar para construir otras estructuras de datos. Siempre que es posible, se hacen comparaciones con otros lenguajes.
@@ -242,9 +243,7 @@ Lee la [página de referencia](/es/docs/Web/JavaScript/Reference/Operators/typeo
 
 ## Especificaciones
 
-| Especificación                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-ecmascript-data-types-and-values', 'Tipos Data y Values ECMAScript')}} |
+{{Specifications}}
 
 ## Ve también
 

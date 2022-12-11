@@ -233,7 +233,7 @@ const DATA = [
 ];
 ```
 
-然后，我们将 `DATA` 作为一个 prop 传入  `<App />`，叫做 `tasks`。`src/index.js` 的最后一行看起来应该像这样：
+然后，我们将 `DATA` 作为一个 prop 传入 `<App />`，叫做 `tasks`。`src/index.js` 的最后一行看起来应该像这样：
 
 ```js
 ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
@@ -275,7 +275,7 @@ const taskList = props.tasks?.map((task) => task.name);
  const taskList = props.tasks.map((task) => <Todo />);
 ```
 
-回顾一下你的 App；现在你的任务看起来更像以前的样子，不过它们缺少自身的名字。记住，我们映射的每个任务都有 `id`、`name` 和  `checked` 属性，我们要把这些属性传递给 `<Todo />` 组件。如果你把它们放在一起，我们就会得到这样的代码：
+回顾一下你的 App；现在你的任务看起来更像以前的样子，不过它们缺少自身的名字。记住，我们映射的每个任务都有 `id`、`name` 和 `checked` 属性，我们要把这些属性传递给 `<Todo />` 组件。如果你把它们放在一起，我们就会得到这样的代码：
 
 ```js
 const taskList = props.tasks.map((task) => (

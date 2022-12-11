@@ -3,7 +3,7 @@ title: <i>：术语文本元素
 slug: Web/HTML/Element/i
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 ## 概述
 

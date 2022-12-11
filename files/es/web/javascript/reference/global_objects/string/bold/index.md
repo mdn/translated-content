@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/bold
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/bold
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 {{Deprecated_header}}

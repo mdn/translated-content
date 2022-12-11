@@ -1,56 +1,51 @@
 ---
 title: MediaRecorder.stream
 slug: Web/API/MediaRecorder/stream
+l10n:
+  sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
 
 {{APIRef("MediaStream Recording")}}
 
-**`MediaRecorder.stream`** 読み取り専用プロパティは、`MediaRecorder` を作成したときに `MediaRecorder()` コンストラクタに渡したストリームを返します。
+**`MediaRecorder.stream`** は読み取り専用プロパティで、 `MediaRecorder` を作成したときに `MediaRecorder()` コンストラクターに渡したストリームを返します。
 
-## 構文
+## 値
 
-```
-var stream = MediaRecorder.stream
-```
-
-### 値
-
-最初に `MediaRecorder` を作成したとき `MediaRecorde()` コンストラクタに渡した {{domxref("MediaStream")}}。
+最初に `MediaRecorder` を作成したとき `MediaRecorde()` コンストラクターに渡した {{domxref("MediaStream")}} です。
 
 ## 例
 
 ```js
 if (navigator.getUserMedia) {
-   console.log('getUserMediaがサポートされています。');
-   navigator.getUserMedia (
-      // 制約 - このアプリに必要なのは音声のみ
-      {
-         audio: true
-      },
+  console.log('getUserMediaがサポートされています。');
+  navigator.getUserMedia(
+    // 制約 - このアプリに必要なのは音声のみ
+    {
+      audio: true,
+    },
 
-      // 成功コールバック
-      function(stream) {
-           var mediaRecorder = new MediaRecorder(stream);
+    // 成功コールバック
+    (stream) => {
+      const mediaRecorder = new MediaRecorder(stream);
 
-           var myStream = mediaRecorder.stream;
-           console.log(myStream);
-
-...
+      const myStream = mediaRecorder.stream;
+      console.log(myStream);
+    }
+  );
+}
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                     | 状態                                         | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-stream", "MediaRecorder.stream")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.stream")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Media​Stream Recording API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
-- [ウェブディクタフォン](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[Github のソース](https://github.com/mdn/web-dictaphone/)）。（英語）
-- [simpl.info の MediaStream Recording のデモ](http://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
-- {{domxref("MediaDevices.getUserMedia")}}
+- [Media​Stream 収録 API の使用](/ja/docs/Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API)
+- [ウェブディクタフォン](https://mdn.github.io/dom-examples/media/web-dictaphone/): MediaRecorder + getUserMedia + ウェブオーディオ API 可視化デモ、[Chris Mills](https://twitter.com/chrisdavidmills) 著（[GitHub のソース](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)）。（英語）
+- [simpl.info の MediaStream Recording のデモ](https://simpl.info/mediarecorder/)、[Sam Dutton](https://twitter.com/sw12) 著。（英語）
+- {{domxref("Navigator.getUserMedia")}}

@@ -1,8 +1,8 @@
 ---
 title: 'Tutorial Express Parte 3: Usando um banco de dados (com Mongoose)'
 slug: Learn/Server-side/Express_Nodejs/mongoose
-translation_of: Learn/Server-side/Express_Nodejs/mongoose
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
 Este artigo introduz brevemente bancos de dados e como usá-los com aplicativos Node/Express. Depois demonstra como podemos usar o [Mongoose](http://mongoosejs.com/) para prover acesso ao banco de dados para o website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website). Explica como object schema e modelos são declarados, os principais tipos de campos e validações básicas. Também demonstra brevemente algumas das muitas maneiras em que se pode acessar os dados do modelo.
@@ -97,7 +97,7 @@ O diagrama também mostra o relacionamento entre modelos, incluindo sua cardinal
 
 > **Nota:** Assim como discutido abaixo em [Iniciando com Mongoose](#related_documents) muitas vezes é melhor ter o atributo que define a relação entre os documentos/modelos em apenas um dos modelos( você ainda pode encontrar o relacionamento reverso pesquisando o `_id` associado no outro modelo). Abaixo nós escolhemos definir o modelo Book Schema para armazenar o relacionamento entre Book/Genre e Book/Author, e definimos BookInstance Schema para armazenar o relacionamento entre Book/BookInstance. Esta escolha foi um tanto arbitrária — nós poderíamos igualmente ter declarado esses atributos em outro schema.
 
-![Mongoose Library Model  with correct cardinality](https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png)
+![Mongoose Library Model with correct cardinality](https://mdn.mozillademos.org/files/15645/Library%20Website%20-%20Mongoose_Express.png)
 
 > **Nota:** A próxima seção fornece um guia explicando como os modelos são definidos e usados. Ao ler, considere como iremos construir cada um dos modelos no diagrama acima.
 
@@ -503,9 +503,9 @@ You will first need to [create an account](https://www.mongodb.com/cloud/atlas/r
 After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
 
 1. Click **Buid a Cluster** button in the Clusters Overview section.
-    ![Create a cluster on MongoDB Atlas.](https://mdn.mozillademos.org/files/16516/MongoDB_Atlas_-_CreateCluster.jpg)
+    ![Create a cluster on MongoDB Atlas.](mongodb_atlas_-_createcluster.jpg)
 2. This will open the _Create New Cluster_ screen.
-    ![Choose a cloud provider when using MongoDB Atlas.](https://mdn.mozillademos.org/files/16511/MongoDB_Atlas_-_ChooseProviderRegion.jpg)
+    ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_chooseproviderregion.jpg)
 
     - Select any provider from the _Cloud Provider & Region_ section. Different providers offer different regions.
     - Select any region marked "FREE TIER AVAILABLE".
@@ -536,7 +536,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 7. From the Cluster0 Overview screen click the **Connect** button.
     ![Configure a connection when after setting up a cluster in MongoDB Atlas.](https://mdn.mozillademos.org/files/16512/MongoDB_Atlas_-_Connectbutton.jpg)
 8. This will open the Connect to Cluster screen.
-    ![Setup a connection when using MongoDB Atlas.](https://mdn.mozillademos.org/files/16513/MongoDB_Atlas_-_ConnectCluster.jpg)
+    ![Setup a connection when using MongoDB Atlas.](mongodb_atlas_-_connectcluster.jpg)
 
     - Click the **Add a Different IP Address** button, enter `0.0.0.0/0` for the IP Address and click **Add IP Address** button.
 
@@ -560,7 +560,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
     - Click the **Short SRV connection string** option to copy the connection string.
 
 11. This will open the connection string URL.
-    ![Copy the Short SRV connection string when setting up a connection on MongoDB Atlas](https://mdn.mozillademos.org/files/16515/MongoDB_Atlas_-_CopyShortSRV.jpg)
+    ![Copy the Short SRV connection string when setting up a connection on MongoDB Atlas](mongodb_atlas_-_copyshortsrv.jpg)
 
     - Choose **Copy** button to copy the string.
     - Save this string somewhere safe.

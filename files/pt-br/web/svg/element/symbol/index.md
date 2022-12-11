@@ -1,13 +1,8 @@
 ---
 title: symbol
 slug: Web/SVG/Element/symbol
-tags:
-  - Container SVG
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/symbol
 ---
+
 {{SVGRef}}
 
 O elemento `symbol` é usado para definir um template que pode ser inicializado por um elemento {{ SVGElement("use") }}. A utilização de elementos `symbol` para gráficos que são usados várias vezes no mesmo documento acrescenta estrutura e semântica. Documentos que são ricos em estrutura podem ser renderizados graficamente, através da fala, ou do braille, e assim promover a acessibilidade. Note que o elemento `symbol` em si não é renderizado. Somente instâncias de um elemento `symbol` (por exemplo, uma referência à um elemento `symbol` feita por um elemento {{ SVGElement("use") }}) são renderizadas.

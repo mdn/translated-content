@@ -1,8 +1,8 @@
 ---
 title: Console API
 slug: Web/API/Console_API
-translation_of: Web/API/Console_API
 ---
+
 {{DefaultAPISidebar("Console API")}}
 
 O Console API traz funcionalidades que permitem desenvolvedores realizar tarefas de debug, como registrar mensagens or os valores das variáveis em sertoes pontos do código, or cronometrar quanto tempo uma operação leva para concluir.
@@ -42,7 +42,7 @@ See the [Console reference page](/pt-BR/docs/Web/API/Console#Usage) for more exa
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.Console")}}
+{{Compat}}
 
 ## See also
 

@@ -1,8 +1,8 @@
 ---
 title: Math.atan2()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan2
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan2
 ---
+
 {{JSRef}}
 
 A função **`Math.atan2()`** retorna o arco tangente do coeficiente dos argumentos passado.

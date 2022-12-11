@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** 메서드는 {{jsxref("Date")}} 객체의 시간을 문자열로 반환합니다.

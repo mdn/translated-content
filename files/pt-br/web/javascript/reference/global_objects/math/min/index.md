@@ -1,8 +1,8 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 ---
+
 {{JSRef}}
 
 A função **`Math.min()`** retorna o menor valor passado como parâmetro, ou {{jsxref("NaN")}} se o parâmetro não é ou não pode ser convertido para um número.

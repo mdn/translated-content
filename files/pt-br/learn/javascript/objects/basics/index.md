@@ -1,9 +1,9 @@
 ---
 title: O básico sobre objetos JavaScript
 slug: Learn/JavaScript/Objects/Basics
-translation_of: Learn/JavaScript/Objects/Basics
 original_slug: Aprender/JavaScript/Objetos/Básico
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 Neste artigo, veremos a sintaxe fundamental de objetos JavaScript e revisitaremos alguns recursos JavaScript vistos anteriormente no curso, reiterando o fato de que muitos dos recursos que você já utilizou são objetos.

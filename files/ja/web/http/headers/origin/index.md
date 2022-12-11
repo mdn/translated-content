@@ -50,10 +50,7 @@ Origin: https://developer.mozilla.org
 
 ## 仕様書
 
-| 仕様書                                                                   | 題名                                                 |
-| ------------------------------------------------------------------------ | ---------------------------------------------------- |
-| {{RFC("6454", "Origin", "7")}}                                 | The Web Origin Concept                               |
-| {{SpecName('Fetch','#origin-header','Origin header')}} | Supplants the `Origin` header as defined in RFC6454. |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

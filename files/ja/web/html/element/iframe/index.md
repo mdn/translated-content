@@ -3,13 +3,13 @@ title: '<iframe>: インラインフレーム要素'
 slug: Web/HTML/Element/iframe
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML のインラインフレーム要素 (`<iframe>`)** は、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに他のページを埋め込むことができます。
 
 {{EmbedInteractiveExample("pages/tabbed/iframe.html", "tabbed-standard")}}
 
-それぞれの閲覧コンテキストは、[セッション履歴](/ja/docs/Web/API/History)と[文書](/ja/docs/Web/API/Document)を持ちます。他の閲覧コンテキストを埋め込んでいる閲覧コンテキストは、\_*親*閲覧コンテキスト*と呼ばれます。*最上位\_の閲覧コンテキストは (親を持たないもの) は、通常はブラウザーのウィンドウで、 {{domxref("Window")}} オブジェクトで表されます。
+それぞれの閲覧コンテキストは、[セッション履歴](/ja/docs/Web/API/History)と[文書](/ja/docs/Web/API/Document)を持ちます。他の閲覧コンテキストを埋め込んでいる閲覧コンテキストは、_親_閲覧コンテキスト_と呼ばれます。_最上位_の閲覧コンテキストは (親を持たないもの) は、通常はブラウザーのウィンドウで、 {{domxref("Window")}} オブジェクトで表されます。
 
 > **警告:** それぞれの閲覧コンテキストは完全な文書環境であるため、ページの中で `<iframe>` を使用するごとに、必要となるメモリやその他の計算リソースが増加します。理論的には好きなだけ `<iframe>` を使用することができますが、パフォーマンスの問題を確認してください。
 
@@ -165,7 +165,7 @@ slug: Web/HTML/Element/iframe
 
 - {{htmlattrdef("mozbrowser")}} {{non-standard_inline}}
 
-  - :&#x20;
+  - : &#x20;
 
     > **メモ:** これを Firefox のウェブ拡張機能に公開するには {{bug(1318532)}} を参照してください。
 
@@ -216,13 +216,7 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           | 状態                                     | 備考                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrerpolicy attribute')}} | {{Spec2('Referrer Policy')}}     | `referrerpolicy` 属性を追加。                      |
-| {{SpecName('HTML WHATWG', 'iframe-embed-object.html#the-iframe-element', '&lt;iframe&gt;')}}                     | {{Spec2('HTML WHATWG')}}         |                                                    |
-| {{SpecName('HTML5 W3C', 'semantics-embedded-content.html#the-iframe-element', '&lt;iframe&gt;')}}                 | {{Spec2('HTML5 W3C')}}             |                                                    |
-| {{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}                                                 | {{Spec2('HTML4.01')}}             |                                                    |
-| {{SpecName('Screen Orientation')}}                                                                                                     | {{Spec2('Screen Orientation')}} | `sandbox` 属性に `allow-orientation-lock` を追加。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

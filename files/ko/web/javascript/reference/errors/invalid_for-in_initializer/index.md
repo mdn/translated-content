@@ -9,6 +9,7 @@ tags:
   - 초기화
 translation_of: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지

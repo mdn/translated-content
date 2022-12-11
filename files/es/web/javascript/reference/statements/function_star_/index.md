@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/function*
 original_slug: Web/JavaScript/Referencia/Sentencias/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 La declaración **`function*`** (la palabra clave `function` seguida de un asterisco) define una _función generadora_, que devuelve un objeto {{jsxref("Global_Objects/Generator","Generator")}}.
@@ -85,9 +86,7 @@ console.log(gen.next().value); // 20
 
 ## Especificaciones
 
-| Especificaciones                                     | Status                   | Comentarios         |
-| ---------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('ES2015', '#', 'function*')}} | {{Spec2('ES2015')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

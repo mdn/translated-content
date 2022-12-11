@@ -1,8 +1,8 @@
 ---
 title: '::first-line (:first-line)'
 slug: Web/CSS/::first-line
-translation_of: Web/CSS/::first-line
 ---
+
 {{CSSRef}}
 
 O pseudoelemento **`::first-line`** aplica estilos à primeira linha de um elemento no nível do bloco. Observe que o comprimento da primeira linha depende de muitos fatores, incluindo a largura do elemento, a largura do documento e o tamanho da fonte do texto.

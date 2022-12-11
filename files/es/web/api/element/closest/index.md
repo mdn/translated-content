@@ -1,14 +1,8 @@
 ---
 title: Element.closest()
 slug: Web/API/Element/closest
-tags:
-  - API
-  - DOM
-  - Elemento
-  - Referencia
-  - metodo
-translation_of: Web/API/Element/closest
 ---
+
 {{APIRef}}
 
 El método `closest()` de la interfaz {{domxref("Element")}} devuelve el ascendiente más cercano al elemento actual (o el propio elemento actual) que coincida con el selector proporcionado por parámetro. Si no existe dicho ascendiente, devuelve `null`.

@@ -14,6 +14,7 @@ tags:
   - 웹 스토리지
 translation_of: Web/API/Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 **Web Storage API**는 브라우저에서 키/값 쌍을 {{glossary("cookie", "쿠키")}}보다 훨씬 직관적으로 저장할 수 있는 방법을 제공합니다.

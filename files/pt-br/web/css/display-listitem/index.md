@@ -1,8 +1,8 @@
 ---
 title: <display-listitem>
 slug: Web/CSS/display-listitem
-translation_of: Web/CSS/display-listitem
 ---
+
 {{CSSRef}}
 
 O `list-item` palavra-chave faz com que o elemento gere um`::marker` pseudoelemento com o conteúdo especificado por sua {{CSSxRef("list-style")}} propriedades (por exemplo, um marcador) junto com uma caixa principal do tipo especificado para seu próprio conteúdo.

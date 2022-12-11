@@ -5,6 +5,7 @@ tags:
   - Псевдо-классы
 translation_of: Web/CSS/:required
 ---
+
 {{ CSSRef() }}
 
 ## Описание

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/protocol
 original_slug: Web/API/HTMLHyperlinkElementUtils/protocol
 ---
+
 {{ApiRef("URL API")}}
 
 Свойство **`HTMLHyperlinkElementUtils.protocol`** – это {{domxref("USVString")}}, содержащий протокол URL включая `':'` в конце.

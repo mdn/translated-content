@@ -478,5 +478,5 @@ let s = d/t;
   - [`fetch()` の例](/ja/docs/Web/API/fetch#例)
   - [`fillRect()` の例](/ja/docs/Web/API/CanvasRenderingContext2D/fillRect#例) （Canvas 2D の例は、古いスタイルの `var` をまだ使用していますが、概ね良好です）。
   - [Payment Request API の `show()`](/ja/docs/Web/API/PaymentRequest/show) （{{DOMxRef("PaymentRequest")}} の例は、全般的にかなり良いものです）。
-  - [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) （HTML、CSS、JavaScript の一般的な良い実践と、スニペットを使用する方法の良いデモと、他の場所での完全な例へのリンク）。
+  - [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) （HTML、CSS、JavaScript の一般的な良い実践と、スニペットを使用する方法の良いデモと、他の場所での完全な例へのリンク）。
   - [メディア能力 API の使用](/ja/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API) （ガイドでコードスニペットを使用するための、より一般的な良い実践）。

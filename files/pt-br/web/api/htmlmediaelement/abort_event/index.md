@@ -1,16 +1,15 @@
 ---
 title: abort
 slug: Web/API/HTMLMediaElement/abort_event
-translation_of: Web/API/HTMLMediaElement/abort_event
-translation_of_original: Web/Events/abort
 original_slug: Web/Events/abort
 ---
+
 O evento **`abort`** é disparado quando o carregamento de um recurso foi interrompido.
 
 ## Informações Gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-abort)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-abort)
 - Interface
   - : {{domxref("UIEvent")}} se gerado a partir da interface do usuário, caso contrário será {{domxref("Event")}}.
 - Bubbles

@@ -1,13 +1,9 @@
 ---
 title: <input type="time">
 slug: Web/HTML/Element/Input/time
-tags:
-  - Formulário
-  - Hora
-  - tipo
-translation_of: Web/HTML/Element/input/time
 ---
-{{HTMLRef("Input_types")}}
+
+{{HTMLSidebar}}
 
 Elementos `<input>` do tipo **`time`** (hora) criam campos de inserção que permitem que o usuário digite horários facilmente (horas e minutos e, opcionalmente, segundos).
 
@@ -255,7 +251,7 @@ Se você tentar enviar o formulário com um horário incompleto (ou com um horá
 
 Here's a screenshot for those of you who aren't using a browser that supports `time` inputs:
 
-![](https://mdn.mozillademos.org/files/15405/firefox-validation-message.png)
+![](firefox-validation-message.png)
 
 > **Warning:** **Important**: HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 
@@ -458,7 +454,7 @@ function populateMinutes() {
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.input-time")}}
+{{Compat}}
 
 ## See also
 

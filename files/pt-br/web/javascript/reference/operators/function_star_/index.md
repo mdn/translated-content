@@ -1,8 +1,8 @@
 ---
 title: Expressão function*
 slug: Web/JavaScript/Reference/Operators/function*
-translation_of: Web/JavaScript/Reference/Operators/function*
 ---
+
 {{jsSidebar("Operators")}}
 
 A palavra-chave **`function*`** pode ser usada para definir uma função generator dentro de uma expressão.

@@ -6,6 +6,7 @@ tags:
   - поведение метода length объекта XML в IE и Mozilla
 translation_of: Web/Guide/AJAX
 ---
+
 ## Введение в AJAX
 
 **AJAX** (англ. _Asynchronous JavaScript and XML_ — асинхронный JavaScript и XML) — это не технология сама по себе, а термин, который описывает «новый» подход к использованию существующих технологий вместе. AJAX включает: [HTML](/ru/HTML) или [XHTML](/ru/XHTML), [CSS](/ru/CSS), [JavaScript](/ru/JavaScript), [DOM](/ru/DOM), [XML](/ru/XML), [XSLT](/Ru/XSLT), и [объект XMLHttpRequest](/ru/XMLHttpRequest). Когда эти технологии объединяются в модель AJAX, web-приложения способны делать быстрые дополняющие обновления интерфейса пользователя без необходимости полной перезагрузки страницы браузером. Приложения работают быстрее и становятся более отзывчивыми к действиям пользователей.
@@ -22,12 +23,6 @@ translation_of: Web/Guide/AJAX
   - : Mike Stenhouse has penned this article, detailing some methods you can use to fix back button and bookmarking issues when developing AJAX applications.
 - [Ошибки использования Ajax](http://alexbosworth.backpackit.com/pub/67688)
   - : Alex Bosworth написал эту статью, где описал некоторые ошибки которые могут сделать разработчики приложений AJAX.
-
-## Сообщество
-
-- Смотрите форумы Mozilla...
-
-{{ DiscussionList("dev-ajax", "mozilla.dev.ajax") }}
 
 ## Инструменты
 

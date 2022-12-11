@@ -1,8 +1,8 @@
 ---
 title: CSS Flow Layout
 slug: Web/CSS/CSS_Flow_Layout
-translation_of: Web/CSS/CSS_Flow_Layout
 ---
+
 {{CSSRef}}
 
 El _Flujo Normal_, o también Flow Layout, es la forma en que los elementos de línea y de bloque son presentados en una página sin que haya cambios en su diseño. El flujo es esencialmente un grupo de elementos que se perciben entre sí e interactúan entre ellos en nuestro diseño. Cuando uno de ellos se encuentra _fuera del flujo_, éste se comporta de manera independiente.

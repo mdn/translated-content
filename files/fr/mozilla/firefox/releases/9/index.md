@@ -54,7 +54,7 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 - Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) [respectent désormais la valeur de l'attribut `lang`](/fr/docs/HTML/Controlling_spell_checking_in_HTML_forms#Controlling_the_spellchecker_language) lors de l'appel du correcteur orthographique.
 - Firefox sur Android permet désormais la prise de photo avec le téléphone sans devoir quitter le navigateur lorsque l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) est utilisé avec `type="file"` et `accept="image/*"`.
 - Les images ICO de style PNG de Windows Vista sont à présent supportée.
-- Les images dessinées qui utilisent l'attribut [`crossorigin`](/en/HTML/CORS_settings_attributes) pour demander l'accès à CORS [n'altère plus le canvas](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F) quand CORS est accordé.
+- Les images dessinées qui utilisent l'attribut [`crossorigin`](/fr/docs/Web/HTML/Attributes/crossorigin) pour demander l'accès à CORS [n'altère plus le canvas](/fr/docs/Web/HTML/CORS_enabled_image#canevas_corrompu_et_sécurité) quand CORS est accordé.
 - La valeur de l'attribut [`rowspan`](/fr/docs/Web/HTML/Element/td#attr-rowspan) peut désormais aller jusqu'à 65 534, contre 8190 avant.
 
 ### CSS
@@ -76,7 +76,7 @@ Firefox 9, basé sur Gecko 9.0, est sorti le 20 décembre 2011 sur Windows. La v
 - [Les évènements de composition](/fr/docs/DOM/CompositionEvent) du DOM Level 3 sont à présent supportés.
 - L'attribut [`Document.scripts`](/fr/docs/Web/API/Document/scripts) a été implémenté, il renvoie [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) de tous les éléments [`<script>`](/fr/docs/Web/HTML/Element/script) du document.
 - la méthode [`Document.queryCommandSupported()`](/fr/docs/Web/API/Document/queryCommandSupported) a été implémentée.
-- L'ensemble des événements qui peuvent être écoutés sur les éléments [`<body>`](/fr/docs/Web/HTML/Element/body) a été révisé pour correspondre à la dernière version de la spécification HTML5. La liste des événements dans la [référence d'événements DOM](/en/DOM/DOM_event_reference) reflète ceux qui peuvent être écoutés sur les [`<body>`](/fr/docs/Web/HTML/Element/body).
+- L'ensemble des événements qui peuvent être écoutés sur les éléments [`<body>`](/fr/docs/Web/HTML/Element/body) a été révisé pour correspondre à la dernière version de la spécification HTML5. La liste des événements dans la [référence d'événements DOM](/fr/docs/Web/Events) reflète ceux qui peuvent être écoutés sur les [`<body>`](/fr/docs/Web/HTML/Element/body).
 - L'évènement `readystatechange` est désormais uniquement tiré sur le document, comme prévu.
 - Les gestionnaires d'événements sont désormais implémentés comme des interfaces IDL standard. Dans la plupart des cas, cela n'affectera pas le contenu, mais [il y a des exceptions](/fr/docs/DOM/DOM_event_handlers#Event_handler_changes_in_Firefox_9).
 - Un nouveau type de réponse, "`moz-json`", a été ajouté à `XMLHttpRequest`, laissant `XMLHttpRequest` analyser automatiquement les chaînes [JSON](/fr/docs/JSON), quand vous demandez ce type, une chaîne JSON est analysé, afin que la valeur de la propriété `response` est la résultante de l'objet JavaScript.
@@ -172,7 +172,7 @@ Le parseur IDL ne supporte plus la notion de pointeurs unique qui n'a jamais ét
 - Vous pouvez désormais enregistrer des composants pour ajouter des fonctionnalités à l'objet [`window.navigator`](/fr/docs/Web/API/Window/navigator "Renvoie une référence à l'objet
 
   navigator
-  , qui peut être interrogé pour obtenir des informations concernant l'application exécutant le script.") à l'aide de la catégorie "JavaScript-navigator-property". Voir [Ajout des APIs de l'objet navigator](/En/Developer_Guide/Adding_APIs_to_the_navigator_object) pour plus de détails et des exemples.
+  , qui peut être interrogé pour obtenir des informations concernant l'application exécutant le script.") à l'aide de la catégorie "JavaScript-navigator-property". Voir [Ajout des APIs de l'objet navigator](/fr/docs/Mozilla/Developer_guide/Adding_APIs_to_the_navigator_object) pour plus de détails et des exemples.
 
 ## Voir aussi
 

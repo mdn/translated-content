@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMonth
 browser-compat: javascript.builtins.Date.setMonth
 ---
+
 {{JSRef}}
 
 setMonth () 메서드는 현재 설정된 연도에 따라 지정된 날짜의 월을 설정합니다.

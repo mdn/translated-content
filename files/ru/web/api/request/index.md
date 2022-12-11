@@ -13,6 +13,7 @@ tags:
   - request
 translation_of: Web/API/Request
 ---
+
 {{APIRef("Fetch")}}
 
 `Интерфейс Request` из [Fetch API](/ru/docs/Web/API/Fetch_API) является запросом ресурсов или данных.

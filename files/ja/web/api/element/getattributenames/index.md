@@ -9,7 +9,7 @@ slug: Web/API/Element/getAttributeNames
 
 `getAttributeNames()` を {{domxref("Element.getAttribute","getAttribute()")}} と共に使用すると、 {{domxref("Element.attributes")}} にアクセスするよりメモリ効率やパフォーマンスが良くなります。
 
-**`getAttributeNames()`** から返される名前は*修飾*属性名です。すなわち、名前空間接頭辞がついた属性であり、名前空間接頭辞（実際の名前空間では*ない*）にコロンが続き、属性名が続きます（例えば  **`xlink:href`**）。名前空間接頭辞のない属性は、そのままの名前になります（例えば **`href`**）。
+**`getAttributeNames()`** から返される名前は*修飾*属性名です。すなわち、名前空間接頭辞がついた属性であり、名前空間接頭辞（実際の名前空間では*ない*）にコロンが続き、属性名が続きます（例えば **`xlink:href`**）。名前空間接頭辞のない属性は、そのままの名前になります（例えば **`href`**）。
 
 ## 構文
 

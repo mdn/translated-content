@@ -1,15 +1,9 @@
 ---
 title: Utilização básica do Canvas
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
-tags:
-  - Canvas
-  - HTML
-  - Intermediário
-  - Tutorial
-  - graficos
-translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 original_slug: Web/Guide/HTML/Canvas_tutorial/Utilizacao_basica
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}Vamos começar este tutorial olhando para o elemento {{HTMLElement("canvas")}} {{Glossary("HTML")}} em si. No final desta página, você saberá como configurar um contexto de canvas 2D e desenhar um primeiro exemplo em seu navegador.
 
 ## O elemento `<canvas>`
@@ -20,7 +14,7 @@ Vamos começar esse tutorial olhando o elemento {{HTMLElement("canvas")}} em si.
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-Se parece muito com o elemento `<img>`com a diferença de não possuir os atributos `src` e `alt`. O elemento `<canvas>` tem apenas dois atributos - **width**  e **height**. Ambos são opcionais e podem ser aplicados utilizando as propriedades [DOM](/pt-BR/docs/DOM) respectivas. Se não forem especificados, o canvas será iniciado com **300 _pixels_** de largura por **150 _pixels_** de altura. O elemento pode ser redimensionado por [CSS](/pt-BR/docs/Web/CSS), mas durante a renderização a imagem é escalonada para caber no tamanho do layout.
+Se parece muito com o elemento `<img>`com a diferença de não possuir os atributos `src` e `alt`. O elemento `<canvas>` tem apenas dois atributos - **width** e **height**. Ambos são opcionais e podem ser aplicados utilizando as propriedades [DOM](/pt-BR/docs/DOM) respectivas. Se não forem especificados, o canvas será iniciado com **300 _pixels_** de largura por **150 _pixels_** de altura. O elemento pode ser redimensionado por [CSS](/pt-BR/docs/Web/CSS), mas durante a renderização a imagem é escalonada para caber no tamanho do layout.
 
 > **Nota:** Se as suas renderizações parecerem distorcidas, tente especificar os atributos `width` e `height` no `<canvas>` e não usando CSS.
 
@@ -58,7 +52,7 @@ Se o conteúdo alternativo não for necessário, um simples `<canvas id="foo" ..
 
 {{HTMLElement("canvas")}} cria uma superfície de desenho de tamanho fixo que expõe um ou mais contextos de renderização, que são usados ​​para criar e manipular o conteúdo mostrado. Vamos nos concentrar no contexto de renderização 2D. Outros contextos podem fornecer diferentes tipos de renderização; por exemplo, [WebGL](/pt-BR/docs/Web/WebGL) usa um contexto 3D ("experimental-WebGL") baseado em [OpenGL ES](http://www.khronos.org/opengles/).
 
-Incialmente o canvas é branco. Para mostrar alguma coisa, primeiro um _script_ precisa acessar o contexto de renderização e desenhar sobre ele. O elemento {{HTMLElement("canvas")}} tem um [método](/pt-BR/docs/Web/API/HTMLCanvasElement#Methods) chamado `getContext()`, usado para obter o contexto de renderização e suas funções de desenho. `getContext()` recebe o tipo de contexto como parâmetro. Para gráficos 2D, que serão abrangidos nesse tutorial, deverá ser especificado "2d".
+Inicialmente o canvas é branco. Para mostrar alguma coisa, primeiro um _script_ precisa acessar o contexto de renderização e desenhar sobre ele. O elemento {{HTMLElement("canvas")}} tem um [método](/pt-BR/docs/Web/API/HTMLCanvasElement#Methods) chamado `getContext()`, usado para obter o contexto de renderização e suas funções de desenho. `getContext()` recebe o tipo de contexto como parâmetro. Para gráficos 2D, que serão abrangidos nesse tutorial, deverá ser especificado "2d".
 
 ```js
 var canvas = document.getElementById('tutorial');

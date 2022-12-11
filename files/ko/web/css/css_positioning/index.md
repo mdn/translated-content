@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Positioning
 ---
+
 {{CSSRef}}
 
 **CSS Positioning**은 요소를 페이지에 배치하는 방법을 정의하는 CSS 모듈입니다.

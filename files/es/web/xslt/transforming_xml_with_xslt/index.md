@@ -1,13 +1,9 @@
 ---
 title: Transformando XML con XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
-tags:
-  - Todas_las_Categorías
-  - Transformando_XML_con_XSLT
-  - XSLT
-translation_of: Web/XSLT/Transforming_XML_with_XSLT
 original_slug: Web/XSLT/Transformando_XML_con_XSLT
 ---
+
 ### Introducción
 
 La separación del contenido y la presentación es una característica clave en el diseño de [XML](/es/XML). La estructura de un documento XML esta diseñada para reflejar y clarificar relaciones importantes entre los aspectos individuales del contenido en si mismo, sin preocuparse de la forma en que posteriormente se visualizaran los datos. Una estructuración inteligente es particularmente importante cuando cada día se realizan más conexiones entre máquinas muy diferentes a través de la red.

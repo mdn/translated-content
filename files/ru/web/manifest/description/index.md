@@ -7,6 +7,7 @@ tags:
   - description
 translation_of: Web/Manifest/description
 ---
+
 {{QuickLinksWithSubpages('/ru/docs/Web/Manifest')}}
 
 <table class="properties">
@@ -30,7 +31,7 @@ translation_of: Web/Manifest/description
   </tbody>
 </table>
 
-_`description`_ это строка, в которой разработчики могут объяснить, что делает приложение. `description` способно к направленности, что означает, что оно может отображаться слева направо или справа налево на основе значений свойств [`dir`](./dir) and [`lang`](./lang) манифеста.
+`description` это строка, в которой разработчики могут объяснить, что делает приложение. `description` способно к направленности, что означает, что оно может отображаться слева направо или справа налево на основе значений свойств [`dir`](./dir) and [`lang`](./lang) манифеста.
 
 ## Примеры
 

@@ -10,6 +10,7 @@ tags:
   - l10n:priority
 translation_of: Web/HTML/Element
 ---
+
 {{HTMLSidebar("Elements")}}
 이 페이지는 {{glossary("tag", "태그")}}를 사용해 만들 수 있는 모든 {{glossary("HTML")}} {{glossary("Element", "요소")}}의 목록을 제공합니다. 필요로 하는 요소를 쉽게 찾을 수 있도록 기능별로 분류했으며, 각각의 요소 참조 페이지 사이드바에서는 사전 순으로 정렬된 목록도 확인할 수 있습니다.
 

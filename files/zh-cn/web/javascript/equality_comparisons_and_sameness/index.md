@@ -20,7 +20,7 @@ JavaScript 提供三种不同的值比较操作：
 
 选择使用哪个操作取决于你需要什么样的比较。
 
-简而言之，在比较两件事情时，双等号将执行类型转换; 三等号将进行相同的比较，而不进行类型转换 (如果类型不同，只是总会返回 false ); 而 Object.is 的行为方式与三等号相同，但是对于 NaN 和-0 和 +0 进行特殊处理，所以最后两个不相同，而 Object.is（NaN，NaN）将为 `true`。(通常使用双等号或三等号将 NaN 与 NaN 进行比较，结果为 false，因为 IEEE 754 如是说.) 请注意，所有这些之间的区别都与其处理原语有关; 这三个运算符的原语中，没有一个会比较两个变量是否结构上概念类似。对于任意两个不同的非原始对象，即便他们有相同的结构，以上三个运算符都会计算得到 false。
+简而言之，在比较两件事情时，双等号将执行类型转换; 三等号将进行相同的比较，而不进行类型转换 (如果类型不同，只是总会返回 false ); 而 Object.is 的行为方式与三等号相同，但是对于 NaN 和 -0 和 +0 进行特殊处理，所以最后两个不相同，而 Object.is（NaN，NaN）将为 `true`。(通常使用双等号或三等号将 NaN 与 NaN 进行比较，结果为 false，因为 IEEE 754 如是说.) 请注意，所有这些之间的区别都与其处理原语有关; 这三个运算符的原语中，没有一个会比较两个变量是否结构上概念类似。对于任意两个不同的非原始对象，即便他们有相同的结构，以上三个运算符都会计算得到 false。
 
 ## 严格相等 `===`
 
@@ -221,7 +221,7 @@ function attemptMutation(v)
 
 总的来说，除了对待[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)的方式，[`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)唯一让人感兴趣的，是当你需要一些元编程方案时，它对待 0 的特殊方式，特别是关于属性描述器，即你的工作需要去镜像[`Object.defineProperty`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)的一些特性时。如果你的工作不需要这些，那你应该避免使用[`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)，使用[`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)来代替。即使你需要比较两个[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN)使其结果为`true`，总的来说编写使用[`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 检查的特例函数 (用旧版本 ECMAScript 的[`isNaN 方法`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN)) 也会比想出一些计算方法让[`Object.is`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/is)不影响不同符号的 0 的比较更容易些。
 
-这里是一个会区别对待-0 和 +0 的内置方法和操作符不完全列表：
+这里是一个会区别对待 -0 和 +0 的内置方法和操作符不完全列表：
 
 - [`- (一元负)`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
   - : 显而易见，对 `0` 一元负操作得到 `-0`。但表达式的抽象化可能在你没有意识到得情况下导致 `-0` 延续传播。例如当考虑下例时：`js let stoppingForce = obj.mass * -obj.velocity` 如果 `obj.velocity` 是 `0` (或计算结果为 `0`), 一个 `-0` 就在上处产生并被赋值为`stoppingForce 的值。

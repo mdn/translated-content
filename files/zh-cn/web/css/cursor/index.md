@@ -63,7 +63,7 @@ cursor: url(one.svg), url(two.svg) 5 5, progress;
           <td></td>
           <td>
             <p>
-              浏览器根据当前内容决定指针样式<br />例如当是内容是文字时使用 text 样式
+              浏览器根据当前内容决定指针样式<br />例如当内容是文字时使用 text 样式
             </p>
           </td>
         </tr>

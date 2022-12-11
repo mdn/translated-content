@@ -2,6 +2,7 @@
 title: HTML 디버깅
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML을 작성을 할 수 있지만, 문제가 생겼을 때 코드의 오류가 발생한 부분을 해결할 수 없나요? 이 기사에서는 HTML의 오류를 찾고 수정하는 데 도움이되는 몇 가지 도구를 소개합니다.

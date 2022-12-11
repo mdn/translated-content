@@ -52,7 +52,7 @@ if (elem.requestFullscreen) {
 
 ### 通知
 
-如果成功進入全螢幕模式，包含該元素的文件將會接收到 {{ event("fullscreenchange") }} 事件。當離開全螢幕模式時，則會收到 {{ event("fullscreenchange") }} 事件。注意 {{ event("fullscreenchange") }} 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示您正在處於全螢幕模式。
+如果成功進入全螢幕模式，包含該元素的文件將會接收到 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件。當離開全螢幕模式時，則會收到 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件。注意 [`fullscreenchange`](/zh-TW/docs/Web/API/Document/fullscreenchange_event) 事件並不提供任何資訊指示進入或離開全螢幕模式，但如果文件的 {{ domxref("document.fullscreenElement", "fullscreenElement") }} 屬性的值不為 null，則表示您正在處於全螢幕模式。
 
 ### 全螢幕要求失敗
 

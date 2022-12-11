@@ -3,6 +3,7 @@ title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 ---
+
 {{jsSidebar("Functions")}}
 
 Свойство `callee псевдомассива arguments` хранит ссылку на функцию-родитель.
@@ -13,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Functions/arguments/callee
 
 ### Зачем вообще использовать `arguments.callee`?
 
-В ранних версиях javaScript отсутствовала такая фишка, как [Named Function Expression ](/ru/docs/Web/JavaScript/Reference/Operators/function#%D0%98%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5)и единственным спасением было свойство **callee**. К примеру:
+В ранних версиях javaScript отсутствовала такая фишка, как [Named Function Expression](/ru/docs/Web/JavaScript/Reference/Operators/function#%D0%98%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B5_%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D0%B2%D1%8B%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5) и единственным спасением было свойство **callee**. К примеру:
 
 ```js
 var f = function test() {

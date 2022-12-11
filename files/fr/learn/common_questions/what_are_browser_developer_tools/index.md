@@ -4,6 +4,7 @@ slug: Learn/Common_questions/What_are_browser_developer_tools
 l10n:
   sourceCommit: 8c6aa8bde7beff52a5cb3351b764be0a49218ed1
 ---
+
 Tous les navigateurs web modernes possèdent un ensemble d'outils de développement. Ces outils permettent de réaliser différentes actions&nbsp;: inspecter le code HTML, CSS ou JavaScript chargé à la volée dans la page, montrer les fichiers téléchargés et leur temps de chargement, etc. Dans cet article, nous verrons comment utiliser les fonctionnalités basiques des outils de développements d'un navigateur (aussi souvent appelés par l'anglicisme «&nbsp;<i lang="en">devtools</i>&nbsp;»).
 
 > **Note :** Avant de poursuivre avec les exemples présentés ci-après, nous vous conseillons d'utiliser [l'exemple construit](https://mdn.github.io/beginner-html-site-scripted/) dans la série d'articles [Commencer avec le Web](/fr/docs/Learn/Getting_started_with_the_web) et d'ouvrir le site dans votre navigateur pour poursuivre avec les étapes suivantes.

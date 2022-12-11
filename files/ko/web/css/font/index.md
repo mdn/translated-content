@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font
 ---
+
 {{CSSRef}}
 
 **`font`** CSS 속성은 {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}, {{cssxref("font-family")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다. 요소의 글꼴을 시스템 폰트로 설정할 수도 있습니다.

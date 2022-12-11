@@ -7,6 +7,7 @@ tags:
   - XSLT
 translation_of: Web/EXSLT/set/trailing
 ---
+
 {{XsltRef}}
 
 `set:trailing()` devuelve los nodos de un conjunto de nodos que vienen después del primer nodo de otro conjunto de nodos.
@@ -26,7 +27,7 @@ set:trailing(conjuntoNodos1,conjuntoNodos2)
 
 ### Devuelve
 
-Un conjunto de nodos que contiene los nodos del `conjuntoNodos1`cuyos valores siguen al primer nodo del `conjuntoNodos2`.
+Un conjunto de nodos que contiene los nodos del `conjuntoNodos1` cuyos valores siguen al primer nodo del `conjuntoNodos2`.
 
 > **Nota:** Si el primer nodo en `conjuntoNodos2` no está contenido en `conjuntoNodos1`, se devuelve un conjunto de nodos vacío. Si `conjuntoNodos2` está vacío, entonces el resultado es el `conjuntoNodos1`.
 

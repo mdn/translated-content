@@ -1,39 +1,38 @@
 ---
 title: StyleSheet
 slug: Web/API/StyleSheet
+l10n:
+  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
 {{APIRef("CSSOM")}}
 
-`StyleSheet`インターフェースを実装するオブジェクトは、単一のスタイルシートを表します。CCS スタイルシートは、より特殊化された{{domxref("CSSStyleSheet")}}インターフェースを実装します。
+`StyleSheet` インターフェイスを実装するオブジェクトは、単一のスタイルシートを表します。 CSS スタイルシートは、より特殊化された {{domxref("CSSStyleSheet")}} インターフェイスを実装します。
 
-## プロパティ
+## インスタンスプロパティ
 
-- {{domxref("StyleSheet/disabled","disabled")}}
-  - : このプロパティは、現在のスタイルシートが適用されているかどうかを示します。
-- {{domxref("StyleSheet/href","href")}} {{readonlyInline}}
-  - : スタイルシートの位置を返します。
-- {{domxref("StyleSheet/media","media")}} {{readonlyInline}}
-  - : Specifies the intended destination medium for style information.
-- {{domxref("StyleSheet/ownerNode","ownerNode")}} {{readonlyInline}}
-  - : このスタイルシートをドキュメントに関連付けるノードを返します。
-- {{domxref("StyleSheet/parentStyleSheet","parentStyleSheet")}} {{readonlyInline}}
-  - : 存在する場合、これを含む {{domxref("StyleSheet")}} を返します; ない場合は `null` を返します。
-- {{domxref("StyleSheet/title","title")}} {{readonlyInline}}
-  - : 現在のスタイルシートへのアドバイザリタイトルを表す {{domxref("DOMString")}} を返します。
-- {{domxref("StyleSheet/type","type")}} {{readonlyInline}}
-  - : このスタイルシートのスタイルシート言語を表す {{domxref("DOMString")}} を返します。
+- {{domxref("StyleSheet.disabled")}}
+  - : 論理値で、現在のスタイルシートが適用されているかどうかを示します。
+- {{domxref("StyleSheet.href")}} {{ReadOnlyInline}}
+  - : 文字列で、スタイルシートの位置を返します。
+- {{domxref("StyleSheet.media")}} {{ReadOnlyInline}}
+  - : {{domxref("MediaList")}} で、スタイル情報の宛先メディアを返します。
+- {{domxref("StyleSheet.ownerNode")}} {{ReadOnlyInline}}
+  - : {{domxref("Node")}} で、このスタイルシートを現在の文書に関連付けているノードを返します。
+- {{domxref("StyleSheet.parentStyleSheet")}} {{ReadOnlyInline}}
+  - : 存在する場合、これをインクルードしている {{domxref("StyleSheet")}} を返します。ない場合は `null` を返します。
+- {{domxref("StyleSheet.title")}} {{ReadOnlyInline}}
+  - : 現在のスタイルシートのアドバイザリータイトルを表す文字列を返します。
+- {{domxref("StyleSheet.type")}} {{ReadOnlyInline}}
+  - : このスタイルシートのスタイルシート言語を表す文字列を返す。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                                                           | 策定状況                         | コメント                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------- |
-| {{ SpecName('CSSOM', '#stylesheet', 'StyleSheet') }}                                             | {{ Spec2('CSSOM') }}     | {{ SpecName('DOM2 Style') }} から変更なし |
-| {{ SpecName('DOM2 Style', 'stylesheets.html#StyleSheets-StyleSheet', 'StyleSheet') }} | {{ Spec2('DOM2 Style') }} | 初期定義                                          |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.StyleSheet")}}
+{{Compat}}
 
 ## 関連情報
 

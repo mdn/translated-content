@@ -28,7 +28,7 @@ _这个接口没有自己的方法，但从 {{domxref("Event")}} 中继承方法
 
 ### 井号内容变化的语法选择
 
-你可以选择使用下述的任一方法监听 {{event("hashchange")}} 事件。
+你可以选择使用下述的任一方法监听 [`hashchange`](/zh-CN/docs/Web/API/Window/hashchange_event) 事件。
 
 ```js
 window.onhashchange = funcRef;
@@ -104,5 +104,5 @@ window.addEventListener('hashchange', locationHashChanged);
 
 ## 相关事件
 
-- {{event("hashchange")}}
-- {{event("popstate")}}
+- [`hashchange`](/zh-CN/docs/Web/API/Window/hashchange_event)
+- [`popstate`](/zh-CN/docs/Web/API/Window/popstate_event)

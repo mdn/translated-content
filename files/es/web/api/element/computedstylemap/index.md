@@ -1,18 +1,8 @@
 ---
 title: Element.computedStyleMap()
 slug: Web/API/Element/computedStyleMap
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Element
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - StylePropertyMapReadOnly
-  - computedStyleMap()
-translation_of: Web/API/Element/computedStyleMap
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 El método `computedStyleMap()` de la interfaz {{domxref("Element")}} devuelve una interfaz {{domxref("StylePropertyMapReadOnly")}} que provee una representación de solo-lectura de un bloque de declaración de CSS que es una alternativa a {{domxref("CSSStyleDeclaration")}}.

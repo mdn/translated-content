@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.restore()
 slug: Web/API/CanvasRenderingContext2D/restore
 translation_of: Web/API/CanvasRenderingContext2D/restore
 ---
+
 {{APIRef}}
 
 Метод **`CanvasRenderingContext2D.restore()`** восстанавливает предварительно сохранённое состояние канваса из стека. Если состояние ранее не сохранялось, то метод ничего не делает.

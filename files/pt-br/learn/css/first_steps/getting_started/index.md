@@ -1,18 +1,9 @@
 ---
 title: Iniciando com CSS
 slug: Learn/CSS/First_steps/Getting_started
-tags:
-  - Aprender
-  - CSS
-  - Classes
-  - Elementos
-  - Estado
-  - Iniciante
-  - Seletores
-  - Sintaxe
-translation_of: Learn/CSS/First_steps/Getting_started
 original_slug: Learn/CSS/First_steps/Iniciando
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 Neste artigo iremos pegar um simples documento HTML e aplicar o CSS nele, aprendendo algumas coisas práticas sobre a linguagem no decorrer do processo.

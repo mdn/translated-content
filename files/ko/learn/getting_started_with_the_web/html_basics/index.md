@@ -3,6 +3,7 @@ title: HTML 기본
 slug: Learn/Getting_started_with_the_web/HTML_basics
 original_slug: Learn/Getting_started_with_the_web/HTML_기본
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
 HTML(**H**yper**t**ext **M**arkup **L**anguage)은 웹 페이지와 그 내용을 구조화하기 위해 사용하는 코드입니다. 예를 들면, 컨텐트는 여러 개의 문단, 글 머리 목록이 구조화된 것이거나 사진이나 데이터 테이블일 수도 있습니다. 제목과 같이 이 글은 HTML과 그 기능에 대한 기본적인 이해를 제공할 것입니다.

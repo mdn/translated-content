@@ -9,6 +9,7 @@ tags:
   - Содержание
 translation_of: Web/HTML/Element/a
 ---
+
 HTML-элемент `<a>` определяет гиперссылку для перехода на определённое место на странице или на другую страницу в Интернете. Также он может быть использован (в устаревшем варианте) для создания якоря — это место назначения для гиперссылок внутри страницы: так ссылки не ограничены только в перемещении между страницами.
 
 ```html
@@ -169,7 +170,7 @@ HTML-элемент `<a>` определяет гиперссылку для п�
 
 ```html
 <a href="https://developer.mozilla.org/ru/" target="_blank">
-  <img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png" alt="MDN logo">
+  <img src="mdn_logo.png" alt="MDN logo">
 </a>
 ```
 
@@ -237,4 +238,4 @@ HTML 3.2 включает в себя только `name`, `href`, `rel`, `rev` 
 
 - Другие элементы: {{HTMLElement("abbr")}}, {{HTMLElement("em")}}, {{HTMLElement("strong")}}, {{HTMLElement("small")}}, {{HTMLElement("cite")}}, {{HTMLElement("q")}}, {{HTMLElement("dfn")}}, {{HTMLElement("time")}}, {{HTMLElement("code")}}, {{HTMLElement("var")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("b")}}, {{HTMLElement("i")}}, {{HTMLElement("mark")}}, {{HTMLElement("ruby")}}, {{HTMLElement("rp")}}, {{HTMLElement("rt")}}, {{HTMLElement("bdo")}}, {{HTMLElement("span")}}, {{HTMLElement("br")}}, {{HTMLElement("wbr")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

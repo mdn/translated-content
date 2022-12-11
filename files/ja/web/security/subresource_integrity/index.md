@@ -87,20 +87,11 @@ Access-Control-Allow-Origin: *
 
 ## 仕様
 
-| 仕様書                                           | 状態                                         | 備考 |
-| ------------------------------------------------ | -------------------------------------------- | ---- |
-| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |      |
-| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |      |
+{{Specifications}}
 
 ## ブラウザの互換性
 
-### \<script integrity>
-
-{{Compat("html.elements.script.integrity")}}
-
-### CSP: require-sri-for
-
-{{Compat("http.headers.csp.require-sri-for")}}
+{{Compat}}
 
 ## 関連情報
 

@@ -12,6 +12,7 @@ tags:
   - openWindow
 translation_of: Web/API/Clients/openWindow
 ---
+
 {{APIRef("Service Workers API")}}
 
 Метод **`openWindow()`** интерфейса {{domxref("Clients")}} создаёт новый контекст просмотра верхнего уровня и загружает заданный URL. Если вызывающий скрипт не имеет разрешения на отображение всплывающих окон, `openWindow()` выдаст `InvalidAccessError`.

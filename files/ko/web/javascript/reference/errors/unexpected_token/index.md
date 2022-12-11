@@ -6,6 +6,7 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메시지

@@ -1,8 +1,8 @@
 ---
 title: Element.getElementsByTagNameNS()
 slug: Web/API/Element/getElementsByTagNameNS
-translation_of: Web/API/Element/getElementsByTagNameNS
 ---
+
 {{APIRef}}
 
 El método `Element.getElementsByTagNameNS()` devuelve una {{domxref("HTMLCollection")}} viva de elementos con el nombre de etiqueta dado perteneciente al espacio de nombres dado. Es similar a {{Domxref("Document.getElementsByTagNameNS")}}, con la excepción de que su búsqueda está limitada a los descendientes del elemento especificado.

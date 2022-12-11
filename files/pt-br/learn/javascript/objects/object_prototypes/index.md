@@ -1,9 +1,9 @@
 ---
 title: Protótipos de objetos
 slug: Learn/JavaScript/Objects/Object_prototypes
-translation_of: Learn/JavaScript/Objects/Object_prototypes
 original_slug: Aprender/JavaScript/Objetos/Object_prototypes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 
 Protótipos são o mecanismo pelo qual objetos JavaScript herdam recursos uns dos outros. Neste artigo, explicamos como as cadeias de protótipos funcionam e observamos como a propriedade prototype pode ser usada para adicionar métodos aos construtores existentes.

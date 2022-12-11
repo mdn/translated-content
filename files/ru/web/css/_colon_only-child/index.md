@@ -5,6 +5,7 @@ tags:
   - Псевдоклассы
 translation_of: Web/CSS/:only-child
 ---
+
 {{CSSRef}}
 
 ## Описание

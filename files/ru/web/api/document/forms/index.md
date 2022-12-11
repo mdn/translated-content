@@ -9,6 +9,7 @@ tags:
   - Property
 translation_of: Web/API/Document/forms
 ---
+
 {{APIRef("DOM")}}
 
 `forms` возвращает коллекцию ({{domxref("HTMLCollection")}}) форм в текущем документе

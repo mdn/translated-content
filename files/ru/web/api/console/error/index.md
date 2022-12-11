@@ -3,6 +3,7 @@ title: console.error()
 slug: Web/API/Console/error
 translation_of: Web/API/Console/error
 ---
+
 {{APIRef("Console API")}}
 
 Выводит сообщение об ошибке в веб-консоль.

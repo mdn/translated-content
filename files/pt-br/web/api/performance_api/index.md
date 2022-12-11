@@ -1,9 +1,9 @@
 ---
 title: API de Desempenho
 slug: Web/API/Performance_API
-translation_of: Web/API/Performance_API
 original_slug: Web/API/API_de_Desempenho
 ---
+
 {{DefaultAPISidebar("High Resolution Time")}}
 
 The [High Resolution Time](https://www.w3.org/TR/hr-time/) standard defines a {{domxref("Performance")}} interface that supports client-side latency measurements within applications. The {{domxref("Performance")}} interfaces are considered _high resolution_ because they are accurate to a thousandth of a millisecond (subject to hardware or software constraints). The interfaces support a number of use cases including calculating frame-rates (potentially important in animations) and benchmarking (such as the time to load a resource).
@@ -67,7 +67,7 @@ The `{{domxref("Performance.navigation","navigation")}}` property returns a {{do
 
 ## Implementation status
 
-As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers.
+As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/pt-BR/docs/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers.
 
 To test your browser's support for the {{domxref("Performance")}} interface, run the [`perf-api-support`](http://mdn.github.io/web-performance/perf-api-support.html) application.
 

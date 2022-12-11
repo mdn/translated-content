@@ -1,8 +1,8 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
-translation_of: Web/HTTP/Status/206
 ---
+
 {{HTTPSidebar}}
 
 El codigo de respuesta con estado exitoso HTTP **`206 Partial Content`** indica que la solicitud se ha realizado con exito y el cuerpo contiene los rangos solicitados de la data, como esta descrito en la cabecera {{HTTPHeader("Range")}} de la solicitud.

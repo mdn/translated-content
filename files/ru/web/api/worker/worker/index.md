@@ -40,8 +40,8 @@ var myWorker = new Worker(aURL, options);
 ### Исключения
 
 - A `SecurityError` is raised if the document is not allowed to start workers.
-- A `NetworkError` is raised if the MIME type of one of the script is `text/csv`, `image/*`, `video/*`, or `audio/*`. It should always be `text/javacript.`
-- A `SyntaxError` is raised if _aUR\_\_L_ cannot be parsed.
+- A `NetworkError` is raised if the MIME type of one of the script is `text/csv`, `image/*`, `video/*`, or `audio/*`. It should always be `text/javascript.`
+- A `SyntaxError` is raised if a _URL_ cannot be parsed.
 
 ## Пример
 

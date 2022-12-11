@@ -1,20 +1,9 @@
 ---
 title: Criando hyperlinks
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
-tags:
-  - Guía
-  - HTML
-  - HTTP
-  - Iniciante
-  - Link
-  - URL
-  - absoluto
-  - href
-  - hyperlinks
-  - relativo
-translation_of: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 original_slug: Aprender/HTML/Introducao_ao_HTML/Criando_hyperlinks
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
@@ -56,7 +45,7 @@ Os hiperlinks são uma das inovações mais interessantes que a Web oferece. Bem
 
 A página inicial da BBC, por exemplo, contém um grande número de links que apontam não apenas para várias notícias, mas também diferentes áreas do site (funcionalidade de navegação), páginas de login/registro (ferramentas do usuário) e muito mais.
 
-![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](https://mdn.mozillademos.org/files/12405/bbc-homepage.png)
+![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](bbc-homepage.png)
 
 ## Anatomia de um link
 

@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Memory_Management
 original_slug: Web/JavaScript/Gestion_de_Memoria
 ---
+
 {{JsSidebar("Advanced")}}
 
 ## Introducción

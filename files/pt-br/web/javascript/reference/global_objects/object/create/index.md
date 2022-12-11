@@ -1,11 +1,13 @@
 ---
 title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
+
 {{JSRef}}
 
-O método **`Object.create()`** cria um novo objeto, utilizando um outro objecto existente como protótipo para o novo objeto a ser criado.
+O método **`Object.create()`** cria um novo objeto, utilizando um outro objeto existente como protótipo para o novo objeto a ser criado.
+
+{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}
 
 ## Sintaxe
 

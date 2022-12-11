@@ -10,6 +10,7 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
+
 {{JSRef}}
 
 **`has()`** 메서드는 `Set` 객체에 주어진 요소가 존재하는지 여부를 판별해 반환합니다.

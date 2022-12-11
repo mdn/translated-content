@@ -1,14 +1,6 @@
 ---
 title: AnimationEvent.animationName
 slug: Web/API/AnimationEvent/animationName
-tags:
-  - AnimationEvent
-  - Animação Web
-  - Apps
-  - CSSOM
-  - Propriedade
-  - Referencia
-translation_of: Web/API/AnimationEvent/animationName
 ---
 `{{SeeCompatTable}}{{ apiref("Web Animations API") }}`
 

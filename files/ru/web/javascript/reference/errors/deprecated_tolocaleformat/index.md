@@ -3,6 +3,7 @@ title: 'Warning: Date.prototype.toLocaleFormat (Является устарев�
 slug: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

@@ -1,19 +1,9 @@
 ---
 title: Identificando recursos na web
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - Esquema
-  - HTTP
-  - O que é HTTP?
-  - Protocolo HTTP
-  - Sintaxe URL
-  - URI
-  - URL
-  - query
-  - resources
-translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 original_slug: Web/HTTP/Basico_sobre_HTTP/Identifying_resources_on_the_Web
 ---
+
 {{HTTPSidebar}}
 
 O alvo de uma requisição HTTP é chamada de "resource", ou recurso em português, com a natureza ainda não definida; Isso pode ser um documento, uma foto ou qualquer outra coisa. Cada recurso é identificado por uma Identificação de recursos uniforme, do inglês **Uniform Resource Identifier** ({{Glossary("URI")}}) usada pelo HTTP para identificar recursos.

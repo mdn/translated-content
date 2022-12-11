@@ -66,10 +66,7 @@ slug: Web/SVG/Element/mpath
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                                     | コメント   |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{SpecName("SVG Animations 2", "#MPathElement", "&lt;mpath&gt;")}}     | {{Spec2("SVG Animations 2")}} | 変更なし   |
-| {{SpecName("SVG1.1", "animate.html#MPathElement", "&lt;mpath&gt;")}} | {{Spec2("SVG1.1")}}                 | 最初の定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

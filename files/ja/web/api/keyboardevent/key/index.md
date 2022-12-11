@@ -1,6 +1,8 @@
 ---
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{APIRef("UI Events")}}
@@ -15,7 +17,7 @@ slug: Web/API/KeyboardEvent/key
 
 - 押されたキーが表示可能なものである場合、返される値は、そのキーの表示可能な表現を含む空でない Unicode 文字列になります。
 - 押されたキーが制御文字や特殊文字の場合、返される値は[事前に定義されたキー値](/ja/docs/Web/API/UI_Events/Keyboard_event_key_values)のいずれかになります。
-- もし `KeyboardEvent` が[デッドキー](https://wikipedia.org/wiki/Dead_key)が押されたことを表している場合は、キー値は "`Dead`" になります。
+- もし `KeyboardEvent` が[デッドキー](https://ja.wikipedia.org/wiki/デッドキー)が押されたことを表している場合は、キー値は "`Dead`" になります。
 - 一部の特殊なキーボードのキー（マルチメディアキーボードでメディアを制御するための拡張キーなど）は、 Windows ではキーコードを生成しません。その代わりに、 `WM_APPCOMMAND` イベントが発生します。これらのイベントは DOM キーボードイベントにマッピングされ、 Windows の「仮想キーコード」にリストアップされます（実際にはキーコードではありませんが）。
 - キーを特定できない場合、返される値は `Unidentified` になります。
 
@@ -73,7 +75,7 @@ slug: Web/API/KeyboardEvent/key
 }
 
 .fx > div:first-child {
-   width: 30%;
+  width: 30%;
 }
 
 .flex {
@@ -96,14 +98,15 @@ consoleLog = document.getElementById('console-log'),
 btnReset = document.getElementById('btn-reset');
 
 function logMessage(message) {
-  consoleLog.innerHTML += message + "<br>";
+  consoleLog.innerHTML += `${message}<br>`;
 }
 
 textarea.addEventListener('keydown', (e) => {
-  if (!e.repeat)
+  if (!e.repeat) {
     logMessage(`Key "${e.key}" pressed [event: keydown]`);
-  else
+  } else {
     logMessage(`Key "${e.key}" repeating [event: keydown]`);
+  }
 });
 
 textarea.addEventListener('beforeinput', (e) => {
@@ -159,7 +162,7 @@ Shift キーが押されると、まず {{domxref("Element/keydown_event", "keyd
 この例では {{domxref("EventTarget.addEventListener()")}} を使用して {{domxref("Element/keydown_event", "keydown")}} イベントを待ち受けています。イベントが発生すると、キーの値がチェックされ、コードが関心を持つキーの一つであるかどうかが確認され、もしそうであれば、何らかの方法で処理されます（宇宙船の操縦や、スプレッドシートの選択セルの変更など）。
 
 ```js
-window.addEventListener("keydown", function (event) {
+window.addEventListener("keydown", (event) => {
   if (event.defaultPrevented) {
     return; // Do nothing if the event was already processed
   }

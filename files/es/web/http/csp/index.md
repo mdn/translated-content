@@ -1,10 +1,8 @@
 ---
 title: Content Security Policy (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - Política de Seguridad del Contenido
-translation_of: Web/HTTP/CSP
 ---
+
 {{HTTPSidebar}}
 
 **Política de Seguridad del Contenido** o ( {{Glossary("CSP")}} ) - del inglés ***Content Security Policy*** - es una capa de seguridad adicional que ayuda a prevenir y mitigar algunos tipos de ataque, incluyendo Cross Site Scripting ( {{Glossary("XSS")}} ) y ataques de inyección de datos. Estos ataques son usados con diversos propósitos, desde robar información hasta desfiguración de sitios o distribución de malware .
@@ -25,7 +23,7 @@ CSP hace posible que los administradores de servidores reduzcan o eliminen las p
 
 Como medida extrema de protección, los sitios que nunca requieran ejecutar scripts, pueden optar por rechazar globalmente la ejecución de scripts.
 
-### Mitigando los ataques de análisis de paquetes _(packet sniffing attacks)_
+### Mitigando los ataques de análisis de paquetes (packet sniffing attacks)
 
 Además de restringir los dominios desde los cuales se puede cargar el contenido, el servidor puede especificar qué protocolos se pueden usar; por ejemplo (e idealmente, desde un punto de vista de seguridad), un servidor puede especificar que todo el contenido debe cargarse utilizando HTTPS. Una estrategia completa de seguridad en la transmisión de datos incluye no solo aplicar HTTPS para la transferencia de datos, sino también marcar todas las cookies con el indicador de seguridad y proporcionar redirecciones automáticas desde las páginas HTTP a sus homólogas HTTPS. Los sitios también pueden usar la cabecera HTTP {{HTTPHeader ("Strict-Transport-Security")}} para garantizar que los navegadores se conecten a ellos solo a través de un canal cifrado.
 
@@ -190,7 +188,7 @@ Como se puede ver, el informe incluye la ruta completa al recurso infractor en `
 
 ## Compatibilidad del navegador
 
-{{Compat("http.headers.csp")}}
+{{Compat}}
 
 Existe una incompatibilidad específica en algunas versiones del navegador web Safari, por lo que si se establece una cabecera de Política de Seguridad de Contenido, pero no una cabecera de Same Origin, el navegador bloqueará el contenido alojado de forma autónoma y el contenido externo, e informará incorrectamente de que esto es debido a que la Política de Seguridad del Contenido no permite el contenido.
 

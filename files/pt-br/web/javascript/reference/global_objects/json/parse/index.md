@@ -1,11 +1,8 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-tags:
-  - JSON
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
+
 {{JSRef}}
 
 O método **`JSON.parse()`** analisa uma string JSON, construindo o valor ou um objeto JavaScript descrito pela string. Uma função **reviver** opcional pode ser fornecida para executar uma transformação no objeto que será retornado.

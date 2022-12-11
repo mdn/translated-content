@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/matchAll
 ---
+
 {{JSRef}}
 
 El método **`matchAll()`** retorna un iterador de todos los resultados de ocurrencia en una _cadena de texto_ contra una expresión regular, incluyendo grupos de captura.
@@ -50,7 +51,7 @@ while ((ocurrencia = regexp.exec(cadena)) !== null) {
 }
 ```
 
-Con `matchAll` disponible, puedes evitar el ciclo [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) y `exec` con `/g`. Por el contrario, usando `matchAll`, obtienes un iterador con el cual puedes usar con constructores más convenientes [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), [array spread](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax), o {{jsxref("Array.from()")}}:
+Con `matchAll` disponible, puedes evitar el ciclo [`while`](/es/docs/Web/JavaScript/Reference/Statements/while) y `exec` con `/g`. Por el contrario, usando `matchAll`, obtienes un iterador con el cual puedes usar con constructores más convenientes [`for...of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), [array spread](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax), o {{jsxref("Array.from()")}}:
 
 ```js
 const regexp = RegExp('foo[a-z]*','g');
@@ -90,7 +91,7 @@ Array.from(cadena.matchAll(regexp), m => `${regexp.lastIndex} ${m[0]}`);
 
 ### Mejor acceso para capturar grupos
 
-Otra buena razón para `matchAll` es el mejorado acceso a los grupos de captura. Los grupos de captura son ignorados cuando se usa [`match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) con la bandera global `/g`:
+Otra buena razón para `matchAll` es el mejorado acceso a los grupos de captura. Los grupos de captura son ignorados cuando se usa [`match()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/match) con la bandera global `/g`:
 
 ```js
 var regexp = /t(e)(st(\d?))/g;
@@ -113,9 +114,7 @@ array[1];
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                       | Comentario |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.matchall', 'String.prototype.matchAll')}} | {{Spec2('ESDraft')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -1,16 +1,8 @@
 ---
 title: Fundamentos de JavaScript
 slug: Learn/Getting_started_with_the_web/JavaScript_basics
-tags:
-  - Aprender
-  - CodingScripting
-  - JavaScript
-  - Novato
-  - Principiante
-  - Web
-  - l10n:priority
-translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext( "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web/Publishing_your_website","Learn/Getting_started_with_the_web")}}
 
 JavaScript es el lenguaje de programación que debes usar para añadir características interactivas a tu sitio web, (por ejemplo, juegos, eventos que ocurren cuando los botones son presionados o los datos son introducidos en los formularios, efectos de estilo dinámicos, animación, y mucho más). Este artículo te ayudará a comenzar con este lenguaje extraordinario y te dará una idea de qué es posible hacer con él.
@@ -31,7 +23,7 @@ Ya que se supone que este artículo es solo una introducción ligera a JavaScrip
 
 Debajo se presentan algunos aspectos del núcleo del lenguaje y también jugarás con unas pocas características de la API del navegador. ¡Diviértete!
 
-## Ejemplo «_¡Hola Mundo!_»
+## Ejemplo «¡Hola Mundo!»
 
 La sección de arriba suena realmente emocionante, y debería serlo. JavaScript es una de las tecnologías web más emocionantes, y cuando comiences a ser bueno en su uso, tus sitios web entrarán en una nueva dimensión de energía y creatividad.
 
@@ -54,7 +46,7 @@ Sin embargo, sentirse cómodo con JavaScript es un poco más difícil que sentir
     miTitulo.textContent = '¡Hola mundo!';
     ```
 
-5. Finalmente, asegúrate de que has guardado los archivos HTML y JavaScript, y abre `index.html` en el navegador. Deberías ver algo así: ![](https://mdn.mozillademos.org/files/9543/hello-world.png)
+5. Finalmente, asegúrate de que has guardado los archivos HTML y JavaScript, y abre `index.html` en el navegador. Deberías ver algo así: ![](hello-world.png)
 
 > **Nota:** la razón por la que has puesto el elemento {{htmlelement("script")}} casi al final del documento HTML es porque **el navegador carga el HTML en el orden en que aparece en el archivo**.
 >
@@ -473,7 +465,7 @@ En el lenguaje humano, esto significa que si `miNombre` no tiene ningún valor, 
 
 Si has seguido las instrucciones en este artículo, tendrás una página que luzca como esta (también puede [ver nuestra versión aquí](http://mdn.github.io/beginner-html-site-scripted/)):
 
-![](https://mdn.mozillademos.org/files/9539/website-screen-scripted.png)
+![](website-screen-scripted.png)
 
 Si tuviste problemas, siempre puedes comparar su trabajo con el [código terminado del ejemplo en GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js).
 

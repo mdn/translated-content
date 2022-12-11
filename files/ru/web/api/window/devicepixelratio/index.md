@@ -3,6 +3,7 @@ title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 translation_of: Web/API/Window/devicePixelRatio
 ---
+
 {{APIRef}}
 
 ## Сводка

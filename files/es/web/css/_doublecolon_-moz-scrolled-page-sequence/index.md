@@ -1,14 +1,8 @@
 ---
 title: '::-moz-scrolled-page-sequence'
 slug: Web/CSS/::-moz-scrolled-page-sequence
-tags:
-  - CSS
-  - NeedsExample
-  - No estándar(2)
-  - Referencia
-  - Referencia CSS
-translation_of: Web/CSS/::-moz-scrolled-page-sequence
 ---
+
 {{CSSRef}}{{non-standard_header}}
 
 ## Resumen

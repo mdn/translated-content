@@ -34,7 +34,7 @@ var myTable = new WebAssembly.Table(tableDescriptor);
 ### 异常
 
 - 如果 `tableDescriptor` 不是对象类型，将会抛出 {{jsxref("TypeError")}} 异常。
-- 如果申明了 `maximum` 属性并且比 `initial` 小, 将会抛出 {{jsxref("RangeError")}} 异常。
+- 如果申明了 `maximum` 属性并且比 `initial` 小，将会抛出 {{jsxref("RangeError")}} 异常。
 
 ## `Table` Instance
 

@@ -10,6 +10,7 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Errors/Delete_in_strict_mode
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지

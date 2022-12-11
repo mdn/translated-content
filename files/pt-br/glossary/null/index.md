@@ -1,9 +1,9 @@
 ---
 title: Nulo
 slug: Glossary/Null
-translation_of: Glossary/Null
 original_slug: Glossario/Nulo
 ---
+
 Em ciência da computação, um valor nulo representa uma referencia que aponta, geralmente de maneira intencional, para um objeto ou endereço de memória inválido ou inexistente. O significado do valor nulo varia entre as implementações das linguagens.
 
 Em {{Glossary("JavaScript")}}, o null é um dos {{Glossary("Primitivo", "tipos primitivos")}}.

@@ -1,8 +1,8 @@
 ---
 title: MessageChannel
 slug: Web/API/MessageChannel
-translation_of: Web/API/MessageChannel
 ---
+
 {{APIRef("HTML DOM")}}
 
 A interface **`MessageChannel`** da [API Channel Messaging](/pt-BR/docs/Web/API/Channel_Messaging_API) nos permite criar um novo canal de mensagem e enviar os dados através de suas duas propriedades {{domxref("MessagePort")}}.

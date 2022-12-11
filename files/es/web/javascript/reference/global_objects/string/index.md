@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String
 ---
+
 {{JSRef}}
 
 El objeto **`String`** se utiliza para representar y manipular una secuencia de caracteres.
@@ -293,9 +294,7 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string-objects', 'String')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

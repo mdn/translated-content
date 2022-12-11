@@ -133,7 +133,7 @@ audioElement.addEventListener('ended', () => {
 
 Firefox 有一个名为 [Web Audio editor](/zh-CN/docs/Tools/Web_Audio_Editor) 的工具。在其上运行音频图的任何页面上，你可以打开开发者工具，使用 Web Audio 选项卡查看音频图，可查看每个节点的可用属性，并可以修改这些属性来查看会有什么效果。
 
-![The Firefox web audio editor showing an audio graph with AudioBufferSource, IIRFilter, and AudioDestination](https://mdn.mozillademos.org/files/16198/web-audio-editor.png)
+![The Firefox web audio editor showing an audio graph with AudioBufferSource, IIRFilter, and AudioDestination](web-audio-editor.png)
 
 > **备注：** Web Audio 编辑器默认不是开启的，你需要打开 Firefox developer tools 设置，选中 Default Developer Tools 部分中的 Web Audio 复选框来显示它。
 
@@ -202,7 +202,7 @@ const panner = new StereoPannerNode(audioContext, pannerOptions);
 
 > **备注：** 目前生成节点的构造函数不是每个浏览器都支持的。旧工厂函数支持更为广泛。
 
-这里我们的范围从-1（最左边）和 1（最右边）。再次让我们使用范围类型的 input 来改变这个参数：
+这里我们的范围从 -1（最左边）和 1（最右边）。再次让我们使用范围类型的 input 来改变这个参数：
 
 ```js
 <input type="range" id="panner" min="-1" max="1" value="0" step="0.01">
@@ -329,7 +329,7 @@ gainNode.connect(audioCtx.destination);
 
 这个将会创造一个如下音频节点图：
 
-![](https://mdn.mozillademos.org/files/7949/voice-change-o-matic-graph.png)你也可以链接多个节点到一个节点，比如说你想要混合多个音频源在一起，就让它们都通过一个效果节点，比如 gain node。
+![](voice-change-o-matic-graph.png)你也可以链接多个节点到一个节点，比如说你想要混合多个音频源在一起，就让它们都通过一个效果节点，比如 gain node。
 
 > **备注：** Firefox32 以上版本已有完整的 firefox 开发者工具包括 [Web Audio Editor](/zh-CN/docs/Tools/Web_Audio_Editor), 一个对测试 web audio 表的 bug 非常有用的东西。
 

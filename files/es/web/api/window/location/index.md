@@ -1,12 +1,8 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
-tags:
-  - Location
-  - contexto
-  - navegación
-translation_of: Web/API/Window/location
 ---
+
 {{APIRef}}
 
 La propiedad de sólo lectura `Window.location` retorna un objeto {{domxref("Location")}} con información acerca de la ubicación actual del documento.
@@ -28,7 +24,7 @@ location = newLocation;
 alert(location); // alerts "https://developer.mozilla.org/en-US/docs/Web/API/Window.location"
 ```
 
-### Ejemplo #1: Navegar a una nueva página
+### Ejemplo 1: Navegar a una nueva página
 
 Cuando un nuevo valor es asignado a un objeto location, un documento será cargado usando la URL como si location.assing() fuera llamada con la URL modificada. Note que configuraciones de seguridad como CORS, esto puede ser prevenido cuando pase.
 
@@ -37,13 +33,13 @@ location.assign("http://www.mozilla.org"); // o
 location = "http://www.mozilla.org";
 ```
 
-### Ejemplo #2: Forzar la recarga de una página desde el servidor
+### Ejemplo 2: Forzar la recarga de una página desde el servidor
 
 ```js
 location.reload(true);
 ```
 
-### Ejemplo #3
+### Ejemplo 3
 
 Considerando el siguiente ejemplo, el cual recargará la página usando el método [`replace()`](/es/docs/Web/API/Location.replace) para insertar un valor de location.pathname dentro del hash:
 
@@ -56,7 +52,7 @@ function reloadPageWithHash() {
 
 > **Nota:** El ejemplo anterior funciona en situaciones cuando location.hash no necesita ser retenido. Sin embargo, en navegadores basados en Gecko, configurar `location.pathname` en esta manera eliminará cualquier información en location.hash, mientras que en WebKit (y posiblemente en otros navegadores), configurar el pathname no afectará el hash. Si necesitas cambiar el pathname pero mantener el hash como está, usa el método `replace()`, el cual funcionará consistentemente a través de los navegadores..
 
-### Ejemplo #4: Muestra las propiedades de la URL actual en una ventana emergente:
+### Ejemplo 4: Muestra las propiedades de la URL actual en una ventana emergente:
 
 ```js
 function showLoc() {
@@ -70,7 +66,7 @@ function showLoc() {
 // in html: <button onclick="showLoc();">Show location properties</button>
 ```
 
-### Ejemplo #5: Enviar una cadena de caracteres de datos al servidor por modificar la propiedad `search`:
+### Ejemplo 5: Enviar una cadena de caracteres de datos al servidor por modificar la propiedad `search`
 
 ```js
 function sendData (sData) {
@@ -82,7 +78,7 @@ function sendData (sData) {
 
 La siguiente URL con "?Some%20data" anexa es enviada al servidor (Si no hay ninguna acción tomada por el servidor, el documento actual es recargado con la cadena de caracteres modificada).
 
-### Ejemplo #6: Usando marcadores sin cambiar la propiedad hash:
+### Ejemplo 6: Usando marcadores sin cambiar la propiedad hash
 
 ```html
 <!doctype html>
@@ -189,10 +185,7 @@ var showBookmark = (function () {
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                           | Comment                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "history.html#the-location-interface", "Window.location")}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#the-location-interface", "Window.location")}} | {{Spec2('HTML5 W3C')}}     | Initial definition.                              |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

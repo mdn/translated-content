@@ -4,6 +4,7 @@ slug: Web/API/Element/scroll_event
 translation_of: Web/API/GlobalEventHandlers/onscroll
 original_slug: Web/API/GlobalEventHandlers/onscroll
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Обработчик для события скролла.

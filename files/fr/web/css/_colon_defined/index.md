@@ -53,7 +53,7 @@ customElements.define('simple-custom',
 })
 ```
 
-On insère ensuite une copie de cet élément dans le document, à côté d'un paragraphe classique {`<p>` :
+On insère ensuite une copie de cet élément dans le document, à côté d'un paragraphe classique `<p>` :
 
 ```html
 <simple-custom text="Le texte de l'élément personnalisé"></simple-custom>

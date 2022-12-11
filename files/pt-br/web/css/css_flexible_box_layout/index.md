@@ -1,14 +1,8 @@
 ---
 title: CSS Flexible Box Layout
 slug: Web/CSS/CSS_Flexible_Box_Layout
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - Guia
-  - Visão Geral
-  - Referência
-  - flexbox
 ---
+
 {{CSSRef}}
 
 **CSS Flexible Box Layout** é um módulo do [CSS](/pt-BR/docs/Web/CSS) que define um layout multicoluna otimizado para o design de interfaces de usuário, para isso busca lidar com o layout dos itens de maneira unidimensional. No modelo de layout do Flexbox, os filhos de um contêiner flex podem ser dispostos em qualquer direção, e podem "flexibilizar" seus tamanhos, crescendo para preencher o espaço vazio ou diminuindo para evitar o transbordamento do elemento pai. O alinhamento horizontal e vertical dos filhos podem ser facilmente manipulados.

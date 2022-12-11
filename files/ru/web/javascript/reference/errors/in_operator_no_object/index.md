@@ -5,6 +5,7 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/in_operator_no_object
 translation_of: Web/JavaScript/Reference/Errors/in_operator_no_object
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщения
@@ -41,7 +42,7 @@ TypeError: невозможно использовать оператор 'in' �
 // true
 ```
 
-### Операнд не может быть`null` или `undefined`
+### Операнд не может быть `null` или `undefined`
 
 Убедитесь, что объект, который вы осматриваете, на самом деле не {{jsxref("null")}} или {{jsxref("undefined")}}.
 

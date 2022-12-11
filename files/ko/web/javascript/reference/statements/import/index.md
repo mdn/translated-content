@@ -7,6 +7,7 @@ tags:
   - import
 translation_of: Web/JavaScript/Reference/Statements/import
 ---
+
 {{jsSidebar("Statements")}}
 
 정적 **`import`** 문은 다른 모듈에서 내보낸 바인딩을 가져올 때 사용합니다.

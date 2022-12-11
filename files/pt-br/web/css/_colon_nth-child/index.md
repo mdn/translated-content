@@ -1,11 +1,8 @@
 ---
 title: ':nth-child()'
 slug: Web/CSS/:nth-child
-tags:
-  - Pseudo-classe
-  - Referencia
-translation_of: Web/CSS/:nth-child
 ---
+
 {{CSSRef}}
 
 A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) `:nth-child()` seleciona elementos com base em suas posições em um grupo de elementos irmãos.

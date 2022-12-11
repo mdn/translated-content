@@ -7,6 +7,7 @@ tags:
   - Текст
 translation_of: Web/API/Text
 ---
+
 {{ApiRef("DOM")}}
 
 Интерфейс **`Text`** представляет собой текстовое содержание (элемента) {{domxref("Element")}} или {{domxref("Attr")}}. Если элемент не имеет разметки внутри собственного содержимого, то он интерпретируется как a single child (implementing) `Text` ,который содержит текст элемента. Однако, если элемент содержит разметку, он разбивается на information items и `Text` nodes ,которые образуют его дочерние элементы.
@@ -33,7 +34,7 @@ _Inherits properties from its parent, {{domxref("CharacterData")}}._
 
 ### Свойства (included) от Slotable
 
-_Интерфейс `Text`включает следующее свойство, определяемое при смешивании {{domxref("Slotable")}} ._
+_Интерфейс `Text` включает следующее свойство, определяемое при смешивании {{domxref("Slotable")}}._
 
 - {{domxref("Slotable.assignedSlot")}} {{readonlyInline}}
   - : Возвращает {{domxref("HTMLSlotElement")}}, представляющий {{htmlelement("slot")}}, в который вставлен данный узел.

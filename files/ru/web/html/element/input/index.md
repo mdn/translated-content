@@ -3,6 +3,9 @@ title: <input>
 slug: Web/HTML/Element/Input
 translation_of: Web/HTML/Element/input
 ---
+
+{{HTMLSidebar}}
+
 ## Описание
 
 **Элемент** **HTML `<input>`** используется для создания интерактивных элементов управления в веб-формах для получения данных от пользователя; в зависимости от устройства и {{Glossary("user agent")}}, доступен широкий выбор типов входных данных и виджетов управления. Из-за огромного количества возможных сочетаний типов ввода и атрибутов это один из самых мощных и сложных элементов HTML.
@@ -89,7 +92,7 @@ translation_of: Web/HTML/Element/input
   - : If the input element is a submit button or image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
     - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
     - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the {{htmlattrxref("type","input")}} attribute set to `file`.
-    - `text/plain`If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.
+    - `text/plain` If this attribute is specified, it overrides the {{htmlattrxref("enctype","form")}} attribute of the element's form owner.
 - {{htmlattrdef("formmethod")}} {{HTMLVersionInline("5")}}
   - : If the input element is a submit button or image, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:
     - `post`: The data from the form is included in the body of the form and is sent to the server.
@@ -256,5 +259,3 @@ Firefox for Android also sets a default {{ cssxref("border") }} on all `<input t
 
 - Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 - [Cross-browser HTML5 placeholder text](http://webdesignerwall.com/tutorials/cross-browser-html5-placeholder-text)
-
-{{HTMLRef}}

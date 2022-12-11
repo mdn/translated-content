@@ -3,6 +3,7 @@ title: MediaRecorder
 slug: Web/API/MediaRecorder
 translation_of: Web/API/MediaRecorder
 ---
+
 {{APIRef("Media Recorder API")}}
 
 The **`MediaRecorder`** это интерфейс [MediaStream Recording API](/ru/docs/Web/API/MediaStream_Recording_API) представляющий функциональность для простой записи медиа. Создаётся с использованием {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} конструктора.

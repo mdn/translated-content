@@ -12,6 +12,7 @@ tags:
   - Платежи
 translation_of: Web/API/PaymentRequest
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The [Payment Request API's](/ru/docs/Web/API/Payment_Request_API) **`PaymentRequest`** interface the primary access point into the API, and lets web content and apps accept payments from the end user on behalf of the operator of the site or the publisher of the app.

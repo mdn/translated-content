@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-grow
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS)-свойство **`flex-grow`** определяет как много свободного пространства во flex-контейнере должно быть назначено текущему элементу (flex grow factor — «коэффициент увеличения flex»). Свободное пространство — разница между размером flex-контейнера и размером всех его flex-элементов вместе. Если все sibling-элементы (sibling items — элементы одного уровня вложенности, состоящие по отношению друг к другу в родственной связи как брат или сестра), имеют одинаковый коэффициент flex-grow, то все они получат одинаковую долю свободного пространства, в противном случае оно распределяется в соответствии с соотношением, определённым различными коэффициентами flex-grow.
@@ -110,4 +111,4 @@ flex-grow: unset;
 
 - Руководство по CSS Flexbox: _[Basic Concepts of Flexbox](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
 - Руководство по CSS Flexbox: _[Controlling Ratios of flex items along the main axis](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
-- [\`flex-grow\` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) статья Мануэля Матузовича (Manuel Matuzovic) на CSS-Tricks, которая показывает как работает flex-grow
+- [`flex-grow` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) статья Мануэля Матузовича (Manuel Matuzovic) на CSS-Tricks, которая показывает как работает flex-grow

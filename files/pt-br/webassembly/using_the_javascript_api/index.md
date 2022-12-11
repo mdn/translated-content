@@ -1,18 +1,9 @@
 ---
 title: Usando a API JavaScript do WebAssembly
 slug: WebAssembly/Using_the_JavaScript_API
-tags:
-  - API
-  - Compilador
-  - DevTools
-  - JavaScript
-  - WebAssembly
-  - compilar
-  - memoria
-  - tabela
-translation_of: WebAssembly/Using_the_JavaScript_API
 original_slug: WebAssembly/Usando_a_API_JavaScript_do_WebAssembly
 ---
+
 {{WebAssemblySidebar}}
 
 Se você já [compilou um módulo de outra linguagem utilizando ferramentas como o Emscripten](/pt-BR/docs/WebAssembly/C_to_wasm), ou [carregou e executou o código sozinho](/pt-BR/docs/WebAssembly/Loading_and_running), o próximo passo é aprender mais sobre o uso de outros recursos da API JavaScript do WebAssembly. Este artigo te ensina o que você precisará saber.
@@ -90,7 +81,7 @@ Este exemplo é longo e um pouco complicado que alcança muito pouco, mas serve 
 
 No Firefox 54+, o painel Debugger do Developer Tool consegue exibir a representação textual do qualquer código wasm inserido em uma página web. Para visualizá-lo, abra o painel Debugger e clique em “xxx > wasm”.
 
-![](https://mdn.mozillademos.org/files/14655/wasm-debugger-output.png)
+![](wasm-debugger-output.png)
 
 Muito em breve no Firefox, além de visualizar o WebAssembly em seu formato textual, os desenvolvedores serão capazes de depurar (colocar breakpoints, inspecionar o callstack, etc.) o WebAssembly utilizando o formato textual. Assista o vídeo [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) para ter uma prévia.
 

@@ -1,16 +1,8 @@
 ---
 title: SubtleCrypto.deriveKey()
 slug: Web/API/SubtleCrypto/deriveKey
-tags:
-  - API
-  - Criptografía
-  - Crypto
-  - Referencia
-  - SubtleCrypto
-  - Web
-  - metodo
-translation_of: Web/API/SubtleCrypto/deriveKey
 ---
+
 {{APIRef("Web Crypto API")}}
 
 O método **`SubtleCrypto.deriveKey()`** retorna como {{jsxref("Promise")}} de um recentemente gerado {{domxref("CryptoKey")}} derivada de uma master key e um algoritmo específico dados como parâmetro.

@@ -14,6 +14,7 @@ tags:
   - Usage
 translation_of: Web/API/StorageManager
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef("Storage")}}
 
 **`StorageManager`** является частью [Storage API](/ru/docs/Web/API/Storage_API) и предоставляет интерфейс для управления правами на хранение данных и для получения объёма данных, доступного для хранения. Доступ к интерфейсу можно получить через {{domxref("navigator.storage")}} или через {{domxref("WorkerNavigator.storage")}}.

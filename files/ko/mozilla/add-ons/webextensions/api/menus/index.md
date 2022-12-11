@@ -3,6 +3,7 @@ title: contextMenus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus
 ---
+
 {{AddonSidebar}}
 
 브라우저의 메뉴 시스템에 항목을 추가한다.

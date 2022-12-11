@@ -24,12 +24,7 @@ CSS 疑似クラスの {{cssxref(":lang")}} においては、名前が異なる
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考                                                                                                                                                                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-lang-and-xml:lang-attributes", "lang")}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。                                                                                                                                                                                                                                                                        |
-| {{SpecName('HTML5.1', "dom.html#the-lang-and-xml:lang-attributes", "lang")}}         | {{Spec2('HTML5.1')}}     | {{SpecName('HTML WHATWG')}} のスナップショット。{{SpecName('HTML5 W3C')}} から変更なし。                                                                                                                                                                                                                                            |
-| {{SpecName('HTML5 W3C', "dom.html#the-lang-and-xml:lang-attributes", "lang")}}     | {{Spec2('HTML5 W3C')}}     | {{SpecName('HTML WHATWG')}} のスナップショット。`xml:lang` の振る舞いと言語判断のアルゴリズムを定義。真にグローバルな属性となった。                                                                                                                                                                                                        |
-| {{SpecName('HTML4.01', 'struct/dirlang.html#h-8.1', 'lang')}}                             | {{Spec2('HTML4.01')}}     | {{HTMLElement("applet")}}, {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("br")}}, {{HTMLElement("frame")}}, {{HTMLElement("frameset")}}, {{HTMLElement("iframe")}}, {{HTMLElement("param")}}, and {{HTMLElement("script")}} を除くすべての要素で対応。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

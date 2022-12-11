@@ -3,6 +3,7 @@ title: Разметка и содержащий блок
 slug: Web/CSS/Containing_block
 translation_of: Web/CSS/Containing_block
 ---
+
 {{cssref}}
 
 На размер и позицию элемента часто влияет его **содержащий блок** (containing block). Чаще всего содержащим блоком является content область ([content area](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content-area)) ближайшего блочного ([block-level](/ru/docs/Web/HTML/Block-level_elements)) предка, но это не всегда так. В этой статье мы рассмотрим факторы, которые определяют содержащий блок элемента.
@@ -253,5 +254,22 @@ p {
 
 ## Смотрите также
 
-- {{css_key_concepts}}
+- Ключевые концепции CSS
+  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/Comments)
+  - [специфичность](/ru/docs/Web/CSS/Specificity)
+  - [наследование](/ru/docs/Web/CSS/inheritance)
+  - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
+  - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - Значения
+    - [начальные](/ru/docs/Web/CSS/initial_value)
+    - [вычисленные](/ru/docs/Web/CSS/computed_value)
+    - [используемые](/ru/docs/Web/CSS/used_value)
+    - [действительные](/ru/docs/Web/CSS/actual_value)
+  - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)
 - The {{cssxref("all")}} property resets all CSS declarations to a given known state

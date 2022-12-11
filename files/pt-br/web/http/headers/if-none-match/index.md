@@ -1,14 +1,8 @@
 ---
 title: If-None-Match
 slug: Web/HTTP/Headers/If-None-Match
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - HTTP
-  - Referencia
-  - Requisições Condicionais
-translation_of: Web/HTTP/Headers/If-None-Match
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição HTTP **`If-None-Match`** faz uma requisição condicional. Para os métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, o servidor irá mandar de volta o recurso requisitado, com um código de status {{HTTPStatus("200")}}, somente se ele não tiver um {{HTTPHeader("ETag")}} correspondendo as _tags_ dadas pela requisição. Para outros métodos, a requisição será processada somente o recurso existente eventualmente não possuir nenhuma {{HTTPHeader("ETag")}} correspondente nos valores listados.

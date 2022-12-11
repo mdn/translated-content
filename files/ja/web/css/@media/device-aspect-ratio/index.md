@@ -9,7 +9,7 @@ slug: Web/CSS/@media/device-aspect-ratio
 
 ## 構文
 
-`device-aspect-ratio` 特性は、 {{cssxref("&lt;ratio&gt;")}} で指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-device-aspect-ratio`** および `**max-device-aspect-ratio**` の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
+`device-aspect-ratio` 特性は、 {{cssxref("&lt;ratio&gt;")}} で指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-device-aspect-ratio`** および **`max-device-aspect-ratio`** の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
 
 ## 例
 

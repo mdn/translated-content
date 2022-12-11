@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 browser-compat: javascript.builtins.Proxy
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
+
 {{JSRef}}
 
 El objeto `Proxy` permite crear un intermediario para otro objeto, el cual
@@ -184,7 +185,7 @@ person.age = 'young'; // Lanza una excepción
 person.age = 300; // Lanza una excepción
 ```
 
-### Extendiendo el contructor
+### Extendiendo el constructor
 
 Una función intermediaria podría fácilmente extender un constructor con un nuevo
 constructor. Este ejemplo usa los manipuladores

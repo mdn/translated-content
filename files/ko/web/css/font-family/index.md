@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-family
 ---
+
 {{CSSRef}}
 
 CSS **`font-family`** 속성은 선택된 요소에 우선 순위가 지정된 font family 이름과 generic family 이름을 지정할 수 있게 해줍니다.

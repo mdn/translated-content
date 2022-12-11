@@ -1,13 +1,8 @@
 ---
 title: globalThis
 slug: Web/JavaScript/Reference/Global_Objects/globalThis
-tags:
-  - JavaScript
-  - Reference
-  - global
-  - globalThis
-translation_of: Web/JavaScript/Reference/Global_Objects/globalThis
 ---
+
 {{jsSidebar("Objects")}}
 
 A propriedade global **`globalThis`** retorna um objeto global de nível superior.

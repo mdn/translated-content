@@ -7,6 +7,7 @@ tags:
   - 접근성
 translation_of: Web/Accessibility/ARIA/Roles/dialog_role
 ---
+
 {{draft()}}
 
 {{ariaref}}

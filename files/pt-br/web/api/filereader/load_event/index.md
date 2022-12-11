@@ -1,15 +1,9 @@
 ---
 title: FileReader.onload
 slug: Web/API/FileReader/load_event
-tags:
-  - Arquivo
-  - Event Handler
-  - FileReader
-  - Manipulador de eventos
-  - Propriedade
-translation_of: Web/API/FileReader/onload
 original_slug: Web/API/FileReader/onload
 ---
+
 {{APIRef}}
 
 A propriedade **FileReader.onload** contém um manipulador de eventos (event handler) executado quando o evento de carregamento ({{event('load')}}) é ativado, quando o conteúdo lido com [readAsArrayBuffer](/pt-BR/docs/Web/API/FileReader/readAsArrayBuffer), [readAsBinaryString](/pt-BR/docs/Web/API/FileReader/readAsBinaryString), [readAsDataURL](/pt-BR/docs/Web/API/FileReader/readAsDataURL) ou [readAsText](/pt-BR/docs/Web/API/FileReader/readAsText) fica disponível.

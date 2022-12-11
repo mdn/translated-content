@@ -478,7 +478,7 @@ squareBtn.addEventListener('click', () => {
 });
 ```
 
-Promise が fullfilled 状態になったときにモジュールオブジェクトを返し、クラスはそのオブジェクトの部分機能であるため、`Module.Square( ... )` のように `Module.` を追加したコンストラクターにアクセスする必要があります。
+Promise が fulfilled 状態になったときにモジュールオブジェクトを返し、クラスはそのオブジェクトの部分機能であるため、`Module.Square( ... )` のように `Module.` を追加したコンストラクターにアクセスする必要があります。
 
 ## トラブルシューティング
 

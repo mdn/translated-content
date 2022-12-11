@@ -353,12 +353,7 @@ nameField.addEventListener("input", event => {
 
 ## 仕様書
 
-| 仕様書                        | 状態                           | 備考                                         |
-| ------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('HTML WHATWG')}} | {{Spec2('HTML WHATWG')}} | WHATWG HTML 仕様書                       |
-| {{SpecName('HTML5 W3C')}}     | {{Spec2('HTML5 W3C')}}     | {{SpecName("DOM2 HTML")}} から変更なし |
-| {{SpecName('DOM2 HTML')}}     | {{Spec2('DOM2 HTML')}}     | {{SpecName("DOM1")}} から変更なし   |
-| {{SpecName('DOM1')}}         | {{Spec2('DOM1')}}         | 初回定義                             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

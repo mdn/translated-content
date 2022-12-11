@@ -1,9 +1,9 @@
 ---
 title: Template strings
 slug: Web/JavaScript/Reference/Template_literals
-translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Reference/template_strings
 ---
+
 {{JsSidebar("More")}}
 
 _Template_ Strings são _string_s que permitem expressões embutidas. Você pode _utilizar string_ multi-linhas e interpolação de _string_ com elas.

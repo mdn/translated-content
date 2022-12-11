@@ -5,6 +5,7 @@ tags:
   - Итератор
 translation_of: Web/JavaScript/Reference/Iteration_protocols
 ---
+
 {{jsSidebar("More")}}
 
 Одно из нововведений стандарта ECMAScript 2015 - протоколы перебора, которые могут реализованы любым объектом, соблюдая при этом определённые правила.
@@ -139,7 +140,7 @@ someString + ""                              // "hi"
 
 ## Встроенная итерируемость
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} и {{jsxref("Set")}} итерируемы, так как их прототипы содержат ` @@``iterator ` метод, а {{jsxref("Object")}} нет, так как прототип {{jsxref("Object")}} не содержит метода ` @@``iterator `
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}} и {{jsxref("Set")}} итерируемы, так как их прототипы содержат `@@iterator` метод, а {{jsxref("Object")}} нет, так как прототип {{jsxref("Object")}} не содержит метода `@@iterator`
 
 ## Итерируемость определённая пользователем
 

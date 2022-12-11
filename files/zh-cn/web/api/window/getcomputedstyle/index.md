@@ -20,7 +20,7 @@ let style = window.getComputedStyle(element, [pseudoElt]);
 - pseudoElt {{optional_inline}}
   - : 指定一个要匹配的伪元素的字符串。必须对普通元素省略（或`null`）。
 
-> **备注：** 在 Gecko2.0 {{geckoRelease("2.0")}}之前版本，参数 pseudoElt 是必要的。如果为 null，则不指定其他主要浏览器必须指定此参数。Gecko 已经更改为匹配其他浏览器的行为。。
+> **备注：** 在 Gecko 2.0 之前版本，参数 pseudoElt 是必要的。如果为 null，则不指定其他主要浏览器必须指定此参数。Gecko 已经更改为匹配其他浏览器的行为。。
 
 返回的`style`是一个实时的 {{domxref("CSSStyleDeclaration")}} 对象，当元素的样式更改时，它会自动更新本身。
 
@@ -79,7 +79,7 @@ function dumpComputedStyles(elem,prop) {
 
 返回的对象与从元素的 {{domxref("HTMLElement.style", "style")}} 属性返回的对象具有相同的类型;然而，两个对象具有不同的目的。从`getComputedStyle`返回的对象是只读的，可以用于检查元素的样式（包括由一个`<style>`元素或一个外部样式表设置的那些样式）。`elt.style`对象应用于在特定元素上设置样式。
 
-第一个参数必须是 Element 对象 (传递一个非节点元素，如 一个#text 节点，将会抛出一个错误). 从 Gecko 1.9.2 {{geckoRelease("1.9.2")}} 开始，现在返回的一个在 URL 周围有引号的 URL 值，像这样： `url("http://foo.com/bar.jpg")`.
+第一个参数必须是 Element 对象 (传递一个非节点元素，如 一个#text 节点，将会抛出一个错误). 从 Gecko 1.9.2 开始，现在返回的一个在 URL 周围有引号的 URL 值，像这样：`url("http://foo.com/bar.jpg")`。
 
 ## `defaultView`
 

@@ -84,9 +84,7 @@ console.log(result)    // false
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-delete-p', '[[Delete]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

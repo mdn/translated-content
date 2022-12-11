@@ -1,8 +1,8 @@
 ---
 title: Element.setAttributeNS()
 slug: Web/API/Element/setAttributeNS
-translation_of: Web/API/Element/setAttributeNS
 ---
+
 {{ APIRef }}
 
 `setAttributeNS añade un nuevo atributo o cambia el valor de un atributo con el namespace dado y el nombre.`

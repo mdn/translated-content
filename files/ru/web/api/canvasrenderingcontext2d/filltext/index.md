@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
 translation_of: Web/API/CanvasRenderingContext2D/fillText
 ---
+
 {{APIRef}}
 
 Метод **`CanvasRenderingContext2D.fillText()`**, предоставляемый Canvas 2D API, рисует (заливает) заданный текст в заданной позиции (_x, y_). Если указан необязательный четвёртый параметр, текст будет масштабироваться в соответствии с указанной максимальной шириной.

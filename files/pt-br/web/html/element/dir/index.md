@@ -1,19 +1,8 @@
 ---
 title: '<dir>:  O elemento obsoleto Directory'
 slug: Web/HTML/Element/dir
-tags:
-  - Agrupando conteúdo HTML
-  - Directory
-  - Elemento
-  - HTML
-  - Listas HTML
-  - Obsoleto
-  - Referencia
-  - Web
-  - dir
-  - listas
-translation_of: Web/HTML/Element/dir
 ---
+
 {{Obsolete_header()}}
 
 O elemento de diretório HTML obsoleto (**`<dir>`**) é usado como um contêiner para um diretório de arquivos e/ou pastas, potencialmente com estilos e ícones aplicados pelo {{Glossary("user agent")}}. Não use este elemento obsoleto; em vez disso, você deve usar o {{HTMLElement("ul")}} elemento para listas, incluindo listas de arquivos.
@@ -48,4 +37,4 @@ Como todos os outros elementos HTML, este elemento suporta os [global attributes
   - A propriedade {{Cssxref('line-height')}}, útil para simular o atributo obsoleto {{htmlattrxref("compact", "dir")}}.
   - A propriedade {{cssxref('margin')}}, útil para controlar o recuo da lista.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

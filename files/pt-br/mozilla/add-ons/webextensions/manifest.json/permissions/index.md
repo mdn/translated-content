@@ -1,9 +1,9 @@
 ---
 title: permissões
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
-translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissões
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

@@ -3,7 +3,7 @@ title: '<script>: スクリプト要素'
 slug: Web/HTML/Element/script
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<script>`** は [HTML](/ja/docs/Web/HTML) の要素で、実行できるコードやデータを埋め込むために使用します。ふつうは JavaScript のコードの埋め込みや参照に使用されます。 `<script>` 要素は [WebGL](/ja/docs/Web/API/WebGL_API) の GLSL shader プログラミング言語、 [JSON](/ja/docs/Glossary/JSON) 等の他の言語にも使用することができます。
 

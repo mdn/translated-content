@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/prompt
 ---
+
 {{ApiRef("Window")}}
 
 `Window.prompt()`는 사용자가 텍스트를 입력할 수 있도록 안내하는 선택적 메세지를 갖고 있는 대화 상자를 띄웁니다.

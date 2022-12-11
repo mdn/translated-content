@@ -3,6 +3,7 @@ title: 비디오 그리고 오디오 컨텐츠
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 original_slug: Learn/HTML/Multimedia_and_embedding/ideo_and_audio_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 이제 우리는 웹페이지에 간단한 이미지를 추가하는 것에 익숙해졌으므로, 다음 단계는 HTML 문서에 비디오와 오디오 플레이어를 추가하는 것이다! 이 기사에서는 {{htmlelement("video")}}와 {{htmlelement("audio")}} 요소들로 그렇게 하는 것에 대해 살펴보고, 동영상에 캡션/자막을 추가하는 방법을 살펴봄으로써 마무리하겠다.
@@ -85,7 +86,7 @@ First, let's go through the terminology quickly. Formats like MP3, MP4 and WebM 
 
 A WebM file containing a movie which has a main video track and one alternate angle track, plus audio for both English and Spanish, in addition to audio for an English commentary track can be conceptualized as shown in the diagram below. Also included are text tracks containing closed captions for the feature film, Spanish subtitles for the film, and English captions for the commentary.
 
-[![Diagram conceptualizing the contents of a media file at the track level.](https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg)](https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg)
+[![Diagram conceptualizing the contents of a media file at the track level.](containersandtracks.svg)](containersandtracks.svg)
 
 The audio and video tracks within the container hold data in the appropriate format for the codec used to encode that media. Different formats are used for audio tracks versus video tracks. Each audio track is encoded using an [audio codec](/ko/docs/Web/Media/Formats/Audio_codecs), while video tracks are encoded using (as you probably have guessed) [a video codec](/ko/docs/Web/Media/Formats/Video_codecs). As we talked about before, different browsers support different video and audio formats, and different container formats (like MP3, MP4, and WebM, which in turn can contain different types of video and audio).
 

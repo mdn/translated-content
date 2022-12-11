@@ -9,6 +9,7 @@ tags:
   - Selectors
 translation_of: Web/CSS/Pseudo-elements
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **의사 요소**(가상 요소)는 선택자에 추가하는 키워드로, 선택한 요소의 일부분에만 스타일을 입힐 수 있습니다. 예를 들어 {{cssxref("::first-line")}}을 사용하면 문단 첫 줄의 글씨체만 바꿀 수 있습니다.

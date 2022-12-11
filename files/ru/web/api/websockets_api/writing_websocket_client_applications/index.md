@@ -4,6 +4,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 original_slug: WebSockets/Writing_WebSocket_client_applications
 ---
+
 Веб-сокеты - технология, которая позволяет открыть интерактивную сессию общения между браузером пользователя и сервером. Соединяясь через веб-сокеты, веб-приложения могут осуществлять взаимодействие в реальном времени вместо того, чтобы делать запросы к клиенту о входящих/исходящих изменениях.
 
 > **Примечание:** **Замечание:** У нас есть работающий пример чата, части кода из которого используются в статье. Пример будет доступен, когда инфраструктура сайта сможет должным образом поддерживать хостинг примеров с использованием веб-сокетов.
@@ -58,7 +59,7 @@ WebSocket WebSocket(
 var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
 ```
 
-После выполнения функции, `exampleSocket`.`readyState` будет иметь значение `CONNECTING`. `readyState` изменится на `OPEN` как только соединение станет готовым к передаче данных.
+После выполнения функции, {{domxref("WebSocket.readyState", "exampleSocket.readyState")}} будет иметь значение `CONNECTING`. `readyState` изменится на `OPEN` как только соединение станет готовым к передаче данных.
 
 Если нужно открыть соединение, поддерживающее несколько протоколов, можно передать массив протоколов:
 

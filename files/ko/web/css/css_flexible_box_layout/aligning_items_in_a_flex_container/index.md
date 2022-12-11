@@ -3,6 +3,7 @@ title: Aligning Items in a Flex Container
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 ---
+
 {{CSSRef}}
 
 flexbox가 웹 개발자들의 관심 받게된 이유 중 하나는 웹 최초로 최초로 적절한 정렬 기능을 제공했기 때문입니다. flexbox의 수직 정렬 기능을 이용하여 우리는 드디어 쉽게 박스(역주: 여기서 박스는 **flex 컨테이너**를 의미합니다) 내부를 중앙 정렬 할 수 있게 되었습니다. 이 가이드에서 우리는 flexbox의 정렬 및 끝 맞추기 기능에 대해 자세히 살펴볼 것입니다.

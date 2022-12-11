@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
+
 {{JSRef}}
 
 **`pop()`** 메서드는 배열에서 **마지막** 요소를 제거하고 그 요소를 반환합니다.

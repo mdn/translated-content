@@ -3,6 +3,7 @@ title: 'Error: Permission denied to access property "x"'
 slug: Web/JavaScript/Reference/Errors/Property_access_denied
 translation_of: Web/JavaScript/Reference/Errors/Property_access_denied
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메시지

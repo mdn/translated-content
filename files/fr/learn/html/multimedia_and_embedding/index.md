@@ -23,7 +23,7 @@ original_slug: Apprendre/HTML/Multimedia_and_embedding
 
 {{LearnSidebar}}
 
-Jusqu'ici, nous avons vu et utilisé beaucoup de texte dans ce cours mais le web serait vraiment ennuyeux s'il n'utilisait que du texte.  Voyons ensemble la manière de le rendre plus vivant avec plus de contenu intéressant&nbsp;! Ce module explore l'utilisation d'HTML pour inclure du contenu multimedia dans vos pages web. Cela comprend les différentes manières d'ajouter des images, d'intégrer de la video, de l'audio et même des pages web entières.
+Jusqu'ici, nous avons vu et utilisé beaucoup de texte dans ce cours mais le web serait vraiment ennuyeux s'il n'utilisait que du texte. Voyons ensemble la manière de le rendre plus vivant avec plus de contenu intéressant&nbsp;! Ce module explore l'utilisation d'HTML pour inclure du contenu multimedia dans vos pages web. Cela comprend les différentes manières d'ajouter des images, d'intégrer de la video, de l'audio et même des pages web entières.
 
 ## Prérequis
 

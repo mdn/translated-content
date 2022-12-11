@@ -39,7 +39,7 @@ var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
 
 ## 解譯 SVG 或 HTML 文件
 
-`DOMParser` 也可以用來解譯 SVG 文件 {{geckoRelease("10.0")}} 或是 HTML 文件 {{geckoRelease("12.0")}}. 可以依 MIME 格式，輸出三種不同格式. 如果 MIME 格式是 `text/xml`,輸出的格式為 `XMLDocument`, 如果 MIME 格式是 `image/svg+xml`, 輸出格式為 `SVGDocument,` 如果 MIME 格式是 `text/html`, 輸出格式則為 `HTMLDocument`.
+`DOMParser` 也可以用來解譯 SVG 文件或是 HTML 文件。可以依 MIME 格式，輸出三種不同格式. 如果 MIME 格式是 `text/xml`,輸出的格式為 `XMLDocument`, 如果 MIME 格式是 `image/svg+xml`, 輸出格式為 `SVGDocument,` 如果 MIME 格式是 `text/html`, 輸出格式則為 `HTMLDocument`.
 
 ```js
 var parser = new DOMParser();

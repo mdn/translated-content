@@ -125,9 +125,7 @@ Object.getOwnPropertyDescriptor({
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-function.prototype.tostring', 'Function.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

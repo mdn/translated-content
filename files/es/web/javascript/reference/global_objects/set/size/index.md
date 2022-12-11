@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/size
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/size
 ---
+
 {{JSRef}}
 
 La propiedad de acceso **`size`** devuelve el número de elementos que hay en el objeto {{jsxref("Set")}}.
@@ -27,10 +28,7 @@ mySet.size; // 3
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estatus                      | Comentario         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName('ES6', '#sec-get-set.prototype.size', 'Set.prototype.size')}}     | {{Spec2('ES6')}}         | Definición inicial |
-| {{SpecName('ESDraft', '#sec-get-set.prototype.size', 'Set.prototype.size')}} | {{Spec2('ESDraft')}} |                    |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

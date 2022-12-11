@@ -1,13 +1,9 @@
 ---
 title: Introducción a XML
 slug: Web/XML/XML_introduction
-tags:
-  - Principiante
-  - XML
-  - introducción
-translation_of: Web/XML/XML_introduction
 original_slug: Web/XML/Introducción_a_XML
 ---
+
 XML es un lenguaje de marcado similar a HTML. Significa Extensible Markup Language (Lenguaje de Marcado Extensible) y es una especificación de [W3C](https://www.w3.org/TR/xml/) como lenguaje de marcado de propósito general. Esto significa que, a diferencia de otros lenguajes de marcado, XML no está predefinido, por lo que debes definir tus propias etiquetas. El propósito principal del lenguaje es compartir datos a través de diferentes sistemas, como Internet.
 
 Hay muchos lenguajes basados en XML; Algunos ejemplos son [XHTML](/es/docs/XHTML), [MathML](/es/docs/Web/MathML), [SVG](/es/docs/Web/SVG), [XUL](/es/docs/Mozilla/Tech/XUL), [XBL](/es/docs/XBL), [RSS](/es/docs/Archive/RSS), y [RDF](/es/docs/RDF). También puedes crear uno propio.

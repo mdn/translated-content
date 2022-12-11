@@ -1,14 +1,8 @@
 ---
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Referencia
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/beginPath
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.beginPath()`** da API Canvas 2D inicia um novo caminho (_path_), esvaziando a lista de sub-caminhos (_sub-paths_). Use esse método quando você quiser criar um novo _path_.

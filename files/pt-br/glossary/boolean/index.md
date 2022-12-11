@@ -1,9 +1,9 @@
 ---
 title: Booleano
 slug: Glossary/Boolean
-translation_of: Glossary/Boolean
 original_slug: Glossario/Booleano
 ---
+
 Um **booleano**, em ciência da computação, é um tipo de dado lógico que pode ter apenas um de dois valores possíveis: `verdadeiro` ou `falso`. Por exemplo, em JavaScript, condicionais booleanas são usadas para decidir quais trechos do código serão executados ou repetidas.
 
 ```

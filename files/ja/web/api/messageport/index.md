@@ -64,9 +64,7 @@ function onMessage(e) {
 
 ## 仕様
 
-| 仕様書                                                                                                   | 策定状況                         | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'web-messaging.html#message-ports','Message ports')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザの実装状況
 

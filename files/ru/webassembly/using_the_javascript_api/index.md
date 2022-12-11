@@ -7,6 +7,7 @@ tags:
   - WebAssembly
 translation_of: WebAssembly/Using_the_JavaScript_API
 ---
+
 {{WebAssemblySidebar}}
 
 Если вы уже [компилировали модуль из другого языка, используя такие инструменты как Emscripten](/ru/docs/WebAssembly/C_to_wasm), или загружали и запускали код, то следующим шагом будет углублённое изучение возможностей WebAssembly JavaScript API. Эта статья даст необходимые знания по этому вопросу.

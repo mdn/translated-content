@@ -3,6 +3,7 @@ title: await
 slug: Web/JavaScript/Reference/Operators/await
 translation_of: Web/JavaScript/Reference/Operators/await
 ---
+
 {{jsSidebar("Operators")}}
 
 Оператор `await` используется для ожидания окончания {{jsxref("Promise")}}. Может быть использован только внутри {{jsxref("Statements/async_function", "async function")}}.

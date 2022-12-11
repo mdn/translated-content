@@ -1,16 +1,8 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Política de Segurança de Conteúdo
-  - Referencia
-  - Segurança
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`Content-Security-Policy`** permite aos administradores do site, ter controle sobre os recursos que o agente de usuário é permitido carregar para uma certa página. Com algumas pequenas exceções, políticas majoritariamente envolvem especificar as origens do servidor e pontos de acessos dos _scripts_. Isso ajuda contra ataques de _scripting_ entre sites ({{Glossary("XSS")}}).
@@ -207,7 +199,7 @@ Veja as [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines
 
 ## Compatibilidade com navegadores
 
-{{Compat("http.headers.csp.Content-Security-Policy")}}
+{{Compat}}
 
 ## Veja também
 

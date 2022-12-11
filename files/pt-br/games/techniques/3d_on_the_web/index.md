@@ -1,12 +1,8 @@
 ---
 title: Jogos 3D na WEB
 slug: Games/Techniques/3D_on_the_web
-tags:
-  - 3D
-  - Jogos
-  - graficos
-translation_of: Games/Techniques/3D_on_the_web
 ---
+
 {{GamesSidebar}}
 
 A melhor arma para desenvolver ótimas experiências em jogos na WEB é WebGL, que é renderizada em HTML {{htmlelement("canvas")}}. WebGL é, basicamente, uma OpenGL ES 2.0 para a Web — é uma API JavaScript que fornece ferramentas para construir animações ricas e, logicamente, jogos. Você pode gerar e renderizar gráficos dinâmicos em 3D com JavaScript acelerado por hardware.

@@ -12,6 +12,7 @@ tags:
   - parameterDescriptors
 browser-compat: api.AudioParamDescriptor
 ---
+
 {{APIRef("Web Audio API")}}
 
 [Web Audio API](/ko/docs/Web/API/Web_Audio_API)의 **`AudioParamDescriptor`** dictionary는 {{domxref("AudioParam")}} 객체에 대한 속성들을 명시합니다.

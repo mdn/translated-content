@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp
 ---
+
 {{JSRef}}
 
 El objeto **`RegExp`** se utiliza para hacer coincidir texto con un patrón.
@@ -214,9 +215,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // registra 'xxx'
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp-regular-expression-objects', 'RegExp')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

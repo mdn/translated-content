@@ -84,13 +84,11 @@ iterator.next().value;        //  "n"
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-array.prototype.values', 'Array.prototype.values')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Array.values")}}
+{{Compat}}
 
 ## 関連情報
 

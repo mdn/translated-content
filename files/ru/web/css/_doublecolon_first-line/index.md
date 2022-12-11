@@ -8,6 +8,7 @@ tags:
   - Псевдоэлементы
 translation_of: Web/CSS/::first-line
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) [псевдоэлемент](/ru/docs/Web/CSS/Pseudo-elements) **`::first-line`** применяет стили к первой строке [блочного элемента](/ru/docs/Web/CSS/Visual_formatting_model#Block-level_elements_and_block_boxes). Обратите внимание, что длина первой строки зависит от многих факторов, включая ширину элемента, ширину документа и размер шрифта текста.

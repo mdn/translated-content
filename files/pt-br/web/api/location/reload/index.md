@@ -1,14 +1,8 @@
 ---
 title: Location.reload()
 slug: Web/API/Location/reload
-tags:
-  - API
-  - HTML-DOM
-  - Localização
-  - Referencia
-  - metodo
-translation_of: Web/API/Location/reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
 O método **`Location.reload()`** recarrega a URL atual. Seu unico parâmetro opcional é um {{domxref("Boolean")}}, que, quando `true`, faz com que a página sempre seja recarregada do servidor. Se ele é `false` ou não estiver especificado, o navegador pode carregar ela do cache.

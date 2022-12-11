@@ -1,9 +1,9 @@
 ---
 title: 'ReferenceError: "x" não está definido'
 slug: Web/JavaScript/Reference/Errors/Not_defined
-translation_of: Web/JavaScript/Reference/Errors/Not_defined
 original_slug: Web/JavaScript/Reference/Errors/Não_definido
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem

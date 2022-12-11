@@ -1,13 +1,8 @@
 ---
 title: list-style-type
 slug: Web/CSS/list-style-type
-tags:
-  - CSS
-  - CSS:Referencias
-  - Referencia_CSS
-  - Todas_las_Categorías
-translation_of: Web/CSS/list-style-type
 ---
+
 {{ CSSRef() }}
 
 ### Resumen

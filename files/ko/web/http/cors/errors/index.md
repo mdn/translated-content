@@ -15,6 +15,7 @@ tags:
   - troubleshooting
 translation_of: Web/HTTP/CORS/Errors
 ---
+
 {{HTTPSidebar}}
 
 [교차 출처 자원 공유](/ko/docs/Web/HTTP/CORS) ({{Glossary("CORS")}})는 서버가 same

@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Headers/Range
 ---
 {{HTTPSidebar}}
 
-**`Range` **HTTP 요청 헤더는 서버에게 문서의 일부분만 돌려주어야 한다는 것을 알려줍니다. `Range` 헤더를 통해 여러 부분을 한번에 요청할 수 있으며, 서버는 이러한 범위에 대해 문서의 여러 부분을 돌려보내줄 것입니다. 만약 서버가 돌려 보낸다면, {{HTTPStatus("206")}} `Partial Content`를 응답으로 사용할 것입니다. 만약 범위가 유효하지 않다면, 서버는 {{HTTPStatus("416")}} `Range Not Satisfiable` 에러를 보낼 것입니다. 또한 서버는 `Range` 헤더를 무시하고 {{HTTPStatus("200")}} 상태 코드와 함께 전체 문서를 돌려줄 수 있습니다.
+**`Range`** HTTP 요청 헤더는 서버에게 문서의 일부분만 돌려주어야 한다는 것을 알려줍니다. `Range` 헤더를 통해 여러 부분을 한번에 요청할 수 있으며, 서버는 이러한 범위에 대해 문서의 여러 부분을 돌려보내줄 것입니다. 만약 서버가 돌려 보낸다면, {{HTTPStatus("206")}} `Partial Content`를 응답으로 사용할 것입니다. 만약 범위가 유효하지 않다면, 서버는 {{HTTPStatus("416")}} `Range Not Satisfiable` 에러를 보낼 것입니다. 또한 서버는 `Range` 헤더를 무시하고 {{HTTPStatus("200")}} 상태 코드와 함께 전체 문서를 돌려줄 수 있습니다.
 
 <table class="properties">
   <tbody>

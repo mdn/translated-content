@@ -13,6 +13,7 @@ tags:
   - Web
 translation_of: Web/API/Document/querySelector
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.querySelector()`**는 제공한 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 {{domxref("Element")}}를 반환합니다. 일치하는 요소가 없으면 `null`을 반환합니다.

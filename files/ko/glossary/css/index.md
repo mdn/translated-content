@@ -2,6 +2,7 @@
 title: CSS
 slug: Glossary/CSS
 ---
+
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 
 **CSS**(Cascading Style Sheets, 종속형 스타일 시트)는 {{glossary("browser", "브라우저")}}에서 웹페이지의 외형을 결정하는 선언형 언어입니다. 브라우저는 선택한 요소에 CSS 스타일 선언을 적용해 화면에 적절히 표현합니다. 하나의 스타일 선언은 속성과 그 값으로 이루어져 있습니다.

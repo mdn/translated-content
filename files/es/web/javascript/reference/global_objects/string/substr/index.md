@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/substr
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 > **Advertencia:** Advertencia: Aunque `String.prototype.substr(…)` no está estrictamente obsoleto (como en "eliminado de los estándares web"), se define en el anexo B de la norma ECMA-262, cuya introducción establece:

@@ -1,7 +1,6 @@
 ---
 title: Dimensionamiento para propiedades lógicas
 slug: Web/CSS/CSS_Logical_Properties/Sizing
-translation_of: Web/CSS/CSS_Logical_Properties/Sizing
 original_slug: Web/CSS/CSS_Logical_Properties/Dimensionamiento
 ---
 {{CSSRef}}
@@ -51,7 +50,7 @@ Finalmente, puedes usar {{CSSxRef("max-inline-size")}} y {{CSSxRef("max-block-si
 
 La propiedad {{CSSxRef("resize")}} establece si un elemento se puede redimensionar o no y si tiene valores físicos de `horizontal` y `vertical`. La propiedad `resize` también tiene valores de palabras clave lógicas. Usar `resize: inline` permite cambiar el tamaño en la dimensión inline y `resize: block` permite cambiar el tamaño en la dimensión de bloque.
 
-El valor de la palabra clave de `both`para la propiedad de cambio de tamaño funciona ya sea que esté pensando física o lógicamente. Establece ambas dimensiones a la vez. Intenta jugar con el siguiente ejemplo.
+El valor de la palabra clave de `both` para la propiedad de cambio de tamaño funciona ya sea que esté pensando física o lógicamente. Establece ambas dimensiones a la vez. Intenta jugar con el siguiente ejemplo.
 
 {{EmbedGHLiveSample("css-examples/logical/size-resize.html", "100%", 700)}}
 

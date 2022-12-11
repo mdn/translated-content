@@ -1697,17 +1697,6 @@
     "modified": "2019-01-16T19:13:18.509Z",
     "contributors": ["wbamberg", "zziuni", "hoony", "Junny", "Sheppy"]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2019-01-16T19:13:26.954Z",
-    "contributors": [
-      "wbamberg",
-      "zziuni",
-      "Netaras",
-      "Junbong",
-      "KwanHong_Lee66",
-      "Sheppy"
-    ]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2019-01-17T02:54:48.050Z",
     "contributors": ["wbamberg", "zziuni"]
@@ -1792,10 +1781,6 @@
   "MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS": {
     "modified": "2020-09-30T15:30:35.142Z",
     "contributors": ["chrisdavidmills", "java2020007"]
-  },
-  "MDN/Yari": {
-    "modified": "2019-09-06T03:29:26.311Z",
-    "contributors": ["SphinxKnight", "wbamberg", "zziuni"]
   },
   "Mozilla": {
     "modified": "2019-03-23T23:35:24.435Z",
@@ -4883,10 +4868,6 @@
     "modified": "2020-10-15T21:39:41.961Z",
     "contributors": ["alattalatta", "fscholz", "epicsaga"]
   },
-  "Web/CSS/@viewport": {
-    "modified": "2020-10-15T21:46:25.224Z",
-    "contributors": ["alattalatta", "cvrebert"]
-  },
   "Web/CSS/Adjacent_sibling_combinator": {
     "modified": "2020-10-15T21:53:17.801Z",
     "contributors": ["alattalatta", "neatnet"]
@@ -4986,10 +4967,6 @@
   "Web/CSS/CSS_Counter_Styles/Using_CSS_counters": {
     "modified": "2020-06-15T04:03:26.893Z",
     "contributors": ["lee.juyoung.1978", "citrus.alice"]
-  },
-  "Web/CSS/CSS_Device_Adaptation": {
-    "modified": "2019-04-26T08:58:25.376Z",
-    "contributors": ["alattalatta", "Netaras"]
   },
   "Web/CSS/CSS_Flexible_Box_Layout": {
     "modified": "2020-08-04T05:49:54.665Z",
@@ -6153,27 +6130,9 @@
     "modified": "2020-02-15T07:39:57.101Z",
     "contributors": ["Netaras", "hyeonseok", "narae_lee"]
   },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2020-07-29T11:16:44.120Z",
-    "contributors": [
-      "jojengman",
-      "alattalatta",
-      "chrisdavidmills",
-      "dooglegh",
-      "cs09g",
-      "KlausLee",
-      "lovefield",
-      "Kaben",
-      "azunyan3"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-05-30T06:59:50.297Z",
     "contributors": ["SDSkyKlouD", "Seia-Soto", "xfq"]
-  },
-  "Web/Guide/Mobile/Separate_sites": {
-    "modified": "2019-03-18T21:20:46.007Z",
-    "contributors": ["jinah1000"]
   },
   "Web/Guide/Parsing_and_serializing_XML": {
     "modified": "2019-03-23T22:16:47.020Z",
@@ -6224,6 +6183,20 @@
   "Web/HTML/CORS_enabled_image": {
     "modified": "2020-01-17T14:43:53.038Z",
     "contributors": ["alattalatta", "proost"]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2020-07-29T11:16:44.120Z",
+    "contributors": [
+      "jojengman",
+      "alattalatta",
+      "chrisdavidmills",
+      "dooglegh",
+      "cs09g",
+      "KlausLee",
+      "lovefield",
+      "Kaben",
+      "azunyan3"
+    ]
   },
   "Web/HTML/Element": {
     "modified": "2020-03-20T02:38:46.890Z",
@@ -7568,22 +7541,6 @@
       "JongChun"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:36:55.143Z",
-    "contributors": [
-      "JinKang",
-      "Parcovia",
-      "cs09g",
-      "imjang57",
-      "wayne-kim",
-      "desty",
-      "stephenjang",
-      "Luzi.kr",
-      "teoli",
-      "Zer0th",
-      "99corps"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-03-12T19:37:58.819Z",
     "contributors": [
@@ -7969,17 +7926,6 @@
       "Constantine Kim",
       "MoGi",
       "Dyhan81",
-      "Goldmund"
-    ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:37:02.761Z",
-    "contributors": [
-      "limkukhyun",
-      "teoli",
-      "Dyhan81",
-      "Netaras",
-      "taggon",
       "Goldmund"
     ]
   },
@@ -9944,7 +9890,7 @@
     "modified": "2020-10-15T21:45:49.973Z",
     "contributors": ["alattalatta", "SeungYeol", "seung-yeol"]
   },
-  "Web/JavaScript/Reference/Operators/Nullish_coalescing_operator": {
+  "Web/JavaScript/Reference/Operators/Nullish_coalescing": {
     "modified": "2020-10-15T22:25:44.809Z",
     "contributors": ["ssohymind", "Jung.Kyu-Hyun"]
   },
@@ -10227,10 +10173,6 @@
       "imskojs",
       "magnoliaa"
     ]
-  },
-  "Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode": {
-    "modified": "2020-03-12T19:48:28.686Z",
-    "contributors": ["SeonHyungJo"]
   },
   "Web/JavaScript/Reference/Template_literals": {
     "modified": "2020-10-15T21:47:14.004Z",
@@ -10904,10 +10846,6 @@
     "modified": "2020-10-29T08:46:10.367Z",
     "contributors": ["limkukhyun", "jung-han", "04SeoHyun", "nakyong"]
   },
-  "WebAssembly/Caching_modules": {
-    "modified": "2019-03-18T21:26:57.835Z",
-    "contributors": ["limkukhyun"]
-  },
   "WebAssembly/Concepts": {
     "modified": "2020-12-08T12:12:26.855Z",
     "contributors": [
@@ -11085,6 +11023,17 @@
     "modified": "2020-07-16T22:32:06.697Z",
     "contributors": ["alattalatta", "beowolf9", "lunarlit", "dsma73"]
   },
+  "conflicting/MDN/Contribute": {
+    "modified": "2019-01-16T19:13:26.954Z",
+    "contributors": [
+      "wbamberg",
+      "zziuni",
+      "Netaras",
+      "Junbong",
+      "KwanHong_Lee66",
+      "Sheppy"
+    ]
+  },
   "conflicting/MDN/Tools": {
     "modified": "2019-01-16T20:50:22.654Z",
     "contributors": ["wbamberg", "andrewJYjang"]
@@ -11175,6 +11124,10 @@
     "modified": "2019-05-20T01:53:49.386Z",
     "contributors": ["dasom0801"]
   },
+  "conflicting/Web/CSS": {
+    "modified": "2020-10-15T21:46:25.224Z",
+    "contributors": ["alattalatta", "cvrebert"]
+  },
   "conflicting/Web/CSS/@viewport": {
     "modified": "2020-10-15T21:46:24.032Z",
     "contributors": ["alattalatta", "Netaras"]
@@ -11199,6 +11152,10 @@
     "modified": "2019-03-23T23:41:42.325Z",
     "contributors": ["hjunshin", "teoli", "jaemin_jo", "Ioseph"]
   },
+  "conflicting/Web/CSS_7fc1a1afe4642afd225ebf1b3d6227a7": {
+    "modified": "2019-04-26T08:58:25.376Z",
+    "contributors": ["alattalatta", "Netaras"]
+  },
   "conflicting/Web/Guide": {
     "modified": "2020-12-07T13:40:57.143Z",
     "contributors": ["peterbe", "alattalatta"]
@@ -11214,6 +11171,22 @@
   "conflicting/Web/HTTP": {
     "modified": "2020-02-05T12:28:02.372Z",
     "contributors": ["alattalatta"]
+  },
+  "conflicting/Web/JavaScript": {
+    "modified": "2020-03-12T19:36:55.143Z",
+    "contributors": [
+      "JinKang",
+      "Parcovia",
+      "cs09g",
+      "imjang57",
+      "wayne-kim",
+      "desty",
+      "stephenjang",
+      "Luzi.kr",
+      "teoli",
+      "Zer0th",
+      "99corps"
+    ]
   },
   "conflicting/Web/JavaScript/Guide": {
     "modified": "2019-01-16T16:10:38.273Z",
@@ -11279,6 +11252,17 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
     "modified": "2020-03-12T19:44:13.687Z",
     "contributors": ["limkukhyun", "hoony"]
+  },
+  "conflicting/Web/JavaScript/Reference": {
+    "modified": "2020-03-12T19:37:02.761Z",
+    "contributors": [
+      "limkukhyun",
+      "teoli",
+      "Dyhan81",
+      "Netaras",
+      "taggon",
+      "Goldmund"
+    ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {
     "modified": "2020-10-15T21:52:46.647Z",
@@ -11412,6 +11396,14 @@
     "modified": "2020-10-15T22:07:33.273Z",
     "contributors": ["alattalatta", "SSJ-unclear"]
   },
+  "conflicting/Web/JavaScript/Reference/Strict_mode": {
+    "modified": "2020-03-12T19:48:28.686Z",
+    "contributors": ["SeonHyungJo"]
+  },
+  "conflicting/Web/Progressive_web_apps": {
+    "modified": "2019-03-18T21:20:46.007Z",
+    "contributors": ["jinah1000"]
+  },
   "conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript": {
     "modified": "2019-01-16T14:19:09.939Z",
     "contributors": ["kmaglione", "Gilchris"]
@@ -11535,6 +11527,10 @@
   "orphaned/MDN/Tools/Page_regeneration": {
     "modified": "2020-09-30T16:51:25.059Z",
     "contributors": ["chrisdavidmills", "wbamberg", "Netaras"]
+  },
+  "orphaned/MDN/Yari": {
+    "modified": "2019-09-06T03:29:26.311Z",
+    "contributors": ["SphinxKnight", "wbamberg", "zziuni"]
   },
   "orphaned/Places/Custom_Containers": {
     "modified": "2020-01-12T05:08:34.067Z",
@@ -11958,6 +11954,10 @@
   "orphaned/Web/Security/Information_Security_Basics": {
     "modified": "2019-03-23T22:05:46.762Z",
     "contributors": ["daebum-lee"]
+  },
+  "orphaned/WebAssembly/Caching_modules": {
+    "modified": "2019-03-18T21:26:57.835Z",
+    "contributors": ["limkukhyun"]
   },
   "orphaned/Windows_and_menus_in_XULRunner": {
     "modified": "2019-01-16T15:50:48.799Z",

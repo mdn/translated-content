@@ -5,6 +5,7 @@ tags:
   - WebGL
 translation_of: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 ---
+
 {{WebGLSidebar("Tutorial")}} {{Next("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context")}}
 
 [WebGL](http://www.khronos.org/webgl/) позволяет веб-контенту использовать API, основанный на [OpenGL ES](http://www.khronos.org/opengles/) 2.0, для визуализации трёхмерной графики без использования плагинов в HTML элементе [`canvas`](/en/HTML/Canvas) в браузерах, которые осуществляют его поддержку. WebGL программы состоят из кода управления, написанном на JavaScript и кода специальных эффектов (шейдерного кода), который выполняется на графическом процессоре. WebGL элементы могут быть смешаны с другими HTML-элементами и собраны с другими частями веб-страницы или фоном веб-страницы.

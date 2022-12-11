@@ -1,19 +1,6 @@
 ---
 title: Formateo de texto avanzado
 slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
-tags:
-  - CodingScripting
-  - Guía
-  - HTML
-  - Lista de descripción
-  - Novato
-  - Principiante
-  - Texto
-  - abreviatura
-  - aprende
-  - cita
-  - semántica
-translation_of: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 original_slug: Learn/HTML/Introduccion_a_HTML/Advanced_text_formatting
 ---
 
@@ -253,7 +240,7 @@ textarea.onkeyup = function () {
 
 HTML también dispone de elementos para el marcado de citas; cual elemento utilices depende de si estás marcando la cita como un bloque o como un elemento en línea.
 
-### Cita en bloque independiente (_blockquote_)
+### Cita en bloque independiente (blockquote)
 
 Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párrafos, una lista, etc.) se cita en otro lugar, debes envolverla dentro de un elemento {{HTMLElement("blockquote")}} para indicarlo, e incluye una URL que apunte a la fuente de la cita dentro de un atributo {{HTMLAttrxRef("cite", "blockquote")}}. Por ejemplo, el siguiente marcado tomado de la página del elemento `<blockquote>` de MDN:
 

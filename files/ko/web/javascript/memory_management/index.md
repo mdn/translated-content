@@ -3,6 +3,7 @@ title: 자바스크립트의 메모리 관리
 slug: Web/JavaScript/Memory_Management
 translation_of: Web/JavaScript/Memory_Management
 ---
+
 {{JsSidebar("Advanced")}}
 
 C 언어같은 저수준 언어에서는 메모리 관리를 위해 [malloc()](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) 과 [free()](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions)를 사용합니다. 반면, 자바스크립트는 객체가 생성되었을 때 자동으로 메모리를 할당하고 더 이상 필요하지 않을 때 자동으로 해제합니다(_가비지 컬렉션_). 이러한 자동 메모리 관리는 잠재적 혼란의 원인이기도 한데, 개발자가 메모리 관리에 대해 고민할 필요가 없다는 잘못된 인상을 줄 수 있기 때문입니다.

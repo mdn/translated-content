@@ -3,7 +3,8 @@ title: '<u>: Элемент слабой аннотации (подчёркив�
 slug: Web/HTML/Element/u
 translation_of: Web/HTML/Element/u
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 The HTML **Unarticulated Annotation Element** (**`<u>`**) represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.
 

@@ -72,4 +72,4 @@ The HTML above outputs:
 - {{HTMLElement("address")}} element
 - {{HTMLElement("p")}} element
 
-{{HTMLRef}}
+{{HTMLSidebar}}

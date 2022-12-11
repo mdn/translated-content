@@ -1,9 +1,9 @@
 ---
 title: Math.cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cos
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/cos
 ---
+
 {{JSRef}}
 
 La función estática **`Math.cos()`** devuelve el [coseno](https://es.wikipedia.org/wiki/Coseno) del ángulo especificado, que debe ser especificado en [radianes](https://es.wikipedia.org/wiki/Radi%C3%A1n). Este valor es <math style="display: inline;"><mstyle displaystyle="true"><mfrac><msub><mrow><mtext>longitud</mtext> </mrow><mrow><mrow><mtext>adyacente</mtext> </mrow></mrow></msub><msub><mrow><mtext>longitud</mtext> </mrow><mrow><mrow><mtext>hipotenusa</mtext> </mrow></mrow></msub></mfrac></mstyle></math>.
@@ -47,9 +47,7 @@ Math.cos(2 * Math.PI); // 1
 
 ## Especificaciones
 
-| Especificación                                                       |
-| -------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-math.cos', 'Math.cos')}} |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

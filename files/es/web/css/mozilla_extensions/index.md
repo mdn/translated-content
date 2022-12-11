@@ -1,8 +1,8 @@
 ---
 title: Extensiones CSS de Mozilla
 slug: Web/CSS/Mozilla_Extensions
-translation_of: Web/CSS/Mozilla_Extensions
 ---
+
 {{CSSRef}}
 
 Mozilla soporta ciertas extensiones de [CSS](/es/docs/CSS) con el prefijo`-moz-`.
@@ -257,18 +257,18 @@ W—Z
 
 ### {{cssxref("background-image")}}
 
-- Gradientes {{Gecko_minversion_inline("1.9.2")}}
+- Gradientes
 
   - {{cssxref("-moz-linear-gradient")}}
   - {{cssxref("-moz-radial-gradient")}}
 
-- Elementos {{gecko_minversion_inline("2.0")}}
+- Elementos
 
   - {{cssxref("-moz-element")}}
 
 - Sub-imágenes
 
-  - {{cssxref("-moz-image-rect")}} {{gecko_minversion_inline("2.0")}}
+  - {{cssxref("-moz-image-rect")}}
 
 ### {{Cssxref("border-color")}}
 
@@ -276,7 +276,7 @@ W—Z
 
 ### {{Cssxref("border-style")}} y {{Cssxref("outline-style")}}
 
-- `-moz-bg-inset | -moz-bg-outset | -moz-bg-solid`{{obsolete_inline}} abandonado en Gecko 1.9 (Firefox 3.0)
+- `-moz-bg-inset | -moz-bg-outset | -moz-bg-solid`{{deprecated_inline}} abandonado en Gecko 1.9 (Firefox 3.0)
 
 ### Palabras clave de {{cssxref("&lt;color&gt;")}}
 
@@ -286,8 +286,8 @@ W—Z
 - `-moz-buttondefault`
 - `-moz-buttonhoverface`
 - `-moz-buttonhovertext`
-- `-moz-default-background-color` {{Gecko_minversion_inline("5.0")}}
-- `-moz-default-color` {{Gecko_minversion_inline("5.0")}}
+- `-moz-default-background-color`
+- `-moz-default-color`
 - `-moz-cellhighlight`
 - `-moz-cellhighlighttext`
 - `-moz-field`
@@ -302,8 +302,8 @@ W—Z
 - `-moz-mac-accentlightshadow`
 - `-moz-mac-accentregularhighlight`
 - `-moz-mac-accentregularshadow`
-- `-moz-mac-chrome-active` {{Gecko_minversion_inline("1.9.1")}}
-- `-moz-mac-chrome-inactive` {{Gecko_minversion_inline("1.9.1")}}
+- `-moz-mac-chrome-active`
+- `-moz-mac-chrome-inactive`
 - `-moz-mac-focusring`
 - `-moz-mac-menuselect`
 - `-moz-mac-menushadow`
@@ -311,17 +311,17 @@ W—Z
 - `-moz-menuhover`
 - `-moz-menuhovertext`
 - `-moz-win-communicationstext`
-- `-moz-win-mediatext` {{gecko_minversion_inline(1.9)}}
-- `-moz-nativehyperlinktext` {{Gecko_minversion_inline("1.9.1")}}
+- `-moz-win-mediatext`
+- `-moz-nativehyperlinktext`
 
 ### {{Cssxref("display")}}
 
 - `-moz-box`
-- `-moz-inline-block` {{obsolete_inline}}
+- `-moz-inline-block` {{deprecated_inline}}
 - `-moz-inline-box`
 - `-moz-inline-grid`
 - `-moz-inline-stack`
-- `-moz-inline-table` {{obsolete_inline}}
+- `-moz-inline-table` {{deprecated_inline}}
 - `-moz-grid`
 - `-moz-grid-group`
 - `-moz-grid-line`
@@ -354,11 +354,11 @@ W—Z
 
 ### {{Cssxref("image-rendering")}}
 
-- {{Cssxref("image-rendering","-moz-crisp-edges")}} {{Gecko_minversion_inline("1.9.2")}}
+- {{Cssxref("image-rendering","-moz-crisp-edges")}}
 
 ### {{cssxref("&lt;length&gt;")}}
 
-- {{cssxref("-moz-calc")}} {{gecko_minversion_inline("2.0")}}
+- {{cssxref("-moz-calc")}}
 
 ### {{Cssxref("list-style-type")}}
 
@@ -396,7 +396,7 @@ W—Z
 
 ### {{Cssxref("overflow")}}
 
-- {{Cssxref("-moz-scrollbars-none")}} {{obsolete_inline}}
+- {{Cssxref("-moz-scrollbars-none")}} {{deprecated_inline}}
 - {{Cssxref("-moz-scrollbars-horizontal")}} {{Deprecated_inline}}
 - {{Cssxref("-moz-scrollbars-vertical")}} {{Deprecated_inline}}
 - {{Cssxref("-moz-hidden-unscrollable")}}
@@ -427,10 +427,10 @@ W—Z
 
 - {{Cssxref("::-moz-anonymous-block")}} eg@:- bug 331432
 - {{Cssxref("::-moz-anonymous-positioned-block")}}
-- {{cssxref(":-moz-any")}} {{gecko_minversion_inline("2.0")}}
+- {{cssxref(":-moz-any")}}
 - {{Cssxref(":-moz-any-link")}} (selecciona :link y :visited)
 - {{Cssxref(":-moz-bound-element")}}
-- {{Cssxref(":-moz-broken")}} {{gecko_minversion_inline("1.9")}}
+- {{Cssxref(":-moz-broken")}}
 - {{Cssxref("::-moz-canvas")}} eg@:-&#x20;
 
   resource://gre/res/ua.css
@@ -440,12 +440,12 @@ W—Z
 - {{Cssxref(":-moz-first-node")}}
 - {{cssxref("::-moz-focus-inner")}}
 - {{cssxref("::-moz-focus-outer")}}
-- {{cssxref(":-moz-focusring")}} {{gecko_minversion_inline("2.0")}}
-- {{cssxref(":-moz-full-screen")}} {{gecko_minversion_inline("9.0")}}
-- {{cssxref(":-moz-full-screen-ancestor")}} {{gecko_minversion_inline("10.0")}}
-- {{cssxref(":-moz-handler-blocked")}} {{gecko_minversion_inline("1.9.1")}}
-- {{cssxref(":-moz-handler-crashed")}} {{gecko_minversion_inline("2.0")}}
-- {{cssxref(":-moz-handler-disabled")}} {{gecko_minversion_inline("1.9.1")}}
+- {{cssxref(":-moz-focusring")}}
+- {{cssxref(":-moz-full-screen")}}
+- {{cssxref(":-moz-full-screen-ancestor")}}
+- {{cssxref(":-moz-handler-blocked")}}
+- {{cssxref(":-moz-handler-crashed")}}
+- {{cssxref(":-moz-handler-disabled")}}
 - {{Cssxref("::-moz-inline-table")}} eg@:-&#x20;
 
   resource://gre/res/ua.css
@@ -453,12 +453,12 @@ W—Z
 - {{Cssxref(":-moz-last-node")}}
 - {{Cssxref(":-moz-list-bullet")}}
 - {{cssxref(":-moz-list-number")}}
-- {{cssxref(":-moz-loading")}} {{gecko_minversion_inline("1.9")}}
-- {{Cssxref(":-moz-locale-dir(ltr)")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref(":-moz-locale-dir(rtl)")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref(":-moz-lwtheme")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref(":-moz-lwtheme-brighttext")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref(":-moz-lwtheme-darktext")}} {{gecko_minversion_inline("1.9.2")}}
+- {{cssxref(":-moz-loading")}}
+- {{Cssxref(":-moz-locale-dir(ltr)")}}
+- {{Cssxref(":-moz-locale-dir(rtl)")}}
+- {{Cssxref(":-moz-lwtheme")}}
+- {{Cssxref(":-moz-lwtheme-brighttext")}}
+- {{Cssxref(":-moz-lwtheme-darktext")}}
 - {{Cssxref("::-moz-math-stretchy")}}
 - {{Cssxref(":-moz-only-whitespace")}}
 - {{Cssxref("::-moz-page")}} eg@:-&#x20;
@@ -477,8 +477,8 @@ W—Z
 
   resource://gre/res/ua.css
 
-- {{Cssxref(":-moz-placeholder")}} {{gecko_minversion_inline("1.9")}}
-- {{cssxref("::-moz-placeholder")}} {{gecko_minversion_inline("19")}}
+- {{Cssxref(":-moz-placeholder")}}
+- {{cssxref("::-moz-placeholder")}}
 - {{Cssxref("::-moz-progress-bar")}}
 - {{Cssxref("::-moz-range-thumb")}}
 - {{Cssxref("::-moz-range-track")}}
@@ -491,22 +491,22 @@ W—Z
 
 - {{Cssxref("::-moz-scrolled-content")}} eg@:- bug 331432
 - {{Cssxref("::-moz-scrolled-page-sequence")}} eg@:- bug 331432
-- {{cssxref(":-moz-suppressed")}} {{gecko_minversion_inline("1.9")}}
-- {{cssxref(":-moz-submit-invalid")}} {{gecko_minversion_inline("2.0")}}
+- {{cssxref(":-moz-suppressed")}}
+- {{cssxref(":-moz-submit-invalid")}}
 - {{Cssxref("::-moz-svg-foreign-content")}} example at&#x20;
 
   resource://gre/res/svg.css
 
   &#x20;, \*|\*::-moz-svg-foreign-content {display: block !important;position: static !important;}
 
-- {{Cssxref(":-moz-system-metric(images-in-menus)")}} {{gecko_minversion_inline("1.9")}}
-- {{Cssxref(":-moz-system-metric(mac-graphite-theme)")}} {{gecko_minversion_inline("1.9.1")}}
-- {{Cssxref(":-moz-system-metric(scrollbar-end-backward)")}} {{gecko_minversion_inline("1.9")}}
-- {{Cssxref(":-moz-system-metric(scrollbar-end-forward)")}} {{gecko_minversion_inline("1.9")}}
-- {{Cssxref(":-moz-system-metric(scrollbar-start-backward)")}} {{gecko_minversion_inline("1.9")}}
+- {{Cssxref(":-moz-system-metric(images-in-menus)")}}
+- {{Cssxref(":-moz-system-metric(mac-graphite-theme)")}}
+- {{Cssxref(":-moz-system-metric(scrollbar-end-backward)")}}
+- {{Cssxref(":-moz-system-metric(scrollbar-end-forward)")}}
+- {{Cssxref(":-moz-system-metric(scrollbar-start-backward)")}}
 - {{Cssxref(":-moz-system-metric(scrollbar-start-forward)")}}
-- {{Cssxref(":-moz-system-metric(scrollbar-thumb-proportional)")}} {{gecko_minversion_inline("1.9")}}
-- {{Cssxref(":-moz-system-metric(touch-enabled)")}} {{gecko_minversion_inline("1.9.2")}}
+- {{Cssxref(":-moz-system-metric(scrollbar-thumb-proportional)")}}
+- {{Cssxref(":-moz-system-metric(touch-enabled)")}}
 - {{Cssxref(":-moz-system-metric(windows-default-theme)")}}
 - {{Cssxref("::-moz-table")}} eg@:-&#x20;
 
@@ -539,7 +539,7 @@ W—Z
 - {{Cssxref(":-moz-tree-checkbox")}}
 - {{Cssxref(":-moz-tree-cell")}}
 - {{Cssxref(":-moz-tree-cell-text")}}
-- {{Cssxref(":-moz-tree-cell-text(hover)")}} {{gecko_minversion_inline("1.9")}}
+- {{Cssxref(":-moz-tree-cell-text(hover)")}}
 - {{Cssxref(":-moz-tree-column")}}
 - {{Cssxref(":-moz-tree-drop-feedback")}}
 - {{Cssxref(":-moz-tree-image")}}
@@ -547,12 +547,12 @@ W—Z
 - {{Cssxref(":-moz-tree-line")}}
 - {{Cssxref(":-moz-tree-progressmeter")}}
 - {{Cssxref(":-moz-tree-row")}}
-- {{Cssxref(":-moz-tree-row(hover)")}} {{gecko_minversion_inline("1.9")}}
+- {{Cssxref(":-moz-tree-row(hover)")}}
 - {{Cssxref(":-moz-tree-separator")}}
 - {{Cssxref(":-moz-tree-twisty")}}
-- {{Cssxref(":-moz-ui-invalid")}}{{gecko_minversion_inline("2.0")}}
-- {{Cssxref(":-moz-ui-valid")}}{{gecko_minversion_inline("2.0")}}
-- {{cssxref(":-moz-user-disabled")}} {{gecko_minversion_inline("1.9")}}
+- {{Cssxref(":-moz-ui-invalid")}}
+- {{Cssxref(":-moz-ui-valid")}}
+- {{cssxref(":-moz-user-disabled")}}
 - {{Cssxref("::-moz-viewport")}} eg@:-&#x20;
 
   resource://gre/res/ua.css
@@ -561,31 +561,31 @@ W—Z
 
   resource://gre/res/ua.css
 
-- {{cssxref(":-moz-window-inactive")}} {{gecko_minversion_inline("2.0")}}
+- {{cssxref(":-moz-window-inactive")}}
 - {{Cssxref("::-moz-xul-anonymous-block")}} eg@:-&#x20;
 
   resource://gre/res/ua.css
 
-## Reglas arroba (_At-rules_)
+## Reglas arroba (At-rules)
 
 - {{Cssxref("@-moz-document")}}
 
 ## Media Queries
 
-- {{Cssxref("Media_queries#-moz-images-in-menus","-moz-images-in-menus")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-mac-graphite-theme","-moz-mac-graphite-theme")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-maemo-classic","-moz-maemo-classic")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-device-pixel-ratio","-moz-device-pixel-ratio")}} {{gecko_minversion_inline("2.0")}}
-- {{Cssxref("Media_queries#-moz-scrollbar-end-backward","-moz-scrollbar-end-backward")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-scrollbar-end-forward","-moz-scrollbar-end-forward")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-scrollbar-start-backward","-moz-scrollbar-start-backward")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-scrollbar-start-forward","-moz-scrollbar-start-forward")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-scrollbar-thumb-proportional","-moz-scrollbar-thumb-proportional")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-touch-enabled","-moz-touch-enabled")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-windows-classic","-moz-windows-classic")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-windows-compositor","-moz-windows-compositor")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-windows-default-theme","-moz-windows-default-theme")}} {{gecko_minversion_inline("1.9.2")}}
-- {{Cssxref("Media_queries#-moz-windows-theme","-moz-windows-theme")}} {{gecko_minversion_inline("2.0")}}
+- {{Cssxref("Media_queries#-moz-images-in-menus","-moz-images-in-menus")}}
+- {{Cssxref("Media_queries#-moz-mac-graphite-theme","-moz-mac-graphite-theme")}}
+- {{Cssxref("Media_queries#-moz-maemo-classic","-moz-maemo-classic")}}
+- {{Cssxref("Media_queries#-moz-device-pixel-ratio","-moz-device-pixel-ratio")}}
+- {{Cssxref("Media_queries#-moz-scrollbar-end-backward","-moz-scrollbar-end-backward")}}
+- {{Cssxref("Media_queries#-moz-scrollbar-end-forward","-moz-scrollbar-end-forward")}}
+- {{Cssxref("Media_queries#-moz-scrollbar-start-backward","-moz-scrollbar-start-backward")}}
+- {{Cssxref("Media_queries#-moz-scrollbar-start-forward","-moz-scrollbar-start-forward")}}
+- {{Cssxref("Media_queries#-moz-scrollbar-thumb-proportional","-moz-scrollbar-thumb-proportional")}}
+- {{Cssxref("Media_queries#-moz-touch-enabled","-moz-touch-enabled")}}
+- {{Cssxref("Media_queries#-moz-windows-classic","-moz-windows-classic")}}
+- {{Cssxref("Media_queries#-moz-windows-compositor","-moz-windows-compositor")}}
+- {{Cssxref("Media_queries#-moz-windows-default-theme","-moz-windows-default-theme")}}
+- {{Cssxref("Media_queries#-moz-windows-theme","-moz-windows-theme")}}
 
 ## Otros
 

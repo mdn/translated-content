@@ -1,18 +1,13 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-tags:
-  - CSS
-  - CSS:Referencias
-  - Referencia_CSS
-  - Todas_las_Categorías
-translation_of: Web/CSS/list-style-image
 ---
+
 {{ CSSRef() }}
 
 ### Resumen
 
-La imagen de lista (`list-style-image`) define la imagen que será utilizada como marcador del [listado](es/HTML/Element/li).
+La imagen de lista (`list-style-image`) define la imagen que será utilizada como marcador del [listado](/es/HTML/Element/li).
 
 - {{ Cssxref("initial", "Valor inicial") }}: {{ Cssxref("none", "ninguno") }}
 - Se aplica a: elementos con 'display: list-item'
@@ -47,7 +42,7 @@ list-style-image: <uri> | none | inherit
 
 ```css
 ul {
-  list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif")
+  list-style-image: url("starsolid.gif")
 }
 ```
 

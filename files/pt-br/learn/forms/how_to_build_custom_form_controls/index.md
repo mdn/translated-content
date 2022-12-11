@@ -1,9 +1,9 @@
 ---
 title: How to build custom form widgets
 slug: Learn/Forms/How_to_build_custom_form_controls
-translation_of: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Web/Guide/HTML/Forms/How_to_build_custom_form_widgets
 ---
+
 {{LearnSidebar}}
 
 There are some cases where the available native HTML form controls may seem like they are not enough. For example, if you need to [perform advanced styling](/en-US/docs/Learn/Forms/Advanced_form_styling) on some controls such as the {{HTMLElement("select")}} element or if you want to provide custom behaviors, you may consider building your own controls.

@@ -11,6 +11,7 @@ tags:
   - метод
 translation_of: Web/API/Worker/terminate
 ---
+
 {{APIRef("Web Workers API")}}
 
 Метод **`terminate()`** интерфейса {{domxref("Worker")}} немедленно завершает работу `worker`. Работнику не даётся возможность завершить свою работу, он останавливается сразу.

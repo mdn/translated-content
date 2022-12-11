@@ -1,10 +1,8 @@
 ---
 title: padding
 slug: Web/CSS/padding
-tags:
-  - Propiedades CSS
-translation_of: Web/CSS/padding
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -103,11 +101,7 @@ h3{
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentario          |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding') }}                 | {{ Spec2('CSS3 Box') }} | Sin cambio.         |
-| {{ SpecName('CSS2.1', 'box.html#propdef-padding', 'padding-top') }} | {{ Spec2('CSS2.1') }}     | Sin cambio.         |
-| {{ Specname('CSS1', '#padding', 'padding') }}                             | {{ Spec2('CSS1') }}         | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

@@ -1,6 +1,8 @@
 ---
 title: KeyboardEvent.code
 slug: Web/API/KeyboardEvent/code
+l10n:
+  sourceCommit: d3408b2effc88ae340124639248fdcf986dfaa21
 ---
 
 {{APIRef("UI Events")}}
@@ -24,10 +26,10 @@ Windows, Linux, macOS におけるコード値は、 [KeyboardEvent: コード�
 ### KeyboardEvent の使用例
 
 ```html
-<p>Press keys on the keyboard to see what the KeyboardEvent's key and code
-   values are for each one.</p>
-<div id="output" tabindex="0">
-</div>
+<p>
+  キーボードのキーを押して、 KeyboardEvent のキーとコードの値がそれぞれどうなっているかを確認しましょう。
+</p>
+<div id="output" tabindex="0"></div>
 ```
 
 #### CSS
@@ -47,7 +49,7 @@ Windows, Linux, macOS におけるコード値は、 [KeyboardEvent: コード�
 #### JavaScript
 
 ```js
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", (event) => {
   const p = document.createElement("p");
   p.textContent = `KeyboardEvent: key='${event.key}' | code='${event.code}'`;
   document.getElementById("output").appendChild(p);
@@ -69,8 +71,12 @@ window.addEventListener("keydown", function(event) {
 
 ```html
 <p>WASD キー（AZERTY キーボードでは ZQSD）を使って移動したり方向を変えたりしましょう。</p>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="world" tabindex="0">
-  <polygon id="spaceship" points="15,0 0,30 30,30"/>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  version="1.1"
+  class="world"
+  tabindex="0">
+  <polygon id="spaceship" points="15,0 0,30 30,30" />
 </svg>
 ```
 
@@ -96,7 +102,7 @@ window.addEventListener("keydown", function(event) {
 
 #### JavaScript
 
-この JavaScript のコードの最初の部分では、これから使用するいくつかの変数を定義しています。 `shipSize` にはプレイヤーが移動する船の大きさが入ります。 `position` はプレイフィールド内での船の位置を追跡するために使用します。 `moveRate` と `turnRate` は、キーを押すごとに船を前後に何ピクセル動かすか、キーを押すごとに左右の操舵コントロールで何度回転させるかを表します。 angle は現在船に適用されている回転の量を度数で表し、 0 度（真上向き）から始まります。最後に、 `spaceship` は ID `"spaceship"` の要素を指すように設定されています。これは、プレイヤーが操作する船を表す SVG ポリゴンを指します。
+この JavaScript のコードの最初の部分では、これから使用するいくつかの変数を定義しています。 `shipSize` にはプレイヤーが移動する船の大きさが入ります。 `position` はプレイフィールド内での船の位置を追跡するために使用します。 `moveRate` はキーを押すごとに船を前後に何ピクセル動かすかを表し、 `turnRate` はキーを押すごとに左右の操舵コントロールで何度回転させるかを表します。 `angle` は現在船に適用されている回転の量を度数で表し、 0 度（真上向き）から始まります。最後に、 `spaceship` は ID `"spaceship"` の要素を指すように設定されています。これは、プレイヤーが操作する船を表す SVG ポリゴンを指します。
 
 ```js
 let shipSize = {
@@ -145,7 +151,7 @@ function updatePosition(offset) {
 function refresh() {
   let x = position.x - (shipSize.width/2);
   let y = position.y - (shipSize.height/2);
-  let transform = "translate(" + x + " " + y + ") rotate(" + angle + " 15 15) ";
+  let transform = `translate(${x} ${y}) rotate(${angle} 15 15) `;
 
   spaceship.setAttribute("transform", transform);
 }
@@ -155,7 +161,7 @@ refresh();
 最後に、`addEventListener()` メソッドを使用して {{domxref("Element/keydown_event", "keydown")}} イベントの待ち受けを開始します。それぞれのイベントで船の位置と回転角を更新し、 `refresh()` を呼び出して新しい位置と角度で船を描画するように動作します。
 
 ```js
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", (event) => {
   if (event.defaultPrevented) {
     return; // Do nothing if event already handled
   }

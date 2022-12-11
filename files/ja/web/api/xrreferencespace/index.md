@@ -20,7 +20,7 @@ _`XRReferenceSpace` は {{domxref("EventTarget")}} のプロパティを継承�
 _`XRReferenceSpace` には以下のメソッド以外に、 {{domxref("EventTarget")}} から継承したメソッドもあります。_
 
 - {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}}
-  - :メソッドを呼び出したものと同じ型（つまり、`XRReferenceSpace` または {{domxref("XRBoundedReferenceSpace")}}）の新しい参照空間オブジェクトを作成して返します。 新しい参照空間を使用して、メソッドが呼び出されたオブジェクトの参照空間から別の座標空間に座標を変換できます。 これは、レンダリング中にオブジェクトを配置したり、3D 空間でビューアーの位置や向きを変更するときに必要な変換を実行したりするのに役立ちます。
+  - : メソッドを呼び出したものと同じ型（つまり、`XRReferenceSpace` または {{domxref("XRBoundedReferenceSpace")}}）の新しい参照空間オブジェクトを作成して返します。 新しい参照空間を使用して、メソッドが呼び出されたオブジェクトの参照空間から別の座標空間に座標を変換できます。 これは、レンダリング中にオブジェクトを配置したり、3D 空間でビューアーの位置や向きを変更するときに必要な変換を実行したりするのに役立ちます。
 
 ## イベント
 

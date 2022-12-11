@@ -1,8 +1,8 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 ---
+
 {{JSRef}}
 
 A função **`Math.sin()`** retorna o seno de um número.

@@ -2,6 +2,7 @@
 title: Object prototypes
 slug: Learn/JavaScript/Objects/Object_prototypes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 
 Javascript에서는 객체를 상속하기 위하여 프로토타입이라는 방식을 사용합니다. 본 문서에서는 프로토타입 체인이 동작하는 방식을 설명하고 이미 존재하는 생성자에 메소드를 추가하기 위해 프로토타입 속성을 사용하는 법을 알아봅니다.

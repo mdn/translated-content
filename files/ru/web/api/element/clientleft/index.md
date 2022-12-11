@@ -3,6 +3,7 @@ title: Element.clientLeft
 slug: Web/API/Element/clientLeft
 translation_of: Web/API/Element/clientLeft
 ---
+
 {{ APIRef("DOM") }}Ширина от левого края элемента в пикселях. При наличии overflow заключает в себя ширину от вертикального scrollbar для письма справа налево.
 
 `clientLeft` не включает в себя ни левый padding ни margin с той же стороны. `clientLeft` только для чтения.

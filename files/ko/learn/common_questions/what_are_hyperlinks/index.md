@@ -2,6 +2,7 @@
 title: What are hyperlinks?
 slug: Learn/Common_questions/What_are_hyperlinks
 ---
+
 이 글에서, 우리는 하이퍼링크가 무엇이고 왜 중요한지를 살필 것이다.
 
 <table class="learn-box standard-table">

@@ -33,35 +33,38 @@ background-blend-mode: unset;
 
 ### 值
 
-- \<blend-mode>
-  - : 一个{{cssxref("&lt;blend-mode&gt;")}}定义混合的模式，可以有多个值，用逗号间隔。
+- {{cssxref("&lt;blend-mode&gt;")}}
+  - : 一个定义混合的模式，可以有多个值，用逗号间隔。
 
 ## 示例
 
-\<select id="select">
-\<option>normal\</option>
-\<option>multiply\</option>
-\<option selected>screen\</option>
-\<option>overlay\</option>
-\<option>darken\</option>
-\<option>lighten\</option>
-\<option>color-dodge\</option>
-\<option>color-burn\</option>
-\<option>hard-light\</option>
-\<option>soft-light\</option>
-\<option>difference\</option>
-\<option>exclusion\</option>
-\<option>hue\</option>
-\<option>saturation\</option>
-\<option>color\</option>
-\<option>luminosity\</option>
-\</select>
+```html hidden
+<div id="div"></div>
+<select id="select">
+  <option>normal</option>
+  <option>multiply</option>
+  <option selected>screen</option>
+  <option>overlay</option>
+  <option>darken</option>
+  <option>lighten</option>
+  <option>color-dodge</option>
+  <option>color-burn</option>
+  <option>hard-light</option>
+  <option>soft-light</option>
+  <option>difference</option>
+  <option>exclusion</option>
+  <option>hue</option>
+  <option>saturation</option>
+  <option>color</option>
+  <option>luminosity</option>
+</select>
+```
 
 ```css
 #div {
     width: 300px;
     height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),url('https://mdn.mozillademos.org/files/8545/tr.png');
+    background: url('br.png'),url('tr.png');
     background-blend-mode: screen;
 }
 ```
@@ -73,7 +76,7 @@ document.getElementById("select").onchange = function(event) {
 console.log(document.getElementById('div'));
 ```
 
-{{ EmbedLiveSample('Examples', "330", "330") }}
+{{ EmbedLiveSample('示例', "330", "330") }}
 
 ## 规范
 

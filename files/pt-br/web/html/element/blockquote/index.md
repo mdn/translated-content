@@ -1,17 +1,8 @@
 ---
 title: <blockquote>
 slug: Web/HTML/Element/blockquote
-tags:
-  - Elemento
-  - HTML
-  - MDN
-  - Referencia
-  - Web
-  - blogger
-  - português brasil
-  - tag
-translation_of: Web/HTML/Element/blockquote
 ---
+
 ## Sumário
 
 O Elemento HTML \<blockquote> (ou Elemento HTML de citação de bloco) indica que o texto incluído é uma longa citação. Normalmente, este é processado visualmente pelo recuo (ver [Notas](/pt-BR/docs/HTML/Element/blockquote#Notes) sobre como mudá-lo). A URL para a fonte da citação pode ser dada usando o atributo **cite**, enquanto uma representação de texto da fonte pode ser dada usando o {{HTMLElement("cite")}} elemento.
@@ -66,4 +57,4 @@ O código HTML acima vai resultar em:
 - O elemento {{HTMLElement("q")}} para citações em linha.
 - O elemento {{HTMLElement("q")}} para citações de origem.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

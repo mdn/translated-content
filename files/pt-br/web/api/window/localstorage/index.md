@@ -1,16 +1,9 @@
 ---
 title: Window.localStorage
 slug: Web/API/Window/localStorage
-tags:
-  - API
-  - Armazenamento
-  - Propriedade
-  - Referencia
-  - WindowLocalStorage
-  - localStorage
-translation_of: Web/API/Window/localStorage
 original_slug: Web/API/Window/Window.localStorage
 ---
+
 {{APIRef()}}
 
 A propriedade `localStorage` permite acessar um objeto {{domxref("Storage")}} local. A `localStorage` é similar ao [`sessionStorage`](/pt-BR/docs/Web/API/Window.sessionStorage). A única diferença é que enquanto os dados armazenados no localStorage não expiram, os dados no sessionStorage tem os seus dados limpos ao expirar a sessão da página — ou seja, quando a página (aba ou janela) é fechada.

@@ -1,13 +1,8 @@
 ---
 title: Date
 slug: Web/HTTP/Headers/Date
-tags:
-  - Cabeçalho Geral
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Date
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho geral HTTP **`Date`** contém a data e a hora que a mensagem foi gerada.

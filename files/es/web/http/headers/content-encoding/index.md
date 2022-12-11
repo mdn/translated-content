@@ -1,11 +1,8 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-tags:
-  - Cabecera
-  - Referencia
-translation_of: Web/HTTP/Headers/Content-Encoding
 ---
+
 {{HTTPSidebar}}
 
 La cabecera **`Content-Encoding`** es usada para comprimir el media-type. Cuando está presente, su valor indica qué codificación de contenido adicional ha sido aplicada al cuerpo de la entidad. Permite al cliente saber cómo decodificar para obtener el media-type referido por la cabecera `Content-Type`.
@@ -67,7 +64,7 @@ Ten en cuenta que el servidor no está obligado a usar algun método de compresi
 
 ## Compatibilidad con los navegadores
 
-{{Compat("http/headers/content-encoding")}}
+{{Compat}}
 
 ## Ver también
 

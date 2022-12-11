@@ -253,7 +253,7 @@ _可以使用_ JavaScript 和浏览器的原生功能来实现路由功能，但
 | 框架 | 浏览器支持 | DSL 偏好 | 支持的 DSL         |
 | --------- | ----------------------------------- | ------------- | ---------------------- |
 | Angular   | IE9+                                | TypeScript    | 基于 HTML、TypeScript |
-| React     | 现代的浏览器（IE9+ with Polyfills）      | JSX           | JSX、 TypeScript        |
+| React     | 现代的浏览器（IE9+ with Polyfills）      | JSX           | JSX、TypeScript        |
 | Vue       | IE9+                                | 基于 HTML    | 基于 HTML、JSX、Pug   |
 | Ember     | 现代的浏览器（IE9+ in Ember version 2.18）| Handlebars    | Handlebars、TypeScript |
 
@@ -278,7 +278,7 @@ Vue 团队[详尽地将 Vue 与其他流行框架进行了比较](https://vuejs.
 
 ## 客户端框架的替代方案
 
-如果你正在寻找工具来加快  Web 开发过程，并且你知道你的项目不需要很多客户端 JavaScript，你可以寻求其他几种构建 Web 的解决方案：
+如果你正在寻找工具来加快 Web 开发过程，并且你知道你的项目不需要很多客户端 JavaScript，你可以寻求其他几种构建 Web 的解决方案：
 
 - 内容管理系统
 - 服务端渲染

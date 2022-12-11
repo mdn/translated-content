@@ -64,9 +64,7 @@ fetch("https://www.example.org/").then((response) => {
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Streams','#default-reader-class','ReadableStreamDefaultReader')}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

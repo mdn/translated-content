@@ -3,7 +3,7 @@ title: <input type="submit">
 slug: Web/HTML/Element/Input/submit
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar("Input_types")}}
 
 **`submit`** 类型的 {{HTMLElement("input")}} 元素会渲染为按钮。当 {{domxref("Element/click_event", "click")}} 事件发生时（用户点击按钮是一个典型的点击事件）， {{Glossary("user agent", "用户代理")}} 尝试提交表单到服务器。
 
@@ -88,7 +88,7 @@ slug: Web/HTML/Element/Input/submit
 一个字符串，指示提交表单数据时要使用的 HTTP 方法；此值将覆盖所属表单上给出的任何 {{htmlattrxref("method", "form")}} 属性。允许的值为：
 
 - `get`
-  - : URL 通过 `formaction` 或 {{htmlattrxref("action", "form")}} 属性给出的 URL 开始，加上一个问号（“?”）字符，然后加上表单的数据，按照 `formenctype` 或表单的{{htmlattrxref("enctype", "form")}} 属性的描述进行编码。然后使用 HTTP {{HTTPMethod("get")}} 请求将这个URL发送到服务器。这种方法对于只包含 ASCII 字符且没有副作用的简单表单很有效。这是默认值。
+  - : URL 通过 `formaction` 或 {{htmlattrxref("action", "form")}} 属性给出的 URL 开始，加上一个问号（“?”）字符，然后加上表单的数据，按照 `formenctype` 或表单的{{htmlattrxref("enctype", "form")}} 属性的描述进行编码。然后使用 HTTP {{HTTPMethod("get")}} 请求将这个 URL 发送到服务器。这种方法对于只包含 ASCII 字符且没有副作用的简单表单很有效。这是默认值。
 - `post`
   - : 表单的数据包含在请求的正文中，该请求的正文使用 HTTP {{HTTPMethod("post")}} 请求发送到由 `formaction` 或 {{htmlattrxref("action", "form")}} 属性指定的 URL 请求。此方法支持复杂的数据和文件附件。
 - `dialog`

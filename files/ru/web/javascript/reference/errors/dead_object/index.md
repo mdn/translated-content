@@ -5,6 +5,7 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/Dead_object
 translation_of: Web/JavaScript/Reference/Errors/Dead_object
 ---
+
 {{JSSidebar("Errors")}}
 
 ## Сообщение
@@ -23,7 +24,7 @@ TypeError: can't access dead object
 
 ## Проверка, если объект мёртв
 
-[Components.utils](/ru/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils) предлагает `isDeadWrapper()`метод, который может использовать привилегированный код.
+[Components.utils](/ru/docs/Mozilla/Tech/XPCOM/Language_Bindings/Components.utils) предлагает `isDeadWrapper()` метод, который может использовать привилегированный код.
 
 ```js
 if (Components.utils.isDeadWrapper(window)) {

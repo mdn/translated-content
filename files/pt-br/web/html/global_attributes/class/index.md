@@ -1,14 +1,8 @@
 ---
 title: class
 slug: Web/HTML/Global_attributes/class
-tags:
-  - Atributos globais
-  - Global attributes
-  - HTML
-  - Reference
-  - Referencia
-translation_of: Web/HTML/Global_attributes/class
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **class** é uma lista das classes de um elemento, separada por espaços. Classes permitem a CSS e Javascript selecionar e acessar elementos específicos através dos [seletores de classe](/pt-BR/docs/Web/CSS/Class_selectors) ou funções como o método DOM {{domxref("document.getElementsByClassName")}}.

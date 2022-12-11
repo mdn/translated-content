@@ -1,17 +1,8 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-tags:
-  - Expressão Regular
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - regex
-  - replaceAll()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
+
 {{JSRef}}
 
 O método `replaceAll()` retorna uma nova string com todas as ocorrências de um padrão substituídas por uma substituição. O padrão pode ser uma string ou uma {{jsxref ("RegExp")}}, e a substituição pode ser uma string ou uma função a ser chamada para cada ocorrência.

@@ -8,7 +8,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/figcaption
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<figcaption>` 요소는** 부모 {{HTMLElement("figure")}} 요소가 포함하는 다른 콘텐츠에 대한 설명 혹은 범례를 나타냅니다.
 

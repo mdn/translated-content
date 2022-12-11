@@ -1,15 +1,8 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-tags:
-  - Classes
-  - ECMAScript6
-  - Experimental
-  - Herança
-  - JavaScript
-  - extends
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
+
 {{jsSidebar("Classes")}}
 
 A palavra chave **`extends`** é usada em uma [class declarations](/pt-BR/docs/Web/JavaScript/Reference/Statements/class) ou [class expressions](/pt-BR/docs/Web/JavaScript/Reference/Operators/class) para criar uma classe filha de outra classe.

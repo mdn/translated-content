@@ -1,14 +1,8 @@
 ---
 title: Coleções chaveadas
 slug: Web/JavaScript/Guide/Keyed_collections
-tags:
-  - Coleções
-  - Guía
-  - JavaScript
-  - Map
-  - configuração
-translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}
 
 Este capítulo apresenta coleções de dados que são ordenados por uma chave; Objetos Map e Set contêm elementos que são iteráveis em ordem de inserção.

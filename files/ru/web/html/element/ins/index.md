@@ -44,4 +44,4 @@ translation_of: Web/HTML/Element/ins
 
 - Элемент {{HTMLElement("del")}} для помещения удаления в документе.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

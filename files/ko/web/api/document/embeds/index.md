@@ -5,6 +5,7 @@ tags:
   - embeds
 translation_of: Web/API/Document/embeds
 ---
+
 {{ ApiRef() }}
 
 ### Summary

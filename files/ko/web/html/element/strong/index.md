@@ -12,7 +12,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/strong
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<strong>` 요소**는 중대하거나 긴급한 콘텐츠를 나타냅니다. 보통 브라우저는 굵은 글씨로 표시합니다.
 

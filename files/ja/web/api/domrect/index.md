@@ -23,13 +23,13 @@ slug: Web/API/DOMRect
 _`DOMRect` は親である {{domxref("DOMRectReadOnly")}} からプロパティを継承しています。違いはそれらが読み取り専用でなくなることです。_
 
 - {{domxref("DOMRectReadOnly.x")}}
-  - :  この `DOMRect` の原点（ふつうは矩形の左上隅）の X 座標です。
+  - : この `DOMRect` の原点（ふつうは矩形の左上隅）の X 座標です。
 - {{domxref("DOMRectReadOnly.y")}}
-  - :  この `DOMRect` の原点（ふつうは矩形の左上隅）の Y 座標です。
+  - : この `DOMRect` の原点（ふつうは矩形の左上隅）の Y 座標です。
 - {{domxref("DOMRectReadOnly.width")}}
-  - :  この `DOMRect` の幅です。
+  - : この `DOMRect` の幅です。
 - {{domxref("DOMRectReadOnly.height")}}
-  - :  この `DOMRect` の高さです。
+  - : この `DOMRect` の高さです。
 - {{domxref("DOMRectReadOnly.top")}}
   - : この `DOMRect` の上端の座標値を返します（ふつうは `y` と同じ、 `height` が負の数である場合は `y + height` と同じです）。
 - {{domxref("DOMRectReadOnly.right")}}

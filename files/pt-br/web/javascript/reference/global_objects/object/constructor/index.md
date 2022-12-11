@@ -1,13 +1,8 @@
 ---
 title: Object.prototype.constructor
 slug: Web/JavaScript/Reference/Global_Objects/Object/constructor
-tags:
-  - Constructor
-  - Objeto
-  - Propriedade
-  - object.constructor
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Sumário

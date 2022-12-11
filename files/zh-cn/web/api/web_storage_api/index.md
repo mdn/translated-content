@@ -35,7 +35,7 @@ Web Storage 包含如下两种机制：
 
 为了阐述一些 典型的 web storage 的用法，我们创了一个简单的例子，想象上地称为 [Web Storage Demo](https://github.com/mdn/dom-examples/tree/master/web-storage). [landing page](https://mdn.github.io/dom-examples/web-storage/) 提供控制器可以用来自定义颜色，字体和装饰图片。当你选择不同的选项，页面会被立即更新;此外，你的选择被储存到 localStorage 中，以便当你离开该页面，然后过些时候在重新加载它时，你的选择会被记住。
 
-另外，我们提供了一个 [event output page](https://mdn.github.io/dom-examples/web-storage/event.html) — 如果你在另一个标签页加载这个页面，然后在 landing page 改变你的选择，当{{event("StorageEvent")}}被发布时，你将会看到被更新的储存信息输出。
+另外，我们提供了一个 [event output page](https://mdn.github.io/dom-examples/web-storage/event.html) — 如果你在另一个标签页加载这个页面，然后在 landing page 改变你的选择，当 {{domxref("StorageEvent")}} 被发布时，你将会看到被更新的储存信息输出。
 
 ## 规范
 

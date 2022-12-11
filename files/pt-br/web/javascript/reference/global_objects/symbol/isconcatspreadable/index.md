@@ -1,8 +1,8 @@
 ---
 title: Symbol.isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 ---
+
 {{JSRef}}
 
 O **`Symbol.isConcatSpreadable`** é um símbolo conhecido que é usado para configurar se um objeto deve ser achatado para um elemento da array quando usado o método {{jsxref("Array.prototype.concat()")}}.

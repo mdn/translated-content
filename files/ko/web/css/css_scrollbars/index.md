@@ -8,6 +8,7 @@ tags:
   - css scrollbars
 spec-urls: https://drafts.csswg.org/css-scrollbars/
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **CSS Scrollbars**는 Windows IE 5.5에서 2000년에 도입한 더이상 사용되지 않는(obsolete) 스크롤바 색상 프로퍼티를 표준화합니다.

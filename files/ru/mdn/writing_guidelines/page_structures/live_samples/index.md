@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/Page_structures/Live_samples
 translation_of: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 original_slug: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 ---
+
 {{MDNSidebar}}
 
 MDN имеет систему «[живых примеров](/ru/docs/MDN/Contribute/Editor/Live_samples)», где пример кода, показанный на странице, служит для отображения вывода этого же примера. Однако во многих существующих статьях есть примеры кода, которые ещё не используют эту систему, и их необходимо преобразовать.
@@ -14,14 +15,14 @@ MDN имеет систему «[живых примеров](/ru/docs/MDN/Contr
   - : В статьях с тегом [NeedsLiveSample](/ru/docs/tag/NeedsLiveSample)
 - **Что вам нужно знать, чтобы начать?**
 
-  - :&#x20;
+  - : &#x20;
 
     - Понимание HTML, CSS и/или JavaScript, в зависимости от примера кода.
     - Способность использовать макросы [KumaScript](/ru/docs/MDN/Contribute/Tools/KumaScript) в статьях MDN.
 
 - **Что нужно для этого сделать?**
 
-  - :&#x20;
+  - : &#x20;
 
     1. Выберите статью из списка статей с тегами [NeedsLiveSample](/ru/docs/tag/NeedsLiveSample), где есть пример кода, с понятной, для вас функцией.
     2. Преобразуйте пример кода, чтоб он стал "живым".

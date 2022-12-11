@@ -3,6 +3,7 @@ title: Cache.addAll()
 slug: Web/API/Cache/addAll
 translation_of: Web/API/Cache/addAll
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 ## Описание

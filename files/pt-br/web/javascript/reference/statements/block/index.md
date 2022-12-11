@@ -1,13 +1,8 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - Declaração
-  - JavaScript
-  - Reference
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/block
 ---
+
 {{jsSidebar("Statements")}}
 
 Uma **declaração em bloco** (ou **declaração composta (compound)** em outras linguagens) é usado para agrupar nenhum ou mais declarações. O bloco é delimitado por um par de chaves e pode opcionalmente ser {{jsxref("Statements/label", "nomeado")}}:

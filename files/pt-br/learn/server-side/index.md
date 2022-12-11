@@ -1,19 +1,8 @@
 ---
 title: Programação de site do lado do servidor
 slug: Learn/Server-side
-tags:
-  - Beginner
-  - CodingScripting
-  - Intro
-  - Landing
-  - Learn
-  - NeedsTranslation
-  - Server
-  - Server-side programming
-  - Topic
-  - TopicStub
-translation_of: Learn/Server-side
 ---
+
 {{LearnSidebar}}
 
 O tópico de _**Websites Dinâmicos - Programação do lado do servidor**_ é uma série de módulos que mostram como criar sites dinâmicos; sites que fornecem informações personalizadas em resposta a solicitações HTTP. Os módulos fornecem uma introdução genérica à programação do lado do servidor, juntamente com guias específicos de nível iniciante sobre como usar os frameworks web Django (Python) e Express (Node.js / JavaScript) para criar aplicativos básicos.

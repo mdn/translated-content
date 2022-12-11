@@ -1,14 +1,6 @@
 ---
 title: URL.protocol
 slug: Web/API/URL/protocol
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-browser-compat: api.URL.protocol
 ---
 
 {{ApiRef("URL API")}}

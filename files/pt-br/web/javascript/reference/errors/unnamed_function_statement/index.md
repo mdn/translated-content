@@ -1,14 +1,9 @@
 ---
 title: 'Erro de sintaxe: declaração de função requer um nome'
 slug: Web/JavaScript/Reference/Errors/Unnamed_function_statement
-tags:
-  - Erro
-  - Erro de Sintaxe
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Errors/Unnamed_function_statement
 original_slug: Web/JavaScript/Reference/Errors/NãoNomeado_funcão_declaração
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem

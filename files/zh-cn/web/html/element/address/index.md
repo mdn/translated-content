@@ -3,7 +3,7 @@ title: <address>
 slug: Web/HTML/Element/address
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<address>` 元素** 表示其中的 HTML 提供了某个人或某个组织（等等）的联系信息。
 

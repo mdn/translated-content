@@ -1,15 +1,8 @@
 ---
 title: Map
 slug: Web/JavaScript/Reference/Global_Objects/Map
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Reference
-  - Polyfill
-browser-compat: javascript.builtins.Map
 ---
+
 {{JSRef}}
 
 O objeto **`Map`** contém pares de chave-valor e lembra a ordem original da inserção das chaves. Qualquer valor (objetos e {{glossary("Primitive", "valores primitivos")}}) podem ser usados como chave ou valor.
@@ -164,7 +157,7 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
         <p>
           (Mas você pode construir sua própria serialização e conversão para o <code>Map</code> usando o
           {{jsxref("JSON.stringify()")}} como o argumento <em>replacer</em>,
-          e usando o  {{jsxref("JSON.parse()")}} com o argumento <em>reviver</em>.
+          e usando o {{jsxref("JSON.parse()")}} com o argumento <em>reviver</em>.
           Veja a questão no Stack Overflow     <a href="https://stackoverflow.com/q/29085197/"
             >How do you JSON.stringify an ES6 Map?</a
           >).

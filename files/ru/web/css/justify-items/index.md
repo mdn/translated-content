@@ -8,6 +8,7 @@ tags:
   - Ссылки
 translation_of: Web/CSS/justify-items
 ---
+
 {{CSSRef}}
 
 Атрибут [CSS](/ru/docs/Web/CSS) **`justify-items`** определяет атрибут по умолчанию {{CSSxRef ("justify-self")}} для всех элементов блока, предоставляя всем им способ выравнивания по умолчанию каждого блока вдоль соответствующей оси.
@@ -129,7 +130,7 @@ justify-items: unset;
 
 ### Поддержка в разметке Grid
 
-{{Compat("css.properties.justify-items.grid_context")}}
+{{Compat}}
 
 ## Смотрите также
 

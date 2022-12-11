@@ -1,8 +1,8 @@
 ---
 title: Console
 slug: Web/API/Console
-translation_of: Web/API/Console
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 O objeto `console` fornece acesso ao console de debug do navegador (por exemplo, o [Web Console](/pt-BR/docs/Tools/Web_Console) do Firefox). O seu funcionamento específico varia de navegador para navegador, mas existe um conjunto de ferramentas que na prática são fornecidas normalmente.
@@ -128,7 +128,7 @@ You can use the `"%c"` directive to apply a CSS style to console output:
 console.log("%cMy stylish message", "color: red; font-style: italic");
 ```
 
-![](https://mdn.mozillademos.org/files/7739/console-style.png)
+![](console-style.png)
 
 ### Usando grupos no console
 

@@ -1,11 +1,8 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
-tags:
-  - Cabaçalho genérico
-  - Cabeçalhos HTTP
-translation_of: Web/HTTP/Headers/Cache-Control
 ---
+
 {{HTTPSidebar}}
 
 O campo de cabeçalho genérico **`Cache-Control`** é usado para especificar diretivas para mecanismos de _cache_ tanto em requisições quanto em respostas. Diretivas de _cache_ são unidirecionais, o que significa que uma dada diretiva em uma requisição não implica em que a mesma seja dada na resposta.

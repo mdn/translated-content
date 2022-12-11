@@ -8,6 +8,7 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Errors/Identifier_after_number
 ---
+
 {{JSSidebar("Errors")}}
 
 ## 메세지

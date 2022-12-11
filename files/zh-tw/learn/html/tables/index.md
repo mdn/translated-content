@@ -11,7 +11,7 @@ HTML 的常見任務就是建構表格資料，某些元素與屬性正是為此
 
 開始本模塊之前，你要理解基本的 HTML：請參見 [HTML 介紹](/zh-TW/docs/Learn/HTML/Introduction_to_HTML)。
 
-> **備註：** 如果你用的電腦或平板之類的設備，無法允許建立自己的檔案，你可以把大部分的例子放在線上程式網站，例如 [JSBin](http://jsbin.com/) 或 [Thimble](https://thimble.mozilla.org/)。
+> **備註：** 如果你用的電腦或平板之類的設備，無法允許建立自己的檔案，你可以把大部分的例子放在線上程式網站，例如 [JSBin](http://jsbin.com/) 或 [Glitch](https://glitch.com/)。
 
 ## 教學
 

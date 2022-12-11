@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement`** 인터페이스는 모든 종류의 [HTML](/ko/docs/Web/HTML) 요소를 나타냅니다. 일부 요소는 이 인터페이스를 직접 구현하지만 나머지 요소는 `HTMLElement`를 상속한 자식 인터페이스를 구현합니다.

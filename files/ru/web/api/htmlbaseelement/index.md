@@ -3,6 +3,7 @@ title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
 translation_of: Web/API/HTMLBaseElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLBaseElement`** интерфейс содержит базовый URI для документа. Этот объект наследует все свойства и методы которые описаны в {{domxref("HTMLElement")}} интерфейсе.

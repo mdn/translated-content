@@ -9,6 +9,7 @@ tags:
 browser-compat: javascript.builtins.Proxy.handler.preventExtensions
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 ---
+
 {{JSRef}}
 
 **`handler.preventExtensions()`** 메서드는 {{jsxref("Object.preventExtensions()")}}에 대한 트랩입니다.

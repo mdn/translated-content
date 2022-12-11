@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 original_slug: Web/JavaScript/Reference/Global_Objects/Proxy/handler/set
 ---
+
 {{JSRef}}
 
 El método **`handler.set()`** captura las asignaciones de un valor a una determinada propiedad.
@@ -24,7 +25,7 @@ var p = new Proxy(target, {
 
 ### Parámetros
 
-El método `set` recibe los siguientes parámetros.`this` se asocia al handler.
+El método `set` recibe los siguientes parámetros. `this` se asocia al handler.
 
 - `target`
   - : El objeto objetivo.
@@ -83,10 +84,7 @@ console.log(p.a)       // 10
 
 ## Especificaciones
 
-| Especificación                                                                                                                                   | Estado                       | Comentario          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con los buscadores
 

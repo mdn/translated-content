@@ -3,6 +3,7 @@ title: storage
 slug: Web/API/Window/storage_event
 translation_of: Web/API/Window/storage_event
 ---
+
 Событие `storage` сигнализирует, что данные в объектах `localStorage` или `sessionStorage` были изменены. Подробнее см. [Web Storage API](/ru/docs/Web/API/Web_Storage_API).
 
 ## Общая информация

@@ -1,18 +1,9 @@
 ---
 title: Configurando o Node como ambiente de desenvolvimento
 slug: Learn/Server-side/Express_Nodejs/development_environment
-tags:
-  - Express
-  - Iniciante
-  - Introdução
-  - Node
-  - nodejs
-  - npm
-  - server-side
-  - web server
-translation_of: Learn/Server-side/Express_Nodejs/development_environment
 original_slug: Learn/Server-side/Express_Nodejs/ambiente_de_desenvolvimento
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 Agora que você sabe para que serve o Express, nós vamos lhe mostrar como configurar e testar o ambiente Node/Express no Windows, Linux (Ubuntu) e macOS. Independentemente do sistema operacional que você prefere, este artigo deve lhe proporcionar o que você precisa para desenvolver aplicativos em Express.

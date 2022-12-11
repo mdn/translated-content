@@ -1,14 +1,8 @@
 ---
 title: with
 slug: Web/JavaScript/Reference/Statements/with
-tags:
-  - Declaração
-  - Deprecado
-  - Deprecated
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/with
 ---
+
 > **Aviso:** O uso da declaração `with` não é recomendado, isso porque ele pode ser a fonte de bugs confusos e problemas de compatibilidade. Veja o parágrafo "Contra de ambiguidade" na seção "Descrição" para mais detalhes.
 
 {{jsSidebar("Statements")}}

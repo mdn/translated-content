@@ -1,9 +1,9 @@
 ---
 title: Construa sua própria função
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
-translation_of: Learn/JavaScript/Building_blocks/Build_your_own_function
 original_slug: Aprender/JavaScript/Elementos_construtivos/Build_your_own_function
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
 Com a maior parte da teoria essencial tratada no artigo anterior, este artigo fornece experiência prática. Aqui você terá algumas práticas construindo sua própria função personalizada. Ao longo do caminho, também explicaremos alguns detalhes úteis sobre como lidar com funções.

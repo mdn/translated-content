@@ -1,8 +1,8 @@
 ---
 title: FormData.set()
 slug: Web/API/FormData/set
-translation_of: Web/API/FormData/set
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 O método **`set()`** da interface {{domxref("FormData")}} adiciona o novo valor para um chave existente em um objeto `FormData`, ou adicionar a combinação chave/valor caso ela não exista.

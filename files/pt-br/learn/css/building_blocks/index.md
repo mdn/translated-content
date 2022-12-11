@@ -1,9 +1,9 @@
 ---
 title: Construindo blocos CSS
 slug: Learn/CSS/Building_blocks
-translation_of: Learn/CSS/Building_blocks
 original_slug: Aprender/CSS/Construindo_blocos
 ---
+
 {{LearnSidebar}}
 
 Este módulo continua onde [Primeiros passos em CSS](/pt-BR/docs/Learn/CSS/First_steps) parou — agora que você já ganhou familiaridade com a linguagem e sua sintaxe, e já tem alguma experiência básica usando-a, é hora de mergulhar um pouco mais fundo. Este módulo analisa a conceitos de cascata e herança , todos os tipos de seletores que temos disponíveis, unidades, dimensionamentos, estilos de fundo e bordas, depuração, e muito mais.

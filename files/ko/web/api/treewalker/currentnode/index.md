@@ -9,6 +9,7 @@ tags:
   - TreeWalker
 translation_of: Web/API/TreeWalker/currentNode
 ---
+
 {{ APIRef("DOM") }}
 
 **`TreeWalker.currentNode`** 속성은 {{domxref("TreeWalker")}}가 현재 가리키고 있는 {{domxref("Node")}}를 나타낸다.

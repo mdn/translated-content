@@ -1,16 +1,8 @@
 ---
 title: Animation.playbackRate
 slug: Web/API/Animation/playbackRate
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Interface
-  - Reference
-  - playbackRate
-translation_of: Web/API/Animation/playbackRate
 ---
+
 {{APIRef("Web Animations")}}
 
 La propiedad `Animation.playbackRate` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve o establece la velocidad de reproducción de la animación.
@@ -73,7 +65,7 @@ setInterval( function() {
 }, 3000);
 ```
 
-Pero hacer click o hacer tapping(pasar el puntero) sobre ellos hace que aceleren multiplicando su `playbackRate`(velocidad de reproducción):
+Pero hacer click o hacer tapping(pasar el puntero) sobre ellos hace que aceleren multiplicando su `playbackRate` (velocidad de reproducción):
 
 ```js
 var goFaster = function() {

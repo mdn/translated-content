@@ -1,13 +1,8 @@
 ---
 title: Conceptos básicos de HTTP
 slug: Web/HTTP/Basics_of_HTTP
-tags:
-  - HTTP
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/HTTP/Basics_of_HTTP
 ---
+
 {{HTTPSidebar}}
 
 El protocolo HTTP es un protocolo ampliable, es decir se puede añadir "vocabulario". HTTP está basado en unos pocos conceptos básicos como el concepto de recursos y URIs, una estructura sencilla de mensajes, y una arquitectura de cliente-servidor para ordenar el flujo de las comunicaciones. A demás de estos conceptos, a lo largo de su desarrollo han aparecido otros nuevos y se han añadido funcionalidades y reglas semánticas, creando nuevos métodos y cabeceras.

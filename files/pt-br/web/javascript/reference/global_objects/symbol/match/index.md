@@ -1,8 +1,8 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
+
 {{JSRef}}
 
 O símbolo **`Symbol.match`** é conhecido por especificar a compatibilidade de uam expressão regular contra uma string. Essa função é chamada pelo método {{jsxref("String.prototype.match()")}}.

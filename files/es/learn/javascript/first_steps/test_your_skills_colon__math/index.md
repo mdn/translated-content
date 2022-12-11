@@ -1,14 +1,8 @@
 ---
 title: 'Comprueba tus habilidades: Matematicas.'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
-tags:
-  - JavaScript
-  - Matemática
-  - Principiante
-  - Prueba tus habilidades
-  - aprende
-translation_of: Learn/JavaScript/First_steps/Test_your_skills:_Math
 ---
+
 {{learnsidebar}}
 
 El objetivo de esta prueba de habilidad es conocer si has entendido nuestra clase sobre el articulo [Matematica basica en JavaScript — números y operadores](/es/docs/Learn/JavaScript/First_steps/Math).

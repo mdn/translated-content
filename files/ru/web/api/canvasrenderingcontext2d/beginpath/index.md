@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
 translation_of: Web/API/CanvasRenderingContext2D/beginPath
 ---
+
 {{APIRef}}
 
 Метод **`CanvasRenderingContext2D.beginPath()`** Canvas 2D API запускает новый путь, опуская список подпутей. Вызовите этот метод, когда хотите создать новый путь.

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Operators/Addition
 translation_of: Web/JavaScript/Reference/Operators/Addition
 original_slug: Web/JavaScript/Referencia/Operadores/Adición
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador de adición (`+`) produce la suma de operandos numéricos o la concatenación de (cadenas) string.
@@ -46,11 +47,9 @@ false + false // 0
 'fut' + false // "futfalse"
 ```
 
-## Especificación
+## Especificaciones
 
-| Specification                                                                                        |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-addition-operator-plus', 'Addition operator')}} |
+{{Specifications}}
 
 ## Compatibilidad de Explorador
 

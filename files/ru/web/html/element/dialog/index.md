@@ -12,6 +12,7 @@ tags:
   - Элемент
 translation_of: Web/HTML/Element/dialog
 ---
+
 {{SeeCompatTable}}
 
 **HTML-элемент `<dialog>`** определяет диалоговое окно или другой интерактивный элемент, такой как инспектор или окно. Элементы `<form>` могут интегрироваться с диалогом с помощью указания атрибута `method="dialog"`. Когда отправляется такая форма, диалог закрывается с returnValue равным value нажатой кнопки submit.
@@ -146,4 +147,4 @@ translation_of: Web/HTML/Element/dialog
 - Событие {{event("cancel")}}
 - [HTML forms guide](/ru/docs/Web/Guide/HTML/Forms).
 
-{{HTMLRef}}
+{{HTMLSidebar}}

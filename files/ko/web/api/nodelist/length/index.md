@@ -7,6 +7,7 @@ tags:
   - Gecko DOM Reference
 translation_of: Web/API/NodeList/length
 ---
+
 {{ ApiRef() }}
 
 ### 요약

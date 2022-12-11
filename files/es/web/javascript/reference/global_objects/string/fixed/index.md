@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fixed
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fixed
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 {{deprecated_header}}

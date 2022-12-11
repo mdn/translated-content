@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LOG10E
 ---
+
 {{JSRef}}
 
 **`Math.LOG10E`** 속성은 e의 로그 10 값, 약 0.434의 값을 가집니다.

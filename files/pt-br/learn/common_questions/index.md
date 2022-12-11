@@ -1,16 +1,8 @@
 ---
 title: Questões comuns
 slug: Learn/Common_questions
-tags:
-  - Aprendendo
-  - Infraestrutura
-  - Internet
-  - NeedsTranslation
-  - TopicStub
-  - Web
-  - WebMechanics
-translation_of: Learn/Common_questions
 ---
+
 Esta sessão de Área de Aprendizado é voltada para dar respostas à questões comuns que possam surgir, que não necessariamente sejam parte do núcleo dos meios de aprendizado (ex. artigos sobre [HTML](/pt-BR/docs/Learn/HTML) ou [CSS](/pt-BR/docs/Learn/CSS).) Estes artigos foram feitos para funcionar de forma independente.
 
 ## Questões sobre HTML e CSS

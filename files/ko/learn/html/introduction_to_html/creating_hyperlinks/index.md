@@ -2,6 +2,7 @@
 title: 하이퍼링크 만들기
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 하이퍼 링크는 중요하다. — 웹을 웹답게 만들기 때문이다. 이 글에서는 링크를 만드는데 필요한 구문을 보여주고 링크의 모범 사례를 설명한다.
@@ -41,7 +42,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 예를 들면, BBC 홈페이지엔 많은 링크들이 있는데요. 그것들은 수많은 뉴스들 뿐만 아니라 다른 웹사이트들 (navigation functionality), 로그인/등록 페이지들 (user tools) 그리고 더 많은 다른 곳에도 연결되어 있습니다.
 
-![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](https://mdn.mozillademos.org/files/12405/bbc-homepage.png)
+![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](bbc-homepage.png)
 
 ## 링크의 구조
 

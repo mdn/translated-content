@@ -1,13 +1,9 @@
 ---
 title: CSS
 slug: Glossary/CSS
-tags:
-  - CSS
-  - Glossário
-  - Web
-translation_of: Glossary/CSS
 original_slug: Glossario/CSS
 ---
+
 **CSS** (Cascading Style Sheets) é uma linguagem declarativa que controla a apresentação visual de páginas web em um {{glossary("browser","navegador")}}. O navegador aplica as declarações de estilo CSS aos elementos selecionados para exibi-los apropriadamente. Uma declaração de estilo contem as propriedades e seus valores, que determinam a aparência de uma página web.
 
 CSS é uma das três principais tecnologias Web, junto com {{Glossary("HTML")}} e {{Glossary("JavaScript")}}. CSS normalmente estiliza {{Glossary("Element","Elementos HTML")}}, mas também pode ser usada com outras linguagens de marcação como {{Glossary("SVG")}} ou {{Glossary("XML")}}.
@@ -37,7 +33,7 @@ p {
 ### Referências técnicas
 
 - [A documentação sobre CSS na MDN](/pt-BR/docs/Web/CSS)
-- [O trabalho atual do CSS Working Group](http://www.w3.org/Style/CSS/current-work) (Em inglês)
+- [O trabalho atual do CSS Working Group](https://www.w3.org/Style/CSS/current-work) (Em inglês)
 
 ### Aprenda CSS
 

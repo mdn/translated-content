@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/E
 ---
+
 {{JSRef}}
 
 **`Math.E`** 속성은 자연로그의 밑 값 e를 나타내며 약 2.718의 값을 가집니다.

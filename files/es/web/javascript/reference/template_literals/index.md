@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Referencia/template_strings
 ---
+
 {{JsSidebar("More")}}
 
 Las plantillas literales son cadenas literales que habilitan el uso de expresiones incrustadas. Con ellas, es posible utilizar cadenas de caracteres de más de una línea, y funcionalidades de interpolación de cadenas de caracteres.
@@ -191,7 +192,7 @@ t3Closure('foo', {nombre: 'MDN', edad: 30}); //"Me llamo MDN. Tengo casi 30 año
 t3Closure({nombre: 'MDN', edad: 30}); //"Me llamo MDN. Tengo casi 30 años."
 ```
 
-### Cadenas en crudo (_raw_)
+### Cadenas en crudo (raw)
 
 La propiedad especial `raw`, disponible en el primer argumento de la función de etiqueta, permite acceso a las cadenas de caracteres tal como fueron ingresadas, sin procesar [secuencias de escape](/es/docs/Web/JavaScript/Guide/Grammar_and_types#Literales_String).
 
@@ -261,9 +262,7 @@ let bad = `bad escape sequence: \unicode`;
 
 ## Especificaciones
 
-| Especificación                                                                                                                                                                | Status               | Comentarios         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-template-literals', 'Template Literals')}} {{SpecName('ES6', '#sec-tagged-templates', 'Tagged Templates')}} | {{Spec2('ES6')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

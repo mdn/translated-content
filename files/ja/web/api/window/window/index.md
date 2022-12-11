@@ -46,8 +46,4 @@ Yet another reason to use this property is for libraries which wish to offer OOP
 
 ## 仕様
 
-| Specification                                                                                | Status                           | Comment                                                              |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-window', 'Window.window')}}             | {{Spec2('HTML WHATWG')}} | 最新のスナップショット {{SpecName("HTML5.1")}} から変更なし |
-| {{SpecName('HTML5.1', 'browsers.html#dom-window', 'Window.window')}} | {{Spec2('HTML5.1')}}     | {{SpecName("HTML5 W3C")}} から変更なし                        |
-| {{SpecName('HTML5 W3C', 'browsers.html#dom-window', 'Window.window')}} | {{Spec2('HTML5 W3C')}}     | `Window.window` の定義を含む最初のスナップショット                   |
+{{Specifications}}

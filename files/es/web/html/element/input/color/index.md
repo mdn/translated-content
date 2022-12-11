@@ -1,19 +1,10 @@
 ---
 title: <input type="color">
 slug: Web/HTML/Element/input/color
-tags:
-  - Elemento
-  - Entrada
-  - Formulários HTML
-  - HTML
-  - Referencia
-  - Selector de colores
-  - color
-  - formulários
-translation_of: Web/HTML/Element/input/color
 original_slug: Web/HTML/Elemento/input/color
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} del tipo «**`color`**» proporciona un elemento de interfaz de usuario que permite a los usuarios especificar un color, bien mediante una interfaz visual de selección, bien a través de un cuadro de texto donde ingresar un valor hexadecimal en el formato «`#rrggbb`». Solo se permiten colores simples (sin canal alfa). Los valores son compatibles con CSS.
 
@@ -29,7 +20,7 @@ La presentación del elemento puede variar considerablamente entre navegadores y
 
 | **[Value](#value)**             | Una {{domxref("DOMString")}} de siete caracteres que especifica un {{cssxref("&lt;color&gt;")}} en notación hexadecimal en minúsculas |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Sucesos**                     | {{event("change")}} e {{event("input")}}                                                                                                   |
+| **Sucesos**                     | [`change`](/es/docs/Web/Reference/Events/change) e [`input`](/es/docs/Web/Reference/Events/input)                                                                                                   |
 | **Atributos comunes admitidos** | {{htmlattrxref("autocomplete", "input")}} y {{htmlattrxref("list", "input")}}                                               |
 | **Atributos IDL**               | `list` y `value`                                                                                                                                      |
 | **Métodos**                     | {{domxref("HTMLInputElement.select", "select()")}}                                                                                  |
@@ -58,7 +49,7 @@ Si no especifica un valor, se utilizará «`#000000`», negro, de manera predete
 
 ### Llevar un seguimiento de los cambios de color
 
-Como sucede con otros tipos de {{HTMLElement("input")}}, existen dos sucesos que pueden emplearse para detectar cambios en el valor de color: {{event("input")}} y {{event("change")}}. El suceso `input` se desencadena en el elemento `<input>` siempre que cambia el color. El suceso `change` se desencadena cuando el usuario cierra el selector de colores. En ambos casos, puede determinar el valor nuevo del elemento al examinar su {{domxref("HTMLInputElement.value", "value")}}.
+Como sucede con otros tipos de {{HTMLElement("input")}}, existen dos sucesos que pueden emplearse para detectar cambios en el valor de color: [`input`](/es/docs/Web/Reference/Events/input) y [`change`](/es/docs/Web/Reference/Events/change). El suceso `input` se desencadena en el elemento `<input>` siempre que cambia el color. El suceso `change` se desencadena cuando el usuario cierra el selector de colores. En ambos casos, puede determinar el valor nuevo del elemento al examinar su {{domxref("HTMLInputElement.value", "value")}}.
 
 Este ejemplo vigila los cambios del valor de color en el tiempo:
 
@@ -81,27 +72,13 @@ Si la implementación del elemento {{HTMLElement("input")}} del tipo «`color`»
 muestrario.select();
 ```
 
-### Variaciones de apariencia
-
-Como se mencionó anteriormente, cuando un navegador no admite una interfaz de selección de colores, su implementación de las entradas de color viene en forma de un cuadro de texto que valida su contenido automáticamente para garantizar que el valor esté en el formato adecuado. Por ejemplo, en Safari 10.1 verá algo como esto:
-
-![Screenshot of the example taken in Safari.](https://mdn.mozillademos.org/files/14899/input-color-safari.png)
-
-El mismo contenido luce así en Firefox 55:
-
-![Screenshot of the example taken in Firefox 55 for macOS](https://mdn.mozillademos.org/files/14901/input-color-firefox.png)
-
-En este caso, al pulsar en el muestrario de colores aparecerá el selector de la plataforma desde el cual elegir un color (en el ejemplo, el selector de macOS):
-
-![Screenshot of the element with the color picker open in Firefox Mac.](https://mdn.mozillademos.org/files/14903/input-with-picker-firefox-mac.png)
-
 ## Validación
 
 El valor de una entrada de colores se considera no válido si el {{Glossary("user agent")}} no es capaz de convertir la entrada del usuario en la notación hexadecimal de siete caracteres minúsculos. Cuando se da esta situación, se aplica la pseudoclase {{cssxref(":invalid")}} al elemento.
 
 ## Ejemplo
 
-Creemos un ejemplo que realice algo más con la entrada de color a través de la monitorización de los sucesos {{event("change")}} y {{event("input")}} para tomar el color nuevo y aplicarlo a cada uno de los elementos {{HTMLElement("p")}} del documento.
+Creemos un ejemplo que realice algo más con la entrada de color a través de la monitorización de los sucesos [`change`](/es/docs/Web/Reference/Events/change) y [`input`](/es/docs/Web/Reference/Events/input) para tomar el color nuevo y aplicarlo a cada uno de los elementos {{HTMLElement("p")}} del documento.
 
 ### HTML
 
@@ -122,7 +99,7 @@ El código HTML es bastante sencillo: un par de párrafos de material descriptiv
 
 ### JavaScript
 
-Primero hay que realizar un poco de configuración. Aquí estableceremos algunas variables, una de las cuales contendrá el color que definiremos en el botón muestrario durante la primera carga y, a continuación, configurará un manejador para {{event("load")}} para realizar el trabajo de inicialización cuando termine de cargarse la página.
+Primero hay que realizar un poco de configuración. Aquí estableceremos algunas variables, una de las cuales contendrá el color que definiremos en el botón muestrario durante la primera carga y, a continuación, configurará un manejador para [`load`](/es/docs/Web/Reference/Events/load) para realizar el trabajo de inicialización cuando termine de cargarse la página.
 
 ```js
 var muestrario;
@@ -145,7 +122,7 @@ function startup() {
 }
 ```
 
-Esto obtiene una referencia al elemento de color `<input>` en una variable denominada `muestrario` y, acto seguido, define el valor de la entrada de color al valor de `colorPredeterminado`. Después, el suceso {{event("input")}} de la entrada de color se configura para llamar a nuestra función `actualizarPrimero()` y el suceso {{event("change")}} se configura para llamar `actualizarTodo()`. Ambos pueden apreciarse a continuación.
+Esto obtiene una referencia al elemento de color `<input>` en una variable denominada `muestrario` y, acto seguido, define el valor de la entrada de color al valor de `colorPredeterminado`. Después, el suceso [`input`](/es/docs/Web/Reference/Events/input) de la entrada de color se configura para llamar a nuestra función `actualizarPrimero()` y el suceso [`change`](/es/docs/Web/Reference/Events/change) se configura para llamar `actualizarTodo()`. Ambos pueden apreciarse a continuación.
 
 Por último, llamamos {{domxref("HTMLInputElement.select", "select()")}} para seleccionar el contenido de texto de la entrada de color input en caso de que el control se haya implementado como un cuadro de texto (lo cual no producirá ningún efecto si se ha brindado una interfaz de selección de colores en su lugar).
 
@@ -183,12 +160,8 @@ El resultado final es el siguiente:
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'the-input-element.html#the-input-element')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C', 'forms.html#the-input-element')}}                     | {{Spec2('HTML5 W3C')}}     |                    |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4')}}                         | {{Spec2('HTML4.01')}}     | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 
-{{Compat("html.elements.input.input-color")}}
+{{Compat}}

@@ -1,15 +1,8 @@
 ---
 title: CSS Lists and Counters
 slug: Web/CSS/CSS_Lists_and_Counters
-tags:
-  - CSS
-  - CSS Lists and Counters
-  - CSS Reference
-  - NeedsTranslation
-  - Overview
-  - TopicStub
-translation_of: Web/CSS/CSS_Lists_and_Counters
 ---
+
 {{CSSRef}}
 
 **CSS Lists and Counters** is a module of CSS that defines how lists are layed out, how the list marker can be styled and how authors can create new counters.

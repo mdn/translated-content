@@ -1,21 +1,9 @@
 ---
 title: Com será o seu site?
 slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
-tags:
-  - Aprender
-  - Ativos
-  - Composição
-  - Conteúdo
-  - Descontinuado
-  - Design
-  - Fontes
-  - Iniciante
-  - Passo a passo
-  - Simples
-  - l10:prioridade
-translation_of: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 original_slug: Aprender/Getting_started_with_the_web/com_que_seu_site_vai_parecer
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 _Como será o seu site?_ discute o trabalho de planejamento e design que você precisa fazer para o seu site antes de escrever o código, incluindo "Quais informações meu site oferece?", "Quais fontes e cores eu quero?" e ​​"O que meu site faz?"
@@ -54,7 +42,7 @@ Você deve ter seu título e parágrafos desde antes. Mantenha eles por perto.
 
 Para escolher a cor, vá ao [Seletor de Cores](/pt-BR/docs/Web/CSS/CSS_Colors/seletor_de_cores) e escolha a cor que preferir. Quando escolher a cor, você verá uma sequência de seis caracteres, como `#660066`. Isso é chamado um _código hex(adecimal)_, e representa sua cor. Copie esse código em algum lugar seguro por enquanto.
 
-![](https://mdn.mozillademos.org/files/8975/Screenshot%20from%202014-11-03%2017:40:49.png)
+![](screenshot_from_2014-11-03_17-40-49.png)
 
 ### Imagens
 
@@ -78,9 +66,9 @@ Para escolher uma fonte:
 3. Clique no botão "\* Família Selecionada" no painel na parte inferior da página ("\*" depende de quantas fontes você selecionou).
 4. Na caixa pop-up, você pode ver e copiar as linhas de código que o Google oferece em seu editor de texto para salvar posteriormente.
 
-![](https://mdn.mozillademos.org/files/13871/font1.png)
+![](font1.png)
 
-![](https://mdn.mozillademos.org/files/13873/font2.png)
+![](font2.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 

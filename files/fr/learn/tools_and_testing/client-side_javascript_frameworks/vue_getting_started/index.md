@@ -91,7 +91,7 @@ Or if you'd prefer to use yarn:
 yarn global add @vue/cli
 ```
 
-Once installed, to initialize a new project you can then open a terminal in the directory you want to create the project in, and run . The CLI will then give you a list of project configurations you can use. There are a few preset ones, and you can make your own. These options let you configure things like TypeScript, linting, vue-router, testing, and more.`vue create <project-name>`
+Once installed, to initialize a new project you can then open a terminal in the directory you want to create the project in, and run . The CLI will then give you a list of project configurations you can use. There are a few preset ones, and you can make your own. These options let you configure things like TypeScript, linting, vue-router, testing, and more. `vue create <project-name>`
 
 We’ll look at using this below.
 
@@ -116,7 +116,7 @@ To explore various features of Vue, we will be building up a sample todo list ap
 
     <kbd>Enter</kbd>
 
-6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's file. Select "In dedicated config files" and push .`package.json`
+6. Now, you will select how we want your config files to be managed. "In dedicated config files" will put your config settings for things like ESLint into their own, dedicated files. The other option, "In package.json", will put all of your config settings into the app's file. Select "In dedicated config files" and push `package.json`.
 
     <kbd>Enter</kbd>
 
@@ -139,7 +139,7 @@ If everything went successfully, the CLI should have created a series of files a
 - `.eslintrc.js`: This is a config file for [eslint](https://eslint.org/). You can use this to manage your linting rules.
 - `babel.config.js`: This is the config file for [Babel](https://babeljs.io/), which transforms modern JavaScript features being used in development code into older syntax that is more cross-browser compatible in production code. You can register additional babel plugins in this file.
 - `.browserslistrc`: This is a config for [Browserslist](https://github.com/browserslist/browserslist). You can use this to control which browsers your tooling optimizes for.
-- `public`: This directory contains static assets that are published, but not processed by [Webpack](https://webpack.js.org/) during build (with one exception; gets some processing).`index.html`
+- `public`: This directory contains static assets that are published, but not processed by [Webpack](https://webpack.js.org/) during build (with one exception; gets some processing) `index.html`.
 
   - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.
   - `index.html`: This is the template for your app. Your Vue app is run from this HTML page, and you can use lodash template syntax to interpolate values into it.

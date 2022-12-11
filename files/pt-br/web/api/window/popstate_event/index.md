@@ -1,8 +1,8 @@
 ---
 title: popstate
 slug: Web/API/Window/popstate_event
-translation_of: Web/API/Window/popstate_event
 ---
+
 O evento `popstate` é disparado quando a entrada do histórico ativa é alterado. Se o histórico de entrada a ser ativado for criado por uma chamada `history.pushState()` ou for afetada por uma chamada `history.replaceState()`, a propriedade dos eventos `popstate` contém uma cópia do histórico de entrada do objeto.
 
 Note que apenas chamando `history.pushState()` ou `history.replaceState()` não ira disparar um evento `popstate`. O evento `popstate` apenas é disparado após uma ação no navegador como um click no botão de voltar (ou chamando `history.back() por javascript`)

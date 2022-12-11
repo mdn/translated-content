@@ -8,7 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/summary
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML 공개 요약 요소** (**`<요약>`**) 요소는 ("상세") 요소의 공개 상자에 대한 요약, 캡션 또는 범례를 지정한다. `<요약>` 요소를 클릭하면 부모 `<상세>` 요소의 상태가 열리거나 닫힌다.
 

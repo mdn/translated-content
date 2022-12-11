@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/super
 original_slug: Web/JavaScript/Referencia/Operadores/super
 ---
+
 {{jsSidebar("Operators")}}
 
 La palabra clave **super** es usada para acceder y llamar funciones del padre de un objeto.
@@ -154,10 +155,7 @@ obj2.method2(); // logs "method 1"
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-super-keyword', 'super')}} | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-super-keyword', 'super')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

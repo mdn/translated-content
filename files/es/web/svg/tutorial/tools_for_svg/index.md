@@ -1,8 +1,8 @@
 ---
 title: Tools for SVG
 slug: Web/SVG/Tutorial/Tools_for_SVG
-translation_of: Web/SVG/Tutorial/Tools_for_SVG
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag") }}
 
 Ahora que hemos cubierto los aspectos básicos de los componentes internos de SVG, analizaremos algunas herramientas para trabajar con archivos SVG.

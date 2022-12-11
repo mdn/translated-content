@@ -13,6 +13,7 @@ tags:
   - 스타일
 translation_of: Web/CSS/revert
 ---
+
 {{CSSRef}}
 
 **`revert`** 는 현재 엘리먼트에 선언 된 캐스캐이딩된 속성으로부터 **{{Glossary("style origin")}}** 으로 되돌립니다. 부모 속성 또는 user agent에 따라 default로 선언 된 속성으로 되돌리는 것입니다. 이 속성은 css 단축속성{{cssxref("all")}}을 포함한 어떤 프로퍼티에도 적용할 수 있습니다.

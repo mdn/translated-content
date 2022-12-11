@@ -3,6 +3,7 @@ title: Animation.cancel()
 slug: Web/API/Animation/cancel
 translation_of: Web/API/Animation/cancel
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
 Метод **`cancel()`** API Web Animation интерфейса {{domxref("Animation")}} очищает все {{domxref("KeyframeEffect")}} вызванной этой анимацией и прекращает его воспроизведение.

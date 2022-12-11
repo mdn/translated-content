@@ -3,7 +3,7 @@ title: '<summary>: 概要明示要素'
 slug: Web/HTML/Element/summary
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<summary>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("details")}} 要素の折り畳みボックスの要約、キャプション、説明、凡例を表します。 `<summary>` 要素をクリックすると、親の `<details>` 要素の開閉状態を切り替えることができます。
 

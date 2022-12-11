@@ -96,10 +96,10 @@ Web Components 旨在解决这些问题 — 它由三项主要技术组成，它
 - CSS pseudo-elements
   - : slots 特别相关的伪元素：
     - {{cssxref("::slotted")}}：匹配任何已经插入一个 slot 的内容。
-- {{event("slotchange")}} event
+- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}} event
   - : 当插槽中的节点改变时在 {{domxref("HTMLSlotElement")}} 实例（[`<slot>`](/zh-CN/docs/Web/HTML/Element/slot) 元素）上触发。
 
-## 例子
+## 示例
 
 在 [web-components-examples](https://github.com/mdn/web-components-examples)，我们正在构建一些例子。以后会添加更多。
 

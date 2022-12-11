@@ -24,10 +24,7 @@ slug: Web/HTML/Global_attributes/translate
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                             | 備考                                                                         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#attr-translate", "translate")}}         | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。 |
-| {{SpecName('HTML5.1', "dom.html#the-translate-attribute", "translate")}} | {{Spec2('HTML5.1')}}     | {{SpecName('HTML WHATWG')}} のスナップショット、初回定義            |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

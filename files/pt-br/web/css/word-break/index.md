@@ -1,12 +1,8 @@
 ---
 title: word-break
 slug: Web/CSS/word-break
-tags:
-  - CSS
-  - Propriedade CSS
-  - Referencia
-translation_of: Web/CSS/word-break
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`word-break`** é usada para especificar se o navegador deve inserir ou não quebras de linha onde, normalmente, o texto vazaria de seu container.

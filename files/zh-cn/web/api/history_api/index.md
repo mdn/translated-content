@@ -96,7 +96,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 - **标题** — Firefox 目前忽略这个参数，但未来可能会用到。在此处传一个空字符串应该可以安全的防范未来这个方法的更改。或者，你可以为跳转的 state 传递一个短标题。
 - **URL** — 该参数定义了新的历史 URL 记录。注意，调用 `pushState()` 后浏览器并不会立即加载这个 URL，但可能会在稍后某些情况下加载这个 URL，比如在用户重新打开浏览器时。新 URL 不必须为绝对路径。如果新 URL 是相对路径，那么它将被作为相对于当前 URL 处理。新 URL 必须与当前 URL 同源，否则 `pushState()` 会抛出一个异常。该参数是可选的，缺省为当前 URL。
 
-> **备注：** 从 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，传递的对象是使用 JSON 进行序列化的。从 Gecko 6.0 {{ geckoRelease("6.0") }}开始，该对象的序列化将使用[结构化克隆算法](/zh-CN/DOM/The_structured_clone_algorithm)。这将会使更多对象可以被安全的传递。
+> **备注：** 从 Gecko 2.0 到 Gecko 5.0，传递的对象是使用 JSON 进行序列化的。从 Gecko 6.0 开始，该对象的序列化将使用[结构化克隆算法](/zh-CN/DOM/The_structured_clone_algorithm)。这将会使更多对象可以被安全的传递。
 
 在某种意义上，调用 `pushState()` 与 设置 `window.location = "#foo"` 类似，二者都会在当前页面创建并激活新的历史记录。但 `pushState()` 具有如下几条优点：
 
@@ -117,7 +117,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 `replaceState()` 的使用场景在于为了响应用户操作，你想要更新状态对象 state 或者当前历史记录的 URL。
 
-> **备注：** 从 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，传递的对象是使用 JSON 进行序列化的。从 Gecko 6.0 {{ geckoRelease("6.0") }} 开始，该对象的序列化将使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。这将会使更多对象可以被安全的传递。
+> **备注：** 从 Gecko 2.0 到 Gecko 5.0，传递的对象是使用 JSON 进行序列化的。从 Gecko 6.0 开始，该对象的序列化将使用[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)。这将会使更多对象可以被安全的传递。
 
 ### replaceState() 方法示例
 

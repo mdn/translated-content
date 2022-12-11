@@ -3,7 +3,7 @@ title: '<rtc>: ルビ文字列コンテナー要素'
 slug: Web/HTML/Element/rtc
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML のルビ文字列コンテナー (`<rtc>`) 要素**は、 {{HTMLElement("ruby")}} 要素内で使用する {{HTMLElement("rb")}} 要素にルビで与える文字列の、意味を表す注釈を包含します。{{HTMLElement("rb")}} 要素は発音の注釈 ({{HTMLElement("rt")}}) と意味の注釈 ({{HTMLElement("rtc")}}) の両方を持つことができます。
 

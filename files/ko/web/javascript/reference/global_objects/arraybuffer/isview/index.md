@@ -9,6 +9,7 @@ tags:
   - TypedArrays
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer.isView()`** 메서드는 주어진 값이 `ArrayBuffer` 뷰, 즉 [형식화 배열 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) 또는 {{jsxref("DataView")}}인지 판별합니다..

@@ -120,7 +120,7 @@ function list() {
 var list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
-Привязка может быть осуществлена посредством функции .`call()` из прототипа функции {{jsxref("Function.prototype")}}, также запись может быть сокращена до `[].slice.call(arguments)` вместо использования `Array.prototype.slice.call()`. В любом случае, она может быть упрощена посредством использования функции {{jsxref("Function.prototype.bind()", "bind()")}}.
+Привязка может быть осуществлена посредством функции `call()` из прототипа функции {{jsxref("Function.prototype")}}, также запись может быть сокращена до `[].slice.call(arguments)` вместо использования `Array.prototype.slice.call()`. В любом случае, она может быть упрощена посредством использования функции {{jsxref("Function.prototype.bind()", "bind()")}}.
 
 ```js
 var unboundSlice = Array.prototype.slice;

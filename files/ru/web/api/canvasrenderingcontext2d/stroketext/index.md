@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
 translation_of: Web/API/CanvasRenderingContext2D/strokeText
 ---
+
 {{APIRef}}
 
 Метод **`CanvasRenderingContext2D.strokeText()`**, предоставляемый Canvas 2D API, выполняет обводку заданного текста в заданной позиции (_x, y_). Если указан необязательный четвёртый параметр, текст будет масштабироваться в соответствие с указанной максимальной шириной.

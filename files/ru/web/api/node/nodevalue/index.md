@@ -3,6 +3,7 @@ title: Node.nodeValue
 slug: Web/API/Node/nodeValue
 translation_of: Web/API/Node/nodeValue
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.nodeValue`** возвращает или устанавливает значение текущего узла.

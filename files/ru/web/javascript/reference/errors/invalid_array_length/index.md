@@ -9,6 +9,7 @@ tags:
   - Размер массива
 translation_of: Web/JavaScript/Reference/Errors/Invalid_array_length
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
@@ -48,8 +49,6 @@ a.length = a.length - 1;         // установка длинны -1
 let b = new Array(Math.pow(2, 32) - 1);
 b.length = b.length + 1;         // установка длинны 2^32
 ```
-
-###
 
 ```js example-good
 [ Math.pow(2, 40) ]                     // [ 1099511627776 ]

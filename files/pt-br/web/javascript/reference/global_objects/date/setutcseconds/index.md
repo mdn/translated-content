@@ -1,17 +1,8 @@
 ---
 title: Date.prototype.setUTCSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds
 ---
+
 {{JSRef}}
 
 O método **`setUTCSeconds()`** atribui os segundos para a data especificada de acordo com o horário universal.

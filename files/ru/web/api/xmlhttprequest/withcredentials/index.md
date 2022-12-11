@@ -9,6 +9,7 @@ tags:
   - Справка
 translation_of: Web/API/XMLHttpRequest/withCredentials
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Свойство **XMLHttpRequest.withCredentials** это {{jsxref("Boolean")}} который определяет, должны ли создаваться кросс-доменные `Access-Control` запросы с использованием таких идентификационных данных как cookie, авторизационные заголовки или TLS сертификаты. Настройка `withCredentials` бесполезна при запросах на тот же домен.

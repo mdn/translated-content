@@ -3,7 +3,7 @@ title: <link>：外部资源链接元素
 slug: Web/HTML/Element/link
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML 外部资源链接元素** (**`<link>`**) 规定了当前文档与外部资源的关系。该元素最常用于链接[样式表](/zh-CN/docs/Glossary/CSS)，此外也可以被用来创建站点图标 (比如 PC 端的“favicon”图标和移动设备上用以显示在主屏幕的图标) 。
 
@@ -142,7 +142,7 @@ slug: Web/HTML/Element/link
 - {{htmlattrdef("rev")}}{{Deprecated_Inline}}
   - : 此属性的值显示了 {{HTMLAttrxRef("href", "link")}} 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[Link type value](/zh-CN/docs/Web/HTML/Link_types)类似于{{HTMLAttrxRef("rel", "link")}}的可能值。
 
-    > **备注：**  WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，您应该使用具有相反链接类型值的{{HTMLAttrxRef("rel", "link")}}属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
+    > **备注：** WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，您应该使用具有相反链接类型值的{{HTMLAttrxRef("rel", "link")}}属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
 
 ## 示例
 

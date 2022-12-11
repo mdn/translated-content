@@ -6,6 +6,7 @@ tags:
   - Псевдо-класс
 translation_of: Web/CSS/:lang
 ---
+
 {{CSSRef}}
 
 [Псевдо-класс](/ru/docs/Web/CSS/Pseudo-classes) [CSS](/ru/docs/Web/CSS) **`:lang()`** выбирает элементы основываясь на языке, на котором они определены.

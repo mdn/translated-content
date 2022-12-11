@@ -9,6 +9,7 @@ tags:
   - Справочник
 browser-compat: api.ValidityState.rangeOverflow
 ---
+
 Доступное только для чтения свойство **`rangeOverflow`** объекта **[`ValidityState`](/ru/docs/Web/API/ValidityState)** указывает, что после редактирования пользователем поля {{HTMLElement("input")}}, значение не соответствует ограничениям, установленным атрибутом [`max`](/en-US/docs/Web/HTML/Attributes/max).
 
 Если поле является числовым, включая типы {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}}, {{HTMLElement("input/range", "range")}} и заданно значение атрибута max, если содержимое поля не соответствует ограничению атрибута [`max`](/en-US/docs/Web/HTML/Attributes/step), свойство `rangeOverflow` будет true.

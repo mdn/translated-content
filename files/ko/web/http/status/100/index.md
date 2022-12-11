@@ -7,6 +7,7 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/100
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`100 Continue`** 정보 상태 응답 코드는 클라이언트가 서버로 보낸 요청에 문제가 없으니 다음 요청을 이어서 보내도 된다는 것을 의미합니다. 만약 클라이언트의 작업이 완료되었다면 이 응답은 무시해도 됩니다.

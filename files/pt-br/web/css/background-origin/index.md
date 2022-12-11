@@ -1,8 +1,8 @@
 ---
 title: background-origin
 slug: Web/CSS/background-origin
-translation_of: Web/CSS/background-origin
 ---
+
 {{CSSRef}}
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-origin`** define _a área de posicionamento do plano de fundo_, isto é, a ponto de origem de uma imagem específica usando a propriedade {{cssxref("background-image")}}.

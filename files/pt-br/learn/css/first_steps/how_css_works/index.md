@@ -1,13 +1,8 @@
 ---
 title: Como funciona o CSS
 slug: Learn/CSS/First_steps/How_CSS_works
-tags:
-  - CSS
-  - DOM
-  - Iniciante
-  - aprenda
-translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
@@ -56,7 +51,7 @@ Quando um navegador redenriza um documento, ele combina o documento com suas inf
 
 O diagrama a seguir também apresenta uma visão simples do processo.
 
-![](https://mdn.mozillademos.org/files/11781/rendering.svg)
+![Rendering process overview](rendering.svg)
 
 ## Sobre o DOM
 
@@ -136,9 +131,9 @@ Em nosso artigo [Debugging CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Debugging_
 
 A resposta é que ele não faz nada e vai para o próximo conteúdo em CSS!
 
-Se um browser está analisando suas regras, e econtra uma porpriedade ou valor que ele não entende, ele o ignora e segue para a próxima declaração. Ele vai fazer isto se você cometeu algum erro ou digitou incorretamente uma propriedade ou valor, ou se tal propriedade ou valor é recente e o browser ainda não o processa.
+Se um browser está analisando suas regras, e encontra uma propriedade ou valor que ele não entende, ele o ignora e segue para a próxima declaração. Ele vai fazer isto se você cometeu algum erro ou digitou incorretamente uma propriedade ou valor, ou se tal propriedade ou valor é recente e o browser ainda não o processa.
 
-Similarmente, se um browser encontra um seletor que não comprrende, ele o ignorará e seguirá para a próxima regra.
+Similarmente, se um browser encontra um seletor que não comprende, ele o ignorará e seguirá para a próxima regra.
 
 No exemplo abaixo usei a grafia em inglês britânico para a propriedade cor, o que a torna inválida e portanto ela não é reconhecida. Por isso, o parágrafo não recebe a coloração azul. Todos os outros CSS foram aplicados, no entanto, apenas aquele que foi considerado inválido foi ignorado.
 
@@ -156,7 +151,7 @@ p {
 
 {{EmbedLiveSample('Skipping_example', '100%', 200)}}
 
-Este comportamento é bastante útil. Ele significa qeu você pode usar o novo CSS como uma melhoria, sabendo que não ocorrerá um erro se ele não for completamente compreendido - o browser ou vai entender esta característica ou não. Em conjunto com a maneira que a cascata funciona, e o fato que browsers usarão o último CSS que eles encontrarem numa folha de estilos quando você possui duas regras com a mesma especificidade, Você pode oferecer alternativas para browsers que não processa CSS mais novos.
+Este comportamento é bastante útil. Ele significa que você pode usar o novo CSS como uma melhoria, sabendo que não ocorrerá um erro se ele não for completamente compreendido - o browser ou vai entender esta característica ou não. Em conjunto com a maneira que a cascata funciona, e o fato que browsers usarão o último CSS que eles encontrarem numa folha de estilos quando você possui duas regras com a mesma especificidade, você pode oferecer alternativas para browsers que não processam estilos CSS mais novos.
 
 Isto funciona particularmente bem quando você usa um valor que é relativamente recente e que não é processado em todo lugar. Por exemplo, alguns browsers antigos não processam `calc()` como um valor. Eu posso dar um recuo com uma largura em pixels para um box, e então seguir e dar uma largura com o valor de `100% - 50px` com `calc()`. Browsers antigos irão utilizar a versão em pixels, ignorando a linha que trata de `calc()`, já que eles não a compreendem. Browsers mais novos irão interpretar inicialmente a linha que utiliza pixels, para em seguida a sobrepor com a linha utilizando `calc()` conforme ela aparece na cascata.
 

@@ -3,7 +3,8 @@ title: Using Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
-{{ServiceWorkerSidebar}}
+
+{{DefaultAPISidebar("Service Workers API")}}
 
 {{ SeeCompatTable() }}
 
@@ -434,7 +435,7 @@ Firefox has also started to implement some useful tools related to service worke
 
 ## See also
 
-- [The Service Worker Cookbook](https://serviceworke.rs/)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - Download the [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
 - [Promises](/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)

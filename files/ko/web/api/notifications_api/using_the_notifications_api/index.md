@@ -4,6 +4,7 @@ slug: Web/API/Notifications_API/Using_the_Notifications_API
 translation_of: Web/API/Notifications_API/Using_the_Notifications_API
 original_slug: WebAPI/Using_Web_Notifications
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 웹 페이지나 앱에서 [알림(Notifications) API](/ko/docs/Web/API/Notifications_API)를 사용하면 페이지 외부에 표시되는 알림을 보낼 수 있습니다. 이것은 시스템 레벨에서 처리되는 것으로 애플리케이션이 유휴 상태거나 백그라운드에 있더라도 웹 앱이 사용자에게 정보를 보낼 수 있습니다. 이 글에서는 여러분의 앱에서 이 API를 사용하기 위한 기초를 알아봅니다.

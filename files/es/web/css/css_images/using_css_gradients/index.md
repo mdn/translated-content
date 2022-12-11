@@ -1,9 +1,9 @@
 ---
 title: Usando gradientes con CSS
 slug: Web/CSS/CSS_Images/Using_CSS_gradients
-translation_of: Web/CSS/CSS_Images/Using_CSS_gradients
 original_slug: CSS/Using_CSS_gradients
 ---
+
 [CSS3](/es/docs/CSS/CSS3) posee soporte para nuevos tipos de _gradientes_ en las propiedades CSS. Usarlos en un segundo plano, permite mostrar transiciones suaves entre dos o más colores especificados, evitando así el uso de imágenes para estos efectos, lo que reduce el tiempo de descarga y el uso de ancho de banda. Además, debido a que el gradiente es generado por el navegador, los objetos degradados se ven mejor cuando se hace un acercamiento, y el ajuste de diseño es mucho más flexible.
 
 Los navegadores soportan dos tipos de gradientes: _lineal_, definido con la función _linear-gradient_, y _radial_, definido con _radial-gradient_.

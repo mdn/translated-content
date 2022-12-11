@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/function
 original_slug: Web/JavaScript/Referencia/Operadores/function
 ---
+
 {{jsSidebar("Operators")}}
 
 ## Resumen

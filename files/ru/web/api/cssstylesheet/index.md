@@ -3,11 +3,12 @@ title: CSSStyleSheet
 slug: Web/API/CSSStyleSheet
 translation_of: Web/API/CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 **`CSSStyleSheet`** interface представляет одну [CSS](/ru/docs/Web/CSS) таблицу стилей. CSS таблица наследует свойства и методы от родителя, {{domxref("StyleSheet")}}.
 
-Таблица стилей состоит (правил)_{{domxref("CSSRule", "rules", "", 1)}}_, таких как _{{domxref("CSSStyleRule", "style rules", "", 1)}}\_\_ _("`h1,h2 { font-size: 16pt }"`),_и различных_ (`@import`, `@media`, ...), etc. **`CSSStyleSheet`** interface позволяет получать и изменять список правил в таблице стилей.
+Таблица стилей состоит (правил) _{{domxref("CSSRule", "rules", "", 1)}}_, таких как _{{domxref("CSSStyleRule", "style rules", "", 1)}}_ ("`h1,h2 { font-size: 16pt }"`), _и различных_ (`@import`, `@media`, ...), etc. **`CSSStyleSheet`** interface позволяет получать и изменять список правил в таблице стилей.
 
 Смотрите [Notes](#notes) секцию о различных способах получения **`CSSStyleSheet`** object.
 

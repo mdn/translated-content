@@ -3,18 +3,57 @@ title: <col>
 slug: Web/HTML/Element/col
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<col>` 元素** 定义表格中的列，并用于定义所有公共单元格上的公共语义。它通常位于{{HTMLElement("colgroup")}}元素内。
 
 此元素允许使用 CSS 进行样式列，但只有少数属性将对该列产生影响（请参阅列表的[CSS 2.1 规范](https://www.w3.org/TR/CSS21/tables.html#columns)）。
 
-- _[Content categories](/zh-CN/docs/HTML/Content_categories)_ None.
-- _Permitted content_ None, it is an {{Glossary("empty element")}}.
-- _Tag omission_ The start tag is mandatory, but, as it is a void element, the use of an end tag is forbidden.
-- _Permitted parent elements_ {{HTMLElement("colgroup")}} only, though it can be implicitly defined as its start tag is not mandatory. The {{HTMLElement("colgroup")}} must not have a {{htmlattrxref("span", "colgroup")}} attribute.
-- \_Permitted ARIA roles_None
-- _DOM interface_ {{domxref("HTMLTableColElement")}}
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>None.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>None; it is a {{Glossary("void element")}}.</td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>It must have start tag, but must not have an end tag.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>
+        {{HTMLElement("colgroup")}} only, though it can be implicitly
+        defined as its start tag is not mandatory. The
+        {{HTMLElement("colgroup")}} must not have a
+        {{htmlattrxref("span", "colgroup")}} attribute.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLTableColElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 属性
 
@@ -90,4 +129,4 @@ slug: Web/HTML/Element/col
   - the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;
   - the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

@@ -1,8 +1,8 @@
 ---
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
+
 {{jsSidebar("Objects")}}
 
 O método **`encodeURIComponent()`** codifica uma URI (Identificador recurso uniforme) substituindo cada ocorrência de determinados caracteres por um, dois, três, ou quatro seqüências de escape que representam a codificação UTF-8 do caractere (só será quatro seqüências de escape para caracteres compostos por dois caracteres "substituto").

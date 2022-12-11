@@ -3,6 +3,7 @@ title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
 translation_of: Web/API/Navigator/registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}
 
 Позволяет веб-сайтам зарегистрировать себя как возможный обработчик для конкретных протоколов.

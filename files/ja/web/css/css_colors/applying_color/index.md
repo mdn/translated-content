@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Colors/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 この記事は、HTML での CSS の色を使用するそれぞれの方法を紹介する入門編です。
 

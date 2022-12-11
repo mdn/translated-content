@@ -11,6 +11,7 @@ tags:
 browser-compat: javascript.functions.get
 translation_of: Web/JavaScript/Reference/Functions/get
 ---
+
 {{jsSidebar("Functions")}}
 
 **`get`** 구문은 객체의 속성 접근 시 호출할 함수를 바인딩합니다.

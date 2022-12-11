@@ -11,6 +11,7 @@ tags:
   - метод
 translation_of: Web/API/Worker/postMessage
 ---
+
 {{APIRef("Web Workers API")}}
 
 Метод **`postMessage()`** интерфейса {{domxref("Worker")}} отправляет сообщение во внутреннее пространство `worker`-а. Метод имеет один параметр с данными для отправки в `worker`. Данные могут быть любым значением или объектом JavaScript, которые может обработать [алгоритм структурированного клонирования](/ru/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), поддерживающий циклические ссылки.

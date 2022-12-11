@@ -78,5 +78,5 @@ window.onmessage = (event) => {
 
 ## Voir aussi
 
-- Événements liés: [`messageerror`](/docs/Web/API/Window/messageerror_event).
+- Événements liés: [`messageerror`](/fr/docs/Web/API/Window/messageerror_event).
 - [`Window.postMessage()`](/fr/docs/Web/API/Window/postMessage).

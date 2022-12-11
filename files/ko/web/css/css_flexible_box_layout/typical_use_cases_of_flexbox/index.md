@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/가변상자의_대표적인_사용례
 ---
+
 {{CSSRef}}
 
 이번 안내서에서는 흔히 볼 수 있는 가변상자 사용 사례 중 일부를 살펴 보겠습니다. 가변상자의 사용이 다른 레이아웃 메서드보다 더 적합한 사례입니다.

@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/label
 original_slug: Web/JavaScript/Referencia/Sentencias/label
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Resumen

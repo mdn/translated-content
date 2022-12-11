@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
 original_slug: Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion
 ---
+
 {{jsSidebar("Errores")}}
 
 ## Mensaje

@@ -26,12 +26,7 @@ _継承するメソッドはありません。_
 
 ## 仕様
 
-| 仕様書                                                                                                   | 策定状況                         | コメント                                                                                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('DOM WHATWG', '#domimplementation', 'DOMImplementation')}}             | {{Spec2('DOM WHATWG')}} | `getFeature()` メソッドを削除。 `createHTMLDocument()` メソッドを追加。 `createDocument()` の返り値の型を {{domxref("Document")}} から {{domxref("XMLDocument")}} に変更。 |
-| {{SpecName('DOM3 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM3 Core')}}     | `getFeature()` メソッド追加 (ユーザーエージェントで実装されることはありません)。                                                                                                              |
-| {{SpecName('DOM2 Core', 'core.html#ID-102161490', 'DOMImplementation')}}         | {{Spec2('DOM2 Core')}}     | `createDocument()` および `createDocumentType()` メソッドが追加。                                                                                                                             |
-| {{SpecName('DOM1', 'level-one-core.html#ID-102161490', 'DOMImplementation')}} | {{Spec2('DOM1')}}         | 初期定義。                                                                                                                                                                                    |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

@@ -1,13 +1,8 @@
 ---
 title: '::-webkit-meter-inner-element'
 slug: Web/CSS/::-webkit-meter-inner-element
-tags:
-  - CSS
-  - No estándar(2)
-  - Pseudo-elemento
-  - Referencia
-translation_of: Web/CSS/::-webkit-meter-inner-element
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

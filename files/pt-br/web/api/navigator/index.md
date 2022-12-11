@@ -1,8 +1,8 @@
 ---
 title: Navigator
 slug: Web/API/Navigator
-translation_of: Web/API/Navigator
 ---
+
 {{ apiref() }}
 
 The **`Navigator`** interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.
@@ -96,7 +96,7 @@ _Doesn't inherit any method, but implements those defined in {{domxref("Navigato
   - : Allows web sites to register themselves as a possible handler for a given protocol.
 - {{domxref("NavigatorID.taintEnabled()")}} {{deprecated_inline("1.7.8")}} {{obsolete_inline("9.0")}} {{experimental_inline}}
   - : Returns `false`. JavaScript taint/untaint functions removed in JavaScript 1.2.
-- {{domxref("Navigator.vibrate()")}} {{gecko_minversion_inline("11.0")}}
+- {{domxref("Navigator.vibrate()")}}
   - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
 
 ### Non standard

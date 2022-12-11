@@ -1,12 +1,10 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/input/email
-browser-compat: html.elements.input.input-email
-translation_of: Web/HTML/Element/input/email
 original_slug: Web/HTML/Elemento/input/email
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Los elementos {{HTMLElement("input")}} de tipo **`email`** se utilizan para permitir que el usuario ingrese y edite una dirección de correo electrónico o, si se especifica el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), una lista de direcciones de correo.
 
@@ -81,7 +79,7 @@ Además de los atributos que operan en todos los elementos {{HTMLElement("input"
 
 ### list
 
-El valor del atributo lista es el {{domxref("Element.id", "id")}} del elemento {{HTMLElement("datalist")}} ubicado en el mismo documento. {{HTMLElement("datalist")}} aporta una lista de valores predefinidos sugeridos al usuario para la entrada. Cualquier valor de la lista que no sea compatible con  {{htmlattrxref("type", "input")}} no son incluidos en las opciones sugeridas. Los valores proporcionados son sugerencias, no valores requeridos: los usuarios pueden seleccionar elementos de la lista o proporcionar uno diferente.
+El valor del atributo lista es el {{domxref("Element.id", "id")}} del elemento {{HTMLElement("datalist")}} ubicado en el mismo documento. {{HTMLElement("datalist")}} aporta una lista de valores predefinidos sugeridos al usuario para la entrada. Cualquier valor de la lista que no sea compatible con {{htmlattrxref("type", "input")}} no son incluidos en las opciones sugeridas. Los valores proporcionados son sugerencias, no valores requeridos: los usuarios pueden seleccionar elementos de la lista o proporcionar uno diferente.
 
 ### maxlength
 

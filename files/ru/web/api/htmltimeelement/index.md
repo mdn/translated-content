@@ -3,6 +3,7 @@ title: HTMLTimeElement
 slug: Web/API/HTMLTimeElement
 translation_of: Web/API/HTMLTimeElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLTimeElement`** даёт специальные свойства (beyond the regular {{domxref("HTMLElement")}} interface it also has available to it by inheritance) для управления {{HTMLElement("time")}} элементами.

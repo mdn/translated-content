@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Typed_arrays
 original_slug: Web/JavaScript/Vectores_tipados
 ---
+
 {{JsSidebar("Advanced")}}
 
 **Los arreglos tipados en JavaScript** son objetos similares a arreglos que proporcionan un mecanismo para leer y escribir datos binarios sin procesar en búferes de memoria. Como ya sabrás, los objetos {{jsxref("Array", "Arreglo")}} crecen y se encogen dinámicamente y pueden tener cualquier valor de JavaScript. Los motores de JavaScript realizan optimizaciones para que estos arreglos sean rápidos.
@@ -20,7 +21,7 @@ Sin embargo, los arreglos tipados _no_ se deben confundir con los arreglos norma
 
 Para lograr la máxima flexibilidad y eficiencia, los arreglos de JavaScript dividen la implementación en _búferes_ y _vistas_. Un búfer (implementado por el objeto {{jsxref("ArrayBuffer")}} es un objeto que representa una porción de datos; no tiene ningún formato del que hablar y no ofrece ningún mecanismo para acceder a su contenido. Para acceder a la memoria contenida en un búfer, necesitas usar una vista. Una vista proporciona un contexto — es decir, un tipo de dato, un desplazamiento inicial y el número de elementos — que convierte los datos en un arreglo tipado.
 
-![Arreglos tipados en ArrayBuffer](https://mdn.mozillademos.org/files/8629/typed_arrays.png)
+![Arreglos tipados en ArrayBuffer](typed_arrays.png)
 
 ### `ArrayBuffer`
 
@@ -148,7 +149,7 @@ let amountDueView = new Float32Array(buffer, 20, 1);
 
 Luego puedes acceder, por ejemplo, al monto adeudado con `amountDueView[0]`.
 
-> **Nota:** La {{interwiki("wikipedia", "Data_structure_alignment")}} en una estructura C depende de la plataforma. Toma precauciones y consideraciones para estas diferencias de relleno.
+> **Nota:** La [Data_structure_alignment](https://es.wikipedia.org/wiki/Data_structure_alignment) en una estructura C depende de la plataforma. Toma precauciones y consideraciones para estas diferencias de relleno.
 
 ### Conversión a arreglos normales
 
@@ -163,9 +164,7 @@ normalArray.constructor === Array;
 
 ## Especificaciones
 
-| Especificación                                                                                   |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-typedarray-objects', 'TypedArray Objects')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

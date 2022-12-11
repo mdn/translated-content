@@ -1,13 +1,9 @@
 ---
 title: button
 slug: Web/HTML/Element/button
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/button
 original_slug: Web/HTML/Elemento/button
 ---
+
 ## Definición
 
 **button** = botón.

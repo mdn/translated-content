@@ -10,6 +10,7 @@ tags:
   - 홈 화면에 추가
 translation_of: Web/Progressive_web_apps/Add_to_home_screen
 ---
+
 Add to Home screen (or A2HS for short) is a feature available in modern smartphone browsers that allows developers to easily and conveniently add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. This guide explains how A2HS is used, and what you need to do as a developer to allow your users to take advantage of it.
 
 ## Why A2HS?
@@ -30,11 +31,11 @@ If you have Firefox for Android available, use it to navigate to our demo at `ht
 
 Tapping this will show a confirmation banner — pressing the big + _ADD TO HOME SCREEN_ button completes the action, adding the app to the Home screen. (Note: In Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.)
 
-![](https://mdn.mozillademos.org/files/15772/fx-a2hs-banner.png)
+![](fx-a2hs-banner.png)
 
 If you have Mobile Chrome available, the experience is slightly different; upon loading our site, you'll see an install banner pop up asking whether you want to add this app to your Home screen.
 
-![](https://mdn.mozillademos.org/files/15771/chrome-a2hs-banner.png)
+![](chrome-a2hs-banner.png)
 
 > **참고:** You can find out a lot more about Chrome install banners from the article [Web App Install Banners](https://developers.google.com/web/fundamentals/app-install-banners/).
 
@@ -192,7 +193,7 @@ The click handler contains the following steps:
 
 So when the button is clicked, the install prompt appears.
 
-![](https://mdn.mozillademos.org/files/16281/chrome-desktop-a2hs-banner.png)
+![](chrome-desktop-a2hs-banner.png)
 
 If the user selects _Install_, the app is installed (available as standalone desktop app), and the Install button no longer shows (the `onbeforeinstallprompt` event no longer fires if the app is already installed). When you open the app, it will appear in its own window:
 

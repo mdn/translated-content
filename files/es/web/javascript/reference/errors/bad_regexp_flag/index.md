@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 original_slug: Web/JavaScript/Reference/Errors/Indicador_regexp_no-val
 ---
+
 {{jsSidebar("Errors", "Errores")}}
 
 La excepción de JavaScript "indicador de expresión regular no válido" se produce cuando las indicadores, definidas después de la segunda barra en la expresión regular literal, no son de `g`, `i`, `m`, `s`, `u` o `y`.

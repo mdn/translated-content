@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/height
 ---
+
 {{CSSRef}}
 
 **`height`** CSS 속성은 요소의 높이를 지정합니다. 기본값은 콘텐츠 영역의 높이지만, {{cssxref("box-sizing")}}이 `border-box`라면 테두리 영역의 높이를 설정합니다.

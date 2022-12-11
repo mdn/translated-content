@@ -1,9 +1,11 @@
 ---
 title: <input type="image">
 slug: Web/HTML/Element/input/image
+l10n:
+  sourceCommit: 7594b50698a76ce79209b159835e615052915723
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`image`** 型は、テキストではなく画像の形をとる送信ボタン、すなわちテキストではなく画像の形をとる送信ボタンを作成するために使用されます。
 
@@ -22,15 +24,15 @@ slug: Web/HTML/Element/input/image
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        {{htmlattrxref("alt", "input")}},
-        {{htmlattrxref("src", "input")}},
-        {{htmlattrxref("width", "input")}},
-        {{htmlattrxref("height", "input")}},
-        {{htmlattrxref("formaction", "input")}},
-        {{htmlattrxref("formenctype", "input")}},
-        {{htmlattrxref("formmethod", "input")}},
-        {{htmlattrxref("formnovalidate", "input")}},
-        {{htmlattrxref("formtarget", "input")}}
+        <a href="/ja/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#src"><code>src</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#width"><code>width</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#height"><code>height</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
+        <a href="/ja/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
       </td>
     </tr>
     <tr>
@@ -79,7 +81,7 @@ slug: Web/HTML/Element/input/image
 - `application/x-www-form-urlencoded`
   - : これは既定値で、フォームのデータを {{jsxref("encodeURI", "encodeURI()")}} などのアルゴリズムを使って URL エンコーディングした後で送信します。
 - `multipart/form-data`
-  - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の {{htmlattrxref("type", "input")}} が `file` のもの ([`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
+  - : データを管理するために {{domxref("FormData")}} API を使用し、複数のファイルをサーバーに送信することができます。フォームに {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) が `file` のもの ([`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)) が含まれている場合は、このエンコーディング型を*使わなければなりません*。
 - `text/plain`
   - : プレーンテキストです。ほとんどデバッグでしか役に立ちませんが、送信されたデータを簡単に見ることができます。
 
@@ -152,15 +154,20 @@ slug: Web/HTML/Element/input/image
 必要な機能をすべて含んだ基本的な例を見てみましょう（これらは `<img>` 要素とまったく同じように動作します）。
 
 ```html
-<input id="image" type="image" width="100" height="30" alt="Login"
-       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png">
+<input
+  id="image"
+  type="image"
+  width="100"
+  height="30"
+  alt="Login"
+  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" />
 ```
 
 {{ EmbedLiveSample('Essential_image_input_features', 600, 50) }}
 
-- {{htmlattrxref("src", "input")}} 属性は、ボタンに表示したい画像のパスを指定するために使用されます。
-- {{htmlattrxref("alt", "input")}} 属性は画像の alt テキストを提供し、画面リーダーの利用者がボタンが何に使われるかをより良く理解することができるようにします。また、何らかの理由で画像を表示できない場合にも表示されます（例えば、パスのスペルが間違っている場合など）。可能であれば、標準的な送信ボタンを使用する場合に使用するラベルと一致するテキストを使用してください。
-- {{htmlattrxref("width", "input")}} と {{htmlattrxref("height", "input")}} 属性は、画像を表示する幅と高さをピクセル単位で指定するために使用されます。ボタンは画像と同じ大きさです。ボタンのヒット領域を画像より大きくしたい場合は、 CSS を使う必要があります（例： {{cssxref("padding")}}）。また、片方の寸法だけを指定した場合、もう片方は自動的に調整され、画像は元のアスペクト比を維持します。
+- [`src`](/ja/docs/Web/HTML/Element/input#src) 属性は、ボタンに表示したい画像のパスを指定するために使用されます。
+- [`alt`](/ja/docs/Web/HTML/Element/input#alt) 属性は画像の alt テキストを提供し、画面リーダーの利用者がボタンが何に使われるかをより良く理解することができるようにします。また、何らかの理由で画像を表示できない場合にも表示されます（例えば、パスのスペルが間違っている場合など）。可能であれば、標準的な送信ボタンを使用する場合に使用するラベルと一致するテキストを使用してください。
+- [`width`](/ja/docs/Web/HTML/Element/input#width) および [`height`](/ja/docs/Web/HTML/Element/input#height) 属性は、画像を表示する幅と高さをピクセル単位で指定するために使用されます。ボタンは画像と同じ大きさです。ボタンのヒット領域を画像より大きくしたい場合は、 CSS を使う必要があります（例： {{cssxref("padding")}}）。また、片方の寸法だけを指定した場合、もう片方は自動的に調整され、画像は元のアスペクト比を維持します。
 
 ### 既定のフォームの動作の上書き
 
@@ -201,7 +208,7 @@ slug: Web/HTML/Element/input/image
 
 `<input type="image">` で作成したボタンを使ってフォームを送信すると、ブラウザーが自動的に `x` と `y` という 2 つの追加データをサーバーに送信します。 [X Y 座標の例](https://mdn.github.io/learning-area/html/forms/image-type-example/xy-coordinates-example.html)で、その様子を見ることができます。
 
-画像をクリックしてフォームを送信すると、 `?x=52&y=55` のようなデータが引数として URL に付加されるのがわかります。画像入力に {{htmlattrxref("name", "input")}} 属性がある場合、指定した名前はすべての属性の先頭に付くことに注意してください。したがって、`name` が `position` である場合、返される座標は URL で `?position.x=52&position.y=55` という書式となります。もちろん、これは他のすべての属性にも当てはまります。
+画像をクリックしてフォームを送信すると、 `?x=52&y=55` のようなデータが引数として URL に付加されるのがわかります。画像入力に [`name`](/ja/docs/Web/HTML/Element/input#name) 属性がある場合、指定した名前はすべての属性の先頭に付くことに注意してください。したがって、`name` が `position` である場合、返される座標は URL で `?position.x=52&position.y=55` という書式となります。もちろん、これは他のすべての属性にも当てはまります。
 
 これらは、マウスでクリックしてフォームを送信した画像の X と Y の座標で、 (0,0) が画像の左上となります。これらは、画像の中でクリックされた位置が重要である場合、例えば、地図がクリックされると、クリックされた座標がサーバーに送信されるような場合に利用することができます。サーバー側のコードは、クリックされた場所を特定し、その近くの場所についての情報を返します。
 
@@ -217,8 +224,6 @@ slug: Web/HTML/Element/input/image
 
 次の例は、前と同じボタンを、典型的なログインフォームのコンテキストに含めて表示したものです。
 
-#### 実行例
-
 {{ EmbedLiveSample('A_login_form', 600, 170) }}
 
 #### HTML
@@ -228,14 +233,19 @@ slug: Web/HTML/Element/input/image
   <p>アカウントにログインしてください</p>
   <div>
     <label for="userId">User ID</label>
-    <input type="text" id="userId" name="userId">
+    <input type="text" id="userId" name="userId" />
   </div>
   <div>
     <label for="pwd">Password</label>
-    <input type="password" id="pwd" name="pwd">
+    <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
-    <input id="image" type="image" src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" alt="Login" width="100">
+    <input
+      id="image"
+      type="image"
+      src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+      alt="Login"
+      width="100" />
   </div>
 </form>
 ```
@@ -272,16 +282,20 @@ label {
   <p>アカウントにログインしてください</p>
   <div>
     <label for="userId">User ID</label>
-    <input type="text" id="userId" name="userId">
+    <input type="text" id="userId" name="userId" />
   </div>
   <div>
     <label for="pwd">Password</label>
-    <input type="password" id="pwd" name="pwd">
+    <input type="password" id="pwd" name="pwd" />
   </div>
   <div>
-    <input id="image" type="image"
+    <input
+      id="image"
+      type="image"
       src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
-      alt="Login" width="200" height="100">
+      alt="Login"
+      width="200"
+      height="100" />
   </div>
 </form>
 ```

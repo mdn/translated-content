@@ -8,6 +8,7 @@ tags:
   - 플래그
 translation_of: Web/JavaScript/Reference/Errors/Bad_regexp_flag
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지

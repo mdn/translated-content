@@ -314,7 +314,7 @@ Mozilla also define some non-standard methods:
 
 Microsoft defines some non-standard properties:
 
-- {{domxref("document.fileSize")}}\* {{Non-standard_Inline}} {{deprecated_inline}}
+- {{domxref("document.fileSize")}} {{Non-standard_Inline}} {{deprecated_inline}}
 
   - : Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See [MSDN](http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx).
 

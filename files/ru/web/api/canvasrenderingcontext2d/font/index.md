@@ -7,6 +7,7 @@ tags:
   - Property
 translation_of: Web/API/CanvasRenderingContext2D/font
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.font`** – свойство Canvas 2D API, определяющее текущие стили рисуемого текста. Это строка, которая использует синтаксис [CSS font](/ru/docs/Web/CSS/font).

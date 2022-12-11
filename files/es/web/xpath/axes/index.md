@@ -1,13 +1,9 @@
 ---
 title: Ejes
 slug: Web/XPath/Axes
-tags:
-  - Todas_las_Categorías
-  - XPath
-  - XSLT
-translation_of: Web/XPath/Axes
 original_slug: Web/XPath/Ejes
 ---
+
 {{XsltRef}}Existen trece ejes diferentes en la especificación [XPath](/es/XPath). Un eje representa una relación con el nodo de contexto, y se utiliza para localizar nodos relativos a ese nodo en el arbol. Lo siguiente es una descripción resumida de los trece ejes disponibles y el grado de soporte disponible en [Gecko](/es/Gecko).
 
 Para mas información sobre el uso de las expresiones XPath, por favor vea la sección [Para Futuras Lecturas](/es/Transformando_XML_con_XSLT/Para_Futuras_Lecturas) al final del documento de [Transformando XML con XSLT](/es/Transformando_XML_con_XSLT).

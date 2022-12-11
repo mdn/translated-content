@@ -1,13 +1,9 @@
 ---
 title: Tomando decisões no seu código — condicionais
 slug: Learn/JavaScript/Building_blocks/conditionals
-tags:
-  - Artigo
-  - Condicionais
-  - Iniciante
-translation_of: Learn/JavaScript/Building_blocks/conditionals
 original_slug: Aprender/JavaScript/Elementos_construtivos/conditionals
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Building_blocks/Looping_code", "Learn/JavaScript/Building_blocks")}}
 
 Em qualquer linguagem de programação, o código precisa tomar decisões e realizar ações de acordo, dependendo de diferentes entradas. Por exemplo, em um jogo, se o número de vidas do jogador é 0, então o jogo acaba. Em um aplicativo de clima, se estiver sendo observado pela manhã, ele mostra um gráfico do nascer do sol; Mostra estrelas e uma lua se for noite. Neste artigo, exploraremos como as chamadas declarações condicionais funcionam em JavaScript.

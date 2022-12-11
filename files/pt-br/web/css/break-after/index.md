@@ -1,8 +1,8 @@
 ---
 title: break-after
 slug: Web/CSS/break-after
-translation_of: Web/CSS/break-after
 ---
+
 {{CSSRef}}
 
 A propriedade **`break-after`** do [CSS](/pt-BR/docs/Web/CSS) configura como uma quebra de página, coluna ou região deve se comportar após renderizar um elemento. Se nenhum elemento foi renderizado, a propriedade é ignorada.
@@ -121,10 +121,4 @@ For compatibility reasons, the legacy {{cssxref("page-break-after")}} property s
 
 ## Browser compatibility
 
-### Support in multi-column layout
-
-{{Compat("css.properties.break-after.multicol_context")}}
-
-### Support in paged media
-
-{{Compat("css.properties.break-after.paged_context")}}
+{{Compat}}

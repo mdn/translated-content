@@ -11,6 +11,7 @@ tags:
   - getDevices()
 translation_of: Web/API/USB/getDevices
 ---
+
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 Метод** `getDevices` **интерфейса {{DOMxRef("USB")}} возвращает {{JSxRef("Promise")}}, который разрешается с массивом {{DOMxRef("USBDevice")}} объектов сопряжённых подключённых устройств. Для информации о сопряжённых устройствах, смотрите {{DOMxRef("USB.requestDevice()")}}.

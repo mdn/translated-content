@@ -37,7 +37,7 @@ new ArrayBuffer(length)
 ## Свойства
 
 - `ArrayBuffer.length`
-  - : Длина конструктора` ArrayBuffer`, которая равна 1.
+  - : Длина конструктора `ArrayBuffer`, которая равна 1.
 - {{jsxref("ArrayBuffer.prototype")}}
   - : Позволяет расширить прототип всех `ArrayBuffer` объектов.
 

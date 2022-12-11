@@ -1,9 +1,11 @@
 ---
 title: <input type="password">
 slug: Web/HTML/Element/input/password
+l10n:
+  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 `<input>` 要素の **`password`** 型は、パスワードを安全に入力する方法を提供します。
 この要素はプレーンテキストの 1 行編集コントロールとして表示され、そのテキストは読み取られることがないように、1 つ 1 つの文字がアスタリスク ("\*") やドット ("•") のような記号に置き換えられ、隠されます。
@@ -11,11 +13,11 @@ slug: Web/HTML/Element/input/password
 
 {{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
 
-詳細な入力プロセスの動作は、ブラウザーによって異なっている場合があります。
-例えば、モバイル端末ではしばしば、ユーザーが思ったとおりのキーを押したかどうかを確かめることができるように、入力した文字を、隠す前に一瞬だけ表示します。
-これは特に、キーのサイズが小さく、押し間違いが起こりやすい、仮想キーボードの場合に役立ちます。
+入力時の正確な動作は、ブラウザーによって異なる場合があります。
+ブラウザーによっては、入力された文字を一瞬だけ表示して見えなくするものや、ユーザーがプレーンテキストの表示のオン・オフを切り替えられるものがあります。
+どちらの手法も、ユーザーが意図したとおりのパスワードが入力されたかどうかを調べるのに役立ちますが、モバイル端末では特に難しい場合があります。
 
-> **メモ:** パスワードのような機密情報が含まれているフォーム (ログインフォームなど) は、 HTTPS で送信するべきです。
+> **メモ:** パスワードのような機密情報が含まれているフォーム（ログインフォームなど）は、 HTTPS で送信するべきです。
 > 現在では多くのブラウザーで、安全ではないログインフォームの場合に警告を行う仕組みが実装されています。詳細は[安全でないパスワード](/ja/docs/Web/Security/Insecure_passwords)を参照してください。
 
 <table class="properties">
@@ -23,7 +25,7 @@ slug: Web/HTML/Element/input/password
     <tr>
       <td><strong><a href="#値">値</a></strong></td>
       <td>
-        パスワードを表す {{domxref("DOMString")}}、または空欄
+        パスワードを表す文字列、または空欄
       </td>
     </tr>
     <tr>
@@ -55,6 +57,10 @@ slug: Web/HTML/Element/input/password
       </td>
     </tr>
     <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>メソッド</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -67,7 +73,7 @@ slug: Web/HTML/Element/input/password
 
 ## 値
 
-{{htmlattrxref("value", "input")}} 属性は、パスワードを入力するために使われているテキスト編集コントロールの、現在の内容である {{domxref("DOMString")}} を格納します。ユーザーが何も入力していない場合、この値は空文字列 (`""`) です。{{htmlattrxref("required")}} プロパティが指定されている場合、パスワード編集ボックスが妥当となるためには、空文字列以外の値を含まなければなりません。
+{{htmlattrxref("value", "input")}} 属性は、パスワードを入力するために使われているテキスト編集コントロールの、現在の内容である文字列を格納します。ユーザーが何も入力していない場合、この値は空文字列 (`""`) です。{{htmlattrxref("required")}} プロパティが指定されている場合、パスワード編集ボックスが妥当となるためには、空文字列以外の値を含まなければなりません。
 
 {{htmlattrxref("pattern", "input")}} 属性が指定されている場合、`password` コントロールの内容は、その値が検証をパスした場合のみ、妥当とみなされます。詳細は[検証](#検証)を参照してください。
 
@@ -129,7 +135,7 @@ slug: Web/HTML/Element/input/password
 
 ```html
 <label for="userPassword">パスワード: </label>
-<input id="userPassword" type="password">
+<input id="userPassword" type="password" />
 ```
 
 {{EmbedLiveSample("A_simple_password_input", 600, 40)}}
@@ -149,7 +155,7 @@ slug: Web/HTML/Element/input/password
 
 ```html
 <label for="userPassword">パスワード:</label>
-<input id="userPassword" type="password" autocomplete="current-password">
+<input id="userPassword" type="password" autocomplete="current-password" />
 ```
 
 {{EmbedLiveSample("Allowing_autocomplete", 600, 40)}}
@@ -160,8 +166,8 @@ slug: Web/HTML/Element/input/password
 
 ```html
 <label for="userPassword">パスワード: </label>
-<input id="userPassword" type="password" required>
-<input type="submit" value="Submit">
+<input id="userPassword" type="password" required />
+<input type="submit" value="Submit" />
 ```
 
 {{EmbedLiveSample("Making_the_password_mandatory", 600, 40)}}
@@ -172,7 +178,7 @@ slug: Web/HTML/Element/input/password
 
 ```html
 <label for="pin">PIN: </label>
-<input id="pin" type="password" inputmode="numeric">
+<input id="pin" type="password" inputmode="numeric" />
 ```
 
 {{EmbedLiveSample("Specifying_an_input_mode", 600, 40)}}
@@ -183,8 +189,13 @@ slug: Web/HTML/Element/input/password
 
 ```html
 <label for="pin">PIN:</label>
-<input id="pin" type="password" inputmode="numeric" minlength="4"
-       maxlength="8" size="8">
+<input
+  id="pin"
+  type="password"
+  inputmode="numeric"
+  minlength="4"
+  maxlength="8"
+  size="8" />
 ```
 
 {{EmbedLiveSample("Setting_length_requirements", 600, 40)}}
@@ -197,14 +208,14 @@ slug: Web/HTML/Element/input/password
 
 ```html
 <label for="userPassword">パスワード: </label>
-<input id="userPassword" type="password" size="12">
+<input id="userPassword" type="password" size="12" />
 <button id="selectAll">Select All</button>
 ```
 
 #### JavaScript
 
 ```js
-document.getElementById("selectAll").onclick = function() {
+document.getElementById("selectAll").onclick = () => {
   document.getElementById("userPassword").select();
 }
 ```
@@ -223,9 +234,12 @@ document.getElementById("selectAll").onclick = function() {
 
 ```html
 <label for="hexId">Hex ID: </label>
-<input id="hexId" type="password" pattern="[0-9a-fA-F]{4,8}"
-       title="4-8 桁の 16 進数で ID を入力してください"
-       autocomplete="new-password">
+<input
+  id="hexId"
+  type="password"
+  pattern="[0-9a-fA-F]{4,8}"
+  title="4-8 桁の 16 進数で ID を入力してください"
+  autocomplete="new-password" />
 ```
 
 {{EmbedLiveSample("Validation", 600, 40)}}
@@ -240,27 +254,33 @@ document.getElementById("selectAll").onclick = function() {
 
 ```html
 <label for="ssn">SSN:</label>
-<input type="password" id="ssn" inputmode="numeric" minlength="9" maxlength="12"
-    pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
-    required autocomplete="off">
-<br>
+<input
+  type="password"
+  id="ssn"
+  inputmode="numeric"
+  minlength="9"
+  maxlength="12"
+  pattern="(?!000)([0-6]\d{2}|7([0-6]\d|7[012]))([ -])?(?!00)\d\d\3(?!0000)\d{4}"
+  required
+  autocomplete="off" />
+<br />
 <label for="ssn">Value:</label>
 <span id="current"></span>
 ```
 
 ここでは {{htmlattrxref("pattern", "input")}} を使って、入力される値を、正当な社会保障番号を示す文字列に制限しています。明らかに、この正規表現は、妥当な SSN であることを保証していません（社会保障局のデータベースにアクセスしているわけではないので）が、その番号が SSN になり得るものであることは保証しています。一般に、値が妥当になり得ないことを避けています。加えて、3 つの数字のグループがスペース、ダッシュ ("-") で区切る、あるいは区切らないことを許容しています。
 
-{{htmlattrxref("inputmode", "input")}} が  `numeric` にセットされ、より入力しやすくするために、仮想キーボードを持つ端末が数字キーパッドレイアウトに切り替えることを支援しています。{{htmlattrxref("minlength", "input")}} と {{htmlattrxref("maxlength", "input")}} がそれぞれ 9 と 12 にセットされ、値が 9 〜 12 文字 (前者はグループ間の区切り文字無し、後者は有り) であることを要件としています。 {{htmlattrxref("required", "input")}} 属性は、このコントロールが値を持っていなければならないことを示すために使われています。最後に、 {{htmlattrxref("autocomplete", "input")}} が `"off"` にセットされており、これはまったくパスワードではないので、パスワードマネージャーが値をセットしようとすることを回避しています。
+{{htmlattrxref("inputmode", "input")}} が `numeric` にセットされ、より入力しやすくするために、仮想キーボードを持つ端末が数字キーパッドレイアウトに切り替えることを支援しています。{{htmlattrxref("minlength", "input")}} と {{htmlattrxref("maxlength", "input")}} がそれぞれ 9 と 12 にセットされ、値が 9 〜 12 文字 (前者はグループ間の区切り文字無し、後者は有り) であることを要件としています。 {{htmlattrxref("required", "input")}} 属性は、このコントロールが値を持っていなければならないことを示すために使われています。最後に、 {{htmlattrxref("autocomplete", "input")}} が `"off"` にセットされており、これはまったくパスワードではないので、パスワードマネージャーが値をセットしようとすることを回避しています。
 
 #### JavaScript
 
 これは実にシンプルなコードで、入力された SSN を見られるように、画面に表示するためのものです。これは明らかに、パスワード欄の目的を損ねるものですが、`pattern` を試すには役立ちます。
 
 ```js
-var ssn = document.getElementById("ssn");
-var current = document.getElementById("current");
+const ssn = document.getElementById("ssn");
+const current = document.getElementById("current");
 
-ssn.oninput = function(event) {
+ssn.oninput = (event) => {
   current.textContent = ssn.value;
 }
 ```

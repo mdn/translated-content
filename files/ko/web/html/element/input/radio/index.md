@@ -15,7 +15,7 @@ tags:
   - 라디오 버튼
 translation_of: Web/HTML/Element/input/radio
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`radio`** 유형의 {{htmlelement("input")}} 요소는 보통 서로 관련된 옵션을 나타내는 라디오 버튼 콜렉션, **라디오 그룹**에 사용합니다. 임의의 그룹 내에서는 동시에 하나의 라디오 버튼만 선택할 수 있습니다. 라디오 버튼은 흔히 원형으로 그려지며, 선택한 경우 속을 채우거나 강조 표시를 합니다.
 
@@ -326,7 +326,7 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.input.input-radio")}}
+{{Compat}}
 
 ## 같이 보기
 

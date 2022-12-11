@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/putImageData
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.putImageData()`** метод Canvas 2D API рисует данные из заданного {{domxref("ImageData")}} объекта на холст. На этот метод не влияет матрица преобразования холста.

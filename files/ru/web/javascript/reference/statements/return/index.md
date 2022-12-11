@@ -6,9 +6,10 @@ tags:
   - Оператор
 translation_of: Web/JavaScript/Reference/Statements/return
 ---
+
 {{jsSidebar("Statements")}}
 
-Оператор **`return` **завершает выполнение текущей функции и возвращает её значение.
+Оператор **`return`** завершает выполнение текущей функции и возвращает её значение.
 
 {{EmbedInteractiveExample("pages/js/statement-return.html")}}
 
@@ -128,5 +129,5 @@ answer(1337); // 56154
 
 ## Смотрите также
 
-- [Функции](/ru/docs/Web/JavaScript/Reference/Functions "En/Core_JavaScript_1.5_Reference/Functions")
+- [Функции](/ru/docs/Web/JavaScript/Reference/Functions)
 - [Замыкания](/ru/docs/Web/JavaScript/Closures)

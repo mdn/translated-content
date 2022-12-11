@@ -3,9 +3,10 @@ title: 'CSP: img-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/img-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/img-src
 ---
+
 {{HTTPSidebar}}
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}}`:` **`img`\*\***`-src`\*\* 지시어는 이미지 및 파비콘에 대하여 유효한 출처를 지정합니다.
+The HTTP {{HTTPHeader("Content-Security-Policy")}}`:` **`img-src`** 지시어는 이미지 및 파비콘에 대하여 유효한 출처를 지정합니다.
 
 <table class="properties">
   <tbody>
@@ -64,7 +65,7 @@ Content-Security-Policy: img-src https://example.com/
 
 ## Browser compatibility
 
-{{Compat("http.headers.csp.img-src")}}
+{{Compat}}
 
 ## See also
 

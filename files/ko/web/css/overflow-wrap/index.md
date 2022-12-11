@@ -10,7 +10,7 @@ translation_of: Web/CSS/overflow-wrap
 ---
 {{CSSRef}}
 
-**`overflow`\*\***`-wrap`\*\* CSS 요소는 어떤 문자가 내용 칸 밖으로 넘치지 않게 브라우저가 단어 마디 안에 줄을 바꿔야 할 것인지 아닌지를 정할 때 사용됩니다.
+**`overflow-wrap`** CSS 요소는 어떤 문자가 내용 칸 밖으로 넘치지 않게 브라우저가 단어 마디 안에 줄을 바꿔야 할 것인지 아닌지를 정할 때 사용됩니다.
 
 > **참고:** {{cssxref("word-break")}}와는 달리, `overflow-wrap`은 모든 단어가 넘치지 않으면 자신의 줄 안에 놓여 있을 수 없을 때 줄 바꿈을 한 번만 할 것입니다.
 

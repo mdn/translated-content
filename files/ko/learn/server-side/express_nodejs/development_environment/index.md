@@ -3,6 +3,7 @@ title: Node 개발 환경을 설치하기
 slug: Learn/Server-side/Express_Nodejs/development_environment
 original_slug: Learn/Server-side/Express_Nodejs/개발_환경
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 이제 Express에 관한 내용을 알았으니, Windows, Linux (Ubuntu), 그리고 macOS 에서의 Node/Express 개발 환경을 설정하고 테스트하는 법을 보여드리겠습니다. 사용중인 운영 체제가 무엇이든 간에, 이 글은 당신에게 Express 앱 개발을 시작할 수 있도록 필요한 내용을 제공합니다.
@@ -29,7 +30,7 @@ Node와 Express를 통해 웹앱 개발을 한결 수월하게 할 수 있습니
 
 ### Express 개발 환경이란 무엇입니까?
 
-Express개발환경은 Nodejs의 설치, NPM 패키지 매니저, 그리고 (선택적) 로컬 컴퓨터의 *Express Application Generator*를\_ \_포함합니다.
+Express개발환경은 Nodejs의 설치, NPM 패키지 매니저, 그리고 (선택적) 로컬 컴퓨터의 *Express Application Generator*를 포함합니다.
 
 _Node_ and the _NPM_ package manager are installed together from prepared binary packages, installers, operating system package managers or from source (as shown in the following sections). _Express_ is then installed by NPM as a dependency of your individual _Express_ web applications (along with other libraries like template engines, database drivers, authentication middleware, middleware to serve static files, etc.)
 

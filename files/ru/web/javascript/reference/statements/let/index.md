@@ -3,6 +3,7 @@ title: let
 slug: Web/JavaScript/Reference/Statements/let
 translation_of: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}Директива **`let`** объявляет переменную с блочной областью видимости с возможностью инициализировать её значением.
 
 ## Синтаксис
@@ -20,7 +21,7 @@ let var1 [= value1] [, var2 [= value2]] [, ..., varN [= valueN]];
 
 ## Описание
 
-Директива **`let`** позволяет объявить локальную переменную с областью видимости, ограниченной текущим блоком кода . В отличие от ключевого слова [`var`](/ru/docs/JavaScript/Reference/Statements/var "JavaScript/Reference/Statements/var"), которое объявляет переменную глобально или локально во всей функции, независимо от области блока.
+Директива **`let`** позволяет объявить локальную переменную с областью видимости, ограниченной текущим блоком кода . В отличие от ключевого слова [`var`](/ru/docs/JavaScript/Reference/Statements/var), которое объявляет переменную глобально или локально во всей функции, независимо от области блока.
 
 Объяснение, почему было выбрано название "**let**" можно найти [здесь](https://stackoverflow.com/questions/37916940/why-was-the-name-let-chosen-for-block-scoped-variable-declarations-in-javascri).
 
@@ -47,8 +48,6 @@ function letTest() {
   console.log(x);  // 1
 }
 ```
-
-###
 
 ### Чище код во вложенных функциях
 
@@ -142,7 +141,7 @@ if (x) {
 }
 ```
 
-В стандарте ECMAScript 2015 переменные, объявленные директивой let, переносятся в начало блока. Но если вы сошлётесь в блоке на переменную, до того как она объявлена директивой let, то это приведёт к выбросу исключения [`ReferenceError`](/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError "TypeError"), потому что переменная находится во "временной мёртвой зоне" с начала блока и до места её объявления. (В отличии от переменной, объявленной через `var`, которая просто будет содержать значение `undefined`)
+В стандарте ECMAScript 2015 переменные, объявленные директивой let, переносятся в начало блока. Но если вы сошлётесь в блоке на переменную, до того как она объявлена директивой let, то это приведёт к выбросу исключения [`ReferenceError`](/en-US/docs/JavaScript/Reference/Global_Objects/ReferenceError), потому что переменная находится во "временной мёртвой зоне" с начала блока и до места её объявления. (В отличии от переменной, объявленной через `var`, которая просто будет содержать значение `undefined`)
 
 ```js
 function do_something() {
@@ -153,7 +152,7 @@ function do_something() {
 }
 ```
 
-Вы можете столкнуться с ошибкой в операторах блока [`switch`](/en-US/docs/JavaScript/Reference/Statements/switch "switch"), так как он имеет только один подблок.
+Вы можете столкнуться с ошибкой в операторах блока [`switch`](/en-US/docs/JavaScript/Reference/Statements/switch), так как он имеет только один подблок.
 
 ```js
 switch (x) {

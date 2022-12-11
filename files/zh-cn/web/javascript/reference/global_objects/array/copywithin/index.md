@@ -40,7 +40,7 @@ copyWithin 方法不要求其 this 值必须是一个数组对象；除此之外
 
 `copyWithin` 是一个可变方法，它不会改变 this 的长度 length，但是会改变 this 本身的内容，且需要时会创建新的属性。
 
-## 例子
+## 示例
 
 ```plain
 [1, 2, 3, 4, 5].copyWithin(-2)

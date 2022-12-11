@@ -1,12 +1,12 @@
 ---
 title: Using files from web applications
 slug: Web/API/File_API/Using_files_from_web_applications
-translation_of: Web/API/File/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
+
 Usando a File API adicionada ao DOM em HTML5, agora é possível para conteúdo web solicitar ao usuário para selecionar arquivos locais, e então ler o conteúdo desses arquivos. Essa seleção pode ser feita usando um elemento HTML {{HTMLElement("input") }} ou por arrastar e soltar.
 
-Se você quiser usar a DOM File API através de extensões ou outro código chrome, você pode; Na verdade, há algumas funcionalidades adicionais para se estar ciente. Veja [Usando a DOM File API em código chrome](/en/Extensions/Using_the_DOM_File_API_in_chrome_code) para detalhes.
+Se você quiser usar a DOM File API através de extensões ou outro código chrome, você pode; Na verdade, há algumas funcionalidades adicionais para se estar ciente. Veja [Usando a DOM File API em código chrome](/pt-BR/Extensions/Using_the_DOM_File_API_in_chrome_code) para detalhes.
 
 ## Selecionando arquivos usando HTML
 
@@ -432,6 +432,6 @@ if (isset($_FILES['myFile'])) {
 - {{ domxref("File") }}
 - {{ domxref("FileList") }}
 - {{ domxref("FileReader") }}
-- [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using the DOM File API in chrome code](/en/Extensions/Using_the_DOM_File_API_in_chrome_code)
+- [Using XMLHttpRequest](/pt-BR/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using the DOM File API in chrome code](/pt-BR/Extensions/Using_the_DOM_File_API_in_chrome_code)
 - {{ domxref("XMLHttpRequest") }}

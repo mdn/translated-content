@@ -1,13 +1,8 @@
 ---
 title: flex-flow
 slug: Web/CSS/flex-flow
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/flex-flow
 ---
+
 {{ CSSRef}}
 
 ## Resumen
@@ -62,9 +57,7 @@ element {
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                               | Comentario         |
-| ------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{ SpecName('CSS3 Flexbox','#flex-flow','flex-flow') }} | {{ Spec2('CSS3 Flexbox') }} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegador
 

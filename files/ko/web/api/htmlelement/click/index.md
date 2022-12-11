@@ -9,6 +9,7 @@ tags:
   - 메소드
 translation_of: Web/API/HTMLElement/click
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLElement.click()`** 메소는 엘리먼트에 마우스 클릭을 시뮬레이션합니다.

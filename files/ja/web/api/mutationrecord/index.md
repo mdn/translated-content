@@ -123,9 +123,7 @@ slug: Web/API/MutationRecord
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('DOM WHATWG', '#mutationrecord', 'MutationRecord')}} | {{ Spec2('DOM WHATWG') }} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

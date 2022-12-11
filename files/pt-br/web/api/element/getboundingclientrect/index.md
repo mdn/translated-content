@@ -1,13 +1,8 @@
 ---
 title: Element.getBoundingClientRect()
 slug: Web/API/Element/getBoundingClientRect
-tags:
-  - API
-  - CSSOM View
-  - Método(2)
-  - Referência(2)
-translation_of: Web/API/Element/getBoundingClientRect
 ---
+
 {{APIRef("DOM")}}
 
 O método `Element.getBoundingClientRect() retorna o tamanho de um elemento e sua posição relativa ao viewport.`

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/CanvasRenderingContext2D/bezierCurveTo
 ---
+
 {{APIRef}}
 
 ## Сводка

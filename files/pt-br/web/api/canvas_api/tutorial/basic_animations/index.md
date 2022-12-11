@@ -1,9 +1,9 @@
 ---
 title: Basic animations
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
 ---
+
 Já que estamos usando JavaScript para controlar {{HTMLElement("canvas")}} elementos, também é muito fácil criar animações interativas. Fazer animações mais complexas pode levar um tempo extra; esperamos introduzir um novo artigo para auxiliar sobre isso em breve.
 
 Provavelmente a maior limitação é que uma vez que uma forma é desenhada, ela permanece assim. Se precisarmos mover, temos que redesenhar-lá e tudo que foi desenhado antes. Demora muito tempo pra redesenhar frames complexos e a desempenho depende altamente da velocidade do computador em que está rodando.
@@ -116,7 +116,7 @@ function draw() {
 init();
 ```
 
-{{EmbedLiveSample("An_animated_solar_system", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}
+{{EmbedLiveSample("An_animated_solar_system", "310", "310", "canvas_animation1.png")}}
 
 #### Um relógio animado
 
@@ -232,7 +232,7 @@ function clock(){
 init();
 ```
 
-{{EmbedLiveSample("An_animated_clock", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}
+{{EmbedLiveSample("An_animated_clock", "180", "180", "canvas_animation2.png")}}
 
 #### Um panorama em loop
 
@@ -244,7 +244,7 @@ var img = new Image();
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
 
-img.src = 'https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg';
+img.src = 'capitan_meadows,_yosemite_national_park.jpg';
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; //lower is faster

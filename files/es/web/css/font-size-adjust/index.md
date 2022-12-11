@@ -1,13 +1,8 @@
 ---
 title: font-size-adjust
 slug: Web/CSS/font-size-adjust
-tags:
-  - CSS
-  - CSS:Referencias
-  - Referencia_CSS
-  - Todas_las_Categorías
-translation_of: Web/CSS/font-size-adjust
 ---
+
 {{ CSSRef() }}
 
 ## Resumen

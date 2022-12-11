@@ -51,7 +51,7 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
  var dest = ac.createMediaStreamDestination();
 
  // ChannelMergerNode を使っているので、ステレオの MediaStream が
- // できました。これでウェブ音声グラフを WebRTC や MediaRecorder などに
+ // できました。これでウェブオーディオグラフを WebRTC や MediaRecorder などに
  // パイプするのに使えます。
  merger.connect(dest);
 });
@@ -67,4 +67,4 @@ ac.decodeAudioData(someStereoBuffer, function(data) {
 
 ## 関連情報
 
-- [ウェブ音声 API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

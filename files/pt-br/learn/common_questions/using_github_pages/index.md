@@ -1,8 +1,8 @@
 ---
 title: How do I use GitHub Pages?
 slug: Learn/Common_questions/Using_Github_pages
-translation_of: Learn/Common_questions/Using_Github_pages
 ---
+
 [GitHub](https://github.com/) is a "social coding" site. It allows you to upload code repositories for
 storage in thecelio [Git](http://git-scm.com/) **version control system.** You can then collaborate on code projects, and the system is open-source by default, meaning that anyone in the world can find your GitHub code, use it, learn from it, and improve on it. You can do that with other people's code too! This article provides a basic guide to publishing content using Github's gh-pages feature.
 
@@ -22,7 +22,7 @@ You can store any code you like in a Github repository, but to use the GitHub Pa
 
 The other thing you need to do before moving on is to initialise your code directory as a Git repository. To do this:
 
-1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "\_c_hange \_d_irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
+1. Point the command line to your `test-site` directory (or whatever you called the directory containing your website). For this, use the `cd` command (i.e. "**c**hange **d**irectory"). Here's what you'd type if you've put your website in a directory called `test-site` on your desktop:
 
    ```bash
    cd Desktop/test-site
@@ -81,7 +81,7 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
     ```
 
 4. Now you need to create a gh-pages branch of your repo; refresh the current page and you'll see a repository page something like the one below. You need to press the button that says _Branch: **master**_, type _gh-pages_ in the text input, then press the blue button that says _Create branch: gh-pages_. This creates a special code branch called gh-pages that is published at a special location. It's URL takes the form _username.github.io/my-repository-name_, so in my example's case, the URL would be `https://chrisdavidmills.github.io/my-repository`. The page shown is the index.html page.
-    ![](https://mdn.mozillademos.org/files/12145/repo-site.png)
+    ![](repo-site.png)
 5. Navigate to your GitHub Pages' web address in a new browser tab, and you should see your site online! Email it to your friends and show off your mastery.
 
 > **Nota:** If you get stuck, the [GitHub Pages homepage](https://pages.github.com/) is also really helpful.

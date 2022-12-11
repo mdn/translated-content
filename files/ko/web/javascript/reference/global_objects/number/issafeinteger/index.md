@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isSafeInteger
 ---
+
 {{JSRef}}
 
 **`Number.isSafeInteger()`** 메서드는 전달된 값이 안전한 정숫값인지 확인합니다.

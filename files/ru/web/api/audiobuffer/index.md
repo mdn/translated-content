@@ -3,6 +3,7 @@ title: AudioBuffer
 slug: Web/API/AudioBuffer
 translation_of: Web/API/AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 ## Сводка

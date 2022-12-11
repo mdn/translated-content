@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Indexed_collections
 original_slug: Web/JavaScript/Guide/colecciones_indexadas
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 Este capítulo presenta colecciones de datos ordenados por un valor de índice. Esto incluye arreglos y construcciones similares a arreglos tal como objetos {{jsxref("Array")}} y objetos {{jsxref("TypedArray")}}.
@@ -523,7 +524,7 @@ Array.prototype.forEach.call('a string', function(chr) {
 
 Para lograr la máxima flexibilidad y eficiencia, los arreglos de JavaScript dividen la implementación en **búferes** y **vistas**. Un búfer (implementado por el objeto {{jsxref("ArrayBuffer")}} es un objeto que representa una porción de datos; no tiene un formato del que hablar y no ofrece ningún mecanismo para acceder a su contenido. Para acceder a la memoria contenida en un búfer, necesitas usar una vista. Una vista proporciona un **contexto** , es decir, un tipo de datos, un desplazamiento inicial y un número de elementos, que convierte los datos en un arreglo con tipo real.
 
-![Arreglos tipados en un <code>ArrayBuffer</code>](https://mdn.mozillademos.org/files/8629/typed_arrays.png)
+![Arreglos tipados en un <code>ArrayBuffer</code>](typed_arrays.png)
 
 ### `ArrayBuffer`
 

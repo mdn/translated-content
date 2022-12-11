@@ -11,6 +11,7 @@ tags:
   - карты кода
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение
@@ -56,8 +57,6 @@ Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecat
 ```js example-good
 X-SourceMap: /path/to/file.js.map
 ```
-
-##
 
 ## Смотрите также
 

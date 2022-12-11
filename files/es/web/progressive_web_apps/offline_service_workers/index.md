@@ -1,21 +1,13 @@
 ---
 title: Hacer que las PWAs trabajen desconectadas con servicio workers
 slug: Web/Progressive_web_apps/Offline_Service_workers
-tags:
-  - Desconectada
-  - PWAs
-  - Servicio workers
-  - aplicaciones web progresivas
-  - js13kGames
-  - progresiva
-translation_of: Web/Progressive_web_apps/Offline_Service_workers
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps")}}
 
 Ahora que hemos visto cómo se ve la estructura de js13kPWA y hemos visto el intérprete básico en funcionamiento, veamos cómo se implementan las capacidades sin conexión con el Servicio _Worker_. En este artículo, analizamos cómo se usa en nuestro [ejemplo de js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) ([ve el código fuente también](<https: //github.com/mdn/pwa-examples/tree/master/js13kpwa>)). Examinamos cómo agregar funcionalidad fuera de línea.
 
-## El servicio _workers_ explicado
+## El servicio workers explicado
 
 El servicio _workers_ son un delegado virtual entre el navegador y la red. Finalmente, solucionan problemas con los que los desarrolladores de aplicaciones para el usuario han luchado durante años, en particular, cómo almacenar correctamente en caché los activos de un sitio web y ponerlos a disposición cuando el dispositivo del usuario está desconectado.
 
@@ -35,11 +27,11 @@ El patrón "desconectado primero" o "primero caché" es la estrategia más popul
 
 Cuando se implementa correctamente como una mejora progresiva, el servicio _workers_ puede beneficiar a los usuarios que tienen navegadores modernos que admiten la API al brindar soporte fuera de línea, pero no romperán nada para aquellos que usan navegadores heredados.
 
-## El servicio _workers_ en la aplicación `js13kPWA`
+## El servicio workers en la aplicación `js13kPWA`
 
 Suficiente teoría, ¡veamos algo de código real!
 
-### Registrar el servicio _worker_
+### Registrar el servicio worker
 
 Comenzaremos mirando el código que registra un nuevo Servicio _Worker_, en el archivo `app.js`:
 
@@ -53,7 +45,7 @@ if ("serviceWorker" in navigator) {
 
 Si la API del servicio _worker_ es compatible con el navegador, se registra en el sitio mediante el método {{DOMxRef("ServiceWorkerContainer.register()")}}. Su contenido reside en el archivo `sw.js` y se puede ejecutar después de que el registro sea exitoso. Es la única parte del código de servicio _worker_ que se encuentra dentro del archivo `app.js`; todo lo demás que sea específico de servicio _worker_ se escribe en el archivo `sw.js`.
 
-### Ciclo de vida de un servicio _worker_
+### Ciclo de vida de un servicio worker
 
 Cuando se completa el registro, el archivo `sw.js` se descarga automáticamente, luego se instala y finalmente se activa.
 

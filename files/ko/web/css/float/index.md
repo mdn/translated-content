@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/float
 ---
+
 {{CSSRef}}
 
 CSS 속성(property) **`float`** 은 한 요소(element)가 보통 흐름(normal flow)으로부터 빠져 텍스트 및 인라인(inline) 요소가 그 주위를 감싸는 자기 컨테이너의 좌우측을 따라 배치되어야 함을 지정합니다.

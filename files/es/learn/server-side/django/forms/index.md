@@ -1,11 +1,11 @@
 ---
 title: 'Tutorial de Django Parte 9: Trabajo con formularios'
 slug: Learn/Server-side/Django/Forms
-translation_of: Learn/Server-side/Django/Forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).
+En este tutorial te mostraremos cómo trabajar con Formularios HTML en Django, y en particular, la forma más fácil de escribir formularios para crear, actualizar y borrar instancias de modelo. Como parte de esta demostración extenderemos el sitio web [LocalLibrary](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) de manera que los bibliotecarios puedan renovar libros, y crear, actualizar y borrar autores utilizando nuestros propios formularios (en vez de utilizar la aplicación de administración).
 
 <table>
   <tbody>
@@ -37,7 +37,7 @@ Un [Formulario HTML](/es/docs/Web/Guide/HTML/Forms) es un conjunto de uno o más
 
 Si bien nosotros aún no hemos creado ningún formulario en este tutorial todavia, ya lo hemos encontrado en el sitio de administración de Django; por ejemplo, la captura de pantalla de abajo muestra un formulario para editar uno de nuestros modelos de [Libro](/es/docs/Learn/Server-side/Django/Models), compuesto de un número de listas de selección y editores de texto.
 
-![Admin Site - Book Add](https://mdn.mozillademos.org/files/13979/admin_book_add.png)
+![Admin Site - Book Add](admin_book_add.png)
 
 Trabajar con formularios puede ser complicado! Los desarrolladores deben de escribir código HTML para el formulario, validar y adecuadamente limpiar los datos ingresados en el servidor (y posiblemente también en el browser o navegador), volver a publicar el formulario con mensajes de error para informar a los usuarios de cualquier campo invalido, manejar los datos cuando hayan sido enviados exitosamente y finalmente, responder al usuario de alguna manera, para indicar el éxito de la operación. Django Forms elimina mucho del trabajo de todos estos pasos, al proporcionar un marco de trabajo que le permite definir formularios y sus campos a travéz de programación y luego, utilizar estos objetos para generar el código HTML del formulario y manejar gran parte de la validación y la interacción del usuario.
 
@@ -47,7 +47,7 @@ En este tutorial vamos a mostrarle algunas de las formas de crear y trabajar con
 
 Primero, una breve revisión de [Formularios HTML](/es/docs/Learn/HTML/Forms). Considere un simple formulario HTML, con un solo campo de texto para entrar el nombre de algun "equipo" y su etiqueta asociada:
 
-![Simple name field example in HTML form](https://mdn.mozillademos.org/files/14117/form_example_name_field.png)
+![Simple name field example in HTML form](form_example_name_field.png)
 
 El formulario es definido en HTML como una colección de elementos dentro de las etiquetas `<form>...</form>`, conteniendo por lo menos un elemento de entrada - `input` de tipo enviar - `type="submit"`.
 
@@ -79,7 +79,7 @@ El manejo de formularios de Django utiliza las mismas técnicas que aprendimos e
 
 A continuación se muestra un diagram de flujo del proceso de cómo Django maneja las solicitudes de formulario, comenzando con una solicitud de una página que contiene un formulario (mostrado en verde).
 
-![Updated form handling process doc.](https://mdn.mozillademos.org/files/14205/Form%20Handling%20-%20Standard.png)
+![Updated form handling process doc.](form_handling_-_standard.png)
 
 Basado en el diagrama de anterior, las principales pasos que hace el proceso del manejo de formularios de Django son:
 
@@ -119,7 +119,7 @@ La clase Form es el corazón del sistema de manejo de formularios de Django. Esp
 
 La sintaxis de declaración para un formulario es muy similar a la de declarar un modelo, y comparte los mismos tipos de campo (y algunos parámetros similares). Esto tiene sentido porque en ambos casos debemos asegurarnos de que cada campo maneja los tipos correctos de datos, está restringido a datos válidos y tiene una descripción para la visualización / documentación.
 
-Para crear un formulario (`Form`) es necesario importar la libreria f`orms`, derivada de la clase `Form`, y tambien declarar los campos del formulario. A continuación se muestra una clase de formulario muy básica para nuestro formulario de renovación de libros de la biblioteca:
+Para crear un formulario (`Form`) es necesario importar la libreria `forms`, derivada de la clase `Form`, y tambien declarar los campos del formulario. A continuación se muestra una clase de formulario muy básica para nuestro formulario de renovación de libros de la biblioteca:
 
 ```python
 from django import forms
@@ -364,9 +364,9 @@ Crea la plantilla html referenciada en la vista dentro del directorio (**/catalo
 {% endblock %}
 ```
 
-La mayor parte de esto será completamente familiar de los tutoriales anteriores. Extendemos la plantilla base y luego redefinimos el bloque de contenido. Podemos hacer referencia`\{{bookinst}}` (y sus variables) porque se pasó al objeto de contexto en la funci'on `render()`,y los usamos para colocar el título del libro, el prestatario y la fecha de vencimiento original.
+La mayor parte de esto será completamente familiar de los tutoriales anteriores. Extendemos la plantilla base y luego redefinimos el bloque de contenido. Podemos hacer referencia `\{{bookinst}}` (y sus variables) porque se pasó al objeto de contexto en la funci'on `render()`,y los usamos para colocar el título del libro, el prestatario y la fecha de vencimiento original.
 
-El código del formulario es relativamente simple. Primero declaramos las etiquetas del `form`,especificando dónde se debe enviar el formulario (`action`) y el `metodo` para enviar los datos (en este caso, una "POST HTTP"), si recuerda el [HTML Forms](#HTML_forms) resumen en la parte superior de la página, un espacio vacío `action`como se muestra, significa que los datos del formulario se volverán a publicar en la URL actual de la página (¡que es lo que queremos!). Dentro de las etiquetas definimos la enntrada (input) `submit`, que un usuario puede presionar para enviar los datos. Esto `{% csrf_token %}` es agregado justo dentro de las etiquetas de formulario es parte de la protección de falsificación entre sitios de Django.
+El código del formulario es relativamente simple. Primero declaramos las etiquetas del `form`,especificando dónde se debe enviar el formulario (`action`) y el `metodo` para enviar los datos (en este caso, una "POST HTTP"), si recuerda el [HTML Forms](#HTML_forms) resumen en la parte superior de la página, un espacio vacío `action` como se muestra, significa que los datos del formulario se volverán a publicar en la URL actual de la página (¡que es lo que queremos!). Dentro de las etiquetas definimos la enntrada (input) `submit`, que un usuario puede presionar para enviar los datos. Esto `{% csrf_token %}` es agregado justo dentro de las etiquetas de formulario es parte de la protección de falsificación entre sitios de Django.
 
 > **Nota:** Agregue el {% csrf_token%} a cada plantilla de Django que cree que use POST para enviar datos. Esto reducirá la posibilidad de que usuarios malintencionados secuestran formularios.
 
@@ -431,15 +431,15 @@ Alternativamente, puede construir manualmente una URL de prueba como esta — `h
 
 Si tiene éxito, el formulario predeterminado se verá así:
 
-![](https://mdn.mozillademos.org/files/14209/forms_example_renew_default.png)
+![](forms_example_renew_default.png)
 
 El formulario con un valor no válido ingresado se verá así:
 
-![](https://mdn.mozillademos.org/files/14211/forms_example_renew_invalid.png)
+![](forms_example_renew_invalid.png)
 
 La lista de todos los libros con enlaces renovados se verá así:
 
-![](https://mdn.mozillademos.org/files/14207/forms_example_renew_allbooks.png)
+![](forms_example_renew_allbooks.png)
 
 ## ModelForms
 
@@ -447,7 +447,7 @@ Crear una clase `Form` utilizando el enfoque descrito anteriormente es muy flexi
 
 Sin embargo, si solo necesita un formulario para asignar los campos de un solo modelo, entonces su modelo ya definirá la mayor parte de la información que necesita en su formulario: campos, etiquetas, texto de ayuda, etc. En lugar de recrear las definiciones de modelo en su formulario , es más fácil usar una clase auxiliar [ModelForm](https://docs.djangoproject.com/en/1.10/topics/forms/modelforms/) para crear el formulario a partir de su modelo. El `ModelForm` puede usarse dentro de sus vistas exactamente de la misma manera que un ordinario `Form`.
 
-Un `ModelForm` que contiene el mismo campo que nuestro original `RenewBookForm`se muestra a continuación. Todo lo que necesita hacer para crear el formulario es agregar `class Meta` with the associated `model` (`BookInstance`) y una lista de los campos del modelo `fields`para incluir en el formulario (puede incluir todos los campos usando `fields = '__all__'`, o puedes usar `exclude` (en vez de `fields`) para especificar los campos que no se incluirán del modelo).
+Un `ModelForm` que contiene el mismo campo que nuestro original `RenewBookForm`se muestra a continuación. Todo lo que necesita hacer para crear el formulario es agregar `class Meta` with the associated `model` (`BookInstance`) y una lista de los campos del modelo `fields` para incluir en el formulario (puede incluir todos los campos usando `fields = '__all__'`, o puedes usar `exclude` (en vez de `fields`) para especificar los campos que no se incluirán del modelo).
 
 ```python
 from django.forms import ModelForm
@@ -459,7 +459,7 @@ class RenewBookModelForm(ModelForm):
         fields = ['due_back',]
 ```
 
-> **Nota:** Esto podría no parece mucho más simple que simplemente usar un `Form`(y no es en este caso, porque solo tenemos un campo). Sin embargo, si tiene muchos campos, puede reducir la cantidad de código de manera bastante significativa.
+> **Nota:** Esto podría no parece mucho más simple que simplemente usar un `Form` (y no es en este caso, porque solo tenemos un campo). Sin embargo, si tiene muchos campos, puede reducir la cantidad de código de manera bastante significativa.
 
 El resto de la información proviene de las definiciones de campo del modelo (por ejemplo, etiquetas, widgets, texto de ayuda, mensajes de error). Si estos no son del todo correctos, entonces podemos anularlos en nuestro `class Meta`, especificando un diccionario que contiene el campo a cambiar y su nuevo valor. Por ejemplo, en este formulario podríamos querer una etiqueta para nuestro campo de "Fecha de renovación" (en lugar del valor predeterminado basado en el nombre del campo: Fecha de vencimiento), y también queremos que nuestro texto de ayuda sea específico para este caso de uso. El `Meta` a continuación le muestra cómo anular estos campos, y puede configurar de manera similar `widgets` y `error_messages` si los valores predeterminados no son suficientes.
 
@@ -540,7 +540,7 @@ La clase `AuthorDelete` no necesita mostrar ninguno de los campos, por lo que no
 
 ### Templates - Plantillas
 
-Las vistas "create" y "update" utilizan la misma plantilla de forma predeterminada, que se nombrará después de su model: _model_name_**\_form.html** (puedes cambiar el sufijo a algo diferente a **\_form** usando el campo `template_name_suffix`en tu vista, ejemplo: `template_name_suffix = '_other_suffix'`)
+Las vistas "create" y "update" utilizan la misma plantilla de forma predeterminada, que se nombrará después de su model: _model_name_**\_form.html** (puedes cambiar el sufijo a algo diferente a **\_form** usando el campo `template_name_suffix` en tu vista, ejemplo: `template_name_suffix = '_other_suffix'`)
 
 Crea la siguiente plantilla **locallibrary/catalog/templates/catalog/author_form.html** y copia el siguiente texto:
 
@@ -603,9 +603,9 @@ Las páginas de crear, actualiza y eliminar autor ahora estan listas para probar
 
 Primero inicie sesión en el sitio con una cuenta que tenga los permisos que haya decidido que se necesitan para acceder a las páginas de edición del autor.
 
-Luego navegue a la página de creación del autor: <http://127.0.0.1:8000/catalog/author/create/>, que debería verse como la captura de pantalla a continuación.
+Luego navegue a la página de creación del autor: `http://127.0.0.1:8000/catalog/author/create/`, que debería verse como la captura de pantalla a continuación.
 
-![Form Example: Create Author](https://mdn.mozillademos.org/files/14223/forms_example_create_author.png)
+![Form Example: Create Author](forms_example_create_author.png)
 
 Ingrese los valores para los campos y luego presione **Submit** para guardar el registro del autor. Ahora debería ser llevado a una vista detallada para su nuevo autor, con una URL de algo como `http://127.0.0.1:8000/catalog/author/10`.
 
@@ -613,13 +613,13 @@ Puede probar la edición de registros agregando _/update/_ hasta el final de la 
 
 Por último, podemos eliminar el autor, agregando eliminar (delete) al final de la vista detallada del autor URL (ejemplo. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django debería mostrar la página de eliminación que se muestra a continuación. pulse **Yes, delete.** para eliminar el registro y ser llevado a la lista de todos los autores.
 
-![](https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png)
+![](forms_example_delete_author.png)
 
 ## Retarte a ti mismo
 
 Crea algunos formularios para crear, editar y eliminar registros de `Book`.Puede usar exactamente la misma estructura de `Authors`. Si tu plantilla **book_form.html** es solo una versión renombrada de la copia de la plantilla **author_form.html**, entonces la nueva página "crear libro" se verá como la captura de pantalla a continuación:
 
-![](https://mdn.mozillademos.org/files/14225/forms_example_create_book.png)
+![](forms_example_create_book.png)
 
 ## Resumen
 

@@ -1,8 +1,8 @@
 ---
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
+
 {{JSRef}}
 
 O método **`Promise.allSettled()`** retorna uma promessa que é resolvida após todas as promessas dadas serem resolvidas ou rejeitadas, com um array de objetos que descrevem o resultado de cada promessa.

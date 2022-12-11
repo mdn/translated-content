@@ -1,42 +1,53 @@
 ---
 title: XMLHttpRequestEventTarget
 slug: Web/API/XMLHttpRequestEventTarget
+l10n:
+  sourceCommit: 073f70e052ff92ab715df3c20678c11c9b51747f
 ---
 
 {{APIRef("XMLHttpRequest")}}
 
-`XMLHttpRequestEventTarget` は、{{ domxref("XMLHttpRequest")}} のイベントを処理するオブジェクトに実装できるイベントハンドラーを記述するインターフェイスです。
+`XMLHttpRequestEventTarget` インターフェイスは、 {{domxref("XMLHttpRequest")}} と {{domxref("XMLHttpRequestUpload")}} で共有されるイベントハンドラーを示します。
 
-{{InheritanceDiagram}}
+`XMLHttpRequestEventTarget` を直接使用することはありません。サブクラスで操作してください。
 
-## プロパティ
+## `XMLHttpRequest` への継承
 
-- {{ domxref("XMLHttpRequestEventTarget.onabort") }}
-  - : リクエストが中止され、{{event('abort')}} イベントがこのオブジェクトによって受信されたときに呼び出す関数が含まれています。
-- {{ domxref("XMLHttpRequestEventTarget.onerror") }}
-  - : リクエストでエラーが発生し、このオブジェクトが {{event('error')}} イベントを受信したときに呼び出す関数が含まれています。
-- {{ domxref("XMLHttpRequestEventTarget.onload") }}
-  - : コンテンツのフェッチに成功した後に HTTP リクエストが返され、このオブジェクトが {{event('load')}} イベントを受信したときに呼び出す関数が含まれています。
-- {{ domxref("XMLHttpRequestEventTarget.onloadstart") }}
-  - : HTTP リクエストが最初にデータの読み込みを開始し、{{event('loadstart')}} イベントがこのオブジェクトによって受信されたときに呼び出される関数が含まれています。
-- {{ domxref("XMLHttpRequestEventTarget.onprogress") }}
-  - : リクエストの進行状況に関する情報とともに定期的に呼び出される関数が含まれ、{{event('progress')}} イベントがこのオブジェクトによって受信されます。
-- {{ domxref("XMLHttpRequestEventTarget.ontimeout") }}
-  - : イベントがタイムアウトし、{{event("timeout")}} イベントがこのオブジェクトによって受信された場合に呼び出される関数が含まれています。これは、`XMLHttpRequest` オブジェクトの `timeout` 属性の値を設定することによってタイムアウトが以前に確立されている場合にのみ発生します。
-- {{ domxref("XMLHttpRequestEventTarget.onloadend") }}
-  - : リクエストが失敗し、{{event('loadend')}} イベントがこのオブジェクトによって受信された場合でも、ロードが完了したときに呼び出される関数が含まれています。
+{{InheritanceDiagram("XMLHttpRequest")}}
+
+以下のイベントが {{domxref("XMLHttpRequest")}} で利用できます。
+
+- {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- {{domxref("XMLHttpRequest/error_event", "error")}}
+- {{domxref("XMLHttpRequest/load_event", "load")}}
+- {{domxref("XMLHttpRequest/loadend_event", "loadend")}}
+- {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}
+- {{domxref("XMLHttpRequest/progress_event", "progress")}}
+- {{domxref("XMLHttpRequest/timeout_event", "timeout")}}
+
+## `XMLHttpRequestUpload` への継承
+
+{{InheritanceDiagram("XMLHttpRequestUpload")}}
+
+以下のイベントが {{domxref("XMLHttpRequestUpload")}} で利用できます。
+
+- {{domxref("XMLHttpRequestUpload/abort_event", "abort")}}
+- {{domxref("XMLHttpRequestUpload/error_event", "error")}}
+- {{domxref("XMLHttpRequestUpload/load_event", "load")}}
+- {{domxref("XMLHttpRequestUpload/loadend_event", "loadend")}}
+- {{domxref("XMLHttpRequestUpload/loadstart_event", "loadstart")}}
+- {{domxref("XMLHttpRequestUpload/progress_event", "progress")}}
+- {{domxref("XMLHttpRequestUpload/timeout_event", "timeout")}}
 
 ## 仕様書
 
-| 仕様書                                   | 状態                                 | 備考                   |
-| ---------------------------------------- | ------------------------------------ | ---------------------- |
-| {{SpecName('XMLHttpRequest')}} | {{Spec2('XMLHttpRequest')}} | WHATWG living standard |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.XMLHttpRequestEventTarget")}}
+{{Compat}}
 
 ## 関連情報
 
-- {{ domxref("XMLHttpRequest") }}
-- [Using XMLHttpRequest](/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("XMLHttpRequestUpload")}}

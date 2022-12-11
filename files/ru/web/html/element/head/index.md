@@ -11,7 +11,8 @@ tags:
   - метаданные документа HTML
 translation_of: Web/HTML/Element/head
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML-элемент `<head>`** содержит машиночитаемую информацию ({{glossary("metadata")}}) о документе, например его [заголовок](/ru/docs/Web/HTML/Element/title), [скрипты](/ru/docs/Web/HTML/Element/script) и [страницы стилей](/ru/docs/Web/HTML/Element/style).
 

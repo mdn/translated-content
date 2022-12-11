@@ -22,12 +22,7 @@ _固有のメソッドなし。親である{{domxref("HTMLElement")}}からメ�
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                             | 備考                                           |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#htmlquoteelement", "HTMLQuoteElement")}}                                 | {{Spec2('HTML WHATWG')}} |                                                |
-| {{SpecName('HTML5 W3C', "grouping-content.html#the-blockquote-element", "HTMLQuoteElement")}} | {{Spec2('HTML5 W3C')}}     | {{SpecName("DOM2 HTML")}}より変更なし。 |
-| {{SpecName('DOM2 HTML', 'html.html#ID-70319763', 'HTMLQuoteElement')}}                                 | {{Spec2('DOM2 HTML')}}     | {{SpecName("DOM1")}}より変更なし。     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-70319763', 'HTMLQuoteElement')}}                         | {{Spec2('DOM1')}}         | 初回定義。                                     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: head 태그에는 무엇이 있을까? HTML의 메타데이터
 slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML의 {{glossary("Head", "head")}}는 페이지를 열 때 웹 브라우저에 표시되지 않습니다. head는 {{htmlelement("title")}} 같은 페이지나, {{glossary("CSS")}}의 링크(HTML 컨텐츠를 CSS로 스타일링하기를 원한다면), 파비콘(favicon), 그리고 다른 메타데이터(작성자, 중요한 키워드와 같은 HTML에 대한 내용)를 포함합니다. 이 글에서는 위 내용들과 그 이상에 대해 다룰 것입니다. 이것은 head에 있어야하는 마크업이나 다른 코드들을 다루는데 좋은 기초가 될 것입니다.
@@ -150,7 +151,7 @@ started with developing web sites and applications.">
 
 4. 지금 당신이 애용하는 검색엔진으로 "Mozilla Developer Network"를 찾아보라(우리는 YAHOO를 사용한다). 검색 결과를 보면, `<meta>` 및 `<title>` 요소의 컨텐츠 설명이 어떤 역할을 했는지 알 수 있을 것이다.
 
-    ![A Yahoo search result for "Mozilla Developer Network"](https://mdn.mozillademos.org/files/12347/search-result.png)
+    ![A Yahoo search result for "Mozilla Developer Network"](search-result.png)
 
 > **참고:** Google에서는 메인 MDN 홈페이지 링크 아래에 MDN의 몇 가지 관련 서브 페이지가 표시된다. 이를 사이트 링크라고하며 Google의 웹 마스터 도구에서 구성 할 수 있다. 그리고 이는 Google 검색 엔진에서 사이트의 검색 결과를 개선하는 방법이다.
 

@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/caption
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<caption>` 요소**는 표의 설명 또는 제목을 나타냅니다.
 

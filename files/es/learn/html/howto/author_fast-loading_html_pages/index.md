@@ -1,14 +1,9 @@
 ---
 title: Consejos para la creación de páginas HTML de carga rápida
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - Consejos
-  - HTML
-  - Rapido
-  - Tips
-translation_of: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Web/HTML/Consejos_para_la_creación_de_páginas_HTML_de_carga_rápida
 ---
+
 ## Consejos para la creación de páginas HTML de carga rápida
 
 Estos consejos estan basados en conocimiento común y experimentación.

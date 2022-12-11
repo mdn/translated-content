@@ -1,14 +1,8 @@
 ---
 title: tspan
 slug: Web/SVG/Element/tspan
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/tspan
 ---
+
 {{SVGRef}}
 
 O elemento SVG **`<tspan>`** define um subtexto dentro de um elemento {{SVGElement ('text')}} ou outro elemento `<tspan>`. Permite o ajuste do estilo e / ou posição desse subtexto, conforme necessário.
@@ -18,7 +12,7 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 240 40" xmlns="https://www.w3.org/2000/svg">
   <style>
     text  { font: italic 12px serif; }
     tspan { font: bold 10px sans-serif; fill: red; }

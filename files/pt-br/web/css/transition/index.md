@@ -1,13 +1,13 @@
 ---
 title: transition
 slug: Web/CSS/transition
-translation_of: Web/CSS/transition
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Summary
 
-A propriedade de [CSS](/en/CSS)**transition** é uma [propriedade abreviada](/pt-BR/docs/Web/CSS/Shorthand_properties) para {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} e {{ cssxref("transition-delay") }}. Ela permite definir a transição entre dois estados de um elemento. Estados diferentes podem ser definidos usando [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) tais como {{cssxref(":hover")}} ou {{cssxref(":active")}}; ou dinamicamente, usando javascript.
+A propriedade de [CSS](/pt-BR/CSS)**transition** é uma [propriedade abreviada](/pt-BR/docs/Web/CSS/Shorthand_properties) para {{ cssxref("transition-property") }}, {{ cssxref("transition-duration") }}, {{ cssxref("transition-timing-function") }} e {{ cssxref("transition-delay") }}. Ela permite definir a transição entre dois estados de um elemento. Estados diferentes podem ser definidos usando [pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes) tais como {{cssxref(":hover")}} ou {{cssxref(":active")}}; ou dinamicamente, usando javascript.
 
 {{cssinfo}}
 

@@ -1,17 +1,9 @@
 ---
 title: Desenhando formas com canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-tags:
-  - Canvas
-  - Gráficos(2)
-  - HTML
-  - HTML Canvas
-  - HTML5
-  - Intermediário
-  - Tutorial
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_shapes
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 Agora que criamos nosso [ambiente em canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_usage), podemos entrar nos detalhes de como desenhar no canvas. No final deste artigo, você terá aprendido a desenhar retângulos, triângulos, linhas, arcos e curvas, proporcionando familiaridade com algumas das formas básicas. Trabalhar com caminhos (_shapes_) é essencial ao desenhar objetos na tela e veremos como isso pode ser feito.

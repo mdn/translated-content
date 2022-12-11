@@ -13,7 +13,7 @@ tags:
   - 비디오
 translation_of: Web/HTML/Element/video
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<video>` 요소**는 비디오 플레이백을 지원하는 미디어 플레이어를 문서에 삽입합니다. 오디오 콘텐츠에도 사용할 수 있으나, {{htmlelement("audio")}} 요소가 사용자 경험에 좀 더 적합합니다.
 

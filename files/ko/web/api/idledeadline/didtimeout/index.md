@@ -3,6 +3,7 @@ title: IdleDeadline.didTimeout
 slug: Web/API/IdleDeadline/didTimeout
 translation_of: Web/API/IdleDeadline/didTimeout
 ---
+
 {{APIRef("Background Tasks")}}
 
 **{{domxref("IdleDeadline")}}** 인터페이스의 읽기 전용 속성(property)인 **`didTimeout`** 는 {{domxref("Window.requestIdleCallback()")}}이 호출될 때 지정된 timeout 간격이 만료되어, 유휴 콜백(idle callback)이 호출되는지 여부를 나타내는 Boolean 값 입니다.

@@ -1,14 +1,9 @@
 ---
 title: Referencia de Atributos HTML
 slug: Web/HTML/Attributes
-tags:
-  - HTML
-  - Referencia
-  - Web
-  - atributo
-translation_of: Web/HTML/Attributes
 original_slug: Web/HTML/Atributos
 ---
+
 Los elementos en HTML tienen **atributos**; estos son valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas para cumplir los criterios de los usuarios.
 
 ## Lista de Atributos
@@ -44,7 +39,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>align</code></td>
-      <td>{{ HTMLElement("applet") }}, {{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }},  {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }},  {{ HTMLElement("td") }},  {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }}, {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}</td>
+      <td>{{ HTMLElement("applet") }}, {{ HTMLElement("caption") }}, {{ HTMLElement("col") }}, {{ HTMLElement("colgroup") }}, {{ HTMLElement("hr") }}, {{ HTMLElement("iframe") }}, {{ HTMLElement("img") }}, {{ HTMLElement("table") }}, {{ HTMLElement("tbody") }}, {{ HTMLElement("td") }}, {{ HTMLElement("tfoot") }} , {{ HTMLElement("th") }}, {{ HTMLElement("thead") }}, {{ HTMLElement("tr") }}</td>
       <td>Especifica el alineamiento horizontal del elemento.</td>
      </tr>
      <tr>
@@ -615,7 +610,7 @@ Los elementos en HTML tienen **atributos**; estos son valores adicionales que co
      </tr>
      <tr>
       <td><code>usemap</code></td>
-      <td>{{ HTMLElement("img") }},  {{ HTMLElement("input") }}, {{ HTMLElement("object") }}</td>
+      <td>{{ HTMLElement("img") }}, {{ HTMLElement("input") }}, {{ HTMLElement("object") }}</td>
       <td>
        <p>Indica la URL parcial de un image map asociado con el elemento.</p>
        <div class="note">

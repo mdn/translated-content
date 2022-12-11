@@ -1,9 +1,9 @@
 ---
 title: Transmisión Adaptativa DASH para Video en HTML 5
 slug: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
-translation_of: Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 original_slug: Web/HTML/Transision_adaptativa_DASH
 ---
+
 La Transmisión Adaptable y Dinámica sobre HTTP (DASH - _Dynamic Adaptive Streaming over HTTP_) es un protocolo de transmisión adaptable. Esto signfica que le permite a un flujo de vídeo cambiar entre diversas tazas de bits con base en el desempeño de la red, para mantener la reproducción de un vídeo.
 
 ## Soporte de Navegadores

@@ -1,12 +1,8 @@
 ---
 title: <dfn>
 slug: Web/HTML/Element/dfn
-tags:
-  - Elemento
-  - HTML semântico nível texto
-  - Referencia
-translation_of: Web/HTML/Element/dfn
 ---
+
 ## Resumo
 
 O elemento **HTML `<dfn>` **(ou _Elemento Definição_ _HTML_) representa uma instância de definição de um termo.
@@ -79,4 +75,4 @@ _A Internet_ é um sistema global de redes interconectadas que usam o Internet P
 - Elementos relacionados à lista de definições: {{HTMLElement("dl")}}, {{HTMLElement("dt")}}, {{HTMLElement("dd")}}
 - {{HTMLElement("abbr")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

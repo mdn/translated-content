@@ -10,7 +10,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/style
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<style>` 요소**는 문서나 문서 일부에 대한 스타일 정보를 포함합니다.
 

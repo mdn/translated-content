@@ -1,12 +1,8 @@
 ---
 title: Elementos
 slug: Web/XSLT/Element
-tags:
-  - Todas_las_Categorías
-  - XSLT
-  - XSLT:Referencia
-translation_of: Web/XSLT/Element
 ---
+
 {{XsltRef}} En este documento se discutiran dos tipos de elementos: elementos raíz e instrucciones. Un elemento raíz debe aparecer como un hijo ya sea de `<xsl:stylesheet>` o `<xsl:transform>`. Por otro lado, una instrucción está asociada con una plantilla. Una hoja de estilo puede incluir varias plantillas. Un tercer tipo de elemento, no discutido aquí, es el elemento de resultado literal (LRE por sus siglas en inglés). Un LRE también aparece dentro de una plantilla, y consiste de cualquier elemento que no sea instrucción y que debe ser copiado tal cual al documento resultante, por ejemplo el elemento `<hr>` cuando se usa en una hoja de estilo para general HTML.
 
 Como nota adicional, cualquier atributo en un LRE y algunos atributos de un conjunto específico de elemento XSLT también pueden incluir lo que se conoce como plantilla de valor de atributo. Que en pocas palabras significa que es una cadena de texto que especifíca una expresión XPath la cual indica el valor del atributo. En tiempo de ejecución la expresión es evaluada y el resultado es sustituido por la expresión XPath. Por ejemplo, asumamos que la variable "`image-dir`" es definida de la siguiente manera:

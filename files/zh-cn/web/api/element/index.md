@@ -94,9 +94,9 @@ _The `Element` interface includes the following property, defined on the {{DOMxR
 ### 事件句柄
 
 - {{domxref("Element.onfullscreenchange")}}
-  - : 事件 {{event("fullscreenchange")}} 的回调方法，在元素进入或退出全屏模式时触发。不仅可用于观察（监听）可预期的过度变化，还可以观察（监听）未知的变化，如：当你的应用程序在后台运行。
+  - : 事件 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 的回调方法，在元素进入或退出全屏模式时触发。不仅可用于观察（监听）可预期的过度变化，还可以观察（监听）未知的变化，如：当你的应用程序在后台运行。
 - {{domxref("Element.onfullscreenerror")}}
-  - : 事件 {{event("fullscreenerror")}} 的回调方法，在进入全屏模式过程中出现错误时触发。
+  - : 事件 [`fullscreenerror`](/zh-CN/docs/Web/API/Document/fullscreenerror_event) 的回调方法，在进入全屏模式过程中出现错误时触发。
 
 ## 方法
 

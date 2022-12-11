@@ -34,8 +34,4 @@ slug: Web/API/HTMLKeygenElement
 
 ## 仕様書
 
-| 仕様                                                                                                         | 状態                             | コメント                                        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('HTML WHATWG', "forms.html#the-keygen-element", "HTMLKeygenElement")}} | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}} から変更なし。 |
-| {{SpecName('HTML5.1', "forms.html#the-keygen-element", "HTMLKeygenElement")}}     | {{Spec2('HTML5.1')}}     |                                                 |
-| {{SpecName('HTML5 W3C', "forms.html#the-keygen-element", "HTMLKeygenElement")}}     | {{Spec2('HTML5 W3C')}}     | 初期定義。                                      |
+{{Specifications}}

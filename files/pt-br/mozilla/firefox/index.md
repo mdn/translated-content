@@ -1,11 +1,8 @@
 ---
 title: Firefox
 slug: Mozilla/Firefox
-tags:
-  - Firefox
-  - Mozilla
-translation_of: Mozilla/Firefox
 ---
+
 {{FirefoxSidebar}}
 
 O [Firefox](https://www.mozilla.org/pt-br/docs/firefox/new/) é um popular navegador de internet da Mozilla, disponível para várias plataformas como Windows, Mac OS X e Linux no desktop, bem como Android e iOS nos dispositivos móveis. Sendo altamente compatível com as últimas tecnologias web e poderosas [ferramentas de desenvolvimento](/pt-BR/docs/Tools), o Firefox é um excelente navegador tanto para usuários comuns quanto desenvolvedores web.

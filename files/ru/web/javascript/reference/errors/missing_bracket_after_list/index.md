@@ -7,6 +7,7 @@ tags:
   - Ошибки
 translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

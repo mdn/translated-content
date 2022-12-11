@@ -3,6 +3,7 @@ title: 미디어 쿼리 초보자 안내서
 slug: Learn/CSS/CSS_layout/Media_queries
 original_slug: Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Responsive_Design", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}
 
 **CSS Media Query**는 예를 들어 "뷰포트가 480 픽셀보다 넓다."라고 여러분이 지정한 규칙에 브라우저 및 장치 환경이 일치하는 경우에만 CSS를 적용할 수 있는 방법을 제공합니다. 미디어 쿼리는 반응형 웹 디자인의 핵심 부분이다. 뷰포트의 크기에 따라 서로 다른 레이아웃을 생성할 수 있기 때문이다. 그러나 예를들면 사용자는 마우스가 아닌 터치스크린을 사용하는지와 같이 실행 중인 사이트 환경에 대한 여러 내용들을 탐지하는 데도 사용할 수 있습니다. 이번 단원에서는 먼저 미디어 쿼리에 사용된 구문에 대해 배우고, 이어 해당 구문을 가공의 예제에서 사용하여 간단한 디자인이 어떻게 반응할 수 있는지 살펴보겠습니다.

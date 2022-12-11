@@ -1,14 +1,9 @@
 ---
 title: Atributo HTML
 slug: Glossary/Attribute
-tags:
-  - Atributos
-  - Glossário
-  - HTML
-  - Tags
-translation_of: Glossary/Attribute
 original_slug: Glossario/Atributo
 ---
+
 _Atributos_ estendem uma {{Glossary("tag")}} ("etiqueta"), modificando o comportamento dela ou fornecendo meta dados.
 Um atributo sempre tem a forma `nome=valor` (especificando o identificador do atributo e o valor associado a ele).
 

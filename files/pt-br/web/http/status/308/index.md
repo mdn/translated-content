@@ -1,12 +1,8 @@
 ---
 title: 308 Permanent Redirect
 slug: Web/HTTP/Status/308
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Redirecionamento
-translation_of: Web/HTTP/Status/308
 ---
+
 {{HTTPSidebar}}
 
 O código de resposta do status de redirecionamento **`308 Redirecionamento Permanente`** do Protocolo de Transferência de Hipertexto (HTTP) indica que o recurso requisitado foi movido definitivamente para o URL dado pelo cabeçalho {{HTTPHeader("Localização")}}. O navegador redireciona para essa página e o motor de busca atualiza os seus links para o recurso (na linguagem 'SEO', é dito que o "suco do link" ('link-juice') é enviado à nova URL).

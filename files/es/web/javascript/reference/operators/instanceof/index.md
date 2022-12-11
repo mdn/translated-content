@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/instanceof
 original_slug: Web/JavaScript/Referencia/Operadores/instanceof
 ---
+
 {{jsSidebar("Operators")}}
 
 ## Resumen

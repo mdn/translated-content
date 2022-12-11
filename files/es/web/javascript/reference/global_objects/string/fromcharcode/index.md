@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fromCharCode
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen
@@ -42,13 +43,9 @@ El siguiene ejemplo devuelve la cadena "ABC".
 String.fromCharCode(65,66,67)
 ```
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                   | Estatus                  | Comentario                                        |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                          | Estándar                 | Primera definicíon Implementada en JavaScript 1.2 |
-| {{SpecName('ES5.1', '#sec-15.5.3.2', 'StringfromCharCode')}}                 | {{Spec2('ES5.1')}} |                                                   |
-| {{SpecName('ES6', '#sec-string.fromcharcodes', 'String.fromCharCode')}} | {{Spec2('ES6')}}     |                                                   |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

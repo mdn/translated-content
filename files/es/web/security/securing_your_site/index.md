@@ -1,14 +1,8 @@
 ---
 title: Securing your site
 slug: Web/Security/Securing_your_site
-tags:
-  - HTTP
-  - NeedsTranslation
-  - Security
-  - TopicStub
-  - Web Development
-translation_of: Web/Security/Securing_your_site
 ---
+
 Hay varias cosas que puede hacer para ayudar a proteger su sitio. Este artículo ofrece varias sugerencias, así como enlaces a otros artículos que proveen más información útil.
 
 > **Nota:** This article is a work in progress, and is neither complete nor does following its suggestions guarantee your site will be fully secure.

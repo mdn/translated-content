@@ -47,4 +47,4 @@ Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTM
 - {{Cssxref("text-align")}}
 - {{Cssxref("display")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

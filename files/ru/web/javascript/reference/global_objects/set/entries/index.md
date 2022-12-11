@@ -3,6 +3,7 @@ title: Set.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Set/entries
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/entries
 ---
+
 {{JSRef}}
 
 Метод **`entries()`** возвращает новый **[`Итератор`](/ru/docs/Web/JavaScript/Guide/Iterators_and_Generators)**, который содержит массив **`[значение, значение]`** для каждого элемента в объекте `Set` в порядке их добавления. Для объекта `Set` не существует ключа `key`, как в объекте `Map`. Тем не менее, чтобы API было схож с объектом `Map`, каждая _запись_ содержит значение как в _ключе,_ так и в _значении_, возвращая массив `[значение, значение]`.

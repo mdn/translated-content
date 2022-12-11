@@ -1,8 +1,8 @@
 ---
 title: <hr>
 slug: Web/HTML/Element/hr
-translation_of: Web/HTML/Element/hr
 ---
+
 ## Sumário
 
 O **elemento HTML `<hr>`** representa uma quebra temática entre elementos de nível de parágrafo (por exemplo , uma mudança da cena de uma história, ou uma mudança de tema com uma seção). Nas versões anteriores do HTML, representava uma linha horizontal. Pode continuar sendo exibida como uma linha horizontal nos navegadores, mas agora está definida em termos semânticos, em vez de termos de apresentação.
@@ -69,4 +69,4 @@ Para alterar a aparencia da linha ou as lacunas entre ela e os parágrafos, util
 
 - [Elemento HTML parágrafo](/pt-BR/docs/HTML/Element/p)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

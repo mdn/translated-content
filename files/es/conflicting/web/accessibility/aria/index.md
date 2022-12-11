@@ -1,15 +1,9 @@
 ---
 title: Alertas
 slug: conflicting/Web/Accessibility/ARIA
-tags:
-  - ARIA
-  - Accesibilidad
-  - Forms
-  - Web
-  - formulários
-translation_of: Web/Accessibility/ARIA/forms/alerts
 original_slug: Web/Accessibility/ARIA/forms/alerts
 ---
+
 ## El problema
 
 Tienes un formulario — un formulario de contacto — por ejemplo, en el que deseas poner algún control de error accesible. Ejemplos de problemas comunes incluyen direcciones de correo electrónico que no son válidas o un campo de nombre que no contiene al menos un nombre o apellido.

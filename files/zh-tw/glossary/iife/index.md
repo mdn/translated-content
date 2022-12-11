@@ -5,7 +5,7 @@ slug: Glossary/IIFE
 
 **IIFE** (Immediately Invoked Function Expression) 是一個定義完馬上就執行的 {{glossary("JavaScript")}} {{glossary("function")}}。
 
-他又稱為 {{glossary("Self-Executing Anonymous Function")}}，也是一種常見的設計模式，包含兩個主要部分：第一個部分是使用{{jsxref("Operators/Grouping", "Grouping Operator")}} `()` 包起來的  anonymous function。這樣的寫法可以避免裡面的變數污染到 global scope。
+他又稱為 {{glossary("Self-Executing Anonymous Function")}}，也是一種常見的設計模式，包含兩個主要部分：第一個部分是使用{{jsxref("Operators/Grouping", "Grouping Operator")}} `()` 包起來的 anonymous function。這樣的寫法可以避免裡面的變數污染到 global scope。
 
 第二個部分是馬上執行 function 的 expression `()`，JavaScript 引擎看到它就會立刻轉譯該 function。
 
@@ -66,7 +66,7 @@ Async function 版本，目前主要為了 top level await 而使用：
 
 ### 學習它
 
-- [Quick example](/zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (在 "Functions" 部分的最後面,  "Custom objects" 的正前面)
+- [Quick example](/zh-TW/docs/Web/JavaScript/A_re-introduction_to_JavaScript#Functions) (在 "Functions" 部分的最後面, "Custom objects" 的正前面)
 
 ### 基本知識
 

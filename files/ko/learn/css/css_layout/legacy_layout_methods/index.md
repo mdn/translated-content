@@ -2,6 +2,7 @@
 title: 레거시 레이아웃 메서드
 slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}

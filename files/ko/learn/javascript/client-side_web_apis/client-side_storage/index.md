@@ -2,6 +2,7 @@
 title: Client-side storage
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
@@ -734,7 +735,7 @@ self.addEventListener('fetch', function(e) {
 });
 ```
 
-And that is it for our simple service worker. There is a whole load more you can do with them — for a lot more detail, see the [service worker cookbook](https://serviceworke.rs/). And thanks to Paul Kinlan for his article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), which inspired this simple example.
+And that is it for our simple service worker. There is a whole load more you can do with them — for a lot more detail, see the [service worker cookbook](https://github.com/mdn/serviceworker-cookbook/). And thanks to Paul Kinlan for his article [Adding a Service Worker and Offline into your Web App](https://developers.google.com/web/fundamentals/codelabs/offline/), which inspired this simple example.
 
 #### Testing the example offline
 

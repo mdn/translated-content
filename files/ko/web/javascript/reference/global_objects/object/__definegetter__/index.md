@@ -3,6 +3,7 @@ title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
+
 {{JSRef}}
 
 > **경고:** 이 기능은 object initializer 문법 혹은 {{jsxref("Object.defineProperty()")}} API를 사용한 getter 정의가 표준화됨으로써 비표준화되었습니다.

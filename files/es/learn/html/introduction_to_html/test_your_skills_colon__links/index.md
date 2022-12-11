@@ -1,9 +1,9 @@
 ---
 title: 'Prueba tus habilidades: Enlaces'
 slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links
-translation_of: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links
 original_slug: Learn/HTML/Introduccion_a_HTML/Prueba_tus_habilidades:_Enlaces
 ---
+
 {{learnsidebar}}
 
 El objetivo de esta pueba de habilidad es evaluar si has comprendido nuestro artículo [Creando hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks).

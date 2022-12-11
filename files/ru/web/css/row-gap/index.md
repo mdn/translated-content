@@ -11,6 +11,7 @@ tags:
   - row-gap
 browser-compat: css.properties.row-gap
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) **`row-gap`** устанавливает промежуток ({{glossary("gutters","интервал")}}) между рядами.

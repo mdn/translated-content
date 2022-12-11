@@ -20,13 +20,13 @@ with (expression)
 - `expression`
   - : Добавляет данный exrpession в цепочку областей видимости используемое когда исследуется statement. Рекомендуется использовать круглые скобки вокруг выражения.
 - `statement`
-  - : Любое выражение. Чтобы использовать несколько выражений, используйте оператор [block](/ru/docs/Web/JavaScript/Reference/Statements/block "JavaScript/Reference/Statements/block") statement ({ ... }), чтобы сгруппировать их.
+  - : Любое выражение. Чтобы использовать несколько выражений, используйте оператор [block](/ru/docs/Web/JavaScript/Reference/Statements/block) statement ({ ... }), чтобы сгруппировать их.
 
 ## Описание
 
 JavaScript ищет unqualified имя, исследуя цепочку областей видимости, связанную с выполнением скрипта или функции, содержащих это unqualified имя. Оператор 'with' добавляет данный объект в начало цепочки областей видимости в ходе исследования тела его оператора. Если unqualified имя используемое в теле соответствует свойству в цепочке областей видимости, тогда имя привязывается к свойству и объекту, содержащему это свойство. В противном случае возвращается {{jsxref("ReferenceError")}}.
 
-> **Примечание:** Использование оператора `with` не рекомендуется, и недопустимо в строгом режиме ([strict mode](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode "JavaScript/Strict mode")) ECMAScript 5 . Рекомендуемой альтернативой может стать связывание объекта, чьи свойства Вы хотели получить, с коротким именем переменной.
+> **Примечание:** Использование оператора `with` не рекомендуется, и недопустимо в строгом режиме ([strict mode](/ru/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)) ECMAScript 5 . Рекомендуемой альтернативой может стать связывание объекта, чьи свойства Вы хотели получить, с коротким именем переменной.
 
 ### Performance pro & contra
 
@@ -64,7 +64,7 @@ If you call `f([1,2,3], obj)` in an ECMAScript 5 environment, then the `values` 
 
 ### Использование `with`
 
-Последующее использование **`with`** указывает что Объект [`Math`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math "JavaScript/Reference/Global_Objects/Math") является объектом по умолчанию. Следующие инструкции за **`with`** ссылаются на свойства `PI и методы `[`cos`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/cos "JavaScript/Reference/Global_Objects/Math/cos") и [`sin`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/sin "JavaScript/Reference/Global_Objects/Math/sin"), без указания объекта. JavaScript предполагает Объект `Math` для этих справок.
+Последующее использование **`with`** указывает что Объект [`Math`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math) является объектом по умолчанию. Следующие инструкции за **`with`** ссылаются на свойства `PI` и методы [`cos`]](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) и [`sin`]](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/sin), без указания объекта. JavaScript предполагает Объект `Math` для этих справок.
 
 ```js
 var a, x, y;

@@ -9,7 +9,8 @@ tags:
   - 파일
 translation_of: Web/HTML/Element/input/file
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **`file`** 유형의 {{htmlelement("input")}} 요소에는 저장 장치의 파일을 하나 혹은 여러 개 선택할 수 있습니다. 그 후, [양식을 제출](/ko/docs/Learn/HTML/Forms)해 서버로 전송하거나, [File API](/ko/docs/Web/API/File/Using_files_from_web_applications)를 사용한 JavaScript 코드로 조작할 수 있습니다.
 
@@ -229,7 +230,7 @@ div {
 
 외형은 유사해 보일지라도, 이번 예제에서 파일을 선택하려고 한다면 `accept`에 지정한 파일 유형만 선택 가능함을 확인할 수 있습니다. (정확한 동작은 브라우저와 운영체제에 따라 다를 수 있습니다)
 
-![Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable.](https://mdn.mozillademos.org/files/15183/file-chooser.png)
+![Screenshot of a macOS file picker dialog. Files other than JPEG are grayed-out and unselectable.](file-chooser.png)
 
 `accept` 특성은 선택한 파일 유형을 검증하지는 않으며, 단순히 브라우저가 사용자를 올바른 파일 유형으로 유도하도록 힌트를 제공할 뿐입니다. (대부분의 경우) 사용자가 파일 선택 창의 옵션을 설정해 `accept`를 덮어쓰고 자신이 원하는 아무 파일이나 선택할 수 있으므로, 파일 입력 칸에 잘못된 유형의 파일이 올 수 있습니다.
 
@@ -442,7 +443,7 @@ function returnFileSize(number) {
 
 ## 브라우저 호환성
 
-{{Compat("html.elements.input.input-file")}}
+{{Compat}}
 
 ## 같이 보 기
 

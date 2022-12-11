@@ -297,9 +297,7 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## 仕様書
 
-| 仕様書                                                                       |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string-objects', 'String')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -3,7 +3,7 @@ title: '<picture>: 画像要素'
 slug: Web/HTML/Element/picture
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<picture>` 要素**は、0 個以上の {{HTMLElement("source")}} 要素と一つの {{HTMLElement("img")}} 要素を含み、様々な画面や端末の条件に応じた画像を提供します。
 
@@ -130,9 +130,7 @@ DPI の高い (高解像度の) ディスプレイのために高解像度版の
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-picture-element', '&lt;picture&gt;')}} | {{Spec2('HTML WHATWG')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

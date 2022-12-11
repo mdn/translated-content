@@ -1,23 +1,8 @@
 ---
 title: Uma visão geral do HTTP
 slug: Web/HTTP/Overview
-tags:
-  - Arquitetura cliente-servidor
-  - Cliente
-  - Como a internet funciona
-  - HTML
-  - HTTP
-  - Mecânica da Internet
-  - Protocolos
-  - Rede
-  - Servidor
-  - TCP
-  - UDP
-  - Visão Geral
-  - cliente-servidor
-  - protocolos de rede
-translation_of: Web/HTTP/Overview
 ---
+
 {{HTTPSidebar}}
 
 **HTTP** é um protocolo ({{glossary("protocol")}}) que permite a obtenção de recursos, como documentos HTML. É a base de qualquer troca de dados na Web e um protocolo cliente-servidor, o que significa que as requisições são iniciadas pelo destinatário, geralmente um navegador da Web. Um documento completo é reconstruído a partir dos diferentes sub-documentos obtidos, como por exemplo texto, descrição do layout, imagens, vídeos, scripts e muito mais.
@@ -26,7 +11,7 @@ translation_of: Web/HTTP/Overview
 
 Clientes e servidores se comunicam trocando mensagens individuais (ao contrário de um fluxo de dados). As mensagens enviadas pelo cliente, geralmente um navegador da Web, são chamadas de **solicitações** _(requests)_, ou também **requisições**, e as mensagens enviadas pelo servidor como resposta são chamadas de **respostas** _(responses)_.
 
-![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](https://mdn.mozillademos.org/files/13673/HTTP%20&%20layers.png)Projetado no início da década de 1990, o protocolo HTTP é extensível e evoluiu ao longo do tempo. Atua na camada de aplicação e é enviado sobre o protocolo{{glossary ("TCP")}}, ou em uma conexão TCP criptografada com {{glossary ("TLS")}}, embora qualquer protocolo de transporte confiável possa, teoricamente, ser usado. Devido à sua extensibilidade, ele é usado não só para buscar documentos de hipertexto, mas também imagens e vídeos ou publicar conteúdo em servidores, como nos resultados de formulário HTML (veja os elementos {{HTMLElement("html")}} e {{HTMLElement("form")}}). O HTTP também pode ser usado para buscar partes de documentos para atualizar páginas da Web sob demanda.
+![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](http_&_layers.png)Projetado no início da década de 1990, o protocolo HTTP é extensível e evoluiu ao longo do tempo. Atua na camada de aplicação e é enviado sobre o protocolo{{glossary ("TCP")}}, ou em uma conexão TCP criptografada com {{glossary ("TLS")}}, embora qualquer protocolo de transporte confiável possa, teoricamente, ser usado. Devido à sua extensibilidade, ele é usado não só para buscar documentos de hipertexto, mas também imagens e vídeos ou publicar conteúdo em servidores, como nos resultados de formulário HTML (veja os elementos {{HTMLElement("html")}} e {{HTMLElement("form")}}). O HTTP também pode ser usado para buscar partes de documentos para atualizar páginas da Web sob demanda.
 
 ## Componentes de sistemas baseados em HTTP
 

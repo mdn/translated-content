@@ -1,17 +1,9 @@
 ---
 title: Introducción a Django
 slug: Learn/Server-side/Django/Introduction
-tags:
-  - Aprendizaje
-  - CodigoScript
-  - Principiante
-  - Programación lado servidor
-  - Python
-  - django
-  - introducción
-translation_of: Learn/Server-side/Django/Introduction
 original_slug: Learn/Server-side/Django/Introducción
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 En este primer artículo de Django responderemos la pregunta ¿Qué es Django? y daremos una visión general de lo que hace que este framework sea tan especial. Vamos a delinear las características principales, incluidas algunas de las funcionalidades avanzadas que no tendremos tiempo de cubrir con detalle en este módulo. Tambien mostraremos algunos de los componentes principales de una aplicación de Django. (aunque en este momento no cuentes con un entorno de desarrollo en el cual probarlo).
@@ -103,7 +95,7 @@ En un sitio web tradicional basado en datos, una aplicación web espera peticion
 
 Las aplicaciones web de Django normalmente agrupan el código que gestiona cada uno de estos pasos en ficheros separados:
 
-![](https://mdn.mozillademos.org/files/13931/basic-django.png)
+![](basic-django.png)
 
 - **URLs:** Aunque es posible procesar peticiones de cada URL individual vía una función individual, es mucho más sostenible escribir una función de visualización separada para cada recurso. Se usa un mapeador URL para redirigir las peticiones HTTP a la vista apropiada basándose en la URL de la petición. El mapeador URL se usa para redirigir las peticiones HTTP a la vista apropiada basándose en la URL de la petición. El mapeador URL puede también emparejar patrones de cadenas o dígitos específicos que aparecen en una URL y los pasan a la función de visualización como datos.
 - **Vista (View):** Una vista es una función de gestión de peticiones que recibe peticiones HTTP y devuelve respuestas HTTP. Las vistas acceden a los datos que necesitan para satisfacer las peticiones por medio de _modelos_, y delegan el formateo de la respuesta a las _plantillas_ (_"templates"_).
@@ -188,7 +180,7 @@ class Team(models.Model):
 
 El modelo de Django proporciona una API de consulta simple para buscar en la base de datos. Esta puede buscar concidencias contra varios campos al mismo tiempo usando diferentes criterios (ej. exacto, insensible a las mayúsculas, mayor que, etc.), y puede soportar sentencias complejas (por ejemplo, puedes especificar que se busque equipos U11 que tengan un nombre de equipo que empiece por "Fr" o termine con "al").
 
-El fragmento de código de más abajo muestra una función de visualización (manejador de recursos) para presentar en pantalla todos nuestros equipos U09. La línea en negrilla muestra como podemos usar la API de consulta del modelo para filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate como este criterio se pasa como argumento a la función `filter()` con el nombre del campo y tipo de coincidencia separados por un doble guion bajo: **team_level\_\_exact**).
+El fragmento de código de más abajo muestra una función de visualización (manejador de recursos) para presentar en pantalla todos nuestros equipos U09. La línea en negrilla muestra como podemos usar la API de consulta del modelo para filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate como este criterio se pasa como argumento a la función `filter()` con el nombre del campo y tipo de coincidencia separados por un doble guion bajo: **`team_level__exact`**).
 
 ```python
 ## filename: views.py

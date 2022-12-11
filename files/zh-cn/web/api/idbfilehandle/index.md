@@ -23,11 +23,11 @@ slug: Web/API/IDBFileHandle
 ### 事件处理
 
 - {{domxref("LockedFile.oncomplete")}}
-  - : 每次读取或写入操作成功时触发 {{event("complete")}} 事件。
+  - : 每次读取或写入操作成功时触发 [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event) 事件。
 - {{domxref("LockedFile.onabort")}}
-  - : 每次调用{{domxref("LockedFile.abort()","abort()")}} 方法时会触发{{event("abort")}}事件。
+  - : 每次调用{{domxref("LockedFile.abort()","abort()")}} 方法时会触发[`abort`](/zh-CN/docs/Web/API/HTMLMediaElement/abort_event)事件。
 - {{domxref("LockedFile.onerror")}}
-  - : 在每次出现问题时触发{{event("error")}}事件。
+  - : 在每次出现问题时触发[`error`](/zh-CN/docs/Web/API/Element/error_event)事件。
 
 ## 方法
 

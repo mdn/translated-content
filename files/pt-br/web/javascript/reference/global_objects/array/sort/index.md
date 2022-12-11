@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.sort()
 slug: Web/JavaScript/Reference/Global_Objects/Array/sort
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/sort
 ---
+
 {{JSRef}}
 
 O método **`sort()`** ordena os elementos do próprio array e retorna o array. A ordenação não é necessariamente [estável](https://pt.wikipedia.org/wiki/Ordena%C3%A7%C3%A3o_est%C3%A1vel). A ordenação padrão é de acordo com a pontuação de código unicode.

@@ -1,15 +1,9 @@
 ---
 title: <track>
 slug: Web/HTML/Element/track
-tags:
-  - Elemento
-  - HTML
-  - HTML5
-  - Web
-  - legenda
-translation_of: Web/HTML/Element/track
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O **elemento HTML `<track>` **é usado como filho dos elementos de mídia{{HTMLElement("audio")}} e {{HTMLElement("video")}}. Ele permite que você especifique faixas de texto temporizadas (ou dados baseados em tempo), por exemplo, para lidar automaticamente com legendas. As faixas são formatadas em [WebVTT format](/pt-BR/docs/Web/API/Web_Video_Text_Tracks_Format) (arquivos `.vtt`) — Web Video Text Tracks or [Timed Text Markup Language (TTML).](https://w3c.github.io/ttml2/index.html)
 

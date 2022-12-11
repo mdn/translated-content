@@ -18,7 +18,7 @@ _Inherits properties from its parent interface, {{domxref("AudioNode")}}, and ad
 ### Event handlers
 
 - {{domxref("AudioScheduledSourceNode.onended", "onended")}}
-  - : A function to be called when the {{event("ended")}} event is fired, indicating that the node has finished playing.
+  - : A function to be called when the [`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event) event is fired, indicating that the node has finished playing.
 
 ## Methods
 

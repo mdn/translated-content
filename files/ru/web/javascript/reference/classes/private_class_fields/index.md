@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Classes/Private_class_fields
 translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 original_slug: Web/JavaScript/Reference/Classes/Приватные_поля_класса
 ---
+
 {{JsSidebar("Classes")}}
 
 Свойства класса по умолчанию являются общедоступными и могут быть рассмотрены или изменены вне класса. Тем не менее, есть [экспериментальное предложение](https://github.com/tc39/proposal-class-fields), позволяющее определить приватные поля класса, используя префикс хэша `#`.
@@ -193,7 +194,7 @@ new ClassWithPrivateAccessor();
 
 ## Совместимость с браузерами
 
-{{Compat("javascript.classes")}}
+{{Compat}}
 
 ## Смотрите также
 

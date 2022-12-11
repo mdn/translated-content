@@ -6,9 +6,10 @@ tags:
   - Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
+
 {{JSRef}}
 
-Статический метод **`Reflect`\*\***`.construct()`\*\* работает как [`new` operator](/ru/docs/Web/JavaScript/Reference/Operators/new). Он эквивалентен `new target(...args)`. Это также даёт дополнительную возможность указать другой прототип.
+Статический метод **`Reflect.construct()`** работает как [`new` operator](/ru/docs/Web/JavaScript/Reference/Operators/new). Он эквивалентен `new target(...args)`. Это также даёт дополнительную возможность указать другой прототип.
 
 {{EmbedInteractiveExample("pages/js/reflect-construct.html")}}
 

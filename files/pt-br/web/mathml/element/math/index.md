@@ -1,8 +1,8 @@
 ---
 title: <math>
 slug: Web/MathML/Element/math
-translation_of: Web/MathML/Element/math
 ---
+
 {{MathMLRef()}}
 
 The top-level element in MathML is `<math>`. Every valid MathML instance must be wrapped in `<math>` tags. In addition you must not nest a second `<math>` element in another, but you can have an arbitrary number of other child elements in it.
@@ -80,14 +80,14 @@ In addition to the following attributes, the `<math>` element accepts any attrib
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "https://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
 <head>
  <title>MathML in XHTML</title>
 </head>
 <body>
 
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <math xmlns="https://www.w3.org/1998/Math/MathML">
     <mrow>
       <mrow>
         <msup>

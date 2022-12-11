@@ -9,6 +9,7 @@ tags:
 browser-compat: javascript.builtins.Proxy.handler.isExtensible
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 ---
+
 {{JSRef}}
 
 **`handler.isExtensible()`** 메서드는 {{jsxref("Object.isExtensible()")}}에 대한 트랩입니다.

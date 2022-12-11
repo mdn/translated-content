@@ -44,4 +44,4 @@ The telnet client should display: `Local Echo is on`
 - {{ HTMLElement("code") }}
 - HTML 4.01 规范：[字体样式](http://www.w3.org/TR/html4/present/graphics.html#h-15.2)
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

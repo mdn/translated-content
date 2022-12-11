@@ -1,21 +1,8 @@
 ---
 title: Un primer acercamiento a JavaScript
 slug: Learn/JavaScript/First_steps/A_first_splash
-tags:
-  - Aprender
-  - Artículo
-  - CodingScripting
-  - Condicionales
-  - Funciones
-  - JavaScript
-  - Novato
-  - Objetos
-  - Operadores
-  - Variables
-  - eventos
-  - l10n:priority
-translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
 Ahora que has aprendido algo sobre la teoría de JavaScript y lo que puedes hacer con ella, te daremos un curso intensivo sobre las características básicas de JavaScript a través de un tutorial completamente práctico. Aquí crearás un sencillo juego de "Adivina el número", paso a paso.

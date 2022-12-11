@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Grouping
 original_slug: Web/JavaScript/Referencia/Operadores/Grouping
 ---
+
 {{jsSidebar("Operators")}}
 
 El operador de agrupación `( )` controla la precedencia de las expresiones a evaluar.
@@ -46,11 +47,7 @@ a * c + b * c // 9
 
 ## Especificaciones
 
-| Especificación                                                                               | Estatus                  | Comentario                                         |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------------------------------------------------- |
-| ECMAScript 1st Edition.                                                                      | Estándar                 | Definición inicial. Implementado en JavaScript 1.0 |
-| {{SpecName('ES5.1', '#sec-11.1.6', 'The Grouping Operator')}}             | {{Spec2('ES5.1')}} |                                                    |
-| {{SpecName('ES6', '#sec-grouping-operator', 'The Grouping Operator')}} | {{Spec2('ES6')}}     |                                                    |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

@@ -1,8 +1,8 @@
 ---
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
-translation_of: Web/JavaScript/Reference/Statements/debugger
 ---
+
 {{jsSidebar("Statements")}}
 
 A **declaração debug** invoca qualquer funcionalidade de depuração disponivel, como definir um breakpoint. Se nenhuma funcionalidade de depuração estiver disponivel, essa declaração não tem nenhum efeito.

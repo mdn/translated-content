@@ -26,9 +26,7 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ## 仕様
 
-| 仕様                                                                             | 状態                         | コメント |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Gamepad', '', 'The Gamepad API specification')}} | {{Spec2('Gamepad')}} | 初版     |
+{{Specifications}}
 
 ## ブラウザの互換性
 

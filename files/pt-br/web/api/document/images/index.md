@@ -1,8 +1,8 @@
 ---
 title: Document.images
 slug: Web/API/Document/images
-translation_of: Web/API/Document/images
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Summary
@@ -35,4 +35,4 @@ for(var i = 0; i < ilist.length; i++) {
 
 ## Especificação
 
-- [DOM Level 2 HTML: HTMLDocument.images](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
+- [DOM Level 2 HTML: HTMLDocument.images](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)

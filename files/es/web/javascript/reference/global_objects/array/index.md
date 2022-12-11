@@ -1,15 +1,9 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - JavaScript
-  - Matriz unidimensional
-  - Referencia
-  - Vector
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Array
 ---
+
 {{JSRef}}
 El objeto **`Array`** de JavaScript es un objeto global que es usado en la construcción de _arrays_, que son objetos tipo lista de alto nivel.
 
@@ -122,7 +116,7 @@ let copiaArray = vegetales.slice();
 // ["Repollo", "Zanahoria"]; ==> Copiado en "copiaArray"
 ```
 
-### Acceso a elementos de un _array_
+### Acceso a elementos de un array
 
 Los índices de los _arrays_ de JavaScript comienzan en cero, es decir, el índice del primer elemento de un _array_ es `0`, y el del último elemento es igual al valor de la propiedad `length` del _array_ restándole 1.
 
@@ -208,7 +202,7 @@ console.log(frutas.length)       // 2
 
 Hay más información sobre este tema en la página sobre [`Array.length`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/length).
 
-### Creación de un _array_ a partir de una expresión regular
+### Creación de un array a partir de una expresión regular
 
 El resultado de una búsqueda con una `RegExp` en un string puede crear un _array_ de JavaScript. Este array tendrá propiedades y elementos que proporcionan información sobre la correspondencia encontrada. Para obtener un _array_ de esta forma puede utilizarse `RegExp.exec()`, `String.match()` o `String.replace()`.
 
@@ -381,7 +375,7 @@ p,p,p,p, ,p,p,p
 t,c,a,d,r,a,c,t
 ```
 
-### Uso de un _array_ para tabular un conjunto de valores
+### Uso de un array para tabular un conjunto de valores
 
 ```js
 valores = []
@@ -413,9 +407,7 @@ da como resultado:
 
 ## Especificaciones
 
-| Especificación                                                           | Publicación inicial |
-| ------------------------------------------------------------------------ | ------------------- |
-| {{SpecName('ESDraft', '#sec-array-objects', 'Array')}} | ECMAScript 1        |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

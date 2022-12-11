@@ -4,6 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 Теперь, установив наше [окружение canvas](/ru/docs/Web/API/Canvas_API/Tutorial/Basic_usage), мы можем погрузиться в детали того, как рисовать в canvas. К концу этой статьи, вы научитесь рисовать прямоугольники, треугольники, линии, дуги и кривые, при условии что вы хорошо знакомы с основными геометрическими фигурами. Работа с путями весьма важна, когда рисуете объекты на canvas и мы увидим как это может быть сделано.
@@ -28,7 +29,7 @@ original_slug: Web/API/Canvas_API/Tutorial/Рисование_фигур
 Каждая из приведённых функций принимает несколько параметров:
 
 - _x_, _y_ устанавливают положение верхнего левого угла прямоугольника в canvas (относительно начала координат);
-- `width`(ширина) и `height`(высота) определяют размеры прямоугольника.
+- `width` (ширина) и `height` (высота) определяют размеры прямоугольника.
 
 Ниже приведена функция draw(), использующая эти три функции.
 

@@ -15,7 +15,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/websites
 
 {{AddonSidebar}}
 
-La propriété {{WebExtAPIRef("privacy.websites")}} contient les paramètres liés à la vie privée qui contrôlent la façon dont le navigateur interargit avec les sites web. Chaque propriété est un objet  {{WebExtAPIRef("types.BrowserSetting")}}.
+La propriété {{WebExtAPIRef("privacy.websites")}} contient les paramètres liés à la vie privée qui contrôlent la façon dont le navigateur interargit avec les sites web. Chaque propriété est un objet {{WebExtAPIRef("types.BrowserSetting")}}.
 
 Les valeurs par défaut de ces propriétés ont tendance à varier selon les navigateurs.
 
@@ -48,7 +48,7 @@ Les valeurs par défaut de ces propriétés ont tendance à varier selon les nav
 - `hyperlinkAuditingEnabled`
   - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si `true`, le navigateur envoie des pings d'audit lorsqu'un site web utilise l'attribut `ping` pour les demander.
 - `protectedContentEnabled`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Disponible uniquement sur Windows. Si`true`, le navigateur fournit un ID unique aux plugins afin d'exécuter le contenu protégé.
+  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Disponible uniquement sur Windows. Si `true`, le navigateur fournit un ID unique aux plugins afin d'exécuter le contenu protégé.
 - `referrersEnabled`
   - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si activé, le navigateur envoie les en-têtes de [référence](/fr/docs/Web/HTTP/Headers/Referer) avec vos demandes.
 - `resistFingerprinting`

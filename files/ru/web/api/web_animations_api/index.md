@@ -3,6 +3,7 @@ title: Web Animations API
 slug: Web/API/Web_Animations_API
 translation_of: Web/API/Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Веб-анимация")}} {{SeeCompatTable()}}
 
 API веб-анимации позволяет синхронизировать и сроки изменения представления веб-страницы, то есть анимации элементов DOM. Она делает это путём объединения двух моделей: Модель синхронизации и анимации модели.
@@ -24,7 +25,7 @@ Web Animations API (API веб-анимации) обеспечивает общ
 - {{Domxref("AnimationEffectTiming")}}
   - : Объект, содержащий временные свойства, возвращённые {{domxref("KeyframeEffect.timing", "сроки")}} атрибут {{domxref("KeyframeEffect")}}. Он наследует свои свойства от {{domxref("AnimationEffectTimingReadOnly")}}, но в не только чтение формы.
 - {{Domxref("SharedKeyframeList")}}
-  - : Представляет собой последовательность ключевых кадров , которые могут быть разделены между {{domxref("KeyframeEffect")}} объектов. Используя `SharedKeyframeList`объекты, несколько `KeyframeEffect`объектов могут повторно использовать одни и те же ключевые кадры , не заплатив стоимость разбора их несколько раз.
+  - : Представляет собой последовательность ключевых кадров , которые могут быть разделены между {{domxref("KeyframeEffect")}} объектов. Используя `SharedKeyframeList` объекты, несколько `KeyframeEffect` объектов могут повторно использовать одни и те же ключевые кадры , не заплатив стоимость разбора их несколько раз.
 - {{domxref("AnimationEffectTimingProperties")}}
   - : {{Domxref("Element.animate()")}}, {{domxref("KeyframeEffectReadOnly.KeyframeEffectReadOnly()")}} и {{domxref("KeyframeEffect.KeyframeEffect()")}} все принимают необязательный словарь объект синхронизации свойств.
 
@@ -32,14 +33,14 @@ Web Animations API (API веб-анимации) обеспечивает общ
 
 API веб - анимации добавляет некоторые новые функции в **{{domxref("документ")}}** и **{{domxref("элемент")}}.**
 
-### Расширения `Document`интерфейса
+### Расширения `Document` интерфейса
 
 - {{Domxref("document.timeline")}}
-  - : `DocumentTimeline`Объект , представляющий документ по умолчанию временную шкалу.
+  - : `DocumentTimeline` Объект , представляющий документ по умолчанию временную шкалу.
 - {{Domxref("document.getAnimations()")}}
   - : Возвращает массив {{domxref("Анимация")}} объектов в настоящее время действуют на элементах в `document`.
 
-### Расширения `Element`интерфейса
+### Расширения `Element` интерфейса
 
 - {{Domxref("Element.animate()")}}
 

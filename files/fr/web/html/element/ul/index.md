@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/ul
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<ul>`** représente une liste d'éléments sans ordre particulier. Il est souvent représenté par une liste à puces.
 

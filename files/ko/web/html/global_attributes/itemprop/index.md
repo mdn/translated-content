@@ -11,6 +11,7 @@ tags:
   - 마이크로데이터
 translation_of: Web/HTML/Global_attributes/itemprop
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemprop`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 아이템에 속성을 추가할 때 사용합니다. 모든 요소는 `itemprop` 특성을 가질 수 있으며, 하나의 `itemprop`은 키-값 쌍으로 구성됩니다. 각각의 키-값 쌍은 **속성**이라고 부르고, 하나 이상의 속성으로 구성한 그룹을 **아이템**이라고 부릅니다. 속성의 값으로는 문자열이나 {{glossary("URL")}}을 사용할 수 있고, {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, {{HTMLElement("video")}} 등 다양한 요소와 연관지을 수 있습니다.

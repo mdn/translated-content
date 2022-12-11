@@ -124,7 +124,7 @@ Flexbox makes this type of layout easy to achieve. I have contained my `<button>
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/input-button.html", '100%', 550)}}
 
-You could add a label or icon to the left as easily as we popped the button onto the right. I have added a label, and other than some styling for background colour I didn’t need to change the layout. The stretchy input field now has a little less space to play with but it uses the space left after the two items are accounted for.
+You could add a label or icon to the left as easily as we popped the button onto the right. I have added a label, and other than some styling for background colour I didn't need to change the layout. The stretchy input field now has a little less space to play with but it uses the space left after the two items are accounted for.
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/label-input-button.html", '100%', 550)}}
 

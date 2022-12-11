@@ -1,15 +1,9 @@
 ---
 title: Definições de Método
 slug: Web/JavaScript/Reference/Functions/Method_definitions
-tags:
-  - ECMAScript 2015
-  - Funções
-  - JavaScript
-  - Objeto
-  - Sintaxe
-translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 original_slug: Web/JavaScript/Reference/Functions/Definicoes_metodos
 ---
+
 {{JsSidebar("Functions")}}
 
 No ECMAScript 2015 foi introduzida uma sintaxe reduzida para definição de métodos em inicializadores de objetos. É uma abreviação para uma função atribuída ao nome do método.

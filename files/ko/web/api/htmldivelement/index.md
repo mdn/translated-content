@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/HTMLDivElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLDivElement`** 인터페이스는 {{domxref("HTMLElement")}} 인터페이스를 확장해, {{htmlelement("div")}} 요소를 조작할 때 사용할 수 있는 추가 속성을 제공합니다.

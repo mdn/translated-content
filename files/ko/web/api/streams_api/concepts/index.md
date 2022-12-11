@@ -4,6 +4,7 @@ slug: Web/API/Streams_API/Concepts
 translation_of: Web/API/Streams_API/Concepts
 original_slug: Web/API/Streams_API/컨셉
 ---
+
 {{apiref("Streams")}}
 
 The [Streams API](/ko/docs/Web/API/Streams_API) adds a very useful set of tools to the web platform, providing objects allowing JavaScript to programmatically access streams of data received over the network and process them as desired by the developer. Some of the concepts and terminology associated with streams might be new to you — this article explains all you need to know.

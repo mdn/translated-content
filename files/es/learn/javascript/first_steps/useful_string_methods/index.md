@@ -1,14 +1,8 @@
 ---
 title: Métodos útiles con cadenas
 slug: Learn/JavaScript/First_steps/Useful_string_methods
-tags:
-  - Artículo
-  - Cadenas
-  - JavaScript
-  - Métodos
-  - Principiante
-translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
 
 Ahora que hemos analizado los conceptos básicos de las cadenas, aumentemos la velocidad y comencemos a pensar qué operaciones útiles podemos hacer en cadenas con métodos integados, como encontrar la longitud de una cadena de texto, unir y dividir cadenas, sustituyendo un caracter de una cadena por otro, y más.

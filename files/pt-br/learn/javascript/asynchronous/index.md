@@ -1,26 +1,8 @@
 ---
 title: JavaScript Assíncrono
 slug: Learn/JavaScript/Asynchronous
-tags:
-  - Beginner
-  - CodingScripting
-  - Guide
-  - Guía
-  - Iniciante
-  - JavaScript
-  - Landing
-  - NeedsTranslation
-  - Promises
-  - TopicStub
-  - async
-  - asynchronous
-  - await
-  - callbacks
-  - requestAnimationFrame
-  - setInterval
-  - setTimeout
-translation_of: Learn/JavaScript/Asynchronous
 ---
+
 {{LearnSidebar}}Neste módulo vamos entender {{Glossary("JavaScript")}} [Assíncrono](/pt-BR/docs/Glossario/Assincrono), porque isso é importante e como pode ser usado para lidar com operações potencialmente bloqueantes, como a busca de recursos em um servidor remoto.
 
 ## Pre requisitos

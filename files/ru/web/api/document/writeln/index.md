@@ -3,6 +3,7 @@ title: Document.writeln()
 slug: Web/API/Document/writeln
 translation_of: Web/API/Document/writeln
 ---
+
 {{ ApiRef("DOM") }}
 
 Выводит в документ строку со знаком перевода каретки в конце.

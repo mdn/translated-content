@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/param
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<param>`** définit les paramètres qui peuvent être employés dans un élément {{HTMLElement("object")}}.
 

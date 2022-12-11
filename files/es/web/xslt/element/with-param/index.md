@@ -1,12 +1,9 @@
 ---
 title: with-param
 slug: Web/XSLT/Element/with-param
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/with-param
 original_slug: Web/XSLT/with-param
 ---
+
 {{XsltRef}}
 
 El elemento `<xsl:with-param>` establece el valor de un parámetro que se pasará a una plantilla.

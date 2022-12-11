@@ -9,6 +9,7 @@ tags:
   - 튜토리얼
 translation_of: Web/SVG/Tutorial/Introduction
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 
 ![](/@api/deki/files/348/=SVG_Overview.png)[SVG](/ko/SVG)는 [XHTML](/ko/XHTML)과 비슷한 [XML](/ko/XML) 언어로 오른쪽에 있는 것과 같은 그래픽을 그리는 데 사용된다. SVG 이미지는 필요한 모든 선과 모양을 직접 일일이 지정하거나, 이미 존재하는 래스터 이미지를 수정하거나, 이 두 가지 방법을 조합해서 만들 수 있다. 이미지와 그 구성요소들은 변형되고, 조합되고, 필터링될 수 있으며, 이를 통해 원래의 형태를 완전히 바꿀 수도 있다.

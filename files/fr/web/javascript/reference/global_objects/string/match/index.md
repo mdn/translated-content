@@ -90,7 +90,7 @@ console.log(tableau_correspondances);
 
 ### Utiliser un paramètre qui n'est pas une `RegExp`
 
-Lorsque le paramètre passé à la fonction est une chaîne de caractères ou un nombre, il est converti de façon implicite en un objet  {{jsxref("RegExp")}} grâce à `new RegExp(obj)`. Si c'est un nombre positif avec le signe +, la méthode `RegExp()` ignorera ce signe.
+Lorsque le paramètre passé à la fonction est une chaîne de caractères ou un nombre, il est converti de façon implicite en un objet {{jsxref("RegExp")}} grâce à `new RegExp(obj)`. Si c'est un nombre positif avec le signe +, la méthode `RegExp()` ignorera ce signe.
 
 ```js
 var str1 = "NaN signifie : qui n'est pas un nombre.";

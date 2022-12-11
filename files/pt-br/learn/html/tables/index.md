@@ -1,11 +1,9 @@
 ---
 title: Tabelas em HTML
 slug: Learn/HTML/Tables
-tags:
-  - tabelas
-translation_of: Learn/HTML/Tables
 original_slug: Aprender/HTML/Tables
 ---
+
 {{LearnSidebar}}
 
 Uma tarefa muito comum em HTML é estruturar os dados tabulares, e há vários elementos e atributos próprios para essa finalidade. Em conjunto com a linguagem [CSS](/pt-BR/docs/Learn/CSS) para estilização, o HTML torna fácil a exibição de tabelas com informação na Web, tais como o seu plano de lições escolares, o horário na sua piscina local, ou estatísticas sobre os seus dinossauros favoritos ou seu time de futebol favorito. Este módulo te guia por tudo que você precisa saber sobre a estruturação de dados tabulares utilizando o HTML.

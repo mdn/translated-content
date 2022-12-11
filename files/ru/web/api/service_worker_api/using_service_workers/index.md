@@ -5,7 +5,8 @@ tags:
   - основы ServiceWorker Workers руководство
 translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
-{{ServiceWorkerSidebar}}
+
+{{DefaultAPISidebar("Service Workers API")}}
 
 В данной статье содержится информация о начале работы с сервис-воркерами, включая базовую архитектуру, процесс регистрации, а также установку и активацию новых сервис-воркеров, обновление существующих сервис-воркеров, управление кешем и настраиваемые ответы и все это в контексте простого приложения с офлайн-функциональностью.
 
@@ -83,7 +84,7 @@ myFunction().then((value) => {
 
 Вместо этого мы можем написать собственный промис для работы с подобными случаями. (Вы можете найти исходный код в нашем примере [Promises test](https://github.com/mdn/promises-test) или взглянуть на [живое демо](https://mdn.github.io/promises-test/).)
 
-{{note("Реальные реализации сервис-воркеров скорее всего будут использовать <code>onfetch</code>, а не устаревающий XMLHttpRequest API. Эти возможности не используются здесь, так что можете сосредоточиться на изучении промисов.")}}
+> **Примечание:** Реальные реализации сервис-воркеров скорее всего будут использовать `onfetch`, а не устаревающий XMLHttpRequest API. Эти возможности не используются здесь, так что можете сосредоточиться на изучении промисов.
 
 ```js
 const imgLoad = (url) => {
@@ -438,7 +439,7 @@ Firefox также начал реализовывать полезные инс
 
 ## Смотрите также
 
-- [The Service Worker Cookbook](https://serviceworke.rs/)
+- [The Service Worker Cookbook](https://github.com/mdn/serviceworker-cookbook/)
 - [Готов ли ServiceWorker для использования?](https://jakearchibald.github.io/isserviceworkerready/)
 - Скачать [Service Workers 101 cheatsheet](https://mdn.mozillademos.org/files/12638/sw101.png).
 - [Promises](/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)

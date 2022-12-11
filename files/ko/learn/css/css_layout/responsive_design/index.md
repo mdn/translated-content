@@ -3,6 +3,7 @@ title: 반응형 디자인
 slug: Learn/CSS/CSS_layout/Responsive_Design
 original_slug: Learn/CSS/CSS_layout/반응형_디자인
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 
 웹디자인 초창기에는 페이지를 구축할 때 매우 구체적인 화면 크기를 공략 대상으로 삼았습니다. 사용자가 웹디자이너가 예상한 것보다 크거나 작은 화면의 기기를 가지고 있다면 원하지 않는 스크롤 막대에서부터 지나치게 긴 길이의 라인, 사용 공간이 부족하게 되는 결과를 낳습니다. 다양한 화면 크기가 등장함에 따라 _responsive web design_ 개념이 등장했습니다. 말하자면 서로 다른 화면 너비와 해상도 등에 맞게 웹 페이지가 레이아웃과 모양을 변경할 수 있는 일련의 실례를 집대성한 것입니다. 이 아이디어가 우리가 멀티 디바이스 웹에 대한 설계 방식을 바꾸게 만든 장본인입니다. 이 문서에서 우리는 그 내용을 숙달하기 위해 당신이 알아야하는 주요 기술을 이해하도록 도울 것입니다.

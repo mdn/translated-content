@@ -1,17 +1,9 @@
 ---
 title: transitionend
 slug: Web/API/Element/transitionend_event
-tags:
-  - DOM
-  - Event
-  - Referencia
-  - Transiciones CSS
-  - Transiciones CSS3
-  - TransitionEvent
-  - transitionend
-translation_of: Web/API/HTMLElement/transitionend_event
 original_slug: Web/API/HTMLElement/transitionend_event
 ---
+
 {{ APIRef }}
 
 El evento `transitionend` es lanzado cuando una [transición CSS](/es/docs/CSS/Using_CSS_transitions) se ha completado. Si la transición es eliminada antes de haberse completado, como cuando {{cssxref("transition-property")}} es eliminado o {{cssxref("display")}} se establece a `"none"`, entonces el evento no será generado.
@@ -19,7 +11,7 @@ El evento `transitionend` es lanzado cuando una [transición CSS](/es/docs/CSS/U
 ## Información general
 
 - Especificación
-  - : {{SpecName("CSS3 Transitions")}}
+  - : [CSS Transitions](https://drafts.csswg.org/css-transitions/)
 - Interfaz
   - : {{domxref("TransitionEvent")}}
 - Burbuja
@@ -66,5 +58,5 @@ element.addEventListener("transitionend", function(event) {
 
 La interfaz {{domxref("TransitionEvent")}}
 
-- {{event("transitionstart")}}, {{event("transitioncancel")}}
+- [`transitionstart`](/es/docs/Web/Reference/Events/transitionstart), [`transitioncancel`](/es/docs/Web/Reference/Events/transitioncancel)
 - Propiedades CSS: {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}.

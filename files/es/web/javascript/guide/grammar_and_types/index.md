@@ -9,6 +9,7 @@ tags:
   - literales
 translation_of: Web/JavaScript/Guide/Grammar_and_types
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 Este capítulo analiza la gramática básica de JavaScript, la declaración de variables, los tipos de datos y literales.
@@ -181,11 +182,11 @@ var x = 3;
  * Ejemplo 2
  */
 // devolverá un valor de undefined
-var myvar = 'my value';
+var myVar = 'my value';
 
 (function() {
   console.log(myVar); // undefined
-  var myvar = 'valor local';
+  var myVar = 'valor local';
 })();
 ```
 
@@ -202,12 +203,12 @@ x = 3;
 /**
  * Ejemplo 2
  */
-var myvar = 'my value';
+var myVar = 'my value';
 
 (function() {
   var myVar;
   console.log(myVar); // undefined
-  myvar = 'valor local';
+  myVar = 'valor local';
 })();
 ```
 
@@ -594,7 +595,7 @@ Puedes llamar a cualquiera de los métodos del objeto {{JSxRef("String")}} en un
 console.log("John's cat".length)  // En este caso, 10.
 ```
 
-En ES2015, también están disponibles las _plantillas literales_. Las plantillas literales están encerradas por la comilla invertida (`` ` ``) ({{Interwiki("wikipedia", "Acento_grave")}}) en lugar de comillas simples o dobles.
+En ES2015, también están disponibles las _plantillas literales_. Las plantillas literales están encerradas por la comilla invertida (`` ` ``) ([Acento_grave](https://es.wikipedia.org/wiki/Acento_grave)) en lugar de comillas simples o dobles.
 
 Las cadenas de las plantillas literales proporcionan azúcar sintáctica para construir cadenas. (Esto es similar a las funciones de interpolación de cadenas en Perl, Python y más).
 

@@ -3,6 +3,7 @@ title: Object.getOwnPropertyDescriptors()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
 ---
+
 {{JSRef}}
 
 Метод **`Object.getOwnPropertyDescriptors()`** возвращает все собственные дескрипторы свойств данного объекта.

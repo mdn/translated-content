@@ -16,7 +16,7 @@ Feature-Policy: screen-wake-lock <allowlist>;
 ```
 
 - \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#syntax) を参照してください。
+  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Headers/Feature-Policy#%E6%A7%8B%E6%96%87) を参照してください。
 
 ## 既定のポリシー
 
@@ -24,10 +24,7 @@ Feature-Policy: screen-wake-lock <allowlist>;
 
 ## 仕様書
 
-| 仕様書                                                                                                | 状態                        | 備考                                                     |
-| ----------------------------------------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------- |
-| {{SpecName('Feature Policy')}}                                                                        | {{Spec2('Feature Policy')}} | 初回定義                                         |
-| [Screen Wake Lock API](https://w3c.github.io/screen-wake-lock/#the-screen-wake-lock-powerful-feature) | 編集者草稿                  | `screen-wake-lock` 機能ディレクティブの初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

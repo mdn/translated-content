@@ -3,6 +3,7 @@ title: WeakMap.prototype.get()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/get
 ---
+
 {{JSRef}}
 
 Метод **`get()`** возвращает элемент из объекта WeakMap,

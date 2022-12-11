@@ -3,6 +3,7 @@ title: 새로운 지식을 사용하기
 slug: Learn/CSS/First_steps/Styling_a_biography_page
 original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 지난 몇 단원에서 배운 내용을 통해 CSS 를 사용하여 간단한 텍스트 문서의 서식을 지정하여 자신만의 스타일을 추가 할 수 있다는 것을 알게 될 것입니다. 이 평가는 그 기회를 제공합니다.

@@ -8,6 +8,7 @@ tags:
   - фрагментация
 translation_of: Web/CSS/orphans
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/CSS) `orphans` устанавливает _минимальное_ число строк в блочном контейнере, которое должно быть показано _внизу_ [страницы](/ru/docs/Web/CSS/Paged_Media), региона или [столбца](/ru/docs/Web/CSS/CSS_Columns).

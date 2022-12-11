@@ -1,13 +1,8 @@
 ---
 title: this
 slug: Web/JavaScript/Reference/Operators/this
-tags:
-  - Expressões Primárias
-  - JavaScript
-  - Operador
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators/this
 ---
+
 {{jsSidebar("Operators")}}
 
 A palavra-chave **`this`** comporta-se um pouco diferente em Javascript se comparado com outras linguagens. Também possui algumas diferenças entre o [modo estrito](/pt-BR/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto) e o modo não estrito.

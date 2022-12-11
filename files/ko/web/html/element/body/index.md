@@ -8,7 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/body
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<body>` 요소**는 HTML 문서의 내용을 나타냅니다. 한 문서에 하나의 `<body>` 요소만 존재할 수 있습니다.
 

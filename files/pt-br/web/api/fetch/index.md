@@ -1,17 +1,6 @@
 ---
 title: fetch()
 slug: Web/API/fetch
-translation_of: Web/API/fetch
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - GlobalFetch
-  - Method
-  - Reference
-  - request
-browser-compat: api.fetch
 ---
 
 {{APIRef("Fetch API")}}

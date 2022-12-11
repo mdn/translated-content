@@ -9,6 +9,7 @@ tags:
   - 프로토타입
 translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** 메서드는 {{jsxref("String")}} 객체의 원시값을 반환합니다.

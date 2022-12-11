@@ -4,6 +4,7 @@ slug: Glossary/Round_Trip_Time_(RTT)
 translation_of: Glossary/Round_Trip_Time_(RTT)
 original_slug: Глоссарий/Round_Trip_Time_(RTT)
 ---
+
 **Время приёма-передачи** (англ. Round Trip Time, RTT) - это время, которое требуется для отправки пакета данных в пункт назначения, плюс время, которое требуется для подтверждения того, что этот пакет был получен обратно. RTT между сетью и сервером может быть определён с помощью команды `ping`.
 
 ```shell

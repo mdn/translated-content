@@ -55,7 +55,7 @@ _{{DOMxRef("EventTarget")}} から継承したプロパティもあります。_
   - : 接続のリモート側の、設定とメディア情報を含むセッションを記述した {{DOMxRef("RTCSessionDescription")}} オブジェクトを返します。
     まだ設定されていない場合は、`null`を返します。
 - {{DOMxRef("RTCPeerConnection.sctp", "sctp")}} {{ReadOnlyInline}}
-  - : SCTP データを送受信するトランスポート層の {{Glossary("SCTP")}} を記述した  {{DOMxRef("RTCSctpTransport")}} オブジェクトを返します。
+  - : SCTP データを送受信するトランスポート層の {{Glossary("SCTP")}} を記述した {{DOMxRef("RTCSctpTransport")}} オブジェクトを返します。
     SCTP が交渉されていない場合、この値は `null` です。
 - {{DOMxRef("RTCPeerConnection.signalingState", "signalingState")}} {{ReadOnlyInline}}
   - : 他のピアに接続中または再接続中の、ローカル側のシグナリングプロセスの状態を記述した文字列を返します。

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Location/replace
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Метод **`Location.replace()`** заменяет текущий ресурс на новый по URL, указанному в качестве параметра. Отличие от {{domxref("Location.assign","assign()")}} в том, что при использовании `replace()` текущая страница не будет сохранена в {{domxref("History")}}, и пользователь не сможет использовать кнопку _назад_, чтобы вернуться к ней.

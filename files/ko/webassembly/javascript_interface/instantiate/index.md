@@ -4,6 +4,7 @@ slug: WebAssembly/JavaScript_interface/instantiate
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 ---
+
 {{JSRef}}
 
 **`WebAssembly.instantiate()`** 함수를 사용하면 WebAssembly 코드를 컴파일하고 인스턴스화 할 수 있습니다. 이 함수에는 두개의 overloads가 있습니다.

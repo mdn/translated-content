@@ -3,6 +3,7 @@ title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
 translation_of: Web/API/NodeList/forEach
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("NodeList")}} 인터페이스의 **`forEach()`** 메서드는 리스트 내의 각각의 값 쌍에 대해 매개 변수에 지정된 콜백을 삽입 순서로 호출합니다.

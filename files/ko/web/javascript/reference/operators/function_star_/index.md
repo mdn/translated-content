@@ -8,6 +8,7 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Reference/Operators/function*
 ---
+
 {{jsSidebar("Operators")}}
 
 **`function*`** keyword 는 표현식 내에서 generator function 을 정의합니다.

@@ -3,6 +3,7 @@ title: <select>
 slug: Web/HTML/Element/select
 translation_of: Web/HTML/Element/select
 ---
+
 **HTML тэг `<select>`** представляет собой элемент управления который содержит меню опций:
 
 | [Категории содержимого](/ru/docs/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [текстовый контент](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content), [интерактивный контент](/ru/docs/HTML/Content_categories#Interactive_content), [списочный](/ru/docs/HTML/Content_categories#Form_listed), [labelable](/ru/docs/HTML/Content_categories#Form_labelable), [сбрасываемый](/ru/docs/HTML/Content_categories#Form_resettable), и [submittable](/ru/docs/HTML/Content_categories#Form_submittable) [form-associated](/ru/docs/HTML/Content_categories#Form-associated_) element |
@@ -66,4 +67,4 @@ translation_of: Web/HTML/Element/select
 - Другие элементы форм: {{HTMLElement("form")}}, {{HTMLElement("legend")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("option")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 - События запускаемые `<select>`: [change.](/ru/docs/Web/Events/change)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

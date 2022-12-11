@@ -234,7 +234,7 @@ ES2015 より前は、二重等号と三重等号について、一方は他方�
 
 - [`- (単項否定演算子)`](/ja/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#-_.28Unary_Negation.29)
 
-  - :&#x20;
+  - : &#x20;
 
     ```js
     let stoppingForce = obj.mass * -obj.velocity;

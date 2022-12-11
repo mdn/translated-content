@@ -3,11 +3,12 @@ title: Element.classList
 slug: Web/API/Element/classList
 translation_of: Web/API/Element/classList
 ---
+
 {{APIRef("DOM")}}
 
 ## Описание
 
-Свойство** `classList`** возвращает псевдомассив {{domxref("DOMTokenList")}}, содержащий все классы элемента.
+Свойство **`classList`** возвращает псевдомассив {{domxref("DOMTokenList")}}, содержащий все классы элемента.
 
 > **Примечание:** У **classList** есть примитивная альтернатива - свойство **className,** которое содержит значение атрибута **class** элемента.
 

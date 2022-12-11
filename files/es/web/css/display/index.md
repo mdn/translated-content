@@ -1,12 +1,8 @@
 ---
 title: display
 slug: Web/CSS/display
-tags:
-  - CSS
-  - CSS Display
-  - Propiedades CSS
-translation_of: Web/CSS/display
 ---
+
 {{CSSRef}}
 
 La propiedad CSS **`display`** especifica si un elemento es tratado como [block or inline element](/es/docs/Web/CSS/CSS_Flow_Layout) y el diseño usado por sus hijos, como [flow layout](/es/docs/Web/CSS/CSS_Flow_Layout)(Diseño de Flujo), [grid](/es/docs/Web/CSS/CSS_Grid_Layout)(Cuadricula) o [flex](/es/docs/Web/CSS/CSS_Flexible_Box_Layout)(Flexible).
@@ -172,7 +168,7 @@ En la actualidad, es mejor especificar `display` utilizando una sola palabra cla
 
 ### `display: none;`
 
-Al utilizar un valor de `none`en la propiedad `display`el elemento se elimina del [árbol de accesibilidad](/es/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). El efecto de esto será que este elemento y sus hijos no serán anunciados a los lectores de pantalla utilizados por no videntes.
+Al utilizar un valor de `none` en la propiedad `display` el elemento se elimina del [árbol de accesibilidad](/es/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). El efecto de esto será que este elemento y sus hijos no serán anunciados a los lectores de pantalla utilizados por no videntes.
 
 Si deseas ocultar el elemento solo de forma visible, pero que los lectores de accesibilidad lo sigan anunciando, puedes utilizar [un método alternativo con una combinación de propiedades de CSS](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link).
 
@@ -220,14 +216,7 @@ Para más información por favor referirse a los siguientes artículos:
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                                   | Comentario                                                                                  |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------- |
-| {{SpecName ('CSS3 Display', '# the-display-properties', 'display')}} | {{Spec2 ('Pantalla CSS3')}}     | Agregado `run-in`, `flow`, `flow-root`, `contents`, y los valores de varias palabras clave. |
-| {{SpecName ('CSS3 Ruby', '# ruby-display', 'display')}}                     | {{Spec2 ('CSS3 Ruby')}}         | Agregado `ruby`, `ruby-base`, `ruby-text`, `ruby-base-container`, y `ruby-text-container`.  |
-| {{SpecName ('CSS3 Grid', '# grid-containers', 'display')}}                 | {{Spec2 ('Cuadrícula CSS3')}} | Se agregaron los valores del modelo de cuadrícula.                                          |
-| {{SpecName ('CSS3 Flexbox', '# flex-containers', 'display')}}             | {{Spec2 ('CSS3 Flexbox')}}     | Se agregaron los valores del modelo de caja flexible.                                       |
-| {{SpecName ('CSS2.1', 'visuren.html # display-prop', 'display')}}     | {{Spec2 ('CSS2.1')}}             | Se agregaron los valores del modelo de tabla e `inline-block.`                              |
-| {{SpecName ('CSS1', '#display', 'display')}}                                 | {{Spec2 ('CSS1')}}                 | Definición inicial. Valores básicos: `none`, `block`, `inline`, y `list-item`.              |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

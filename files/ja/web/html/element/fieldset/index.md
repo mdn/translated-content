@@ -3,7 +3,7 @@ title: '<fieldset>: フィールドセット要素'
 slug: Web/HTML/Element/fieldset
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<fieldset>` 要素**は、ウェブフォーム内のラベル ({{HTMLElement("label")}}) などのようにいくつかのコントロールをグループ化するために使用します。
 
@@ -137,11 +137,7 @@ slug: Web/HTML/Element/fieldset
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                  |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName('HTML WHATWG', 'forms.html#the-fieldset-element', '&lt;fieldset&gt;')}}     | {{Spec2('HTML WHATWG')}} | `fieldset` 要素を定義 |
-| {{SpecName('HTML5 W3C', 'sec-forms.html#the-fieldset-element', '&lt;fieldset&gt;')}} | {{Spec2('HTML5 W3C')}}     |                       |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.10', '&lt;fieldset&gt;')}}             | {{Spec2('HTML4.01')}}     | 初回定義              |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Guide/Introduction
 original_slug: Web/JavaScript/Guide/Введение_в_JavaScript
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Values,_variables,_and_literals")}}
 
 Данная глава является введением в JavaScript и рассматривает некоторые его фундаментальные концепции.
@@ -104,7 +105,7 @@ Web Console отлично подходит для выполнения один
 
 Если вы выберете "Display", то код в вашем блокноте будет выполнен в браузере, а результат вставлен обратно в блокнот как комментарий:
 
-![](https://mdn.mozillademos.org/files/13468/scratchpad.png)
+![](scratchpad.png)
 
 ### Hello world
 

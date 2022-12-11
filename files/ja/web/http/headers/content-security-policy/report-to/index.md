@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/report-to
 
 {{HTTPSidebar}}
 
-`Content-Security-Policy` の **_`Report-To`_** は HTTP のレスポンスヘッダーフィールドで、ユーザーエージェントにオリジンの報告先のエンドポイントを保存するよう指示します。
+`Content-Security-Policy` の **`Report-To`** は HTTP のレスポンスヘッダーフィールドで、ユーザーエージェントにオリジンの報告先のエンドポイントを保存するよう指示します。
 
 ```html
 Content-Security-Policy: …; report-to groupname

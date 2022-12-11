@@ -8,9 +8,10 @@ tags:
   - Экспериментальное
 translation_of: Web/API/Bluetooth
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-Объект **`Bluetooth`** интерфейса [Web Bluetooth API](/Web/API/Web_Bluetooth_API) возвращает объект {{jsxref("Promise")}} объекту {{domxref("BluetoothDevice")}} с указанными параметрами.
+Объект **`Bluetooth`** интерфейса [Web Bluetooth API](/ru/docs/Web/API/Web_Bluetooth_API) возвращает объект {{jsxref("Promise")}} объекту {{domxref("BluetoothDevice")}} с указанными параметрами.
 
 ## Интерфейс
 

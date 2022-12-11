@@ -1,19 +1,9 @@
 ---
 title: Iniciando com HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Codificação de Scripts
-  - Comentário
-  - Elemento
-  - Guía
-  - HTML
-  - Iniciante
-  - atributo
-  - espaço em branco
-  - referência de entidade
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 original_slug: Aprender/HTML/Introducao_ao_HTML/Getting_started
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 Neste artigo nós abordamos os princípios básicos do HTML, para você começar. Definimos os elementos, atributos e todos os outros termos importantes que você possa ter ouvido e onde eles se encaixam na linguagem. Também mostramos como um elemento HTML é estruturado, como uma página HTML típica é estruturada e explicamos outras importantes características básicas da linguagem. Ao longo do caminho, nós brincaremos com um pouco de HTML, para despertar seu interesse!
@@ -508,7 +498,7 @@ Neste código nós temos:
 
     ```
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     ```
 
     No entanto, atualmente, ninguém se importa com eles, e eles são realmente apenas um artefato histórico que precisa ser incluído para que tudo funcione corretamente. \<! DOCTYPE html> é a menor cadeia de caracteres que conta como um doctype válido; é tudo o que você realmente precisa saber.

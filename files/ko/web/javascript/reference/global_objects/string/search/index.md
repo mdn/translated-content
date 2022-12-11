@@ -3,6 +3,7 @@ title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 translation_of: Web/JavaScript/Reference/Global_Objects/String/search
 ---
+
 {{JSRef}}
 
 **`search()`** 메서드는 정규 표현식과 이 {{jsxref("String")}} 객체간에 같은 것을 찾기

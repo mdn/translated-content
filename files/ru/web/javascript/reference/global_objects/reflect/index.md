@@ -3,9 +3,10 @@ title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
+
 {{JSRef}}
 
-**Reflect** - это встроенный объект, который предоставляет методы для перехватываемых JavaScript операций. Эти методы аналогичны методам [proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)\`ов. `Reflect` - это не функциональный, а простой объект, он не является сконструированным.
+**Reflect** - это встроенный объект, который предоставляет методы для перехватываемых JavaScript операций. Эти методы аналогичны методам [proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler). `Reflect` - это не функциональный, а простой объект, он не является сконструированным.
 
 ## Описание
 
@@ -13,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 
 ## Методы
 
-Объект `Reflect` обеспечивает работу статических функций, называющиеся так же, как [методы proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler)\`а. Некоторые из этих методов - те же, что и соответствующие им методы класса {{jsxref("Object")}}.
+Объект `Reflect` обеспечивает работу статических функций, называющиеся так же, как [методы proxy handler](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler). Некоторые из этих методов - те же, что и соответствующие им методы класса {{jsxref("Object")}}.
 
 - {{jsxref("Reflect.apply()")}}
   - : Вызывает целевую функцию с аргументами, переданными в параметре `args`. Смотрите также {{jsxref("Function.prototype.apply()")}}.
@@ -32,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 - {{jsxref("Reflect.getPrototypeOf()")}}
   - : Аналогично {{jsxref("Object.getPrototypeOf()")}}.
 - {{jsxref("Reflect.has()")}}
-  - : Оператор [`in` ](/ru/docs/Web/JavaScript/Reference/Operators/in)как функция. Возвращает значение {{jsxref("Boolean")}} в зависимости от факта наличия собственного или наследованного свойства.
+  - : Оператор [`in`](/ru/docs/Web/JavaScript/Reference/Operators/in) как функция. Возвращает значение {{jsxref("Boolean")}} в зависимости от факта наличия собственного или наследованного свойства.
 - {{jsxref("Reflect.isExtensible()")}}
   - : Аналогично {{jsxref("Object.isExtensible()")}}.
 - {{jsxref("Reflect.ownKeys()")}}

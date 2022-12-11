@@ -1,16 +1,9 @@
 ---
 title: Document.activeElement
 slug: Web/API/Document/activeElement
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-translation_of: Web/API/DocumentOrShadowRoot/activeElement
-translation_of_original: Web/API/Document/activeElement
 original_slug: Web/API/DocumentOrShadowRoot/activeElement
 ---
+
 {{APIRef("DOM")}}
 
 Retorna o {{ domxref("Element", "elemento") }} atualmente em foco, ou seja, o elemento que receberá os eventos do teclado caso o usuário digite algo. Esse atributo é somente-leitura.

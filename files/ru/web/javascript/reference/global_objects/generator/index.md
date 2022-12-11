@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 ---
+
 {{JSRef}}
 
 **`Генератор`** - это объект, возвращаемый {{jsxref("Statements/function*", "функцией-генератором", "", 1)}} и соответствующий как ["Итерируемому" протоколу](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#iterable), так и [протоколу "Итератор"](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#iterator).

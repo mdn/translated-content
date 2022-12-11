@@ -1,19 +1,13 @@
 ---
 title: '::-moz-range-track'
 slug: Web/CSS/::-moz-range-track
-tags:
-  - CSS
-  - No estándar(2)
-  - Pseudo-elemento
-  - Pseudo-elemento CSS
-  - Referencia
-translation_of: Web/CSS/::-moz-range-track
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen
 
-El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements)`CSS`**`::-moz-range-track`** representa la trayectoría, es decir la ranura sobre la cual se desliza el indicador de un {{HTMLElement("input")}} con `type="range"`.
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-moz-range-track`** representa la trayectoría, es decir la ranura sobre la cual se desliza el indicador de un {{HTMLElement("input")}} con `type="range"`.
 
 > **Nota:** Si usamos `::-moz-range-track` con cualquier otra cosa que no sea un `<input type="range">` ni seleccionaremos nada ni se mostrará efecto alguno.
 
@@ -43,7 +37,7 @@ input[type=range]::-moz-range-track {
 
 Un barra de progreso con ese estilo tendrá una apariencia similar a la siguiente:
 
-![A range with the track green.](https://mdn.mozillademos.org/files/11999/Screen%20Shot%202015-12-04%20at%2010.14.34.png)
+![A range with the track green.](screen_shot_2015-12-04_at_10.14.34.png)
 
 ## Especificaciones
 

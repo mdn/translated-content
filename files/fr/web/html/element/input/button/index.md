@@ -3,7 +3,7 @@ title: <input type ="button">
 slug: Web/HTML/Element/input/button
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement [`click`](/fr/docs/Web/API/Element/click_event)).
 
@@ -138,7 +138,7 @@ function disableBtn() {
 
 Si l'attribut `disabled` n'est pas fourni, il est hérité depuis l'élément parent. De cette façon, on peut activer/désactiver des groupes d'éléments en les plaçant dans un conteneur (par exemple un élément {{HTMLElement("fieldset")}}) et en indiquant `disabled` sur le conteneur.
 
-C'est ce qu'illustre l'exemple suivant. Il est semblable à l'exemple précédent mais l'attribut  `disabled` est activé sur l'élément `<fieldset>` lorsqu'on appuie sur le premier bouton. Les trois autres boutons sont donc désactivés pendant deux secondes.
+C'est ce qu'illustre l'exemple suivant. Il est semblable à l'exemple précédent mais l'attribut `disabled` est activé sur l'élément `<fieldset>` lorsqu'on appuie sur le premier bouton. Les trois autres boutons sont donc désactivés pendant deux secondes.
 
 #### Exemple 2
 

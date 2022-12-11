@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
+
 {{JSRef}}
 
 O método **`fill()`** preenche todos os valores do array a partir do índice inicial a um índice final com um valor estático.

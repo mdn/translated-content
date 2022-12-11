@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/OffscreenCanvas/height
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`height`** 프로퍼티는 {{domxref("OffscreenCanvas")}} 객체에 할당된 높이를 반환합니다.
