@@ -11,7 +11,7 @@ original_slug: Web/Guide/CSS/Media_queries
 媒体查询常被用于以下目的：
 
 - 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at-rules](/zh-CN/docs/Web/CSS/At-rule) 用[CSS](/zh-CN/docs/Web/CSS) 装饰样式。
-- 用`media=` 属性为{{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}和其他[HTML](/zh-CN/docs/Web/HTML)元素指定特定的媒体类型。如：
+- 用 `media=` 属性为{{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}和其他[HTML](/zh-CN/docs/Web/HTML)元素指定特定的媒体类型。如：
 
 ```
 <link rel="stylesheet" src="styles.css" media="screen" />
@@ -29,43 +29,6 @@ original_slug: Web/Guide/CSS/Media_queries
 当媒体类型（如果指定）与在其上显示文档的设备匹配并且所有媒体功能表达式都计算为 true 时，媒体查询将计算为 true。涉及未知媒体类型的查询始终为 false。
 
 > **备注：** 即使媒体查询返回 false，带有媒体查询附加到其{{HTMLElement("link")}}标记的样式表[仍将下载](http://scottjehl.github.com/CSS-Download-Tests/)。但是，除非查询结果变为 true，否则其内容将不适用。
-
-### 媒体类型
-
-_媒体类型_（_Media types_）描述设备的一般类别。除非使用 `not` 或 `only` 逻辑操作符，媒体类型是可选的，并且会（隐式地）应用 `all` 类型。
-
-- `all`
-  - : 适用于所有设备。
-- `print`
-  - : 适用于在打印预览模式下在屏幕上查看的分页材料和文档。 （有关特定于这些格式的格式问题的信息，请参阅[分页媒体](/zh-CN/docs/Web/CSS/Paged_Media)。）
-- `screen`
-  - : 主要用于屏幕。
-- `speech`
-  - : 主要用于语音合成器。
-
-> **备注：** 被废弃的媒体类型：CSS2.1 和 [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) 定义了一些额外的媒体类型 (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, 以及 `aural`)，但是他们在[Media Queries 4](http://dev.w3.org/csswg/mediaqueries/#media-types) 中已经被废弃，并且不应该被使用。`aural`类型被替换为具有相似效果的`speech`。
-
-### 逻辑操作符
-
-_逻辑操作符_（_logical operators_）`not`、`and` 和 `only` 可用于联合构造复杂的媒体查询，您还可以通过用逗号分隔多个媒体查询，将它们组合为一个规则。
-
-#### `and`
-
-`and` 操作符用于将多个媒体查询规则组合成单条媒体查询，当每个查询规则都为真时则该条媒体查询为真，它还用于将媒体功能与媒体类型结合在一起。
-
-#### `not`
-
-`not`运算符用于否定媒体查询，如果不满足这个条件则返回 true，否则返回 false。如果出现在以逗号分隔的查询列表中，它将仅否定应用了该查询的特定查询。如果使用 not 运算符，则还必须指定媒体类型。
-
-> **备注：** 在 Level 3 中，`not`关键字不能用于否定单个媒体功能表达式，而只能用于否定整个媒体查询。
-
-#### `only`
-
-`only`运算符仅在整个查询匹配时才用于应用样式，并且对于防止较早的浏览器应用所选样式很有用。当不使用`only`时，旧版本的浏览器会将`screen and (max-width: 500px)`简单地解释为`screen`，忽略查询的其余部分，并将其样式应用于所有屏幕。如果使用`only`运算符，则*还必须指定*媒体类型。
-
-#### `,` (逗号)
-
-逗号用于将多个媒体查询合并为一个规则。逗号分隔列表中的每个查询都与其他查询分开处理。因此，如果列表中的任何查询为 true，则整个 media 语句均返回 true。换句话说，列表的行为类似于逻辑或`or`运算符。
 
 ## 定位媒体类型
 
