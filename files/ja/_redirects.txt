@@ -3534,7 +3534,7 @@
 /ja/docs/Web/API/ServiceWorkerContainer/oncontrollerchange	/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event
 /ja/docs/Web/API/ServiceWorkerContainer/onerror	/ja/docs/Web/API/ServiceWorkerContainer/error_event
 /ja/docs/Web/API/ServiceWorkerContainer/onmessage	/ja/docs/Web/API/ServiceWorkerContainer/message_event
-/ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/conflicting/Web/API/caches
+/ja/docs/Web/API/ServiceWorkerGlobalScope/caches	/ja/docs/Web/API/caches
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onactivate	/ja/docs/Web/API/ServiceWorkerGlobalScope/activate_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/onfetch	/ja/docs/Web/API/ServiceWorkerGlobalScope/fetch_event
 /ja/docs/Web/API/ServiceWorkerGlobalScope/oninstall	/ja/docs/Web/API/ServiceWorkerGlobalScope/install_event
