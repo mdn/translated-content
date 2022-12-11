@@ -5,7 +5,7 @@ slug: Web/CSS/@media
 
 {{CSSRef}}
 
-`@media` [CSS](/zh-CN/CSS) [@规则](/zh-CN/docs/Web/CSS/At-rule) 可用于基于一个或多个 [媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)的结果来应用样式表的一部分。使用它，您可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
+`@media` [CSS](/zh-CN/CSS) [@ 规则](/zh-CN/docs/Web/CSS/At-rule)可用于基于一个或多个[媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries)的结果来应用样式表的一部分。使用它，您可以指定一个媒体查询和一个 CSS 块，当且仅当该媒体查询与正在使用其内容的设备匹配时，该 CSS 块才能应用于该文档。
 
 > **备注：** 在 JavaScript 中，可以使用{{domxref("CSSMediaRule")}}CSS 对象模型接口访问使用 @media 创建的规则。
 
@@ -31,15 +31,74 @@ slug: Web/CSS/@media
 }
 ```
 
-有关媒体查询语法的讨论，请参阅[使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax)。
-
-### 正式语法
-
-{{csssyntax}}
+有关媒体查询语法的讨论，请参阅[使用媒体查询](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#语法)。
 
 ## 媒体特性
 
-{{page("/zh-CN/docs/Web/Guide/CSS/Media_queries","媒体特性")}}
+*媒体特性*描述了{{glossary("user agent", "用户代理")}}、输出设备或环境的具体特征。媒体特性表达式是完全可选的，其用于测试这些特征是否存在存在和它们的值。每个媒体特性表达式都必须用括号括起来。
+
+- {{cssxref("@media/any-hover", "any-hover")}}
+  - : 是否有任何可用的输入机制允许用户（将鼠标等）悬停在元素上。在 Media Queries Level 4 中被添加。
+- {{cssxref("@media/any-pointer", "any-pointer")}}
+  - : 可用的输入机制中是否有任何指针设备，如果有，它的精度如何？在 Media Queries Level 4 中被添加。
+- {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
+  - : 视口（viewport）的宽高比。
+- {{cssxref("@media/color", "color")}}
+  - : 输出设备每个像素的比特值，如果设备不支持输出彩色，则该值为 0。
+- {{cssxref("@media/color-gamut", "color-gamut")}}
+  - : 用户代理和输出设备大致程度上支持的色域。在 Media Queries Level 4 中被添加。
+- {{cssxref("@media/color-index", "color-index")}}
+  - : 输出设备的颜色查询表（color lookup table）中的条目数量，如果设备不使用颜色查询表，则该值为 0。
+- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
+  - : 输出设备的宽高比。已在 Media Queries Level 4 中被弃用。
+- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
+  - : 输出设备渲染表面（如屏幕）的高度。已在 Media Queries Level 4 中被弃用。
+- {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
+  - : 输出设备渲染表面（如屏幕）的宽度。已在 Media Queries Level 4 中被弃用。
+- {{cssxref("@media/display-mode", "display-mode")}}
+  - : 应用程序的显示模式，如 web app 的 manifest 中的 [`display`](/zh-CN/docs/Web/Manifest#display) 成员所指定。在 [Web App Manifest spec](https://w3c.github.io/manifest/#the-display-mode-media-feature) 中被定义。
+- {{cssxref("@media/dynamic-range", "dynamic-range")}}
+  - : 用户代理和输出设备支持的亮度、对比度和颜色深度的组合。在 Media Queries Level 5 中被添加。
+- {{cssxref("@media/forced-colors", "forced-colors")}}
+  - : 检测用户代理是否限制调色板。在 Media Queries Level 5 中被添加。
+- {{cssxref("@media/grid", "grid")}}
+  - : 输出设备使用网格屏幕还是点阵屏幕？
+- {{cssxref("@media/height", "height")}}
+  - : 视口的高度。
+- {{cssxref("@media/hover", "hover")}}
+  - : 主输入机制是否允许用户在元素上悬停。在 Media Queries Level 4 中被添加。
+- {{cssxref("@media/inverted-colors", "inverted-colors")}}
+  - : 用户代理或者底层操作系统是否反转了颜色。在 Media Queries Level 5 中被添加。
+- {{cssxref("@media/monochrome", "monochrome")}}
+  - : 输出设备单色帧缓冲区中每个像素的位深度。如果设备并非黑白屏幕，则该值为 0。
+- {{cssxref("@media/orientation", "orientation")}}
+  - : 视口的旋转方向。
+- {{cssxref("@media/overflow-block", "overflow-block")}}
+  - : 输出设备如何处理沿块轴溢出视口的内容。在 Media Queries Level 4 中被添加。
+- {{cssxref("@media/overflow-inline", "overflow-inline")}}
+  - : 沿内联轴溢出视口的内容是否可以滚动。在 Media Queries Level 4 中被添加。
+- {{cssxref("@media/pointer", "pointer")}}
+  - : 主输入机制是一个指针设备吗？如果是，它的精度如何？在 Media Queries Level 4 中被添加。
+- {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
+  - : 检测用户倾向于选择亮色还是暗色的配色方案。在 Media Queries Level 5 中被添加。
+- {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
+  - : 检测用户是否有向系统要求提高或降低相近颜色之间的对比度。在 Media Queries Level 5 中被添加。
+- {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
+  - : 用户是否希望页面上出现更少的动态效果。在 Media Queries Level 5 中被添加。
+- {{cssxref("@media/resolution", "resolution")}}
+  - : 输出设备的像素密度（分辨率）。
+- {{cssxref("@media/scripting", "scripting")}}
+  - : 检测脚本（例如 JavaScript）是否可用。在 Media Queries Level 5 中被添加。
+- {{cssxref("@media/update-frequency", "update")}} {{Experimental_Inline}}
+  - : 输出设备修改渲染内容的频率。在 Media Queries Level 4 中被添加。
+- {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
+  - : 用户代理的视频平面（video plane）和输出设备支持的亮度、对比度及颜色深度的组合。在 Media Queries Level 5 中被添加。
+- {{cssxref("@media/width", "width")}}
+  - : 视口的宽度，包括纵向滚动条的宽度。
+
+### 形式语法
+
+{{csssyntax}}
 
 ## 示例
 
