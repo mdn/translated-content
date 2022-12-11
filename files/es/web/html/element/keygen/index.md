@@ -1,9 +1,6 @@
 ---
 title: keygen
 slug: Web/HTML/Element/keygen
-tags:
-  - para_revisar
-translation_of: Web/HTML/Element/keygen
 original_slug: Web/HTML/Elemento/keygen
 ---
 

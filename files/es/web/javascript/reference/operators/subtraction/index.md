@@ -36,9 +36,7 @@ Operator: x - y
 
 ## Especificaciones
 
-| Specification                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-subtraction-operator-minus', 'Subtraction operator')}} |
+{{Specifications}}
 
 ## Compatibilidad entre exploradores
 

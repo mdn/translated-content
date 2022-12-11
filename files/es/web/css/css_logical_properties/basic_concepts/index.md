@@ -13,15 +13,15 @@ Tradicionalmente CSS ha medido las cosas de acuerdo con las dimensiones físicas
 
 Un ejemplo de por qué esas asignaciones podrían ser necesarias es el siguiente: tengo el diseño de una pantalla usando CSS Grid, el contenedor de la rejilla tiene un ancho y estoy usando las propiedades {{CSSxRef("align-self")}} y {{CSSxRef("justify-self")}} para alinear los elementos dentro del contenedor. Esas propiedades son de flujo relativo — `justify-self: start` alinea el elemento al inicio de la dimensión en línea, `align-self: start` hace lo mismo en la dimensión bloque.
 
-![A grid in a horizontal writing mode](https://mdn.mozillademos.org/files/16338/grid-horizontal-width-sm.png)
+![A grid in a horizontal writing mode](grid-horizontal-width-sm.png)
 
 Si ahora cambio el modo de escritura para este componente a `vertical-rl` usando la propiedad {{CSSxRef("writing-mode")}}, la alineación sigue trabajando de la misma forma. La dimensión en línea está ahora de forma vertical y la dimensión bloque de forma horizontal. Sin embargo, la rejilla no se ve igual ya que el ancho asignado para el contenedor es una medida horizontal, vinculada a la posición física y no a la posición lógica o al flujo relativo del texto.
 
-![A grid in vertical writing mode.](https://mdn.mozillademos.org/files/16339/grid-vertical-width-sm.png)
+![A grid in vertical writing mode.](grid-vertical-width-sm.png)
 
 Si en lugar de usar la propiedad `width` usamos la propiedad lógica {{CSSxRef("inline-size")}}, el componente funciona de la misma forma sin importar en qué modo de escritura se encuentre.
 
-![A grid layout in vertical writing mode](https://mdn.mozillademos.org/files/16337/grid-vertical-inline-size-small.png)
+![A grid layout in vertical writing mode](grid-vertical-inline-size-small.png)
 
 Puedes probar lo anterior en el siguiente ejemplo en vivo. Cambia la propiedad `writing-mode` de `vertical-rl` a `horizontal-tb` en `.box` para mirar cómo cambia el diseño con las diferentes propiedades.
 
@@ -39,11 +39,11 @@ La dimensión en bloque es la dimensión en la que los bloques —como los párr
 
 El siguiente diagrama muestra las direcciones de bloque y en línea en un modo de escritura horizontal:
 
-![diagram showing the inline axis running horizontally, block axis vertically.](https://mdn.mozillademos.org/files/16340/mdn-horizontal.png)
+![diagram showing the inline axis running horizontally, block axis vertically.](mdn-horizontal.png)
 
 El siguiente diagrama muestra las direcciones de bloque y en línea en un modo de escritura vertical:
 
-![Diagram showing the block axis running horizontally the inline axis vertically.](https://mdn.mozillademos.org/files/16341/mdn-vertical.png)
+![Diagram showing the block axis running horizontally the inline axis vertically.](mdn-vertical.png)
 
 ## Soporte en navegadores
 

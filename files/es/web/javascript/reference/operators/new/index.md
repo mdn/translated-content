@@ -152,9 +152,7 @@ car2.owner.name
 
 ## Especificaciones
 
-| Especificación                                                                       |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-new-operator', 'El operador new')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

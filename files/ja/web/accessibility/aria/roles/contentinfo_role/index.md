@@ -110,10 +110,7 @@ slug: Web/Accessibility/ARIA/Roles/Contentinfo_role
 
 ## 仕様
 
-| 仕様                                                                                                                     | 状態                                             |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#contentinfo","contentinfo landmark role")}}                                     | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_contentinfo","contentinfo landmark role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

@@ -1,14 +1,6 @@
 ---
 title: RSS
 slug: Glossary/RSS
-tags:
-  - Compartit
-  - Glosario
-  - Noticias
-  - RSS
-  - Web
-  - XML
-translation_of: Glossary/RSS
 ---
 
 _RSS_ (Really Simple Syndication en español Sindicación Realmente Simple) hace referencia a los diferentes formatos de [XML](/es/docs/Glossary/XML) diseñados para sitios web de noticias.

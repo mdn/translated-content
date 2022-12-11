@@ -1,11 +1,6 @@
 ---
 title: del
 slug: Web/HTML/Element/del
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/del
 original_slug: Web/HTML/Elemento/del
 ---
 
@@ -14,7 +9,7 @@ original_slug: Web/HTML/Elemento/del
 - El elemento `del` (deleted-borrado) marca las partes de un texto o documento que han sido suprimidas o sustituidas.
   - : **Sus etiquetas son**: \<del> y \</del> (ambas obligatorias).
   
-    **Crea una caja**: a veces [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: a veces [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea) a veces [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
     **Está definido como**:
 
@@ -140,4 +135,4 @@ Se visualiza así:
 
 ### Comentarios
 
-El elemento [del](es/HTML/Elemento/del) del tiene un opuesto, el elemento [ins](es/HTML/Elemento/ins). [del](es/HTML/Elemento/del), marca las partes descartadas e [ins](es/HTML/Elemento/ins) las insertadas.
+El elemento [del](/es/HTML/Elemento/del) del tiene un opuesto, el elemento [ins](/es/HTML/Elemento/ins). [del](/es/HTML/Elemento/del), marca las partes descartadas e [ins](/es/HTML/Elemento/ins) las insertadas.

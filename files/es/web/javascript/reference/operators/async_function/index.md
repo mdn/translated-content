@@ -75,9 +75,7 @@ agregar(10).then(v => {
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

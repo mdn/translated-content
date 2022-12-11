@@ -86,9 +86,7 @@ inputForm.onsubmit = function(event) {
 
 ## 仕様
 
-| 仕様書                                                                                                           | 策定状況                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---- |
-| {{SpecName('Web Speech API', '#utterance-attributes', 'SpeechSynthesisUtterance')}} | {{Spec2('Web Speech API')}} |      |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 

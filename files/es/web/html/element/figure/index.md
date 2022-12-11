@@ -1,13 +1,6 @@
 ---
 title: figure
 slug: Web/HTML/Element/figure
-tags:
-  - HTML
-  - HTML5
-  - HTML:Elemento
-  - figure
-  - para_revisar
-translation_of: Web/HTML/Element/figure
 original_slug: Web/HTML/Elemento/figure
 ---
 

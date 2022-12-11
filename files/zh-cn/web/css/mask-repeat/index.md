@@ -78,7 +78,7 @@ One or more `<repeat-style>` values, separated by commas.
   width: 250px;
   height: 250px;
   background: blue linear-gradient(red, blue);
-  mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
+  mask-image: url(star.svg);
   mask-repeat: repeat; /* 可在实时示例 live sample 中修改 */
   margin-bottom: 10px;
 }

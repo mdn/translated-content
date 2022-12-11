@@ -36,9 +36,7 @@ customElements.define('word-count', WordCount, { extends: 'p' });
 
 ## 仕様書
 
-| 仕様書                                                                                   | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', "custom-elements.html#attr-is", "is")}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

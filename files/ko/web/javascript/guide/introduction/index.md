@@ -105,7 +105,7 @@ Web Console은 한 줄 JavaScript를 실행하기에 훌륭합니다. 하지만 
 
 Scratchpad를 열기 위해, Firefox의 메뉴 "Tools" 의 하위에 있는 "Web Developer" 메뉴의 "Scratchpad" 를 선택합니다(단축키: <kbd>Shift</kbd>+<kbd>F4</kbd>). 이것은 분리된 창에서 열리고 브라우저에서 JavaScript를 작성하고 실행하기 위해 사용할 수 있는 에디터입니다. 여러분은 또한 디스크로부터 스크립트를 부르거나 저장할 수도 있습니다.
 
-![](https://mdn.mozillademos.org/files/13468/scratchpad.png)
+![](scratchpad.png)
 
 ### Hello world
 

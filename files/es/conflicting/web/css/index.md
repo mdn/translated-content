@@ -1,9 +1,6 @@
 ---
 title: Herramientas
 slug: conflicting/Web/CSS
-tags:
-  - CSS
-translation_of: Web/CSS/Tools
 original_slug: Web/CSS/Tools
 ---
 

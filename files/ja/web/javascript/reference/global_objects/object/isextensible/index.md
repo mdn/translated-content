@@ -26,7 +26,7 @@ Object.isExtensible(obj)
 
 ## 解説
 
-オブジェクトは既定では拡張可能です。つまり、新しいプロパティの追加が可能であり、 ({{jsxref("Object.proto", "__proto__")}} のプロパティに対応しているエンジンでは) `__proto__` プロパティを変更することができます。オブジェクトは {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, {{jsxref("Object.freeze()")}} の何れかを用いる事で拡張不能に設定する事が可能です。
+オブジェクトは既定では拡張可能です。つまり、新しいプロパティの追加が可能であり、[`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) のプロパティに対応しているエンジンでは) `__proto__` プロパティを変更することができます。オブジェクトは {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, {{jsxref("Object.freeze()")}} の何れかを用いる事で拡張不能に設定する事が可能です。
 
 ## 例
 

@@ -343,9 +343,7 @@ function testInfo(phoneInput) {
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp-regular-expression-objects', 'RegExp')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

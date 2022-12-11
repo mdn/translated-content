@@ -5,7 +5,7 @@ slug: Web/HTTP/Headers/Cache-Control
 
 {{HTTPSidebar}}
 
-El encabezado HTTP **`Cache-Control`** contiene _directivas_ (instrucciones) — tanto en peticiones como en respuestas — para controlar el almacenamiento temporal [(caching)](/en-US/docs/Web/HTTP/Caching) en navegadores y cachés compartidas (p. ej. Proxies, CDNs).
+El encabezado HTTP **`Cache-Control`** contiene _directivas_ (instrucciones) — tanto en peticiones como en respuestas — para controlar el almacenamiento temporal [(caching)](/es/docs/Web/HTTP/Caching) en navegadores y cachés compartidas (p. ej. Proxies, CDNs).
 
 <table class="properties">
   <tbody>

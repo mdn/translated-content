@@ -31,9 +31,7 @@ nsResolver = document.createNSResolver(node);
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('DOM3 XPath', 'xpath.html#XPathEvaluator-createNSResolver', 'document.createNSResolver')}} | {{Spec2('DOM3 XPath')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,7 +1,6 @@
 ---
 title: Block (CSS)
 slug: Glossary/Block/CSS
-translation_of: Glossary/Block/CSS
 ---
 
 Un **bloque** en una página web es un {{glossary("elemento")}} {{glossary("HTML")}} que aparece en una nueva línea, por ejemplo debajo del elemento precedente y encima del siguiente elemento (comúnmente conocido como _block-level element)_. Por ejemplo, visto que {{htmlelement("a")}} es un _elemento en línea_ — puedes colocar varios enlaces uno al lado del otro en el código HTML y no se posicionarán en la misma línea como uno al otro en la salida representada.
@@ -12,4 +11,4 @@ Usando la propiedad {{cssxref("display")}} puedes cambiar si un elemento se mues
 
 ### Conocimiento general
 
-- [Modelo de formato visual](/en-US/docs/Web/Guide/CSS/Visual_formatting_model)
+- [Modelo de formato visual](/es/docs/Web/Guide/CSS/Visual_formatting_model)

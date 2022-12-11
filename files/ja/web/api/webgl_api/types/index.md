@@ -46,11 +46,7 @@ slug: Web/API/WebGL_API/Types
 
 ## 仕様
 
-| 仕様書                                                                           | ステータス                                       | コメント             |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName('WebGL', "#5.1", "Types")}}                             | {{Spec2('WebGL')}}                         | 初期定義             |
-| {{SpecName('WebGL2', "#3.1", "Types")}}                             | {{Spec2('WebGL2')}}                         | 追加のタイプを定義   |
-| {{SpecName('EXT_disjoint_timer_query', "", "GLuint64EXT")}} | {{Spec2('EXT_disjoint_timer_query')}} | `GLuint64EXT` の追加 |
+{{Specifications}}
 
 ## あわせて参照
 

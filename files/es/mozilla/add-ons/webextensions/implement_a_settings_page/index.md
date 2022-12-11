@@ -1,22 +1,19 @@
 ---
 title: Implementar una página de configuración
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-tags:
-  - JavaScript
-translation_of: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 ---
 
 {{AddonSidebar}}
 
 Una página de configuración ofrece a los usuarios una manera de ver y cambiar los ajustes (algunas veces también llamados "preferencias" u "opciones") para el complemento.
 
-Con WebExtensions, los ajustes generalmente se almacenan utilizando la API [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) . La implementación de una página de configuración se realiza en un proceso de tres pasos:
+Con WebExtensions, los ajustes generalmente se almacenan utilizando la API [`storage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage) . La implementación de una página de configuración se realiza en un proceso de tres pasos:
 
 - Escribir un archivo HTML que muestre los ajustes y permita al usuario cambiarlos.
 - Escribir un script, incluido desde el archivo HTML , que establece la página de configuración desde su almacenamiento y actualiza los ajustes seleccionados cuando el usuario los modifica.
-- Establecer la ruta al archivo HTML como la clave [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) en manifest.json. Haciendo esto, el documento HTML se mostrará en el administrador de complementos del navegador, junto al nombre del complemento y su descripción.
+- Establecer la ruta al archivo HTML como la clave [`options_ui`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) en manifest.json. Haciendo esto, el documento HTML se mostrará en el administrador de complementos del navegador, junto al nombre del complemento y su descripción.
 
-> **Nota:** También puedes abrir esta página mediante programación utilizando la función [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) .
+> **Nota:** También puedes abrir esta página mediante programación utilizando la función [`runtime.openOptionsPage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) .
 
 ## Una sencilla ExtensionWeb
 
@@ -49,7 +46,7 @@ Crea un nuevo directorio llamado "configuración", a continuación crea un archi
 
 Este complemento da instrucciones al navegador para cargar un script de contenido llamado "borderify.js" en todas las páginas web que el usuario visita.
 
-Ten en cuenta que también hemos incluido la clave [`applications`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) . Necesitaremos esto (solamente en Firefox ) porque si hay un error, debemos establecer explícitamente (la identidad del complemento) [add-on ID](/es/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) , y también incluimos la clave de manifiesto `options_ui`. Aunque no utilicemos la clave `options_ui` en ese momento, lo haremos en la siguiente sección. Ver el [bug 1269545](https://bugzilla.mozilla.org/show_bug.cgi?id=1269454).
+Ten en cuenta que también hemos incluido la clave [`applications`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications) . Necesitaremos esto (solamente en Firefox ) porque si hay un error, debemos establecer explícitamente (la identidad del complemento) [add-on ID](/es/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) , y también incluimos la clave de manifiesto `options_ui`. Aunque no utilicemos la clave `options_ui` en ese momento, lo haremos en la siguiente sección. Ver el [bug 1269545](https://bugzilla.mozilla.org/show_bug.cgi?id=1269454).
 
 A continuación, crea un archivo llamado "borderify.js" en el directorio "configuración" , y añade el siguiente contenido :
 
@@ -59,7 +56,7 @@ document.body.style.border = "10px solid blue";
 
 Esto solo añade un borde azul a la página.
 
-Ahora [instala WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y comprueba — abre cualquier página web que te guste:
+Ahora [instala WebExtension](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y comprueba — abre cualquier página web que te guste:
 
 {{EmbedYouTube("E-WUhihF8fw")}}
 
@@ -100,8 +97,8 @@ En primer lugar, actualiza "manifest.json" para que tenga este contenido:
 
 Hemos añadido dos nuevas claves de manifiesto:
 
-- [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui): Esta establece un documento HTML que es la página de configuración (tambien llamada página de opciones) para este complemento.
-- [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): utilizaremos la API [`storage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage) para almacenar los ajustes, y necesitaremos pedir permiso para utilizar esta API.
+- [`options_ui`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui): Esta establece un documento HTML que es la página de configuración (tambien llamada página de opciones) para este complemento.
+- [`permissions`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): utilizaremos la API [`storage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage) para almacenar los ajustes, y necesitaremos pedir permiso para utilizar esta API.
 
 A continuacion, como hemos prometido crear "options.html", vamos a realizarlo. Crea un archivo con ese nombre en el directorio "configuración" , y añade el siguiente contenido:
 
@@ -150,8 +147,8 @@ document.querySelector("form").addEventListener("submit", saveOptions);
 
 Esto hace dos cosas:
 
-- Cuando el documento ha sido cargado, se obtiene el valor "color" desde el almacenamiento utilizando [`storage.local.get()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get). Si el valor no se ha establecido, utiliza por defecto "azul".
-- Cuando el usuario envía el formulario haciendo click en "guardar", se almacena el valor del cuadro de texto utilizando [`storage.local.set()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set).
+- Cuando el documento ha sido cargado, se obtiene el valor "color" desde el almacenamiento utilizando [`storage.local.get()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get). Si el valor no se ha establecido, utiliza por defecto "azul".
+- Cuando el usuario envía el formulario haciendo click en "guardar", se almacena el valor del cuadro de texto utilizando [`storage.local.set()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set).
 
 Finalmente, actualiza "borderify.js" para leer el color del borde del almacenamiento:
 
@@ -177,7 +174,7 @@ settings/
 
 Ahora:
 
-- [recarga WebExtension.](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)
+- [recarga WebExtension.](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)
 - carga una página web.
 - abre la página de configuración y cambia el color del borde.
 - recarga la página web para ver la diferencia.
@@ -190,7 +187,7 @@ En Firefox se puede accededer a la página de configuración visitando : complem
 
 - Documentación de referencia de la clave de manifiesto.[options_ui.](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)
 - Documentación de referencia de la API [storage.](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage)
-- Abrir la página de configuración directamente desde el complemento utilizando la API [`runtime.openOptionsPage().`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage)
+- Abrir la página de configuración directamente desde el complemento utilizando la API [`runtime.openOptionsPage().`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage)
 - Página de ejemplo de configuraciones:
 
   - [color-favorito.](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)

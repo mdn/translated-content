@@ -3,7 +3,7 @@ title: border-collapse
 slug: Web/CSS/border-collapse
 ---
 
-<< [Volver](es/Gu%c3%ada_de_referencia_de_CSS)
+<< [Volver](/es/Gu%c3%ada_de_referencia_de_CSS)
 
 ### Resumen
 

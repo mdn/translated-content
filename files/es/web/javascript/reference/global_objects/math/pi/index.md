@@ -1,12 +1,6 @@
 ---
 title: Math.PI
 slug: Web/JavaScript/Reference/Global_Objects/Math/PI
-tags:
-  - JavaScript
-  - Math
-  - Propiedad
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/PI
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/PI
 ---
 

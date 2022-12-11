@@ -1,11 +1,6 @@
 ---
 title: GlobalEventHandlers.onresize
 slug: Web/API/Window/resize_event
-tags:
-  - API
-  - DOM
-  - Propiedad
-translation_of: Web/API/GlobalEventHandlers/onresize
 original_slug: Web/API/GlobalEventHandlers/onresize
 ---
 

@@ -367,7 +367,7 @@ Nota que `() => x` es un atajo para `() => { return x; }`.
 
 Ahora tenemos una cadena determinística simple con un manejador de error adecuado.
 
-El uso de [async / await](/es/docs/Web/JavaScript/Reference/Statements/async_function) aborda la mayoría, si no todos estos problemas, la desventaja es que el error más común con esa sintaxis es olvidar la palabra clave [await](/en-US/docs/Web/JavaScript/Reference/Statements/async_function).
+El uso de [async / await](/es/docs/Web/JavaScript/Reference/Statements/async_function) aborda la mayoría, si no todos estos problemas, la desventaja es que el error más común con esa sintaxis es olvidar la palabra clave [await](/es/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ## Vea también
 

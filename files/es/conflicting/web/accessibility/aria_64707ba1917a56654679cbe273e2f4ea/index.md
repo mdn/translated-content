@@ -1,11 +1,6 @@
 ---
 title: Consejos básicos para formularios
 slug: conflicting/Web/Accessibility/ARIA_64707ba1917a56654679cbe273e2f4ea
-tags:
-  - ARIA
-  - Accesibilidad
-  - formulários
-translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
 ---
 

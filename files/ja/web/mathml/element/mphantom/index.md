@@ -16,7 +16,7 @@ MathML の `<mphantom>` 要素は、表示上は不可視だが一定の広が�
 
 ## 例
 
-Sample rendering: ![x+  z](mphantom.png)
+Sample rendering: ![x+ z](mphantom.png)
 
 Rendering in your browser: <math><mrow><mi>x </mi><mo>+ </mo><mphantom><mi>y </mi><mo>+ </mo></mphantom><mi>z</mi></mrow></math>
 
@@ -38,10 +38,7 @@ Rendering in your browser: <math><mrow><mi>x </mi><mo>+ </mo><mphantom><mi>y </m
 
 ## 仕様
 
-| Specification                                                                                | Status                       | Comment               |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mphantom', 'mphantom') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mphantom', 'mphantom') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
 ## ブラウザーごとの互換性
 

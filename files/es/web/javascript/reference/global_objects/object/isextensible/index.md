@@ -1,13 +1,6 @@
 ---
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
-tags:
-  - ECMAScript5
-  - JavaScript
-  - JavaScript 1.8.5
-  - Objeto
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/isExtensible
 ---
 
@@ -28,7 +21,7 @@ Object.isExtensible(obj)
 
 ## Descripción
 
-Los objetos son extendibles por defecto: ellos pueden tener propiedades nuevas agregadas a ellos, y (en motores que soportan {{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} la propiedad \_\_proto\_\_) pueden ser modificados. Un objeto puede ser marcado como no extendible usando {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, o {{jsxref("Object.freeze()")}}.
+Los objetos son extendibles por defecto: ellos pueden tener propiedades nuevas agregadas a ellos, y (en motores que soportan [`Object.prototype.__proto__`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} la propiedad \_\_proto\_\_) pueden ser modificados. Un objeto puede ser marcado como no extendible usando {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}}, o {{jsxref("Object.freeze()")}}.
 
 ## Ejemplos
 

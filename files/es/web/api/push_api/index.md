@@ -67,7 +67,7 @@ Mozilla's [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook
 
 ## See also
 
-- [¿Cómo usar la API Push?](Web/API/Push_API/Using_the_Push_API)
+- [¿Cómo usar la API Push?](/es/docs/Web/API/Push_API/Using_the_Push_API)
 - [Push API Demo](https://github.com/chrisdavidmills/push-api-demo), on Github
 - [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web), Matt Gaunt
 - [Service Worker API](/es/docs/Web/API/Service_Worker_API)

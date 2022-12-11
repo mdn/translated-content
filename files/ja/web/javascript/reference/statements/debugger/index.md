@@ -32,9 +32,7 @@ function potentiallyBuggyCode() {
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-debugger-statement', 'Debugger statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

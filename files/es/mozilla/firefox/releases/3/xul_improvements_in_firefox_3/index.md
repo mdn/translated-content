@@ -1,11 +1,6 @@
 ---
 title: Mejoras XUL en Firefox 3
 slug: Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3
-tags:
-  - Firefox 3
-  - Todas_las_Categorías
-  - XUL
-translation_of: Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3
 original_slug: Mejoras_XUL_en_Firefox_3
 ---
 

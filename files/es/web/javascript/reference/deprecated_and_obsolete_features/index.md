@@ -69,7 +69,7 @@ Las siguientes ahora son propiedades de instancias de `RegExp`, ya no del objeto
 
 - {{jsxref("Object.watch", "watch")}} y {{jsxref("Object.unwatch", "unwatch")}} están en desuso. En su lugar usa {{jsxref("Proxy")}}.
 - `__iterator__` está en desuso.
-- {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} está en desuso. En su lugar usa {{jsxref("Proxy")}}.
+- `Object.prototype.__noSuchMethod__` está en desuso. En su lugar usa {{jsxref("Proxy")}}.
 
 ### Métodos de `Date`
 
@@ -111,12 +111,12 @@ Estas características obsoletas se han eliminado por completo de JavaScript y y
 
 | Propiedad                                                                                | Descripción                                                                                      |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| {{jsxref("Global_Objects/Object/count", "__count__")}}                 | Devuelve el número de propiedades enumerables directamente en un objeto definido por el usuario. |
-| {{jsxref("Global_Objects/Object/Parent", "__parent__")}}             | Apunta al contexto de un objeto.                                                                 |
-| {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Evalúa una cadena de código JavaScript en el contexto del objeto especificado.                   |
-| {{jsxref("Object.observe()")}}                                                 | Observar de forma asincrónica los cambios en un objeto.                                          |
-| {{jsxref("Object.unobserve()")}}                                             | Elimina observadores.                                                                            |
-| {{jsxref("Object.getNotifier()")}}                                             | Crea un objeto que permite desencadenar sintéticamente un cambio.                                |
+| `__count__`                 | Devuelve el número de propiedades enumerables directamente en un objeto definido por el usuario. |
+| `__parent__`             | Apunta al contexto de un objeto.                                                                 |
+| `Object.prototype.eval()` | Evalúa una cadena de código JavaScript en el contexto del objeto especificado.                   |
+| `Object.observe()`                                                 | Observar de forma asincrónica los cambios en un objeto.                                          |
+| `Object.unobserve()`                                             | Elimina observadores.                                                                            |
+| `Object.getNotifier()`                                             | Crea un objeto que permite desencadenar sintéticamente un cambio.                                |
 
 ### Función
 

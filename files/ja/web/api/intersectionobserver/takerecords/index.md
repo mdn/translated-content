@@ -29,9 +29,7 @@ intersectionObserverEntries = intersectionObserver.takeRecords();
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                   | 状態                                         | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('IntersectionObserver','#dom-intersectionobserver-takerecords','IntersectionObserver.takeRecords()')}} | {{Spec2('IntersectionObserver')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

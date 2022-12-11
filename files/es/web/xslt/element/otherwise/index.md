@@ -1,10 +1,6 @@
 ---
 title: otherwise
 slug: Web/XSLT/Element/otherwise
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/otherwise
 original_slug: Web/XSLT/otherwise
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: Criptoanálisis
 slug: Glossary/Cryptanalysis
-tags:
-  - Criptografía
-  - Glosario
-  - Seguridad
-  - privacidad
-translation_of: Glossary/Cryptanalysis
 original_slug: Glossary/Criptoanálisis
 ---
 

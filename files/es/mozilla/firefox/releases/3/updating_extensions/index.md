@@ -1,9 +1,6 @@
 ---
 title: Actualizar extensiones para Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
-tags:
-  - Firefox 3
-translation_of: Mozilla/Firefox/Releases/3/Updating_extensions
 original_slug: Actualizar_extensiones_para_Firefox_3
 ---
 
@@ -68,8 +65,8 @@ La API del Administrador de descargas ha cambiado ligeramente debido a la transi
 Si tu extensión tiene acceso a información de inicio de sesión de usuario en el Administrador de contraseñas, deberás actualizarla para poder utilizar la nueva API para el Administrador de inicio de sesión.
 
 - El artículo [Utilizar nsILoginManager](/es/Using_nsILoginManager) incluye ejemplos y hasta una demostración de cómo debes escribir extensiones que funcionen tanto con el Administrador de contraseñas como con el Administrador de inicio de sesión, de manera que ambos funcionen con Firefox 3 y versiones anteriores.
-- [`nsILoginInfo`](/en-US/nsILoginInfo)
-- [`nsILoginManager`](/en-US/nsILoginManager)
+- [`nsILoginInfo`](/es/nsILoginInfo)
+- [`nsILoginManager`](/es/nsILoginManager)
 
 También puedes sobrescribir el almacén del administrador de contraseñas interno si quieres ofrecer tu propia implementación del almacén de contraseñas en la extensión. Visita [Crear un módulo de almacenamiento para el Administrador de inicio de sesión](/es/Creating_a_Login_Manager_storage_module) para más detalles
 

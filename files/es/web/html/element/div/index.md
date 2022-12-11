@@ -1,11 +1,6 @@
 ---
 title: div
 slug: Web/HTML/Element/div
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/div
 original_slug: Web/HTML/Elemento/div
 ---
 
@@ -18,7 +13,7 @@ original_slug: Web/HTML/Elemento/div
 
     **Crea una caja**: En bloque.
 
-    **Puede contener**: Texto, y/o cero o más elementos [en bloque](es/HTML/Elemento/Tipos_de_elementos#enbloque) o [en linea](es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **Puede contener**: Texto, y/o cero o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#enbloque) o [en linea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
 
 #### Atributos
 

@@ -1,12 +1,6 @@
 ---
 title: Hilo principal
 slug: Glossary/Main_thread
-tags:
-  - Actualización Web
-  - Glosario
-  - Referencia
-  - Web de rendimiento
-translation_of: Glossary/Main_thread
 original_slug: Glossary/Hilo_principal
 ---
 

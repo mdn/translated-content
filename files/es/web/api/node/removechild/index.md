@@ -19,7 +19,7 @@ elemento.removeChild(child);
 - `elemento` es el nodo padre de `hijo`.(ver nota mas abajo)
 - `antiguoHijo` tiene una referencia al hijo eliminado. `antiguoHijo === child`.
 
-El hijo(child) eliminado aún existe en memoria pero ya no es parte del DOM. Con la primera forma de sintaxis mostrada, se puede reutilizar el nodo eliminado más tarde en el código, por medio de la referencia al objeto `antiguoHijo`. Sin embargo, en la segunda forma, la referencia a `antiguoHijo` se pierde, y suponiendo que el código no mantenga una referencia a ese objeto en alguna otra parte, inmediatamente será inutilizable e irrecuperable y será [eliminada automáticamente](es/docs/Web/JavaScript/Gestion_de_Memoria)de memoria después de poco tiempo.
+El hijo(child) eliminado aún existe en memoria pero ya no es parte del DOM. Con la primera forma de sintaxis mostrada, se puede reutilizar el nodo eliminado más tarde en el código, por medio de la referencia al objeto `antiguoHijo`. Sin embargo, en la segunda forma, la referencia a `antiguoHijo` se pierde, y suponiendo que el código no mantenga una referencia a ese objeto en alguna otra parte, inmediatamente será inutilizable e irrecuperable y será [eliminada automáticamente](/es/docs/Web/JavaScript/Gestion_de_Memoria)de memoria después de poco tiempo.
 
 Si hijo(`child)` no es en realidad hijo del nodo `elemento`, el método lanza una excepción. Esto también sucederá si `child` es en realidad hijo de `elemento` al momento de llamar al método, pero fue eliminado por un controlador(manejador) de eventos(event handler) invocado en el curso de tratar de eliminar el elemento. (e.g. blur).
 

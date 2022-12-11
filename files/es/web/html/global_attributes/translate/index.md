@@ -1,12 +1,6 @@
 ---
 title: translate
 slug: Web/HTML/Global_attributes/translate
-tags:
-  - Atributos globales
-  - Experimental
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/translate
 original_slug: Web/HTML/Atributos_Globales/translate
 ---
 

@@ -140,9 +140,7 @@ console.table(textoNoEs.match(regexpEPU));
 
 ## Especificaciones
 
-| Especificación                                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-runtime-semantics-unicodematchproperty-p', 'RegExp: Escapes de propiedades Unicode')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

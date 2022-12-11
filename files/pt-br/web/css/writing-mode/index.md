@@ -159,7 +159,7 @@ O CSS que ajusta a direcionalidade do conteúdo é algo como esse:
 
 Essa é uma imagem mostrando o que o resultado deve parecer, no caso do suporte do seu navegador para `writing-mode` estiver incompleto.
 
-![](https://mdn.mozillademos.org/files/12201/writing-mode-actual-result.png)
+![](writing-mode-actual-result.png)
 
 ## Especificação
 

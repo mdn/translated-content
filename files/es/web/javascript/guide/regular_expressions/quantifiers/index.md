@@ -153,9 +153,7 @@ console.log(texto.match(regexpNoCodiciosa));
 
 ## Especificaciones
 
-| Especificación                                                                           |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-quantifier', 'RegExp: Quantifiers')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

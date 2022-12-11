@@ -195,9 +195,7 @@ console.log(naranjas_maduras); // [ 'naranja madura A ', 'naranja madura C' ]
 
 ## Especificaciones
 
-| Especificación                                                                       |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-assertion', 'RegExp: Aserciones')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -251,7 +251,7 @@ Se você tentar enviar o formulário com um horário incompleto (ou com um horá
 
 Here's a screenshot for those of you who aren't using a browser that supports `time` inputs:
 
-![](https://mdn.mozillademos.org/files/15405/firefox-validation-message.png)
+![](firefox-validation-message.png)
 
 > **Warning:** **Important**: HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to simply bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
 

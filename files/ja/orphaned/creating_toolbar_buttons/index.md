@@ -4,13 +4,13 @@ slug: orphaned/Creating_toolbar_buttons
 original_slug: Creating_toolbar_buttons
 ---
 
-この記事ではツールキットアプリケーション（Firefox、Thunderbird、Nvu など）に [オーバレイ](ja/XUL_Overlays) を使用してツールバーボタンを追加する方法を説明します。[XUL](ja/XUL) と [CSS](ja/CSS) の基礎知識を備えた [拡張機能](ja/Extension) の開発者が対象です。
+この記事ではツールキットアプリケーション（Firefox、Thunderbird、Nvu など）に [オーバレイ](/ja/XUL_Overlays) を使用してツールバーボタンを追加する方法を説明します。[XUL](/ja/XUL) と [CSS](/ja/CSS) の基礎知識を備えた [拡張機能](/ja/Extension) の開発者が対象です。
 
-また、Firefox の拡張機能の作り方の基礎に通じており、[Hello World 拡張機能](ja/Building_an_Extension) を動作させられることも前提です。別のチュートリアルも [利用可能](ja/Custom_Toolbar_Button) です。そちらは全体の過程を最初から見ていく形式です。
+また、Firefox の拡張機能の作り方の基礎に通じており、[Hello World 拡張機能](/ja/Building_an_Extension) を動作させられることも前提です。別のチュートリアルも [利用可能](/ja/Custom_Toolbar_Button) です。そちらは全体の過程を最初から見ていく形式です。
 
 ### オーバレイの作成
 
-はじめに、機能を強化させたいツールバーを含む文書への [オーバレイ](ja/XUL_Overlays) を作成する必要があります。オーバレイの説明はこのチュートリアルでは扱いません。[XUL チュートリアル](ja/XUL_Tutorial/Cross_Package_Overlays) をご覧ください。
+はじめに、機能を強化させたいツールバーを含む文書への [オーバレイ](/ja/XUL_Overlays) を作成する必要があります。オーバレイの説明はこのチュートリアルでは扱いません。[XUL チュートリアル](/ja/XUL_Tutorial/Cross_Package_Overlays) をご覧ください。
 
 文書をオーバレイするには、その文書の URI を知らなければなりません。よくオーバレイされる文書の URI は [このページの最後](#.E3.82.88.E3.81.8F.E3.82.AA.E3.83.BC.E3.83.90.E3.83.AC.E3.82.A4.E3.81.95.E3.82.8C.E3.82.8B.E3.83.84.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.82.92.E6.8C.81.E3.81.A4.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E3.83.AA.E3.82.B9.E3.83.88) にあります。
 
@@ -122,7 +122,7 @@ Customize Toolbar ウィンドウ (\<tt>chrome://global/content/customizeToolbar
 </RDF>
 ```
 
-Firefox/Thunderbird 1.5 向けの拡張機能では代わりに以下のような [chrome.manifest](ja/Chrome.manifest) を使用すべきです：
+Firefox/Thunderbird 1.5 向けの拡張機能では代わりに以下のような [chrome.manifest](/ja/Chrome.manifest) を使用すべきです：
 
 ```
 skin  myextension  classic/1.0  chrome/skin/
@@ -155,4 +155,4 @@ style chrome://global/content/customizeToolbar.xul chrome://myextension/skin/too
 - XulPlanet.com リファレンス: [`<toolbarbutton>`](http://xulplanet.com/references/elemref/ref_toolbarbutton.html)、[`<toolbaritem>`](http://xulplanet.com/references/elemref/ref_toolbaritem.html)
 - [ツールバーボタンのラベルの位置を調整する方法](http://forums.mozillazine.org/viewtopic.php?t=220220)
 - 拡張機能のインストール直後に（パレットにではなく）ツールバーにアイテムを追加することに関する [フォーラムのスレッド](http://forums.mozillazine.org/viewtopic.php?t=189667)。この方法は非推奨であることに注意。
-- MDC 上には SeaMonkey のさまざまなウィンドウにボタンを追加することについての [別のページ](ja/Custom_Toolbar_Button/SeaMonkey) があります。ChatZilla へのオーバレイについての便利な情報が載っています。
+- MDC 上には SeaMonkey のさまざまなウィンドウにボタンを追加することについての [別のページ](/ja/Custom_Toolbar_Button/SeaMonkey) があります。ChatZilla へのオーバレイについての便利な情報が載っています。

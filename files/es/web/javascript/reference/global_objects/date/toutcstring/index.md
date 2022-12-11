@@ -1,14 +1,6 @@
 ---
 title: Date.prototype.toUTCString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - UTC
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/toUTCString
 ---
 
@@ -58,9 +50,7 @@ var UTCstring = today.toUTCString(); // Wed, 14 Jun 2017 07:00:00 GMT
 
 ## Especificaciones
 
-| Especificación                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

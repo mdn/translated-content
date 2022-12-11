@@ -111,7 +111,7 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 На выходе получим нечто, подобное этому:
 
-**![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](https://mdn.mozillademos.org/files/12796/extra-video-features.png)**Новые параметры:
+**![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](extra-video-features.png)**Новые параметры:
 
 - **{{htmlattrxref("width","video")}} and {{htmlattrxref("height","video")}}**
   - : Вы можете контролировать размер видео либо с помощью этих атрибутов, либо с помощью {{Glossary("CSS")}}. В обоих случаях видео поддерживают собственное соотношение ширины и высоты — известное как соотношение сторон. Если соотношение сторон не поддерживается установленными вами размерами, видео будет увеличиваться, чтобы заполнить пространство по горизонтали, а заполненному пространству по умолчанию будет задан сплошной цвет фона.

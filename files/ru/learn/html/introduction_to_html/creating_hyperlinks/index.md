@@ -32,7 +32,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Создание_гиперс
 
 Например, домашняя страница BBC содержит большое количество ссылок, которые указывают не только на множество новостей, но и на различные области сайта (меню), страницы входа / регистрации (пользовательские инструменты) и многое другое.
 
-![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](https://mdn.mozillademos.org/files/12405/bbc-homepage.png)
+![frontpage of bbc.co.uk, showing many news items, and navigation menu functionality](bbc-homepage.png)
 
 ## Анатомия ссылки
 

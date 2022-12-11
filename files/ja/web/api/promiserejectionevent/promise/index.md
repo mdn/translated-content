@@ -35,9 +35,7 @@ window.onunhandledrejection = function(event) {
 
 ## 仕様
 
-| 仕様                                                                                                                                                     | ステータス                           | コメント   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#dom-promiserejectionevent-promise', 'PromiseRejectionEvent.promise')}} | {{ Spec2('HTML WHATWG') }} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

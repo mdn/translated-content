@@ -222,9 +222,7 @@ f()  // 6
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Definición de Funciones')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

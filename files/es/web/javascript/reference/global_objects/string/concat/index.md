@@ -65,9 +65,7 @@ let greetList = ['Hello', ' ', 'Venkat', '!']
 
 ## Especificaciones
 
-| Especificación                                                                                               |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

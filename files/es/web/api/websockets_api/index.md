@@ -1,7 +1,6 @@
 ---
 title: WebSockets
 slug: Web/API/WebSockets_API
-translation_of: Web/API/WebSockets_API
 ---
 
 {{DefaultAPISidebar("Websockets API")}}
@@ -12,7 +11,7 @@ translation_of: Web/API/WebSockets_API
 
 - [`WebSocket`](/es/docs/Web/API/WebSocket)
   - : El interfaz principal para conectar a un servidor Websocket y así enviar y recibir datos a través de la conexión.
-- [`CloseEvent`](/en-US/docs/Web/API/CloseEvent)
+- [`CloseEvent`](/es/docs/Web/API/CloseEvent)
   - : El evento enviado por el objeto WebSocket cuando se cierra la conexión.
 - [`MessageEvent`](/es/docs/Web/API/MessageEvent)
   - : El evento enviado por el objeto WebSocket cuando se recibe un mensaje enviado desde el servidor.

@@ -1,14 +1,6 @@
 ---
 title: 'HTML el atributo: minlength'
 slug: Web/HTML/Attributes/minlength
-tags:
-  - Entrada
-  - Input
-  - Referencia
-  - atributo
-  - minlength
-  - textarea
-translation_of: Web/HTML/Attributes/minlength
 original_slug: Web/HTML/Atributos/minlength
 ---
 

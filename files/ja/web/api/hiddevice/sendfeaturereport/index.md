@@ -20,7 +20,7 @@ sendFeatureReport(reportId, data)
 ### 引数
 
 - `reportId`
-  - :8 ビットのレポート ID です。HID デバイスがレポート ID を使わない場合、`0` を送信します。
+  - : 8 ビットのレポート ID です。HID デバイスがレポート ID を使わない場合、`0` を送信します。
 - `data`
   - : {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}} のいずれかで表されるバイト列です。
 

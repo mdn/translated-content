@@ -68,9 +68,7 @@ window.addEventListener('scroll', function(e) {
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('CSSOM View', '#scrolling-events')}} | {{Spec2('CSSOM View')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

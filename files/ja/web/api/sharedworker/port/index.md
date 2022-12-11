@@ -30,9 +30,7 @@ myWorker.port.start();
 
 ## 仕様
 
-| 仕様                                                                                                     | ステータス                       | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "#dom-sharedworker-port", "AbstractWorker.onerror")}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

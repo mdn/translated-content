@@ -36,9 +36,7 @@ sourceBuffer.appendWindowEnd = 120.0;
 
 ## 仕様
 
-| 仕様                                                                                                                                 | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-appendwindowend', 'appendWindowEnd')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

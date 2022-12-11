@@ -7,7 +7,7 @@ slug: Web/CSS/inheritance
 
 ### Resumen
 
-El resumen de cada [definición de propiedad CSS](es/Gu%c3%ada_de_referencia_de_CSS) indica si esa propiedad es heredada por defecto ("Inherit: Yes") o no ("Inherit: no"). Esto controla lo que sucede al no especificar un valor concreto para una propiedad de un elemento.
+El resumen de cada [definición de propiedad CSS](/es/Gu%c3%ada_de_referencia_de_CSS) indica si esa propiedad es heredada por defecto ("Inherit: Yes") o no ("Inherit: no"). Esto controla lo que sucede al no especificar un valor concreto para una propiedad de un elemento.
 
 ### Propiedades heredadas
 

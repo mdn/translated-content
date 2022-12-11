@@ -88,7 +88,7 @@ This type of field is set with the value `email` for the {{htmlattrxref("type","
 
 When this `type` is used, the user is required to type a valid e-mail address into the field; any other content causes the browser to display an error when the form is submitted. Note that this is client-side error validation, performed by the browser:
 
-![An invalid email input showing the message Please enter an email address.](https://mdn.mozillademos.org/files/14781/email-invalid.png)
+![An invalid email input showing the message Please enter an email address.](email-invalid.png)
 
 It's also possible to let the user type several e-mail addresses into the same input (separated by commas) by including the {{htmlattrxref("multiple","input")}} attribute.
 

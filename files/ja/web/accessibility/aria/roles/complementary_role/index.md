@@ -75,10 +75,7 @@ slug: Web/Accessibility/ARIA/Roles/Complementary_role
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                                             |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#complementary","ARIA: Complementary role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_complementary","Complementary landmark role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

@@ -1,11 +1,6 @@
 ---
 title: Escribiendo un servidor WebSocket en C#
 slug: Web/API/WebSockets_API/Writing_WebSocket_server
-tags:
-  - HTML5
-  - Tutorial
-  - WebSockets
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_server
 original_slug: Web/API/WebSockets_API/Escribiendo_servidor_WebSocket
 ---
 

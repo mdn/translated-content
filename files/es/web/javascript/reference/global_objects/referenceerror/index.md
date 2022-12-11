@@ -73,9 +73,7 @@ try {
 
 ## Especificaciones
 
-| Especificación                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-referenceerror', 'ReferenceError')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

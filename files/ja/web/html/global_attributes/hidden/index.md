@@ -23,11 +23,7 @@ slug: Web/HTML/Global_attributes/hidden
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考                                                                                          |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "interaction.html#the-hidden-attribute", "hidden")}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。                  |
-| {{SpecName('HTML WHATWG', "rendering.html#hiddenCSS", "Hidden elements")}}     | {{Spec2('HTML WHATWG')}} | CSS による `hidden` 属性のデフォルトレンダリング方法の案を定義                                |
-| {{SpecName('HTML5.1', "editing.html#the-hidden-attribute", "hidden")}}             | {{Spec2('HTML5.1')}}     | {{SpecName('HTML WHATWG')}} のスナップショットであり、この属性を初めて定義しました。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

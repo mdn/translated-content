@@ -9,7 +9,7 @@ translation_of: Web/API/NodeList
 
 {{APIRef("DOM")}}
 
-**`NodeList` **객체는 일반적으로 {{domxref("element.childNodes")}}와 같은 속성(property)과 {{domxref("document.querySelectorAll")}} 와 같은 메서드에 의해 반환되는 [노드](/ko/docs/Glossary/Node/DOM)의 콜렉션입니다.
+**`NodeList`** 객체는 일반적으로 {{domxref("element.childNodes")}}와 같은 속성(property)과 {{domxref("document.querySelectorAll")}} 와 같은 메서드에 의해 반환되는 [노드](/ko/docs/Glossary/Node/DOM)의 콜렉션입니다.
 
 > **참고:** `NodeList` 가 `Array` 는 아니지만, `forEach()` 를 사용하여 반복할 수 있습니다. 또한 {{jsxref("Array.from()")}} 을 사용하여 `Array` 로 변환 할 수도 있습니다.그러나 일부 오래된 브라우저는 아직`NodeList.forEach()` 또는 `Array.from()` 를 구현하지 않았습니다. 이것은 {{jsxref("Array.forEach()", "Array.prototype.forEach()")}} 를 사용하여 회피할 수 있습니다. — 이 [문서](#example)의 예제를 참조하세요.
 

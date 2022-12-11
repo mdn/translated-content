@@ -31,11 +31,11 @@ If you have Firefox for Android available, use it to navigate to our demo at `ht
 
 Tapping this will show a confirmation banner — pressing the big + _ADD TO HOME SCREEN_ button completes the action, adding the app to the Home screen. (Note: In Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.)
 
-![](https://mdn.mozillademos.org/files/15772/fx-a2hs-banner.png)
+![](fx-a2hs-banner.png)
 
 If you have Mobile Chrome available, the experience is slightly different; upon loading our site, you'll see an install banner pop up asking whether you want to add this app to your Home screen.
 
-![](https://mdn.mozillademos.org/files/15771/chrome-a2hs-banner.png)
+![](chrome-a2hs-banner.png)
 
 > **참고:** You can find out a lot more about Chrome install banners from the article [Web App Install Banners](https://developers.google.com/web/fundamentals/app-install-banners/).
 
@@ -193,7 +193,7 @@ The click handler contains the following steps:
 
 So when the button is clicked, the install prompt appears.
 
-![](https://mdn.mozillademos.org/files/16281/chrome-desktop-a2hs-banner.png)
+![](chrome-desktop-a2hs-banner.png)
 
 If the user selects _Install_, the app is installed (available as standalone desktop app), and the Install button no longer shows (the `onbeforeinstallprompt` event no longer fires if the app is already installed). When you open the app, it will appear in its own window:
 

@@ -235,7 +235,7 @@ Sin embargo. esta manera de pensar sobre los operadores de igualdad proporcionad
 
 ## Cuando usar `Object.is` o el igual triple
 
-Además de como trata [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN), generalmente, la única vez en la que [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is) posee un comportamiento especial hacia los ceros puede resultar de interés para usar ciertos esquemas de meta-programación, sobre todo en relación a los descriptores de porpiedades cuando es deseable que nuestro trabajo replique algunas de las características de [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Si en tu situación no requiere de esto, lo mejor es evitar [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is)y usar [`===.`](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)Incluso si entre tus requisitos está poseer que la comparación entre dos valores [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN)sea verdadera, generalmente es más fácil hacer un caso especial para ello (usando el método [`isNaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN)que está disponible en versiones previas de ECMAScript) que calcular cómo la operaciones van afectar a los posibles signos de los valores cero en tu comparación.
+Además de como trata [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN), generalmente, la única vez en la que [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is) posee un comportamiento especial hacia los ceros puede resultar de interés para usar ciertos esquemas de meta-programación, sobre todo en relación a los descriptores de porpiedades cuando es deseable que nuestro trabajo replique algunas de las características de [`Object.defineProperty`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Si en tu situación no requiere de esto, lo mejor es evitar [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is)y usar [`===.`](/es/docs/Web/JavaScript/Reference/Operators/Comparison_Operators)Incluso si entre tus requisitos está poseer que la comparación entre dos valores [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/NaN)sea verdadera, generalmente es más fácil hacer un caso especial para ello (usando el método [`isNaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/isNaN)que está disponible en versiones previas de ECMAScript) que calcular cómo la operaciones van afectar a los posibles signos de los valores cero en tu comparación.
 
 Aquí podemos ver una lista exhaustiva de los método y operadores nativos que pueden distinguir entre -0 y +0 en tu código:
 
@@ -277,11 +277,11 @@ Aquí podemos ver una lista exhaustiva de los método y operadores nativos que p
 
 <!---->
 
-- [`~`](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
+- [`~`](/es/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
   - : Empty
-- [`<<`](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
+- [`<<`](/es/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
   - : Empty
-- [`>>`](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
+- [`>>`](/es/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
   - : Cada uno de estos operadores usa el algoritmo ToInt32 de manera interna. Como sólo hay un representacion de 0 para el intero de 32-bit interno. -0 no sobrevivirá a la operación inversa. Por ejemplo Object.is(\~\~(-0), -0) y Object.is(-0 << 2 >> 2, -0) devolverán false.
 
 Confiar en [`Object.is`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/is) cuando no hay que tener en cuenta el signo de los ceros puede ser peligroso. Por supuesto para el caso contrario hará exactamente lo deseado.

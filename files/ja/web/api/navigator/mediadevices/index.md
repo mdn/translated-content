@@ -19,9 +19,7 @@ var mediaDevices = navigator.mediaDevices;
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                                 | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Media Capture', '#mediadevices', 'NavigatorUserMedia.mediaDevices')}} | {{Spec2('Media Capture')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

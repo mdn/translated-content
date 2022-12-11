@@ -105,7 +105,7 @@ Web Console отлично подходит для выполнения один
 
 Если вы выберете "Display", то код в вашем блокноте будет выполнен в браузере, а результат вставлен обратно в блокнот как комментарий:
 
-![](https://mdn.mozillademos.org/files/13468/scratchpad.png)
+![](scratchpad.png)
 
 ### Hello world
 

@@ -130,13 +130,13 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 
 나는 뷰포트 너비를 320px로 했다가 480px로 한다. 각 너비에서 나는 [DOM 검사기](/ko/docs/%EB%8F%84%EA%B5%AC%EB%93%A4/Page_Inspector)로 가서, 확인하고 싶은 {{htmlelement("img")}} 요소를 클릭한다. 그리고 화면의 오른쪽에 있는 박스 모델 뷰 탭에서 크기를 확인한다. 이렇게 하면 필요한 고유 너비를 알 수 있다.
 
-![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](https://mdn.mozillademos.org/files/12932/box-model-devtools.png)
+![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](box-model-devtools.png)
 
 다음으로 원하는 뷰포트 너비를 설정해서 어떤 `srcset`이 작동하는지 체크할 수 있다(예컨대, 좁게 설정할 수 있다). 네트워크 검사기(도구 > 웹 개발 도구 > 네트워크)를 열고, 페이지를 새로 고침 한다. 웹페이지를 만들기 위해 다운로드한 항목들을 보여 주는데, 따라서 어떤 이미지가 사용됐는지 여기서 확인할 수 있다.
 
 > **참고:** **알림:** 크롬에서 테스트할 때 캐시를 비활성화하라. 개발자 도구를 열고, **Network** 탭의 체크박스들 중 **Disable cache**에 체크하라. 이렇게 하지 않으면 크롬은 최적의 이미지보다 캐시된 이미지를 선호할 것이다.
 
-![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](https://mdn.mozillademos.org/files/12934/network-devtools.png)
+![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](network-devtools.png)
 
 ### 해상도 전환: 같은 크기, 다른 해상도
 

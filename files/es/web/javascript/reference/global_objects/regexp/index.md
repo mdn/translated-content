@@ -215,9 +215,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // registra 'xxx'
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp-regular-expression-objects', 'RegExp')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -3,7 +3,7 @@ title: Pixel manipulation with canvas
 slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
 直到目前為止，我們還沒真正了解 pixels 在 canvas 上的運用。使用`ImageData`物件，可直接對 pixel 裡的陣列資料**讀(read)**和**寫(write)**。在接下的內容中，也可了解到如何使影像平滑化(反鋸齒)及如何將影像保存在 canvas 之中。
 
@@ -81,7 +81,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ```js
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 img.onload = function() {
@@ -134,7 +134,7 @@ In this example we iterate over all pixels to change their values, then we put t
 
 ```js
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 img.onload = function() {
   draw(this);
 };
@@ -204,7 +204,7 @@ Because anti-aliasing is enabled by default, we might want to disable the smooth
 
 ```js
 var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = 'rhino.jpg';
 img.onload = function() {
   draw(this);
 };

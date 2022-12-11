@@ -27,9 +27,7 @@ slug: Web/API/CompositionEvent/CompositionEvent
 
 ## 仕様
 
-| 仕様書                                                                                                                   | 策定状況                         | 備考       |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('DOM3 Events','#dom-compositionevent-compositionevent','CompositionEvent()')}} | {{Spec2('DOM3 Events')}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

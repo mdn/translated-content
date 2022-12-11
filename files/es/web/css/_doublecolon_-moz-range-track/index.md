@@ -37,7 +37,7 @@ input[type=range]::-moz-range-track {
 
 Un barra de progreso con ese estilo tendrá una apariencia similar a la siguiente:
 
-![A range with the track green.](https://mdn.mozillademos.org/files/11999/Screen%20Shot%202015-12-04%20at%2010.14.34.png)
+![A range with the track green.](screen_shot_2015-12-04_at_10.14.34.png)
 
 ## Especificaciones
 

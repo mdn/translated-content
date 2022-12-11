@@ -70,7 +70,7 @@ typeof symObj;  // "object"
 - {{jsxref("Symbol.prototype")}}
   - : `symbol` 构造函数的原型。
 
-### 众所周知的 symbols
+### 内置通用（well-known）symbol
 
 除了自己创建的 symbol，JavaScript 还内建了一些在 ECMAScript 5 之前没有暴露给开发者的 symbol，它们代表了内部语言行为。它们可以使用以下属性访问：
 

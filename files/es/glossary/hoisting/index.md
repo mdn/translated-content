@@ -1,15 +1,11 @@
 ---
 title: Hoisting
 slug: Glossary/Hoisting
-tags:
-  - JavaScript
-  - hoisting
-translation_of: Glossary/Hoisting
 ---
 
-Hoisting es un término que _no_ encontrará utilizado en ninguna especificación previa a [ECMAScript® 2015 Language Specification](http://www.ecma-international.org/ecma-262/6.0/index.html). El concepto de Hoisting fue pensado como una manera general de referirse a cómo funcionan los contextos de ejecución en JavaScript (específicamente las fases de creación y ejecución). Sin embargo, el concepto puede ser un poco confuso al principio.
+Hoisting es un término que _no_ encontrará utilizado en ninguna especificación previa a la [Especificación del Lenguaje ECMAScript® 2015](http://www.ecma-international.org/ecma-262/6.0/index.html). El concepto de Hoisting fue pensado como una manera general de referirse a cómo funcionan los contextos de ejecución en JavaScript (específicamente las fases de creación y ejecución). Sin embargo, el concepto puede ser un poco confuso al principio.
 
-Conceptualmente, por ejemplo, una estricta definición de hoisting sugiere que las declaraciones de variables y funciones son físicamente movidas al comienzo del código, pero esto no es lo que ocurre en realidad. Lo que sucede es que las declaraciones de variables y funciones son **asignadas en memoria** durante la fase de __compilación__, pero quedan exactamente en dónde las has escrito en el código.
+Conceptualmente, por ejemplo, una estricta definición de hoisting sugiere que las declaraciones de variables y funciones son físicamente movidas al comienzo del código, pero esto no es lo que ocurre en realidad. Lo que sucede es que las declaraciones de variables y funciones son **asignadas en memoria** durante la fase de **compilación**, pero quedan exactamente en dónde las has escrito en el código.
 
 ## Aprenda más
 

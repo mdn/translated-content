@@ -1,8 +1,6 @@
 ---
 title: WorkerNavigator
 slug: Web/API/WorkerNavigator
-translation_of: Web/API/WorkerNavigator
-browser-compat: api.WorkerNavigator
 ---
 
 {{APIRef("Web Workers API")}}
@@ -32,7 +30,7 @@ _La interfaz `WorkerNavigator` no hereda ninguna propiedad._
 - {{DOMxRef("WorkerNavigator.onLine")}}{{ReadOnlyInline}}
   - : Retorna un valor booleano indicando si el navegador está en línea.
 - {{DOMxRef("WorkerNavigator.permissions")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Retorna un objeto {{DOMxRef("Permissions")}} que puede ser usado para consultar y actualizar el estado de permisos de las APIs que soportan la [Permissions API](/en-US/docs/Web/API/Permissions_API).
+  - : Retorna un objeto {{DOMxRef("Permissions")}} que puede ser usado para consultar y actualizar el estado de permisos de las APIs que soportan la [Permissions API](/es/docs/Web/API/Permissions_API).
 - {{DOMxRef("WorkerNavigator.platform")}} {{Deprecated_Inline}}{{ReadOnlyInline}}
   - : Retorna un `string` representando la plataforma del navegador. No confiar en esta propiedad para retornar el valor correcto.
 - {{DOMxRef("WorkerNavigator.product")}} {{Deprecated_Inline}}{{ReadOnlyInline}}

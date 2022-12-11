@@ -1,9 +1,6 @@
 ---
 title: Anfitrión
 slug: Glossary/Host
-tags:
-  - Glosario
-translation_of: Glossary/Host
 ---
 
 Un anfitrión (del ingles _host_) es un dispositivo conectado a {{glossary("Internet")}} (o una red de área local). Algunos anfitriones denominados {{glossary("server","servidores")}} ofrecen servicios adicionales como servir páginas web o alojar archivos y correos electrónicos.

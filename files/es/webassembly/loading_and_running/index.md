@@ -52,7 +52,7 @@ La función {{jsxref("WebAssembly.instantiate()")}} tiene dos formas de sobrecar
   instance : Instance // Una instancia nueva de WebAssembly.Instance del módulo}
 ```
 
-> **Nota:** Generalmente solo nos preocupamos de la instancia, pero resulta útil tener el módulo en caso de que querramos almacenarlo temporalmente (cache), compartirlo con otro proceso o ventana vía [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), o simplemente crear mas instancias.
+> **Nota:** Generalmente solo nos preocupamos de la instancia, pero resulta útil tener el módulo en caso de que querramos almacenarlo temporalmente (cache), compartirlo con otro proceso o ventana vía [`postMessage()`](/es/docs/Web/API/MessagePort/postMessage), o simplemente crear mas instancias.
 
 > **Nota:** La segunda forma de sobrecarga utiliza un objeto del tipo {{jsxref("WebAssembly.Module")}} como argumento y regresa un compromiso directo conteniendo la instancia del objeto como resultado. Vea el [Segundo ejemplo de sobrecarga](/es/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate#Second_overload_example).
 
@@ -79,7 +79,7 @@ WebAssembly.instantiateStreaming(fetch('myModule.wasm'), importObject)
 
 ## Utilizando XMLHttpRequest
 
-[`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) es de alguna forma más viejo que Fetch, pero se puede utilizar aún para obtener un arreglo de tipos. De nuevo, los pasos para utilizarlo, asumiendo que nuestro módulo se llama `simple.wasm`:
+[`XMLHttpRequest`](/es/docs/Web/API/XMLHttpRequest) es de alguna forma más viejo que Fetch, pero se puede utilizar aún para obtener un arreglo de tipos. De nuevo, los pasos para utilizarlo, asumiendo que nuestro módulo se llama `simple.wasm`:
 
 1. Crear una instancia nueva de {{domxref("XMLHttpRequest()")}} y utilizar su método {{domxref("XMLHttpRequest.open","open()")}} para abrir una petición, dejando el método de petición en `GET`, y declarando la ruta al alrchivo que queremos traer.
 2. La parte clave de esto es poner el tipo de respuesta al uso de `'arraybuffer'` por medio de la propiedad {{domxref("XMLHttpRequest.responseType","responseType")}}.
