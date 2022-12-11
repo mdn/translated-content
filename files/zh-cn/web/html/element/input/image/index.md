@@ -22,14 +22,14 @@ slug: Web/HTML/Element/Input/image
     <tr>
       <td><strong>支持的公共属性</strong></td>
       <td>
-        <a href="/zh-CN/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
-        <a href="/zh-CN/docs/Web/HTML/Element/input#src"><code>src</code></a>,
-        <a href="/zh-CN/docs/Web/HTML/Element/input#width"><code>width</code></a>,
-        <a href="/zh-CN/docs/Web/HTML/Element/input#height"><code>height</code></a>,
-        <a href="/zh-CN/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
-        <a href="/zh-CN/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
-        <a href="/zh-CN/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
-        <a href="/zh-CN/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
+        <a href="/zh-CN/docs/Web/HTML/Element/input#alt"><code>alt</code></a>、
+        <a href="/zh-CN/docs/Web/HTML/Element/input#src"><code>src</code></a>、
+        <a href="/zh-CN/docs/Web/HTML/Element/input#width"><code>width</code></a>、
+        <a href="/zh-CN/docs/Web/HTML/Element/input#height"><code>height</code></a>、
+        <a href="/zh-CN/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>、
+        <a href="/zh-CN/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>、
+        <a href="/zh-CN/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>、
+        <a href="/zh-CN/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>、
         <a href="/zh-CN/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
       </td>
     </tr>
@@ -60,9 +60,9 @@ slug: Web/HTML/Element/Input/image
 
 `alt` 属性提供一个备用字符串，在图像无法加载的情况下作为按钮的标注（由于错误，一个不能或者被设置为不能显示图像的 {{Glossary("user agent")}}，或用户正在使用屏幕阅读设备）。如果它被提供，它必须为非空字符串，且适合作为按钮的标签。
 
-例如，如果你有一个按钮，显示一个带有图标和/或图像文本“现在登录”的图片，您也应该设置 `alt` 属性为类似于 `现在登录` 的东西。
+例如，如果你有一个按钮，显示一个带有图标和/或图像文本“现在登录”的图片，你也应该设置 `alt` 属性为类似于 `现在登录` 的东西。
 
-> **注意：** 虽然 `alt` 属性在技术上是可选的，但是您总应该包含它，以最大限度地提高您的内容的可用性。在功能上，`<input type="image">` 元素的 `alt` 属性与 {{HTMLElement("img")}} 元素的 {{htmlattrxref("alt", "img")}} 属性相类似。
+> **备注：** 虽然 `alt` 属性在技术上是可选的，但是你总应该包含它，以最大限度地提高你的内容的可用性。在功能上，`<input type="image">` 元素的 `alt` 属性与 {{HTMLElement("img")}} 元素的 {{htmlattrxref("alt", "img")}} 属性相类似。
 
 ### formaction
 
@@ -77,11 +77,11 @@ slug: Web/HTML/Element/Input/image
 - `application/x-www-form-urlencoded`
   - : 这是默认值，它将会将表单数据在使用 {jsxref("encodeURI", "encodeURI()")}} 等算法进行 URL 编码后发送。
 - `multipart/form-data`
-  - : 使用 {{domxref("FormData")}} API 来管理数据，允许向服务器提交文件。您_必须_使用该编码方式，如果您的表单包含 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)) 的任何 {{HTMLElement("input")}} 元素。
+  - : 使用 {{domxref("FormData")}} API 来管理数据，允许向服务器提交文件。你_必须_使用该编码方式，如果你的表单包含 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)) 的任何 {{HTMLElement("input")}} 元素。
 - `text/plain`
   - : 纯文本；通常只在调试时有作用，你可以很容易看到要被提交的数据。
 
-如果该属性被指定，`formenctype` 属性的值将会覆盖表单的 {{htmlattrxref("action", "form")} 属性。
+如果该属性被指定，`formenctype` 属性的值将会覆盖表单的 {{htmlattrxref("action", "form")}} 属性。
 
 该属性也在 [`<input type="submit">`](/zh-CN/docs/Web/HTML/Element/input/submit) 和 {{HTMLElement("button")}} 元素上可用。
 
@@ -143,7 +143,7 @@ slug: Web/HTML/Element/Input/image
 
 ## 使用图像输入
 
-The `<input type="image">` element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element) (an element whose content isn't generated or directly managed by the CSS layer), behaving in much the same way as a regular {{htmlelement("img")}} element, but with the capabilities of a [submit button](/en-US/docs/Web/HTML/Element/input/submit).
+The `<input type="image">` element is a [replaced element](/zh-CN/docs/Web/CSS/Replaced_element) (an element whose content isn't generated or directly managed by the CSS layer), behaving in much the same way as a regular {{htmlelement("img")}} element, but with the capabilities of a [submit button](/zh-CN/docs/Web/HTML/Element/input/submit).
 
 ### 基本的图像输入特性
 
@@ -159,15 +159,15 @@ Let's look at a basic example that includes all the essential features you'd nee
   src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" />
 ```
 
-{{ EmbedLiveSample('Essential_image_input_features', 600, 50) }}
+{{ EmbedLiveSample('基本的图像输入特性', 600, 50) }}
 
-- The [`src`](/en-US/docs/Web/HTML/Element/input#src) attribute is used to specify the path to the image you want to display in the button.
-- The [`alt`](/en-US/docs/Web/HTML/Element/input#alt) attribute provides alt text for the image, so screen reader users can get a better idea of what the button is used for. It will also display if the image can't be shown for any reason (for example if the path is misspelled). If possible, use text which matches the label you'd use if you were using a standard submit button.
-- The [`width`](/en-US/docs/Web/HTML/Element/input#width) and [`height`](/en-US/docs/Web/HTML/Element/input#height) attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g. {{cssxref("padding")}}). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original aspect ratio.
+- The [`src`](/zh-CN/docs/Web/HTML/Element/input#src) attribute is used to specify the path to the image you want to display in the button.
+- The [`alt`](/zh-CN/docs/Web/HTML/Element/input#alt) attribute provides alt text for the image, so screen reader users can get a better idea of what the button is used for. It will also display if the image can't be shown for any reason (for example if the path is misspelled). If possible, use text which matches the label you'd use if you were using a standard submit button.
+- The [`width`](/zh-CN/docs/Web/HTML/Element/input#width) and [`height`](/zh-CN/docs/Web/HTML/Element/input#height) attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g. {{cssxref("padding")}}). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original aspect ratio.
 
 ### 覆盖表单默认行为
 
-`<input type="image">` elements — like regular [submit buttons](/en-US/docs/Web/HTML/Element/input/submit) — can accept a number of attributes that override the default form behavior:
+`<input type="image">` elements — like regular [submit buttons](/zh-CN/docs/Web/HTML/Element/input/submit) — can accept a number of attributes that override the default form behavior:
 
 - {{htmlattrdef("formaction")}}
   - : The URI of a program that processes the information submitted by the input element; overrides the {{htmlattrxref("action","form")}} attribute of the element's form owner.
@@ -195,7 +195,7 @@ Let's look at a basic example that includes all the essential features you'd nee
 
   - : A name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the {{htmlattrxref("target", "form")}} attribute of the element's form owner. The following keywords have special meanings:
 
-    - \_`self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
+    - `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context.
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.
     - `_top`: Load the response into the top-level browsing context (that is, the browsing context that is an ancestor of the current one, and has no parent). If there is no parent, this option behaves the same as `_self`.
@@ -204,13 +204,13 @@ Let's look at a basic example that includes all the essential features you'd nee
 
 When you submit a form using a button created with `<input type="image">`, two extra data points are submitted to the server automatically by the browser — `x` and `y`. You can see this in action in our [X Y coordinates example](https://mdn.github.io/learning-area/html/forms/image-type-example/xy-coordinates-example.html).
 
-When you click on the image to submit the form, you'll see the data appended to the URL as parameters, for example `?x=52&y=55`. If the image input has a [`name`](/en-US/docs/Web/HTML/Element/input#name) attribute, then keep in mind that the specified name is prefixed on every attribute, so if the `name` is `position`, then the returned coordinates would be formatted in the URL as `?position.x=52&position.y=55`. This, of course, applies to all other attributes as well.
+When you click on the image to submit the form, you'll see the data appended to the URL as parameters, for example `?x=52&y=55`. If the image input has a [`name`](/zh-CN/docs/Web/HTML/Element/input#name) attribute, then keep in mind that the specified name is prefixed on every attribute, so if the `name` is `position`, then the returned coordinates would be formatted in the URL as `?position.x=52&position.y=55`. This, of course, applies to all other attributes as well.
 
 These are the X and Y coordinates of the image that the mouse clicked on to submit the form, where (0,0) is the top-left of the image. These can be used when the position the image was clicked on is significant, for example you might have a map that when clicked, sends the coordinates that were clicked to the server. The server-side code then works out what location was clicked on, and returns information about places nearby.
 
 In our above example, we could write server-side code that works out what color was clicked on by the coordinates submitted, and keeps a tally of the favorite colors people voted for.
 
-### Adjusting the image's position and scaling algorithm
+### 调整图像的位置和缩放算法
 
 You can use the {{cssxref("object-position")}} property to adjust the positioning of the image within the `<input>` element's frame, and the {{cssxref("object-fit")}} property to control how the image's size is adjusted to fit within the frame. This allows you to specify a frame for the image using the `width` and `height` attributes to set aside space in the layout, then adjust where within that space the image is located and how (or if) it is scaled to occupy that space.
 
@@ -220,13 +220,13 @@ You can use the {{cssxref("object-position")}} property to adjust the positionin
 
 下面的例子显示和之前相同的按钮，但被包含在了一个典型登录表单的上下文中：
 
-{{ EmbedLiveSample('A_login_form', 600, 170) }}
+{{ EmbedLiveSample('一个登录表单', 600, 170) }}
 
 #### HTML
 
 ```html
 <form>
-  <p>登录到您的账户</p>
+  <p>登录到你的账户</p>
   <div>
     <label for="userId">用户 ID</label>
     <input type="text" id="userId" name="userId" />
@@ -266,13 +266,13 @@ label {
 
 在这个例子里，我们调整了之前的例子，为图像留出了更多空间，并使用 {{cssxref("object-fit")}} 和 {{cssxref("object-position")}} 来调节图像的大小和位置。
 
-{{EmbedLiveSample("Adjusting_the_image_position_and_scaling", 600, 300)}}
+{{EmbedLiveSample("调整图像的位置和缩放", 600, 300)}}
 
 #### HTML
 
 ```html
 <form>
-  <p>登录到您的账户</p>
+  <p>登录到你的账户</p>
   <div>
     <label for="userId">用户 ID</label>
     <input type="text" id="userId" name="userId" />
@@ -324,6 +324,6 @@ Here, `object-position` is configured to draw the image in the top-right corner 
 
 ## 参见
 
-- {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
-- Positioning and sizing the image within the `<input>` element's frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
-- [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- 实现它的 {{HTMLElement("input")}} 和 {{domxref("HTMLInputElement")}} 接口。
+- 在 `<input>` 元素的框架内改变图像的位置和大小：{{cssxref("object-position")}} and {{cssxref("object-fit")}}
+- [CSS 属性的兼容性](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
