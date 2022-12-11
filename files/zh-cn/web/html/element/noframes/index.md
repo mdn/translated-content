@@ -3,7 +3,7 @@ title: <noframes>
 slug: Web/HTML/Element/noframes
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 ## 概述
 

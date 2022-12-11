@@ -3,7 +3,7 @@ title: <param>
 slug: Web/HTML/Element/param
 ---
 
-{{deprecated_header}}
+{{HTMLSidebar}}{{Deprecated_Header}}
 
 ## 概要
 
