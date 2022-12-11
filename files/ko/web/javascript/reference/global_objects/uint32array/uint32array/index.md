@@ -14,6 +14,7 @@ new Uint32Array()
 new Uint32Array(length)
 new Uint32Array(typedArray)
 new Uint32Array(object)
+
 new Uint32Array(buffer)
 new Uint32Array(buffer, byteOffset)
 new Uint32Array(buffer, byteOffset, length)
