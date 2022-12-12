@@ -1,13 +1,6 @@
 ---
 title: Asignacion (=)
 slug: Web/JavaScript/Reference/Operators/Assignment
-tags:
-  - JS
-  - JavaScript
-  - Operador de Asignacion
-  - Operadores JavaScript
-  - Referências
-translation_of: Web/JavaScript/Reference/Operators/Assignment
 original_slug: Web/JavaScript/Referencia/Operadores/Asignacion
 ---
 

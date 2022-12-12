@@ -1,14 +1,6 @@
 ---
 title: Cuantificadores
 slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
-tags:
-  - Expresiones Regulares
-  - Guía
-  - JavaScript
-  - Referencia
-  - cuantificadores
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Cuantificadores
 ---
 
