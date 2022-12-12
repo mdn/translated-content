@@ -33718,37 +33718,5 @@
       "skyfore",
       "xgqfrms-GitHub"
     ]
-  },
-  "conflicting/Web/API/Document": {
-    "modified": "2019-03-23T22:10:39.057Z",
-    "contributors": ["littlemosquito", "lxcyha"]
-  },
-  "conflicting/Web/API/Element/shadowRoot": {
-    "modified": "2019-03-18T20:37:03.561Z",
-    "contributors": ["SphinxKnight", "CrazyMushroom"]
-  },
-  "conflicting/Web/API/Navigator": {
-    "modified": "2019-03-24T00:15:57.130Z",
-    "contributors": ["teoli", "AshfaqHossain", "ziyunfei"]
-  },
-  "conflicting/Web/API/Node": {
-    "modified": "2019-03-23T23:32:58.017Z",
-    "contributors": ["teoli", "AshfaqHossain", "ziyunfei"]
-  },
-  "conflicting/Web/API/VRPose": {
-    "modified": "2019-03-23T22:20:33.043Z",
-    "contributors": ["ajzeng"]
-  },
-  "conflicting/Web/API/Window": {
-    "modified": "2019-03-23T23:44:59.136Z",
-    "contributors": ["teoli", "khalid32", "ziyunfei", "Mickeyboy"]
-  },
-  "conflicting/Web/API/XMLDocument": {
-    "modified": "2019-04-24T21:14:27.334Z",
-    "contributors": ["ExE-Boss", "teoli", "ziyunfei"]
-  },
-  "conflicting/Web/API/XMLDocument_e7165fc663e6b211830a9ac924b0817e": {
-    "modified": "2019-03-24T00:15:45.480Z",
-    "contributors": ["teoli", "ziyunfei"]
   }
 }
