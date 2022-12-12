@@ -64,7 +64,7 @@ slug: Web/SVG/Tutorial/Getting_Started
 
   이 주제에 대해 깊이있게 다루기 위해 [이 문서](/ko/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)를 참조하십시오.
 
-- SVG에서 크기와 단위를 처리하는 방법에 대해서는 [다음 페이지](/en-US/docs/Web/SVG/Tutorial/Positions)에서 설명 할 것입니다.
+- SVG에서 크기와 단위를 처리하는 방법에 대해서는 [다음 페이지](/ko/docs/Web/SVG/Tutorial/Positions)에서 설명 할 것입니다.
 
 ### SVG 파일 형식
 
