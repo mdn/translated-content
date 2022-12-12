@@ -921,7 +921,7 @@
 /fr/docs/DOM/element.innerHTML	/fr/docs/Web/API/Element/innerHTML
 /fr/docs/DOM/element.insertAdjacentHTML	/fr/docs/Web/API/Element/insertAdjacentHTML
 /fr/docs/DOM/element.insertBefore	/fr/docs/Web/API/Node/insertBefore
-/fr/docs/DOM/element.isSupported	/fr/docs/Web/API/Node/isSupported
+/fr/docs/DOM/element.isSupported	/fr/docs/Web/API/Node
 /fr/docs/DOM/element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/DOM/element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/DOM/element.localName	/fr/docs/Web/API/Element/localName
@@ -1009,14 +1009,14 @@
 /fr/docs/DOM/window.matchMedia	/fr/docs/Web/API/Window/matchMedia
 /fr/docs/DOM/window.navigator	/fr/docs/Web/API/Window/navigator
 /fr/docs/DOM/window.navigator.battery	/fr/docs/Web/API/Navigator/getBattery
-/fr/docs/DOM/window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
+/fr/docs/DOM/window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator
 /fr/docs/DOM/window.navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/DOM/window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/DOM/window.onbeforeunload	/fr/docs/Web/API/Window/beforeunload_event
 /fr/docs/DOM/window.onload	/fr/docs/Web/API/Window/load_event
 /fr/docs/DOM/window.onpopstate	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/DOM/window.open	/fr/docs/Web/API/Window/open
-/fr/docs/DOM/window.openDialog	/fr/docs/Web/API/Window/openDialog
+/fr/docs/DOM/window.openDialog	/fr/docs/Web/API/Window
 /fr/docs/DOM/window.opener	/fr/docs/Web/API/Window/opener
 /fr/docs/DOM/window.parent	/fr/docs/Web/API/Window/parent
 /fr/docs/DOM/window.prompt	/fr/docs/Web/API/Window/prompt
@@ -1078,7 +1078,7 @@
 /fr/docs/DOM:element.id	/fr/docs/Web/API/Element/id
 /fr/docs/DOM:element.innerHTML	/fr/docs/Web/API/Element/innerHTML
 /fr/docs/DOM:element.insertBefore	/fr/docs/Web/API/Node/insertBefore
-/fr/docs/DOM:element.isSupported	/fr/docs/Web/API/Node/isSupported
+/fr/docs/DOM:element.isSupported	/fr/docs/Web/API/Node
 /fr/docs/DOM:element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/DOM:element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/DOM:element.localName	/fr/docs/Web/API/Element/localName
@@ -1157,7 +1157,7 @@
 /fr/docs/DOM:window.innerWidth	/fr/docs/Web/API/Window/innerWidth
 /fr/docs/DOM:window.location	/fr/docs/Web/API/window/location
 /fr/docs/DOM:window.navigator	/fr/docs/Web/API/Window/navigator
-/fr/docs/DOM:window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
+/fr/docs/DOM:window.navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator
 /fr/docs/DOM:window.navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/DOM:window.navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/DOM:window.onload	/fr/docs/Web/API/Window/load_event
@@ -3664,7 +3664,7 @@
 /fr/docs/Web/API/Document.open	/fr/docs/Web/API/Document/open
 /fr/docs/Web/API/Document.write	/fr/docs/Web/API/Document/write
 /fr/docs/Web/API/Document/Document.anchors	/fr/docs/Web/API/Document/anchors
-/fr/docs/Web/API/Document/async	/fr/docs/Web/API/XMLDocument/async
+/fr/docs/Web/API/Document/async	/fr/docs/Web/API/XMLDocument
 /fr/docs/Web/API/Document/createEntityReference	/fr/docs/Web/API/Document
 /fr/docs/Web/API/Document/defaultView/popstate_event	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Document/defaultView/storage_event	/fr/docs/Web/API/Window/storage_event
@@ -3679,6 +3679,7 @@
 /fr/docs/Web/API/Document/getBoxObjectFor	/fr/docs/Web/API/Element/getBoundingClientRect
 /fr/docs/Web/API/Document/height	/fr/docs/Web/API/Element/clientHeight
 /fr/docs/Web/API/Document/keypress_event	/fr/docs/Web/API/Element/keypress_event
+/fr/docs/Web/API/Document/mozSyntheticDocument	/fr/docs/Web/API/Document
 /fr/docs/Web/API/Document/onafterscriptexecute	/fr/docs/Web/API/Document/afterscriptexecute_event
 /fr/docs/Web/API/Document/onbeforescriptexecute	/fr/docs/Web/API/Document/beforescriptexecute_event
 /fr/docs/Web/API/Document/onfullscreenchange	/fr/docs/Web/API/Document/fullscreenchange_event
@@ -3739,7 +3740,7 @@
 /fr/docs/Web/API/Element.innertHTML	/fr/docs/Web/API/Element/innerHTML
 /fr/docs/Web/API/Element.insertAdjacentHTML	/fr/docs/Web/API/Element/insertAdjacentHTML
 /fr/docs/Web/API/Element.insertBefore	/fr/docs/Web/API/Node/insertBefore
-/fr/docs/Web/API/Element.isSupported	/fr/docs/Web/API/Node/isSupported
+/fr/docs/Web/API/Element.isSupported	/fr/docs/Web/API/Node
 /fr/docs/Web/API/Element.lang	/fr/docs/Web/API/HTMLElement/lang
 /fr/docs/Web/API/Element.lastChild	/fr/docs/Web/API/Node/lastChild
 /fr/docs/Web/API/Element.localName	/fr/docs/Web/API/Element/localName
@@ -3876,10 +3877,11 @@
 /fr/docs/Web/API/Media_Streams_API	/fr/docs/Web/API/Media_Capture_and_Streams_API
 /fr/docs/Web/API/Media_Streams_API/Taking_still_photos	/fr/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /fr/docs/Web/API/Navigator.getGamepads	/fr/docs/Web/API/Navigator/getGamepads
-/fr/docs/Web/API/Navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator/mozIsLocallyAvailable
+/fr/docs/Web/API/Navigator.isLocallyAvailable	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/Navigator.onLine	/fr/docs/Web/API/Navigator/onLine
 /fr/docs/Web/API/Navigator.registerProtocolHandler	/fr/docs/Web/API/Navigator/registerProtocolHandler
 /fr/docs/Web/API/Navigator/battery	/fr/docs/Web/API/Navigator/getBattery
+/fr/docs/Web/API/Navigator/mozIsLocallyAvailable	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/NavigatorLanguage	/fr/docs/Web/API/Navigator
 /fr/docs/Web/API/NavigatorLanguage/language	/fr/docs/Web/API/Navigator/language
 /fr/docs/Web/API/NavigatorLanguage/languages	/fr/docs/Web/API/Navigator/languages
@@ -3892,6 +3894,7 @@
 /fr/docs/Web/API/Node.contains	/fr/docs/Web/API/Node/contains
 /fr/docs/Web/API/Node/baseURIObject	/fr/docs/Web/API/Node
 /fr/docs/Web/API/Node/innerText	/fr/docs/Web/API/HTMLElement/innerText
+/fr/docs/Web/API/Node/isSupported	/fr/docs/Web/API/Node
 /fr/docs/Web/API/Node/localName	/fr/docs/Web/API/Element/localName
 /fr/docs/Web/API/Node/namespaceURI	/fr/docs/Web/API/Element/namespaceURI
 /fr/docs/Web/API/Node/nodePrincipal	/fr/docs/Web/API/Node
@@ -3932,6 +3935,7 @@
 /fr/docs/Web/API/Selection.toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/Web/API/ServiceWorker/onstatechange	/fr/docs/Web/API/ServiceWorker/statechange_event
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/Web/API/ServiceWorker/state
+/fr/docs/Web/API/SharedWorkerGlobalScope/applicationCache	/fr/docs/Web/API/SharedWorkerGlobalScope
 /fr/docs/Web/API/SharedWorkerGlobalScope/onconnect	/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/Web/API/Window/localStorage
 /fr/docs/Web/API/StorageEstimate	/fr/docs/Web/API/StorageManager/estimate
@@ -3998,7 +4002,7 @@
 /fr/docs/Web/API/Window.onload	/fr/docs/Web/API/Window/load_event
 /fr/docs/Web/API/Window.onpopstate	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/Web/API/Window.onresize	/fr/docs/Web/API/Window/resize_event
-/fr/docs/Web/API/Window.openDialog	/fr/docs/Web/API/Window/openDialog
+/fr/docs/Web/API/Window.openDialog	/fr/docs/Web/API/Window
 /fr/docs/Web/API/Window.opener	/fr/docs/Web/API/Window/opener
 /fr/docs/Web/API/Window.postMessage	/fr/docs/Web/API/Window/postMessage
 /fr/docs/Web/API/Window.prompt	/fr/docs/Web/API/Window/prompt
@@ -4012,6 +4016,7 @@
 /fr/docs/Web/API/Window/mozAnimationStartTime	/fr/docs/Web/API/Animation/startTime
 /fr/docs/Web/API/Window/mozPaintCount	/fr/docs/Web/API/Window
 /fr/docs/Web/API/Window/onresize	/fr/docs/Web/API/Window/resize_event
+/fr/docs/Web/API/Window/openDialog	/fr/docs/Web/API/Window
 /fr/docs/Web/API/WindowBase64/Décoder_encoder_en_base64	/fr/docs/Glossary/Base64
 /fr/docs/Web/API/WindowBase64/atob	/fr/docs/Web/API/atob
 /fr/docs/Web/API/WindowBase64/btoa	/fr/docs/Web/API/btoa
@@ -4047,6 +4052,8 @@
 /fr/docs/Web/API/WorkerGlobalScope/onlanguagechange	/fr/docs/Web/API/WorkerGlobalScope/languagechange_event
 /fr/docs/Web/API/WorkerGlobalScope/onoffline	/fr/docs/Web/API/WorkerGlobalScope/offline_event
 /fr/docs/Web/API/WorkerGlobalScope/ononline	/fr/docs/Web/API/WorkerGlobalScope/online_event
+/fr/docs/Web/API/XMLDocument/async	/fr/docs/Web/API/XMLDocument
+/fr/docs/Web/API/XMLDocument/load	/fr/docs/Web/API/XMLDocument
 /fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
 /fr/docs/Web/API/XMLHttpRequestEventTarget/onload	/fr/docs/Web/API/XMLHttpRequest/load_event
@@ -6302,6 +6309,7 @@
 /fr/docs/conflicting/Web/API/IDBTransaction/error_event	/fr/docs/Web/API/IDBTransaction/error_event
 /fr/docs/conflicting/Web/API/KeyframeEffect/KeyframeEffect	/fr/docs/Web/API/KeyframeEffect/KeyframeEffect
 /fr/docs/conflicting/Web/API/MediaTrackConstraints	/fr/docs/Web/API/MediaTrackConstraints
+/fr/docs/conflicting/Web/API/Navigator	/fr/docs/Web/API/Navigator
 /fr/docs/conflicting/Web/API/Node	/fr/docs/Web/API/Node
 /fr/docs/conflicting/Web/API/Node/getRootNode	/fr/docs/Web/API/Node/getRootNode
 /fr/docs/conflicting/Web/API/Node_378aed5ed6869e50853edbc988cf9556	/fr/docs/Web/API/Node
@@ -6311,6 +6319,7 @@
 /fr/docs/conflicting/Web/API/Performance/resourcetimingbufferfull_event	/fr/docs/Web/API/Performance/resourcetimingbufferfull_event
 /fr/docs/conflicting/Web/API/Pointer_events	/fr/docs/Web/API/Pointer_events
 /fr/docs/conflicting/Web/API/Selection	/fr/docs/Web/API/Selection_API
+/fr/docs/conflicting/Web/API/SharedWorkerGlobalScope	/fr/docs/Web/API/SharedWorkerGlobalScope
 /fr/docs/conflicting/Web/API/StorageManager/estimate	/fr/docs/Web/API/StorageManager/estimate
 /fr/docs/conflicting/Web/API/URL	/fr/docs/Web/API/URL
 /fr/docs/conflicting/Web/API/WebRTC_API	/fr/docs/Web/API/WebRTC_API
@@ -6334,6 +6343,8 @@
 /fr/docs/conflicting/Web/API/Window/online_event	/fr/docs/Web/API/Window/online_event
 /fr/docs/conflicting/Web/API/Window/popstate_event	/fr/docs/Web/API/Window/popstate_event
 /fr/docs/conflicting/Web/API/Window/unload_event	/fr/docs/Web/API/Window/unload_event
+/fr/docs/conflicting/Web/API/XMLDocument	/fr/docs/Web/API/XMLDocument
+/fr/docs/conflicting/Web/API/XMLDocument_e7165fc663e6b211830a9ac924b0817e	/fr/docs/Web/API/XMLDocument
 /fr/docs/conflicting/Web/API/XSLTProcessor	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/conflicting/Web/API/XSLTProcessor_197eea6e529b0a946d29ce7cc292e7ef	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/conflicting/Web/API/btoa	/fr/docs/Web/API/btoa

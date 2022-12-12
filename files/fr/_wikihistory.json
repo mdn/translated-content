@@ -8423,10 +8423,6 @@
     "modified": "2019-03-18T21:39:25.178Z",
     "contributors": ["loella16"]
   },
-  "Web/API/Document/mozSyntheticDocument": {
-    "modified": "2019-03-18T21:39:15.573Z",
-    "contributors": ["loella16"]
-  },
   "Web/API/Document/open": {
     "modified": "2019-03-23T23:45:31.773Z",
     "contributors": [
@@ -11041,10 +11037,6 @@
     "modified": "2019-03-23T23:05:32.482Z",
     "contributors": ["a-mt", "Nek-", "Eric013", "SuperStrong"]
   },
-  "Web/API/Navigator/mozIsLocallyAvailable": {
-    "modified": "2019-03-23T23:52:20.754Z",
-    "contributors": ["fscholz", "teoli", "jsx", "Mgjbot", "BenoitL"]
-  },
   "Web/API/Navigator/registerProtocolHandler": {
     "modified": "2019-03-23T23:52:04.757Z",
     "contributors": [
@@ -11223,10 +11215,6 @@
   "Web/API/Node/isSameNode": {
     "modified": "2019-03-18T21:39:55.776Z",
     "contributors": ["loella16"]
-  },
-  "Web/API/Node/isSupported": {
-    "modified": "2019-03-18T21:15:15.385Z",
-    "contributors": ["loella16", "fscholz", "teoli", "jsx", "BenoitL"]
   },
   "Web/API/Node/lastChild": {
     "modified": "2020-10-15T21:15:08.719Z",
@@ -11884,10 +11872,6 @@
   "Web/API/SharedWorkerGlobalScope": {
     "modified": "2020-10-15T22:26:31.672Z",
     "contributors": ["SphinxKnight", "mfuji09"]
-  },
-  "Web/API/SharedWorkerGlobalScope/applicationCache": {
-    "modified": "2020-10-15T22:26:34.435Z",
-    "contributors": ["Arzak656"]
   },
   "Web/API/SharedWorkerGlobalScope/connect_event": {
     "modified": "2020-10-15T22:26:31.419Z",
@@ -13100,17 +13084,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/Window/openDialog": {
-    "modified": "2020-10-15T21:14:00.787Z",
-    "contributors": [
-      "velkro",
-      "fscholz",
-      "teoli",
-      "jsx",
-      "tregagnon",
-      "damien.flament"
-    ]
-  },
   "Web/API/Window/opener": {
     "modified": "2019-03-23T23:49:11.676Z",
     "contributors": ["fscholz", "teoli", "khalid32", "Mgjbot", "BenoitL"]
@@ -13409,14 +13382,6 @@
   },
   "Web/API/XMLDocument": {
     "modified": "2020-10-15T22:03:21.753Z",
-    "contributors": ["NemoNobobyPersonne"]
-  },
-  "Web/API/XMLDocument/async": {
-    "modified": "2019-04-24T21:08:31.361Z",
-    "contributors": ["ExE-Boss", "loella16"]
-  },
-  "Web/API/XMLDocument/load": {
-    "modified": "2020-10-15T22:04:13.899Z",
     "contributors": ["NemoNobobyPersonne"]
   },
   "Web/API/XMLHttpRequest": {
