@@ -1,11 +1,6 @@
 ---
 title: Diseño de caja flexible CSS
 slug: Web/CSS/CSS_Flexible_Box_Layout
-tags:
-  - CSS
-  - CSS Flexible
-  - flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout
 ---
 
 {{CSSRef}}

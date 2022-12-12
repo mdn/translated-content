@@ -57,9 +57,7 @@ ctx.fill(p1);
 
 ## 仕様
 
-| Specification                                                                                                    | Status                           | Comment  |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-path2d-addpath", "Path2D.addPath()")}} | {{Spec2('HTML WHATWG')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザー互換性
 

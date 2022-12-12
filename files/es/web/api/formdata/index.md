@@ -1,13 +1,6 @@
 ---
 title: FormData
 slug: Web/API/FormData
-tags:
-  - API
-  - FormData
-  - Interfaz
-  - Referencia
-  - XMLHttpRequest
-translation_of: Web/API/FormData
 original_slug: Web/API/XMLHttpRequest/FormData
 ---
 

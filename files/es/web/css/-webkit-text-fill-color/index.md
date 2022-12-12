@@ -1,12 +1,6 @@
 ---
 title: '-webkit-text-fill-color'
 slug: Web/CSS/-webkit-text-fill-color
-tags:
-  - CSS
-  - No estandar
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/-webkit-text-fill-color
 ---
 
 {{CSSRef}}{{Non-standard_header}}

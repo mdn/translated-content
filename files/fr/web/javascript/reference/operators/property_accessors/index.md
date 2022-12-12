@@ -76,7 +76,7 @@ Cette ligne fait exactement la même chose que l'exemple précédent.
 
 ### Noms de propriétés
 
-Les noms de propriétés doivent être des chaînes de caractères ou des symboles. Cela signifie que les autres types d'objet ne peuvent pas être utilisés comme clés d'un objet. Tout autre type d'objet, même un nombre, sera converti en une chaîne via sa méthode [`toString`](fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Objets_globaux/Object/toString).
+Les noms de propriétés doivent être des chaînes de caractères ou des symboles. Cela signifie que les autres types d'objet ne peuvent pas être utilisés comme clés d'un objet. Tout autre type d'objet, même un nombre, sera converti en une chaîne via sa méthode [`toString`](/fr/R%c3%a9f%c3%a9rence_de_JavaScript_1.5_Core/Objets_globaux/Object/toString).
 
 #### Exemples
 
@@ -94,7 +94,7 @@ objet[toto] = 'valeur';
 console.log(objet[truc]);
 ```
 
-Ce code affichera également «&nbsp;valeur&nbsp;», étant donné que `toto` et `truc` seront convertis en la même chaîne de caractères. Dans le cas du moteur JavaScript [SpiderMonkey](fr/SpiderMonkey), cette chaîne serait `"['object Object']"`.
+Ce code affichera également «&nbsp;valeur&nbsp;», étant donné que `toto` et `truc` seront convertis en la même chaîne de caractères. Dans le cas du moteur JavaScript [SpiderMonkey](/fr/SpiderMonkey), cette chaîne serait `"['object Object']"`.
 
 ### Liaison de méthodes
 

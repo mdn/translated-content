@@ -81,7 +81,7 @@ This may seem a bit scary at first, but don't worry — you'll soon get the hang
     ```
 
 4. Now you need to create a gh-pages branch of your repo; refresh the current page and you'll see a repository page something like the one below. You need to press the button that says _Branch: **master**_, type _gh-pages_ in the text input, then press the blue button that says _Create branch: gh-pages_. This creates a special code branch called gh-pages that is published at a special location. It's URL takes the form _username.github.io/my-repository-name_, so in my example's case, the URL would be `https://chrisdavidmills.github.io/my-repository`. The page shown is the index.html page.
-    ![](https://mdn.mozillademos.org/files/12145/repo-site.png)
+    ![](repo-site.png)
 5. Navigate to your GitHub Pages' web address in a new browser tab, and you should see your site online! Email it to your friends and show off your mastery.
 
 > **Nota:** If you get stuck, the [GitHub Pages homepage](https://pages.github.com/) is also really helpful.

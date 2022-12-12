@@ -1,7 +1,6 @@
 ---
 title: requestIdleCallback
 slug: Web/API/Window/requestIdleCallback
-translation_of: Web/API/Window/requestIdleCallback
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}

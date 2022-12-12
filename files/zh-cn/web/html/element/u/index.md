@@ -37,7 +37,7 @@ slug: Web/HTML/Element/u
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLElement")}} Gecko 1.9.2 (Firefox 4) 之前（包含）, Firefox 为这个元素实现了 {{domxref("HTMLSpanElement")}}  接口。</td>
+   <td>{{domxref("HTMLElement")}} Gecko 1.9.2 (Firefox 4) 之前（包含）, Firefox 为这个元素实现了 {{domxref("HTMLSpanElement")}} 接口。</td>
   </tr>
  </tbody>
 </table>

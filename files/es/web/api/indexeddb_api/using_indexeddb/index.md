@@ -1,16 +1,6 @@
 ---
 title: Usando IndexedDB
 slug: Web/API/IndexedDB_API/Using_IndexedDB
-tags:
-  - API
-  - Almacenamiento
-  - Avanzado
-  - Base de datos
-  - Guía
-  - IndexedDB
-  - Tutorial
-  - jsstore
-translation_of: Web/API/IndexedDB_API/Using_IndexedDB
 original_slug: Web/API/IndexedDB_API/Usando_IndexedDB
 ---
 

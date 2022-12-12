@@ -1,11 +1,6 @@
 ---
 title: 502 Puerta de enlace no válida
 slug: Web/HTTP/Status/502
-tags:
-  - Codigo de Estado
-  - Error de servidor
-  - HTTP
-translation_of: Web/HTTP/Status/502
 ---
 
 {{HTTPSidebar}}

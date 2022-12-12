@@ -1,7 +1,6 @@
 ---
 title: Allow
 slug: Web/HTTP/Headers/Allow
-translation_of: Web/HTTP/Headers/Allow
 ---
 
 {{HTTPSidebar}}

@@ -1,13 +1,6 @@
 ---
 title: JSON
 slug: Glossary/JSON
-tags:
-  - Glosario
-  - I10n:prioridad
-  - JSON
-  - Script de codificación
-  - introducción
-translation_of: Glossary/JSON
 ---
 
 **JSON (notación de objetos javascript)** es un formato de intercambio de datos. Es muy parecido a un subconjunto de sintaxis JavaScript, aunque no es un subconjunto en sentido estricto. (Ver JSON en la Referencia JavaScript para más detalles.) Aunque muchos lenguajes de programación lo soportan, JSON es especialmente útil al escribir cualquier tipo de aplicación basada en JavaScript, incluyendo sitios web y extensiones del navegador. Por ejemplo, es posible almacenar la información del usuario en formato JSON en una cookie o almacenar las preferencias de extensión en JSON en una cadena de valores de preferencias del navegador.

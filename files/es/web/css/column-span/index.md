@@ -1,11 +1,6 @@
 ---
 title: column-span
 slug: Web/CSS/column-span
-tags:
-  - CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/column-span
 ---
 
 {{CSSRef}}

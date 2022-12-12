@@ -152,7 +152,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 4. Теперь найдите "Mozilla Developer Network" в своём поисковике (мы использовали Google). Обратите внимание, что описание и название из `<meta>` и `<title>` используется в результатах поиска, — мы не зря указали их!
 
-![Результат поиска в Google](https://mdn.mozillademos.org/files/17061/Updated_search_result__ru.jpg)
+![Результат поиска в Google](updated_search_result__ru.jpg)
 
 > **Примечание:** Google также показывает важные страницы MDN под ссылкой на главную страницу. Такие ссылки называются sitelinks, и их можно настроить через [Google Search Console](http://www.google.com/webmasters/tools/), чтобы пользователи могли сразу перейти к ним со страницы поиска.
 

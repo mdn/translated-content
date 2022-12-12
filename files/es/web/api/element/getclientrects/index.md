@@ -1,13 +1,6 @@
 ---
 title: element.getClientRects
 slug: Web/API/Element/getClientRects
-tags:
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - NeedsLiveSample
-  - NeedsUpdate
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Element/getClientRects
 ---
 
 {{ APIRef }}

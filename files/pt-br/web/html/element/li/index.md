@@ -87,7 +87,7 @@ Para exemplos mais detalhados veja as páginas [\<ol>](/pt-BR/docs/Web/HTML/Elem
 - Propriedades CSS que podem ser úteis, especialmente para dar um charme ao elemento`<li>`:
 
   - a propriedade {{cssxref("list-style")}}, para escolher a maneira como os posicionamentos serão exibidos,
-  - [contadores CSS](/Web/Guide/CSS/Counters) para controlar listas aninhadas complexas,
+  - [contadores CSS](/pt-BR/docs/Web/Guide/CSS/Counters) para controlar listas aninhadas complexas,
   - a propriedade {{cssxref("margin")}}, para controlar a indentação dos itens da lista.
 
 {{HTMLSidebar}}

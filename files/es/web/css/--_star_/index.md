@@ -1,7 +1,6 @@
 ---
 title: 'Propiedades personalizadas (--*): variables CSS'
 slug: Web/CSS/--*
-translation_of: Web/CSS/--*
 ---
 
 {{CSSRef}}

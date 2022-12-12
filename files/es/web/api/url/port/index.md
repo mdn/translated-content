@@ -1,7 +1,6 @@
 ---
 title: URL.port
 slug: Web/API/URL/port
-translation_of: Web/API/URL/port
 ---
 
 {{ApiRef("URL API")}}

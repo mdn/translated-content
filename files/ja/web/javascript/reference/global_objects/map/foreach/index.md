@@ -68,9 +68,7 @@ new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

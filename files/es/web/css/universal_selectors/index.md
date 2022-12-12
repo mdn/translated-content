@@ -1,12 +1,6 @@
 ---
 title: Selectores universales
 slug: Web/CSS/Universal_selectors
-tags:
-  - CSS
-  - Principiante
-  - Referencia CSS
-  - Selectores
-translation_of: Web/CSS/Universal_selectors
 ---
 
 {{CSSRef}}

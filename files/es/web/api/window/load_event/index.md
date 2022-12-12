@@ -1,9 +1,6 @@
 ---
 title: load
 slug: Web/API/Window/load_event
-tags:
-  - Evento
-translation_of: Web/API/Window/load_event
 original_slug: Web/Events/load
 ---
 

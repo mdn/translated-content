@@ -1,10 +1,6 @@
 ---
 title: import
 slug: Web/XSLT/Element/import
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/import
 original_slug: Web/XSLT/import
 ---
 

@@ -29,7 +29,7 @@ Web Authentication API（也称作 WebAuthn）使用[asymmetric (public-key) cry
 
 一个典型的注册过程包括如图 1 所示的六个步骤，这些在稍后会进一步描述。这是一个注册过程的概览，所需数据已经被简化。所有的必填字段、可选字段及它们在创建注册请求中的含义可以在 {{domxref("PublicKeyCredentialCreationOptions")}} 字典中找到。类似地，完整的响应字段可以在 {{domxref("PublicKeyCredential")}} 接口（其中 {{domxref("PublicKeyCredential.response")}} 是 {{domxref("AuthenticatorAttestationResponse")}} 的接口）中找到。请注意大多数编写程序的 JavaScript 程序员只会关心第 1 步和第 5 步，分别对应 create() 函数的调用和返回。但是，了解步骤 2 到 4 对于理解在浏览器和认证器中发生了什么以及返回数据的含义至关重要。
 
-![WebAuthn registration component and dataflow diagram](<https://mdn.mozillademos.org/files/15801/MDN%20Webauthn%20Registration%20(r3).png>)
+![WebAuthn registration component and dataflow diagram](<mdn_webauthn_registration_(r3).png>)
 
 _图 1 - WebAuthn 注册流程及与各个步骤相关的重要数据。_
 

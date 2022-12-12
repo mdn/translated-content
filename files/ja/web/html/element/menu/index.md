@@ -214,10 +214,7 @@ div {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName("HTML WHATWG", "grouping-content.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML WHATWG")}} | 最新のスナップショット {{SpecName("HTML5.2")}} から変更なし |
-| {{SpecName("HTML5.1", "interactive-elements.html#the-menu-element", "&lt;menu&gt;")}} | {{Spec2("HTML5.1")}}     |                                                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

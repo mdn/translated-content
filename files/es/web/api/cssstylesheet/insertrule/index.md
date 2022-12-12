@@ -1,9 +1,6 @@
 ---
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
-tags:
-  - CSSStyleSheet
-translation_of: Web/API/CSSStyleSheet/insertRule
 ---
 
 {{APIRef}}

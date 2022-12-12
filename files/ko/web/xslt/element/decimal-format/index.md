@@ -10,7 +10,7 @@ original_slug: Web/XSLT/decimal-format
 {{ XsltRef() }}
 
 `<xsl:decimal-format>` 요소는
-_`format-number( )`_
+`format-number( )`
 함수를 써서 숫자를 문자열로 바꿀 때 쓰는 기호와 문자를 정의합니다.
 
 ### 문법

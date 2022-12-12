@@ -180,17 +180,7 @@ This property is specified as a value for `<'row-gap'>` followed optionally by a
 
 ## Browser compatibility
 
-### Support in Flex layout
-
 {{Compat}}
-
-### Support in Grid layout
-
-{{Compat("css.properties.gap.grid_context")}}
-
-### Support in Multi-column layout
-
-{{Compat("css.properties.gap.multicol_context")}}
 
 ## See also
 

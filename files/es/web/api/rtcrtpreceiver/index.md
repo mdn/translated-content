@@ -1,7 +1,6 @@
 ---
 title: RTCRtpReceiver
 slug: Web/API/RTCRtpReceiver
-translation_of: Web/API/RTCRtpReceiver
 ---
 
 {{APIRef("WebRTC")}}

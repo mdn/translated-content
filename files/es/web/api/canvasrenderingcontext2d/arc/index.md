@@ -1,7 +1,6 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
-translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 
 {{APIRef}}
@@ -128,7 +127,7 @@ for (var i = 0; i < 4; i++) {
 }
 ```
 
-{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}
+{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "canvas_arc.png") }}
 
 ## Especificaciones
 

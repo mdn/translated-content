@@ -36,9 +36,9 @@ slug: Web/API/BaseAudioContext
 _{{domxref("EventTarget")}} インターフェイスから継承しているメソッドもあります。_
 
 - {{domxref("BaseAudioContext.createAnalyser()")}}
-  - :  {{domxref("AnalyserNode")}} を作成します。これは音声の時間と周波数データを公開し、データの可視化などに利用できます。
+  - : {{domxref("AnalyserNode")}} を作成します。これは音声の時間と周波数データを公開し、データの可視化などに利用できます。
 - {{domxref("BaseAudioContext.createBiquadFilter()")}}
-  - :  {{domxref("BiquadFilterNode")}} を作成します。これはハイパス、ローパス、バンドパスなどの一般的なフィルター型として設定可能な 2 次フィルターを表します。
+  - : {{domxref("BiquadFilterNode")}} を作成します。これはハイパス、ローパス、バンドパスなどの一般的なフィルター型として設定可能な 2 次フィルターを表します。
 - {{domxref("BaseAudioContext.createBuffer()")}}
   - : 新しい空の {{ domxref("AudioBuffer") }} オブジェクトを作成します。これにデータを入力して {{ domxref("AudioBufferSourceNode") }} で再生できます。
 - {{domxref("BaseAudioContext.createBufferSource()")}}
@@ -56,7 +56,7 @@ _{{domxref("EventTarget")}} インターフェイスから継承しているメ�
 - {{domxref("BaseAudioContext.createDynamicsCompressor()")}}
   - : {{domxref("DynamicsCompressorNode")}} を作成します。これは音声信号に音響圧縮をかけるために使用します。
 - {{domxref("BaseAudioContext.createGain()")}}
-  - :  {{domxref("GainNode")}} を作成します。これはオーディオグラフの全体的な音量を制御するために使用することができます。
+  - : {{domxref("GainNode")}} を作成します。これはオーディオグラフの全体的な音量を制御するために使用することができます。
 - {{domxref("BaseAudioContext.createIIRFilter()")}}
   - : {{domxref("IIRFilterNode")}} を作成します。これは複数の異なる一般的なフィルター種別として設定可能な二次フィルタを表します。
 - {{domxref("BaseAudioContext.createOscillator()")}}
@@ -68,7 +68,7 @@ _{{domxref("EventTarget")}} インターフェイスから継承しているメ�
 - {{domxref("BaseAudioContext.createScriptProcessor()")}} {{deprecated_inline}}
   - : {{domxref("ScriptProcessorNode")}} を作成します。これは JavaScript で直接音声処理を行うために使用します。
 - {{domxref("BaseAudioContext.createStereoPanner()")}}
-  - :  {{domxref("StereoPannerNode")}} を作成します。これは音声ソースにステレオパニングを適用するために使用することができます。
+  - : {{domxref("StereoPannerNode")}} を作成します。これは音声ソースにステレオパニングを適用するために使用することができます。
 - {{domxref("BaseAudioContext.createWaveShaper()")}}
   - : 非線形歪み効果を実装するために使用される {{domxref("WaveShaperNode")}} を作成します。
 - {{domxref("BaseAudioContext.decodeAudioData()")}}

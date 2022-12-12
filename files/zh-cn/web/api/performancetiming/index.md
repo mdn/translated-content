@@ -58,7 +58,7 @@ _`PerformanceTiming` 接口不包含任何继承属性。_
 
 ## 方法
 
-**`Performance` **接口不包含任何方法。
+**`Performance`** 接口不包含任何方法。
 
 - {{domxref("PerformanceTiming.toJSON()")}} {{non-Standard_Inline}}
   - : 是一个 JSON 格式化工具，返回一个 [JSON 对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON)，代表具体的 `PerformanceTiming` 对象。

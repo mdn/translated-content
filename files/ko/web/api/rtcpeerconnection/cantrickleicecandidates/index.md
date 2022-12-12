@@ -3,6 +3,7 @@ title: RTCPeerConnection.canTrickleIceCandidates
 slug: Web/API/RTCPeerConnection/canTrickleIceCandidates
 translation_of: Web/API/RTCPeerConnection/canTrickleIceCandidates
 ---
+
 {{APIRef("WebRTC")}}
 
 읽기 속성인 **{{domxref("RTCPeerConnection")}}** 속성의 **`canTrickleIceCandidates`**는 원격유저가 [trickled ICE candidates](https://tools.ietf.org/html/draft-ietf-mmusic-trickle-ice)를 승인 할 수 있는지의 여부를 알려주는 {{jsxref("Boolean")}}을 반환합니다.

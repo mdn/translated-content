@@ -92,9 +92,7 @@ p.a; // TypeError is thrown
 
 ## 仕様書
 
-| 仕様書                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,11 +1,6 @@
 ---
 title: Referencia CSS
 slug: Web/CSS/Reference
-tags:
-  - CSS
-  - Referencia CSS
-  - para_revisar
-translation_of: Web/CSS/Reference
 original_slug: Web/CSS/Referencia_CSS
 ---
 

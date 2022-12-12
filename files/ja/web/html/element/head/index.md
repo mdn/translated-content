@@ -94,11 +94,7 @@ HTML5 互換のブラウザーでは、タグが省略されていても `<head>
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                               |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-head-element', '&lt;head&gt;')}}         | {{Spec2('HTML WHATWG')}} | 最新のスナップショットから変更なし |
-| {{SpecName('HTML5 W3C', 'document-metadata.html#the-head-element', '&lt;head&gt;')}} | {{Spec2('HTML5 W3C')}}     | `profile` を廃止                   |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.4.1', '&lt;head&gt;')}}                     | {{Spec2('HTML4.01')}}     |                                    |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

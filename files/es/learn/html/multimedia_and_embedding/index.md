@@ -1,28 +1,6 @@
 ---
 title: Multimedia e inserción
 slug: Learn/HTML/Multimedia_and_embedding
-tags:
-  - Aprender
-  - Audio
-  - Codificación de Secuencia de comandos
-  - Evaluación
-  - Flash
-  - Gráficos vectoriales
-  - Guía
-  - HTML
-  - Imagenes
-  - Inserción
-  - Landing
-  - Mapa de Imágenes
-  - Multimedia
-  - Principiante
-  - SVG
-  - Video
-  - Web
-  - iframes
-  - img
-  - receptivo
-translation_of: Learn/HTML/Multimedia_and_embedding
 ---
 
 Hemos visto mucho texto hasta ahora en este curso, pero la web sería realmente aburrida solo usando textos. ¡Comencemos observando como hacer que la web cobre vida, con mucho más contenido interesante! Este módulo te acompañará a explorar maneras de usar HTML para incluir multimedia a tus páginas web, y las diferentes formas en la que podrás hacerlo, incluyendo como enlazar videos, audios e incluso otras páginas webs.

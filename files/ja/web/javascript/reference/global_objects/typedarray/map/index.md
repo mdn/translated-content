@@ -77,9 +77,7 @@ const doubles = numbers.map(function(num) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.map', 'TypedArray.prototype.map')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

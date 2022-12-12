@@ -1,17 +1,6 @@
 ---
 title: Document.clear()
 slug: Web/API/Document/clear
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Method
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpectTable
-  - Referencia
-translation_of: Web/API/Document/clear
 ---
 
 {{APIRef("DOM")}}{{ Deprecated_header() }}

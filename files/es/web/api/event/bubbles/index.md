@@ -1,14 +1,6 @@
 ---
 title: event.bubbles
 slug: Web/API/Event/bubbles
-tags:
-  - Anidado
-  - DOM
-  - Propagación
-  - Referencia
-  - Referência(2)
-  - eventos
-translation_of: Web/API/Event/bubbles
 ---
 
 {{ ApiRef("DOM") }}

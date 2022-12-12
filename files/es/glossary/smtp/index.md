@@ -1,13 +1,6 @@
 ---
 title: SMTP
 slug: Glossary/SMTP
-tags:
-  - Colaboración
-  - Compartiendo
-  - Glosario
-  - Infraestructura
-  - Principiante
-translation_of: Glossary/SMTP
 ---
 
 **SMTP** (Protocolo de Transferencia de Correo Simple por sus siglas en inglés) es un [protocolo](/es/docs/Glossary/Protocol) utilizado para enviar un nuevo correo. Como [POP3](/es/docs/Glossary/POP) y [NNTP](/es/docs/Glossary/NNTP), es un protocolo dirigido por [estado de máquina](/es/docs/Glossary/State_machine).

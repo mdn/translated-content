@@ -3,6 +3,7 @@ title: CSS 선택자
 slug: Learn/CSS/Building_blocks/Selectors
 original_slug: Learn/CSS/Building_blocks/선택자
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 {{Glossary("CSS")}} 에서, 선택자는 스타일을 지정할 웹 페이지의 {{glossary("HTML")}} 요소를 대상으로 하는 데 사용됩니다. 사용 가능한 다양한 CSS 선택자가 있으며, 스타일을 지정할 요소를 선택할 때 세밀한 정밀도를 허용합니다. 이 기사와 하위 기사에서는 다양한 유형을 자세히 살펴보고 작동 방식을 살펴보겠습니다.
@@ -43,7 +44,7 @@ original_slug: Learn/CSS/Building_blocks/선택자
 
 우리는 이미 선택자 (selector) 를 만났습니다. CSS 선택자는 CSS 규칙의 첫 부분입니다. 규칙 내의 CSS 속성값을 적용하기 위해 어떤 HTML 요소를 선택해야 하는지 브라우저에 알려주는 요소 및 기타 용어의 패턴입니다. 선택자에 의해 선택된 요소들은 ***선택자의 주제(subject)** *로 지칭됩니다.
 
-![Some code with the h1 highlighted.](https://mdn.mozillademos.org/files/16550/selector.png)
+![Some code with the h1 highlighted.](selector.png)
 
 이전 기사에서는 몇 가지 다른 선택자를 만났으며 — 예를 들어 `h1` 과 같은 요소 또는 `.special` 과 같은 class 를 선택하는 등 다양한 방법으로 문서를 대상으로 하는 선택자가 있다는 것을 배웠습니다.
 

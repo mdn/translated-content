@@ -3,7 +3,7 @@ title: WebRTC connectivity
 slug: Web/API/WebRTC_API/Connectivity
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 现在我们已经单独介绍了协议，我们可以将它们放在一起。本文介绍了 WebRTC 各种相关协议如何相互交互，以便在对等体之间创建连接和传输数据和/或媒体。
 

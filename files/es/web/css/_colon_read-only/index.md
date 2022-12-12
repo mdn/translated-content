@@ -1,13 +1,6 @@
 ---
 title: ':read-only'
 slug: Web/CSS/:read-only
-tags:
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:read-only
 ---
 
 {{CSSRef}}

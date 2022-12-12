@@ -36,9 +36,7 @@ slug: Web/API/Element/touchstart_event
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                             |
-| ---------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('Touch Events', '#event-touchstart')}} | {{Spec2('Touch Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

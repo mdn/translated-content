@@ -1,21 +1,6 @@
 ---
 title: Gráficas en la web
 slug: Web/Guide/Graphics
-tags:
-  - 2D
-  - 3D
-  - 3ra Dimensión
-  - Canvas
-  - Gráficas
-  - Gráficos(2)
-  - HTML5
-  - Líneas
-  - RTCWeb
-  - SVG
-  - WebGL
-  - WebRTC
-  - graficos
-translation_of: Web/Guide/Graphics
 ---
 
 Los sitios web modernos a menudo necesitan aplicaciones para presentar y/o visualizar gráficos . Se

@@ -1,9 +1,6 @@
 ---
 title: HTMLShadowElement
 slug: Web/API/HTMLShadowElement
-tags:
-  - Necesita traducción
-translation_of: Web/API/HTMLShadowElement
 ---
 
 {{APIRef("Web Components")}}{{Deprecated_Header}}

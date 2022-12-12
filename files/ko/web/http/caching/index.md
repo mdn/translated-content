@@ -102,7 +102,7 @@ Cache-Control: must-revalidate
 
 다음은 이런 과정에 대한 공유 캐시 프록시를 이용한 예제입니다:
 
-![Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale.](https://mdn.mozillademos.org/files/13771/HTTPStaleness.png)
+![Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale.](httpstaleness.png)
 
 유효 수명은 몇가지 헤더에 근거해 계산됩니다. "`Cache-control: max-age=N`" 헤더가 설정된 경우, 유효 수명은 N과 동일합니다. 만약 이 헤더가 없다면, 이런 경우가 매우 많습니다만, {{HTTPHeader("Expires")}} 헤더가 있는지 없는지를 검사합니다. `Expires` 헤더가 존재한다면, 그것의 값에서 {{HTTPHeader("Date")}} 헤더의 값을 뺀 결과가 유효 수명이 됩니다.
 
@@ -127,7 +127,7 @@ expirationTime = responseTime + freshnessLifetime - currentAge
 
 이 기술은 추가적인 이점도 가지고 있습니다: 캐시된 두 개의 리소스를 동시에 갱신해도 한 리소스의 오래된 버전이 다른 리소스의 새로운 버전과 함께 혼합되어 사용되는 경우를 초래하지 않을 것입니다. 이것은 웹 사이트가 상호 간의 의존성을 가지고 있는 CSS 스타일시트와 자바스크립트를 가지고 있는 경우 (같은 HTML 요소를 참조하기에 서로 의존하게 됩니다) 매우 중요합니다.
 
-![](https://mdn.mozillademos.org/files/13779/HTTPRevved.png)
+![](httprevved.png)
 
 리소스에 추가되는 수정 버전은 1.1.3과 같은 전통적인 버전 번호 형식이 아니어도 되고, 단조 증가하는 숫자들이 아니어도 됩니다. 그것은 해시 혹은 날짜와 같이 충돌만 되지 않는다면 무엇이든지 될 수 있습니다.
 
@@ -153,7 +153,7 @@ expirationTime = responseTime + freshnessLifetime - currentAge
 
 캐시가 `Vary` 헤더 필드를 지닌 요청을 수신한 경우, `Vary` 헤더에 의해 지정된 모든 헤더 필드들이 원래의 (캐시된) 요청과 새로운 요청 사이에서 일치하지 않는다면 그 캐시된 응답을 사용해서는 안 됩니다.
 
-![The Vary header leads cache to use more HTTP headers as key for the cache.](https://mdn.mozillademos.org/files/13769/HTTPVary.png)
+![The Vary header leads cache to use more HTTP headers as key for the cache.](httpvary.png)
 
 이 기능은 컨텐츠를 비압축 또는 (여러 가지) 압축 포맷으로 캐시될 수 있도록 하고, 유저 에이전트가 지원하는 포맷에 따라 제공하도록 할 때 흔히 사용됩니다. 예를 들어 서버는 `Vary: Accept-Encoding`을 설정하여 특정한 집합의 인코딩을 지원하는 (예를 들어 `Accept-Encoding: gzip,deflate,sdch`) 모든 요청들에 대해 각각 다른 버전의 리소스를 캐시하도록 할 수 있습니다.
 

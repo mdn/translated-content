@@ -62,9 +62,7 @@ navigator.serviceWorker.addEventListener('message', event => {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                                 | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-client-postmessage-message-options', 'postMessage()')}} | {{Spec2('Service Workers')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

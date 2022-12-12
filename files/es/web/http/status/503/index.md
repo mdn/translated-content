@@ -1,12 +1,6 @@
 ---
 title: 503 Servicio No Disponible
 slug: Web/HTTP/Status/503
-tags:
-  - Codigo de Estado
-  - Error de servidor
-  - HTTP
-  - error 503
-translation_of: Web/HTTP/Status/503
 ---
 
 {{HTTPSidebar}}

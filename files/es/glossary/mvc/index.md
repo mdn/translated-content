@@ -1,7 +1,6 @@
 ---
 title: MVC
 slug: Glossary/MVC
-translation_of: Glossary/MVC
 ---
 
 **MVC** (Modelo-Vista-Controlador) es un patrón en el diseño de software comúnmente utilizado para implementar interfaces de usuario, datos y lógica de control. Enfatiza una separación entre la lógica de negocios y su visualización. Esta "separación de preocupaciones" proporciona una mejor división del trabajo y una mejora de mantenimiento. Algunos otros patrones de diseño se basan en MVC, como MVVM (Modelo-Vista-modelo de vista), MVP (Modelo-Vista-Presentador) y MVW (Modelo-Vista-Whatever).
@@ -14,7 +13,7 @@ Las tres partes del patrón de diseño de software MVC se pueden describir de la
 
 ## Modelo Vista Controlador ejemplo
 
-Imagine una sencilla aplicación de lista de compras. Todo lo que queremos es una lista del nombre, la cantidad y el precio de cada artículo que necesitamos comprar esta semana. A continuación describiremos cómo podríamos implementar parte de esta funcionalidad usando MVC.![Diagram to show the different parts of the mvc architecture.](https://mdn.mozillademos.org/files/16042/model-view-controller-light-blue.png)
+Imagine una sencilla aplicación de lista de compras. Todo lo que queremos es una lista del nombre, la cantidad y el precio de cada artículo que necesitamos comprar esta semana. A continuación describiremos cómo podríamos implementar parte de esta funcionalidad usando MVC.![Diagrama para mostrar las distintas partes de la arquitectura mvc.](model-view-controller-light-blue.png)
 
 ### Modelo
 
@@ -30,7 +29,7 @@ En nuestra aplicación de lista de compras, la vista definiría cómo se present
 
 ### Controlador
 
-El controlador contiene una lógica que actualiza el modelo y / o vista en respuesta a las entradas de los usuarios de la aplicación.
+El controlador contiene una lógica que actualiza el modelo y/o vista en respuesta a las entradas de los usuarios de la aplicación.
 
 Entonces, por ejemplo, nuestra lista de compras podría tener formularios de entrada y botones que nos permitan agregar o eliminar artículos. Estas acciones requieren que se actualice el modelo, por lo que la entrada se envía al controlador, que luego manipula el modelo según corresponda, que luego envía datos actualizados a la vista.
 
@@ -44,8 +43,8 @@ En los primeros días de la Web, la arquitectura MVC se implementó principalmen
 
 Los frameworks de desarrollo web como AngularJS y Ember.js implementan una arquitectura MVC, aunque de maneras ligeramente diferentes.
 
-## Learn more
+## Aprenda más
 
-### General knowledge
+### Conocimiento general
 
-- [Model–view–controller](https://es.wikipedia.org/wiki/Model–view–controller) on Wikipedia
+- [Modelo–vista-controlador](https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador) en Wikipedia

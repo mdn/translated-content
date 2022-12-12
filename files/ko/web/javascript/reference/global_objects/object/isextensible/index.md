@@ -31,7 +31,7 @@ Object.isExtensible(obj)
 
 ## 설명
 
-객체는 기본으로 확장 가능입니다: 새로운 속성이 추가될 수 있고 ({{jsxref("Object.proto", "__proto__")}} {{deprecated_inline}} 속성을 지원하는 엔진에서는) 수정될 수 있습니다. 객체는 {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}} 또는 {{jsxref("Object.freeze()")}}를 사용하여 확장 불가로 표시될 수 있습니다.
+객체는 기본으로 확장 가능입니다: 새로운 속성이 추가될 수 있고 ([`Object.prototype.__proto__`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{deprecated_inline}} 속성을 지원하는 엔진에서는) 수정될 수 있습니다. 객체는 {{jsxref("Object.preventExtensions()")}}, {{jsxref("Object.seal()")}} 또는 {{jsxref("Object.freeze()")}}를 사용하여 확장 불가로 표시될 수 있습니다.
 
 ## 예제
 

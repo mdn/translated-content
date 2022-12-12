@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/NavigatorPlugins/javaEnabled
 original_slug: Web/API/NavigatorPlugins/javaEnabled
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Este método indica se o navegador atual tem o Java ativo ou não.

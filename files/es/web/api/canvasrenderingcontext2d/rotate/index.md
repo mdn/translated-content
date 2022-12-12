@@ -1,9 +1,6 @@
 ---
 title: CanvasRenderingContext2D.rotate()
 slug: Web/API/CanvasRenderingContext2D/rotate
-tags:
-  - metodo
-translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
 
 {{APIRef}}
@@ -16,7 +13,7 @@ El método **`CanvasRenderingContext2D.rotate()`** de la API Canvas 2D añade un
 void ctx.rotate(angulo);
 ```
 
-![](https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png)
+![](canvas_grid_rotate.png)
 
 ### Parámetros
 

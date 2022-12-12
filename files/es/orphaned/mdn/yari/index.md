@@ -1,7 +1,6 @@
 ---
 title: Kuma
 slug: orphaned/MDN/Yari
-translation_of: MDN/Kuma
 original_slug: MDN/Yari
 ---
 

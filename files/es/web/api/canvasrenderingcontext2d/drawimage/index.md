@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContect2D
-  - Métodos
-  - Referencia
-translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
 
 {{APIRef}}
@@ -22,7 +15,7 @@ void ctx.drawImage(image, dx, dy, dWidth, dHeight);
 void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 ```
 
-![drawImage](https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg)
+![drawImage](canvas_drawimage.jpg)
 
 ### Parámetros
 
@@ -64,7 +57,7 @@ Este es sólo un simple fragmento de código que utiliza el método drawImage.
 
 ```html
 <canvas id="canvas"></canvas>
-  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+  <img id="source" src="rhino.jpg"
        width="300" height="227">
 </div>
 ```
@@ -83,7 +76,7 @@ Edita el código debajo y observa los cambios actualizarse en vivo en el canvas:
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
+  <img id="source" src="rhino.jpg" width="300" height="227">
 </div>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />

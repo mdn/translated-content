@@ -1,15 +1,7 @@
 ---
-title: >-
-  Tablas de compatibilidad y repositorio de datos de compatibilidad del
-  navegador (DCN)
+title: Tablas de compatibilidad y repositorio de datos de compatibilidad del navegador
+  (DCN)
 slug: MDN/Writing_guidelines/Page_structures
-tags:
-  - Estructuras
-  - Guía
-  - Meta MDN
-  - compatibilidad con el navegador
-  - tablas de compatibilidad
-translation_of: MDN/Structures/Compatibility_tables
 original_slug: MDN/Structures/Compatibility_tables
 ---
 

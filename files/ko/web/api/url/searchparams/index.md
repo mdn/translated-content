@@ -10,6 +10,7 @@ tags:
   - URLSearchParams
 translation_of: Web/API/URL/searchParams
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URL")}} 인터페이스의 **`searchParams`** 읽기 전용 속성은 URL 내의 {{httpmethod("GET")}} 디코딩 된 쿼리 매개변수에 접근할 수 있는 {{domxref("URLSearchParams")}} 객체를 반환합니다.

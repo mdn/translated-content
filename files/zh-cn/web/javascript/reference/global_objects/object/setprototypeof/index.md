@@ -43,7 +43,7 @@ Object.setPrototypeOf(obj, prototype)
 
 出于安全考虑，某些内置对象的原型被设计为是*不可变的*。这可以防止原型污染攻击，尤其是[与代理（proxy）相关的](https://github.com/tc39/ecma262/issues/272)。核心语言仅指定 `Object.prototype` 是不可变原型的特异对象，其原型始终为 `null`。而在浏览器中，[`window`](/zh-CN/docs/Web/API/Window) 和 [`location`](/zh-CN/docs/Web/API/Window/location) 也是（常见的）不可变原型的特异对象。
 
-`Object.setPrototypeOf()` 是 ECMAScript 6 最新草案中的方法，相对于 {{jsxref("Object.prototype.__proto__")}}，它被认为是修改对象原型更合适的方法
+`Object.setPrototypeOf()` 是 ECMAScript 6 最新草案中的方法，相对于 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)，它被认为是修改对象原型更合适的方法
 
 ```js
 Object.isExtensible(Object.prototype); // true; you can add more properties

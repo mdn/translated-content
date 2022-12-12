@@ -1,12 +1,6 @@
 ---
 title: Decremento(--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - Decremento
-  - JavaScript
-  - JavaScript basico
-  - Operadores
-translation_of: Web/JavaScript/Reference/Operators/Decrement
 original_slug: Web/JavaScript/Referencia/Operadores/Decremento
 ---
 
@@ -52,9 +46,7 @@ b = --a;
 
 ## Especificaciones
 
-| Especificaciones                                                                                             |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-postfix-decrement-operator', 'Decrement operator')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -30,9 +30,7 @@ slug: Web/API/CSSUnparsedValue
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                     | 備考     |
-| -------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSSOM','#cssunparsedvalue','CSSUnparsedValue')}} | {{Spec2('CSSOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

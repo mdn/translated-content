@@ -262,7 +262,7 @@ This is not a new concept — television services have had closed captioning ava
 
 Whereas many countries offer English films with subtitles written in their own native languages, and different language subtitles are often available on DVDs, for example
 
-![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](https://mdn.mozillademos.org/files/14442/Subtitles_German.jpg)
+![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](subtitles_german.png)
 
 There are different types of text track with different purposes. The main ones you'll come across are:
 

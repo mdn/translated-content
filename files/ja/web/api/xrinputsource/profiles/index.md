@@ -34,9 +34,7 @@ WebXR 入力プロファイルレジストリー（[WebXR Input Profiles Registr
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                     | コメント |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#dom-xrinputsource-profiles','XRInputSource.profiles')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

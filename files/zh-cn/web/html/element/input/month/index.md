@@ -442,7 +442,7 @@ function populateYears() {
 }
 ```
 
-> **备注：**  请记住有些年份有 53 周（见[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期)）！当你在开发产品应用时应当考虑这个问题。
+> **备注：** 请记住有些年份有 53 周（见[每年的周数](https://zh.wikipedia.org/wiki/ISO週日曆#每年的星期)）！当你在开发产品应用时应当考虑这个问题。
 
 ## 规范
 

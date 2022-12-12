@@ -5,7 +5,7 @@ slug: Web/XSLT/Element/decimal-format
 
 {{ XsltRef() }}
 
-`<xsl:decimal-format>` 要素は、_`format-number( )`_ 関数を使用して数字を文字列に変換する際に使用される文字と記号を定義します。
+`<xsl:decimal-format>` 要素は、`format-number( )` 関数を使用して数字を文字列に変換する際に使用される文字と記号を定義します。
 
 ### 構文
 

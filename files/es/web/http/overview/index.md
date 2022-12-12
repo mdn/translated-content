@@ -1,12 +1,6 @@
 ---
 title: Generalidades del protocolo HTTP
 slug: Web/HTTP/Overview
-tags:
-  - HTML
-  - HTTP
-  - Mecánica Web
-  - Visión general
-translation_of: Web/HTTP/Overview
 ---
 
 {{HTTPSidebar}}

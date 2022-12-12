@@ -37,9 +37,7 @@ CSSUnparsedValue.forEach(function callback(currentValue[, index[, array]]) {
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                     | 備考     |
-| ------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('CSSOM','#cssunparsedvalue','forEach()')}} | {{Spec2('CSSOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

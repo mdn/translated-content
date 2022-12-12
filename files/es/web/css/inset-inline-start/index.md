@@ -1,7 +1,6 @@
 ---
 title: inset-inline-start
 slug: Web/CSS/inset-inline-start
-translation_of: Web/CSS/inset-inline-start
 ---
 
 {{CSSRef}}{{SeeCompatTable}}

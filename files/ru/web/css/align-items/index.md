@@ -74,7 +74,7 @@ align-items: unset;
 
 ### Support in Grid layout
 
-{{Compat("css.properties.align-items.grid_context")}}
+{{Compat}}
 
 ## Смотрите также
 

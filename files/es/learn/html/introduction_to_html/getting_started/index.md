@@ -1,14 +1,6 @@
 ---
 title: Empezar con HTML
 slug: Learn/HTML/Introduction_to_HTML/Getting_started
-tags:
-  - Atributos
-  - Elemento
-  - Guía
-  - HTML
-  - Principiante
-  - comentários
-translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 original_slug: Learn/HTML/Introduccion_a_HTML/iniciar
 ---
 
@@ -57,7 +49,7 @@ Si queremos que la línea sea independiente de otras, podemos especificar que es
 
 Exploremos un poco el elemento párrafo:
 
-![Anatomía de los elementos HTML](https://mdn.mozillademos.org/files/11913/htmlexp.png)
+![Anatomía de los elementos HTML](grumpy-cat-small.png)
 
 Las principales partes de nuestro elemento son:
 
@@ -265,7 +257,7 @@ Este texto mostrará lo siguiente en tu página:
 
 Los elementos también pueden tener atributos. Los atributos tienen este aspecto:
 
-![atributo html](https://mdn.mozillademos.org/files/11915/htmlatributos.png)
+![atributo html](grumpy-cat-attribute-small.png)
 
 Los atributos contienen información extra sobre el elemento que no se mostrará en el contenido. En este caso, el atributo `class` asigna al elemento un identificador que se puede utilizar para dotarlo de información de estilo.
 
@@ -279,9 +271,12 @@ Un atributo debería tener:
 
 Otro ejemplo de un elemento es {{htmlelement("a")}}. Esto significa _ancla_. Una ancla puede convertir el texto que encierra en un hipervínculo. Las anclas pueden tener varios atributos, pero varios son como sigue:
 
-- **`href`**: El valor de este atributo indica la dirección web a la que se quiere que apunte el enlace, que será hacia donde nos lleve el navegador cuando se haga clic sobre el elemento. Por ejemplo, `href="https://www.mozilla.org/"`.
-- **`title`**: El atributo `title` añade información adicional sobre el enlace, como puede ser el título de la página que vinculas. Por ejemplo, `title="La página de inicio de Mozilla"`. Esta información aparecerá cuando se le pase el ratón por encima.
-- **`target`**: El atributo `target` especifica el contexto de navegación que va a usar para mostrar el enlace. Por ejemplo, `target="_blank"` abrirá el enlace en una nueva pestaña. Si quieres mostrar el enlace en la pestaña activa, simplemente omite este atributo.
+- `href`
+  - : El valor de este atributo indica la dirección web a la que se quiere que apunte el enlace, que será hacia donde nos lleve el navegador cuando se haga clic sobre el elemento. Por ejemplo, `href="https://www.mozilla.org/"`.
+- `title`
+  - : El atributo `title` añade información adicional sobre el enlace, como puede ser el título de la página que vinculas. Por ejemplo, `title="La página de inicio de Mozilla"`. Esta información aparecerá cuando se le pase el ratón por encima.
+- `target`
+  - : El atributo `target` especifica el contexto de navegación que va a usar para mostrar el enlace. Por ejemplo, `target="_blank"` abrirá el enlace en una nueva pestaña. Si quieres mostrar el enlace en la pestaña activa, simplemente omite este atributo.
 
 Edita la línea de abajo en el área de _Entrada_ para convertirlo en un enlace a tu sitio web favorito.
 

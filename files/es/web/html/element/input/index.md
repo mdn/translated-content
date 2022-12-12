@@ -1,9 +1,7 @@
 ---
 title: input
 slug: Web/HTML/Element/input
-translation_of: Web/HTML/Element/input
 original_slug: Web/HTML/Elemento/input
-browser-compat: html.elements.input
 ---
 
 ## Resumen
@@ -70,19 +68,19 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
     - `button`: Botón sin un comportamiento específico.
     - `checkbox`: Casilla de selección. Se debe usar el atributo **value** para definir el valor que se enviará por este elemento. Se usa el atributo **checked** para indicar si el elemento está seleccionado. También se puede usar el atributo **indeterminate** (el cual solo se puede establecer programaticamente) para indicar que la casilla está en un estado indeterminado (en la mayoría de las plataformas, se dibuja una línea horizontal a través de la casilla).
-    - `color`:  Control para espicificar un color. Una interfaz de selección de color no requiere más funcionalidad que la de aceptar colores simples como texto ([más información](<http://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
-    - `date`:  Control para introducir una fecha (año, mes y día, sin tiempo).
-    - `datetime`:  {{deprecated_inline}} Control para introducir una fecha y hora (horas, minutos, segundos y fracción de segundo), basado en la zona horaria UTC. **Esta característica ha sido [removida de WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
-    - `datetime-local`:  Control para introducir fecha y hora, sin zona horaria específica.
+    - `color`: Control para espicificar un color. Una interfaz de selección de color no requiere más funcionalidad que la de aceptar colores simples como texto ([más información](<http://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
+    - `date`: Control para introducir una fecha (año, mes y día, sin tiempo).
+    - `datetime`: {{deprecated_inline}} Control para introducir una fecha y hora (horas, minutos, segundos y fracción de segundo), basado en la zona horaria UTC. **Esta característica ha sido [removida de WHATWG HTML.](https://github.com/whatwg/html/issues/336)**
+    - `datetime-local`: Control para introducir fecha y hora, sin zona horaria específica.
     - `email`: Campo para introducir una dirección de correo electrónico. El valor introducido se valida para que contenga una cadena vacía o una dirección de correo válida antes de enviarse. Las pseudo-clases {{cssxref(":valid")}} y {{cssxref(":invalid")}} son aplicadas segun corresponda.
     - `file`: Control que permite al usuario seleccionar un archivo. Se puede usar el atributo **accept** para definir los tipos de archivo que el control podrá seleccionar.
     - `hidden`: Control que no es mostrado en pantalla, pero cuyo valor es enviado al servidor.
     - `image`: Botón de envío de formulario con gráfico. Se debe usar el atributo **src** para definir el origen de la imagen y el atributo **alt** para definir un texto alternativo. Se puede usar los atributos **height** y **width** para definir el tamaño de la imagen en píxeles.
-    - `month`:  Control para introducir un mes y año, sin zona horaria específica.
-    - `number`:  Control para introducir un número de punto flotante.
+    - `month`: Control para introducir un mes y año, sin zona horaria específica.
+    - `number`: Control para introducir un número de punto flotante.
     - `password`: Control de línea simple cuyo valor permanece oculto. Se puede usar el atributo **maxlength** para especificar la longitud máxima del valor que se puede introducir.
     - `radio`: Botón radio. Se debe usar el atributo **value** para definir el valor que se enviará por este elemento. Se usa el atributo **checked** para indicar si el elemento está seleccionado de forma predeterminada. Los botones radio que tengan el mismo valor para su atributo **name** están dentro del mismo "grupo de botones radio". Solo un botón radio dentro de un grupo puede ser seleccionado a la vez.
-    - `range`:  Control para introducir un número cuyo valor exacto no es importante. Este control usa los siguientes valores predeterminados si no se especifica cada atributo:
+    - `range`: Control para introducir un número cuyo valor exacto no es importante. Este control usa los siguientes valores predeterminados si no se especifica cada atributo:
 
       - `min`: 0
       - `max`: 100

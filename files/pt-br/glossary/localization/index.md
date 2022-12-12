@@ -23,7 +23,6 @@ Localização (L10n) é o processo de tradução de interfaces de software a par
 - [Frequently Asked Localization Questions](/pt-BR/docs/Frequently_Asked_Localization_Questions)
   - : Frequently asked questions about localization.
 
-
 ## Related Topics
 
 - [Extensions](/pt-BR/docs/Extensions),

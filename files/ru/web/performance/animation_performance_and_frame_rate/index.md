@@ -68,7 +68,7 @@ original_slug: Web/Performance/Производительность_анимац
 
 Если вы хотите самостоятельно разобраться с этим примером, вы можете найти демо [здесь](http://mdn.github.io/performance-scenarios/animation-transform-margin/index.html). Демо выглядит так:
 
-![](https://mdn.mozillademos.org/files/11029/css-animations-demo.png)На экране всего два контрола: кнопка "start / stop" для запуска и остановки анимации и радио-кнопки для выбора свойства, с помощью которого происходит анимация: `margin`, или `transform`.
+![](css-animations-demo.png)На экране всего два контрола: кнопка "start / stop" для запуска и остановки анимации и радио-кнопки для выбора свойства, с помощью которого происходит анимация: `margin`, или `transform`.
 
 Так же на странице есть некоторое количество элементов со свойствами [`linear-gradient`](/en-US/docs/Web/CSS/linear-gradient) и [`box-shadow`](/en-US/docs/Web/CSS/box-shadow) Мы обращаем внимание именно на эти два свойства, так как они относительно дорогие.
 
@@ -82,19 +82,19 @@ original_slug: Web/Performance/Производительность_анимац
 
 Откройте первую запись. Точное содержимое, которое вы увидите, зависит от вашего устройства, системной нагрузки и окружения, но, в целом это должно выглядеть так:
 
-![](https://mdn.mozillademos.org/files/10853/margin-recording.png)
+![](margin-recording.png)
 
 На экране показаны три отдельных секции: (a) обзор этапов рендеринга (Waterfall), (b) частота кадров, и (c) детали на временной шкалы.
 
 #### Обзор этапов рендеринга на временной шкале (Waterfall)
 
-![](https://mdn.mozillademos.org/files/10857/margin-timeline-overview.png)
+![](margin-timeline-overview.png)
 
 Сейчас здесь показаны ужатые этапы рендеринга [Waterfall](/ru/docs/Tools/Performance/Waterfall). Как видите, большая часть графика заполнена зелёным цветом - это говорит нам о том, что [мы тратим много ресурсов на отрисовывание](/ru/docs/Tools/Performance/Timeline#timeline-color-coding).
 
 #### Частота кадров (Frame Rate)
 
-![](https://mdn.mozillademos.org/files/10859/margin-frame-rate.png)
+![](margin-frame-rate.png)
 
 Эта секция показывает [частоту кадров](/ru/docs/Tools/Performance/Frame_rate). Средняя частота на примере - 46.67fps. Это ниже, чем желаемые 60fps. Однако, ещё хуже то, что частота кадров нестабильна - есть этапы, где частота кадров снижается до 20 и даже до 10 fps. Маловероятно, что вы увидите здесь плавную анимацию, особенно если добавите какое-то взаимодействие с пользователем.
 
@@ -102,7 +102,7 @@ original_slug: Web/Performance/Производительность_анимац
 
 Оставшаяся часть записей показа в секции "Waterfall view". Если вы пролистаете этот список, вы увидите что-то наподобие этого:
 
-![](https://mdn.mozillademos.org/files/10861/margin-timeline.png)
+![](margin-timeline.png)
 
 Это шаги рендеринга ([rendering waterfall](/ru/docs/Tools/Performance/Scenarios/Animating_CSS_properties#The_CSS_rendering_waterfall)). Для каждого кадра анимации мы вычисляем стили для каждого элемента, потом вычисляем Layout, а затем перерисовываем все элементы.
 
@@ -114,17 +114,17 @@ original_slug: Web/Performance/Производительность_анимац
 
 Теперь, переключитесь на "Use transform" и запишите новые данные. Это должно выглядеть примерно так:
 
-![](https://mdn.mozillademos.org/files/10863/transform-recording.png)
+![](transform-recording.png)
 
 #### Обзор этапов рендеринга на временной шкале (Waterfall)
 
-![](https://mdn.mozillademos.org/files/10869/transform-timeline-overview.png)
+![](transform-timeline-overview.png)
 
 В сравнении с [версией, которая использует margin](/ru/docs/Tools/Performance/Scenarios/Animating_CSS_properties#Waterfall_overview), мы видим намного меньше зелёного, но намного больше фиолетового цвета. Это говорит о том, что вместо paint мы теперь тратим ресурсы на этапы [layout или style recalculation](/ru/docs/Tools/Performance/Waterfall#timeline-color-coding).
 
 #### Частота кадров (Frame Rate)
 
-![](https://mdn.mozillademos.org/files/10865/transform-frame-rate.png)
+![](transform-frame-rate.png)
 
 В сравнении с [версией, которая использует margin](/ru/docs/Tools/Performance/Scenarios/Animating_CSS_properties#Frame_rate), показатели fps здесь выглядят достаточно хорошо. Средняя частота кадров близка к 60fps, а стабильность fps, за исключением падения fps в начале значительно выросла.
 
@@ -132,6 +132,6 @@ original_slug: Web/Performance/Производительность_анимац
 
 В этой секции мы видим объяснения тому, что fps значительно улучшился. Мы больше не тратим время на layout и перерисовку элементов:
 
-![](https://mdn.mozillademos.org/files/10867/transform-timeline.png)
+![](transform-timeline.png)
 
 Здесь, используя `transform`, мы заметно улучшили производительность приложения. А инструменты разработчика помогли нам это сделать.

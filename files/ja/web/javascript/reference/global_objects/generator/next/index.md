@@ -104,9 +104,7 @@ g.next(2);
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-generator.prototype.next', 'Generator.prototype.next')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

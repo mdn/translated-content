@@ -77,7 +77,7 @@ fetch('simple.wasm').then(response =>
 
 Firefox 54+에서 Developer Tool Debugger Panel에는 웹 페이지에 포함된 모든 wasm 코드의 텍스트 표현을 표시하는 기능이 있습니다. Debugger 패널로 이동하여 "wasm://" 항목을 클릭할 수 있습니다.
 
-![wasm-debug](https://mdn.mozillademos.org/files/15823/wasm-debug.png)
+![wasm-debug](wasm-debug.png)
 
 Firefox에서 WebAssembly를 텍스트로 보는 것 외에도 텍스트 형식을 사용하여 개발자는 WebAssembly를 디버깅할 수 있습니다(breakpoint, callstack 검사, 단일 단계 검사 등). 비디오 미리 보기는 [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds)을 참조하십시오.
 

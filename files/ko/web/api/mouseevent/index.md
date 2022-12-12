@@ -3,6 +3,7 @@ title: MouseEvent
 slug: Web/API/MouseEvent
 translation_of: Web/API/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent`** 인터페이스는 특정 지점을 가리키는 장치를 통해 발생하는 이벤트를 의미한다 (마우스 등). 주로 사용되는 이벤트로는 {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}}, {{event("mousedown")}}가 있다.

@@ -140,9 +140,7 @@ Object.prototype.toString.call(new Date()); // [object prototype polluted]
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.prototype.tostring', 'Object.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

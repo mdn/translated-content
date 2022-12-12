@@ -18,7 +18,7 @@ number( [object] )
 
 ### 인수
 
-- _`object`_
+- `object`
   (optional)
   - : 숫자로 변환할 개체.
 

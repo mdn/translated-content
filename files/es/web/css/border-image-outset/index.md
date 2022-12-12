@@ -1,12 +1,6 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
-tags:
-  - Bordes CSS
-  - CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/border-image-outset
 ---
 {{CSSRef}}
 

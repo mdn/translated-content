@@ -1,14 +1,6 @@
 ---
 title: transform
 slug: Web/CSS/transform
-tags:
-  - CSS
-  - Compatibilidad con los navegadores
-  - Experimental
-  - Propiedad CSS
-  - Referencia
-  - Transformación
-translation_of: Web/CSS/transform
 ---
 
 {{CSSRef}}
@@ -206,9 +198,9 @@ Sesga un elemento a lo largo del eje Y por el ángulo dado.
 transform:  translate(tx[, ty]);     /* ej. translate(50px, 100px) */
 ```
 
-Especifica una tanslación 2D dada por el vector **\[tx, ty]**. Si **`ty` **no es específicada, se asumirá que su valor es cero.
+Especifica una tanslación 2D dada por el vector **\[tx, ty]**. Si **`ty`** no es específicada, se asumirá que su valor es cero.
 
-Cada [`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/en-US/docs/CSS/length) o un valor de [`porcentaje`](/en-US/docs/CSS/percentage).
+Cada [`translation-value`](/es/docs/translation-value) puede ser un valor de [`longuitud`](/es/docs/CSS/length) o un valor de [`porcentaje`](/es/docs/CSS/percentage).
 
 ### translateX
 

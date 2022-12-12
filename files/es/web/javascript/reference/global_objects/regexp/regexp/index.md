@@ -1,12 +1,6 @@
 ---
 title: Constructor RegExp()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
-tags:
-  - Constructor
-  - JavaScript
-  - Referencia
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp/RegExp
 ---
 
@@ -82,9 +76,7 @@ El constructor del objeto de expresión regular, por ejemplo, `new RegExp('ab+c'
 
 ## Especificaciones
 
-| Especificación                                                                                   |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-regexp-constructor', 'RegExp constructor')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

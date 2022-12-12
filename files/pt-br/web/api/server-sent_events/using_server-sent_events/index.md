@@ -49,7 +49,7 @@ evtSource.addEventListener("ping", (evento) => {
 
 Este código é semelhante, exceto que será chamado automaticamente sempre que o servidor enviar uma mensagem com o campo `event` definido como "ping"; ele então analisa o JSON no campo `data` e gera essa informação.
 
-> **Aviso:** quando **não usado em HTTP/2**, o SSE sofre de uma limitação ao número máximo de conexões abertas, o que pode ser especialmente doloroso ao abrir várias guias, pois o limite é _por navegador_ e é definido para um número muito baixo (6). O problema foi marcado como "Não será corrigido" no [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) e no [Firefox](https://bugzilla. mozilla.org/show_bug.cgi?id=906896). Esse limite é por navegador + domínio, o que significa que você pode abrir 6 conexões SSE em todas as guias para `www.example1.com` e outras 6 conexões SSE para `www.example2.com` (por [Stackoverflow](https ://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)). Ao usar HTTP/2, o número máximo de _streams HTTP_ simultâneos é negociado entre o servidor e o cliente (o padrão é 100).
+> **Aviso:** quando **não usado em HTTP/2**, o SSE sofre de uma limitação ao número máximo de conexões abertas, o que pode ser especialmente doloroso ao abrir várias guias, pois o limite é _por navegador_ e é definido para um número muito baixo (6). O problema foi marcado como "Não será corrigido" no [Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=275955) e no [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=906896). Esse limite é por navegador + domínio, o que significa que você pode abrir 6 conexões SSE em todas as guias para `www.example1.com` e outras 6 conexões SSE para `www.example2.com` (por [Stackoverflow](https://stackoverflow.com/questions/5195452/websockets-vs-server-sent-events-eventsource/5326159)). Ao usar HTTP/2, o número máximo de _streams HTTP_ simultâneos é negociado entre o servidor e o cliente (o padrão é 100).
 
 ## Enviando eventos do servidor
 
@@ -95,7 +95,7 @@ O código acima gera um evento a cada segundo, com o tipo de evento "ping". Os d
 O loop continuará funcionando independentemente do status da conexão, portanto, uma verificação é incluída
 para quebrar o loop se a conexão foi fechada (por exemplo, o cliente fecha a página).
 
-> **Observação:** você pode encontrar um exemplo completo que usa o código mostrado neste artigo no GitHub — veja [Simple SSE demo using PHP](https://github.com/mdn/dom-examples/tree/main /servidor-enviados-eventos).
+> **Observação:** você pode encontrar um exemplo completo que usa o código mostrado neste artigo no GitHub — veja [Simple SSE demo using PHP](<https://github.com/mdn/dom-examples/tree/main> /servidor-enviados-eventos).
 
 ## Manipulação de erros
 

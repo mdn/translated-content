@@ -254,7 +254,7 @@ while (i < 5) {
 
 ### Exemplo 2
 
-Uma instrução label `checkiandj` contém uma instrução label c`heckj`. Se o `continue` for executado, o programa terminará a iteração atual de `checkj` e começará a próxima iteração. Toda vez que o `continue` for executado, `checkj` recomeçará até que a condição do `while` for falsa. Quando isto ocorrer `checkiandj` executará até que sua condição seja falsa.
+Uma instrução label `checkiandj` contém uma instrução label `checkj`. Se o `continue` for executado, o programa terminará a iteração atual de `checkj` e começará a próxima iteração. Toda vez que o `continue` for executado, `checkj` recomeçará até que a condição do `while` for falsa. Quando isto ocorrer `checkiandj` executará até que sua condição seja falsa.
 
 Se o `continue` estivesse referenciando `checkiandj`, o programa deveria continuar do topo de `checkiandj`.
 

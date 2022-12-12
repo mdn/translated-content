@@ -1,12 +1,6 @@
 ---
 title: Selectores de hijo
 slug: Web/CSS/Child_combinator
-tags:
-  - CSS
-  - Principiante
-  - Referencia CSS
-  - Selectores
-translation_of: Web/CSS/Child_combinator
 ---
 
 {{CSSRef("Selectors")}}

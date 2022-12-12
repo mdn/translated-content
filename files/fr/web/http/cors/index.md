@@ -138,7 +138,7 @@ Les lignes 13 à 22 détaillent la réponse HTTP du serveur situé sous le domai
 
 `Access-Control-Allow-Origin: http://toto.example`
 
-On notera que, dans ce cas, aucun autre domaine que `http://toto.example` (tel qu'identifié par l'en-tête `Origin`) ne pourra accéder à la ressource. L'en-tête `Access-Control-Allow-Origin` devrait contenir la valeur qui a été envoyée dans l'en-tête  `Origin` de la requête.
+On notera que, dans ce cas, aucun autre domaine que `http://toto.example` (tel qu'identifié par l'en-tête `Origin`) ne pourra accéder à la ressource. L'en-tête `Access-Control-Allow-Origin` devrait contenir la valeur qui a été envoyée dans l'en-tête `Origin` de la requête.
 
 ### Requêtes nécessitant une requête préliminaire
 
@@ -313,7 +313,7 @@ En attendant que les navigateurs comblent ce manque, il est possible de contourn
 
 S'il n'est pas possible d'appliquer ces changements, on peut également :
 
-1. Effectuer [une requête simple](#simples) (avec [`Response.url`](/fr/docs/Web/API/Response/url) si on utilise l'API Fetch ou  [`XHR.responseURL`](/fr/docs/Web/API/XMLHttpRequest/responseURL) si on utilise XHR) afin de déterminer l'URL à laquelle aboutirait la requête avec requête préliminaire.
+1. Effectuer [une requête simple](#simples) (avec [`Response.url`](/fr/docs/Web/API/Response/url) si on utilise l'API Fetch ou [`XHR.responseURL`](/fr/docs/Web/API/XMLHttpRequest/responseURL) si on utilise XHR) afin de déterminer l'URL à laquelle aboutirait la requête avec requête préliminaire.
 2. Effectuer la requête initialement souhaitée avec l'URL _réelle_ obtenue à la première étape.
 
 Toutefois, si la requête déclenche une requête préliminaire suite à l'absence de l'en-tête {{HTTPHeader("Authorization")}}, on ne pourra pas utiliser cette méthode de contournement et il sera nécessaire d'avoir accès au serveur pour contourner le problème.
@@ -446,7 +446,7 @@ Access-Control-Allow-Credentials: true
 
 ### `Access-Control-Allow-Methods`
 
-L'en-tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique la ou les méthodes qui sont autorisées pour accéder à la ressoure. Cet en-tête est utilisé dans la réponse à la requête préliminaire (voir ci-avant [les conditions dans lesquelles une requête préliminaire est nécessaire](#preflight)).
+L'en-tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique la ou les méthodes qui sont autorisées pour accéder à la ressource. Cet en-tête est utilisé dans la réponse à la requête préliminaire (voir ci-avant [les conditions dans lesquelles une requête préliminaire est nécessaire](#preflight)).
 
 ```
 Access-Control-Allow-Methods: <methode>[, <methode>]*

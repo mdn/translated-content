@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/NavigatorOnLine/onLine
 original_slug: Web/API/NavigatorOnLine/onLine
 ---
+
 {{ApiRef("HTML DOM")}}
 
 Retorna o estado da conexão do navegador. A propriedade retorna um valor booleano, com `true` significando online e `false` significando offline. A propriedade envia atualizações assim que a capacidade do navegador de se conectar a rede muda. A atualização ocorre quando o usuário entra em um link ou quando algum script faz uma requisição a uma página remota. Exemplo, a propriedade deve retornar `false` quando usuários clicam em links assim que perderem suas conexões com a internet.

@@ -42,9 +42,7 @@ self.onmessage = function(e) {
 
 ## 仕様
 
-| 仕様                                                                                                                                 | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-extendablemessageevent-data', 'ExtendableMessageEvent.data')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

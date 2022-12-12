@@ -1,14 +1,11 @@
 ---
 title: API
 slug: Mozilla/Add-ons/WebExtensions/API
-tags:
-  - Extenciones Web
-translation_of: Mozilla/Add-ons/WebExtensions/API
 ---
 
-Las API de JavaScript para las Extensiones Web se pueden usar dentro de los [scripts en segundo plano](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) de la extensión y en cualquier otro documento contenido en la extensión, incluyendo las ventanas emergentes de [acción de página](/es/docs/Mozilla/Add-ons/WebExtensions/Page_actions) o [acción del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_action), [barras laterales](/es/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [páginas de opciones](/es/docs/Mozilla/Add-ons/WebExtensions/Options_pages) o [páginas de pestañas nuevas](/en-US/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A algunas de estas API también se puede acceder mediante los [scripts de contenido](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) de una extensión ( consulte la [lista en la guía de script de contenido](/en-US/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
+Las API de JavaScript para las Extensiones Web se pueden usar dentro de los [scripts en segundo plano](/es/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts) de la extensión y en cualquier otro documento contenido en la extensión, incluyendo las ventanas emergentes de [acción de página](/es/docs/Mozilla/Add-ons/WebExtensions/Page_actions) o [acción del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/Browser_action), [barras laterales](/es/docs/Mozilla/Add-ons/WebExtensions/Sidebars), [páginas de opciones](/es/docs/Mozilla/Add-ons/WebExtensions/Options_pages) o [páginas de pestañas nuevas](/es/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). A algunas de estas API también se puede acceder mediante los [scripts de contenido](/es/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts) de una extensión ( consulte la [lista en la guía de script de contenido](/es/Add-ons/WebExtensions/Content_scripts#WebExtension_APIs)).
 
-Para usar API más poderosas debes [solicitar permiso](/en-US/Add-ons/WebExtensions/manifest.json/permissions) en manifest.json en tu extensión.
+Para usar API más poderosas debes [solicitar permiso](/es/Add-ons/WebExtensions/manifest.json/permissions) en manifest.json en tu extensión.
 
 Puedes acceder a las API utilizando el namespace `browser`:
 

@@ -5,6 +5,7 @@ slug: >-
 translation_of: MDN/Structures/Macros
 original_slug: MDN/Structures/Macros
 ---
+
 {{MDNSidebar}}
 
 The [Kuma](/pt-BR/docs/Project:MDN/Kuma) platform on which MDN runs provides a powerful macro system, [KumaScript](/pt-BR/docs/MDN/Contribute/Tools/KumaScript "/en-US/docs/Project:MDN/Kuma/KumaScript_guide"), which makes it possible to do a wide variety of things automatically. This article provides information on how to invoke MDN's macros within articles.

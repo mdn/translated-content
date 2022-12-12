@@ -1,11 +1,6 @@
 ---
 title: style
 slug: Web/HTML/Global_attributes/style
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/style
 original_slug: Web/HTML/Atributos_Globales/style
 ---
 

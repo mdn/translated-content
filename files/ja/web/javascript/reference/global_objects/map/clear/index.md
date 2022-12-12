@@ -39,9 +39,7 @@ myMap.has('bar')  // false
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.clear', 'Map.prototype.clear')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,13 +1,6 @@
 ---
 title: ':not()'
 slug: Web/CSS/:not
-tags:
-  - CSS
-  - Diseño
-  - Referencia
-  - Web
-  - pseudoclase
-translation_of: Web/CSS/:not
 original_slug: Web/CSS/:not()
 ---
 

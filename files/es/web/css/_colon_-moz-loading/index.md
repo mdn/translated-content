@@ -1,14 +1,6 @@
 ---
 title: ':-moz-loading'
 slug: Web/CSS/:-moz-loading
-tags:
-  - CSS
-  - NeedsCompatTable
-  - NeedsContent
-  - NeedsExample
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-loading
 ---
 
 {{CSSRef}}{{Non-standard_header}}

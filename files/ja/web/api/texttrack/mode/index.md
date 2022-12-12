@@ -64,9 +64,7 @@ window.addEventListener("load", event => {
 
 ## 仕様書
 
-| 仕様書                                                                           | 状態                                 | 備考 |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ---- |
-| {{ SpecName('HTML WHATWG', '#dom-texttrack-mode', 'mode') }} | {{ Spec2('HTML WHATWG') }} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

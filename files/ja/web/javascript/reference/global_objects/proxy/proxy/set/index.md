@@ -85,9 +85,7 @@ console.log(p.a);       // 10
 
 ## 仕様書
 
-| 仕様書                                                                                                                                           |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-set-p-v-receiver', '[[Set]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -8,6 +8,7 @@ tags:
   - Window
 translation_of: Web/API/Window/pageYOffset
 ---
+
 {{ APIRef("CSSOM View") }}
 
 {{domxref("Window")}} 인터페이스의 **`pageYOffset`** 읽기 전용 속성은 {{domxref("Window.scrollY", "scrollY")}}의 다른 이름으로, 문서가 수직으로 얼마나 스크롤됐는지 픽셀 단위로 반환합니다.

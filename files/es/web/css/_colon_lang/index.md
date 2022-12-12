@@ -1,11 +1,6 @@
 ---
 title: ':lang'
 slug: Web/CSS/:lang
-tags:
-  - CSS
-  - Pseudo-clase
-  - Web
-translation_of: Web/CSS/:lang
 ---
 
 {{CSSRef}}

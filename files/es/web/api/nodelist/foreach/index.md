@@ -1,14 +1,6 @@
 ---
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
-tags:
-  - DOM
-  - Iterable
-  - Métodos
-  - NodeList
-  - Referencia
-  - Web
-translation_of: Web/API/NodeList/forEach
 ---
 
 {{APIRef("DOM")}}

@@ -1,13 +1,6 @@
 ---
 title: ':target'
 slug: Web/CSS/:target
-tags:
-  - CSS
-  - Layout
-  - Pseudo clase CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/:target
 ---
 {{CSSRef}}
 

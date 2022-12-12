@@ -45,7 +45,7 @@ audioCtx.currentTime;
 // ...
 ```
 
-Firefox では、 `privacy.resistFingerprinting` を有効にすると、精度は 100ms または  `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のどちらか大きいほうになります。
+Firefox では、 `privacy.resistFingerprinting` を有効にすると、精度は 100ms または `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` の値のどちらか大きいほうになります。
 
 ## 仕様書
 

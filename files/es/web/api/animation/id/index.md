@@ -1,14 +1,6 @@
 ---
 title: Animation.id
 slug: Web/API/Animation/id
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Reference
-  - id
-translation_of: Web/API/Animation/id
 ---
 
 {{ APIRef("Web Animations") }}

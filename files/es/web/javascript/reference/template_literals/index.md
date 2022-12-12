@@ -1,12 +1,6 @@
 ---
 title: Plantillas literales (plantillas de cadenas)
 slug: Web/JavaScript/Reference/Template_literals
-tags:
-  - ECMAScript 2015
-  - Experimental
-  - Expérimental(2)
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Template_literals
 original_slug: Web/JavaScript/Referencia/template_strings
 ---
 

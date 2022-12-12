@@ -6,6 +6,7 @@ tags:
   - performance.now
 translation_of: Web/API/Performance/now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 The **`performance.now()`** method returns a {{domxref("DOMHighResTimeStamp")}}, measured in milliseconds.

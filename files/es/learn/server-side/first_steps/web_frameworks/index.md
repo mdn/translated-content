@@ -1,16 +1,6 @@
 ---
 title: Frameworks Web de lado servidor
 slug: Learn/Server-side/First_steps/Web_frameworks
-tags:
-  - Aprendizaje
-  - Codificación de scripts
-  - Frameworks web
-  - Guía
-  - Principiante
-  - Programación lado servidor
-  - Servidor
-  - introducción
-translation_of: Learn/Server-side/First_steps/Web_frameworks
 original_slug: Learn/Server-side/Primeros_pasos/Web_frameworks
 ---
 

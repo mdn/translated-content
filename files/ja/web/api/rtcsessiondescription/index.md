@@ -65,9 +65,7 @@ signalingChannel.onmessage = function (evt) {
 
 ## 仕様策定状況
 
-| 仕様書                                                                                                           | 策定状況                         | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{ SpecName('WebRTC 1.0', '#rtcsessiondescription-class', 'RTCSessionDescription') }} | {{Spec2('WebRTC 1.0')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

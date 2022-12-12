@@ -1,13 +1,6 @@
 ---
 title: Location
 slug: Web/API/Location
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - Location
-  - Referencia
-translation_of: Web/API/Location
 ---
 
 {{APIRef("HTML DOM")}}

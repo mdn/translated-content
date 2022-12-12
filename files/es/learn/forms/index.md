@@ -1,10 +1,6 @@
 ---
 title: Formularios en HTML5
 slug: Learn/Forms
-tags:
-  - Forms
-  - HTML
-  - HTML5
 original_slug: HTML/HTML5/Forms_in_HTML5
 ---
 

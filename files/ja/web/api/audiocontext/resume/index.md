@@ -43,13 +43,11 @@ susresBtn.onclick = function() {
 
 ## 仕様
 
-| Specification                                                                                    | Status                               | Comment |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#dom-baseaudiocontext-resume', 'resume()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 
-{{Compat("api.BaseAudioContext.resume")}}
+{{Compat}}
 
 ## 参考
 

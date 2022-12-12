@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers
 original_slug: Web/API/GlobalEventHandlers
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`GlobalEventHandlers`** 믹스인mixin은 {{domxref("HTMLElement")}}, {{domxref("Document")}}, {{domxref("Window")}} 등 여러 인터페이스가 공유하는 공통 이벤트 처리기를 묘사합니다. 물론, 각각의 인터페이스는 아래에 나열된 항목뿐만 아니라 더 많은 이벤트 처리기를 추가할 수 있습니다.

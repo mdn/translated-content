@@ -1,11 +1,6 @@
 ---
 title: sub
 slug: Web/HTML/Element/sub
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/sub
 original_slug: Web/HTML/Elemento/sub
 ---
 

@@ -1,13 +1,6 @@
 ---
 title: Node.lastChild
 slug: Web/API/Node/lastChild
-tags:
-  - API
-  - DOM
-  - NecesitaCompatibilidadNavegador
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Node/lastChild
 ---
 
 {{APIRef("DOM")}}

@@ -1,9 +1,6 @@
 ---
 title: 'Null'
 slug: Glossary/Null
-tags:
-  - Glosario
-translation_of: Glossary/Null
 ---
 
 En ciencias informáticas, un valor **null** representa una referencia que apunta, generalmente intencionadamente, a una inexistente o inválido {{glossary("objecto","objeto")}} o dirección. El significado de una referencia null varía entre las implementaciones de lenguajes.
@@ -14,7 +11,7 @@ En {{Glossary("JavaScript")}}, null es uno de los {{Glossary("Primitivo", "valor
 
 ### Referencia técnica
 
-- [Tipos de datos y estructuras de datos en JavaScript](/en-US/docs/Web/JavaScript/Data_structures)
+- [Tipos de datos y estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures)
 - {{jsxref("null", "Referencia JavaScript para los valores null")}}
 
 ### Conocimientos generales

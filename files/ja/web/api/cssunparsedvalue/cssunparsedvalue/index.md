@@ -20,9 +20,7 @@ var CSSUnparsedValue = new CSSUnparsedValue(members)
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                     | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('CSSOM','#dom-cssunparsedvalue-cssunparsedvalue-members-members','CSSUnparsedValue')}} | {{Spec2('CSSOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

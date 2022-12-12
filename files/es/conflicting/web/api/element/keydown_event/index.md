@@ -1,7 +1,6 @@
 ---
 title: GlobalEventHandlers.onkeydown
 slug: conflicting/Web/API/Element/keydown_event
-translation_of: Web/API/GlobalEventHandlers/onkeydown
 original_slug: Web/API/GlobalEventHandlers/onkeydown
 ---
 

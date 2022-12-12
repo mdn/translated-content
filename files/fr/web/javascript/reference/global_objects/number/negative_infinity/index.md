@@ -26,8 +26,8 @@ Cette valeur se comporte différemment de l'infini mathématique :
 - Toute valeur négative, y compris `NEGATIVE_INFINITY`, multipliée par `NEGATIVE_INFINITY` sera égale à `POSITIVE_INFINITY`.
 - Zéro multiplié par `NEGATIVE_INFINITY` sera égal à {{jsxref("NaN")}}.
 - NaN multiplié par `NEGATIVE_INFINITY` sera égal à `NaN`.
-- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur négative, à l'exception de  `NEGATIVE_INFINITY`, sera égal à `POSITIVE_INFINITY`.
-- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur positive à l'exception de  `POSITIVE_INFINITY`, sera égal à `NEGATIVE_INFINITY`.
+- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur négative, à l'exception de `NEGATIVE_INFINITY`, sera égal à `POSITIVE_INFINITY`.
+- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur positive à l'exception de `POSITIVE_INFINITY`, sera égal à `NEGATIVE_INFINITY`.
 - `NEGATIVE_INFINITY`, divisé par `NEGATIVE_INFINITY` ou `POSITIVE_INFINITY`, sera égal à `NaN`.
 - Tout nombre positif divisé par `NEGATIVE_INFINITY` sera égal au zéro négatif.
 - Tout nombre négatif divisé par `NEGATIVE_INFINITY` sera égal au zéro positif.

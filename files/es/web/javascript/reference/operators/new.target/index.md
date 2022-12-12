@@ -1,12 +1,6 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-tags:
-  - Clases
-  - ECMAScript6
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators/new.target
 original_slug: Web/JavaScript/Referencia/Operadores/new.target
 ---
 
@@ -72,4 +66,4 @@ var b = new B(); // escribe en el log "B"
 - [Funciones](/es/docs/Web/JavaScript/Guide/Funciones)
 - [Clases](/es/docs/Web/JavaScript/Referencia/Classes)
 - [`new`](/es/docs/Web/JavaScript/Referencia/Operadores/new)
-- [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [`this`](/es/docs/Web/JavaScript/Reference/Operators/this)

@@ -12,7 +12,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser
 
 이 시리즈를 최대한 활용하려면 중급의 [JavaScript](/ko/Learn/Getting_started_with_the_web/JavaScript_basics) 지식이 있어야 합니다. 이 튜토리얼을 끝낸 후에는 여러분은 스스로 간단한 웹 게임들을 만들 수 있게 될 것입니다.
 
-![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](https://mdn.mozillademos.org/files/10383/mdn-breakout-gameplay.png)
+![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](mdn-breakout-gameplay.png)
 
 ## 강의 내용
 

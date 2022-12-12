@@ -1,13 +1,6 @@
 ---
 title: Document.adoptNode()
 slug: Web/API/Document/adoptNode
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Referencia
-  - metodo
-translation_of: Web/API/Document/adoptNode
 ---
 
 {{ ApiRef("DOM") }}

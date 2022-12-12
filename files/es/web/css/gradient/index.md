@@ -1,15 +1,6 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-tags:
-  - CSS
-  - CSS tipo de datos
-  - Degradado
-  - Diseño
-  - Gradiente
-  - Referencia
-  - graficos
-translation_of: Web/CSS/gradient
 original_slug: Web/CSS/Gradiente
 ---
 

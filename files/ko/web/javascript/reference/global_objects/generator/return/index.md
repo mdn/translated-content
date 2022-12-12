@@ -65,7 +65,7 @@ g.next();        // { value: undefined, done: true }
 
 제너레이터가 이미 "완료" 상태 일때 `return(value)`가 호출되면 제너레이터는 "완료" 상태를 유지합니다.
 
-인수를 지정하지 않으면 반환된 객체의 `value` 속성은 `undefined`가 됩니다. 인수가 제공되면 `yield` 식이 `try...finally`로 감싸지지 않는 한 반환된 객체의 `value` 속성은  해당 값이 됩니다.
+인수를 지정하지 않으면 반환된 객체의 `value` 속성은 `undefined`가 됩니다. 인수가 제공되면 `yield` 식이 `try...finally`로 감싸지지 않는 한 반환된 객체의 `value` 속성은 해당 값이 됩니다.
 
 ```js
 function* gen() {

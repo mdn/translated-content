@@ -147,7 +147,7 @@ alt テキストのキーワードは「説明文」です。 alt テキスト�
 
 それでは、あなたの HTML の {{htmlelement("img")}} 要素の上に適切なタイトルを付けてみましょう。
 
-> **メモ:** 見出しレベル 1 には、暗黙のスタイルがあることがわかりますね。テキストを大きくしたり、太くしたりするために見出し要素を使用しないでください。見出し要素は[アクセシビリティ](/ja/docs/Learn/Accessibility/HTML#text_content)や  [SEO などの理由](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure)で使用されているからです。段階を飛ばすことなく、意味のある見出しの並びをページ上に作るようにしてください。
+> **メモ:** 見出しレベル 1 には、暗黙のスタイルがあることがわかりますね。テキストを大きくしたり、太くしたりするために見出し要素を使用しないでください。見出し要素は[アクセシビリティ](/ja/docs/Learn/Accessibility/HTML#text_content)や [SEO などの理由](/ja/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure)で使用されているからです。段階を飛ばすことなく、意味のある見出しの並びをページ上に作るようにしてください。
 
 ### 段落
 

@@ -1,15 +1,6 @@
 ---
 title: El objeto arguments
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - Funciones
-  - JavaScript
-  - Namespace
-  - argumentos
-  - arguments
-  - espacio de nombres
-  - multiples
-translation_of: Web/JavaScript/Reference/Functions/arguments
 original_slug: Web/JavaScript/Referencia/Funciones/arguments
 ---
 
@@ -217,9 +208,7 @@ func(); // undefined
 
 ## Especificaciones
 
-| Especificación                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Objectos arguments exóticos')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

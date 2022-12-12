@@ -44,11 +44,4 @@ slug: Web/CSS/CSS_Images
 
 ## 仕様書
 
-| 仕様書                                                           | 状態                     | 備考                                                                                                                               |
-| ---------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Images")}}                                      | {{Spec2("CSS4 Images")}} | {{CSSxRef("image-resolution")}}, {{CSSxRef("gradient/conic-gradient()", "conic-gradient()")}}, {{CSSxRef("image/image()", "image()")}} を追加                            |
-| {{SpecName("CSS3 Images")}}                                      | {{Spec2("CSS3 Images")}} | {{CSSxRef("image-orientation")}}, {{CSSxRef("image-rendering")}}, {{CSSxRef("object-fit")}}, {{CSSxRef("object-position")}} を追加 |
-| {{SpecName("Compat", "#css-%3Cimage%3E-type", "CSS Gradients")}} | {{Spec2("Compat")}}      | `-webkit` の接頭辞が付いたグラデーション値の関数を標準化                                                                           |
-| {{SpecName("CSS3 Values", "#urls", "&lt;url&gt;")}}              | {{Spec2("CSS3 Values")}} |                                                                                                                                    |
-| {{Specname("CSS2.1", "syndata.html#uri", "&lt;uri&gt;")}}        | {{Spec2("CSS2.1")}}      |                                                                                                                                    |
-| {{SpecName("CSS1", "#url", "&lt;url&gt;")}}                      | {{Spec2("CSS1")}}        | 初回定義                                                                                                                           |
+{{Specifications}}

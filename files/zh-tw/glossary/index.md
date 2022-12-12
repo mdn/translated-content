@@ -7,7 +7,7 @@ slug: Glossary
 
 你可以從側邊欄中選擇術語。
 
-> **備註：** 這個術語表永遠不會寫完。你可以幫忙[撰寫新術語](/zh-TW/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary)或是改寫現有的術語。
+> **備註：** 這個術語表永遠不會寫完。你可以幫忙[撰寫新術語](/zh-TW/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_Glossary)或是改寫現有的術語。
 
 <section id="Quick_links">
  <ol>

@@ -1,9 +1,7 @@
 ---
 title: Array() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/Array
 original_slug: Web/JavaScript/Reference/Global_Objects/Array/Array
-browser-compat: javascript.builtins.Array.Array
 ---
 
 {{JSRef}}
@@ -26,7 +24,7 @@ Array(arrayLength)
 - `elementN`
   - : Un array de JavaScript se inicializa con los elementos dados, excepto en el caso donde se pase un solo argumento al constructor de `Array` y ese argumento sea un número (véase el parámetro `arrayLength` más abajo). Tenga en cuenta que este caso especial sólo se aplica a los arrays de JavaScript creadas con el constructor `Array`, no a los arrays literales, creadas con la sintaxis de corchetes.
 - `arrayLength`
-  - : Si el único argumento pasado al constructor de `Array` es un número entero entre 0 y 2^32 - 1 (incluido), éste devuelve un nuevo array de JavaScript con su propiedad de `length` establecida a ese número (**Nota:** esto implica un array de ranuras vacías de `arrayLength`, no ranuras con valores reales `undefined` — ver [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)).
+  - : Si el único argumento pasado al constructor de `Array` es un número entero entre 0 y 2^32 - 1 (incluido), éste devuelve un nuevo array de JavaScript con su propiedad de `length` establecida a ese número (**Nota:** esto implica un array de ranuras vacías de `arrayLength`, no ranuras con valores reales `undefined` — ver [sparse arrays](/es/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)).
 
 ### Exceptions
 

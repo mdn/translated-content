@@ -1,12 +1,6 @@
 ---
 title: samp
 slug: Web/HTML/Element/samp
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/samp
 original_slug: Web/HTML/Elemento/samp
 ---
 
@@ -23,11 +17,11 @@ The source for this interactive example is stored in a GitHub repository. If you
 - Señala lo que es una salida de un programa.
   - : **Sus etiquetas son**: \<samp> y \</samp> (ambas obligatorias)
   
-    **Crea una caja**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea).
+    **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
-    **Está definido como**: [Elemento de frase](es/HTML/Elemento/Tipos_de_elementos#de_frase).
+    **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).
 
-    **Puede contener**: [en linea](es/HTML/Elemento/Tipos_de_elementos#en_linea)
+    **Puede contener**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea)
 
 ##### Atributos Genéricos
 

@@ -1,11 +1,6 @@
 ---
 title: basefont
 slug: conflicting/Web/CSS/CSS_Fonts
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/basefont
 original_slug: Web/HTML/Element/basefont
 ---
 
@@ -15,8 +10,8 @@ original_slug: Web/HTML/Element/basefont
 
   - : **Sus etiquetas son**: \<basefont> (solo tiene una).
 
-    - **Está definido como**: Elemento [desaprobado](es/HTML/Elemento/Tipos_de_elementos#desaprobado).
-      - : En un doctype transicional está definido como un elemento [especial](es/HTML/Elemento/Tipos_de_elementos#especial) y por lo tanto [en línea](es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    - **Está definido como**: Elemento [desaprobado](/es/HTML/Elemento/Tipos_de_elementos#desaprobado).
+      - : En un doctype transicional está definido como un elemento [especial](/es/HTML/Elemento/Tipos_de_elementos#especial) y por lo tanto [en línea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
 
     **Crea una caja**: No.
     **Puede contener**: Nada.

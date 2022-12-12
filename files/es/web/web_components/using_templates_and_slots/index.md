@@ -1,12 +1,6 @@
 ---
 title: Usando plantillas y slots
 slug: Web/Web_Components/Using_templates_and_slots
-tags:
-  - Componentes Web
-  - Template
-  - shadow dom
-  - slot
-translation_of: Web/Web_Components/Using_templates_and_slots
 ---
 
 {{DefaultAPISidebar("Web Components")}}
@@ -246,7 +240,7 @@ body { margin-top: 47px }
 
 Finalmente, juntemos todos los fragmentos y veamos cómo se ve el resultado renderizado.
 
-{{ EmbedLiveSample('full_example', '300','400','https://mdn.mozillademos.org/files/14553/element-details.png','') }}
+{{ EmbedLiveSample('full_example', '300','400','element-details.png','') }}
 
 Observa los siguientes puntos del resultado renderizado:
 

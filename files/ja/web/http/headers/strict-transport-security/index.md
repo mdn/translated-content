@@ -86,9 +86,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## 仕様書
 
-| 仕様書                       | 状態                     | 備考     |
-| ---------------------------- | ------------------------ | -------- |
-| {{SpecName('HSTS')}} | {{Spec2('HSTS')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

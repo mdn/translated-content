@@ -1,11 +1,6 @@
 ---
 title: flex-basis
 slug: Web/CSS/flex-basis
-tags:
-  - CSS
-  - Cajas Flexibles de CSS
-  - Propiedad de CSS
-translation_of: Web/CSS/flex-basis
 ---
 
 {{CSSRef}}

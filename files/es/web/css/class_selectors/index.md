@@ -1,12 +1,6 @@
 ---
 title: Selectores de clase
 slug: Web/CSS/Class_selectors
-tags:
-  - CSS
-  - Principiante
-  - Referencia CSS
-  - Selectores
-translation_of: Web/CSS/Class_selectors
 ---
 
 {{CSSRef("Selectors")}}

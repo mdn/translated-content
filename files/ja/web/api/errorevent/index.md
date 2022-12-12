@@ -35,10 +35,7 @@ _親である {{domxref("Event")}}_ から関数を継承します。
 
 ## 仕様
 
-| 仕様                                                                                                                 | ステータス                           | 備考                                                            |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------- |
-| {{ SpecName('HTML WHATWG', 'webappapis.html#the-errorevent-interface', 'ErrorEvent') }} | {{ Spec2('HTML WHATWG') }} | `error` プロパティと 5 番目のパラメータをコンストラクタに追加。 |
-| {{ SpecName('HTML5 W3C', 'webappapis.html#the-errorevent-interface', 'ErrorEvent') }}     | {{ Spec2('HTML5 W3C') }}     | 初回定義。                                                      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

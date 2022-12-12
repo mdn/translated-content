@@ -9,11 +9,11 @@ slug: Web/API/Storage/length
 
 ## 構文
 
-```
+```js
 var aLength = storage.length;
 ```
 
-### 戻り値
+### 返値
 
 整数
 
@@ -27,19 +27,17 @@ function populateStorage() {
   localStorage.setItem('font', 'Helvetica');
   localStorage.setItem('image', 'cats.png');
 
-  localStorage.length; // 3 を返す
+  return localStorage.length; // 3 を返す
 }
 ```
 
 > **メモ:** 実際の例として、[Web Storage Demo](https://github.com/mdn/web-storage-demo) をご覧ください。
 
-## 仕様
+## 仕様書
 
-| 仕様書                                                                           | 策定状況                         | コメント |
-| -------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Web Storage', '#dom-storage-length', 'length')}} | {{Spec2('Web Storage')}} |          |
+{{Specifications}}
 
-## ブラウザ実装状況
+## ブラウザーの互換性
 
 {{Compat("api.Storage.length")}}
 

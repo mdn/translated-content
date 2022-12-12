@@ -10,6 +10,7 @@ tags:
 browser-compat: api.WebSocket.WebSocket
 translation_of: Web/API/WebSocket/WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket()`** 생성자는 새로운 {{domxref("WebSocket")}} 객체를 반환합니다.

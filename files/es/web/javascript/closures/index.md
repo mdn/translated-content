@@ -1,7 +1,6 @@
 ---
 title: Closures
 slug: Web/JavaScript/Closures
-translation_of: Web/JavaScript/Closures
 original_slug: Web/JavaScript/Closures
 ---
 
