@@ -1,6 +1,7 @@
 ---
 title: XMLDocument.load()
-slug: Web/API/XMLDocument/load
+slug: conflicting/Web/API/XMLDocument_e7165fc663e6b211830a9ac924b0817e
+original_slug: Web/API/XMLDocument/load
 ---
 
 {{APIRef("DOM")}}

@@ -1,6 +1,7 @@
 ---
 title: Node.isSupported
-slug: Web/API/Node/isSupported
+slug: conflicting/Web/API/Node
+original_slug: Web/API/Node/isSupported
 ---
 
 {{ ApiRef() }} {{deprecated_header}}

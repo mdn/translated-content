@@ -1,6 +1,7 @@
 ---
 title: Document.mozSyntheticDocument
-slug: Web/API/Document/mozSyntheticDocument
+slug: conflicting/Web/API/Document
+original_slug: Web/API/Document/mozSyntheticDocument
 ---
 
 ## 概述

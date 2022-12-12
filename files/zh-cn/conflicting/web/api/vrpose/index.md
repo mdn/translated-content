@@ -1,6 +1,7 @@
 ---
 title: VRPose.timestamp
-slug: Web/API/VRPose/timeStamp
+slug: conflicting/Web/API/VRPose
+original_slug: Web/API/VRPose/timeStamp
 ---
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
