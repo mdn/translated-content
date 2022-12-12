@@ -1,12 +1,6 @@
 ---
 title: new.target
 slug: Web/JavaScript/Reference/Operators/new.target
-tags:
-  - Clases
-  - ECMAScript6
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators/new.target
 original_slug: Web/JavaScript/Referencia/Operadores/new.target
 ---
 

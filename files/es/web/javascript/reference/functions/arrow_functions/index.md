@@ -1,13 +1,6 @@
 ---
 title: Funciones Flecha
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript6
-  - Intermedio
-  - JavaScript
-  - Referencia
-  - función
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 original_slug: Web/JavaScript/Referencia/Funciones/Arrow_functions
 ---
 

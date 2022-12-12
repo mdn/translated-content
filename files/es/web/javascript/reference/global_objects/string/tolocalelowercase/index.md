@@ -1,13 +1,6 @@
 ---
 title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
-tags:
-  - Cadena
-  - Internacionalizacion
-  - Prototipo
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/toLocaleLowerCase
 ---
 
