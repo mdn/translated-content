@@ -1,7 +1,7 @@
 ---
 title: Document.async
-slug: Web/API/XMLDocument/async
-original_slug: Web/API/Document/async
+slug: Web/API/XMLDocument
+original_slug: Web/API/XMLDocument/async
 ---
 
 `document.async` es utilizado para indicar cuándo un llamado de {{domxref("document.load")}} debe ser sincrónico o asincrónico. `true` es su valor por defecto, indicando que el documento se cargó asincrónicamente.

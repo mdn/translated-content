@@ -5850,7 +5850,7 @@
     "modified": "2019-03-23T22:19:14.265Z",
     "contributors": ["AzazelN28"]
   },
-  "Web/API/XMLDocument/async": {
+  "Web/API/XMLDocument": {
     "modified": "2019-03-23T22:57:43.989Z",
     "contributors": ["MauroEldritch"]
   },
