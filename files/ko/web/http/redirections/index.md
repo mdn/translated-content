@@ -1,5 +1,5 @@
 ---
-title: Redirections in HTTP
+title: HTTP 리다이렉트
 slug: Web/HTTP/Redirections
 translation_of: Web/HTTP/Redirections
 ---
@@ -149,7 +149,7 @@ Redirect permanent / http://www.example.com
 Redirect 301 / http://www.example.com
 ```
 
-[mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) 모듈도 리다이렉트를 만드는데 사용될 수 있습니다. 이것은 약간 더 복잡한데, 사용은 약간 더 복잡합니다.
+[mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 모듈도 리다이렉트를 만드는데 사용될 수 있습니다. 이것은 약간 더 복잡한데, 사용은 약간 더 복잡합니다.
 
 ### Nginx
 
