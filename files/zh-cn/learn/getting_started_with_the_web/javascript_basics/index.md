@@ -460,7 +460,7 @@ function setUserName() {
 
 如果你按部就班完成本文的实践，那么最终可以得到以下页面（可以 [查看我们的版本](https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site-scripted/)）：
 
-![测试页面，添加了 一个 js 脚本，可以显示用户名、更改 Firefox 图片。](https://mdn.mozillademos.org/files/16484/beginner-site-scripted.png)
+![测试页面，添加了 一个 js 脚本，可以显示用户名、更改 Firefox 图片。](beginner-site-scripted.png)
 
 若遇到问题，可以参考 GitHub 上的 [完整示例代码](https://github.com/roy-tian/learning-area/tree/master/extras/getting-started-web/beginner-html-site-scripted) 进行对比。
 

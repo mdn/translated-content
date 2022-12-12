@@ -1,11 +1,6 @@
 ---
 title: constructor
 slug: Web/JavaScript/Reference/Classes/constructor
-tags:
-  - Clases
-  - ECMAScript6
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Classes/constructor
 original_slug: Web/JavaScript/Referencia/Classes/constructor
 ---
 

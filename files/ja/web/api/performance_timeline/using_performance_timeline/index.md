@@ -1,118 +1,117 @@
 ---
 title: パフォーマンスタイムラインの使用
 slug: Web/API/Performance_Timeline/Using_Performance_Timeline
+l10n:
+  sourceCommit: 66c9543af6a0cf1baf89d5b0c972ee7dd08663b0
 ---
 
-{{DefaultAPISidebar("Performance Timeline API")}}
+{{DefaultAPISidebar("Performance API")}}
 
-**[パフォーマンスタイムライン](https://w3c.github.io/performance-timeline/)** 標準は、アプリケーション内でクライアント側の待ち時間の測定をサポートするための {{domxref("Performance")}} インターフェイスへの拡張を定義します。この規格には、特定のパフォーマンスイベントが発生したときにアプリケーションに通知することを可能にするインターフェイスも含まれています。同時に、これらのインターフェイスを使用してアプリケーションのパフォーマンスボトルネックを特定することができます。
+**[パフォーマンスタイムライン](https://w3c.github.io/performance-timeline/)** 規格は、アプリケーション内でクライアント側の待ち時間の測定をサポートするための {{domxref("Performance")}} インターフェイスへの拡張を定義します。この規格には、特定のパフォーマンスイベントが発生したときにアプリケーションに通知することを可能にするインターフェイスも含まれています。同時に、これらのインターフェイスを使用してアプリケーションのパフォーマンスボトルネックを特定することができます。
 
-## Performance 拡張
+## パフォーマンス拡張
 
-**Performance Timeline** extends the {{domxref("Performance")}} object with three methods that provide different mechanisms to get a set of {{domxref("PerformanceEntry","performance records (metrics)")}}, depending on the specified filter criteria. The following example show the usage of these methods {{domxref("Performance.getEntries","getEntries()")}}, {{domxref("Performance.getEntriesByName","getEntriesByName()")}} and {{domxref("Performance.getEntriesByType","getEntriesByType()")}}.
+**パフォーマンスタイムライン** は {{domxref("Performance") }} オブジェクトを拡張し、指定したフィルター条件に応じて {{domxref("PerformanceEntry", "パフォーマンス記録（指標）")}} の集合を取得するための異なる形を提供する 3 つのメソッドを備えています。以下の例では、これらのメソッド {{domxref("Performance.getEntries", "getEntries()")}}, {{domxref("Performance.getEntriesByName", "getEntriesByName()")}}, {{domxref("Performance.getEntriesByType", "getEntriesByType()")}} を使用した場合を示しています。
 
 ```js
 function log(s) {
-  var o = document.getElementsByTagName("output")[0];
-  o.innerHTML += s + " <br>";
+  const o = document.getElementsByTagName("output")[0];
+  o.innerHTML += `${s} <br>`;
 }
-function do_work (n) {
-  for (var i=0 ; i < n; i++) {
-     var m = Math.random();
+
+function doWork(n) {
+  for (let i = 0; i < n; i++) {
+     const m = Math.random(); // This is an example of work taking some time
   }
 }
-function print_perf_entry(pe) {
-  log("..name: "        + pe.name      +
-      "; entryType: " + pe.entryType +
-      "; startTime: " + pe.startTime +
-      "; duration: "  + pe.duration);
+
+function printPerfEntry(pe) {
+  log(`name: ${pe.name}`);
+  log(`entryType: ${pe.entryType}`);
+  log(`startTime: ${pe.startTime}`);
+  log(`duration: ${pe.duration}`);
 }
-function print_PerformanceEntries() {
+
+function printPerformanceEntries() {
   if (performance.mark === undefined) {
-    log("... performance.mark Not supported");
+    console.error("The property performance.mark is not supported.");
     return;
   }
 
   // Create some performance entries via the mark() and measure() methods
   performance.mark("Begin");
-  do_work(50000);
+  doWork(50000);
   performance.mark("End");
-  do_work(50000);
+  doWork(50000);
   performance.measure("Measure1", "Begin", "End");
 
   // Use getEntries() to iterate all entries
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("All Entry[" + i + "]");
-    print_perf_entry(p[i]);
-  }
+  performance.getEntries()
+    .forEach((entry, i) => {
+      log(`All Entry[${i}]`);
+      printPerfEntry(entry);
+    });
 
   // Use getEntries(name, entryType) to get specific entries
-  p = performance.getEntries({name : "Measure1", entryType: "measure"});
-  for (var i=0; i < p.length; i++) {
-    log("Begin and Measure [" + i + "]");
-    print_perf_entry(p[i]);
-  }
+  performance.getEntries({ name: "Measure1", entryType: "measure" })
+    .forEach((entry, i) => {
+      log(`Begin and Measure [${i}]`);
+      printPerfEntry(entry);
+    });
 
   // Use getEntriesByType() to get all "mark" entries
-  p = performance.getEntriesByType("mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Mark only [" + i + "]");
-    print_perf_entry(p[i]);
-  }
+  performance.getEntriesByType("mark")
+    .forEach((entry, i) => {
+      log(`Mark only [${i}]`);
+      printPerfEntry(entry);
+    });
 
   // Use getEntriesByName() to get all "mark" entries named "Begin"
-  p = performance.getEntriesByName("Begin", "mark");
-  for (var i=0; i < p.length; i++) {
-    log ("Begin and Mark [" + i + "]");
-    print_perf_entry(p[i]);
-  }
+  performance.getEntriesByName("Begin", "mark")
+    .forEach((entry, i) => {
+      log(`Begin and Mark [${i}]`);
+      printPerfEntry(entry);
+    });
 }
 ```
 
 ## PerformanceEntry インターフェイス
 
-The `{{domxref("PerformanceEntry")}}` interface encapsulates a single _performance entry_ i.e. a single performance metric. This interface has four properties and a JSON _serializer_ ({{domxref("Performance.toJSON","toJSON()")}}. The following example shows the use of these properties.
+この インターフェイスは、単一のパフォーマンス項目、すなわち単一のパフォーマンスメトリックをカプセル化します。このインターフェイスは 4 つのプロパティと JSON _シリアライザー_ ({{domxref("Performance.toJSON", "toJSON()")}}) を保有しています。以下の例では、これらのプロパティを使用することを示します。
 
 ```js
-function print_PerformanceEntry(ev) {
-  var properties = ["name", "entryType", "startTime", "duration"];
+function printPerformanceEntry(ev) {
+  const properties = ["name", "entryType", "startTime", "duration"];
 
   // Create a few performance entries
   performance.mark("Start");
-  do_work(50000);
+  doWork(50000);
   performance.mark("Stop");
   performance.measure("measure-1");
 
-  var p = performance.getEntries();
-  for (var i=0; i < p.length; i++) {
-    log("PerfEntry[" + i + "]");
-    for (var j=0; j < properties.length; j++) {
-      // check each property in window.performance
-      var supported = properties[j] in p[i];
-      if (supported) {
-        var pe = p[i];
-        log("... " + properties[j] + " = " + pe[properties[j]]);
-      } else {
-        log("... " + properties[j] + " = Not supported");
-      }
-    }
-  }
+  performance.getEntries()
+    .forEach((perfEntry, i) => {
+      log(`PerfEntry[${i}]`);
+      properties.forEach((prop) => {
+        // Check each property in window.performance
+        const supported = prop in perfEntry;
+        log(`… ${prop} = ${supported ? perfEntry[prop] : "Not supported"}`);
+      });
+    });
 }
 ```
 
-This interface also includes a {{domxref("PerformanceEntry.toJSON","toJSON()")}} method that returns the serialization of the {{domxref("PerformanceEntry")}} object. The following examples show the use of this method.
+このインターフェイスは {{domxref("PerformanceEntry") }} オブジェクトのシリアライズを返す {{domxref("PerformanceEntry.toJSON", "toJSON()")}} メソッドも記載しています。以下の例では、このメソッドを使用することを示します。
 
 ```js
-function PerfEntry_toJSON() {
-
+function perfEntryToJSON() {
   // Create a few performance entries
   performance.mark("mark-1");
   performance.mark("mark-2");
   performance.measure("meas-1", "mark-1", "mark-2");
 
-  var peList = performance.getEntries();
-  var pe = peList[0];
+  const peList = performance.getEntries();
+  const pe = peList[0];
 
   if (pe.toJSON === undefined) {
     log ("PerformanceEntry.toJSON() is NOT supported");
@@ -120,76 +119,66 @@ function PerfEntry_toJSON() {
   }
 
   // Print the PerformanceEntry object
-  var json = pe.toJSON();
-  var s = JSON.stringify(json);
-  log("PerformanceEntry.toJSON = " + s);
+  const json = pe.toJSON();
+  const s = JSON.stringify(json);
+  log(`PerformanceEntry.toJSON = ${s}`);
 }
 ```
 
-## Performance オブザーバー
+## パフォーマンスオブザーバー
 
-{{SeeCompatTable}}
+パフォーマンスオブザーバーのインターフェイスは、アプリケーションが特定のパフォーマンスイベントの種類のオブザーバーを登録することを可能にし、それらのイベントの種類の 1 つが記録されたとき、アプリケーションはオブザーバーが作成されたときに指定されたオブザーバーのコールバック関数によってイベントの_通知を受ける。オブザーバー（コールバック）が呼び出されたとき、コールバックの引数には{{domxref("PerformanceObserverEntryList", "パフォーマンスオブザーバー項目リスト","",1)}}が含まれ、監視されている{{domxref("PerformanceEntry", "パフォーマンス項目","",1)}}だけを収めます。つまり、このリストにはオブザーバーの {{domxref("PerformanceObserver.observe", "observe()")}} メソッドを呼び出したときに指定されたイベントの種類の項目のみが収められています。
 
-The _performance observer_ interfaces allow an application to register an _observer_ for specific performance event types, and when one of those event types is recorded, the application is _notified_ of the event via the observer's callback function that was specified at the time, the observer was created. When the observer (callback) is invoked the callback's parameters include a _{{domxref("PerformanceObserverEntryList","performance observer entry list")}}_ that only contains _observed_ {{domxref("PerformanceEntry","performance entries")}}. That is, the list only contains entries for the event types that were specified when the observer's {{domxref("PerformanceObserver.observe","observe()")}} method was invoked.
-
-The following example shows how to register two observers: the first one registers for several event types and the second observer only registers for one event type.
+以下の例では、 2 つのオブザーバーを登録する方法を示しています。最初のオブザーバーは、いくつかのイベント種別に対して登録し、 2 つ目のオブザーバーは 1 つのイベント種別に対してのみ登録します。
 
 ```js
 function PerformanceObservers() {
   // Create observer for all performance event types
-  var observe_all = new PerformanceObserver(function(list, obs) {
-    var perfEntries;
-
+  const observeAll = new PerformanceObserver((list, obs) => {
     // Print all entries
-    perfEntries = list.getEntries();
-    for (var i=0; i < perfEntries.length; i++) {
-      print_perf_entry(perfEntries[i]);
-    }
+    list.getEntries().forEach((entry) => {
+      printPerfEntry(entry);
+    });
 
     // Print entries named "Begin" with type "mark"
-    perfEntries = list.getEntriesByName("Begin", "mark");
-    for (var i=0; i < perfEntries.length; i++) {
-      print_perf_entry(perfEntries[i]);
-    }
+    list.getEntriesByName("Begin", "mark").forEach((entry) => {
+      printPerfEntry(entry);
+    });
 
     // Print entries with type "mark"
-    perfEntries = list.getEntriesByType("mark");
-    for (var i=0; i < perfEntries.length; i++) {
-      print_perf_entry(perfEntries[i]);
-    }
+    list.getEntriesByType("mark").forEach((entry) => {
+      printPerfEntry(entry);
+    });
   });
-  // subscribe to all performance event types
-  observe_all.observe({entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server']});
+
+  // Subscribe to all performance event types
+  observeAll.observe({
+    entryTypes: ['frame', 'mark', 'measure', 'navigation', 'resource', 'server'],
+  });
 
   // Create observer for just the "mark" event type
-  var observe_mark = new PerformanceObserver(function(list, obs) {
-    var perfEntries = list.getEntries();
+  const observeMark = new PerformanceObserver((list, obs) => {
     // Should only have 'mark' entries
-    for (var i=0; i < perfEntries.length; i++) {
-      print_perf_entry(perfEntries[i]);
-    }
+    list.getEntries().forEach((entry) =>  {
+      printPerfEntry(entry);
+    });
   });
-  // subscribe to only the 'mark' event
-  observe_mark.observe({entryTypes: ['mark']});
+
+  // Subscribe to only the 'mark' event
+  observeMark.observe({ entryTypes: ['mark'] });
 }
-function print_perf_entry(pe) {
-  log("name: "        + pe.name      +
-      "; entryType: " + pe.entryType +
-      "; startTime: " + pe.startTime +
-      "; duration: "  + pe.duration);
+
+function printPerfEntry(pe) {
+  log(`name: ${pe.name}`);
+  log(`entryType: ${pe.entryType}`);
+  log(`startTime: ${pe.startTime}`);
+  log(`duration: ${pe.duration}`);
 }
 ```
 
-The {{domxref("PerformanceObserverEntryList","performance observer entry list")}} interface has the same three `getEntries*()` methods as the {{domxref("Performance")}} interface and these methods are used to retrieve _observed_ performance entries within the observer callback. These methods have been used in the above stated example.
+{{domxref("PerformanceObserverEntryList", "パフォーマンスオブザーバー項目リスト","",1)}} インターフェイスは {{domxref("Performance")}} インターフェイスと同じ3つの `getEntries*()` メソッドを保有し、これらのメソッドはオブザーバーコールバック内で _observed_ パフォーマンス項目を取得するために使用されます。これらのメソッドは上記の例で使用されています。
 
-## 仕様
+## 関連情報
 
-The interfaces described in this document are defined in the **Performance Timeline** standard which has two levels:
-
-- [Performance Timeline Level 2](https://w3c.github.io/performance-timeline/); Editors Draft; Work In Progress. This version introduces _performance observers_ (and the {{domxref("PerformanceObserver")}} and {{domxref("PerformanceObserverEntryList")}} interfaces).
-- [Performance Timeline](http://www.w3.org/TR/performance-timeline/); W3C Recommendation 12 December 2013
-
-## あわせて参照
-
-- [Performance Timeline (Overview)](/ja/docs/Web/API/Performance_Timeline)
-- [A Primer for Web Performance Timing APIs](http://siusin.github.io/perf-timing-primer/)
+- [パフォーマンスガイドライン（概要）](/ja/docs/Web/API/Performance_Timeline)
+- [A Primer for Web Performance Timing APIs](https://siusin.github.io/perf-timing-primer/)

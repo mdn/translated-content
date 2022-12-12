@@ -1954,10 +1954,6 @@
       "Sheppy"
     ]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2019-01-16T19:17:27.272Z",
-    "contributors": ["wbamberg", "-", "angellica.araujo"]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2019-01-16T19:51:57.687Z",
     "contributors": ["wbamberg", "-"]
@@ -5802,10 +5798,6 @@
     "modified": "2019-03-23T23:24:23.146Z",
     "contributors": ["julio-elipse", "MarceloBRN", "LucasPrado", "MatCAlv"]
   },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2019-03-18T21:16:20.736Z",
-    "contributors": ["ygormaximo"]
-  },
   "Web/Guide/Introduction_to_Web_development": {
     "modified": "2019-07-28T16:57:13.368Z",
     "contributors": ["rvenson"]
@@ -5888,6 +5880,10 @@
   "Web/HTML/CORS_enabled_image": {
     "modified": "2019-03-23T22:20:56.821Z",
     "contributors": ["mak213k"]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2019-03-18T21:16:20.736Z",
+    "contributors": ["ygormaximo"]
   },
   "Web/HTML/Element": {
     "modified": "2020-10-20T02:01:24.831Z",
@@ -8734,10 +8730,6 @@
     "modified": "2019-03-23T22:37:22.411Z",
     "contributors": ["pabloff9"]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/toGMTString": {
-    "modified": "2020-10-15T22:34:12.107Z",
-    "contributors": ["FernandoKGA"]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/toISOString": {
     "modified": "2020-10-15T22:34:15.917Z",
     "contributors": ["FernandoKGA"]
@@ -10994,6 +10986,10 @@
     "modified": "2020-07-16T22:32:07.136Z",
     "contributors": ["rpizzolato", "WellingtonFR", "greysonf"]
   },
+  "conflicting/MDN/Contribute": {
+    "modified": "2019-01-16T19:17:27.272Z",
+    "contributors": ["wbamberg", "-", "angellica.araujo"]
+  },
   "conflicting/MDN/Contribute/Getting_started": {
     "modified": "2019-03-23T23:38:18.895Z",
     "contributors": ["hlays", "wbamberg", "teoli", "jaydson", "jswisher"]
@@ -11263,6 +11259,10 @@
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toString": {
     "modified": "2020-10-15T22:34:13.547Z",
+    "contributors": ["FernandoKGA"]
+  },
+  "conflicting/Web/JavaScript/Reference/Global_Objects/Date/toUTCString": {
+    "modified": "2020-10-15T22:34:12.107Z",
     "contributors": ["FernandoKGA"]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Error/toString": {

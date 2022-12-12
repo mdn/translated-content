@@ -3,7 +3,7 @@ title: '<rb>: The Ruby Base element'
 slug: Web/HTML/Element/rb
 ---
 
-{{HTMLSidebar}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 **HTML Ruby Base**（`<rb>`）元素用于分隔{{HTMLElement("ruby")}}注释的基本文本组件（即正在注释的文本）。一个`<rb>`元素应该包装基本文本的每个单独的原子段。
 

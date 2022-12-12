@@ -1,14 +1,6 @@
 ---
 title: Hoja de referencia de sintaxis de expresiones regulares
 slug: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
-tags:
-  - Cheatsheet
-  - Expresiones Regulares
-  - Guía
-  - Hoja de referencia
-  - JavaScript
-  - RegExp
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Hoja_de_referencia
 ---
 

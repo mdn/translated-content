@@ -134,7 +134,7 @@ This example uses an image to link to the MDN home page. The home page will open
 
 ```html
 <a href="https://developer.mozilla.org/en-US/" target="_blank">
-  <img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png"
+  <img src="mdn_logo.png"
        alt="MDN logo" />
 </a>
 ```

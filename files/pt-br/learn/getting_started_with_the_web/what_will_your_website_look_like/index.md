@@ -42,7 +42,7 @@ Você deve ter seu título e parágrafos desde antes. Mantenha eles por perto.
 
 Para escolher a cor, vá ao [Seletor de Cores](/pt-BR/docs/Web/CSS/CSS_Colors/seletor_de_cores) e escolha a cor que preferir. Quando escolher a cor, você verá uma sequência de seis caracteres, como `#660066`. Isso é chamado um _código hex(adecimal)_, e representa sua cor. Copie esse código em algum lugar seguro por enquanto.
 
-![](https://mdn.mozillademos.org/files/8975/Screenshot%20from%202014-11-03%2017:40:49.png)
+![](screenshot_from_2014-11-03_17-40-49.png)
 
 ### Imagens
 
@@ -66,9 +66,9 @@ Para escolher uma fonte:
 3. Clique no botão "\* Família Selecionada" no painel na parte inferior da página ("\*" depende de quantas fontes você selecionou).
 4. Na caixa pop-up, você pode ver e copiar as linhas de código que o Google oferece em seu editor de texto para salvar posteriormente.
 
-![](https://mdn.mozillademos.org/files/13871/font1.png)
+![](font1.png)
 
-![](https://mdn.mozillademos.org/files/13873/font2.png)
+![](font2.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 

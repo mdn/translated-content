@@ -1,5 +1,5 @@
 ---
-title: Redirections in HTTP
+title: HTTP 리다이렉트
 slug: Web/HTTP/Redirections
 translation_of: Web/HTTP/Redirections
 ---
@@ -11,7 +11,7 @@ URL 리다이렉션 혹은 URL 포워딩은 페이지 단위의 실제 리소스
 
 HTTP에서, 리다이렉션은 요청에 대해 특별한 응답(_리다이렉트_)을 전송함으로써 촉발됩니다. HTTP 리다이렉트는 `3xx` 상태 코드를 지닌 응답입니다. 리다이렉트 응답을 수신한 브라우저는, 제공된 새로운 URL을 사용하며 그것을 즉시 로드합니다: 대부분의 경우, 리다이렉션은 사용자에게는 보이지 않는데다가, 적은 성능 저하를 일으킵니다.
 
-![](https://mdn.mozillademos.org/files/13785/HTTPRedirect.png)
+![](httpredirect.png)
 
 리다이렉트에는 몇 가지 유형이 있으며 세 가지 카테고리로 나누어집니다: 영속적, 일시적 그리고 특수 리다이렉션.
 
@@ -149,7 +149,7 @@ Redirect permanent / http://www.example.com
 Redirect 301 / http://www.example.com
 ```
 
-[mod_rewrite](http://httpd.apache.org/docs/current/mod/mod_rewrite.html) 모듈도 리다이렉트를 만드는데 사용될 수 있습니다. 이것은 약간 더 복잡한데, 사용은 약간 더 복잡합니다.
+[mod_rewrite](https://httpd.apache.org/docs/current/mod/mod_rewrite.html) 모듈도 리다이렉트를 만드는데 사용될 수 있습니다. 이것은 약간 더 복잡한데, 사용은 약간 더 복잡합니다.
 
 ### Nginx
 

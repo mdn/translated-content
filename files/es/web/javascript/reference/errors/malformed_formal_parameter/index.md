@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: Malformed formal parameter'
 slug: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
-tags:
-  - JavaScript
-  - SyntaxError
-  - errores
-translation_of: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 ---
 
 ## Mensaje

@@ -26,7 +26,7 @@ Para empezar, podríamos volver a ver al objeto `Persona` de nuestro [artículo 
 
 Esto es conocido como **abstracción** — crear un modelo simple de algo complejo que represente sus aspectos más importantes y que sea fácil de manipular para el propósito de nuestro programa.
 
-![](https://mdn.mozillademos.org/files/13889/person-diagram.png)
+![](person-diagram.png)
 
 En algunos lenguajes de POO, esta definición de tipo de objeto se la llama **class** (JavaScript utiliza diferentes mecanismos y terminologías, como verás a continuación) — esto no es en realidad un objeto, en vez de esto es un modelo que define las características que un objeto debería tener.
 
@@ -34,7 +34,7 @@ En algunos lenguajes de POO, esta definición de tipo de objeto se la llama **cl
 
 Partiendo de nuestra clase, podemos crear **instancias de objetos** — objetos que contienen los datos y funcionalidades definidas en la clase original. Teniendo a nuestra clase `Persona`, ahora podemos crear gente con características más específicas:
 
-![](https://mdn.mozillademos.org/files/15163/MDN-Graphics-instantiation-2-fixed.png)
+![](mdn-graphics-instantiation-2-fixed.png)
 
 Cuando una instancia del objeto es creada a partir de una clase, se ejecuta **la función constructora** (constructor en inglés) de la clase para crearla. El proceso de crear una instancia del objeto desde una clase se llama **instanciación**.
 
@@ -42,7 +42,7 @@ Cuando una instancia del objeto es creada a partir de una clase, se ejecuta **la
 
 En este caso nosotros no queremos personas genericas — queremos docentes y estudiantes, que son los dos tipos más específicos de personas. En POO, podemos crear nuevas clases basadas en otras clases, estas nuevas **clases secundarias** se pueden hacer para **heredar** los datos y código de su **clase primaria**, de modo que pueden reutilizar la funcionalidad común a todos los tipos de objetos en lugar de tener que duplicarla. Cuando la funcionalidad difiere entre clases, puedes definir funciones especializadas directamente en ellas según sea necesario.
 
-![](https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png)
+![](mdn-graphics-inherited-3.png)
 
 Esto es realmente útil, los profesores y los estudiantes comparten muchas características comunes como el nombre, el género y la edad, por lo que es conveniente tener que definir esas características solo una vez. También puedes definir la misma característica por separado en diferentes clases, ya que cada definición de esa característica estará en un espacio de nombres diferente. Por ejemplo, el saludo de un estudiante puede tener la forma "Yo, soy \[Nombre]" (por ejemplo, Yo, soy Sam), mientras que un profesor puede usar algo más formal, como "Hola, mi nombre es \[Prefix] \[lastName], y enseño \[Asunto] ". (Por ejemplo, Hola, mi nombre es Sr. Griffiths, y yo enseño Química).
 
@@ -50,7 +50,7 @@ Esto es realmente útil, los profesores y los estudiantes comparten muchas carac
 
 Ahora puedes crear instancias de objetos de las clases "hijo". Por ejemplo:
 
-![](https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png)
+![](mdn-graphics-instantiation-teacher-3.png)
 
 En el resto del articulo, comenzaremos a ver como podemos practicar la teoría de POO en JavaScript.
 

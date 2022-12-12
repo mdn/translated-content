@@ -1,24 +1,29 @@
 ---
 title: 409 Conflict
 slug: Web/HTTP/Status/409
-translation_of: Web/HTTP/Status/409
 ---
+
 {{HTTPSidebar}}
 
-HTTP **`409 Conflict`** 응답 상태 코드는 서버의 현재 상태와 요청이 충돌했음을 나타낸다.
+HTTP **`409 Conflict`** 응답 상태 코드는 서버의 현재 상태와 요청이 충돌했음을 나타냅니다.
 
-충돌은 {{HTTPMethod("PUT")}} 요청에 대응하여 발생할 가능성이 가장 높다. 예를 들어 서버에 이미 있는 파일보다 오래된 파일을 업로드할 때 409 응답이 발생하여 버전 제어 충돌이 발생할 수 있다.
+충돌은 {{HTTPMethod("PUT")}} 요청에 대응하여 발생할 가능성이 가장 높습니다. 예를 들어 서버에 이미 있는 파일보다 오래된 파일을
+업로드하면 버전 제어 충돌이 발생하여 409 응답받을 수 있습니다.
 
-## Status
+## 상태
 
-```
+```http
 409 Conflict
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## See also
+## 브라우저 호환성
+
+{{Compat}}
+
+## 같이 보기
 
 - {{HTTPMethod("PUT")}}

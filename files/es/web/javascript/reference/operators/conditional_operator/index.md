@@ -1,10 +1,6 @@
 ---
 title: Operador condicional (ternario)
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-tags:
-  - JavaScript
-  - Operador
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 original_slug: Web/JavaScript/Referencia/Operadores/Conditional_Operator
 ---
 

@@ -69,7 +69,7 @@ Highlights:
 
 - 非标准的{{domxref("CloseEvent.initCloseEvent()")}} 方法和创建 {{domxref("CloseEvent")}} 使用 {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} 方法已经被移除。相反可以使用标准的构造器{{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} . ({{bug(1161950)}}).
 - On Desktop, {{domxref("PointerEvent")}} is now activated by default in Nightly; it is not activated in Developer Edition, Beta or Release and won't be for at least some versions ({{bug(1166347)}}).
-- The unprefixed version of {{domxref("MouseEvent.movementX")}} and {{domxref("MouseEvent.movementY")}}}} have been added; the prefixed versions are deprecated and will be removed at some point in the future ({{bug(1164981)}}).
+- The unprefixed version of {{domxref("MouseEvent.movementX")}} and {{domxref("MouseEvent.movementY")}} have been added; the prefixed versions are deprecated and will be removed at some point in the future ({{bug(1164981)}}).
 
 #### Web Crypto
 

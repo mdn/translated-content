@@ -61,60 +61,101 @@ writing-mode: unset;
 
 ```html hidden
 <table>
-    <tr>
-        <th>value</th>
-        <th>Sistema de escritura vertical</th>
-        <th>Sistema de escritura horizontal</th>
-        <th>Escritura mixta</th>
-    </tr>
-    <tr>
-        <td>horizontal-tb</td>
-        <td class="exampleText1">我家没有电脑。</td>
-        <td class="exampleText1">Texto de ejemplo</td>
-        <td class="exampleText1">1994年に至っては</td>
-    </tr>
-    <tr>
-        <td>vertical-lr</td>
-        <td class="exampleText2">我家没有电脑。</td>
-        <td class="exampleText2">Texto de ejemplo</td>
-        <td class="exampleText2">1994年に至っては</td>
-    </tr>
-    <tr>
-        <td>vertical-rl</td>
-        <td class="exampleText3">我家没有电脑。</td>
-        <td class="exampleText3">Texto de ejemplo</td>
-        <td class="exampleText3">1994年に至っては</td>
-    </tr>
-    <tr>
-        <td>sideways-lr</td>
-        <td class="exampleText4">我家没有电脑。</td>
-        <td class="exampleText4">Texto de ejemplo</td>
-        <td class="exampleText4">1994年に至っては</td>
-    </tr>
-    <tr>
-        <td>sideways-rl</td>
-        <td class="exampleText5">我家没有电脑。</td>
-        <td class="exampleText5">Texto de ejemplo</td>
-        <td class="exampleText5">1994年に至っては</td>
-    </tr>
+  <tr>
+    <th>Value</th>
+    <th>Vertical script</th>
+    <th>Horizontal (LTR) script</th>
+    <th>Horizontal (RTL) script</th>
+    <th>Mixed script</th>
+  </tr>
+  <tr>
+    <td>horizontal-tb</td>
+    <td class="example Text1"><span>我家没有电脑。</span></td>
+    <td class="example Text1"><span>Example text</span></td>
+    <td class="example Text1"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text1"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>vertical-lr</td>
+    <td class="example Text2"><span>我家没有电脑。</span></td>
+    <td class="example Text2"><span>Example text</span></td>
+    <td class="example Text2"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text2"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>vertical-rl</td>
+    <td class="example Text3"><span>我家没有电脑。</span></td>
+    <td class="example Text3"><span>Example text</span></td>
+    <td class="example Text3"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text3"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>sideways-lr</td>
+    <td class="example Text4"><span>我家没有电脑。</span></td>
+    <td class="example Text4"><span>Example text</span></td>
+    <td class="example Text4"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text4"><span>1994年に至っては</span></td>
+  </tr>
+  <tr>
+    <td>sideways-rl</td>
+    <td class="example Text5"><span>我家没有电脑。</span></td>
+    <td class="example Text5"><span>Example text</span></td>
+    <td class="example Text5"><span>מלל ארוך לדוגמא</span></td>
+    <td class="example Text5"><span>1994年に至っては</span></td>
+  </tr>
+</table>
 ```
 
 ```css hidden
-table { border-collapse:collapse; }
-td, th {border: 1px black solid; padding: 3px; }
-th {background-color: lightgray; }
-.exampleText1 { width:75px; writing-mode: horizontal-tb; -webkit-writing-mode: horizontal-tb; -ms-writing-mode: horizontal-tb; }
-.exampleText2 { height:75px; writing-mode: vertical-lr; -webkit-writing-mode: vertical-lr; -ms-writing-mode: vertical-lr; }
-.exampleText3 { height:75px; writing-mode: vertical-rl; -webkit-writing-mode: vertical-rl; -ms-writing-mode: vertical-rl; }
-.exampleText4 { height:75px; writing-mode: sideways-lr; -webkit-writing-mode: sideways-lr; -ms-writing-mode: sideways-lr; }
-.exampleText5 { height:75px; writing-mode: sideways-rl; -webkit-writing-mode: sideways-rl; -ms-writing-mode: sideways-rl; }
+table {
+  border-collapse: collapse;
+}
+td,
+th {
+  border: 1px black solid;
+  padding: 3px;
+}
+th {
+  background-color: lightgray;
+}
+.example {
+  height: 75px;
+  width: 75px;
+}
+```
+
+```css hidden
+.example.Text1 span,
+.example.Text1 {
+  writing-mode: horizontal-tb;
+}
+
+.example.Text2 span,
+.example.Text2 {
+  writing-mode: vertical-lr;
+}
+
+.example.Text3 span,
+.example.Text3 {
+  writing-mode: vertical-rl;
+}
+
+.example.Text4 span,
+.example.Text4 {
+  writing-mode: sideways-lr;
+}
+
+.example.Text5 span,
+.example.Text5 {
+  writing-mode: sideways-rl;
+}
 ```
 
 {{EmbedLiveSample("Example", 400, 430)}}
 
 ### Resultado efectivo
 
-![](https://mdn.mozillademos.org/files/12201/writing-mode-actual-result.png)
+![](screenshot_2020-02-05_21-04-30.png)
 
 ## Especificaciones
 

@@ -1,14 +1,6 @@
 ---
 title: Expresiones y operadores
 slug: Web/JavaScript/Guide/Expressions_and_Operators
-tags:
-  - Expresiones
-  - Guía
-  - JavaScript
-  - Operadores
-  - Principiante
-  - '|10n_prioridad'
-translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 ---
 
 {{jsSidebar("JavaScript Guide", "Guía JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}
