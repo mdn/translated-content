@@ -27974,40 +27974,5 @@
       "si0ls",
       "dattaz"
     ]
-  },
-  "conflicting/Web/API/Document": {
-    "modified": "2019-03-18T21:39:15.573Z",
-    "contributors": ["loella16"]
-  },
-  "conflicting/Web/API/Navigator": {
-    "modified": "2019-03-23T23:52:20.754Z",
-    "contributors": ["fscholz", "teoli", "jsx", "Mgjbot", "BenoitL"]
-  },
-  "conflicting/Web/API/Node": {
-    "modified": "2019-03-18T21:15:15.385Z",
-    "contributors": ["loella16", "fscholz", "teoli", "jsx", "BenoitL"]
-  },
-  "conflicting/Web/API/SharedWorkerGlobalScope": {
-    "modified": "2020-10-15T22:26:34.435Z",
-    "contributors": ["Arzak656"]
-  },
-  "conflicting/Web/API/Window": {
-    "modified": "2020-10-15T21:14:00.787Z",
-    "contributors": [
-      "velkro",
-      "fscholz",
-      "teoli",
-      "jsx",
-      "tregagnon",
-      "damien.flament"
-    ]
-  },
-  "conflicting/Web/API/XMLDocument": {
-    "modified": "2019-04-24T21:08:31.361Z",
-    "contributors": ["ExE-Boss", "loella16"]
-  },
-  "conflicting/Web/API/XMLDocument_e7165fc663e6b211830a9ac924b0817e": {
-    "modified": "2020-10-15T22:04:13.899Z",
-    "contributors": ["NemoNobobyPersonne"]
   }
 }
