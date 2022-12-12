@@ -83,7 +83,7 @@ Other things to think about:
 
 The following screenshot shows an example of what the finished design should look like:
 
-![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](https://mdn.mozillademos.org/files/12616/business-card.png)
+![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](business-card.png)
 
 ## Assessment
 

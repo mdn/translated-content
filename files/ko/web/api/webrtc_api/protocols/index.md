@@ -18,7 +18,7 @@ translation_of: Web/API/WebRTC_API/Protocols
 
 클라이언트는 인터넷을 통해 클라이언트의 공개주소와 라우터의 NAT 뒤에 있는 클라이언트가 접근가능한지에 대한 답변을 위한 요청을 STUN서버에 보냅니다.
 
-![An interaction between two users of a WebRTC application involving a STUN server.](https://mdn.mozillademos.org/files/6115/webrtc-stun.png)
+![An interaction between two users of a WebRTC application involving a STUN server.](webrtc-stun.png)
 
 ## NAT
 
@@ -32,7 +32,7 @@ translation_of: Web/API/WebRTC_API/Protocols
 
 [Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) 은 TURN 서버와 연결하고 모든 정보를 그 서버에 전달하는 것으로 Symmetric NAT 제한을 우회하는 것을 의미합니다. 이를 위해 TURN 서버와 연결을 한 후 모든 peer들에게 저 서버에 모든 패킷을 보내고 다시 나에게 전달해달라고 해야 합니다. 이것은 명백히 오버헤드가 발생하므로 이 방법은 다른 대안이 없을 경우만 사용하게 됩니다.
 
-![An interaction between two users of a WebRTC application involving STUN and TURN servers.](https://mdn.mozillademos.org/files/6117/webrtc-turn.png)
+![An interaction between two users of a WebRTC application involving STUN and TURN servers.](webrtc-turn.png)
 
 ## SDP
 

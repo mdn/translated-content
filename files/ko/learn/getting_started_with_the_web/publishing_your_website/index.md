@@ -25,7 +25,7 @@ original_slug: Learn/Getting_started_with_the_web/웹사이트_출판하기
 
 게다가, 여러분은 서버로 웹사이트 파일들을 실제로 전송하기 위한 파일 전송 프로토콜 (FTP) 프로그램 (자세한 내용은 [얼마나 드나요: 소프트웨어](/en-US/Learn/How_much_does_it_cost#Software) 에서 확인하세요) 이 필요할 것입니다. FTP 프로그램은 아주 다양합니다, 하지만 일반적으로 호스팅 회사에 의해 제공된 정보 (예로 사용자 이름, 비밀번호, 호스트 이름) 를 사용해 여러분의 웹서버에 로그인을 해야 합니다. 그러면 프로그램은 여러분의 로컬 파일들과 웹 서버의 파일을 두 창에서 보여주므로, 그것들을 외부로 전송하거나 다시 돌려 놓을 수 있습니다:
 
-![](https://mdn.mozillademos.org/files/9469/ftp.jpg)
+![](ftp.jpg)
 
 #### 호스팅과 도메인을 찾는 팁
 
@@ -53,7 +53,7 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 - [Thimble](https://thimble.webmaker.org/)
 - [JSBin](http://jsbin.com/)
 
-![](https://mdn.mozillademos.org/files/9471/jsbin-screen.png)
+![](jsbin-screen.png)
 
 ## GitHub 를 통한 출판
 
@@ -65,7 +65,7 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 2. 다음으로, [GitHub 계정을 위해 가입하세요](https://github.com/join). 간단하고 쉽습니다.
 3. 가입을 하셨다면, github.com 에 여러분의 유저 이름과 암호로 로그인하세요.
 4. 그리고나서, 여러분의 파일들이 들어가게될 새로운 repo 를 생성해야 합니다. GitHub 홈페이지의 오른쪽 상단에 있는 플러스 (+) 를 클릭하고, _New Repository_ 를 선택하세요.
-5. 이 페이지에서, _Repository name_ 박스 안에, _username_.github.io 를 입력하세요, _username_ 가 있는 곳이 여러분의 유저 이름입니다. 그러니까 예를 들어, 우리 친구 bobsmith 는 _bobsmith.github.io_ 를 입력할 것입니다.![](https://mdn.mozillademos.org/files/9479/github-create-repo.png)
+5. 이 페이지에서, _Repository name_ 박스 안에, _username_.github.io 를 입력하세요, _username_ 가 있는 곳이 여러분의 유저 이름입니다. 그러니까 예를 들어, 우리 친구 bobsmith 는 _bobsmith.github.io_ 를 입력할 것입니다.![](github-create-repo.png)
 6. _Create repository_ 를 클릭하세요. 다음과 같은 페이지로 이동하실 겁니다:![](github-populate-repo.png)
 
 ### GitHub 에 파일 올리기

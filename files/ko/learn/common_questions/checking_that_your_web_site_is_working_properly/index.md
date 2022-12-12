@@ -46,11 +46,11 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 
 우리의 개인 사이트를 봅시다.(동작x), `http://demozilla.examplehostingprovider.net/`. It's not showing the image we expected!
 
-![Oops, the ‘unicorn’ image is missing](https://mdn.mozillademos.org/files/9643/image-missing.png)
+![Oops, the ‘unicorn’ image is missing](image-missing.png)
 
 Open Firefox's Network tool (**Tools ➤ Web Developer ➤ Network**) and reload the page:
 
-![The image has a 404 error](https://mdn.mozillademos.org/files/9645/error404.png)
+![The image has a 404 error](error404.png)
 
 There's the problem, that "404" at the bottom. "404" means "resource not found", and that's why we didn't see the image.
 
@@ -81,15 +81,15 @@ As beginners checking our (simple) website, we'll deal most often with 200, 304,
 
 So what went wrong?
 
-![Le list of images in our project](https://mdn.mozillademos.org/files/9649/demozilla-images-list.png)
+![Le list of images in our project](demozilla-images-list.png)
 
 At first glance, the image we asked for seems to be in the right place... but the Network tool reported a "404". It turns out that we made a typo in our HTML code: `unicorn_pics.png` rather than `unicorn_pic.png`. So correct the typo in your code editor by changing the image's `src` attribute:
 
-![Deleting the ‘s’](https://mdn.mozillademos.org/files/9651/code-correct.png)
+![Deleting the ‘s’](code-correct.png)
 
 Save, [push to the server](/en-US/Learn/Upload_files_to_a_web_server), and reload the page in your browser:
 
-![The image loads corectly in the browser](https://mdn.mozillademos.org/files/9655/image-corrected.png)
+![The image loads corectly in the browser](image-corrected.png)
 
 There you go! Let's look at the {{Glossary("HTTP")}} statuses again:
 
@@ -106,7 +106,7 @@ The most frequent errors that we find are these:
 
 We wanted to type `http://demozilla.examplehostingprovider.net/` but typed too fast and forgot an “l”:
 
-![Address unreachable](https://mdn.mozillademos.org/files/9657/cannot-find-server.png)
+![Address unreachable](cannot-find-server.png)
 
 The address cannot be found. Indeed.
 
@@ -120,7 +120,7 @@ Someone (possibly you) added a script to the page and made a mistake. This will 
 
 Open the console (**Tools ➤ Web developer ➤ Web Console**) and reload the page:
 
-![A Javascript error is shown in the Console](https://mdn.mozillademos.org/files/9659/js-error.png)
+![A Javascript error is shown in the Console](js-error.png)
 
 In this example, we learn (quite clearly) what the error is, and we can go fix it (we will cover JavaScript in [another series](/en-US/Learn/JavaScript) of articles).
 
@@ -132,7 +132,7 @@ We have listed a few simple ways to check that your website works properly, as w
 
 Does the page load fast enough? Resources like [WebPagetest.org](http://www.webpagetest.org/) or browser add-ons like [YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) can tell you a few interesting things:
 
-![Yslow diagnostics](https://mdn.mozillademos.org/files/9661/yslow-diagnostics.png)
+![Yslow diagnostics](yslow-diagnostics.png)
 
 Grades go from A to F. Our page is just small and meets most criteria. But we can already note it would have been better to use a {{Glossary("CDN")}}. That doesn't matter very much when we're only serving one image, but it would be critical for a high-bandwidth website serving many thousands of images.
 

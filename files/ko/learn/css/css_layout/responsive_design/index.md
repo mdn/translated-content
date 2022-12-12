@@ -40,13 +40,13 @@ original_slug: Learn/CSS/CSS_layout/반응형_디자인
 
 이러한 두 가지 접근법은 사이트를 디자인하는 사람의 화면에서 가장 보기 좋은 웹 사이트로 귀결되는 경향이 있었습니다! 유동 사이트는 (아래에서 볼 수 있듯이) 디자이너의 화면보다 더 작은 화면에는 찌부러진 디자인이 나오고, 더 큰 화면에는 읽을 수 없을 정도로 길이가 긴 라인을 만들어냅니다.
 
-![두 개의 열이 있는 레이아웃이 모바일 크기 뷰포트에서 찌부러집니다.](https://mdn.mozillademos.org/files/16834/mdn-rwd-liquid.png)
+![두 개의 열이 있는 레이아웃이 모바일 크기 뷰포트에서 찌부러집니다.](mdn-rwd-liquid.png)
 
 > **참고:** **주석**: 여기 간단한 유동 레이아웃을 보세요: [예제](https://mdn.github.io/css-examples/learn/rwd/liquid-width.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/liquid-width.html). 예제를 보면 브라우저 창을 안팎으로 드래그하여 서로 다른 크기에 반응해 어떻게 보이는지 확인합니다.
 
 고정 폭 사이트는 (아래에서 보듯) 사이트 너비보다 작은 화면상에 수평 스크롤 막대가 생기는 위험이 있고 더 큰 화면상에서는 웹디자인 가장자리에 많은 흰색 공간이 생길 위험이 있습니다.
 
-![이동 뷰포트에 수평 스크롤 막대가 있는 레이아웃입니다.](https://mdn.mozillademos.org/files/16835/mdn-rwd-fixed.png)
+![이동 뷰포트에 수평 스크롤 막대가 있는 레이아웃입니다.](mdn-rwd-fixed.png)
 
 > **참고:** **주석**: 여기 간단한 고정 너비 레이아웃을 보세요: [예제](https://mdn.github.io/css-examples/learn/rwd/fixed-width.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/fixed-width.html). 역시 브라우저 창 크기를 변경할 때 결과를 관찰하세요.
 
@@ -118,11 +118,11 @@ target / context = result
 
 다음 예제에서는 미디어 쿼리와 가변 격자를 사용하여 간단한 반응형 디자인를 보여줍니다. 좁은 화면상에서는 상자가 상대 요소 위해 겹겹이 쌓여지는 레이아웃 형태로 표시됩니다.
 
-![상자 무리가 상대 요소의 상단에 수직으로 겹겹이 쌓이는 모바일뷰 레이아웃입니다.](https://mdn.mozillademos.org/files/16836/mdn-rwd-mobile.png)
+![상자 무리가 상대 요소의 상단에 수직으로 겹겹이 쌓이는 모바일뷰 레이아웃입니다.](mdn-rwd-mobile.png)
 
 On wider screens they move to two columns:
 
-![2단 레이아웃이 적용된 데스크탑 뷰입니다.](https://mdn.mozillademos.org/files/16837/mdn-rwd-desktop.png)
+![2단 레이아웃이 적용된 데스크탑 뷰입니다.](mdn-rwd-desktop.png)
 
 > **참고:** **주석**: 여러분은 여기서 [실례](https://mdn.github.io/css-examples/learn/rwd/float-based-rwd.html)를 찾아볼 수 있으며, 이 예제에 대한 [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/float-based-rwd.html)를 깃허브에서 찾을 수 있습니다.
 
@@ -223,11 +223,11 @@ h1 {
 
 모바일에서는 머리글이 더 작다:
 
-![머리글 크기가 작은 스택 모양의 레이아웃입니다.](https://mdn.mozillademos.org/files/16838/mdn-rwd-font-mobile.png)
+![머리글 크기가 작은 스택 모양의 레이아웃입니다.](mdn-rwd-font-mobile.png)
 
 On desktop however we see the larger heading size:
 
-![큰 머리글이 딸린 두개의 열 레이아웃입니다.](https://mdn.mozillademos.org/files/16839/mdn-rwd-font-desktop.png)
+![큰 머리글이 딸린 두개의 열 레이아웃입니다.](mdn-rwd-font-desktop.png)
 
 > **참고:** 이 예제의 실제 구현 장면: [예제](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), [소스 코드](https://github.com/mdn/css-examples/blob/master/learn/rwd/type-rwd.html).
 

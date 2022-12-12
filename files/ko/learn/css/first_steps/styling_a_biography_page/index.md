@@ -54,7 +54,7 @@ CSS 를 사용하여 내가 사용한 속성 값을 변경하여 이 전기(biog
 
 이 이미지와 비슷한 결과가 나옵니다.
 
-![Screenshot of how the example should look after completing the assessment.](https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png)
+![Screenshot of how the example should look after completing the assessment.](learn-css-basics-assessment.png)
 
 그런 다음 [MDN CSS 참조](/ko/docs/Web/CSS/Reference) 에서 이 페이지에 언급되지 않은 일부 속성을 찾아보고 시도해 보십시오!
 

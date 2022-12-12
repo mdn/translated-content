@@ -37,7 +37,7 @@ slug: Learn/Common_questions/What_is_a_web_server
 
 가장 기본적인 단계에서, 브라우저가 웹 서버에서 불려진 파일을 필요로 할때, 브라우저는 HTTP를 통해 파일을 요청합니다. 요청이 올바른 웹 서버(하드웨어)에 도달하였을 때, HTTP 서버(software)는 요청된 문서를 HTTP를 이용해 보내줍니다.
 
-![Basic representation of a client/server connection through HTTP](https://mdn.mozillademos.org/files/8659/web-server.svg)
+![Basic representation of a client/server connection through HTTP](web-server.svg)
 
 웹 사이트를 공개하기 위해서는, 당신은 정적 혹은 동적 웹 서버가 필요합니다.
 
@@ -87,7 +87,7 @@ HTTP는 어떻게 클라이언트와 서버가 통신을 하는지 명확한 규
 - HTTP를 통해 파일을 요청할때, 클라이언트는 반드시 {{Glossary("URL")}} 파일들을 제공해야 합니다.
 - 웹 서버는 반드시 최소한의 에러 메시지를 포함하여 모든 HTTP 요청에 응답해야합니다.
 
-[![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](/en-US/404)웹 서버에서, HTTP 서버는 들어오는 요청들에 대해 응답하고, 처리해야 합니다.
+[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/en-US/404)웹 서버에서, HTTP 서버는 들어오는 요청들에 대해 응답하고, 처리해야 합니다.
 
 1. 요청을 받으면, HTTP 서버는 먼저 요청받은 URL이 존재하는 파일과 매칭이 되는지를 확인합니다.
 2. 만약 매칭된다면, 웹 서버는 그 파일 내용을 브라우저에게 되돌려줍니다. 만약 그렇지 않다면, 애플리케이션 서버는 필요한 파일을 구축합니다.
