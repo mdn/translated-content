@@ -1,7 +1,8 @@
 ---
 title: Window.openDialog()
-slug: Web/API/Window/openDialog
+slug: conflicting/Web/API/Window
 translation_of: Web/API/Window/openDialog
+original_slug: Web/API/Window/openDialog
 browser-compat: api.Window.openDialog
 ---
 

@@ -1,12 +1,13 @@
 ---
 title: Document.mozSyntheticDocument
-slug: Web/API/Document/mozSyntheticDocument
+slug: conflicting/Web/API/Document
 tags:
   - API
   - DOM
   - Document
   - Propriétés
 translation_of: Web/API/Document/mozSyntheticDocument
+original_slug: Web/API/Document/mozSyntheticDocument
 ---
 
 {{ ApiRef("DOM") }}

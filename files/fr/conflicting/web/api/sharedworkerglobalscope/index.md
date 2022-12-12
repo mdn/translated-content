@@ -1,7 +1,8 @@
 ---
 title: SharedWorkerGlobalScope.applicationCache
-slug: Web/API/SharedWorkerGlobalScope/applicationCache
+slug: conflicting/Web/API/SharedWorkerGlobalScope
 translation_of: Web/API/SharedWorkerGlobalScope/applicationCache
+original_slug: Web/API/SharedWorkerGlobalScope/applicationCache
 ---
 
 {{APIRef("Web Workers API")}}

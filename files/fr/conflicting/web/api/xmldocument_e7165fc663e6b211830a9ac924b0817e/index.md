@@ -1,11 +1,10 @@
 ---
 title: XMLDocument.load()
-slug: Web/API/XMLDocument/load
+slug: conflicting/Web/API/XMLDocument_e7165fc663e6b211830a9ac924b0817e
 page-type: web-api-instance-method
 translation_of: Web/API/XMLDocument/load
+original_slug: Web/API/XMLDocument/load
 browser-compat: api.XMLDocument.load
-l10n:
-  sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---
 
 {{APIRef("DOM")}}{{Non-standard_Header}}{{Deprecated_Header}}

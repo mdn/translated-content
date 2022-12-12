@@ -1,6 +1,6 @@
 ---
 title: Document.async
-slug: Web/API/XMLDocument/async
+slug: conflicting/Web/API/XMLDocument
 tags:
   - API
   - Asynchrone
@@ -9,6 +9,7 @@ tags:
   - Propriété
   - XML
 translation_of: Web/API/XMLDocument/async
+original_slug: Web/API/XMLDocument/async
 ---
 
 {{APIRef("DOM")}}{{Deprecated_header}} {{Non-standard_header}}
