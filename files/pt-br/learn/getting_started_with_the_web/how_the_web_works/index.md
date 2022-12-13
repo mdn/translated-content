@@ -27,7 +27,7 @@ O cliente e o servidor que descrevemos acima não contam toda a história. Exist
 
 Por enquanto, vamos imaginar que a web é uma estrada. Em um extremo da estrada, temos o cliente, que é como sua casa. No extremo oposto, temos o servidor, que é como uma loja onde você quer comprar algo.
 
-![](https://mdn.mozillademos.org/files/9749/road.jpg)
+![](road.jpg)
 
 Além do cliente e do servidor, também precisamos dizer oi para:
 

@@ -49,7 +49,7 @@ _There is no active learning available yet. [Please, consider contributing](/pt-
 
 Um "nome de domínio" tem uma estrutura simples feita de várias partes (pode ser apenas uma parte, duas, três...), separados por pontos e **lidos da direita para a esquerda**:
 
-![Anatomy of the MDN domain name](https://mdn.mozillademos.org/files/11229/structure.png)
+![Anatomy of the MDN domain name](structure.png)
 
 Cada uma dessas partes fornece informações específicas sobre todo o domain name.
 
@@ -137,7 +137,7 @@ Como já vimos, quando você deseja exibir uma página da Web em seu navegador, 
 3. Se o seu computador não sabe qual IP está por trás do nome mozilla.org, ele vai perguntar a um servidor DNS, cujo trabalho é precisamente informar ao seu computador qual endereço IP corresponde a cada nome de domínio registrado.
 4. Agora que o computador conhece o endereço IP solicitado, seu navegador pode negociar o conteúdo com o servidor da web.
 
-![Explanation of the steps needed to obtain the result to a DNS request](https://mdn.mozillademos.org/files/8961/2014-10-dns-request2.png)
+![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
 
 ## Próximos passos
 

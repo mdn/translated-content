@@ -59,7 +59,7 @@ Para fazer arquivos conversarem entre si, você tem que fornecer um caminho de a
 4. Insira o caminho dentro do seu código HTML, dentro das aspas do código `src=""`.
 5. Salve seu arquivo HTML, então carregue em seu navegador web (dê um duplo-clique no arquivo). Você deve ver sua nova página mostrando sua imagem!
 
-![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](https://mdn.mozillademos.org/files/9229/website-screenshot.png)
+![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](website-screenshot.png)
 
 Algumas regras gerais para caminhos de arquivo:
 
@@ -76,7 +76,7 @@ Por agora, isso é tudo o que precisamos saber.
 
 Por agora, é isso. Sua pasta deve parecer algo do tipo:
 
-![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](https://mdn.mozillademos.org/files/9231/file-structure.png){{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
+![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png){{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 
 ## Neste módulo
 
