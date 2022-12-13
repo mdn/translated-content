@@ -266,18 +266,18 @@ Algumas propriedades se aplicam apenas a tipos de elemento de entrada que suport
 
 - {{domxref("HTMLInputElement.stepDown()", "stepDown()")}}
 
-  - : Decrementa o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) em ([`step`](/pt-BR/docs/Web/HTML/Element/input#step) \* n), em que n é padronizado como 1 se não for especificado. Lança uma exceção `InvalidStateError`:
+  - : Decrementa o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) em ([`step`](/pt-BR/docs/Web/HTML/Element/Input#step) \* n), em que n é padronizado como 1 se não for especificado. Lança uma exceção `InvalidStateError`:
     - se o método não for aplicável para o valor [`type`](/pt-BR/docs/Web/HTML/Element/Input#type) atual,
     - se o elemento não tiver valor [`step`](/pt-BR/docs/Web/HTML/Element/Input#step),
     - se o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) não puder ser convertido em um número,
-    - se o valor resultante estiver acima de [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) ou abaixo de [`min`](/pt-BR/docs/Web/HTML /Elemento/entrada#min).
+    - se o valor resultante estiver acima de [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) ou abaixo de [`min`](/pt-BR/docs/Web/HTML/Elemento/Input#min).
 
 - {{domxref("HTMLInputElement.stepUp()", "stepUp()")}}
-  - : Incrementa o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) em ([`step`](/pt-BR/docs/Web/HTML/Element/input#step) \* n), em que n é padronizado como 1 se não for especificado. Lança uma exceção `InvalidStateError`:
+  - : Incrementa o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) em ([`step`](/pt-BR/docs/Web/HTML/Element/Input#step) \* n), em que n é padronizado como 1 se não for especificado. Lança uma exceção `InvalidStateError`:
     - se o método não for aplicável para o valor atual de [`type`](/pt-BR/docs/Web/HTML/Element/Input#type),
     - se o elemento não tiver valor [`step`](/pt-BR/docs/Web/HTML/Element/Input#step),
     - se o [`value`](/pt-BR/docs/Web/HTML/Element/Input#value) não puder ser convertido em um número,
-    - se o valor resultante estiver acima de [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) ou abaixo de [`min`](/pt-BR/docs/Web/HTML /Elemento/entrada#min).
+    - se o valor resultante estiver acima de [`max`](/pt-BR/docs/Web/HTML/Element/Input#max) ou abaixo de [`min`](/pt-BR/docs/Web/HTML/Elemento/Input#min).
 
 ## Eventos
 
