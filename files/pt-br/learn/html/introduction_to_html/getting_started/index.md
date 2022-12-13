@@ -251,7 +251,7 @@ Elementos também podem conter atributos, que se apresentam da seguinte forma:
 
 ![&lt;p class="editor-note">My cat is very grumpy&lt;/p>](grumpy-cat-attribute-small.png)
 
-Atributos contém informação extra sobre o elemento, mas que você não deseja que apareça no conteúdo. Nete caso, o atributo `class` permite que você dê ao elemento um nome de identificação, que pode ser usada mais tarde para direcionar informação de estilo ao elemento e outras coisas.
+Atributos contém informação extra sobre o elemento, mas que você não deseja que apareça no conteúdo. Neste caso, o atributo `class` permite que você dê ao elemento um nome de identificação, que pode ser usada mais tarde para direcionar informação de estilo ao elemento e outras coisas.
 
 Um atributo deve conter:
 
