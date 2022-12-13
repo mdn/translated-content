@@ -5,7 +5,7 @@ slug: Learn/JavaScript/Asynchronous/Introducing_workers
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
 
-"비동기 JavaScript" 학습 과정의 마지막 글에서는 별도의 {{Glossary("Thread", "Thread")}} 실행 시 일부 작업을 실행할 수 있는 __workers__ 를 소개합니다.
+"비동기 JavaScript" 학습 과정의 마지막 글에서는 별도의 {{Glossary("Thread", "Thread")}} 실행 시 일부 작업을 실행할 수 있는 **workers** 를 소개합니다.
 
 <table>
   <tbody>
@@ -226,7 +226,7 @@ function generatePrimes(quota) {
 
 ## 다른 종류의 워커
 
-우리가 방금 만든 워커가 __dedicated worker__ 입니다. 단일 스크립트 인스턴스에서 사용됩니다.
+우리가 방금 만든 워커가 _dedicated worker_ 입니다. 단일 스크립트 인스턴스에서 사용됩니다.
 
 다른 유형의 워커도 있습니다.
 

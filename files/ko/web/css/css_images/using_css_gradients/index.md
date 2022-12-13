@@ -305,7 +305,7 @@ div {
 ```css
 .layered-image {
   background: linear-gradient(to right, transparent, mistyrose),
-      url("https://mdn.mozillademos.org/files/15525/critters.png");
+      url("critters.png");
 }
 ```
 

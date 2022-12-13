@@ -1,14 +1,6 @@
 ---
 title: Introducción
 slug: Web/JavaScript/Guide/Introduction
-tags:
-  - Guía
-  - Introducion
-  - JavaScript
-  - Novato
-  - Principiante
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Introduction
 original_slug: Web/JavaScript/Guide/Introducción
 ---
 

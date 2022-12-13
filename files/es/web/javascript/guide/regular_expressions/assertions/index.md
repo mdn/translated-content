@@ -1,14 +1,6 @@
 ---
 title: Aserciones
 slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
-tags:
-  - Aserciones
-  - Expresiones Regulares
-  - Guía
-  - JavaScript
-  - Referencia
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Aserciones
 ---
 

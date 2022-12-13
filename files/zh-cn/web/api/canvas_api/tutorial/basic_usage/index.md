@@ -3,7 +3,7 @@ title: Canvas 的基本用法
 slug: Web/API/Canvas_API/Tutorial/Basic_usage
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial", "Web/API/Canvas_API/Tutorial/Drawing_shapes")}}
 
 让我们通过了解 {{HTMLElement("canvas")}} {{Glossary("HTML")}} 元素本身开始本教程。在本页结束时，你会了解到如何去设置一个 canvas 2D 上下文以及如何在你的浏览器上创建第一个例子。
 

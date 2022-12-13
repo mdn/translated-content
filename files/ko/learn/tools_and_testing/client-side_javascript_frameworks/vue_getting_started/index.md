@@ -220,7 +220,7 @@ INFO  Starting development server...
 
 브라우저 탭을 열고 위의 “local” 주소로 (위 내용처럼 `http://localhost:8080`이거나 설정에 따라 다를 수 있음) 이동해보면, 아래 사진과 같은 앱이 나타날 것입니다. 환영 메시지, Vue 문서 링크, 우리가 선택한 CLI 플러그인 링크, 기타 유용한 Vue 커뮤니티와 생태계 링크 등이 표시되고 있습니다.
 
-![default vue app render, with vue logo, welcome message, and some documentation links](https://mdn.mozillademos.org/files/17240/vue-default-app.png)
+![default vue app render, with vue logo, welcome message, and some documentation links](vue-default-app.png)
 
 ## 약간의 변경 사항 적용하기
 

@@ -1,12 +1,6 @@
 ---
 title: super
 slug: Web/JavaScript/Reference/Operators/super
-tags:
-  - Clases
-  - ECMAScript 2015
-  - JavaScript
-  - Operador
-translation_of: Web/JavaScript/Reference/Operators/super
 original_slug: Web/JavaScript/Referencia/Operadores/super
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: block
 slug: Web/JavaScript/Reference/Statements/block
-tags:
-  - JavaScript
-  - Referencia
-  - Referência(2)
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/block
 original_slug: Web/JavaScript/Referencia/Sentencias/block
 ---
 

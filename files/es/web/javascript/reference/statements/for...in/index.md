@@ -1,11 +1,6 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - Característica del lenguaje
-  - Declaración
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/for...in
 original_slug: Web/JavaScript/Referencia/Sentencias/for...in
 ---
 

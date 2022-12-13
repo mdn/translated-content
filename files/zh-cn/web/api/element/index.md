@@ -110,8 +110,6 @@ _Inherits methods from its parents {{DOMxRef("Node")}}, and its own parent, {{DO
   - : A shortcut method to create and run an animation on an element. Returns the created Animation object instance.
 - {{DOMxRef("Element.closest()")}} {{Experimental_Inline}}
   - : Returns the {{DOMxRef("Element")}} which is the closest ancestor of the current element (or the current element itself) which matches the selectors given in parameter.
-- {{DOMxRef("Element.createShadowRoot()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : Creates a [shadow DOM](/zh-CN/docs/Web/Web_Components/Shadow_DOM) on on the element, turning it into a shadow host. Returns a {{DOMxRef("ShadowRoot")}}.
 - {{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}
   - : Returns a {{DOMxRef("StylePropertyMapReadOnly")}} interface which provides a read-only representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 - {{DOMxRef("EventTarget.dispatchEvent()")}}

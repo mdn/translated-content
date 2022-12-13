@@ -15,7 +15,7 @@ Notifications API 는 웹 페이지가 일반 사용자에게 시스템 알림 �
 
 지원되는 플랫폼에서, 시스템 알림 표시는 일반적으로 두 가지를 포함합니다. 첫째로, 사용자가 시스템 알림 표시에 대한 현재 origin 권한을 허용해야합니다. 이는 {{domxref("Notification.requestPermission()")}} 메소드를 사용해 앱이나 사이트가 초기화될 때 일반적으로 완료됩니다. 다음과 같이 요청 대화상자가 나타납니다.
 
-![](https://mdn.mozillademos.org/files/10819/notification-bubble.png)
+![](notification-bubble.png)
 
 여기에서 사용자는 이 origin 으로부터의 알림을 허용할지, 차단할지, 이 시점에는 선택하지 않을지를 선택할 수 있습니다. 하나가 선택된후에는, 그 설정이 현재 세션에대해서 일반적으로 유지됩니다.
 

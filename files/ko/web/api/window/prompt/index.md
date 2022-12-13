@@ -51,7 +51,7 @@ sign = window.prompt("님 지금 기분 좋아요?", "네."); // 안내 문구 "
 
 상기의 대화 상자는 OS X 상의 Chrome에서 다음과 같이 보입니다.
 
-[![prompt() dialog in Chrome on OS X](https://mdn.mozillademos.org/files/11303/prompt.png)](https://mdn.mozillademos.org/files/11303/prompt.png)
+[![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
 
 ## 비고
 

@@ -1,14 +1,6 @@
 ---
 title: JavaScript error reference
 slug: Web/JavaScript/Reference/Errors
-tags:
-  - Depuración
-  - Error
-  - Excepciones
-  - Excepción
-  - JavaScript
-  - errores
-translation_of: Web/JavaScript/Reference/Errors
 ---
 
 {{jsSidebar("Errors")}}

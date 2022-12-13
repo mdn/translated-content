@@ -58,7 +58,7 @@ HTTP 조건부 요청은 특정 헤더 값에 의존하여 기존과는 다르�
 
 조건부 요청의 가장 일반적인 유스 케이스는 캐시를 갱신하는 것입니다. 비어 있는 캐시를 가지고 있거나 혹은 캐시를 가지고 있지 않은 경우, 요청된 리소스는 {{HTTPStatus("200")}} `OK`의 상태로 회신됩니다.
 
-![The request issued when the cache is empty triggers the resource to be downloaded, with both validator value sent as headers. The cache is then filled.](https://mdn.mozillademos.org/files/13729/Cache1.png)
+![The request issued when the cache is empty triggers the resource to be downloaded, with both validator value sent as headers. The cache is then filled.](cache1.png)
 
 리소스와 함께, 검사기가 헤더 내에 전송됩니다. 예를 들어, {{HTTPHeader("Last-Modified")}}와 {{HTTPHeader("ETag")}}가 전송되지만, 그들 중 하나만 전송될 수도 있습니다. 이 검사기들은 (모든 헤더처럼) 해당 리소스와 함께 캐시되며 캐시가 더 이상 신선하지 않게 됐을 때 조건부 요청을 만들어 내는데 사용될 것입니다.
 
@@ -66,11 +66,11 @@ HTTP 조건부 요청은 특정 헤더 값에 의존하여 기존과는 다르�
 
 리소스가 변경되지 않았다면, 서버는 {{HTTPStatus("304")}} `Not Modified` 응답을 회신하게 되는데, 이는 캐시를 다시 신선한 것으로 만들어주며 클라이언트는 그 캐시된 리소스를 사용하게 됩니다. 비록 어떤 리소스를 소비하는 응답/요청 라운드 트립이 있다고 하더라도, 연결을 통해 다시 전체 리소스를 전송하는 것보다는 더 효율적입니다.
 
-![With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same.](https://mdn.mozillademos.org/files/13731/HTTPCache2.png)
+![With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same.](httpcache2.png)
 
 리소스가 변경되었다면, 요청이 조건부가 아니었고 클라이언트가 이 새로운 리소스를 사용하는(그리고 그것을 캐시하는) 경우처럼, 서버는 리소스의 새로운 버전과 함께, {{HTTPStatus("200")}} `OK` 응답을 회신합니다.
 
-![In the case where the resource was changed, it is sent back as if the request wasn't conditional.](https://mdn.mozillademos.org/files/13733/HTTPCache3.png)
+![In the case where the resource was changed, it is sent back as if the request wasn't conditional.](httpcache3.png)
 
 서버 측에서 검사기를 설정하는 것외에도, 이 메커니즘은 투명합니다: 모든 브라우저가 캐시를 관리하고 있으며 그런 조건부 요청을 웹 개발자가 해야할 특별한 조치없이 보내게 됩니다.
 
@@ -78,21 +78,21 @@ HTTP 조건부 요청은 특정 헤더 값에 의존하여 기존과는 다르�
 
 파일들의 부분적인 다운로드는 이전 동작을 계속하게 이어주는 HTTP의 기능으로, 이미 받아놓은 정보를 유지함으로써 대역폭과 시간을 절약해줍니다.
 
-![A download has been stopped and only partial content has been retrieved.](https://mdn.mozillademos.org/files/13735/HTTPResume1.png)
+![A download has been stopped and only partial content has been retrieved.](httpresume1.png)
 
 부분적인 다운로드를 지원하는 서버는 {{HTTPHeader("Accept-Ranges")}} 헤더를 보냄으로써 이를 알립니다. 그렇게 되면, 클라이언트는 아직 전송받지 못한 범위와 함께 {{HTTPHeader("Ranges")}}을 전송하여 다운로드를 이어나갈 수 있습니다.
 
-![The client resumes the requests by indicating the range he needs and preconditions checking the validators of the partially obtained request.](https://mdn.mozillademos.org/files/13737/HTTPResume2.png)
+![The client resumes the requests by indicating the range he needs and preconditions checking the validators of the partially obtained request.](httpresume2.png)
 
 이 원칙은 간단한데, 한 가지 잠재적인 문제점이 있습니다: 다운로드된 리소스가 두 개의 다운로드 사이에 수정될 경우, 수신받던 범위는 리소스의 두 개의 서로 다른 버전과 상응하게 될 것이며 최종적인 문서는 오염되게 될 것입니다.
 
 이것은 방지하기 위해, 조건부 요청이 사용됩니다. 범위에 대해, 이를 할 수 있는 두 가지 방법이 존재합니다. 좀 더 유연한 방법은 {{HTTPHeader("If-Modified-Since")}}과 {{HTTPHeader("If-Match")}}을 사용하는 것이며 서버는 전제 조건이 실패할 경우 오류를 반환하게 됩니다; 그러면 클라이언트는 다운로드를 처음부터 다시 시작하게 되는 것이죠.
 
-![When the partially downloaded resource has been modified, the preconditions will fail and the resource will have to be downloaded again completely.](https://mdn.mozillademos.org/files/13739/HTTPResume3.png)
+![When the partially downloaded resource has been modified, the preconditions will fail and the resource will have to be downloaded again completely.](httpresume3.png)
 
 이 방법이 동작하긴 하지만, 문서가 변경된 경우 추가적인 응답/요청 교환을 필요로 합니다. 이것은 성능을 감소시키는데 HTTP는 이것을 피하기 위한 특별한 헤더를 가지고 있습니다: 바로 {{HTTPHeader("If-Range")}}이죠.
 
-![The If-Range headers allows the server to directly send back the complete resource if it has been modified, no need to send a 412 error and wait for the client to re-initiate the download.](https://mdn.mozillademos.org/files/13741/HTTPResume4.png)
+![The If-Range headers allows the server to directly send back the complete resource if it has been modified, no need to send a 412 error and wait for the client to re-initiate the download.](httpresume4.png)
 
 이 해결책이 좀 더 효과적이긴 한데 약간은 덜 유연하여(오로지 하나의 etag만이 조건 내에서 사용될 수 있습니다), 추가적인 유연성이 필요한 경우가 아주 드물게 있기도 합니다.
 
@@ -102,17 +102,17 @@ HTTP 조건부 요청은 특정 헤더 값에 의존하여 기존과는 다르�
 
 {{HTTPMethod("PUT")}} 메서드를 이용해 당신은 이러한 것을 구현할 수 있습니다. 먼저 클라이언트는 원본 파일을 읽어들인 후 그것을 수정하고 최종적으로 서버로 수정된 파일을 내보냅니다.
 
-![Updating a file with a PUT is very simple when concurrency is not involved.](https://mdn.mozillademos.org/files/13743/HTTPLock1.png)
+![Updating a file with a PUT is very simple when concurrency is not involved.](httplock1.png)
 
 불행하게도, 계정의 동시실행 내로 들어가자마자 약간 예상치 못한 결과를 맞이하게 될 겁니다. 하나의 클라이언트가 리소스의 새로운 복사본을 지역적으로 수정하고 있는 동안에도, 두번째 클라이언트가 동일한 리소스를 내려받고 자신의 영역 내에서 동일한 작업을 할 수 있습니다. 그렇게 되면 매우 유감스러운 일이 발생하게 됩니다: 그들이 다시 커밋하게 됐을 때, 전송할 첫번째 클라이언트의 수정본은 다음의 전송에 의해 폐기되는데, 이는 두번째 클라이언트가 새로운 변경 사항을 알고 있지 못하기 때문입니다. 어떤 것이 받아들여질지에 대한 결정은 다른 쪽에게 알려지지 않겠지만, 어떤 클라이언트의 변경 사항이 유지될 지는 그들이 커밋하는 시점, 클라이언트 그리고 서버의 성능에 의해서도 달리지며, 클라이언트에서 문서를 수정하는 속도에 의해서도 달라지게 될 겁니다: 받아들여진 클라이언트의 변경 사항으로 모두 변경될 것입니다. 이것을 {{glossary("경쟁 상태")}}라고 하며 감지하고 디버깅하기 어려운 불확실한 동작을 유발합니다.
 
-![When several clients update the same resource in parallel, we are facing a race condition: the slowest win, and the others don't even know they lost. Problematic!](https://mdn.mozillademos.org/files/13749/HTTPLock2.png)
+![When several clients update the same resource in parallel, we are facing a race condition: the slowest win, and the others don't even know they lost. Problematic!](httplock2.png)
 
 두 클라이언트 중 하나를 불편하게 만들지 않고는 이를 해결할 수 있는 방법은 없습니다. 그러나 업데이트 손실과 경쟁 상태는 피하게 됩니다: 우리는 예측 가능한 결과와 클라이언트의 변경 사항이 거절된 경우 클라이언트가 그것을 알 수 있길 원합니다.
 
 조건부 요청은 (대부분의 위키 혹은 소스 제어 시스템에 의해 사용되는) *최적화 잠금 알고리즘*을 구현할 수 있도록 합니다. 이런 아이디어는 모든 클라이언트들이 리소스의 복사본들을 갖고 로컬에서 그것을 수정하며 첫번째 클라이언트가 그 수정된 내용을 성공적으로 제출하고 나서 이제는 이전 버전이 된 리소스가 거절되도록 하여 모든 업데이트가 순차적으로 이루어질 수 있도록 하여 동시성을 제어할 수 있도록 해줍니다.
 
-![Conditional requests allow to implement optimistic locking: now the quickest wins, and the others get an error.](https://mdn.mozillademos.org/files/13751/HTTPLock3.png)
+![Conditional requests allow to implement optimistic locking: now the quickest wins, and the others get an error.](httplock3.png)
 
 이것은 {{HTTPHeader("If-Match")}} 혹은 {{HTTPHeader("If-Unmodified-Since")}} 헤더를 사용해 구현하게 됩니다. etag가 원본 파일과 일치하지 않거나 혹은 파일을 수신한 이후에 파일이 수정된 경우, 해당 변경 사항은 단순히 {{HTTPStatus("412")}} `Precondition Failed` 오류와 함께 거절될 것입니다. 그런 뒤에 오류를 다루는 것은 클라이언트에게 달려있므며, 현재 가장 최신의 버전으로부터 다시 시작하도록 사람에게 알려주는 방법 혹은 "diff"를 보여주고 변경된 내용을 유지하도록 선택할 수 있게 사람에게 도움을 주는 방법 등을 이용하도록 할 수 있습니다.
 
@@ -120,7 +120,7 @@ HTTP 조건부 요청은 특정 헤더 값에 의존하여 기존과는 다르�
 
 리소스의 첫번째 업로드는 이전 예제의 엣지 케이스입니다: 리소스 업데이트의 어떤 경우든지, 두 클라이언트가 업데이트를 동시에(혹은 거의 같은 시점에) 실행하려고 하는 경우는 경쟁 상태의 대상입니다. 이를 방지하기 위해, 조건부 요청을 사용할 수 있습니다: 어떤 etag든지 나타내는 `'*'`라고 하는 특별한 값을 {{HTTPHeader("If-None-Match")}}에 추가하여, 리소스가 이전에 존재하지 않은 경우에만 요청이 성공하게 할 수 있습니다.
 
-![Like for a regular upload, the first upload of a resource is subject to a race condition: If-None-Match can prevent it.](https://mdn.mozillademos.org/files/13753/HTTPFirst.png)
+![Like for a regular upload, the first upload of a resource is subject to a race condition: If-None-Match can prevent it.](httpfirst.png)
 
 `If-None-Match` 는 HTTP/1.1 호환 (혹은 그 이상의) 서버에서만 동작할 겁니다. 서버가 호환되는지 아닌지를 모르는 경우라면, 이를 확인하기 위해 리소스에 {{HTTPMethod("HEAD")}} 요청을 해보는 것이 우선적으로 필요합니다.
 

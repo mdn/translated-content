@@ -87,7 +87,7 @@ Undefined 类型只有一个值：[`undefined`](/zh-CN/docs/Web/JavaScript/Refer
 
 `+Infinity` 和 `-Infinity` 行为类似于数学上的无穷大，但是有一些细微的区别；更多细节，参见 {{jsxref("Number.POSITIVE_INFINITY")}} 和 {{jsxref("Number.NEGATIVE_INFINITY")}}。
 
-Number 类型仅有一个具有多个表现形式的值：`0` 同时表示为 `-0` 和 `+0`（其中 `0` 是 `+0` 的别名）。实际上，这两者之间机会没有区别；例如，`+0 === -0` 是 `true`。然而，当你除以 0 的时候，你要注意到这一点：
+Number 类型仅有一个具有多个表现形式的值：`0` 同时表示为 `-0` 和 `+0`（其中 `0` 是 `+0` 的别名）。实际上，这两者之间几乎没有区别；例如，`+0 === -0` 是 `true`。然而，当你除以 0 的时候，你要注意到这一点：
 
 ```js
 console.log(42 / +0); // Infinity
