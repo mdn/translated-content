@@ -1,7 +1,7 @@
 ---
 title: Feature Policy
-slug: Web/HTTP/Feature_Policy
-original_slug: Web/HTTP/策略特征
+slug: Web/HTTP/Permissions_Policy
+original_slug: Web/HTTP/Feature_Policy
 ---
 
 {{SeeCompatTable}}{{HTTPSidebar}}
@@ -36,7 +36,7 @@ original_slug: Web/HTTP/策略特征
 
 功能策略提供了两种方法来指定用于控制功能的策略：
 
-- {{httpheader('Feature-Policy')}} HTTP 报文头。
+- {{httpheader('Permissions-Policy')}} HTTP 报文头。
 - 在{{HTMLElement('iframe','<code>allow</code>','#Attributes')}} iframes 之上的属性。
 
 HTTP 标头和 allow 属性之间的主要区别在于 allow 属性仅控制 iframe 中的功能。标头控制响应中的功能以及页面内的任何嵌入式内容。
@@ -112,7 +112,7 @@ Web 提供的功能和 API 如果被滥用，可能会带来隐私或安全风�
 ## 参见
 
 - [Using Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- {{HTTPHeader("Feature-Policy")}} HTTP header
+- {{HTTPHeader("Permissions-Policy")}} HTTP header
 - {{HTMLElement('iframe','<code>allow</code>','#Attributes')}} attribute on iframes
 - [Introduction to Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)
 - [Feature policies on www.chromestatus.com](https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
