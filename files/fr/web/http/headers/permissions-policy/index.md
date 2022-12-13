@@ -1,7 +1,8 @@
 ---
 title: Feature-Policy
-slug: Web/HTTP/Headers/Feature-Policy
+slug: Web/HTTP/Headers/Permissions-Policy
 translation_of: Web/HTTP/Headers/Feature-Policy
+original_slug: Web/HTTP/Headers/Feature-Policy
 browser-compat: http.headers.Feature-Policy
 ---
 
