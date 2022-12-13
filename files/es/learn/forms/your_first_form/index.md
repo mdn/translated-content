@@ -1,14 +1,6 @@
 ---
 title: Mi primer formulario HTML
 slug: Learn/Forms/Your_first_form
-tags:
-  - Ejemplo
-  - Guía
-  - HTML
-  - Principiante
-  - Web
-  - formulários
-translation_of: Learn/Forms/Your_first_form
 original_slug: Learn/HTML/Forms/Your_first_HTML_form
 ---
 

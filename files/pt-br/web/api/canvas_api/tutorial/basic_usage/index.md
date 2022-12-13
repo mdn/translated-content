@@ -138,6 +138,6 @@ Para começar, vamos dar uma olhada num exemplo simples que desenha a interseç�
 
 Este exemplo parece assim:
 
-{{EmbedLiveSample("Um_simples_exemplo", 160, 160, "https://mdn.mozillademos.org/files/228/canvas_ex1.png")}}
+{{EmbedLiveSample("Um_simples_exemplo", 160, 160, "canvas_ex1.png")}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial", "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes")}}

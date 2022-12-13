@@ -21,7 +21,7 @@ slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 
 每个输入和输出都可以包括几个声道，声道代表了一个特定的音效通道。各种声道分离结构都可以使用，包括*单声道*，_立体声_，_四声道_，*5.1*等等。
 
-![Show the ability of AudioNodes to connect via their inputs and outputs and the channels inside these inputs/outputs.](https://mdn.mozillademos.org/files/12239/audionodes_en.svg)
+![Show the ability of AudioNodes to connect via their inputs and outputs and the channels inside these inputs/outputs.](audionodes_en.svg)
 
 声源可以来自不同的地方：
 
@@ -49,7 +49,7 @@ slug: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 - 单声道片段会有 44100 个样本点和 44100 个帧。长度属性为 44100。
 - 立体声片段会有 88200 个样本点和 44100 个帧。长度属性依旧为 44100，因为长度总和帧的个数相同。
 
-![A diagram showing several frames in an audio buffer in a long line, each one containing two samples, as the buffer has two channels, it is stereo.](https://mdn.mozillademos.org/files/12519/sampleframe.svg)
+![A diagram showing several frames in an audio buffer in a long line, each one containing two samples, as the buffer has two channels, it is stereo.](sampleframe.svg)
 
 当一个音频片段开始播放时，你将会听到最左侧的样本帧，之后是他右侧相邻的一帧，以此类推。在立体声中，你将会同时听到两个声道。样本帧的概念在此时非常有用，因为每个样本帧代表特定的播放时间，而和声道个数无关，这种方式很有利于精确的多声道同步处理。
 
@@ -345,7 +345,7 @@ LRLRLRLRLRLRLRLRLRLRLRLRLRLRLRLR（对于一个有 16 帧的音频片段）
 
 接听者的位置可以用笛卡尔坐标系来表示；他的运动可以用方向向量表示；头部姿态可以用两个向量表示：一个向上向量表示头顶正对的方向，一个向前向量表示鼻子所指向的方向（面向的方向），这两个向量应该互相垂直。
 
-![The PannerNode brings a spatial position and velocity and a directionality for a given signal.](https://mdn.mozillademos.org/files/12513/listener.svg)
+![The PannerNode brings a spatial position and velocity and a directionality for a given signal.](listener.svg)
 
 > **备注：** 更多信息可以参考我们的这篇文章：[网络音频位置空间化入门（英文）](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)。
 

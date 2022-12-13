@@ -1,7 +1,6 @@
 ---
 title: Utilizando eventos enviados por el servidor (server-sent event)
 slug: Web/API/Server-sent_events/Using_server-sent_events
-translation_of: Web/API/Server-sent_events/Using_server-sent_events
 original_slug: Server-sent_events/utilizando_server_sent_events_sse
 ---
 

@@ -1,14 +1,6 @@
 ---
 title: Window.scrollBy()
 slug: Web/API/Window/scrollBy
-tags:
-  - API
-  - CSSOM View
-  - Método(2)
-  - NeedsCompatTable
-  - NeedsSpecTable
-  - Referencia
-translation_of: Web/API/Window/scrollBy
 ---
 
 {{ APIRef() }}

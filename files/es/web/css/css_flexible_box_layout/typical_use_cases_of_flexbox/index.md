@@ -62,7 +62,7 @@ Es posible que en el futuro no tengamos que crear un contenedor en un contenedor
 
 Ya sea que use flexbox o CSS Grid para diseñar una lista de componentes de tarjeta, estos métodos de diseño solo funcionan en los elementos directos de los componentes flex o grid. Esto significa que si tiene cantidades variables de contenido, la tarjeta se extenderá hasta la altura del área de la cuadrícula o del contenedor flexible. Cualquier contenido interno usa un diseño de bloque regular, lo que significa que en una tarjeta con menos contenido, el pie de página subirá hasta la parte inferior del contenido en lugar de adherirse a la parte inferior de la tarjeta.
 
-![Two card components showing that the internals of the component do not stretch with the wrapper.](https://mdn.mozillademos.org/files/15669/flex-cards.png)
+![Two card components showing that the internals of the component do not stretch with the wrapper.](flex-cards.png)
 
 Flexbox puede resolver esto. Hacemos de la tarjeta un contenedor flexible, con `{{cssxref ("flex-direction")}} :column`. A continuación, configuramos el área de contenido con `flex: 1`, que es la abreviatura de `flex: 1 1 0`; el elemento puede crecer y reducirse desde una base flexible de 0. Como este es el único elemento que puede crecer, ocupa todo el espacio disponible en el contenedor flexible y empuja el pie de página hacia abajo. Si elimina la propiedad `flex` del ejemplo en vivo, verá cómo el pie de página se mueve hacia arriba para sentarse directamente debajo del contenido.
 

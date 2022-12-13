@@ -1,9 +1,7 @@
 ---
 title: <td>
 slug: Web/HTML/Element/td
-translation_of: Web/HTML/Element/td
 original_slug: Web/HTML/Elemento/td
-browser-compat: html.elements.td
 ---
 
 {{HTMLSidebar}}

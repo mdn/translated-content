@@ -90,7 +90,7 @@ for (let i = 0; i < lineCap.length; i++) {
 }
 ```
 
-{{EmbedLiveSample("Comparison_of_line_caps", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}
+{{EmbedLiveSample("Comparison_of_line_caps", "180", "180", "canvas_linecap.png")}}
 
 ## Especificaciones
 

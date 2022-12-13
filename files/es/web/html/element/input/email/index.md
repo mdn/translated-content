@@ -1,8 +1,6 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/input/email
-browser-compat: html.elements.input.input-email
-translation_of: Web/HTML/Element/input/email
 original_slug: Web/HTML/Elemento/input/email
 ---
 

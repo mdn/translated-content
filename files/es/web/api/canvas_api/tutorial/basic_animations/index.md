@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Basic_animations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 Ya que estamos usando JavaScript para controlar elementos {{HTMLElement("canvas")}} , también es muy fácil hacer animaciones (interactivas). En este capitulo veremos como hacer algunas animaciones básicas.
 
@@ -53,9 +53,9 @@ var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init(){
-  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  sun.src = 'canvas_sun.png';
+  moon.src = 'canvas_moon.png';
+  earth.src = 'canvas_earth.png';
   window.requestAnimationFrame(draw);
 }
 
@@ -102,7 +102,7 @@ init();
 <canvas id="canvas" width="300" height="300"></canvas>
 ```
 
-{{EmbedLiveSample("Un_sistema_solar_animado", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}
+{{EmbedLiveSample("", "310", "310")}}
 
 ## Un reloj animado
 
@@ -213,7 +213,7 @@ window.requestAnimationFrame(clock);
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-{{EmbedLiveSample("Un_reloj_animado", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}
+{{EmbedLiveSample("", "180", "180")}}
 
 ## Un panorama en bucle
 
@@ -225,7 +225,7 @@ var img = new Image();
 // Variables de usuario - personalizar estas para cambiar la imagen cuando inicie el desplazamiento
 // dirección y velocidad.
 
-img.src = 'https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg';
+img.src = 'capitan_meadows_yosemite_national_park.jpg';
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; //más bajo es más rápido
@@ -313,7 +313,7 @@ Debajo esta el elemento {{HTMLElement("canvas")}} en el cual va la imagen se va 
 <canvas id="canvas" width="800" height="200"></canvas>
 ```
 
-{{EmbedLiveSample("Un_panorama_en_bucle", "830", "230")}}
+{{EmbedLiveSample("", "830", "230")}}
 
 ## Otros ejemplos
 

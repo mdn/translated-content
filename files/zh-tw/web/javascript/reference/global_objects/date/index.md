@@ -82,7 +82,16 @@ new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]]);
 
 ### Date.prototype 方法
 
-{{page('/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype', '方法')}}
+- {{jsxref("Date.now()")}}
+  - : 回傳對應於當下時間的數值 - 1970/01/01 00:00:00 (UTC) 到當下的毫秒數。
+- {{jsxref("Date.parse()")}}
+
+  - : 解析字串所表示的時間，回傳由 1970/01/01 00:00:00 (UTC) 到該時間的毫秒數值。
+
+    > **備註：** 由於瀏覽器之間的不同與差異，強烈不建議使用 `Date.parse` 。
+
+- {{jsxref("Date.UTC()")}}
+  - : 需要傳入與建構子相同的參數數目（即 2 到 7 個），會得到由 1970-01-01 00:00:00 UTC 到該日期時間的毫秒數。（輸入的參數會視為世界標準時間，而非本地時間）
 
 ## 範例
 

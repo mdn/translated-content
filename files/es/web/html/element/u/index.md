@@ -1,11 +1,6 @@
 ---
 title: u
 slug: Web/HTML/Element/u
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/u
 original_slug: Web/HTML/Elemento/u
 ---
 

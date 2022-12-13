@@ -201,7 +201,7 @@ original_slug: Learn/CSS/CSS_layout/미디어_쿼리_초보자_안내서
 
 Firefox DevTools의 [반응형 디자인 모드](/ko/docs/Tools/Responsive_Design_Mode)는 이러한 분기점이 어느 부분이 될지 알아내는 데 매우 유용합니다. 동 툴은 미디어 쿼리를 추가하고 디자인을 조정하면서 콘텐츠가 개선되는 위치를 파악하기 위해 뷰포트를 쉽게 크거나 작게 만들 수 있습니다.
 
-![파이어폭스 개발툴상에 레이아웃 갈무리](https://mdn.mozillademos.org/files/16867/rwd-mode.png)
+![파이어폭스 개발툴상에 레이아웃 갈무리](rwd-mode.png)
 
 ## 능동 학습: 모바일 우선 반응형 디자인
 

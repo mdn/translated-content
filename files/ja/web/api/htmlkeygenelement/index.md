@@ -35,4 +35,3 @@ slug: Web/API/HTMLKeygenElement
 ## 仕様書
 
 {{Specifications}}
-

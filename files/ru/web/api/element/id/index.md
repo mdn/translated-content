@@ -24,7 +24,7 @@ var idStr = element.id; // Получаем id.
 ```
 
 ```
-element.id = idStr; // Применяем id
+element.id = idStr; // Применяем id.
 ```
 
 _`idStr`_ - идентификатор элемента

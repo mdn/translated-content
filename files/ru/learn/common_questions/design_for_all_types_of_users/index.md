@@ -35,7 +35,7 @@ translation_of: Learn/Common_questions/Design_for_all_types_of_users
 
 Например, давайте протестируем цвета на этой странице и посмотрим, как мы справляемся с анализатором цветового контраста:
 
-![Colour contrast on this page: excellent!](https://mdn.mozillademos.org/files/9671/colour-contrast.png)
+![Colour contrast on this page: excellent!](colour-contrast.png)
 
 Коэффициент контрастности яркости между текстом и фоном составляет 8,30:1, что превышает минимальный стандарт (4,5: 1) и должно позволить многим слабовидящим людям читать эту страницу.
 

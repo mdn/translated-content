@@ -53,7 +53,7 @@ sudo npm install express-generator -g
 
 生成器有许多选项，可以使用 `--help`（或 `-h`）命令进行查看：
 
-![express 生成器的帮助信息](https://mdn.mozillademos.org/files/16407/express-help.png)
+![express 生成器的帮助信息](express-help.png)
 
 大意如下：
 
@@ -132,7 +132,7 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
 
 首先，进入准备放置项目的目录，然后在命令提示符运行 Express 应用生成器，生成器将创建（并列出）项目的文件：
 
-![用 express 生成器生成一个应用](https://mdn.mozillademos.org/files/16408/express.png)
+![用 express 生成器生成一个应用](express.png)
 
 生成器在最后还告诉你如何安装（**package.json** 中所列的）依赖，以及如何运行该应用。
 
@@ -152,11 +152,11 @@ Express 应用生成器支持最常见的 CSS 引擎：[LESS](http://lesscss.org
     DEBUG=express-locallibrary-tutorial:* npm start
     ```
 
-3. 最后在浏览器中导航至 <http://localhost:3000/> ，就可以访问该应用。你应该可以看到： ![Express 应用生成器生成的应用启动成功](https://mdn.mozillademos.org/files/16410/success.png)
+3. 最后在浏览器中导航至 <http://localhost:3000/> ，就可以访问该应用。你应该可以看到： ![Express 应用生成器生成的应用启动成功](success.png)
 
 一个 Express 应用就配置成功了，它托管于 localhost:3000。
 
-> **备注：** 指定 DEBUG 变量可启用控制台日志记录/调试。例如，当你访问上面的页面时，你会看到像这样的调试输出： ![用 npm start 启动这个应用](https://mdn.mozillademos.org/files/16409/npm-start.png) 直接通过 `npm start` 命令启动应用也可以，但不会看到调试信息。
+> **备注：** 指定 DEBUG 变量可启用控制台日志记录/调试。例如，当你访问上面的页面时，你会看到像这样的调试输出： ![用 npm start 启动这个应用](npm-start.png) 直接通过 `npm start` 命令启动应用也可以，但不会看到调试信息。
 
 ## 文件改动时重启服务器
 

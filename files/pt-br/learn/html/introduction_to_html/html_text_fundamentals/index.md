@@ -33,7 +33,7 @@ Um dos principais objetivos do HTML é dar estrutura de texto e significado, tam
 
 O texto mais estruturado é composto por títulos e parágrafos,esteja você lendo uma história, um jornal, um livro da faculdade, uma revista, etc.
 
-![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](https://mdn.mozillademos.org/files/12371/newspaper_small.jpg)
+![An example of a newspaper front cover, showing use of a top level heading, subheadings and paragraphs.](newspaper_small.jpg)
 
 O conteúdo estruturado torna a experiência de leitura mais fácil e mais agradável.
 
@@ -85,7 +85,7 @@ Para responder a esta pergunta, dê uma olhada em [text-start.html](https://gith
 
 No entanto, quando você abre o documento em seu navegador, você verá que o texto aparece como uma só parte!
 
-![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](https://mdn.mozillademos.org/files/14827/Screen%20Shot%202017-03-29%20at%2009.20.35.png)
+![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](screen_shot_2017-03-29_at_09.20.35.png)
 
 Isso ocorre porque não há elementos para dar a estrutura de conteúdo, então o navegador não sabe o que é um título e o que é um parágrafo. Além disso:
 

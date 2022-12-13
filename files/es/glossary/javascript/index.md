@@ -1,12 +1,6 @@
 ---
 title: JavaScript
 slug: Glossary/JavaScript
-tags:
-  - CodingScripting
-  - Glosario
-  - JavaScript
-  - l10n:priority
-translation_of: Glossary/JavaScript
 ---
 {{jsSidebar}}
 

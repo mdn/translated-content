@@ -71,13 +71,13 @@ _There is no active learning available yet. [Please, consider contributing](/ko/
 
 웹에서 이용하는 모든 웹 페이지는 유일한 주소를 통해 접근할 수 있습니다. 한 페이지에 접근하기 위해서는, 브라우저의 주소창에 주소를 적으면 됩니다.
 
-![Example of a web page address in the browser address bar](https://mdn.mozillademos.org/files/8529/web-page.jpg)
+![Example of a web page address in the browser address bar](web-page.jpg)
 
 _웹사이트_ 는 유일한 도메인 이름을 같이 사용하는 연결된 웹 페이지들의 모음입니다. (관련된 자원도 포함된다.) 각각의 웹사이트에서 분명한 링크가 주어진 웹 페이지들은 유저가 그 웹사이트의 한 페이지에서 다른 페이지로 이동하게 합니다. 보통 클릭할 수 있는 형태로 되어있습니다.
 
 웹사이트에 접근하기 위해서, 브라우저 주소 창에 도메인 이름을 적으면, 브라우저는 웹사이트의 메인 페이지나 _홈페이지_ (보통 "홈"이라 하는)를 보여줄 것이다:
 
-![Example of a web site domain name in the browser address bar](https://mdn.mozillademos.org/files/8531/web-site.jpg)
+![Example of a web site domain name in the browser address bar](web-site.jpg)
 
 _웹 페이지_ 와 _웹사이트 에 대한 생각은_ 특히 하나의*웹 페이지*만 포함하는 *웹사이트*에서 혼동하기 쉽습니다. 이런 웹사이트를 보통 a *single-page website(싱글 페이지 웹사이트)*라고 합니다.
 
@@ -97,7 +97,7 @@ _웹 페이지_ 와 _웹사이트 에 대한 생각은_ 특히 하나의*웹 페
 
 기본 시작 페이지로 구글 검색 상자를 보여주는 파이어폭의 한 예입니다.
 
-![Example of Firefox nightly displaying a custom Google page as default](https://mdn.mozillademos.org/files/8533/search-engine.jpg)
+![Example of Firefox nightly displaying a custom Google page as default](search-engine.jpg)
 
 ## 다음 단계
 

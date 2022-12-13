@@ -11,7 +11,7 @@ El evento `transitionend` es lanzado cuando una [transición CSS](/es/docs/CSS/U
 ## Información general
 
 - Especificación
-  - : {{SpecName("CSS3 Transitions")}}
+  - : [CSS Transitions](https://drafts.csswg.org/css-transitions/)
 - Interfaz
   - : {{domxref("TransitionEvent")}}
 - Burbuja

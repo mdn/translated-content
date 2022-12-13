@@ -1,13 +1,6 @@
 ---
 title: '<mark>: el elemento de resaltado de texto'
 slug: Web/HTML/Element/mark
-tags:
-  - HTML
-  - HTML5
-  - HTML:Elemento
-  - mark
-  - para_revisar
-translation_of: Web/HTML/Element/mark
 original_slug: Web/HTML/Elemento/mark
 ---
 

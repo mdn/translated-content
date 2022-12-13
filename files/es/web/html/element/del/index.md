@@ -1,11 +1,6 @@
 ---
 title: del
 slug: Web/HTML/Element/del
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/del
 original_slug: Web/HTML/Elemento/del
 ---
 

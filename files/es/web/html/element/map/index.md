@@ -1,11 +1,6 @@
 ---
 title: map
 slug: Web/HTML/Element/map
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/map
 original_slug: Web/HTML/Elemento/map
 ---
 

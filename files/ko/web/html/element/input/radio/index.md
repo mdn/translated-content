@@ -23,7 +23,7 @@ translation_of: Web/HTML/Element/input/radio
 
 오래된 라디오의 버튼과 비슷한 형태와 동작 방식을 가졌기에 라디오 버튼이라고 부릅니다.
 
-![Shows what radio buttons looked like in the olden days.](https://mdn.mozillademos.org/files/15610/old-radio.jpg)
+![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
 
 > **참고:** [체크박스](/ko/docs/Web/HTML/Element/input/checkbox)도 라디오 버튼과 비슷하지만 중요한 차이점이 하나 있습니다. 라디오 버튼은 여러 값에서 단 하나만 선택할 때 사용하지만, 체크박스는 각각의 값을 켜고 끌 수 있다는 점입니다. 다수의 컨트롤이 존재할 때 라디오 버튼은 전체에서 하나를 허용하고, 체크박스는 여러 개 선택을 허용합니다.
 

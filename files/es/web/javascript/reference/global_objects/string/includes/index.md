@@ -1,14 +1,6 @@
 ---
 title: String.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/String/includes
-tags:
-  - Cadena de texto
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/includes
 ---
 
@@ -84,9 +76,7 @@ console.log(str.includes(''))             // true
 
 ## Especificaciones
 
-| Specification                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.includes', 'String.prototype.includes')}} |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

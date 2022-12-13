@@ -1,13 +1,6 @@
 ---
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
-tags:
-  - JavaScript
-  - Objeto
-  - Prototipo
-  - Prototype
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/__defineGetter__
 ---
 

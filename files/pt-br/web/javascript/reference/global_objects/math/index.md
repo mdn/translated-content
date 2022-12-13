@@ -30,8 +30,6 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
 - {{jsxref("Math.SQRT2")}}
   - : Raiz quadrada de 2, aproximadamente 1.414.
 
-{{ jsOverrides("Object", "properties", "E", "LN2", "LN10", "LOG2E", "LOG10E", "PI", "SQRT1_2", "SQRT") }}
-
 ## Métodos
 
 > **Nota:** Note que as funções trigonométricas (sin(), cos(), tan(), asin(), acos(), atan(), atan2()) recebem ou retornam ângulos em radianos. Divida por (`Math.PI/180`) para converter radianos em graus, ou multiplique por esse valor para fazer a conversão inversa.
@@ -238,8 +236,6 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
   - : Retorna a string `"Math"`.
 - {{jsxref("Global_Objects/Math/trunc", "Math.trunc(x)")}} {{experimental_inline}}
   - : Retorna a parte inteira de `x`, removendo quaisquer dígitos fracionários.
-
-{{ jsOverrides("Object", "Methods") }}
 
 ## Especificações
 

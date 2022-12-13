@@ -1,12 +1,6 @@
 ---
 title: Algoritmo criptográfico
 slug: Glossary/Cipher
-tags:
-  - Criptografía
-  - Glosario
-  - Seguridad
-  - privacidad
-translation_of: Glossary/Cipher
 original_slug: Glossary/Cifrado
 ---
 

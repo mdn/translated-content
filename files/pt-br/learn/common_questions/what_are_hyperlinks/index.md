@@ -45,7 +45,7 @@ Antes da Web, era muito difícil acessar documentos e passar de um para outro. P
 
 Os links se destacam do texto ao redor por serem sublinhados e em azul. Toque ou clique em um link para ativá-lo ou, se usar um teclado, pressione Tab até que o link esteja em foco e pressione Enter ou a barra de espaço.
 
-![Example of a basic display and effect of a link in a web page](https://mdn.mozillademos.org/files/8625/link-1.png)
+![Example of a basic display and effect of a link in a web page](link-1.png)
 
 Os links são o avanço que tornou a Web tão útil e bem-sucedida. No restante deste artigo, discutiremos os vários tipos de links e sua importância para o design moderno da Web.
 
@@ -70,7 +70,7 @@ Quando você está começando, não precisa se preocupar tanto com links externo
 
 Muitos links unem duas páginas da web. **Âncoras** amarrar duas seções de um documento. Quando você segue um link que aponta para uma âncora, seu navegador salta para outra parte do documento atual em vez de carregar um novo documento. No entanto, você cria e usa âncoras da mesma forma que outros links.
 
-![Example of a basic display and effect of an anchor in a web page](https://mdn.mozillademos.org/files/8627/link-2.png)
+![Example of a basic display and effect of an anchor in a web page](link-2.png)
 
 ### Links e Mecanismos de pesquisa
 

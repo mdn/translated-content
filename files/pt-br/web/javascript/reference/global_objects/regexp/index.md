@@ -674,13 +674,9 @@ var re = new RegExp('\\w+');
 - `RegExp.length`
   - : O valor of `RegExp.length` é 2.
 
-{{jsOverrides("Function", "Properties", "prototype")}}
-
 ## Métodos
 
 O objeto global `RegExp não possui métodos próprios, no entanto, herda alguns métodos através da cadeia de prototype.`
-
-{{jsOverrides("Function", "Methods", "prototype")}}
 
 ## Objetos e instancias
 

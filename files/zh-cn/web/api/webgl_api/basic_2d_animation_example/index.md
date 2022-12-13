@@ -3,7 +3,7 @@ title: 一个 2D WebGL 动画的基础示例
 slug: Web/API/WebGL_API/Basic_2D_animation_example
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 在这个 WebGL 示例中，我们创建一个画布，并在其中使用 WebGL 渲染旋转正方形。我们用来表示场景的坐标系与画布的坐标系相同。也就是说，（0, 0）这个坐标在左上角，右下角是坐标在（600, 460）。
 

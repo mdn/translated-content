@@ -44,7 +44,7 @@ _No hay atributos específicos_
 
 ## Interfaz DOM
 
-Este elemento implementa la interfaz [`SVGGElement`](/en-US/docs/DOM/SVGGElement).
+Este elemento implementa la interfaz [`SVGGElement`](/es/docs/DOM/SVGGElement).
 
 ## Compatibilidad con navegadores
 

@@ -21,4 +21,3 @@ slug: Web/CSS/CSS_Table
 ## 仕様書
 
 {{Specifications}}
-

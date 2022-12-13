@@ -1,12 +1,6 @@
 ---
 title: rotate()
 slug: Web/CSS/transform-function/rotate
-tags:
-  - CSS
-  - NeedsCompatTable
-  - Referencia
-  - Transformaciones CSS
-translation_of: Web/CSS/transform-function/rotate()
 original_slug: Web/CSS/transform-function/rotate()
 ---
 
@@ -17,8 +11,6 @@ La función [CSS](/es/docs/) **`rotate()`** define una transformación que gira 
 El punto fijo alrededor del cual gira el elemento, mencionado anteriormente, también se conoce como el **origen de transformación**. Se establece de manera predeterminada en el centro del elemento, pero se puede personalizar utilizando la propiedad {{ cssxref("transform-origin") }}.
 
 La cantidad de rotación generada por la propiedad `rotate()` se define mediante un {{cssxref("&lt;angle&gt;")}}. Si es positivo, el movimiento serán en el sentido de las agujas del reloj; si es negativo, en sentido contrario a las agujas. Una rotación de 180° se llama centro de simetría.
-
-![](https://mdn.mozillademos.org/files/12113/rotate.png)
 
 ## Síntaxis
 

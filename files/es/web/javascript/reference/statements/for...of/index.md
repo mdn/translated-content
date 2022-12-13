@@ -1,12 +1,6 @@
 ---
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Referencia
-  - Sentencia
-translation_of: Web/JavaScript/Reference/Statements/for...of
 original_slug: Web/JavaScript/Referencia/Sentencias/for...of
 ---
 

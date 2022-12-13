@@ -1,15 +1,6 @@
 ---
 title: Validación de formularios de datos
 slug: Learn/Forms/Form_validation
-tags:
-  - Ejemplo
-  - Guía
-  - HTML
-  - Intermedio
-  - JavaScript
-  - Web
-  - formulários
-translation_of: Learn/Forms/Form_validation
 original_slug: Learn/HTML/Forms/Validacion_formulario_datos
 ---
 

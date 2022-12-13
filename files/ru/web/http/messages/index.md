@@ -59,7 +59,7 @@ HTTP запросы - это сообщения, отправляемые кли
 - _Основные заголовки (General headers_), например, {{HTTPHeader("Via")}}, относящиеся к сообщению в целом
 - _Заголовки запроса (Request headers_), например, {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, уточняющие запрос (как, например, {{HTTPHeader("Accept-Language")}}), придающие контекст (как {{HTTPHeader("Referer")}}), или накладывающие ограничения на условия (like {{HTTPHeader("If-None")}}).
 - _Заголовки сущности_, например {{HTTPHeader("Content-Length")}}, относящиеся к телу сообщения. Как легко понять, они отсутствуют, если у запроса нет тела.
-- ![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+- ![Example of headers in an HTTP request](http_request_headers2.png)
 
 ### Тело
 
@@ -92,7 +92,7 @@ HTTP запросы - это сообщения, отправляемые кли
 - _Заголовки ответа (Response headers_), например, {{HTTPHeader("Vary")}} и {{HTTPHeader("Accept-Ranges")}}, сообщающие дополнительную информацию о сервере, которая не уместилась в строку состояния.
 - _Заголовки сущности (Entity headers_), например, {{HTTPHeader("Content-Length")}}, относящиеся к телу ответа. Отсутствуют, если у запроса нет тела.
 
-![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![Example of headers in an HTTP response](http_response_headers2.png)
 
 ### Тело
 

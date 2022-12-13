@@ -317,7 +317,7 @@ function doDrop(event) {
 
 ## Смотрите также
 
-- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API)
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
-- [Recommended Drag Types](/Web/Guide/HTML/Recommended_Drag_Types)
+- [HTML Drag and Drop API (Overview)](/ru/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Dragging and Dropping Multiple Items](/ru/docs/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [Recommended Drag Types](/ru/docs/Web/Guide/HTML/Recommended_Drag_Types)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

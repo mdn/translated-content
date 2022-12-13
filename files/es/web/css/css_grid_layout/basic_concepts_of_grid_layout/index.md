@@ -78,7 +78,7 @@ Hago de `.wrapper` un contenedor de cuadrícula.
 
 Todos los descendientes directos son ahora elementos de la cuadrícula. En un navegador web, usted no verá ninguna diferencia en cómo son mostrados estos elementos antes de convertirlos en una cuadrícula ya que grid ha creado una cuadrícula de una sola columna para los elementos. En este punto usted puede encontrar útil trabajar en Firefox Developer Edition, el cual tiene disponible el [Grid Inspector](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) (Inspector de cuádricula) como parte de las Herramientas de Desarrollador. Si ve este ejemplo en Firefox e inspecciona la cuadrícula, verá un icono pequeño junto al valor `grid`. Haga clic sobre este y la cuadrícula de este elemento se superpondrá en la ventana del navegador.
 
-![Using the Grid Highlighter in DevTools to view a grid](https://mdn.mozillademos.org/files/14631/1-grid-inspector.png)
+![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
 
 Mientras usted aprende y luego trabaja con CSS Grid Layout esta herramienta le dará una mejor idea de lo que está sucediendo con sus cuadrículas visualmente.
 
@@ -88,7 +88,7 @@ Si queremos empezar a hacer esto más parecido a una cuadrícula necesitamos agr
 
 Definimos filas y columnas en nuestra cuadrícula con las propiedades {{cssxref("grid-template-columns")}} y {{cssxref("grid-template-rows")}}. Éstas definen las vías de la cuadrícula. Una vía de cuadrícula es el área entre las dos líneas -horizontales o verticales- dentro de la cuadrícula. En la imagen inferior se puede ver una vía resaltada - esta es la vía de la primera fila en nuestra cuadrícula.
 
-![](https://mdn.mozillademos.org/files/14637/1_Grid_Track.png)
+![](1_grid_track.png)
 
 Puedo modificar nuestro ejemplo anterior al agregar la propiedad `grid-template-columns`, para así definir el tamaño (ancho) de las vías de cada columna.
 
@@ -327,7 +327,7 @@ Grid tiene una solución para esto con la función {{cssxref("minmax", "minmax()
 
 Debe tenerse en cuenta que cuando definimos una cuadrícula definimos las vías de la cuadrícula, no las líneas. Grid luego nos da las líneas numeradas a utilizar al posicionar elementos. En nuestra cuadrícula de tres columnas y dos filas, tenemos cuatro líneas de columna.
 
-![Diagram showing numbered grid lines.](https://mdn.mozillademos.org/files/14761/1_diagram_numbered_grid_lines.png)
+![Diagram showing numbered grid lines.](1_diagram_numbered_grid_lines.png)
 
 Las líneas están numeradas según el modo de escritura del documento. En un idioma de izquierda a derecha, la línea 1 está al lado izquierdo de la cuadrícula. En un idioma de derecha a izquierda, está en el lado derecho de la cuadrícula. Las líneas también se pueden nombrar, ya veremos cómo hacer esto en una guía posterior de esta serie.
 
@@ -396,13 +396,13 @@ No olvide que puede utilizar [Grid Inspector](/es/docs/Tools/Page_Inspector/How_
 
 Una _celda de cuadrícula_ es la unidad más pequeña en una cuadrícula, conceptualmente es como una celda de tabla. Como vimos en nuestros ejemplos anteriores, una vez que se define una cuadrícula en un padre, los elementos hijo se posicionarán a sí mismos de una vez en cada celda de la cuadrícula definida. En la imagen de abajo he resaltado la primera celda de la cuadrícula.
 
-![The first cell of the grid highlighted](https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png)
+![The first cell of the grid highlighted](1_grid_cell.png)
 
 ## Áreas de cuadrícula
 
 Los elementos pueden extenderse a través de una o más celdas tanto por fila como por columna, lo que crea un _área de cuadrícula_. Las áreas de la cuadrícula tienen que ser rectangulares - no es posible crear un área en forma de L, por ejemplo. El área de cuadrícula resaltada abarca dos vías de fila y dos de columna.
 
-![A grid area](https://mdn.mozillademos.org/files/14645/1_Grid_Area.png)
+![A grid area](1_grid_area.png)
 
 ## Canaletas
 
@@ -472,7 +472,7 @@ Un elemento de cuadrícula puede convertirse en un contenedor de cuadrícula. En
 </div>
 ```
 
-![Nested grid in flow](https://mdn.mozillademos.org/files/14641/1_Nested_Grids_in_flow.png)
+![Nested grid in flow](1_nested_grids_in_flow.png)
 
 Si establezco `box1` a `display: grid` puedo darle una definición de vía y también se convertirá en una cuadrícula, los elementos entonces se posicionan en esta nueva cuadrícula.
 

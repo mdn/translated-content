@@ -1,11 +1,6 @@
 ---
 title: caption
 slug: Web/HTML/Element/caption
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/caption
 original_slug: Web/HTML/Elemento/caption
 ---
 

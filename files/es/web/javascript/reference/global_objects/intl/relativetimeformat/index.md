@@ -1,9 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
-tags:
-  - RelatimeTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Intl/RelativeTimeFormat
 ---
 
@@ -77,9 +74,7 @@ rtf.formatToParts(100, "day");
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado | Comentario |
-| ------------------------------------------------------------------------------------------------------------ | ------ | ---------- |
-| {{SpecName('ES Int Draft', '#relativetimeformat-objects', 'RelativeTimeFormat')}} |        |            |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

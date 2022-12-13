@@ -21,7 +21,7 @@ _La interfaz `Coordinates` no hereda ninguna propiedad_.
 - {{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}}
   - : Devuelve un `double` que representa la precisión de la propiedad `altitude` expresada en metros. Este valor puede ser `null`.
 - {{domxref("Coordinates.heading")}} {{readonlyInline}}
-  - : Devuelve un `double` que representa la dirección en la que el dispositivo está viajando. Este valor, indicado en grados, indica la distancia real a la que el dispositivo se encuentra del norte. `0` grados representa el norte real, y la dirección se determina en el sentido de la agujas del reloj (lo que significa que el este es `90` grados y el oeste es `270` grados). Si `speed` es `0`, `heading` es [`NaN`](/en-US/docs/JavaScript/Reference/Global_Objects/NaN). En caso de que el dispositivo no pueda proporcionar la información de `heading`, este valor es `null`.
+  - : Devuelve un `double` que representa la dirección en la que el dispositivo está viajando. Este valor, indicado en grados, indica la distancia real a la que el dispositivo se encuentra del norte. `0` grados representa el norte real, y la dirección se determina en el sentido de la agujas del reloj (lo que significa que el este es `90` grados y el oeste es `270` grados). Si `speed` es `0`, `heading` es [`NaN`](/es/docs/JavaScript/Reference/Global_Objects/NaN). En caso de que el dispositivo no pueda proporcionar la información de `heading`, este valor es `null`.
 - {{domxref("Coordinates.speed")}} {{readonlyInline}}
   - : Devuelve un `double` que representa la velocidad del dispositivo en metros por segundo. Este valor puede ser `null`.
 

@@ -4,9 +4,9 @@ slug: Web/API/WebRTC_API/adapter.js
 translation_of: Web/API/WebRTC_API/adapter.js
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
-WebRTC [사양](http://www.w3.org/TR/webrtc/)은 비교적 인정적이지만, 모든 브라우저가 모든 기능이 구현되어 있는 것은 아니다. 또한, 일부 브라우저는 여전히 일부 혹은 모든 WebRTC API에 접두사가 붙어 있는상황이다. 이러한 문제에 대해 수동적으로 코딩을 할 수 있지만, 더 쉬운 방법이 있다.WebRTC 단체는 다른 브라우저의 WebRTC 구현에서 호환성 문제를 해결하기 위해 [WebRTC 어댑터를 GitHub에서 제공한다.](https://github.com/webrtc/adapter/) 어댑터는 WebRTC가 지원되는 모든 브라우저에서 "그냥 작동"되도록 당신이 작성한 코드가 사양에 적합하도록 해 주는 JavaScript 코드 모음이다. 더이상 접두사 API를 조건부로 사용하거나 다른 해결 방법을 구현할 필요가 없다.
+WebRTC [사양](https://www.w3.org/TR/webrtc/)은 비교적 인정적이지만, 모든 브라우저가 모든 기능이 구현되어 있는 것은 아니다. 또한, 일부 브라우저는 여전히 일부 혹은 모든 WebRTC API에 접두사가 붙어 있는상황이다. 이러한 문제에 대해 수동적으로 코딩을 할 수 있지만, 더 쉬운 방법이 있다.WebRTC 단체는 다른 브라우저의 WebRTC 구현에서 호환성 문제를 해결하기 위해 [WebRTC 어댑터를 GitHub에서 제공한다.](https://github.com/webrtc/adapter/) 어댑터는 WebRTC가 지원되는 모든 브라우저에서 "그냥 작동"되도록 당신이 작성한 코드가 사양에 적합하도록 해 주는 JavaScript 코드 모음이다. 더이상 접두사 API를 조건부로 사용하거나 다른 해결 방법을 구현할 필요가 없다.
 
 > **참고:** WebRTC 및 지원 브라우저에서 API 용어의 기능과 이름 지정이 지속적으로 변경되고 있기 때문에, 일반적으로 이 어댑터의 사용을 권장한다.
 

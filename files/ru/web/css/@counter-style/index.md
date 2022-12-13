@@ -12,7 +12,7 @@ translation_of: Web/CSS/@counter-style
 
 ## Описание
 
-The** `@counter-style`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) lets authors define specific counter styles that are not part of the predefined set of styles. A `@counter-style` rule defines how to convert a counter value into a string representation.
+The **`@counter-style`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) lets authors define specific counter styles that are not part of the predefined set of styles. A `@counter-style` rule defines how to convert a counter value into a string representation.
 
 Initial version of CSS defined a set of useful counter styles. Although more styles where added to this set of predefined styles over the years, this restrictive way proved unable to fulfill the needs of worldwide typography. The `@counter-style` at-rule addresses this shortcoming in an open-ended manner, by allowing authors to define their own counter styles when the pre-defined styles aren't fitting their needs.
 

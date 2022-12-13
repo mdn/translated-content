@@ -45,7 +45,7 @@ Aquí utilizamos tres manejadores de eventos:
 - En el manejador del evento `dragover` para el contenedor de destino, llamamos a `event.preventDefault()`, que lo habilita para recibir eventos de drop.
 - En el manejador de eventos `drop` para la zona de caída, manejamos el movimiento del elemento arrastrable desde el contenedor original a la zona de caída.
 
-Para un ejemplo más completo de drag y drop, ver la página del evento [`drag`](/en-US/docs/Web/API/HTMLElement/drag_event).
+Para un ejemplo más completo de drag y drop, ver la página del evento [`drag`](/es/docs/Web/API/HTMLElement/drag_event).
 
 #### HTML
 

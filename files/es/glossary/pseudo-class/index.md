@@ -1,13 +1,6 @@
 ---
 title: Pseudo-clase
 slug: Glossary/Pseudo-class
-tags:
-  - CSS
-  - Glosario
-  - Pseudo-clase
-  - Selector
-  - Selectores
-translation_of: Glossary/Pseudo-class
 original_slug: Glossary/Pseudo-clase
 ---
 
@@ -17,4 +10,4 @@ En CSS, un selector de **pseudo-clase** apunta a elementos dependiendo de su est
 
 ### Referencía técnica
 
-- [Pseudo-class documentación](/en-US/docs/Web/CSS/Pseudo-classes)
+- [Pseudo-class documentación](/es/docs/Web/CSS/Pseudo-classes)

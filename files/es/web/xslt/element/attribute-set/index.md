@@ -1,10 +1,6 @@
 ---
 title: attribute-set
 slug: Web/XSLT/Element/attribute-set
-tags:
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/XSLT/Element/attribute-set
 original_slug: Web/XSLT/attribute-set
 ---
 

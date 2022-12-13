@@ -1,11 +1,6 @@
 ---
 title: b
 slug: Web/HTML/Element/b
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/b
 original_slug: Web/HTML/Elemento/b
 ---
 

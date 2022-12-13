@@ -3,7 +3,7 @@ title: Canvas API
 slug: Web/API/Canvas_API
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 **{{HTMLElement("canvas")}}** 是 [HTML5](/zh-TW/docs/HTML) 的新元素，可透過 Script（通常是 [JavaScript](/zh-TW/docs/JavaScript)）繪製圖形。例如，可以用來繪圖、合成圖照片、建立動畫、甚至處理即時的影片播放。
 

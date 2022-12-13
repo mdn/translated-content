@@ -1,11 +1,6 @@
 ---
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
-tags:
-  - Atributos globales
-  - HTML
-  - Referencia
-translation_of: Web/HTML/Global_attributes/accesskey
 original_slug: Web/HTML/Atributos_Globales/accesskey
 ---
 

@@ -1,9 +1,6 @@
 ---
 title: addRange
 slug: Web/API/Selection/addRange
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/addRange
 ---
 
 {{ ApiRef("DOM") }}

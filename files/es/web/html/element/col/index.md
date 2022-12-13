@@ -1,11 +1,6 @@
 ---
 title: col
 slug: Web/HTML/Element/col
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/col
 original_slug: Web/HTML/Elemento/col
 ---
 

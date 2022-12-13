@@ -1,7 +1,6 @@
 ---
 title: Flex
 slug: Glossary/Flex
-translation_of: Glossary/Flex
 ---
 
 flex es una nueva herramienta agregada a la propiedad CSS {{cssxref ("display")}}. Junto con inline-flex, hace que el elemento al que se aplica se convierta en un {{glossary("flex container")}}, y los hijos del elemento se conviertan cada uno en un {{glossary("flex item")}}.

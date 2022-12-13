@@ -19,10 +19,10 @@ Los tipos de resultados son descritos a continuación.
 
 | Método                                                                      | Descripción                                                                                                                                        |
 | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`readAsArrayBuffer()`](/en-US/docs/Web/API/FileReader/readAsArrayBuffer)   | `result` es un [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) de JavaScript que contiene la información binaria. |
-| [`readAsBinaryString()`](/en-US/docs/Web/API/FileReader/readAsBinaryString) | `result` contiene la información binaria del archivo en una cadena de texto.                                                                       |
-| [`readAsDataURL()`](/en-US/docs/Web/API/FileReader/readAsDataURL)           | `result` es una cadena de texto que representa una URL con la propiedad `data:` que contiene la información leída del archivo.                     |
-| [`readAsText()`](/en-US/docs/Web/API/FileReader/readAsText)                 | `result` es una cadena de texto con el contenido del archivo.                                                                                      |
+| [`readAsArrayBuffer()`](/es/docs/Web/API/FileReader/readAsArrayBuffer)   | `result` es un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) de JavaScript que contiene la información binaria. |
+| [`readAsBinaryString()`](/es/docs/Web/API/FileReader/readAsBinaryString) | `result` contiene la información binaria del archivo en una cadena de texto.                                                                       |
+| [`readAsDataURL()`](/es/docs/Web/API/FileReader/readAsDataURL)           | `result` es una cadena de texto que representa una URL con la propiedad `data:` que contiene la información leída del archivo.                     |
+| [`readAsText()`](/es/docs/Web/API/FileReader/readAsText)                 | `result` es una cadena de texto con el contenido del archivo.                                                                                      |
 
 ## Ejemplo
 

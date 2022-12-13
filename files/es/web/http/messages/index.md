@@ -11,7 +11,7 @@ Los mensajes HTTP están compuestos de texto, codificado en ASCII, y pueden comp
 
 Los desarrolladores de páginas Web, o administradores de sitios Web, desarrolladores... raramente codifican directamente estos mensajes HTTP. Normalmente especifican estos mensajes HTTP, mediante archivos de configuración (para proxies, y servidores), APIs (para navegadores) y otros medios.
 
-![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](https://mdn.mozillademos.org/files/13825/HTTPMsg2.png)
+![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](httpmsg2.png)
 
 El mecanismo de tramas binarias de HTTP/2 ha sido diseñado para que no necesite ninguna modificación de las APIs o archivos de configuración utilizados: es totalmente transparente para el usuario.
 
@@ -24,7 +24,7 @@ Las peticiones y respuestas HTTP, comparten una estructura similar, compuesta de
 
 La línea de inicio y las cabeceras HTTP, del mensaje, son conocidas como la _cabeza_ de la peticiones, mientras que su contenido en datos se conoce como el _cuerpo_ del mensaje.
 
-![Requests and responses share a common structure in HTTP](https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png)
+![Requests and responses share a common structure in HTTP](httpmsgstructure2.png)
 
 ## Peticiones HTTP
 
@@ -56,7 +56,7 @@ Hay bastantes cabeceras posibles. Estas se pueden clasificar en varios grupos:
 - Cabeceras de petición, ('_Request headers_' en inglés), como {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, modifican la petición especificándola en mayor detalle ( como: {{HTTPHeader("Accept-Language")}}, o dándole un contexto, como: {{HTTPHeader("Referer")}}, o restringiéndola condicionalmente, como: {{HTTPHeader("If-None")}}.
 - _Cabeceras de entidad, ('Entity headers'_ en ingles), como {{HTTPHeader("Content-Length")}} las cuales se aplican al cuerpo de la petición. Por supuesto, esta cabecera no necesita ser transmitida si el mensaje no tiene cuerpo ('_body_' en inglés).
 
-![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+![Example of headers in an HTTP request](http_request_headers3.png)
 
 ### Cuerpo
 
@@ -89,7 +89,7 @@ Existen varias cabeceras posibles. Estas se puede dividir en distintos grupos:
 - Cabeceras de petición, ('_Request headers_' en inglés), como {{HTTPHeader("Vary")}} , {{HTTPHeader("Accept-Ranges")}}, dan información adicional sobre el servidor, que no tiene espacio en la línea de estado.
 - _Cabeceras de entidad, ('Entity headers'_ en ingles), como {{HTTPHeader("Content-Length")}} las cuales se aplican al cuerpo de la petición. Por supuesto, esta cabecera no necesita ser transmitida si el mensaje no tiene cuerpo ('_body_' en inglés).
 
-\*![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![Example of headers in an HTTP response](http_response_headers3.png)
 
 ### Cuerpo
 
@@ -111,7 +111,7 @@ Los mensajes HTTP/1.x tienen algunas desventajas por su no muy alta eficiencia e
 
 HTTP/2 introduce un paso extra: divide los mensajes HTTP/1.x en tramas que integra en un flujo de datos. Los datos y las tramas de las cabeceras, se separan, esto permite la compresión de las cabeceras. Varios flujos de datos pueden combinarse juntos, y entonces se puede usar un procedimiento de multiplexación, permitiendo un uso más eficiente, de las conexiónes TCP.
 
-![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](https://mdn.mozillademos.org/files/13819/Binary_framing2.png)
+![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](binary_framing2.png)
 
 Las tramas HTTP son trasnparentes para los desarrolladores Web. Este paso adicional en HTTP/2, de los mensajes HTTP/1.0 y el protocolo por debajo. No son necesarios cambios en las APIs usadas por los desarrolladores Web para utilizar estas tramas HTTP, cuando las usan ambos: servidor y navegador.
 

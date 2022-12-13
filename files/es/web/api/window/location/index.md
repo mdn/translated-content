@@ -1,11 +1,6 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
-tags:
-  - Location
-  - contexto
-  - navegación
-translation_of: Web/API/Window/location
 ---
 
 {{APIRef}}

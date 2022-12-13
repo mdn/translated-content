@@ -1,10 +1,6 @@
 ---
 title: Canvas
 slug: Glossary/Canvas
-tags:
-  - Canvas
-  - HTML5
-translation_of: Glossary/Canvas
 ---
 
 El **elemento canvas** forma parte de [HTML5](https://es.wikipedia.org/wiki/HTML5) y habilita la [representación (rendering)](https://es.wikipedia.org/wiki/Renderizaci%C3%B3n) dinámica y en [scripts](https://es.wikipedia.org/wiki/Script) de figuras en 2D y 3D de imágenes de [mapas de Bits](https://es.wikipedia.org/wiki/Bitmap).

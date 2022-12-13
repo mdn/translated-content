@@ -1,11 +1,6 @@
 ---
 title: strong
 slug: Web/HTML/Element/strong
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/strong
 original_slug: Web/HTML/Elemento/strong
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: AJAX
 slug: Glossary/AJAX
-tags:
-  - AJAX
-  - CodingScripting
-  - Glosario
-  - Infrastructure
-translation_of: Glossary/AJAX
 ---
 
 AJAX (de las siglas en Inglés **A**synchronous {{glossary("JavaScript")}} **A**nd {{glossary("XML")}} ) es una práctica de programación utilizada para construir páginas web más complejas y dinámicas, utilizando una tecnología conocida como {{Glossary("XHR_(XMLHttpRequest)","XMLHttpRequest")}}.
@@ -25,5 +19,5 @@ Con los sitios web interactivos y los estándares web modernos, AJAX está siend
 ### Información técnica
 
 - El objeto {{domxref("XMLHttpRequest")}}.
-- [Documentación AJAX en MDN](/en-US/docs/AJAX)
-- [Fetch API en MDN](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+- [Documentación AJAX en MDN](/es/docs/AJAX)
+- [Fetch API en MDN](/es/docs/Web/API/Fetch_API/Using_Fetch)

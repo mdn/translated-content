@@ -29,9 +29,7 @@ var result = url.pathname; // 戻り値: "/en-US/docs/Web/API/URL/pathname"
 
 ## 仕様
 
-| 仕様                                                                         | 状態                 | コメント |
-| ---------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-pathname', 'URL.pathname')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,7 +1,6 @@
 ---
 title: Estabilidad
 slug: Web/API/URL/Host
-translation_of: Web/API/URL/host
 ---
 
 {{ApiRef("URL API")}}

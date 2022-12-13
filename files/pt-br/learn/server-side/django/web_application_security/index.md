@@ -55,12 +55,12 @@ O sistema de _templates_ do Django protege você da maioria dos ataques XSS [esc
 3. Navegue até a página de criação do autor (que deve estar na URL: [`http://127.0.0.1:8000/catalog/author/create/`](http://127.0.0.1:8000/catalog/author/create/)).
 4. Digite os nomes e os detalhes de data para um novo usuário, e então acrescente o seguinte texto no campo Last Name :
     `<script>alert('Test alert');</script>`.
-    ![Author Form XSS test](https://mdn.mozillademos.org/files/14305/author_create_form_alert_xss.png)
+    ![Author Form XSS test](author_create_form_alert_xss.png)
 
     > **Nota:** Este é um script inofensivo que, se executado, exibirá uma caixa de alerta em seu navegador. Se o alerta é exibido quando você submeter o registro então o site está vulnerável a ameaças XSS.
 
 5. Pressione **Submit** para salvar o registro.
-6. Quando você salvar o autor, ele será exibido como mostrado abaixo. Por causa das proteções XSS o `alert()` não deve ser executado. Em vez disso o script é exibido como texto simples.![Author detail view XSS test](https://mdn.mozillademos.org/files/14307/author_detail_alert_xss.png)
+6. Quando você salvar o autor, ele será exibido como mostrado abaixo. Por causa das proteções XSS o `alert()` não deve ser executado. Em vez disso o script é exibido como texto simples.![Author detail view XSS test](author_detail_alert_xss.png)
 
 Se você visualizar o código fonte da página HTML, poderá ver que os carcteres perigosos para as tags de script foram trasnformadoes em seus equivalentes de código de escape inofensivos (ex. `>` agora é `&gt;`)
 

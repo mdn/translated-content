@@ -1,7 +1,6 @@
 ---
 title: Preprocesador CSS
 slug: Glossary/CSS_preprocessor
-translation_of: Glossary/CSS_preprocessor
 original_slug: Glossary/Preprocesador_CSS
 ---
 

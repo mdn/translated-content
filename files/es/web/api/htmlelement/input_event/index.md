@@ -88,4 +88,4 @@ function updateValue(e) {
 
   - [`beforeinput`](/es/docs/Web/Reference/Events/beforeinput)
   - [`change`](/es/docs/Web/Reference/Events/change)
-  - [`invalid`](/en-US/docs/Web/API/Constraint_validation/invalid_event)
+  - [`invalid`](/es/docs/Web/API/Constraint_validation/invalid_event)

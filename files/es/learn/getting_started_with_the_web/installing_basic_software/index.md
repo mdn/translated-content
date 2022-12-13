@@ -1,19 +1,6 @@
 ---
 title: Instalación de software básico
 slug: Learn/Getting_started_with_the_web/Installing_basic_software
-tags:
-  - Aprender
-  - Configuración
-  - Herramientas
-  - Navegadores
-  - Novato
-  - Principiantes
-  - aprende
-  - buscador
-  - editor de textos
-  - instalar
-  - l10n:priority
-translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 original_slug: Learn/Getting_started_with_the_web/Instalacion_de_software_basico
 ---
 

@@ -17,7 +17,7 @@ manifest.json 파일은 모든 확장앱이 가져야하는 유일한 파일입�
 - [사이드바, 팝업, 옵션 페이지](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Sidebars_popups_options_pages): UI 컴포넌트를 제공하는 HTML 파일들
 - [컨텐츠 스크립트](/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts): 웹페이지에 주입할 자바스크립트 파일
 
-![](https://mdn.mozillademos.org/files/13669/webextension-anatomy.png)
+![](webextension-anatomy.png)
 
 세부 내용: [manifest.json](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 참조.
 

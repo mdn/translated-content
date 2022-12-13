@@ -1,7 +1,6 @@
 ---
 title: Poner un contador y terminar ganando
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win
 ---
 

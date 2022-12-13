@@ -29,9 +29,7 @@ var result = url.hostname; // 戻り値: 'developer.mozilla.org'
 
 ## 仕様
 
-| 仕様                                                                         | 状態                 | コメント |
-| ---------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-hostname', 'URL.hostname')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

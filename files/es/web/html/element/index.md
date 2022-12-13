@@ -1,13 +1,6 @@
 ---
 title: Referencia de Elementos HTML
 slug: Web/HTML/Element
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-  - básico
-translation_of: Web/HTML/Element
 original_slug: Web/HTML/Elemento
 ---
 

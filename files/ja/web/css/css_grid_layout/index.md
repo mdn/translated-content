@@ -156,4 +156,3 @@ slug: Web/CSS/CSS_Grid_Layout
 ## 仕様書
 
 {{Specifications}}
-

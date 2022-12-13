@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 
 {{jsSidebar("Operators")}}
 
-减法赋值运算符（`-=`）从变量中减去右操作数的值，并将结果赋值给该变量。
+**减法赋值**（**`-=`**）运算符从变量中减去右操作数的值，并将结果赋值给该变量。
 
 {{EmbedInteractiveExample("pages/js/expressions-subtraction-assignment.html")}}
 
@@ -20,11 +20,10 @@ x -= y // x = x - y
 ### 使用减法赋值
 
 ```js
-// 假设以下变量
-//  bar = 5
+let bar = 5;
 
-bar -= 2     // 3
-bar -= 'foo' // NaN
+bar -= 2; // 3
+bar -= 'foo'; // NaN
 ```
 
 ## 规范
