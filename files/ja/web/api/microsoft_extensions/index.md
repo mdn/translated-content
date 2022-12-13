@@ -1,24 +1,26 @@
 ---
-title: Microsoft API extensions
+title: Microsoft API 拡張
 slug: Web/API/Microsoft_Extensions
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
 {{DefaultAPISidebar("Microsoft Extensions")}}
 
-Microsoft ブラウザー (Internet Explorer および、場合によっては Microsoft Edge) は、標準の [DOM API](/ja/docs/Web/API) に対するいくつかの特別な Microsoft 拡張機能をサポートしています。これらの拡張機能には `MS` または `ms`.のプレフィックスが付きます。
+Microsoft のブラウザー (Internet Explorer および、場合によっては Microsoft Edge) は、標準の [DOM API](/ja/docs/Web/API) 以外にいくつかの特別な Microsoft 拡張機能に対応しています。これらの拡張機能には `MS` または `ms` の接頭辞が付きます。
 
 > **メモ:** これらの API は Microsoft アプリケーションでのみ機能し、標準化されていません。
 
-## Touch APIs
+## タッチ API
 
 - {{DOMxRef("Element.msZoomTo()")}}
-- {{Event("msContentZoom")}}
+- {{domxref("Element/msContentZoom_event", "msContentZoom")}}
 - {{DOMxRef("MSManipulationEvent")}}
-- {{Event("MSManipulationStateChanged")}}
-- {{DOMxRef("msManipulationViewsEnabled")}}
-- {{Event("MSPointerHover")}} {{Deprecated_Inline}}
+- {{domxref("Element/MSManipulationStateChanged_event", "MSManipulationStateChanged")}}
+- {{DOMxRef("Touch.MsManipulationViewsEnabled")}}
+- `MSPointerHover` {{Deprecated_Inline}}
 
-## Media APIs
+## メディア API
 
 - {{DOMxRef("HTMLVideoElement.msFrameStep()")}}
 - {{DOMxRef("HTMLVideoElement.msHorizontalMirror")}}
@@ -40,21 +42,21 @@ Microsoft ブラウザー (Internet Explorer および、場合によっては M
 - {{DOMxRef("msPlayToSource")}}
 - {{DOMxRef("msRealTime")}}
 - {{DOMxRef("msSetMediaProtectionManager")}}
-- {{DOMxRef("msSetVideoRectangle")}}
-- {{DOMxRef("msStereo3DPackingMode")}}
-- {{DOMxRef("msStereo3DRenderMode")}}
-- {{DOMxRef("onMSVideoFormatChanged")}}
-- {{DOMxRef("onMSVideoFrameStepCompleted")}}
-- {{DOMxRef("onMSVideoOptimalLayoutChanged")}}
+- {{DOMxRef("HTMLVideoElement.msSetVideoRectangle")}}
+- {{DOMxRef("HTMLVideoElement.msStereo3DPackingMode")}}
+- {{DOMxRef("HTMLVideoElement.msStereo3DRenderMode")}}
+- {{DOMxRef("HTMLVideoElement.onMSVideoFormatChanged")}}
+- {{DOMxRef("HTMLVideoElement.onMSVideoFrameStepCompleted")}}
+- {{DOMxRef("HTMLVideoElement.onMSVideoOptimalLayoutChanged")}}
 - {{DOMxRef("msFirstPaint")}}
 
-## Pinned Sites APIs
+## ピン止めサイト API
 
 - {{DOMxRef("MSSiteModeEvent")}}
 - {{DOMxRef("mssitemodejumplistitemremoved")}}
 - {{DOMxRef("msthumbnailclick")}}
 
-## Other APIs
+## その他の API
 
 - [`x-ms-aria-flowfrom`](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/x-ms-aria-flowfrom)
 - [`x-ms-acceleratorkey`](/ja/docs/Web/HTML/Global_attributes/x-ms-acceleratorkey)
@@ -64,16 +66,15 @@ Microsoft ブラウザー (Internet Explorer および、場合によっては M
 - {{DOMxRef("msCapsLockWarningOff")}}
 - {{DOMxRef("Event.msConvertURL()")}}
 - {{DOMxRef("mselementresize")}}
-- {{DOMxRef("DocumentOrShadowRoot.msElementsFromRect()", "Document.msElementsFromRect()")}}
 - {{DOMxRef("msIsStaticHTML")}}
 - {{DOMxRef("Navigator.msLaunchUri()")}}
 - {{DOMxRef("msLaunchUriCallback")}}
-- {{DOMxRef("Element.msMatchesSelector()")}} {{Deprecated_Inline}}
+- `Element.msMatchesSelector()` {{Deprecated_Inline}}
 - {{DOMxRef("msProtocols")}}
 - {{DOMxRef("msPutPropertyEnabled")}}
 - {{DOMxRef("msWriteProfilerMark")}}
 
-## 関連項目
+## 関連情報
 
-- [Microsoft CSS extensions](/ja/docs/Web/CSS/Microsoft_Extensions)
-- [Microsoft JavaScript extensions](/ja/docs/Web/JavaScript/Microsoft_JavaScript_extensions)
+- [Microsoft CSS 拡張](/ja/docs/Web/CSS/Microsoft_Extensions)
+- [Microsoft JavaScript 拡張](/ja/docs/Web/JavaScript/Microsoft_JavaScript_extensions)
