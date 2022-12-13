@@ -21,14 +21,13 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
     </tr>
     <tr>
       <td>
-        <a href="/en/DOM/event.target" title="en/DOM/event.target"
+        <a href="/ru/docs/Web/API/Event/target"
           >event.target</a
         >
       </td>
       <td>
         <a
-          class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
           >DOM Event Interface</a
         >
       </td>
@@ -40,26 +39,23 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
     </tr>
     <tr>
       <td>
-        <a href="/en/DOM/event.currentTarget" title="en/DOM/event.currentTarget"
+        <a href="/ru/docs/Web/API/Event/currentTarget"
           >event.currentTarget</a
         >
       </td>
       <td>
         <a
-          class="external"
           href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface"
           >DOM Event Interface</a
         >
       </td>
       <td>
         <a
-          class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"
           ><code>EventTarget</code></a
         >, чьи
         <a
-          class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"
           ><code>EventListeners</code></a
         >
         в настоящее время обрабатываются. По мере того, как происходит захват и
@@ -68,14 +64,13 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
     </tr>
     <tr>
       <td>
-        <a href="/en/DOM/event.relatedTarget" title="en/DOM/event.relatedTarget"
+        <a href="/ru/docs/Web/API/MouseEvent/relatedTarget"
           >event.relatedTarget</a
         >
       </td>
       <td>
         <a
-          class="external"
-          href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent"
+          href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent"
           >DOM MouseEvent Interface</a
         >
       </td>
@@ -84,13 +79,12 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
     <tr>
       <td>
         <a
-          href="/en/DOM/event.explicitOriginalTarget"
-          title="en/DOM/event.explicitOriginalTarget"
+          href="/ru/docs/Web/API/Event/explicitOriginalTarget"
           >event.explicitOriginalTarget</a
         >
       </td>
       <td>
-        {{ Source("/dom/public/idl/events/nsIDOMNSEvent.idl", "nsIDOMNSEvent.idl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} Если по какой-либо причине событие
@@ -108,20 +102,18 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
     <tr>
       <td>
         <a
-          href="/en/DOM/event.originalTarget"
-          title="en/DOM/event.originalTarget"
+          href="/ru/docs/Web/API/Event/originalTarget"
           >event.originalTarget</a
         >
       </td>
       <td>
-        {{ Source("/dom/public/idl/events/nsIDOMNSEvent.idl", "nsIDOMNSEvent.idl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} Первоначальная цель события перед
         любым перенацеливанием. Подробнее см.
         <a
           href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
-          title="en/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting"
           >Анонимный контент#Event_Flow_and_Targeting</a
         >.
       </td>
@@ -131,11 +123,11 @@ translation_of: Web/API/Event/Comparison_of_Event_Targets
 
 ### Использование `explicitOriginalTarget` и `originalTarget`
 
-TODO: Only available in a Mozilla-based browser? TODO: Only suitable for extension-developers?
+> **Note:** These properties are only available in Mozilla-based browsers.
 
 ### Примеры
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -207,7 +199,7 @@ TODO: Only available in a Mozilla-based browser? TODO: Only suitable for extensi
 
 Свойство `relatedTarget` для события `mouseover` содержит узел, над которым ранее была указана мышь. Для события `mouseout` он удерживает узел, к которому движется мышь.
 
-| Тип события | [event.target](/en/DOM/event.target) | [event.relatedTarget](/en/DOM/event.relatedTarget) |
+| Тип события | [event.target](/ru/docs/Web/API/Event/target)  | [event.relatedTarget](/ru/docs/Web/API/MouseEvent/relatedTarget) |
 | ----------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `mouseover` | EventTarget, в который входим указателем                   | EventTarget, из которого выходим указателем                                     |
 | `mouseout`  | EventTarget, из которого выходим указателем                | EventTarget, в который входим указателем                                        |
@@ -216,7 +208,7 @@ TODO: Также требуется описание событий `dragenter` 
 
 #### Пример
 
-```
+```xml
 <hbox id="outer">
   <hbox id="inner"
         onmouseover="dump('mouseover ' + event.relatedTarget.id + ' > ' + event.target.id + '\n');"

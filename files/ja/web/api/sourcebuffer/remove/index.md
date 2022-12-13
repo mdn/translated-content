@@ -37,9 +37,7 @@ sourceBuffer.remove(start, end);
 
 ## 仕様
 
-| 仕様                                                                                                                                                 | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-remove(double,unrestricted_double)', 'remove()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

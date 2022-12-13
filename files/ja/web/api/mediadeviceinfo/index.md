@@ -66,9 +66,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 
 ## 仕様
 
-| 仕様                                                                                                     | 状況                                 | コメント |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Media Capture', '#idl-def-MediaDeviceInfo', 'MediaDevicesInfo')}} | {{Spec2('Media Capture')}} | 初版     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

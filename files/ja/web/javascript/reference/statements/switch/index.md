@@ -258,9 +258,7 @@ switch (action) {
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-switch-statement', 'switch statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -88,11 +88,33 @@ All objects in JavaScript are descended from `Object`; all objects inherit metho
 
 ### 屬性
 
-{{page('/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', '屬性') }}
+- {{jsxref("Object.prototype.constructor")}}
+  - : Specifies the function that creates an object's prototype.
+- [`Object.prototype.__proto__`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) {{Deprecated_Inline}}
+  - : Points to the object which was used as prototype when the object was instantiated.
 
 ### 方法
 
-{{page('/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', '方法') }}
+- [`Object.prototype.__defineGetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+  - : Associates a function with a property that, when accessed, executes that function and returns its return value.
+- [`Object.prototype.__defineSetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
+  - : Associates a function with a property that, when set, executes that function which modifies the property.
+- [`Object.prototype.__lookupGetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : Returns the function bound as a getter to the specified property.
+- [`Object.prototype.__lookupSetter__()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : Returns the function bound as a setter to the specified property.
+- {{jsxref("Object.prototype.hasOwnProperty()")}}
+  - : Returns a boolean indicating whether an object contains the specified property as a direct property of that object and not inherited through the prototype chain.
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+  - : Returns a boolean indicating whether the object this method is called upon is in the prototype chain of the specified object.
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+  - : Returns a boolean indicating whether the specified property is the object's [enumerable own](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) property.
+- {{jsxref("Object.prototype.toLocaleString()")}}
+  - : Calls {{jsxref("Object/toString", "toString()")}}.
+- {{jsxref("Object.prototype.toString()")}}
+  - : Returns a string representation of the object.
+- {{jsxref("Object.prototype.valueOf()")}}
+  - : Returns the primitive value of the specified object.
 
 ## 範例
 

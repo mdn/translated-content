@@ -75,7 +75,7 @@ HTML 표 스타일링은 세계에서 가장 매력적인 일이 아니지만, �
 
 {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}} 등의 기능 덕분에 표가 잘 표시되고 쉽게 스타일링되며 액세스할 수 있습니다. 불행히도 화면에 렌더링할 때는 좋지 않습니다 ([punk-bands-unstyled.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 에서 라이브 참조):
 
-![](https://mdn.mozillademos.org/files/13064/table-unstyled.png)
+![](table-unstyled.png)
 
 기본 브라우저 스타일만 사용하면, 비좁고 읽기 어려우며 지루해 보입니다. 이 문제를 해결하려면 CSS 를 사용해야 합니다.
 
@@ -132,13 +132,13 @@ th, td {
 
   이를 {{cssxref("width")}} 와 100% 결합했습니다. 즉, 표에 넣은 container 를 표에 채우고 반응성이 뛰어납니다 (아직 더 많은 작업이 필요하지만 좁은 화면 너비에서 잘 보임).
 
-- `collapse` 의 {{cssxref("border-collapse")}} 값은 모든 표 스타일 작업에 대한 표준 모범 사례입니다. 기본적으로, 표 요소에 테두리를 설정하면, 아래 이미지와 같이 테두리 사이에 간격이 있습니다: ![](https://mdn.mozillademos.org/files/13068/no-border-collapse.png)이것은 매우 멋지게 보이지 않습니다 (원하는 모양일 수 있는지, 누가 알겠습니까?) `border-collapse: collapse;` 로 설정하면 테두리가 하나로 축소되어 훨씬 좋아 보입니다: ![](https://mdn.mozillademos.org/files/13066/border-collapse.png)
+- `collapse` 의 {{cssxref("border-collapse")}} 값은 모든 표 스타일 작업에 대한 표준 모범 사례입니다. 기본적으로, 표 요소에 테두리를 설정하면, 아래 이미지와 같이 테두리 사이에 간격이 있습니다: ![](no-border-collapse.png)이것은 매우 멋지게 보이지 않습니다 (원하는 모양일 수 있는지, 누가 알겠습니까?) `border-collapse: collapse;` 로 설정하면 테두리가 하나로 축소되어 훨씬 좋아 보입니다: ![](border-collapse.png)
 - 우리는 전체 표 주위에 {{cssxref("border")}} 를 넣었습니다. 나중에 표 머리글과 바닥글에 테두리를 씌울 것입니다 — 표 바깥쪽에 테두리가 없고 틈새가 생기면 정말 이상하게 보입니다.
 - {{htmlelement("th")}} 및 {{htmlelement("td")}} 요소에 {{cssxref("padding")}} 을 설정했습니다 — 이렇게 하면 데이터 항목에 숨을 공간이 생깁니다. 표를 훨씬 읽기 쉽게 보이게합니다.
 
 이 시점에서, 우리 표는 이미 훨씬 좋아보입니다:
 
-![](https://mdn.mozillademos.org/files/13070/table-with-spacing.png)
+![](table-with-spacing.png)
 
 ### 간단한 typography
 
@@ -191,7 +191,7 @@ tfoot th {
 
 결과는 조금 깔끔해 보입니다:
 
-![](https://mdn.mozillademos.org/files/13072/table-with-typography.png)
+![](table-with-typography.png)
 
 ### 그래픽 과 색상
 
@@ -246,7 +246,7 @@ table {
 
 이러한 색상은 다음과 같은 모양을 만듭니다:
 
-![](https://mdn.mozillademos.org/files/13074/table-with-color.png)
+![](table-with-color.png)
 
 자, 이것은 여러분의 취향에 맞지 않을 수도 있습니다. 하지만 , 우리가 하려고하는 요점은 표가 지루하고 학문적일 필요는 없다는 것입니다.
 
@@ -268,7 +268,7 @@ caption {
 
 `bottom` 값을 가진 {{cssxref("caption-side")}} 속성을 제외하고는 여기서 주목할만한 것이 없습니다. 이로 인해 caption 이 표의 맨 아래에 배치되고 다른 선언과 함께 최종 모양을 얻을 수 있습니다 ([punk-bands-complete.html](http://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html) 참조):
 
-![](https://mdn.mozillademos.org/files/13076/table-with-caption.png)
+![](table-with-caption.png)
 
 ## 적극적인 학습: 나만의 표 스타일
 

@@ -1,16 +1,6 @@
 ---
 title: JavaScript
 slug: Learn/JavaScript
-tags:
-  - JavaScript
-  - Novato
-  - Principiante
-  - Tema
-  - aterrizando
-  - l10n:priority
-  - modulo
-  - princiante JavaScript
-translation_of: Learn/JavaScript
 ---
 
 {{LearnSidebar}}

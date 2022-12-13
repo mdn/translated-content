@@ -1,7 +1,6 @@
 ---
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/bind
 ---
 
@@ -207,7 +206,7 @@ if (!Function.prototype.bind) {
 Algunas de las muchas diferencias (bien podría haber otras, en tanto la siguiente lista no intenta ser exhaustiva) entre este algoritmo y el algoritmo de la especificación son:
 
 - La implementación parcial se basa en {{jsxref("Array.prototype.slice()")}}, {{jsxref("Array.prototype.concat()")}}, {{jsxref("Function.prototype.call()")}} y {{jsxref("Function.prototype.apply()")}}, métodos incorporados para tener sus valores originales.
-- La implementación parcial crea funciones que no tienen "poison pills" inmutables {{jsxref("Function.caller", "caller")}} y las propiedades de los `argumentos` que lanzan una {{jsxref("Global_Objects/TypeError", "TypeError")}} sobre get, set, o deletion. (Esto podría ser añadido si la implementación soportara {{jsxref("Object.defineProperty")}}, o parcialmente implementada [sin el comportamiento throw-on-delete] si la implementación soportara las extensiones {{jsxref("Object.defineGetter", "__defineGetter__")}} y {{jsxref("Object.defineSetter", "__defineSetter__")}} ).
+- La implementación parcial crea funciones que no tienen "poison pills" inmutables {{jsxref("Function.caller", "caller")}} y las propiedades de los `argumentos` que lanzan una {{jsxref("Global_Objects/TypeError", "TypeError")}} sobre get, set, o deletion. (Esto podría ser añadido si la implementación soportara {{jsxref("Object.defineProperty")}}, o parcialmente implementada [sin el comportamiento throw-on-delete] si la implementación soportara las extensiones [`Object.prototype.__defineGetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) y [`Object.prototype.__defineSetter__()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) ).
 - La implementación parcial crea funciones que tienen una propiedad `prototype`. (Las funciones ligadas no tienen ninguna).
 - La implementación parcial crea funciones ligadas cuya propiedad {{jsxref("Function.length", "length")}} no coincide con la indicada por ECMA-262: ésta crea funciones con longitud 0, mientras que la implementación completa, dependiendo de la longitud de la función objetivo y del número de argumentos pre-especificados, podría regresar una longitud mayor a zero.
 

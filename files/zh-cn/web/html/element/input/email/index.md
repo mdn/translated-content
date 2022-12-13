@@ -166,7 +166,7 @@ Taking it a step farther, you can provide a list of default options from which t
 
 With the {{HTMLElement("datalist")}} element and its {{HTMLElement("option")}}s in place, the browser will offer the specified values as potential values for the email address; this is typically presented as a popup or drop-down menu containing the suggestions. While the specific user experience may vary from one browser to another, typically clicking in the edit box presents a drop-down of the suggested email addresses. Then, as the user types, the list is filtered to show only matching values. Each typed character narrows down the list until the user makes a selection or types a custom value.
 
-![Animation: Using keyboard entry to filter the list of suggested email addresses](https://mdn.mozillademos.org/files/14831/html-input-email1.gif)
+![Animation: Using keyboard entry to filter the list of suggested email addresses](html-input-email1.gif)
 
 ## Validation
 

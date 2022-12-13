@@ -1,9 +1,7 @@
 ---
 title: '<a>: El elemento ancla'
 slug: Web/HTML/Element/a
-translation_of: Web/HTML/Element/a
 original_slug: Web/HTML/Elemento/a
-browser-compat: html.elements.a
 ---
 
 {{HTMLSidebar}}
@@ -174,7 +172,7 @@ Este ejemplo utiliza una imagen que enlaza a la página de inicio de MDN. La pá
 
 ```html
 <a href="https://developer.mozilla.org/en-US/" target="_blank">
-  <img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png"
+  <img src="mdn_logo.png"
        alt="MDN logo" />
 </a>
 ```

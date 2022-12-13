@@ -12,7 +12,7 @@ Un ejemplo de solicitud de origen cruzado: el código JavaScript frontend de una
 
 Por razones de seguridad, los exploradores restringen las solicitudes HTTP de origen cruzado iniciadas dentro de un script. Por ejemplo, [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) y la API [Fetch](/es/docs/Web/API/Fetch_API) siguen la [política de mismo-origen](/es/docs/Web/Security/Same-origin_policy). Ésto significa que una aplicación que utilice esas APIs [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) sólo puede hacer solicitudes HTTP a su propio dominio, a menos que se utilicen cabeceras CORS.
 
-![](https://mdn.mozillademos.org/files/14295/CORS_principle.png)
+![](cors_principle.png)
 
 El [W3C](http://www.w3.org/) [Grupo de Trabajo de Aplicaciones Web](http://www.w3.org/2008/webapps/) recomienda el nuevo mecanismo de [Intercambio de Recursos de Origen Cruzado](http://www.w3.org/TR/cors/) (CORS, por sus siglas en inglés). CORS da controles de acceso a dominios cruzados para servidores web y transferencia segura de datos en dominios cruzados entre navegadores y servidores Web. Los exploradores modernos utilizan CORS en un **contenedor API** (como [XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest) o [Fetch](/es/docs/Web/API/Fetch_API)) para ayudar a mitigar los riesgos de solicitudes HTTP de origen cruzado.
 
@@ -29,7 +29,7 @@ Este [estándar de intercambio de origen cruzado](http://www.w3.org/TR/cors/) es
 - Invocaciones de las APIs [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) o [Fetch](/es/docs/Web/API/Fetch_API) en una manera de sitio cruzado, como se discutió arriba.
 - Fuentes Web (para usos de fuente en dominios cruzados `@font-face` dentro de CSS), [para que los servidores puedan mostrar fuentes TrueType que sólo puedan ser cargadas por sitios cruzados y usadas por sitios web que lo tengan permitido.](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - Texturas WebGL.
-- Imágenes dibujadas en patrones usando [`drawImage`](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage).
+- Imágenes dibujadas en patrones usando [`drawImage`](/es/docs/Web/API/CanvasRenderingContext2D/drawImage).
 - Hojas de estilo (para acceso [CSSOM](/es/docs/Web/CSS/CSSOM_View)).
 - Scripts (para excepciones inmutadas).
 

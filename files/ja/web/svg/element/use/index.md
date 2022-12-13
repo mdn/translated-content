@@ -85,10 +85,7 @@ That's why the circles have different x positions, but the same stroke value.
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                     | 備考     |
-| ------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('SVG2', 'struct.html#UseElement', '&lt;use&gt;')}}     | {{Spec2('SVG2')}} |          |
-| {{SpecName('SVG1.1', 'struct.html#UseElement', '&lt;use&gt;')}} | {{Spec2('SVG1.1')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

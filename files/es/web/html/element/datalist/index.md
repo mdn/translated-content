@@ -1,10 +1,6 @@
 ---
 title: datalist
 slug: Web/HTML/Element/datalist
-tags:
-  - HTML5
-  - datalist
-translation_of: Web/HTML/Element/datalist
 original_slug: Web/HTML/Elemento/datalist
 ---
 

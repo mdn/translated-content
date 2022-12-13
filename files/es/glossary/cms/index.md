@@ -1,11 +1,6 @@
 ---
 title: Sistema de gestión de contenidos
 slug: Glossary/CMS
-tags:
-  - CMS
-  - Glosario
-  - Sistema de gestión de contenidos
-translation_of: Glossary/CMS
 original_slug: Glossary/Sistema_gestion_contenidos
 ---
 

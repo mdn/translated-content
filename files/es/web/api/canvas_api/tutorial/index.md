@@ -4,9 +4,7 @@ slug: Web/API/Canvas_API/Tutorial
 original_slug: Web/Guide/HTML/Canvas_tutorial
 ---
 
-[![](https://mdn.mozillademos.org/files/257/Canvas_tut_examples.jpg)](/es/docs/HTML/Canvas)
-
-[**`<canvas>`**](/es/docs/HTML/Canvas) es un elemento [HTML](/es/docs/HTML) el cual puede ser usado para dibujar gráficos usando scripts (normalmente [JavaScript](/es/docs/JavaScript)). Este puede, por ejemplo, ser usado para dibujar gráficos, realizar composición de fotos o simples (y [no tan simples](/es/docs/HTML/Canvas/A_Basic_RayCaster)) animaciones. Las imágenes a la derecha muestran algunos ejemplos de implementaciones `<canvas>` las cuales se verán en un futuro en este tutorial.
+[**`<canvas>`**](/es/docs/HTML/Canvas) es un elemento [HTML](/es/docs/HTML) el cual puede ser usado para dibujar gráficos usando scripts (normalmente [JavaScript](/es/docs/JavaScript)). Este puede, por ejemplo, ser usado para dibujar gráficos, realizar composición de fotos o simples (y [no tan simples](/es/docs/HTML/Canvas/A_Basic_RayCaster)) animaciones.
 
 `<canvas>` fue introducido primero por Apple para el Mac OS X Dashboard y después implementado en Safari y Google Chrome. Navegadores basados en [Gecko](/es/docs/Gecko) 1.8, tal como Firefox 1.5, que también soportan este elemento. El `<canvas>` es un elemento parte de las especificaciones de la [WhatWG Web applications 1.0](http://www.whatwg.org/specs/web-apps/current-work/) mejor conocida como HTML5.
 

@@ -7,7 +7,7 @@ slug: Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 
 [WebGL](/ja/docs/Web/API/WebGL_API) により、ウェブコンテンツが [OpenGL ES](https://www.khronos.org/opengles/) 2.0 ベースの API を用いて、対応しているブラウザーではプラグインを使わずに、二次元および三次元の描画を HTML の [`canvas`](/ja/docs/Web/API/Canvas_API) において行うことができます。
 
-WebGL のプログラムは JavaScript で記述する制御コードと、コンピューターの Graphics Processing Unit (GPU) で実行するシェーダーコード (GLSL)  で構成されます。 WebGL 要素は他の HTML 要素と混ぜられ、他のページ部品やページの背景と合成されます。
+WebGL のプログラムは JavaScript で記述する制御コードと、コンピューターの Graphics Processing Unit (GPU) で実行するシェーダーコード (GLSL) で構成されます。 WebGL 要素は他の HTML 要素と混ぜられ、他のページ部品やページの背景と合成されます。
 
 この記事では、 WebGL の基礎を紹介します。ここでは、三次元グラフィックスに関する数学的な知識を理解していることを前提とします。よって、 OpenGL そのものの説明は行いません。
 

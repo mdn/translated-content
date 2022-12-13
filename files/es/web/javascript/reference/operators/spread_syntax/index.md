@@ -1,11 +1,6 @@
 ---
 title: Sintaxis Spread
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript6
-  - Iteradores
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 original_slug: Web/JavaScript/Referencia/Operadores/Sintaxis_Spread
 ---
 

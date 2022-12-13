@@ -91,10 +91,7 @@ JavaScript によってトリガーされたときにページコンテンツを
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                                             |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#main","ARIA Main Role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_main","Main Landmark Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

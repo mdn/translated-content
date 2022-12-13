@@ -354,7 +354,7 @@ The DEBUG command creates useful logging, resulting in an output like that shown
 
 Open a browser and navigate to <http://127.0.0.1:3000/> to see the default Express welcome page.
 
-![Express - Generated App Default Screen](https://mdn.mozillademos.org/files/14331/express_default_screen.png)
+![Express - Generated App Default Screen](express_default_screen.png)
 
 We'll talk more about the generated app when we get to the article on generating a skeleton application.
 

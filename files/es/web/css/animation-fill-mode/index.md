@@ -45,7 +45,7 @@ animation-fill-mode: unset;
     | `alternate`           | even                        | `0%` or `from`              |
     | `alternate`           | odd                         | `100%` or `to`              |
     | `alternate-reverse`   | even                        | `100%` or `to`              |
-    |  `alternate-reverse`  | odd                         | `0%` or `from`              |
+    | `alternate-reverse`  | odd                         | `0%` or `from`              |
 - `backwards`
   - : La animación aplicará los valores definidos en el primer [keyframe](/es/docs/CSS/@keyframes) tan pronto como se aplique al objeto, y los retendrá durante el tiempo de {{ cssxref("animation-delay") }}. El primer keyframe dependerá del valor de {{ cssxref("animation-direction") }}:
     | `animation-direction`           | primer keyframe |

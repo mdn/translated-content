@@ -1,7 +1,6 @@
 ---
 title: Math.sin()
 slug: Web/JavaScript/Reference/Global_Objects/Math/sin
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/sin
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/seno
 ---
 

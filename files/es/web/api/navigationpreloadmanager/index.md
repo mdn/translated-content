@@ -19,7 +19,7 @@ Se espera el resultado de una solicitud de recuperación de precarga usando la p
 - {{domxref("NavigationPreloadManager.setHeaderValue()")}}
   - : Establece el valor del encabezado HTTP {{HTTPHeader("Service-Worker-Navigation-Preload")}} que se envía en las solicitudes de precarga y devuelve una {{jsxref("Promise")}} vacía.
 - {{domxref("NavigationPreloadManager.getState()")}}
-  - : Devuelve una {{jsxref("Promise")}} que se resuelve en un objeto con propiedades que indican si la precarga está habilitada y qué valor se enviará en la Cabecera HTTP  {{HTTPHeader("Service-Worker-Navigation-Preload") }} en solicitudes de precarga.
+  - : Devuelve una {{jsxref("Promise")}} que se resuelve en un objeto con propiedades que indican si la precarga está habilitada y qué valor se enviará en la Cabecera HTTP {{HTTPHeader("Service-Worker-Navigation-Preload") }} en solicitudes de precarga.
 
 ## Descripción
 

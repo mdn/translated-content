@@ -8,7 +8,7 @@ tags:
 translation_of: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 앞 단원의 예제에서 회전하는 3차원 정육면체를 만들어봤습니다. 이번에는 정육면체의 각 면에 단색으로 색을 칠하는 대신에 텍스쳐를 입혀 보겠습니다.
 

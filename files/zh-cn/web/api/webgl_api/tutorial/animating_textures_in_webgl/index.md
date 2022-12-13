@@ -3,7 +3,7 @@ title: 动画纹理
 slug: Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial") }} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
 
 在本演示中，我们以上一个示例为基础，将静态纹理替换为正在播放的 mp4 视频文件的帧。实际上，这很容易做到，而且观看起来很有趣，所以让我们开始吧。您可以使用类似的代码来使用任何类型的数据（例如 {{ HTMLElement("canvas") }}) 作为纹理的源。
 

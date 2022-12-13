@@ -1,7 +1,6 @@
 ---
 title: Object.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/toLocaleString
 ---
 
@@ -39,7 +38,7 @@ Se proporciona esta función para que los objetos dispongan de un método `toLoc
 
 ### Redefinición de toLocaleString() en Array
 
-En los objetos [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) se puede utilizar [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString) para imprimir los valores del _array_ como un string, con indicadores opcionales de configuración regional (como símbolos de moneda) aplicados.
+En los objetos [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) se puede utilizar [`toLocaleString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString) para imprimir los valores del _array_ como un string, con indicadores opcionales de configuración regional (como símbolos de moneda) aplicados.
 
 Por ejemplo:
 
@@ -52,7 +51,7 @@ let preciosEnEuros = unArray.toLocaleString('fr', { style: 'currency', currency:
 
 ### Redefinición de toLocaleString() para Date
 
-En los objetos [`Date`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) se usa [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) para imprimir fechas en un formato adecuado a la configuración regional.
+En los objetos [`Date`](/es/docs/Web/JavaScript/Reference/Global_Objects/Date) se usa [`toLocaleString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString) para imprimir fechas en un formato adecuado a la configuración regional.
 
 Por ejemplo:
 
@@ -69,7 +68,7 @@ var fechaFrances= unaFecha.toLocaleString('fr');
 
 ### Redefinición de toLocaleString() para Number
 
-En los objetos [`Number`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) se usa [`toLocaleString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) para imprimir números de forma adecuada a la configuración regional, p. ej. para usar los separadores de miles correctos.
+En los objetos [`Number`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number) se usa [`toLocaleString()`](/es/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) para imprimir números de forma adecuada a la configuración regional, p. ej. para usar los separadores de miles correctos.
 
 Por ejemplo:
 
@@ -86,9 +85,7 @@ let numeroFrances = unNumero.toLocaleString('fr');
 
 ## Especificaciones
 
-| Especificación                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

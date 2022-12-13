@@ -1,9 +1,6 @@
 ---
 title: Window.applicationCache
 slug: Web/API/Window/applicationCache
-translation_of: Web/API/Window/applicationCache
-page-type: web-api-instance-property
-browser-compat: api.SharedWorkerGlobalScope.applicationCache
 ---
 
 {{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}{{securecontext_header}}

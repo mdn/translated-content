@@ -1,7 +1,6 @@
 ---
 title: Firefox 61 for developers
 slug: Mozilla/Firefox/Releases/61
-translation_of: Mozilla/Firefox/Releases/61
 ---
 
 {{FirefoxSidebar}}

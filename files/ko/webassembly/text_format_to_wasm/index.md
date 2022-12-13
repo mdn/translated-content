@@ -52,7 +52,7 @@ wat2wasm simple.wat -v
 
 이렇게하면 다음과 같은 방법으로 터미널에 출력을 줄 수 있습니다.
 
-![several strings of binary with textual descriptions beside them. For example: 0000008: 01 ; section code ](https://mdn.mozillademos.org/files/14653/assembly-output.png)
+![several strings of binary with textual descriptions beside them. For example: 0000008: 01 ; section code ](assembly-output.png)
 
 ## See also
 

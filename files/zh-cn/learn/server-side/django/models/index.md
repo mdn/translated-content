@@ -44,7 +44,7 @@ Django 网络应用通过作为模型被参照的 Python 对象访问并管理�
 
 这个图表也显示了模型之间的关系，including their _multiplicities_. 这些在图表里每个模型边上的数字（最大和最小）显示了他们的关系。例如，链接 Book 和 Genre 两个盒子的线表示它们是关联的。靠近 Book 模型的数字显示一本书必须有一个或多个 Genre（要多少有多少），然而另一端靠近 Genre 的数字显示了它可以有零或无数本相关的书籍。
 
-![LocalLibrary Model UML - v3](https://mdn.mozillademos.org/files/14021/local_library_model_uml_v0_1.png)
+![LocalLibrary Model UML - v3](local_library_model_uml_v0_1.png)
 
 > **备注：** 下一部分提供了基本的关于模型如何被定义和使用的解释。边阅读，边考虑以下我们是如何根据以上的图标构建数据库内的模型的。
 

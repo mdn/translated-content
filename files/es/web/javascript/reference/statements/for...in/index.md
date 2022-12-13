@@ -1,11 +1,6 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - Característica del lenguaje
-  - Declaración
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/for...in
 original_slug: Web/JavaScript/Referencia/Sentencias/for...in
 ---
 
@@ -105,9 +100,7 @@ for (const prop in obj) {
 
 ## Especificaciones
 
-| Especificación                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'declaración for...in')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

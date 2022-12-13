@@ -1,14 +1,6 @@
 ---
 title: <option>
 slug: Web/HTML/Element/option
-tags:
-  - Elemento
-  - Formulários HTML
-  - Referencia
-  - Web
-  - formulários
-  - htmls
-translation_of: Web/HTML/Element/option
 original_slug: Web/HTML/Elemento/option
 ---
 

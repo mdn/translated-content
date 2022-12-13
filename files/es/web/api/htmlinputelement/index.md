@@ -164,11 +164,11 @@ Propiedades aun no categorizadas
   - : Focus on the input element; keystrokes will subsequently go to this element.
 - `blur()`
   - : Removes focus from input; keystrokes will subsequently go nowhere.
-- [`select()`](/en-US/docs/Web/API/HTMLInputElement/select)
+- [`select()`](/es/docs/Web/API/HTMLInputElement/select)
   - : Selects the input text in the element, and focuses it so the user can subsequently replace the whole entry.
-- [`click()`](/en-US/docs/Web/API/HTMLInputElement/click)
+- [`click()`](/es/docs/Web/API/HTMLInputElement/click)
   - : Simulates a click on the element.
-- [`setSelectionRange()`](/en-US/docs/Web/API/HTMLInputElement/setSelectionRange)
+- [`setSelectionRange()`](/es/docs/Web/API/HTMLInputElement/setSelectionRange)
   - : Selects a range of text in the element (but does not focus it). The optional selectionDirection parameter may be "forward" or "backward" to establish the direction in which selection was set, or "none" if the direction is unknown or not relevant. The default is "none". Specifying a selectionDirection parameter sets the value of the selectionDirection property.
 - `setRangeText()`
 
@@ -211,35 +211,35 @@ Propiedades aun no categorizadas
 ### Métodos no estandarizados
 
 - {{domxref("HTMLInputElement.mozSetFileArray()")}}{{non-standard_inline}}
-  - : Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to `mozSetFileNameArray()` which can be used in frame scripts: a chrome script can [open files as File objects](/es/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) and send them via [message manager](/en-US/Firefox/Multiprocess_Firefox/The_message_manager).
+  - : Sets the files selected on the input to the given array of {{domxref("File")}} objects. This is an alternative to `mozSetFileNameArray()` which can be used in frame scripts: a chrome script can [open files as File objects](/es/docs/Extensions/Using_the_DOM_File_API_in_chrome_code) and send them via [message manager](/es/Firefox/Multiprocess_Firefox/The_message_manager).
 - {{domxref("HTMLInputElement.mozGetFileNameArray()")}}{{non-standard_inline}}
   - : Returns an array of all the file names from the input.
 - {{domxref("HTMLInputElement.mozSetFileNameArray()")}}{{non-standard_inline}}
-  - : Sets the filenames for the files selected on the input. Not for use in [frame scripts](/en-US/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts), because it accesses the file system.
+  - : Sets the filenames for the files selected on the input. Not for use in [frame scripts](/es/Firefox/Multiprocess_Firefox/Limitations_of_frame_scripts), because it accesses the file system.
 
 ## Eventos
 
-Responde a este elemento usando [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener) o asignando una respuesta a la propiedad `oneventname` de esta interface:
+Responde a este elemento usando [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) o asignando una respuesta a la propiedad `oneventname` de esta interface:
 
 - [`input`](/es/docs/Web/API/HTMLElement/input_event)
 
   - : Se activa cuando el `value` de un elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, o {{HTMLElement("textarea")}} ha sido modificado.
 
-    **Nota:** Esto es actualmente gatillado en la interface {{domxref("HTMLElement")}} y también aplica a los elementos [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable), pero lo hemos listado acá porque es más utilizado con los elementos de entrada de formularios.
+    **Nota:** Esto es actualmente gatillado en la interface {{domxref("HTMLElement")}} y también aplica a los elementos [`contenteditable`](/es/docs/Web/HTML/Global_attributes/contenteditable), pero lo hemos listado acá porque es más utilizado con los elementos de entrada de formularios.
 
-    También disponible por la propiedad manipuladora [`oninput`](/en-US/docs/Web/API/GlobalEventHandlers/oninput).
+    También disponible por la propiedad manipuladora [`oninput`](/es/docs/Web/API/GlobalEventHandlers/oninput).
 
-- [`invalid`](/en-US/docs/Web/API/HTMLElement/invalid_event)
+- [`invalid`](/es/docs/Web/API/HTMLElement/invalid_event)
 
   - : Fired when an element does not satisfy its constraints during constraint validation.
 
-    Also available via the [`oninvalid`](/en-US/docs/Web/API/GlobalEventHandlers/oninvalid) event handler property.
+    Also available via the [`oninvalid`](/es/docs/Web/API/GlobalEventHandlers/oninvalid) event handler property.
 
-- [`search`](/en-US/docs/Web/API/HTMLInputElement/search_event)
+- [`search`](/es/docs/Web/API/HTMLInputElement/search_event)
 
   - : Fired when a search is initiated on an {{HTMLElement("input")}} of `type="search"`.
 
-    Also available via the [`onsearch`](/en-US/docs/Web/API/GlobalEventHandlers/onsearch) event handler property.
+    Also available via the [`onsearch`](/es/docs/Web/API/GlobalEventHandlers/onsearch) event handler property.
 
 ## Especificaciones
 

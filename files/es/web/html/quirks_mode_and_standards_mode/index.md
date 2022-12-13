@@ -1,14 +1,6 @@
 ---
 title: Modo Quirks y Modo Estándar
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-tags:
-  - Desarrollo web
-  - Estándar Web
-  - Gecko
-  - Guía
-  - HTML
-  - XHTML
-translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
 
 En los viejos días de la web, las páginas eran comúnmente escritas de dos formas: Una para navegador Netscape y otra para Microsoft Internet Explorer. Cuando los estándares de la web fueron creador por W3C, los navegadores no sólo empezaron a utilizarlos, tan pronto lo hicieron romperían los más existentes sitios en la Web. Sin embargo los navegadores introdujeron dos modos para tratar los nuevos estándares que cumplan que los sitios diferentemente de los viejos legados de sitios.
@@ -50,7 +42,3 @@ Si sirves contenido XHTML usando el MIME `text/html`, los navegadores lo leeran 
 En Firefox, selecciona _Ver Información de Página_ en el menú contextual, y selecciona la opción _Modo de Renderizado_ (Render Mode).
 
 En Internet Explorer, pulsa _F12_, y buscar _Modo de Documento_ (Document Mode)
-
-## ¿Cuáles son las diferencias entre los modos?
-
-Lee la [lista de quirks](/es/docs/Mozilla_Quirks_Mode_Behavior) y [modo casi estándar](/es/docs/Gecko's_"Almost_Standards"_Mode) para ver las diferencias entre los modos.

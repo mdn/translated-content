@@ -812,9 +812,7 @@ Sur les <i.foreignphrase><lang en>playground</lang></i>, ici à Montpellier
 
 ## 仕様
 
-| 仕様                         | 状態                     | コメント |
-| ---------------------------- | ------------------------ | -------- |
-| {{SpecName("WebVTT")}} | {{Spec2("WebVTT")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,9 +1,6 @@
 ---
 title: Unicode
 slug: Glossary/Unicode
-tags:
-  - Infraestructura
-translation_of: Glossary/Unicode
 ---
 
 Unicode es un {{Glossary("Character set", "conjunto de caracteres")}} estándar que numera y define {{Glossary("Character", "caracteres")}} de diferentes idiomas, sistemas de escritura y símbolos. Al asignar un número a cada caracter, los programadores pueden crear {{Glossary("Character encoding", "codificaciones de caracteres")}}, para permitir que las computadoras almacenen, procesen y transmitan cualquier combinación de idiomas en el mismo archivo o programa.

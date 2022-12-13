@@ -1,11 +1,6 @@
 ---
 title: colgroup
 slug: Web/HTML/Element/colgroup
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/colgroup
 original_slug: Web/HTML/Elemento/colgroup
 ---
 
@@ -16,9 +11,9 @@ original_slug: Web/HTML/Elemento/colgroup
   
     **Crea una caja**: No.
 
-    **Está definido como**: Elemento [para tablas](es/HTML/Elemento/Tipos_de_elementos#para_tablas).
+    **Está definido como**: Elemento [para tablas](/es/HTML/Elemento/Tipos_de_elementos#para_tablas).
 
-    **Puede contener**: Cero o más elementos [col](es/HTML/Elemento/col).
+    **Puede contener**: Cero o más elementos [col](/es/HTML/Elemento/col).
 
 #### Atributos
 

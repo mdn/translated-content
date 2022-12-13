@@ -1,7 +1,6 @@
 ---
 title: <dialog>
 slug: Web/HTML/Element/dialog
-translation_of: Web/HTML/Element/dialog
 original_slug: Web/HTML/Elemento/dialog
 ---
 

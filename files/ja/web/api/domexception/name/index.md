@@ -19,9 +19,7 @@ var domExceptionName = domExceptionInstance.name;
 
 ## 仕様書
 
-| 仕様書                                                                       | 状態                     | 備考 |
-| ---------------------------------------------------------------------------- | ------------------------ | ---- |
-| {{SpecName('WebIDL', '#dom-domexception-name', 'name')}} | {{Spec2('WebIDL')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

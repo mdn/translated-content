@@ -150,10 +150,7 @@ ctx.fillRect(10, 10, 100, 100);
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考     |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#the-canvas-element', '&lt;canvas&gt;')}}             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'semantics-scripting.html#the-canvas-element', '&lt;canvas&gt;')}} | {{Spec2('HTML5 W3C')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

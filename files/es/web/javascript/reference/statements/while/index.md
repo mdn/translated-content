@@ -1,10 +1,6 @@
 ---
 title: while
 slug: Web/JavaScript/Reference/Statements/while
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/while
 original_slug: Web/JavaScript/Referencia/Sentencias/while
 ---
 

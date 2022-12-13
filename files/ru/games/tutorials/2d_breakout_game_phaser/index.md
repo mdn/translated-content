@@ -33,7 +33,7 @@ original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 1. [Инициализация фреймворка](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework)
 2. [Масштабирование](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling)
 3. [Загрузка ресурсов и их вывод](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Load_the_assets_and_print_them_on_screen)
-4. [Движение мяча](ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Move_the_ball)
+4. [Движение мяча](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Move_the_ball)
 5. [Физика](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Physics)
 6. [Отскакивание от стен](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls)
 7. [Управление](/ru/docs/Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Платформа_и_управление)

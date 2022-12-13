@@ -30,9 +30,7 @@ window.navigator.vendor
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#dom-navigator-vendor', 'NavigatorID: vendor')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの対応
 

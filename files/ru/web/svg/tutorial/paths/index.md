@@ -114,7 +114,7 @@ m dx dy
 
 Последний набор координат (x,y) это точка, в которой заканчивается линия. Две другие - контрольные точки. (x1,y1) контрольная точка для начала вашей кривой, а (x2,y2) для конца вашей кривой. Если вы знакомы с вычислительной алгеброй, контрольные точки в описывают наклон вашей линии в каждой точке. Функция Безье создаёт плавную кривую, которая ведёт от наклона, который вы установили в начале вашей линии к наклону на другом конце.
 
-![Cubic Bézier Curves with grid](https://mdn.mozillademos.org/files/10401/Cubic_Bezier_Curves_with_grid.png)
+![Cubic Bézier Curves with grid](cubic_bezier_curves_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +142,7 @@ m dx dy
 
 Команда S задаёт тот же тип кривой, что и был, но если он следует за другой S или C командой, подразумевается, что первая контрольная точка - отражение той, что использовалась перед этим. Если команда S не следует за другой командой S или C, то подразумевается, что текущая позиция курсора используется как первая контрольная точка. Пример синтаксиса показан ниже. В фигуре слева контрольные точки показаны красным, а подразумеваемая контрольная точка - синим.
 
-![ShortCut_Cubic_Bezier_with_grid.png](https://mdn.mozillademos.org/files/10405/ShortCut_Cubic_Bezier_with_grid.png)
+![ShortCut_Cubic_Bezier_with_grid.png](shortcut_cubic_bezier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -156,7 +156,7 @@ m dx dy
  Q x1 y1, x y (or q dx1 dy1, dx dy)
 ```
 
-![Quadratic Bézier with grid](https://mdn.mozillademos.org/files/10403/Quadratic_Bezier_with_grid.png)
+![Quadratic Bézier with grid](quadratic_bezier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -174,7 +174,7 @@ m dx dy
 
 > **Примечание:** Обратите внимание, что это работает только в том случае, если предыдущей командой была команда Q или T. Если это не так, то контрольная точка считается той же, что и предыдущая, и вы нарисуете только линии.
 
-![Shortcut_Quadratic_Bezier_with_grid.png](https://mdn.mozillademos.org/files/10407/Shortcut_Quadratic_Bezier_with_grid.png)
+![Shortcut_Quadratic_Bezier_with_grid.png](shortcut_quadratic_bezier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">

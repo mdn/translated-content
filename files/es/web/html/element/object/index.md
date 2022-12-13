@@ -1,14 +1,6 @@
 ---
 title: <object>
 slug: Web/HTML/Element/object
-tags:
-  - Contenido incrustado
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-  - incrustar
-translation_of: Web/HTML/Element/object
 original_slug: Web/HTML/Elemento/object
 ---
 

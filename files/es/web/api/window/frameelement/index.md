@@ -1,7 +1,6 @@
 ---
 title: Window.frameElement
 slug: Web/API/Window/frameElement
-translation_of: Web/API/Window/frameElement
 ---
 
 {{ ApiRef }}

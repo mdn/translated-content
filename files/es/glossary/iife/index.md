@@ -1,9 +1,6 @@
 ---
 title: 'IIFE: Expresión de función ejecutada inmediatamente'
 slug: Glossary/IIFE
-tags:
-  - Funciones
-translation_of: Glossary/IIFE
 ---
 
 Las expresiones de función ejecutadas inmediatamente (**IIFE** por su sigla en inglés) son funciones que se ejecutan tan pronto como se definen.

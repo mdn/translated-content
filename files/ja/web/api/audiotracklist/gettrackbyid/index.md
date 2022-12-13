@@ -1,6 +1,8 @@
 ---
 title: AudioTrackList.getTrackById()
 slug: Web/API/AudioTrackList/getTrackById
+l10n:
+  sourceCommit: 9ad07c43f42e14278a4040fd554af33699aea632
 ---
 
 {{APIRef("HTML DOM")}}
@@ -9,16 +11,16 @@ slug: Web/API/AudioTrackList/getTrackById
 
 ## 構文
 
-```
-var theTrack = AudioTrackList.getTrackById(id);
+```js-nolint
+getTrackById(id)
 ```
 
-### パラメーター
+### 引数
 
 - `id`
-  - : トラックリスト内で検索するトラックの ID を示す {{domxref("DOMString")}}。
+  - : 文字列で、トラックリスト内で検索するトラックの ID を示します。
 
-### 戻り値
+### 返値
 
 指定された文字列に一致する `id` を持つ `AudioTrackList` 内で見つかった最初のトラックを示す {{domxref("AudioTrack")}} オブジェクト。 一致が見つからない場合、このメソッドは `null` を返します。
 
@@ -36,13 +38,10 @@ function disableCharacter(videoElem, characterName) {
 
 この短い関数は、{{domxref("HTMLMediaElement.audioTracks")}} を使用して動画の音声トラックを含む {{domxref("AudioTrackList")}} を取得し、それから `getTrackById()` を呼び出してキャラクターの名前を指定します。 結果としてトラックの音声は、その {{domxref("AudioTrack.enabled", "enabled")}} フラグを `false` に設定することで無効になります。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                                         | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-audiotracklist-gettrackbyid', 'AudioTrackList.getTrackById()')}}                             | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#dom-audiotracklist-getTrackById', 'AudioTrackList.getTrackById()')}} | {{Spec2('HTML5 W3C')}}     |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.AudioTrackList.getTrackById")}}
+{{Compat}}

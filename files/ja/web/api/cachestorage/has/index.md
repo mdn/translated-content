@@ -46,9 +46,7 @@ caches.has('v1').then(function(hasCache) {
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#cache-storage-has', 'CacheStorage: has')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

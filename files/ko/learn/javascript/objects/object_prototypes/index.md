@@ -68,11 +68,11 @@ var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
 
 Javascript 콘솔에서 "person1."을 치게 되면 브라우저는 아래처럼 해당 객체의 멤버 이름을 자동 완성 팝업으로 보여줄 것입니다:
 
-![](https://mdn.mozillademos.org/files/13853/object-available-members.png)
+![](object-available-members.png)
 
 위에서 `person1`의 프로토타입 객체인 `Person()`에 정의된 멤버들 — `name`, `age`, `gender`, `interests`, `bio`, `greeting`을 볼 수 있습니다. 또한 — `watch`, `valueOf`처럼 `Person()`의 프로토타입 객체인 [`Object`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)에 정의된 다른 멤버들도 보실 수 있습니다. 이는 프로토타입 체인이 동작한다는 증거입니다.
 
-![](https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png)
+![](mdn-graphics-person-person-object-2.png)
 
 그럼 실제로는 `Object`에 정의되어 있는 메소드를 `person1`에서 호출하면 어떻게 될까요?
 아래 처럼 말이죠:

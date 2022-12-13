@@ -10,7 +10,7 @@ translation_of: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transform
 
 ### XSLTProcessor 만들기
 
-시작하기 위해, [XSLTProcessor](ko/XSLTProcessor) 개체 만들기가 필요합니다.
+시작하기 위해, [XSLTProcessor](/ko/XSLTProcessor) 개체 만들기가 필요합니다.
 
 ```
 var processor = new XSLTProcessor();
@@ -67,7 +67,7 @@ var newFragment = processor.transformToFragment(domToBeTransformed, ownerDocumen
 
 ### 재설정
 
-`XSLTProcessor` 개체는 또한 모든 스타일시트와 매개변수를 제거하고 처리기(processor)를 초기 상태로 되돌리는 데 쓸 수 있는 `reset()` 메소드를 구현합니다. 이 메소드는 [Mozilla](ko/Gecko) 1.3과 그 뒤에 구현됩니다.
+`XSLTProcessor` 개체는 또한 모든 스타일시트와 매개변수를 제거하고 처리기(processor)를 초기 상태로 되돌리는 데 쓸 수 있는 `reset()` 메소드를 구현합니다. 이 메소드는 [Mozilla](/ko/Gecko) 1.3과 그 뒤에 구현됩니다.
 
 ### Resources
 

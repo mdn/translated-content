@@ -69,7 +69,7 @@ l10n:
 
 一方、 DOM はこのようになります。
 
-![ドキュメントオブジェクトモデルをツリー構造で表現したもの。トップノードは doctype と HTML  要素です。 HTML の子ノードには、 head と body が記載されます。それぞれの子要素が分岐となる。テキストは、空白も含めてすべて表示されます。](dom-screenshot.png)
+![ドキュメントオブジェクトモデルをツリー構造で表現したもの。トップノードは doctype と HTML 要素です。 HTML の子ノードには、 head と body が記載されます。それぞれの子要素が分岐となる。テキストは、空白も含めてすべて表示されます。](dom-screenshot.png)
 
 > **メモ:** この DOM ツリーの図は Ian Hickson の [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) を使って作成しました。
 

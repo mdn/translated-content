@@ -150,6 +150,6 @@ Estos recursos son creados por empresas innovadoras y desarrolladores web que ha
 
 ### Desarrollo de extensiones
 
-**[Extensiones web](/en-US/Add-ons/WebExtensions)**
+**[Extensiones web](/es/Add-ons/WebExtensions)**
 
-Extensiones Web es un sistema de navegación cruzada para desarrollar complementos del buscador. El sistema es en gran medida compatible con la [API (Interfaz de Programación de Aplicaciones)](https://developer.chrome.com/extensions)respaldada por Google Chrome y Opera. En la mayoría de los casos, las extensiones escritas para estos buscadores pueden funcionar en Firefox o Microsoft Edge con [solo algunos cambios](/en-US/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). La API es compatible también con el [multiprocesador de Firefox](/en-US/Firefox/Multiprocess_Firefox).
+Extensiones Web es un sistema de navegación cruzada para desarrollar complementos del buscador. El sistema es en gran medida compatible con la [API (Interfaz de Programación de Aplicaciones)](https://developer.chrome.com/extensions)respaldada por Google Chrome y Opera. En la mayoría de los casos, las extensiones escritas para estos buscadores pueden funcionar en Firefox o Microsoft Edge con [solo algunos cambios](/es/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension). La API es compatible también con el [multiprocesador de Firefox](/es/Firefox/Multiprocess_Firefox).

@@ -1,14 +1,6 @@
 ---
 title: <details>
 slug: Web/HTML/Element/details
-tags:
-  - Elemento
-  - Elementos HTML interactivos
-  - HTML
-  - HTML5
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/details
 original_slug: Web/HTML/Elemento/details
 ---
 

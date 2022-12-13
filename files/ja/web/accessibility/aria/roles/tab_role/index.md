@@ -183,10 +183,7 @@ function changeTabs(e) {
 
 ## 仕様
 
-| 仕様                                                                             | 状態                                             |
-| -------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#tab","tab")}}                                     | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#tabpanel","tabs")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 優先順位
 

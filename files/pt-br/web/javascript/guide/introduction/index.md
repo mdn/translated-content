@@ -83,7 +83,7 @@ O [console web](/pt-BR/docs/Tools/Web_Console) mostra informações sobre a pág
 
 Para abrir o console (Ctrl+Shift+K), selecione "Web Console" do menu "Web Developer", que está sob o menu "Tools" no Firefox. Ele aparece na parte inferior da janela do navegador. Na parte inferior do console está a linha de comando que você pode usar para colocar o JavaScript, e a saída é exibida no painel acima:
 
-![](https://mdn.mozillademos.org/files/7363/web-console-commandline.png)
+![](web-console-commandline.png)
 
 ### Scratchpad
 
@@ -91,7 +91,7 @@ O Web Console é excelente para executar linhas únicas de JavaScript, mas embor
 
 Para abrir o Scratchpad (Shift+F4), selecione "Scratchpad" do menu "Web Developer", que está sob o menu "Tools/Ferramentas" do Firefox. Ele abre em uma janela separada e é um editor que você pode usar para escrever e executar JavaScript no navegador. Você também pode salvar os scripts para o disco e carregá-los a partir do disco.
 
-![](https://mdn.mozillademos.org/files/7365/scratchpad.png)
+![](scratchpad.png)
 
 ### Hello world
 

@@ -1,19 +1,6 @@
 ---
 title: <input type="text">
 slug: Web/HTML/Element/input/text
-tags:
-  - Entrada de texto
-  - Form input
-  - Formulários HTML
-  - HTML
-  - Input
-  - Input Type
-  - Referencia
-  - Text
-  - Texto
-  - formulários
-  - text input
-translation_of: Web/HTML/Element/input/text
 original_slug: Web/HTML/Elemento/input/text
 ---
 
@@ -415,6 +402,6 @@ Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los ar
 
 - [Formularios HTML](/es/docs/Learn/HTML/Forms)
 - {{HTMLElement("input")}} y la interfaz {{DOMxRef("HTMLInputElement")}} en que se basa.
-- [`<input type="search">`](/en-US/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 - {{HTMLElement("textarea")}}: Campo de entrada de texto multilínea
 - [Compatibilidad de propiedades CSS](/es/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)

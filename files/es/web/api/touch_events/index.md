@@ -1,13 +1,6 @@
 ---
 title: Eventos de toque
 slug: Web/API/Touch_events
-tags:
-  - DOM
-  - Event
-  - Mobile
-  - NeedsMobileBrowserCompatTable
-  - eventos
-translation_of: Web/API/Touch_events
 original_slug: DOM/Touch_events
 ---
 

@@ -73,7 +73,7 @@ list-style-position: unset;
 }
 
 .three {
-  list-style-image: url("https://mdn.mozillademos.org/files/11979/starsolid.gif");
+  list-style-image: url("starsolid.gif");
   list-style-position: inherit;
 }
 ```

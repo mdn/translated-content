@@ -1,11 +1,6 @@
 ---
 title: Constante
 slug: Glossary/Constant
-tags:
-  - CodingScripting
-  - Constante
-  - Glosario
-translation_of: Glossary/Constant
 original_slug: Glossary/Constante
 ---
 

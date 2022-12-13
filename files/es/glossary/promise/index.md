@@ -1,12 +1,6 @@
 ---
 title: Promesa
 slug: Glossary/Promise
-tags:
-  - Asíncrono
-  - Glosario
-  - Promesa
-  - Promesas
-translation_of: Glossary/Promise
 ---
 
 Una **{{jsxref("Promesa")}}** es un {{Glossary("objeto")}} devuelto por una {{Glossary("función")}} que no ha completado su tarea. La promesa representa literalmente una promesa creada por una función a la que le llegará un resultado en un futuro.

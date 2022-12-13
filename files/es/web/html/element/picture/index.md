@@ -1,12 +1,6 @@
 ---
 title: <picture>
 slug: Web/HTML/Element/picture
-tags:
-  - Elemento
-  - Fotografía
-  - Imagen
-  - graficos
-translation_of: Web/HTML/Element/picture
 original_slug: Web/HTML/Elemento/picture
 ---
 

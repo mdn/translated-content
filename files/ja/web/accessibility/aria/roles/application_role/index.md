@@ -73,9 +73,7 @@ slug: Web/Accessibility/ARIA/Roles/Application_Role
 
 ## 仕様
 
-| 仕様                                                             | 状態                     |
-| ---------------------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#application","application")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## 優先順位
 
