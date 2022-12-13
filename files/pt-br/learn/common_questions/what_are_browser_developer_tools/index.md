@@ -23,7 +23,7 @@ Como você acessa? Três modos:
 
 - _**Menu bar.**_
 
-  - **Firefox.** Menu ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ ![](screenshot_from_2014-11-26_14-24-56.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
+  - **Firefox.** Menu ![](2014-01-10-13-08-08-f52b8c.png) _➤ ![](screenshot_from_2014-11-26_14-24-56.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
   - **Chrome.** _View ➤ Developer ➤ Developer Tools_
   - **Safari.** _Develop ➤ Show Web Inspector._ Se você não consegue ver o _menu Desenvolvedor_ , vá para _Safari ➤ Preferências ➤ Avançado_ e confira o _Show Develop menu no menu bar_ checkbox.
   - **Opera**. _Developer ➤ Web Inspector_
@@ -101,11 +101,11 @@ Descubra mais sobre o Inspetor em diferentes navegadores:
 
 O depurador Javascript permite a visualização dos conteúdos das variáveis e a configuração dos pontos de paradas(breakpoints) no código. Breakpoints são marcadores de linha para analisar a execução do código. A identificação previne problemas.
 
-![](https://mdn.mozillademos.org/files/16239/firefox_debugger.png)
+![](firefox_debugger.png)
 
 Para acessar o (debugger)depurador:
 
-**Firefox**: Clique![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) ➤ _Web Developer_ ➤ _Debugger_ ou pelo atalho <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> para abrir o Debugger Javascript. Se a ferramenta já estiver vísivel, clique na aba **Debugger**.
+**Firefox**: Clique![](2014-01-10-13-08-08-f52b8c.png) ➤ _Web Developer_ ➤ _Debugger_ ou pelo atalho <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> para abrir o Debugger Javascript. Se a ferramenta já estiver vísivel, clique na aba **Debugger**.
 
 **Chrome**: Abra as ferramentas de desenvolvimento e selecione a aba Fontes(**Sources)**. (Opera funciona igualmente).
 
@@ -121,13 +121,13 @@ Há três painéis no Depurador(debugger) no Firefox
 
 O primeiro painel na parte esquerda contém uma lista de arquivos associado com a página que está sendo depurada(debugging). Selecione o arquivo da seleção. Clique no arquivo para selecionar e visualizar os conteúdos no painel central do Debugger.
 
-![](https://mdn.mozillademos.org/files/16240/File_List.png)
+![](file_list.png)
 
 #### Código fonte
 
 Insira os pontos de parada (breakpoints) onde deseja que a execução pare. Na imagem abaixo, a linha selecionada é a 18 na qual tem um ponto de parada (breakpoint).
 
-![](https://mdn.mozillademos.org/files/16241/Source_code.png)
+![](source_code.png)
 
 #### Veja as expressões e pontos de paradas
 
@@ -143,7 +143,7 @@ A seção **Call stack** (chamada na pilha) mostra que o código foi executado p
 
 A seção final, **Scopes(escopos)**, mostra os valores visíveis em vários pontos no código. Por exemplo, na imagem abaixo, os objetos disponíveis estão na função addItemClick.
 
-![](https://mdn.mozillademos.org/files/16242/watch_items.png)
+![](watch_items.png)
 
 ## O console JavaScript
 
@@ -151,7 +151,7 @@ O console JavaScript é uma ferramenta incrivelmente útil para depurar códigos
 
 Para acessar o console basta abrir ferramentas de desenvolvimentos e escolher a aba Console.
 
-No Firefox o atalho é <kbd>ctrl</kbd> + <kbd>shift</kbd>+ <kbd>k</kbd> ou no menu comando: ![](https://mdn.mozillademos.org/files/9637/2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer_ _➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._
+No Firefox o atalho é <kbd>ctrl</kbd> + <kbd>shift</kbd>+ <kbd>k</kbd> ou no menu comando: ![](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer_ _➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._
 
 Aparecerá uma janela como a seguinte:
 

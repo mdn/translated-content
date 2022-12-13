@@ -23617,14 +23617,6 @@
       "charlie"
     ]
   },
-  "Web/HTTP/Feature_Policy": {
-    "modified": "2020-10-15T22:13:12.541Z",
-    "contributors": ["xiaomaokeke", "chenqingyue", "RainSlide", "joechan"]
-  },
-  "Web/HTTP/Feature_Policy/Using_Feature_Policy": {
-    "modified": "2019-05-06T05:13:36.251Z",
-    "contributors": ["roostinghawk"]
-  },
   "Web/HTTP/Headers": {
     "modified": "2020-05-20T02:33:50.716Z",
     "contributors": [
@@ -23961,18 +23953,6 @@
       "paranoidjk"
     ]
   },
-  "Web/HTTP/Headers/Feature-Policy": {
-    "modified": "2020-10-15T22:18:06.274Z",
-    "contributors": ["roostinghawk"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/autoplay": {
-    "modified": "2020-10-15T22:18:28.072Z",
-    "contributors": ["baijingfeng"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/camera": {
-    "modified": "2020-10-15T22:26:24.357Z",
-    "contributors": ["K.Pen"]
-  },
   "Web/HTTP/Headers/Forwarded": {
     "modified": "2019-03-23T22:11:01.048Z",
     "contributors": ["ujsxn", "WayneCui"]
@@ -24028,6 +24008,18 @@
   "Web/HTTP/Headers/Origin": {
     "modified": "2020-10-15T21:53:11.797Z",
     "contributors": ["JasonJunJun", "yuankunzhang"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy": {
+    "modified": "2020-10-15T22:18:06.274Z",
+    "contributors": ["roostinghawk"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/autoplay": {
+    "modified": "2020-10-15T22:18:28.072Z",
+    "contributors": ["baijingfeng"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/camera": {
+    "modified": "2020-10-15T22:26:24.357Z",
+    "contributors": ["K.Pen"]
   },
   "Web/HTTP/Headers/Pragma": {
     "modified": "2020-10-15T21:54:59.607Z",
@@ -24314,6 +24306,10 @@
       "joezheng",
       "MagicLee"
     ]
+  },
+  "Web/HTTP/Permissions_Policy": {
+    "modified": "2020-10-15T22:13:12.541Z",
+    "contributors": ["xiaomaokeke", "chenqingyue", "RainSlide", "joechan"]
   },
   "Web/HTTP/Protocol_upgrade_mechanism": {
     "modified": "2020-11-12T12:36:28.458Z",

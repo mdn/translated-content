@@ -1,6 +1,7 @@
 ---
 title: Feature Policy
-slug: Web/HTTP/Feature_Policy
+slug: Web/HTTP/Permissions_Policy
+original_slug: Web/HTTP/Feature_Policy
 ---
 
 {{HTTPSidebar}}

@@ -149,7 +149,7 @@ _create-react-app_ vai mostrar várias mensagens em seu terminal enquanto ele tr
 
 Quando o processo finalizar, dê um `cd` para dentro da pasta `moz-todo-react` e execute o comando `npm start`. Os scripts instalados pelo _create-react-app_ vão começar a serem servidos em um servidor local, no endereço _localhost:3000,_ e abrirão o aplicativo em uma nova aba em seu navegador. Seu navegador vai mostrar algo como isto:
 
-![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](https://mdn.mozillademos.org/files/17203/default-create-react-app.png)
+![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](default-create-react-app.png)
 
 ### Estrutura da aplicação
 

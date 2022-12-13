@@ -41,9 +41,9 @@ To give you an idea of the difference between the two, let's look at an example.
 
 The difference becomes apparent when you zoom in the page — the PNG image becomes pixellated as you zoom in because it contains information on where each pixel should be (and what color). When it is zoomed, each pixel is simply increased in size to fill multiple pixels on screen, so the image starts to look blocky. The vector image however continues to look nice and crisp, because no matter what size it is, the algorithms are used to work out the shapes in the image, with the values simply being scaled as it gets bigger.
 
-![Two star images](https://mdn.mozillademos.org/files/12866/raster-vector-default-size.png)
+![Two star images](raster-vector-default-size.png)
 
-![Two star images zoomed in, one crisp and the other blurry](https://mdn.mozillademos.org/files/12868/raster-vector-zoomed.png)
+![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
 
 > **Nota:** The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) demo for a real example!
 

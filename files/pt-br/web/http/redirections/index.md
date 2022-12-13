@@ -12,7 +12,7 @@ Redirecionamento de URL, também conhecido como encaminhamento de URL, é uma t�
 
 Em HTTP, um redirecionamento é acionado pelo servidor enviando respostas especiais para uma solicitação: _redirects_. Os redirecionamentos HTTP são respostas com um código de status de 3xx. Um navegador, ao receber uma resposta de redirecionamento, usa o novo URL fornecido e carrega-o imediatamente: a maior parte do tempo, o redirecionamento é transparente para o usuário, além de um pequeno desempenho.
 
-![](https://mdn.mozillademos.org/files/13785/HTTPRedirect.png)
+![](httpredirect.png)
 
 Existem vários tipos de redirecionamentos e eles se enquadram em três categorias: redirecionamentos permanentes, temporários e especiais.
 

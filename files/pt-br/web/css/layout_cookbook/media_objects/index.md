@@ -7,7 +7,7 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 O _Media Object_ (Objeto de Mídia) é um padrão que vemos em toda web. [Nomeado por Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/) refere-se a uma caixa de duas colunas com uma imagem de um lado e texto descritivo do outro, por ex. uma postagem no facebook ou tweet.
 
-![](https://mdn.mozillademos.org/files/16112/media-object.png)
+![](media-object.png)
 
 ## Exigências
 
