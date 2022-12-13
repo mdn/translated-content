@@ -1,5 +1,5 @@
 ---
-title: HTML tables
+title: HTML 테이블
 slug: Learn/HTML/Tables
 ---
 {{LearnSidebar}}
