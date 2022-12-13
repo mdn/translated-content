@@ -63,7 +63,7 @@ HTML 中的元素拥有属性（attribute）；这些额外的属性值可以配
     <tr>
       <td><a href="/zh-CN/docs/Web/HTML/Attributes/allow">allow</a></td>
       <td>{{ HTMLElement("iframe") }}</td>
-      <td>Specifies a feature-policy for the iframe.</td>
+      <td>Specifies a Permissions-Policy for the iframe.</td>
     </tr>
     <tr>
       <td><a href="/zh-CN/docs/Web/HTML/Attributes/alt">alt</a></td>

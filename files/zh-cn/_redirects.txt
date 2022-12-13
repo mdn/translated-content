@@ -2281,7 +2281,6 @@
 /zh-CN/docs/Web/HTTP/Caching_FAQ	/zh-CN/docs/Web/HTTP/Caching
 /zh-CN/docs/Web/HTTP/Content_negotiation/Accept_默认值	/zh-CN/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values
 /zh-CN/docs/Web/HTTP/Feature_Policy	/zh-CN/docs/Web/HTTP/Permissions_Policy
-/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy	/zh-CN/docs/orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy
 /zh-CN/docs/Web/HTTP/HTTP_Strict_Transport_Security	/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security
 /zh-CN/docs/Web/HTTP/HTTP请求方法	/zh-CN/docs/Web/HTTP/Methods
 /zh-CN/docs/Web/HTTP/HTTP请求方法/GET	/zh-CN/docs/Web/HTTP/Methods/GET
@@ -2317,7 +2316,6 @@
 /zh-CN/docs/Web/HTTP/data_URIs	/zh-CN/docs/Web/HTTP/Basics_of_HTTP/Data_URLs
 /zh-CN/docs/Web/HTTP/消息	/zh-CN/docs/Web/HTTP/Messages
 /zh-CN/docs/Web/HTTP/策略特征	/zh-CN/docs/Web/HTTP/Permissions_Policy
-/zh-CN/docs/Web/HTTP/策略特征/Using_Feature_Policy	/zh-CN/docs/orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy
 /zh-CN/docs/Web/HTTP/缓存_FAQ	/zh-CN/docs/Web/HTTP/Caching
 /zh-CN/docs/Web/HTTP/重定向	/zh-CN/docs/Web/HTTP/Redirections
 /zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/Guide/Houdini
