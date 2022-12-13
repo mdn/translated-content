@@ -1,6 +1,6 @@
 ---
 title: Feature Policy
-slug: Web/HTTP/Feature_Policy
+slug: Web/HTTP/Permissions_Policy
 tags:
   - Feature Policy
   - Feature-Policy
@@ -16,6 +16,7 @@ tags:
   - header
   - permission
 translation_of: Web/HTTP/Feature_Policy
+original_slug: Web/HTTP/Feature_Policy
 ---
 
 {{HTTPSidebar}}
