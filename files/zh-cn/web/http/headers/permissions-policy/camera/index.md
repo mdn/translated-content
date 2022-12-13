@@ -1,6 +1,7 @@
 ---
 title: 'Feature-Policy: camera'
-slug: Web/HTTP/Headers/Feature-Policy/camera
+slug: Web/HTTP/Headers/Permissions-Policy/camera
+original_slug: Web/HTTP/Headers/Feature-Policy/camera
 ---
 
 {{HTTPSidebar}}

@@ -1,6 +1,7 @@
 ---
 title: 'Feature-Policy: picture-in-picture'
-slug: Web/HTTP/Headers/Feature-Policy/picture-in-picture
+slug: Web/HTTP/Headers/Permissions-Policy/picture-in-picture
+original_slug: Web/HTTP/Headers/Feature-Policy/picture-in-picture
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}
