@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "files/zh-cn/**"
+      - ".github/workflows/autocorrect-lint.yml"
 
 jobs:
   lint:
