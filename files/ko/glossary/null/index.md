@@ -11,6 +11,7 @@ console.log(typeof null); // "object"
 ```
 
 이는 [버그](/ko/docs/Web/JavaScript/Reference/Operators/typeof#null)로 여겨지지만 수정하면 많은 스크립트에 문제가 발생할 수 있어서 고칠 수 없습니다.
+
 ## 일반적인 지식
 
 - [JavaScript의 타입](/ko/docs/Web/JavaScript/Data_structures)
