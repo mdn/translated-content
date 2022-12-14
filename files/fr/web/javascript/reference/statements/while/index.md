@@ -29,12 +29,12 @@ while (condition)
     Note : on pourra utiliser l'instruction [`break`](/fr/docs/Web/JavaScript/Reference/Instructions/break) afin d'arrêter une boucle avant que la condition soit vérifiée.
 
 ## Exemples
-
+1.
 La boucle `while` qui suit s'exécute tant que `n` est strictement inférieur à 3.
 
 ```js
-var n = 0;
-var x = 0;
+let n = 0;
+let x = 0;
 
 while (n < 3) {
   n++;
@@ -49,6 +49,22 @@ while (n < 3) {
 - Après la troisième itération : `n` = 3 et `x` = 6
 
 Une fois que la troisième itération est exécutée, la condition `n` < 3 n'est plus vérifiée et donc la boucle se termine.
+
+2. S'assurer que la function  imprime les nombres de 0 à 20 à l'écran en utilisant la boucle "while"
+
+```js
+const myWhileLoop = () =>{
+  let i = 0;
+  while (i< 20){
+  i++;
+  };
+    console.log(i);
+};
+```
+
+Dans l'exemple ci-haut, le code de la boucle s'exécutera encore et encore tant qu'une variable (i) est inférieure à 20 :
+
+**Attention**: => Si vous oubliez d'augmenter la variable utilisée dans la condition, la boucle ne se terminera jamais. Cela plantera votre navigateur.
 
 ## Spécifications
 
