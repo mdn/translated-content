@@ -274,7 +274,7 @@ otherwise my code is unreadable.";
 - {{jsxref("String.prototype.padEnd()")}}
   - : 用给定字符串从末尾填充当前字符串并返回长度为 `targetLength` 的新字符串。
 - {{jsxref("String.prototype.padStart()")}}
-  - : 用给定字符串从开始填充当前字符串并返回长度为 `targetLength` 的新字符串。
+  - : 用给定字符串从开头填充当前字符串并返回长度为 `targetLength` 的新字符串。
 - {{jsxref("String.prototype.repeat()")}}
   - : 返回由对象的元素重复 `count` 次组成的字符串。
 - {{jsxref("String.prototype.replace()")}}
