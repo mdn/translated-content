@@ -370,7 +370,7 @@ otherwise my code is unreadable.";
 
 ### 字符串转换
 
-可以使用 `String` 作为 {{jsxref("String.prototype.toString()", "toString()")}} 更可靠的代替方法，因为它在用于 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)和 {{jsxref("undefined")}} 时有效。例如：
+可以使用 `String` 作为 {{jsxref("String.prototype.toString()", "toString()")}} 更可靠的代替方法，因为它在用于 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null) 和 {{jsxref("undefined")}} 时有效。例如：
 
 ```js
 const nullVar = null;
