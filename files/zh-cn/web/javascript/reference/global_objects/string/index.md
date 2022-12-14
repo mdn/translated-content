@@ -202,7 +202,7 @@ otherwise my code is unreadable.";
 
 然而，整个 Unicode 字符集比 65536 大得多。额外的字符作为*代理对*（surrogate pairs）存储在 UTF-16 中，代理对是表示单个字符的 16 位码元对。为了避免起义，该对的两个部分必须介于 `0xD800` 和 `0xDFFF` 之间，并且这些码元不用于对单码元（single-code-unit）进行编码。因此，“单独的代理项”通常不是操作字符串的有效值——例如 [`encodeURI()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) 将为单独的代理项抛出 {{jsxref("URIError")}}。每个 Unicode 字符由一个或者两个 UTF-16 码元组成，也称为 _Unicode 码位_（codepoint）。每个 Unicode 码位都可以使用 `\u{xxxxxx}` 写成一个字符串，其中 `xxxxxx` 表示 1–6 个十六进制数字。
 
-在 Unicode 字符之上，有一些 Unicode 字符序列勇敢被视为一个视觉单元，被称为*字素簇*（grapheme cluster）。更通常的案列是 emoji：很多具有一系列变化的 emoji 实际上是由多个 emoji组成的，通常由 \<ZWJ>（`U+200D`）字符连接。
+在 Unicode 字符之上，有一些 Unicode 字符序列应该被视为一个视觉单元，被称为*字素簇*（grapheme cluster）。更通常的案列是 emoji：很多具有一系列变化的 emoji 实际上是由多个 emoji组成的，通常由 \<ZWJ>（`U+200D`）字符连接。
 
 你必须小心迭代字符级别。例如， [`split("")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 将按照 UTF-16 码元分割并强代理对分开。字符串索引也是指的每个 UTF-16 码元的索引。在另一方面，[`@@iterator()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) 按 Unicode 码位迭代。遍历字素簇将需要一些自定义代码。
 
