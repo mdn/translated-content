@@ -79,10 +79,10 @@ USA
 
 Saída do HTML acima:
 
-Mozilla Foundation
-1981 Landings Drive
-Building K
-Mountain View, CA 94043-0801
+Mozilla Foundation<br>
+1981 Landings Drive<br>
+Building K<br>
+Mountain View, CA 94043-0801<br>
 USA
 
 ## Especificações
