@@ -47,35 +47,35 @@ slug: Learn/Common_questions/How_does_the_Internet_work
 
 > **참고:** 이 글의 나머지 부분에서는 유선 케이블에 대해서만 이야기 하지만 무선 네트워크도 동일한 방식입니다.
 
-![Two computers linked together](https://mdn.mozillademos.org/files/8441/internet-schema-1.png)
+![Two computers linked together](internet-schema-1.png)
 
 이러한 네트워크는 두 대의 컴퓨터로 제한되지 않습니다. 원하는 만큼의 컴퓨터를 연결할 수 있습니다. 그러나 이렇게 연결할 수록 매우 복잡해집니다. 예를 들어 10대의 컴퓨터를 연결하려는 경우 컴퓨터 당 9개의 플러그가 달린 45개의 케이블이 필요합니다!
 
-![Ten computers all together](https://mdn.mozillademos.org/files/8443/internet-schema-2.png)
+![Ten computers all together](internet-schema-2.png)
 
 이 문제를 해결하기 위해 네트워크의 각 컴퓨터는 라우터라고하는 특수한 소형 컴퓨터에 연결됩니다. 이 라우터에는 단 하나의 작업만 있습니다. 철도역의 신호원처럼 주어진 컴퓨터에서 보낸 메시지가 올바른 대상 컴퓨터에 도착하는지 확인합니다. 컴퓨터 B에게 메시지를 보내려면 컴퓨터 A가 메시지를 라우터로 보내야하며, 라우터는 메시지를 컴퓨터 B로 전달하고 메시지가 컴퓨터 C로 배달되지 않도록해야합니다.
 
 이 라우터를 시스템에 추가하면 10대의 컴퓨터 네트워크에는 10개의 케이블만 필요합니다. 각 컴퓨터마다 단일 플러그와 10개의 플러그가 있는 하나의 라우터가 필요합니다.
 
-![Ten computers with a router](https://mdn.mozillademos.org/files/8445/internet-schema-3.png)
+![Ten computers with a router](internet-schema-3.png)
 
 ### 네트워크 속의 네트워크
 
 지금까지는 그런대로 잘되었습니다. 수백, 수천, 수십억 대의 컴퓨터를 연결하는 것은 어떨까요? 물론 단일 라우터는 그 정도까지 확장 할 수는 없지만 신중하게 읽으면 라우터는 다른 컴퓨터와 마찬가지로 컴퓨터라고 말했습니다. 그럼, 두 대의 라우터를 연결하지 못하게 하는 것이 있을까요? 없죠!
 
-![Two routers linked together](https://mdn.mozillademos.org/files/8447/internet-schema-4.png)
+![Two routers linked together](internet-schema-4.png)
 
 컴퓨터를 라우터에 연결하고, 라우터에서 라우터로, 우리는 무한히 확장할 수 있습니다.
 
-![Routers linked to routers](https://mdn.mozillademos.org/files/8449/internet-schema-5.png)
+![Routers linked to routers](internet-schema-5.png)
 
 이러한 네트워크는 우리가 인터넷이라고 부르는 것에 매우 가깝지만, 우리는 뭔가를 놓치고 있습니다. 우리는 우리의 목적을 가지고 네트워크를 구축했습니다. 하지만 그밖에 다른 네트워크들 : 친구, 이웃, 누구든지 컴퓨터로 이루어진 그들만의 네트워크를 가질 수 있습니다. 하지만 집과 다른 지역 사이에, 아주 먼 곳에 케이블을 연결할 수는 없습니다. 이 문제를 어떻게 처리 할 수 있을까요? 예를 들어 전력 및 전화와 같이 이미 집에 연결된 케이블이 있습니다. 전화기 기반의 시설은 이미 세계 어느 곳과도 연결되어 있으므로 우리가 필요로 하는 완벽한 배선이라고 할 수 있습니다. 따라서 우리의 네트워크를 전화 시설과 연결하기 위해선, 모뎀이라는 특수 장비가 필요합니다. 이 모뎀은 우리 네트워크의 정보를 전화 시설에서 처리 할 수있는 정보로 바꾸며, 그 반대의 경우도 마찬가지입니다.
 
-![A router linked to a modem](https://mdn.mozillademos.org/files/8451/internet-schema-6.png)
+![A router linked to a modem](internet-schema-6.png)
 
 그래서 우리의 네트워크는 전화 시설에 연결됩니다. 다음 단계는 우리의 네트워크에서 도달하려는 네트워크로 메시지를 보내는 것입니다. 그렇게하기 위해 네트워크를 인터넷 서비스 제공 업체 (Internet Service Provider, ISP)에 연결합니다. ISP는 모두 함께 연결되는 몇몇 특수한 라우터를 관리하고 다른 ISP의 라우터에도 액세스 할 수 있는 회사입니다. 따라서 우리 네트워크의 메시지는 ISP 네트워크의 네트워크를 통해 대상 네트워크로 전달됩니다. 인터넷은 이러한 전체 네트워크 인프라로 구성됩니다.
 
-![Full Internet stack](https://mdn.mozillademos.org/files/8453/internet-schema-7.png)
+![Full Internet stack](internet-schema-7.png)
 
 ### 컴퓨터 찾기
 
@@ -83,7 +83,7 @@ slug: Learn/Common_questions/How_does_the_Internet_work
 
 컴퓨터는 이러한 주소로 다른 컴퓨터를 찾아가는데 문제가 없습니다. 그러나 우리들은 IP주소를 기억하기 어렵죠. 그래서 우리는 '도메인 이름' 이라고하는 사람이 읽을 수 있는 IP 주소의 이름을 지정할 수 있습니다. 예를 들어 `'google.com'`은 IP 주소로 `'173.194.121.32'` 입니다. 따라서 '도메인 이름'은 'IP주소'보다 인터넷을 사용하기에 쉽습니다.
 
-![Show how a domain name can alias an IP address](https://mdn.mozillademos.org/files/8405/dns-ip.png)
+![Show how a domain name can alias an IP address](dns-ip.png)
 
 ### 인터넷과 웹
 

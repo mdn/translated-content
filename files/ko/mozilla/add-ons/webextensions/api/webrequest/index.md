@@ -9,7 +9,7 @@ Add event listeners for the various stages of making an HTTP request. The event 
 
 Each event is fired at a particular stage of the request. The typical sequence of events is like this:
 
-![](https://mdn.mozillademos.org/files/13376/webRequest-flow.png)
+![](webrequest-flow.png)
 
 {{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} can be fired at any time during the request. Also, note that sometimes the sequence of events may differ from this: for example, in Firefox, on an [HSTS](/ko/docs/Web/HTTP/Headers/Strict-Transport-Security) upgrade, the `onBeforeRedirect` event will be triggered immediately after `onBeforeRequest`.
 

@@ -68,8 +68,6 @@ _此接口也继承自 {{DOMxRef("Node")}} 和 {{DOMxRef("EventTarget")}} 接口
   - : 返回当前文档的最后一个子元素。
 - {{DOMxRef("Document.links")}} {{ReadOnlyInline}}
   - : 返回一个包含文档中所有超链接的 {{DOMxRef("HTMLCollection")}}。
-- {{DOMxRef("Document.mozSyntheticDocument")}} {{Non-standard_Inline}}
-  - : 返回 {{JSxRef("Boolean")}}，仅当此文件是合成的（例如独立图像、视频、音频文件等）时才为 `true` 。
 - {{DOMxRef("Document.pictureInPictureElement")}} {{ReadOnlyInline}}
   - : 返回文档中正处于画中画模式的 {{DOMxRef('Element')}}。
 - {{DOMxRef("Document.pictureInPictureEnabled")}} {{ReadOnlyInline}}

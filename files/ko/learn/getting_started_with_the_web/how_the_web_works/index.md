@@ -27,7 +27,7 @@ original_slug: Learn/Getting_started_with_the_web/웹의_동작_방식
 
 지금은, 웹이 도로라고 상상해봅시다. 도로의 한 쪽 끝은 여러분의 집 같은 클라이언트 입니다. 다른 한 쪽 끝은 여러분이 뭔가를 사길 원하는 상점같은 서버입니다.
 
-![](https://mdn.mozillademos.org/files/9749/road.jpg)
+![](road.jpg)
 
 클라이언트와 서버에 덧붙여서 우리는 다음 내용들도 알아볼 필요가 있습니다.
 

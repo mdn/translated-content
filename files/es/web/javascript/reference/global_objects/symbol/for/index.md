@@ -1,9 +1,7 @@
 ---
 title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/for
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-browser-compat: javascript.builtins.Symbol.for
 l10n:
   sourceCommit: ef59c2d0399ba62ec2632810564ab12a198af868
 ---

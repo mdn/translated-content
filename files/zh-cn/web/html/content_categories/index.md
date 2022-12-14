@@ -4,6 +4,8 @@ slug: Web/HTML/Content_categories
 original_slug: Web/Guide/HTML/Content_categories
 ---
 
+{{HTMLSidebar}}
+
 每一个 [HTML](/zh-CN/docs/Web/HTML) 元素都必须遵循定义了它可以包含哪一类内容的规则。这些规则被归类为几个常见的元素**内容模型**（content model）。这是一个松散的分组（它实际上并没有在这些类别的元素之间建立关系），但它们有助于定义和描述这些类别的共同行为及其相关规则，特别是当你遇到它们的复杂细节时。元素也有可能不是这些类别的*任何*成员。
 
 以下是三种类型的内容分类：

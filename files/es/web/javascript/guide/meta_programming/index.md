@@ -1,14 +1,6 @@
 ---
 title: Metaprogramación
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - ECMAScript 2015
-  - Guía
-  - JavaScript
-  - Proxy
-  - Reflejar
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
 
 {{jsSidebar("Guía de JavaScript")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}

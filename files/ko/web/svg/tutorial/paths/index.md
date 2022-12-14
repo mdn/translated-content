@@ -198,7 +198,7 @@ SVG로 그릴 수 있는 다른 형태의 곡선으로는 A라고 부르는 호(
 
 A 명령어는 일단 x축, y축 반지름을 매개변수로 받는다. 혹시 필요하다면 [ellipse](/ko/docs/Web/SVG/Element/ellipse) 문서에서 두 매개변수가 어떻게 작동하는지 확인해볼 수 있다. 세 번째 매개변수는 호의 회전각을 기술한다. 이는 아래 예제에서 잘 확인할 수 있다.
 
-![SVGArcs_XAxisRotation_with_grid](https://mdn.mozillademos.org/files/10409/SVGArcs_XAxisRotation_with_grid.png)
+![SVGArcs_XAxisRotation_with_grid](svgarcs_xaxisrotation_with_grid.png)
 
 ```xml
 <svg width="320" height="320" xmlns="http://www.w3.org/2000/svg">

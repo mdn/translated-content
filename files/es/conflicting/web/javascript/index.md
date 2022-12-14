@@ -1,9 +1,6 @@
 ---
 title: Acerca de JavaScript
 slug: conflicting/Web/JavaScript
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/About_JavaScript
 original_slug: Web/JavaScript/About_JavaScript
 ---
 

@@ -56,7 +56,7 @@ Use CSS para mudar como esta biografia aparece, alterando valores das propriedad
 
 Você deve acabar com algo parecido com esta imagem.
 
-![Screenshot of how the example should look after completing the assessment.](https://mdn.mozillademos.org/files/17035/learn-css-basics-assessment.png)
+![Screenshot of how the example should look after completing the assessment.](learn-css-basics-assessment.png)
 
 Após isto, tente pesquisar algumas propriedades não mencionadas nesta página em [MDN CSS referências](/pt-BR/docs/Web/CSS/Reference) e se aventure!
 

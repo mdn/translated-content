@@ -24,7 +24,7 @@ Para começar, você deve responder às seguintes questões:
 
 Em seguida, pegue papel e caneta e faça um rascunho de como você deseja que seu site seja. Para sua primeira página simples, não há muito o que rascunhar, mas você deve criar o hábito desde o começo. Realmente ajuda — você não precisa ser um Van Gogh!
 
-![](https://mdn.mozillademos.org/files/9239/website-drawing-scan.png)
+![](website-drawing-scan.png)
 
 > **Nota:** Mesmo em sites reais e complexos, os times de design geralmente começam pelo rascunho em papel e depois constroem a versão digital usando um editor gráfico ou tecnologias da web.
 >
@@ -51,11 +51,11 @@ Para escolher uma imagens, vá no [Google Imagens](https://www.google.com/imghp?
 1. Quando você achar a imagem que você quer, clique nela para obter uma visão ampliada dela.
 2. Clique com o botão direito na imagem (Ctrl + click no Mac) escolha _Salvar imagem como..._ e escolha um local seguro para salvar sua imagem. Como alternativa, copie o endereço web da imagem da barra de endereço do navegador, para uso posterior.
 
-![](https://mdn.mozillademos.org/files/16599/updated-google-images.png)
+![](updated-google-images.png)
 
 Observe que a maioria das imagens na Web, inclusive no Imagens do Google, é protegida por direitos autorais. Para reduzir a probabilidade de violar direitos autorais, você pode usar o filtro de licenças do Google. Clique no botão _Ferramentas_ e, em seguida, na opção _Direitos de uso_ resultante que aparece abaixo. Você deve escolher uma opção como _Marcada para reutilização_.
 
-![](https://mdn.mozillademos.org/files/16598/updated-google-images-licensing.png)
+![](updated-google-images-licensing.png)
 
 ### Fonte
 

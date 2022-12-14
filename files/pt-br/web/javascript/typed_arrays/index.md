@@ -9,7 +9,7 @@ slug: Web/JavaScript/Typed_arrays
 
 Para alcançar a máxima flexibilidade e eficiência, os arrays tipados do Javascript dividem sua implementação entre **buffers** e **views**. Um buffer (implementado pelo objeto {{jsxref("ArrayBuffer")}}) é um objeto que representa um fragmento (chunk) de dados; Não possui formato para ser discutido, e não oferece mecanismos para acessar seu conteúdo. Para acessar os dados contidos em um buffer, você precisa utilizar uma view. Uma view fornece um contexto — isto é, um tipo de dado, o deslocamento inicial, e o número de elementos — que transforma estes dados em um array tipado.
 
-![Typed arrays in an ArrayBuffer](https://mdn.mozillademos.org/files/8629/typed_arrays.png)
+![Typed arrays in an ArrayBuffer](typed_arrays.png)
 
 ### ArrayBuffer
 
