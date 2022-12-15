@@ -44,7 +44,7 @@ _아직 이용가능한 Active Learning이 없습니다. [Please, consider contr
 
 도메인 이름은 몇개의 파트로 이루어진 간단한 구조를 이루고 있습니다. 점으로 구분하고 오른쪽에서 왼쪽으로 읽습니다.
 
-![Anatomy of the MDN domain name](https://mdn.mozillademos.org/files/11229/structure.png)
+![Anatomy of the MDN domain name](structure.png)
 
 각각의 파트들은 전체 도메인 이름에 대해 특별한 정보를 제공합니다.
 
@@ -132,7 +132,7 @@ As we already saw, when you want to display a webpage in your browser it's easie
 3. If your computer does not know which IP is behind the `mozilla.org` name, it goes on to ask a DNS server, whose job is precisely to tell your computer which IP address matches each registered domain name.
 4. Now that the computer knows the requested IP address, your browser can negotiate contents with the web server.
 
-![Explanation of the steps needed to obtain the result to a DNS request](https://mdn.mozillademos.org/files/8961/2014-10-dns-request2.png)
+![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
 
 ## 다음 단계
 

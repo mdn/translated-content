@@ -34,7 +34,7 @@ CSS는 [100가지 이상의 속성](/ko/docs/Web/CSS/CSS_Reference)과 셀 수 �
 
 이런 블록은 자연스럽게도 **선언 블록**이라고 부르며, 내부의 선언은 세미콜론, '`;`' (`U+003B SEMICOLON`)으로 구분합니다. 선언 블록은 아무런 선언도 들어가지 않은 빈 상태로도 존재할 수 있습니다. 선언 주위의 공백은 무시합니다. 마지막 선언에는 세미콜론을 생략해도 되지만, 다른 선언을 밑에다 덧붙여서 블록을 확장하면서 세미콜론 추가를 잊는 상황을 방지하기 위해 붙여주는 것이 *좋은 스타일*이라고 생각하는 경우가 자주 있기는 합니다.
 
-CSS 선언 블록을 시각화하면 다음과 같습니다.![css syntax - declarations block.png](https://mdn.mozillademos.org/files/17009/declaration-block.png)
+CSS 선언 블록을 시각화하면 다음과 같습니다.![css syntax - declarations block.png](declaration-block.png)
 
 > **참고:** CSS 선언 블록의 콘텐츠, 즉 여닫는 중괄호 없이 세미콜론으로 분리한 선언 목록은 HTML {{htmlattrxref("style")}} 특성의 값으로 사용할 수 있습니다.
 
@@ -44,7 +44,7 @@ CSS 선언 블록을 시각화하면 다음과 같습니다.![css syntax - decla
 
 CSS에서는 선언 블록에 조건을 붙여 해결할 수 있습니다. 각 (유효한) 선언 블록은 페이지의 일부 요소를 선택하는 조건인 선택자(_selector_)가 선행됩니다. 선택자-선언 블록 쌍은 **규칙집합** 또는 종종 간단히 **규칙**이라고 합니다.
 
-![css syntax - ruleset.png](https://mdn.mozillademos.org/files/17010/ruleset.png)
+![css syntax - ruleset.png](ruleset.png)
 
 페이지 요소는 여러 선택자로 그리고 결국 주어진 속성을 서로 다른 값으로 여러 번 포함하는 여러 규칙에 의해 일치될 수 있기에, CSS 표준은 어느 게 다른 것보다 우선하고 적용되어야 하는 지를 정의합니다: 이를 종속([cascade](/ko/docs/Web/CSS/시작하기/종속과_상속)) 알고리즘이라고 합니다.
 

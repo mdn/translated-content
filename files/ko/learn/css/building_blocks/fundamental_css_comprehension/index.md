@@ -1,7 +1,6 @@
 ---
 title: 기본적인 CSS 이해
 slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
-original_slug: Learn/CSS/Introduction_to_CSS/기본적인_CSS_이해
 ---
 
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Learn/CSS/Introduction_to_CSS")}}
@@ -83,7 +82,7 @@ Other things to think about:
 
 The following screenshot shows an example of what the finished design should look like:
 
-![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](https://mdn.mozillademos.org/files/12616/business-card.png)
+![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](business-card.png)
 
 ## Assessment
 

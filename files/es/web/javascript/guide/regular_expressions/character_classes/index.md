@@ -1,14 +1,6 @@
 ---
 title: Clases de caracteres
 slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
-tags:
-  - Expresiones Regulares
-  - Guía
-  - JavaScript
-  - Referencia
-  - RegExp
-  - clases de caracteres
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Clases_de_caracteres
 ---
 

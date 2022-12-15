@@ -231,7 +231,7 @@ Las características de las WebAPI están sujetas a las mismas consideraciones d
 
 Además, algunas WebAPIs solicitarán permiso al usuario para ser activadas cuando se produzcan las llamadas desde el código. Como ejemplo, habrás observado un cuadro de diálogo como éste al probar nuestro ejemplo anterior de [Geolocalización](/es/docs/Web/API/Geolocation):
 
-![](https://mdn.mozillademos.org/files/14313/location-permission.png)
+![](location-permission.png)
 
 La [Notifications API](/es/docs/Web/API/Notifications_API) solicita los permisos de una forma parecida:
 

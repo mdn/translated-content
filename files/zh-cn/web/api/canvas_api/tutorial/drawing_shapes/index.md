@@ -3,7 +3,7 @@ title: 使用 canvas 来绘制图形
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 既然我们已经设置了 [canvas 环境](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage)，我们可以深入了解如何在 canvas 上绘制。到本文的最后，你将学会如何绘制矩形，三角形，直线，圆弧和曲线，变得熟悉这些基本的形状。绘制物体到 Canvas 前，需掌握路径，我们看看到底怎么做。
 
@@ -55,7 +55,7 @@ function draw() {
 
 该例子的输出如下图所示。
 
-{{EmbedLiveSample("矩形（Rectangular）例子", 160, 160, "https://mdn.mozillademos.org/files/245/Canvas_rect.png")}}
+{{EmbedLiveSample("矩形（Rectangular）例子", 160, 160, "canvas_rect.png")}}
 
 `fillRect()`函数绘制了一个边长为 100px 的黑色正方形。`clearRect()`函数从正方形的中心开始擦除了一个 60\*60px 的正方形，接着`strokeRect()`在清除区域内生成一个 50\*50 的正方形边框。
 
@@ -122,7 +122,7 @@ function draw() {
 
 输出看上去如下：
 
-{{EmbedLiveSample("绘制一个三角形", 110, 110, "https://mdn.mozillademos.org/files/9847/triangle.png")}}
+{{EmbedLiveSample("绘制一个三角形", 110, 110, "triangle.png")}}
 
 ### 移动笔触
 
@@ -164,7 +164,7 @@ function draw() {
 
 结果看起来是这样的：
 
-{{EmbedLiveSample("%E7%A7%BB%E5%8A%A8%E7%AC%94%E8%A7%A6", 160, 160, "https://mdn.mozillademos.org/files/252/Canvas_smiley.png")}}
+{{EmbedLiveSample("%E7%A7%BB%E5%8A%A8%E7%AC%94%E8%A7%A6", 160, 160, "canvas_smiley.png")}}
 
 如果你想看到连续的线，你可以移除调用的 moveTo()。
 
@@ -215,7 +215,7 @@ function draw() {
 
 这里从调用`beginPath()`函数准备绘制一个新的形状路径开始。然后使用`moveTo()`函数移动到目标位置上。然后下面，两条线段绘制后构成三角形的两条边。
 
-{{EmbedLiveSample("%E7%BA%BF", 160, 160, "https://mdn.mozillademos.org/files/238/Canvas_lineTo.png")}}
+{{EmbedLiveSample("%E7%BA%BF", 160, 160, "canvas_lineto.png")}}
 
 你会注意到填充与描边三角形步骤有所不同。正如上面所提到的，因为路径使用填充（fill）时，路径自动闭合，使用描边（stroke）则不会闭合路径。如果没有添加闭合路径`closePath()`到描边三角形函数中，则只绘制了两条线段，并不是一个完整的三角形。
 
@@ -281,7 +281,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("%E5%9C%86%E5%BC%A7", 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png")}}
+{{EmbedLiveSample("%E5%9C%86%E5%BC%A7", 160, 210, "canvas_arc.png")}}
 
 ### 二次贝塞尔曲线及三次贝塞尔曲线
 
@@ -332,7 +332,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("%E4%BA%8C%E6%AC%A1%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF", 160, 160, "https://mdn.mozillademos.org/files/243/Canvas_quadratic.png")}}
+{{EmbedLiveSample("%E4%BA%8C%E6%AC%A1%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF", 160, 160, "canvas_quadratic.png")}}
 
 #### 三次贝塞尔曲线
 
@@ -366,7 +366,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("%E4%B8%89%E6%AC%A1%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF", 160, 160, "https://mdn.mozillademos.org/files/207/Canvas_bezier.png")}}
+{{EmbedLiveSample("%E4%B8%89%E6%AC%A1%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF", 160, 160, "canvas_bezier.png")}}
 
 ### 矩形
 
@@ -477,7 +477,7 @@ function roundedRect(ctx, x, y, width, height, radius){
 
 结果画面如下：
 
-{{EmbedLiveSample("%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8", 160, 160, "https://mdn.mozillademos.org/files/9849/combinations.png")}}
+{{EmbedLiveSample("%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8", 160, 160, "combinations.png")}}
 
 我们不会很详细地讲解上面的代码，因为事实上这很容易理解。重点是绘制上下文中使用到了 fillStyle 属性，以及封装函数（例子中的`roundedRect()`）。使用封装函数对于减少代码量以及复杂度十分有用。
 
@@ -536,7 +536,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Path2D_%E7%A4%BA%E4%BE%8B", 130, 110, "https://mdn.mozillademos.org/files/9851/path2d.png")}}
+{{EmbedLiveSample("Path2D_%E7%A4%BA%E4%BE%8B", 130, 110, "path2d.png")}}
 
 ### 使用 SVG paths
 

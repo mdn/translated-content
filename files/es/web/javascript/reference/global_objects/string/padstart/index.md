@@ -1,13 +1,6 @@
 ---
 title: String.prototype.padStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/padStart
-tags:
-  - Cadena
-  - Experimental
-  - JavaScript
-  - Método(2)
-  - Referencia
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padStart
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/padStart
 ---
 

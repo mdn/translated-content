@@ -13,7 +13,7 @@ l10n:
 - メディアストリームが終了すると、`ondataavailable` ハンドラーにまだ引き渡されていないメディアデータはすべて単一の {{domxref("Blob")}} で渡されます。
 - {{domxref("MediaRecorder.stop()")}} を呼び出すと、収録を開始してから、または最後に `dataavailable` イベントが発生してからキャプチャされたすべてのメディアデータが {{domxref("Blob")}} で引き渡されます。 この後、キャプチャは終了します。
 - {{domxref("MediaRecorder.requestData()")}} を呼び出すと、収録を開始してから、または最後に `dataavailable` イベントが発生してからキャプチャされたすべてのメディアデータが引き渡されます。 その後、新しい `Blob` が作成され、メディアのキャプチャがその blob に対して続行されます。
-- `timeslice` プロパティをメディアキャプチャを開始した {{domxref("MediaRecorder.start()")}} メソッドに渡した場合は、`timeslice` ミリ秒ごとに `dataavailable` イベントが発生します。 つまり、各 blob は特定の期間を持つことになります（最後の blob を除いてで、最後のイベント以降に残っているものは何でもということになるので、これはもっと短いかもしれません）。 そのため、メソッド呼び出しが次のようになっていれば — `recorder.start(1000);` — `dataavailable` イベントはメディアキャプチャの毎秒後に発生し、イベントハンドラーは一秒の長さのメディアデータの blob で毎秒呼ばれるでしょう。  `timeslice` を {{domxref("MediaRecorder.stop()")}} および {{domxref("MediaRecorder.requestData()")}} と共に使用して、複数の同じ長さの blob と他の短い blob を生成することもできます。
+- `timeslice` プロパティをメディアキャプチャを開始した {{domxref("MediaRecorder.start()")}} メソッドに渡した場合は、`timeslice` ミリ秒ごとに `dataavailable` イベントが発生します。 つまり、各 blob は特定の期間を持つことになります（最後の blob を除いてで、最後のイベント以降に残っているものは何でもということになるので、これはもっと短いかもしれません）。 そのため、メソッド呼び出しが次のようになっていれば — `recorder.start(1000);` — `dataavailable` イベントはメディアキャプチャの毎秒後に発生し、イベントハンドラーは一秒の長さのメディアデータの blob で毎秒呼ばれるでしょう。 `timeslice` を {{domxref("MediaRecorder.stop()")}} および {{domxref("MediaRecorder.requestData()")}} と共に使用して、複数の同じ長さの blob と他の短い blob を生成することもできます。
 
 > **メモ:** メディアデータを含む {{domxref("Blob")}} は、{{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} イベントの `data` プロパティで利用できます。
 

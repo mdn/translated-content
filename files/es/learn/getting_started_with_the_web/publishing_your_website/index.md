@@ -90,11 +90,11 @@ Antes que nada, [descarga e instala Git](http://git-scm.com/downloads) en tu equ
 
 Sigue los pasos **1 a 5** y el **7** (recuerda omitir el 6) detallados en la anterior sección _[De manera visual y sin necesidad de más herramientas](/es/docs/Learn/Getting_started_with_the_web/Publishing_your_website#De_manera_visual_y_sin_necesidad_de_m%C3%A1s_herramientas)_. Una vez hayas dado clic en _Create repository_ (Crear repositorio) verás la siguiente ventana (¡no la cierres, más adelante necesitarás copiar información de allí!):
 
-![](https://mdn.mozillademos.org/files/9481/github-populate-repo.png)
+![](github-populate-repo.png)
 
 En este punto ya estarás listo para poder utilizar la línea de comandos para subir los archivos de tu repositorio a GitHub. Una _línea de órdenes o de comandos_ es una ventana donde escribes comandos que realizarán tareas como crear archivos y ejecutar programas, en lugar de utiizar la interfaz gráfica de usuario. Se debe parecer a algo como esto:
 
-![](https://mdn.mozillademos.org/files/9483/command-line.png)
+![](command-line.png)
 
 > **Nota:** si no te sientes cómodo utilizando la línea de comandos, podrías considerar usar [Git graphical user interface](http://git-scm.com/downloads/guis) para realizar la misma tarea.
 
@@ -163,7 +163,7 @@ Puedes reemplazar el texto _otro commit_ con un mensaje más descriptivo respect
 
 En este punto, deberías tener tu página web de ejemplo disponible en una dirección web única. ¡Bien hecho!
 
-![](https://mdn.mozillademos.org/files/9485/hosted-final-site.png)
+![](hosted-final-site.png)
 
 ### Ver también
 

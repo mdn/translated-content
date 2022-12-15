@@ -12,7 +12,7 @@ HTTP는 액세스 제어와 인증을 위한 프레임워크를 제공합니다.
 
 {{RFC("7235")}}는 서버에 의해 클라이언트 요청을 시도({{glossary("challenge")}})하고, 클라이언트에 의해 인증 정보를 제공하기 위해 사용될 수 있는 HTTP 인증 프레임워크를 정의합니다. 이러한 시도와 응답 과정은 다음과 같이 작동합니다. 서버는 클라이언트에게 {{HTTPStatus("401")}} (Unauthorized) 응답 코드를 가지고 응답하며, 최소한 한 번의 시도에 포함된 {{HTTPHeader("WWW-Authenticate")}} 응답 헤더로 권한을 부여하는 방법에 대한 정보를 제공합니다. 서버와 인증을 하기를 원하는 클라이언트는 {{HTTPHeader("Authorization")}} 요청 헤더 필드에 인증 정보를 포함함으로써 인증을 수행할 수 있습니다. 클라이언트는 대개 사용자에게 비밀번호 프롬프트를 표시할 것이고 정확한 `Authorization` 헤더를 포함하는 요청을 만들 것입니다.
 
-![](https://mdn.mozillademos.org/files/14689/HTTPAuth.png)
+![](httpauth.png)
 
 그림에서 보는 것과 같이 "Basic" 인증의 경우, 교환은 안전을 위해 HTTPS (TLS) 연결 위에서 **발생하여야 합니다**.
 

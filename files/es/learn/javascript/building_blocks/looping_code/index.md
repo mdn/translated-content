@@ -18,7 +18,7 @@ Bucles, bucles, bucles. Además de ser conocidos como un cereal de desayuno popu
 
 Consideremos el caso de un agricultor que se asegura de tener suficiente comida para alimentar a su familia durante la semana. Podría usar el siguiente bucle para lograr esto:
 
-![](https://mdn.mozillademos.org/files/13755/loop_js-02-farm.png)
+![](loop_js-02-farm.png)
 
 Un bucle cuenta con una o más de las siguientes características:
 

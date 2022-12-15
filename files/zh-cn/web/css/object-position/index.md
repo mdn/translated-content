@@ -44,8 +44,8 @@ Here we see HTML that includes two {{HTMLElement("img")}} elements, each display
 这里我们看到包含两个 img 元素的 HTML，分别展示了 MDN 的 logo
 
 ```html
-<img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
-<img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+<img id="object-position-1" src="mdn.svg" alt="MDN Logo"/>
+<img id="object-position-2" src="mdn.svg" alt="MDN Logo"/>
 ```
 
 ### CSS

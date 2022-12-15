@@ -1,14 +1,6 @@
 ---
 title: Módulos JavaScript
 slug: Web/JavaScript/Guide/Modules
-tags:
-  - Guía
-  - JavaScript
-  - Modules
-  - Módulos
-  - export
-  - import
-translation_of: Web/JavaScript/Guide/Modules
 original_slug: Web/JavaScript/Guide/Módulos
 ---
 

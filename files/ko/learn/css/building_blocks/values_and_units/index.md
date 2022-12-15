@@ -64,11 +64,11 @@ CSS 값은 허용가능한 하위값 모음을 정의하는 방법입니다. 즉
 
 CSS 에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니다. 다음은 모두 숫자로 분류됩니다:
 
-| 데이터 형식                                      | 설명                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/en-US/docs/Web/CSS/integer)       | `<integer>` 은 `1024` 또는`-55` 와 같은 정수입니다.                                                                                                                                                                                                                                                                                                            |
-| [`<number>`](/en-US/docs/Web/CSS/number)         | `<number>` 는 10진수를 나타냅니다 — 소수점 이하의 소수 자릿수 (예: `0.255`, `128` 또는 `-1.2`) 가 있을 수도 있고 없을 수도 있습니다.                                                                                                                                                                                                                           |
-| `<dimension>`                                    | `<dimension>` 은 예를 들어 `45deg`, `5s` 또는 `10px`. 과 같은 단위가 붙어있는 `<number>` 입니다. `<dimension>` 은 [`<length>`](/en-US/docs/Web/CSS/length), [`<angle>`](/en-US/docs/Web/CSS/angle), [`<time>`](/en-US/docs/Web/CSS/time) 및 [`<resolution>`](/en-US/docs/Web/CSS/resolution) 의 종류를 포함하는 카테고리입니다[.](/ko/docs/Web/CSS/resolution) |
+| 데이터 형식  | 설명     |
+| ---- | --- |
+| [`<integer>`](/ko/docs/Web/CSS/integer)       | `<integer>` 은 `1024` 또는`-55` 와 같은 정수입니다. |
+| [`<number>`](/ko/docs/Web/CSS/number)         | `<number>` 는 10진수를 나타냅니다 — 소수점 이하의 소수 자릿수 (예: `0.255`, `128` 또는 `-1.2`) 가 있을 수도 있고 없을 수도 있습니다.|
+| [`<dimension>`](/ko/docs/Web/CSS/dimension) | `<dimension>` 은 예를 들어 `45deg`, `5s` 또는 `10px`. 과 같은 단위가 붙어있는 `<number>` 입니다. `<dimension>` 은 [`<length>`](/ko/docs/Web/CSS/length), [`<angle>`](/ko/docs/Web/CSS/angle), [`<time>`](/ko/docs/Web/CSS/time) 및 [`<resolution>`](/ko/docs/Web/CSS/resolution) 의 종류를 포함하는 카테고리입니다[.](/ko/docs/Web/CSS/resolution) |
 | [`<percentage>`](/en-US/docs/Web/CSS/percentage) | `<percentage>` 는 다른 값의 일부, 예를 들어 `50%` 를 나타냅니다. 백분율 값은 항상 다른 수량을 기준으로 합니다. 예를 들어 요소의 길이는 부모 요소의 길이를 기준으로 합니다.                                                                                                                                                                                     |
 
 ### 길이
