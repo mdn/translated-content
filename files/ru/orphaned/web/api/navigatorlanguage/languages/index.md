@@ -4,6 +4,7 @@ slug: orphaned/Web/API/NavigatorLanguage/languages
 translation_of: Web/API/NavigatorLanguage/languages
 original_slug: Web/API/NavigatorLanguage/languages
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 Свойство **`NavigatorLanguage.languages`** только для чтения, возвращающее массив {{domxref("DOMString")}} показывающее предпочитаемые пользователем языки. language описывает использование языковых тегов [BCP 47](http://tools.ietf.org/html/bcp47). В возвращаемом массиве они отсортированы по предпочтению с наиболее предпочитаемые языком в первую очередь.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/Guide/Unicode_Bidrectional_Text_Algorithm
 original_slug: Web/Guide/Unicode_Bidrectional_Text_Algorithm
 ---
+
 **Алгоритм обработки текста двусторонней направленности** (Unicode® Bidirectional Algorithm или **BiDi** Algorithm) — раздел стандарта текста Unicode, описывающий в каком порядке раскладываются символы во время обработки страницы {{Glossary("агентом пользователя")}}.
 Этот алгоритм полезен при создании локализированного веб-контента.
 

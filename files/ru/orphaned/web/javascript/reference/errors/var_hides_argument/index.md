@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Var_hides_argument
 original_slug: Web/JavaScript/Reference/Errors/Var_hides_argument
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

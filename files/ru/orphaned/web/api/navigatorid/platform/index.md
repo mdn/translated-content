@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/NavigatorID/platform
 original_slug: Web/API/NavigatorID/platform
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Возвращает строку, показывающую платформу браузера. Спецификация позволяет браузерам всегда возвращает пустую строку, так что не стоит полагаться на это свойство, чтобы получить надёжный ответ.
