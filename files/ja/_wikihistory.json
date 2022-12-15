@@ -10273,10 +10273,6 @@
     "modified": "2020-10-15T22:19:48.721Z",
     "contributors": ["mfuji09", "silverskyvicto"]
   },
-  "Web/API/Long_Tasks_API": {
-    "modified": "2020-10-15T22:19:58.850Z",
-    "contributors": ["silverskyvicto", "Wind1808"]
-  },
   "Web/API/MediaCapabilities/encodingInfo": {
     "modified": "2020-10-15T22:24:30.759Z",
     "contributors": ["Wind1808"]

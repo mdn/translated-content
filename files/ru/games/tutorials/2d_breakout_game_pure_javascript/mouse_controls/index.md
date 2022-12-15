@@ -10,9 +10,7 @@ translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Управление_мышью
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
-
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Заключение")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Заключение")}}
 
 Это 9-й шаг из 10 в [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код к этому уроку в [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).
 

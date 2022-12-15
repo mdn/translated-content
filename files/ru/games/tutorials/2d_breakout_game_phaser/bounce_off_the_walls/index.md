@@ -5,9 +5,7 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Bounce_off_the_walls
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/ru/docs/")}}
-
-{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Physics", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Платформа_и_управление")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Physics", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Платформа_и_управление")}}
 
 Это **6 урок** из 16 [Руководства разработки игры с помощью Phaser](/ru/docs/Games/Tutorials/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5_2D_Breakout_%D0%B8%D0%B3%D1%80%D1%8B_%D0%BD%D0%B0_Phaser). Вы можете найти исходный код того как должен выглядеть код после завершения урока здесь: [Gamedev-Phaser-Content-Kit/demos/lesson06.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson06.html).
 

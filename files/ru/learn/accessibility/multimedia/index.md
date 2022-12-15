@@ -60,9 +60,9 @@ HTML5 video and audio instances even come with a set of inbuilt controls that al
 
 The controls attribute provides play/pause buttons, seek bar, etc. — the basic controls you'd expect from a media player. It looks like so in Firefox and Chrome:
 
-![Screenshot of Video Controls in Firefox](https://mdn.mozillademos.org/files/14440/native-controls-firefox.png)
+![Screenshot of Video Controls in Firefox](native-controls-firefox.png)
 
-![Screenshot of Video Controls in Chrome](https://mdn.mozillademos.org/files/14438/native-controls-chrome.png)
+![Screenshot of Video Controls in Chrome](native-controls-chrome.png)
 
 However, there are problems with these controls:
 
@@ -258,7 +258,7 @@ To make video accessible for deaf, blind, or even other groups of users (such as
 
 This is not a new concept — television services have had closed captioning available for quite a long time:
 
-![Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"](https://mdn.mozillademos.org/files/14436/closed-captions.png)
+![Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"](closed-captions.png)
 
 Whereas many countries offer English films with subtitles written in their own native languages, and different language subtitles are often available on DVDs, for example
 
@@ -308,7 +308,7 @@ Here's an example:
 
 This will result in a video that has subtitles displayed, kind of like this:
 
-![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
 For more details, please read [Adding captions and subtitles to HTML5 video](/ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). You can find [the example](http://iandevlin.github.io/mdn/video-player-with-captions/) that goes along with this article on Github, written by Ian Devlin (see the [source code](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) too.) This example uses some JavaScript to allow users to choose between different subtitles. Note that to turn the subtitles on, you need to press the "CC" button and select an option — English, Deutsch, or Español.
 

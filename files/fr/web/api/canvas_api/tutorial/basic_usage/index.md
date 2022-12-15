@@ -11,7 +11,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Utilisation_de_base
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas", "Tutoriel_canvas/Formes_géométriques")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas", "Tutoriel_canvas/Formes_géométriques")}}
 
 ## L'élément `<canvas>`
 
