@@ -62,7 +62,7 @@ if (a < b) {
 }
 ```
 
-注意，所有的比较运算符（包括 [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) 和 [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)）都区分大小写比较字符串。不区分大小写地比较字符串的常见方式是在比较它们之前将他们转为相同的大小写（大写或者小写）。
+注意，所有的比较运算符（包括 [`===`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality) 和 [`==`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)）在比较字符串时都区分大小写。不区分大小写地比较字符串的常见方式是在比较它们之前将它们转为相同的大小写（大写或者小写）。
 
 ```js
 function areEqualCaseInsensitive(str1, str2) {
