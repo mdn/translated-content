@@ -27,7 +27,7 @@ const string4 = new String("A String object");
 
 字符串原始值和字符串对象共享很多行为，但也有其他重要的区别和注意事项。请参阅下面的[字符串原始值和字符串对象](#字符串原始值和字符串对象)。
 
-字符串字面值可以使用单引号或者双引号指定，它们的处理方式相同，或者使用反引号字符 <kbd>`</kbd>。最后一种形式指定了[模板字符](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)：这种方式可以让你插入表达式。
+字符串字面量可以使用单引号或者双引号指定，它们的处理方式相同，或者使用反引号字符 <kbd>`</kbd>。最后一种形式指定了[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/Template_literals)：这种方式可以让你插入表达式。
 
 ### 访问字符
 
