@@ -28,7 +28,7 @@ translation_of: Learn/HTML/Tables/Structuring_planet_data
 
 Готовая таблица должна выглядеть так:
 
-![](https://mdn.mozillademos.org/files/14609/assessment-table.png)
+![](assessment-table.png)
 
 Вы можете также [посмотреть на готовый вариант здесь](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (не смотрите на исходный код — не жульничайте!).
 

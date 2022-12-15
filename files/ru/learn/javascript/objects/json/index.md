@@ -162,7 +162,7 @@ var section = document.querySelector('section');
 
 Мы собираемся загрузить его на нашу страницу и использовать некоторые изящные манипуляции DOM, чтобы отобразить их, например:
 
-![](https://mdn.mozillademos.org/files/13857/json-superheroes.png)
+![](json-superheroes.png)
 
 ### Получение JSON
 
