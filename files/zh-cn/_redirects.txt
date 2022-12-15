@@ -1608,6 +1608,7 @@
 /zh-CN/docs/Web/API/LocalFileSystemSync	/zh-CN/docs/Web/API/File_and_Directory_Entries_API
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
 /zh-CN/docs/Web/API/LockedFile	/zh-CN/docs/Web/API/IDBFileHandle
+/zh-CN/docs/Web/API/Long_Tasks_API	/zh-CN/docs/Web/API/PerformanceLongTaskTiming
 /zh-CN/docs/Web/API/MediaCapabilitiesInfo	/zh-CN/docs/Web/API/MediaCapabilities/encodingInfo
 /zh-CN/docs/Web/API/MediaDevices/ondevicechange	/zh-CN/docs/Web/API/MediaDevices/devicechange_event
 /zh-CN/docs/Web/API/MediaRecorder/ondataavailable	/zh-CN/docs/Web/API/MediaRecorder/dataavailable_event
