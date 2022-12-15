@@ -1,14 +1,6 @@
 ---
 title: "aria-label"
 slug: Web/Accessibility/ARIA/Attributes/aria-label
-tags:
-  - 접근성
-  - ARIA
-  - ARIA 속성
-  - ARIA 성질
-  - aria-label
-  - 출처
-spec-urls: https://w3c.github.io/aria/#aria-label
 ---
 
 `aria-label` 속성은 상호작용되는 요소에 레이블된 문자열 값을 정의합니다.
