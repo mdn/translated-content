@@ -1,8 +1,8 @@
 ---
 title: AudioBuffer
 slug: Web/API/AudioBuffer
-translation_of: Web/API/AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 La interfaz **`AudioBuffer`** representa un pequeño recurso de audio que se almacena en memoria, creado a partir de un archivo de audio usando el método {{ domxref("AudioContext.decodeAudioData()") }}, o de datos en bruto con el método {{ domxref("AudioContext.createBuffer()") }}. Una véz cargado en AudioBuffer, el audio puede ser reproducido pasandolo en el método {{ domxref("AudioBufferSourceNode") }}.
@@ -73,9 +73,7 @@ source.start();
 
 ## Especificaciones
 
-| Specification                                                                                        | Status                               | Comment             |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Web Audio API', '#the-audiobuffer-interface', 'AudioBuffer')}} | {{Spec2('Web Audio API')}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

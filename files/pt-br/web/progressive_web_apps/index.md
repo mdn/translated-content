@@ -1,15 +1,8 @@
 ---
 title: Progressive web apps
 slug: Web/Progressive_web_apps
-tags:
-  - Apps
-  - Modern web apps
-  - NeedsTranslation
-  - PWA
-  - Progressive web apps
-  - TopicStub
-translation_of: Web/Progressive_web_apps
 ---
+
 Os aplicativos web progressivos usam APIs web modernas, juntamente com a estratégia tradicional de aprimoramento progressivo para criar aplicativos web entre plataformas. Esses aplicativos funcionam em todos os lugares e fornecem vários recursos que lhes dão as mesmas vantagens de experiência do usuário que os aplicativos nativos. Este conjunto de médicos diz tudo o que você precisa saber sobre eles.
 
 ## PWA advantages
@@ -48,7 +41,7 @@ The following guides show you what need to do to implement a PWA, by examining a
 - [sw-precache](https://github.com/GoogleChrome/sw-precache) — a node module to generate service worker code that will precache specific resources.
 - [workbox](https://github.com/GoogleChrome/workbox) — spiritual successor to sw-precache with more advanced caching strategies and easy precaching.
 - [upup](https://www.talater.com/upup/) — a tiny script that makes sure your site is always there for your users.
-- [The service worker cookbook](https://serviceworke.rs/) — A series of excellent service worker/push recipes, showing how to implement an offline app, but also much more.
+- [The service worker cookbook](https://github.com/mdn/serviceworker-cookbook/) — A series of excellent service worker/push recipes, showing how to implement an offline app, but also much more.
 
 ## See also
 

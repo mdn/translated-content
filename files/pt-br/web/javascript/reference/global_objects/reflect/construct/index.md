@@ -1,8 +1,8 @@
 ---
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
+
 {{JSRef}}
 
 The static **`Reflect.construct()`** method acts like the [`new` operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/new), but as a function. It is equivalent to calling `new target(...args)`. It gives also the added option to specify a different prototype.

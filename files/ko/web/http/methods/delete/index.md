@@ -7,6 +7,7 @@ tags:
   - Request method
 translation_of: Web/HTTP/Methods/DELETE
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `DELETE` 메서드**는 지정한 리소스를 삭제합니다.

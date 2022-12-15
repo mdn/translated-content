@@ -37,4 +37,4 @@ Firefox 是 Netscape 浏览器的后继，在版本 4 中移除了 `<spacer>` �
 
 并不是任何规范的一部分。
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

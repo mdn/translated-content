@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
+
 {{CSSRef}}
 
 CSS счётчики, в своей сущности, переменные CSS, значения которых могут быть инкрементированы при помощи CSS для отслеживания количества их использования. Они позволяют регулировать внешний вид контента, основываясь на его местоположении в документе. CSS счётчики реализованы в CSS 2.1 ([ссылка на спецификацию](https://www.w3.org/TR/CSS21/generate.html#counters)).

@@ -1,13 +1,8 @@
 ---
 title: Referrer-Policy
 slug: Web/HTTP/Headers/Referrer-Policy
-tags:
-  - Cabecera
-  - HTTP
-  - Respuesta
-  - privacidad
-translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
+
 {{HTTPSidebar}}
 
 La cabecera **`Referrer-Policy`** de HTTP determina qué datos de referente, de entre los que se envían con la cabecera {{HTTPHeader("Referer")}}, deben incluirse con las solicitudes realizadas.
@@ -108,7 +103,7 @@ Referrer-Policy: unsafe-url
 
 ## Véase también
 
-- {{interwiki("wikipedia", "HTTP_referer", "Referente HTTP en Wikipedia")}}
+- [Referente HTTP en Wikipedia](https://es.wikipedia.org/wiki/HTTP_referer)
 - Otras maneras de definir una directiva de referentes:
 
   - Un elemento {{HTMLElement("meta")}} con un [nombre de `referrer`](/es/docs/Web/HTML/Element/meta#attr-name).

@@ -1,8 +1,8 @@
 ---
 title: ImageBitmapRenderingContext
 slug: Web/API/ImageBitmapRenderingContext
-translation_of: Web/API/ImageBitmapRenderingContext
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 El interface **`ImageBitmapRenderingContext`** es un lienzo de contexto renderizado que sólo permite la funcionalidad de reemplazar el contenido del lienzo ( [`<canvas>`](/es/docs/Web/HTML/Element/canvas) ) con el {{domxref("ImageBitmap")}} dado. La identificación de contenido (el primer argumento a {{domxref("HTMLCanvasElement.getContext()")}} o {{domxref("OffscreenCanvas.getContext()")}} es `"bitmaprenderer"`.

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Table
 ---
+
 {{CSSRef}}
 
 **CSS Table**은 표 데이터의 배치법을 정의하는 CSS 모듈입니다.

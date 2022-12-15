@@ -1,19 +1,8 @@
 ---
 title: CSS selectors
 slug: Learn/CSS/Building_blocks/Selectors
-tags:
-  - Attribute
-  - Beginner
-  - CSS
-  - Class
-  - Learn
-  - NeedsTranslation
-  - Pseudo
-  - Selectors
-  - TopicStub
-  - id
-translation_of: Learn/CSS/Building_blocks/Selectors
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
 
 Em {{Glossary("CSS")}}, os seletores são usados ​​para direcionar os elementos {{glossary("HTML")}} em nossas páginas da web que queremos estilizar. Há uma grande variedade de seletores CSS disponíveis, permitindo uma precisão refinada ao selecionar os elementos a serem estilizados. Neste artigo e seus sub-artigos, examinaremos os diferentes tipos em grande detalhe, vendo como eles funcionam.
@@ -54,7 +43,7 @@ Em {{Glossary("CSS")}}, os seletores são usados ​​para direcionar os elemen
 
 Você já conheceu os seletores. Um seletor CSS é a primeira parte de uma regra CSS. É um padrão de elementos e outros termos que informam ao navegador quais elementos HTML devem ser selecionados para que os valores de propriedade CSS dentro da regra sejam aplicados a eles. O elemento ou elementos que são selecionados pelo seletor são referidos como o _assunto do seletor_ .
 
-![Some code with the h1 highlighted.](https://mdn.mozillademos.org/files/16550/selector.png)
+![Some code with the h1 highlighted.](selector.png)
 
 Em artigos anteriores, você conheceu alguns seletores diferentes e aprendeu que existem seletores que direcionam o documento de maneiras diferentes - por exemplo, selecionando um elemento como `h1`, ou uma classe como `.special`.
 

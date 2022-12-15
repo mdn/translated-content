@@ -1,8 +1,8 @@
 ---
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
-translation_of: Web/API/Element/querySelector
 ---
+
 {{APIRef}}
 
 El método **`querySelector()`** de la intrefaz {{domxref("Element")}} devuelve el primer descendiente del elemento sobre el cual es invocado que coincida con el o los selectores especificados.

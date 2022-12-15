@@ -1,13 +1,9 @@
 ---
 title: Utilizando el atributo  aria-label
 slug: orphaned/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
-tags:
-  - Accesibilidad
-  - Referencia
-  - agente
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute
 ---
+
 El atributo [`aria-label`](https://www.w3.org/TR/wai-aria/#aria-label) se utiliza para definir una cadena que etiqueta el elemento actual. Úselo en los casos en que no haya una etiqueta de texto visible en pantalla. Si hay texto visible etiquetando el elemento, utilice [aria-labelledby](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) en su lugar.
 
 Este atributo puede ser utilizado con cualquier elemento HTML típico; no se limita a los elementos que tienen un papel ARIA asignado.

@@ -1,13 +1,9 @@
 ---
 title: Trabalhando com JSON
 slug: Learn/JavaScript/Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - assíncrono
-translation_of: Learn/JavaScript/Objects/JSON
 original_slug: Aprender/JavaScript/Objetos/JSON
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript Object Notation (JSON) é um formato baseado em texto padrão para representar dados estruturados com base na sintaxe do objeto JavaScript. É comumente usado para transmitir dados em aplicativos da Web (por exemplo, enviar alguns dados do servidor para o cliente, para que possam ser exibidos em uma página da Web ou vice-versa). Você se deparará com isso com bastante frequência, portanto, neste artigo, oferecemos tudo o que você precisa para trabalhar com o JSON usando JavaScript, incluindo a análise do JSON para que você possa acessar os dados dentro dele e criar o JSON.
@@ -191,7 +187,7 @@ Disponibilizamos nossos dados JSON em nosso GitHub, em<https://mdn.github.io/lea
 
 Vamos carregá-lo em nossa página e usar algumas manipulações de DOM nifty para exibi-lo, assim:
 
-![](https://mdn.mozillademos.org/files/13857/json-superheroes.png)
+![](json-superheroes.png)
 
 ### Obtendo o JSON
 

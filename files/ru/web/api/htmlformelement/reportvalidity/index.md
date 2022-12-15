@@ -3,6 +3,7 @@ title: HTMLFormElement.reportValidity()
 slug: Web/API/HTMLFormElement/reportValidity
 translation_of: Web/API/HTMLFormElement/reportValidity
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Метод **`HTMLFormElement.reportValidity()`** возвращает **`true`** если все дочерние элементы прошли проверку. Когда возвращается **`false`**, по каждому дочернему элементу не прошедшему проверку генерируется событие [`invalid`](/en-US/docs/Web/Events/invalid) и пользователю сообщаются проблемы проверки.

@@ -2,6 +2,7 @@
 title: StorageArea.get()
 slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
 ---
+
 {{AddonSidebar()}}
 
 저장소에서 하나 이상의 항목을 가져온다.

@@ -1,8 +1,8 @@
 ---
 title: 'ReferenceError: Atribuição à variável não declarada "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
-translation_of: Web/JavaScript/Reference/Errors/Undeclared_var
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

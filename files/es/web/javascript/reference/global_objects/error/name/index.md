@@ -1,14 +1,9 @@
 ---
 title: Error.prototype.name
 slug: Web/JavaScript/Reference/Global_Objects/Error/name
-tags:
-  - Error
-  - JavaScript
-  - Propiedad
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/Error/name
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Error/name
 ---
+
 {{JSRef}}
 
 La propiedad **`name`** representa un nombre para el tipo de error. El valor inicial es "Error".
@@ -31,9 +26,7 @@ throw e;
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error.prototype.name', 'Error.prototype.name')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

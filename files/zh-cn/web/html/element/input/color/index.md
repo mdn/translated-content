@@ -3,7 +3,7 @@ title: <input type="color">
 slug: Web/HTML/Element/Input/color
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`color`** 类型的 {{HTMLElement("input")}} 元素为用户提供了指定颜色的用户界面，或使用可视化颜色选择器，或以 `#rrggbb` 十六进制格式输入颜色值。
 

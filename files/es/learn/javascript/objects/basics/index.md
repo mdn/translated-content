@@ -1,25 +1,8 @@
 ---
 title: Conceptos básicos de los objetos JavaScript
 slug: Learn/JavaScript/Objects/Basics
-tags:
-  - API
-  - Aprender
-  - Artículo
-  - JavaScript
-  - Novato
-  - Object
-  - Objeto
-  - Principiante
-  - Sintaxis
-  - instancia
-  - l10n:priority
-  - notación de corchetes
-  - notación de punto
-  - objeto literal
-  - tehoría
-  - this
-translation_of: Learn/JavaScript/Objects/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 En éste artículo, veremos fundamentos de sintaxis de los objetos de JavaScript y revisaremos algunas características de JavaScript que ya hemos analizado anteriormente en el curso, reiterando el hecho de que muchas de las funciones con las que ya has tratado de hecho son objetos.
@@ -263,7 +246,7 @@ Entonces cuando usaste métodos de cadenas de texto como:
 myCadena.split(',');
 ```
 
-Estabas usando un método disponible en una instancia de la clase [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). Cada vez que creas una cadena en tu código, esa cadena se crea automáticamente como una instancia de String, y por lo tanto tiene varios métodos/propiedades comunes disponibles en ella.
+Estabas usando un método disponible en una instancia de la clase [`String`](/es/docs/Web/JavaScript/Reference/Global_Objects/String). Cada vez que creas una cadena en tu código, esa cadena se crea automáticamente como una instancia de String, y por lo tanto tiene varios métodos/propiedades comunes disponibles en ella.
 
 Cuando accediste al modelo de objetos del documento (document object model) usando líneas como esta:
 

@@ -3,6 +3,7 @@ title: Элемент.scrollTop
 slug: Web/API/Element/scrollTop
 translation_of: Web/API/Element/scrollTop
 ---
+
 {{ APIRef("DOM") }}
 
 `Свойство scrollTop` считывает или устанавливает количество пикселей, прокрученных от верха элемента. `scrollTop` измеряет дистанцию от верха элемента до верхней точки видимого контента. Когда контент элемента не создаёт вертикальную прокрутку, его `scrollTop` равно `0`.

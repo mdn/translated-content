@@ -1,9 +1,9 @@
 ---
 title: Funcion de primera clase
 slug: Glossary/First-class_Function
-translation_of: Glossary/First-class_Function
 original_slug: Glossary/Funcion_de_primera_clase
 ---
+
 Un lenguaje de programación se dice que tiene **Funciones de primera clase** cuando las funciones en ese lenguaje son tratadas como cualquier otra variable. Por ejemplo, en ese lenguaje, una función puede ser pasada como argumento a otras funciones, puede ser retornada por otra función y puede ser asignada a una variable.
 
 ## Ejemplo | Asignar función a una variable
@@ -94,7 +94,7 @@ Usamos paréntesis doble `()()` para invocar también a la función retornada.
 
 <section id="Quick_links">
  <ol>
-  <li>{{Interwiki("wikipedia", "First-class_function", "First-class functions")}} on Wikipedia</li>
+  <li>[First-class functions](https://es.wikipedia.org/wiki/First-class_function) on Wikipedia</li>
   <li><a href="/en-US/docs/Glossary">MDN Web Docs Glossary</a>
    <ul>
     <li>{{glossary("Callback function")}}</li>

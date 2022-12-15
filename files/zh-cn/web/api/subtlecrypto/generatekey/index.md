@@ -40,7 +40,7 @@ generateKey(algorithm, extractable, keyUsages)
 
 ### 返回值
 
-一个 {{jsxref("Promise")}}，兑现为 {{domxref("CryptoKey")}}（用于对称加密算法）或  {{domxref("CryptoKeyPair")}}（用于非对称加密算法）。
+一个 {{jsxref("Promise")}}，兑现为 {{domxref("CryptoKey")}}（用于对称加密算法）或 {{domxref("CryptoKeyPair")}}（用于非对称加密算法）。
 
 ### 异常
 

@@ -1,9 +1,9 @@
 ---
 title: WindowEventHandlers.onhashchange
 slug: Web/API/Window/hashchange_event
-translation_of: Web/API/WindowEventHandlers/onhashchange
 original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
+
 {{APIRef("HTML DOM")}}
 
 O evento **hashchange** é disparado quando a _hash_ da _window_ muda. (ver {{domxref("Window.location", "location.hash")}}).
@@ -51,10 +51,10 @@ window.onhashchange = locationHashChanged;
 
 O evento hashchange disparado possui os seguintes campos
 
-| Campo                                                 | Tipo        | Descrição                                       |
-| ----------------------------------------------------- | ----------- | ----------------------------------------------- |
-| `newURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | A nova URL para a qual a janela está navegando. |
-| `oldURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | A antiga URL da qual a janela veio.             |
+| Campo    | Tipo        | Descrição                                       |
+| -------- | ----------- | ----------------------------------------------- |
+| `newURL` | `DOMString` | A nova URL para a qual a janela está navegando. |
+| `oldURL` | `DOMString` | A antiga URL da qual a janela veio.             |
 
 ## Especificações
 

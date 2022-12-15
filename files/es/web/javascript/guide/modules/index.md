@@ -1,16 +1,9 @@
 ---
 title: Módulos JavaScript
 slug: Web/JavaScript/Guide/Modules
-tags:
-  - Guía
-  - JavaScript
-  - Modules
-  - Módulos
-  - export
-  - import
-translation_of: Web/JavaScript/Guide/Modules
 original_slug: Web/JavaScript/Guide/Módulos
 ---
+
 {{JSSidebar("Guía de JavaScript")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 Esta guía te brinda todo lo que necesitas para comenzar con la sintaxis de los módulos JavaScript.

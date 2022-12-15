@@ -1,12 +1,8 @@
 ---
 title: Sintaxe de Espalhamento
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
+
 {{jsSidebar("Operators")}}**Sintaxe de Espalhamento (Spread syntax)** permite que um objeto iterável, como uma expressão de array ou uma string seja expandido para ser usado onde zero ou mais argumentos (para chamadas de funções) ou elementos (para arrays _literais_) são esperados, ou que um objeto seja expandido onde zero ou mais pares _propriedade:valor_ (para objetos _literais_) são esperados.{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
 
 ## Sintaxe

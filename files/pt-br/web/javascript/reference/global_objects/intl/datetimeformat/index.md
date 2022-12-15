@@ -1,8 +1,8 @@
 ---
 title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 ---
+
 {{JSRef}}
 
 O objeto Intl.DateTimeFormat é um constructor para objetos que habilita o formato de data e hora no idioma padrão.

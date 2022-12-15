@@ -1,16 +1,8 @@
 ---
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
-tags:
-  - Codificação
-  - JavaScript
-  - Texto
-  - URI
-  - URL
-  - encodeURI
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 A função **`encodeURI()`** codifica a [URI](/pt-BR/docs/Glossary/URI) substituindo cada instância de certos caracteres por um, dois, três ou quatro sequências de escape representando a codificação [UTF-8](/pt-BR/docs/Glossary/UTF-8) do caracter (será somente quatro sequências de escape para caracteres compostos de dois caracteres substitutos).

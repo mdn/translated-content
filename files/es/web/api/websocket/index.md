@@ -1,8 +1,8 @@
 ---
 title: WebSocket
 slug: Web/API/WebSocket
-translation_of: Web/API/WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}{{SeeCompatTable}}El objeto WebSocket provee la API para la creación y administración de una conexión [WebSocket](/es/docs/Web/API/WebSockets_API)a un servidor, así como también para enviar y recibir datos en la conexión.El constructor de WebSocket acepta un parámetro requerido y otro opcional.
 
 ```
@@ -88,7 +88,7 @@ void close(
 - `SYNTAX_ERR`
   - : La `reason` cadena es demasiado larga o continene caracteres no validos.
 
-> **Nota:** En Gecko, este métido no soporta ningun parámetro antes de Gecko 8.0 {{geckoRelease("8.0")}}.
+> **Nota:** En Gecko, este método no soporta ningun parámetro antes de Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
 
 ### send()
 
@@ -143,9 +143,7 @@ socket.addEventListener('message', function (event) {
 
 ## Especificaciones
 
-| Specification                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Websockets", "#the-websocket-interface", "WebSocket")}} | {{Spec2("Websockets")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

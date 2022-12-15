@@ -5,6 +5,7 @@ tags:
   - Событие
 translation_of: Web/API/Document/DOMContentLoaded_event
 ---
+
 {{APIRef}}
 
 Событие **`DOMContentLoaded`** запускается когда первоначальный HTML документ будет полностью загружен и разобран, без ожидания полной загрузки таблиц стилей, изображений и фреймов.

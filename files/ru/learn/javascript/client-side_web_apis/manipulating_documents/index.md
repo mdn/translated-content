@@ -10,6 +10,7 @@ tags:
   - Окно
 translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
 
 При написании веб-страниц и приложений вам придётся часто каким-либо образом управлять структурой документа. Обычно это делается с помощью Document Object Model (DOM), набора API для управления разметкой HTML и стилями, которая сильно использует объект {{domxref ("Document")}}. В этой статье мы подробно рассмотрим, как использовать DOM и некоторые другие интересные API, которые могут изменить вашу среду интересными способами.
@@ -24,7 +25,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 Несмотря на ограничения, Web API по-прежнему дают нам доступ к множеству функциональных возможностей, которые позволяют нам многое делать с веб-страницами. Есть несколько действительно очевидных моментов, на которые вы будете регулярно ссылаться в своём коде. Рассмотрим следующую диаграмму, которая представляет основные части браузера, непосредственно участвующие в просмотре веб-страниц:
 
-![](https://mdn.mozillademos.org/files/14557/document-window-navigator.png)
+![](document-window-navigator.png)
 
 - Окно - это вкладка браузера, в которую загружается веб-страница; это представлено в JavaScript объектом {{domxref("Window")}}. Используя методы, доступные для этого объекта, вы можете делать такие вещи, как возврат размера окна (см. {{Domxref("Window.innerWidth")}} и {{domxref("Window.innerHeight")}}), манипулировать документом, загруженным в этот window, хранить данные, специфичные для этого документа на стороне клиента (например, используя локальную базу данных или другой механизм хранения), присоединить обработчик событий ([event handler](/ru/docs/Learn/JavaScript/Building_blocks/Events#A_series_of_fortunate_events)) к текущему окну и многое другое.
 - Навигатор представляет состояние и идентификатор браузера (т. е. пользовательский агент), как он существует в Интернете. В JavaScript это представлено объектом {{domxref("Navigator")}}. Вы можете использовать этот объект для извлечения таких вещей, как геолокационная информация, предпочтительный язык пользователя, медиапоток с веб-камеры пользователя и т. д.
@@ -56,7 +57,7 @@ translation_of: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 
 DOM, с другой стороны, выглядит так:
 
-![](https://mdn.mozillademos.org/files/14559/dom-screenshot.png)
+![](dom-screenshot.png)
 
 > **Примечание:** . Эта диаграмма дерева DOM была создана с использованием [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/) Яна Хиксона.
 
@@ -275,7 +276,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 Готовое демо будет выглядеть примерно так:
 
-![](https://mdn.mozillademos.org/files/14563/shopping-list.png)
+![](shopping-list.png)
 
 Чтобы завершить упражнение, выполните следующие действия и убедитесь, что список ведёт себя так, как описано выше.
 

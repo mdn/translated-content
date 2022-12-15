@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Subtraction
 browser-compat: javascript.operators.subtraction
 ---
+
 {{jsSidebar("Operators")}}
 
 빼기 연산자(`-`)는 두 연산자의 차이를 구합니다.

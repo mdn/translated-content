@@ -1,9 +1,9 @@
 ---
 title: Demonstrações de tecnologia web aberta
 slug: Web/Demos
-translation_of: Web/Demos_of_open_web_technologies
 original_slug: Web/Demos_of_open_web_technologies
 ---
+
 A mozilla suporta uma grande variedade de tecnologias abertas da web aberta e nós encorajamos seu uso.Esta página oferece links para demonstrações interessantes dessas tecnologia.
 
 Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta, adicione um link para a seção apropriada aqui.

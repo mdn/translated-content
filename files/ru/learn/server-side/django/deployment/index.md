@@ -9,6 +9,7 @@ tags:
 translation_of: Learn/Server-side/Django/Deployment
 original_slug: Learn/Server-side/Django/Разворачивание
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Testing", "Learn/Server-side/Django/web_application_security", "Learn/Server-side/Django")}}
 
 Теперь, когда вы создали (и протестировали) свой шикарный сайт [LocalLibrary](/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website), у вас скорее всего, есть желание разместить его на публичном веб-сервере, чтобы он стал доступен через интернет персоналу и посетителям библиотеки. Данная статья даёт общее представление о том, каким образом подойти к поиску хостинга для размещения сайта, а также, что нужно сделать чтобы подготовить свой сайт к публикации.

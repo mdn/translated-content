@@ -1,8 +1,8 @@
 ---
 title: Console.dir()
 slug: Web/API/Console/dir
-translation_of: Web/API/Console/dir
 ---
+
 {{APIRef("Console API")}}
 
 El método **`dir()`** de {{domxref("Console")}} despliega una lista interactiva de las propiedades del objeto JavaScript especificado. El resultado es presentado como un listado jerárquico con triángulos de despliegue que te dejan ver los contenidos de los objetos hijos.
@@ -26,9 +26,7 @@ console.dir(objeto);
 
 ## Especificaciones
 
-| Especificación                                                                           | Estatus                          | Comentario         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#consoledirobject", "console.dir()")}} | {{Spec2("Console API")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

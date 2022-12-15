@@ -1,17 +1,8 @@
 ---
 title: Object.is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
-tags:
-  - Comparação
-  - Condição
-  - ECMAScript6
-  - Igualdade
-  - JavaScript
-  - Objeto
-  - condicional
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/is
 ---
+
 {{JSRef}}
 
 O método **`Object.is()`** determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness).

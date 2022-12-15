@@ -1,8 +1,8 @@
 ---
 title: Printing
 slug: Web/Guide/Printing
-translation_of: Web/Guide/Printing
 ---
+
 Pode haver momentos em que seu site ou aplicação queira melhorar a experiência do usuário quando imprime um conteúdo. Existem diversos cenários possíveis:
 
 - Você deseja ajustar o layout para tirar vantagem do tamanho e forma do papel.

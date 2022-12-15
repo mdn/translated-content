@@ -3,6 +3,7 @@ title: Введение в CSS вёрстку
 slug: Learn/CSS/CSS_layout/Introduction
 translation_of: Learn/CSS/CSS_layout/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
 
 В этой статье мы рассмотрим некоторые функции макета CSS, которые мы затрагивали в предыдущих статьях, например различные значения свойства {{cssxref("display")}}, и разберём некоторые концепции, которые будут рассмотрены в этой статье.

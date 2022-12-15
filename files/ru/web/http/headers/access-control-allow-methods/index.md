@@ -8,6 +8,7 @@ tags:
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Methods
 original_slug: Web/HTTP/Заголовки/Access-Control-Allow-Methods
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Allow-Methods`** это заголовок ответа, который определяет метод или методы доступа к ресурсам {{glossary("preflight request")}}.

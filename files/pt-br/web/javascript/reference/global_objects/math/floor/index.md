@@ -1,12 +1,8 @@
 ---
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
-tags:
-  - JavaScript
-  - Math
-  - Method
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## Resumo

@@ -6,6 +6,7 @@ tags:
   - Свойство
 translation_of: Web/CSS/user-select
 ---
+
 {{CSSRef}}
 
 Свойство [CSS](/ru/docs/Web/CSS) **`user-select`** определяет может ли пользователь выбрать текст. Оно не влияет на контент, загруженный как {{Glossary("Chrome", "chrome")}}, за исключением текстовых блоков.

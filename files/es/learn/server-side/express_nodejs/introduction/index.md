@@ -1,17 +1,8 @@
 ---
 title: Introducción a Express/Node
 slug: Learn/Server-side/Express_Nodejs/Introduction
-tags:
-  - Aprender
-  - Express
-  - MDN
-  - Node
-  - Servidor
-  - javascri
-  - lado del servidor
-  - nodejs
-translation_of: Learn/Server-side/Express_Nodejs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Aprendizaje/Lado-Servidor/Express_Nodejs/Ambiente-Desarrollo", "Aprendizaje/Lado-Servidor/Express_Nodejs")}}
 
 En este primer articulo de Express resolveremos las preguntas "¿Qué es Node?" y "¿Qué es Express?", y te daremos una visión general de que hace especial al framework web "Express". Delinearemos las características principales, y te mostraremos algunos de los principales bloques de construcción de una aplicación en Express (aunque en este punto no tendrás todavía un entorno de desarrollo en que probarlo).

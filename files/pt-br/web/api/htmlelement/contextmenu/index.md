@@ -1,17 +1,8 @@
 ---
 title: HTMLElement.contextMenu
 slug: Web/API/HTMLElement/contextMenu
-tags:
-  - API
-  - Depreciado
-  - Elemento
-  - HTML
-  - HTML DOM
-  - Propriedade
-  - Referencia
-  - UX
-translation_of: Web/API/HTMLElement/contextMenu
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header()}}
 
 A propriedade **`HTMLElement.contextMenu`** refere-se ao menu de contexo atribuído aum elemento usando o {{htmlattrxref("contextmenu")}} atributo. O menu em sí é criado usando o {{HTMLElement("menu")}} elemento.

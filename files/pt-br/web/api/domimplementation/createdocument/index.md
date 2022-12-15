@@ -1,8 +1,8 @@
 ---
 title: DOMImplementation.createDocument()
 slug: Web/API/DOMImplementation/createDocument
-translation_of: Web/API/DOMImplementation/createDocument
 ---
+
 {{ApiRef("DOM")}}
 
 O método **`DOMImplementation.createDocument()`** cria e retorna um {{domxref("XMLDocument")}}.
@@ -25,8 +25,8 @@ doc = document.implementation.createDocument(namespaceURI, qualifiedNameStr, doc
 ## Example
 
 ```js
-var doc = document.implementation.createDocument ('http://www.w3.org/1999/xhtml', 'html', null);
-var body = document.createElementNS('http://www.w3.org/1999/xhtml', 'body');
+var doc = document.implementation.createDocument ('https://www.w3.org/1999/xhtml', 'html', null);
+var body = document.createElementNS('https://www.w3.org/1999/xhtml', 'body');
 body.setAttribute('id', 'abc');
 doc.documentElement.appendChild(body);
 alert(doc.getElementById('abc')); // [object HTMLBodyElement]

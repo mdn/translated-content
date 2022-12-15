@@ -103,10 +103,7 @@ function addStylesheetRules (rules) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('CSSOM', '#dom-cssstylesheet-insertrule', 'CSSStyleSheet.insertRule')}}                     | {{Spec2('CSSOM')}}         | {{SpecName('DOM2 Style')}} からの変更なし。 |
-| {{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleSheet-insertRule', 'CSSStyleSheet.insertRule')}} | {{Spec2('DOM2 Style')}} | 初回定義                                              |
+{{Specifications}}
 
 ## ポリフィル
 

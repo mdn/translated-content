@@ -1,9 +1,9 @@
 ---
 title: Novas funcionalidades no Firefox
 slug: Mozilla/Firefox/Experimental_features
-translation_of: Mozilla/Firefox/Experimental_features
 original_slug: Mozilla/Firefox/Novas_funcionalidades
 ---
+
 {{FirefoxSidebar}}
 
 Com intuito de testar as novas funcionalidades, a Mozilla publica uma versão de testes do navegador Firefox, [Firefox Nightly](https://nightly.mozilla.org/), diariamente. Funcionalidades experimentais, por exemplo implementações de propostas de padrões para plataforma Web, estão disponíveis. Essa página lista funcionalidades que estão nas versões Nightly do Firefox juntamente com informações de como ativá-las, se necessário. Você pode testar seus websites e aplicações antes dessas funcionalidades serem lançadas e garantir que tudo ainda irá funcionar com os recursos mais recentes da tecnologia da Web.

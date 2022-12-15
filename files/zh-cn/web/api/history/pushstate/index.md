@@ -16,7 +16,7 @@ history.pushState(state, title[, url])
 ### 参数
 
 - `state`
-  - : 状态对象是一个 JavaScript 对象，它与`pushState()`创建的新历史记录条目相关联。每当用户导航到新状态时，都会触发{{event("popstate")}}事件，并且该事件的状态属性包含历史记录条目的状态对象的副本。
+  - : 状态对象是一个 JavaScript 对象，它与`pushState()`创建的新历史记录条目相关联。每当用户导航到新状态时，都会触发[`popstate`](/zh-CN/docs/Web/API/Window/popstate_event)事件，并且该事件的状态属性包含历史记录条目的状态对象的副本。
     状态对象可以是任何可以序列化的对象。因为 Firefox 将状态对象保存到用户的磁盘上，以便用户重新启动浏览器后可以将其还原，所以我们对状态对象的序列化表示施加了 2MiB 的大小限制。如果将序列化表示形式大于此状态的状态对象传递给`pushState()`，则该方法将引发异常。如果您需要更多空间，建议您使用 {{domxref("Window.sessionStorage", "sessionStorage")}}或者{{domxref("Window.localStorage", "localStorage")}}。
 - `title`
   - : [当前大多数浏览器都忽略此参数](https://github.com/whatwg/html/issues/2174)，尽管将来可能会使用它。在此处传递空字符串应该可以防止将来对方法的更改。或者，您可以为要移动的状态传递简短的标题。
@@ -31,7 +31,7 @@ history.pushState(state, title[, url])
 - 非强制修改 URL。相反，设置 `window.location = "#foo";` 仅仅会在锚的值不是 #foo 情况下创建一条新的历史记录。
 - 可以在新的历史记录中关联任何数据。`window.location = "#foo"`形式的操作，你只可以将所需数据写入锚的字符串中。
 
-注意： `pushState()` 不会造成 {{event("hashchange")}} 事件调用，即使新的 URL 和之前的 URL 只是锚的数据不同。
+注意： `pushState()` 不会造成 [`hashchange`](/zh-CN/docs/Web/API/Window/hashchange_event) 事件调用，即使新的 URL 和之前的 URL 只是锚的数据不同。
 
 ## 示例
 

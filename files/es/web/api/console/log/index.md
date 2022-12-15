@@ -1,23 +1,8 @@
 ---
 title: Console.log()
 slug: Web/API/Console/log
-tags:
-  - API
-  - Compatibilidad necesaria con navegadores
-  - Consola
-  - DOM
-  - Desarrollo web
-  - Método(2)
-  - consola web
-  - console.dir()
-  - console.log()
-  - debuguear
-  - depurar
-  - diferencia
-  - Árbol HTML
-  - Árbol JSON
-translation_of: Web/API/Console/log
 ---
+
 {{APIRef("Console API")}}Muestra un mensaje en la consola web (o del intérprete JavaScript).
 
 {{AvailableInWorkers}}
@@ -42,9 +27,7 @@ Vea "[Mostrando texto en la consola](/es/docs/DOM/console#Outputting_text_to_the
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                           | Comentario         |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Console API", "#log", "console.log()")}} | {{Spec2("Console API")}} | Definicion inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

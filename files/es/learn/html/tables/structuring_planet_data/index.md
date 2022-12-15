@@ -1,9 +1,9 @@
 ---
 title: 'Evaluación: Estructurando datos planetarios'
 slug: Learn/HTML/Tables/Structuring_planet_data
-translation_of: Learn/HTML/Tables/Structuring_planet_data
 original_slug: Learn/HTML/Tablas/Structuring_planet_data
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 En nuestra evaluación te proporcionamos datos sobre los planetas de nuestro sistema solar y tu los estructurarás en una tabla HTML.
@@ -39,7 +39,7 @@ Estás trabajando en la escuela; tus estudiantes están estudiando los planetas 
 
 La tabla finalizada debería de verse así:
 
-![](https://mdn.mozillademos.org/files/14609/assessment-table.png)
+![](assessment-table.png)
 
 También puedes ver el ejemplo [aquí](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (no mires el código fuente — ¡no hagas trampas!)
 

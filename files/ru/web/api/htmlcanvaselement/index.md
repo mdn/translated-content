@@ -11,6 +11,7 @@ tags:
   - TopicStub
 translation_of: Web/API/HTMLCanvasElement
 ---
+
 {{APIRef("Canvas API")}}
 
 Интерфейс **`HTMLCanvasElement`** предоставляет свойства и методы для управления расположением и представлением элементов canvas. Он также наследует свойства и методы интерфейса {{domxref("HTMLElement")}}.

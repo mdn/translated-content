@@ -11,6 +11,7 @@ tags:
   - Web
 browser-compat: api.Element.cut_event
 ---
+
 {{APIRef}}
 
 **`copy`** 이벤트는 사용자가 브라우저의 사용자 인터페이스를 통해 잘라내기를 했을 때 발생합니다.

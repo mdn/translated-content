@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Transitions
 ---
+
 {{CSSRef}}
 
 **CSS Transitions**는 특정 CSS 속성의 값을 점진적으로 바꿀 수 있는 CSS 모듈입니다. 타이밍 함수, 시간 등 여러 속성을 통해 값이 바뀌는 방식을 조절할 수 있습니다.

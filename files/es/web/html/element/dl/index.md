@@ -1,16 +1,10 @@
 ---
 title: dl
 slug: Web/HTML/Element/dl
-tags:
-  - Agrupando contenido HTML
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/dl
 original_slug: Web/HTML/Elemento/dl
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 El elemento **HTML `<dl>`** representa una lista descriptiva. El elemento encierra una lista de grupos de términos (especificados con el uso del elemento {{HTMLElement("dt")}}) y de descripciones (proveídas con elementos {{HTMLElement("dd")}}). Algunos usos comunes para este elemento son implementar un glosario o para desplegar metadatos (lista de pares llave-valor).
 
@@ -212,11 +206,7 @@ Para cambiar la indentación de un término, usa la propiedad {{cssxref("margin"
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                          | Comentarios        |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-dl-element', '&lt;dl&gt;')}}     | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-dl-element', '&lt;dl&gt;')}} | {{Spec2('HTML5 W3C')}}     |                    |
-| {{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dl&gt;')}}                 | {{Spec2('HTML4.01')}}     | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad Web
 

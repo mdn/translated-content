@@ -76,7 +76,7 @@ Les objets [`DOMString`](/fr/docs/Web/API/DOMString) sont des chaînes de caract
 
 Voici ces deux méthodes :
 
-### Première solution  – échapper la chaîne avant de l'encoder
+### Première solution – échapper la chaîne avant de l'encoder
 
 ```js
 function utf8_to_b64( str ) {

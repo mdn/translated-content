@@ -1,12 +1,9 @@
 ---
 title: Math.hypot()
 slug: Web/JavaScript/Reference/Global_Objects/Math/hypot
-tags:
-  - JavaScript
-  - Math
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/hypot
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/hypot
 ---
+
 {{JSRef}}
 
 La función **`Math.hypot()`** retorna la raíz cuadrada de la suma de los cuadrados de sus argumentos, es decir:
@@ -91,10 +88,7 @@ Math.hypot = function (x, y) {
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-math.hypot', 'Math.hypot')}}     | {{Spec2('ES2015')}}     | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-math.hypot', 'Math.hypot')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

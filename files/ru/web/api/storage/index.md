@@ -11,6 +11,7 @@ tags:
   - data
 translation_of: Web/API/Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 `Интерфейс Storage` из Web Storage API предоставляет доступ для session storage или local storage для конкретного домена, позволяя вам к примеру добавлять, изменять или удалять сохранённые элементы данных.

@@ -1,17 +1,6 @@
 ---
 title: Almacenamiento del lado cliente
 slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
-tags:
-  - API
-  - Almacenaje
-  - Article
-  - CodingScripting
-  - Guía
-  - IndexedDB
-  - JavaScript
-  - Principiante
-  - aprende
-translation_of: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 ---
 
 {{LearnSidebar}}
@@ -134,7 +123,7 @@ Apliquemos este conocimiento recién descubierto escribiendo un sencillo ejemplo
 
 Puede encontrar el HTML de ejemplo en [personal-greeting.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/web-storage/personal-greeting.html): contiene un sitio web simple con un encabezado, contenido y pie de página, y un formulario para ingresar tu nombre.
 
-![Ejemplo de almacenamiento](https://mdn.mozillademos.org/files/15735/web-storage-demo.png)
+![Ejemplo de almacenamiento](web-storage-demo.png)
 
 Construyamos el ejemplo para que puedas entender cómo funciona.
 
@@ -243,7 +232,7 @@ Aquí, mostraremos un ejemplo que te permite almacenar notas en tu navegador y v
 
 La aplicación se parece a esta:
 
-![IDB en acción](https://mdn.mozillademos.org/files/15744/idb-demo.png)
+![IDB en acción](idb-demo.png)
 
 Cada nota tiene un título y un cuerpo de texto, cada uno editable individualmente. El código JavaScript que veremos a continuación tiene comentarios detallados para ayudarte a comprender lo que está sucediendo.
 
@@ -272,7 +261,7 @@ Ahora veamos lo que tenemos que hacer en primer lugar, para configurar una base 
    window.onload = function () {};
    ```
 
-   Escribiremos todo nuestro subsiguiente código dentro de esta función controladora de eventos `window.onload`, llamada cuando se activa el evento {{event("load")}} de la ventana, para asegurarnos de que no intentemos usar la funcionalidad `IndexedDB` antes de que la aplicación haya terminado de cargarse por completo (podría fallar si no lo hacemos).
+   Escribiremos todo nuestro subsiguiente código dentro de esta función controladora de eventos `window.onload`, llamada cuando se activa el evento [`load`](/es/docs/Web/Reference/Events/load) de la ventana, para asegurarnos de que no intentemos usar la funcionalidad `IndexedDB` antes de que la aplicación haya terminado de cargarse por completo (podría fallar si no lo hacemos).
 
 3. Dentro del controlador `window.onload`, agrega lo siguiente:
 
@@ -651,7 +640,7 @@ Repasemos las partes más interesantes del ejemplo. No lo veremos todo; gran par
 
 El ejemplo anterior ya muestra cómo crear una aplicación que almacenará grandes activos en una base de datos `IndexedDB`, evitando la necesidad de descargarlos más de una vez. Esto ya es una gran mejora para la experiencia del usuario, pero todavía falta una cosa: los archivos HTML, CSS y JavaScript principales aún se deben descargar cada vez que se accede al sitio, lo cual significa que no funcionará cuando no haya conexión de red.
 
-![Fuera de línea](https://mdn.mozillademos.org/files/15759/ff-offline.png)
+![Fuera de línea](ff-offline.png)
 
 Aquí es donde entran el [servicio workers](/es/docs/Web/API/Service_Worker_API) y la [API de caché](/es/docs/Web/API/Cache).
 
@@ -739,7 +728,7 @@ self.addEventListener("fetch", function (e) {
 });
 ```
 
-Y eso es todo para nuestro sencillo servicio _worker_. Hay muchas más cosas que puedes hacer con ellos; para obtener más detalles, consulta el [libro de recetas para el servicio _worker_](https://serviceworke.rs/). Y gracias a Paul Kinlan por su artículo [Agregar un servicio _worker_ y sin conexión a tu aplicación web](https://developers.google.com/web/fundamentals/codelabs/offline/), que inspiró este sencillo ejemplo.
+Y eso es todo para nuestro sencillo servicio _worker_. Hay muchas más cosas que puedes hacer con ellos; para obtener más detalles, consulta el [libro de recetas para el servicio _worker_](https://github.com/mdn/serviceworker-cookbook/). Y gracias a Paul Kinlan por su artículo [Agregar un servicio _worker_ y sin conexión a tu aplicación web](https://developers.google.com/web/fundamentals/codelabs/offline/), que inspiró este sencillo ejemplo.
 
 #### Probando el ejemplo sin conexión
 

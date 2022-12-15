@@ -1,16 +1,9 @@
 ---
 title: XMLHttpRequest.onreadystatechange
 slug: Web/API/XMLHttpRequest/readystatechange_event
-tags:
-  - AJAX
-  - API
-  - Evento
-  - Manipulador de eventos
-  - XHR
-  - XMLHttpRequest
-translation_of: Web/API/XMLHttpRequest/onreadystatechange
 original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
+
 {{APIRef}}
 
 Um [`EventHandler`](/pt-BR/docs/Web/API/EventHandler) é chamado sempre que o atributo `readyState` é modificado. O callback é chamado a partir da interface do usuário. A propriedade **`XMLHttpRequest.onreadystatechange`** contém o manipulador de eventos que é chamado quando o evento [readystatechange](/pt-BR/docs/Web/Events/readystatechange) é disparado, ou seja, toda vez que a propriedade {{domxref("XMLHttpRequest.readyState", "readyState")}} do {{domxref("XMLHttpRequest")}} é modificada.

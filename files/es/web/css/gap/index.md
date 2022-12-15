@@ -1,10 +1,9 @@
 ---
 title: grid-gap
 slug: Web/CSS/gap
-translation_of: Web/CSS/gap
-translation_of_original: Web/CSS/grid-gap
 original_slug: Web/CSS/grid-gap
 ---
+
 ## Resumen
 
 La propiedad CSS `grid-gap` es una propiedad abreviada [shorthand](/es/docs/Web/CSS/Shorthand_properties) para {{cssxref("grid-row-gap")}} y {{cssxref("grid-column-gap")}} que especifica los canales entre las filas y las columnas de la cuadrícula.
@@ -90,9 +89,7 @@ CSS
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                       | Comentario         |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-gap", "grid-gap")}} | {{Spec2("CSS3 Grid")}} | definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

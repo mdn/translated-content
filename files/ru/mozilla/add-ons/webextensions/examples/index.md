@@ -7,6 +7,7 @@ tags:
   - Интерфейс
 translation_of: Mozilla/Add-ons/WebExtensions/Examples
 ---
+
 {{AddonSidebar}}
 
 В целях иллюстрации разработки расширений, мы поддерживаем репозиторий простых демонстрационных расширений по адресу <https://github.com/mdn/webextensions-examples>. Данная статья описывает, как использовать эти примеры, и перечисляет их вместе с API Веб-расширений (WebExtensions API), которые они демонстрируют.

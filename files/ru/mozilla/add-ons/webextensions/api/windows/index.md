@@ -3,6 +3,7 @@ title: windows
 slug: Mozilla/Add-ons/WebExtensions/API/windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 ---
+
 {{AddonSidebar}}
 
 Взаимодействие с окнами браузера. Вы можете использовать этот API, чтобы получить информацию об открытых окнах, а также открывать, изменять и закрывать окна. Вы также можете обрабатывать события открытия, закрытия окна, и активировать события.

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<textarea>`** は [HTML](/ja/docs/Web/HTML) の要素で、複数行のプレーンテキスト編集コントロールを表し、レビューのコメントやお問い合わせフォーム等のように、ユーザーが大量の自由記述テキストを入力できるようにするときに便利です。
 

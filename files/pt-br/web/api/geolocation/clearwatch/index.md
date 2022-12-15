@@ -1,8 +1,8 @@
 ---
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
-translation_of: Web/API/Geolocation/clearWatch
 ---
+
 {{securecontext_header}}{{ APIref("Geolocation API") }}
 
 O método **`Geolocation.clearWatch()`** é usado para cancelar o registro dos manipuladores de monitoramento de localização / erro instalados anteriormente usando {{domxref("Geolocation.watchPosition()")}}.

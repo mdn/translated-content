@@ -1,11 +1,8 @@
 ---
 title: content
 slug: Web/CSS/content
-tags:
-  - Propriedade CSS
-  - Referencia
-translation_of: Web/CSS/content
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`content`** é usada com os pseudoelementos {{cssxref("::before")}} e {{cssxref("::after")}} para gerar conteúdo em um elemento. Objetos inseridos usando a propriedade `content` são _[elementos substituídos](/pt-BR/docs/CSS/Replaced_element) anônimos_.
@@ -89,7 +86,7 @@ Este exemplo insere aspas ao redor de citações e adiciona a palavra "Capítulo
 ```html
 <h1>5</h1>
 <p>De acordo com o Sr. Tim Berners-Lee,
-  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
+  <q cite="https://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
     lucky enough to invent the Web at the time when the Internet
     already existed - and had for a decade and a half.</q>
   Devemos entender que não há nada fundamentalmente errado em criar
@@ -219,7 +216,7 @@ a::after {
 }
 
 #mdn::before {
-  content: url("https://mdn.mozillademos.org/files/7691/mdn-favicon16.png") ;
+  content: url("mdn-favicon16.png") ;
 }
 
 li {

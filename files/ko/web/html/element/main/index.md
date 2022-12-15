@@ -9,7 +9,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/main
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<main>` 요소**는 문서 {{HTMLElement("body")}}의 주요 콘텐츠를 나타냅니다. 주요 콘텐츠 영역은 문서의 핵심 주제나 앱의 핵심 기능에 직접적으로 연결됐거나 확장하는 콘텐츠로 이루어집니다.
 

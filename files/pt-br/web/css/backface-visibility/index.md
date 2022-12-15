@@ -1,8 +1,8 @@
 ---
 title: backface-visibility
 slug: Web/CSS/backface-visibility
-translation_of: Web/CSS/backface-visibility
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Sumário

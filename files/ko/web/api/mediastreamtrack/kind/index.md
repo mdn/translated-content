@@ -10,6 +10,7 @@ tags:
   - WebRTC
 translation_of: Web/API/MediaStreamTrack/kind
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack.kind`** 읽기 전용 속성은 트랙이 오디오인 경우 `"audio"`, 비디오인 경우 `"video"`인 {{domxref("DOMString")}}을 반환합니다. 트랙이 소스에서 분리된 경우엔 바뀌지 않습니다.

@@ -1,13 +1,8 @@
 ---
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
-tags:
-  - CSP
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 La cabecera HTTP **`Content-Security-Policy`** en la respuesta permite a los administradores de un sitio web controlar los recursos que el User-Agent puede cargar a una pagina. Con algunas (Poquísimas) excepciones, las políticas implican principalmente especificar el servidor de origen la protección de puntos finales del script. Esto ayuda a protegerse contra ataques Cross-site scripting ({{Glossary("XSS")}}).
@@ -86,7 +81,7 @@ Document directives govern the properties of a document or [worker](/es/docs/Web
   - : Restricts the set of plugins that can be embedded into a document by limiting the types of resources which can be loaded.
 - {{CSP("sandbox")}}
   - : Enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} {{htmlattrxref("sandbox", "iframe")}} attribute.
-- {{CSP("disown-opener")}} {{obsolete_inline}}
+- {{CSP("disown-opener")}} {{deprecated_inline}}
   - : Ensures a resource will disown its opener when navigated to.
 
 ### {{Glossary("Navigation directive", "Navigation directives")}}
@@ -104,7 +99,7 @@ Navigation directives govern to which location a user can navigate to or submit 
 
 Reporting directives control the reporting process of CSP violations. See also the {{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
 
-- {{CSP("report-uri")}} {{obsolete_inline}}
+- {{CSP("report-uri")}} {{deprecated_inline}}
 
   - : Instructs the user agent to report attempts to violate the Content Security Policy. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 
@@ -123,7 +118,7 @@ Reporting directives control the reporting process of CSP violations. See also t
 
 - {{CSP("block-all-mixed-content")}}
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
-- {{CSP("referrer")}} {{obsolete_inline}}
+- {{CSP("referrer")}} {{deprecated_inline}}
   - : Used to specify information in the referer (sic) header for links away from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.
 - {{CSP("require-sri-for")}}
   - : Requires the use of {{Glossary("SRI")}} for scripts or styles on the page.
@@ -183,20 +178,13 @@ Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violati
 
 See [Mozilla Web Security Guidelines](https://wiki.mozilla.org/Security/Guidelines/Web_Security#Examples_5) for more examples.
 
-## Espeficicaciones
+## Especificaciones
 
-| Specification                                            | Status                                               | Comment                                                                                                                                                                      |
-| -------------------------------------------------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{specName("CSP 3.0")}}                         | {{Spec2('CSP 3.0')}}                         | Adds `disown-opener`, `manifest-src`, `navigate-to`, `report-to`, `strict-dynamic`, `worker-src`. Undeprecates `frame-src`. Deprecates `report-uri` in favor if `report-to`. |
-| {{specName("Mixed Content")}}                 | {{Spec2('Mixed Content')}}                 | Adds `block-all-mixed-content`.                                                                                                                                              |
-| {{specName("Subresource Integrity")}}         | {{Spec2('Subresource Integrity')}}         | Adds `require-sri-for`.                                                                                                                                                      |
-| {{specName("Upgrade Insecure Requests")}} | {{Spec2('Upgrade Insecure Requests')}} | Adds `upgrade-insecure-requests`.                                                                                                                                            |
-| {{specName("CSP 1.1")}}                         | {{Spec2('CSP 1.1')}}                         | Adds `base-uri`, `child-src`, `form-action`, `frame-ancestors`, `plugin-types`, `referrer`, and `report-uri`. Deprecates `frame-src`.                                        |
-| {{specName("CSP 1.0")}}                         | {{Spec2('CSP 1.0')}}                         | Defines `connect-src`, `default-src`, `font-src`, `frame-src`, `img-src`, `media-src`, `object-src`, report-uri, `sandbox`, `script-src,` and `style-src`.                   |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 
-{{Compat("http.headers.csp.Content-Security-Policy")}}
+{{Compat}}
 
 ## Mirar tambien
 

@@ -1,14 +1,9 @@
 ---
 title: Capturar fotografías con la cámara web
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
-tags:
-  - Canvas
-  - WebRTC
-  - cámara web
-  - getusermedia
-translation_of: Web/API/WebRTC_API/Taking_still_photos
 original_slug: Web/API/Media_Streams_API/Taking_still_photos
 ---
+
 ## Introducción y demostración
 
 Este es un tutorial rápido de cómo acceder a la cámara de tu laptop y capturar una foto con ella. Puedes observar el [código final en acción en este JSFiddle](http://jsfiddle.net/codepo8/agaRe/4/). También existe una versión más avanzada en JavaScript para cargar fotos a **imgur** disponible como [código en GitHub](https://github.com/codepo8/interaction-cam/) o [como demo](http://codepo8.github.com/interaction-cam/).

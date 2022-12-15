@@ -1,16 +1,8 @@
 ---
 title: Math.log1p()
 slug: Web/JavaScript/Reference/Global_Objects/Math/log1p
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Logaritmo Natural
-  - Math
-  - Math.log1p
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/log1p
 ---
+
 {{JSRef}}
 
 A função **`Math.log1p()`** retorna o logaritmo natural (base {{jsxref("Math.E", "e")}}) de 1 + um número, isto é

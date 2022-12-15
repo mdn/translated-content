@@ -1,15 +1,9 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Módulos
-  - Sentencia
-  - import
-translation_of: Web/JavaScript/Reference/Statements/import
 original_slug: Web/JavaScript/Referencia/Sentencias/import
 ---
+
 {{jsSidebar("Sentencias")}}
 
 La sentencia **`import`** se usa para importar funciones que han sido exportadas desde un módulo externo.
@@ -159,10 +153,7 @@ getUsefulContents('http://www.example.com',
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                       | Comentario        |
-| -------------------------------------------------------------------- | ---------------------------- | ----------------- |
-| {{SpecName('ES6', '#sec-imports', 'Imports')}}         | {{Spec2('ES6')}}         | Definición inical |
-| {{SpecName('ESDraft', '#sec-imports', 'Imports')}} | {{Spec2('ESDraft')}} |                   |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

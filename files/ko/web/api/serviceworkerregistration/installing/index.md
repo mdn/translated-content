@@ -3,6 +3,7 @@ title: ServiceWorkerRegistration.installing
 slug: Web/API/ServiceWorkerRegistration/installing
 translation_of: Web/API/ServiceWorkerRegistration/installing
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerRegistration")}} 인터페이스의 **`installing`** 속성은 {{domxref("ServiceWorker.state")}} 가 `installing` 인 서비스 워커를 반환한다. 이 속성은 `null` 로 초기 설정되어 있다.

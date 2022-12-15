@@ -1,11 +1,9 @@
 ---
 title: document.cookie
 slug: Web/API/Document/cookie
-tags:
-  - NeedsContent
-translation_of: Web/API/Document/cookie
 original_slug: DOM/document.cookie
 ---
+
 {{ApiRef("DOM")}}
 
 ### Resumen
@@ -49,7 +47,7 @@ En el código anterior, _`nuevacookie`_ es una cadena de la forma _`clave=valor`
   - `__Secure-` Señales para el navegador que solo deben incluirse en las perticiones de cookie transmitidas por un canal seguro.
   - `__Host-` Señales del navegador que además de la restricción de uso de cookies que provienen de un origen serugo, el ámbito de la cookie está limitado a un atributo path que proporciona el servidor. Si el servidor omite el atributo path, el directorio de las petición URI está en uso. Tabién las señales del atributo dominio no deben estar presentes, lo cual previene que la cookie sea usada en otros dominis. Para Chrome, el atributo path debe tener el mismo origen.
 
-> **Nota:** Nótese que previamente a Gecko 6.0 {{ geckoRelease("6.0") }}, rutas que contenían comillas eran tratadas como si las comillas fueran parte de la cadena, en lugar de considerarse como un delimitador de la ruta actual. Esto ya ha sido arreglado.
+> **Nota:** Nótese que previamente a Gecko 6.0 (Firefox 6.0 / Thunderbird 6.0 / SeaMonkey 2.3), rutas que contenían comillas eran tratadas como si las comillas fueran parte de la cadena, en lugar de considerarse como un delimitador de la ruta actual. Esto ya ha sido arreglado.
 
 ## Ejemplos
 

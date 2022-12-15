@@ -1,20 +1,9 @@
 ---
 title: Como a Web funciona
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
-tags:
-  - Aprender
-  - Cliente
-  - DNS
-  - HTTP
-  - IP
-  - Infraestrutura
-  - Iniciante
-  - Servidor
-  - TCP
-  - l10n:prioridade
-translation_of: Learn/Getting_started_with_the_web/How_the_Web_works
 original_slug: Aprender/Getting_started_with_the_web/Como_a_Web_funciona
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
@@ -38,7 +27,7 @@ O cliente e o servidor que descrevemos acima não contam toda a história. Exist
 
 Por enquanto, vamos imaginar que a web é uma estrada. Em um extremo da estrada, temos o cliente, que é como sua casa. No extremo oposto, temos o servidor, que é como uma loja onde você quer comprar algo.
 
-![](https://mdn.mozillademos.org/files/9749/road.jpg)
+![](road.jpg)
 
 Além do cliente e do servidor, também precisamos dizer oi para:
 

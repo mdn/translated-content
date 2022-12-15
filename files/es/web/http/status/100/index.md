@@ -1,13 +1,8 @@
 ---
 title: 100 Continue
 slug: Web/HTTP/Status/100
-tags:
-  - Códigos de estado
-  - HTTP
-  - Informativa
-  - continue
-translation_of: Web/HTTP/Status/100
 ---
+
 {{HTTPSidebar}}
 
 El código de respuesta de estado informativo **`100 Continue`** indica que todo hasta ahora está bien y que el cliente debe continuar con la solicitud o ignorarlo si ya está terminado.

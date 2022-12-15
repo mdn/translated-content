@@ -3,6 +3,7 @@ title: DOMStringList
 slug: Web/API/DOMStringList
 translation_of: Web/API/DOMStringList
 ---
+
 {{APIRef("DOM")}}{{Obsolete_header}}
 
 Тип возвращаемый некоторыми API, который содержит список [DOMString](/En/DOM/DOMString) (строки).

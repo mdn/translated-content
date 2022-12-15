@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/Replaced_element
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS)의 **대체 요소**(replaced element)란 자신의 표현 결과가 CSS의 범위를 벗어나는 요소로서, CSS 서식 모델과는 분리된 외부 객체인 요소입니다.

@@ -1,14 +1,8 @@
 ---
 title: element.innerHTML
 slug: Web/API/Element/innerHTML
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Element/innerHTML
 ---
+
 {{APIRef}}
 
 ## Resumen

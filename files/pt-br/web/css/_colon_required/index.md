@@ -1,8 +1,8 @@
 ---
 title: ':required'
 slug: Web/CSS/:required
-translation_of: Web/CSS/:required
 ---
+
 {{ CSSRef }}
 
 A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:required`** representa qualquer {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} contendo o atributo {{ htmlattrxref("required", "input") }}.

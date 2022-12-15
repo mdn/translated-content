@@ -3,6 +3,7 @@ title: Node.js server without a framework
 slug: Learn/Server-side/Node_server_without_framework
 translation_of: Learn/Server-side/Node_server_without_framework
 ---
+
 {{LearnSidebar}}
 
 Здесь вы найдёте описание простого статического сервера, который построен сугубо на Node.js без использования какого-либо фреймворка .

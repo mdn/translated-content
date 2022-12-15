@@ -1,13 +1,8 @@
 ---
 title: Math.LN2
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
-tags:
-  - JavaScript
-  - Math
-  - Property
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN2
 ---
+
 {{JSRef}}
 
 A propriedade **`Math.LN2`** representa o logaritmo natural (também conhecido como logaritmo neperiano) de 2, que é aproximadamente 0.693:

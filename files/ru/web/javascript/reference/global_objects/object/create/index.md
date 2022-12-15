@@ -11,6 +11,7 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
+
 {{JSRef}}
 
 Метод **`Object.create()`** создаёт новый объект с указанным прототипом и свойствами.

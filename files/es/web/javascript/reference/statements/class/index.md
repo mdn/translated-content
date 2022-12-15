@@ -1,9 +1,9 @@
 ---
 title: class
 slug: Web/JavaScript/Reference/Statements/class
-translation_of: Web/JavaScript/Reference/Statements/class
 original_slug: Web/JavaScript/Referencia/Sentencias/class
 ---
+
 {{jsSidebar("Statements")}}
 
 La **declaración class** crea una nueva clase con el nombre proporcionado utilizando la herencia basada en prototipos
@@ -49,10 +49,7 @@ class Square extends Polygon {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                       | Comentarios         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-class-definitions', 'Class definitions')}}     | {{Spec2('ES6')}}         | Definición inicial. |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

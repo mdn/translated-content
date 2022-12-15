@@ -1,17 +1,8 @@
 ---
 title: Uso de la API de WebVR
 slug: Web/API/WebVR_API/Using_the_WebVR_API
-tags:
-  - '1.1'
-  - API
-  - Canvas
-  - Realidad Virtual
-  - Tutorial
-  - VR
-  - WebGL
-  - WebVR
-translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 ---
+
 {{APIRef("WebVR API")}}
 
 La API WebVR es una fantástica adición al kit de herramientas del desarrollador web, permitiendo que las escenas de WebGL sean presentadas en pantallas de realidad virtual como el Oculus Rift y HTC Vive. Pero, ¿cómo empezar a desarrollar aplicaciones VR para la Web? Este artículo le guiará a través de los fundamentos.
@@ -38,7 +29,7 @@ Una vez que tengas todo montado, puedes probar si tu configuración funciona con
 
 Para ilustrar cómo funciona la API de WebVR, estudiaremos nuestro ejemplo raw-webgl-example, que se parece un poco a esto:
 
-![](https://mdn.mozillademos.org/files/15121/Capture1.png)
+![](capture1.png)
 
 > **Nota:** **Nota:** Puedes encontrar el [código fuente de nuestra demo](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) en GitHub, y [verlo en vivo](https://mdn.github.io/webvr-tests/raw-webgl-example/)también.
 
@@ -235,7 +226,7 @@ To stop the VR presentation when the button is subsequently pressed, we call {{d
 
 Una vez iniciada la presentación, podrás ver la vista estereoscópica que se muestra en el navegador:
 
-![](https://mdn.mozillademos.org/files/15123/Capture2.png)
+![](capture2.png)
 
 A continuación, aprenderá cómo se produce realmente la vista estereoscópica.
 
@@ -451,9 +442,9 @@ You should note that we've used a conditional expression to detect whether the l
 
 The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/es/docs/Web/API/WebVR_API#Window_events)). For example:
 
-- {{event("vrdisplaypresentchange")}} — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
-- {{event("vrdisplayconnect")}} — Fires when a compatible VR display has been connected to the computer.
-- {{event("vrdisplaydisconnect")}} — Fires when a compatible VR display has been disconnected from the computer.
+- [`vrdisplaypresentchange`](/es/docs/Web/Reference/Events/vrdisplaypresentchange) — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
+- [`vrdisplayconnect`](/es/docs/Web/Reference/Events/vrdisplayconnect) — Fires when a compatible VR display has been connected to the computer.
+- [`vrdisplaydisconnect`](/es/docs/Web/Reference/Events/vrdisplaydisconnect) — Fires when a compatible VR display has been disconnected from the computer.
 
 To demonstrate how they work, our simple demo includes the following example:
 

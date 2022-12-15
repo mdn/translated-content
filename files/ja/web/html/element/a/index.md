@@ -3,7 +3,7 @@ title: '<a>: アンカー要素'
 slug: Web/HTML/Element/a
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<a>`** は [HTML](/ja/docs/Web/HTML) の要素（*アンカー*要素）で、 [`href` 属性](#attr-href)を用いて、別のウェブページ、ファイル、メールアドレス、同一ページ内の場所、または他の URL へのハイパーリンクを作成します。
 

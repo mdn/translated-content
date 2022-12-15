@@ -10,6 +10,7 @@ tags:
   - 정규 표현식
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 ---
+
 {{JSRef}}
 
 **`exec()`** 메서드는 주어진 문자열에서 일치 탐색을 수행한 결과를 배열 혹은 {{jsxref("null")}}로 반환합니다.

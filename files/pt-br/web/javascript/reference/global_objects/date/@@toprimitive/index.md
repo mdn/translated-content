@@ -1,17 +1,8 @@
 ---
 title: Date.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive
 ---
+
 {{JSRef}}
 
 O método **`[@@toPrimitive]()`** converte o objeto `Date` para um valor primitivo.

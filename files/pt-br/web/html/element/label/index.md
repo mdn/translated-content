@@ -1,8 +1,8 @@
 ---
 title: <label>
 slug: Web/HTML/Element/label
-translation_of: Web/HTML/Element/label
 ---
+
 ## Resumo
 
 Um **elemento** **HTML `<label>` **representa uma legenda para um item em uma interface de usuário. Ele pode estar associado com um elemento de controle, colocando este dentro do elemento `label`, ou usando o atributo `for`. Tal controle é chamado o _controle etiquetado_ do elemento etiqueta. Um input pode ser associado a diversas etiquetas (\<label>s).
@@ -63,4 +63,4 @@ A tecla de atalho para acessar este elemento a partir do teclado.
 
 - Other form-related elements: {{HTMLElement("form")}}, {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("legend")}}, {{HTMLElement("select")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

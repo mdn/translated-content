@@ -3,6 +3,7 @@ title: Delete Author form
 slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 translation_of: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 ---
+
 В этой статье показано, как определить страницу для удаления объектов `Author`.
 
 Как описано в разделе [form design](/ru/docs/Learn/Server-side/Express_Nodejs/forms#form_design), наша стратегия будет заключаться в том, чтобы разрешить удаление только объектов, на которые не ссылаются другие объекты(в этом случае это означает, что мы не позволим `Author` быть удалённым, если на него ссылается `Book`). С точки зрения реализации это означает, что форма должна подтвердить, что нет никаких связанных книг, прежде чем автор будет удалён. Если есть связанные книги, то они должны отображаться и быть удалены до того, как будет удалён объект `Author`.
@@ -141,7 +142,7 @@ p
 
 Теперь элемент управления должен отображаться в виде ссылки, как показано ниже на странице сведений об авторе.
 
-![](https://mdn.mozillademos.org/files/14492/LocalLibary_Express_Author_Detail_Delete.png)
+![](locallibary_express_author_detail_delete.png)
 
 ## Как это выглядит?
 
@@ -149,11 +150,11 @@ p
 
 Если у автора нет книг, вам будет представлена такая страница. После нажатия клавиши delete сервер удалит автора и перенаправит в список авторов
 
-![](https://mdn.mozillademos.org/files/14494/LocalLibary_Express_Author_Delete_NoBooks.png)
+![](locallibary_express_author_delete_nobooks.png)
 
 Если у автора есть книги, то вам будет представлен следующий вид. Затем вы можете удалить книги из их подробных страниц (как только этот код будет реализован!).
 
-![](https://mdn.mozillademos.org/files/14496/LocalLibary_Express_Author_Delete_WithBooks.png)
+![](locallibary_express_author_delete_withbooks.png)
 
 > **Примечание:** Другие страницы для удаления объектов могут быть реализованы примерно таким же образом. Мы оставили это как задачи.
 

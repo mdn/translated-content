@@ -1,9 +1,9 @@
 ---
 title: Introdução ao leiaute com CSS
 slug: Learn/CSS/CSS_layout/Introduction
-translation_of: Learn/CSS/CSS_layout/Introduction
 original_slug: Learn/CSS/CSS_layout/Intro_leiaute_CSS
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout")}}
 
 This article will recap some of the CSS layout features we've already touched upon in previous modules — such as different {{cssxref("display")}} values — and introduce some of the concepts we'll be covering throughout this module.

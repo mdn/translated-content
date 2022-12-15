@@ -3,7 +3,7 @@ title: <div>
 slug: Web/HTML/Element/div
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<div>` 元素**（或是 _HTML 文件區塊元素_）是本質上不特別代表任何東西的通用内容流容器。它可以成為樣式化用途（使用 **class** 或 **id** 屬性）、或是共享如 **lang** 同一個屬性的元素集合。它應該在沒有其他適合的語義元素（例如{{HTMLElement("article")}} 或 {{HTMLElement("nav")}} ）可用時才用。
 

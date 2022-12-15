@@ -1,11 +1,6 @@
 ---
 title: Primitivo
 slug: Glossary/Primitive
-tags:
-  - CodingScripting
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Primitive
 original_slug: Glossary/Primitivo
 ---
 
@@ -100,7 +95,7 @@ El método {{JSxRef("Objetos_globales/Object/valueOf"," valueOf()")}} del conten
 ### Conocimientos generales
 
 - {{JSxRef("Data_structures", "Introducción a los tipos de datos de JavaScript")}}
-- {{Interwiki("wikipedia", "Tipo de dato primitivo")}} en Wikipedia
+- [Tipo de dato primitivo](https://es.wikipedia.org/wiki/Tipo_de_dato_primitivo) en Wikipedia
 
 <section id="Quick_links">
  <ol>

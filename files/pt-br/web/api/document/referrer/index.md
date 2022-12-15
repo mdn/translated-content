@@ -1,21 +1,11 @@
 ---
 title: Document.referrer
 slug: Web/API/Document/referrer
-tags:
-  - API
-  - Anterior
-  - HTML DOM
-  - NeedsCompatTable
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Propriedade
-  - Página(2)
-  - Referência(2)
-translation_of: Web/API/Document/referrer
 ---
+
 {{APIRef("DOM")}}
 
-Retorna o [URI](http://www.w3.org/Addressing/#background) da página que continha o _link_ para a página atual.
+Retorna o [URI](https://www.w3.org/Addressing/#background) da página que continha o _link_ para a página atual.
 
 ## Sintaxe
 
@@ -29,4 +19,4 @@ O valor retornado será uma _string_ vazia se o usuário tiver chegado na págin
 
 ## Especificação
 
-- [DOM Level 2: referrer](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)
+- [DOM Level 2: referrer](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-95229140)

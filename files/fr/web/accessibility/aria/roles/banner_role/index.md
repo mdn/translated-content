@@ -14,7 +14,7 @@ original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_banner
 
 Cette technique présente l’utilisation du rôle [`banner` (en)](https://www.w3.org/TR/wai-aria/roles#banner).
 
-La zone d’entête principale d'un site devrait être structurée avec  `<header role="banner">`. Cette zone peut contenir le logo du site, sa description, le moteur de recherche.
+La zone d’entête principale d'un site devrait être structurée avec `<header role="banner">`. Cette zone peut contenir le logo du site, sa description, le moteur de recherche.
 
 Une page web ne doit pas contenir plus d'un rôle `banner`, mais il est tout à fait possible d'utiliser plusieurs éléments `<header>` dans une page.
 

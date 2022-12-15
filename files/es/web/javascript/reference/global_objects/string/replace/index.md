@@ -1,15 +1,9 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Regular Expressions
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/replace
 ---
+
 {{JSRef("Objetos_globales", "String")}}
 
 ## Resumen

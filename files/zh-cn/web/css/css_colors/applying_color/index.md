@@ -4,7 +4,7 @@ slug: Web/CSS/CSS_Colors/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Element) 添加颜色，以创建所需的外观。本文是一篇入门文章，介绍了 CSS 颜色在 HTML 中的各种使用方法。
 
@@ -126,7 +126,7 @@ For example, a bright red that's 50% opaque can be represented as `rgb(255, 0, 0
 
 Designers and artists often prefer to work using the [HSL](https://zh.wikipedia.org/wiki/HSL_and_HSV) (Hue/Saturation/Luminosity) color method. On the web, HSL colors are represented using HSL functional notation. The `hsl()` CSS function is very similar to the `rgb()` function in usage otherwise.
 
-![HSL color cylinder](https://mdn.mozillademos.org/files/15445/1200px-HSL_color_solid_cylinder_alpha_lowgamma.png)
+![HSL color cylinder](1200px-hsl_color_solid_cylinder_alpha_lowgamma.png)
 
 _**Figure 1. An HSL color cylinder.** Hue defines the actual color based on the position along a circular color wheel representing the colors of the visible spectrum. Saturation is a percentage of how much of the way between being a shade of gray and having the maximum possible amount of the given hue. As the value of luminance (or lightness) increases, the color transitions from the darkest possible to the brightest possible (from black to white). Image courtesy of user [SharkD](http://commons.wikimedia.org/wiki/User:SharkD) on [Wikipedia](https://www.wikipedia.org/), distributed under the [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0) license._
 
@@ -367,9 +367,9 @@ colorPicker.addEventListener("change", function(event) {
 }, false);
 ```
 
-The {{event("input")}} event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
+The [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event) event is sent every time the value of the element changes; that is, every time the user adjusts the color in the color picker. Each time this event arrives, we set the box's border color to match the color picker's current value.
 
-The {{event("change")}} event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
+The [`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) event is received when the color picker's value is finalized. We respond by setting the contents of the `<p>` element with the ID `"output"` to a string describing the finally selected color.
 
 ## 机智地运用颜色
 

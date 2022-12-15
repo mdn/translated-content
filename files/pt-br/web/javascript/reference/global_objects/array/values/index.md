@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
+
 {{JSRef}}
 
 O método **`values()`** retorna um novo objeto de **`Array Iterator`** que contém os valores para cada índice no array.

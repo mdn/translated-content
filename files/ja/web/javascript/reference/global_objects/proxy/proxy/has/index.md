@@ -86,9 +86,7 @@ const p = new Proxy(obj, {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-hasproperty-p', '[[HasProperty]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

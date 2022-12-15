@@ -1,16 +1,8 @@
 ---
 title: String.prototype.trimStart()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimStart
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - Remover espaços ao começo string
-  - String
-  - metodo
-  - trimStart()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 ---
+
 {{JSRef}}
 
 O método `trimStart()` remove espaços do começo de uma _string_. `trimLeft()` é um apelido para este método.

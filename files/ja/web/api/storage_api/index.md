@@ -74,9 +74,7 @@ navigator.storage.estimate().then(estimate => {
 
 ## 仕様
 
-| 仕様                             | 状態                         | コメント |
-| -------------------------------- | ---------------------------- | -------- |
-| {{SpecName('Storage')}} | {{Spec2('Storage')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

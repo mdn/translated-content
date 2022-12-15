@@ -3,7 +3,7 @@ title: '<tbody>: テーブル本体要素'
 slug: Web/HTML/Element/tbody
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の表本体要素** (**`<tbody>`**) は、表の一連の行 ({{HTMLElement("tr")}} 要素) を内包し、その部分が表 ({{HTMLELement("table")}}) の本体部分を構成することを表します。
 
@@ -298,10 +298,7 @@ tbody > tr > th {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG','tables.html#the-tbody-element','tbody 要素')}}     | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-tbody-element','tbody 要素')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

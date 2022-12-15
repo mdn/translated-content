@@ -3,6 +3,7 @@ title: Selection.toString()
 slug: Web/API/Selection/toString
 translation_of: Web/API/Selection/toString
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 Метод **`Selection.toString()`** возвращает строку, содержащуюся в выделенном объекте, т.е. выделенный текст.

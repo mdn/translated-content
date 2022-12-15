@@ -1,15 +1,9 @@
 ---
 title: Animation.finished
 slug: Web/API/Animation/finished
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Reference
-translation_of: Web/API/Animation/finished
 original_slug: Web/API/Animation/terminado
 ---
+
 {{ APIRef("Web Animations") }}
 
 La propiedad de solo-lectura de `Animation.finished` de la [Web Animations API](/es/docs/Web/API/Web_Animations_API) devuelve un {{jsxref("Promise")}} que se resuelve una vez que la animación a terminado de reproducirse.

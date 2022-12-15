@@ -3,7 +3,7 @@ title: <hgroup>
 slug: Web/HTML/Element/hgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 > **警告:** `<hgroup>` は支援技術にサポートされていないため、使用すべきではありません。使用すると、中にある見出し要素の認識に悪影響を与えます。
 >
@@ -128,9 +128,7 @@ slug: Web/HTML/Element/hgroup
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## アクセシビリティの考慮
 

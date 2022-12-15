@@ -2,6 +2,7 @@
 title: 첫 번째 Vue 컴포넌트 만들기
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 이제 Vue에 대해 더 자세히 알아보고 직접 커스텀 컴포넌트를 만들어 볼 시간입니다. 먼저, Todo 리스트의 각 항목을 표현하는 컴포넌트를 만들어 보면서 몇 가지 중요한 개념을 배우겠습니다. 컴포넌트 내부에서 다른 컴포넌트 호출하기, props를 통해 데이터 넘겨주기, 데이터 상태 저장하기 등을 배울 것입니다.
@@ -120,7 +121,7 @@ export default {
 
 렌더링된 앱을 다시 확인해보면 체크박스와 레이블로 구성된 `ToDoItem` 이 보일 것입니다.
 
-![The current rendering state of the app, which includes a title of To-Do List, and a single checkbox and label](https://mdn.mozillademos.org/files/17243/rendered-todoitem.png)
+![The current rendering state of the app, which includes a title of To-Do List, and a single checkbox and label](rendered-todoitem.png)
 
 ## props를 사용해 컴포넌트를 동적으로 만들기
 

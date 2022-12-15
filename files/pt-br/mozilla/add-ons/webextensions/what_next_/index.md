@@ -1,9 +1,9 @@
 ---
 title: O que vem a seguir ?
 slug: Mozilla/Add-ons/WebExtensions/What_next_
-translation_of: Mozilla/Add-ons/WebExtensions/What_next_
 original_slug: Mozilla/Add-ons/WebExtensions/O_que_vem_a_seguir_
 ---
+
 {{AddonSidebar}}
 
 Você está pronto para começar a tornar a tua ideia de extensão de navegador uma realidade. Antes de iniciar essa jornada, vale a pena estar ciente de algumas coisas que te ajudarão a torná-la tranquila.

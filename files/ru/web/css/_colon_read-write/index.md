@@ -5,6 +5,7 @@ tags:
   - Псевдо-классы
 translation_of: Web/CSS/:read-write
 ---
+
 {{ CSSRef() }}
 
 ## Описание

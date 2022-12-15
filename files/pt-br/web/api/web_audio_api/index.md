@@ -1,381 +1,231 @@
 ---
 title: API Web Áudio
 slug: Web/API/Web_Audio_API
-tags:
-  - Web Audio API
-  - api de áudio
-  - áudio api
-  - áudio web
-translation_of: Web/API/Web_Audio_API
-original_slug: Web/API/API_Web_Audio
 ---
-A API de áudio da web disponibiliza um poderoso e versátil sistema de controle de áudio para a Web, permitindo aos desenvolvedores escolher arquivos de áudio, adicionar efeitos a estes arquivos, criar reprodutores de áudio, aplicar _spatial effects_ (como _panning_) e muito mais.
 
-## Web audio: conceitos e uso
+{{DefaultAPISidebar("Web Audio API")}}
 
-A API de Web audio envolve manipulação de operações com áudio dentro de um **contexto de áudio**, e foi desenvolvida para permitir o **roteamento** **modular**. Operações básicas de áudio são feitas com **_audio nodes_ (nós de áudio**), que são ligados para formar **gráficos de** **roteamento** **de áudio**. Várias fontes - com diferentes tipos de _layout_ de canal - são suportados mesmo em um único contexto. Este _design_ modular permite flexibilidade para criar funções de áudio complexas com efeitos dinâmicos.
+A API de áudio da Web fornece um sistema poderoso e versátil para controlar o áudio na Web, permitindo que os desenvolvedores escolham fontes de áudio, adicionem efeitos ao áudio, criem visualizações de áudio, apliquem efeitos espaciais (como panorâmica) e muito mais.
 
-_Audio nodes_ são ligados pelas suas entradas e saídas, formando uma cadeia que começa com uma ou mais fontes, passa por um ou mais _nodes_ e então acaba em um destino (embora você não tenha que fornecer um destino, por exemplo, se você quiser apenas visualizar alguns dados de áudio). Um fluxo de trabalho simples, com Web áudio, seria algo parecido com isso:
+## Conceitos e uso de áudio da Web
 
-1. Crie um contexto de áudio
-2. Dentro do contexto, crie fontes de áudio — como `<audio>`, oscilador, _stream_
-3. Crie efeitos de áudio, como _reverb_, _biquad filter_, _panner_, _compressor_
-4. Escolha o destino final de áudio, por exemplo os auto-falantes de seu sistema
-5. Conecte as fontes de áudio com os efeitos, e os efeitos com o destino.
+A API de áudio da Web envolve a manipulação de operações de áudio dentro de um **contexto de áudio** e foi projetada para permitir o **roteamento modular**. As operações básicas de áudio são realizadas com **nós de áudio**, que são vinculados para formar um **gráfico de roteamento de áudio**. Várias fontes — com diferentes tipos de layout de canal — são suportadas mesmo dentro de um único contexto. Este design modular oferece flexibilidade para criar funções de áudio complexas com efeitos dinâmicos.
 
-![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](https://mdn.mozillademos.org/files/7893/web-audio-api-flowchart.png)
+Os nós de áudio são ligados em cadeias e teias simples por suas entradas e saídas. Eles geralmente começam com uma ou mais fontes. As fontes fornecem matrizes de intensidades sonoras (amostras) em fatias de tempo muito pequenas, geralmente dezenas de milhares delas por segundo. Estes podem ser calculados matematicamente (como {{domxref("OscillatorNode")}}), ou podem ser gravações de arquivos de som/vídeo (como {{domxref("AudioBufferSourceNode")}} e {{domxref("MediaElementAudioSourceNode ")}}) e fluxos de áudio ({{domxref("MediaStreamAudioSourceNode")}}). Na verdade, os arquivos de som são apenas gravações das próprias intensidades sonoras, que vêm de microfones ou instrumentos elétricos e são misturadas em uma única e complicada onda.
 
-O sincronismo é controlado com alta precisão e baixa latência, permitindo aos desenvolvedores escrever códigos que respondam com precisão a eventos e capazes de gerar exemplos específicos, mesmo com uma alta taxa de amostragem. Dessa forma, aplicações como baterias eletrônicas e seqüenciadores estarão facilmente ao alcance dos desenvolvedores.
+As saídas desses nós podem ser vinculadas às entradas de outros, que misturam ou modificam esses fluxos de amostras de som em diferentes fluxos. Uma modificação comum é multiplicar as amostras por um valor para torná-las mais altas ou mais baixas (como é o caso de {{domxref("GainNode")}}). Uma vez que o som tenha sido suficientemente processado para o efeito pretendido, ele pode ser vinculado à entrada de um destino ({{domxref("BaseAudioContext.destination")}}), que envia o som para os alto-falantes ou fones de ouvido. Esta última conexão só é necessária se o usuário tiver que ouvir o áudio.
 
-A API de Web Audio também permite o controle de como o áudio será ordenado. Usando um sistema baseado em um modelo de _source-listener_, a API permite controlar os painéis de _modelo_ para serem usados e tratados com atenuação de distância induzida ou _doppler shift_ induzido por uma fonte em movimento (ou um ouvinte em movimento).
+Um fluxo de trabalho simples e típico para áudio da web seria algo assim:
 
-> **Nota:** Você pode ver mais detalhes sobre a teoria da API de Web Audio em nosso artigo [Basic concepts behind Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
+1. Criar contexto de áudio
+2. Dentro do contexto, crie fontes — como `<áudio>`, oscilador, fluxo
+3. Crie nós de efeitos, como reverb, filtro biquad, panner, compressor
+4. Escolha o destino final do áudio, por exemplo, os alto-falantes do sistema
+5. Conecte as fontes aos efeitos e os efeitos ao destino.
 
-## Web Audio: Interfaces da API
+![Um diagrama de caixa simples com uma caixa externa denominada Contexto de áudio e três caixas internas denominadas Fontes, Efeitos e Destino. As três caixas internas têm setas entre elas apontando da esquerda para a direita, indicando o fluxo de informações de áudio.](audio-context_.png)
 
-A API de Web Audio possui um total de 28 interfaces e eventos associados, que nós dividimos e categorizamos em 9 funcionalidades.
+O tempo é controlado com alta precisão e baixa latência, permitindo que os desenvolvedores escrevam código que responda com precisão a eventos e seja capaz de direcionar amostras específicas, mesmo em uma alta taxa de amostragem. Assim, aplicações como baterias eletrônicas e sequenciadores estão bem ao alcance.
 
-### Definições gerais de grafos de áudio (audio graph)
+A API de áudio da Web também nos permite controlar como o áudio é _espacializado_. Utilizando um sistema baseado em um _modelo de ouvinte-fonte_, permite o controle do _modelo panorâmico_ e trata da _atenuação induzida por distância_ induzida por uma fonte em movimento (ou ouvinte em movimento).
 
-Definições gerais que moldam os grafos de áudio no uso da API de Web Audio.
+> **Observação:** você pode ler sobre a teoria da API de áudio da Web com muito mais detalhes em nosso artigo [Conceitos básicos por trás da API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API) .
+
+## Público-alvo da API de áudio da Web
+
+A API de áudio da Web pode parecer intimidante para aqueles que não estão familiarizados com termos de áudio ou música e, como incorpora uma grande quantidade de funcionalidades, pode ser difícil começar se você for um desenvolvedor.
+
+Ele pode ser usado para incorporar áudio em seu site ou aplicativo, [fornecendo uma atmosfera como futurelibrary.no](https://www.futurelibrary.no/) ou [feedback auditivo em formulários](https://css-tricks.com/form-validation-web-audio/). No entanto, também pode ser usado para criar instrumentos interativos _avançados_. Com isso em mente, é adequado tanto para desenvolvedores quanto para músicos.
+
+Temos um [tutorial introdutório simples](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) para aqueles que estão familiarizados com programação, mas precisam de uma boa introdução a alguns dos termos e estrutura da API.
+
+Há também um artigo [Conceitos básicos por trás da API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API), para ajudá-lo a entender como o áudio digital funciona, especificamente no domínio da API. Isso também inclui uma boa introdução a alguns dos conceitos sobre os quais a API é construída.
+
+Aprender a codificar é como jogar cartas - você aprende as regras, depois joga, depois volta e aprende as regras novamente, depois joga novamente. Portanto, se parte da teoria não se encaixar bem após o primeiro tutorial e artigo, há um [tutorial avançado](/pt-BR/docs/Web/API/Web_Audio_API/Advanced_techniques) que estende o primeiro para ajudá-lo a praticar o que você aprendeu e aplicar algumas técnicas mais avançadas para construir um sequenciador de passos.
+
+Também temos outros tutoriais e material de referência abrangente disponível que abrange todos os recursos da API. Veja a barra lateral nesta página para saber mais.
+
+Se você está mais familiarizado com o lado musical das coisas, está familiarizado com os conceitos de teoria musical, quer começar a construir instrumentos, então você pode ir em frente e começar a construir coisas com o tutorial avançado e outros como um guia (o tutorial linkado acima cobre agendando notas, criando osciladores e envelopes sob medida, bem como um LFO entre outras coisas.)
+
+Se você não estiver familiarizado com o básico de programação, você pode querer consultar alguns tutoriais JavaScript para iniciantes e depois voltar aqui - veja nosso [módulo de aprendizado JavaScript para iniciantes](/pt-BR/docs/Learn/JavaScript) para um ótimo lugar para começar.
+
+## Interfaces da API de áudio da Web
+
+A API de áudio da Web tem várias interfaces e eventos associados, que dividimos em nove categorias de funcionalidade.
+
+### Definição geral do gráfico de áudio
+
+Contêineres e definições gerais que moldam gráficos de áudio no uso da API de áudio da Web.
 
 - {{domxref("AudioContext")}}
-  - : A interface **`AudioContext`** representa um grafo de processamento de áudio construído a partir de módulos de áudio ligados entre si, cada um representado por um {{domxref("AudioNode")}}. Um contexto de áudio (audio context) controla a criação dos*nós* que ele contém e a execução do processamento de áudio, ou a decodificação. Como tudo acontece dentro de um contexto, você deve criar um **`AudioContext`** antes de fazer qualquer outra coisa.
+  - : A interface **`AudioContext`** representa um gráfico de processamento de áudio construído a partir de módulos de áudio ligados entre si, cada um representado por um {{domxref("AudioNode")}}. Um contexto de áudio controla a criação dos nós que ele contém e a execução do processamento ou decodificação de áudio. Você precisa criar um `AudioContext` antes de fazer qualquer outra coisa, pois tudo acontece dentro de um contexto.
 - {{domxref("AudioNode")}}
-  - : A interface **`AudioNode`** representa um módulo de processamento de áudio como uma fonte de áudio (por exemplo, um HTML {{HTMLElement("áudio")}} ou um elemento {{HTMLElement("vídeo")}}), destino de áudio, módulo de processamento intermediário (por exemplo, um filtro como {{domxref("BiquadFilterNode")}}, ou controle de volume, como {{domxref("GainNode")}}).
+  - : A interface **`AudioNode`** representa um módulo de processamento de áudio como uma _fonte de áudio_ (por exemplo, um elemento HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}}), _audio destino_, _módulo de processamento intermediário_ (por exemplo, um filtro como {{domxref("BiquadFilterNode")}} ou _controle de volume_ como {{domxref("GainNode")}}).
 - {{domxref("AudioParam")}}
-  - : A interface **`AudioParam`** representa um parâmetro relacionado ao áudio, como um parâmetro de um {{domxref("AudioNode")}}. Ele pode ser configurado com um valor específico ou uma mudança de valor, e pode ser programado para "acontecer" em um momento específico e seguindo um padrão específico.
-- {{event("ended_(Web_Audio)", "ended")}} (event)
-  - : O evento `ended` é disparado quando a reprodução parou porque o fim da mídia foi atingido.
+  - : A interface **`AudioParam`** representa um parâmetro relacionado ao áudio, como um de um {{domxref("AudioNode")}}. Ele pode ser definido para um valor específico ou uma alteração no valor e pode ser programado para ocorrer em um horário específico e seguindo um padrão específico.
+- {{domxref("AudioParamMap")}}
+  - : Fornece uma interface tipo mapa para um grupo de interfaces {{domxref("AudioParam")}}, o que significa que fornece os métodos `forEach()`, `get()`, `has()`, `keys ()` e `values()`, bem como uma propriedade `size`.
+- {{domxref("BaseAudioContext")}}
+  - : A interface **`BaseAudioContext`** atua como uma definição básica para gráficos de processamento de áudio online e offline, conforme representado por {{domxref("AudioContext")}} e {{domxref("OfflineAudioContext")}} respectivamente . Você não usaria `BaseAudioContext` diretamente — você usaria seus recursos por meio de uma dessas duas interfaces herdadas.
+- O evento {{domxref("AudioScheduledSourceNode/ended_event", "ended")}}
+  - : O evento `ended` é acionado quando a reprodução é interrompida porque o fim da mídia foi atingido.
 
 ### Definindo fontes de áudio
 
-Interfaces que definem fontes de áudio para uso na API de Web Audio.
+Interfaces que definem fontes de áudio para uso na API de áudio da Web.
 
+- {{domxref("AudioScheduledSourceNode")}}
+  - : O **`AudioScheduledSourceNode`** é uma interface pai para vários tipos de interfaces de nó de fonte de áudio. É um {{domxref("AudioNode")}}.
 - {{domxref("OscillatorNode")}}
-  - : A interface **`OscillatorNode`** representa uma onda senoidal. Esta interface é um módulo de processamento de áudio que gera uma onda senoidal com determinada frequência.
+  - : A interface **`OscillatorNode`** representa uma forma de onda periódica, como uma onda senoidal ou triangular. É um módulo de processamento de áudio {{domxref("AudioNode")}} que faz com que uma determinada _frequência_ de onda seja criada.
 - {{domxref("AudioBuffer")}}
-  - : A interface **`AudioBuffer`** representa uma pequena porção de áudio armazenada na memória, criada a partir de um arquivo de áudio usando o método {{ domxref("AudioContext.decodeAudioData()") }}, ou criado com os dados brutos usando o método {{ domxref("AudioContext.createBuffer()") }}. Uma vez decodificado neste formato o áudio pode ser colocada em um {{ domxref("AudioBufferSourceNode") }}.
+  - : A interface **`AudioBuffer`** representa um pequeno recurso de áudio que reside na memória, criado a partir de um arquivo de áudio usando o método {{ domxref("BaseAudioContext.decodeAudioData") }} ou criado com dados brutos usando {{ domxref ("BaseAudioContext.createBuffer") }}. Uma vez decodificado neste formato, o áudio pode ser colocado em um {{ domxref("AudioBufferSourceNode") }}.
 - {{domxref("AudioBufferSourceNode")}}
-  - : A interface AudioBufferSourceNode representa uma fonte de áudio que consiste em dados de áudio na memória, armazenados em um {{domxref ("AudioBuffer")}}. É um {{domxref ("AudioNode")}} que atua como uma fonte de áudio.
+  - : A interface **`AudioBufferSourceNode`** representa uma fonte de áudio que consiste em dados de áudio na memória, armazenados em um {{domxref("AudioBuffer")}}. É um {{domxref("AudioNode")}} que atua como uma fonte de áudio.
 - {{domxref("MediaElementAudioSourceNode")}}
-  - : A interface **`MediaElementAudioSourceNode`** representa uma fonte de audio consiste de um HTML5 {{ htmlelement("audio") }} ou {{ htmlelement("video") }} elemento. É uma {{domxref("AudioNode")}} que atua como uma fonte de áudio.
+  - : A interface **`MediaElementAudioSourceNode`** representa uma fonte de áudio que consiste em um elemento HTML {{ htmlelement("audio") }} ou {{ htmlelement("video") }}. É um {{domxref("AudioNode")}} que atua como uma fonte de áudio.
 - {{domxref("MediaStreamAudioSourceNode")}}
-  - : The **`MediaStreamAudioSourceNode`** interface represents an audio source consisting of a [WebRTC](/pt-BR/docs/WebRTC) {{domxref("MediaStream")}} (such as a webcam or microphone.) It is an {{domxref("AudioNode")}} that acts as an audio source.
+  - : A interface **`MediaStreamAudioSourceNode`** representa uma fonte de áudio que consiste em um {{domxref("MediaStream")}} (como uma webcam, microfone ou um fluxo sendo enviado de um computador remoto). Se várias faixas de áudio estiverem presentes no fluxo, a faixa cujo {{domxref("MediaStreamTrack.id", "id")}} vem primeiro lexicograficamente (em ordem alfabética) é usada. É um {{domxref("AudioNode")}} que atua como uma fonte de áudio.
+- {{domxref("MediaStreamTrackAudioSourceNode")}}
+  - : Um aceno de cabeça e do tipo {{domxref("MediaStreamTrackAudioSourceNode")}} representa uma fonte de áudio cujos dados vêm de um {{domxref("MediaStreamTrack")}}. Ao criar o nó usando o método {{domxref("AudioContext.createMediaStreamTrackSource", "createMediaStreamTrackSource()")}} para criar o nó, você especifica qual faixa usar. Isso fornece mais controle do que `MediaStreamAudioSourceNode`.
 
 ### Definindo filtros de efeitos de áudio
 
-Interfaces para definição de efeitos que você deseja aplicar em suas fontes de áudio.
+Interfaces para definir os efeitos que você deseja aplicar às suas fontes de áudio.
 
 - {{domxref("BiquadFilterNode")}}
-  - : The **`BiquadFilterNode`** interface represents a simple low-order filter. It is an {{domxref("AudioNode")}} that can represent different kinds of filters, tone control devices or graphic equalizers. A `BiquadFilterNode` always has exactly one input and one output.
+  - : A interface **`BiquadFilterNode`** representa um filtro simples de baixa ordem. É um {{domxref("AudioNode")}} que pode representar diferentes tipos de filtros, dispositivos de controle de tom ou equalizadores gráficos. Um `BiquadFilterNode` sempre tem exatamente uma entrada e uma saída.
 - {{domxref("ConvolverNode")}}
-  - : The **`ConvolverNode`** interface is an {{domxref("AudioNode")}} that performs a Linear Convolution on a given AudioBuffer, often used to achieve a reverb effect.
+  - : A interface **`ConvolverNode`** é um {{domxref("AudioNode")}} que executa uma Convolução Linear em um determinado {{domxref("AudioBuffer")}} e é frequentemente usado para obter um reverb efeito.
 - {{domxref("DelayNode")}}
-  - : The **`DelayNode`** interface represents a [delay-line](http://en.wikipedia.org/wiki/Digital_delay_line); an {{domxref("AudioNode")}} audio-processing module that causes a delay between the arrival of an input data and its propagation to the output.
+  - : A interface **`DelayNode`** representa uma [linha de atraso](https://en.wikipedia.org/wiki/Digital_delay_line); um módulo de processamento de áudio {{domxref("AudioNode")}} que causa um atraso entre a chegada de um dado de entrada e sua propagação para a saída.
 - {{domxref("DynamicsCompressorNode")}}
-  - : The **`DynamicsCompressorNode`** interface provides a compression effect, which lowers the volume of the loudest parts of the signal in order to help prevent clipping and distortion that can occur when multiple sounds are played and multiplexed together at once.
+  - : A interface **`DynamicsCompressorNode`** fornece um efeito de compressão, que reduz o volume das partes mais altas do sinal para ajudar a evitar cortes e distorções que podem ocorrer quando vários sons são reproduzidos e multiplexados ao mesmo tempo.
 - {{domxref("GainNode")}}
-  - : The **`GainNode`** interface represents a change in volume. It is an {{domxref("AudioNode")}} audio-processing module that causes a given _gain_ to be applied to the input data before its propagation to the output.
+  - : A interface **`GainNode`** representa uma mudança no volume. É um módulo de processamento de áudio {{domxref("AudioNode")}} que faz com que um determinado _gain_ seja aplicado aos dados de entrada antes de sua propagação para a saída.
 - {{domxref("WaveShaperNode")}}
-  - : The **`WaveShaperNode`** interface represents a non-linear distorter. It is an {{domxref("AudioNode")}} that use a curve to apply a waveshaping distortion to the signal. Beside obvious distortion effects, it is often used to add a warm feeling to the signal.
+  - : A interface **`WaveShaperNode`** representa um distorção não linear. É um {{domxref("AudioNode")}} que usa uma curva para aplicar uma distorção de forma de onda ao sinal. Além dos efeitos de distorção óbvios, é frequentemente usado para adicionar uma sensação de calor ao sinal.
 - {{domxref("PeriodicWave")}}
-  - : Used to define a periodic waveform that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
+  - : Descreve uma forma de onda periódica que pode ser usada para moldar a saída de um {{ domxref("OscillatorNode") }}.
+- {{domxref("IIRFilterNode")}}
+  - : Implementa um filtro geral de [resposta ao impulso infinito](https://en.wikipedia.org/wiki/Infinite_impulse_response) (IIR); este tipo de filtro pode ser usado para implementar dispositivos de controle de tom e equalizadores gráficos também.
 
 ### Definindo destinos de áudio
 
-Uma vez que você tenha feito o processamento do seu áudio, estas interfaces definirão aonde será a saída do áudio.
+Assim que você terminar de processar seu áudio, essas interfaces definem onde ele deve ser emitido.
 
 - {{domxref("AudioDestinationNode")}}
-  - : The **`AudioDestinationNode`** interface represents the end destination of an audio source in a given context — usually the speakers of your device.
+  - : A interface **`AudioDestinationNode`** representa o destino final de uma fonte de áudio em um determinado contexto — geralmente os alto-falantes do seu dispositivo.
 - {{domxref("MediaStreamAudioDestinationNode")}}
-  - : The **`MediaElementAudioSourceNode`** interface represents an audio destination consisting of a [WebRTC](/pt-BR/docs/WebRTC) {{domxref("MediaStream")}} with a single `AudioMediaStreamTrack`, which can be used in a similar way to a MediaStream obtained from {{ domxref("Navigator.getUserMedia") }}. It is an {{domxref("AudioNode")}} that acts as an audio destination.
+  - : A interface **`MediaStreamAudioDestinationNode`** representa um destino de áudio que consiste em um [WebRTC](/pt-BR/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} com um único `AudioMediaStreamTrack`, que pode ser usado de maneira semelhante a um {{domxref("MediaStream")}} obtido de {{ domxref("MediaDevices.getUserMedia", "getUserMedia()") }}. É um {{domxref("AudioNode")}} que atua como destino de áudio.
 
-### Análise dos dados e visualização
+### Análise e visualização de dados
 
-Se você deseja extrair tempo, frequencia e outras informações do seu áudio, o `AnalyserNode` é o que você necessita.
+Se você deseja extrair tempo, frequência e outros dados do seu áudio, o `AnalyserNode` é o que você precisa.
 
 - {{domxref("AnalyserNode")}}
-  - : The **`AnalyserNode`** interface represents a node able to provide real-time frequency and time-domain analysis information, for the purposes of data analysis and visualization.
+  - : A interface **`AnalyserNode`** representa um nó capaz de fornecer informações de análise de frequência e domínio de tempo em tempo real, para fins de análise e visualização de dados.
 
 ### Dividindo e mesclando canais de áudio
 
-Para dividir e mesclar canais de áudio, você utilizará essas interfaces.
+Para dividir e mesclar canais de áudio, você usará essas interfaces.
 
 - {{domxref("ChannelSplitterNode")}}
-  - : The **`ChannelSplitterNode`** interface separates the different channels of an audio source out into a set of _mono_ outputs.
+  - : A interface **`ChannelSplitterNode`** separa os diferentes canais de uma fonte de áudio em um conjunto de saídas _mono_.
 - {{domxref("ChannelMergerNode")}}
-  - : The **`ChannelMergerNode`** interface reunites different mono inputs into a single outputs. Each input will be used to fill a channel of the output.
+  - : A interface **`ChannelMergerNode`** reúne diferentes entradas mono em uma única saída. Cada entrada será usada para preencher um canal da saída.
 
-### Audio spatialization
+### Espacialização de áudio
 
-These interfaces allow you to add audio spatialization panning effects to your audio sources.
+Essas interfaces permitem adicionar efeitos panorâmicos de espacialização de áudio às suas fontes de áudio.
 
 - {{domxref("AudioListener")}}
-  - : The **`AudioListener`** interface represents the position and orientation of the unique person listening to the audio scene used in audio spatialization.
+  - : A interface **`AudioListener`** representa a posição e orientação da única pessoa que está ouvindo a cena de áudio usada na espacialização de áudio.
 - {{domxref("PannerNode")}}
-  - : The **`PannerNode`** interface represents the behavior of a signal in space. It is an {{domxref("AudioNode")}} audio-processing module describing its position with right-hand Cartesian coordinates, its movement using a velocity vector and its directionality using a directionality cone.
+  - : A interface **`PannerNode`** representa a posição e o comportamento de um sinal de fonte de áudio no espaço 3D, permitindo criar efeitos de panorâmica complexos.
+- {{domxref("StereoPannerNode")}}
+  - : A interface **`StereoPannerNode`** representa um simples nó panorâmico estéreo que pode ser usado para deslocar um fluxo de áudio para a esquerda ou para a direita.
 
-### Processamento de áudio por JavaScript
+### Processamento de áudio em JavaScript
 
-Se você quiser usar um _script_ externo para processar sua fonte de áudio, Node e eventos abaixo tornarão isto possível.
+Usando worklets de áudio, você pode definir nós de áudio personalizados escritos em JavaScript ou [WebAssembly](/pt-BR/docs/WebAssembly). Worklets de áudio implementam a interface {{domxref("Worklet")}}, uma versão leve da interface {{domxref("Worker")}}.
 
-- {{domxref("ScriptProcessorNode")}}
-  - : The **`ScriptProcessorNode`** interface allows the generation, processing, or analyzing of audio using JavaScript. It is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the current input, one containing the output. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.
-- {{event("audioprocess")}} (event)
-  - : The `audioprocess` event is fired when an input buffer of a Web Audio API {{domxref("ScriptProcessorNode")}} is ready to be processed.
-- {{domxref("AudioProcessingEvent")}}
-  - : The [Web Audio API](/pt-BR/docs/Web_Audio_API) `AudioProcessingEvent` represents events that occur when a {{domxref("ScriptProcessorNode")}} input buffer is ready to be processed.
+- {{domxref("AudioWorklet")}}
+  - : A interface `AudioWorklet` está disponível através do objeto {{domxref("AudioContext")}} do objeto {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} e permite adicionar módulos ao worklet de áudio a ser executado fora do thread principal.
+- {{domxref("AudioWorkletNode")}}
+  - : A interface `AudioWorkletNode` representa um {{domxref("AudioNode")}} que está embutido em um gráfico de áudio e pode passar mensagens para o `AudioWorkletProcessor` correspondente.
+- {{domxref("AudioWorkletProcessor")}}
+  - : A interface `AudioWorkletProcessor` representa o código de processamento de áudio executado em um `AudioWorkletGlobalScope` que gera, processa ou analisa o áudio diretamente e pode passar mensagens para o `AudioWorkletNode` correspondente.
+- {{domxref("AudioWorkletGlobalScope")}}
+  - : A interface `AudioWorkletGlobalScope` é um objeto derivado de `WorkletGlobalScope` que representa um contexto de trabalho no qual um script de processamento de áudio é executado; ele foi projetado para permitir a geração, processamento e análise de dados de áudio diretamente usando JavaScript em um encadeamento de worklet em vez de no encadeamento principal.
 
-### Áudio _offline_
+#### Obsoleto: nós do processador de script
 
-Manipular áudio _offline_ é possível com estas interfaces.
+Antes da definição dos worklets de áudio, a API de áudio da Web usava o `ScriptProcessorNode` para processamento de áudio baseado em JavaScript. Como o código é executado no thread principal, eles têm um desempenho ruim. O `ScriptProcessorNode` é mantido por motivos históricos, mas está marcado como obsoleto.
+
+- {{domxref("ScriptProcessorNode")}} {{deprecated_inline}}
+  - : A interface **`ScriptProcessorNode`** permite a geração, processamento ou análise de áudio usando JavaScript. É um módulo de processamento de áudio {{domxref("AudioNode")}} que está vinculado a dois buffers, um contendo a entrada atual e outro contendo a saída. Um evento, implementando a interface {{domxref("AudioProcessingEvent")}}, é enviado ao objeto toda vez que o buffer de entrada contém novos dados, e o manipulador de eventos termina quando preenche o buffer de saída com dados.
+- {{domxref("ScriptProcessorNode.audioprocess_event", "audioprocess")}} (evento) {{deprecated_inline}}
+  - : O evento `audioprocess` é acionado quando um buffer de entrada de uma API de áudio da Web {{domxref("ScriptProcessorNode")}} está pronto para ser processado.
+- {{domxref("AudioProcessingEvent")}} {{deprecated_inline}}
+  - : O `AudioProcessingEvent` representa eventos que ocorrem quando um buffer de entrada {{domxref("ScriptProcessorNode")}} está pronto para ser processado.
+
+### Processamento de áudio off-line/de fundo
+
+É possível processar/renderizar um gráfico de áudio muito rapidamente em segundo plano — renderizando-o para um {{domxref("AudioBuffer")}} em vez de para os alto-falantes do dispositivo — com o seguinte.
 
 - {{domxref("OfflineAudioContext")}}
-  - : The **`OfflineAudioContext`** interface is an {{domxref("AudioContext")}} interface representing an audio-processing graph built from linked together {{domxref("AudioNode")}}s. In contrast with a standard `AudioContext`, an `OfflineAudioContext` doesn't really render the audio but rather generates it, _as fast as it can_, in a buffer.
-- {{event("complete")}} (event)
-  - : The `complete` event is fired when the rendering of an {{domxref("OfflineAudioContext")}} is terminated.
+  - : A interface **`OfflineAudioContext`** é uma interface {{domxref("AudioContext")}} que representa um gráfico de processamento de áudio construído a partir de {{domxref("AudioNode")}}s vinculados. Em contraste com um `AudioContext` padrão, um `OfflineAudioContext` realmente não renderiza o áudio, mas o gera, _tão rápido quanto possível_, em um buffer.
+- {{domxref("OfflineAudioContext/complete_event", "complete")}} (evento)
+  - : O evento `complete` é acionado quando a renderização de um {{domxref("OfflineAudioContext")}} é encerrada.
 - {{domxref("OfflineAudioCompletionEvent")}}
-  - : The `OfflineAudioCompletionEvent` represents events that occur when the processing of an {{domxref("OfflineAudioContext")}} is terminated. The {{event("complete")}} event implements this interface.
+  - : O `OfflineAudioCompletionEvent` representa eventos que ocorrem quando o processamento de um {{domxref("OfflineAudioContext")}} é encerrado. O evento {{domxref("OfflineAudioContext/complete_event", "complete")}} usa essa interface.
 
-## Interfaces obsoletas
+## Guias e tutoriais
 
-As interfaces a seguir foram definidas em versões antigas das especificações da API de Web Audio, mas agora elas estão obsoletas e serão substituidas por outras interfaces.
+{{LandingPageListSubpages}}
 
-- {{domxref("JavaScriptNode")}}
-  - : Used for direct audio processing via JavaScript. This interface is obsolete, and has been replaced by {{domxref("ScriptProcessorNode")}}.
-- {{domxref("WaveTableNode")}}
-  - : Used to define a periodic waveform. This interface is obsolete, and has been replaced by {{domxref("PeriodicWave")}}.
+## Exemplos
 
-## Exemplo
-
-Este exemplo mostra uma grande variedade de funções da API de Web Audio que podem ser utilizadas. Você pode ver este código em ação na demo [Voice-change-o-matic](http://mdn.github.io/voice-change-o-matic/) (também verificar o [código-fonte completo no Github](https://github.com/mdn/voice-change-o-matic)) - esta é uma demonstração de um modificador de voz de brinquedo experimental; aconselhamos manter seus alto-falantes baixo ao utilizá-lo, pelo menos para começar!
-
-As linhas API de Web Audio estão destacadas; se você quiser encontrar mais informações sobre os diferentes métodos, faça uma busca através das páginas de referência.
-
-```js
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)(); // define audio context
-// Webkit/blink browsers need prefix, Safari won't work without window.
-
-var voiceSelect = document.getElementById("voice"); // select box for selecting voice effect options
-var visualSelect = document.getElementById("visual"); // select box for selecting audio visualization options
-var mute = document.querySelector('.mute'); // mute button
-var drawVisual; // requestAnimationFrame
-
-var analyser = audioCtx.createAnalyser();
-var distortion = audioCtx.createWaveShaper();
-var gainNode = audioCtx.createGain();
-var biquadFilter = audioCtx.createBiquadFilter();
-
-function makeDistortionCurve(amount) { // function to make curve shape for distortion/wave shaper node to use
-  var k = typeof amount === 'number' ? amount : 50,
-    n_samples = 44100,
-    curve = new Float32Array(n_samples),
-    deg = Math.PI / 180,
-    i = 0,
-    x;
-  for ( ; i < n_samples; ++i ) {
-    x = i * 2 / n_samples - 1;
-    curve[i] = ( 3 + k ) * x * 20 * deg / ( Math.PI + k * Math.abs(x) );
-  }
-  return curve;
-};
-
-navigator.getUserMedia (
-  // constraints - only audio needed for this app
-  {
-    audio: true
-  },
-
-  // Success callback
-  function(stream) {
-    source = audioCtx.createMediaStreamSource(stream);
-    source.connect(analyser);
-    analyser.connect(distortion);
-    distortion.connect(biquadFilter);
-    biquadFilter.connect(gainNode);
-    gainNode.connect(audioCtx.destination); // connecting the different audio graph nodes together
-
-    visualize(stream);
-    voiceChange();
-
-  },
-
-  // Error callback
-  function(err) {
-    console.log('The following gUM error occured: ' + err);
-  }
-);
-
-function visualize(stream) {
-  WIDTH = canvas.width;
-  HEIGHT = canvas.height;
-
-  var visualSetting = visualSelect.value;
-  console.log(visualSetting);
-
-  if(visualSetting == "sinewave") {
-    analyser.fftSize = 2048;
-    var bufferLength = analyser.frequencyBinCount; // half the FFT value
-    var dataArray = new Uint8Array(bufferLength); // create an array to store the data
-
-    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
-
-    function draw() {
-
-      drawVisual = requestAnimationFrame(draw);
-
-      analyser.getByteTimeDomainData(dataArray); // get waveform data and put it into the array created above
-
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)'; // draw wave with canvas
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
-
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
-
-      canvasCtx.beginPath();
-
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
-
-      for(var i = 0; i < bufferLength; i++) {
-
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
-
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
-
-        x += sliceWidth;
-      }
-
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
-
-    draw();
-
-  } else if(visualSetting == "off") {
-    canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
-    canvasCtx.fillStyle = "red";
-    canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
-  }
-
-}
-
-function voiceChange() {
-  distortion.curve = new Float32Array;
-  biquadFilter.gain.value = 0; // reset the effects each time the voiceChange function is run
-
-  var voiceSetting = voiceSelect.value;
-  console.log(voiceSetting);
-
-  if(voiceSetting == "distortion") {
-    distortion.curve = makeDistortionCurve(400); // apply distortion to sound using waveshaper node
-  } else if(voiceSetting == "biquad") {
-    biquadFilter.type = "lowshelf";
-    biquadFilter.frequency.value = 1000;
-    biquadFilter.gain.value = 25; // apply lowshelf filter to sounds using biquad
-  } else if(voiceSetting == "off") {
-    console.log("Voice settings turned off"); // do nothing, as off option was chosen
-  }
-
-}
-
-// event listeners to change visualize and voice settings
-
-visualSelect.onchange = function() {
-  window.cancelAnimationFrame(drawVisual);
-  visualize(stream);
-}
-
-voiceSelect.onchange = function() {
-  voiceChange();
-}
-
-mute.onclick = voiceMute;
-
-function voiceMute() { // toggle to mute and unmute sound
-  if(mute.id == "") {
-    gainNode.gain.value = 0; // gain set to 0 to mute sound
-    mute.id = "activated";
-    mute.innerHTML = "Unmute";
-  } else {
-    gainNode.gain.value = 1; // gain set to 1 to unmute sound
-    mute.id = "";
-    mute.innerHTML = "Mute";
-  }
-}
-```
+Você pode encontrar vários exemplos em nosso [repositório webaudio-example](https://github.com/mdn/webaudio-examples/) no GitHub.
 
 ## Especificações
 
-| Especificação                            | Status                               | Comentário |
-| ---------------------------------------- | ------------------------------------ | ---------- |
-| {{SpecName('Web Audio API')}} | {{Spec2('Web Audio API')}} |            |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
-{{Compat("api.AudioContext")}}
+### AudioContext
+
+{{Compat}}
 
 ## Veja também
 
-- [Using the Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Visualizations with Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [Voice-change-O-matic example](http://mdn.github.io/voice-change-o-matic/)
-- [Violent Theremin example](http://mdn.github.io/violent-theremin/)
-- [Web audio spatialisation basics](/pt-BR/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-- [Mixing Positional Audio and WebGL](http://www.html5rocks.com/tutorials/webaudio/positional_audio/)
-- [Developing Game Audio with the Web Audio API](http://www.html5rocks.com/tutorials/webaudio/games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/pt-BR/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
-- [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
+### Tutoriais/guias
 
-### Quicklinks
+- [Conceitos básicos por trás da API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
+- [Usando a API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Técnicas avançadas: criação de som, sequenciamento, temporização, agendamento](/pt-BR/docs/Web/API/Web_Audio_API/Advanced_techniques)
+- [Guia de reprodução automática para APIs de mídia e áudio da Web](/pt-BR/docs/Web/Media/Autoplay_guide)
+- [Usando filtros IIR](/pt-BR/docs/Web/API/Web_Audio_API/Using_IIR_filters)
+- [Visualizações com API de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+- [Noções básicas de espacialização de áudio da Web](/pt-BR/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Controlando vários parâmetros com ConstantSourceNode](/pt-BR/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
+- [Misturando áudio posicional e WebGL (2012)](https://web.dev/webaudio-positional-audio/)
+- [Desenvolvendo o áudio do jogo com a API de áudio da Web (2012)](https://auth.web.dev/webaudio-games/)
+- [Migrando código webkitAudioContext para padrões baseados em AudioContext](/pt-BR/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
 
-1. **Guides**
+### Bibliotecas
 
-    1. [Basic concepts behind Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
-    2. [Using the Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-    3. [Visualizations with Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-    4. [Web audio spatialisation basics](/pt-BR/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-    5. [Porting webkitAudioContext code to standards based AudioContext](/pt-BR/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
+- [Tones](https://github.com/bit101/tones): uma biblioteca simples para tocar tons/notas específicos usando a API de áudio da Web.
+- [Tone.js](https://tonejs.github.io/): um framework para criar música interativa no navegador.
+- [howler.js](https://github.com/goldfire/howler.js/): uma biblioteca de áudio JS que tem como padrão [Web Audio API](https://webaudio.github.io/web-audio-api/) e retorna para [HTML Audio](https://html.spec.whatwg.org/multipage/media.html#the-audio-element), além de fornecer outros recursos úteis.
+- [Mooog](https://github.com/mattlima/mooog): encadeamento de AudioNodes no estilo jQuery, envios/retornos no estilo do mixer e muito mais.
+- [XSound](https://xsound.jp/): Biblioteca Web Audio API para Sintetizador, Efeitos, Visualização, Gravação, etc.
+- [OpenLang](https://github.com/chrisjohndigital/OpenLang): aplicativo da Web do laboratório de linguagem de vídeo HTML usando a API de áudio da Web para gravar e combinar vídeo e áudio de diferentes fontes em um único arquivo ([fonte no GitHub]( https://github.com/chrisjohndigital/OpenLang))
+- [Pts.js](https://ptsjs.org/): Simplifica a visualização de áudio na web ([guide](https://ptsjs.org/guide/sound-0800))
 
-2. **Examples**
+### Tópicos relacionados
 
-    1. [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)
-    2. [Violent Theremin](http://mdn.github.io/violent-theremin/)
-
-3. **Interfaces**
-
-    1. {{domxref("AnalyserNode")}}
-    2. {{domxref("AudioBuffer")}}
-    3. {{domxref("AudioBufferSourceNode")}}
-    4. {{domxref("AudioContext")}}
-    5. {{domxref("AudioDestinationNode")}}
-    6. {{domxref("AudioListener")}}
-    7. {{domxref("AudioNode")}}
-    8. {{domxref("AudioParam")}}
-    9. {{event("audioprocess")}} (event)
-    10. {{domxref("AudioProcessingEvent")}}
-    11. {{domxref("BiquadFilterNode")}}
-    12. {{domxref("ChannelMergerNode")}}
-    13. {{domxref("ChannelSplitterNode")}}
-    14. {{event("complete")}} (event)
-    15. {{domxref("ConvolverNode")}}
-    16. {{domxref("DelayNode")}}
-    17. {{domxref("DynamicsCompressorNode")}}
-    18. {{event("ended_(Web_Audio)", "ended")}} (event)
-    19. {{domxref("GainNode")}}
-    20. {{domxref("MediaElementAudioSourceNode")}}
-    21. {{domxref("MediaStreamAudioDestinationNode")}}
-    22. {{domxref("MediaStreamAudioSourceNode")}}
-    23. {{domxref("OfflineAudioCompletionEvent")}}
-    24. {{domxref("OfflineAudioContext")}}
-    25. {{domxref("OscillatorNode")}}
-    26. {{domxref("PannerNode")}}
-    27. {{domxref("PeriodicWaveNode")}}
-    28. {{domxref("ScriptProcessorNode")}}
-    29. {{domxref("WaveShaperNode")}}
+- [Tecnologias de mídia da Web](/pt-BR/docs/Web/Media)
+- [Guia para tipos e formatos de mídia na web](/pt-BR/docs/Web/Media/Formats)

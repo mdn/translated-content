@@ -3,6 +3,7 @@ title: <form>
 slug: Web/HTML/Element/form
 translation_of: Web/HTML/Element/form
 ---
+
 ## Резюме
 
 _Элемент HTML form_ (`<form>`) представляет (собой) раздел документа, содержащий интерактивные элементы управления, которые позволяют пользователю отправлять информацию на веб-сервер.
@@ -92,4 +93,4 @@ _Элемент HTML form_ (`<form>`) представляет (собой) ра
 
 - Другие элементы, которые используются для создания форм: {{HTMLElement("button")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

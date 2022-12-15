@@ -1,28 +1,12 @@
 ---
 title: Utilizando a função "alerta"
 slug: Web/Accessibility/ARIA/Roles/alert_role
-tags:
-  - ARIA
-  - Accessibility
-  - Acessibilidade
-  - Alertas
-  - Avançado
-  - CSS
-  - Caixas de aviso
-  - Configuração role
-  - Guía
-  - HTML+ARIA
-  - NeedsContent
-  - PrecisaDeConteúdo
-  - WAI-ARIA
-  - wcag1.2.1
-  - wcag3.3.1
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 ---
+
 ### Descrição
 
-Esta técnica mostra como utilizar o atributo _role_ [alert](http://www.w3.org/TR/wai-aria/roles#alert) e demonstra seu efeito em navegadores e tecnologias assistivas.
+Esta técnica mostra como utilizar o atributo _role_ [alert](https://www.w3.org/TR/wai-aria/roles#alert) e demonstra seu efeito em navegadores e tecnologias assistivas.
 
 O atributo de alerta é utilizado para comunicar alguma mensagem importante e, frequentemente, urgente. Quando este atributo (_role_) estiver ligado a um elemento, o navegador vai enviar um evento acessível de alerta aos produtos de tecnologia assistiva que, então, poderão notificar seus utilizadores sobre o que estiver acontecendo. O atributo _alert_ é mais útil para as informações que requerem a atenção imediata na tela. Por exemplo:
 
@@ -112,16 +96,16 @@ document.getElementById("expirationWarning").className = "";
 
 - A utilização da função alerta em um elemento implica que ele tenha a `aria-live="assertive"`.
 - O atributo _alert role_ deve ser usado, apenas, para conteúdo com texto estático. O elemento no qual a função alerta for usada não deve ser passível de receber foco, então, um leitor de tela vai, automaticamente, anunciar o alerta, independentemente de onde o foco do teclado esteja localizado no momento.
-- Se um alerta oferecer, também, controles interativos (tais como um controle de formulário que possibilite a sua correção, ou um botão "OK" que descarte o alerta), em seu lugar deve-se utilizar um [_alertdialog_ (diálogo de alerta)](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role).
+- Se um alerta oferecer, também, controles interativos (tais como um controle de formulário que possibilite a sua correção, ou um botão "OK" que descarte o alerta), em seu lugar deve-se utilizar um [_alertdialog_ (diálogo de alerta)](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role).
 
 ### Atributos ARIA utilizados
 
-- [alert](http://www.w3.org/TR/wai-aria/roles#alert)
+- [alert](https://www.w3.org/TR/wai-aria/roles#alert)
 
 ### Técnicas ARIA relacionadas
 
-- [Utilizando a função alertdialog](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
-- [Utilizando a propriedade aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property)
+- [Utilizando a função alertdialog](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+- [Utilizando a propriedade aria-invalid](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property)
 
 ### Compatibilidade
 
@@ -129,4 +113,4 @@ TBD: Adicionar informações de suporte para UA comum e combinações de produto
 
 ### Recursos Adicionais
 
-- Melhores práticas ARIA - Alert Role: <http://www.w3.org/TR/wai-aria-practices/#alert>
+- Melhores práticas ARIA - Alert Role: <https://www.w3.org/TR/wai-aria-practices/#alert>

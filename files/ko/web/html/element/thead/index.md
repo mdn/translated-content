@@ -11,7 +11,7 @@ tags:
 browser-compat: html.elements.thead
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<thead>`** [HTML](/ko/docs/Web/HTML) 요소는 테이블의 열의 머리글인 행들의 집합입니다.
 

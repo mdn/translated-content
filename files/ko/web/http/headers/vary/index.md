@@ -3,6 +3,7 @@ title: Vary
 slug: Web/HTTP/Headers/Vary
 translation_of: Web/HTTP/Headers/Vary
 ---
+
 {{HTTPSidebar}}
 
 **`Vary`** 헤더는 캐시 된 응답을 향후 요청들에서 오리진 서버로 새로운 요청 헤더를 요청하는 대신 사용할 수 있는지 여부를 결정합니다. 이것은 서버에서 [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation) 알고리즘에 어떤 리소스를 선택을 할 것인지를 가르킵니다.

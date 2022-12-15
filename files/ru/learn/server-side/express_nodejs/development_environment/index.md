@@ -3,6 +3,7 @@ title: Setting up a Node development environment
 slug: Learn/Server-side/Express_Nodejs/development_environment
 translation_of: Learn/Server-side/Express_Nodejs/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
 Теперь, когда вы знаете, что такое Express, мы покажем вам, как настроить и протестировать среду разработки Express для Windows, Linux (Ubuntu) и Mac OS X - какую бы операционную систему вы не использовали, эта статья должна дать вам все, что необходимо для возможности начать разрабатывать приложения Express.
@@ -346,7 +347,7 @@ DEBUG=helloworld:* npm start
 
 Откройте браузер и перейдите по адресу `http://127.0.0.1:3000/`, чтобы увидеть страницу приветствия Express по умолчанию.
 
-![Express - Generated App Default Screen](https://mdn.mozillademos.org/files/14331/express_default_screen.png)
+![Express - Generated App Default Screen](express_default_screen.png)
 
 Мы поговорим больше о сгенерированном приложении, когда перейдём к статье о создании каркасного приложения.
 

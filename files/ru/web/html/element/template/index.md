@@ -16,7 +16,8 @@ tags:
 translation_of: Web/HTML/Element/template
 browser-compat: html.elements.template
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 [HTML](/ru/docs/Web/HTML)-элемент шаблона контента **`<template>`** — это механизм для отложенного создания клиентского контента, который не отображается во время загрузки страницы, но может быть инициализирован при помощи JavaScript.
 

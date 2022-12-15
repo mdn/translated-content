@@ -49,9 +49,7 @@ document.onselectstart = () => {
 
 ## 仕様
 
-| Specification                                                                            | Status                               | Comment             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Selection API', '#selectstart-event', 'selectstart')}} | {{Spec2('Selection API')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザ互換性
 

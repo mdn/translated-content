@@ -21,6 +21,4 @@ slug: Web/CSS/CSS_Scroll_Snap_Points
 
 ## 仕様書
 
-| 仕様書                                                                                          | 状態                                | 備考     |
-| ----------------------------------------------------------------------------------------------- | ----------------------------------- | -------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-points-y", "scroll-snap-points-y")}} | {{Spec2("CSS Scroll Snap Points")}} | 初回定義 |
+{{Specifications}}

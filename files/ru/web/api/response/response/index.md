@@ -9,6 +9,7 @@ tags:
   - Response
 translation_of: Web/API/Response/Response
 ---
+
 {{APIRef("Fetch")}}
 
 Конструктор **`Response()`** создаёт новый объект {{domxref("Response")}}.

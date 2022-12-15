@@ -3,6 +3,7 @@ title: Document.registerElement()
 slug: Web/API/Document/registerElement
 translation_of: Web/API/Document/registerElement
 ---
+
 {{APIRef("DOM")}}
 
 Метод **`Document.registerElement()`** регистрирует новый кастомный элемент ([custom element](/ru/docs/Web/Web_Components/Custom_Elements)) в браузере и возвращает конструктор для этого нового элемента.

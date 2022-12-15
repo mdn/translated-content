@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Functions/Method_definitions
 translation_of: Web/JavaScript/Reference/Functions/Method_definitions
 original_slug: Web/JavaScript/Reference/Functions/Определение_методов
 ---
+
 {{JsSidebar("Functions")}}
 
 Начиная с ECMAScript 6, существует короткий синтаксис для определения методов в инициализаторе объекта. По сути, это сокращение для функции, которая назначена имени метода.

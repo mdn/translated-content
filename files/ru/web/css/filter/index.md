@@ -10,6 +10,7 @@ tags:
   - Ссылка
 translation_of: Web/CSS/filter
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Описание

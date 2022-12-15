@@ -1,11 +1,8 @@
 ---
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
-tags:
-  - Objeto
-  - Prototipo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
+
 {{JSRef}}
 
 O método **`isPrototypeOf()`** checa se um objeto existe em na cadeia de protótipos de um outro objeto.
@@ -98,4 +95,4 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 - {{jsxref("Operators/instanceof", "instanceof")}}
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)

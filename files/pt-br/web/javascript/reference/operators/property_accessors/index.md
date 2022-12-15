@@ -1,8 +1,8 @@
 ---
 title: Assessores de propriedade
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
+
 {{jsSidebar("Operators")}}
 
 Os assessores de propriedade fornecem acesso as propriedades de um objeto usando a notação de ponto ou a notação de colchetes.

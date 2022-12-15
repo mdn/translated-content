@@ -3,6 +3,7 @@ title: ServiceWorker
 slug: Web/API/ServiceWorker
 translation_of: Web/API/ServiceWorker
 ---
+
 {{APIRef("Service Workers API")}}
 
 Интерфейс `ServiceWorker`, являющийся частью [ServiceWorker API](/ru/docs/Web/API/ServiceWorker_API), позволяет взаимодействовать с Service Worker. К одному Service Worker могут быть привязаны несколько контекстов (например страниц, Web Workers, и т.д.), каждый с использованием собственного объекта `ServiceWorker`.
@@ -76,7 +77,7 @@ if ('serviceWorker' in navigator) {
 
 ## Смотрите Также
 
-- [ServiceWorker Cookbook](https://serviceworke.rs)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Базовый пример для Service Worker](https://github.com/mdn/sw-test)
 - [Поддержка ServiceWorker браузерами](https://jakearchibald.github.io/isserviceworkerready/)

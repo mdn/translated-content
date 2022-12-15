@@ -9,6 +9,7 @@ tags:
   - Web Audio API
 browser-compat: api.AnalyserNode.getByteTimeDomainData
 ---
+
 {{ APIRef("Mountain View APIRef Project") }}
 
 {{ domxref("AnalyserNode") }} 인터페이스의 **`getByteTimeDomainData()`** 메서드는 전달된 {{domxref("Uint8Array")}} (unsigned byte array) 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.

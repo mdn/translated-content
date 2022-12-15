@@ -1,10 +1,8 @@
 ---
 title: selectAllChildren
 slug: Web/API/Selection/selectAllChildren
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/selectAllChildren
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen

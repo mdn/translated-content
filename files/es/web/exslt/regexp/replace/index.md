@@ -1,12 +1,8 @@
 ---
 title: replace
 slug: Web/EXSLT/regexp/replace
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/regexp/replace
 ---
+
 {{XsltRef}}
 
 `regexp:replace()` reemplaza porciones de una cadena que coincide con la expresión regular dada por el contenido de otra cadena.

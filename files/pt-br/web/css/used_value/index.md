@@ -1,9 +1,9 @@
 ---
 title: Valor usado
 slug: Web/CSS/used_value
-translation_of: Web/CSS/used_value
 original_slug: Web/CSS/Valor_usado
 ---
+
 {{cssref}}
 
 O **valor usado** de uma propriedade CSS é o valor final dessa propriedade depois de todos os cálculos terem sido executados.
@@ -91,7 +91,7 @@ window.addEventListener('resize', updateAllUsedWidths);
 
 ## Diferentes valores computados
 
-CSS 2.0 defined only [computed value](/pt-BR/docs/CSS/computed_value) as the last step in a property's calculation. Then, CSS 2.1 introduced the distinct definition of used value. An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., display, font-size, line-height), the computed values and used values are the same. These are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from [CSS 2.1 Changes: Specified, computed, and actual values](http://www.w3.org/TR/CSS2/changes.html#q36)):
+CSS 2.0 defined only [computed value](/pt-BR/docs/CSS/computed_value) as the last step in a property's calculation. Then, CSS 2.1 introduced the distinct definition of used value. An element could then explicitly inherit a width/height of a parent, whose computed value is a percentage. For CSS properties that don't depend on layout (e.g., display, font-size, line-height), the computed values and used values are the same. These are the CSS 2.1 properties that do depend on layout, so they have a different computed value and used value: (taken from [CSS 2.1 Changes: Specified, computed, and actual values](https://www.w3.org/TR/CSS2/changes.html#q36)):
 
 - background-position
 - bottom, left, right, top
@@ -103,7 +103,7 @@ CSS 2.0 defined only [computed value](/pt-BR/docs/CSS/computed_value) as the las
 
 ## Especificações
 
-[CSS Level 2: Used Values](http://www.w3.org/TR/CSS2/cascade.html#used-value)
+[CSS Level 2: Used Values](https://www.w3.org/TR/CSS2/cascade.html#used-value)
 
 ## Veja também
 

@@ -7,6 +7,7 @@ tags:
   - Текст
 translation_of: Web/API/SVGTextElement
 ---
+
 {{APIRef("SVG")}}
 
 Интерфейс **`SVGTextElement`** соответствует элементам {{SVGElement("text")}}.

@@ -1,12 +1,10 @@
 ---
 title: '<title>: El elemento Título del documento'
 slug: Web/HTML/Element/title
-translation_of: Web/HTML/Element/title
 original_slug: Web/HTML/Elemento/title
-browser-compat: html.elements.title
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del documento que se muestra en un {{glossary("Browser", "browser")}} la barra de título o la pestaña de una página. Solo contiene texto; las etiquetas dentro del elemento se ignoran.
 

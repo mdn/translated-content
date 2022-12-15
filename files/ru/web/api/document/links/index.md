@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/links
 ---
+
 {{ APIRef("DOM") }}
 
 Возвращает объект всех элементов {{HTMLElement("area")}} и {{HTMLElement("a")}}, присутствующих на странице с значением атрибута [href](/ru/docs/Web/API/URLUtils.href).

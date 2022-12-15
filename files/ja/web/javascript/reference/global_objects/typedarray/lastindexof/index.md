@@ -46,9 +46,7 @@ uint8.lastIndexOf(2, -1); // 3
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.lastindexof', 'TypedArray.prototype.lastIndexOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

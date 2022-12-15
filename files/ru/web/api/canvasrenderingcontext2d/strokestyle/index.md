@@ -3,6 +3,7 @@ title: CanvasRenderingContext2D.strokeStyle
 slug: Web/API/CanvasRenderingContext2D/strokeStyle
 translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
+
 {{APIRef}}
 
 Свойство **`CanvasRenderingContext2D.strokeStyle`**, предоставляемое Canvas 2D API задаёт цвет или стиль, используемый при выполнении обводки фигур. По умолчанию установлено значение `#000` (чёрный цвет).
@@ -112,7 +113,7 @@ for (var i=0;i<6;i++){
 
 Результат выглядит так:
 
-{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "https://mdn.mozillademos.org/files/253/Canvas_strokestyle.png")}}
+{{EmbedLiveSample("A_strokeStyle_example", "180", "180", "canvas_strokestyle.png")}}
 
 ## Спецификации
 

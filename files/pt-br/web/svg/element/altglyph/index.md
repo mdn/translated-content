@@ -1,13 +1,8 @@
 ---
 title: altGlyph
 slug: Web/SVG/Element/altGlyph
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/altGlyph
 ---
+
 {{SVGRef}}
 
 O elemento `altGlyph` habilita a seleção sofisticada de símbolos utilizada para renderizar os dados de caractere de seu elemento filho.
@@ -22,11 +17,11 @@ O elemento `altGlyph` habilita a seleção sofisticada de símbolos utilizada pa
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/en/SVG/Attribute#ConditionalProccessing) »
-- [Atributos principais](/en/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/en/SVG/Attribute#GraphicalEvent) »
-- [Atributos de apresentação](/en/SVG/Attribute#Presentation) »
-- [Atributos XLink](/en/SVG/Attribute#XLink) »
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}

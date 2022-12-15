@@ -50,9 +50,7 @@ for (var v of str) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype-@@iterator', 'String.prototype[@@iterator]()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

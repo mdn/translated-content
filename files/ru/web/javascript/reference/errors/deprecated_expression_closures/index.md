@@ -6,6 +6,7 @@ tags:
   - Warning
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

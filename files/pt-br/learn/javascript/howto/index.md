@@ -1,9 +1,9 @@
 ---
 title: Solve common problems in your JavaScript code
 slug: Learn/JavaScript/Howto
-translation_of: Learn/JavaScript/Howto
 original_slug: Aprender/JavaScript/Howto
 ---
+
 {{LearnSidebar}}
 
 Os links a seguir apontam soluções para problemas comuns do dia a dia, você precisará consertar em ordem para que seu código javascript execute corretamente.
@@ -83,9 +83,6 @@ var myObject = {
 - [O que são strings?](/pt-BR/docs/Learn/JavaScript/First_steps/Strings)
 - [O que é um vetor?](/pt-BR/docs/Learn/JavaScript/First_steps/Arrays#What_is_an_Array)
 - [O que é um laço?](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code)
-
-<!---->
-
 - [O que é uma função?](/pt-BR/docs/Learn/JavaScript/Building_blocks/Functions)
 - [O que é um evento?](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
 - [O que é um objeto?](/pt-BR/docs/Learn/JavaScript/Objects/Basics#Object_basics)

@@ -1,8 +1,8 @@
 ---
 title: Mobile accessibility
 slug: Learn/Accessibility/Mobile
-translation_of: Learn/Accessibility/Mobile
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 
 Dado que el acceso a la web en dispositivos móviles es tan popular, y las plataformas populares como iOS y Android tienen herramientas de accesibilidad completas, es importante considerar la accesibilidad de su contenido web en estas plataformas. Este artículo analiza las consideraciones de accesibilidad específicas para dispositivos móviles.

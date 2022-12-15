@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Logical_Properties
 ---
+
 {{CSSRef}}
 
 **CSS Logical Properties and Values**는 레이아웃을 제어하는 물리 속성에 논리 맵핑을 정의하는 CSS 모듈입니다.

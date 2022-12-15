@@ -3,7 +3,7 @@ title: <meta>
 slug: Web/HTML/Element/meta
 translation_of: Web/HTML/Element/meta
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML-элемент `<meta>`** представляет такие {{Glossary("Metadata","метаданные")}}, которые не могут быть представлены другими HTML-метатегами, такими как {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} или {{HTMLElement("title")}}.
 

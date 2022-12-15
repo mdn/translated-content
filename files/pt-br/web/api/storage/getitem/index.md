@@ -1,8 +1,8 @@
 ---
 title: localStorage.getItem()
 slug: Web/API/Storage/getItem
-translation_of: Web/API/Storage/getItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 Passar o nome da chave para o método `getItem()` da interface {{domxref("Storage")}} retornará o seu valor.

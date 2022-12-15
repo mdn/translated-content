@@ -1,14 +1,9 @@
 ---
 title: NonDocumentTypeChildNode.nextElementSibling
 slug: Web/API/Element/nextElementSibling
-tags:
-  - API
-  - DOM
-  - NonDocumentTypeChildNode
-  - Propiedad
-translation_of: Web/API/NonDocumentTypeChildNode/nextElementSibling
 original_slug: Web/API/NonDocumentTypeChildNode/nextElementSibling
 ---
+
 {{APIRef}}
 
 La propiedad de sólo lectura `NonDocumentTypeChildNode.nextElementSibling` devuelve el elemento inmediatamente posterior al especificado, dentro de la lista de elementos hijos de su padre, o bien `null` si el elemento especificado es el último en dicha lista.

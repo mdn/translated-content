@@ -3,6 +3,7 @@ title: ServiceWorkerRegistration.showNotification()
 slug: Web/API/ServiceWorkerRegistration/showNotification
 translation_of: Web/API/ServiceWorkerRegistration/showNotification
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `showNotification()` method of the {{domxref("ServiceWorkerRegistration")}} interface creates a notification on an active service worker.

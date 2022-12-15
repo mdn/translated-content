@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/JavaScript/Asynchronous/Async_await
 original_slug: Learn/JavaScript/Asynchronous/Async_await
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
 
 В ECMAScript версии 2017 появились [async functions](/ru/docs/Web/JavaScript/Reference/Statements/async_function) и ключевое слово [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) ([ECMAScript Next support in Mozilla](/ru/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_Next_support_in_Mozilla)). По существу, такие функции есть синтаксический сахар над Promises и Generator functions ([ts39](https://tc39.es/ecmascript-asyncawait/)). С их помощью легче писать/читать асинхронный код, ведь они позволяют использовать привычный синхронный стиль написания. В этой статье мы на базовом уровне разберёмся в их устройстве.

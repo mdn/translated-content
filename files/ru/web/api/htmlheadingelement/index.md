@@ -3,6 +3,7 @@ title: HTMLHeadingElement
 slug: Web/API/HTMLHeadingElement
 translation_of: Web/API/HTMLHeadingElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLHeadingElement`** интерфейс представляет различные элементы заголовков. Наследует методы и свойства из {{domxref("HTMLElement")}}.

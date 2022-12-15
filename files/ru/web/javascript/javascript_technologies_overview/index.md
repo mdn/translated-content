@@ -3,6 +3,7 @@ title: Обзор JavaScript
 slug: Web/JavaScript/JavaScript_technologies_overview
 translation_of: Web/JavaScript/JavaScript_technologies_overview
 ---
+
 {{JsSidebar("Introductory")}}
 
 ## Введение

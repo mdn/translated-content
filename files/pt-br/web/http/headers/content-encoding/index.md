@@ -1,13 +1,8 @@
 ---
 title: Content-Encoding
 slug: Web/HTTP/Headers/Content-Encoding
-tags:
-  - Cabeçalhos
-  - HTTP
-  - Reference
-  - Referencia
-translation_of: Web/HTTP/Headers/Content-Encoding
 ---
+
 {{HTTPSidebar}}
 
 The **`Content-Encoding`** entity header is used to compress the media-type. When present, its value indicates which encodings were applied to the entity-body. It lets the client know how to decode in order to obtain the media-type referenced by the `Content-Type` header.

@@ -1,12 +1,8 @@
 ---
 title: Complementos
 slug: Mozilla/Add-ons
-tags:
-  - Add-ons
-  - Precisa de Tradução
-  - TopicStub
-translation_of: Mozilla/Add-ons
 ---
+
 {{AddonSidebar}}Modifique e amplie os aplicativos da Mozilla
 
 **Complementos** acrescentam novas funcionalidades para os aplicativos baseados no [Gecko](/pt-BR/docs/Mozilla/Gecko) tais como Firefox, SeaMonkey e Thunderbird. Há dois tipos de complementos principais [Extensões](/pt-BR/docs/Mozilla/Add-ons/Gerenciador_de_Add-on#Extensoes) adicionam novas características para o aplicativo, enquanto [Temas](/pt-BR/docs/Mozilla/Add-ons/Temas) modificam a interface do aplicativo do usuário.

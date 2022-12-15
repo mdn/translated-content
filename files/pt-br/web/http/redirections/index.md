@@ -1,13 +1,9 @@
 ---
 title: Redirecionamentos em HTTP
 slug: Web/HTTP/Redirections
-tags:
-  - Guía
-  - HTTP
-  - Redirecionamento
-translation_of: Web/HTTP/Redirections
 original_slug: Web/HTTP/Redirecionamento
 ---
+
 {{HTTPSidebar}}
 
 Redirecionamento de URL, também conhecido como encaminhamento de URL, é uma técnica que à uma página, formulário ou uma aplicação web inteira, mais de um endereço de URL. HTTP fornece uma espécie especial de respostas, _**HTTP redirects**_, executar esta operação é utilizada para vários objetivos: redirecionamento temporário enquanto está sendo feita a manutenção do web site, redirecionamento permanente para manter links externos funcionando após alterações na arquitetura do web site, páginas de progresso enquanto é feito o envio de um arquivo, e assim por diante.
@@ -16,7 +12,7 @@ Redirecionamento de URL, também conhecido como encaminhamento de URL, é uma t�
 
 Em HTTP, um redirecionamento é acionado pelo servidor enviando respostas especiais para uma solicitação: _redirects_. Os redirecionamentos HTTP são respostas com um código de status de 3xx. Um navegador, ao receber uma resposta de redirecionamento, usa o novo URL fornecido e carrega-o imediatamente: a maior parte do tempo, o redirecionamento é transparente para o usuário, além de um pequeno desempenho.
 
-![](https://mdn.mozillademos.org/files/13785/HTTPRedirect.png)
+![](httpredirect.png)
 
 Existem vários tipos de redirecionamentos e eles se enquadram em três categorias: redirecionamentos permanentes, temporários e especiais.
 

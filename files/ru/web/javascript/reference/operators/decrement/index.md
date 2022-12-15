@@ -6,6 +6,7 @@ tags:
   - Оператор
 translation_of: Web/JavaScript/Reference/Operators/Decrement
 ---
+
 {{jsSidebar("Operators")}}
 
 Оператор декремента (`--`) уменьшает (вычитает единицу) свой операнд и возвращает значение.

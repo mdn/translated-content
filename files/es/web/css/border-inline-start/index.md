@@ -1,8 +1,8 @@
 ---
 title: border-inline-start
 slug: Web/CSS/border-inline-start
-translation_of: Web/CSS/border-inline-start
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`border-inline-start`** es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) para establecer los valores de la propiedad inicial del borde individual en línea en un solo lugar en la hoja de estilos.
@@ -65,11 +65,9 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                               | Estado                                           | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-inline-start", "border-inline-start")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

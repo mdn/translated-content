@@ -91,7 +91,7 @@ For example, if you specify a {{domxref("MediaTrackConstraints.width", "width")}
 
 While display capture is in effect, the machine which is sharing screen contents will display some form of indicator so the user is aware that sharing is taking place.
 
-> **备注：** For privacy and security reasons, screen sharing sources are not enumerable using {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Related to this, the {{event("devicechange")}} event is never sent when there are changes to the sources available for `getDisplayMedia()`.
+> **备注：** For privacy and security reasons, screen sharing sources are not enumerable using {{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}}. Related to this, the {{domxref("MediaDevices/devicechange_event", "devicechange")}} event is never sent when there are changes to the sources available for `getDisplayMedia()`.
 
 ### Capturing shared audio
 
@@ -321,12 +321,12 @@ The final product looks like this. If your browser supports Screen Capture API, 
 
 ## 安全
 
-In order to function when [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Feature-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's {{htmlattrxref("allow", "iframe")}} attribute.
+In order to function when [Feature Policy](/zh-CN/docs/Web/HTTP/Feature_Policy) is enabled, you will need the `display-capture` permission. This can be done using the {{HTTPHeader("Permissions-Policy")}} {{Glossary("HTTP")}} header or—if you're using the Screen Capture API in an {{HTMLElement("iframe")}}, the `<iframe>` element's {{htmlattrxref("allow", "iframe")}} attribute.
 
 For example, this line in the HTTP headers will enable Screen Capture API for the document and any embedded {{HTMLElement("iframe")}} elements that are loaded from the same origin:
 
 ```
-Feature-Policy: display-capture 'self'
+Permissions-Policy: display-capture 'self'
 ```
 
 If you're performing screen capture within an `<iframe>`, you can request permission just for that frame, which is clearly more secure than requesting a more general permission:

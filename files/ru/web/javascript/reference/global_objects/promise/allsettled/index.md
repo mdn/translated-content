@@ -3,6 +3,7 @@ title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
+
 {{JSRef}}
 
 Метод **`Promise.allSettled()`** возвращает промис, который исполняется когда все полученные промисы завершены (исполнены или отклонены), содержащий массив результатов исполнения полученных промисов.

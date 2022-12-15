@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toTimeString
 
 {{JSRef}}
 
-La méthode **`toTimeString()`**renvoie la partie « heure » de l'objet `Date` dans un format lisible par un humain, en anglais américain.
+La méthode **`toTimeString()`** renvoie la partie « heure » de l'objet `Date` dans un format lisible par un humain, en anglais américain.
 
 {{EmbedInteractiveExample("pages/js/date-totimestring.html")}}
 

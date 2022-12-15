@@ -62,11 +62,11 @@ const decryptText = async (ctBuffer, iv, password) => {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 另请参见
+## 参见
 
 - {{domxref("Crypto")}} 与 {{domxref("Crypto.subtle")}}。
 - {{domxref("SubtleCrypto")}} 包含了该接口。

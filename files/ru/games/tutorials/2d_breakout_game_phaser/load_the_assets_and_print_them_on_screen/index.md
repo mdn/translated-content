@@ -12,6 +12,7 @@ translation_of: >-
 original_slug: >-
   Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Load_the_assets_and_print_them_on_screen
 ---
+
 {{GamesSidebar}}{{IncludeSubnav("/ru/docs/Games")}}
 
 {{PreviousNext("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Scaling", "Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Move_the_ball")}}

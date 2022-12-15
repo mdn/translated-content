@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
-translation_of: Web/API/HTMLElement/offsetTop
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La propiedad de sólo lectura **`HTMLElement.offsetTop`** retorna la distancia del elemento actual respecto al borde superior del nodo {{domxref("HTMLelement.offsetParent","offsetParent")}}.
@@ -29,11 +29,9 @@ if (topPos > 10) {
 }
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                               | Estado                           | Observaciones |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsettop', 'offsetTop')}} | {{Spec2('CSSOM View')}} |               |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

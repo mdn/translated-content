@@ -6,6 +6,7 @@ tags:
   - Operators
 translation_of: Web/JavaScript/Reference/Operators
 ---
+
 {{jsSidebar("Operators")}}
 
 Эта глава описывает все операторы, выражения и ключевые слова языка JavaScript.

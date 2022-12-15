@@ -11,6 +11,7 @@ tags:
   - Экспериментальное
 translation_of: Web/API/BluetoothRemoteGATTServer
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 Интерфейс **`BluetoothRemoteGATTServer`**, относящийся к [Web Bluetooth API](/ru/docs/Web/API/Web_Bluetooth_API), представляет сервер GATT на удалённом устройстве.

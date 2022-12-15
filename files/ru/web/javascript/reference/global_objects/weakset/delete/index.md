@@ -9,6 +9,7 @@ tags:
   - WeakSet
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 ---
+
 {{JSRef("Global_Objects", "WeakSet")}}
 
 Метод **`delete()`** удаляет указанный элемент из объекта `WeakSet`.

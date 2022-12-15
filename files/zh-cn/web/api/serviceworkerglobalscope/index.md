@@ -26,26 +26,30 @@ slug: Web/API/ServiceWorkerGlobalScope
 - {{domxref("ServiceWorkerGlobalScope.caches")}} {{readonlyinline}}
   - : Contains the {{domxref("CacheStorage")}} object associated with the service worker.
 
-### Event handlers
+## 事件
 
-- {{domxref("ServiceWorkerGlobalScope.onactivate")}}
-  - : An event handler fired whenever an {{Event("activate")}} event occurs — when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
-- {{domxref("ServiceWorkerGlobalScope.onfetch")}}
-  - : An event handler fired whenever a {{Event("fetch")}} event occurs — when a {{domxref("GlobalFetch.fetch", "fetch()")}} is called.
-- {{domxref("ServiceWorkerGlobalScope.oninstall")}}
-  - : An event handler fired whenever an {{Event("install")}} event occurs — when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
-- {{domxref("ServiceWorkerGlobalScope.onmessage")}}
-  - : An event handler fired whenever a {{Event("message")}} event occurs — when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers. The service worker can optionally send a response back via the {{domxref("MessagePort")}} exposed in [`event.data.port`](https://html.spec.whatwg.org/multipage/comms.html#messageport), corresponding to the controlled page.
-- {{domxref("ServiceWorkerGlobalScope.onnotificationclick")}}
-  - : An event handler fired whenever a {{Event("notificationclick")}} event occurs — when a user clicks on a displayed notification.
-- {{domxref("ServiceWorkerGlobalScope.onnotificationclose")}}
-  - : An event handler fired whenever a {{Event("notificationclose")}} event occurs — when a user closes a displayed notification.
-- {{domxref("ServiceWorkerGlobalScope.onpush")}}
-  - : An event handler fired whenever a {{Event("push")}} event occurs — when a server push notification is received.
-- {{domxref("ServiceWorkerGlobalScope.onpushsubscriptionchange")}}
-  - : An event handler fired whenever a {{Event("pushsubscriptionchange")}} event occurs — when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time.)
-- {{domxref("ServiceWorkerGlobalScope.onsync")}}
-  - : An event handler fired whenever a {{Event("SyncEvent")}} event occurs. This is triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.
+- {{domxref("ServiceWorkerGlobalScope/activate_event", "activate")}}
+  - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.active")}} worker.
+- {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
+  - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
+- {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}
+  - : Occurs when a {{domxref("fetch()")}} is called.
+- {{domxref("ServiceWorkerGlobalScope/install_event", "install")}}
+  - : Occurs when a {{domxref("ServiceWorkerRegistration")}} acquires a new {{domxref("ServiceWorkerRegistration.installing")}} worker.
+- {{domxref("ServiceWorkerGlobalScope/message_event", "message")}}
+  - : Occurs when incoming messages are received. Controlled pages can use the {{domxref("MessagePort.postMessage()")}} method to send messages to service workers. The service worker can optionally send a response back via the {{domxref("MessagePort")}} exposed in [`event.data.port`](https://html.spec.whatwg.org/multipage/comms.html#messageport), corresponding to the controlled page.
+- {{domxref("ServiceWorkerGlobalScope/notificationclick_event", "notificationclick")}}
+  - : Occurs when a user clicks on a displayed notification.
+- {{domxref("ServiceWorkerGlobalScope/notificationclose_event", "notificationclose")}}
+  - : Occurs when a user closes a displayed notification.
+- {{domxref("ServiceWorkerGlobalScope/sync_event", "sync")}}
+  - : Triggered when a call to {{domxref("SyncManager.register")}} is made from a service worker client page. The attempt to sync is made either immediately if the network is available or as soon as the network becomes available.
+- {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}} {{Experimental_Inline}}
+  - : Occurs at periodic intervals, which were specified when registering a {{domxref("PeriodicSyncManager")}}.
+- {{domxref("ServiceWorkerGlobalScope/push_event", "push")}}
+  - : Occurs when a server push notification is received.
+- {{domxref("ServiceWorkerGlobalScope/pushsubscriptionchange_event", "pushsubscriptionchange")}}
+  - : Occurs when a push subscription has been invalidated, or is about to be invalidated (e.g. when a push service sets an expiration time).
 
 ## 方法
 

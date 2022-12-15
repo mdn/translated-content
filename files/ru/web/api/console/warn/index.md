@@ -3,9 +3,12 @@ title: Console.warn()
 slug: Web/API/Console/warn
 translation_of: Web/API/Console/warn
 ---
+
 {{APIRef("Console API")}}Выводит предупреждение в веб-консоль.
 
-{{AvailableInWorkers}}{{Note("В Firefox, предупреждения имеют небольшое изображение восклицательного знака перед сообщением.")}}
+{{AvailableInWorkers}}
+
+> **Примечание:** В Firefox, предупреждения имеют небольшое изображение восклицательного знака перед сообщением.
 
 ## Синтаксис
 

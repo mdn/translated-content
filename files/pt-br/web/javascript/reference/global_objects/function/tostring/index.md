@@ -1,13 +1,8 @@
 ---
 title: Function.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
-tags:
-  - Função
-  - JavaScript
-  - Prototipo
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 ---
+
 {{JSRef}}
 
 O método **`toString()`** retorna uma string representando o código fonte da função.

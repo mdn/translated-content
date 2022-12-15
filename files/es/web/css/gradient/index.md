@@ -1,17 +1,9 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-tags:
-  - CSS
-  - CSS tipo de datos
-  - Degradado
-  - Diseño
-  - Gradiente
-  - Referencia
-  - graficos
-translation_of: Web/CSS/gradient
 original_slug: Web/CSS/Gradiente
 ---
+
 {{CSSRef}}
 
 ## Resumen
@@ -85,11 +77,9 @@ background: repeating-linear-gradient(to top left, red, red 5px, white 5px, whit
 
 Al igual que con cualquier caso de interpolación de colores, los gradientes se calculan en el espacio de color alfa-premultiplicado. Esto impide que sombras de gris inesperadas aparezcan cuando el color o la opacidad están variando. (debe tener en cuenta que los navegadores mas antiguos no tienen incorporado este tipo de comportamient cuando utiliza la palabra clave "[transparent](/es/docs/Web/CSS/color_value#transparent_keyword)" del inglés transparente ( para más información hacer clic en el link))
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                   | Estado                           | Comentario |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('CSS3 Images', '#gradients', '&lt;gradient&gt;')}} | {{Spec2('CSS3 Images')}} |            |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

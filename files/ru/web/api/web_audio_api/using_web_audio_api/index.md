@@ -3,6 +3,7 @@ title: Используем Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
+
 [Web Audio API](/ru/docs/Web_Audio_API) обеспечивает простой, но мощный механизм реализации и управления аудио-контентом внутри web приложения. Это позволяет разрабатывать сложные аудио миксины, эффекты и т.д. В этой статье мы постараемся объяснить основы использования Web Audio API, посредством пары простых примеров.
 
 The Web Audio API does not replace the [\<audio>](/ru/docs/Web/HTML/Element/audio) media element, but rather complements it, just like [\<canvas>](/ru/docs/Web/HTML/Element/canvas) co-exists well alongside the [\<img>](/ru/docs/Web/HTML/Element/Img) element. What you use to implement audio depends on your use case. If you just want to control playback of a simple audio track, \<audio> is probably a better, quicker solution. If you want to carry out more complex audio processing, as well as playback, Web Audio API provides much more power and control.
@@ -15,11 +16,11 @@ To demonstrate usage of the Web Audio API, we created a number of examples which
 
 First off, we created the [Voice-change-O-matic](https://github.com/mdn/voice-change-o-matic), a fun voice changer and sound visualisation web app, which allows you to choose different effects and visualisations. This could definitely be improved on with better quality effects, but it demonstrates the usage of multiple Web Audio API features together ([run the Voice-change-O-matic live](http://mdn.github.io/voice-change-o-matic/)).
 
-![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](https://mdn.mozillademos.org/files/7921/voice-change-o-matic.png)
+![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](voice-change-o-matic.png)
 
 Another example we've created on our quest to understand the Web Audio is the [Violent Theremin](http://mdn.github.io/violent-theremin/), a simple app allowing you to change the pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/violent-theremin)).
 
-![A page full of rainbow colours, with two buttons labeled Clear screen and mute. ](https://mdn.mozillademos.org/files/7919/violent-theremin.png)
+![A page full of rainbow colours, with two buttons labeled Clear screen and mute. ](violent-theremin.png)
 
 ## Basic concepts
 
@@ -98,7 +99,7 @@ gainNode.connect(audioCtx.destination);
 
 This would create an audio graph like this:
 
-![](https://mdn.mozillademos.org/files/7949/voice-change-o-matic-graph.png)You can also link multiple nodes to one node, for example if you wanted to mix multiple audio sources together, passing them all through a single effect node, like a gain node.
+![](voice-change-o-matic-graph.png)You can also link multiple nodes to one node, for example if you wanted to mix multiple audio sources together, passing them all through a single effect node, like a gain node.
 
 > **Примечание:** From Firefox 32 onwards, the integrated Firefox Developer Tools include a [Web Audio Editor](/ru/docs/Tools/Web_Audio_Editor), which is very useful for debugging web audio graphs.
 

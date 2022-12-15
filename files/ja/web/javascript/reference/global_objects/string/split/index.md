@@ -182,9 +182,7 @@ console.log(splits)
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -3,6 +3,7 @@ title: 'HTMLMediaElement: abort event'
 slug: Web/API/HTMLMediaElement/abort_event
 translation_of: Web/API/HTMLMediaElement/abort_event
 ---
+
 {{APIRef}}
 
 Событие **`abort`** запускается, когда ресурс не был полностью загружен, но не в результате ошибки.

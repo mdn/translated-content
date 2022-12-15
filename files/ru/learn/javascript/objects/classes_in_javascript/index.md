@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/JavaScript/Objects/Inheritance
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 Теперь, когда объясняется большая часть подробностей OOJS, эта статья показывает, как создавать «дочерние» классы объектов (конструкторы), которые наследуют признаки из своих «родительских» классов. Кроме того, мы дадим некоторые советы о том, когда и где вы можете использовать OOJS , и посмотрим, как классы рассматриваются в современном синтаксисе ECMAScript.

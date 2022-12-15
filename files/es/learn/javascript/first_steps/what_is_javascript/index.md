@@ -1,24 +1,9 @@
 ---
 title: ¿Qué es JavaScript?
 slug: Learn/JavaScript/First_steps/What_is_JavaScript
-tags:
-  - APIs
-  - Aprender
-  - Artículo
-  - Añadir JavaScript
-  - Curso
-  - Dinámico
-  - En línea
-  - Gestores de JavaScript en linea
-  - JavaScript
-  - Navegador
-  - Núcleo
-  - Principiante
-  - comentários
-  - externo
-translation_of: Learn/JavaScript/First_steps/What_is_JavaScript
 original_slug: Learn/JavaScript/First_steps/Qué_es_JavaScript
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
 
 ¡Bienvenido al curso de JavaScript para principiantes de MDN! En este artículo veremos JavaScript desde un alto nivel, respondiendo preguntas como "¿Qué es?" y "¿Qué puedes hacer con él?", y asegúrate de estar cómodo con el propósito de JavaScript.
@@ -31,7 +16,7 @@ original_slug: Learn/JavaScript/First_steps/Qué_es_JavaScript
 
 JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado. Es la tercera capa del pastel de las tecnologías web estándar, dos de las cuales ([HTML](/es/docs/Learn/HTML) y [CSS](/es/docs/Learn/CSS)) hemos cubierto con mucho más detalle en otras partes del Área de aprendizaje.
 
-![](https://mdn.mozillademos.org/files/13502/cake.png)
+![](cake.png)
 
 - {{Glossary("HTML")}} es el lenguaje de marcado que usamos para estructurar y dar significado a nuestro contenido web, por ejemplo, definiendo párrafos, encabezados y tablas de datos, o insertando imágenes y videos en la página.
 - {{Glossary("CSS")}} es un lenguaje de reglas de estilo que usamos para aplicar estilo a nuestro contenido HTML, por ejemplo, establecer colores de fondo y tipos de letra, y distribuir nuestro contenido en múltiples columnas.
@@ -43,7 +28,7 @@ Las tres capas se superponen muy bien. Tomemos una etiqueta de texto simple como
 <p>Player 1: Chris</p>
 ```
 
-![](https://mdn.mozillademos.org/files/13422/just-html.png)
+![](just-html.png)
 
 Luego, podemos agregar algo de CSS a la mezcla para que se vea bien:
 
@@ -64,7 +49,7 @@ p {
 }
 ```
 
-![](https://mdn.mozillademos.org/files/13424/html-and-css.png)
+![](html-and-css.png)
 
 Y finalmente, podemos agregar algo de JavaScript para implementar un comportamiento dinámico:
 
@@ -91,7 +76,7 @@ El núcleo del lenguaje JavaScript de lado del cliente consta de algunas caracte
 
 - Almacenar valores útiles dentro de variables. En el ejemplo anterior, por ejemplo, pedimos que ingreses un nuevo nombre y luego almacenamos ese nombre en una variable llamada `name`.
 - Operaciones sobre fragmentos de texto (conocidas como "cadenas" (`strings`) en programación). En el ejemplo anterior, tomamos la cadena "`Player1`:" y la unimos a la variable `name` para crear la etiqueta de texto completa, p. ej. ''`Player1: Chris`".
-- Y ejecuta código en respuesta a ciertos eventos que ocurren en una página web. Usamos un evento {{Event("click")}} en nuestro ejemplo anterior para detectar cuándo se hace clic en el botón y luego ejecutar el código que actualiza la etiqueta de texto.
+- Y ejecuta código en respuesta a ciertos eventos que ocurren en una página web. Usamos un evento [`click`](/es/docs/Web/Reference/Events/click) en nuestro ejemplo anterior para detectar cuándo se hace clic en el botón y luego ejecutar el código que actualiza la etiqueta de texto.
 - ¡Y mucho más!
 
 Sin embargo, lo que aún es más emocionante es la funcionalidad construida sobre el lenguaje JavaScript de lado del cliente. Las denominadas **interfaces de programación de aplicaciones** (**API**) te proporcionan superpoderes adicionales para utilizar en tu código JavaScript.
@@ -100,7 +85,7 @@ Las API son conjuntos de bloques de construcción de código listos para usar qu
 
 Generalmente se dividen en dos categorías.
 
-![](https://mdn.mozillademos.org/files/13508/browser.png)
+![](browser.png)
 
 Las **APIs del navegador** están integradas en tu navegador web y pueden exponer datos del entorno informático circundante o realizar tareas complejas y útiles. Por ejemplo:
 
@@ -126,7 +111,7 @@ Aquí, de hecho, comenzaremos a ver algo de código y, mientras lo hacemos, expl
 
 Recapitulemos brevemente sobre la historia de lo que sucede cuando cargas una página web en un navegador (de lo que hablamos por primera vez en nuestro artículo [Cómo funciona CSS](/es/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_does_CSS_actually_work)). Cuando cargas una página web en tu navegador, estás ejecutando tu código (HTML, CSS y JavaScript) dentro de un entorno de ejecución (la pestaña del navegador). Esto es como una fábrica que toma materias primas (el código) y genera un producto (la página web).
 
-![](https://mdn.mozillademos.org/files/13504/execution.png)
+![](execution.png)
 
 Un uso muy común de JavaScript es modificar dinámicamente HTML y CSS para actualizar una interfaz de usuario, a través de la API del modelo de objetos del documento (como se mencionó anteriormente). Ten en cuenta que el código de tus documentos web generalmente se cargan y ejecutan en el orden en que aparece en la página. Si JavaScript se carga e intenta ejecutarse antes de que se hayan cargado el HTML y el CSS al que afecta, pueden producirse errores. Aprenderás formas de evitar esto más adelante en el artículo, en la sección [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript#Script_loading_strategies).
 

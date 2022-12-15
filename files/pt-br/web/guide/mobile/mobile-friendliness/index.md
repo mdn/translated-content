@@ -1,9 +1,9 @@
 ---
 title: Site Móvel Amigável
 slug: Web/Guide/Mobile/Mobile-friendliness
-translation_of: Web/Guide/Mobile/Mobile-friendliness
 original_slug: Web_Development/Mobile/Mobile-friendliness
 ---
+
 ## O que é site móvel amigável?
 
 Mobile friendliness can mean a multitude of things, depending on who you’re talking to. It can be helpful to think of it in terms of three goals for improving your site’s user experience: Presentation, Content, and Performance.
@@ -34,9 +34,9 @@ While not strictly a part of the definition of being mobile friendly, defining w
 
 The following approaches aim to achieve each of these goals by different means.
 
-- [Separate sites](/en/Web_development/Mobile/Separate_sites)
-- [Responsive design](/en/Web_development/Mobile/Responsive_design)
-- [A hybrid approach](/en/Web_development/Mobile/A_hybrid_approach)
+- [Separate sites](/pt-BR/Web_development/Mobile/Separate_sites)
+- [Responsive design](/pt-BR/Web_development/Mobile/Responsive_design)
+- [A hybrid approach](/pt-BR/Web_development/Mobile/A_hybrid_approach)
 
 ### Original document information
 

@@ -7,7 +7,8 @@ tags:
   - элементы
 translation_of: Web/HTML/Element/ol
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML-элемент `<ol>`** используется для упорядоченного списка — в частности для пронумерованного списка.
 

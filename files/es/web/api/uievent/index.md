@@ -1,11 +1,8 @@
 ---
 title: UIEvent
 slug: Web/API/UIEvent
-tags:
-  - API
-translation_of: Web/API/UIEvent
-browser-compat: api.UIEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 The **`UIEvent`** interface represents simple user interface events.

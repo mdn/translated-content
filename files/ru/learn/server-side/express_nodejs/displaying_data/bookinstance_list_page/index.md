@@ -3,6 +3,7 @@ title: Список экземпляров книг
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 translation_of: Learn/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page
 ---
+
 Далее мы реализуем список всех имеющихся в библиотеке копий книги (`BookInstance`) . Эта страница должна включать название книги из `Book`, с которой связаны экземпляры `BookInstance` (linked to its detail page), а также дополнительную информацию, имеющуюся в модели `BookInstance`, включая статус, издание, и уникальный идентификатор каждой копии. Уникальное значение идентификатора копии должно быть связано со страницей детальной информации `BookInstance`.
 
 ## Контроллер
@@ -63,7 +64,7 @@ This view is much the same as all the others. It extends the layout, replacing t
 
 Run the application, open your browser to <http://localhost:3000/>, then select the _All book-instances_ link. If everything is set up correctly, your site should look something like the following screenshot.
 
-![BookInstance List Page - Express Local Library site](https://mdn.mozillademos.org/files/14474/LocalLibary_Express_BookInstance_List.png)
+![BookInstance List Page - Express Local Library site](locallibary_express_bookinstance_list.png)
 
 ## Next steps
 

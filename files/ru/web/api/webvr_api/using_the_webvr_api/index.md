@@ -3,6 +3,7 @@ title: Использование WebVR API
 slug: Web/API/WebVR_API/Using_the_WebVR_API
 translation_of: Web/API/WebVR_API/Using_the_WebVR_API
 ---
+
 {{APIRef("WebVR API")}}
 
 WebVR API - фантастическое дополнение к набору инструментов веб-разработчика, позволяющее отображать WebGL сцены на устройствах виртуальной реальности, таких как Oculus Rift и HTC Vive. Но как же начать разработку VR для Веба? Эта статья познакомит вас с основами.
@@ -29,7 +30,7 @@ WebVR API - фантастическое дополнение к набору и
 
 Рассмотрим как работает WebVR API на примере, проекте raw-webgl-example, который выглядит похожим образом:
 
-![](https://mdn.mozillademos.org/files/15121/Capture1.png)
+![](capture1.png)
 
 > **Примечание:** **Обратите внимание**: вы можете найти [исходный код примера](https://github.com/mdn/webvr-tests/tree/master/raw-webgl-example) на GitHub, а так же [посмотреть как он работает прямо в браузере](https://mdn.github.io/webvr-tests/raw-webgl-example/).
 >
@@ -228,7 +229,7 @@ To stop the VR presentation when the button is subsequently pressed, we call {{d
 
 Once the presentation starts, you'll be able to see the stereoscopic view displayed in the browser:
 
-![](https://mdn.mozillademos.org/files/15123/Capture2.png)
+![](capture2.png)
 
 You'll learn below how the stereoscopic view is actually produced.
 

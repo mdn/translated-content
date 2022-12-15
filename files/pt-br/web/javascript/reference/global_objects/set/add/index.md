@@ -1,15 +1,8 @@
 ---
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Prototype
-  - metodo
-  - set
-  - set.add
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
+
 {{JSRef}}
 
 O método **`add()`** acrescenta um novo elemento com o valor especificado no final de um objeto `Set`.

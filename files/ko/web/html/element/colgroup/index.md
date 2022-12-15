@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/colgroup
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<colgroup>` 요소**는 표의 열을 묶는 그룹을 정의합니다.
 

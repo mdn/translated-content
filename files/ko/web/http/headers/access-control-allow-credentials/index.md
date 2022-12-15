@@ -3,6 +3,7 @@ title: Access-Control-Allow-Credentials
 slug: Web/HTTP/Headers/Access-Control-Allow-Credentials
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Credentials
 ---
+
 {{HTTPSidebar}}
 
 응답헤더 **`Access-Control-Allow-Credentials`** 는 요청의 자격증명 모드({{domxref("Request.credentials")}})가 "`include`" 일때, 브라우저들이 응답을 프로트엔드 자바스트립트 코드에 노출할지에 대해 알려줍니다.

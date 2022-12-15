@@ -9,6 +9,7 @@ tags:
   - Window
 translation_of: Web/API/Window/opener
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("Window")}} 인터페이스의 **`opener`** 속성은 {{domxref("Window.open", "open()")}}을 사용해 현재 창을 열었던 창의 참조를 반환합니다.

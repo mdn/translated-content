@@ -1,8 +1,8 @@
 ---
 title: Navigator.cookieEnabled
 slug: Web/API/Navigator/cookieEnabled
-translation_of: Web/API/Navigator/cookieEnabled
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 `navigator.cookieEnabled` retorna um valor _Booleano_ que indica quando _cookies_ estão habilitados ou não. A propriedade é de apenas leitura.

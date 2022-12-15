@@ -1,8 +1,8 @@
 ---
 title: Box alignment in CSS Grid Layout
 slug: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
-translation_of: Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout
 ---
+
 Si estás familiarizado con [flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout) Entonces ya habrás encontrado la forma en que los items flexibles pueden ser alineados correctamente dentro de un contendor flex. Estas propiedades de alineación que encontramos por primera vez en la especificación de flexbox se han trasladado a una nueva especificación llamada [Box Alignment Level 3](https://drafts.csswg.org/css-align/). Esta especificación tiene detalles de cómo debería funcionar la alineación en todos los diferentes métodos de diseño.
 
 Cada método de diseño que implemente Box Alignment tendrá algunas diferencias debido a que cada método tiene características y restricciones diferentes (y acciones heredadas), por lo que es imposible hacer la alineación exactamente de la misma forma en todos los ámbitos. La especificación Box Alignment tiene detalles para cada método, sin embargo, te decepcionaría si intentaras alinear en muchos métodos en este momento, pues el soporte aún no está disponible para todos los navegadores. Donde sí tenemos soporte de navegador para las propiedades de alineación y distribución de espacio de la especificación Box Alignment es en grid layout.
@@ -13,11 +13,11 @@ Esta guía muestra la forma cómo funciona la alineación de cajas (box alignmen
 
 Al trabajar con el diseño de cuadrícula, tienes dos ejes disponibles para alinear las cosas: el eje del bloque (block axis) y el eje en línea (inline axis). El eje de bloque es el eje sobre el cual se disponen los bloques en el diseño del bloque. Si tienes dos párrafos en tu página, se mostrara uno debajo del otro, entonces es ésta la dirección que describimos como el eje de bloque (también llamadas columnas, eje "y", eje vertical).
 
-![](https://mdn.mozillademos.org/files/15963/Block_Axis.png)
+![](block_axis.png)
 
 El eje en línea (inline axis) se ejecuta a través del eje del bloque, es la dirección en la que se ejecuta el texto en el flujo regular en línea (también llamadas filas, Eje "x", eje horizontal).
 
-![](https://mdn.mozillademos.org/files/14773/7_Inline_Axis.png)
+![](7_inline_axis.png)
 
 Podemos alinear el contenido dentro de las áreas de la cuadrícula o rejilla , y los tracks en estos dos ejes.
 
@@ -93,7 +93,7 @@ En el siguiente ejemplo, tengo 4 áreas dentro de mi cuadricula (grid). Puedo us
 
 {{ EmbedLiveSample('alignment_1', '500', '450') }}
 
-Ten en mente que una vez establezcas `align-self: start`, la altura de cada hijo `<div>` será determinada por el contenido del `<div>`. Esto está en contraste de omitir [`align-self`](/en-US/docs/Web/CSS/align-self) completamente, en el cual la altura de cada `<div>` se extendería hasta llenar el área de la cuadricula.
+Ten en mente que una vez establezcas `align-self: start`, la altura de cada hijo `<div>` será determinada por el contenido del `<div>`. Esto está en contraste de omitir [`align-self`](/es/docs/Web/CSS/align-self) completamente, en el cual la altura de cada `<div>` se extendería hasta llenar el área de la cuadricula.
 
 La propiedad {{cssxref("align-items")}} establece la propiedad {{cssxref("align-self")}} para todos los elementos hijos de la cuadricula. Esto significa que puedes establecer la propiedad individualmente, usando `align-self` en cada elemento de la cuadricula.
 
@@ -488,7 +488,7 @@ It is worth noting, that using these space distribution values may cause items o
 
 In the below image I have placed the grid with `align-content`, with a value of `start` alongside the grid when `align-content` has a value of `space-between`. You can see how items 1 and 2, which span two row tracks have taken on extra height as they gain the additional space added to the gap between those two tracks:
 
-![Demonstrating how items become larger if we use space-between.](https://mdn.mozillademos.org/files/14729/7_space-between.png)
+![Demonstrating how items become larger if we use space-between.](7_space-between.png)
 
 ## Justifying the grid tracks on the row axis
 
@@ -619,7 +619,7 @@ In this next example, I have given item 1 a left margin of `auto`. You can see h
 
 You can see how the item is aligned by using the [Firefox Grid Highlighter](/es/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts):
 
-![Image showing auto-margins using the Grid Highlighter.](https://mdn.mozillademos.org/files/14731/7_auto_margins.png)
+![Image showing auto-margins using the Grid Highlighter.](7_auto_margins.png)
 
 ## Alignment and Writing Modes
 

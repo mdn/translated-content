@@ -6,6 +6,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 Функция **`parseInt()`** принимает строку в качестве аргумента и возвращает целое число в соответствии с указанным основанием системы счисления.

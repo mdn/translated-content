@@ -1,13 +1,8 @@
 ---
 title: '::-webkit-progress-bar'
 slug: Web/CSS/::-webkit-progress-bar
-tags:
-  - CSS
-  - No estándar(2)
-  - Pseudo-elemento
-  - Referencia
-translation_of: Web/CSS/::-webkit-progress-bar
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 ## Resumen
@@ -46,7 +41,7 @@ progress {
 
 Una barra de progreso que use el estilo indicado anteriormente será similar a la siguiente:
 
-![](https://mdn.mozillademos.org/files/13488/progress-bar.png)
+![](progress-bar.png)
 
 ## Compatibilidad con los distintos navegadores
 

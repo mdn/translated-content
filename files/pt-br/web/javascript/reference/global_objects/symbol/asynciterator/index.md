@@ -1,8 +1,8 @@
 ---
 title: Symbol.asyncIterator
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 ---
+
 {{JSRef}}
 
 O **`Symbol.asyncIterator`** é um símbolo conhecido que especifica o padrão AsyncIterator para um objeto. Se essa propriedade é configurada em um objeto, é um iterável assíncrono e pode ser usado in um [`for await...of`](/pt-BR/docs/Web/JavaScript/Reference/Statements/for-await...of) loop.

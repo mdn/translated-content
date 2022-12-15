@@ -1,31 +1,27 @@
 ---
 title: meta
 slug: Web/HTML/Element/meta
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/meta
 original_slug: Web/HTML/Elemento/meta
 ---
+
 ### Definición
 
 - **meta** de "metainformation" - metainformación. Sirve para aportar información sobre el documento..
   - : **Sus etiquetas son**: `<meta>` (solo tiene una).
   
-    **Está definido como**: Elemento [de cabecera](es/HTML/Elemento/Tipos_de_elementos#de_cabecera).
+    **Está definido como**: Elemento [de cabecera](/es/HTML/Elemento/Tipos_de_elementos#de_cabecera).
 
     **Crea una caja**: No.
 
     **Puede contener**: Nada.
 
-    **Puede ser contenido por**: Elementos [head](es/HTML/Elemento/head)
+    **Puede ser contenido por**: Elementos [head](/es/HTML/Elemento/head)
 
 #### Atributos
 
 ~~Por defecto~~: Debe indicarlo el autor.
 
-name = name {{ mediawiki.external('CS') }} Este atributo identifica un nombre de propiedad. Esta especificación no enumera los valores legales para este atributo. content = cdata {{ mediawiki.external('CS') }} Este atributo especifica el valor de una propiedad. Esta especificación no enumera los valores legales para este atributo. scheme = cdata {{ mediawiki.external('CS') }} Este atributo especifica un esquema que se usará para interpretar el valor de la propiedad (véase la sección sobre perfiles para más detalles). http-equiv = name {{ mediawiki.external('CI') }} Este atributo puede utilizarse en lugar del atributo name. Los servidores HTTP utilizan este atributo para obtener información sobre los encabezados del mensaje de respuesta HTTP.
+name = name [CS] Este atributo identifica un nombre de propiedad. Esta especificación no enumera los valores legales para este atributo. content = cdata [CS] Este atributo especifica el valor de una propiedad. Esta especificación no enumera los valores legales para este atributo. scheme = cdata [CS] Este atributo especifica un esquema que se usará para interpretar el valor de la propiedad (véase la sección sobre perfiles para más detalles). http-equiv = name [CI] Este atributo puede utilizarse en lugar del atributo name. Los servidores HTTP utilizan este atributo para obtener información sobre los encabezados del mensaje de respuesta HTTP.
 
 <table class="fullwidth-table standard-table">
   <tbody>

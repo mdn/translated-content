@@ -67,7 +67,7 @@ Par exemple:
 </video>
 ```
 
-## Extensions de Sources Média  (MSE)
+## Extensions de Sources Média (MSE)
 
 [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) est un brouillon de travail de W3C qui prévoit d'étendre {{ domxref("HTMLMediaElement") }} pour permettre à JavaScript de générer des flux média pour la lecture. Permettre à JavaScript de générer des streams facilite toute une variété de cas d'utilisations comme le streaming adaptatif et le décalage temporel des live streams.
 

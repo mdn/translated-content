@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 browser-compat: javascript.builtins.Date.getUTCFullYear
 ---
+
 {{JSRef}}
 
 **getUTCFullYear()** 메서드는 표준시에 따라 지정된 날짜의 연도를 반환합니다.

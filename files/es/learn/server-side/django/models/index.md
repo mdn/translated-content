@@ -1,17 +1,8 @@
 ---
 title: 'Tutorial Django Parte 3: Uso de modelos'
 slug: Learn/Server-side/Django/Models
-tags:
-  - Aprender
-  - Artículo
-  - Datos
-  - Modelo
-  - Principiante
-  - Tutorial
-  - django
-  - lado-servidor
-translation_of: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 Este artículo muestra cómo definir modelos para el sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website). En él se explica lo que es un modelo, cómo se declara, y cuáles son algunos de los principales tipos de campos de un modelo. También veremos, brevemente, cuáles son algunas de las maneras en que puede accederse a los datos del modelo.
@@ -61,7 +52,7 @@ Con esto en mente, el diagrama de asociación UML a continuación muestra los mo
 
 El diagrama también muestra las relaciones entre los modelos, incluida su _cardinalidad_. La cardinalidad expresa la cantidad de instancias (máximo y mínimo) de cada modelo que pueden estar presentes en la relación. Por ejemplo, la línea de conexión entre los cuadros muestra que _Book_ y _Genre_ están relacionados. Los números cercanos al modelo _Book_ muestran que un libro debe tener uno o más _Genres_ (tantos como desee), mientras que los números al otro lado de la línea al lado de _Genre_ muestran que puede tener cero o más libros asociados.
 
-![LocalLibrary Model UML](https://mdn.mozillademos.org/files/15646/local_library_model_uml.png)
+![LocalLibrary Model UML](local_library_model_uml.svg)
 
 > **Nota:** La siguiente sección proporciona un manual básico que explica cómo se definen y utilizan los modelos. Mientras lo lees, considera cómo construiremos cada uno de los modelos en el diagrama de arriba.
 

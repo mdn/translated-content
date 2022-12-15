@@ -43,7 +43,7 @@ button.addEventListener("click", function() {
 });
 ```
 
-ボタン要素と緯度経度が描画される 2 つの要素をより参照しやすくするための変数を設定した後、  {{domxref("EventTarget.addEventListener", "addEventListener()")}} を {{HTMLElement("button")}} 要素で呼び出してイベントリスナーを確立しています。ユーザーがボタンをクリックすると、位置情報を取得して表示するようにします。
+ボタン要素と緯度経度が描画される 2 つの要素をより参照しやすくするための変数を設定した後、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} を {{HTMLElement("button")}} 要素で呼び出してイベントリスナーを確立しています。ユーザーがボタンをクリックすると、位置情報を取得して表示するようにします。
 
 {{domxref("Element/click_event", "click")}} イベントを受信すると、{{domxref("Geolocation.getCurrentPosition", "getCurrentPosition()")}} を呼び出し、端末の現在位置を要求しています。これは非同期のリクエストなので、決定した位置を表す {{domxref("GeolocationPosition")}} オブジェクトを put で受け取るコールバックを用意します。
 

@@ -10,6 +10,7 @@ tags:
   - указатель
 translation_of: Web/Guide/User_input_methods
 ---
+
 Это руководство содержит рекомендации по обработке пользовательского ввода
 и внедрению управляющих элементов в веб-приложения. Также здесь вы найдёте соответствующие FAQs, живые примеры, ссылки на более подробные разборы близлежащих технологий.
 Связанные интерфейсы API и события: [события касаний](/ru/docs/Web/API/Touch_events), [интерфейс отслеживания указателя мыши](/ru/docs/Web/API/Pointer_Lock_API),
@@ -20,7 +21,7 @@ translation_of: Web/Guide/User_input_methods
 
 The following diagram illustrates the typical workflow for implementing user input mechanisms:
 
-![](https://mdn.mozillademos.org/files/8085/user-input-and-controls.png)
+![](user-input-and-controls.png)
 
 First of all, you need to decide which input mechanisms you want to cover in your application out of mouse, keyboard, finger touch and so on. Once you decided the input mechanisms, you can control them using tools offered by the web platform or JavaScript libraries.
 

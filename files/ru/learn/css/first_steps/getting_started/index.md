@@ -11,6 +11,7 @@ tags:
   - Синтаксис
 translation_of: Learn/CSS/First_steps/Getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}
 
 В этой статье мы возьмём простой HTML-документ и применим к нему CSS, изучая некоторые практические вещи о языке.

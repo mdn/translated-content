@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/tbody
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML** **`<tbody>`** 요소는 표의 여러 행({{htmlelement("tr")}})을 묶어서 표 본문을 구성합니다.
 

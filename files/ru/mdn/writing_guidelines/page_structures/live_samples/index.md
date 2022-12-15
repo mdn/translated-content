@@ -4,6 +4,7 @@ slug: MDN/Writing_guidelines/Page_structures/Live_samples
 translation_of: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 original_slug: MDN/Contribute/Howto/Convert_code_samples_to_be_live
 ---
+
 {{MDNSidebar}}
 
 MDN имеет систему «[живых примеров](/ru/docs/MDN/Contribute/Editor/Live_samples)», где пример кода, показанный на странице, служит для отображения вывода этого же примера. Однако во многих существующих статьях есть примеры кода, которые ещё не используют эту систему, и их необходимо преобразовать.

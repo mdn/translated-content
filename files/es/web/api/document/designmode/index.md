@@ -1,15 +1,8 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-tags:
-  - API
-  - Documento
-  - HTML DOM
-  - Propiedad
-  - Referencia
-  - editor
-translation_of: Web/API/Document/designMode
 ---
+
 {{ ApiRef() }}
 
 **`document.designMode`** controla la posibilidad de editar un documento entero. Los valores válidos son `"on"` y `"off"`. De acuerdo a las especificaciones, el valor predeterminado de esta propiedad es `"off"`. Firefox sigue este estándar. El valor predeterminado de versiones anteriores de Chrome y IE es `"inherit"`. En IE6-10, el valor se escribe con mayúscula.

@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/del
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<del>` 요소**는 문서에서 제거된 텍스트의 범위를 나타냅니다. 문서나 소스 코드의 변경점 추적 등에 사용할 수 있습니다. {{htmlelement("ins")}} 요소를 추가된 텍스트의 범위를 나타낼 수 있습니다.
 

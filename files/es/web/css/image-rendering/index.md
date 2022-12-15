@@ -1,8 +1,8 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
-translation_of: Web/CSS/image-rendering
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propiedad [CSS](/es/docs/Web/CSS) **`image-rendering`** provee una sugerencia al navegador acerca del algoritmo que debe usar para escalar imágenes.
@@ -77,11 +77,7 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Images', '#the-image-rendering', 'image-rendering')}} | {{Spec2('CSS3 Images')}} | Initial definition |
-
-> **Nota:** Aunque similar al atributo SVG {{svgattr("image-rendering")}}, los valores son bastante diferentes ahora.
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

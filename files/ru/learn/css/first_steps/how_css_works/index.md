@@ -12,6 +12,7 @@ tags:
   - дерево
 translation_of: Learn/CSS/First_steps/How_CSS_works
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
@@ -34,7 +35,7 @@ translation_of: Learn/CSS/First_steps/How_CSS_works
 
 Диаграмма демонстрирует этот процесс.
 
-![](https://mdn.mozillademos.org/files/17080/Browser_simple_rendering_pipeline__ru.png)
+![](browser_simple_rendering_pipeline__ru.png)
 
 ## DOM-дерево
 

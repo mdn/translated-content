@@ -7,6 +7,7 @@ tags:
   - CSS-свойства
 translation_of: Web/CSS/animation-delay
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Описание

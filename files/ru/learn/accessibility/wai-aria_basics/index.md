@@ -6,6 +6,7 @@ tags:
 translation_of: Learn/Accessibility/WAI-ARIA_basics
 original_slug: Learn/Доступность/WAI-ARIA_basics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
 
 Исходя из предыдущей статьи, иногда создание сложных элементов UI, которые включают в себя несемантичный HTML и динамически обновляемый с помощью JavaScript контент, может быть затруднено. WAI-ARIA - это технология, которая может помочь в решении таких проблем, добавляя дополнительную разметку, которую браузеры и вспомогательные технологии могут распознавать и использовать, чтобы пользователи знали, что происходит. В этой статье мы покажем, как использовать эту технологию на базовом уровне для улучшения доступности.
@@ -130,7 +131,7 @@ If you try testing the example with a screenreader in a modern browser, you'll a
 
 If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and then using the cursor keys to cycle through the menu choices), you'll see that most of the elements are nicely listed so they can be accessed quickly.
 
-![](https://mdn.mozillademos.org/files/14420/landmarks-list.png)
+![](landmarks-list.png)
 
 However, we could do better here. the search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark, beyond the actual input being called out as a search input (`<input type="search">`). In addition, some older browsers (most notably IE8) don't recognise the semantics of the HTML5 elements.
 

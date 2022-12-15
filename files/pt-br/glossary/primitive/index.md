@@ -1,9 +1,9 @@
 ---
 title: Primitivo
 slug: Glossary/Primitive
-translation_of: Glossary/Primitive
 original_slug: Glossario/Primitivo
 ---
+
 ## Resumo
 
 Um **primitivo** (valor primitivo, tipo de dados primitivo) é um dado que não é representado através de um {{Glossary("Objeto")}} e, por consequência, não possui métodos.

@@ -1,27 +1,15 @@
 ---
 title: 'SVG: Gráficos Vetoriais Escaláveis'
 slug: Web/SVG
-tags:
-  - Design Responsivo
-  - Gráficos 2D
-  - Gráficos Escaláveis
-  - Gráficos Vetoriais
-  - Imagens
-  - Referencia
-  - SVG
-  - Web
-  - graficos
-  - l10n:prioridade
-  - Ícones
-translation_of: Web/SVG
 ---
+
 **[Iniciando](/pt-BR/docs/Web/SVG/Tutorial)** Este tutorial irá ajudá-lo a começar a trabalhar com SVG.
 
 {{SVGRef}}
 
 **Gráficos Vetoriais Escaláveis (SVG)** é uma linguagem de marcação [XML](/pt-BR/docs/XML) para descrever gráficos vetoriais bidimensionais. Essencialmente, SVG é para gráficos o que o XHTML é para texto.
 
-SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se distingue por ser uma [recomendação da W3C](http://www.w3.org/Graphics/SVG/), ou seja, um padrão, e por ser baseado em XML e não em um formato binário fechado. O SVG foi criado para funcionar com outros padrões da [W3C](http://www.w3.org/), tais como [CSS](/pt-BR/docs/CSS), [DOM](/pt-BR/docs/DOM) e [SMIL](http://www.w3.org/AudioVideo/).
+SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se distingue por ser uma [recomendação da W3C](https://www.w3.org/Graphics/SVG/), ou seja, um padrão, e por ser baseado em XML e não em um formato binário fechado. O SVG foi criado para funcionar com outros padrões da [W3C](https://www.w3.org/), tais como [CSS](/pt-BR/docs/CSS), [DOM](/pt-BR/docs/DOM) e [SMIL](https://www.w3.org/AudioVideo/).
 
 ## Documentação
 
@@ -41,13 +29,9 @@ SVG é similar em escopo à tecnologia Flash, propriedade da Adobe, mas se disti
     - [Tutorial sobre como usá-lo](/pt-BR/docs/SVG_in_Firefox)
     - [SVG em XHTML](/pt-BR/docs/SVG_In_HTML_Introduction)
 
-## Comunidade
-
-- Ver os fóruns da Mozilla... {{DiscussionList("dev-tech-svg", "mozilla.dev.tech.svg")}}
-
 ## Ferramentas
 
-- [Suíte de Teste SVG](http://www.w3.org/Graphics/SVG/Test/)
+- [Suíte de Teste SVG](https://www.w3.org/Graphics/SVG/Test/)
 - [Validador SVG](http://jiggles.w3.org/svgvalidator/) (Descontinuado)
 - [Mais Ferramentas...](/pt-BR/docs/tag/SVG:Tools)
 - Outros recursos: [XML](/pt-BR/docs/XML), [CSS](/pt-BR/docs/CSS), [DOM](/pt-BR/docs/DOM), [Canvas](/pt-BR/docs/HTML/Canvas)

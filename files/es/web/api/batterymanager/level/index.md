@@ -1,11 +1,9 @@
 ---
 title: BatteryManager.level
 slug: Web/API/BatteryManager/level
-page-type: web-api-instance-property
-translation_of: Web/API/BatteryManager/level
 original_slug: Web/API/BatteryManager/level
-browser-compat: api.BatteryManager.level
 ---
+
 {{APIRef("Battery API")}}
 
 La propiedad **`BatteryManager.level`** indica el nivel de carga actual de la batería como un valor entre `0.0` y `1.0`.

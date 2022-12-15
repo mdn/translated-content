@@ -7,6 +7,7 @@ tags:
   - Method
 translation_of: Web/API/CanvasRenderingContext2D/lineTo
 ---
+
 {{APIRef}}
 
 **`lineTo()`** - метод {{domxref("CanvasRenderingContext2D")}}, часть Canvas 2D API, добавляет линию к текущему под пути с конечной точкой с координатами `(x, y)`.

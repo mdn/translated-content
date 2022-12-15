@@ -3,6 +3,7 @@ title: Window.name
 slug: Web/API/Window/name
 translation_of: Web/API/Window/name
 ---
+
 {{APIRef}}
 
 ## Описание

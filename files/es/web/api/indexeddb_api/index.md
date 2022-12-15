@@ -1,8 +1,8 @@
 ---
 title: IndexedDB
 slug: Web/API/IndexedDB_API
-translation_of: Web/API/IndexedDB_API
 ---
+
 {{ SeeCompatTable() }}
 
 IndexedDB es una API de bajo nivel que ofrece almacenamiento en el cliente de cantidades significativas de datos estructurados, incluyendo archivos y blobs. Para búsquedas de alto rendimiento en esos datos usa índices. Mientras [DOM Storage](/es/docs/DOM/Storage) es útil para el almacenamiento de pequeñas cantidades de datos, no es útil para almacenar grandes cantidades de datos estructurados. IndexedDB proporciona una solución.
@@ -33,7 +33,7 @@ Los métodos del API Asíncrono, retornan sin bloquear el hilo de llamada. Para 
 Una versión anterior de la especificación también define estas -ahora removidas- interfaces. Éstas son documentadas todavía, en caso de que necesite actualizar código escrito previamente:
 
 - [`IDBVersionChangeRequest`](/en-US/docs/IndexedDB/IDBVersionChangeRequest) representa una solicitud para cambiar la versión de una base de datos. La manera de cambiar la versión de la base de datos ahora es diferente (llamando [`IDBFactory.open()`](/es/docs/IndexedDB/IDBFactory#open) sin llamar también a [`IDBDatabase.setVersion()`](</es/docs/IndexedDB/IDBDatabase#setVersion()> "en-US/docs/IndexedDB/IDBDatabase#setVersion()")), y la interfaz [`IDBOpenDBRequest`](/es/docs/IndexedDB/IDBOpenDBRequest) tiene ahora la funcionalidad de la eliminada `IDBVersionChangeRequest`.
-- [`IDBDatabaseException`](/en-US/docs/IndexedDB/IDBDatabaseException){{ obsolete_inline() }} representa las condiciones de excepción que se pueden encontrar mientras se ejecutan operaciones en la base de datos.
+- [`IDBDatabaseException`](/en-US/docs/IndexedDB/IDBDatabaseException){{deprecated_inline}} representa las condiciones de excepción que se pueden encontrar mientras se ejecutan operaciones en la base de datos.
 
 Hay también una [versión sincrónica de la API](/es/docs/IndexedDB/Syncronous_API). La API síncrona no ha sido implementada en cualquier navegador. Está destinada a ser usada con [WebWorkers](/es/docs/DOM/Using_web_workers).
 

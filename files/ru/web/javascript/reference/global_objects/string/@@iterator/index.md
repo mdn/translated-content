@@ -14,6 +14,7 @@ tags:
   - String
 translation_of: Web/JavaScript/Reference/Global_Objects/String/@@iterator
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Сводка

@@ -1,12 +1,6 @@
 ---
 title: Firefox 66 para desarrolladores
 slug: Mozilla/Firefox/Releases/66
-tags:
-  - "66"
-  - Firefox
-  - Lanzamiento
-  - Mozilla
-translation_of: Mozilla/Firefox/Releases/66
 ---
 
 {{FirefoxSidebar}}
@@ -67,7 +61,7 @@ _No hay adicionales._
 
 #### Removido
 
-- Eliminamos el soporte para [`xml:base`](/en-US/docs/XML_introduction/xml:base) atributo ({{Bug(903372)}}).
+- Eliminamos el soporte para [`xml:base`](/es/docs/XML_introduction/xml:base) atributo ({{Bug(903372)}}).
 
 ### JavaScript
 
@@ -88,7 +82,7 @@ _Sin cambios._
 
 - La {{domxref("InputEvent.inputType")}} propiedad ha sido implementada ({{bug(1447239)}}).
 - Las propiedades {{domxref("Window.event")}} y {{domxref("Event.returnValue")}} ropiedades, que originalmente eran propiedad de IE, y que luego se admitían en otros navegadores por motivos de compatibilidad, se han vuelto a introducir en Firefox 66, después de haber sido agregadas primero en las versiones 63 y 64 respectivamente, pero luego se eliminaron nuevamente debido a problemas de compatibilidad.
-- A partir de 66, cuando la {{domxref("KeyboardEvent.keyCode")}} propiedad del {{event("keypress")}} evento del objeto es 0, el valor será el mismo que {{domxref("KeyboardEvent.charCode")}}. Por el contrario, cuando, `charCode` es 0, será igual que `keyCode`. Este comportamiento de duplicación coincide con otros navegadores y se espera que solucione la mayoría de los problemas de compatibilidad asociados, sin embargo, la detección de agentes de usuario puede causar problemas adicionales en algunas bibliotecas de JavaScript. Tenga en cuenta que en términos de especificaciones, hemos cambiado desde el _modelo de división_ del _modelo fusionado_ (ver [Como determinar keyCode para eventos de pulsaciones de tecla](https://w3c.github.io/uievents/#determine-keypress-keyCode) en la especificación de interfaz de usuario de eventos).
+- A partir de 66, cuando la {{domxref("KeyboardEvent.keyCode")}} propiedad del [`keypress`](/es/docs/Web/Reference/Events/keypress) evento del objeto es 0, el valor será el mismo que {{domxref("KeyboardEvent.charCode")}}. Por el contrario, cuando, `charCode` es 0, será igual que `keyCode`. Este comportamiento de duplicación coincide con otros navegadores y se espera que solucione la mayoría de los problemas de compatibilidad asociados, sin embargo, la detección de agentes de usuario puede causar problemas adicionales en algunas bibliotecas de JavaScript. Tenga en cuenta que en términos de especificaciones, hemos cambiado desde el _modelo de división_ del _modelo fusionado_ (ver [Como determinar keyCode para eventos de pulsaciones de tecla](https://w3c.github.io/uievents/#determine-keypress-keyCode) en la especificación de interfaz de usuario de eventos).
 
 #### Media, Audio Web, y WebRTC
 

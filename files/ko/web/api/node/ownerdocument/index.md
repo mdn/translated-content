@@ -3,6 +3,7 @@ title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 translation_of: Web/API/Node/ownerDocument
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.ownerDocument`** 읽기 전용 속성은 이 node 의 최상위 document 객체를 반환합니다.

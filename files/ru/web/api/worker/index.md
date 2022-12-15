@@ -3,6 +3,7 @@ title: Worker
 slug: Web/API/Worker
 translation_of: Web/API/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 Интерфейс **`Worker`** из [Web Workers API](/ru/docs/Web/API/Web_Workers_API) является представителем фоновой задачи, которая легко может быть создана и может передавать сообщения обратно создателю. Создание worker - это вызов конструктора `Worker()` и задание скрипта, выполняемого в потоке worker.

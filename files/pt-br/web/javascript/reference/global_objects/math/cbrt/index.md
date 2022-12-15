@@ -1,14 +1,8 @@
 ---
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
-tags:
-  - JavaScript
-  - Math
-  - Raiz Cúbica
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
+
 {{JSRef}}
 
 A função **`Math.cbrt()`** retorna a raiz cúbica de um número, isto é

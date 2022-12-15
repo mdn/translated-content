@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/hgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<hgroup>`** représente un titre de plusieurs niveaux pour une section d'un document. Il regroupe un ensemble d'éléments [`<h1>–<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements).
 

@@ -1,9 +1,11 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Element/input/month
+l10n:
+  sourceCommit: b56483692fd247dd7c5f11af4233ad40bf19ac31
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} 要素の **`month`** 型は、ユーザーが年と月を入力できるようにする入力フィールドを作成し、年と月を簡単に入力できるようにします。
 値は "`YYYY-MM`" の形式の文字列で、 `YYYY` は 4 桁の年、 `MM` は月の番号です。
@@ -27,7 +29,7 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
     <tr>
       <td><strong><a href="#値">値</a></strong></td>
       <td>
-        年と月を表す {{domxref("DOMString")}}、または空欄
+        年と月を表す文字列、または空欄
       </td>
     </tr>
     <tr>
@@ -51,6 +53,10 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM インターフェイス</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>メソッド</strong></td>
       <td>
         {{domxref("HTMLInputElement.select", "select()")}},
@@ -63,7 +69,7 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
 
 ## 値
 
-{{domxref("DOMString")}} で、入力欄に入力された年と月の値を YYYY-MM (4 桁以上の年に続いてハイフン ("`-`")、続いて 2 桁の月) の形式で表します。
+文字列で、入力欄に入力された年と月の値を YYYY-MM (4 桁以上の年に続いてハイフン ("`-`")、続いて 2 桁の月) の形式で表します。
 この入力型で使用される時刻の値の形式について詳しくは、 [HTML で使われる日付や時刻の形式](/ja/docs/Web/HTML/Date_and_time_formats)の[月の文字列](/ja/docs/Web/HTML/Date_and_time_formats#month_string)をご覧ください。
 
 ### 既定値の設定
@@ -72,7 +78,7 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
 
 ```html
 <label for="bday-month">生まれた月は？</label>
-<input id="bday-month" type="month" name="bday-month" value="2001-06">
+ <input id="bday-month" type="month" name="bday-month" value="2001-06" />
 ```
 
 {{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
@@ -87,11 +93,11 @@ Microsoft Edge では、 `month` コントロールはこのように表示さ�
 
 ```html
 <label for="bday-month">生まれた月は？</label>
-<input id="bday-month" type="month" name="bday-month">
+<input id="bday-month" type="month" name="bday-month" />
 ```
 
 ```js
-var monthControl = document.querySelector('input[type="month"]');
+const monthControl = document.querySelector('input[type="month"]');
 monthControl.value = '2001-06';
 ```
 
@@ -157,7 +163,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 ```html
 <form>
   <label for="bday-month">生まれた月を入力してください。</label>
-  <input id="bday-month" type="month" name="bday-month">
+  <input id="bday-month" type="month" name="bday-month" />
 </form>
 ```
 
@@ -166,13 +172,17 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 ### 日付の最大値と最小値の設定
 
 {{htmlattrxref("min", "input")}} および {{htmlattrxref("max", "input")}} 属性を使用して、ユーザーが選択できる日付の範囲を制限することができます。
-次の例では、日付の最小値を `1900-01` に、日付の最大値を `1999-12` に指定しています。
+次の例では、日付の最小値を `1900-01` に、日付の最大値を `2013-12` に指定しています。
 
 ```html
 <form>
   <label for="bday-month">生まれた月を入力してください。</label>
-  <input id="bday-month" type="month" name="bday-month"
-         min="1900-01" max="2013-12">
+  <input
+    id="bday-month"
+    type="month"
+    name="bday-month"
+    min="1900-01"
+    max="2013-12" />
 </form>
 ```
 
@@ -180,7 +190,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 次のような結果になります。
 
-- 1900 年 1 月から 1999 年 12 月までの間の月のみが選択できます。この範囲から外れた月は、コントロール内でスクロールできません。
+- 1900 年 1 月から 2013 年 12 月までの間の月のみが選択できます。この範囲から外れた月は、コントロール内でスクロールできません。
 - 使用しているブラウザーによりますが、指定された範囲外の月が月選択で選択できないか (Edge など)、無効になるものの ([検証](#検証) を参照) 選択できるか (Chrome など) だということが分かるでしょう。
 
 ### 入力欄の寸法の制御
@@ -202,12 +212,17 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 <form>
   <div>
     <label for="month">何月にいらっしゃいますか？ (6 ～ 9 月)</label>
-    <input id="month" type="month" name="month"
-           min="2022-06" max="2022-09" required>
+    <input
+      id="month"
+      type="month"
+      name="month"
+      min="2022-06"
+      max="2022-09"
+      required />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="フォームを送信">
+    <input type="submit" value="フォームを送信" />
   </div>
 </form>
 ```
@@ -239,15 +254,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -266,11 +281,9 @@ input:valid+span:after {
 
 対応していないブラウザーでは、文字列入力欄に安全に格下げされますが、これはユーザーインターフェイスの一貫性 (表示されるコントロールが異なること) とデータの扱いの両方で問題を生みます。
 
-2番目の問題はより深刻です。すでに述べたように、 `month` 入力欄では、実際の値が常に `yyyy-mm` の書式で正規化されます。
+2 番目の問題はより深刻です。すでに述べたように、 `month` 入力欄では、実際の値が常に `yyyy-mm` の書式で正規化されます。
 一方、既定の設定では、 `text` 入力欄ではどの書式で入力されるかの認識がなく、以下のように人間が日付を書く様々な方法で入力される可能性があります。
 
-- `yyyy/mm` (2018/07)
-- `yyyymm` (201807)
 - `mmyyyy` (072022)
 - `mm/yyyy` (07/2022)
 - `mm-yyyy` (07-2022)
@@ -286,13 +299,18 @@ input:valid+span:after {
 <form>
   <div>
     <label for="month">何月にいらっしゃいますか？ (6 ～ 9 月)</label>
-    <input id="month" type="month" name="month"
-           min="2022-06" max="2022-09" required
-           pattern="[0-9]{4}-[0-9]{2}">
+    <input
+      id="month"
+      type="month"
+      name="month"
+      min="2022-06"
+      max="2022-09"
+      required
+      pattern="[0-9]{4}-[0-9]{2}" />
     <span class="validity"></span>
   </div>
   <div>
-      <input type="submit" value="フォームを送信">
+    <input type="submit" value="フォームを送信" />
   </div>
 </form>
 ```
@@ -319,15 +337,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -402,15 +420,15 @@ input + span {
   padding-right: 30px;
 }
 
-input:invalid+span:after {
+input:invalid + span::after {
   position: absolute;
-  content: '✖';
+  content: "✖";
   padding-left: 5px;
 }
 
-input:valid+span:after {
+input:valid + span::after {
   position: absolute;
-  content: '✓';
+  content: "✓";
   padding-left: 5px;
 }
 ```
@@ -423,19 +441,19 @@ input:valid+span:after {
 
 ```js
 // define variables
-var nativePicker = document.querySelector('.nativeDatePicker');
-var fallbackPicker = document.querySelector('.fallbackDatePicker');
-var fallbackLabel = document.querySelector('.fallbackLabel');
+const nativePicker = document.querySelector('.nativeDatePicker');
+const fallbackPicker = document.querySelector('.fallbackDatePicker');
+const fallbackLabel = document.querySelector('.fallbackLabel');
 
-var yearSelect = document.querySelector('#year');
-var monthSelect = document.querySelector('#month');
+const yearSelect = document.querySelector('#year');
+const monthSelect = document.querySelector('#month');
 
-// hide fallback initially
+// Hide fallback initially
 fallbackPicker.style.display = 'none';
 fallbackLabel.style.display = 'none';
 
-// test whether a new date input falls back to a text input or not
-var test = document.createElement('input');
+// Test whether a new date input falls back to a text input or not
+const test = document.createElement('input');
 
 try {
   test.type = 'month';
@@ -443,27 +461,27 @@ try {
   console.log(e.description);
 }
 
-// if it does, run the code inside the if() {} block
-if(test.type === 'text') {
-  // hide the native picker and show the fallback
+// If it does, run the code inside the if () {} block
+if (test.type === 'text') {
+  // Hide the native picker and show the fallback
   nativePicker.style.display = 'none';
   fallbackPicker.style.display = 'block';
   fallbackLabel.style.display = 'block';
 
-  // populate the years dynamically
+  // Populate the years dynamically
   // (the months are always the same, therefore hardcoded)
   populateYears();
 }
 
 function populateYears() {
-  // get the current year as a number
-  var date = new Date();
-  var year = date.getFullYear();
+  // Get the current year as a number
+  const date = new Date();
+  const year = date.getFullYear();
 
   // Make this year, and the 100 years before it available in the year <select>
-  for(var i = 0; i <= 100; i++) {
-    var option = document.createElement('option');
-    option.textContent = year-i;
+  for (let i = 0; i <= 100; i++) {
+    const option = document.createElement('option');
+    option.textContent = year - i;
     yearSelect.appendChild(option);
   }
 }

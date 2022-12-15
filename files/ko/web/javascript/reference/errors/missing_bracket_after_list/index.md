@@ -7,6 +7,7 @@ tags:
   - 자바스크립트
 translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지

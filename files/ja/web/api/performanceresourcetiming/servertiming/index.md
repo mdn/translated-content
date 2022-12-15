@@ -15,9 +15,7 @@ resource.serverTiming;
 
 ## 仕様書
 
-| 仕様書                                                                                                       | ステータス                           | コメント |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Server Timing','#-dfn-servertiming-dfn-attribute', 'serverTiming')}} | {{Spec2('Server Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

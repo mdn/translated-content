@@ -1,15 +1,9 @@
 ---
 title: Domínio
 slug: Glossary/Domain
-tags:
-  - Domínio
-  - Glossário
-  - Infraestrutura
-  - Navegador
-  - Networking
-translation_of: Glossary/Domain
 original_slug: Glossario/Domínio
 ---
+
 Um domínio é uma autoridade na internet que controla seus próprios recursos. Seu "nome de domínio" é uma forma de endereçar essa autoridade como parte da hierarquia de uma {{Glossary("URL")}} — normalmente a parte mais memorável dela, por exemplo por ser uma marca.
 
 Um nome de domínio totalmente qualificado (FQDN — sigla em inglês) contém todas as partes necessárias para pesquisar essa autoridade pelo seu nome, sem ambiguidade, usando o sistema {{Glossary("DNS")}} da internet.

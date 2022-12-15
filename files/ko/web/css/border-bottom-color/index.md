@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-bottom-color
 ---
+
 {{CSSRef}}
 
 **`border-bottom-color`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 아래쪽 테두리 색상을 지정합니다. {{cssxref("border-color")}} 또는 {{cssxref("border-bottom")}} 단축 속성으로도 지정할 수 있습니다.

@@ -3,6 +3,7 @@ title: DocumentFragment
 slug: Web/API/DocumentFragment
 translation_of: Web/API/DocumentFragment
 ---
+
 {{ APIRef("DOM") }}
 
 Интерфейс DocumentFragment представляет собой минимальный объект документа, который не имеет родителя. Он используется как лёгкая версия {{domxref ("Document")}}, чтобы хранить хорошо сформированные или потенциально не хорошо формированные фрагменты XML.

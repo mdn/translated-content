@@ -37,7 +37,7 @@ var sign = window.prompt('Are you feeling lucky', 'sure'); // открывает
 
 Вышеописанный prompt будет выглядеть следующим образом (в Chrome на OS X):
 
-[![prompt() dialog in Chrome on OS X](https://mdn.mozillademos.org/files/11303/prompt.png)](https://mdn.mozillademos.org/files/11303/prompt.png)
+[![prompt() dialog in Chrome on OS X](prompt.png)](prompt.png)
 
 ## Примечания
 
@@ -49,7 +49,7 @@ The following text is shared between this article, DOM:window\.confirm and DOM:w
 
 Пользователи [Mozilla Firefox](/Mozilla/Firefox) (например, расширений Firefox) должны использовать методы `nsIPromptService`.
 
-Начиная с Chrome {{CompatChrome(46.0)}}, этот метод блокируется внутри объекта {{htmlelement("iframe")}}, пока атрибут sandbox не будет установлен в значение `allow-modal`.
+Начиная с Chrome 46.0 этот метод блокируется внутри объекта {{htmlelement("iframe")}}, пока атрибут sandbox не будет установлен в значение `allow-modal`.
 
 Эта функция не действует в современной UI/Metro версии Internet Explorer для Windows 8. Он не отображает запрос для пользователя и всегда возвращает `undefined`. Неясно, является ли это ошибкой или предполагаемым поведением. Desktop версия IE выполняет функцию корректно.
 

@@ -3,6 +3,7 @@ title: Node.baseURI
 slug: Web/API/Node/baseURI
 translation_of: Web/API/Node/baseURI
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.baseURI`** только для чтения, возвращающее абсолютный базовый URL узла.

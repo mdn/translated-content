@@ -1,18 +1,8 @@
 ---
 title: 'Tutorial Django Parte 2: Creación del esqueleto del sitio web'
 slug: Learn/Server-side/Django/skeleton_website
-tags:
-  - Aprendizaje
-  - Artículo
-  - Codificación de scripts
-  - Guía
-  - Principiante
-  - Tutorial
-  - django
-  - introducción
-  - lado servidor
-translation_of: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) muestra cómo puedes crear un proyecto de "esqueleto" de sitio web como base, que puedes continuar luego llenado de configuraciones específicas del sitio, urls, modelos, vistas y plantillas.
@@ -343,7 +333,7 @@ python3 manage.py runserver
 
 Una vez que el servidor está funcionando puedes ver el sitio navegando a `http://127.0.0.1:8000/` en tu explorador local. Deberías ver una página de error del sitio que tiene el siguiente aspecto:
 
-![Django Debug page for Django 2.0](https://mdn.mozillademos.org/files/15729/django_404_debug_page.png)
+![Django Debug page for Django 2.0](django_404_debug_page.png)
 
 ¡No te preocupes! Esta página de error es lo esperado porque no tenemos ninguna página/url definidas en el módulo `catalogs.urls` (que es al que nos redirigimos cuando obtenemos la URL a la raíz del sitio).
 

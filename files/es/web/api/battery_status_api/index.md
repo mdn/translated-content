@@ -1,15 +1,9 @@
 ---
 title: API de Estado de Bateria
 slug: Web/API/Battery_Status_API
-tags:
-  - API
-  - Apps
-  - Firefox OS
-  - Mobile
-translation_of: Web/API/Battery_Status_API
 original_slug: Web/API/Estado_de_Bateria
-browser-compat: api.BatteryManager
 ---
+
 {{DefaultAPISidebar("Battery API")}}{{deprecated_header}}
 
 La **API de Estado de Batería**, también conocida como "**Battery API**", provee información acerca del sistema de carga de la batería y permite notificar mediante eventos que son enviados cuando el nivel de la batería cambia. Este puede ser usado para ajustar el uso de recursos por parte de una aplicación y evitar un gasto innecesario de energía cuando la batería esta baja o para guardar cambios en un archivo antes de que la batería se agote y así prevenir perdida de información.
@@ -25,7 +19,7 @@ La **API de Estado de Batería**, también conocida como "**Battery API**", prov
 
 ## Ejemplo
 
-En este ejemplo, observamos los cambios en el estado de la carga (este o no conectado y cargando) y en el nivel de la batería. Esto se hace escuchando los eventos {{event("chargingchange")}}, {{event("levelchange")}}, {{event("chargingtimechange")}} y {{event("dischargingtimechange")}}.
+En este ejemplo, observamos los cambios en el estado de la carga (este o no conectado y cargando) y en el nivel de la batería. Esto se hace escuchando los eventos [`chargingchange`](/es/docs/Web/Reference/Events/chargingchange), [`levelchange`](/es/docs/Web/Reference/Events/levelchange), [`chargingtimechange`](/es/docs/Web/Reference/Events/chargingtimechange) y [`dischargingtimechange`](/es/docs/Web/Reference/Events/dischargingtimechange).
 
 ```js
 navigator.getBattery().then(function(battery) {

@@ -50,13 +50,11 @@ slug: Web/API/Push_API
 
 ## 例
 
-Mozilla の [ServiceWorker Cookbook](https://serviceworke.rs/) は便利なプッシュ通知の例をたくさん揃えています。
+Mozilla の [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook/) は便利なプッシュ通知の例をたくさん揃えています。
 
 ## 仕様書
 
-| 仕様書                           | 状態                         | 備考     |
-| -------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Push API")}} | {{Spec2("Push API")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

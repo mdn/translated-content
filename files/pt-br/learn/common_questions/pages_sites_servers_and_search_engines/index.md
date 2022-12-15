@@ -1,12 +1,8 @@
 ---
 title: Qual a diferença entre página web, site, servidor web e mecanismo de busca?
 slug: Learn/Common_questions/Pages_sites_servers_and_search_engines
-tags:
-  - Iniciante
-  - Mecânica da Web
-  - Precisa de Aprendizagem Ativa
-translation_of: Learn/Common_questions/Pages_sites_servers_and_search_engines
 ---
+
 Neste artigo, iremos apresentar diversos conceitos relacionados à Web: páginas web, sites, servidores web e mecanismos de busca. Estes termos são confundidos frequentemente por iniciantes na web, ou são empregados de forma incorreta. Vamos aprender o que cada um significa!
 
 <table class="learn-box standard-table">
@@ -79,7 +75,7 @@ Uma **página web** é simplesmente um documento que é renderizado ("mostrado")
 
 Todas as páginas web disponíveis na web são alcançáveis através de um único endereço. Para acessar uma página, basta digitar seu endereço na barra de endereços do seu navegador:
 
-![Example of a web page address in the browser address bar](https://mdn.mozillademos.org/files/8529/web-page.jpg)
+![Example of a web page address in the browser address bar](web-page.jpg)
 
 ### Site
 
@@ -87,7 +83,7 @@ Um _site_ é um conjunto de páginas web vinculadas (mais os recursos associados
 
 Para acessar um website, digite o nome de domínio na barra de endereço do seu navegador, e então o navegador irá mostrar a página web principal daquele website, ou a _homepage_ (casualmente referenciada como "a _home_").
 
-![Example of a web site domain name in the browser address bar](https://mdn.mozillademos.org/files/8531/web-site.jpg)
+![Example of a web site domain name in the browser address bar](web-site.jpg)
 
 Os conceitos de página web e de website são especialmente fáceis de se confundir quando um _website_ possui apenas uma _página web_. Websites com esta característica são ocasionalmente chamados de _websites de página única_ (_single-page website_).
 
@@ -107,7 +103,7 @@ Muitos iniciantes na web confundem mecanismos de pesquisa e navegadores. Tornemo
 
 Aqui há uma instância do Firefox mostrando uma caixa de pesquisa do Google como sua página inicial padrão:
 
-![Example of Firefox nightly displaying a custom Google page as default](https://mdn.mozillademos.org/files/8533/search-engine.jpg)
+![Example of Firefox nightly displaying a custom Google page as default](search-engine.jpg)
 
 ## Próximos passos
 

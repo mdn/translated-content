@@ -32,4 +32,4 @@ slug: Web/HTML/Element/dir
   - {{Cssxref('line-height')}} 属性，用于模拟废除的 {{htmlattrxref("compact", "dir")}} 属性。.
   - {{cssxref('margin')}} 属性，用于控制列表的缩进。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

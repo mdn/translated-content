@@ -3,7 +3,7 @@ title: <a>
 slug: Web/HTML/Element/a
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<a>` 元素**（或称锚元素）可以通过[它的 `href` 属性](#href)创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。`<a>` 中的内容**应该**应该指明链接的意图。如果存在 [`href` 属性](#href)，当 `<a>` 元素聚焦时按下回车键就会激活它。
 
@@ -134,7 +134,7 @@ Description of Same-Page Links
 
 ```html
 <a href="https://developer.mozilla.org/en-US/">
-  <img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png"
+  <img src="mdn_logo.png"
        alt="MDN logo" />
 </a>
 ```

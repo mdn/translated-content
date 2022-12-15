@@ -36,10 +36,7 @@ MathML の `<mtd>` 要素は表組み・行列のセルを表します。{{ Math
 
 ## 仕様
 
-| Specification                                                                    | Status                       | Comment               |
-| -------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mtd', 'mtd') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mtd', 'mtd') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
 ## See also
 

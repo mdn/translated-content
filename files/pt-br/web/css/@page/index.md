@@ -1,12 +1,8 @@
 ---
 title: '@page'
 slug: Web/CSS/@page
-tags:
-  - '@page'
-  - CSS
-  - pagina
-translation_of: Web/CSS/@page
 ---
+
 {{CSSRef}}
 
 ## Resumo

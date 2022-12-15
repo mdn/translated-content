@@ -8,6 +8,7 @@ tags:
   - метод
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/revocable
 ---
+
 {{JSRef}}
 
 Метод **`Proxy.revocable()`** используется, чтобы создать отменяемый {{jsxref("Proxy")}} объект.

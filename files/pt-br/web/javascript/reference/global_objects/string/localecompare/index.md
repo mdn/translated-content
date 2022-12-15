@@ -1,16 +1,8 @@
 ---
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
-tags:
-  - Internacionalização
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - localeCompare()
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
+
 {{JSRef}}
 
 O método `localeCompare()` retorna um número que indica se uma string de referência vem antes ou depois, ou é a mesma que a string fornecida na ordem de classificação.

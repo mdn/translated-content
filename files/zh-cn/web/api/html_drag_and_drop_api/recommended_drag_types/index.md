@@ -88,8 +88,6 @@ event.dataTransfer.mozSetDataAt("application/x-moz-file", file, 0);
 
 If possible, you may also include the file URL of the file using both the `text/uri-list` and/or `text/plain` types. These types should be added last so that the more specific `application/x-moz-file` type has higher priority.
 
-Multiple files will be received during a drop as multiple items in the data transfer. See [Dragging and Dropping Multiple Items](/En/DragDrop/Dragging_and_Dropping_Multiple_Items) for more details about this.
-
 The following example shows how to create an area for receiving dropped files:
 
 ```
@@ -217,9 +215,8 @@ dataProvider.prototype = {
 }
 ```
 
-## 也可以看看
+## 参见
 
-- [HTML Drag and Drop API (Overview)](/Web/API/HTML_Drag_and_Drop_API)
-- [Drag Operations](Web/Guide/HTML/Drag_operations)
-- [Dragging and Dropping Multiple Items](/Web/Guide/HTML/Dragging_and_Dropping_Multiple_Items)
+- [HTML Drag and Drop API (Overview)](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
+- [Drag Operations](/zh-CN/docs/Web/Guide/HTML/Drag_operations)
 - [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

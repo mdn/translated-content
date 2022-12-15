@@ -3,6 +3,7 @@ title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 ---
+
 {{JSRef}}
 
 Метод **`valueOf()`** возвращает примитивное значение символьного объекта.

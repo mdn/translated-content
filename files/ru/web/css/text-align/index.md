@@ -3,6 +3,7 @@ title: text-align
 slug: Web/CSS/text-align
 translation_of: Web/CSS/text-align
 ---
+
 {{CSSRef}}
 
 ## Резюме

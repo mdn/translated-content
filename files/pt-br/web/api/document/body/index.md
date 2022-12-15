@@ -1,8 +1,8 @@
 ---
 title: Document.body
 slug: Web/API/Document/body
-translation_of: Web/API/Document/body
 ---
+
 {{APIRef("DOM")}}
 
 Retorna o elemento {{HTMLElement("body")}} ou o {{HTMLElement("frameset")}} do documento atual, ou `null` se nenhum destes elementos existir.
@@ -35,8 +35,8 @@ Apesar do `body` ser configurável, definir um novo `body` em um documento irá 
 
 ## Especificação
 
-- [DOM Level 2 HTML: HTMLDocument.body](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
-- [HTML5: DOM Tree Accessors](http://www.w3.org/TR/html5/dom.html#dom-tree-accessors)
+- [DOM Level 2 HTML: HTMLDocument.body](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-56360201)
+- [HTML5: DOM Tree Accessors](https://www.w3.org/TR/html5/dom.html#dom-tree-accessors)
 
 ## Veja Também
 

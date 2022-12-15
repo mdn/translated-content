@@ -2,6 +2,7 @@
 title: Content scripts
 slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 ---
+
 {{AddonSidebar}}
 
 A content script is a part of your extension that runs in the context of a particular web page (as opposed to background scripts which are part of the extension, or scripts which are part of the web site itself, such as those loaded using the {{HTMLElement("script")}} element).

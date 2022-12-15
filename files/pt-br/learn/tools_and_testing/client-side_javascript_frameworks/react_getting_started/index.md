@@ -1,11 +1,9 @@
 ---
 title: Começando com React
-slug: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
-translation_of: >-
-  Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Comecando_com_React
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Neste artigo mostraremos como dizer Olá para o React. Descobriremos um pouco sobre e os casos de usos, configurar uma React toolchain no computador localmente, e criar e usar um app simples como partida, aprendendo um pouco sobre como os processos do React funcionam.
@@ -151,7 +149,7 @@ _create-react-app_ vai mostrar várias mensagens em seu terminal enquanto ele tr
 
 Quando o processo finalizar, dê um `cd` para dentro da pasta `moz-todo-react` e execute o comando `npm start`. Os scripts instalados pelo _create-react-app_ vão começar a serem servidos em um servidor local, no endereço _localhost:3000,_ e abrirão o aplicativo em uma nova aba em seu navegador. Seu navegador vai mostrar algo como isto:
 
-![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](https://mdn.mozillademos.org/files/17203/default-create-react-app.png)
+![Screenshot of Firefox MacOS, open to localhost:3000, showing the default create-react-app application](default-create-react-app.png)
 
 ### Estrutura da aplicação
 

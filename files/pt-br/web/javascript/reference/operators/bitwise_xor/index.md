@@ -1,8 +1,8 @@
 ---
 title: Bitwise XOR (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_XOR
 ---
+
 {{jsSidebar("Operators")}}
 
 O operador bitwise XOR (`^`) retorna o numero 1 em cada posição de bit para a qual os bits correspondentes de ambos, mas não de ambos os operandos, são `1`s.

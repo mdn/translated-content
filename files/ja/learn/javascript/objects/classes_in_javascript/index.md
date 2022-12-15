@@ -329,7 +329,7 @@ class Teacher extends Person {
 }
 ```
 
-上のクラスでは、`subject` プロパティの getter と setter があります。 Name プロパティを格納するために **`_` **を使用して別の値を作成します。この規約を使用しないと、get または set を呼び出すたびにエラーが発生します。 この時点で：
+上のクラスでは、`subject` プロパティの getter と setter があります。 Name プロパティを格納するために **`_`** を使用して別の値を作成します。この規約を使用しないと、get または set を呼び出すたびにエラーが発生します。 この時点で：
 
 - `snape` オブジェクトの `_subject` プロパティの現在の値を表示するには、`snape.subject` getter メソッドを使用します
 - `_subject` プロパティに新しい値を割り当てるには、`snape.subject="new value"` setter メソッドを使用できます

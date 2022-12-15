@@ -1,24 +1,8 @@
 ---
 title: Elementos básicos de JavaScript
 slug: Learn/JavaScript/Building_blocks
-tags:
-  - CodingScripting
-  - Condicionales
-  - Evaluación
-  - Funciones
-  - Guía
-  - JavaScript
-  - Landing
-  - NeedsTranslation
-  - Principiante
-  - TopicStub
-  - bucles
-  - eventos
-  - introducción
-  - l10n:priority
-  - modulo
-translation_of: Learn/JavaScript/Building_blocks
 ---
+
 {{LearnSidebar}}
 
 En este módulo, continuamos nuestra cobertura de todas las características clave de JavaScript, tornando nuestra atención a tipos de código comúnmente encontrados tales como enunciados condicionales, bucles (loops), funciones, y eventos. Ya has visto estas cosas en este curso, pero solo de pasada aquí lo hablaremos mas explícitamente.

@@ -1,8 +1,8 @@
 ---
 title: Move the ball
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
@@ -82,7 +82,7 @@ function draw() {
 
 Save your code again and try it in your browser. This works ok, although it appears that the ball is leaving a trail behind it:
 
-![](https://mdn.mozillademos.org/files/10430/ball-trail.png)
+![](ball-trail.png)
 
 ## Clearing the canvas before each frame
 

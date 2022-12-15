@@ -1,14 +1,9 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - JavaScript
-  - Number
-  - Referencia
-  - Referência(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Number
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Number
 ---
+
 {{JSRef}}
 
 **`Number`** es un objeto primitivo envolvente que permite representar y manipular valores numéricos cómo 37 o -9.25. El constructor Number contiene constantes y métodos para trabajar con números. Valores de otro tipo pueden ser convertidos a números usando la función Number().
@@ -86,7 +81,7 @@ Number(undefined)  // NaN
   - : Determina si un numero es entero.
 - {{jsxref("Number.isSafeInteger()")}}
   - : Determine si el valor pasado es un entero seguro (número entre `-(253 - 1)` y `253 - 1`).
-- ~~{{jsxref("Number.toInteger()")}} {{obsolete_inline}}~~
+- ~~{{jsxref("Number.toInteger()")}} {{deprecated_inline}}~~
   - : ~~Se usa para evaluar el valor pasado y convertirlo en un entero (or {{jsxref("Global_Objects/Infinity", "Infinity")}}), pero ha sido eliminado.~~
 - {{jsxref("Number.parseFloat()")}}
   - : El valor es el mismo que {{jsxref ("parseFloat", "parseFloat ()")}} del objeto global.

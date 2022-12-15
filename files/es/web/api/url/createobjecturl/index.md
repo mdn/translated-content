@@ -1,15 +1,8 @@
 ---
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
-tags:
-  - API
-  - Experimental
-  - Method
-  - URL
-  - URL API
-  - createObjectURL
-translation_of: Web/API/URL/createObjectURL
 ---
+
 {{ApiRef("URL")}}{{SeeCompatTable}}
 
 El método estático **`URL.createObjectURL()`** crea un {{domxref("DOMString")}} que contiene una URL que representa al objeto pasado como parámetro. La vida de la URL está ligado al {{domxref("document")}} de la ventana en la que fue creada. El nuevo objeto URL representa al objeto {{domxref("File")}} especificado o al objeto {{domxref("Blob")}}.
@@ -43,9 +36,7 @@ Cada vez que se llama a `createObjectURL()`, un nuevo objeto URL es creado, incl
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                       | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('File API', '#dfn-createObjectURL', 'URL')}} | {{Spec2('File API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

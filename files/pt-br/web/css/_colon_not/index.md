@@ -1,14 +1,6 @@
 ---
 title: ':not()'
 slug: Web/CSS/:not
-tags:
-  - CSS
-  - Composição
-  - Layout
-  - Pseudo-classe CSS
-  - Referencia
-  - Web
-translation_of: Web/CSS/:not
 ---
 {{ CSSRef() }}
 

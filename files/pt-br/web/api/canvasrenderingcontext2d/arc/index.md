@@ -1,16 +1,8 @@
 ---
 title: CanvasRenderingContext2D.arc()
 slug: Web/API/CanvasRenderingContext2D/arc
-tags:
-  - API
-  - Arco
-  - Canvas
-  - CanvasRenderingContext2D
-  - Circulo
-  - Method
-  - Reference
-translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.arc()`** da API Canvas 2D adiciona um arco circular para o atual sub-caminhoa (_sub-path_).
@@ -103,7 +95,7 @@ for (let i = 0; i <= 3; i++) {
 
 #### Resultado
 
-{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}
+{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "canvas_arc.png") }}
 
 ## Especificações
 

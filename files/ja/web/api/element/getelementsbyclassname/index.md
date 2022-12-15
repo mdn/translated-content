@@ -84,7 +84,7 @@ while (matches.length > 0) {
 
 ### Array メソッドで結果を抽出する
 
-このメソッドの戻り値を `this` 値として {{jsxref("Array.prototype")}} メソッドに与えることで、任意の {{ domxref("HTMLCollection") }} で `Array` メソッドを使うことができます。次の例では `test` クラスを持つすべての {{HTMLElement("div")}} 要素を見つけられます。
+このメソッドの戻り値を `this` 値として {{jsxref("Array")}} のメソッドに与えることで、任意の {{ domxref("HTMLCollection") }} で `Array` のメソッドを使うことができます。次の例では `test` クラスを持つすべての {{HTMLElement("div")}} 要素を見つけられます。
 
 ```js
 var testElements = document.getElementsByClassName('test');

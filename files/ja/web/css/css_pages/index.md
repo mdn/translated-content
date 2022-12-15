@@ -28,8 +28,4 @@ slug: Web/CSS/CSS_Pages
 
 ## 仕様書
 
-| 仕様書                             | 状態                            | 備考    |
-| ---------------------------------- | ------------------------------- | ------- |
-| {{SpecName('CSS3 Paged Media')}}   | {{Spec2('CSS3 Paged Media')}}   |         |
-| {{SpecName('CSS3 Fragmentation')}} | {{Spec2('CSS3 Fragmentation')}} |         |
-| {{SpecName('CSS2.1')}}             | {{Spec2('CSS2.1')}}             |         |
+{{Specifications}}

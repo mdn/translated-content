@@ -3,7 +3,7 @@ title: <legend>
 slug: Web/HTML/Element/legend
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML \<legend>** 元素用于表示其父元素 {{HTMLElement("fieldset")}} 的内容标题。
 

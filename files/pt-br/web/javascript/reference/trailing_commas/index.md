@@ -1,15 +1,6 @@
 ---
 title: Trailing commas
 slug: Web/JavaScript/Reference/Trailing_commas
-tags:
-  - Comma
-  - ECMAScript2017
-  - ECMAScript5
-  - JavaScript
-  - Language feature
-  - Syntax
-  - Trailing comma
-browser-compat: javascript.grammar.trailing_commas
 ---
 
 {{JsSidebar("More")}}

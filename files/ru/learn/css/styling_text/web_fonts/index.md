@@ -4,6 +4,7 @@ slug: Learn/CSS/Styling_text/Web_fonts
 translation_of: Learn/CSS/Styling_text/Web_fonts
 original_slug: Learn/CSS/Styling_text/Веб_шрифты
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
 В первой статье модуля, мы изучали основные функции CSS доступные для стилизации шрифтов и текста. В этой статье мы продвинемся дальше изучая веб-шрифты в деталях — они позволяют вам загружать пользовательские шрифты вместе с вашей веб-страницей, чтобы обеспечить более разнообразный, индивидуальный стиль текста.
@@ -107,7 +108,7 @@ font-family: 'zantrokeregular', serif;
 
 Вы должны получить демо-страницу с какими-то реализованными симпатичными шрифтами. Поскольку различные шрифты создаются в разных размерах, вам может понадобиться настроить размер, интервалы и т.д., чтобы отладить внешний вид.
 
-![](https://mdn.mozillademos.org/files/12984/web-font-example.png)
+![](web-font-example.png)
 
 > **Примечание:** **Обратите внимание**: Если у вас возникли какие-либо проблемы с тем что что-то не работает, смело сравнивайте файлы вашей версии с нашей законченной — см. [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) и [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) ([run the finished example live](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
 

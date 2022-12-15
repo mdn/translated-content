@@ -1,9 +1,9 @@
 ---
 title: Como CSS é estruturado
 slug: Learn/CSS/First_steps/How_CSS_is_structured
-translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 original_slug: Learn/CSS/First_steps/Como_CSS_e_estruturado
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Agora que você tem uma ideia sobre o que é o CSS e seu uso basico, é hora de olhar um pouco mais a fundo das estruturas da linguagem em si. Nós ja conhecemos muitos conceitos discutidos aqui, entretanto, você pode voltar para qualquer um em específico, se achar algum dos proximos conceitos um tanto confuso
@@ -254,15 +254,15 @@ At its most basic level, CSS consists of two building blocks:
 
 The below image highlights a single property and value. The property name is `color`, and the value `blue`.
 
-![A declaration highlighted in the CSS](https://mdn.mozillademos.org/files/16498/declaration.png)
+![A declaration highlighted in the CSS](declaration.png)
 
 A property paired with a value is called a _CSS declaration_. CSS declarations are put within _CSS Declaration Blocks_. This next image shows our CSS with the declaration block highlighted.
 
-![A highlighted declaration block](https://mdn.mozillademos.org/files/16499/declaration-block.png)
+![A highlighted declaration block](declaration-block.png)
 
 Finally, CSS declaration blocks are paired with _selectors_ to produce _CSS Rulesets_ (or _CSS Rules_). Our image contains two rules, one for the `h1` selector and one for the `p` selector. The rule for `h1` is highlighted.
 
-![The rule for h1 highlighted](https://mdn.mozillademos.org/files/16500/rules.png)
+![The rule for h1 highlighted](rules.png)
 
 Setting CSS properties to specific values is the core function of the CSS language. The CSS engine calculates which declarations apply to every single element of a page in order to appropriately lay it out and style it. What is important to remember is that both properties and values are case-sensitive in CSS. The property and value in each pair is separated by a colon (`:`).
 

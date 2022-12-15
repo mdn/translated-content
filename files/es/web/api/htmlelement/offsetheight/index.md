@@ -1,12 +1,8 @@
 ---
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-tags:
-  - API
-  - Propiedad
-  - Referencia
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 La propiedad de sólo lectura **`HTMLElement.offsetHeight`** devuelve el alto de un elemento, incluyendo el _padding_ vertical y los bordes, en píxeles, como un número entero.
@@ -31,11 +27,9 @@ var intElemOffsetHeight = element.offsetHeight;
 
 El ejemplo de la imagen de superior muestra una barra de desplazamiento y un `offsetHeight` que cabe en la ventana. Sin embargo, los elementos no desplazables podrían tener un `offsetHeight` mucho más grande que el área visible. Esos elementos están típicamente contenidos en elementos desplazables (scroll); con lo cual esos elementos no desplazables podrían ser parcial o completamente invisibles, dependiendo de la configuración de `scrollTop` del elemento contenedor.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('CSSOM View', '#dom-htmlelement-offsetHeight', 'offsetLeft')}} | {{Spec2('CSSOM View')}} |            |
+{{Specifications}}
 
 ### Notas
 

@@ -16,6 +16,7 @@ tags:
   - Workers
 translation_of: Web/API/Clients
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 Интерфейс `Clients` [Service Workers API](/ru/docs/Web/API/ServiceWorker_API) представляет собой контейнер со списком объектов {{domxref("Client")}}.

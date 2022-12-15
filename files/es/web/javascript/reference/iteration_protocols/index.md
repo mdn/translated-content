@@ -1,16 +1,9 @@
 ---
 title: Protocolos de Iteración
 slug: Web/JavaScript/Reference/Iteration_protocols
-tags:
-  - ECMAScript6
-  - Experimental
-  - Intermedio
-  - Iterable
-  - Iterador
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Iteration_protocols
 original_slug: Web/JavaScript/Referencia/Iteration_protocols
 ---
+
 {{jsSidebar("More")}}Las nuevas características de ECMAScript 6 no solo están asociadas a cambios y adiciones de sintaxis o a nuevos objetos nativos, sino también a protocolos. Dichos protocolos puede ser implementados por cualquier objeto en relación a algunas convenciones.Existen dos protocolos: El[protocolo iterable](#The_.22iterable.22_protocol) y el[protocolo iterador](#The_.22iterator.22_protocol).
 
 ## El protocolo iterable
@@ -153,7 +146,7 @@ De igual manera {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Pr
 
 ### Sintaxis que espera un iterable
 
-Algunas declaraciones y expresiones esperan iterables, por ejemplo el bucle [`for-of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of), el[operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator), la expresión [`Yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*), y la [asignación desestructurada _destructuring assignment_](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Algunas declaraciones y expresiones esperan iterables, por ejemplo el bucle [`for-of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), el[operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_operator), la expresión [`Yield*`](/es/docs/Web/JavaScript/Reference/Operators/yield*), y la [asignación desestructurada _destructuring assignment_](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
 ```js
 for(let value of ["a", "b", "c"]){
@@ -285,9 +278,7 @@ aGeneratorObject[Symbol.iterator]() === aGeneratorObject;
 
 ## Especificaciones
 
-| Especificación                                                       | Estado               | Comentario          |
-| -------------------------------------------------------------------- | -------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-iteration', 'Iteration')}} | {{Spec2('ES6')}} | Definición inicial. |
+{{Specifications}}
 
 ## Temas relacionados
 

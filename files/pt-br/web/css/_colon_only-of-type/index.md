@@ -1,8 +1,8 @@
 ---
 title: ':only-of-type'
 slug: Web/CSS/:only-of-type
-translation_of: Web/CSS/:only-of-type
 ---
+
 {{CSSRef}}
 
 ## Descrição

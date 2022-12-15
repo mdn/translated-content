@@ -3,6 +3,7 @@ title: XMLHttpRequest.setRequestHeader()
 slug: Web/API/XMLHttpRequest/setRequestHeader
 translation_of: Web/API/XMLHttpRequest/setRequestHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 Метод **XMLHttpRequest.setRequestHeader()** устанавливает значения HTTP заголовков. Метод `setRequestHeader()` следует вызывать только после `open()`, но до `send()`. Если метод вызывается несколько раз подряд, значения присоединяется к одному и тому же заголовку.

@@ -1,8 +1,8 @@
 ---
 title: Using CSS transitions
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 ---
+
 {{CSSref}}
 
 **CSS transitions** provê uma forma de controlar a velocidade de uma animação quando há mudanças de propriedades CSS. Ao invés de uma propriedade entrar em vigor imediatamente, você pode fazer com que as mudanças em uma propriedade ocorram durante um periodo de tempo. Por exemplo, se você mudar a cor de um elemento de branco para preto, a alteração será instantanea. Utilizando transições CSS, as alterações acontecem em uma intervalo de tempo que seguem uma curva de aceleração, e todas podem ser personalizadas

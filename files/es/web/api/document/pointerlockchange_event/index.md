@@ -1,9 +1,9 @@
 ---
 title: pointerlockchange
 slug: Web/API/Document/pointerlockchange_event
-translation_of: Web/API/Document/pointerlockchange_event
 original_slug: Web/API/Element/pointerlockchange_event
 ---
+
 El evento `pointerlockchange` es disparado cuando el cursor del navegador es bloqueado o desbloqueado.
 
 ## Información general

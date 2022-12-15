@@ -4,6 +4,7 @@ slug: Learn/Forms/Sending_and_retrieving_form_data
 translation_of: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/HTML/Forms/Отправка_и_Получение_данных_формы
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
 
 В этой статье рассматривается, что происходит, когда пользователь отправляет форму - куда передаются данные и как мы их обрабатываем, когда они туда попадают? Мы также рассмотрим некоторые проблемы безопасности, связанные с отправкой данных формы.

@@ -3,7 +3,7 @@ title: '<mark>: 文字列マーク要素'
 slug: Web/HTML/Element/mark
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の文字列マーク要素** (**`<mark>`**) は、周囲の文脈の中でマークを付けた部分の関連性や重要性のために、参照や記述の目的で目立たせたり強調したりする文字列を表します。
 
@@ -152,10 +152,7 @@ mark::after {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-mark-element', '&lt;mark&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-mark-element', '&lt;mark&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

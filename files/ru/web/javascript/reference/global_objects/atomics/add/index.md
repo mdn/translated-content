@@ -3,6 +3,7 @@ title: Atomics.add()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
+
 {{JSRef}}
 
 Статический метод **`Atomics.add()`** добавляет значение к текущему по указанной позиции в массиве и возвращает предыдущее значение в этой позиции. Эта атомарная операция гарантирует, что никакой другой записи не произойдёт, пока изменённое значение не будет записано обратно.

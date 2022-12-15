@@ -3,6 +3,7 @@ title: class
 slug: Web/JavaScript/Reference/Statements/class
 translation_of: Web/JavaScript/Reference/Statements/class
 ---
+
 {{jsSidebar("Statements")}}
 
 **Class declaration** создаёт новый класс с данным именем на основе прототипного наследования.

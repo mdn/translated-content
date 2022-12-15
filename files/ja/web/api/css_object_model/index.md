@@ -1,6 +1,8 @@
 ---
 title: CSS オブジェクトモデル (CSSOM)
 slug: Web/API/CSS_Object_Model
+l10n:
+  sourceCommit: 58792ac0cd1e3ab302683533862f821b666c5e3b
 ---
 
 {{DefaultAPISidebar("CSSOM")}}
@@ -93,32 +95,18 @@ CSS の値は型を使わずに表現しますので、 {{JSxRef("String")}} オ
 
 ## チュートリアル
 
-- [Determining the dimensions of elements](/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (これは DHTML/Ajax 時代に作られたのでいくらか更新が必要です)。
+- [要素の寸法の決定](/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements) (これは DHTML/Ajax 時代に作られたのでいくらか更新が必要です)。
 - [画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 
 ## 仕様書
 
-| 仕様書                                           | 状態                                         | 備考                                                                                                                                                                                                                              |
-| ------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Typed OM")}}             | {{Spec2("CSS Typed OM")}}             |                                                                                                                                                                                                                                   |
-| {{SpecName("CSS Painting API")}}     | {{Spec2("CSS Painting API")}}     | {{DOMxRef("CSS")}} インターフェイスを {{DOMxRef("CSS.paintWorklet","paintWorklet")}} 静的プロパティで拡張。                                                                                                   |
-| {{SpecName("CSSOM View")}}             | {{Spec2("CSSOM View")}}             | {{DOMxRef("Screen")}} および {{DOMxRef("MediaQueryList")}} インターフェイスと {{DOMxRef("MediaQueryListEvent")}} イベントと {{DOMxRef("MediaQueryListListener")}} イベントリスナーを定義。 |
-| {{SpecName("CSSOM")}}                     | {{Spec2("CSSOM")}}                     | {{DOMxRef("CSS")}} インターフェイスを拡張し、最新の CSSOM 仕様書の基礎を提供。                                                                                                                                              |
-| {{SpecName("Screen Orientation")}}     | {{Spec2("Screen Orientation")}}     |                                                                                                                                                                                                                                   |
-| {{SpecName("CSS3 Fonts")}}             | {{Spec2("CSS3 Fonts")}}             |                                                                                                                                                                                                                                   |
-| {{SpecName("CSS3 Animations")}}         | {{Spec2("CSS3 Animations")}}         |                                                                                                                                                                                                                                   |
-| {{SpecName("CSS3 Transitions")}}     | {{Spec2("CSS3 Transitions")}}     |                                                                                                                                                                                                                                   |
-| {{SpecName("CSS3 Variables")}}         | {{Spec2("CSS3 Variables")}}         |                                                                                                                                                                                                                                   |
-| {{SpecName("CSS3 Conditional")}}     | {{Spec2("CSS3 Conditional")}}     | {{DOMxRef("CSS")}} インターフェイスを定義。                                                                                                                                                                                 |
-| {{SpecName("CSS3 Device")}}             | {{Spec2("CSS3 Device")}}             |                                                                                                                                                                                                                                   |
-| {{SpecName("CSS3 Counter Styles")}} | {{Spec2("CSS3 Counter Styles")}} |                                                                                                                                                                                                                                   |
-| {{SpecName("DOM2 Style")}}             | {{Spec2("DOM2 Style")}}             | 初回定義                                                                                                                                                                                                                          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
 この機能のすべてはさまざまなブラウザーで何年かけて少しずつ追加されてきました。これは簡単なページにまとめることができないとても複雑なプロセスでした。利用できるかについてはそれぞれのインターフェイスを参照してください。
 
-## See also
+## 関連情報
 
 - [Document Object Model (DOM)](/ja/docs/Web/API/Document_Object_Model)
-- [Houdini](/ja/docs/Web/Houdini/)
+- [Houdini](/ja/docs/Web/Guide/Houdini)

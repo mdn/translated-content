@@ -1,14 +1,9 @@
 ---
 title: embed
 slug: Web/HTML/Element/embed
-tags:
-  - HTML
-  - HTML5
-  - HTML:Elemento
-  - para_revisar
-translation_of: Web/HTML/Element/embed
 original_slug: Web/HTML/Elemento/embed
 ---
+
 > **Nota:** este tema documenta sólo el elemento \<embed> que se define como parte de HTML5. No trata las implementaciones anteriores no estandarizadas del elemento `<embed>`.
 
 El _Elemento HTML Embed_ ( `<embed>` ) representa un punto de integración para una aplicación externa o de contenido interactivo (en otras palabras, un plug-in).

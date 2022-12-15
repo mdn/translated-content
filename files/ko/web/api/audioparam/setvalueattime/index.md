@@ -10,6 +10,7 @@ tags:
   - setValueAtTime
 browser-compat: api.AudioParam.setValueAtTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{domxref("AudioParam")}} 인터페이스의 `setValueAtTime()` 메서드는 {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}으로 측정된 정밀한 시간에 `AudioParam` 값의 즉각적인 변화를 예정합니다. 새로운 값은 value 매개변수에 주어집니다.

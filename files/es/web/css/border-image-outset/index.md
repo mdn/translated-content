@@ -1,12 +1,6 @@
 ---
 title: border-image-outset
 slug: Web/CSS/border-image-outset
-tags:
-  - Bordes CSS
-  - CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/border-image-outset
 ---
 {{CSSRef}}
 
@@ -63,9 +57,7 @@ border-image-outset: inherit;
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                                  | Comentarios        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-image-outset', 'border-image-outset')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

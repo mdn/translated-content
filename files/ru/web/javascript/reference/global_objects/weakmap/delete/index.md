@@ -3,6 +3,7 @@ title: WeakMap.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 ---
+
 {{JSRef}}
 
 `Метод delete()` удаляет элемент из объекта WeakMap.

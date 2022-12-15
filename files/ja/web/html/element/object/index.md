@@ -3,7 +3,7 @@ title: '<object>: 外部オブジェクト要素'
 slug: Web/HTML/Element/object
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<object>`** は [HTML](/ja/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。
 

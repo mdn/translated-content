@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.inequality
 ---
+
 {{jsSidebar("Operators")}}
 
 부등 연산자(!=)는 두 피연산자가 같지 않은지 확인하여 불리언 결과를 반환합니다. 엄격한 부등 연산자와는 달리 다른 유형의 피연산자를 암묵적으로 변환하고 비교합니다.

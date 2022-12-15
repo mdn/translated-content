@@ -1,8 +1,8 @@
 ---
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
-translation_of: Web/CSS/grid-template-areas
 ---
+
 `La propiedad CSS grid-template-areas` especifica nombres para cada una de las {{glossary("grid areas")}}.
 
 ```css
@@ -89,11 +89,9 @@ Estas áreas no están asociadas a ningún elemento particular de la cuadrícula
 
 _{{EmbedLiveSample("Example", "100%", "250px")}}_
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                | Status                       | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid-template-areas", "grid-template-areas")}} | {{Spec2("CSS3 Grid")}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -54,7 +54,7 @@ slug: Web/API/Payment_Request_API
 ### “保存卡信息并自动扣款”规范的相关词典
 
 - {{domxref("BasicCardChangeDetails")}}
-  - : 一个对象，提供了当用户更改支付信息时，{{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}}中传送通过{{event("paymentmethodchange")}}事件传送给 {{domxref("PaymentRequest")}}的*删节的*地址信息。
+  - : 一个对象，提供了当用户更改支付信息时，{{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} 中传送通过 {{domxref('PaymentMethodChangeEvent', 'paymentmethodchange')}} 事件传送给 {{domxref("PaymentRequest")}} 的*删节的*地址信息。
 - {{domxref("BasicCardErrors")}}
   - : 一个对象，提供了{{domxref("BasicCardResponse")}}中无效信息的相关错误提示。错误发生时，该对象被传送给{{domxref("PaymentRequest")}}，作为{{domxref("PaymentValidationErrors")}}对象中{{domxref("PaymentValidationErrors.paymentMethod", "paymentMethod")}}属性的值。
 - {{domxref('BasicCardRequest')}}

@@ -1,16 +1,8 @@
 ---
 title: Como eu faço o upload de arquivos para um servidor web ?
 slug: Learn/Common_questions/Upload_files_to_a_web_server
-tags:
-  - FTP
-  - GitHub
-  - Iniciante
-  - MecanismosWeb
-  - hospedagem
-  - rsync
-  - sftp
-translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 ---
+
 Este artigo mostra como publicar seu site online usando ferramentas de transferência de arquivos.
 
 <table class="learn-box standard-table">
@@ -58,7 +50,7 @@ Existem vários clientes SFTP . Nossa demo cobre o FileZilla, já que é gratuit
 
 Abra o FileZilla, você verá algo semelhante a isso:
 
-![](https://mdn.mozillademos.org/files/15767/filezilla-ui.png)
+![](filezilla-ui.png)
 
 ### Logging in
 
@@ -82,7 +74,7 @@ Acabamos de abrir uma conta e receber estas informações :
 
 Primeiramente, olhe em `http://demozilla.examplehostingprovider.net/` — como você pode ver até o momento, não há nada lá :
 
-![Our demozilla personal website, seen in a browser: it's empty](https://mdn.mozillademos.org/files/9615/demozilla-empty.png)
+![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
 
 > **Nota:** Dependendo do seu provedor de hospedagem, na maioria das vezes você verá uma página dizendo algo como como "Este site é hospedado por \[serviço de hospedagem]".Isso é claro, quando você acessa seu endereço da web pela primeira vez.
 
@@ -96,7 +88,7 @@ Para conectar seu cliente SFTP ao servidor, siga estas etapas:
 
 Sua janela estará semelhante a esta:
 
-![](https://mdn.mozillademos.org/files/15769/site-manager.png)
+![](site-manager.png)
 
 Agora pressione _Connect_ para conectar ao servidor SFTP.
 
@@ -106,7 +98,7 @@ Nota: Atenção, certifique-se de que seu provedor de hospedagem oferece conexã
 
 Depois de conectada, sua tela deve ser semelhante a esta (conectamos a um exemplo nosso para lhe dar uma ideia):
 
-![](https://mdn.mozillademos.org/files/15768/connected.png)
+![](connected.png)
 
 Vamos analisar o que você está vendo:
 
@@ -124,7 +116,7 @@ Depois de encontrar o diretório remoto correto para colocar seus arquivos, para
 
 Até agora, tudo bem , mas os arquivos estão realmente online ? Você pode verificar novamente voltando ao seu site (e.g. `http://demozilla.examplehostingprovider.net/`) no seu navegador:
 
-![Here we go: our website is live!](https://mdn.mozillademos.org/files/9627/here-we-go.png)
+![Here we go: our website is live!](here-we-go.png)
 
 E _voilà_! Nosso website está vivo!
 
@@ -166,7 +158,7 @@ Novamente, você teria que obter as credenciais de conexão do seu provedor de h
 
 Github permite você publicar páginas por meio do [GitHub pages](https://pages.github.com/) (gh-pages).
 
-Cobrimos o básico de como usar isso no [Publishing your website](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website) artigo do guia [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) , então não vamos repetir tudo aqui.
+Cobrimos o básico de como usar isso no [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website) artigo do guia [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) , então não vamos repetir tudo aqui.
 
 No entanto, é importante saber que você também pode hospedar um site no GitHub, mas usar um domínio personalizado com ele. Para obter um guia detalhado, consulte [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) .
 

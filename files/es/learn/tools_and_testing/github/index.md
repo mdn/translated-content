@@ -1,15 +1,9 @@
 ---
 title: Git y GitHub
 slug: Learn/Tools_and_testing/GitHub
-tags:
-  - Aprender
-  - GitHub
-  - Principiante
-  - Web
-  - git
-translation_of: Learn/Tools_and_testing/GitHub
 original_slug: Learn/Herramientas_y_pruebas/GitHub
 ---
+
 {{LearnSidebar}}
 
 Todos los desarrolladores utilizarán algún tipo de **sistema de control de versiones** (**VCS**), una herramienta que les permita colaborar con otros desarrolladores en un proyecto sin peligro de que sobrescriban el trabajo de los demás, y volver a las versiones anteriores de la base de código si existe un problema descubierto más tarde. El VCS más popular (al menos entre los desarrolladores web) es **Git**, junto con **GitHub**, un sitio que proporciona alojamiento para tus repositorios y varias herramientas para trabajar con ellos. Este módulo tiene como objetivo enseñarte lo que necesitas saber sobre ambos.

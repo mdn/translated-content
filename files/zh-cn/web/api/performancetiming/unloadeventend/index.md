@@ -7,7 +7,7 @@ slug: Web/API/PerformanceTiming/unloadEventEnd
 
 ## 概要
 
-**`PerformanceTiming.unloadEventEnd`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为{{event("unload")}} 事件处理程序结束之时的 Unix 毫秒时间戳。如果没有上一个的文档，或者上一个文档或需要被跳转的页面的其中之一不同源，则该值返回 `0`。
+**`PerformanceTiming.unloadEventEnd`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为[`unload`](/zh-CN/docs/Web/API/Window/unload_event) 事件处理程序结束之时的 Unix 毫秒时间戳。如果没有上一个的文档，或者上一个文档或需要被跳转的页面的其中之一不同源，则该值返回 `0`。
 
 ## 语法
 

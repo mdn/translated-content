@@ -1,8 +1,8 @@
 ---
 title: RTCPeerConnection
 slug: Web/API/RTCPeerConnection
-translation_of: Web/API/RTCPeerConnection
 ---
+
 {{APIRef('WebRTC')}}
 
 A interface **`RTCPeerConnection`** cria uma conexão WebRTC entre um computador local e um ponto remoto. Esta interface fornece métodos que possibilitam a conexão a um ponto remoto, mantendo e monitorando a conexão, e fechando-a quando não for mais necessária.

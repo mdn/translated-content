@@ -1,8 +1,8 @@
 ---
 title: CssRule
 slug: Web/API/CSSRule
-translation_of: Web/API/CSSRule
 ---
+
 {{ ApiRef("CSSOM") }}
 
 El objeto **`CSSRule`** representa una única regla de estilo CSS. Puede ser parte de una lista [cssRules](/Es/DOM/Stylesheet.cssRules) de hojas de estilo ([stylesheet](/Es/DOM/Stylesheet)).

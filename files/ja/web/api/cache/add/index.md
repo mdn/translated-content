@@ -59,9 +59,7 @@ this.addEventListener('install', function(event) {
 
 ## 仕様策定状況
 
-| 仕様書                                                                               | 策定状況                             | コメント |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-cache-add', 'Cache: add')}} | {{Spec2('Service Workers')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

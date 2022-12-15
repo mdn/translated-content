@@ -1,20 +1,8 @@
 ---
 title: 'HTML: Boas práticas em acessibilidade'
 slug: Learn/Accessibility/HTML
-tags:
-  - Acessibilidade
-  - Artigo
-  - Código
-  - Iniciante
-  - aprendizado
-  - botões
-  - formulários
-  - leitor de telas
-  - semántica
-  - teclado
-  - tecnologia assistiva
-translation_of: Learn/Accessibility/HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 Uma grande parte do conteúdo presente na internet pode se tornar acessível apenas com a utilização correta dos elementos HTML. Esse artigo mostra em detalhes como o HTML pode ser utilizado para garantir o máximo de acessibilidade.
@@ -280,7 +268,7 @@ Por controles de UI, o que nós queremos dizer é as partes dos documentos web q
 
 Um aspecto chave da acessibilidade de controles Ui é que, por padrão, os navegadores premitem que esses controles sejam acessados pelo teclado. Você pode experimentar isso utilizando o nosso exemplo [native-keyboard-accessibility.html](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) (ver o [código-fonte](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)) — abra em uma nova aba e experimente apertar a tecla tab; depois de algumas tecladas, você irá ver o foco da aba se mover entre diferentes elementos que podem ser focados; os elementos focados são dados um estilo de destaque em todos os navegadores (muda levemente entre diferentes navegadores) dessa forma você pode dizer qual elemento está em foco.
 
-![](https://mdn.mozillademos.org/files/14215/button-focused-unfocused.png)
+![](button-focused-unfocused.png)
 
 Você pode apertar Enter/Return para seguir um link que está focado ou apertar um botão (nós incluimos um pouco de JavaScript para fazer os botões chamarem uma mensagem), ou começar a escrever para inserir um texto em um formulário de texto (outros elementos possuem controles diferentes, por exemplo o elemento {{htmlelement("select")}} pode ter suas opções visíveis e selecionáveis utilizando as teclas de flecha para cima e para baixo.
 
@@ -363,7 +351,7 @@ document.onkeydown = function(e) {
 };
 ```
 
-Aqui nós adicionamos um "ouvinte" (listener) ao objeto de documento (`document`) para detectar quando um botão foi pressionado no teclado. Verificamos qual botão foi pressionado por meio da propriedade [`keyCode`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode) do objeto de evento; se for o código que corresponde a Enter/Return, executamos a função armazenada no manipulador `onclick` do botão usando `document.activeElement.click()`. [`activeElement`](https://developer.mozilla.org/en-US/docs/Web/API/Document/activeElement) nos dá o elemento que está atualmente focado na página.
+Aqui nós adicionamos um "ouvinte" (listener) ao objeto de documento (`document`) para detectar quando um botão foi pressionado no teclado. Verificamos qual botão foi pressionado por meio da propriedade [`keyCode`](/en-US/docs/Web/API/KeyboardEvent/keyCode) do objeto de evento; se for o código que corresponde a Enter/Return, executamos a função armazenada no manipulador `onclick` do botão usando `document.activeElement.click()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) nos dá o elemento que está atualmente focado na página.
 
 Isso acrescenta um monte de problemas extras para construir a funcionalidade de volta. E não deveríamos ter outros problemas com isso. **É sempre melhor apenas usar o elemento certo.**
 
@@ -373,7 +361,7 @@ Os rótulos de texto de controle da interface do usuário são muito úteis para
 
 Você deve certificar-se de que seus rótulos de texto de botão e link sejam compreensíveis e distintos. Não use apenas "Clique aqui" para seus rótulos, pois os usuários de leitores de tela podem utilizar atalhos para exibir/ouvir listas de botões e controles de formulários e não identificá-los adequadamente. A captura de tela a seguir mostra nossos controles sendo listados pelo VoiceOver no Mac.
 
-![](https://mdn.mozillademos.org/files/14335/voiceover-formcontrols.png)
+![](voiceover-formcontrols.png)
 
 Certifique-se de que seus rótulos fazem sentido fora de contexto, lidos individualmente e no contexto do parágrafo em que estão. Por exemplo, este seria um bom exemplo para link:
 
@@ -408,7 +396,7 @@ Já o exemplo a seguir, é bem melhor:
 
 Com o código assim, o rótulo será claramente associado à entrada; a descrição será algo como "Preencha seu nome: editar texto".
 
-![](https://mdn.mozillademos.org/files/14337/voiceover-good-form-label.png)
+![](voiceover-good-form-label.png)
 
 Como um bônus adicional, na maioria dos navegadores a associação de um rótulo a uma entrada de formulário significa que você pode clicar no rótulo para selecionar/ativar o elemento de formulário. Isso consequentemente aumenta o tamanho da área clicável dos elementos, facilitando assim a seleção.
 
@@ -488,7 +476,7 @@ Uma coisa a considerar é se as imagens possuem algum significado dentro de seu 
 
 Se você quiser fornecer informações contextuais extras, deverá colocá-las no texto ao redor da imagem ou dentro de um atributo de título (`title`), como mostrado acima. Nesse caso, a maioria dos leitores de tela lerá o texto alternativo, o atributo de título e o nome do arquivo. Além disso, os navegadores exibem o texto do título como dicas de ferramentas quando estão sobre o mouse.
 
-![](https://mdn.mozillademos.org/files/14333/title-attribute.png)
+![](title-attribute.png)
 
 Vamos dar uma olhada rápida no quarto método:
 

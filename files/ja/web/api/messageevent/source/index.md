@@ -1,6 +1,8 @@
 ---
 title: MessageEvent.source
 slug: Web/API/MessageEvent/source
+l10n:
+  sourceCommit: 4b4638246aad5d39b9a2e5c572b179b4c39c0a84
 ---
 
 {{APIRef("HTML DOM")}}
@@ -14,7 +16,7 @@ slug: Web/API/MessageEvent/source
 ## 例
 
 ```js
-myWorker.onmessage = function(e) {
+myWorker.onmessage = (e) => {
   result.textContent = e.data;
   console.log('Message received from worker');
   console.log(e.source);

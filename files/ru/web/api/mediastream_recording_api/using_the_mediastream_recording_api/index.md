@@ -3,13 +3,14 @@ title: Использование интерфейса записи медиап
 slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 translation_of: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 ---
+
 {{DefaultAPISidebar("MediaStream Recording")}}
 
 Интерфейс [MediaStream Recording](/ru/docs/Web/API/MediaStream_Recording_API) позволяет записывать аудио и видео потоки. При использовании с методом {{domxref("MediaDevices.getUserMedia()","navigator.mediaDevices.getUserMedia()")}}, предлагает простой способ записи данных с устройств пользователя, и немедленное их использование в веб приложениях.И аудио и видео могут быть записаны вместе или по отдельности.Цель данной статьи - предоставить базовое руководство о том как использовать объект `MediaRecorder`, реализующий такой программный интерфейс.
 
 ## Пример приложения: Веб диктофон
 
-![An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back.](https://mdn.mozillademos.org/files/7885/web-dictaphone.png)
+![An image of the Web dictaphone sample app - a sine wave sound visualization, then record and stop buttons, then an audio jukebox of recorded tracks that can be played back.](web-dictaphone.png)
 
 Для демонстрации основной функциональности интерфейса `MediaRecorder API`, мы создали веб диктофон, позволяющий записывать отрывки аудио и проигрывать их после записи. Он визуализирует устройства ввода звука, используя интерфейс `Web Audio API`. В этой статье будем концентрироваться на функциональности записи и воспроизведения.
 

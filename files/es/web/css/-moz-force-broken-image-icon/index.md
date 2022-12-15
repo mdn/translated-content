@@ -1,12 +1,8 @@
 ---
 title: '-moz-force-broken-image-icon'
 slug: Web/CSS/-moz-force-broken-image-icon
-tags:
-  - CSS
-  - CSS Reference
-  - Non-standard
-translation_of: Web/CSS/-moz-force-broken-image-icon
 ---
+
 {{Non-standard_header}}{{ CSSRef() }}
 
 ## Resumen

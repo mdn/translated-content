@@ -10,6 +10,7 @@ tags:
   - Reference
   - Storage
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 IndexedDB는 파일이나 블롭 등 많은 양의 구조화된 데이터를 클라이언트에 저장하기 위한 로우 레벨 API입니다. IndexedDB API는 인덱스를 사용해 데이터를 고성능으로 탐색할 수 있습니다. [Web Storage](/ko/docs/Web/API/Web_Storage_API)는 적은 양의 데이터를 저장하는데 유용하지만 많은 양의 구조화된 데이터에는 적합하지 않은데, 이런 상황에서 IndexedDB를 사용할 수 있습니다. 이 페이지는 MDN에서 IndexedDB에 대한 내용을 다루는 시작 문서로 전체 API 참고서, 사용 안내서, 세부적인 브라우저 지원 상황, 그리고 핵심 개념에 대한 설명을 제공하는 링크를 찾을 수 있습니다.

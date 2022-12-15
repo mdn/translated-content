@@ -1,10 +1,8 @@
 ---
 title: focusNode
 slug: Web/API/Selection/focusNode
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/focusNode
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen

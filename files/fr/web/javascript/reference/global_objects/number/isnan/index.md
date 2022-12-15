@@ -36,7 +36,7 @@ Un booléen qui indique si la valeur fournie en argument est {{jsxref("NaN")}}.
 
 Les deux opérateurs d'égalité, {{jsxref("Opérateurs/Opérateurs_de_comparaison", "==", "#.C3.89galit.C3.A9_simple_(.3D.3D)")}} et {{jsxref("Opérateurs/Opérateurs_de_comparaison", "===", "#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)")}}, renvoient `false` pour vérifier que {{jsxref("NaN")}} _est_ NaN. La fonction `Number.isNaN` est nécessaire pour distinguer ce cas. Le résultat de cette comparaison sera différent avec les autres méthodes de comparaisons en JavaScript.
 
-En effet, la fonction globale {{jsxref("isNaN")}} convertit l'argument en un nombre.  `Number.isNaN` ne convertit pas l'argument. Cela signifie qu'on peut passer des valeurs qui, normalement, seraient converties en NaN, mais qui ne sont pas NaN. Cela signifie également que, uniquement lorsque la méthode sera utilisée avec des nombres qui valent `NaN`, elle renverra `true`.
+En effet, la fonction globale {{jsxref("isNaN")}} convertit l'argument en un nombre. `Number.isNaN` ne convertit pas l'argument. Cela signifie qu'on peut passer des valeurs qui, normalement, seraient converties en NaN, mais qui ne sont pas NaN. Cela signifie également que, uniquement lorsque la méthode sera utilisée avec des nombres qui valent `NaN`, elle renverra `true`.
 
 ## Exemples
 

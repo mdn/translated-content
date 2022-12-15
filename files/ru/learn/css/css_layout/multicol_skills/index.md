@@ -4,6 +4,7 @@ slug: Learn/CSS/CSS_layout/Multicol_skills
 translation_of: Learn/CSS/CSS_layout/Multicol_skills
 original_slug: Learn/CSS/CSS_layout/Навыки_Multicol
 ---
+
 {{LearnSidebar}}
 
 Цель этого задания — чтобы вы поработали с CSS свойствами {{CSSxRef("column-count")}}, {{CSSxRef("column-width")}}, {{CSSxRef("column-gap")}}, {{CSSxRef("column-span")}} и {{CSSxRef("column-rule")}} и со значениями которые описаны в нашем уроке [Макет с несколькими столбцами](/ru/docs/Learn/CSS/CSS_layout/Multiple-column_Layout). Вы будете работать над тремя небольшими задачами, использующими различные элементы из пройденного материала.
@@ -16,7 +17,7 @@ original_slug: Learn/CSS/CSS_layout/Навыки_Multicol
 
 В этом задании вам необходимо создать три столбца с отступом 50px между каждый столбцом.
 
-![Three columns of text](https://mdn.mozillademos.org/files/17081/multicol-task1.png)
+![Three columns of text](multicol-task1.png)
 
 Попробуйте обновить живой пример ниже для воссоздания законченного примера:
 
@@ -30,7 +31,7 @@ original_slug: Learn/CSS/CSS_layout/Навыки_Multicol
 
 Затем добавьте серую линейку 5px между каждым столбцом, убедитесь, что между краями линейки и содержимым столбцов есть пространство 10px.
 
-![Three columns of text with a grey rule between them.](https://mdn.mozillademos.org/files/17082/multicol-task2.png)
+![Three columns of text with a grey rule between them.](multicol-task2.png)
 
 Попробуйте обновить живой код ниже для воссоздания законченного примера:
 
@@ -42,7 +43,7 @@ original_slug: Learn/CSS/CSS_layout/Навыки_Multicol
 
 Заставьте элемент содержащий заголовок и подзаголовок растянуться через все столбцы так чтоб это выглядело как на картинке
 
-![Three columns of text with a heading and subheading spanning all three in the middle.](https://mdn.mozillademos.org/files/17083/multicol-task3.png)
+![Three columns of text with a heading and subheading spanning all three in the middle.](multicol-task3.png)
 
 Попробуйте обновить живой код ниже для воссоздания законченного примера:
 

@@ -95,5 +95,5 @@ function handlePlayButton() {
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
 - 学習: [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [メディアおよびウェブ音声 API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
-- [ウェブ音声 API の利用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)
+- [ウェブオーディオ API の利用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

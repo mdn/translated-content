@@ -1,8 +1,8 @@
 ---
 title: decodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/decodeURI
-translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 A função **`decodeURI()`** decodifica um Uniform Resource Identifier (URI) criado anteriormente por {{jsxref("encodeURI", "encodeURI()")}} ou por uma rotina semelhante.

@@ -1,16 +1,8 @@
 ---
 title: CustomElementRegistry.upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
-tags:
-  - API
-  - CustomElementRegistry
-  - Method
-  - Reference
-  - Upgrade
-  - Web Components
-  - custom elements
-browser-compat: api.CustomElementRegistry.upgrade
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 O **`upgrade()`** é um método de {{domxref("CustomElementRegistry")}} a interface atualiza todos os shadow-containing custom elements em um {{domxref("Node")}} da

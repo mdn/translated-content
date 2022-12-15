@@ -7,6 +7,7 @@ tags:
   - Obsolete
 translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
+
 {{JsSidebar("More")}}
 
 본 페이지는 자바스크립트의 제외 예정인(즉, 아직 사용할 수 있지만 제거 계획이 있는) 기능과 제외된(즉, 더 이상 사용할 수 없는) 기능을 나열합니다.
@@ -117,7 +118,7 @@ The following are now properties of `RegExp` instances, no longer of the `RegExp
 
 - {{jsxref("Object.watch", "watch")}} and {{jsxref("Object.unwatch", "unwatch")}} are deprecated. Use {{jsxref("Proxy")}} instead.
 - `__iterator__` is deprecated.
-- {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} is deprecated. Use {{jsxref("Proxy")}} instead.
+- `Object.prototype.__noSuchMethod__` is deprecated. Use {{jsxref("Proxy")}} instead.
 
 ### Date methods
 
@@ -156,14 +157,8 @@ These obsolete features have been entirely removed from JavaScript and can no lo
 
 ### Object
 
-| Property                                                                                 | Description                                                                    |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| {{jsxref("Global_Objects/Object/count", "__count__")}}                 | Returns the number of enumerable properties directly on a user-defined object. |
-| {{jsxref("Global_Objects/Object/Parent", "__parent__")}}             | Points to an object's context.                                                 |
-| {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | Evaluates a string of JavaScript code in the context of the specified object.  |
-| {{jsxref("Object.observe()")}}                                                 | Asynchronously observing the changes to an object.                             |
-| {{jsxref("Object.unobserve()")}}                                             | Remove observers.                                                              |
-| {{jsxref("Object.getNotifier()")}}                                             | Creates an object that allows to synthetically trigger a change.               |
+- The [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) accessors are deprecated. Use [`Object.getPrototypeOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf) and [`Object.setPrototypeOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) instead. This does not apply to the `__proto__` literal key in object literals.
+- The [`Object.prototype.__defineGetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), [`Object.prototype.__defineSetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__), [`Object.prototype.__lookupGetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__), and [`Object.prototype.__lookupSetter__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__) methods are deprecated. Use [`Object.getOwnPropertyDescriptor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor) and [`Object.defineProperty`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) instead.
 
 ### Function
 

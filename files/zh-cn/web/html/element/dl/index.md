@@ -149,4 +149,4 @@ WHATWG HTML 允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 
 - {{HTMLElement("dt")}} element
 - {{HTMLElement("dd")}} element
 
-{{HTMLRef}}
+{{HTMLSidebar}}

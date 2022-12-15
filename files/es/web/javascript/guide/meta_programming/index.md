@@ -1,15 +1,8 @@
 ---
 title: Metaprogramación
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - ECMAScript 2015
-  - Guía
-  - JavaScript
-  - Proxy
-  - Reflejar
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
+
 {{jsSidebar("Guía de JavaScript")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
 
 A partir de ECMAScript 2015, JavaScript gana soporte para los objetos {{jsxref("Proxy")}} y {{jsxref("Reflect")}} lo cual te permite interceptar y definir un comportamiento personalizado para las operaciones fundamentales del lenguaje (por ejemplo, búsqueda de propiedades, asignación, enumeración, invocación de funciones, etc.). Con la ayuda de estos dos objetos, puedes programar en el metanivel de JavaScript.
@@ -32,7 +25,7 @@ p.a = 1
 console.log(p.a, p.b) // 1, 42
 ```
 
-El objeto `Proxy` define un _`target`_ (un objeto vacío aquí) y un objeto _`handler`_, en el que se implementa un `get` _trap_. Aquí, un objeto que es proxy no devolverá `undefined` cuando obtenga propiedades indefinidas, sino que devolverá el número `42`.
+El objeto `Proxy` define un `target` (un objeto vacío aquí) y un objeto `handler`, en el que se implementa un `get` _trap_. Aquí, un objeto que es proxy no devolverá `undefined` cuando obtenga propiedades indefinidas, sino que devolverá el número `42`.
 
 Hay ejemplos adicionales disponibles en la página de referencia {{jsxref("Proxy")}}.
 

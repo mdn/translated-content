@@ -3,6 +3,7 @@ title: 'Учебник Express часть 2: Создание скелета с�
 slug: Learn/Server-side/Express_Nodejs/skeleton_website
 translation_of: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
@@ -169,7 +170,7 @@ express express-locallibrary-tutorial --view=pug
 
 3. Откроем <http://localhost:3000/> в браузере. Мы должны увидеть такую страницу:
 
-![Browser for default Express app generator website](https://mdn.mozillademos.org/files/14375/ExpressGeneratorSkeletonWebsite.png)
+![Browser for default Express app generator website](expressgeneratorskeletonwebsite.png)
 
 У нас получилось веб-приложение на базе Express, работающее по адресу _localhost:3000_.
 

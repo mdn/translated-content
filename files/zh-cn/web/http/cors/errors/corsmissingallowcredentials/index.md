@@ -4,6 +4,8 @@ slug: Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
 original_slug: Web/HTTP/CORS/Errors/CORS 错误允许凭证
 ---
 
+{{HTTPSidebar}}
+
 ## 理由
 
 ```plain

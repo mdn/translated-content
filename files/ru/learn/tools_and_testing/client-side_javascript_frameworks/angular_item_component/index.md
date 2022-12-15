@@ -17,6 +17,7 @@ tags:
   - События
   - Данные
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Компоненты представляют способ для организации вашего приложения. В этой статье описывается создание компонента для обработки отдельных элементов в списке и добавление функций проверки, редактирования и удаления.
@@ -192,7 +193,7 @@ export class ItemComponent {
 ```
 
 Свойство `editable` помогает переключать раздел шаблона, где пользователь может редактировать элемент.
-`editable` это  свойство, которое находится в директиве `*ngIf`: `*ngIf="editable"`.
+`editable` это свойство, которое находится в директиве `*ngIf`: `*ngIf="editable"`.
 Когда вы используете свойство в шаблоне, вы так же должны объявить его в классе.
 
 `@Input()`, `@Output()`, и `EventEmitter` облегчают связь между вашими двумя компонентами.

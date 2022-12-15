@@ -82,9 +82,7 @@ if (!Math.imul) Math.imul = function(opA, opB) {
 
 ## 仕様書
 
-| 仕様書                                                                   |
-| ------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-math.imul', 'Math.imul')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

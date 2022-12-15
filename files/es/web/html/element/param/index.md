@@ -1,13 +1,9 @@
 ---
 title: param
 slug: Web/HTML/Element/param
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/param
 original_slug: Web/HTML/Elemento/param
 ---
+
 ### Definición
 
 - **param** de "parameter" = parámetro. Permite especificar parámetros de ejecución para un objeto.
@@ -19,7 +15,7 @@ original_slug: Web/HTML/Elemento/param
 
     - **Puede contener**: Nada.
 
-      - : **Puede ser contenido por**: El elemento [object](es/HTML/Elemento/object), y el desaprobado [applet](es/HTML/Elemento/applet).
+      - : **Puede ser contenido por**: El elemento [object](/es/HTML/Elemento/object), y el desaprobado [applet](/es/HTML/Elemento/applet).
 
 #### Atributos
 

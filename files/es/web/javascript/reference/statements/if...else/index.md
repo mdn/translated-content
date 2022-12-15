@@ -1,12 +1,9 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/if...else
 original_slug: Web/JavaScript/Referencia/Sentencias/if...else
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Resumen

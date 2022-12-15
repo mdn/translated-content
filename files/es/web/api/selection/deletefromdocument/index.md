@@ -1,10 +1,8 @@
 ---
 title: deleteFromDocument
 slug: Web/API/Selection/deleteFromDocument
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/deleteFromDocument
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen

@@ -1,15 +1,8 @@
 ---
 title: Element.localName
 slug: Web/API/Element/localName
-tags:
-  - API
-  - Compatibilidad de los Navegadores en Móviles
-  - Compatibilidad de los navegadores
-  - DOM
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Element/localName
 ---
+
 {{APIRef}}
 
 La propiedad únicamente de lectura `Element.localName` devuelve la parte local del nombre calificado de un objeto.

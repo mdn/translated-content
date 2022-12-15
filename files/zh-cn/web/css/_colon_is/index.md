@@ -27,13 +27,13 @@ footer p:hover {
 
 伪元素在 `:is()` 的选择器列表中无效。
 
-### 区分 :is() 和 :where()
+### :is() 和 :where() 的区别
 
 两者的区别在于 `:is()` 计入整体选择器的优先级（它接受优先级最高参数的优先级），而 [`:where()`](/zh-CN/docs/Web/CSS/:where) 的优先级为 0。[参考 `:where()` 页面上的示例](/zh-CN/docs/Web/CSS/:where#示例)，它证明了这一点。
 
-### 容许解析错误的选择器
+### 可容错选择器解析
 
-规范指定了 `:is()` 和 `:where()` 可以接受一个[有错误的选择器列表](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)。
+规范将 `:is()` 和 `:where()` 定义为接受一个[可容错选择器列表](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list)。
 
 在 CSS 中使用选择器列表时，如果任何选择器无效，则整个列表被视为无效。当使用 `:is()` 或 `:where()` 而不是整个选择器列表时，如果某个选择器无法解析，则被视为无效，不正确或不受支持的选择器将被忽略，其他选择器将被使用。
 

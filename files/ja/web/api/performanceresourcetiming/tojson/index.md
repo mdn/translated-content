@@ -37,9 +37,7 @@ console.log("PerformanceEntry.toJSON = " + s);
 
 ## 仕様書
 
-| 仕様書                                                                       | ステータス                           | コメント |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#serializer', 'toJSON')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

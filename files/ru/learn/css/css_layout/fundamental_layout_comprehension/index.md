@@ -8,6 +8,7 @@ tags:
   - Раскладка
 translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 ---
+
 {{LearnSidebar}}
 
 Если вы проработали этот модуль, то уже имеете базовое представление о том, что вам нужно знать, чтобы создавать современную CSS раскладку и работать с более старым CSS. Это задание проверит некоторые из ваших знаний путём разработки раскладки для простой веб-страницы, используя различные техники.
@@ -20,7 +21,7 @@ translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 
 Вам предоставили некоторый html, базовый css и изображения — ваша задача, создать раскладку для дизайна, который должен выглядеть как на изображении ниже.
 
-![](https://mdn.mozillademos.org/files/16076/layout-task-complete.png)
+![](layout-task-complete.png)
 
 ### Базовые настройки
 
@@ -30,7 +31,7 @@ translation_of: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
 
 Эта отправная точка и всё содержимое отображается браузером в нормальном потоке.
 
-![](https://mdn.mozillademos.org/files/16075/layout-task-start.png)
+![](layout-task-start.png)
 
 ### Ваши задачи
 

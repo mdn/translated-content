@@ -1,14 +1,8 @@
 ---
 title: Element.id
 slug: Web/API/Element/id
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Property
-  - Reference
-translation_of: Web/API/Element/id
 ---
+
 {{ApiRef("DOM")}}
 
 A propriedade **`Element.id`** representa o identificador do elemento, refletindo no atributo global **[id](/pt-BR/docs/Web/HTML/Global_attributes/id)**.

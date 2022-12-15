@@ -4,6 +4,7 @@ slug: Web/API/XMLHttpRequest/loadend_event
 translation_of: Web/API/GlobalEventHandlers/onloadend
 original_slug: Web/API/GlobalEventHandlers/onloadend
 ---
+
 {{ApiRef}}
 
 Свойство **`onloadend`** от {{domxref("GlobalEventHandlers")}} примесь {{event("Event_handlers", "event handler")}} передаёт код для вызова в момент возникновения события {{event("loadend")}} (когда процесс загрузки ресурса окончился и остановился)

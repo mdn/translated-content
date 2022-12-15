@@ -14,6 +14,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
+
 {{AddonSidebar}}
 
 Interact with the browser's tab system. You can use this API to get a list of opened tabs and to create, modify, and rearrange tabs in the browser.

@@ -1,12 +1,8 @@
 ---
 title: Function.prototype.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
-tags:
-  - Funções
-  - JavaScript
-  - Métodos
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 ---
+
 {{JSRef}}
 
 O método **`apply()`** chama uma função com um dado valor `this` e `arguments` providos como uma array (ou um objeto parecido com um array).

@@ -160,10 +160,7 @@ A' | 0 0 0 1 0 |
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('Filters 1.0', '#feColorMatrixElement', '&lt;feColorMatrix&gt;')}}         | {{Spec2('Filters 1.0')}} | 変更なし |
-| {{SpecName('SVG1.1', 'filters.html#feColorMatrixElement', '&lt;feColorMatrix&gt;')}} | {{Spec2('SVG1.1')}}         | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -5,6 +5,7 @@ title: >-
 slug: Web/JavaScript/Reference/Errors/Dead_object
 translation_of: Web/JavaScript/Reference/Errors/Dead_object
 ---
+
 {{JSSidebar("Errors")}}
 
 ## Сообщение

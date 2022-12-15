@@ -46,9 +46,7 @@ let params = new URLSearchParams('foo=1&bar=2');
 
 ## 仕様
 
-| 仕様                                                                                                             | 状態                 | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#interface-urlsearchparams', "toString() (see \"stringifier\")")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

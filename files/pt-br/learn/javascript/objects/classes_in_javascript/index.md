@@ -1,9 +1,9 @@
 ---
 title: Herança em JavaScript
 slug: Learn/JavaScript/Objects/Classes_in_JavaScript
-translation_of: Learn/JavaScript/Objects/Inheritance
 original_slug: Learn/JavaScript/Objects/Inheritance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects")}}
 
 Com a maior parte dos detalhes principais do OOJS agora explicados, este artigo mostra como criar classes de objetos "child" (construtores) que herdam recursos de suas classes "parent". Além disso, apresentamos alguns conselhos sobre quando e onde você pode usar o OOJS e veja como as classes são tratadas na sintaxe moderna do ECMAScript.
@@ -353,7 +353,7 @@ class Teacher extends Person {
 }
 ```
 
-Em nossa classe acima, temos um getter e setter para a propriedade `subject`. Usamos **`_` **para criar um valor separado no qual armazenar nossa propriedade de nome. Sem usar essa convenção, obteríamos erros toda vez que chamássemos get ou set. Neste ponto:
+Em nossa classe acima, temos um getter e setter para a propriedade `subject`. Usamos **`_`** para criar um valor separado no qual armazenar nossa propriedade de nome. Sem usar essa convenção, obteríamos erros toda vez que chamássemos get ou set. Neste ponto:
 
 - Para mostrar o valor atual da propriedade `_subject` do objeto `snape` , podemos usar o método getter `snape.subject`.
 - Para atribuir um novo valor à propriedade `_subject` , podemos usar o método setter `snape.subject="new value"`.

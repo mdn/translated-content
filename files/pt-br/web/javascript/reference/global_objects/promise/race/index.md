@@ -1,13 +1,6 @@
 ---
 title: Promise.race()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/race
-tags:
-  - ECMAScript6
-  - Experimental
-  - JavaScript
-  - Method
-  - Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/race
 ---
 {{JSRef}}
 

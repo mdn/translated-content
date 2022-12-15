@@ -3,6 +3,7 @@ title: for
 slug: Web/JavaScript/Reference/Statements/for
 translation_of: Web/JavaScript/Reference/Statements/for
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Введение

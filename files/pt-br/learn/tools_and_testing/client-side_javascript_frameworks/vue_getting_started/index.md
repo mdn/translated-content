@@ -1,9 +1,9 @@
 ---
 title: Iniciando com Vue
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
-translation_of: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started
 original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_iniciando
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 Agora vamos apresentar o Vue, o nosso terceiro frameworks. Neste artigo, examinaremos um pouco do histórico do Vue, aprenderemos como instalá-lo e criar um novo projeto, estudaremos a estrutura de alto nível de todo o projeto e um componente individual, veremos como executar o projeto localmente e o deixaremos preparado para começar a construir o nosso exemplo.
@@ -229,7 +229,7 @@ INFO  Starting development server...
 
 If you navigate to the “local” address in a new browser tab (this should be something like `http://localhost:8080` as stated above, but may vary based on your setup), you should see your app. Right now, it should contain a welcome message, a link to the Vue documentation, links to the plugins you added when you initialized the app with your CLI, and some other useful links to the Vue community and ecosystem.
 
-![default vue app render, with vue logo, welcome message, and some documentation links](https://mdn.mozillademos.org/files/17240/vue-default-app.png)
+![default vue app render, with vue logo, welcome message, and some documentation links](vue-default-app.png)
 
 ## Making a couple of changes
 

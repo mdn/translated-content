@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
+
 {{JSRef("Global_Objects", "Intl", "Collator,DateTimeFormat,NumberFormat")}}
 
 ## Сводка

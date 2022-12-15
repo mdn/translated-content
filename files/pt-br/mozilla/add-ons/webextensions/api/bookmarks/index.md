@@ -1,8 +1,8 @@
 ---
 title: bookmarks
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks
-translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 ---
+
 {{AddonSidebar}}
 
 A API [WebExtensions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} permite uma extensão interagir e manipular o sistema de favoritos do navegador. Você pode pode usá-lo para favoritar páginas, obter favoritos existentes e, editar, remover ou organizar os favoritos.

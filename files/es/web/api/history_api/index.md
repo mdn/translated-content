@@ -1,13 +1,9 @@
 ---
 title: Manipulando el historial del navegador
 slug: Web/API/History_API
-tags:
-  - HTML5
-  - historial
-  - para_revisar
-translation_of: Web/API/History_API
 original_slug: DOM/Manipulando_el_historial_del_navegador
 ---
+
 El objeto DOM {{ domxref("window") }} proporciona acceso al historial del navegador a través del objeto {{ domxref("window.history", "history") }} . Este da acceso a métodos y propiedades útiles que permiten avanzar y retroceder a través del historial del usuario, así como --a partir de HTML5-- manipular el contenido del historial.
 
 ## Viajando a través del historial
@@ -66,8 +62,6 @@ var numeroDeEntradas = window.history.length;
 > **Nota:** Internet Explorer admite el paso de cadenas de URL como parámetro para `go()`; esto no es estándar y no está implementado en Gecko.
 
 ## Añadiendo y modificando entradas del historial
-
-{{ gecko_minversion_header("2") }}
 
 HTML5 introduce los métodos `history.pushState()` y `history.replaceState()`, los cuales te permiten añadir y modificar entradas del historial, respectivamente. Estos métodos trabajan en conjunto con el evento {{ domxref("window.onpopstate") }}.
 
@@ -140,10 +134,7 @@ Para un ejemplo completo de un sitio AJAX, ver: [Ejemplo de navegación AJAX](/e
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario                                             |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "browsers.html#history", "History")}} | {{Spec2('HTML WHATWG')}} | No hay cambios desde {{SpecName("HTML5 W3C")}}. |
-| {{SpecName('HTML5 W3C', "browsers.html#history", "History")}}     | {{Spec2('HTML5 W3C')}}     | Definición inicial                                     |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

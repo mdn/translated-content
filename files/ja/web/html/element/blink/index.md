@@ -3,7 +3,7 @@ title: '<blink>: 点滅文字列要素'
 slug: Web/HTML/Element/blink
 ---
 
-{{HTMLRef}}{{Deprecated_header}}
+{{HTMLSidebar}}{{Deprecated_header}}
 
 **`<blink>`** は [HTML](/ja/docs/Web/HTML) の要素で、標準外の要素であり、包含するテキストをゆっくり点滅させます。
 

@@ -1,14 +1,8 @@
 ---
 title: DPR
 slug: Web/HTTP/Headers/DPR
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - Client hints
-  - DPR
-  - HTTP
-translation_of: Web/HTTP/Headers/DPR
 ---
+
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
 O cabeçalho **`DPR`** é um cabeçalho de requisição _[Client Hints](/pt-BR/docs/Glossary/Client_hints)_ que representa a razão de pixeis do dispositivo do cliente, por isso ({{Glossary("DPR")}})(_device pixel ratio_), que é o número de pixeis físicos do dispositivo correspondendo a cada pixel CSS.

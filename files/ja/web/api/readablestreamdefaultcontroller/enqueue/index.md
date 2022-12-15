@@ -67,9 +67,7 @@ const stream = new ReadableStream({
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                         | コメント |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#rs-default-controller-enqueue","enqueue()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

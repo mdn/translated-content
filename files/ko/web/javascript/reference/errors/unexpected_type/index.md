@@ -7,6 +7,7 @@ tags:
   - TypeError
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

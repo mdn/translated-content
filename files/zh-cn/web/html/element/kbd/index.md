@@ -77,4 +77,4 @@ Save the document by pressing <kbd>Ctrl</kbd> + <kbd>S</kbd>
 
 - {{htmlelement("code")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

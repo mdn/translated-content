@@ -1,16 +1,9 @@
 ---
 title: Cómo etiquetar correctamente las páginas
 slug: MDN/Writing_guidelines/Howto/Tag
-tags:
-  - Colaborar
-  - Etiquetas
-  - Guia(2)
-  - Guía
-  - MDN
-  - Principiante
-translation_of: MDN/Contribute/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
+
 {{MDNSidebar}}
 
 **"Article tags"** Las etiquetas del artículo son una forma importante para poner a los visitantes en contacto con contenido útil. Cada página normalmente debería contener varias etiquetas para ayudar a mantener organizado el contenido. En esta página se explica la mejor manera de marcar las páginas para que así nuestros lectores puedan encontrar la información y podamos mantenernos organizados.

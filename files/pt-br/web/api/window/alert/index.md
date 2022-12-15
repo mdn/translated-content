@@ -1,8 +1,8 @@
 ---
 title: Window.alert
 slug: Web/API/Window/alert
-translation_of: Web/API/Window/alert
 ---
+
 {{ APIRef }}
 
 O método **`Window.alert()`** mostra uma caixa de diálogo de aviso com o conteúdo opcionalmente especificado e um botão OK.
@@ -33,7 +33,7 @@ The following text is shared between this article, DOM:window\.prompt and DOM:wi
 
 Usuários do Chrome (por exemplo, em extensões) devem utilizar os métodos da interface `nsIPromptService` como alternativa.
 
-{{gecko_minversion_inline("23.0")}} O argumento agora é opcional conforme exigido na especificação.
+O argumento agora é opcional conforme exigido na especificação.
 
 ## Especificação
 

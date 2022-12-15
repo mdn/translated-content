@@ -8,6 +8,7 @@ tags:
   - Справка
 translation_of: Web/HTTP/Methods/PATCH
 ---
+
 {{HTTPSidebar}}
 
 **Метод запроса HTTP `PATCH`** частично изменяет ресурс.

@@ -1,14 +1,8 @@
 ---
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
-tags:
-  - Cacheamento
-  - Depreciado
-  - HTTP
-  - cabeçalho
-  - requisição
-translation_of: Web/HTTP/Headers/Pragma
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho genérico HTTP/1.0 **`Pragma`** é um cabeçalho de implementação específica que pode ter vários efeitos ao longo da cadeia de requisição e resposta. Ele é usado para compatibilidade retroativa com caches do HTTP/1.0 onde o cabeçalho HTTP/1.1 `Cache-Control` ainda não está presente.

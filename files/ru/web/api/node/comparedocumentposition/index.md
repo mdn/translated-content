@@ -3,6 +3,7 @@ title: Node.compareDocumentPosition
 slug: Web/API/Node/compareDocumentPosition
 translation_of: Web/API/Node/compareDocumentPosition
 ---
+
 {{ ApiRef() }}
 
 ## Аннотация

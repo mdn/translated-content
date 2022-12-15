@@ -18,13 +18,11 @@ port.onmessageerror = function() { ... };
 
 ## 仕様
 
-| 仕様                                                                                                                                     | ステータス                       | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'web-messaging.html#handler-messageport-onmessageerror', 'onmessageerror')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザー実装状況
 
-{{Compat("api.MessagePort.onmessageerror")}}
+{{Compat}}
 
 ## 関連項目
 

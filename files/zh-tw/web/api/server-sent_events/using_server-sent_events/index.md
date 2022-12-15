@@ -21,7 +21,7 @@ const evtSource = new EventSource("ssedemo.php");
 const evtSource = new EventSource("//api.example.com/ssedemo.php", { withCredentials: true } );
 ```
 
-當你完成初始化事件來源後，你就可以透過新增 {{event("message")}} 事件的處理器來開始監聽來自伺服器的訊息：
+當你完成初始化事件來源後，你就可以透過新增 {{domxref("EventSource.message_event", "message")}} 事件的處理器來開始監聽來自伺服器的訊息：
 
 ```js
 evtSource.onmessage = function(event) {

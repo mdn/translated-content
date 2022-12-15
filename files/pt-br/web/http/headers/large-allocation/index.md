@@ -1,15 +1,8 @@
 ---
 title: Large-Allocation
 slug: Web/HTTP/Headers/Large-Allocation
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Não padronizado
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Large-Allocation
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta não padronizado **`Large-Allocation`** diz ao nevagador que a página que está sendo carregada vai performar uma grande alocação. Ele é atualmente implementado somente no Firefox, mas é inofensivo para ser enviado para qualquer navegador.

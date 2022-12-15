@@ -51,7 +51,7 @@ _This interface also inherits methods from its parent, {{domxref("HTMLElement")}
 - {{domxref("HTMLFormElement.reportValidity()")}}
   - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable [`invalid`](/zh-TW/docs/Web/API/HTMLInputElement/invalid_event) events are fired for each invalid child and validation problems are reported to the user.
 - {{domxref("HTMLFormElement.requestAutocomplete()")}}
-  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be {{event("autocomplete")}} when the fields have been filled or {{event("autocompleteerror")}} when there was a problem.
+  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be `autocomplete` when the fields have been filled or `autocompleteerror` when there was a problem.
 
 ## 範例
 

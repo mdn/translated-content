@@ -3,6 +3,7 @@ title: Работа с History API
 slug: Web/API/History_API/Working_with_the_History_API
 translation_of: Web/API/History_API/Working_with_the_History_API
 ---
+
 В HTML5 стали доступны методы {{DOMxRef("History.pushState","pushState()")}} и {{DOMxRef("History.replaceState","replaceState()")}} для добавления и изменения записей в истории. Эти методы работают в сочетании с событием {{domxref("Window.onpopstate","onpopstate")}}
 
 ## Добавление и изменение записей в истории

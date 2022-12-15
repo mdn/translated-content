@@ -1,8 +1,8 @@
 ---
 title: Sets (set)
 slug: Web/EXSLT/set
-translation_of: Web/EXSLT/set
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/es/docs/Web/EXSLT")}}
 
 El paquete Sets de EXSLT ofrece funciones que le permiten manipular conjuntos.

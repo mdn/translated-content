@@ -1,10 +1,8 @@
 ---
 title: '-webkit-mask-composite'
 slug: Web/CSS/-webkit-mask-composite
-tags:
-  - CSS
-translation_of: Web/CSS/-webkit-mask-composite
 ---
+
 {{ CSSRef() }}
 
 {{ Non-standard_header() }}

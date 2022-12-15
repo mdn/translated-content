@@ -4,6 +4,7 @@ slug: Web/SVG/Tutorial/SVG_and_CSS
 translation_of: Web/SVG/Tutorial/SVG_and_CSS
 original_slug: Web/Guide/CSS/Getting_started/SVG_и_CSS
 ---
+
 На этой странице показано, как использовать CSS со специальным языком для создания графики: [SVG](/ru/docs/SVG).
 
 Вы сделаете небольшой пример, которые можно будет запустить в любом браузере с поддержкой SVG.
@@ -171,7 +172,7 @@ svg {
 
 Эта wiki не поддерживает вставку SVG в страницы, поэтому мы не имеем возможности продемонстрировать это здесь. Изображение будет выглядеть так:
 
-| ![SVG demonstration](https://mdn.mozillademos.org/files/719/SVG-flower.png) |
+| ![SVG demonstration](svg-flower.png) |
 | --------------------------------------------------------------------------- |
 
 Примечания к демонстрации:

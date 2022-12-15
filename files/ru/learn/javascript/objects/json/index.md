@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/JavaScript/Objects/JSON
 original_slug: Learn/JavaScript/Объекты/JSON
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 Обозначение объектов JavaScript (JSON - JavaScript Object Notation) - стандартный текстовый формат для представления структурированных данных на основе синтаксиса объекта JavaScript. Он обычно используется для передачи данных в веб-приложениях (например, отправка некоторых данных с сервера клиенту,таким образом чтобы это могло отображаться на веб-странице или наоборот). Вы будете сталкиваться с этим довольно часто, поэтому в этой статье мы даём вам все, что вам нужно для работы с JSON используя JavaScript, включая парсинг JSON, чтобы вы могли получить доступ к данным внутри него при создании JSON.
@@ -161,7 +162,7 @@ var section = document.querySelector('section');
 
 Мы собираемся загрузить его на нашу страницу и использовать некоторые изящные манипуляции DOM, чтобы отобразить их, например:
 
-![](https://mdn.mozillademos.org/files/13857/json-superheroes.png)
+![](json-superheroes.png)
 
 ### Получение JSON
 

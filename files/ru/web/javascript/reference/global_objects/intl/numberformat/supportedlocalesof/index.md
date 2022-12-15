@@ -8,6 +8,7 @@ tags:
   - NumberFormat
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 ---
+
 {{JSRef("Global_Objects", "NumberFormat", "Intl,Collator,DateTimeFormat")}}
 
 ## Сводка

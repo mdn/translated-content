@@ -1,12 +1,8 @@
 ---
 title: background-position
 slug: Web/CSS/background-position
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/background-position
 ---
+
 {{ PreviousNext("CSS:background-image", "CSS:background-repeat") }}
 
 ## Resumen

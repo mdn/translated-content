@@ -3,6 +3,7 @@ title: Node.parentElement
 slug: Web/API/Node/parentElement
 translation_of: Web/API/Node/parentElement
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.parentElement`** только для чтения, возвращает родителя узла DOM {{domxref("Element")}}, или `null` если узел не имеет родителя, или его родитель не DOM {{domxref("Element")}}.

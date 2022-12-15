@@ -11,7 +11,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Transformations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Utilisation_d'images", " Web/API/Canvas_API/Tutorial/Compositing ")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Utilisation_d'images", " Web/API/Canvas_API/Tutorial/Compositing ")}}
 
 Précédemment dans ce tutoriel, nous avons étudié la [grille du canevas](/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques) et le **système de coordonnées**. Jusqu'à maintenant, nous avons uniquement utilisé la grille par défaut et modifié la taille de la globalité du canevas afin de répondre à nos besoins. Les transformations que nous allons aborder dans la suite vont nous permettre, de manière plus puissante, d'effectuer des déplacements et des rotations sur la grille et même d'effectuer des mises à l'échelle.
 

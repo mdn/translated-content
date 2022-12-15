@@ -3,6 +3,7 @@ title: HTMLElement.offsetLeft
 slug: Web/API/HTMLElement/offsetLeft
 translation_of: Web/API/HTMLElement/offsetLeft
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Свойство **offsetLeft** содержит левое смещение элемента относительно offsetParent. Содержит расстояние от offsetParent до границы элемента.

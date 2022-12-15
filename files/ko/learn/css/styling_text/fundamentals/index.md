@@ -2,6 +2,7 @@
 title: 기본적인 텍스트 및 글꼴 스타일링
 slug: Learn/CSS/Styling_text/Fundamentals
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
 
 이 기사에서는 {{glossary("CSS")}} 를 사용하여 텍스트 스타일링을 마스터하기 위한 과정을 시작합니다. 여기에서는 글꼴 굵기, 종류 및 스타일, 글꼴 약식 (shorthand), 텍스트 정렬 및 기타 효과, 줄 및 문자 간격 설정을 포함하여, 텍스트/글꼴 스타일링의 모든 기본 사항에 대해 자세히 설명합니다.

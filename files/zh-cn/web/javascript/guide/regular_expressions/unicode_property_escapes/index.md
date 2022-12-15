@@ -39,7 +39,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes
 - Unicode 属性名
   - : [Non-binary](https://tc39.es/ecma262/#table-nonbinary-unicode-properties) 属性名：
 - Unicode 属性值
-  - : 很多值有同名或简写 (e.g. 对应着 `General_Category` 属性名的属性值 `Decimal_Number` 可以写作 `Nd`, `digit`, 或 `Decimal_Number`). 大多数属性值的 _`Unicode 属性名`_ 和等号可以省去。如果想明确某 _`Unicode 属性名`_，必须给出它的值。
+  - : 很多值有同名或简写 (e.g. 对应着 `General_Category` 属性名的属性值 `Decimal_Number` 可以写作 `Nd`, `digit`, 或 `Decimal_Number`). 大多数属性值的 `Unicode 属性名` 和等号可以省去。如果想明确某 `Unicode 属性名`，必须给出它的值。
 
 > **备注：** 因为可使用的属性和值太多，这里不一一赘述，仅提供几个例子。
 

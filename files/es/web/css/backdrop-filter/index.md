@@ -1,17 +1,8 @@
 ---
 title: backdrop-filter
 slug: Web/CSS/backdrop-filter
-tags:
-  - CSS
-  - Diseño
-  - Filtro SVG
-  - Propiedad CSS
-  - Referencia
-  - SVG
-  - Web
-  - graficos
-translation_of: Web/CSS/backdrop-filter
 ---
+
 {{CSSRef}}
 
 La propiedad [CSS](/es/docs/Web/CSS) de **`backdrop-filter`** le permite aplicar efectos gráficos como el desenfoque o el cambio de color al área detrás de un elemento. Debido a que se aplica a todo lo que está _detrás_ del elemento, para ver el efecto debe hacer que el elemento o su fondo sean al menos parcialmente transparentes.
@@ -116,9 +107,7 @@ body {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('Filters 2.0', '#BackdropFilterProperty', 'backdrop-filter')}} | {{Spec2('Filters 2.0')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

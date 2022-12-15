@@ -3,7 +3,7 @@ title: '<applet>: 埋め込み Java アプレット要素'
 slug: Web/HTML/Element/applet
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 **HTML の アプレット要素** (**`<applet>`**) は文書に Java アプレットを埋め込みます。この要素は {{HTMLElement("object")}} にとって代わり、廃止されました。
 

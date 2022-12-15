@@ -1,11 +1,8 @@
 ---
 title: ARIA guides
 slug: Web/Accessibility/ARIA/ARIA_Guides
-tags:
-  - ARIA
-  - Accessibility
-translation_of: Web/Accessibility/ARIA/ARIA_Guides
 ---
+
 Aplicações de internet ricas acessíveis (**ARIA**) define caminhos para fazer a web mais acessível para pessoas com deficiências. Umas poucas linhas guias para seguirem que garante melhor acessibilidade, como usar drag and drop para colocações de widgets.
 
 - Manipulação de erros em formulários

@@ -1,17 +1,8 @@
 ---
 title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 ---
+
 {{JSRef}}
 
 O método **`valueOf()`** retorna o valor primitivo do objeto {{jsxref("Date")}}.

@@ -1,22 +1,8 @@
 ---
 title: HTTP cookies
 slug: Web/HTTP/Cookies
-tags:
-  - Almacenamiento
-  - Articulo sobre Cookies
-  - Cookies
-  - Datos
-  - Desarrollo web
-  - HTTP
-  - JavaScript
-  - Navegador
-  - Petición
-  - Protocolos
-  - Servidor
-  - privacidad
-  - seguimiento
-translation_of: Web/HTTP/Cookies
 ---
+
 {{HTTPSidebar}}
 
 Una cookie HTTP, cookie web o cookie de navegador es una pequeña pieza de datos que un servidor envía a el navegador web del usuario. El navegador guarda estos datos y los envía de regreso junto con la nueva petición al mismo servidor. Las cookies se usan generalmente para decirle al servidor que dos peticiones tienen su origen en el mismo navegador web lo que permite, por ejemplo, mantener la sesión de un usuario abierta. Las cookies permiten recordar la información de estado en vista a que el protocolo HTTP es un protocolo sin estado.

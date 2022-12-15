@@ -6,6 +6,7 @@ tags:
   - консоль
 translation_of: Web/API/Console/clear
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 Очищает консоль.

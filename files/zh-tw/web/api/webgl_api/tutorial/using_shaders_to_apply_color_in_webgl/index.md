@@ -3,7 +3,7 @@ title: 使用 shaders 在 WebGL 上色
 slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 ---
 
-{{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
 [上一篇](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)我們建立了一個正方形平面，接下來我們要透過修改 shakder 來加入顏色。
 

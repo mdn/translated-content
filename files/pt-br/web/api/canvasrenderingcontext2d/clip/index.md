@@ -1,8 +1,8 @@
 ---
 title: CanvasRenderingContext2D.clip()
 slug: Web/API/CanvasRenderingContext2D/clip
-translation_of: Web/API/CanvasRenderingContext2D/clip
 ---
+
 {{APIRef}}
 
 O método **`CanvasRenderingContext2D.clip()`** da API do Canvas 2D transforma o caminho atualmente construido em um caminho atual de recorte.
@@ -17,15 +17,17 @@ void ctx.clip(path, fillRule);
 
 ### Parâmetros
 
-![](https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png)
+![](canvas_clipping_path.png)
 
 - `fillRule`
 
   - : O algoritmo pelo qual determina se um ponto esta dentro de um caminho ou fora de um caminho.
     Valores Possíveis:
 
-    - **`"nonzero`**": A [regra contorno diferente de zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
-    - **`"evenodd"`**: A [regra do contorno par ou ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+    - `nonzero`
+      - : A [regra contorno diferente de zero](http://en.wikipedia.org/wiki/Nonzero-rule), que é a regra padrão.
+    - `evenodd`
+      - : A [regra do contorno par ou ímpar](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 - `path`
   - : Um {{domxref("Path2D")}} caminho para recorte.

@@ -79,7 +79,7 @@ Notre point de départ est un document HTML. Pour suivre la leçon en travaillan
 
 ## Ajouter CSS à notre document
 
-Pour commencer, on doit signaler au document HTML que nous souhaitons utiliser des règles CSS. Vous rencontrerez trois possibilités pour appliquer CSS à un document HTML. Nous nous contenterons de présenter la méthode la plus utilisée  — créer un lien vers la feuille de style CSS depuis l'en-tête du document HTML.
+Pour commencer, on doit signaler au document HTML que nous souhaitons utiliser des règles CSS. Vous rencontrerez trois possibilités pour appliquer CSS à un document HTML. Nous nous contenterons de présenter la méthode la plus utilisée — créer un lien vers la feuille de style CSS depuis l'en-tête du document HTML.
 
 Avec votre éditeur de code, dans le dossier où se trouve le document HTML, créez un fichier et sauvegardez le sous le nom `styles.css`. L'extension `.css` indique que c'est un fichier CSS.
 
@@ -129,7 +129,7 @@ Testez cela dans l'éditeur interacif ci-dessous (éditer les boîtes de code) o
 
 Quand on observe un document HTML bien formé, même simple comme notre exemple, on peut voir comment un navigateur le rend lisible par une mise en forme par défaut. Les titres sont écrits en gras dans une taille plus grande, les items des listes sont précédés d'une puce. Les navigateurs ont leurs feuilles de style internes qu'ils appliquent par défaut à toutes les pages ; sans cela, tout le texte s'agglutinerait en paquet et il faudrait tout mettre en forme à partir de zéro. Tous les navigateurs modernes rendent les contenus HTML par défaut essentiellement de la même manière.
 
-On recherche pourtant souvent autre chose que ce rendu par défaut. Il suffit alors de sélectionner l'élément HTML dont on veut modifier le rendu et d'écrire la règle CSS pour réaliser cette mise en forme.  Un bon exemple est notre `<ul>`, une liste non ordonnée. Ses items sont marqués par des puces et si on décide de se débarrasser de ces puces, on peut le faire comme suit :
+On recherche pourtant souvent autre chose que ce rendu par défaut. Il suffit alors de sélectionner l'élément HTML dont on veut modifier le rendu et d'écrire la règle CSS pour réaliser cette mise en forme. Un bon exemple est notre `<ul>`, une liste non ordonnée. Ses items sont marqués par des puces et si on décide de se débarrasser de ces puces, on peut le faire comme suit :
 
 ```css
 li {
@@ -147,7 +147,7 @@ En parcourant la page de documentation, vous découvrirez qu'au lieu de supprime
 
 Jusqu'ici, nous avons mis en forme des éléments HTML repérés par leur nom de balise. Cela fonctionne tant que vous voulez appliquer le même style à tous les éléments de ce type dans le document. La plupart du temps ce n'est pas le comportement désiré ; il faut donc trouver une méthode pour sélectionner un sous-ensemble des éléments à mettre en forme sans changer l'apparence des autres éléments du même type. L'approche la plus commune pour obtenir ce comportement est d'ajouter une classe (pensez à une étiquette) aux éléments HTML à mettre en forme puis de sélectionner cette classe.
 
-Dans le document HTML, ajouter un  [attribut class](/fr/docs/Web/HTML/Attributs_universels/class) au deuxième item de la liste :
+Dans le document HTML, ajouter un [attribut class](/fr/docs/Web/HTML/Attributs_universels/class) au deuxième item de la liste :
 
 ```html
 <ul>
@@ -170,7 +170,7 @@ Sauvegardez et rechargez la page HTML dans votre navigateur pour observer le ré
 
 Vous pouvez attribuer la classe `special` à tout élément dans votre document HTML, dans le navigateur il sera rendu comme le deuxième item de la liste. Par exemple, vous pourriez appliquer ce style à l'élément `<span>` du premier paragraphe.
 
-Vous verrez parfois des règles avec un sélecteur qui combine le nom de l'élément HTML avec celui de la classe  :
+Vous verrez parfois des règles avec un sélecteur qui combine le nom de l'élément HTML avec celui de la classe :
 
 ```css
 li.special {

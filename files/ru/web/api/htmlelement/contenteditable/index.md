@@ -3,6 +3,7 @@ title: HTMLElement.contentEditable
 slug: Web/API/HTMLElement/contentEditable
 translation_of: Web/API/HTMLElement/contentEditable
 ---
+
 {{ APIRef("HTML DOM") }}
 
 Свойство **`HTMLElement.contentEditable`** элемента - признак, указывающий можно или нет редактировать содержимое элемента. Свойство может принимать следующие значения:

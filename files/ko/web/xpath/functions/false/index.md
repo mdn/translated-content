@@ -5,6 +5,7 @@ tags:
   - XSLT_Reference
 translation_of: Web/XPath/Functions/false
 ---
+
 {{ XsltRef() }}
 
 `false` 함수는 boolean false를 반환합니다.

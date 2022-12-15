@@ -1,10 +1,8 @@
 ---
 title: addRange
 slug: Web/API/Selection/addRange
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/addRange
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen
@@ -20,7 +18,7 @@ sel.addRange(range)
 ### Parámetros
 
 - _`range`_
-  - : Un objeto [range](es/DOM/range) que será añadido a la selección.
+  - : Un objeto [range](/es/DOM/range) que será añadido a la selección.
 
 ### Ejemplos
 

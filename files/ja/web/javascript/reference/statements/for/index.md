@@ -117,9 +117,7 @@ showOffsetPos('content');
 
 ## 仕様書
 
-| 仕様書                                                                               |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-for-statement', 'for statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

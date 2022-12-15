@@ -3,6 +3,7 @@ title: Элементы изображений, медиа и форм
 slug: Learn/CSS/Building_blocks/Images_media_form_elements
 translation_of: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
 
 В этом уроке мы рассмотрим, как обрабатываются определённые специальные элементы в CSS. Элементы изображений, других медиа и форм ведут себя иначе при их стилизации в CSS чем обычные блоки. Понимание того, что возможно, а что нет спасут вас от лишних разочарований и этот урок прольёт свет на некоторые из этих основных вещей, которые вам нужно знать.

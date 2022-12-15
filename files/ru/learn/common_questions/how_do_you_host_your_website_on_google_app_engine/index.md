@@ -3,6 +3,7 @@ title: Как разместить свой сайт в Google App Engine
 slug: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
 translation_of: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
 ---
+
 [Google App Engine](https://cloud.google.com/appengine/) - это мощная платформа, которая позволяет создавать и запускать приложения в инфраструктуре Google - нужно ли создавать многоуровневое веб-приложение с нуля или размещать статический веб-сайт. Вот пошаговое руководство по размещению вашего сайта в Google App Engine.
 
 ## Создание проекта Google Cloud Platform
@@ -32,9 +33,9 @@ translation_of: Learn/Common_questions/How_do_you_host_your_website_on_Google_Ap
 Каждый проект Cloud Platform может содержать одно приложение App Engine. Давайте подготовим приложение для нашего проекта.
 
 1. Нажмите кнопку Активировать Google Cloud Shell в верхней части окна консоли.
-    ![Activate Google Cloud Shell button](https://mdn.mozillademos.org/files/15041/activate-google-cloud-shell-button.png)
+    ![Activate Google Cloud Shell button](activate-google-cloud-shell-button.png)
 2. Откройте редактор кода с панели инструментов Cloud Shell.
-    ![Code Editor from Cloud Shell toolbar](https://mdn.mozillademos.org/files/15940/Screen%20Shot%202018-05-09%20at%2023.13.21.png)
+    ![Code Editor from Cloud Shell toolbar](screen_shot_2018-05-09_at_23.13.21.png)
 3. С помощью drag and drop разместите папку `sample-app` в левой панели редактора кода.
 4. Вернитесь обратно в Cloud Shell и введите следующую команду для перехода в директорию вашего приложения:
 

@@ -1,8 +1,8 @@
 ---
 title: Node.isConnected
 slug: Web/API/Node/isConnected
-translation_of: Web/API/Node/isConnected
 ---
+
 {{APIRef("DOM")}}
 
 A propriedade somente-leitura **`isConnected`** da interface {{domxref("Node")}} retorna um boleano indicando se um nó está conectado (direta ou indiretamente) ao contexto do objeto, por exemplo o objeto {{domxref("Document")}} no caso da DOM normal, ou o {{domxref("ShadowRoot")}} no caso de uma shadow DOM.

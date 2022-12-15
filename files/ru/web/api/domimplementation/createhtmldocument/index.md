@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/DOMImplementation/createHTMLDocument
 ---
+
 {{ApiRef("DOM")}}
 
 Метод **`DOMImplementation.createHTMLDocument()`** создаёт новый HTML {{ domxref("Document") }}.

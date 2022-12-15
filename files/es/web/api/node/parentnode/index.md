@@ -1,8 +1,8 @@
 ---
 title: Node.parentNode
 slug: Web/API/Node/parentNode
-translation_of: Web/API/Node/parentNode
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad de sólo lectura **`node.parentNode`** devuelve el padre del nodo especificado en el árbol.

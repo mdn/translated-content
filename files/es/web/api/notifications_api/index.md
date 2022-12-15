@@ -1,15 +1,8 @@
 ---
 title: Notifications API
 slug: Web/API/Notifications_API
-tags:
-  - Landing
-  - NeedsTranslation
-  - Notifications
-  - TopicStub
-  - permission
-  - system
-translation_of: Web/API/Notifications_API
 ---
+
 {{DefaultAPISidebar("Web Notifications")}}
 
 The Notifications API allows web pages to control the display of system notifications to the end user. These are outside the top-level browsing context viewport, so therefore can be displayed even when the user has switched tabs or moved to a different app. The API is designed to be compatible with existing notification systems, across different platforms.
@@ -18,7 +11,7 @@ The Notifications API allows web pages to control the display of system notifica
 
 On supported platforms, showing a system notification generally involves two things. First, the user needs to grant the current origin permission to display system notifications, which is generally done when the app or site initialises, using the {{domxref("Notification.requestPermission()")}} method. This will spawn a request dialog, along the following lines:
 
-![](https://mdn.mozillademos.org/files/10819/notification-bubble.png)
+![](screen_shot_2019-12-11_at_9.59.14_am.png)
 
 From here the user can choose to allow notifications from this origin, block notifications from this origin, or not choose at this point. Once a choice has been made, the setting will generally persist for the current session.
 
@@ -46,11 +39,9 @@ In addition, the Notifications API spec specifies a number of additions to the [
 - {{domxref("NotificationEvent")}}
   - : A specific type of event object, based on {{domxref("ExtendableEvent")}}, which represents a notification that has fired.
 
-## Specifications
+## Especificaciones
 
-| Specification                                | Status                                   | Comment         |
-| -------------------------------------------- | ---------------------------------------- | --------------- |
-| {{SpecName('Web Notifications')}} | {{Spec2('Web Notifications')}} | Living standard |
+{{Specifications}}
 
 ## Browser compatibility
 

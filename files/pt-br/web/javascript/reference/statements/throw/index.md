@@ -1,11 +1,8 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
-tags:
-  - Instrução
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/throw
 ---
+
 {{jsSidebar("Statements")}}
 
 A **declaração** **`throw`** lança uma exceção definida pelo usuário. A execução da função atual vai parar (as instruções após o `throw` não serão executadas), e o controle será passado para o primeiro bloco [`catch`](/pt-BR/docs/Web/JavaScript/Reference/Statements/try...catch) na pilha de chamadas. Se nenhum bloco `catch` existe entre as funções "chamadoras", o programa vai terminar.

@@ -1,14 +1,8 @@
 ---
 title: Document.write()
 slug: Web/API/Document/write
-tags:
-  - API
-  - DOM
-  - Documentación
-  - Referencia
-  - metodo
-translation_of: Web/API/Document/write
 ---
+
 {{ ApiRef("DOM") }}
 
 Escribe una cadena de texto dentro del hilo de un `document` abierto por [document.open()](/es/docs/Web/API/document.open).

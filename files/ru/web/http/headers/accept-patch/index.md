@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Accept-Patch
 translation_of: Web/HTTP/Headers/Accept-Patch
 original_slug: Web/HTTP/Заголовки/Accept-Patch
 ---
+
 {{HTTPSidebar}}
 
 HTTP-заголовок запроса **`Accept-Patch`** показывает, какой медиа-тип понимает сервер внутри запроса `PATCH`.

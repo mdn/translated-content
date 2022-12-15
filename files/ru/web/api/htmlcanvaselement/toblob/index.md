@@ -3,6 +3,7 @@ title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
 translation_of: Web/API/HTMLCanvasElement/toBlob
 ---
+
 {{APIRef("Canvas API")}}
 
 Метод **`HTMLCanvasElement.toBlob()`** создаёт объект {{domxref("Blob")}} представляющий изображение, содержащееся в `canvas`; этот файл может быть закеширован на диске или храниться в памяти на усмотрение пользователя (_at the discretion of the user agent_). Если параметр `mimeType` не определён, типом изображения считается `image/png`. Созданное изображение имеет разрешение 96dpi.

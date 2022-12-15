@@ -10,7 +10,7 @@ translation_of: Web/CSS/border-style
 ---
 {{CSSRef}}
 
-**`border-style` **[CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소 테두리 네 면의 스타일을 지정합니다.
+**`border-style`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소 테두리 네 면의 스타일을 지정합니다.
 
 {{EmbedInteractiveExample("pages/css/border-style.html")}}
 

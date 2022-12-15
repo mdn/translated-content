@@ -12,6 +12,7 @@ tags:
   - 프로그레시브 웹 앱
 translation_of: Web/Progressive_web_apps/App_structure
 ---
+
 {{PreviousMenuNext("Web/Apps/Progressive/Introduction", "Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive")}}
 
 이제 우리는 PWA의 원리에 대해 알고 있습니다. 실제 앱의 권장 구조에 대해 살펴봅시다. 우리는 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 어플리케이션을 왜 그렇게 구축하였는지, 그리고 무슨 이점이 있는지 분석하는 것으로 시작할 것입니다.
@@ -65,7 +66,7 @@ Streams API는 개발자가 서버로부터의 데이터 스트리밍에 직접 
 
 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) 웹 사이트 구조는 아주 간단합니다. 하나의 HTML 파일([index.html](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html))과 기본적인 CSS 스타일링([style.css](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css)), 몇 가지 이미지, 스크립트, 폰트로 구성되어 있습니다. 폴더 구조는 다음과 같습니다.
 
-![Folder structure of js13kPWA.](https://mdn.mozillademos.org/files/15925/js13kpwa-directory.png)
+![Folder structure of js13kPWA.](js13kpwa-directory.png)
 
 ### HTML
 

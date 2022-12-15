@@ -3,6 +3,7 @@ title: 204 No Content
 slug: Web/HTTP/Status/204
 translation_of: Web/HTTP/Status/204
 ---
+
 {{HTTPSidebar}}
 
 "The HTTP **`204 No Content"`** код ответа статуса успеха указывает, что запрос имеет успех, но что клиенту не нужно уходить со своей текущей страницы. По умолчанию ответ **204** кешируется. В такой ответ включён {{HTTPHeader("ETag")}}.

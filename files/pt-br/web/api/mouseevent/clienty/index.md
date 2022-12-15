@@ -1,15 +1,8 @@
 ---
 title: MouseEvent.clientY
 slug: Web/API/MouseEvent/clientY
-tags:
-  - API
-  - CSSOM View
-  - Eventos de DOM
-  - Eventos de mouse
-  - Propriedade
-  - Somente Leitura
-translation_of: Web/API/MouseEvent/clientY
 ---
+
 {{APIRef("DOM Events")}}
 
 A propriedade **`clientY`** da interface {{domxref("MouseEvent")}} fornece a coordenada vertical do cliente dentro da aplicacão em que o evento ocorreu (ao contrário da coordenada que pertence a página).

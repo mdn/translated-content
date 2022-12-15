@@ -1,8 +1,8 @@
 ---
 title: Precedencia de operadores
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
+
 {{jsSidebar("Operators")}}
 
 La **precedencia de operadores** determina el orden en el cual los operadores son evaluados uno respecto del otro. Los operadores con mayor precedencia se convierten en los operandos de los operadores con menor precedencia.

@@ -3,6 +3,7 @@ title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 Интерфейс **WebGLRenderingContext** обеспечивает доступ к контексту рендеринга OpenGL ES 2.0 (**OpenGL** for **E**mbedded **S**ystems — OpenGL для встраиваемых систем) для использования его с помощью HTML {{HTMLElement("canvas")}} элемента.

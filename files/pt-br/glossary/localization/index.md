@@ -1,9 +1,9 @@
 ---
 title: Localização
 slug: Glossary/Localization
-translation_of: Glossary/Localization
 original_slug: Localização
 ---
+
 Localização (L10n) é o processo de tradução de interfaces de software a partir de uma língua para outra e adaptá-lo para atender a uma cultura estrangeira. Esses recursos são para qualquer pessoa com interesse nos aspectos técnicos envolvidos na localização. Eles são para os desenvolvedores e todos os colaboradores.
 
 ## Documentação
@@ -22,15 +22,6 @@ Localização (L10n) é o processo de tradução de interfaces de software a par
   - : To localize the description of an extension (the string that shows up under extension's name in the Extensions window), you need to use a special preference key to override the description specified in your install.rdf file. This article contains instructions on how to modify this preference key.
 - [Frequently Asked Localization Questions](/pt-BR/docs/Frequently_Asked_Localization_Questions)
   - : Frequently asked questions about localization.
-
-## Comunidade
-
-- View Mozilla forums...
-
-{{ DiscussionList("dev-l10n", "mozilla.dev.l10n") }}
-
-- [Tools](/Special:Tags?tag=Localization:Tools&language=en)
-- [Community](https://wiki.mozilla.org/L10n)
 
 ## Related Topics
 

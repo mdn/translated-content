@@ -1,19 +1,8 @@
 ---
 title: 'Tutorial de Django Parte 7: Framework de sesiones'
 slug: Learn/Server-side/Django/Sessions
-tags:
-  - Artículo
-  - Principiante
-  - Python
-  - Servidor
-  - Sesion
-  - Sesiones
-  - Tutorial
-  - aprende
-  - django
-  - lado-servidor
-translation_of: Learn/Server-side/Django/Sessions
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication", "Learn/Server-side/Django")}}
 
 Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), añadiendo un contador de visitas a tu página de inicio basado en sesiones. Es un ejemplo relativamente simple, pero muestra cómo puedes usar el framework de sesión para proporcionar persistencia a usuarios anónimos en tus propios sitios.

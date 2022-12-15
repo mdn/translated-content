@@ -1,24 +1,8 @@
 ---
 title: Cross Browser Teste
 slug: Learn/Tools_and_testing/Cross_browser_testing
-tags:
-  - Accessibility
-  - Automation
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Module
-  - NeedsTranslation
-  - Testing
-  - Tools
-  - TopicStub
-  - cross browser
-translation_of: Learn/Tools_and_testing/Cross_browser_testing
 ---
+
 {{LearnSidebar}}
 
 This module focuses on testing web projects across different browsers. We look at identifying your target audience (e.g. what users, browsers, and devices do you most need to worry about?), how to go about doing testing, the main issues that you'll face with different types of code and how to mitigate them, what tools are most useful in helping you test and fix problems, and how to use automation to speed up testing.

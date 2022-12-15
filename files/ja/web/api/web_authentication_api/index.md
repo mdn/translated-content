@@ -13,7 +13,7 @@ slug: Web/API/Web_Authentication_API
 
 - **フィッシングからの保護:** 偽のログインサイトを作成した攻撃者は、サイトの[オリジン](/ja/docs/Glossary/Origin)で署名が変わるため、ユーザーとしてログインすることができません。
 - **情報漏洩の影響を軽減:** 開発者は公開鍵をハッシュ化する必要がなく、攻撃者が認証に使用した公開鍵にアクセスしても、秘密鍵が必要なため認証ができません。
-- **パスワード攻撃に対して無防備：** ユーザーによってはパスワードを再利用する可能性があり、攻撃者は別のウェブサイト用にユーザーのパスワードを（例えばデータ漏洩を介して）取得する可能性があります。また、テキストのパスワードは、デジタル署名よりもはるかに容易に総当たりすることができます。
+- **パスワード攻撃が無効：** ユーザーによってはパスワードを再利用する可能性があり、攻撃者は別のウェブサイト用にユーザーのパスワードを（例えばデータ漏洩を介して）取得する可能性があります。また、テキストのパスワードは、デジタル署名よりもはるかに容易に総当たりすることができます。
 
 多くのウェブサイトが既にアカウントの登録や作成したアカウントにログインするウェブページを提供しています。ウェブ認証 API はそれらの既存のウェブページの代替または補足として機能します。 [資格情報管理 API](/ja/docs/Web/API/Credential_Management_API) の他の形式と同様に、 ウェブ認証 API は登録とログインの 2 つの基本的な機能を持っています。
 
@@ -66,7 +66,7 @@ _図 2 - 図 1 と同様、ウェブ認証による認証手順と各アクシ�
 
 この後、登録のステップになります。
 
-1. **サーバーからのチャレンジ送信** - サーバーが JavaScript プログラムに対してチャレンジを送ります。サーバーとのコミュニケーションに用いられるプロトコルに指定はなく、ウェブ認証 API の規定の対象範囲外です。通常、サーバーは HTTPS 通信を使って [REST](/ja/docs/Glossary/REST) で接続します（恐らく [XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) や [Fetch](/ja/docs/Web/API/Fetch_API)) を用いるでしょう）が、安全なプロトコルでありさえすれば [SOAP](/ja/docs/Glossary/SOAP) や [RFC 2549](https://tools.ietf.org/html/rfc2549)、その他ほぼどのようなプロトコルを使用しても構いません。サーバーから受信した引数はほとんどの場合少しもしくは全く改変されずに  [get()](/ja/docs/Web/API/CredentialsContainer/get) の呼び出しに渡されます。**なお、チャレンジは、ランダムな情報のバッファ（少なくとも 16 バイト）であることが絶対に必要であり、認証プロセスのセキュリティを確保するために、サーバー上で生成されなければなりません。**
+1. **サーバーからのチャレンジ送信** - サーバーが JavaScript プログラムに対してチャレンジを送ります。サーバーとのコミュニケーションに用いられるプロトコルに指定はなく、ウェブ認証 API の規定の対象範囲外です。通常、サーバーは HTTPS 通信を使って [REST](/ja/docs/Glossary/REST) で接続します（恐らく [XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest) や [Fetch](/ja/docs/Web/API/Fetch_API)) を用いるでしょう）が、安全なプロトコルでありさえすれば [SOAP](/ja/docs/Glossary/SOAP) や [RFC 2549](https://tools.ietf.org/html/rfc2549)、その他ほぼどのようなプロトコルを使用しても構いません。サーバーから受信した引数はほとんどの場合少しもしくは全く改変されずに [get()](/ja/docs/Web/API/CredentialsContainer/get) の呼び出しに渡されます。**なお、チャレンジは、ランダムな情報のバッファ（少なくとも 16 バイト）であることが絶対に必要であり、認証プロセスのセキュリティを確保するために、サーバー上で生成されなければなりません。**
 2. **ブラウザーによる認証器の authenticatorGetCredential() の呼び出し** - 内部的にブラウザーは引数を検証し、既定値を埋めて {{domxref("AuthenticatorResponse.clientDataJSON")}}を作成します。最も重要な引数の一つが origin であり、これはclientDataの一部として記録され、後ほどサーバーによって検証されます。 get() 呼び出し時の引数は、 clientDataJSON の SHA-256 ハッシュと一緒に認証器に渡されます（認証器への接続が低帯域幅の NFC または Bluetooth である可能性があり、認証器は単にハッシュに署名して改ざんされていないことを保証することが目的のため、ハッシュのみを送信します）
 3. **認証器によるアサーションの生成** - 認証器がこのサービスの認証情報が署名検証者 ID と一致することを確認し、ユーザーに認証の同意を促します。この二つのステップが成功した場合、認証器は登録時に生成された秘密鍵を用いて clientDataHash と authenticatorData に署名を行うことで新しいアサーションを生成します。
 4. **認証器がブラウザーにデータを返す** - 認証器が authenticatorData とアサーションの署名をブラウザーに返します。
@@ -88,7 +88,7 @@ _図 2 - 図 1 と同様、ウェブ認証による認証手順と各アクシ�
 - {{domxref("PublicKeyCredential")}}
   - : 公開鍵 / 秘密鍵ペアについての情報を提供し、それはサービスへのログインのための資格情報であり、パスワードの代わりに、フィッシング耐性かつデータ漏洩体制のある非対称鍵ペアを用いています。
 - {{domxref("AuthenticatorResponse")}}
-  - : {{domxref("AuthenticatorAttestationResponse")}}  と {{domxref("AuthenticatorAssertionResponse")}}に関するベースのインターフェイスであり、鍵ペアについての信頼の暗号的根幹を提供します。{{domxref('CredentialsContainer.create()')}} と {{domxref('CredentialsContainer.get()')}}によって返され、それぞれ、その子インターフェイスはチャレンジ、オリジンのようなブラウザーからの情報を含んでいます。{{domxref("PublicKeyCredential.response")}}から返されるでしょう。
+  - : {{domxref("AuthenticatorAttestationResponse")}} と {{domxref("AuthenticatorAssertionResponse")}}に関するベースのインターフェイスであり、鍵ペアについての信頼の暗号的根幹を提供します。{{domxref('CredentialsContainer.create()')}} と {{domxref('CredentialsContainer.get()')}}によって返され、それぞれ、その子インターフェイスはチャレンジ、オリジンのようなブラウザーからの情報を含んでいます。{{domxref("PublicKeyCredential.response")}}から返されるでしょう。
 - {{domxref("AuthenticatorAttestationResponse")}}
   - : {{domxref('PublicKeyCredential')}} が渡された時 {{domxref('CredentialsContainer.create()')}} によって返され、生成された新たな鍵ペアの信頼の暗号的根幹を提供します。
 - {{domxref("AuthenticatorAssertionResponse")}}

@@ -9,7 +9,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/hgroup
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<hgroup>` 요소**는 문서 구획의 다단계 제목을 나타냅니다. 다수의 `{{htmlelement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}}` 요소를 묶을 때 사용합니다.
 

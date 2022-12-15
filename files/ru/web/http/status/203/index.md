@@ -3,6 +3,7 @@ title: 203 Non-Authoritative Information
 slug: Web/HTTP/Status/203
 translation_of: Web/HTTP/Status/203
 ---
+
 {{HTTPSidebar}}
 
 "The HTTP **`203 Non-Authoritative Information`** Статус ответа указывает, что запрос был успешным, но прилагаемая полезная нагрузка была изменена с учётом ответа сервера{{HTTPStatus("200")}} (`OK`) сервера происхождения с помощью преобразующего {{Glossary("Proxy server", "proxy")}}.

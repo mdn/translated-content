@@ -59,9 +59,7 @@ if (!String.prototype.endsWith) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string.prototype.endswith', 'String.prototype.endsWith')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

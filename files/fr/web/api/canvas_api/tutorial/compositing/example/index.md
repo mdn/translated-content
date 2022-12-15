@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 3c67eed7b0d2c91198ec95bcc9b1a570f6c0f585
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 Cet exemple illustre un certain nombre d'[opérations de composition](/fr/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). Voici le résultat&nbsp;:
 

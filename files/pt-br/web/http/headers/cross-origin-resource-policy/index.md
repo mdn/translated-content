@@ -1,15 +1,8 @@
 ---
 title: Cross-Origin-Resource-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
-tags:
-  - CORP
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Cross-Origin-Resource-Policy
 ---
+
 {{HTTPSidebar}}
 
 > **Nota:** Devido a um [bug no Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261), configurar Cross-Origin-Resource-Policy pode quebrar a renderização de PDF, impedindo visitantes de conseguir ler além da primeira página de alguns PDFs. Utilize com cuidado este cabeçalho em um ambiente de produção.

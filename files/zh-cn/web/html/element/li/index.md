@@ -3,7 +3,7 @@ title: <li>
 slug: Web/HTML/Element/li
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<li>` 元素** （或称 _HTML 列表条目元素）_ 用于表示列表里的条目。它必须包含在一个父元素里：一个有序列表 ({{HTMLElement("ol")}})，一个无序列表 ({{HTMLElement("ul")}})，或者一个菜单 ({{HTMLElement("menu")}})。在菜单或者无序列表里，列表条目通常用点排列显示；在有序列表里，列表条目通常在左边显示按升序排列的计数，例如数字或者字母。
 
@@ -101,5 +101,5 @@ slug: Web/HTML/Element/li
 - 可能特定用于排版 `<li>` 元素的 CSS 属性：
 
   - {{cssxref("list-style")}} 属性，用于选择序号的展示方式，
-  - [CSS 计数器](/Web/Guide/CSS/Counters)，用于处理复杂的嵌套列表，
+  - [CSS 计数器](/zh-CN/docs/Web/Guide/CSS/Counters)，用于处理复杂的嵌套列表，
   - {{cssxref("margin")}} 属性，用于控制列表条目的缩进。

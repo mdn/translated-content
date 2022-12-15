@@ -6,6 +6,7 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/dur
 ---
+
 {{SVGRef}}
 
 Атрибут **`dur`** отображает простую длительность анимации.

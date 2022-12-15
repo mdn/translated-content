@@ -1,9 +1,9 @@
 ---
 title: Armazenando as informações que você precisa — Variáveis
 slug: Learn/JavaScript/First_steps/Variables
-translation_of: Learn/JavaScript/First_steps/Variables
 original_slug: Learn/JavaScript/First_steps/Variáveis
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
 Depois de ler os últimos artigos, você deve saber agora o que é o JavaScript, o que ele pode fazer para você, como você usa isso junto com outras tecnologias da web e as características principais de alto nível. Neste artigo, iremos ao básico, vendo como trabalhar com a maioria dos blocos de construção básicos de JavaScript - Variáveis.
@@ -67,7 +67,7 @@ Outra coisa especial sobra as variáveis é que elas podem conter praticamente q
 
 > **Nota:** Perceba que dissemos que as variáveis contém valores. Essa é uma distinção importante a se fazer. Elas não são os valores; e sim os containers para eles. Você pode pensar nelas sendo pequenas caixas de papelão nas quais você pode guardar coisas..
 
-![](https://mdn.mozillademos.org/files/13506/boxes.png)
+![](boxes.png)
 
 ## Declarando uma variável
 

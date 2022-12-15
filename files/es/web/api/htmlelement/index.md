@@ -1,10 +1,8 @@
 ---
 title: HTMLElement
 slug: Web/API/HTMLElement
-tags:
-  - API
-translation_of: Web/API/HTMLElement
 ---
+
 {{ APIRef("HTML DOM") }}La interfaz **`HTMLElement`** representa cualquier elemento [HTML](/es/docs/Web/HTML). Algunos elementos implementan directamente esta interfaz, otros la implementan a través de una interfaz que hereda de ella.
 
 ## Properties
@@ -57,7 +55,7 @@ _Hereda propiedades de su padre, {{domxref("Element")}}, y los implementalo de {
   - : Returns a `double` containing the width of an element, relative to the layout.
 - {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns an {{domxref("HTMLPropertiesCollection")}}…
-- {{domxref("HTMLElement.spellcheck")}}{{ gecko_minversion_inline("1.9")}}
+- {{domxref("HTMLElement.spellcheck")}}
   - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/es/docs/HTML/Controlling_spell_checking_in_HTML_forms). It is present on all HTML elements, though it hasn't an effect on all of them.
 - {{domxref("HTMLElement.style")}}
   - : Is {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.
@@ -79,17 +77,17 @@ La mayoria de las propiedades de los eventos, del formulario `onXYZ`, estan defi
 - {{ domxref("HTMLElement.onpaste") }} {{ non-standard_inline() }}
   - : Returns the event handling code for the `paste` event ({{bug("280959")}}).
 - {{domxref("TouchEventHandlers.ontouchstart")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchstart")}} event.
+  - : Returns the event handling code for the [`touchstart`](/es/docs/Web/Reference/Events/touchstart) event.
 - {{domxref("TouchEventHandlers.ontouchend")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchend")}} event.
+  - : Returns the event handling code for the [`touchend`](/es/docs/Web/Reference/Events/touchend) event.
 - {{domxref("TouchEventHandlers.ontouchmove")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchmove")}} event.
+  - : Returns the event handling code for the [`touchmove`](/es/docs/Web/Reference/Events/touchmove) event.
 - {{domxref("TouchEventHandlers.ontouchenter")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchenter")}} event.
+  - : Returns the event handling code for the [`touchenter`](/es/docs/Web/Reference/Events/touchenter) event.
 - {{domxref("TouchEventHandlers.ontouchleave")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchleave")}} event.
+  - : Returns the event handling code for the [`touchleave`](/es/docs/Web/Reference/Events/touchleave) event.
 - {{domxref("TouchEventHandlers.ontouchcancel")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchcancel")}} event.
+  - : Returns the event handling code for the [`touchcancel`](/es/docs/Web/Reference/Events/touchcancel) event.
 
 ## Methods
 
@@ -104,15 +102,9 @@ _Inherits methods from its parent, {{domxref("Element")}}._
 - {{domxref("HTMLElement.forceSpellCheck()")}} {{experimental_inline}}
   - : Makes the spell checker runs on the element.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                    | Status                           | Comment                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSSOM View', '#extensions-to-the-htmlelement-interface', 'HTMLElement')}} | {{Spec2('CSSOM View')}} | Added the following properties: `offsetParent`, `offsetTop`, `offsetLeft`, `offsetWidth`, and `offsetHeight`.                                                                                                                                                                                                                                                                                                                       |
-| {{SpecName('HTML WHATWG', 'elements.html#htmlelement', 'HTMLElement')}}                 | {{Spec2('HTML WHATWG')}} | Added the following properties: `translate`, `itemScope`, `itemType`, `itemId`, `itemRef`, `itemProp`, `properties`, and `itemValue`. Added the following method: `forceSpellcheck()`. Moved the `onXYZ` attributes to the {{domxref("GlobalEventHandlers")}} interface and added an inheritance from it.                                                                                                                 |
-| {{SpecName('HTML5 W3C', 'dom.html#htmlelement', 'HTMLElement')}}                             | {{Spec2('HTML5 W3C')}}     | Added the following properties: `dataset`, `hidden`, `tabindex`, `accessKey`, `accessKeyLabel`, `draggable`, `dropzone`, `contentEditable`, `isContentEditable`, `contextMenu`, `spellcheck`, `commandType`, `commandLabel`, `commandIcon`, `commandHidden`, `commandDisabled`, `commandChecked`, `style`, and all the `onXYZ` properties. Moved the `id` and `className` properties to the {{domxref("Element")}} interface. |
-| {{SpecName('DOM2 HTML', 'html.html#ID-011100101', 'HTMLElement')}}                         | {{Spec2('DOM2 HTML')}}     | No change from {{SpecName('DOM2 HTML')}}                                                                                                                                                                                                                                                                                                                                                                                     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-011100101', 'HTMLElement')}}                 | {{Spec2('DOM1')}}         | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+{{Specifications}}
 
 ## Browser compatibility
 

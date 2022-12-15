@@ -9,6 +9,7 @@ tags:
   - SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Invalid_for-of_initializer
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

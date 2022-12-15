@@ -1,13 +1,8 @@
 ---
 title: ':-moz-drag-over'
 slug: Web/CSS/:-moz-drag-over
-tags:
-  - CSS
-  - NeedsCompatTable
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-drag-over
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Resumen

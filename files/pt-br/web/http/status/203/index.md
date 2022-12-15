@@ -1,8 +1,8 @@
 ---
 title: 203 Non-Authoritative Information
 slug: Web/HTTP/Status/203
-translation_of: Web/HTTP/Status/203
 ---
+
 {{HTTPSidebar}}
 
 A resposta com status HTTP **`203 Non-Authoritative Information`** indica que a requisição foi realizada com sucesso porém o conteúdo foi modificado por um {{Glossary("Proxy server", "proxy")}} da resposta com status {{HTTPStatus("200")}} (`OK`) do servidor de origem.

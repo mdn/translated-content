@@ -21,7 +21,7 @@ slug: Web/API/InputEvent
 - {{domxref("InputEvent.data")}} {{readOnlyInline}}
   - : 返回当前输入的字符串，如果是删除操作，则该值为空字符串。
 - {{domxref("InputEvent.isComposing")}}{{readOnlyInline}}
-  - : 返回一个布尔值，表明该事件是在触发 {{event("compositionstart")}} 事件之后且触发 {{event("compositionend")}} 事件之前触发的，也就是表明当前输入的字符是输入法的中途输入。
+  - : 返回一个布尔值，表明该事件是在触发 [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event) 事件之后且触发 [`compositionend`](/zh-CN/docs/Web/API/Element/compositionend_event) 事件之前触发的，也就是表明当前输入的字符是输入法的中途输入。
 
 ## 方法
 
@@ -35,7 +35,7 @@ slug: Web/API/InputEvent
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- {{ event("beforeinput") }}
-- {{ event("input") }}
+- [`beforeinput` 事件](/zh-CN/docs/Web/API/HTMLElement/beforeinput_event)
+- [`input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)

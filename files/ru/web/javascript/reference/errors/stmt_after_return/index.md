@@ -8,6 +8,7 @@ tags:
   - Предупреждения
 translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Сообщение

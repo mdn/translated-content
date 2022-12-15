@@ -1,13 +1,8 @@
 ---
 title: let
 slug: Web/JavaScript/Reference/Statements/let
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Variable declaration
-  - Variables
-translation_of: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 Declara uma variável local no escopo do bloco atual, opcionalmente iniciando-a com um valor.

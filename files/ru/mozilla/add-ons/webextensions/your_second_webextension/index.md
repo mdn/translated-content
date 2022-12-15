@@ -8,6 +8,7 @@ tags:
   - WebExtension
 translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
+
 {{AddonSidebar}}
 
 Если вы уже прочитали статью [Ваш первый WebExtension](/ru/Add-ons/WebExtensions/Your_first_WebExtension), то уже представляете, как создавать WebExtension. В этой статье мы напишем более сложное дополнение, которое демонстрирует ещё несколько API.
@@ -30,7 +31,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 Вы можете представить общую структуру дополнения вот так:
 
-![](https://mdn.mozillademos.org/files/13671/Untitled-1.png)
+![](untitled-1.png)
 
 Это простое дополнение, но показывает множество основных концепций WebExtensions API:
 
@@ -314,7 +315,7 @@ Content script добавляет обработчик к сообщениям �
 
 Создайте новую папку с именем "beasts" и добавьте туда три изображения с соответствующими именами. Вы можете получить изображения из [GitHub репозитория](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), или прямо здесь:
 
-![](https://mdn.mozillademos.org/files/11459/frog.jpg)![](https://mdn.mozillademos.org/files/11461/snake.jpg)![](https://mdn.mozillademos.org/files/11463/turtle.jpg)
+![](frog.jpg)![](snake.jpg)![](turtle.jpg)
 
 ## Тестирование
 

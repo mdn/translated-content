@@ -14,6 +14,7 @@ tags:
   - 헤더
 translation_of: Web/HTTP/Headers/X-Forwarded-Host
 ---
+
 {{HTTPSidebar}}
 
 **`X-Forwarded-Host`** (XFH) 헤더는 HTTP 요청 헤더에서 클라이언트가 요청한 원래 {{HTTPHeader("Host")}} 헤더를 식별하는 사실상의 표준 헤더입니다.

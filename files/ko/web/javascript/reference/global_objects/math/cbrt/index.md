@@ -9,6 +9,7 @@ tags:
   - 세제곱근
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
+
 {{JSRef}}
 
 **`Math.cbrt()`** 함수는 주어진 수의 세제곱근을 반환합니다. 즉,

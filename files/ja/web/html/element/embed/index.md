@@ -3,7 +3,7 @@ title: '<embed>: 埋め込み外部コンテンツ要素'
 slug: Web/HTML/Element/embed
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<embed>` 要素**は、外部のコンテンツを文書中の指定された場所に埋め込みます。コンテンツは外部アプリケーションや、対話型コンテンツの他の出所 (ブラウザーのプラグインなど) によって提供されます。
 
@@ -98,10 +98,7 @@ slug: Web/HTML/Element/embed
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'embedded-content.html#the-embed-element', '&lt;embed&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'semantics-embedded-content.html#the-embed-element', '&lt;embed&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

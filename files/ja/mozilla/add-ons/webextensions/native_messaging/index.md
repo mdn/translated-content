@@ -159,7 +159,7 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 - アプリマニフェストの完全パス
 - (Firefox 55 以降で) 起動元のアドオンの ID (manifest.json の [browser_specific_settings](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーにて指定)
 
-> **メモ:** Chrome  では引数の扱いが異なります。
+> **メモ:** Chrome では引数の扱いが異なります。
 >
 > - Linux と Macでは、Chrome は引数を、拡張機能が開始するオリジンを次の形: `chrome-extension://[extensionID]`で渡します。これによりアプリは拡張機能を識別できます。
 > - Windowsでは、Chrome は 2 つの引数を渡します、 1 つ目は拡張機能のオリジンで、 2 つ目はアプリを開始するChrome ネイティブウィンドウのハンドルです。

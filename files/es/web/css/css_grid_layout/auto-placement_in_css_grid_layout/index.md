@@ -1,8 +1,8 @@
 ---
 title: Colocación automática en diseño de cuadrícula CSS
 slug: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
-translation_of: Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout
 ---
+
 Además de la capacidad de colocar elementos con precisión en una cuadrícula creada, la especificación de diseño de cuadrícula CSS contiene reglas que controlan lo que sucede cuando crea una cuadrícula y no coloca algunos o todos los elementos secundarios. Puede ver la colocación automática en acción de la manera más simple creando una cuadrícula en un conjunto de elementos. Si no proporciona información de ubicación a los elementos, se colocarán en la cuadrícula, uno en cada celda de la cuadrícula.
 
 #### Ejemplo

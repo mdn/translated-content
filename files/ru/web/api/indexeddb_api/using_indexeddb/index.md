@@ -1186,7 +1186,10 @@ Reference
 
 Tutorials
 
-- [A simple TODO list using HTML5 IndexedDB](http://www.html5rocks.com/tutorials/indexeddb/todo/). {{Note("This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed <code>setVersion()</code> method.") }}
+- [A simple TODO list using HTML5 IndexedDB](http://www.html5rocks.com/tutorials/indexeddb/todo/).
+
+  > **Примечание:** This tutorial is based on an old version of the specification and does not work on up-to-date browsers - it still uses the removed `setVersion()` method.
+
 - [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 
 Related articles

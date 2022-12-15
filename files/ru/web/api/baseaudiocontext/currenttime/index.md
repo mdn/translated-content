@@ -4,6 +4,7 @@ slug: Web/API/BaseAudioContext/currentTime
 translation_of: Web/API/BaseAudioContext/currentTime
 original_slug: Web/API/AudioContext/currentTime
 ---
+
 {{ APIRef("AudioContext") }}
 
 Поле currentTime принадлежит {{ domxref("AudioContext") }} и возвращает время с момента создания AudioContext. Может использоваться при планировании воспроизведения или визуализации. Поле currentTime является не перезаписываемым и не может быть остановлено или сброшено.

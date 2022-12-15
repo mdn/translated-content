@@ -1,9 +1,9 @@
 ---
 title: Galeria de Imagens
 slug: Learn/JavaScript/Building_blocks/Image_gallery
-translation_of: Learn/JavaScript/Building_blocks/Image_gallery
 original_slug: Aprender/JavaScript/Elementos_construtivos/Image_gallery
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 Agora que analisamos os blocos de construção fundamentais do JavaScript, testaremos seu conhecimento de loops, funções, condicionais e eventos, fazendo com que você crie um item bastante comum que você verá em muitos sites — uma galeria de imagens ativadas em JavaScript.
@@ -53,7 +53,7 @@ Você recebeu alguns recursos de HTML, CSS e imagem e algumas linhas de código 
 
 O exemplo é assim:
 
-![](https://mdn.mozillademos.org/files/13787/gallery.png)
+![](gallery.png)
 
 As partes mais interessantes do arquivo CSS do exemplo:
 

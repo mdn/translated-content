@@ -1,10 +1,8 @@
 ---
 title: anchorNode
 slug: Web/API/Selection/anchorNode
-tags:
-  - páginas_a_traducir
-translation_of: Web/API/Selection/anchorNode
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Resumen

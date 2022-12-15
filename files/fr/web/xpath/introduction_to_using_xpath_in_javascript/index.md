@@ -333,11 +333,11 @@ Une autre approche pour identifier les éléments par défaut dans un espace de 
 
 Si l'on souhaite avoir une certaine flexibilité dans les espaces de noms en ne nécessitant pas d'utiliser un préfixe spécifique lorsque l'on veut trouver un élément ou un attribut appartenant à un espace de noms, on doit utiliser des techniques spéciales.
 
-Tandis que l'on peut adapter la technique dans la section supérieure pour tester les éléments appartenant à un espace de noms sans regarder le préfix choisi (en utilisant [local-name()](/XPath/Functions/local-name) combiné avec [namespace-uri()](/XPath/Functions/namespace-uri) à la place de [name()](/XPath/Functions/name)), un situation plus compliquée apparaît cependant, si l'on souhaite obtenir un élément avec un attribut appartenant à un espace de noms spécifique dans un prédicat (étant donnée l'absence des variables indépendantes de l'implémentation en XPath 1.0).
+Tandis que l'on peut adapter la technique dans la section supérieure pour tester les éléments appartenant à un espace de noms sans regarder le préfix choisi (en utilisant [local-name()](/fr/docs/Web/XPath/Functions/local-name) combiné avec [namespace-uri()](/fr/docs/Web/XPath/Functions/namespace-uri) à la place de [name()](/fr/docs/Web/XPath/Functions/name)), un situation plus compliquée apparaît cependant, si l'on souhaite obtenir un élément avec un attribut appartenant à un espace de noms spécifique dans un prédicat (étant donnée l'absence des variables indépendantes de l'implémentation en XPath 1.0).
 
 Par exemple, on peut essayer (de manière incorrecte) d'obtenir un élément avec un attribut appartenant à un espace de noms de la manière suivante : `var xpathlink = someElements[local-name(@*)="href" and namespace-uri(@*)='http://www.w3.org/1999/xlink'];`
 
-Cela pourrait récupérer des éléments par inadvertance si un de ces attributs existaient avec un nom local "`href`", mais que c'était un autre attribut qui avait le nom d'espace ciblé (XLink, à la place de [@href](/XPath/Axes/attribute)).
+Cela pourrait récupérer des éléments par inadvertance si un de ces attributs existaient avec un nom local "`href`", mais que c'était un autre attribut qui avait le nom d'espace ciblé (XLink, à la place de [@href](/fr/docs/Web/XPath/Axes/attribute)).
 
 Afin d'obtenir des éléments avec l'attribut XLink `@href` de manière précise (sans par ailleurs être obligé de définir des préfixes dans un résolveur de nom d'espaces), on procéder comme suit :
 

@@ -1,14 +1,8 @@
 ---
 title: const
 slug: Web/JavaScript/Reference/Statements/const
-tags:
-  - ECMAScript6
-  - ES6
-  - JavaScript
-  - Referencia
-  - constantes
-translation_of: Web/JavaScript/Reference/Statements/const
 ---
+
 {{jsSidebar("Statements")}}
 
 Constantes possuem escopo de bloco, semelhantes às variáveis declaradas usando o palavra-chave [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let). O valor de uma constante não pode ser alterado por uma atribuição, e ela não pod ser redeclarada.

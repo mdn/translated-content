@@ -1,13 +1,9 @@
 ---
 title: ¿Cómo desactivar el autocompletado del formulario?
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
-tags:
-  - Desarrollo web
-  - Seguridad
-  - formulários
-translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 original_slug: Web/Security/Securing_your_site/desactivar_autocompletado_formulario
 ---
+
 Este artículo explica como un sitio web puede inhabilitar el autocompletado para los campos del formulario.
 
 Por defecto, los navegadores recuerdan información que el usuario envía a través de los campos [`input`](/es/docs/Web/HTML/Elemento/input) en los sitios web. Esto habilita al navegador para ofrecer el autocompletado (P. Ej. Sugiere posibles completaciones para los campos que el usuario ha iniciado escribiendo) o el llenado automático (P. Ej. rellenar previamente ciertos campos al cargar).

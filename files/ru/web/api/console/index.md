@@ -12,6 +12,7 @@ tags:
   - Справочник по DOM Gecko
 translation_of: Web/API/Console
 ---
+
 {{APIRef("Console API")}}
 
 Объект **Console** служит для доступа к средствам отладки браузера (например, [Web Console (Веб-консоль)](/ru/docs/Tools/Web_Console) в Firefox). Работа с ним отличается в разных браузерах, но эти методы и свойства по факту поддерживаются всеми браузерами.
@@ -155,7 +156,7 @@ for (var i=0; i<5; i++) {
 console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue; padding: 2px;");
 ```
 
-![](https://mdn.mozillademos.org/files/12527/CSS-styling.png)
+![](css-styling.png)
 
 > **Примечание:** Поддерживается довольно много свойств стилей CSS; но вам необходимо поэкспериментировать и посмотреть, что окажется более полезным.
 
@@ -221,7 +222,7 @@ function foo() {
 
 Вывод в консоль будет похож на этот:
 
-![](https://mdn.mozillademos.org/files/7167/api-trace2.png)
+![](api-trace2.png)
 
 ## Замечания
 

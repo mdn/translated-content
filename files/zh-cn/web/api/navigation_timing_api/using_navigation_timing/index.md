@@ -21,7 +21,7 @@ window.addEventListener("load", function() {
 }, false);
 ```
 
-在发生 {{event("load")}} 事件时执行的该代码从当前时间中减去浏览器导航开始时记录的时间 ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}})，并通过将该信息插入到元素中，输出到屏幕。
+在发生 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件时执行的该代码从当前时间中减去浏览器导航开始时记录的时间 ({{domxref("PerformanceTiming.navigationStart", "performance.timing.navigationStart")}})，并通过将该信息插入到元素中，输出到屏幕。
 
 ```html hidden
 <div class="output">

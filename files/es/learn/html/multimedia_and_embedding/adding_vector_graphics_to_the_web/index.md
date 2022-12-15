@@ -1,20 +1,8 @@
 ---
 title: Agregar Gráficos Vectoriales a la Web
 slug: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
-tags:
-  - Aprender
-  - Guía
-  - HTML
-  - Imagenes
-  - Principiante
-  - Raster
-  - SVG
-  - Vector
-  - graficos
-  - iframe
-  - img
-translation_of: Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 Los gráficos vectoriales son muy útiles en muchas circunstancias — tienen tamaño de archivo pequeños y son altamente escalables, por lo que no se pixelan cuando se amplían a un tamaño más grande. En este artículo le mostraremos cómo incluir uno en su página web.
@@ -54,9 +42,9 @@ Para darte una idea de la diferencia entre los dos, veamos un ejemplo. Puede enc
 
 La diferencia se hace evidente cuando amplía la página — la imagen PNG se pixela a medida que se acerca porque contiene información sobre dónde debería estar cada píxel (y de qué color). Cuando se amplía, cada píxel simplemente aumenta de tamaño para llenar varios píxeles en la pantalla, por lo que la imagen comienza a verse borrosa. Sin embargo, la imagen vectorial sigue luciendo agradable y nítida, porque no importa el tamaño que tenga, los algoritmos se utilizan para resolver las formas en la imagen, y los valores simplemente se escalan a medida que aumenta.
 
-![Two star images](https://mdn.mozillademos.org/files/12866/raster-vector-default-size.png)
+![Two star images](raster-vector-default-size.png)
 
-![Two star images zoomed in, one crisp and the other blurry](https://mdn.mozillademos.org/files/12868/raster-vector-zoomed.png)
+![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
 
 > **Nota:** Las imágenes de arriba son en realidad todos PNG, con la estrella de la izquierda en cada caso representando una imagen rasterizada y la estrella de la derecha representando una imagen vectorial. Nuevamente, vaya a la demostración de vector-versus-raster.html para ver un ejemplo real.
 

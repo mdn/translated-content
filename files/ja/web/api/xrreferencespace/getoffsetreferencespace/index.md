@@ -113,9 +113,7 @@ function applyMouseMovement(refSpace) {
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                     | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName('WebXR','#dom-xrreferencespace-getoffsetreferencespace','getOffsetReferenceSpace()')}} | {{Spec2('WebXR')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

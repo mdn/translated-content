@@ -142,9 +142,7 @@ display.call(); // undefined の 'sData' のプロパティは読めない
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-function.prototype.call', 'Function.prototype.call')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

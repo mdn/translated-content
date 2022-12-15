@@ -25,7 +25,7 @@ Element.requestFullscreen();
 
 ## Exemple
 
-Avant d'appeler `requestFullScreen()`, mettez en place des gestionnaires (handlers) pour les évenements  [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) et [`fullscreenerror`](/fr/docs/Web/API/Element/fullscreenerror_event), pour savoir lorsque vous avez réussi à passer en mode plein écran (ou lorsque la permission de le faire a été refusée).
+Avant d'appeler `requestFullScreen()`, mettez en place des gestionnaires (handlers) pour les évenements [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) et [`fullscreenerror`](/fr/docs/Web/API/Element/fullscreenerror_event), pour savoir lorsque vous avez réussi à passer en mode plein écran (ou lorsque la permission de le faire a été refusée).
 
 tbd
 

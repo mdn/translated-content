@@ -1,5 +1,5 @@
 ---
-title: 循环吧代码
+title: 循环吧，代码
 slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 

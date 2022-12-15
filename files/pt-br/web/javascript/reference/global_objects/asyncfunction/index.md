@@ -1,15 +1,8 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-tags:
-  - Constructor
-  - Construtor
-  - Experimental
-  - JavaScript
-  - Reference
-  - Referência(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
+
 {{JSRef}}
 
 O **construtor `AsyncFunction`** cria um novo objeto {{jsxref("Statements/async_function", "async function")}}. Em JavaScript cada função assíncrona é atualmente um objeto do tipo `AsyncFunction`.

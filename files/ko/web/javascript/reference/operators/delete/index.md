@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/delete
 browser-compat: javascript.operators.delete
 ---
+
 {{jsSidebar("Operators")}}
 
 **`delete`** **연산자**는 객체의 속성을 제거합니다. 제거한 객체의 참조를 어디에서도 사용하지 않는다면 나중에 자원을 회수합니다.

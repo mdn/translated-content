@@ -1,13 +1,14 @@
 ---
-title: '<bdo>: The Bidirectional Text Override element'
+title: '<bdo>: Элемент переопределения направления текста'
 slug: Web/HTML/Element/bdo
 tags:
   - направление текста
 translation_of: Web/HTML/Element/bdo
 ---
-{{HTMLRef}}
 
-**HTML-элемент переопределения двунаправленного текста** (**`<bdo>`**) переопределяет текущее направление текста так, что текст внутри отображается в другом направлении.
+{{HTMLSidebar}}
+
+**HTML - элемент переопределения двунаправленного текста** (**`<bdo>`**) переопределяет текущее направление текста так, что текст внутри отображается в другом направлении.
 
 {{EmbedInteractiveExample("pages/tabbed/bdo.html", "tabbed-standard")}}
 

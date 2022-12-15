@@ -1,8 +1,8 @@
 ---
 title: 'HTMLMediaElement: canplay'
 slug: Web/API/HTMLMediaElement/canplay_event
-translation_of: Web/API/HTMLMediaElement/canplay_event
 ---
+
 El evento canplay es lanzado cuando el elemento [\<video>](/es/docs/Web/HTML/Elemento/video) o [\<audio>](/es/docs/Web/HTML/Elemento/Audio) puede ser iniciado o fue iniciado satisfactoriamente.
 
 Lo que puede evitar que el evento `canplay`se dispare puede ser por alguna de estás razones:
@@ -60,21 +60,21 @@ Intente especificar mal la ruta del `src` y comprobrará que el evento no funcio
 
 ## Related Events
 
-- {{event("playing")}}
-- {{event("waiting")}}
-- {{event("seeking")}}
-- {{event("seeked")}}
-- {{event("ended")}}
-- {{event("loadedmetadata")}}
-- {{event("loadeddata")}}
-- {{event("canplay")}}
-- {{event("canplaythrough")}}
-- {{event("durationchange")}}
-- {{event("timeupdate")}}
-- {{event("play")}}
-- {{event("pause")}}
-- {{event("ratechange")}}
-- {{event("volumechange")}}
-- {{event("suspend")}}
-- {{event("emptied")}}
-- {{event("stalled")}}
+- [`playing`](/es/docs/Web/Reference/Events/playing)
+- [`waiting`](/es/docs/Web/Reference/Events/waiting)
+- [`seeking`](/es/docs/Web/Reference/Events/seeking)
+- [`seeked`](/es/docs/Web/Reference/Events/seeked)
+- [`ended`](/es/docs/Web/Reference/Events/ended)
+- [`loadedmetadata`](/es/docs/Web/Reference/Events/loadedmetadata)
+- [`loadeddata`](/es/docs/Web/Reference/Events/loadeddata)
+- [`canplay`](/es/docs/Web/Reference/Events/canplay)
+- [`canplaythrough`](/es/docs/Web/Reference/Events/canplaythrough)
+- [`durationchange`](/es/docs/Web/Reference/Events/durationchange)
+- [`timeupdate`](/es/docs/Web/Reference/Events/timeupdate)
+- [`play`](/es/docs/Web/Reference/Events/play)
+- [`pause`](/es/docs/Web/Reference/Events/pause)
+- [`ratechange`](/es/docs/Web/Reference/Events/ratechange)
+- [`volumechange`](/es/docs/Web/Reference/Events/volumechange)
+- [`suspend`](/es/docs/Web/Reference/Events/suspend)
+- [`emptied`](/es/docs/Web/Reference/Events/emptied)
+- [`stalled`](/es/docs/Web/Reference/Events/stalled)

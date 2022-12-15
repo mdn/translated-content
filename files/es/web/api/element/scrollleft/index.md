@@ -1,16 +1,8 @@
 ---
 title: Element.scrollLeft
 slug: Web/API/Element/scrollLeft
-tags:
-  - API
-  - Necesita Tabla de Compatibilidad
-  - Necesita Trabajo de Markup
-  - Necesita tabla de Especificaciones
-  - Propiedad
-  - Referencia
-  - Vista CSSOM
-translation_of: Web/API/Element/scrollLeft
 ---
+
 {{ APIRef }}
 
 La propiedad `Element.scrollLeft` obtiene o establece el número de píxeles que desplaza el contenido de un elemento hacia la izquierda.

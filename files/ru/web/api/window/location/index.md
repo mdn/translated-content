@@ -9,6 +9,7 @@ tags:
   - Ссылки
 translation_of: Web/API/Window/location
 ---
+
 {{APIRef}}
 
 Свойство только для чтения **`Window.location`** возвращает объект {{domxref("Location")}} с информацией о текущем расположении документа.

@@ -26,7 +26,7 @@ CORS の仕組みは、安全なオリジン間のリクエストとブラウザ
 この [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-protocol) では、以下についてサイト間の HTTP リクエストができるようにしています。
 
 - 前述のような {{domxref("XMLHttpRequest")}} または [Fetch API](/ja/docs/Web/API/Fetch_API) の呼び出し。
-- ウェブフォント (CSS の `@font-face` で別ドメインのフォントを利用するため)。[これによりサーバーは、許可したウェブサイトのみから読み込みんで利用できる TrueType フォントを提供することができます。](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
+- ウェブフォント (CSS の `@font-face` で別ドメインのフォントを利用するため)。[これによりサーバーは、許可したウェブサイトのみから読み込んで利用できる TrueType フォントを提供することができます。](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)
 - [WebGL テクスチャ](/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。
 - [画像から生成した CSS シェイプ](/ja/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)。
 
@@ -470,9 +470,7 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 
 ## 仕様書
 
-| 仕様書                                                    | 状態                   | 備考                                                                          |
-| ---------------------------------------------------------------- | ------------------------ | -------------------------------------------------------------------------------- |
-| {{SpecName('Fetch', '#cors-protocol', 'CORS')}} | {{Spec2('Fetch')}} | [W3C CORS](https://www.w3.org/TR/cors/) 仕様書に代わる新しい定義です。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/toLocaleString
 ---
+
 {{JSRef}}O método **`toLocaleString()`** retorna uma representaçao de elementos de um array. Os elementos são convertidos para Strings utilizando seus respectivos métodos `toLocaleString` e essas cadeias são separadas por uma sequência específica de localidade (separados por virgula ",").
 
 ## Sintaxe

@@ -1,20 +1,8 @@
 ---
 title: CORS errors
 slug: Web/HTTP/CORS/Errors
-tags:
-  - CORS
-  - Errors
-  - HTTP
-  - HTTPS
-  - Messages
-  - NeedsTranslation
-  - Same-origin
-  - Security
-  - TopicStub
-  - console
-  - troubleshooting
-translation_of: Web/HTTP/CORS/Errors
 ---
+
 {{HTTPSidebar}}
 
 [Cross-Origin Resource Sharing](/pt-BR/docs/Web/HTTP/CORS) ({{Glossary("CORS")}}) is a standard that allows a server to relax the [same-origin policy](/pt-BR/docs/Web/Security/Same-origin_policy). This is used to explicitly allow some cross-origin requests while rejecting others. For example, if a site offers an embeddable service, it may be necessary to relax certain restrictions. Setting up such a CORS configuration isn't necessarily easy and may present some challenges. In these pages, we'll look into some common CORS error messages and how to resolve them.
@@ -28,7 +16,7 @@ To understand the underlying issue with the CORS configuration, you need to find
 1. Navigate to the web site or web app in question and open the [Developer Tools](/pt-BR/docs/Tools).
 2. Now try to reproduce the failing transaction and check the [console](/pt-BR/docs/Tools/Web_Console) if you are seeing a CORS violation error message. It will probably look like this:
 
-![Firefox console showing CORS error](https://mdn.mozillademos.org/files/16050/cors-error2.png)
+![Firefox console showing CORS error](cors-error2.png)
 
 The text of the error message will be something similar to the following:
 

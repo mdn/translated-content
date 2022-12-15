@@ -2,6 +2,7 @@
 title: 뭐가 잘못됐을까요? JavaScript 문제 해결
 slug: Learn/JavaScript/First_steps/What_went_wrong
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
 앞선 글의 "숫자 알아맞히기" 게임을 따라 만들다가 프로그램이 동작하지 않았나요? 두려워 마세요. 이 글에서는 JavaScript 프로그램에서 그런 문제를 찾아 수정하는 방법에 대한 팁을 제공하여 여러분이 머리카락을 쥐어뜯지 않도록 지켜드리겠습니다.

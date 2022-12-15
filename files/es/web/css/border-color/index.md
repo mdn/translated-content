@@ -1,12 +1,8 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/border-color
 ---
+
 {{ PreviousNext("CSS:border", "CSS:border-style") }}
 
 ### Resumen

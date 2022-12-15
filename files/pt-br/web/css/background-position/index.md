@@ -1,8 +1,8 @@
 ---
 title: background-position
 slug: Web/CSS/background-position
-translation_of: Web/CSS/background-position
 ---
+
 {{CSSRef}}
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-position`** define a posição inicial, relativa a posição de fundo na camada definido por {{cssxref("background-origin")}}, para cada background image definido.
@@ -98,17 +98,17 @@ div {
 
 /* These examples use the `background` shorthand property */
 .exampleone {
-  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
+  background: url("startransparent.gif") #FFEE99 2.5cm bottom no-repeat;
 }
 .exampletwo {
-  background: url("https://mdn.mozillademos.org/files/11987/startransparent.gif") #FFEE99 3em 50% no-repeat;
+  background: url("startransparent.gif") #FFEE99 3em 50% no-repeat;
 }
 
 /* Multiple background images: Each image is matched with the
    corresponding position, from first specified to last. */
 .examplethree {
-  background-image:    url("https://mdn.mozillademos.org/files/11987/startransparent.gif"),
-                       url("https://mdn.mozillademos.org/files/7693/catfront.png");
+  background-image:    url("startransparent.gif"),
+                       url("catfront.png");
   background-position: 0px 0px,
                        center;
 }

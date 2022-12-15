@@ -1,8 +1,8 @@
 ---
 title: '@font-face'
 slug: Web/CSS/@font-face
-translation_of: Web/CSS/@font-face
 ---
+
 {{CSSRef}}
 
 O **`@font-face`** [CSS](/pt-BR/docs/CSS) [at-rule](/pt-BR/docs/CSS/At-rule) especifica uma fonte customizada com a qual exibe o texto; a fonte pode ser carregada de um servidor remoto ou de uma fonte instalada localmente no computador do usuário.
@@ -72,7 +72,7 @@ Este exemplo simplesmente especifica uma fonte para download a ser usada, aplica
 ```css
 @font-face {
   font-family: "Bitstream Vera Serif Bold";
-  src: url("https://mdn.mozillademos.org/files/2468/VeraSeBd.ttf");
+  src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
 }
 
 p { font-family: "Bitstream Vera Serif Bold", serif }

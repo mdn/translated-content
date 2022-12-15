@@ -1,11 +1,9 @@
 ---
 title: Que software eu preciso para construir um site?
 slug: Learn/Common_questions/What_software_do_I_need
-tags:
-  - Iniciante
-translation_of: Learn/Common_questions/What_software_do_I_need
 original_slug: Learn/Common_questions/Que_software_eu_preciso
 ---
+
 Neste artigo nós destacamos quais _softwares_ você precisa para editar, fazer _upload_ ou visualizar um _site_.
 
 | Pré requisitos: | Você deve saber [a diferença entre páginas _web_, _sites web_, servidores*web*, e mecanismos de busca.](/pt-BR/docs/Learn/page_vs_site_vs_server_vs_search_engine) |
@@ -155,11 +153,11 @@ Todos os sistemas operacionais _desktop_ possuem um editor de texto básico. Tod
 
 Aqui está uma captura de tela de um editor de texto avançado:
 
-![Screenshot of Notepad++.](https://mdn.mozillademos.org/files/8221/NotepadPlusPlus.png)
+![Screenshot of Notepad++.](notepadplusplus.png)
 
 Aqui está uma captura de tela de um editor de texto online:
 
-![Screenshot of ShiftEdit](https://mdn.mozillademos.org/files/15837/shiftedit.png)
+![Screenshot of ShiftEdit](shiftedit.png)
 
 ### Fazendo _upload_ de arquivos na _web_
 

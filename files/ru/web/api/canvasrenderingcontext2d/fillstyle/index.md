@@ -7,6 +7,7 @@ tags:
   - Property
 translation_of: Web/API/CanvasRenderingContext2D/fillStyle
 ---
+
 {{APIRef}}
 
 Свойство **`CanvasRenderingContext2D.fillStyle`**, предоставляемое [Canvas 2D API](/ru/docs/Web/API/Canvas_API), задаёт цвет или стиль, используемый при заливке фигур. По умолчанию установлено значение `#000` (чёрный цвет).
@@ -81,7 +82,7 @@ for (let i = 0; i < 6; i++) {
 
 #### Результат:
 
-{{EmbedLiveSample("Использование_fillStyle_в_циклах_for", 160, 160, "https://mdn.mozillademos.org/files/5417/Canvas_fillstyle.png")}}
+{{EmbedLiveSample("Использование_fillStyle_в_циклах_for", 160, 160, "canvas_fillstyle.png")}}
 
 ## Спецификации
 

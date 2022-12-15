@@ -3,6 +3,7 @@ title: window.getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 translation_of: Web/API/Window/getComputedStyle
 ---
+
 Метод **`Window.getComputedStyle()`** возвращает объект, содержащий значения всех CSS-свойств элемента, полученных после применения всех активных таблиц стилей, и завершения базовых вычислений значений, которые они могут содержать. Некоторые CSS-свойства доступны через API, предоставляемые объектом, или индексацию по именам CSS-свойств.
 
 ## Синтаксис

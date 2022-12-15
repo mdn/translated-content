@@ -1,14 +1,8 @@
 ---
 title: HTMLCanvasElement.height
 slug: Web/API/HTMLCanvasElement/height
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Propriedade
-  - altura
-translation_of: Web/API/HTMLCanvasElement/height
 ---
+
 {{APIRef("Canvas API")}}
 
 A propriedade **`HTMLCanvasElement.height`** é um `inteiro` positivo que reflete o atributo {{htmlattrxref("height", "canvas")}} do elemento HTML {{HTMLElement("canvas")}} interpretado em pixels no CSS. Quando o atributo não é especificado, ou se for definido como um valor inválido, como um `inteiro` negativo, o valor padrão de `150` será usado.

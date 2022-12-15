@@ -1,12 +1,8 @@
 ---
 title: return
 slug: Web/JavaScript/Reference/Statements/return
-tags:
-  - Declaração
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/return
 ---
+
 {{jsSidebar("Statements")}}
 
 A **declaração `return`** finaliza a execução de uma função e especifica os valores que devem ser retonados para onde a função foi chamada.

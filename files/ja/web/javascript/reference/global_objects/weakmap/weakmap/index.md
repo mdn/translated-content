@@ -56,9 +56,7 @@ wm1.has(o1); // false
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-weakmap-constructor', 'WeakMap constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ---
+
 {{JSRef("Global_Objects", "JSON")}}
 
 ## Сводка

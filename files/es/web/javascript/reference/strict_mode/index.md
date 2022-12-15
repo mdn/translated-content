@@ -1,14 +1,9 @@
 ---
 title: Modo Estricto
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript5
-  - Guía
-  - JavaScript
-  - Modo estricto
-translation_of: Web/JavaScript/Reference/Strict_mode
 original_slug: Web/JavaScript/Referencia/Modo_estricto
 ---
+
 {{JsSidebar("More", "Más")}}A veces, verás que llaman {{Glossary("Sloppy_mode", "sloppy mode — modo poco riguroso")}} al modo no estricto predeterminado. Este no es un término oficial, pero tenlo en cuenta, por si acaso.
 
 El modo estricto de [ECMAScript 5](http://www.ecma-international.org/publications/standards/Ecma-262.htm) es una forma de elegir una variante _restringida_ de _JavaScript_, así implícitamente se deja de lado el modo poco riguroso. El modo estricto no es sólo un subconjunto: _intencionalmente_ tiene diferencia semántica del código normal. Los navegadores que no admiten el modo estricto ejecutarán el código con un comportamiento diferente a los que sí lo soportan, por lo tanto no confíes en el modo estricto sin antes hacer pruebas de sus características más relevantes. Los modos estricto y no estricto pueden coexistir, por lo tanto el código se puede transformar a modo estricto incrementalmente.
@@ -363,9 +358,7 @@ La mayoría de los navegadores ya implementan el modo estricto. Sin embargo, no 
 
 ## Especificaciones
 
-| Especificación                                                                                       |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-strict-mode-code', 'Código en modo estricto')}} |
+{{Specifications}}
 
 ## Ve también
 

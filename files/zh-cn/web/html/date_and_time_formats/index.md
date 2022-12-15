@@ -3,7 +3,7 @@ title: HTML 中使用的日期与时间格式
 slug: Web/HTML/Date_and_time_formats
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 特定的 HTML 元素会使用日期和（或）时间值，指定这些值的字符串格式将在本篇文章中描述。
 

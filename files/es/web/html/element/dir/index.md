@@ -1,25 +1,21 @@
 ---
 title: dir
 slug: Web/HTML/Element/dir
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/dir
 original_slug: Web/HTML/Elemento/dir
 ---
+
 ### Definición
 
 - El elemento `dir` (directorio) es un elemento desaprobado. En su origen fue pensado para crear directorios en multicolumna, en la actualidad es inutil.
   - : **Sus etiquetas son**: \<dir> y \</dir> (ambas obligatorias).
   
-    **Crea una caja**: [en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque).
+    **Crea una caja**: [en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque).
 
-    **Está definido como**: [Elemento DESAPROBADO](es/HTML/Elemento/Tipos_de_elementos#desaprobado).
+    **Está definido como**: [Elemento DESAPROBADO](/es/HTML/Elemento/Tipos_de_elementos#desaprobado).
 
-    **Puede contener**: uno o más elementos [li](es/HTML/Elemento/li)
+    **Puede contener**: uno o más elementos [li](/es/HTML/Elemento/li)
 
-    **NO puede contener**: [Elementos en bloque](es/HTML/Elemento/Tipos_de_elementos#en_bloque)
+    **NO puede contener**: [Elementos en bloque](/es/HTML/Elemento/Tipos_de_elementos#en_bloque)
 
 #### Atributos
 

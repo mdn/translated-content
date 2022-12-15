@@ -50,7 +50,7 @@ _从上一级继承属性，{{domxref("AudioNode")}}。_
 ### 事件句柄
 
 - {{domxref("ScriptProcessorNode.onaudioprocess")}}
-  - : Represents the {{event("Event_handlers", "event handler")}} to be called.
+  - : Represents the event handler to be called.
 
 ## 方法
 

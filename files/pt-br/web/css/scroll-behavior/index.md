@@ -1,14 +1,8 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
-tags:
-  - CSS
-  - CSS PROPRIEDADE SCROLL
-  - CSS SCROLL
-  - PROPRIEDADES DO CSS
-  - REFERENCIA DE SCROLL
-translation_of: Web/CSS/scroll-behavior
 ---
+
 {{ CSSRef }}
 
 A propriedade css **`scroll-behavior`** especifica o comportamento de rolagem para uma caixa de scrolling, quando a rolagem acontece devido às APIs do CSSOM. Qualquer outro scroll, aqueles que são executados pelo usuário, não são afetados por esta propriedade. Quando esta propriedade é especificada no elemento raiz, ela se aplica à viewport.

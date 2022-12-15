@@ -3,6 +3,7 @@ title: flex-basis
 slug: Web/CSS/flex-basis
 translation_of: Web/CSS/flex-basis
 ---
+
 {{CSSRef}}
 
 [CSS](/ru/docs/Web/CSS) свойство **`flex-basis`** задаёт базовый размер флекс элемента по **основной оси**. Это свойство определяет размер контент-бокса, если не задано иначе через {{Cssxref("box-sizing")}}.

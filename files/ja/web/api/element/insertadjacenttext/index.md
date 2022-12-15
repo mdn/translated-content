@@ -63,11 +63,9 @@ afterBtn.addEventListener('click', function() {
 
 私たちが GitHub に用意した [insertAdjacentText.html](https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentText.html) デモを見てください。(同時に [source code](https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentText.html) も読んでください。) ここにはシンプルなパラグラフが 1 つあります。フォーム要素に好きなテキストを入力してから、_Insert before_ または _Insert after_ ボタンを押すと、`insertAdjacentText()` が、入力したテキストをパラグラフのテキストの前または後に挿入します。すでにあるテキストノードにテキストが追加されるのではなく、新しい追加テキストが含まれる別のテキストノードが生成されて、それが追加されることに注意してください。
 
-**仕様**
+## 仕様
 
-| 仕様                                                                                                             | ステータス                       | コメント |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('DOM WHATWG', '#dom-element-insertadjacenttext', 'insertAdjacentText()')}} | {{ Spec2('DOM WHATWG') }} |          |
+{{Specifications}}
 
 ## ブラウザー間の互換性
 

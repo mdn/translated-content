@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Reference
 ---
+
 {{HTMLSidebar}}
 
 [HTML](/ko/docs/Web/HTML) 참고서는 HTML의 모든 **요소**와 **특성**의 설명을 담고 있습니다.

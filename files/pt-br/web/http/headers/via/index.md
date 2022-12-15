@@ -1,12 +1,8 @@
 ---
 title: Via
 slug: Web/HTTP/Headers/Via
-tags:
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/Via
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho geral **`Via`** é adicionado por proxies, ambos diretos e reversos, e pode aparecer em cabeçalhos de requisição e de cabeçalhos de resposta. Ele é usado para rastrear mensagens direcionadas, evitando laços de requisição, e identificando as capacidades dos protocolos dos remetentes ao longo da cadeia de requisição/resposta.

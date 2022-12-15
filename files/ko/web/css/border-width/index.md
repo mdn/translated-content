@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 translation_of: Web/CSS/border-width
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border-width`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소 네 면 테두리의 너비를 설정합니다.

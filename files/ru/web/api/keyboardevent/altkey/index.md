@@ -3,6 +3,7 @@ title: KeyboardEvent.altKey
 slug: Web/API/KeyboardEvent/altKey
 translation_of: Web/API/KeyboardEvent/altKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`KeyboardEvent.altKey`** свойство только для чтения, возвращает {{jsxref("Boolean")}}, если клавиша <kbd>alt</kbd> (<kbd>Option</kbd> или <kbd>⌥</kbd> на OS X) была нажата (`true`) или не нажата (`false`), когда событие произошло.

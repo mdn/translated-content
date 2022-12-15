@@ -1,10 +1,9 @@
 ---
 title: Number.parseFloat()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 original_slug: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
-browser-compat: javascript.builtins.Number.parseFloat
 ---
+
 {{JSRef}}
 
 El método **`Number.parseFloat()`** analiza un argumento y devuelve un número de punto flotante. Si un número no se puede analizar a partir del argumento, devuelve {{jsxref("NaN")}}.

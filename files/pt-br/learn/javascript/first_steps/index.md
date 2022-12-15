@@ -1,29 +1,8 @@
 ---
 title: Primeiros passos com JavaScript
 slug: Learn/JavaScript/First_steps
-tags:
-  - Arrays
-  - Artigo
-  - Assessment
-  - Beginner
-  - CodingScripting
-  - Guia(2)
-  - Guide
-  - Iniciante
-  - JavaScript
-  - Landing
-  - Matrizes
-  - Module
-  - NeedsTranslation
-  - Numbers
-  - Operadores
-  - Operators
-  - TopicStub
-  - Variables
-  - maths
-  - strings
-translation_of: Learn/JavaScript/First_steps
 ---
+
 {{LearnSidebar}}
 
 Em nosso primeiro módulo de JavaScript, vamos responder algumas questões fundamentais como "o que é JavaScript?", "com o que se parece?", e "o que ele pode fazer?", antes de levá-lo a sua primeira experiência em escrever JavaScript. Depois disso, vamos discutir em detalhes algumas peças chaves, como variáveis, cadeias de caracteres (_strings_), números (_numbers_) e matrizes (_arrays_).

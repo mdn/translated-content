@@ -1,18 +1,8 @@
 ---
 title: <ul>
 slug: Web/HTML/Element/ul
-tags:
-  - Elemento
-  - Guía
-  - HTML
-  - Indentação
-  - Intermediário
-  - Lista
-  - Listagem <ul>
-  - Referencia
-  - menu+HTML
-translation_of: Web/HTML/Element/ul
 ---
+
 O **elemento HTML`<ul>`** (ou _elemento_ _HTML de Lista desordenada_) representa uma lista de itens sem ordem rígida, isto é, uma coleção de itens que não trazem uma ordenação numérica e as suas posições, nessa lista, são irrelevantes. Caracteristicamente, os itens em uma lista desordenada são exibidos com um marcador que pode ter várias formas, como um ponto, um círculo, ou um quadrado. O tipo de marcador não é definido na descrição HTML da página, mas na CSS associada, utilizando a propriedade {{ cssxref("list-style-type") }}.
 
 Não há nenhuma limitação para a profundidade e a imbricação das listas definidas com os elementos {{ HTMLElement("ol") }} e {{ HTMLElement("ul") }}.
@@ -70,11 +60,11 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
   - : Este atributo booleano sugere que a lista será processada em um modelo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.
 
-    > **Note:** **Nota de utilização:** Não aplique este atributo, que foi preterido - o elemento {{ HTMLElement("ul") }} deve ser definido utilizando-se a folha de estilos [CSS](/en/CSS). Para dar um efeito similar ao atributo compacto, a propriedade [line-height](/en/CSS/line-height) (espaçamento), da [CSS](/en/CSS), pode ser utilizada com um valor de 80%.
+    > **Note:** **Nota de utilização:** Não aplique este atributo, que foi preterido - o elemento {{ HTMLElement("ul") }} deve ser definido utilizando-se a folha de estilos [CSS](/pt-BR/CSS). Para dar um efeito similar ao atributo compacto, a propriedade [line-height](/pt-BR/CSS/line-height) (espaçamento), da [CSS](/pt-BR/CSS), pode ser utilizada com um valor de 80%.
 
 - {{ htmlattrdef("type") }}{{ Deprecated_inline() }}
 
-  - : Usados para estabelecer o tipo de marcador da lista. Os valores definidos durante a [HTML3.2](/en/HTML3.2) e a versão de transição de [HTML 4.0/4.01](/en/HTML4.01), são:
+  - : Usados para estabelecer o tipo de marcador da lista. Os valores definidos durante a [HTML3.2](/pt-BR/HTML3.2) e a versão de transição de [HTML 4.0/4.01](/pt-BR/HTML4.01), são:
 
     - `círculo`,
     - `disco`,
@@ -82,9 +72,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
     Um quarto tipo de marcação está definido na interface _WebTV_, mas nem todos os navegadores o acolhem: `triângulo.`
 
-    Se não estiver presente e se nenhuma propriedade [CSS](/en/CSS) {{ cssxref("list-style-type") }} se aplicar ao elemento, o perfil de navegação decidirá qual tipo de marcador utilizar, dependendo do nível de aninhamento da lista.
+    Se não estiver presente e se nenhuma propriedade [CSS](/pt-BR/CSS) {{ cssxref("list-style-type") }} se aplicar ao elemento, o perfil de navegação decidirá qual tipo de marcador utilizar, dependendo do nível de aninhamento da lista.
 
-    > **Note:** **Nota de utilização:** Não use este atributo, pois está ultrapassado; em seu lugar, utilize a propriedade [CSS](/en/CSS) {{ cssxref("list-style-type") }}.
+    > **Note:** **Nota de utilização:** Não use este atributo, pois está ultrapassado; em seu lugar, utilize a propriedade [CSS](/pt-BR/CSS) {{ cssxref("list-style-type") }}.
 
 ## Exemplos
 
@@ -174,9 +164,9 @@ A saída HTML acima será:
 - Outros elementos HTML relacionados à lista: {{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} e o obsoleto {{ HTMLElement("dir") }};
 - Propriedades CSS que podem ser especialmente úteis para determinar o modelo do elemento \<ul>:
 
-  - a propriedade [list-style](/en/CSS/list-style), conveniente para escolher a maneira como os ordinais serão mostrados,
-  - [CSS counters](/en/CSS_Counters), eficientes para guiar listas complexas aninhadas,
-  - a propriedade [line-height](/en/CSS/line-height), válida para simular o atributo ultrapassado {{ htmlattrxref("compact", "ul") }},
-  - a propriedade [margin](/en/CSS/margin), proveitosa para controlar a indentação da lista.
+  - a propriedade [list-style](/pt-BR/CSS/list-style), conveniente para escolher a maneira como os ordinais serão mostrados,
+  - [CSS counters](/pt-BR/CSS_Counters), eficientes para guiar listas complexas aninhadas,
+  - a propriedade [line-height](/pt-BR/CSS/line-height), válida para simular o atributo ultrapassado {{ htmlattrxref("compact", "ul") }},
+  - a propriedade [margin](/pt-BR/CSS/margin), proveitosa para controlar a indentação da lista.
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

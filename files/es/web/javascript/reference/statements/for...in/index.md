@@ -1,13 +1,9 @@
 ---
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
-tags:
-  - Característica del lenguaje
-  - Declaración
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/for...in
 original_slug: Web/JavaScript/Referencia/Sentencias/for...in
 ---
+
 {{jsSidebar("Statements")}}
 
 La instrucción {{JSxRef("Sentencias/for...in", "for-in")}} itera sobre todas las {{JSxRef("../Enumerability_and_ownership_of_properties", "propiedades enumerables")}} de un objeto que está codificado por cadenas (ignorando los codificados por {{JSxRef("Objetos_globales/Symbol", "Símbolos")}}, incluidas las propiedades enumerables heredadas.
@@ -104,9 +100,7 @@ for (const prop in obj) {
 
 ## Especificaciones
 
-| Especificación                                                                                                   |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'declaración for...in')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

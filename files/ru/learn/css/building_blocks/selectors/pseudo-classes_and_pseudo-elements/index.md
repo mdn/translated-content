@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 original_slug: Learn/CSS/Building_blocks/Селекторы/Pseudo-classes_and_pseudo-elements
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
 
 Следующий набор селекторов, который мы рассмотрим, относится к псевдоклассам и псевдоэлементам. Их очень много, и они часто служат довольно специфическим целям. После того как вы узнаете порядок их использования, просмотрите список — не найдётся ли в нём что-либо, что поможет решить стоящую перед вами задачу. Кроме того, будет полезным заглянуть на соответствующую каждому селектору страницу MDN, чтобы прояснить, как его обрабатывает браузер.

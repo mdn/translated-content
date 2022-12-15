@@ -1,8 +1,8 @@
 ---
 title: event.defaultPrevented
 slug: Web/API/Event/defaultPrevented
-translation_of: Web/API/Event/defaultPrevented
 ---
+
 {{ ApiRef() }}
 
 ### Resumen

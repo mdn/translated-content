@@ -7,6 +7,7 @@ tags:
   - Reference
 browser-compat: javascript.builtins.parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 **`parseFloat()`** 함수는 주어진 값을 필요한 경우 문자열로 변환한 후 부동소수점 실수로 파싱해 반환합니다.

@@ -1,13 +1,8 @@
 ---
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Property
-browser-compat: javascript.builtins.Map.@@species
 ---
+
 {{JSRef}}
 
 O Acessor de propriedade **`Map[@@species]`** retorna o construtor do `Map`.

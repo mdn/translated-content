@@ -3,7 +3,7 @@ title: <col>
 slug: Web/HTML/Element/col
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<col>` 要素**は、表内の列を定義して、すべての一般セルに共通の意味を定義するために使用します。この要素は通常、 {{HTMLElement("colgroup")}} 要素内にみられます。
 
@@ -120,11 +120,7 @@ slug: Web/HTML/Element/col
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考     |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'tables.html#the-col-element', '&lt;col&gt;')}}         | {{Spec2('HTML WHATWG')}} |          |
-| {{SpecName('HTML5 W3C', 'tabular-data.html#the-col-element', '&lt;col&gt;')}} | {{Spec2('HTML5 W3C')}}     |          |
-| {{SpecName('HTML4.01', 'struct/tables.html#h-11.2.4.2', '&lt;col&gt;')}}         | {{Spec2('HTML4.01')}}     | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

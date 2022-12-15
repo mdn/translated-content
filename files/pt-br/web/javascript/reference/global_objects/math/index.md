@@ -1,13 +1,8 @@
 ---
 title: Math
 slug: Web/JavaScript/Reference/Global_Objects/Math
-tags:
-  - JavaScript
-  - Math
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Math
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 **Math** é um objeto embutido que tem propriedades e métodos para constantes e funções matemáticas. Não é um objeto de função.
@@ -34,8 +29,6 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
   - : Raiz quadrada de 1/2; Equivale a 1 dividido pela raiz quadrada de 2, aproximadamente 0.707.
 - {{jsxref("Math.SQRT2")}}
   - : Raiz quadrada de 2, aproximadamente 1.414.
-
-{{ jsOverrides("Object", "properties", "E", "LN2", "LN10", "LOG2E", "LOG10E", "PI", "SQRT1_2", "SQRT") }}
 
 ## Métodos
 
@@ -243,8 +236,6 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
   - : Retorna a string `"Math"`.
 - {{jsxref("Global_Objects/Math/trunc", "Math.trunc(x)")}} {{experimental_inline}}
   - : Retorna a parte inteira de `x`, removendo quaisquer dígitos fracionários.
-
-{{ jsOverrides("Object", "Methods") }}
 
 ## Especificações
 

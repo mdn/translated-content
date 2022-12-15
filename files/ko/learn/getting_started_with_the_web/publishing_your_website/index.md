@@ -3,6 +3,7 @@ title: 웹사이트 출판하기
 slug: Learn/Getting_started_with_the_web/Publishing_your_website
 original_slug: Learn/Getting_started_with_the_web/웹사이트_출판하기
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web/How_the_Web_works", "Learn/Getting_started_with_the_web")}}
@@ -24,7 +25,7 @@ original_slug: Learn/Getting_started_with_the_web/웹사이트_출판하기
 
 게다가, 여러분은 서버로 웹사이트 파일들을 실제로 전송하기 위한 파일 전송 프로토콜 (FTP) 프로그램 (자세한 내용은 [얼마나 드나요: 소프트웨어](/en-US/Learn/How_much_does_it_cost#Software) 에서 확인하세요) 이 필요할 것입니다. FTP 프로그램은 아주 다양합니다, 하지만 일반적으로 호스팅 회사에 의해 제공된 정보 (예로 사용자 이름, 비밀번호, 호스트 이름) 를 사용해 여러분의 웹서버에 로그인을 해야 합니다. 그러면 프로그램은 여러분의 로컬 파일들과 웹 서버의 파일을 두 창에서 보여주므로, 그것들을 외부로 전송하거나 다시 돌려 놓을 수 있습니다:
 
-![](https://mdn.mozillademos.org/files/9469/ftp.jpg)
+![](ftp.jpg)
 
 #### 호스팅과 도메인을 찾는 팁
 
@@ -37,7 +38,7 @@ original_slug: Learn/Getting_started_with_the_web/웹사이트_출판하기
 
 어떤 도구들은 여러분이 여러분의 웹사이트를 온라인에 출판할 수 있게 해줍니다:
 
-- [GitHub](https://github.com/) 은 "소셜 코딩" 사이트입니다. 여러분이 [Git](http://git-scm.com/) **버전 관리 시스템** 안에 저장을 위한 코드 저장소를 업로드하게 해줍니다.\*\* \*\*코드 프로젝트에서 협업할 수 있고, 기본적으로 시스템은 오픈 소스가 됩니다, 이 것은 세상의 누구든 여러분의 GitHub 코드를 찾아볼 수 있다는 말입니다, 사용하세요, 이것으로부터 배우세요, 그리고 개선하세요. 여러분으 다른 사람들의 코드에도 마찬가지로 작업 할 수 있습니다! 이건 참여하기에 아주 중요하고 유용한 커뮤니티입니다, 그리고 Git/GitHub 은 아주 유명한 [버전 관리 시스템](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) 입니다 — 대부분의 기술 회사들은 현재 이것을 그들의 작업흐름에서 사용하고 있습니다. GitHub 은 웹에서 존재하는 웹사이트 코드를 전시할 수 있도록 해주는 [GitHub pages](https://pages.github.com/) 라는 아주 유용한 특징을 갖습니다.
+- [GitHub](https://github.com/) 은 "소셜 코딩" 사이트입니다. 여러분이 [Git](http://git-scm.com/) **버전 관리 시스템** 안에 저장을 위한 코드 저장소를 업로드하게 해줍니다. 코드 프로젝트에서 협업할 수 있고, 기본적으로 시스템은 오픈 소스가 됩니다, 이 것은 세상의 누구든 여러분의 GitHub 코드를 찾아볼 수 있다는 말입니다, 사용하세요, 이것으로부터 배우세요, 그리고 개선하세요. 여러분으 다른 사람들의 코드에도 마찬가지로 작업 할 수 있습니다! 이건 참여하기에 아주 중요하고 유용한 커뮤니티입니다, 그리고 Git/GitHub 은 아주 유명한 [버전 관리 시스템](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) 입니다 — 대부분의 기술 회사들은 현재 이것을 그들의 작업흐름에서 사용하고 있습니다. GitHub 은 웹에서 존재하는 웹사이트 코드를 전시할 수 있도록 해주는 [GitHub pages](https://pages.github.com/) 라는 아주 유용한 특징을 갖습니다.
 - [Dropbox](https://www.dropbox.com/) 는 웹에 여러분의 파일들을 저장하고 어떤 컴퓨터에서든 사용가능하게 해주는 파일 저장 시스템입니다. 인터넷 접속이 되는 누구든 여러분이 공개적으로 접근가능하게 해둔 Dropbox 폴더에 접근할 수 있습니다. 만약 그 폴더가 웹사이트 파일을 포함한다면, 자동적으로 웹사이트로써 제공될 것입니다. 더 많은 정보는 [Dropbox 로 웹사이트 관리하기](http://www.dropboxwiki.com/tips-and-tricks/host-websites-with-dropbox) 를 확인하세요.
 
 대부분의 호스팅과 다르게, 많은 도구들은 일반적으로 무료이지만, 여러분은 제한된 기능들만 사용할 수 있습니다.
@@ -52,7 +53,7 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 - [Thimble](https://thimble.webmaker.org/)
 - [JSBin](http://jsbin.com/)
 
-![](https://mdn.mozillademos.org/files/9471/jsbin-screen.png)
+![](jsbin-screen.png)
 
 ## GitHub 를 통한 출판
 
@@ -64,14 +65,14 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 2. 다음으로, [GitHub 계정을 위해 가입하세요](https://github.com/join). 간단하고 쉽습니다.
 3. 가입을 하셨다면, github.com 에 여러분의 유저 이름과 암호로 로그인하세요.
 4. 그리고나서, 여러분의 파일들이 들어가게될 새로운 repo 를 생성해야 합니다. GitHub 홈페이지의 오른쪽 상단에 있는 플러스 (+) 를 클릭하고, _New Repository_ 를 선택하세요.
-5. 이 페이지에서, _Repository name_ 박스 안에, _username_.github.io 를 입력하세요, _username_ 가 있는 곳이 여러분의 유저 이름입니다. 그러니까 예를 들어, 우리 친구 bobsmith 는 _bobsmith.github.io_ 를 입력할 것입니다.![](https://mdn.mozillademos.org/files/9479/github-create-repo.png)
-6. _Create repository_ 를 클릭하세요. 다음과 같은 페이지로 이동하실 겁니다:![](https://mdn.mozillademos.org/files/9481/github-populate-repo.png)
+5. 이 페이지에서, _Repository name_ 박스 안에, _username_.github.io 를 입력하세요, _username_ 가 있는 곳이 여러분의 유저 이름입니다. 그러니까 예를 들어, 우리 친구 bobsmith 는 _bobsmith.github.io_ 를 입력할 것입니다.![](github-create-repo.png)
+6. _Create repository_ 를 클릭하세요. 다음과 같은 페이지로 이동하실 겁니다:![](github-populate-repo.png)
 
 ### GitHub 에 파일 올리기
 
 이것은 GitHub 에 있는 우리의 repository 를 놓기 위해 사용해볼 커맨드 라인입니다. 커맨드 라인은 파일을 생성하거나 프로그램을 실행하는 것 같은 일을 하기 위해 유저 인터페이스 안에서 클릭을 하는 것 대신 명령어를 입력하는 창입니다. 이렇게 생긴 것입니다:
 
-![](https://mdn.mozillademos.org/files/9483/command-line.png)
+![](command-line.png)
 
 > **참고:** **노트**: 만약 커맨드라인이 불편하시다면, 같은 일을 하기 위해서 [Git graphical user interface](http://git-scm.com/downloads/guis) 를 사용하는것도 고려해 볼 수 있습니다.
 
@@ -83,7 +84,7 @@ HTML, CSS 그리고 JavaScript 를 입력할 수 있게 하고 웹사이트로 �
 
 처음에는 좀 두려우실 수 있지만, 걱정하지마세요 — 기본적인 것들은 금방 익히실 수 있을 것입니다. 무언가를 하기 위해선 명령어를 입력하고 엔터를 누르는 것으로 컴퓨터에게 알려줘야합니다.
 
-1. 커맨드 라인을 여러분의 `test-site` 폴더로 향하게 합니다 (또는 여러분의 웹사이트가 포함된 어디든지). 그러기 위해선, `cd` 명령을 사용합니다 (말하자면 "\_c_hange \_d_irectory"). 여기 만약 `test-site` 폴더 안에 여러분의 웹사이트를 놓으셨다면 여러분이 입력해야 하는 것이 있습니다:
+1. 커맨드 라인을 여러분의 `test-site` 폴더로 향하게 합니다 (또는 여러분의 웹사이트가 포함된 어디든지). 그러기 위해선, `cd` 명령을 사용합니다 (말하자면 "**c**hange **d**irectory"). 여기 만약 `test-site` 폴더 안에 여러분의 웹사이트를 놓으셨다면 여러분이 입력해야 하는 것이 있습니다:
 
     ```bash
     cd Desktop/test-site
@@ -136,7 +137,7 @@ _another commit_ 대신에 여러분이 막 변경했던 것을 설명할 수 �
 
 이 지점에서, 특정 웹 주소에서 여러분의 예시 웹사이트를 사용하실 수 있을 것입니다. 수고하셨습니다!
 
-![](https://mdn.mozillademos.org/files/9485/hosted-final-site.png)
+![](hosted-final-site.png)
 
 ## 더 읽을거리
 

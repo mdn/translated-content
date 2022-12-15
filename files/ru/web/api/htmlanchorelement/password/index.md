@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/HTMLHyperlinkElementUtils/password
 original_slug: Web/API/HTMLHyperlinkElementUtils/password
 ---
+
 {{ApiRef("URL API")}}
 
 Свойство **`HTMLHyperlinkElementUtils.password`** – это {{domxref("USVString")}}, содержащий пароль, указанный перед именем домена.

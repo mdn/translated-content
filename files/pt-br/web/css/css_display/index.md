@@ -1,8 +1,8 @@
 ---
 title: CSS Display
 slug: Web/CSS/CSS_Display
-translation_of: Web/CSS/CSS_Display
 ---
+
 {{CSSRef}}
 
 **CSS Display** É um módulo de CSS que define como a árvore da caixa de formatação CSS é gerada a partir da árvore de elementos do documento e define as propriedades que a controlam.

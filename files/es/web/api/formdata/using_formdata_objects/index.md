@@ -1,8 +1,6 @@
 ---
 title: Usando Objetos FormData
 slug: Web/API/FormData/Using_FormData_Objects
-translation_of: Web/API/FormData/Using_FormData_Objects
-translation_of_original: Web/Guide/Using_FormData_Objects
 original_slug: Web/Guide/Usando_Objetos_FormData
 ---
 

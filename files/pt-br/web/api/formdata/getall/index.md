@@ -1,8 +1,8 @@
 ---
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
-translation_of: Web/API/FormData/getAll
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 O metodo **`getAll()`** do {{domxref("FormData")}} retorna todos os valores associados com a chave dentro `de um objeto FormData`.

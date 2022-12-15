@@ -1,19 +1,9 @@
 ---
 title: Gráficos na Web
 slug: Web/Guide/Graphics
-tags:
-  - 2D
-  - 3D
-  - Canvas
-  - Gráficos(2)
-  - HTML5
-  - SVG
-  - Web
-  - WebGL
-  - WebRTC
-translation_of: Web/Guide/Graphics
 original_slug: Web/Guide/Gráficos
 ---
+
 Sites modernos da Web e aplicativos frequentemente precisam exibir gráficos. Imagens estáticas podem ser exibidas facilmente usando o elemento {{HTMLElement("img")}} ou configurando o background de elementos HTML usando a propriedade {{cssxref("background-image")}}. Você também pode construir gráficos em tempo real ou manipular imagens depois de criadas. Esses artigos fornecem conhecimento de como você pode realizar isto.
 
 ## Gráficos 2D

@@ -53,11 +53,11 @@ Dans l'autre sens, si vous essayez d'émuler le comportement de WebKit sur Gecko
 
 ### Notification
 
-Quand le mode plein écran est activé, le document qui contient l'élément reçoit un événement de type [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event). Lors de la sortie du mode plein écran, le document reçoit à nouveau l'événement  [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) . Notez que l'événement en lui-même [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) ne fournit aucune information si le document est en train d'entrer ou de sortir du mode plein écran, mais si le document a une valeur non nulle {{ domxref("document.fullscreenElement", "fullscreenElement") }} , vous savez que vous êtes en mode plein écran.
+Quand le mode plein écran est activé, le document qui contient l'élément reçoit un événement de type [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event). Lors de la sortie du mode plein écran, le document reçoit à nouveau l'événement [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) . Notez que l'événement en lui-même [`fullscreenchange`](/fr/docs/Web/API/Element/fullscreenchange_event) ne fournit aucune information si le document est en train d'entrer ou de sortir du mode plein écran, mais si le document a une valeur non nulle {{ domxref("document.fullscreenElement", "fullscreenElement") }} , vous savez que vous êtes en mode plein écran.
 
 ### Lorsqu'une demande de plein écran échoue
 
-Il n'est pas garanti que vous soyez capable de passer en mode plein écran. Par exemple, les élements {{ HTMLElement("iframe") }} possèdent l'attribut  {{ HTMLAttrXRef("allowfullscreen", "iframe") }} pour permettre à leur contenu d'être affiché en mode plein écran. Certains contenus comme les greffons fenêtrés ne peuvent être représentés en plein écran. Essayer de placer un élément qui ne peut être affiché en mode plein écran (ou le parent ou le descendant d'un tel élément) ne marchera pas. A la place, l'élément qui a demandé le mode plein écran recevra un événement  `mozfullscreenerror` . Quand une demande de plein écran échoue, Firefox écrit un message d'erreur dans la console Web expliquant pourquoi la demande n'a pas pu aboutir. Dans Chrome et les versions plus récentes d'Opera, aucun avertissement de ce type n'est généré.
+Il n'est pas garanti que vous soyez capable de passer en mode plein écran. Par exemple, les élements {{ HTMLElement("iframe") }} possèdent l'attribut {{ HTMLAttrXRef("allowfullscreen", "iframe") }} pour permettre à leur contenu d'être affiché en mode plein écran. Certains contenus comme les greffons fenêtrés ne peuvent être représentés en plein écran. Essayer de placer un élément qui ne peut être affiché en mode plein écran (ou le parent ou le descendant d'un tel élément) ne marchera pas. A la place, l'élément qui a demandé le mode plein écran recevra un événement `mozfullscreenerror` . Quand une demande de plein écran échoue, Firefox écrit un message d'erreur dans la console Web expliquant pourquoi la demande n'a pas pu aboutir. Dans Chrome et les versions plus récentes d'Opera, aucun avertissement de ce type n'est généré.
 
 > **Note :** Les requêtes de Fullscreen doivent être appelées depuis un gestionnaire d'évènements ou sinon, elles seront refusées.
 
@@ -76,19 +76,19 @@ Le {{ domxref("document") }} fournit des informations supplémentaires pouvant �
 
 ## Choses que vos utilisateurs doivent savoir
 
-Vous voulez faire savoir à vos utilisateurs qu'il peuvent utiliser la touche <kbd>ECHAP</kbd>  (ou  <kbd>F11</kbd>) pour sortir du mode plein écran.
+Vous voulez faire savoir à vos utilisateurs qu'il peuvent utiliser la touche <kbd>ECHAP</kbd>  (ou <kbd>F11</kbd>) pour sortir du mode plein écran.
 
 En même temps, naviguer sur une autre page, changer d'onglet, ou changer d'application (en utilisant, par exemple, <kbd>Alt</kbd>-<kbd>Tab</kbd> ) pendant le mode plein écran, implique la sortie du mode plein écran de toute façon.
 
 ## Exemple
 
-Dans cet exemple, une vidéo est affichée dans une page web. Taper sur l'une des touches  <kbd>Retour</kbd>  ou <kbd>Entrée</kbd>, permet à l'utilisateur de passer d'une présentation dans une fenêtre à une présentation en mode plein écran de la vidéo.
+Dans cet exemple, une vidéo est affichée dans une page web. Taper sur l'une des touches <kbd>Retour</kbd>  ou <kbd>Entrée</kbd>, permet à l'utilisateur de passer d'une présentation dans une fenêtre à une présentation en mode plein écran de la vidéo.
 
 [Voir l'exemple sur une page](/samples/domref/fullscreen.html)
 
 ### Action sur la touche <kbd>Entrée</kbd>
 
-Quand la page est chargée, ce code est exécuté pour mettre en place un évènement "listener" permettant de surveiller la moindre action sur la touche  <kbd>Entrée</kbd> .
+Quand la page est chargée, ce code est exécuté pour mettre en place un évènement "listener" permettant de surveiller la moindre action sur la touche <kbd>Entrée</kbd> .
 
 ```js
 document.addEventListener("keydown", function(e) {
@@ -116,7 +116,7 @@ function toggleFullScreen() {
 
 Dans un premier temps, la valeur de l'attribut `fullscreenElement` est analysée dans le {{ domxref("document") }} (en contrôlant s'il est préfixé par `moz-, ms-` ou `webkit-`). Si la valeur est nulle, le document est actuellement en mode normal, donc nous devons passer en mode plein écran. Le passage en mode plein écran est assuré en appelant {{ domxref("element.requestFullscreen()") }}.
 
-Si le mode plein écran est déjà activé (`fullscreenElement` est non nul), nous appelons  {{ domxref("document.exitFullscreen()") }}.
+Si le mode plein écran est déjà activé (`fullscreenElement` est non nul), nous appelons {{ domxref("document.exitFullscreen()") }}.
 
 ## Préfixes
 

@@ -13,7 +13,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/script
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<script>` 요소**는 데이터와 실행 가능한 코드를 문서에 포함할 때 사용하며 보통 JavaScript 코드와 함께 씁니다. [WebGL](/ko/docs/Web/API/WebGL_API)의 GLSL 셰이더 프로그래밍 언어, [JSON](/ko/docs/Glossary/JSON) 등 다른 언어와도 사용할 수 있습니다.
 

@@ -5,7 +5,7 @@ slug: Web/API/ServiceWorkerContainer/register
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-{{domxref("ServiceWorkerContainer")}} 接口的 **`register()`**方法创建或更新一个给定 scriptURL 的[`ServiceWorkerRegistration`](/zh-CN/docs/Web/API/ServiceWorkerRegistration)。
+{{domxref("ServiceWorkerContainer")}} 接口的 **`register()`** 方法创建或更新一个给定 scriptURL 的[`ServiceWorkerRegistration`](/zh-CN/docs/Web/API/ServiceWorkerRegistration)。
 
 如果成功，一个服务工作者注册将提供的脚本 URL 与一个范围进行关联，后者用于导航匹配。如果该方法无法返回一个 `ServiceWorkerRegistration`，则返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 

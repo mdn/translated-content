@@ -3,13 +3,14 @@ title: AnalyserNode
 slug: Web/API/AnalyserNode
 translation_of: Web/API/AnalyserNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `AnalyserNode` интерфейс который предоставляет частоту (frequency) в реальном времени. Элемент {{domxref("AudioNode")}} который пропускает аудиопоток неизменным от ввода (input) до вывода (output), но позволяет использовать генерируемые данные, обрабатывать или создавать аудиовизуализацию.
 
 `AnalyserNode` имеет только один ввод и один вывод. Узел работает даже если вывод не подсоединён.
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](https://mdn.mozillademos.org/files/12970/fttaudiodata_en.svg)
+![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
 
 <table class="properties">
   <tbody>

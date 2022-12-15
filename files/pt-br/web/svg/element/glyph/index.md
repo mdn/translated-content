@@ -1,13 +1,8 @@
 ---
 title: glyph
 slug: Web/SVG/Element/glyph
-tags:
-  - Conteúdo de Texto SVG
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/glyph
 ---
+
 {{SVGRef}}
 
 O `glyph` determina um único glifo em uma fonte SVG.
@@ -21,8 +16,8 @@ O `glyph` determina um único glifo em uma fonte SVG.
 ```xml
 <?xml version="1.0" standalone="yes"?>
 <svg width="400px" height="300px" version="1.1"
-  xmlns = 'http://www.w3.org/2000/svg'>
-<!-- Exemplo copiado de http://www.w3.org/TR/SVG/fonts.html#GlyphElement -->
+  xmlns = 'https://www.w3.org/2000/svg'>
+<!-- Exemplo copiado de https://www.w3.org/TR/SVG/fonts.html#GlyphElement -->
   <defs>
 
     <font id="Font1" horiz-adv-x="1000">

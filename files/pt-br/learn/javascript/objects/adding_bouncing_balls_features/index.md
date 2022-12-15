@@ -1,9 +1,9 @@
 ---
 title: Adicionando recursos à nossa demonstração de bolas pulantes
 slug: Learn/JavaScript/Objects/Adding_bouncing_balls_features
-translation_of: Learn/JavaScript/Objects/Adding_bouncing_balls_features
 original_slug: Aprender/JavaScript/Objetos/Adding_bouncing_balls_features
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object_building_practice", "", "Learn/JavaScript/Objects")}}
 
 Nesta avaliação, espera-se que você use a demonstração de bolas saltantes do artigo anterior como ponto de partida e adicione alguns recursos novos e interessantes a ela.
@@ -39,7 +39,7 @@ Nossa demo com bola saltitante é divertida, mas agora queremos torná-la um pou
 
 A imagem seguinte dá-lhe uma ideia do que deve ser o programa final:
 
-![](https://mdn.mozillademos.org/files/13875/bouncing-evil-circle.png)
+![](bouncing-evil-circle.png)
 
 Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (não espreitar o código-fonte!)
 

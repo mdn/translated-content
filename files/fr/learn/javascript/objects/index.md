@@ -1,51 +1,51 @@
 ---
-title: Introduction aux objets JS
+title: Introduction aux objets en JavaScript
 slug: Learn/JavaScript/Objects
-tags:
-  - Apprendre
-  - Article
-  - Auto-évaluation
-  - Débutant
-  - Guide
-  - JavaScript
-  - Objets
-  - Tutoriel
-translation_of: Learn/JavaScript/Objects
+l10n:
+  sourceCommit: 72d4c8678b172f558eca279d98abf23395e0d9a4
 ---
 
-{{JsSidebar}}{{PreviousNext("Apprendre/JavaScript/Building_blocks", "Learn/JavaScript/Objects/Basics")}}
+{{LearnSidebar}}
 
-En JavaScript, la plupart des choses sont des objets, des éléments du cœur de JavaScript, comme les chaînes de caractères et les tableaux, aux interfaces de programmation (APIs) des navigateurs construites sur la base de JavaScript. Vous pouvez même créer vos propres objets pour encapsuler des fonctions liées et des variables au sein de paquets efficaces, et se comportant comme des conteneurs de données. Il est important de comprendre la nature orientée objet du JavaScript si vous souhaitez aller loin dans votre connaissance du langage, aussi, avons-nous fourni ce module afin de vous aider. Ici, nous enseignons la théorie de l’objet et sa syntaxe en détail, ensuite, ce sera à vous de voir comment vous souhaitez créer vos propres objets.
+En JavaScript, la plupart des valeurs manipulées sont des objets, qu'ils proviennent des fonctionnalités natives du langage, comme les tableaux, ou qu'ils soient fournis par les API du navigateur. Il est aussi possible de créer ses propres objets qui contiendront des propriétés avec des données ou des fonctions. JavaScript est un langage orienté objet et la compréhension de cette notion est nécessaire pour approfondir ses connaissances dans ce langage. Nous avons donc construit un module pour vous aider, où nous vous apprendrons la théorie du modèle objet et les détails de la syntaxe JavaScript associée. Nous verrons ensuite comment créer ses propres objets.
+
+> **Remarque :**
+>
+> #### Vous souhaitez devenir développeuse ou développeur web&nbsp;?
+>
+> Nous avons construit un cursus contenant toutes les informations essentielles pour parvenir à cet objectif.
+>
+> [**Commencer**](/fr/docs/Learn/Front-end_web_developer)
 
 ## Prérequis
 
-Avant de commencer ce module, vous devriez avoir quelques familiarités avec le HTML et le CSS. Il serait raisonnable de travailler sur les modules [Introduction au HTML](/fr/Apprendre/HTML/Introduction_%C3%A0_HTML) et [Introduction au CSS](/fr/Apprendre/CSS/Introduction_%C3%A0_CSS) avant de commencer avec le JavaScript.
+Avant de commencer ce module, vous devriez connaître les bases de [HTML](/fr/docs/Glossary/HTML) et de [CSS](/fr/docs/Glossary/CSS). Nous vous conseillons de réaliser les modules [Introduction à HTML](/fr/docs/Learn/HTML/Introduction_to_HTML) et [Introduction à CSS](/fr/docs/Learn/CSS/First_steps) avant de commencer celui-ci sur JavaScript.
 
-Vous devriez également être familiarisé avec les bases du JavaScript avant de poursuivre en détails avec les objets JavaScript. Avant de commencer ce module, travaillez sur [Premiers pas avec JavaScript](/fr/docs/Learn/JavaScript/First_steps) et [Les blocs de construction en JavaScript](/fr/Apprendre/JavaScript/Building_blocks).
+Vous devriez également connaître les notions de bases sur JavaScript avant d'étudier les objets JavaScript en détails. Avant de démarrer ce module, lisez [Premiers pas en JavaScript](/fr/docs/Learn/JavaScript/First_steps) et [Blocs de construction de JavaScript](/fr/docs/Learn/JavaScript/Building_blocks).
 
-> **Note :** Si vous travaillez sur un ordinateur, une tablette ou un autre appareil où vous n’avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer les (la plupart des) exemples de code grâce à un programme en ligne comme [JSBin](http://jsbin.com/) ou [Thimble](https://thimble.mozilla.org/).
+> **Note :** Si vous travaillez depuis un appareil où vous ne pouvez pas créer vos propres fichiers, vous pouvez essayer la plupart des exemples de code dans un outil de programmation en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
 
 ## Guides
 
-- [Les bases de JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects/Basics)
-  - : Dans le premier article concernant les objets JavaScript, nous découvrirons la syntaxe fondamentale d’un objet JavaScript, et nous revisiterons certaines fonctionnalités du JavaScript que nous avions vues précédemment dans le cours, en insistant sur le fait que bon nombre d'éléments précedemment abordés sont en fait des objets.
+- [Notions de base sur les objets](/fr/docs/Learn/JavaScript/Objects/Basics)
+  - : Dans ce premier article consacré aux objets en JavaScript, nous verrons les fondamentaux de la syntaxe objet en JavaScript et reverrons certaines des fonctionnalités abordées précédemment dans le cours et qui manipulaient déjà des objets.
+- [Prototypes d'objets](/fr/docs/Learn/JavaScript/Objects/Object_prototypes)
+  - : Les prototypes sont le mécanisme par lequel les objets JavaScript héritent des fonctionnalités d'autres objets. Il s'agit d'un mécanisme différent de l'héritage basé sur les classes. Dans cet article, nous verrons comment la chaîne de prototypes fonctionne.
+- [Programmation orientée objet](/fr/docs/Learn/JavaScript/Objects/Object-oriented_programming)
+  - : Dans cet article, nous décrirons certaines notions de base sur la programmation orientée objet à l'aide de classes et verrons en quoi cela diffère du modèle JavaScript qui utilise les prototypes.
+- [Classes en JavaScript](/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+  - : JavaScript fournit certaines fonctionnalités pour les personnes qui souhaitent implémenter des programmes utilisant des classes. Dans cet article, nous décrirons ces fonctionnalités.
+- [Manipuler des données en JSON](/fr/docs/Learn/JavaScript/Objects/JSON)
+  - : JSON (<i lang="en">JavaScript Object Notation</i>) est un format textuel standardisé de représentation des données, utilisant la syntaxe objet de JavaScript. Il est utilisé pour la représentation et la transmission de données sur le Web (par exemple transmettre des données d'un serveur à un client afin qu'elles puissent être affichées sur une page web). Ce format étant fréquemment utilisé, nous aborderons dans cet article les outils pour manipuler des données JSON en JavaScript et notamment l'analyse de texte JSON et l'écriture de données en JSON.
+- [Construire des objets en pratique](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
+  - : Dans les articles qui précèdent, nous avons étudié la théorie objet et la syntaxe JavaScript, fournissant ainsi les notions de bases nécessaires. Dans cet article, nous verrons un exercice concret, vous permettant de mettre en pratique la construction d'objets afin de produire une démo colorée avec des balles rebondissantes.
 
-<!---->
+## Évaluations
 
-- [JavaScript orienté objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/JS_orient%C3%A9-objet)
-  - : Après avoir vu les notions de base, nous nous pencherons sur le JavaScript orienté objet (JSOO) — cet article présente une vue basique de la théorie de la programmation orientée objet (POO), et explore ensuite comment le JavaScript émule les classes d’objet via les fonctions des constructeurs et comment créer des instances d’objet.
-- [Objets prototypes](/fr/docs/Learn/JavaScript/Objects/Prototypes_Objet)
-  - : Les prototypes sont des mécanismes par lesquels les objets JavaScript héritent les fonctionnalités d’un autre objet, et ils fonctionnent différemment des mécanismes d’héritage des langages classiques de programmation orientée objet. Dans cet article, nous explorons cette différence, expliquant comment les chaînes de prototypes fonctionnent et jetant un regard sur comment la propriété prototype peut être utilisée pour ajouter des méthodes aux constructeurs existants.
-- [L’héritage au sein de JavaScript](/fr/docs/Learn/JavaScript/Objects/Heritage)
-  - : Avec la plupart des redoutables détails du JSOO maintenant expliqués, cet article montre comment créer les classes (constructeurs) d’objet “enfant” qui héritent des fonctionnalités de leur classes “parents”. De plus, nous présentons certains conseils sur où et comment utiliser le JSOO.
-- [Manipuler des données JSON](/fr/docs/Learn/JavaScript/Objects/JSON)
-  - : JavaScript Object Notation (JSON) est un format standard pour la représentation de données structurées comme les objets JavaScript, qui est communément utilisé pour représenter et transmettre les données sur les sites web (ex. : Envoyer certaines données du serveur au client, afin d’être affichées sur une page web). Vous le rencontrerez assez souvent. Aussi, dans cet article, nous vous donnons tout ce dont vous avez besoin pour travailler avec le format JSON utilisant le JavaScript, incluant l’accès aux éléments des données dans un objet JSON et l’écriture de votre propre JSON.
-- [Pratiques sur la construction d’objet](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)
-  - : Dans l’article précédent nous avons fait le tour de l’essentiel de la théorie de l’objet JavaScript et les détails de sa syntaxe, vous donnant ainsi une solide base sur laquelle débuter. Dans cet article nous plongeons dans un exercice, vous donnant plus de pratique dans la construction d’objets JavaScript personnalisés, qui produisent quelque chose d’amusant et de plus coloré — quelques balles colorées et bondissantes.
+- [Ajouter des fonctionnalités à notre démo de balles rebondissantes](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+  - : Dans cette évaluation, nous vous demandons de repartir de la démo construite précédemment et d'y ajouter certaines fonctionnalités intéressantes.
 
-## Auto-évaluation
+## Voir aussi
 
-- [Ajoutez des fonctionnalitée à notre démo des ballons bondissants](/fr/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
-  - : Dans cette évaluation, vous devrez utiliser la démo des balles bondissantes de l’article précédent comme un point de départ et y ajouter quelques nouvelles et intéressantes fonctionnalités.
-
-{{PreviousNext("Apprendre/JavaScript/Building_blocks", "JavaScript/Guide")}}
+- [JavaScript de Zéro - Module débutant](https://www.javascriptdezero.com/module-debutant)
+  - : Un module de formation en ligne en français avec des leçons vidéo et des exercices et quiz.

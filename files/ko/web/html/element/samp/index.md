@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/samp
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<samp>` 요소**는 컴퓨터 프로그램 출력의 예시(혹은 인용문)를 나타냅니다. 보통 브라우저의 기본 고정폭 글씨체(보통 Courier, Lucida Console)를 사용해 렌더링합니다.
 

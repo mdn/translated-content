@@ -1,11 +1,8 @@
 ---
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
-tags:
-  - Interfaz
-  - Referencia
-translation_of: Web/API/CSSStyleDeclaration
 ---
+
 {{ APIRef("CSSOM") }}
 
 ## Resúmen

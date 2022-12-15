@@ -6,6 +6,7 @@ tags:
   - веб расширение
 translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
+
 {{AddonSidebar}}
 
 Расширение состоит из набора файлов, упакованных для распространения и установки. В этой статье мы быстро рассмотрим файлы, которые могут присутствовать в расширении.
@@ -22,7 +23,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 - [Content scripts](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Content_scripts): JavaScript сценарии вашего расширения, которые будут исполняться на веб-страницах.
 - [Web-accessible resources](/ru/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources): Делает контент вашего расширения видимым для веб-страниц и скриптов.
 
-![](https://mdn.mozillademos.org/files/13669/webextension-anatomy.png)
+![](webextension-anatomy.png)
 
 Для получения подробной информации см. справочную страницу [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 

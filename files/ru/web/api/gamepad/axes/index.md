@@ -3,6 +3,7 @@ title: Gamepad.axes
 slug: Web/API/Gamepad/axes
 translation_of: Web/API/Gamepad/axes
 ---
+
 {{APIRef("Gamepad API")}}
 
 Свойство **`Gamepad.axes`** интерфейса {{domxref("Gamepad") }} возвращает массив, показывающий состояние элементов управления, имеющих оси направления, такие как джойстики на геймпаде.

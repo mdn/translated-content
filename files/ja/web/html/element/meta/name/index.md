@@ -3,7 +3,7 @@ title: 標準メタデータ名
 slug: Web/HTML/Element/meta/name
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{htmlelement("meta")}} 要素を使用すると、文書のメタデータを名前と値の組み合わせで提供することができます。 {{htmlattrxref("name", "meta")}} 属性でメタデータ名を指定し、 {{htmlattrxref("content", "meta")}} 属性で値を指定します。
 

@@ -67,7 +67,18 @@ new Number(value);
 
 ### 方法
 
-{{page('/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', '方法')}}
+- {{jsxref("Number.isNaN()")}}
+  - : 判斷傳入的值是不是 NaN.
+- {{jsxref("Number.isFinite()")}}
+  - : 判斷傳入的值是不是一個有限的數值。
+- {{jsxref("Number.isInteger()")}}
+  - : 判斷傳入的值是不是一個整數。
+- {{jsxref("Number.isSafeInteger()")}}
+  - : 判斷傳入的值是不是在 IEEE-754 雙精度範圍間 (即介於 `-(2^53 - 1)` 和 `2^53 - 1`之前)。
+- {{jsxref("Number.parseFloat()")}}
+  - : 這個方法和全域物件的 {{jsxref("parseFloat", "parseFloat()")}} 相同。
+- {{jsxref("Number.parseInt()")}}
+  - : 這個方法和全域物件的 {{jsxref("parseInt", "parseInt()")}} 相同。
 
 ## 範例
 

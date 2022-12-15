@@ -77,7 +77,7 @@ a("first call, firstarg")@file:///C:/example.html:19
 
 ### Stack of eval'ed code
 
-Firefox30 以{{geckoRelease("30")}}格式开头，`Function()` 和 `eval()` 调用产生的错误代码堆栈，现在在调用内部通过行号和列号以更加详细的格式向我们展示出来。函数调用显示为`"> Function"` 而 eval 调用则是 `"> eval"`这样。下面来看这个{{bug("332176")}}.
+Firefox30 以 Gecko 30 格式开头，`Function()` 和 `eval()` 调用产生的错误代码堆栈，现在在调用内部通过行号和列号以更加详细的格式向我们展示出来。函数调用显示为`"> Function"` 而 eval 调用则是 `"> eval"`这样。下面来看这个{{bug("332176")}}.
 
 ```js
 try {

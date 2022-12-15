@@ -4,6 +4,7 @@ slug: Learn/Accessibility/Accessibility_troubleshooting
 translation_of: Learn/Accessibility/Accessibility_troubleshooting
 original_slug: Learn/Доступность/Accessibility_troubleshooting
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 In the assessment for this module, we present to you a simple site with a number of accessibility issues that you need to diagnose and fix.
@@ -18,7 +19,7 @@ To get this assessment started, you should go and grab the [ZIP containing the f
 
 The finished assessment site should look like so:
 
-![](https://mdn.mozillademos.org/files/14555/assessment-site-finished.png)
+![](assessment-site-finished.png)
 
 You will see some differences/issues with the display of the starting state of the assessment — this is mainly due to the differences in the markup, which in turn cause some styling issues as the CSS is not applied properly. Don't worry — you'll be fixing these problems in the upcoming sections!
 

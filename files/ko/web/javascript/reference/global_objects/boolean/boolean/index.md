@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 ---
+
 {{JSRef}}
 
 **`Boolean()`** 생성자는 {{jsxref("Boolean")}} 객체를 생성할 때 사용합니다.

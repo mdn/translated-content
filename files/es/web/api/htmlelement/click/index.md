@@ -1,12 +1,8 @@
 ---
 title: HTMLElement.click()
 slug: Web/API/HTMLElement/click
-tags:
-  - HTMLElement
-  - Referencia
-  - metodo
-translation_of: Web/API/HTMLElement/click
 ---
+
 {{ APIRef("HTML DOM") }}
 
 El método **`HTMLElement.click()`** simula el click de un ratón físico en un elemento HTML.
@@ -19,11 +15,9 @@ Cuando `click()` se usa en un elemento que soporte este método (como un element
 elemento.click()
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                   | Estado                       | Comentario          |
-| ---------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} | {{Spec2('DOM2 HTML')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

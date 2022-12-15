@@ -3,6 +3,7 @@ title: Lighting in WebGL
 slug: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 translation_of: Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 ---
+
 {{WebGLSidebar("Tutorial")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL", "Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL")}}
 
 Вам уже должно быть понятно,что у WebGL нет много "встроенного знания". Он просто выполняет две функции, которые вы написали - вершинный шейдер и фрагментный шейдер, а функции, которые рисуют сцену должны написать вы сами. Другими словами, если вы хотите добавить освещение, то вы должны рассчитать его самостоятельно. К счастью, сделать это не сложно. В этой статье мы опишем некоторые основы.

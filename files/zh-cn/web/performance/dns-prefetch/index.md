@@ -19,7 +19,7 @@ slug: Web/Performance/dns-prefetch
 
 ## 例子
 
-```plain
+```html
 <html>
   <head>
     <link rel="dns-prefetch" href="https://fonts.gstatic.com/">

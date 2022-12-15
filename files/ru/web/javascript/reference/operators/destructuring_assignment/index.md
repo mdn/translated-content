@@ -6,6 +6,7 @@ tags:
   - Оператор
 translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
+
 Синтаксис **деструктурирующего присваивания** в выражениях JavaScript позволяет извлекать данные из массивов или объектов при помощи синтаксиса, подобного объявлению массива или литералов в объекте.
 
 ## Синтаксис
@@ -26,7 +27,9 @@ console.log(a); // 1
 console.log(b); // 2
 
 ({a, b, ...rest} = {a:1, b:2, c:3, d:4});
-// ES2016 - ещё не реализовано Firefox 47a01
+console.log(a); // 1
+console.log(b); // 2
+console.log(rest); // { c:3, d:4 }
 ```
 
 ## Описание

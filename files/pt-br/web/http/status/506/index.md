@@ -1,14 +1,8 @@
 ---
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Status/506
-tags:
-  - Código de status
-  - Erro do servidor
-  - HTTP
-  - Server error
-  - Status code
-translation_of: Web/HTTP/Status/506
 ---
+
 {{HTTPSidebar}}
 
 O código de status de resposta HTTP **`506 Variant Also Negotiates`** pode ser dado no contexto de Negociação de Conteúdo Transparente (Transparent Content Negotiation) (veja [RFC 2295](https://tools.ietf.org/html/rfc2295)). Esse protocolo permite ao cliente requerer a melhor variante de um dado recurso, onde um servidor fornece múltiplos variantes.

@@ -1,15 +1,9 @@
 ---
 title: Funciones Flecha
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript6
-  - Intermedio
-  - JavaScript
-  - Referencia
-  - función
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 original_slug: Web/JavaScript/Referencia/Funciones/Arrow_functions
 ---
+
 {{jsSidebar("Functions", "Funciones")}}
 
 Una **expresión de función flecha** es una alternativa compacta a una {{JSxRef("Operadores/function", "expresión de función")}} tradicional, pero es limitada y no se puede utilizar en todas las situaciones.
@@ -541,9 +535,7 @@ setTimeout( () => {
 
 ## Especificaciones
 
-| Especificación                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Definición de función flecha')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

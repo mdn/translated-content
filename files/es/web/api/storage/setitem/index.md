@@ -1,15 +1,8 @@
 ---
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
-tags:
-  - API
-  - Almacenamiento
-  - Almacenamiento web
-  - Storage
-  - Web Storage
-  - metodo
-translation_of: Web/API/Storage/setItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 El método `setItem()` de la interfaz {{domxref("Storage")}}, cuando reciba una clave y un valor, añadirá estos al almacén, o actualizará el valor si la clave ya existe.
@@ -52,9 +45,7 @@ function populateStorage() {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#dom-storage-setitem', 'setItem()')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

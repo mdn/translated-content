@@ -7,6 +7,7 @@ tags:
 translation_of: Learn/JavaScript/Objects/Basics
 original_slug: Learn/JavaScript/Объекты/Основы
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 В этой статье мы рассмотрим объекты в JavaScript. Мы будем разбирать основы синтаксиса объектов JavaScript и заново изучим некоторые возможности JavaScript, которые мы уже исследовали ранее на курсе, подтвердив тот факт, что большая часть функциональности, с которой мы уже столкнулись, в действительности является объектами.

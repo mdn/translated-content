@@ -1,13 +1,9 @@
 ---
 title: event.pageX
 slug: Web/API/MouseEvent/pageX
-tags:
-  - DOM
-  - Referencia_DOM_de_Gecko
-  - Todas_las_Categorías
-translation_of: Web/API/UIEvent/pageX
 original_slug: Web/API/UIEvent/pageX
 ---
+
 {{ ApiRef() }}
 
 ### Sumario

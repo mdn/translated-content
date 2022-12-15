@@ -1,8 +1,8 @@
 ---
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
-translation_of: Web/CSS/animation-timing-function
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Resumen
@@ -57,9 +57,7 @@ Visita [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejempl
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                               | Comentario        |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{SpecName('CSS3 Animations', '#animation-timing-function', 'animation-timing-function')}} | {{Spec2('CSS3 Animations')}} | Definición incial |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

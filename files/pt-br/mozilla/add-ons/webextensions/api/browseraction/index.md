@@ -1,16 +1,8 @@
 ---
 title: browserAction
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction
-tags:
-  - API
-  - Add-ons
-  - Extensões
-  - Interfaces
-  - Não Padrão
-  - Referencia
-  - browserAction
-translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
+
 {{AddonSidebar}}
 
 Adiciona um botão a barra de ferramentas do navegador.

@@ -1,8 +1,8 @@
 ---
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 ---
+
 {{JSRef}}
 
 O **`Symbol.split`** é um símbolo conhecido que especifica o método que divide uma string nos índices correspondentes a uma expressão regular. Essa função é chamada pelo método {{jsxref("String.prototype.split()")}}.

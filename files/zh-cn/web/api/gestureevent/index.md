@@ -7,9 +7,9 @@ slug: Web/API/GestureEvent
 
 {{Non-standard_header()}}
 
-**`GestureEvent`** 是 WebKit 的专有接口，提供多点触控的信息。这个接口的事件包括 {{event("gesturestart")}}, {{event("gesturechange")}} 和 {{event("gestureend")}}.
+**`GestureEvent`** 是 WebKit 的专有接口，提供多点触控的信息。这个接口的事件包括 {{domxref("Element/gesturestart_event", "gesturestart")}}、{{domxref("Element/gesturechange_event", "gesturechange")}} 和 {{domxref("Element/gestureend_event", "gestureend")}}.
 
-`GestureEvent` 继承自 {{domxref("UIEvent")}}，后者又继承自{{domxref("Event")}}。
+`GestureEvent` 继承自 {{domxref("UIEvent")}}，后者又继承自 {{domxref("Event")}}。
 
 ## 构造函数
 
@@ -34,24 +34,24 @@ _This interface also inherits methods of its parents, {{domxref("UIEvent")}} and
 
 ## 手势事件类型
 
-- {{event("gesturestart")}}
-- {{event("gesturechange")}}
-- {{event("gestureend")}}
+- {{domxref("Element/gesturestart_event", "gesturestart")}}
+- {{domxref("Element/gesturechange_event", "gesturechange")}}
+- {{domxref("Element/gestureend_event", "gestureend")}}
 
 ## 规范
 
-_不属于任何规范。苹果在[Safari Developer Library](https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html)中描述了这个接口。_
+_不属于任何规范_。苹果在 [Safari Developer Library 中描述了这个接口](https://developer.apple.com/library/iad/documentation/UserExperience/Reference/GestureEventClassReference/index.html)。
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
 ## 参见
 
 - {{domxref("MSGestureEvent")}}
-- {{event("MSGestureStart")}}
-- {{event("MSGestureEnd")}}
-- {{event("MSGestureTap")}}
-- {{event("MSGestureHold")}}
-- {{event("MSGestureChange")}}
-- {{event("MSInertiaStart")}}
+- {{domxref("Element/MSGestureStart_event", "MSGestureStart")}}
+- {{domxref("Element/MSGestureEnd_event", "MSGestureEnd")}}
+- {{domxref("Element/MSGestureTap_event", "MSGestureTap")}}
+- {{domxref("Element/MSGestureHold_event", "MSGestureHold")}}
+- {{domxref("Element/MSGestureChange_event", "MSGestureChange")}}
+- {{domxref("Element/MSInertiaStart_event", "MSInertiaStart")}}

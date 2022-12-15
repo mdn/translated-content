@@ -3,6 +3,7 @@ title: 텍스트 서식
 slug: Web/JavaScript/Guide/Text_formatting
 translation_of: Web/JavaScript/Guide/Text_formatting
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
 
 이 장에서는 JavaScript에서 문자열과 텍스트로 작업하는 방법을 소개합니다.

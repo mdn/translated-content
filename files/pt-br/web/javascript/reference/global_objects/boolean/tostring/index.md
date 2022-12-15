@@ -1,8 +1,8 @@
 ---
 title: Boolean.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 ---
+
 {{JSRef}}
 
 O método **`toString()`** retorna uma string representando o objeto Boolean específico.

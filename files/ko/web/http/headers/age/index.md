@@ -3,6 +3,7 @@ title: Age
 slug: Web/HTTP/Headers/Age
 translation_of: Web/HTTP/Headers/Age
 ---
+
 {{HTTPSidebar}}
 
 **`Age`** 헤더는 객체가 프록시 캐시 내에 머무는 초단위의 시간을 가집니다.

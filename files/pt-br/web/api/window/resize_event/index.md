@@ -1,8 +1,8 @@
 ---
 title: resize
 slug: Web/API/Window/resize_event
-translation_of: Web/API/Window/resize_event
 ---
+
 O evento **`resize`** é disparado quando o document view é redimensionado.
 
 O evento manipulador pode ser registrado para o evento `resize` usando o atributo `window.onresize` ou usando `window.addEventListener('resize', ...)`
@@ -14,7 +14,7 @@ Existe uma nova proposta (2017) para permitir que todos os elementos sejam notif
 ## Informações gerais
 
 - Specifications
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](http://www.w3.org/TR/cssom-view/#resizing-viewports)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](https://www.w3.org/TR/cssom-view/#resizing-viewports)
 - Interface
   - : UIEvent
 - Bubbles

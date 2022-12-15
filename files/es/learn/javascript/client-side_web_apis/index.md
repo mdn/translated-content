@@ -1,24 +1,8 @@
 ---
 title: Client-side web APIs
 slug: Learn/JavaScript/Client-side_web_APIs
-tags:
-  - API
-  - Articles
-  - Beginner
-  - CodingScripting
-  - DOM
-  - Graphics
-  - JavaScript
-  - Landing
-  - Learn
-  - Media
-  - Module
-  - NeedsTranslation
-  - TopicStub
-  - WebAPI
-  - data
-translation_of: Learn/JavaScript/Client-side_web_APIs
 ---
+
 {{LearnSidebar}}
 
 Cuando se escribe JavaScript para sitios web o aplicaciones del lado del cliente, no pasará mucho tiempo antes de que comience a usar APIs ("Application Programming Interfaces"). Estas son interfaces para manipular diferentes aspectos del navegador y el sistema operativo sobre el cuál se esta ejecutando, o incluso datos de otros sitios web o servicios. En este módulo, vamos a aprender que son las APIs y cómo utilizar algunas de las API más comunes que encuentran al momento de desarrollar.

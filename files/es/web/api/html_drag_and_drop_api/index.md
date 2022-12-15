@@ -1,12 +1,9 @@
 ---
 title: Arrastrar y soltar
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - HTML5
-  - XUL
-translation_of: Web/API/HTML_Drag_and_Drop_API
 original_slug: DragDrop/Drag_and_Drop
 ---
+
 Firefox y otras aplicaciones de Mozilla admiten una serie de características para gestionar la funcionalidad de arrastrar y soltar. Esto le permite al usuario hacer clic y mantener presionado el botón del ratón/mouse sobre un elemento, arrastrarlo a otra ubicación y soltarlo para colocar el elemento allí. Al puntero le seguirá una representación transparente de lo que se está arrastrando durante la operación. La ubicación de destino puede ser una aplicación diferente. Sitios web, extensiones y aplicaciones XUL pueden hacer uso de esta funcionalidad para personalizar los elementos que pueden ser arrastrados, evaluar la operación, así como especificar el lugar donde los elementos se pueden soltar.
 
 > **Nota:** Esta sección trata sobre la funcionalidad de arrastrar y soltar en Firefox 3.5 (Gecko 1.9.1) y versiones posteriores. Consulta la [documentación de la API anterior](/es/docs/Drag_and_Drop) para Firefox 3.0 y versiones anteriores.

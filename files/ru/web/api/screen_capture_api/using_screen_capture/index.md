@@ -3,6 +3,7 @@ title: Использование интерфейса Screen Capture API
 slug: Web/API/Screen_Capture_API/Using_Screen_Capture
 translation_of: Web/API/Screen_Capture_API/Using_Screen_Capture
 ---
+
 {{DefaultAPISidebar("Screen Capture API")}}
 
 В этой статье изучается использование программного интерфейса Screen Capture и его метода {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} для захвата потока экрана (всего или его части), его записи или передачи через сессию [WebRTC](/ru/docs/Web/API/WebRTC_API) .
@@ -47,7 +48,7 @@ function startCapture(displayMediaOptions) {
 
 **_Пример окна, позволяющего пользователю выбрать поверхность дисплея для захвата_**
 
-[![Screenshot of Chrome's window for picking a source surface](https://mdn.mozillademos.org/files/16365/Chrome-Screen-Capture-Window.png)](https://mdn.mozillademos.org/files/16365/Chrome-Screen-Capture-Window.png)
+[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](chrome-screen-capture-window.png)
 
 Затем можно использовать захваченный поток `captureStream`, везде, где принимается тип потока в качестве входных параметров. Пример [examples](#examples) ниже показывает несколько способов использования полученного типа потока
 

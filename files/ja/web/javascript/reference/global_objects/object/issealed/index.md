@@ -92,9 +92,7 @@ Object.isSealed(1);
 
 ## 仕様書
 
-| 仕様書                                                                                   |
-| ---------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.issealed', 'Object.isSealed')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

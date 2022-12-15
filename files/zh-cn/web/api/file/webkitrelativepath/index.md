@@ -19,7 +19,7 @@ slug: Web/API/File/webkitRelativePath
 
 ## 示例
 
-这个示例展示了目录选择器，它让用户选择一个或多个目录。{{event("change")}} 事件触发时，所选目录包含的所有文件的列表，会生成并展示，带有所选目录的层次结构。
+这个示例展示了目录选择器，它让用户选择一个或多个目录。[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 事件触发时，所选目录包含的所有文件的列表，会生成并展示，带有所选目录的层次结构。
 
 ### HTML 内容
 

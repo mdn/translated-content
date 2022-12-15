@@ -1,15 +1,8 @@
 ---
 title: String.prototype.padEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - padEnd()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 ---
+
 {{JSRef}}
 
 O método `padEnd()` preenche a string original com um determinado caractere, ou conjunto de caraceres, (repetidamente, se necessário) para que a string resultante alcance um determinado comprimento. O preenchimento é aplicado a partir do final (direita) da string original. A string original não é modificada.

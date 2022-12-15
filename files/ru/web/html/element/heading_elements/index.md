@@ -3,6 +3,7 @@ title: '<h1>–<h6>: HTML-элементы заголовков секций'
 slug: Web/HTML/Element/Heading_Elements
 translation_of: Web/HTML/Element/Heading_Elements
 ---
+
 **HTML-элементы `<h1>`–`<h6>`** представляют собой 6 уровней заголовков секций. `<h1>` это наибольший заголовок и `<h6>` - наименьший
 
 | [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Content_categories#Flow_content), заголовок контента, явный контент.                                                                                        |

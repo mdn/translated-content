@@ -36,7 +36,7 @@ window.scrollByPages(-1);
 
 ### Notes
 
-Voir aussi [window.scrollBy](/fr/docs/Web/API/Window/scrollByPages), [window.scrollByLines](/fr/docs/Web/API/Window/scrollByPages), [window.scroll](/fr/docs/Web/API/Window/scroll), [window.scrollTo](fr/docs/Web/API/Window/scrollTo).
+Voir aussi [window.scrollBy](/fr/docs/Web/API/Window/scrollByPages), [window.scrollByLines](/fr/docs/Web/API/Window/scrollByPages), [window.scroll](/fr/docs/Web/API/Window/scroll), [window.scrollTo](/fr/docs/Web/API/Window/scrollTo).
 
 ### Spécification
 

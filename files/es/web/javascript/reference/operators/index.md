@@ -1,15 +1,9 @@
 ---
 title: Expresiones y operadores
 slug: Web/JavaScript/Reference/Operators
-tags:
-  - Descripción
-  - JavaScript
-  - Operadores
-  - Operators
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators
 original_slug: Web/JavaScript/Referencia/Operadores
 ---
+
 {{jsSidebar("Operators", "Operadores")}}
 
 Este capítulo documenta todos los operadores, expresiones y palabras clave del lenguaje JavaScript.
@@ -225,9 +219,7 @@ Un operador de asignación asigna un valor a su operando izquierdo basándose en
 
 ## Especificaciones
 
-| Especificación                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-ecmascript-language-expressions', 'ECMAScript Language: Expressions')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

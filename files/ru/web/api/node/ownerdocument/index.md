@@ -3,6 +3,7 @@ title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 translation_of: Web/API/Node/ownerDocument
 ---
+
 {{APIRef("DOM")}}
 
 Свойство **`Node.ownerDocument`** только для чтения, возвращающее объект документа верхнего уровня для этого узла.

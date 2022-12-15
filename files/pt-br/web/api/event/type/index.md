@@ -1,8 +1,8 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
-translation_of: Web/API/Event/type
 ---
+
 {{APIRef("DOM")}}
 
 ## Sumário
@@ -58,4 +58,4 @@ function getEvtType(evt) {
 
 ## Especificação
 
-- [type](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-type)
+- [type](https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-type)

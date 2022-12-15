@@ -1,8 +1,8 @@
 ---
 title: Document()
 slug: Web/API/Document/Document
-translation_of: Web/API/Document/Document
 ---
+
 {{APIRef}}{{Non-standard_header}}
 
 O construtor **`Document`** cria um novo objeto {{domxref("Document")}}, o qual trata de uma página carregada no navegador servindo como porta de entrada para o conteúdo da página.

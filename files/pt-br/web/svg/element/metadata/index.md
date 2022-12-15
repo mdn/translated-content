@@ -1,13 +1,8 @@
 ---
 title: metadata
 slug: Web/SVG/Element/metadata
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-  - SVG Descritivo
-translation_of: Web/SVG/Element/metadata
 ---
+
 {{SVGRef}}
 
 Metadados são dados estruturados sobre dados. Metadados que são incluídos com um conteúdo SVG devem ser especificados com um elemento `metadata`. O conteúdo do `metadata` devem ser elementos de outros namespaces XML tais como RDF, FOAF, etc.

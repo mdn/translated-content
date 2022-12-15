@@ -3,7 +3,7 @@ title: '<abbr>: 略語要素'
 slug: Web/HTML/Element/abbr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の略語要素** (**`<abbr>`**) は略語や頭字語を表します。任意で {{htmlattrxref("title")}} 属性で、略語の完全形または説明を提供することができます。 `title` 属性はこの完全な説明のみを含み、それ以外を含んではいけません。
 
@@ -180,11 +180,7 @@ accessed.</p>
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-abbr-element', '&lt;abbr&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'textlevel-semantics.html#the-abbr-element', '&lt;abbr&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-ABBR', '&lt;abbr&gt;')}}                         | {{Spec2('HTML4.01')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

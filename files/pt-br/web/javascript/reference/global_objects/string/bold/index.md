@@ -1,15 +1,8 @@
 ---
 title: String.prototype.bold()
 slug: Web/JavaScript/Reference/Global_Objects/String/bold
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/bold
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método **`bold()`** cria um elemento HTML [\<b>](/pt-BR/docs/Web/HTML/Element/b) que faz com que uma string seja exibida em negrito.

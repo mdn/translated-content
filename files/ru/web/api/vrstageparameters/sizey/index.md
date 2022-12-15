@@ -5,6 +5,7 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRStageParameters/sizeY
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 Свойство (параметр) **sizeY** только для чтения интерфейса {{domxref ("VRStageParameters")}} возвращает глубину границ игровой площадки в метрах.

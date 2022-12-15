@@ -1,13 +1,8 @@
 ---
 title: Window.scrollY
 slug: Web/API/Window/scrollY
-tags:
-  - API
-  - Propiedad
-  - Rerencia
-  - Scroll Vertical
-translation_of: Web/API/Window/scrollY
 ---
+
 {{APIRef}}
 
 ## Sumario

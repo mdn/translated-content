@@ -4,6 +4,7 @@ slug: Web/API/HTMLInputElement/select_event
 translation_of: Web/API/GlobalEventHandlers/onselect
 original_slug: Web/API/GlobalEventHandlers/onselect
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 Обработчик события select окна браузера.

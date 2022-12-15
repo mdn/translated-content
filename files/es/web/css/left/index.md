@@ -1,8 +1,8 @@
 ---
 title: left
 slug: Web/CSS/left
-translation_of: Web/CSS/left
 ---
+
 {{CSSRef}}
 
 La propiedad `left` especifica parte de la posición de un elemento (posicionado - es decir, con una posición determinada por código).

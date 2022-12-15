@@ -26,7 +26,7 @@ element.insertAdjacentHTML(position, text);
 - `'afterend'`
   - : `element` の直後に挿入
 
-`text`\_ \_には HTML または XML としてパースし DOM ツリーに挿入することが可能な文字列を指定します。
+`text` には HTML または XML としてパースし DOM ツリーに挿入することが可能な文字列を指定します。
 
 ### ポジション名の可視化
 
@@ -55,9 +55,7 @@ d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
 
 ## 仕様
 
-| 仕様                                                                                                                                                                                 | ステータス                           | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('DOM Parsing', '#widl-Element-insertAdjacentHTML-void-DOMString-position-DOMString-text', 'Element.insertAdjacentHTML()')}} | {{ Spec2('DOM Parsing') }} |          |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

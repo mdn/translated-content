@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 browser-compat: css.properties.grid-template-areas
 ---
+
 {{CSSRef}}
 
 CSS-свойство **`grid-template-areas`** создаёт {{glossary("grid areas", "грид-области")}} путём размещения именованных ячеек в грид-раскладке.

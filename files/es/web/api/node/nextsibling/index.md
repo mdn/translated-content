@@ -1,14 +1,8 @@
 ---
 title: Node.nextSibling
 slug: Web/API/Node/nextSibling
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Nodo
-  - Propiedad
-translation_of: Web/API/Node/nextSibling
 ---
+
 {{APIRef("DOM")}}
 
 La propiedad de sólo lectura **`Node.nextSibling`** devuelve el siguiente nodo con respecto al indicado en la lista de nodos ({{domxref("Node.childNodes","childNodes")}}) a la que este pertenece o `null` si el nodo especificado es el último en dicha lista.

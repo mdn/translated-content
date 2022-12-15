@@ -80,6 +80,4 @@ options.forEach(function(element, key) {
 
 ## 仕様書
 
-| 仕様書                                                               |
-| -------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG','#dom-option','Option()')}} |
+{{Specifications}}

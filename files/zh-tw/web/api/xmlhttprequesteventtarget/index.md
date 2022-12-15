@@ -22,7 +22,7 @@ slug: Web/API/XMLHttpRequestEventTarget
 - {{ domxref("XMLHttpRequestEventTarget.onprogress") }}
   - : Contains the function that is called periodically with information about the progress of the request and the [`progress`](/zh-TW/docs/Web/API/XMLHttpRequest/progress_event) event is received by this object.
 - {{ domxref("XMLHttpRequestEventTarget.ontimeout") }}
-  - : Contains the function that is called if the event times out and the {{event("timeout")}} event is received by this object; this only happens if a timeout has been previously established by setting the value of the `XMLHttpRequest` object's `timeout` attribute.
+  - : Contains the function that is called if the event times out and the `timeout` event is received by this object; this only happens if a timeout has been previously established by setting the value of the `XMLHttpRequest` object's `timeout` attribute.
 - {{ domxref("XMLHttpRequestEventTarget.onloadend") }}
   - : Contains the function that is called when the load is completed, even if the request failed, and the [`loadend`](/zh-TW/docs/Web/API/XMLHttpRequest/loadend_event) event is received by this object.
 

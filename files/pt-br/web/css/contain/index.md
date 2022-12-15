@@ -1,8 +1,8 @@
 ---
 title: contain
 slug: Web/CSS/contain
-translation_of: Web/CSS/contain
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 A propriedade **`contain`** permite que um autor indique que elemento e seus conteúdos são, na medida do possível, _independente_ do resto da árvore do documento. Isso permite que o navegador recalcule o layout, estilo, pintura, tamanho ou alguma combinação deles para uma área limitada do DOM e não da página inteira.

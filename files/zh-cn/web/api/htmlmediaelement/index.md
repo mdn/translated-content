@@ -491,8 +491,8 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
           <p>
             <strong>Note:</strong> Previously
             <code>canPlayType('video/webm')</code> returned
-            <code>'probably'</code>. Starting with Gecko 28
-            {{geckoRelease(28)}}, it returns <code>'maybe'</code>.
+            <code>'probably'</code>. Starting with Gecko 28,
+            it returns <code>'maybe'</code>.
             ({{ bug(884275) }})
           </p>
         </div>
