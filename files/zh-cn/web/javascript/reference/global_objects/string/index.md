@@ -278,7 +278,7 @@ otherwise my code is unreadable.";
 - {{jsxref("String.prototype.repeat()")}}
   - : 返回由对象的元素重复 `count` 次组成的字符串。
 - {{jsxref("String.prototype.replace()")}}
-  - 用于使用 `replaceWith` 替换出现的 `searchFor`。`searchFor` 可以是字符串或正则表达式，`replaceWith` 可以是字符串或函数。
+  - : 用于使用 `replaceWith` 替换出现的 `searchFor`。`searchFor` 可以是字符串或正则表达式，`replaceWith` 可以是字符串或函数。
 - {{jsxref("String.prototype.replaceAll()")}}
   - : 用于使用 `replaceWith` 替换所有出现的 `searchFor`。`searchFor` 可以是字符串或正则表达式，`replaceWith` 可以是字符串或函数。
 - {{jsxref("String.prototype.search()")}}
