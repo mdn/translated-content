@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String
 
 ### 创建字符串
 
-从字符串字面值将字符串创建为原始值或使用 {{jsxref("String/String", "String()")}} 构造函数将字符串创建为对象。
+从字符串字面量将字符串创建为原始值或使用 {{jsxref("String/String", "String()")}} 构造函数将字符串创建为对象。
 
 ```js
 const string1 = "A string primitive";
