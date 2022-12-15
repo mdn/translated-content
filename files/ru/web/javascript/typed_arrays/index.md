@@ -18,7 +18,7 @@ translation_of: Web/JavaScript/Typed_arrays
 
 ### ArrayBuffer
 
-Объект [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) –– это набор бинарных данных с фиксированной длиной. Вы не можете манипулировать содержимым `ArrayBuffer` напрямую. Вместо этого, необходимо создать типизированное представление [`DataView`](/ru/docs/Web/JavaScript/Reference/DataView), которое будет отображать буфер в определённом формате, и даст доступ на запись и чтение его содержимого.
+Объект [`ArrayBuffer`](/ru/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) –– это набор бинарных данных с фиксированной длиной. Вы не можете манипулировать содержимым `ArrayBuffer` напрямую. Вместо этого, необходимо создать типизированное представление [`DataView`](/ru/docs/Web/JavaScript/Reference/Global_Objects/DataView), которое будет отображать буфер в определённом формате, и даст доступ на запись и чтение его содержимого.
 
 ### Типизированные представления
 
