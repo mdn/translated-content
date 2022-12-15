@@ -22,7 +22,7 @@ void ctx.drawImage(image, dx, dy, dWidth, dHeight);
 void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 ```
 
-![drawImage](https://mdn.mozillademos.org/files/225/Canvas_drawimage.jpg)
+![drawImage](canvas_drawimage.jpg)
 
 ### Параметры
 
@@ -64,7 +64,7 @@ void ctx.drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
 
 ```html
 <canvas id="canvas"></canvas>
-  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg"
+  <img id="source" src="rhino.jpg"
        width="300" height="227">
 </div>
 ```
@@ -83,7 +83,7 @@ ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 
 ```html hidden
 <canvas id="canvas" width="400" height="200" class="playable-canvas"></canvas>
-  <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
+  <img id="source" src="rhino.jpg" width="300" height="227">
 </div>
 <div class="playable-buttons">
   <input id="edit" type="button" value="Edit" />
@@ -144,7 +144,7 @@ var image = new Image(60, 45);   // Размер изображения
 image.onload = drawImageActualSize; // Рисуем изображение, когда оно будет загружено
 
 // load an image of intrinsic size 300x227 in CSS pixels
-image.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+image.src = 'rhino.jpg';
 
 function drawImageActualSize() {
   // use the intrinsic size of image in CSS pixels for the canvas element

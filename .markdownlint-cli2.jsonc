@@ -120,8 +120,9 @@
     },
     // MD049 is set to underscore upstream, not yet fixed here
     "MD049": false,
-    // MD050 is set to asterisk upstream, not yet fixed here
-    "MD050": false,
+    "MD050": {
+      "style": "asterisk"
+    },
     // MD051 - Link fragments should be valid.
     // -> Disabled, as yari generates link fragments by replacing spaces with underscores, not dashes.
     "MD051": false,
@@ -135,6 +136,12 @@
           "searchPattern": "/ /g",
           "replace": " ",
           "skipCode": false
+        },
+        {
+          "name": "relative-link-path",
+          "message": "Don't use relative paths",
+          "search": "](..",
+          "skipCode": true
         },
         // This will be replaced with Prettier in the long run
         {
