@@ -204,7 +204,7 @@ otherwise my code is unreadable.";
 
 在 Unicode 字符之上，有一些 Unicode 字符序列应该被视为一个视觉单元，被称为*字素簇*（grapheme cluster）。更通常的案列是 emoji：很多具有一系列变化的 emoji 实际上是由多个 emoji组成的，通常由 \<ZWJ>（`U+200D`）字符连接。
 
-你必须小心迭代字符级别。例如， [`split("")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 将按照 UTF-16 码元分割并强代理对分开。字符串索引也是指的每个 UTF-16 码元的索引。在另一方面，[`@@iterator()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) 按 Unicode 码位迭代。遍历字素簇将需要一些自定义代码。
+你必须小心迭代字符级别。例如，[`split("")`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/split) 将按照 UTF-16 码元分割并强代理对分开。字符串索引也是指的每个 UTF-16 码元的索引。在另一方面，[`@@iterator()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) 按 Unicode 码位迭代。遍历字素簇将需要一些自定义代码。
 
 ```js
 "😄".split(""); // ['\ud83d', '\ude04']; splits into two lone surrogates
