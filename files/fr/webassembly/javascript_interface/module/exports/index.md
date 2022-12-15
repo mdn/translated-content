@@ -82,13 +82,11 @@ La valeur `exports[0]` ressemblera alors à :
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                       |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblymoduleexports', 'exports()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Module.exports")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,13 +2,14 @@
 title: device-aspect-ratio
 slug: Web/CSS/@media/device-aspect-ratio
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 [CSS](/ja/docs/Web/CSS) の **`device-aspect-ratio`** [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、出力機器の幅対高さのアスペクト比を調べるために使用します。
 
 ## 構文
 
-`device-aspect-ratio` 特性は、 {{cssxref("&lt;ratio&gt;")}} で指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-device-aspect-ratio`** および `**max-device-aspect-ratio**` の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
+`device-aspect-ratio` 特性は、 {{cssxref("&lt;ratio&gt;")}} で指定します。これは範囲の特性であり、つまり接頭辞の付いた **`min-device-aspect-ratio`** および **`max-device-aspect-ratio`** の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
 
 ## 例
 

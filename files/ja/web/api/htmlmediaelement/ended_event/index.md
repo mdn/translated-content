@@ -38,7 +38,7 @@ slug: Web/API/HTMLMediaElement/ended_event
   </tbody>
 </table>
 
-> **Note:** このイベントは、[メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API) および [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) でも定義されています。
+> **メモ:** このイベントは、[メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Streams_API) および [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) でも定義されています。
 
 ## 例
 
@@ -105,6 +105,6 @@ video.onended = (event) => {
 
   - [メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Streams_API)[: ended イベント](/ja/docs/Web/API/MediaStreamTrack/ended_event)
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
 
-  - [ウェブ音声 API: ended イベント](/ja/docs/Web/API/AudioScheduledSourceNode/ended_event)
+  - [ウェブオーディオ API: ended イベント](/ja/docs/Web/API/AudioScheduledSourceNode/ended_event)

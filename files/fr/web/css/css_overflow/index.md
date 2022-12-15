@@ -44,10 +44,7 @@ L'exempel interactif suivant illustre comment la modification de la valeur de la
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires                                                                                                |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Overflow', '#propdef-overflow', 'overflow')}} | {{Spec2('CSS3 Overflow')}} | Modification de la syntaxe afin de permettre d'utilise un ou deux mots-clés (plutôt qu'un seul auparavant). |
-| {{SpecName('CSS2.1', 'visufx.html#overflow', 'overflow')}}         | {{Spec2('CSS2.1')}}             | Définition initiale.                                                                                        |
+{{Specifications}}
 
 ## Voir aussi
 

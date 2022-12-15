@@ -8,29 +8,38 @@ l10n-de:
 
 l10n-es:
   - files/es/**/*
+  - docs/es/**/*
+  - /.github/ISSUE_TEMPLATE/page-report-es.yml
 
 l10n-fr:
   - files/fr/**/*
+  - /.github/ISSUE_TEMPLATE/page-report-fr.yml
 
 l10n-ja:
   - files/ja/**/*
+  - /.github/ISSUE_TEMPLATE/page-report-ja.yml
 
 l10n-ko:
   - files/ko/**/*
   - docs/ko/**/*
+  - /.github/ISSUE_TEMPLATE/page-report-ko.yml
 
 l10n-pl:
   - files/pl/**/*
 
 l10n-pt-br:
   - files/pt-br/**/*
+  - /.github/ISSUE_TEMPLATE/page-report-pt-br.yml
 
 l10n-ru:
   - files/ru/**/*
   - docs/ru/**/*
+  - /.github/ISSUE_TEMPLATE/page-report-ru.yml
 
 l10n-zh:
   - files/zh-cn/**/*
   - files/zh-tw/**/*
   - docs/zh-cn/**/*
   - docs/zh-tw/**/*
+  - /.github/ISSUE_TEMPLATE/page-report-zh-cn.yml
+  - /.github/ISSUE_TEMPLATE/page-report-zh-tw.yml

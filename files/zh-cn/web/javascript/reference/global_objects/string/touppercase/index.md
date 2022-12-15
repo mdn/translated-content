@@ -38,7 +38,7 @@ console.log('alphabet'.toUpperCase()); // 'ALPHABET'
 
 ### 将非字符串类型的 `this` （上下文）转为字符串
 
-此方法会将任何非字符串类型的值转为字符串， 当你将其上下文 `this` 值设置为非字符串类型
+此方法会将任何非字符串类型的值转为字符串，当你将其上下文 `this` 值设置为非字符串类型
 
 ```js
 const a = String.prototype.toUpperCase.call({

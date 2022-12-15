@@ -48,7 +48,7 @@ void function iife() {
 
 ### JavaScript URI
 
-`javascript:` の URI に対応しているブラウザーでは、 URI の中のコードを評価し、返値が  {{jsxref("undefined")}} でない限り、返された値でページの内容を置き換えます。 `void` 演算子は、`undefined` を返すために使用できます。
+`javascript:` の URI に対応しているブラウザーでは、 URI の中のコードを評価し、返値が {{jsxref("undefined")}} でない限り、返された値でページの内容を置き換えます。 `void` 演算子は、`undefined` を返すために使用できます。
 
 ```html
 <a href="javascript:void(0);">
@@ -60,7 +60,7 @@ void function iife() {
 </a>
 ```
 
-> **Note:** `javascript:` 擬似プロトコルは控えめなイベントハンドラーなどの代替であり、積極的に使用するべきではないでしょう。
+> **メモ:** `javascript:` 擬似プロトコルは控えめなイベントハンドラーなどの代替であり、積極的に使用するべきではないでしょう。
 
 ### アロー関数からのリーク防止
 

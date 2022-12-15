@@ -217,7 +217,7 @@ let bigmouth = 'I\'ve got no right to take my place...';
 bigmouth;
 ```
 
-这回正常了。你可以用别的方式来达到一样的目的， 例如. `\",` 除此之外有一些特殊的代码 。更多细节请参见[转义符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#Parameters)。
+这回正常了。你可以用别的方式来达到一样的目的，例如。`\",` 除此之外有一些特殊的代码。更多细节请参见[转义符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#Parameters)。
 
 ## 连接字符串
 
@@ -232,7 +232,7 @@ bigmouth;
 
     变量 `joined` 的值的结果，它包含的值为 "Hello, how are you?"。
 
-2. 最后一个例子中， 我们只是把两个字符串连接在一起，但是你可以喜欢连接多少就多少个， 只需要在它们之间加上 + 操作符。试试这个：
+2. 最后一个例子中，我们只是把两个字符串连接在一起，但是你可以喜欢连接多少就多少个，只需要在它们之间加上 + 操作符。试试这个：
 
     ```js
     let multiple = one + one + one + one + two;

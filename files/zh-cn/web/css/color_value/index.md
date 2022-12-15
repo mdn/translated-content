@@ -44,9 +44,9 @@ slug: Web/CSS/color_value
 
 > **备注：** 可接受的关键字列表在 CSS 的演变过程中发生了改变：
 >
-> - CSS 标准 1 只接受 16 个基本颜色，称为*VGA 颜色*，因为它们来源于 [VGA](http://en.wikipedia.org/wiki/VGA) 显卡所显示的颜色集合而被称为 _VGA colors_ （视频图形阵列色彩）。
+> - CSS 标准 1 只接受 16 个基本颜色，称为*VGA 颜色*，因为它们来源于 [VGA](http://en.wikipedia.org/wiki/VGA) 显卡所显示的颜色集合而被称为 _VGA colors_（视频图形阵列色彩）。
 > - CSS 标准 2 增加了 `orange` 关键字。
-> - 从一开始，浏览器接受其它的颜色，由于一些早期浏览器是 X11 应用程序，这些颜色大多数是 X11 命名的颜色列表，虽然有一点不同。SVG 1.0 是首个正式定义这些关键字的标准；CSS 色彩标准 3 也正式定义了这些关键字。它们经常被称作*扩张的颜色关键字*， *X11 颜色*或 _SVG 颜色_ 。
+> - 从一开始，浏览器接受其它的颜色，由于一些早期浏览器是 X11 应用程序，这些颜色大多数是 X11 命名的颜色列表，虽然有一点不同。SVG 1.0 是首个正式定义这些关键字的标准；CSS 色彩标准 3 也正式定义了这些关键字。它们经常被称作*扩张的颜色关键字*， *X11 颜色*或 _SVG 颜色_。
 > - CSS 颜色标准 4 添加可`rebeccapurple`关键字来[纪念 web 先锋 Eric Meyer](https://codepen.io/trezy/post/honoring-a-great-man)。
 
 ### `transparent` 关键字
@@ -83,7 +83,7 @@ slug: Web/CSS/color_value
 
 ### RGB 颜色
 
-颜色可以使用红 - 绿-蓝（red-green-blue (RGB)）模式的两种方式被定义：
+颜色可以使用红 - 绿 - 蓝（red-green-blue (RGB)）模式的两种方式被定义：
 
 #### 语法
 

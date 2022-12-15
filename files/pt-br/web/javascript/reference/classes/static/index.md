@@ -1,14 +1,8 @@
 ---
 title: static
 slug: Web/JavaScript/Reference/Classes/static
-tags:
-  - Classes
-  - ECMAScript 2015
-  - Experimental
-  - JavaScript
-  - Static
-translation_of: Web/JavaScript/Reference/Classes/static
 ---
+
 {{jsSidebar("Classes")}}
 
 A palavra chave **static** define um método estático para a classe. Métodos estáticos não são chamados na instâncias da classe. Em vez disso, eles são chamados na própria classe. Geralmente, são funções utilitárias, como funções para criar ou clonar objetos.
@@ -47,7 +41,7 @@ ChamadaDoMetodoEstatico.outroMetodoEstatico();
 
 ### De outro construtor e outros métodos
 
-Métodos estáticos não são diretamente acessíveis utilizando-se `this `a partir de métodos não estáticos. É necessário chamá-los usando o nome da classe:
+Métodos estáticos não são diretamente acessíveis utilizando-se `this` a partir de métodos não estáticos. É necessário chamá-los usando o nome da classe:
 
 ```js
 nomeDaClasse.nomeDoMetodoEstatico()

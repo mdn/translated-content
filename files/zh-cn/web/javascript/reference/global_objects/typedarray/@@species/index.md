@@ -12,7 +12,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ```plain
 TypedArray[Symbol.species]
 
-其中TypedArray是下列类型之一：
+其中 TypedArray 是下列类型之一：
 
 Int8Array
 Uint8Array
@@ -27,7 +27,7 @@ Float64Array
 
 ## 描述
 
-`species` 访问器属性返回[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)对象的构造器。 子类的构造器可能会覆盖它来修改构造器的赋值。
+`species` 访问器属性返回[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)对象的构造器。子类的构造器可能会覆盖它来修改构造器的赋值。
 
 ## 示例
 

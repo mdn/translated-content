@@ -2,6 +2,7 @@
 title: CSS 값 과 단위
 slug: Learn/CSS/Building_blocks/Values_and_units
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
 CSS 에 사용된 모든 속성에는 해당 속성에 허용되는 값 이 있으며, MDN 의 속성 페이지를 보면 특성 속성에 유효한 값을 이해하는 데 도움이 됩니다. 이 레슨에서는 가장 일반적인 값 과 사용 단위를 살펴 보겠습니다.
@@ -63,11 +64,11 @@ CSS 값은 허용가능한 하위값 모음을 정의하는 방법입니다. 즉
 
 CSS 에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니다. 다음은 모두 숫자로 분류됩니다:
 
-| 데이터 형식                                      | 설명                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/en-US/docs/Web/CSS/integer)       | `<integer>` 은 `1024` 또는`-55` 와 같은 정수입니다.                                                                                                                                                                                                                                                                                                            |
-| [`<number>`](/en-US/docs/Web/CSS/number)         | `<number>` 는 10진수를 나타냅니다 — 소수점 이하의 소수 자릿수 (예: `0.255`, `128` 또는 `-1.2`) 가 있을 수도 있고 없을 수도 있습니다.                                                                                                                                                                                                                           |
-| `<dimension>`                                    | `<dimension>` 은 예를 들어 `45deg`, `5s` 또는 `10px`. 과 같은 단위가 붙어있는 `<number>` 입니다. `<dimension>` 은 [`<length>`](/en-US/docs/Web/CSS/length), [`<angle>`](/en-US/docs/Web/CSS/angle), [`<time>`](/en-US/docs/Web/CSS/time) 및 [`<resolution>`](/en-US/docs/Web/CSS/resolution) 의 종류를 포함하는 카테고리입니다[.](/ko/docs/Web/CSS/resolution) |
+| 데이터 형식  | 설명     |
+| ---- | --- |
+| [`<integer>`](/ko/docs/Web/CSS/integer)       | `<integer>` 은 `1024` 또는`-55` 와 같은 정수입니다. |
+| [`<number>`](/ko/docs/Web/CSS/number)         | `<number>` 는 10진수를 나타냅니다 — 소수점 이하의 소수 자릿수 (예: `0.255`, `128` 또는 `-1.2`) 가 있을 수도 있고 없을 수도 있습니다.|
+| [`<dimension>`](/ko/docs/Web/CSS/dimension) | `<dimension>` 은 예를 들어 `45deg`, `5s` 또는 `10px`. 과 같은 단위가 붙어있는 `<number>` 입니다. `<dimension>` 은 [`<length>`](/ko/docs/Web/CSS/length), [`<angle>`](/ko/docs/Web/CSS/angle), [`<time>`](/ko/docs/Web/CSS/time) 및 [`<resolution>`](/ko/docs/Web/CSS/resolution) 의 종류를 포함하는 카테고리입니다[.](/ko/docs/Web/CSS/resolution) |
 | [`<percentage>`](/en-US/docs/Web/CSS/percentage) | `<percentage>` 는 다른 값의 일부, 예를 들어 `50%` 를 나타냅니다. 백분율 값은 항상 다른 수량을 기준으로 합니다. 예를 들어 요소의 길이는 부모 요소의 길이를 기준으로 합니다.                                                                                                                                                                                     |
 
 ### 길이
@@ -136,7 +137,7 @@ HTML 은 중첩된 목록의 집합니다 — 총 3개의 목록이 있으며 �
 
 ### 백분율
 
-많은 경우 백분율은 길이와 같은 방식으로 처리됩니다. 백분율이 있는 것은 항상 다른 값에 상대적으로 설정된다는 것입니다. 예를 들어, 요소의 `font-size` 를 백분율로 설정하면요소 무보의 글꼴 크기에 대한 백분율이 됩니다. `width` 값에 백분율을 사용하면, 부모 너비의 백분율이 됩니다.
+많은 경우 백분율은 길이와 같은 방식으로 처리됩니다. 백분율이 있는 것은 항상 다른 값에 상대적으로 설정된다는 것입니다. 예를 들어, 요소의 `font-size` 를 백분율로 설정하면요소 부모의 글꼴 크기에 대한 백분율이 됩니다. `width` 값에 백분율을 사용하면, 부모 너비의 백분율이 됩니다.
 
 아래 예제에서 두 개의 백분율 크기 박스와 두 개의 픽셀 크기 박스는 동일한 class 이름을 갖습니다. 두 세트의 너비는 각각 200px 및 40% 입니다.
 

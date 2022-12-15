@@ -1,15 +1,8 @@
 ---
 title: BiquadFilterNode
 slug: Web/API/BiquadFilterNode
-tags:
-  - API
-  - BiquadFilterNode
-  - CompatibilidadeNavegadorCelular
-  - Interface
-  - Referencia
-  - Web Audio API
-translation_of: Web/API/BiquadFilterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 A interface `BiquadFilterNode` representa um filtro simples de ordem baixa, e é criada utilizando o método {{ domxref("AudioContext.createBiquadFilter()") }} . É o {{domxref("AudioNode")}} que pode representar diferentes tipos de filtros, dispositivo de controle de timbre, e equalizadores gráficos. Um `BiquadFilterNode` sempre tem exatamente uma entrada e uma saída.
@@ -68,8 +61,8 @@ _Herda as propriedades de seu pai,_ _{{domxref("AudioNode")}}_.
     | `lowshelf`  | Filtro lowshelf padrão de segunda ordem. Frequências menores que a frequência recebem um aumento, ou uma atenuação; frequências maiores não sofrem alterações.                                                                                                                               | O limite superior das frequênicas recebe um aumento ou atenuação.                                                                                                                  | _Não utilizado_                                                                                                               | O aumento, em dB, para ser aplicado; se negativo, ele será uma atenuação. |
     | `highshelf` | Filtro highshelf padrão de segunda ordem. Frequências maiores que a frequência recebem aumento ou atenuação; frequências abaixo disso não sofrem alterações.                                                                                                                                 | O limite inferior de frequências recebe aumento ou uma atenuação.                                                                                                                  | _Não utilizado_                                                                                                               | O aumento, em dB, para ser aplicado; se negativo, ele será uma atenuação. |
     | `peaking`   | Frequências dentro da faixa de frequencias recebem aumento ou atenuação; frequências fora da faixa não sofrem alterações.                                                                                                                                                                    | O meio da faixa de frequência recebe um aumento ou uma atenuação.                                                                                                                  | Controla a largura da banda de frequência. Quanto maior o valor `Q`, menor a frequência de banda.                             | O aumento, em dB, para ser aplicado; se negativo, ele será uma atenuação. |
-    | `notch`     | Filtro [notch](http://en.wikipedia.org/wiki/Band-stop_filter "/en-US/docs/") padrão, também chamado de filtro _band-stop_ ou _band-rejection_. É o oposto do filtro de de bandpass: frequências fora da faixa de frequências atribuída passam; frequências de dentro da faixa são atenuadas. | O centro de alcance de frequências.                                                                                                                                                | Controla a largura da banda de frequência. Quanto maior o valor `Q`, menor a frequência de banda.                             | _Não utilizado_                                                           |
-    | `allpass`   | Filtro [allpass](http://en.wikipedia.org/wiki/All-pass_filter#Digital_Implementation "/en-US/docs/") padrão de segunda ordem. Permite que todas as frequências passem, porém altera a relação de fase entre as diversas frequências.                                                         | A frequência com o máximo [group delay](http://en.wikipedia.org/wiki/Group_delay_and_phase_delay "/en-US/docs/"), ou seja, a frequência onde o centro da fase de transição ocorre. | Controla o quão apurada a transição é na frequência média. Quanto maior este parâmetro, mais apurada e ampla será a transição | _Não utilizado_                                                           |
+    | `notch`     | Filtro [notch](http://en.wikipedia.org/wiki/Band-stop_filter) padrão, também chamado de filtro _band-stop_ ou _band-rejection_. É o oposto do filtro de de bandpass: frequências fora da faixa de frequências atribuída passam; frequências de dentro da faixa são atenuadas. | O centro de alcance de frequências.                                                                                                                                                | Controla a largura da banda de frequência. Quanto maior o valor `Q`, menor a frequência de banda.                             | _Não utilizado_                                                           |
+    | `allpass`   | Filtro [allpass](http://en.wikipedia.org/wiki/All-pass_filter#Digital_Implementation) padrão de segunda ordem. Permite que todas as frequências passem, porém altera a relação de fase entre as diversas frequências.                                                         | A frequência com o máximo [group delay](http://en.wikipedia.org/wiki/Group_delay_and_phase_delay), ou seja, a frequência onde o centro da fase de transição ocorre. | Controla o quão apurada a transição é na frequência média. Quanto maior este parâmetro, mais apurada e ampla será a transição | _Não utilizado_                                                           |
 
 ## Métodos
 
@@ -80,7 +73,7 @@ _Herda os métodos de seu pai,_ _{{domxref("AudioNode")}}_.
 
 ## Exemplo
 
-{{page("/en-US/docs/Web/API/AudioContext.createBiquadFilter","Example")}}
+{{page("/pt-BR/docs/Web/API/AudioContext.createBiquadFilter","Example")}}
 
 ## Especificações
 

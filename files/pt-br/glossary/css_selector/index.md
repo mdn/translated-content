@@ -1,9 +1,9 @@
 ---
 title: Selector (CSS)
 slug: Glossary/CSS_Selector
-translation_of: Glossary/CSS_Selector
 original_slug: Glossario/CSS_Selector
 ---
+
 O **seletor CSS** é parte da regra do CSS que lhe permite selecionar qual elemento(s) vai receber o estilo pela regra. Por exemplo:
 
 ```
@@ -24,7 +24,7 @@ p {
 
 Nessa primeira regra do CSS, eu estou selecionando o elemento da div estilizando-a colorindo o texto para verde. Na segunda regra do CSS, eu estou selecionando o elemento "p" e estilizando-a colorindo o texto para vermelho. Aqui estão os resultados:
 
-![CSS selector coding results](https://mdn.mozillademos.org/files/13941/cssSelectorMDNGlossary.jpg)
+![CSS selector coding results](cssselectormdnglossary.jpg)
 
 ## Aprenda mais
 
@@ -32,11 +32,11 @@ Nessa primeira regra do CSS, eu estou selecionando o elemento da div estilizando
 
 - Seletores básicos
 
-  - [Tipos de seletores](/pt-BR/docs/Web/CSS/Type_selectors)` elementname`
+  - [Tipos de seletores](/pt-BR/docs/Web/CSS/Type_selectors) `elementname`
   - [Classes seletoras](/pt-BR/docs/Web/CSS/Class_selectors) `.classname`
   - [ID seletores](/pt-BR/docs/Web/CSS/ID_selectors) `#idname`
-  - [Seletores universais](/pt-BR/docs/Web/CSS/Universal_selectors)` * ns|* *|*`
-  - [Seletores de atributos](/pt-BR/docs/Web/CSS/Attribute_selectors)` [attr=value]`
+  - [Seletores universais](/pt-BR/docs/Web/CSS/Universal_selectors) `* ns|* *|*`
+  - [Seletores de atributos](/pt-BR/docs/Web/CSS/Attribute_selectors) `[attr=value]`
   - `Seletores de estado a:active, a:visited`
 
 - Combinadores

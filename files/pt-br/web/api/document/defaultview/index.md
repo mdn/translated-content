@@ -1,13 +1,13 @@
 ---
 title: Document.defaultView
 slug: Web/API/Document/defaultView
-translation_of: Web/API/Document/defaultView
 ---
+
 {{ ApiRef() }}
 
 ## Sumário
 
-Em navegadores, retorna o objeto [window](/pt-BR/docs/DOM/window "DOM/window") associado ao documento ou `null` se não houver.
+Em navegadores, retorna o objeto [window](/pt-BR/docs/DOM/window) associado ao documento ou `null` se não houver.
 
 ## Sintaxe
 
@@ -23,6 +23,6 @@ De acordo com o [quirksmode](http://www.quirksmode.org/dom/w3c_html.html), `defa
 
 ## Especificação
 
-- [HTML5: defaultView](/pt-BR/docs/HTML/HTML5 "HTML/HTML5")
-- [DOM Level 2 Views: defaultView](http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView)
-- [DOM Level 3 Views](http://www.w3.org/TR/DOM-Level-3-Views/) (Apenas desenvolvido para o Working Group Note e não implementado)
+- [HTML5: defaultView](/pt-BR/docs/HTML/HTML5)
+- [DOM Level 2 Views: defaultView](https://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-DocumentView-defaultView)
+- [DOM Level 3 Views](https://www.w3.org/TR/DOM-Level-3-Views/) (Apenas desenvolvido para o Working Group Note e não implementado)

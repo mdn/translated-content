@@ -2,9 +2,10 @@
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 ---
+
 **CSSStyleSheet.insertRule()** メソッドは、新しい [CSS 規則](/ja/docs/Web/API/CSSRule)を[現在のスタイルシート](/ja/docs/Web/API/CSSStyleSheet)に挿入しますが、いくつかの[制限](#Restrictions)があります。
 
-> **Note:** **メモ:** **insertRule()** は {{domxref("CSSStyleSheet")}} の排他的なメソッドですが、実際には規則を `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules`、内部的には {{domxref("CSSRuleList")}} に挿入します。
+> **メモ:** **insertRule()** は {{domxref("CSSStyleSheet")}} の排他的なメソッドですが、実際には規則を `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules`、内部的には {{domxref("CSSRuleList")}} に挿入します。
 
 ## 構文
 
@@ -102,10 +103,7 @@ function addStylesheetRules (rules) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('CSSOM', '#dom-cssstylesheet-insertrule', 'CSSStyleSheet.insertRule')}}                     | {{Spec2('CSSOM')}}         | {{SpecName('DOM2 Style')}} からの変更なし。 |
-| {{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleSheet-insertRule', 'CSSStyleSheet.insertRule')}} | {{Spec2('DOM2 Style')}} | 初回定義                                              |
+{{Specifications}}
 
 ## ポリフィル
 

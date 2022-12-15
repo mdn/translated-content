@@ -1,12 +1,9 @@
 ---
 title: Formatando texto
 slug: Web/JavaScript/Guide/Text_formatting
-tags:
-  - Guía
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Text_formatting
 original_slug: Web/JavaScript/Guide/Formatando_texto
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
 
 Esse capítulo introduz como trabalhar com strings e texto em JavaScript.
@@ -65,7 +62,7 @@ console.log(s); // Exibe no console: { '0': 'f', '1': 'o', '2': 'o'}
 typeof s; // Retorna 'object'
 ```
 
-Você pode chamar qualquer um dos métodos do objeto `String` em cima de uma string literal — JavaScript automaticamente converte a string literal em um objeto `String `temporário, chama o método, e então descarta o objeto `String` temporário. Você pode também usar a propriedade `String.length` com uma string literal.
+Você pode chamar qualquer um dos métodos do objeto `String` em cima de uma string literal — JavaScript automaticamente converte a string literal em um objeto `String` temporário, chama o método, e então descarta o objeto `String` temporário. Você pode também usar a propriedade `String.length` com uma string literal.
 
 Você deve usar strings literais a menos que você realmente precise usar um objeto `String`, pois objetos `String` podem ter comportamentos inesperados. Por exemplo:
 
@@ -83,7 +80,7 @@ var minhaString = "Olá, mundo!";
 var x = minhaString.length;
 ```
 
-Um objeto `String `possui uma variedade de métodos: por exemplo aqueles que retornam uma variação da própria string, como `substring` e `toUpperCase`.
+Um objeto `String` possui uma variedade de métodos: por exemplo aqueles que retornam uma variação da própria string, como `substring` e `toUpperCase`.
 
 A tabela a seguir lista os métodos de objetos {{jsxref("String")}}.
 
@@ -94,7 +91,7 @@ A tabela a seguir lista os métodos de objetos {{jsxref("String")}}.
 | {{jsxref("String.startsWith", "startsWith")}}, {{jsxref("String.endsWith", "endsWith")}}, {{jsxref("String.includes", "includes")}} | Retorna se uma string começa, termina ou contém uma outra string específica.                                                                     |
 | {{jsxref("String.concat", "concat")}}                                                                                                                                 | Concatena o texto de duas strings e retorna uma nova string.                                                                                     |
 | {{jsxref("String.fromCharCode", "fromCharCode")}}, {{jsxref("String.fromCodePoint", "fromCodePoint")}}                                           | Cria uma string a partir de uma sequência específica de valores Unicode. Esse é um método da classe String, não de uma instância do tipo String. |
-| {{jsxref("String.split", "split")}}                                                                                                                                 | Separa um objeto `String `em um array de strings, separando a string em substrings.                                                              |
+| {{jsxref("String.split", "split")}}                                                                                                                                 | Separa um objeto `String` em um array de strings, separando a string em substrings.                                                              |
 | {{jsxref("String.slice", "slice")}}                                                                                                                                 | Extrai uma seção de uma string e retorna uma nova string.                                                                                        |
 | {{jsxref("String.substring", "substring")}}, {{jsxref("String.substr", "substr")}}                                                                       | Retorna um subconjunto específico de uma string, definindo os índices inicial e final, ou definindo um índice e um tamanho.                      |
 | {{jsxref("String.match", "match")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}}                         | Trabalha com expressões regulares.                                                                                                               |

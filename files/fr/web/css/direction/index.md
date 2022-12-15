@@ -41,9 +41,13 @@ direction: unset;
 
 Afin que la propriété `direction` ait un effet sur les éléments en ligne, il faut que la valeur de la propriété {{cssxref("unicode-bidi")}} soit `embed` ou `override`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -71,16 +75,11 @@ blockquote {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Writing Modes', '#direction', 'direction')}} | {{Spec2('CSS3 Writing Modes')}} | Aucune modification. |
-| {{SpecName('CSS2.1', 'visuren.html#direction', 'direction')}} | {{Spec2('CSS2.1')}}                 | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.direction")}}
+{{Compat}}
 
 ## Voir aussi
 

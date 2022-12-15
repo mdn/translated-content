@@ -15,7 +15,7 @@ Beacon API 的示例用例是记录活动并向服务器发送分析数据。
 
 `Beacon` 接口满足了分析和诊断代码的需要，这些代码通常会尝试在卸载文档之前将数据发送到 web 服务器。发送数据的任何过早时机都可能导致错失收集数据的机会。但是，确保在卸载文档期间发送数据是开发人员难以做到的。
 
-用户代理通常会忽略卸载文档处理程序中的异步 {{domxref("XMLHttpRequest","XMLHttpRequests")}} 请求。若要解决此问题，为了分析和诊断代码，通常会在 {{event("unload")}} 事件或 {{event("beforeunload")}} 事件中创建同步 {{domxref("XMLHttpRequest")}} 请求以提交数据。同步 {{domxref("XMLHttpRequest")}} 请求强制浏览器延迟卸载文档，并使下一个页面跳转看起来较慢。下一页面没有任何办法来避免这种页面加载性能不佳的感觉。
+用户代理通常会忽略卸载文档处理程序中的异步 {{domxref("XMLHttpRequest","XMLHttpRequests")}} 请求。若要解决此问题，为了分析和诊断代码，通常会在 [`unload`](/zh-CN/docs/Web/API/Window/unload_event) 事件或 [`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event) 事件中创建同步 {{domxref("XMLHttpRequest")}} 请求以提交数据。同步 {{domxref("XMLHttpRequest")}} 请求强制浏览器延迟卸载文档，并使下一个页面跳转看起来较慢。下一页面没有任何办法来避免这种页面加载性能不佳的感觉。
 
 其他技术也可以用来确保提交数据。其中一种技术是通过创建 Image 元素并在卸载文档处理程序中设置其 `src` 属性来延迟卸载以提交数据。由于大多数用户代理会延迟文档卸载，以完成挂起的图片加载，因此可以在卸载过程中提交数据。另一种方法是在卸载处理程序中创建一个无操作循环，花费数秒以延迟卸载并将数据提交到服务器。
 

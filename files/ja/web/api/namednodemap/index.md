@@ -4,13 +4,14 @@ slug: Web/API/NamedNodeMap
 l10n:
   sourceCommit: a33268ca8d264ca3d504f65fdf11ce38a7bcb9bd
 ---
+
 {{APIRef("DOM")}}
 
 **`NamedNodeMap`** インターフェイスは {{domxref("Attr")}} （属性）オブジェクトの集合を表します。 `NamedNodeMap` の中のオブジェクトは {{domxref("NodeList")}} の場合とは異なり、特定の順序で並んでいるわけではありませんが、配列のように添字でアクセスすることもできます。
 
 `NamedNodeMap` オブジェクトは**生きて**おり、内部または他の場所でその内容に変更が加えられた場合、自動的に更新されます。
 
-> **Note:** `NamedNodeMap` と呼ばれていますが、このインターフェイスが扱うのは {{domxref("Node")}} オブジェクトではなく、{{domxref("Attr")}} オブジェクトであり、これは {{domxref("Node")}} オブジェクトの特殊化されたクラスです。
+> **メモ:** `NamedNodeMap` と呼ばれていますが、このインターフェイスが扱うのは {{domxref("Node")}} オブジェクトではなく、{{domxref("Attr")}} オブジェクトであり、これは {{domxref("Node")}} オブジェクトの特殊化されたクラスです。
 
 ## プロパティ
 

@@ -125,7 +125,7 @@ slug: Web/HTML/Link_types
       <td><code>canonical</code></td>
       <td>
         <p>
-          来自维基百科:
+          来自维基百科：
           <a href="https://en.wikipedia.org/wiki/Canonical_link_element"
             >Canonical_link_element</a
           ><br />规范链接元素是一个 HTML 元素，它通过指定 web
@@ -199,7 +199,7 @@ slug: Web/HTML/Link_types
           属性允许浏览器选择其上下文中最合适的图标。如果多种资源符合条件，浏览器会选择最后一个。
         </p>
         <p>
-          在树型序列中，由于这些属性只是提示，并且这这些资源在进一步检查时可能是不适合的，浏览器可能选择另一个适合的。<br /><br /><strong
+          在树型序列中，由于这些属性只是提示，并且这些资源在进一步检查时可能是不适合的，浏览器可能选择另一个适合的。<br /><br /><strong
             >Note:</strong
           >
           苹果 iOS 不支持此链接类型，也不支持
@@ -390,7 +390,7 @@ slug: Web/HTML/Link_types
       <td><code>pingback</code><br /></td>
       <td>
         <p>
-          定义一个外部资源 URI，以便在对该网页发表评论或引用时调用。 在
+          定义一个外部资源 URI，以便在对该网页发表评论或引用时调用。在
           <a href="http://www.hixie.ch/specs/pingback/pingback">Pingback 1.0</a>
           规范中定义了用于进行此类调用的协议。
         </p>
@@ -421,7 +421,7 @@ slug: Web/HTML/Link_types
       <td>
         提示浏览器提前加载链接的资源，因为它可能会被用户请求。
         <p>
-          建议浏览器提前获取链接的资源，因为它很可能会被用户请求。 从 Firefox 44
+          建议浏览器提前获取链接的资源，因为它很可能会被用户请求。从 Firefox 44
           开始，考虑了{{HTMLAttrxRef("crossorigin", "link")}}属性的值，从而可以进行匿名预取。
         </p>
         <p>
@@ -507,7 +507,7 @@ slug: Web/HTML/Link_types
           <a
             href="https://code.google.com/archive/p/shortlink/wikis/Specification.wiki"
             ><code>shortlink</code> 规范</a
-          ><br />来自维基百科:
+          ><br />来自维基百科：
           <a href="https://en.wikipedia.org/wiki/URL_shortening"
             >URL shortening</a
           ><br />一些网站创建短链接，使通过即时消息共享链接更容易。

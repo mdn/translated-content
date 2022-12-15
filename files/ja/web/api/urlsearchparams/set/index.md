@@ -2,6 +2,7 @@
 title: URLSearchParams.set()
 slug: Web/API/URLSearchParams/set
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`set()`** メソッドは、指定された検索パラメーターに関連付けられた値を指定された値に設定します。 一致する値が複数ある場合、このメソッドは他の値を削除します。 検索パラメーターが存在しない場合、このメソッドはそれを作成します。
@@ -94,9 +95,7 @@ console.info( url, url.toString() )
 
 ## 仕様
 
-| 仕様                                                                         | 状態                 | コメント |
-| ---------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-urlsearchparams-set', "set()")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

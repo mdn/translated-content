@@ -34,9 +34,9 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
-{{Compat("api.Navigator.permissions")}}
+{{Compat}}
 
 ## 参见
 

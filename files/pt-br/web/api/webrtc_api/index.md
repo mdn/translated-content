@@ -1,20 +1,8 @@
 ---
 title: WebRTC API
 slug: Web/API/WebRTC_API
-tags:
-  - API
-  - Audio
-  - Landing
-  - Media
-  - NeedsTranslation
-  - Networking
-  - TopicStub
-  - Video
-  - WebRTC
-  - WebRTC API
-  - streaming
-translation_of: Web/API/WebRTC_API
 ---
+
 {{APIRef("WebRTC")}}
 
 **WebRTC** (Web Real-Time Communications) é uma tecnologia que permite aplicativos e sites da Web a capturarem e opcionalmente transmitirem mídia de áudio e/ou vídeo, assim como trocar informação arbitrária entre navegadores sem a necessidade de um intermediador. O conjunto de padrões que abrangem WebRTC possibilita o compartilhamento de informação e a realização de teleconferência peer-to-peer, dispensando a instalação de _plug-ins_ ou quaisquer softwares de terceiros.
@@ -48,7 +36,7 @@ Estas interfaces são usadas para configurar, abrir e gerenciar conexões WebRTC
 - {{domxref("RTCDataChannelEvent")}}
   - : Represents events that occur while attaching a {{domxref("RTCDataChannel")}} to a {{domxref("RTCPeerConnection")}}. The only event sent with this interface is {{event("datachannel")}}.
 - {{domxref("RTCSessionDescription")}}
-  - : Represents the parameters of a session. Each `RTCSessionDescription` consists of a description [`type`](/pt-BR/docs/Web/API/RTCSessionDescription/type "The property RTCSessionDescription.type is an enum of type RTCSdpType describing the description's type.") indicating which part of the offer/answer negotiation process it describes and of the [SDP](/pt-BR/docs/Glossary/SDP "SDP: SDP (Session Description Protocol) is the standard describing a peer-to-peer connection. SDP contains the codec, source address, and timing information of audio and video.") descriptor of the session.
+  - : Represents the parameters of a session. Each `RTCSessionDescription` consists of a description [`type`](/pt-BR/docs/Web/API/RTCSessionDescription/type) indicating which part of the offer/answer negotiation process it describes and of the [SDP](/pt-BR/docs/Glossary/SDP) descriptor of the session.
 - {{domxref("RTCStatsReport")}}
   - : Provides information detailing statistics for a connection or for an individual track on the connection; the report can be obtained by calling {{domxref("RTCPeerConnection.getStats()")}}.
 - {{domxref("RTCIceCandidate")}}

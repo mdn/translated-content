@@ -38,7 +38,7 @@ HTML 优雅明了，但要是出了错，你会不会一头雾水呢，本节将
 
 写代码通常都是按部就班的，但是一旦犯了错，可怕的代码问题就出现了：或彻底罢工，或得不到正确结果。比如，以下窗口显示了：用 [Rust](https://www.rust-lang.org/) 编写的一个小程序在 {{glossary("compile", "编译")}} 时得到的出错信息：
 
-![一个控制台窗口，显示了一个rust工程编译时的出错信息。（println宏少一个引号）](error-message.png)这里错误信息比较容易理解："unterminated double quote string"，即"双引号字符串未闭合"。错误列表中可以看到 `println!(Hello, world!");` 这里少一个双引号，然而当程序规模变大时，错误信息也会变得更复杂和更难解释，同时对于 Rust 新手而言，上述提示也是找不到北。
+![一个控制台窗口，显示了一个 rust 工程编译时的出错信息。（println 宏少一个引号）](error-message.png)这里错误信息比较容易理解："unterminated double quote string"，即"双引号字符串未闭合"。错误列表中可以看到 `println!(Hello, world!");` 这里少一个双引号，然而当程序规模变大时，错误信息也会变得更复杂和更难解释，同时对于 Rust 新手而言，上述提示也是找不到北。
 
 调试其实没有那么可怕，写代码和调试的关键其实是：熟悉语言本身和相关工具。
 
@@ -62,7 +62,7 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 现在来研究 HTML 代码的宽松特性。
 
 1. 首先，下载并保存 [debug-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html)。代码中故意留了一些错误，以便探究（这里的 HTML 标记写成了**糟糕的格式**，与**良好的格式**相反）。
-2. 下一步，在浏览器中打开，可以看到：![一个简单的HTML文档，但其中包含一些常见的HTML错误，比如：未关闭的元素、嵌套混乱的元素、未关闭的属性。](badly-formed-html.png)
+2. 下一步，在浏览器中打开，可以看到：![一个简单的 HTML 文档，但其中包含一些常见的 HTML 错误，比如：未关闭的元素、嵌套混乱的元素、未关闭的属性。](badly-formed-html.png)
 3. 看起来糟透了，我们到源代码中寻找原因（只列出 `body` 部分）：
 
     ```html
@@ -87,7 +87,7 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
     - {{htmlattrxref("href","a")}} 属性缺少了一个双引号。从而导致了一个最严重的问题：整个链接完全没有渲染出来。
 
 5. 下面暂时忽略源代码中的标记，先看一下浏览器渲染出的标记。打开浏览器的开发者工具。如果不太熟悉，请先阅读 [浏览器开发工具概览](/zh-CN/docs/Learn/Discover_browser_developer_tools)。
-6. 在 DOM 查看器中可以看到渲染的标记：![Firefox控制台中的HTML检查器，可标亮元素，（图中标亮了“什么使得HTML出错？”）可以看到浏览器自动补齐了</p>关闭标签](html-inspector.png)
+6. 在 DOM 查看器中可以看到渲染的标记：![Firefox 控制台中的 HTML 检查器，可标亮元素，（图中标亮了“什么使得 HTML 出错？”）可以看到浏览器自动补齐了</p>关闭标签](html-inspector.png)
 7. 通过 DOM 查看器可以清楚地看到，浏览器已经尝试修补代码错误（我们尝试了 Firefox，其他现代浏览器也应给出同样结果）：
 
     - 段落和列表元素加上了关闭标签。
@@ -130,7 +130,7 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 
 将返回一个包含错误和其它信息的列表。
 
-![W3C验证工具为本示例给出的验证结果。](validation-results.png)
+![W3C 验证工具为本示例给出的验证结果。](validation-results.png)
 
 #### 错误信息分析
 
@@ -154,7 +154,7 @@ HTML 本身不容易出现语法错误，因为浏览器是以宽松模式运行
 
 所有错误都修复之后会得到以下输出：
 
-![W3C站点上HTML通过验证的横幅](valid-html-banner.png)
+![W3C 站点上 HTML 通过验证的横幅](valid-html-banner.png)
 
 ## 小结
 

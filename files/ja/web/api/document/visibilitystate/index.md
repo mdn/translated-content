@@ -2,6 +2,7 @@
 title: Document.visibilityState
 slug: Web/API/Document/visibilityState
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.visibilityState`** 読み取り専用プロパティは、文書 ({{domxref('document')}}) の可視性、つまりこの要素が現在表示されているかのコンテキストを返します。 文書がバックグラウンドにあるのか、非表示のタブにあるのか、プリレンダリングのためにのみ読み込まれるのかを知ることは有用です。 可能な値は次のとおりです。
@@ -34,9 +35,7 @@ document.addEventListener("visibilitychange", function() {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                   | 状態                                         | 備考     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('Page Visibility API','#visibility-states-and-the-visibilitystate-enum', 'Document.visibilityState')}} | {{Spec2('Page Visibility API')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

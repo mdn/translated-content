@@ -1,8 +1,8 @@
 ---
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
-translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
+
 {{JSRef}}
 
 O objeto **`TypeError`** representa um erro de quando um valor não é do tipo esperado.
@@ -39,11 +39,11 @@ O TypeError global não contém métodos por si só, no entanto, ele herda algun
 
 ### Propriedades
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Properties')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Properties')}}
 
 ### Métodos
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypeError/prototype', 'Methods')}}
 
 ## Exemplos
 

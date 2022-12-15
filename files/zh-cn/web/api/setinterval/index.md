@@ -7,8 +7,7 @@ slug: Web/API/setInterval
 
 {{domxref("Window")}} 和 {{domxref("Worker")}} 接口提供的 **`setInterval()`** 方法重复调用一个函数或执行一个代码片段，在每次调用之间具有固定的时间间隔。
 
-它返回一个 `interval ID`，该 ID 唯一地标识时间间隔，因此你可以稍后通过调用 {{domxref("clearInterval",
-  "clearInterval()")}} 来移除定时器。
+它返回一个 `interval ID`，该 ID 唯一地标识时间间隔，因此你可以稍后通过调用 {{domxref("clearInterval", "clearInterval()")}} 来移除定时器。
 
 ## 语法
 
@@ -27,7 +26,7 @@ var intervalID = setInterval(code, [delay]);
 - `delay`
   - : 是每次延迟的毫秒数（一秒等于 1000 毫秒），函数的每次调用会在该延迟之后发生。如果未指定，则其默认值为 0。参见下方的[延迟限制](#延迟限制)以了解详细的 `delay` 的取值范围。
 - `arg1, ..., argN` {{optional_inline}}
-  - : 当定时器过期的时候，将被传递给 _func_ 函数的附加参数。
+  - : 当计时结束的时候，将被传递给 _func_ 函数的附加参数。
 
 ### 返回值
 

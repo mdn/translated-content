@@ -1,8 +1,8 @@
 ---
 title: HTMLCollection
 slug: Web/API/HTMLCollection
-translation_of: Web/API/HTMLCollection
 ---
+
 {{APIRef("HTML DOM")}}
 
 A interface **`HTMLCollection`** representa uma coleção genérica (objeto array) de elementos (na ordem em que aparecem no documento) e oferece métodos e propriedades para selecioná-los da lista.
@@ -25,7 +25,7 @@ Uma coleção `HTMLCollection` de um HTML DOM está linkada com o documento; ela
 
 ## Uso no JavaScript
 
-`HTMLCollection `expõe seus membros diretamente como propriedades, tanto por nome quanto por índice. IDs HTML podem conter : e . como caracteres válidos, o que fará necessária a utilização de colchetes para acessar as propriedades. Atualmente HTMLCollection não reconhece IDs puramente numéricos, o que pode causar conflitos com acesso em formato array, apesar do HTML5 os permitir.
+`HTMLCollection` expõe seus membros diretamente como propriedades, tanto por nome quanto por índice. IDs HTML podem conter : e . como caracteres válidos, o que fará necessária a utilização de colchetes para acessar as propriedades. Atualmente HTMLCollection não reconhece IDs puramente numéricos, o que pode causar conflitos com acesso em formato array, apesar do HTML5 os permitir.
 
 Por exemplo, assumindo que há um elemento `<form>` no documento e seu `id` é `"myForm"`:
 
@@ -53,8 +53,8 @@ Diferentes browsers se comportam de maneira diferente quando um os mais elemento
 
 ## Especificações
 
-- [DOM Level 2 HTML, Section 1.4, Miscellaneous Object Definitions](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)
-- [DOM4: HTMLCollection](http://www.w3.org/TR/domcore/#interface-htmlcollection)
+- [DOM Level 2 HTML, Section 1.4, Miscellaneous Object Definitions](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75708506)
+- [DOM4: HTMLCollection](https://www.w3.org/TR/domcore/#interface-htmlcollection)
 
 ## Veja também
 

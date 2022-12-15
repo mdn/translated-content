@@ -23,7 +23,7 @@ let workerContainerInstance = navigator.serviceWorker;
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.serviceWorker")}}
+{{Compat}}
 
 ## 也可以看看
 

@@ -1,13 +1,8 @@
 ---
 title: void operator
 slug: Web/JavaScript/Reference/Operators/void
-tags:
-  - JavaScript
-  - Operador
-  - Operadores
-  - unário
-translation_of: Web/JavaScript/Reference/Operators/void
 ---
+
 {{jsSidebar("Operators")}}
 
 O **`operador void`** avalia a expressão dada e, em seguida, retorna {{jsxref("Global_Objects/undefined", "undefined")}}.
@@ -73,4 +68,4 @@ Note que no entanto o pseudo protocolo `javascript:` tem seu uso desencorajado p
 
 ## Veja também
 
-- [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+- [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined)

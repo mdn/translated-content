@@ -2,6 +2,7 @@
 title: VideoTrack.kind
 slug: Web/API/VideoTrack/kind
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`kind`** プロパティには、**{{domxref("VideoTrack")}}** に含まれる動画のカテゴリを示す文字列が含まれています。 この `kind` を使用して、特定のトラックを有効または無効にするシナリオを決定できます。 動画トラックで利用可能な kind の一覧については、[動画トラックの kind 文字列](#video_track_kind_strings)を参照してください。
@@ -37,9 +38,7 @@ var trackKind = VideoTrack.kind;
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', '#dom-videotrack-kind', 'VideoTrack: kind')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

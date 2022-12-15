@@ -3,14 +3,15 @@ title: React todo list 시작하기
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 여러분이 React로 개념 증명을 만드는, 곧 사용자가 원하는 작업을 추가, 편집, 그리고 삭제할 수 있으며, 작업을 삭제하지 않고 완료로 표시할 수도 있는 앱을 만드는 작업을 맡게 되었다고 가정해 보겠습니다. 이 기사는 기본 `App` 컴포넌트 구조와 스타일링을 설정하는 방법에 대해서 다루며, 여러분은 개별 컴포넌트 정의와 상호작용성을 배울 준비를 갖추게 될 겁니다.
 
-<div class="notecard note">
-<p class="summary"><strong>참고</strong>: 여러분의 코드를 우리의 것과 비교하고 싶다면 <a href="https://github.com/mdn/todo-react">todo-react repository</a>에서 최종적인 버전의 샘플 React 앱 코드를 확인해보세요. 실행 중인 라이브 버전은 <a href="https://mdn.github.io/todo-react-build/">https://mdn.github.io/todo-react-build/</a>에서 볼 수 있습니다.</p></div>
+> **참고:** 여러분의 코드를 우리의 것과 비교하고 싶다면 [todo-react repository](https://github.com/mdn/todo-react) 에서 최종적인 버전의 샘플 React 앱 코드를 확인해보세요. 실행 중인 라이브 버전은 <https://mdn.github.io/todo-react-build/> 에서 볼 수 있습니다.
+
 <table class="learn-box standard-table">
  <tbody>
   <tr>
@@ -218,7 +219,7 @@ function App(props) {
 >
 ```
 
-`role` 속성은 보조 기술이 태그가 나타내고 있는 요소의 종류가 무엇인지 설명하는 데 도움이 됩니다. `<ul>`은 기본적으로 리스트처럼 취급되지만, 우리가 추가할 스타일은 리스트의 기능성을 해칩니다. `role="list"`는 `<ul>` 요소가  "리스트"의 의미를 회복하도록 합니다. 이것이 왜 필요한지 알고 싶다면, [Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)을 참고하세요.
+`role` 속성은 보조 기술이 태그가 나타내고 있는 요소의 종류가 무엇인지 설명하는 데 도움이 됩니다. `<ul>`은 기본적으로 리스트처럼 취급되지만, 우리가 추가할 스타일은 리스트의 기능성을 해칩니다. `role="list"`는 `<ul>` 요소가 "리스트"의 의미를 회복하도록 합니다. 이것이 왜 필요한지 알고 싶다면, [Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)을 참고하세요.
 
 `aria-labelledby` 속성은 보조 기술에게 리스트 헤딩을 헤딩 아래의 리스트의 목적을 나타내는 라벨로 사용하고 있음을 알립니다. 이러한 연관을 만드는 것은 리스트가 더욱 정보가 많은 맥락을 가지게 하여, 스크린 리더 사용자가 리스트의 목적을 더 잘 이해할 수 있도록 합니다.
 

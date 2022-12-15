@@ -1,13 +1,8 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
-tags:
-  - Array
-  - ECMAScript6
-  - JavaScript
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
+
 {{JSRef}}
 
 O método **`Array.of()`** cria um nova instância de `Array` com um número variável de argumentos, independentemente do número ou do tipo dos argumentos.
@@ -32,8 +27,10 @@ Array.of(element0[, element1[, ...[, elementN]]])
 
 - `elementN`
   - : Elementos usados para criar o `array`.
-- ### Valor de retorno
-  - : Uma nova instância de {{jsxref("Array")}}.
+
+### Valor de retorno
+
+Uma nova instância de {{jsxref("Array")}}.
 
 ## Descrição
 

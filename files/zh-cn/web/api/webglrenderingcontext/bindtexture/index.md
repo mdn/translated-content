@@ -17,7 +17,7 @@ void gl.bindTexture(target, texture);
 
 - target
 
-  - : {{domxref("GLenum")}} 指定绑定点（目标）。 可能的值：
+  - : {{domxref("GLenum")}} 指定绑定点（目标）。可能的值：
 
     - `gl.TEXTURE_2D`: 二维纹理。
     - `gl.TEXTURE_CUBE_MAP`: 立方体映射纹理。
@@ -35,7 +35,7 @@ void gl.bindTexture(target, texture);
 
 ### 异常
 
-如果目标不是 gl.TEXTURE_2D ，gl.TEXTURE_CUBE_MAP，gl.TEXTURE_3D 或 gl.TEXTURE_2D_ARRAY ，则会抛出 gl.INVALID_ENUM 错误。
+如果目标不是 gl.TEXTURE_2D，gl.TEXTURE_CUBE_MAP，gl.TEXTURE_3D 或 gl.TEXTURE_2D_ARRAY，则会抛出 gl.INVALID_ENUM 错误。
 
 ## 示例
 

@@ -36,7 +36,7 @@ _固有のメソッドはありません。 インターフェイスである {{
 
 以下の {{domxref("Window")}} の `onXYZ` イベントハンドラープロパティも、 `window` オブジェクトをターゲットとした別名として利用可能です。しかし、これらの情報は `HTMLBodyElement` ではなく、 `window` オブジェクトで直接聞くことをお勧めします。
 
-> **Note:** `addEventListener()` を `HTMLBodyElement` に対して使用しても、以下に示す `onXYZ` イベントハンドラーを動作させることができません。代わりに {{domxref("window")}} オブジェクトのイベントを待ち受けしてください。
+> **メモ:** `addEventListener()` を `HTMLBodyElement` に対して使用しても、以下に示す `onXYZ` イベントハンドラーを動作させることができません。代わりに {{domxref("window")}} オブジェクトのイベントを待ち受けしてください。
 
 - {{domxref("window.afterprint_event", "HTMLBodyElement.onafterprint")}}
   - : 文書の印刷を開始した後、または印刷プレビューが閉じられた後に発行されます。

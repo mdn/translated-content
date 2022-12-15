@@ -26,7 +26,7 @@ new Uint32Array(buffer [, byteOffset [, length]]);
 - Uint32Array.length
   - : 固定值 (static) 属性，值为 3。使用 {{jsxref("TypedArray.prototype.length", "Uint32Array.prototype.length")}} 获得数组的真实长度（元素个数）。
 - {{jsxref("TypedArray.name", "Uint32Array.name")}}
-  - : 返回字符串类型的值，表示构造器的名字。`Uint32Array` 的返回值是: "Uint32Array"。
+  - : 返回字符串类型的值，表示构造器的名字。`Uint32Array` 的返回值是："Uint32Array"。
 - {{jsxref("TypedArray.prototype", "Uint32Array.prototype")}}
   - : _TypedArray_ 对象的原型链。
 
@@ -44,9 +44,9 @@ new Uint32Array(buffer [, byteOffset [, length]]);
 ### 属性
 
 - `Uint32Array.prototype.constructor`
-  - : 返回创建实例原型的函数。 默认返回 `Uint32Array` 的构造器。
+  - : 返回创建实例原型的函数。默认返回 `Uint32Array` 的构造器。
 - {{jsxref("TypedArray.prototype.buffer", "Uint32Array.prototype.buffer")}} {{readonlyInline}}
-  - : 返回 `Uint32Array`引用的 {{jsxref("ArrayBuffer")}}。 由于构造时已固定，所以是**只读的**。
+  - : 返回 `Uint32Array`引用的 {{jsxref("ArrayBuffer")}}。由于构造时已固定，所以是**只读的**。
 - {{jsxref("TypedArray.prototype.byteLength", "Uint32Array.prototype.byteLength")}} {{readonlyInline}}
   - : 返回从其 {{jsxref("ArrayBuffer")}} 开始的 `Uint32Array` 字节长度。由于构造时已固定，所以是**只读的**。
 - {{jsxref("TypedArray.prototype.byteOffset", "Uint32Array.prototype.byteOffset")}} {{readonlyInline}}

@@ -2,6 +2,7 @@
 title: RTCDataChannel
 slug: Web/API/RTCDataChannel
 ---
+
 {{APIRef("WebRTC")}}
 
 **`RTCDataChannel`** インターフェイスは、2 つのピア間で双方向に任意のデータを転送するためのネットワークチャンネルを表現します。すべてのデータチャンネルは {{domxref("RTCPeerConnection")}} に関連付けられており、それぞれのぴあコネクションは理論上、最大 65,534 個のデータチャンネルを持つことができます (実際の上限はブラウザーごとに異なります)。
@@ -81,9 +82,7 @@ dc.onclose = function () {
 
 ## 仕様
 
-| Specification                                                                                    | Status                           | Comment                |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ---------------------- |
-| {{ SpecName('WebRTC 1.0', '#idl-def-RTCDataChannel', 'RTCDataChannel') }} | {{ Spec2('WebRTC 1.0') }} | Initial specification. |
+{{Specifications}}
 
 ## ブラウザー互換性
 

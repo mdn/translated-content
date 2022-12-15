@@ -7,7 +7,7 @@ slug: Web/API/Window/back
 
 ## 总结
 
-跳转窗口到 history 中的前一个地址， 这曾是 Gecko 的方法。请使用标准的 history.back 替代它。
+跳转窗口到 history 中的前一个地址，这曾是 Gecko 的方法。请使用标准的 history.back 替代它。
 
 ## Syntax
 

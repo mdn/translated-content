@@ -191,7 +191,7 @@ Le répertoire **`public`** contient des fichiers qui seront lus par votre navig
 
 Le répertoire `public` sera également déployé lorsque vous créerez une version de production pour votre application. Nous n'aborderons pas le déploiement dans ce tutoriel, mais vous devriez pouvoir utiliser une solution similaire à celle décrite dans notre tutoriel [Déployer notre application](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
 
-Le fichier `package.json` contient des informations sur notre projet que Node.js/npm utilise pour le garder organisé. Ce fichier n'est pas unique aux applications React&nbsp;; create-react-app ne fait qu'utiliser ce mécanisme. Vous n'avez pas du tout besoin de comprendre ce fichier pour terminer ce didacticiel. Cependant, si vous souhaitez en savoir plus, vous pouvez lire [Qu'est-ce que le fichier \`package.json\`&nbsp;? sur NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)&nbsp;; on en parle aussi dans notre tutoriel [Les bases de la gestion des paquets](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
+Le fichier `package.json` contient des informations sur notre projet que Node.js/npm utilise pour le garder organisé. Ce fichier n'est pas unique aux applications React&nbsp;; create-react-app ne fait qu'utiliser ce mécanisme. Vous n'avez pas du tout besoin de comprendre ce fichier pour terminer ce didacticiel. Cependant, si vous souhaitez en savoir plus, vous pouvez lire [Qu'est-ce que le fichier `package.json`&nbsp;? sur NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)&nbsp;; on en parle aussi dans notre tutoriel [Les bases de la gestion des paquets](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
 
 ## Explorer notre premier composant React — `<App/>`
 
@@ -477,7 +477,7 @@ Dans React&nbsp;:
 ## Dans ce module
 
 - [Introduction aux <i lang="en">frameworks</i> côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction)
-- [Fonctionnalités principales des  <i lang="en">frameworks</i>](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
+- [Fonctionnalités principales des <i lang="en">frameworks</i>](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
   - [Démarrer avec React](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)

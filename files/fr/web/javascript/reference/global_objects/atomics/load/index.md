@@ -52,13 +52,11 @@ Atomics.load(ta, 0); // 12
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires                     |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.load', 'Atomics.load')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.load")}}
+{{Compat}}
 
 ## Voir aussi
 

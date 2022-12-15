@@ -1,8 +1,8 @@
 ---
 title: footer (rodapé)
 slug: Web/HTML/Element/footer
-translation_of: Web/HTML/Element/footer
 ---
+
 ### Resumo
 
 O elemento HTML de Rodapé (\<footer>) representa um rodapé para o seu sectioning content (conteúdo de seção) mais próximo ou [sectioning root](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root) elemento (ou seja, seu parente mais próximo {{HTMLElement ("article")}}, {{HTMLElement ("aside")}}, {{HTMLElement ("nav")}}, {{HTMLElement ("section")}}, {{HTMLElement ("blockquote")}}, {{HTMLElement ("body")}}, {{HTMLElement ("details" )}}, {{HTMLElement ("fieldset")}}, {{HTMLElement ("figure")}}, {{HTMLElement ("td")}}). Normalmente um rodapé contém informações sobre o autor da seção de dados, direitos autorais ou links para documentos relacionados.
@@ -26,7 +26,7 @@ Este elemento não tem outros atributos que os [global attributes](/pt-BR/docs/H
 
 ## DOM Interface
 
-Este elemento implementa a interface [`HTMLElement`](/en-US/docs/DOM/element).
+Este elemento implementa a interface [`HTMLElement`](/pt-BR/docs/DOM/element).
 
 ## Exemplos
 

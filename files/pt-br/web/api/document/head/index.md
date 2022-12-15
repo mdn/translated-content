@@ -1,8 +1,8 @@
 ---
 title: Document.head
 slug: Web/API/Document/head
-translation_of: Web/API/Document/head
 ---
+
 {{APIRef("DOM")}}
 
 Retorna o elemento {{HTMLElement("head")}} do documento atual. Se existir mais de um elemento `<head>`, apenas o primeiro será devolvido.
@@ -37,8 +37,6 @@ alert( document.head === document.querySelector("head") ); // true
 ## Compatibilidade com navegadores
 
 {{Compat("api.Document.head")}}
-
-##
 
 ## Veja Também
 

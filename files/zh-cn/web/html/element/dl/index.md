@@ -97,7 +97,7 @@ slug: Web/HTML/Element/dl
 </dl>
 ```
 
-小技巧：通过 CSS3 ，我们可以很容易的在术语后面添加一个与内容无关的分隔符号，比如：
+小技巧：通过 CSS3，我们可以很容易的在术语后面添加一个与内容无关的分隔符号，比如：
 
 ```plain
 dt:after {
@@ -149,4 +149,4 @@ WHATWG HTML 允许在 {{HTMLElement("div")}} 元素中的 {{HTMLElement("dl")}} 
 - {{HTMLElement("dt")}} element
 - {{HTMLElement("dd")}} element
 
-{{HTMLRef}}
+{{HTMLSidebar}}

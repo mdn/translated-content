@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Statements/label
 
 {{EmbedInteractiveExample("pages/js/statement-label.html")}}
 
-> **Note:** ループやブロックに名前を付けることはめったにありません。ふつうは、ジャンプによるループの代わりに関数呼び出しを使用することができます。
+> **メモ:** ループやブロックに名前を付けることはめったにありません。ふつうは、ジャンプによるループの代わりに関数呼び出しを使用することができます。
 
 ## 構文
 
@@ -166,9 +166,7 @@ L: function* F() {}
 
 ## 仕様書
 
-| 仕様書                                                                                           |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-labelled-statements', 'Labelled statement')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

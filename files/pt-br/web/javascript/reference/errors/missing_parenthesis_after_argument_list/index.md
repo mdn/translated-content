@@ -1,9 +1,9 @@
 ---
 title: Erro de sintaxe falta ) depois da lista de argumentos
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
-translation_of: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 original_slug: Web/JavaScript/Reference/Errors/Fata_parênteses_após_lista_argumento
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem

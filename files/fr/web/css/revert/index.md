@@ -176,13 +176,11 @@ On voit ici que le paragraphe reste en rouge malgré l'utilisation de `revert` p
 
 ## Spécifications
 
-| Spécification                                                        | Statut                           | Commentaires         |
-| -------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Cascade', '#default', 'revert')}} | {{Spec2('CSS4 Cascade')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.global_keywords.revert")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: DataTransfer()
 slug: Web/API/DataTransfer/DataTransfer
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer`** のコンストラクターは、新しい {{domxref("DataTransfer")}} オブジェクトのインスタンスを作成します。

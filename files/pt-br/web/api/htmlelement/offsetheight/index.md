@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
+
 {{ APIRef("HTML DOM") }}
 
 A propriedade **`HTMLElement.offsetHeight`** é somente leitura e retorna um valor do tipo inteiro a altura de um elemento incluindo padding-top+padding-bottom+border-top+border-bottom.
@@ -46,5 +46,5 @@ The example image above shows a scrollbar and an offsetHeight which fits on the 
 - {{domxref("Element.clientHeight")}}
 - {{domxref("Element.scrollHeight")}}
 - {{domxref("HTMLElement.offsetWidth")}}
-- [Determining the dimensions of elements](/pt-BR/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements "en/Determining_the_dimensions_of_elements")
+- [Determining the dimensions of elements](/pt-BR/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
 - [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/en-us/previous-versions//hh781509(v=vs.85)>)

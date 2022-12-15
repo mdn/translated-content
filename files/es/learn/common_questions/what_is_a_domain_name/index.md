@@ -1,13 +1,8 @@
 ---
 title: ¿Qué es un nombre de dominio?
 slug: Learn/Common_questions/What_is_a_domain_name
-tags:
-  - Infraestructura
-  - Nombres de dominio
-  - Principiante
-  - Web
-translation_of: Learn/Common_questions/What_is_a_domain_name
 ---
+
 En este artículo discutiremos acerca de los nombres de los dominios: qué son, cómo se estructuran y cómo conseguir uno.
 
 <table>
@@ -45,7 +40,7 @@ Cualquier computadora conectada a Internet puede ser alcanzada a partir de una d
 
 Un nombre de dominio tiene una estructura simple formada por varias partes (puede tener solamente una parte, dos, tres,...), separadas por puntos y **se leen de derecha a izquierda**:
 
-![Anatomy of the MDN domain name](https://mdn.mozillademos.org/files/11229/structure.png)
+![Anatomy of the MDN domain name](structure.png)
 
 Cada una de estas partes provee información específica sobre el nombre de dominio completo.
 
@@ -53,14 +48,14 @@ Cada una de estas partes provee información específica sobre el nombre de domi
 - Los TLDs que contienen `.gov` son solamente permitidos para ser usados por los departamentos de gobierno.
 - Los TLDs como `.edu` y `.ac` `.uk` se supone que se usen solamente en instituciones educacionales o académicas.
 
-[]()
+<!-- -->
 
 - {{Glossary("TLD")}} (Top-Level Domain) Dominio de primer nivel.
   - : El TLD proporciona la información más genérica. Los TLDs les dicen a usuarios el propósito general del servicio que se esconde tras el nombre de dominio. Los TLDs más genéricos (.com, .org, .net) no requieren que los servicios web cumplan ningún criterio particular, pero algunos TLDs hacen cumplir políticas más estrictas por lo que es más claro su propósito. Por ejemplo:
 
     **Etiqueta (o componente)**
 
-    Las etiquetas son lo que siguen al TLD. Una etiqueta puede se cualquier cosa desde una letra hasta una oración completa. La etiqueta localizada a la derecha antes del TLD puede ser llamada también Dominio de Nivel Secundario, en inglés _Secondary Level Domain_ (SLD). Un nombre de dominio puede tener muchas etiquetas (o componentes), no es obligatorio ni necesario tener tres etiquetas para formar un nombre de dominio. Por ejemplo, www.inf.ed.ac.uk es un nombre de dominio correcto. Para cualquier dominio sobre el que se tenga control (por ejemplo [mozilla.org](https://mozilla.org)), uno puede crear otros nombres de dominio (a veces llamados "subdominios", por ejemplo [developer.mozilla.org](https://developer.mozilla.org) o [iot.mozilla.org](https://iot.mozilla.org/)).
+    Las etiquetas son lo que siguen al TLD. Una etiqueta puede se cualquier cosa desde una letra hasta una oración completa. La etiqueta localizada a la derecha antes del TLD puede ser llamada también Dominio de Nivel Secundario, en inglés _Secondary Level Domain_ (SLD). Un nombre de dominio puede tener muchas etiquetas (o componentes), no es obligatorio ni necesario tener tres etiquetas para formar un nombre de dominio. Por ejemplo, www.inf.ed.ac.uk es un nombre de dominio correcto. Para cualquier dominio sobre el que se tenga control (por ejemplo [mozilla.org](https://mozilla.org)), uno puede crear otros nombres de dominio (a veces llamados "subdominios", por ejemplo [developer.mozilla.org](/) o [iot.mozilla.org](https://iot.mozilla.org/)).
 
 ### Comprar un nombre de dominio
 
@@ -141,7 +136,7 @@ Como ya hemos visto, cuando usted quiere visualizar una página web en su navega
 3. Si la computadora no sabe qué IP está detrás del nombre `mozilla.org`, hay que pedírselo a un servidor DNS, cuyo trabajo es precisamente decirle a la computadora cuál es la dirección IP de cada nombre de dominio registrado.
 4. Ahora que la computadora conoce la dirección IP requerida, su navegador puede gestionar contenidos con el servidor web.
 
-![Explanation of the steps needed to obtain the result to a DNS request](https://mdn.mozillademos.org/files/8961/2014-10-dns-request2.png)
+![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
 
 ## Próximos pasos
 

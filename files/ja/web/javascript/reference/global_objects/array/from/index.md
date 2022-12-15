@@ -53,7 +53,7 @@ Array.from(arrayLike, function mapFn(element, index) { /* … */ }, thisArg)
 
 より明確に言うと、中間配列を生成しないことを除いて、`Array.from(obj, mapFn, thisArg)` は `Array.from(obj).map(mapFn, thisArg)` と同じ結果です。 _mapFn_ は配列全体ではなく 2 つの引数 (_element_, _index_) のみを取るため、配列は構築途中になります。
 
-> **Note:** これは、[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)のような特定の配列のサブクラスでは特に重要です。なぜなら、中間配列の値は適切な型に収まるように切り捨てられている必要があるからです。
+> **メモ:** これは、[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)のような特定の配列のサブクラスでは特に重要です。なぜなら、中間配列の値は適切な型に収まるように切り捨てられている必要があるからです。
 
 `from()` メソッドの `length` プロパティは 1 です。
 

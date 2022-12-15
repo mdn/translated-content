@@ -44,7 +44,7 @@ WebSocket WebSocket(
 
 만약 연결 시도 중 에러가 발생하면, 먼저 "error"란 이름의 이벤트가 [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) 오브젝트로 전달되고, 그로 인해 `onerror` 핸들러가 실행됩니다. 그 후에 연결이 종료되는 이유를 가리키는 [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) 이벤트가 [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) 오브젝트로 전달되고, 그로 인해 `onclose` 핸들러가 실행됩니다.
 
-Firefox 11부터는 보통 에러 메세지에 대한 설명이 Mozillia 플랫폼의 콘솔에 표시되며, [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent)로부터는 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4 "RFC 6455 Section 7.4")에 정의되어 있는 연결 종료 코드를 받게 됩니다.
+Firefox 11부터는 보통 에러 메세지에 대한 설명이 Mozillia 플랫폼의 콘솔에 표시되며, [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent)로부터는 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4)에 정의되어 있는 연결 종료 코드를 받게 됩니다.
 
 ### 예제
 

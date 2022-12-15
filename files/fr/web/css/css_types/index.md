@@ -68,10 +68,7 @@ Le module **_CSS basic data types_** définit les différents types de données 
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires         |
-| ------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Values')}} | {{Spec2('CSS4 Values')}} |                      |
-| {{SpecName('CSS3 Values')}} | {{Spec2('CSS3 Values')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

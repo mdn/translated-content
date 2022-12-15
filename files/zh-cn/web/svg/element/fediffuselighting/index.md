@@ -7,7 +7,7 @@ slug: Web/SVG/Element/feDiffuseLighting
 
 滤镜光照一个图像，使用 alpha 通道作为隆起映射。结果图像，是一个 RGBA 不透明图像，取决于光的颜色、光的位置以及输入隆起映射的表面几何形状。
 
-滤镜制造的光映射可以与一个纹理图像组合，使用{{SVGElement("feComposite")}}滤镜的多重`arithmetic 操作。在应用纹理图案之前合加多个光映射可以模拟多重光源。`
+滤镜制造的光映射可以与一个纹理图像组合，使用{{SVGElement("feComposite")}}滤镜的多重 `arithmetic` 操作。在应用纹理图案之前合加多个光映射可以模拟多重光源。
 
 ## 用法
 

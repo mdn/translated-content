@@ -2,9 +2,10 @@
 title: ':blank'
 slug: Web/CSS/:blank
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
-> **Note:** セレクターは、CSSWG が変更を続けているため、使用するリスクを考慮する必要があります。
+> **メモ:** セレクターは、CSSWG が変更を続けているため、使用するリスクを考慮する必要があります。
 >
 > [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967) を参照してください。
 
@@ -12,7 +13,9 @@ slug: Web/CSS/:blank
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:blank
+```
 
 ## 例
 

@@ -2,9 +2,10 @@
 title: PerformanceNavigation
 slug: Web/API/PerformanceNavigation
 ---
+
 {{APIRef("Navigation Timing")}}
 
-> **Warning:** このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
+> **警告:** このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。
 
 従来の **`PerformanceNavigation`** インターフェイスは、現在のドキュメントへのナビゲーションがどのように行われたかに関する情報を表します。
 

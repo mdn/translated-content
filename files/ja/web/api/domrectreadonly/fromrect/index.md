@@ -2,6 +2,7 @@
 title: DOMRectReadOnly.fromRect()
 slug: Web/API/DOMRectReadOnly/fromRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`fromRect()`** は {{domxref("DOMRectReadOnly")}} オブジェクトの静的メソッドで、指定された位置と大きさで新しい `DOMRectReadOnly` オブジェクトを作成します。

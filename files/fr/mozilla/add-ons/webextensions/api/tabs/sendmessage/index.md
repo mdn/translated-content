@@ -44,7 +44,7 @@ var sending = browser.tabs.sendMessage(
   - : `object`.
 
     - `frameId`{{optional_inline}}
-      - : `integer`.  Envoie le message à un cadre (_iframe_) spécifique identifiée par `frameId` au lieu de tous les cadres de l'onglet. Le fait que le script de contenu soit exécuté dans tous les cadres dépend du paramètre `all_frames` dans la section  [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts) de manifest.json.
+      - : `integer`. Envoie le message à un cadre (_iframe_) spécifique identifiée par `frameId` au lieu de tous les cadres de l'onglet. Le fait que le script de contenu soit exécuté dans tous les cadres dépend du paramètre `all_frames` dans la section [`content_scripts`](/fr/Add-ons/WebExtensions/manifest.json/content_scripts) de manifest.json.
 
 ### Valeur renvoyée
 
@@ -107,7 +107,8 @@ browser.runtime.onMessage.addListener(request => {
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2015 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -134,4 +135,4 @@ browser.runtime.onMessage.addListener(request => {
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>
+-->

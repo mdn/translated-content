@@ -2,6 +2,7 @@
 title: performance.clearMeasures()
 slug: Web/API/Performance/clearMeasures
 ---
+
 {{APIRef("User Timing API")}}
 
 **`clearMeasures()`** メソッドは、ブラウザーのパフォーマンスエントリーバッファーから*名前付きメジャー*を削除します。このメソッドが引数なしで呼び出された場合、{{domxref("PerformanceEntry.entryType","エントリー種別", "", 1)}}が "`measure`" の{{domxref("PerformanceEntry","パフォーマンスエントリー", "", 1)}}がすべてパフォーマンスエントリーバッファーから削除されます。

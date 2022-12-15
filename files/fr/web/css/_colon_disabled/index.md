@@ -71,17 +71,11 @@ function toggleBilling() {
 
 ## Spécifications
 
-| Spécification                                                                        | État                                 | Commentaires                                                     |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ---------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-disabled', ':disabled')}} | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                             |
-| {{SpecName('HTML5 W3C', '#selector-disabled', ':disabled')}}     | {{Spec2('HTML5 W3C')}}         | Définition de la sémantique relative à HTML et aux formulaires.  |
-| {{SpecName('CSS4 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                             |
-| {{SpecName('CSS3 Basic UI', '#pseudo-classes', ':disabled')}}     | {{Spec2('CSS3 Basic UI')}} | Référence à la spécification de niveau 3 sur les sélecteurs.     |
-| {{SpecName('CSS3 Selectors', '#enableddisabled', ':disabled')}} | {{Spec2('CSS3 Selectors')}} | Définition de la pseudo-classe mais sans la sémantique associée. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.disabled")}}
+{{Compat}}
 
 ## Voir aussi
 

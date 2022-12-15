@@ -1,15 +1,18 @@
 ---
 title: MouseEvent
 slug: Web/API/MouseEvent
+l10n:
+  sourceCommit: a6390b5024f29bcd6bdab5eedade24e3b446b37b
 ---
-{{APIRef("DOM Events")}}
+
+{{APIRef("UI Events")}}
 
 **`MouseEvent`** インターフェイスは、ポインティングデバイス (マウスなど) によるユーザーの操作によって発行されたイベントを表します。
 このインターフェイスを使用する一般的なイベントとして {{domxref("Element/click_event", "click")}}, {{domxref("Element/dblclick_event", "dblclick")}}, {{domxref("Element/mouseup_event", "mouseup")}}, {{domxref("Element/mousedown_event", "mousedown")}} があります。
 
 `MouseEvent` は {{domxref("UIEvent")}} から派生しており、これはさらに {{domxref("Event")}} から派生しています。後方互換性のために {{domxref("MouseEvent.initMouseEvent()")}} メソッドは維持されていますが、 `MouseEvent` オブジェクトを作成する際は {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} コンストラクターを使用するべきです。
 
-`MouseEvent` からは、 {{domxref("WheelEvent")}}, {{domxref("DragEvent")}} などの特定用途向けイベントが派生しています。
+`MouseEvent` からは、 {{domxref("WheelEvent")}}、{{domxref("DragEvent")}}、{{domxref("PointerEvent")}} などの特定用途向けイベントが派生しています。
 
 {{InheritanceDiagram}}
 
@@ -18,67 +21,69 @@ slug: Web/API/MouseEvent
 - {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}
   - : `MouseEvent` オブジェクトを生成します。
 
-## プロパティ
+## 静的プロパティ
+
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : 通常のクリックに必要な最小圧力。
+- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}} {{ReadOnlyInline}}
+  - : 強めのクリック (force click)に必要な最小圧力。
+
+## インスタンスプロパティ
 
 _このインターフェイスは、親インターフェイスである {{domxref("UIEvent")}} および {{domxref("Event")}} のプロパティも継承しています。_
 
-- {{domxref("MouseEvent.altKey")}} {{readonlyinline}}
+- {{domxref("MouseEvent.altKey")}} {{ReadOnlyInline}}
   - : マウスイベントが発行されたときに <kbd>alt</kbd> キーが押下されていれば `true` を返します。
-- {{domxref("MouseEvent.button")}} {{readonlyinline}}
+- {{domxref("MouseEvent.button")}} {{ReadOnlyInline}}
   - : マウスイベントが発行されたときに押下されたボタンの番号 (もしあれば) です。
-- {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
+- {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : マウスイベントが発行されたときに離されていたボタンの番号 (もしあれば) です。
-- {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
+- {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
   - : ローカル (DOM コンテンツ) 座標における、マウスポインターの X 座標です。
-- {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
+- {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
   - : ローカル (DOM コンテンツ) 座標における、マウスポインターの Y 座標です。
-- {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
+- {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : マウスイベントが発行されたときに <kbd>control</kbd> キーが押下されていれば、 `true` を返します。
-- {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
+- {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+  - : 現在のレイヤーを基準としたイベントの水平座標を返します。
+- {{domxref("MouseEvent.layerY")}} {{Non-standard_inline}} {{ReadOnlyInline}}
+  - : 現在のレイヤーを基準としたイベントの垂直座標を返します。
+- {{domxref("MouseEvent.metaKey")}} {{ReadOnlyInline}}
   - : マウスイベントが発行されたときに <kbd>meta</kbd> キーが押下されていれば、 `true` を返します。
-- {{domxref("MouseEvent.movementX")}} {{readonlyinline}}
+- {{domxref("MouseEvent.movementX")}} {{ReadOnlyInline}}
   - : 直前の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的な、マウスポインターの X 座標です。
-- {{domxref("MouseEvent.movementY")}} {{readonlyinline}}
+- {{domxref("MouseEvent.movementY")}} {{ReadOnlyInline}}
   - : 直前の {{domxref("Element/mousemove_event", "mousemove")}} イベントの位置から相対的な、マウスポインターの Y 座標です。
-- {{domxref("MouseEvent.offsetX")}} {{readonlyinline}}
+- {{domxref("MouseEvent.offsetX")}} {{ReadOnlyInline}}
   - : 対象ノードのパディング辺の位置に対して相対的なマウスポインターの X 座標です。
-- {{domxref("MouseEvent.offsetY")}} {{readonlyinline}}
+- {{domxref("MouseEvent.offsetY")}} {{ReadOnlyInline}}
   - : 対象ノードのパディング辺の位置に対して相対的なマウスポインターの Y 座標です。
-- {{domxref("MouseEvent.pageX")}} {{readonlyinline}}
+- {{domxref("MouseEvent.pageX")}} {{ReadOnlyInline}}
   - : 文書全体に対して相対的な、マウスポインターの X 座標です。
-- {{domxref("MouseEvent.pageY")}} {{readonlyinline}}
+- {{domxref("MouseEvent.pageY")}} {{ReadOnlyInline}}
   - : 文書全体に対して相対的な、マウスポインターの Y 座標です。
-- {{domxref("MouseEvent.region")}} {{readonlyinline}}
-  - : イベントの影響を受けたヒット領域の ID を返します。影響を受けたヒット領域がない場合は、`null` を返します。
-- {{domxref("MouseEvent.relatedTarget")}} {{readonlyinline}}
+- {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : イベントのセカンダリターゲットがあれば、それを表します。
-- {{domxref("MouseEvent.screenX")}} {{readonlyinline}}
+- {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
   - : グローバル (スクリーン) 座標における、マウスポインターの X 座標。
-- {{domxref("MouseEvent.screenY")}} {{readonlyinline}}
+- {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
   - : グローバル (スクリーン) 座標における、マウスポインターの Y 座標。
-- {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
+- {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : マウスイベントが発行されたときに <kbd>shift</kbd> キーが押下されていれば、`true` を返します。
-- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{readonlyinline}}
+- {{domxref("MouseEvent.mozPressure")}} {{non-standard_inline()}} {{deprecated_inline}} {{ReadOnlyInline}}
   - : イベントが発行されたとき、タッチ機器やタブレット機器に与えられた圧力の大きさです。この値の範囲は、`0.0` (最小圧力) から `1.0` (最大圧力) の間です。
     このプロパティは非推奨 (かつ標準外) であり、代わりに {{domxref("PointerEvent")}} を使用し、 {{domxref("PointerEvent.pressure", "pressure")}} プロパティを参照してください。
-- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{readonlyinline}}
+- {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
   - : イベントを生成した機器の種類 (`MOZ_SOURCE_*` 定数のいずれか)。
     これにより、例えばマウスイベントが実際のマウスによって発行されたのか、あるいはタッチイベントによって発行されたのかを識別できます (これは、イベントに関連する座標を解釈する際の正確さに影響を与えるでしょう)。
-- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
+- {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{ReadOnlyInline}}
   - : クリック時に与えられた圧力。
-- {{domxref("MouseEvent.x")}} {{readonlyinline}}
+- {{domxref("MouseEvent.x")}} {{ReadOnlyInline}}
   - : {{domxref("MouseEvent.clientX")}} の別名。
-- {{domxref("MouseEvent.y")}} {{readonlyinline}}
+- {{domxref("MouseEvent.y")}} {{ReadOnlyInline}}
   - : {{domxref("MouseEvent.clientY")}} の別名。
 
-## 定数<
-
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
-  - : 通常のクリックに必要な最小圧力。
-- {{domxref("MouseEvent.WEBKIT_FORCE_AT_FORCE_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}
-  - : 強めのクリック (force click)に必要な最小圧力。
-
-## メソッド
+## インスタンスメソッド
 
 _このインターフェイスは、親インターフェイスである {{domxref("UIEvent")}} および {{domxref("Event")}} のメソッドも継承しています。_
 
@@ -95,28 +100,32 @@ _このインターフェイスは、親インターフェイスである {{domx
 ### HTML
 
 ```html
-<p><label><input type="checkbox" id="checkbox"> チェック</label></p>
-<p><button id="button">クリックすると MouseEvent をチェックボックスに送信します</button></p>
+<p>
+  <label><input type="checkbox" id="checkbox" /> チェック</label>
+</p>
+<p>
+  <button id="button">クリックすると MouseEvent をチェックボックスに送信します</button>
+</p>
 ```
 
 ### JavaScript
 
 ```js
 function simulateClick() {
-// クリックイベントを送るために要素を取得
-const cb = document.getElementById("checkbox");
+  // クリックイベントを送るために要素を取得
+  const cb = document.getElementById("checkbox");
 
-// クリックイベントの MouseEvent を合成
+  // クリックイベントの MouseEvent を合成
   let evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
-    view: window
+    view: window,
   });
 
-// イベントをチェックボックス要素に送信
-cb.dispatchEvent(evt);
+  // イベントをチェックボックス要素に送信
+  cb.dispatchEvent(evt);
 }
-document.getElementById("button").addEventListener('click', simulateClick);
+document.getElementById("button").addEventListener("click", simulateClick);
 ```
 
 ### 結果

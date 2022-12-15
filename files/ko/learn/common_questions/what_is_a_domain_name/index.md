@@ -44,14 +44,14 @@ _아직 이용가능한 Active Learning이 없습니다. [Please, consider contr
 
 도메인 이름은 몇개의 파트로 이루어진 간단한 구조를 이루고 있습니다. 점으로 구분하고 오른쪽에서 왼쪽으로 읽습니다.
 
-![Anatomy of the MDN domain name](https://mdn.mozillademos.org/files/11229/structure.png)
+![Anatomy of the MDN domain name](structure.png)
 
 각각의 파트들은 전체 도메인 이름에 대해 특별한 정보를 제공합니다.
 
 - {{Glossary("TLD")}} (Top-Level Domain; 최고레벨 도메인).
   - : TLD은 가장 일반적인 정보를 제공합니다. TLDs tell users the general purpose of the service behind the domain name. The most generic TLDs (.com, .org, .net) don't require web services to meet strict criteria, but some TLDs enforce stricter policies. For example, local TLDs such as .us, .fr, or .sh can require the service to be provided in a given language or hosted in a certain country.
 - Label (or component)
-  - : The labels are what follow the TLD. A label can be anything, from one letter to a full sentence. The label located right before the TLD can also be referred as a _Secondary Level Domain_ (SLD). A domain name can have many labels (or components), it is not mandatory nor necessary to have 3 labels to form a domain name. For instance, www\.inf.ed.ac.uk is a correct domain name. When controlling the "upper" part of a domain name (e.g. [mozilla.org](https://mozilla.org)), one can create other domain names (sometimes called "subdomains") (e.g. [developer.mozilla.org](https://developer.mozilla.org)).
+  - : The labels are what follow the TLD. A label can be anything, from one letter to a full sentence. The label located right before the TLD can also be referred as a _Secondary Level Domain_ (SLD). A domain name can have many labels (or components), it is not mandatory nor necessary to have 3 labels to form a domain name. For instance, www\.inf.ed.ac.uk is a correct domain name. When controlling the "upper" part of a domain name (e.g. [mozilla.org](https://mozilla.org)), one can create other domain names (sometimes called "subdomains") (e.g. [developer.mozilla.org](/)).
 
 ### Domain name 구매하기
 
@@ -132,7 +132,7 @@ As we already saw, when you want to display a webpage in your browser it's easie
 3. If your computer does not know which IP is behind the `mozilla.org` name, it goes on to ask a DNS server, whose job is precisely to tell your computer which IP address matches each registered domain name.
 4. Now that the computer knows the requested IP address, your browser can negotiate contents with the web server.
 
-![Explanation of the steps needed to obtain the result to a DNS request](https://mdn.mozillademos.org/files/8961/2014-10-dns-request2.png)
+![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
 
 ## 다음 단계
 

@@ -242,7 +242,7 @@ p {
 
 Cependant, dans l'exemple plus haut avec le sélecteur de classe et le sélecteur d'élément, la classe l'emportera, rendant le paragraphe rouge — même s'il apparaît plus tôt dans la feuille de style. Une classe est décrite comme étant plus spécifique ou ayant plus de _spécificité_ que le sélecteur d'élément, elle gagne donc.
 
-**Tentez vous-même l'expérience ci-dessus** — **ajoutez le code HTML à votre expérience, puis ajoutez les deux règles `p {…}` à votre feuille de style. Ensuite, changez le premier sélecteur `p` en `.special`pour voir comment il affecte le style.**
+**Tentez vous-même l'expérience ci-dessus** — **ajoutez le code HTML à votre expérience, puis ajoutez les deux règles `p {…}` à votre feuille de style. Ensuite, changez le premier sélecteur `p` en `.special` pour voir comment il affecte le style.**
 
 Au premier abord, les règles de cascade et de spécificité peuvent sembler compliquées ; avec une meilleure connaissance de CSS, elles vous paraîtront plus naturelles. Dans le prochain module, l'article [Cascade et héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) vous détaillera ces principes et expliquera notamment comment calculer la spécificité. Pour le moment, rappelez vous que de tels cas existent et que le CSS peut parfois ne pas s'appliquer comme prévu. Dans une telle situation, souvenez-vous qu'un même élément peut être la cible de plusieurs sélecteurs concurrents.
 

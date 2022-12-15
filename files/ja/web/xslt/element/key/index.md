@@ -2,6 +2,7 @@
 title: <xsl:key>
 slug: Web/XSLT/Element/key
 ---
+
 {{ XsltRef() }}
 
 `<xsl:key>`要素は、`key( )`関数を使用してスタイルシートの他の場所で使用できる名前付きキーを宣言します。

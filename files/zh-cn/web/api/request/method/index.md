@@ -32,7 +32,7 @@ var myMethod = myRequest.method; // GET
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.method")}}
+{{Compat}}
 
 ## See also
 

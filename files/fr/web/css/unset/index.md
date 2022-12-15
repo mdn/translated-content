@@ -78,14 +78,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires                    |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------------------------- |
-| {{SpecName('CSS4 Cascade', '#inherit-initial', 'unset')}} | {{Spec2('CSS4 Cascade')}} | Aucun changement depuis Level 3 |
-| {{SpecName('CSS3 Cascade', '#inherit-initial', 'unset')}} | {{Spec2('CSS3 Cascade')}} | Définition initiale             |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.global_keywords.unset")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -53,11 +53,11 @@ outline-style: unset;
 - groove
   - : 轮廓呈凹下状。
 - ridge
-  - : 与 `groove` 相反: 轮廓呈凸起状。
+  - : 与 `groove` 相反：轮廓呈凸起状。
 - inset
   - : 轮廓呈嵌入状。
 - outset
-  - : 与 `inset` 相反: 轮廓呈突出状。
+  - : 与 `inset` 相反：轮廓呈突出状。
 
 ### 正式语法
 

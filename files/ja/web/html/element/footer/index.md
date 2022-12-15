@@ -2,7 +2,8 @@
 title: <footer>
 slug: Web/HTML/Element/footer
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<footer>` 要素**は、直近の[区分コンテンツ](/ja/docs/Web/Guide/HTML/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#Sectioning_root)要素のフッターを表します。フッターには通常、そのセクションの著作者に関する情報、関連文書へのリンク、著作権情報等を含めます。
 
@@ -112,10 +113,7 @@ Safari 13 のリリース以前は、 `contentinfo` の[ランドマークロー
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#the-footer-element', '&lt;footer&gt;')}}             | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sections.html#the-footer-element', '&lt;footer&gt;')}} | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -2,6 +2,7 @@
 title: <polygon>
 slug: Web/SVG/Element/polygon
 ---
+
 {{SVGRef}}
 
 **`<polygon>`** 要素は、接続された一連の直線の区間で構成される閉じた図形を定義します。最後の点は最初の点と結ばれます。
@@ -55,10 +56,7 @@ html,body,svg { height:100% }
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                     | 備考     |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('SVG2', 'shapes.html#PolygonElement', '&lt;polygon&gt;')}}     | {{Spec2('SVG2')}} | 変更なし |
-| {{SpecName('SVG1.1', 'shapes.html#PolygonElement', '&lt;polygon&gt;')}} | {{Spec2('SVG1.1')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,12 +1,8 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-tags:
-  - Codigo de Estado
-  - Error de Cliente
-  - HTTP
-translation_of: Web/HTTP/Status/404
 ---
+
 {{HTTPSidebar}}
 
 El codigo de error HTTP **`404 Not Found`** (404 No Encontrado) de respuesta de cliente indica que el servidor no puede encontrar el recurso solicitado. Vinculos que conducen a una pagina 404 son normalmente llamados _vinculos rotos_ o _vinculos muertos_, y pueden estar sujetos a [Enlace Roto](https://es.wikipedia.org/wiki/Enlace_roto).
@@ -33,7 +29,7 @@ Muchos sitios web personalizan la apariencia de la pagina 404 para que sea de ut
 ErrorDocument 404 /no-encontrado.html
 ```
 
-Para una pagina 404 de ejemplo, mire la pagina [MDN 404](https://developer.mozilla.org/es/404).
+Para una pagina 404 de ejemplo, mire la pagina [MDN 404](/es/404).
 
 > **Nota:** Diseños personalizados son buenos, si se usan de manera moderada. Siente libre de hacer tus paginas 404 humoristicas y humanas, pero no confundas a tus usuarios.
 
@@ -50,4 +46,4 @@ Para una pagina 404 de ejemplo, mire la pagina [MDN 404](https://developer.mozil
 ## Vea también
 
 - {{HTTPStatus(410)}}
-- {{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}
+- [Wikipedia: HTTP 404](https://es.wikipedia.org/wiki/HTTP_404)

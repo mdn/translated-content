@@ -49,6 +49,6 @@ slug: Web/API/Element/compositionupdate_event
 
 ## 参阅
 
-- {{Event("compositionstart")}}
-- {{Event("compositionupdate")}}
-- {{Event("compositionend")}}
+- [`compositionstart`](/zh-CN/docs/Web/API/Element/compositionstart_event)
+- [`compositionupdate`](/zh-CN/docs/Web/API/Element/compositionupdate_event)
+- [`compositionend`](/zh-CN/docs/Web/API/Element/compositionend_event)

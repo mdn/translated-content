@@ -8,6 +8,7 @@ tags:
   - 폭 없는 공백
 translation_of: Web/JavaScript/Reference/Errors/Illegal_character
 ---
+
 {{jsSidebar("Errors")}}
 
 ## 메세지
@@ -85,4 +86,4 @@ var foo = 'bar';​<200b>
 
 ## 같이 보기
 
-- [문법](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Lexical_grammar)
+- [문법](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)

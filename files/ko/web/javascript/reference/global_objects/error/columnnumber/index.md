@@ -8,6 +8,7 @@ tags:
   - Prototype
 browser-compat: javascript.builtins.Error.columnNumber
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`columnNumber`** 속성은 이 오류가 발생한 파일의 행의 열 번호를 포함합니다.

@@ -2,6 +2,7 @@
 title: string
 slug: Web/XPath/Functions/string
 ---
+
 {{ XsltRef() }}
 
 `string` 関数は与えられた引数を文字列に変換します。
@@ -14,7 +15,7 @@ string( [object] )
 
 ### 引数
 
-- _`object`_(省略可)
+- `object` (省略可)
   - : 文字列に変換するオブジェクト。省略すると、コンテキストノードが使用されます。
 
 ### 返値

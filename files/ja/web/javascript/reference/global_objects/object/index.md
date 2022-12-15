@@ -81,19 +81,19 @@ JavaScript のほぼすべてのオブジェクトが {{jsxref("Object")}} の�
 
 - {{jsxref("Object.prototype.constructor")}}
   - : オブジェクトのプロトタイプを生成する関数を指定します。
-- {{jsxref("Object/proto","Object.prototype.__proto__")}}
+- [`Object.prototype.__proto__`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
   - : オブジェクトがインスタンス化されたとき、プロトタイプとして使用されたオブジェクトを指します。
 
 ## インスタンスメソッド
 
-- {{jsxref("Object.prototype.__defineGetter__()")}}
+- [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
   - : 関数をプロパティに関連付けます。そのプロパティにアクセスすると、その関数を実行して返値を返すようにします。
-- {{jsxref("Object.prototype.__defineSetter__()")}}
+- [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
   - : 関数をプロパティに関連付け、設定されるとプロパティを変更する関数を実行するようにします。
-- {{jsxref("Object.prototype.__lookupGetter__()")}}
-  - : {{jsxref("Object.prototype.__defineGetter__()", "__defineGetter__()")}} メソッドによって特定のプロパティに関連付けされた関数を返します。
-- {{jsxref("Object.prototype.__lookupSetter__()")}}
-  - : {{jsxref("Object.prototype.__defineSetter__()", "__defineSetter__()")}} メソッドによって特定のプロパティに関連付けされた関数を返します。
+- [`Object.prototype.__lookupGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)
+  - : [`Object.prototype.__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__) メソッドによって特定のプロパティに関連付けされた関数を返します。
+- [`Object.prototype.__lookupSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__)
+  - : [`Object.prototype.__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) メソッドによって特定のプロパティに関連付けされた関数を返します。
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
   - : オブジェクトが、プロトタイプチェーンを通じて継承されたものではなくオブジェクトの直接のプロパティを持っているかどうかを示す論理値を返します。
 - {{jsxref("Object.prototype.isPrototypeOf()")}}

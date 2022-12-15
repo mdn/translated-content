@@ -2,6 +2,7 @@
 title: AudioContext.suspend()
 slug: Web/API/AudioContext/suspend
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `suspend()`メソッドは、オーディオコンテキストの時間の流れを一時停止します。音声ハードウェアへのアクセスを一時的に停止し、処理に必要だった CPU/バッテリーの使用を減らすことが出来ます。これは、アプリケーションがしばらくの間オーディオを扱わない間に、音声ハードウェアに電源を供給しないようにしたいときに便利です。
@@ -39,9 +40,7 @@ susresBtn.onclick = function() {
 
 ## 仕様
 
-| Specification                                                                                                    | Status                               | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#widl-AudioContext-suspend-Promise-void', 'close()')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## ブラウザ互換性
 

@@ -1,13 +1,13 @@
 ---
 title: background-attachment
 slug: Web/CSS/background-attachment
-translation_of: Web/CSS/background-attachment
 ---
+
 {{CSSRef}}
 
 ## Resumo
 
-Se um {{cssxref("background-image")}} é especificado, a propriedade [CSS](/pt-BR/docs/CSS "CSS") **`background-attachment`** determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.
+Se um {{cssxref("background-image")}} é especificado, a propriedade [CSS](/pt-BR/docs/CSS) **`background-attachment`** determina se aquela posição da imagem é fixa com o viewport, ou se irá rolar juntamente com o seu bloco.
 
 {{cssinfo}}
 
@@ -42,7 +42,7 @@ background-attachment: inherit;
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
+  background-image: url("starsolid.gif");
   background-attachment: fixed;
 }
 ```
@@ -70,7 +70,7 @@ Essa propriedade suporta múltiplas imagens de background. Você pode especifica
 
 ```css
 p {
-  background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
+  background-image: url("starsolid.gif"), url("startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
 }
@@ -114,4 +114,4 @@ p {
 
 ## Veja também
 
-- [Multiple backgrounds](/pt-BR/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")
+- [Multiple backgrounds](/pt-BR/docs/CSS/Multiple_backgrounds)

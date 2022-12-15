@@ -2,6 +2,7 @@
 title: notifications.create()
 slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
 ---
+
 {{AddonSidebar()}}
 
 通知を生成、表示します。
@@ -12,7 +13,7 @@ You can optionally provide an ID for the notification. If you omit the ID, an ID
 
 This is an asynchronous function that returns a [`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Warning:** If you call `notifications.create()` more than once in rapid succession, Firefox may end up not displaying any notification at all.
+> **警告:** If you call `notifications.create()` more than once in rapid succession, Firefox may end up not displaying any notification at all.
 
 ## 書式
 
@@ -128,4 +129,4 @@ browser.notifications.onButtonClicked.addListener((id, index) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications#method-create) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> **メモ:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications#method-create) API.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

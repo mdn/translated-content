@@ -1,15 +1,8 @@
 ---
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - API
-  - DOM
-  - Gecko
-  - JavaScript
-  - Method
-  - events
-translation_of: Web/API/EventTarget/removeEventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 Remove o event listener anteriormente registrado com {{domxref("EventTarget.addEventListener()")}}.
@@ -73,7 +66,7 @@ div.removeEventListener('click', listener, false);
 
 ### Especificação
 
-- [removeEventListener](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener)
+- [removeEventListener](https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-EventTarget-removeEventListener)
 
 ## Polyfill para oferecer suporte aos navegadores antigos
 

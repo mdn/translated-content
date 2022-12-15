@@ -15,6 +15,7 @@ tags:
   - WebRTC
 translation_of: Web/API/RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`RTCSessionDescription`** interface describes one end of a connection—or potential connection—and how it's configured. Each `RTCSessionDescription` consists of a description {{domxref("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.
@@ -53,7 +54,7 @@ _The `RTCSessionDescription` doesn't inherit any methods._
 - {{domxref("RTCSessionDescription.toJSON()")}}
   - : Returns a {{Glossary("JSON")}} description of the object. The values of both properties, {{domxref("RTCSessionDescription.type", "type")}} and {{domxref("RTCSessionDescription.sdp", "sdp")}}, are contained in the generated JSON.
 
-## Example<span id="cke_bm_72C" class="hidden"></span>
+## Example
 
 ```js
 signalingChannel.onmessage = function (evt) {

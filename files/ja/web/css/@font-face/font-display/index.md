@@ -2,6 +2,7 @@
 title: font-display
 slug: Web/CSS/@font-face/font-display
 ---
+
 {{CSSRef}}
 
 **`font-display`** 記述子は、フォントがダウンロード済みで利用できるかに基づいて、どのようにフォントの種類を表示するかを定めます。
@@ -30,7 +31,7 @@ font-display: optional;
 - `optional`
   - : フォントに対して非常に短いブロック時間の後、スワップ時間を置きません。
 
-> **Note:** Firefox では、 `gfx.downloadable_fonts.fallback_delay` および `gfx.downloadable_fonts.fallback_delay_short` の設定項目で、それぞれ "short" および "extremely small" の時間が利用できます。
+> **メモ:** Firefox では、 `gfx.downloadable_fonts.fallback_delay` および `gfx.downloadable_fonts.fallback_delay_short` の設定項目で、それぞれ "short" および "extremely small" の時間が利用できます。
 
 ## 解説
 

@@ -2,6 +2,7 @@
 title: ':disabled'
 slug: Web/CSS/:disabled
 ---
+
 {{CSSRef}}
 
 **`:disabled`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、無効な要素を表します。無効な要素とは、アクティブ化（選択、クリック、入力など）したりフォーカスを得たりすることができないものです。要素には有効な状態、つまりアクティブ化したりフォーカスを得たりすることができる状態もあります。
@@ -15,7 +16,9 @@ input:disabled {
 
 ## 構文
 
-{{csssyntax}}
+```
+:disabled
+```
 
 ## 例
 

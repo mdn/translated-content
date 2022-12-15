@@ -42,7 +42,7 @@ slug: Web/HTML/Element/aside
 
 ## 使用说明
 
-- 不要使用 `<aside>` 元素去尾随括号内的文本 ，因为这种文本被认为是主要流内容的一部分。
+- 不要使用 `<aside>` 元素去尾随括号内的文本，因为这种文本被认为是主要流内容的一部分。
 
 ## 示例
 
@@ -75,4 +75,4 @@ slug: Web/HTML/Element/aside
 - Others section-related elements: {{HTMLElement("body")}}, {{HTMLElement("article")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}};
 - [使用 HTML 章节与大纲](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -67,8 +67,4 @@ original_slug: Web/CSS/Modèle_de_boîte_CSS
 
 ## Spécifications
 
-| Spécification                                | État                         | Commentaires         |
-| -------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Box")}}             | {{Spec2("CSS3 Box")}} | Added `margin-trim`  |
-| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}     |                      |
-| {{SpecName("CSS1")}}                 | {{Spec2("CSS1")}}     | Définition initiale. |
+{{Specifications}}

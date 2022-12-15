@@ -2,6 +2,7 @@
 title: JavaScript のよくある問題を扱う
 slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 ここではよくあるクロスブラウザー JavaScript 問題と、その直し方を見てみます。
@@ -56,13 +57,13 @@ As we said in the [previous article](/ja/docs/Learn/Tools_and_testing/Cross_brow
 - Confusion about [this](/ja/docs/Web/JavaScript/Reference/Operators/this), in terms of what scope it applies to, and therefore if its value is what you intended. You can read [What is "this"?](/ja/docs/Learn/JavaScript/Objects/Basics#what_is_this) for a light introduction; you should also study examples like [this one](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), which shows a typical pattern of saving a `this` scope to a separate variable, then using that variable in nested functions so you can be sure you are applying functionality to the correct `this` scope.
 - Incorrectly using functions inside loops that iterate with a global variable (more generally "getting the scope wrong"). For example, in [bad-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) (see [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)), we loop through 10 iterations using a variable defined with `var`, each time creating a paragraph and adding an [onclick](/ja/docs/Web/API/Element/click_event) event handler to it. When clicked, we want each one to display an alert message containing its number (the value of `i` at the time it was created). Instead they all report `i` as 11 — because the `for` loop does all its iterating before nested functions are invoked.
 
-  > **Note:** The easiest solution is to declare the iteration variable with `let` instead of `var`—the value of `i` associated with the function is then unique to each iteration. Unfortunately this does not work correctly with IE11, which is why we haven't used this approach in the "good" for loop.
+  > **メモ:** The easiest solution is to declare the iteration variable with `let` instead of `var`—the value of `i` associated with the function is then unique to each iteration. Unfortunately this does not work correctly with IE11, which is why we haven't used this approach in the "good" for loop.
 
   If you want this to work correctly, you can define a function to add the handler separately, calling it on each iteration and passing it the current value of `para` and `i` each time (or something similar). See [good-for-loop.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html) also) for a version that works.
 
 - Making sure asynchronous operations have returned before trying to use the values they return. For example, [this Ajax example](/ja/docs/Web/Guide/AJAX/Getting_Started#step_3_%e2%80%93_a_simple_example) checks to make sure the request is complete and the response has been returned before trying to use the response for anything. This kind of operation has been made easier to handle by the introduction of [Promises](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) to the JavaScript language.
 
-> **Note:** [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
+> **メモ:** [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
 
 ### リンター
 
@@ -102,7 +103,7 @@ You can then point these tools at JavaScript files you want to lint, for example
 
 ![](js-hint-commandline.png)You can also use these tools with a task runner/build tool such as [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.github.io/) to automatically lint your JavaScript during development. (see [Using a task runner to automate testing tools](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools) in a later article.) See [ESLint integrations](https://eslint.org/docs/user-guide/integrations) for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. [JSHint loader for Webpack](https://github.com/webpack-contrib/jshint-loader).
 
-> **Note:** ESLint takes a bit more setup and configuration than JSHint, but it is more powerful too.
+> **メモ:** ESLint takes a bit more setup and configuration than JSHint, but it is more powerful too.
 
 ### ブラウザーの開発ツール
 
@@ -175,7 +176,7 @@ To summarize, anytime something is not working and a value does not appear to be
 
 Unfortunately, we still have the same error — the problem has not gone away. Let's investigate this now, using a more sophisticated feature of browser developer tools: the [JavaScript debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) as it is called in Firefox.
 
-> **Note:** Similar tools are available in other browsers; the [Sources tab](https://developer.chrome.com/docs/devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
+> **メモ:** Similar tools are available in other browsers; the [Sources tab](https://developer.chrome.com/docs/devtools/#sources) in Chrome, Debugger in Safari (see [Safari Web Development Tools](https://developer.apple.com/safari/tools/)), etc.
 
 In Firefox, the Debugger tab looks as follows:
 
@@ -204,7 +205,7 @@ We can find out some very useful information in here.
 
 We'd like you to try fixing this problem yourself. To give you a clue, you can either [tell the XMLHttpRequest object explicitly to return JSON format](/ja/docs/Web/API/XMLHttpRequest/responseType), or [convert the returned text to JSON](/ja/docs/Learn/JavaScript/Objects/JSON#converting_between_objects_and_text) after the response arrives. If you get stuck, consult our [fixed-ajax.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fixed-ajax.html) example.
 
-> **Note:** The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) page.
+> **メモ:** The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) page.
 
 ### パフォーマンスの問題
 
@@ -215,7 +216,7 @@ As your apps get more complex and you start to use more JavaScript, you may star
 - When using APIs, make sure you turn off the API features when they are not being used; some API calls can be really expensive on processing power. For example, when showing a video stream, make sure it is turned off when you can't see it. When tracking a device's location using repeated Geolocation calls, make sure you turn it off when the user stops using it.
 - Animations can be really costly for performance. A lot of JavaScript libraries provide animation capabilities programmed by JavaScript, but it is much more cost effective to do the animations via native browser features like [CSS Animations](/ja/docs/Web/CSS/CSS_Animations) (or the nascent [Web Animations API](/ja/docs/Web/API/Web_Animations_API)) than JavaScript. Read Brian Birtles' [Animating like you just don't care with Element.animate](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) for some really useful theory on why animation is expensive, tips on how to improve animation performance, and information on the Web Animations API.
 
-> **Note:** Addy Osmani's [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) contains a lot of detail and some excellent tips for boosting JavaScript performance.
+> **メモ:** Addy Osmani's [Writing Fast, Memory-Efficient JavaScript](https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/) contains a lot of detail and some excellent tips for boosting JavaScript performance.
 
 ## クロスブラウザー JavaScript の問題
 
@@ -257,7 +258,7 @@ There are also many new APIs appearing in recent browsers, which don't work in o
 
 There are a few strategies for handling incompatibilities between browsers relating to feature support; let's explore the most common ones.
 
-> **Note:** These strategies do not exist in separate silos — you can, of course combine them as needed. For example, you could use feature detection to determine whether a feature is supported; if it isn't, you could then run code to load a polyfill or a library to handle the lack of support.
+> **メモ:** These strategies do not exist in separate silos — you can, of course combine them as needed. For example, you could use feature detection to determine whether a feature is supported; if it isn't, you could then run code to load a polyfill or a library to handle the lack of support.
 
 #### 機能検出
 
@@ -277,9 +278,9 @@ You could also write such a test for a CSS feature, for example by testing for t
 
 As a last point, don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](#using_bad_browser_sniffing_code), later on, for more details.
 
-> **Note:** Some features are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables).
+> **メモ:** Some features are known to be undetectable — see Modernizr's list of [Undetectables](https://github.com/Modernizr/Modernizr/wiki/Undetectables).
 
-> **Note:** Feature detection will be covered in a lot more detail in its own dedicated article, later in the module.
+> **メモ:** Feature detection will be covered in a lot more detail in its own dedicated article, later in the module.
 
 #### ライブラリー
 
@@ -298,7 +299,7 @@ When choosing a library to use, make sure that it works across the set of browse
 
 Library usage at a basic level tends to consist of downloading the library's files (JavaScript, possibly some CSS or other dependencies too) and attaching them to your page (e.g. via a {{htmlelement("script")}} element), although there are normally many other usage options for such libraries, like installing them as [Bower](https://bower.io/) components, or including them as dependencies via the [Webpack](https://webpack.github.io/) module bundler. You will have to read the libraries' individual install pages for more information.
 
-> **Note:** You will also come across JavaScript frameworks in your travels around the Web, like [Ember](https://emberjs.com/) and [Angular](https://angularjs.org/). Whereas libraries are often usable for solving individual problems and dropping into existing sites, frameworks tend to be more along the lines of complete solutions for developing complex web applications.
+> **メモ:** You will also come across JavaScript frameworks in your travels around the Web, like [Ember](https://emberjs.com/) and [Angular](https://angularjs.org/). Whereas libraries are often usable for solving individual problems and dropping into existing sites, frameworks tend to be more along the lines of complete solutions for developing complex web applications.
 
 #### Polyfills
 
@@ -320,7 +321,7 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
 
 4. Inside the original {{htmlelement("script")}}, add the following code:
 
-5. ```js
+    ```js
     const myImage = document.querySelector('.my-image');
 
     fetch('flowers.jpg').then((response) => {
@@ -331,12 +332,12 @@ Let's work through an exercise — in this example we will use a Fetch polyfill 
     });
     ```
 
-6. Now if you load it in a browser that doesn't support [Fetch](/ja/docs/Web/API/fetch) (IE is an obvious candidate), you should still see the flower image appear — cool!
+5. Now if you load it in a browser that doesn't support [Fetch](/ja/docs/Web/API/fetch) (IE is an obvious candidate), you should still see the flower image appear — cool!
     ![](fetch-image.jpg)
 
-> **Note:** You can find our finished version at [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
+> **メモ:** You can find our finished version at [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
 
-> **Note:** Again, there are many different ways to make use of the different polyfills you will encounter — consult each polyfill's individual documentation.
+> **メモ:** Again, there are many different ways to make use of the different polyfills you will encounter — consult each polyfill's individual documentation.
 
 One thing you might be thinking is "why should we always load the polyfill code, even if we don't need it?" This is a good point — as your sites get more complex and you start to use more libraries, polyfills, etc., you can start to load a lot of extra code, which can start to affect performance, especially on less-powerful devices. It makes sense to only load files as needed.
 
@@ -384,13 +385,13 @@ Note that polyfills.js is basically the two polyfills we are using put together 
 
 You can see this code in action in [fetch-polyfill-only-when-needed.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) (see the [source code also](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)). We'd like to make it clear that we can't take credit for this code — it was originally written by Philip Walton. Check out his article [Loading Polyfills Only When Needed](https://philipwalton.com/articles/loading-polyfills-only-when-needed/) for the original code, plus a lot of useful explanation around the wider subject).
 
-> **Note:** There are some 3rd party options to consider, for example [Polyfill.io](https://polyfill.io/v3/api/) — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.
+> **メモ:** There are some 3rd party options to consider, for example [Polyfill.io](https://polyfill.io/v3/api/) — this is a meta-polyfill library that will look at each browser's capabilities and apply polyfills as needed, depending on what APIs and JS features you are using in your code.
 
 #### JavaScript トランスパイルする
 
 Another option that is becoming popular for people that want to use modern JavaScript features now is converting code that makes use of ECMAScript 6/ECMAScript 2015 features to a version that will work in older browsers.
 
-> **Note:** This is called "transpiling" — you are not compiling code into a lower level to be run on a computer (like you would say with C code); instead, you are changing it into a syntax that exists at a similar level of abstraction so it can be used in the same way, but in slightly different circumstances (in this case, transforming one flavor of JavaScript into another).
+> **メモ:** This is called "transpiling" — you are not compiling code into a lower level to be run on a computer (like you would say with C code); instead, you are changing it into a syntax that exists at a similar level of abstraction so it can be used in the same way, but in slightly different circumstances (in this case, transforming one flavor of JavaScript into another).
 
 So for example, we talked about arrow functions (see [arrow-function.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/arrow-function.html) live, and see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/arrow-function.html)) earlier in the article, which only work in the newest browsers:
 
@@ -408,7 +409,7 @@ The recommended tool for JavaScript transpiling is currently [Babel](https://bab
 
 The easiest way to give Babel a try is to use the [online version](https://babeljs.io/repl/), which allows you to enter your source code on the left, and outputs a transpiled version on the right.
 
-> **Note:** There are many ways to use Babel (task runners, automation tools, etc.), as you'll see on the [setup page](https://babeljs.io/en/setup/).
+> **メモ:** There are many ways to use Babel (task runners, automation tools, etc.), as you'll see on the [setup page](https://babeljs.io/en/setup/).
 
 ### 悪いブラウザーを検出するコードを使う
 
@@ -428,13 +429,13 @@ if (ua.includes('Firefox')) {
 
 The idea was fairly good — detect what browser is viewing the site, and run code as appropriate to make sure the browser will be able to use your site OK.
 
-> **Note:** Try opening up your JavaScript console now and running navigator.userAgent, to see what you get returned.
+> **メモ:** Try opening up your JavaScript console now and running navigator.userAgent, to see what you get returned.
 
 However, as time went on, developers started to see major problems with this approach. For a start, the code was error prone. What if you knew a feature didn't work in say, Firefox 10 and below, and implemented code to detect this, and then Firefox 11 came out — which did support that feature? Firefox 11 probably wouldn't be supported because it's not Firefox 10. You'd have to change all your sniffing code regularly.
 
 Many developers implemented bad browser sniffing code and didn't maintain it, and browsers start getting locked out of using websites containing features that they had since implemented. This became so common that browsers started to lie about what browser they were in their user-agent strings (or claim they were all browsers), to get around sniffing code. Browsers also implemented facilities to allow users to change what user-agent string the browser reported when queried with JavaScript. This all made browser sniffing even more error prone, and ultimately pointless.
 
-> **Note:** You should read [History of the browser user-agent string](https://webaim.org/blog/user-agent-string-history/) by Aaron Andersen for a useful and amusing take on this situation.
+> **メモ:** You should read [History of the browser user-agent string](https://webaim.org/blog/user-agent-string-history/) by Aaron Andersen for a useful and amusing take on this situation.
 
 The lesson to be learned here is — NEVER use browser sniffing. The only real use case for browser sniffing code in the modern day is if you are implementing a fix for a bug in a very specific version of a particular browser. But even then, most bugs get fixed pretty quickly in browser vendor rapid release cycles. It won't come up very often. [Feature detection](#feature_detection) is almost always a better option — if you detect whether a feature is supported, you won't need to change your code when new browser versions come out, and the tests are much more reliable.
 

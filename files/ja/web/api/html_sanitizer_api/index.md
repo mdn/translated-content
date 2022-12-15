@@ -100,7 +100,7 @@ console.log(sanitizedDiv.innerHTML)
 document.querySelector("div#target").replaceChildren(sanitizedDiv.children);
 ```
 
-> **Note:** どうしても文字列から文字列への操作を行いたい場合は `innerHTML` を使って文字列を抽出することができますが、文字列が適用されるときに正しいコンテキストを使用することを忘れてはいけません。
+> **メモ:** どうしても文字列から文字列への操作を行いたい場合は `innerHTML` を使って文字列を抽出することができますが、文字列が適用されるときに正しいコンテキストを使用することを忘れてはいけません。
 >
 > ```js
 > const unsanitized_string = "abc <script>alert(1)<" + "/script> def";

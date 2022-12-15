@@ -1,19 +1,11 @@
 ---
 title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - sup()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
 ---
+
 {{JSRef}} {{deprecated_header}}
 
-O método `sup()` cria um elemento HTML [`<sup>`](/en-US/docs/Web/HTML/Element/sup) que faz com que uma string seja exibida como sobrescrito.
+O método `sup()` cria um elemento HTML [`<sup>`](/pt-BR/docs/Web/HTML/Element/sup) que faz com que uma string seja exibida como sobrescrito.
 
 ## Sintaxe
 

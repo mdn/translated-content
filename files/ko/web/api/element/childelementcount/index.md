@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/ParentNode/childElementCount
 original_slug: Web/API/ParentNode/childElementCount
 ---
+
 {{ APIRef("DOM") }}
 
 **`ParentNode.childElementCount`** 읽기 전용 속성은 주어진 요소의 자식 요소 개수를 `unsigned long` 타입으로 반환합니다.

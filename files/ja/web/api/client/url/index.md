@@ -2,6 +2,7 @@
 title: Client.url
 slug: Web/API/Client/url
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Client")}} インターフェイスの **`url`** 読み取り専用プロパティは、現在のサービスワーカークライアントの URL を返します。
@@ -41,9 +42,7 @@ self.addEventListener('notificationclick', function(event) {
 
 ## 仕様
 
-| 仕様                                                                     | 状態                                 | コメント |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#client-url', 'url')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

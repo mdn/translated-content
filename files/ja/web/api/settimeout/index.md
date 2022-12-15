@@ -3,6 +3,7 @@ title: setTimeout()
 slug: Web/API/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 グローバルの **`setTimeout()`** メソッドは、時間切れになると関数または指定されたコードの断片を実行するタイマーを設定します。
@@ -211,7 +212,7 @@ document.querySelector("#run").addEventListener("click", run);
 
 #### アクティブでないタブのタイムアウト
 
-バックグラウンドのタブによる負荷（および関連するバッテリーの使用量）を軽減するために、ブラウザはアクティブでないタブの最小タイムアウト時間を強制します。また、ページがウェブ音声 API の {{domxref("AudioContext")}} を使用して音声を再生している場合、このタイムアウトが免除されることもあります。
+バックグラウンドのタブによる負荷（および関連するバッテリーの使用量）を軽減するために、ブラウザはアクティブでないタブの最小タイムアウト時間を強制します。また、ページがウェブオーディオ API の {{domxref("AudioContext")}} を使用して音声を再生している場合、このタイムアウトが免除されることもあります。
 
 この仕様はブラウザーに依存します。
 

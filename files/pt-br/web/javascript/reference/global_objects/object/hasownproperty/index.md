@@ -1,8 +1,8 @@
 ---
 title: Object.prototype.hasOwnProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## Resumo
@@ -90,7 +90,7 @@ for (var nome in buz) {
 
 ### Exemplo: `hasOwnProperty` como propriedade
 
-JavaScript não protege o nome `hasOwnProperty`, assim, se existir a possibilidade do objeto possuir uma propriedade com esse nome, é necessário usar` externamente hasOwnProperty` para se ter o resultado correto:
+JavaScript não protege o nome `hasOwnProperty`, assim, se existir a possibilidade do objeto possuir uma propriedade com esse nome, é necessário usar externamente `hasOwnProperty` para se ter o resultado correto:
 
 ```js
 var foo = {

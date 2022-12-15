@@ -23,7 +23,7 @@ connectionInfo = navigator.connection
 
 ## 浏览器兼容情况
 
-{{Compat("api.Navigator.connection")}}
+{{Compat}}
 
 ## 参考资料
 

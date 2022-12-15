@@ -39,7 +39,7 @@ width: unset;
 Свойство `width` указывается как:
 
 - одно из следующих ключевых слов: [`available`](#available), [`min-content`](#min-content), [`max-content`](#max-content), [`fit-content`](#fit-content), [`auto`](#auto).
-- [`<length>`](#<length>) или [`<percentage>`](#<percentage>). За ними так же могут быть указаны одни из следующих ключевых слов: [`border-box`](#border-box), [`content-box`](#content-box).
+- [`<length>`](#length) или [`<percentage>`](#percentage). За ними так же могут быть указаны одни из следующих ключевых слов: [`border-box`](#border-box), [`content-box`](#content-box).
 
 ### Значения
 
@@ -62,7 +62,8 @@ width: unset;
 - `available`{{experimental_inline}}
   - : Ширина содержащего блока минус горизонтальные `margin`, `border` и `padding`.
 - `fit-content`{{experimental_inline}}
-  - : Наибольшее из:\* внутренняя минимальная ширина
+  - : Наибольшее из:
+    - внутренняя минимальная ширина
     - меньшая из внутренней предпочтительной ширины и доступной ширины
 
 ### Формальный синтаксис

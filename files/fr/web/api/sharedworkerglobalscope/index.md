@@ -43,7 +43,7 @@ _This interface inherits properties from the {{domxref("WorkerGlobalScope")}} in
 _This interface inherits event handlers from the {{domxref("WorkerGlobalScope")}} interface, and its parent {{domxref("EventTarget")}}, and therefore implements event handlers from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}._
 
 - {{domxref("SharedWorkerGlobalScope.onconnect")}}
-  - : Is an {{event("Event_handlers", "event handler")}} representing the code to be called when the {{event("connect")}} event is raised — that is, when a {{domxref("MessagePort")}} connection is opened between the associated {{domxref("SharedWorker")}} and the main thread.
+  - : Is an gestionnaire d'évènement representing the code to be called when the [`connect`](/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event)} event is raised — that is, when a {{domxref("MessagePort")}} connection is opened between the associated {{domxref("SharedWorker")}} and the main thread.
 
 ## Methods
 

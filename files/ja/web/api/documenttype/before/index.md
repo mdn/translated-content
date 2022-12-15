@@ -2,11 +2,12 @@
 title: DocumentType.before()
 slug: Web/API/DocumentType/before
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentType.before()`** 一連の {{domxref("Node")}} オブジェクトまたは文字列を、この `DocumentType` の親ノードの子リストの、この `DocumentType` の直前に挿入します。文字列は等価な {{domxref("Text")}} ノードとして挿入されます。
 
-> **Note:** 文書の doctype の前にノードを置くと、一部のブラウザー (Internet Explorer) でレンダリングモードが後方互換 ([quirks](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)) モードに設定されます。このようなことをするのは好ましくありません。
+> **メモ:** 文書の doctype の前にノードを置くと、一部のブラウザー (Internet Explorer) でレンダリングモードが後方互換 ([quirks](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)) モードに設定されます。このようなことをするのは好ましくありません。
 
 ## 構文
 

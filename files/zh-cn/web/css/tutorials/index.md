@@ -33,7 +33,7 @@ CSS 2 (Level 1) 标准放出后，CSS 增加了很多新特性。有些特性比
 - [CSS Transforms](/zh-CN/docs/CSS/Tutorials/Using_CSS_transforms)
   - : 变换可以通过坐标改变元素的位置，可以使用位移，旋转等定义元素在 2D 或 3D 空间的状态。
 - [CSS Gradients](/zh-CN/docs/CSS/Using_CSS_gradients)
-  - : 渐变其实是图片，可以让一个颜色柔和的过渡到另一个颜色。CSS 中有很多渐变方式：线性渐变或者径向渐变等.这篇教程会讲解怎么使用渐变。
+  - : 渐变其实是图片，可以让一个颜色柔和的过渡到另一个颜色。CSS 中有很多渐变方式：线性渐变或者径向渐变等。这篇教程会讲解怎么使用渐变。
 
 ## CSS 高级教程
 

@@ -1,8 +1,8 @@
 ---
 title: Node.appendChild
 slug: Web/API/Node/appendChild
-translation_of: Web/API/Node/appendChild
 ---
+
 {{ApiRef("DOM")}}
 
 ## Resumo
@@ -15,7 +15,7 @@ Adiciona um nó ao final da lista de filhos de um nó pai especificado. Se o nó
 var filho = elemento.appendChild(filho);
 ```
 
-- `elemento` é o [elemento](/pt-BR/docs/DOM/element "/en-US/docs/DOM/element") pai.
+- `elemento` é o [elemento](/pt-BR/docs/DOM/element) pai.
 - `filho` é o nó a ser adicionado como filho de `elemento`. Também é devolvido.
 
 ## Descrição
@@ -44,7 +44,7 @@ Este método não permite mover nós entre documentos diferentes. Se você quise
 
 ## Especificação
 
-- [DOM Level 3 Core: appendChild](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107)
+- [DOM Level 3 Core: appendChild](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-184E7107)
 
 ## Ver também
 

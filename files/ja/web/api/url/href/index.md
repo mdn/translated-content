@@ -2,6 +2,7 @@
 title: URL.href
 slug: Web/API/URL/href
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`href`** プロパティは、URL 全体を含む {{domxref("USVString")}} です。
@@ -28,9 +29,7 @@ var result = url.href; // 戻り値: 'https://developer.mozilla.org/en-US/docs/W
 
 ## 仕様
 
-| 仕様                                                             | 状態                 | コメント |
-| ---------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-href', 'URL.href')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

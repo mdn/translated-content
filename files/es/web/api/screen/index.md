@@ -1,9 +1,8 @@
 ---
 title: Screen
 slug: Web/API/Screen
-translation_of: Web/API/Screen
-browser-compat: api.Screen
 ---
+
 {{APIRef("CSSOM")}}
 
 La interfaz `Screen` representa una pantalla,
@@ -45,7 +44,7 @@ detectando qué pantalla tiene el navegador centrada.
 ### Manejador de eventos
 
 - {{DOMxRef("Screen.onorientationchange")}} {{Deprecated_Inline}}
-  - : Un manejador para el evento {{event("orientationchange")}}.
+  - : Un manejador para el evento [`orientationchange`](/es/docs/Web/Reference/Events/orientationchange).
 
 ## Métodos
 

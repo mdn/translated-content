@@ -2,6 +2,7 @@
 title: Document.domain
 slug: Web/API/Document/domain
 ---
+
 {{ApiRef}}
 
 {{domxref("Document")}} インターフェイスの **`domain`** プロパティは、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)で使用される現在の文書の{{glossary("origin", "オリジン")}}のうち、ドメインの部分を取得または設定します。
@@ -56,9 +57,7 @@ if (document.domain === badDomain) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | 状態                             | 備考 |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG','origin.html#relaxing-the-same-origin-restriction','Document.domain')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

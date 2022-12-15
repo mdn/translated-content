@@ -191,21 +191,11 @@ Cette propriété peut être définie selon trois formes différentes :
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-justify-items", "justify-items")}} | {{Spec2("CSS3 Box Alignment")}} | Définition initiale. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### Prise en charge pour les dispositions flexibles
-
-{{Compat("css.properties.justify-items.flex_context")}}
-
-### Prise en charge pour les grilles CSS
-
-{{Compat("css.properties.justify-items.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

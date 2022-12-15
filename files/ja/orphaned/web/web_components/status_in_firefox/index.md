@@ -3,6 +3,7 @@ title: Firefox での Web Components のサポート状況
 slug: orphaned/Web/Web_Components/Status_in_Firefox
 original_slug: Web/Web_Components/Status_in_Firefox
 ---
+
 {{DefaultAPISidebar("Web Components")}}{{SeeCompatTable}}
 
 [Web Components](/docs/Web/Web_Components) は、とても新しい技術で、ブラウザ実装者や Web 開発者が実際に利用した経験を集めて仕様を考案しています。実装状況は変化しやすく、次々と進化していきます。この記事は、Firefox や Firefox OS で使用されている [Gecko](/docs/Mozilla/Gecko) での実装状況の一覧を示します。

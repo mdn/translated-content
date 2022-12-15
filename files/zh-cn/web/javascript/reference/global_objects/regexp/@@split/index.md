@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@split
 
 {{JSRef}}
 
-**`[@@split]()`** 方法切割 {{jsxref("String")}} 对象为一个其子字符串的数组 。
+**`[@@split]()`** 方法切割 {{jsxref("String")}} 对象为一个其子字符串的数组。
 
 ## 语法
 

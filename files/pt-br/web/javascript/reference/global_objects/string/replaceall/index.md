@@ -1,17 +1,8 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-tags:
-  - Expressão Regular
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - regex
-  - replaceAll()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
+
 {{JSRef}}
 
 O método `replaceAll()` retorna uma nova string com todas as ocorrências de um padrão substituídas por uma substituição. O padrão pode ser uma string ou uma {{jsxref ("RegExp")}}, e a substituição pode ser uma string ou uma função a ser chamada para cada ocorrência.
@@ -26,13 +17,13 @@ A _string_ original é mantida sem modificação.
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Nota:** quando usar uma \`_regexp_\`, você deve colocar o sinalizador (flag) global "`g`". Do contrário, será retornado um `TypeError`: "_replaceAll must be called with a global RegExp_".
+> **Nota:** quando usar uma `regexp`, você deve colocar o sinalizador (flag) global "`g`". Do contrário, será retornado um `TypeError`: "_replaceAll must be called with a global RegExp_".
 
 ### Parâmetros
 
 - `regexp` (padrão)
   - : Uma {{jsxref ("RegExp")}} ou literal com o sinalizador (flag) global. As ocorrências serão substituídas por _`newSubstr`_ ou pelo valor retornado da _`function`_ (função) especificada.
-- `substr`\_ \_(padrão)
+- `substr` (padrão)
   - : Uma {{jsxref ("String")}} que deve ser substituída por `newSubstr`. É tratada como uma string literal e não é interpretada como uma expressão regular (_`RegExp`_).
 - `newSubstr` (substituição)
 

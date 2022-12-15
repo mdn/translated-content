@@ -15,8 +15,8 @@ slug: MDN/Writing_guidelines/Page_structures/Code_examples
 
 - 静态示例——纯代码块，可能含有静态的代码运行结果的屏幕截图。
 - 交互示例——用于创建[在线交互示例](https://github.com/mdn/interactive-examples)的系统，允许你随时更改代码，以查看效果，并轻松复制运行结果。
-- 传统的 MDN “运行实例”——一个宏，接受普通代码块作为参数，将它们动态地放入文档中的 {{htmlelement("iframe")}} 元素内，并将其嵌入页面，以显示代码的实时运行效果。
-- GitHub “在线实例”——一个宏，接受 [MDN 组织](https://github.com/mdn/) GitHub 仓库的文档路径作为参数，将其放入文档中的 {{htmlelement("iframe")}} 元素内，并将其嵌入页面，以显示代码的实时运行效果。
+- 传统的 MDN“运行实例”——一个宏，接受普通代码块作为参数，将它们动态地放入文档中的 {{htmlelement("iframe")}} 元素内，并将其嵌入页面，以显示代码的实时运行效果。
+- GitHub“在线实例”——一个宏，接受 [MDN 组织](https://github.com/mdn/) GitHub 仓库的文档路径作为参数，将其放入文档中的 {{htmlelement("iframe")}} 元素内，并将其嵌入页面，以显示代码的实时运行效果。
 
 我们将在后面章节中依次讨论它们。
 
@@ -162,7 +162,7 @@ p.fancy {
 
 ## GitHub 在线实例
 
-一般使用 [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) 宏将 GitHub 在线实例插入到页面中。一个 \\{{EmbedGHLiveSample}} 调用将从给定的（GitHub **mdn** 组织的） URL 中动态抓取文档，并插入至页面的 {{htmlelement("iframe")}} 元素中。
+一般使用 [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) 宏将 GitHub 在线实例插入到页面中。一个 \\{{EmbedGHLiveSample}} 调用将从给定的（GitHub **mdn** 组织的）URL 中动态抓取文档，并插入至页面的 {{htmlelement("iframe")}} 元素中。
 
 其工作方式与传统的运行实例非常相似，但它们要简单得多：
 
@@ -170,7 +170,7 @@ p.fancy {
 
 该宏只有三个参数：
 
-1. 要嵌入的文档的 URL——这是相对于顶级目录为 `https://mdn.github.io/` 的 MDN 组织而言的。这个参数需要包含URL后面的部分，例如：`my-subdirectory/example.html`。如果它被称为 `index.html`，你可以省略文件名。
+1. 要嵌入的文档的 URL——这是相对于顶级目录为 `https://mdn.github.io/` 的 MDN 组织而言的。这个参数需要包含 URL 后面的部分，例如：`my-subdirectory/example.html`。如果它被称为 `index.html`，你可以省略文件名。
 2. `<iframe>` 的宽度，可以用百分比或像素来表示。
 3. `<iframe>` 的高度，可以用百分比或像素来表示。
 

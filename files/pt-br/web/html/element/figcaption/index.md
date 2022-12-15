@@ -1,25 +1,22 @@
 ---
 title: '<figcaption>: O elemento de legenda da figura'
 slug: Web/HTML/Element/figcaption
-tags:
-  - Elemento
-  - HTML
-translation_of: Web/HTML/Element/figcaption
 ---
-{{HTMLRef}}O **Elemento HTML Figcaption** (`<figcaption>`) representa uma legenda ou uma legenda associada com uma figura ou ilustração descrita pelo resto dos dados do elemento {{ HTMLElement("figure") }} que seu elemento pai.{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
+
+{{HTMLSidebar}}O **Elemento HTML Figcaption** (`<figcaption>`) representa uma legenda ou uma legenda associada com uma figura ou ilustração descrita pelo resto dos dados do elemento {{ HTMLElement("figure") }} que seu elemento pai.{{EmbedInteractiveExample("pages/tabbed/figcaption.html","tabbed-shorter")}}
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Categorias de conteúdo</a>
+        <a href="/pt-BR/docs/HTML/Content_categories">Categorias de conteúdo</a>
       </th>
       <td>Nenhuma.</td>
     </tr>
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Flow content</a
         >.
       </td>

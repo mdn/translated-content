@@ -15,7 +15,7 @@ La pseudo-classe **`:focus-visible`** s'applique lorsqu'un élément correspond 
 
 Ce sélecteur peut être utile afin de fournir un indicateur de focus différent selon le mode de navigation de l'utilisateur (souris ou clavier).
 
-On notera que Firefox prend en charge cette fonctionnalité via une ancienne pseudo-classe préfixée  `:-moz-focusring`. Voir la page {{cssxref(":-moz-focusring")}} pour plus d'informations.
+On notera que Firefox prend en charge cette fonctionnalité via une ancienne pseudo-classe préfixée `:-moz-focusring`. Voir la page {{cssxref(":-moz-focusring")}} pour plus d'informations.
 
 ## Syntaxe
 
@@ -114,13 +114,11 @@ L'apparition ou la disparition d'un indicateur de focus peut être source de con
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#the-focus-visible-pseudo", ":focus-visible")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.focus-visible")}}
+{{Compat}}
 
 ## Voir aussi
 

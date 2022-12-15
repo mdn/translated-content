@@ -1,17 +1,8 @@
 ---
 title: Date.prototype.setUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth
 ---
+
 {{JSRef}}
 
 O método **`setUTCMonth()`** atribui o mês para a data especificada de acordo com o horário universal.

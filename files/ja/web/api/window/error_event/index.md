@@ -2,6 +2,7 @@
 title: 'Window: error イベント'
 slug: Web/API/Window/error_event
 ---
+
 {{APIRef}}
 
 `error` イベントは、リソースの読み取りに失敗したり、使用できなかったりした場合 — 例えば、スクリプトに実行エラーがあった場合に {{domxref("Window")}} オブジェクトに発生します。
@@ -108,9 +109,7 @@ scriptError.addEventListener('click', () => {
 
 ## 仕様書
 
-| 仕様書                                                       | 状態                         |
-| ------------------------------------------------------------ | ---------------------------- |
-| {{SpecName('UI Events', '#event-type-error')}} | {{Spec2('UI Events')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

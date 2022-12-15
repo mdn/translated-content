@@ -1,8 +1,8 @@
 ---
 title: Console.assert()
 slug: Web/API/Console/assert
-translation_of: Web/API/console/assert
 ---
+
 {{APIRef("Console API")}}
 
 Escreve uma mensagem de erro para o console se a afirmação é falsa. Se a firmação é verdadeira, nada acontece.
@@ -28,7 +28,7 @@ console.assert(afirmação, msg [, subst1, ..., substN]); // c-mensagem de forma
 - `msg`
   - : Uma String que contém zero ou mais seguências de substituição.
 - `subst1` ... `substN`
-  - : Objetos JavaScript com qual as strings de substituição `msg `serão substituidas. Isto dá um contriole adicional sobre a mensagem que será escrita.
+  - : Objetos JavaScript com qual as strings de substituição `msg` serão substituidas. Isto dá um contriole adicional sobre a mensagem que será escrita.
 
 Ver [Outputting text to the console](/pt-BR/docs/Web/API/console#Outputting_text_to_the_console) na documentação do {{domxref("console")}} para mais detalhes.
 

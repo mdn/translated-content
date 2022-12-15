@@ -47,5 +47,5 @@ slug: Web/API/Element/cut_event
 - {{domxref("HTMLElement.oncut")}}
 - Related events
 
-  - {{event("copy")}}
-  - {{event("paste")}}
+  - [`copy`](/zh-CN/docs/Web/API/Element/copy_event)
+  - [`paste`](/zh-CN/docs/Web/API/Element/paste_event)

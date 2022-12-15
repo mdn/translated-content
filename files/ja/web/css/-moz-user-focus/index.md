@@ -2,6 +2,7 @@
 title: '-moz-user-focus'
 slug: Web/CSS/-moz-user-focus
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 **`-moz-user-focus`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素がフォーカスを持つことができるかどうかを示すために使用されます。
@@ -20,8 +21,6 @@ slug: Web/CSS/-moz-user-focus
 この値を `ignore` に設定することで、その要素のフォーカスを無効にすることができます。その要素はタブ順で飛ばされます。
 
 {{cssinfo}}
-
-> **Note:** このプロパティは XUL の {{XULElem("textbox")}} 要素では動作しません。`textbox` 自体はフォーカスを受けないからです。代わりに、XBL は無名の HTML {{HTMLElement("input")}} 要素を `textbox` の中に作成し、その要素がフォーカスを受けます。`textbox` がキーボードのフォーカスを受けないようにするには、そのタブインデックスを `-1` に設定することで、またマウスのフォーカスを受けないようにするには、`mousedown` イベントの既定のアクションを防ぐことで可能です。
 
 ## 構文
 

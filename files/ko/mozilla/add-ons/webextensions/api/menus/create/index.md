@@ -3,6 +3,7 @@ title: menus.create()
 slug: Mozilla/Add-ons/WebExtensions/API/menus/create
 original_slug: Mozilla/Add-ons/WebExtensions/API/contextMenus/create
 ---
+
 {{AddonSidebar()}}
 
 주어진 객체대로 새 메뉴 항목을 만든다.

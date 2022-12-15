@@ -2,6 +2,7 @@
 title: DocumentFragment
 slug: Web/API/DocumentFragment
 ---
+
 {{ APIRef("DOM") }}
 
 **`DocumentFragment`** インターフェイスは、親ノードを持たない最小限の文書オブジェクト (文書の断片) を表します。これは {{domxref("Document")}} の軽量版として使用され、標準の文書のようにノードで構成される文書構造の区間を格納します。重要な違いは、文書の断片はアクティブな文書ツリー構造の一部ではないため、断片に対して変更を行っても、文書に影響したり、{{Glossary("reflow", "再フロー")}}を起こしたり、変更が行われたときに性能上の影響を及ぼしたりすることがないことです。
@@ -45,13 +46,7 @@ _このインターフェイスはその親である {{domxref("Node")}} のメ�
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                                         | 備考                                                               |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#interface-documentfragment', 'DocumentFragment')}} | {{Spec2('DOM WHATWG')}}             | コンストラクターと {{domxref("ParentNode")}} の実装を追加。 |
-| {{SpecName('Selectors API Level 1', '#the-apis', 'DocumentFragment')}}             | {{Spec2('Selectors API Level 1')}} | `querySelector()` と `querySelectorAll()` メソッドを追加。         |
-| {{SpecName('DOM3 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}             | {{Spec2('DOM3 Core')}}                 | {{SpecName('DOM2 Core')}} より変更なし                      |
-| {{SpecName('DOM2 Core', 'core.html#ID-B63ED1A3', 'DocumentFragment')}}             | {{Spec2('DOM2 Core')}}                 | {{SpecName('DOM1')}} より変更なし                          |
-| {{SpecName('DOM1', 'level-one-core.html#ID-B63ED1A3', 'DocumentFragment')}}     | {{Spec2('DOM1')}}                     | 初回定義                                                           |
+{{Specifications}}
 
 ## ブラウザーの対応
 

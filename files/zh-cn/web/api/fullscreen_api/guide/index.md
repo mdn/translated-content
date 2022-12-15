@@ -46,7 +46,7 @@ if (elem.requestFullscreen) {
 
 ### 通知
 
-当成功进入全屏模式时，包含该元素的文档会收到一个 {{Event("fullscreenchange")}} 事件。当退出全屏模式时，文档会再一次收到 {{Event("fullscreenchange")}} 事件。注意此 {{Event("fullscreenchange")}} 事件，不管在文档进入和退出全屏模式时，都不会提供任何信息，但如果文档的 {{DOMxRef("document.fullscreenElement", "fullscreenElement")}} 为非空（`null`），即处于全屏模式中。
+当成功进入全屏模式时，包含该元素的文档会收到一个 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 事件。当退出全屏模式时，文档会再一次收到 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 事件。注意此 [`fullscreenchange`](/zh-CN/docs/Web/API/Document/fullscreenchange_event) 事件，不管在文档进入和退出全屏模式时，都不会提供任何信息，但如果文档的 {{DOMxRef("document.fullscreenElement", "fullscreenElement")}} 为非空（`null`），即处于全屏模式中。
 
 ### 当全屏请求失败时
 

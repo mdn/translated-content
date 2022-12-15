@@ -71,7 +71,7 @@ Include this polyfill to provide support for older and currently incompatible br
 [loading-attribute-polyfill](https://github.com/mfranzke/loading-attribute-polyfill)
 
 **交叉观察者 API**
-[Intersection Observers](/zh-CN/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser’s viewport.
+[Intersection Observers](/zh-CN/docs/Web/API/IntersectionObserver) allow the user to know when an observed element enters or exits the browser's viewport.
 
 **事件处理程序**
 当浏览器的兼容性至关重要时，有以下几种选择：

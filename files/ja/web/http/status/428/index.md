@@ -2,6 +2,7 @@
 title: 428 Precondition Required
 slug: Web/HTTP/Status/428
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`428 Precondition Required`** レスポンスステータスコードは、サーバーがリクエストを[条件付き](/ja/docs/Web/HTTP/Conditional_requests)にする必要があることを示します。

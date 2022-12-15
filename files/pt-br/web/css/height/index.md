@@ -1,13 +1,13 @@
 ---
 title: height
 slug: Web/CSS/height
-translation_of: Web/CSS/height
 ---
+
 {{CSSRef()}}
 
 ## Sumário
 
-A propriedade `height` do CSS determina a altura da área do conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/CSS/box_model#content "CSS/Box_model#content") consiste no `padding`, `margin` e `border `do elemento.
+A propriedade `height` do CSS determina a altura da área do conteúdo de um elemento. A [área de conteúdo](/pt-BR/docs/CSS/box_model#content) consiste no `padding`, `margin` e `border` do elemento.
 
 As propriedades {{Cssxref("min-height")}} e {{Cssxref("max-height")}} sobrepõem a {{Cssxref("height")}}.
 
@@ -36,7 +36,7 @@ height: inherit
   - : Veja {{cssxref("&lt;length&gt;")}} para unidades disponíveis.
 - `<percentage>`
   - : Especificada como uma {{cssxref("&lt;percentage&gt;")}} da altura do conteúdo do bloco.
-- `border-box `{{ experimental_inline }}
+- `border-box` {{ experimental_inline }}
   - : Se presente, o último {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado a caixa de borda do elemento.
 - `content-box` {{ experimental_inline }}
   - : Se presente, o último {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} é aplicado a caixa de conteúdo do elemento.
@@ -117,4 +117,4 @@ div {
 
 ## Veja também
 
-- [box model](/pt-BR/docs/CSS/box_model "CSS/box_model"), {{Cssxref("width")}}, {{Cssxref("box-sizing")}}, {{Cssxref("min-height")}}, {{Cssxref("max-height")}}
+- [box model](/pt-BR/docs/CSS/box_model), {{Cssxref("width")}}, {{Cssxref("box-sizing")}}, {{Cssxref("min-height")}}, {{Cssxref("max-height")}}

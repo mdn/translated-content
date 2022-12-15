@@ -1,9 +1,9 @@
 ---
 title: <meta>
 slug: Web/HTML/Element/meta
-translation_of: Web/HTML/Element/meta
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O elemento **HTML `<meta>` **define qualquer informação de metadados que não podem ser definidos por outros elementos **HTML.** ({{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} ou {{HTMLElement("title")}}).
 
@@ -11,17 +11,17 @@ O elemento **HTML `<meta>` **define qualquer informação de metadados que não 
   <tbody>
     <tr>
       <th>
-        <a href="/en-US/docs/Web/HTML/Content_categories">Categoria</a> de
+        <a href="/pt-BR/docs/Web/HTML/Content_categories">Categoria</a> de
         conteúdo
       </th>
       <td>
         Conteúdo de metadado. Se o
         {{htmlattrxref("itemprop", "meta")}} atributo estiver
         presente:
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -67,8 +67,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
 - {{htmlattrdef("charset")}}
 
-  - :&#x20;
-    Este atributo define a codificação de caracteres usada na página. Pode ser substituído localmente usando o atributo _lang_ em qualquer elemento. Esse atributo é literalmente uma amarra e deve ser um dos _MIME names_ preferidos para uma codificação de caracteres como definido pela IANA ([defined by the IANA](https://www.iana.org/assignments/character-sets)). Embora o padrão não solicite uma codificação específica, ele dá algumas sugestões:
+  - : Este atributo define a codificação de caracteres usada na página. Pode ser substituído localmente usando o atributo _lang_ em qualquer elemento. Esse atributo é literalmente uma amarra e deve ser um dos _MIME names_ preferidos para uma codificação de caracteres como definido pela IANA ([defined by the IANA](https://www.iana.org/assignments/character-sets)). Embora o padrão não solicite uma codificação específica, ele dá algumas sugestões:
 
     - Autores são encorajados a usar UTF-8.
     - Autores não devem usar codificações incompatíveis com ASCII (
@@ -81,7 +80,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     > - Esse elemento {{HTMLElement ("meta")}} deve estar dentro do elemento {{HTMLElement ("head")}} e dentro dos primeiros 1024 bytes da página, pois alguns navegadores só olham para esses primeiros bytes antes de escolher um caractere definido para a página.
     > - Esse elemento {{HTMLElement ("meta")}} é apenas uma parte do algoritmo para determinar o conjunto de caracteres de uma página que os navegadores aplicam. O cabeçalho HTTP Content-Type e quaisquer elementos da BOM têm precedência sobre esse elemento.
     > - É uma boa prática, e altamente recomendável, definir o conjunto de caracteres usando este atributo. Se nenhum conjunto de caracteres estiver definido para uma página, várias técnicas de scripts cruzados poderão prejudicar o usuário da página, como a técnica de cross-scripting de fallback UTF-7. Sempre definindo esta meta irá proteger contra esses riscos.
-    > - Esse elemento {{HTMLElement("meta")}} é um sinônimo para o pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` onde o atributo \_`IANAcharset` \_corresponde ao valor equivalente de {{htmlattrxref("charset", "meta")}}. Essa sintaxe ainda é permitida, embora obsoleta e não mais recomendada.
+    > - Esse elemento {{HTMLElement("meta")}} é um sinônimo para o pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` onde o atributo `IANAcharset` corresponde ao valor equivalente de {{htmlattrxref("charset", "meta")}}. Essa sintaxe ainda é permitida, embora obsoleta e não mais recomendada.
 
 - {{htmlattrdef("content")}}
   - : Esse atributo fornece o valor associado ao atributo {{htmlattrxref("http-equiv", "meta")}} ou {{htmlattrxref("name", "meta")}}, dependendo do contexto.

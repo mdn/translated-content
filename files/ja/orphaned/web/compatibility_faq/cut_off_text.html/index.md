@@ -3,6 +3,7 @@ title: 文字列の一部が表示されずに見切れる
 slug: orphaned/Web/Compatibility_FAQ/Cut_Off_Text.html
 original_slug: Web/Compatibility_FAQ/Cut_Off_Text.html
 ---
+
 ## 概要
 
 検索等のテキストボックス内のプレースホルダーが見切れています。
@@ -10,7 +11,7 @@ original_slug: Web/Compatibility_FAQ/Cut_Off_Text.html
 
 表示画面
 
-![](https://mdn.mozillademos.org/files/9967/0108.png)
+![](0108.png)
 
 ## 要因
 

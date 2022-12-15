@@ -1,16 +1,8 @@
 ---
 title: String.prototype.substr()
 slug: Web/JavaScript/Reference/Global_Objects/String/substr
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - substr()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/substr
 ---
+
 {{JSRef}}
 
 O método `substr()` retorna uma parte da string, começando no índice especificado e estendendo-se por um determinado número de caracteres posteriormente.
@@ -82,7 +74,7 @@ if ('ab'.substr(-1) != 'b') {
     return function(start, length) {
       // call the original method
       return substr.call(this,
-      	// did we get a negative start, calculate how much it is from the beginning of the string
+        // did we get a negative start, calculate how much it is from the beginning of the string
         // adjust the start parameter for negative value
         start < 0 ? this.length + start : start,
         length)

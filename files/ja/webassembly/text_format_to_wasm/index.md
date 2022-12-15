@@ -4,11 +4,12 @@ slug: WebAssembly/Text_format_to_wasm
 i10n:
   sourceCommit: 0160aac0e623dacdce4019205f32f7b3d3e58019
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly には S 式ベースのテキスト表現があります。これはテキストエディター、ブラウザーの開発者ツールなどで見せるために設計された中間表現です。この記事では、これがどのように動作するか、テキスト形式のファイルを `.wasm` アセンブリー形式に変換するのに利用可能なツールの使用方法について少し説明します。
 
-> **Note:** テキスト形式のファイルは、通常 `.wat` という拡張子で保存されます。過去には `.wast` という拡張子も使用されていましたが、現在は WebAssembly テストスイートで使用されるスクリプト言語のために使用されています。
+> **メモ:** テキスト形式のファイルは、通常 `.wat` という拡張子で保存されます。過去には `.wast` という拡張子も使用されていましたが、現在は WebAssembly テストスイートで使用されるスクリプト言語のために使用されています。
 
 ## 初めてのテキスト形式
 
@@ -41,7 +42,7 @@ WebAssembly 関数 `exported_func` は私たちの環境（WebAssembly モジュ
 
 これで `simple.wasm` という名前のファイルに wasm が出力されます。これには `.wasm` アセンブリーのコードが含まれます。
 
-> **Note:** wasm2wat を使用して wasm から テキスト表現に戻すことができます。例: `wasm2wat simple.wasm -o text.wat`.
+> **メモ:** wasm2wat を使用して wasm から テキスト表現に戻すことができます。例: `wasm2wat simple.wasm -o text.wat`.
 
 ## アセンブリーの出力を見る
 

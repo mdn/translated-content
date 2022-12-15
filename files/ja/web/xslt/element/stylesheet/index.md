@@ -2,6 +2,7 @@
 title: <xsl:stylesheet>
 slug: Web/XSLT/Element/stylesheet
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XSLT")}}
 
 `<xsl:stylesheet>` 要素 (または同等の `<xsl:transform>` 要素) は、スタイルシートの最も外側の要素です。
@@ -57,11 +58,7 @@ slug: Web/XSLT/Element/stylesheet
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                         | 備考                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("XSLT 3.0", "#stylesheet-element", "&lt;xsl:stylesheet&gt;")}} | {{Spec2("XSLT 3.0")}} | `default-mode`, `expand-text`, `use-when` 属性を追加。                                                                                                     |
-| {{SpecName("XSLT 2.0", "#stylesheet-element", "&lt;xsl:stylesheet&gt;")}} | {{Spec2("XSLT 2.0")}} | `xpath-default-namespace`, `default-validation`, `default-collation`, `input-type-annotations` 属性を追加し、 `version` を除くすべての属性を省略可とした。 |
-| {{SpecName("XSLT 1.0", "#stylesheet-element", "&lt;xsl:stylesheet&gt;")}} | {{Spec2("XSLT 1.0")}} | 初回定義                                                                                                                                                   |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

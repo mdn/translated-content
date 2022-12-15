@@ -61,14 +61,11 @@ for (var v of maMap) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype-@@iterator', 'Map.prototype[@@iterator]()')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-map.prototype-@@iterator', 'Map.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.@@iterator")}}
+{{Compat}}
 
 ## Voir aussi
 

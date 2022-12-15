@@ -1,15 +1,8 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-tags:
-  - Expressões Regulares
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - replace()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
+
 {{JSRef("Global_Objects", "String")}}
 
 ## Resumo
@@ -17,6 +10,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
 O método `replace()` retorna uma nova string com algumas ou todas as correspondências de um padrão substituídas por um determinado caractere (ou caracteres). O padrão pode ser uma string ou uma {{jsxref("RegExp")}}, e a substituição pode ser uma string ou uma função a ser chamada para cada correspondência. Se o padrão for uma string, apenas a primeira ocorrência será substituída.
 
 A string original não é modificada.
+
+{{EmbedInteractiveExample("pages/js/string-replace.html")}}
 
 ## Sintaxe
 

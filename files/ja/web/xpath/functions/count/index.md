@@ -2,6 +2,7 @@
 title: count
 slug: Web/XPath/Functions/count
 ---
+
 {{ XsltRef() }}
 
 `count` 関数はノード集合に含まれるノードの数を数え、その整数を返します。

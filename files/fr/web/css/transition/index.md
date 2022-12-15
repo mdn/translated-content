@@ -60,9 +60,13 @@ Chacune des propriétés de transition décrit la transition qui devrait être a
 
 Si la liste des valeurs est trop courte pour les différentes propriétés, les valeurs seront répétées. Si la liste est trop longue, elle sera tronquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -70,15 +74,11 @@ Plusieurs exemples de transitions CSS sont présentés [sur l'article sur les tr
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Transitions', '#transition-shorthand-property', 'transition')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transition")}}
+{{Compat}}
 
 ## Voir aussi
 

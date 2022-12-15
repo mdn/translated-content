@@ -1,12 +1,8 @@
 ---
 title: Jogos 3D na WEB
 slug: Games/Techniques/3D_on_the_web
-tags:
-  - 3D
-  - Jogos
-  - graficos
-translation_of: Games/Techniques/3D_on_the_web
 ---
+
 {{GamesSidebar}}
 
 A melhor arma para desenvolver ótimas experiências em jogos na WEB é WebGL, que é renderizada em HTML {{htmlelement("canvas")}}. WebGL é, basicamente, uma OpenGL ES 2.0 para a Web — é uma API JavaScript que fornece ferramentas para construir animações ricas e, logicamente, jogos. Você pode gerar e renderizar gráficos dinâmicos em 3D com JavaScript acelerado por hardware.
@@ -27,7 +23,7 @@ Você pode fazer muito mais com WebGL. Há alguns conceitos avançados que você
 
 ### Shaders
 
-É importante mencionar os shaders, que tem uma história separada por sí próprios. Shaders usam GLSL, uma "Linguagem de Sombreamento" OpenGL especial com sintaxe similar a C, que é executada diretamente pelos pipelines de gráficos. Podem ser divididos em Vertex Shaders e Fragment Shaders (ou Pixel Shaders) — o primeiro transforma as posições das formas em coordenadas reais de desenho 3D, enquanto o segundo calcula cores de renderização e outros atributos. Recomendamos fortemente que você veja o artigo [GLSL Shaders ](/pt-BR/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders)para aprender mais sobre eles.
+É importante mencionar os shaders, que tem uma história separada por sí próprios. Shaders usam GLSL, uma "Linguagem de Sombreamento" OpenGL especial com sintaxe similar a C, que é executada diretamente pelos pipelines de gráficos. Podem ser divididos em Vertex Shaders e Fragment Shaders (ou Pixel Shaders) — o primeiro transforma as posições das formas em coordenadas reais de desenho 3D, enquanto o segundo calcula cores de renderização e outros atributos. Recomendamos fortemente que você veja o artigo [GLSL Shaders](/pt-BR/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders) para aprender mais sobre eles.
 
 ### Detecção de Colisão
 

@@ -2,6 +2,7 @@
 title: 'Window: deviceorientation イベント'
 slug: Web/API/Window/deviceorientation_event
 ---
+
 {{APIRef}}
 
 `deviceorientation` イベントは、端末の現在の向きを地球座標フレームと比較した場合に、方角センサーから最新のデータが得られた場合に発生します。このデータは端末内部の磁力計から収集されます。詳細については、[向きと動きのデータの説明](/ja/docs/DOM/Orientation_and_motion_data_explained)を参照してください。
@@ -50,9 +51,7 @@ var handleOrientationEvent = function(frontToBack, leftToRight, rotateDegrees) {
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                                     |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| {{SpecName("Device Orientation", "#deviceorientation", "DeviceOrientation event")}} | {{Spec2("Device Orientation")}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

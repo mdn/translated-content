@@ -1,11 +1,8 @@
 ---
 title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
-tags:
-  - CSS
-  - Propriedade CSS
-translation_of: Web/CSS/mix-blend-mode
 ---
+
 {{CSSRef}}
 
 ## Resumo
@@ -77,8 +74,6 @@ circle { mix-blend-mode: screen; }
 ## Compatibilidade de navegadores
 
 {{Compat("css.properties.mix-blend-mode")}}
-
-##
 
 ## Veja também
 

@@ -4,6 +4,8 @@ slug: Web/API/Window/history
 original_slug: Web/API/Window.history
 ---
 
+{{APIRef}}
+
 {{ APIRef }}
 
 `Window.history` 唯讀屬性會回傳一個 {{domxref("History")}} 物件，其提供了一個介面來操控瀏覽器的 _session history_ 紀錄（為當前面頁所在分頁中訪問、或於當前面頁中透過頁面框架（frame）所載入的頁面）。

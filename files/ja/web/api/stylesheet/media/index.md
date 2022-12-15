@@ -1,51 +1,66 @@
 ---
 title: StyleSheet.media
 slug: Web/API/StyleSheet/media
+l10n:
+  sourceCommit: 84fc68f1674c9b2d1708fb38dc2824e228f9bb3f
 ---
+
 {{APIRef("CSSOM")}}
 
-**StyleSheet.media** は、スタイル情報の対象として想定するメディアを指定します。これは読み取り専用で配列風の `MediaList` オブジェクトであり、 `deleteMedium()` で削除したり `appendMedium()` で追加したりすることができます。
+**`media`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、スタイル情報の対象となる出力先メディアを指定します。これは読み取り専用の配列風の `MediaList` オブジェクトで、 `deleteMedium()` で削除し、 `appendMedium()` で追加することが可能です。
+
+## 値
+
+読み取り専用、配列風の `MediaList` オブジェクトです。
 
 ## 例
 
-```
-<!doctype html>
-<html>
-<head>
-<link rel="stylesheet" href="document.css" type="text/css" media="screen" />
-<style rel="stylesheet" type="text/css" media="screen, print">
-body  { background-color: snow; }
-</style>
-</head>
-<body>
-
-<script>
-for (var iSheetIndex = 0; iSheetIndex < document.styleSheets.length; iSheetIndex++)
- {
-  console.log('document.styleSheets[' + String(iSheetIndex) + '].media: ' +
-   JSON.stringify(document.styleSheets[iSheetIndex].media));
-  if (iSheetIndex === 0)
-    document.styleSheets[iSheetIndex].media.appendMedium('handheld');
-  if (iSheetIndex === 1)
-    document.styleSheets[iSheetIndex].media.deleteMedium('print');
-  console.log('document.styleSheets[' + String(iSheetIndex) + '].media: ' +
-   JSON.stringify(document.styleSheets[iSheetIndex].media));
- }
-/*
-will log:
-document.styleSheets[0].media: {"0":"screen"}
-document.styleSheets[0].media: {"0":"screen","1":"handheld"}
-document.styleSheets[1].media: {"0":"screen","1":"print"}
-document.styleSheets[1].media: {"0":"screen"}
-*/
-</script>
-
-</body>
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Test page</title>
+    <link rel="stylesheet" href="document.css" media="screen" />
+    <style rel="stylesheet" media="screen, print">
+      body {
+        background-color: snow;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      for (let i = 0; i < document.styleSheets.length; i++) {
+        console.log(
+          `document.styleSheets[${i}].media: ${JSON.stringify(
+            document.styleSheets[i].media
+          )}`
+        );
+        if (iSheetIndex === 0)
+          document.styleSheets[i].media.appendMedium("handheld");
+        if (iSheetIndex === 1)
+          document.styleSheets[i].media.deleteMedium("print");
+        console.log(
+          `document.styleSheets[${i}].media: ${JSON.stringify(
+            document.styleSheets[i].media
+          )}`
+        );
+      }
+      // This will log:
+      // document.styleSheets[0].media: {"0":"screen"}
+      // document.styleSheets[0].media: {"0":"screen","1":"handheld"}
+      // document.styleSheets[1].media: {"0":"screen","1":"print"}
+      // document.styleSheets[1].media: {"0":"screen"}
+    </script>
+  </body>
 </html>
 ```
 
 ## 仕様書
 
-DOM Level 2 Styles - STYLESHEET
+{{Specifications}}
 
-[W3C: Document Object Model Style Sheets - MediaList](https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-MediaList)
+## ブラウザーの互換性
+
+{{Compat}}

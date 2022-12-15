@@ -57,7 +57,7 @@ Toutefois, ce script sera bloqué car il n'utilise pas cet attribut :
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.require-sri-for")}}
+{{Compat}}
 
 ## Voir aussi
 

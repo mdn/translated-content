@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration.navigationPreload
 slug: Web/API/ServiceWorkerRegistration/navigationPreload
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`navigationPreload`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、現在のサービスワーカー登録に関連する {{domxref("NavigationPreloadManager")}} を返します。

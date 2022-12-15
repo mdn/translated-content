@@ -39,7 +39,7 @@ La plupart de ces opérations requièrent les [permissions d'APIs](/fr/Add-ons/W
 - {{WebExtAPIRef("management.getSelf()")}}
   - : Renvoie des informations sur l'appel du module complémentaire.
 - {{WebExtAPIRef("management.install()")}}
-  - : Installe un thème particulier, étant donné son URL à l'adresse  [addons.mozilla.org](https://addons.mozilla.org).
+  - : Installe un thème particulier, étant donné son URL à l'adresse [addons.mozilla.org](https://addons.mozilla.org).
 - {{WebExtAPIRef("management.uninstall()")}}
   - : Désinstalle un module complémenaire particulier, compte tenu de son ID.
 - {{WebExtAPIRef("management.uninstallSelf()")}}
@@ -74,7 +74,8 @@ La plupart de ces opérations requièrent les [permissions d'APIs](/fr/Add-ons/W
 >
 > Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
 
-<div class="hidden"><pre>// Copyright 2012 The Chromium Authors. All rights reserved.
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
@@ -101,4 +102,3 @@ La plupart de ces opérations requièrent les [permissions d'APIs](/fr/Add-ons/W
 // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-</pre></div>

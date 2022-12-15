@@ -2,6 +2,7 @@
 title: URLSearchParams.values()
 slug: Web/API/URLSearchParams/values
 ---
+
 {{APIRef("URL API")}}
 
 {{domxref("URLsearchParams")}} インターフェースの **`values()`** メソッドは、このオブジェクトに含まれるすべての値を反復処理できる {{jsxref("Iteration_protocols",'iterator')}} を返します。 値は {{domxref("USVString")}} オブジェクトです。
@@ -43,9 +44,7 @@ value2
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                 | コメント |
-| ------------------------------------------------------------------------------------------------------------ | -------------------- | -------- |
-| {{SpecName('URL', '#interface-urlsearchparams', "values() (see \"iterable\")")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

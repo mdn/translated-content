@@ -1,14 +1,8 @@
 ---
 title: String.prototype.codePointAt()
 slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 ---
+
 {{JSRef}}
 
 O método **`codePointAt()`** retorna um número inteiro não negativo que é o valor do ponto de código Unicode.

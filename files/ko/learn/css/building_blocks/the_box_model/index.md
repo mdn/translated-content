@@ -3,6 +3,7 @@ title: 상자 모델
 slug: Learn/CSS/Building_blocks/The_box_model
 original_slug: Learn/CSS/Building_blocks/상자_모델
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
 
 CSS에 포함되는 모든 요소의 외장은 박스이며, 이 박스를 이해하는 것은 CSS을 통해 레이아웃을 생성하거나, 아이템과 다른 아이템을 정렬하는 것을 가능하게 하는 열쇠입니다. 이번 단원에서 우리는 CSS 박스*모델*을 제대로 살펴보겠습니다. 박스의 작동 방식과 박스와 관련된 용어를 이해함으로써 더 복잡한 레이아웃 작업으로 넘어갈 수 있도록합니다.
@@ -115,7 +116,7 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 
 아래 도표는 이들 레이어를 보여줍니다.
 
-![Diagram of the box model](https://mdn.mozillademos.org/files/16558/box-model.png)
+![박스 모델](box-model.png)
 
 ### 표준 CSS box model
 
@@ -135,7 +136,7 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 
 표준 박스 모델을 사용하여 박스가 차지하는 공간은 실제로 너비 410px(350 + 25 + 25 + 5 + 5), 높이 210px(150 + 25 + 25 + 5 + 5)가 될 것인데, 양쪽 패딩과 테두리는 콘텐츠 박스에 사용되는 너비에 더해지기 때문입니다.
 
-![Showing the size of the box when the standard box model is being used.](https://mdn.mozillademos.org/files/16559/standard-box-model.png)
+![표준 박스 모델을 사용했을 때의 박스 크기](standard-box-model.png)
 
 > **참고:** 여백은 박스의 실제 크기에 포함되지 않습니다. 물론 여백은 박스가 페이지에서 차지하는 총 공간에 영향을 미치지만, 박스의 외부 공간에만 영향을 미칩니다. 박스의 영역은 테두리에서 멈추게 됩니다. 여백으로 확장되지 않습니다.
 
@@ -143,7 +144,7 @@ CSS 블록 박스 구성하기 위한 우리의 준비물은:
 
 박스의 실제 크기를 얻기 위해 테두리와 패딩을 추가하는 것이 다소 불편하다고 생각할 수 있습니다. 당신 말이 옳을 것입니다! 이러한 이유로 CSS는 표준 박스 모델 이후 머지않아 대체 박스 모델이 도입되었습니다. 이 모델을 사용한다면 너비는 페이지에서 표시되는 박스 너비이므로 콘텐츠 영역 너비는 너비에서 패딩 및 테두리 너비를 뺀 너비입니다. 위에서 사용된 것과 동일한 CSS를 아래 결과에 대입하면(폭 = 350px, 높이 = 150px)가 됩니다.
 
-![Showing the size of the box when the alternate box model is being used.](https://mdn.mozillademos.org/files/16557/alternate-box-model.png)
+![대체 표준 박스 모델을 사용했을 때의 박스 크기](alternate-box-model.png)
 
 기본값으로 브라우저는 기본 박스 모델을 사용합니다. 요소에 대체 모델을 활성화하려면 거기에 `box-sizing: border-box`를 설정하여 그렇게 할 수 있습니다. 이렇게 하면 당신이 설정한 크기에 따라 정의된 영역만큼 테두리 박스가 점유하도록 브라우저에 전달할 수 있습니다.
 
@@ -180,7 +181,7 @@ html {
 
 [브라우저 개발자 도구](/ko/docs/Learn/Common_questions/What_are_browser_developer_tools)를 사용하면 박스 모델을 훨씬 쉽게 이해할 수 있습니다. 파이어폭스의 개발자 도구에서 요소를 검사하면 요소의 크기와 여백, 패딩 및 테두리를 볼 수 있습니다. 이 방법으로 요소를 검사하면 실제로 그것이 당신이 생각하는 크기인지를 알아낼 수 있어 좋은 방법입니다.
 
-![Inspecting the box model of an element using Firefox DevTools](https://mdn.mozillademos.org/files/16560/box-model-devtools.png)
+![FireFox의 DevTools를 이용한 박스 모델 검사](box-model-devtools.png)
 
 ## 여백과 패딩과 테두리
 

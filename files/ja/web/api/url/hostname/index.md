@@ -2,6 +2,7 @@
 title: URL.hostname
 slug: Web/API/URL/hostname
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`hostname`** プロパティは、URL のドメインを含む {{domxref("USVString")}} です。
@@ -28,9 +29,7 @@ var result = url.hostname; // 戻り値: 'developer.mozilla.org'
 
 ## 仕様
 
-| 仕様                                                                         | 状態                 | コメント |
-| ---------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-url-hostname', 'URL.hostname')}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

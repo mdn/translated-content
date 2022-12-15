@@ -2,6 +2,7 @@
 title: Notification.title
 slug: Web/API/Notification/title
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`title`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、 {{domxref("Notification.Notification","Notification()")}} コンストラクターの `title` 引数で指定された通知のタイトルを示します。

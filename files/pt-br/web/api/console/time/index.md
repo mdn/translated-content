@@ -1,15 +1,15 @@
 ---
 title: Console.time()
 slug: Web/API/Console/time
-translation_of: Web/API/Console/time
 ---
+
 {{ APIRef("Console API") }}{{Non-standard_header}}
 
 ## Sumário
 
 Inicia um cronômetro que você pode usar para monitorar quanto tempo uma operação leva. Você dá para cada cronômetro um nome único, e deve ter no máximo 10.000 deles sendo executados na página. Quando você chama {{ domxref("console.timeEnd()") }} com o mesmo nome, o navegador mostrará o tempo, em milisegundos, que se passou desde que o cronômetro iniciou.
 
-Veja [Timers ](/pt-BR/DOM/console#Timers)na documentação {{ domxref("console") }} para detalhes e exemplos.
+Veja [Timers](/pt-BR/DOM/console#Timers) na documentação {{ domxref("console") }} para detalhes e exemplos.
 
 {{AvailableInWorkers}}
 

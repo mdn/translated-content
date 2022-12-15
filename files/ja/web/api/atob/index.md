@@ -3,6 +3,7 @@ title: WindowOrWorkerGlobalScope.atob()
 slug: Web/API/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`WindowOrWorkerGlobalScope.atob()`** 関数は、 {{glossary("Base64")}} エンコーディングでエンコードされたデータの文字列をデコードします。 {{domxref("WindowOrWorkerGlobalScope.btoa","btoa()")}} メソッドを使用して、通信に問題が発生する可能性のあるデータをエンコードして送信し、送信した後に `atob()` メソッドを使用して再度デコードすることができます。例えば、ASCII の 0 から 31 までのコードような制御文字をエンコードして送信し、デコードすることができます。
@@ -42,15 +43,11 @@ const decodedData = window.atob(encodedData); // 文字列をデコード
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考                                                                                                           |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#dom-atob', 'WindowOrWorkerGlobalScope.atob()')}} | {{Spec2('HTML WHATWG')}} | 最新の仕様で、メソッドを `WindowOrWorkerGlobalScope` ミックスインに移動。                                      |
-| {{SpecName('HTML5.1', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}     | {{Spec2('HTML5.1')}}     | {{SpecName("HTML WHATWG")}} のスナップショット、変更なし。                                            |
-| {{SpecName("HTML5 W3C", "#dom-windowbase64-atob", "WindowBase64.atob()")}} | {{Spec2('HTML5 W3C')}}     | {{SpecName("HTML WHATWG")}} のスナップショット。 `WindowBase64` の作成 (以前の対象だったプロパティ)。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.WindowOrWorkerGlobalScope.atob")}}
+{{Compat}}
 
 ## 関連情報
 

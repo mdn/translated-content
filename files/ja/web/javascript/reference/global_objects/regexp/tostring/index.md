@@ -50,9 +50,7 @@ new RegExp('\n').toString() === '/\\n/'; // true, starting with ES5
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.tostring', 'RegExp.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

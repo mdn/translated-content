@@ -28,7 +28,7 @@ dateObj.setUTCFullYear(yearValue[, monthValue[, dayValue]])
 
 如果你没有指定具体的 `monthValue` 和 `dayValue`，将会使用 `getUTCMonth` 和 `getUTCDate` 方法的返回值。
 
-如果你指定的参数超出了期待范围，`setUTCFullYear() 方法将会根据 Date 对象，更新其他参数和日期信息。例如，如果你将 monthValue 设定为 15，年份会增加 1，月份值则为为 3。`
+如果你指定的参数超出了期待范围，`setUTCFullYear()` 方法将会根据 `Date` 对象，更新其他参数和日期信息。例如，如果你将 `monthValue` 设定为 `15`，年份会增加 `1`，月份值则为为 `3`。
 
 ## 例子
 

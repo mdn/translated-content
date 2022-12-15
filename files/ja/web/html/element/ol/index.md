@@ -3,7 +3,7 @@ title: '<ol>: 順序付きリスト要素'
 slug: Web/HTML/Element/ol
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<ol>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序付きリストを表します。ふつうは番号付きのリストとして表示されます。
 
@@ -79,7 +79,7 @@ slug: Web/HTML/Element/ol
 
     指定された種類は、異なる {{HTMLAttrxRef("type", "li")}} 属性が内部の {{HTMLElement("li")}} 要素で使用されない限り、リスト全体に使用されます。
 
-    > **Note:** （項目が番号や文字で参照される法律文書や技術文書のように）リスト番号の種類に重要性がない限り、代わりに CSS の {{CSSxRef("list-style-type")}} プロパティを使用してください。
+    > **メモ:** （項目が番号や文字で参照される法律文書や技術文書のように）リスト番号の種類に重要性がない限り、代わりに CSS の {{CSSxRef("list-style-type")}} プロパティを使用してください。
 
 ## 使用上の注意
 

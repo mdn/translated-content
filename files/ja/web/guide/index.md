@@ -2,6 +2,7 @@
 title: 開発者ガイド
 slug: Web/Guide
 ---
+
 **これらの記事は、特定の技術や API を利用するための how-to 情報を提供します。**
 
 - [HTML 学習エリア](/ja/docs/Learn/HTML)

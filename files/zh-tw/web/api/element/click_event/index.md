@@ -3,6 +3,8 @@ title: click事件
 slug: Web/API/Element/click_event
 ---
 
+{{APIRef}}
+
 **`click`** 事件通常會在設備的按鈕（通常是滑鼠按鍵）點擊元素時執行。
 
 <table class="properties">

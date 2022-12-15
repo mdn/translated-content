@@ -1,17 +1,6 @@
 ---
 title: fetch()
 slug: Web/API/fetch
-translation_of: Web/API/fetch
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - GlobalFetch
-  - Method
-  - Reference
-  - request
-browser-compat: api.fetch
 ---
 
 {{APIRef("Fetch API")}}
@@ -45,7 +34,7 @@ const fetchResponsePromise = fetch(resource [, init])
 
   - : Isto define o recurso que você deseja buscar. Isto pode ser:
 
-    - String ou qualquer outro objeto com um [stringifier](/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — incluindo um objeto {{domxref("URL")}} — que fornece a URL do recurso que você deseja buscar.
+    - String ou qualquer outro objeto com um [stringifier](/pt-BR/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers) — incluindo um objeto {{domxref("URL")}} — que fornece a URL do recurso que você deseja buscar.
     - Um objeto {{domxref("Request")}}.
 
 - `init` {{optional_inline}}
@@ -59,7 +48,7 @@ const fetchResponsePromise = fetch(resource [, init])
         (Este comportamento foi corrigido no Firefox 65 — consulte {{bug(1508661)}}).
     - `headers`
       - : Qualquer cabeçalho que você queira adicionar à sua requisição, contido dentro de um objeto
-        {{domxref("Headers")}} ou um objeto literal com valores {{jsxref("String")}}. Observe que [alguns nomes são proibidos](/en-US/docs/Glossary/Forbidden_header_name).
+        {{domxref("Headers")}} ou um objeto literal com valores {{jsxref("String")}}. Observe que [alguns nomes são proibidos](/pt-BR/docs/Glossary/Forbidden_header_name).
     - `body`
       - : Qualquer corpo que você queira adicionar à sua requisição: podendo ser um
         {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
@@ -81,7 +70,7 @@ const fetchResponsePromise = fetch(resource [, init])
 
           - : Diz aos navegadores para incluir credenciais em ambas requisições `same-origin` e `cross-origin`, e sempre use as credenciais enviadas de volta nas respostas.
 
-            > **Note:** As credenciais podem ser incluídas em requisições cross-origin simples e "finais", mas não devem ser incluídas em [requisições de comprovação de CORS](/en-US/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
+            > **Note:** As credenciais podem ser incluídas em requisições cross-origin simples e "finais", mas não devem ser incluídas em [requisições de comprovação de CORS](/pt-BR/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
 
     - `cache`
       - : Uma string indicando como a requisição vai interagir com o [cache HTTP](/pt-BR/docs/Web/HTTP/Caching) do navegador. Os valores possíveis, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, e `only-if-cached`, estão documentados no artigo para a propriedade {{domxref("Request/cache", "cache")}} do objeto {{domxref("Request")}}.
@@ -105,7 +94,7 @@ const fetchResponsePromise = fetch(resource [, init])
         `origin-when-cross-origin`,
         `strict-origin-when-cross-origin` ou `unsafe-url`.
     - `integrity`
-      - : Contém o valor [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+      - : Contém o valor [subresource integrity](/pt-BR/docs/Web/Security/Subresource_Integrity)
         da requisição (por exemplo,
         `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
     - `keepalive`

@@ -2,6 +2,7 @@
 title: CharacterData.length
 slug: Web/API/CharacterData/length
 ---
+
 {{APIRef("DOM")}}
 
 **`CharacterData.length`** プロパティは読み取り専用で、含まれているデータの文字数を正の整数で返します。
@@ -12,7 +13,7 @@ slug: Web/API/CharacterData/length
 
 ## 例
 
-> **Note:** {{domxref("CharacterData")}} は抽象インターフェイスです。
+> **メモ:** {{domxref("CharacterData")}} は抽象インターフェイスです。
 > The examples below use {{domxref("Text")}}, a concrete interface implementing it.
 
 ```html

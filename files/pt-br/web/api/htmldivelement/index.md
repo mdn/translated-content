@@ -1,17 +1,11 @@
 ---
 title: HTMLDivElement
 slug: Web/API/HTMLDivElement
-tags:
-  - API
-  - HTMLDivElement
-  - Interface
-  - PrecisaNovoLayout
-  - Referência(2)
-translation_of: Web/API/HTMLDivElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
-A interface `HTMLDivElement `fornece propriedades especiais ( além da interface normal {{domxref ("HTMLElement")}} que também está a sua disposição por herança ) para manipular elementos div.
+A interface `HTMLDivElement` fornece propriedades especiais ( além da interface normal {{domxref ("HTMLElement")}} que também está a sua disposição por herança ) para manipular elementos div.
 
 {{InheritanceDiagram(600,120)}}
 
@@ -39,8 +33,6 @@ _Nenhum método específico; os métodos são herdados de seu pai, {{domxref ("H
 ## Compatibilidade com navegadores
 
 {{Compat("api.HTMLDivElement")}}
-
-##
 
 ## Ver também
 

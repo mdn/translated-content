@@ -86,7 +86,7 @@ JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提�
 - [3. 渲染 Vue 组件列表](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
   - : 至此我们已经得到了一个完全可用的组件，我们现在已经准备好添加多个`ToDoItem` 组件到我们的应用中了。在此章节我们将了解如何添加一组待办项数据到我们的`App.vue`组件，这组数据我们随后使用`v-for`指令将它们循环并显示到`ToDoItem`组件中。
 - [4. 添加一个新的待办表单：Vue 事件，方法和模型](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)
-  - : 现在我们的应用已经有了示例数据和一个循环来将每条数据渲染到`ToDoItem`中。下一步我们要做的是让用户能够输入他们自己的待办事项到这个应用中。 为此我们需要一个文本输入框`<input>`，一个在数据提交时触发的事件，一个在数据提交时被触发来添加数据和渲染列表的方法和一个用来控制数据的模型。这就是这个章节我们将要介绍的内容。
+  - : 现在我们的应用已经有了示例数据和一个循环来将每条数据渲染到`ToDoItem`中。下一步我们要做的是让用户能够输入他们自己的待办事项到这个应用中。为此我们需要一个文本输入框`<input>`，一个在数据提交时触发的事件，一个在数据提交时被触发来添加数据和渲染列表的方法和一个用来控制数据的模型。这就是这个章节我们将要介绍的内容。
 - [5. 使用 CSS 美化 Vue 组件](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling)
   - : 终于到了美化我们的应用的时间了。在此章节我们将探索用 CSS 美化 Vue 组件的不同方法。
 - [6. 使用 Vue 计算属性](/zh-CN/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties)

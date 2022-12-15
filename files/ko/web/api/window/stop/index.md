@@ -3,6 +3,7 @@ title: Window.stop()
 slug: Web/API/Window/stop
 translation_of: Web/API/Window/stop
 ---
+
 {{APIRef}}
 
 ## 요약

@@ -33,7 +33,4 @@ translation_of: Web/CSS/CSS_Positioning
 
 ## Spécifications
 
-| Spécification                                        | État                                     | Commentaires |
-| ---------------------------------------------------- | ---------------------------------------- | ------------ |
-| {{SpecName('CSS3 Positioning')}}         | {{Spec2('CSS3 Positioning') }} |              |
-| {{SpecName('CSS2.1', 'visuren.html')}} | {{Spec2('CSS2.1')}}                 |              |
+{{Specifications}}

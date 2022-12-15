@@ -35,7 +35,7 @@ var result = url.password; // Returns:"flabada"
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.password")}}
+{{Compat}}
 
 ## 参见
 

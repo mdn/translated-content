@@ -4,11 +4,12 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 original_slug: Web/Guide/CSS/Understanding_z_index/Adding_z-index
 ---
+
 {{cssref}}
 
-The first part of this article, [Stacking without the z-index property](/en/CSS/Understanding_z-index/Stacking_without_z-index "en/CSS/Understanding_z-index/Stacking_without_z-index"), explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/ru/docs/Web/CSS/position#Types_of_positioning) element.
+The first part of this article, [Stacking without the z-index property](/en/CSS/Understanding_z-index/Stacking_without_z-index), explains how stacking is arranged by default. If you want to create a custom stacking order, you can use the {{cssxref("z-index")}} property on a [positioned](/ru/docs/Web/CSS/position#Types_of_positioning) element.
 
-Свойство `z-index` может иметь значение в целых числах (положительные, ноль, или отрицательные), что представляет собой позицию элемента вдоль оси z. Если вы не знакомы с\*\* **осью** \*\*z, представьте себе страницу как стопку слоёв, имеющих собственное порядковое число. Слои представлены в числовом порядке, with larger numbers above smaller numbers.
+Свойство `z-index` может иметь значение в целых числах (положительные, ноль, или отрицательные), что представляет собой позицию элемента вдоль оси z. Если вы не знакомы с **осью** z, представьте себе страницу как стопку слоёв, имеющих собственное порядковое число. Слои представлены в числовом порядке, with larger numbers above smaller numbers.
 
 - bottom layer _(farthest from the observer)_
 - ...
@@ -22,9 +23,10 @@ The first part of this article, [Stacking without the z-index property](/en/CSS/
 - ...
 - top layer _(closest to the observer)_
 
-> **Примечание:** **Notes:\*** When no `z-index` property is specified, elements are rendered on the default rendering layer 0 (zero).
+> **Примечание:**
 >
-> - If several elements share the same `z-index` value (i.e., they are placed on the same layer), stacking rules explained in the section [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index "Stacking without z-index") apply.
+> - When no `z-index` property is specified, elements are rendered on the default rendering layer 0 (zero).
+> - If several elements share the same `z-index` value (i.e., they are placed on the same layer), stacking rules explained in the section [Stacking without z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) apply.
 
 In the following example, the layers' stacking order is rearranged using `z-index`. The `z-index` of element #5 has no effect since it is not a positioned element.
 
@@ -133,9 +135,9 @@ b {
 
 ## See also
 
-- [Stacking without the z-index property](/en/CSS/Understanding_z-index/Stacking_without_z-index "en/CSS/Understanding_z-index/Stacking_without_z-index"): The stacking rules that apply when `z-index` is not used.
-- [Stacking with floated blocks](/en/CSS/Understanding_z-index/Stacking_and_float "en/CSS/Understanding_z-index/Stacking_and_float"): How floating elements are handled with stacking.
-- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context "en/CSS/Understanding_z-index/The_stacking_context"): Notes on the stacking context.
-- [Stacking context example 1](/en/CSS/Understanding_z-index/Stacking_context_example_1 "en/CSS/Understanding_z-index/Stacking_context_example_1"): 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2 "en/CSS/Understanding_z-index/Stacking_context_example_2"): 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3 "en/CSS/Understanding_z-index/Stacking_context_example_3"): 3-level HTML hierarchy, z-index on the second level
+- [Stacking without the z-index property](/en/CSS/Understanding_z-index/Stacking_without_z-index): The stacking rules that apply when `z-index` is not used.
+- [Stacking with floated blocks](/en/CSS/Understanding_z-index/Stacking_and_float): How floating elements are handled with stacking.
+- [The stacking context](/en/CSS/Understanding_z-index/The_stacking_context): Notes on the stacking context.
+- [Stacking context example 1](/en/CSS/Understanding_z-index/Stacking_context_example_1): 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/en/CSS/Understanding_z-index/Stacking_context_example_2): 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/en/CSS/Understanding_z-index/Stacking_context_example_3): 3-level HTML hierarchy, z-index on the second level

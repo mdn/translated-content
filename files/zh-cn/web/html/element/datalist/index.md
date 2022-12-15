@@ -1,9 +1,11 @@
 ---
-title: datalist
+title: <datalist>：HTML 数据列表元素
 slug: Web/HTML/Element/datalist
 ---
 
-**_HTML_ `<datalist>`_元素_**包含了一组{{HTMLElement("option")}}元素，这些元素表示其它表单控件可选值。
+{{HTMLSidebar}}
+
+[HTML](/zh-CN/docs/Web/HTML) **`<datalist>`** 元素包含了一组 {{HTMLElement("option")}} 元素，这些元素表示其它表单控件可选值。
 
 {{EmbedInteractiveExample("pages/tabbed/datalist.html", "tabbed-standard")}}
 

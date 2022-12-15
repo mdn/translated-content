@@ -3,6 +3,7 @@ title: '-ms-high-contrast'
 slug: Web/CSS/@media/-ms-high-contrast
 original_slug: Web/CSS/-ms-high-contrast
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **-ms-high-contrast** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 [Microsoft 拡張](/ja/docs/Web/CSS/Microsoft_Extensions)であり、アプリケーションが高コントラストモードで表示されているかどうか、どの配色で表示されているかを記述します。

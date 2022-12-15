@@ -1,11 +1,11 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
-translation_of: Web/JavaScript/Reference/Functions/set
 ---
+
 {{jsSidebar("Functions")}}
 
-A sintaxe _**`set`**_ liga a propriedade da função para ser chamada quando existe uma tentativa de definir valor para essa propriedade.
+A sintaxe **`set`** liga a propriedade da função para ser chamada quando existe uma tentativa de definir valor para essa propriedade.
 
 ## Sintaxe
 
@@ -18,9 +18,6 @@ A sintaxe _**`set`**_ liga a propriedade da função para ser chamada quando exi
 
 - `prop`
   - : Nome da propriedade ligada a função.
-
-<!---->
-
 - `val`
   - : `Um apelido para variável que será atribuidada a prop.`
 - expression
@@ -37,7 +34,7 @@ Observe os seguintes itens ao trabalhar com a sintaxe _set_:
 - Não deve ter a mesma nomenclatura seja ela para propriedades ou função.
   (`{ set x(v) { }, set x(v) { } }` e `{ x: ..., set x(v) { } }` é proibido.)
 
-Um _setter_ pode ser deletado usando o operator [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete").
+Um _setter_ pode ser deletado usando o operator [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete).
 
 ## Exemplos
 
@@ -58,7 +55,7 @@ Observe que _current_ não está definido e qualquer tentativa de acesso irá re
 
 ### Removendo um setter com o operador `delete`
 
-Se você deseja remover o _setter_, poderá usar somente o [`delete`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete):
+Se você deseja remover o _setter_, poderá usar somente o [`delete`](/pt-BR/docs/Web/JavaScript/Reference/Operators/delete):
 
 ```js
 delete o.current;
@@ -108,7 +105,7 @@ console.log(obj.baz); // "baz"
 
 ## SpiderMonkey-specific notes
 
-- Starting with[ JavaScript 1.8.1](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.8.1), setters are no longer called when setting properties in object and array initializers.
+- Starting with [JavaScript 1.8.1](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/1.8.1), setters are no longer called when setting properties in object and array initializers.
 - From SpiderMonkey 38 on, a setter with a {{jsxref("Functions/rest_parameters", "rest parameter", "", 1)}} is a {{jsxref("SyntaxError")}} as per the ES6 specification.
 
 ## See also
@@ -116,6 +113,6 @@ console.log(obj.baz); // "baz"
 - [getter](/pt-BR/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
-- {{jsxref("Object.defineGetter", "__defineGetter__")}}
-- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- [`Object.prototype.__defineGetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)
+- [`Object.prototype.__defineSetter__()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__)
 - [Defining Getters and Setters](/pt-BR/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters) in JavaScript Guide

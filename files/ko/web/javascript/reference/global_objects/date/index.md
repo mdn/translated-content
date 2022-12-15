@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date
 browser-compat: javascript.builtins.Date
 ---
+
 {{JSRef}}
 
 JavaScript **`Date`** 객체는 시간의 한 점을 플랫폼에 종속되지 않는 형태로 나타냅니다.

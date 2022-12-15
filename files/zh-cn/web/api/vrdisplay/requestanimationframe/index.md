@@ -39,7 +39,7 @@ TBD.
 
 ## Browser compatibility
 
-{{Compat("api.VRDisplay.requestAnimationFrame")}}
+{{Compat}}
 
 ## See also
 

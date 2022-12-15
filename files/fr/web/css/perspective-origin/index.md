@@ -57,9 +57,13 @@ perspective-origin: unset;
     - `center` : un mot-clé qui est un alias pour indiquer une valeur de pourcentage de `50%`.
     - `bottom` : un mot-clé qui est un alias pour indiquer un pourcentage de `100%`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -353,15 +357,11 @@ section {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS Transforms 2', '#perspective-origin-property', 'perspective-origin')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.perspective-origin")}}
+{{Compat}}
 
 ## Voir aussi
 

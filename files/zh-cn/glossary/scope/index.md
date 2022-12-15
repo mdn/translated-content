@@ -7,7 +7,7 @@ slug: Glossary/Scope
 
 JavaScript 的作用域分以下三种：
 
-- 全局作用局：脚本模式运行所有代码的默认作用域
+- 全局作用域：脚本模式运行所有代码的默认作用域
 - 模块作用域：模块模式中运行代码的作用域
 - 函数作用域：由{{glossary("function","函数")}}创建的作用域
 
@@ -19,10 +19,11 @@ JavaScript 的作用域分以下三种：
 
 ```js example-bad
 function exampleFunction() {
-    var x = "declared inside function";  // x 只能在 exampleFunction 函数中使用
-    console.log("Inside function");
-    console.log(x);
+  const x = "declared inside function"; // x 只能在 exampleFunction 函数中使用
+  console.log("Inside function");
+  console.log(x);
 }
+
 
 console.log(x);  // 报错
 ```
@@ -30,13 +31,13 @@ console.log(x);  // 报错
 但是，下面的代码是有效的，因为变量在函数外被声明，为全局变量：
 
 ```js example-good
-var x = "declared outside function";
+const x = "declared outside function";
 
 exampleFunction();
 
 function exampleFunction() {
-    console.log("Inside function");
-    console.log(x);
+  console.log("Inside function");
+  console.log(x);
 }
 
 console.log("Outside function");
@@ -61,4 +62,4 @@ console.log(x); // ReferenceError: x is not defined
 
 ## 参见
 
-- 见维基百科词条：[作用域](https://zh.wikipedia.org/wiki/作用域)
+- 维基百科词条：[作用域](https://zh.wikipedia.org/wiki/作用域)

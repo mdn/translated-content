@@ -2,6 +2,7 @@
 title: Event (イベント)
 slug: Glossary/event
 ---
+
 Events は [DOM](/ja/docs/Glossary/DOM) 要素によって生成される資産であり、Javascript コードから操作できます。
 
 ## 関連項目

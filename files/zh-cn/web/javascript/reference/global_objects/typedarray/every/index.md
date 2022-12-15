@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/every
 
 {{JSRef}}
 
-**`every()`** 方法测试类型化数组的所有元素是否都能够通过由提供函数实现的测试。这个方法的算法与 {{jsxref("Array.prototype.every()")}}相同。 _TypedArray_ 是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
+**`every()`** 方法测试类型化数组的所有元素是否都能够通过由提供函数实现的测试。这个方法的算法与 {{jsxref("Array.prototype.every()")}}相同。_TypedArray_ 是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。
 
 ## 语法
 

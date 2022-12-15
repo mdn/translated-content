@@ -1,8 +1,8 @@
 ---
 title: HTMLElement.lang
 slug: Web/API/HTMLElement/lang
-translation_of: Web/API/HTMLElement/lang
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.lang`** property gets or sets the base language of an element's attribute values and text content.

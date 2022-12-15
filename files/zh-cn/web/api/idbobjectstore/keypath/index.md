@@ -87,7 +87,7 @@ function addData() {
 - [使用 IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - 开始学习事务 transactions: {{domxref("IDBDatabase")}}
 - 使用事务 transactions: {{domxref("IDBTransaction")}}
-- 值域 range 的使用: {{domxref("IDBKeyRange")}}
-- 检索、修改: {{domxref("IDBObjectStore")}}
-- 使用游标: {{domxref("IDBCursor")}}
+- 值域 range 的使用：{{domxref("IDBKeyRange")}}
+- 检索、修改：{{domxref("IDBObjectStore")}}
+- 使用游标：{{domxref("IDBCursor")}}
 - 相关例子：[To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](http://mdn.github.io/to-do-notifications/).)

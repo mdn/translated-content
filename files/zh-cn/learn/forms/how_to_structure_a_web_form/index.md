@@ -43,7 +43,7 @@ HTML 表单的灵活性使它们成为 HTML 中最复杂的结构之一;您可�
 
 ## \<fieldset> 和 \<legend> 元素
 
-{{HTMLElement("fieldset")}}元素是一种方便的用于创建具有相同目的的小部件组的方式，出于样式和语义目的。 你可以在`<fieldset>`开口标签后加上一个 {{HTMLElement("legend")}}元素来给{{HTMLElement("fieldset")}} 标上标签。 {{HTMLElement("legend")}}的文本内容正式地描述了{{HTMLElement("fieldset")}}里所含有部件的用途。
+{{HTMLElement("fieldset")}}元素是一种方便的用于创建具有相同目的的小部件组的方式，出于样式和语义目的。你可以在`<fieldset>`开口标签后加上一个 {{HTMLElement("legend")}}元素来给{{HTMLElement("fieldset")}} 标上标签。 {{HTMLElement("legend")}}的文本内容正式地描述了{{HTMLElement("fieldset")}}里所含有部件的用途。
 
 许多辅助技术将使用{{HTMLElement("legend")}} 元素，就好像它是相应的 {{HTMLElement("fieldset")}} 元素里每个部件的标签的一部分。例如，在说出每个小部件的标签之前，像[Jaws](http://www.freedomscientific.com/products/fs/jaws-product-page.asp)或[NVDA](http://www.nvda-project.org/)这样的屏幕阅读器会朗读出 legend 的内容。
 

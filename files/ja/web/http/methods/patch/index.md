@@ -2,6 +2,7 @@
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
 ---
+
 {{HTTPSidebar}}
 
 **HTTP の `PATCH` リクエストメソッド**は、リソースへの部分的な変更を適用します。

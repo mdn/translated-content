@@ -164,7 +164,7 @@ Pour les valeurs temporelles, on utilisera les éléments {{HTMLElement("time")}
 
 On peut avoir des imbrications de propriétés et utiliser l'attribut `itemscope` sur l'élément qui porte le groupe.
 
-L'élément de plus haut niveau possède deux propriétés `name` et `band`. La valeur de `name` est Amanda et la valeur de ` ban``d ` est un objet à part entière, composé de deux propriétés `name` et `size`. Le valeur pour `name` est Jazz Band et la valeur de `size` est 12. L'objet de plus haut niveau est un objet qui ne fait pas partie d'un autre objet.
+L'élément de plus haut niveau possède deux propriétés `name` et `band`. La valeur de `name` est Amanda et la valeur de `band` est un objet à part entière, composé de deux propriétés `name` et `size`. Le valeur pour `name` est Jazz Band et la valeur de `size` est 12. L'objet de plus haut niveau est un objet qui ne fait pas partie d'un autre objet.
 
 ### Séparation des objets
 

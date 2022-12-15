@@ -50,5 +50,5 @@ Timing-Allow-Origin: https://developer.mozilla.org
 ## 参见
 
 - [Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API)
-- [Using the Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [使用 Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
 - {{HTTPHeader("Vary")}}

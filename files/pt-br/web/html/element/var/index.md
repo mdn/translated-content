@@ -1,7 +1,6 @@
 ---
 title: <var>
 slug: Web/HTML/Element/var
-translation_of: Web/HTML/Element/var
 ---
 ## Resumo
 
@@ -21,7 +20,7 @@ Este elemento somente inclui os [global attributes](/pt-BR/docs/HTML/Global_attr
 
 ## Interface DOM
 
-Este elemento implementa a interface [`HTMLElement`](/en-US/docs/DOM/element).
+Este elemento implementa a interface [`HTMLElement`](/pt-BR/docs/DOM/element).
 
 > **Note:** **Implementation note:** up to Gecko 1.9.2 inclusive, Firefox implements the [HTMLSpanElement](/pt-BR/docs/DOM/span) interface for this element.
 
@@ -41,4 +40,4 @@ var {
 
 A simple equation: _x_ = _y_ + 2
 
-{{HTMLRef}}
+{{HTMLSidebar}}

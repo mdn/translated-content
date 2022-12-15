@@ -31,7 +31,7 @@ original_slug: learn/Performance/感知性能
   </tbody>
 </table>
 
-性能是关于用户视角的。 How fast a website feels like it's loading and rendering has a greater impact on user experience than how fast the website actually loads and renders. Even if an operation is going to take a long time (because of latency or or inavailability of the [main thread](/zh-CN/docs/Glossary/Main_thread)), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.
+性能是关于用户视角的。How fast a website feels like it's loading and rendering has a greater impact on user experience than how fast the website actually loads and renders. Even if an operation is going to take a long time (because of latency or or inavailability of the [main thread](/zh-CN/docs/Glossary/Main_thread)), it is possible to keep the user engaged while they wait by showing a loading spinner, or a series of useful hints and tips (or jokes, or whatever else you think might be appropriate). Such an approach is much better than just showing nothing, which will make it feel like it is taking a lot longer and possibly lead to your users thinking it is broken and giving up.
 
 ## 感知性能
 
@@ -39,7 +39,7 @@ The perception of how fast your site loads and how responsive feels to user inte
 
 There is no unicorn metric that can measure what the user feels, but metrics are useful in guaging improvements (and regressions). Relevant measurements include first meaningful paint (FMP), largest contentful paint (LCP), time to interactive (TTI), render start, DOM interactive, and speed index.
 
-**[First paint](/zh-CN/docs/Glossary/First_paint)** is reported by the browser and provides the time, in ms, of when the page starts changing; but this change can be a simple background color update or something even less noticable. It doesn’t indicate completeness and may report a time when nothing visible is painted. **[First Contentful Paint](/zh-CN/docs/Glossary/First_contentful_paint) (FCP)** reports the time when the browser first rendered anything of signifigance, be that text, foreground or background image, or a canvas or SVG; capturing the very beginning of the loading experience. But, just because there's content, doesn't mean it's useful content or that the user has content to consume. The **[First Meaningful Paint](/zh-CN/docs/Glossary/first_meaningful_paint)**, or FMP, is the when content appears on the screen that is actually meaningful; which is a better metric for user-perceived loading experience, but still not ideal. **Largest contentful paint (LCP)** metric, definited in the [Largest Contentful Paint API](https://wicg.github.io/largest-contentful-paint/), reports the render time of the largest content element visible in the viewport.
+**[First paint](/zh-CN/docs/Glossary/First_paint)** is reported by the browser and provides the time, in ms, of when the page starts changing; but this change can be a simple background color update or something even less noticable. It doesn't indicate completeness and may report a time when nothing visible is painted. **[First Contentful Paint](/zh-CN/docs/Glossary/First_contentful_paint) (FCP)** reports the time when the browser first rendered anything of signifigance, be that text, foreground or background image, or a canvas or SVG; capturing the very beginning of the loading experience. But, just because there's content, doesn't mean it's useful content or that the user has content to consume. The **[First Meaningful Paint](/zh-CN/docs/Glossary/first_meaningful_paint)**, or FMP, is the when content appears on the screen that is actually meaningful; which is a better metric for user-perceived loading experience, but still not ideal. **Largest contentful paint (LCP)** metric, definited in the [Largest Contentful Paint API](https://wicg.github.io/largest-contentful-paint/), reports the render time of the largest content element visible in the viewport.
 
 **[Speed index](/zh-CN/docs/Glossary/Speed_index)** is also used to approximate perceived performance: it measures the average time for pixels on the visible screen to be painted. It doesn't account for jitter, nor does it weight which content important to a user more highly, so it's not a perfect metric.
 
@@ -65,7 +65,7 @@ Displaying content, or at least some part of the page with an indication that co
 
 为了最大程度地[减少初始加载资源](https://onilab.com/blog/perceived-performance-vs-actual-load-time-5-secrets-of-lightning-fast-magento-store/)，请从内容中分离交互式功能，以便优先加载初始化时所需的可见内容——文本、样式和图像。延迟加载其余资源。
 
-不要加载初始页面未使用或看不到的图像或脚本，而在页面可用后延时加载，或在需要使用时按需加载。 在初始页面加载之后加载其他资源可提高感知性能。 在初始请求中加载基本数据，并仅根据需要逐步加载功能部件和数据，有助于改善低带宽和低规格硬件的体验。
+不要加载初始页面未使用或看不到的图像或脚本，而在页面可用后延时加载，或在需要使用时按需加载。在初始页面加载之后加载其他资源可提高感知性能。在初始请求中加载基本数据，并仅根据需要逐步加载功能部件和数据，有助于改善低带宽和低规格硬件的体验。
 
 此外，您应该优化需加载的资源。图片和视频应以最佳格式、压缩后的大小和正确尺寸进行投放。
 

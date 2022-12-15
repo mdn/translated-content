@@ -2,6 +2,7 @@
 title: ident
 slug: Web/CSS/ident
 ---
+
 {{CSSRef}}
 
 **`<ident>`** [CSS](/ja/docs/Web/CSS) [データ型](/ja/docs/Web/CSS/CSS_Types) は、 {{glossary("identifier")}} として使用される任意の文字列を意味します。
@@ -45,10 +46,7 @@ bili.bob  アルファベット、 _、 - のみをエスケープする必要�
 
 ## 仕様
 
-| 仕様                                                                                                 | ステータス                       | コメント |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('CSS4 Values', '#css-identifier', '<code>&lt;ident&gt;</code>')}} | {{Spec2('CSS4 Values')}} |          |
-| {{SpecName('CSS3 Values', '#css-identifier', '<code>&lt;ident&gt;</code>')}} | {{Spec2('CSS3 Values')}} |          |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

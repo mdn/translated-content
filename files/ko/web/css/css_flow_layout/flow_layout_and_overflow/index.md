@@ -1,13 +1,13 @@
 ---
-title: 대열 조판과 대열이탈
+title: 대열 레이아웃과 대열이탈
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
 tags:
   - 가시성
-  - 대열 조판
+  - 대열 레이아웃
   - 대열이탈
-  - 씨에스에스
+  - CSS
   - 안내서
-  - 조판
+  - 레이아웃
   - 중급
   - 텍스트 대열이탈
 translation_of: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow

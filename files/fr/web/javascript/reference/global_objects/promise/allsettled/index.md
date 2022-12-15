@@ -35,13 +35,11 @@ Pour chaque objet contenu dans ce tableau, il y aura une propriété `status` qu
 
 ## Spécifications
 
-| Spécification                                                                                       | État                         | Commentaires |
-| --------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| [`Promise.allSettled()` (Brouillon TC39 au niveau 4)](https://tc39.es/proposal-promise-allSettled/) | {{Spec2('ESDraft')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.allSettled")}}
+{{Compat}}
 
 ## Voir aussi
 

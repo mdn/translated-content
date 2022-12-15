@@ -188,7 +188,7 @@ Boolean(12n)
 - {{JSxRef("BigInt.prototype.toString()")}}
   - : 返回以指定基数 (base) 表示指定数字的字符串。覆盖 {{JSxRef("Object.prototype.toString()")}} 方法。
 - {{JSxRef("BigInt.prototype.valueOf()")}}
-  - : 返回指定对象的基元值。 覆盖 {{JSxRef("Object.prototype.valueOf()")}} 方法。
+  - : 返回指定对象的基元值。覆盖 {{JSxRef("Object.prototype.valueOf()")}} 方法。
 
 ## 使用建议
 

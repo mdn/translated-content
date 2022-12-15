@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.responseStart
 slug: Web/API/PerformanceResourceTiming/responseStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`responseStart`** 読み取り専用プロパティは、ブラウザーがサーバ、キャッシュ、またはローカルリソースからレスポンスの最初のバイトを受信した直後に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。
@@ -55,9 +56,7 @@ function print_start_and_end_properties(perfEntry) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | ステータス                           | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-responseStart', 'responseStart')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

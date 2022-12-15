@@ -69,6 +69,7 @@ yari 가 content repo에 내장돼있습니다. 세부 절차는 [다음 링크]
 문서의 상단에 있는 메타데이터는 `title`, `slug`, `original_slug` 그리고 `l10n.*`만 번역해줍니다. (참고: [#7412](https://github.com/mdn/translated-content/issues/7412))
 
 영어 원문
+
 ```markdown
 ---
 title: Proxy
@@ -87,6 +88,7 @@ The `Proxy` object enables you to create a proxy for another ...
 ```
 
 번역본
+
 ```markdown
 ---
 title: Proxy
@@ -155,7 +157,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy
 
 다만 진짜 강조를 해야하는 상황에는, 따옴표로 강조하고 PR로 소명합니다.
 
-### `:` 쌍점,  `;` 쌍반점 지침
+### `:` 쌍점, `;` 쌍반점 지침
 
 뒤의 문장 예시를 강조하기 위해 쌍점을 사용하는 경우에 `: 쌍점`은 한글 문법에 적합하지 않습니다. [(참고 이슈 링크)](https://github.com/mdn/translated-content/pull/2747#issuecomment-964241518)
 
@@ -250,20 +252,6 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
   - 예: 정수 값, 소수 값, 반환 값, 기본 값
   - 틀린 예: 정숫값, 소숫값, 반환값, 기본값
 
-- callout
-
-  ```html
-  <div class="callout">
-    <h4 id="looking_to_become_a_front-end_web_developer">프론트엔드 웹 개발자가 되고자 하시나요?</h4>
-
-    <p>목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.</p>
-
-    <p>
-      <a href="/ko/docs/Learn/Front-end_web_developer"><strong>시작하기</strong></a>
-    </p>
-  </div>
-  ```
-
 ### 용어 지침 `참고 링크` 우선 순위
 
 - 1. 해당 단어에 대한 의견을 나눈 PR 링크
@@ -327,8 +315,22 @@ A value of 0.01 was used for the value to ramp down to in the last function rath
 | 용어 | 번역 | 참고 링크 |
 | --- | --- | --- |
 | Note | 참고 | |
+| Warning | 경고 | |
+| Callout | 알림 | |
 | Objective | 목표 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
 | Prerequisites | 필요한 사전 지식 | [링크](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/What_is_accessibility) |
+
+- callout
+
+```markdown
+> **알림:**
+>
+> #### 프론트엔드 웹 개발자가 되고자 하시나요?
+>
+> 목표를 달성하기 위한 모든 필수 정보가 들어있는 교육 과정을 준비했습니다.
+>
+> [**시작하기**](/en-US/docs/Learn/Front-end_web_developer)
+```
 
 ## 공통 용어
 
@@ -450,7 +452,7 @@ issue: [#1008](https://github.com/mdn/translated-content/issues/1008)
 
 다음은 `en-us locale`에 대한 기본 compatibility 항목입니다. 현재 `ko locale`에는 여러 번역 문구들이 있습니다. 이 문구들은 모두 삭제돼야합니다.
 
-1차적으로 https://gist.github.com/hochan222/ad801f7a6325e2b2e391ab634d6d18ce 로 30가지 경우에 대해 [PR 1176](https://github.com/mdn/translated-content/pull/1176) 에서 처리했으며, 나머지 경우에 대해 정규표현식을 작성해 삭제하거나 발견시 삭제 바랍니다.
+1차적으로 <https://gist.github.com/hochan222/ad801f7a6325e2b2e391ab634d6d18ce> 로 30가지 경우에 대해 [PR 1176](https://github.com/mdn/translated-content/pull/1176) 에서 처리했으며, 나머지 경우에 대해 정규표현식을 작성해 삭제하거나 발견시 삭제 바랍니다.
 
 #### 기본 항목
 
@@ -481,7 +483,7 @@ issue: [#1008](https://github.com/mdn/translated-content/issues/1008)
 
 **1. 한국어로된 MDN 사이트는 못보나요?**
 
-https://developer.mozilla.org/en-US/docs/Web/HTML 와같이 영문 페이지라면 중간에 en-US만 https://developer.mozilla.org/ko/docs/Web/HTML 와같이 ko로 바꿔주시면 번역본으로 보실 수 있습니다.
+<https://developer.mozilla.org/en-US/docs/Web/HTML> 와같이 영문 페이지라면 중간에 en-US만 <https://developer.mozilla.org/ko/docs/Web/HTML> 와같이 ko로 바꿔주시면 번역본으로 보실 수 있습니다.
 
 페이지가 존재하지 않는 경우 번역을 통해 기여를 하실 수 있습니다. 번역 기준 버전은 en-US입니다.
 
@@ -491,7 +493,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTML 와같이 영문 페이지라�
 
 **3. 제가 초보라서 번역에 어떻게 기여하는지, 또 따라야 할 공식 지침 같은 것이 있는지 몰라서 손을 못 대고 있는 상황입니다.**
 
-단순한 제보는 https://github.com/mdn/translated-content/issues 다음 페이지에서 New issue를 눌러서 이슈 작성을 해주시면 됩니다! 혹시 직접 수정해서 기여하고 싶으시면 https://github.com/mdn/translated-content/issues/827 이 절차대로 진행해주실 수 있으신가요? 기여해주셔서 감사합니다.
+단순한 제보는 <https://github.com/mdn/translated-content/issues> 다음 페이지에서 New issue를 눌러서 이슈 작성을 해주시면 됩니다! 혹시 직접 수정해서 기여하고 싶으시면 <https://github.com/mdn/translated-content/issues/827> 이 절차대로 진행해주실 수 있으신가요? 기여해주셔서 감사합니다.
 
 **4. Issue의 라벨은 어떻게 붙이나요?**
 

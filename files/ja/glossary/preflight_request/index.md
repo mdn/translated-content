@@ -2,6 +2,7 @@
 title: Preflight request (プリフライトリクエスト)
 slug: Glossary/Preflight_request
 ---
+
 CORS のプリフライトリクエストは {{Glossary("CORS")}} のリクエストの一つであり、サーバーが CORS プロトコルを理解していて準備がされていることを、特定のメソッドとヘッダーを使用してチェックします。
 
 これは {{HTTPMethod("OPTIONS")}} リクエストであり、 {{HTTPHeader("Access-Control-Request-Method")}},{{HTTPHeader("Access-Control-Request-Headers")}}, {{HTTPHeader("Origin")}} の 3 つの HTTP リクエストヘッダー使用します。

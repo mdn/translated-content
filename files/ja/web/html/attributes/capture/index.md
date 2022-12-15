@@ -16,7 +16,7 @@ slug: Web/HTML/Attributes/capture
 | `user`        | ユーザー側のカメラやマイクを使用します。   |
 | `environment` | 外向きのカメラやマイクを使用します。 |
 
-> **Note:** capture は、以前は論理属性で、存在する場合、ファイル入力を要求する代わりに、カメラやマイクなどの機器のメディアキャプチャ機器を使用するように要求していました。
+> **メモ:** capture は、以前は論理属性で、存在する場合、ファイル入力を要求する代わりに、カメラやマイクなどの機器のメディアキャプチャ機器を使用するように要求していました。
 
 ## 例
 
@@ -51,6 +51,6 @@ slug: Web/HTML/Attributes/capture
 
 ## 関連情報
 
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
 - [ファイル API](/ja/docs/Web/API/File)
 - {{domxref('HTMLInputElement.files')}}

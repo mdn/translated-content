@@ -1,36 +1,57 @@
 ---
-title: SpeechRecognition.onspeechstart
+title: 'SpeechRecognition: speechstart イベント'
 slug: Web/API/SpeechRecognition/speechstart_event
 original_slug: Web/API/SpeechRecognition/onspeechstart
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-{{domxref("SpeechRecognition")}} インターフェイスの **`onspeechstart`** プロパティは、認識できる音声が検出できた時に([`speechstart`](/ja/docs/Web/API/SpeechRecognition/speechstart_event) イベントが発生した時)、実行されるイベントハンドラーになります。
+{{APIRef("Web Speech API")}}
+
+**`speechstart`** は[ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API) のイベントで、音声認識サービスにより音声として認識された音が検出されたときに発行されます。
 
 ## 構文
 
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('speechstart', (event) => { })
+
+onspeechstart = (event) => { }
 ```
-mySpeechRecognition.onspeechstart = function() { ... };
-```
+
+## イベント型
+
+一般的な {{DOMxRef("Event")}} であり、追加のプロパティはありません。
 
 ## 例
 
+`speechstart` イベントは、 [`addEventListener`](/ja/docs/Web/API/EventTarget/addEventListener) メソッドで使用することができます。
+
 ```js
-recognition.onspeechstart = function() {
-  console.log('音声が検出できました。');
+const recognition = new webkitSpeechRecognition() || new SpeechRecognition();
+
+recognition.addEventListener('speechstart', () => {
+  console.log('音声が検出されました');
+});
+```
+
+または `onspeechstart` イベントハンドラープロパティを使用してください。
+
+```js
+recognition.onspeechstart = () => {
+  console.log('音声が検出されました');
 }
 ```
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                         | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Web Speech API', '#dfn-onspeechstart', 'onspeechstart')}} | {{Spec2('Web Speech API')}} |          |
+{{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
-{{Compat("api.SpeechRecognition.onspeechstart")}}
+{{Compat}}
 
 ## 関連情報
 
-- [Web Speech API](/ja/docs/Web/API/Web_Speech_API)
+- [ウェブ音声 API](/ja/docs/Web/API/Web_Speech_API)

@@ -5,6 +5,7 @@ l10n:
   sourceCommit: 4ca03cbbfe78d66e4e7efd7ceaf04acb08a18572
 original_slug: Learn/Forms/Styling_HTML_forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 これまでのいくつかの記事では、ウェブフォームを作成し、構成するために必要なすべての HTML について見てきました。この記事では、[CSS](/ja/docs/Web/CSS) を使用してフォームコントロールのスタイルを設定する方法について移動します。これは過去には難しいことでした。フォームコントロールは CSS でカスタマイズしやすいかどうかで大きく異なりますが、古いブラウザーが引退し、現代のブラウザーがより多くの機能を使用するようになるにつれて、簡単になってきています。
@@ -78,7 +79,7 @@ CSS が HTML のスタイル設定できるようになってからも、ユー�
 
 これらのウィジェットを完全にカスタマイズしたい場合は、 HTML, CSS, JavaScript を使って独自のものを作成する必要があります。それはこのコアフォームの記事の範囲を超えますが、高度な記事の[カスタムウィジェットの作成方法](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)の記事で説明します。
 
-> **Note:** フォームコントロールの内部コンポーネントにスタイル設定するプロプライエタリな CSS 擬似要素、例えば {{cssxref('::-moz-range-track')}}がありますが、これはブラウザー同士で整合していないので、これに頼るべきではありません。これについては後程でも触れます。
+> **メモ:** フォームコントロールの内部コンポーネントにスタイル設定するプロプライエタリな CSS 擬似要素、例えば {{cssxref('::-moz-range-track')}}がありますが、これはブラウザー同士で整合していないので、これに頼るべきではありません。これについては後程でも触れます。
 
 ## 良好
 
@@ -156,7 +157,7 @@ legend {
 
 {{HTMLElement("legend")}} 要素はアクセシビリティにとってとても重要です。フィールドセット内の各フォーム要素のラベルの一部として支援技術によって読み上げられます。しかし、上記のようなテクニックを使用しても問題ありません。 legend の内容はこれまでと同じように読み上げられます。見た目の位置が変更されただけです。
 
-> **Note:** {{cssxref("transform")}} プロパティを使用して `<legend>` の位置指定に役立てることもできます。しかし、例えば `transform: translateY();` を使って配置すると、移動はするものの `<fieldset>` の枠に醜い隙間ができて、簡単には除去できません。
+> **メモ:** {{cssxref("transform")}} プロパティを使用して `<legend>` の位置指定に役立てることもできます。しかし、例えば `transform: translateY();` を使って配置すると、移動はするものの `<fieldset>` の枠に醜い隙間ができて、簡単には除去できません。
 
 ## 具体的なスタイル設定の例
 
@@ -363,7 +364,7 @@ button:focus {
 
 ![上記のようにスタイル設定と微調整を行った後の、フォームの最終的な外観とレイアウト](updated-form-screenshot.jpg)
 
-> **Note:** 例が期待どおり動かず、私たちのバージョンを確認したい場合は、 GitHub を参照してください。[ライブ版](https://mdn.github.io/learning-area/html/forms/postcard-example/)を見てください ([ソースコード](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)も見てください)。
+> **メモ:** 例が期待どおり動かず、私たちのバージョンを確認したい場合は、 GitHub を参照してください。[ライブ版](https://mdn.github.io/learning-area/html/forms/postcard-example/)を見てください ([ソースコード](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)も見てください)。
 
 ## スキルを試しましょう！​
 

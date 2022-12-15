@@ -1,17 +1,8 @@
 ---
 title: Event
 slug: Web/API/Event
-tags:
-  - API
-  - DOM
-  - Event
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Référence(2)
-  - TopicStub
-translation_of: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 A interface de **eventos** representa qualquer evento de DOM. Ele contém propriedades comuns e métodos para qualquer evento.

@@ -24,11 +24,11 @@ Mobile Chrome / Android Webview 从 31 版开始支持 A2HS，Opera for Android 
 
 点击此按钮将显示一个确认横幅，按下大大的“添加到主屏幕”按钮即可将应用添加到主屏幕。（注意：在 Android 8 及更高版本中，将首先显示系统级的“添加到主屏幕”权限对话框。）
 
-![确认横幅](https://mdn.mozillademos.org/files/15772/fx-a2hs-banner.png)
+![确认横幅](fx-a2hs-banner.png)
 
 使用 Mobile Chrome 的体验则略有不同；加载我们的网站后，您会看到一个弹出安装横幅，询问您是否要将此应用添加到主屏幕。
 
-![Mobile Chrome 上的 A2HS 提示](https://mdn.mozillademos.org/files/15771/chrome-a2hs-banner.png)
+![Mobile Chrome 上的 A2HS 提示](chrome-a2hs-banner.png)
 
 > **备注：** 您可以在“[Web App 安装横幅](https://developers.google.com/web/fundamentals/app-install-banners/)”一文中找到有关 Chrome 安装横幅的更多信息。
 
@@ -89,7 +89,7 @@ A2HS 所需的字段如下：
 
 请注意，每个图标对象中的 `type` 成员都指定了该图标的 MIME 类型，因此浏览器可以快速读取该图标的类型，并在不支持此类型时将其忽略并采用其他图标。
 
-在设计图标方面，您应该遵循与任何 Android 图标相同的最佳做法（请参阅 [Android 图标设计指南](https://developer.android.com/guide/practices/ui_guidelines/icon_design.html)）。
+在设计图标方面，您应该遵循与任何 Android 图标相同的最佳做法（请参阅 [Google Play 图标设计规范](https://developer.android.google.cn/distribute/google-play/resources/icon-design-specifications)）。
 
 ### 将 HTML 链接到 manifest
 
@@ -186,7 +186,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
 于是，点击按钮后安装提示就会消失。
 
-![应用安装提示](https://mdn.mozillademos.org/files/16281/chrome-desktop-a2hs-banner.png)
+![应用安装提示](chrome-desktop-a2hs-banner.png)
 
 如果用户选择安装，则将安装该应用程序（可作为独立的桌面应用程序使用），并且不再显示“安装”按钮（如果已经安装了该应用程序，则将不再触发 `onbeforeinstallprompt` 事件）。当您打开应用程序时，它将显示在其自己的窗口中：
 

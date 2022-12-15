@@ -1,8 +1,8 @@
 ---
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
+
 {{JSRef}}
 
 O método **`fill()`** preenche todos os valores do array a partir do índice inicial a um índice final com um valor estático.
@@ -26,7 +26,7 @@ arr.fill(valor[, ínicio = 0[, fim = this.length]])
 
 O intervalo de preenchimento dos elementos é \[`início`, `fim`).
 
-O método **`fill`** pode receber até três argumentos `valor`, `ínicio` e `fim`. Os argumentos `ínicio` e `fim` são opcionais com valor padrão `0 (valor) `e o tamanho do objeto `(fim)`.
+O método **`fill`** pode receber até três argumentos `valor`, `ínicio` e `fim`. Os argumentos `ínicio` e `fim` são opcionais com valor padrão `0 (valor)` e o tamanho do objeto `(fim)`.
 
 Se o `ínicio` for negativo, ele será tratado como `tamanho + ínicio` onde `tamanho é o tamanho total do array`. Se o `fim` for negativo, ele será tratado como `tamanho + fim`.
 

@@ -32,4 +32,4 @@ url.toJSON(); // 应该以字符串形式返回 URL
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.toJSON")}}
+{{Compat}}

@@ -26,16 +26,8 @@ translation_of: Web/CSS/Filter_Effects
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('Filters 1.0', '#FilterProperty', 'filter')}} | {{ Spec2('Filters 1.0') }} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `backdrop-filter`
-
-{{Compat("css.properties.backdrop-filter")}}
-
-### `filter`
-
-{{Compat("css.properties.filter")}}
+{{Compat}}

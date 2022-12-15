@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Classes/Public_class_fields
 translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
 original_slug: Web/JavaScript/Reference/Classes/Class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 > **note: This page describes experimental features.** Both Public and private field declarations are an [experimental feature (stage 3)](https://github.com/tc39/proposal-class-fields) proposed at [TC39](https://tc39.github.io/beta/), the JavaScript standards committee. Support in browsers is limited, but the feature can be used through a build step with systems like [Babel](https://babeljs.io/). See the [compat information](#Browser_compatibility) below.
@@ -203,7 +204,7 @@ console.log(instance.subPublicMethod())
 // expected output: "hello worl​d"
 ```
 
-Getters and setters are special methods that bind to a class property and are called when that property is accessed or set. Use the [get](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) and [set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set) syntax to declare a public instance getter or setter.
+Getters and setters are special methods that bind to a class property and are called when that property is accessed or set. Use the [get](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [set](/en-US/docs/Web/JavaScript/Reference/Functions/set) syntax to declare a public instance getter or setter.
 
 ```js
 class ClassWithGetSet {

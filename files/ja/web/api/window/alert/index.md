@@ -2,6 +2,7 @@
 title: window.alert
 slug: Web/API/Window/alert
 ---
+
 {{ApiRef}}
 
 **`Window.alert()`** メソッドは、オプションの指定されたコンテンツと OK ボタンを持つ警告ダイアログを表示します。
@@ -38,9 +39,7 @@ alert("Hello world!");
 
 ## 仕様
 
-| 仕様                                                                                                         | 状態                             | コメント |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', 'timers-and-user-prompts.html#dom-alert', 'alert()')}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## 関連情報
 

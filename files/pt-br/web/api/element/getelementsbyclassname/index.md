@@ -1,8 +1,8 @@
 ---
 title: Element.getElementsByClassName()
 slug: Web/API/Element/getElementsByClassName
-translation_of: Web/API/Element/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 O método **`getElementsByClassName()`** da interface {{domxref("Element")}} retorna um {{domxref("HTMLCollection")}} atualizado simultaneamente que contém todos os elementos descendentes da classe ou das classes especificadas.
@@ -58,7 +58,7 @@ element.getElementsByClassName('red test');
 
 ### Examinando os resultados
 
-You can use either the {{domxref("HTMLCollection.item", "item()")}} method on the returned `HTMLCollection` or standard array syntax to examine individual elements in the collection. However\*\* **the following code will not work\*\*** as one might expect because `"matches" `will change as soon as any `"colorbox"` class is removed.
+You can use either the {{domxref("HTMLCollection.item", "item()")}} method on the returned `HTMLCollection` or standard array syntax to examine individual elements in the collection. However **the following code will not work** as one might expect because `"matches"` will change as soon as any `"colorbox"` class is removed.
 
 ```js
 var matches = element.getElementsByClassName('colorbox');
@@ -80,7 +80,7 @@ while (matches.length > 0) {
 }
 ```
 
-This code finds descendant elements with the `"colorbox"` class, adds the class `"hueframe"`, by calling `item(0), `then removes `"colorbox" `(using array notation). Another element (if any are left) will then become `item(0)`.
+This code finds descendant elements with the `"colorbox"` class, adds the class `"hueframe"`, by calling `item(0)`, then removes `"colorbox"` (using array notation). Another element (if any are left) will then become `item(0)`.
 
 ### Filtering the results using array methods
 

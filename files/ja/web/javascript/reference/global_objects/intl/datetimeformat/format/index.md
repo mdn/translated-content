@@ -72,7 +72,7 @@ let formattedDate = Intl.DateTimeFormat(undefined, {
 // false in IE and Edge
 ```
 
-> **Note:** この [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)に詳細や例があります。
+> **メモ:** この [StackOverflow のスレッド](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)に詳細や例があります。
 
 ## 仕様書
 

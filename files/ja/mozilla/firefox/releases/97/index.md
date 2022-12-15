@@ -2,6 +2,7 @@
 title: Firefox 97 for developers
 slug: Mozilla/Firefox/Releases/97
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 97 の変更点をまとめています。Firefox 97 は、米国時間 2022 年 2 月 8 日にリリースされました。

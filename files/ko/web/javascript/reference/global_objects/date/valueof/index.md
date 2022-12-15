@@ -3,6 +3,7 @@ title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** 함수는 {{jsxref("Date")}} 객체의 원시값을 반환합니다.

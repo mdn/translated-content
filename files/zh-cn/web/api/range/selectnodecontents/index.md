@@ -74,7 +74,7 @@ deselectButton.addEventListener('click', e => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.selectNodeContents")}}
+{{Compat}}
 
 ## 参见
 

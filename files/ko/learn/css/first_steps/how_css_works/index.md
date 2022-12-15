@@ -2,6 +2,7 @@
 title: CSS 작동 방식
 slug: Learn/CSS/First_steps/How_CSS_works
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps/Using_your_new_knowledge", "Learn/CSS/First_steps")}}
 
@@ -50,7 +51,7 @@ CSS 기본 사항, CSS 의 목적 및 간단한 스타일 시트 작성 방법�
 
 다음 그림은 작업의 간단한 보기를 제공합니다.
 
-![](https://mdn.mozillademos.org/files/11781/rendering.svg)
+![](rendering.svg)
 
 ## DOM 정보
 

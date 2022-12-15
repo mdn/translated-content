@@ -114,7 +114,7 @@ onmessage = function(evt) {
 
 ## 浏览器兼容性
 
-{{Compat("api.OffscreenCanvas")}}
+{{Compat}}
 
 ## 另请参见
 

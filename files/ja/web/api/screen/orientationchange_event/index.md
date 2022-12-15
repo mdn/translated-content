@@ -3,6 +3,7 @@ title: 'Screen: orientationchange イベント'
 slug: Web/API/Screen/orientationchange_event
 original_slug: Web/API/Screen/onorientationchange
 ---
+
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
 
 `orientationchange` イベントは、端末の向きが変化したときに発行されます。

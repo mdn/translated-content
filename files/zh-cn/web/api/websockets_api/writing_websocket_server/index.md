@@ -11,7 +11,7 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_server
 
 ## 第一步
 
-WebSockets 通过 [TCP (传输控制协议)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 连接进行通信.。幸运的是，C# 中有一个 [TcpListener](http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx) 类。 它位于 _System.Net.Sockets_ 的命名空间。
+WebSockets 通过 [TCP (传输控制协议)](http://en.wikipedia.org/wiki/Transmission_Control_Protocol) 连接进行通信.。幸运的是，C# 中有一个 [TcpListener](http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx) 类。它位于 _System.Net.Sockets_ 的命名空间。
 
 > **备注：** 最好使用 `using` 关键字来包含命名空间，这样在你写代码的时候就不需要指定详细的命名空间。
 
@@ -31,7 +31,7 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 - `Start()`
 - `System.Net.Sockets.TcpClient AcceptTcpClient()`
-  等一个 Tcp 连接， 并接受一个返回的 TcpClient 对象。
+  等一个 Tcp 连接，并接受一个返回的 TcpClient 对象。
 
 下面是基于服务端的实现：
 
@@ -194,7 +194,7 @@ if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))
 
 _Di_ = _Ei_ XOR _M_(_i_ mod 4)
 
-D 是解密后的消息数组， _E_ 是被加密的消息数组， _M_ 是掩码字节数组， _i_ 是需要解密的消息字节的序号。
+D 是解密后的消息数组，_E_ 是被加密的消息数组，_M_ 是掩码字节数组，_i_ 是需要解密的消息字节的序号。
 
 C# 示例：
 

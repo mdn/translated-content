@@ -87,9 +87,7 @@ Object.getOwnPropertyDescriptor(p, 'a'); // TypeError is thrown
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p', '[[GetOwnProperty]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

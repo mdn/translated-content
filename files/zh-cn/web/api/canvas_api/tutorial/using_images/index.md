@@ -3,7 +3,7 @@ title: 使用图像 Using images
 slug: Web/API/Canvas_API/Tutorial/Using_images
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations")}}
 
 canvas 更有意思的一项特性就是图像操作能力。可以用于动态的图像合成或者作为图形的背景，以及游戏界面（Sprites）等等。浏览器支持的任意格式的外部图片都可以使用，比如 PNG、GIF 或者 JPEG。你甚至可以将同一个页面中其他 canvas 元素生成的图片作为图片源。
 
@@ -19,7 +19,7 @@ canvas 更有意思的一项特性就是图像操作能力。可以用于动态�
 canvas 的 API 可以使用下面这些类型中的一种作为图片的源：
 
 - **{{domxref("HTMLImageElement")}}**
-  - : 这些图片是由`Image()函数构造出来的，或者任何的{{HTMLElement("img")}}元素`
+  - : 这些图片是由 `Image()` 函数构造出来的，或者任何的 {{HTMLElement("img")}} 元素
 - **{{domxref("HTMLVideoElement")}}**
   - : 用一个 HTML 的 {{HTMLElement("video")}}元素作为你的图片源，可以从视频中抓取当前帧作为一个图像
 - **{{domxref("HTMLCanvasElement")}}**
@@ -51,7 +51,7 @@ canvas 的 API 可以使用下面这些类型中的一种作为图片的源：
 
 ### 由零开始创建图像
 
-或者我们可以用脚本创建一个新的 {{domxref("HTMLImageElement")}} 对象。要实现这个方法，我们可以使用很方便的`Image()构造函数。`
+或者我们可以用脚本创建一个新的 {{domxref("HTMLImageElement")}} 对象。要实现这个方法，我们可以使用很方便的 `Image()` 构造函数。
 
 ```js
 var img = new Image();   // 创建一个<img>元素
@@ -104,7 +104,7 @@ function getMyVideo() {
 一旦获得了源图对象，我们就可以使用 `drawImage` 方法将它渲染到 canvas 里。`drawImage` 方法有三种形态，下面是最基础的一种。
 
 - **`drawImage(image, x, y)`**
-  - : 其中 `image` 是 image 或者 canvas 对象，`x` 和 `y 是其在目标 canvas 里的起始坐标。`
+  - : 其中 `image` 是 `image` 或者 `canvas` 对象，`x` 和 `y` 是其在目标 `canvas` 里的起始坐标。
 
 > **备注：** SVG 图像必须在 \<svg> 根指定元素的宽度和高度。
 
@@ -135,13 +135,13 @@ function getMyVideo() {
       ctx.lineTo(170,15);
       ctx.stroke();
     }
-    img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
+    img.src = 'backdrop.png';
   }
 ```
 
 结果看起来是这样的：
 
-{{EmbedLiveSample("Example_A_simple_line_graph", 220, 160, "https://mdn.mozillademos.org/files/206/Canvas_backdrop.png")}}
+{{EmbedLiveSample("Example_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
 
 ## 缩放 Scaling
 
@@ -177,13 +177,13 @@ function draw() {
       }
     }
   };
-  img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+  img.src = 'rhino.jpg';
 }
 ```
 
 结果看起来像这样：
 
-{{EmbedLiveSample("Example_Tiling_an_image", 160, 160, "https://mdn.mozillademos.org/files/251/Canvas_scale_image.png")}}
+{{EmbedLiveSample("Example_Tiling_an_image", 160, 160, "canvas_scale_image.png")}}
 
 ## 切片 Slicing
 
@@ -209,8 +209,8 @@ function draw() {
  <body onload="draw();">
    <canvas id="canvas" width="150" height="150"></canvas>
    <div style="display:none;">
-     <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
-     <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
+     <img id="source" src="rhino.jpg" width="300" height="227">
+     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
    </div>
  </body>
 </html>
@@ -230,7 +230,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Example_Framing_an_image", 160, 160, "https://mdn.mozillademos.org/files/226/Canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("Example_Framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}
 
 ## 示例：画廊 Art gallery example
 
@@ -247,26 +247,26 @@ function draw() {
  <body onload="draw();">
      <table>
       <tr>
-        <td><img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"></td>
+        <td><img src="gallery_1.jpg"></td>
+        <td><img src="gallery_2.jpg"></td>
+        <td><img src="gallery_3.jpg"></td>
+        <td><img src="gallery_4.jpg"></td>
       </tr>
       <tr>
-        <td><img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"></td>
+        <td><img src="gallery_5.jpg"></td>
+        <td><img src="gallery_6.jpg"></td>
+        <td><img src="gallery_7.jpg"></td>
+        <td><img src="gallery_8.jpg"></td>
       </tr>
      </table>
-     <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
+     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
  </body>
 </html>
 ```
 
 ```css
 body {
-  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
   margin: 10px;
 }
 

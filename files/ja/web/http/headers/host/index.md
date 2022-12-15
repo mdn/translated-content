@@ -2,6 +2,7 @@
 title: Host
 slug: Web/HTTP/Headers/Host
 ---
+
 {{HTTPSidebar}}
 
 **`Host`** リクエストヘッダーは、リクエストが送信される先のサーバーのホスト名とポート番号を指定します。

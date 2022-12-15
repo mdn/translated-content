@@ -7,7 +7,7 @@ slug: Web/API/FormData/keys
 
 **`FormData.keys()`** メソッドは、 {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれる全てのキーを通過できるようにします。キーは {{domxref("USVString")}} オブジェクトです。
 
-> **Note:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
+> **メモ:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
 
 ## 構文
 
@@ -42,9 +42,7 @@ key2
 
 ## 仕様
 
-| 仕様                                                                                                     | ステータス                           | 備考     |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata','keys() (as iterator&lt;&gt;)')}} | {{Spec2('XMLHttpRequest')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

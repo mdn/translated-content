@@ -1,9 +1,9 @@
 ---
 title: contains
 slug: Web/XPath/Functions/contains
-translation_of: Web/XPath/Functions/contains
 original_slug: Web/XPath/Funciones/contains
 ---
+
 {{ XsltRef() }}
 
 La función `contains` determina si la primera cadena del argumento contiene la segunda cadena del argumento y devuelve el booleano verdadero o falso.

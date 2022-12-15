@@ -1,8 +1,8 @@
 ---
 title: DocumentFragment
 slug: Web/API/DocumentFragment
-translation_of: Web/API/DocumentFragment
 ---
+
 {{ ApiRef("DOM") }}
 
 A interface do **DocumentFragment** representa um objeto de documento mínimo que não possui pai. Ela é utilizada como uma versão leve de {{domxref("Document")}} para armazenar fragmentos bem formados ou fragments potencialmente mal formados de XML.
@@ -33,7 +33,7 @@ _Essa interface não tem uma propriedade específica, mas herda de seu pai,_ _{{
 
 ## Métodos
 
-_This interface inherits the methods of its parent, {{domxref("Node")}}_, and implements those of the {{domxref("ParentNode")}} interface*\_\_.*
+_This interface inherits the methods of its parent, {{domxref("Node")}}_, and implements those of the {{domxref("ParentNode")}} interface.
 
 - {{domxref("DocumentFragment.find()")}} {{experimental_inline}}
   - : Returns the first matching {{domxref("Element")}} in the tree of the `DocumentFragment`.
@@ -43,9 +43,6 @@ _This interface inherits the methods of its parent, {{domxref("Node")}}_, and im
   - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified selectors.
 - {{domxref("DocumentFragment.querySelectorAll()")}}
   - : Returns a {{domxref("NodeList")}} of all the {{domxref("Element")}} nodes within the `DocumentFragment` that match the specified selectors.
-
-<!---->
-
 - {{domxref("DocumentFragment.getElementById()")}}
   - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified ID.
 

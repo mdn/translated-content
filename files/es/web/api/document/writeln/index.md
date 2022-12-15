@@ -1,8 +1,8 @@
 ---
 title: Document.writeln()
 slug: Web/API/Document/writeln
-translation_of: Web/API/Document/writeln
 ---
+
 {{ ApiRef("DOM") }}
 
 Escribe una cadena de texto en el documento, seguida de una nueva línea.

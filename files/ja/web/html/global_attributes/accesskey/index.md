@@ -2,13 +2,14 @@
 title: accesskey
 slug: Web/HTML/Global_attributes/accesskey
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`accesskey`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、現在の要素のショートカットキーを生成するためのヒントを与えます。この属性は空白で区切った表示可能な文字 (キーボードから生成できるアクセント付き文字やその他の文字を含む) から成ります。
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
 
-> **Note:** WHATWG の仕様書では、空白区切りの複数の文字を指定することができ、ブラウザーは対応する最初の一つを使用するとしています。しかし、これは多くのブラウザーでは動作しません。 IE や Edge は、他のコマンドと競合がない問題なく使用することができる最初の 1 つを使用します。
+> **メモ:** WHATWG の仕様書では、空白区切りの複数の文字を指定することができ、ブラウザーは対応する最初の一つを使用するとしています。しかし、これは多くのブラウザーでは動作しません。 IE や Edge は、他のコマンドと競合がない問題なく使用することができる最初の 1 つを使用します。
 
 アクセスキーを有効にする方法は、ブラウザーやプラットフォームによって異なります。
 
@@ -96,13 +97,7 @@ slug: Web/HTML/Global_attributes/accesskey
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                             | 備考                                                                                                                                                                                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML5.2', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.2')}}     | 現実の実装のためにもっと現実的な振る舞いを記述。                                                                                                                                                                                                                                   |
-| {{SpecName('HTML WHATWG', "interaction.html#the-accesskey-attribute", "accesskey")}} | {{Spec2('HTML WHATWG')}} | 最新の W3C の {{SpecName('HTML5.1')}} から変更なし。                                                                                                                                                                                                                      |
-| {{SpecName('HTML5.1', "editing.html#the-accesskey-attribute", "accesskey")}}             | {{Spec2('HTML5.1')}}     | {{SpecName('HTML5 W3C')}} から変更なし。                                                                                                                                                                                                                                    |
-| {{SpecName('HTML5 W3C', "editing.html#the-accesskey-attribute", "accesskey")}}         | {{Spec2('HTML5 W3C')}}     | {{SpecName('HTML4.01')}} から `accesskey` に設定できる文字が増えました。また、任意の要素に設定できるようになりました。                                                                                                                                                     |
-| {{SpecName('HTML4.01', "interact/forms.html#h-17.11.2", "accesskey")}}                     | {{Spec2('HTML4.01')}}     | {{ HTMLElement("a") }}, {{ HTMLElement("area") }}, {{ HTMLElement("button") }}, {{ HTMLElement("input") }}, {{ HTMLElement("label") }}, {{ HTMLElement("legend") }} and {{ HTMLElement("textarea") }} 要素のみ対応。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

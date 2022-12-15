@@ -2,15 +2,16 @@
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemscope`** は論理[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、関連付けられたメタデータのスコープを定義します。 **`itemscope**` 属性を要素に指定すると、要素に関連付けられた数々の名前と値の組み合わせを持つ新しいアイテムを作成します。
+**`itemscope`** は論理[グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、関連付けられたメタデータのスコープを定義します。 **`itemscope`** 属性を要素に指定すると、要素に関連付けられた数々の名前と値の組み合わせを持つ新しいアイテムを作成します。
 
 関連する属性である [`itemtype`](/ja/docs/Web/HTML/Global_attributes/itemtype) は、アイテムおよびそのプロパティのコンテキストを記述する語彙 ([schema.org](https://schema.org/) など) の有効な URL を指定するために使用されます。以下のそれぞれの例では、 [schema.org](https://schema.org/) からの語彙を使用しています。
 
 あらゆる HTML 要素に `itemscope` 属性を設定することができます。 `itemscope` 要素が `itemtype` を持たない場合は、関連付けられた `itemref` を持つ必要があります。
 
-> **Note:** `itemtype` 属性についての詳細は、 <https://schema.org/Thing> をご覧ください
+> **メモ:** `itemtype` 属性についての詳細は、 <https://schema.org/Thing> をご覧ください
 
 ### itemscope の id 属性
 
@@ -185,7 +186,7 @@ slug: Web/HTML/Global_attributes/itemscope
   </tbody>
 </table>
 
-> **Note:** 手軽に HTML からマイクロデータを抽出するには、 Google の[リッチリザルトテストツール](https://search.google.com/test/rich-results)が便利です。上の HTML で試してみてください。
+> **メモ:** 手軽に HTML からマイクロデータを抽出するには、 Google の[リッチリザルトテストツール](https://search.google.com/test/rich-results)が便利です。上の HTML で試してみてください。
 </div>
 
 #### HTML

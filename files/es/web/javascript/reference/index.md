@@ -1,9 +1,9 @@
 ---
 title: Referencia de JavaScript
 slug: Web/JavaScript/Reference
-translation_of: Web/JavaScript/Reference
 original_slug: Web/JavaScript/Referencia
 ---
+
 {{JsSidebar}}
 
 Esta parte de la sección de Javascript en MDN sirve como un repositorio de hechos sobre el lenguaje Javascript. Lee más [sobre esta referencia](/es/docs/Web/JavaScript/Reference/About).
@@ -202,7 +202,7 @@ Esta parte de la sección de Javascript en MDN sirve como un repositorio de hech
 ### Expresiones del lado izquierdo
 
 - {{JSxRef("Operators/Property_accessors", "Property accessors", "", 1)}}
-- {{JSxRef("Operators/Optional_chaining", "<code>?.</code> (Optional chaining)", "", 1)}}
+- [`?.` (Optional chaining)](/es/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - {{JSxRef("Operators/new", "new")}}
 - {{JSxRef("Operators/new%2Etarget", "new.target")}}
 - {{JSxRef("Statements/import%2Emeta", "import.meta")}}

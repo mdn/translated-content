@@ -1,31 +1,32 @@
 ---
 title: PointerEvent.getCoalescedEvents()
 slug: Web/API/PointerEvent/getCoalescedEvents
+l10n:
+  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
 ---
-{{APIRef("Pointer Events")}}{{seecompattable}}
 
-{{domxref("PointerEvent")}} インターフェイスの **`getCoalescedEvents()`** メソッドは、送出された {{event("pointermove")}} イベントに合体したすべての `PointerEvent` インスタンスのシーケンスを返します。
+{{APIRef("Pointer Events")}}
+
+**`getCoalescedEvents()`** は {{domxref("PointerEvent")}} インターフェイスのメソッドで、送出された {{domxref('Element/pointermove_event', 'pointermove')}} イベントに合成されるすべての `PointerEvent` インスタンスの列を返します。
 
 ## 構文
 
-```
-var pointerEvents[] = PointerEvent.getCoalescedEvents()
+```js-nolint
+getCoalescedEvents()
 ```
 
-### パラメーター
+### 引数
 
 なし。
 
-### Returns
+### 返値
 
-{{domxref("PointerEvent")}} インスタンスのシーケンス。
+{{domxref('PointerEvent')}} インスタンスの列。
 
-## 仕様
+## 仕様書
 
-| 仕様                                                                                                                                 | 状態                                         | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------- |
-| {{SpecName('Pointer Events 2 Ext','#dom-pointerevent-getcoalescedevents','getCoalescedEvents()')}} | {{Spec2('Pointer Events 2 Ext')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.PointerEvent.getCoalescedEvents")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: 콘텐츠 overflow
 slug: Learn/CSS/Building_blocks/Overflowing_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}
 
 이번 수업에서는 CSS 의 또 다른 중요한 개념인 — **overflow** 를 살펴봅니다. Overflow 는 박스 안에 편안하게 담기에는 너무 많은 내용이 있을 때 발생합니다. 이 안내서에서는 내용과 관리 방법에 대해 설명합니다.

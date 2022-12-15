@@ -1,13 +1,9 @@
 ---
 title: Canvas
 slug: Web/API/Canvas_API
-tags:
-  - API
-  - Canvas
-  - Referência(2)
-translation_of: Web/API/Canvas_API
 original_slug: Web/HTML/Canvas
 ---
+
 {{CanvasSidebar}}
 
 A **Canvas API** provê maneiras de desenhar gráficos via [JavaScript](/pt-BR/docs/Web/JavaScript) e via elemento [HTML](/pt-BR/docs/Web/HTML) {{HtmlElement("canvas")}}. Entre outras coisas, ele pode ser utilizado para animação, gráficos de jogos, visualização de dados, manipulação de fotos e processamento de vídeo em tempo real.
@@ -85,7 +81,7 @@ A API Canvas é extremamente poderosa, mas nem sempre é simples de usar. As bib
 - [heatmap.js](https://www.patrick-wied.at/static/heatmapjs/) é uma biblioteca de código aberto para criar mapas de calor (heatmaps) baseados em canvas.
 - [JavaScript InfoVis Toolkit](http://thejit.org/) cria visualizações de dados interativas.
 - [Konva.js](https://konvajs.github.io/) é uma biblioteca de canvas 2D para aplicações _desktop_ e móveis.
-- [p5.js ](https://p5js.org/)tem um conjunto completo de funcionalidades de desenho canvas para artistas, _designers_, educadores e iniciantes.
+- [p5.js](https://p5js.org/) tem um conjunto completo de funcionalidades de desenho canvas para artistas, _designers_, educadores e iniciantes.
 - [Paper.js](http://paperjs.org/) é um framework de código-aberto para scripting de vetores gŕaficos que funciona sobre o Canvas HTML5.
 - [Phaser](https://phaser.io/) é um framework de código-aberto rápido, grátis e divertido para jogos de navegador desenvolvidos com Canvas e WebGL.
 - [Processing.js](http://processingjs.org/) é um conversor da linguagem de visualização Processing.

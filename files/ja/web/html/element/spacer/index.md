@@ -41,4 +41,4 @@ Netscape のブラウザーの子孫である Firefox は、バージョン 4 �
 
 {{Compat}}
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

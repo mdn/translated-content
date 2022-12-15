@@ -2,6 +2,7 @@
 title: SourceBuffer.textTracks
 slug: Web/API/SourceBuffer/textTracks
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`textTracks`** 読み取り専用プロパティは、`SourceBuffer` 内に現在含まれているテキストトラックのリストを返します。
@@ -22,9 +23,7 @@ var myTextTracks = sourceBuffer.textTracks;
 
 ## 仕様
 
-| 仕様                                                                                                                     | 状態                                             | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-texttracks', 'textTracks')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

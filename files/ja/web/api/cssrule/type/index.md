@@ -2,6 +2,7 @@
 title: CSSRule.type
 slug: Web/API/CSSRule/type
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 
 **`type`** は {{domxref("CSSRule")}} インターフェイスの読み取り専用プロパティで、非推奨です。この {{domxref("CSSRule")}} が表すルールの型を示す整数を返します。

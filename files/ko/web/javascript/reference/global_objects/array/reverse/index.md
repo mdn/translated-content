@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/reverse
 browser-compat: javascript.builtins.Array.reverse
 ---
+
 {{JSRef}}
 
 **`reverse()`** 메서드는 배열의 순서를 반전합니다. 첫 번째 요소는 마지막 요소가 되며 마지막 요소는 첫 번째 요소가 됩니다.

@@ -1,9 +1,9 @@
 ---
 title: Basic animations
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
-translation_of: Web/API/Canvas_API/Tutorial/Basic_animations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Basic_animations
 ---
+
 Já que estamos usando JavaScript para controlar {{HTMLElement("canvas")}} elementos, também é muito fácil criar animações interativas. Fazer animações mais complexas pode levar um tempo extra; esperamos introduzir um novo artigo para auxiliar sobre isso em breve.
 
 Provavelmente a maior limitação é que uma vez que uma forma é desenhada, ela permanece assim. Se precisarmos mover, temos que redesenhar-lá e tudo que foi desenhado antes. Demora muito tempo pra redesenhar frames complexos e a desempenho depende altamente da velocidade do computador em que está rodando.
@@ -12,13 +12,13 @@ Provavelmente a maior limitação é que uma vez que uma forma é desenhada, ela
 
 Estes são os passos que você precisa para desenhar um frame:
 
-1.  **Limpe o canvas**
+1. **Limpe o canvas**
     A menos que a forma que você vai desenhar preencha o canvas completo(por exemplo, uma imagem de fundo), você precisa limpar todas as formas que foram desenhadas anteriormente. O caminho mais fácil para fazer isso é usando o método clearRect().
-2.  **Salve o estado da tela**
+2. **Salve o estado da tela**
     Se você estiver mudando alguma configuração(como estilos, transformações, etc.) que afete o estado do canvas e você quer garantir que o estado original seja usado sempre que um quadro é desenhado, você precisa salvar esse estado original.
-3.  **Desenhe formas animadas**
+3. **Desenhe formas animadas**
     A etapa em que você faz a renderização real do quadro.
-4.  **Restaure o estado do canvas**
+4. **Restaure o estado do canvas**
     Se você salvou o estado, restaure-o antes de desenhar um novo quadro.
 
 ## Controlando uma animação
@@ -67,9 +67,9 @@ var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init(){
-  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  sun.src = 'canvas_sun.png';
+  moon.src = 'canvas_moon.png';
+  earth.src = 'canvas_earth.png';
   setInterval(draw,100);
 }
 
@@ -116,7 +116,7 @@ function draw() {
 init();
 ```
 
-{{EmbedLiveSample("An_animated_solar_system", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}
+{{EmbedLiveSample("An_animated_solar_system", "310", "310", "canvas_animation1.png")}}
 
 #### Um relógio animado
 
@@ -232,7 +232,7 @@ function clock(){
 init();
 ```
 
-{{EmbedLiveSample("An_animated_clock", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}
+{{EmbedLiveSample("An_animated_clock", "180", "180", "canvas_animation2.png")}}
 
 #### Um panorama em loop
 
@@ -244,7 +244,7 @@ var img = new Image();
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
 
-img.src = 'https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg';
+img.src = 'capitan_meadows,_yosemite_national_park.jpg';
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; //lower is faster

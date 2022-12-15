@@ -140,4 +140,4 @@ forEach.call(firstDiv.childNodes, function( divChild ){
 
 ## 浏览器兼容性
 
-{{Compat("api.NodeList")}}
+{{Compat}}

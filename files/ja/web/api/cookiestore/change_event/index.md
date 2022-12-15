@@ -2,6 +2,7 @@
 title: 'CookieStore: change event'
 slug: Web/API/CookieStore/change_event
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
 任意の Cookie に変更が加えられると、{{domxref("CookieStore")}} オブジェクトで `change` イベントが発火します。

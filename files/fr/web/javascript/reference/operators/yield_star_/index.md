@@ -84,7 +84,7 @@ console.log(iterator.next()); // { value: 6, done: false }
 console.log(iterator.next()); // { value: undefined, done: true }
 ```
 
-### La valeur de l'expression `yield*`
+### La valeur de l'expression yield\*
 
 `yield*` est une expression et non une instruction, elle est donc évaluée et fournit une valeur :
 
@@ -113,27 +113,11 @@ console.log(résultat);          // "toto"
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-generator-function-definitions-runtime-semantics-evaluation', 'Yield')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-generator-function-definitions-runtime-semantics-evaluation', 'Yield')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.yield_star")}}
-
-## Notes relatives à Firefox
-
-- À partir de Gecko 33 {{geckoRelease(33)}}, l'analyse de l'expression `yield` a été mise à jour pour être conforme aux spécifications ES2015 ({{bug(981599)}}) :
-
-  - La restriction concernant les terminateurs de lignes est désormais implémentée. Il n'est pas autorisé d'avoir un terminateur de ligne entre "yield" et "\*". Le code suivant lèvera une exception {{jsxref("SyntaxError")}}:
-
-    ```js
-        function* toto() {
-          yield
-          *[];
-        }
-        ```
+{{Compat}}
 
 ## Voir aussi
 

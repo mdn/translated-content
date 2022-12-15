@@ -302,14 +302,9 @@ h1 {
 
 Ceci est dû au fait que le sélecteur `h1` cible l'élément spécifiquement, mais le sélecteur vert (_green_) est uniquement hérité de ses parents.
 
-## Caractéristiques
+## Spécifications
 
-| Spécification                                                                                                                | État                              | Commentaire                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------- |
-| {{SpecName("CSS4 Selectors", "#specificity-rules", "Calculer la spécificité d'un sélecteur")}} | {{Spec2("CSS4 Selectors")}} | Ajout du sélecteur d'ajustement de spécificité {{CSSxRef(":where", ":where()")}}. |
-| {{SpecName("CSS3 Selectors", "#specificity", "Calculer la spécificité d’un sélecteur")}}         | {{Spec2("CSS3 Selectors")}} | Ajout des [pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements).                           |
-| {{SpecName("CSS2.1", "cascade.html#specificity", "Calculer la spécificité d'un sélecteur")}}     | {{Spec2("CSS2.1")}}             | Ajout des [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes).                             |
-| {{SpecName("CSS1", "#cascading-order", "Ordre dans la cascade")}}                                             | {{Spec2("CSS1")}}             | Définition initiale.                                                                   |
+{{Specifications}}
 
 ## Voir aussi
 

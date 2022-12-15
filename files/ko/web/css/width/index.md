@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/width
 ---
+
 {{CSSRef}}
 
 CSS **`width`** 속성은 요소의 너비를 설정합니다. 기본값은 콘텐츠 영역의 너비이지만, {{cssxref("box-sizing")}}이 `border-box`라면 테두리 영역의 너비를 설정합니다.

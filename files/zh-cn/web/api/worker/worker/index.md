@@ -9,7 +9,7 @@ slug: Web/API/Worker/Worker
 
 如果 此 URL 有一个无效的语句，或者违反同源策略，一个 `SECURITY_ERR` 类型的{{domxref("DOMException")}}被抛出。
 
-> **备注：** 浏览器厂商对于 data URI 是否同源存在分歧。尽管 Gecko 10.0 {{ geckoRelease("10.0") }} 和之后的版本接受 data URIs，但在所有其他浏览器中并非如此。
+> **备注：** 浏览器厂商对于 data URI 是否同源存在分歧。尽管 Gecko 10.0 和之后的版本接受 data URIs，但在所有其他浏览器中并非如此。
 
 ## 语法
 
@@ -40,12 +40,12 @@ const myWorker = new Worker(aURL, options);
 ### 异常
 
 - 当 document 不被允许启动 worker 的时候，将抛出一个 SecurityError 异常。例如：如果提供的 aURL 有语法错误，或者与同源策略相冲突（跨域访问）。
-- 如果 worker 的 MIME 类型不正确，将抛出一个 NetworkError 异常。worker 的 MIME 类型必须是 text/javascript 。
+- 如果 worker 的 MIME 类型不正确，将抛出一个 NetworkError 异常。worker 的 MIME 类型必须是 text/javascript。
 - 如果 aURL 无法被解析（格式错误），将抛出一个 SyntaxError 异常。
 
 ## 例子
 
-下面的代码片段展示了通过 Worker() 创建 {{domxref("Worker")}} 对象的过程， 以及随后的使用方法：
+下面的代码片段展示了通过 Worker() 创建 {{domxref("Worker")}} 对象的过程，以及随后的使用方法：
 
 ```js
 let myWorker = new Worker("worker.js");

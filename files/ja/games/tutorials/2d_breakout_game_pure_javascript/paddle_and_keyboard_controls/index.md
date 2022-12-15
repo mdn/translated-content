@@ -3,6 +3,7 @@ title: パドルとキーボード操作
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over")}}
@@ -118,7 +119,7 @@ drawPaddle();
 
 {{JSFiddleEmbed("https://jsfiddle.net/L9xfn4up/1/","","395")}}
 
-> **Note:** パドルを速く、または遅く動くようにしたり、大きさを変えたりしてみましょう。
+> **メモ:** パドルを速く、または遅く動くようにしたり、大きさを変えたりしてみましょう。
 
 ## 次のステップ
 

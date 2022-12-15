@@ -26,7 +26,7 @@ _`FocusEvent()` コンストラクターも {{domxref("UIEvent.UIEvent", "UIEven
 
     - `"relatedTarget"` は、省略可能で既定値は `null` ですが、 {{domxref("EventTarget")}} であり、 {{domxref("FocusEvent")}} の副ターゲットを表します。
 
-    > **Note:** `FocusEventInit` 辞書は、 {{domxref("UIEvent.UIEvent", "UIEventInit")}} および {{domxref("Event.Event", "EventInit")}} 辞書のフィールドも受け入れます。
+    > **メモ:** `FocusEventInit` 辞書は、 {{domxref("UIEvent.UIEvent", "UIEventInit")}} および {{domxref("Event.Event", "EventInit")}} 辞書のフィールドも受け入れます。
 
 ## 仕様書
 

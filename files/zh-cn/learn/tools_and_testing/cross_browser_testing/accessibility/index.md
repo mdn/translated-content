@@ -243,7 +243,7 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 
 要处理内容定期更新的区域，可以使用`aria-live`属性，该属性标识更新区域。它的值指示屏幕阅读器如何处理更新内容：
 
-- `off:` 默认值。更新内容不被读出。
+- `off`: 默认值。更新内容不被读出。
 - `polite`: 当用户空闲时读出更新内容。
 - `assertive`: 尽快读出更新内容。
 - `rude`: 直接读出更新内容，即使会打断用户正常阅读。
@@ -276,7 +276,7 @@ CSS 往往提供的基本无障碍功能要比 HTML 少得多，但是如果使�
 2. 使用[bad-semantics.html](http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)示例测试，输入链接地址并按下*Analyse Your Webpage（译者注：开始分析你的网页）。*
 3. 下滑，直到你看到错误/描述部分，如下图。
 
-![](https://mdn.mozillademos.org/files/14217/tenon-screenshot.png)
+![](tenon-screenshot.png)
 
 你还可以探索一些选项（请参阅页面顶部附近的*Show Options（译者注：显示选项）*链接），或者使用 Tenon 的 API。
 
@@ -311,7 +311,7 @@ aXe 也可以使用`npm`安装，并且可以与任务运行器（如[Grunt](htt
 
 #### VoiceOver
 
-VoiceOver (VO) 是 Mac/iPhone/iPad 上的免费应用，所以如果你使用苹果公司的产品，可以用 VO 来进行测试。 我们在 Mac OS X 系统上测试了它。
+VoiceOver (VO) 是 Mac/iPhone/iPad 上的免费应用，所以如果你使用苹果公司的产品，可以用 VO 来进行测试。我们在 Mac OS X 系统上测试了它。
 
 按下 Cmd + Fn + F5 打开它。如果你之前没用过 VO，将会出现一个可以选择是否开启 VO 的欢迎界面，并且还会有教程指导你如何使用。再次按下 Cmd + Fn + F5 可以关闭。
 

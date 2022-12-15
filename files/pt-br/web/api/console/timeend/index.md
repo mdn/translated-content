@@ -1,18 +1,15 @@
 ---
 title: Console.timeEnd()
 slug: Web/API/Console/timeEnd
-tags:
-  - Desenvolvimento Web
-  - metodo
-translation_of: Web/API/Console/timeEnd
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 ## Resumo
 
 Interrompe um temporizador que foi anteriormente iniciado por uma chamada a {{domxref("console.time()")}}.
 
-Veja [Timers](/pt-BR/docs/DOM/console#Timers "DOM/console#Timers") na documentação de {{domxref("console")}} para detalhes e exemplos.
+Veja [Timers](/pt-BR/docs/DOM/console#Timers) na documentação de {{domxref("console")}} para detalhes e exemplos.
 
 ## Sintaxe
 
@@ -23,7 +20,7 @@ console.timeEnd(label);
 ### Parametros
 
 - `label`
-  - : O nome do temporizador a ser interrompido. Uma vez interrompido, o tempo decorrido é automaticamente apresentado no [Web Console](/pt-BR/docs/Tools/Web_Console "Web Console").
+  - : O nome do temporizador a ser interrompido. Uma vez interrompido, o tempo decorrido é automaticamente apresentado no [Web Console](/pt-BR/docs/Tools/Web_Console).
 
 ## Especificação
 

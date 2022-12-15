@@ -2,7 +2,8 @@
 title: '<aside>: 余談要素'
 slug: Web/HTML/Element/aside
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML の `<aside>` 要素**は、文書のメインコンテンツと間接的な関係しか持っていない文書の部分を表現します。サイドバーやコールアウトボックスなどを表現するためによく使われます。
 
@@ -109,10 +110,7 @@ slug: Web/HTML/Element/aside
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-aside-element', '&lt;aside&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
-| {{SpecName('HTML5 W3C', 'sections.html#the-aside-element', '&lt;aside&gt;')}}     | {{Spec2('HTML5 W3C')}}     |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

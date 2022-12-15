@@ -23,7 +23,7 @@ gainNode.gain.value = 0.5;
 
 ## 範例
 
-{{page("/en-US/docs/Web/API/AudioContext.createGain","Example")}}
+See [`BaseAudioContext.createGain()`](/zh-TW/docs/Web/API/BaseAudioContext/createGain#examples) for example code showing how to use an `AudioContext` to create a `GainNode`, which is then used to mute and unmute the audio by changing the gain property value.
 
 ## 規格
 

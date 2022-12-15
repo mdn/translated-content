@@ -2,11 +2,12 @@
 title: WebSocket API (WebSockets)
 slug: Web/API/WebSockets_API
 ---
+
 {{DefaultAPISidebar("Websockets API")}}
 
 **WebSocket API** は、ユーザーのブラウザーとサーバー間で対話的な通信セッションを開くことができる先進技術です。この API によって、サーバーにメッセージを送信したり、応答をサーバーにポーリングすることなく、イベント駆動型のレスポンスを受信したりすることができます。
 
-> **Note:** WebSocket のコネクションは機能的にどこか標準 Unix スタイルのソケットに似ていますが、関連はありません。
+> **メモ:** WebSocket のコネクションは機能的にどこか標準 Unix スタイルのソケットに似ていますが、関連はありません。
 
 ## インターフェイス
 
@@ -31,7 +32,7 @@ slug: Web/API/WebSockets_API
 - [µWebSockets](https://github.com/uWebSockets/uWebSockets): [C++11](https://isocpp.org/) および [Node.js](https://nodejs.org) で書かれた可用性の高い WebSocket サーバーとクライアントの実装です。
 - [ClusterWS](https://github.com/ClusterWS/ClusterWS): [Node.js](https://nodejs.org) でスケーラブルな WebSocket アプリケーションを構築する、軽量で高速で強力なフレームワークです。
 - [CWS](https://github.com/ClusterWS/cWS): Node.js のための高速な C++ による WebSocket の実装です (uWebSockets v0.14 のフォーク)
-- [Socket.IO](https://socket.io): 長いポーリングと WevSocket ベースのサードバーティ―の [Node.js](https://nodejs.org) 用転送プロトコルです。
+- [Socket.IO](https://socket.io): 長いポーリングと WebSocket ベースのサードバーティ―の [Node.js](https://nodejs.org) 用転送プロトコルです。
 - [SocketCluster](http://socketcluster.io/): スケーラビリティに焦点を当てた [Node.js](https://nodejs.org) 用の pub/sub WebSocket フレームワークです。
 - [WebSocket-Node](https://github.com/Worlize/WebSocket-Node): [Node.js](https://nodejs.org) 用の WebSocket サーバー API 実装です。
 - [Total.js](http://www.totaljs.com): [Node.js](https://www.nodejs.org) 用の ウェブアプリケーションフレームワーク(使用例: [WebSocket chat](https://github.com/totaljs/examples/tree/master/websocket))

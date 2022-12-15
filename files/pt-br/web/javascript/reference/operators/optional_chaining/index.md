@@ -1,8 +1,8 @@
 ---
 title: Encadeamento opcional
 slug: Web/JavaScript/Reference/Operators/Optional_chaining
-translation_of: Web/JavaScript/Reference/Operators/Optional_chaining
 ---
+
 {{JSSidebar("Operators")}}
 
 O operador de **encadeamento opcional** **`?.`** permite a leitura do valor de uma propriedade localizada internamente em uma cadeia de objetos conectados, sem que a validação de cada referência da cadeia seja expressivamente realizada.
@@ -59,7 +59,7 @@ Usar encadeamento opcional com chamadas de função faz com que a expressão aut
 let result = someInterface.customMethod?.();
 ```
 
-> **Nota:** Se existe uma propriedade com tal nome e que não é uma função, usando `?.` ainda lançará a exceção {{JSxRef("TypeError")}} (` x.y`` is not a function `).
+> **Nota:** Se existe uma propriedade com tal nome e que não é uma função, usando `?.` ainda lançará a exceção {{JSxRef("TypeError")}} (`x.y is not a function`).
 
 #### Lidando com callbacks opcionais ou manipuladores de eventos
 

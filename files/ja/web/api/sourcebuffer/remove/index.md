@@ -2,6 +2,7 @@
 title: SourceBuffer.remove()
 slug: Web/API/SourceBuffer/remove
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`remove()`** メソッドは、特定の時間範囲内のメディアセグメントを `SourceBuffer` から削除します。 このメソッドは、{{domxref("SourceBuffer.updating")}} が `false` の場合にのみ呼び出すことができます。 `SourceBuffer.updating` が `false` に等しくない場合、{{domxref("SourceBuffer.abort()")}} を呼び出します。
@@ -36,9 +37,7 @@ sourceBuffer.remove(start, end);
 
 ## 仕様
 
-| 仕様                                                                                                                                                 | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-sourcebuffer-remove(double,unrestricted_double)', 'remove()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

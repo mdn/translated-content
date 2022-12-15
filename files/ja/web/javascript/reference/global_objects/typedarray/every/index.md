@@ -70,9 +70,7 @@ new Uint8Array([12, 54, 18, 130, 44]).every(elem => elem >= 10); // true
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.every', 'TypedArray.prototype.every')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

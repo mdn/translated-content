@@ -40,4 +40,4 @@ The various dictionaries that are used to define the contents of the objects tha
 
 ## Browser compatibility
 
-{{Compat("api.RTCStats")}}
+{{Compat}}

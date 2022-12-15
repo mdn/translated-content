@@ -2,6 +2,7 @@
 title: XMLHttpRequest.response
 slug: Web/API/XMLHttpRequest/response
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の **`response`** プロパティは、そのリクエストの本文の内容を、 {{jsxref("ArrayBuffer")}}, {{domxref("Blob")}}, {{domxref("Document")}}, JavaScript の {{jsxref("Object")}}, {{domxref("DOMString")}} など、リクエストの {{domxref("XMLHttpRequest.responseType", "responseType")}} プロパティの値に応じた形で返します。

@@ -1,9 +1,9 @@
 ---
 title: Guia de estilo de escrita
 slug: MDN/Writing_guidelines/Writing_style_guide
-translation_of: MDN/Guidelines/Writing_style_guide
 original_slug: MDN/Guidelines/Writing_style_guide
 ---
+
 {{MDNSidebar}}
 
 Em um esforço para apresentar a documentação de maneira organizada, padronizada e fácil de ler a guia de estilo MDN Web Docs descreve como o texto deve ser organizado, escrito, formatado, e assim por diante. Estas sao orientações mais do que regras estritas. Nos estamos mais interessados em conteúdo do que em formatação, então não se sinta obrigado a aprender a guia de estilo antes de contribuir. Não fique chateado/a ou surpreso/a caso algum/a voluntário/a trabalhador/a edite o seu trabalho de acordo com esta guia.
@@ -12,7 +12,7 @@ Se você esta procurando por coisas específicas sobre como determinado tipo de 
 
 Os aspetos relacionado a linguagem desta guia aplicam-se principalmente a documentação em Inglês. Outras idiomas devem ter (e são bem-vindos a criar) seu próprio guia de estilo. Estes devem ser publicados como sub-páginas da página do time de localização.
 
-Para os estilos padrão que se aplicam ao conteúdo escrito por outros sites que não sejam a MDN, referir-se a [guia de estilo Única Mozilla](http://www.mozilla.org/en-US/styleguide/).
+Para os estilos padrão que se aplicam ao conteúdo escrito por outros sites que não sejam a MDN, referir-se a [guia de estilo Única Mozilla](http://www.mozilla.org/pt-BR/styleguide/).
 
 ## Básico
 
@@ -43,10 +43,10 @@ Quando você precisar adicionar vários artigos sobre um tópico ou um assunto d
 
 Por exemplo, considere a guia [JavaScript](/pt-BR/docs/Web/JavaScript), que é estruturada da seguinte forma:
 
-- [JavaScript/Guide](/pt-BR/docs/Web/JavaScript/Guide "JavaScript/Guide") - Página principal do sumário.
-- [JavaScript/Guide/JavaScript Overview](/pt-BR/docs/Web/JavaScript/Guide/JavaScript_Overview "JavaScript/Guide/JavaScript_Overview")
-- [JavaScript/Guide/Functions](/pt-BR/docs/JavaScript/Guide/Functions "JavaScript/Guide/Functions")
-- [JavaScript/Guide/Details of the Object Model](/pt-BR/docs/JavaScript/Guide/Details_of_the_Object_Model "JavaScript/Guide/Details_of_the_Object_Model")
+- [JavaScript/Guide](/pt-BR/docs/Web/JavaScript/Guide) - Página principal do sumário.
+- [JavaScript/Guide/JavaScript Overview](/pt-BR/docs/Web/JavaScript/Guide/JavaScript_Overview)
+- [JavaScript/Guide/Functions](/pt-BR/docs/JavaScript/Guide/Functions)
+- [JavaScript/Guide/Details of the Object Model](/pt-BR/docs/JavaScript/Guide/Details_of_the_Object_Model)
 
 Tente evitar colocar seu artigo no topo da hierarquia, o que torna lento o site e menos eficiente a pesquisa e a navegação.
 
@@ -56,7 +56,7 @@ Quando estiver escrevendo qualquer documento é importante conhecer o quanto fal
 
 ### Seções, parágrafos e novas linhas
 
-Use os níveis de cabeçalho em ordem decrescente na hierarquia: {{HTMLElement("h2")}} depois {{HTMLElement("h3")}} depois {{HTMLElement("h4")}}, sem pular níveis. {{HTMLElement("h2")}} é o maior nível permitido, pois {{HTMLElement("h1")}} está reservado para o título da página. Se perceber que precisará de mais de 3 ou 4 níveis de cabeçalho, considere fragmentar seu artigo em artigos menores, ou colocando uma landing page, linkando estes com o {{TemplateLink("Next")}}, {{TemplateLink("Previous")}}, e {{TemplateLink("PreviousNext")}} macros.
+Use os níveis de cabeçalho em ordem decrescente na hierarquia: {{HTMLElement("h2")}} depois {{HTMLElement("h3")}} depois {{HTMLElement("h4")}}, sem pular níveis. {{HTMLElement("h2")}} é o maior nível permitido, pois {{HTMLElement("h1")}} está reservado para o título da página. Se perceber que precisará de mais de 3 ou 4 níveis de cabeçalho, considere fragmentar seu artigo em artigos menores, ou colocando uma landing page, linkando estes com o [Next](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs), [Previous](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs), e [PreviousNext](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) macros.
 
 O Enter (ou Return) do seu teclado inicia um novo parágrafo. Para inserir uma nova linha sem espaço, faça Shift + Enter.
 
@@ -111,7 +111,7 @@ Method names should be followed by a pair of parentheses: `doSomethingUseful()`.
 
 #### Syntax highlighting
 
-![Screenshot of the "syntax highlighting" menu.](https://mdn.mozillademos.org/files/7857/syntax-highlighting-menu.png)Entire lines (or multiple lines) of code should be formatted using syntax highlighting rather than the {{HTMLElement("code")}} element. Click the "pre" button in the toolbar to create the preformatted content box in which you'll then write your code. Then, with the text entry cursor inside the code box, select the appropriate language from the language list button to the right of the "pre" button, as seen in the screenshot to the right. The following example shows text with JavaScript formatting:
+![Screenshot of the "syntax highlighting" menu.](syntax-highlighting-menu.png)Entire lines (or multiple lines) of code should be formatted using syntax highlighting rather than the {{HTMLElement("code")}} element. Click the "pre" button in the toolbar to create the preformatted content box in which you'll then write your code. Then, with the text entry cursor inside the code box, select the appropriate language from the language list button to the right of the "pre" button, as seen in the screenshot to the right. The following example shows text with JavaScript formatting:
 
 ```js
 for (var i = 0, j = 9; i <= 9; i++, j--)
@@ -129,11 +129,11 @@ x = 42;
 There are various specific rules to follow when writing about HTML elements, in order to consistently describe the various components of elements, and to ensure that they're properly linked to detailed documentation.
 
 - Element names
-  - : Use the {{TemplateLink("HTMLElement")}} macro, which creates a link to the page for that element. For example, writing \\{{HTMLElement("title")}} produces "{{HTMLElement("title")}}". If you don't want to create a link, **enclose the name in angle brackets** and use "Code (inline)" style (e.g., `<title>`).
+  - : Use the [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) macro, which creates a link to the page for that element. For example, writing \\{{HTMLElement("title")}} produces "{{HTMLElement("title")}}". If you don't want to create a link, **enclose the name in angle brackets** and use "Code (inline)" style (e.g., `<title>`).
 - Attribute names
   - : Use **bold face**.
 - Attribute definitions
-  - : Use the {{TemplateLink("htmlattrdef")}} macro (e.g., \\{{htmlattrdef("type")}}) for the definition term, so that it can be linked to from other pages, then use the {{TemplateLink("htmlattrxref")}} macro (e.g., \\{{htmlattrxref("attr","element")}}) to reference attribute definitions.
+  - : Use the [`htmlattrdef`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrdef.ejs) macro (e.g., \\{{htmlattrdef("type")}}) for the definition term, so that it can be linked to from other pages, then use the [`htmlattrxref`](https://github.com/mdn/yari/blob/main/kumascript/macros/htmlattrxref.ejs) macro (e.g., \\{{htmlattrxref("attr","element")}}) to reference attribute definitions.
 - Attribute values
   - : Use "Code (inline)" style, and do not use quotation marks around strings, unless needed by the syntax of a code sample. E.g.: When the **type** attribute of an `<input>` element is set to `email` or `tel` ...
 - Labeling attributes
@@ -296,7 +296,7 @@ In running text, use commas only in five-digit and larger numbers.
 - **Correct**: I will travel on trains, planes, and automobiles.
 - **Incorrect**: I will travel on trains, planes and automobiles.
 
-> **Nota:** This is in contrast to the [One Mozilla style guide](http://www.mozilla.org/en-US/styleguide/), which specifies that the serial comma is not to be used. MDN is an exception to this rule.
+> **Nota:** This is in contrast to the [One Mozilla style guide](http://www.mozilla.org/pt-BR/styleguide/), which specifies that the serial comma is not to be used. MDN is an exception to this rule.
 
 ### Spelling
 
@@ -318,7 +318,7 @@ It's important to be clear on the difference between the terms **obsolete** and 
 
 #### HTML elements
 
-Use "elements" to refer to HTML and XML elements, rather than "tags". In addition, they should almost always be wrapped in "<>", and should be in the {{HTMLElement("code")}} style. Also, at least the first time you reference a given element in a section should use the {{TemplateLink("HTMLElement")}} macro, to create a link to the documentation for the element (unless you're writing within that element's reference document page).
+Use "elements" to refer to HTML and XML elements, rather than "tags". In addition, they should almost always be wrapped in "<>", and should be in the {{HTMLElement("code")}} style. Also, at least the first time you reference a given element in a section should use the [`HTMLElement`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs) macro, to create a link to the documentation for the element (unless you're writing within that element's reference document page).
 
 - **Correct**: the {{HTMLElement("span")}} element
 - **Incorrect**: the span tag
@@ -364,7 +364,7 @@ Tags provide meta information about a page and/or indicate that a page has speci
 
 The tagging interface lives at the bottom of a page while you're in edit mode, and looks something like this:
 
-![Screenshot of the UX for adding and removing tags on MDN](https://mdn.mozillademos.org/files/7859/tag-interface.png)
+![Screenshot of the UX for adding and removing tags on MDN](tag-interface.png)
 
 To add a tag, click in the edit box at the end of the tag list and type the tag name you wish to add. Tags will autocomplete as you type. Press enter (or return) to submit the new tag. Each article may have as many tags as needed. For example, an article about using JavaScript in AJAX programming might have both "JavaScript" and "AJAX" as tags.
 
@@ -379,7 +379,7 @@ In addition to using tags to track information about the documentation's quality
 Use the following tags for pages that are not current:
 
 - _Junk_: Use for spam, pages created by mistake, or content that is so bad that it should be deleted. Pages with this tag are deleted from time to time.
-- _Obsolete_: Use for content that is technically superceded, but still valid in context. For example an HTML element that is obsolete in HTML5 is still valid in HTML 4.01. You can also use the {{TemplateLink("obsolete_header")}} macro to put a prominent banner on the topic.
+- _Obsolete_: Use for content that is technically superceded, but still valid in context. For example an HTML element that is obsolete in HTML5 is still valid in HTML 4.01. You can also use the [`obsolete_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Obsolete_Header.ejs) macro to put a prominent banner on the topic.
 - _Archive_: Use for content that is technically superceded and no longer useful. If possible, add a note to the topic referring readers to a more current topic. For example, a page that describes how to use the Mozilla CVS repository should refer readers to a current topic on using Mercurial repos. (If no corresponding current topic exists, use the _NeedsUpdate_ tag, and add an explanation on the Talk page.) Pages with the Archive tag are eventually moved from the main content of MDN to the [Archive](/pt-BR/docs/Archive) section.
 
 ### SEO summary
@@ -390,11 +390,11 @@ By default, the first pagragraph of the page is used as the SEO summary. However
 
 ### Landing pages
 
-**Landing pages** are pages at the root of a topic area of the site, such as the main [CSS](/pt-BR/docs/CSS "CSS") or [HTML](/pt-BR/docs/HTML "HTML") pages. They have a standard format that consists of three areas:
+**Landing pages** are pages at the root of a topic area of the site, such as the main [CSS](/pt-BR/docs/CSS) or [HTML](/pt-BR/docs/HTML) pages. They have a standard format that consists of three areas:
 
-1.  A brief (typically one paragraph) overview of what the technology is and what it's used for. See [Writing a landing page overview](#writing_a_landing_page_overview) for tips.
-2.  A two-column list of links with appropriate headings. See [Creating a page link list](#creating_a_page_link_list) for guidelines.
-3.  An **optional** "Browser compatibility" section at the bottom of the page.
+1. A brief (typically one paragraph) overview of what the technology is and what it's used for. See [Writing a landing page overview](#writing_a_landing_page_overview) for tips.
+2. A two-column list of links with appropriate headings. See [Creating a page link list](#creating_a_page_link_list) for guidelines.
+3. An **optional** "Browser compatibility" section at the bottom of the page.
 
 #### Creating a page link list
 
@@ -428,10 +428,10 @@ The right column should contain one or more of the following sections, in order:
 
 It's sometimes helpful to provide an image in an article you create or modify, especially if the article is very technical. To include an image:
 
-1.  Attach the desired image file to the article (at the bottom of every article in edit mode)
-2.  Create an image in the WYSIWYG editor
-3.  In the WYSIWYG editor in the drop-down list listing attachments, select the newly created attachment which is your image
-4.  Press OK.
+1. Attach the desired image file to the article (at the bottom of every article in edit mode)
+2. Create an image in the WYSIWYG editor
+3. In the WYSIWYG editor in the drop-down list listing attachments, select the newly created attachment which is your image
+4. Press OK.
 
 ## Other References
 
@@ -443,12 +443,12 @@ If you have questions about usage and style not covered here, we recommend refer
 
 For questions of spelling, please refer to [Answers.com](http://www.answers.com/library/Dictionary). The spell-checker for this site uses American English. Please do not use variant spellings (e.g., use _honor_ rather than _honour_).
 
-We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, please send them to the [MDC mailing list](/pt-BR/docs/Project:Community "Project:en/Community") or [project lead](/User:Sheppy "User:Sheppy") so we know what should be added.
+We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, please send them to the [MDC mailing list](/pt-BR/docs/Project:Community) or [project lead](/User:Sheppy) so we know what should be added.
 
 ### MDN-specific
 
-- [Custom CSS classes](/pt-BR/docs/Project:Custom_CSS_Classes "Project:en/Custom_CSS_Classes") defined for all MDC pages.
-- [Custom templates](/pt-BR/docs/Project:Custom_Templates "Project:en/Custom_Templates") created for use on MDC, with explanations.
+- [Custom CSS classes](/pt-BR/docs/Project:Custom_CSS_Classes) defined for all MDC pages.
+- [Custom templates](/pt-BR/docs/Project:Custom_Templates) created for use on MDC, with explanations.
 
 ### Language, grammar, spelling
 

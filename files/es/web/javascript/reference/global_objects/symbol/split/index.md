@@ -1,12 +1,11 @@
 ---
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/split
 original_slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
-browser-compat: javascript.builtins.Symbol.split
 l10n:
   sourceCommit: 88508ebe5c73264be2cf03f1a949d8099d68d1ea
 ---
+
 {{JSRef}}
 
 El símbolo conocido como **`Symbol.split`** especifica el método que divide una cadena en los índices que coinciden con una expresión regular. Esta función es llamada por el método {{jsxref("String.prototype.split()")}}.

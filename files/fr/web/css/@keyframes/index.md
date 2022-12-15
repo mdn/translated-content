@@ -147,13 +147,11 @@ Regardez [Utiliser les animations CSS](/fr/docs/Web/CSS/Animations_CSS/Utiliser_
 
 ## Spécifications
 
-| Spécification                                                                    | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Animations', '#keyframes', '@keyframes')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.keyframes")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,14 +1,8 @@
 ---
 title: '::-moz-list-number'
 slug: Web/CSS/:-moz-list-number
-tags:
-  - CSS
-  - NeedsCompatTable
-  - No estandar
-  - Pseudo-elemento
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-list-number
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Resumen

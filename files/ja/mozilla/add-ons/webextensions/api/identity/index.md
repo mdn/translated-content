@@ -2,6 +2,7 @@
 title: identity
 slug: Mozilla/Add-ons/WebExtensions/API/identity
 ---
+
 {{AddonSidebar}}
 
 identity API を使って [OAuth2](https://oauth.net/2/) の認証コードやアクセストークンを取得し、拡張機能が OAuth2 での認証 (Google や Facebook アカウントなど) をサポートするサービスからユーザーデータを取得できるようにします。
@@ -53,7 +54,7 @@ identity API は {{WebExtAPIRef("identity.launchWebAuthFlow()")}} 関数を提�
 
 {{WebExtExamples("h2")}}
 
-> **Note:** この API は Chromium の [`chrome.identity`](https://developer.chrome.com/extensions/identity) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> **メモ:** この API は Chromium の [`chrome.identity`](https://developer.chrome.com/extensions/identity) API に基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

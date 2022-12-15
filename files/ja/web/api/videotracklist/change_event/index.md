@@ -2,6 +2,7 @@
 title: 'VideoTrackList: change イベント'
 slug: Web/API/VideoTrackList/change_event
 ---
+
 {{APIRef}}
 
 `change` イベントは、動画トラックがアクティブまたは非アクティブになったとき（トラックの [`selected`](/ja/docs/Web/API/VideoTrack/selected) プロパティを変更したときなど）に発生します。
@@ -67,9 +68,7 @@ toggleTrackButton.addEventListener('click', () => {
 
 ## 仕様
 
-| 仕様                                                                                         | 状態                             |
-| -------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'media.html#event-media-change', 'change')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

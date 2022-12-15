@@ -57,4 +57,4 @@ translation_of: Web/HTML/Element/ruby
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

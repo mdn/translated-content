@@ -102,9 +102,7 @@ class Thingy {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-finalization-registry.prototype.unregister', 'FinalizationRegistry.prototype.unregister')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

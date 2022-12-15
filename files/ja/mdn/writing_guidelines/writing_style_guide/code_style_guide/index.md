@@ -3,6 +3,7 @@ title: コード例のガイドライン
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide
 original_slug: MDN/Guidelines/Code_guidelines
 ---
+
 {{MDNSidebar}}
 
 この記事で記述するガイドラインは、言語に関係なく、コード例のスタイルと形式に適用されます。コード例を書くときにどのような内容を入れるべきかについてのガイドラインは、[執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/writing_style_guide#コード例) を参照してください。

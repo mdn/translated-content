@@ -3,6 +3,7 @@ title: min()
 slug: Web/CSS/min
 original_slug: Web/CSS/min()
 ---
+
 {{CSSRef}}
 
 **`min()`** は [CSS](/ja/docs/Web/CSS) 関数で、 CSS プロパティの値としてカンマで区切られた式のリストから最小の (最も負である) 値を設定できます。 `min()` 関数は {{CSSxRef("&lt;length&gt;")}}、{{CSSxRef("&lt;frequency&gt;")}},、{{CSSxRef("&lt;angle&gt;")}}、{{CSSxRef("&lt;time&gt;")}}、{{CSSxRef("&lt;percentage&gt;")}}、{{CSSxRef("&lt;number&gt;")}}、{{CSSxRef("&lt;integer&gt;")}} が利用できるところならばどこでも使用することができます。

@@ -83,11 +83,8 @@ body :not(.classy, p) {
 
 ## Spécifications
 
-| Spécification                                                            | État                                 | Commentaires                                                                       |
-| ------------------------------------------------------------------------ | ------------------------------------ | ---------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#negation', ':not()')}} | {{Spec2('CSS4 Selectors')}} | La définition de l'argument est étendue afin d'autoriser les sélecteurs complexes. |
-| {{SpecName('CSS3 Selectors', '#negation', ':not()')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.not")}}
+{{Compat}}

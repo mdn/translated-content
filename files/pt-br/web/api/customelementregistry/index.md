@@ -1,8 +1,8 @@
 ---
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
-translation_of: Web/API/CustomElementRegistry
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 A interface **`CustomElementRegistry`** provê métodos para registro de elementos customizados e busca de elementos registrados. Para instancia-lo, use a propriedade {{domxref("window.customElements")}}.

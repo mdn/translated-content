@@ -37,20 +37,18 @@ scroll-snap-align: unset;
 - `center`
   - : Le point d'alignement situé au centre de l'axe et à l'intérieur de la boîte de défilement est une position d'accroche sur cet axe.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                             | Commentaires       |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-align", "scroll-snap-align")}} | {{Spec2("CSS Scroll Snap Points")}} | Initial definition |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-snap-align")}}
-
-> **Attention :** Pour Safari, la syntaxe utilisant les deux valeurs intervertit les deux valeurs (la première cible l'alignement en ligne et la seconde l'alignement en bloc). Voir [le bug n°191865](https://bugs.webkit.org/show_bug.cgi?id=191865).
+{{Compat}}

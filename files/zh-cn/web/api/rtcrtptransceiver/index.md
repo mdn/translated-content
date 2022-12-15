@@ -39,7 +39,7 @@ A transceiver is uniquely identified using its {{domxref("RTCRtpTransceiver.mid"
 
 ## Browser compatibility
 
-{{Compat("api.RTCRtpTransceiver")}}
+{{Compat}}
 
 ## See also
 

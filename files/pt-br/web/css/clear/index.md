@@ -1,16 +1,11 @@
 ---
 title: clear
 slug: Web/CSS/clear
-tags:
-  - CSS
-  - CSS Positioning
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/clear
 ---
+
 {{CSSRef}}
 
-A propriedade **`clear do`** [CSS](/pt-BR/docs/CSS "CSS") especifica se um elemento pode ter elementos [flutuantes](/pt-BR/docs/CSS/float) ao seu lado ou se devem ser movidos para abaixo dele (clear). Essa propriedade se aplica à elementos flutuantes ou não flutuantes.
+A propriedade **`clear do`** [CSS](/pt-BR/docs/CSS) especifica se um elemento pode ter elementos [flutuantes](/pt-BR/docs/CSS/float) ao seu lado ou se devem ser movidos para abaixo dele (clear). Essa propriedade se aplica à elementos flutuantes ou não flutuantes.
 
 {{EmbedInteractiveExample("pages/css/clear.html")}}
 
@@ -213,4 +208,4 @@ p {
 
 ## Veja também
 
-- [Box model](/pt-BR/docs/CSS/box_model "CSS/box_model")
+- [Box model](/pt-BR/docs/CSS/box_model)

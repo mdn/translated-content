@@ -1,13 +1,8 @@
 ---
 title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
-tags:
-  - Construtor
-  - JavaScript
-  - TypedArray
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Int16Array
 ---
+
 {{JSRef}}
 
 A matriz do tipo **`Int16Array`** representa uma matriz de inteiros assinados de 16 bits com dois complementos na ordem de bytes da plataforma. Se o controle sobre a ordem de bytes for necessário, use {{jsxref ("DataView")}}. O conteúdo é inicializado em 0. Uma vez estabelecido, você pode fazer referência a elementos na matriz usando os métodos do objeto ou usando a sintaxe de índice da matriz padrão (ou seja, usando a notação de colchetes).
@@ -106,7 +101,7 @@ Todos `Int16Array` objetos herdam de {{jsxref("TypedArray.prototype", "%TypedArr
 - {{jsxref("TypedArray.sort", "Int16Array.prototype.sort()")}}
   - : Classifica os elementos de uma matriz e retorna a matriz. Veja também {{jsxref("Array.prototype.sort()")}}.
 - {{jsxref("TypedArray.subarray", "Int16Array.prototype.subarray()")}}
-  - : Retorna um novo `Int16Array `a partir do índice de elemento inicial e final fornecido.
+  - : Retorna um novo `Int16Array` a partir do índice de elemento inicial e final fornecido.
 - {{jsxref("TypedArray.values", "Int16Array.prototype.values()")}}
   - : Retorna um novo objeto `Array Iterator` que contém os valores para cada índice na matriz. Veja também {{jsxref("Array.prototype.values()")}}.
 - {{jsxref("TypedArray.toLocaleString", "Int16Array.prototype.toLocaleString()")}}
@@ -175,6 +170,6 @@ var dv = new Int16Array([1, 2, 3]);
 
 ## Ver também
 
-- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays "en/JavaScript typed arrays")
+- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

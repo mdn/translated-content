@@ -3,6 +3,7 @@ title: WebAssembly.Memory() コンストラクター
 slug: WebAssembly/JavaScript_interface/Memory/Memory
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
 ---
+
 {{JSRef}}
 
 **`WebAssembly.Memory()`** コンストラクターは新しい `Memory` オブジェクトを生成します。これは {{jsxref("WebAssembly/Memory/buffer","buffer")}} プロパティがサイズ変更可能な [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) または `SharedArrayBuffer` であり、 WebAssembly の `Instance` からアクセスする生のバイト列のメモリーであるものです。
@@ -28,7 +29,7 @@ new WebAssembly.Memory(memoryDescriptor)
     - shared _{{optional_inline}}_
       - : 論理値で、このメモリーを共有メモリーにするかどうかを定義します。 `true` に設定すると、共有メモリーになります。既定値は `false` です。
 
-> **Note:** WebAssembly ページは 65,536 バイト、すなわち 64KiB の固定長です。
+> **メモ:** WebAssembly ページは 65,536 バイト、すなわち 64KiB の固定長です。
 
 ### 例外
 

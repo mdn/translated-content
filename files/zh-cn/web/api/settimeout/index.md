@@ -1,11 +1,11 @@
 ---
-title: window.setTimeout
+title: setTimeout()
 slug: Web/API/setTimeout
 ---
 
 {{APIRef("HTML DOM")}}
 
-`WindowOrWorkerGlobalScope` 混合的 **`setTimeout()`**方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。
+全局的 **`setTimeout()`** 方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。
 
 ## 语法
 
@@ -328,7 +328,7 @@ setInterval(f, 0);
 
 > **备注：** 最小延时， `DOM_MIN_TIMEOUT_VALUE`, 是 4ms (但在 Firefox 中通常是是存储在 `dom.min_timeout_value` 这个变量中), `DOM_CLAMP_TIMEOUT_NESTING_LEVEL` 的第 5 层。
 
-> **备注：** 4 ms 是在 [HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) 中精确的，并且在 2010 年及以后的跨浏览器中保持了一致，这个数值比 {{geckoRelease("5.0")}}规定的嵌套函数的最小延时 10ms 更为精确。
+> **备注：** 4 ms 是在 [HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers) 中精确的，并且在 2010 年及以后的跨浏览器中保持了一致，这个数值比 Gecko 5.0 规定的嵌套函数的最小延时 10ms 更为精确。
 
 #### 未被激活的 tabs 的定时最小延迟>=1000ms
 

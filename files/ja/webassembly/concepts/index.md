@@ -4,6 +4,7 @@ slug: WebAssembly/Concepts
 l10n:
   sourceCommit: 1ef12f2e0815d0d285d6027219c987a3e4e228a3
 ---
+
 {{WebAssemblySidebar}}
 
 この記事では、 WebAssembly がどのように機能しているか、その目標、解決している問題、ウェブブラウザーのレンダリングエンジン内での動作などの概念について説明します。
@@ -25,7 +26,7 @@ WebAssembly は [W3C WebAssembly Community Group](https://www.w3.org/community/w
 - 安全であること — WebAssembly は安全でサンドボックス化された実行環境上で動作するように設計されています。他のウェブ言語と同様に、ブラウザーに対して same-origin および権限ポリシーの確認を強制します。
 - ウェブを破壊しないこと — WebAssembly は他のウェブ技術と協調し、後方互換性を維持するように設計されます。
 
-> **Note:** WebAssembly はまたウェブの領域外の JavaScript 環境での利用も行います ([Non-web embeddings](http://webassembly.org/docs/non-web/) を参照)。
+> **メモ:** WebAssembly はまたウェブの領域外の JavaScript 環境での利用も行います ([Non-web embeddings](http://webassembly.org/docs/non-web/) を参照)。
 
 ## WebAssembly はどのようにウェブプラットフォームに適合するのか
 
@@ -95,7 +96,7 @@ Emscripten ツールは C/C++ ソースコードを取得し、それを .wasm �
 2. Emscripten が Clang + LLVM によるコンパイル結果を .wasm バイナリーに変換します。
 3. それ自体だけでは WebAssembly は現時点で DOM に直接アクセスできません; JavaScript を呼び出して、整数型もしくは浮動小数点型の基本データを渡せるだけです。そのため、ウェブ API にアクセスするためには、WebAssembly は JavaScript を呼び出す必要が有り、この時点でウェブ API の呼び出しが行われます。そのため Emscripten は結果を得るための HTML と JavaScript のグルーコードを生成します。
 
-> **Note:** 将来的に [WebAssembly に直接ウェブ API を呼ばせることを許容する](https://github.com/WebAssembly/gc/blob/master/README.md) 計画があります。
+> **メモ:** 将来的に [WebAssembly に直接ウェブ API を呼ばせることを許容する](https://github.com/WebAssembly/gc/blob/master/README.md) 計画があります。
 
 JavaScript グルーコードは多くの人が想像するほど簡単な構造をしていません。はじめに、 Emscripten は [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer)、 [OpenGL](https://en.wikipedia.org/wiki/OpenGL)、 [OpenAL](https://en.wikipedia.org/wiki/OpenAL) および [POSIX](https://en.wikipedia.org/wiki/POSIX) の一部といった主な C/C++ ライブラリーを組み込みます。これらのライブラリー群はウェブ API の観点から組み込まれ、各々が WebAssembly を既存のウェブ API に接続するためにいくつかの JavaScript グルーコードを必要とします。
 

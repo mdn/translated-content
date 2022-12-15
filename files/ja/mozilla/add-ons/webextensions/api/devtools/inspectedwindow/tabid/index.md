@@ -3,6 +3,7 @@ title: devtools.inspectedWindow.tabId
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId
 ---
+
 {{AddonSidebar()}}
 
 devtools のこのインスタンスがアタッチされる {{WebExtAPIRef("tabs.Tab", "tab")}} の ID。番号で表されます。
@@ -40,7 +41,7 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 {{WebExtExamples}}
 
-> **Note:** この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API に基づいています。Microsoft Edge の互換性データは Microsoft Corporation によって提供され、Creative Commons Attribution 3.0 United States License に含まれています。
+> **メモ:** この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) API に基づいています。Microsoft Edge の互換性データは Microsoft Corporation によって提供され、Creative Commons Attribution 3.0 United States License に含まれています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

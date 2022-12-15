@@ -40,26 +40,11 @@ original_slug: Web/CSS/CSS_Color
 
 ## Spécifications
 
-| Spécification                                    | État                             | Commentaires         |
-| ------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS4 Colors')}}             | {{Spec2('CSS4 Colors')}} |                      |
-| {{SpecName('CSS3 Colors')}}             | {{Spec2('CSS3 Colors')}} |                      |
-| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}         |                      |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `color` property
-
-{{Compat("css.properties.color")}}
-
-### `color-adjust` property
-
-{{Compat("css.properties.color-adjust")}}
-
-### `opacity` property
-
-{{Compat("css.properties.opacity")}}
+{{Compat}}
 
 ## Voir aussi
 

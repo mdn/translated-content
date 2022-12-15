@@ -9,6 +9,7 @@ tags:
 browser-compat: javascript.builtins.Proxy.handler.defineProperty
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 ---
+
 {{JSRef}}
 
 **`handler.defineProperty()`** 메서드는 {{jsxref("Object.defineProperty()")}}에 대한 트랩입니다.
@@ -79,6 +80,7 @@ const p = new Proxy({}, {
 const desc = { configurable: true, enumerable: true, value: 10 };
 Object.defineProperty(p, 'a', desc); // "호출: a"
 ```
+
 {{jsxref("Object.defineProperty()")}} 또는 {{jsxref("Reflect.defineProperty()")}}를 호출할 때 `defineProperty()` 트랩에 전달된 `descriptor`에는 한 가지 제한 사항이 있어 다음 속성만 사용할 수 있습니다.(비표준 속성은 무시됨)
 
 - `enumerable`

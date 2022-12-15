@@ -1,16 +1,11 @@
 ---
 title: MathML element reference
 slug: Web/MathML/Element
-tags:
-  - MathML
-  - MathML Reference
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/MathML/Element
 ---
+
 Essa é uma lista alfabética dos elementos de **apresentação** de MathML.
 
-O termo **marcação de apresentação** é usado para descrever a estrutura da notação matemática, enquanto que **marcação de conteúdo** fornece um significado matemático básico e não é feito para ser renderizado pelo parser de MathML (ver {{ bug(276028)}}). Se você desejar aprender mais sobre marcação de conteúdo considere o [Capítulo 4](http://www.w3.org/TR/MathML3/chapter4.html) na [especificação do MathML 3](http://www.w3.org/TR/MathML3/).
+O termo **marcação de apresentação** é usado para descrever a estrutura da notação matemática, enquanto que **marcação de conteúdo** fornece um significado matemático básico e não é feito para ser renderizado pelo parser de MathML (ver {{ bug(276028)}}). Se você desejar aprender mais sobre marcação de conteúdo considere o [Capítulo 4](https://www.w3.org/TR/MathML3/chapter4.html) na [especificação do MathML 3](https://www.w3.org/TR/MathML3/).
 
 ### math
 
@@ -104,5 +99,5 @@ O termo **marcação de apresentação** é usado para descrever a estrutura da 
 
 ## Ver também
 
-- [MathML](/pt-BR/docs/Web/MathML "/en-US/docs/Web/MathML")
-- [Referência de atributos de MathML](/pt-BR/docs/Web/MathML/Attribute "/en-US/docs/Web/MathML/Attribute")
+- [MathML](/pt-BR/docs/Web/MathML)
+- [Referência de atributos de MathML](/pt-BR/docs/Web/MathML/Attribute)

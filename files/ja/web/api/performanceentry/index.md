@@ -2,6 +2,7 @@
 title: PerformanceEntry
 slug: Web/API/PerformanceEntry
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`PerformanceEntry`** オブジェクトは、*パフォーマンスタイムライン*の一部である単一のパフォーマンスメトリックをカプセル化します。パフォーマンスエントリは、アプリケーション内の明示的な時点でパフォーマンス _{{domxref("PerformanceMark","mark")}}_ または _{{domxref("PerformanceMeasure","measure")}}_ を作成する (たとえば、{{domxref("Performance.mark","mark()")}} メソッドを呼び出すことによって) ことで直接作成できます。パフォーマンスエントリは、(イメージなどの) リソースのロードなどの間接的な方法でも作成されます。
@@ -67,18 +68,7 @@ function print_PerformanceEntry(perfEntry) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | ステータス                                               | コメント                                                                                                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Resource Timing 3')}}                                                                             | {{Spec2('Resource Timing 3')}}                 |                                                                                                                                                                                  |
-| {{SpecName('Resource Timing 2')}}                                                                             | {{Spec2('Resource Timing 2')}}                 |                                                                                                                                                                                  |
-| {{SpecName('Resource Timing')}}                                                                                 | {{Spec2('Resource Timing')}}                     | {{domxref("PerformanceResourceTiming")}} インターフェイスと `entryType` の `resource` 値を追加します。                                                               |
-| {{SpecName('Navigation Timing Level 2')}}                                                                 | {{Spec2('Navigation Timing Level 2')}}     |                                                                                                                                                                                  |
-| {{SpecName('Navigation Timing')}}                                                                             | {{Spec2('Navigation Timing')}}                 | {{domxref("PerformanceNavigationTiming")}} インターフェイスと `entryType` の `navigation` 値を追加します。                                                         |
-| {{SpecName('User Timing Level 2')}}                                                                         | {{Spec2('User Timing Level 2')}}             |                                                                                                                                                                                  |
-| {{SpecName('User Timing')}}                                                                                     | {{Spec2('User Timing')}}                         | `entryType` の `mark` および `measure` の値と同様に、{{domxref("PerformanceMark")}} および {{domxref("PerformanceMeasure")}} インターフェイスを追加します。 |
-| {{SpecName('Frame Timing')}}                                                                                     | {{Spec2('Frame Timing')}}                         | {{domxref('PerformanceFrameTiming')}} インターフェイスと `entryType` の `frame` 値を追加します。                                                                      |
-| {{SpecName('Performance Timeline Level 2', '#dom-performanceentry', 'PerformanceEntry')}} | {{Spec2('Performance Timeline Level 2')}} | `toJSON()` シリアライザメソッドを追加しました。                                                                                                                                  |
-| {{SpecName('Performance Timeline', '#dom-performanceentry', 'PerformanceEntry')}}             | {{Spec2('Performance Timeline')}}             | 初期定義                                                                                                                                                                         |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

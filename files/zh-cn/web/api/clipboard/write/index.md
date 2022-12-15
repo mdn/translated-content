@@ -5,7 +5,7 @@ slug: Web/API/Clipboard/write
 
 {{APIRef("Clipboard API")}}
 
-{{domxref("Clipboard")}} 的方法 **`write()`** 写入图片等任意的数据到剪贴板。 这个方法可以用于实现剪切和复制的功能。
+{{domxref("Clipboard")}} 的方法 **`write()`** 写入图片等任意的数据到剪贴板。这个方法可以用于实现剪切和复制的功能。
 
 但是你要提前获取 "[Permissions API](/zh-CN/docs/Web/API/Permissions_API)" 的 `"clipboard-write"` 权限才能将数据写入到剪贴板。
 

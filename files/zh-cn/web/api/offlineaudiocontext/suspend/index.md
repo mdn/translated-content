@@ -43,4 +43,4 @@ A {{jsxref("Promise")}} resolving to void.
 
 ## Browser compatibility
 
-{{Compat("api.OfflineAudioContext.suspend")}}
+{{Compat}}

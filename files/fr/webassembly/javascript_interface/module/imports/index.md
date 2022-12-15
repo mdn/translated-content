@@ -55,13 +55,11 @@ Le résultat affiché dans la console ressemble alors à :
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblymoduleimports', 'imports()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initial pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Module.imports")}}
+{{Compat}}
 
 ## Voir aussi
 

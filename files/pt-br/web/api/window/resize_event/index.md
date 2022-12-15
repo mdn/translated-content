@@ -1,8 +1,8 @@
 ---
 title: resize
 slug: Web/API/Window/resize_event
-translation_of: Web/API/Window/resize_event
 ---
+
 O evento **`resize`** é disparado quando o document view é redimensionado.
 
 O evento manipulador pode ser registrado para o evento `resize` usando o atributo `window.onresize` ou usando `window.addEventListener('resize', ...)`
@@ -14,7 +14,7 @@ Existe uma nova proposta (2017) para permitir que todos os elementos sejam notif
 ## Informações gerais
 
 - Specifications
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](http://www.w3.org/TR/cssom-view/#resizing-viewports)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-resize), [CSSOM View](https://www.w3.org/TR/cssom-view/#resizing-viewports)
 - Interface
   - : UIEvent
 - Bubbles
@@ -30,11 +30,11 @@ Existe uma nova proposta (2017) para permitir que todos os elementos sejam notif
 
 | Property                              | Type                                                                                                                                                            | Description                                                                                                                                                                                                        |
 | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget "EventTarget is an interface implemented by objects that can receive events and may have listeners for them.")  | O evento alto (o primeiro alvo na árvore DOM).                                                                                                                                                                     |
-| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/Web/API/DOMString "DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String.") | O tipo de evento.                                                                                                                                                                                                  |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.")                                                         | Se o evento normalmente bubbles ou não.                                                                                                                                                                            |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/API/Boolean "The Boolean object is an object wrapper for a boolean value.")                                                         | Se o evento é cancelado ou não.                                                                                                                                                                                    |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy "The documentation about this has not yet been written; please consider contributing!")                         | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView "In browsers, document.defaultView returns the window object associated with a document, or null if none is available.") (`window` do documento) |
+| `target` {{readonlyInline}}     | [`EventTarget`](/pt-BR/docs/Web/API/EventTarget)  | O evento alto (o primeiro alvo na árvore DOM).                                                                                                                                                                     |
+| `type` {{readonlyInline}}       | [`DOMString`](/pt-BR/docs/Web/API/DOMString) | O tipo de evento.                                                                                                                                                                                                  |
+| `bubbles` {{readonlyInline}}    | [`Boolean`](/pt-BR/docs/Web/API/Boolean)                                                         | Se o evento normalmente bubbles ou não.                                                                                                                                                                            |
+| `cancelable` {{readonlyInline}} | [`Boolean`](/pt-BR/docs/Web/API/Boolean)                                                         | Se o evento é cancelado ou não.                                                                                                                                                                                    |
+| `view` {{readonlyInline}}       | [`WindowProxy`](/pt-BR/docs/Web/API/WindowProxy)                         | [`document.defaultView`](/pt-BR/docs/Web/API/Document/defaultView) (`window` do documento) |
 | `detail` {{readonlyInline}}     | `long` (`float`)                                                                                                                                                | 0.                                                                                                                                                                                                                 |
 
 ## Examples

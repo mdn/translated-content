@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.parentRule
 slug: Web/API/CSSStyleDeclaration/parentRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **CSSStyleDeclaration.parentRule** は読み取り専用のプロパティで、このスタイルブロックの親である {{domxref('CSSRule')}} を返します。例えば、 CSS セレクターのスタイルを表す {{domxref('CSSStyleRule')}} です。

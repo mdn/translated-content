@@ -9,6 +9,7 @@ tags:
   - recipe:css-shorthand-property
 translation_of: Web/CSS/border-radius
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border-radius`** 속성은 요소 테두리 경계의 꼭짓점을 둥글게 만듭니다. 하나의 값을 사용해 원형 꼭짓점을, 두 개의 값을 사용해 타원형 꼭짓점을 적용할 수 있습니다.

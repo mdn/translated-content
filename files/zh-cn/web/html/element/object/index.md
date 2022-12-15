@@ -5,7 +5,7 @@ slug: Web/HTML/Element/object
 
 ## 概要
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 **HTML `<object>` 元素**（或者称作 _HTML 嵌入对象元素_）表示引入一个外部资源，这个资源可能是一张图片，一个嵌入的浏览上下文，亦或是一个插件所使用的资源。
 
 {{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
@@ -47,7 +47,7 @@ slug: Web/HTML/Element/object
 - {{htmlattrdef("type")}}
   - : **data** 指定的资源的 MIME 类型，需要为 **data** 和 **type** 中至少一个设置值。
 - {{htmlattrdef("usemap")}}
-  - : 指向一个 {{HTMLElement("map")}} 元素的 hash-name；格式为 ‘#’ 加 map 元素 {{htmlattrxref("name", "map")}} 元素的值。
+  - : 指向一个 {{HTMLElement("map")}} 元素的 hash-name；格式为‘#’加 map 元素 {{htmlattrxref("name", "map")}} 元素的值。
 - {{htmlattrdef("width")}}
   - : 资源显示的宽度，单位是 CSS 像素。
 

@@ -2,6 +2,7 @@
 title: bookmarks.BookmarkTreeNodeType
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType
 ---
+
 {{AddonSidebar()}}
 
 **`bookmarks.BookmarkTreeNodeType`** 型は、ブックマークツリーのノードがブックマーク、フォルダーまたはセパレーターであるかどうかを示すために使用されます。

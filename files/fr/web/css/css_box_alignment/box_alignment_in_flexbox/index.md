@@ -15,7 +15,7 @@ Le module de spécification _[Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
 
 ## Exemple simple
 
-Dans cet exemple, trois objets flexibles sont alignés sur l'axe principal avec {{cssxref("justify-content")}} et sur l'axe secondaire grâce à {{cssxref("align-items")}}. Le premier objet surcharge l'alignement fourni par `align-items`en utilisant `center` comme valeur pour la propriété {{cssxref("align-self")}}.
+Dans cet exemple, trois objets flexibles sont alignés sur l'axe principal avec {{cssxref("justify-content")}} et sur l'axe secondaire grâce à {{cssxref("align-items")}}. Le premier objet surcharge l'alignement fourni par `align-items` en utilisant `center` comme valeur pour la propriété {{cssxref("align-self")}}.
 
 {{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}
 

@@ -21,14 +21,11 @@ Pour plus d'informations, se référer aux pages sur {{jsxref("RegExp.@@split", 
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.split', 'Symbol.split')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.split', 'Symbol.split')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.split")}}
+{{Compat}}
 
 ## Voir aussi
 

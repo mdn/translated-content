@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 l10n:
   sourceCommit: 3c82191324ff6ef3e3c1b0e792b5e62ff8d2267a
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 ハイパーリンクとは本当に重要なものです。ウェブをウェブたらしめているものです。
@@ -39,7 +40,7 @@ l10n:
 ハイパーリンクによって、文書を他の文書やリソースにリンクしたり、文書の特定の部分にリンクしたり、ウェブアドレスでアプリを利用できるようにすることができます。
 ほとんどすべてのウェブコンテンツはリンクに変換することができ、クリックするか他の方法でアクティブにすると、ウェブブラウザーは別のウェブアドレス ({{glossary("URL")}}) に移動します。
 
-> **Note:** URL は HTML ファイルや、テキストファイル、画像、テキスト文書、動画や音声ファイルや、その他ウェブに載せられるものを指すことができます。
+> **メモ:** URL は HTML ファイルや、テキストファイル、画像、テキスト文書、動画や音声ファイルや、その他ウェブに載せられるものを指すことができます。
 > ウェブブラウザーがそのファイルを表示または処理する方法を知らない場合、ファイルを開くか（この場合、ファイルを開くまたは処理する役目は端末上の適切なネイティブアプリに委ねられます）、ファイルをダウンロードするか（この場合、後で扱いを試すことができます）を尋ねられます。
 
 例えば、 BBC のホームページには、複数のニュース記事だけでなく、サイトのさまざまなエリア（ナビゲーション機能）、ログイン/登録ページ（ユーザーツール）などを指し示すリンクが多数掲載されています。
@@ -77,7 +78,7 @@ I'm creating a link to [the Mozilla homepage](https://www.mozilla.org/ja/).
 
 I'm creating a link to <a href="https://www.mozilla.org/en-US/" title="The best place to find more information about Mozilla's mission and how to contribute">the Mozilla homepage</a>.
 
-> **Note:** リンクのタイトルはマウスを当てないと表示されないため、キーボード操作やタッチ画面でウェブページを操作している人は、タイトル情報にアクセスしにくいという問題があります。
+> **メモ:** リンクのタイトルはマウスを当てないと表示されないため、キーボード操作やタッチ画面でウェブページを操作している人は、タイトル情報にアクセスしにくいという問題があります。
 > タイトルの情報がページのユーザビリティにとって本当に重要であれば、通常のテキストに入れるなどして、すべてのユーザーがアクセスできるように表示する必要があります。
 
 ### アクティブラーニング: 独自のサンプルリンクを作成する
@@ -99,7 +100,7 @@ I'm creating a link to <a href="https://www.mozilla.org/en-US/" title="The best 
 </a>
 ```
 
-> **Note:** 今後の記事ではウェブ上での画像の使用についてさらに多くのことがわかります。
+> **メモ:** 今後の記事ではウェブ上での画像の使用についてさらに多くのことがわかります。
 
 ## URL とパスに関する簡単な入門
 
@@ -134,7 +135,7 @@ URL はファイルを見つけるためにパスを使います。パスはフ�
   <p>A link to my <a href="../pdfs/project-brief.pdf">project brief</a>.</p>
   ```
 
-> **Note:** 例えば `../../../complex/path/to/my/file.html` のように、必要に応じて、これらの機能の複数のインスタンスを複雑な URL に組み合わせることができます。
+> **メモ:** 例えば `../../../complex/path/to/my/file.html` のように、必要に応じて、これらの機能の複数のインスタンスを複雑な URL に組み合わせることができます。
 
 ### 文書フラグメント
 
@@ -272,7 +273,7 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 
 ![シンプルな HTML ナビゲーションメニューの例。ホーム、ピクチャー、プロジェクト、ソーシャルの各メニューがあります。](navigation-example.png)
 
-> **Note:** 行き詰まったり、正しいかどうかわからない場合は、[ナビゲーションメニューのマークアップ](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-marked-up)ディレクトリーをチェックして正しい答えを確認できます。
+> **メモ:** 行き詰まったり、正しいかどうかわからない場合は、[ナビゲーションメニューのマークアップ](https://github.com/mdn/learning-area/tree/main/html/introduction-to-html/navigation-menu-marked-up)ディレクトリーをチェックして正しい答えを確認できます。
 
 ## メールのリンク
 
@@ -301,7 +302,7 @@ HTML 文書の上部だけでなく、HTML 文書の特定の部分（**文書�
 </a>
 ```
 
-> **Note:** 各フィールドの値は URL エンコードされている必要があります。つまり、非印刷文字（タブ、改行、改ページなどの不可視文字）とスペースの[パーセントエスケープ](http://en.wikipedia.org/wiki/Percent-encoding)が含まれています。
+> **メモ:** 各フィールドの値は URL エンコードされている必要があります。つまり、非印刷文字（タブ、改行、改ページなどの不可視文字）とスペースの[パーセントエスケープ](http://en.wikipedia.org/wiki/Percent-encoding)が含まれています。
 > また、疑問符 (`?`) を使用してメイン URL とフィールド値を区別し、アンパサンド (&) を使用して `mailto:` URL 内の各フィールドを区別します。
 > これは標準の URL クエリー表記です。 [GET メソッド](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data#get_メソッド)を読んで、どの URL クエリー表記がより一般的に使用されているかを理解してください。
 

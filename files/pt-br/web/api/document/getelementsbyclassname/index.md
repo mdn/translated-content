@@ -1,16 +1,8 @@
 ---
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
-tags:
-  - API
-  - DOM
-  - Gecko
-  - HTML5
-  - Métodos de Elementos DOM
-  - Referencia
-  - metodo
-translation_of: Web/API/Document/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 Retorna um vetor de objetos com todos os elementos filhos que possuem o nome da classe dada. Quando invocado no objeto _document_, o documento é examinado por completo, incluindo o nó raiz. Você também pode invocar {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} em qualquer elemento; isso retornaria somente elementos que são descendentes do nó raiz especificado com o nome da classe.

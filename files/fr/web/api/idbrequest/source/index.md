@@ -26,7 +26,7 @@ var IDBObjectStore = request.source;
 
 ### Valeur
 
-Un objet qui représente la source de la requête. Ce peut être un objet {{domxref("IDBIndex")}}, {{domxref("IDBObjectStore")}} ou un objet  {{domxref("IDBCursor")}}.
+Un objet qui représente la source de la requête. Ce peut être un objet {{domxref("IDBIndex")}}, {{domxref("IDBObjectStore")}} ou un objet {{domxref("IDBCursor")}}.
 
 ## Exemples
 

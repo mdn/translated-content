@@ -53,9 +53,13 @@ flex-direction: unset;
 - `column-reverse`
   - : Se comporte comme `column` mais **main-start** et **main-end** sont échangés.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -116,15 +120,11 @@ Lorsqu'on utilise `flex-direction` avec les valeurs `row-reverse` ou `column-rev
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox', '#flex-direction', 'flex-direction')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex-direction")}}
+{{Compat}}
 
 ## Voir aussi
 

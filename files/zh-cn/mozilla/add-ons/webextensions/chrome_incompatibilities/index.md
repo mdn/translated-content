@@ -95,7 +95,7 @@ setCookie.then(logCookie, logError);
 
 #### [webRequest](/zh-CN/Add-ons/WebExtensions/API/webRequest)
 
-- 在 Firefx 中，只有原网址使用 `http:` `或 https:` 协议时所请求的重定向才有效。
+- 在 Firefox 中，只有原网址使用 `http:` 或 `https:` 协议时所请求的重定向才有效。
 - In Firefox, events are not fired for system requests (for example, extension upgrades or searchbar suggestions). From Firefox 57 onwards, Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.
 - In Firefox, if an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page. Note that any website may then link or redirect to that url, and extensions should treat any input (POST data, for examples) as if it came from an untrusted source, just as a normal web page should.
 

@@ -59,7 +59,7 @@ More details in [this post](https://hacks.mozilla.org/2013/12/split-console-pret
 
 ### MathML
 
-- Support of “mathvariant” attribute ({{bug("114365")}}).
+- Support of "mathvariant" attribute ({{bug("114365")}}).
 
 ### SVG
 

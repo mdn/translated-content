@@ -1,9 +1,9 @@
 ---
 title: hifens
 slug: Web/CSS/hyphens
-translation_of: Web/CSS/hyphens
 original_slug: Web/CSS/hifens
 ---
+
 {{CSSRef}}A propriedade [CSS](/pt-BR/docs/) **`hyphens`** especifica como palavras devem ser hifenizadas quando o há quebra de texto em múltiplas linhas. Você pode prevenir a hifenização completamente, especificar pontos manualmente, ou permitir que o navegador insira automaticamente quando apropriado.
 
 ```css
@@ -17,7 +17,7 @@ hyphens: initial;
 hyphens: unset;
 ```
 
-Regras de hifenização são específicas para cada idioma. Em HTML, o idioma é determinado pelo atributo `lang,` e os navegadores irão utilizar hífen apenas caso este atributo esteja presente e se houver um dicionário de hifenização disponível. Em XML, deve ser usado o atributo `xml:lang.`
+Regras de hifenização são específicas para cada idioma. Em HTML, o idioma é determinado pelo atributo `lang`, e os navegadores irão utilizar hífen apenas caso este atributo esteja presente e se houver um dicionário de hifenização disponível. Em XML, deve ser usado o atributo `xml:lang.`
 
 > **Note:** **Nota:** As regras que definem como a hifenização é realizada não são explicitamente definidas pela especificação, então a hifenização exata pode variar de navegador para navegador.
 

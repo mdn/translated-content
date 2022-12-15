@@ -38,9 +38,7 @@ const y = new Error('"new" キーワードによって生成されました。')
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-error-constructor', 'Error constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

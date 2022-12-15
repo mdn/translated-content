@@ -2,6 +2,7 @@
 title: テスト自動化環境をセットアップする
 slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 この記事では、Selenium/WebDriver や selenium-webdriver for Node のようなテストライブラリーを使って、自動化環境のインストールとテストを実行する方法を教えます。またあなたのローカルテスト環境と、以前の記事で見てきたような商用アプリとを統合する方法についても見て行きます。
@@ -20,7 +21,7 @@ WebDriver のインストール方法と使用方法は、テストの作成と�
 
 Node.js を使用した Selenium テストの作成と実行については、始める前にすばやく簡単に行うことができ、フロントエンド開発者にはもっと使い慣れた環境を提供する予定です。
 
-> **Note:** 他のサーバーサイド環境で WebDriver を使用する方法を知りたい場合は、[Platforms Supported by Selenium](http://www.seleniumhq.org/about/platforms.jsp)もチェックしてください。
+> **メモ:** 他のサーバーサイド環境で WebDriver を使用する方法を知りたい場合は、[Platforms Supported by Selenium](http://www.seleniumhq.org/about/platforms.jsp)もチェックしてください。
 
 ### Node で Selenium のセットアップ
 
@@ -31,7 +32,7 @@ Node.js を使用した Selenium テストの作成と実行については、�
     npm install selenium-webdriver
     ```
 
-> **Note:** 以前に selenium-webdriver をインストールしてブラウザードライバをダウンロードした場合でも、これらの手順を実行することをお勧めします。すべてが最新であることを確認する必要があります。
+> **メモ:** 以前に selenium-webdriver をインストールしてブラウザードライバをダウンロードした場合でも、これらの手順を実行することをお勧めします。すべてが最新であることを確認する必要があります。
 
 Next, you need to download the relevant drivers to allow WebDriver to control the browsers you want to test. You can find details of where to get them from on the [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) page (see the table in the first section.) Obviously, some of the browsers are OS-specific, but we're going to stick with Firefox and Chrome, as they are available across all the main OSes.
 
@@ -39,7 +40,7 @@ Next, you need to download the relevant drivers to allow WebDriver to control th
 2. Unpack them into somewhere fairly easy to navigate to, like the root of your home user directory.
 3. Add the `chromedriver` and `geckodriver` driver's location to your system `PATH` variable. This should be an absolute path from the root of your hard disk, to the directory containing the drivers. 例えば、if we were using a Mac OS X machine, our user name was bob, and we put our drivers in the root of our home folder, the path would be `/Users/bob`.
 
-> **Note:** Just to reiterate, the path you add to `PATH` needs to be the path to the directory containing the drivers, not the paths to the drivers themselves! This is a common mistake.
+> **メモ:** Just to reiterate, the path you add to `PATH` needs to be the path to the directory containing the drivers, not the paths to the drivers themselves! This is a common mistake.
 
 To set your `PATH` variable on Mac OS X/most Linux systems:
 
@@ -223,7 +224,7 @@ To load the page you actually want to test, you use the `get()` method of the dr
 driver.get('http://www.google.com');
 ```
 
-> **Note:** See the [WebDriver class reference](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html) for details of the features in this section and the ones below it.
+> **メモ:** See the [WebDriver class reference](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html) for details of the features in this section and the ones below it.
 
 You can use any URL to point to your resource, including a `file://` URL to test a local document:
 
@@ -353,7 +354,7 @@ driver.sleep(2000).then(function() {
 
 WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using `getAttribute()` to retrieve it's `value` attribute value, and print a message to the console if it is not empty.
 
-> **Note:** There is also a method called [`wait()`](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html), which defines common conditions to use along with `wait()`.
+> **メモ:** There is also a method called [`wait()`](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html), which defines common conditions to use along with `wait()`.
 
 ### 使用後のドライバのシャットダウン
 
@@ -390,7 +391,7 @@ In addition, we should mention test results/reporting — we've been reporting r
 
 4. You should include the `--no-timeouts` flag to make sure your tests don't end up failing because of Mocha's arbitrary timeout (which is 3 seconds).
 
-> **Note:** [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) contains several useful examples showing how to set up different combinations of test/assertion tools.
+> **メモ:** [saucelabs-sample-test-frameworks](https://github.com/saucelabs-sample-test-frameworks) contains several useful examples showing how to set up different combinations of test/assertion tools.
 
 ## リモートテストの実行
 
@@ -464,9 +465,9 @@ Let's write an example:
 
 If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.
 
-> **Note:** The _Resources_ menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/automate/node) for the node-specific information. Expore the docs to find out all the useful things BrowserStack can do.
+> **メモ:** The _Resources_ menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/automate/node) for the node-specific information. Expore the docs to find out all the useful things BrowserStack can do.
 
-> **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See [Run tests on mobile browsers](https://www.browserstack.com/automate/node#run-tests-on-mobile) and [Run tests on desktop browsers](https://www.browserstack.com/automate/node#setting-os-and-browser).
+> **メモ:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See [Run tests on mobile browsers](https://www.browserstack.com/automate/node#run-tests-on-mobile) and [Run tests on desktop browsers](https://www.browserstack.com/automate/node#setting-os-and-browser).
 
 #### プログラムによる BrowserStack テストの詳細の入力
 
@@ -581,9 +582,9 @@ Let's write an example:
 5. Now if you go to your [Sauce Labs Automated Test dashboard](https://saucelabs.com/beta/dashboard/tests) page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
     ![](sauce_labs_automated_test.png)
 
-> **Note:** Sauce Labs' [Platform Configurator](https://wiki.saucelabs.com/display/DOCS/Platform+Configurator/#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
+> **メモ:** Sauce Labs' [Platform Configurator](https://wiki.saucelabs.com/display/DOCS/Platform+Configurator/#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
 
-> **Note:** for more useful details on testing with Sauce Labs and Selenium, check out [Getting Started with Selenium for Automated Website Testing](https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Selenium+for+Automated+Website+Testing), and [Instant Selenium Node.js Tests](https://wiki.saucelabs.com/display/DOCS/Instant+Selenium+Node.js+Tests).
+> **メモ:** for more useful details on testing with Sauce Labs and Selenium, check out [Getting Started with Selenium for Automated Website Testing](https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Selenium+for+Automated+Website+Testing), and [Instant Selenium Node.js Tests](https://wiki.saucelabs.com/display/DOCS/Instant+Selenium+Node.js+Tests).
 
 #### Sauce Labs テストの詳細をプログラムで書き込む
 

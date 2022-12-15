@@ -7,6 +7,7 @@ tags:
 browser-compat: api.Event
 translation_of: Web/API/Event
 ---
+
 {{APIRef("DOM")}}
 
 **`Event`** 인터페이스는 DOM 내에 위치한 이벤트를 나타냅니다.

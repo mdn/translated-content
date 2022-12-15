@@ -3,6 +3,7 @@ title: Базовые концепции CSS Scroll Snap
 slug: Web/CSS/CSS_Scroll_Snap/Basic_concepts
 translation_of: Web/CSS/CSS_Scroll_Snap/Basic_concepts
 ---
+
 {{CSSRef}}
 
 Спецификация [CSS Scroll Snap](https://drafts.csswg.org/css-scroll-snap-1/) даёт нам возможность реализовывать прокрутку документа с привязкой к определённым точкам. Это может быть полезно в создании интерфейса, по своей работе больше похожего на мобильное приложение.

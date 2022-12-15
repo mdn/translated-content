@@ -5,7 +5,7 @@ slug: Web/CSS/angle
 
 {{ CSSRef() }}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<angle>`** 用于表示角的大小，单位为度（degrees）、 百分度（gradians）、弧度（radians）或圈数（turns）。在 {{cssxref("&lt;gradient&gt;")}} 和 {{cssxref("transform")}} 的某些方法等场景中有所应用。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<angle>`** 用于表示角的大小，单位为度（degrees）、百分度（gradians）、弧度（radians）或圈数（turns）。在 {{cssxref("&lt;gradient&gt;")}} 和 {{cssxref("transform")}} 的某些方法等场景中有所应用。
 
 ## 语法
 

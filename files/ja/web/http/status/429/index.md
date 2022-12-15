@@ -2,6 +2,7 @@
 title: 429 Too Many Requests
 slug: Web/HTTP/Status/429
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`429 Too Many Requests`** レスポンスステータスコードは、ユーザーが指定された時間内に多くのリクエストを送信した ("rate limiting") ことを示します。

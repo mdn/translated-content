@@ -2,6 +2,7 @@
 title: ShadowRoot.innerHTML
 slug: Web/API/ShadowRoot/innerHTML
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`innerHTML`** は {{domxref("ShadowRoot")}} インターフェイスのプロパティで、 `ShadowRoot` の内部の DOM ツリーに対する参照を設定したり返したりします。

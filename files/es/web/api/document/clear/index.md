@@ -1,18 +1,8 @@
 ---
 title: Document.clear()
 slug: Web/API/Document/clear
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Method
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpectTable
-  - Referencia
-translation_of: Web/API/Document/clear
 ---
+
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 
 Método que se usa en versiones anterior a las 1.0 de Mozilla para para limpiar el documento completo.

@@ -2,6 +2,7 @@
 title: CSSUnparsedValue.entries()
 slug: Web/API/CSSUnparsedValue/entries
 ---
+
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 **`CSSUnparsedValue.entries()`** メソッドは、指定されたオブジェクトの列挙可能なプロパティ `[key, value]` の組の配列を、 {{jsxref("Statements/for...in", "for...in")}} ループで提供されるのと同じ順序で返します (違いは for-in ループがプロトタイプチェーン上のプロパティも列挙することです)。
@@ -23,9 +24,7 @@ CSSUnparsedValue.entries(obj)
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                     | 備考     |
-| ------------------------------------------------------------------------ | ------------------------ | -------- |
-| {{SpecName('CSSOM','#cssunparsedvalue','entries()')}} | {{Spec2('CSSOM')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

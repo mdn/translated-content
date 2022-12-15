@@ -45,4 +45,4 @@ var params4 = new URLSearchParams({"foo" : 1 , "bar" : 2});
 
 ## 浏览器兼容性
 
-{{Compat("api.URLSearchParams.URLSearchParams")}}
+{{Compat}}

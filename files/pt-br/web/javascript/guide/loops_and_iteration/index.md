@@ -1,9 +1,9 @@
 ---
 title: Laços e iterações
 slug: Web/JavaScript/Guide/Loops_and_iteration
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
 original_slug: Web/JavaScript/Guide/Lacos_e_iteracoes
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 Laços oferecem um jeito fácil e rápido de executar uma ação repetidas vezes. Este capítulo do [guia do JavaScript](/pt-BR/docs/Web/JavaScript/Guide) abordará diferentes formas de iterações existentes no JavaScript.
@@ -42,10 +42,10 @@ for ([expressaoInicial]; [condicao]; [incremento])
 
 Quando um for é executado, ocorre o seguinte:
 
-1.  A expressão `expressao Inicial` é inicializada e, caso possível, é executada. Normalmente essa expressão inicializa um ou mais contadores, mas a sintaxe permite expressões de qualquer grau de complexidade. Podendo conter também declaração de variáveis.
-2.  A expressão `condicao` é avaliada. caso o resultado de `condicao` seja verdadeiro, o laço é executado. Se o valor de `condicao` é falso, então o laço terminará. Se a expressão `condicao` é omitida, a `condicao` é assumida como verdadeira.
-3.  A instrução é executada. Para executar múltiplas declarações, use uma declaração em bloco ({ ... }) para agrupá-las.
-4.  A atualização da expressão `incremento`, se houver, executa, e retorna o controle para o passo 2.
+1. A expressão `expressao Inicial` é inicializada e, caso possível, é executada. Normalmente essa expressão inicializa um ou mais contadores, mas a sintaxe permite expressões de qualquer grau de complexidade. Podendo conter também declaração de variáveis.
+2. A expressão `condicao` é avaliada. caso o resultado de `condicao` seja verdadeiro, o laço é executado. Se o valor de `condicao` é falso, então o laço terminará. Se a expressão `condicao` é omitida, a `condicao` é assumida como verdadeira.
+3. A instrução é executada. Para executar múltiplas declarações, use uma declaração em bloco ({ ... }) para agrupá-las.
+4. A atualização da expressão `incremento`, se houver, executa, e retorna o controle para o passo 2.
 
 ### Exemplo
 
@@ -186,8 +186,8 @@ Use [break](/pt-BR/docs/Web/JavaScript/Reference/Statements/break) para terminar
 
 Segue a sintaxe do break:
 
-1.  `break;`
-2.  `break label;`
+1. `break;`
+2. `break label;`
 
 Na primeira opção será encerrado o laço de repetição mais interno ou `switch`. Já na segunda opção será encerrada o bloco de código referente a label.
 
@@ -233,8 +233,8 @@ A declaração [continue](/pt-BR/docs/Web/JavaScript/Reference/Statements/contin
 
 Segue a sintaxe do `continue`:
 
-1.  `continue;`
-2.  `continue `_`label;`_
+1. `continue;`
+2. `continue`_`label;`_
 
 ### Exemplo 1
 
@@ -254,7 +254,7 @@ while (i < 5) {
 
 ### Exemplo 2
 
-Uma instrução label `checkiandj` contém uma instrução label c`heckj`. Se o `continue` for executado, o programa terminará a iteração atual de `checkj` e começará a próxima iteração. Toda vez que o `continue` for executado, `checkj` recomeçará até que a condição do `while` for falsa. Quando isto ocorrer `checkiandj` executará até que sua condição seja falsa.
+Uma instrução label `checkiandj` contém uma instrução label `checkj`. Se o `continue` for executado, o programa terminará a iteração atual de `checkj` e começará a próxima iteração. Toda vez que o `continue` for executado, `checkj` recomeçará até que a condição do `while` for falsa. Quando isto ocorrer `checkiandj` executará até que sua condição seja falsa.
 
 Se o `continue` estivesse referenciando `checkiandj`, o programa deveria continuar do topo de `checkiandj`.
 

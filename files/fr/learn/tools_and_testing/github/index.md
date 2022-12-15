@@ -36,7 +36,7 @@ Les systèmes de contrôle des versions fournissent des outils pour répondre à
 >
 > Nous avons mis ensemble un cours incluant toutes les informations nécessaires dont vous avez besoin pour atteindre votre objectif.
 >
-> [Commencer](/docs/Learn/Front-end_web_developer)
+> [Commencer](/fr/docs/Learn/Front-end_web_developer)
 
 ## Prérequis
 

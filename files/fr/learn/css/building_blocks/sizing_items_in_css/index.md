@@ -64,7 +64,7 @@ De bien des manières, les pourcentages agissent de la même manière que les un
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
 
-En effet, les pourcentages sont déterminés en fonction de la taille de l'élément parent. Si aucun pourcentage n'est spécifié, notre `<div>` prendra 100% de l'espace disponible (car il s'agit du comportement par défaut d'un élément de type bloc). En revanche si nous lui donnons une largeur en pourcentage, ce pourcentage fera référence à l'espace que la ` <div``> ` aurait normalement occupé dans l'élément parent.
+En effet, les pourcentages sont déterminés en fonction de la taille de l'élément parent. Si aucun pourcentage n'est spécifié, notre `<div>` prendra 100% de l'espace disponible (car il s'agit du comportement par défaut d'un élément de type bloc). En revanche si nous lui donnons une largeur en pourcentage, ce pourcentage fera référence à l'espace que la `<div>` aurait normalement occupé dans l'élément parent.
 
 ### Marges et remplissage en pourcentages
 

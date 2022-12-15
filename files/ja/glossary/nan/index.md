@@ -2,6 +2,7 @@
 title: NaN (非数)
 slug: Glossary/NaN
 ---
+
 非数(英語：Not a Number)とは未定義な値か、特に浮動小数点数の計算の結果で、表すことができない数値({{Glossary("Type", "データ型")}})のことを言います。
 
 例えば、無限、０で割り算された結果、未定義、負数の平方根 (浮動小数点数は実数ですが、これは虚数です) などは非数と言います。
@@ -12,7 +13,7 @@ slug: Glossary/NaN
 
 ### 一般的な知識
 
-- Wikipedia による{{Interwiki("wikipedia", "NaN")}}
+- Wikipedia による[NaN](https://ja.wikipedia.org/wiki/NaN)
 
 ### 技術情報
 

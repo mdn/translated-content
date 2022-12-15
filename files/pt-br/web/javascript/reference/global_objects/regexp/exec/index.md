@@ -1,8 +1,8 @@
 ---
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 ---
+
 {{JSRef}}
 
 O método **`exec()`** executa a busca por um padrão em uma determinada string. Retorna um array, ou {{jsxref("null")}}.
@@ -22,7 +22,7 @@ regexObj.exec(string)
 
 ### Valor retornado
 
-Se a combinação acontecer, o método `exec() `o método retorna um array e atualiza as propriedades do objeto da expressão regular. Esse array retornado possui o texto combinado como primeiro item e depois um item para cada captura contendo o respectivo texto.
+Se a combinação acontecer, o método `exec()` o método retorna um array e atualiza as propriedades do objeto da expressão regular. Esse array retornado possui o texto combinado como primeiro item e depois um item para cada captura contendo o respectivo texto.
 
 Se falhar, o retorno do método `exec()` será {{jsxref("null")}}.
 

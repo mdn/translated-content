@@ -5,7 +5,7 @@ slug: Web/API/HTMLAnchorElement/search
 
 {{ApiRef("URL API")}}
 
-**`HTMLHyperlinkElementUtils.search`** 属性是一个搜索字符串，也叫做查询字符串， 它是一个 {{domxref("USVString")}} ，包含 `'?'` 和随后的 URL 参数。
+**`HTMLHyperlinkElementUtils.search`** 属性是一个搜索字符串，也叫做查询字符串，它是一个 {{domxref("USVString")}} ，包含 `'?'` 和随后的 URL 参数。
 
 ## 语法
 
@@ -36,4 +36,4 @@ let result = anchor.search;
 
 ## 相关链接
 
-- 它属于{{domxref("HTMLHyperlinkElementUtils")}} mixin 。
+- 它属于{{domxref("HTMLHyperlinkElementUtils")}} mixin。

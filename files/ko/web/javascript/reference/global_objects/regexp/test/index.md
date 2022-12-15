@@ -11,6 +11,7 @@ tags:
   - 정규식
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/test
 ---
+
 {{JSRef}}
 
 **`test()`** 메서드는 주어진 문자열이 정규 표현식을 만족하는지 판별하고, 그 여부를 `true` 또는 `false`로 반환합니다.

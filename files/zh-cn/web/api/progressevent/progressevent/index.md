@@ -19,7 +19,7 @@ new ProgressEvent(type, options)
 - `type`
   - : 带有事件名称的字符串。它是区分大小写的，浏览器将其设置为 `loadstart`、`progress`、`abort`、`error`、`load`、`timeout` 或 `loadend`。
 - `options` {{optional_inline}}
-  - : 一个对象，除了 {{domxref("Event/Event", "Event()")}} 中定义的属性，它还具有以下属性:
+  - : 一个对象，除了 {{domxref("Event/Event", "Event()")}} 中定义的属性，它还具有以下属性：
     - `lengthComputable` {{optional_inline}}
       - : 一个布尔值，表示底层的进程将要完成的总工作量和已经完成的工作量是否是可计算的。换句话说，它说明进度是否可衡量。它的默认值是 `false`。
     - `loaded` {{optional_inline}}

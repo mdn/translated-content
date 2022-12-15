@@ -1,12 +1,8 @@
 ---
 title: Número
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - JavaScript
-  - Número
-  - Referência(2)
-translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## Sumário
@@ -52,8 +48,6 @@ Os principais usos para o objeto `Number` são:
 - {{jsxref("Number.prototype")}}
   - : Permite a adição de propriedades a um objeto Number.
 
-{{jsOverrides("Function", "properties", "MAX_VALUE", "MIN_VALUE", "NaN", "NEGATIVE_INFINITY", "POSITIVE_INFINITY", "protoype")}}
-
 ## Methods
 
 - {{jsxref("Number.isNaN()")}} {{experimental_inline}}
@@ -71,15 +65,13 @@ Os principais usos para o objeto `Number` são:
 - {{jsxref("Number.parseInt()")}} {{experimental_inline}}
   - : O valor é o mesmo que {{jsxref("Global_Objects/parseInt", "parseInt")}} do objeto global.
 
-{{jsOverrides("Function", "methods", "isNaN")}}
-
-## Instâncias` Number`
+## Instâncias `Number`
 
 Toda instância `Number` herdam de {{jsxref("Number.prototype")}}. O objeto 'prototype' do construtor `Number` pode ser modificado para afetar todas as instâncias `Number`.
 
 ### Métodos
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype', 'Methods')}}
 
 ## Exemplos
 
@@ -104,7 +96,7 @@ var maxInt = 9007199254740992;
 var minInt = -9007199254740992;
 ```
 
-Ao analisar dados que foram serializados para JSON, valores inteiros que caem fora desse intervalo podem ser corrompidos quando o analisador JSON os converte ao tipo `Number`. Usando `String `em vez disso é uma possível alternativa para se evitar um resultado indesejado.
+Ao analisar dados que foram serializados para JSON, valores inteiros que caem fora desse intervalo podem ser corrompidos quando o analisador JSON os converte ao tipo `Number`. Usando `String` em vez disso é uma possível alternativa para se evitar um resultado indesejado.
 
 ### Exemplo: Usando `Number para converter um objeto Date`
 

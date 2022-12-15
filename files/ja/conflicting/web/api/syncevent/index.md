@@ -3,6 +3,7 @@ title: registration
 slug: conflicting/Web/API/SyncEvent
 original_slug: Web/API/SyncEvent/registration
 ---
+
 {{Non-standard_header}}{{APIRef("Service Workers API")}}
 
 {{domxref("SyncEvent")}} インターフェイスの登録読み取り専用プロパティは、 {{domxref("SyncRegistration")}} オブジェクトへの参照を返します。

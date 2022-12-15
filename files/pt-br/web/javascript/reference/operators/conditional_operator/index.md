@@ -1,12 +1,9 @@
 ---
 title: Operador Condicional Ternário
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
-tags:
-  - JavaScript
-  - Operadores Condicionais
-translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 original_slug: Web/JavaScript/Reference/Operators/Operador_Condicional
 ---
+
 {{jsSidebar("Operators")}}
 
 ## Sumário
@@ -23,9 +20,6 @@ condition ? expr1 : expr2
 
 - `condition`
   - : Uma expressão que é avaliada como `true` ou `false`.
-
-<!---->
-
 - `expr1`, `expr2`
   - : Expressões com valores de qualquer tipo.
 
@@ -75,7 +69,7 @@ age > 18 ? (
 );
 ```
 
-Você também pode fazer mais de uma operação durante a atribuição de um valor. Neste caso, **\_o último valor separado por vírgula dentro **_dos parênteses_ **será o valor a ser atribuído\_**.
+Você também pode fazer mais de uma operação durante a atribuição de um valor. Neste caso, **o último valor separado por vírgula dentro** dos parênteses **será o valor a ser atribuído**.
 
 ```js
 var age = 16;

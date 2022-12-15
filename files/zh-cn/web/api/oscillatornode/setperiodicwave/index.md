@@ -61,7 +61,7 @@ osc.stop(2);
 
 ## 浏览器兼容性
 
-{{Compat("api.OscillatorNode.setPeriodicWave")}}
+{{Compat}}
 
 ## See also
 

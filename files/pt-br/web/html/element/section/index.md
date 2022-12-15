@@ -1,8 +1,8 @@
 ---
 title: <section>
 slug: Web/HTML/Element/section
-translation_of: Web/HTML/Element/section
 ---
+
 O **elemento HTML `<section>`** representa uma seção genérica contida em um documento HTML, geralmente com um título, quando não existir um elemento semântico mais específico para representá-lo.
 
 Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement ("nav")}}, mas uma lista de resultados de pesquisa ou a exibição de um mapa e seus controles não possuem elementos específicos, e podem ser colocados dentro de uma \<section>.
@@ -11,16 +11,16 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Conteúdo de fluxo</a
         >
         ,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Sectioning_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Sectioning_content"
           >conteúdo de seção</a
         >, conteúdo palpável.
       </td>
@@ -28,7 +28,7 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
     <tr>
       <th scope="row">Conteúdo permitido</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Conteúdo de fluxo</a
         >.
       </td>
@@ -41,7 +41,7 @@ Por exemplo, um menu de navegação deve estar dentro um elemento {{htmlelement 
       <th scope="row">Tags-pai permitidas</th>
       <td>
         Qualquer elemento que aceite
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >conteúdo de fluxo</a
         >. Note que um elemento {{HTMLElement("section")}} não deve
         ser um descendente de um elemento {{HTMLElement("address")}}.
@@ -133,4 +133,4 @@ Este elemento inclui apenas os [atributos globais](/pt-BR/docs/Web/HTML/Global_a
 ## Veja também
 
 - Outros elemtnos relacionados: {{ HTMLElement("body") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("article") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};
-- [Seções e estrurura do um documento HTML5](/en/Sections_and_Outlines_of_an_HTML5_document).
+- [Seções e estrurura do um documento HTML5](/pt-BR/Sections_and_Outlines_of_an_HTML5_document).

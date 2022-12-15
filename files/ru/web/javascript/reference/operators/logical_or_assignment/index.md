@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_or_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 Оператор присваивания логического ИЛИ (`x ||= y`) присваивает значение переменной `x` только в случае, если её текущее значение {{Glossary("falsy", "ложноподобно")}}.

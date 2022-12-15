@@ -2,6 +2,7 @@
 title: tab-size
 slug: Web/CSS/tab-size
 ---
+
 {{CSSRef}}
 
 CSS の **`tab-size`** プロパティは、タブ文字 (U+0009) の表示幅の指定に用います。

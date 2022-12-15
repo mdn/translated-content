@@ -2,13 +2,14 @@
 title: CanvasRenderingContext2D.strokeText()
 slug: Web/API/CanvasRenderingContext2D/strokeText
 ---
+
 {{APIRef}}
 
 {{domxref("CanvasRenderingContext2D")}} の **`strokeText()`** メソッドはキャンバス 2D API の一部であり、テキスト文字列の文字の輪郭を指定した座標に描画します。オプションの引数で、描画されるテキストの最大幅を指定することができます。{{Glossary("user agent", "ユーザーエージェント")}}はこの幅を実現するために、テキストを圧縮したり、フォントサイズを縮小したりします。
 
 このメソッドは現在のパスを変更することなく、直接キャンバスに描画を行います。その後の {{domxref("CanvasRenderingContext2D.fill()", "fill()")}} や {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} には影響を与えません。
 
-> **Note:** 輪郭線のみを描くのではなく、テキスト文字を塗りつぶすのであれば {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} メソッドを使用してください。
+> **メモ:** 輪郭線のみを描くのではなく、テキスト文字を塗りつぶすのであれば {{domxref('CanvasRenderingContext2D.fillText()', 'fillText()')}} メソッドを使用してください。
 
 ## 構文
 
@@ -60,7 +61,7 @@ ctx.strokeText('Hello world', 50, 90);
 
 このコードは {{HTMLElement("canvas")}} への参照を受け取り、そこから二次元グラフィックコンテキストへの参照を取得します。
 
-そこで、 {{domxref("CanvasRenderingContext2D.font", "font")}} に 50 ピクセル高の "serif" （ユーザーの既定の{{interwiki("wikipedia", "セリフ_(文字)", "セリフ付き")}}フォント）を設定し、`strokeText()` を呼呼び出して座標 (50, 90) からテキスト "Hello world" を描画します。
+そこで、 {{domxref("CanvasRenderingContext2D.font", "font")}} に 50 ピクセル高の "serif" （ユーザーの既定の[セリフ付き](https://ja.wikipedia.org/wiki/セリフ_(文字))フォント）を設定し、`strokeText()` を呼呼び出して座標 (50, 90) からテキスト "Hello world" を描画します。
 
 #### 結果
 

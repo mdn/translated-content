@@ -2,6 +2,7 @@
 title: Graceful asynchronous programming with Promises
 slug: Learn/JavaScript/Asynchronous/Promises
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Timeouts_and_intervals", "Learn/JavaScript/Asynchronous/Async_await", "Learn/JavaScript/Asynchronous")}}
 
 **Promises** 는 이전 작업이 완료될 때 까지 다음 작업을 연기 시키거나, 작업실패를 대응할 수 있는 비교적 새로운 JavaScript 기능입니다. Promise는 비동기 작업 순서가 정확하게 작동되게 도움을 줍니다. 이번 문서에선 Promise가 어떻게 동작하는지, 웹 API와 어떻게 사용할 수 있는지 그리고 직접 코드를 만들어 볼것 입니다.

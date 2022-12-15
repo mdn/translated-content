@@ -34,7 +34,7 @@ formData.set(name, value, filename);
 
 ## 示例
 
-先创建一个空的 `FormData` `对象：`
+先创建一个空的 `FormData` 对象：
 
 ```js
 var formData = new FormData(); // Currently empty

@@ -2,6 +2,7 @@
 title: 帰属表示と著作権使用許諾
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs のコンテンツは無料で利用でき、様々なオープンソースライセンスのもとで利用することができます。
@@ -12,7 +13,7 @@ MDN Web Docs のコンテンツは無料で利用でき、様々なオープン�
 
 #### ドキュメント
 
-> **Note:** MDN Web Docs のコンテンツは、 Mozilla の内外の執筆者の協力により作成されています。特に明記されていない限り、コンテンツは [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 もしくはそれ以上のバージョンの条件の下で利用可能です。
+> **メモ:** MDN Web Docs のコンテンツは、 Mozilla の内外の執筆者の協力により作成されています。特に明記されていない限り、コンテンツは [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA), v2.5 もしくはそれ以上のバージョンの条件の下で利用可能です。
 
 ここでのコンテンツの再利用は、元のコンテンツと同じライセンス、CC-BY-SA v2.5 またはそれ以降のバージョン、の下で公開する必要があります。 MDN Web Docs のコンテンツを再利用する場合、"Mozilla Contributors" だけでなく、元ののコンテンツにも帰属することを確認する必要があります。出典となるコンテンツの特定のページへのハイパーリンク（オンライン）または URL （印刷物）入れてください。例：この記事の帰属表示を提供するには、次のように書きます。
 
@@ -32,7 +33,7 @@ MDN Web Docs のコンテンツは無料で利用でき、様々なオープン�
 
 MDN Web Docs に協力したい場合は、 Attribution-ShareAlike ライセンス（または編集中のページで既に指定されている代替ライセンス）で文書を公開し、コード例は [Creative Commons CC-0](https://creativecommons.org/publicdomain/zero/1.0/) （パブリックドメインへの寄付）で公開する必要があります。
 
-> **Warning:** 新しいページをその他のライセンスで作成してはいけません。
+> **警告:** 新しいページをその他のライセンスで作成してはいけません。
 
 **ユーザーから提供された資料の著作権については、著作者がそれを第三者に譲渡しない限り、著作者に帰属するものとします。**
 

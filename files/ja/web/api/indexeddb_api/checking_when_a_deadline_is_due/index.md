@@ -2,6 +2,7 @@
 title: 期限の確認
 slug: Web/API/IndexedDB_API/Checking_when_a_deadline_is_due
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 この記事では、 IndexedDB で保存された期限と現在の日時を照合する複雑な例を見てみましょう。ここでの主な課題は、保存されている期限情報 (月、時、日など) を、[Date](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date) オブジェクトから取得した現在の日時と照合することです。
@@ -75,7 +76,7 @@ function addData(e) {
 
 この部分では、データベースへの挿入に必要な形式でデータを保存する `newItem` というオブジェクトを作成します。次の数行では、データベーストランザクションを開き、これが成功したか失敗したかをユーザーに通知するメッセージを提供しています。そして、新しい項目が追加される `objectStore` が生成されます。データオブジェクトの `notified` プロパティは、 To-do リストの項目の期限がまだ来ておらず、通知されていないことを示しています。これについては後ほど説明します。
 
-> **Note:** **メモ:** 変数 `db` には IndexedDB のデータベースインスタンスへの参照が格納されています。この変数の様々なプロパティを使用してデータを操作することができます。
+> **メモ:** 変数 `db` には IndexedDB のデータベースインスタンスへの参照が格納されています。この変数の様々なプロパティを使用してデータを操作することができます。
 
 ```js
     request.onsuccess = function(event) {

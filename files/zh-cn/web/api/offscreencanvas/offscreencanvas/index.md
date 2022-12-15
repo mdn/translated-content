@@ -35,7 +35,7 @@ var gl = offscreen.getContext("webgl");
 
 ## 浏览器兼容性
 
-{{Compat("api.OffscreenCanvas.OffscreenCanvas")}}
+{{Compat}}
 
 ## 查看更多
 

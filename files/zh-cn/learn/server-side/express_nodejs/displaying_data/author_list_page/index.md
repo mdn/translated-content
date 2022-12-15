@@ -26,7 +26,7 @@ exports.author_list = function(req, res, next) {
 };
 ```
 
-该方法使用模型的 `find()`, `sort()` 和 `exec()` 函数，以返回所有`Author`对象，并按`family_name`的字母顺排列。传递给`exec()`方法的回调被调用，并将传入任何错误（或`null`）作为第一个参数，或者成功时，传入所有作者列表。如果出现错误，则调用带有错误值的下一个中间件函数，如果没有错误，则呈现 **author_list**（.pug）模板，传递页面标题`title，`和作者列表（`author_list`）。
+该方法使用模型的 `find()`, `sort()` 和 `exec()` 函数，以返回所有 `Author` 对象，并按 `family_name` 的字母顺排列。传递给 `exec()` 方法的回调被调用，并将传入任何错误（或 `null`）作为第一个参数，或者成功时，传入所有作者列表。如果出现错误，则调用带有错误值的下一个中间件函数，如果没有错误，则呈现 **author_list**（.pug）模板，传递页面标题 `title`，和作者列表（`author_list`）。
 
 ## 视图
 

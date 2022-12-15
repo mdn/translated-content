@@ -1,19 +1,11 @@
 ---
 title: String.prototype.fixed()
 slug: Web/JavaScript/Reference/Global_Objects/String/fixed
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - fixed()
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fixed
 ---
+
 {{JSRef}} {{deprecated_header}}
 
-O método **`fixed()`** cria um elemento HTML [`<tt>`](/en-US/docs/Web/HTML/Element/tt) que faz com que uma string seja exibida em uma fonte de densidade fixa.
+O método **`fixed()`** cria um elemento HTML [`<tt>`](/pt-BR/docs/Web/HTML/Element/tt) que faz com que uma string seja exibida em uma fonte de densidade fixa.
 
 ## Sintaxe
 
@@ -27,7 +19,7 @@ Uma string que representa o elemento HTML [\<tt>](/pt-BR/docs/Web/HTML/Element/t
 
 ## Descrição
 
-O método\*\* \*\*`fixed()` cria uma string dentro de uma tag `<tt>`:
+O método `fixed()` cria uma string dentro de uma tag `<tt>`:
 `"<tt>str</tt>"`.
 
 ## Exemplos

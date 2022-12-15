@@ -2,6 +2,7 @@
 title: grid
 slug: Web/CSS/@media/grid
 ---
+
 {{CSSRef}}
 
 **`grid`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器がグリッドベースの画面を使用しているかどうかを調べるために使用します。

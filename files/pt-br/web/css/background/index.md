@@ -1,12 +1,8 @@
 ---
 title: background
 slug: Web/CSS/background
-tags:
-  - Fundo CSS
-  - Propriedades CSS
-  - Referencia
-translation_of: Web/CSS/background
 ---
+
 {{CSSRef ( "CSS Background")}}
 
 ## Resumo
@@ -81,7 +77,7 @@ Um ou mais dos seguintes, por qualquer ordem:
 }
 
 .Topbanner {
-  background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #00D repeat-y fixed;
+  background: url("starsolid.gif") #00D repeat-y fixed;
 }
 ```
 

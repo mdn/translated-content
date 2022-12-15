@@ -2,6 +2,7 @@
 title: 独自の関数を作る
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
 前の記事で扱った重要な理屈をたくさん使って、この記事では実践的な練習を行ないます。ここではあなたが自力で独自関数を作成するための練習を行なっていきます。同時に、関数を扱う上で役に立つ細々の説明もしていきます。
@@ -22,13 +23,13 @@ alert('This is a message');
 
 `alert` 関数には制限があります: メッセージを変更することはできますが、色やアイコンなど、それ以外の部分を簡単には変えられません。もっと楽しくできるやつを作りましょう。
 
-> **Note:** この例題は全てのモダンブラウザー上で問題なく動くはずですが、古いブラウザーではちょっとおかしな見た目になるかもしれません。この課題は Firefox、Opera、Chrome のようなモダンなブラウザー上で行なうのが推奨です。
+> **メモ:** この例題は全てのモダンブラウザー上で問題なく動くはずですが、古いブラウザーではちょっとおかしな見た目になるかもしれません。この課題は Firefox、Opera、Chrome のようなモダンなブラウザー上で行なうのが推奨です。
 
 ## 基本的な関数
 
 最初に、基本的な関数を組み立てていきましょう。
 
-> **Note:** 関数に名前を付ける方針としては、[変数名に名前をつける方針](/ja/docs/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules)と同じルールに従うべきです。問題はありません、すぐに見分けがつくからです — 関数ならすぐ後に括弧が付きますが、変数には付きません。
+> **メモ:** 関数に名前を付ける方針としては、[変数名に名前をつける方針](/ja/docs/Learn/JavaScript/First_steps/Variables#An_aside_on_variable_naming_rules)と同じルールに従うべきです。問題はありません、すぐに見分けがつくからです — 関数ならすぐ後に括弧が付きますが、変数には付きません。
 
 1. [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) ファイルにアクセスして、ローカルコピーを作成するところから初めます。HTML は単純です — body にはボタン一つしかありません。特製メッセージボックス用の基本的な CSS スタイルと、JavaScript を追加していく用の空の {{htmlelement("script")}} 要素が含まれています。
 2. 次に、`<script>` 要素の中に以下を追加して下さい:
@@ -215,7 +216,7 @@ btn.onclick = displayMessage();
 
 1. まず始めに、この演習に必要なアイコン ([warning](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/icons/warning.png) と [chat](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/icons/chat.png)) を GitHub からダウンロードしてください。HTML ファイルと同じ場所にある `icons` という新しいフォルダーに保存します
 
-    > **Note:** [iconfinder.com](https://www.iconfinder.com/) にある warning と chat のアイコンは [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) によってデザインされたものです。ありがとう！ (実際のアイコンのページは移動か削除されています。)
+    > **メモ:** [iconfinder.com](https://www.iconfinder.com/) にある warning と chat のアイコンは [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) によってデザインされたものです。ありがとう！ (実際のアイコンのページは移動か削除されています。)
 
 2. 次に、HTML ファイル内の CSS を探します。私たちは、アイコンの道を作るためにいくつかの変更を行います。まず `.msgBox` の幅を次のように更新します
 
@@ -268,7 +269,7 @@ btn.onclick = displayMessage();
 
     私たちの (今はそうではない) 小さな機能がどのように役立つかがわかります。
 
-> **Note:** サンプルをうまく動作させることができない場合は、コードを [GitHub の完成バージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html)と比較して ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) もみて) チェックしてください。もしくは私たちにヘルプを依頼してください。
+> **メモ:** サンプルをうまく動作させることができない場合は、コードを [GitHub の完成バージョン](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-stage-4.html)と比較して ([see it running live](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) もみて) チェックしてください。もしくは私たちにヘルプを依頼してください。
 
 ## スキルをテストしよう!
 

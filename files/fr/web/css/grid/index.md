@@ -61,9 +61,13 @@ Pour plus de détails, voir les pages de chacune des propriétés : {{cssxref("g
 - `<'grid-auto-columns'>`
   - : Définit {{cssxref("grid-auto-columns")}} qui indique la taille des pistes créées pour les colonnes de façon implicite.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -103,15 +107,11 @@ Pour plus de détails, voir les pages de chacune des propriétés : {{cssxref("g
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid", "grid")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid")}}
+{{Compat}}
 
 ## Voir aussi
 

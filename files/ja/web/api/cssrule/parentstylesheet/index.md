@@ -2,6 +2,7 @@
 title: CSSRule.parentStyleSheet
 slug: Web/API/CSSRule/parentStyleSheet
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`parentStyleSheet`** は {{domxref("CSSRule")}} インターフェイスのプロパティで、現在のルールを定義している {{domxref("StyleSheet")}} オブジェクトを返します。

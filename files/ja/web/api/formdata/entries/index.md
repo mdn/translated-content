@@ -7,7 +7,7 @@ slug: Web/API/FormData/entries
 
 **`FormData.entries()`** メソッドは、 {{jsxref("Iteration_protocols",'iterator')}} を返し、このオブジェクトに含まれる全ての キー/バリュー ペアを通過できるようにします。 各ペアのキーは {{domxref("USVString")}} オブジェクトで、 {{domxref("USVString")}} 、または {{domxref("Blob")}} のいずれかの値。
 
-> **Note:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
+> **メモ:** このメソッドは [Web Workers](/ja/docs/Web/API/Web_Workers_API) で使用できます。
 
 ## 構文
 
@@ -42,9 +42,7 @@ key2, value2
 
 ## 仕様
 
-| 仕様                                                                                                         | ステータス                           | 備考     |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('XMLHttpRequest','#dom-formdata','entries() (as iterator&lt;&gt;)')}} | {{Spec2('XMLHttpRequest')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

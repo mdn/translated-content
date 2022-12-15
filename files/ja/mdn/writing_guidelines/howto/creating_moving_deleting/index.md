@@ -3,6 +3,7 @@ title: ページを作成および編集する方法
 slug: MDN/Writing_guidelines/Howto/Creating_moving_deleting
 original_slug: MDN/Contribute/Howto/Create_and_edit_pages
 ---
+
 {{MDNSidebar}}
 
 この記事では、新しい協力者に既存ページの編集と、新規ページを作成する手順を紹介します。

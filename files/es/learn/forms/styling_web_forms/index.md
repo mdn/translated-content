@@ -1,9 +1,9 @@
 ---
 title: Estilizando formularios HTML
 slug: Learn/Forms/Styling_web_forms
-translation_of: Learn/Forms/Styling_web_forms
 original_slug: Learn/HTML/Forms/Styling_HTML_forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 En los artículos anteriores vimos todo el HTML que necesitas para crear y estructurar tus formularios HTML. En este artículo veremos como usar [CSS](/es/docs/Web/CSS) para estilizar nuestros formularios. Esto historicamente ha sido díficil — cada control tiene un nivel de dificultad distinta — pero se esta volviendo más fácil a medida de que los navegadores antiguos son retirados, y los modernos nos abren más posibilidades.
@@ -124,7 +124,7 @@ input, textarea, select, button {
 }
 ```
 
-En la captura de pantalla a continuación, la columna de la izquierda muestra la representación predeterminada de los controles de entrada `<input type="radio">`, `<input type="checkbox">`, `<input type="range">`, `<input type="text">`, `<input type="date">`, {{htmlelement('select')}}, {{htmlelement('textarea')}},`<input type="submit" >`, y {{htmlelement('button')}}. La columna de la derecha, por otro lado, muestra los mismos elementos con nuestra regla anterior aplicada a ellos. Observe cómo esto nos permite asegurarnos de que todos los elementos ocupen la misma cantidad de espacio, a pesar de las reglas predeterminadas de la plataforma para cada tipo de control.
+En la captura de pantalla a continuación, la columna de la izquierda muestra la representación predeterminada de los controles de entrada `<input type="radio">`, `<input type="checkbox">`, `<input type="range">`, `<input type="text">`, `<input type="date">`, {{htmlelement('select')}}, {{htmlelement('textarea')}}, `<input type="submit">`, y {{htmlelement('button')}}. La columna de la derecha, por otro lado, muestra los mismos elementos con nuestra regla anterior aplicada a ellos. Observe cómo esto nos permite asegurarnos de que todos los elementos ocupen la misma cantidad de espacio, a pesar de las reglas predeterminadas de la plataforma para cada tipo de control.
 
 ![Las propiedades del modelo de caja afectan a la mayoría de los tipos de entrada.](boxmodel_formcontrols1.png)
 

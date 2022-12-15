@@ -26,12 +26,8 @@ original_slug: Web/CSS/Motion_Path
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires         |
-| ------------------------------------------------ | -------------------------------------------- | -------------------- |
-| {{SpecName('Motion Path Level 1')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `offset`
-
-{{Compat("css.properties.offset")}}
+{{Compat}}

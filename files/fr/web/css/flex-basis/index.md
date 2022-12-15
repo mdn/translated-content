@@ -59,9 +59,13 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
     > - Ensuite, `flex-basis:auto` a été modifiée pour indiquer un dimensionnement automatique et le mot-clé `main-size` fut introduit pour faire référence à la propriété `width` ou `height`. L'implémentation dans Gecko a été suivie avec le bug {{bug("1032922")}}.
     > - Cette modification a été annulée avec le bug {{bug("1093316")}} afin qu'`auto` fasse à nouveau référence à la propriété `height` ou `width`. Le mot-clé `content` a été introduit pour déclencher un dimensionnement automatique (c'est le bug {{bug("1105111")}} qui couvre cette implémentation).
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -170,15 +174,11 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaires         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.flex-basis")}}
+{{Compat}}
 
 ## Voir aussi
 

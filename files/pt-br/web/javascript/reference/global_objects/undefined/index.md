@@ -1,8 +1,8 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 ---
+
 {{jsSidebar("Objects")}}
 
 ## Resumo

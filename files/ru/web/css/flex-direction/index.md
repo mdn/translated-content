@@ -7,13 +7,13 @@ translation_of: Web/CSS/flex-direction
 
 ## Резюме
 
-`flex-direction -` [CSS](/ru/docs/CSS "CSS") свойство , указывающее на то,как flex-элементы располагаются во flex-контейнере по главной оси и направлению (normal или reversed).
+`flex-direction -` [CSS](/ru/docs/CSS) свойство , указывающее на то,как flex-элементы располагаются во flex-контейнере по главной оси и направлению (normal или reversed).
 
 Обратите внимание, что значения `row` и `row-reverse` зависят от направления flex-контейнера. Если его атрибут `dir` равен `ltr`, `row` представляет собой горизонтальную ось, ориентированную слева направо, а `row-reverse` - справа налево; если атрибут `dir` равен `rtl`, `row` представляет собой горизонтальную ось, ориентированную справа налево, а `row-reverse` - слева направо.
 
 {{cssinfo}}
 
-См. [Using CSS flexible boxes](/ru/docs/Web/Guide/CSS/Flexible_boxes "/en/CSS/Using_CSS_flexible_boxes") для детализации по свойствам и дополнительной информации.
+См. [Using CSS flexible boxes](/ru/docs/Web/Guide/CSS/Flexible_boxes) для детализации по свойствам и дополнительной информации.
 
 ## Синтаксис
 

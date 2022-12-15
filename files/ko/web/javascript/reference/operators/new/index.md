@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/new
 ---
+
 {{jsSidebar("Operators")}}
 
 **`new` 연산자**는 사용자 정의 객체 타입 또는 내장 객체 타입의 인스턴스를 생성한다.

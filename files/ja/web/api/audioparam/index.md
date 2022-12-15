@@ -2,6 +2,7 @@
 title: AudioParam
 slug: Web/API/AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 Web Audio API の`AudioParam`インタフェースは、オーディオ関連のパラメーターを表します、通常は{{domxref("AudioNode")}}のパラメーター（{{ domxref("GainNode.gain") }}など）です。`AudioParam`は特定の値または値の変化に設定でき、特定の時間に特定のパターンに従って発生するようにスケジュールできます。
@@ -74,9 +75,7 @@ biquadFilter.gain.value = 25;
 
 ## Specifications
 
-| Specification                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{SpecName('Web Audio API', '#AudioParam', 'AudioParam')}} | {{Spec2('Web Audio API')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -1,8 +1,8 @@
 ---
 title: animation-play-state
 slug: Web/CSS/animation-play-state
-translation_of: Web/CSS/animation-play-state
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Resumen
@@ -42,13 +42,11 @@ animation-play-state: unset;
 
 ## Ejemplos
 
-Visita [animaciones CSS](https://developer.mozilla.org/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
+Visita [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemplos.
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                               | Comentario        |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ----------------- |
-| {{SpecName('CSS3 Animations', '#animation-play-state', 'animation-play-state')}} | {{Spec2('CSS3 Animations')}} | Definición incial |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

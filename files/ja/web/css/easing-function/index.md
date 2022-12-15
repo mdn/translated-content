@@ -2,6 +2,7 @@
 title: <easing-function>
 slug: Web/CSS/easing-function
 ---
+
 {{CSSRef}}
 
 **`<easing-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、アニメーションの間に一次元の値がどれだけの速さで変化するかを記述する数学的な関数を表します。これにより、アニメーションの速度を期間中に変化させることができます。
@@ -303,10 +304,7 @@ steps(0, jump-none)
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                                 | 備考                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Animations', '#animation-timing-function', '&lt;timing-function&gt;')}} | {{Spec2('CSS3 Animations')}} | `<single-timing-function>` を CSS トランジションモジュールの `<single-transition-timing-function>` の別名として定義 |
-| {{SpecName('CSS Easing 1', '#typedef-easing-function', '&lt;easing-function&gt;')}}     | {{Spec2('CSS Easing 1')}}     | 初回定義                                                                                                            |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

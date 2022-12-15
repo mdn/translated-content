@@ -9,7 +9,7 @@ slug: Web/API/HTMLMediaElement/srcObject
 
 このオブジェクトは {{domxref("MediaStream")}}、{{domxref("MediaSource")}}、{{domxref("Blob")}} や（Blob から派生している） {{domxref("File")}} です。
 
-> **Note:** 2020 年 3 月現在、 Safari のみが `MediaStream` 以外のオブジェクトを設定することに対応しています。他のブラウザーが追いつくまで、 `MediaSource`、`Blob`、および `File` の場合は、{{domxref("URL.createObjectURL()")}} を使用して URL を作成し、それを {{domxref("HTMLMediaElement.src")}} に割り当てる必要があります。以下の例を参照してください。
+> **メモ:** 2020 年 3 月現在、 Safari のみが `MediaStream` 以外のオブジェクトを設定することに対応しています。他のブラウザーが追いつくまで、 `MediaSource`、`Blob`、および `File` の場合は、{{domxref("URL.createObjectURL()")}} を使用して URL を作成し、それを {{domxref("HTMLMediaElement.src")}} に割り当てる必要があります。以下の例を参照してください。
 
 ## 値
 

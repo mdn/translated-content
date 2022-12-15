@@ -3,7 +3,7 @@ title: <wbr>
 slug: Web/HTML/Element/wbr
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<wbr>` 元素** — 一个文本中的位置，其中浏览器可以选择来换行，虽然它的换行规则可能不会在这里换行。
 

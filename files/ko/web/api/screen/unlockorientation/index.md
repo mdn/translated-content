@@ -3,6 +3,7 @@ title: window.screen.unlockOrientation
 slug: Web/API/Screen/unlockOrientation
 translation_of: Web/API/Screen/unlockOrientation
 ---
+
 {{APIRef("CSSOM View")}}{{Deprecated_header}}
 
 **`Screen.unlockOrientation()`** 함수는 이전의 page나 앱을 통해 지정한 화면 고정 값들을 모두 제거 한다.

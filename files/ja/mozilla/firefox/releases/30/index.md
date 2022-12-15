@@ -2,6 +2,7 @@
 title: Firefox 30 for developers
 slug: Mozilla/Firefox/Releases/30
 ---
+
 Gecko 30 を搭載した Firefox 30 は、米国時間 2014 年 6 月 10 日にリリースされました。このページでは、開発者に影響する Firefox 30 の変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧

@@ -2,6 +2,7 @@
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Location`** ヘッダーは、返されるデータの代替場所を示します。主な用途は[コンテンツネゴシエーション](/ja/docs/Web/HTTP/Content_negotiation)の結果として送信されたリソースの URL を示すことです。

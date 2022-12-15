@@ -24,24 +24,8 @@ translation_of: Web/CSS/CSS_Conditional_Rules
 
 ## Spécifications
 
-| Spécification                                | État                                     | Commentaires         |
-| -------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Conditional')}} | {{Spec2('CSS3 Conditional')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### `@document`
-
-{{Compat("css.at-rules.document")}}
-
-### `@import`
-
-{{Compat("css.at-rules.import")}}
-
-### `@media`
-
-{{Compat("css.at-rules.media")}}
-
-### `@supports`
-
-{{Compat("css.at-rules.supports")}}
+{{Compat}}

@@ -88,7 +88,7 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
 
 ### OS.File（chrome/add-on コンテクストのみ）で toBlob をディスクに保存する
 
-> **Note:** このテクニックは画像をデスクトップに保存しますが、Web サイトには公開されていない OS API として Firefox chrome コンテクストか add-on コードでのみ役立ちます。
+> **メモ:** このテクニックは画像をデスクトップに保存しますが、Web サイトには公開されていない OS API として Firefox chrome コンテクストか add-on コードでのみ役立ちます。
 
 ```js
 var canvas = document.getElementById("canvas");
@@ -131,11 +131,7 @@ canvas.toBlob(blobCallback('passThisString'), 'image/vnd.microsoft.icon',
 
 ## 仕様書
 
-| 仕様                                                                                                                     | 状態                             | コメント                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------ |
-| {{SpecName('HTML WHATWG', "scripting.html#dom-canvas-toblob", "HTMLCanvasElement.toBlob")}} | {{Spec2('HTML WHATWG')}} | {{SpecName('HTML5 W3C')}} の最新のスナップショットから変更なし。  |
-| {{SpecName('HTML5.1', "scripting-1.html#dom-canvas-toblob", "HTMLCanvasElement.toBlob")}} | {{Spec2('HTML5.1')}}     | 変更なし。                                                               |
-| {{SpecName('HTML5 W3C', "scripting-1.html#dom-canvas-toblob", "HTMLCanvasElement.toBlob")}} | {{Spec2('HTML5 W3C')}}     | 初期定義を含む {{SpecName('HTML WHATWG')}} のスナップショット。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

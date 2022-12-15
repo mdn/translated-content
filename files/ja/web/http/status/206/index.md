@@ -2,6 +2,7 @@
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`206 Partial Content`** は成功ステータスレスポンスコードで、そのリクエストが成功したこと、そしてリクエストの {{HTTPHeader("Range")}} ヘッダーに記述された通り、要求された範囲のデータが本文に含まれていることを示します。

@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 browser-compat: javascript.builtins.Date.getUTCSeconds
 ---
+
 {{JSRef}}
 
 **getUTCSeconds()** 메서드는 표준시에 따라 지정된 날짜의 초를 반환합니다.

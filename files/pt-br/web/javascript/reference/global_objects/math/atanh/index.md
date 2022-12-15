@@ -1,15 +1,8 @@
 ---
 title: Math.atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
-tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/atanh
 ---
+
 {{JSRef}}
 
 A função **`Math.atanh()`** retorna o arco tangente hiperbólico de um número, onde

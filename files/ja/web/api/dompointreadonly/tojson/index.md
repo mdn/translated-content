@@ -2,6 +2,7 @@
 title: DOMPointReadOnly.toJSON()
 slug: Web/API/DOMPointReadOnly/toJSON
 ---
+
 {{APIRef("DOM")}}
 
 メソッド `toJSON()` は、この点オブジェクトの {{Glossary("JSON")}} 形式を表すオブジェクトを返します。

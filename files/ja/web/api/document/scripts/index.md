@@ -2,6 +2,7 @@
 title: Document.scripts
 slug: Web/API/Document/scripts
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} インターフェイスの **`scripts`** プロパティは、文書中の {{HTMLElement("script")}} 要素のリストを返します。返されるオブジェクトは単一の {{domxref("HTMLCollection")}} オブジェクトです。
@@ -30,9 +31,7 @@ if (scripts.length) {
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                                 | 備考 |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
-| {{SpecName('HTML WHATWG', '#dom-document-scripts', 'Document.scripts')}} | {{ Spec2('HTML WHATWG') }} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

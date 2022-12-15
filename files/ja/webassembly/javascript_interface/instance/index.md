@@ -3,6 +3,7 @@ title: WebAssembly.Instance
 slug: WebAssembly/JavaScript_interface/Instance
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 ---
+
 {{JSRef}}
 
 **`WebAssembly.Instance`** オブジェクトは、ステートフルで実行可能な {{jsxref("WebAssembly.Module")}} のインスタンスです。 `Instance` オブジェクトには JavaScript から WebAssembly コードを呼び出すことができるすべての[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions)が含まれます。

@@ -12,6 +12,7 @@ tags:
   - 그레이디언트
 translation_of: Web/CSS/gradient
 ---
+
 {{CSSRef}}
 
 **`<gradient>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 {{cssxref("&lt;image&gt;")}}의 특별한 종류로 여러 색의 점진적인 변화를 나타냅니다.

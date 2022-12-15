@@ -1,15 +1,8 @@
 ---
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método **big()** cria um elemento HTML [\<big>](/pt-BR/docs/Web/HTML/Element/big) fazendo com que o texto dentro dele seja exibido uma uma fonte maior.
@@ -35,7 +28,7 @@ O método `big()` cria uma string dentro de uma tag `<big>`:
 
 ### Usando `big()`
 
-Os exemplos abaixo usam métodos do objeto [String ](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings)para alterar o tamanho de uma string:
+Os exemplos abaixo usam métodos do objeto [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings) para alterar o tamanho de uma string:
 
 ```js
 var worldString = 'Olá, mundo';

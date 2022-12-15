@@ -65,7 +65,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
             "n" 这个单词字符。
           </li>
           <li>
-            <code>/oon\b/</code> 在 "moon" 中匹配 "oon"， 因为 "oon"
+            <code>/oon\b/</code> 在 "moon" 中匹配 "oon"，因为 "oon"
             是这个字符串的结尾，因此后面没有单词字符
           </li>
           <li>
@@ -89,7 +89,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
           匹配非单词边界。这是上一个字符和下一个字符属于同一类型的位置：要么两者都必须是单词，要么两者都必须是非单词，例如在两个字母之间或两个空格之间。字符串的开头和结尾被视为非单词。与匹配的词边界相同，匹配的非词边界也不包含在匹配中。例如，<code
             >/\Bon/</code
           >
-          在 “at noon” 中匹配 “on” ，<code>/ye\B/</code> 在 "possibly
+          在“at noon”中匹配“on” ，<code>/ye\B/</code> 在 "possibly
           yesterday"中匹配"ye" 。
         </p>
       </td>
@@ -229,10 +229,10 @@ console.log(fruitsStartsWithA); // [ 'Apple', 'Avocado' ]
 ```plain
 let fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
 
-// 使用正则 /^[^A]/ 选择 不是以 ‘A’ 开头的水果
-// 在这个例子中，“^” 控件符号表示两种含义：
+// 使用正则 /^[^A]/ 选择 不是以‘A’开头的水果
+// 在这个例子中，“^”控件符号表示两种含义：
 // 1) 匹配输入的开头
-// 2) 一个否定的字符集: [^A] ，意思是匹配不是 ‘A’ 的字符
+// 2) 一个否定的字符集：[^A] ，意思是匹配不是‘A’的字符
 
 let fruitsStartsWithNotA = fruits.filter(fruit => /^[^A]/.test(fruit));
 
@@ -244,7 +244,7 @@ console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 ```plain
 let fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
 
-// 选择包含以 “en” 或 “ed” 结尾的单词的描述：
+// 选择包含以“en”或“ed”结尾的单词的描述：
 let enEdSelection = fruitsWithDescription.filter(descr => /(en|ed)\b/.test(descr));
 
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]

@@ -76,7 +76,7 @@ function handlePlayButton() {
 
 在这个例子中，视频的播放由 [`async`](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function) `playVideo()` 函数控制。函数尝试播放视频，如果播放成功，将 `playButton` 元素的类名称设为 `"playing"`。如果播放失败，去除 `playButton` 元素的类名称，恢复其原来的样式。通过监视 `play()` 返回的 {{jsxref("Promise")}} 是被解决还是被拒绝以保证播放按钮的外观与实际的播放状态相匹配。
 
-上述代码开始执行时，先获取 {{HTMLElement("video")}} 元素和用于切换播放、暂停的 {{HTMLElement("button")}} 元素的引用。在切换按钮上添加 {{event("click")}} 事件的处理程序。最后调用 `playVideo()` 尝试自动开始播放。
+上述代码开始执行时，先获取 {{HTMLElement("video")}} 元素和用于切换播放、暂停的 {{HTMLElement("button")}} 元素的引用。在切换按钮上添加 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件的处理程序。最后调用 `playVideo()` 尝试自动开始播放。
 
 你可以在 [这里](https://media-play-promise.glitch.me/) 查看或修改这个例子。
 

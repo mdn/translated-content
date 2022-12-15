@@ -10,7 +10,7 @@ L'interface **`Gamepad`** de l'[API Gamepad](/fr/docs/Web/API/Gamepad_API) défi
 
 Un objet `Gamepad` peut être retourné de deux manières :
 
-- Via la propriété `gamepad` des événements {{event("gamepadconnected")}} et {{event("gamepaddisconnected")}}.
+- Via la propriété `gamepad` des événements [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) et [`gamepadisdisconnected`](/fr/docs/Web/API/Window/gamepadisdisconnected_event).
 - Ou en prenant n'importe quelle position dans le tableau retourné par la méthode {{domxref("Navigator.getGamepads()")}}.
 
 ## Propriétés

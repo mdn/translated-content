@@ -98,14 +98,11 @@ p.a; // exception TypeError levée
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
-## Compatiblité des navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.get")}}
+{{Compat}}
 
 ## Voir aussi
 

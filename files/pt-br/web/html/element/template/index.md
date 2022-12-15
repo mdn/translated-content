@@ -1,39 +1,31 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-tags:
-  - Componentes
-  - Elemento
-  - HTML
-  - Referência(2)
-  - Web
-  - Web Componentes
-translation_of: Web/HTML/Element/template
 ---
+
 ## Sumário
 
 O elemento **[HTML](/pt-BR/docs/Web/HTML) `<template>`** é um mecanismo para encapsular um conteúdo do lado do cliente que não é renderizado quando a página é carregada, mas que pode ser instanciado posteriormente em tempo de execução usando JavaScript.
 
-Pense no template como um fragmento de conteúdo, que é armazenado para um possível uso futuro no documento. Enquanto o parser processa o conteúdo do elemento **`<template>` **ao carregar a página, isso apenas garante que o conteúdo é válido; porém, o conteúdo do elemento ainda não foi renderizado.
+Pense no template como um fragmento de conteúdo, que é armazenado para um possível uso futuro no documento. Enquanto o parser processa o conteúdo do elemento **`<template>`** ao carregar a página, isso apenas garante que o conteúdo é válido; porém, o conteúdo do elemento ainda não foi renderizado.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/HTML/Content_categories"
-          title="HTML/Content_categories"
+          href="/pt-BR/docs/Web/HTML/Content_categories"
           >Conteúdo de categorias</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
           >Metadata content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories#Phrasing_content"
           >phrasing content</a
         >, script-supporting element
       </td>
@@ -41,10 +33,10 @@ Pense no template como um fragmento de conteúdo, que é armazenado para um poss
     <tr>
       <th scope="row">Conteúdo Permitido</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Metadata_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Metadata_content"
           >Metadata content</a
         >,
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >flow content, </a
         >qualquer conteúdo HTML válido que é permitido para ocorrer dentro do
         {{HTMLElement("ol")}}, {{HTMLElement("dl")}},
@@ -171,4 +163,4 @@ table td {
 
 - Web components: {{HTMLElement("content")}}, {{HTMLElement("shadow")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

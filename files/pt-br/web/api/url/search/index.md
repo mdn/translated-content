@@ -1,14 +1,6 @@
 ---
 title: URL.search
 slug: Web/API/URL/search
-page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - URL
-  - URL API
-browser-compat: api.URL.search
 ---
 
 {{ApiRef("URL API")}}
@@ -27,7 +19,7 @@ Uma {{domxref("USVString")}}.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/search?q=123"
+  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/search?q=123"
 );
 console.log(url.search); // Logs "?q=123"
 ```

@@ -25,9 +25,11 @@ div:hover {
 
 ## Синтаксис
 
-    selector:pseudo-class {
-      property: value;
-    }
+```
+selector:pseudo-class {
+  property: value;
+}
+```
 
 Как и с обычными классами, можно совмещать вместе в одном селекторе любое число псевдоклассов.
 

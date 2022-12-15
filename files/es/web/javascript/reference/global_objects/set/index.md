@@ -1,10 +1,9 @@
 ---
 title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set
 original_slug: Web/JavaScript/Reference/Global_Objects/Set
-browser-compat: javascript.builtins.Set
 ---
+
 {{JSRef}}
 
 El objeto **`Set`** le permite almacenar valores únicos de cualquier tipo, ya sea {{Glossary("Primitivo", "valores primitivos")}} o referencias a objetos.

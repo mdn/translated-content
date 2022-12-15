@@ -2,6 +2,7 @@
 title: CSS セレクターと XPath の比較
 slug: Web/XPath/Comparison_with_CSS_selectors
 ---
+
 {{XSLTRef}}
 
 この記事では、ウェブ開発者が適材適所のツールを選択できるように、CSSセレクターとXPathの違いを説明することを目的としています。

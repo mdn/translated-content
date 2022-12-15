@@ -17,7 +17,7 @@ slug: Web/CSS/At-rule
   - {{ cssxref("@font-face") }}, 描述将下载的外部的字体。 {{ experimental_inline() }}
   - {{ cssxref("@keyframes") }}, 描述 CSS 动画的中间步骤 . {{ experimental_inline() }}
   - {{ cssxref("@supports") }}, 如果满足给定条件则条件规则组里的规则生效。 {{ experimental_inline() }}
-  - {{ cssxref("@document") }}, 如果文档样式表满足给定条件则条件规则组里的规则生效。 _(推延至 CSS Level 4 规范)_
+  - {{ cssxref("@document") }}, 如果文档样式表满足给定条件则条件规则组里的规则生效。_(推延至 CSS Level 4 规范)_
 
 ## 条件规则组
 

@@ -37,6 +37,6 @@ L'événement **compositionupdate** est déclenché lorsqu'un caractère est ajo
 
 ## Voir aussi
 
-- {{Event("compositionstart")}}
-- {{Event("compositionupdate")}}
-- {{Event("compositionend")}}
+- [`compositionstart`](/fr/docs/Web/API/Element/compositionstart_event)
+- [`compositionupdate`](/fr/docs/Web/API/Element/compositionupdate_event)
+- [`compositionend`](/fr/docs/Web/API/Element/compositionend_event)

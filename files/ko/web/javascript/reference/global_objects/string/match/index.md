@@ -3,6 +3,7 @@ title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
+
 {{JSRef}}
 
 **`match()`** 메서드는 문자열이 정규식과 매치되는 부분을 검색합니다.

@@ -179,7 +179,7 @@ What would you like to do today?
 在 `app.component.ts` 中，加入以下方法至此類別中：
 
 ```js
-addItem(description) {
+addItem(description: string) {
   this.allItems.unshift({
     description,
     done: false

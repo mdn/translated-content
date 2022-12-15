@@ -2,6 +2,7 @@
 title: TimeRanges
 slug: Web/API/TimeRanges
 ---
+
 {{APIRef("DOM")}}
 
 **`TimeRanges`** インターフェイスは、主に {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素で使用するためにメディアをロードするときにメディアのどの部分がバッファリングされたかを追跡する目的で、一連の時間範囲を表すために使用します。
@@ -24,9 +25,7 @@ slug: Web/API/TimeRanges
 
 ## 仕様
 
-| 仕様                                                                         | 状態                             | コメント |
-| ---------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName("HTML WHATWG", "#time-ranges", "TimeRanges")}} | {{Spec2("HTML WHATWG")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

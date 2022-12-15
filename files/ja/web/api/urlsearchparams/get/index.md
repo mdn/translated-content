@@ -2,6 +2,7 @@
 title: URLSearchParams.get()
 slug: Web/API/URLSearchParams/get
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェースの **`get()`** メソッドは、指定された検索パラメーターに関連付けられた最初の値を返します。
@@ -41,9 +42,7 @@ let address = params.get("address"); // null
 
 ## 仕様
 
-| 仕様                                                                         | 状態                 | コメント |
-| ---------------------------------------------------------------------------- | -------------------- | -------- |
-| {{SpecName('URL', '#dom-urlsearchparams-get', "get()")}} | {{Spec2('URL')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

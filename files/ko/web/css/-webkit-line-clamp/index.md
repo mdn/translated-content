@@ -9,6 +9,7 @@ tags:
   - recipe:css-property
 translation_of: Web/CSS/-webkit-line-clamp
 ---
+
 {{CSSRef}}
 
 **`-webkit-line-clamp`** CSS 속성은 {{Glossary("block container", "블록 컨테이너")}}의 콘텐츠를 지정한 줄 수만큼으로 제한합니다.

@@ -60,7 +60,7 @@ transform: initial;
 transform: unset;
 ```
 
-Свойство `transform` может быть указано как значение ключевого слова [`none`](#none) или как одно или более значений [`<transform-function>`](#<transform-function>).
+Свойство `transform` может быть указано как значение ключевого слова [`none`](#none) или как одно или более значений [`<transform-function>`](#transform-function).
 
 ### Значения
 

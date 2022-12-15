@@ -4,11 +4,12 @@ slug: Learn/JavaScript/First_steps
 l10n:
   sourceCommit: 0b270d4f95ba1c4abcc81215df774a9448a78105
 ---
+
 {{LearnSidebar}}
 
 最初の JavaScript のモジュールでは、初めて JavaScript を書く実践的な経験を体験する前に、「JavaScript とは何？」や「どのようなもの？」や「何ができる？」といったような基本的な質問に答えます。その後、変数や文字列、 数値、配列といったような言語の内容をお話しします。
 
-> **Callout:**
+> **注目:**
 >
 > #### フロントエンドのウェブ開発者になりたいですか？
 >
@@ -24,7 +25,7 @@ l10n:
 - [HTML 入門](/ja/docs/Learn/HTML/Introduction_to_HTML)
 - [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)
 
-> **Note:** 作業しているコンピューターやタブレットなどの端末で、自分でファイルを作れない場合は、 [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったようなオンラインコーディングプログラムで（ほとんどの場合）試すことができます。
+> **メモ:** 作業しているコンピューターやタブレットなどの端末で、自分でファイルを作れない場合は、 [JSBin](https://jsbin.com/) や [Glitch](https://glitch.com/) といったようなオンラインコーディングプログラムで（ほとんどの場合）試すことができます。
 
 ## ガイド
 

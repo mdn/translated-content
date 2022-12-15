@@ -5,6 +5,7 @@ l10n:
   sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
 original_slug: Learn/Forms/How_to_structure_an_HTML_form
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Your_first_form", "Learn/Forms/Basic_native_form_controls", "Learn/Forms")}}
 
 基本を押さえた上で、フォームの各パーツに構造と意味を提供している要素について、より詳しく見ていきましょう。
@@ -37,9 +38,9 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 
 前の記事ですでにこれを見ています。
 
-> **Warning:** フォームの中にフォームを入れ子にすることは厳格に禁じられています。これは予期せぬ動作を発生するおそれがあるので、悪い考えです。
+> **警告:** フォームの中にフォームを入れ子にすることは厳格に禁じられています。これは予期せぬ動作を発生するおそれがあるので、悪い考えです。
 
-{{HTMLElement("form")}} 要素の外部でもフォームウィジェットを使用できますが、そのフォームウィジェットは [`form`](/en-US/docs/Web/HTML/Element/input#form) 属性を用いて関連付けなければ、どのフォームに対しても何も行わないことに注意してください。これは、フォーム内に包含されていないコントロールを明示的にフォームへ紐付けられるように導入されました。
+{{HTMLElement("form")}} 要素の外部でもフォームウィジェットを使用できますが、そのフォームウィジェットは [`form`](/ja/docs/Web/HTML/Element/input#form) 属性を用いて関連付けなければ、どのフォームに対しても何も行わないことに注意してください。これは、フォーム内に包含されていないコントロールを明示的にフォームへ紐付けられるように導入されました。
 
 それでは、フォームに入れ子になっている構造要素に移動してみましょう。
 
@@ -71,7 +72,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 </form>
 ```
 
-> **Note:** この例は [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html))。
+> **メモ:** この例は [fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html))。
 
 この例では、画面リーダーは最初のウィジェットを "Fruit juice size small"、2 番目を "Fruit juice size medium"、3 番目を "Fruit juice size large" と読み上げるでしょう。
 
@@ -120,7 +121,7 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 </form>
 ```
 
-> **Note:** この例は [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html))。
+> **メモ:** この例は [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html))。
 
 ### 複数のラベル
 
@@ -164,9 +165,9 @@ original_slug: Learn/Forms/How_to_structure_an_HTML_form
 - 2 つ目の例では、少し明確になります "name star name edit text required" というようにラベルが入力と一緒に読み上げられます。しかしラベルはまだ別々に読み上げられます。少し混乱しやすいですが、これは `<input>` と関連したラベルがあるためまだ良いでしょう。
 - 3 つ目の例が最も良いです — 実際のラベルがすべて一緒に読み上げられ、 "name required edit text" のようにラベルと入力が一緒に読み上げられます。
 
-> **Note:** 画面リーダーによっては、少し異なる結果になる場合もあります。これは VoiceOver (と同様に動作する NVDA)でテストしています。あなたの体験を聞きたいです。
+> **メモ:** 画面リーダーによっては、少し異なる結果になる場合もあります。これは VoiceOver (と同様に動作する NVDA)でテストしています。あなたの体験を聞きたいです。
 
-> **Note:** この例は GitHub の [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。2 や 3 のコメントを外したバージョンの例を実行しないでください — 複数の label と複数の同じ input ID があると、画面リーダーは確実に混乱します!
+> **メモ:** この例は GitHub の [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) で見ることができます([ライブ版も見てください](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html))。2 や 3 のコメントを外したバージョンの例を実行しないでください — 複数の label と複数の同じ input ID があると、画面リーダーは確実に混乱します!
 
 ## フォームで使用される一般的な HTML 構造
 

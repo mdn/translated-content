@@ -2,6 +2,7 @@
 title: Window.outerHeight
 slug: Web/API/Window/outerHeight
 ---
+
 {{APIRef}}
 
 **`Window.outerHeight`** は読み取り専用のプロパティで、サイドバー、ウィンドウの操作部分、ウィンドウをリサイズする境界やハンドルを含む、ブラウザーウィンドウ全体の高さをピクセル単位で表します。
@@ -20,9 +21,7 @@ slug: Web/API/Window/outerHeight
 
 ## 仕様書
 
-| 仕様書                                                                                               | 状態                             | 備考 |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---- |
-| {{ SpecName('CSSOM View', '#dom-window-outerwidth', 'Window.outerWidth') }} | {{ Spec2('CSSOM View') }} |      |
+{{Specifications}}
 
 ## ブラウザーの対応
 

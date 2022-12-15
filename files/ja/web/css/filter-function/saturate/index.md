@@ -3,6 +3,7 @@ title: saturate()
 slug: Web/CSS/filter-function/saturate
 original_slug: Web/CSS/filter-function/saturate()
 ---
+
 {{CSSRef}}
 
 **`saturate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、入力画像の彩度を上げたり下げたりします。結果は {{cssxref("&lt;filter-function&gt;")}} です。

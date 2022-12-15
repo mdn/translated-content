@@ -1,17 +1,8 @@
 ---
 title: Date.prototype.setSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 ---
+
 {{JSRef}}
 
 O método **`setSeconds()`** atribui os segundos na data especificada de acordo com o tempo local.

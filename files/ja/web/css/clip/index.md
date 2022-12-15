@@ -2,6 +2,7 @@
 title: clip
 slug: Web/CSS/clip
 ---
+
 {{CSSRef}}
 
 **`clip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のどの部分が可視であるかを定義します。 `clip` プロパティは絶対配置された要素、つまり {{cssxref("position","position:absolute")}} または {{cssxref("position","position:fixed")}} を持つ要素だけに適用されます。
@@ -22,7 +23,7 @@ clip: unset;
 
 ## 構文
 
-> **Note:** 可能であれば、より新しい {{cssxref("clip-path")}} を使うことをお勧めします。
+> **メモ:** 可能であれば、より新しい {{cssxref("clip-path")}} を使うことをお勧めします。
 
 ### 値
 

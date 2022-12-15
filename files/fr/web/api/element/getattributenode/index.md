@@ -39,9 +39,9 @@ alert(idAttr.value == "top");
 
 Lorsqu'elle est appelée sur un élément HTML dans un DOM marqué comme un document HTML, `getAttributeNode` passe en minuscules son argument avant de continuer.
 
-Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisant partie de l'arbre du document. Les attributs habituels des nœuds comme [parentNode](fr/DOM/element.parentNode), [previousSibling](fr/DOM/element.previousSibling), et [nextSibling](fr/DOM/element.nextSibling) sont `null` pour un nœud `Attr`. Vous pouvez cependant accéder à l'élément auquel cet attribut appartient grâce à la propriété `ownerElement`.
+Les nœuds `Attr` héritent de `Node`, mais ne sont pas considérés comme faisant partie de l'arbre du document. Les attributs habituels des nœuds comme [parentNode](/fr/DOM/element.parentNode), [previousSibling](/fr/DOM/element.previousSibling), et [nextSibling](/fr/DOM/element.nextSibling) sont `null` pour un nœud `Attr`. Vous pouvez cependant accéder à l'élément auquel cet attribut appartient grâce à la propriété `ownerElement`.
 
-[getAttribute](fr/DOM/element.getAttribute) est habituellement utilisé à la place de `getAttributeNode` pour obtenir la valeur d'un attribut d'un élément.
+[getAttribute](/fr/DOM/element.getAttribute) est habituellement utilisé à la place de `getAttributeNode` pour obtenir la valeur d'un attribut d'un élément.
 
 {{ DOMAttributeMethods() }}
 

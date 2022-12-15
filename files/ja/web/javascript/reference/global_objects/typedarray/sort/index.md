@@ -48,13 +48,11 @@ numbers.sort((a, b) => a - b); // 数値を比較
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.TypedArray.indexOf")}}
+{{Compat}}
 
 ## 関連情報
 

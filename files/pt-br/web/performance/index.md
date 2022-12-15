@@ -1,24 +1,8 @@
 ---
 title: Web Performance
 slug: Web/Performance
-tags:
-  - API
-  - App
-  - App Performance
-  - HTML
-  - JavaScript
-  - Landing
-  - Mobile
-  - Mobile Performance
-  - NeedsTranslation
-  - Performance
-  - Performance Budget
-  - Start-Up Performance
-  - TopicStub
-  - Web
-  - Web Performance
-translation_of: Web/Performance
 ---
+
 Web performance is the objective measurements and the perceived user experience of load time and runtime. Web performance is how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions - is the scrolling smooth? are buttons clickable? Are pop-ups quick to load and display, and do they animate smoothly as they do so? Web performance includes both objective measurements like time to load, frames per second, and time to become interactive, and subjective experiences of how long it felt like it took the content to load.
 
 The longer it takes for a site to respond, the more users will abandon the site. It is important to minimize the loading and response times and add additional features to conceal latency by making the experience as available and interactive as possible, as soon as possible, while asynchronously loading in the longer tail parts of the experience.
@@ -57,15 +41,15 @@ The MDN [Web Performance Learning Area](/pt-BR/docs/Learn/Performance) contains 
 ## Using Performance APIs
 
 - [Performance API](/pt-BR/docs/Web/API/Performance_API/Using_the_Performance_API)
-  - : This guide describes how to use the [`Performance`](/pt-BR/docs/Web/API/Performance "The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.") interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard.
+  - : This guide describes how to use the [`Performance`](/pt-BR/docs/Web/API/Performance) interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard.
 - [Resource Timing API](/pt-BR/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
   - : [Resource loading and timing](/pt-BR/docs/Web/API/Resource_Timing_API) the loading of those resources, including managing the resource buffer and coping with CORS
 - [The performance timeline](/pt-BR/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-  - : The [Performance Timeline](/pt-BR/docs/Web/API/Performance_Timeline) standard defines extensions to the [`Performance`](/pt-BR/docs/Web/API/Performance "The Performance interface provides access to performance-related information for the current page. It's part of the High Resolution Time API, but is enhanced by the Performance Timeline API, the Navigation Timing API, the User Timing API, and the Resource Timing API.") interface to support client-side latency measurements within applications. Together, these interfaces can be used to help identify an application's performance bottlenecks.
+  - : The [Performance Timeline](/pt-BR/docs/Web/API/Performance_Timeline) standard defines extensions to the [`Performance`](/pt-BR/docs/Web/API/Performance) interface to support client-side latency measurements within applications. Together, these interfaces can be used to help identify an application's performance bottlenecks.
 - [User Timing API](/pt-BR/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)
   - : Create application specific timestamps using the [user timing API](/pt-BR/docs/Web/API/User_Timing_API)'s "mark" and "measure" entry types - that are part of the browser's performance timeline.
 - [Frame Timing API](/pt-BR/docs/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API)
-  - : The [`PerformanceFrameTiming`](/en-US/docs/Web/API/PerformanceFrameTiming) interface provides _frame_ timing data about the browser's event loop.
+  - : The [`PerformanceFrameTiming`](/pt-BR/docs/Web/API/PerformanceFrameTiming) interface provides _frame_ timing data about the browser's event loop.
 - [Beacon API](/pt-BR/docs/Web/API/Beacon_API/Using_the_Beacon_API)
   - : The [Beacon](/pt-BR/docs/Web/API/Beacon_API) interface schedules an asynchronous and non-blocking request to a web server.
 - [Intersection Observer API](/pt-BR/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)
@@ -174,7 +158,7 @@ HTML
 
   - [Responsive images](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
-- [Preloading content with `rel="preload"`](/pt-BR/docs/Web/HTML/Preloading_content) - [(https://w3c.github.io/preload/ ](https://w3c.github.io/preload/))
+- [Preloading content with `rel="preload"`](/pt-BR/docs/Web/HTML/Preloading_content) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
 
 CSS
 

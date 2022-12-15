@@ -2,6 +2,7 @@
 title: CountQueuingStrategy.size()
 slug: Web/API/CountQueuingStrategy/size
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("CountQueuingStrategy")}} インターフェイスの **`size()`** メソッドは常に `1` を返すため、合計キューサイズはキュー内のチャンク数を数えたものになります。
@@ -43,9 +44,7 @@ var size = queuingStrategy.size();
 
 ## 仕様
 
-| 仕様                                                     | 状態                         | コメント |
-| -------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#cqs-size","size")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

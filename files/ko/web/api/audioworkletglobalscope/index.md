@@ -16,6 +16,7 @@ tags:
   - sound
 browser-compat: api.AudioWorkletGlobalScope
 ---
+
 {{APIRef("Web Audio API")}}
 
 [Web Audio API](/ko/docs/Web/API/Web_Audio_API)의 **`AudioWorkletGlobalScope`** 인터페이스는 커스텀 {{domxref("AudioWorkletProcessor")}}에서 파생된 클래스를 정의하는 코드에 대한 전역 실행 컨텍스트를 나타냅니다.

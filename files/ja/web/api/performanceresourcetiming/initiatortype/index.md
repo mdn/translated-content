@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.initiatorType
 slug: Web/API/PerformanceResourceTiming/initiatorType
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`initiatorType`** 読み取り専用プロパティは、パフォーマンスイベントを開始したリソースの種類を表す {{domxref("DOMString","文字列")}} です。
@@ -47,9 +48,7 @@ function print_initiatorType(perfEntry) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                           | ステータス                           | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-initiatorType', 'initiatorType')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -24,7 +24,7 @@ _无。_
 
 ## 例子
 
-下面这个例子中使用 `getAsFile()` 。放在 {{event("drop")}} 事件处理里面。
+下面这个例子中使用 `getAsFile()` 。放在 [`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) 事件处理里面。
 
 ```js
 function drop_handler(ev) {

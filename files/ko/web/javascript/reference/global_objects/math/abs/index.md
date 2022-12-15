@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
 browser-compat: javascript.builtins.Math.abs
 ---
+
 {{JSRef}}
 
 **`Math.abs()`** 함수는 주어진 숫자의 절대값을

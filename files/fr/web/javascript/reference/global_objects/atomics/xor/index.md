@@ -76,13 +76,11 @@ Atomics.load(ta, 0);   // 4
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                     |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.xor', 'Atomics.xor')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.xor")}}
+{{Compat}}
 
 ## Voir aussi
 

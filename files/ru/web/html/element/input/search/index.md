@@ -3,7 +3,7 @@ title: <input type="search">
 slug: Web/HTML/Element/Input/search
 translation_of: Web/HTML/Element/input/search
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 {{HTMLElement("input")}} элементы с типом **`search`** это текстовые поля разработанные для ввода пользователем поисковых запросов. Функциональность идентична элементам с типом [`text`](/en-US/docs/Web/HTML/Element/input/text), но может отличаться стилизация за счёт {{Glossary("user agent")}}, а также наличием специального **не стандартизированного** события {{domxref("HTMLElement/search_event", "onsearch")}}.
 
@@ -32,7 +32,7 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 
 | Attribute                     | Description                                                                                                                         |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| [`list`](#list)               | The id of the <datalist> element that contains the optional pre-defined autocomplete options                                        |
+| [`list`](#list)               | The id of the `<datalist>` element that contains the optional pre-defined autocomplete options                                        |
 | [`maxlength`](#maxlength)     | The maximum number of characters the input should accept                                                                            |
 | [`minlength`](#minlength)     | The minimum number of characters long the input can be and still be considered valid                                                |
 | [`pattern`](#pattern)         | A regular expression the input's contents must match in order to be valid                                                           |

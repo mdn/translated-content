@@ -3,6 +3,7 @@ title: HTML 기본
 slug: Learn/Getting_started_with_the_web/HTML_basics
 original_slug: Learn/Getting_started_with_the_web/HTML_기본
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
 HTML(**H**yper**t**ext **M**arkup **L**anguage)은 웹 페이지와 그 내용을 구조화하기 위해 사용하는 코드입니다. 예를 들면, 컨텐트는 여러 개의 문단, 글 머리 목록이 구조화된 것이거나 사진이나 데이터 테이블일 수도 있습니다. 제목과 같이 이 글은 HTML과 그 기능에 대한 기본적인 이해를 제공할 것입니다.
@@ -25,7 +26,7 @@ HTML 은 프로그래밍 언어가 아닙니다; 컨텐츠의 구조를 정의�
 
 이 문단 요소에 대해 조금 더 탐구해봅시다.
 
-![](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
+![](grumpy-cat-small.png)
 
 이 요소의 주요 부분은 이렇습니다:
 
@@ -36,7 +37,7 @@ HTML 은 프로그래밍 언어가 아닙니다; 컨텐츠의 구조를 정의�
 
 요소는 속성도 가질 수 있는데, 다음과 같이 사용합니다:
 
-![](https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png)
+![](grumpy-cat-attribute-small.png)
 
 속성은 실제 컨텐츠로 표시되길 원하지 않는 추가적인 정보를 담고 있습니다. 이 예제에서, class 속성을 이용해 나중에 해당 요소를 특정해 스타일이나 다른 정보를 설정할 때 사용할 수 있는 식별자를 지정할 수 있습니다.
 
@@ -113,7 +114,7 @@ HTML 은 프로그래밍 언어가 아닙니다; 컨텐츠의 구조를 정의�
 1. 시각 장애자인 경우. 시각 장애가 심한 사용자들은 alt 텍스트(대체 텍스트)를 읽어주는 스크린 리더라는 도구를 자주 사용합니다.
 2. 무언가 잘못되어서 이미지를 표시할 수 없는 경우. 예를 들면, `src` 속성 안의 경로를 일부러 틀리게 변경해보세요. 저장한 후에 페이지를 다시 열면, 이미지가 표시되어야할 위치에 다음과 같은 것을 보게 될 것입니다.
 
-![](https://mdn.mozillademos.org/files/9349/alt-text-example.png)
+![](alt-text-example.png)
 
 alt 텍스트에서 핵심 단어는 "설명적인 문자(descriptive text)" 입니다. 여러분이 작성하는 alt 텍스트는 독자에게 이미지가 전달하는 어떤 것에 대해 좋은 아이디어를 가지기에 충분한 정보를 제공해야 합니다. 이 예제에서 "My test image"라는 현재의 텍스트는 전혀 좋지 않습니다. Firefox 로고에 대해서는 "파이어폭스 로고: 지구를 둘러싼 타오르는 여우"가 훨씬 나은 대안이될 수 있습니다.
 
@@ -212,7 +213,7 @@ alt 텍스트에서 핵심 단어는 "설명적인 문자(descriptive text)" 입
 
 이 글의 모든 설명을 따라오셨다면, 이와 같이 보이는 페이지가 될 겁니다. ([여기서](http://mdn.github.io/beginner-html-site/)도 볼 수 있습니다):
 
-![A web page screenshot showing a firefox logo, a heading saying mozilla is cool, and two paragraphs of filler text](https://mdn.mozillademos.org/files/9351/finished-test-page-small.png)
+![A web page screenshot showing a firefox logo, a heading saying mozilla is cool, and two paragraphs of filler text](finished-test-page-small.png)
 
 잘 안 된다면, 여러분의 코드를 Github에 있는 [예제 코드](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html)를 비교해 볼 수 있습니다.
 
@@ -225,8 +226,8 @@ alt 텍스트에서 핵심 단어는 "설명적인 문자(descriptive text)" 입
 - [기본 소프트웨어 설치하기](/ko/Learn/Getting_started_with_the_web/Installing_basic_software)
 - [여러분의 웹사이트는 어떤 모습일까요?](/ko/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
 - [파일 다루기](/ko/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML 기본 사항](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS 기본 사항](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript 기본 사항](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [웹 사이트 출판](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [웹 작동 방식](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [HTML 기본 사항](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
+- [CSS 기본 사항](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
+- [JavaScript 기본 사항](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [웹 사이트 출판](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [웹 작동 방식](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)

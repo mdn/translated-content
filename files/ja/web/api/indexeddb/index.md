@@ -3,6 +3,7 @@ title: WindowOrWorkerGlobalScope.indexedDB
 slug: Web/API/indexedDB
 original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
 ---
+
 {{ APIRef() }}
 
 {{domxref("WindowOrWorkerGlobalScope")}} ミックスインの **`indexedDB`** 読み取り専用プロパティは、アプリケーションが indexed データベースのキャパビリティに非同期でアクセスするための機構を提供します。
@@ -31,14 +32,11 @@ function openDB() {
 
 ## 仕様
 
-| 仕様書                                                                                                           | 策定状況                         | 備考                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------------- |
-| {{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}} | {{Spec2('IndexedDB 2')}} | Defined in a `WindowOrWorkerGlobalScope` partial in the newest spec. |
-| {{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}                 | {{Spec2('IndexedDB')}}     | 初期定義。                                                           |
+{{Specifications}}
 
 ## ブラウザーの実装状況
 
-{{Compat("api.WindowOrWorkerGlobalScope.indexedDB")}}
+{{Compat}}
 
 ## 関連情報
 

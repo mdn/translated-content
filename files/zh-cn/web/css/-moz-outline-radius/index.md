@@ -77,7 +77,7 @@ p {
 
 ## 备注
 
-- 直至 Firefox 50 之前，`dotted` 或 `dashed` 圆角被渲染为 solid ，详见 {{bug("382721")}}
+- 直至 Firefox 50 之前，`dotted` 或 `dashed` 圆角被渲染为 solid，详见 {{bug("382721")}}
 - 未来的 Gecko/Firefox 版本可能完全弃用这个属性。详见 {{bug("593717")}}.
 
 ## 规范

@@ -1,8 +1,8 @@
 ---
 title: Console.error()
 slug: Web/API/Console/error
-translation_of: Web/API/Console/error
 ---
+
 {{APIRef("Console API")}}{{Non-standard_header}}
 
 '_Escreve_' uma mensagem de erro no Web Console.

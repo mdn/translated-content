@@ -39,14 +39,11 @@ La position de la page soit à gauche ou à droite dépend de la direction d'éc
 
 ## Spécifications
 
-| Spécification                                                                        | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Paged Media', '#left-right-first', ':left')}} | {{Spec2('CSS3 Paged Media')}} | Aucune modification. |
-| {{SpecName('CSS2.1', 'page.html#page-selectors', ':left')}}     | {{Spec2('CSS2.1')}}                 | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.left")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -1,8 +1,8 @@
 ---
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
-translation_of: Web/CSS/transition-timing-function
 ---
+
 {{CSSRef}}
 
 A propriedade CSS **`transition-timing-function`** é usada para descrever como os valores intermediários das propriedades CSS sendo afetados por um efeito de transição são calculados. Em essência isso permite você estabelecer uma curva de aceleração, para que então a velocidade da transição possa variar durante sua duração.
@@ -566,5 +566,5 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## See also
 
-- [Using CSS transitions](/pt-BR/docs/CSS/Using_CSS_transitions "en/CSS/CSS transitions")
+- [Using CSS transitions](/pt-BR/docs/CSS/Using_CSS_transitions)
 - {{ domxref("TransitionEvent") }}

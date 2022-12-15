@@ -2,6 +2,7 @@
 title: flex-direction
 slug: Web/CSS/flex-direction
 ---
+
 {{CSSRef}}
 
 **`flex-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、主軸の方向や向き (通常または逆方向) を定義することにより、フレックスコンテナー内でフレックスアイテムを配置する方法を設定します。

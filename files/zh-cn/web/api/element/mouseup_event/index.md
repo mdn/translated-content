@@ -45,13 +45,13 @@ slug: Web/API/Element/mouseup_event
 ## 参见
 
 - [Introduction to events](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
-- {{Event("mousedown")}}
-- {{Event("mouseup")}}
-- {{Event("mousemove")}}
-- {{Event("click")}}
-- {{Event("dblclick")}}
-- {{Event("mouseover")}}
-- {{Event("mouseout")}}
-- {{Event("mouseenter")}}
-- {{Event("mouseleave")}}
-- {{Event("contextmenu")}}
+- [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event)
+- [`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event)
+- [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)
+- [`click`](/zh-CN/docs/Web/API/Element/click_event)
+- [`dblclick`](/zh-CN/docs/Web/API/Element/dblclick_event)
+- [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event)
+- [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event)
+- [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event)
+- [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event)
+- [`contextmenu`](/zh-CN/docs/Web/API/Element/contextmenu_event)

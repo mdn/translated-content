@@ -2,6 +2,7 @@
 title: 'Django チュートリアル Part 2: スケルトンウェブサイトの作成'
 slug: Learn/Server-side/Django/skeleton_website
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
 [Django チュートリアル](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website) の 2 つ目の記事では、基本的なウェブサイトプロジェクトの「スケルトン」をどのように作っていくのかを説明します。サイト固有の設定、URL、モデル、ビュー、テンプレートを作成する方法について説明します。
@@ -19,7 +20,7 @@ slug: Learn/Server-side/Django/skeleton_website
 1. `django-admin` ツールを使ってプロジェクトフォルダ、基本的なテンプレートファイル、プロジェクト管理スクリプト(**manage.py**)を作ります .
 2. **manage.py** は１つ以上のアプリケーションを作ります。
 
-    > **Note:** ウェブサイトは 1 つ以上のセクションから成ります。例えば、メインサイト、ブログ、ウィキ、ダウンロードエリアなど。Django は、これらのコンポーネントを別々のアプリケーションとして作成することを助けてくれます。それらは、必要なら異なるプロジェクトで再利用できます。
+    > **メモ:** ウェブサイトは 1 つ以上のセクションから成ります。例えば、メインサイト、ブログ、ウィキ、ダウンロードエリアなど。Django は、これらのコンポーネントを別々のアプリケーションとして作成することを助けてくれます。それらは、必要なら異なるプロジェクトで再利用できます。
 
 3. プロジェクトにアプリケーションを含めるために登録します。
 4. url/path マッパーはそれらのアプリケーションを結びつけます。
@@ -85,7 +86,7 @@ locallibrary/
 python3 manage.py startapp catalog
 ```
 
-> **Note:** 上記コマンドは Linux や macOS X 用です。Windows のコマンドは: `py -3 manage.py startapp catalog`
+> **メモ:** 上記コマンドは Linux や macOS X 用です。Windows のコマンドは: `py -3 manage.py startapp catalog`
 >
 > もし Windows を使っているなら、このモジュール（manage.py）を使う際は`python3` を `py -3` に変更して下さい。
 >
@@ -114,7 +115,7 @@ locallibrary/
 - "マイグレーション"を格納するためのマイグレーションフォルダーモデルを変更した場合に自動的にデータベースの変更をするためのファイル
 - **\_\_init\_\_.py** — Django/Python がこのフォルダを [Python Package](https://docs.python.org/3/tutorial/modules.html#packages) であると認識するためにここに作られた空のファイル。そうすることで、このオブジェクトは他のプロジェクトでも使用できる。
 
-> **Note:** 上記ファイルリストに何か欠けているものがあることに気づきましたか？ ビューやモデルがある一方で、URL マッピング、テンプレート、静的ファイルの配置場所はありません。それらの作り方も以後説明します。(それらは全てのサイトで必須ではないですが、この例では必要になります。).
+> **メモ:** 上記ファイルリストに何か欠けているものがあることに気づきましたか？ ビューやモデルがある一方で、URL マッピング、テンプレート、静的ファイルの配置場所はありません。それらの作り方も以後説明します。(それらは全てのサイトで必須ではないですが、この例では必要になります。).
 
 ## catalog アプリケーションの登録
 
@@ -136,7 +137,7 @@ INSTALLED_APPS = [
 
 追加した新しい行はアプリケーションの構成オブジェクト(`CatalogConfig`) を指定しており、それはアプリケーション作成時に**/locallibrary/catalog/apps.py** によって生成されています。
 
-> **Note:** すでにたくさんの他の`INSTALLED_APPS` (`MIDDLEWARE`も同様。設定ファイルのさらに下の方にあります)が存在していることに気づいたでしょう。これらは、[Django administration site](/ja/docs/Learn/Server-side/Django/Admin_site) をサポートすること可能にし、その結果、Django が使用するたくさんの機能(セッション、認証など)をサポートします。
+> **メモ:** すでにたくさんの他の`INSTALLED_APPS` (`MIDDLEWARE`も同様。設定ファイルのさらに下の方にあります)が存在していることに気づいたでしょう。これらは、[Django administration site](/ja/docs/Learn/Server-side/Django/Admin_site) をサポートすること可能にし、その結果、Django が使用するたくさんの機能(セッション、認証など)をサポートします。
 
 ## データベースの指定
 
@@ -201,7 +202,7 @@ urlpatterns = [
 
 The URL mappings are managed through the `urlpatterns` variable, which is a Python _list_ of `path()` functions. Each `path()` function either associates a URL pattern to a _specific view_, which will be displayed when the pattern is matched, or with another list of URL pattern testing code (in this second case, the pattern becomes the "base URL" for patterns defined in the target module). The `urlpatterns` list initially defines a single function that maps all URLs with the pattern _admin/_ to the module `admin.site.urls` , which contains the Administration application's own URL mapping definitions.
 
-> **Note:** The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. `'catalog/<id>/'`. This pattern will match a URL like **/catalog/**_any_chars_**/** and pass _any_chars_ to the view as a string with parameter name `id`). We discuss path methods and route patterns further in later topics.
+> **メモ:** The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. `'catalog/<id>/'`. This pattern will match a URL like **/catalog/**_any_chars_**/** and pass _any_chars_ to the view as a string with parameter name `id`). We discuss path methods and route patterns further in later topics.
 
 Add the lines below to the bottom of the file in order to add a new list item to the `urlpatterns` list. This new item includes a `path()` that forwards requests with the pattern `catalog/` to the module `catalog.urls` (the file with the relative URL **/catalog/urls.py**).
 
@@ -250,7 +251,7 @@ from django.conf.urls.static import static
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 
-> **Note:** There are a number of ways to extend the `urlpatterns` list (above we just appended a new list item using the `+=` operator to clearly separate the old and new code). We could have instead just included this new pattern-map in the original list definition:
+> **メモ:** There are a number of ways to extend the `urlpatterns` list (above we just appended a new list item using the `+=` operator to clearly separate the old and new code). We could have instead just included this new pattern-map in the original list definition:
 >
 > ```python
 > urlpatterns = [
@@ -291,19 +292,19 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-> **Warning:** **Important**: You'll need to run the above commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
+> **警告:** You'll need to run the above commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
 
 The `makemigrations` command _creates_ (but does not apply) the migrations for all applications installed in your project (you can specify the application name as well to just run a migration for a single project). This gives you a chance to checkout the code for these migrations before they are applied — when you're a Django expert you may choose to tweak them slightly!
 
 The `migrate` command actually applies the migrations to your database (Django tracks which ones have been added to the current database).
 
-> **Note:** See [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
+> **メモ:** See [Migrations](https://docs.djangoproject.com/en/2.0/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
 
 ### Running the website
 
 During development you can test the website by first serving it using the _development web server_, and then viewing it on your local web browser.
 
-> **Note:** The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (Django docs).
+> **メモ:** The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/2.0/ref/django-admin/#runserver) (Django docs).
 
 Run the _development web server_ by calling the `runserver` command (in the same directory as **manage.py**):
 
@@ -325,11 +326,11 @@ Once the server is running you can view the site by navigating to `http://127.0.
 
 Don't worry! This error page is expected because we don't have any pages/urls defined in the `catalogs.urls` module (which we're redirected to when we get an URL to the root of the site).
 
-> **Note:** The above page demonstrates a great Django feature — automated debug logging. An error screen will be displayed with useful information whenever a page cannot be found, or any error is raised by the code. In this case we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). The logging will be turned off during production (when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.
+> **メモ:** The above page demonstrates a great Django feature — automated debug logging. An error screen will be displayed with useful information whenever a page cannot be found, or any error is raised by the code. In this case we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). The logging will be turned off during production (when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.
 
 At this point we know that Django is working!
 
-> **Note:** You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!
+> **メモ:** You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!
 
 ## 自分でやってみよう
 

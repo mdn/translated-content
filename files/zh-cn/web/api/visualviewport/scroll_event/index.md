@@ -27,4 +27,4 @@ VisualViewport.onscroll = function(e) {
 
 ## Browser compatibility
 
-{{Compat("api.VisualViewport.onscroll")}}
+{{Compat}}

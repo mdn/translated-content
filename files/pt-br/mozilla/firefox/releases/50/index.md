@@ -1,7 +1,6 @@
 ---
 title: Firefox 50 for developers
 slug: Mozilla/Firefox/Releases/50
-translation_of: Mozilla/Firefox/Releases/50
 ---
 {{FirefoxSidebar}}
 
@@ -90,8 +89,8 @@ _No change._
 
 ## Networking
 
-- The {{htmlattrxref("ping", "a")}} attribute of {{htmlelement("a")}} element is now abiding by the [`connect-src`](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) ({{bug(1100181)}}).
-- Support of the [`sandbox`](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#sandbox) [CSP](/pt-BR/docs/Web/Security/CSP) directive has been added ({{bug(671389)}}).
+- The {{htmlattrxref("ping", "a")}} attribute of {{htmlelement("a")}} element is now abiding by the [`connect-src`](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives#connect-src) [CSP 1.1 policy directive](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives) ({{bug(1100181)}}).
+- Support of the [`sandbox`](/pt-BR/docs/Web/Security/CSP/CSP_policy_directives#sandbox) [CSP](/pt-BR/docs/Web/Security/CSP) directive has been added ({{bug(671389)}}).
 
 ## Segurança
 

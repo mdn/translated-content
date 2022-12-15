@@ -21,7 +21,7 @@ var mediaDevices = navigator.mediaDevices;
 
 ## 浏览器兼容
 
-{{Compat("api.Navigator.mediaDevices")}}
+{{Compat}}
 
 ## 参考阅读
 

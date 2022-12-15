@@ -1,11 +1,8 @@
 ---
 title: label (Etiqueta)
 slug: Web/JavaScript/Reference/Statements/label
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/label
 ---
+
 {{jsSidebar("Statements")}}
 
 Provém uma declaração com um indentificador o qual pode ser referido posteriormente utilizando-se os comandos _break_ ou _continue_.
@@ -94,5 +91,5 @@ for (i = 0; items.length; i++)
 
 ## Veja também
 
-- [break](/pt-BR/docs/JavaScript/Reference/Statements/break "JavaScript/Reference/Statements/break")
-- [continue](/pt-BR/docs/JavaScript/Reference/Statements/continue "JavaScript/Reference/Statements/continue")
+- [break](/pt-BR/docs/JavaScript/Reference/Statements/break)
+- [continue](/pt-BR/docs/JavaScript/Reference/Statements/continue)

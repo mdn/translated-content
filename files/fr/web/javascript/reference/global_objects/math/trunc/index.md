@@ -62,14 +62,11 @@ Math.trunc();        // NaN
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaire          |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-math.trunc', 'Math.trunc')}}     | {{Spec2('ES2015')}}     | Première définition. |
-| {{SpecName('ESDraft', '#sec-math.trunc', 'Math.trunc')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.trunc")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -98,4 +98,4 @@ video.onsuspend = (event) => {
 
 <!---->
 
-- [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API)
+- [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)

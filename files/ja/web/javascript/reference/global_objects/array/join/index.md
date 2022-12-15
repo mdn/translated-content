@@ -31,7 +31,7 @@ join(separator)
 
 配列のすべての要素を文字列に変換したものが、1 個の文字列に繋がれます。
 
-> **Warning:** 要素が `undefined` または `null` または空配列 `[]` であった場合は、空の文字列に変換されます。
+> **警告:** 要素が `undefined` または `null` または空配列 `[]` であった場合は、空の文字列に変換されます。
 
 `join` メソッドは、内部的には [`Array.prototype.toString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) によって引数なしでアクセスすることができます。配列インスタンスの `join` をオーバーライドすると、その `toString` の動作もオーバーライドされます。
 

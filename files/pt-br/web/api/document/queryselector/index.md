@@ -1,8 +1,8 @@
 ---
 title: Document.querySelector()
 slug: Web/API/Document/querySelector
-translation_of: Web/API/Document/querySelector
 ---
+
 {{ ApiRef("DOM") }}
 
 ## Sumário
@@ -44,11 +44,11 @@ Gera uma exceção `SYNTAX_ERR` se o grupo de seletores utilizado for inválido.
 
 ## Especificação
 
-- [Selectors API](http://www.w3.org/TR/selectors-api/)
+- [Selectors API](https://www.w3.org/TR/selectors-api/)
 
 ## Veja também:
 
 - {{domxref("document.querySelectorAll()")}}
 - {{domxref("element.querySelector()")}}
 - {{domxref("element.querySelectorAll()")}}
-- [Code snippets for querySelector](/pt-BR/docs/Code_snippets/QuerySelector "en-US/docs/Code snippets/QuerySelector")
+- [Code snippets for querySelector](/pt-BR/docs/Code_snippets/QuerySelector)

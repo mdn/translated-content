@@ -90,7 +90,7 @@ document.querySelector("#id-checkbox").addEventListener("click", function(event)
 
 #### JavaScript
 
-这里是相关的 JavaScript 代码。首先，监听{{event("keypress")}}事件：
+这里是相关的 JavaScript 代码。首先，监听[`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)事件：
 
 ```js
 var myTextbox = document.getElementById('my-textbox');

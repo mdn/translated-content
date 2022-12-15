@@ -3,6 +3,7 @@ title: hue-rotate()
 slug: Web/CSS/filter-function/hue-rotate
 original_slug: Web/CSS/filter-function/hue-rotate()
 ---
+
 {{CSSRef}}
 
 **`hue-rotate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素およびその中身のコンテンツの[色相環](https://ja.wikipedia.org/wiki/%E8%89%B2%E7%9B%B8)を回転させます。結果は {{cssxref("&lt;filter-function&gt;")}} です。

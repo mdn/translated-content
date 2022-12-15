@@ -1,15 +1,10 @@
 ---
 title: Eventos online y offline
 slug: orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
-tags:
-  - AJAX
-  - DOM
-  - Desarrollo_Web
-  - Todas_las_Categorías
-translation_of: Web/API/NavigatorOnLine/Online_and_offline_events
 original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
 ---
-[Firefox 3](es/Firefox_3_para_desarrolladores) implementa [eventos Online/Offline](http://www.whatwg.org/specs/web-apps/current-work/#offline) de la [especificacióbn WHATWG Web Applications 1.0](http://www.whatwg.org/specs/web-apps/current-work/).
+
+[Firefox 3](/es/Firefox_3_para_desarrolladores) implementa [eventos Online/Offline](http://www.whatwg.org/specs/web-apps/current-work/#offline) de la [especificacióbn WHATWG Web Applications 1.0](http://www.whatwg.org/specs/web-apps/current-work/).
 
 ### Descripción
 
@@ -32,7 +27,7 @@ Cuando Firefox 3 o superiores procesan el HTML, esto causará que el recurso ref
 
 #### `navigator.onLine`
 
-[`navigator.onLine`](es/DOM/window.navigator.onLine) es una propiedad que mantiene un valor `true`/`false` (`true` para online, `false` para offline). Esta propiedad se actualiza siempre que el usuario cambia hacia "Modo sin conexión" seleccionando el menú correspondiente (Archivo -> Trabajar sin conexión en Firefox).
+[`navigator.onLine`](/es/DOM/window.navigator.onLine) es una propiedad que mantiene un valor `true`/`false` (`true` para online, `false` para offline). Esta propiedad se actualiza siempre que el usuario cambia hacia "Modo sin conexión" seleccionando el menú correspondiente (Archivo -> Trabajar sin conexión en Firefox).
 
 Además, esta propiedad se debería actualizar siempre que el navegador no sea capaz de conectarse a la red. De acuerdo con la especificación:
 
@@ -44,11 +39,11 @@ Esta propiedad existía en versiones más antiguas de Firefox e Internet Explore
 
 #### eventos "`online`" y "`offline`"
 
-[Firefox 3](es/Firefox_3_para_desarrolladores) introduce dos nuevos eventos: "`online`" y "`offline`". Estos dos eventos son iniciados en el `<body>` de cada página cuando el usuario cambia de modo online a offline. Además, los eventos emergen desde `document.body` a `document`, terminando en `window`. Ambos eventos son no-cancelables (no se puede evitar que el usuario pase a modo online u offline).
+[Firefox 3](/es/Firefox_3_para_desarrolladores) introduce dos nuevos eventos: "`online`" y "`offline`". Estos dos eventos son iniciados en el `<body>` de cada página cuando el usuario cambia de modo online a offline. Además, los eventos emergen desde `document.body` a `document`, terminando en `window`. Ambos eventos son no-cancelables (no se puede evitar que el usuario pase a modo online u offline).
 
 Puedes registrar _listeners_ para estos eventos de varias maneras habituales:
 
-- Usando [`addEventListener`](es/DOM/element.addEventListener) en `window`, `document` o `document.body`
+- Usando [`addEventListener`](/es/DOM/element.addEventListener) en `window`, `document` o `document.body`
 - estableciendo las propiedades `.ononline` u `.onoffline` en `document` o `document.body` para que apunten a un objeto JavaScript `Function` (**Nota:** usar `window.ononline` o `window.onoffline` no funcionará por razones de compatibilidad).
 - especificando los atributos `ononline="..."` u `onoffline="..."` en la etiqueta `<body>` en el código HTML.
 

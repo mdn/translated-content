@@ -3,6 +3,7 @@ title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 ---
+
 {{JSRef}}
 
 **`Math.min()`** 함수는 주어진 숫자들 중 가장 작은 값을 반환합니다.

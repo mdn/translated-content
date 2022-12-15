@@ -2,7 +2,7 @@
 title: CORS-safelisted response header (CORS セーフリストレスポンスヘッダー)
 slug: Glossary/CORS-safelisted_response_header
 ---
-_CORS セーフリストレスポンスヘッダー_ は、[CORS](/en-US/docs/Web/HTTP/CORS) レスポンスに含まれる [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)で、クライアントスクリプトに公開しても _安全_ であると見なされます。セーフリストに含まれたレスポンスヘッダーのみがウェブページで利用できます。
+_CORS セーフリストレスポンスヘッダー_ は、[CORS](/ja/docs/Web/HTTP/CORS) レスポンスに含まれる [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)で、クライアントスクリプトに公開しても _安全_ であると見なされます。セーフリストに含まれたレスポンスヘッダーのみがウェブページで利用できます。
 
 既定では以下のレスポンスヘッダーがセーフリストに含まれます。
 
@@ -16,7 +16,7 @@ _CORS セーフリストレスポンスヘッダー_ は、[CORS](/en-US/docs/We
 
 {{HTTPHeader("Access-Control-Expose-Headers")}} ヘッダーを使用して追加のヘッダーをセーフリストに追加することができます。
 
-> **Note:** {{HTTPHeader("Content-Length")}} は既定のセーフリストではありませんでした。 \[[参照](https://github.com/whatwg/fetch/pull/626)]
+> **メモ:** {{HTTPHeader("Content-Length")}} は既定のセーフリストではありませんでした。 \[[参照](https://github.com/whatwg/fetch/pull/626)]
 
 ## 例
 

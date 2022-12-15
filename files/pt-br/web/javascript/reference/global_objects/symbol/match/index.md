@@ -1,8 +1,8 @@
 ---
 title: Symbol.match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/match
 ---
+
 {{JSRef}}
 
 O símbolo **`Symbol.match`** é conhecido por especificar a compatibilidade de uam expressão regular contra uma string. Essa função é chamada pelo método {{jsxref("String.prototype.match()")}}.
@@ -28,7 +28,7 @@ O seguinte código vai lançar um {{jsxref("TypeError")}}:
 // não Symbol.match não é modificado.
 ```
 
-Entretanto, se você configurar `Symbol.match` para `false`, a verificação `isRegExp `(que usa a propriedade `match` ) que o objeto não é uma expressão regular. O método `startsWith` e `endsWith` não vão lançar um `TypeError` como consequência.
+Entretanto, se você configurar `Symbol.match` para `false`, a verificação `isRegExp` (que usa a propriedade `match` ) que o objeto não é uma expressão regular. O método `startsWith` e `endsWith` não vão lançar um `TypeError` como consequência.
 
 ```js
 var re = /foo/;

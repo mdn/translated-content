@@ -1,15 +1,9 @@
 ---
 title: Iteratores e geradores
 slug: Web/JavaScript/Guide/Iterators_and_Generators
-tags:
-  - Generators
-  - Guia(2)
-  - Intermediario(2)
-  - Iteradores
-  - JavaScript
-translation_of: Web/JavaScript/Guide/Iterators_and_Generators
 original_slug: Web/JavaScript/Guide/Iteratores_e_geradores
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Meta_programming")}}
 
 Processar cada item em uma coleção é uma operação muito comum. O JavaScript disponibiliza uma série de maneiras de iterar sobre uma coleção, desde um simples laço {{jsxref("Statements/for","for")}}, até um {{jsxref("Global_Objects/Array/map","map()")}} e também com o {{jsxref("Global_Objects/Array/filter","filter()")}}. Iteradores e Geradores trazem o conceito da interação ocorrer diretamente no núcleo da linguagem e prover um mecanismo para a customização do comportamento dos laços {{jsxref("Statements/for...of","for...of")}}.
@@ -23,7 +17,7 @@ Para detalhes, também veja:
 
 ## Iterators (Iteradores)
 
-Um objeto é um **iterator (iterador)** quando sabe como acessar itens numa coleção, um por vez, enquanto mantém rastreada a posição atual em uma dada sequência. Em JavaScript um iterator é um objeto que oferece o método `next(),` o qual retorna o próximo item da sequência. Este método retorna um objeto com duas propriedades: `done` e `value`.
+Um objeto é um **iterator (iterador)** quando sabe como acessar itens numa coleção, um por vez, enquanto mantém rastreada a posição atual em uma dada sequência. Em JavaScript um iterator é um objeto que oferece o método `next()`, o qual retorna o próximo item da sequência. Este método retorna um objeto com duas propriedades: `done` e `value`.
 
 Uma vez criado, um objeto iterator pode ser usado explicitamente ao chamar repetidas vezes o método `next()`.
 
@@ -101,7 +95,7 @@ a // "a"
 
 ## Generators
 
-Enquanto os iteradores são ferramentas muito úteis, sua criação requer um cuidado devido à necessidade de manter explícito seu estado interno. **{{jsxref("Global_Objects/Generator","Generators","","true")}}** provêm uma alternativa poderosa: eles te permitem definir um algorítimo iterativo escrevendo uma função simples que pode manter seu estado próprio.
+Enquanto os iteradores são ferramentas muito úteis, sua criação requer um cuidado devido à necessidade de manter explícito seu estado interno. **{{jsxref("Global_Objects/Generator","Generators","","true")}}** provêm uma alternativa poderosa: eles te permitem definir um algoritmo iterativo escrevendo uma função simples que pode manter seu estado próprio.
 
 Generator é um tipo especial de função que trabalha como uma factory para iteradores. A função vira um generator se ela contém uma ou mais expressões {{jsxref("Operators/yield","yield")}} e se ela usa a sintaxe {{jsxref("Statements/function*","function*")}}.
 

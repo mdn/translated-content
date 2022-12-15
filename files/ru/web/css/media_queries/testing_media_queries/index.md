@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/Media_Queries/Testing_media_queries
 original_slug: Web/CSS/Media_Queries/Тестирование_медиа_запросы
 ---
+
 {{cssref}}
 
 {{Glossary("DOM")}} предоставляет возможности, позволяющие тестировать результат [медиавыражений](/ru/docs/Web/CSS/Media_Queries) программно, с помощью интерфейса {{domxref("MediaQueryList") }}, его методов и свойств. Однажды, создав объект {{domxref("MediaQueryList") }} вы можете проверить результат выражения или получать уведомление, при изменении результата.

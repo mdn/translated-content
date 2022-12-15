@@ -1,8 +1,8 @@
 ---
 title: Meta programação
 slug: Web/JavaScript/Guide/Meta_programming
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
 
 Começando com ECMAScript 6, o JavaScript ganha suporte para os objetos {{jsxref("Proxy")}} e {{jsxref("Reflect")}}, permitindo você interceptar e definir o comportamento personalizado para operações fundamentais da linguagem (por exemplo, pesquisa de propriedade, atribuição, enumeração, invocação de função, etc). Com a ajuda destes dois objetos você será capaz de programar a nível [meta](https://pt.wikipedia.org/wiki/Metaprograma%C3%A7%C3%A3o) em JavaScript.
@@ -21,7 +21,7 @@ p.a = 1;
 console.log(p.a, p.b); // 1, 42
 ```
 
-O objeto Proxy define um _target_ (um objeto vazio aqui) e um objeto _handler_ em que um `get` _trap_ é implementado. Aqui, um objeto que está em proxy não retornará indefinido quando receber propriedades indefinidas, mas, ao contrário, retornar o número 42.
+O objeto Proxy define um `target` (um objeto vazio aqui) e um objeto `handler` em que um `get` _trap_ é implementado. Aqui, um objeto que está em proxy não retornará indefinido quando receber propriedades indefinidas, mas, ao contrário, retornar o número 42.
 
 Exemplos adicionais estão disponíveis na página de referência de {{jsxref("Proxy")}} .
 
@@ -65,8 +65,7 @@ A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja a
             <code>null</code>.
           </li>
           <li>
-            <font face="Open Sans, arial, sans-serif">Se </font
-            ><code>target</code> não puder ser extendido, o método
+            Se <code>target</code> não puder ser extendido, o método
             <code>Object.getPrototypeOf(proxy)</code> deve retornar o mesmo
             valor que <code>Object.getPrototypeOf(target)</code>.
           </li>
@@ -220,6 +219,7 @@ A tabela a seguir resume as traps disponíveis aos objetos do tipo Proxy. Veja a
         {{jsxref("Global_Objects/Proxy/handler/get", "handler.get()")}}
       </td>
       <td>
+        <!-- markdownlint-disable MD011 -->1
         Property access: <code>proxy[foo]</code>and <code>proxy.bar</code
         ><br />Inherited property access: <code>Object.create(proxy)[foo]</code
         ><br />{{jsxref("Reflect.get()")}}
@@ -375,9 +375,9 @@ typeof proxy            // "object", typeof não desencadeia nenhuma trap
 
 ## Reflexão
 
-{{jsxref("Reflect")}} é um objeto embutido que contém métodos que permitem a criação de operações interceptáveis em JavaScript. Os métodos são iguais àqueles de {{jsxref("Global_Objects/Proxy/handler","proxy handlers","","true")}}. `Reflect `não é um objeto do tipo function.
+{{jsxref("Reflect")}} é um objeto embutido que contém métodos que permitem a criação de operações interceptáveis em JavaScript. Os métodos são iguais àqueles de {{jsxref("Global_Objects/Proxy/handler","proxy handlers","","true")}}. `Reflect` não é um objeto do tipo function.
 
-`Reflect `auxilia no encaminhamento de operações padrão do handler para o target.
+`Reflect` auxilia no encaminhamento de operações padrão do handler para o target.
 
 {{jsxref("Reflect.has()")}}, por exemplo, tem o mesmo efeito prático que o operador in, com a facilidade de ser utilizado como uma função:
 
@@ -385,7 +385,7 @@ typeof proxy            // "object", typeof não desencadeia nenhuma trap
 Reflect.has(Object, "assign"); // true
 ```
 
-### Uma função `apply `melhorada
+### Uma função `apply` melhorada
 
 Em ES5, você normalmente utiliza o método {{jsxref("Function.prototype.apply()")}} para invocar uma função com um dado valor para `this` e `arguments` fornecido como um array (ou um [objeto parecido com um array](/pt-BR/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
 

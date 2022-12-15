@@ -40,7 +40,7 @@ image-rendering: unset;
 - **`pixelated`**
   - : 이미지 스케일링을 크게 확대할 때는 "nearest neighbor" 혹은 비슷한 알고리즘을 반드시 사용해야 합니다. 그래서 이미지의 큰 픽셀로 구성해서 나타낼 수 있습니다. 이미지를 작게 축소할 때는 "auto" 속성과 같습니다.
 
-> **참고:** The values <span id="cke_bm_145S" class="hidden"></span>`optimizeQuality` and `optimizeSpeed` present in early draft (and coming from its SVG counterpart) are defined as synonyms for the `auto` value.
+> **참고:** The values `optimizeQuality` and `optimizeSpeed` present in early draft (and coming from its SVG counterpart) are defined as synonyms for the `auto` value.
 
 ### 공식 문법
 

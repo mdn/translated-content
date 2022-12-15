@@ -1,8 +1,11 @@
 ---
 title: MouseEvent.pageX
 slug: Web/API/MouseEvent/pageX
+l10n:
+  sourceCommit: a36633398f827c87eb593f9647ed00bf33fd5b34
 ---
-{{APIRef("CSSOM View")}}
+
+{{APIRef("UI Events")}}
 
 **`pageX`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、マウスがクリックされた位置の X（水平）座標を、文書全体の左端からの相対座標で返します。
 これには文書の現在見えていない範囲にあるものも含みます。
@@ -10,7 +13,7 @@ slug: Web/API/MouseEvent/pageX
 文書の端をそのまま基準とするため、このプロパティは、ページの水平方向のスクロールを加味します。
 例えば、文書の左側 200 ピクセルが隠れるようにページがスクロールされ、ビューの左端から 100 ピクセル内側でマウスがクリックされた場合、 `pageX` が返す値は 300 となります。
 
-元々、このプロパティは `long` 型の整数として定義されていましたが、 [CSSOM View モジュール](/en-US/docs/Web/CSS/CSSOM_View) では、 `double` 型の浮動小数点値として再定義しています。
+元々、このプロパティは `long` 型の整数として定義されていましたが、 [CSSOM View モジュール](/ja/docs/Web/CSS/CSSOM_View) では、 `double` 型の浮動小数点値として再定義しています。
 詳しくは[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
 この方法で指定された座標について詳しくは、[座標系](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems)の[ページ](/ja/docs/Web/CSS/CSSOM_View/Coordinate_systems#ページ)の節を参照してください。
@@ -35,15 +38,9 @@ JavaScript では数値型はどちらも `Number` 型で表現されますが�
 
 ```html
 <div class="box">
-  <p>
-    このボックス内でマウスを動かして、座標の変化を確認してください。
-  </p>
-  <p>
-    <code>pageX</code>: <span id="x">n/a</span>
-  </p>
-  <p>
-    <code>pageY</code>: <span id="y">n/a</span>
-  </p>
+  <p>このボックス内でマウスを動かして、座標の変化を確認してください。</p>
+  <p><code>pageX</code>: <span id="x">n/a</span></p>
+  <p><code>pageY</code>: <span id="y">n/a</span></p>
 </div>
 ```
 
@@ -69,9 +66,9 @@ HTML は単純です。マウスイベントを監視するボックスには `"
 #### JavaScript
 
 ```js
-var box = document.querySelector(".box");
-var pageX = document.getElementById("x");
-var pageY = document.getElementById("y");
+const box = document.querySelector(".box");
+const pageX = document.getElementById("x");
+const pageY = document.getElementById("y");
 
 function updateDisplay(event) {
   pageX.innerText = event.pageX;

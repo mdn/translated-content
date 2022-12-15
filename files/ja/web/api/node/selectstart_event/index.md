@@ -3,6 +3,7 @@ title: 'Document: selectstart event'
 slug: Web/API/Node/selectstart_event
 original_slug: Web/API/Document/selectstart_event
 ---
+
 {{APIRef}}
 
 [Selection API](/ja/docs/Web/API/Selection) の **`selectstart`** イベントは新しい選択範囲をユーザが指定した際に発火します。
@@ -48,9 +49,7 @@ document.onselectstart = () => {
 
 ## 仕様
 
-| Specification                                                                            | Status                               | Comment             |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Selection API', '#selectstart-event', 'selectstart')}} | {{Spec2('Selection API')}} | Initial definition. |
+{{Specifications}}
 
 ## ブラウザ互換性
 

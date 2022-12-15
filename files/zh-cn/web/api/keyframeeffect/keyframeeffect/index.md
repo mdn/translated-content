@@ -33,7 +33,7 @@ A string defining the timing function to use for easing transitions during the a
 - `ease-in`
   - : An accelerated rate of change, going from slow to fast. Equivalent to `cubic-bezier(0.42, 0, 1, 1)`.
 - `ease-out`
-  - : 变化速率变慢了，从快到慢， 等价于`cubic-bezier(0, 0, 0.58, 1)`.
+  - : 变化速率变慢了，从快到慢，等价于`cubic-bezier(0, 0, 0.58, 1)`.
 - `ease-in-out`
   - : This rate of change speeds up in the middle. Equivalent to `cubic-bezier(0.42, 0, 0.58, 1)`.
 - `frames(<integer>)`

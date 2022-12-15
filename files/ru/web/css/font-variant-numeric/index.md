@@ -7,6 +7,7 @@ tags:
   - Шрифты CSS
 translation_of: Web/CSS/font-variant-numeric
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -19,20 +20,22 @@ translation_of: Web/CSS/font-variant-numeric
 
 [Formal syntax](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("font-variant-numeric")}}
 
-    font-variant-numeric: normal
-    font-variant-numeric: ordinal
-    font-variant-numeric: slashed-zero
-    font-variant-numeric: lining-nums         /* <numeric-figure-values> */
-    font-variant-numeric: oldstyle-nums       /* <numeric-figure-values> */
-    font-variant-numeric: proportional-nums   /* <numeric-spacing-values> */
-    font-variant-numeric: tabular-nums        /* <numeric-spacing-values> */
-    font-variant-numeric: diagonal-fractions  /* <numeric-fraction-values> */
-    font-variant-numeric: stacked-fractions   /* <numeric-fraction-values> */
-    font-variant-numeric: oldstyle-nums stacked-fractions
+```css
+font-variant-numeric: normal
+font-variant-numeric: ordinal
+font-variant-numeric: slashed-zero
+font-variant-numeric: lining-nums         /* <numeric-figure-values> */
+font-variant-numeric: oldstyle-nums       /* <numeric-figure-values> */
+font-variant-numeric: proportional-nums   /* <numeric-spacing-values> */
+font-variant-numeric: tabular-nums        /* <numeric-spacing-values> */
+font-variant-numeric: diagonal-fractions  /* <numeric-fraction-values> */
+font-variant-numeric: stacked-fractions   /* <numeric-fraction-values> */
+font-variant-numeric: oldstyle-nums stacked-fractions
 
-    font-variant-numeric: initial
-    font-variant-numeric: inherit
-    font-variant-numeric: unset
+font-variant-numeric: initial
+font-variant-numeric: inherit
+font-variant-numeric: unset
+```
 
 ### Values
 
@@ -43,13 +46,16 @@ translation_of: Web/CSS/font-variant-numeric
 - `slashed-zero`
   - : Это ключевое слово включает перечёркнутый ноль; это полезно, когда нужно чёткое различие между буквой O и цифрой 0. Это соответствует значению OpenType `zero`.
 - _\<numeric-figure-values_>
-  - : Эти значения управляют тем, какими знаками будут отображаться цифры. Возможны два значения:\* `lining-nums` включает маюскульные («заглавные») цифры, стоящие на опорной линии текста. Это соответствует значению OpenType `lnum`.
+  - : Эти значения управляют тем, какими знаками будут отображаться цифры. Возможны два значения:
+    - `lining-nums` включает маюскульные («заглавные») цифры, стоящие на опорной линии текста. Это соответствует значению OpenType `lnum`.
     - `oldstyle-nums` включает минускульные («строчные») цифры, в которых некоторые знаки (3, 4, 7, 9) уходят нижним краем под опорную линию (в русской типографике не принято, зато широко используется в западной, в основном в шрифтах с засечками). Это соответствует значению OpenType `onum`.
 - _\<numeric-spacing-values_>
-  - : Эти значения управляют горизонтальным размером цифр. Возможны два значения:\* `proportional-nums` включает цифры разной ширины. Это соответствует значению OpenType `pnum`.
+  - : Эти значения управляют горизонтальным размером цифр. Возможны два значения:
+    - `proportional-nums` включает цифры разной ширины. Это соответствует значению OpenType `pnum`.
     - `tabular-nums` включает цифры одинаковой ширины, которые легко выравниваются, как в таблицах. Это соответствуют значению OpenType `tnum`.
 - _\<numeric-fraction-values_>
-  - : Эти значения управляют отображением дробей. Возможны два значения:\* `diagonal-fractions` включает символы дробей, в которых числитель и знаменатель уменьшены и разделены косой чертой. Это соответствует значению OpenType `frac`.
+  - : Эти значения управляют отображением дробей. Возможны два значения:
+    - `diagonal-fractions` включает символы дробей, в которых числитель и знаменатель уменьшены и разделены косой чертой. Это соответствует значению OpenType `frac`.
     - `stacked-fractions` включает символы дробей, где числитель и знаменатель уменьшены, поставлены друг над другом и разделены горизонтальной чертой. Это соответствует значению OpenType `afrc`.
 
 ## Examples

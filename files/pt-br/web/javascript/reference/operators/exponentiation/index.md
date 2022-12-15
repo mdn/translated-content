@@ -1,17 +1,14 @@
 ---
 title: Operador Exponencial
 slug: Web/JavaScript/Reference/Operators/Exponentiation
-tags:
-  - JavaScript
-  - Operador Exponencial
-translation_of: Web/JavaScript/Reference/Operators/Exponentiation
 original_slug: Web/JavaScript/Reference/Operators/Operador_Exponencial
 ---
+
 {{jsSidebar("Operators")}}
 
 ## Sumário
 
-O **operador de exponenciação (\*\*)** retorna o resultado de elevar o primeiro operando à potência do
+O **operador de exponenciação (`**`)** retorna o resultado de elevar o primeiro operando à potência do
 segundo operando. É equivalente ao método `Math.pow`, exceto que também aceita números do tipo BigInt
 como operandos.
 

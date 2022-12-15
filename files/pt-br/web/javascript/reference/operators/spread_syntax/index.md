@@ -1,12 +1,8 @@
 ---
 title: Sintaxe de Espalhamento
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
-tags:
-  - ECMAScript 2015
-  - Iterator
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
+
 {{jsSidebar("Operators")}}**Sintaxe de Espalhamento (Spread syntax)** permite que um objeto iterável, como uma expressão de array ou uma string seja expandido para ser usado onde zero ou mais argumentos (para chamadas de funções) ou elementos (para arrays _literais_) são esperados, ou que um objeto seja expandido onde zero ou mais pares _propriedade:valor_ (para objetos _literais_) são esperados.{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
 
 ## Sintaxe
@@ -198,7 +194,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ### Espalhamento com muitos valores
 
-Quando usar a sintaxe de espalhamento para chamada de funções, esteja ciente da possibilidade de exceder tamanho máximo de argumentos do motor do Javascript. Veja [`apply()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).") para mais detalhes.
+Quando usar a sintaxe de espalhamento para chamada de funções, esteja ciente da possibilidade de exceder tamanho máximo de argumentos do motor do Javascript. Veja [`apply()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) para mais detalhes.
 
 ## Sintaxe Rest (parâmetros)
 

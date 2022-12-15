@@ -44,17 +44,17 @@ var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 var removed = myFish.splice(2, 0, "drum");
 
 // 运算后的 myFish: ["angel", "clown", "drum", "mandarin", "sturgeon"]
-// 被删除的元素: [], 没有元素被删除
+// 被删除的元素：[], 没有元素被删除
 ```
 
-### 从索引 2 的位置开始删除 0 个元素，插入“drum” 和 "guitar"
+### 从索引 2 的位置开始删除 0 个元素，插入“drum”和 "guitar"
 
 ```js
 var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2, 0, 'drum', 'guitar');
 
 // 运算后的 myFish: ["angel", "clown", "drum", "guitar", "mandarin", "sturgeon"]
-// 被删除的元素: [], 没有元素被删除
+// 被删除的元素：[], 没有元素被删除
 ```
 
 ### 从索引 3 的位置开始删除 1 个元素
@@ -64,7 +64,7 @@ var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(3, 1);
 
 // 运算后的 myFish: ["angel", "clown", "drum", "sturgeon"]
-// 被删除的元素: ["mandarin"]
+// 被删除的元素：["mandarin"]
 ```
 
 ### 从索引 2 的位置开始删除 1 个元素，插入“trumpet”
@@ -74,7 +74,7 @@ var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
 var removed = myFish.splice(2, 1, "trumpet");
 
 // 运算后的 myFish: ["angel", "clown", "trumpet", "sturgeon"]
-// 被删除的元素: ["drum"]
+// 被删除的元素：["drum"]
 ```
 
 ### 从索引 0 的位置开始删除 2 个元素，插入"parrot"、"anemone"和"blue"
@@ -84,7 +84,7 @@ var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 
 // 运算后的 myFish: ["parrot", "anemone", "blue", "trumpet", "sturgeon"]
-// 被删除的元素: ["angel", "clown"]
+// 被删除的元素：["angel", "clown"]
 ```
 
 ### 从索引 2 的位置开始删除 2 个元素
@@ -94,7 +94,7 @@ var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(myFish.length - 3, 2);
 
 // 运算后的 myFish: ["parrot", "anemone", "sturgeon"]
-// 被删除的元素: ["blue", "trumpet"]
+// 被删除的元素：["blue", "trumpet"]
 ```
 
 ### 从索引 -2 的位置开始删除 1 个元素
@@ -104,7 +104,7 @@ var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(-2, 1);
 
 // 运算后的 myFish: ["angel", "clown", "sturgeon"]
-// 被删除的元素: ["mandarin"]
+// 被删除的元素：["mandarin"]
 ```
 
 ### 从索引 2 的位置开始删除所有元素
@@ -114,7 +114,7 @@ var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2);
 
 // 运算后的 myFish: ["angel", "clown"]
-// 被删除的元素: ["mandarin", "sturgeon"]
+// 被删除的元素：["mandarin", "sturgeon"]
 ```
 
 ## 规范

@@ -2,6 +2,7 @@
 title: Random Number Generator (乱数発生器)
 slug: Glossary/RNG
 ---
+
 **PRNG** (擬似乱数発生器) は、複雑で、予測できないように見えるパターンの数字を出力するためのアルゴリズムです。真の乱数 (放射性線源など) はまったく予測できないのに対し、すべてのアルゴリズムは予測可能なので、 PRNG は、開始パラメーターや*シード*が同じときには同じ数値を返します。
 
 疑似乱数はゲームなど、様々な応用分野で使用されています。
@@ -17,7 +18,7 @@ slug: Glossary/RNG
 
 ### 一般知識
 
-- Wikipedia の{{Interwiki("wikipedia", "Pseudorandom number generator")}}
+- Wikipedia の[擬似乱数](https://ja.wikipedia.org/wiki/擬似乱数)
 - JavaScript の組み込み PRNG 関数である {{jsxref("Math.random()")}}。これは暗号学的に安全な PRNG ではありません。
 - {{domxref("Crypto.getRandomValues()")}}: 暗号学的に安全な数値を提供するためのものです。
 

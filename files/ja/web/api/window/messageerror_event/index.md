@@ -1,37 +1,50 @@
 ---
 title: 'Window: messageerror イベント'
 slug: Web/API/Window/messageerror_event
+l10n:
+  sourceCommit: f7dae62645a2c735ed6f6ed63f664bf279fdfc4b
 ---
+
 {{APIRef}}
 
 `messageerror` イベントは、解読できないメッセージを受け取った時に {{domxref('Window')}} オブジェクトに発生します。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">バブリング</th>
-      <td>なし</td>
-    </tr>
-    <tr>
-      <th scope="row">キャンセル</th>
-      <td>不可</td>
-    </tr>
-    <tr>
-      <th scope="row">インターフェイス</th>
-      <td>{{domxref("MessageEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">イベントハンドラープロパティ</th>
-      <td>
-        {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}}
-      </td>
-    </tr>
-  </tbody>
-</table>
+このイベントはキャンセル不可で、バブリングしません。
+
+## 構文
+
+このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} のようなメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
+
+```js
+addEventListener('messageerror', (event) => { });
+
+onmessageerror = (event) => { };
+```
+
+## イベント型
+
+{{domxref("MessageEvent")}} です。 {{domxref("Event")}} を継承しています。
+
+{{InheritanceDiagram("MessageEvent")}}
+
+## イベントプロパティ
+
+_このインターフェイスは親である {{domxref("Event")}} からプロパティを継承しています。_
+
+- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+  - : メッセージ送信元によって送信されたデータです。
+- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
+  - : 文字列で、メッセージ送信元のオリジンを表します。
+- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
+  - : 文字列で、このイベントの一意の ID を表します。
+- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
+  - : `MessageEventSource` （{{domxref("WindowProxy")}}、{{domxref("MessagePort")}}、{{domxref("ServiceWorker")}} の何れかのオブジェクト）で、メッセージの送信元を表します。
+- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
+  - : {{domxref("MessagePort")}} オブジェクトの配列で、メッセージが送信されるチャンネルに関連するポートを表します（チャンネルメッセージングや、共有ワーカーにメッセージを送信する場合など、適切な場合）。
 
 ## 例
 
-`messageerror` は {{domxref("EventTarget/addEventListener", "addEventListener()")}} を使用して待ち受けします。
+`messageerror` を {{domxref("EventTarget/addEventListener", "addEventListener()")}} で待待ち受けします。
 
 ```js
 window.addEventListener('messageerror', (event) => {
@@ -39,7 +52,7 @@ window.addEventListener('messageerror', (event) => {
 });
 ```
 
-同じですが、 {{domxref("WindowEventHandlers/onmessageerror", "onmessageerror")}} イベントハンドラープロパティを使用する場合です。
+同じもので、 `onmessageerror` イベントハンドラープロパティを使用したものです。
 
 ```js
 window.onmessageerror = (event) => {
@@ -49,13 +62,11 @@ window.onmessageerror = (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             |
-| ------------------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'indices.html#event-messageerror')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.messageerror_event")}}
+{{Compat}}
 
 ## 関連情報
 

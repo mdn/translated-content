@@ -1,15 +1,9 @@
 ---
 title: ':-moz-broken'
 slug: Web/CSS/:-moz-broken
-tags:
-  - CSS
-  - NeedsCompatTable
-  - NeedsExample
-  - No estandar
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-broken
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}
+
+{{Non-standard_header}}{{CSSRef}}
 
 ## Resumen
 

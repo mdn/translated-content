@@ -1,15 +1,8 @@
 ---
 title: BroadcastChannel
 slug: Web/API/BroadcastChannel
-tags:
-  - API
-  - Broadcast Channel API
-  - Experimental
-  - HTML API
-  - Interface
-  - Reference
-translation_of: Web/API/BroadcastChannel
 ---
+
 {{APIRef("Broadcast Channel API")}}
 
 A interface **`BroadcastChannel`** representa um canal com um nome em que qualquer {{glossary("browsing context")}} (contexto de navegação) de uma determinada {{glossary("origin")}} (origem) pode assinar. Permite a comunicação entre diferentes documentos (em diferentes janelas, abas, frames ou iframes) da mesma _origin_. As mensagens são transmitidas através de um evento {{event("message")}} acionado em todos objetos do tipo `BroadcastChannel` que estão ouvindo o canal.
@@ -27,12 +20,11 @@ _Essa interface também herda propriedades de seu pai, {{domxref("EventTarget")}
 
 - {{domxref("BroadcastChannel.name")}}
   - : Retorna um {{domxref("DOMString")}}, o nome do canal.
-- ### Event handlers
 
-  {{domxref("BroadcastChannel.onmessage")}}
+### Event handlers
 
+- {{domxref("BroadcastChannel.onmessage")}}
   - : Uma propriedade {{event("Event_handlers", "event handler")}} que específica a função a ser executada quando um evento {{event("message")}} é acionado a este objeto.
-
 - {{domxref("BroadcastChannel.onmessageerror")}}
   - : Uma chamada {{event("Event_handlers", "event handler")}} quando um {{domxref("MessageEvent")}} do tipo {{domxref("MessageError")}} é disparado - isto é, quando recebe uma mensagem que não pode ser desserializada.
 

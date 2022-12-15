@@ -1,11 +1,9 @@
 ---
 title: Mutável
 slug: Glossary/Mutable
-tags:
-  - mutavel
-translation_of: Glossary/Mutable
 original_slug: Glossario/Mutavel
 ---
+
 _Mutável_ é o tipo da variável que pode ser alterada. Em {{glossary("JavaScript")}}, somente {{Glossary("Object","objetos")}} e {{Glossary("Array","arrays")}} são mutáveis, {{Glossary("primitive", "valores primitivos")}} não.
 
 (Você _pode_ fazer o nome da variável apontar para um novo valor, mas o valor anterior continua na memória. Logo, a necessidade da coleta de lixo, "garbage collection")
@@ -28,11 +26,11 @@ stringImutavel = stringImutavel + 'World';
 
 Ao anexar a 'stringImutavel' com um valor de string, os seguintes eventos ocorrem:
 
-1.  O valor existente de 'stringImutavel' é recuperado.
-2.  'World' é anexado ao valor existente de 'stringImutavel'.
-3.  O valor resultante é então alocado para um novo bloco na memória.
-4.  O objeto 'stringImutavel' agora aponta para um novo espaço de memória criado.
-5.  O espaço de memória criado anteriormente está habilitado para a coleta de lixo.
+1. O valor existente de 'stringImutavel' é recuperado.
+2. 'World' é anexado ao valor existente de 'stringImutavel'.
+3. O valor resultante é então alocado para um novo bloco na memória.
+4. O objeto 'stringImutavel' agora aponta para um novo espaço de memória criado.
+5. O espaço de memória criado anteriormente está habilitado para a coleta de lixo.
 
 ## Aprenda mais
 

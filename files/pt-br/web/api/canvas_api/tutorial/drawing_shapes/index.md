@@ -1,24 +1,16 @@
 ---
 title: Desenhando formas com canvas
 slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
-tags:
-  - Canvas
-  - Gráficos(2)
-  - HTML
-  - HTML Canvas
-  - HTML5
-  - Intermediário
-  - Tutorial
-translation_of: Web/API/Canvas_API/Tutorial/Drawing_shapes
 original_slug: Web/Guide/HTML/Canvas_tutorial/Drawing_shapes
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_usage", "Web/API/Canvas_API/Tutorial/Applying_styles_and_colors")}}
 
 Agora que criamos nosso [ambiente em canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Basic_usage), podemos entrar nos detalhes de como desenhar no canvas. No final deste artigo, você terá aprendido a desenhar retângulos, triângulos, linhas, arcos e curvas, proporcionando familiaridade com algumas das formas básicas. Trabalhar com caminhos (_shapes_) é essencial ao desenhar objetos na tela e veremos como isso pode ser feito.
 
 ## A grade
 
-![](https://mdn.mozillademos.org/files/224/Canvas_default_grid.png)Antes que possamos começar a desenhar, precisamos falar sobre a grade de tela ou **espaço de coordenadas**. O modelo HTML na página anterior tinha um elemento canvas de 150 pixels de largura e 150 pixels de altura. À direita, você verá este canvas com a grade padrão sobreposta. Normalmente 1 unidade na grade corresponde a um pixel na tela. A origem desta grade está posicionada no canto superior esquerdo (coordenadas (0,0)). Todos os elementos são colocados em relação a esta origem. Assim, a posição do canto superior esquerdo do quadrado azul, se torna x pixels dos pixels da esquerda e y a partir do topo (coordenadas (x,y)). Mais tarde nesse tutorial vamos ver como podemos traduzir a origem para uma posição diferente, girar a grade e até mesmo escaloná-la. Por enquanto vamos ficar com o padrão.
+![](canvas_default_grid.png)Antes que possamos começar a desenhar, precisamos falar sobre a grade de tela ou **espaço de coordenadas**. O modelo HTML na página anterior tinha um elemento canvas de 150 pixels de largura e 150 pixels de altura. À direita, você verá este canvas com a grade padrão sobreposta. Normalmente 1 unidade na grade corresponde a um pixel na tela. A origem desta grade está posicionada no canto superior esquerdo (coordenadas (0,0)). Todos os elementos são colocados em relação a esta origem. Assim, a posição do canto superior esquerdo do quadrado azul, se torna x pixels dos pixels da esquerda e y a partir do topo (coordenadas (x,y)). Mais tarde nesse tutorial vamos ver como podemos traduzir a origem para uma posição diferente, girar a grade e até mesmo escaloná-la. Por enquanto vamos ficar com o padrão.
 
 ## Desenhando retângulos
 
@@ -62,7 +54,7 @@ function draw() {
 
 O resultado desse exemplo é mostrado abaixo.
 
-{{EmbedLiveSample('Exemplo_de_forma_retangular', 160, 160, "https://mdn.mozillademos.org/files/245/Canvas_rect.png")}}
+{{EmbedLiveSample('Exemplo_de_forma_retangular', 160, 160, "canvas_rect.png")}}
 
 A função `fillRect()` desenha um grande quadrado preto de 100 pixels. A função `clearRect()` por sua vez apaga um quadrado de 60x60 pixels a partir do centro, por fim, a função `strokeRect()` é chamada para criar uma borda de 50x50 pixels em volta do quadrado apagado.
 
@@ -76,14 +68,8 @@ Para criar uma camada usando caminhos (regiões ou _paths_) é necessário algun
 
 - {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}
   - : Cria um novo path. Uma vez criado, futuros comandos de desenho são direcionados do path atual para a construção de um novo path no canvas.
-
-<!---->
-
 - [Métodos de Caminhos (Path)](/pt-BR/docs/Web/API/CanvasRenderingContext2D#Paths)
   - : Métodos para manipuliar diferentes paths para objetos.
-
-<!---->
-
 - {{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}
   - : Finaliza o path para futuros comandos de desenho, fazendo com que voltem a ser direcionados ao contexto.
 - {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}}
@@ -130,7 +116,7 @@ function draw() {
 
 O resultado se parece com isso:
 
-{{EmbedLiveSample('Desenhando_um_triângulo', 160, 160, "https://mdn.mozillademos.org/files/9847/triangle.png")}}
+{{EmbedLiveSample('Desenhando_um_triângulo', 160, 160, "triangle.png")}}
 
 ### Desenhando
 
@@ -172,7 +158,7 @@ function draw() {
 
 O resultado aparece como:
 
-{{EmbedLiveSample("Desenhando", 160, 160, "https://mdn.mozillademos.org/files/252/Canvas_smiley.png")}}
+{{EmbedLiveSample("Desenhando", 160, 160, "canvas_smiley.png")}}
 
 Se você não gosta de ver linhas conectadas, você pode remover as linhas que chamam a função `moveTo()`.
 
@@ -223,7 +209,7 @@ function draw() {
 
 Isso começa chamando o método `beginPath()` para iniciar um novo _shape path_. Em seguida, usamos o método `moveTo()` para mover o ponto inicial para a posição desejada. Logo abaixo, duas linhas, que compõem os dois lados do triângulo, são desenhadas.
 
-{{EmbedLiveSample("Linhas", 160, 160, "https://mdn.mozillademos.org/files/238/Canvas_lineTo.png")}}
+{{EmbedLiveSample("Linhas", 160, 160, "canvas_lineto.png")}}
 
 Você notará a diferença entre o triângulo preenchido (_filled_) e não prenchido (_stroked_). Isto ocorre, como mencionado acima, porque as formas são automaticamente fechadas quando um caminho é preenchido, mas não quando são não preenchidos. Se deixássemos de fora o `closePath()` para os triângulos não preenchidos, apenas duas linhas teriam sido desenhadas, não um triângulo completo.
 
@@ -287,7 +273,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Arcos", 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png")}}
+{{EmbedLiveSample("Arcos", 160, 210, "canvas_arc.png")}}
 
 ### Curvas de Bézier Cúbicas e Quadráticas
 
@@ -298,9 +284,9 @@ O próximo tipo de caminhos disponíveis são as Curvas de Bézier, disponíveis
 - {{domxref("CanvasRenderingContext2D.bezierCurveTo", "bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)")}}
   - : Desenha uma curva de Bézier cúbica partindo da posição atual indicada pelo cursor, até a posição final especificada por `x` e `y`, usando o controle de pontos guiados por (`cp1x`, `cp1y`) e (cp2x, cp2y).
 
-![](https://mdn.mozillademos.org/files/223/Canvas_curves.png)A diferença entre estes métodos pode ser descrita de forma melhor usando a imagem à direita. Uma curva quadrática de Bézier tem um ponto inicial e final (pontos azuis) e apenas um ponto de controle (indicado pelo ponto vermelho) enquanto que uma curva cúbica de Bézier utiliza dois pontos de controles.
+![](canvas_curves.png)A diferença entre estes métodos pode ser descrita de forma melhor usando a imagem à direita. Uma curva quadrática de Bézier tem um ponto inicial e final (pontos azuis) e apenas um ponto de controle (indicado pelo ponto vermelho) enquanto que uma curva cúbica de Bézier utiliza dois pontos de controles.
 
-Os parâmetros `x` e `y` em ambos os métodos são as coordenadas do ponto final. `cp1x` e` cp1y` são as coordenadas do primeiro ponto de controle, e `cp2x` e `cp2y` são as coordenadas do segundo ponto de controle.
+Os parâmetros `x` e `y` em ambos os métodos são as coordenadas do ponto final. `cp1x` e `cp1y` são as coordenadas do primeiro ponto de controle, e `cp2x` e `cp2y` são as coordenadas do segundo ponto de controle.
 
 Usando curvas de Bézier quadráticas e cúbicas pode ser algo bastante desafiador, porque ao contrário de um software de desenho vetorial, como o Adobe Illustrator, não temos resultados visuais imediatos sobre o que estamos fazendo. Isso torna bastante difícil desenhar formas complexas. No exemplo a seguir, vamos desenhar algumas formas orgânicas simples, mas se você tiver tempo e, acima de tudo, paciência, formas muito mais complexas podem ser criadas.
 
@@ -338,7 +324,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample('Curvas_de_Bézier_Quadráticas', 160, 160, "https://mdn.mozillademos.org/files/243/Canvas_quadratic.png")}}
+{{EmbedLiveSample('Curvas_de_Bézier_Quadráticas', 160, 160, "canvas_quadratic.png")}}
 
 #### Curvas de Bézier Cúbicas
 
@@ -372,7 +358,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample('Curvas_de_Bézier_Cúbicas', 160, 160, "https://mdn.mozillademos.org/files/207/Canvas_bezier.png")}}
+{{EmbedLiveSample('Curvas_de_Bézier_Cúbicas', 160, 160, "canvas_bezier.png")}}
 
 ### Retângulos
 
@@ -483,7 +469,7 @@ function roundedRect(ctx,x,y,width,height,radius){
 
 O resultado é:
 
-{{EmbedLiveSample("Combinando_Elementos", 160, 160, "https://mdn.mozillademos.org/files/9849/combinations.png")}}
+{{EmbedLiveSample("Combinando_Elementos", 160, 160, "combinations.png")}}
 
 Não vamos discutir isso em detalhes, uma vez que é realmente muito simples. As coisas mais importantes a serem observadas são o uso da propriedade `fillStyle` no contexto de desenho e o uso de uma função auxiliar (neste caso `roundedRect()`). Usando funções auxiliares para construir um desenho frequentemente pode ser muito útil, além de reduzir a quantidade de código que você precisa, bem como a sua complexidade.
 
@@ -541,7 +527,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Exemplo_de_Path2D", 140, 110, "https://mdn.mozillademos.org/files/9851/path2d.png")}}
+{{EmbedLiveSample("Exemplo_de_Path2D", 140, 110, "path2d.png")}}
 
 ### Usando _paths_ em SVG
 

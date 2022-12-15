@@ -2,6 +2,7 @@
 title: VideoTrackList
 slug: Web/API/VideoTrackList
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`VideoTrackList`** インターフェイスは、{{HTMLElement("video")}} 要素内に含まれる動画トラックのリストを表すために使用します。 各トラックはリスト内の個別の {{domxref("VideoTrack")}} オブジェクトで表します。
@@ -75,9 +76,7 @@ function updateTrackCount(event) {
 
 ## 仕様書
 
-| 仕様書                                                                               | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', '#videotracklist', 'VideoTrackList')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

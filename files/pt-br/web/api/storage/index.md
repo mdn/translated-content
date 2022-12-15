@@ -1,17 +1,8 @@
 ---
 title: Storage
 slug: Web/API/Storage
-tags:
-  - API
-  - Interface
-  - NeedsTranslation
-  - Reference
-  - Storage
-  - TopicStub
-  - Web Storage
-  - data
-translation_of: Web/API/Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 A interface de Armazenamento da Web Storage API fornece acesso ao armazenamento de sessão ou armazenamento local para um domínio específico, permitindo que você, por exemplo, adicione, modifique ou exclua itens de dados armazenados.
@@ -27,9 +18,6 @@ Se você quiser manipular o armazenamento de sessão para um domínio, você cha
 
 - {{domxref("Storage.key()")}}
   - : Quando passado um número n, este método retornará o nome da n-ésima chave no armazenamento..
-
-<!---->
-
 - {{domxref("Storage.getItem()")}}
   - : Quando passado um nome de chave, retornará o valor dessa chave.
 - {{domxref("Storage.setItem()")}}

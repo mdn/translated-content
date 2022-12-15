@@ -38,7 +38,6 @@ L'événement **focusin** est déclenché lorsqu'un élément est sur le point d
 
 ## Evénements liés
 
-- {{event("focus")}}
-- {{event("blur")}}
-- {{event("focusin")}}
-- {{event("focusout")}}
+- [`focus`](/fr/docs/Web/API/Element/focus_event)
+- [`blur`](/fr/docs/Web/API/Element/blur_event)
+- [`focusout`](/fr/docs/Web/API/Element/focusout_event)

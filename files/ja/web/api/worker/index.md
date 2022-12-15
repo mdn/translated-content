@@ -4,6 +4,7 @@ slug: Web/API/Worker
 l10n:
   sourceCommit: 6fefcdd237a377af5c066dc2734c118feadbbef9
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`Worker`** は[ウェブワーカー API](/ja/docs/Web/API/Web_Workers_API) のインターフェイスで、スクリプトで生成することができるバックグラウンドタスクを表し、作成元にメッセージを送り返すことができます。
@@ -83,4 +84,4 @@ first.onchange = () => {
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [ウェブワーカーで使用可能な関数一覧](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)
 - 他の種類のワーカー: {{domxref("SharedWorker")}}、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)
-- [`OffscreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) インターフェイス
+- [`OffscreenCanvas`](/ja/docs/Web/API/OffscreenCanvas) インターフェイス

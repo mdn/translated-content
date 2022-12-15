@@ -2,6 +2,7 @@
 title: TextEncoder.encodeInto()
 slug: Web/API/TextEncoder/encodeInto
 ---
+
 {{APIRef("Encoding API")}}{{SeeCompatTable}}
 
 **`TextEncoder.encodeInto()`** メソッドは、エンコードする文字列と、 UTF-8 エンコード後のテキスト格納先となる {{jsxref("Uint8Array")}} を受け取り、エンコードの進行状況を示す辞書オブジェクトを返します。これは古い `encode()` メソッドよりも潜在的に性能が高く、特にターゲットバッファーが Wasm ヒープへのビューである場合、より効果的です。

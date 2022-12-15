@@ -1,5 +1,5 @@
 ---
-title: Using the Resource Timing API
+title: 使用 Resource Timing API
 slug: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
 ---
 
@@ -24,7 +24,7 @@ slug: Web/API/Resource_Timing_API/Using_the_Resource_Timing_API
 
 ## 计算资源加载各阶段的时间
 
-接下来的这段例子展示了用 Resource timing 属性去计算以下阶段的耗时：重定向 ({{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} 和 {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} )，DNS 查询 ({{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} 和 {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}})，TCP 握手 ({{domxref('PerformanceResourceTiming.connectStart','connectStart')}} 和 {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}})， 响应 ({{domxref('PerformanceResourceTiming.responseStart','responseStart')}} 和 {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}})。 这段例子也计算了从开始获取资源和请求开始（分别为{{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} and {{domxref("PerformanceResourceTiming.requestStart","requestStart")}}）到响应结束 ({{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}) 的时间。
+接下来的这段例子展示了用 Resource timing 属性去计算以下阶段的耗时：重定向 ({{domxref("PerformanceResourceTiming.redirectStart","redirectStart")}} 和 {{domxref("PerformanceResourceTiming.redirectEnd","redirectEnd")}} )，DNS 查询 ({{domxref("PerformanceResourceTiming.domainLookupStart","domainLookupStart")}} 和 {{domxref("PerformanceResourceTiming.domainLookupEnd","domainLookupEnd")}})，TCP 握手 ({{domxref('PerformanceResourceTiming.connectStart','connectStart')}} 和 {{domxref('PerformanceResourceTiming.connectEnd','connectEnd')}})，响应 ({{domxref('PerformanceResourceTiming.responseStart','responseStart')}} 和 {{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}})。这段例子也计算了从开始获取资源和请求开始（分别为{{domxref("PerformanceResourceTiming.fetchStart","fetchStart")}} and {{domxref("PerformanceResourceTiming.requestStart","requestStart")}}）到响应结束 ({{domxref('PerformanceResourceTiming.responseEnd','responseEnd')}}) 的时间。
 
 ```js
 function calculate_load_times() {
@@ -169,7 +169,7 @@ function set_resource_timing_buffer_size(n) {
 }
 ```
 
-The {{domxref("Performance")}} interface has a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event handler that gets called (with an {{domxref("Event")}} of type {{domxref("Event.type")}} of "{{event("resourcetimingbufferfull")}}") when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.onresourcetimingbufferfull","onresourcetimingbufferfull")}} event callback in the `init()` function.
+The {{domxref("Performance.resourcetimingbufferfull_event","resourcetimingbufferfull")}} event is fired at the {{domxref("Performance")}} object when the browser's resource performance entry buffer is full. The following code example sets a {{domxref("Performance.resourcetimingbufferfull_event","onresourcetimingbufferfull")}} event handler in the `init()` function.
 
 ```js
 function buffer_full(event) {

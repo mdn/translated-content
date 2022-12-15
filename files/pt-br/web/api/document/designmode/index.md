@@ -1,8 +1,8 @@
 ---
 title: Document.designMode
 slug: Web/API/Document/designMode
-translation_of: Web/API/Document/designMode
 ---
+
 {{ ApiRef() }}
 
 ## Sumário
@@ -34,8 +34,6 @@ iframe_node.contentDocument.designMode = "on";
 ## Compatibilidade com navegadores
 
 {{Compat("api.Document.designMode")}}
-
-##
 
 ## Veja também:
 

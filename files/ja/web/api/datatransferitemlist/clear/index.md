@@ -2,6 +2,7 @@
 title: DataTransferItemList.clear()
 slug: Web/API/DataTransferItemList/clear
 ---
+
 {{domxref("DataTransferItemList")}} の **`clear()`** メソッドは、ドラッグデータアイテムリストからすべての {{domxref("DataTransferItem")}} オブジェクトを削除し、リストを空にします。
 
 このリストが保持されるドラッグデータストアは、 {{event("dragstart")}} イベントの処理中にのみ書き込み可能になります。 {{event("drop")}} を処理する間、ドラッグデータストアは読み取り専用モードであり、このメソッドは何もしません。例外も投げません。
@@ -115,11 +116,7 @@ function dragend_handler(ev) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                                                      |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'interaction.html#dom-datatransferitemlist-clear','clear()')}} | {{Spec2('HTML WHATWG')}} |                                                           |
-| {{SpecName('HTML5.1', 'editing.html#dom-datatransferitemlist-clear','clear()')}}         | {{Spec2('HTML5.1')}}     | W3C HTML5 {{Spec2('HTML5 W3C')}} には含まれていない |
-|                                                                                                                      |                                  |                                                           |
+{{Specifications}}
 
 ## ブラウザーの対応
 

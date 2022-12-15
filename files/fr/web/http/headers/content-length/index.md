@@ -44,7 +44,7 @@ Content-Length: <longueur>
 
 ## Compatibilité des navigateurs
 
-{{Compat("http/headers/content-length")}}
+{{Compat}}
 
 ## Voir aussi
 

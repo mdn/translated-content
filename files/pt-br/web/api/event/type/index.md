@@ -1,8 +1,8 @@
 ---
 title: Event.type
 slug: Web/API/Event/type
-translation_of: Web/API/Event/type
 ---
+
 {{APIRef("DOM")}}
 
 ## Sumário
@@ -11,7 +11,7 @@ Retorna uma string contendo o tipo de evento.
 
 O argumento do evento {{ domxref("EventTarget.addEventListener()") }} e {{ domxref("EventTarget.removeEventListener()") }} é caso insensível(case insensitive).
 
-Veja [Mozilla event reference](/pt-BR/docs/Mozilla_event_reference "Mozilla event reference") para obter a lista de tipos de evento disponíveis
+Veja [Mozilla event reference](/pt-BR/docs/Mozilla_event_reference) para obter a lista de tipos de evento disponíveis
 
 ## Sintaxe
 
@@ -58,4 +58,4 @@ function getEvtType(evt) {
 
 ## Especificação
 
-- [type](http://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-type)
+- [type](https://www.w3.org/TR/2000/REC-DOM-Level-2-Events-20001113/events.html#Events-Event-type)

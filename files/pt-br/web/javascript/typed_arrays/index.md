@@ -1,18 +1,15 @@
 ---
 title: Arrays tipados no JavaScript
 slug: Web/JavaScript/Typed_arrays
-tags:
-  - Guía
-  - JavaScript
-translation_of: Web/JavaScript/Typed_arrays
 ---
+
 {{JsSidebar("Advanced")}}Os arrays tipados do Javascript são objetos parecidos com arrays convencionais, e fornecem um mecanismo para lidar com dados binários em sua forma "bruta". Como você já deve saber, objetos do tipo {{jsxref("Array")}} aumentam e encolhem dinamicamente, e podem conter qualquer tipo de valor possível no Javascript. Os interpretadores Javascript realizam otimizações para que estes arrays sejam rápidos de se manipular. Todavia, à medida em que as aplicações web tornam-se mais e mais poderosas, adicionando recursos como manipulação de áudio e vídeo, acesso a dados brutos utilizando WebSockets, e assim por diante, tornou-se claro que há momentos em que seria útil ao código Javascript ser capaz de manipular dados binários "brutos" em arrays tipados, de forma rápida e fácil.Entretanto, os arrays tipados não devem ser confundidos com arrays convencionais, já que invocar o método {{jsxref("Array.isArray()")}} em um array tipado retornará `false`. Além disso, nem todos os métodos disponíveis para arrays normais são suportados pelos arrays tipados (ex. push e pop).
 
 ## Buffers e views: a arquitetura dos arrays tipados
 
 Para alcançar a máxima flexibilidade e eficiência, os arrays tipados do Javascript dividem sua implementação entre **buffers** e **views**. Um buffer (implementado pelo objeto {{jsxref("ArrayBuffer")}}) é um objeto que representa um fragmento (chunk) de dados; Não possui formato para ser discutido, e não oferece mecanismos para acessar seu conteúdo. Para acessar os dados contidos em um buffer, você precisa utilizar uma view. Uma view fornece um contexto — isto é, um tipo de dado, o deslocamento inicial, e o número de elementos — que transforma estes dados em um array tipado.
 
-![Typed arrays in an ArrayBuffer](https://mdn.mozillademos.org/files/8629/typed_arrays.png)
+![Typed arrays in an ArrayBuffer](typed_arrays.png)
 
 ### ArrayBuffer
 
@@ -34,7 +31,7 @@ O objeto do tipo {{jsxref("DataView")}} é uma interface de baixo nível que for
   - : O método `FileReader.prototype.readAsArrayBuffer()` inicia a leitura do conteúdo de um objeto do tipo [Blob](/pt-BR/docs/Web/API/Blob) ou [FIle](/pt-BR/docs/Web/API/File) especificado.
 - [`XMLHttpRequest.prototype.send()`](</pt-BR/docs/Web/API/XMLHttpRequest#send()>)
   - : O método `send()` das instâncias de `XMLHttpRequest` agora suportam arrays tipados e objetos do tipo {{jsxref("ArrayBuffer")}} como argumento.
-- [`ImageData.data`](https://developer.mozilla.org/en-US/docs/Web/API/ImageData)
+- [`ImageData.data`](/pt-BR/docs/Web/API/ImageData)
   - : É objeto do tipo {{jsxref("Uint8ClampedArray")}} que representa uma matriz unidimensional que contém dados na ordem RGBA, com valores numéricos entre `0` e `255` inclusive.
 
 ## Exemplos
@@ -98,7 +95,7 @@ A saída disso é "Entrada 0 na matriz de 32 bits agora é 32". Em outras palavr
 
 ### Trabalhando com Estruturas de Dados Complexas
 
-Ao combinar um único buffer com várias exibições de diferentes tipos, iniciando em diferentes deslocamentos no buffer, você pode interagir com objetos de dados contendo vários tipos de dados. Isso permite, por exemplo, interagir com estruturas de dados complexas de WebGL, arquivos de dados ou estruturas C que você precisa usar ao usar [js-ctypes](/pt-BR/docs/Mozilla/js-ctypes "js-ctypes").
+Ao combinar um único buffer com várias exibições de diferentes tipos, iniciando em diferentes deslocamentos no buffer, você pode interagir com objetos de dados contendo vários tipos de dados. Isso permite, por exemplo, interagir com estruturas de dados complexas de WebGL, arquivos de dados ou estruturas C que você precisa usar ao usar [js-ctypes](/pt-BR/docs/Mozilla/js-ctypes).
 
 Considere esta estrutura em C:
 
@@ -148,7 +145,7 @@ normalArray.constructor === Array;
 ## Veja também
 
 - [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/pt-BR/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
-- [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Code_snippets/StringView "/en-US/docs/Web/JavaScript/Typed_arrays/StringView")
+- [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Code_snippets/StringView)
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
 - [Typed Arrays: Binary Data in the Browser](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

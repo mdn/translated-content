@@ -1,19 +1,8 @@
 ---
 title: Element.scrollIntoView()
 slug: Web/API/Element/scrollIntoView
-tags:
-  - API
-  - CSSOM Views
-  - DOM
-  - Elemento
-  - Experimental
-  - Referencia
-  - Rolagem
-  - View
-  - metodo
-  - scrollIntoView
-translation_of: Web/API/Element/scrollIntoView
 ---
+
 {{ APIRef("DOM")}}{{SeeCompatTable}}
 
 O método **`Element.scrollIntoView()`** move o elemento ao qual é aplicado para a área visível da janela do navegador.
@@ -78,4 +67,4 @@ O elemento poderá não ser movido completamento ao topo ou ao fundo dependendo 
 
 ## Veja também
 
-- {{domxref("Element.scrollIntoViewIfNeeded()")}}[ ](/pt-BR/docs/Web/API/Element/scrollIntoViewIfNeeded){{non-standard_inline}}
+- {{domxref("Element.scrollIntoViewIfNeeded()")}} {{non-standard_inline}}

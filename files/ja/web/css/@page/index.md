@@ -2,6 +2,7 @@
 title: '@page'
 slug: Web/CSS/@page
 ---
+
 {{CSSRef}}
 
 **`@page`** は CSS のアットルールで、文書を印刷するときに一部の CSS プロパティを変更するために使用します。
@@ -29,7 +30,7 @@ slug: Web/CSS/@page
 
 `@page` アットルールには、 CSS オブジェクトモデルインターフェイスの {{domxref("CSSPageRule")}} からアクセスできます。
 
-> **Note:** W3C は、ビューポートに関する {{cssxref("&lt;length&gt;")}} の単位、`vh`、`vw`、`vmin`、`vmax` の取り扱い方について議論中です。差し当たっては、これらを `@page` アットルールの中で使わないでください。
+> **メモ:** W3C は、ビューポートに関する {{cssxref("&lt;length&gt;")}} の単位、`vh`、`vw`、`vmin`、`vmax` の取り扱い方について議論中です。差し当たっては、これらを `@page` アットルールの中で使わないでください。
 
 ## 形式文法
 

@@ -2,6 +2,7 @@
 title: MediaSource.addSourceBuffer()
 slug: Web/API/MediaSource/addSourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 {{domxref("MediaSource")}} インターフェイスの **`addSourceBuffer()`** メソッドは、指定された {{Glossary("MIME type","MIME タイプ")}}の新しい {{domxref("SourceBuffer")}} を作成し、`MediaSource` の {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} リストに追加します。 新しい `SourceBuffer` も返されます。
@@ -68,9 +69,7 @@ function sourceOpen (_) {
 
 ## 仕様
 
-| 仕様                                                                                                                                                 | 状態                                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{SpecName('Media Source Extensions', '#idl-def-mediasource-addsourcebuffer(domstring)', 'addSourceBuffer()')}} | {{Spec2('Media Source Extensions')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

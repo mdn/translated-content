@@ -1,10 +1,8 @@
 ---
 title: Storage.setItem()
 slug: Web/API/Storage/setItem
-tags:
-  - Referencia
-translation_of: Web/API/Storage/setItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 O método `setItem()` da interface {{domxref("Storage")}}, quando passado 'chave' e 'valor', irá adicionar esta chave ao storage, ou atualizar o valor caso a chave já exista.

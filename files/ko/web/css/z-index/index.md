@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/z-index
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`z-index`** 속성은 [위치 지정 요소](/ko/docs/Web/CSS/position)와, 그 자손 또는 하위 플렉스 아이템의 Z축 순서를 지정합니다. 더 큰 `z-index` 값을 가진 요소가 작은 값의 요소 위를 덮습니다.

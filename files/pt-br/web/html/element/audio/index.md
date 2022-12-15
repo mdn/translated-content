@@ -1,8 +1,8 @@
 ---
 title: audio
 slug: Web/HTML/Element/Audio
-translation_of: Web/HTML/Element/audio
 ---
+
 ## Sumário
 
 O elemento `audio` é utilizado para embutir conteúdo de som em um documento HTML ou XHTML.O elemento `audio` foi adicionado como parte do HTML5.
@@ -15,7 +15,7 @@ Você pode utilizar recursos avançados da API de áudio — que são específic
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Omissão de tag           | Nenhuma, tanto as tags iniciais quanto as finais devem estar presentes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | Elementos pai permitidos | Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#flow_content), ou qualquer elemento que aceite [phrasing content](/pt-BR/docs/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                                                                                                                                                                                 |
-| Documento normativo      | [HTML5, section 4.8.7](http://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Documento normativo      | [HTML5, section 4.8.7](https://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 ## Atributos
 
@@ -31,7 +31,7 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
   - : Se esse atributo estiver presente, o navegador oferecerá controles para permitir ao usuário controlar a reprodução do áudio, incluindo volume, navegação, e pausa/continuação da reprodução.
 - {{ htmlattrdef("loop") }}
   - : Um atributo Booleano; se especificado, ao chegar no fim do áudio, ele voltará automaticamente para o começo.
-- {{ htmlattrdef("mozCurrentSampleOffset") }} {{ gecko_minversion_inline("2.0") }} {{ non-standard_inline() }}
+- {{ htmlattrdef("mozCurrentSampleOffset") }} {{ non-standard_inline() }}
   - : The offset, specified as the number of samples since the beginning of the audio stream, at which the audio is currently playing.
 - {{ htmlattrdef("muted") }}
   - : Um atributo Booleano que indica se o áudio será inicializado silenciado.
@@ -48,12 +48,12 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
 
     Se não definido, seu valor padrão será definido pelo navegador (isto é, cada navegador pode escolher seu valor padrão), embora a especificação recomenda que seja definido para o metadata.
 
-    > **Note:** **Notas de uso:**- O atributo `autoplay` tem precedência sobre o `preload,`pois se é necessário executar o áudio automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
+    > **Note:** **Notas de uso:**- O atributo `autoplay` tem precedência sobre o `preload`, pois se é necessário executar o áudio automaticamente, o navegador obviamente o baixará. Definindo ambos `autoplay` e `preload` é permitido pela especificação.
     >
     > - O navegador não é forçado pela especifição a seguir o valor desse atributo; é apenas uma sugestão.
 
 - {{ htmlattrdef("src") }}
-  - : A URL do áudio a ser incorporado. Isso é sujeito a [HTTP access controls](/pt-BR/docs/HTTP_access_control). Isto é opcional; ao invés disso você pode usar o elemento [`<source>`](http://developer.mozilla.org/en-US/docs/pt-BR/HTML/Element/source) dentro do bloco do áudio para especificar o vídeo a ser incorporado .
+  - : A URL do áudio a ser incorporado. Isso é sujeito a [HTTP access controls](/pt-BR/docs/HTTP_access_control). Isto é opcional; ao invés disso você pode usar o elemento [`<source>`](http://developer.mozilla.org/pt-BR/docs/pt-BR/HTML/Element/source) dentro do bloco do áudio para especificar o vídeo a ser incorporado .
 
 O tempo de compensação (time offset) entre o áudio e o vídeo está especificado como um valor de ponto flutuante (float) representando o número de segundos da compensação.
 

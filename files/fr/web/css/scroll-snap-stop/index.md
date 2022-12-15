@@ -32,9 +32,13 @@ scroll-snap-type: unset;
 - `always`
   - : Le conteneur de défilement ne peut pas passer sur une position d'accroche. Le conteneur doit « s'accrocher » dès la première position d'accroche de l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -200,12 +204,8 @@ scroll-snap-type: unset;
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-stop", "scroll-snap-stop")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-snap-stop")}}
+{{Compat}}

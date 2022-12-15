@@ -1,16 +1,8 @@
 ---
 title: Web Animations API
 slug: Web/API/Web_Animations_API
-tags:
-  - API
-  - Animation
-  - Landing
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-  - Web Animations
-translation_of: Web/API/Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 The **Web Animations API** allows for synchronizing and timing changes to the presentation of a Web page, i.e. animation of DOM elements. It does so by combining two models: the Timing Model and the Animation Model.
@@ -44,12 +36,11 @@ The Web Animations API adds some new features to {{domxref("document")}} and {{d
   - : The `DocumentTimeline` object representing the default document timeline.
 - {{domxref("document.getAnimations()")}}
   - : Returns an Array of {{domxref("Animation")}} objects currently in effect on elements in the `document`.
-- ### Extensions to the `Element` interface
 
-  {{domxref("Element.animate()")}}
+### Extensions to the `Element` interface
 
+- {{domxref("Element.animate()")}}
   - : A shortcut method for creating and playing an animation on an element. It returns the created {{domxref("Animation")}} object instance.
-
 - {{domxref("Element.getAnimations()")}}
   - : Returns an Array of {{domxref("Animation")}} objects currently affecting an element or which are scheduled to do so in future.
 

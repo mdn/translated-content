@@ -93,7 +93,7 @@ Content-Type: text/plain
 
 ## Compatibilité selon les navigateurs
 
-{{Compat("http/headers/content-type")}}
+{{Compat}}
 
 ## Voir aussi
 

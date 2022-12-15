@@ -34,7 +34,7 @@ function isInPage(node) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.contains")}}
+{{Compat}}
 
 ## 规范
 

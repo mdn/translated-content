@@ -3,6 +3,7 @@ title: EventListener.handleEvent()
 slug: conflicting/Web/API/EventTarget/addEventListener
 original_slug: Web/API/EventListener/handleEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 {{domxref("EventListener")}} の **`handleEvent()`** メソッドは、

@@ -2,6 +2,7 @@
 title: line-gap-override
 slug: Web/CSS/@font-face/line-gap-override
 ---
+
 {{CSSRef}}
 
 **`line-gap-override`** は CSS の記述子で、そのフォントの line-gap の寸法を定義します。 line-gap の寸法は、フォントが推奨する line-gap または external leading です。

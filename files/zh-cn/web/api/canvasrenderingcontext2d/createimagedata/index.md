@@ -36,7 +36,7 @@ ImageData ctx.createImageData(imagedata);
 
 ### 使用 `createImageData` 方法
 
-这是一段简单地使用 `createImageData` 方法的代码片段。 获取更多信息，请看 [canvas 像素控制](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) 和 {{domxref("ImageData")}} 对象。
+这是一段简单地使用 `createImageData` 方法的代码片段。获取更多信息，请看 [canvas 像素控制](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas) 和 {{domxref("ImageData")}} 对象。
 
 #### HTML
 
@@ -66,7 +66,7 @@ console.log(ctx.createImageData(100, 100));
 
 ### 兼容性注解
 
-- 从 {{geckoRelease("5.0")}}开始：
+- 从 Gecko 5.0 开始：
 
   - 如果矩形小于指定的 1 个像素，`createImageData()` 会返回图像数据至少 1 个像素值。
   - 当调用 `createImageData()` 指定非限制值时，会抛出`NOT_SUPPORTED_ERR` exception 异常。

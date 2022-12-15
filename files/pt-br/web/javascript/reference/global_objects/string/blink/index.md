@@ -1,14 +1,8 @@
 ---
 title: String.prototype.blink()
 slug: Web/JavaScript/Reference/Global_Objects/String/blink
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - String
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 O método **`blink()`** cria um elemento HTML [\<blink>](/pt-BR/docs/Web/HTML/Element/blink) que faz uma string piscar.
@@ -34,7 +28,7 @@ O método `blink()` cria uma string dentro de uma tag `<blink>`:
 
 ### Usando `blink()`
 
-Os exemplos abaixo usam métodos do objeto [String ](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings)para alterar a formatação de uma string:
+Os exemplos abaixo usam métodos do objeto [String](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String#M%C3%A9todos_gen%C3%A9ricos_de_Strings) para alterar a formatação de uma string:
 
 ```js
 var worldString = 'Olá, mundo';

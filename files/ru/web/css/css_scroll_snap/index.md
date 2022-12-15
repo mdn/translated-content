@@ -10,6 +10,7 @@ tags:
   - TopicStub
 translation_of: Web/CSS/CSS_Scroll_Snap
 ---
+
 {{CSSRef}}
 
 **CSS Scroll Snap** is a module of CSS that introduces scroll snap positions, which enforce the scroll positions that a {{Glossary("scroll container")}}’s {{Glossary("scrollport")}} may end at after a scrolling operation has completed.

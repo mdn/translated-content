@@ -2,6 +2,7 @@
 title: 'Window: cut イベント'
 slug: Web/API/Window/cut_event
 ---
+
 {{APIRef}}
 
 **`cut`** イベントは、ユーザーがブラウザーのユーザーインターフェイスから切り取り操作を実行したときに発生します。
@@ -39,13 +40,11 @@ window.addEventListener('cut', (event) => {
 
 ## 仕様書
 
-| 仕様書                                                                   | 状態                                 |
-| ------------------------------------------------------------------------ | ------------------------------------ |
-| {{SpecName('Clipboard API', '#clipboard-event-cut')}} | {{Spec2('Clipboard API')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.cut_event")}}
+{{Compat}}
 
 ## 関連情報
 

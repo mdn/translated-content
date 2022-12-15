@@ -3,13 +3,15 @@ title: Web Audio API
 slug: Web/API/Web_Audio_API
 ---
 
+{{DefaultAPISidebar("Web Audio API")}}
+
 Web Audio API 提供了在 Web 上控制音频的一个非常有效通用的系统，允许开发者来自选音频源，对音频添加特效，使音频可视化，添加空间效果（如平移），等等。
 
 ## Web audio 概念与使用
 
-Web Audio API 使用户可以在**音频上下文**(AudioContext) 中进行音频操作，具有**模块化路由**的特点。在**音频节点**上操作进行基础的音频， 它们连接在一起构成**音频路由图**。即使在单个上下文中也支持多源，尽管这些音频源具有多种不同类型通道布局。这种模块化设计提供了灵活创建动态效果的复合音频的方法。
+Web Audio API 使用户可以在**音频上下文**（AudioContext）中进行音频操作，具有**模块化路由**的特点。在**音频节点**上操作进行基础的音频，它们连接在一起构成**音频路由图**。即使在单个上下文中也支持多源，尽管这些音频源具有多种不同类型通道布局。这种模块化设计提供了灵活创建动态效果的复合音频的方法。
 
-音频节点通过它们的输入输出相互连接，形成一个链或者一个简单的网。一般来说，这个链或网起始于一个或多个音频源。音频源可以提供一个片段一个片段的音频采样数据（以数组的方式），一般，一秒钟的音频数据可以被切分成几万个这样的片段。这些片段可以是经过一些数学运算得到 （比如{{domxref("OscillatorNode")}}），也可以是音频或视频的文件读出来的（比如{{domxref("AudioBufferSourceNode")}}和{{domxref("MediaElementAudioSourceNode")}}），又或者是音频流（{{domxref("MediaStreamAudioSourceNode")}}）。其实，音频文件本身就是声音的采样数据，这些采样数据可以来自麦克风，也可以来自电子乐器，然后混合成一个单一的复杂的波形。
+音频节点通过它们的输入输出相互连接，形成一个链或者一个简单的网。一般来说，这个链或网起始于一个或多个音频源。音频源可以提供一个片段一个片段的音频采样数据（以数组的方式），一般，一秒钟的音频数据可以被切分成几万个这样的片段。这些片段可以是经过一些数学运算得到（比如{{domxref("OscillatorNode")}}），也可以是音频或视频的文件读出来的（比如{{domxref("AudioBufferSourceNode")}}和{{domxref("MediaElementAudioSourceNode")}}），又或者是音频流（{{domxref("MediaStreamAudioSourceNode")}}）。其实，音频文件本身就是声音的采样数据，这些采样数据可以来自麦克风，也可以来自电子乐器，然后混合成一个单一的复杂的波形。
 
 这些节点的输出可以连接到其它节点的输入上，然后新节点可以对接收到的采样数据再进行其它的处理，再形成一个结果流。一个最常见的操作是通过把输入的采样数据放大来达到扩音器的作用（缩小就是一个弱音器）（参见{{domxref("GainNode")}}）。声音处理完成之后，可以连接到一个目的地（{{domxref("AudioContext.destination")}}），这个目的地负责把声音数据传输给扬声器或者耳机。注意，只有当用户期望听到声音时，才需要进行最后一个这个连接。
 
@@ -21,7 +23,7 @@ Web Audio API 使用户可以在**音频上下文**(AudioContext) 中进行音�
 4. 为音频选择一个目的地，例如你的系统扬声器
 5. 连接源到效果器，对目的地进行效果输出
 
-![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](https://mdn.mozillademos.org/files/12241/webaudioAPI_en.svg)
+![A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information.](audio-context_.png)
 
 使用这个 API，时间可以被非常精确地控制，几乎没有延迟，这样开发人员可以准确地响应事件，并且可以针对采样数据进行编程，甚至是较高的采样率。这样，鼓点和节拍是准确无误的。
 
@@ -40,10 +42,10 @@ Web Audio API 中与生成音频图相关的定义与通用容器。
 - {{domxref("AudioContext")}}
   - : **`AudioContext`** 接口代表由音频模块构成的音频处理图。音频上下文控制其所包含节点的创建和音频处理、解码。使用其它接口前你必需创建一个`音频上下文`，一切操作都在这个环境里进行。
 - {{domxref("AudioNode")}}
-  - : **`音频节点`** 接口是一个音频处理模块， 例如音频源（{{HTMLElement("audio")}}或{{HTMLElement("video")}}），音频输出、中间处理模块（例如：滤波器 {{domxref("BiquadFilterNode")}} 或者音量控制器 {{domxref("GainNode")}}）。
+  - : **`音频节点`** 接口是一个音频处理模块，例如音频源（{{HTMLElement("audio")}}或{{HTMLElement("video")}}），音频输出、中间处理模块（例如：滤波器 {{domxref("BiquadFilterNode")}} 或者音量控制器 {{domxref("GainNode")}}）。
 - {{domxref("AudioParam")}}
   - : **`AudioParam`** 接口代表音频相关的参数，比如一个 {{domxref("AudioNode")}}的参数。它可以设置为特定值或值的变化，并且可以在指定的时间之后以指定模式变更。
-- {{event("ended")}}结束事件
+- [`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event)结束事件
   - : 当媒体播放停止时，会触发`ended`事件。
 
 ### 定义音频源
@@ -124,7 +126,7 @@ Web Audio API 使用的音频源接口。
 
 - {{domxref("ScriptProcessorNode")}}
   - : **`ScriptProcessorNode`** 接口用于通过 JavaScript 代码生成，处理，分析音频。它是一个{{domxref("AudioNode")}}类型的音频处理模块，但是它与两个缓冲区相连接，一个缓冲区里包含当前的输入数据，另一个缓冲区里包含着输出数据。每当新的音频数据被放入输入缓冲区，就会产生一个{{domxref("AudioProcessingEvent")}}事件，当这个事件处理结束时，输出缓冲区里应该写好了新数据。
-- {{event("audioprocess")}} (event)
+- [`audioprocess`](/zh-CN/docs/Web/API/ScriptProcessorNode/audioprocess_event) (event)
   - : 当一个 Web Audio API {{domxref("ScriptProcessorNode")}}已经准备好进行处理时，这个事件回调会被调用。
 - {{domxref("AudioProcessingEvent")}}
   - : 当{{domxref("ScriptProcessorNode")}}的输入流数据准备好了时，`AudioProcessingEvent`事件会产生。
@@ -135,7 +137,7 @@ Web Audio API 使用的音频源接口。
 
 - {{domxref("OfflineAudioContext")}}
   - : **`OfflineAudioContext`** 离线音频上下文也是音频上下文{{domxref("AudioContext")}}，也表示把{{domxref("AudioNode")}}连接到一起的一个音频处理图。但是，与一个标准的音频上下文相比，离线上下文不能把音频渲染到扬声器，仅仅是把音频渲染到一个缓冲区。
-- {{event("complete")}} (event)
+- [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event) (event)
   - : Complete 事件，当离线音频上下文被终止时产生。
 - {{domxref("OfflineAudioCompletionEvent")}}
   - : `OfflineAudioCompletionEvent`表示上下文被终止时的事件。
@@ -344,50 +346,3 @@ function voiceMute() { // toggle to mute and unmute sound
 - [Porting webkitAudioContext code to standards based AudioContext](/zh-CN/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
 - [Tones](https://github.com/bit101/tones): a simple library for playing specific tones/notes using the Web Audio API.
 - [howler.js](https://github.com/goldfire/howler.js/): a JS audio library that defaults to [Web Audio API](https://dvcs.w3.org/hg/audio/raw-file/tip/webaudio/specification.html) and falls back to [HTML5 Audio](http://www.whatwg.org/specs/web-apps/current-work/#the-audio-element), as well as providing other useful features.
-
-### Quicklinks
-
-1. **Guides**
-
-    1. [Basic concepts behind Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
-    2. [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-    3. [Visualizations with Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-    4. [Web audio spatialisation basics](/zh-CN/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics)
-    5. [Porting webkitAudioContext code to standards based AudioContext](/zh-CN/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
-
-2. **Examples**
-
-    1. [Voice-change-O-matic](http://mdn.github.io/voice-change-o-matic/)
-    2. [Violent Theremin](http://mdn.github.io/violent-theremin/)
-
-3. **Interfaces**
-
-    1. {{domxref("AnalyserNode")}}
-    2. {{domxref("AudioBuffer")}}
-    3. {{domxref("AudioBufferSourceNode")}}
-    4. {{domxref("AudioContext")}}
-    5. {{domxref("AudioDestinationNode")}}
-    6. {{domxref("AudioListener")}}
-    7. {{domxref("AudioNode")}}
-    8. {{domxref("AudioParam")}}
-    9. {{event("audioprocess")}} (event)
-    10. {{domxref("AudioProcessingEvent")}}
-    11. {{domxref("BiquadFilterNode")}}
-    12. {{domxref("ChannelMergerNode")}}
-    13. {{domxref("ChannelSplitterNode")}}
-    14. {{event("complete")}} (event)
-    15. {{domxref("ConvolverNode")}}
-    16. {{domxref("DelayNode")}}
-    17. {{domxref("DynamicsCompressorNode")}}
-    18. {{event("ended_(Web_Audio)", "ended")}} (event)
-    19. {{domxref("GainNode")}}
-    20. {{domxref("MediaElementAudioSourceNode")}}
-    21. {{domxref("MediaStreamAudioDestinationNode")}}
-    22. {{domxref("MediaStreamAudioSourceNode")}}
-    23. {{domxref("OfflineAudioCompletionEvent")}}
-    24. {{domxref("OfflineAudioContext")}}
-    25. {{domxref("OscillatorNode")}}
-    26. {{domxref("PannerNode")}}
-    27. {{domxref("PeriodicWaveNode")}}
-    28. {{domxref("ScriptProcessorNode")}}
-    29. {{domxref("WaveShaperNode")}}

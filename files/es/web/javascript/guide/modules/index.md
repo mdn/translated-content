@@ -1,16 +1,9 @@
 ---
 title: Módulos JavaScript
 slug: Web/JavaScript/Guide/Modules
-tags:
-  - Guía
-  - JavaScript
-  - Modules
-  - Módulos
-  - export
-  - import
-translation_of: Web/JavaScript/Guide/Modules
 original_slug: Web/JavaScript/Guide/Módulos
 ---
+
 {{JSSidebar("Guía de JavaScript")}}{{Previous("Web/JavaScript/Guide/Meta_programming")}}
 
 Esta guía te brinda todo lo que necesitas para comenzar con la sintaxis de los módulos JavaScript.
@@ -61,7 +54,7 @@ Los dos módulos del directorio `modules` se describen a continuación:
 
 - `canvas.js` — contiene funciones relacionadas con la configuración del lienzo (`canvas`):
 
-  - `create()` — crea un lienzo (`canvas`) con un `width` y `height` especificados dentro de un contenedor [`<div>`](/es/docs/Web/HTML/Element/div 'El elemento ↑div↑ de HTML con ↑id="content"↓ es el contenedor genérico para el flujo de contenido. No tiene ningún efecto en el contenido o el diseño hasta que se le aplica estilo usando CSS.') con un ID especificado, que a su vez se añade dentro de un elemento padre especificado. Devuelve un objeto que contiene el contexto 2D del lienzo y el ID del contenedor.
+  - `create()` — crea un lienzo (`canvas`) con un `width` y `height` especificados dentro de un contenedor [`<div>`](/es/docs/Web/HTML/Element/div) con un ID especificado, que a su vez se añade dentro de un elemento padre especificado. Devuelve un objeto que contiene el contexto 2D del lienzo y el ID del contenedor.
   - `createReportList()` — crea una lista desordenada adjunta dentro de un elemento contenedor específico, que se puede usar para generar datos de informes. Devuelve el ID de la lista.
 
 - `square.js` — contiene:

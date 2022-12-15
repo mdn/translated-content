@@ -2,6 +2,7 @@
 title: table-layout
 slug: Web/CSS/table-layout
 ---
+
 {{CSSRef}}
 
 **`table-layout`** は CSS のプロパティで、{{htmlelement("table")}} のセル、行、列のレイアウトに使用されるアルゴリズムを設定します。

@@ -1,18 +1,8 @@
 ---
 title: Window.document
 slug: Web/API/Window/document
-tags:
-  - API
-  - DOM HTML
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Propriedade
-  - Referencia
-  - Window
-translation_of: Web/API/Window/document
 ---
+
 {{APIRef}}
 
 ## Resumo
@@ -29,7 +19,7 @@ doc = window.document
 
 ### Parâmetros
 
-- `doc` é um objeto referência de um objeto para um [document](/pt-BR/docs/DOM/document "DOM/document").
+- `doc` é um objeto referência de um objeto para um [document](/pt-BR/docs/DOM/document).
 
 ## Exemplo
 

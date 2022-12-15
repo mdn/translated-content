@@ -1,15 +1,8 @@
 ---
 title: Desenvolvimento de jogos
 slug: Games
-tags:
-  - Aplicativos
-  - Desenvolvimento de Jogos
-  - Gamedev
-  - Jogos Web
-  - Jogos em HTML5
-  - Jogos em JavaScript
-translation_of: Games
 ---
+
 {{GamesSidebar}}
 
 Jogar é uma das atividades mais populares em computadores. Novas tecnologias aparecem, constantemente, para tornar possível o desenvolvimento de jogos melhores e mais poderosos, que podem ser executados em qualquer navegador compatível com os padrões web.
@@ -18,7 +11,7 @@ Jogar é uma das atividades mais populares em computadores. Novas tecnologias ap
 
 Bem-vindas ao centro de desenvolvimento de jogos MDN! Nesta área da página oferecemos recursos para desenvolvedores web que querem dedicar-se a jogos. Você encontrará muitos tutoriais úteis e artigos técnicos no menu principal à sua esquerda - sinta-se livre para explorá-los.
 
-Também incluímos uma seção de referências para que você possa, facilmente, encontrar informações sobre todas APIs mais usadas no desenvolvimento de jogos, acompanhadas de uma lista de [ferramentas e engines](/pt-BR/docs/Games/Tools) úteis e,[ exemplos de jogos](/pt-BR/docs/Games/Examples).
+Também incluímos uma seção de referências para que você possa, facilmente, encontrar informações sobre todas APIs mais usadas no desenvolvimento de jogos, acompanhadas de uma lista de [ferramentas e engines](/pt-BR/docs/Games/Tools) úteis e, [exemplos de jogos](/pt-BR/docs/Games/Examples).
 
 > **Nota:** Você já deve ter um conhecimento básico sobre as principais tecnologias web — tais como HTML, CSS e Javascript — antes de tentar criar jogos web. A [Área de aprendizado](/pt-BR/docs/Learn) é o melhor para você, se você for completamente principiante.
 
@@ -36,7 +29,7 @@ Para começar, veja:
 
 Para uma lista de exemplos de jogos web, veja a nossa [página de exemplos](/pt-BR/docs/Games/Examples). Também dê uma olhada em [openwebgames.com](http://www.openwebgames.com/) para mais exemplos e recursos úteis!
 
-[![](https://mdn.mozillademos.org/files/12790/owg-logo-dark.svg)](http://www.openwebgames.com)
+[![](owg-logo-dark.svg)](http://www.openwebgames.com)
 
 ## Veja também
 

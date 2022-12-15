@@ -131,7 +131,7 @@ application/x-ns-proxy-autoconfig
 > **备注：** pactester ([pacparser](https://github.com/pacparser/pacparser) 的一部分) 可以用来检测语法是否符合要求，使用方法如下：
 >
 > - PAC 文件保存为 `proxy.pac`
-> - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org。`
+> - 命令行输入：`pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org`。
 >
 >   - 该命令中， `host` 参数为 `www.mozilla.org` ， `url` 参数为`http://www.mozilla.org`。
 
@@ -701,7 +701,7 @@ function FindProxyForURL(url, host) {
 >
 > ```
 
-> **备注：** 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isInNet()`， `isResolvable()` 和 `dnsResolve()` 应该谨慎使用，这些函数会进行 DNS 查询。其他函数则大都是字符处理函数，不需要 DNS 。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。
+> **备注：** 自动配置脚本也可以在服务端动态生成。这在某些情况下比较有用，例如根据客户端地址指定不同的代理服务器。`isInNet()`， `isResolvable()` 和 `dnsResolve()` 应该谨慎使用，这些函数会进行 DNS 查询。其他函数则大都是字符处理函数，不需要 DNS。如果通过代理连接，代理本身也会进行一次 DNS 查询，这产生了额外的 DNS 请求。并且绝大多数情况下，不需要这些函数来实现特定的功能。
 
 ## 历史与实现
 

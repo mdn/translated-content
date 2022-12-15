@@ -3,7 +3,7 @@ title: Create Book form
 slug: Learn/Server-side/Express_Nodejs/forms/Create_book_form
 ---
 
-[Edit](/zh-TW/docs/Learn/Server-side/Express_Nodejs/forms$edit#Create_book_form)此章節展示如何定義頁面/表單以創建`Book`對象。這比相同的作者`Author`或種類`Genre`頁面稍微複雜一點，因為我們需要在我們的書本表單中，獲取並顯示可用的作者和種類記錄。
+此章節展示如何定義頁面/表單以創建`Book`對象。這比相同的作者`Author`或種類`Genre`頁面稍微複雜一點，因為我們需要在我們的書本表單中，獲取並顯示可用的作者和種類記錄。
 
 ## 導入驗證和清理方法
 

@@ -44,14 +44,11 @@ uint8.byteLength; // 6 (en raison du décalage utilisé pour la construction du 
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.byteLength")}}
+{{Compat}}
 
 ## Voir aussi
 

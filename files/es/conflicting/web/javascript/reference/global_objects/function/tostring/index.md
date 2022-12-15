@@ -1,9 +1,9 @@
 ---
 title: Function.prototype.toSource()
 slug: conflicting/Web/JavaScript/Reference/Global_Objects/Function/toString
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Function/toSource
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 El método **`toSource()`** devuelve un string representando el código fuente del objeto.

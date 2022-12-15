@@ -51,9 +51,7 @@ console.log(objectSymbols[0]);     // Symbol(a)
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,7 +1,6 @@
 ---
 title: Função Callback
 slug: Glossary/Callback_function
-translation_of: Glossary/Callback_function
 original_slug: Glossario/Callback_function
 ---
 

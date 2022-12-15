@@ -2,6 +2,7 @@
 title: data-*
 slug: Web/HTML/Global_attributes/data-*
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`data-*`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は**カスタムデータ属性**と呼ばれる属性の組を作り、[HTML](/ja/docs/Web/HTML) と、スクリプトによる [DOM](/ja/docs/Web/API/Document_Object_Model) 表現との間で、固有の情報を交換できるようにします。
@@ -32,11 +33,7 @@ slug: Web/HTML/Global_attributes/data-*
 
 ## 仕様書
 
-| 仕様書                                                                                                                                               | 状態                             | 備考                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes", "data-*")}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。                            |
-| {{SpecName('HTML5.1', "dom.html#element-attrdef-global-data", "data-*")}}                                                     | {{Spec2('HTML5.1')}}     | {{SpecName('HTML WHATWG')}} のスナップショット、 {{SpecName('HTML5 W3C')}} から変更なし |
-| {{SpecName('HTML5 W3C', "dom.html#element-attrdef-global-data", "data-*")}}                                                 | {{Spec2('HTML5 W3C')}}     | {{SpecName('HTML WHATWG')}} のスナップショット、初回定義。                                     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

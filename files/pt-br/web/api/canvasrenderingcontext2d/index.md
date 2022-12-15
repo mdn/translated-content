@@ -1,17 +1,8 @@
 ---
 title: 'Canvas: Contexto de Renderização em "2D"'
 slug: Web/API/CanvasRenderingContext2D
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Games
-  - Graphics
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}A interface **Canvas Renderização de Contexto de duas Dimensões (** **CanvasRenderingContext2D**) é usada para desenhar retangulos, textos, imagens e outros objetos na tag ou elemento canvas. Fornece o contexto de renderização em 2D para a superfície de desenho do elemento {{ HTMLElement("canvas") }}.
 
 Para obter um objeto desta interface, chama-se {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} em um `elemento <canvas>`, adicionando "2d" como argumento, veja o exemplo abaixo:
@@ -28,7 +19,7 @@ ctx.fillStyle = "rgb(200,0,0)"; // define a cor de preenchimento do retângulo
 ctx.fillRect(10, 10, 55, 50);   // desenha o retângulo na posição 10, 10 com 55 pixels de largura e uma altura de 50
 ```
 
-Veja as propriedades e métodos no menu lateral e abaixo. O [tutorial canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial "Canvas tutorial") tem mais informações, exemplos e recursos.
+Veja as propriedades e métodos no menu lateral e abaixo. O [tutorial canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial) tem mais informações, exemplos e recursos.
 
 ## Desenhando Retângulos
 
@@ -149,7 +140,7 @@ Os seguintes métodos podem ser usados para manipular caminhos de desenhos.
 - {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}
   - : Scrolls the current path or a given path into the view.
 - {{domxref("CanvasRenderingContext2D.clip()")}}
-  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing "Clipping paths") in the Canvas tutorial.
+  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}
   - : Reports whether or not the specified point is contained in the current path.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
@@ -273,8 +264,6 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 - {{non-standard_inline}} `CanvasRenderingContext2D.webkitPutImageDataHD`
   - : Intended for HD backing stores, but removed from canvas specifications.
 
-<!---->
-
 ### Gecko only
 
 - {{non-standard_inline}} {{domxref("CanvasRenderingContext2D.filter")}}
@@ -283,17 +272,17 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 #### Prefixed APIs
 
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransform`
-  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}. {{ gecko_minversion_inline("7.0") }}
+  - : Sets or gets the current transformation matrix, see {{domxref("CanvasRenderingContext2D.currentTransform")}}.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozCurrentTransformInverse`
-  - : Sets or gets the current inversed transformation matrix. {{ gecko_minversion_inline("7.0") }}
+  - : Sets or gets the current inversed transformation matrix.
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozFillRule`
   - : The [fill rule](http://cairographics.org/manual/cairo-cairo-t.html#cairo-fill-rule-t) to use. This must be one of `evenodd` or `nonzero` (default).
 - {{non-standard_inline}} `CanvasRenderingContext2D.mozImageSmoothingEnabled`
   - : See {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDash`
-  - : An array which specifies the lengths of alternating dashes and gaps {{ gecko_minversion_inline("7.0") }}. Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.
+  - : An array which specifies the lengths of alternating dashes and gaps . Use {{domxref("CanvasRenderingContext2D.getLineDash()")}} and {{domxref("CanvasRenderingContext2D.setLineDash()")}} instead.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozDashOffset`
-  - : Specifies where to start a dash array on a line. {{ gecko_minversion_inline("7.0") }}. Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
+  - : Specifies where to start a dash array on a line. Use {{domxref("CanvasRenderingContext2D.lineDashOffset")}} instead.
 - {{non-standard_inline}} {{deprecated_inline}} `CanvasRenderingContext2D.mozTextStyle`
   - : Introduced in in Gecko 1.9, deprecated in favor of the {{domxref("CanvasRenderingContext2D.font")}} property.
 - {{non-standard_inline}} {{obsolete_inline}} `CanvasRenderingContext2D.mozDrawText()`
@@ -331,7 +320,7 @@ Most of these APIs are [deprecated and will be removed in the future](https://co
 
 ## Compatibility notes
 
-- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, ` rotate(), ``scale(), ` `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
+- Starting with Gecko 5.0 {{geckoRelease("5.0")}}, specifying invalid values are now silently ignored for the following methods and properties: `translate()`, `transform()`, `rotate()`, `scale()`, `rect()`, `clearRect()`, `fillRect()`, `strokeRect()`, `lineTo()`, `moveTo()`, `quadraticCurveTo()`, `arc()`, `shadowOffsetX`, `shadowOffsetY`, `shadowBlur`.
 
 ## Veja também
 

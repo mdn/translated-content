@@ -40,7 +40,7 @@ MDN Web 文档需要你的帮助！我们有大量需要完成的工作，比如
   </tr>
   <tr>
    <td><a href="https://github.com/mdn/content/blob/main/REVIEWING.md">审核内容修改</a></td>
-   <td><a href="https://github.com/mdn/content">content repo</a> 每时每刻都会收到人们提交的内容修改, 我们需要有人来审核它们。在 <a href="https://github.com/mdn/content/blob/main/REVIEWING.md">REVIEWING.md</a> 里介绍了我们审核工作的流程，以及如何加入进来。</td>
+   <td><a href="https://github.com/mdn/content">content repo</a> 每时每刻都会收到人们提交的内容修改，我们需要有人来审核它们。在 <a href="https://github.com/mdn/content/blob/main/REVIEWING.md">REVIEWING.md</a> 里介绍了我们审核工作的流程，以及如何加入进来。</td>
    <td>
     <ul>
      <li>对要修改的内容，你需要对内容涉及到的技术（类似 JavaScript、CSS 等）有一定的了解。</li>
@@ -76,23 +76,23 @@ MDN Web 文档需要你的帮助！我们有大量需要完成的工作，比如
 
 如果你对文字感兴趣，下面这些任务可能适合你：
 
-- [为现有文章补充新的信息](/zh-CN/docs/MDN/Contribute/Howto/Create_and_edit_pages#editing_an_existing_page)（需时：5 分钟到 1 小时）
-- [在术语表里新增一个条目](/zh-CN/docs/MDN/Contribute/Howto/Write_a_new_entry_in_the_Glossary)（需时：15 分钟到 1 小时）
+- [为现有文章补充新的信息](/zh-CN/docs/MDN/Writing_guidelines/Howto/Creating_moving_deleting#编辑现有页面)（需时：5 分钟到 1 小时）
+- [在术语表里新增一个条目](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary)（需时：15 分钟到 1 小时）
 
 如果你对代码感兴趣，可以试试下面这些任务：
 
-- [让示例代码以预期的方式展示出来](/zh-CN/docs/MDN/Contribute/Howto/Convert_code_samples_to_be_live)（需时：15 分钟到 1 小时）
+- [让示例代码以预期的方式展示出来](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)（需时：15 分钟到 1 小时）
 - [完善 Yari 平台](https://github.com/mdn/yari)（需时：1 小时）
 - [新建一个可交互的示例](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md)（需时：1 小时）
 
 如果你对代码和文章*这两者都感兴趣*，下面列出的任务或许适合你：
 
-- [撰写新的或完善现有 API 参考](/zh-CN/docs/MDN/Contribute/Howto/Write_an_API_reference)（需时：30 分钟到 2 小时或更长）
+- [撰写新的或完善现有 API 参考](/zh-CN/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference)（需时：30 分钟到 2 小时或更长）
 - [写一篇文章分享你熟悉的技术领域](https://github.com/mdn/content#adding-a-new-document)（需时：1 小时或更长）
-- [添加或更新参考页面列出的浏览器兼容性](/zh-CN/docs/MDN/Structures/Compatibility_tables)（需时：30 分钟到 1 小时）
+- [添加或更新参考页面列出的浏览器兼容性](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables)（需时：30 分钟到 1 小时）
 
 > **备注：** 如果你在使用 MDN 时发现了一些错误，却不知道怎么改正，你可以[提交一个 issue](https://github.com/mdn/content/issues/new/choose)。记得写个合适的标题（使用“Dead link”而不说明这个链接在哪里是没有太大帮助的）。如果你发现的问题属于翻译上的错误，[向 translated-content 仓库提交一个 issue](https://github.com/mdn/translated-content/issues/new/choose) 会更加合适。
 
-## 相关链接
+## 其它有用的页面
 
 {{LandingPageListSubPages()}}

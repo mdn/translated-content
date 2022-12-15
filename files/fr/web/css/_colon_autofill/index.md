@@ -22,7 +22,7 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à WebKit/Blink et
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-webkit-autofill")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -3,7 +3,7 @@ title: <summary>
 slug: Web/HTML/Element/summary
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 ## 概述
 

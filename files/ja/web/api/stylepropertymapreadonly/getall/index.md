@@ -2,6 +2,7 @@
 title: StylePropertyMapReadOnly.getAll()
 slug: Web/API/StylePropertyMapReadOnly/getAll
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 **`getAll()`** は {{domxref("StylePropertyMapReadOnly")}} インターフェイスのメソッドで、指定されたプロパティの値を含む {{domxref("CSSStyleValue")}} オブジェクトの配列を返します。

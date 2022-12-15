@@ -72,13 +72,11 @@ tab-size: unset;
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('CSS3 Text', '#tab-size-property', 'tab-size')}} | {{Spec2('CSS3 Text')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.tab-size")}}
+{{Compat}}
 
 ## Voir aussi
 

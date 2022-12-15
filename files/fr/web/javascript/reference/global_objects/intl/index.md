@@ -101,15 +101,11 @@ afficher("de-DE");
 
 ## Spécifications
 
-| Spécification                                                        | État                             | Commentaires                                            |
-| -------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
-| {{SpecName('ES Int 1.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 1.0')}} | Définition initiale.                                    |
-| {{SpecName('ES Int 2.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 2.0')}} |                                                         |
-| {{SpecName('ES Int Draft', '#intl-object', 'Intl')}} | {{Spec2('ES Int Draft')}} | Ajout de `Intl.getCanonicalLocales` dans la 4e édition. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl")}}
+{{Compat}}
 
 ## Voir aussi
 

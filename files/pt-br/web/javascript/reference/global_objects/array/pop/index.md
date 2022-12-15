@@ -1,12 +1,8 @@
 ---
 title: Array.prototype.pop()
 slug: Web/JavaScript/Reference/Global_Objects/Array/pop
-tags:
-  - Array
-  - JavaScript
-  - Pop
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 ---
+
 {{JSRef("Global_Objects", "Array")}}
 
 ## Resumo
@@ -31,7 +27,7 @@ Se você chamar `pop()` em um array vazio, ele retorna o valor {{jsxref("Global_
 
 ### Exemplo: Removendo o último elemento de um array
 
-O código seguinte cria o array `meuPeixe `contendo quatro elementos e então remove seu último elemento.
+O código seguinte cria o array `meuPeixe` contendo quatro elementos e então remove seu último elemento.
 
 ```js
 var meuPeixe = ['acara-bandeira', 'palhaco', 'mandarim', 'esturjao'];

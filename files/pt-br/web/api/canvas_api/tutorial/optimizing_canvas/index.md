@@ -1,13 +1,9 @@
 ---
 title: Otimizando canvas
 slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
-tags:
-  - Canvas
-  - Gráfico 2D
-  - Otimização
-translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 original_slug: Web/Guide/HTML/Canvas_tutorial/Otimizando_Canvas
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 O elemento {{HTMLElement("canvas")}} é um dos padrões mais largamente utilizados para renderização de gráficos 2D na Web. É muito usado em jogos e em visualizações complexas. Porém, quando sítios web e aplicativos utilizam canvas até seus limites, começam a surgir problemas de perda de performance. Este artigo tem o objetivo de prover sugestões de otimização de seu elemento canvas e garantir que seu site ou aplicativo funcione melhor.
@@ -91,7 +87,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 
 ### Turn off transparency
 
-If your game uses canvas and doesn’t need to be transparent, set the `alpha` option to `false` when creating a drawing context with [`HTMLCanvasElement.getContext()`](/pt-BR/docs/Web/API/HTMLCanvasElement/getContext "The HTMLCanvasElement.getContext() method returns a drawing context on the canvas, or null if the context identifier is not supported."). This information can be used internally to optimize rendering.
+If your game uses canvas and doesn’t need to be transparent, set the `alpha` option to `false` when creating a drawing context with [`HTMLCanvasElement.getContext()`](/pt-BR/docs/Web/API/HTMLCanvasElement/getContext). This information can be used internally to optimize rendering.
 
 ```js
 var ctx = canvas.getContext('2d', { alpha: false });

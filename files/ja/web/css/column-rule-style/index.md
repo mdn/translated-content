@@ -2,6 +2,7 @@
 title: column-rule-style
 slug: Web/CSS/column-rule-style
 ---
+
 {{ CSSRef}}
 
 **`column-rule-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段の間に引かれる線 (段間罫) のスタイルを設定します。

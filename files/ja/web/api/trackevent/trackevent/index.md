@@ -2,6 +2,7 @@
 title: TrackEvent()
 slug: Web/API/TrackEvent/TrackEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 `TrackEvent()` コンストラクタは、トラックのリスト（{{domxref("AudioTrackList")}}、{{domxref("VideoTrackList")}}、または {{domxref("TextTrackList")}}）で発生したイベントを記述する新しい {{domxref("TrackEvent")}} オブジェクトを作成して返します。
@@ -35,10 +36,7 @@ trackEvent = new TrackEvent(type, eventInfo);
 
 ## 仕様
 
-| 仕様                                                                                                                                     | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "media.html#dom-trackevent-trackevent", "TrackEvent()")}}                         | {{Spec2('HTML WHATWG')}} | 初期定義 |
-| {{SpecName('HTML5 W3C', "semantics-embedded-content.html#dom-trackevent-trackevent", "TrackEvent()")}} | {{Spec2('HTML5 W3C')}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -11,6 +11,7 @@ tags:
   - Sameness
 translation_of: Web/JavaScript/Equality_comparisons_and_sameness
 ---
+
 {{jsSidebar("Intermediate")}}
 
 ES2015에는 4가지 같음(equality) 알고리즘이 있습니다:

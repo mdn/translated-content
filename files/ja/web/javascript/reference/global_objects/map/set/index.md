@@ -54,9 +54,7 @@ myMap.set('bar', 'foo')
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.set', 'Map.prototype.set')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

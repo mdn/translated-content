@@ -2,6 +2,7 @@
 title: CacheStorage.keys()
 slug: Web/API/CacheStorage/keys
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("CacheStorage")}} インターフェイスの **`keys()`** メソッドは、{{domxref("CacheStorage")}} オブジェクトによって追跡されるすべての名前付き {{domxref("Cache")}} オブジェクトに対応する文字列をそれが作成された順番で含む配列で解決する {{jsxref("Promise")}} を返します。 このメソッドを使用して、すべての {{domxref("Cache")}} オブジェクトのリストを反復処理します。
@@ -46,9 +47,7 @@ this.addEventListener('activate', function(event) {
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-cachestorage-keys', 'CacheStorage: keys')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -469,7 +469,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 - {{domxref("Window/offline_event", "offline")}}
   - : Fired when the browser has lost access to the network and the value of `navigator.onLine` has switched to `false`.
     Also available via the {{domxref("WindowEventHandlers.onoffline", "onoffline")}} property.
-- {{domxref("Window/online_event", "online ")}}[``](/en-US/docs/Web/API/Window/online_event)
+- {{domxref("Window/online_event", "online ")}}
   - : Fired when the browser has gained access to the network and the value of `navigator.onLine` has switched to `true`.
     Also available via the {{domxref("WindowEventHandlers.ononline", "ononline")}} property.
 

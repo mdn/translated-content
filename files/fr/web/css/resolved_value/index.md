@@ -14,9 +14,11 @@ La **valeur résolue** d'une propriété CSS est la valeur renvoyée par {{domxr
 
 ## Spécifications
 
-| Spécification                                                                    | État                     | Commentaires        |
-| -------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("CSSOM", "#resolved-values", "resolved value")}} | {{Spec2("CSSOM")}} | Définition initiale |
+{{Specifications}}
+
+## Compatibilité des navigateurs
+
+{{Compat}}
 
 ## Voir aussi
 

@@ -33,9 +33,13 @@ outline-offset: unset;
 - `<length>`
   - : La largeur de l'espace, voir la page {{cssxref("&lt;length&gt;")}} pour plus d'informations. Les valeurs négatives sont utilisées et font que la bordure dessinée est dessinée dans l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -64,13 +68,8 @@ outline-offset: unset;
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                                   | Commentaires                                 |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------- |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-offset')}} | {{Spec2('CSS3 Transitions')}} | `outline-offset` peut désormais être animée. |
-| {{SpecName('CSS3 Basic UI', '#outline-offset', 'outline-offset')}}     | {{Spec2('CSS3 Basic UI')}}     | Définition initiale.                         |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.outline-offset")}}
+{{Compat}}

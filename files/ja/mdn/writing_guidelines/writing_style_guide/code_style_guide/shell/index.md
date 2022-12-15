@@ -3,6 +3,7 @@ title: シェルプロンプトのコード例を整形するためのガイド�
 slug: MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/Shell
 original_slug: MDN/Guidelines/Code_guidelines/Shell
 ---
+
 {{MDNSidebar}}
 
 シェルとは、コマンドを入力してリターンキーが押すのを待つプログラムのことです。どのコマンドを入力すべきか示すために、 MDN 文書ではコード例と同様のコードブロックにそれらをリストアップしています。ブロックは次のようなものです。

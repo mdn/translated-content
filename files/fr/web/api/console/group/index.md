@@ -27,7 +27,7 @@ console.group();
 ## Paramètres
 
 - `label`
-  - : donne une étiquette au groupe. Facultatif. (Chrome 59 testé). Ne fonctionne pas avec` ``console.groupEnd()`.
+  - : donne une étiquette au groupe. Facultatif. (Chrome 59 testé). Ne fonctionne pas avec `console.groupEnd()`.
 
 ## Exemples
 

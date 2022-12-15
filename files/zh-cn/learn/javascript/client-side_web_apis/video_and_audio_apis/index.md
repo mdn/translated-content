@@ -97,7 +97,7 @@ HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("vid
 - 控件 HTML 大概是最有趣的：
 
   - 我们有四个 {{htmlelement("button")}} — play/pause, stop, rewind, and fast forward.
-  - 每个`<button>` 都有一个`class名` , 一个`data-icon` 属性来决定在每个按钮上显示什么图标 (在下一节讲述它是如何工作的), 和一个`aria-label` 属性为每一个按钮提供容易理解的描述，即使我们没有在 tags 内提供可读的标签。当用户关注这些元素时含有`aria-label` 属性的内容也会被讲述人读出来。
+  - 每个`<button>` 都有一个 `class` 名，一个`data-icon` 属性来决定在每个按钮上显示什么图标 (在下一节讲述它是如何工作的), 和一个`aria-label` 属性为每一个按钮提供容易理解的描述，即使我们没有在 tags 内提供可读的标签。当用户关注这些元素时含有`aria-label` 属性的内容也会被讲述人读出来。
   - 有一个设定的计时器 {{htmlelement("div")}}用来报告已经播放的时长。为了好玩，我们提供了两种报告机制 — 一个 {{htmlelement("span")}} 包含了流逝时间的分钟和秒，和一个额外的`<div>` 用来创建一个水平的随着时间增加而增长的进度条。要想了解完成版本看上去是咋样的，[点击查看完成版本](https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/).
 
 #### 探索 CSS
@@ -270,9 +270,9 @@ button:before {
     media.addEventListener('ended', stopMedia);
     ```
 
-    {{event("click")}} 事件很明显——我们想要在点击停止按钮的时候停止视频通过运行我们的 `stopMedia()` 函数。然而我们也希望停止视频当视频播放完成时——由{{event("ended")}} 事件标记，所以我们也会设置一个监听器在此事件触发时运行函数。
+    [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件很明显——我们想要在点击停止按钮的时候停止视频通过运行我们的 `stopMedia()` 函数。然而我们也希望停止视频当视频播放完成时——由[`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event) 事件标记，所以我们也会设置一个监听器在此事件触发时运行函数。
 
-2. 接下来，让我们定义 `stopMedia()`—— 在 `playPauseMedia() 后面`添加以下函数：
+2. 接下来，让我们定义 `stopMedia()`—— 在 `playPauseMedia()` 后面添加以下函数：
 
     ```plain
     function stopMedia() {
@@ -374,7 +374,7 @@ button:before {
 
 #### 更新已用时间
 
-我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在\<video>元素上触发 {{event("timeupdate")}}事件时更新时间显示。此事件触发的频率取决于您的浏览器，CPU 电源等（[see this stackoverflow post](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
+我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在\<video>元素上触发 [`timeupdate`](/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event)事件时更新时间显示。此事件触发的频率取决于您的浏览器，CPU 电源等（[see this stackoverflow post](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
 
 在代码下方添加`addEventListener（）`行：
 

@@ -1,5 +1,5 @@
 ---
-title: 'Reason: Did not find method in CORS header ‘Access-Control-Allow-Methods’'
+title: "Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'"
 slug: Web/HTTP/CORS/Errors/CORSMethodNotFound
 ---
 
@@ -8,7 +8,7 @@ slug: Web/HTTP/CORS/Errors/CORSMethodNotFound
 ## 原因
 
 ```plain
-原因：在 CORS 头 ‘Access-Control-Allow-Methods’ 中没有找到方法
+原因：在 CORS 头‘Access-Control-Allow-Methods’中没有找到方法
 ```
 
 ## 哪里错了？

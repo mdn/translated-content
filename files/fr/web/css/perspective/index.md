@@ -45,9 +45,13 @@ perspective: unset;
 - `<length>`
   - : Une longueur (une valeur de type {{cssxref("&lt;length&gt;")}}) qui indique la distance entre l'utilisateur et le plan d'équation z = 0. Elle est utilisée pour appliquer une perspective à l'élément et à son contenu. Si elle vaut `0` ou qu'elle est négative, aucune transformation de perspective ne sera appliquée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -219,15 +223,11 @@ th, p, td {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                     | Commentaires        |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{Specname('CSS Transforms 2', '#propdef-perspective', 'perspective')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.perspective")}}
+{{Compat}}
 
 ## Voir aussi
 

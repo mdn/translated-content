@@ -1,18 +1,8 @@
 ---
 title: '::-webkit-slider-thumb'
 slug: Web/CSS/::-webkit-slider-thumb
-tags:
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - No estándar(2)
-  - Pseudo-elemento
-  - Pseudo-elemento CSS
-  - Referencia
-translation_of: Web/CSS/::-webkit-slider-thumb
 ---
+
 admi{{CSSRef}}{{Non-standard_header}}
 
 ## Resumen

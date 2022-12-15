@@ -1,15 +1,8 @@
 ---
 title: String.fromCharCode()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
-tags:
-  - JavaScript
-  - Referencia
-  - String
-  - UTF-16
-  - Unicode
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 ---
+
 {{JSRef}}
 
 O método **`String.fromCharCode()`** retorna uma string criada ao usar uma sequência específica de valores Unicode.
@@ -33,7 +26,7 @@ Uma string contendo os caracteres correspondentes à sequência de valores Unico
 
 Esse método retorna uma string e não um objeto {{jsxref("String")}}.
 
-Como `fromCharCode() `é um método estático de {{jsxref("String")}}, você sempre o usará como `String.fromCharCode()`, ao invés de um método de um objeto {{jsxref("String")}} que você tenha criado.
+Como `fromCharCode()` é um método estático de {{jsxref("String")}}, você sempre o usará como `String.fromCharCode()`, ao invés de um método de um objeto {{jsxref("String")}} que você tenha criado.
 
 ## Exemplos
 

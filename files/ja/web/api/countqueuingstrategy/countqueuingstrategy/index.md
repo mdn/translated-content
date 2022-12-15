@@ -2,6 +2,7 @@
 title: CountQueuingStrategy.CountQueuingStrategy()
 slug: Web/API/CountQueuingStrategy/CountQueuingStrategy
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 **`CountQueuingStrategy()`** コンストラクターは、`CountQueuingStrategy` オブジェクトのインスタンスを作成して返します。
@@ -48,9 +49,7 @@ var size = queuingStrategy.size();
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                         | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("Streams","#cqs-constructor","CountQueuingStrategy()")}} | {{Spec2('Streams')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

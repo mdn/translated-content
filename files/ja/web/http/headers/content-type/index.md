@@ -2,6 +2,7 @@
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Type`** 表現ヘッダーは、リソースの{{Glossary("MIME type","メディア種別")}}を示すために使用します。</p>
@@ -44,7 +45,7 @@ Content-Type: multipart/form-data; boundary=something
 ## ディレクティブ
 
 - `media-type`
-  - : リソースやデータの [MIME タイプ](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
+  - : リソースやデータの [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)です。
 - charset
   - : 標準の文字エンコーディングです。
 - boundary

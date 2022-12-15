@@ -2,6 +2,7 @@
 title: CSS 型付きオブジェクトモデルの使用
 slug: Web/API/CSS_Typed_OM_API/Guide
 ---
+
 {{DefaultAPISidebar("CSS Typed Object Model API")}}
 
 **[CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)** は、 CSS 値を型付き JavaScript オブジェクトとして公開し、その値を効率的に操作できるようにします。

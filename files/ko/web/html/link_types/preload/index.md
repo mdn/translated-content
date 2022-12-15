@@ -16,7 +16,7 @@ browser-compat: html.elements.link.rel.preload
 
 ## 기본
 
-페이지를 스타일링하기 위해 주로 다음과 같이 `<link>`를 이용해 CSS 파일을 로드할 것입니다. 
+페이지를 스타일링하기 위해 주로 다음과 같이 `<link>`를 이용해 CSS 파일을 로드할 것입니다.
 
 ```html
 <link rel="stylesheet" href="styles/main.css">
@@ -61,7 +61,6 @@ browser-compat: html.elements.link.rel.preload
 - 리소스에 대해 올바른 [콘텐츠 보안 정책](/en-US/docs/Web/HTTP/CSP)을 적용할 수 있습니다.
 - 리소스에 대해 올바른 {{HTTPHeader("Accept")}} 요청 헤더를 설정할 수 있습니다.
 
-
 ### 어떤 유형의 콘텐츠를 프리로드 할 수 있나요?
 
 다양한 유형의 콘텐츠를 프리로드할 수 있습니다. `as` 특성으로 지정 가능한 값은 다음과 같습니다.
@@ -78,7 +77,6 @@ browser-compat: html.elements.link.rel.preload
 - `track`: WebVTT 파일.
 - `worker`: JavaScript 웹 워커 혹은 공유 워커.
 - `video`: 주로 {{htmlelement("video")}}에 사용되는 비디오 파일.
-
 
 > **참고:** `video`를 프리로딩하는 것은 프리로드 스펙에 포함되어 있지만 현재 브라우저에는 구현되지 않았습니다.
 
@@ -108,12 +106,11 @@ browser-compat: html.elements.link.rel.preload
 
 위 예제의 코드는 지원하는 브라우저에 한해 `video/mp4` 비디오를 프리로드합니다. 그리고 `video/mp4`를 지원하는 브라우저 사용자를 위해 `video/mp4`를 우선으로 사용하게 합니다({{htmlelement("source")}}에서 `video/mp4`가 첫 번째 항목이기 때문입니다). 이로 인해 비디오 플레이어가 `video/mp4`를 지원하는 브라우저 사용자에게 더 부드럽고 빠르게 반응할 수 있습니다.
 
-또한, `video/mp4`와 `video/webm`을 모두 지원하는 브라우저 사용자의 경우 위 코드에 `<link rel="preload" href="sintel-short.webm" as="video" type="video/webm">` 요소가 추가된다면 `video/mp4`와 `video/webm` '모두' 프리로드될 것입니다(물론 브라우저에서는 실제로 두 유형의 비디오 중 하나만 보여질 것입니다). 
+또한, `video/mp4`와 `video/webm`을 모두 지원하는 브라우저 사용자의 경우 위 코드에 `<link rel="preload" href="sintel-short.webm" as="video" type="video/webm">` 요소가 추가된다면 `video/mp4`와 `video/webm` '모두' 프리로드될 것입니다(물론 브라우저에서는 실제로 두 유형의 비디오 중 하나만 보여질 것입니다).
 
 따라서, 동일한 리소스에 대해 여러 개의 타입을 지정해 프리로드 하는 것은 권장되지 않습니다. 대신, 모범 사례는 가장 많은 사용자에게 해당될 것으로 예상되는 타입에 대해서만 프리로드하는 것입니다. 이 때문에 위 예제 코드에서는 `video/webm` 비디오에 대해 프리로드를 명시하지 않았습니다.
 
 하지만, `video/webm`을 프리로딩하지 않는다고 해서 `video/webm` 비디오를 필요로 하는 경우에 이를 사용할 수 없는 것은 아닙니다. `video/mp4`를 지원하지 않지만 `video/webm`은 지원하는 브라우저 사용자들의 경우, 위 예시 코드에서 여전히 `video/webm` 비디오를 사용할 수 있습니다. 다만 다른 사용자들 중 대다수에게 `video/webm`을 불필요하게 프리로드하지 않은 채로 사용할 수 있다는 점입니다.
-
 
 ## CORS가 활성화된 fetch
 
@@ -122,7 +119,6 @@ browser-compat: html.elements.link.rel.preload
 위에서 언급된 것과 같이, 폰트 파일을 로딩하는 것이 이와 관련된 흥미로운 사례입니다. 여러 이유로 인해, 폰트 파일은 익명 모드 CORS를 통해 요청 되어야 합니다([폰트 요청 조건](https://drafts.csswg.org/css-fonts/#font-fetching-requirements)를 참고하세요).
 
 이 경우를 아래 예제에서 다뤄보겠습니다. [GitHub에 업로드된 전체 코드](https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts)를 참고하세요([라이브 예제](https://mdn.github.io/html-examples/link-rel-preload/fonts/)로도 볼 수 있습니다).
-
 
 ```html
 <head>
@@ -146,7 +142,6 @@ browser-compat: html.elements.link.rel.preload
 `<link>` 요소의 한 가지 멋진 기능은 {{htmlattrxref("media", "link")}} 특성을 포함할 수 있다는 것입니다. `<link>`는 [미디어 타입](/en-US/docs/Web/CSS/@media#media_types) 혹은 완전한 [미디어 쿼리](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)를 포함할 수 있기 때문에 반응형 프리로드를 할 수 있습니다.
 
 예제를 살펴보겠습니다(GitHub에서 [소스 코드](https://github.com/mdn/html-examples/tree/master/link-rel-preload/media)와 [라이브 예제](https://mdn.github.io/html-examples/link-rel-preload/media/)를 참고하세요).
-
 
 ```html
 <head>
@@ -182,7 +177,6 @@ browser-compat: html.elements.link.rel.preload
 
 또한 위 방법은 이미지에 국한될 필요가 없고, 반드시 같은 유형의 파일끼리만 사용할 수 있는 것도 아닙니다. 더 넓게 생각해보세요! 대역폭과 CPU가 특히 더 제한적일 수 있는 좁은 화면으로 접속한 사용자가 있다면 단순한 SVG 도형을 프리로드해서 보여주거나, 충분한 대역폭과 CPU를 가진 사용자에게는 복잡한 JavaScript 청크를 프리로드하여 상호작용이 가능한 3D 모델을 렌더링할 수도 있을 것입니다.
 
-
 ## 스크립팅과 프리로드
 
 이러한 프리로드의 또 다른 멋진 점은 JavaScript를 통해 프리로드를 할 수 있다는 점입니다. 예를 들어, {{domxref("HTMLLinkElement")}} 인스턴스를 생성해 이를 DOM에 부착해보겠습니다.
@@ -205,7 +199,6 @@ document.body.appendChild(preloadedScript);
 
 이 방법은 스크립트를 프리로드하고 싶지만, 실제 이 스크립트를 필요로 할 때까지 실행을 늦추려고 할 때 유용합니다.
 
-
 ## 다른 리소스 프리로딩 작동 방식
 
 다른 프리로딩 관련 기능이 존재하기는 하지만, `<link rel="preload">` 만큼 목적에 잘 부합하는 기능은 없습니다.
@@ -214,7 +207,6 @@ document.body.appendChild(preloadedScript);
 - `<link rel="prerender">`는 특정한 웹 페이지를 백그라운드에서 렌더링해 사용자가 해당 페이지에 접근할 때의 로딩 속도를 높입니다. 이는 사용자의 대역폭을 낭비할 가능성이 있기 때문에, Chrome은 `prerender`를 [NoState prefetch](https://developer.chrome.com/blog/nostate-prefetch/)로 대신 간주합니다.
 - `<link rel="subresource">` {{non-standard_inline}}은 Chrome에서 예전에 `preload`와 같은 문제를 해결하기 위해 지원됐지만, 한 가지 문제가 있었습니다. 항목에 대한 우선순위를 지정할 방법이 없었습니다(당시는 `as`가 존재하지 않았습니다). 따라서 이를 사용한 리소스는 동일하게 낮은 우선순위로 불러와졌습니다.
 - 다양한 스크립트 기반의 리소스 로더들이 나와 있지만, 그 어떤 로더도 브라우저의 fetch 우선순위 큐보다 강력한 파워를 가지지는 못했을 뿐만 아니라, 성능 문제가 발생할 가능성이 높습니다.
-
 
 ## 명세서
 

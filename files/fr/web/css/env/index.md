@@ -111,13 +111,11 @@ Pour la deuxième valeur, il est possible d'utiliser des virgules afin de fourni
 
 ## Spécifications
 
-| Spécification                                                                                | État                                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Environment Variables", "#env-function", "env()")}} | {{Spec2("CSS3 Environment Variables")}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.custom-property.env")}}
+{{Compat}}
 
 ## Voir aussi
 

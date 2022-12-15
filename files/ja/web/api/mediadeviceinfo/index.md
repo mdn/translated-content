@@ -2,6 +2,7 @@
 title: MediaDeviceInfo
 slug: Web/API/MediaDeviceInfo
 ---
+
 {{APIRef("WebRTC")}}
 
 **`MediaDevicesInfo`** インタフェースは 1 つメディアが入力か出力のデバイスであるかを示す情報を含みます。{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}の呼び出しによって取得できるデバイスの一覧は、`MediaDeviceInfo`オブジェクトの配列であり、1 つの要素が 1 つのメディアデバイスになります。
@@ -17,7 +18,7 @@ slug: Web/API/MediaDeviceInfo
 - {{domxref("MediaDeviceInfo.label")}}{{readonlyinline}}
   - : デバイスを説明するラベルである{{domxref("DOMString")}}を返します。(例、"External USB Webcam")
 
-> **Note:** セキュリティ的な関係で、アクティブなメディアストリームが存在するか、メディアデバイスへの継続的な権限をユーザが付与しない限り、`label`のフィールドは常に空欄になります。デバイスラベルの組み合わせによって、ユーザを識別するためのフィンガープリントの一部として利用することができてしまいます。
+> **メモ:** セキュリティ的な関係で、アクティブなメディアストリームが存在するか、メディアデバイスへの継続的な権限をユーザが付与しない限り、`label`のフィールドは常に空欄になります。デバイスラベルの組み合わせによって、ユーザを識別するためのフィンガープリントの一部として利用することができてしまいます。
 
 ## メソッド
 
@@ -65,9 +66,7 @@ audioinput: Built-in Microphone id=r2/xw1xUPIyZunfV1lGrKOma5wTOvCkWfZ368XCndm0=
 
 ## 仕様
 
-| 仕様                                                                                                     | 状況                                 | コメント |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Media Capture', '#idl-def-MediaDeviceInfo', 'MediaDevicesInfo')}} | {{Spec2('Media Capture')}} | 初版     |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

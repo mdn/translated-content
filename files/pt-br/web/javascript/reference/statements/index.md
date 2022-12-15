@@ -1,11 +1,8 @@
 ---
 title: Instruções e declarações
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Statements
 ---
+
 {{jsSidebar("Instruções")}}
 
 Aplicações em JavaScript são realizadas através de instruções com uma sintaxe apropriada. Uma única instrução pode abranger multiplas linhas. Multiplas instruções podem estar contidas em uma única linha se cada instrução estiver separada por ponto e vírgula ( ; ).
@@ -64,7 +61,7 @@ Para visualizar em ordem alfabética use a barra de rolagem à esquerda.
 - {{jsxref("Statements/for...in", "for...in")}}
   - : Itera através de enumeráveis propriedades de um objeto, em ordem arbitrária. Para cada propriedade distinta, instruções podem ser executadas.
 - {{experimental_inline}} {{jsxref("Statements/for...of", "for...of")}}
-  - : Itera através de objetos iteráveis (incluindo [arrays](/pt-BR/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array "Array"), array-like objects, [iterators and generators](/pt-BR/docs/JavaScript/Guide/Iterators_and_Generators "Iterators and generators")), invocando uma iteração personalizada com instruções para serem executadas pelo valor de cada propriedade.
+  - : Itera através de objetos iteráveis (incluindo [arrays](/pt-BR/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array), array-like objects, [iterators and generators](/pt-BR/docs/JavaScript/Guide/Iterators_and_Generators)), invocando uma iteração personalizada com instruções para serem executadas pelo valor de cada propriedade.
 - {{jsxref("Statements/while", "while")}}
   - : Cria um loop que executa uma especifica instrução enquanto o teste da condição for positivo. A condição é retornada antes de executar a instrução.
 
@@ -78,9 +75,6 @@ Para visualizar em ordem alfabética use a barra de rolagem à esquerda.
   - : Usado para importar funções exportadas de um módulo externo, outro script.
 - {{jsxref("Statements/label", "label")}}
   - : Fornece uma instrução com um identificador que pode ser referido usando `break` ou `continue` instruções.
-
-<!---->
-
 - {{deprecated_inline}} {{jsxref("Statements/with", "with")}}
   - : Extende o alcance de uma instrução.
 

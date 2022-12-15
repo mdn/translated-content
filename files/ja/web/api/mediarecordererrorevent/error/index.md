@@ -2,6 +2,7 @@
 title: MediaRecorderErrorEvent.error
 slug: Web/API/MediaRecorderErrorEvent/error
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **{{domxref("MediaRecorderErrorEvent")}}** インタフェースの読み取り専用の `error` プロパティは、{{domxref("MediaRecorder")}} インスタンスによってスローされた例外に関する詳細を提供する {{domxref("DOMException")}} オブジェクトです。
@@ -55,9 +56,7 @@ function recordStream(stream) {
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                                             | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------- |
-| {{ SpecName('MediaStream Recording', '#errorevent-section', 'MediaRecorderErrorEvent.error') }} | {{ Spec2('MediaStream Recording') }} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

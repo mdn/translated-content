@@ -53,19 +53,11 @@ Lors du paramétrage des barres de défilement, on s'assurera que le contraste a
 
 ## Spécifications
 
-| Spécification                            | État                                 | Commentaires        |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('CSS Scrollbars')}} | {{Spec2('CSS Scrollbars')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-### scrollbar-width
-
-{{Compat("css.properties.scrollbar-width")}}
-
-### scrollbar-color
-
-{{Compat("css.properties.scrollbar-color")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -32,4 +32,4 @@ object.hash = string;
 
 ## Browser compatibility
 
-{{Compat("api.Location.hash")}}
+{{Compat}}

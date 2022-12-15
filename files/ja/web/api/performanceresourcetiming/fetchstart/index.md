@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.fetchStart
 slug: Web/API/PerformanceResourceTiming/fetchStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`fetchStart`** 読み取り専用プロパティは、ブラウザーがリソースの取得を開始する直前の {{domxref("DOMHighResTimeStamp","timestamp")}} を表します。
@@ -57,9 +58,7 @@ function print_start_and_end_properties(perfEntry) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                   | ステータス                           | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Resource Timing', '#widl-PerformanceResourceTiming-fetchStart', 'fetchStart')}} | {{Spec2('Resource Timing')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

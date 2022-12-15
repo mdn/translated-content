@@ -23,4 +23,4 @@ var downLink = NetworkInformation.downlink
 
 ## Browser Compatibility
 
-{{Compat("api.NetworkInformation.downlink")}}
+{{Compat}}

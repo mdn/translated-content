@@ -60,10 +60,8 @@ La caractéristique `update` est définie avec un mot-clé parmi ceux de la list
 
 ## Spécifications
 
-| Spécification                                                            | État                                     | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS4 Media Queries', '#update', 'update')}} | {{Spec2('CSS4 Media Queries')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.update")}}
+{{Compat}}

@@ -3,6 +3,7 @@ title: DeviceAcceleration
 slug: Web/API/DeviceMotionEventAcceleration
 original_slug: Web/API/DeviceAcceleration
 ---
+
 {{ ApiRef("Device Orientation Events") }}{{SeeCompatTable}}
 
 `DeviceAcceleration`オブジェクトは、3 つの軸に沿って発生しているデバイスの加速度についての情報を提供します。
@@ -18,6 +19,4 @@ original_slug: Web/API/DeviceAcceleration
 
 ## 仕様
 
-| Specification                                                                                                | Status                                   | Comment            |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName("Device Orientation", "#device_acceleration", "DeviceAcceleration")}} | {{Spec2("Device Orientation")}} | Initial definition |
+{{Specifications}}

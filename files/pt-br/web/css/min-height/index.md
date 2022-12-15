@@ -1,8 +1,8 @@
 ---
 title: min-height
 slug: Web/CSS/min-height
-translation_of: Web/CSS/min-height
 ---
+
 {{ CSSRef() }}
 
 ## Sumário
@@ -39,10 +39,10 @@ min-height: inherit
   - : The intrinsic preferred height.
 - `min-content` {{ experimental_inline() }}
   - : The intrinsic minimum height.
-- `fill-available`{{ experimental_inline() }}
+- `fill-available` {{ experimental_inline() }}
   - : The containing block height minus horizontal margin, border and padding. Some browsers implement an ancient name for this keyword, `available`.
 - `fit-content` {{ experimental_inline() }}
-  - : According CSS3 Box, this is a synonym of `min-content.` CSS3 Sizing defines a more complex algorithm, but no browser implements it, even in an experimental way.
+  - : According CSS3 Box, this is a synonym of `min-content`. CSS3 Sizing defines a more complex algorithm, but no browser implements it, even in an experimental way.
 
 ## Exemplos
 
@@ -57,7 +57,7 @@ form { min-height: 0; }
 | Especificação                                                                                | Status                                   | Comentário                                                                                                                                                                                                                                                                                                                                                                                                 |
 | -------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{ SpecName('CSS3 Sizing', '#width-height-keywords', 'min-height') }} | {{ Spec2('CSS3 Sizing') }}     | Adds the `max-content`, `min-content`, `fit-content`, and `fill-available` keywords. _Both CSS3 Box and CSS3 Writing Modes drafts defined at some point these keywords. These drafts are superseded by this spec._                                                                                                                                                                                         |
-| {{ SpecName('CSS3 Flexbox', '#min-auto', 'min-height') }}                 | {{ Spec2('CSS3 Flexbox') }}     | An [earlier revision of the spec](http://www.w3.org/TR/2012/CR-css3-flexbox-20120918/) added the `auto` keyword and used it as the initial value. The CSSWG subsequently resolved to revert this change, however. As of March 29, 2013, the latest [Editor's Draft](http://dev.w3.org/csswg/css-flexbox/) doesn't modify the `min-width` property anymore (i.e. it no longer introduces the `auto` value). |
+| {{ SpecName('CSS3 Flexbox', '#min-auto', 'min-height') }}                 | {{ Spec2('CSS3 Flexbox') }}     | An [earlier revision of the spec](https://www.w3.org/TR/2012/CR-css3-flexbox-20120918/) added the `auto` keyword and used it as the initial value. The CSSWG subsequently resolved to revert this change, however. As of March 29, 2013, the latest [Editor's Draft](http://dev.w3.org/csswg/css-flexbox/) doesn't modify the `min-width` property anymore (i.e. it no longer introduces the `auto` value). |
 | {{ SpecName('CSS3 Transitions', '#animatable-css', 'min-height') }}     | {{ Spec2('CSS3 Transitions') }} | Defines `min-height` as animatable.                                                                                                                                                                                                                                                                                                                                                                        |
 | {{ SpecName('CSS2.1', 'visudet.html#min-max-heights', 'min-height') }} | {{ Spec2('CSS2.1') }}             | Initial definition.                                                                                                                                                                                                                                                                                                                                                                                        |
 
@@ -68,4 +68,4 @@ form { min-height: 0; }
 ## Ver também
 
 - {{ Cssxref("width") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
-- The [box model](/pt-BR/docs/CSS/box_model "en/CSS/box_model"), {{ Cssxref("min-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
+- The [box model](/pt-BR/docs/CSS/box_model), {{ Cssxref("min-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}

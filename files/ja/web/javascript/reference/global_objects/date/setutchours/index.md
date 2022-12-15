@@ -1,6 +1,8 @@
 ---
 title: Date.prototype.setUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
+l10n:
+  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
 ---
 
 {{JSRef}}
@@ -11,8 +13,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 
 ## 構文
 
-```
-dateObj.setUTCHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
+```js-nolint
+setUTCHours(hoursValue)
+setUTCHours(hoursValue, minutesValue)
+setUTCHours(hoursValue, minutesValue, secondsValue)
+setUTCHours(hoursValue, minutesValue, secondsValue, msValue)
 ```
 
 ### 引数
@@ -41,19 +46,17 @@ dateObj.setUTCHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
 ### setUTCHours() の使用
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 theBigDay.setUTCHours(8);
 ```
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-date.prototype.setutchours', 'Date.prototype.setUTCHours')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("javascript.builtins.Date.setUTCHours")}}
+{{Compat}}
 
 ## 関連情報
 

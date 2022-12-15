@@ -37,13 +37,13 @@ const p = new Proxy(obj, {
 
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}
-- {{jsxref("Object/proto", "__proto__")}}
+- [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Operators/instanceof", "instanceof")}}
 
 如果遇到了下面两种情况，JS 引擎会抛出 {{jsxref("TypeError")}} 异常：
 
-- `getPrototypeOf()` 方法返回的不是对象也不是 `null。`
+- `getPrototypeOf()` 方法返回的不是对象也不是 `null`。
 - 目标对象是不可扩展的，且 `getPrototypeOf()` 方法返回的原型不是目标对象本身的原型。
 
 ## 示例

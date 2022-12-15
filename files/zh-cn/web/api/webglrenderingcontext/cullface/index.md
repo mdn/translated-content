@@ -29,7 +29,7 @@ None.
 
 ## 示例
 
-多边形剔除功能默认不开启。 想要开启这个功能，使用{{domxref("WebGLRenderingContext.enable", "enable()")}} 和 {{domxref("WebGLRenderingContext.disable", "disable()")}} 方法，传入参数`gl.CULL_FACE`.
+多边形剔除功能默认不开启。想要开启这个功能，使用{{domxref("WebGLRenderingContext.enable", "enable()")}} 和 {{domxref("WebGLRenderingContext.disable", "disable()")}} 方法，传入参数`gl.CULL_FACE`.
 
 ```js
 gl.enable(gl.CULL_FACE);

@@ -42,9 +42,13 @@ background-clip: unset;
 - `text` {{experimental_inline}}
   - : L'arrière-plan est limité (rogné) au texte en premier plan.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -105,16 +109,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                                     | Commentaires               |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------- |
-| {{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale.       |
-| {{SpecName('CSS4 Backgrounds', '#background-clip', 'background-clip')}}     | {{Spec2('CSS4 Backgrounds')}} | Ajout de la valeur `text`. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.background-clip")}}
+{{Compat}}
 
 ## Voir aussi
 

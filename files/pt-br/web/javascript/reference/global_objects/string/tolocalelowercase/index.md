@@ -1,16 +1,8 @@
 ---
 title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
-tags:
-  - Internacionalização
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - toLocaleLowerCase()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 ---
+
 {{JSRef}}
 
 O método `toLocaleLowerCase()` retorna o valor da string em minúsculas, de acordo com qualquer mapeamento de caixa de texto específico da localidade.

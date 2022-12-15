@@ -1,16 +1,8 @@
 ---
 title: <number>
 slug: Web/CSS/number
-tags:
-  - CSS
-  - Layout
-  - Referencia CSS
-  - Tipo de Dado Númerico
-  - Tipo de dado CSS
-  - Tipos de Dados CSS
-  - Web
-translation_of: Web/CSS/number
 ---
+
 {{CSSRef}}
 
 O [tipo de dado CSS](/pt-BR/docs/Web/CSS/CSS_Types) **`<number>`** representa um número, sendo esse ou um inteiro ou um componente fracional.
@@ -21,7 +13,7 @@ A sintaxe de `<number>` estende a sintaxe de {{CSSxRef("&lt;integer&gt;")}}. Um 
 
 ## Interpolação
 
-Quando animado, os valores de `<number>` são interpolados como números reais e de ponto flutuante. A velocidade da interpolação é determinada pelo[ tempo da função](/pt-BR/docs/Web/CSS/timing-function) associada à animação.
+Quando animado, os valores de `<number>` são interpolados como números reais e de ponto flutuante. A velocidade da interpolação é determinada pelo [tempo da função](/pt-BR/docs/Web/CSS/timing-function) associada à animação.
 
 ## Exemplos
 

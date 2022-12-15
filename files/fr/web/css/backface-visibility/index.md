@@ -41,9 +41,13 @@ La propriété `backface-visibility` est définie avec l'un des mots-clés suiva
 - `hidden`
   - : Ce mot-clé indique que la face arrière n'est pas visible. La face avant est donc cachée.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -188,15 +192,11 @@ th, p, td {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS Transforms 2', '#propdef-backface-visibility', 'backface-visibility')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.backface-visibility")}}
+{{Compat}}
 
 ## Voir aussi
 

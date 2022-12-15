@@ -10,6 +10,7 @@ tags:
   - set
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** 메서드는 지정한 요소를 `Set` 객체에서 제거합니다.

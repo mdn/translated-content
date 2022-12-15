@@ -2,6 +2,7 @@
 title: Location
 slug: Web/HTTP/Headers/Location
 ---
+
 {{HTTPSidebar}}
 
 **`Location`** レスポンスヘッダーはリダイレクト先の URL を示します。 `3xx` (リダイレクト) または `{{HTTPStatus("201")}}` (created) ステータスレスポンスを返すときのみ意味を成します。

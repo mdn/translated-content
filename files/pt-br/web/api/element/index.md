@@ -1,16 +1,8 @@
 ---
 title: Element
 slug: Web/API/Element
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Element
-  - Interface
-  - Reference
-  - Web API
-translation_of: Web/API/Element
 ---
+
 {{ APIRef("DOM") }}
 
 A interface **`Element`** é a classe base mais geral da qual todos os objetos em um {{domxref("Document")}} herda. Ela somente tem métodos e propriedades comuns para todos os tipos de elementos. Mais classes específicas herdam de `Element`. Por exemplo, a interface {{domxref("HTMLElement")}} é a interface base para elementos HTML, enquanto a interface {{domxref("SVGElement")}} é a base para todos os elementos SVG. A maioria das funcionalidades é especificada mais abaixo da hierarquia de classes.
@@ -85,7 +77,7 @@ _Herda propriedades de seus parentes {{domxref("Node")}}, e seu próprio parente
 
 ## Métodos
 
-_Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{domxref("EventTarget")}}_, e implementa aqueles de {{domxref("ParentNode")}}, {{domxref("ChildNode")}}_, {{domxref("NonDocumentTypeChildNode")}}, e\_\_ {{domxref("Animatable")}}._
+_Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{domxref("EventTarget")}}, e implementa aqueles de {{domxref("ParentNode")}}, {{domxref("ChildNode")}}, {{domxref("NonDocumentTypeChildNode")}}, e {{domxref("Animatable")}}._
 
 - {{ domxref("EventTarget.addEventListener()") }}
   - : Registra um manipulador de evento para um tipo específico de evento no elemento.
@@ -109,7 +101,7 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Recupera a representação do nó de um atributo nomeado do nó atual e o retorna como um {{ domxref("Attr") }}.
 - {{ domxref("Element.getAttributeNodeNS()") }} {{obsolete_inline}}
   - : Recupera a representação de nó do atributo com o nome especificado e [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces), do nó atual e o retorna como um {{ domxref("Attr") }}.
-- {{ domxref("Element.getBoundingClientRect()") }}` `{{experimental_inline}}
+- {{ domxref("Element.getBoundingClientRect()") }} {{experimental_inline}}
   - : ...
 - {{ domxref("Element.getClientRects()") }} {{experimental_inline}} TYPE of returnvalue????
   - : Retorna uma coleção de retângulos que indicam os retângulos delimitadores para cada linha de texto em um cliente.
@@ -127,7 +119,7 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Retorna um {{jsxref("Boolean")}} indicando se o elemento tem um atributo especificado, no [namespace](/pt-BR/docs/Mozilla/Tech/XUL/Namespaces) especificado, ou não.
 - {{ domxref("Element.insertAdjacentHTML") }} {{experimental_inline}}
   - : Analisa o texto como HTML ou XML e insere os nós resultantes na árvore em dada posição.
-- {{ domxref("Element.matches()") }}` `{{experimental_inline}}
+- {{ domxref("Element.matches()") }} {{experimental_inline}}
   - : Retorna um {{jsxref("Boolean")}} indicando se o elemento seria ou não selecionado pelo seletor de string specificada.
 - {{ domxref("Element.querySelector()") }}
   - : Retorna {{ domxref("Node") }}...
@@ -149,9 +141,6 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
   - : Assíncronamente pede o navegador para fazer o elemento tela cheia.
 - {{ domxref("Element.requestPointerLock()")}} {{experimental_inline}}
   - : Permite assíncronamente pedir pelo apontador para ser bloqueado em um dado elemento.
-
-<!---->
-
 - {{ domxref("Element.scrollIntoView()") }} {{experimental_inline}}
   - : Rola a página até que o elemento apareça na visão.
 - {{ domxref("Element.setAttribute()") }}
@@ -174,7 +163,7 @@ _Herda métodos de seus parentes {{domxref("Node")}}, e seu proprío parente, {{
 | {{SpecName("Web Animations", '', '')}}                                                         | {{Spec2("Web Animations")}}         | Adicionado o método `getAnimationPlayers()`.                                                                                                                                                                                                                                                                                    |
 | {{SpecName('Undo Manager', '', 'Element')}}                                                     | {{Spec2('Undo Manager')}}             | Adicionadas as propriedades `undoScope` e `undoManager`.                                                                                                                                                                                                                                                                        |
 | {{SpecName('Pointer Events', '#extensions-to-the-element-interface', 'Element')}} | {{Spec2('Pointer Events')}}         | Adicionados os seguintes manipuladores de evento: `ongotpointercapture` e `onlostpointercapture`. Adicionados os seguintes métodos: `setPointerCapture()` e `releasePointerCapture()`.                                                                                                                                          |
-| {{SpecName('Selectors API Level 2', '#interface-definitions', 'Element')}}         | {{Spec2('Selectors API Level 2')}} | Adicionados os seguintes métodos:` matches()` (implementado como `mozMatchesSelector()`), `find()`, `findAll()`.                                                                                                                                                                                                                |
+| {{SpecName('Selectors API Level 2', '#interface-definitions', 'Element')}}         | {{Spec2('Selectors API Level 2')}} | Adicionados os seguintes métodos: `matches()` (implementado como `mozMatchesSelector()`), `find()`, `findAll()`.                                                                                                                                                                                                                |
 | {{SpecName('Selectors API Level 1', '#interface-definitions', 'Element')}}         | {{Spec2('Selectors API Level 1')}} | Adicionados os seguintes métodos: `querySelector()` e `querySelectorAll()`.                                                                                                                                                                                                                                                     |
 | {{SpecName('Pointer Lock', 'index.html#element-interface', 'Element')}}             | {{Spec2('Pointer Lock')}}             | Adicionado o método `requestPointerLock()`.                                                                                                                                                                                                                                                                                     |
 | {{SpecName('Fullscreen', '#api', 'Element')}}                                                 | {{Spec2('Fullscreen')}}             | Adicionado o método `requestFullscreen()`.                                                                                                                                                                                                                                                                                      |

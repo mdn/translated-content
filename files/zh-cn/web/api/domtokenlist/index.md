@@ -12,7 +12,7 @@ slug: Web/API/DOMTokenList
 - {{ domxref("DOMTokenList.length") }} {{ReadOnlyInline}}
   - : 一个整数，表示存储在该对象里值的个数。
 - {{domxref("DOMTokenList.value")}}
-  - : 该属性以 {{domxref("DOMString")}} 的形式返回 **`DOMTokenList` **列表的值。
+  - : 该属性以 {{domxref("DOMString")}} 的形式返回 **`DOMTokenList`** 列表的值。
 
 ## 方法
 
@@ -33,7 +33,7 @@ slug: Web/API/DOMTokenList
 - {{domxref("DOMTokenList.entries()")}}
   - : 返回一个迭代器（{{jsxref("Iteration_protocols","iterator")}}），以遍历这个对象中的所有键值对。
 - {{domxref("DOMTokenList.forEach()", "DOMTokenList.forEach(<var>callback</var> [, <var>thisArg</var>])")}}
-  - : 为每个 `DOMTokenList` 中的元素都调用一次传入的 `callback` 函数 。
+  - : 为每个 `DOMTokenList` 中的元素都调用一次传入的 `callback` 函数。
 - {{domxref("DOMTokenList.keys()")}}
   - : 返回一个迭代器（{{jsxref("Iteration_protocols","iterator")}}）以遍历这个对象中所有键值对的键。
 - {{domxref("DOMTokenList.values()")}}

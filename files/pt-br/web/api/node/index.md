@@ -1,8 +1,8 @@
 ---
 title: Node
 slug: Web/API/Node
-translation_of: Web/API/Node
 ---
+
 {{Apiref("DOM")}}
 
 **`Node`** é uma interface da qual diversos tipos do DOM herdam, e que permite que esses tipos sejam tratados de forma similar, por exemplo, herdando os mesmos métodos ou sendo testados da mesma forma.
@@ -64,19 +64,20 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 
 - {{domxref("Node.rootNode")}} {{readOnlyInline}} {{deprecated_inline}}
   - : Retorna um objeto {{domxref("Node")}} representando o nó mais alto em uma árvore, ou o nó atual, se ele for o mais alto da árvore. Isso foi substituído por {{domxref("Node.getRootNode()")}}.
-- ### Propriedades obsoletas
 
-  {{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}
+### Propriedades obsoletas
+
+- {{domxref("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}
 
   - : Retorna um {{domxref("DOMString")}} representando a parte local do nome qualificado de um elemento.
 
-    > **Nota:** No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML. {{gecko_minversion_inline("1.9.2")}}
+    > **Nota:** No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML.
 
 - {{domxref("Node.namespaceURI")}} {{obsolete_inline}}{{readonlyInline}}
 
   - : O espaço de nomes URI desse nó, ou `null` se não estiver no espaço de nomes.
 
-    > **Nota:** No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`http://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML. {{gecko_minversion_inline("1.9.2")}}
+    > **Nota:** No Firefox 3.5 e nas versões anteriores, elementos HTML estão no espaço de nomes. Em versões posteriores, elementos HTML estão em [`https://www.w3.org/1999/xhtml/`](https://www.w3.org/1999/xhtml/), nas árvores HTML e XML.
 
 - {{domxref("Node.prefix")}} {{obsolete_inline}}{{readonlyInline}}
   - : É um {{domxref("DOMString")}} representando o espaço de nomes do nó, ou `null` se nenhum prefixo é especificado.
@@ -153,14 +154,14 @@ DOMComb(parentNode, callbackFunction);
 
 #### Descrição
 
-Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `parentNode` e executa a `callbackFunction` em cada um deles como [`this`](/pt-BR/docs/JavaScript/Reference/Operators/this "en-US/docs/JavaScript/Reference/Operators/this").
+Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `parentNode` e executa a `callbackFunction` em cada um deles como [`this`](/pt-BR/docs/JavaScript/Reference/Operators/this).
 
 #### Parâmetros
 
 - `parentNode`
-  - : O nó pai ([`Object`](/en-US/docs/JavaScript/Reference/Global_Objects/Object "en-US/docs/JavaScript/Reference/Global_Objects/Object")` do tipo Node`).
+  - : O nó pai ([`Object`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object)`do tipo Node`).
 - `callbackFunction`
-  - : A função de callback ([`Function`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/JavaScript/Reference/Global_Objects/Function")).
+  - : A função de callback ([`Function`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function)).
 
 #### Exemplo de uso
 
@@ -178,7 +179,7 @@ onload = function () {
 
 ## Especificações
 
-- [DOM Level 1 Core: Node interface](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1950641247)
-- [DOM Level 2 Core: Node interface](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1950641247)
-- [DOM Level 3 Core: Node interface](http://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247)
+- [DOM Level 1 Core: Node interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1950641247)
+- [DOM Level 2 Core: Node interface](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-1950641247)
+- [DOM Level 3 Core: Node interface](https://www.w3.org/TR/DOM-Level-3-Core/core.html#ID-1950641247)
 - [DOM Standard: Node Interface](http://dom.spec.whatwg.org/#interface-node)

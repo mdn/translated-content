@@ -83,7 +83,7 @@ Web app manifest 的部署只需要在 HTML 文件中的 [head](/zh-TW/docs/Web/
 
 ### `dir`
 
-指定一個對於 `name`、` short_name、``description ` 等成員的主要書寫方向。 包含 `lang` 成員，其能夠為右至左書寫的語言提供幫助。
+指定一個對於 `name`、`short_name`、`description` 等成員的主要書寫方向。 包含 `lang` 成員，其能夠為右至左書寫的語言提供幫助。
 
 ```json
 "dir": "rtl",

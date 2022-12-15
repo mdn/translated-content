@@ -2,9 +2,10 @@
 title: ブラウザーの開発者ツールとは？
 slug: Learn/Common_questions/What_are_browser_developer_tools
 ---
+
 近頃のブラウザーにはパワフルな開発者ツールが入っています。開発者ツールでは、現在の HTML や CSS、JavaScript の状態を検証したり、ページがどういった資産にアクセスし、どれだけ時間がかかったかといった多様なことができます。この記事ではブラウザーの開発者ツールの使い方について説明します。
 
-> **Note:** 下のサンプルを実行していく前に、[ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)の記事の中で作りあげる、[初心者向けウェブサイトの例](https://mdn.github.io/beginner-html-site-scripted/)を開いてください。後ほどこれを使って説明します。
+> **メモ:** 下のサンプルを実行していく前に、[ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)の記事の中で作りあげる、[初心者向けウェブサイトの例](https://mdn.github.io/beginner-html-site-scripted/)を開いてください。後ほどこれを使って説明します。
 
 ## ブラウザーの開発者ツールの開き方
 
@@ -24,12 +25,12 @@ slug: Learn/Common_questions/What_are_browser_developer_tools
 
 - **_メニューバー:_**
 
-  - **Firefox:** ![](2014-01-10-13-08-08-f52b8c.png) メニュー ➤ ウェブ開発 ➤ 開発者ツールを開く
+  - **Firefox:** ![](2014-01-10-13-08-08-f52b8c.png) メニュー ➤ ウェブ開発 ➤ 開発者ツールを開く
   - **Chrome:** その他のツール ➤ 開発者ツール
-  - **Safari:** 開発 ➤ Web インスペクタ (もし、開発メニューが表示されていない場合は Safari ➤ 設定 ➤ 詳細 を開いて、メニューバーに[開発]メニューを表示 のチェックボックスをオンにします。)
-  - **Opera** では 開発者用ツール ➤ Web インスペクタ
+  - **Safari:** 開発 ➤ Web インスペクタ (もし、開発メニューが表示されていない場合は Safari ➤ 設定 ➤ 詳細 を開いて、メニューバーに[開発]メニューを表示 のチェックボックスをオンにします。)
+  - **Opera** では 開発者用ツール ➤ Web インスペクタ
 
-- **コンテキストメニュー:** ウェブページ上の項目で、長押しまたは右クリック (Mac では Ctrl + クリック) し、表示されたコンテキストメニューより**要素を調査**を選択してください（さらに、この方法では右クリックで選択した要素がハイライトされて表示されます）。
+- **コンテキストメニュー:** ウェブページ上の項目で、長押しまたは右クリック (Mac では Ctrl + クリック) し、表示されたコンテキストメニューより**要素を調査**を選択してください（さらに、この方法では右クリックで選択した要素がハイライトされて表示されます）。
 
 ![](inspector_context.png)
 
@@ -42,7 +43,7 @@ slug: Learn/Common_questions/What_are_browser_developer_tools
 もしインスペクターが表示されていない場合、
 
 - インスペクタータブをタップまたはクリックしてください。
-- Internet Explorer では、 DOM Explorer または <kbd>Ctrl</kbd> + <kbd>1</kbd> を押してください。
+- Internet Explorer では、 DOM Explorer または <kbd>Ctrl</kbd> + <kbd>1</kbd> を押してください。
 - Microsoft Edge や Opera では、要素をタップ／クリックしてください。
 - Safari では、それに類するような名前はついていませんが、HTML が見えるでしょう。もし、画面に表示するように何も選択していなければ、スタイルボタンを押すことで CSS が見られます。
 
@@ -52,10 +53,10 @@ slug: Learn/Common_questions/What_are_browser_developer_tools
 
 ![](dom_inspector.png)
 
-- **ノードを削除** (要素を削除の場合もあり) は現在選択中の要素を削除します。
-- **HTML として編集** (属性を追加や、テキストの編集の場合もあり) はその場で HTML を編集し、結果を見ることができます。テストやデバッグの際にとても便利です。
-- **hover / active / focus** 要素を強制的に選択した状態にトグルします。その状態での見た目を確認することができます。
-- **コピー** 現在選択されている項目の HTML をコピーします。
+- **ノードを削除** (要素を削除の場合もあり) は現在選択中の要素を削除します。
+- **HTML として編集** (属性を追加や、テキストの編集の場合もあり) はその場で HTML を編集し、結果を見ることができます。テストやデバッグの際にとても便利です。
+- **hover / active / focus** 要素を強制的に選択した状態にトグルします。その状態での見た目を確認することができます。
+- **コピー** 現在選択されている項目の HTML をコピーします。
 - CSS パスをコピーする や、XPath をコピーする といったメニューがあるブラウザーもあります。これは CSS のセレクターや、現在の HTML要素への XPath 表現のコピーを可能とするものです。
 
 それでは表示されている DOM を編集してみましょう。要素をダブルクリックしたり、右クリックして、HTML として編集を選んでみましょう。いろいろと変更してみても問題ありませんが、保存ができませんのでご注意を。
@@ -91,7 +92,7 @@ CSS ビューアーの一番上にいくつかのタブメニューがあるこ�
 
 - [Firefox インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html)
 - [Internet Explorer DOM エクスプローラー (英語)](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/dn255008(v=vs.85))
-- [Chrome DOM インスペクタ](https://developer.chrome.com/docs/devtools/dom/) (Opera のインスペクタもこれと同じ動作です)
+- [Chrome DOM インスペクタ](https://developer.chrome.com/docs/devtools/dom/) (Opera のインスペクタもこれと同じ動作です)
 - [Safari DOM インスペクタおよびスタイルエクスプローラー (英語)](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/ResourcesandtheDOM/ResourcesandtheDOM.html#//apple_ref/doc/uid/TP40007874-CH3-SW1)
 
 ## JavaScript デバッガー
@@ -165,35 +166,35 @@ JavaScript コンソールは、期待通りに使用されていない JavaScri
 
 以下のコードをひとつずつコンソールに入力して（Enterキーを押して）、何が起こるか試してみてください。
 
-1. ```js
-    alert('hello!');
-    ```
+```js
+alert('hello!');
+```
 
-2. ```js
-    document.querySelector('html').style.backgroundColor = 'purple';
-    ```
+```js
+document.querySelector('html').style.backgroundColor = 'purple';
+```
 
-3. ```js
-    const myWordmark = document.createElement('img');
-    myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-    document.querySelector('h1').appendChild(myWordmark);
-    ```
+```js
+const myWordmark = document.createElement('img');
+myWordmark.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
+document.querySelector('h1').appendChild(myWordmark);
+```
 
 では、次のような誤ったバージョンのコードを入力してみて、何が返されるかを見てみましょう。
 
-1. ```js
-    alert('hello!);
-    ```
+```js example-bad
+alert('hello!);
+```
 
-2. ```js
-    document.cheeseSelector('html').style.backgroundColor = 'purple';
-    ```
+```js example-bad
+document.cheeseSelector('html').style.backgroundColor = 'purple';
+```
 
-3. ```js
-    const myWordmark = document.createElement('img');
-    myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
-    document.querySelector('h1').appendChild(myWordmark);
-    ```
+```js example-bad
+const myWordmark = document.createElement('img');
+myBanana.setAttribute('src','https://blog.mozilla.org/press/wp-content/themes/OneMozilla/img/mozilla-wordmark.png');
+document.querySelector('h1').appendChild(myWordmark);
+```
 
 ブラウザーが返すエラーの種類を見ることができるようになります。多くの場合、これらのエラーはかなり不可解ですが、これらの問題を解決するのはかなり簡単なはずです。
 

@@ -54,7 +54,7 @@ n.data // should return 'I like peas.'
 
 ## Browser compatibility
 
-{{Compat("api.Notification.data")}}
+{{Compat}}
 
 ## See also
 

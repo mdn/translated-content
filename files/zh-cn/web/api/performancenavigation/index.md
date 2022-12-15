@@ -7,7 +7,7 @@ slug: Web/API/PerformanceNavigation
 
 ## Summary
 
-**`PerformanceNavigation`**`接口呈现了如何导航到当前文档的信息。`
+**`PerformanceNavigation`** 接口呈现了如何导航到当前文档的信息。
 
 这个类型的对象可以被只读属性{{domxref("Performance.navigation")}}调用。
 

@@ -30,9 +30,9 @@ document.domain = domainString;
     - 该文件没有参考上下文
     - 该文档的有效域为 null
     - 给定值不等于文档的有效域（或者它不是该域的可注册域后缀）
-    - The {{httpheader('Feature-Policy/document-domain','document-domain')}} {{HTTPHeader("Feature-Policy")}}一启用
+    - The {{httpheader('Permissions-Policy/document-domain','document-domain')}} {{HTTPHeader("Permissions-Policy")}}一启用
 
-## 例子
+## 示例
 
 ### 获取域名
 
@@ -44,7 +44,7 @@ var currentDomain = document.domain;
 
 ### 关闭窗口
 
-如果文档（例如 www\.example.xxx/good.html）的域为“ www\.example.xxx”，则本示例将尝试关闭窗口。
+如果文档（例如 www\.example.xxx/good.html）的域为“www\.example.xxx”，则本示例将尝试关闭窗口。
 
 ```js
 var badDomain = "www.example.xxx";

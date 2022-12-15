@@ -1,15 +1,9 @@
 ---
 title: Escrevendo um servidor WebSocket
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
-tags:
-  - Guía
-  - HTML5
-  - Tutorial
-  - WebSocket
-  - WebSockets
-translation_of: Web/API/WebSockets_API/Writing_WebSocket_servers
 original_slug: WebSockets/Writing_WebSocket_servers
 ---
+
 Um servidor de WebSocket é uma aplicação TCP que escuta uma porta de um servidor que segue um protocolo específico, simples assim. A tarefa de criar um servidor personalizado costuma assustar as pessoas; no entanto, pode ser fácil implementar um simples servidor WebSocket na sua plataforma de escolha.
 
 Um servidor WebSocket pode ser escrito em qualquer linguagem de programação server-side que é capaz de utilizar [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), tais como C(++) , ou Python, ou mesmo o [PHP](/pt-BR/docs/PHP) e o [server-side JavaScript](/pt-BR/docs/Web/JavaScript/Server-Side_JavaScript). Esse não é um tutorial em uma linguagem de programação específica, mas serve como guia para facilitar a escrita do seu próprio servidor.
@@ -122,9 +116,9 @@ Se falará mais sobre isso depois.
 
 Para ler o `payload data`, você deve saber quando parar de ler. Por isso é importante saber o tamanho do payload (payload length). Infelizmente, conseguir essa informação é de certa forma complicado. Para obte-lá, seguimos esses passos:
 
-1.  Ler os bits 9-15 (inclusivo) e interpretar como um unsigned integer. Se o valor for de 125 ou menor, esse é o tamanho; temos a resposta. Se o valor é igual a 126, então vai para o passo 2, ou se for 127, então vai para o passo 3.
-2.  Ler os próximos 16 bits e interpretar como um unsined integer, esse é o tamanho; temos a resposta
-3.  Ler os próximos 64 bits e interpretar como um unsigned integer (o bit mais significante DEVE ser 0), esse é o tamanho; temos a resposta.
+1. Ler os bits 9-15 (inclusivo) e interpretar como um unsigned integer. Se o valor for de 125 ou menor, esse é o tamanho; temos a resposta. Se o valor é igual a 126, então vai para o passo 2, ou se for 127, então vai para o passo 3.
+2. Ler os próximos 16 bits e interpretar como um unsined integer, esse é o tamanho; temos a resposta
+3. Ler os próximos 64 bits e interpretar como um unsigned integer (o bit mais significante DEVE ser 0), esse é o tamanho; temos a resposta.
 
 ### Lendo e Desmascarando o Dado
 

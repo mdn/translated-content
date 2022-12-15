@@ -29,7 +29,7 @@ typedarray.some(callback[, thisArg])
       - : 正在被调用的 typed array 本身。
 
 - `thisArg`
-  - : 可选的. `callback` 回调函数的 `this` 值 .
+  - : 可选的。`callback` 回调函数的 `this` 值 .
 
 ### 返回值
 

@@ -2,6 +2,7 @@
 title: 解決値
 slug: Web/CSS/resolved_value
 ---
+
 {{CSSRef}}
 
 **解決値** は [CSS](/ja/docs/Web/CSS) プロパティにおいて、 {{domxref("Window.getComputedStyle", "getComputedStyle()")}} で返される値です。

@@ -1,15 +1,8 @@
 ---
 title: Date.prototype.toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
-tags:
-  - Date
-  - JavaScript
-  - Prototipo
-  - Prototype
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 ---
+
 {{JSRef}}
 
 O método **`toDateString()`** retorna a porção da data de um objeto {{jsxref("Date")}} em um formato legível para humanos em inglês dos Estados Unidos.

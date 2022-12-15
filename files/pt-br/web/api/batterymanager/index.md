@@ -1,12 +1,8 @@
 ---
 title: BatteryManager
 slug: Web/API/BatteryManager
-tags:
-  - API
-  - Battery API
-  - Referencia
-translation_of: Web/API/BatteryManager
 ---
+
 {{APIRef("Battery API")}}
 
 ## Resumo
@@ -56,4 +52,4 @@ Herdado de {{domxref("EventTarget")}}:
 ## Veja também
 
 - {{ domxref("Navigator.battery","navigator.battery") }}
-- A [Battery Status API](/pt-BR/docs/WebAPI/Battery_Status "/en-US/docs/WebAPI/Battery_Status")
+- A [Battery Status API](/pt-BR/docs/WebAPI/Battery_Status)

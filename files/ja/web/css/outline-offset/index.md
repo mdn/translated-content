@@ -2,6 +2,7 @@
 title: outline-offset
 slug: Web/CSS/outline-offset
 ---
+
 {{CSSRef}}
 
 CSS の **`outline-offset`** プロパティは、要素の辺や境界線と[輪郭線](/ja/docs/Web/CSS/outline)との空間の量を設定します。

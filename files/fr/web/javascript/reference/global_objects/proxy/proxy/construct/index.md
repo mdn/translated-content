@@ -28,7 +28,7 @@ var p = new Proxy(cible, {
 
 ### Paramètres
 
-Les paramètres suivants sont passés à la méthode `construct`.  `this` est ici lié au gestionnaire (_handler_).
+Les paramètres suivants sont passés à la méthode `construct`. `this` est ici lié au gestionnaire (_handler_).
 
 - `cible`
   - : L'objet cible.
@@ -100,14 +100,11 @@ new p(); // TypeError: p is not a constructor
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-construct-argumentslist-newtarget', '[[Construct]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-construct-argumentslist-newtarget', '[[Construct]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.construct")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.attachShader()
 slug: Web/API/WebGLRenderingContext/attachShader
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **WebGLRenderingContext.attachShader()** メソッドは、フラグメントか頂点のどちらかの {{domxref("WebGLShader")}} を {{domxref("WebGLProgram")}} にアタッチします。
@@ -40,10 +41,7 @@ if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
 
 ## 仕様策定状況
 
-| 仕様                                                                                         | 策定状況                             | コメント                  |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------- |
-| {{SpecName('WebGL', "#5.14.9", "attachShader")}}                             | {{Spec2('WebGL')}}             | 初回定義。                |
-| {{SpecName('OpenGL ES 2.0', "glAttachShader.xml", "glAttachShader")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL マニュアルページ。 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

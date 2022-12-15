@@ -2,6 +2,7 @@
 title: 一般的な HTML と CSS の問題への対処
 slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 ここでは、HTML と CSS のコードで発生する可能性のある一般的なクロスブラウザーの問題、および問題の発生を防ぐため、または発生する問題を修正するために使用できるツールについて具体的に説明します。これには、コードのリンティング、CSS プレフィックスの処理、問題を追跡するためのブラウザーの開発者ツールの使用、ブラウザーにサポートを追加するための polyfill の使用、レスポンシブデザイン問題への取り組みなどが含まれます。
@@ -25,7 +26,7 @@ HTML/CSS に起因するクロスブラウザーエラーを減らす方法を�
 
 基本的には、HTML と CSS のコードが整形式で、構文エラーがないかどうかをチェックすることです。
 
-> **Note:** CSS と HTML に関する一般的な問題の 1 つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の 1 つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API (たとえば広告バナーの生成) によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、"名前空間" CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクタを起動します。そうすれば競合は起こりにくくなります。例えば、 `.audio-player ul a` です。
+> **メモ:** CSS と HTML に関する一般的な問題の 1 つは、異なる CSS ルールが互いに矛盾が生じるときに発生します。 サードパーティのコードを使用している場合、これは特に問題になる可能性があります。たとえば、CSS フレームワークを使用して、それが使用しているクラス名の 1 つが別の目的ですでに使用されているものと衝突しているとします。 または、ある種のサードパーティ API (たとえば広告バナーの生成) によって生成された HTML に、すでに別の目的で使用されているクラス名または ID が含まれていることもあります。これが起こらないようにするには、最初に使用しているツールを調べて、それらを中心にコードを設計する必要があります。また、"名前空間" CSS も価値があります。ウィジェットがある場合は、それが明確なクラスを持っていることを確認してから、このクラスでウィジェット内の要素を選択するセレクタを起動します。そうすれば競合は起こりにくくなります。例えば、 `.audio-player ul a` です。
 
 ### 検証
 
@@ -65,7 +66,7 @@ Other popular editors have similar linting packages available. For example, see:
 
 The developer tools built into most browsers also feature useful tools for hunting down errors, mainly for CSS.
 
-> **Note:** ブラウザーが不正な形式のマークアップを自動的に修正しようとするため、HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。W3C バリデータは HTML エラーを取得するための最良の方法です — 上の [Validation](#validation) を見てください。
+> **メモ:** ブラウザーが不正な形式のマークアップを自動的に修正しようとするため、HTML エラーは開発ツールではそれほど簡単には表示されない傾向があります。W3C バリデータは HTML エラーを取得するための最良の方法です — 上の [Validation](#validation) を見てください。
 
 As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:
 
@@ -125,7 +126,7 @@ The output of this code is as follows:
 
 {{EmbedGHLiveSample("learning-area/tools-testing/cross-browser-testing/html-css/forms-test", '100%', 150)}}
 
-> **Note:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
+> **メモ:** You can also see this running live as [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) on GitHub (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/html-css/forms-test.html) also).
 
 If you view the example on a supporting browser, you'll see the UI features in action as you try to input data. On devices with dynamic keyboards, type-specific keypads will be displayed. On a non-supporting browser like Internet Explorer, the inputs will just default to normal text inputs, meaning the user can still enter the correct information.
 
@@ -137,7 +138,7 @@ Let's look at an example — a simple box styled with CSS, which has some stylin
 
 ![A red pill button with rounded corners, inset shadow, and drop shadow](blingy-button.png)
 
-> **Note:** You can also see this example running live on GitHub as [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
+> **メモ:** You can also see this example running live on GitHub as [button-with-fallback.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (also see the [source code](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
 
 The button has a number of declarations that style, but the two we are most interested in are as follows:
 
@@ -167,7 +168,7 @@ Here we are providing an [RGBA](/ja/docs/Web/CSS/color_value/rgba) {{cssxref("ba
 
 To sort this out, we have added a second `background-color` declaration, which just specifies a hex color — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGBA colors. If not, it will just ignore the entire declaration and move on.
 
-> **Note:** The same is true for other CSS features like [media queries](/ja/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/ja/docs/Web/CSS/@font-face) and [`@supports`](/ja/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
+> **メモ:** The same is true for other CSS features like [media queries](/ja/docs/Web/CSS/Media_Queries/Using_media_queries), [`@font-face`](/ja/docs/Web/CSS/@font-face) and [`@supports`](/ja/docs/Web/CSS/@supports) blocks — if they are not supported, the browser just ignores them.
 
 #### Selector support
 

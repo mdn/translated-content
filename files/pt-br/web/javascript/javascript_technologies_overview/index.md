@@ -1,17 +1,17 @@
 ---
 title: Visão geral das tecnologias JavaScript
 slug: Web/JavaScript/JavaScript_technologies_overview
-translation_of: Web/JavaScript/JavaScript_technologies_overview
 ---
+
 ## Introdução
 
-Enquanto o [HTML](/pt-BR/docs/Web/HTML) é usado para armazenar o conteúdo e a formatação de uma página web e o [CSS](/pt-BR/docs/Web/CSS) define a formatação e a aparência, o[ JavaScript](/pt-BR/docs/Web/JavaScript) é usado para adicionar interatividade a uma página web e criar aplicações web ricas.
+Enquanto o [HTML](/pt-BR/docs/Web/HTML) é usado para armazenar o conteúdo e a formatação de uma página web e o [CSS](/pt-BR/docs/Web/CSS) define a formatação e a aparência, o [JavaScript](/pt-BR/docs/Web/JavaScript) é usado para adicionar interatividade a uma página web e criar aplicações web ricas.
 
 No entanto, o termo genérico "JavaScript" tal como é entendido no contexto do navegador contém vários elementos bem diferentes. Um deles é a linguagem principal (ECMAScript), outra é a coleção das [Web APIs](/pt-BR/docs/Web/Reference/API), incluindo o DOM (Document Object Model).
 
 ## JavaScript, a linguagem principal (ECMAScript)
 
-O núcleo da linguagem JavaScript é padronizado pelo comitê ECMA TC39 como uma linguagem chamada [ECMAScript](/pt-BR/docs/JavaScript/Language_Resources "en-US/docs/JavaScript/Language_Resources"). A última versão da especificação é [ECMAScript 5.1](http://ecma-international.org/ecma-262/5.1/).
+O núcleo da linguagem JavaScript é padronizado pelo comitê ECMA TC39 como uma linguagem chamada [ECMAScript](/pt-BR/docs/JavaScript/Language_Resources). A última versão da especificação é [ECMAScript 5.1](http://ecma-international.org/ecma-262/5.1/).
 
 Este núcleo da linguagem é também usado em ambientes fora do navegador, por exemplo em [node.js](http://nodejs.org/).
 
@@ -43,7 +43,7 @@ A [API de Especificação de Internacionalização do ECMASCRIPT](http://ecma-in
 
 ### WebIDL
 
-A [Especificação da WebIDL ](http://dev.w3.org/2006/webapi/WebIDL/)provê a junção entre as tecnologias DOM e o ECMAScript.
+A [Especificação da WebIDL](http://dev.w3.org/2006/webapi/WebIDL/) provê a junção entre as tecnologias DOM e o ECMAScript.
 
 ### O núcleo do DOM
 
@@ -51,7 +51,7 @@ O Document Object Model (DOM) é uma **convenção multiplataforma** e **lndepen
 
 - A estrutura do documento, um tree model (modelo de árvore), e a arquitetura do DOM Event (Evento do DOM) no [DOM core](http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) (núceo do DOM): Node, Element, DocumentFragment, Document, DOMImplementation, Event, EventTarget, …
 - Uma definição menos rigorosa do DOM Event Architecture, assim como eventos específicos no [DOM events](http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html).
-- Outras coisas como o [DOM Traversal](http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) e o [DOM Range](http://html5.org/specs/dom-range.html).
+- Outras coisas como o [DOM Traversal](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html) e o [DOM Range](http://html5.org/specs/dom-range.html).
 
 Pela perspectiva do EXMScript, objetos definidos na especificação do DOM são chamados de "host objects".
 
@@ -61,16 +61,20 @@ Pela perspectiva do EXMScript, objetos definidos na especificação do DOM são 
 
 A especificação HTML também define restrições nos objetos; por exemplo, ela requer que todos os filhos de um elemento `ul`, que representam uma lista desordenada, sejam elementos `li`, que representem itens de lista. Em linhas gerais, ele também proíbe o uso de elementos e atributos que não estão definidos em um padrão.
 
-Procurando pelo [Document object](/pt-BR/docs/DOM/document "https://developer.mozilla.org/en-US/docs/DOM/document"), [Window object](/pt-BR/docs/DOM/window), e outros elementos DOM? Leia a[ Documentação do DOM](/pt-BR/docs/Gecko_DOM_Reference).
+Procurando pelo [Document object](/pt-BR/docs/DOM/document), [Window object](/pt-BR/docs/DOM/window), e outros elementos DOM? Leia a [Documentação do DOM](/pt-BR/docs/Gecko_DOM_Reference).
 
 ## Outras APIs de destaque
 
-- As funções setTimeout e setInterval foram inicialmente especificadas na interface [Window](http://www.whatwg.org/html/#window) no Padrão HTML.
+- As funções [setTimeout](/pt-BR/docs/Web/API/setTimeout) e [setInterval](/pt-BR/docs/Web/API/setInterval) foram inicialmente especificadas na interface [Window](http://www.whatwg.org/html/#window) no Padrão HTML.
 - [XMLHttpRequest.](http://dev.w3.org/2006/webapi/XMLHttpRequest-2/) Possibilita enviar requisições HTTP assíncronas.
+- A [Fetch API](https://fetch.spec.whatwg.org/) fornece uma abstração mais ergonômica para requisições de rede.
 - [CSS Object Model.](http://dev.w3.org/csswg/cssom/) O CSSOM é utilizado para abstrair regras CSS como objetos
 - [WebWorkers.](http://www.whatwg.org/specs/web-workers/current-work/) API que permite computação paralela.
 - [WebSockets.](http://www.whatwg.org/C/#network) API que permite comunicação bi-direcional de baixo-nível.
 - [Canvas 2D Context.](http://www.whatwg.org/html/#2dcontext) API de ilustração (desenho) para o elemento canvas.
+- A [interface WebAssembly](https://webassembly.github.io/spec/js-api) fornece utilitários para comunicação entre código JavaScript e módulos [WebAssembly](/pt-BR/docs/WebAssembly).
+
+Ambientes sem navegador (como Node.js) geralmente não têm APIs DOM — porque não interagem com um documento — mas ainda assim implementam muitas APIs da Web, como [fetch()](/pt-BR/docs/Web/API/fetch) e [setTimeout()](/pt-BR/docs/Web/API/setTimeout).
 
 ### Suporte de Navegadores
 

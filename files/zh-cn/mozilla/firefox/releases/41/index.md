@@ -63,13 +63,13 @@ Highlights:
 
   - 使用 `'paste'`名利作为参数，{{domxref("Document.queryCommandSupported()")}}现在会返回 false 如果不充分的权限被执行 ({{bug(1161721)}}).
   - 使用`'cut'` 或 `'copy'` 命令作为参数，{{domxref("Document.queryCommandSupported()")}} 现在返回`true` 如果调用的上下文中包括用户发起的或特权代码 ({{bug(1162952)}}).
-  - 使用 `'cut'` 或`'copy' 命令作为参数`, {{domxref("Document.execCommand()")}} 将会执行，但是仅仅在用户发起的或特权代码的上下文下 ({{bug(1012662)}}).
+  - 使用 `'cut'` 或`'copy'` 命令作为参数，{{domxref("Document.execCommand()")}} 将会执行，但是仅仅在用户发起的或特权代码的上下文下 ({{bug(1012662)}}).
 
 #### Events
 
 - 非标准的{{domxref("CloseEvent.initCloseEvent()")}} 方法和创建 {{domxref("CloseEvent")}} 使用 {{domxref("Event.createEvent", "Event.createEvent('CloseEvent')")}} 方法已经被移除。相反可以使用标准的构造器{{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} . ({{bug(1161950)}}).
 - On Desktop, {{domxref("PointerEvent")}} is now activated by default in Nightly; it is not activated in Developer Edition, Beta or Release and won't be for at least some versions ({{bug(1166347)}}).
-- The unprefixed version of {{domxref("MouseEvent.movementX")}} and {{domxref("MouseEvent.movementY")}}}} have been added; the prefixed versions are deprecated and will be removed at some point in the future ({{bug(1164981)}}).
+- The unprefixed version of {{domxref("MouseEvent.movementX")}} and {{domxref("MouseEvent.movementY")}} have been added; the prefixed versions are deprecated and will be removed at some point in the future ({{bug(1164981)}}).
 
 #### Web Crypto
 

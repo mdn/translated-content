@@ -1,16 +1,8 @@
 ---
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
-tags:
-  - Codificação
-  - JavaScript
-  - Texto
-  - URI
-  - URL
-  - encodeURI
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
+
 {{jsSidebar("Objects")}}
 
 A função **`encodeURI()`** codifica a [URI](/pt-BR/docs/Glossary/URI) substituindo cada instância de certos caracteres por um, dois, três ou quatro sequências de escape representando a codificação [UTF-8](/pt-BR/docs/Glossary/UTF-8) do caracter (será somente quatro sequências de escape para caracteres compostos de dois caracteres substitutos).
@@ -70,7 +62,7 @@ console.log(encodeURIComponent(set2)); // -_.!~*'()
 console.log(encodeURIComponent(set3)); // ABC%20abc%20123 (o espaço é codificado como %20)
 ```
 
-Note que `encodeURI()` por si só não pode formar requisições [`GET`](/pt-BR/docs/Web/HTTP/Methods/GET "The HTTP GET method requests a representation of the specified resource. Requests using GET should only retrieve data.") e [`POST`](/pt-BR/docs/Web/HTTP/Methods/POST "The HTTP POST method sends data to the server. The type of the body of the request is indicated by the Content-Type header."), como para [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest "Use XMLHttpRequest (XHR) objects to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing."), porque `"&"`, `"+"`, e `"="` não são codificados, que são tratados como caracteres especiais em requisições `GET` e `POST`. `encodeURIComponent()`, entretanto, codifica esses caracteres.
+Note que `encodeURI()` por si só não pode formar requisições [`GET`](/pt-BR/docs/Web/HTTP/Methods/GET) e [`POST`](/pt-BR/docs/Web/HTTP/Methods/POST), como para [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest), porque `"&"`, `"+"`, e `"="` não são codificados, que são tratados como caracteres especiais em requisições `GET` e `POST`. `encodeURIComponent()`, entretanto, codifica esses caracteres.
 
 ### Codificando um substituto solitário alto joga
 

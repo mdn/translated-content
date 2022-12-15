@@ -89,13 +89,11 @@ Voici ce à quoi ressemblera l'élément lorsqu'il sera inséré dans la page :
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires         |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('CSS Scope', '#slotted-pseudo', '::slotted')}} | {{Spec2('CSS Scope')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.slotted")}}
+{{Compat}}
 
 ## Voir aussi
 

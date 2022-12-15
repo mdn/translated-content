@@ -51,13 +51,11 @@ Le module est ensuite instancié grâce à la fonction {{jsxref("WebAssembly.ins
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                         | Commentaires                           |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------------------------- |
-| {{SpecName('WebAssembly Embedding', '#webassemblycompilestreaming', 'compileStreaming()')}} | {{Spec2('WebAssembly Embedding')}} | Brouillon pour la définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.compileStreaming")}}
+{{Compat}}
 
 ## Voir aussi
 

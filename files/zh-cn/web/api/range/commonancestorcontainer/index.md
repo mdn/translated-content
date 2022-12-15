@@ -33,7 +33,7 @@ rangeAncestor = range.commonAncestorContainer;
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.commonAncestorContainer")}}
+{{Compat}}
 
 ## 更多
 

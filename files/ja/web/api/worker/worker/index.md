@@ -4,11 +4,12 @@ slug: Web/API/Worker/Worker
 l10n:
   sourceCommit: c7aeb96dac3e0ac2864cffe45c02d214ae1a5219
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`Worker()`** コンストラクターは、指定された URL で指定されたスクリプトを実行する {{domxref("Worker")}} オブジェクトを作成します。このスクリプトは [同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)に従わなければいけません。
 
-> **Note:** data URL が 同一オリジンであるかどうかについては、ブラウザーベンダーの間で合意されていません。 Firefox 10 以降のリリースでは data URL を受け入れますが、すべてのブラウザーでそうなるとは限りません。
+> **メモ:** data URL が 同一オリジンであるかどうかについては、ブラウザーベンダーの間で合意されていません。 Firefox 10 以降のリリースでは data URL を受け入れますが、すべてのブラウザーでそうなるとは限りません。
 
 ## 構文
 

@@ -22,7 +22,7 @@ var data = dragEvent.dataTransfer;
 
 ## 範例
 
-This example illustrates accessing the drag and drop data within the {{event("dragend")}} event handler.
+This example illustrates accessing the drag and drop data within the [`dragend`](/zh-TW/docs/Web/API/HTMLElement/dragend_event) event handler.
 
 ```js
 function process_data(d) {

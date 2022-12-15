@@ -52,13 +52,11 @@ Il n'existe actuellement pas d'objets JavaScript natifs qui possèdent la clé `
 
 ## Spécifications
 
-| Spécification                                                                                        | État                     | Commentaires |
-| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------ |
-| {{SpecName('ES2018', '#sec-symbol.asynciterator', 'Symbol.asyncIterator')}} | {{Spec2('ES2018')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{compat("javascript.builtins.Symbol.asyncIterator")}}
+{{Compat}}
 
 ## Voir aussi
 

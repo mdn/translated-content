@@ -1,8 +1,8 @@
 ---
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
-translation_of: Web/API/Window/showModalDialog
 ---
+
 {{ deprecated_header() }}{{APIRef}}
 
 El método **`Window.showModalDialog()`** crea y visualiza una caja de diálogo modal, conteniendo el documento HTML especificado.
@@ -23,7 +23,7 @@ donde
 
 - `valRetorno` es un valor indicando la propiedad returnValue establecida por la ventana del documento especificado por la `uri`.
 - `uri` is es la URI del documento a visualizar en la caja de diálogo.
-- `argumentos` es un parámetro adicional, que contiene valores que deberían ser pasados a la caja de diálogo; estos son puestos a disposición en el la propiedad [`window.dialogArguments`](/en-US/docs/DOM/window.dialogArguments) del objeto [`window`](/en-US/docs/DOM/window).
+- `argumentos` es un parámetro adicional, que contiene valores que deberían ser pasados a la caja de diálogo; estos son puestos a disposición en el la propiedad [`window.dialogArguments`](/es/docs/DOM/window.dialogArguments) del objeto [`window`](/es/docs/DOM/window).
 - `opciones` es una cadena adicional que especifica ornamentaciones de ventana para la caja de diálogo, usando uno o más de los siguientes valores separados por punto y coma:
 
 | Sintaxis                                         | Descripción                                                                                                                                                                            |
@@ -36,7 +36,7 @@ donde
 | `resizable: {on \| off \| yes \| no \| 1 \| 0 }` | Si el valor de este argumentoes `on`, `yes`, ó 1, la ventana de diálogo podrá ser redimensionada por el usuario; en caso controario su tamaño será fijo. El valor por defecto es `no`. |
 | `scroll: {on \| off \| yes \| no \| 1 \| 0 }`    | Si el valor de este argumento es `on`, `yes`, ó 1, la ventana de diálogo tendrá barras de desplazamiento; en caso contrario su tamaño será fijo. El valor por defecto es `no`.         |
 
-{{Note("Firefox no implementa los argumentos <code>dialogHide</code>, <code>edge</code>, <code>status</code>, ó <code>unadorned</code>.")}}
+> **Nota:** Firefox no implementa los argumentos `dialogHide`, `edge`, `status`, ó `unadorned`.
 
 ## Compatibilidad con navegadores
 
