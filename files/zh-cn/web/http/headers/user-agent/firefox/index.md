@@ -169,7 +169,7 @@ Firefox iOS 版使用 Safari 移动版的默认 User Agent 再加上 **FxiOS/\<v
 - [Firefox OS User Agent](http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/) （参考博客文章以及 [bug 777710](https://bugzilla.mozilla.org/show_bug.cgi?id=777710)）
 - [Firefox 4 的最终 User Agent](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/)（博客文章）
 - [检测 UA 字符串以获得跨浏览器支持](/zh-CN/Browser_Detection_and_Cross_Browser_Support)
-- [window.navigator.userAgent](../../../../en/DOM/window.navigator.userAgent)
+- [window.navigator.userAgent](/zh-CN/docs/Web/API/Navigator/userAgent)
 - [为 Fennec UA 字符串添加 Android 版本 (bug 1169772)](https://bugzilla.mozilla.org/show_bug.cgi?id=)
 
 ---
