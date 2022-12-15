@@ -155,7 +155,7 @@ for(var i = 0; i < bgBtns.length; i++) {
   var imgName = bgBtns[i].getAttribute('class');
   var bgImg = 'url(\'images/' + imgName + '.png\')';
   bgBtns[i].style.backgroundImage = bgImg;
-  
+
   bgBtns[i].onclick = function(e) {
 ```
 

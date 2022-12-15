@@ -16,7 +16,7 @@ The source for this interactive example is stored in a GitHub repository. If you
 
 - Señala lo que es una salida de un programa.
   - : **Sus etiquetas son**: \<samp> y \</samp> (ambas obligatorias)
-  
+
     **Crea una caja**: [en linea](/es/HTML/Elemento/Tipos_de_elementos#en_linea).
 
     **Está definido como**: [Elemento de frase](/es/HTML/Elemento/Tipos_de_elementos#de_frase).

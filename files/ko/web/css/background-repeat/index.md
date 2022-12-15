@@ -44,7 +44,7 @@ background-repeat: unset;
 
 - `<repeat-style>`
   - : 한 개 값 구문은 두 개 값 구문의 단축 형태입니다.
-  
+
     <table class="standard-table">
       <tbody>
         <tr>
