@@ -98,7 +98,7 @@ areEqual("ı", "I", "tr"); // true
 
 注意，JavaScript 区分 `String` 对象和{{Glossary("Primitive", "原始字符串")}}值（{{jsxref("Boolean")}} 和 {{jsxref("Global_Objects/Number", "Number")}} 也是如此）。
 
-字符串字面值（使用单引号或者双引号表示）和从非构造函数上下文中的 `String` 调用返回的字符串（即在不使用 {{jsxref("Operators/new", "new")}} 关键字的情况下调用）是原始字符串。在要对原始字符串调用方法或者发生属性查找的上下文中，JavaScript 将自动的包装原始字符串并调用方法或在包装对象上执行属性查找。
+字符串字面量（使用单引号或者双引号表示）和从非构造函数上下文中的 `String` 调用返回的字符串（即在不使用 {{jsxref("Operators/new", "new")}} 关键字的情况下调用）是原始字符串。在要对原始字符串调用方法或者发生属性查找的上下文中，JavaScript 将自动的包装原始字符串并调用方法或在包装对象上执行属性查找。
 
 ```js
 const strPrim = "foo"; // A literal is a string primitive
