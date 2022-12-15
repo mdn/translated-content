@@ -1,6 +1,7 @@
 ---
 title: Long Tasks API
-slug: Web/API/Long_Tasks_API
+slug: Web/API/PerformanceLongTaskTiming
+original_slug: Web/API/Long_Tasks_API
 ---
 
 {{DefaultAPISidebar("Long Tasks")}}
