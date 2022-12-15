@@ -15,9 +15,8 @@ tags:
 translation_of: Learn/Common_questions/What_are_browser_developer_tools
 original_slug: Learn/Discover_browser_developer_tools
 ---
-{{IncludeSubnav("/ru-RU/Learn")}}
 
-{{Previous("Learn/Getting_started_with_the_web")}}
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
 
 Каждый современный интернет-браузер оснащён мощными инструментами для веб-разработчика. Эти инструменты позволяют делать различные вещи, от изучения загруженных в настоящий момент HTML, CSS и JavaScript до отображения в каких ресурсах нуждается страница и как долго она будет загружаться. Эта статья научит вас использовать базовые функции инструментов разработчика в вашем браузере.
 
