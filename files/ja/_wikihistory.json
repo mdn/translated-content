@@ -10273,10 +10273,6 @@
     "modified": "2020-10-15T22:19:48.721Z",
     "contributors": ["mfuji09", "silverskyvicto"]
   },
-  "Web/API/Long_Tasks_API": {
-    "modified": "2020-10-15T22:19:58.850Z",
-    "contributors": ["silverskyvicto", "Wind1808"]
-  },
   "Web/API/MediaCapabilities/encodingInfo": {
     "modified": "2020-10-15T22:24:30.759Z",
     "contributors": ["Wind1808"]
@@ -31034,6 +31030,10 @@
   "conflicting/Web/API/Node": {
     "modified": "2019-03-23T23:59:58.146Z",
     "contributors": ["fscholz", "khalid32", "ethertank", "Marsf"]
+  },
+  "conflicting/Web/API/PerformanceLongTaskTiming": {
+    "modified": "2020-10-15T22:19:58.850Z",
+    "contributors": ["silverskyvicto", "Wind1808"]
   },
   "conflicting/Web/API/SourceBuffer": {
     "modified": "2020-10-15T22:25:07.363Z",
