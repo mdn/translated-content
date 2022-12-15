@@ -3,7 +3,7 @@ title: 使用影像
 slug: Web/API/Canvas_API/Tutorial/Using_images
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Drawing_text", "Web/API/Canvas_API/Tutorial/Transformations" )}}
 
 使用影像是{{HTMLElement("canvas")}}另一個有趣的功能，這個功能可以用來動態組合圖片或作為背景等等。任何瀏覽器支援的外部圖片格式都可以使用，例如 PNG, GIF, 或 JPEG，甚至也可以利用同一份頁面上其他畫布元素產生的影像.
 
@@ -134,13 +134,13 @@ function draw() {
     ctx.lineTo(170,15);
     ctx.stroke();
   };
-  img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
+  img.src = 'backdrop.png';
 }
 ```
 
 結果如下:
 
-{{EmbedLiveSample("Example.3A_A_simple_line_graph", 220, 160, "https://mdn.mozillademos.org/files/206/Canvas_backdrop.png")}}
+{{EmbedLiveSample("Example.3A_A_simple_line_graph", 220, 160, "canvas_backdrop.png")}}
 
 ## 縮放
 
@@ -174,13 +174,13 @@ function draw() {
       }
     }
   };
-  img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+  img.src = 'rhino.jpg';
 }
 ```
 
 結果如下:
 
-{{EmbedLiveSample("Example.3A_Tiling_an_image", 160, 160, "https://mdn.mozillademos.org/files/251/Canvas_scale_image.png")}}
+{{EmbedLiveSample("Example.3A_Tiling_an_image", 160, 160, "canvas_scale_image.png")}}
 
 ## 切割影像
 
@@ -202,8 +202,8 @@ drawImage()第三個型態接受 9 個參數，其中 8 個讓我們從原始影
  <body onload="draw();">
    <canvas id="canvas" width="150" height="150"></canvas>
    <div style="display:none;">
-     <img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227">
-     <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
+     <img id="source" src="rhino.jpg" width="300" height="227">
+     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
    </div>
  </body>
 </html>
@@ -225,7 +225,7 @@ function draw() {
 
 這次我們不產生新的{{domxref("HTMLImageElement")}}物件，改採用直接把影像包入 HTML 的{{HTMLElement("img")}}標籤，然後再取得影像元素，其中 HTML 上的影像已經透過設定 CSS 屬性{{cssxref("display")}}為 none 來隱藏起來了.
 
-{{EmbedLiveSample("Example.3A_Framing_an_image", 160, 160, "https://mdn.mozillademos.org/files/226/Canvas_drawimage2.jpg")}}
+{{EmbedLiveSample("Example.3A_Framing_an_image", 160, 160, "canvas_drawimage2.jpg")}}
 
 程式碼相當簡單，每個{{HTMLElement("img")}}有自己的 ID 屬性，這樣便可以利用{{domxref("document.getElementById()")}}輕易取得，之後再簡單地用 drawImage()方法切割犀牛影像然後縮放並放到畫布上，最後第二個 drawImage()再把畫框放到上面.
 
@@ -242,19 +242,19 @@ function draw() {
  <body onload="draw();">
      <table>
       <tr>
-        <td><img src="https://mdn.mozillademos.org/files/5399/gallery_1.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5401/gallery_2.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5403/gallery_3.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5405/gallery_4.jpg"></td>
+        <td><img src="gallery_1.jpg"></td>
+        <td><img src="gallery_2.jpg"></td>
+        <td><img src="gallery_3.jpg"></td>
+        <td><img src="gallery_4.jpg"></td>
       </tr>
       <tr>
-        <td><img src="https://mdn.mozillademos.org/files/5407/gallery_5.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5409/gallery_6.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5411/gallery_7.jpg"></td>
-        <td><img src="https://mdn.mozillademos.org/files/5413/gallery_8.jpg"></td>
+        <td><img src="gallery_5.jpg"></td>
+        <td><img src="gallery_6.jpg"></td>
+        <td><img src="gallery_7.jpg"></td>
+        <td><img src="gallery_8.jpg"></td>
       </tr>
      </table>
-     <img id="frame" src="https://mdn.mozillademos.org/files/242/Canvas_picture_frame.png" width="132" height="150">
+     <img id="frame" src="canvas_picture_frame.png" width="132" height="150">
  </body>
 </html>
 ```
@@ -263,7 +263,7 @@ function draw() {
 
 ```css
 body {
-  background: 0 -100px repeat-x url(https://mdn.mozillademos.org/files/5415/bg_gallery.png) #4F191A;
+  background: 0 -100px repeat-x url(bg_gallery.png) #4F191A;
   margin: 10px;
 }
 
@@ -311,7 +311,7 @@ function draw() {
 }
 ```
 
-{{EmbedLiveSample("Art_gallery_example", 725, 400, "https://mdn.mozillademos.org/files/205/Canvas_art_gallery.jpg")}}
+{{EmbedLiveSample("畫廊範例", 725, 400)}}
 
 ## 控制影像縮放行為
 

@@ -201,7 +201,7 @@ Un _sitio estático_ es aquél que devuelve desde el servidor el mismo contenido
 
 Recapitulemos cómo funciona ésto, mirando otra vez el diagrama de la arquitectura de un sitio estático que vimos en el anterior artículo.
 
-![A simplified diagram of a static web server.](https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png)
+![A simplified diagram of a static web server.](basic_static_app_server.png)
 
 Cuando un usuario quiere navegar a una página, el explorador envía una petición HTTP `GET` especificando la URL de su página HTML. El servidor recupera el documento solicitado de su sistema de ficheros y devuelve una respuesta HTTP conteniendo el documento y un [código de estado de respuesta HTTP](/es/docs/Web/HTTP/Status) "`200 OK`" (indicando éxito). El servidor podría devolver un código de estado diferente, por ejemplo "`404 Not Found`" si el fichero no está presente en el servidor, o "`301 Moved Permanently`" si el fichero existe pero ha sido redirigido a una localización diferente.
 
@@ -223,7 +223,7 @@ Esta sección proporciona una visión general paso a paso de un ciclo de petici�
 
 El diagrama de abajo muestra los elementos principales del sitio web del "entrenador del equipo", junto con etiquetas numeradas de la secuencia de operaciones cuando el entrenador accede a su lista de "mejor equipo". Las partes del sitio que lo hacen dinámico son las _Aplicaciones Web_ (que es como llamaremos al código del lado servidor que procesa las peticiones HTTP y devuelve respuestas HTTP), la _Base de Datos_, que contiene la información sobre los jugadores, equipos, entrenadores y sus relaciones, y las _Plantillas HTML_.
 
-![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](https://mdn.mozillademos.org/files/13829/Web%20Application%20with%20HTML%20and%20Steps.png)
+![This is a diagram of a simple web server with step numbers for each of step of the client-server interaction.](web_application_with_html_and_steps.png)
 
 Después de que el entrenador envíe el formulario con el nombre del equipo y el número de jugadores, la secuencia de operaciones es la siguiente:
 

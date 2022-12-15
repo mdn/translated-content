@@ -33,7 +33,7 @@ Alternativamente, podría usar un sitio como [JSBin](http://jsbin.com/) o [Glitc
 
 El sitio de evaluación terminado debe tener este aspecto:
 
-![](https://mdn.mozillademos.org/files/14555/assessment-site-finished.png)
+![](assessment-site-finished.png)
 
 Verá algunas diferencias/problemas con la visualización del estado inicial de la evaluación — esto se debe principalmente a las diferencias en el marcado, que a su vez causan algunos problemas de estilo, ya que el CSS no se aplica correctamente. No se preocupe, ¡estará solucionando estos problemas en las próximas secciones!
 

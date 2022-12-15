@@ -64,10 +64,10 @@ gainNode.connect(audioCtx.destination);
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 其他
+## 参见
 
 - [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

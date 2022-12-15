@@ -24,7 +24,7 @@ CSS transforms 通过一系列 CSS 属性实现，通过使用这些属性，可
 
 这是一个未经任何变换的 MDN 标志：
 
-![MDN Logo](https://mdn.mozillademos.org/files/12539/Screen%20Shot%202016-02-16%20at%2015.53.54.png)
+![MDN Logo](screen_shot_2016-02-16_at_15.53.54.png)
 
 ### 旋转
 
@@ -33,7 +33,7 @@ CSS transforms 通过一系列 CSS 属性实现，通过使用这些属性，可
 ```html
 <img style="transform: rotate(90deg);
             transform-origin: bottom left;"
-     src="https://mdn.mozillademos.org/files/12539/Screen%20Shot%202016-02-16%20at%2015.53.54.png">
+     src="screen_shot_2016-02-16_at_15.53.54.png">
 ```
 
 {{EmbedLiveSample('Rotating', 'auto', 240) }}
@@ -45,7 +45,7 @@ CSS transforms 通过一系列 CSS 属性实现，通过使用这些属性，可
 ```html
 <img style="transform: skewx(10deg) translatex(150px);
             transform-origin: bottom left;"
-     src="https://mdn.mozillademos.org/files/12539/Screen%20Shot%202016-02-16%20at%2015.53.54.png">
+     src="screen_shot_2016-02-16_at_15.53.54.png">
 ```
 
 {{EmbedLiveSample('Skewing_and_translating') }}

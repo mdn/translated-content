@@ -26,7 +26,7 @@ Para implementar esto, haremos lo siguiente:
 
 Tu puedes notar que la estructura general de la extensión luce como esto:
 
-![](https://mdn.mozillademos.org/files/13671/Untitled-1.png)
+![](untitled-1.png)
 
 Esta es una extensión simple, pero muestra muchos de los principales conceptos de la API WebExtensions:
 
@@ -398,7 +398,7 @@ Finalmente, necesitamos incluir las imágenes de los animales.
 
 Crea una carpeta nueva llamada "beasts", y adiciona tres imágenes en ella, con su nombre apropiado. Tu puedes obtener estas imágenes desde el [repositorio en GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), o desde aquí:
 
-![](https://mdn.mozillademos.org/files/11459/frog.jpg)![](https://mdn.mozillademos.org/files/11461/snake.jpg)![](https://mdn.mozillademos.org/files/11463/turtle.jpg)
+![](frog.jpg)![](snake.jpg)![](turtle.jpg)
 
 ## Probándolo
 

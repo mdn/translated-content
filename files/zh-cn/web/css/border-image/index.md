@@ -43,7 +43,7 @@ border-image: url("/images/border.png") 30 30 stretch;
 #bitmap {
   border: 30px solid transparent;
   padding: 20px;
-  border-image: url("https://mdn.mozillademos.org/files/4127/border.png") 30;
+  border-image: url("border.png") 30;
 }
 ```
 

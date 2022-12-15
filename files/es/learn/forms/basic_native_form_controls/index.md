@@ -66,7 +66,7 @@ Los campos de texto de una sola línea solo tienen una restricción verdadera: s
 
 _La captura de pantalla siguiente muestra los tipos de entrada de texto predeterminado, activo (con el foco) y deshabilitado en Firefox 71 y Safari en macOS y en Chrome 79 y Edge 18 en Windows 10._
 
-![Captura de pantalla del atributo deshabilitado y predeterminado: estilo para una entrada de texto activa (con el foco) en Firefox, Safari, Chrome y Edge.](https://mdn.mozillademos.org/files/17021/disabled.png)
+![Captura de pantalla del atributo deshabilitado y predeterminado: estilo para una entrada de texto activa (con el foco) en Firefox, Safari, Chrome y Edge.](disabled.png)
 
 > **Nota:** HTML5 ha mejorado el campo de texto básico original de una sola línea al añadir valores especiales para el atributo {{htmlattrxref ("type", "input")}} que imponen restricciones de validación específicas y otras características, por ejemplo, específicas para introducir direcciones URL o números. Los expondremos en el artículo siguiente: [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types).
 
@@ -118,7 +118,7 @@ Al incluir el atributo [`checked`](/es/docs/Web/HTML/Attributes/checked), la cas
 
 Las capturas de pantalla siguientes muestran casillas de verificación predeterminadas, activas (con el foco) y deshabilitadas en Firefox 71 y Safari 13 en macOS y Chrome 79 y Edge 18 en Windows 10:
 
-![Casillas de verificación predeterminadas, activas y deshabilitadas en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](https://mdn.mozillademos.org/files/17024/checkboxes.png)
+![Casillas de verificación predeterminadas, activas y deshabilitadas en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](checkboxes.png)
 
 > **Nota:** Las casillas de verificación y los botones de opción con atributo [`checked`](/es/docs/Web/HTML/Attributes/checked) al cargarse coinciden con la pseudoclase {{cssxref ('<code>:default</code>')}}, incluso aunque ya no estén seleccionadas. Las que están seleccionadas coinciden con la pseudoclase `{{cssxref(':checked')}}`.
 
@@ -156,7 +156,7 @@ Es posible asociar diversos botones de opción. Si comparten el mismo valor de a
 
 Las capturas de pantalla siguientes muestran botones de opción sin seleccionar y seleccionados, algunos con el foco y otros desactivados sin seleccionar y seleccionados, en Firefox 71 y Safari 13 en MacOS y Chrome 79 y Edge 18 en Windows 10.
 
-![Botones de opción en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](https://mdn.mozillademos.org/files/17022/radios.png)
+![Botones de opción en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](radios.png)
 
 ## Botones
 
@@ -211,7 +211,7 @@ Los botones siempre se comportan igual, independientemente de su usas un element
 
 Los ejemplos siguientes muestran los tipos de entrada de botones predeterminados, activos y deshabilitados: en Firefox 71 y Safari 13 en macOS, y Chrome 79 y Edge 18 en Windows 10.
 
-![Tipos de entrada de botones predeterminados, activos y deshabilitados en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](https://mdn.mozillademos.org/files/17023/buttons.png)
+![Tipos de entrada de botones predeterminados, activos y deshabilitados en Firefox 71 y Safari 13 en Mac y Chrome 79 y Edge 18 en Windows 10](buttons.png)
 
 ### Botón de imagen
 

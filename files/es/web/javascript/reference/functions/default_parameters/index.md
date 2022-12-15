@@ -1,12 +1,6 @@
 ---
 title: Parámetros predeterminados
 slug: Web/JavaScript/Reference/Functions/Default_parameters
-tags:
-  - Característica del lenguaje
-  - ECMAScript 2015
-  - Funciones
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Functions/Default_parameters
 original_slug: Web/JavaScript/Referencia/Funciones/Parametros_por_defecto
 ---
 

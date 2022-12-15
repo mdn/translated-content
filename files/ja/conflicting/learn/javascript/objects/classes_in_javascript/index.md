@@ -46,13 +46,13 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 はじめに、[オブジェクト入門の最初の記事](/ja/docs/Learn/JavaScript/Objects/Basics)にある、人物の包括的なデータや機能を定義した、Person オブジェクトに戻りましょう。ある人物について知り得る事柄は数多くあります (住所、身長、靴のサイズ、DNA 情報、パスポート番号、顕著な人格特性など) が、このケースでは名前、年齢、性別、趣味を表示することに興味があるだけです。また、このデータに基づいた短い自己紹介や、挨拶をさせられるようにもしましょう。これは**抽象化** — より複雑な事物を、プログラムの目的に沿って簡単に操作できるように、その最も重要な側面を表現する、シンプルなモデルを作ること — として知られています。
 
-![](https://mdn.mozillademos.org/files/13889/person-diagram.png)
+![](person-diagram.png)
 
 ### 実際のオブジェクトの生成
 
 このクラスから、**オブジェクトインスタンス**を生成することができます。オブジェクトインスタンスは、クラスで定義されたデータや機能を持ったオブジェクトです。 Person クラスから、何名かの実際の人物を生成します。
 
-![](https://mdn.mozillademos.org/files/15163/MDN-Graphics-instantiation-2-fixed.png)
+![](mdn-graphics-instantiation-2-fixed.png)
 
 クラスからオブジェクトインスタンスが生成されるとき、クラスの**コンストラクター関数**が生成のために実行されます。クラスからオブジェクトインスタンスが生成される過程を**インスタンス化**と呼びます。オブジェクトインスタンスは、クラスを**インスタンス化**したものです。
 
@@ -60,7 +60,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 このケースで求めているのは、包括的な人物ではなく、より特定のタイプである、教師と生徒です。OOP では、他のクラスを元にした新しいクラスを作ることができます。これらの新しい**子クラス**は、**親クラス**からデータやコード機能を**継承**することができ、すべてのオブジェクトタイプに共通する機能を、重複させるのではなく、再利用することができます。クラス間で機能が異なる場合は、必要に応じて特殊化された機能を直接定義することができます。
 
-![](https://mdn.mozillademos.org/files/13881/MDN-Graphics-inherited-3.png)
+![](mdn-graphics-inherited-3.png)
 
 これは実に役立ちます。教師と生徒は名前、性別、年齢のように多数の共通機能を共有しており、これらの機能を一度だけ定義すればいいので便利です。異なるクラスで、同じ機能を分けて定義することもでき、その機能の各定義は異なる名前空間に置かれます。例えば、生徒の挨拶は "Yo, I'm \[firstName]" (例：_Yo, I'm Sam) という形式とし、一方の教師の挨拶は、より形式的に_ "Hello, my name is \[Prefix] \[lastName], and I teach \[Subject]." (例：_Hello, My name is Mr Griffiths, and I teach Chemistry) のように。_
 
@@ -68,7 +68,7 @@ original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 
 子クラスのオブジェクトインスタンスを生成しましょう。例：
 
-![](https://mdn.mozillademos.org/files/13885/MDN-Graphics-instantiation-teacher-3.png)
+![](mdn-graphics-instantiation-teacher-3.png)
 
 記事の続きでは、OOP 理論が JavaScript でどのように実践されているかを見ていきます。
 

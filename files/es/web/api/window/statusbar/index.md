@@ -41,7 +41,7 @@ window.statusbar.visible=!window.statusbar.visible;
 
 ## Notas
 
-Al cargar la pagina del ejemplo anterior se muestra el siguiente cuadro de dialogo:![](https://mdn.mozillademos.org/files/550/Modify_any_open_window_dialog.png)
+Al cargar la pagina del ejemplo anterior se muestra el siguiente cuadro de dialogo:![](modify_any_open_window_dialog.png)
 
 Para alternar la visibilidad de las barras, debe de firmar sus scripts o abilitar los privilegios apropiados, como en el ejemplo anterior. Tenga en cuenta que cambiar la visibilidad de manera dinamica de las barras de herramientas puede cambiar el tamaño de la ventana de forma dramatica y afectando de manera significativa el rendimiento de su pagina.
 

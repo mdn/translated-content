@@ -3,7 +3,7 @@ title: Canvas
 slug: Web/API/Canvas_API
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 **Canvas API** 提供了一个通过[JavaScript](/zh-CN/docs/Web/JavaScript) 和 [HTML](/zh-CN/docs/Web/HTML)的{{HtmlElement("canvas")}}元素来绘制图形的方式。它可以用于动画、游戏画面、数据可视化、图片编辑以及实时视频处理等方面。
 

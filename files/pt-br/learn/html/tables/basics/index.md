@@ -31,13 +31,13 @@ Este artigo é uma introdução às tabelas HTML, cobrindo o básico, como linha
 
 Uma tabela é um conjunto estruturado de dados composto de linhas e colunas (**dados tabulares**). Uma tabela permite consultar de forma rápida e fácil valores que indicam algum tipo de conexão entre diferentes tipos de dados, por exemplo, uma pessoa e sua idade, ou um dia da semana, ou os horários de uma piscina local.
 
-![Uma tabela de amostra mostrando nomes e idades de algumas pessoas - Chris 38, Dennis 45, Sarah 29, Karen 47.](https://mdn.mozillademos.org/files/14583/numbers-table.png)
+![Uma tabela de amostra mostrando nomes e idades de algumas pessoas - Chris 38, Dennis 45, Sarah 29, Karen 47.](numbers-table.png)
 
-![Um cronograma de natação mostrando uma tabela de dados de amostra](https://mdn.mozillademos.org/files/14587/swimming-timetable.png)
+![Um cronograma de natação mostrando uma tabela de dados de amostra](swimming-timetable.png)
 
 As tabelas são muito comumente usadas na sociedade humana, e têm sido por muito tempo, como evidenciado por este documento do Censo dos EUA de 1800:
 
-![Um documento de pergaminho muito antigo; os dados não são facilmente legíveis, mas mostram claramente uma tabela de dados sendo usada.](https://mdn.mozillademos.org/files/14585/1800-census.jpg)
+![Um documento de pergaminho muito antigo; os dados não são facilmente legíveis, mas mostram claramente uma tabela de dados sendo usada.](1800-census.jpg)
 
 Portanto, não é de se admirar que os criadores do HTML tenham fornecido um meio de estruturar e apresentar dados tabulares na web.
 

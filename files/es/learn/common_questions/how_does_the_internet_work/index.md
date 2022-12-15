@@ -46,35 +46,35 @@ Cuando dos ordenadores necesitan comunicarse, tienes que vincularlos, ya sea fí
 
 > **Nota:** En el resto de este artículo, sólo nos referiremos al uso de cables físicos, pero es igualmente aplicable a las redes inalámbricas.
 
-![Dos computadoras conectadas entre sí](https://mdn.mozillademos.org/files/8441/internet-schema-1.png)
+![Dos computadoras conectadas entre sí](internet-schema-1.png)
 
 Una red no se limita a dos ordenadores, se pueden conectar tantos como se desee; sin embargo, rápidamente se volverá más compleja. Por ejemplo, para conectar diez ordenadores, se necesitarían ¡45 cables y unos nueve conectores por ordenador!
 
-![Diez ordenadores interconectados](https://mdn.mozillademos.org/files/8443/internet-schema-2.png)
+![Diez ordenadores interconectados](internet-schema-2.png)
 
 Para resolver este problema, cada ordenador en una red está conectado a una pequeña computadora especial llamada enrutador o router (en inglés). Este enrutador cumple una única función: tal como hace un señalizador en una estación de tren, el router se encarga de asegurar que el mensaje enviado desde un ordenador emisor llegue al destino correcto. Para que el ordenador B reciba un mensaje desde el ordenador A, este último debe enviarlo primero al router, que a su vez lo remite al ordenador B asegurándose que dicho mensaje no sea entregado a otro ordenador C.
 
 Una vez que agregamos un enrutador al sistema, nuestra red de 10 ordenadores solo requiere 10 cables: un enchufe para cada ordenador y un enrutador con 10 enchufes.
 
-![Diez ordenadores con un router](https://mdn.mozillademos.org/files/8445/internet-schema-3.png)
+![Diez ordenadores con un router](internet-schema-3.png)
 
 ### Una red de redes
 
 Hasta aquí todo es más o menos simple, pero ¿qué sucede al conectar cientos, miles, millones de ordenadores entre sí?. Por supuesto un solo _enrutador_ no puede escalar tanto, pero, si lees cuidadosamente, dijimos que un _enrutador_ es como un pequeño ordenador, entonces ¿qué nos impide conectar dos _enrutadores_ a la vez?. Nada: hagámoslo.
 
-![Dos routers conectados entre sí](https://mdn.mozillademos.org/files/8447/internet-schema-4.png)
+![Dos routers conectados entre sí](internet-schema-4.png)
 
 Conectando ordenadores a enrutadores y luego enrutadores entre sí, podemos escalar infinitamente.
 
-![Routers interconectados](https://mdn.mozillademos.org/files/8449/internet-schema-5.png)
+![Routers interconectados](internet-schema-5.png)
 
 Una red así se acerca mucho a lo que llamamos Internet, pero hay algo que nos falta. Construimos esa red para nuestros propios propósitos. Hay otras redes ahí fuera: tus amigos, tus vecinos, cualquiera puede tener su propia red de ordenadores. Pero no es posible instalar cables entre tu casa y el resto del mundo, así que ¿cómo puedes manejar esto? Bueno, ya hay cables conectados a tu casa, por ejemplo, la energía eléctrica y el teléfono. La infraestructura telefónica ya conecta tu casa con cualquier persona en el mundo, así que es el cable perfecto que necesitamos. Para conectar nuestra red a la infraestructura telefónica, necesitamos un equipo especial llamado _modem_. Este _modem_ convierte la información de nuestra red en información manejable por la infraestructura telefónica y viceversa.
 
-![Un router conectado a un modem](https://mdn.mozillademos.org/files/8451/internet-schema-6.png)
+![Un router conectado a un modem](internet-schema-6.png)
 
 Entonces estamos conectados a la infraestructura telefónica. El siguiente paso es enviar el mensaje desde nuestra red a la red que queremos llegar. Para lograr eso, conectaremos nuestra red a un proveedor de servicios de internet (ISP de sus siglas en inglés Internet Service Provider). Un ISP es una empresa que gestiona algunos enrutadores especiales interconectados, que también pueden acceder a enrutadores de otros ISP. Así, el mensaje de nuestra red es llevada a través de la red de redes de ISP, hasta la red de destino. Internet consiste en toda esta infraestructura de redes.
 
-![stack de Internet al completo](https://mdn.mozillademos.org/files/8453/internet-schema-7.png)
+![stack de Internet al completo](internet-schema-7.png)
 
 ### Encontrando ordenadores
 
@@ -82,7 +82,7 @@ Si deseas enviar un mensaje a una computadora, debes especificar a cuál. Es por
 
 Para los ordenadores es un identificador simple, pero los humanos tenemos mayor dificultad para recordar este tipo de direcciones. Con el propósito de convertir esta serie numérica en algo que podamos asociar con mayor facilidad a la dirección IP se utiliza lo que conocemos como _nombre de dominio_. Por ejemplo, `google.com` es el nombre de dominio utilizado para la dirección IP `173.194.121.32`. Así, usar un nombre de dominio es la manera más fácil para nosotros de identificar un ordenador a través de Internet.
 
-![Mostrar cómo un nombre de dominio sirve como alias a una dirección IP](https://mdn.mozillademos.org/files/8405/dns-ip.png)
+![Mostrar cómo un nombre de dominio sirve como alias a una dirección IP](dns-ip.png)
 
 ### Internet y la web
 

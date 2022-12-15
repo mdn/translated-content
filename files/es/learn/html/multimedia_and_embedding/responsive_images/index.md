@@ -40,7 +40,7 @@ Las imágenes adaptables son solo una parte del diseño web responsivo, un tema 
 
 Examinemos un escenario típico. Un sitio web típico puede contener una imagen de encabezado y algunas imágenes de contenido debajo del encabezado. Es probable que la imagen del encabezado abarque todo el ancho del encabezado y la imagen del contenido quepa en algún lugar dentro de la columna de contenido. He aquí un ejemplo sencillo:
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)
 
 Esto funciona bien en un dispositivo de pantalla ancha, como una computadora portatil o de escritorio (puedes [ver el ejemplo en vivo](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) y encontrar el [código fuente](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) en Github.) No hablaremos mucho del CSS en esta lección, excepto para decir que:
 
@@ -50,7 +50,7 @@ Esto funciona bien en un dispositivo de pantalla ancha, como una computadora por
 
 Sin embargo, surgen problemas cuando comienza a ver el sitio en un dispositivo de pantalla estrecha — el encabezado de abajo está bien, pero empieza a ocupar gran parte de la altura de la pantalla de un dispositivo móvil. ¡A este tamaño es difícil ver a las personas que aparecen en la foto!
 
-![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](https://mdn.mozillademos.org/files/12936/non-responsive-narrow.png)
+![Our example site as viewed on a narrow screen; the first image has shrunk to the point where it is hard to make out the detail on it.](non-responsive-narrow.png)
 
 Una mejora sería mostrar una versión recortada de la imagen que muestra los detalles importantes de la imagen cuando el sitio se ve en una pantalla estrecha. Se podría mostrar una segunda imagen recortada para un dispositivo de pantalla de ancho medio, como una tableta. A esto se le conoce comúnmente como **el problema de cambio de resolución.**
 
@@ -121,18 +121,6 @@ Los navegadores más antiguos que no soportan estas características solo las ig
 
 > **Nota:** En el {{htmlelement("head")}} del documento usted hallará la línea `<meta name="viewport" content="width=device-width">`: esto fuerza a los dispositivos móviles a adoptar su ancho real de ventana para cargar las páginas web (algunos navegadores móviles mienten sobre el ancho de su ventana gráfica y, en su lugar, cargan páginas con un ancho de ventana más grande y luego reducen la página cargada, lo que no es muy útil para imágenes o diseño receptivos).
 
-### Useful developer tools
-
-There are some useful [developer tools](/es/docs/Learn/Common_questions/What_are_browser_developer_tools) in browsers to help with working out the necessary slot widths, etc, that you need to use. When I was working them out, I first loaded up the non-responsive version of my example (`not-responsive.html`), then went into [Responsive Design View](/es/docs/Tools/Responsive_Design_Mode) (_Tools > Web Developer > Responsive Design View_), which allows you to look at your web page layouts as if they were being viewed through a variety of different device screen sizes.
-
-I set the viewport width to 320px then 480px; for each one I went into the [DOM Inspector](/es/docs/Tools/Page_Inspector), clicked on the {{htmlelement("img")}} element we are interested in, then looked at its size in the Box Model view tab on the right hand side of the display. This should give you the inherent image widths you need.
-
-![A screenshot of the firefox devtools with an image element highlighted in the dom, showing its dimensions as 440 by 293 pixels.](https://mdn.mozillademos.org/files/12932/box-model-devtools.png)
-
-Next, you can check whether the `srcset` is working by setting the viewport width to what you want (set it to a narrow width, for example), opening the Network Inspector (_Tools > Web Developer > Network_), then reloading the page. This should give you a list of the assets that were downloaded to make up the webpage, and here you can check which image file was chosen for download.
-
-![a screenshot of the network inspector in firefox devtools, showing that the HTML for the page has been downloaded, along with three images, which include the two 800 wide versions of the responsive images](https://mdn.mozillademos.org/files/12934/network-devtools.png)
-
 ### Resolution switching: Same size, different resolutions
 
 If you're supporting multiple display resolutions, but everyone sees your image at the same real-world size on the screen, you can allow the browser to choose an appropriate resolution image by using `srcset` with x-descriptors and without `sizes` — a somewhat easier syntax! You can find an example of what this looks like in [srcset-resolutions.html](http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (see also [the source code](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
@@ -144,7 +132,7 @@ If you're supporting multiple display resolutions, but everyone sees your image 
      src="elva-fairy-640w.jpg" alt="Elva dressed as a fairy">
 ```
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](https://mdn.mozillademos.org/files/12942/resolution-example.png)In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):
 
 ```css
 img {
@@ -180,7 +168,7 @@ Let's fix this, with {{htmlelement("picture")}}! Like [`<video>` and `<audio>`](
 
 This code allows us to display a suitable image on both wide screen and narrow screen displays, as shown below:
 
-![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](https://mdn.mozillademos.org/files/12940/picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](https://mdn.mozillademos.org/files/12938/picture-element-narrow.png)
+![Our example site as viewed on a wide screen - here the first image works ok, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](picture-element-narrow.png)
 
 > **Nota:** You should use the `media` attribute only in art direction scenarios; when you do use `media`, don't also offer media conditions within the `sizes` attribute.
 

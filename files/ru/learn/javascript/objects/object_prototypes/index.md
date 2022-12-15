@@ -61,11 +61,11 @@ var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
 
 Если вы наберёте «`person1.`» в вашей консоли JavaScript, вы должны увидеть, что браузер пытается автоматически заполнить это с именами участников, доступных на этом объекте:
 
-![](https://mdn.mozillademos.org/files/13853/object-available-members.png)
+![](object-available-members.png)
 
 В этом списке вы увидите элементы, определённые в конструкторе person 1 — Person() — `name`, `age`, `gender`, `interests`, `bio`, и `greeting`. Однако вы также увидите некоторые другие элементы — `watch`, `valueOf` и т. д. — они определены в объекте прототипа Person (), который является [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object).
 
-![](https://mdn.mozillademos.org/files/13891/MDN-Graphics-person-person-object-2.png)
+![](mdn-graphics-person-person-object-2.png)
 
 Итак, что произойдёт, если вы вызываете метод в `person1`, который фактически определён в `Object`? Например:
 

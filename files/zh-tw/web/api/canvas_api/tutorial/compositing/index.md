@@ -3,7 +3,7 @@ title: 合成效果
 slug: Web/API/Canvas_API/Tutorial/Compositing
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}
 
 在前述的範例中，新繪製的圖形總會覆蓋在之前的圖形上，對大多數情況來說這相當正常，不過它也限制了圖形繪製的順序。其實我們可以透過 globalCompositeOperation 屬性來改變這項預設行為。
 

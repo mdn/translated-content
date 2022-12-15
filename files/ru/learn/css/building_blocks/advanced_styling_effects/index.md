@@ -207,7 +207,7 @@ div {
   padding: 10px;
   margin: 10px;
   display: inline-block;
-  background: url(https://mdn.mozillademos.org/files/13090/colorful-heart.png) no-repeat center 20px;
+  background: url(colorful-heart.png) no-repeat center 20px;
   background-color: green;
 }
 
@@ -266,7 +266,7 @@ article div:first-child {
   position: absolute;
   top: 10px;
   left: 0;
-  background: url(https://mdn.mozillademos.org/files/13090/colorful-heart.png) no-repeat center 20px;
+  background: url(colorful-heart.png) no-repeat center 20px;
   background-color: green;
 }
 

@@ -84,9 +84,9 @@ Dentro del elemento {{htmlelement("div")}} con clase `red-panda`, queremos inser
 
 Las siguientes capturas de pantalla muestran como debería verse la página de bienvenida después de haber sido marcada correctamente, en una pantalla ancha y estrecha.
 
-![A wide shot of our example splash page](https://mdn.mozillademos.org/files/12946/wide-shot.png)
+![A wide shot of our example splash page](wide-shot.png)
 
-![A narrow shot of our example splash page](https://mdn.mozillademos.org/files/12944/narrow-shot.png)
+![A narrow shot of our example splash page](narrow-shot.png)
 
 ## Evaluación o ayuda adicional
 

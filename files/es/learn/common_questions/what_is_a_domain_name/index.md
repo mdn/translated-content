@@ -40,7 +40,7 @@ Cualquier computadora conectada a Internet puede ser alcanzada a partir de una d
 
 Un nombre de dominio tiene una estructura simple formada por varias partes (puede tener solamente una parte, dos, tres,...), separadas por puntos y **se leen de derecha a izquierda**:
 
-![Anatomy of the MDN domain name](https://mdn.mozillademos.org/files/11229/structure.png)
+![Anatomy of the MDN domain name](structure.png)
 
 Cada una de estas partes provee información específica sobre el nombre de dominio completo.
 
@@ -136,7 +136,7 @@ Como ya hemos visto, cuando usted quiere visualizar una página web en su navega
 3. Si la computadora no sabe qué IP está detrás del nombre `mozilla.org`, hay que pedírselo a un servidor DNS, cuyo trabajo es precisamente decirle a la computadora cuál es la dirección IP de cada nombre de dominio registrado.
 4. Ahora que la computadora conoce la dirección IP requerida, su navegador puede gestionar contenidos con el servidor web.
 
-![Explanation of the steps needed to obtain the result to a DNS request](https://mdn.mozillademos.org/files/8961/2014-10-dns-request2.png)
+![Explanation of the steps needed to obtain the result to a DNS request](2014-10-dns-request2.png)
 
 ## Próximos pasos
 

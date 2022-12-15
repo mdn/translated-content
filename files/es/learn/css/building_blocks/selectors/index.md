@@ -38,7 +38,7 @@ En {{Glossary( "CSS")}} los selectores se utilizan para delimitar los elementos 
 
 En un artículo anterior explicamos qué son los selectores. Un selector CSS es la primera parte de una regla CSS. Es un patrón de elementos y otros términos que indican al navegador qué elementos HTML se seleccionan para aplicarles una regla que incluye los valores de las propiedades CSS. El elemento o los elementos seleccionados por el selector se denominan _sujeto del selector_.
 
-![Fragmento de código con el elemento h1 resaltado.](https://mdn.mozillademos.org/files/16550/selector.png)
+![Fragmento de código con el elemento h1 resaltado.](selector.png)
 
 En artículos anteriores ya has visto algunos selectores y has aprendido que hay diversas maneras de organizar el documento. Por ejemplo, seleccionando un elemento, como `h1`, o seleccionando una clase, como `.special`.
 

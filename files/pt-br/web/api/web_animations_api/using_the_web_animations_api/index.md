@@ -26,7 +26,7 @@ Uma das maneiras mais familiares de abordar a Web Animations API é começar com
 
 Aqui temos uma animação escrita com CSS mostrando Alice caindo no buraco de coelho que leva ao País das Maravilhas (veja o [código completo no Codepen](http://codepen.io/rachelnabors/pen/QyOqqW)):
 
-[![Alice Tumbling down the rabbit's hole.](https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
+[![Alice Tumbling down the rabbit's hole.](tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
 
 Perceba que o fundo se mexe, a Alice gira e sua cor muda em sincronia com o giro. Nós vamos focar somente na Alice para este tutorial. Segue a versão simplificada do CSS que controla a animação da Alice:
 
@@ -137,7 +137,7 @@ document.getElementById("alice").animate(
 
 Por mais que possamos escrever Animações CSS utilizando a Web Animations API, a API realmente mostra seu potencial quando precisamos manipular a reprodução da animação. A Web Animations API fornece vários métodos úteis para controlar a reprodução. Vamos dar uma olhada em como pausar e tocar animações no jogo da Alice Crescendo/Encolhendo (confira o [código completo no Codepen](http://codepen.io/rachelnabors/pen/PNYGZQ)):
 
-[![Playing the growing and shrinking game with Alice.](https://mdn.mozillademos.org/files/13845/growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
+[![Playing the growing and shrinking game with Alice.](growing-shrinking_article_optimized.gif)](http://codepen.io/rachelnabors/pen/PNYGZQ?editors=0010)
 
 Nesse jogo, Alice tem uma animação que a encolhe ou aumenta seu tamanho, que controlamos por uma garrafa e um cupcake. Cada um tem sua própria animação.
 
@@ -210,7 +210,7 @@ bottle.addEventListener("touchstart", shrinkAlice, false);
 
 Em [Alice Através do Espelho](https://en.wikipedia.org/wiki/Through_the_Looking-Glass), Alice viaja para um mundo onde ela deve correr para se manter no lugar — e correr com o dobro de velocidade para avançar! No exemplo da Corrida da Rainha Vermelha, Alice e a Rainha Vermelha estão correndo para se manter no lugar (veja o [código completo no Codepen](http://codepen.io/rachelnabors/pen/PNGGaV)):
 
-[![Alice and the Red Queen race to get to the next square in this game.](https://mdn.mozillademos.org/files/13847/red-queen-race_optimized.gif)](http://codepen.io/rachelnabors/pen/PNGGaV)
+[![Alice and the Red Queen race to get to the next square in this game.](red-queen-race_optimized.gif)](http://codepen.io/rachelnabors/pen/PNGGaV)
 
 Já que crianças pequenas se cansam facilmente, diferente de peças de xadrez autônomas, Alice está constantemente desacelerando. Nós podemos fazer isso definindo uma queda no `playbackRate` da animação dela. Usamos o `updatePlaybackRate()` no lugar de definir manualmente o playbackRate, já que isso produz uma atualização mais suave:
 

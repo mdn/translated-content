@@ -42,7 +42,7 @@ Neste artigo vamos revisar o que são web servers, como eles funcionam, e por qu
 
 Em um nível mais básico, o navegador fará uma requisição utilizando o protocolo HTTP sempre que necessitar de um um arquivo hospedado em um servidor web. Quando a requisição alcançar o servidor web correto (hardware), o _servidor HTTP_ (software) enviará o documento requerido, também via HTTP.
 
-![Basic representation of a client/server connection through HTTP](https://mdn.mozillademos.org/files/8659/web-server.svg)
+![Basic representation of a client/server connection through HTTP](web-server.svg)
 
 Para publicar um website, é necessário ou um servidor web estático ou um dinâmico.
 
@@ -92,7 +92,7 @@ O HTTP fornece regras claras sobre como um cliente e um servidor se comunicam. A
 - Quando fizer a requisição de um arquivo via HTTP, os clientes devem fornecer a {{Glossary("URL")}} do arquivo.
 - O servidor web _deve responder_ todas as requisições HTTP, mesmo que seja com uma mensagem de erro.
 
-[![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](/en-US/404)Em um servidor web, o servidor HTTP é responsável por processar e responder as requisições recebidas.
+[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/en-US/404)Em um servidor web, o servidor HTTP é responsável por processar e responder as requisições recebidas.
 
 1. Ao receber uma requisição, um servidor HTTP primeiramente confirma se a URL requisitada corresponde ao arquivo existente.
 2. Se confirmar, o servidor web envia o conteúdo do arquivo de volta ao navegador. Senão, o servidor de aplicações cria o arquivo necessário.

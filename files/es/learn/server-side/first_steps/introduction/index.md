@@ -40,7 +40,7 @@ Los servidores web esperan los mensajes de petición de los clientes, los proces
 
 El diagrama de abajo muestra una arquitectura de servidor web básica correspondiente a un _sitio estático_ (un sitio estático es aquél que devuelve desde el servidor el mismo contenido insertado en el código "hard coded" siempre que se solicita un recurso en particular). Cuando un usuario quiere navegar a una página, el explorador envía una petición HTTP "GET" especificando su URL. El servidor recupera de su sistema de ficheros el documento solicitado y devuelve una respuesta HTTP que contiene el documento y un [estado de éxito "success status](/es/docs/Web/HTTP/Status#Successful_responses)" (normalmente 200 OK). Si el fichero no puede ser recuperado por alguna razón, se devuelve un estado de error (ver [respuestas de error del cliente](/es/docs/Web/HTTP/Status#Client_error_responses) and [respuestas de error del servidor](/es/docs/Web/HTTP/Status#Server_error_responses)).
 
-![A simplified diagram of a static web server.](https://mdn.mozillademos.org/files/13841/Basic%20Static%20App%20Server.png)
+![A simplified diagram of a static web server.](basic_static_app_server.png)
 
 ### Sitios Dinámicos
 
@@ -50,7 +50,7 @@ La mayor parte del código para soportar un sitio web dinámico debe correr en e
 
 El diagrama de abajo muestra una arquitectura simple para un*sitio web dinámico.* Como en el diagrama previo, los exploradores web envían peticiones HTTP al servidor, el servidor procesa a continuación las peticiones y devuelve las respuestas HTTP apropiadas. Las peticiones de recursos _estáticos_ son gestionadas de la misma manera que para los _sitios estáticos_ (los recursos estáticos son cualquier fichero que no cambia - generalmente: CSS, JavaScript, Imágenes, ficheros PDF creados previamente, etc...)
 
-![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](https://mdn.mozillademos.org/files/13839/Web%20Application%20with%20HTML%20and%20Steps.png)
+![A simplified diagram of a web server that uses server-side programming to get information from a database and construct HTML from templates. This is the same diagram as is in the Client-Server overview.](web_application_with_html_and_steps.png)
 
 Las peticiones de recursos dinámicos, por el contrario, son reenviadas (2) al código del lado-servidor (mostrado en el diagrama como _Web Application_). Para las "peticiones dinámicas" el servidor interpreta la petición, lee de la base de datos la información requerida (3), combina los datos recuperados con las plantillas HTML (4), y envía de vuelta una respuesta que contiene el HTML generado (5,6).
 

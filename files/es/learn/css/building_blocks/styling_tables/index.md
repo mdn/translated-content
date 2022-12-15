@@ -76,7 +76,7 @@ Comencemos por echar un vistazo a una tabla HTML típica. Bueno, decimos típica
 
 La tabla está bien creada, puede aplicársele estilo fácilmente y presenta características de accesibilidad gracias a propiedades como {{htmlattrxref("scope","th")}}, {{htmlelement("caption")}}, {{htmlattrxref("summary","table")}}, {{htmlelement("thead")}}, {{htmlelement("tbody")}}, etc. Por desgracia, no presenta un aspecto agradable cuando se muestra en pantalla (puedes ver el ejemplo en [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html)):
 
-![](https://mdn.mozillademos.org/files/13064/table-unstyled.png)
+![](table-unstyled.png)
 
 Tal y como está, es aburrida y difícil de leer. Necesitamos usar algo de CSS para arreglar esto.
 
@@ -133,13 +133,13 @@ Las partes más importantes que destacamos son:
 
   Hemos emparejado esto con un {{cssxref("width")}} del 100%, que significa que la tabla llenará cualquier contenedor en la que se ubique, y presentará unas buenas características adaptativas (aunque podría requerir algo más de trabajo para que se vea bien en pantallas de anchuras estrechas).
 
-- Un valor {{cssxref("border-collapse")}} de `collapse` es una buena práctica estándar para cualquier tarea de aplicación de estilo a tablas. Por defecto, cuando estableces los bordes de los elementos de la tabla, quedará un espacio entre ellos, como se muestra en la imagen siguiente. ![](https://mdn.mozillademos.org/files/13068/no-border-collapse.png) Esto no presenta un aspecto agradable (aunque puede ser el aspecto que buscas, ¡quién sabe!). Si estableces `border-collapse: collapse;`, los bordes se reducen a uno, y así presenta un aspecto mucho más agradable: ![](https://mdn.mozillademos.org/files/13066/border-collapse.png)
+- Un valor {{cssxref("border-collapse")}} de `collapse` es una buena práctica estándar para cualquier tarea de aplicación de estilo a tablas. Por defecto, cuando estableces los bordes de los elementos de la tabla, quedará un espacio entre ellos, como se muestra en la imagen siguiente. ![](no-border-collapse.png) Esto no presenta un aspecto agradable (aunque puede ser el aspecto que buscas, ¡quién sabe!). Si estableces `border-collapse: collapse;`, los bordes se reducen a uno, y así presenta un aspecto mucho más agradable: ![](border-collapse.png)
 - Hemos puesto un borde ({{cssxref("border")}}) alrededor de la tabla, que es necesario, porque vamos a poner bordes en la cabecera de la tabla y después en el pie; queda raro e inconexo si no pones ningún borde a la tabla que la delimite del resto de los elementos del exterior y quedan huecos.
 - Hemos puesto área de relleno ({{cssxref("padding")}}) en los elementos {{htmlelement("th")}} y {{htmlelement("td")}}; esto da a los datos espacio para que respiren y mejora la legibilidad de la tabla.
 
 En este punto, nuestra tabla ya presenta un aspecto mucho más agradable:
 
-![](https://mdn.mozillademos.org/files/13070/table-with-spacing.png)
+![](table-with-spacing.png)
 
 ### Un poco de tipografía
 
@@ -192,7 +192,7 @@ En realidad aquí no hay nada que sea específico para las tablas. En general, m
 
 El resultado se ve un poco más limpio:
 
-![](https://mdn.mozillademos.org/files/13072/table-with-typography.png)
+![](table-with-typography.png)
 
 ### Gráficos y colores
 
@@ -247,7 +247,7 @@ table {
 
 Esta explosión de colores da como resultado el aspecto siguiente:
 
-![](https://mdn.mozillademos.org/files/13074/table-with-color.png)
+![](table-with-color.png)
 
 Esto puede quedar un poco exagerado y no ser de tu agrado, pero el punto que tratamos de explicar es que las tablas no tienen por qué ser aburridas ni académicas.
 
@@ -269,7 +269,7 @@ caption {
 
 Aquí no hay nada notable, excepto la propiedad {{cssxref ("caption-side")}}, a la que se le ha dado un valor `bottom`. Esto coloca el título en la parte inferior de la tabla, lo que junto con el resto de declaraciones nos proporciona este aspecto final (puedes verlo vivo en [punk-bands-complete.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html)):
 
-![](https://mdn.mozillademos.org/files/13076/table-with-caption.png)
+![](table-with-caption.png)
 
 ## Aprendizaje activo: Aplica estilo a tu tabla
 

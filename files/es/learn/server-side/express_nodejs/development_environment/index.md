@@ -361,7 +361,7 @@ El comando DEBUG crea registros útiles, lo que resulta en una salida como la qu
 
 Abra un navegador y navegue a `http://127.0.0.1:3000/` para ver la página de bienvenida Express predeterminada.
 
-![Express - Generated App Default Screen](https://mdn.mozillademos.org/files/14331/express_default_screen.png)
+![Express - Generated App Default Screen](express_default_screen.png)
 
 Hablaremos más sobre la aplicación generada cuando lleguemos al artículo sobre la generación de una aplicación esqueleto.
 
