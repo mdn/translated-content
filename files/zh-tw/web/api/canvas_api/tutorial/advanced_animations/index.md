@@ -155,7 +155,7 @@ canvas.addEventListener('mouseout', function(e) {
 ball.draw();
 ```
 
-{{EmbedLiveSample("First_demo", "610", "310")}}
+{{EmbedLiveSample("第一個示範", "610", "310")}}
 
 ## 加速性能
 
@@ -224,7 +224,7 @@ canvas.addEventListener('mouseout', function(e) {
 ball.draw();
 ```
 
-{{EmbedLiveSample("Second_demo", "610", "310")}}
+{{EmbedLiveSample("加速性能", "610", "310")}}
 
 ## 追蹤效果
 
@@ -292,7 +292,7 @@ canvas.addEventListener('mouseout', function(e) {
 ball.draw();
 ```
 
-{{EmbedLiveSample("Third_demo", "610", "310")}}
+{{EmbedLiveSample("追蹤效果", "610", "310")}}
 
 ## 增加滑鼠控制
 
@@ -371,7 +371,7 @@ ball.draw();
 
 用你的滑鼠移動這顆球且點擊鬆放它。
 
-{{EmbedLiveSample("Adding_mouse_control", "610", "310")}}
+{{EmbedLiveSample("增加滑鼠控制", "610", "310")}}
 
 ## 突破性(遊戲)
 

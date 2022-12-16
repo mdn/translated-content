@@ -127,7 +127,7 @@ onload = function () {
 }
 ```
 
-{{ EmbedLiveSample('scrollHeight_Demo', '640', '400') }}
+{{ EmbedLiveSample('scrollHeight 範例', '640', '400') }}
 
 ## 規範
 

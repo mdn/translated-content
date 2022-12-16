@@ -150,7 +150,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 </div>
 ```
 
-{{EmbedLiveSample("Multiple_labels", 120, 120)}}
+{{EmbedLiveSample("多個標籤", 120, 120)}}
 
 The paragraph at the top states a rule for required elements. The rule must be included _before_ it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "_star_" when encountered. When hovered by a sighted mouse user, "_required_" should appear, which is achieved by use of the `title` attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the [`aria-label`](/zh-TW/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) attribute, which is always read by screen readers.
 
@@ -295,7 +295,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
 
 You can see the finished form in action below (also find it on GitHub — see our payment-form.html [source](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) and [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
 
-{{EmbedLiveSample("A_payment_form","100%",620, "", "Learn/Forms/How_to_structure_a_web_form/Example")}}
+{{EmbedLiveSample("主動學習：建立表單結構","100%",620)}}
 
 ## 結論
 

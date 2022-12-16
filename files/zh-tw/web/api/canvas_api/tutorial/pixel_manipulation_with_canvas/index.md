@@ -102,7 +102,7 @@ function pick(event) {
 canvas.addEventListener('mousemove', pick);
 ```
 
-{{ EmbedLiveSample('A_color_picker', 610, 240) }}
+{{ EmbedLiveSample('調色盤', 610, 240) }}
 
 ## 在內容中寫入 pixel 資料
 
@@ -173,7 +173,7 @@ function draw(img) {
 }
 ```
 
-{{ EmbedLiveSample('Grayscaling_and_inverting_colors', 330, 270) }}
+{{ EmbedLiveSample('灰階和負片效果', 330, 270) }}
 
 ## 放大和平滑化(反鋸齒)
 
