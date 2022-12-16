@@ -82,7 +82,7 @@ function draw() {
 
 Save your code again and try it in your browser. This works ok, although it appears that the ball is leaving a trail behind it:
 
-![](https://mdn.mozillademos.org/files/10430/ball-trail.png)
+![](ball-trail.png)
 
 ## Clearing the canvas before each frame
 

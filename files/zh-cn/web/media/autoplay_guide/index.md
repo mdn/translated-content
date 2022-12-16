@@ -155,7 +155,7 @@ _More content will come soon; autoplay blocking is still being worked on at Mozi
 
 ## The autoplay feature policy
 
-In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Feature-Policy")}} header's [`autoplay`](/zh-CN/docs/Web/HTTP/Headers/Feature-Policy/autoplay) directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` feature policy is set to `'self'` (_including the single quote characters_), indicating that autoplay is permitted as they're hosted on the same domain as the document.
+In addition to the browser-side management and control over autoplay functionality described above, a web server can also express its willingness to allow autoplay to function. The {{Glossary("HTTP")}} {{HTTPHeader("Permissions-Policy")}} header's [`autoplay`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) directive is used to control which domains, if any, can be used to autoplay media. By default, the `autoplay` feature policy is set to `'self'` (_including the single quote characters_), indicating that autoplay is permitted as they're hosted on the same domain as the document.
 
 You can also specify `'none'` to disable autoplay entirely, `'*'` to allow autoplay from all domains, or one or more specific origins from which media can be automatically played. These origins are separated by space characters.
 
@@ -165,10 +165,10 @@ When using the {{htmlattrxref("allow", "iframe")}} attribute on an `<iframe>` to
 
 ### Example: Allowing autoplay only from the document's domain
 
-To use the {{HTTPHeader("Feature-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:
+To use the {{HTTPHeader("Permissions-Policy")}} header to only allow media to autoplay from the document's {{Glossary("origin")}}:
 
 ```plain
-Feature-Policy: autoplay 'self'
+Permissions-Policy: autoplay 'self'
 ```
 
 To do the same for an {{HTMLElement("iframe")}}:
@@ -181,10 +181,10 @@ To do the same for an {{HTMLElement("iframe")}}:
 
 ### Example: Allowing autoplay and fullscreen mode
 
-Adding [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API) permission to the previous example results in a `Feature-Policy` header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.
+Adding [Fullscreen API](/zh-CN/docs/Web/API/Fullscreen_API) permission to the previous example results in a `Permissions-Policy` header like the following if fullscreen access is allowed regardless of the domain; a domain restriction can be added as well as needed.
 
 ```plain
-Feature-Policy: autoplay 'self'; fullscreen
+Permissions-Policy: autoplay 'self'; fullscreen
 ```
 
 The same permissions, grated using the `<iframe>` element's `allow` property, look like this:
@@ -197,10 +197,10 @@ The same permissions, grated using the `<iframe>` element's `allow` property, lo
 
 ### Example: Allowing autoplay from specific sources
 
-The `Feature-Policy` header to allow media to be played from both the document's (or `<iframe>`'s) own domain and `https://example.media` looks like this:
+The `Permissions-Policy` header to allow media to be played from both the document's (or `<iframe>`'s) own domain and `https://example.media` looks like this:
 
 ```plain
-Feature-Policy: autoplay 'self' https://example.media
+Permissions-Policy: autoplay 'self' https://example.media
 ```
 
 An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy should be applied to itself and any child frames would be written thusly:
@@ -217,7 +217,7 @@ An {{HTMLElement("iframe")}} can be written to specify that this autoplay policy
 Setting the `autoplay` feature policy to `'none'` disables autoplay entirely for the document or `<iframe>` and all nested frames. The HTTP header is:
 
 ```plain
-Feature-Policy: autoplay 'none'
+Permissions-Policy: autoplay 'none'
 ```
 
 Using the `<iframe>`'s `allow` attribute:

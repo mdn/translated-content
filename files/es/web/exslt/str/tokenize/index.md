@@ -1,11 +1,6 @@
 ---
 title: tokenize
 slug: Web/EXSLT/str/tokenize
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/str/tokenize
 ---
 
 {{XsltRef}}

@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/i18n
 
 拡張機能で i18n を使用するための詳細は、以下の記事を参照してください:
 
-- [Internationalization](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization): WebExtension の i18n システムを使うためのガイド。
+- [国際化拡張](/ja/docs/Mozilla/Add-ons/WebExtensions/Internationalization): WebExtension の i18n システムを使うためのガイド。
 - [ロケール固有のメッセージ参照](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference): 拡張機能が `messages.json` と呼ばれるファイルで供給するロケール固有の文字列。このページは、`messages.json` の書式について書かれています。
 
 ## 型

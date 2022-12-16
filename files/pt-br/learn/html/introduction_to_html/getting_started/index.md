@@ -53,7 +53,7 @@ Se nós quisermos que a linha permaneça, nós podemos especificar que é um par
 
 Vamos explorar nosso elemento parágrafo um pouco mais:
 
-![](https://mdn.mozillademos.org/files/9347/grumpy-cat-small.png)
+![](grumpy-cat-small.png)
 
 As partes principais do elemento são:
 
@@ -249,9 +249,9 @@ Isto exibirá em sua página:
 
 Elementos também podem conter atributos, que se apresentam da seguinte forma:
 
-![&lt;p class="editor-note">My cat is very grumpy&lt;/p>](https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png)
+![&lt;p class="editor-note">My cat is very grumpy&lt;/p>](grumpy-cat-attribute-small.png)
 
-Atributos contém informação extra sobre o elemento, mas que você não deseja que apareça no conteúdo. Nete caso, o atributo `class` permite que você dê ao elemento um nome de identificação, que pode ser usada mais tarde para direcionar informação de estilo ao elemento e outras coisas.
+Atributos contém informação extra sobre o elemento, mas que você não deseja que apareça no conteúdo. Neste caso, o atributo `class` permite que você dê ao elemento um nome de identificação, que pode ser usada mais tarde para direcionar informação de estilo ao elemento e outras coisas.
 
 Um atributo deve conter:
 
@@ -522,7 +522,7 @@ Se você quiser experimentar como funciona um documento HTML no seu computador, 
 
 Você pode abrir este arquivo no navegador para ver como o código renderizado se apresenta, e então, editar o código e atualizar a página no navegador para ver o resultado com as mudanças. Inicialmente será exibido assim:
 
-![A simple HTML page that says This is my page](https://mdn.mozillademos.org/files/12279/template-screenshot.png)Neste exercício, você pode editar o código localmente em seu computador, com descrito acima, ou você pode editá-lo na janela de exemplo editável abaixo (esta janela editável representa apenas o conteúdo do elemento `<body>` , neste caso). Nós gostaríamos que você seguisse as seguintes etapas:
+![A simple HTML page that says This is my page](template-screenshot.png)Neste exercício, você pode editar o código localmente em seu computador, com descrito acima, ou você pode editá-lo na janela de exemplo editável abaixo (esta janela editável representa apenas o conteúdo do elemento `<body>` , neste caso). Nós gostaríamos que você seguisse as seguintes etapas:
 
 - Logo abaixo da tag de abertura [`<body>`](/pt-BR/docs/Web/HTML/Element/body), adicione um título principal para o documento. Isso deve estar dentro da tag de abertura `<h1>`e da tag de fechamento `</h1>` .
 - Edite o conteúdo do parágrafo para incluir algum texto sobre algo de seu interesse.

@@ -40,9 +40,9 @@ text-decoration-skip: unset;
 - `spaces`
   - : All spacing is skipped, i.e. all [Unicode white space characters](http://www.unicode.org/reports/tr44/#White_Space) and all word separators, plus any adjacent {{cssxref("letter-spacing")}} or {{cssxref("word-spacing")}}.
 - `ink`
-  - : The text decoration is only drawn where it does not touch or closely approach a glyph. I.e. it is interrupted where it would otherwise cross over a glyph.![An example of "text-decoration-skip: ink;".](https://mdn.mozillademos.org/files/13464/decoration-skip-ink.png)
+  - : The text decoration is only drawn where it does not touch or closely approach a glyph. I.e. it is interrupted where it would otherwise cross over a glyph.![An example of "text-decoration-skip: ink;".](decoration-skip-ink.png)
 - `edges`
-  - : The start and end of the text decoration is placed slightly inward (e.g. by half of the line thickness) from the content edge of the decorating box. E.g. two underlined elements side-by-side do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.)![An example of "text-decoration-skip: edges;".](https://mdn.mozillademos.org/files/13466/decoration-skip-edges.png)
+  - : The start and end of the text decoration is placed slightly inward (e.g. by half of the line thickness) from the content edge of the decorating box. E.g. two underlined elements side-by-side do not appear to have a single underline. (This is important in Chinese, where underlining is a form of punctuation.)![An example of "text-decoration-skip: edges;".](decoration-skip-edges.png)
 - `box-decoration`
   - : The text decoration is skipped over the box's margin, border and padding areas. This only has an effect on decorations imposed by an ancestor; a _decorating box_ never draws over its own box decoration.
 

@@ -7,7 +7,7 @@ translation_of: Web/API/AudioNode
 {{ APIRef("Web Audio API") }}
 **AudioNode** это общий интерфейс для описания модулей обработки аудио таких как источники звука (например HTML элементы {{HTMLElement("audio")}} или {{HTMLElement("video")}}), генераторы звука (например {{domxref("OscillatorNode")}} и т.п.), приёмники звука для модулей производящих обработку звука (например {{domxref("BiquadFilterNode")}} или {{domxref("ConvolverNode")}}), или регуляторы громкости (например {{domxref("GainNode")}}).
 
-![AudioNodes participating in an AudioContext create a audio routing graph.](https://mdn.mozillademos.org/files/9713/WebAudioBasics.png)
+![AudioNodes participating in an AudioContext create a audio routing graph.](webaudiobasics.png)
 
 `AudioNode` имеет входы и выходы, каждый с заданным количеством _каналов_. `AudioNode` без входов в с одним или несколькими выходами называются *источниками* (_source node_). Результаты обработки передаются от одного AudioNode к другому, при этом каждый узел считывает только свой вход, производит обработку и представляет результат на свой выход, или просто пропускает аудио через себя (например {{domxref("AnalyserNode")}} где результат представляется отдельно).
 

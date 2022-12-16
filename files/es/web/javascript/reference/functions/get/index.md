@@ -1,11 +1,6 @@
 ---
 title: get
 slug: Web/JavaScript/Reference/Functions/get
-tags:
-  - ECMAScript5
-  - JavaScript
-  - Operator
-translation_of: Web/JavaScript/Reference/Functions/get
 original_slug: Web/JavaScript/Referencia/Funciones/get
 ---
 

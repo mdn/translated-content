@@ -1603,7 +1603,7 @@
 /es/docs/Web/API/DOMString/Binary	/es/docs/Web/API/btoa
 /es/docs/Web/API/DOMString/Cadenas_binarias	/es/docs/Web/API/btoa
 /es/docs/Web/API/Document/abrir	/es/docs/Web/API/Document/open
-/es/docs/Web/API/Document/async	/es/docs/Web/API/XMLDocument/async
+/es/docs/Web/API/Document/async	/es/docs/Web/API/XMLDocument
 /es/docs/Web/API/Document/crearAtributo	/es/docs/Web/API/Document/createAttribute
 /es/docs/Web/API/Document/documentURIObject	/es/docs/orphaned/Web/API/Document/documentURIObject
 /es/docs/Web/API/Document/dragover_event	/es/docs/Web/API/HTMLElement/dragover_event
@@ -1722,6 +1722,7 @@
 /es/docs/Web/API/WindowTimers/clearTimeout	/es/docs/Web/API/clearTimeout
 /es/docs/Web/API/WindowTimers/setInterval	/es/docs/Web/API/setInterval
 /es/docs/Web/API/WindowTimers/setTimeout	/es/docs/Web/API/setTimeout
+/es/docs/Web/API/XMLDocument/async	/es/docs/Web/API/XMLDocument
 /es/docs/Web/API/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
 /es/docs/Web/API/XMLHttpRequest/onreadystatechange	/es/docs/Web/API/XMLHttpRequest/readystatechange_event
 /es/docs/Web/API/event.defaultPrevented	/es/docs/Web/API/Event/defaultPrevented

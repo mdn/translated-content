@@ -1,11 +1,6 @@
 ---
 title: Operador de agrupación
 slug: Web/JavaScript/Reference/Operators/Grouping
-tags:
-  - Expresiones primarias
-  - JavaScript
-  - Operador
-translation_of: Web/JavaScript/Reference/Operators/Grouping
 original_slug: Web/JavaScript/Referencia/Operadores/Grouping
 ---
 

@@ -124,7 +124,7 @@ SDP를 서로 교환한 후에, 두 피어들은 **ICE candidate**(ICE 후보)�
 
 Naomi와 Priya는 채팅 소프트웨어를 사용해 대화에 참여했고 Naomi는 둘 사이에 영상 통화를 하기로 결정한다. 다음 표는 이벤트들이 발생하는 과정이다.
 
-[![Diagram of the signaling process](https://mdn.mozillademos.org/files/12363/WebRTC%20-%20Signaling%20Diagram.svg)](https://mdn.mozillademos.org/files/12363/WebRTC%20-%20Signaling%20Diagram.svg)
+[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](webrtc_-_signaling_diagram.svg)
 
 곧 더 자세한 설명을 볼 수 있다.
 
@@ -132,7 +132,7 @@ Naomi와 Priya는 채팅 소프트웨어를 사용해 대화에 참여했고 Nao
 
 각 피어들의 ICE layer에서 candidate들을 보내기 시작할 때, 다음 그림과 같은 교환이 일어난다.
 
-[![Diagram of ICE candidate exchange process](https://mdn.mozillademos.org/files/12365/WebRTC%20-%20ICE%20Candidate%20Exchange.svg)](https://mdn.mozillademos.org/files/12365/WebRTC%20-%20ICE%20Candidate%20Exchange.svg)
+[![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)](webrtc_-_ice_candidate_exchange.svg)
 
 각 피어들은 candidate 들을 전송하고, 준비가 되면 받은 candidate 들을 처리한다. Candidate들은 양 피어들이 동의할 때까지 계속 교환되며, 미디어가 송수신 되도록 만든다. "ICE exchange"은 양측이 교대로 제안을하는 것을 의미하지 않는다. 올바르게 작동할 경우, 각 피어들은 모두 소진되거나 서로 동의할 때까지 상대방에게 제안할 candidate 들을 계속 전송한다.
 

@@ -77,7 +77,7 @@ Os recursos da nota são:
 
 O vídeo incorporado será mais ou menos assim:
 
-![A simple video player showing a video of a small white rabbit](https://mdn.mozillademos.org/files/12794/simple-video.png)
+![A simple video player showing a video of a small white rabbit](simple-video.png)
 
 Você pode tentar o [exemplo ao vivo](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/simple-video.html) aqui (veja também o [código fonte](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/video-and-audio-content/simple-video.html).)
 
@@ -183,7 +183,7 @@ O elemento {{htmlelement("audio")}} funciona exatamente como o elemento {{htmlel
 
 Isso produz algo como o seguinte em um navegador:
 
-![A simple audio player with a play button, timer, volume control, and progress bar](https://mdn.mozillademos.org/files/12798/audio-player.png)
+![A simple audio player with a play button, timer, volume control, and progress bar](audio-player.png)
 
 > **Nota:** You can [run the audio demo live](http://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html) on Github (also see the [audio player source code](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/multiple-audio-formats.html).)
 
@@ -271,7 +271,7 @@ Aqui está um exemplo:
 
 Isso resultará em um vídeo com legendas exibidas, mais ou menos assim:
 
-![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](https://mdn.mozillademos.org/files/7887/video-player-with-captions.png)
+![Video player with stand controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
 
 Para mais detalhes, leia [Adicionando legendas e legendas ao vídeo HTML5](/en-US/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Você pode [encontrar o exemplo](http://iandevlin.github.io/mdn/video-player-with-captions/) que acompanha este artigo no Github, escrito por Ian Devlin (consulte o [código-fonte](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions) também.) Este exemplo usa algum JavaScript para permitir que os usuários escolham entre diferentes legendas. Observe que, para ativar as legendas, você precisa pressionar o botão "CC" e selecionar uma opção - inglês, alemão ou espanhol.
 

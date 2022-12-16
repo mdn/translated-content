@@ -1,13 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Módulos
-  - Sentencia
-  - import
-translation_of: Web/JavaScript/Reference/Statements/import
 original_slug: Web/JavaScript/Referencia/Sentencias/import
 ---
 

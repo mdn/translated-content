@@ -17,7 +17,7 @@ void ctx.clip(path, fillRule);
 
 ### Parâmetros
 
-![](https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png)
+![](canvas_clipping_path.png)
 
 - `fillRule`
 

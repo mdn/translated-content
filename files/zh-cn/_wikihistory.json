@@ -8377,10 +8377,6 @@
     "modified": "2019-04-28T04:24:07.786Z",
     "contributors": ["teoli", "AlexChao"]
   },
-  "Web/API/Document/mozSyntheticDocument": {
-    "modified": "2019-03-23T22:10:39.057Z",
-    "contributors": ["littlemosquito", "lxcyha"]
-  },
   "Web/API/Document/open": {
     "modified": "2020-10-15T21:52:24.168Z",
     "contributors": ["ridiculousjam", "JobWebNie", "luxp", "xgqfrms-GitHub"]
@@ -8948,10 +8944,6 @@
   "Web/API/Element/copy_event": {
     "modified": "2019-04-30T13:59:22.378Z",
     "contributors": ["wbamberg", "zhangchen", "fscholz", "inottn", "maicss"]
-  },
-  "Web/API/Element/createShadowRoot": {
-    "modified": "2019-03-18T20:37:03.561Z",
-    "contributors": ["SphinxKnight", "CrazyMushroom"]
   },
   "Web/API/Element/cut_event": {
     "modified": "2019-04-30T14:14:11.414Z",
@@ -11800,10 +11792,6 @@
     "modified": "2020-10-19T03:38:36.478Z",
     "contributors": ["Sxxxx-x"]
   },
-  "Web/API/Long_Tasks_API": {
-    "modified": "2020-10-15T22:18:48.616Z",
-    "contributors": ["Li-saltair", "koolc"]
-  },
   "Web/API/MIDIAccess": {
     "modified": "2020-10-15T21:53:29.345Z",
     "contributors": ["bershanskiy", "tlos142857", "micblo"]
@@ -12350,10 +12338,6 @@
     "modified": "2019-03-18T21:45:18.805Z",
     "contributors": ["nDos", "hawtim"]
   },
-  "Web/API/Navigator/mozIsLocallyAvailable": {
-    "modified": "2019-03-24T00:15:57.130Z",
-    "contributors": ["teoli", "AshfaqHossain", "ziyunfei"]
-  },
   "Web/API/Navigator/oscpu": {
     "modified": "2019-03-24T00:16:00.751Z",
     "contributors": ["teoli", "Hasilt", "ziyunfei"]
@@ -12568,10 +12552,6 @@
   },
   "Web/API/Node/isSameNode": {
     "modified": "2019-03-24T00:17:51.664Z",
-    "contributors": ["teoli", "AshfaqHossain", "ziyunfei"]
-  },
-  "Web/API/Node/isSupported": {
-    "modified": "2019-03-23T23:32:58.017Z",
     "contributors": ["teoli", "AshfaqHossain", "ziyunfei"]
   },
   "Web/API/Node/lastChild": {
@@ -12985,6 +12965,10 @@
   "Web/API/PerformanceEntry/toJSON": {
     "modified": "2020-10-15T21:53:01.195Z",
     "contributors": ["fscholz", "xgqfrms-GitHub"]
+  },
+  "Web/API/PerformanceLongTaskTiming": {
+    "modified": "2020-10-15T22:18:48.616Z",
+    "contributors": ["Li-saltair", "koolc"]
   },
   "Web/API/PerformanceNavigation": {
     "modified": "2020-10-15T22:04:14.850Z",
@@ -14613,10 +14597,6 @@
     "modified": "2019-03-23T22:29:44.644Z",
     "contributors": ["SoAanyip"]
   },
-  "Web/API/VRPose/timeStamp": {
-    "modified": "2019-03-23T22:20:33.043Z",
-    "contributors": ["ajzeng"]
-  },
   "Web/API/ValidityState": {
     "modified": "2020-10-15T21:19:36.661Z",
     "contributors": ["Carllllo", "ziyunfei", "teoli", "AshfaqHossain"]
@@ -16100,10 +16080,6 @@
       "Mickeyboy"
     ]
   },
-  "Web/API/Window/openDialog": {
-    "modified": "2019-03-23T23:44:59.136Z",
-    "contributors": ["teoli", "khalid32", "ziyunfei", "Mickeyboy"]
-  },
   "Web/API/Window/opener": {
     "modified": "2020-10-15T21:06:35.488Z",
     "contributors": ["woshiqiang1", "teoli", "khalid32", "ziyunfei"]
@@ -16488,14 +16464,6 @@
   "Web/API/XMLDocument": {
     "modified": "2020-10-15T21:15:38.976Z",
     "contributors": ["RainSlide", "mySoul", "teoli", "ziyunfei", "Xiaomin98"]
-  },
-  "Web/API/XMLDocument/async": {
-    "modified": "2019-04-24T21:14:27.334Z",
-    "contributors": ["ExE-Boss", "teoli", "ziyunfei"]
-  },
-  "Web/API/XMLDocument/load": {
-    "modified": "2019-03-24T00:15:45.480Z",
-    "contributors": ["teoli", "ziyunfei"]
   },
   "Web/API/XMLHttpRequest": {
     "modified": "2020-10-15T21:07:25.396Z",
@@ -23649,14 +23617,6 @@
       "charlie"
     ]
   },
-  "Web/HTTP/Feature_Policy": {
-    "modified": "2020-10-15T22:13:12.541Z",
-    "contributors": ["xiaomaokeke", "chenqingyue", "RainSlide", "joechan"]
-  },
-  "Web/HTTP/Feature_Policy/Using_Feature_Policy": {
-    "modified": "2019-05-06T05:13:36.251Z",
-    "contributors": ["roostinghawk"]
-  },
   "Web/HTTP/Headers": {
     "modified": "2020-05-20T02:33:50.716Z",
     "contributors": [
@@ -23993,18 +23953,6 @@
       "paranoidjk"
     ]
   },
-  "Web/HTTP/Headers/Feature-Policy": {
-    "modified": "2020-10-15T22:18:06.274Z",
-    "contributors": ["roostinghawk"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/autoplay": {
-    "modified": "2020-10-15T22:18:28.072Z",
-    "contributors": ["baijingfeng"]
-  },
-  "Web/HTTP/Headers/Feature-Policy/camera": {
-    "modified": "2020-10-15T22:26:24.357Z",
-    "contributors": ["K.Pen"]
-  },
   "Web/HTTP/Headers/Forwarded": {
     "modified": "2019-03-23T22:11:01.048Z",
     "contributors": ["ujsxn", "WayneCui"]
@@ -24060,6 +24008,18 @@
   "Web/HTTP/Headers/Origin": {
     "modified": "2020-10-15T21:53:11.797Z",
     "contributors": ["JasonJunJun", "yuankunzhang"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy": {
+    "modified": "2020-10-15T22:18:06.274Z",
+    "contributors": ["roostinghawk"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/autoplay": {
+    "modified": "2020-10-15T22:18:28.072Z",
+    "contributors": ["baijingfeng"]
+  },
+  "Web/HTTP/Headers/Permissions-Policy/camera": {
+    "modified": "2020-10-15T22:26:24.357Z",
+    "contributors": ["K.Pen"]
   },
   "Web/HTTP/Headers/Pragma": {
     "modified": "2020-10-15T21:54:59.607Z",
@@ -24346,6 +24306,10 @@
       "joezheng",
       "MagicLee"
     ]
+  },
+  "Web/HTTP/Permissions_Policy": {
+    "modified": "2020-10-15T22:13:12.541Z",
+    "contributors": ["xiaomaokeke", "chenqingyue", "RainSlide", "joechan"]
   },
   "Web/HTTP/Protocol_upgrade_mechanism": {
     "modified": "2020-11-12T12:36:28.458Z",

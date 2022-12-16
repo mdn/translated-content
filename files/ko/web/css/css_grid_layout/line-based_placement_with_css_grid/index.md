@@ -18,7 +18,7 @@ translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 
 그리드 컨테이너 안에는 네 개의 자식 요소가 있습니다. 이것들을 아무런 조건 없이 그대로 그리드 위에 위치시키면, 자동 배치 규칙에 따라 각 아이템은 처음에 있는 네 개의 셀 위에 놓이게 됩니다. 여기서 [Firefox의 Grid Highlighter](/ko/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts)를 사용하면 그리드의 열과 행이 어떻게 정의되어 있는지 확인하실 수 있습니다.
 
-![Our Grid highlighted in DevTools](https://mdn.mozillademos.org/files/14663/3_hilighted_grid.png)
+![Our Grid highlighted in DevTools](3_hilighted_grid.png)
 
 ```css hidden
 * {box-sizing: border-box;}

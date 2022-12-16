@@ -95,7 +95,7 @@ URL-адрес (Uniform Resource Locator, или единый указатель
 
 URL-адреса используют пути для поиска файлов. Пути указывают, где в файловой системе находится файл, который вас интересует. Давайте рассмотрим простой пример структуры каталогов (смотрите каталог [creating-hyperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks).)
 
-![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](https://mdn.mozillademos.org/files/12409/simple-directory.png)
+![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](simple-directory.png)
 
 **Корень** структуры — каталог `creating-hyperlinks`. При работе на локальном веб-сайте у вас будет один каталог, в который входит весь сайт. В корне у нас есть два файла — `index.html` и `contacts.html`. На настоящем веб-сайте `index.html` был бы нашей домашней, или лендинг-страницей (веб-страницей, которая служит точкой входа для веб-сайта или определённого раздела веб-сайта).
 
@@ -269,7 +269,7 @@ _**Плохой** текст ссылки:_ [Нажми сюда](https://firefo
 
 Когда закончите задание, посмотрите, как это должно выглядеть:
 
-![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](https://mdn.mozillademos.org/files/12411/navigation-example.png)
+![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
 
 > **Примечание:** Если не удаётся сделать, или вы не уверены, что сделали верно, посмотрите наш вариант [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up).
 

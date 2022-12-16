@@ -27,7 +27,7 @@ We've written a very simple example web site ([see our demo live](https://mdn.gi
 
 If you have Firefox for Android available, use it to navigate to our demo at `https://mdn.github.io/pwa-examples/a2hs/`. You'll see fox pictures, but more important, you'll see a "home" icon with a plus (+) icon inside it — this is the "Add to Home screen" icon displayed for any site that has the necessary features in place.
 
-![](https://mdn.mozillademos.org/files/15762/add-to-home-screen-icon.png)
+![](add-to-home-screen-icon.png)
 
 Tapping this will show a confirmation banner — pressing the big + _ADD TO HOME SCREEN_ button completes the action, adding the app to the Home screen. (Note: In Android 8 and higher, a system-level "Add to Home screen" permission dialog will be shown first.)
 
@@ -43,7 +43,7 @@ If you choose not to add it to your Home screen at this point, you can do so lat
 
 Regardless of which browser you are using, when you choose to add the app to your Home screen, you'll see it appear along with a short title, in the same way that native apps do.
 
-![](https://mdn.mozillademos.org/files/15770/a2hs-on-home-screen.png)
+![](a2hs-on-home-screen.png)
 
 Tapping this icon opens it up, but as a fullscreen app, you'll no longer see the browser UI around it.
 
@@ -197,7 +197,7 @@ So when the button is clicked, the install prompt appears.
 
 If the user selects _Install_, the app is installed (available as standalone desktop app), and the Install button no longer shows (the `onbeforeinstallprompt` event no longer fires if the app is already installed). When you open the app, it will appear in its own window:
 
-![](https://mdn.mozillademos.org/files/16280/a2hs-installed-desktop.png)
+![](a2hs-installed-desktop.png)
 
 If the user selects _Cancel_, the state of the app goes back to how it was before the button was clicked.
 

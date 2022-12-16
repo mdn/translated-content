@@ -155,7 +155,7 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 
 ### модули JavaScript-код
 
-- Асинхронные [интерфейсы AddonManager](../../../Add-ons/Add-on_Manager/AddonManager) теперь поддерживают {{jsxref ( "Promise", "Промис")}}, а также колбэки ({{bug (987512)}}.
+- Асинхронные [интерфейсы AddonManager](/ru/docs/Mozilla/Add-ons/Add-on_Manager/AddonManager) теперь поддерживают {{jsxref ( "Promise", "Промис")}}, а также колбэки ({{bug (987512)}}.
 
 ## Старые версии
 

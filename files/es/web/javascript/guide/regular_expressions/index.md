@@ -1,15 +1,6 @@
 ---
 title: Expresiones Regulares
 slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - Expresiones Regulares
-  - Guía
-  - Intermedio
-  - JavaScript
-  - Referencia
-  - RegExp
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
