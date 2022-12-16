@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 
 {{JSRef}}
 
-**`toLocaleString()`** 方法返回一个表示给定 BitInt 对象的字符串，该字符串格式因不同语言而不同。在支持 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 的实现中，该方法仅是调用了 `Intl.NumberFormat` 方法。
+**`toLocaleString()`** 方法返回一个表示给定 BigInt 对象的字符串，该字符串格式因不同语言而不同。在支持 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 的实现中，该方法仅是调用了 `Intl.NumberFormat` 方法。
 
 {{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
 
