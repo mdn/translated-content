@@ -219,7 +219,7 @@ Google 地图的另一个常见用例是在点击其名称或标记时显示有�
 
 下面是这个应用最终的样子，可以在搜索框里填写条目、起始日期和结束日期，作为参数向 Article Search API 接口发起查询，然后显示查询结果。
 
-![](https://mdn.mozillademos.org/files/14821/nytimes-search.png)
+![](nytimes-search.png)
 
 ### 将 API 连接到应用
 

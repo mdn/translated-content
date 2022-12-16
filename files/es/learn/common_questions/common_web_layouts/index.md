@@ -46,19 +46,19 @@ Estos elementos son bastante comunes en todos los factores de forma, pero pueden
 
 **Diseño de una columna.** Especialmente importante para navegadores de móviles de modo que no se llene la pequeña pantalla.
 
-![Example of a 1 column layout: Main on top and asides stacked beneath it.](https://mdn.mozillademos.org/files/9501/1-col-layout.png)
+![Example of a 1 column layout: Main on top and asides stacked beneath it.](1-col-layout.png)
 
 **Diseño de dos columnas.** A menudo utilizado para tabletas, ya que tienen pantallas de tamaño medio.
 
-![Example of a basic 2 column layout: One aside on the left column, and main on the right column.](https://mdn.mozillademos.org/files/9499/2-col-layout-right.png) ![Example of a basic 2 column layout: One aside on the right column, and main on the left column.](https://mdn.mozillademos.org/files/9497/2-col-layout-left.png)
+![Example of a basic 2 column layout: One aside on the left column, and main on the right column.](2-col-layout-right.png) ![Example of a basic 2 column layout: One aside on the right column, and main on the left column.](2-col-layout-left.png)
 
 **Diseños de tres columnas**. Solamene adecuado para escritorios con pantallas grandes. (Incluso muchos usuarios de escritorio prefieren ver cosas en pequeñas ventanas que en pantalla completa.)
 
-![Example of a basic 3 column layout: Aside on the left and right column, Main on the middle column.](https://mdn.mozillademos.org/files/9491/3-col-layout.png) ![Another example of a 3 column layout: Aside side by side on the left, Main on the right column.](https://mdn.mozillademos.org/files/9493/3-col-layout-alt.png) ![Another example of a 3 column layout: Aside side by side on the right, Main on the left column.](https://mdn.mozillademos.org/files/9495/3-col-layout-alt2.png)
+![Example of a basic 3 column layout: Aside on the left and right column, Main on the middle column.](3-col-layout.png) ![Another example of a 3 column layout: Aside side by side on the left, Main on the right column.](3-col-layout-alt.png) ![Another example of a 3 column layout: Aside side by side on the right, Main on the left column.](3-col-layout-alt2.png)
 
 La verdadera diversión comienza cuando empiezas a mezclarlos todos juntos.
 
-![Example of mixed layout: Main on top and asides beneath it side by side.](https://mdn.mozillademos.org/files/9503/1-col-layout-alt.png) ![Example of a mixed layout: Main on the left column and asides stack on top of each other on the right column](https://mdn.mozillademos.org/files/9505/2-col-layout-left-alt.png) ![Example of a mixed layout: one aside on the left column and main in the right column with a aside beneath main.](https://mdn.mozillademos.org/files/9507/2-col-layout-mix.png) ![Example of a mixed layout: Main on the left of the first row and one aside on the right of that same row, a second aside convering the whole second row.](https://mdn.mozillademos.org/files/9509/2-col-layout-mix-alt.png)…
+![Example of mixed layout: Main on top and asides beneath it side by side.](1-col-layout-alt.png) ![Example of a mixed layout: Main on the left column and asides stack on top of each other on the right column](2-col-layout-left-alt.png) ![Example of a mixed layout: one aside on the left column and main in the right column with a aside beneath main.](2-col-layout-mix.png) ![Example of a mixed layout: Main on the left of the first row and one aside on the right of that same row, a second aside convering the whole second row.](2-col-layout-mix-alt.png)…
 
 Estos son solo ejemplos y eres bastante libre de diseñar las cosas como quieras. Puedes notar que mientras el contenido se puede mover alrededor de la pantalla, siempre se mantiene el encabezado (1) en la parte superior y el pie de página (2) en la parte inferior. Además, el contenido principal (A) es lo más importante, así que dale la mayor parte del espacio.
 
@@ -76,7 +76,7 @@ Estudiemos algunos ejemplos más concretos tomados de sitios web bien conocidos.
 
 **[Aplicación de Invision](http://www.invisionapp.com/)**. Un diseño típico de una columna proporcionando toda la información linealmente en una sola página.
 
-![Example of a 1 column layout in the wild](https://mdn.mozillademos.org/files/9523/screenshot-product.jpg) ![1 column layout with header, main content, a stack of aside contents and a footer](https://mdn.mozillademos.org/files/9525/screenshot-product-overlay.jpg)
+![Example of a 1 column layout in the wild](screenshot-product.jpg) ![1 column layout with header, main content, a stack of aside contents and a footer](screenshot-product-overlay.jpg)
 
 Bastante sencillo. Sólo recuerda que muchas personas navegarán por tu sitio desde escritorios, así que haz tu contenido también utilizable allí.
 
@@ -84,7 +84,7 @@ Bastante sencillo. Sólo recuerda que muchas personas navegarán por tu sitio de
 
 **[Abduzeedo](http://abduzeedo.com/typography-mania-261)**, un simple diseño de blog. Los blogs usualmente tienen dos columnas, una para el contenido principal que es más ancha y otra más estrecha para el contenido secundario (como widgets, niveles de navegación secundarios y anuncios).
 
-![Example of a 2 column layout for a blog](https://mdn.mozillademos.org/files/9527/screenshot-blog.jpg) ![A 2 column layout with the main content on the left column](https://mdn.mozillademos.org/files/9529/screenshot-blog-overlay.jpg)
+![Example of a 2 column layout for a blog](screenshot-blog.jpg) ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
 
 En este ejemplo, mira la imagen (B1) justo debajo del encabezado. Está relacionada con el contenido principal, pero el contenido principal tiene sentido sin esta, de este modo pudieras pensar que la imagen forma parte del contenido principal o del lateral. En realidad no importa. Lo que importa es que si pones algo justo debajo del encabezado, debería ser parte del contenido principal o estar directamente relacionado con este.
 
@@ -92,7 +92,7 @@ En este ejemplo, mira la imagen (B1) justo debajo del encabezado. Está relacion
 
 **[MICA](http://www.mica.edu/About_MICA.html)**. Este es un poco más complicado. Parece un diseño de tres columnas...
 
-![Example of a false 3 columns layout](https://mdn.mozillademos.org/files/9531/screenshot-education.jpg) ![It looks like a 3 columns layout but actually, the aside content is floating around.](https://mdn.mozillademos.org/files/9533/screenshot-education-overlay.jpg)
+![Example of a false 3 columns layout](screenshot-education.jpg) ![It looks like a 3 columns layout but actually, the aside content is floating around.](screenshot-education-overlay.jpg)
 
 ...pero no lo es. B1 y B2 flotan alrededor del contenido principal. Recuerda esa palabra "float"--te acordarás cuando empieces a aprender sobre {{Glossary("CSS")}}.
 
@@ -104,7 +104,7 @@ Este es un buen ejemplo de diseño clásico que admite cierta creatividad. Los d
 
 **La [Opera de Paris](https://www.operadeparis.fr/en/saison-2014-2015/opera/la-boheme-puccini).**
 
-![An example of a tricky layout.](https://mdn.mozillademos.org/files/9535/screenshot-opera.jpg) ![This is a 2 column layout but the header is overlaping the main content.](https://mdn.mozillademos.org/files/9537/screenshot-opera-overlay.jpg)
+![An example of a tricky layout.](screenshot-opera.jpg) ![This is a 2 column layout but the header is overlaping the main content.](screenshot-opera-overlay.jpg)
 
 Básicamente un diseño de dos columnas, pero notarás muchos ajustes por aquí y por allá que rompen visualmente el diseño. Especialmente, el encabezado se superposiciona a la imagen del contenido principal. La manera en que la curva del menú del encabezado se une con la curva en el fondo de la imagen, hacen que el encabezado y el contenido principal parezcan un solo componente a pesar de que son técnicamente completamente distintos.
 

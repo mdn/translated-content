@@ -18,7 +18,7 @@ La API Web Speech tiene una interfaz principal de control para el - {{domxref ("
 
 Para mostrar un uso sencillo del reconocimiento de voz Web, hemos escrito una demo llamada [Speech color changer](https://github.com/mdn/web-speech-api/tree/master/speech-color-changer). Cuando se toca o hace click en la pantalla, se puede decir un color HTML, y el color de fondo de la aplicación cambiará a ese color.
 
-![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](https://mdn.mozillademos.org/files/11975/speech-color-changer.png)
+![The UI of an app titled Speech Color changer. It invites the user to tap the screen and say a color, and then it turns the background of the app that colour. In this case it has turned the background red.](speech-color-changer.png)
 
 Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/web-speech-api/archive/master.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
 
@@ -173,7 +173,7 @@ La Web Speech API tiene una interface principal controladora — {{domxref("Spee
 
 Para mostrar un uso sencillo de la síntesis de voz Web, tenemos la demo llamada [Speak easy synthesis](https://mdn.github.io/web-speech-api/speak-easy-synthesis/). Esta incluye un juego de controles de formulario para introducir texto a sintetizar, configurar el tono, velocidad de reproducción y la voz a usar cuando el texto sea pronunciado. Después de introducir el texto se puede presionar <kbd>Enter</kbd>/<kbd>Return</kbd> para escucharlo.
 
-![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](https://mdn.mozillademos.org/files/11977/speak-easy-synthesis.png)
+![UI of an app called speak easy synthesis. It has an input field in which to input text to be synthesised, slider controls to change the rate and pitch of the speech, and a drop down menu to choose between different voices.](speak-easy-synthesis.png)
 
 Para ejecutar la demo, se puede clonar (o [directamente descargar](https://github.com/mdn/web-speech-api/archive/master.zip)) el repositorio Github donde se encuentra, abrir el fichero index HTML en un navegador de escritorio compatible, o navegar a través del enlace [live demo URL](https://mdn.github.io/web-speech-api/speech-color-changer/) en un navegador de móvil compatible como Chrome.
 

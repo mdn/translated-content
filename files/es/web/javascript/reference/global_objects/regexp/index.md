@@ -1,13 +1,6 @@
 ---
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
-tags:
-  - Clase
-  - Expresiones Regulares
-  - JavaScript
-  - Referencia
-  - RegExp
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp
 original_slug: Web/JavaScript/Referencia/Objetos_globales/RegExp
 ---
 

@@ -49,8 +49,8 @@ Estos iconos son de [bitsies!](https://www.iconfinder.com/iconsets/bitsies) conj
 
 Despues, dentro del folder "botón" crea la carpeta "icons" y dentro de el guarda estos dos iconos:
 
-- "page-16.png" (![](https://mdn.mozillademos.org/files/13476/page-16.png))
-- "page-32.png" (![](https://mdn.mozillademos.org/files/13478/page-32.png)).
+- "page-16.png" (![](page-16.png))
+- "page-32.png" (![](page-32.png)).
 
 Tenemos dos iconos entonces podemos usar el mas grande para las pantallas de alta densidad. El navegador se va encargar de seleccionar el correcto para cada pantalla.
 

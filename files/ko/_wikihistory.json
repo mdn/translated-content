@@ -1697,17 +1697,6 @@
     "modified": "2019-01-16T19:13:18.509Z",
     "contributors": ["wbamberg", "zziuni", "hoony", "Junny", "Sheppy"]
   },
-  "MDN/Contribute/Howto": {
-    "modified": "2019-01-16T19:13:26.954Z",
-    "contributors": [
-      "wbamberg",
-      "zziuni",
-      "Netaras",
-      "Junbong",
-      "KwanHong_Lee66",
-      "Sheppy"
-    ]
-  },
   "MDN/Contribute/Processes": {
     "modified": "2019-01-17T02:54:48.050Z",
     "contributors": ["wbamberg", "zziuni"]
@@ -6141,20 +6130,6 @@
     "modified": "2020-02-15T07:39:57.101Z",
     "contributors": ["Netaras", "hyeonseok", "narae_lee"]
   },
-  "Web/Guide/HTML/Content_categories": {
-    "modified": "2020-07-29T11:16:44.120Z",
-    "contributors": [
-      "jojengman",
-      "alattalatta",
-      "chrisdavidmills",
-      "dooglegh",
-      "cs09g",
-      "KlausLee",
-      "lovefield",
-      "Kaben",
-      "azunyan3"
-    ]
-  },
   "Web/Guide/Mobile": {
     "modified": "2019-05-30T06:59:50.297Z",
     "contributors": ["SDSkyKlouD", "Seia-Soto", "xfq"]
@@ -6208,6 +6183,20 @@
   "Web/HTML/CORS_enabled_image": {
     "modified": "2020-01-17T14:43:53.038Z",
     "contributors": ["alattalatta", "proost"]
+  },
+  "Web/HTML/Content_categories": {
+    "modified": "2020-07-29T11:16:44.120Z",
+    "contributors": [
+      "jojengman",
+      "alattalatta",
+      "chrisdavidmills",
+      "dooglegh",
+      "cs09g",
+      "KlausLee",
+      "lovefield",
+      "Kaben",
+      "azunyan3"
+    ]
   },
   "Web/HTML/Element": {
     "modified": "2020-03-20T02:38:46.890Z",
@@ -7552,22 +7541,6 @@
       "JongChun"
     ]
   },
-  "Web/JavaScript/About_JavaScript": {
-    "modified": "2020-03-12T19:36:55.143Z",
-    "contributors": [
-      "JinKang",
-      "Parcovia",
-      "cs09g",
-      "imjang57",
-      "wayne-kim",
-      "desty",
-      "stephenjang",
-      "Luzi.kr",
-      "teoli",
-      "Zer0th",
-      "99corps"
-    ]
-  },
   "Web/JavaScript/Closures": {
     "modified": "2020-03-12T19:37:58.819Z",
     "contributors": [
@@ -7953,17 +7926,6 @@
       "Constantine Kim",
       "MoGi",
       "Dyhan81",
-      "Goldmund"
-    ]
-  },
-  "Web/JavaScript/Reference/About": {
-    "modified": "2020-03-12T19:37:02.761Z",
-    "contributors": [
-      "limkukhyun",
-      "teoli",
-      "Dyhan81",
-      "Netaras",
-      "taggon",
       "Goldmund"
     ]
   },
@@ -11061,6 +11023,17 @@
     "modified": "2020-07-16T22:32:06.697Z",
     "contributors": ["alattalatta", "beowolf9", "lunarlit", "dsma73"]
   },
+  "conflicting/MDN/Contribute": {
+    "modified": "2019-01-16T19:13:26.954Z",
+    "contributors": [
+      "wbamberg",
+      "zziuni",
+      "Netaras",
+      "Junbong",
+      "KwanHong_Lee66",
+      "Sheppy"
+    ]
+  },
   "conflicting/MDN/Tools": {
     "modified": "2019-01-16T20:50:22.654Z",
     "contributors": ["wbamberg", "andrewJYjang"]
@@ -11199,6 +11172,22 @@
     "modified": "2020-02-05T12:28:02.372Z",
     "contributors": ["alattalatta"]
   },
+  "conflicting/Web/JavaScript": {
+    "modified": "2020-03-12T19:36:55.143Z",
+    "contributors": [
+      "JinKang",
+      "Parcovia",
+      "cs09g",
+      "imjang57",
+      "wayne-kim",
+      "desty",
+      "stephenjang",
+      "Luzi.kr",
+      "teoli",
+      "Zer0th",
+      "99corps"
+    ]
+  },
   "conflicting/Web/JavaScript/Guide": {
     "modified": "2019-01-16T16:10:38.273Z",
     "contributors": ["teoli", "Wafe"]
@@ -11263,6 +11252,17 @@
   "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
     "modified": "2020-03-12T19:44:13.687Z",
     "contributors": ["limkukhyun", "hoony"]
+  },
+  "conflicting/Web/JavaScript/Reference": {
+    "modified": "2020-03-12T19:37:02.761Z",
+    "contributors": [
+      "limkukhyun",
+      "teoli",
+      "Dyhan81",
+      "Netaras",
+      "taggon",
+      "Goldmund"
+    ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects": {
     "modified": "2020-10-15T21:52:46.647Z",

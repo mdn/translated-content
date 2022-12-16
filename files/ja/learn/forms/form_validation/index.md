@@ -2,7 +2,7 @@
 title: クライアント側のフォーム検証
 slug: Learn/Forms/Form_validation
 l10n:
-  sourceCommit: edabd5d383369f30c31d0710145ebe29f8ad7978
+  sourceCommit: 8e16e19d3ee35157c81b299c0ccb9d5effd2ac22
 ---
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/UI_pseudo-classes", "Learn/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}
@@ -182,8 +182,8 @@ input:valid {
 
 - `a` — `a` の 1 文字に一致する (`b` や `aa` などではない)。
 - `abc` — `a` と、その次の `b` と、その次の `c` の並びに一致する。
-- `ab?c`— `a` と、その次にひとつだけ `b` があるかないかと、その次の `c` の並びに一致する ( `ac` または `abc`)
-- `ab*c`— `a` と、その次に任意の数の `b` が続き、その次に `c` のある並びに一致する。( `ac` , `abc`, `abbbbbc`, 等)
+- `ab?c` — `a` と、その次にひとつだけ `b` があるかないかと、その次の `c` の並びに一致する ( `ac` または `abc`)
+- `ab*c` — `a` と、その次に任意の数の `b` が続き、その次に `c` のある並びに一致する。( `ac`, `abc`, `abbbbbc`, 等)
 - `a|b` — 一文字の `a` または `b` に一致する
 - `abc|xyz` — `abc` の並びまたは `xyz` の並びに一致する。これは `abcxyz` や `a` や `y` などには一致しない。
 
@@ -392,7 +392,7 @@ input:focus:invalid {
 
 ### 制約検証 API
 
-多くのブラウザーが [制約検証 API](/ja/docs/Web/API/Constraint_validation) に対応しています。以下のフォーム要素 DOM インターフェイスで利用できるメソッドとプロパティのセットで構成されています。
+多くのブラウザーが制約検証 API に対応しています。以下のフォーム要素 DOM インターフェイスで利用できるメソッドとプロパティのセットで構成されています。
 
 - [`HTMLButtonElement`](/ja/docs/Web/API/HTMLButtonElement) ([`<button>`](/ja/docs/Web/HTML/Element/button) 要素を表現)
 - [`HTMLFieldSetElement`](/ja/docs/Web/API/HTMLFieldSetElement) ([`<fieldset>`](/ja/docs/Web/HTML/Element/fieldset) 要素を表現)
@@ -420,6 +420,7 @@ input:focus:invalid {
 また、制約検証 API では、上記の要素や [`form`](/ja/docs/Web/HTML/Element/form) 要素に対して、以下のメソッドを利用することが可能です。
 
 - `checkValidity()`: 要素の値で妥当性の問題がない場合に `true` を返します。そうでない場合は `false` を返します。要素が不正である場合、このメソッドは要素で [`invalid` イベント](/ja/docs/Web/API/HTMLInputElement/invalid_event)を発生させます。
+- `reportValidity()`: イベントを使用して、無効なフィールドを報告します。このメソッドは `onSubmit` イベントハンドラーでは `preventDefault()` と組み合わせて使用すると有益です。
 - `setCustomValidity(message)`: 要素に独自のエラーメッセージを追加します。独自のエラーメッセージを設定すると、要素が不正であるとみなされる場合に指定したエラーが表示されます。これにより JavaScript で、標準の HTML 制約検証 API で提供されるもの以外の検証不合格状態を作り出すことができます。ユーザーに問題を報告する際に、メッセージが表示されます。
 
 #### 独自のエラーメッセージを実装する
@@ -433,7 +434,7 @@ input:focus:invalid {
 
 ![Example of an error message with Firefox in French on an English page](error-firefox-win7.png)
 
-これらのメッセージの外見やテキストを変更するには、[制約検証 API](/ja/docs/Web/API/Constraint_validation) の最も一般的なユースケースです。この使用法を例で詳しく見てみましょう。
+これらのメッセージの外見やテキストを変更するには、制約検証 API の最も一般的なユースケースです。この使用法を例で詳しく見てみましょう。
 
 いくつかの簡単な HTML で開始します (空の HTML ファイルにこれを入力します; もしよければ、[fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) を基礎としてもいいでしょう):
 
@@ -491,7 +492,7 @@ email.addEventListener("input", (event) => {
 </form>
 ```
 
-この簡単なフォームでは、ブラウザーの自動検証を無効にするために [`novalidate`](/ja/docs/Web/HTML/Attributes/novalidate) 属性を使用しています。これで、検証を制御するためにスクリプトを使用できます。ただし、これは制約検証 API の対応や CSS の擬似クラス {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}}, {{cssxref(":out-of-range")}} の適用を無効にするわけではありません。つまり、データを送信する前にブラウザーが自動的なフォームの妥当性確認を行わないとしても、あなた自身で確認を行って、フォームの状態に応じたスタイル設定ができます。
+この簡単なフォームでは、ブラウザーの自動検証を無効にするために [`novalidate`](/ja/docs/Web/HTML/Element/form#attr-novalidate) 属性を使用しています。これで、検証を制御するためにスクリプトを使用できます。ただし、これは制約検証 API の対応や CSS の擬似クラス {{cssxref(":valid")}}, {{cssxref(":invalid")}}, {{cssxref(":in-range")}}, {{cssxref(":out-of-range")}} の適用を無効にするわけではありません。つまり、データを送信する前にブラウザーが自動的なフォームの妥当性確認を行わないとしても、あなた自身で確認を行って、フォームの状態に応じたスタイル設定ができます。
 
 検証する入力は [`<input type="email">`](/ja/docs/Web/HTML/Element/input/email)で、これは `required` (入力必須) で、8 文字の `minlength` があります。これをわれわれのコードで確認して、それぞれカスタムエラーメッセージを表示させてみましょう。
 
@@ -626,8 +627,6 @@ function showError() {
 
 制約検証 API はフォーム検証を制御するための強力なツールであり、HTML および CSS のみで検証を行うよりもはるかにユーザーインターフェイスをコントロールできます。
 
-> **メモ:** さらなる情報は、[制約検証ガイド](/ja/docs/Web/Guide/HTML/Constraint_validation)と[制約検証 API](/ja/docs/Web/API/Constraint_validation) リファレンスを見てください。
-
 ### 組み込み API を使用しないフォーム検証
 
 古いブラウザーや[カスタムコントロール](/ja/docs/Learn/Forms/How_to_build_custom_form_controls)において、制約検証 API を使用できない （または使用したくない）ことがあるでしょう。このような場合でも、フォームを検証するために JavaScript が使用できます。フォームを検証には、実際のデータの検証よりもユーザーインターフェイスの疑問が多くなります。
@@ -646,10 +645,9 @@ function showError() {
     明確なエラーメッセージはもちろん、ユーザーが何を求められているか理解できるように前向きの提案をするべきです。
     フォーム検証のユーザーインターフェイスの要件について深く知りたいのであれば、ぜひ読むべきである有用な記事があります（英語）。
 
-    - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](https://www.smashingmagazine.com/2012/06/form-field-validation-errors-only-approach/)
-    - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](https://www.smashingmagazine.com/2009/07/web-form-validation-best-practices-and-tutorials/)
-    - WebFX: [10 Tips for Optimizing Web Form Submission Usability](https://www.webfx.com/blog/web-design/10-tips-for-optimizing-web-form-submission-usability/)
-    - A List Apart: [Inline Validation in Web Forms](https://alistapart.com/article/inline-validation-in-web-forms/)
+    - [Help users enter the right data in forms](https://web.dev/learn/forms/validation/)
+    - [Validating input](https://www.w3.org/WAI/tutorials/forms/validation/)
+    - [How to Report Errors in Forms: 10 Design Guidelines](https://www.nngroup.com/articles/errors-forms-design-guidelines/)
 
 #### 制約検証 API を使用しない例
 
@@ -661,7 +659,7 @@ function showError() {
 <form>
   <p>
     <label for="mail">
-        <span>メールアドレスを入力してください。</span>
+      <span>メールアドレスを入力してください。</span>
       <input type="text" id="mail" name="mail" />
       <span class="error" aria-live="polite"></span>
     </label>
@@ -809,7 +807,7 @@ form.addEventListener("submit", (event) => {
 - [フォームへのスタイル設定](/ja/docs/Learn/Forms/Styling_web_forms)
 - [フォームへの高度なスタイル設定](/ja/docs/Learn/Forms/Advanced_form_styling)
 - [UI 擬似クラス](/ja/docs/Learn/Forms/UI_pseudo-classes)
-- [クライアント側のフォーム検証](/ja/docs/Learn/Forms/Form_validation)
+- **クライアント側のフォーム検証**
 - [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
 
 ### 上級トピック

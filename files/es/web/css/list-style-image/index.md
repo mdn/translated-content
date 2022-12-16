@@ -42,7 +42,7 @@ list-style-image: <uri> | none | inherit
 
 ```css
 ul {
-  list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif")
+  list-style-image: url("starsolid.gif")
 }
 ```
 

@@ -80,7 +80,7 @@ GitHub 是一个非常重要和有用的社区，值得参与其中，Git / GitH
     ```
 
 4. 现在你需要为你的仓库创建一个 gh-pages 分支;刷新当前页面，您将看到一个类似下面的存储库页面。您需要点击**Branch：master**按钮，在文本输入框中输入 gh-pages，然后按蓝色按钮，即创建分支**_Create branch: gh-pages_**。这将创建一个特殊的代码分支，称为 gh-pages，该分支会在特殊位置发布。它的 URL 采用 `https://username.github.io/my-repository-name` 的格式，所以在我的例子中，URL 是 `https://chrisdavidmills.github.io/my-repository`。显示的页面是 index.html 页面。
-    ![](https://mdn.mozillademos.org/files/12145/repo-site.png)
+    ![](repo-site.png)
 5. 在新的浏览器标签中浏览您的 GitHub Pages 的网址，您将能够在线访问您的网站！通过电子邮件把地址发送给你的朋友，炫耀你的掌握的成果吧。
 
 > **备注：** 如果卡住了，[GitHub Pages 主页](https://pages.github.com/)也是非常有帮助的。

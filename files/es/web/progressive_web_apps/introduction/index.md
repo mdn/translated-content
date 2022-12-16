@@ -71,7 +71,7 @@ Una aplicación web progresiva totalmente capaz debería proporcionar todas las 
 
 ### Reconocible
 
-![Detectabilidad](https://mdn.mozillademos.org/files/12654/discoverable.svg)El objetivo final es que las aplicaciones web tengan una mejor representación en los motores de búsqueda, sean más fáciles de exponer, catalogar y clasificar, y tener metadatos utilizables por los navegadores para brindarles capacidades especiales.
+El objetivo final es que las aplicaciones web tengan una mejor representación en los motores de búsqueda, sean más fáciles de exponer, catalogar y clasificar, y tener metadatos utilizables por los navegadores para brindarles capacidades especiales.
 
 Algunas de las capacidades ya se han habilitado en ciertas plataformas basadas en web mediante tecnologías patentadas como [Open Graph](http://ogp.me/), que proporciona un formato para especificar metadatos similares en el bloque {{HTMLElement("head")}} de {{Glossary("HTML")}} con etiquetas {{HTMLElement("meta")}}.
 
@@ -79,21 +79,15 @@ El estándar web relevante aquí es el [manifiesto de la aplicación web](/es/do
 
 ### Instalable
 
-![Instalabilidad](https://mdn.mozillademos.org/files/12656/installable.svg)
-
 Una parte fundamental de la experiencia de la aplicación web es que los usuarios tengan iconos de aplicaciones en su pantalla de inicio y los puedan tocar para abrir aplicaciones en su propio contenedor nativo que se sienta bien integrado con la plataforma subyacente.
 
 Las aplicaciones web modernas pueden hacer que esta aplicación nativa se sienta a través de las propiedades establecidas dentro del manifiesto de la aplicación web y mediante una función disponible en los navegadores de teléfonos inteligentes modernos llamada [instalación de la aplicación web](/es/docs/Web/Progressive_web_apps/Developer_guide/Installing).
 
 ### Enlazable
 
-![Enlazable](https://mdn.mozillademos.org/files/12658/linkable.svg)
-
 Una de las características más poderosas de la web es la capacidad de vincularse a una aplicación en una URL específica sin la necesidad de una tienda de aplicaciones o un proceso de instalación complejo. Así ha sido siempre.
 
 ### Independiente de la red
-
-![Independencia de la red](https://mdn.mozillademos.org/files/12660/network-independent.svg)
 
 Las aplicaciones web modernas pueden funcionar cuando hay mala (o incluso inexistente) conectividad con la red. Las ideas básicas detrás de la independencia de la red son poder:
 
@@ -105,29 +99,19 @@ Esto se consigue mediante una combinación de tecnologías: el [servicio Workers
 
 ### Compatibilidad de mejora progresiva
 
-![Mejora progresiva](https://mdn.mozillademos.org/files/12662/progressive.svg)
-
 Se pueden desarrollar aplicaciones web modernas para proporcionar una experiencia excelente a los navegadores totalmente compatibles y una experiencia aceptable (aunque no tan brillante) a los navegadores menos capaces. Hemos estado haciendo esto durante años con las mejores prácticas, como la mejora progresiva. Al utilizar {{Glossary("Progressive_Enhancement", "Mejora progresiva")}}, las PWAs se utilizan en varios navegadores. Esto significa que los desarrolladores deben tener en cuenta las diferencias en la implementación de algunas características y tecnologías PWA entre diferentes implementaciones de navegadores.
 
 ### Reconectable
-
-![Reconectable](https://mdn.mozillademos.org/files/12666/re-engageable.svg)
 
 Una de las principales ventajas de las plataformas nativas es la facilidad con la que los usuarios pueden volver a interactuar con las actualizaciones y el contenido nuevo, incluso cuando no están mirando la aplicación o usando sus dispositivos. Las aplicaciones web modernas ahora también pueden hacer esto, utilizando nuevas tecnologías como Servicio _Workers_ para controlar páginas, la [API Web Push](/es/docs/Web/API/Push_API) para enviar actualizaciones. directamente del servidor a la aplicación a través de un servicio _workers_ y la [API de notificaciones](/es/docs/Web/API/Notifications_API) para generar notificaciones del sistema para ayudar a involucrar a los usuarios cuando no están utilizando activamente su navegador web.
 
 ### Adaptable
 
-![Adaptable](https://mdn.mozillademos.org/files/12650/responsive.svg)
-
 Las aplicaciones web adaptables utilizan tecnologías como [consultas de medios](/es/docs/Web/CSS/Media_Queries) y [viewport](/es/docs/Glossary/Viewport) para asegurarte de que tu IU se ajuste a cualquier factor de forma: computadora de escritorio, dispositivo móvil, tableta o lo que venga a continuación.
 
 ### Segura
 
-![Segura](https://mdn.mozillademos.org/files/12664/safe.svg)
-
 La plataforma web proporciona un mecanismo de entrega seguro que evita espionaje y, al mismo tiempo, garantiza que el contenido no haya sido manipulado, siempre que aproveche {{Glossary("HTTPS")}} y desarrolles tus aplicaciones pensando en la seguridad.
-
-![Captura de pantalla que muestra una gran cantidad de resultados al buscar "Messenger" al intentar encontrar Facebook Messenger. ¿Cuál es el correcto?](https://mdn.mozillademos.org/files/17175/InstalingMessengerSoManyOptionsEek.jpeg)
 
 También es fácil para los usuarios asegurarse de que están instalando la aplicación correcta, porque su URL coincidirá con el dominio de tu sitio. Esto es muy diferente de las aplicaciones en las tiendas de aplicaciones, que pueden tener varias aplicaciones con nombres similares, algunas de las cuales incluso pueden estar basadas en su propio sitio, lo que aumenta la confusión. Las aplicaciones web eliminan esa confusión y garantizan que los usuarios obtengan la mejor experiencia posible.
 

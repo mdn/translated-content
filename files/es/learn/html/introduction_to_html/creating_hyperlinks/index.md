@@ -38,7 +38,7 @@ Los hipervínculos son una de las innovaciones más interesantes que ofrece la W
 
 El sitio web de la BBC, por ejemplo, contiene una gran cantidad de enlaces que apuntan a multitud de noticias en diferentes zonas de el sitio (funcionalidad de navegación), zonas de acceso/registro (herramientas de usuario) y otras.
 
-![Portada de bbc.co.uk, que muestra muchas noticias y la funcionalidad del menú de navegación](https://mdn.mozillademos.org/files/12405/bbc-homepage.png)
+![Portada de bbc.co.uk, que muestra muchas noticias y la funcionalidad del menú de navegación](updated-bbc-website.png)
 
 ## Anatomía de un enlace
 
@@ -108,7 +108,7 @@ Una localizadora uniforme de recursos (URL, de las iniciales en inglés de «_Un
 
 Las URLs utilizan rutas para encontrar los archivos. Las rutas especifican dónde se encuentra el archivo que buscas dentro del sistema de archivos. Veamos un ejemplo de una estructura de directorios (ve el directorio [creating-hyperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks)).
 
-![Una estructura de directorios simple. El directorio principal se llama creating-hyperlinks y contiene dos archivos llamados index.html y contacts.html, y dos directorios llamados projects y pdfs, que contiene un archivo index.html y un archivo project-brief.pdf, respectivamente](https://mdn.mozillademos.org/files/12409/simple-directory.png)
+![Una estructura de directorios simple. El directorio principal se llama creating-hyperlinks y contiene dos archivos llamados index.html y contacts.html, y dos directorios llamados projects y pdfs, que contiene un archivo index.html y un archivo project-brief.pdf, respectivamente](simple-directory.png)
 
 Al directorio **raíz** de esta estructura de directorios lo hemos llamado `creating-hyperlinks`. Al trabajar en modo local en una web, habrá un directorio que contendrá toda la información. En nuestro ejemplo, dentro de la raíz, encontramos el archivo `index.html` y el archivo `contacts.html`. En una web real, `index.html` es el punto de entrada a la web, lo que se conoce como _página de inicio_.
 
@@ -286,7 +286,7 @@ A continuación:
 
 El ejercicio terminado debería crear una página como la siguiente:
 
-![Un ejemplo de un menú de navegación HTML simple, con inicio, imágenes, proyectos y elementos del menú social](https://mdn.mozillademos.org/files/12411/navigation-example.png)
+![Un ejemplo de un menú de navegación HTML simple, con inicio, imágenes, proyectos y elementos del menú social](navigation-example.png)
 
 > **Nota:** Si ahora encallas, o no estás seguro de haberlo conseguido, revisa el directorio [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) para ver la respuesta correcta.
 

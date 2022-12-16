@@ -59,7 +59,7 @@ Para que los archivos se comuniquen entre sí, debes proporcionar una ruta de ar
 4. Inserta la ruta del archivo en tu código HTML entre las comillas dobles del código `src=""`.
 5. Guarda tu archivo HTML, luego cárgalo en tu navegador web (haz doble clic en el archivo). ¡Deberías ver tu nueva página web mostrando tu imagen!
 
-![Una captura de pantalla del sitio web básico que muestra solo el logotipo de Firefox: un zorro en llamas envolviendo el mundo](https://mdn.mozillademos.org/files/9229/website-screenshot.png)
+![Una captura de pantalla del sitio web básico que muestra solo el logotipo de Firefox: un zorro en llamas envolviendo el mundo](website-screenshot.png)
 
 Algunas reglas generales para las rutas de archivo:
 
@@ -76,7 +76,7 @@ Por ahora, esto es todo lo que necesitas saber.
 
 Eso es todo por ahora. La estructura de tu directorio debería verse así:
 
-![Una estructura de archivos en mac os x finder, que muestra un directorio de imágenes con una imagen, directorios de estilos y scripts vacíos, y un archivo index.html](https://mdn.mozillademos.org/files/9231/file-structure.png)
+![Una estructura de archivos en mac os x finder, que muestra un directorio de imágenes con una imagen, directorios de estilos y scripts vacíos, y un archivo index.html](file-structure.png)
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web")}}
 

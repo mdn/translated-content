@@ -14,7 +14,7 @@ Cada paso tiene ejemplos editables y listos para ejecutar, para que puedas ver q
 
 Para aprovechar al máximo esta serie de artículos necesitas tener ya un conocimiento básico o intermedio de [JavaScript](/es/Learn/Getting_started_with_the_web/JavaScript_basics). Cuando termines este tutorial serás capaz de construir tus propios juegos Web.
 
-![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](https://mdn.mozillademos.org/files/10383/mdn-breakout-gameplay.png)
+![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](mdn-breakout-gameplay.png)
 
 ## Detalle de las lecciones
 

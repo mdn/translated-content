@@ -4,7 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 original_slug: Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Advanced_animations", "Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility")}}
 
 Hasta ahora, no habíamos mirado los píxeles reales de nuestro _canvas_. Con el objeto `ImageData`, puedes leer y escribir directamente un _array_ de datos para manipular píxeles.
 
@@ -109,37 +109,40 @@ This method is also demonstrated in the article [Manipulating video using canvas
 
 ### A color picker
 
-In this example we are using the [getImageData()](/es/docs/Web/API/CanvasRenderingContext2D/getImageData)method to display the color under the mouse cursor. For this, we need the current position of the mouse with `layerX` and `layerY`, then we look up the pixel data on that position in the pixel array that [getImageData()](/es/docs/Web/API/CanvasRenderingContext2D/getImageData) provides us. Finally, we use the array data to set a background color and a text in the `<div>` to display the color.
-
-```html hidden
-<canvas id="canvas" width="300" height="227" style="float:left"></canvas>
-<div id="color" style="width:200px;height:50px;float:left"></div>
-```
+In this example we are using the [getImageData()](/es/docs/Web/API/CanvasRenderingContext2D/getImageData) method to display the color under the mouse cursor. For this, we need the current position of the mouse with `layerX` and `layerY`, then we look up the pixel data on that position in the pixel array that [getImageData()](/es/docs/Web/API/CanvasRenderingContext2D/getImageData) provides us. Finally, we use the array data to set a background color and a text in the `<div>` to display the color.
 
 ```js
-var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
-img.onload = function() {
+const img = new Image();
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+img.addEventListener("load", () => {
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
-};
-var color = document.getElementById('color');
-function pick(event) {
-  var x = event.layerX;
-  var y = event.layerY;
-  var pixel = ctx.getImageData(x, y, 1, 1);
-  var data = pixel.data;
-  var rgba = 'rgba(' + data[0] + ', ' + data[1] +
-             ', ' + data[2] + ', ' + (data[3] / 255) + ')';
-  color.style.background =  rgba;
-  color.textContent = rgba;
+  img.style.display = "none";
+});
+const hoveredColor = document.getElementById("hovered-color");
+const selectedColor = document.getElementById("selected-color");
+
+function pick(event, destination) {
+  const bounding = canvas.getBoundingClientRect();
+  const x = event.clientX - bounding.left;
+  const y = event.clientY - bounding.top;
+  const pixel = ctx.getImageData(x, y, 1, 1);
+  const data = pixel.data;
+
+  const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
+  destination.style.background = rgba;
+  destination.textContent = rgba;
+
+  return rgba;
 }
-canvas.addEventListener('mousemove', pick);
+
+canvas.addEventListener("mousemove", (event) => pick(event, hoveredColor));
+canvas.addEventListener("click", (event) => pick(event, selectedColor));
 ```
 
-{{ EmbedLiveSample('A_color_picker', 610, 240) }}
+{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-picker.html", '100%', 300)}}
 
 ## Painting pixel data into a context
 
@@ -161,56 +164,63 @@ ctx.putImageData(myImageData, 0, 0);
 
 In this example we iterate over all pixels to change their values, then we put the modified pixel array back to the canvas using [putImageData()](/es/docs/Web/API/CanvasRenderingContext2D/putImageData). The invert function simply subtracts each color from the max value 255. The grayscale function simply uses the average of red, green and blue. You can also use a weighted average, given by the formula `x = 0.299r + 0.587g + 0.114b`, for example. See [Grayscale](http://en.wikipedia.org/wiki/Grayscale) on Wikipedia for more information.
 
-```html hidden
-<canvas id="canvas" width="300" height="227"></canvas>
-<div>
-  <input id="grayscalebtn" value="Grayscale" type="button">
-  <input id="invertbtn" value="Invert" type="button">
-</div>
-```
-
 ```js
-var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
-img.onload = function() {
-  draw(this);
+const img = new Image();
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+img.onload = () => {
+  ctx.drawImage(img, 0, 0);
 };
 
-function draw(img) {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+const original = () => {
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
-  var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-  var data = imageData.data;
+};
 
-  var invert = function() {
-    for (var i = 0; i < data.length; i += 4) {
-      data[i]     = 255 - data[i];     // red
-      data[i + 1] = 255 - data[i + 1]; // green
-      data[i + 2] = 255 - data[i + 2]; // blue
+const invert = () => {
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (let i = 0; i < data.length; i += 4) {
+    data[i] = 255 - data[i]; // red
+    data[i + 1] = 255 - data[i + 1]; // green
+    data[i + 2] = 255 - data[i + 2]; // blue
+  }
+  ctx.putImageData(imageData, 0, 0);
+};
+
+const grayscale = () => {
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+  for (let i = 0; i < data.length; i += 4) {
+    const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+    data[i] = avg; // red
+    data[i + 1] = avg; // green
+    data[i + 2] = avg; // blue
+  }
+  ctx.putImageData(imageData, 0, 0);
+};
+
+const inputs = document.querySelectorAll("[name=color]");
+for (const input of inputs) {
+  input.addEventListener("change", (evt) => {
+    switch (evt.target.value) {
+      case "inverted":
+        return invert();
+      case "grayscale":
+        return grayscale();
+      default:
+        return original();
     }
-    ctx.putImageData(imageData, 0, 0);
-  };
-
-  var grayscale = function() {
-    for (var i = 0; i < data.length; i += 4) {
-      var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-      data[i]     = avg; // red
-      data[i + 1] = avg; // green
-      data[i + 2] = avg; // blue
-    }
-    ctx.putImageData(imageData, 0, 0);
-  };
-
-  var invertbtn = document.getElementById('invertbtn');
-  invertbtn.addEventListener('click', invert);
-  var grayscalebtn = document.getElementById('grayscalebtn');
-  grayscalebtn.addEventListener('click', grayscale);
+  });
 }
 ```
 
-{{ EmbedLiveSample('Grayscaling_and_inverting_colors', 330, 270) }}
+{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/color-manipulation.html", '100%', 300)}}
 
 ## Zooming and anti-aliasing
 
@@ -219,65 +229,76 @@ With the help of the {{domxref("CanvasRenderingContext2D.drawImage", "drawImage(
 We get the position of the mouse and crop an image of 5 pixels left and above to 5 pixels right and below. Then we copy that one over to another canvas and resize the image to the size we want it to. In the zoom canvas we resize a 10×10 pixel crop of the original canvas to 200×200.
 
 ```js
-zoomctx.drawImage(canvas,
-                  Math.abs(x - 5), Math.abs(y - 5),
-                  10, 10, 0, 0, 200, 200);
+zoomctx.drawImage(
+  canvas,
+  Math.min(Math.max(0, x - 5), img.width - 10),
+  Math.min(Math.max(0, y - 5), img.height - 10),
+  10,
+  10,
+  0,
+  0,
+  200,
+  200
+);
 ```
 
 Because anti-aliasing is enabled by default, we might want to disable the smoothing to see clear pixels. You can toggle the checkbox to see the effect of the `imageSmoothingEnabled` property (which needs prefixes for different browsers).
 
 ###### Zoom example
 
-```html hidden
-<canvas id="canvas" width="300" height="227"></canvas>
-<canvas id="zoom" width="300" height="227"></canvas>
-<div>
-<label for="smoothbtn">
-  <input type="checkbox" name="smoothbtn" checked="checked" id="smoothbtn">
-  Enable image smoothing
-</label>
-</div>
-```
-
 ```js
-var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
-img.onload = function() {
+const img = new Image();
+img.crossOrigin = "anonymous";
+img.src = "./assets/rhino.jpg";
+img.onload = () => {
   draw(this);
 };
 
 function draw(img) {
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
   ctx.drawImage(img, 0, 0);
-  img.style.display = 'none';
-  var zoomctx = document.getElementById('zoom').getContext('2d');
 
-  var smoothbtn = document.getElementById('smoothbtn');
-  var toggleSmoothing = function(event) {
-    zoomctx.imageSmoothingEnabled = this.checked;
-    zoomctx.mozImageSmoothingEnabled = this.checked;
-    zoomctx.webkitImageSmoothingEnabled = this.checked;
-    zoomctx.msImageSmoothingEnabled = this.checked;
+  const smoothedZoomCtx = document
+    .getElementById("smoothed-zoom")
+    .getContext("2d");
+  smoothedZoomCtx.imageSmoothingEnabled = true;
+  smoothedZoomCtx.mozImageSmoothingEnabled = true;
+  smoothedZoomCtx.webkitImageSmoothingEnabled = true;
+  smoothedZoomCtx.msImageSmoothingEnabled = true;
+
+  const pixelatedZoomCtx = document
+    .getElementById("pixelated-zoom")
+    .getContext("2d");
+  pixelatedZoomCtx.imageSmoothingEnabled = false;
+  pixelatedZoomCtx.mozImageSmoothingEnabled = false;
+  pixelatedZoomCtx.webkitImageSmoothingEnabled = false;
+  pixelatedZoomCtx.msImageSmoothingEnabled = false;
+
+  const zoom = (ctx, x, y) => {
+    ctx.drawImage(
+      canvas,
+      Math.min(Math.max(0, x - 5), img.width - 10),
+      Math.min(Math.max(0, y - 5), img.height - 10),
+      10,
+      10,
+      0,
+      0,
+      200,
+      200
+    );
   };
-  smoothbtn.addEventListener('change', toggleSmoothing);
 
-  var zoom = function(event) {
-    var x = event.layerX;
-    var y = event.layerY;
-    zoomctx.drawImage(canvas,
-                      Math.abs(x - 5),
-                      Math.abs(y - 5),
-                      10, 10,
-                      0, 0,
-                      200, 200);
-  };
-
-  canvas.addEventListener('mousemove', zoom);
+  canvas.addEventListener("mousemove", (event) => {
+    const x = event.layerX;
+    const y = event.layerY;
+    zoom(smoothedZoomCtx, x, y);
+    zoom(pixelatedZoomCtx, x, y);
+  });
 }
 ```
 
-{{ EmbedLiveSample('Zoom_example', 620, 490) }}
+{{EmbedGHLiveSample("dom-examples/canvas/pixel-manipulation/image-smoothing.html", '100%', 300)}}
 
 ## Guardando las imágenes
 

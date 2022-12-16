@@ -1,14 +1,6 @@
 ---
 title: Bucles e iteración
 slug: Web/JavaScript/Guide/Loops_and_iteration
-tags:
-  - Bucle
-  - Guia(2)
-  - Guía
-  - Iteración
-  - JavaScript
-  - Sintaxis
-translation_of: Web/JavaScript/Guide/Loops_and_iteration
 original_slug: Web/JavaScript/Guide/Bucles_e_iteración
 ---
 

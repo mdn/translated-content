@@ -113,7 +113,7 @@ slug: Web/SVG/Tutorial/Paths
 
 마지막으로 지정된 좌표 (x, y)는 곡선의 끝점이다. 나머지 두 개는 제어점이며, 첫 번째 제어점은 (x1, y1), 두 번째 제어점은 (x2, y2)이다. 제어점은 기본적으로 시작점과 끝점에서 곡선의 방향을 기술한다. 베지어 함수는 각 제어점의 방향을 이용해 부드러운 곡선을 만드는 기능을 한다.
 
-![격자에 그려진 베지어 곡선](cubic_bézier_curves_with_grid.png)
+![Cubic Bézier Curves with grid](cubic_bezier_curves_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
@@ -141,7 +141,7 @@ slug: Web/SVG/Tutorial/Paths
 
 `S`는 위와 같은 형태의 곡선을 그리지만, 다른 `S`나 `C` 명령어 다음에 올 경우 첫 번째 제어점은 이전에 사용했던 제어점을 뒤집은 것으로 간주된다. `S` 명령어가 다른 `S`나 `C` 명령어 다음에 오지 않을 경우에는 현재 커서 위치가 첫 번째 제어점으로 사용되며, 이 경우에 그려지는 결과는 Q 명령어로 같은 파라미터를 사용해서 그린 결과와 같게 된다. 아래에 이 명령어의 예제가 있으며, 왼쪽의 미리보기에서 패스에 명시적으로 표시된 제어점은 빨간색, 생략된 제어점은 파란색으로 표시한다.
 
-![베지어 곡선으로 그린 두개의 매끄러운 S자형 곡선. 두 번째 곡선은 첫 번째 곡선과 동일한 제어점의 기울기를 유지하며, 이 기울기는 다른 쪽에 반영됩니다.](shortcut_cubic_bézier_with_grid.png)
+![ShortCut_Cubic_Bezier_with_grid.png](shortcut_cubic_bezier_with_grid.png)
 
 ```xml
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">

@@ -5,7 +5,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Drawing_text
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Dessin_de_texte_avec_canvas
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Ajout_de_styles_et_de_couleurs", "Tutoriel_canvas/Utilisation_d'images")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Tutoriel_canvas/Ajout_de_styles_et_de_couleurs", "Tutoriel_canvas/Utilisation_d'images")}}
 
 Après avoir vu comment [appliquer les styles et les couleurs](/fr/docs/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs) dans le chapitre précédent, nous allons maintenant voir comment dessiner du texte sur canvas.
 

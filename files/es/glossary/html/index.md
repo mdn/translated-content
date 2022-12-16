@@ -17,7 +17,7 @@ Un documento HTML es un documento de texto plano estructurado con {{glossary("el
 
 Usted puede extender las etiquetas (tags) de HTML con {{Glossary("attribute","attributes")}}(atributos en español) (art. en inglés), las cuales proporcionan información adicional que afecta el modo como el navegador interpreta los elementos:
 
-![](https://mdn.mozillademos.org/files/14550/Anatomia-de-un-elemento-HTML.png)
+![](anatomia-de-un-elemento-html.png)
 
 Un archivo HTML es normalmente guardado con una extensión `.htm` o `.html`, es entregado por un {{Glossary("Server","web server")}} (servidor de internet) (art. en inglés), y puede ser interpretado por cualquier {{Glossary("browser","web browser")}} (navegador de internet) (art. en inglés).
 

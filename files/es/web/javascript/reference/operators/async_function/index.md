@@ -1,12 +1,6 @@
 ---
 title: Expresión de función asíncrona
 slug: Web/JavaScript/Reference/Operators/async_function
-tags:
-  - Expresión Primaria
-  - JavaScript
-  - Operador
-  - función
-translation_of: Web/JavaScript/Reference/Operators/async_function
 original_slug: Web/JavaScript/Referencia/Operadores/async_function
 ---
 

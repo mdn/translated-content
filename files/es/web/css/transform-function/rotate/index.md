@@ -12,8 +12,6 @@ El punto fijo alrededor del cual gira el elemento, mencionado anteriormente, tam
 
 La cantidad de rotación generada por la propiedad `rotate()` se define mediante un {{cssxref("&lt;angle&gt;")}}. Si es positivo, el movimiento serán en el sentido de las agujas del reloj; si es negativo, en sentido contrario a las agujas. Una rotación de 180° se llama centro de simetría.
 
-![](https://mdn.mozillademos.org/files/12113/rotate.png)
-
 ## Síntaxis
 
 ```

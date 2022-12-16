@@ -3,7 +3,7 @@ title: <image>
 slug: Web/HTML/Element/image
 ---
 
-{{non-standard_header}}
+{{HTMLSidebar}}{{deprecated_header}}{{non-standard_header}}
 
 ## 概要
 

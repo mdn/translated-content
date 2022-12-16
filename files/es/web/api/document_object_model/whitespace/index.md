@@ -58,7 +58,7 @@ Tomemos el siguiente documento, por ejemplo:
 
 El árbol del DOM para esto se ve así:
 
-![árbol de dom equivalente al ejemplo de HTML anterior](https://mdn.mozillademos.org/files/17084/dom-string.png)
+![árbol de dom equivalente al ejemplo de HTML anterior](dom-string.png)
 
 Conservar caracteres de espacio en blanco en el DOM es útil de muchas maneras, pero hay ciertos lugares donde esto hace que ciertos diseños sean más difíciles de implementar y causa problemas a los desarrolladores que quieren iterar a través de los nodos del DOM. Veremos estas y algunas soluciones más adelante.
 
@@ -265,7 +265,7 @@ Probablemente no desees los espacios entre los bloques — dependiendo del caso 
 
 El _Inspector HTML de Firefox DevTools_ resaltará los nodos de texto y también te mostrará exactamente qué áreas están ocupando los elementos, lo que es útil si te preguntas qué está causando el problema y tal vez estés pensando que tienes un margen adicional allí o algo así.
 
-![Espacio en blanco en Devtools](https://mdn.mozillademos.org/files/17085/whitespace-devtools.png)
+![Espacio en blanco en Devtools](whitespace-devtools.png)
 
 Hay algunas formas de solucionar este problema:
 

@@ -52,7 +52,7 @@ translation_of: Web/HTML/Element/input/image
 ### Поле в виде логотипа Firefox
 
 ```html
-<input type="image" name="image" src="https://mdn.mozillademos.org/files/2917/fxlogo.png" width="50">
+<input type="image" name="image" src="fxlogo.png" width="50">
 ```
 
 #### Результат

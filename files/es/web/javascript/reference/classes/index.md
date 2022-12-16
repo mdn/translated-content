@@ -1,17 +1,6 @@
 ---
 title: Clases
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - Classes
-  - ECMAScript 2015
-  - Herencia
-  - Intermedio
-  - JavaScript
-  - NeedsContent
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Classes
 original_slug: Web/JavaScript/Referencia/Classes
 ---
 

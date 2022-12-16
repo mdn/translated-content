@@ -1,12 +1,6 @@
 ---
 title: Función async
 slug: Web/JavaScript/Reference/Statements/async_function
-tags:
-  - Declaración
-  - Ejemplo
-  - JavaScript
-  - función
-translation_of: Web/JavaScript/Reference/Statements/async_function
 original_slug: Web/JavaScript/Referencia/Sentencias/funcion_asincrona
 ---
 

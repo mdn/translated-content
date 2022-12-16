@@ -22,7 +22,7 @@ last()
 
 ### 주의
 
-- 이 함수는 특정 노드가 노드 집합의 마지막 노드인지를 결정하기 위해 [position()](ko/XPath/Functions/position) 함수와 함께 자주 씁니다.
+- 이 함수는 특정 노드가 노드 집합의 마지막 노드인지를 결정하기 위해 [position()](/ko/XPath/Functions/position) 함수와 함께 자주 씁니다.
 
 ### 정의
 

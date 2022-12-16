@@ -79,13 +79,13 @@ colorWell.select();
 
 ### Вариации внешнего вида
 
-Как уже упоминалось ранее, когда браузер не поддерживает интерфейс выбора цвета, его реализация цветовых входов будет представлять собой текстовое поле, которое автоматически проверяет содержимое, чтобы убедиться, что значение находится в правильном формате. Например, в Safari 10.1 вы увидите что-то похожее на это:![Screenshot of the example taken in Safari.](https://mdn.mozillademos.org/files/14899/input-color-safari.png)
+Как уже упоминалось ранее, когда браузер не поддерживает интерфейс выбора цвета, его реализация цветовых входов будет представлять собой текстовое поле, которое автоматически проверяет содержимое, чтобы убедиться, что значение находится в правильном формате. Например, в Safari 10.1 вы увидите что-то похожее на это:![Screenshot of the example taken in Safari.](input-color-safari.png)
 
-То же самое можно увидеть и в Firefox 55:![Screenshot of the example taken in Firefox 55 for macOS](https://mdn.mozillademos.org/files/14901/input-color-firefox.png)
+То же самое можно увидеть и в Firefox 55:![Screenshot of the example taken in Firefox 55 for macOS](input-color-firefox.png)
 
 В этом случае при нажатии на цветовой колодец отображается палитра цветов платформы, из которой вы можете выбрать нужный цвет (в данном случае это палитра macOS):
 
-![Screenshot of the element with the color picker open in Firefox Mac.](https://mdn.mozillademos.org/files/14903/input-with-picker-firefox-mac.png)
+![Screenshot of the element with the color picker open in Firefox Mac.](input-with-picker-firefox-mac.png)
 
 ## Validation
 

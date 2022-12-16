@@ -172,21 +172,17 @@ When, for example, you have a long list of elements (let’s say tweets), don’
 
 Firefox, Chrome, and other browsers include built-in tools that can help you diagnose slow page rendering. In particular, [Firefox's Network Monitor](/es/docs/Tools/Network_Monitor) will display a precise timeline of when each network request on your page happens, how large it is, and how long it takes.
 
-![The Firefox network monitor showing get requests, multiple files, and different times taken to load each resource on a graph.](https://mdn.mozillademos.org/files/6845/network-monitor.jpg)
+![The Firefox network monitor showing get requests, multiple files, and different times taken to load each resource on a graph.](network-monitor.jpg)
 
 If your page contains JavaScript code that is taking a long time to run, the [JavaScript profiler](/es/docs/Tools/Profiler) will pinpoint the slowest lines of code:
 
-![The Firefox JavaScript profiler showing a completed profile 1.](https://mdn.mozillademos.org/files/6839/javascript-profiler.png)
+![The Firefox JavaScript profiler showing a completed profile 1.](javascript-profiler.png)
 
 The [Built-in Gecko Profiler](/es/docs/Performance/Profiling_with_the_Built-in_Profiler) is a very useful tool that provides even more detailed information about which parts of the browser code are running slowly while the profiler runs. This is a bit more complex to use, but provides a lot of useful details.
 
-![A built-in Gecko profiler windows showing a lot of network information.](https://mdn.mozillademos.org/files/6837/gecko-profiler.png)
+![A built-in Gecko profiler windows showing a lot of network information.](gecko-profiler.png)
 
 > **Nota:** You can use these tools with the Android browser by running Firefox and enabling [remote debugging](/es/docs/Tools/Remote_Debugging).
-
-Using [YSlow](https://addons.mozilla.org/en-US/firefox/addon/yslow/) (which requires [Firebug](https://getfirebug.com/)) provides extremely helpful recommendations for improving performance. Many of the identified problems and suggested solutions are especially useful for mobile browsers. You should definitely run YSlow and follow its recommendations.
-
-![A YSlow window showing a set of tips for improving performance, the top one being make fewer http requests.](https://mdn.mozillademos.org/files/6843/yslow.png)
 
 In particular, making dozens or hundreds of network requests takes longer in mobile browsers. Rendering large images and CSS gradients can also take longer. Simply downloading large files can take longer, even over a fast network, because mobile hardware is sometimes too slow to take advantage of all the available bandwidth. For useful general tips on mobile Web performance, have a look at Maximiliano Firtman's [Mobile Web High Performance](http://www.slideshare.net/firt/mobile-web-high-performance) talk.
 
