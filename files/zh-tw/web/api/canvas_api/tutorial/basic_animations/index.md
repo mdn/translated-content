@@ -310,7 +310,7 @@ function draw() {
 
 **Live sample**
 
-{{EmbedLiveSample("A_looping_panorama", "830", "230")}}
+{{EmbedLiveSample("循環景色", "830", "230")}}
 
 ## 其他範例
 

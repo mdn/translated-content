@@ -70,7 +70,7 @@ textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 ```
 
-{{ EmbedLiveSample('Playable_code', 700, 360) }}
+{{ EmbedLiveSample('範例', 700, 360) }}
 
 ## 參考
 
