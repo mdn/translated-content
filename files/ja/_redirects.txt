@@ -3425,7 +3425,7 @@
 /ja/docs/Web/API/LocalFileSystemSync	/ja/docs/Web/API/File_and_Directory_Entries_API
 /ja/docs/Web/API/Location/password	/ja/docs/Web/API/Location
 /ja/docs/Web/API/Location/username	/ja/docs/Web/API/Location
-/ja/docs/Web/API/Long_Tasks_API	/ja/docs/conflicting/Web/API/PerformanceLongTaskTiming
+/ja/docs/Web/API/Long_Tasks_API	/ja/docs/Web/API/PerformanceLongTaskTiming
 /ja/docs/Web/API/MediaCapabilitiesInfo	/ja/docs/Web/API/MediaCapabilities/encodingInfo
 /ja/docs/Web/API/MediaDevices/ondevicechange	/ja/docs/Web/API/MediaDevices/devicechange_event
 /ja/docs/Web/API/MediaQueryList/onchange	/ja/docs/Web/API/MediaQueryList/change_event

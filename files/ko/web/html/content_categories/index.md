@@ -1,14 +1,6 @@
 ---
 title: 콘텐츠 카테고리
 slug: Web/HTML/Content_categories
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - HTML5
-  - Web
-translation_of: Web/Guide/HTML/Content_categories
-original_slug: Web/Guide/HTML/Content_categories
 ---
 
 {{HTMLSidebar}}
@@ -23,7 +15,7 @@ original_slug: Web/Guide/HTML/Content_categories
 
 > **참고:** 콘텐츠 카테고리의 상세 내용과 서로간의 비교는 이 글의 범위를 벗어납니다. 궁금하시다면 [HTML 명세의 관련 항목](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)을 읽어보세요.
 
-[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](/@api/deki/files/6244/=Content_categories_venn.png?size=webview)](/@api/deki/files/6244/=Content_categories_venn.png)
+[![다양한 내용 범주가 상호 작용하는 방식을 보여주는 벤다이어그램입니다. 다음 절에서는 이러한 관계를 텍스트로 설명합니다.](content_categories_venn.png)](/ko/docs/Web/Guide/HTML/Content_categories/content_categories_venn.png)
 
 ## 메인 콘텐츠 카테고리
 
