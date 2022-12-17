@@ -4,7 +4,7 @@ slug: Web/Guide
 ---
 
 <section id="Quick_links">
-  {{ListSubpagesForSidebar("/en-US/docs/Web/Guide")}}
+  {{ListSubpagesForSidebar("/zh-CN/docs/Web/Guide")}}
 </section>
 
 MDN 文档中有大量的指南，这些文章意在增加用例，或教你如何使用 API 接口或特性。此页面将提供到一些最流行的阅读材料的链接。
