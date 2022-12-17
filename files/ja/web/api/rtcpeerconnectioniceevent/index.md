@@ -11,7 +11,6 @@ l10n:
 
 この型のイベントは、 {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} の 1 つだけです。
 
-
 {{InheritanceDiagram}}
 
 ## インスタンスプロパティ
