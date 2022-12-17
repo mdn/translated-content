@@ -199,7 +199,7 @@ TN99 8ZZ
 
 {{Compat}}
 
-## 另请详见
+## 参见
 
 - {{htmlelement("input")}} 元素。
 - {{htmlelement("select")}} 元素。
