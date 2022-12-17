@@ -80,7 +80,7 @@ l10n:
 
 ## アドオン開発者向けの変更点一覧
 
--  [バージョン番号](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) が推奨するフォーマットに従っていない拡張機能がインストールされているときに、Firefox が警告を表示するようになりました ({{bug(1793925)}})。
+- [バージョン番号](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) が推奨するフォーマットに従っていない拡張機能がインストールされているときに、Firefox が警告を表示するようになりました ({{bug(1793925)}})。
 
 ### 廃止
 
