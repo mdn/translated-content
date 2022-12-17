@@ -14,12 +14,12 @@ Chrome 浏览器是 Google 开发的一个免费网络{{glossary("browser","浏�
 如果你只想使用 Chrome，请点击下面的链接。
 
 - [安卓版](https://play.google.com/store/apps/details?id=com.android.chrome)
-- [IOS 版](https://itunes.apple.com/us/app/chrome-web-browser-by-google/id535886823?mt=8)
-- [桌面版](https://www.google.com/chrome/)
+- [IOS 版](https://apps.apple.com/cn/app/chrome-web-browser-by-google/id535886823)
+- [桌面版](https://www.google.cn/chrome/)
 
 ### 对于开发者
 
 如果你想尝试 Chrome 的最新功能，可以尝试使用预发布版本。Google 经常推送更新，并使得这些版本可以与稳定版并行运行。你可以在 [Chrome Release Blog](https://chromereleases.googleblog.com) 了解更多相关内容。
 
 - [安卓上的 Chrome 开发者版本](https://play.google.com/store/apps/details?id=com.chrome.dev)
-- [电脑上的 Chrome 金丝雀版本](https://www.google.com/chrome/canary/)
+- [电脑上的 Chrome 金丝雀版本](https://www.google.cn/chrome/canary/)
