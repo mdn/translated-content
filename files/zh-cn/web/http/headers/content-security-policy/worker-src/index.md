@@ -47,7 +47,7 @@ Content-Security-Policy: worker-src <source> <source>;
 
 ### 违规的案例
 
-给定此 CSP 以下的 header：
+给定此 CSP header：
 
 ```http
 Content-Security-Policy: worker-src https://example.com/
