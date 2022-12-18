@@ -18,16 +18,16 @@ p:lang(en) {
 
 ## 語法 Syntax
 
-### 語法格式 Formal syntax
+### 語法格式
 
 {{csssyntax}}
 
-### 參數 Parameter
+### 參數
 
 - `<language-code>`
   - : {{cssxref("&lt;string&gt;")}} 代表你要指定的語言。可接受的值為 [HTML](/zh-TW/docs/Web/HTML) 規範中指定的值。
 
-## 範例 Example
+## 範例
 
 在此例中，`:lang()` 偽類 會依據 “引用元素 quote” ({{htmlElement("q")}}) 的父層來選擇 [子組合子 ( child combinators )](/zh-TW/docs/Web/CSS/Child_selectors)。 請注意，此處演示的方法並不是唯一的，並且最好的方式，是依據文檔類型來確定。還要注意的是， {{glossary("Unicode")}} 的值，有明確指定到那些你要使用的字符。
 
@@ -47,19 +47,19 @@ p:lang(en) {
 :lang(de) > q { quotes: '»' '«' '\2039' '\203A'; }
 ```
 
-### 結果 Result
+### 結果
 
-{{EmbedLiveSample('Example', 350)}}
+{{EmbedLiveSample('範例', 350)}}
 
-## 技術規格 Specifications
+## 技術規格
 
 {{Specifications}}
 
-## 瀏覽器兼容性 Browser compatibility
+## 瀏覽器兼容性
 
 {{Compat}}
 
-## 其他參考 See also
+## 其他參考
 
 - 語言相關偽類： {{cssxref(":lang")}}, {{cssxref(":dir")}}
 - HTML {{htmlattrxref("lang")}} 屬性

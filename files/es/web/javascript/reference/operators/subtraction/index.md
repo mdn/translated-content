@@ -1,9 +1,6 @@
 ---
 title: Sustracción (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Operators/Subtraction
 original_slug: Web/JavaScript/Referencia/Operadores/Sustracción
 ---
 

@@ -132,7 +132,7 @@ window.addEventListener('load', function () {
 
 若無法顯示，可至本文右上角「Language」切換回英文原文觀看。
 
-{{ EmbedLiveSample('Simple_example', '100%', 30) }}
+{{ EmbedLiveSample('簡易範例', '100%', 30) }}
 
 ## 處理多筆通知
 
@@ -201,11 +201,11 @@ window.addEventListener('load', function () {
 });
 ```
 
-### 現場測試結果
+#### 現場測試結果
 
 若無法顯示，可至本文右上角「Language」切換回英文原文觀看。
 
-{{ EmbedLiveSample('Tag_example', '100%', 30) }}
+{{ EmbedLiveSample('標籤範例', '100%', 30) }}
 
 ## 規格
 

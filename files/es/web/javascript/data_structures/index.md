@@ -1,12 +1,6 @@
 ---
 title: Tipos de datos y estructuras en JavaScript
 slug: Web/JavaScript/Data_structures
-tags:
-  - JavaScript
-  - Novato
-  - Principiante
-  - Tipado
-translation_of: Web/JavaScript/Data_structures
 ---
 
 {{jsSidebar("More", "Más")}}

@@ -22,7 +22,7 @@ original_slug: >-
 
 Внутри нашего грид-контейнера у нас есть четыре дочерних элемента. Если мы не размещаем их явным образом, эти элементы будут расположены в гриде в соответствии с правилами авторазмещения, то есть, по одному элементу - в каждой из четырёх первых ячеек. Если вы воспользуетесь [Firefox Grid Highlighter](/ru/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts) , то увидите, как грид инициирует колонки и строки.
 
-![Our Grid highlighted in DevTools](https://mdn.mozillademos.org/files/14663/3_hilighted_grid.png)
+![Подсветка нашей грид разметки в инструментах разработчка.](3_hilighted_grid.png)
 
 ```css hidden
 * {box-sizing: border-box;}

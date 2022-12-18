@@ -10,7 +10,7 @@ l10n:
 
 ## 履歴項目の追加と修正
 
-{{DOMxRef("History.pushState","pushState()")}} を使うことで、履歴の状態を変更した後に生成される {{domxref("XMLHttpRequest")}} オブジェクトの HTTP ヘッダー中のリファラも変更されます。リファラーは {{domxref("XMLHttpRequest")}} オブジェクトが生成された時点での `this` となるウィンドウの持つ文書の URL となります。
+{{DOMxRef("History.pushState","pushState()")}} を使うことで、履歴の状態を変更した後に生成される {{domxref("XMLHttpRequest")}} オブジェクトの HTTP ヘッダー中のリファラも変更されます。リファラーは {{domxref("XMLHttpRequest")}} オブジェクトが生成された時点での `this` となるウィンドウの持つ文書の URL となります。
 
 ### pushState() の例
 

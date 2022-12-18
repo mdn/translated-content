@@ -13,9 +13,7 @@ original_slug: >-
   Games/Tutorials/2D_Breakout_game_pure_JavaScript/Создание_Canvas_и_рисование_на_нём
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/ru/docs/Games")}}
-
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч")}}
+{{GamesSidebar}}{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч")}}
 
 Это **1й шаг** из 10 [Gamedev Canvas tutorial](/ru/docs/Games/Workflows/Breakout_game_from_scratch). Вы можете найти исходный код для этого урока по ссылке [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
 

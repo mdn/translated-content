@@ -22,7 +22,7 @@ Employee.prototype.specialty = "none";
 
 JavaScript がこの文を実行するとすぐに `mark` オブジェクトも "`none`" という値を持つ specialty プロパティを持つようになります。次の図ではこのプロパティを Employee プロトタイプに追加し、さらに `Engineer` プロトタイプに対するそれを上書きしたときの効果を示します。
 
-![Image:hier04.gif](/@api/deki/files/1907/=Hier04.gif)
+![Image:hier04.gif](hier04.gif)
 **図 8.4：プロパティの追加**
 
 {{ PreviousNext("Core_JavaScript_1.5_Guide:The_Employee_Example:Object_Properties:Inheriting_Properties", "Core_JavaScript_1.5_Guide:The_Employee_Example:More_Flexible_Constructors") }}

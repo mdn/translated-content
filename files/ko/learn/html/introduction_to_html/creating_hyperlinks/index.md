@@ -106,7 +106,7 @@ URL, 혹은 Uniform Resource Locator 은 단순히 무언가가 웹상의 어디
 
 URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관심있어 하는 파일이 파일 시스템 어디에 있는지 구체적으로 명시하구요. 디렉토리 구조에 대한 예제를 보시죠. (see the [creating-hyperlinks](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/creating-hyperlinks) directory.)
 
-![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](https://mdn.mozillademos.org/files/12409/simple-directory.png)
+![A simple directory structure. The parent directory is called creating-hyperlinks and contains two files called index.html and contacts.html, and two directories called projects and pdfs, which contain an index.html and a project-brief.pdf file, respectively](simple-directory.png)
 
 이 디렉토리 구조의 **root**는 `creating-hyperlinks`. 웹사이트를 로컬 단에서 다룰 때에는 전체 웹사이트가 모두 들어갈 수 있는 하나의 디렉토리를 가져야 할 것입니다. Root 안에서 우리는 `index.html` 파일과 `contacts.html` 파일을 갖습니다. 진짜 웹사이트 안에서 `index.html` 는 우리의 홈 페이지 또는 랜딩 페이지(웹사이트의 접속 포인트 또는 웹사이트의 특정 부분 이 되는 페이지)가 될 것입니다.
 
@@ -280,7 +280,7 @@ Firefox 39의 Windows 버전에 대한 다운로드 링크가 있는 예:
 
 완성된 예는 다음과 같다:
 
-![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](https://mdn.mozillademos.org/files/12411/navigation-example.png)
+![An example of a simple HTML navigation menu, with home, pictures, projects, and social menu items](navigation-example.png)
 
 > **참고:** 만약 당신이 막히거나, 당신이 그것을 제대로 가지고 있는지 확신할 수 없다면, 당신은 정확한 답을 보기 위해 [navigation-menu-marked-up](https://github.com/mdn/learning-area/tree/master/html/introduction-to-html/navigation-menu-marked-up) 디렉토리를 확인할 수 있다.
 

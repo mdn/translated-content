@@ -37,7 +37,7 @@ transition-duration: unset;
 
 ## 範例
 
-`transition-duration: 0.5s`
+### `transition-duration: 0.5s`
 
 ```html hidden
  <div class="parent">
@@ -100,9 +100,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("duration_0_5s",275,150)}}
+{{EmbedLiveSample("transition-duration: 0.5s",275,150)}}
 
-`transition-duration: 1s`
+### `transition-duration: 1s`
 
 ```html hidden
  <div class="parent">
@@ -165,9 +165,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("duration_1s",275,150)}}
+{{EmbedLiveSample("transition-duration: 1s",275,150)}}
 
-`transition-duration: 2s`
+### `transition-duration: 2s`
 
 ```html hidden
  <div class="parent">
@@ -230,9 +230,9 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("duration_2s",275,150)}}
+{{EmbedLiveSample("transition-duration: 2s",275,150)}}
 
-`transition-duration: 4s`
+### `transition-duration: 4s`
 
 ```html hidden
  <div class="parent">
@@ -295,7 +295,7 @@ function updateTransition() {
 var intervalID = window.setInterval(updateTransition, 7000);
 ```
 
-{{EmbedLiveSample("duration_4s",275,150)}}
+{{EmbedLiveSample("transition-duration: 4s",275,150)}}
 
 ## 規範
 

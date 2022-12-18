@@ -564,7 +564,7 @@
 /pt-BR/docs/Web/API/Document.querySelector	/pt-BR/docs/Web/API/Document/querySelector
 /pt-BR/docs/Web/API/Document.querySelectorAll	/pt-BR/docs/Web/API/Document/querySelectorAll
 /pt-BR/docs/Web/API/Document/ElementoRegistrado	/pt-BR/docs/Web/API/Document/registerElement
-/pt-BR/docs/Web/API/Document/async	/pt-BR/docs/Web/API/XMLDocument/async
+/pt-BR/docs/Web/API/Document/async	/pt-BR/docs/conflicting/Web/API/XMLDocument
 /pt-BR/docs/Web/API/Document/defaultView/popstate_event	/pt-BR/docs/Web/API/Window/popstate_event
 /pt-BR/docs/Web/API/Document/defaultView/resize_event	/pt-BR/docs/Web/API/Window/resize_event
 /pt-BR/docs/Web/API/Document/height	/pt-BR/docs/Web/API/Element/clientHeight
@@ -634,9 +634,10 @@
 /pt-BR/docs/Web/API/Web_Storage_API_pt_br/Using_the_Web_Storage_API	/pt-BR/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
 /pt-BR/docs/Web/API/Window.alert	/pt-BR/docs/Web/API/Window/alert
 /pt-BR/docs/Web/API/Window.navigator	/pt-BR/docs/Web/API/Window/navigator
-/pt-BR/docs/Web/API/Window.openDialog	/pt-BR/docs/Web/API/Window/openDialog
+/pt-BR/docs/Web/API/Window.openDialog	/pt-BR/docs/conflicting/Web/API/Window
 /pt-BR/docs/Web/API/Window/Window.localStorage	/pt-BR/docs/Web/API/Window/localStorage
 /pt-BR/docs/Web/API/Window/crypto	/pt-BR/docs/Web/API/crypto_property
+/pt-BR/docs/Web/API/Window/openDialog	/pt-BR/docs/conflicting/Web/API/Window
 /pt-BR/docs/Web/API/Window/performance	/pt-BR/docs/Web/API/performance_property
 /pt-BR/docs/Web/API/Window/setCursor	/pt-BR/docs/orphaned/Web/API/Window/setCursor
 /pt-BR/docs/Web/API/WindowBase64/atob	/pt-BR/docs/Web/API/atob
@@ -651,6 +652,7 @@
 /pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/pt-BR/docs/Web/API/setInterval
 /pt-BR/docs/Web/API/WindowTimers.clearTimeout	/pt-BR/docs/Web/API/clearTimeout
 /pt-BR/docs/Web/API/WindowTimers/clearTimeout	/pt-BR/docs/Web/API/clearTimeout
+/pt-BR/docs/Web/API/XMLDocument/async	/pt-BR/docs/conflicting/Web/API/XMLDocument
 /pt-BR/docs/Web/API/XMLHttpRequest/Requisicoes_sincronas_e_assincronas	/pt-BR/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 /pt-BR/docs/Web/API/XMLHttpRequest/Usando_XMLHttpRequest	/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /pt-BR/docs/Web/API/XMLHttpRequest/onreadystatechange	/pt-BR/docs/Web/API/XMLHttpRequest/readystatechange_event
@@ -819,11 +821,14 @@
 /pt-BR/docs/Web/HTTP/Cabecalhos_HTTP	/pt-BR/docs/Web/HTTP/Headers
 /pt-BR/docs/Web/HTTP/Compressão	/pt-BR/docs/Web/HTTP/Compression
 /pt-BR/docs/Web/HTTP/Controle_Acesso_CORS	/pt-BR/docs/Web/HTTP/CORS
+/pt-BR/docs/Web/HTTP/Feature_Policy	/pt-BR/docs/Web/HTTP/Permissions_Policy
+/pt-BR/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy	/pt-BR/docs/orphaned/Web/HTTP/Feature_Policy/Using_Feature_Policy
 /pt-BR/docs/Web/HTTP/Gerenciamento_de_Conexão_em_HTTP_1.x	/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x
 /pt-BR/docs/Web/HTTP/HTTP	/pt-BR/docs/Web/HTTP/Caching
 /pt-BR/docs/Web/HTTP/Headers/Conexão	/pt-BR/docs/Web/HTTP/Headers/Connection
 /pt-BR/docs/Web/HTTP/Headers/Cookie2	/pt-BR/docs/conflicting/Web/HTTP/Headers/Cookie
 /pt-BR/docs/Web/HTTP/Headers/Expira	/pt-BR/docs/Web/HTTP/Headers/Expires
+/pt-BR/docs/Web/HTTP/Headers/Feature-Policy	/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy
 /pt-BR/docs/Web/HTTP/Headers/Localização	/pt-BR/docs/Web/HTTP/Headers/Location
 /pt-BR/docs/Web/HTTP/Headers/Public-Key-Pins	/pt-BR/docs/conflicting/Web/HTTP/Headers/Expect-CT
 /pt-BR/docs/Web/HTTP/Headers/Public-Key-Pins-Report-Only	/pt-BR/docs/conflicting/Web/HTTP/Headers/Expect-CT_63e560324d2c47190db4456d746ba07b

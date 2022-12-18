@@ -427,11 +427,11 @@ def book_detail_view(request, primary_key):
 
 책 목록을 보기 위해 **All books** 링크를 클릭하세요.
 
-![Book List Page](https://mdn.mozillademos.org/files/14049/book_list_page_no_pagination.png)
+![Book List Page](book_list_page_no_pagination.png)
 
 그리고 당신의 책들 중 하나를 클릭해보세요. 만약, 현재까지의 과정을 성공적으로 따라왔다면, 당신은 다음과 같은 스크린샷을 볼 수 있을 겁니다.
 
-![Book Detail Page](https://mdn.mozillademos.org/files/14051/book_detail_page_no_pagination.png)
+![Book Detail Page](book_detail_page_no_pagination.png)
 
 ## Pagination
 
@@ -491,7 +491,7 @@ pagination 링크를 만들기 위해 우리는 `{{ request.path }}` 를 이용�
 
 next/previous 링크와 함께 보이는 밑에 pagination 링크는 당신이 어느 페이지에 있느냐에 따라 달리 표시가 됩니다.
 
-![Book List Page - paginated](https://mdn.mozillademos.org/files/14057/book_list_paginated.png)
+![Book List Page - paginated](book_list_paginated.png)
 
 ## 도전과제
 
@@ -513,9 +513,9 @@ URL mappers에 필요한 코드들과 view들은 ,사실상, 우리가 위에서
 
 모두 마치면, 당신의 페이즈들은 아마 밑의 스크린샷과 비슷하게 보일 겁니다.
 
-![Author List Page](https://mdn.mozillademos.org/files/14053/author_list_page_no_pagination.png)
+![Author List Page](author_list_page_no_pagination.png)
 
-![Author Detail Page](https://mdn.mozillademos.org/files/14055/author_detail_page_no_pagination.png)
+![Author Detail Page](author_detail_page_no_pagination.png)
 
 ## 요약
 

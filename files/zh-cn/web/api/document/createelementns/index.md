@@ -84,7 +84,7 @@ document.createElementNS(namespaceURI, qualifiedName[, options]);
 
 ## 相关链接
 
-- [document.createElement](createElement)
-- [document.createTextNode](createTextNode)
-- [Node.namespaceURI](../Node/namespaceURI)
-- [Namespaces in XML](http://www.w3.org/TR/1999/REC-xml-names-19990114)
+- {{DOMxRef("document.createElement()")}}
+- {{DOMxRef("document.createTextNode()")}}
+- {{DOMxRef("Element.namespaceURI")}}
+- [Namespaces in XML](https://www.w3.org/TR/1999/REC-xml-names-19990114/)

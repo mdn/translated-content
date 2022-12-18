@@ -12,7 +12,7 @@ Employee の階層を実装するための適当なコンストラクタ関数�
 
 実際のアプリケーションでは、オブジェクト作成時にプロパティの値を設定できるようにするコンストラクタを定義することになるでしょう（詳しくは [より柔軟なコンストラクタ](/ja/Core_JavaScript_1.5_Guide/The_Employee_Example/More_Flexible_Constructors) を参照）。今回はこれらの単純な定義を使用して、継承はどのようにして起こるのかを実際に示していくことにします。
 
-![Image:hier02.gif](/@api/deki/files/1905/=Hier02.gif)
+![Image:hier02.gif](hier02.gif)
 **図 8.2：Employee オブジェクトの定義**
 
 以下に示すように、Java と JavaScript の `Employee` の定義は似ています。唯一の相違点は、Java では各プロパティに対して型を指定する必要があるのに対して、JavaScript ではその必要がないことです。また、Java のクラスでは明示的なコンストラクタメソッドを作成する必要があります。
@@ -152,7 +152,7 @@ this.machine = "";
 
 **注意**：*インスタンス*という用語はクラスベース言語においてはある特定の技術的な意味を持っています。これらの言語では、インスタンスとはクラスの個々のメンバであり、クラスとは根本的に異なるものです。JavaScript では「インスタンス」はこの技術的な意味を持っていません。なぜならば JavaScript にはクラスとインスタンスとの間のこの違いがないからです。しかしながら、JavaScript について話す際に、「インスタンス」をある特定のコンストラクタ関数を用いて作成したオブジェクトを意味する言葉として正式ではない形で使用することがあります。例えば、`jane` は `Engineer` のインスタンスであると砕けた言い方をすることもできます。同様に、_親_、_子_、_祖先_、そして*子孫*という用語は JavaScript において正式な意味を持ちませんが、プロトタイプチェーンにおいて上や下にあるオブジェクトについて言及する際にそれらを正式ではない形で使用してもかまいません。
 
-![Image:hier03.gif](/@api/deki/files/1906/=Hier03.gif)
+![Image:hier03.gif](hier03.gif)
 **図 8.3：単純な定義を用いたオブジェクトの作成**
 
 {{ PreviousNext("Core_JavaScript_1.5_Guide:The_Employee_Example", "Core_JavaScript_1.5_Guide:The_Employee_Example:Object_Properties") }}

@@ -1,11 +1,6 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
- - Aprender
- - JavaScript
- - 'l10n:priority'
-translation_of: Web/JavaScript
 ---
 
 {{JsSidebar}}

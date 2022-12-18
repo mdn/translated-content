@@ -77,13 +77,13 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 2. Откройте файл в браузере. Вы увидите что-то вроде этого:
 
-    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)Теперь должно стать совершенно ясно, в чём разница между `<h1>` и `<title>`!
+    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](title-example.png)Теперь должно стать совершенно ясно, в чём разница между `<h1>` и `<title>`!
 
 3. Откройте код страницы в редакторе, измените содержимое элементов и обновите страницу в браузере. Развлекайтесь!
 
 Содержимое элемента `<title>` используется и в других местах. Например, при добавлении страницы в избранное (_Bookmarks > Bookmark This Page_ в Firefox), текст из `<title>` предлагается в качестве названия закладки.
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](bookmark-example.png)
 
 Текст из `<title>` также появляется в результатах поиска, как мы скоро увидим.
 
@@ -101,9 +101,9 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 В этом элементе указана кодировка документа — набор символов, которые в нём можно использовать . `utf-8` — универсальный набор символов, который включает почти все символы со всех языков человечества. Такая веб-страница сможет работать с любым языком. Установить эту кодировку на всех веб-страницах, которые вы создаёте — отличная идея! Страница в такой кодировке прекрасно отображает как английские, так и японские символы:
 
-![a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine,](https://mdn.mozillademos.org/files/12343/correct-encoding.png)Если использовать, скажем, кодировку `ISO-8859-1` (набор символов для латиницы), текст страницы испортится:
+![a web page containing English and Japanese characters, with the character encoding set to universal, or utf-8. Both languages display fine,](correct-encoding.png)Если использовать, скажем, кодировку `ISO-8859-1` (набор символов для латиницы), текст страницы испортится:
 
-![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](https://mdn.mozillademos.org/files/12341/bad-encoding.png)
+![a web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly](bad-encoding.png)
 
 > **Примечание:** Некоторые браузеры (например, Chrome) автоматически исправляют неправильную кодировку, поэтому, в зависимости от используемого вами браузера, вы можете не увидеть эту проблему. Несмотря на это вам всё равно необходимо указывать кодировку UTF-8 для вашей страницы, чтобы избежать возможных проблем в других браузерах.
 
@@ -175,7 +175,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 Один из результатов добавления этих метаданных в том, что когда вы добавите ссылку MDN Web Docs на facebook, она отобразится с изображением и описанием, улучшая опыт взаимодействия _[(User eXperience, UX](https://ru.wikipedia.org/wiki/%D0%9E%D0%BF%D1%8B%D1%82_%D0%B2%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D0%B4%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%B8%D1%8F))_.
 
-![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](https://mdn.mozillademos.org/files/12349/facebook-output.png)У Twitter также есть собственный формат метаданных, с помощью которого создаётся аналогичный эффект, при отображении URL сайта на twitter.com:
+![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)У Twitter также есть собственный формат метаданных, с помощью которого создаётся аналогичный эффект, при отображении URL сайта на twitter.com:
 
 ```html
 <meta name="twitter:title" content="MDN Web Docs">
@@ -185,7 +185,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 Чтобы добавить своему сайту узнаваемости, можно указать в метаданных разные иконки.
 
-[Favicon](https://ru.wikipedia.org/wiki/Favicon), один из старожилов интернета, стал первой из таких иконок. Браузеры показывают её в заголовке вкладки и в списке избранных страниц.![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](https://mdn.mozillademos.org/files/12351/bookmark-favicon.png)
+[Favicon](https://ru.wikipedia.org/wiki/Favicon), один из старожилов интернета, стал первой из таких иконок. Браузеры показывают её в заголовке вкладки и в списке избранных страниц.![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](bookmark-favicon.png)
 
 Чтобы добавить на страницу favicon:
 
@@ -241,7 +241,7 @@ original_slug: Learn/HTML/Введение_в_HTML/The_head_metadata_in_HTML
 
 Если всё получилось, когда вы сохраните HTML и обновите страницу в браузере, вы увидите кое-что новенькое:
 
-![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](https://mdn.mozillademos.org/files/12359/js-and-css.png)
+![Example showing a page with CSS and JavaScript applied to it. The CSS has made the page go green, whereas the JavaScript has added a dynamic list to the page.](js-and-css.png)
 
 - JavaScript добавил на страницу пустой список. При нажатии на красную область появляется окно, в которое можно ввести текст нового пункта списка. При нажатии на кнопку OK пункт добавляется на страницу. Текст существующих пунктов списка можно редактировать, нажимая на них.
 - CSS покрасил фон зелёным и увеличил размер шрифта, а также стилизовал элементы, добавленные JavaScript. Красный прямоугольник и рамка вокруг списка — тоже его рук дело.
