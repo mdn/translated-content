@@ -24,7 +24,7 @@ l10n:
 - {{domxref("SourceBuffer.mode")}}
   - : `SourceBuffer` 内のメディアセグメントの順序を、任意の順序で追加できるか、または厳密な順序で保持する必要があるかを制御します。
 - {{domxref("SourceBuffer.textTracks")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : `SourceBuffer` 内に現在含まれているテキストトラックのリストです。。
+  - : `SourceBuffer` 内に現在含まれているテキストトラックのリストです。
 - {{domxref("SourceBuffer.timestampOffset")}}
   - : その後 `SourceBuffer` に追加されるメディアセグメント内のタイムスタンプに適用されるオフセットを制御します。
 - {{domxref("SourceBuffer.updating")}} {{ReadOnlyInline}}
