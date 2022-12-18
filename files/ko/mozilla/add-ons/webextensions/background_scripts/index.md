@@ -1,8 +1,6 @@
 ---
 title: Background scripts
 slug: Mozilla/Add-ons/WebExtensions/Background_scripts
-tags:
-  - WebExtensions
 ---
 
 {{AddonSidebar}}

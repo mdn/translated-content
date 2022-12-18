@@ -17,7 +17,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 >
 > accounts-static.cdn.mozilla.net, accounts.firefox.com, addons.cdn.mozilla.net, addons.mozilla.org, api.accounts.firefox.com, content.cdn.mozilla.net, content.cdn.mozilla.net, discovery.addons.mozilla.org, input.mozilla.org, install.mozilla.org, oauth.accounts.firefox.com, profile.accounts.firefox.com, support.mozilla.org, sync.services.mozilla.com, testpilot.firefox.com
 >
-> 이러한 도메인의 페이지에서 콘텐츠 스크립트를 삽입하려고 할 시 실패하며 페이지에 [CSP](/ko/docs/Web/HTTP/CSP) 오류가 로깅됩니다. 이러한 제한에는 addons.mozilla.org가 포함되므로 사용자가 확장 기능을 설치 직후 사용하려고 시도했지만 작동하지 않을 수 있습니다. 사용자가 addons.mozilla.org에서 나가게끔 적절한 경고나  [온보딩 페이지](/ko/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices)를 추가할 수 있습니다.
+> 이러한 도메인의 페이지에서 콘텐츠 스크립트를 삽입하려고 할 시 실패하며 페이지에 [CSP](/ko/docs/Web/HTTP/CSP) 오류가 로깅됩니다. 이러한 제한에는 addons.mozilla.org가 포함되므로 사용자가 확장 기능을 설치 직후 사용하려고 시도했지만 작동하지 않을 수 있습니다. 사용자가 addons.mozilla.org에서 나가게끔 적절한 경고나 [온보딩 페이지](/ko/docs/Mozilla/Add-ons/WebExtensions/onboarding_upboarding_offboarding_best_practices)를 추가할 수 있습니다.
 
 > **참고:** [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996) 버그로 인해 `var foo` 또는 `window.foo = "bar"`로 콘텐츠 스크립트의 전역 스코프에 추가된 값은 사라질 수 있습니다.
 
@@ -25,18 +25,18 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 
 다음의 세 가지 방법 중 하나를 이용해 콘텐츠 스크립트를 웹페이지에 로드할 수 있습니다.
 
-1. **설치 도중, URL 패턴과 일치하는 페이지에** 
+1. **설치 도중, URL 패턴과 일치하는 페이지에**
   manifest.json 안의 [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 키를 사용하여, 브라우저가 [주어진 패턴과 일치하는](/en-US/Add-ons/WebExtensions/Match_patterns) URL에 해당하는 페이지를 로드할 때마다 콘텐츠 스크립트를 로드하도록 브라우저에 요청할 수 있습니다.
 
-2. **실행 도중, URL 패턴과 일치하는 페이지에** 
+2. **실행 도중, URL 패턴과 일치하는 페이지에**
   {{WebExtAPIRef("contentScripts")}} API를 사용하여, 브라우저가 [주어진 패턴과 일치하는](/en-US/Add-ons/WebExtensions/Match_patterns) URL에 해당하는 페이지를 로드할 때마다 콘텐츠 스크립트를 로드하도록 브라우저에 요청할 수 있습니다. 이 방법은 실행 도중 콘텐츠 스크립트를 추가하고 제거할 수 있다는 것만 제외하면 방법 (1)과 같습니다.
 
-3. **실행 도중, 특정 탭에** 
+3. **실행 도중, 특정 탭에**
   [`tabs.executeScript()`](/en-US/Add-ons/WebExtensions/API/Tabs/executeScript) API을 사용하여, 원할 때마다 콘텐츠 스크립트를 특정 탭에 로드할 수 있습니다. 유저가 [브라우저 액션](/ko/docs/Mozilla/Add-ons/WebExtensions/Browser_action)을 클릭했을 때 응답하는 것이 한 예시입니다.
 
 확장 기능 당 프레임 당 하나의 전역 스코프만 있으므로, 콘텐츠 스크립트가 로드된 방식에 관계없이 한 콘텐츠 스크립트의 변수들은 다른 콘텐츠 스크립트로부터 직접 접근할 수 있습니다.
 
-방법 (1)과 (2)를 사용해서 [매치 패턴](/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)으로 나타낼 수 있는 URL의 페이지에만 스크립트를 로드할 수 있습니다. 방법 (3)을 사용해서 확장 기능과 함께 패키지된 페이지에도 스크립트를 로드할 수 있으나, "about:debugging" 이나 "about:addons"와 같이 특별한 권한이 있는 브라우저 페이지에는 스크립트를 로드할 수 없습니다.
+방법 (1)과 (2)를 사용해서 [일치 패턴](/ko/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)으로 나타낼 수 있는 URL의 페이지에만 스크립트를 로드할 수 있습니다. 방법 (3)을 사용해서 확장 기능과 함께 패키지된 페이지에도 스크립트를 로드할 수 있으나, "about:debugging" 이나 "about:addons"와 같이 특별한 권한이 있는 브라우저 페이지에는 스크립트를 로드할 수 없습니다.
 
 ## 콘텐츠 스크립트 환경
 
@@ -350,7 +350,7 @@ window.addEventListener("message", function(event) {
 이에 대한 완전한 예제를 보려면 [GitHub의 데모페이지](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html)를 방문하고 지침을 따르세요.
 
 > **경고:** 이런 방식으로 신뢰할 수 없는 웹 콘텐츠와 상호 작용할 때마다 매우 조심해야 합니다. 확장 기능은 강력한 기능을 제공할 수 있는 권한을 가진 코드이고, 적대적인 웹 페이지는 그런 기능에 접근해서 확장 기능을 쉽게 속일 수 있습니다.
-> 
+>
 > 간단한 예제로, 콘텐츠 스크립트가 아래처럼 동작하는 메시지를 받는다고 합시다.
 >
 > ```js example-bad
@@ -368,11 +368,9 @@ window.addEventListener("message", function(event) {
 >
 > 이제 페이지 스크립트는 콘텐츠 스크립트의 모든 권한으로 어떠한 코드라도 실행할 수 있게 됩니다.
 
-
 ## 콘텐츠 스크립트에서 eval() 사용하기
 
 > **참고:** `eval()`은 Manifest V3에서 지원하지 않습니다.
-
 
 - Chrome의 경우,
   - : {{jsxref("Global_Objects/eval", "eval")}}은 항상 페이지 맥락이 아닌 콘텐츠 스크립트의 맥락에서 코드를 실행합니다.
@@ -430,7 +428,7 @@ In page script, window.x: 1
 In page script, window.y: undefined
 ```
 
-[`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), [`setInterval()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) 및  [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)에도 동일하게 적용됩니다.
+[`setTimeout()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout), [`setInterval()`](/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval) 및 [`Function()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)에도 동일하게 적용됩니다.
 
 페이지 맥락에서에서 코드를 실행할 때는 매우 주의해야 합니다. 페이지의 환경은 잠재적으로 악의적인 웹 페이지에 의해 제어되며, 상호 작용하는 객체를 재정의하여 예기치 못한 방식으로 동작할 수 있습니다.
 
