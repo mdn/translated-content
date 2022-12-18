@@ -36,10 +36,7 @@ trackEvent = new TrackEvent(type, eventInfo);
 
 ## 仕様
 
-| 仕様                                                                                                                                     | 状態                             | コメント |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "media.html#dom-trackevent-trackevent", "TrackEvent()")}}                         | {{Spec2('HTML WHATWG')}} | 初期定義 |
-| {{SpecName('HTML5 W3C', "semantics-embedded-content.html#dom-trackevent-trackevent", "TrackEvent()")}} | {{Spec2('HTML5 W3C')}}     | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

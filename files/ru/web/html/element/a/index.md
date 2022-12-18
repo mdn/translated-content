@@ -1,5 +1,5 @@
 ---
-title: <a>
+title: <a> - элемент ссылки
 slug: Web/HTML/Element/A
 tags:
   - HTML
@@ -158,7 +158,6 @@ HTML-элемент `<a>` определяет гиперссылку для п�
 ### Ссылка на внешний сайт
 
 ```html
-<!-- Ссылка на внешний файл -->
 <a href="http://www.mozilla.com/">Внешняя ссылка</a>
 ```
 
@@ -170,7 +169,7 @@ HTML-элемент `<a>` определяет гиперссылку для п�
 
 ```html
 <a href="https://developer.mozilla.org/ru/" target="_blank">
-  <img src="https://mdn.mozillademos.org/files/6851/mdn_logo.png" alt="MDN logo">
+  <img src="mdn_logo.png" alt="MDN logo">
 </a>
 ```
 

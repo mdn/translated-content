@@ -80,7 +80,7 @@ La sintaxis de cada capa es la siguiente:
 }
 
 .topbanner {
-  background: url("https://mdn.mozillademos.org/files/11983/starsolid.gif") #00D repeat-y fixed;
+  background: url("starsolid.gif") #00D repeat-y fixed;
 }
 ```
 

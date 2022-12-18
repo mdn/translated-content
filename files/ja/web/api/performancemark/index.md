@@ -29,14 +29,11 @@ slug: Web/API/PerformanceMark
 
 ## 例
 
-[ユーザータイミング API の使用](/Web/API/User_Timing_API/Using_the_User_Timing_API)の例を参照してください。
+[ユーザータイミング API の使用](/ja/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)の例を参照してください。
 
 ## 仕様書
 
-| 仕様書                                                                                               | ステータス                                   | コメント     |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------ |
-| {{SpecName('User Timing Level 2', '#performancemark', 'PerformanceMark')}} | {{Spec2('User Timing Level 2')}} |              |
-| {{SpecName('User Timing', '#performancemark', 'PerformanceMark')}}             | {{Spec2('User Timing')}}             | 基本的な定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -44,5 +41,5 @@ slug: Web/API/PerformanceMark
 
 ## あわせて参照
 
-- [User Timing (Overview)](/Web/API/User_Timing_API)
-- [Using the User Timing API](/Web/API/User_Timing_API/Using_the_User_Timing_API)
+- [User Timing (Overview)](/ja/docs/Web/API/User_Timing_API)
+- [Using the User Timing API](/ja/docs/Web/API/User_Timing_API/Using_the_User_Timing_API)

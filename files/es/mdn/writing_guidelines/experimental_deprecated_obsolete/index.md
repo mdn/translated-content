@@ -1,13 +1,6 @@
 ---
 title: MDN convenciones y definiciones
 slug: MDN/Writing_guidelines/Experimental_deprecated_obsolete
-tags:
-  - Directrices
-  - Documentación
-  - Guía
-  - MDN
-  - Meta MDN
-translation_of: MDN/Guidelines/Conventions_definitions
 original_slug: MDN/Guidelines/Conventions_definitions
 ---
 

@@ -4,7 +4,7 @@ slug: Web/API/Document_Object_Model/Introduction
 original_slug: Referencia_DOM_de_Gecko/Introducción
 ---
 
-Ésta sección da una breve introducción conceptual del [DOM](es/DOM): qué es, cómo proporciona la estructura para los documentos [HTML](es/HTML) y [XML](es/XML), cómo se accede a él, y cómo esta ["API"](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones) presenta la información de referencia y ejemplos.
+Ésta sección da una breve introducción conceptual del [DOM](/es/DOM): qué es, cómo proporciona la estructura para los documentos [HTML](/es/HTML) y [XML](/es/XML), cómo se accede a él, y cómo esta ["API"](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones) presenta la información de referencia y ejemplos.
 
 ## ¿Qué es el DOM?
 
@@ -27,7 +27,7 @@ Todas las propiedades, métodos y eventos disponibles para la manipulación y la
 
 ## DOM y JavaScript
 
-El ejemplo corto de abajo, como casi todos los ejemplos de esta referencia, es [JavaScript](es/JavaScript). Es decir, es _escrito_ en JavaScript pero _utiliza_ el DOM para acceder al documento y a sus elementos. El DOM no es un lenguaje de programación pero sin él, el lenguaje JavaScript no tiene ningún modelo o noción de las páginas web, de la páginas XML ni de los elementos con los cuales es usualmente relacionado. Cada elemento -"el documento íntegro, el título, las tablas dentro del documento, los títulos de las tablas, el texto dentro de las celdas de las tablas"- es parte del modelo de objeto del documento para cada documento, así se puede acceder y manipularlos utilizando el DOM y un lenguaje de escritura, como JavaScript.
+El ejemplo corto de abajo, como casi todos los ejemplos de esta referencia, es [JavaScript](/es/JavaScript). Es decir, es _escrito_ en JavaScript pero _utiliza_ el DOM para acceder al documento y a sus elementos. El DOM no es un lenguaje de programación pero sin él, el lenguaje JavaScript no tiene ningún modelo o noción de las páginas web, de la páginas XML ni de los elementos con los cuales es usualmente relacionado. Cada elemento -"el documento íntegro, el título, las tablas dentro del documento, los títulos de las tablas, el texto dentro de las celdas de las tablas"- es parte del modelo de objeto del documento para cada documento, así se puede acceder y manipularlos utilizando el DOM y un lenguaje de escritura, como JavaScript.
 
 En el comienzo, JavaScript y el DOM estaban herméticamente enlazados, pero después se desarrollaron como entidades separadas. El contenido de la página es almacenado en DOM y el acceso y la manipulación se hace vía JavaScript, podría representarse aproximadamente así:
 
@@ -47,7 +47,7 @@ p_list = doc.getElementsByTagName("para");
 
 No se tiene que hacer nada especial para empezar a utilizar el DOM. Los diferentes navegadores tienen directrices DOM distintas, y éstas directrices tienen diversos grados de conformidad al actual estándar DOM (un tema que se intenta evitar en este manual), pero todos los navegadores web usan el modelo de objeto de documento para hacer accesibles las páginas web al script.
 
-Cuando se crea un script –esté en un elemento `<SCRIPT>` o incluido en una página web por la instrucción de cargar un script– inmediatamente está disponible para usarlo con el API, accediendo así a los elementos [`document`](es/DOM/document) o [`window`](es/DOM/window), para manipular el documento mismo o sus diferentes partes, las cuales son los varios elementos de una página web. La programación DOM hace algo tan simple como lo siguiente, lo cual abre un mensaje de alerta usando la función [`alert()`](es/DOM/window.alert) desde el objeto [`window`](es/DOM/window), o permite métodos DOM más sofisticados para crear realmente un nuevo contenido, como en el largo ejemplo de más abajo.
+Cuando se crea un script –esté en un elemento `<SCRIPT>` o incluido en una página web por la instrucción de cargar un script– inmediatamente está disponible para usarlo con el API, accediendo así a los elementos [`document`](/es/DOM/document) o [`window`](/es/DOM/window), para manipular el documento mismo o sus diferentes partes, las cuales son los varios elementos de una página web. La programación DOM hace algo tan simple como lo siguiente, lo cual abre un mensaje de alerta usando la función [`alert()`](/es/DOM/window.alert) desde el objeto [`window`](/es/DOM/window), o permite métodos DOM más sofisticados para crear realmente un nuevo contenido, como en el largo ejemplo de más abajo.
 
 ```html
 <body onload="window.alert('Bienvenido a mi página!');">
@@ -120,7 +120,7 @@ Pero puede resultar confuso el funcionamiento de la fuerte relación entre objet
 
 ## Interfaces y objetos
 
-En algunos casos un objeto pone en ejecución a una sola interfaz. Pero a menudo un objeto toma prestada una tabla HTML (`table`) desde muchas interfaces diversas. El objeto table, por ejemplo, pone en funcionamiento una [Interfaz especial del elemento table HTML](es/DOM/tabla), la cual incluye métodos como `createCaption` y `insertRow`. Pero como también es un elemento HTML, table pone en marcha a la interfaz del `Element` descrita en el capítulo [La referencia al elemento del DOM](es/Referencia_DOM_de_Gecko/elemento). Y finalmente, puesto que un elemento HTML es también, por lo que concierna al DOM, un nodo en el árbol de nodos que hace el modelo de objeto para una página web o XML, el elemento de table hace funcionar la interfaz más básica de `Node`, desde el cual deriva `Element`.
+En algunos casos un objeto pone en ejecución a una sola interfaz. Pero a menudo un objeto toma prestada una tabla HTML (`table`) desde muchas interfaces diversas. El objeto table, por ejemplo, pone en funcionamiento una [Interfaz especial del elemento table HTML](/es/DOM/tabla), la cual incluye métodos como `createCaption` y `insertRow`. Pero como también es un elemento HTML, table pone en marcha a la interfaz del `Element` descrita en el capítulo [La referencia al elemento del DOM](/es/Referencia_DOM_de_Gecko/elemento). Y finalmente, puesto que un elemento HTML es también, por lo que concierna al DOM, un nodo en el árbol de nodos que hace el modelo de objeto para una página web o XML, el elemento de table hace funcionar la interfaz más básica de `Node`, desde el cual deriva `Element`.
 
 La referencia a un objeto `table`, como en el ejemplo siguiente, utiliza estas interfaces intercambiables sobre el objeto.
 
@@ -138,7 +138,7 @@ table.summary = "nota: borde aumentado";
 
 ## Interfaces esenciales en el DOM
 
-Esta sección lista las interfaces más comúnmente utilizadas en el DOM. La idea no es describir qué hacen estas APIs pero sí dar una idea de las clases de métodos y propiedades que se encuentran con el uso del DOM. Muchos ejemplos de uso común de esta API se encuentran en el capítulo [Ejemplos DOM](es/Referencia_DOM_de_Gecko/Ejemplos) al final de este manual.
+Esta sección lista las interfaces más comúnmente utilizadas en el DOM. La idea no es describir qué hacen estas APIs pero sí dar una idea de las clases de métodos y propiedades que se encuentran con el uso del DOM. Muchos ejemplos de uso común de esta API se encuentran en el capítulo [Ejemplos DOM](/es/Referencia_DOM_de_Gecko/Ejemplos) al final de este manual.
 
 `document` y `window` son objetos cuya interfaces son generalmente muy usadas en la programación de DOM. En término simple, el objeto `window` representa algo como podría ser el navegador, y el objeto `document` es la raíz del documento en sí. `Element` hereda de la interfaz genérica `Node`, y juntos, estas dos interfaces proporcionan muchos métodos y propiedades utilizables sobre los elementos individuales. Éstos elementos pueden igualmente tener interfaces específicas según el tipo de datos representados, como en el ejemplo anterior del objeto `table`. Lo siguiente es una breve lista de los APIS comunes en la web y en las páginas escritas en XML utilizando el DOM.
 
@@ -151,10 +151,10 @@ Esta sección lista las interfaces más comúnmente utilizadas en el DOM. La ide
 - `element.setAttribute`
 - `element.element.getAttribute`
 - `element.addEventListener`
-- [`window.content`](es/DOM/window.content)
-- [`window.onload`](es/DOM/window.onload)
-- [`window.dump`](es/DOM/window.dump)
-- [`window.scrollTo`](es/DOM/window.scrollTo)
+- [`window.content`](/es/DOM/window.content)
+- [`window.onload`](/es/DOM/window.onload)
+- [`window.dump`](/es/DOM/window.dump)
+- [`window.scrollTo`](/es/DOM/window.scrollTo)
 
 ## Probando el API del DOM
 

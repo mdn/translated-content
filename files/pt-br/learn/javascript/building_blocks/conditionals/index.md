@@ -31,7 +31,7 @@ Seres humanos (e outros animais) tomam decisões o tempo todo que afetam suas vi
 
 As declarações condicionais nos permitem representar tomadas de decisão como estas em _JavaScript_, a partir da escolha que deve ser feita (por exemplo, "um biscoito ou dois"), ao resultado obtido dessas escolhas (talvez o resultado de "comer um biscoito" possa ser "ainda sentido fome ", e o resultado de "comer dois biscoitos" pode ser "ter se sentido cheio, mas mamãe me falou para comer todos os biscoitos".)
 
-![](https://mdn.mozillademos.org/files/13703/cookie-choice-small.png)
+![](cookie-choice-small.png)
 
 ## Declarações if ... else
 

@@ -1,14 +1,6 @@
 ---
 title: String — Cadena de caracteres
 slug: Web/JavaScript/Reference/Global_Objects/String
-tags:
-  - Clase
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Referencia
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String
 ---
 
@@ -294,9 +286,7 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## Especificaciones
 
-| Especificación                                                               |
-| ---------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-string-objects', 'String')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

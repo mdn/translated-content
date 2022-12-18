@@ -1,12 +1,6 @@
 ---
 title: Optimizar sus páginas para análisis especulativo
 slug: Glossary/speculative_parsing
-tags:
-  - Avanzado
-  - Desarrollo web
-  - HTML
-  - HTML5
-translation_of: Glossary/speculative_parsing
 original_slug: Web/HTML/Optimizing_your_pages_for_speculative_parsing
 ---
 

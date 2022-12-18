@@ -71,12 +71,7 @@ multiline title">example</abbr>.</p>
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                             | 備考                                                                                                                                                                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "dom.html#the-title-attribute", "title")}} | {{Spec2('HTML WHATWG')}} | 最新のスナップショットである {{SpecName('HTML5.1')}} から変更なし。                                                                                                                                                                                                                                  |
-| {{SpecName('HTML5.1', "dom.html#the-title-attribute", "title")}}         | {{Spec2('HTML5.1')}}     | {{SpecName('HTML WHATWG')}} のスナップショットであり、{{SpecName('HTML5 W3C')}} から変更なし。                                                                                                                                                                                                |
-| {{SpecName('HTML5 W3C', "dom.html#the-title-attribute", "title")}}     | {{Spec2('HTML5 W3C')}}     | {{SpecName('HTML WHATWG')}} のスナップショット。 {{SpecName("HTML4.01")}} から、真にグローバルな属性になりました。                                                                                                                                                                           |
-| {{SpecName('HTML4.01', 'struct/global.html#adef-title', 'title')}}     | {{Spec2('HTML4.01')}}     | {{HTMLElement("base")}}, {{HTMLElement("basefont")}}, {{HTMLElement("head")}}, {{HTMLElement("html")}}, {{HTMLElement("meta")}}, {{HTMLElement("param")}}, {{HTMLElement("script")}}, {{HTMLElement("title")}} を除くすべての要素で対応。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -1,11 +1,6 @@
 ---
 title: Texto Simple
 slug: Glossary/Plaintext
-tags:
-  - Cryptography
-  - Glossary
-  - Security
-translation_of: Glossary/Plaintext
 original_slug: Glossary/TextoSimple
 ---
 

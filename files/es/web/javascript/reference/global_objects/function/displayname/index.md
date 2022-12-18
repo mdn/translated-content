@@ -1,7 +1,6 @@
 ---
 title: Function.displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Function/displayName
 ---
 

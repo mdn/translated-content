@@ -11,7 +11,7 @@ Um objeto `Blob` representa um objeto do tipo arquivo, com dados brutos imutáve
 
 Para construir um `Blob` a partir de outro objeto ou dado não-blob , utilize o construtor {{domxref("Blob.Blob","Blob()")}}. Para criar um blob que contém um subconjunto de dados de outro blob, use o método {{domxref("Blob.slice()", "slice()")}}. Para obter um objeto Blob de um arquivo no sistema de arquivos do usuário, veja a documentação {{domxref("File")}}.
 
-The APIs accepting `Blob` objects are also listed on the {{domxref("File")}} documentation.
+As APIs que aceitam objetos `Blob` também são listados na documentação {{domxref("File")}}.
 
 > **Nota:** O método `slice()` usava inicialmente `length` como segundo argumento para indicar o numero de bytes a copiar no novo `Blob`. Se você especificou valores de maneira que `start + length` excederam o tamanho do `Blob` de origem, o `Blob` retornado contém dados a partir do início do índice até o final do `Blob` de origem.
 

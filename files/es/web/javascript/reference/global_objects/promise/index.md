@@ -1,9 +1,7 @@
 ---
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 original_slug: Web/JavaScript/Reference/Global_Objects/Promise
-browser-compat: javascript.builtins.Promise
 ---
 
 {{JSRef}}

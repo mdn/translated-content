@@ -57,10 +57,7 @@ html, body, svg {
 
 ## 仕様書
 
-| 仕様書                                                                                       | 状態                     | 備考     |
-| -------------------------------------------------------------------------------------------- | ------------------------ | -------- |
-| {{SpecName("SVG2", "interact.html#EventAttributes", "onclick")}}         | {{Spec2("SVG2")}} | 変更なし |
-| {{SpecName("SVG1.1", "script.html#OnClickEventAttribute", "onclick")}} | {{Spec2("SVG1.1")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

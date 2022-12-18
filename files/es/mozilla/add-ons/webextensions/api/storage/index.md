@@ -1,20 +1,6 @@
 ---
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
-tags:
-  - API
-  - Add-ons
-  - Complentos
-  - Extensions
-  - Interface
-  - NeedsTranslation
-  - Non-standard
-  - Reference
-  - Storage
-  - TopicStub
-  - WebExtensions
-  - extensiones
-translation_of: Mozilla/Add-ons/WebExtensions/API/storage
 ---
 
 {{AddonSidebar}}
@@ -25,14 +11,14 @@ El sistema de almacenamiento se basa en [Web Storage API](/es/docs/Web/API/Web_S
 
 - Es asíncrono.
 - Los valores se aplican a la extensión, no a un dominio específico (es decir, el mismo conjunto de pares clave / valor está disponible para todos los scripts de tipo background y los scripts de contenido o content).
-- Los valores almacenados pueden ser cualquier valor JSON, no solo [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). Entre otras cosas, esto incluye: [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) y [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object), pero solo cuando sus contenidos se pueden representar como JSON, que no incluye nodos DOM. No es necesario convertir sus valores en cadenas JSON antes de almacenarlos, pero se representan como JSON internamente, por lo tanto, el requisito de que sean responsables de JSON.
+- Los valores almacenados pueden ser cualquier valor JSON, no solo [`String`](/es/docs/Web/JavaScript/Reference/Global_Objects/String). Entre otras cosas, esto incluye: [`Array`](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) y [`Object`](/es/docs/Web/JavaScript/Reference/Global_Objects/Object), pero solo cuando sus contenidos se pueden representar como JSON, que no incluye nodos DOM. No es necesario convertir sus valores en cadenas JSON antes de almacenarlos, pero se representan como JSON internamente, por lo tanto, el requisito de que sean responsables de JSON.
 - Se pueden establecer o recuperar múltiples pares de clave / valor en la misma llamada a la API.
 
 Para usar esta API, debe incluir el [permiso](/es/docs/) de "storage" en su archivo [manifest.json](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 Cada extensión tiene su propia área de almacenamiento, que se puede dividir en diferentes tipos de almacenamiento.
 
-Aunque esta API es similar a {{domxref ("Window.localStorage")}}, se recomienda que no use Window\.localStorage en el código de extensión para almacenar datos relacionados con la extensión. Firefox borrará los datos almacenados por las extensiones utilizando la API localStorage en varios escenarios donde los usuarios borran su historial de navegación y los datos por razones de privacidad, mientras que los datos guardados utilizando la API [`storage.local`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) se conservarán correctamente en estos escenarios.
+Aunque esta API es similar a {{domxref ("Window.localStorage")}}, se recomienda que no use Window\.localStorage en el código de extensión para almacenar datos relacionados con la extensión. Firefox borrará los datos almacenados por las extensiones utilizando la API localStorage en varios escenarios donde los usuarios borran su historial de navegación y los datos por razones de privacidad, mientras que los datos guardados utilizando la API [`storage.local`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) se conservarán correctamente en estos escenarios.
 
 > **Nota:** El área de almacenamiento no está encriptada y no debe utilizarse para almacenar información confidencial del usuario, como claves.
 

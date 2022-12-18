@@ -1,10 +1,6 @@
 ---
 title: Inmutable
 slug: Glossary/Immutable
-tags:
-  - CodingScripting
-  - Glosario
-translation_of: Glossary/Immutable
 original_slug: Glossary/Inmutable
 ---
 

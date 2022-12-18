@@ -1,22 +1,6 @@
 ---
 title: Herramientas y pruebas
 slug: Learn/Tools_and_testing
-tags:
-  - Accesibilidad
-  - Aprender
-  - Aterrizaje
-  - CSS
-  - CodificaciónDeSecuenciasDeComandos
-  - HTML
-  - Herramientas
-  - JavaScript
-  - Navegador cruzado
-  - Principiante
-  - Pruebas de usuario
-  - Tema
-  - Testing
-  - automatización
-translation_of: Learn/Tools_and_testing
 original_slug: Learn/Herramientas_y_pruebas
 ---
 

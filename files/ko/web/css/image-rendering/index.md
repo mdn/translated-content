@@ -1,12 +1,6 @@
 ---
 title: image-rendering
 slug: Web/CSS/image-rendering
-tags:
-  - CSS
-  - CSS Images
-  - CSS Property
-  - Reference
-translation_of: Web/CSS/image-rendering
 ---
 {{CSSRef}}
 
@@ -77,15 +71,15 @@ div {
 
 #### image-rendering: auto;
 
-78% ![squares.gif](/@api/deki/files/3612/=squares.gif) 100% ![squares.gif](/@api/deki/files/3612/=squares.gif) 138% ![squares.gif](/@api/deki/files/3612/=squares.gif) downsized ![hut.jpg](/@api/deki/files/3613/=hut.jpg) upsized ![blumen.jpg](/@api/deki/files/3611/=blumen.jpg)
+78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
 
 #### image-rendering: pixelated; (-ms-interpolation-mode: nearest-neighbor)
 
-78% ![squares.gif](/@api/deki/files/3612/=squares.gif) 100% ![squares.gif](/@api/deki/files/3612/=squares.gif) 138% ![squares.gif](/@api/deki/files/3612/=squares.gif) downsized ![hut.jpg](/@api/deki/files/3613/=hut.jpg) upsized ![blumen.jpg](/@api/deki/files/3611/=blumen.jpg)
+78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
 
 #### image-rendering: crisp-edges; (-webkit-optimize-contrast)
 
-78% ![squares.gif](/@api/deki/files/3612/=squares.gif) 100% ![squares.gif](/@api/deki/files/3612/=squares.gif) 138% ![squares.gif](/@api/deki/files/3612/=squares.gif) downsized ![hut.jpg](/@api/deki/files/3613/=hut.jpg) upsized ![blumen.jpg](/@api/deki/files/3611/=blumen.jpg)
+78% ![squares.gif](squares.gif) 100% ![squares.gif](squares.gif) 138% ![squares.gif](squares.gif) downsized ![hut.jpg](hut.jpg) upsized ![blumen.jpg](blumen.jpg)
 
 ## 명세
 

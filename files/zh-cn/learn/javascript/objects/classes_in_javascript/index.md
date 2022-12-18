@@ -22,7 +22,7 @@ slug: Learn/JavaScript/Objects/Classes_in_JavaScript
           href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >创建代码块</a>）以及面向对象的
           JavaScript（OOJS）基础（参见
-        <a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/zh-CN/docs/Learn/JavaScript/Objects/Basics"
           >JavaScript 对象基础</a>、<a
           href="/zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes">对象原型</a>和<a
           href="/zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_programming">面向对象编程</a>）。

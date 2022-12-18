@@ -23,11 +23,11 @@ var crypto = crypto.subtle;
 
 {{Specifications}}
 
-## 浏览器支持
+## 浏览器兼容性
 
 {{Compat}}
 
-## 另见
+## 参见
 
-- {{domxref("Crypto")}}.
-- {{domxref("SubtleCrypto")}}.
+- {{domxref("Crypto")}}
+- {{domxref("SubtleCrypto")}}

@@ -1,15 +1,6 @@
 ---
 title: link
 slug: Web/HTML/Element/link
-tags:
-  - HTML
-  - HTML:Elemento
-  - Metadatos
-  - Metadatos de documento HTML
-  - Referencia
-  - Todas_las_Categorías
-  - Web
-translation_of: Web/HTML/Element/link
 original_slug: Web/HTML/Elemento/link
 ---
 

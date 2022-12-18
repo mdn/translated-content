@@ -1,15 +1,6 @@
 ---
 title: Colecciones con clave
 slug: Web/JavaScript/Guide/Keyed_collections
-tags:
-  - Colecciones
-  - Conjunto
-  - Guía
-  - JavaScript
-  - Map
-  - l10n:priority
-  - set
-translation_of: Web/JavaScript/Guide/Keyed_collections
 ---
 
 {{jsSidebar("JavaScript Guide", "Guía de JavaScript")}} {{PreviousNext("Web/JavaScript/Guide/Indexed_Collections", "Web/JavaScript/Guide/Working_with_Objects")}}

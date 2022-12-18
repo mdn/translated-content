@@ -57,7 +57,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Marking_up_a_letter
 
 Это скриншот размеченного письма:
 
-![Example](https://mdn.mozillademos.org/files/15811/Letter%20screengrab%202.png)
+![Example](letter_screengrab_2.png)
 
 ## Оценка
 

@@ -82,7 +82,7 @@ If we take the following HTML code, with {{ HTMLElement("p") }} have `display:in
 
 Two anonymous block boxes are created, one for the text before the span Element (`Some inline text`) and one for the text after it (`followed by more inline text`), which gives the following block structure:
 
-![](https://mdn.mozillademos.org/files/13625/anonymous_block_box_break.png)
+![](anonymous_block_box_break.png)
 
 Which leads to:
 

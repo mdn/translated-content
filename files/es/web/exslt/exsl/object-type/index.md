@@ -1,11 +1,6 @@
 ---
 title: object-type
 slug: Web/EXSLT/exsl/object-type
-tags:
-  - EXSLT
-  - Todas_las_Categorías
-  - XSLT
-translation_of: Web/EXSLT/exsl/object-type
 ---
 
 {{ XsltRef() }}

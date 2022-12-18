@@ -1,7 +1,6 @@
 ---
 title: ServiceWorkerContainer.register()
 slug: Web/API/ServiceWorkerContainer/register
-translation_of: Web/API/ServiceWorkerContainer/register
 ---
 
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}

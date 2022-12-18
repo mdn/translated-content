@@ -23,9 +23,7 @@ slug: Web/API/ImageData
 
 ## 仕様
 
-| 仕様書                                                                                                   | 策定状況                         | コメント |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------- |
-| {{SpecName('HTML WHATWG', "the-canvas-element.html#imagedata", "ImageData")}} | {{Spec2('HTML WHATWG')}} |          |
+{{Specifications}}
 
 ## ブラウザー実装状況
 

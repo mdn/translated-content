@@ -7,7 +7,7 @@ Esta es una lista alfabetica de atributos de MathML. Más detalles de cada atrib
 
 Notas:
 
-- Los elementos MathML {{ MathMLElement("mstyle") }} y {{ MathMLElement("math") }}  aceptan todos los atributos de todos los elementos de presentacion.
+- Los elementos MathML {{ MathMLElement("mstyle") }} y {{ MathMLElement("math") }} aceptan todos los atributos de todos los elementos de presentacion.
 - Vea los [valores](/es/docs/MathML/Attributes/Values) de las notas sobre los valores y unidades en MathML.
 
 | Nombre                                                                                                 | Atributos aceptados                                                                                                                                                                                                    | Descripción                                                                                                                                                                                                                                                   |

@@ -3,7 +3,7 @@ title: 对象原型
 slug: Learn/JavaScript/Objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
 
 通过原型这种机制，JavaScript 中的对象从其他对象继承功能特性；这种继承机制与经典的面向对象编程语言的继承机制不同。本文将探讨这些差别，解释原型链如何工作，并了解如何通过 `prototype` 属性向已有的构造器添加方法
 
@@ -14,12 +14,12 @@ slug: Learn/JavaScript/Objects/Object_prototypes
       <td>
         基本的计算机素养，对 HTML 和 CSS 有基本的理解，熟悉 JavaScript
         基础（参见
-        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a> 和
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">JavaScript 第一步</a>和
         <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
-          >Building blocks</a
+          >创建 JavaScript 代码块</a
         >）以及面向对象的 JavaScript (OOJS) 基础（参见
-        <a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction"
-          >Introduction to objects</a
+        <a href="/zh-CN/docs/Learn/JavaScript/Object/Basics"
+          >面向对象编程基本概念</a
         >）。
       </td>
     </tr>
@@ -41,13 +41,13 @@ JavaScript 常被描述为一种**基于原型的语言 (prototype-based languag
 
 在传统的 OOP 中，首先定义“类”，此后创建对象实例时，类中定义的所有属性和方法都被复制到实例中。在 JavaScript 中并不如此复制——而是在对象实例和它的构造器之间建立一个链接（它是\_\_proto\_\_属性，是从构造函数的`prototype`属性派生的），之后通过上溯原型链，在构造器中找到这些属性和方法。
 
-> **备注：** 理解对象的原型（可以通过[`Object.getPrototypeOf(obj)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)或者已被弃用的[`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)属性获得）与构造函数的`prototype`属性之间的区别是很重要的。前者是每个实例上都有的属性，后者是构造函数的属性。也就是说，`Object.getPrototypeOf(new Foobar())`和`Foobar.prototype`指向着同一个对象。
+> **备注：** 理解对象的原型（可以通过 [`Object.getPrototypeOf(obj)`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf)或者已被弃用的[`__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)属性获得）与构造函数的 `prototype` 属性之间的区别是很重要的。前者是每个实例上都有的属性，后者是构造函数的属性。也就是说，`Object.getPrototypeOf(new Foobar())` 和 `Foobar.prototype` 指向着同一个对象。
 
 以上描述很抽象；我们先看一个例子。
 
 ## 使用 Javascript 中的原型
 
-在 javascript 中，函数可以有属性。每个函数都有一个特殊的属性叫作`原型（prototype）` ，正如下面所展示的。请注意，下面的代码是独立的一段 (在网页中没有其他代码的情况下，这段代码是安全的)。为了最好的学习体验，你最好打开一个控制台 (在 Chrome 和 Firefox 中，可以按 Ctrl+Shift+I 来打开) 切换到"控制台" 选项卡，复制粘贴下面的 JavaScript 代码，然后按回车来运行。
+在 javascript 中，函数可以有属性。每个函数都有一个特殊的属性叫作**原型（prototype）**，正如下面所展示的。请注意，下面的代码是独立的一段 (在网页中没有其他代码的情况下，这段代码是安全的)。为了最好的学习体验，你最好打开一个控制台 (在 Chrome 和 Firefox 中，可以按 Ctrl+Shift+I 来打开) 切换到"控制台" 选项卡，复制粘贴下面的 JavaScript 代码，然后按回车来运行。
 
 ```js
 function doSomething(){}
@@ -384,4 +384,4 @@ Test.prototype.y = function () { ... }
 
 下一篇文章中，我们将了解如何在两个自定义的对象间实现功能的继承。
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}

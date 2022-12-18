@@ -1,7 +1,6 @@
 ---
 title: Fundamentos de texto y fuentes tipográficas
 slug: Learn/CSS/Styling_text/Fundamentals
-translation_of: Learn/CSS/Styling_text/Fundamentals
 ---
 
 {{LearnSidebar}}{{NextMenu("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text")}}
@@ -699,4 +698,4 @@ Esperamos que hayas disfrutado jugando con el texto en este artículo. El próxi
 - [Aplicación de estilo a listas](/es/docs/Learn/CSS/Styling_text/Styling_lists)
 - [Aplicación de estilo a enlaces](/es/docs/Learn/CSS/Styling_text/Styling_links)
 - [Tipos de letra para web](/es/docs/Learn/CSS/Styling_text/Web_fonts)
-- [Escribir una página de inicio para la comunidad escolar](/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage)
+- [Escribir una página de inicio para la comunidad escolar](/es/Learn/CSS/Styling_text/Typesetting_a_homepage)

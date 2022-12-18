@@ -1,14 +1,6 @@
 ---
 title: expresión class
 slug: Web/JavaScript/Reference/Operators/class
-tags:
-  - Classes
-  - ECMAScript6
-  - Expression
-  - JavaScript
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/class
 original_slug: Web/JavaScript/Referencia/Operadores/class
 ---
 

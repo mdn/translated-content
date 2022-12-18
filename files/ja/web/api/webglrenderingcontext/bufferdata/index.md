@@ -94,11 +94,7 @@ gl.getBufferParameter(gl.ARRAY_BUFFER, gl.BUFFER_USAGE);
 
 ## 仕様策定状況
 
-| 仕様                                                                                     | 策定状況                             | コメント                                                                                                                                                                                                                                                                                                                                                                                      |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WebGL', "#5.14.5", "bufferData")}}                             | {{Spec2('WebGL')}}             | 初回定義。                                                                                                                                                                                                                                                                                                                                                                                    |
-| {{SpecName('OpenGL ES 2.0', "glBufferData.xml", "glBufferData")}} | {{Spec2('OpenGL ES 2.0')}} | OpenGL API のマニュアルページ。                                                                                                                                                                                                                                                                                                                                                               |
-| {{SpecName('OpenGL ES 3.0', "glBufferData.xhtml", "glBufferData")}} | {{Spec2('OpenGL ES 3.0')}} | OpenGL ES 3 API (と同様の) マニュアルページ。 以下の新しい `target` バッファーを追加。 `gl.COPY_READ_BUFFER`, `gl.COPY_WRITE_BUFFER`, `gl.TRANSFORM_FEEDBACK_BUFFER`, `gl.UNIFORM_BUFFER`, `gl.PIXEL_PACK_BUFFER`, `gl.PIXEL_UNPACK_BUFFER` 以下の新しい `usage` ヒントを追加。 `gl.STATIC_READ`, `gl.DYNAMIC_READ`, `gl.STREAM_READ`, `gl.STATIC_COPY`, `gl.DYNAMIC_COPY`, `gl.STREAM_COPY`. |
+{{Specifications}}
 
 ## ブラウザーの対応
 

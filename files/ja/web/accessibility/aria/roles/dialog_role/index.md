@@ -110,9 +110,7 @@ slug: Web/Accessibility/ARIA/Roles/dialog_role
 
 ## 仕様
 
-| 仕様                                                 | 状態                     |
-| ---------------------------------------------------- | ------------------------ |
-| {{SpecName("ARIA","#dialog","dialog")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

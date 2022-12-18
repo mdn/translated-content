@@ -1,6 +1,8 @@
 ---
 title: KeyboardEvent.keyCode
 slug: Web/API/KeyboardEvent/keyCode
+l10n:
+  sourceCommit: ff3545b816d9a945d3793ecc330a3b6cbdc59c1c
 ---
 
 {{APIRef("UI Events")}}{{Deprecated_Header}}
@@ -16,7 +18,7 @@ slug: Web/API/KeyboardEvent/keyCode
 ## 例
 
 ```js
-window.addEventListener("keydown", function (event) {
+window.addEventListener("keydown", (event) => {
   if (event.defaultPrevented) {
     return; // 既定のアクションがキャンセルされている場合は何もしないようにします。
   }
@@ -55,7 +57,7 @@ IE はネイティブの仮想キーコードの値を `KeyboardEvent.keyCode` �
 
 Google Chrome、Chromium、Safari は入力された文字から値を決定する必要があります。入力文字が US キーボードレイアウトで入力できる場合、 US キーボードレイアウトの `keyCode` 値を使用します。
 
-Firefox 15 {{geckoRelease("15.0")}} からは、 Gecko はキーによって入力可能な ASCII 文字から `keyCode` 値を取得します。 shift 修飾子や ASCII 対応キーボードレイアウトであった場合も含みます。詳しくは以下のルールを参照してください。
+Firefox は、キーによって入力可能な ASCII 文字から `keyCode` 値を取得します。 shift 修飾子や ASCII 対応キーボードレイアウトであった場合も含みます。詳しくは以下のルールを参照してください。
 
 1. システムが Windows で、押されたキーのネイティブキーコードが a-z または 0-9 であることを示す場合、そのキーコードを使用します。
 2. システムが Mac で、押されたキーのネイティブキーコードが 0-9 である場合、そのキーコードを使用します。
@@ -65,29 +67,29 @@ Firefox 15 {{geckoRelease("15.0")}} からは、 Gecko はキーによって入�
 6. 押されたキーが、別の ASCII文字を Shift キー修飾で入力する場合、それに対応するキーコードを使用します。
 7. それ以外の場合、すなわち、押されたキーが Unicode 文字を入力する場合は以下の通り。
 
-    1. キーボードレイアウトが ASCII 対応の（ASCII アルファベットを入力できる）場合、 0 を使用するか、[下記の追加ルール](#keycode_of_punctuation_keys_on_some_keyboard_layout)で計算します。
-    2. それ以外の場合、つまりキーボードレイアウトが ASCII に対応していない場合は、最も優先度の高い環境にインストールされている ASCII に対応したキーボードレイアウトを使用します。
+   1. キーボードレイアウトが ASCII 対応の（ASCII アルファベットを入力できる）場合、 0 を使用するか、[下記の追加ルール](#keycode_of_punctuation_keys_on_some_keyboard_layout)で計算します。
+   2. それ以外の場合、つまりキーボードレイアウトが ASCII に対応していない場合は、最も優先度の高い環境にインストールされている ASCII に対応したキーボードレイアウトを使用します。
 
-        1. 代替キーボードレイアウトで押されたキーが ASCII のアルファベットまたは数字を入力する場合、そのキーコードを使用します。
-        2. それ以外の場合、 0 を使用するか、[下記の追加ルール](#keycode_of_punctuation_keys_on_some_keyboard_layout)で計算します。
+      1. 代替キーボードレイアウトで押されたキーが ASCII のアルファベットまたは数字を入力する場合、そのキーコードを使用します。
+      2. それ以外の場合、 0 を使用するか、[下記の追加ルール](#keycode_of_punctuation_keys_on_some_keyboard_layout)で計算します。
 
-Firefox 60 {{geckoRelease("60.0")}} からは、 Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規則で設定します（上記のリストのポイント 7.1 または 7.2 に到達したとき）。
+Gecko は区切り記号キーの `keyCode` 値を、できる限り以下の規則で設定します（上記のリストのポイント 7.1 または 7.2 に到達したとき）。
 
 > **警告:** これらの新しい追加ルールの目的は、米国式キーボードレイアウトの区切り記号キーに unicode 文字をマッピングしているユーザーが、 Firefox に対応したウェブアプリケーションを ASCII に対応したキーボードレイアウトのみ、または米国式キーボードレイアウトのみで使用できるようにするためです。そうでなければ、新しく割り当てられた `keyCode` 値が他のキーと衝突する可能性があります。例えば、アクティブなキーボードレイアウトがロシア語の場合、 `"Period"` キーと `"Slash"` キーの `keyCode` 値は**どちらも** `190` (`KeyEvent.DOM_VK_PERIOD`) になります。もし、これらのキーを区別する必要があるが、世界中の全てのキーボードレイアウトに自分で対応したくない場合は、おそらく {{domxref("KeyboardEvent.code")}} を使用した方が良いでしょう。
 
 1. macOS または Linux を使用している場合
 
-    1. アクティブなキーボードレイアウトが ASCII に対応したものではなく、代替の ASCII 対応のキーボードレイアウトが利用可能な場合。
+   1. アクティブなキーボードレイアウトが ASCII に対応したものではなく、代替の ASCII 対応のキーボードレイアウトが利用可能な場合。
 
-        1. もし、 ASCII に対応したキーボードレイアウトが、修飾されていないキーだけで ASCII 文字を生成する場合、その文字の `keyCode` を使用します。
-        2. もし、代替の ASCII に対応したキーボードレイアウトで、 Shift キーで修飾した ASCII 文字が生成された場合、シフトされた文字の `keyCode`を使用します。
-        3. それ以外の場合は、 US キーボードレイアウトがアクティブなときにキーが生成する ASCII 文字を `keyCode` に使用します。
+      1. もし、 ASCII に対応したキーボードレイアウトが、修飾されていないキーだけで ASCII 文字を生成する場合、その文字の `keyCode` を使用します。
+      2. もし、代替の ASCII に対応したキーボードレイアウトで、 Shift キーで修飾した ASCII 文字が生成された場合、シフトされた文字の `keyCode`を使用します。
+      3. それ以外の場合は、 US キーボードレイアウトがアクティブなときにキーが生成する ASCII 文字を `keyCode` に使用します。
 
-    2. それ以外の場合は、 US キーボードレイアウトがアクティブなときにキーが生成する ASCII 文字を `keyCode` に使用します。
+   2. それ以外の場合は、 US キーボードレイアウトがアクティブなときにキーが生成する ASCII 文字を `keyCode` に使用します。
 
 2. Windows を使用している場合
 
-    1. US キーボードレイアウトがアクティブなときに Windows の同じ仮想キーコードに割り当てられたキーによって生成される ASCII 文字を `keyCode` 値に使用します。
+   1. US キーボードレイアウトがアクティブなときに Windows の同じ仮想キーコードに割り当てられたキーによって生成される ASCII 文字を `keyCode` 値に使用します。
 
 <table class="no-markdown">
   <caption>

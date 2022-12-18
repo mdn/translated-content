@@ -32,7 +32,4 @@ slug: Web/API/Credential_Management_API
 
 ## 仕様書
 
-| 仕様書                                           | 状態                                         | 備考     |
-| ------------------------------------------------ | -------------------------------------------- | -------- |
-| {{SpecName('Credential Management')}} | {{Spec2('Credential Management')}} | 初回定義 |
-| {{SpecName('WebAuthn')}}                 | {{Spec2('WebAuthn')}}                 | 初回定義 |
+{{Specifications}}

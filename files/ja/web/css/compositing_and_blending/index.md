@@ -21,9 +21,7 @@ slug: Web/CSS/Compositing_and_Blending
 
 ## 仕様書
 
-| 仕様書                      | 状態                     | 備考     |
-| --------------------------- | ------------------------ | -------- |
-| {{SpecName("Compositing")}} | {{Spec2("Compositing")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

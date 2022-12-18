@@ -1,13 +1,6 @@
 ---
 title: Funciones Flecha
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript6
-  - Intermedio
-  - JavaScript
-  - Referencia
-  - función
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 original_slug: Web/JavaScript/Referencia/Funciones/Arrow_functions
 ---
 
@@ -542,9 +535,7 @@ setTimeout( () => {
 
 ## Especificaciones
 
-| Especificación                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Definición de función flecha')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

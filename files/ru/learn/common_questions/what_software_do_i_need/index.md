@@ -35,7 +35,7 @@ _Пока нет активного обучения._ [Пожалуйста, п
 
 Ниже скриншот продвинутого текстового редактора:
 
-![Screenshot of Notepad++.](https://mdn.mozillademos.org/files/8221/NotepadPlusPlus.png)
+![Screenshot of Notepad++.](notepadplusplus.png)
 
 ### Загрузка файлов в Интернете
 

@@ -21,9 +21,7 @@ embedArrayObj = document.plugins
 
 ## 仕様書
 
-| 仕様書                                                                                           | 状態                                 | 備考 |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ---- |
-| {{SpecName('HTML WHATWG', '#dom-document-plugins', 'Document.plugins')}} | {{ Spec2('HTML WHATWG') }} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

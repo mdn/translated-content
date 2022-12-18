@@ -6,13 +6,13 @@ original_slug: Creacion_de_plugins_OpenSearch_para_Firefox
 
 ## OpenSearch
 
-[Firefox 2](es/Firefox_2) admite el formato de descripción [OpenSearch](http://opensearch.org/) para complementos (_plugins_) de búsqueda. Aquellos complementos que usen [la sintaxis OpenSearch](http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document) son compatibles con Firefox e Internet Explorer 7. Por ello es el formato recomendado para cualquier nuevo desarrollo.
+[Firefox 2](/es/Firefox_2) admite el formato de descripción [OpenSearch](http://opensearch.org/) para complementos (_plugins_) de búsqueda. Aquellos complementos que usen [la sintaxis OpenSearch](http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document) son compatibles con Firefox e Internet Explorer 7. Por ello es el formato recomendado para cualquier nuevo desarrollo.
 
 Firefox admite además capacidades de búsqueda adicionales no incluidas en [la sintaxis de descripción OpenSearch](http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document), tales como las "sugerencias de búsqueda" y el elemento `SearchForm`. Este artículo se centrará en la creación de complementos compatibles con OpenSearch que empleen estas capacidades adicionales de Firefox.
 
 Además, los ficheros de descripción OpenSearch pueden ser anunciados dentro de una página HTML de forma que puedan ser descubiertos automáticamente por el navegador (esto se describe en [Detección automática de motores de búsqueda](#Autodiscovery_of_search_plugins).
 
-Por último, estos complementos, pueden ser instalados mediante código tal y como se describe en [Añadir motores de búsqueda desde páginas web](es/A%c3%b1adir_motores_de_b%c3%basqueda_desde_p%c3%a1ginas_web).
+Por último, estos complementos, pueden ser instalados mediante código tal y como se describe en [Añadir motores de búsqueda desde páginas web](/es/A%c3%b1adir_motores_de_b%c3%basqueda_desde_p%c3%a1ginas_web).
 
 ## El fichero de descripción OpenSearch
 
@@ -68,7 +68,7 @@ El fichero XML que describe un motor de búsqueda es bastante sencillo, tal y co
 
     El atributo `template` indica la forma en que se construirá la URL para la consulta. Dentro de este atributo se pueden introducir plantillas que se expanden de forma dinámica; la más habitual es `{searchTerms}`, la cual se expande a los términos de búsqueda introducidos por el usuario en la barra de búsquedas. En [OpenSearch 1.1 parameters](http://www.opensearch.org/Specifications/OpenSearch/1.1/Draft_3#OpenSearch_1.1_parameters) se describen los otros tipos admitidos.
 
-    Para consultas que devuelven sugerencias de búsqueda, la URL descrita en `template` se usa para obtener una lista de sugerencias en el formato JSON (JavaScript Object Notation). Para saber más sobre como incorporar sugerencias de búsqueda en el lado del servidor, ver [Permitir sugerencias en los plugins de búsqueda](es/Permitir_sugerencias_en_los_plugins_de_b%c3%basqueda).
+    Para consultas que devuelven sugerencias de búsqueda, la URL descrita en `template` se usa para obtener una lista de sugerencias en el formato JSON (JavaScript Object Notation). Para saber más sobre como incorporar sugerencias de búsqueda en el lado del servidor, ver [Permitir sugerencias en los plugins de búsqueda](/es/Permitir_sugerencias_en_los_plugins_de_b%c3%basqueda).
 
 <!---->
 
@@ -119,7 +119,7 @@ Si hay algún error en el fichero XML que describe el complemento, seguramente h
 
 - Asegúrate de que el documento XML de tu complemento está bien formado. Puedes comprobarlo cargando el fichero directamente en Firefox. Los _Ampersands_ en la plantilla de la URL deben ser escapadas con \&amp; y las etiquetas (_tags_) deben ser cerradas con una barra (`/`) al final o con la correspondiente etiqueta de cierre.
 - El atributo `xmlns` es importante. Sin él, puedes obtener un mensaje de error indicando que "Firefox no pudo descargar el motor de búsqueda desde: (URL)".
-- Ten en cuente que **debes** incluir una URL del tipo `text/html` — los complmentos que sólo incluyan URLs del tipo Atom o [RSS](es/RSS) (lo cual es válido, pero Firefox no admite) producirán el error "no pudo descargar el motor de búsqueda".
+- Ten en cuente que **debes** incluir una URL del tipo `text/html` — los complmentos que sólo incluyan URLs del tipo Atom o [RSS](/es/RSS) (lo cual es válido, pero Firefox no admite) producirán el error "no pudo descargar el motor de búsqueda".
 - Los _favicons_ obtenidos remotamente no deben ser mayores de 10KB (ver {{ Bug(361923) }}).
 
 Adicionalmente, el servicio de complementos de búsqueda suministra un mecanismo de registro (_logging_) que puede ser de utilidad a los desarrolladores de complementos. Usa _about:config_ para establecer la preferencia '`browser.search.log`' al valor `true`. La información de registro aparecerá en la consola de errores de Firefox (Tools->Error Console) cuando se añada un complemento de búsqueda.

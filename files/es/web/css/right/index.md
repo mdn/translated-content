@@ -12,7 +12,7 @@ La propiedad `right` especifica parte de la posición de un elemento (posicionad
 Para los elementos con una posición absoluta (aquellos que tienen la propiedad {{ Cssxref("position") }}`: absolute` ó `position: fixed`), la propiedad right determina la distancia entre el margen derecho del elemento y el borde derecho de su bloque contenedor.
 
 - {{ Xref_cssinitial() }}: {{ Cssxref("auto") }}
-- Se aplica a: [positioned elements](es/CSS/position)
+- Se aplica a: [positioned elements](/es/CSS/position)
 - {{ Xref_cssinherited() }}: no
 - Porcentajes: se refiere al ancho del bloque contenedor.
 - Media: {{ Xref_cssvisual() }}

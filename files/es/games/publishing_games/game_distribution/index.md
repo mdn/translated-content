@@ -1,19 +1,6 @@
 ---
 title: Distrbución de juegos
 slug: Games/Publishing_games/Game_distribution
-tags:
-  - CocoonIO
-  - Distribución
-  - Distribución de juegos para móviles
-  - HTML5
-  - JavaScript
-  - Juego de azar
-  - Phonegap
-  - Publicación de un juego
-  - Tiendas web
-  - juego
-  - juegos
-translation_of: Games/Publishing_games/Game_distribution
 ---
 
 {{GamesSidebar}}
@@ -28,7 +15,7 @@ Construir juegos con HTML5 te da ventajas, como:
 
 La tecnología en si es multiplataforma, por lo que puedes escribir el código una vez y apuntarle a múltiples dispositivos. Esto puede ir desde teléfonos inteligentes o tabletas de gama baja, portátiles y ordenadores de escritorio, a smart TVs, relojes o incluso una nevera si puede manejar un navegador lo suficientemente moderno.
 
-No necesitas tener equipos separados para trabajar en el mismo título que le apunta a diferentes plataformas, con solo una base de código para preocuparse. Puedes invertir más tiempo y dinero en [Promociones](/en-US/docs/Games/Techniques/Publishing_games/Game_promotion) y [Monetizar](/en-US/docs/Games/Techniques/Publishing_games/Game_monetization).
+No necesitas tener equipos separados para trabajar en el mismo título que le apunta a diferentes plataformas, con solo una base de código para preocuparse. Puedes invertir más tiempo y dinero en [Promociones](/es/docs/Games/Techniques/Publishing_games/Game_promotion) y [Monetizar](/es/docs/Games/Techniques/Publishing_games/Game_monetization).
 
 ### Actualizaciones instantáneas
 
@@ -66,9 +53,9 @@ Si estás trabajando en un proyecto paralelo solo por diversión, entonces dejar
 
 ### Editores y portales
 
-Como el nombre lo indica, los editores pueden manejar la publicación de tu juego por ti. Si debe ir de esa manera o no, depende de cuál sea tu plan para distribuir el juego: ¿Quieres venderlo donde sea posible, o quieres restringir su presencia a aquellos que han comprado una [licencia exclusiva](/en-US/docs/Games/Publishing_games/Game_monetization)? Tu decides. Considera varias opciones, experimenta y saca conclusiones. Los editores se explicarán con más detalle en el artículo de [monetización](/en-US/docs/Games/Techniques/Publishing_games/Game_monetization/).
+Como el nombre lo indica, los editores pueden manejar la publicación de tu juego por ti. Si debe ir de esa manera o no, depende de cuál sea tu plan para distribuir el juego: ¿Quieres venderlo donde sea posible, o quieres restringir su presencia a aquellos que han comprado una [licencia exclusiva](/es/docs/Games/Publishing_games/Game_monetization)? Tu decides. Considera varias opciones, experimenta y saca conclusiones. Los editores se explicarán con más detalle en el artículo de [monetización](/es/docs/Games/Techniques/Publishing_games/Game_monetization/).
 
-También hay portales independientes que recogen juegos interesantes como [HTML5Games.com](http://html5games.com/), [MarketJS.com](http://www.marketjs.com/) o [Clay.io](http://clay.io/) donde puedes mandar tus juegos y obtendrás algo de promoción natural debido al gran tráfico que esos sitios atraen. Algunos de estos toman tus archivos y los hostean en sus servidores, mientras que otros solo enlazan a su sitio web o insertan tu juego en su sitio. Tal exposición solo puede proporcionar [promoción](/en-US/docs/Games/Techniques/Publishing_games/Game_promotion/) para tu juego, o si tienes anuncios en el juego (u otra opción de conseguir dinero) también puede ofrecer monetización.
+También hay portales independientes que recogen juegos interesantes como [HTML5Games.com](http://html5games.com/), [MarketJS.com](http://www.marketjs.com/) o [Clay.io](http://clay.io/) donde puedes mandar tus juegos y obtendrás algo de promoción natural debido al gran tráfico que esos sitios atraen. Algunos de estos toman tus archivos y los hostean en sus servidores, mientras que otros solo enlazan a su sitio web o insertan tu juego en su sitio. Tal exposición solo puede proporcionar [promoción](/es/docs/Games/Techniques/Publishing_games/Game_promotion/) para tu juego, o si tienes anuncios en el juego (u otra opción de conseguir dinero) también puede ofrecer monetización.
 
 ### Tiendas web y nativas
 
@@ -107,7 +94,7 @@ Después de que hayas cubierto Steam, hay un montón de rumores alrededor de ini
 
 La web es la primera y la mejor opción para juegos de HTML5, pero si quieres buscar una audiencia más amplia y distribuir tu juego en un ecosistema cerrado, todavía puedes hacerlo empaquetándolo.
 
-Lo bueno es que no necesitas muchos equipos separados trabajando en el mismo juego para diferentes plataformas — puedes construirlo una vez y usar herramientas como [Phonegap](/en-US/docs/) o [CocoonIO](/en-US/docs/) para empaquetar el juego en tiendas nativas. Los paquetes resultantes suelen ser bastante fiables, pero todavía deberias probarlos y estar atento a pequeños problemas o errores que solucionar.
+Lo bueno es que no necesitas muchos equipos separados trabajando en el mismo juego para diferentes plataformas — puedes construirlo una vez y usar herramientas como [Phonegap](/es/docs/) o [CocoonIO](/es/docs/) para empaquetar el juego en tiendas nativas. Los paquetes resultantes suelen ser bastante fiables, pero todavía deberias probarlos y estar atento a pequeños problemas o errores que solucionar.
 
 ### Herramientas disponibles
 
@@ -126,4 +113,4 @@ Otras herramientas alternativas son:
 
 ## Resumen
 
-La distribución es el camino para dar acceso al mundo a tu juego. Hay muchas opciones disponibles y no hay una única respuesta en cuanto a cuál es la mejor. Cuando publiques el juego es momento de enfocarse en la [promoción](/en-US/docs/Games/Techniques/Publishing_games/Game_promotion/) — dejar que la gente sepa que tu juego existe. Sin promoción, ni siquiera serían capaces de aprender y jugar con él.
+La distribución es el camino para dar acceso al mundo a tu juego. Hay muchas opciones disponibles y no hay una única respuesta en cuanto a cuál es la mejor. Cuando publiques el juego es momento de enfocarse en la [promoción](/es/docs/Games/Techniques/Publishing_games/Game_promotion/) — dejar que la gente sepa que tu juego existe. Sin promoción, ni siquiera serían capaces de aprender y jugar con él.

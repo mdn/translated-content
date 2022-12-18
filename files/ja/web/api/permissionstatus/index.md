@@ -32,9 +32,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus
 
 ## 仕様
 
-| 仕様                                                                                                     | 状態                                 | コメント |
-| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Permissions API', '#status-of-a-permission', 'PermissionStatus')}} | {{Spec2('Permissions API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

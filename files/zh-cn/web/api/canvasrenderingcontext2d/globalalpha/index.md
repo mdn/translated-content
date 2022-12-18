@@ -126,7 +126,7 @@ for (i=0;i<7;i++){
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}
+{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}
 
 ## 规范描述
 

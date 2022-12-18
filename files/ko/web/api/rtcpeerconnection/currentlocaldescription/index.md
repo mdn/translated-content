@@ -4,9 +4,9 @@ slug: Web/API/RTCPeerConnection/currentLocalDescription
 translation_of: Web/API/RTCPeerConnection/currentLocalDescription
 ---
 
-{{WebRTCSidebar}}
+{{APIRef("WebRTC")}}
 
-읽기 속성인 **`RTCPeerConnection.currentLocalDescription`**은 가장 최근에 {{domxref("RTCPeerConnection")}}가 성공적으로 네고시에이션을 마치고 원격 피어와 연결된, 연결인터페이스의 로컬 엔드를 설명하는 {{domxref("RTCSessionDescription")}} 객체를 반환합니다. 이외에도 설명에 의해 offer 혹은 answer가 처음으로 인스턴스화 되면 ICE 에이전트에 의해 이미 생성됬을수도 있는 ICE candidate 목록이 포함되어 있습니다.
+읽기 속성인 **`RTCPeerConnection.currentLocalDescription`** 은 가장 최근에 {{domxref("RTCPeerConnection")}}가 성공적으로 네고시에이션을 마치고 원격 피어와 연결된, 연결인터페이스의 로컬 엔드를 설명하는 {{domxref("RTCSessionDescription")}} 객체를 반환합니다. 이외에도 설명에 의해 offer 혹은 answer가 처음으로 인스턴스화 되면 ICE 에이전트에 의해 이미 생성됬을수도 있는 ICE candidate 목록이 포함되어 있습니다.
 
 `currentLocalDescription`을 바꾸기 위해서는, 이 값을 설정하도록 연쇄 이벤트를 작동시키는 {{domxref("RTCPeerConnection.setLocalDescription()")}}를 호출하십시오. 이 연쇄 이벤트가 어떻게 값을 바꾸고, 왜 즉시 값이 바뀌지 않는지에 대해 궁금하다면, {{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Connectivity", "Pending and current descriptions")}}를 살펴보십시오.
 
@@ -54,4 +54,4 @@ else {
 
 - {{domxref("RTCPeerConnection.setLocalDescription()")}}, {{domxref("RTCPeerConnection.pendingLocalDescription")}}, {{domxref("RTCPeerConnection.localDescription")}}
 - {{domxref("RTCPeerConnection.setRemoteDescription()")}}, {{domxref("RTCPeerConnection.remoteDescription")}}, {{domxref("RTCPeerConnection.pendingRemoteDescription")}}, {{domxref("RTCPeerConnection.currentRemoteDescription")}}
-- [WebRTC](/ko/docs/Web/Guide/API/WebRTC)
+- [WebRTC](/ko/docs/Web/API/WebRTC_API)

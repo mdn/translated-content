@@ -1,7 +1,6 @@
 ---
 title: undefined
 slug: Glossary/undefined
-translation_of: Glossary/undefined
 ---
 
 Un valor **{{Glossary("primitivo")}}** automáticamente asignado a las **variables** que solo han sido declarados o a los **{{Glossary("Argument","argumentos")}}** formales para los cuales no existe argumentos reales.
@@ -10,5 +9,5 @@ Un valor **{{Glossary("primitivo")}}** automáticamente asignado a las **variabl
 
 ### Conocimientos generales
 
-- [Tipos de datos y estructuras de datos en JavaScript](/en-US/docs/Web/JavaScript/Data_structures)
+- [Tipos de datos y estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures)
 - [Valor undefined en Wikipedia](http://en.wikipedia.org/wiki/Undefined_value)

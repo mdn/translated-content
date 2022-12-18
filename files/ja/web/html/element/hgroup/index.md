@@ -128,9 +128,7 @@ slug: Web/HTML/Element/hgroup
 
 ## 仕様書
 
-| 仕様書                                                                                                       | 状態                             | 備考 |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-hgroup-element', '&lt;hgroup&gt;')}} | {{Spec2('HTML WHATWG')}} |      |
+{{Specifications}}
 
 ## アクセシビリティの考慮
 

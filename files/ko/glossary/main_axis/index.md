@@ -11,11 +11,11 @@ slug: Glossary/Main_Axis
 
 `row` 또는 `row-reverse`를 선택한 경우, 주축은 행을 따라 인라인 방향으로 진행합니다.
 
-![In this image the flex-direction is row which forms the main axis](https://mdn.mozillademos.org/files/15708/Basics1.png)
+![In this image the flex-direction is row which forms the main axis](basics1.png)
 
 `column` 또는 `column-reverse`인 경우, 주축은 페이지의 위에서 아래, 블록 방향으로 진행합니다.
 
-![](https://mdn.mozillademos.org/files/15709/Basics2.png)
+![](basics2.png)
 
 아이템의 `flex` 속성을 통하면, 컨테이너의 사용 가능한 공간을 그 아이템에 더 할당하는 방식으로 주축 방향 크기를 키울 수 있습니다. 아니면 `justify-content` 속성을 사용해 아이템 사이와 주위 여백을 조절할 수 있습니다.
 

@@ -166,7 +166,7 @@ P
 
 Este ejemplo muestra de una forma muy simple como los eventos se inician y son gestionados en el DOM. Cuando el cuerpo (_body_ ) de ese documento HTML se carga,_un evento listener es registrado con la columna superior de la TABLA. El evento listener maneja el evento ejecutando la función stopEvent, que cambia el valor en el final de la celda de la tabla._
 
-Sin embargo, stopEvent también llama a un método del objeto evento, [event.stopPropagation](es/DOM/event.stopPropagation), que mantiene el evento del burbujeo a continuación dentro del DOM. Note que la tabla misma tiene un manejador de evento [onclick](es/DOM/element.onclick) que muestra un mensaje cuando la tabla es seleccionada. Pero el método stopEvent ha detenido la propagación, y así despues los datos en la tabla son actualizados, la fase de evento es efectivamente finalizada, y un cuadro de alerta es mostrado para confirmar esto.
+Sin embargo, stopEvent también llama a un método del objeto evento, [event.stopPropagation](/es/DOM/event.stopPropagation), que mantiene el evento del burbujeo a continuación dentro del DOM. Note que la tabla misma tiene un manejador de evento [onclick](/es/DOM/element.onclick) que muestra un mensaje cuando la tabla es seleccionada. Pero el método stopEvent ha detenido la propagación, y así despues los datos en la tabla son actualizados, la fase de evento es efectivamente finalizada, y un cuadro de alerta es mostrado para confirmar esto.
 
 ```
 <html>
@@ -213,7 +213,7 @@ function load() {
 
 ### Ejemplo 6: Conseguir el estilo computado (getComputedStyle)
 
-Este ejemplo demuestra como el método [window.getComputedStyle](es/DOM/window.getComputedStyle) puedes utilizarse para obtener los estilos de un elemento que no son especificados en el atributo `style` o con JavaScript (por ejemplo, **`element.style.backgroundColor="rgb(173, 216, 230)"`**). Estos últimos tipos de estilos se pueden recuperar con el atributo [element.style](es/DOM/element.style), las propiedades del cual están en la [lista de propiedades de CSS](es/DOM/CSS) del DOM.
+Este ejemplo demuestra como el método [window.getComputedStyle](/es/DOM/window.getComputedStyle) puedes utilizarse para obtener los estilos de un elemento que no son especificados en el atributo `style` o con JavaScript (por ejemplo, **`element.style.backgroundColor="rgb(173, 216, 230)"`**). Estos últimos tipos de estilos se pueden recuperar con el atributo [element.style](/es/DOM/element.style), las propiedades del cual están en la [lista de propiedades de CSS](/es/DOM/CSS) del DOM.
 
 `getComputedStyle()` devuelve un objeto `ComputedCSSStyleDeclaration`, cuyas propiedades de estilo individuales pueden ser referenciadas con este método del objeto `getPropertyValue()`, el siguiente documento de ejemplo lo muestra.
 
@@ -273,7 +273,7 @@ height: 20px; max-width: 20px; }
 
 ### Ejemplo 7: Mostrar las propiedades del objeto de evento
 
-Este ejemplo utiliza métodos del DOM para mostrar todas las propiedades del [evento](es/DOM/event) de [window.onload](es/DOM/window.onload) y sus valores en una tabla. Muestra además una cómoda técnica del uso de un bucle***for...in*** para iterar sobre las propiedades de un objeto y conseguir sus valores.
+Este ejemplo utiliza métodos del DOM para mostrar todas las propiedades del [evento](/es/DOM/event) de [window.onload](/es/DOM/window.onload) y sus valores en una tabla. Muestra además una cómoda técnica del uso de un bucle***for...in*** para iterar sobre las propiedades de un objeto y conseguir sus valores.
 
 Las propiedades de los objetos de evento difieren bastante entre los navegadores, la [especificación W3C de los eventos del DOM 2](http://www.w3.org/TR/DOM-Level-2-Events/events.html) enumera las propiedades estándares, sin embargo algunos navegadores han extendido estas diferencias.
 
@@ -338,7 +338,7 @@ window.onload = function(event){
 
 ### Ejemplo 8: Utilización del interfaz de tabla del DOM
 
-La interfaz HTMLTableElement del DOM provee algunos métodos de conveniencia para crear y manipular tablas. Dos métodos usados frecuentemente son [`table.insertRow`](es/DOM/table.insertRow) y [`row.insertCell`](es/DOM/table/row.insertCell).
+La interfaz HTMLTableElement del DOM provee algunos métodos de conveniencia para crear y manipular tablas. Dos métodos usados frecuentemente son [`table.insertRow`](/es/DOM/table.insertRow) y [`row.insertCell`](/es/DOM/table/row.insertCell).
 
 Para agregar una columna y algunas celdas a una tabla existente:
 
@@ -366,6 +366,6 @@ for (var i=0; i<2; i++) {
 
 #### Notas
 
-- Una propiedad [`innerHTML`](es/DOM/element.innerHTML) de la tabla nunca debería ser utilizada para modificar una tabla, aunque puede utilizarla para escribir una tabla entera o el contenido de una celda.
-- Si los métodos Core del DOM[`document.createElement`](es/DOM/document.createElement) y [`element.appendChild`](es/DOM/element.appendChild) son utilizados para crear columnas y celdas, IE requiere que sean agregadas a un elemento tbody, mientras que otros navegadores permitirán agregar a un elemento de la tabla (las columnas serán agregadas al último elemento tbody).
-- Hay un número de otros métodos de conveniencia pertenecientes a la [interfaz de tabla](es/DOM/table#M.C3.A9todos) que pueden ser utilizados para crear y modificar tablas.
+- Una propiedad [`innerHTML`](/es/DOM/element.innerHTML) de la tabla nunca debería ser utilizada para modificar una tabla, aunque puede utilizarla para escribir una tabla entera o el contenido de una celda.
+- Si los métodos Core del DOM[`document.createElement`](/es/DOM/document.createElement) y [`element.appendChild`](/es/DOM/element.appendChild) son utilizados para crear columnas y celdas, IE requiere que sean agregadas a un elemento tbody, mientras que otros navegadores permitirán agregar a un elemento de la tabla (las columnas serán agregadas al último elemento tbody).
+- Hay un número de otros métodos de conveniencia pertenecientes a la [interfaz de tabla](/es/DOM/table#M.C3.A9todos) que pueden ser utilizados para crear y modificar tablas.

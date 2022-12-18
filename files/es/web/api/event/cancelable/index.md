@@ -22,7 +22,7 @@ event.cancelable;
 
 Si un evento puede ser cancelado o no, es algo que se determina en el momento en que el evento es inicializado.
 
-Para cancelar un evento, llama al método [preventDefault](es/DOM/event.preventDefault) en el evento. Esto evita que la tarea de implementación ejecute la acción por defecto asociada con el evento.
+Para cancelar un evento, llama al método [preventDefault](/es/DOM/event.preventDefault) en el evento. Esto evita que la tarea de implementación ejecute la acción por defecto asociada con el evento.
 
 ### Especificación
 

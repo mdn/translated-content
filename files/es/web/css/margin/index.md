@@ -127,4 +127,4 @@ Sin embargo, en navegadores antiguos como IE8-9, **flexbox** no está disponible
 
 ## Ver también
 
-- [Entendiendo el colapso de margen](es/docs/Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing)
+- [Entendiendo el colapso de margen](/es/docs/Web/CSS/CSS_Modelo_Caja/Mastering_margin_collapsing)

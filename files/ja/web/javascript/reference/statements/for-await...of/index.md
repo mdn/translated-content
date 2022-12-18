@@ -219,9 +219,7 @@ try {
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

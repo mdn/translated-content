@@ -1,11 +1,6 @@
 ---
 title: decodeURIComponent
 slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
-tags:
-  - JavaScript
-  - JavaScript Reference
-  - URI
-translation_of: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 original_slug: Web/JavaScript/Referencia/Objetos_globales/decodeURIComponent
 ---
 

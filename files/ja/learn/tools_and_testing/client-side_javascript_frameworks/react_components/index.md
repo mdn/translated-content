@@ -44,13 +44,13 @@ mkdir src/components
 touch src/components/Todo.js
 ```
 
-新しい  `Todo.js`  ファイルは今は空です。ファイルを開いて最初の行に次を入力してください。
+新しい `Todo.js`  ファイルは今は空です。ファイルを開いて最初の行に次を入力してください。
 
 ```js
 import React from "react";
 ```
 
-今回は `Todo` というコンポーネントを作る予定なので、以下のように  `Todo.js` にもそのためのコードを追加していきます。このコードでは、関数の定義とエクスポートを一行で定義しています。
+今回は `Todo` というコンポーネントを作る予定なので、以下のように `Todo.js` にもそのためのコードを追加していきます。このコードでは、関数の定義とエクスポートを一行で定義しています。
 
 ```js
 export default function Todo() {
@@ -87,7 +87,7 @@ export default function Todo() {
 
 > **メモ:** コンポーネントは常に何かを返さなければなりません。もし今後あなたが何も返さないコンポーネントをレンダリングしようとしたら、React はブラウザーにエラーを表示するでしょう。
 
-これで `Todo` コンポーネントは完成しました。`App.js` で、ファイルの先頭付近に次の行を追加して  `Todo`  をインポートします。
+これで `Todo` コンポーネントは完成しました。`App.js` で、ファイルの先頭付近に次の行を追加して `Todo`  をインポートします。
 
 <pre class="brush: js">import Todo from "./components/Todo";</pre>
 
@@ -162,7 +162,7 @@ export default function Todo(props) {
 
 ![Todo リストアプリには、異なる Todo ラベルが付けられており、それらはコンポーネントに props として渡されます。](todo-list-unique-todos.png)
 
-### それは  `completed` ですか？
+### それは `completed` ですか？
 
 元の静的リストでは、`Eat` だけがチェックされていました。もう一度言いますが、`<Todo />` コンポーネントを構成する UI のほとんどを再利用しつつ、一つだけ変更したいのです。これは別の props が良い仕事をしてくれます！ `App.js`  での各 `<Todo />` の呼び出しには、完了したことを示す新しい props を与えます。最初の (`Eat`) は `true` の値を持ち、残りは `false` にします。
 
@@ -217,7 +217,7 @@ JavaScript のコアな能力の一つであるイテレーション（反復処
 
 それぞれのタスクには現在、 3 つの情報が含まれています: 名前、チェック済みかどうか、そして一意な ID です。このデータはうまくオブジェクトに変換されます。複数のタスクがあるので、このデータを表現するにはオブジェクトの配列が有効です。
 
-`src/index.js` で、 import の後  `ReactDOM.render()`  より前の行で以下の  `const` を作成してください。
+`src/index.js` で、 import の後 `ReactDOM.render()` より前の行で以下の `const` を作成してください。
 
 ```js
 const DATA = [

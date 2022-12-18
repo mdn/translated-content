@@ -41,7 +41,7 @@ _このインターフェイスは、 {{domxref("XMLHttpRequestEventTarget")}} �
 - {{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}
   - : {{domxref("Document")}} でリクエストに対するレスポンスが入ったを返すか、またはリクエストが成功しなかった場合、まだ送信されていない場合、 XML または HTML として解釈できなかった場合は `null` を返します。
 - {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
-  - :  `unsigned short` でリクエストに対するレスポンスのステータスを返します。
+  - : `unsigned short` でリクエストに対するレスポンスのステータスを返します。
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
 
   - : {{domxref("DOMString")}} で HTTP サーバーから返ってきたレスポンス文字列を返します。 {{domxref("XMLHttpRequest.status")}} とは異なり、("`200 OK`" のような) レスポンスメッセージの完全な文が含まれています。

@@ -1,12 +1,6 @@
 ---
 title: Set.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/Set/has
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Prototype
-  - set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Set/has
 ---
 

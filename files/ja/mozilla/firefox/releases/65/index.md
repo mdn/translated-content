@@ -1,58 +1,31 @@
 ---
 title: Firefox 65 for developers
 slug: Mozilla/Firefox/Releases/65
+l10n:
+  sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
 {{FirefoxSidebar}}
 
 この記事では、開発者に影響を与える Firefox 65 の変更点について説明します。Firefox 65 は 2019 年 1 月 29 日に出荷されました。
 
-## Web 開発者のための変更
+## ウェブ開発者のための変更
 
 ### 開発者ツール
 
-- [Flexbox インスペクター](/ja/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts) をデフォルトで有効にしました。
-- [JavaScript デバッガー](/ja/docs/Tools/Debugger) で、XHR のブレークポイントをサポートしました ({{bug(821610)}})。
-- アクセシビリティツリーでアイテムを右クリックすると、JSON ビューアに移動して [ツリーを JSON として表示](/ja/docs/Tools/Accessibility_inspector#Print_accessibility_tree_to_json) できます。
-- アクセシビリティピッカーの [色のコントラスト](/ja/docs/Tools/Accessibility_inspector#Color_Contrast) 表示機能を、文字列の背景が複雑 (例えばグラデーションや複雑な画像) である場合はコントラスト値の範囲を表示するように改良しました。
-- [ネットワークモニター](/ja/docs/Tools/Network_Monitor) のヘッダータブに、選択した要求のリファラーポリシーを表示するようになりました ({{bug(1496742)}})。
+- [Flexbox インスペクター](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html) をデフォルトで有効にしました。
+- [JavaScript デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) で、XHR のブレークポイントをサポートしました ({{bug(821610)}})。
+- アクセシビリティツリーでアイテムを右クリックすると、JSON ビューアに移動して [ツリーを JSON として表示](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#print-accessibility-tree-to-json) できます。
+- アクセシビリティピッカーの [色のコントラスト](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#color-contrast) 表示機能を、文字列の背景が複雑 (例えばグラデーションや複雑な画像) である場合はコントラスト値の範囲を表示するように改良しました。
+- [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) のヘッダータブに、選択した要求のリファラーポリシーを表示するようになりました ({{bug(1496742)}})。
 - スタックトレースを表示するとき (例えばコンソールのログや JavaScript デバッガー)、自身のコードに集中できるようにするため、フレームワークのメソッドの呼び出しを認識してデフォルトで折りたたむようにしました。
-- ネイティブの端末と同じように、JavaScript コンソールの履歴を見つけるための逆検索が可能になりました (Windows/Linux では&#x20;
-
-  <kbd>F9</kbd>
-
-  、macOS では&#x20;
-
-  <kbd>Ctrl</kbd>
-
-  &#x20;\+&#x20;
-
-  <kbd>R</kbd>
-
-  &#x20;を押下して検索文字列を入力します。さらに&#x20;
-
-  <kbd>Ctrl</kbd>
-
-  &#x20;\+&#x20;
-
-  <kbd>R</kbd>
-
-  /
-
-  <kbd>Ctrl</kbd>
-
-  &#x20;\+&#x20;
-
-  <kbd>S</kbd>
-
-  &#x20;で結果を切り替えます)。
-
-- JavaScript コンソールの `$0` ショートカット (ページで現在調査している要素を参照します) でオートコンプリートが可能になりました。例えば `$0.textContent` のようなプロパティのオートコンプリート候補を得るために `$0.te` と入力できます。
+- ネイティブの端末と同じように、JavaScript コンソールの履歴を見つけるための逆検索が可能になりました (Windows/Linux では `F9`、macOS では `Ctrl` + `R` を押下して検索文字列を入力します。さらに `Ctrl` + `R`/`Ctrl` + `S` で結果を切り替えます)。
+- JavaScript コンソールの `$0` ショートカット (ページで現在調査している要素を参照します) で自動補完が可能になりました。例えば `$0.textContent` のようなプロパティの自動補完候補を得るために `$0.te` と入力できます。
 - インスペクターのルールビューで編集した箇所が、変更点パネルに表示されるようになりました ({{bug(1503920)}})。
 
 ### HTML
 
-- イベントは無効な HTML 要素にディスパッチされるようになりました。例えば、`disabled` 属性を持つ {{htmlelement("button")}}、{{htmlelement("fieldset")}}、{{htmlelement("input")}}、{{htmlelement("select")}}、{{htmlelement("textarea")}} 要素に設定されています ({{bug(329509)}})。
+- イベントが無効な HTML 要素に配信されるようになりました。例えば、 {{htmlelement("button")}}、{{htmlelement("fieldset")}}、{{htmlelement("input")}}、{{htmlelement("select")}}、{{htmlelement("textarea")}} 要素に `disabled` 属性が設定されていた場合です ({{bug(329509)}})。
 - Chrome や Safari に合わせて、{{htmlelement("iframe")}} 要素で `src` 属性を削除すると `about:blank` を読み込むようにしました ({{bug(1507842)}})。以前は、`src` を削除しても `iframe` の内容に影響はありませんでした。
 - {{htmlelement("script")}} 要素で {{htmlattrxref("referrerpolicy", "script")}} 属性をサポートしました ({{bug(1460920)}})。
 
@@ -62,13 +35,13 @@ slug: Mozilla/Firefox/Releases/65
 - 値が `auto` である {{cssxref("scrollbar-color")}} が、2 つの色ではなく `auto` として解釈するようになりました ({{bug(1501418)}})。
 - `break-*` プロパティを実装して、古い `page-break-*` プロパティをそれらの別名にしました ({{bug(775618)}}):
 
-  - {{cssxref("page-break-before")}} は {{cssxref("break-before")}} の別名です。
-  - {{cssxref("page-break-after")}} は {{cssxref("break-after")}} の別名です。
-  - {{cssxref("page-break-inside")}} は {{cssxref("break-inside")}} の別名です。
+  - {{cssxref("page-break-before")}} は {{cssxref("break-before")}} の別名になりました。
+  - {{cssxref("page-break-after")}} は {{cssxref("break-after")}} の別名になりました。
+  - {{cssxref("page-break-inside")}} は {{cssxref("break-inside")}} の別名になりました。
 
 - {{cssxref("overflow-wrap")}} プロパティの値 `anywhere` を実装しました ({{bug(1505786)}})。
-- 新しいステップ位置のキーワードである `jump-start`、`jump-end`、`jump-none`、`jump-both` ([`steps()` タイミング関数](</ja/docs/Web/CSS/single-transition-timing-function#The_steps()_class_of_timing_functions>) 内で使用可能) を実装しました ({{bug(1496619)}})。これは `frames()` タイミング関数の削除と同時に行いました。この関数は過去に同様の機能を実装していたものであり、非推奨になりました。
-- ほかのブラウザーとの互換性のために、{{cssxref("appearance", "-webkit-appearance")}} で新しい値をいくつか追加しました。特に、以下の値です:
+- 新しいステップ位置のキーワードである `jump-start`、`jump-end`、`jump-none`、`jump-both` ([`steps()` タイミング関数](</ja/docs/Web/CSS/easing-function#the_steps()_class_of_timing_functions>) 内で使用可能) を実装しました ({{bug(1496619)}})。これは `frames()` タイミング関数の削除と同時に行いました。この関数は過去に同様の機能を実装していたものであり、非推奨になりました。
+- ほかのブラウザーとの互換性のために、{{cssxref("appearance", "-webkit-appearance")}} で新しい値をいくつか追加しました。特に、以下の値です。
 
   - `meter`。これはユーザーエージェントのスタイルシートで、{{htmlelement("meter")}} 要素のデフォルトの値として使用されます。既存の値 `meterbar` は、`meter` の別名になりました ({{bug(1501483)}})。
   - `progress-bar`。これはユーザーエージェントのスタイルシートで、{{htmlelement("progress")}} 要素のデフォルトの値として使用されます。既存の値 `progressbar` は、`progress-bar` の別名になりました ({{bug(1501506)}})。
@@ -79,7 +52,8 @@ slug: Mozilla/Firefox/Releases/65
   - 要素で `user-select: all` を設定したとき、子孫要素で設定した `user-select` のほかの値を上書きしないようになりました。例えば、以下のコードをご覧ください:
 
     ```html
-    <div style="-webkit-user-select: all">All
+    <div style="-webkit-user-select: all">
+      All
       <div style="-webkit-user-select: none">None</div>
     </div>
     ```
@@ -108,7 +82,7 @@ _変更なし_
 - 文字列の {{jsxref("String/length","length","","1")}} の最大値を `2**28 - 1` (\~256MB) から `2**30 - 2` (\~1GB) に変更しました ({{bug(1509542)}})。
 - 常にトップレベルのグローバルオブジェクトを参照する {{jsxref("globalThis")}} プロパティを実装しました ({{bug(1317422)}})。
 
-### APIs
+### API
 
 #### 新しい API
 
@@ -120,18 +94,18 @@ _変更なし_
 - {{domxref("Performance.toJSON()")}} を {{domxref("Web_Workers_API", "Web Workers", "", "1")}} に公開しました ({{bug(1504958)}})。
 - {{domxref("XMLHttpRequest")}} 要求で、要求した content type が `Blob` かつ要求メソッドが `GET` ではない場合に、`NetworkError` が発生するようになりました ({{bug(1502599)}})。
 - {{domxref("Fullscreen API", "", "", "1")}} で、`-moz-` 接頭辞がつく多くの機能が非推奨になりました。また、これらを発見すると JavaScript コンソールで非推奨の警告を表示するようになりました ({{bug(1504946)}})。
-- {{domxref("WindowOrWorkerGlobalScope.createImageBitmap", "createImageBitmap()")}} で、SVG 画像 ({{domxref("SVGImageElement")}}) を画像のソースとしてサポートしました。
+- {{domxref("createImageBitmap()")}} で、SVG 画像 ({{domxref("SVGImageElement")}}) を画像のソースとしてサポートしました。
 
-#### DOM events
+#### DOM イベント
 
 - 今後、{{domxref("Window.open()")}} はイベントごとに 1 回だけ呼び出し可能になります ({{bug(675574)}})。
-- CJKT ユーザーに対してブラウザー間の互換性を高めるため、IME で変換している間に [`keyup`](/ja/docs/Web/Events/keyup) および [`keydown`](/ja/docs/Web/Events/keydown) イベントが発生するようになりました ({{bug(354358)}})。
+- CJKT ユーザーに対してブラウザー間の互換性を高めるため、IME で変換している間に [`keyup`](/ja/docs/Web/API/Element/keyup_event) および [`keydown`](/ja/docs/Web/API/Element/keydown_event) イベントが発生するようになりました ({{bug(354358)}})。
 
-#### Web workers
+#### ウェブワーカー
 
 - {{domxref("SharedWorkerGlobalScope.onconnect")}} のイベントオブジェクトが {{domxref("MessageEvent")}} のインスタンスになりました。また、`data` プロパティが `null` からから文字列に変わりました ({{bug(1508824)}})。
 
-#### Fetch と Service workers
+#### フェッチとサービスワーカー
 
 - {{domxref("Response.redirect()")}} メソッドが、最初の引数で有効な URL が指定されていない場合に、正しく `TypeError` を発生させるようになりました ({{bug(1503276)}})。
 - {{domxref("ServiceWorkerContainer.register()")}} および {{domxref("WorkerGlobalScope.importScripts()")}} (Service worker で使用している場合) メソッドが、有効な [JavaScript MIME type](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#textjavascript) のファイルを受け入れるようになりました ({{bug(1354577)}})。
@@ -139,10 +113,10 @@ _変更なし_
 - {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} および {{domxref("ServiceWorkerContainer.onmessageerror")}} ハンドラープロパティを実装しました ({{bug(1399446)}})。
 - {{HTTPMethod("HEAD")}} または {{HTTPMethod("GET")}} メソッドの Fetch リクエストで、{{httpheader("Origin")}} ヘッダーを設定しないようにしました ({{bug(1508661)}})。
 
-#### Media, Web Audio, および WebRTC
+#### メディア、ウェブオーディオ、WebRTC
 
 - {{domxref("WebRTC API", "WebRTC", "", "1")}} の {{domxref("RTCIceCandidateStats")}} ディクショナリーを、最新の仕様に合わせて更新しました ({{bug(1324788)}}、{{bug(1489040)}})。
-- {{domxref("MediaRecorder")}} の `pause` および `resume` イベント (また、対応するイベントハンドラープロパティの {{domxref("MediaRecorder.onpause")}} および {{domxref("MediaRecorder.onresume")}}) は、ブラウザーの互換性では実装済みとしていましたが、以前は実装されていませんでした。これらを実装しました ({{bug(1458538)}}, {{bug(1514016)}})。
+- {{domxref("MediaRecorder")}} の `pause` および `resume` イベント (また、対応するイベントハンドラープロパティ) は、ブラウザーの互換性では実装済みとしていましたが、以前は実装されていませんでした。これらを実装しました ({{bug(1458538)}}, {{bug(1514016)}})。
 
 #### Canvas と WebGL
 
@@ -150,31 +124,11 @@ _変更なし_
 
 #### 廃止
 
-- [Mutation events](/ja/docs/Web/Guide/Events/Mutation_events) を、shadow trees で無効化しました ({{bug(1489858)}})。
+- [Mutation events](/ja/docs/Web/API/MutationEvent) を、シャドウツリーで無効化しました ({{bug(1489858)}})。
 - {{domxref("MediaStream")}} の非標準プロパティである `currentTime` を削除しました ({{bug(1502927)}})。
 - 設定項目 `dom.webcomponents.shadowdom.enabled` および `dom.webcomponents.customelements.enabled` を削除しました。Shadow DOM および Custom Elements は `about:config` で無効化できません ({{bug(1503019)}})。
 - 非標準の DOM `text` イベント (ブラウザーのエディター UI に、IME のコンポジション文字列や選択範囲を伝えるために発生します) を削除しました ({{bug(1288640)}})。
-- [non-printable keys](</ja/docs/Web/API/KeyboardEvent/keyCode#Non-printable_keys_(function_keys)>) では {{event("keypress")}} イベントが発生しなくなりました ({{bug(968056)}})。ただし&#x20;
-
-  <kbd>Enter</kbd>
-
-  &#x20;キーと、
-
-  <kbd>Shift</kbd>
-
-  &#x20;\+&#x20;
-
-  <kbd>Enter</kbd>
-
-  &#x20;および&#x20;
-
-  <kbd>Ctrl</kbd>
-
-  &#x20;\+&#x20;
-
-  <kbd>Enter</kbd>
-
-  &#x20;の組み合わせは除きます (これらはブラウザー間の互換性のために維持します)。
+- {{domxref("Element/keypress_event", "keypress")}} イベントが[非表示キー](</ja/docs/Web/API/KeyboardEvent/keyCode#non-printable_keys_(function_keys)>) では 発生しなくなりました ({{bug(968056)}})。ただし `Enter` キーと、 `Shift` + `Enter` および `Ctrl` + `Enter` の組み合わせは除きます (これらはブラウザー間の互換性のために維持します)。
 
 ### セキュリティ
 
@@ -215,8 +169,6 @@ _変更なし_
 
 ### API の変更
 
-#### メニュー
-
 #### タブ
 
 - {{WebExtAPIRef("tabs", "tabs API", "", "1")}} を、タブサクセサーをサポートするように強化しました。タブがサクセサーを持つことができ、サクセサーはタブが閉じられたときにアクティブになるタブの ID です ({{bug(1500479)}}。詳しくは [this blog post](https://qiita.com/piroor/items/ea7e727735631c45a366) をご覧ください)。特に、以下の値です:
@@ -234,6 +186,10 @@ _変更なし。_
 ### その他
 
 - [Webextension themes](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) の `headerURL`/`theme_frame` プロパティを、Android 版 Firefox でサポートしました ({{bug(1429488)}})。
+
+## 関連情報
+
+- Hacks の関連記事: [Firefox 65: WebP support, Flexbox Inspector, new tooling & platform updates](https://hacks.mozilla.org/2019/01/firefox-65-webp-flexbox-inspector-new-tooling/)
 
 ## 旧バージョン
 

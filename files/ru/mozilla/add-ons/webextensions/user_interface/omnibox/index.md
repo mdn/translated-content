@@ -11,7 +11,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
 
 Используя {{WebExtAPIRef("omnibox")}} API, расширения могут взаимодействовать с адресной строкой и заполнять её выпадающий список предложений своими значениями, после введения пользователем определённого ключевого слова.
 
-![Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions.](https://mdn.mozillademos.org/files/15749/omnibox_example_small.png)
+![Example showing the result of the firefox_code_search WebExtension's customization of the address bar suggestions.](omnibox_example_small.png)
 
 Это могло бы позволить вам написать расширение, которое, например, искало бы бесплатные книги в электронной библиотеке, или как в примере выше, строки кода из репозитория.
 
