@@ -443,7 +443,7 @@ self.addEventListener("activate", (event) => {
 
 - [Chrome](https://www.chromium.org/blink/serviceworker/service-worker-faq/)
 - [Firefox](https://firefox-source-docs.mozilla.org/devtools-user/application/service_workers/index.html)
-  - Il est possible de réinitialiser les  <i lang="en">service workers</i> et leurs caches pour un site en utilisant le menu «&nbsp;Oublier ce site&nbsp;» dans l'historique, le bouton Gérer les données&nbsp;» dans les préférences ou le bouton «&nbsp;Effacer des données&nbsp;» qu'il est possible d'ajouter à [la barre d'outils en la personnalisant](https://support.mozilla.org/fr/kb/personnaliser-boutons-barres-outils-firefox).
+  - Il est possible de réinitialiser les <i lang="en">service workers</i> et leurs caches pour un site en utilisant le menu «&nbsp;Oublier ce site&nbsp;» dans l'historique, le bouton Gérer les données&nbsp;» dans les préférences ou le bouton «&nbsp;Effacer des données&nbsp;» qu'il est possible d'ajouter à [la barre d'outils en la personnalisant](https://support.mozilla.org/fr/kb/personnaliser-boutons-barres-outils-firefox).
 - [Edge](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/service-workers/)
 
 ## Voir aussi
