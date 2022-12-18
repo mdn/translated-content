@@ -1,8 +1,8 @@
 ---
-title: Utiliser les Service Workers
+title: Utiliser les service workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 l10n:
-  sourceCommit: 1a2274453f55f4305809e0463fea71bd266b1bf8
+  sourceCommit: c3f5ace1f341eee8959790046bb887ecb3c991f3
 ---
 
 {{DefaultAPISidebar("Service Workers API")}}
@@ -13,11 +13,9 @@ Dans cet article, nous aborderons les notions pour vous permettre de démarrer a
 
 Un problème qui se pose depuis plusieurs années sur le Web est la perte de connexion au réseau. Une application web, si performante soit elle, fournira un service déplorable si on ne peut pas la télécharger. Plusieurs tentatives ont eu lieu pour résoudre ce problème et certains aspects ont été réglés. Toutefois, il était encore difficile de bien contrôler la mise en cache de données et de gérer l'interception de requêtes.
 
-Les <i lang="en">service workers</i> aident à résoudre ces problème. En utilisant un <i lang="en">service worker</i>, on peut facilement mettre en place une application qui utilise des fichiers en cache et ainsi fournir des fonctionnalités, même hors ligne, avant d'obtenir des données depuis le réseau. Ce qui est possible avec les applications natives devient possible avec les applications web.
+Les <i lang="en">service workers</i> aident à résoudre ces problème. En utilisant un <i lang="en">service worker</i>, on peut mettre en place une application qui utilise des fichiers en cache et ainsi fournir des fonctionnalités, même hors ligne, avant d'obtenir des données depuis le réseau. Ce qui est possible avec les applications natives devient possible avec les applications web.
 
 Un <i lang="en">service worker</i> fonctionne comme un serveur intermédiaire ("proxy"), permettant de modifier les requêtes et les réponses en utilisant les éléments qu'il a en cache.
-
-> **Note :** Avant l'apparition des <i lang="en">service workers</i>, l'API AppCache avait été implémentée pour essayer de résoudre ces problèmes. Elle a depuis été dépréciée et retirée des navigateurs et ne devrait donc plus être utilisée.
 
 ## Mise en place pour manipuler les <i lang="en">service workers</i>
 
@@ -27,29 +25,27 @@ Les <i lang="en">service workers</i> sont présents par défaut dans les navigat
 
 Lors de la mise en place d'un <i lang="en">service worker</i>, on a généralement les étapes suivantes&nbsp;:
 
-1. L'URL du <i lang="en">service worker</i> est récupérée et enregistrée grâce à [`serviceWorkerContainer.register()`](/fr/docs/Web/API/ServiceWorkerContainer/register).
-2. Si cela fonctionne, le <i lang="en">service worker</i> est exécuté dans une portée [`ServiceWorkerGlobalScope`](/fr/docs/Web/API/ServiceWorkerGlobalScope)&nbsp;: il s'agit d'un type de contexte de <i lang="en">worker</i> particulier, qui s'exécute en dehors du <i lang="en">thread</i> principal, sans accès au DOM.
-3. Le <i lang="en">service worker</i> est alors prêt à traiter des évènements.
-4. Une tentative d'installation du <i lang="en">service worker</i> a lieu lorsque la personne à l'une des pages contrôlées par le <i lang="en">service worker</i>. Un évènement `install`est toujours le premier évènement envoyé à un <i lang="en">service worker</i> (et peut être utilisé pour remplir une base de données IndexedDB, et mettre en cache des fichiers). Pendant cette étape, l'application prépare ce qui doit l'être pour fonctionner hors ligne.
-5. Lorsque le gestionnaire d'évènements `oninstall` a terminé, on considère que le <i lang="en">service worker</i> est installé.
-6. Arrive alors l'activation. Lorsque le <i lang="en">service worker</i> est installé, il reçoit un évènement `activate`. On utilise principalement `onactivate` pour nettoyer les ressources utilisées par les versions précédentes d'un <i lang="en">service worker</i>.
-7. Le <i lang="en">service worker</i> contrôlera alors les pages qui ont été ouvertes après que la fonction `register()` a fini son exécution. Autrement dit, les documents devront être rechargés afin d'être contrôlé, car l'état de contrôle d'un document avec ou sans <i lang="en">service worker</i> est déterminé à son chargement et reste ainsi pendant sa durée de vie.
+1. Le code du <i lang="en">service worker</i> est récupérée et enregistrée grâce à [`serviceWorkerContainer.register()`](/fr/docs/Web/API/ServiceWorkerContainer/register). Si cela fonctionne, le <i lang="en">service worker</i> est exécuté dans une portée [`ServiceWorkerGlobalScope`](/fr/docs/Web/API/ServiceWorkerGlobalScope)&nbsp;: il s'agit d'un type de contexte de <i lang="en">worker</i> particulier, qui s'exécute en dehors du <i lang="en">thread</i> principal, sans accès au DOM. Le <i lang="en">service worker</i> est alors prêt à traiter des évènements.
+2. L'installation se déroule alors. Un évènement `install`est toujours le premier évènement envoyé à un <i lang="en">service worker</i> (et peut être utilisé pour remplir une base de données IndexedDB, et mettre en cache des fichiers). Pendant cette étape, l'application prépare ce qui doit l'être pour fonctionner hors ligne.
+3. Lorsque le gestionnaire d'évènements `oninstall` a terminé, on considère que le <i lang="en">service worker</i> est installé. À cet instant, une version précédente du <i lang="en">service worker</i> peut toujours être active et contrôler les pages ouvertes. Comme on ne veut pas que deux versions différentes du même <i lang="en">service worker</i> s'exécutent au même moment, la nouvelle version n'est pas encore active.
+4. Une fois que toutes les pages contrôlées par l'ancienne version du <i lang="en">service worker</i> sont fermées, on peut alors enlever l'ancienne version. Le nouveau <i lang="en">service worker</i> installé reçoit un évènement `activate`. On utilise principalement `activate` pour nettoyer les ressources utilisées par les versions précédentes d'un <i lang="en">service worker</i>. Le nouveau <i lang="en">service worker</i> peut appeler [`skipWaiting()`](/fr/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting) pour demander l'activation immédiate, sans attendre la fermeture des pages ouvertes. Le nouveau <i lang="en">service worker</i> recevra alors l'évènement `activate` immédiatement, et prendra le contrôle des pages ouvertes concernées.
+5. Le <i lang="en">service worker</i> contrôlera alors les pages qui ont été ouvertes après que la fonction `register()` a fini son exécution. Autrement dit, les documents devront être rechargés afin d'être contrôlé, car l'état de contrôle d'un document avec ou sans <i lang="en">service worker</i> est déterminé à son chargement et reste ainsi pendant sa durée de vie. Pour surcharger ce comportement par défaut et contrôler les pages ouvertes, un <i lang="en">service worker</i> peut appeler [`clients.claim()`](/fr/docs/Web/API/Clients/claim).
 
-![Diagramme illustrant le cycle de vie d'un service worker](sw-lifecycle.png)
+![Diagramme illustrant le cycle de vie d'un service worker](sw-lifecycle.svg)
 
 Voici les évènements disponibles pour un <i lang="en">service worker</i>&nbsp;:
 
-- `install`
-- `activate`
-- `message`
+- [`install`](/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event)
+- [`activate`](/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event)
+- [`message`](/fr/docs/Web/API/ServiceWorkerGlobalScope/message_event)
 - Évènements fonctionnels
-  - `fetch`
-  - `sync`
-  - `push`
+  - [`fetch`](/fr/docs/Web/API/ServiceWorkerGlobalScope/fetch_event)
+  - [`sync`](/fr/docs/Web/API/ServiceWorkerGlobalScope/sync_event)
+  - [`push`](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event)
 
 ## Démonstration
 
-Pour illustrer les bases de l'enregistrement et de l'installation d'un <i lang="en">service worker</i>, nous avons créé une application d'exemple intitulée [simple-service-worker](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker), qui est une galerie d'images de Lego Star Wars. Elle utilise une fonction à base de promesses pour lire les données des images depuis un objet JSON et charger les images avec [`fetch()`](/fr/docs/Web/API/Fetch_API/Using_Fetch) avant de les afficher sur une ligne dans la page. L'exemple n'utilise que des ressources statiques pour rester simple. Nous verrons aussi l'enregistrement, l'installation et l'activation d'un <i lang="en">service worker</i>.
+Pour illustrer les bases de l'enregistrement et de l'installation d'un <i lang="en">service worker</i>, nous avons créé une application d'exemple intitulée [simple-service-worker](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker), qui est une galerie d'images de Lego Star Wars. Elle utilise une fonction à base de promesses pour lire les données des images depuis un objet JSON et charger les images avec [`fetch()`](/fr/docs/Web/API/Fetch_API/Using_Fetch) avant de les afficher sur une ligne dans la page. L'exemple n'utilise que des ressources statiques. Nous verrons aussi l'enregistrement, l'installation et l'activation d'un <i lang="en">service worker</i>.
 
 ![Les mots Star Wars suivis par une image du personnage de Dark Vador en Lego](demo-screenshot.png)
 
@@ -85,10 +81,10 @@ registerServiceWorker();
 ```
 
 1. Le bloc `if` teste la présence de la fonctionnalité pour s'assurer que les <i lang="en">service workers</i> sont bien pris en charge avant de tenter l'enregistrement.
-2. Ensuite, on utilise la fonction [`ServiceWorkerContainer.register()`](/fr/docs/Web/API/ServiceWorkerContainer/register) pour enregistrer le <i lang="en">service worker</i> pour ce site. Il s'agit ici d'un simple fichier JavaScript. Attention, l'URL du fichier ciblé est relative à l'origine de la page et pas à l'URL du fichier JavaScript qui la référence.
+2. Ensuite, on utilise la fonction [`ServiceWorkerContainer.register()`](/fr/docs/Web/API/ServiceWorkerContainer/register) pour enregistrer le <i lang="en">service worker</i> pour ce site. Il s'agit ici d'un fichier JavaScript. Attention, l'URL du fichier ciblé est relative à l'origine de la page et pas à l'URL du fichier JavaScript qui la référence.
 3. Le paramètre `scope` est optionnel et peut être utilisé afin d'indiquer le sous-ensemble du contenu qu'on veut contrôler avec le <i lang="en">service worker</i>. Ici, nous avons indiqué '`'/'`, ce qui représente tout le contenu situé sous l'origine de l'application. Si ce paramètre est absent, la valeur par défaut qui sera utilisée sera également '`'/'` (nous l'avons inclus ici à des fins d'explication).
 
-Cela permet d'enregistrer un <i lang="en">service worker</i> qui s'exécute dans un contexte de <i lang="en">worker</i> et n'a donc pas accès au DOM. On exécute ensuite du code dans le <i lang="en">service worker</i> en dehors des pages normales pour contrôler son chargement.
+Cela permet d'enregistrer un <i lang="en">service worker</i> qui s'exécute dans un contexte de <i lang="en">worker</i> et n'a donc pas accès au DOM.
 
 Un seul <i lang="en">service worker</i> peut contrôler de nombreuses pages. Chaque fois qu'une page concernée par la portée du <i lang="en">service worker</i> est chargée, le <i lang="en">service worker</i> est installé pour cette page et s'en occupe. Il faut donc faire attention aux variables globales dans le script d'un <i lang="en">service worker</i>, car chaque page ne récupère un exemplaire séparé distinct.
 
@@ -150,7 +146,7 @@ self.addEventListener("install", (event) => {
 
 Maintenant que les fichiers sont mis en cache, il faut indiquer au <i lang="en">service worker</i> quoi faire de ce contenu. Pour cela, on utilise l'évènement `fetch`.
 
-1. Un évènèment `fetch` est déclenché à chaque fois qu'une ressource doit être récupéré depuis une page contrôlée par un <i lang="en">service worker</i>. Cela inclut les documents situés dans la portée du <i lang="en">worker</i> et les ressources référencées depuis ces documents (ainsi, si `index.html` effectue une requête vers une origine différente pour charger une image, la requête passera quand même par le <i lang="en">service worker</i>).
+1. Un évènèment `fetch` est déclenché à chaque fois qu'une ressource doit être récupérée depuis une page contrôlée par un <i lang="en">service worker</i>. Cela inclut les documents situés dans la portée du <i lang="en">worker</i> et les ressources référencées depuis ces documents (ainsi, si `index.html` effectue une requête vers une origine différente pour charger une image, la requête passera quand même par le <i lang="en">service worker</i>).
 
 2. On peut attacher un gestionnaire d'évènement pour `fetch` au <i lang="en">service worker</i>, puis appeler la méthode `respondWith()` sur l'évènement afin d'intercepter les réponses HTTP et les remplacer par le contenu voulu.
 
@@ -173,47 +169,7 @@ Maintenant que les fichiers sont mis en cache, il faut indiquer au <i lang="en">
 
     `caches.match(event.request)` permet de cibler les ressources demandées sur le réseau avec les ressources équivalentes et qui sont disponibles dans le cache (si une telle ressource est disponible). La correspondance est effectuée avec l'URL et différents en-têtes, comme pour une requête HTTP normale.
 
-![Diagramme illustrant le rôle de l'évènement fetch](sw-fetch.png)
-
-Voyons les différentes options dont nous disposons pour implémenter la logique sur mesure (voyez [la documentation sur l'API `Fetch`](/fr/docs/Web/API/Fetch_API) pour plus d'informations sur les objets [`Request`](/fr/docs/Web/API/Request) et [`Response`](/fr/docs/Web/API/Response)).
-
-1. Le constructeur [`Response()`](/fr/docs/Web/API/Response/Response) permet de créer une réponse sur mesure. Ici, nous allons simplement renvoyer une simple chaîne de caractères&nbsp;:
-
-   ```js
-   new Response("Bien le bonjour depuis ce service worker !");
-   ```
-
-2. Voici ensuite un exemple plus complexe d'objet `Response` qui illustre les en-têtes qui peuvent être passés avec la réponse pour émuler les en-têtes de réponse HTTP classiques. Ici, on indique le type de contenu pour notre réponse de remplacement&nbsp;:
-
-   ```js
-   new Response(
-     "<p>Bien le bonjour depuis ce service worker !</p>",
-     {
-       headers: { "Content-Type": "text/html" },
-     }
-   );
-   ```
-
-3. Si aucune correspondance n'a été trouvée dans le cache, on peut indiquer au navigateur d'utiliser [`fetch()`](/fr/docs/Web/API/fetch) pour réaliser la requête passant par le réseau pour cette requête et ainsi obtenir la ressource depuis le réseau si ce dernier est disponible&nbsp;:
-
-   ```js
-   fetch(event.request);
-   ```
-
-4. Si aucune correspondance n'existe dans le cache et que le réseau n'est pas disponible, on peut utiliser un contenu par défaut en cache pour la réponse avec [`match()`](/fr/docs/Web/API/CacheStorage/match)&nbsp;:
-
-   ```js
-   caches.match("./fallback.html");
-   ```
-
-5. Il est possible d'obtenir de nombreuses informations sur chaque requête en utilisant les propriétés de l'objet [`Request`](/fr/docs/Web/API/Request) fourni par l'évènement [`FetchEvent`](/fr/docs/Web/API/FetchEvent)&nbsp;:
-
-   ```js
-   event.request.url;
-   event.request.method;
-   event.request.headers;
-   event.request.body;
-   ```
+![Diagramme illustrant le rôle de l'évènement fetch](sw-fetch.svg)
 
 ## Gérer les requêtes qui échouent
 
@@ -322,15 +278,8 @@ S'il est activé, [le préchargement à la navigation](/fr/docs/Web/API/Navigati
 Pour commencer, la fonctionnalité doit être activée lors de l'activation du <i lang="en">service worker</i> en utilisant [`registration.navigationPreload.enable()`](/fr/docs/Web/API/NavigationPreloadManager/enable)&nbsp;:
 
 ```js
-const enableNavigationPreload = async () => {
-  if (self.registration.navigationPreload) {
-    // Activer le préchargement lors de la navigation
-    await self.registration.navigationPreload.enable();
-  }
-};
-
-self.addEventListener("activate", (event) => {
-  event.waitUntil(enableNavigationPreload());
+self.addEventListener('activate', (event) => {
+  event.waitUntil(self.registration?.navigationPreload.enable());
 });
 ```
 
@@ -465,11 +414,11 @@ self.addEventListener("install", (event) => {
 
 Lorsque cette installation se produit, la version précédente est toujours utilisée pour les interceptions/récupérations de ressources. La nouvelle version est installée en arrière-plan. En appelant notre nouveau cache `v2`, le cache précédent (`v1`) n'est pas perturbé.
 
-Lorsqu'aucune page n'utilise la version actuelle, c'est le nouveau <i lang="en">service worker</i> qui est activé et qui devient alors responsable des interceptions/récupérations.
+Lorsqu'aucune page n'utilise la version précédente, c'est le nouveau <i lang="en">service worker</i> qui est activé et qui devient alors responsable des interceptions/récupérations.
 
 ### Supprimer les anciens caches
 
-L'évènement `activate` qui arrive ensuite est généralement utilisé pour réaliser les étapes qui auraient cassé la version précédente lors de son exécution (par exemple supprimer les anciens caches). Cette étape s'avère également utile pour supprimer des données qui ne sont plus utiles afin d'éviter de remplir l'espace de stockage alloué par le navigateur à chaque  <i lang="en">service worker</i>. Le navigateur fera de son mieux pour gérer l'espace disque mais pourra supprimer le stockage du cache pour une origine. Dans ce cas, le navigateur supprime généralement toutes les données d'une origine ou aucune.
+Comme nous l'avons vu dans la section précédente, lorsqu'on met à jour un <i lang="en">service worker</i> avec une nouvelle version, on pourra créer un nouveau cache avec le gestionnaire d'évènement `install`. Tant qu'il y a des pages ouvertes qui sont contrôlées par l'ancienne version, il faut conserver les deux caches, car la version précédente utilise cette version précédente du cache. L'évènement `activate` peut ensuite être utilisé pour retirer des données des caches précédents.
 
 Les promesses passées à `waitUntil()` bloqueront les autres évènements tant qu'elles ne seront pas terminées. Cela permet de s'assurer que les étapes de nettoyage auront été réalisées lorsque le premier évènement `fetch` parviendra au nouveau <i lang="en">service worker</i>.
 
@@ -499,6 +448,5 @@ self.addEventListener("activate", (event) => {
 
 ## Voir aussi
 
-- [Un livre de recettes utilisant les <i lang="en">service workers</i>](https://github.com/mdn/serviceworker-cookbook)
 - [Les promesses en JavaScript](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Utiliser les <i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
