@@ -74,5 +74,5 @@ Content-Security-Policy: worker-src https://example.com/
 ## 参见
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [Web Worker 的内容安全策略（SCP）](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers#内容安全策略)
+- [Web Worker 的内容安全策略（CSP）](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers#内容安全策略)
 - {{domxref("Worker")}}、{{domxref("SharedWorker")}}、{{domxref("ServiceWorker")}}
