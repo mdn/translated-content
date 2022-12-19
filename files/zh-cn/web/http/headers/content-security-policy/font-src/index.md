@@ -7,10 +7,24 @@ slug: Web/HTTP/Headers/Content-Security-Policy/font-src
 
 HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP 内容安全策略) 中 **`font-src`** 指令定义了 {{cssxref("@font-face")}} 加载字体的有效源规则。
 
-| CSP 版本                    | 1                                                             |
-| --------------------------- | ------------------------------------------------------------- |
-| 指令类型                    | {{Glossary("Fetch directive")}}                               |
-| {{CSP("default-src")}} 回落 | 是。如果 **`font-src`** 没有指定，则使用 `default-src` 指令。 |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">CSP 版本</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">指令类型</th>
+      <td>{{Glossary("Fetch directive","fetch 指令")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} 回落</th>
+      <td>
+        是。如果不存在该指令，用户代理将查找 <code>default-src</code> 指令。
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
