@@ -89,7 +89,7 @@ Content-Security-Policy: connect-src https://example.com/
 
 ### 兼容性注意
 
-- Firefox 23 之前，`xhr-src` 被用于替代 `connect-src` 指令，并且只限制 {{domxref("XMLHttpRequest")}} 的使用。
+- Firefox 23 之前，`xhr-src` 被用来代替 `connect-src` 指令，并且只用于限制 {{domxref("XMLHttpRequest")}} 的使用。
 
 ## 参见
 
