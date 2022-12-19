@@ -35,7 +35,7 @@ const gl = canvas.getContext('webgl');
 - {{domxref("WebGLRenderingContext.drawingBufferHeight")}}
   - : 只读属性，当前绘图缓冲区的高度，等于和该上下文相联系的 canvas 元素的高度。
 - {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-  - : 返回 `WebGLContextAttributes` 对象，该对象包含真实的上下文参数。如果上下文丢失，将会返回 [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)。
+  - : 返回 `WebGLContextAttributes` 对象，该对象包含真实的上下文参数。如果上下文丢失，将会返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
 - {{domxref("WebGLRenderingContext.isContextLost()")}}
   - : 如果上下文丢失，返回 `true`；否则，返回 `false`。
 - {{domxref("WebGLRenderingContext.makeXRCompatible()")}}
