@@ -1,14 +1,6 @@
 ---
 title: Intl.supportedValuesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Method
-  - Reference
-  - supportedValuesOf
-browser-compat: javascript.builtins.Intl.supportedValuesOf
 ---
 
 {{JSRef}}
