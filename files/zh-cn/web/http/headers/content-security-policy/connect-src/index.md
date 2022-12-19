@@ -60,7 +60,7 @@ Content-Security-Policy: connect-src <source> <source>;
 Content-Security-Policy: connect-src https://example.com/
 ```
 
-一下连接被禁止并且将不会夹在：
+以下连接被禁止并且将不会加载：
 
 ```html
 <a ping="https://not-example.com">
