@@ -45,9 +45,9 @@ button.onclick = function() {
 
 이 예제에서 버튼을 누르면 몇 줄의 코드가 실행됩니다. 첫 번째 줄은 독자가 이름을 입력하도록 요청한 화면에 상자를 띄운 다음, 변수에 값을 저장합니다. 두 번째 줄은 변수 값에서 가져온, 이름이 포함된 환영 메시지가 표시됩니다.
 
-왜 변수가 유용한 지 이해하려면, 변수를 사용하지 않고 이 예제를 작성하는 방법에 대해 생각해 봅시다. 그러면 아마 이런 식으로 끝날 것입니다 :
+왜 변수가 유용한 지 이해하려면, 변수를 사용하지 않고 이 예제를 작성하는 방법에 대해 생각해 봅시다. 그러면 아마 이런 식으로 끝날 것입니다.
 
-```plain example-bad
+```js example-bad
 let name = prompt('What is your name?');
 
 if (name === 'Adam') {
@@ -233,7 +233,10 @@ var myName = 'Chris';
 
 아마도 변수의 선언과 초기화를 두줄로 나누어 하는것 보다 더 빠르기 때문에 대부분 이러한 방식을 자주 사용 하게 될 겁니다.
 
-> **참고**: 여러 줄 문자열로 JavaScript 프로그램을 작성할 때(write a multiline JavaScript), 변수를 선언하기 전에 해당 변수의 값을 초기화 할 수 있습니다. 이것이 가능한 이유는 JavaScript 에서 일반적으로 변수 선언문이 다른 코드 보다 먼저 실행되기 때문인데, 이 동작을 **호이스팅**이라고 합니다. 자세한 내용은 [var 호이스팅](/ko/docs/Web/JavaScript/Reference/Statements/var#var_호이스팅(hoisting)) 문서를 참고하세요.
+> **참고:**
+>
+> 여러 줄 문자열로 JavaScript 프로그램을 작성할 때(write a multiline JavaScript), 변수를 선언하기 전에 해당 변수의 값을 초기화 할 수 있습니다. 이것이 가능한 이유는 JavaScript 에서 일반적으로 변수 선언문이 다른 코드 보다 먼저 실행되기 때문인데, 이 동작을 **호이스팅**이라고 합니다.
+> 자세한 내용은 [var 호이스팅](/ko/docs/Web/JavaScript/Reference/Statements/var#var_호이스팅(hoisting)) 문서를 참고하세요.
 
 ## 변수의 재지정
 
@@ -260,7 +263,7 @@ myAge = 40;
 
 바람직한 변수 이름의 예:
 
-```plain example-good
+```js example-good
 age
 myAge
 init
@@ -272,7 +275,7 @@ audio2
 
 바람직하지 않은 변수 이름의 예:
 
-```plain example-bad
+```js example-bad
 1
 a
 _12
