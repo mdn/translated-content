@@ -132,19 +132,19 @@ Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.e
 作为报告的 JSON 对象报告包含了以下数据：
 
 - `blocked-uri`
-  - : 被 CSP 阻止的资源 URI。如果被阻止的 URI 来自不同的源而非 `document-uri`，那么被阻止的资源 URI 会被删减，仅保留协议，主机和端口号。
+  - : 被 CSP 阻止的资源 URI。如果被阻止的 URI 来自不同的源而非 `document-uri`，那么被阻止的资源 URI 会被删减，仅保留协议、主机和端口号。
 - `disposition`
-  - : 根据 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 头和 `Content-Security-Policy` 头的使用情况不同，值为 `"enforce"` 或 `"report"`。
+  - : 根据 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 和 `Content-Security-Policy` 标头使用情况的不同，值为 `"enforce"` 或 `"report"`。
 - `document-uri`
   - : 发生违规的文档的 URI。
 - `effective-directive`
-  - : 导致了违法行为的发生的指令。一些浏览器可能提供不同的值，例如 Chrome 提供 `style-src-elem` 或 `style-src-attr`，即使实际执行的指令是 `style-src`。
+  - : 导致违规行为发生的指令。一些浏览器可能提供不同的值，例如 Chrome 提供 `style-src-elem` 或 `style-src-attr`，即使实际执行的指令是 `style-src`。
 - `original-policy`
   - : 由 `Content-Security-Policy` HTTP 标头指定的原始策略值。
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 违规发生处的文档引用（地址）。
 - `script-sample`
-  - : 导致该违例的内联代码、事件处理器或样式的前 40 个字符。只适用于 `script-src*` 和 `style-src*` 为例，因为它们包含 `'report-sample'`。
+  - : 导致该违例的内联代码、事件处理器或样式的前 40 个字符。只适用于 `script-src*` 或 `style-src*` 包含 `'report-sample'` 的情况。
 - `status-code`
   - : 全局对象被实例化的资源的 HTTP 状态代码。
 - `violated-directive`
@@ -194,7 +194,7 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 
 {{Compat}}
 
-### 兼容性笔记
+### 兼容性备注
 
 在某些版本的 Safari 网络浏览器中存在一种特殊的不兼容性，即如果设置了内容安全策略标头，但没有设置相同来源（Same Origin）标头。浏览器将阻止自我托管的内容和网站外的内容，并错误地报告说这是由于内容安全政策不允许该内容。
 
