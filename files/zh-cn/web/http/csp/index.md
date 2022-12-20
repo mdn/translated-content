@@ -134,7 +134,7 @@ Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.e
 - `blocked-uri`
   - : 被 CSP 阻止的资源 URI。如果被阻止的 URI 来自不同的源而非 `document-uri`，那么被阻止的资源 URI 会被删减，仅保留协议，主机和端口号。
 - `disposition`
-  - : 根据 {HTTPHeader("Content-Security-Policy-Report-Only")}} 头和 `Content-Security-Policy` 头的使用情况不同，值为 `"enforce"` 或 `"report"`。
+  - : 根据 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 头和 `Content-Security-Policy` 头的使用情况不同，值为 `"enforce"` 或 `"report"`。
 - `document-uri`
   - : 发生违规的文档的 URI。
 - `effective-directive`
