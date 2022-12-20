@@ -7,7 +7,7 @@ translation_of: Web/API/DataTransfer
 ---
 {{APIRef("HTML DOM")}}
 
-{{ gecko_minversion_header("1.9") }} Объект **DataTransfer** используется для хранения данных, перетаскиваемых мышью во время операции **drag and drop**. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. [Drag and Drop](/En/DragDrop/Drag_and_Drop)
+Объект **DataTransfer** используется для хранения данных, перетаскиваемых мышью во время операции **drag and drop**. Он может хранить от одного до нескольких элементов данных, вне зависимости от их типа. Для получения доп. информации об операции drag and drop, см. [Drag and Drop](/En/DragDrop/Drag_and_Drop)
 
 Объект может быть получен из свойства **dataTransfer** всех событий перетаскивания. Он не может быть отдельно создан.
 
@@ -78,8 +78,6 @@ Assigning any other value has no effect and retains the old value.
 
 ### files
 
-{{ gecko_minversion_header("1.9.2") }}
-
 Содержит список локальных файлов доступных на dataTransfer. Если операция перемещения не включала в себя перемещение файлов, то данное свойство будет пустым списком. Неверное обращение по индексу к объекту {{ domxref("FileList") }} определённым данным свойством вернёт null.
 
 #### Пример
@@ -115,7 +113,7 @@ The number of items being dragged.
 
 ### mozSourceNode
 
-{{ gecko_minversion_header("2") }}
+{{ ("2") }}
 
 The {{ domxref("Node") }} over which the mouse cursor was located when the button was pressed to initiate the drag operation. This value is `null` for external drags or if the caller can't access the node.
 
