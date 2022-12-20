@@ -10,9 +10,9 @@ HTTP {{HTTPHeader("Content-Security-Policy")}}（内容安全策略，CSP）中�
 - {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},
 - {{domxref("fetch()")}},
 - {{domxref("XMLHttpRequest")}},
-- {{domxref("WebSocket")}},
-- {{domxref("EventSource")}}, and
-- {{domxref("Navigator.sendBeacon()")}}.
+- {{domxref("WebSocket")}}
+- {{domxref("EventSource")}}
+- {{domxref("Navigator.sendBeacon()")}}
 
 > **备注：** 并不是所有浏览器都能将 `connect-src 'self'` 解析为 websocket 协议，更多信息，请查看这个 [issue](https://github.com/w3c/webappsec-csp/issues/7)。
 
