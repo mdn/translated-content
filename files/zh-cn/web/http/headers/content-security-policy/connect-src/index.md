@@ -7,9 +7,9 @@ slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 
 HTTP {{HTTPHeader("Content-Security-Policy")}}（内容安全策略，CSP）中的 **`connect-src`** 指令用于限制通过使用脚本接口加载的 URL。其中受限制的 API 如下：
 
-- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}},
-- {{domxref("fetch()")}},
-- {{domxref("XMLHttpRequest")}},
+- {{HTMLElement("a")}} {{htmlattrxref("ping", "a")}}
+- {{domxref("fetch()")}}
+- {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
 - {{domxref("EventSource")}}
 - {{domxref("Navigator.sendBeacon()")}}
