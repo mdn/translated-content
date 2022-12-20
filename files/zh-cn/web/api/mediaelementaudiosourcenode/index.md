@@ -22,9 +22,9 @@ slug: Web/API/MediaElementAudioSourceNode
       <td><code>1</code></td>
     </tr>
     <tr>
-      <th scope="row">频道数</th>
+      <th scope="row">通道数</th>
       <td>
-        2（但请注意 {{domxref("AudioNode.channelCount")}} 仅用于 {{domxref("AudioNode")}} 输入的上混合下混，而 {{domxref("MediaElementAudioSourceNode")}} 则没有任何输入）</td>
+        2（但请注意 {{domxref("AudioNode.channelCount")}} 仅用于 {{domxref("AudioNode")}} 输入的上混和下混，而 {{domxref("MediaElementAudioSourceNode")}} 则没有任何输入）</td>
     </tr>
   </tbody>
 </table>
