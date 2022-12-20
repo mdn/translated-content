@@ -113,8 +113,6 @@ The number of items being dragged.
 
 ### mozSourceNode
 
-{{ ("2") }}
-
 The {{ domxref("Node") }} over which the mouse cursor was located when the button was pressed to initiate the drag operation. This value is `null` for external drags or if the caller can't access the node.
 
 > **Примечание:** This property is Gecko-specific.
