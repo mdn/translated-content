@@ -28,9 +28,7 @@ clip: unset;
 
 ## Syntaxe
 
-> **Attention :** Lorsque c'est possible, il est recommandé aux personnes qui écrivent du CSS d'utiliser la propriété [`clip-path`](/fr/docs/Web/CSS/clip-path) à la place.
-
-### Values
+### Valeurs
 
 - [`<shape>`](/fr/docs/Web/CSS/shape)
 
