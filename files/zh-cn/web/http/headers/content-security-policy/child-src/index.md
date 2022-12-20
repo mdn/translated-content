@@ -20,7 +20,7 @@ HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP 内容安全策略）中的
     <tr>
       <th scope="row">{{CSP("default-src")}} 回落</th>
       <td>
-        是。如果该指令不存在，用户代理将寻找 <code>default-src</code> 指令。
+        是。如果该指令不存在，用户代理将查找 <code>default-src</code> 指令。
       </td>
     </tr>
   </tbody>
