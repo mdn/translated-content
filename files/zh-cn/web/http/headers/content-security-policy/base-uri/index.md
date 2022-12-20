@@ -19,7 +19,7 @@ HTTP {{HTTPHeader("Content-Security-Policy")}}（内容安全策略）中的 **`
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} 回落</th>
-      <td>无。没有设置允许任何 URL。</td>
+      <td>无。没有设置则允许任何 URL。</td>
     </tr>
   </tbody>
 </table>
