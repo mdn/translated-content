@@ -75,5 +75,5 @@ Content-Security-Policy: font-src https://example.com/
 
 ## 参见
 
-- {{HTTPHeader("Content-Security-Policy")}}（内容安全性策略）
+- {{HTTPHeader("Content-Security-Policy")}}（内容安全策略）
 - {{cssxref("@font-face")}}
