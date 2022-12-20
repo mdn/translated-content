@@ -63,7 +63,7 @@ add_header Content-Security-Policy "base-uri 'self';"
 
 ### 违规的案列
 
-假如你的域名不是 `example.com`，那么将 {{HTMLElement("base")}} 元素的 `href` 属性值设置成 `https://example.com` 会违犯 CSP 策略。
+假如你的域名不是 `example.com`，那么将 {{HTMLElement("base")}} 元素的 `href` 属性值设置成 `https://example.com` 会违反 CSP 策略。
 
 ```html example-bad
 <meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
