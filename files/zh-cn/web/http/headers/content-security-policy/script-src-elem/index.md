@@ -37,7 +37,7 @@ Content-Security-Policy: script-src-elem <source>;
 Content-Security-Policy: script-src-elem <source> <source>;
 ```
 
-`script-src-elem` 可以与 {{CSP("script-src")}} 一起使用
+`script-src-elem` 可以与 {{CSP("script-src")}} 一起使用：
 
 ```http
 Content-Security-Policy: script-src <source>;
