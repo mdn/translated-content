@@ -121,7 +121,7 @@ Content-Security-Policy-Report-Only: policy
 
 默认情况下，违规报告并不会发送。为启用发送违规报告，你需要指定 {{CSP("report-uri")}} 策略指令，并提供至少一个 URI 地址去递交报告：
 
-```plain
+```http
 Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi
 ```
 
@@ -131,43 +131,52 @@ Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.e
 
 作为报告的 JSON 对象报告包含了以下数据：
 
+- `blocked-uri`
+  - : 被 CSP 阻止的资源 URI。如果被阻止的 URI 来自不同的源而非 `document-uri`，那么被阻止的资源 URI 会被删减，仅保留协议、主机和端口号。
+- `disposition`
+  - : 根据 {{HTTPHeader("Content-Security-Policy-Report-Only")}} 和 `Content-Security-Policy` 标头使用情况的不同，值为 `"enforce"` 或 `"report"`。
 - `document-uri`
   - : 发生违规的文档的 URI。
-- `referrer`
-  - : 违规发生处的文档引用（地址）。
-- `blocked-uri`
-  - : 被 CSP 阻止的资源 URI。如果被阻止的 URI 来自不同的源而非文档 URI，那么被阻止的资源 URI 会被删减，仅保留协议，主机和端口号。
-- `violated-directive`
-  - : 违反的策略名称。
+- `effective-directive`
+  - : 导致违规行为发生的指令。一些浏览器可能提供不同的值，例如 Chrome 提供 `style-src-elem` 或 `style-src-attr`，即使实际执行的指令是 `style-src`。
 - `original-policy`
-  - : 在 `Content-Security-Policy` HTTP 头部中指明的原始策略。
+  - : 由 `Content-Security-Policy` HTTP 标头指定的原始策略值。
+- `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : 违规发生处的文档引用（地址）。
+- `script-sample`
+  - : 导致该违例的内联代码、事件处理器或样式的前 40 个字符。只适用于 `script-src*` 或 `style-src*` 包含 `'report-sample'` 的情况。
+- `status-code`
+  - : 全局对象被实例化的资源的 HTTP 状态代码。
+- `violated-directive`
+  - : 所违反的策略名称。
 
 ## 违例报告样本
 
 我们假设页面位于 `http://example.com/signup.html`。它使用如下策略，该策略禁止任何资源的加载，除了来自 `cdn.example.com` 的样式表。
 
-```plain
+```http
 Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
 ```
 
 `signup.html` 的 HTML 像这样：
 
-```plain
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
+    <meta charset="UTF-8" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    ... Content ...
+    Here be content.
   </body>
 </html>
 ```
 
-你能看出其中错误吗？样式表仅允许加载自`cdn.example.com，`然而该页面企图从自己的源 (`http://example.com`) 加载。当该文档被访问时，一个兼容 CSP 的浏览器将以 POST 请求的形式发送违规报告到 `http://example.com/_/csp-reports`，内容如下：
+你能看出其中错误吗？这里仅允许加载自 `cdn.example.com` 的样式表，然而该页面企图从自己的源（`http://example.com`）加载。当该文档被访问时，一个兼容 CSP 的浏览器将以 POST 请求的形式发送违规报告到 `http://example.com/_/csp-reports`，内容如下：
 
-```plain
+```json
 {
   "csp-report": {
     "document-uri": "http://example.com/signup.html",
@@ -179,15 +188,21 @@ Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-u
 }
 ```
 
-如你所见，该报告在 `blocked-uri 字段` 中包含了违规资源的完整路径，但情况并非总是如此。比如，当 signup.html 试图从 [`http://anothercdn.example.com/stylesheet.css`](http://anothercdn.example.com/stylesheet.css) 加载 CSS 时，浏览器将不会包含完整路径，而只会保留源路径 (`http://anothercdn.example.com`)。CSP 技术规范小组对此古怪行为给出了[解释](https://www.w3.org/TR/CSP/#violation-reports)。大体上说，这样是为了防止泄露跨域资源的敏感信息。
+如你所见，该报告在 `blocked-uri` 字段中包含了违规资源的完整路径，但情况并非总是如此。比如，当 `signup.html` 试图从 `http://anothercdn.example.com/stylesheet.css` 加载 CSS 时，浏览器将*不会*包含完整路径，而只会保留源路径（`http://anothercdn.example.com`）。CSP 技术规范小组对此古怪行为给出了[解释](https://www.w3.org/TR/CSP/#violation-reports)。大体上说，这样是为了防止泄露跨域资源的敏感信息。
 
 ## 浏览器兼容性
 
 {{Compat}}
 
+### 兼容性备注
+
+在某些版本的 Safari 网络浏览器中存在一种特殊的不兼容性，即如果设置了内容安全策略标头，但没有设置相同来源（Same Origin）标头。浏览器将阻止自我托管的内容和网站外的内容，并错误地报告说这是由于内容安全政策不允许该内容。
+
 ## 参见
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [Content Security in WebExtensions](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
-- [Display security and privacy policies In Firefox Developer Tools](/zh-CN/docs/Tools/GCLI/Display_security_and_privacy_policies)
+- {{HTTPHeader("Content-Security-Policy")}} HTTP 标头
+- {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP 标头
+- [WebExtensions 中的安全策略](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [Web Workers 中的 CSP](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
+- [隐私、权限和信息安全](/zh-CN/docs/Web/Privacy)
+- [CSP 评估器](https://github.com/google/csp-evaluator)——评估你的内容安全策略
