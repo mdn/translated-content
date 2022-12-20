@@ -15,13 +15,13 @@ Dans Gecko, la compilation asynchrone permet au moteur JavaScript de compiler l'
 
 ## Mettre l'asynchrone en action
 
-Obtenir une compilation asynchrone est facile : lors de l'écriture de votre JavaScript, utilisez simplement l'attribut "async" comme suit :
+Obtenir une compilation asynchrone est facile&nbsp;: lors de l'écriture de votre JavaScript, utilisez simplement l'attribut "async" comme suit&nbsp;:
 
 ```html
 <script async src="file.js"></script>
 ```
 
-ou, pour faire la même chose via un script :
+ou, pour faire la même chose via un script&nbsp;:
 
 ```js
 const script = document.createElement('script');
@@ -31,9 +31,9 @@ document.body.appendChild(script);
 
 (Les scripts créés à partir du script par défaut sont `async`.) Le shell HTML par défaut généré par Emscripten produit ce dernier.
 
-## Quand l'async n'est-il pas asynchrone ?
+## Quand l'async n'est-il pas asynchrone&nbsp;?
 
-Deux situations courantes dans lesquelles un script n'est \*pas\* asynchrone (comme [défini par la spécification HTML](https://html.spec.whatwg.org/multipage/scripting.html)) sont :
+Deux situations courantes dans lesquelles un script n'est \*pas\* asynchrone (comme [défini par la spécification HTML](https://html.spec.whatwg.org/multipage/scripting.html)) sont&nbsp;:
 
 ```html
 <script async>code</script>
@@ -49,7 +49,7 @@ document.body.appendChild(script);
 
 Les deux sont comptés comme des scripts "en ligne" et sont compilés puis exécutés immédiatement.
 
-Que faire si votre code est dans une chaîne JS ? Au lieu d'utiliser `eval` ou `innerHTML`, qui déclenchent tous deux une compilation synchrone, vous devez utiliser un Blob avec une URL d'objet :
+Que faire si votre code est dans une chaîne JS&nbsp;? Au lieu d'utiliser `eval` ou `innerHTML`, qui déclenchent tous deux une compilation synchrone, vous devez utiliser un Blob avec une URL d'objet&nbsp;:
 
 ```js
 const blob = new Blob([codeString]);
