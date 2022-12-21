@@ -49,7 +49,7 @@ MDN Web 文档需要你的帮助！我们有大量需要完成的工作，比如
    </td>
   </tr>
   <tr>
-   <td><a href="/zh-CN/docs/MDN/Contribute/Help_beginners">帮助网站上的初学者</a></td>
+   <td><a href="/zh-CN/docs/MDN/Community/Learn_forum">帮助网站上的初学者</a></td>
    <td>我们的 <a href="/zh-CN/docs/Learn">Web 开发教程</a>非常热门，<a href="https://discourse.mozilla.org/c/mdn/learn/250">论坛上</a>也有许多初来乍到的爱好者，他们有很多疑问等待有经验的人帮助他们解决。</td>
    <td>
     <ul>
