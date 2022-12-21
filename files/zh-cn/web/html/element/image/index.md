@@ -5,7 +5,7 @@ slug: Web/HTML/Element/image
 
 {{HTMLSidebar}}{{deprecated_header}}{{Non-standard_header}}
 
-[HTML](/zh-CN/docs/Web/HTML) `<image>` 元素是 {{HTMLElement("img")}} 元素的一个古老且支持不足的前驱。**不应该使用它**。
+[HTML](/zh-CN/docs/Web/HTML) `<image>` 元素是 {{HTMLElement("img")}} 元素的一个古老且支持不足的前身。**不应该使用它**。
 
 某些浏览器会尝试将它自动转化为 {{HTMLElement("img")}} 元素，在也指定了 {{htmlattrxref("src", "img")}} 属性时可能会成功。
 
