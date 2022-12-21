@@ -21,8 +21,9 @@ original_slug: MDN/Contribute/Localize
 
 ### 汉语（zh-CN，zh-TW）
 
-- 讨论组：[Telegram (MozTW L10n channel)](https://moztw.org/tg)
-- 目前的志愿者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[yin1999](https://github.com/yin1999)
+- Moz://TW 讨论组：[Telegram (MozTW L10n channel)](https://moztw.org/tg)
+- Mozilla China 讨论组：[Mozilla China](https://t.me/mozilla_china)
+- 目前的志愿者：[Irvin](https://github.com/irvin)、[t7yang](https://github.com/t7yang)、[yin1999](https://github.com/yin1999)、[LaoshuBaby](https://github.com/LaoshuBaby)
 
 ### 法语（fr）
 
