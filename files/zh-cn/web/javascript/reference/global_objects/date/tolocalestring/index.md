@@ -43,6 +43,8 @@ toLocaleString(locales, options)
 
 在支持 `Intl.DateTimeFormat` 的实现中，此方法等价于 `new Intl.DateTimeFormat(locales, options).format(date)`。
 
+> **备注：** 大多数时候，`toLocaleString()` 返回的格式是一致的。但是，这可能在未来发生变化，且不能保证所有语言都能得到一致的格式。输出的变化因实现而异，而且这种变化是规范所允许的。你不应该将 `toLocaleString()` 的结果与静态值作比较。
+
 ## 示例
 
 ### 使用 toLocaleString()
@@ -138,25 +140,6 @@ console.log(date.toLocaleString("en-US", options));
 console.log(date.toLocaleString("en-US", { hour12: false }));
 // "12/19/2012, 19:00:00"
 ```
-
-### 避免将格式化的日期值与静态值进行比较
-
-大多数时候，`toLocaleString()` 返回的格式是一致的。但是，这可能在未来发生变化，且不能保证所有语言都能得到一致的格式。输出的变化因实现的设计而异，而且这种变化是规范所允许的。
-
-值得注意的是，IE 和 Edge 浏览器会插入双向控制字符，因此输出文本在与其他文本连接时会正确流动。
-
-因此，你不能期望 `toLocaleString()` 的结果能与一个静态值作比较：
-
-```js example-bad
-"1/1/2019, 01:00:00" ===
-  new Date("2019-01-01T01:00:00Z").toLocaleString("en-US");
-// 在 Firefox 和其它浏览器中为 true
-// 在 IE 浏览器中为 false
-```
-
-> **备注：** 参见
-> [StackOverflow thread](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results)
-> 以获得更详细的信息以及更多示例。
 
 ## 规范
 
