@@ -5,7 +5,7 @@ slug: Web/HTML/Element/Input/button
 
 {{HTMLSidebar}}
 
-**`button`** 类型的 {{htmlelement("input")}} 元素被渲染为简单的按下的按钮，可以根据需要对其进行编程，当分配到一个事件处理函数时（通常为 {{domxref("Element/click_event", "click")}} 事件），控制网页上的任何地方的自定义功能。
+**`button`** 类型的 {{htmlelement("input")}} 元素被渲染为简单的按钮，可以根据需要对其进行编程，可以为其分配一个事件处理函数（通常为 {{domxref("Element/click_event", "click")}} 事件），以控制网页上的任何地方的自定义功能。
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
@@ -35,7 +35,7 @@ slug: Web/HTML/Element/Input/button
 
 ## 使用按钮
 
-`<input type="button">` 元素没有默认行为（它们的亲戚，`<input type="submit">` 和 [`<input type="reset">`](/zh-CN/docs/Web/HTML/Element/Input/reset) 分别用于提交和重置表单）。要让按钮做任何事情，你必须写 JavaScript 代码来做。
+`<input type="button">` 元素没有默认行为（与之类似的 `<input type="submit">` 和 [`<input type="reset">`](/zh-CN/docs/Web/HTML/Element/Input/reset) 分别用于提交和重置表单）。要让按钮做任何事情，你必须编写 JavaScript 代码。
 
 ### 简单的按钮
 
@@ -71,7 +71,7 @@ function updateButton() {
 
 ### 为按钮添加键盘快捷方式
 
-键盘快捷键，也被称为访问键和键盘等价物，让用户使用键盘上的某个键或组合键来触发一个按钮。要为一个按钮添加键盘快捷键——就像对任何 {{HTMLElement("input")}} 都有意义的那样——你可以使用[`accesskey`](/zh-CN/docs/Web/HTML/Global_attributes/accesskey) 全局属性。
+键盘快捷键可以让用户使用键盘上的某个键或组合键来触发一个按钮。要为一个按钮添加键盘快捷键——就像对任何 {{HTMLElement("input")}} 都有意义的那样——你可以使用 [`accesskey`](/zh-CN/docs/Web/HTML/Global_attributes/accesskey) 全局属性。
 
 在这个例子中，<kbd>s</kbd> 被指定成为访问键，你需要按住浏览器或操作系统所指定的组合键加上 <kbd>s</kbd> 键来触发按钮，参见 [accesskey](/zh-CN/docs/Web/HTML/Global_attributes/accesskey) 以获取一些有用的列表。
 
