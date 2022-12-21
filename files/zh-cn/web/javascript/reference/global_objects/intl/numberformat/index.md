@@ -5,11 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 
 {{JSRef}}
 
-**`Intl.NumberFormat`** 对象使语言敏感的数字格式化。
+**`Intl.NumberFormat`** 对象能使语言敏感的数字格式化。
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
-
-<!-- 此交互式示例的源代码存储在 GitHub 存储库中。如果你想为交互式示例项目做出贡献，请克隆 https://github.com/mdn/interactive-examples 并向我们发送拉取请求。 -->
 
 ## 构造函数
 
@@ -19,18 +17,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 ## 静态方法
 
 - {{jsxref("Intl/NumberFormat/supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
-  - : 返回一个数组，其包含着那些被提供的受支持的地区（local），而运行时的默认的地区不会回落到该数组。
+  - : 返回一个数组，其包含着那些被提供的受支持的区域（local），而运行时的默认的区域不会回落到该数组。
 
 ## 实例方法
 
 - {{jsxref("Intl/NumberFormat/format", "Intl.NumberFormat.prototype.format()")}}
   - : getter 函数，根据此 {{jsxref("Intl.NumberFormat")}} 对象的区域设置和格式化选项格式化数字。
 - {{jsxref("Intl/NumberFormat/formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
-  - : 返回一个对象{{jsxref("Array","数组")}}，表示可以用于自定义区域设置感知格式的部分数字字符串。
+  - : 返回一个对象{{jsxref("Array", "数组", "", 1)}}，表示可以用于自定义区域设置感知格式的部分数字字符串。
 - {{jsxref("Intl/NumberFormat/formatRange", "Intl.NumberFormat.prototype.formatRange()")}} {{experimental_inline}}
   - : getter 函数，根据调用该方法的 {{jsxref("Intl.NumberFormat")}} 对象的区域设置和格式化选项格式化一系列数字。
 - {{jsxref("Intl/NumberFormat/formatRangeToParts", "Intl.NumberFormat.prototype.formatRangeToParts()")}} {{experimental_inline}}
-  - : 返回一个对象{{jsxref("Array","数组")}}，表示可以用于自定义区域设置感知格式的部分数字字符串范围。
+  - : 返回一个对象{{jsxref("Array", "数组", "", 1)}}，表示可以用于自定义区域设置感知格式的部分数字字符串范围。
 - {{jsxref("Intl/NumberFormat/resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
   - : 返回一个新对象，其属性反映了对象对象初始化期间计算的区域设置和排序选项。
 
@@ -38,7 +36,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 
 ### 基本使用
 
-在不指定地区设置的基本使用中，返回默认区域设置中的格式化字符串和默认选项。
+在不指定区域设置的基本使用中，返回默认区域设置中的格式化字符串和默认选项。
 
 ```js
 const number = 3500;
@@ -47,7 +45,7 @@ console.log(new Intl.NumberFormat().format(number));
 // '3,500' if in US English locale
 ```
 
-### 使用地区（locale）
+### 使用 locales
 
 此示例展示了本地数字格式化的一些变化。未来得到用户应用接口使用的语言格式，请确保使用 `locales` 参数指定该语言（可能还有一些备选语言）：
 
@@ -76,7 +74,7 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 // 123.456,789
 ```
 
-### 使用可选的对象
+### 可用的选项
 
 可以使用 [`options`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) 参数自定义结果：
 
