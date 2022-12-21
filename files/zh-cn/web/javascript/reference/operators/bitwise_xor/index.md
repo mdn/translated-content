@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
 
 {{jsSidebar("Operators")}}
 
-**按位异或**（**`^`**）运算符在其中任意一个操作数对应的二进制位不同时，该位的结果值为 `1`。
+**按位异或**（**`^`**）运算符在两个操作数对应的二进制位不同时，该位的结果值为 `1`。
 
 {{EmbedInteractiveExample("pages/js/expressions-bitwise-xor.html", "shorter")}}
 
