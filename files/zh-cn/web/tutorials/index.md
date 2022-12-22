@@ -15,7 +15,7 @@ slug: Web/Tutorials
 
 ### 初级课程
 
-- [HTML 简介](/zh-CN/docs/Web/Learn/HTML/Introduction_to_HTML)
+- [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
   - : HTML 是什么，干什么，以及其简要历史，还有一个 HTML 文档的结构是什么样子的。其后的文章会更深入 HTML 的每一个部分。
 - [网页的基本构架](http://reference.sitepoint.com/html/page-structure) _（由出版社提供）_
   - : 学习 HTML 元素是如何组装在一起从而构成一个更大的图块的。
