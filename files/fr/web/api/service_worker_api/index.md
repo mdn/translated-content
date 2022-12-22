@@ -15,13 +15,13 @@ Un <i lang="en">service worker</i> est un [<i lang="en">worker</i>](/fr/docs/Web
 
 Un <i lang="en">service worker</i> s'exécute dans le contexte d'un <i lang="en">worker</i> et n'a donc pas accès au DOM. Il s'exécute dans un <i lang="en">thread</i> différent du <i lang="en">thread</i> JavaScript principal et n'est donc pas bloquant. Il est conçu pour fonctionner de façon complètement asynchrone. Aussi, les API synchrones comme [XHR](/fr/docs/Web/API/XMLHttpRequest) et [<i lang="en">Web Storage</i>](/fr/docs/Web/API/Web_Storage_API) ne peuvent pas être utilisées dans le code d'un <i lang="en">service worker</i>.
 
-Pour des raisons de sécurité, les <i lang="en">services worker</i> ne fonctionnent qu'avec le protocole HTTPS. En effet, les connexions HTTP sont susceptibles d'être victimes d'injection de code par [attaque du monstre du milieu](/fr/docs/Glossary/MitM) et l'accès à ces API aggraverait ces attaques.
+Pour des raisons de sécurité, les <i lang="en">service workers</i> ne fonctionnent qu'avec le protocole HTTPS. En effet, les connexions HTTP sont susceptibles d'être victimes d'injection de code par [attaque du monstre du milieu](/fr/docs/Glossary/MitM) et l'accès à ces API aggraverait ces attaques.
 
-> **Note :** Sur Firefox, les <i lang="en">services worker</i> ne fonctionnent pas en navigation privée.
+> **Note :** Sur Firefox, les <i lang="en">service workers</i> ne fonctionnent pas en navigation privée.
 
-> **Note :** Sur Firefox, il est possible de tester les <i lang="en">services worker</i> via HTTP (donc de façon non-sécurisée) en cochant l'option **Activer les Service Workers via HTTP (lorsque la boîte à outils est ouverte)** dans les options des outils de développement.
+> **Note :** Sur Firefox, il est possible de tester les <i lang="en">service workers</i> via HTTP (donc de façon non-sécurisée) en cochant l'option **Activer les Service Workers via HTTP (lorsque la boîte à outils est ouverte)** dans les options des outils de développement.
 
-> **Note :** Les <i lang="en">services worker</i> utilisent [les promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Ils attendent généralement l'arrivée de réponses auxquelles ils répondront par une action de réussite ou d'échec. L'architecture asynchrone des promesses est idéale pour ce mode de fonctionnement.
+> **Note :** Les <i lang="en">service workers</i> utilisent [les promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Ils attendent généralement l'arrivée de réponses auxquelles ils répondront par une action de réussite ou d'échec. L'architecture asynchrone des promesses est idéale pour ce mode de fonctionnement.
 
 ### Enregistrement
 
@@ -73,7 +73,7 @@ Les <i lang="en">service workers</i> sont également conçus pour répondre à c
 À l'avenir, les <i lang="en">service workers</i> pourront réaliser d'autres tâches qui rapprocheront la plateforme web des applications natives. D'autres spécifications peuvent déjà exploiter les contextes des <i lang="en">service workers</i>, par exemple&nbsp;:
 
 - [Synchronisation en arrière-plan](https://github.com/WICG/background-sync) pour démarrer un <i lang="en">service worker</i> même lorsqu'il n'y a personne sur le site afin de mettre à jour les caches, etc.
-- [Réaction aux messages <i lang="en">push</i>](/fr/docs/Web/API/Push_API) pour démarrer un <i lang="en">service workers</i> afin d'envoyer un message aux personnes pour leur indiquer que du nouveau contenu est disponible
+- [Réaction aux messages <i lang="en">push</i>](/fr/docs/Web/API/Push_API) pour démarrer un <i lang="en">service worker</i> afin d'envoyer un message aux personnes pour leur indiquer que du nouveau contenu est disponible
 - Réaction à une date/heure donnée
 - Entrée dans une zone géographique donnée.
 
@@ -127,4 +127,5 @@ Les <i lang="en">service workers</i> sont également conçus pour répondre à c
 - [Livre de recettes avec les <i lang="en">service workers</i>](https://github.com/mdn/serviceworker-cookbook)
 - [Utiliser les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Exemple de code simple avec les <i lang="en">service workers</i>](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- [Les <i lang="en">service workers</i> sont-ils prêts&nbsp;? (en anglais)](https://jakearchibald.github.io/isserviceworkerready/)
 - [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
