@@ -9,9 +9,7 @@ translation_of: Web/API/Window/mozAnimationStartTime
 original_slug: Web/API/Window/mozAnimationStartTime
 ---
 
-{{ APIRef() }}
-
-{{ gecko_minversion_header("2.0") }}{{ non-standard_header() }}
+{{ APIRef() }}{{ non-standard_header() }}
 
 ### Summary
 
