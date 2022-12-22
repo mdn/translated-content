@@ -19,14 +19,14 @@ slug: Web/Tutorials
   - : HTML 是什么，干什么，以及其简要历史，还有一个 HTML 文档的结构是什么样子的。其后的文章会更深入 HTML 的每一个部分。
 - [网页的基本构架](http://reference.sitepoint.com/html/page-structure) _（由出版社提供）_
   - : 学习 HTML 元素是如何组装在一起从而构成一个更大的图块的。
-- [MDN 的 HTML 元素参考](/zh-CN/docs/HTML/Element)
+- [MDN 的 HTML 元素参考](/zh-CN/docs/Web/HTML/Element)
   - : 一个 HTML 元素综合性性参考，还有不同浏览器对它们的支持。
 - [HTML 挑战](http://wikiversity.org/wiki/Web_Design/HTML_Challenges)_（来自维基大学）_
   - : 参与这些挑战来巩固你的 HTML 技能。（例如，“我到底是应该使用一个 \<h2> 元素还是用 \<strong> 呢？”）专注于有意义的小点滴。
 
 ### 高级课程
 
-- [编写出能够快速加载 HTML 页面的小贴士](/zh-CN/docs/Tips_for_Authoring_Fast-loading_HTML_Pages)
+- [编写出能够快速加载 HTML 页面的小贴士](/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
   - : 优化网页，以减少您的 Web 服务器上的负载和网络连接和为游客提供一个响应迅速的网站。
 - [HTML5 入门](http://www.html5rocks.com/tutorials/)_（HTML5 Rocks）_
   - : 通过指南来指导使用 HTML5 特征来写代码。
@@ -54,7 +54,7 @@ slug: Web/Tutorials
 
 ### 中级课程
 
-- [JavaScript 再深入](/zh-CN/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+- [JavaScript 再深入](/zh-CN/docs/Web/JavaScript/Language_Overview)
   - : 针对于中等水平的开发者的关于 Javascript 编程语言的一个回顾。
 - [Eloquent JavaScript](http://eloquentjavascript.net/contents.html)
   - : 一本中级和高级 JavaScript 使用方法的全面指南。（译者注：简体中文版《JavaScript 编程精解》已由机械工业出版社华章公司出版发行）
@@ -90,7 +90,7 @@ slug: Web/Tutorials
   - : 在 CSS 里类是什么？
 - [外部 CSS](http://en.wikiversity.org/wiki/Web_Design/External_CSS) (来自维基大学)
   - : 从外部样式表使用 CSS。
-- [添加一点样式](http://www.w3.org/MarkUp/Guide/Style) (W3C)
+- [添加一点样式](https://www.w3.org/MarkUp/Guide/Style) (W3C)
   - : 入门介绍使用 CSS 样式化网页。
 - [常见 CSS 问题](/zh-CN/docs/Learn/CSS/Howto/CSS_FAQ)
   - : 初学者一些常见问题和解答。
@@ -99,7 +99,7 @@ slug: Web/Tutorials
 
 ### 中级课程
 
-- [CSS 参考](/zh-CN/docs/Web/CSS/CSS_Reference)
+- [CSS 参考](/zh-CN/docs/Web/CSS/Reference)
   - : CSS 完整参考，包含 Firefox 和另外浏览器支持的详细信息。
 - [CSS 挑战](http://en.wikiversity.org/wiki/Web_Design/CSS_challenges) (维基大学)
   - : 让你的 CSS 技巧更灵活，看你是否需要更多的练习。
