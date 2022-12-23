@@ -208,11 +208,11 @@ Puisque les en-têtes peuvent être envoyés dans les requêtes et reçus dans l
 
 Les valeurs possibles de la propriété <i lang="en">guard</i> sont&nbsp;:
 
-- `none`: défaut.
-- `request`: guard pour l’en-tête obtenu d'une requête ({{domxref("Request.headers")}}).
-- `request-no-cors`: guard pour l'en-tête obtenu d'une requête créé avec {{domxref("Request.mode")}} `no-cors`.
-- `response`: guard pour l'en-tête obtenu d'une réponse ({{domxref("Response.headers")}}).
-- `immutable`: majoritairement utilisé pour les ServiceWorkers; retourne un objet en-tête en lecture seule.
+- `none`&nbsp;: défaut.
+- `request`&nbsp;: <i lang="en">guard</i> pour l'en-tête obtenu d'une requête ({{domxref("Request.headers")}}).
+- `request-no-cors`&nbsp;: <i lang="en">guard</i> pour l'en-tête obtenu d'une requête créée avec {{domxref("Request.mode")}} `no-cors`.
+- `response`&nbsp;: <i lang="en">guard</i> pour l'en-tête obtenu d'une réponse ({{domxref("Response.headers")}}).
+- `immutable`&nbsp;: majoritairement utilisé pour les <i lang="en">service workers</i>&nbsp;; retourne un objet en-tête en lecture seule.
 
 > **Note :** Vous ne pouvez pas ajouter ou définir sur une requête protegée un en-tête `Content-Length`. De manière similaire, ajouter `Set-Cookie` dans l'en-tête de réponse n'est pas autorisé&nbsp;: les ServiceWorkers n'étant pas autorisés à gérer des cookies via des réponses synthétisées.
 
