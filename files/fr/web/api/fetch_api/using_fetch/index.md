@@ -220,7 +220,7 @@ Les valeurs possibles de la propriété <i lang="en">guard</i> sont&nbsp;:
 
 Comme vous l'avez vu ci-dessus, des instances de {{domxref("Response")}} sont retournées quand la promesse de `fetch()` est résolue.
 
-Elles peuvent aussi être programmées dans le code via JavaScript, mais c'est seulement utile concernant les {{domxref("ServiceWorker_API", "ServiceWorkers")}}, quand vous retournez, pour une requête reçue, une réponse personnalisée en utilisant la méthode {{domxref("FetchEvent.respondWith","respondWith()")}}&nbsp;:
+Elles peuvent aussi être programmées dans le code via JavaScript, mais c'est seulement utile concernant les [<i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API), quand vous retournez, pour une requête reçue, une réponse personnalisée en utilisant la méthode {{domxref("FetchEvent.respondWith","respondWith()")}}&nbsp;:
 
 ```js
 var myBody = new Blob();
