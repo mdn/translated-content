@@ -214,7 +214,7 @@ Les valeurs possibles de la propriété <i lang="en">guard</i> sont&nbsp;:
 - `response`&nbsp;: <i lang="en">guard</i> pour l'en-tête obtenu d'une réponse ({{domxref("Response.headers")}}).
 - `immutable`&nbsp;: majoritairement utilisé pour les <i lang="en">service workers</i>&nbsp;; retourne un objet en-tête en lecture seule.
 
-> **Note :** Vous ne pouvez pas ajouter ou définir sur une requête protegée un en-tête `Content-Length`. De manière similaire, ajouter `Set-Cookie` dans l'en-tête de réponse n'est pas autorisé&nbsp;: les ServiceWorkers n'étant pas autorisés à gérer des cookies via des réponses synthétisées.
+> **Note :** Vous ne pouvez pas ajouter ou définir sur une requête protegée un en-tête `Content-Length`. De manière similaire, ajouter `Set-Cookie` dans l'en-tête de réponse n'est pas autorisé, les <i lang="en">service workers</i> n'étant pas autorisés à gérer des cookies via des réponses synthétisées.
 
 ## Réponses
 
