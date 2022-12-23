@@ -25,7 +25,7 @@ A {{domxref("DOMString")}} whose value is one of the strings which are a member 
     <tr>
       <th scope="row"><code>"sendrecv"</code></th>
       <td>
-        可以发送 {{Glossary("RTP")}} 数据，如果另一个对等节点接受了链接，且至少有一个 sender 的处于编码状态，则发送数据。
+        可以发送 {{Glossary("RTP")}} 数据，如果另一个对等节点接受了连接，且至少有一个 sender 的处于编码状态，则发送数据。
       </td>
       <td>
         可以接收 RTP 数据，如果有其它的对等节点接受数据，则接收数据。
@@ -34,7 +34,7 @@ A {{domxref("DOMString")}} whose value is one of the strings which are a member 
     <tr>
       <th scope="row"><code>"sendonly"</code></th>
       <td>
-        可以发送 {{Glossary("RTP")}} 数据，如果另一个对等节点接受了链接，且至少有一个 sender 的处于编码状态，则发送数据。
+        可以发送 {{Glossary("RTP")}} 数据，如果另一个对等节点接受了连接，且至少有一个 sender 的处于编码状态，则发送数据。
       </td>
       <td><em>不</em>可以接收 RTP 数据，无论如何都不会接收数据。</td>
     </tr>
