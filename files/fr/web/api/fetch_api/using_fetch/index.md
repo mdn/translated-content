@@ -273,7 +273,7 @@ fetch("/login", {
 })
 ```
 
-Les Requêtes et Réponses (et par extension la fonction `fetch()`), vont tenter de déterminer le type de contenu. Une requête va automatiquement définir un en-tête `Content-Type`  si rien n'est défini dans le dictionnaire \[NDLT&nbsp;: configuration d'initialisation].
+Les requêtes et réponses (et par extension la fonction `fetch()`), vont tenter de déterminer le type de contenu. Une requête va automatiquement définir un en-tête `Content-Type` si rien n'est défini dans le dictionnaire \[NDLT&nbsp;: configuration d'initialisation].
 
 ## Spécifications
 
