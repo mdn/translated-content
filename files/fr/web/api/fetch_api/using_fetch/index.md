@@ -137,7 +137,7 @@ C'est très pratique, si le corps de la requête et de la réponse ne sont utili
 
 > **Note :** Il y a aussi une méthode {{domxref("Request.clone","clone()")}} qui crée une copie. Cette sémantique est légèrement différente de l'autre méthode de copie—la première va échouer si l'ancien corps de la requête a déjà été lu (même pour copier une réponse), alors qu'elle fonctionnera avec `clone()`.
 
-## En-têtes (Headers)
+## En-têtes (<i lang="en">headers</i>)
 
 L'interface {{domxref("Headers")}} vous permet de créer vos propres objets d'en-têtes via le constructeur {{domxref("Headers.Headers","Headers()")}}. Un objet en-tête est un simple ensemble de plusieurs clé-valeurs&nbsp;:
 
