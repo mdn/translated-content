@@ -61,7 +61,7 @@ Les requêtes Fetch sont controllées par la directive `connect-src` du [Content
 
 ### Fournir des options à la requête
 
-La méthode `fetch()` accepte un second paramètre, optionnel ; un objet `init` qui vous permet de contrôler un certain nombre de réglages&nbsp;:
+La méthode `fetch()` accepte un second paramètre optionnel, un objet `init` qui vous permet de contrôler un certain nombre de réglages&nbsp;:
 
 ```js
 var myHeaders = new Headers();
