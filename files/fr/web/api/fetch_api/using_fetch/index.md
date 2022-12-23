@@ -176,7 +176,7 @@ console.log(myHeaders.getAll("X-Custom-Header")); // [ ]
 
 Certaines de ces opérations sont seulement utiles dans {{domxref("ServiceWorker_API","ServiceWorkers")}}, mais elles fournissent une bien meilleur API pour la manipulation des en-têtes.
 
-Toutes les méthodes d'en-tête provoquent une erreur TypeError si un nom d’en-tête utilisé n'est pas un nom d’en-tête HTTP valide. Les opérations de mutation vont provoquer une erreur TypeError si il y a une protection immutable (voir ci-dessous). Sinon elles échoueront en silence. Par exemple&nbsp;:
+Toutes les méthodes d'en-tête provoquent une erreur `TypeError` si un nom d'en-tête utilisé n'est pas un nom d'en-tête HTTP valide. Les opérations de mutation vont provoquer une erreur `TypeError` si il y a une protection immutable (voir ci-dessous). Sinon elles échoueront en silence. Par exemple&nbsp;:
 
 ```js
 var myResponse = Response.error();
