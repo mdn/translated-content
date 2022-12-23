@@ -206,7 +206,7 @@ fetch(myRequest).then(function(response) {
 
 Puisque les en-têtes peuvent être envoyés dans les requêtes et reçus dans les réponses, et qu'elles ont diverses limitations concernant les informations qui peuvent et doivent être mutables, les objets en-tête ont une propriété _guard_. Celle-ci n'est pas exposée au Web, mais elle définit quelle opération de mutation est autorisée sur l'objet en-tête.
 
-Les valeurs possibles de la propriété _guard_ sont&nbsp;:
+Les valeurs possibles de la propriété <i lang="en">guard</i> sont&nbsp;:
 
 - `none`: défaut.
 - `request`: guard pour l’en-tête obtenu d'une requête ({{domxref("Request.headers")}}).
