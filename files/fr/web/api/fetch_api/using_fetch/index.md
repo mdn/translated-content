@@ -135,7 +135,7 @@ var anotherRequest = new Request(myRequest,myInit);
 
 C'est très pratique, si le corps de la requête et de la réponse ne sont utilisés qu'une fois seulement. Cette manière de faire une copie permet de ré-utiliser la requête/réponse, en changeant juste les options du `init` si nécessaire.
 
-> **Note :** Il y a aussi une méthode {{domxref("Request.clone","clone()")}} qui crée une copie. Cette sémantique est légèrement différente de l'autre méthode de copie— La première va échouer si l'ancien corps de la requête a déjà été lu (même pour copier une réponse), alors qu'elle fonctionnera avec `clone()`.
+> **Note :** Il y a aussi une méthode {{domxref("Request.clone","clone()")}} qui crée une copie. Cette sémantique est légèrement différente de l'autre méthode de copie—la première va échouer si l'ancien corps de la requête a déjà été lu (même pour copier une réponse), alors qu'elle fonctionnera avec `clone()`.
 
 ## En-têtes (Headers)
 
