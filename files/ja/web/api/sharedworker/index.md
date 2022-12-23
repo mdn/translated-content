@@ -1,91 +1,97 @@
 ---
 title: SharedWorker
 slug: Web/API/SharedWorker
+l10n:
+  sourceCommit: 06105598d11001e9f12d80ad05087f1df3c0634b
 ---
 
 {{APIRef("Web Workers API")}}
 
-**`SharedWorker`** インターフェースは複数のブラウザコンテキストからアクセス可能な Worker を提供します。複数のブラウザコンテキストとは、複数のウィンドウや iframe、Worker などを指します。Dedicated Worker とは異なるインタフェースと、異なるグローバルスコープを持ちます。スコープに関しては {{domxref("SharedWorkerGlobalScope")}} を参照してください。
+**`SharedWorker`** インターフェイスは、ウィンドウ、iframe、ワーカーなど複数の閲覧コンテキストからアクセスできる、特定の種類のワーカーを表します。これらは専用ワーカーとは異なるインターフェイスを実装しており、異なるグローバルコンテキストである {{domxref("SharedWorkerGlobalScope")}} を持ちます。
 
-> **メモ:** 同じオリジン、つまりプロトコル、ホスト名、ポートが全て同じ場合にのみ、SharedWorker は異なるブラウザコンテキスト間で共有されます。
+> **メモ:** SharedWorkerが複数の閲覧コンテキストからアクセスできる場合、それらの閲覧コンテキストはすべて、まったく同じ元（同じプロトコル、ホスト、ポート）を共有している必要があります。
 
-## コンストラクタ
+{{InheritanceDiagram}}
+
+## コンストラクター
 
 - {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}
-  - : 指定された URL のスクリプトを実行する SharedWorker を作成します。
+  - : 指定された URL のスクリプトを実行する共有ウェブワーカーを作成します。
 
-## プロパティ
+## インスタンスプロパティ
 
-_{{domxref("EventTarget")}} のプロパティを継承し、 {{domxref("AbstractWorker")}} で定義されるプロパティを実装しています。_
+_{{domxref("EventTarget")}} のプロパティを継承しています。_
 
-- {{domxref("AbstractWorker.onerror")}}
-  - : type `error` である {{domxref("ErrorEvent")}} がバブリングした時に呼ばれる {{domxref("EventListener")}}
-- {{domxref("SharedWorker.port")}} {{readonlyInline}}
-  - : 通信とコントロールに利用される {{domxref("MessagePort")}} オブジェクトを返します。
+- {{domxref("SharedWorker.port")}} {{ReadOnlyInline}}
+  - : 共有ワーカーとの通信および制御に使用される {{domxref("MessagePort")}} オブジェクトを返します。
+
+## イベント
+
+- {{domxref("SharedWorker.error_event", "error")}}
+  - : 共有ワーカーでエラーが発生したときに発行されます。
 
 ## メソッド
 
-_{{domxref("EventTarget")}} のメソッドを継承し、 {{domxref("AbstractWorker")}} に定義されるメソッドを実装します。_
+_{{domxref("EventTarget")}} のメソッドを継承しています。_
 
 ## 例
 
-[SharedWorker の基本利用例](https://github.com/mdn/simple-shared-worker) ([ライブデモ](http://mdn.github.io/simple-shared-worker/)) には 2 つの HTML ページがあり、それぞれでは JavaScript で単純な計算を行っています。それぞれのスクリプトは計算を行うために同じ JS ファイルを Worker に実行させています。2 つのページが別のウインドウで動作していたとしても、同じ Worker にアクセスできています。
+[基本的な共有ワーカーの例](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker)（[共有ワーカーを実行](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)）には 2 つの HTML ページがあり、それぞれでは JavaScript で単純な計算を行っています。異なるスクリプトが同じワーカーファイルを使用して計算を行っているため、ページが異なるウィンドウで実行されていても、どちらもアクセスすることができます。
 
-`SharedWorker` オブジェクトは {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクタを利用して、次のように作成します：
+以下のコードでは `SharedWorker` オブジェクトを、 {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクターを使用して生成しています。どちらのスクリプトもこれを格納します。
 
 ```js
-var myWorker = new SharedWorker("worker.js");
+const myWorker = new SharedWorker('worker.js');
 ```
 
-それぞれのスクリプトは {{domxref("MessagePort")}} オブジェクトを通じて Worker にアクセスします。このオブジェクトは {{domxref("SharedWorker.port")}} プロパティから取得できます。addEventListener を読んで onmessage イベントのハンドラを登録したら、`start()` メソッドを呼んでポートを手動で開始できます：
+どちらのスクリプトも、{{domxref("SharedWorker.port")}} プロパティを使用して作成された {{domxref("MessagePort")}} オブジェクトを通してワーカーにアクセスします。addEventListener を使用して onmessage イベントが関連づけられている場合、ポートはその `start()` メソッドを使用して手動で開始されます。
 
 ```js
 myWorker.port.start();
 ```
 
-ポートが開始されたら、Worker に向けてメッセージを送ったり、送られたメッセージを受け取ったりできます。これらには `port.postMessage()` と `port.onmessage` を利用します:
+ポートが開始されると、どちらのスクリプトも `port.postMessage()` と `port.onmessage` を使用して、それぞれワーカーにメッセージを投稿し、ワーカーから送られたメッセージを処理します。
 
 ```js
-first.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message posted to worker');
-  }
+first.onchange = () => {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log('Message posted to worker');
+}
 
-  second.onchange = function() {
-    myWorker.port.postMessage([first.value,second.value]);
-    console.log('Message posted to worker');
-  }
+second.onchange = () => {
+  myWorker.port.postMessage([first.value, second.value]);
+  console.log('Message posted to worker');
+}
 
-  myWorker.port.onmessage = function(e) {
-    result1.textContent = e.data;
-    console.log('Message received from worker');
-  }
-```
-
-Worker の内部では {{domxref("SharedWorkerGlobalScope.onconnect")}} に対してハンドラを設定することで、上述したポートへの接続を処理できます。Worker に関連付けられたポートは {{event("connect")}} イベントの `ports` 属性で参照できます。{{domxref("MessagePort")}} `の start()` メソッドによるポート開始後は、`onmessage` ハンドラでメインスレッドからのメッセージを処理します。
-
-```js
-onconnect = function(e) {
-    var port = e.ports[0];
-
-    port.addEventListener('message', function(e) {
-      var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
-      port.postMessage(workerResult);
-    });
-
-    port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
+myWorker.port.onmessage = (e) => {
+  result1.textContent = e.data;
+  console.log('Message received from worker');
 }
 ```
 
-## 仕様
+ワーカー内部では {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} ハンドラーを使用して、前述と同じポートに接続します。そのワーカーに関連するポートは {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} イベントの `ports` プロパティでアクセスできます。それから {{domxref("MessagePort") }} を使用して、ワーカーを開始します。ポートを始めるには `start()` メソッドを、メインスレッドから送られるメッセージを処理するには `onmessage` ハンドラーを使用します。
+
+```js
+onconnect = (e) => {
+  const port = e.ports[0];
+
+  port.addEventListener('message', (e) => {
+    const workerResult = `Result: ${e.data[0] * e.data[1]}`;
+    port.postMessage(workerResult);
+  });
+
+  port.start(); // Required when using addEventListener. Otherwise called implicitly by onmessage setter.
+}
+```
+
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザ互換性
+## ブラウザーの互換性
 
-{{Compat("api.SharedWorker")}}
+{{Compat}}
 
 ## 関連情報
 
 - {{domxref("Worker")}}
-- [Web workers の利用](/ja/docs/Web/Guide/Performance/Using_web_workers)
