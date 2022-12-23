@@ -54,7 +54,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 Os seguintes atributos são obsoletos e não devem ser usados. Estão documentados abaixo apenas como referência ao atualizar o código, e interesse histórico.
 
-- {{htmlattrdef("align")}} {{deprecatedGeneric('inline','HTML4.01')}} {{obsoleteGeneric('inline','HTML5')}}
+- {{htmlattrdef("align")}} {{deprecated_inline}}
 
   - : Esse atributo enumerado indica como o caption deve ser alinhado em relação a tabela. Ele pode ter os seguintes valores:
 
