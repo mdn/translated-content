@@ -32,9 +32,9 @@ if (window.fetch) {
 }
 ```
 
-## Créer une requête fetch
+## Créer une requête `fetch`
 
-Une requête fetch basique est vraiment simple à initier. Jetez un coup d'œil au code suivant&nbsp;:
+Une requête `fetch` basique est vraiment simple à initier. Jetez un coup d'œil au code suivant&nbsp;:
 
 ```js
 const myImage = document.querySelector('img');
@@ -232,13 +232,13 @@ addEventListener('fetch', function(event) {
 )});
 ```
 
-Le constructeur {{domxref("Response.Response","Response()")}} prend deux arguments optionnels —le corps de la réponse, et un objet d'options (similaire à l'objet que {{domxref("Request.Request","Request()")}} accepte).
+Le constructeur {{domxref("Response.Response","Response()")}} prend deux arguments optionnels&nbsp;: le corps de la réponse, et un objet d'options (similaire à l'objet que {{domxref("Request.Request","Request()")}} accepte).
 
 Les propriétés de réponse les plus communes que vous allez utiliser sont&nbsp;:
 
-- {{domxref("Response.status")}} —Un entier (valeur par défaut 200) contenant le code de statut de la réponse.
-- {{domxref("Response.statusText")}} — Une chaine de caractères (valeur par défaut "OK"), qui correspond au message du statut HTTP.
-- {{domxref("Response.ok")}} —vu précedemment, c'est un raccourci pour vérifier que le code de statut et bien compris entre 200 et 299 inclus. Retourne un {{domxref("Boolean")}}.
+- {{domxref("Response.status")}} — un entier (valeur par défaut 200) contenant le code de statut de la réponse.
+- {{domxref("Response.statusText")}} — une chaine de caractères (valeur par défaut "OK"), qui correspond au message du statut HTTP.
+- {{domxref("Response.ok")}} — vu précedemment, c'est un raccourci pour vérifier que le code de statut et bien compris entre 200 et 299 inclus. Retourne un {{domxref("Boolean")}}.
 
 > **Note :** La méthode statique {{domxref("Response.error","error()")}} retourne simplement une réponse d'erreur. De manière similaire, {{domxref("Response.redirect","redirect()")}} retourne une réponse de redirection vers une URL spécifique. Elles sont aussi pertinentes pour les Service Workers.
 
