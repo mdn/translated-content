@@ -52,10 +52,10 @@ window.onhashchange = locationHashChanged;
 
 The dispatched `hashchange` event has the following fields:
 
-| Field                                                 | Type        | Description                                           |
-| ----------------------------------------------------- | ----------- | ----------------------------------------------------- |
-| `newURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | The new URL to which the window is navigating.        |
-| `oldURL` {{gecko_minversion_inline("6.0")}} | `DOMString` | The previous URL from which the window was navigated. |
+| Field    | Type        | Description                                           |
+| -------- | ----------- | ----------------------------------------------------- |
+| `newURL` | `DOMString` | The new URL to which the window is navigating.        |
+| `oldURL` | `DOMString` | The previous URL from which the window was navigated. |
 
 ## Specifications
 
