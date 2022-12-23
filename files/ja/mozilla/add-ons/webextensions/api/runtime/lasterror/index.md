@@ -1,17 +1,6 @@
 ---
 title: runtime.lastError
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Non-standard
-  - Property
-  - Reference
-  - WebExtensions
-  - lastError
-  - runtime
-browser-compat: webextensions.api.runtime.lastError
 ---
 
 {{AddonSidebar()}}
@@ -37,7 +26,7 @@ let myError = browser.runtime.lastError;  // null or Error object
 
 ### 値
 
-エラーを表す{{jsxref("Error")}} オブジェクトです。 {{jsxref("Error.message", "message")}} プロパティは、人間が読めるエラーの説明の `string` です。`lastError` が無かったら、値は `null` になります。
+エラーを表す {{jsxref("Error")}} オブジェクトです。 {{jsxref("Error.message", "message")}} プロパティは、人間が読めるエラーの説明の `string` です。`lastError` が無かったら、値は `null` になります。
 
 ## 例
 
@@ -76,9 +65,9 @@ const setCookie = browser.cookies.set(
 setCookie.then(logCookie, logError);
 ```
 
-> **メモ:** `runtime.lastError` は {{WebExtAPIRef("extension.lastError")}} のエイリアスです。2つはセットになっており、どちらかだけを確認すればよいです。
+> **メモ:** `runtime.lastError` は {{WebExtAPIRef("extension.lastError")}} のエイリアスです。 2 つはセットになっており、どちらかだけを確認すればよいです。
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}
 
