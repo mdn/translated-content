@@ -32,7 +32,7 @@ slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 
 ## 主动学习
 
-_当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/docs/MDN/Getting_started) 。_
+_当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/docs/MDN/Community/Contributing/Getting_started)_。
 
 ## 深入探索
 
@@ -42,7 +42,7 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 #### **噢哦，图片去哪里了？**
 
-让我们看下我们的个人网站， `http://demozilla.examplehostingprovider.net/`.。没有出现我们预期的图片！
+让我们看下我们的个人网站， `http://demozilla.examplehostingprovider.net/`。没有出现我们预期的图片！
 
 ![Oops, the ‘unicorn’ image is missing](image-missing.png)
 
@@ -79,11 +79,11 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 ![Le list of images in our project](demozilla-images-list.png)
 
-乍一看，我们请求的图片似乎在正确的位置... 但是网络工具却出现了"404"的报错.。事实证明我们的 HTML 代码中出现了错别字： `unicorn_pics.png` 而不是`unicorn_pic.png`.。所以，通过在你的代码编辑器中改变图片的`src` 属性来纠正错别字。
+乍一看，我们请求的图片似乎在正确的位置... 但是网络工具却出现了"404"的报错。事实证明我们的 HTML 代码中出现了错别字：`unicorn_pics.png` 而不是 `unicorn_pic.png`。所以，通过在你的代码编辑器中改变图片的 `src` 属性来纠正错别字。
 
 ![Deleting the ‘s’](code-correct.png)
 
-保存，[推送到服务器](/zh-CN/Learn/Upload_files_to_a_web_server)，并在你的浏览器中重现加载网页。
+保存，[推送到服务器](/zh-CN/docs/Learn/Upload_files_to_a_web_server)，并在你的浏览器中重现加载网页。
 
 ![The image loads corectly in the browser](image-corrected.png)
 
@@ -118,7 +118,7 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 ![A Javascript error is shown in the Console](js-error.png)
 
-在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 [另一个系列](/zh-CN/Learn/JavaScript) 的文章中提到 JavaScript )。
+在这个例子中，我们清楚（相当清楚）错误所在，可以马上进行修复 (我们将在 [另一个系列](/zh-CN/docs/Learn/JavaScript) 的文章中提到 JavaScript )。
 
 ### 更多需要检查的地方
 
