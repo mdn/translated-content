@@ -21,13 +21,13 @@ slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
         <a href="/en-US/docs/Learn/JavaScript/Objects">JavaScript 객체</a> 참고),
         <a href="/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction"
           >Client-side API의 기본</a
-        > 
+        >
       </td>
     </tr>
     <tr>
       <th scope="row">목표:</th>
       <td>
-        데이터를 저장하기 위해 client-side storage API를 어떻게 사용하는지 배우기. 
+        데이터를 저장하기 위해 client-side storage API를 어떻게 사용하는지 배우기.
       </td>
     </tr>
   </tbody>
