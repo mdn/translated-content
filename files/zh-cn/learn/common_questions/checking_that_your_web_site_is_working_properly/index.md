@@ -3,6 +3,8 @@ title: 如何确保你的网站正常运行？
 slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 ---
 
+{{QuicklinksWithSubPages("Learn/Common_questions")}}
+
 在这篇文章中我们将重温针对网站的各种故障排除步骤以及解决这些问题的基本措施。
 
 <table class="learn-box standard-table">
