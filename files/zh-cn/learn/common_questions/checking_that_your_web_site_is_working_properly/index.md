@@ -10,7 +10,7 @@ slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提 :</th>
+      <th scope="row">预备知识：</th>
       <td>
         你需要知道怎么<a href="/zh-CN/docs/Learn/Upload_files_to_a_web_server"
           >上传文件到 web 服务器</a
@@ -18,15 +18,15 @@ slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
       </td>
     </tr>
     <tr>
-      <th scope="row">目的 :</th>
+      <th scope="row">目标：</th>
       <td>你将学习如何诊断并解决你的网站可能遇到的一些基本问题。</td>
     </tr>
   </tbody>
 </table>
 
-所以你已经发布你的网站了对吗 ? 非常棒！但是你确定它能够正常运行吗？
+所以你已经发布你的网站了对吗？非常棒！但是你确定它能够正常运行吗？
 
-远程 web 服务器与本地服务器的运行表现通常有很大差别，因此在你的网站上线之时对它进行测试是个不错的主意。你可能会对为数众多的问题表示惊讶：图片无法显示，页面无法加载或者加载缓慢，等等。大多数时候这个问题不严重，只是一个小小的错误或者你的 web 主机配置问题。
+远程 web 服务器与本地服务器的运行表现通常有很大差别，因此在你的网站上线之时对它进行测试是个不错的主意。你可能会对为数众多的问题表示惊讶：图片无法显示、页面无法加载或者加载缓慢，等等。大多数时候这个问题不严重，只是一个小小的错误或者你的 web 主机配置问题。
 
 让我们看下如何诊断并解决那些问题。
 
@@ -40,9 +40,9 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 如果你想知道你的网站是否正常运行，第一件要做的事就是打开你的浏览器并前往你想要测试的页面。
 
-#### **噢哦，图片去哪里了？**
+#### 噢哦，图片去哪里了？
 
-让我们看下我们的个人网站， `http://demozilla.examplehostingprovider.net/`。没有出现我们预期的图片！
+让我们看下我们的个人网站，`http://demozilla.examplehostingprovider.net/`。没有出现我们预期的图片！
 
 ![Oops, the ‘unicorn’ image is missing](image-missing.png)
 
@@ -50,7 +50,7 @@ _当前没有主动学习的相关页面。[请考虑作出你的贡献](/zh-CN/
 
 ![The image has a 404 error](error404.png)
 
-这就是问题所在，位于底部的"404" 。 "404" 意味着 "资源未找到", 也就是我们无法看到图片的原因。
+这就是问题所在，位于底部的“404”。“404”意味着“资源未找到”，也就是我们无法看到图片的原因。
 
 #### HTTP 状态
 

@@ -10,7 +10,7 @@ slug: Learn/Common_questions/Thinking_before_coding
 <table class="learn-box standard-table">
   <tbody>
     <tr>
-      <th scope="row">前提：</th>
+      <th scope="row">预备知识：</th>
       <td>无</td>
     </tr>
     <tr>
