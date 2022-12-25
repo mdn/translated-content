@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 
 {{JSRef}}
 
-**`Intl.NumberFormat`** 对象能使语言敏感的数字格式化。
+**`Intl.NumberFormat`** 对象能使数字在特定的语言环境下格式化。
 
 {{EmbedInteractiveExample("pages/js/intl-numberformat.html")}}
 
@@ -52,26 +52,25 @@ console.log(new Intl.NumberFormat().format(number));
 ```js
 const number = 123456.789;
 
-// German uses comma as decimal separator and period for thousands
+// 德语使用逗号（,）作为小数点，使用句号（.）作为千位分隔符
 console.log(new Intl.NumberFormat('de-DE').format(number));
-// 123.456,789
+// → 123.456,789
 
-// Arabic in most Arabic speaking countries uses real Arabic digits
+// 大多数阿拉伯语国家使用阿拉伯语数字
 console.log(new Intl.NumberFormat('ar-EG').format(number));
-// ١٢٣٤٥٦٫٧٨٩
+// → ١٢٣٤٥٦٫٧٨٩
 
 // India uses thousands/lakh/crore separators
 console.log(new Intl.NumberFormat('en-IN').format(number));
-// 1,23,456.789
+// → 1,23,456.789
 
-// the nu extension key requests a numbering system, e.g. Chinese decimal
+// 通过编号系统中的 nu 扩展键请求，例如：中文十进制数字
 console.log(new Intl.NumberFormat('zh-Hans-CN-u-nu-hanidec').format(number));
-// 一二三,四五六.七八九
+// → 一二三,四五六.七八九
 
-// when requesting a language that may not be supported, such as
-// Balinese, include a fallback language, in this case Indonesian
+//当请求的语言不被支持，例如巴里，包含一个回滚语言印尼，这时候就会使用印尼语
 console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
-// 123.456,789
+// → 123.456,789
 ```
 
 ### 可用的选项
@@ -81,19 +80,19 @@ console.log(new Intl.NumberFormat(['ban', 'id']).format(number));
 ```js
 const number = 123456.789;
 
-// request a currency format
+// 要求货币格式
 console.log(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(number));
 // 123.456,79 €
 
-// the Japanese yen doesn't use a minor unit
+// 日元不使用小数位
 console.log(new Intl.NumberFormat('ja-JP', { style: 'currency', currency: 'JPY' }).format(number));
 // ￥123,457
 
-// limit to three significant digits
+// 限制三位有效数字
 console.log(new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(number));
-// 1,23,000
+// → 1,23,000
 
-// Formatting with units
+// 带有单位的格式化
 console.log(new Intl.NumberFormat('pt-PT', {
   style: 'unit',
   unit: 'kilometer-per-hour'
