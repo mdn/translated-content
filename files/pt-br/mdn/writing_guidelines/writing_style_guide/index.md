@@ -71,7 +71,7 @@ O Enter (ou Return) do seu teclado inicia um novo parágrafo. Para inserir uma n
 
 Use the "Formatting Styles" drop-down list to apply predefined styles to selected content.
 
-> **Nota:**The "Note" style is used to call out important notes, like this one.
+> **Nota:** The "Note" style is used to call out important notes, like this one.
 
 > **Aviso:** Similarly, the "Warning" style creates warning boxes like this.
 
