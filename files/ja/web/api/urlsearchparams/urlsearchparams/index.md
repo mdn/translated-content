@@ -93,7 +93,7 @@ const addSearchParams = (url, params = {}) =>
   );
 ```
 
-## 仕様書
+## 仕様
 
 {{Specifications}}
 
