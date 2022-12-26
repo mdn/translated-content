@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
 
 중복 항목이 생략되고 배열이 알파벳 오름차순으로 정렬됩니다 (또는 더 정확하게, `undefined` 비교 함수와 함께 {{jsxref("Array/sort", "Array.prototype.sort()")}}를 사용합니다)
 
-이 메서드를 사용하여 특정 구현에서 값이 지원되는지 여부를 feature-test하고 필요한 경우에만 폴리필을 다운로드할 수 있습니다. 
+이 메서드를 사용하여 특정 구현에서 값이 지원되는지 여부를 feature-test하고 필요한 경우에만 폴리필을 다운로드 할 수 있습니다.
 또한 사용자가 선호하는 지역화된 값을 선택할 수 있는 UI를 만드는 데 사용할 수도 있습니다, 예를 들어 UI가 WebGL 또는 server-side에서 생성된 경우입니다.
 
 {{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html", "taller")}}
@@ -61,7 +61,6 @@ Intl.supportedValuesOf("calendar").forEach((calendar) => {
 ```
 
 > **참고:** 달력 값에 대해 반환되는 배열에는 항상 "gregory" (그레고리안력) 값이 포함됩니다.
-
 
 다른 값은 모두 같은 방식으로 얻어집니다.
 
