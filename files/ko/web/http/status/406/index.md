@@ -41,4 +41,4 @@ browser-compat: http.status.406
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
-- HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+- HTTP [콘텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)
