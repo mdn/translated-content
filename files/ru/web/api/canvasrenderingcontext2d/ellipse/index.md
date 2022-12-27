@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/ellipse
 ---
 {{APIRef}}
 
-**`CanvasRenderingContext2D`\*\***`.ellipse()`\*\* - метод Canvas 2D API, который добавляет эллиптическую дугу к текущему подпространству.
+**`CanvasRenderingContext2D.ellipse()`** - метод Canvas 2D API, который добавляет эллиптическую дугу к текущему подпространству.
 
 ## Синтаксис
 

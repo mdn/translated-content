@@ -77,7 +77,7 @@ f2() === undefined; // true
 
 En mode strict, la valeur de `this` est conservée (il reste le même) entre le moment de sa définition et l'entrée dans le contexte d'exécution. S'il n'est pas défini, il reste `undefined`. Il pourrait être défini avec n'importe quelle autre valeur, telle que `null` ou `42` ou `"Je ne suis pas this"`.
 
-> **Note :** Dans ce deuxième exemple,`this` vaut {{jsxref("undefined")}} car `f2` a été appelé sans « base » (ex. : `window.f2()`). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet `window`.
+> **Note :** Dans ce deuxième exemple, `this` vaut {{jsxref("undefined")}} car `f2` a été appelé sans « base » (ex. : `window.f2()`). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet `window`.
 
 ### `call` et `apply`
 

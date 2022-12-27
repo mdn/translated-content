@@ -21,7 +21,7 @@ await clients.claim();
 
 ### Результат
 
-[`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object is used for deferred and asynchronous computations. A Promise is in one of these states:") с `undefined`.
+[`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) с `undefined`.
 
 ## Пример
 

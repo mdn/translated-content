@@ -71,7 +71,7 @@ var myImageData = ctx.getImageData(left, top, width, height);
 
 ### Выбор цвета
 
-В этом примере мы используем метод [getImageData() ](/ru/docs/Web/API/CanvasRenderingContext2D/getImageData)для отображения цвета под курсором мыши. Для этого нам нужна текущая позиция мыши с `layerX` и `layerY`, затем мы просматриваем пиксельные данные в этой позиции в массиве пикселей, который предоставляет нам [getImageData() ](/ru/docs/Web/API/CanvasRenderingContext2D/getImageData). Наконец, мы используем данные массива для установки цвета фона и текста `<div>` для отображения цвета.
+В этом примере мы используем метод [getImageData()](/ru/docs/Web/API/CanvasRenderingContext2D/getImageData) для отображения цвета под курсором мыши. Для этого нам нужна текущая позиция мыши с `layerX` и `layerY`, затем мы просматриваем пиксельные данные в этой позиции в массиве пикселей, который предоставляет нам [getImageData()](/ru/docs/Web/API/CanvasRenderingContext2D/getImageData). Наконец, мы используем данные массива для установки цвета фона и текста `<div>` для отображения цвета.
 
 ```html hidden
 <canvas id="canvas" width="300" height="227" style="float:left"></canvas>

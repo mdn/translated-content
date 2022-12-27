@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/strokeStyle
 ---
 {{APIRef}}
 
-Свойство** \*\***`CanvasRenderingContext2D`\***\*`.strokeStyle`**, предоставляемое Canvas 2D API задаёт цвет или стиль, используемый при выполнении обводки фигур. По умолчанию установлено значение `#000` (чёрный цвет).
+Свойство **`CanvasRenderingContext2D.strokeStyle`**, предоставляемое Canvas 2D API задаёт цвет или стиль, используемый при выполнении обводки фигур. По умолчанию установлено значение `#000` (чёрный цвет).
 
 Смотрите также главу [Applying styles and color](/ru/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) в [Canvas Tutorial](/ru/docs/Web/API/Canvas_API/Tutorial).
 
@@ -89,7 +89,7 @@ window.addEventListener("load", drawCanvas);
 
 {{ EmbedLiveSample('Playable_code', 700, 360) }}
 
-### Использование `strokeStyle `в циклах` for`
+### Использование `strokeStyle` в циклах `for`
 
 В этом примере свойство `strokeStyle` используется для рисования границ фигур. Мы используем метод {{domxref("CanvasRenderingContext2D.arc", "arc()")}} для рисования кругов.
 

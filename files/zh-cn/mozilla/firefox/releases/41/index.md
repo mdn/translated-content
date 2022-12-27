@@ -63,7 +63,7 @@ Highlights:
 
   - 使用 `'paste'`名利作为参数，{{domxref("Document.queryCommandSupported()")}}现在会返回 false 如果不充分的权限被执行 ({{bug(1161721)}}).
   - 使用`'cut'` 或 `'copy'` 命令作为参数，{{domxref("Document.queryCommandSupported()")}} 现在返回`true` 如果调用的上下文中包括用户发起的或特权代码 ({{bug(1162952)}}).
-  - 使用 `'cut'` 或`'copy' 命令作为参数`, {{domxref("Document.execCommand()")}} 将会执行，但是仅仅在用户发起的或特权代码的上下文下 ({{bug(1012662)}}).
+  - 使用 `'cut'` 或`'copy'` 命令作为参数, {{domxref("Document.execCommand()")}} 将会执行，但是仅仅在用户发起的或特权代码的上下文下 ({{bug(1012662)}}).
 
 #### Events
 

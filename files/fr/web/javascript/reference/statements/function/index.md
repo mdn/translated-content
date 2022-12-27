@@ -27,7 +27,7 @@ function nom([param1[, param2,[…, paramN]]]) {
 
 - `nom`
   - : Le nom de la fonction.
-- `param`N
+- `paramN`
   - : Le nom d'un argument à passer à la fonction. Une fonction peut avoir jusqu'à 255 arguments (cela peut varier en fonction des moteurs).
 - `instructions`
   - : Les instructions qui constituent le corps de la fonction.

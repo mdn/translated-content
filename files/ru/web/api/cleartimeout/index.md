@@ -70,4 +70,4 @@ window.onclick = function() { alarm.setup(); };
 - {{domxref("WindowOrWorkerGlobalScope.setInterval()")}}
 - {{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}
 - {{domxref("Window.requestAnimationFrame()")}}
-- [_Daemons_ management](/ru/docs/JavaScript/Timers/Daemons "JavaScript/Timers/Daemons")
+- [_Daemons_ management](/ru/docs/JavaScript/Timers/Daemons)

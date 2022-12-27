@@ -43,7 +43,7 @@ slug: Learn/JavaScript/Objects/Object_building_practice
 先複製 [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html)`、style.css`、[`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js) 檔案到你的本機磁碟中。這些檔案分別具備下列：
 
 1. 極簡的 HTML 文件，具備 1 個 {{HTMLElement("h1")}} 元素、1 個 {{HTMLElement("canvas")}} 元素可繪製彩球，以及其他元素可將 CSS 與 JavaScript 套用到 HTML 之上。
-2. 一些極簡單的樣式，主要可作為 `<h1> 的樣式風格與定位之用，並省去網頁邊緣的捲動棒或空白` (看起來更簡約)。
+2. 一些極簡單的樣式，主要可作為 `<h1>` 的樣式風格與定位之用，並省去網頁邊緣的捲動棒或空白 (看起來更簡約)。
 3. 某些 JavaScript 可用以設定 `<canvas>` 元素，另有通用函式可供我們往後使用。
 
 指令碼第一部分就像：
@@ -100,7 +100,7 @@ function Ball() {
 
 ### 繪製球體
 
-先將下列 `draw()` 函式加到 `Ball() 的` `prototype 之中：`
+先將下列 `draw()` 函式加到 `Ball()` 的 `prototype` 之中：
 
 ```js
 Ball.prototype.draw = function() {
@@ -121,7 +121,7 @@ Ball.prototype.draw = function() {
   - 弧形半徑 — 指定球體的 `size` 屬性。
   - 最後 2 項參數則指定弧形繪製時的圓圈起、終點角度。我們這裡指定 0 度與 `2 * PI` 度，這也等於半徑繞了 360 度 (你必須在半徑中指定，有點煩)。如此構成完整的圓。如果你只設定了 `1 * PI，就會只有半球體` (即 180 度)。
 
-- 最後使用 [`fill()`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/fill) 函式，基本上是用來聲稱「完成我們以 `beginPath()` 開始的繪圖路徑，再用 `fillStyle 中指定的色彩將之填滿`」。
+- 最後使用 [`fill()`](/zh-TW/docs/Web/API/CanvasRenderingContext2D/fill) 函式，基本上是用來聲稱「完成我們以 `beginPath()` 開始的繪圖路徑，再用 `fillStyle` 中指定的色彩將之填滿」。
 
 你已經可以開始測試自己的物件了。
 
@@ -221,7 +221,7 @@ Ball.prototype.update = function() {
 
     我們的 `loop()` 函式可進行：
 
-    - 設定 canvas 填滿色彩或是半透明的黑色。接著透`過 fillRect()` (共 4 個參數提供起始座標，以及繪製矩形的高度與寬度)，跨 canvas 的寬度與高度繪製整個矩型的色彩。如此可在繪製下一個畫格之前，先覆蓋前一個已存在的畫格；否則會看到許多隻長長的蛇爬來爬去。填充顏色已設定為半透明狀態：`rgba(0,0,0,0.25)` 可讓先前的畫格微微發亮，製造出球體移動時的小尾巴效果。如果將 0.25 更改為 1，就會完全消除尾巴。你可自己測試不同的數值，找出自己喜歡的效果。
+    - 設定 canvas 填滿色彩或是半透明的黑色。接著透過 `fillRect()` (共 4 個參數提供起始座標，以及繪製矩形的高度與寬度)，跨 canvas 的寬度與高度繪製整個矩型的色彩。如此可在繪製下一個畫格之前，先覆蓋前一個已存在的畫格；否則會看到許多隻長長的蛇爬來爬去。填充顏色已設定為半透明狀態：`rgba(0,0,0,0.25)` 可讓先前的畫格微微發亮，製造出球體移動時的小尾巴效果。如果將 0.25 更改為 1，就會完全消除尾巴。你可自己測試不同的數值，找出自己喜歡的效果。
     - 可對 `Ball()` 建立新的實作，接著將之 `push()` 到球體陣列的最後，且彩球數量必須少於 25 個。所以整個畫面最多顯示 25 個球。你可嘗試變更 `balls.length < 25` 中的數值，畫面中的彩球數量也會隨著變化。依你所用電腦＼瀏覽器處理效能的不同，若繪製上千個彩球就會拖慢整個動畫的速度。
     - 迴圈將巡過 `balls` 陣列中的所有彩球，並執行各個彩球的 `draw()` 與 `update()` 函式，以於畫面中逐一繪製，接著對下個畫格的位置與速度執行必要更新。
     - 再以 `requestAnimationFrame()` 函式執行過此函式 — 當此函式持續執行並傳送相同的函式名稱時，就會每秒執行此函式達特定次數，以產生流暢的動畫。接著重複執行此作業，也就是函式每次執行時均會呼叫自身 1 次，進而循環執行。

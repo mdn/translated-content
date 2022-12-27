@@ -253,7 +253,7 @@ WEBVTT
 让其与 HTML 媒体一起显示，你需要做如下工作：
 
 1. 以 .vtt 后缀名保存文件。
-2. 用 {{htmlelement("track")}} 标签链接 .vtt 文件， `<track>` 标签需放在 `<audio>` 或 `<video> 标签当中`，同时需要放在所有 \<source> 标签之后。使用 {{htmlattrxref("kind","track")}} 属性来指明是哪一种类型，如 subtitles、captions、descriptions。然后，使用 {{htmlattrxref("srclang","track")}} 来告诉浏览器你是用什么语言来编写的 subtitles。
+2. 用 {{htmlelement("track")}} 标签链接 .vtt 文件， `<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 {{htmlattrxref("kind","track")}} 属性来指明是哪一种类型，如 subtitles、captions、descriptions。然后，使用 {{htmlattrxref("srclang","track")}} 来告诉浏览器你是用什么语言来编写的 subtitles。
 
 如下：
 

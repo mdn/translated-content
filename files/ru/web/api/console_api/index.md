@@ -46,6 +46,6 @@ console.log(myString)
 
 ## Смотрите также
 
-- [Инструменты разработчика](/ru/docs/Tools "Tools")
-- [Веб-консоль](/ru/docs/Tools/Web_Console "Web Console") — как Веб-консоль в Firefox работает с вызовами Console API
+- [Инструменты разработчика](/ru/docs/Tools)
+- [Веб-консоль](/ru/docs/Tools/Web_Console) — как Веб-консоль в Firefox работает с вызовами Console API
 - [Отладка удалённых скриптов](/ru/docs/Tools/Remote_Debugging) — как увидеть консоль, когда выполняется отладка на мобильных устройствах

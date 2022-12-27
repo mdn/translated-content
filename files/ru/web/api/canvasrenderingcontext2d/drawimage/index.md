@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
 {{APIRef}}
 
-**`CanvasRenderingContext2D`\*\***`.drawImage()`\*\* метод Canvas 2D API предоставляет разные способы рисования изображения на холсте.
+**`CanvasRenderingContext2D.drawImage()`** метод Canvas 2D API предоставляет разные способы рисования изображения на холсте.
 
 ## Синтаксис
 
@@ -181,8 +181,8 @@ function drawImageActualSize() {
 - Начиная с {{geckoRelease("5.0")}}, `drawImage()` поддерживает отрицательные значения аргументов. Таким образом, можно переворачивать изображение вокруг разных осей.
 - Начиная с {{geckoRelease("5.0")}}, передача `null` или `undefined` как источника для `drawImage()` корректно выбрасывает исключение `TYPE_MISMATCH_ERR`.
 - Вплоть до Gecko 7.0 {{ geckoRelease("7.0") }} Firefox выбрасывал исключение в случае, если какая-то из координат равнялась нулю или бесконечности. Согласно спецификации, этого больше не происходит.
-- Gecko 9.0 {{ geckoRelease("9.0") }} теперь корректно поддерживает CORS без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F").
-- Gecko 11.0 {{ geckoRelease("11.0") }} теперь поддерживает SVG как источник для `drawImage()` без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F "en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F").
+- Gecko 9.0 {{ geckoRelease("9.0") }} теперь корректно поддерживает CORS без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
+- Gecko 11.0 {{ geckoRelease("11.0") }} теперь поддерживает SVG как источник для `drawImage()` без необходимости ["порчи" холста](/en/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F).
 
 ## Дополнительно
 

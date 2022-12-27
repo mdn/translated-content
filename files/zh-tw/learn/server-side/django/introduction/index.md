@@ -123,7 +123,7 @@ urlpatterns = [
 ]
 ```
 
-`urlpatterns`對像是`path()`和/或`re_path()`函數的列表（Python 列表使用方括號定義，其中項目用逗號分隔，可以有一個[可選的尾隨逗號](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples)。例如：\[`item1, item2, item3,` ]）。
+`urlpatterns` 對像是 `path()` 和/或 `re_path()` 函數的列表（Python 列表使用方括號定義，其中項目用逗號分隔，可以有一個[可選的尾隨逗號](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples)。例如：`[item1, item2, item3,]`）。
 
 兩種方法的第一個參數，是將要匹配的路由（模式）。`path()`方法使用尖括號，來定義將被捕獲、並作為命名參數傳遞給視圖函數的 URL 的部分。`re_path()`函數使用靈活的模式匹配方法，稱為正則表達式。我們將在後面的文章中討論這些內容！
 

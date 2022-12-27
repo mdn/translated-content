@@ -10,13 +10,13 @@ translation_of: Web/API/Canvas_API
 ---
 {{CanvasSidebar}}
 
-Элемент {{HTMLElement("canvas")}}, добавленный в [HTML5](/ru/docs/HTML/HTML5), предназначен для создания графики с помощью [JavaScript](/ru/docs/JavaScript "JavaScript"). Например, его используют для рисования графиков, создания фотокомпозиций, анимаций и даже обработки и рендеринга видео в реальном времени.
+Элемент {{HTMLElement("canvas")}}, добавленный в [HTML5](/ru/docs/HTML/HTML5), предназначен для создания графики с помощью [JavaScript](/ru/docs/JavaScript). Например, его используют для рисования графиков, создания фотокомпозиций, анимаций и даже обработки и рендеринга видео в реальном времени.
 
 _«Canvas»_ в переводе с английского означает _«холст»_.
 
-Приложения от Mozilla поддерживают `<canvas>` начиная с Gecko 1.8 (т.е. [с Firefox 1.5](/ru/docs/Firefox_1.5_for_developers "Firefox_1.5_for_developers")). Этот элемент первоначально был представлен Apple для OS X [Dashboard](http://www.apple.com/macosx/features/dashboard/) и Safari. Internet Explorer поддерживает` <canvas>` начиная с 9 версии; для более ранних версий IE поддержку для \<canvas> можно добавить с помощью скрипта из проекта Google's [Explorer Canvas](http://excanvas.sourceforge.net/). Google Chrome и Opera 9 также поддерживают `<canvas>`.
+Приложения от Mozilla поддерживают `<canvas>` начиная с Gecko 1.8 (т.е. [с Firefox 1.5](/ru/docs/Firefox_1.5_for_developers)). Этот элемент первоначально был представлен Apple для OS X [Dashboard](http://www.apple.com/macosx/features/dashboard/) и Safari. Internet Explorer поддерживает `<canvas>` начиная с 9 версии; для более ранних версий IE поддержку для \<canvas> можно добавить с помощью скрипта из проекта Google's [Explorer Canvas](http://excanvas.sourceforge.net/). Google Chrome и Opera 9 также поддерживают `<canvas>`.
 
-Элемент `<canvas>` также используется технологией [WebGL](/ru/docs/WebGL "WebGL") для отрисовки аппаратно-ускоренной 3D-графики на веб-страницах.
+Элемент `<canvas>` также используется технологией [WebGL](/ru/docs/WebGL) для отрисовки аппаратно-ускоренной 3D-графики на веб-страницах.
 
 ## Пример
 

@@ -3,7 +3,10 @@ title: CanvasRenderingContext2D.rotate()
 slug: Web/API/CanvasRenderingContext2D/rotate
 translation_of: Web/API/CanvasRenderingContext2D/rotate
 ---
-{{APIRef}}Метод **`CanvasRenderingContext2D`\*\***`.rotate()`\*\* из Canvas 2D API добавляет поворот в матрицу преобразования. Параметр angle - это угол поворота по часовой стрелке, в радианах.
+
+{{APIRef}}
+
+Метод **`CanvasRenderingContext2D.rotate()`** из Canvas 2D API добавляет поворот в матрицу преобразования. Параметр angle - это угол поворота по часовой стрелке, в радианах.
 
 ## Syntax
 

@@ -112,7 +112,7 @@ function list() {
 var list1 = list(1, 2, 3); // [1, 2, 3]
 ```
 
-Il est possible de lier avec la fonction .`call` de {{jsxref("Function.prototype")}} et on peut effectuer la réduction avec `[].slice.call(arguments)` plutôt qu'avec `Array.prototype.slice.call`. Voici comment on peut simplifier avec {{jsxref("Function.prototype.bind", "bind")}} :
+Il est possible de lier avec la fonction `call` de {{jsxref("Function.prototype")}} et on peut effectuer la réduction avec `[].slice.call(arguments)` plutôt qu'avec `Array.prototype.slice.call`. Voici comment on peut simplifier avec {{jsxref("Function.prototype.bind", "bind")}} :
 
 ```js
 var unboundSlice = Array.prototype.slice;

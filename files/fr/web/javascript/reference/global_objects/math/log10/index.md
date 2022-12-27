@@ -39,7 +39,7 @@ Le logarithme en base 10 du nombre passé en argument. Si cette valeur est néga
 
 Si la valeur de l'argument est strictement inférieure à 0, la valeur renvoyée à {{jsxref("NaN")}}.
 
-`log10()` étant une méthode statique de `Math`, il faut utiliser `Math.log10()`et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Cette fonction est équivalente à la fonction donnée par `Math.log(x) / Math.log(10)`.
+`log10()` étant une méthode statique de `Math`, il faut utiliser `Math.log10()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur). Cette fonction est équivalente à la fonction donnée par `Math.log(x) / Math.log(10)`.
 
 ## Exemple
 

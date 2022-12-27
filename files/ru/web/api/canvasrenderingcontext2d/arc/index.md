@@ -12,7 +12,7 @@ translation_of: Web/API/CanvasRenderingContext2D/arc
 ---
 {{APIRef}}
 
-**`CanvasRenderingContext2D`\*\***`.arc()`\*\* метод Canvas 2D API добавляет дугу к пути с центром _(x, y)_ и с радиусом _r_ с началом в _startAngle_ и с концом _endAngle_ и с направлением против часовой стрелки (по умолчанию по часовой стрелке).
+**`CanvasRenderingContext2D.arc()`** метод Canvas 2D API добавляет дугу к пути с центром _(x, y)_ и с радиусом _r_ с началом в _startAngle_ и с концом _endAngle_ и с направлением против часовой стрелки (по умолчанию по часовой стрелке).
 
 ## Синтаксис
 

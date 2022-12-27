@@ -13,7 +13,7 @@ translation_of: Web/API/Console/timeEnd
 
 Останавливает таймер, который был запущен до этого через функцию {{domxref("console.time()")}}.
 
-Более подробная документация и примеры есть в разделе [Таймеры](/ru/docs/DOM/console#Timers "DOM/console#Timers") документации к {{domxref("console")}}.
+Более подробная документация и примеры есть в разделе [Таймеры](/ru/docs/DOM/console#Timers) документации к {{domxref("console")}}.
 
 {{AvailableInWorkers}}
 
@@ -26,7 +26,7 @@ console.timeEnd(label);
 ### Параметры
 
 - `label`
-  - : Метка таймера, который будет остановлен. Останавливается один раз. После остановки время отображается в [Веб-консоли](/ru/docs/Tools/Web_Console "Web Console").
+  - : Метка таймера, который будет остановлен. Останавливается один раз. После остановки время отображается в [Веб-консоли](/ru/docs/Tools/Web_Console).
 
 ## Примеры
 

@@ -34,7 +34,7 @@ translation_of: Web/API/Attr
 - {{domxref("Attr.value", "value")}}
   - : Значение атрибута
 
-> **Примечание:** уровень DOM 3 определил `namespaceURI`, `localName `и `prefix` в {{domxref("Node")}} интерфейсе. В DOM4 они были перемещены в `Attr`.
+> **Примечание:** уровень DOM 3 определил `namespaceURI`, `localName` и `prefix` в {{domxref("Node")}} интерфейсе. В DOM4 они были перемещены в `Attr`.
 >
 > Это изменение реализовано в Chrome с версии 46.0 и Firefox с версии 48.
 
@@ -89,7 +89,7 @@ The following methods have been deprecated:
   - : Используйте {{domxref("Element.getAttribute()")}} взамен.
 - `getAttributeNodeNS()`
   - : Используйте {{domxref("Element.getAttributeNS()")}} взамен.
-- `hasAttributes() `{{obsolete_inline("21.0")}}
+- `hasAttributes()`{{obsolete_inline("21.0")}}
   - : Этот метод всегда возвращает значение false.
 - `hasChildNodes()`
   - : Этот метод всегда возвращает значение false.

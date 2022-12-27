@@ -32,7 +32,7 @@ ARIA - это набор специальных атрибутов, которы
   - : Хорошее введение в использование ARIA landmarks для улучшения навигации для пользователей с экранными читалками. [Стоит также заглянуть в заметки по поддержке ARIA landmarks читалками](http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/) и примеры использования на реальных сайтах (опубликовано в Июле 2011).
 - [Улучшение доступности форм](/ru/docs/ARIA/forms)
   - : ARIA используется не только для обозначения динамического контента! Узнайте, как улучшить доступность форм HTML используя дополнительные ARIA-атрибуты.
-- [Live regions (в процессе написания)](/ru/docs/Accessibility/ARIA/ARIA_Live_Regions "Live Regions")
+- [Live regions (в процессе написания)](/ru/docs/Accessibility/ARIA/ARIA_Live_Regions)
   - : Live regions подсказывают экранным читалкам как правильно обрабатывать изменения контента на странице.
 - [Использование ARIA Live Regions для оповещения об изменении контента страницы](http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)
   - : Краткая сводка об использовании live regions от создателей JAWS screen reader software. Live regions также поддерживаются NVDA в Firefox и VoiceOver в Safari.
@@ -66,7 +66,7 @@ ARIA - это набор специальных атрибутов, которы
 
 ### Обнаружение багов.
 
-[Сообщайте об ошибках ARIA в браузерах, экранных читалках и библиотеках JavaScript.](/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs "https://developer.mozilla.org/en/ARIA/How_to_file_ARIA-related_bugs")
+[Сообщайте об ошибках ARIA в браузерах, экранных читалках и библиотеках JavaScript.](/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs)
 
 ### Примеры
 
@@ -93,7 +93,7 @@ ARIA - это набор специальных атрибутов, которы
 
 - [Open AJAX Accessibility Task Force](http://www.openajax.org/member/wiki/Accessibility)
   - : The Open AJAX effort centers around developing tools, sample files, and automated tests for ARIA.
-- [Under Construction: WCAG 2.0 ARIA Techniques](/ru/docs/Accessibility/ARIA/ARIA_Techniques "ARIA Techniques")
+- [Under Construction: WCAG 2.0 ARIA Techniques](/ru/docs/Accessibility/ARIA/ARIA_Techniques)
   - : The community needs a complete set of WCAG techniques for WAI-ARIA + HTML, so that organizations can be comfortable claiming their ARIA-enabled content is WCAG compliant. This is important when regulations or policies are based on WCAG.
 
 ### Related Topics

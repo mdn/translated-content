@@ -67,7 +67,7 @@ var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
 
 ![](object-available-members.png)
 
-在此列表中，可以看到 `person1` 原型物件上所定義的成員，也就是 `Person()` 建構子 — `name`、`age`、`gender`、`interests`、`bio`、`greeting`。你也會看到其他如 `watch`、`valueOf 等，同樣也是定義在` `Person()` 建構子原型物件之上的成員，如此構成 [`Object`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object)。下圖顯示原型鍊的運作方式。
+在此列表中，可以看到 `person1` 原型物件上所定義的成員，也就是 `Person()` 建構子 — `name`、`age`、`gender`、`interests`、`bio`、`greeting`。你也會看到其他如 `watch`、`valueOf` 等，同樣也是定義在 `Person()` 建構子原型物件之上的成員，如此構成 [`Object`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object)。下圖顯示原型鍊的運作方式。
 
 ![](mdn-graphics-person-person-object-2.png)
 
@@ -95,7 +95,7 @@ person1.valueOf()
 
 所以如 [`Object.prototype.watch()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/watch)、[`Object.prototype.valueOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 等等，均可用於繼承自 `Object()` 的任何物件類型，包含以建構子建立的新物件實例。
 
-[`Object.is()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/is)、[`Object.keys()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)，及其他未於 `prototype` 內定義的成員，也就不會繼承至 1). 物件實例或 2). 從 `Object() 繼承而來的物件類型。`這些函式＼屬性都只能用於 `Object()` 建構子本身。
+[`Object.is()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/is)、[`Object.keys()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)，及其他未於 `prototype` 內定義的成員，也就不會繼承至 1). 物件實例或 2). 從 `Object()` 繼承而來的物件類型。這些函式、屬性都只能用於 `Object()` 建構子本身。
 
 > **備註：** 這看起來很奇怪：你怎麼能在建構子上定義函式 (Method)，而且這建構子本身也是函式 (Function)？其實「Function」也屬於一個物件類型，可參閱 [`Function()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function) 建構子參考以進一步了解。
 

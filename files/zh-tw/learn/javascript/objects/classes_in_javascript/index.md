@@ -103,7 +103,7 @@ function Teacher(first, last, age, gender, interests, subject) {
 }
 ```
 
-但這樣只是重新定義了新的屬性，而不是繼承自 `Person() 而來，所以無法達到我們預設的目標，也需要更多程式碼才能達成。`
+但這樣只是重新定義了新的屬性，而不是繼承自 `Person()` 而來，所以無法達到我們預設的目標，也需要更多程式碼才能達成。
 
 ## 設定 Teacher() 的原型與建構子參考
 

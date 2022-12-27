@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/moveTo
 ---
 {{APIRef}}
 
-Метод **`CanvasRenderingContext2D`\*\***`.moveTo()`\*\*, предоставляемый Canvas 2D API, перемещает начальную точку нового фрагмента контура в координаты `(x, y)`.
+Метод **`CanvasRenderingContext2D.moveTo()`**, предоставляемый Canvas 2D API, перемещает начальную точку нового фрагмента контура в координаты `(x, y)`.
 
 ## Синтаксис
 

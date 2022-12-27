@@ -19,7 +19,7 @@ var aBlob = new Blob( array, options );
 - _options_ is an optional `BlobPropertyBag` dictionary which may specify the following two attributes:
 
   - `type`, with a default value of `""`, that represents the MIME type of the content of the array that will be put in the blob.
-  - `endings`, with a default value of `"transparent"`, that specifies how strings containing the line ending character `\n` are to be written out. It is one of the two values: `"native"`, meaning that line ending characters are changed to match host OS filesystem convention, or `"transparent", `meaning that endings are stored in the blob without change. {{non-standard_inline}}
+  - `endings`, with a default value of `"transparent"`, that specifies how strings containing the line ending character `\n` are to be written out. It is one of the two values: `"native"`, meaning that line ending characters are changed to match host OS filesystem convention, or `"transparent"`, meaning that endings are stored in the blob without change. {{non-standard_inline}}
 
 ## Пример
 

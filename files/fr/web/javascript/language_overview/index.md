@@ -343,7 +343,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-JavaScript permet également d'utiliser deux autres types de boucles : [`for`...`of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) :
+JavaScript permet également d'utiliser deux autres types de boucles : [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) :
 
 ```js
 for (let element of tableau) {
@@ -352,7 +352,7 @@ for (let element of tableau) {
 }
 ```
 
-et [`for`...`in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) :
+et [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) :
 
 ```js
 for (let propriete in objet) {
@@ -563,7 +563,7 @@ for (let i = 0; i < a.length; i++) {
 }
 ```
 
-ES2015 a introduit la boucle plus concise [`for`...`of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) pour les objets itérables tels que les tableaux :
+ES2015 a introduit la boucle plus concise [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) pour les objets itérables tels que les tableaux :
 
 ```js
 for (const currentValue of a) {
@@ -571,7 +571,7 @@ for (const currentValue of a) {
 }
 ```
 
-Vous pourriez également itérer sur un tableau en utilisant une boucle [`for`...`in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in), cependant cela n'itère pas sur les éléments du tableau, mais sur les indices du tableau. De plus, si quelqu'un ajoutait de nouvelles propriétés à `Array.prototype`, elles seraient également parcourues par une telle boucle. Par conséquent, ce type de boucle n'est pas recommandé pour les tableaux.
+Vous pourriez également itérer sur un tableau en utilisant une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in), cependant cela n'itère pas sur les éléments du tableau, mais sur les indices du tableau. De plus, si quelqu'un ajoutait de nouvelles propriétés à `Array.prototype`, elles seraient également parcourues par une telle boucle. Par conséquent, ce type de boucle n'est pas recommandé pour les tableaux.
 
 Une autre façon d'itérer sur un tableau qui a été ajoutée avec ECMAScript 5 est [`forEach()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) :
 

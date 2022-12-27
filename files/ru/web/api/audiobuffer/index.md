@@ -87,8 +87,6 @@ button.onclick = function() {
 
 {{Compat}}
 
-##
-
 ## Смотрите также
 
 - [Использование Web Audio API](/ru/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

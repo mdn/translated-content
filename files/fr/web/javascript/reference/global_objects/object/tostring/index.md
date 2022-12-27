@@ -72,7 +72,7 @@ Chien.prototype.toString = function chienToString() {
 }
 ```
 
-En utilisant la fonction ci-avant, à chaque fois que `monChien` sera utilisé là où on attend une chaîne, le moteur JavaScript appellera automatique la fonction `chienToString()`qui renverra la chaîne suivante :
+En utilisant la fonction ci-avant, à chaque fois que `monChien` sera utilisé là où on attend une chaîne, le moteur JavaScript appellera automatique la fonction `chienToString()` qui renverra la chaîne suivante :
 
 ```js
 Le chien Gabby est un labrador femelle chocolat.

@@ -28,13 +28,13 @@ var myTable = new WebAssembly.Table(tableDescriptor);
       - : 一个表明储存在该 Table 中对象的类型。目前只能是： `"anyfunc"` (函数)。
     - _initial_
       - : 该 WebAssembly Table 初始大小。
-    - _maximum {{optional_inline}}_
+    - _maximum_ {{optional_inline}}
       - : 该 WebAssembly Table 允许扩展到的最大大小。
 
 ### 异常
 
 - 如果 `tableDescriptor` 不是对象类型，将会抛出 {{jsxref("TypeError")}} 异常。
-- 如果申明了 `maximum` 属性并且比 `initial 小`, 将会抛出{{jsxref("RangeError")}} 异常。
+- 如果申明了 `maximum` 属性并且比 `initial` 小, 将会抛出 {{jsxref("RangeError")}} 异常。
 
 ## `Table` Instance
 

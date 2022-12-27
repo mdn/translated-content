@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/save
 ---
 {{APIRef}}
 
-**`CanvasRenderingContext2D`\*\***`.save()`\*\* - метод Canvas 2D API. Сохраняет все состояния и добавляет текущее состояние в стек.
+**`CanvasRenderingContext2D.save()`** - метод Canvas 2D API. Сохраняет все состояния и добавляет текущее состояние в стек.
 
 ### Состояние чертежа
 

@@ -392,11 +392,11 @@ La liste de paliers de ratio de visibilité, `threshold`, est construite par la 
 
 Une fois que `options` est prêt, nous pouvons créer le nouvel observateur, en appelant le constructeur {{domxref("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} , en précisant une fonction _callback_ à appeler quand l'intersection franchit l'un de nos paliers, `handleIntersect()`, et notre ensemble d'options. On appelle alors {{domxref("IntersectionObserver.observe", "observe()")}} sur l'observateur retourné, afin de le passer à l'élément qui sera notre cible
 
-On pourrait également choisir de surveiller l'évolution de la visibilité de l'intersection de plusieurs éléments par rapport au _viewport_ en appelant `observer.observe()`pour chacun de ces éléments.
+On pourrait également choisir de surveiller l'évolution de la visibilité de l'intersection de plusieurs éléments par rapport au _viewport_ en appelant `observer.observe()` pour chacun de ces éléments.
 
 #### Construction du tableau de paliers de ratios
 
-La fonction`buildThresholdList()`, qui construit la liste de paliers, ressemble à ceci :
+La fonction `buildThresholdList()`, qui construit la liste de paliers, ressemble à ceci :
 
 ```js
 function buildThresholdList() {
@@ -412,7 +412,7 @@ function buildThresholdList() {
 }
 ```
 
-Cela construit la tableau de paliers (chacun de ces paliers étant un ratio compris entre 0.0 et 1.0, ajouté en poussant la valeur`i/numSteps`dans le tableau `thresholds` pour chaque entier `i` entre 1 et `numSteps`). On pousse également 0 pour inclure cette valeur. Le résultat, dans le cas où`numSteps`a sa valeur par défaut, est la liste de paliers suivante :
+Cela construit la tableau de paliers (chacun de ces paliers étant un ratio compris entre 0.0 et 1.0, ajouté en poussant la valeur `i/numSteps` dans le tableau `thresholds` pour chaque entier `i` entre 1 et `numSteps`). On pousse également 0 pour inclure cette valeur. Le résultat, dans le cas où `numSteps` a sa valeur par défaut, est la liste de paliers suivante :
 
 <table class="standard-table">
   <tbody>

@@ -27,7 +27,7 @@ Firefox 19 已于 2013 年 2 月 19 日正式发布。
 
 ### DOM
 
-- {{domxref("element.getElementsByTagName")}} 方法开始返回 `HTMLCollection` 对象，而不是以前的 `NodeList 对象`. ({{bug("799464")}}).
+- {{domxref("element.getElementsByTagName")}} 方法开始返回 `HTMLCollection` 对象，而不是以前的 `NodeList` 对象. ({{bug("799464")}}).
 - 实现了 {{domxref("File")}} 对象的 `mozLastModifiedDate` 属性。({{bug("793955")}})
 - 当 {{domxref("File")}} 对象的最后修改时间无法获取到时，它的 lastModifiedDate 属性会返回当前日期。({{bug("793459")}}
 - 实现了 {{domxref("CanvasRenderingContext2D")}}对象的 `isPointInStroke` 方法。({{bug("803124")}}).

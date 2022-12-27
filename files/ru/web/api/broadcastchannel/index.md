@@ -20,9 +20,10 @@ _Этот интерфейс также наследует свойства от
 
 - {{domxref("BroadcastChannel.name")}}
   - : Возвращает {{domxref("DOMString")}}, имя канала.
-- ### Обработчики событий
 
-  {{domxref("BroadcastChannel.onmessage")}}
+### Обработчики событий
+
+- {{domxref("BroadcastChannel.onmessage")}}
 
   - : {{event("Event_handlers", "event handler")}} свойство, определяющее функцию, которая будет запущена, когда произойдёт вызов события {{event("message")}} на этом объекте.
 

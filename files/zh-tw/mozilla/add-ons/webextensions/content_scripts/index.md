@@ -276,7 +276,7 @@ document.body.addEventListener("click", function() {
 - 監聽來自內容腳本的連線請求
 - 當它收到連線請求：
 
-  - 將端口儲存在 `portFromCS 這個變數`
+  - 將端口儲存在 `portFromCS` 這個變數
   - 透過端口傳送訊息給內容腳本
   - 開始監聽並記錄端口上的訊息
 

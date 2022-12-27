@@ -220,7 +220,7 @@ var section = document.querySelector('section');
 
 这儿我们保存了相应我们请求的数据 (访问 [`response`](/zh-CN/docs/Web/API/XMLHttpRequest/response) 属性) 于变量 `superHeroes` ;这个变量现在含有 JSON！我们现在把`superHeroes`传给两个函数，第一个函数将会用正确的数据填充`<header>`，同时第二个函数将创建一个信息卡片，然后把它插入`<section>`中。
 
-我们把代码包在事件处理函数中，当请求对象`load`事件触发时执行代码 (`见 onload`)，这是因为请求对象`load`事件只有在请求成功时触发；这种方式可以保证事件触发时 `request.response` 是绝对可以访问的。
+我们把代码包在事件处理函数中，当请求对象 `load` 事件触发时执行代码 (见 {{domxref("XMLHttpRequest.load_event", "onload")}})，这是因为请求对象 `load` 事件只有在请求成功时触发；这种方式可以保证事件触发时 `request.response` 是绝对可以访问的。
 
 ### 定位 header
 

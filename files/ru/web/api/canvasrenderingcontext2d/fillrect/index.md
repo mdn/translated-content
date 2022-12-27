@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/fillRect
 ---
 {{APIRef}}
 
-Метод **`CanvasRenderingContext2D`\*\***`.fillRect()`\*\*, предоставляемый Canvas 2D API, рисует залитый прямоугольник в позиции _(x, y),_ размер которого определяется аргументами _width_ и _height_, и стиль которого определяется атрибутом {{domxref("CanvasRenderingContext2D.fillStyle", "<code>fillStyle</code>")}}.
+Метод **`CanvasRenderingContext2D.fillRect()`**, предоставляемый Canvas 2D API, рисует залитый прямоугольник в позиции _(x, y),_ размер которого определяется аргументами _width_ и _height_, и стиль которого определяется атрибутом {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}.
 
 ## Синтаксис
 

@@ -9,7 +9,7 @@ translation_of: Web/API/CryptoKeyPair
 ---
 {{APIRef("Web Crypto API")}}
 
-**`CryptoKeyPair`** из [Web Crypto API ](/ru/docs/Web/API/Web_Crypto_API)представляет собой пару ключей для ассиметричных криптографических алгоритмов, также известных как алгоритмы с публичным-приватным ключом.
+**`CryptoKeyPair`** из [Web Crypto API](/ru/docs/Web/API/Web_Crypto_API) представляет собой пару ключей для ассиметричных криптографических алгоритмов, также известных как алгоритмы с публичным-приватным ключом.
 
 Объект `CryptoKeyPair` может быть получен с помощью {{domxref("SubtleCrypto.generateKey()")}}, используя один из следующих алгоритмов: RSASSA-PKCS1-v1_5, RSA-PSS, RSA-OAEP, ECDSA, или ECDH.
 

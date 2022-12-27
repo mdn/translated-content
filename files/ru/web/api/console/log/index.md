@@ -32,7 +32,7 @@ console.log(msg [, subst1, ..., substN]);
 - `subst1` ... `substN`
   - : JavaScript-объекты, с помощью которых произойдёт замена подстановочных символов в `msg`. Это даст вам дополнительный контроль над форматом вывода.
 
-Больше подробностей смотрите в разделе [Вывод текста в консоль ](/ru/docs/DOM/console#Outputting_text_to_the_console)документации {{domxref("console")}}.
+Больше подробностей смотрите в разделе [Вывод текста в консоль](/ru/docs/DOM/console#Outputting_text_to_the_console) документации {{domxref("console")}}.
 
 ## Спецификация
 

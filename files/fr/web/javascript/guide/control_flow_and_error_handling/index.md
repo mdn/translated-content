@@ -61,7 +61,7 @@ Ici, `{ x++; }` représente le bloc.
 >
 > Cella affichera 2 car l'instruction `var x` contenue dans le bloc fait partie de la même portée que l'instruction `var x` écrite avant le bloc. En C ou en Java, le code équivalent à cet exemple aurait produit 1.
 >
-> Cela a évolué avec ECMAScript 2015 (ES6). Les instructions `let`et `const` permettent de déclarer des variables dont la portée est celle du bloc courant. Voir les pages des références [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const).
+> Cela a évolué avec ECMAScript 2015 (ES6). Les instructions `let` et `const` permettent de déclarer des variables dont la portée est celle du bloc courant. Voir les pages des références [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const).
 
 ## Les instructions conditionnelles
 

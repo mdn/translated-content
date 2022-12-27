@@ -20,7 +20,7 @@ SyntaxError: Unexpected '#' used outside of class body.
 
 ## Quel est le problème&nbsp;?
 
-Un caractère \`#\` a été trouvé dans un contexte inattendu. Cela peut être à du code déplacé qui ne fait plus partie d'une classe, à un commentaire d'interpréteur (<i lang="en">hashbang</i>) situé sur une autre ligne que la première ou à l'oubli de quotes/guillemets autour d'un identifiant du DOM.
+Un caractère `#` a été trouvé dans un contexte inattendu. Cela peut être à du code déplacé qui ne fait plus partie d'une classe, à un commentaire d'interpréteur (<i lang="en">hashbang</i>) situé sur une autre ligne que la première ou à l'oubli de quotes/guillemets autour d'un identifiant du DOM.
 
 ## Exemples
 

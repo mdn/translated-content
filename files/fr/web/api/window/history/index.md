@@ -9,7 +9,7 @@ translation_of: Web/API/Window/history
 La propriété en lecture seule **`Window.history`** renvoie une référence à l'objet {{domxref("History")}}, qui offre la possibilité de manipuler l'historique de session du navigateur (pages visitées dans l'onglet ou le cadre dans lesquels la page courante est chargée).
 
 L'objet `History` obtenu a les méthodes suivantes : voir [la manipulation de l'historique du navigateur](/en/DOM/Manipulating_the_browser_history) pour avoir plus de détails ainsi que des exemples.
-En particulier, cet article explique les caractéristiques des méthodes `pushState()` et `replaceState()`qu'il est utile de connaître avant de les utiliser.
+En particulier, cet article explique les caractéristiques des méthodes `pushState()` et `replaceState()` qu'il est utile de connaître avant de les utiliser.
 
 ## Exemple
 
