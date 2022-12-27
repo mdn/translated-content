@@ -4711,6 +4711,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 /ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toSource	/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/toString
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Set/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Set
+/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/String/TrimLeft	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimStart
 /ja/docs/Web/JavaScript/Reference/Global_Objects/String/TrimRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/trimEnd

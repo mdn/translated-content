@@ -450,7 +450,7 @@ issue: [#1008](https://github.com/mdn/translated-content/issues/1008)
 
 다음은 `en-us locale`에 대한 기본 compatibility 항목입니다. 현재 `ko locale`에는 여러 번역 문구들이 있습니다. 이 문구들은 모두 삭제돼야합니다.
 
-1차적으로 https://gist.github.com/hochan222/ad801f7a6325e2b2e391ab634d6d18ce 로 30가지 경우에 대해 [PR 1176](https://github.com/mdn/translated-content/pull/1176) 에서 처리했으며, 나머지 경우에 대해 정규표현식을 작성해 삭제하거나 발견시 삭제 바랍니다.
+1차적으로 <https://gist.github.com/hochan222/ad801f7a6325e2b2e391ab634d6d18ce> 로 30가지 경우에 대해 [PR 1176](https://github.com/mdn/translated-content/pull/1176) 에서 처리했으며, 나머지 경우에 대해 정규표현식을 작성해 삭제하거나 발견시 삭제 바랍니다.
 
 #### 기본 항목
 
@@ -481,7 +481,7 @@ issue: [#1008](https://github.com/mdn/translated-content/issues/1008)
 
 **1. 한국어로된 MDN 사이트는 못보나요?**
 
-https://developer.mozilla.org/en-US/docs/Web/HTML 와같이 영문 페이지라면 중간에 en-US만 https://developer.mozilla.org/ko/docs/Web/HTML 와같이 ko로 바꿔주시면 번역본으로 보실 수 있습니다.
+<https://developer.mozilla.org/en-US/docs/Web/HTML> 와같이 영문 페이지라면 중간에 en-US만 <https://developer.mozilla.org/ko/docs/Web/HTML> 와같이 ko로 바꿔주시면 번역본으로 보실 수 있습니다.
 
 페이지가 존재하지 않는 경우 번역을 통해 기여를 하실 수 있습니다. 번역 기준 버전은 en-US입니다.
 
@@ -491,7 +491,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTML 와같이 영문 페이지라�
 
 **3. 제가 초보라서 번역에 어떻게 기여하는지, 또 따라야 할 공식 지침 같은 것이 있는지 몰라서 손을 못 대고 있는 상황입니다.**
 
-단순한 제보는 https://github.com/mdn/translated-content/issues 다음 페이지에서 New issue를 눌러서 이슈 작성을 해주시면 됩니다! 혹시 직접 수정해서 기여하고 싶으시면 https://github.com/mdn/translated-content/issues/827 이 절차대로 진행해주실 수 있으신가요? 기여해주셔서 감사합니다.
+단순한 제보는 <https://github.com/mdn/translated-content/issues> 다음 페이지에서 New issue를 눌러서 이슈 작성을 해주시면 됩니다! 혹시 직접 수정해서 기여하고 싶으시면 <https://github.com/mdn/translated-content/issues/827> 이 절차대로 진행해주실 수 있으신가요? 기여해주셔서 감사합니다.
 
 **4. Issue의 라벨은 어떻게 붙이나요?**
 

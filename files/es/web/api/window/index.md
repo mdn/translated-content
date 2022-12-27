@@ -53,7 +53,7 @@ Nota que la propiedades que son objetos (por ejemplo para sobreescribir los prot
   - : El punto de acceso a muchas propiedades [XPCOM](/es/docs/XPCOM). Algunas propiedades, ej. [classes](/es/docs/Components.classes), son disponibles solamente a codigo suficientemente privilegiado. **El codigo Web no deberia usar esta propiedad.**
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Retorna una referencia al objeto de la consola proveyendo acceso a la consola debugger del navegador.
-- {{domxref("Window.content")}} and Window.\_content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
   - : Returns a reference to the content element in the current window. The obsolete variant with underscore is no longer available from Web content.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Returns the XUL controller objects for the current chrome window.

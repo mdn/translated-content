@@ -7,7 +7,7 @@ translation_of: Web/CSS/@supports
 
 ## Resumen
 
-La regla "CSS `@supports"`asocia un conjunto de declaraciones anidadas en un bloque CSS (que está delimitado por corchetes) con una condición consistente en probar declaraciones de CSS (es decir, pares propiedad-valor, así como conjunciones, disjunciones o negaciones abritrarias sobre ellas). A esas condiciones se le llama condición "soporta" _(\_\_supports condition)_.
+La regla "CSS `@supports"`asocia un conjunto de declaraciones anidadas en un bloque CSS (que está delimitado por corchetes) con una condición consistente en probar declaraciones de CSS (es decir, pares propiedad-valor, así como conjunciones, disjunciones o negaciones abritrarias sobre ellas). A esas condiciones se le llama condición "soporta" _(supports condition)_.
 
 `@supports` otorga la habilidad de realizar consultas que comprueben si ciertas funcionalidades están disponibles _(feature query)_.
 

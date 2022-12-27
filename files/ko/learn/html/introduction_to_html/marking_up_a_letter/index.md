@@ -69,7 +69,7 @@ Inline semantics:
 - The five acronyms/abbreviations in the main text of the letter should be marked up to provide expansions of each acronym/abbreviation.
 - The six sub/superscripts should be marked up appropriately — in the chemical formulae, and the numbers 103 and 104 (they should be 10 to the power or 3 and 4, respectively).
 - Try to mark up at least two appropriate words in the text with strong importance/emphasis.
-- There are two places where a hyperlink should be added; add appropriate links with titles. For the location that the links point to, just use http\://example.com.
+- There are two places where a hyperlink should be added; add appropriate links with titles. For the location that the links point to, just use `http://example.com`.
 - The university motto quote and citation should be marked up with appropriate elements.
 
 The head of the document:

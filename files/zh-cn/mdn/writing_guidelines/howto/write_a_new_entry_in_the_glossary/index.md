@@ -50,7 +50,7 @@ MDN [术语表](/zh-CN/docs/Glossary) 是一个定义所有被用于文档和编
 - 该术语的主页面必须是一个包含了 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) 宏的消歧页面；
 - 该术语具有定义给定上下文的术语的子页面。
 
-我们以一个例子来说明。_signature_ 条目在至少三种不同的语境中具有不同的含义： _安全_、_函数_ 和 _电子邮件_。
+我们以一个例子来说明。_signature_ 条目在至少三种不同的语境中具有不同的含义：_安全_、_函数_ 和 _电子邮件_。
 
 1. [Glossary/Signature](/zh-CN/docs/Glossary/Signature) 页面是使用了 [`GlossaryDisambiguation`](https://github.com/mdn/yari/blob/main/kumascript/macros/GlossaryDisambiguation.ejs) 宏的消歧页面；
 2. [Glossary/Signature/Security](/zh-CN/docs/Glossary/Signature/Security) 页面是定义安全上下文中签名的条目页面；

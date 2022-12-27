@@ -149,7 +149,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
     如果测试返回 false，则数值是一个数字，所以我们在段落元素中打印出一个句子，说明数字的平方、立方体和阶乘是什么。这句话叫 squared()，cubed()，和 factorial() 函数来获得所需的值。
 
-4. 保存您的代码，将其加载到浏览器中，然后尝试.
+4. 保存您的代码，将其加载到浏览器中，然后尝试。
 
 > **备注：** 如果你有麻烦让例子工作，对比[GitHub 的已完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)检查你的代码（或[看它在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），或寻求我们的帮助。
 

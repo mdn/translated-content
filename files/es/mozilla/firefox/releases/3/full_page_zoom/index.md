@@ -7,7 +7,7 @@ original_slug: Zoom_a_página_completa
 
 {{FirefoxSidebar}}
 
-El zoom a página completa (o sólo zoom completo) es una nueva característica que probablemente estará con [Firefox 3](es/Firefox_3_para_desarrolladores). Puedes verla en funcionamiento en las actuales "trunk builds" desde Gecko 1.9a7. Mientras no exista aún UI puedes usar JavaScript y la interface [XPCOM](es/XPCOM) [nsIMarkupDocumentViewer](https://www.xulplanet.com/references/xpcomref/ifaces/nsIMarkupDocumentViewer.html).
+El zoom a página completa (o sólo zoom completo) es una nueva característica que probablemente estará con [Firefox 3](/es/Firefox_3_para_desarrolladores). Puedes verla en funcionamiento en las actuales "trunk builds" desde Gecko 1.9a7. Mientras no exista aún UI puedes usar JavaScript y la interface [XPCOM](/es/XPCOM) [nsIMarkupDocumentViewer](https://www.xulplanet.com/references/xpcomref/ifaces/nsIMarkupDocumentViewer.html).
 
 ### Ejemplo (xul:browser)
 

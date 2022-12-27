@@ -216,7 +216,7 @@ Además, los literales `null`, `true` y `false` no se pueden utilizar como ident
 
 ### Uso de palabras reservadas
 
-Las palabras reservadas en realidad solo se aplican a los _identificadores_ (frente a los _nombres de identificadores_). Como se describe en [es5.github.com/#A.1](http://es5.github.com/#A.1), todos estos son _IdentifierName_s que no excluyen \_Palabras reservadas_.
+Las palabras reservadas en realidad solo se aplican a los _identificadores_ (frente a los _nombres de identificadores_). Como se describe en [es5.github.com/#A.1](http://es5.github.com/#A.1), todos estos son _IdentifierNames_ que no excluyen _Palabras reservadas_.
 
 ```js
 a.import

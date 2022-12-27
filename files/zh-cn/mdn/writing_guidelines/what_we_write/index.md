@@ -35,7 +35,7 @@ original_slug: MDN/Guidelines/Does_this_belong_on_MDN
 - [WebGL](/zh-CN/docs/Web/API/WebGL_API)
 - 等等。
 
-> **备注：** 后端技术通常在其他地方有自己的文档， MDN 不会试图取代这些文档，尽管我们确实有一些[例外](/zh-CN/docs/learn/Server-side)。
+> **备注：** 后端技术通常在其他地方有自己的文档，MDN 不会试图取代这些文档，尽管我们确实有一些[例外](/zh-CN/docs/learn/Server-side)。
 
 我们还欢迎一些跨端技术但与 Web 开发相关的主题，例如：
 
@@ -45,7 +45,7 @@ original_slug: MDN/Guidelines/Does_this_belong_on_MDN
 - [Progressive web apps](/zh-CN/docs/Web/Progressive_web_apps)
 - [Web-based games](/zh-CN/docs/Games)
 
-> **备注：** MDN 涵盖了一些在网络上公开的非标准功能，特别是它们很常用的时候。例如，我们有 WebKit特定的CSS属性的文档。MDN 还涵盖了一些非Web 标准技术，如果这些技术被认为对 Web 开发人员很有用——参阅我们的 [Web 相关技术](/zh-CN/docs/Related)部分。
+> **备注：** MDN 涵盖了一些在网络上公开的非标准功能，特别是它们很常用的时候。例如，我们有 WebKit 特定的 CSS 属性的文档。MDN 还涵盖了一些非 Web 标准技术，如果这些技术被认为对 Web 开发人员很有用——参阅我们的 [Web 相关技术](/zh-CN/docs/Related)部分。
 
 ## 哪些主题不属于 MDN Web 文档？
 
@@ -71,7 +71,7 @@ MDN Web Docs 不再托管 Mozilla 产品的文档。
 
 ## 哪些类型在 MDN 的范畴内？
 
-一般情况下，MDN是*产品*文档，而不是*项目*或记录过程的文档（除了 [MDN 本身](/zh-CN/docs/MDN)）。因此，如果文档是关于“如何使用一项技术”或“一项技术是如何工作的”（这项技术在上面提到的一个主题类别中）那么它可以被放在 MDN 上但如果它是关于“谁在开发一项技术”或“开发一项技术的计划”，那么它就不应该出现在 MDN 上。在这种情况下，如果这个东西是在 Mozilla 支持下开发的，那么 [Mozilla project wiki](https://wiki.mozilla.org/Main_Page) 可能是一个好地方。
+一般情况下，MDN 是*产品*文档，而不是*项目*或记录过程的文档（除了 [MDN 本身](/zh-CN/docs/MDN)）。因此，如果文档是关于“如何使用一项技术”或“一项技术是如何工作的”（这项技术在上面提到的一个主题类别中）那么它可以被放在 MDN 上但如果它是关于“谁在开发一项技术”或“开发一项技术的计划”，那么它就不应该出现在 MDN 上。在这种情况下，如果这个东西是在 Mozilla 支持下开发的，那么 [Mozilla project wiki](https://wiki.mozilla.org/Main_Page) 可能是一个好地方。
 
 以下是不应该放置在 MDN 上的文档类型的一些示例：
 

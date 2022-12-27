@@ -24,7 +24,7 @@ Permitanos introducirlo con un sencillo ejemplo. Mire el siguiente codigo :
 </svg>
 ```
 
-Copie el código y guárdelo como demo1.svg. Luego ábralo en Firefox. Lo verá como se ve en la siguiente figura. (usuarios Firefox : click [aqui](https://developer.mozilla.org/@api/deki/files/4571/=svgdemo1.xml))
+Copie el código y guárdelo como demo1.svg. Luego ábralo en Firefox. Lo verá como se ve en la siguiente figura. (usuarios Firefox : click [aqui](/@api/deki/files/4571/=svgdemo1.xml))
 
 ![svgdemo1.png](/@api/deki/files/4928/=svgdemo1.png)
 

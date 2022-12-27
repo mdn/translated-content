@@ -40,7 +40,7 @@ MDN Web 文档需要你的帮助！我们有大量需要完成的工作，比如
   </tr>
   <tr>
    <td><a href="https://github.com/mdn/content/blob/main/REVIEWING.md">审核内容修改</a></td>
-   <td><a href="https://github.com/mdn/content">content repo</a> 每时每刻都会收到人们提交的内容修改, 我们需要有人来审核它们。在 <a href="https://github.com/mdn/content/blob/main/REVIEWING.md">REVIEWING.md</a> 里介绍了我们审核工作的流程，以及如何加入进来。</td>
+   <td><a href="https://github.com/mdn/content">content repo</a> 每时每刻都会收到人们提交的内容修改，我们需要有人来审核它们。在 <a href="https://github.com/mdn/content/blob/main/REVIEWING.md">REVIEWING.md</a> 里介绍了我们审核工作的流程，以及如何加入进来。</td>
    <td>
     <ul>
      <li>对要修改的内容，你需要对内容涉及到的技术（类似 JavaScript、CSS 等）有一定的了解。</li>

@@ -10,6 +10,6 @@ slug: Web/SVG/Attribute/version
 
 | Categories         | None                                                                                                          |
 | ------------------ | ------------------------------------------------------------------------------------------------------------- |
-| Value              | [<number>](/en/SVG/Content_type#Number "https://developer.mozilla.org/en/SVG/Content_type#Number")            |
+| Value              | [\<number>](/en/SVG/Content_type#Number)            |
 | Animatable         | No                                                                                                            |
 | Normative document | [SVG 1.1 (2nd Edition): version attribute](http://www.w3.org/TR/SVG11/struct.html#SVGElementVersionAttribute) |

@@ -61,6 +61,7 @@ new Proxy(target, {
 ### new 연산자 트랩하기
 
 다음 코드는 {{jsxref("Operators/new", "new")}} 연산자를 트랩합니다.
+
 ```js
 const p = new Proxy(function () {}, {
   construct(target, argumentsList, newTarget) {

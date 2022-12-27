@@ -311,7 +311,7 @@ aXe 也可以使用`npm`安装，并且可以与任务运行器（如[Grunt](htt
 
 #### VoiceOver
 
-VoiceOver (VO) 是 Mac/iPhone/iPad 上的免费应用，所以如果你使用苹果公司的产品，可以用 VO 来进行测试。 我们在 Mac OS X 系统上测试了它。
+VoiceOver (VO) 是 Mac/iPhone/iPad 上的免费应用，所以如果你使用苹果公司的产品，可以用 VO 来进行测试。我们在 Mac OS X 系统上测试了它。
 
 按下 Cmd + Fn + F5 打开它。如果你之前没用过 VO，将会出现一个可以选择是否开启 VO 的欢迎界面，并且还会有教程指导你如何使用。再次按下 Cmd + Fn + F5 可以关闭。
 

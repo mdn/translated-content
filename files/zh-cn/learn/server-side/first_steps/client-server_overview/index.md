@@ -27,7 +27,7 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 
 ## 网络服务器和 HTTP（入门）
 
-网络浏览器通过超文本标记语言传输协议（[HTTP](/zh-CN/docs/Web/HTTP)）与网络服务器（[web servers](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)）。 当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。
+网络浏览器通过超文本标记语言传输协议（[HTTP](/zh-CN/docs/Web/HTTP)）与网络服务器（[web servers](/zh-CN/docs/Learn/Common_questions/What_is_a_web_server)）。当你在网页上点击一个链接、提交一个表单、或者进行一次搜索的时候，浏览器发送一个 HTTP 请求给服务器。
 
 这个请求包含：
 
@@ -104,7 +104,7 @@ Cookie: sessionid=6ynxs23n521lu21b1t136rhbv7ezngie; csrftoken=zIPUJsAZv6pcgCBJSC
 针对这个请求的回应的第一部分内容展示如下。The header 包含了如下信息：
 
 - 第一行包括了回应状态码 200 OK，这告诉我们请求是成功的。
-- 我们可以看到回应是文本`/html格式的`(`Content-Type`).
+- 我们可以看到回应是文本 `html` 格式的（`Content-Type`）。
 - 我们也可以看到它使用的是 UTF-8 字符集 (`Content-Type: text/html; charset=utf-8`).
 - The head 也告诉我们它有多大 (`Content-Length: 41823`).
 
@@ -193,7 +193,7 @@ Content-Length: 0
 
 静态网站是指每当请求一个特定的资源时，会从服务器返回相同的硬编码内容。因此，例如，如果您在 `/static/myproduct1.html` 有一个关于产品的页面，则该页面将返回给每个用户。如果您添加另一个类似的产品到您的网站，您将需要添加另一个页面（例如 `myproduct2.html` ）等。这可能开始变得非常低效：当您访问数千个产品页面时会发生什么——你会在每个页面（基本的页面模板，结构等等）上重复很多代码，如果你想改变页面结构的任何东西，比如添加一个新的“相关产品”部分，必须单独更改每个页面。
 
-> **备注：** 当你有少量页面时，向每个用户发送相同的内容时，静态网站是最佳选择， 然而随着页面数量的增加，它们的维护成本也会很高。
+> **备注：** 当你有少量页面时，向每个用户发送相同的内容时，静态网站是最佳选择，然而随着页面数量的增加，它们的维护成本也会很高。
 
 让我们回顾一下在上一篇文章中看到的静态网站架构图，看看它是如何工作的。
 

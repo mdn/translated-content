@@ -135,7 +135,7 @@ import Todo from "./components/Todo";
 
 当你刷新浏览器，你会看到和以前完全一样的东西。我们给了 `<Todo />` 一些 props，但还没有使用它们。让我们回到 `Todo.js` 修改一下。
 
-首先修改你的 `Todo()` 函数定义，使其接受 `props` 参数 。如果你想检查 `props` 是否被组件正确接收，你可以像之前那样使用 `console.log()` 检查你的 `props`。
+首先修改你的 `Todo()` 函数定义，使其接受 `props` 参数。如果你想检查 `props` 是否被组件正确接收，你可以像之前那样使用 `console.log()` 检查你的 `props`。
 
 一旦你确信你的组件得到了它的 `props`，你就可以用 `name` prop 来替换每次出现的 `Eat`。记住：当你在 JSX 表达式的中，你可以使用大括号来注入一个变量的值。
 
@@ -192,7 +192,7 @@ export default function Todo(props) {
 
 ### 请给我一些 `id`
 
-我们的 `<Todo />` 组件给每个任务的 `id` 属性都设为 `todo-0` 了。这是个不好的 HTML写法，因为 [`id` 属性](/zh-CN/docs/Web/HTML/Global_attributes/id)必须是不同的（它们被CSS、JavaScript等用作文档片段的唯一标识符）。这意味着我们需要给每一个 `Todo` 组件一个不同 `id` prop。
+我们的 `<Todo />` 组件给每个任务的 `id` 属性都设为 `todo-0` 了。这是个不好的 HTML 写法，因为 [`id` 属性](/zh-CN/docs/Web/HTML/Global_attributes/id)必须是不同的（它们被 CSS、JavaScript 等用作文档片段的唯一标识符）。这意味着我们需要给每一个 `Todo` 组件一个不同 `id` prop。
 
 为了遵循最初的规则，让我们给每个 `<Todo />` 组件实例一个 `todo-i` 格式的 ID，其中数字 `i` 每次增加一。
 
@@ -431,7 +431,7 @@ function App(props) {
 export default App;
 ```
 
-有了这些，我们*几乎*已经准备好在 React App 中处理一些交互性问题了!
+有了这些，我们*几乎*已经准备好在 React App 中处理一些交互性问题了！
 
 ## 总结
 

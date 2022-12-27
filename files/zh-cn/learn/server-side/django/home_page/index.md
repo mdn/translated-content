@@ -96,7 +96,7 @@ urlpatterns = [
 > ]
 > ```
 >
-> 每当 Django 使用 include() （[`django.conf.urls.include()），`](https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include)`它排除与该点 匹配URL的任何部分，并将剩余的字符串发送到随附的 URLconf 进行一步处理。`
+> 每当 Django 使用 include() （[`django.conf.urls.include()`](https://docs.djangoproject.com/en/1.11/ref/urls/#django.conf.urls.include)），它排除与该点匹配 URL 的任何部分，并将剩余的字符串发送到随附的 URLconf 进行一步处理。
 >
 > 匹配的 URL 实际上是 `catalog/`+<空字符串> （`/catalog/` 假定是因为 `include()`是使用的方法）。如果我们收到一个 URL 的 HTTP 请求，我们的第一个视图函数将被调用`/catalog/。`
 

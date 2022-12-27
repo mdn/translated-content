@@ -9,7 +9,7 @@ slug: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
 
 ## 创建一个谷歌云平台项目
 
-为了在你自己的网站或者 app 使用谷歌的工具， 你需要在谷歌云平台上创建一个新项目 ( a new project ) 当然，需要谷歌账号。
+为了在你自己的网站或者 app 使用谷歌的工具，你需要在谷歌云平台上创建一个新项目 ( a new project ) 当然，需要谷歌账号。
 
 1. 打开谷歌云平台控制台（Google Cloud Platform Console），再打开 [App Engine dashboard](https://console.cloud.google.com/projectselector/appengine) 页面 并点击 _Create_ .
 2. 如果从未创建过项目 (project)，会提示你是否选择接收邮箱升级，并需要同意团队服务条款才能继续。
@@ -25,7 +25,7 @@ slug: Learn/Common_questions/How_do_you_host_your_website_on_Google_App_Engine
 
 每个云平台项目都可以包含一个 APP 引擎应用，所以我们来为自己的项目准备一个 app
 
-1. 我们需要一个样例应用来发布. 如果你还没有， 请下载 [sample app](http://gaesamplesite.appspot.com/downloads.html) 并解压。
+1. 我们需要一个样例应用来发布。如果你还没有，请下载 [sample app](http://gaesamplesite.appspot.com/downloads.html) 并解压。
 2. 看一下这个样例应用的结构—`website`文件夹包括你的网站内`容，app.yaml`文件是你的应用配置文件
 
     - 你的网站内容必须放在`website`文件夹下，并且入口文件必须取名为`index.html`，其他部分可以自行定义。

@@ -31,7 +31,7 @@ html,body,svg { height:100% }
 
 For {{SVGElement('path')}}, `d` is a string containing a series of path commands that define the path to be drawn.
 
-| Value         | **[<string>](/docs/Web/SVG/Content_type#String)** |
+| Value         | **[\<string>](/docs/Web/SVG/Content_type#String)** |
 | ------------- | ------------------------------------------------- |
 | Default value | _none_                                            |
 | Animatable    | Yes                                               |
@@ -42,7 +42,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
 
 For {{SVGElement('glyph')}}, `d` is a string containing a series of path commands that define the outline shape of the glyph.
 
-| Value         | **[<string>](/docs/Web/SVG/Content_type#String)** |
+| Value         | **[\<string>](/docs/Web/SVG/Content_type#String)** |
 | ------------- | ------------------------------------------------- |
 | Default value | _none_                                            |
 | Animatable    | Yes                                               |
@@ -55,7 +55,7 @@ For {{SVGElement('glyph')}}, `d` is a string containing a series of path command
 
 For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path commands that define the outline shape of the glyph.
 
-| Value         | **[<string>](/docs/Web/SVG/Content_type#String)** |
+| Value         | **[\<string>](/docs/Web/SVG/Content_type#String)** |
 | ------------- | ------------------------------------------------- |
 | Default value | _none_                                            |
 | Animatable    | Yes                                               |

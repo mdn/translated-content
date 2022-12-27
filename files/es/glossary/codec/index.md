@@ -16,4 +16,4 @@ Un _códec_ (acrónimo de "***co***dificador-***dec***odificador") es un program
 
 ### Referencias técnicas
 
-- [Formatos de medios admitidos por los elementos HTML audio y video](es/docs/Web/HTML/Formatos_admitidos_de_audio_y_video_en_html5)
+- [Formatos de medios admitidos por los elementos HTML audio y video](/es/docs/Web/HTML/Formatos_admitidos_de_audio_y_video_en_html5)

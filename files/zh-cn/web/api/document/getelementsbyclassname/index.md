@@ -16,7 +16,7 @@ var elements = rootElement.getElementsByClassName(names);
 
 - _elements_ 是一个实时{{ domxref("HTMLCollection", "集合") }}，包含了找到的所有元素。
 - _names_ 是一个字符串，表示要匹配的类名列表；类名通过空格分隔
-- getElementsByClassName 可以在任何元素上调用，不仅仅是 document。 调用这个方法的元素将作为本次查找的根元素。
+- getElementsByClassName 可以在任何元素上调用，不仅仅是 document。调用这个方法的元素将作为本次查找的根元素。
 
 ## 示例
 
@@ -77,7 +77,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ## 多个 Class 示例
 
-`document.getElementsByClassName` 的工作方式与 `document.querySelector` 和 `document.querySelectorAll` 很相似。 只有所有 className 都匹配的元素会被选择。
+`document.getElementsByClassName` 的工作方式与 `document.querySelector` 和 `document.querySelectorAll` 很相似。只有所有 className 都匹配的元素会被选择。
 
 ### HTML
 

@@ -11,7 +11,7 @@ translation_of: Web/API/Document/documentElement
 
 **Solo-lectura**
 
-Devuelve el [`Element`](es/DOM/element) que es el elemento raíz de [document](es/DOM/document) (por ejemplo, devuelve el elemento `<html>` en los documentos HTML).
+Devuelve el [`Element`](/es/DOM/element) que es el elemento raíz de [document](/es/DOM/document) (por ejemplo, devuelve el elemento `<html>` en los documentos HTML).
 
 ### Sintaxis
 
@@ -35,7 +35,7 @@ for (var i = 0; i < firstTier.length; i++) {
 
 Esta propiedad es de sólo-lectura, facilitada para obtener el elemento raíz de cualquier documento.
 
-Los documentos HTML contienen normalmente un único hijo directo, `<html>`, quizá con una declaración DOCTYPE antes que él. Los documento XML contienen a menudo, múltiples hijos: el elemento raíz, la declaración DOCTYPE y [processing instructions](es/DOM/ProcessingInstruction).
+Los documentos HTML contienen normalmente un único hijo directo, `<html>`, quizá con una declaración DOCTYPE antes que él. Los documento XML contienen a menudo, múltiples hijos: el elemento raíz, la declaración DOCTYPE y [processing instructions](/es/DOM/ProcessingInstruction).
 
 Por tanto, deberías usar `document.documentElement` en lugar de {{ Domxref("document.firstChild") }} para obtener el elemento raíz.
 

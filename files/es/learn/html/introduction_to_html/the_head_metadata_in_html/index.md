@@ -148,7 +148,7 @@ Especificar una descripción que incluya palabras clave relacionadas con el cont
 
 La descripción también se usa en las páginas de resultados del motor de búsqueda. Repasemos un ejercicio para explorar esto:
 
-1. Ve a la página de inicio de [Mozilla Developer Network](https://developer.mozilla.org/es/).
+1. Ve a la página de inicio de [Mozilla Developer Network](/es/).
 2. Observa el código fuente de la página (
 
     <kbd>Ctrl</kbd>
@@ -234,7 +234,7 @@ Los comentarios explican para qué se usa cada icono (estos elementos abarcan si
 
 No te preocupes demasiado sobre la implementación de todos estos tipos de iconos por el momento; se trata de una característica bastante avanzada y no se espera que tengas conocimientos de ello para avanzar en el curso. El propósito principal aquí es darte a conocer estos elementos por si te los encuentras mientras examinas el código fuente de otros sitios web.
 
-> **Nota:** Si tu sitio web utiliza una política de seguridad de contenido (_content security policy o CSP_) para mejorar la seguridad, la política afecta al `favicon`. Si te encuentras con problemas como que el `favicon` no se carga, comprueba que la respuesta a {{HTTPHeader("Content-Security-Policy")}} del `header` [Content-Security-Policy]() para la [directriz `img-src`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) en la cabecera no impide el acceso a este.
+> **Nota:** Si tu sitio web utiliza una política de seguridad de contenido (_content security policy o CSP_) para mejorar la seguridad, la política afecta al `favicon`. Si te encuentras con problemas como que el `favicon` no se carga, comprueba que la respuesta a {{HTTPHeader("Content-Security-Policy")}} del `header` para la [directriz `img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) en la cabecera no impide el acceso a este.
 
 ## Aplicar CSS y JavaScript a HTML
 

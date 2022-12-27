@@ -302,7 +302,7 @@ We'll show you a lot more about working with routes, and in particular about usi
 서드파티 미들웨어를 사용하려면 먼저 NPM을 사용하여 앱에 설치해야합니다. 예를 들어 [morgan](http://expressjs.com/en/resources/middleware/morgan.html) HTTP 요청 logger 미들웨어 를 설치하려면 다음과 같이 진행합니다.
 
 ```bash
-$ npm install morgan
+npm install morgan
 ```
 
 그런 다음 _Express application object에_ use()를 호출해서 스택에 이 미들웨어를 추가합니다.
@@ -417,7 +417,7 @@ _Express_ apps can use any database mechanism supported by _Node_ (_Express_ its
 In order to use these you have to first install the database driver using NPM. For example, to install the driver for the popular NoSQL MongoDB you would use the command:
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.

@@ -305,7 +305,7 @@ HTML 元素的样式有一套自己的规则。遵守这些规则可以让元素
 
 ### 采用包容性的语言
 
-MDN拥有广泛而多样化的受众。我们强烈建议尽可能保持文本的包容性。以下是文档中使用的常用术语的一些替代方案：
+MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本的包容性。以下是文档中使用的常用术语的一些替代方案：
 
 - 不使用“**master**”和“**slave**”，而使用“**main**”和“**replica**”
 - 不使用“**whitelist**”和“**blacklist**”，而使用“**allowlist**”和“**denylist**”
@@ -399,7 +399,7 @@ _A confirmation dialog box appears, which asks the user for permission to use th
 - **正确**: Please don't use "curly quotes."
 - **错误**: Please don’t use “curly quotes.”
 
-> **备注：** 中文与英文的使用习惯是不同的，在翻译时，应该遵循[简体中文翻译指南-标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)中的有关说明。
+> **备注：** 中文与英文的使用习惯是不同的，在翻译时，应该遵循[简体中文翻译指南 - 标点符号](https://github.com/mdn/translated-content/blob/main/docs/zh-cn/translation-guide.md#标点符号)中的有关说明。
 
 ### 拼写
 

@@ -88,6 +88,6 @@ slug: Learn/Common_questions/set_up_a_local_testing_server
 - PHP로된 서버측 코드를 실행하려면 PHP에 내장된 개발서버([PHP's built-in development server](http://php.net/manual/en/features.commandline.webserver.php))를 실행시킵니다:
 
 ```bash
-$ cd path/to/your/php/code
-$ php -S localhost:8000
+cd path/to/your/php/code
+php -S localhost:8000
 ```

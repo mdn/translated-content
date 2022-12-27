@@ -13,7 +13,7 @@ translation_of: Learn/Common_questions
 ---
 {{LearnSidebar}}
 
-Esta sección del área de aprendizaje está diseñada para proveer respuestas a preguntas frecuentes que pueden surgir, las cuales no son necesariamente parte del núcleo estructurado de formas de aprendizaje (ej. los artículos de aprendizaje de [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML) o [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)). Éstos artículos están diseñados para trabajar por su cuenta.
+Esta sección del área de aprendizaje está diseñada para proveer respuestas a preguntas frecuentes que pueden surgir, las cuales no son necesariamente parte del núcleo estructurado de formas de aprendizaje (ej. los artículos de aprendizaje de [HTML](/en-US/docs/Learn/HTML) o [CSS](/en-US/docs/Learn/CSS)). Éstos artículos están diseñados para trabajar por su cuenta.
 
 ## Cómo funciona la Web
 
@@ -22,7 +22,7 @@ Esta sección cubre los mecanismos de la web -preguntas relativas al conocimient
 - [¿Cómo funciona la Web?](/es/docs/Learn/Common_questions/How_does_the_Internet_work)
   - : **Internet** es la columna vertebral de la Web, la infraestructura técnica que hace la Web posible. Básicamente, Internet es una gran red de ordenadores que se comunican todos entre sí. Este artículo explica cómo funciona, en un nivel básico.
 
-- [¿Cúal es la diferencia entre página web, sitio web, servidor web y motor de búsqueda?](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
+- [¿Cúal es la diferencia entre página web, sitio web, servidor web y motor de búsqueda?](/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines)
   - : En este artículo se describen varios conceptos relacionados con la web: páginas web, sitios web, servidores web y motores de búsqueda. Estos términos son confundidos habitualmente por los novatos en la Web, o son incorrectamente usados. ¡ Vamos a aprender que significa cada uno de ellos !
 - [¿Qué es una URL?](/es/docs/Learn/Common_questions/What_is_a_URL)
   - : Con {{Glossary("Hypertext")}} y {{Glossary("HTTP")}}, URL es uno de los conceptos clave de la Web. Es el mecanismo usado por {{Glossary("Browser","browsers")}} para recoger cualquier recurso publicado en la Web.
@@ -79,6 +79,6 @@ Esta sección enlista preguntas relacionadas con la estética, estructura de pá
 
 Para soluciones a problemas comunes de HTML/CSS/JavaScript, trata con los siguientes artículos.
 
-- [Usa HTML para solucionar problemas comunes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto)
+- [Usa HTML para solucionar problemas comunes](/en-US/docs/Learn/HTML/Howto)
 - [Usa CSS para solucionar problemas comunes](/es/docs/Learn/CSS/Howto)
 - [Usa JavaScript para solucionar problemas comunes](/es/docs/Learn/JavaScript/Howto)
