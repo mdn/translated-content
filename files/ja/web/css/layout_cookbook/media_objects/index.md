@@ -2,6 +2,7 @@
 title: 'レシピ: メディアオブジェクト'
 slug: Web/CSS/Layout_cookbook/Media_objects
 ---
+
 {{CSSRef}}
 
 *メディアオブジェクト*は、ウェブ上のいたるところで見られるパターンです。 [Nicole Sullivan によって命名](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)され、一方の側に画像を、そして他方の側に説明的なテキストを有する Facebook の投稿やツイートのような 2 列のボックスを指します。

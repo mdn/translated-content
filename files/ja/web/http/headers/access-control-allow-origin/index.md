@@ -2,6 +2,7 @@
 title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
+
 {{HTTPSidebar}}
 
 **`Access-Control-Allow-Origin`** レスポンスヘッダーは、指定された{{glossary("origin", "オリジン")}}からのリクエストを行うコードでレスポンスが共有できるかどうかを示します。

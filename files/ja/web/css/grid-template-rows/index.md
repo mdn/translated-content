@@ -2,6 +2,7 @@
 title: grid-template-rows
 slug: Web/CSS/grid-template-rows
 ---
+
 {{CSSRef}}
 
 **`grid-template-rows`** は CSS のプロパティで、{{glossary("grid rows", "グリッド行")}}の線名とトラックのサイズ変更機能を定義します。

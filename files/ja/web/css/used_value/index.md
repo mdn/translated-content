@@ -2,6 +2,7 @@
 title: 使用値
 slug: Web/CSS/used_value
 ---
+
 {{CSSRef}}
 
 **使用値** (used value) は [CSS](/ja/docs/Web/CSS) プロパティにおいて、[計算値](/ja/docs/Web/CSS/computed_value)で行われたすべての計算が実行された後の値です。

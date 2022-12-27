@@ -3,6 +3,7 @@ title: scaleZ()
 slug: Web/CSS/transform-function/scaleZ
 original_slug: Web/CSS/transform-function/scaleZ()
 ---
+
 {{CSSRef}}
 
 **`scaleZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を Z 軸に沿って変倍する変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

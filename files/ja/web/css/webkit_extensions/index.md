@@ -2,6 +2,7 @@
 title: WebKit の CSS 拡張
 slug: Web/CSS/WebKit_Extensions
 ---
+
 {{CSSRef}}
 
 Safari や Chrome のような WebKit または blink ベースのアプリケーションは、数多くの特殊な **[CSS](/ja/docs/Web/CSS) の WebKit 拡張**に対応しています。これらの拡張には一般に `-webkit-` の接頭辞が付きます。 `-webkit-` の接頭辞が付いたプロパティの多くは `-apple-` の接頭辞でも動作します。少数ながら `-epub-` の接頭辞も存在します。

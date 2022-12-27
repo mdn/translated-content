@@ -2,6 +2,7 @@
 title: CSS スクロールスナップの基本概念
 slug: Web/CSS/CSS_Scroll_Snap/Basic_concepts
 ---
+
 {{CSSRef}}
 
 [CSS スクロールスナップ仕様書](https://drafts.csswg.org/css-scroll-snap-1/)は、ユーザーが文書をスクロールする際に、特定の位置にスクロールをスナップさせる方法を提供します。これにより、モバイルでも、デスクトップであっても、アプリのような操作感を実現することができます。

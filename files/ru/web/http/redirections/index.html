@@ -249,7 +249,7 @@ rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
 
 <p>В случае, когда сервер не может обнаружить его: цикл перенаправлений может распространиться на несколько серверов, каждый из которых не имеет полной картины происходящего. В этом случае, браузеры покажут сообщение об ошибке. Firefox выведет:</p>
 
-<pre class="bz_comment_text" id="comment_text_0">Firefox has detected that the server is redirecting the request for this address in a way that will never complete.</pre>
+<pre>Firefox has detected that the server is redirecting the request for this address in a way that will never complete.</pre>
 
 <p>тогда, как Chrome:</p>
 

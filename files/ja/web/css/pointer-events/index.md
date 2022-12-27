@@ -2,6 +2,7 @@
 title: pointer-events
 slug: Web/CSS/pointer-events
 ---
+
 {{CSSRef}}
 
 **`pointer-events`** は [CSS](/ja/docs/Web/CSS) のプロパティで、特定のグラフィック要素がポインターイベントの[対象](/ja/docs/Web/API/Event/target)になる可能性のある環境 (存在する場合) を設定します。

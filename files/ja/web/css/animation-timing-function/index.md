@@ -2,6 +2,7 @@
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 ---
+
 {{CSSRef}}
 
 **`animation-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションがそれぞれの周期の中でどのように進行するかを設定します。

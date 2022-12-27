@@ -2,6 +2,7 @@
 title: element-available
 slug: Web/XPath/Functions/element-available
 ---
+
 {{ XsltRef() }}
 
 `element-available` 関数は、要素が利用可能かどうかを判断し、true または false を返します。

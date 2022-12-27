@@ -2,6 +2,7 @@
 title: <script>
 slug: Web/SVG/Element/script
 ---
+
 SVG `script` 要素は、HTML の [`script`](/ja/HTML/Element/Script) 要素と同じく、 スクリプト（例えば ECMAScript）を設置するための場所です。
 
 すべての `script` 要素内で定義されたすべての関数は、現在のドキュメント全体でグローバルスコープを持っています。

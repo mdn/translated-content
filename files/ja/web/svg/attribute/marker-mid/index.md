@@ -2,6 +2,7 @@
 title: marker-mid
 slug: Web/SVG/Attribute/marker-mid
 ---
+
 {{SVGRef}}
 
 **`marker-mid`** 属性は、指定された[シェイプ](/ja/docs/Web/SVG/Element#Shape_elements)の中間の頂点すべてに描かれる矢印やマーカーを定義します。

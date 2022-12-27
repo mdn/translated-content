@@ -2,6 +2,7 @@
 title: <use>
 slug: Web/SVG/Element/use
 ---
+
 {{SVGRef}}
 
 **`<use>`** 要素は SVG 文書の中からノード取り出して、別の場所に複製します。

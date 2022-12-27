@@ -2,6 +2,7 @@
 title: translate
 slug: Web/HTML/Global_attributes/translate
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`translate`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes) は列挙型属性で、要素の*翻訳可能な属性*の値や {{domxref("Text")}} 子ノードを、ページをローカライズする際に翻訳するべきか、あるいは変更せずにおくかを指定します。以下の値を使用することができます。

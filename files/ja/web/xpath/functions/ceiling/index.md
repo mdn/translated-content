@@ -2,6 +2,7 @@
 title: ceiling
 slug: Web/XPath/Functions/ceiling
 ---
+
 {{ XsltRef() }}
 
 `ceiling` 関数は小数を評価し、その小数以上の最も小さい整数を返します。

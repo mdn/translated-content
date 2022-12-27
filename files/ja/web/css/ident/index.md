@@ -2,6 +2,7 @@
 title: ident
 slug: Web/CSS/ident
 ---
+
 {{CSSRef}}
 
 **`<ident>`** [CSS](/ja/docs/Web/CSS) [データ型](/ja/docs/Web/CSS/CSS_Types) は、 {{glossary("identifier")}} として使用される任意の文字列を意味します。

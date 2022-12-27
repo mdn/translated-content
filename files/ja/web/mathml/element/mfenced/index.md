@@ -2,6 +2,7 @@
 title: <mfenced>
 slug: Web/MathML/Element/mfenced
 ---
+
 {{MathMLRef}}
 
 MathML `<mfenced>` 要素は、独自の括弧類 (角括弧など) や区切り記号 (カンマやセミコロンなど) を数式に追加する機能を提供します。

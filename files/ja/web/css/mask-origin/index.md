@@ -2,6 +2,7 @@
 title: mask-origin
 slug: Web/CSS/mask-origin
 ---
+
 {{CSSRef}}
 
 **`mask-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスクの原点を設定します。

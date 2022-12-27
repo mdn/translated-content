@@ -2,6 +2,7 @@
 title: Server
 slug: Web/HTTP/Headers/Server
 ---
+
 {{HTTPSidebar}}
 
 **`Server`** ヘッダーは、リクエストを処理したオリジンサーバー、すなわち、レスポンスを生成したサーバーで使用されたソフトウェアを説明します。

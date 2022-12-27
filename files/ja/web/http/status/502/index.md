@@ -2,6 +2,7 @@
 title: 502 Bad Gateway
 slug: Web/HTTP/Status/502
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`502 Bad Gateway`** サーバーエラーレスポンスコードは、ゲートウェイまたはプロキシとして機能しているサーバーが上流のサーバーから無効なレスポンスを受け取ったことを示しています。

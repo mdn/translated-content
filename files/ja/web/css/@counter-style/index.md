@@ -2,6 +2,7 @@
 title: '@counter-style'
 slug: Web/CSS/@counter-style
 ---
+
 {{CSSRef}}
 
 **`@counter-style`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、スタイルにあらかじめ設定されたものではないカウンターのスタイルを定義することができます。 `@counter-style` ルールはカウンターの値をどのように文字列表現に変換するかを定義します。

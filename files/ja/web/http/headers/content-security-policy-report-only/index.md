@@ -2,6 +2,7 @@
 title: Content-Security-Policy-Report-Only
 slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Content-Security-Policy-Report-Only`** レスポンスヘッダーにより、ウェブ開発者はポリシーの効果を監視する (ただし強制はしない) ことによりポリシーを試行することができます。これらの違反レポートは {{Glossary("JSON")}} の文書で構成され、 HTTP の `POST` リクエストを通して指定された URI に送信されます。

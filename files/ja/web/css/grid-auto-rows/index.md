@@ -2,6 +2,7 @@
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 ---
+
 {{CSSRef}}
 
 **`grid-auto-rows`** は CSS のプロパティで、暗黙的に生成されたグリッドの列{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。

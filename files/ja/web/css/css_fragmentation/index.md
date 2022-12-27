@@ -2,6 +2,7 @@
 title: CSS 断片化
 slug: Web/CSS/CSS_Fragmentation
 ---
+
 {{CSSRef}}
 
 **CSS 断片化**は CSS のモジュールの一つで、コンテンツが[ページ](/ja/docs/Web/CSS/Paged_Media)、領域、[段](/ja/docs/Web/CSS/CSS_Columns)をまたがって分割された (断片化された) ときにどのように表示するかを定義します。

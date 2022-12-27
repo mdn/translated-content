@@ -20,8 +20,10 @@ El método **`trimEnd()`** elimina los espacios en blanco al final de una cadena
 
 ## Sintaxis
 
-    str.trimEnd();
-    str.trimRight();
+```
+str.trimEnd();
+str.trimRight();
+```
 
 ### Valor de retorno
 

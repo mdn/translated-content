@@ -2,6 +2,7 @@
 title: font-weight
 slug: Web/CSS/@font-face/font-weight
 ---
+
 {{CSSRef}}
 
 **`font-weight`** は CSS の記述子で、 {{cssxref("@font-face")}} ルールで指定されたフォントの太さを指定することができます。別に {{cssxref("font-weight")}} プロパティを使用して、テキストを表示する文字の太さや細さを設定することができます。

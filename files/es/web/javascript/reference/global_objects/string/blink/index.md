@@ -21,7 +21,9 @@ Causa que una cadena parpadee como si estuviese en una etiqueta {{HTMLElement("b
 
 ## Sintaxis
 
-    cadena.blink()
+```
+cadena.blink()
+```
 
 ## Descripción
 

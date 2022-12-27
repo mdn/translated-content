@@ -140,7 +140,7 @@ La lista siguiente describe algunos de los tipos de campo más comunmente usados
 
 - [CharField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.CharField) se usa para definir cadenas de longitud corta a media. Debes especificar la `max_length` (longitud máxima) de los datos que se guardarán.
 - [TextField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.TextField) se usa para cadenas de longitud grande o arbitraria. Puedes especificar una `max_length` para el campo, pero sólo se usa cuando el campo se muestra en formularios (no se fuerza al nivel de la base de datos).
-- [IntegerField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.IntegerField "django.db.models.IntegerField") es un campo para almacenar valores de números enteros y para validar los valores introducidos como enteros en los formularios.
+- [IntegerField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#django.db.models.IntegerField) es un campo para almacenar valores de números enteros y para validar los valores introducidos como enteros en los formularios.
 - [DateField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datefield) y [DateTimeField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#datetimefield) se usan para guardar/representar fechas e información fecha/hora (como en los objetos Python `datetime.date` y `datetime.datetime`, respectivamente). Estos campos pueden adicionalmente declarar los parámetros (mutuamente excluyentes) `auto_now=True` (para establecer el campo a la fecha actual cada vez que se guarda el modelo), `auto_now_add` (para establecer sólo la fecha cuando se crea el modelo por primera vez), y `default` (para establecer una fecha por defecto que puede ser sobreescrita por el usuario).
 - [EmailField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#emailfield) se usa para validar direcciones de correo electrónico.
 - [FileField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#filefield) e [ImageField](https://docs.djangoproject.com/en/1.10/ref/models/fields/#imagefield) se usan para subir ficheros e imágenes respectivamente (el `ImageField` añade simplemente una validación adicional de que el fichero subido es una imagen). Éstos tienen parámetros para definir cómo y donde se guardan los ficheros subidos.
@@ -204,7 +204,7 @@ def get_absolute_url(self):
 ```
 
 > **Nota:** Asumiendo que usarás URLs tipo `/myapplication/mymodelname/2` para presentar registros individuales para tu modelo (donde "2" es el `id` de un registro en particular), necesitarás crear un mapeador URL para pasar la respuesta e id a la "vista detallada del modelo (model detail view)" (que hará el trabajo requerido para presentar el registro). La función `reverse()` de arriba es capaz de "invertir" tu mapeador url (llamado _'model-detail-view'_ en el caso de arriba) para crear una URL del formato correcto.
-> 
+>
 > Por supuesto para hacer este trabajo ¡tienes aún que escribir el mapeo URL, la vista y la plantilla!
 
 Puedes también definir todos los métodos que te apetezca y llamarlos desde tu código o plantillas (siempre y cuando no reciban ningún parámetro).
@@ -395,7 +395,7 @@ Adicionalmente hemos declarado algunos tipos nuevos de campos:
 
 El patrón `__str__()` representa el objeto `BookInstance` usando una combinación de su id único y el título del `Book` asociado.
 
-> **Nota:** Un poco de Python: 
+> **Nota:** Un poco de Python:
 >
 > El valor retornado por `__str__()` es una _cadena formateada_. Dentro de la cadena usamos `%s` para declarar "marcadores de posición". Después de la cadena ponemos `%` y después una tupla que contiene los valores que serán puestos en los marcadores de posición. Si solo tienes un marcador de posición entonces puedes omitir la tupla — e.j. `'Mi valor: %s' % variable.`
 >

@@ -2,6 +2,7 @@
 title: CSS 条件付き規則
 slug: Web/CSS/CSS_Conditional_Rules
 ---
+
 {{CSSRef}}
 
 **CSS 条件付き規則** (CSS Conditional Rules) は CSS のモジュールの一つで、プロセッサーの能力やスタイルシートが適用される文書の条件などに基づいて一連の規則を定義することができます。

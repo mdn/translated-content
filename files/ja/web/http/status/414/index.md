@@ -2,6 +2,7 @@
 title: 414 URI Too Long
 slug: Web/HTTP/Status/414
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`414 URI Too Long`** レスポンスステータスコードは、クライアントがリクエストした URL が、サーバーが解釈しようとするものよりも長いことを示します。

@@ -2,6 +2,7 @@
 title: ':first-child'
 slug: Web/CSS/:first-child
 ---
+
 {{CSSRef}}
 
 **`:first-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で最初の要素を表します。

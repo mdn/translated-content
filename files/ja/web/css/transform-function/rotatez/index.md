@@ -3,6 +3,7 @@ title: rotateZ()
 slug: Web/CSS/transform-function/rotateZ
 original_slug: Web/CSS/transform-function/rotateZ()
 ---
+
 {{CSSRef}}
 
 **`rotateZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素の形を変化させずに Z 軸の周りを回転させる変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

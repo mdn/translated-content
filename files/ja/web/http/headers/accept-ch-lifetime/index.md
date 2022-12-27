@@ -2,6 +2,7 @@
 title: Accept-CH-Lifetime
 slug: Web/HTTP/Headers/Accept-CH-Lifetime
 ---
+
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 
 **`Accept-CH-Lifetime`** ヘッダーは、クライアントが後続のリクエストにどの[クライアントヒント](/ja/docs/Glossary/Client_hints)のヘッダーを含める必要があるかを指定する {{HTTPHeader("Accept-CH")}} ヘッダーの値の永続性を指定するためにサーバーによって設定されます。

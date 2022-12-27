@@ -2,6 +2,7 @@
 title: list-style-position
 slug: Web/CSS/list-style-position
 ---
+
 {{CSSRef}}
 
 **`list-style-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目に対する {{cssxref("::marker")}} の位置を指定します。

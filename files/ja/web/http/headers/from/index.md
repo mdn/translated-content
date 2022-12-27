@@ -2,6 +2,7 @@
 title: From
 slug: Web/HTTP/Headers/From
 ---
+
 {{HTTPSidebar}}
 
 **`From`** リクエストヘッダーには、リクエスト元の user agent を制御する人のユーザーの E メールアドレスが含まれています。

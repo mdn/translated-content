@@ -2,6 +2,7 @@
 title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
 ---
+
 {{CSSRef}}
 
 `scroll-margin-inline` は[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、インライン方向のスクロールマージンを設定します。

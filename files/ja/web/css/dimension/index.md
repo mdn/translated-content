@@ -2,6 +2,7 @@
 title: <dimension>
 slug: Web/CSS/dimension
 ---
+
 {{CSSRef}}
 
 **`<dimension>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{CSSxRef("&lt;number&gt;")}} とそれに添付された単位を表します (`10px` など)。

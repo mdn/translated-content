@@ -2,6 +2,7 @@
 title: mask-border-width
 slug: Web/CSS/mask-border-width
 ---
+
 {{CSSRef}}
 
 **`mask-border-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の幅を設定します。

@@ -2,6 +2,7 @@
 title: tabindex
 slug: Web/HTML/Global_attributes/tabindex
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`tabindex`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素が入力フォーカスを持てることと、キーボードの順次ナビゲーション (ふつうは名前の由来である <kbd>Tab</kbd> キーによる) に加わるかどうか、どの位置に加わるかを示します。

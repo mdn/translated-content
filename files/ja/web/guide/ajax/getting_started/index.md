@@ -2,6 +2,7 @@
 title: 始めましょう
 slug: Web/Guide/AJAX/Getting_Started
 ---
+
 この記事は AJAX の基礎の概観と、入門のための二つの実践的なサンプルを示します。
 
 ### AJAX とは?

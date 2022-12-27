@@ -3,6 +3,7 @@ title: CSS 色
 slug: Web/CSS/CSS_Colors
 original_slug: Web/CSS/CSS_Color
 ---
+
 {{CSSRef}}
 
 **CSS 色** (CSS Color) は CSS のモジュールで、色、色の種類、色の混合、透過性、そしてどのようにこれらの色や効果を HTML コンテンツに適用するかを扱います。{{cssxref("&lt;color&gt;")}} を値として取る CSS プロパティがすべてこのモジュールの一部であるとは限りませんが、このモジュールに依存することがあります。

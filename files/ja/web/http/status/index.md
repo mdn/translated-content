@@ -2,6 +2,7 @@
 title: HTTP レスポンスステータスコード
 slug: Web/HTTP/Status
 ---
+
 {{HTTPSidebar}}
 
 HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/Web/HTTP) リクエストが正常に完了したどうかを示します。

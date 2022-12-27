@@ -2,6 +2,7 @@
 title: Pragma
 slug: Web/HTTP/Headers/Pragma
 ---
+
 {{HTTPSidebar}}
 
 **`Pragma`** は HTTP/1.0 の一般ヘッダーで、実装固有のヘッダーであり、リクエスト - レスポンスチェーンに沿ってさまざまな影響を与えます。 `Cache-Control` HTTP/1.1 ヘッダーがまだ存在しない HTTP/1.0 キャッシュとの下位互換性のために使用されます。

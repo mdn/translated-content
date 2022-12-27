@@ -2,6 +2,7 @@
 title: border-width
 slug: Web/CSS/border-width
 ---
+
 {{CSSRef}}
 
 **`border-width`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の幅を設定します。

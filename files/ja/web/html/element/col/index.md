@@ -2,6 +2,7 @@
 title: <col>
 slug: Web/HTML/Element/col
 ---
+
 {{HTMLRef}}
 
 **HTML の `<col>` 要素**は、表内の列を定義して、すべての一般セルに共通の意味を定義するために使用します。この要素は通常、 {{HTMLElement("colgroup")}} 要素内にみられます。

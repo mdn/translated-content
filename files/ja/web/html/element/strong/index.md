@@ -2,6 +2,7 @@
 title: '<strong>: 強い重要性要素'
 slug: Web/HTML/Element/strong
 ---
+
 {{HTMLRef}}
 
 HTML の**強い重要性要素** (**`<strong>`**) は、内容の重要性、重大性、または緊急性が高いテキストを表します。ブラウザーは一般的に太字で描画します。

@@ -2,6 +2,7 @@
 title: 典型的な HTTP セッション
 slug: Web/HTTP/Session
 ---
+
 {{HTTPSidebar}}
 
 HTTP のようなクライアントサーバープロトコルでは、セッションが 3 つの段階で構成されます。

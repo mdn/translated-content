@@ -2,6 +2,7 @@
 title: 同一オリジンポリシー
 slug: Web/Security/Same-origin_policy
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 
 **同一オリジンポリシー**は重要なセキュリティの仕組みであり、ある{{Glossary("origin", "オリジン")}}によって読み込まれた文書やスクリプトが、他のオリジンにあるリソースにアクセスできる方法を制限するものです。

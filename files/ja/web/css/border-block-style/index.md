@@ -2,6 +2,7 @@
 title: border-block-style
 slug: Web/CSS/border-block-style
 ---
+
 {{CSSRef}}
 
 **`border-block-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}} と {{cssxref("border-bottom-style")}}、または {{cssxref("border-left-style")}} と {{cssxref("border-right-style")}} のどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。

@@ -2,6 +2,7 @@
 title: ':-moz-only-whitespace'
 slug: Web/CSS/:-moz-only-whitespace
 ---
+
 {{CSSRef}}
 
 {{Non-standard_Header}}

@@ -4,6 +4,7 @@ slug: WebAssembly/Loading_and_running
 i10n:
   sourceCommit: 1ef12f2e0815d0d285d6027219c987a3e4e228a3
 ---
+
 {{WebAssemblySidebar}}
 
 JavaScript で WebAssembly を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリーにプルする必要があります。この記事では、WebAssembly バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。

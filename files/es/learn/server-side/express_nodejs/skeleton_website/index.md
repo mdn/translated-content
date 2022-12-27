@@ -36,7 +36,7 @@ Este artículo muestra cómo puede crear un sitio web "esqueleto" usando la herr
 
 Las siguientes secciones muestran como puede llamar al generador de aplicaciones, y proporcionan una pequeña explicación sobre las diferentes opciones para vistas y CSS. También explicaremos como está estructurado el esqueleto del sitio web. Al final, mostraremos como puede ejecutar el sitio web para verificar que funciona.
 
-> **Nota:** El _Generador de Aplicaciones Express_ no es el único generador para aplicaciones Express, y el proyecto generado no es la única forma viable para estructurar sus archivos y directorios. El sitio generado, sin embargo, tiene una estructura modular que es fácil de extender y comprender. Para informacion sobre una _mínima_ aplicación Express, vea el [Ejemplo Hello world ](https://expressjs.com/en/starter/hello-world.html)(Express docs).
+> **Nota:** El _Generador de Aplicaciones Express_ no es el único generador para aplicaciones Express, y el proyecto generado no es la única forma viable para estructurar sus archivos y directorios. El sitio generado, sin embargo, tiene una estructura modular que es fácil de extender y comprender. Para informacion sobre una _mínima_ aplicación Express, vea el [Ejemplo Hello world](https://expressjs.com/en/starter/hello-world.html) (Express docs).
 
 ## Usando el generador de aplicaciones
 
@@ -75,7 +75,7 @@ express
 
 También puede seleccionar el motor de plantillas para las vistas usando `--view` y/o un motor generador de CSS usando `--css`.
 
-> **Nota:** Las otras opciones para elegir motores de plantillas (e.g. `--hogan`, `--ejs`, `--hbs` etc.) están descontinuadas. Use `--view` (o bien` -v`)!
+> **Nota:** Las otras opciones para elegir motores de plantillas (e.g. `--hogan`, `--ejs`, `--hbs` etc.) están descontinuadas. Use `--view` (o bien `-v`)!
 
 ### ¿Cuál motor de vistas debo usar?
 
@@ -161,14 +161,14 @@ Al final de la lista el generador mostrará instrucciones sobre como instalar la
 
 En este punto tenemos un esqueleto completo de nuestro proyecto. El sitio web no hace mucho actualmente, pero es bueno ejecutarlo para ver como funciona.
 
-1.  Primero instale las dependencias (el comando `install` recuperará todas las dependencias listadas e el archivo **package.json** del proyecto).
+1. Primero instale las dependencias (el comando `install` recuperará todas las dependencias listadas e el archivo **package.json** del proyecto).
 
     ```bash
     cd express-locallibrary-tutorial
     npm install
     ```
 
-2.  Luego ejecute la aplicación.
+2. Luego ejecute la aplicación.
 
     - En Windows, use este comando:
 
@@ -182,7 +182,7 @@ En este punto tenemos un esqueleto completo de nuestro proyecto. El sitio web no
       DEBUG=express-locallibrary-tutorial:* npm start
       ```
 
-3.  Luego carge en su navegador <http://localhost:3000/> para acceder a la aplicación.
+3. Luego carge en su navegador `http://localhost:3000/` para acceder a la aplicación.
 
 Debería ver una página parecida a esta:
 
@@ -191,6 +191,7 @@ Debería ver una página parecida a esta:
 Tiene una aplicación Express funcional, ejecutandose en _localhost:3000_.
 
 > **Nota:** También podría ejecutar la app usando el comando `npm start`. Especificado la variable DEBUG como se muestra habilita el logging/debugging por consola. Por ejemplo, cuando visite la página mostrada arriba verá la información de depuración como esta:
+>
 > ```bash
 > $ SET DEBUG=express-locallibrary-tutorial:* &#x26; npm start
 > 
@@ -256,25 +257,27 @@ Observemos el proyecto que hemos creado.
 
 El proyecto generado, ahora que ha instalado las dependencias, tiene la siguiente estructura de archivos (los archivos son los elementos que **no** están precedidos con "/"). El archivo **package.json** define las dependencias de la aplicación y otra información. También define un script de inicio que es el punto de entrada de la aplicación, el archivo JavaScript **/bin/www**. Éste establece algunos de los manejadores de error de la aplicación y luego carga el archivo **app.js** para que haga el resto del trabajo. Las rutas se almacenan en módulos separados en el directorio **/routes**. las plantillas se almacenan en el directorio /**views**.
 
-    /express-locallibrary-tutorial
-        app.js
-        /bin
-            www
-        package.json
-        /node_modules
-            [about 4,500 subdirectories and files]
-        /public
-            /images
-            /javascripts
-            /stylesheets
-                style.css
-        /routes
-            index.js
-            users.js
-        /views
-            error.pug
-            index.pug
-            layout.pug
+```
+/express-locallibrary-tutorial
+    app.js
+    /bin
+        www
+    package.json
+    /node_modules
+        [about 4,500 subdirectories and files]
+    /public
+        /images
+        /javascripts
+        /stylesheets
+            style.css
+    /routes
+        index.js
+        users.js
+    /views
+        error.pug
+        index.pug
+        layout.pug
+```
 
 Las siguientes secciones describen los archivos con más detalle.
 
@@ -451,7 +454,7 @@ module.exports = router;
 
 The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported ('`/users`') plus whatever is defined in this file ('`/`'). In other words, this route will be used when an URL of `/users/` is received.
 
-> **Nota:** Try this out by running the server with node and visiting the URL in your browser: <http://localhost:3000/users/>. You should see a message: 'respond with a resource'.
+> **Nota:** Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
 
 One thing of interest above is that the callback function has the third argument '`next`', and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the `next` argument, it may be useful in the future if you want to add multiple route handlers to the `'/'` route path.
 
@@ -478,7 +481,7 @@ block content
 
 ## Challenge yourself
 
-Create a new route in **/routes/users.js** that will display the text "_You're so cool"_ at URL `/users/cool/`. Test it by running the server and visiting <http://localhost:3000/users/cool/> in your browser
+Create a new route in **/routes/users.js** that will display the text "_You're so cool"_ at URL `/users/cool/`. Test it by running the server and visiting `http://localhost:3000/users/cool/` in your browser
 
 ## Summary
 

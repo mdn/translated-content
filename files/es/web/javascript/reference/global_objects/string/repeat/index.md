@@ -17,7 +17,9 @@ El método **`repeat()`** construye y devuelve una nueva cadena que contiene el 
 
 ## Sintáxis
 
-    str.repeat(count)
+```
+str.repeat(count)
+```
 
 ### Parámetros
 

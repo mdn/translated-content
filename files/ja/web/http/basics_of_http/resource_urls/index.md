@@ -2,6 +2,7 @@
 title: リソース URL
 slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
 ---
+
 {{HTTPSidebar}}{{non-standard_header}}
 
 `resource:` というスキームのプレフィックスが付いたリソース URL は、Firefox と Firefox のブラウザー拡張機能によってリソースを内部的に読み込むために使用されますが、情報の一部はブラウザーが接続するサイトでも利用できます。

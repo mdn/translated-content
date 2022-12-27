@@ -13,22 +13,22 @@ translation_of: Web/HTTP/Methods/POST
 
 <p>Разница между {{HTTPMethod("PUT")}} и <code>POST</code> состоит в том, что <code>PUT</code> является идемпотентным: повторное его применение даёт тот же результат, что и при первом применении (то есть у метода нет <em>побочных эффектов</em>), тогда как повторный вызов одного и того же метода <code>POST</code> может иметь такие эффекты, как например, оформление одного и того же заказа несколько раз.</p>
 
-<p><span id="result_box" lang="ru"><span title="A POST request is typically sent via an HTML form and results in a change on the server.">Запрос <code>POST</code> обычно отправляется через форму HTML и приводит к изменению на сервере. </span><span title="In this case, the content type is selected by putting the adequate string in the enctype attribute of the &lt;form> element or the formenctype attribute of the &lt;input> or &lt;button> elements:">В этом случае тип содержимого выбирается путём размещения соответствующей строки в атрибуте {{htmlattrxref ("enctype", "form")}} элемента {{HTMLElement ("form")}} или {{htmlattrxref ("formenctype", "input")}} атрибута элементов {{HTMLElement ("input")}} или {{HTMLElement ("button")}}:</span></span></p>
+<p>Запрос <code>POST</code> обычно отправляется через форму HTML и приводит к изменению на сервере.  element or the formenctype attribute of the &lt;input> or &lt;button> elements:">В этом случае тип содержимого выбирается путём размещения соответствующей строки в атрибуте {{htmlattrxref ("enctype", "form")}} элемента {{HTMLElement ("form")}} или {{htmlattrxref ("formenctype", "input")}} атрибута элементов {{HTMLElement ("input")}} или {{HTMLElement ("button")}}:</p>
 
 <ul>
- <li><span title="application/x-www-form-urlencoded: the values are encoded in key-value tuples separated by '&amp;', with a '=' between the key and the value."><code>application/x-www-form-urlencoded</code>: значения кодируются в кортежах с ключом, разделённых символом <code>'&amp;'</code>, с <code>'='</code> между ключом и значением. </span><span title="Non-alphanumeric characters are percent encoded: this is the reason why this type is not suitable to use with binary data (use multipart/form-data instead)">Не буквенно-цифровые символы - {{glossary ("percent encoded")}}: это причина, по которой этот тип не подходит для использования с двоичными данными (вместо этого используйте <code>multipart/form-data</code>)</span></li>
- <li><code><span title="multipart/form-data">multipart/form-data</span></code>: каждое значение посылается как блок данных ("body part"), с заданными пользовательским клиентом разделителем ("boundary"), разделяющим каждую часть. Эти ключи даются в заголовки <code>Content-Disposition</code> каждой части</li>
- <li><code><span title="text/plain">text/plain</span></code></li>
+ <li><code>application/x-www-form-urlencoded</code>: значения кодируются в кортежах с ключом, разделённых символом <code>'&amp;'</code>, с <code>'='</code> между ключом и значением. Не буквенно-цифровые символы - {{glossary ("percent encoded")}}: это причина, по которой этот тип не подходит для использования с двоичными данными (вместо этого используйте <code>multipart/form-data</code>)</li>
+ <li><code>multipart/form-data</code>: каждое значение посылается как блок данных ("body part"), с заданными пользовательским клиентом разделителем ("boundary"), разделяющим каждую часть. Эти ключи даются в заголовки <code>Content-Disposition</code> каждой части</li>
+ <li><code>text/plain</code></li>
 </ul>
 
-<p><span title="When the POST request is sent via a method other than an HTML form — like via an XMLHttpRequest — the body can take any type.">Когда запрос <code>POST</code> отправляется с помощью метода, отличного от HTML-формы, </span><span title="When the POST request is sent via a method other than an HTML form — like via an XMLHttpRequest — the body can take any type.">— например, через {{domxref ("XMLHttpRequest")}} </span><span title="When the POST request is sent via a method other than an HTML form — like via an XMLHttpRequest — the body can take any type.">— тело может принимать любой тип. </span><span title="As described in the HTTP 1.1 specification, POST is designed to allow a uniform method to cover the following functions:">Как описано в спецификации HTTP 1.1, <code>POST</code> предназначен для обеспечения единообразного метода для покрытия следующих функций:</span></p>
+<p>Когда запрос <code>POST</code> отправляется с помощью метода, отличного от HTML-формы, — например, через {{domxref ("XMLHttpRequest")}} — тело может принимать любой тип. Как описано в спецификации HTTP 1.1, <code>POST</code> предназначен для обеспечения единообразного метода для покрытия следующих функций:</p>
 
 <ul>
- <li><span id="result_box" lang="ru"><span>Аннотация существующих ресурсов</span></span></li>
- <li><span id="result_box" lang="ru"><span>Публикация сообщения на доске объявлений, в новостной группе, в списке рассылки или в аналогичной группе статей;</span></span></li>
- <li><span id="result_box" lang="ru"><span>Добавление нового пользователя посредством модальности регистрации;</span></span></li>
- <li><span id="result_box" lang="ru"><span>Предоставление блока данных, например, результата отправки формы, процессу обработки данных;</span></span></li>
- <li><span id="result_box" lang="ru"><span>Расширение базы данных с помощью операции добавления.</span></span></li>
+ <li>Аннотация существующих ресурсов</li>
+ <li>Публикация сообщения на доске объявлений, в новостной группе, в списке рассылки или в аналогичной группе статей;</li>
+ <li>Добавление нового пользователя посредством модальности регистрации;</li>
+ <li>Предоставление блока данных, например, результата отправки формы, процессу обработки данных;</li>
+ <li>Расширение базы данных с помощью операции добавления.</li>
 </ul>
 
 <table class="properties">

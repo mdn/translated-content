@@ -2,6 +2,7 @@
 title: align-tracks
 slug: Web/CSS/align-tracks
 ---
+
 {{CSSRef}}
 
 {{SeeCompatTable}}

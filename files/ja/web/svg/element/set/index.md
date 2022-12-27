@@ -2,6 +2,7 @@
 title: set
 slug: Web/SVG/Element/set
 ---
+
 {{SVGRef}}
 
 ## 概要

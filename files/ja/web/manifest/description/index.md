@@ -2,6 +2,7 @@
 title: description
 slug: Web/Manifest/description
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

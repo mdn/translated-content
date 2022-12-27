@@ -2,6 +2,7 @@
 title: '<option>: HTML 選択肢要素'
 slug: Web/HTML/Element/option
 ---
+
 {{HTMLRef}}
 
 **HTML の `<option>` 要素**は、 {{HTMLElement("select")}} 要素、{{HTMLElement("optgroup")}} 要素、{{HTMLElement("datalist")}} 要素内で項目を定義するために使われます。したがって、`<option>` は HTML 文書でポップアップメニューのメニュー項目や、その他の項目の一覧を表すことができます。

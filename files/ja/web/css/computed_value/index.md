@@ -2,6 +2,7 @@
 title: 計算値
 slug: Web/CSS/computed_value
 ---
+
 {{CSSRef}}
 
 **計算値** (computed value) は [CSS](/ja/docs/Web/CSS) プロパティにおいて、継承の過程で親から子へと伝えられる値です。これは[指定値](/ja/docs/Web/CSS/specified_value)から計算されます。

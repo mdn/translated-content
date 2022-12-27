@@ -2,6 +2,7 @@
 title: '-moz-image-region'
 slug: Web/CSS/-moz-image-region
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 {{CSSxRef("list-style-image")}} プロパティの画像を使用している特定の XUL 要素や擬似要素では、このプロパティは画像全体の代わりに使用される画像の領域を指定します。これにより、要素は同じ画像の異なる部分を使用してパフォーマンスを向上させることができます。

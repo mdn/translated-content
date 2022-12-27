@@ -2,6 +2,7 @@
 title: '::before (:before)'
 slug: Web/CSS/::before
 ---
+
 {{CSSRef}}
 
 CSS において **`::before`** は、選択した要素の最初の子要素として[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を生成します。よく {{cssxref("content")}} プロパティを使用して、要素に装飾的な内容を追加するために用いられます。この要素は既定でインラインです。

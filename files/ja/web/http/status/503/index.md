@@ -2,6 +2,7 @@
 title: 503 Service Unavailable
 slug: Web/HTTP/Status/503
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) の **`503 Service Unavailable`** サーバーエラーレスポンスコードで、サーバーがリクエストを処理する準備ができていないことを示します。

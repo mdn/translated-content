@@ -2,6 +2,7 @@
 title: CSP ソース値
 slug: Web/HTTP/Headers/Content-Security-Policy/Sources
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) ヘッダーディレクティブで、リソースを読み込むための `<source>` を指定する場合、以下の一覧のいずれかを使用することができます。

@@ -2,6 +2,7 @@
 title: grid-row
 slug: Web/CSS/grid-row
 ---
+
 {{CSSRef}}
 
 **`grid-row`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、グリッド行の中におけるグリッドアイテムの寸法と位置を指定し、線、区間、なし (自動) をグリッド配置に適用することで、{{Glossary("grid areas", "グリッド領域")}}の行の先頭と末尾の端を指定します。

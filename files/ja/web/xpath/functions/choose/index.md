@@ -2,6 +2,7 @@
 title: choose
 slug: Web/XPath/Functions/choose
 ---
+
 {{ XsltRef() }}
 
 `choose` 関数は正負値に基づいて、指定されたオブジェクトのうち 1 つを返します。

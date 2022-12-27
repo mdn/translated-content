@@ -2,6 +2,7 @@
 title: ':right'
 slug: Web/CSS/:right
 ---
+
 {{ CSSRef() }}
 
 **`:right`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/At-rule)で使われ、印刷文書の右側のページすべてを表します。

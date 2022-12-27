@@ -10,9 +10,11 @@ El método estatico **`String.raw()`** es una función de [plantilla de literale
 
 ## Sintaxis
 
-    String.raw(callSite, ...substitutions)
+```
+String.raw(callSite, ...substitutions)
 
-    String.raw`templateString`
+String.raw`templateString`
+```
 
 ### Parametros
 

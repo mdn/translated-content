@@ -2,6 +2,7 @@
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
 ---
+
 {{CSSRef}}
 
 **`overflow-wrap`** は [CSS](/ja/docs/Web/CSS) のプロパティで、インライン要素に対して、テキストが行ボックスをあふれないように、ブラウザーが分割できない文字列の途中で改行を入れるかどうかの設定を適用します。

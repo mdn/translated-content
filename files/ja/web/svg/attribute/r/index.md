@@ -2,6 +2,7 @@
 title: r
 slug: Web/SVG/Attribute/r
 ---
+
 {{SVGRef}}
 
 **`r`** 属性は円の半径を定義します。

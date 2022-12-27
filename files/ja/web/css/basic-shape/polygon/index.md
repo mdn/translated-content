@@ -3,6 +3,7 @@ title: polygon()
 slug: Web/CSS/basic-shape/polygon
 original_slug: Web/CSS/basic-shape/polygon()
 ---
+
 {{CSSRef}}
 
 **`polygon()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。

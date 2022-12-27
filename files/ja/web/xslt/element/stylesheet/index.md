@@ -2,6 +2,7 @@
 title: <xsl:stylesheet>
 slug: Web/XSLT/Element/stylesheet
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/ja/docs/Web/XSLT")}}
 
 `<xsl:stylesheet>` 要素 (または同等の `<xsl:transform>` 要素) は、スタイルシートの最も外側の要素です。

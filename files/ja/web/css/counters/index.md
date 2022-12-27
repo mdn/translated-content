@@ -3,6 +3,7 @@ title: counters()
 slug: Web/CSS/counters
 original_slug: Web/CSS/counters()
 ---
+
 {{CSSRef}}
 
 **`counter()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、階層的なカウンターを利用できるようにし、指定された名前付きカウンターがあれば、その現在値を表す連結された文字列を返します。 `counters()` 関数には `counters(name, string)` と `counters(name, string, style)` の二つの形式があります。一般的には[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)と一緒に使用されますが、理論的には [`<string>`](/ja/docs/Web/CSS/string) 値に対応している場所ならばどこでも使用できます。生成されるテキストは、指定された名前を持つすべてのカウンターの値で、指定された文字列で区切られた一番外側から一番内側までの値です。カウンターは、指定されたスタイルで表示され、スタイルが指定されていない場合は既定で `decimal` で表示されます。

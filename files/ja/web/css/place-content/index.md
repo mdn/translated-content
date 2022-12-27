@@ -2,6 +2,7 @@
 title: place-content
 slug: Web/CSS/place-content
 ---
+
 {{CSSRef}}
 
 **`place-content`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、ブロック方向とインライン方向の内容物の配置 (すなわち {{CSSxRef("align-content")}} および {{CSSxRef("justify-content")}}) を、[グリッド](/ja/docs/Web/CSS/CSS_Grid_Layout)や[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout)などのレイアウトシステムにおいて、一度に指定することができます。

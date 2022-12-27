@@ -2,6 +2,7 @@
 title: line
 slug: Web/SVG/Element/line
 ---
+
 {{SVGRef}}
 
 **`<line>`** 要素は SVG の基本図形であり、2 つの点をつなぐ直線を作成するために使用します。

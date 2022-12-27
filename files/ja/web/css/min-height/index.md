@@ -2,6 +2,7 @@
 title: min-height
 slug: Web/CSS/min-height
 ---
+
 {{CSSRef}}
 
 **`min-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の最小高を設定します。これは {{cssxref("height")}} プロパティの[使用値](/ja/docs/Web/CSS/used_value)が、`min-height` で指定した値を下回ることを防ぎます。

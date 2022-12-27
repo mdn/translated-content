@@ -2,6 +2,7 @@
 title: categories
 slug: Web/Manifest/categories
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

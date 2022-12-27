@@ -4,11 +4,16 @@ slug: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/codePointAt
 ---
-{{JSRef}}El método **`codePointAt() `**`d`evuelve un entero no negativo que equivale al valor Unicode code point del carácter.
+
+{{JSRef}}
+
+El método **`codePointAt()`** devuelve un entero no negativo que equivale al valor Unicode code point del carácter.
 
 ## Sintaxis
 
-    str.codePointAt(indice)
+```
+str.codePointAt(indice)
+```
 
 ### Parámetros
 

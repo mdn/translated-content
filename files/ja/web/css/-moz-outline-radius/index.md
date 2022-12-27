@@ -2,6 +2,7 @@
 title: '-moz-outline-radius'
 slug: Web/CSS/-moz-outline-radius
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 Firefox などの Mozilla アプリケーションにおいて、**`-moz-outline-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線 ({{cssxref("outline")}}) の角を丸くするために使用することができます。

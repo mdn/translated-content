@@ -2,6 +2,7 @@
 title: プログレッシブウェブアプリの構造
 slug: Web/Progressive_web_apps/App_structure
 ---
+
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
 
 PWA の背後にある理論が分かったところで、推奨されるアプリの構造を見てみましょう。まず、 [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) アプリの分析、それがなぜそのように構築されているのか、それがもたらす利点について説明します。

@@ -10,9 +10,11 @@ El método **`toLocaleUpperCase()`** devuelve el valor de la cadena que lo llama
 
 ## Syntaxis
 
-    str.toLocaleUpperCase()
-    str.toLocaleUpperCase(locale)
-    str.toLocaleUpperCase([locale, locale, ...])
+```
+str.toLocaleUpperCase()
+str.toLocaleUpperCase(locale)
+str.toLocaleUpperCase([locale, locale, ...])
+```
 
 ### Parámetros
 

@@ -2,6 +2,7 @@
 title: size
 slug: Web/CSS/@page/size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 [CSS](/ja/docs/Web/CSS) の **`size`** [アット規則](/ja/docs/Web/CSS/At-rule)記述子は、 {{cssxref("@page")}} アット規則で使用し、ページを表現するために使用するボックスの寸法と向きを定義します。多くの場合、この寸法は印刷ページの適用可能な対象の寸法に対応します。

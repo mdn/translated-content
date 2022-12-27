@@ -2,6 +2,7 @@
 title: overflow-clip-margin
 slug: Web/CSS/overflow-clip-margin
 ---
+
 {{CSSRef}}
 
 **`overflow-clip-margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [`overflow: clip`](/ja/docs/Web/CSS/overflow) を持つ要素がクリップされる前に、要素の辺からどれだけ外側に描画できるかを指定します。

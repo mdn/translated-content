@@ -2,6 +2,7 @@
 title: border-right-style
 slug: Web/CSS/border-right-style
 ---
+
 {{CSSRef}}
 
 **`border-right-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の境界線 ({{cssxref("border")}}) の形状を設定します。

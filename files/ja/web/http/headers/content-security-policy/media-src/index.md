@@ -2,6 +2,7 @@
 title: 'CSP: media-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/media-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`media-src`** ディレクティブは、 {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素を使用して読み込むメディアの有効なソースを指定します。

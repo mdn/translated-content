@@ -2,6 +2,7 @@
 title: '<meter>: HTML メーター要素'
 slug: Web/HTML/Element/meter
 ---
+
 {{HTMLRef}}
 
 **HTML の `<meter>` 要素**は、既知の範囲内のスカラー値、または小数値を表します。

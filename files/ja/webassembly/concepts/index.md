@@ -4,6 +4,7 @@ slug: WebAssembly/Concepts
 l10n:
   sourceCommit: 1ef12f2e0815d0d285d6027219c987a3e4e228a3
 ---
+
 {{WebAssemblySidebar}}
 
 この記事では、 WebAssembly がどのように機能しているか、その目標、解決している問題、ウェブブラウザーのレンダリングエンジン内での動作などの概念について説明します。

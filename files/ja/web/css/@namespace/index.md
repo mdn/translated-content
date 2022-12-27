@@ -2,6 +2,7 @@
 title: '@namespace'
 slug: Web/CSS/@namespace
 ---
+
 {{CSSRef}}
 
 **`@namespace`** は[アットルール](/ja/docs/Web/CSS/At-rule)で、

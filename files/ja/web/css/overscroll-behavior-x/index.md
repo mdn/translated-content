@@ -2,6 +2,7 @@
 title: overscroll-behavior-x
 slug: Web/CSS/overscroll-behavior-x
 ---
+
 {{CSSRef}}
 
 **`overscroll-behavior-x`** は CSS のプロパティで、スクロール領域の水平方向の境界に達したときのブラウザーの挙動を設定します。

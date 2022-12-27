@@ -12,7 +12,9 @@ El método **trim( )** elimina los espacios en blanco en ambos extremos del stri
 
 ## Sintaxis
 
-    str.trim()
+```
+str.trim()
+```
 
 Una nueva cadena que representa la cadena de llamada sin espacios en blanco de ambos extremos.
 

@@ -2,6 +2,7 @@
 title: ellipse
 slug: Web/SVG/Element/ellipse
 ---
+
 {{SVGRef}}
 
 `ellipse` 要素は SVG の基本的な図形であり、中心となる座標と x 方向と y 方向の半径両方を指定し、楕円を生成します。

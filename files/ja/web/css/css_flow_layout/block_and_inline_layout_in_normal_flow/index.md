@@ -2,6 +2,7 @@
 title: 通常フローでのブロック及びインラインレイアウト
 slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 ---
+
 {{CSSRef}}
 
 このガイドでは、通常フローの中でブロック及びインライン要素がどのように動作するかの基本を見てみます。

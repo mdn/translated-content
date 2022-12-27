@@ -2,6 +2,7 @@
 title: transform
 slug: Web/SVG/Attribute/transform
 ---
+
 {{SVGRef}}
 
 **`transform`** 属性は、要素とその要素の子に適用される変換定義のリストを定義します。
@@ -41,7 +42,7 @@ html,body,svg { height:100% }
 
 以下の変換関数は、 `transform` 属性の _`<transform-list>`_ で使用することができます。
 
-> **Warning:** **警告:** 仕様書によれば、 CSS の[変換関数](/ja/docs/Web/CSS/transform-function)も使用することができます。しかし、互換性は保証されていません。
+> **Warning:** 仕様書によれば、 CSS の[変換関数](/ja/docs/Web/CSS/transform-function)も使用することができます。しかし、互換性は保証されていません。
 
 ### Matrix
 

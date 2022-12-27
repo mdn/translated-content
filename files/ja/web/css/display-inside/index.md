@@ -2,6 +2,7 @@
 title: <display-inside>
 slug: Web/CSS/display-inside
 ---
+
 {{CSSRef}}
 
 以下のキーワードは、要素の内部の {{CSSxRef("display")}} 種別を指定し、これは要素 (置換要素ではないものとする) の内容物をレイアウトする整形コンテキストの種類を定義します。これらのキーワードは `display` プロパティの値として使用され、単一のキーワードとしては伝統的な目的に、または Level 3 仕様書では {{CSSxRef("&lt;display-outside&gt;")}} のキーワードと共に使用されます。

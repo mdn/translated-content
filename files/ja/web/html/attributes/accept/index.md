@@ -2,6 +2,7 @@
 title: 'HTML 属性: accept'
 slug: Web/HTML/Attributes/accept
 ---
+
 {{HTMLSidebar}}
 
 **`accept`** 属性は、値としてカンマ区切りでファイル種別または[固有ファイル種別指定子](#unique_file_type_specifiers)を取り、どのファイル種別を受け入れるかを記述します。 accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlelement("input")}} 要素のプロパティです。もとは {{htmlelement("form")}} 要素で対応していましたが、 HTML5 で削除され、 {{HTMLElement("input/file", "file")}} に変更されました。

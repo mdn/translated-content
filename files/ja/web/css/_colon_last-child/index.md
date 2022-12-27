@@ -2,6 +2,7 @@
 title: ':last-child'
 slug: Web/CSS/:last-child
 ---
+
 {{CSSRef}}
 
 **`:last-child`** は[CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で最後の要素を表します。

@@ -3,6 +3,7 @@ title: scaleY()
 slug: Web/CSS/transform-function/scaleY
 original_slug: Web/CSS/transform-function/scaleY()
 ---
+
 {{CSSRef}}
 
 **`scaleY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を Y 軸に沿って (垂直に) 変倍する変形を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

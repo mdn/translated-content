@@ -3,6 +3,7 @@ title: ':host()'
 slug: Web/CSS/:host_function
 original_slug: Web/CSS/:host()
 ---
+
 {{CSSRef}}
 
 **`:host()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、その中で使われている CSS を含む[シャドウ DOM](/ja/docs/Web/Web_Components/Using_shadow_DOM) のシャドウホストを選択します（従ってカスタム要素をそのシャドウ DOM 内部から選択できます）。ただし、関数の引数として与えられたセレクターがシャドウホストと一致した場合のみです。

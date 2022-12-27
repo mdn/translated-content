@@ -2,6 +2,7 @@
 title: initial-letter
 slug: Web/CSS/initial-letter
 ---
+
 {{CSSRef}}
 
 `initial-letter` は CSS のプロパティで、頭文字をドロップキャップにしたり、上げたり、下げたりすることを設定します。

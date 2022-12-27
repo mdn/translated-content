@@ -4,6 +4,7 @@ slug: WebAssembly/Using_the_JavaScript_API
 i10n:
   sourceCommit: 754a5590dd7d8d1e231ed0443a5a3feacc9ad4c0
 ---
+
 {{WebAssemblySidebar}}
 
 これまでに [Emscripten などのツールを使用して他の言語からモジュールをコンパイルしたり](/ja/docs/WebAssembly/C_to_wasm)、[自分自身のコードを読み込んでして実行したりしました](/ja/docs/WebAssembly/Loading_and_running)。次のステップは他の WebAssembly JavaScript API の使い方について学ぶことです。この記事では知る必要があることを説明します。

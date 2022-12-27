@@ -2,6 +2,7 @@
 title: background_color
 slug: Web/Manifest/background_color
 ---
+
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 
 <table class="properties">

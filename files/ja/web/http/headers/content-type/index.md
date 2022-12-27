@@ -2,6 +2,7 @@
 title: Content-Type
 slug: Web/HTTP/Headers/Content-Type
 ---
+
 {{HTTPSidebar}}
 
 **`Content-Type`** 表現ヘッダーは、リソースの{{Glossary("MIME type","メディア種別")}}を示すために使用します。</p>

@@ -2,6 +2,7 @@
 title: <textarea>
 slug: Web/HTML/Element/textarea
 ---
+
 {{HTMLRef}}
 
 **HTML の `<textarea>` 要素**は、複数行のプレーンテキスト編集コントロールを表し、レビューのコメントやお問い合わせフォーム等のように、ユーザーが大量の自由記述テキストを入力できるようにするときに便利です。

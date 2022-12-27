@@ -2,6 +2,7 @@
 title: scale
 slug: Web/SVG/Attribute/scale
 ---
+
 {{SVGRef}}
 
 **`scale`** 属性は、{{SVGElement("feDisplacementMap")}}フィルタプリミティブにおいて用いられる距離の尺度因子を定義します。その量は、{{SVGElement("filter")}}要素の{{SVGAttr("primitiveUnits")}}属性で規定される座標系で表されます。

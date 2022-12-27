@@ -2,6 +2,7 @@
 title: 415 Unsupported Media Type
 slug: Web/HTTP/Status/415
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`415 Unsupported Media Type`** クライアントエラーレスポンスコードは、ペイロードフォーマットがサポートされていないフォーマットであるため、サーバーがリクエストの受け入れを拒否することを示します。

@@ -26,16 +26,20 @@ Los navegadores no envían ninguna cabecera `Referer` si:
 
 ## Sintaxis
 
-    Referer: <url>
+```
+Referer: <url>
+```
 
 ## Directivas
 
 - \<url>
-  - : Una dirección absoluta o parcial de la página web anterior, la cual contenía un enlace hacia la página solicitada actual que se siguió. No se incluyen los fragmentos de URL (esto es, «#sección») ni los datos de usuario (o sea, «nombredeusuario:contraseña» en URI como «https\://nombredeusuario:contraseña\@ejemplo.com/equis/ye/»).
+  - : Una dirección absoluta o parcial de la página web anterior, la cual contenía un enlace hacia la página solicitada actual que se siguió. No se incluyen los fragmentos de URL (esto es, «#sección») ni los datos de usuario (o sea, «nombredeusuario:contraseña» en URI como `https://nombredeusuario:contraseña\@ejemplo.com/equis/ye/`).
 
 ## Ejemplos
 
-    Referer: https://developer.mozilla.org/es/docs/Web/JavaScript
+```
+Referer: https://developer.mozilla.org/es/docs/Web/JavaScript
+```
 
 ## Especificaciones
 

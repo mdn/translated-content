@@ -2,6 +2,7 @@
 title: ':lang()'
 slug: Web/CSS/:lang
 ---
+
 {{CSSRef}}
 
 **`:lang()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、指定された言語に基づいて要素に一致します。

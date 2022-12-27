@@ -322,7 +322,7 @@ py -3 -m django --version
 
 > **Note:** Windows では`py -3`コマンドをプレフィックスにして Python 3 スクリプトを起動し、Linux/macOS X では `python3`を実行します。
 
-> **Warning:** **重要**: このモジュールの残りの部分は、 Python 3 (`python3`) を呼び出すために Linux コマンドを使用します。Windows で作業している場合は、単にこの接頭辞を`py -3`に置き換えてください。
+> **Warning:** このモジュールの残りの部分は、 Python 3 (`python3`) を呼び出すために Linux コマンドを使用します。Windows で作業している場合は、単にこの接頭辞を`py -3`に置き換えてください。
 
 ## インストールのテスト
 

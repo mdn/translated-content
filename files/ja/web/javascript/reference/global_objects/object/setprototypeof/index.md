@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 
 **`Object.setPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部の `[[Prototype]]` プロパティ) を、別のオブジェクトまたは {{jsxref("null")}} に設定します。
 
-> **Warning:** **警告:** オブジェクトの `[[Prototype]]` を変更すると、 [最近の JavaScript エンジンがプロパティへのアクセスを最適化する方法](https://mathiasbynens.be/notes/prototypes)の特質上、すべてのブラウザーや JavaScript エンジンで、操作がとても低速になります。さらに、プロトタイプを変更することの性能への影響は細かく広範囲にわたり、 `Object.setPrototypeOf(...)` 文に費やされる時間だけではなく、 `[[Prototype]]` が変更されたすべてのオブジェクトへのアクセスを持つ**_すべて_**のコードに影響する可能性があります。
+> **Warning:** オブジェクトの `[[Prototype]]` を変更すると、 [最近の JavaScript エンジンがプロパティへのアクセスを最適化する方法](https://mathiasbynens.be/notes/prototypes)の特質上、すべてのブラウザーや JavaScript エンジンで、操作がとても低速になります。さらに、プロトタイプを変更することの性能への影響は細かく広範囲にわたり、 `Object.setPrototypeOf(...)` 文に費やされる時間だけではなく、 `[[Prototype]]` が変更されたすべてのオブジェクトへのアクセスを持つ**_すべて_**のコードに影響する可能性があります。
 >
 > この機能は言語の一部であるため、その機能の実装による負荷は (理念上は) エンジンの開発者によります。エンジンの開発者がこの問題に対処するまでの間、性能が気になる場合は、オブジェクトの `[[Prototype]]` を変更することは避けるべきです。代わりに、 {{jsxref("Object.create()")}} を使用して必要な `[[Prototype]]` をもつオブジェクトを生成してください。
 

@@ -2,6 +2,7 @@
 title: font-style
 slug: Web/CSS/@font-face/font-style
 ---
+
 {{CSSRef}}
 
 **`font-style`** は CSS の記述子で、 {{cssxref("@font-face")}} ルールの中で指定されたフォントのフォントスタイルを指定することができます。

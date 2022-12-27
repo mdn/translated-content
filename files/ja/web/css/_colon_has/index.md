@@ -2,6 +2,7 @@
 title: ':has()'
 slug: Web/CSS/:has
 ---
+
 {{CSSRef}}
 
 **`:has()`** は CSS の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、引数として渡されたセレクターに (指定された要素の {{cssxref(":scope")}} の相対で) 該当する要素が一つ以上の要素に一致することを表します。

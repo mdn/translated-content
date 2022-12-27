@@ -2,6 +2,7 @@
 title: CSS スクロールスナップ
 slug: Web/CSS/CSS_Scroll_Snap
 ---
+
 {{CSSRef}}
 
 **CSS スクロールスナップ** (CSS Scroll Snap) は CSS モジュールの一つで、スクロール操作の完了後にスクロールコンテナーのスクロールポートが終了するスクロール位置を強制する、スクロールスナップ位置を導入します。

@@ -2,6 +2,7 @@
 title: display-mode
 slug: Web/CSS/@media/display-mode
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`display-mode`** [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、アプリケーションの表示モードに基づいて選択的に CSS を適用するために使います。これは、サイトを URL から起動した場合とデスクトップアイコンから実行した場合の使い勝手に一貫性を持たせるために使用することができます。

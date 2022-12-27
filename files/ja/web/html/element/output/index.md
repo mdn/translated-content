@@ -2,6 +2,7 @@
 title: '<output>: 出力要素'
 slug: Web/HTML/Element/output
 ---
+
 {{HTMLRef}}
 
 **HTML の出力要素** (**`<output>`**) は、サイトやアプリが計算結果やユーザー操作の結果を挿入することができるコンテナー要素です。

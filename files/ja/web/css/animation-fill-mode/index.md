@@ -2,6 +2,7 @@
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
 ---
+
 {{CSSRef}}
 
 **`animation-fill-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 CSS アニメーションの実行の前後にどう対象にスタイルを適用するかを設定します。

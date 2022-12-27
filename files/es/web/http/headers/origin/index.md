@@ -19,8 +19,10 @@ La cabecera de petición **`Origin`** indica de dónde se origina una búsqueda.
 
 ## Sintaxis
 
-    Origin: ""
-    Origin: <esquema> "://" <nombre de host> [ ":" <puerto> ]
+```
+Origin: ""
+Origin: <esquema> "://" <nombre de host> [ ":" <puerto> ]
+```
 
 `Origin` puede ser una cadena vacía: esto es útil, por ejemplo, si el origen es una `data` URL.
 
@@ -35,7 +37,9 @@ La cabecera de petición **`Origin`** indica de dónde se origina una búsqueda.
 
 ## Ejemplos
 
-    Origin: https://developer.mozilla.org
+```
+Origin: https://developer.mozilla.org
+```
 
 ## Especificaciones
 

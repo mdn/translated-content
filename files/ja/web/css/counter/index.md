@@ -3,6 +3,7 @@ title: counter()
 slug: Web/CSS/counter
 original_slug: Web/CSS/counter()
 ---
+
 {{CSSRef}}
 
 **`counter()`** は [CSS](/ja/docs/Web/CSS) の関数で、指定された名前付きカウンターの現在値があれば、その文字列を返します。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)において用いるのが多いものの、理論的には [`<string>`](/ja/docs/Web/CSS/string) に対応するすべての箇所で用いることができます。

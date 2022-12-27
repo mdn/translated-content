@@ -2,6 +2,7 @@
 title: Clear-Site-Data
 slug: Web/HTTP/Headers/Clear-Site-Data
 ---
+
 {{HTTPSidebar}}
 
 **`Clear-Site-Data`** ヘッダーは、リクエストしているウェブサイトに関連付けられた閲覧用データ (クッキー、ストレージ、キャッシュ) を消去します。ウェブ開発者がそのオリジンのためにブラウザーがローカルに保存したデータをより制御できます。

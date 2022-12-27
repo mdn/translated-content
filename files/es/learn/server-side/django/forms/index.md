@@ -83,23 +83,23 @@ A continuación se muestra un diagram de flujo del proceso de cómo Django manej
 
 Basado en el diagrama de anterior, las principales pasos que hace el proceso del manejo de formularios de Django son:
 
-1.  Mostrar el formulario predeterminado la primera vez que es solicitado por el usuario.
+1. Mostrar el formulario predeterminado la primera vez que es solicitado por el usuario.
 
     - El formulario puede contener campos en blanco (por ejemplo, si está creando un registro nuevo), o puede estar rellenado previamente con valores iniciales (por ejemplo, si está modificando un registro o si tiene valores iniciales predeterminados útiles).
     - El formulario se conoce como no vinculado en este punto porque no esta asociado con ningún dato ingresado por el usuario (aunque pueda tener valores iniciales).
 
-2.  Recibir datos de una solicitud de envío y vincularlo al formulario.
+2. Recibir datos de una solicitud de envío y vincularlo al formulario.
 
     - La vinculacion de datos al formulario significa que los datos ingresados por el usuario y cualquier error están disponibles cuando necesitamos volver a desplegar el formulario.
 
-3.  Limpiar y validar los datos. Clean and validate the data.
+3. Limpiar y validar los datos. Clean and validate the data.
 
     - La limpieza de los datos realiza una sanitización de la entrada (por ejemplo, remover caracteres no válidos que podrían ser usados para enviar contenido malicioso al servidor) y convertirlos en tipos consistente de Python.
     - La validación verifica que los valores sean apropiados para el campo (por ejemplo, que esten en el rango correcto de fechas, no sean demasiado cortos ni demasiado largos, etc.)
 
-4.  Si algún dato es no válido, volver a mostrar el formulario, esta vez con cualquier valor rellenado por el usuario y los mensajes de error para los campos con problemas.
-5.  Si todos los datos son válidos, realizar las acciones requeridas (por ejemplo, guardar los datos, enviar un correo electrónico, devolver el resultado de una búsqueda, cargar un archivo, etc)
-6.  Una vez todas las acciones se hayan completado, redirijir al usuario a otra página
+4. Si algún dato es no válido, volver a mostrar el formulario, esta vez con cualquier valor rellenado por el usuario y los mensajes de error para los campos con problemas.
+5. Si todos los datos son válidos, realizar las acciones requeridas (por ejemplo, guardar los datos, enviar un correo electrónico, devolver el resultado de una búsqueda, cargar un archivo, etc)
+6. Una vez todas las acciones se hayan completado, redirijir al usuario a otra página
 
 Django provee una serie de herramientas y enfoques para ayudarlo con las tareas detalladas anteriormente. La más fundamental es la clase `Form`, la cuál simplifica la generación de formularios HTML y la limpieza y validación de datos. En la siguiente sección describimos cómo funcionan los formularios usando el ejemplo práctico de una página para permitir a los bibliotecarios renovar libros.
 
@@ -149,7 +149,7 @@ Los argumentos que son comunes a la mayoría de los campos se enumeran a continu
 
 #### Validación
 
-Django proporciona numerosos lugares donde puede validar sus datos. La forma más fácil de validar un solo campo es anular el método `clean_<fieldname>()` para el campo que desea verificar. Entonces, por ejemplo, podemos validar lo ingresado `renewal_date` los valores son entre ahora y 4 semanas mediante la implementación `clean_renewal_date() `como se muestra abajo.
+Django proporciona numerosos lugares donde puede validar sus datos. La forma más fácil de validar un solo campo es anular el método `clean_<fieldname>()` para el campo que desea verificar. Entonces, por ejemplo, podemos validar lo ingresado `renewal_date` los valores son entre ahora y 4 semanas mediante la implementación `clean_renewal_date()` como se muestra abajo.
 
 ```python
 from django import forms
@@ -383,7 +383,7 @@ Todo lo que queda es la variable de la plantilla `\{{form}}`, que pasamos a la p
 </tr>
 ```
 
-> **Nota:** Quizás no sea obvio porque solo tenemos un campo, pero de forma predeterminada cada campo se define en su propia fila de tabla (razón por la cual la variable está dentro de la etiqueta `table `arriba).Esta misma representación (rendering) se proporciona si hace referencia a la variable de plantilla `\{{ form.as_table }}`.
+> **Nota:** Quizás no sea obvio porque solo tenemos un campo, pero de forma predeterminada cada campo se define en su propia fila de tabla (razón por la cual la variable está dentro de la etiqueta `table` arriba).Esta misma representación (rendering) se proporciona si hace referencia a la variable de plantilla `\{{ form.as_table }}`.
 
 Si tuviera que ingresar una fecha no válida, también obtendría una lista de los errores que se muestran en la página (en negrita a continuación).
 
@@ -607,11 +607,11 @@ Luego navegue a la página de creación del autor: <http://127.0.0.1:8000/catalo
 
 ![Form Example: Create Author](https://mdn.mozillademos.org/files/14223/forms_example_create_author.png)
 
-Ingrese los valores para los campos y luego presione **Submit** para guardar el registro del autor. Ahora debería ser llevado a una vista detallada para su nuevo autor, con una URL de algo como _http\://127.0.0.1:8000/catalog/author/10_.
+Ingrese los valores para los campos y luego presione **Submit** para guardar el registro del autor. Ahora debería ser llevado a una vista detallada para su nuevo autor, con una URL de algo como `http://127.0.0.1:8000/catalog/author/10`.
 
-Puede probar la edición de registros agregando _/update/_ hasta el final de la vista detallada URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/update/_) — no mostramos una captura de pantalla, porque se parece a la página "create".
+Puede probar la edición de registros agregando _/update/_ hasta el final de la vista detallada URL (e.g. `http://127.0.0.1:8000/catalog/author/10/update/`) — no mostramos una captura de pantalla, porque se parece a la página "create".
 
-Por último, podemos eliminar el autor, agregando eliminar (delete) al final de la vista detallada del autor URL (ejemplo. _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django debería mostrar la página de eliminación que se muestra a continuación. pulse **Yes, delete.** para eliminar el registro y ser llevado a la lista de todos los autores.
+Por último, podemos eliminar el autor, agregando eliminar (delete) al final de la vista detallada del autor URL (ejemplo. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django debería mostrar la página de eliminación que se muestra a continuación. pulse **Yes, delete.** para eliminar el registro y ser llevado a la lista de todos los autores.
 
 ![](https://mdn.mozillademos.org/files/14221/forms_example_delete_author.png)
 

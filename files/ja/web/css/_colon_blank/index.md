@@ -2,6 +2,7 @@
 title: ':blank'
 slug: Web/CSS/:blank
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 > **Note:** セレクターは、CSSWG が変更を続けているため、使用するリスクを考慮する必要があります。

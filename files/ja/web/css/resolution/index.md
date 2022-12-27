@@ -2,6 +2,7 @@
 title: <resolution>
 slug: Web/CSS/resolution
 ---
+
 {{CSSRef}}
 
 **`<resolution>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Types) で、[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)の [resolution](/ja/docs/Web/CSS/@media/resolution) で使われ、出力端末のピクセル密度である、解像度を表します。

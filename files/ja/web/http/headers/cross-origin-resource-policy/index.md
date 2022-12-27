@@ -2,6 +2,7 @@
 title: Cross-Origin-Resource-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Resource-Policy
 ---
+
 {{HTTPSidebar}}
 
 > **Note:** [Chrome のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261)のため、 Cross-Origin-Resource-Policy を設定すると PDF のレンダリングが中断され、一部の PDF の最初のページを超えて読むことができなくなることがあります。 [Firefox のバグ](https://bugzilla.mozilla.org/show_bug.cgi?id=1638323)のため、Cross-Origin-Resource-Policy を設定すると、状況によっては一部のリソース（PDF など）のダウンロードができなくなることがあります。本番環境では、このヘッダーの使用に注意してください。

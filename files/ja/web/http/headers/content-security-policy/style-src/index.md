@@ -2,6 +2,7 @@
 title: 'CSP: style-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/style-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`style-src`** ディレクティブは、スタイルシートの有効なソースを指定します。

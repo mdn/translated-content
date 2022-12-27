@@ -2,6 +2,7 @@
 title: 重ね合わせコンテキストの例 2
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 ---
+
 {{CSSRef}}
 
 « [CSS](/ja/docs/Web/CSS) « [CSS の z-index を理解する](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index)

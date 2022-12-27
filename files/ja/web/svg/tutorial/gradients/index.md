@@ -2,6 +2,7 @@
 title: SVG におけるグラデーション
 slug: Web/SVG/Tutorial/Gradients
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 
 単なる塗り潰しや線だけではなく、グラデーション (gradients) も塗り潰しや線として作成・適用できるのが魅力です。

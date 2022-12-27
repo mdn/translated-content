@@ -81,7 +81,7 @@ La primera página que crearemos será la página index (`catalog/`). Esto despl
 
 ### Mapeador URL
 
-Hemos creado un archivo básico **/catalog/urls.py** para nuestra aplicación catálogo cuando creamos el [esqueleto del sitio Web](/es/docs/Learn/Server-side/Django/skeleton_website). Las URLs de la aplicación catálogo fueron incluidas dentro del proyecto con un mapeador a `catalog/`, entonces las URLs que llegan a este mapeador deben empezar con` catalog/` (el mapeador funciona sobre todos los string en la URL después de la barra diagonal).
+Hemos creado un archivo básico **/catalog/urls.py** para nuestra aplicación catálogo cuando creamos el [esqueleto del sitio Web](/es/docs/Learn/Server-side/Django/skeleton_website). Las URLs de la aplicación catálogo fueron incluidas dentro del proyecto con un mapeador a `catalog/`, entonces las URLs que llegan a este mapeador deben empezar con `catalog/` (el mapeador funciona sobre todos los string en la URL después de la barra diagonal).
 
 Abra **urls.py** y pegue la línea en negrita que aparece a continuación.
 
@@ -93,7 +93,8 @@ urlpatterns = [
 
 Esta función `url()` define un patrón URL (`r'^$'`), y una función vista que será llamada si el patrón es detectado (`views.index` — una función llamada `index()` en **views.py**). El patrón URL es una [expresión regular de Python](https://docs.python.org/3/library/re.html) (ER). Hablaremos un poco más sobre ERs más adelante en este tutorial, pero para este caso todo lo que necesitas saber es que en una ER de ^$ el patrón coincidirá con una cadena vacía (^ es un marcador de inicio de cadena y $ es un marcador de fin de cadena).
 
-> **Nota:** Nota que en <strong>/locallibrary/locallibrary/urls.py</strong>
+> **Nota:** Nota que en **/locallibrary/locallibrary/urls.py**
+>
 > ```py
 > urlpatterns += [
 >   url(r'^catalog/', include('catalog.urls')),
@@ -364,8 +365,8 @@ En este punto deberíamos haber creado todo lo necesario para desplegar la pági
 
 Aquí hay un par de tareas para probar tu familiaridad con consultas a modelos, vistas y plantillas.
 
-1.  Declara un nuevo bloque _title_ en la plantilla _index_ y cambia el título de la página para coincidir con esta página en particular.
-2.  Modifica la vista para generar un conteo de géneros y otro de libros que contengan una palabra en particular (no sensible a mayúsculas y minúsculas) y luego añade estos campos a la plantilla.
+1. Declara un nuevo bloque _title_ en la plantilla _index_ y cambia el título de la página para coincidir con esta página en particular.
+2. Modifica la vista para generar un conteo de géneros y otro de libros que contengan una palabra en particular (no sensible a mayúsculas y minúsculas) y luego añade estos campos a la plantilla.
 
 ## Resumen
 
@@ -400,4 +401,4 @@ En nuestro siguiente artículo nos basaremos en nuestro conocimiento para crear 
 - [Tutorial de Django Parte 10: Probando una aplicación web de Django](/es/docs/Learn/Server-side/Django/Testing)
 - [Tutorial de Django Parte 11: Poniendo Django en producción](/es/docs/Learn/Server-side/Django/Deployment)
 - [Seguridad en aplicaciones web Django](/es/docs/Learn/Server-side/Django/web_application_security)
-- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)[](/es/docs/Learn/Server-side/Django/django_assessment_blog)
+- [DIY Django mini blog](/es/docs/Learn/Server-side/Django/django_assessment_blog)

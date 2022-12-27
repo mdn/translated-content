@@ -2,6 +2,7 @@
 title: 425 Too Early
 slug: Web/HTTP/Status/425
 ---
+
 {{SeeCompatTable}}{{HTTPSidebar}}
 
 HTTP (HyperText Transfer Protocol) の **`425 Too Early`** レスポンスステータスコードは、サーバーがリプレイ攻撃の可能性を生み出すリプレイされた要求を処理するリスクを負わないことを示します。

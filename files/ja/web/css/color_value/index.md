@@ -2,6 +2,7 @@
 title: <color>
 slug: Web/CSS/color_value
 ---
+
 {{CSSRef}}
 
 **`<color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、一つの色を表します。

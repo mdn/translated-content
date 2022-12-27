@@ -2,6 +2,7 @@
 title: Content-Security-Policy
 slug: Web/HTTP/Headers/Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。これはクロスサイトスクリプティング攻撃 ({{Glossary("Cross-site_scripting", "クロスサイトスクリプティング")}}) を防ぐのに役立ちます。

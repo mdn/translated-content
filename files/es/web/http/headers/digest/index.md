@@ -19,7 +19,9 @@ Toma como argumento un identificador para el algoritmo digest a utilizar y los d
 
 ## Sintaxis
 
-    const digest = crypto.subtle.digest(algorithm, data);
+```
+const digest = crypto.subtle.digest(algorithm, data);
+```
 
 ### Parámetros
 

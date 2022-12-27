@@ -2,6 +2,7 @@
 title: <mtr>
 slug: Web/MathML/Element/mtr
 ---
+
 {{MathMLRef()}}
 
 MathML の `<mtr>` 要素は表組・行列の行を表します。{{ MathMLElement("mtable") }} 要素の中にしか現れません。この要素は [HTML](/ja/docs/HTML) の {{ HTMLElement("tr") }} 要素に似ています。

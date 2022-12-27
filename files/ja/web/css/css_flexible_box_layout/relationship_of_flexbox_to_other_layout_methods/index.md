@@ -2,6 +2,7 @@
 title: フレックスボックスと他のレイアウト方法の関係
 slug: Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
 ---
+
 {{CSSRef}}
 
 この記事ではフレックスボックスが他の CSS モジュールとどのように組み合わせられるかを見ていきます。フレックスボックスについて学びたいときに気をつけておくべき仕様を明らかにし、またなぜフレックスボックスが他のモジュールと異なったものであるかという点についても明確にします。

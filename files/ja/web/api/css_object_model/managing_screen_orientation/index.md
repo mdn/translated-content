@@ -110,7 +110,7 @@ li {
 
 ## 画面の向きを固定する
 
-> **Warning:** **警告:** この API は実験的であり現在は `moz` 接頭辞付きで、[Firefox OS](/ja/docs/Mozilla/Firefox_OS) および [Android 版 Firefox](/ja/docs/Mozilla/Firefox_for_Android) で使用できます。また、Windows 8.1 以降の Internet Explorer では `ms` 接頭辞付きで使用できます。
+> **Warning:** この API は実験的であり現在は `moz` 接頭辞付きで、[Firefox OS](/ja/docs/Mozilla/Firefox_OS) および [Android 版 Firefox](/ja/docs/Mozilla/Firefox_for_Android) で使用できます。また、Windows 8.1 以降の Internet Explorer では `ms` 接頭辞付きで使用できます。
 
 一部の端末 (主にモバイル端末) は、画面に表示している内容をいつでも読めるようにするため、端末の向きに基づいて画面の向きを動的に変更できます。この動作はテキストコンテンツにはとても適していますが、そのような変化を好まないコンテンツも存在します。例えば端末の向きに基づくゲームでは、そのような向きの変化によって混乱してしまうでしょう。
 

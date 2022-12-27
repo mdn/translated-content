@@ -2,6 +2,7 @@
 title: '<progress>: 進捗表示要素'
 slug: Web/HTML/Element/progress
 ---
+
 {{HTMLRef}}
 
 **HTML の `<progress>` 要素**は、タスクの進捗状況を表示します。プログレスバーとしてよく表示されます。

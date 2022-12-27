@@ -2,6 +2,7 @@
 title: animateMotion
 slug: Web/SVG/Element/animateMotion
 ---
+
 {{SVGRef}}
 
 SVG の **`<animateMotion>`** 要素は、ある要素がモーションパスに沿って移動する方法を定義します。

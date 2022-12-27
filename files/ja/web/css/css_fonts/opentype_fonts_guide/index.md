@@ -2,6 +2,7 @@
 title: OpenType フォント特性の手引き
 slug: Web/CSS/CSS_Fonts/OpenType_fonts_guide
 ---
+
 {{CSSRef}}
 
 フォント特性 (font features) または異体字 (variants) とは、OpenType フォントに含まれるさまざまな字形や文字スタイルのことです。これらには、合字 ('fi' や 'ffl' などの文字を組み合わせた特別な字形)、カーニング (特定の文字の組み合わせの間隔の調整)、分数、数字のスタイルなどがあります。これらはすべて OpenType 機能と呼ばれ、特定のプロパティや低レベルの制御プロパティ - {{cssxref("font-feature-settings")}} を通じてウェブ上で使用できるようになっています。この記事では、CSS で OpenType フォント特性を使用するために必要なすべての知識を提供します。

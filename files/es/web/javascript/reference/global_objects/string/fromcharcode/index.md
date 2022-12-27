@@ -17,7 +17,9 @@ El **`String.fromCharCode()`** método estático que devuelve una cadena creada 
 
 ## Sintaxis
 
-    String.fromCharCode(num1, ..., numN)
+```
+String.fromCharCode(num1, ..., numN)
+```
 
 ### Parámetros
 

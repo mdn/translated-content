@@ -64,7 +64,7 @@ original_slug: Web/SVG/Tutorial/Основные_Фигуры
 
 <p>Как вы могли предположить, элемент <a href="/en-US/Web/SVG/Element/circle" title="en-US/Web/SVG/Element/circle">circle</a> рисует окружность на экране. Существует 3 атрибута для описания этого элемента.</p>
 
-<pre class="brush:xml;gutter:false;">&lt;circle cx="25" cy="75" r="20"/&gt;</pre>
+<pre class="brush:xml">&lt;circle cx="25" cy="75" r="20"/&gt;</pre>
 
 <dl>
  <dt>r</dt>
@@ -79,7 +79,7 @@ original_slug: Web/SVG/Tutorial/Основные_Фигуры
 
 <p><a href="/en-US/Web/SVG/Element/ellipse" title="en-US/Web/SVG/Element/ellipse">Ellipse</a> - это наиболее общая форма элемента окружность, в котором можно масштабировать радиусы x и y (обычно называемые математиками половиной большой оси и половиной малой оси) окружности по отдельности.</p>
 
-<pre class="brush:xml;gutter:false;">&lt;ellipse cx="75" cy="75" rx="20" ry="5"/&gt;</pre>
+<pre class="brush:xml">&lt;ellipse cx="75" cy="75" rx="20" ry="5"/&gt;</pre>
 
 <dl>
  <dt>rx</dt>
@@ -96,7 +96,7 @@ original_slug: Web/SVG/Tutorial/Основные_Фигуры
 
 <p><a href="/en-US/Web/SVG/Element/line" title="en-US/Web/SVG/Element/line">Line</a> изображает простую прямую линию. Её атрибутами являются две точки, которые определяют начальную и конечную точки линии.</p>
 
-<pre class="brush:xml;gutter:false;">&lt;line x1="10" x2="50" y1="110" y2="150"/&gt;</pre>
+<pre class="brush:xml">&lt;line x1="10" x2="50" y1="110" y2="150"/&gt;</pre>
 
 <dl>
  <dt>x1</dt>
@@ -113,7 +113,7 @@ original_slug: Web/SVG/Tutorial/Основные_Фигуры
 
 <p>Элемент <a href="/en-US/Web/SVG/Element/polyline" title="en-US/Web/SVG/Element/polyline">polyline</a> воспроизводит группу соединённых прямых линий. Поскольку этот список может быть довольно длинным, все точки включены в один атрибут:</p>
 
-<pre class="brush:xml;gutter:false;">&lt;polyline points="60 110, 65 120, 70 115, 75 130, 80 125, 85 140, 90 135, 95 150, 100 145"/&gt;</pre>
+<pre class="brush:xml">&lt;polyline points="60 110, 65 120, 70 115, 75 130, 80 125, 85 140, 90 135, 95 150, 100 145"/&gt;</pre>
 
 <dl>
  <dt>точки</dt>
@@ -124,7 +124,7 @@ original_slug: Web/SVG/Tutorial/Основные_Фигуры
 
 <p>Элемент <a href="/en-US/Web/SVG/Element/polygon" title="en-US/Web/SVG/Element/polygon">polygon</a> очень похож на элемент polyline в том, что они образованы сегментами прямых линий, соединяющими список точек. Но для многоугольников путь автоматически возвращается к первой точке в конце, создавая тем самым замкнутую форму. Следует отметить, что прямоугольник является частным случаем многоугольника, поэтому polygon можно использовать для создания элемента <code>&lt;rect/&gt;</code> в случаях, когда необходимо большая гибкость.</p>
 
-<pre class="brush:xml;gutter:false;">&lt;polygon points="50 160, 55 180, 70 180, 60 190, 65 205, 50 195, 35 205, 40 190, 30 180, 45 180"/&gt;</pre>
+<pre class="brush:xml">&lt;polygon points="50 160, 55 180, 70 180, 60 190, 65 205, 50 195, 35 205, 40 190, 30 180, 45 180"/&gt;</pre>
 
 <dl>
  <dt>точки</dt>
@@ -135,7 +135,7 @@ original_slug: Web/SVG/Tutorial/Основные_Фигуры
 
 <p><a href="/en-US/Web/SVG/Element/path" title="en-US/Web/SVG/Element/path">Path</a>, вероятно, наиболее общая форма, которую можно использовать в SVG. Используя элемент path вы можете рисовать прямоугольники (с закруглёнными углами или без), окружности, эллипсы, ломанные линии и многоугольники; и по существу любые другие типы форм: кривые Безье, квадратические кривые и многое другое. По этой причине элемент path будет рассмотрен отдельно <a href="/en-US/Web/SVG/Tutorial/Paths" title="en-US/Web/SVG/Tutorial/Paths">в следующей секции</a> этого руководства, но сейчас отметим только, что существует единственный атрибут для контроля его формы.</p>
 
-<pre class="brush:xml;gutter:false;">&lt;path d="M 20 230 Q 40 205, 50 230 T 90230"/&gt;</pre>
+<pre class="brush:xml">&lt;path d="M 20 230 Q 40 205, 50 230 T 90230"/&gt;</pre>
 
 <dl>
  <dt>d</dt>

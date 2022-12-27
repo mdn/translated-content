@@ -2,6 +2,7 @@
 title: title
 slug: Web/HTML/Global_attributes/title
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`title`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)は、要素に関するアドバイザリー情報を表すテキストを含みます。

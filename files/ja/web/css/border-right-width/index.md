@@ -2,6 +2,7 @@
 title: border-right-width
 slug: Web/CSS/border-right-width
 ---
+
 {{CSSRef}}
 
 **`border-right-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の境界の幅を設定します。

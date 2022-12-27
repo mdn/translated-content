@@ -28,7 +28,7 @@ cadena.slice(inicioTrozo[, finTrozo])
   - : El índice basado en cero en el cual empieza la extracción. Si es negativo, se trata como `longCadena + inicioTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `inicioTrozo` es `-3` se trata como `longCadena - 3`)
 
 - `finTrozo`
-  - : Opcional. El índice basado en cero en el que termina la extracción. Si se omite, `slice` extrae hasta el final de la cadena. Si es negativo, se trata como `longCadena + finTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `finTrozo `es `-3` se trata como `longCadena - 3`).
+  - : Opcional. El índice basado en cero en el que termina la extracción. Si se omite, `slice` extrae hasta el final de la cadena. Si es negativo, se trata como `longCadena + finTrozo` donde `longCadena` es la longitud de la cadena (por ejemplo, si `finTrozo` es `-3` se trata como `longCadena - 3`).
 
 ### Valor retornado
 
@@ -56,16 +56,20 @@ console.log(cadena2);
 
 Esto escribe:
 
-    mañana se nos echa encim
+```
+mañana se nos echa encim
+```
 
 ### Uso de `slice()` con índices negativos
 
 El siguiente ejemplo usa `slice()` con índices negativos.
 
-    var cad = "La mañana se nos echa encima.";
-    cad.slice(-3);     // retorna 'ma.'
-    cad.slice(-3, -1); // retorna 'ma'
-    cad.slice(0, -1);  // retorna 'La mañana se nos echa encima'
+```js
+var cad = "La mañana se nos echa encima.";
+cad.slice(-3);     // retorna 'ma.'
+cad.slice(-3, -1); // retorna 'ma'
+cad.slice(0, -1);  // retorna 'La mañana se nos echa encima'
+```
 
 ## Especificaciones
 

@@ -2,6 +2,7 @@
 title: '-moz-float-edge'
 slug: Web/CSS/-moz-float-edge
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 標準外の **`-moz-float-edge`** [CSS](/ja/docs/Web/CSS) プロパティは要素の高さと幅のプロパティが margin 、border 、padding の厚さを含んでいるのかを指定します。

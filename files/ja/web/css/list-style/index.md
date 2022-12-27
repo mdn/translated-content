@@ -2,6 +2,7 @@
 title: list-style
 slug: Web/CSS/list-style
 ---
+
 {{CSSRef}}
 
 **`list-style`** は CSS の[一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、リストのすべてのスタイルプロパティを設定します。

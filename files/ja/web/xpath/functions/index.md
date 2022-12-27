@@ -2,6 +2,7 @@
 title: Functions
 slug: Web/XPath/Functions
 ---
+
 {{ XsltRef() }}
 
 以下はコア [XPath](/ja/docs/XPath) 関数及び [XSLT](/ja/docs/XSLT) 固有の追加 XPath 関数の、解説、構文、引数一覧、返される型、該当する W3C 勧告の原典、及び [Gecko](/ja/docs/Gecko) での現在の対応状況を含む注釈付きの一覧です。 XPath/XSLT 関数の使用に関するより詳しい情報は、[より詳しい読み物](/ja/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading)のページをご覧ください。

@@ -2,6 +2,7 @@
 title: SVG In HTML Introduction
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
+
 ## 概要
 
 この記事と関連する例では、インラインの [SVG](/ja/docs/SVG) をフォームの背景画像として使用する方法を示します。どのように [JavaScript](/ja/docs/JavaScript) と [CSS](/ja/docs/CSS) を利用すれば、通常の HTML を記述するのと同じ方法で画像を扱えるかを紹介しています。

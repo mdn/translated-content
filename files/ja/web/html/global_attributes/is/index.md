@@ -2,6 +2,7 @@
 title: is
 slug: Web/HTML/Global_attributes/is
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`is`** [グローバル属性](/ja/docs/Web/HTML/Global_attributes)で、標準の HTML 要素が定義されたカスタム内蔵要素のように振舞うよう指定することができます (詳しくは [カスタム要素の使用](/ja/docs/Web/Web_Components/Using_custom_elements) を参照してください)。

@@ -2,6 +2,7 @@
 title: grid
 slug: Web/CSS/grid
 ---
+
 {{CSSRef}}
 
 **`grid`** は CSS のプロパティで、[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)として明示的・暗黙的なすべてのグリッドプロパティを単一の宣言で設定します。

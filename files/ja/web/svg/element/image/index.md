@@ -2,6 +2,7 @@
 title: <image>
 slug: Web/SVG/Element/image
 ---
+
 {{SVGRef}}
 
 The **`<image>`** は SVG の要素で、 SVG 文書内に画像を含めます。これは{{glossary("raster image", "ラスター画像")}}ファイルや他の SVG ファイルを表示することができます。

@@ -2,6 +2,7 @@
 title: <ratio>
 slug: Web/CSS/ratio
 ---
+
 {{CSSRef}}
 
 **`<ratio>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、[アスペクト比](/ja/docs/Web/CSS/@media/aspect-ratio)を[メディアクエリ](/ja/docs/Web/CSS/Media_Queries)内で記述するために使用し、2 つの単位のない値で比率を記述します。

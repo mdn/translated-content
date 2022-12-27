@@ -2,6 +2,7 @@
 title: Microsoft CSS 拡張
 slug: Web/CSS/Microsoft_Extensions
 ---
+
 {{CSSRef}}
 
 Edge や Internet Explorer のような Microsoft のアプリケーションは、いくつもの特殊な **Microsoft [CSS](/ja/docs/Web/CSS) 拡張**に対応しています。これらの拡張には接頭辞に `-ms-` が付きます。

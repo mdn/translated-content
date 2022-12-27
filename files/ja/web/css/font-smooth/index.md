@@ -2,6 +2,7 @@
 title: font-smooth
 slug: Web/CSS/font-smooth
 ---
+
 {{ CSSRef }} {{ Non-standard_header }}
 
 **`font-smooth`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントが描画されるときのアンチエイリアスの適用を制御します。

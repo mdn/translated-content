@@ -15,8 +15,10 @@ El encabezado `Vary` se debe establecer en una respuesta {{HTTPStatus("304")}} `
 
 ## Sintaxis
 
-    Vary: *
-    Vary: <header-name>, <header-name>, ...
+```
+Vary: *
+Vary: <header-name>, <header-name>, ...
+```
 
 ## Directivas
 
@@ -31,7 +33,9 @@ El encabezado `Vary` se debe establecer en una respuesta {{HTTPStatus("304")}} `
 
 Cuando usamos el encabezado `Vary: User-Agent` , los servidores de almacenamiento en cache deben considerar al agente de usuario al decidir si desea publicar la págína desde la memoria cache. Por ejemplo, si está sirviendo contenido diferente a usuarios móviles, puede ayudarle a evitar que la memoria cache pueda servir erróneamente una versión de escritorio de su sitio a usuarios móviles. Esto puede ayudar a Google y otros motores de búsqueda para descubrir la versión de una página web, y además permitir que intenten [Cloaking](https://en.wikipedia.org/wiki/Cloaking).
 
-    Vary: User-Agent
+```
+Vary: User-Agent
+```
 
 ## Especificaciones
 

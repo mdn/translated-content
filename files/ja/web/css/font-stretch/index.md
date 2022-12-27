@@ -2,6 +2,7 @@
 title: font-stretch
 slug: Web/CSS/font-stretch
 ---
+
 {{CSSRef}}
 
 **`font-stretch`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの normal, condensed, expanded のフェイスを選択します。

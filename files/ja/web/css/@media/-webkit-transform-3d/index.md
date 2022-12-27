@@ -2,6 +2,7 @@
 title: '-webkit-transform-3d'
 slug: Web/CSS/@media/-webkit-transform-3d
 ---
+
 {{ Non-standard_header }}
 
 **`-webkit-transform-3d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。

@@ -2,6 +2,7 @@
 title: 304 Not Modified
 slug: Web/HTTP/Status/304
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`304 Not Modified`** クライアントリダイレクトレスポンスコードは、リクエストされたリソースを再送する必要がないことを示します。これはキャッシュされたリソースへの暗黙のリダイレクトです。これは、{{HTTPMethod("GET")}} や {{HTTPMethod("HEAD")}} リクエストのようなリクエストメソッドが {{glossary("safe")}} である場合、またはリクエストが条件付きで {{HTTPHeader("If-None-Match")}} もしくは {{HTTPHeader("If-Modified-Since")}} ヘッダーを使用しているときに発生します。

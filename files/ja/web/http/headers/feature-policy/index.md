@@ -2,6 +2,7 @@
 title: Feature-Policy
 slug: Web/HTTP/Headers/Feature-Policy
 ---
+
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 > **Warning:** このヘッダーは仕様書では `Permissions-Policy` に改名されており、この記事は最終的にその変更を反映して更新される予定です。

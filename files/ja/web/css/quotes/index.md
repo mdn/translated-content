@@ -2,6 +2,7 @@
 title: quotes
 slug: Web/CSS/quotes
 ---
+
 {{CSSRef}}
 
 **`quotes`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [`content`](/ja/docs/Web/CSS/content) プロパティの `open-quotes` や `close-quotes` を使用して追加された引用符をどのように表示するかを設定します。

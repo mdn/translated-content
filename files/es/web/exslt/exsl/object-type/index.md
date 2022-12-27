@@ -15,7 +15,9 @@ translation_of: Web/EXSLT/exsl/object-type
 
 ### Sintaxis
 
-    exsl:object-type(objeto)
+```
+exsl:object-type(objeto)
+```
 
 ### Argumentos
 

@@ -2,6 +2,7 @@
 title: box-ordinal-group
 slug: Web/CSS/box-ordinal-group
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 > **Warning:** これはオリジナルの CSS フレックスボックスレイアウトモジュールの草稿のプロパティで、より新しい標準に置き換えられました。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes)を参照してください。

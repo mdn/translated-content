@@ -2,6 +2,7 @@
 title: Content type
 slug: Web/SVG/Content_type
 ---
+
 SVG は多くのデータ型を使用しています。この記事では、これらのデータ型とその構文、使用目的の説明を掲載しています。
 
 ## Angle (角度)

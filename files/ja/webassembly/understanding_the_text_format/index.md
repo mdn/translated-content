@@ -2,6 +2,7 @@
 title: WebAssembly テキスト形式の理解
 slug: WebAssembly/Understanding_the_text_format
 ---
+
 {{WebAssemblySidebar}}
 
 WebAssembly を人間が読んだり編集したりできるようにするため、 wasm バイナリー形式にはテキスト表現が存在します。これはテキストエディター、ブラウザーの開発者ツールなどで見せるために設計された中間表現です。この記事では、テキスト形式のしくみ、生の構文、および元のバイトコードの表現との関係 (と JavaScript で wasm を表現したラッパーオブジェクト) について説明します。

@@ -2,6 +2,7 @@
 title: X-Content-Type-Options
 slug: Web/HTTP/Headers/X-Content-Type-Options
 ---
+
 {{HTTPSidebar}}
 
 **`X-Content-Type-Options`** は HTTP のレスポンスヘッダーで、 {{HTTPHeader("Content-Type")}} ヘッダーで示された [MIME タイプ](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)を変更せずに従うべきであることを示すために、サーバーによって使用されるマーカーです。これにより、[MIME タイプのスニッフィング](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing)を抑止することができます。言い替えれば、 MIME タイプを意図的に設定することができます。

@@ -18,7 +18,9 @@ Crea un enlace de hipertexto HTML, {{HTMLElement("a")}}, que solicita otra URL.
 
 ## Sintaxis
 
-    cadena.link(atributoHref)
+```
+cadena.link(atributoHref)
+```
 
 ### Parámetros
 

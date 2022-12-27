@@ -59,10 +59,10 @@ De acuerdo a los estándares, una `meta` etiqueta que brinda el tipo MIME tal co
 
 Hay ciertos pasos los cuales pueden llevar a derminar el correcto tipo de valor MIME a ser usado para su contenido.
 
-1.  Si su contenido fue creado usando la aplicación de software del vendedor, lea la documentación del vendedor para ver qué tipos MIME debería n ser informados para los diferentes tipos de medios.
-2.  Mire en el [IANA | Registro de Tipos de medios MIME](http://www.iana.org/assignments/media-types/index.html) que contiene todos los tipos MIME registrados.
-3.  Si el tipo de medio es mostrado usando un plug-in en Netscape Gecko, instale el plug-in y luego mire en Ayuda->Acerca en le Menú Plug-in para ver qué tipos MIME están asociados con el tipo de medio.
-4.  Buscar la extensión del archivo en [FILExt](http://filext.com/) para ver qué tipos MIME están asociados con esa expresión.
+1. Si su contenido fue creado usando la aplicación de software del vendedor, lea la documentación del vendedor para ver qué tipos MIME debería n ser informados para los diferentes tipos de medios.
+2. Mire en el [IANA | Registro de Tipos de medios MIME](http://www.iana.org/assignments/media-types/index.html) que contiene todos los tipos MIME registrados.
+3. Si el tipo de medio es mostrado usando un plug-in en Netscape Gecko, instale el plug-in y luego mire en Ayuda->Acerca en le Menú Plug-in para ver qué tipos MIME están asociados con el tipo de medio.
+4. Buscar la extensión del archivo en [FILExt](http://filext.com/) para ver qué tipos MIME están asociados con esa expresión.
 
 ### Cómo configurar su servidor para enviar los tipos MIME correctos
 

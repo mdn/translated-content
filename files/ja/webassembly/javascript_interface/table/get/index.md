@@ -3,6 +3,7 @@ title: WebAssembly.Table.prototype.get()
 slug: WebAssembly/JavaScript_interface/Table/get
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get
 ---
+
 {{JSRef}}
 
 **`get()`** は {{jsxref("WebAssembly.Table")}} オブジェクトのプロトタイプメソッドで、指定された位置に格納されている関数参照を取得します。

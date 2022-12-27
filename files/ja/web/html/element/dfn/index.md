@@ -2,6 +2,7 @@
 title: '<dfn>: 定義要素'
 slug: Web/HTML/Element/dfn
 ---
+
 {{HTMLRef}}
 
 **HTML の定義要素** (**_\<dfn>_**) は、定義句や文の文脈の中で定義している用語を示すために用いられます。 `<dfn>` の直近の祖先である {{HTMLElement("p")}} 要素、 {{HTMLElement("dt")}}/{{HTMLElement("dd")}} の組み合わせ、 {{HTMLElement("section")}} 要素が用語の定義とみなされます。

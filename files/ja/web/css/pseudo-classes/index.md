@@ -2,6 +2,7 @@
 title: 擬似クラス
 slug: Web/CSS/Pseudo-classes
 ---
+
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の**擬似クラス** (_pseudo-classes_) は、セレクターに付加するキーワードであり、選択された要素に対して特定の状態を指定します。例えば {{CSSxRef(":hover")}} 擬似クラスで、ユーザーのポインターが当たったときにボタンの色を変更することができます。

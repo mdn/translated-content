@@ -2,6 +2,7 @@
 title: <shape>
 slug: Web/CSS/shape
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`<shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、ある領域の具体的な形状を表します。この領域は、{{cssxref("clip")}} プロパティが適用される要素の一部を表します。

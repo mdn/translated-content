@@ -2,6 +2,7 @@
 title: ':target'
 slug: Web/CSS/:target
 ---
+
 {{CSSRef}}
 
 **`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する {{htmlattrxref("id")}} を持つ固有の要素 (*対象要素*) を表します。

@@ -14,7 +14,9 @@ Un nodo tiene este valor máximo si convierte su valor de cadena a un número ig
 
 ## Sintaxis
 
-    math:highest(conjuntoNodos)
+```
+math:highest(conjuntoNodos)
+```
 
 ### Argumentos
 

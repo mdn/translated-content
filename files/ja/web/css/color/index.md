@@ -2,6 +2,7 @@
 title: color
 slug: Web/CSS/color
 ---
+
 {{CSSRef}}
 
 CSS の **`color`** プロパティは、要素のテキストや[テキスト装飾](/ja/docs/Web/CSS/text-decoration)における前景色の[色の値](/ja/docs/Web/CSS/color_value)を設定し、 {{cssxref("color_value#currentcolor_keyword", "currentcolor")}} の値を設定します。`currentcolor` は*他の*プロパティの間接的な値として使用される可能性があり、 {{cssxref("border-color")}} のような他の色に関するプロパティの既定値にもなったりします。

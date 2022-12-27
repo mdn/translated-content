@@ -2,6 +2,7 @@
 title: 'CSP: frame-ancestors'
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 ---
+
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) である **`frame-ancestors`** ディレクティブは {{HTMLElement("frame")}}、 {{HTMLElement("iframe")}}、 {{HTMLElement("object")}} 、 {{HTMLElement("embed")}}、 {{HTMLElement("applet")}} などを使ってページを埋め込むことのできる親を指定します。

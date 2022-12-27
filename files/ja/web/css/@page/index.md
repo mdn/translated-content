@@ -2,6 +2,7 @@
 title: '@page'
 slug: Web/CSS/@page
 ---
+
 {{CSSRef}}
 
 **`@page`** は CSS のアットルールで、文書を印刷するときに一部の CSS プロパティを変更するために使用します。

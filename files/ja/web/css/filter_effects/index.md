@@ -2,6 +2,7 @@
 title: フィルター効果
 slug: Web/CSS/Filter_Effects
 ---
+
 {{CSSRef}}
 
 **フィルター効果** (Filter Effects) は CSS のモジュールの一つで、要素が文書内に表示される前の処理方法を定義します。

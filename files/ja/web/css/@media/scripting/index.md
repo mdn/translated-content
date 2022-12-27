@@ -2,6 +2,7 @@
 title: scripting
 slug: Web/CSS/@media/scripting
 ---
+
 {{CSSRef}}
 
 **`scripting`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 (JavaScript などの) スクリプトが利用できるかどうかを調べるために使用することができます。

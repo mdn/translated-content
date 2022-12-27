@@ -2,6 +2,7 @@
 title: '<portal>: ポータル要素'
 slug: Web/HTML/Element/portal
 ---
+
 {{HTMLRef}}
 
 **HTML のポータル要素 (`<portal>`)** は、他の HTML ページを現在のページに埋め込み、新しいページへの移動がスムーズにできるようにします。

@@ -24,14 +24,16 @@ Cuando está presente en una respuesta a una solicitud {{HTTPMethod ("HEAD")}} q
 
 ## Sintaxis
 
-    Transfer-Encoding: chunked
-    Transfer-Encoding: compress
-    Transfer-Encoding: deflate
-    Transfer-Encoding: gzip
-    Transfer-Encoding: identity
+```
+Transfer-Encoding: chunked
+Transfer-Encoding: compress
+Transfer-Encoding: deflate
+Transfer-Encoding: gzip
+Transfer-Encoding: identity
 
-    // Se pueden enumerar varios valores, separados por una coma
-    Transfer-Encoding: gzip, chunked
+// Se pueden enumerar varios valores, separados por una coma
+Transfer-Encoding: gzip, chunked
+```
 
 ## Directivas
 
@@ -53,18 +55,20 @@ Cuando está presente en una respuesta a una solicitud {{HTTPMethod ("HEAD")}} q
 
 La codificación fragmentada es útil cuando se envían grandes cantidades de datos al cliente y el tamaño total de la respuesta puede no conocerse hasta que la solicitud se haya procesado por completo. Por ejemplo, al generar una tabla HTML grande como resultado de una consulta a la base de datos o al transmitir imágenes grandes. Veamos un ejemplo de una respuesta fragmentada:
 
-    HTTP/1.1 200 OK
-    Content-Type: text/plain
-    Transfer-Encoding: chunked
+```
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Transfer-Encoding: chunked
 
-    7\r\n
-    Mozilla\r\n
-    9\r\n
-    Developer\r\n
-    7\r\n
-    Network\r\n
-    0\r\n
-    \r\n
+7\r\n
+Mozilla\r\n
+9\r\n
+Developer\r\n
+7\r\n
+Network\r\n
+0\r\n
+\r\n
+```
 
 ## Especificaciones
 

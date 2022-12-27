@@ -2,6 +2,7 @@
 title: color
 slug: Web/SVG/Attribute/color
 ---
+
 {{SVGRef}}
 
 **`color`** 属性は、間接的な値の候補である `currentcolor` を {{SVGAttr("fill")}}, {{SVGAttr("stroke")}}, {{SVGAttr("stop-color")}}, {{SVGAttr("flood-color")}}, {{SVGAttr("lighting-color")}} の各属性に与えるために使用します。

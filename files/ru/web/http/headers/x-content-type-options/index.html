@@ -11,13 +11,13 @@ original_slug: Web/HTTP/Заголовки/X-Content-Type-Options
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">HTTP-заголовок ответа</span></span> <code><strong>X-Content-Type-Options</strong></code> <span class="tlid-translation translation" lang="ru"><span title="">является маркером, используемым сервером для указания того, что типы MIME, объявленные в заголовках {{HTTPHeader ("Content-Type")}}, должны соблюдаться и не изменяться.</span></span> Это позволяет отказаться от <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing">перехвата MIME</a>, или, другими словами, <span class="tlid-translation translation" lang="ru"><span title="">это способ сказать, что веб-мастера знали, что они делают.</span></span></p>
+<p>HTTP-заголовок ответа <code><strong>X-Content-Type-Options</strong></code> является маркером, используемым сервером для указания того, что типы MIME, объявленные в заголовках {{HTTPHeader ("Content-Type")}}, должны соблюдаться и не изменяться. Это позволяет отказаться от <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing">перехвата MIME</a>, или, другими словами, это способ сказать, что веб-мастера знали, что они делают.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Этот HTTP-заголовок был введён Microsoft в IE 8 как способ для веб-мастеров блокировать происходящий перехват содержимого и может преобразовывать неисполняемые типы MIME в исполняемые типы MIME.</span> <span title="">С тех пор другие браузеры внедрили его, даже если их алгоритмы обработки MIME были менее агрессивными.</span></span></p>
+<p>Этот HTTP-заголовок был введён Microsoft в IE 8 как способ для веб-мастеров блокировать происходящий перехват содержимого и может преобразовывать неисполняемые типы MIME в исполняемые типы MIME. С тех пор другие браузеры внедрили его, даже если их алгоритмы обработки MIME были менее агрессивными.</p>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Тестеры безопасности сайта обычно ожидают, что этот заголовок будет установлен.</span></span></p>
+<p>Тестеры безопасности сайта обычно ожидают, что этот заголовок будет установлен.</p>
 
-<p class="blockIndicator note">Примечание: <code>nosniff</code> применяется только к типам "<code>script</code>" и "<code>style</code>". <span class="tlid-translation translation" lang="ru"><span title="">Также применение</span></span> <code>nosniff</code> <span class="tlid-translation translation" lang="ru"><span title="">к изображениям оказалось <a href="https://github.com/whatwg/fetch/issues/395">несовместимым с существующими веб-сайтами</a>.</span></span></p>
+<p class="blockIndicator note">Примечание: <code>nosniff</code> применяется только к типам "<code>script</code>" и "<code>style</code>". Также применение <code>nosniff</code> к изображениям оказалось <a href="https://github.com/whatwg/fetch/issues/395">несовместимым с существующими веб-сайтами</a>.</p>
 
 <table class="properties">
  <tbody>
@@ -41,7 +41,7 @@ original_slug: Web/HTTP/Заголовки/X-Content-Type-Options
 
 <dl>
  <dt><code>nosniff</code></dt>
- <dd><span class="tlid-translation translation" lang="ru"><span title="">Блокирует запрос, если запрошенный тип:</span></span>
+ <dd>Блокирует запрос, если запрошенный тип:
  <ul>
   <li>"<code>style</code>" и его MIME не "<code>text/css</code>", или</li>
   <li>"<code>script</code>" и его MIME не <a href="https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type">JavaScript MIME-тип</a>.</li>
@@ -76,8 +76,8 @@ original_slug: Web/HTTP/Заголовки/X-Content-Type-Options
 
 <ul>
  <li>{{HTTPHeader("Content-Type")}}</li>
- <li><a href="https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/">Первоначальное определение</a> X-Content-Type-Options от Microsoft<span>®</span>.</li>
- <li> Инструмент <a href="https://observatory.mozilla.org/">Обсерватория Mozilla</a> <span class="tlid-translation translation" lang="ru"><span title="">проверяющий конфигурацию (включая этот заголовок) веб-сайтов на безопасность.</span></span></li>
+ <li><a href="https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/">Первоначальное определение</a> X-Content-Type-Options от Microsoft®.</li>
+ <li> Инструмент <a href="https://observatory.mozilla.org/">Обсерватория Mozilla</a> проверяющий конфигурацию (включая этот заголовок) веб-сайтов на безопасность.</li>
  <li><a href="https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/">Смягчение MIME путаницы в Firefox</a></li>
  <li><a href="https://fetch.spec.whatwg.org/#corb">Блокировка чтения из разных источников (Cross-Origin Read Blocking)</a></li>
  <li><a href="https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md">Google Docs CORB explainer</a></li>

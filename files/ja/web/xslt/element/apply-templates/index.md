@@ -2,6 +2,7 @@
 title: <xsl:apply-templates>
 slug: Web/XSLT/Element/apply-templates
 ---
+
 {{ XsltRef() }}
 
 `<xsl:apply-templates>` 要素は、入力ツリー内のノードのセットを選択し、適切なテンプレートを適用するようにプロセッサに指示します。

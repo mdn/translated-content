@@ -70,7 +70,7 @@ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-> **Warning:** **警告:** それらは非常に古いバージョンの Node を含んでいるので、通常の Ubuntu リポジトリーから直接インストールしないでください。
+> **Warning:** それらは非常に古いバージョンの Node を含んでいるので、通常の Ubuntu リポジトリーから直接インストールしないでください。
 
 ### Nodejs および NPM インストールのテスト
 

@@ -2,6 +2,7 @@
 title: カード
 slug: Web/CSS/Layout_cookbook/Card
 ---
+
 {{CSSRef}}
 
 このパターンは、オプションでフッターが付く「カード」部品のリストです。

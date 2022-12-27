@@ -2,6 +2,7 @@
 title: '<img>: 画像埋め込み要素'
 slug: Web/HTML/Element/img
 ---
+
 {{HTMLRef}}
 
 **`<img>`**  は [HTML](/ja/docs/Web/HTML) の要素で、文書に画像を埋め込みます。

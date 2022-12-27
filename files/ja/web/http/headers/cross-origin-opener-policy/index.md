@@ -2,6 +2,7 @@
 title: Cross-Origin-Opener-Policy
 slug: Web/HTTP/Headers/Cross-Origin-Opener-Policy
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Cross-Origin-Opener-Policy`** (COOP) はレスポンスヘッダーで、最上位の文書がほかのオリジンの文書と閲覧コンテキストのグループを共有していないことを保証することができます。

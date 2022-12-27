@@ -2,6 +2,7 @@
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
 ---
+
 {{HTTPSidebar}}
 
 **HTTP の `HEAD` メソッド**は、この `HEAD` リクエストが HTTP {{HTTPMethod("GET")}} メソッドでリクエストされた場合に返される[ヘッダー](/ja/docs/Web/HTTP/Headers)をリクエストします。例えば、ある URL が大きなファイルをダウンロードする可能性がある場合、 `HEAD` リクエストは {{HTTPHeader("Content-Length")}} ヘッダーを読み込んで、実際にファイルをダウンロードすることなくファイルサイズを確認することができます。

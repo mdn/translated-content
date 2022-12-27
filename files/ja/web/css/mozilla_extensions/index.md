@@ -2,6 +2,7 @@
 title: CSS の Mozilla 拡張
 slug: Web/CSS/Mozilla_Extensions
 ---
+
 {{CSSRef}}
 
 Firefox などの Mozilla アプリケーションは、いくつもの特別な **[CSS](/ja/docs/Web/CSS) の Mozilla 拡張**に対応しています。これには、プロパティ、値、擬似要素、擬似クラス、アットルール、メディアクエリーが含まれます。これらの拡張には `-moz-` の接頭辞が付いています。

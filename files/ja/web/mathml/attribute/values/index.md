@@ -2,6 +2,7 @@
 title: Values
 slug: Web/MathML/Attribute/Values
 ---
+
 {{MathMLRef}}
 
 ## Lengths

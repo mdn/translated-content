@@ -2,6 +2,7 @@
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
 ---
+
 {{HTTPSidebar}}
 
 **`Accept-Encoding`** は HTTP のリクエストヘッダーで、コンテンツのエンコーディング、ふつうは圧縮アルゴリズムのどれをクライアントが理解することができるかを示します。 [コンテンツ交渉](/ja/docs/Web/HTTP/Content_negotiation)を使用して、サーバーは提案されたものから一つを選択して使用し、 {{HTTPHeader("Content-Encoding")}} レスポンスヘッダーを使用してクライアントに選択結果を知らせます。

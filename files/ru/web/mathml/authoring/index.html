@@ -18,7 +18,7 @@ translation_of: Web/MathML/Authoring
 
 <h4 id="Example_in_HTML5_(text/html)">MathML на страницах HTML</h4>
 
-<p><span id="result_box" lang="ru"><span>Вы можете использовать Presentation MathML внутри документов HTML5</span></span>:</p>
+<p>Вы можете использовать Presentation MathML внутри документов HTML5:</p>
 
 <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -91,7 +91,7 @@ m|math {
     font-family: Latin Modern Math;
 }</pre>
 
-<p><span id="result_box" lang="ru"><span>Затем вы можете использовать правило</span></span> <a href="/ru/docs/Web/CSS/@font-face">@font-face</a>, как обычно, для обеспечения выбора WOFF для Latin Modern и Latin Modern Math. Смотрите <a href="https://github.com/fred-wang/MathFonts">репозиторий GitHub с  WOFF шрифтами и примерами таблиц стилей CSS</a> для использования на вашем Web-сайте, а также этот <a href="http://fred-wang.github.io/MathFonts/">ресурс с тестами</a>.</p>
+<p>Затем вы можете использовать правило <a href="/ru/docs/Web/CSS/@font-face">@font-face</a>, как обычно, для обеспечения выбора WOFF для Latin Modern и Latin Modern Math. Смотрите <a href="https://github.com/fred-wang/MathFonts">репозиторий GitHub с  WOFF шрифтами и примерами таблиц стилей CSS</a> для использования на вашем Web-сайте, а также этот <a href="http://fred-wang.github.io/MathFonts/">ресурс с тестами</a>.</p>
 
 <h4 id="MathML_в_документах_XML_(XHTML_EPUB_и_т.д.)">MathML в документах XML (XHTML, EPUB, и т.д.)</h4>
 
@@ -171,7 +171,7 @@ m|math {
 
 <p><a href="https://github.com/fred-wang/TeXZilla">TeXZilla</a> имеет пользовательский элемент <a href="https://github.com/fred-wang/x-tex">&lt;x-tex&gt;</a> который может использоваться для записи таких вещей, как</p>
 
-<pre><span class="brush: html">&lt;<span class="start-tag">x-tex</span>&gt;</span><span>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</span><span class="brush: html">&lt;/<span class="end-tag">x-tex</span>&gt;</span></pre>
+<pre>&lt;x-tex&gt;\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1&lt;/x-tex&gt;</pre>
 
 <p>и автоматически преобразуется в MathML. Это все ещё в процессе разработки и может быть улучшено в будущем благодаря Web-компонентам и DOM. Кроме того, вы можете использовать более традиционный <a href="https://github.com/fred-wang/TeXZilla/wiki/Advanced-Usages#parsing-tex-expressions-in-your-web-page">Javascript парсинг выражений в процессе загрузки</a> как это используют и все другие инструменты, описанные в этом разделе.</p>
 
@@ -191,17 +191,17 @@ m|math {
 
 <p><a href="https://math.etsu.edu/LaTeXMathML/">LaTeXMathML</a> - это похожий скрипт, который позволяет анализировать больше команд LaTeX. Установка похожа: скопируйте <a href="https://math.etsu.edu/LaTeXMathML/LaTeXMathML.js">LaTeXMathML.js</a> и <a href="https://math.etsu.edu/LaTeXMathML/LaTeXMathML.standardarticle.css">LaTeXMathML.standardarticle.css</a>, добавьте ссылки в заголовок вашего документа, а содержимое LaTeX вашей веб-страницы, помеченное классом "LaTeX", будет автоматически проанализировано и преобразовано в HTML+MathML:</p>
 
-<pre class="brush: html"><span>&lt;<span class="start-tag">head</span>&gt;</span>
-<span>...
-</span><span>&lt;<span class="start-tag">script</span> <span class="attribute-name">type</span>="<a class="attribute-value">text/javascript</a>" <span class="attribute-name">src</span>="<a class="attribute-value">LaTeXMathML.js</a>"&gt;</span><span>&lt;/<span class="end-tag">script</span>&gt;</span><span>
-</span><span>&lt;<span class="start-tag">link</span> <span class="attribute-name">rel</span>="<a class="attribute-value">stylesheet</a>" <span class="attribute-name">type</span>="<a class="attribute-value">text/css</a>" <span class="attribute-name">href</span>="<a class="attribute-value">LaTeXMathML.standardarticle.css</a>" <span>/</span>&gt;</span><span>
+<pre class="brush: html">&lt;head&gt;
 ...
-</span><span>&lt;/<span class="end-tag">head</span>&gt;</span><span>
+&lt;script type="text/javascript" src="LaTeXMathML.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" type="text/css" href="LaTeXMathML.standardarticle.css" /&gt;
+...
+&lt;/head&gt;
 
-</span><span>&lt;<span class="start-tag">body</span>&gt;</span><span>
+&lt;body&gt;
 ...
 
-</span>&lt;div class="LaTeX"&gt;
+&lt;div class="LaTeX"&gt;
 \documentclass[12pt]{article}
 
 \begin{document}
@@ -287,8 +287,8 @@ sudo make install
 
 <p>В случаях с браузерами без поддержки MathML, вы можете использовать параметр <code>--javascript</code>, чтобы сообщить LaTeXML о включении одного из <a href="#fallback_for_browsers_without_mathml_support">дополнительных скриптов</a>:</p>
 
-<pre>  latexmlc --dest foo.html --javascript=<code class="language-html"><span class="script token"><span class="tag token"><span class="attr-value token">http://fred-wang.github.io/mathml.css/mspace.js</span></span></span></code> foo.tex  # Вариант с добавлением CSS
-  latexmlc --dest foo.html --javascript=<code class="language-html"><span class="script token"><span class="tag token"><span class="attr-value token">http://fred-wang.github.io/mathjax.js/mpadded-min.js</span></span></span></code> foo.tex # Вариант с добавлением MathJax</pre>
+<pre>  latexmlc --dest foo.html --javascript=<code class="language-html">http://fred-wang.github.io/mathml.css/mspace.js</code> foo.tex  # Вариант с добавлением CSS
+  latexmlc --dest foo.html --javascript=<code class="language-html">http://fred-wang.github.io/mathjax.js/mpadded-min.js</code> foo.tex # Вариант с добавлением MathJax</pre>
 
 <p>Если ваш документ LaTeX - большой, вы можете разбить его на несколько небольших страниц, а не размещать все на одной большой странице. Например, это разделит страницы на уровне <code>\section</code>:</p>
 

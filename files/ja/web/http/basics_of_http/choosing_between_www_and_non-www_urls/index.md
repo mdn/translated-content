@@ -2,6 +2,7 @@
 title: www 付きと www なしの URL の選択
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 ---
+
 {{HTTPSidebar}}
 
 ウェブサイトの管理者の間で繰り返される質問が、www URL と非 www URL のどちらを選択するかです。このページでは、何が最良かについてアドバイスを提供します。

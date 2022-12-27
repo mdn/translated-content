@@ -2,6 +2,7 @@
 title: SVG スタイル付け属性
 slug: Web/SVG/Attribute/Styling
 ---
+
 SVG のスタイル付け属性は、CSS スタイリング効果を適用するために任意の SVG 要素に指定できるすべての属性です。
 
 - [`class`](#attr-class)

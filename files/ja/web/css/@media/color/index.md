@@ -2,6 +2,7 @@
 title: color
 slug: Web/CSS/@media/color
 ---
+
 {{CSSRef}}
 
 **`color`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器の色成分 (赤, 緑, 青) 当たりのビット数を調べるために使用します。

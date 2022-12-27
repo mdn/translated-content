@@ -12,7 +12,9 @@ El método estatico **`String.fromCodePoint()`** devuelve una cadena creada por 
 
 ## Sintaxis
 
-    String.fromCodePoint(num1[, ...[, numN]])
+```
+String.fromCodePoint(num1[, ...[, numN]])
+```
 
 ### Parametros
 

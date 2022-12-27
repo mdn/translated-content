@@ -2,6 +2,7 @@
 title: text-decoration-thickness
 slug: Web/CSS/text-decoration-thickness
 ---
+
 {{CSSRef}}
 
 **`text-decoration-thickness`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素内のテキストに用いられる装飾線、例えば取り消し線、下線、上線の太さを設定します。

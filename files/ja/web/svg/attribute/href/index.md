@@ -2,6 +2,7 @@
 title: class
 slug: Web/SVG/Attribute/href
 ---
+
 {{SVGRef}}
 
 The **`href`** attribute defines a link to a resource as a reference [URL](/ja/docs/Web/SVG/Content_type#URL). The exact meaning of that link depends on the context of each element using it.

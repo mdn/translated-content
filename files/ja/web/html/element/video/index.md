@@ -2,6 +2,7 @@
 title: '<video>: 動画埋め込み要素'
 slug: Web/HTML/Element/video
 ---
+
 {{HTMLRef}}
 
 **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。

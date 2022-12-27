@@ -2,6 +2,7 @@
 title: '-webkit-box-reflect'
 slug: Web/CSS/-webkit-box-reflect
 ---
+
 {{CSSRef}}{{Non-standard_Header}}
 
 **`-webkit-box-reflect`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の内容を特定の方向に反射させることができます。

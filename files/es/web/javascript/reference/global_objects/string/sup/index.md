@@ -18,7 +18,9 @@ Causa que una cadena se muestre como superíndice, como si estuviese dentro de u
 
 ## Sintaxis
 
-    cadena.sup()
+```
+cadena.sup()
+```
 
 ## Descripción
 

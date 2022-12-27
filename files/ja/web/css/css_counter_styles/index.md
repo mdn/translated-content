@@ -2,6 +2,7 @@
 title: CSS カウンタースタイル
 slug: Web/CSS/CSS_Counter_Styles
 ---
+
 {{CSSRef}}
 
 **CSS カウンタースタイル** (CSS Counter Styles) は CSS のモジュールの一つで、独自のカウンタースタイルを定義することができます。

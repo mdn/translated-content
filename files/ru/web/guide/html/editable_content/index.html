@@ -6,7 +6,7 @@ tags:
   - contenteditable
 translation_of: Web/Guide/HTML/Editable_content
 ---
-<p><font>В HTML любой элемент может быть доступен для редактирования. </font><font>Используя некоторые обработчики событий JavaScript, вы можете превратить свою веб-страницу в полноценный и быстрый текстовый редактор. </font><font>В этой статье содержится некоторая информация об этой функции.</font></p>
+<p>В HTML любой элемент может быть доступен для редактирования. Используя некоторые обработчики событий JavaScript, вы можете превратить свою веб-страницу в полноценный и быстрый текстовый редактор. В этой статье содержится некоторая информация об этой функции.</p>
 
 <h2 id="Как_это_работает">Как это работает?</h2>
 
@@ -40,17 +40,17 @@ translation_of: Web/Guide/HTML/Editable_content
 
 <p>Если вы хотите использовать другой разделитель абзацев, все вышеперечисленные браузеры поддерживают {{domxref("document.execCommand")}}, предоставляющий для этих изменений команду  <code>defaultParagraphSeparator</code>. Например, чтобы использовать элементы {{htmlelement("p")}}:</p>
 
-<pre><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"p"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">document.execCommand("defaultParagraphSeparator", false, "p");</pre>
 
 <p>Добавочно, Firefox поддерживает нестандартный аргумент, <code>br</code>, для <code>defaultParagraphSeparator</code>  с Firefox 55. Это действительно полезно, если ваше веб-приложение обеспечивало поддержку старого Firefox, а у вас, к сожалению, нет времени исправить его для более нового Firefox, то вы можете вернуть прежнее поведение Firefox вставкой этой строки во время инициализации <code>designMode</code> или  <code>contenteditable</code> редактора:</p>
 
-<pre><code class="language-js">document<span class="punctuation token">.</span><span class="function token">execCommand</span><span class="punctuation token">(</span><span class="string token">"defaultParagraphSeparator"</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">,</span> <span class="string token">"br"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">document.execCommand("defaultParagraphSeparator", false, "br");</pre>
 
 <h2 id="Безопасность">Безопасность</h2>
 
 <p>По соображениям безопасности Firefox не позволяет JavaScript-коду использовать связанные с буфером функции (копировать, вставлять и т. д.) по умолчанию. Используя  <code>about:config</code> вы можете включить их, установив настройки, показанные ниже:</p>
 
-<pre class="code">user_pref("capability.policy.policynames", "allowclipboard");
+<pre>user_pref("capability.policy.policynames", "allowclipboard");
 user_pref("capability.policy.allowclipboard.sites", "https://www.mozilla.org");
 user_pref("capability.policy.allowclipboard.Clipboard.cutcopy", "allAccess");
 user_pref("capability.policy.allowclipboard.Clipboard.paste", "allAccess");</pre>
@@ -227,8 +227,7 @@ function printDoc() {
 </pre>
 </div>
 
-<p><br>
- Результат: {{EmbedLiveSample('Пример')}}</p>
+<p>Результат: {{EmbedLiveSample('Пример')}}</p>
 
 <div class="note"><strong>Примечание:</strong> если вы хотите увидеть, как стандартизировать создание и вставку вашего редактора на свою страницу, см. <a href="https://developer.mozilla.org/@api/deki/files/6243/=rich-text-editor.zip" title="rich-text-editor.zip">наш более полный пример редактора.</a> </div>
 

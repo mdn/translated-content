@@ -2,6 +2,7 @@
 title: polyline
 slug: Web/SVG/Element/polyline
 ---
+
 {{SVGRef}}
 
 ## 概要

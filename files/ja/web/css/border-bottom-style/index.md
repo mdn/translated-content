@@ -2,6 +2,7 @@
 title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 ---
+
 {{CSSRef}}
 
 **`border-bottom-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界 ({{cssxref("border")}}) における線の形状を設定します。

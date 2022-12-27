@@ -2,6 +2,7 @@
 title: '<dialog>: ダイアログ要素'
 slug: Web/HTML/Element/dialog
 ---
+
 {{HTMLRef}}
 
 **HTML の `<dialog>` 要素**は、ダイアログボックスや、消すことができるアラート、インスペクター、サブウィンドウ等のような対話的コンポーネントを表します。

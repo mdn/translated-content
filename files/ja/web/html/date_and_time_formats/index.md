@@ -2,6 +2,7 @@
 title: HTML で使われる日付や時刻の形式
 slug: Web/HTML/Date_and_time_formats
 ---
+
 {{HTMLRef}}
 
 一部の HTML 要素は日付や時刻の値を使用します。この記事ではこれらの値を指定する文字列の形式について説明しています。このような形式を使用する要素には、ユーザーに日付、時刻、またはその両方を選択または指定させる {{HTMLElement("input")}} 要素の一部の形、同様に {{HTMLElement("ins")}} および {{HTMLElement("del")}} 要素で、 {{htmlattrxref("datetime", "ins")}} 属性によって内容の挿入または削除が行われた日付や日時を指定しているものなどがあります。

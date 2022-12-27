@@ -2,6 +2,7 @@
 title: cx
 slug: Web/SVG/Attribute/cx
 ---
+
 {{SVGRef}}
 
 **`cx`** 属性は中心の x-座標を定義します。

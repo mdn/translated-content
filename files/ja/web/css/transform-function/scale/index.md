@@ -3,6 +3,7 @@ title: scale()
 slug: Web/CSS/transform-function/scale
 original_slug: Web/CSS/transform-function/scale()
 ---
+
 {{CSSRef}}
 
 **`scale()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二次元平面上における拡縮する変形を定義します。変倍の量がベクトルで定義されるため、水平方向と垂直方向に対して異なる変倍で大きさを変えることができます。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

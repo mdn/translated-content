@@ -2,6 +2,7 @@
 title: <input type="color">
 slug: Web/HTML/Element/input/color
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} 要素の **`color`** は視覚的なインターフェイス、もしくは `#rrggbb` の 16 進数表記でテキストを入力することでユーザーが色を指定することができます。 CSS の色表現には色名、関数表記、アルファ値つきの 16 進表記などがありますが、ここでは単純な (アルファ値のない) もののみが利用できます。

@@ -2,6 +2,7 @@
 title: z-index
 slug: Web/CSS/z-index
 ---
+
 {{CSSRef}}
 
 **`z-index`** は CSS のプロパティで、[位置指定](/ja/docs/Web/CSS/position)要素とその子孫要素、またはフレックスアイテムの z 順を定義します。より大きな z-index を持つ要素はより小さな要素の上に重なります。

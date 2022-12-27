@@ -2,6 +2,7 @@
 title: 一般兄弟結合子
 slug: Web/CSS/General_sibling_combinator
 ---
+
 {{CSSRef("Selectors")}}
 
 **一般兄弟結合子** (general sibling combinator, `~`) は 2 個のセレクターを結びつけ、 1 つ目の要素の後に 2 つ目の要素のがあり（直後である必要はない）、かつ両者が同じ親{{Glossary("element", "要素")}}の子であるすべてのパターンに一致します。

@@ -29,8 +29,10 @@ Si quieres que los clientes puedan acceder a otra cabeceras, tienes que listarla
 
 ## Sintaxis
 
-    Access-Control-Expose-Headers: <header-name>, <header-name>, ...
-    Access-Control-Expose-Headers: *
+```
+Access-Control-Expose-Headers: <header-name>, <header-name>, ...
+Access-Control-Expose-Headers: *
+```
 
 ## Directivas
 
@@ -45,19 +47,27 @@ Si quieres que los clientes puedan acceder a otra cabeceras, tienes que listarla
 
 Para exponer una cabecera no simple, puedes especificar:
 
-    Access-Control-Expose-Headers: Content-Length
+```
+Access-Control-Expose-Headers: Content-Length
+```
 
 Para exponer cabeceras personalizadas, como `X-Kuma-Revision`, puedes especificar varias cabeceras separadas por coma:
 
-    Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision
+```
+Access-Control-Expose-Headers: Content-Length, X-Kuma-Revision
+```
 
 En peticiones sin credenciales puedes utilizar el valor comodín:
 
-    Access-Control-Expose-Headers: *
+```
+Access-Control-Expose-Headers: *
+```
 
 Si necesitas acceder (exponer) la cabecera {{HTTPHeader("Authorization")}}, hay que añadirla de manera explícita:
 
-    Access-Control-Expose-Headers: *, Authorization
+```
+Access-Control-Expose-Headers: *, Authorization
+```
 
 ## Especificaciones
 

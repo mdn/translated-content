@@ -3,6 +3,7 @@ title: skew()
 slug: Web/CSS/transform-function/skew
 original_slug: Web/CSS/transform-function/skew()
 ---
+
 {{CSSRef}}
 
 **`skew()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上でゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

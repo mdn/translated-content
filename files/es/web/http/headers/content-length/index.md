@@ -13,7 +13,9 @@ El encabezado de entidad **`Content-Length`** indica el tamaño de la entidad-cu
 
 ## Sintaxis
 
-    Content-Length: <longitud>
+```
+Content-Length: <longitud>
+```
 
 ## Directivas
 

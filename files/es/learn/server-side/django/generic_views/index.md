@@ -511,11 +511,13 @@ Este método es necesario porque has declarado un campo `ForeignKey` (uno-a-much
 > **Nota:** Aquí usamos `all()` para obtener todos los registros (la opción por defecto). A pesar de que puedes usar el método `filter()` para obtener un subconjunto de registros en el código, no puedes hacerlo directamente en las plantillas porque no puedes especificar argumentos para las funciones.
 >
 > Ten también cuidado de que si no defines un orden (en tu vista o modelo basado en clases), verás errores arrojados por el servidor de dearrollo como este:
+>
 > ```
 > [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
 > /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
 > allow_empty_first_page=allow_empty_first_page, **kwargs)
 > ```
+>
 > Eso sucede porque el [objeto paginador](https://docs.djangoproject.com/en/1.10/topics/pagination/#paginator-objects) espera ver una cláusula ORDER BY siendo ejecutada en tu base de datos subyacente. Sin ella, ¡no puede estar seguro de que los registros devueltos están en el orden correcto!
 >
 > Este tutorial no llegó a la **Paginación** (aún, pero pronto lo hará), pero como no puedes uar `sort_by()` y enviar un parámetro (el mismo con `filter()` descrito arriba) tendrás que escoger entre tres opciones:
@@ -631,8 +633,9 @@ El reto en este artículo es crear las vistas de lista y detalle para autores, q
 El código requerido para los mapeadores URL y las vistas debería ser virtualmente idéntico a las vistas de lista y detalle para `Book` que creamos arriba. Las plantillas serán diferentes, pero tendrán un comportamiento similar.
 
 > **Nota:**
+>
 > - Una vez que has creado el mapeador URL para la página de lista de autores, necesitarás también actualizar el enlace **All authors** en la plantilla base. Sigue el [mismo proceso](#Update_the_base_template) que hicimos cuando actualizamos el enlace **All books**.
-> - Una vez que has creado el mapeador URL para la página de detalle de autores, deberías también actualizar la [plantilla de vista de detalle de libros ](#Creating_the_Detail_View_template)(**/locallibrary/catalog/templates/catalog/book_detail.html**) de modo que el enlace de autor apunte a tu nueva página de detalle de autor (en lugar de ser una URL vacía). La línea cambiará para añadir la etiqueta de plantilla que se muestra en negrita abajo.
+> - Una vez que has creado el mapeador URL para la página de detalle de autores, deberías también actualizar la [plantilla de vista de detalle de libros](#Creating_the_Detail_View_template) (**/locallibrary/catalog/templates/catalog/book_detail.html**) de modo que el enlace de autor apunte a tu nueva página de detalle de autor (en lugar de ser una URL vacía). La línea cambiará para añadir la etiqueta de plantilla que se muestra en negrita abajo.
 >
 > ```html
 > <p><strong>Author:</strong> <a href="{% url 'author-detail' book.author.pk %}">\{{ book.author }}</a></p>

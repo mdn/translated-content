@@ -19,7 +19,9 @@ El método **`normalize()`** retorna la Forma de Normalización Unicode de la ca
 
 ## Sintaxis
 
-    str.normalize([form])
+```
+str.normalize([form])
+```
 
 ### Parámetros
 

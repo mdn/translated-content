@@ -2,6 +2,7 @@
 title: mask-border-source
 slug: Web/CSS/mask-border-source
 ---
+
 {{CSSRef}}
 
 **`mask-border-source`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/mask-border)を生成するのに使われる元の画像を設定します。

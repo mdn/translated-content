@@ -2,6 +2,7 @@
 title: any-pointer
 slug: Web/CSS/@media/any-pointer
 ---
+
 {{CSSRef}}
 
 **`any-pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが (マウスなどの) *何らかの*ポインティングデバイスを持っているか、もしそうならば、どれだけの正確性を持っているかを調べます。

@@ -2,6 +2,7 @@
 title: word-break
 slug: Web/CSS/word-break
 ---
+
 {{CSSRef}}
 
 **`word-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、改行しなければテキストがコンテンツボックスからあふれる場合に、ブラウザーが改行を挿入するかどうかを指定します。

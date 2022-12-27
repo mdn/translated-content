@@ -2,6 +2,7 @@
 title: ':dir()'
 slug: Web/CSS/:dir
 ---
+
 {{CSSRef}}
 
 **`:dir()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、中に含まれる文字列の方向に基づいて要素を選択します。

@@ -2,6 +2,7 @@
 title: Authorization
 slug: Web/HTTP/Headers/Authorization
 ---
+
 {{HTTPSidebar}}
 
 HTTP の **`Authorization`** リクエストヘッダーは、ユーザーエージェントがサーバーから認証を受けるための証明書を保持し、ふつうは、必ずではありませんが、サーバーが {{HTTPStatus("401")}} `Unauthorized` ステータスと {{HTTPHeader("WWW-Authenticate")}} ヘッダーを返した後に使われます。

@@ -2,6 +2,7 @@
 title: inline-size
 slug: Web/CSS/inline-size
 ---
+
 {{CSSRef}}
 
 **`inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じた要素ブロックの水平または垂直方向の寸法を定義します。これは {{cssxref("width")}} または {{cssxref("height")}} プロパティに相当し、 {{cssxref("writing-mode")}} の値によって変わります。

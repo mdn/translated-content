@@ -3,6 +3,7 @@ title: WebAssembly.compileStreaming()
 slug: WebAssembly/JavaScript_interface/compileStreaming
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming
 ---
+
 {{JSRef}}
 
 **`WebAssembly.compileStreaming()`** 関数は {{jsxref("WebAssembly.Module")}} を直接、基礎的なソースのストリームからコンパイルします。この関数はモジュールをインスタンス化する前にコンパイルする必要がある場合に役立ちます (そうでない場合は、{{jsxref("WebAssembly.instantiateStreaming()")}} 関数の仕様が推奨されます)。
