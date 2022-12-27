@@ -1375,7 +1375,7 @@
 /fr/docs/Glossaire/Détournement_de_session	/fr/docs/Glossary/Session_Hijacking
 /fr/docs/Glossaire/ECMA	/fr/docs/Glossary/ECMA
 /fr/docs/Glossaire/ECMAScript	/fr/docs/Glossary/ECMAScript
-/fr/docs/Glossaire/Element_vide	/fr/docs/Glossary/Empty_element
+/fr/docs/Glossaire/Element_vide	/fr/docs/Glossary/Void_element
 /fr/docs/Glossaire/En-tête	/fr/docs/Glossary/Head
 /fr/docs/Glossaire/En-tête_de_requête	/fr/docs/Glossary/Request_header
 /fr/docs/Glossaire/En-tête_de_réponse_simple	/fr/docs/Glossary/Simple_response_header
@@ -1731,6 +1731,7 @@
 /fr/docs/Glossary/Block/Block_(CSS)	/fr/docs/Glossary/Block/CSS
 /fr/docs/Glossary/Bézier_curve	/fr/docs/Glossary/Bezier_curve
 /fr/docs/Glossary/Client_hints	/fr/docs/Web/HTTP/Client_hints
+/fr/docs/Glossary/Empty_element	/fr/docs/Glossary/Void_element
 /fr/docs/Glossary/Index	/fr/docs/Glossary
 /fr/docs/Glossary/Modern_web_apps	/fr/docs/Glossary/Progressive_web_apps
 /fr/docs/Glossary/Node/réseau	/fr/docs/Glossary/Node/networking
