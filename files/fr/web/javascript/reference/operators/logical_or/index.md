@@ -9,6 +9,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_or
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur OU logique (`||`) (disjonction logique) renvoie vrai si et seulement si au moins un de ses opérandes est vrai. Cet opérateur est généralement utilisé avec des valeurs booléennes et, lorsque c'est le cas, il renvoie une valeur booléenne. Toutefois, `||` peut aussi être utilisé avec des valeurs non-booléennes et, dans ce cas, renverra une valeur non-booléenne.

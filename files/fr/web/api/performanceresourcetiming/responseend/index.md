@@ -11,6 +11,7 @@ tags:
   - responseEnd
 translation_of: Web/API/PerformanceResourceTiming/responseEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 La propriété en lecture seule **`responseEnd`** retourne un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) immédiatement après que le navigateur a reçu le dernier octet de la ressource ou immédiatement avant la fermeture de la connexion de transport, selon ce qui se produit en premier.

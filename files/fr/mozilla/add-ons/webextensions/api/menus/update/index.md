@@ -13,6 +13,7 @@ tags:
   - contextMenus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/update
 ---
+
 {{AddonSidebar()}}
 
 Met à jour un élément de menu précédemment créé.

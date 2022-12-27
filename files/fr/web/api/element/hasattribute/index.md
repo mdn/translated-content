@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/Element/hasAttribute
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.hasAttribute()`** renvoie une **valeur booléenne** indiquant si l'élément courant possède l'attribut spécifié ou non.

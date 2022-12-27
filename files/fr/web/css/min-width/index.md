@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/min-width
 ---
+
 {{CSSRef}}
 
 La propriété **`min-width`** est utilisée pour définir la largeur minimale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("width")}} de devenir inférieure à la valeur spécifiée par `min-width` (autrement dit, `min-width` est une borne inférieure pour `width`).

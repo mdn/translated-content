@@ -6,6 +6,7 @@ tags:
   - Reference
 translation_of: Web/API/BeforeUnloadEvent
 ---
+
 {{APIRef}}
 
 L'évènement **`beforeunload`** est déclenché quand la fenêtre, le document et ses ressources sont sur le point d'être déchargées.

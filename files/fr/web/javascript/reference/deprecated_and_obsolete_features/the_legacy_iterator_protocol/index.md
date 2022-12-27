@@ -9,6 +9,7 @@ translation_of: >-
   Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
 original_slug: Web/JavaScript/Guide/Le_protocole_itérateur_historique
 ---
+
 {{JSSideBar("More")}}
 
 > **Attention :** Ce protocole historique était une fonctionnalité spécifique à SpiderMonkey et est supprimé à partir de Firefox 58. Pour utiliser des itérations par la suite, veuillez utiliser des boucles [for..of](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) ainsi que le [protocole itérateur](/fr/docs/Web/JavaScript/Guide/Le_protocole_iterator).

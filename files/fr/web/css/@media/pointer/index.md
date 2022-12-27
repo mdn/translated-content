@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/pointer
 ---
+
 {{CSSRef}}
 
 **`pointer`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet de vérifier si le dispositif de saisie/d'entrée principal est un dispositif de pointage et, le cas échéant, de connaître sa précision.

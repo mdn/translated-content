@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/length
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/length
 ---
+
 {{JSRef}}
 
 La propriété **`length`** représente la longueur d'une chaine de caractères, exprimée en nombre de points de code UTF-16. C'est une propriété accessible en lecture seule.

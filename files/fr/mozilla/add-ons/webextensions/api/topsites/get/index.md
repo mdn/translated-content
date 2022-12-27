@@ -13,6 +13,7 @@ tags:
   - topSites
 translation_of: Mozilla/Add-ons/WebExtensions/API/topSites/get
 ---
+
 {{AddonSidebar()}}
 
 Obtient un tableau contenant des informations sur les pages que l'utilisateur a visitées souvent et récemment.

@@ -13,6 +13,7 @@ tags:
   - show
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/show
 ---
+
 {{AddonSidebar()}}
 
 Affiche l'action de la page pour un onglet donné. L'action de la page est affichée chaque fois que l'onglet donné est l'onglet actif.

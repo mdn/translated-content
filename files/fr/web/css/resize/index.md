@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/resize
 ---
+
 {{CSSRef}}
 
 La propriété **`resize`** permet de contrôler le caractère redimensionnable d'un élément et notamment la direction dans laquelle celui-ci peut être redimensionné.

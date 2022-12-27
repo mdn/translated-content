@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/upper
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`upper`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie la borne supérieure de l'intervalle de clé.

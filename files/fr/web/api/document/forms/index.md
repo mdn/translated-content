@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Document/forms
 ---
+
 {{APIRef("DOM")}}
 
 La propriété `forms` de {{domxref("Document")}} retourne une collection ({{domxref("HTMLCollection")}}) des éléments {{HTMLElement("form")}} présents dans le document actuel.

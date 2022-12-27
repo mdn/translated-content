@@ -1,7 +1,6 @@
 ---
 title: Prototype
 slug: Glossary/Prototype
-translation_of: Glossary/Prototype
 ---
 프로토타입은 개발 사이클의 초기 단계에서 제품 혹은 어플리케이션의 외형이나 동작을 보여줄 수 있는 모델을 의미합니다.
 

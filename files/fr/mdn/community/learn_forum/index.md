@@ -10,6 +10,7 @@ tags:
 translation_of: MDN/Contribute/Help_beginners
 original_slug: MDN/Contribute/Help_beginners
 ---
+
 {{MDNSidebar}}
 
 Nos pages [Apprendre le développement web](/fr/docs/Learn) obtiennent plus d'un million de vues par mois, et ont [des forums actifs](https://discourse.mozilla.org/c/mdn/learn/250) où les utilisateurs vont pour demander une aide générale, ou demander que leurs évaluations soient notées. Nous aimerions avoir de l'aide pour répondre aux messages et développer notre communauté d'apprentissage.

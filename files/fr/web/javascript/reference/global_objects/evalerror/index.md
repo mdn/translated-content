@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/EvalError
 original_slug: Web/JavaScript/Reference/Objets_globaux/EvalError
 browser-compat: javascript.builtins.EvalError
 ---
+
 {{JSRef}}
 
 L'objet **`EvalError`** indique une erreur relative à la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Cette exception n'est plus déclenchée par JavaScript, toutefois, l'objet `EvalError` est toujours présent à des fins de compatibilité.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Int8Array
 ---
+
 {{JSRef}}
 
 Le tableau typé **`Int8Array`** permet de représenter un tableau d'entiers signés (en complément à deux) représentés sur 8 bits. Les éléments du tableau sont initialisés à 0. Une fois le tableau construit, il est possible de faire référence aux éléments en utilisant les méthodes de l'objet ou en utilisant la notation usuelle de parcours d'un tableau (la syntaxe utilisant les crochets).

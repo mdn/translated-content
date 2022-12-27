@@ -9,6 +9,7 @@ tags:
   - XPath
 translation_of: Web/API/Document/evaluate
 ---
+
 {{ ApiRef("DOM") }}
 
 La méthode **`evaluate()`** renvoie un {{domxref("XPathResult")}} basé sur une expression [XPath](/fr/docs/XPath) et d'autres paramètres donnés.

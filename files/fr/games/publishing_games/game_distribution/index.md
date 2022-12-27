@@ -14,6 +14,7 @@ tags:
   - Web Stores
   - distribution
 ---
+
 {{GamesSidebar}}
 
 Vous avez suivi un [tutoriel](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) ou [deux](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) et créé un jeu en HTML5 : c'est génial ! Cet article couvre tout ce que vous avez besoin de savoir sur la façon de distribuer votre nouveau jeu dans la nature : que vous l'hébergiez en ligne vous-même, que vous le proposiez sur des plateformes ouvertes, ou encore que vous le mettiez à disposition sur des plateformes privées comme Google Play ou l'App Store iOS d'Apple.

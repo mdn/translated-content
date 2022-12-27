@@ -3,6 +3,7 @@ title: hanging-punctuation
 slug: Web/CSS/hanging-punctuation
 translation_of: Web/CSS/hanging-punctuation
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`hanging-punctuation`** indique si un signe de ponctuation se situant au début ou à la fin d'une ligne de texte doit rester sur cette ligne, quitte à sortir de la boîte qui représente la ligne.

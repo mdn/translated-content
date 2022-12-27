@@ -8,6 +8,7 @@ tags:
 translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko
 original_slug: Web/XSLT/Interface_XSLT_JS_dans_Gecko
 ---
+
 1. [Introduction](/fr/docs/XSLT/XSLT_JS_Interface_in_Gecko/Introduction)
 2. [JavaScript/XSLT Bindings](/fr/docs/XSLT/XSLT_JS_Interface_in_Gecko/JavaScript_XSLT_Bindings)
 3. [Basic Example](/fr/docs/XSLT/XSLT_JS_Interface_in_Gecko/Basic_Example)

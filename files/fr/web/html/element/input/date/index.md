@@ -4,6 +4,7 @@ slug: Web/HTML/Element/input/date
 translation_of: Web/HTML/Element/input/date
 browser-compat: html.elements.input.input-date
 ---
+
 {{HTMLRef}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`date`** permettent de créer des champs où saisir des dates, via un champ texte dont la valeur est validée ou avec un sélecteur de date.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:not
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) de négation, **`:not()`**, est une notation fonctionnelle qui prend un sélecteur comme argument. Elle permet de cibler les éléments qui ne sont pas représentés par cet argument. Le sélecteur passé en argument ne doit pas contenir d'autre sélecteur de négation et ne doit pas cibler de pseudo-élément.

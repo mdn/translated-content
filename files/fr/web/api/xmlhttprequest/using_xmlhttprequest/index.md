@@ -14,6 +14,7 @@ tags:
 translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 original_slug: Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest
 ---
+
 [`XMLHttpRequest`](/fr/docs/DOM/XMLHttpRequest) permet d'envoyer des requêtes HTTP de manière très simple.  Il suffit de créer une instance de l'objet, d'ouvrir une URL, et d'envoyer la requête.  Le [status HTTP](/fr/docs/HTTP/HTTP_response_codes) du résultat, tout comme le contenu de la réponse, sont disponibles dans l'objet de la requête quand la transaction est terminée. Cette page présente quelques-uns des cas d'utilisation communs et même un peu obscurs pour cet objet JavaScript puissant.
 
 ```js

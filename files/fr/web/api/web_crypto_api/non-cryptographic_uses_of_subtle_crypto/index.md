@@ -3,6 +3,7 @@ title: Utilisations non-cryptographiques de SubtleCrypto
 slug: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
 translation_of: Web/API/Web_Crypto_API/Non-cryptographic_uses_of_subtle_crypto
 ---
+
 {{APIRef("Web Crypto API")}}
 
 Dans cet article, nous nous intéresserons à la méthode [`digest()`](/fr/docs/Web/API/SubtleCrypto/digest) de l'interface [`SubtleCrypto`](/fr/docs/Web/API/SubtleCrypto). De nombreuses autres méthodes appartenant à [l'API Web Crypto](/fr/docs/Web/API/Web_Crypto_API) ciblent des cas d'usage cryptographiques très spécifiques, créer des empreintes (<i lang="en">hash</i>) de contenus (ce que fait la méthode `digest()`) peut s'avérer utile dans diverses situations.

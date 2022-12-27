@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Overflow
 ---
+
 {{CSSRef}}
 Le module de spécification **_CSS Overflow_** décrit les fonctionnalités CSS relatives au dépassement et au défilement du contenu pour les médias visuels. En CSS, le dépassement se produit lorsque le contenu d'une boîte s'étend au-delà des bords de la boîte.
 

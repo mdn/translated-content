@@ -13,6 +13,7 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onBeforeNavigate
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque le navigateur est sur le point de démarrer un événement de navigation.

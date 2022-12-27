@@ -3,6 +3,7 @@ title: API Fetch
 slug: Web/API/Fetch_API
 translation_of: Web/API/Fetch_API
 ---
+
 {{DefaultAPISidebar("Fetch API")}}
 
 L'API Fetch fournit une interface pour la récupération de ressources (e.g., à travers le réseau.) Elle paraîtra familière à tout utilisateur de {{domxref("XMLHttpRequest")}}, mais cette nouvelle API propose néanmoins un ensemble de fonctionnalités plus souples et plus puissantes.

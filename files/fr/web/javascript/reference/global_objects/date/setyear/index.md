@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setYear
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 La méthode **`setYear()`** définit l'année pour pour la date, selon l'heure locale. `setYear()` ne définissant pas des années complêtes ( « bug de l'an 2000 » ), elle n'est plus utilisée et a été remplacée par la méthode {{jsxref("Date.prototype.setFullYear", "setFullYear")}}.

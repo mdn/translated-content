@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Element/footer
 browser-compat: html.elements.footer
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<footer>`** représente le pied de page de la [section](/fr/docs/Web/Guide/HTML/Content_categories#sectioning_content) ou de la [racine de sectionnement](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_root) la plus proche. Un élément `<footer>` contient habituellement des informations sur l'autrice ou l'auteur de la section, les données relatives au droit d'auteur (_copyright_) ou les liens vers d'autres documents en relation.

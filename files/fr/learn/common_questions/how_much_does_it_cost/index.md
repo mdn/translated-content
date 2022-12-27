@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/Common_questions/How_much_does_it_cost
 original_slug: Apprendre/Publier_sur_le_Web_combien_ça_coûte
 ---
+
 Se lancer sur le Web n'est pas aussi bon marché qu'il y paraît à première vue. Dans cet article, nous verrons les différentes dépenses et leur raison d'être.
 
 <table class="standard-table">

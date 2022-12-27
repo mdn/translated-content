@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-padding-inline
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-padding-inline`** est une propriété raccourcie qui permet de définir le remplissage, sur l'axe en ligne, entre l'élément et la zone de défilement. Autrement dit, elle permet de définir `scroll-padding-inline-end` et `scroll-padding-inline-start`.

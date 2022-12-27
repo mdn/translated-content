@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/inset-inline
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`inset-inline`** définit le décalage d'un élément par rapport au début et à la fin de l'axe en ligne de l'élément. Cette propriété logique correspond à une propriété physique donnée selon le mode d'écriture de l'élément, sa direction et l'orientation de son texte. Autrement dit, cette propriété peut correspondre à {{cssxref("top")}} et {{cssxref("bottom")}} ou à {{cssxref("right")}} et {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::-webkit-outer-spin-button
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-webkit-outer-spin-button`** peut être utilisé afin de mettre en forme la partie extérieure du sélecteur numérique utilisé pour les éléments {{HTMLElement("input")}} de type `number`.

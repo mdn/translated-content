@@ -13,6 +13,7 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WindowType
 ---
+
 {{AddonSidebar()}}
 
 Le type de la fenêtre du navigateur est comme çà.

@@ -13,6 +13,7 @@ tags:
   - userScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
 ---
+
 {{AddonSidebar}}
 
 L'objet UserScriptOptions représente les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des options contentScript prises en charge par browser.contentScripts.register. Les différences sont les suivantes :

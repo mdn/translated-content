@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/new
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_new
 ---
+
 {{jsSidebar("Operators")}}
 
 L'**opérateur `new`** permet de créer une instance d'un certain type d'objet à partir du constructeur qui existe pour celui-ci (natif ou défini par l'utilisateur).

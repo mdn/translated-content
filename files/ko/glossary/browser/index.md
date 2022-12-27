@@ -1,10 +1,6 @@
 ---
 title: 브라우저
 slug: Glossary/Browser
-tags:
-  - Glossary
-  - Navigation
-translation_of: Glossary/Browser
 ---
 **웹 브라우저** 또는 **브라우저**는 {{Glossary("World Wide Web","웹")}}에서 페이지를 찾아서 보여주고, 사용자가 {{Glossary("hyperlink","하이퍼링크")}}를 통해 다른 페이지로 이동할 수 있도록 하는 프로그램입니다. 브라우저는 가장 익숙한 타입의 {{Glossary("user agent", "사용자 에이전트")}}입니다.
 

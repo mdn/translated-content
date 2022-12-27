@@ -3,6 +3,7 @@ title: ':checked'
 slug: Web/CSS/:checked
 translation_of: Web/CSS/:checked
 ---
+
 {{CSSRef}}
 
 La pseudo-classe **`:checked`** représente n'importe quel **bouton radio** ([`<input type="radio">`](/fr/docs/Web/HTML/Element/Input/radio)), **case à cocher** ([`<input type="checkbox">`](/fr/docs/Web/HTML/Element/Input/checkbox)) ou **option** ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (`on`). L'utilisateur peut modifier cet état en cliquant sur l'élément ou en sélectionnant une valeur différente auquel cas la pseudo-classe `:checked` ne s'applique plus à l'élément en question.

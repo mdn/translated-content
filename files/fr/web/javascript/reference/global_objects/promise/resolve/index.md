@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/resolve
 ---
+
 {{JSRef}}
 
 La méthode **`Promise.resolve(valeur)`** renvoie un objet {{jsxref("Promise")}} qui est résolu avec la valeur donnée. Si cette valeur est une promesse, la promesse est renvoyée, si la valeur possède une méthode {{jsxref("Promise.then","then")}}, la promesse renvoyée « suivra » cette méthode et prendra son état ; sinon, la promesse renvoyée sera tenue avec la valeur.

@@ -1,7 +1,6 @@
 ---
 title: Java
 slug: Glossary/Java
-translation_of: Glossary/Java
 ---
 Java는 {{glossary("Compile", "컴파일")}}이 되고, {{glossary("OOP", "객체 지향적")}}이며, 휴대성이 높은 {{Glossary("computer programming", "프로그래밍")}} 언어이다.
 

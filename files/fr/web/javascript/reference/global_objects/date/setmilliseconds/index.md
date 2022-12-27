@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setMilliseconds
 ---
+
 {{JSRef}}
 
 La méthode **`setMilliseconds()`** définit les millièmes de secondes pour la date, selon l'heure locale.

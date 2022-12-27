@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/DOMRectReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}{{ SeeCompatTable() }}
 
 L'interface **`DOMRectReadOnly`** spécifie les propriétés standard utilisées par {{domxref("DOMRect")}} pour définir un rectangle.

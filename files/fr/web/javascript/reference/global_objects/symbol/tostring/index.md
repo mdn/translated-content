@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet `Symbol`.

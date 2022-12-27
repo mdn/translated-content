@@ -3,6 +3,7 @@ title: CSSStyleDeclaration.cssText
 slug: Web/API/CSSStyleDeclaration/cssText
 translation_of: Web/API/CSSStyleDeclaration/cssText
 ---
+
 A ne pas confondre avec la règle de style de feuille de style {{domxref("CSSRule.cssText")}}.
 
 {{APIRef("CSSOM") }}

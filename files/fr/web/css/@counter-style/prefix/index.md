@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/prefix
 ---
+
 {{CSSRef}}
 
 Le descripteur **`prefix`**, utilisé avec la règle @ {{cssxref("@counter-style")}}, permet de définir un symbole qui sera ajouté comme préfixe à la représentation du marqueur. Si aucune valeur n'est fournie, la valeur utilisée par défaut sera la chaîne de caractères vide.

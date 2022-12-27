@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-x
 ---
+
 {{CSSRef}}
 
 La propriété **`overflow-x`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords droit et gauche de la boîte de contenu.

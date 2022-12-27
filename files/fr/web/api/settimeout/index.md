@@ -6,6 +6,7 @@ translation_of: Web/API/WindowOrWorkerGlobalScope/setTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 browser-compat: api.setTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode globale **`setTimeout()`** permet de définir un minuteur qui exécute une fonction ou un code donné après la fin du délai indiqué.

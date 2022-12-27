@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/forms/Multipart_labels
 original_slug: Accessibilité/ARIA/formulaires/Labels_multi-options
 ---
+
 ## Utiliser ARIA avec des labels comportant des champs
 
 ### Problème

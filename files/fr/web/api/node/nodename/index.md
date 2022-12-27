@@ -9,6 +9,7 @@ tags:
   - Propriété
 translation_of: Web/API/Node/nodeName
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Node.nodeName`** renvoie le nom du nœud courant dans une chaîne.

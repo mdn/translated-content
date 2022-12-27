@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/forms
 original_slug: Accessibilité/ARIA/formulaires
 ---
+
 Les pages suivantes fournissent diverses techniques pour améliorer l’accessibilité des formulaires web&nbsp;:
 
 - [Indications élémentaires pour les formulaires](/fr/Accessibilité/ARIA/formulaires/Indications_élémentaires_pour_les_formulaires)&nbsp;: ajouter des suggestions et des descriptions pour les champs invalides ou obligatoires

@@ -3,6 +3,7 @@ title: DNT
 slug: Web/HTTP/Headers/DNT
 translation_of: Web/HTTP/Headers/DNT
 ---
+
 {{HTTPSidebar}}
 
 Le header de requête **`DNT`** (**D**o **N**ot **T**rack) indique que les préférences de l'utilisateur concernant le suivi publicitaire. Il permet aux utilisateurs d'indiquer s'ils préfèrent leur vie privée au lieu d'un contenu personnalisé.

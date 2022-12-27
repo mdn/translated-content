@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/calendar
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.calendar`** est une propriété (via un accesseur) qui renvoie le type de calendrier utilisé par l'instance de `Locale`.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-transform
 ---
+
 {{CSSRef}}
 
 La propriété **`text-transform`** définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations [Ruby](/fr/docs/Web/HTML/Element/ruby).

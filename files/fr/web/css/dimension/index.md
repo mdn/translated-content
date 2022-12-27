@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/dimension
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<dimension>`** représente une valeur de type {{CSSxRef("&lt;number&gt;")}} directement suivie d'une unité : par exemple `10px`.

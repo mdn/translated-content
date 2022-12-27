@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/7
 original_slug: Mozilla/Firefox/Versions/7
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article fournit des informations à propos des changements qui affectent les développeurs dans cette version.

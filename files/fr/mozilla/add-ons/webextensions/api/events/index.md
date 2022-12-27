@@ -12,6 +12,7 @@ tags:
   - events
 translation_of: Mozilla/Add-ons/WebExtensions/API/events
 ---
+
 {{AddonSidebar}}
 
 Types communs utilisés par les API qui distribuent les événements.

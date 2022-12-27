@@ -13,6 +13,7 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/update
 ---
+
 {{AddonSidebar()}}
 
 Mises à jour des propriétés d'une fenêtre. Utilisez ceci pour déplacer, redimensionner, et (un) se concentrer sur une fenêtre, etc.

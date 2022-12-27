@@ -7,6 +7,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/createNodeIterator
 ---
+
 {{APIRef("DOM")}}
 
 Renvoie un nouvel objet [`NodeIterator`](/fr/docs/Web/API/NodeIterator).

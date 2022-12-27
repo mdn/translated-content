@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
 ---
+
 {{AddonSidebar()}}
 
 Un objet contenant des informations sur l'expéditeur d'un message ou d'une demande de connexion ; ceci est passé à l'écouteur {{WebExtAPIRef("runtime.onMessage()")}}.

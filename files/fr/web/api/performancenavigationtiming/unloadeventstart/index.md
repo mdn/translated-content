@@ -10,6 +10,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceNavigationTiming/unloadEventStart
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`unloadEventStart`** renvoie un [`timestamp`](/fr/docs/Web/API/DOMHighResTimeStamp) représentant la valeur temporelle égale au temps immédiatement avant que l'agent utilisateur ne commence l'événement de déchargement du document précédent. S'il n'y a pas de document précédent, cette propriété renvoie `0`.

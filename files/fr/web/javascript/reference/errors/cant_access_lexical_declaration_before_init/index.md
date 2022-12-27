@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 original_slug: Web/JavaScript/Reference/Erreurs/Cant_access_lexical_declaration_before_init
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

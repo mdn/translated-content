@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/font-style
 ---
+
 {{CSSRef}}
 
 Le descripteur **`font-style`**, associé à [la règle @](/fr/docs/Web/CSS/At-rule) {{cssxref("@font-face")}}, permet d'indiquer le style de police pour la police définie via la règle.

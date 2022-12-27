@@ -11,6 +11,7 @@ tags:
   - uninstall
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/uninstall
 ---
+
 {{AddonSidebar()}}
 
 Désinstalle une extension, compte tenu de son ID.

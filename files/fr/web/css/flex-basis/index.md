@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-basis
 ---
+
 {{CSSRef}}
 
 La propriété **`flex-basis`** détermine la base de flexibilité utilisée comme taille initiale principale pour un élément flexible. Cette propriété détermine la taille de la boîte de contenu sauf si une autre boîte est visée par {{cssxref("box-sizing")}}.

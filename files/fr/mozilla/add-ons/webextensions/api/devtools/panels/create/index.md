@@ -12,6 +12,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/create
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/create
 ---
+
 {{AddonSidebar()}}
 
 Ajoute un nouveau panneau aux devtools.

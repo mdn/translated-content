@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/align-content
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`align-content`** définit la façon dont l'espace est réparti entre et autour des éléments le long de l'axe en bloc du conteneur (c'est-à-dire l'axe orthogonal à l'axe d'écriture) lorsque celui-ci est [un conteneur de boîte flexible](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) et le long de l'axe principal lorsque le conteneur est une grille.

@@ -9,6 +9,7 @@ tags:
   - synthèse vocale
 translation_of: Web/API/Web_Speech_API
 ---
+
 {{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}
 
 L'API <i lang="en">Web Speech</i> permet d'intégrer des données liées à la voix dans des applications web. L'API <i lang="en">Web Speech</i> se compose de deux parties : <i lang="en">SpeechSynthesis</i> (synthèse vocale) et <i lang="en">SpeechRecognition</i> (reconnaissance vocale asynchrone).

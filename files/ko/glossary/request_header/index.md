@@ -1,7 +1,6 @@
 ---
 title: 요청 헤더
 slug: Glossary/Request_header
-translation_of: Glossary/Request_header
 ---
 **요청 헤더**는 HTTP 요청에서 사용되지만 메시지의 컨텐츠와는 관련이 없는 {{glossary("header", "HTTP 헤더")}}입니다. {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language", "Accept-*")}}, {{HTTPHeader("If-Modified-Since", "If-*")}}와 같은 요청 헤더들은 조건부 요청 수행을 허용합니다. {{HTTPHeader("Cookie")}}, {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Referer")}}와 같은 다른 것들은 컨텍스트를 정확히 나타내어 서버가 응답에 맞출 수 있게합니다.
 

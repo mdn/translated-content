@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/strike
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/strike
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`strike()`** permet de créer un élément HTML {{HTMLElement("strike")}} qui permet d'afficher la chaîne comme un texte barré.

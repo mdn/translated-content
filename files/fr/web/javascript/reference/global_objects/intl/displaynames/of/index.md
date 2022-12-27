@@ -3,6 +3,7 @@ title: Intl.DisplayNames.prototype.of()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
 browser-compat: javascript.builtins.Intl.DisplayNames.of
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.DisplayNames.prototype.of()`** prend comme argument un code et renvoie une chaîne de caractères selon les options et la locale fournies lors de l'instanciation de l'objet `Intl.DisplayNames`.

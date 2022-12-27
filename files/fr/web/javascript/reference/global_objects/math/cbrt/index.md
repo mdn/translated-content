@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/cbrt
 ---
+
 {{JSRef}}
 
 La fonction **`Math.cbrt()`** renvoie la racine cubique (le nom anglais étant _cubic root_) d'un nombre :

@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/samp
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<samp>`** est un élément qui permet de représenter un résultat produit par un programme informatique. Il est généralement affiché avec la police à chasse fixe du navigateur (par exemple en Courier ou en Lucida Console).

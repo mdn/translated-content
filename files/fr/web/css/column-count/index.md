@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/column-count
 ---
+
 {{CSSRef}}
 
 La propriété **`column-count`** décrit le nombre de colonnes d'un élément lorsqu'on utilise une disposition en colonnes.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Float32Array
 ---
+
 {{JSRef}}
 
 Le tableau typé **`Float32Array`** représente un tableau de nombres flottants représentés sur 32 bits (ce qui correspond au type C `float`), l'ordre des octets utilisés étant celui de la plate-forme. Si on souhaite maîtriser le boutisme (_endianness_) utilisé, on pourra utiliser une {{jsxref("DataView")}}. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est établi, on peut référencer des éléments dans le tableau en utilisant les méthodes de l'objet ou la syntaxe usuelle des crochets.

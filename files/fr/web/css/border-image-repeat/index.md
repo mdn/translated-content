@@ -4,6 +4,7 @@ slug: Web/CSS/border-image-repeat
 browser-compat: css.properties.border-image-repeat
 translation_of: Web/CSS/border-image-repeat
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`border-image-repeat`** définit la façon dont les zones de l'image de bordure sont utilisées pour s'étendre sur chacun des côtés de la bordure.

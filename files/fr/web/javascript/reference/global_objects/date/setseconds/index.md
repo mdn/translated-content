@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setSeconds
 ---
+
 {{JSRef}}
 
 La méthode **`setSeconds()`** définit les secondes pour la date, selon l'heure locale.

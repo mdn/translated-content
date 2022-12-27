@@ -13,6 +13,7 @@ tags:
   - onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'un élément de menu est cliqué.

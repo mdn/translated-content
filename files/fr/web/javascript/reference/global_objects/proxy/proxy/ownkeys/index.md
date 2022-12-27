@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/ownKeys
 ---
+
 {{JSRef}}
 
 La méthode **`handler.ownKeys()`** est une trappe pour {{jsxref("Object.getOwnPropertyNames()")}}.

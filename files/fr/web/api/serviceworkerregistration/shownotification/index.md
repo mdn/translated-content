@@ -12,6 +12,7 @@ tags:
   - showNotification
 translation_of: Web/API/ServiceWorkerRegistration/showNotification
 ---
+
 {{APIRef("Service Workers API")}}
 
 La méthode **`showNotification()`** de l'interface {{domxref("ServiceWorkerRegistration")}} crée une notification dans un service worker actif.

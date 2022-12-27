@@ -1,11 +1,6 @@
 ---
 title: Lazy load
 slug: Glossary/Lazy_load
-tags:
-  - Glossary
-  - Lazy loading
-  - Reference
-  - Web Performance
 ---
 **Lazy Loading**은 사용자의 행동이나 탐색 패턴에 기반해 유저가 필요할 때 일부 자원(이미지 같은)을 지연해서 로드하는 전략입니다. 통상적으로 이 자원들은 스크롤하여 발견될 때 로드됩니다.
 

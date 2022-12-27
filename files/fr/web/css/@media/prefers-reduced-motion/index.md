@@ -3,6 +3,7 @@ title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 translation_of: Web/CSS/@media/prefers-reduced-motion
 ---
+
 {{CSSRef}}
 
 La [requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-motion`** détecte si l'utilisateur a demandé au système de minimiser la quantité d'animation ou de mouvement.

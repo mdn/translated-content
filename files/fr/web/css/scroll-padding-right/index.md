@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-padding-right
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-padding-right`** est une propriété qui permet de définir le remplissage sur le côté droit entre l'élément et la zone de défilement.

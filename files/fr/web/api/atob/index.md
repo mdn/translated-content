@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
+
 {{APIRef ("HTML DOM")}}
 La fonction `WindowOrWorkerGlobalScope.atob()` décode une chaîne de données qui a été codée en utilisant le codage en base 64. Vous pouvez utiliser la méthode [`btoa()`](/fr/docs/Web/API/btoa) pour encoder et transmettre des données qui pourraient causer des problèmes de communication, puis les transmettre et utiliser la méthode atob() pour décoder les données . Par exemple, vous pouvez coder, transmettre et décoder des caractères de contrôle tels que les valeurs ASCII 0 à 31.
 

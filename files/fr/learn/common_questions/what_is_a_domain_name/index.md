@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Common_questions/What_is_a_domain_name
 original_slug: Apprendre/Comprendre_noms_de_domaine
 ---
+
 Dans cet article, nous discutons des noms de domaine : ce qu'ils sont, comment ils sont organisés et comment en avoir un.
 
 <table class="standard-table">

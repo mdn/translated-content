@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::-moz-color-swatch
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-color-swatch`** est [un pseudo-élément spécifique à Mozilla](/fr/docs/Web/CSS/Extensions_Mozilla) qui représente la couleur sélectionnée d'un élément {{HTMLElement("input")}} avec `type="color"`.

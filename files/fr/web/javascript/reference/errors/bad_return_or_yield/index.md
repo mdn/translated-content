@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 original_slug: Web/JavaScript/Reference/Erreurs/Bad_return_or_yield
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/search
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/search
 ---
+
 {{JSRef}}
 
 Le symbole connu **`Symbol.search`** définit la méthode qui renvoie l'indice indiquant la position d'une correspondance trouvée dans une chaîne de caractères grâce à une expression rationnelle. Cette fonction est appelée par la méthode {{jsxref("String.prototype.search()")}}.

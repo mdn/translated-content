@@ -3,6 +3,7 @@ title: PointerEvent
 slug: Web/API/PointerEvent
 translation_of: Web/API/PointerEvent
 ---
+
 {{ APIRef("Pointer Events") }}
 
 L'interface **`PointerEvent`** représente les données de l'état d'un évènement du DOM produit par un pointeur, tels que la géométrie du point de contact, le type d'appareil qui a généré l'évènement, l'intensité de pression qui a été appliquée au contact de la surface, etc.

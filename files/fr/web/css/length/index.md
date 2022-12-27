@@ -8,6 +8,7 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/length
 ---
+
 {{CSSRef}}
 
 Le type de données CSS **`<length>`** correspond à une mesure de distance.

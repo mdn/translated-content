@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/forEach
 ---
+
 {{JSRef}}
 
 La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque élément du tableau. Cette méthode implémente le même algorithme que {{jsxref("Array.prototype.forEach()")}}.

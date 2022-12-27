@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-align
 ---
+
 {{CSSRef}}
 
 La propriété **`text-align`** définit l'alignement horizontal d'un élément de bloc ou de la boîte d'une cellule de tableau. Cette propriété fonctionne donc de façon analogue à {{cssxref("vertical-align")}} mais dans le sens horizontal.

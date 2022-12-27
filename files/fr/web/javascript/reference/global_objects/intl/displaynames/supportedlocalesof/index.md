@@ -3,6 +3,7 @@ title: Intl.DisplayNames.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf
 browser-compat: javascript.builtins.Intl.DisplayNames.supportedLocalesOf
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.DisplayNames.supportedLocalesOf()`** renvoie un tableau dont les éléments sont les locales fournies qui sont prises en charge pour les noms d'affichage sans avoir à utiliser la locale par défaut de recours de l'environnement d'exécution.

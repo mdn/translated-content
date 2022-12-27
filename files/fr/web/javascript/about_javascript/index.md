@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/About_JavaScript
 original_slug: Web/JavaScript/A_propos
 ---
+
 {{jsSidebar}}
 
 ## Qu'est-ce que JavaScript ?

@@ -10,6 +10,7 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeIterator/detach
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 La méthode **`NodeIterator.detach()`** est une non opération, conservée seulement pour la rétro-compatibilité.

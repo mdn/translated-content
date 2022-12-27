@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/clamp()
 original_slug: Web/CSS/clamp()
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`clamp()`** permet de ramener (d'écrêter) une valeur entre deux bornes inférieure et supérieure. Cette fonction utilise trois paramètres : une valeur minimale, la valeur à tester et une valeur maximale. La fonction `clamp()` peut être utilisée à tout endroit où une valeur de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;integer&gt;")}} peut être utilisée.

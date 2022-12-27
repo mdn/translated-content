@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Undeclared_var
 original_slug: Web/JavaScript/Reference/Erreurs/Undeclared_var
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

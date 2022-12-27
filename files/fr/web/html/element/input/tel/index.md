@@ -4,6 +4,7 @@ slug: Web/HTML/Element/input/tel
 translation_of: Web/HTML/Element/input/tel
 browser-compat: html.elements.input.input-tel
 ---
+
 {{HTMLRef}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`tel`** permettent de saisir un numéro de téléphone. Contrairement aux contrôles utilisés pour [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email) et [`<input type="url">`](/fr/docs/Web/HTML/Element/input/url), la valeur saisie n'est pas automatiquement validée selon un format donné, car les formats des numéros de téléphone varient à travers le monde.

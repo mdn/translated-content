@@ -7,6 +7,7 @@ tags:
   - SVG Filter
 translation_of: Web/SVG/Element/feConvolveMatrix
 ---
+
 {{SVGRef}}
 
 La primitive de filtre [SVG](/fr/docs/Web/SVG) **`<feConvolveMatrix>`** applique une matrice de convolution d'effet de filtre. Une convolution combine les pixels de l'image en entrée avec ceux voisins pour donner une image résultante. On peut obtenir une grande variété d'opérations d'imagerie à l'aide de convolutions, dont le flou, la détection de bord, la netteté, l'estampage et le chanfreinage.

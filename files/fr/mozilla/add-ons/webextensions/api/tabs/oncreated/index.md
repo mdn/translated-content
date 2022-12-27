@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'un onglet est créé.

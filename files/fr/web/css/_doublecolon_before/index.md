@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::before
 ---
+
 {{CSSRef}}
 
 **`::before`** crée un [pseudo-élément](/fr/docs/Web/CSS/Pseudo-éléments) qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (_inline_).

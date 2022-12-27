@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toUTCString
 ---
+
 {{JSRef}}
 
 La méthode **`toUTCString()`** convertit une date en une chaîne de caractères, selon le fuseau horaire UTC.

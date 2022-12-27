@@ -8,6 +8,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Document/getElementsByTagName
 ---
+
 {{ ApiRef("DOM") }}
 
 Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise donné. Le document complet est recherché, y compris le nœud racine. Le `HTMLCollection` renvoyée est en direct, ce qui signifie qu'elle se met à jour automatiquement pour rester synchronisée avec l'arborescence DOM sans avoir à rappeler document.getElementsByTagName ().

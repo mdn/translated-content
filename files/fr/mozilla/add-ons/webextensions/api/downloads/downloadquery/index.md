@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadQuery
 ---
+
 {{AddonSidebar()}}
 
 Le type `DownloadQuery` de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de paramètres pouvant être utilisés pour rechercher dans le gestionnaire de téléchargements un ensemble spécifique de téléchargements.

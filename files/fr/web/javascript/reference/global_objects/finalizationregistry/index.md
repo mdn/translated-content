@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 browser-compat: javascript.builtins.FinalizationRegistry
 ---
+
 {{JSRef}}
 
 Un objet **`FinalizationRegistry`** permet de déclencher une fonction de rappel (<i lang="en">callback</i>) lorsqu'un objet est récupéré par le ramasse-miettes.

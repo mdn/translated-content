@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 **`-webkit-device-pixel-ratio`** est une caractéristique média non-standard, alternative à la caractéristique média standard {{cssxref("@media/resolution","resolution")}}.

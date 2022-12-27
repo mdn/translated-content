@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/shape-margin
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`shape-margin`** définit la marge autour d'une forme CSS créée avec {{cssxref("shape-outside")}}.

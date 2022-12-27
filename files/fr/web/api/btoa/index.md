@@ -14,6 +14,7 @@ tags:
 translation_of: Web/API/WindowOrWorkerGlobalScope/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
 La méthode `WindowOrWorkerGlobalScope.btoa()` crée une chaîne ASCII codée en base 64 à partir d'un objet {{jsxref ("String")}} dans lequel chaque caractère de la chaîne est traité comme un octet de données binaires.

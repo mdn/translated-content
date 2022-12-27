@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
 ---
+
 {{AddonSidebar()}}
 
 Lancé quand une connexion est établie avec un processus d'extension ou un script de contenu.

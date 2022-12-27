@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/CSS/CSS_layout/Legacy_Layout_Methods
 original_slug: Apprendre/CSS/CSS_layout/Legacy_Layout_Methods
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}

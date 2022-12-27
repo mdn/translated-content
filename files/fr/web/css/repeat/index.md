@@ -4,6 +4,7 @@ slug: Web/CSS/repeat
 translation_of: Web/CSS/repeat()
 original_slug: Web/CSS/repeat()
 ---
+
 {{CSSRef}}
 
 La fonction CSS **`repeat()`** permet de répéter un fragment d'une liste de pistes. Autrement dit, lorsqu'on a une grille avec de nombreuses lignes/colonnes, cela permet de réutiliser un même motif sur la grille. On a alors des règles plus concises.

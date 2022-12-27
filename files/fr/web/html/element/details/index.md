@@ -13,6 +13,7 @@ tags:
 translation_of: Web/HTML/Element/details
 browser-compat: html.elements.details
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<details>`** est utilisé comme un outil permettant de révéler une information. Un résumé ou un intitulé peuvent être fournis grâce à un élément [`<summary>`](/fr/docs/Web/HTML/Element/summary).

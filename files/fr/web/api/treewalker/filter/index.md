@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/TreeWalker/filter
 ---
+
 {{ APIRef("DOM") }}
 
 La propriété en lecture seule **`TreeWalker.filter`** renvoie un {{domxref("NodeFilter")}} (_filtre de noeuds_) qui est l'objet de filtrage associé à {{domxref("TreeWalker")}}.

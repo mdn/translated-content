@@ -14,6 +14,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 original_slug: Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition
 ---
+
 {{jsSidebar("Operators")}}
 
 L'**affectation par décomposition** (_destructuring_ en anglais) est une expression JavaScript qui permet d'extraire (_unpack_ en anglais) des données d'un tableau ou d'un objet grâce à une syntaxe dont la forme ressemble à la structure du tableau ou de l'objet.

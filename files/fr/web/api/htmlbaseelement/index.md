@@ -3,6 +3,7 @@ title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
 translation_of: Web/API/HTMLBaseElement
 ---
+
 {{APIRef("HTML DOM")}}L'interface **`HTMLBaseElement`** contient l'URI de base pour un document. Cet objet hérite de toutes les propriétés et des méthodes telles quelles sont décrites dans l'interface {{domxref("HTMLElement")}}.
 
 ## Propriétés

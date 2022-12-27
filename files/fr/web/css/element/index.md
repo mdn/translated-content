@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/element()
 original_slug: Web/CSS/element()
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La fonction **`element()`** définit une valeur {{cssxref("&lt;image&gt;")}} générée à partir d'un élément HTML arbitraire. L'image est calculée dynamiquement : si l'élément HTML change, les propriétés CSS utilisant la valeur seront automatiquement mis à jour.

@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/503
 translation_of: Web/HTTP/Status/503
 browser-compat: http.status.503
 ---
+
 {{HTTPSidebar}}
 
 Le code de réponse HTTP d'erreur serveur **`503 Service Unavailable`** indique que le serveur n'est pas prêt à traiter la requête.

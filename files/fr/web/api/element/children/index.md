@@ -4,6 +4,7 @@ slug: Web/API/Element/children
 translation_of: Web/API/Element/children
 browser-compat: api.Element.children
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`children`** renvoie une collection dynamique [`HTMLCollection`](/fr/docs/Web/API/HTMLCollection) qui contient les [éléments](/fr/docs/Web/API/Element) enfants de l'élément courant (celui sur lequel elle a été appelée).

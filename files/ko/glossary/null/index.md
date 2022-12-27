@@ -1,12 +1,6 @@
 ---
 title: 'Null'
 slug: Glossary/Null
-tags:
-  - CodingScripting
-  - Glossary
-  - JavaScript
-  - Types
-translation_of: Glossary/Null
 ---
 컴퓨터 과학에서 `null` 값은 일반적으로 존재하지 않거나 유효하지 않은 {{glossary ("object")}} 또는 주소를 의도적으로 가리키는 참조를 나타냅니다. null 참조의 의미는 언어의 구현에 따라 다양하다.
 

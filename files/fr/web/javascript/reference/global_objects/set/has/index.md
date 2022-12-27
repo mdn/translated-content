@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/has
 ---
+
 {{JSRef}}
 
 La méthode **`has()`** renvoie un booléen qui indique s'il existe un élément de l'ensemble `Set` avec une certaine valeur.

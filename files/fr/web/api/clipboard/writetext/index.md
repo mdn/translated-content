@@ -3,6 +3,7 @@ title: Clipboard.writeText()
 slug: Web/API/Clipboard/writeText
 translation_of: Web/API/Clipboard/writeText
 ---
+
 {{APIRef("Clipboard API")}}
 
 La méthode **`writeText()`** de l’interface {{domxref("Clipboard")}} écrit le texte spécifié dans le presse-papiers du système.

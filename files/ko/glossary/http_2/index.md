@@ -1,7 +1,6 @@
 ---
 title: HTTP/2
 slug: Glossary/HTTP_2
-translation_of: Glossary/HTTP_2
 ---
 **HTTP/2** 는 [HTTP 네트워크 프로토콜](/ko/docs/Web/HTTP/Basics_of_HTTP)의 메인 개정판입니다. HTTP/2의 주요 목표는 "지연 시간"을 감소시키는 것입니다. 전체 요청과 응답 멀티플렉싱을 가능하게 하여 HTTP 헤더 필드를 효율적으로 압축함으로써 프로토콜 오버헤드를 최소화하고, 요청에 대한 우선 순위를 결정하며 서버 푸시 지원을 추가하는 과정을 통해서요.
 

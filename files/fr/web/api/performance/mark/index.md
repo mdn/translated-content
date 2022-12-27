@@ -9,6 +9,7 @@ tags:
   - Performance web
 translation_of: Web/API/Performance/mark
 ---
+
 {{APIRef("User Timing API")}}
 
 La méthode **`mark()`** crée un {{domxref("DOMHighResTimeStamp", "timestamp")}} dans le _tampon d'entrée de performance_ du navigateur avec le nom donné en argument.

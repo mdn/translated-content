@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Attribute_selectors
 original_slug: Web/CSS/Sélecteurs_d_attribut
 ---
+
 {{CSSRef}}
 
 Les sélecteurs d'attribut permettent de cibler un élément selon la présence d'un attribut ou selon la valeur donnée d'un attribut.

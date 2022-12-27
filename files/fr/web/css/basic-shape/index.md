@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/basic-shape
 ---
+
 {{CSSRef}}
 
 Le type **`<basic-shape>`** permet de définir une forme simple en utilisant des fonctions et est notamment utilisé pour les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} ou {{cssxref("offset-path")}}.

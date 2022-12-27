@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Content-Security-Policy/script-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src
 browser-compat: http.headers.csp.Content-Security-Policy.script-src
 ---
+
 {{HTTPSidebar}}
 
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`script-src`** spécifie les sources valides pour du code JavaScript. Cela inclut les URL chargées directement par les éléments [`<script>`](/fr/docs/Web/HTML/Element/script), et aussi les scripts embarqués, les attributs de gestion d'évènements (par exemple `onclick`) et [les feuilles de style XSLT](/fr/docs/Web/XSLT) pouvant déclencher l'exécution de scripts.

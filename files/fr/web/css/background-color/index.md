@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
 La propriété **`background-color`** permet de définir la couleur utilisée pour l'arrière-plan d'un élément (celle-ci peut être une couleur transparente).

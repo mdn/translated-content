@@ -9,6 +9,7 @@ tags:
   - hors-ligne
 translation_of: Web/API/Service_Worker_API
 ---
+
 {{ServiceWorkerSidebar}}
 
 {{ SeeCompatTable() }}

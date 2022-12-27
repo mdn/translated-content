@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-justify
 ---
+
 {{CSSRef}}
 
 la propriété CSS **`text-justify`** définit le type de justification à appliquer au texte justifié (par exemple avec {{cssxref("text-align")}}`: justify;`).

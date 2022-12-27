@@ -10,6 +10,7 @@ tags:
   - lecture seule
 translation_of: Web/API/WorkerGlobalScope/console
 ---
+
 {{APIRef("Web Workers API")}}{{Non-standard_header}}
 
 La propriété en lecture seule **`console`** de l'interface {{domxref("WorkerGlobalScope")}} retourne un objet {{domxref("Console")}} donnant accès à la console du navigateur pour le worker.

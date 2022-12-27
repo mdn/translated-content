@@ -13,6 +13,7 @@ tags:
   - onVisited
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/onVisited
 ---
+
 {{AddonSidebar()}}
 
 Mise en place à chaque fois que l'utilisateur visite une page. Un objet {{WebExtAPIRef("history.HistoryItem")}} est transmis à l'écouteur. Cet événement se déclenche avant que la page ne soit chargée.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-auto-flow
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-auto-flow`** permet de contrôler la façon dont fonctionne l'algorithme de placement automatique. Celui-ci définit exactement comme les objets placés automatiquement s'inscrivent dans la grille.

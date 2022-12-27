@@ -1,7 +1,6 @@
 ---
 title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
-translation_of: Glossary/Microsoft_Internet_Explorer
 ---
 Internet Explorer (또는 IE)는 Microsoft에서 레거시 엔터프라이즈 사용을 위해 유지 관리하는 무료 그래픽 {{glossary ( "browser")}}이다. {{glossary ( "Microsoft Edge")}}는 현재 기본 Windows 브라우저이다.
 

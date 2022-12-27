@@ -6,6 +6,7 @@ tags:
   - DOM
 translation_of: Web/API/Comment
 ---
+
 {{ ApiRef("DOM") }}
 
 L'interface **`Comment`** représente des annotations textuelles au sein du balisage; même si elles ne sont généralement pas montrées, elles sont disponibles à la lecture dans le code source. Les commentaires sont représentés en HTML et XML avec du contenu entre cette balise '`<!--`' et celle ci '`-->`'. Pour XML, la séquence de caractère suivante '`--`' ne peut être utilisée dans un commentaire.

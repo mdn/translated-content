@@ -13,6 +13,7 @@ tags:
   - contextMenus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/ACTION_MENU_TOP_LEVEL_LIMIT
 ---
+
 {{AddonSidebar()}}
 
 Le nombre maximal d'éléments d'extension de niveau supérieur pouvant être ajoutés à un élément de menu dont {{WebExtAPIRef("contextMenus.ContextType", "ContextType")}} est "browser_action" ou "page_action". Tout élément au-delà de cette limite sera ignoré.

@@ -13,6 +13,7 @@ tags:
   - remove
 translation_of: Mozilla/Add-ons/WebExtensions/API/cookies/remove
 ---
+
 {{AddonSidebar()}}
 
 La méthode **`remove()`** de l'API {{WebExtAPIRef("cookies")}} supprime un cookie, compte tenu de son nom et de son URL.

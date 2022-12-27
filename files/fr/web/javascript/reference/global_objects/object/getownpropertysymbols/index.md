@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols
 ---
+
 {{JSRef}}
 
 La méthode **`Object.getOwnPropertySymbols()`** renvoie un tableau contenant tous les symboles des propriétés trouvées directement sur un objet donné.

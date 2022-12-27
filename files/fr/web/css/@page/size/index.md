@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@page/size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le descripteur **`size`**, associé à la règle @ {{cssxref("@page")}}, permet de définir les dimensions et l'orientation de la boîte utilisée pour représenter une page. La plupart du temps, cette taille correspondra à la totalité de la taille de la page imprimée.

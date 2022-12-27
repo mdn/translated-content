@@ -12,6 +12,7 @@ tags:
   - overrideDocumentColors
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideDocumentColors
 ---
+
 {{AddonSidebar()}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est une chaîne.

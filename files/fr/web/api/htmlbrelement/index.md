@@ -6,6 +6,7 @@ tags:
   - Référence_du_DOM_Gecko
 translation_of: Web/API/HTMLBRElement
 ---
+
 {{ApiRef}}
 
 L'interface **`HTMLBRElement`** représente un retour à la ligne. Il hérite de {{domxref("HTMLElement")}}.

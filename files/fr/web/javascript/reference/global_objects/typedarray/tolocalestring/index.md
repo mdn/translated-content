@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/toLocaleStrin
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/toLocaleString
 browser-compat: javascript.builtins.TypedArray.toLocaleString
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleString()`** renvoie une chaîne de caractères qui représente les éléments du tableau typé. Les éléments sont convertis en chaînes de caractères et séparés par une chaîne de caractères qui est fonction de la locale (la virgule `,` par exemple). Cette méthode utilise le même algorithme que [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString) et vu que les éléments d'un tableau typé sont des nombres, elle utilise le même algorithme que [`Number.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) pour chaque élément. Dans la suite de cet article, `TypedArray` fait référence à [l'un des types de tableau typé listés ici](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#les_objets_typedarray).

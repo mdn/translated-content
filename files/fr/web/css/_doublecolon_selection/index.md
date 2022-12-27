@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/::selection
 ---
+
 {{CSSRef}}
 
 Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::selection`** permet d'appliquer des règles CSS à une portion du document qui a été sélectionnée par l'utilisateur (via la souris ou un autre dispositif de pointage).

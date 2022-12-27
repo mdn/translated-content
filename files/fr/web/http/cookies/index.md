@@ -7,6 +7,7 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Cookies
 ---
+
 {{HTTPSidebar}}
 
 Un cookie HTTP (cookie web, cookie de navigateur) est un petit ensemble de données qu'un serveur envoie au navigateur web de l'utilisateur. Le navigateur peut alors le stocker localement, puis le renvoyer à la prochaine requête vers le même serveur. Typiquement, cette méthode est utilisée par le serveur pour déterminer si deux requêtes proviennent du même navigateur.

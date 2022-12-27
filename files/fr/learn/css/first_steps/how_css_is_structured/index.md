@@ -3,6 +3,7 @@ title: Comment CSS est structuré
 slug: Learn/CSS/First_steps/How_CSS_is_structured
 translation_of: Learn/CSS/First_steps/How_CSS_is_structured
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
 
 Vous avez maintenant une idée plus claire de CSS. Vous connaissez les bases de son fonctionnement. Il est temps d'explorer plus avant la structure du langage lui-même. Nous avons déjà rencontré nombre des concepts apparaissant dans ce tutoriel ; reportez vous aux leçons précédentes si un concept vous semble peu clair.

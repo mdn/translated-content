@@ -3,6 +3,7 @@ title: flex
 slug: Web/CSS/flex
 translation_of: Web/CSS/flex
 ---
+
 {{CSSRef}}
 
 La propriété **`flex`** est une propriété raccourcie qui définit la capacité d'un élément flexible à modifier ses dimensions afin de remplir l'espace disponible de son conteneur.

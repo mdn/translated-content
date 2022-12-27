@@ -4,6 +4,7 @@ slug: Web/CSS/path
 translation_of: Web/CSS/path()
 original_slug: Web/CSS/path()
 ---
+
 {{CSSRef}}
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`path()`** accepte comme paramètre une chaîne représentant un tracé SVG. Elle est utilisée dans les formes CSS et les animations de tracés CSS pour permettre de dessiner une forme.

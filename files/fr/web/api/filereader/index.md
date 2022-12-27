@@ -8,6 +8,7 @@ tags:
   - Référence(2)
 translation_of: Web/API/FileReader
 ---
+
 {{APIRef("File API")}}
 
 L'objet **`FileReader`** permet à des applications web de lire le contenu de fichiers (ou de tampons de mémoire brute) de façon asynchrone. On peut ainsi lire le contenu des objets {{domxref("File")}} ou {{domxref("Blob")}} (qui représentent respectivement un fichier ou des données).

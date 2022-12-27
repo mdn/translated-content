@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/valueOf
 ---
+
 {{JSRef}}
 
 La méthode **`valueOf()`** renvoie la valeur primitive correspondant à l'objet `Symbol`.

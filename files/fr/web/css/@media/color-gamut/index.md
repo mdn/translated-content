@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/color-gamut
 ---
+
 {{CSSRef}}
 
 **`color-gamut`** est une caractéristique média dont la valeur décrit l'intervalle approximatif des couleurs qui sont prises en charge par l'agent utilisateur et l'appareil responsable de l'affichage.

@@ -14,6 +14,7 @@ tags:
   - workflow
 translation_of: Mozilla/Add-ons/WebExtensions/Firefox_workflow_overview
 ---
+
 {{AddonSidebar}}
 
 <table>

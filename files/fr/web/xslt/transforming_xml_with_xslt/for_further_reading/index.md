@@ -8,6 +8,7 @@ tags:
 translation_of: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 original_slug: Web/XSLT/Transformations_XML_avec_XSLT/Autres_ressources
 ---
+
 [« Transformations XML avec XSLT](/fr/docs/Transformations_XML_avec_XSLT)
 
 ### Sources imprimées

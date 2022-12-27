@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/grid
 ---
+
 {{CSSRef}}
 
 **`grid`** est une caractéristique média CSS (cf {{cssxref("@media")}}) dont la valeur est un booléen qui indique si l'appareil d'affichage fonctionne grâce à une grille (ex. un terminal ou un appareil qui ne dispose que d'une police à chasse fixe) ou grâce à une matrice d'affichage (avec des pixels « classiques »).

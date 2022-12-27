@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getTimezoneOffset
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getTimezoneOffset
 ---
+
 {{JSRef}}
 
 La méthode **`getTimezoneOffset()`** retourne la différence en minutes entre le fuseau horaire UTC, et celui de l'heure locale.

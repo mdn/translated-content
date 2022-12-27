@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:first-of-type
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** permet de cibler le premier élément d'un type donné parmi ceux d'un même élément parent (et de même niveau).

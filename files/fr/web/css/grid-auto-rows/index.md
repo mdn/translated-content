@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-auto-rows
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-auto-rows`** définit la taille d'une ligne de grille créée de façon implicite.

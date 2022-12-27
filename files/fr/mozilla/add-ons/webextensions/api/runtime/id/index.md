@@ -13,6 +13,7 @@ tags:
   - §ID
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/id
 ---
+
 {{AddonSidebar()}}
 
 L'ID de l'extension

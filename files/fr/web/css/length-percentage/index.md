@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/length-percentage
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<length-percentage>`** représente une valeur qui peut être une valeur de type {{Cssxref("length")}} ou une valeur de type {{Cssxref("percentage")}}.

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/var
 original_slug: Web/JavaScript/Reference/Instructions/var
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`var`** (pour variable) permet de déclarer une variable et éventuellement d'initialiser sa valeur.

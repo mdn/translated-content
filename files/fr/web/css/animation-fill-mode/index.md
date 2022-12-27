@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-fill-mode
 ---
+
 {{CSSRef}}
 
 La propriété **`animation-fill-mode`** indique la façon dont une animation CSS doit appliquer les styles à sa cible avant et après son exécution.

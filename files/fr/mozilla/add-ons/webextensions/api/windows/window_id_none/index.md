@@ -13,6 +13,7 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_NONE
 ---
+
 {{AddonSidebar()}}
 
 La valeur `windowId` que représente l'absence d'une fenêtre du navigateur.

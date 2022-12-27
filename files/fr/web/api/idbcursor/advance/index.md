@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBCursor/advance
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`advance()`** de l'interface {{domxref("IDBCursor")}} définit le nombre d'itérations du curseur avec lequel celui-ci doit se déplacer vers l'avant.

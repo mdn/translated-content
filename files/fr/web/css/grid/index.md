@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid
 ---
+
 {{CSSRef}}
 
 La propriété **`grid`** est une propriété raccourcie qui permet de définir toutes les propriétés liées aux grilles CSS, qu'elles soient explicites ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-areas")}}), implicites ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}} et {{cssxref("grid-auto-flow")}}).

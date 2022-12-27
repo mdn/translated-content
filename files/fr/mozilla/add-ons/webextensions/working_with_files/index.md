@@ -6,6 +6,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Working_with_files
 ---
+
 {{AddonSidebar()}}
 
 Votre extension de navigateur peut avoir besoin de fichiers pour offrir des fonctionnalités complètes. Cet article examine les cinq mécanismes permettant de gérer les fichiers :

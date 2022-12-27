@@ -13,6 +13,7 @@ tags:
   - deleteAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/deleteAll
 ---
+
 {{AddonSidebar()}}
 
 Supprime toutes les visites de l'historique du navigateur.

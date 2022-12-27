@@ -13,6 +13,7 @@ tags:
   - inIncognitoContext
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/inIncognitoContext
 ---
+
 {{AddonSidebar()}}
 
 Valeur booléenne, `true` pour les scripts de contenu s'exécutant dans les onglets de navigation privée et pour les pages d'extension exécutées dans un processus de navigation privé..

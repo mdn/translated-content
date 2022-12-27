@@ -12,6 +12,7 @@ tags:
   - topSites
 translation_of: Mozilla/Add-ons/WebExtensions/API/topSites
 ---
+
 {{AddonSidebar}}
 
 Utilisez l'API topSites pour obtenir un tableau contenant les pages que l'utilisateur a visitées fréquemment.

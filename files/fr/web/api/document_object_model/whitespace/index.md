@@ -5,6 +5,7 @@ tags:
   - DOM
 translation_of: Web/API/Document_Object_Model/Whitespace
 ---
+
 ## Le problème
 
 La présence d'espaces et de blancs dans le [DOM](fr/DOM) peut rendre la manipulation de l'arbre de contenu difficile dans des aspects qu'on ne prévoit pas forcément. Dans Mozilla, tous les espaces et blancs dans le contenu texte du document original sont représentés dans le DOM (cela ne concerne pas les blancs à l'intérieur des balises). (C'est nécessaire en interne afin que l'éditeur puisse conserver le formatage des documents et que l'instruction `white-space: pre` en [CSS](fr/CSS) fonctionne.) Cela signifie que&nbsp;:

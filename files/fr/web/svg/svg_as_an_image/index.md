@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/SVG_as_an_Image
 original_slug: Web/SVG/SVG_en_tant_qu_image
 ---
+
 {{SVGRef}}
 
 Le format SVG peut être utilisé en tant qu'image dans de nombreux contextes. Beaucoup de navigateurs prennent en charge les images au format SVG avec :

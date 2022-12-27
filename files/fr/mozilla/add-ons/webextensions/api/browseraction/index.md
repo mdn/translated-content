@@ -12,6 +12,7 @@ tags:
   - browserAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction
 ---
+
 {{AddonSidebar}}
 
 Ajoute un bouton à la barre d'outils du navigateur.

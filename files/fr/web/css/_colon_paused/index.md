@@ -4,6 +4,7 @@ slug: Web/CSS/:paused
 translation_of: Web/CSS/:paused
 browser-compat: css.selectors.paused
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:paused`** est une pseudo-classe d'état d'une ressource audio, vidéo ou autre type de ressource capable d'être «&nbsp;lue&nbsp;» ou «&nbsp;mise en pause&nbsp;», qui permet de cibler un élément lorsqu'il est «&nbsp;mis en pause&nbsp;».

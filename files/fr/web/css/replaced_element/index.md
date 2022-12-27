@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/Replaced_element
 original_slug: Web/CSS/Élément_remplacé
 ---
+
 {{CSSRef}}
 
 En CSS, un **élément remplacé** est un élément dont la représentation est en dehors du champ de CSS. Ce sont des objets externes dont la représentation sera indépendante de CSS.

@@ -4,6 +4,7 @@ slug: Web/CSS/background-image
 browser-compat: css.properties.background-image
 translation_of: Web/CSS/background-image
 ---
+
 {{CSSRef}}
 
 La propriété **`background-image`** permet de définir une ou plusieurs images comme arrière(s)-plan(s) pour un élément.

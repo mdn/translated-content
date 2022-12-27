@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/display-mode
 ---
+
 {{CSSRef}}
 
 **`display-mode`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet d'appliquer différentes règles CSS selon le mode d'affichage de l'application. On pourra utiliser cette caractéristique afin qu'un utilisateur ait une expérience similaire selon qu'il lance le site depuis une URL ou depuis une icône sur un bureau.

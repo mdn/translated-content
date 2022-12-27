@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/hasInstance
 ---
+
 {{JSRef}}
 
 Le symbole « connu » **`Symbol.hasInstance`** est utilisé afin de déterminer si un objet constructeur reconnaît un objet comme une de ses instances. On peut donc adapter/personnaliser le comportement de l'opérateur {{jsxref("Opérateurs/instanceof", "instanceof")}} grâce à ce symbole.

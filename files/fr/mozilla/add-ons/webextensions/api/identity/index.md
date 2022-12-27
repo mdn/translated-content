@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/identity
 ---
+
 {{AddonSidebar}}
 
 Utilisez l'API d'identité pour obtenir un code d'autorisation ou un jeton d'accès [OAuth2](https://oauth.net/2/), qu'une extension peut ensuite utiliser pour accéder aux données utilisateur d'un service prenant en charge l'accès à OAuth2 (tel qu'un compte Google ou Facebook).

@@ -3,6 +3,7 @@ title: transition-duration
 slug: Web/CSS/transition-duration
 translation_of: Web/CSS/transition-duration
 ---
+
 {{CSSRef}}
 
 La propriété **`transition-duration`** définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, `0s`, indique qu'il n'y aura aucune animation.

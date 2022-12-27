@@ -4,6 +4,7 @@ slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 translation_of: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 original_slug: Apprendre/CSS/Building_blocks/Selectors/Sélecteurs_de_type_classe_ID
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
 
 Dans cette leçon, nous examinons les sélecteurs les plus simples qu'on puisse trouver, ce sont ceux que vous utiliserez le plus couramment dans votre travail.

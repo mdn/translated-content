@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap
 browser-compat: javascript.builtins.WeakMap
 ---
+
 {{JSRef}}
 
 L'objet **`WeakMap`** représente une collection de paires clé-valeur dont les clés sont des objets et pour lesquelles les références sont « faibles » et les valeurs des valeurs quelconques.

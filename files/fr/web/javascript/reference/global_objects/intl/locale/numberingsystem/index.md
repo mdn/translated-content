@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/numberingSystem
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.numberingSystem`** est une propriété fournie par un accesseur qui renvoie le [système de numération](https://en.wikipedia.org/wiki/Numeral_system) utilisée par la locale.

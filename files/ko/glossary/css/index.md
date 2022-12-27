@@ -1,13 +1,6 @@
 ---
 title: CSS
 slug: Glossary/CSS
-tags:
-  - CSS
-  - CodingScripting
-  - Glossary
-  - Web
-  - l10n:priority
-translation_of: Glossary/CSS
 ---
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 

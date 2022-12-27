@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/HistoryItem
 ---
+
 {{AddonSidebar()}}
 
 Un objet `HistoryItem` fournit des informations sur une page dans l'historique du navigateur.

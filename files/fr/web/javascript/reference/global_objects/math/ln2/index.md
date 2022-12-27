@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN2
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/LN2
 ---
+
 {{JSRef}}
 
 La propriété **`Math.LN2`** représente le logarithme naturel de 2, environ 0.693:

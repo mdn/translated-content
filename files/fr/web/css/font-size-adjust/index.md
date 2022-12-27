@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-size-adjust
 ---
+
 {{CSSRef}}
 
 La propriété **`font-size-adjust`** permet de choisir une taille de police selon la taille des caractères en minuscules plutôt que selon la taille des majuscules.

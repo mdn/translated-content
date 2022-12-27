@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML
 ---
+
 {{HTMLSidebar}}
 
 **HTML** signifie « _HyperText Markup Language_ » qu'on peut traduire par « langage de balises pour l'hypertexte ». Il est utilisé afin de créer et de représenter le contenu d'une page web et sa structure. D'autres technologies sont utilisées avec HTML pour décrire la présentation d'une page ([CSS](/fr/docs/Web/CSS)) et/ou ses fonctionnalités interactives ([JavaScript](/fr/docs/Web/JavaScript)).

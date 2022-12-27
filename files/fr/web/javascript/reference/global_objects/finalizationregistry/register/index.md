@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 browser-compat: javascript.builtins.FinalizationRegistry.register
 ---
+
 {{JSRef}}
 
 La méthode `register()` inscrit un objet dans un registre [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry) afin que, lorsque l'objet est traité par le ramasse-miettes, la fonction de rappel de nettoyage associée puisse être appelée.

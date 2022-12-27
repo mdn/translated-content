@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/sup
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<sup>`** est utilisé, pour des raisons typographiques, afin d'afficher du texte en exposant (plus haut et généralement plus petit) par rapport au bloc de texte environnant.

@@ -7,6 +7,7 @@ original_slug: Web/API/Event/Comparaison_des_cibles_d_évènements
 l10n:
   sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---
+
 {{APIRef}}
 
 On peut facilement confondre les différentes cibles d'évènements lorsqu'on écrit un gestionnaire d'évènement. Cet article devrait vous aider à y voir plus clair dans l'utilisation des propriétés relatives aux cibles.

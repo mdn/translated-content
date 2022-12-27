@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/columns
 ---
+
 {{CSSRef}}
 
 La propriété **`columns`** est une propriété raccourcie permettant de définir les deux propriétés {{cssxref('column-width')}} (qui définit la largeur des colonnes) et {{cssxref("column-count")}} (qui définit le nombre de colonnes) en même temps.

@@ -7,6 +7,7 @@ tags:
   - django
 translation_of: Learn/Server-side/Django/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
 
 Dans ce premier article sur Django, nous allons répondre à la question suivante "Qu'est ce que Django ?", et nous vous montrerons en quoi cette infrastructure d'application (aussi appelée framework) est spéciale. Nous allons ensuite voir les principales fonctionnalités, mais aussi quelques fonctionnalités avancées que nous n'aurons malheureusement pas le temps de voir en détails dans ce module. Nous allons aussi vous montrer comment fonctionne une application Django (bien que nous n'ayons pas d'environnement où le tester) .

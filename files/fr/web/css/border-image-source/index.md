@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-image-source
 ---
+
 {{CSSRef}}
 
 La propriété **`border-image-source`** définit l'image (type {{cssxref("&lt;image&gt;")}}) qu'on souhaite utiliser pour mettre en forme la bordure. Si la valeur de cette propriété vaut `none`, ce sera la mise en forme définie par la propriété {{cssxref("border-style")}} qui sera utilisée.

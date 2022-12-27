@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/lowerOpen
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`lowerOpen`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie un booléen qui inidque si l'intervalle est ouvert pour la borne inférieure (autrement dit, le booléen est vrai lorsque la borne n'est pas incluse et est faux sinon).

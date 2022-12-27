@@ -4,6 +4,7 @@ slug: Web/CSS/border-bottom-style
 translation_of: Web/CSS/border-bottom-style
 browser-compat: css.properties.border-bottom-style
 ---
+
 {{CSSRef}}
 
 La propriété **`border-bottom-style`** définit le style de ligne utilisé pour mettre en forme la bordure en bas d'une boîte.

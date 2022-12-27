@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBTransaction/objectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`objectStore()`**, rattachée à l'interface {{domxref("IDBTransaction")}}, renvoie l'accès à un des magasins d'objets liés à la transation sous la forme d'un objet {{domxref("IDBObjectStore")}}.

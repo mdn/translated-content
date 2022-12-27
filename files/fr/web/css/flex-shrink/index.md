@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-shrink
 ---
+
 {{CSSRef}}
 
 La propriété **`flex-shrink`** définit le facteur de rétrécissement d'un élément flexible. Si la taille de l'ensemble des éléments flexibles est supérieure à la taille du conteneur, les éléments seront comprimés selon leur facteur `flex-shrink`.

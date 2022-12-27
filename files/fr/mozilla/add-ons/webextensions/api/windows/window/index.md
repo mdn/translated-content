@@ -5,6 +5,7 @@ tags:
   - Fenêtre
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/Window
 ---
+
 {{AddonSidebar()}}
 
 Informations sur une fenêtre du navigateur.

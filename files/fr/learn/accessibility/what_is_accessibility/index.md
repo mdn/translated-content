@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/Accessibility/What_is_accessibility
 original_slug: Apprendre/a11y/What_is_accessibility
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
 
 Cet article présente un module général sur ce que l'accessibilité est actuellement — Cela comprend les groupes de personnes que l'on a besoin de considérer et pourquoi, quels outils ils utilisent afin d'intéragir avec les pages web et comment rendre accessible la partie de notre espace de travail web.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-right-color
 ---
+
 {{CSSRef}}
 
 La propriété **`border-right-color`** définit la couleur utilisée pour la bordure droite d'un élément. Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-right")}}.

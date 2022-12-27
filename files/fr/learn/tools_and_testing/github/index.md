@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Tools_and_testing/GitHub
 original_slug: Apprendre/Outils_et_tests/GitHub
 ---
+
 {{LearnSidebar}}
 
 Tous les développeurs utiliseront une sorte de **système de contrôle des versions** (_version control system_ ou VCS en anglais), un outil leur permettant de collaborer avec d'autres développeurs sur un projet sans prendre le risque que l'un d'eux écrase le travail d'un autre, et de revenir à une version précédente de la base de code si un problème est découvert plus tard. Le plus populaires de ces outils (au mois parmi les développeurs) est **Git**, ainsi que **GitHub**, un site vous proposant d'héberger vos dépôts de code et plusieurs outils pour travailler avec eux. Ce module vise à vous enseigner ce que vous devez savoir à propos de ces deux outils.

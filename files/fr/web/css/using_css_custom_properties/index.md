@@ -3,6 +3,7 @@ title: Les variables CSS
 slug: Web/CSS/Using_CSS_custom_properties
 translation_of: Web/CSS/Using_CSS_custom_properties
 ---
+
 {{CSSRef}}
 
 **Les propriétés personnalisées CSS** (_custom properties_ en anglais, aussi parfois appelés **variables CSS**) sont des entités définies par les développeurs ou les utilisateurs d'une page Web, contenant des valeurs spécifiques utilisables à travers le document. Elles sont initialisées avec des propriétés personnalisées (par exemple **`--main-color: black;`**) et accessibles en utilisant la notation spécifique {{cssxref("var", "var()")}} (par exemple : **`color: var(--main-color);`**).

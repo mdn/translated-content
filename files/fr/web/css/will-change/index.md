@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/will-change
 ---
+
 {{CSSRef}}
 
 La propriété **`will-change`** fournit une indication au navigateur sur la propension d'un élément à changer (afin que le navigateur puisse mettre en place les optimisations nécessaires avant que l'élément change vraiment). Ce type d'optimisation permet d'augmenter la réactivité de la page en effectuant des calculs (éventuellement coûteux) en prévision du changement.

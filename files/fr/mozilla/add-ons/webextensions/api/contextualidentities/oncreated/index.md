@@ -12,6 +12,7 @@ tags:
   - onCreated
 translation_of: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'une nouvelle identité contextuelle est créée. Les identités contextuelles peuvent être créées par des extensions en utilisant l'API `contextualIdentities`, ou directement par l'utilisateur, en utilisant l'interface utilisateur du navigateur.

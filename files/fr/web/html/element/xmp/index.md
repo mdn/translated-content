@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/xmp
 ---
+
 {{deprecated_header}}{{HTMLRef}}
 
 L'élément HTML **`<xmp>`** (pour _example_) affiche le texte entre les balises d'ouverture et de fermeture sans interpréter le HTML qu'il contient et en utilisant une police à chasse fixe. La spécification HTML 2 recommande un affichage suffisamment large pour contenir 80 caractères par ligne.

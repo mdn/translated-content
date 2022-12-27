@@ -3,6 +3,7 @@ title: selection
 slug: Web/API/Selection
 translation_of: Web/API/Selection
 ---
+
 {{ ApiRef() }}
 
 ### Résumé

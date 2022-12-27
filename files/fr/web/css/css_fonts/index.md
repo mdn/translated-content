@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Fonts
 ---
+
 {{CSSRef}}
 
 **CSS Fonts** est un module CSS qui définit des propriétés relatives aux polices de caractères et la façon dont les ressources des polices sont chargées. Il permet de définir le style d'une police, comme sa famille, sa taille ou sa graisse ainsi que la variante du glyphe à utiliser dans le cas des polices disposant de plusieurs glyphes par caractère. Il permet également de définir la hauteur d'une ligne.

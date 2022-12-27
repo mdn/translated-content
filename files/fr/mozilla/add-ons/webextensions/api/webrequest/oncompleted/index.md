@@ -13,6 +13,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onCompleted
 ---
+
 {{AddonSidebar()}}
 
 Utilisé lorsqu'une demande est complétée.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/collation
 ---
+
 {{JSRef}}
 
 La propriété **`Intl.Locale.prototype.collation`** est une propriété (à laquelle on accède via un accesseur) qui renvoie le [type de collation](https://www.unicode.org/reports/tr35/tr35-collation.html#CLDR_Collation) pour l'instance de `Locale` courante. La collation est la méthode qui permet d'ordonner des chaînes de caractères en fonction des règles de la locale.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-bottom-color
 ---
+
 {{CSSRef}}
 
 La propriété **`border-bottom-color`** permet de définir la couleur utilisée pour la bordure basse d'un élément.

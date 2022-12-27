@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/Variable
 original_slug: Glossaire/Variable
 ---
+
 Une variable est un emplacement nommé pour conserver une {{Glossary("Value", "valeur")}}. Ainsi, il est possible d'accéder à une valeur quelconque par l'intermédiaire d'un nom prédéterminé.
 
 ## Voir aussi

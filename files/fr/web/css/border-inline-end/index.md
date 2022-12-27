@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-inline-end
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`border-inline-end`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant à la fin de l'élément dans le sens de lecture. Elle peut être utilisée pour définir les valeurs de {{cssxref("border-inline-end-width")}}, {{cssxref("border-inline-end-style")}} et {{cssxref("border-inline-end-color")}}.

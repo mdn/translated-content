@@ -4,6 +4,7 @@ slug: Web/SVG/Tutorial/Other_content_in_SVG
 translation_of: Web/SVG/Tutorial/Other_content_in_SVG
 original_slug: Web/SVG/Tutoriel/Contenu_embarque_SVG
 ---
+
 {{ PreviousNext("Web/SVG/Tutoriel/Découpages_et_masquages", "Web/SVG/Tutoriel/filtres") }}
 
 En plus des formes graphiques simples comme les rectangles et les cercles, le format SVG permet d'ajouter d'autres types de contenu aux images.

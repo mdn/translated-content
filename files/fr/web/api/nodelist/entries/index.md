@@ -12,6 +12,7 @@ tags:
   - Noeuds
 translation_of: Web/API/NodeList/entries
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`NodeList.entries()`** renvoie un {{jsxref("Les_protocoles_iteration",'itérateur')}} permettant de parcourir toutes les paires clé / valeur contenues dans cet objet . Les valeurs sont des objets {{domxref("Node")}}.

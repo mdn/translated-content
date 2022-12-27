@@ -3,6 +3,7 @@ title: URL.createObjectURL
 slug: Web/API/URL/createObjectURL
 translation_of: Web/API/URL/createObjectURL
 ---
+
 {{APIRef("URL")}}
 La méthode statique **URL.createObjectURL()** crée une chaîne contenant une URL représentant l’objet passé en paramètre. La durée de vie de l’URL est liée au {{domxref("document")}} de la fenêtre depuis laquelle elle a été créée. La nouvelle URL d’objet représente l’objet {{domxref("File")}} ou {{domxref("Blob")}} spécifié.
 

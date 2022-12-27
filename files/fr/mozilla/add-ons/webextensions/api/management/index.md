@@ -10,6 +10,7 @@ tags:
   - management
 translation_of: Mozilla/Add-ons/WebExtensions/API/management
 ---
+
 {{AddonSidebar}}
 
 Obtenez les éléments sur les modules complémentaires installés.

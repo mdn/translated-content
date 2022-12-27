@@ -17,6 +17,7 @@ tags:
 translation_of: Learn/CSS/CSS_layout/Introduction
 original_slug: Apprendre/CSS/CSS_layout/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Apprendre/CSS/CSS_layout/Normal_Flow", "Apprendre/CSS/CSS_layout")}}
 
 Cet article récapitule quelques fonctionnalités de mise en page CSS que l'on a déjà côtoyées dans les modules précédents — telles que les différentes valeurs de {{cssxref("display")}} — et en introduit de nouveaux que nous aborderons dans ce module.

@@ -6,6 +6,7 @@ translation_of_original: Web/API/Document/elementFromPoint
 original_slug: Web/API/DocumentOrShadowRoot/elementFromPoint
 browser-compat: api.Document.elementFromPoint
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`elementFromPoint()`**, rattachée à l'interface  [`Document`](/fr/docs/Web/API/Document), renvoie un objet [`Element`](/fr/docs/Web/API/Element) correspondant à l'élément de plus au niveau situé aux coordonnées indiquées en arguments (relativement à la zone d'affichage (<i lang="en">viewport</i>)).

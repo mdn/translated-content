@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getDay
 ---
+
 {{JSRef}}
 
 La méthode **`getDay()`** renvoie le jour de la semaine pour la date spécifiée selon l'heure locale (0 correspondant à dimanche). Pour obtenir le jour du mois, on utilisera {{jsxref("Date.prototype.getDate()")}}.

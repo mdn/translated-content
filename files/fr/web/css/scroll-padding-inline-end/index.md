@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-padding-inline-end
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-padding-inline-end`** est une propriété qui permet de définir le remplissage, à la fin de l'axe en ligne, entre l'élément et la zone de défilement.

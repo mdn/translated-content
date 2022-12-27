@@ -12,6 +12,7 @@ tags:
   - clear
 translation_of: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
 ---
+
 {{AddonSidebar}}
 
 Utilisez `BrowserSetting.clear()` pour effacer toutes les modification apportées à l'extension du navigateur. Le paramètre du navigateur revient à sa valeur précédente.

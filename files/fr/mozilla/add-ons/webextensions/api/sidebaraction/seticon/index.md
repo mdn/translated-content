@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
 ---
+
 {{AddonSidebar()}}
 
 Définit l'icône de la barre latérale.

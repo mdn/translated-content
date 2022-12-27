@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/buffer
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/buffer
 ---
+
 {{JSRef}}
 
 La propriété **`buffer`** est un accesseur représentant l'{{jsxref("ArrayBuffer")}} représenté par le _TypedArray_ lors de la construction de l'objet.

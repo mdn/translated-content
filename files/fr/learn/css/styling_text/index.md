@@ -13,6 +13,7 @@ tags:
   - Texte
 translation_of: Learn/CSS/Styling_text
 ---
+
 Une fois acquises les bases du langage CSS, la prochaine étape pour vous est la mise en forme de texte, une des choses les plus commune mais essentielle du CSS. Nous étudierons ici les principes de base de la mise en forme de texte : choix de polices de caractères, gras ou italique, interlignes et espacement de caractères, ajouter des ombres et autres fonctionnalités. Nous terminerons le module en détaillant l'intégration de polices personnalisées à votre page, ainsi que la mise en forme de listes et de liens.
 
 ## Prérequis

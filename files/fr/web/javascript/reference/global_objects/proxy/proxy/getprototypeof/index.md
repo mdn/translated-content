@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/getPrototypeOf
 ---
+
 {{JSRef}}
 
 La méthode **`handler.getPrototypeOf()`** représente une trappe pour la méthode interne `[[GetPrototypeOf]]`.

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:scope
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:scope`** correspond aux éléments qui sont un point de référence pour faire correspondre les sélecteurs.

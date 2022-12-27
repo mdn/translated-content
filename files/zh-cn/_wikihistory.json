@@ -33872,9 +33872,5 @@
   "conflicting/Web/API/Element/touchmove_event": {
     "modified": "2019-04-30T14:14:32.752Z",
     "contributors": ["wbamberg", "irenesmith", "fscholz", "zhaosource"]
-  },
-  "conflicting/Web/API/HTMLMediaElement/error_event": {
-    "modified": "2020-10-15T22:20:09.423Z",
-    "contributors": ["HaukWong"]
   }
 }

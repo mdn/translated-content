@@ -7,6 +7,7 @@ tags:
 translation_of: Web/API/Canvas_API/Manipulating_video_using_canvas
 original_slug: HTML/Manipulating_video_using_canvas
 ---
+
 {{CanvasSidebar}}
 
 En combinant les possibilités de l'élément [`video`](/En/HTML/Element/Video) avec celles de l'élément [`canvas`](/en/HTML/Canvas), vous pouvez manipuler les données vidéos en temps réel, et y incorporer une variété d'effets visuels. Ce tutoriel explique comment réaliser un travail d'incrustation "chroma-keying" (_fond vert_) en utilisant JavaScript.

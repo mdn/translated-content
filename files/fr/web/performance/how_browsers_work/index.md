@@ -8,6 +8,7 @@ tags:
   - Performance Web
 translation_of: Web/Performance/How_browsers_work
 ---
+
 Les utilisateurs veulent des expériences Web avec un contenu rapide à charger et une interaction fluide. Par conséquent, un développeur doit s'efforcer d'atteindre ces deux objectifs.
 
 Pour comprendre comment améliorer les performances et les performances perçues, il est utile de comprendre le fonctionnement du navigateur.

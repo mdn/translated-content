@@ -11,6 +11,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 original_slug: Mozilla/Add-ons/WebExtensions/extension_des_outils_de_developpement
 ---
+
 {{AddonSidebar}}
 
 > **Note :** Cette page décrit les API de devtools telles qu'elles existent dans Firefox 55. Bien que les API soient basées sur les  [API devtools de chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir quelles fonctionnalités sont actuellement manquantes, voir les [Limitations des APIs devtools](/fr/Add-ons/WebExtensions/Using_the_devtools_APIs#Limitations_of_the_devtools_APIs).

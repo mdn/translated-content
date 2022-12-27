@@ -4,6 +4,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 translation_of: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Third_party_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
 
 Jusqu'à présent, nous avons uniquement abordé des API qui sont fournies par le navigateur. Il en existe d'autres&nbsp;: de nombreux sites et services, tels que Google Maps, Twitter, Facebook, PayPal, etc. fournissent des API permettant aux développeuses et développeurs d'exploiter leurs données (par exemple d'afficher un flux Twitter sur un blog) ou leurs services (utiliser l'outil de connexion Facebook pour que des personnes se connectent par ce biais à votre application). Dans cet article, nous verrons les différences entre les API du navigateur et celles fournies par des services tiers (en anglais, on parle de «&nbsp;<i lang="en">third-party API</i>&nbsp;») et nous illustrerons certains cas d'usage pour ces API tierces.

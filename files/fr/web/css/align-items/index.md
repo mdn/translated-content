@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/align-items
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`align-items`** définit la valeur de {{cssxref("align-self")}} sur l'ensemble des éléments-fils directs.

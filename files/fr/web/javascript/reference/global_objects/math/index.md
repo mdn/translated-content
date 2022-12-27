@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math
 ---
+
 {{JSRef}}
 
 L'objet **`Math`** est un objet natif dont les méthodes et propriétés permettent l'utilisation de constantes et fonctions mathématiques. Cet objet n'est pas une fonction.

@@ -10,6 +10,7 @@ tags:
   - WebAPI
 translation_of: Web/API/Location/assign
 ---
+
 {{ APIRef("Location") }}
 
 La méthode **`Location.assign()`** charge et affiche dans la fenêtre le document situé à l'URL spécifiée.

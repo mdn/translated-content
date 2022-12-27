@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/counter-increment
 ---
+
 {{CSSRef}}
 
 La propriété **`counter-increment`** est utilisée afin d'augmenter la valeur d'un [compteur CSS](/fr/docs/Web/CSS/Compteurs_CSS) d'une valeur donnée.

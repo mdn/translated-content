@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/orientation
 ---
+
 {{CSSRef}}
 
 **`orientation`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée pour vérifier l'orientation de la zone d'affichage (_viewport_) (ou la boîte de la page pour les média paginés).

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration-skip
 ---
+
 {{CSSRef}}
 
 La propriété **`text-decoration-skip`** définit la façon dont les lignes décoratives doivent être appliquées aux éléments et aux caractères. Elle contrôle les lignes décoratives dessinées par l'élément courant ainsi que celles de ses ancêtres.

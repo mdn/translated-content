@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@match
 ---
+
 {{JSRef}}
 
 La méthode **`[@@match]()`** permet de récupérer les correspondances obtenues lorsqu'on teste une chaîne de caractères par rapport à une expression rationnelle (_regexp_).

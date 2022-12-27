@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/:host()
 original_slug: Web/CSS/:host()
 ---
+
 {{CSSRef}}
 
 La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host()`** permet de sélectionner l'hôte du _shadow DOM_ contenant le CSS à utiliser, uniquement si le sélecteur passé en argument correspond à l'élément hôte.

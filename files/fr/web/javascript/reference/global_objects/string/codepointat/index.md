@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/codePointAt
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/codePointAt
 ---
+
 {{JSRef}}
 
 La méthode **`codePointAt()`** renvoie un entier positif qui correspond au code Unicode (_code point_) du caractère de la chaîne à la position donnée.

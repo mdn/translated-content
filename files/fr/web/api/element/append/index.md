@@ -4,6 +4,7 @@ slug: Web/API/Element/append
 translation_of: Web/API/Element/append
 browser-compat: api.Element.append
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.append()`** ajoute un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères après le dernier enfant d'`Element`. Les chaînes de caractères sont insérées comme des nœuds [`Text`](/fr/docs/Web/API/Text).

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/Canvas_API/Tutorial/Compositing/Example
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition/Example
 ---
+
 {{CanvasSidebar}}
 
 Cet exemple illustre un certain nombre d'[opérations de composition](/fr/docs/Web/API/CanvasRenderingContext2D.globalCompositeOperation). Le résultat donne ceci:

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Not_defined
 original_slug: Web/JavaScript/Reference/Erreurs/Not_defined
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

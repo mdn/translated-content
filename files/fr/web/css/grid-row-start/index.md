@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-row-start
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-row-start`** définit le début de la position, sur une ligne, d'un élément placé sur la grille qui participe à une ligne, à un fragment de ligne ou rien (automatique). Par conséquent, cela définit également le début de la zone de la grille pour cet élément.

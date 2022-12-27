@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/idle/IdleState
 ---
+
 {{AddonSidebar()}}
 
 Chaîne d'écrivant l'état d'inactivité du périphérique.

@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Error
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error
 browser-compat: javascript.builtins.Error
 ---
+
 {{JSRef}}
 
 Les objets `Error` sont déclenchés lorsque des erreurs d'exécution surviennent. L'objet `Error` peut aussi être utilisé comme objet de base pour des exceptions spécifiques. Voir ci-dessous pour les types d'erreur natifs standards.

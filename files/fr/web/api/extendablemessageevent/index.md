@@ -10,6 +10,7 @@ tags:
   - Service Workers
 translation_of: Web/API/ExtendableMessageEvent
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 L'interface **`ExtendableMessageEvent`** de {{domxref("ServiceWorker_API", "ServiceWorker API")}} représentes un objet d'évenement qu'un évènement {{event("message_(ServiceWorker)","message")}} lance pour un service worker (quand un canal de message est reçu sur le {{domxref("ServiceWorkerGlobalScope")}} depuis un autre context) — étends la durée de vie de ces évènements.

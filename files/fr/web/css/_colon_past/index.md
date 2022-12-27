@@ -4,6 +4,7 @@ slug: Web/CSS/:past
 translation_of: Web/CSS/:past
 browser-compat: css.selectors.past
 ---
+
 {{CSSRef}}
 
 Le sélecteur de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:past`** est une pseudo-classe agissant dans la dimension temporelle qui cible n'importe quel élément apparaissant entièrement avant un élément correspondant à {{cssxref(":current")}}. Ce sélecteur peut par exemple servir dans le cas d'une vidéo ayant des sous-titres affichés à l'aide du format [WebVTT](/fr/docs/Web/API/WebVTT_API).

@@ -11,6 +11,7 @@ tags:
   - UI Events
 translation_of: Web/API/KeyboardEvent/key
 ---
+
 {{APIRef("DOM Events")}}
 
 La propriété en lecture seule de `key` de l'interface {{domxref("KeyboardEvent")}} retourne la valeur d’une ou plusieurs touches pressées par l’utilisateur, tout en tenant compte de l'état des touches de modification telles que la touche <kbd>Shift</kbd> (_majuscules_) ainsi que les paramètres régionaux des clavier et mise en page. Ce peut être l’une des valeurs suivantes :

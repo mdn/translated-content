@@ -18,6 +18,7 @@ tags:
 translation_of: Learn/JavaScript/First_steps/Arrays
 original_slug: Learn/JavaScript/First_steps/tableaux
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
 
 Dans le dernier article de ce module, nous examinerons les tableaux — une façon de stocker proprement une liste d'éléments de données sous un seul nom de variable. Ici nous verrons pourquoi c'est utile, puis nous apprendrons comment créer un tableau, y retrouver, y ajouter ou en enlever les éléments dedans, et quelques à‑côtés en bonus.

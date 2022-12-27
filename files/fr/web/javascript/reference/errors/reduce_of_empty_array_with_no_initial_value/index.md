@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
 original_slug: Web/JavaScript/Reference/Erreurs/Reduce_of_empty_array_with_no_initial_value
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

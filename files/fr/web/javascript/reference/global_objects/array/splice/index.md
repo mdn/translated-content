@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/splice
 ---
+
 {{JSRef}}
 
 La méthode **`splice()`** modifie le contenu d'un tableau en retirant des éléments et/ou en ajoutant de nouveaux éléments [à même le tableau](https://en.wikipedia.org/wiki/In-place_algorithm).On peut ainsi vider ou remplacer une partie d'un tableau.

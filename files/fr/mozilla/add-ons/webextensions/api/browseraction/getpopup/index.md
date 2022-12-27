@@ -13,6 +13,7 @@ tags:
   - getPopup
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getPopup
 ---
+
 {{AddonSidebar()}}
 
 Obtient le document HTML défini comme la popup pour cette action du navigateur.

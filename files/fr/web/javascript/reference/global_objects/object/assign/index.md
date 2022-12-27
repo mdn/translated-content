@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/assign
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/assign
 ---
+
 {{JSRef}}
 
 La méthode **`Object.assign()`** est utilisée afin de copier les valeurs de toutes les propriétés directes (non héritées) d'un objet qui sont énumérables sur un autre objet cible. Cette méthode renvoie l'objet cible.

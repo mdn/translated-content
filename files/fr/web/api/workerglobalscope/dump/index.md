@@ -3,6 +3,7 @@ title: WorkerGlobalScope.dump()
 slug: Web/API/WorkerGlobalScope/dump
 translation_of: Web/API/WorkerGlobalScope/dump
 ---
+
 {{APIRef("Web Workers API")}}
 
 > **Attention :** Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.

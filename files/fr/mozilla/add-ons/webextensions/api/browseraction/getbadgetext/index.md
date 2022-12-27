@@ -13,6 +13,7 @@ tags:
   - getBadgeText
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
 ---
+
 {{AddonSidebar()}}
 
 Obtient le texte du badge de l'action du navigateur.

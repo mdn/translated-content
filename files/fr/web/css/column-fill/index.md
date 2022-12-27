@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/column-fill
 ---
+
 {{CSSRef}}
 
 La propriété **`column-fill`** permet de contrôler la façon dont le contenu est réparti entre les colonnes. Le contenu peut être équilibré (afin de prendre la même hauteur sur toutes les colonnes) ou être réparti de façon automatique (avec `auto`) et remplir l'espace nécessaire.

@@ -3,6 +3,7 @@ title: AnalyserNode.getFloatTimeDomainData()
 slug: Web/API/AnalyserNode/getFloatTimeDomainData
 translation_of: Web/API/AnalyserNode/getFloatTimeDomainData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La méthode **`getFloatTimeDomainData()`** de l'interface {{ domxref("AnalyserNode") }} copie les données de forme d'onde ou du domaine temporel, dans un tableau {{domxref("Float32Array")}} passé en paramètre.

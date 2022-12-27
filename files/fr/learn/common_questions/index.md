@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/Common_questions
 original_slug: Apprendre/Common_questions
 ---
+
 {{LearnSidebar}}
 
 Cette section de la zone d'apprentissage est là pour fournir des réponses aux questions fréquentes qui peuvent survenir et qui ne concernent pas nécesserairement l'apprentissage du code (par exemple les articles sur [HTML](/fr/docs/Learn/HTML) ou [CSS](/fr/docs/Learn/CSS).) Ces articles sont conçus pour être lus de manière indépendante.

@@ -13,6 +13,7 @@ tags:
   - onErased
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
 ---
+
 {{AddonSidebar()}}
 
 L'événement **`onErased()`** de l'API {{WebExtAPIRef("downloads")}} se déclenche lorsqu'un téléchargement est effacé de l'historique du navigateur.

@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/19
 original_slug: Mozilla/Firefox/Versions/19
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 19, basé sur Gecko 19.0, est sorti le 19 février 2013. Cette page résume les principaux changements dans Firefox 19 qui sont utiles aux développeurs.

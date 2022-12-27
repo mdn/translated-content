@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getPanel
 ---
+
 {{AddonSidebar()}}
 
 Obtient une URL vers le document HTML qui définit le contenu de la barre latérale.

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/Class_selectors
 original_slug: Web/CSS/Sélecteurs_de_classe
 ---
+
 {{CSSRef}}
 
 Les **sélecteurs de classe** CSS permettent de cibler des éléments d'un document en fonction du contenu de l'attribut `class` de chaque élément.

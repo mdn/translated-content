@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/PI_Parameters
 original_slug: Web/XSLT/Paramètres_des_instructions_de_traitement
 ---
+
 ### Présentation
 
 XSLT permet de passer des paramètres à une feuille de style lors de son exécution. C'était déjà possible depuis quelques temps dans l'[XSLTProcessor](fr/XSLTProcessor) sous JavaScript, mais pas lors de l'utilisation de l'instruction de traitement (_PI_, pour Processing Instruction) `<?xml-stylesheet?>`.

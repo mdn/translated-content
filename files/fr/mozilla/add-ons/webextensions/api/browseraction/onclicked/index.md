@@ -13,6 +13,7 @@ tags:
   - onClicked
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/onClicked
 ---
+
 {{AddonSidebar()}}
 
 Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.

@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange
 ---
+
 {{AddonSidebar()}}
 
 Envoyé lorsqu'un onglet est agrandi.

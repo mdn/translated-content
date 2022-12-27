@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/import
 original_slug: Web/JavaScript/Reference/Instructions/import
 ---
+
 {{jsSidebar("Statements")}}
 
 L'instruction **`import`** est utilisée pour importer des liens qui sont exportés par un autre module. Les modules importés sont interprétés en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) dans tous les cas. L'instruction `import` ne peut pas être utilisée dans les scripts embarqués sauf si ceux-ci proviennent de ressources avec [`type="module"`](/fr/docs/Web/HTML/Element/script#Attributs).

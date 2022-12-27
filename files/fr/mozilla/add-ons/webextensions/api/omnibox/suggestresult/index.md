@@ -12,6 +12,7 @@ tags:
   - omnibox
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/SuggestResult
 ---
+
 {{AddonSidebar()}}
 
 Le type **`omnibox.SuggestResult`** définit une suggestion unique que l'extension peut ajouter à la liste déroulante de la barre d'adresse.

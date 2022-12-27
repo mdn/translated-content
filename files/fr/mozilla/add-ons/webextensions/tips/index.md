@@ -9,6 +9,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/Tips
 ---
+
 {{AddonSidebar}}
 
 Cette page contient divers conseils et astuces qui devraient être utiles à beaucoup de personnes développant des extensions à l'aide des API WebExtension.

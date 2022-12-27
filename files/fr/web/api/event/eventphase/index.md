@@ -5,6 +5,7 @@ page-type: web-api-instance-property
 translation_of: Web/API/Event/eventPhase
 browser-compat: api.Event.eventPhase
 ---
+
 {{ApiRef("DOM")}}
 
 La propriété en lecture seule **`eventPhase`**, rattachée à l'interface [`Event`](/fr/docs/Web/API/Event), indique la phase du flux d'évènement en cours d'évaluation.

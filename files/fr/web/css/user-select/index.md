@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/user-select
 ---
+
 {{CSSRef}}
 
 La propriété **`user-select`** permet de contrôler l'opération de [sélection](/fr/docs/Web/API/Selection). Cela n'a aucun effet sur le contenu qui est chargé dans les éléments de l'interface ({{Glossary("Chrome", "chrome")}}), sauf pour les boîtes de texte.

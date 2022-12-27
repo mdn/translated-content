@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/box-decoration-break
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`box-decoration-break`** définit la façon dont les propriétés {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}}, {{cssxref("border-image")}}, {{cssxref("box-shadow")}}, {{cssxref("margin")}} et {{cssxref("clip")}} sont appliquées sur un élément lorsque la boîte de celui-ci est fragmentée. La fragmentation apparaît lorsqu'une boîte en ligne s'étend sur plusieurs lignes ou lorsqu'un bloc s'étend sur plus d'une colonne lorsque qu'il est dans conteneur disposé en colonne ou lorsqu'un bloc déclenche un saut de page sur un média imprimé. Chaque « morceau » de l'élément est alors appelé un fragment.

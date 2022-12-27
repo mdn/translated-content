@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/overscroll-behavior
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`overscroll-behavior`** est une propriété raccourcie permettant de définir les propriétés {{cssxref("overscroll-behavior-x")}} et {{cssxref("overscroll-behavior-y")}}. Ces propriétés contrôlent le comportement du navigateur lorsqu'on dépasse la limite d'une zone de défilement (_scrolling_).

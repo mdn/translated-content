@@ -3,6 +3,7 @@ title: Navigator.languages
 slug: Web/API/Navigator/languages
 browser-compat: api.Navigator.languages
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 La propriété en lecture seule **`Navigator.languages`** renvoie un tableau de chaînes de caractères [`DOMString`](/fr/docs/Web/API/DOMString) qui représente les langues préférées de l'utilisatrice ou de l'utilisateur. Les langues sont représentées au format défini par [la RFC 5646, aussi connu sous le nom de balise BCP 47](https://datatracker.ietf.org/doc/html/rfc5646). Les éléments du tableau sont triés par ordre de préférence, la langue préférée étant située en première.

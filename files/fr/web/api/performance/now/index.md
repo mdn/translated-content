@@ -10,6 +10,7 @@ tags:
   - Reference
 translation_of: Web/API/Performance/now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 La méthode **`Performance.now()`** retourne une valeur de type {{domxref("DOMHighResTimeStamp")}}, mesurée en millisecondes et avec une précision de 5 millièmes de milliseconde (5 microsecondes).

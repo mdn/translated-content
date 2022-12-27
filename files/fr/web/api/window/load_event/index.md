@@ -8,6 +8,7 @@ browser-compat: api.Window.load_event
 l10n:
   sourceCommit: 95d6c222f9aba9a60dee4adc738d741a28c8b83a
 ---
+
 {{APIRef}}
 
 L'évènement **`load`** est déclenché lorsque la page et toutes ses ressources dépendantes (telles que des feuilles de style et des images) sont complètement chargées. Cela contraste avec [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event), qui est déclenché lorsque le <i lang="en">DOM</i> de la page est chargé sans attendre la fin du chargement des ressources.

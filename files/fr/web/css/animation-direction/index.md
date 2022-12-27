@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-direction
 ---
+
 {{CSSRef}}
 
 La propriété **`animation-direction`** indique si les cycles de l'animation doivent être joués dans le sens inverse et/ou de façon alternée.

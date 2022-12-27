@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-language-override
 ---
+
 {{CSSRef}}
 
 La propriété **`font-language-override`** permet de contrôler l'utilisation des glyphes spécifiques à une langue pour une police.

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/size
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/size
 ---
+
 {{JSRef}}
 
 L'accesseur **`size`** est une propriété qui renvoie le nombre d'éléments contenus dans un objet {{jsxref("Set")}}. Un objet `Set` correspondant à un ensemble, chaque élément qu'il contient y est unique.

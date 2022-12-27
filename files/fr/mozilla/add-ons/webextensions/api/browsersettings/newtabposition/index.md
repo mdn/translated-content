@@ -3,6 +3,7 @@ title: browserSettings.newTabPosition
 slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPosition
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPosition
 ---
+
 {{AddonSidebar()}}
 
 Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour contrôler la position des onglets nouvellement ouverts par rapport aux onglets déjà ouverts.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-variant-position
 ---
+
 {{CSSRef}}
 
 La propriété **`font-variant-position`** permet d'utiliser des glyphes de plus petite taille positionnés en exposant ou en indice par rapport à la ligne de base utilisée (qui reste la même).

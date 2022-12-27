@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Child_combinator
 original_slug: Web/CSS/Sélecteurs_enfant
 ---
+
 {{CSSRef("Selectors")}}
 
 Le combinateur `>` sépare deux sélecteurs et cible seulement les éléments correspondant au second sélecteur qui sont des enfants **directs** des éléments ciblés par le premier sélecteur.

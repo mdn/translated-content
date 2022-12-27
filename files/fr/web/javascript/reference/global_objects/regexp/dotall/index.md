@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/dotAll
 ---
+
 {{JSRef}}
 
 La propriété **`dotAll`** indique si le marqueur "`s`" est utilisé pour l'expression rationnelle. `dotAll` est une propriété en lecture seule et qui renseigne à propos de l'expression rationnelle courante.

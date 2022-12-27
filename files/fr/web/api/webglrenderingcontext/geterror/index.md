@@ -9,6 +9,7 @@ tags:
   - WebGLRenderingContext
 translation_of: Web/API/WebGLRenderingContext/getError
 ---
+
 {{APIRef("WebGL")}}
 
 La méthode **`WebGLRenderingContext.getError()`** de l'[API WebGL](/fr-Fr/docs/Web/API/WebGL_API) retourne des informations d'erreur.

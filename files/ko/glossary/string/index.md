@@ -1,7 +1,6 @@
 ---
 title: String
 slug: Glossary/String
-translation_of: Glossary/String
 ---
 특정한 컴퓨터 프로그래밍 언어에서 문자를 표현하는 데 사용되는, {{Glossary("character","문자")}} 열 시퀀스이다.
 

@@ -3,6 +3,7 @@ title: ':-moz-only-whitespace'
 slug: Web/CSS/:-moz-only-whitespace
 translation_of: Web/CSS/:-moz-only-whitespace
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 > **Note :** Dans la spécification {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}}, le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme `:-moz-only-whitespace` mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.

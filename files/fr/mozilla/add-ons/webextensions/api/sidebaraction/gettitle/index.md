@@ -12,6 +12,7 @@ tags:
   - sidebarAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
 ---
+
 {{AddonSidebar()}}
 
 Obtient le titre de la barre latérale.

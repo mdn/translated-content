@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe
 original_slug: Web/CSS/Layout_cookbook/Contribuer_à_une_recette
 ---
+
 {{CSSRef}}
 
 Si vous souhaitez contribuer en ajoutant une recette à celles présentées dans cette section de MDN, nous vous expliquons ici quelles étapes suivre pour que vos exemples soient publiés.

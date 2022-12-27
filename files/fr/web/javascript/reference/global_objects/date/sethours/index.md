@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setHours
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setHours
 ---
+
 {{JSRef}}
 
 La méthode **`setHours()`** définit les heures pour une date donnée, selon l'heure locale, et renvoie le nombre de millièmes de secondes écoulées entre le 1er janvier 1970 00:00:00 UTC et la nouvelle date mise à jour.

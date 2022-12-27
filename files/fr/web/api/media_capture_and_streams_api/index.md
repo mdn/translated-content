@@ -9,6 +9,7 @@ tags:
 translation_of: Web/API/Media_Streams_API
 original_slug: Web/API/Media_Streams_API
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 L'**API Processing MediaStream**, souvent appelée _Media Stream API_ ou _Stream API_, est la partie de [WebRTC](/fr/docs/WebRTC) décrivant un flux de données audio ou vidéo, les méthodes pour les manipuler, les contraintes associées au type de données, les erreurs et succès des callbacks avec les données asynchrones, et les évènements déclenchés durant le processus.

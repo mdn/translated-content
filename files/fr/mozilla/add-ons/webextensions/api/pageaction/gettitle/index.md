@@ -13,6 +13,7 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
 ---
+
 {{AddonSidebar()}}
 
 Obtient le titre de la page action.

@@ -13,6 +13,7 @@ tags:
   - getRecent
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
 ---
+
 {{AddonSidebar()}}
 
 La méthode `bookmarks.getRecent()` récupère un nombre spécifié de signets ajoutés le plus récemment en tant que tableau d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}}.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCMinutes
 ---
+
 {{JSRef}}
 
 La méthode **`getUTCMinutes()`** renvoie les minutes de la date renseignée, d'après UTC.

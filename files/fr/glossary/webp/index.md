@@ -10,6 +10,7 @@ tags:
 translation_of: Glossary/webp
 original_slug: Glossaire/webp
 ---
+
 **WebP** est un format d'image avec compression, avec ou sans perte, développé par Google.
 
 ## Voir aussi

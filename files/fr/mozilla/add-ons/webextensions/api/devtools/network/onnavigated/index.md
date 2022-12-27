@@ -11,6 +11,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/onNavigated
 ---
+
 {{AddonSidebar()}}
 
 Mise en place lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page

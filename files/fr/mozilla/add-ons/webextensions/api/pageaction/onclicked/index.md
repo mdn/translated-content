@@ -13,6 +13,7 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
 ---
+
 {{AddonSidebar}}
 
 Lancé quand l'icône de la page action est cliquée. Cet événement ne se déclenchera pas si l'action de la page comporte une fenêtre contextuelle.

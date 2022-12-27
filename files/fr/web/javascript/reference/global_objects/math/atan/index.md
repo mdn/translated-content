@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/atan
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/atan
 ---
+
 {{JSRef}}
 
 La fonction **`Math.atan()`** renvoie l'arc tangente d'un nombre exprimée en radians. Elle est définie par :

@@ -3,6 +3,7 @@ title: IDBObjectStore.deleteIndex()
 slug: Web/API/IDBObjectStore/deleteIndex
 translation_of: Web/API/IDBObjectStore/deleteIndex
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La méthode **`deleteIndex()`** de l'interface {{domxref("IDBObjectStore")}} supprime l'index dont le nom est passé en paramètre, du magasin d'objet relié ({{domxref("IDBObjectStore")}}).

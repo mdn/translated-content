@@ -8,6 +8,7 @@ tags:
 translation_of: Web/XSLT/Transforming_XML_with_XSLT/An_Overview
 original_slug: Web/XSLT/Transformations_XML_avec_XSLT/Présentation
 ---
+
 [« Transformations XML avec XSLT](/fr/docs/Transformations_XML_avec_XSLT)
 
 L'eXtensible Stylesheet Language/Transform est un langage très puissant, et une étude approfondie de celui-ci n'est pas l'objectif de ce document, mais une présentation succincte des concepts fondamentaux vous aidera à mieux appréhender la description des capacités de Netscape qui suit.

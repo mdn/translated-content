@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-right
 ---
+
 {{CSSRef}}
 
 La propriété **`margin-right`** d'un élément définit l'espace horizontal à droite qui formera la marge à droite. On peut avoir une marge droite négative.

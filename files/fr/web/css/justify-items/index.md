@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/justify-items
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`justify-items`** définit la valeur par défaut de {{cssxref("justify-self")}} pour tous les éléments d'une boîte et permet ainsi de définir le comportement par défaut pour la justification des éléments d'une boîte le long de l'axe en ligne (c'est-à-dire l'axe correspondant au sens d'écriture).

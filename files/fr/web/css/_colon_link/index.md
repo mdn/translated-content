@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:link
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:link`** permet de sélectionner les liens à l'intérieur d'éléments. Elle sélectionnera tout lien n'ayant pas été visité, même ceux qui seraient déjà mis en forme via des sélecteurs utilisant d'autres pseudo-classes comme {{cssxref(":hover")}}, {{cssxref(":active")}} ou {{cssxref(":visited")}}.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/parseInt
 ---
+
 {{JSRef}}
 
 La méthode **`Number.parseInt()`** analyse et convertit une chaine de caractères, fournie en argument, en un entier dans la base souhaitée.

@@ -8,6 +8,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.remainder
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur du reste (`%`) renvoie le reste de la division de l'opérande gauche par l'opérande droit. Le résultat a toujours le signe du numérateur.

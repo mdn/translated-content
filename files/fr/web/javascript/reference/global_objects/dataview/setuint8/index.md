@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setUint8
 ---
+
 {{JSRef}}
 
 La méthode **`setUint8()`** permet d'enregister un entier non-signé sur 8 bits à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.

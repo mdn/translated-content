@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/shape-image-threshold
 ---
+
 {{CSSRef}}
 
 La propriété **`shape-image-threshold`** définit le seuil, en terme de canal alpha, à utiliser pour extraire la forme d'une image. Cette forme pourra être utilisée pour {{cssxref("shape-outside")}}.

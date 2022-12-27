@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/RequestUpdateCheckStatus
 ---
+
 {{AddonSidebar()}}
 
 Résultat d'un appel à {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.

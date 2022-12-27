@@ -9,6 +9,7 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform-box
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`transform-box`** définit la boîte à laquelle les propriétés {{cssxref("transform")}} et {{cssxref("transform-origin")}} font référence.

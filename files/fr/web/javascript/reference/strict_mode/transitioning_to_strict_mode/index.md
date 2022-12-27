@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 original_slug: Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict
 ---
+
 {{jsSidebar("More")}}
 
 Le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) fut introduit avec ECMAScript 5 et est désormais présent dans les principaux navigateurs. Pour indiquer au navigateur l'utilisation de ce mode, il suffit d'ajouter `"use strict";` au début du code source. En revanche, il faut un peu plus de travail afin de migrer une base de code existante afin qu'elle utilise intégralement le mode strict.

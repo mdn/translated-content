@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/push
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/push
 ---
+
 {{JSRef}}
 
 La méthode **`push()`** ajoute un ou plusieurs éléments à la fin d'un tableau et retourne la nouvelle taille du tableau.

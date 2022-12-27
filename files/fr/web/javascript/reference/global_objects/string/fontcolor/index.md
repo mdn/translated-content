@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fontcolor
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/fontcolor
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`fontcolor()`** permet de créer un élément {{HTMLElement("font")}} qui permet d'afficher la chaine de caractères dans une fonte utilisant la couleur donnée.

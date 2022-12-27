@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:-moz-last-node
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 La pseudo-classe **`:-moz-last-node`** correspond à un élément si celui-ci est le dernier nœud d'un autre élément. Cette pseudo-classe est différente de {{cssxref(":last-child")}} car elle ne cible pas le dernier élément qui possède du texte (hors blancs).

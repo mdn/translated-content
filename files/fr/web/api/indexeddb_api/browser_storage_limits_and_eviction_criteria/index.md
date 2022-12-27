@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria
 original_slug: Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria
 ---
+
 {{DefaultAPISidebar("IndexedDB")}}
 
 > **Note :** Il existe un certain nombre de technologies Web qui stockent des données d'un type ou d'un autre du côté client (c'est-à-dire sur le disque local). Le processus par lequel le navigateur calcule l'espace alloué au stockage de données Web et les données à supprimer quand la limite est atteinte n'est pas simple et diffère d'un navigateur à l'autre. Cet article tente d'expliquer comment tout cela fonctionne.

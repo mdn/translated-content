@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 original_slug: Web/JavaScript/Reference/Erreurs/Redeclared_parameter
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

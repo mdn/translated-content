@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/byteLength
 ---
+
 {{JSRef}}
 
 L'accesseur **`byteLength`** est une propriété représentant la longueur d'un {{jsxref("ArrayBuffer")}} en octets.

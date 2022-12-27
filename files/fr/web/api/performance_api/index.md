@@ -9,6 +9,7 @@ tags:
   - Performance Web
 translation_of: Web/API/Performance_API
 ---
+
 {{DefaultAPISidebar("High Resolution Time")}}
 
 La norme [High Resolution Time](https://www.w3.org/TR/hr-time/) définit l'interface [`Performance`](/fr/docs/Web/API/Performance) qui prend en charge les mesures de latence côté client au sein des applications. Les interfaces [`Performance`](/fr/docs/Web/API/Performance) sont considérées comme étant à _haute résolution_, car elles sont précises au millième de milliseconde (sous réserve de contraintes matérielles ou logicielles).

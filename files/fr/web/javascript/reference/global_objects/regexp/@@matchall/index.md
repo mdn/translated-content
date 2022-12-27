@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@matchAll
 ---
+
 {{JSRef}}
 
 La méthode **`[@@matchAll]`** renvoie l'ensemble des correspondances d'une expression rationnelle sur une chaîne de caractères.

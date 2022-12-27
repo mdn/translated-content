@@ -8,6 +8,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 original_slug: Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_role_listbox
 ---
+
 ### Description
 
 Cette technique présente l’utilisation du rôle [listbox](http://www.w3.org/TR/wai-aria/roles#listbox) et décrit les effets produits sur les navigateurs et les technologies d’assistance.

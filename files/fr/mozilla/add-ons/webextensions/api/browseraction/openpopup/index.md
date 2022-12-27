@@ -12,6 +12,7 @@ tags:
   - openPopup
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup
 ---
+
 {{AddonSidebar()}}Ouvrez le popup de l'action du navigateur.
 
 Vous pouvez uniquement appeler cette fonction à partir du gestionnaire pour une [action utilisateur](/fr/Add-ons/WebExtensions/User_actions).

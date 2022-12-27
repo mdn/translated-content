@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/devtools
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools
 browser-compat: webextensions.api.devtools
 ---
+
 {{AddonSidebar}}
 
 Cette API permet aux extensions d'interagir avec les [outils de développement (<i lang="en">devtools</i>)](/fr/docs/Glossary/Developer_Tools) du navigateur. Elle peut être utilisée pour créer des pages d'outils de développement, interagir avec la fenêtre qui est inspectée, inspecter la page réseau des outils.

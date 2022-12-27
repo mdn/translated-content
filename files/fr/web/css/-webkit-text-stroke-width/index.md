@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-text-stroke-width
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-text-stroke-width`** permet de définir l'épaisseur du trait qui entoure les lettres du texte.

@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/ins
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<ins>`** représente un fragment de texte qui a été ajouté dans un document.

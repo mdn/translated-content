@@ -12,6 +12,7 @@ tags:
   - websites
 translation_of: Mozilla/Add-ons/WebExtensions/API/privacy/websites
 ---
+
 {{AddonSidebar}}
 
 La propriété {{WebExtAPIRef("privacy.websites")}} contient les paramètres liés à la vie privée qui contrôlent la façon dont le navigateur interargit avec les sites web. Chaque propriété est un objet  {{WebExtAPIRef("types.BrowserSetting")}}.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/counter-reset
 ---
+
 {{CSSRef}}
 
 La propriété **`counter-reset`** permet de réinitialiser un [compteur CSS](/fr/docs/Web/CSS/Compteurs_CSS) avec une valeur donnée.

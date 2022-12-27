@@ -4,6 +4,7 @@ slug: Web/CSS/font-variant
 translation_of: Web/CSS/font-variant
 browser-compat: css.properties.font-variant
 ---
+
 {{CSSRef}}
 
 La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) [CSS](/fr/docs/Web/CSS) **`font-variant`** permet de définir tous les paramètres typographiques pour une police de caractères.

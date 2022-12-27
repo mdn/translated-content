@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/CSS/Building_blocks/A_cool_looking_box
 original_slug: Apprendre/CSS/styliser_boites/A_cool_looking_box
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
 Avec cette évaluation, vous obtiendrez une meilleure pratique dans la création de boîtes d'aspect rafraîchissant en faisant en sorte qu'elles attirent le regard.

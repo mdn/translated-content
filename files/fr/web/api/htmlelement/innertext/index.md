@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/innerText
 translation_of: Web/API/HTMLElement/innerText
 original_slug: Web/API/Node/innerText
 ---
+
 {{APIRef("DOM")}}
 
 ## Sommaire

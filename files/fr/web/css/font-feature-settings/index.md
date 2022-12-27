@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-feature-settings
 ---
+
 {{CSSRef}}
 
 La propriété **`font-feature-settings`** permet de contrôler les fonctionnalités typographiques des polices OpenType.

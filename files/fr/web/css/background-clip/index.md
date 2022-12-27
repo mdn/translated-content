@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/background-clip
 ---
+
 {{CSSRef}}
 
 La propriété **`background-clip`** définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (_padding_) ou la boîte de contenu.

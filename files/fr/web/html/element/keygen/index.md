@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/keygen
 ---
+
 {{deprecated_header}}{{HTMLRef}}
 
 L'élément HTML **`<keygen>`** existe afin de faciliter la génération de clés et l'envoi d'une clé publique via un formulaire HTML. Le mécanisme utilisé est conçu pour être utilisé avec les systèmes de gestion de certificats électroniques. L'élément `keygen` est prévu pour être utilisé dans un formulaire HTML avec d'autres informations permettant de construire une requête de certificat, le résultat du processus étant un certificat signé.

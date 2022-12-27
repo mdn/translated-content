@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/entries
 ---
+
 {{JSRef}}
 
 La méthode **`entries()`** renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau.

@@ -12,6 +12,7 @@ tags:
   - open
 translation_of: Web/API/CacheStorage/open
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La fonction **`open()`**de l'interface {{domxref("CacheStorage")}} retourne une {{jsxref("Promise", "Promesse")}} qui renvoie l'objet {{domxref("Cache")}} correspondant a un `cacheName`.

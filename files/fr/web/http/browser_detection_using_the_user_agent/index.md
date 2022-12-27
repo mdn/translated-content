@@ -4,6 +4,7 @@ slug: Web/HTTP/Browser_detection_using_the_user_agent
 translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
 ---
+
 {{HTTPSidebar}}
 
 Afficher des pages web ou des services en fonction du navigateur est généralement une mauvaise idée. Le Web se doit d'être accessible à tout le monde, sans prendre en compte le navigateur ou l'appareil utilisé. Il existe différentes façons de développer votre site web afin de l'améliorer progressivement en se basant sur des fonctionnalités standard plutôt qu'en traitant chaque navigateur de manière spécifique.

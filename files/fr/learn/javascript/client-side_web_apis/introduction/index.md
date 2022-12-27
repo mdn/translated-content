@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/JavaScript/Client-side_web_APIs/Introduction
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
 Tout d'abord, nous verrons dans les grandes lignes ce qu'est une API — leur fonctionnement, comment les utiliser dans votre code, leur structure. Nous verrons également quelles sont les principales API et leur utilisation.

@@ -4,6 +4,7 @@ slug: Web/CSS/box-lines
 translation_of: Web/CSS/box-lines
 browser-compat: css.properties.box-lines
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 > **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<i lang="en">flexbox</i>) et a été remplacée dans une version plus récente de la spécification. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations.

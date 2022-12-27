@@ -11,6 +11,7 @@ tags:
   - has
 translation_of: Web/API/FormData/has
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 La méthode **`has()`** de l'interface {{domxref("FormData")}} renvoie un booléen indiquant si un objet `FormData` contient une certaine clé.

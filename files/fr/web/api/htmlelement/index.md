@@ -5,6 +5,7 @@ translation_of: Web/API/HTMLElement
 page-type: web-api-interface
 browser-compat: api.HTMLElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLElement`** représente n'importe quel élément [HTML](/fr/docs/Web/HTML). Certains éléments implémentent directement cette interface tandis que d'autres implémentent une interface qui hérite de celle-ci.

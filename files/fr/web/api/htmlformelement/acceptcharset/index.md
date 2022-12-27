@@ -5,6 +5,7 @@ tags:
   - HTMLFormElement
 translation_of: Web/API/HTMLFormElement/acceptCharset
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`HTMLFormElement.acceptCharset`** représente une liste des codages de caratères acceptés par l'élément FORM concerné. Les valeurs de cette liste peuvent être séparés par des virgules ou des espaces.

@@ -9,6 +9,7 @@ tags:
   - Sélecteur
 translation_of: Web/CSS/Pseudo-classes
 ---
+
 {{CSSRef}}
 
 Une **pseudo-classe** est un mot-clé qui peut être ajouté à un sélecteur afin d'indiquer l'état spécifique dans lequel l'élément doit être pour être ciblé par la déclaration. La pseudo-classe {{cssxref(":hover")}}, par exemple, permettra d'appliquer une mise en forme spécifique lorsque l'utilisateur survole l'élément ciblé par le sélecteur (changer la couleur d'un bouton par exemple).

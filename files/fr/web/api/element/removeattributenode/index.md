@@ -8,6 +8,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/removeAttributeNode
 ---
+
 {{ APIRef("DOM") }}
 
 `removeAttributeNode` enlève l'attribut spécifié de l'élément courant.

@@ -11,6 +11,7 @@ tags:
   - onInstalled
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
 ---
+
 {{AddonSidebar()}}
 
 Action quand une extension est installée.

@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/XPath
 original_slug: Glossaire/XPath
 ---
+
 **XPath** est un langage de requêtes permettant d'accéder aux sections et contenus d'un document {{glossary("XML")}}.
 
 ## Voir aussi

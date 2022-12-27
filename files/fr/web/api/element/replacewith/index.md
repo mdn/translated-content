@@ -4,6 +4,7 @@ slug: Web/API/Element/replaceWith
 translation_of: Web/API/Element/replaceWith
 browser-compat: api.Element.replaceWith
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Element.replaceWith()`** remplace l'élément courant dans la liste des enfants de son parent par un ensemble d'objets [`Node`](/fr/docs/Web/API/Node) ou de chaînes de caractères.

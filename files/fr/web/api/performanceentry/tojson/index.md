@@ -11,6 +11,7 @@ tags:
   - Performance Web
 translation_of: Web/API/PerformanceEntry/toJSON
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 La méthode **`toJSON()`** permet de sérialiser l'objet [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) courant et renvoie une représentation JSON de l'objet.

@@ -12,6 +12,7 @@ tags:
   - keys
 translation_of: Web/API/Cache/keys
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 La méthode **`keys()`** de l'interface {{domxref("Cache")}} retourne une {{jsxref("Promise", "Promesse")}} qui est résolue en un tableau de clé de {{domxref("Cache")}}.

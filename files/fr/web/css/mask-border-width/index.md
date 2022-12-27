@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-border-width
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété CSS **`mask-border-width`** définit la largeur [du masque de bordure](/fr/docs/Web/CSS/mask-border) d'un élément.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/page-break-inside
 ---
+
 {{CSSRef}}
 
 > **Attention :** Cette propriété a été remplacée par la propriété {{cssxref("break-inside")}}.

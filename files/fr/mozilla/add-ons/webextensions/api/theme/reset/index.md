@@ -12,6 +12,7 @@ tags:
   - reset
 translation_of: Mozilla/Add-ons/WebExtensions/API/theme/reset
 ---
+
 {{AddonSidebar()}}
 
 Réinitialise tout thème appliqué à l'aide de la méthode {{WebExtAPIRef("theme.update()")}}

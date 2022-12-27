@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/color
 ---
+
 {{CSSRef}}
 
 La propriété **`color`** définit la couleur de premier plan d'un élément texte et de ses éventuelles [décorations](/fr/docs/Web/CSS/text-decoration). Elle définit également la valeur de {{cssxref("currentColor")}} qui peut être utilisée pour d'autres propriétés (par exemple comme valeur par défaut pour {{cssxref("border-color")}}).

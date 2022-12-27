@@ -1,11 +1,6 @@
 ---
 title: 전역 객체
 slug: Glossary/Global_object
-tags:
-  - CodingScripting
-  - 용어
-  - 전역 객체
-translation_of: Glossary/Global_object
 ---
 전역 객체 {{glossary("object")}} 는 전역 범위 {{glossary("global scope")}} 에 항상 존재하는 객체를 의미합니다.
 

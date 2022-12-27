@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaine de caractères représentant l'objet renseigné.

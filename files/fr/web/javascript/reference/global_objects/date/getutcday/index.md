@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDay
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCDay
 ---
+
 {{JSRef}}
 
 La méthode **`getUTCDay()`** renvoie le jour de la semaine pour la date renseignée d'après UTC. La numérotation commence à 0, et dimanche est considéré comme le premier jour de la semaine.

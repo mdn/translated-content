@@ -3,6 +3,7 @@ title: DOMTokenList.replace()
 slug: Web/API/DOMTokenList/replace
 translation_of: Web/API/DOMTokenList/replace
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`replace()`** de l'interface {{domxref("DOMTokenList")}} remplace une marque _(token)_ existante par une nouvelle marque.

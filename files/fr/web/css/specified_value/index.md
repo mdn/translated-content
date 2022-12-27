@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/specified_value
 original_slug: Web/CSS/Valeur_spécifiée
 ---
+
 {{CSSRef}}
 
 La **valeur définie** d'une propriété CSS est celle explicitement définie dans la feuille de style ou grâce au style de son élément parent. Elle est déterminée selon une des trois méthodes suivantes :

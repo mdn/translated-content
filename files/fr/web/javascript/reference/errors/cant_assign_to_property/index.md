@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_assign_to_property
 original_slug: Web/JavaScript/Reference/Erreurs/Cant_assign_to_property
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

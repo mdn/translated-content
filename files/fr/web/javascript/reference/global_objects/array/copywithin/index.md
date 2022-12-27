@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/copyWithin
 ---
+
 {{JSRef}}
 
 La méthode **`copyWithin()`** effectue une copie superficielle (_shallow copy_) d'une partie d'un tableau sur ce même tableau et le renvoie, sans modifier sa taille.

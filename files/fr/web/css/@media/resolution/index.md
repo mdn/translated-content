@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/resolution
 ---
+
 {{CSSRef}}
 
 **`resolution`** est une caractéristique média CSS dont la valeur représente la densité de pixels de l'appareil d'affichage.

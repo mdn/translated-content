@@ -13,6 +13,7 @@ tags:
   - setIcon
 translation_of: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
 ---
+
 {{AddonSidebar()}}
 
 Définit l'icône pour l'action du navigateur.

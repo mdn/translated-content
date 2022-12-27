@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 original_slug: Mozilla/Add-ons/WebExtensions/Ajouter_une_page_de_paramètres
 ---
+
 {{AddonSidebar}}
 
 Une page de paramètres donne aux utilisateurs la possiblité de voir et de changer les paramètres (parfois aussi appelée "préférences" ou "options") de l'extension.

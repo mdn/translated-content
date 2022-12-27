@@ -4,6 +4,7 @@ slug: Web/HTTP/Headers/Feature-Policy
 translation_of: Web/HTTP/Headers/Feature-Policy
 browser-compat: http.headers.Feature-Policy
 ---
+
 {{HTTPSidebar}}{{SeeCompatTable}}
 
 > **Attention :** Cet en-tête a maintenant été renommé `Permissions-Policy` dans la spécification, et cet article sera mis à jour pour refléter ce changement.

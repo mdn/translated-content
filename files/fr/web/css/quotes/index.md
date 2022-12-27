@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/CSS/quotes
 ---
+
 {{CSSRef}}
 
 La propriété **`quotes`** indique la façon dont les marques de citation sont affichées.

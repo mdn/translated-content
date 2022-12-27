@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/Notification/onshow
 original_slug: Web/API/notification/onshow
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété **`onshow`** de l'interface {{domxref ("Notification")}} définit un écouteur d'événements pour recevoir des événements {{domxref ("Element/show_event", "show")}}. Ces événements se produisent lorsqu'une {{domxref ("Notification")}} est affiché.

@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Grouping
 original_slug: Web/JavaScript/Reference/Opérateurs/Groupement
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur de groupement `( )` contrôle la précédence de l'évaluation dans les expressions.

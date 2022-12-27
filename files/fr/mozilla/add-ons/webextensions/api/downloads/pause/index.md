@@ -13,6 +13,7 @@ tags:
   - pause
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/pause
 ---
+
 {{AddonSidebar()}}
 
 La fonction **`pause()`** de l'API {{WebExtAPIRef("downloads")}} interrompt un téléchargement.

@@ -13,6 +13,7 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
 ---
+
 {{AddonSidebar()}}
 
 Mise en place lorsque une liste d'onglets fermes ou de fenêtre changes.

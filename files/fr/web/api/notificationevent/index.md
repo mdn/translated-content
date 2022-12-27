@@ -9,6 +9,7 @@ tags:
   - ServiceWorker
 translation_of: Web/API/NotificationEvent
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 L'interface **`NotificationEvent`** représente un évènement de clic pour une notification et qui est dispatché vers le {{domxref("ServiceWorkerGlobalScope")}} d'un {{domxref("ServiceWorker")}}.

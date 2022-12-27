@@ -3,6 +3,7 @@ title: Streams API
 slug: Web/API/Streams_API
 translation_of: Web/API/Streams_API
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 L'API Streams permet à JavaScript d'accèder par programmation aux flux de données reçus sur le réseau et de les traiter selon les souhaits du développeur.

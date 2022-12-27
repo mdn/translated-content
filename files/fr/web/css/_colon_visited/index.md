@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:visited
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:visited`** permet de modifier l'aspect d'un lien après que l'utilisateur l'a visité. Pour des raisons relatives à la vie privée, les propriétés qui peuvent être utilisées sont restreintes.

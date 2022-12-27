@@ -10,6 +10,7 @@ tags:
   - Interface
 translation_of: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`HTMLFormElement`** représente un élément  {{HTMLElement("form")}} dans le DOM ; il peut être utilisé pour accéder et, dans quelques cas, modifier l'aspect du formulaire, ainsi que pour accéder à ses éléments composants.

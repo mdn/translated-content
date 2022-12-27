@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/visibility
 ---
+
 {{CSSRef}}
 
 La propriété **`visibility`** peut être utilisée afin de cacher un élément tout en conservant occupé l'espace dans lequel il aurait été visible. Elle permet aussi de masquer des lignes ou des colonnes dans un tableau (cf. {{HTMLElement("table")}}).

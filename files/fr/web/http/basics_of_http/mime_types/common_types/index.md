@@ -9,6 +9,7 @@ tags:
   - Video
 translation_of: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ---
+
 {{HTTPSidebar}}
 
 Voici une liste de types MIME, associés par type et ordonnée par extension.

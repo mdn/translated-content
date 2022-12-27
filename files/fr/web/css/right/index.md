@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/right
 ---
+
 {{CSSRef}}
 
 La propriété **`right`** définit, en partie, la position des éléments positionnés. La propriété `right` n'a aucun effet sur les éléments non-positionnés.

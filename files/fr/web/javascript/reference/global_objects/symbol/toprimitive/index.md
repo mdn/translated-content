@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/toPrimitive
 ---
+
 {{JSRef}}
 
 Le symbole « connu » **`Symbol.toPrimitive`** définit une fonction qui est appelée pour convertir un objet en une valeur primitive.

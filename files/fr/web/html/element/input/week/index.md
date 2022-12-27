@@ -4,6 +4,7 @@ slug: Web/HTML/Element/input/week
 translation_of: Web/HTML/Element/input/week
 browser-compat: html.elements.input.input-week
 ---
+
 {{HTMLRef}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`week`** permettent de créer des champs de saisie où l'on peut saisir une année et le numéro de la semaine pendant cette année (allant de 1 à 52 ou 53, suivant la norme [ISO 8601](https://fr.wikipedia.org/wiki/ISO_8601#Numéro_de_semaine)).

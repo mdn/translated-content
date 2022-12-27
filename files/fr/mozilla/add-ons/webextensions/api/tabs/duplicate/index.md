@@ -4,6 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
 browser-compat: webextensions.api.tabs.duplicate
 ---
+
 {{AddonSidebar()}}
 
 Duplique un onglet dont l'identifiant est donné.

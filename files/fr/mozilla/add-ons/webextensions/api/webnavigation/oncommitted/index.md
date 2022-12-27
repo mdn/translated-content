@@ -13,6 +13,7 @@ tags:
   - webNavigations
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'une navigation est validée. Au moins une partie du nouveau document a été reçue du serveur et le navigateur a décidé de passer au nouveau document.

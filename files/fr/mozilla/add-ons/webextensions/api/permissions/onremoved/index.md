@@ -11,6 +11,7 @@ tags:
   - onRemoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved
 ---
+
 {{AddonSidebar()}}
 
 Activé lorsque certaines permissions sont supprimés de l'extension.

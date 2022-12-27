@@ -13,6 +13,7 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 ---
+
 {{AddonSidebar()}}
 
 Cause de la navigation: par exemple, l'utilisateur a cliqué sur un lien, ou a tapé une adresse, ou a cliqué sur un signet.

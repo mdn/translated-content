@@ -7,6 +7,7 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Content-Disposition
 ---
+
 {{HTTPSidebar}}
 
 Dans une réponse HTTP régulière, l'en-tête de réponse `Content-Disposition` est un en-tête indiquant si le contenu devrait être affiché en ligne dans le navigateur, c'est-à-dire en tant que page Web, dans une page Web ou en pièce jointe qui sera téléchargé et enregistré localement.

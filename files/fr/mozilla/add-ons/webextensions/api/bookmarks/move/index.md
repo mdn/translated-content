@@ -13,6 +13,7 @@ tags:
   - move
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
 ---
+
 {{AddonSidebar()}}
 
 La méthode **`bookmarks.move()`** déplace le  {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à la destination spécifiée dans l'arborescence des signets. Cela vous permet de déplacer un signet vers un nouveau dossier et / ou une position dans le dossier.

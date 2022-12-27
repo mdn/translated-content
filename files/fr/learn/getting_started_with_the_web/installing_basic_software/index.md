@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 original_slug: Apprendre/Commencer_avec_le_web/Installation_outils_de_base
 ---
+
 {{LearnSidebar}}
 {{NextMenu("Apprendre/Commencer_avec_le_web/Quel_aspect_pour_votre_site","Apprendre/Commencer_avec_le_web")}}
 

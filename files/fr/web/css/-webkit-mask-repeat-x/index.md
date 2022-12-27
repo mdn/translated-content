@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-mask-repeat-x
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-mask-repeat-x`** définit la façon dont une image de masque est répétée horizontalement.

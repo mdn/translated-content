@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/isPrototypeOf
 ---
+
 {{JSRef}}
 
 La méthode **`isPrototypeOf()`** permet de tester si un objet existe dans la chaîne de prototypes d'un autre objet.

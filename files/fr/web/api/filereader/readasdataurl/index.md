@@ -7,6 +7,7 @@ browser-compat: api.FileReader.readAsDataURL
 l10n:
   sourceCommit: cd997ca39d8f0ce5511bc41a9bc58310ac69cb40
 ---
+
 {{APIRef("File API")}}
 
 La méthode **`FileReader.readAsDataURL()`** est utilisée afin de lire le contenu d'un blob ([`Blob`](/fr/docs/Web/API/Blob)) ou d'un fichier ([`File`](/fr/docs/Web/API/File)). Lorsque l'opération de lecture est terminée, [`readyState`](/fr/docs/Web/API/FileReader/readyState) prend la valeur `DONE`, et l'évènement [`loadend`](/fr/docs/Web/API/XMLHttpRequest/loadend_event) est déclenché. À partir de ce moment, la propriété [`result`](/fr/docs/Web/API/FileReader/result) contient les données sous la forme d'une [URL de données](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) qui représente les données du fichier sous la forme d'une chaîne de caractères encodée en base64.

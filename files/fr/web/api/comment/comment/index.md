@@ -7,6 +7,7 @@ tags:
   - DOM
 translation_of: Web/API/Comment/Comment
 ---
+
 {{ApiRef("DOM")}}{{seeCompatTable}}
 
 Le constructeur **`Comment()`** renvoie un objet {{domxref("Comment")}} _(Commentaire)_ nouvellement créé avec le {{domxref ("DOMString")}} donné en paramètre comme contenu textuel.

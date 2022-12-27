@@ -4,6 +4,7 @@ slug: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 translation_of: Web/API/Canvas_API/Tutorial/Optimizing_canvas
 original_slug: Web/API/Canvas_API/Tutoriel_canvas/Optimizing_canvas
 ---
+
 {{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility", "Web/API/Canvas_API/Tutorial/Finale")}}
 
 L'élément {{HTMLElement("canvas")}} est l'un des standards les plus utilisés pour le rendu graphique 2D sur le web. Il est surtout utilisé dans les jeux et les visualisations complexes. Cependant, les sites et applications web poussent les canvas à leurs limites, et les performances commencent à en pâtir. Cet article propose des suggestions pour optimiser votre utilisation de l'élément canvas, et pour être certain que votre site ou application web fonctionne bien.

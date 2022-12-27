@@ -13,6 +13,7 @@ tags:
   - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage
 ---
+
 {{AddonSidebar()}}
 
 Obtient la langue de l'interface utilisateur du navigateur. Ceci est différent de {{WebExtAPIRef('i18n.getAcceptLanguages')}} qui renvoie les langues utilisateur préférées.

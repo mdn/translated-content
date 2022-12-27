@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator
 browser-compat: javascript.builtins.Intl.Collator
 ---
+
 {{JSRef}}
 
 L'objet **`Intl.Collator`** permet de comparer des chaînes de caractères en tenant compte de la locale.

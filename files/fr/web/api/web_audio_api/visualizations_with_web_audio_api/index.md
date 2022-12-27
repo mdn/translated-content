@@ -3,6 +3,7 @@ title: Visualisations avec la Web Audio API
 slug: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 translation_of: Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API
 ---
+
 L'une des fonctionnalités les plus intéressantes de la Web Audio API est la possibilité d'extraire de la source audio la fréquence, la forme d'onde et d'autres données, qui permettent de créer des visualisations. Cet article explique comment, et fournit quelques exemples basiques.
 
 > **Note :** Vous pouvez trouver des exemples de tous les extraits de the code dans notre démo [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/).

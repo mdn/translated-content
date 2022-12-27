@@ -13,6 +13,7 @@ tags:
   - getAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/commands/getAll
 ---
+
 {{AddonSidebar()}}
 
 Obient toutes les commandes pour l'exécution que vous avez enregistré à l'aide d'une des [`commandes` clef du manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).

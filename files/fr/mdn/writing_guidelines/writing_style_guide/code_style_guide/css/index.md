@@ -10,6 +10,7 @@ tags:
 translation_of: MDN/Guidelines/Code_guidelines/CSS
 original_slug: MDN/Guidelines/Code_guidelines/CSS
 ---
+
 {{MDNSidebar}}
 
 Les directives suivantes couvrent la manière d'écrire les CSS pour les exemples de code MDN.

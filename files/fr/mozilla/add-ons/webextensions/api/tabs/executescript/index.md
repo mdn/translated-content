@@ -14,6 +14,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
 ---
+
 {{AddonSidebar()}}
 
 Injecte du code JavaScript dans une page.

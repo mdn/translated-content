@@ -10,6 +10,7 @@ tags:
 translation_of: Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid
 original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS
 ---
+
 {{CSSRef}}
 
 {{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Les_concepts_de_base", "Web/CSS/CSS_Grid_Layout/D%C3%A9finir_des_zones_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}

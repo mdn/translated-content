@@ -8,6 +8,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@document
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La [règle @ CSS](/fr/docs/Web/CSS/R%C3%A8gles_@) **`@document`** restreint les règles qu'elle contient en fonction de l'URL du document. Elle est principalement conçue pour les feuilles de style utilisateur, bien qu'elle puisse être également utilisée pour les feuilles de style d'auteur.

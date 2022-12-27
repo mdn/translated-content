@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/max
 ---
+
 {{JSRef}}
 
 La fonction **`Math.max()`** renvoie le plus grand nombre d'une série de 0 ou plusieurs nombres.

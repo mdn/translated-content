@@ -7,6 +7,7 @@ tags:
   - WebGLShader
 translation_of: Web/API/WebGLShader
 ---
+
 {{APIRef("WebGL")}}
 
 Le **WebGLShader** fait partie de l'[API WebGL](/fr-FR/docs/Web/API/WebGL_API) et peut être un shader de sommet ou de fragment. Un {{domxref ("WebGLProgram")}} requiert les deux types de shaders.

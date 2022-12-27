@@ -4,6 +4,7 @@ slug: Learn/Server-side/First_steps/Client-Server_overview
 translation_of: Learn/Server-side/First_steps/Client-Server_overview
 original_slug: Learn/Server-side/Premiers_pas/Client-Serveur
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 Maintenant que vous connaissez le but et le bénéfice de la programmation côté serveur, nous allons analyser en détails ce qui se passe quand un serveur reçoit une requête dynamique de la part d'un navigateur. Comme la plupart des sites gèrent le code côté serveur (requêtes et réponses) de la même manière, cela vous aidera à comprendre ce que vous devrez faire ensuite en écrivant votre propre code.

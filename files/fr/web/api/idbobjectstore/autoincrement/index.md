@@ -3,6 +3,7 @@ title: IDBObjectStore.autoIncrement
 slug: Web/API/IDBObjectStore/autoIncrement
 translation_of: Web/API/IDBObjectStore/autoIncrement
 ---
+
 {{ APIRef("IndexedDB") }}
 
 La propriété **`autoIncrement`** de l'interface {{domxref("IDBObjectStore")}} renvoie la position du drapeau d’incrémentation automatique du magasin d'objet {{domxref("IDBObjectStore","relié")}}.

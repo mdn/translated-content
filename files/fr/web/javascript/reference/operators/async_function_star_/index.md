@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Operators/async_function*
 l10n:
   sourceCommit: 1be604140d8179f54bc180af6cd4bc27576219de
 ---
+
 {{jsSidebar("Operators")}}
 
 Les mots-clés **`async function*`** peuvent être utilisés afin de créer une fonction génératrice asynchrone au sein d'une expression.

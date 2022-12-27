@@ -7,6 +7,7 @@ tags:
   - MathML Project
 translation_of: Web/MathML/Authoring
 ---
+
 Cette page explique comment écrire des formules mathématiques en utilisant le langage MathML. À l'instar du HTML, le MathML est décrit par des balises et des attributs. Le code source HTML devient lourd lorsque votre document contient des structures avancées telles que des listes ou tableaux mais heureusement il existe plusieurs générateurs de HTML à partir de notations simples, des éditeurs WYSIWYG ainsi que des systèmes de gestions de contenu (CMS) qui aide à l'écriture de page Web.
 
 Les notations mathématiques sont encore plus complexes, avec des structures telles que les fractions, les racines carrées ou les matrices qui sont susceptibles de nécessiter leur propre balisage. Par conséquent, de bons outils d'édition MathML sont encore plus importants et nous en décrivons quelques-uns ci-dessous. En particulier, l'équipe MathML de Mozilla a développé [TeXZilla](https://github.com/fred-wang/TeXZilla/), un convertisseur Javascript de LaTeX vers MathML compatible avec Unicode, dont le but est d'être utilisé dans divers scénarios décrits ici. Bien sûr, la liste n'est pas exhaustive et vous êtes invité à jeter un œil à la [liste du W3C des logiciels MathML (en)](https://www.w3.org/Math/Software/) où vous pouvez trouver divers outils.

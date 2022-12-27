@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/remove
 ---
+
 {{AddonSidebar()}}
 
 Ferme une fenêtre et tous les onglets à l'intérieur, compte tenu de l'ID de la fenêtre.

@@ -13,6 +13,7 @@ tags:
   - onChildrenReordered
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChildrenReordered
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque les enfants d'un dossier ont changé leur commande en raison de la commande triée dans l'interface utilisateur. Cela n'est pas appelé à la suite d'un appel à  {{WebExtAPIRef("bookmarks.move()")}} ou une opération glisser dans l'interface utilisateur.

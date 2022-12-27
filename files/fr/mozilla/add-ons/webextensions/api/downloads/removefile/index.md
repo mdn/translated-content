@@ -13,6 +13,7 @@ tags:
   - removeFile
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/removeFile
 ---
+
 {{AddonSidebar()}}
 
 La fonction **`removeFile()`** de l'API {{WebExtAPIRef("downloads")}} supprime un fichier téléchargé du disque.

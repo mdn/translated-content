@@ -12,6 +12,7 @@ tags:
   - tag
 translation_of: Web/API/Notification/tag
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`tag`** de l'interface {{domxref ("Notification")}} correspond à une balise d'identification pour la notification, comme définis à l'aide de l'option `tag` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.

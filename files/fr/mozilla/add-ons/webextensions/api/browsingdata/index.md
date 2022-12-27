@@ -11,6 +11,7 @@ tags:
   - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData
 ---
+
 {{AddonSidebar}}
 
 Permet aux extensions d'effacer les données accumulées pendant la navigation de l'utilisateur.

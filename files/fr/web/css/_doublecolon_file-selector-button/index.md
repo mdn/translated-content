@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/::file-selector-button
 original_slug: Web/CSS/::-webkit-file-upload-button
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 Le pseudo-élément **`::-webkit-file-upload-button`** représente le bouton d'un élément {{HTMLElement("input")}} de type `file`.

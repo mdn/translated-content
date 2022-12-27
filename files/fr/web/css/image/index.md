@@ -4,6 +4,7 @@ slug: Web/CSS/image
 l10n:
   sourceCommit: 1be604140d8179f54bc180af6cd4bc27576219de
 ---
+
 {{CSSRef}}
 
 Le [type de données](/fr/docs/Web/CSS/CSS_Types) [CSS](/fr/docs/Web/CSS)  **`<image>`** représente une image en deux dimensions.

@@ -13,6 +13,7 @@ tags:
   - getBackgroundPage
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
 ---
+
 {{AddonSidebar()}}
 
 Alias de {{WebExtAPIRef("runtime.getBackgroundPage()")}}.

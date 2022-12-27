@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Cas_utilisation_flexbox
 ---
+
 {{CSSRef}}
 
 Dans ce guide, nous verrons quels sont les cas d'utilisation classiques pour les boîtes flexibles et lorsque cette méthode est plus pertinente qu'une autre méthode de disposition.

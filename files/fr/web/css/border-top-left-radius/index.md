@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-top-left-radius
 ---
+
 {{CSSRef}}
 
 La propriété **`border-top-left-radius`** définit le rayon de courbure de la bordure pour le coin en haut à gauche de la boîte. L'arrondi peut être un fragment de cercle ou d'ellipse. Si une des valeurs vaut `0`, aucun arrondi n'a lieu et le coin est un angle droit.Un arrière-plan (que ce soit une couleur ou une image) sera rogné selon la bordure même si celle-ci est arrondie. L'endroit du rognage est défini selon la valeur de {{cssxref("background-clip")}}.

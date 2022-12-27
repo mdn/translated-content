@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_NOT
 browser-compat: javascript.operators.bitwise_not
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur binaire NON (`~`) prend l'opposé de chaque bit de son opérande et fournit la valeur ainsi obtenue. À l'instar des autres opérateurs binaires, il convertit son opérande en un entier signé sur 32 bits.
@@ -43,6 +44,7 @@ La table de vérité pour l'opération `NON` est :
 ```js
  9 (base 10) = 00000000000000000000000000001001 (base 2)
                --------------------------------
+
 ~9 (base 10) = 11111111111111111111111111110110 (base 2) = -10 (base 10)
 ```
 

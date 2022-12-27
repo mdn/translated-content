@@ -3,6 +3,7 @@ title: <easing-function>
 slug: Web/CSS/easing-function
 translation_of: Web/CSS/easing-function
 ---
+
 {{CSSRef}}
 
 Le [type de données](/fr/docs/Web/CSS/CSS_Types) CSS **`<easing-function>`** indique une fonction mathématique qui décrit la façon dont une valeur numérique évolue.

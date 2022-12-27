@@ -3,6 +3,7 @@ title: Déterminer les dimensions des éléments
 slug: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 translation_of: Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
 ---
+
 {{APIRef("CSSOM View")}}
 
 Il y a plusieurs propriétés que vous pouvez regarder dans le but de déterminer la largeur et la hauteur des éléments, et il peut être difficile de déterminer quelle est la bonne pour vos besoins.

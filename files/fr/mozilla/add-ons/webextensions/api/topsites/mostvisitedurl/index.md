@@ -13,6 +13,7 @@ tags:
   - topSites
 translation_of: Mozilla/Add-ons/WebExtensions/API/topSites/MostVisitedURL
 ---
+
 {{AddonSidebar()}}
 
 Le type `MostVisitedURL` contient deux propriétés : le titre de la page et son URL.

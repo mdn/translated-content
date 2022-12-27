@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/void
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_void
 ---
+
 {{jsSidebar("Operators")}}
 
 L'**opérateur `void`** permet d'évaluer une _expression_ donnée et de renvoyer `undefined`.

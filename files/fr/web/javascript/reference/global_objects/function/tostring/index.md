@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant le code source de la fonction.

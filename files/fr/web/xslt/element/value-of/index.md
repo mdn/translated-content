@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/value-of
 original_slug: Web/XSLT/value-of
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:value-of>` évalue une expression XPath, la convertit en chaîne et écrit cette chaîne dans l'arbre de sortie.

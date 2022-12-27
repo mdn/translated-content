@@ -11,6 +11,7 @@ tags:
   - Response
 translation_of: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
 L'interface **`Response`** de l'API de [fetch](/fr/docs/Web/API/Fetch_API) représente la réponse d'une requête initialisée.

@@ -13,6 +13,7 @@ tags:
   - onClosed
 translation_of: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'une notification est fermée, soit par le système, soit par l'utilisateur.

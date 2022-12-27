@@ -8,6 +8,7 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/perspective-origin
 ---
+
 {{CSSRef}}
 
 La propriété **`perspective-origin`** détermine la poisition depuis laquelle le spectateur regarde le document. Elle est utilisée comme point de fuite par la propriété {{cssxref("perspective")}}.

@@ -14,6 +14,7 @@ tags:
   - outils de développement
 translation_of: Learn/JavaScript/First_steps/What_went_wrong
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps")}}
 
 Après avoir créé le jeu "Devinez le nombre" de l'article précédent, vous avez peut-être constaté qu'il ne fonctionnait pas. Pas de panique — cet article vise à ce que vous ne vous arrachiez pas les cheveux sur ces problèmes en donnant quelques conseils simples sur la façon de trouver et corriger les erreurs dans les programmes JavaScript.

@@ -11,6 +11,7 @@ translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Contain
 original_slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Aligner_des_éléments_dans_un_conteneur_flexible
 ---
+
 {{CSSRef}}
 
 Une des raisons qui ont poussé à l'adoption des boîtes flexibles est la présence d'outils d'alignement enfin corrects pour le Web. On pouvait ainsi enfin centrer une boîte sur un axe vertical. Dans ce guide, nous verrons dans le détail comment fonctionnent les propriétés d'alignement et de justification relatives aux boîtes flexibles.

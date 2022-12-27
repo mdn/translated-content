@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/MAX_VALUE
 ---
+
 {{JSRef}}
 
 La propriété **`Number.MAX_VALUE`** représente la valeur maximale qui peut être représentée par un nombre en JavaScript.

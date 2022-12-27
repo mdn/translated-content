@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/hover
 ---
+
 {{CSSRef}}
 
 **`hover`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet de vérifier si le dispositif de saisie/d'entrée principal permet à l'utilisateur de survoler les éléments.

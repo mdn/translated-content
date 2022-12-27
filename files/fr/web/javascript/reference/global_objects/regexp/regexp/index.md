@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 browser-compat: javascript.builtins.RegExp.RegExp
 ---
+
 {{JSRef}}
 
 Le constructeur **`RegExp`** crée une expression rationnelle pour manipuler les correspondances trouvées dans un texte par rapport à un motif.

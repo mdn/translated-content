@@ -6,6 +6,7 @@ translation_of: Web/API/origin
 original_slug: Web/API/WindowOrWorkerGlobalScope/origin
 browser-compat: api.origin
 ---
+
 {{APIRef()}}{{SeeCompatTable}}
 
 La propriété globale en lecture seule **`origin`** renvoie l'origine de la portée globale, sérialisée sous la forme d'une chaîne de caractères.

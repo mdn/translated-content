@@ -13,6 +13,7 @@ tags:
   - sessions
 translation_of: Mozilla/Add-ons/WebExtensions/API/sessions/MAX_SESSION_RESULTS
 ---
+
 {{AddonSidebar()}}
 
 Le nombre maximum de sessions qui seront retournées par un appel à {{WebExtAPIRef("sessions.getRecentlyClosed()")}}. Il est en lecture seule pour le code des WebExtensions, et défini à 25.

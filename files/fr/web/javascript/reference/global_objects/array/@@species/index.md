@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/@@species
 ---
+
 {{JSRef}}
 
 La propriété d'accesseur **`Array[@@species]`** renvoie le constructeur `Array`.

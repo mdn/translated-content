@@ -7,6 +7,7 @@ tags:
   - MathML:Référence
 translation_of: Web/MathML/Element/maction
 ---
+
 L'élément MathML `<maction>` permet de lier des actions à des (sous-)expressions.
 L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs valeurs. Pour définir quels éléments fils sont affectés par l'action, il est possible d'utiliser l'attribut `selection`.
 

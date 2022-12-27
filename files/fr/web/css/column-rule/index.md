@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/column-rule
 ---
+
 {{CSSRef}}
 
 Lorsqu'on utilise une disposition sur plusieurs colonnes, la [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) **`column-rule`** permet de définir l'affichage d'une ligne droite (aussi appelée « règle ») entre chaque colonne.

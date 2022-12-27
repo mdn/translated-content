@@ -13,6 +13,7 @@ tags:
   - extensionType
 translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 ---
+
 {{AddonSidebar()}}
 
 Details sur le format et la qualité de l'image.

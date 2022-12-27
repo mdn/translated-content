@@ -3,6 +3,7 @@ title: SharedWorkerGlobalScope.applicationCache
 slug: Web/API/SharedWorkerGlobalScope/applicationCache
 translation_of: Web/API/SharedWorkerGlobalScope/applicationCache
 ---
+
 {{APIRef("Web Workers API")}}
 
 > **Attention :** Application Cache est déprécié depuis Firefox 44, et ne sera plus disponible dans des contextes non sécurisés avant Firefox 60 ({{bug(1354175)}}, currently uniquement sur les versions Nightly/Beta). Ne pas utiliser cette fonctionnalité sur des sites web en production, utilisez plutôt les [services workers.](/fr/docs/Web/API/Service_Worker_API)

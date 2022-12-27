@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/shape-outside
 ---
+
 {{CSSRef}}
 
 La propriété **`shape-outside`** définit une forme (qui peut ne pas être un rectangle) autour de laquelle le contenu en ligne devra « s'écouler ». Par défaut, le contenu en ligne évolue autour de la boîte de marge de l'élément flottant. La propriété `shape-outside` permet de personnaliser ce contour et d'obtenir un texte qui s'écoule autour d'objets plus complexes que des rectangles.

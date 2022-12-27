@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-coordinate
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 La propriété **`scroll-snap-coordinate`** définit les coordonnées horizontale et verticale, au sein de l'élément, qui s'aligneront avec les points définis par {{cssxref("scroll-snap-destination")}} dans le conteneur le plus proche en termes de parenté.

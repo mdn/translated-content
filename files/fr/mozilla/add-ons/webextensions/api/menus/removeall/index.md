@@ -14,6 +14,7 @@ tags:
   - removeAll
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/removeAll
 ---
+
 {{AddonSidebar()}}
 
 Supprime tous les éléments de menu ajoutés par l'extension.

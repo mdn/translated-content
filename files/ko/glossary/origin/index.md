@@ -1,11 +1,6 @@
 ---
 title: 출처
 slug: Glossary/Origin
-tags:
-  - Glossary
-  - Security
-  - WebMechanics
-translation_of: Glossary/Origin
 ---
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 

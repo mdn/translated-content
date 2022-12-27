@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/input/submit
 ---
+
 {{HTMLRef}}
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"submit"`** sont affichés comme des boutons permettant d'envoyer les données d'un formulaire. Cliquer sur un tel bouton déclenchera l'envoi des données du formulaire vers le serveur.

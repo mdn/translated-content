@@ -12,6 +12,7 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation
 ---
+
 {{AddonSidebar}}
 
 Ajouter des écouteurs d'événement pour les différentes étapes d'une navigation. Une navigation se compose d'un cadre dans le navigateur passant d'une URL à l'autre, généralement (mais pas toujours) en réponse à une action de l'utilisateur comme cliquer sur un lien ou entrer une URL dans la barre d'adresse.

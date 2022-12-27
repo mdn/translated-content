@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/includes
 ---
+
 {{JSRef}}
 
 La méthode **`includes()`** détermine si une chaîne de caractères est contenue dans une autre et renvoie `true` ou `false` selon le cas de figure.

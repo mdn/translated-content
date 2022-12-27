@@ -7,6 +7,7 @@ tags:
 translation_of: Web/SVG/Tutorial/Getting_Started
 original_slug: Web/SVG/Tutoriel/Premiers_pas
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions")}}
 
 ## Un exemple simple

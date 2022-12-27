@@ -6,6 +6,7 @@ tags:
   - Référence MathML
 translation_of: Web/MathML/Element
 ---
+
 {{MathMLRef}}
 
 Ce document est une liste, par ordre alphabétique, des éléments de **présentation** MathML.

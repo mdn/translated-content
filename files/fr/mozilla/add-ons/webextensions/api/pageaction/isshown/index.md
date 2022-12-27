@@ -12,6 +12,7 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
 ---
+
 {{AddonSidebar()}}
 
 Renvoie `true` si l'action de la page est affichée pour l'onglet donné..

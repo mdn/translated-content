@@ -12,6 +12,7 @@ tags:
   - timeOrigin
 translation_of: Web/API/Performance/getEntriesByName
 ---
+
 {{SeeCompatTable}}{{APIRef("High Resolution Time")}}
 
 La propriété en lecture seule **`timeOrigin`** de l'interface {{domxref("Performance")}} renvoie l'horodatage haute résolution de l'heure de début de la mesure de performance.

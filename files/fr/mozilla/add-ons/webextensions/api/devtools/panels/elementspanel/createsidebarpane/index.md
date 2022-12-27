@@ -16,6 +16,7 @@ translation_of: >-
 original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ElementsPanel/createSidebarPane
 ---
+
 {{AddonSidebar()}}
 
 Ajoute un nouveau volet à la barre latérale dans l'inspecteur HTML / CSS.

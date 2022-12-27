@@ -10,6 +10,7 @@ tags:
   - Reference
 browser-compat: javascript.operators.logical_nullish_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur d'affectation après coalescence des nuls (`x ??= y`) effectue une affectation uniquement si l'opérande de gauche (`x`) vaut [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null).

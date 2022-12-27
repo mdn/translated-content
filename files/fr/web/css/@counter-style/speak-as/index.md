@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/speak-as
 ---
+
 {{CSSRef}}
 
 Le descripteur **`speak-as`**, rattaché à la règle @ {{cssxref("@counter-style")}}, permet d'indiquer la représentation sonore du compteur qui doit être utilisée par l'agent utilisateur si nécessaire. Ainsi, on peut utiliser ce descripteur pour que le compteur soit énoncé comme un nombre ou avec un signal audio particulier.

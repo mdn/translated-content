@@ -13,6 +13,7 @@ tags:
   - theme manifest
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

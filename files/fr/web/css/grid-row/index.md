@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-row
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-row`** est une propriété raccourcie pour {{cssxref("grid-row-start")}} et {{cssxref("grid-row-end")}}. Elle permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.

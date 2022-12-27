@@ -13,6 +13,7 @@ tags:
   - get
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/get
 ---
+
 {{AddonSidebar()}}
 
 Obtient les détails sur une fenêtre, compte tenu de son identifiant. Les détails sont transmis à un rappel.

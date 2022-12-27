@@ -12,6 +12,7 @@ tags:
   - removeCache
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
 ---
+
 {{AddonSidebar()}}
 
 Effacer le cache du navigateur.

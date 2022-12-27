@@ -7,6 +7,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 original_slug: Web/JavaScript/Reference/Objets_globaux/parseInt
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`parseInt()`** analyse une chaîne de caractère fournie en argument et renvoie un entier exprimé dans une base donnée.

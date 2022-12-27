@@ -1,10 +1,6 @@
 ---
 title: DOM
 slug: Glossary/DOM
-tags:
-  - DOM
-  - Glossary
-translation_of: Glossary/DOM
 ---
 DOM (Document Object Model) 은 {{glossary("HTML")}} 또는 {{glossary("XML")}} document와 상호작용하고 표현하는 {{glossary("API")}}입니다. DOM은 {{glossary("browser")}}에서 로드되며, 노드 트리(각 노드는 document의 부분을 나타냅니다)로 표현하는 document 모델입니다(예, {{Glossary("element")}}, 문자열, 또는 코멘트).
 

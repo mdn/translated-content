@@ -12,6 +12,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension
 ---
+
 {{AddonSidebar}}
 
 Utilitaires liés à votre extension. Obtenez des URL vers des packages de ressources avec votre extension, récupérez l'objet [`Window`](/fr/docs/Web/API/Window) pour les pages de votre extension, récupérez les valeurs pour différents paramètres. Notez que les API de messagerie de ce module sont déconseillées au profit des API équivalentes dans le module [`runtime`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime).

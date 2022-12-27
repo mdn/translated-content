@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated
 ---
+
 C'est déclenché lorsqu'un onglet est mis à jour.
 
 Lorsque l'utilisateur navigue vers une nouvelle URL dans un onglet, cela génère généralement plusieurs événements `onUpdated` au fur et à mesure que diverses propriétés de l'objet {{WebExtAPIRef("tabs.Tab")}} sont mises à jour. Ceci inclut l' `url`, mais aussi potentiellement le `title` et les propriétés `favIconUrl`. La propriété du  `status` passe par le `"loading"` et `"complete"`.

@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Node/childNodes
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule  **`Node.childNodes`** renvoie une {{domxref("NodeList")}} (_liste de noeuds_) de {{domxref("Node","noeuds")}} enfants de l'élément donné avec le premier noeud enfant affecté à l'index 0.

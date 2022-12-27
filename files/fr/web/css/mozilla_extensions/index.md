@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/Mozilla_Extensions
 original_slug: Web/CSS/Extensions_Mozilla
 ---
+
 {{CSSRef}}
 
 Les applications Mozilla, telles que Firefox, prennent en charge un certain nombre d'extensions spécifiques à [CSS](/fr/docs/Web/CSS) : des propriétés, des valeurs, des pseudo-éléments, des pseudo-classes, des règles @ et des requêtes média. Ces extensions utilisent le préfixe `-moz`.

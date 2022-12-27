@@ -7,6 +7,7 @@ tags:
   - Règle @
 translation_of: Web/CSS/@font-face
 ---
+
 {{CSSRef}}
 
 La [règle @](/fr/docs/Web/CSS/R%C3%A8gles_@) **`@font-face`** permet de définir les polices d'écriture à utiliser pour afficher le texte de pages web. Cette police peut être chargée depuis un serveur distant ou depuis l'ordinateur de l'utilisateur. Si la fonction `local()` est utilisée, elle indique à l'agent utilisateur de prendre en compte une police présente sur le poste de l'utilisateur.

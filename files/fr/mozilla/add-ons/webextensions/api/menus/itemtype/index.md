@@ -13,6 +13,7 @@ tags:
   - itemtype
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
 ---
+
 {{AddonSidebar()}}
 
 Le type d'élément de menu.

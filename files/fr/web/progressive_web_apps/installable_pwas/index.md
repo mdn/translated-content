@@ -3,6 +3,7 @@ title: Comment rendre les PWAs installables
 slug: Web/Progressive_web_apps/Installable_PWAs
 translation_of: Web/Progressive_web_apps/Installable_PWAs
 ---
+
 {{PreviousMenuNext("Web/Apps/Progressive/Offline_Service_workers", "Web/Apps/Progressive/Re-engageable_Notifications_Push", "Web/Apps/Progressive")}}
 
 Dans l'article précédent, nous avons vu comment [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) fonctionne en mode déconnecté grâce à son [service worker](/fr/docs/Web/API/Service_Worker_API), mais nous pouvons aller encore plus loin et permettre aux utilisateurs d'installer l'application web sur les navigateurs mobiles pris en charge, comme s'il s'agissait d'une application native. Cet article explique comment réaliser ceci en utilisant un manifeste web et une fonctionnalité appelée "ajouter à l'écran d'accueil".

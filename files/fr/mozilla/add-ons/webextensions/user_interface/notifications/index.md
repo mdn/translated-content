@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
 ---
+
 {{AddonSidebar}}
 
 Les notifications vous permettent d'afficher des informations sur votre extension ou son contenu en utilisant le système d'exploitation sous-jacent.

@@ -6,6 +6,7 @@ tags:
 translation_of: Web/API/XMLSerializer
 original_slug: XMLSerializer
 ---
+
 `XMLSerializer` sert à convertir des sous-arborescence DOM ou des documents DOM en texte. `XMLSerializer` est accessible aux scripts sans privilèges.
 
 > **Note :** `XMLSerializer` sert le plus souvent aux applications et extensions basées sur la plateforme Mozilla. Bien qu'il soit utilisable par les pages Web, il ne fait partie d'aucun standard et son niveau de support dans les autres navigateurs est inconnu.

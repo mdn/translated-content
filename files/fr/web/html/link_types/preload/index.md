@@ -4,6 +4,7 @@ slug: Web/HTML/Link_types/preload
 translation_of: Web/HTML/Link_types/preload
 browser-compat: html.elements.link.rel.preload
 ---
+
 {{HTMLSidebar}}
 
 La valeur `preload` de l'attribut {{htmlattrxref("rel", "link")}} de l'élément {{htmlelement("link")}} permet de déclarer des requêtes à récupérer dans la partie {{htmlelement("head")}} du HTML de la page, en spécifiant les ressources dont votre page va avoir besoin dans peu de temps, et qu'il serait souhaitable de charger le plus tôt possible, avant que le rendu de la page par le navigateur ne commence. Cela permet de s'assurer que les ressources sont disponibles plus tôt et qu'elles auront moins de chances de bloquer le rendu de la page, ce qui améliore les performances.

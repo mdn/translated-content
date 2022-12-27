@@ -10,6 +10,7 @@ tags:
   - register
 translation_of: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
 ---
+
 {{AddonSidebar()}}
 
 Utilisez cette fonction pour enregistrer un ou plusieurs scripts de contenu.

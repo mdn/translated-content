@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Boolean/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaine de caractères correspondant à l'objet `Boolean` courant.

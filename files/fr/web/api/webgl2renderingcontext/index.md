@@ -9,6 +9,7 @@ tags:
   - WebGL2
 translation_of: Web/API/WebGL2RenderingContext
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 L'interface **WebGL2RenderingContext** fournit le contexte de rendu OpenGL ES 3.0 pour la surface de dessin d'un élément HTML {{HTMLElement("canvas")}}.

@@ -4,6 +4,7 @@ slug: Web/API/Window/parent
 translation_of: Web/API/Window/parent
 browser-compat: api.Window.parent
 ---
+
 {{APIRef}}
 
 La propriété **`Window.parent`** est une référence au parent de la fenêtre ou du cadre embarqué (<i lang="en">subframe</i>).

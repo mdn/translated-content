@@ -8,6 +8,7 @@ tags:
   - Mobile
 translation_of: Web/API/Force_Touch_events
 ---
+
 {{DefaultAPISidebar("Force Touch events")}}
 
 {{Non-standard_header()}}

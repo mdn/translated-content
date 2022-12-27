@@ -13,6 +13,7 @@ tags:
   - placeholders
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
 ---
+
 {{AddonSidebar()}}
 
 Chaque extension internationalisée a au moins un fichier nommé `messages.json` qui fournit des chaînes spécifiques aux paramètres régionaux. Cette page décrit le format des fichiers `messages.json`.

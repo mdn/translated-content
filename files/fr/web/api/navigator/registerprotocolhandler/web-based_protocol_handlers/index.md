@@ -3,6 +3,7 @@ title: Gestionnaires de protocoles web
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
+
 ### Contexte
 
 Il est relativement courant de voir des pages web lier des ressources utilisant des protocoles qui ne sont pas HTTP. Prenons par exemple le protocole `mailto:`&nbsp;:

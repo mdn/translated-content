@@ -12,6 +12,7 @@ tags:
   - onInputChanged
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
 ---
+
 {{AddonSidebar()}}
 
 Lancé chaque fois que l'utilisateur modifie sa saisie, après avoir commencé à interagir avec votre extension en saisissant son mot-clé dans la barre d'adresse, puis en appuyant sur la touche espace.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-template-columns
 ---
+
 {{CSSRef}}
 
 La propriété **`grid-template-columns`** définit les noms des lignes et les fonctions de taille (_track sizing_) pour les colonnes de la grille.

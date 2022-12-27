@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules/select
 ---
+
 {{JSRef}}
 
 La méthode **`Intl.PluralRules.prototype.select`** renvoie une chaîne de caractères qui indique la règle de nombre utilisée pour le formatage relatif à la locale.

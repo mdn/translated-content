@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
 ---
+
 {{AddonSidebar()}}
 
 Lancé quand un onglet est fermé.

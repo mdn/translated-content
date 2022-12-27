@@ -12,6 +12,7 @@ tags:
   - browsingData
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
 ---
+
 {{AddonSidebar()}}
 
 Le type **`browsingData.DataTypeSet`**  décrit un ensemble de types de données.

@@ -8,6 +8,7 @@ tags:
 translation_of: Learn/Common_questions/Thinking_before_coding
 original_slug: Apprendre/Commencez_votre_projet_web
 ---
+
 Cette article présente l'étape primordiale de n'importe quel projet définir ce qu'on souhaite accomplir avec.
 
 <table class="standard-table">

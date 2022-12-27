@@ -5,6 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toLocaleString
 browser-compat: javascript.builtins.Number.toLocaleString
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleString()`** permet de renvoyer une chaîne de caractères représentant un nombre en tenant compte de la locale.

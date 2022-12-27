@@ -15,6 +15,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
 original_slug: Mozilla/Add-ons/WebExtensions/partage_d_objets_avec_des_scripts_de_page
 ---
+
 {{AddonSidebar}}
 
 > **Note :** Les techniques décrites dans cette section sont uniquement disponibles dans Firefox, et seulement à partir de Firefox 49

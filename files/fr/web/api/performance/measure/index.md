@@ -10,6 +10,7 @@ tags:
   - Web Workers
 translation_of: Web/API/Performance/measure
 ---
+
 {{APIRef("User Timing API")}}
 
 La méthode **`measure()`** crée un {{domxref("DOMHighResTimeStamp", "timestamp")}} nommé dans le _tampon d'entrée de performance_ du navigateur entre deux marqueurs, l'heure de début de navigation ou l'heure actuelle. Lors d'une mesure entre deux marqueurs, on aura un _marqueur de début_ et un _marqueur de fin_. L'horodatage ainsi nommé est désigné comme une _mesure_.

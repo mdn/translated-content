@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/background-position-x
 ---
+
 {{CSSRef}}
 
 La propriété **`background-position-x`** définit la position horizontale initiale de chaque image d'arrière-plan par rapport à l'origine, définie avec {{cssxref("background-origin")}}.

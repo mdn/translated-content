@@ -1,14 +1,6 @@
 ---
 title: Mozilla Firefox
 slug: Glossary/Mozilla_Firefox
-tags:
-  - Browser
-  - Firefox
-  - Glossary
-  - Infrastructure
-  - Mozilla
-  - 파이어폭스
-translation_of: Glossary/Mozilla_Firefox
 ---
 **Mozilla Firefox**는 Mozilla Corporation에서 개발을 감독하는 무료 오픈 소스 {{Glossary("browser","브라우저")}}입니다. Firefox는 Windows, OS X, Linux, Android에서 구동할 수 있습니다.
 

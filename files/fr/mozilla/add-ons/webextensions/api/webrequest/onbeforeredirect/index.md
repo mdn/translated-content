@@ -13,6 +13,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRedirect
 ---
+
 {{AddonSidebar()}}
 
 Déclenché lorsqu'une redirection initiée par le serveur est sur le point de se produire.

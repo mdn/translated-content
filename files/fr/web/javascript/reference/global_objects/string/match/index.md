@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/match
 ---
+
 {{JSRef}}
 
 La méthode **`match()`** permet d'obtenir le tableau des correspondances entre la chaîne courante et une expression rationnelle.

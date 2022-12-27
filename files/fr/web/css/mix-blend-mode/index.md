@@ -3,6 +3,7 @@ title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 translation_of: Web/CSS/mix-blend-mode
 ---
+
 {{CSSRef}}
 
 La propriété **`mix-blend-mode`** définit la façon dont le contenu d'un élément doit se mélanger avec le contenu de l'élément parent et avec son arrière-plan.

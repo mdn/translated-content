@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setDate
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setDate
 ---
+
 {{JSRef}}
 
 La méthode **`setDate()`** définit le jour du mois (relatif au début du mois courant) pour une date donnée.

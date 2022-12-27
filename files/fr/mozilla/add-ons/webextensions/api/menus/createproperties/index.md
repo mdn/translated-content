@@ -3,6 +3,7 @@ title: createProperties
 slug: Mozilla/Add-ons/WebExtensions/API/menus/createProperties
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/createProperties
 ---
+
 {{AddonSidebar()}}
 
 Un `object` passé au méthodes {{WebExtAPIRef("menus.create()", "menus.create()")}} ou  {{WebExtAPIRef("menus.update()", "menus.update()")}}  pour décrire les propriétés de l'élément de menu nouveau ou mis à jour.

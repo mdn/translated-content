@@ -7,6 +7,7 @@ tags:
 translation_of: Web/Guide/Writing_forward-compatible_websites
 original_slug: Développement_Web/Développer_des_sites_à_compatibilité_descendante
 ---
+
 Cette page explique comment développer des sites qui continuent de fonctionner au fur et à mesure des mises à jour des navigateurs.
 
 C'est d'autant plus important pour les intranets et autres sites non-publics; s'il n'est pas possible de voir votre site, il ne nous est pas possible de voir s'il est cassé. Il ne nous est pas toujours possible de suivre tous les sites, mais en suivre autant que possible permet d'en assurer la pérennité.

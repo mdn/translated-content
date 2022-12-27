@@ -12,6 +12,7 @@ tags:
   - removeLocalStorage
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage
 ---
+
 {{AddonSidebar()}}
 
 Efface tout le [stockage local](/fr/docs/Web/API/Window/localStorage) créé par des sites Web.

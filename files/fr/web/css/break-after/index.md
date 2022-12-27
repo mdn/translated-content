@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/break-after
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`break-after`** définit la façon dont la page, la colonne ou la région se fragmente après la boîte générée. S'il n'y a aucune boîte générée, la propriété est ignorée.

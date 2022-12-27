@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase/name
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`name`** de l'interface `IDBDatabase` est une chaîne de caractères, sous la forme d'un objet {{domxref("DOMString")}}, contenant le nom de la base de données connectée.

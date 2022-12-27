@@ -3,6 +3,7 @@ title: Tk
 slug: Web/HTTP/Headers/Tk
 translation_of: Web/HTTP/Headers/Tk
 ---
+
 {{HTTPSidebar}}
 
 L'entête de réponse `Tk` indique le statut de suivi (tracking) qui s'applique à la demande correspondante.

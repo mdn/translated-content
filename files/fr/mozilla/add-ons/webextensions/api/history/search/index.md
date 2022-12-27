@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/search
 ---
+
 {{AddonSidebar()}}
 
 Recherche dans l'historique du navigateur les objets {{WebExtAPIRef("history.HistoryItem")}} correspondant aux critères donnés.

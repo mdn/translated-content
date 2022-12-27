@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/column-rule-style
 ---
+
 {{CSSRef}}
 
 La propriété **`column-rule-style`** permet de définir le style de la ligne tracée entre plusieurs colonnes lorsqu'on utilise une disposition en colonnes.

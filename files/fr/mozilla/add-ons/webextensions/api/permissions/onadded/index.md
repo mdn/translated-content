@@ -11,6 +11,7 @@ tags:
   - onAdded
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/onAdded
 ---
+
 {{AddonSidebar()}}
 
 Activé lorsque l'extension a accordé de nouvelles permissions.

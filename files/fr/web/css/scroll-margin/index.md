@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-margin
 ---
+
 {{CSSRef}}
 
 La propriété `scroll-margin` est une propriété raccourcie qui permet de définir l'ensemble des propriétés `scroll-margin-top`, `scroll-margin-left`, `scroll-margin-bottom` et `scroll-margin-right` (de la même façon que la propriété `margin` définit les différents côtés des marges).

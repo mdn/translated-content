@@ -13,6 +13,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.network/onRequestFinished
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.network/onRequestFinished
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'une requête réseau est terminée et que ses détails sont disponibles pour l'extension.

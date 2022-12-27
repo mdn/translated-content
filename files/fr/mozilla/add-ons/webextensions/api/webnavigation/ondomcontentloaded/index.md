@@ -13,6 +13,7 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onDOMContentLoaded
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque l'événement [DOMContentLoaded](/fr/docs/Web/Events/DOMContentLoaded) est déclenché dans la page. À ce stade, le document est chargé et analysé, et le DOM est entièrement construit, mais les ressources liées telles que les images, les feuilles de style et les sous-trames peuvent ne pas encore être chargées.

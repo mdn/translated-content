@@ -13,6 +13,7 @@ tags:
   - getCurrent
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/getCurrent
 ---
+
 {{AddonSidebar()}}
 
 Obtient la fenêtre actuelle du navigateur, en passant ses détails dans un rappel.

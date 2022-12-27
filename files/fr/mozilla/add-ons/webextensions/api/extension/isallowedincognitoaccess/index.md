@@ -13,6 +13,7 @@ tags:
   - isAllowedIncognitoAccess
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
 ---
+
 {{AddonSidebar()}}
 
 Vérifiez si l'extension est autorisée à accéder aux onglets ouverts en mode "navigation privée".

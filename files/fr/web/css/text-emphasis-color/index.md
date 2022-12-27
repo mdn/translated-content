@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-emphasis-color
 ---
+
 {{CSSRef}}
 
 La propriété **`text-emphasis-color`** définit la couleur utilisée pour dessiner les marques d'emphase. Celle-ci peut être (re)définie grâce à la propriété raccourcie {{cssxref("text-emphasis")}}.

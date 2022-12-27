@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/color_value
 original_slug: Web/CSS/Type_color
 ---
+
 {{CSSRef}}
 
 Le type de données CSS **`<color>`** permet de représenter des couleurs dans [l'espace de couleurs sRGB](https://fr.wikipedia.org/wiki/SRGB). Une couleur pourra être décrite de trois façons :

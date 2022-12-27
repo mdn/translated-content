@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/xor
 ---
+
 {{JSRef}}
 
 La méthode statique **`Atomics.xor()`** calcule le résultat d'un OU exclusif (XOR) binaire entre une valeur donnée et une valeur du tableau partagé à un emplacement donné. Elle renvoie l'ancienne valeur qui était contenue à cette position. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
@@ -58,6 +59,7 @@ Par exemple, le calcul d'un OU exclusif binaire entre 5 et 1 (`5 ^ 1`) renvoie `
 5  0101
 1  0001
    ----
+
 4  0100
 ```
 

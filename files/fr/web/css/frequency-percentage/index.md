@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/frequency-percentage
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<frequency-percentage>`** représente une valeur qui peut être une valeur de type {{Cssxref("frequency")}} ou une valeur de type {{Cssxref("percentage")}}.

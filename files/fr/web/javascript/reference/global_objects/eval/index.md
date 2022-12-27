@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/eval
 original_slug: Web/JavaScript/Reference/Objets_globaux/eval
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`eval()`** permet d'évaluer du code JavaScript représenté sous forme d'une chaîne de caractères.

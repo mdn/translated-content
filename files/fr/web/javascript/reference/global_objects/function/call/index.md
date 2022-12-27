@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/call
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/call
 ---
+
 {{JSRef}}
 
 La méthode **`call()`** réalise un appel à une fonction avec une valeur `this` donnée et des arguments fournis individuellement.

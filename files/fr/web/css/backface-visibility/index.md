@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/backface-visibility
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`backface-visibility`** indique si la face arrière d'un élément doit être visible lorsqu'elle est orientée vers l'utilisateur. La face arrière d'un élément est un arrière-plan transparent qui, lorsqu'il est visible, permet de voir un reflet symétrique de la face avant de l'élément.

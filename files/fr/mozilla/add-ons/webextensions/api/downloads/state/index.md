@@ -13,6 +13,7 @@ tags:
   - state
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/State
 ---
+
 {{AddonSidebar()}}
 
 Le type d'`état` de l'API {{WebExtAPIRef("downloads")}} définit différents états dans lesquels un téléchargement en cours peut se trouver.

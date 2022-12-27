@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/table-layout
 ---
+
 {{CSSRef}}
 
 La propriété **`table-layout`** définit l'algorithme utilisé pour disposer les cellules, lignes et colonnes d'un tableau.

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/pow
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/pow
 ---
+
 {{JSRef}}
 
 La fonction **`Math.pow()`** renvoie un nombre à une certaine puissance, c'est-à-dire `base^exposant`.

@@ -4,6 +4,7 @@ slug: Web/CSS/-moz-image-rect
 translation_of: Web/CSS/-moz-image-rect
 browser-compat: css.types.-moz-image-rect
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 La propriété **`-moz-image-rect`** permet d'utiliser une seule partie d'une image pour un arrière-plan (contrairement à [`background-image`](/fr/docs/Web/CSS/background-image)). On peut ainsi utiliser une image qui regroupe plusieurs _sprites_ à différentes fins, ce qui permet de diminuer le nombre de transfert réseau.

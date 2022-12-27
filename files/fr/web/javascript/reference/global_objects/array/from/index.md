@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/from
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/from
 ---
+
 {{JSRef}}
 
 La méthode **`Array.from()`** permet de créer une nouvelle instance d'`Array` (une copie superficielle) à partir d'un objet itérable ou semblable à un tableau.

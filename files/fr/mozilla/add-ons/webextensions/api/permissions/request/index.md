@@ -11,6 +11,7 @@ tags:
   - request
 translation_of: Mozilla/Add-ons/WebExtensions/API/permissions/request
 ---
+
 {{AddonSidebar()}}
 
 Demandez l'ensemble des permissions répertoriées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.

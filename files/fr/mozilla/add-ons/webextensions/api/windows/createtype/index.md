@@ -13,6 +13,7 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows/CreateType
 ---
+
 {{AddonSidebar()}}
 
 Spécifie le type de fenêtre du navigateur à créer.

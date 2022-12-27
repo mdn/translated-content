@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/toLocaleString
 ---
+
 {{JSRef}}
 
 La méthode **`toLocaleString()`** renvoie une chaîne de caractères représentant le grand entier pour la ou les locale(s) indiquée(s).

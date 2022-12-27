@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration-thickness
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`text-decoration-thickness`** définit l'épaisseur ou la largeur de la ligne de décoration utilisée sur le texte d'un élément (la ligne qui raye, souligne ou surligne le texte).

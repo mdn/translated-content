@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/lastIndexOf
 ---
+
 {{JSRef}}
 
 La méthode **`lastIndexOf()`** renvoie l'indice, dans la chaîne courante, de la dernière occurence de la valeur donnée en argument. Si cette sous-chaîne n'est pas trouvée, la méthode renvoie -1. La recherche s'effectue de la fin vers le début de la chaîne, à partir de `indiceDébut`.

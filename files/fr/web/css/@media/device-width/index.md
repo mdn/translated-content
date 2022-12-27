@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/device-width
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 **`device-width`** est une caractéristique média dépréciée dont la valeur représente la largeur de la surface de rendu de l'appareil d'affichage.

@@ -8,6 +8,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/removeAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 `removeAttributeNS` supprime l'attribut spécifié d'un élément.

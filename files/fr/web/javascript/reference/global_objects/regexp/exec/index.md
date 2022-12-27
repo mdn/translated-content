@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/exec
 ---
+
 {{JSRef}}
 
 La méthode **`exec()`** exécute la recherche d'une correspondance sur une chaîne de caractères donnée. Elle renvoie un tableau contenant les résultats ou {{jsxref("null")}}.

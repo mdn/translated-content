@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/suffix
 ---
+
 {{CSSRef}}
 
 Le descripteur **`suffix`**, utilisé avec la règle @ {{cssxref("@counter-style")}}, afin de définir un symbole qui pourra être utilisé comme suffixe pour la représentation du marqueur. Le symbole en question pourra être une chaîne de caractères, une image ou un identifiant CSS. La valeur par défaut de ce descripteur sera `"\2E\20"` (un point « . » suivi par un espace).

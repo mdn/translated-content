@@ -8,6 +8,7 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 original_slug: Web/CSS/Comprendre_z-index/Exemple_1
 ---
+
 {{PreviousMenuNext("Web/CSS/Comprendre_z-index/L'empilement_de_couches","Web/CSS/Comprendre_z-index/Exemple_2", "Web/CSS/Comprendre_z-index")}}
 
 ## Premier exemple

@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
 ---
+
 {{AddonSidebar()}}
 
 Le système d'exploitation sur lequel le navigateur fonctionne.

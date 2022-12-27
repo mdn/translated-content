@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/JavaScript/Building_blocks/Return_values
 original_slug: Apprendre/JavaScript/Building_blocks/Return_values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 Il y a un concept essentiel que nous devons aborder dans ce cours, pour être complet sur les fonctions: les valeurs de retour. Certaines fonctions ne retournent pas de valeur significative après avoir été exécutées, mais d'autres oui, il est important de comprendre ces valeurs, comment les utiliser dans votre code et comment faire pour que vos propres fonctions retournent des valeurs utiles. Nous aborderons tout cela dans cet article.

@@ -4,6 +4,7 @@ slug: Web/HTTP/Status/308
 translation_of: Web/HTTP/Status/308
 browser-compat: http.status.308
 ---
+
 {{HTTPSidebar}}
 
 Le code de statut de réponse de redirection **`308 Permanent Redirect`** indique que la ressource demandée à définitivement été déplacée vers l'URL contenue dans l'en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location). Un navigateur redirigera vers cette page et les moteurs de recherche mettront à jour leurs liens vers la ressource (en termes de référencement, cela implique que le flux de référencement est envoyé vers la nouvelle URL).

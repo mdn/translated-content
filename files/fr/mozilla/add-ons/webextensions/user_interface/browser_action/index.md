@@ -3,6 +3,7 @@ title: Bouton de la barre d'outils
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 ---
+
 {{AddonSidebar}}
 
 Généralement appelé comme une [action de navigateur](/fr/Add-ons/WebExtensions/API/browserAction), cette option d'interface utilisateur est un bouton ajouté à la barre d'outils du navigateur. Les utilisateurs cliquent sur le bouton pour interagir avec votre extension.

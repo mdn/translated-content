@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-bottom
 ---
+
 {{CSSRef}}
 
 La propriété **`margin-bottom`** définit la marge basse appliquée à un élément. On peut définir une marge négative qui rapprochera l'élément de ses voisins ou une marge positive qui l'en écartera..

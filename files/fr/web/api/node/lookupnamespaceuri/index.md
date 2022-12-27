@@ -8,6 +8,7 @@ tags:
   - Noeuds
 translation_of: Web/API/Node/lookupNamespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 La méthode **`Node.lookupNamespaceURI()`** accepte un préfixe et renvoie l'URI de l'espace de nom associé avec lui sur le noeud donné s'il le trouve (et `null` sinon). La fourniture de `null` pour le préfixe renverra l'espace de nom par défaut.

@@ -5,6 +5,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

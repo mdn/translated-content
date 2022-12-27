@@ -10,6 +10,7 @@ tags:
 translation_of: Web/HTML/Element/font
 browser-compat: html.elements.font
 ---
+
 {{HTMLRef}}
 
 > **Attention :** Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la prendre en charge, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications web l'utilisant peuvent cesser de fonctionner à tout moment.

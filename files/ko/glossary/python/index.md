@@ -1,7 +1,6 @@
 ---
 title: Python
 slug: Glossary/Python
-translation_of: Glossary/Python
 ---
 **Python** 은 고도의 범용 프로그래밍 언어다. 그것은 절차적, 객체지향적, 그리고 일부 기능적 프로그래밍 구조를 지원하는 다변수적 접근방식을 사용한다.
 

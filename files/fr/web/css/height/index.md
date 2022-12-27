@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/height
 ---
+
 {{CSSRef}}
 
 La propriété **`height`** définit la hauteur de la boîte de contenu d'un élément. [La boîte de contenu](/fr/docs/CSS/box_model#content) est à l'intérieur de la boîte de remplissage (_padding_) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété {{cssxref("box-sizing")}} vaut `border-box`, cette propriété détermine la hauteur de [la boîte de marge](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#Les_propriétés_des_boîtes).

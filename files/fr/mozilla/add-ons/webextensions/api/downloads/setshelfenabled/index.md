@@ -13,6 +13,7 @@ tags:
   - setShelfEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/downloads/setShelfEnabled
 ---
+
 {{AddonSidebar()}}
 
 La fonction  **`setShelfEnabled()`** de l'API {{WebExtAPIRef("downloads")}} active ou désactive l'étagère grise située en bas de chaque fenêtre associée au profil de navigateur actuel. L'étagère sera désactivée si au moins une extension l'a désactivée.

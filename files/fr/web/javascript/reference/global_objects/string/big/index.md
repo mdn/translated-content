@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/big
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`big()`** crée un élément HTML {{HTMLElement("big")}} qui affichera la chaine de caractères avec une taille de police importante.

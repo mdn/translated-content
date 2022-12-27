@@ -9,6 +9,7 @@ tags:
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques
 original_slug: Accessibilité/ARIA/Techniques_ARIA
 ---
+
 ### Rôles
 
 #### Rôles de composant d’interface

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Element/input/file
 ---
+
 {{HTMLRef}}
 
 Les éléments {{HTMLElement("input")}} dont l'attribut `type` vaut **`"file"`** permettent à un utilisateur de sélectionner un ou plusieurs fichiers depuis leur appareil et de les _uploader_ vers un serveur via [un formulaire](/fr/docs/Web/Guide/HTML/Formulaires) ou grâce à du code JavaScript [via l'API _File_](/fr/docs/Using_files_from_web_applications).

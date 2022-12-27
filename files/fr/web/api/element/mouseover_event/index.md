@@ -10,6 +10,7 @@ tags:
   - mouseover
 translation_of: Web/API/Element/mouseover_event
 ---
+
 {{APIRef}}
 
 L'évènement **`mouseover`** est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (une souris par exemple) déplace le curseur sur l'élément ou sur l'un de ses éléments fils.

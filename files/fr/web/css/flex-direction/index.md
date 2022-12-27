@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-direction
 ---
+
 {{CSSRef}}
 
 La propriété **`flex-direction`** définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée).

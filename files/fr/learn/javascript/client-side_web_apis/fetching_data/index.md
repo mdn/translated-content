@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 original_slug: Apprendre/JavaScript/Client-side_web_APIs/Fetching_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 Une autre tâche courante dans les sites et applications web modernes est de récupérer des données à partir du serveur pour mettre à jour des sections de la page web sans la recharger entièrement. Ce qui pourrait paraître comme un petit détail a, en vérité, eu un impact énorme sur les performances et le comportement des sites. Dans cet article, nous allons expliquer le concept et les technologies qui rendent cela possible, tels que XMLHttpRequest et l'API Fetch.

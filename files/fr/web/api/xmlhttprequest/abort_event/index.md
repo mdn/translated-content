@@ -4,6 +4,7 @@ slug: Web/API/XMLHttpRequest/abort_event
 translation_of: Web/API/XMLHttpRequest/abort_event
 original_slug: Web/Events/abort_(ProgressEvent)
 ---
+
 L'événement **abort** est déclenché lorsque la progression a été interompue (Non causé par une erreur)
 
 ## Informations générales

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/for
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/for
 ---
+
 {{JSRef}}
 
 La méthode **`Symbol.for(clé)`** permet de chercher parmi les symboles existants enregistrés dans le registre global de l'environnement d'exécution. Si un symbole associé à la clé donnée existe, il est renvoyé par la fonction, sinon un nouveau symbole associé à cette clé est créé dans le registre.

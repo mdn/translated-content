@@ -6,6 +6,7 @@ tags:
   - Sélecteur
 translation_of: Web/CSS/Selector_list
 ---
+
 {{CSSRef}}
 
 **Une liste de sélecteurs** (`,`) permet de cibler tous les nœuds correspondants à l'une des conditions.

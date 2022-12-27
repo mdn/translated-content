@@ -11,6 +11,7 @@ tags:
 translation_of: Learn/Server-side/First_steps/Introduction
 original_slug: Learn/Server-side/Premiers_pas/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 Bienvenue au cours pour débutant de MDN sur la programmation côté serveur. Dans ce premier article, nous allons regarder la programmation côté serveur sans rentrer dans les détails techniques, en répondant aux questions telles que "qu'est-ce que c'est?", "quelle est la différence avec la programmation côté client?", et "pourquoi est-ce utile?". Après avoir lu cet article vous comprendrez commment la programmation côté serveur donne toute leur puissance aux sites web.

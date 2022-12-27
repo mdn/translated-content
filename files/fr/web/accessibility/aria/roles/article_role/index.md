@@ -6,6 +6,7 @@ spec-urls:
   - https://w3c.github.io/aria/#article
   - https://w3c.github.io/aria-practices/#feed
 ---
+
 Le rôle `article` indique qu'une section d'une page pourrait tout à fait être autonome sur sa propre page, sur un document ou un site web donné. Il est généralement associé au contenu relatif comme les commentaires, les messages sur un forum, les articles d'un journal ou plus généralement pour des éléments regroupés à plusieurs sur une même page.
 
 ```html

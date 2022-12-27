@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/isExtensible
 ---
+
 {{JSRef}}
 
 La méthode **`Object.isExtensible()`** permet de déterminer si un objet est extensible (c'est-à-dire qu'on peut lui ajouter de nouvelles propriétés).

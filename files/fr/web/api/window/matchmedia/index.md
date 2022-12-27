@@ -3,6 +3,7 @@ title: window.matchMedia
 slug: Web/API/Window/matchMedia
 translation_of: Web/API/Window/matchMedia
 ---
+
 {{ApiRef}}
 
 Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats de la chaîne de caractères [media query](/fr/docs/CSS/Media_queries) spécifiée.

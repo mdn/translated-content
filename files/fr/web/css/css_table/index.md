@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Table
 ---
+
 {{CSSRef}}
 
 **_CSS Table_** (ou module des tableaux CSS) est un module CSS qui définit comment disposer les données de tableaux.

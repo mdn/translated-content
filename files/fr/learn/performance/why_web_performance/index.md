@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Performance/why_web_performance
 original_slug: Learn/Performance/pourquoi_performance_web
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
 
 La performance Web consiste à rendre les sites Web rapides, y compris à rendre les processus lents rapides. Cet article explique pourquoi les performances Web sont importantes pour les visiteurs du site et pour vos objectifs commerciaux.

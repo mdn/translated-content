@@ -12,6 +12,7 @@ tags:
 translation_of: Web/API/FormData/Using_FormData_Objects
 original_slug: Web/API/FormData/Utilisation_objets_FormData
 ---
+
 L’objet [`FormData`](/fr/docs/Web/API/FormData) vous permet de compiler un ensemble de paires clé/valeur à envoyer à l’aide de l’API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest). Il est principalement destiné à l’envoi de données de formulaire, mais il peut également être utilisé indépendamment des formulaires pour transmettre des données indexées. Le format des données transmises est le même que celui qu’utiliserait la méthode {{domxref("HTMLFormElement.submit","submit()")}} du formulaire pour envoyer les données si l’encodage de ce dernier était défini sur `multipart/form-data`.
 
 ## Création intégrale d’un objet FormData

@@ -13,6 +13,7 @@ tags:
   - getViews
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getViews
 ---
+
 {{AddonSidebar()}}
 
 Renvoie un tableau des objets [Window](/fr/docs/Web/API/Window) pour chacune des pages exécutées dans l'extension en cours. Cela inclut, par exemple :

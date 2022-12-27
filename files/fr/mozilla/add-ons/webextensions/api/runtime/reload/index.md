@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/reload
 ---
+
 {{AddonSidebar()}}
 
 Recharge une extension.

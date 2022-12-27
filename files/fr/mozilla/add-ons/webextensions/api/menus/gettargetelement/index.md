@@ -10,6 +10,7 @@ tags:
   - menus
 translation_of: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
 ---
+
 {{AddonSidebar}}
 
 Renvoie l'élément pour un `targetElementId` donné

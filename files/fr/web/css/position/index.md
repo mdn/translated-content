@@ -4,6 +4,7 @@ slug: Web/CSS/position
 translation_of: Web/CSS/position
 browser-compat: css.properties.position
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`position`** définit la façon dont un élément est positionné dans un document. Les propriétés [`top`](/fr/docs/Web/CSS/top), [`right`](/fr/docs/Web/CSS/right), [`bottom`](/fr/docs/Web/CSS/bottom) et [`left`](/fr/docs/Web/CSS/left) déterminent l'emplacement final de l'élément positionné.

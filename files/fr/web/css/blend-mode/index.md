@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/blend-mode
 ---
+
 {{CSSRef}}
 
 Le type **`<blend-mode>`** est un ensemble de mots-clés qui permettent de décrire les différents modes de fusion (_blend modes_). Ce type de valeur est utilisé pour les propriétés {{cssxref("background-blend-mode")}} et {{cssxref("mix-blend-mode")}}.

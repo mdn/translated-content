@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/src
 ---
+
 {{CSSRef}}
 
 Le descripteur **`src`**, associé à la règle @ {{cssxref("@font-face")}}, permet de définir la ressource qui contient les données relatives à une police de caractères. Ce descripteur est obligatoire afin que la règle `@font-face` soit considérée comme valide.

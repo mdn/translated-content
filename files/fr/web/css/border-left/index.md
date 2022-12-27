@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-left
 ---
+
 {{CSSRef}}
 
 La propriété **`border-left`** est une propriété raccourcie qui permet de définir la bordure gauche d'un élément

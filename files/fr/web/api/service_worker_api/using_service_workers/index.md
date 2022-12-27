@@ -9,6 +9,7 @@ tags:
   - basics
 translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
+
 {{ServiceWorkerSidebar}}
 
 {{ SeeCompatTable() }}

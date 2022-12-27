@@ -4,6 +4,7 @@ slug: Web/CSS/content
 translation_of: Web/CSS/content
 browser-compat: css.properties.content
 ---
+
 {{CSSRef}}
 
 La propriété [CSS](/fr/docs/Web/CSS) **`content`** remplace un élément avec une valeur générée. Les objets insérés via la propriété `content` sont des **[éléments remplacés anonymes](/fr/docs/Web/CSS/Replaced_element)**.

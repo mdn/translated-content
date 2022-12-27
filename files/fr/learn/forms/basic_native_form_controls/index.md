@@ -4,6 +4,7 @@ slug: Learn/Forms/Basic_native_form_controls
 translation_of: Learn/Forms/Basic_native_form_controls
 original_slug: Web/Guide/HTML/Formulaires/Les_blocs_de_formulaires_natifs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
 Dans [l'article précédent](/fr/docs/Learn/Forms/How_to_structure_a_web_form), nous avons construit un exemple de formulaire web fonctionnel à l'aide de balises. Nous y avons vu certains des contrôles liés aux formulaires, les éléments communs pour organiser la structure et les bonnes pratiques pour l'accessibilité. Nous allons maintenant aborder les fonctionnalités des différents contrôles de formulaire, dans le détail. Nous étudierons l'ensemble des options disponibles pour recueillir les différents types de données. Dans cet article, nous verrons l'ensemble des contrôles de formulaire qui sont présents dans tous les navigateurs, depuis les débuts du Web.

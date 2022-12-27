@@ -9,6 +9,7 @@ tags:
   - Sélecteur
 translation_of: Web/CSS/:has
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:has()`** permet de cibler un élément si au moins un des sélecteurs passés en paramètre correspond à l'élément (selon la portée, {{cssxref(":scope")}}, de l'élément).

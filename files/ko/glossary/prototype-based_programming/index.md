@@ -1,10 +1,6 @@
 ---
 title: 프로토타입 기반 프로그래밍
 slug: Glossary/Prototype-based_programming
-tags:
-  - CodingScripting
-  - Glossary
-translation_of: Glossary/Prototype-based_programming
 ---
 **프로토타입 기반 프로그래밍**은 {{Glossary("OOP", "객체 지향 프로그래밍")}}과 달리 클래스를 명확히 정의하지 않아도 되며, 속성과 메서드를 다른 클래스의 인스턴스나 빈 객체에 추가하는 작업을 덜 수 있는 프로그래밍 스타일 입니다.
 

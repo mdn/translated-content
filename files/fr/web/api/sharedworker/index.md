@@ -10,6 +10,7 @@ tags:
   - Worker
 translation_of: Web/API/SharedWorker
 ---
+
 {{APIRef("Web Workers API")}}
 
 L'interface **`SharedWorker`** représente un type spécifique de worker qui peut être _accédé_ à partir de plusieurs contextes de navigation, tels que plusieurs fenêtres, iframes ou même workers. Ils implémentent une autre interface que les workers dédiés et ont un contexte global différent, {{domxref("SharedWorkerGlobalScope")}}.

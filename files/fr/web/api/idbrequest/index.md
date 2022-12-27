@@ -12,6 +12,7 @@ tags:
   - TopicStub
 translation_of: Web/API/IDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 L'interface **`IDBRequest`** de l'API IndexedDB donne accès par ses gestionnaires d'événements aux résultats des requêtes asynchrones sur la base de données, les magasins d'objets ou les index. Chaque opération d'écriture ou lecture sur la base de données utilise une requête.

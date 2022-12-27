@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-text-stroke
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-text-stroke`** permet de définir l'épaisseur et la couleur du contour utilisé pour les lettres d'un texte. Cette propriété est une propriété raccourcie qui permet de définir les propriétés {{cssxref("-webkit-text-stroke-width")}} et {{cssxref("-webkit-text-stroke-color")}}.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/font-size
 ---
+
 {{CSSRef}}
 
 La propriété **`font-size`** définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type {{cssxref("&lt;length&gt;")}}) (par exemple exprimées avec les unités `em` ou `ex`).

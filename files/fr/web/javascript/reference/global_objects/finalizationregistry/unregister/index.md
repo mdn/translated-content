@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
 translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
 browser-compat: javascript.builtins.FinalizationRegistry.unregister
 ---
+
 {{JSRef}}
 
 La méthode `unregister()` permet de retirer un objet donné d'un registre [`FinalizationRegistry`](/fr/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry).

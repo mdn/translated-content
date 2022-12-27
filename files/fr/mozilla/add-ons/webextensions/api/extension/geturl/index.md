@@ -12,6 +12,7 @@ tags:
   - getURL
 translation_of: Mozilla/Add-ons/WebExtensions/API/extension/getURL
 ---
+
 {{AddonSidebar}}
 
 > **Attention :** Cette fonction est obsolète. Veuillez utiliser [`runtime.getURL`](/fr/Add-ons/WebExtensions/API/runtime/getURL).

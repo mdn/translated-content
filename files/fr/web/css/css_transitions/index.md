@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Transitions
 ---
+
 {{CSSRef}}
 
 Les **transitions CSS** permettent de créer des transitions harmonieuses entre les valeurs des propriétés CSS concernées. Elles permettent aussi de définir leur évolution (accélération/décélération), via les fonctions de minutage.

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Basic_User_Interface
 ---
+
 {{CSSRef}}
 
 **_CSS Basic User Interface_** est un module de la spécification CSS qui décrit les fonctionnalités et le rendu associés aux fonctionnalités de l'interface utilisateur.

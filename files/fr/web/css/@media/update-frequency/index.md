@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/update-frequency
 ---
+
 {{CSSRef}}
 
 **`update`** est une caractéristique média (cf. {{cssxref("@media")}}) qui permet de vérifier la vitesse à laquelle l'appareil d'affichage peut modifier l'apparence du contenu.

@@ -11,6 +11,7 @@ tags:
   - Reference
 translation_of: Web/API/Notification/body
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 La propriété en lecture seule **`body`** de l'interface {{domxref ("Notification")}} est la chaîne de caractères qui correspond au corps de la notification, comme définis à l'aide de l'option `body` lors de la création de la notification à l'aide du constructeur {{domxref ("Notification.Notification", "Notification()" )}}.

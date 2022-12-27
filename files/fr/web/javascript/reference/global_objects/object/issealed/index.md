@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/isSealed
 ---
+
 {{JSRef}}
 
 La méthode **`Object.isSealed()`** permet de déterminer si un objet est scellé.

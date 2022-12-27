@@ -3,6 +3,7 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 translation_of: Web/CSS/transform-origin
 ---
+
 {{CSSRef}}
 
 La propriété **`transform-origin`** permet de modifier l'origine du repère pour les opérations de transformation d'un élément.

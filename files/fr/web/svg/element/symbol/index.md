@@ -6,6 +6,7 @@ tags:
   - SVG Conteneur
 translation_of: Web/SVG/Element/symbol
 ---
+
 {{SVGRef}}
 
 L'élément **`<symbol>`** est utilisé pour définir un template de graphique pouvant être instancié par un élément {{SVGElement("use")}}.

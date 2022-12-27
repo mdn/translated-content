@@ -1,11 +1,6 @@
 ---
 title: 태그
 slug: Glossary/Tag
-tags:
-  - CodingScripting
-  - Glossary
-  - HTML
-translation_of: Glossary/Tag
 ---
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 

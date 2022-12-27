@@ -1,7 +1,6 @@
 ---
 title: IP Address
 slug: Glossary/IP_Address
-translation_of: Glossary/IP_Address
 ---
 IP 주소는 인터넷 프로토콜을 사용하는 네트워크에 연결된 모든 장치에 할당된 번호다.
 

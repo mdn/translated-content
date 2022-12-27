@@ -13,6 +13,7 @@ tags:
   - pageAction
 translation_of: Mozilla/Add-ons/WebExtensions/API/pageAction/ImageDataType
 ---
+
 {{AddonSidebar()}}
 
 Données en pixel pour une image.

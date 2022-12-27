@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBIndex/name
 ---
+
 {{APIRef("IndexedDB")}}
 
 La propriété **`name`**, rattachée à l'interface {{domxref("IDBIndex")}}, contient une chaîne de caractères qui permet de désigner l'index courant.

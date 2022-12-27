@@ -9,6 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/textarea
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<textarea>`** représente un contrôle qui permet d'éditer du texte sur plusieurs lignes.

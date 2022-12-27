@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-right-width
 ---
+
 {{CSSRef}}
 
 La propriété **`border-right-width`** définit l'épaisseur de la bordure pour le côté droit d'une boîte.

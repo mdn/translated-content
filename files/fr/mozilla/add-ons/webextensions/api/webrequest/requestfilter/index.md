@@ -13,6 +13,7 @@ tags:
   - webRequest
 translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
 ---
+
 {{AddonSidebar()}}
 
 Un objet décrivant les filtres à appliquer aux événements webRequest.

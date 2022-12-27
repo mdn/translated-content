@@ -3,6 +3,7 @@ title: '-webkit-text-fill-color'
 slug: Web/CSS/-webkit-text-fill-color
 translation_of: Web/CSS/-webkit-text-fill-color
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-webkit-text-fill-color`** définit la couleur utilisée pour dessiner le contenu des lettres qui forment un texte. Si cette propriété n'est pas définie, c'est la valeur de la propriété {{cssxref("color")}} qui sera utilisée.

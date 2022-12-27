@@ -11,6 +11,7 @@ tags:
 translation_of: Web/HTML/Element/body
 browser-compat: html.elements.body
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<body>`** représente le contenu principal du document HTML. Il ne peut y avoir qu'un élément `<body>` par document.

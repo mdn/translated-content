@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
 ---
+
 {{AddonSidebar()}}
 
 Utilisez cet événement pour écouter les messages d’une autre partie de votre extension.

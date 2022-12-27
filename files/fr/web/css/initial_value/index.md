@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/initial_value
 original_slug: Web/CSS/Valeur_initiale
 ---
+
 {{CSSRef}}
 
 La **valeur initiale** d'une [propriété CSS](/fr/docs/Web/CSS/Reference) est définie par la spécification et varie selon [qu'une propriété est héritée ou non](/fr/docs/Web/CSS/Héritage).

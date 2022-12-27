@@ -8,6 +8,7 @@ tags:
 translation_of: Web/API/Document/touchend_event
 original_slug: Web/API/Document/touchend_event
 ---
+
 {{APIRef}}
 
 L'événement `touchend` est déclenché quand un point de contact est retiré de la surface.

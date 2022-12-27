@@ -12,6 +12,7 @@ tags:
 translation_of: Web/HTML/Element/figure
 browser-compat: html.elements.figure
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **`<figure>`** représente un contenu autonome, éventuellement accompagné d'une légende facultative, qui est spécifiée à l'aide de l'élément [`<figcaption>`](/fr/docs/Web/HTML/Element/figcaption). La figure, sa légende et son contenu sont référencés comme une seule unité.

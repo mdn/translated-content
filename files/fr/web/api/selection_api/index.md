@@ -5,6 +5,7 @@ page-type: web-api-overview
 translation_of: Web/API/Selection_API
 spec-urls: https://w3c.github.io/selection-api/#selection-interface
 ---
+
 {{DefaultAPISidebar("Selection API")}}
 
 > **Note :** Cette API _n'est pas disponible_ dans [les <i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API) (elle n'est pas exposée via [`WorkerNavigator`](/fr/docs/Web/API/WorkerNavigator)).

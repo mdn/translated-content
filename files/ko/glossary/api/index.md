@@ -1,7 +1,6 @@
 ---
 title: API
 slug: Glossary/API
-translation_of: Glossary/API
 ---
 API(Application Programming Interface)는 소프트웨어 프로그램(애플리케이션) 내부에 존재하는 기능 및 규칙의 집합이다. API는 Human User Interface와 달리 소프트웨어를 통해 상호작용할 수 있다. 즉, API는 API를 제공하는 애플리케이션과 서드파티 소프트웨어 및 하드웨어 등의 것들 사이의 간단한 계약(인터페이스)이라고도 볼 수 있다.
 

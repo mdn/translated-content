@@ -4,6 +4,7 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 original_slug: Web/API/Web_Workers_API/algorithme_clonage_structure
 ---
+
 L’algorithme de clonage structuré est un nouvel algorithme [défini par la spécification HTML5](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data) pour sérialiser les objets JavaScript complexes. Il est plus puissant que [JSON](/en/JSON) en cela qu’il supporte la sérialisation d’objets contenant des graphes cycliques — des objets peuvent faire référence à des objets faisant référence à d’autres objets dans le même graphe. De plus, dans certains cas, l’algorithme de clonage structuré peut être plus efficace que JSON.
 
 L’algorithme, essentiellement, parcourt tous les champs de l’objet original, copiant les valeurs de chaque champ dans un nouvel objet. Si un champ est lui-même un objet avec des champs, ces champs sont parcourus de manière récursive jusqu’à ce que chaque champ et sous-champ aient été copié dans le nouvel objet.

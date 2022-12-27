@@ -13,6 +13,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
 ---
+
 {{AddonSidebar()}}
 
 Un objet décrivant une seule visite sur une page.

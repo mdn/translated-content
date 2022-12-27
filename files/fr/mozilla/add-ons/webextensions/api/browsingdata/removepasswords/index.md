@@ -12,6 +12,7 @@ tags:
   - removePasswords
 translation_of: Mozilla/Add-ons/WebExtensions/API/browsingData/removePasswords
 ---
+
 {{AddonSidebar()}}
 
 Efface les mots de passes enregistrés

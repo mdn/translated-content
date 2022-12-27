@@ -12,6 +12,7 @@ tags:
   - messaging
 translation_of: Web/API/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 L'interface **`MessageEvent`** représente un message reçu par un objet cible.

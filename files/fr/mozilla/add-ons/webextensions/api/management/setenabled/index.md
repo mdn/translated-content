@@ -11,6 +11,7 @@ tags:
   - setEnabled
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/setEnabled
 ---
+
 {{AddonSidebar()}}
 
 Active ou désactive l'extension ajoutée.

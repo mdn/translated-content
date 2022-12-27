@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/ratio
 ---
+
 {{CSSRef}}
 
 Le type de donnée CSS **`<ratio>`** permet de décrire les proportions [dans les _media queries_](/fr/docs/Web/CSS/Media_Queries) (N.D.T. pour « requête média » qui est moins usité). entre deux valeurs sans unité.

@@ -3,6 +3,7 @@ title: document.createElement
 slug: Web/API/Document/createElement
 translation_of: Web/API/Document/createElement
 ---
+
 {{APIRef("DOM")}}
 
 Dans un document [HTML](/fr/docs/Web/HTML), la méthode **`document.createElement()`** crée un élément HTML du type spécifié par `tagName` ou un {{domxref("HTMLUnknownElement")}} si `tagName` n’est pas reconnu.

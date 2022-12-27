@@ -13,6 +13,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
 ---
+
 {{AddonSidebar()}}
 
 Vérifie de voir si un mise à jour de l'extension est disponible.

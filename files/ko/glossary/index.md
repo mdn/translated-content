@@ -1,16 +1,6 @@
 ---
 title: 용어 사전
 slug: Glossary
-tags:
-  - Beginner
-  - Definitions
-  - Glossary
-  - Index
-  - Landing
-  - Terminology
-  - 사전
-  - 용어
-translation_of: Glossary
 ---
 웹 기술은 문서화 및 코딩에 쓰이는 전문 용어와 약어 목록을 포함합니다. 이 용어 사전은 웹을 성공적으로 이해하고 구축하기 위해 알아야 할 단어와 약자의 정의를 제공합니다.
 

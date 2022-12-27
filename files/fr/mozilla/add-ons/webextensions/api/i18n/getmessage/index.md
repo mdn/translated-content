@@ -13,6 +13,7 @@ tags:
   - i18n
 translation_of: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
 ---
+
 {{AddonSidebar()}}
 
 Obtient la chaîne localisée pour le message spécifié.

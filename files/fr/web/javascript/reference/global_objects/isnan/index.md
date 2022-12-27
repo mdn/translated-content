@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/isNaN
 original_slug: Web/JavaScript/Reference/Objets_globaux/isNaN
 ---
+
 {{jsSidebar("Objects")}}
 
 La fonction **`isNaN()`** permet de déterminer si une valeur est {{jsxref("NaN")}}. On notera que cette fonction utilise des règles de conversion différentes de {{jsxref("Number.isNaN()")}}, définie avec ECMAScript 2015 (ES6).

@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Unary_negation
 browser-compat: javascript.operators.unary_negation
 ---
+
 {{jsSidebar("Operators")}}
 
 L'opérateur de négation unaire (`-`) se place devant son opérande et le transforme en son opposé.

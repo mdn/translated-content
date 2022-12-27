@@ -3,6 +3,7 @@ title: Utiliser les champs privés d'une classe
 slug: Web/JavaScript/Guide/Working_With_Private_Class_Features
 translation_of: Web/JavaScript/Guide/Working_With_Private_Class_Features
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 Il arrive souvent de vouloir utiliser des champs ou des méthodes privées. Seulement, cette fonctionnalité n'était pas présente aux débuts de JavaScript et, même si des conventions ont été mises en place comme l'utilisation d'un tiret bas comme préfixe afin d'indiquer des champs ou des méthodes privées (`_masqué`)&nbsp;: ce n'était que des conventions et les propriétés concernées étaient bien publiques.

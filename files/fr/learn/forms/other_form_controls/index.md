@@ -3,6 +3,7 @@ title: Les autres contrôles de formulaire
 slug: Learn/Forms/Other_form_controls
 translation_of: Learn/Forms/Other_form_controls
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/HTML5_input_types","Learn/Forms/Styling_web_forms", "Learn/Forms")}}
 
 Voyons maintenant les fonctionnalités des éléments de formulaire qui ne sont pas des éléments `<input>`. C'est le cas par exemple des listes déroulantes, des champs textes sur plusieurs lignes mais aussi d'autres fonctionnalités comme l'élément [`<output>`](/fr/docs/Web/HTML/Element/output) (croisé dans l'article précédent), et des barres de progression.

@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBKeyRange/bound
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`bound()`**, rattachée à l'interface {{domxref("IDBKeyRange")}}, renvoie un intervalle de clé délimité par une borne inférieure et une borne supérieure.

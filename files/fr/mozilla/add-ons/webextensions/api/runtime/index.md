@@ -12,6 +12,7 @@ tags:
   - runtime
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime
 ---
+
 {{AddonSidebar}}
 
 Ce module fournit des informations sur votre extension et l'environnement dans lequel elle fonctionne.

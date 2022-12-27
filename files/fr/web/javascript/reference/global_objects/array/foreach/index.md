@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/forEach
 ---
+
 {{JSRef}}
 
 La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque élément du tableau.

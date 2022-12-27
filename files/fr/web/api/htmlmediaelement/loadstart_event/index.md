@@ -10,6 +10,7 @@ tags:
 translation_of: Web/API/GlobalEventHandlers/onloadstart
 original_slug: Web/API/GlobalEventHandlers/onloadstart
 ---
+
 {{ApiRef}}
 
 La propriété **`onloadstart`** du "mixin" {{domxref("GlobalEventHandlers")}} Un gestionnaire d'évènement représentant le code à appeler lorsque l'évènement {{event("loadstart")}} est déclenché (quand la progression est commencée sur le chargement d'une ressource).

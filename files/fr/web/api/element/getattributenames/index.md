@@ -9,6 +9,7 @@ tags:
   - Méthodes
 translation_of: Web/API/Element/getAttributeNames
 ---
+
 {{APIRef("DOM")}}
 
 `Element.getAttributeNames()` renvoie les noms des attributs de l'élément sous la forme d'un {{jsxref("Array")}} (_tableau_) de chaînes de caractères. Si l'élément n'a pas d'attributs, il retourne un tableau vide.

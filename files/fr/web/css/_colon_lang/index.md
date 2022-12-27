@@ -3,6 +3,7 @@ title: ':lang'
 slug: Web/CSS/:lang
 translation_of: Web/CSS/:lang
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:lang`** permet de définir la mise en forme d'un élément selon la langue dans laquelle il est écrit.

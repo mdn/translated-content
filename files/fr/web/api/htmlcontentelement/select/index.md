@@ -9,6 +9,7 @@ tags:
   - Web Components
 translation_of: Web/API/HTMLContentElement/select
 ---
+
 {{ APIRef("Web Components") }}
 
 La propriété **`HTMLContentElement.select`** represente l'attribut `select`. La valeur de retour est une liste de sélecteurs CSS séparés par des espaces. Ils récupèrent le contenu à inserer à la place de l'élément `<content>`.

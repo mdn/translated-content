@@ -4,6 +4,7 @@ slug: Web/API/BiquadFilterNode
 translation_of: Web/API/BiquadFilterNode
 browser-compat: api.BiquadFilterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 L'interface **`BiquadFilterNode`** représente un simple filtre de bas niveau, créé avec la méthode [`AudioContext.createBiquadFilter()`](/fr/docs/Web/API/AudioContext/createBiquadFilter). Il s'agit d'un objet [`AudioNode`](/fr/docs/Web/API/AudioNode) qui peut représenter différents types de filtres, dispositifs de réglage de tonalité ou égaliseurs graphiques. Un objet `BiquadFilterNode` possède toujours exactement une entrée et une sortie.

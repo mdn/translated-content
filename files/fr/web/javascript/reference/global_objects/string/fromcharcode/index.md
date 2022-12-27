@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/fromCharCode
 ---
+
 {{JSRef}}
 
 La méthode statique **`String.fromCharCode()`** renvoie une chaîne de caractères créée à partir de points de code UTF-16.

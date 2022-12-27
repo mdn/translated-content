@@ -4,6 +4,7 @@ slug: Web/CSS/attr
 translation_of: Web/CSS/attr()
 original_slug: Web/CSS/attr()
 ---
+
 {{CSSRef}}
 
 La fonction **`attr()`** est utilisée afin de récupérer la valeur d'un attribut d'un élément pour l'utiliser dans la feuille de style. Cette fonction peut également être utilisée sur [les pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements) auquel cas c'est la valeur correspondant à l'élément source qui est renvoyée.

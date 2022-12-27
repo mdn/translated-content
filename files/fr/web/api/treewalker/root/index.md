@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/TreeWalker/root
 ---
+
 {{ APIRef("DOM") }}
 
 La propriété en lecture seule **`TreeWalker.root`** renvoie le noeud qui est la racine de ce que TreeWalker doit traverser.

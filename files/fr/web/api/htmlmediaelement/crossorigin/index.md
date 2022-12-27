@@ -4,6 +4,7 @@ slug: Web/API/HTMLMediaElement/crossOrigin
 browser-compat: api.HTMLMediaElement.crossOrigin
 translation_of: Web/API/HTMLMediaElement/crossOrigin
 ---
+
 {{APIRef("HTML DOM")}}
 
 La propriété **`HTMLMediaElement.crossOrigin`** est le paramètre CORS pour cet élément d'image. Voir les [attributs des paramètres CORS](/fr/docs/Web/HTML/Attributes/crossorigin) pour plus de détails.

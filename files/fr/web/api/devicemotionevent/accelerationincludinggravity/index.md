@@ -11,6 +11,7 @@ tags:
   - axes
 translation_of: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 La propriété **`accelerationIncludingGravity`** renvoie la valeur d'accélération enregistrée par l'appareil, en [mètres par seconde au carré (m/s<sup>2</sup>)](https://fr.wikipedia.org/wiki/M%C3%A8tre_par_seconde_carr%C3%A9e). Contrairement à  {{domxref("DeviceMotionEvent.acceleration")}} qui compense pour tenir compte de l'influence de la gravité, sa valeur est la somme de l'accélération de l'appareil induite par l'utilisateur et de celle provoquée par la gravité.

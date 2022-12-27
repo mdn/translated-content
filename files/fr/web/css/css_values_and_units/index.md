@@ -7,6 +7,7 @@ tags:
 translation_of: Web/CSS/CSS_Values_and_Units
 original_slug: Web/CSS/Valeurs_et_unités_CSS
 ---
+
 {{CSSRef}}
 
 Chaque déclaration CSS inclut une paire constituée d'une propriété et d'une valeur. La plupart de celles-ci sont définies dans le module de spécification _[CSS Values and Units](https://www.w3.org/TR/css-values-4/)_ (Valeurs et unités CSS). Dans cet article, nous verrons ces différents types et valeurs ainsi que des notions de base quant à leur utilisation. Pour obtenir des informattions plus détaillées, vous pouvez consulter la page de chacun de ces types.

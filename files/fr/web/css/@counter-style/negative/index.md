@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/negative
 ---
+
 {{CSSRef}}
 
 Le descripteur **`negative`**, associé à la règle @ {{cssxref("@counter-style")}}, permet de définir la représentation du compteur lorsque la valeur est négative.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/color
 ---
+
 {{CSSRef}}
 
 **`color`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) dont la valeur est le nombre de bits par composante de couleur du périphérique de sortie, ou zéro si ce dernier ne gère pas les couleurs.

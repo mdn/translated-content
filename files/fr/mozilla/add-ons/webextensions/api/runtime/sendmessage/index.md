@@ -13,6 +13,7 @@ tags:
   - sendMessage
 translation_of: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 ---
+
 {{AddonSidebar()}}
 
 Envoie un simple message aux écouteurs d'événement dans votre extension ou une extension différente.

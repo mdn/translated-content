@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/allSettled
 ---
+
 {{JSRef}}
 
 La méthode **`Promise.allSettled()`** renvoie une promesse qui est résolue une fois que l'ensemble des promesses de l'itérable passée en argument sont réussies ou rejetées. La valeur de résolution de cette promesse est un tableau d'objets dont chacun est le résultat de chaque promesse de l'itérable.

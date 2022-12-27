@@ -12,6 +12,7 @@ tags:
   - XML
 translation_of: Web/API/Node/baseURI
 ---
+
 {{APIRef("DOM")}}
 
 La propriété en lecture seule **`Node.baseURI`** renvoie l'URL de base absolue d'un noeud.

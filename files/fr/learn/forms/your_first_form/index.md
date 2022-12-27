@@ -13,6 +13,7 @@ tags:
 translation_of: Learn/Forms/Your_first_form
 original_slug: Web/Guide/HTML/Formulaires/Mon_premier_formulaire_HTML
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms")}}
 
 Le premier article de notre série vous offre une toute première expérience de création de formulaire en HTML, y compris sa conception, sa mise en œuvre en utilisant les bons éléments HTML, l'ajout de quelques très simples décorations avec les CSS et la façon dont les données sont envoyées à un serveur.

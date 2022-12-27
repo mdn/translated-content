@@ -10,6 +10,7 @@ tags:
   - données
 translation_of: Web/API/BlobEvent/data
 ---
+
 {{ apiref("Media Capture and Streams") }}
 
 {{ SeeCompatTable() }}

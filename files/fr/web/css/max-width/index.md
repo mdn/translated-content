@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/max-width
 ---
+
 {{CSSRef}}
 
 La propriété **`max-width`** est utilisée pour définir la largeur maximale d'un élément donné. Elle empêche la valeur de la propriété {{cssxref("width")}} de devenir supérieure à la valeur spécifiée par `max-width` (autrement dit, `max-width` est une borne supérieur pour `width`).

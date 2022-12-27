@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 translation_of: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
 original_slug: Apprendre/HTML/Multimedia_and_embedding/Mozilla_splash_page
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
 
 Dans cette partie, nous testerons vos connaissances des quelques techniques abordées dans les articles de ce module, en vous demandant d'ajouter des images et des vidéos à une super page d'accueil entièrement dédiée à Mozilla !

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/letter-spacing
 ---
+
 {{CSSRef}}
 
 La propriété **`letter-spacing`** définit [l'interlettre](https://fr.wikipedia.org/wiki/Interlettre) utilisée pour les caractères qui composent le texte.

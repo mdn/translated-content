@@ -8,6 +8,7 @@ tags:
   - XPath
 translation_of: Web/API/XPathExpression
 ---
+
 {{APIRef}}
 
 Une `XPathExpression` est une requête de XPath compilé renvoyée par {{domxref("document.createExpression()")}}. Elle a une méthode `evaluate()` qui peut être utilisée pour exécuter le XPath compilé.

@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Firefox/Releases/3.5
 original_slug: Mozilla/Firefox/Versions/3.5
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'une gestion améliorée d'une grande variété de standards du Web. Cet article en fournit une longue liste, avec des liens vers des articles décrivant les améliorations majeures.

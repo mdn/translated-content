@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/flags
 ---
+
 {{JSRef}}
 
 La propriété **`flags`** renvoie une chaîne de caractères contenant les [drapeaux (_flags_)](</fr/docs/Web/JavaScript/Guide/Expressions_régulières#Effectuer_des_recherches_avanc.C3.A9es_en_utilisant_les_drapeaux_(flags)>) de l'objet {{jsxref("RegExp")}} auquel elle appartient.

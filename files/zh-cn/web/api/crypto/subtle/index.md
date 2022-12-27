@@ -6,7 +6,7 @@ slug: Web/API/Crypto/subtle
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-**`Crypto.subtle`** 是一个只读属性，返回一个 {{domxref("SubtleCrypto")}} 对象允许做一个些加密操作。
+**`Crypto.subtle`** 是一个只读属性，返回一个 {{domxref("SubtleCrypto")}} 对象，可以用来做低级加密运算。
 
 ## 语法
 

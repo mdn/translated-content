@@ -9,6 +9,7 @@ tags:
 translation_of: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 original_slug: Web/CSS/CSS_Shapes/Aperçu_formes_CSS
 ---
+
 {{CSSRef}}
 
 La spécification [CSS Shapes Level 1](https://www.w3.org/TR/css-shapes/) définit les formes géométriques en CSS. Pour ce module de niveau 1, ces formes s'appliquent aux éléments qui utilisent une disposition flottante. Dans cet article, nous verrons un aperçu de ce qu'il est possible de faire avec les formes en CSS.

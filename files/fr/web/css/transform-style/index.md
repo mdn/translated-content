@@ -9,6 +9,7 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform-style
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`transform-style`** définit si les éléments-fils d'un éléments sont positionnés dans l'espace tridimensionnel ou s'ils sont aplatis dans le plan de l'élément.

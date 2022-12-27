@@ -14,6 +14,7 @@ tags:
   - set
 translation_of: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
 ---
+
 {{AddonSidebar()}}
 
 Stocke un ou plusieurs éléments dans la zone de stockage ou met à jour les éléments existants..

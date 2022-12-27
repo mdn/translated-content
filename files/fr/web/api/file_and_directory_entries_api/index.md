@@ -4,6 +4,7 @@ slug: Web/API/File_and_Directory_Entries_API
 translation_of: Web/API/File_and_Directory_Entries_API
 original_slug: Web/API/API_fichier_systeme
 ---
+
 {{DefaultAPISidebar("File System API")}}{{Non-standard_header()}}
 
 L'API fichier système simule un fichier système en local que les applications web peuvent utiliser. Vous pouvez développer des applications qui lisent, écrivent, et créent des fichiers et/ou des dossiers dans un espace virtuel.

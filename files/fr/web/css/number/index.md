@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/number
 ---
+
 {{CSSRef}}
 
 Le type de donnée CSS **`<number>`** permet de représenter des nombres entiers ou décimaux. C'est donc un type qui englobe le type de données {{cssxref("&lt;integer&gt;")}} (permettant de représenter des entiers).

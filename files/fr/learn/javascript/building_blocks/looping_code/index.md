@@ -18,6 +18,7 @@ tags:
 translation_of: Learn/JavaScript/Building_blocks/Looping_code
 original_slug: Apprendre/JavaScript/Building_blocks/Looping_code
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
 
 Les langages de programmation sont très utiles pour effectuer des tâches répétitives, allant de calculs basiques jusqu'à peu près n'importe quelle autre situation où vous avez un certain nombre d'actions similaires à répéter. Ici, nous allons étudier les structures de boucle disponible dans JavaScript qui répondent à un tel besoin.

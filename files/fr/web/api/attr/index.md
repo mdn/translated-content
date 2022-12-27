@@ -7,6 +7,7 @@ tags:
   - DOM
 translation_of: Web/API/Attr
 ---
+
 {{APIRef("DOM")}}
 
 Ce type représente un attribut d'un élément DOM comme un objet. Dans la plupart des méthodes DOM, vous auriez probablement récupéré l'attribut directement comme une chaîne (par exemple, {{domxref ("element.getAttribute()")}}, mais certaines fonctions (par exemple, {{domxref ("element.getAttributeNode()" )}}) ou des moyens d'itération donnent des types Attr.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCMonth
 ---
+
 {{JSRef}}
 
 La méthode **`getUTCMonth()`** renvoie le mois de la date renseignée, d'après UTC. La numérotation des mois commence à 0 pour le premier mois de l'année.

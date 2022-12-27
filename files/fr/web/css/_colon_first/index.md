@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/:first
 ---
+
 {{CSSRef}}
 
 La pseudo-classe **`:first`**, liée à la règle @ {{cssxref("@page")}} décrit la mise en forme de la première page lors de l'impression d'un document. ( voir {{cssxref(":first-child")}} pour le premier élément d'un noeud )

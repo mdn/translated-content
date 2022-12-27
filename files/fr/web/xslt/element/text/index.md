@@ -6,6 +6,7 @@ tags:
 translation_of: Web/XSLT/Element/text
 original_slug: Web/XSLT/text
 ---
+
 {{ XsltRef() }}
 
 L'élément `<xsl:text>` écrit un texte littéral dans l'arbre de sortie. Il peut contenir des `#PCDATA`, du texte littéral, et des références aux entités.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCMilliseconds
 ---
+
 {{JSRef}}
 
 La méthode **`getUTCMilliseconds()`** renvoie les millièmes de secondes pour la date renseignée selon UTC.

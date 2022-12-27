@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
 translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
 browser-compat: javascript.builtins.AggregateError.AggregateError
 ---
+
 {{JSRef}}
 
 Le **constructeur `AggregateError()`** permet de créer une erreur qui agrège plusieurs erreurs.

@@ -10,6 +10,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
 original_slug: Mozilla/Add-ons/WebExtensions/API/userScripts/travailler_avec_userScripts
 ---
+
 {{AddonSidebar}}
 
 En implémentant userScripts, les développeurs d'extension peuvent modifier l'apparence et/ou le fonctionnement des sites pour mieux répondre aux besoins des utilisateurs.

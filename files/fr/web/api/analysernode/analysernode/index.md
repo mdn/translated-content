@@ -3,6 +3,7 @@ title: AnalyserNode()
 slug: Web/API/AnalyserNode/AnalyserNode
 translation_of: Web/API/AnalyserNode/AnalyserNode
 ---
+
 {{APIRef("'Web Audio API'")}}{{SeeCompatTable}}
 
 Le constructeur **`AnalyserNode`** crée un nouvel objet {{domxref("AnalyserNode")}}.

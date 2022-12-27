@@ -1,7 +1,6 @@
 ---
 title: JSON
 slug: Glossary/JSON
-translation_of: Glossary/JSON
 ---
 _JavaScript Object Notation_ (**JSON**) 은 데이터 교환 형식의 일종입니다. Although not a strict subset, JSON closely resembles a subset of {{Glossary("JavaScript")}} syntax. Though many programming languages support JSON, JSON is especially useful for JavaScript-based apps, including websites and browser extensions.
 

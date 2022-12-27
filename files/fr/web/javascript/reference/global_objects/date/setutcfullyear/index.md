@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCFullYear
 ---
+
 {{JSRef}}
 
 La méthode **`setUTCFullYear()`** définit l'année complête pour la date, selon UTC.

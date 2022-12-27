@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/set
 ---
+
 {{JSRef}}
 
 La méthode **`handler.set()`** est une trappe permettant d'intercepter les opérations visant à définir ou modifier la valeur d'une propriété.

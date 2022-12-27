@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/setPrototypeOf
 ---
+
 {{JSRef}}
 
 La méthode **`handler.setPrototypeOf()`** est une trappe pour intercepter {{jsxref("Object.setPrototypeOf()")}}.

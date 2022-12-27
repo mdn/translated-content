@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/keys
 ---
+
 {{JSRef}}
 
 La méthode **`Object.keys()`** renvoie un tableau contenant les noms des propriétés propres à un objet (qui ne sont pas héritées via la chaîne de prototypes) et qui sont énumérables. L'ordre de ce tableau est le même que celui obtenu par une boucle {{jsxref("Instructions/for...in","for...in")}} (à la différence qu'une boucle for-in liste également les propriétés héritées).

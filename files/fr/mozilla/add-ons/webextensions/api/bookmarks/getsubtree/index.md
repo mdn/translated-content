@@ -13,6 +13,7 @@ tags:
   - getSubTree
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
 ---
+
 {{AddonSidebar()}}
 
 La méthode **`bookmarks.getSubTree()`** récupère de façon asynchrone un {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, étant donné son ID.

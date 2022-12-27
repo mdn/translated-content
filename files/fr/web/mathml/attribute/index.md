@@ -6,6 +6,7 @@ tags:
   - MathML:Référence
 translation_of: Web/MathML/Attribute
 ---
+
 {{MathMLRef}}
 
 Cette référence est une liste, dans l'ordre alphabétique, des attributs MathML. De plus amples détails sur chaque attribut sont disponibles sur les pages des [éléments](/fr/docs/MathML/Element).

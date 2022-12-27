@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
 original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_source_map_pragma
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Message

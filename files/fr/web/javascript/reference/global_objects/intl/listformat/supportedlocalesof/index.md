@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/supportedLocalesOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/ListFormat/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 The **`Intl.ListFormat.supportedLocalesOf()`** renvoie, parmi les locales fournies, un tableau contenant les locales supportées pour le formatage des listes et qui ne nécessitent pas d'utiliser la locale par défaut de l'environnement.

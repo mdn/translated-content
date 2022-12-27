@@ -12,6 +12,7 @@ tags:
   - Windows
 translation_of: Mozilla/Add-ons/WebExtensions/API/windows
 ---
+
 {{AddonSidebar}}
 
 Intéragissez avec les fenêtres du navigateur. Vous pouvez utiliser cette API pour obtenir des informations sur les fenêtres ouvertes et à ouvrir, modifiée et fermée les fenêtres. Vous pouvez également écouter la fenêtre ouverte, fermée, et activée les événements.

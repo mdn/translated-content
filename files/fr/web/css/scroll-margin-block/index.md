@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-margin-block
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-margin-block`** est une propriété raccourcie logique qui définit les marges de défilement sur l'axe de bloc (i.e. les propriétés logiques `scroll-margin-block-start` et `scroll-margin-block-end`).

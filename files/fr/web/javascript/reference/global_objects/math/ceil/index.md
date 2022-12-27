@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/ceil
 ---
+
 {{JSRef}}
 
 La fonction **`Math.ceil()`** retourne le plus petit entier supérieur ou égal au nombre donné.

@@ -13,6 +13,7 @@ tags:
   - Listes
 translation_of: Learn/CSS/Styling_text/Typesetting_a_homepage
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 Dans cette évaluation, nous testerons votre compréhension de toutes les techniques pour la composition de textes à l'écran présentées au cours de ce module&nbsp;: elle consiste à créer la page d'accueil du site d'une école communale. Vous ne devriez avoir que du plaisir tout au long de ce parcours.

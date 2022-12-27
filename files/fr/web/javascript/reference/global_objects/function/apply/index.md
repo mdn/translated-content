@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/apply
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/apply
 ---
+
 {{JSRef}}
 
 La méthode **`apply()`** appelle une fonction en lui passant une valeur `this` et des `arguments` sous forme d'un tableau (ou d'un objet [semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Objets_élémentaires_JavaScript#Manipuler_des_objets_semblables_aux_tableaux)).

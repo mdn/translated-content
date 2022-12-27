@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-collapse
 ---
+
 {{CSSRef}}
 
 La propriété **`border-collapse`** détermine si les bordures d'un tableau sont séparées ou fusionnées. Quand elles sont séparées, chaque cellule du tableau a ses propres bordures, distinctes. Quand elles sont fusionnées, les bordures des cellules sont partagées.

@@ -13,6 +13,7 @@ tags:
   - onMoved
 translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsqu'un signet ou un dossier est déplacé vers un autre dossier parent et / ou position dans un dossier.

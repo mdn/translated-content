@@ -7493,6 +7493,10 @@
     "modified": "2020-10-15T22:25:33.509Z",
     "contributors": ["mfuji09"]
   },
+  "Web/API/Document/pointerlockchange_event": {
+    "modified": "2020-10-15T22:15:21.525Z",
+    "contributors": ["mfuji09"]
+  },
   "Web/API/Document/preferredStyleSheetSet": {
     "modified": "2020-10-16T14:05:35.162Z",
     "contributors": ["mfuji09"]
@@ -8181,14 +8185,6 @@
   "Web/API/Element/pointerleave_event": {
     "modified": "2020-10-15T22:20:45.066Z",
     "contributors": ["mfuji09", "Wind1808"]
-  },
-  "Web/API/Element/pointerlockchange_event": {
-    "modified": "2020-10-15T22:15:21.525Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/API/Element/pointerlockerror_event": {
-    "modified": "2020-10-15T22:15:23.341Z",
-    "contributors": ["mfuji09"]
   },
   "Web/API/Element/pointermove_event": {
     "modified": "2020-10-15T22:20:46.283Z",
@@ -28241,114 +28237,6 @@
     "modified": "2020-11-14T07:35:11.792Z",
     "contributors": ["mfuji09", "SphinxKnight", "shide55"]
   },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly": {
-    "modified": "2020-10-15T21:52:52.145Z",
-    "contributors": ["eltociear", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/CompileError": {
-    "modified": "2020-10-15T21:53:17.674Z",
-    "contributors": ["ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Global": {
-    "modified": "2020-10-15T22:24:08.516Z",
-    "contributors": ["Uemmra3", "dskmori", "horitaku1124"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance": {
-    "modified": "2020-10-15T21:52:51.981Z",
-    "contributors": ["mfuji09", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance": {
-    "modified": "2020-10-15T22:28:19.365Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports": {
-    "modified": "2020-10-15T21:58:32.773Z",
-    "contributors": ["mfuji09", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError": {
-    "modified": "2020-10-15T21:54:40.626Z",
-    "contributors": ["ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory": {
-    "modified": "2020-10-15T21:52:52.014Z",
-    "contributors": ["mfuji09", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory": {
-    "modified": "2020-10-15T22:28:19.316Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/buffer": {
-    "modified": "2020-10-15T21:54:53.879Z",
-    "contributors": ["mfuji09", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/grow": {
-    "modified": "2020-10-15T21:54:54.850Z",
-    "contributors": ["mfuji09", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module": {
-    "modified": "2020-12-06T05:19:41.051Z",
-    "contributors": ["mfuji09", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections": {
-    "modified": "2019-03-23T22:10:48.073Z",
-    "contributors": ["ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/exports": {
-    "modified": "2020-10-15T21:54:53.049Z",
-    "contributors": ["ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/imports": {
-    "modified": "2020-10-15T21:54:52.650Z",
-    "contributors": ["mfuji09", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError": {
-    "modified": "2020-10-15T21:54:41.289Z",
-    "contributors": ["ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table": {
-    "modified": "2020-10-15T21:53:02.171Z",
-    "contributors": ["chikoski", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/Table": {
-    "modified": "2020-10-15T22:28:18.775Z",
-    "contributors": ["mfuji09"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get": {
-    "modified": "2020-10-15T21:54:53.337Z",
-    "contributors": ["mfuji09", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow": {
-    "modified": "2020-10-15T21:54:52.682Z",
-    "contributors": ["mfuji09", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length": {
-    "modified": "2020-10-15T21:54:52.925Z",
-    "contributors": ["mfuji09", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/set": {
-    "modified": "2020-10-15T21:54:51.626Z",
-    "contributors": ["mfuji09", "bellbind", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compile": {
-    "modified": "2020-10-15T21:53:09.837Z",
-    "contributors": ["ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/compileStreaming": {
-    "modified": "2020-10-15T21:58:31.035Z",
-    "contributors": ["ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate": {
-    "modified": "2020-12-06T05:02:05.948Z",
-    "contributors": ["mfuji09", "michitaro", "ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming": {
-    "modified": "2020-10-15T21:58:31.752Z",
-    "contributors": ["ukyo"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/WebAssembly/validate": {
-    "modified": "2020-10-15T21:53:09.850Z",
-    "contributors": ["ukyo"]
-  },
   "Web/JavaScript/Reference/Global_Objects/decodeURI": {
     "modified": "2020-10-15T21:13:38.379Z",
     "contributors": [
@@ -30950,6 +30838,114 @@
     "modified": "2019-06-26T23:45:25.845Z",
     "contributors": ["Uemmra3", "chikoski", "ukyo"]
   },
+  "WebAssembly/JavaScript_interface": {
+    "modified": "2020-10-15T21:52:52.145Z",
+    "contributors": ["eltociear", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/CompileError": {
+    "modified": "2020-10-15T21:53:17.674Z",
+    "contributors": ["ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Global": {
+    "modified": "2020-10-15T22:24:08.516Z",
+    "contributors": ["Uemmra3", "dskmori", "horitaku1124"]
+  },
+  "WebAssembly/JavaScript_interface/Instance": {
+    "modified": "2020-10-15T21:52:51.981Z",
+    "contributors": ["mfuji09", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Instance/Instance": {
+    "modified": "2020-10-15T22:28:19.365Z",
+    "contributors": ["mfuji09"]
+  },
+  "WebAssembly/JavaScript_interface/Instance/exports": {
+    "modified": "2020-10-15T21:58:32.773Z",
+    "contributors": ["mfuji09", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/LinkError": {
+    "modified": "2020-10-15T21:54:40.626Z",
+    "contributors": ["ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Memory": {
+    "modified": "2020-10-15T21:52:52.014Z",
+    "contributors": ["mfuji09", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Memory/Memory": {
+    "modified": "2020-10-15T22:28:19.316Z",
+    "contributors": ["mfuji09"]
+  },
+  "WebAssembly/JavaScript_interface/Memory/buffer": {
+    "modified": "2020-10-15T21:54:53.879Z",
+    "contributors": ["mfuji09", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Memory/grow": {
+    "modified": "2020-10-15T21:54:54.850Z",
+    "contributors": ["mfuji09", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Module": {
+    "modified": "2020-12-06T05:19:41.051Z",
+    "contributors": ["mfuji09", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Module/customSections": {
+    "modified": "2019-03-23T22:10:48.073Z",
+    "contributors": ["ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Module/exports": {
+    "modified": "2020-10-15T21:54:53.049Z",
+    "contributors": ["ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Module/imports": {
+    "modified": "2020-10-15T21:54:52.650Z",
+    "contributors": ["mfuji09", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/RuntimeError": {
+    "modified": "2020-10-15T21:54:41.289Z",
+    "contributors": ["ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Table": {
+    "modified": "2020-10-15T21:53:02.171Z",
+    "contributors": ["chikoski", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Table/Table": {
+    "modified": "2020-10-15T22:28:18.775Z",
+    "contributors": ["mfuji09"]
+  },
+  "WebAssembly/JavaScript_interface/Table/get": {
+    "modified": "2020-10-15T21:54:53.337Z",
+    "contributors": ["mfuji09", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Table/grow": {
+    "modified": "2020-10-15T21:54:52.682Z",
+    "contributors": ["mfuji09", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Table/length": {
+    "modified": "2020-10-15T21:54:52.925Z",
+    "contributors": ["mfuji09", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/Table/set": {
+    "modified": "2020-10-15T21:54:51.626Z",
+    "contributors": ["mfuji09", "bellbind", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/compile": {
+    "modified": "2020-10-15T21:53:09.837Z",
+    "contributors": ["ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/compileStreaming": {
+    "modified": "2020-10-15T21:58:31.035Z",
+    "contributors": ["ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/instantiate": {
+    "modified": "2020-12-06T05:02:05.948Z",
+    "contributors": ["mfuji09", "michitaro", "ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/instantiateStreaming": {
+    "modified": "2020-10-15T21:58:31.752Z",
+    "contributors": ["ukyo"]
+  },
+  "WebAssembly/JavaScript_interface/validate": {
+    "modified": "2020-10-15T21:53:09.850Z",
+    "contributors": ["ukyo"]
+  },
   "WebAssembly/Loading_and_running": {
     "modified": "2019-03-23T22:13:00.551Z",
     "contributors": ["silverskyvicto", "ukyo"]
@@ -31509,6 +31505,10 @@
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2020-09-27T12:30:54.835Z",
     "contributors": ["mfuji09", "dskmori", "keeponbeat", "mikamikuh"]
+  },
+  "orphaned/Web/API/Element/pointerlockerror_event": {
+    "modified": "2020-10-15T22:15:23.341Z",
+    "contributors": ["mfuji09"]
   },
   "orphaned/Web/API/Frame_Timing_API": {
     "modified": "2019-06-07T11:58:30.872Z",

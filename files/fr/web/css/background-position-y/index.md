@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/background-position-y
 ---
+
 {{CSSRef}}
 
 La propriété **`background-position-y`** définit la position verticale initiale de chaque image d'arrière-plan. La position est relative à l'origine définie par {{cssxref("background-origin")}}.

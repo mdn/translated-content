@@ -13,6 +13,7 @@ tags:
   - webNavigation
 translation_of: Mozilla/Add-ons/WebExtensions/API/webNavigation/onHistoryStateUpdated
 ---
+
 {{AddonSidebar()}}
 
 Lancé lorsque la page a utilisé l'[API history](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur. Tous les événements futurs de ce cadre utiliseront l'URL mise à jour.

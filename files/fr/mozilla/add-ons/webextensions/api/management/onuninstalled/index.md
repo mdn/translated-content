@@ -11,6 +11,7 @@ tags:
   - onUninstalled
 translation_of: Mozilla/Add-ons/WebExtensions/API/management/onUninstalled
 ---
+
 {{AddonSidebar()}}
 
 Action quand une extension est désinstallée.

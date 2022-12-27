@@ -1,7 +1,6 @@
 ---
 title: Object reference
 slug: Glossary/Object_reference
-translation_of: Glossary/Object_reference
 ---
 **{{glossary("object", "객체")}}**와 연결된 문서. 객체 참조는 연결된 객체와 비슷하게 사용될 수 있다.
 

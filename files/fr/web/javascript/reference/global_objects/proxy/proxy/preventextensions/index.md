@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/preventExtensions
 ---
+
 {{JSRef}}
 
 La méthode **`handler.preventExtensions()`** est une trappe pour {{jsxref("Object.preventExtensions()")}}.

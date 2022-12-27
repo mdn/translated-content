@@ -4,6 +4,7 @@ slug: Web/API/HTMLElement/style
 translation_of: Web/API/HTMLElement/style
 browser-compat: api.HTMLElement.style
 ---
+
 {{APIRef("CSSOM")}}
 
 La propriété en lecture seule **`style`** renvoie le style _en incise_ d'un élément sous la forme d'un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) contenant une liste de l'ensemble des propriétés de style pour cet élément dont les valeurs sont celles des attributs défini par [l'attribut HTML `style`](/fr/docs/Web/HTML/Global_attributes/style).

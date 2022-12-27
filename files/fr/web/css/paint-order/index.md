@@ -10,6 +10,7 @@ tags:
   - Web
 translation_of: Web/CSS/paint-order
 ---
+
 {{CSSRef}}{{seecompattable}}
 
 La propriété **`paint-order`** permet de contrôler l'ordre dans lequel le remplissage, les marqueurs de peinture et le contour du texte et des formes sont dessinés.

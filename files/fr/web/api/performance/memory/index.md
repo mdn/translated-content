@@ -7,6 +7,7 @@ tags:
   - Performance web
 translation_of: Web/API/Performance/memory
 ---
+
 {{APIRef}}
 
 {{Non-standardGeneric('header')}}

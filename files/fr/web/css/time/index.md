@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/time
 ---
+
 {{CSSRef}}
 
 Le type de donnée **`<time>`** indique des durées exprimées en secondes ou en millisecondes. Il est par exemple utilisé dans les propriétés {{cssxref("animation")}}, {{cssxref("transition")}}.

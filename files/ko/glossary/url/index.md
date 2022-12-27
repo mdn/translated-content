@@ -1,11 +1,6 @@
 ---
 title: URL
 slug: Glossary/URL
-tags:
-  - Glossary
-  - Infrastructure
-  - l10n:priority
-translation_of: Glossary/URL
 ---
 {{QuickLinksWithSubpages("/ko/docs/Glossary")}}
 

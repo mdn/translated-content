@@ -10,6 +10,7 @@ tags:
   - userScripts
 translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript
 ---
+
 {{AddonSidebar()}}
 
 Un RegisteredUserScript est retourné par un appel à {{WebExtAPIRef("userScripts.register","userScripts.register()")}} et représente les scripts utilisateur enregistrés dans cet appel.

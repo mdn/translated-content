@@ -16,6 +16,7 @@ translation_of: >-
 original_slug: >-
   Mozilla/Add-ons/WebExtensions/API/devtools.panels/ExtensionSidebarPane/onHidden
 ---
+
 {{AddonSidebar()}}
 
 Appelé lorsque le volet de la barre latérale est masqué, suite à l'abandon de l'utilisateur.

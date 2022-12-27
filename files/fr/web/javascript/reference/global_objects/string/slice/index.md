@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/slice
 ---
+
 {{JSRef}}
 
 La méthode **`slice()`** extrait une section d'une chaine de caractères et la retourne comme une nouvelle chaine de caractères. La chaîne de caractères courante n'est pas modifiée.

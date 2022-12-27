@@ -10,6 +10,7 @@ tags:
   - omnibox
 translation_of: Mozilla/Add-ons/WebExtensions/API/omnibox
 ---
+
 {{AddonSidebar}}
 
 Permet aux extensions d'implémenter un comportement personnalisé lorsque l'utilisateur tape dans la barre d'adresse du navigateur.

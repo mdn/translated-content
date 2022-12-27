@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/return
 original_slug: Web/JavaScript/Reference/Objets_globaux/Generator/return
 ---
+
 {{JSRef}}
 
 La méthode **`return()`** renvoie la valeur fournie et termine le générateur.

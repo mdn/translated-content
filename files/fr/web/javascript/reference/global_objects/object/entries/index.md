@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/entries
 ---
+
 {{JSRef}}
 
 La méthode **`Object.entries()`** renvoie un tableau des propriétés propres énumérables d'un objet dont la clé est une chaîne de caractères, sous la forme de paires `[clé, valeur]`, dans le même ordre qu'une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt la chaîne des prototypes).

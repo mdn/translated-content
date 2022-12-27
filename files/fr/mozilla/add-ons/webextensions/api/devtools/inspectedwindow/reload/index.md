@@ -12,6 +12,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/reload
 ---
+
 {{AddonSidebar()}}
 
 Recharge la fenêtre à laquelle les devtools sont attachés.

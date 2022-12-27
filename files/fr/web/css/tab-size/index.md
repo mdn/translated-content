@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/tab-size
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 La propriété **`tab-size`** permet d'adapter la largeur utilisée pour représenter le caractère de tabulation (`U+0009`).

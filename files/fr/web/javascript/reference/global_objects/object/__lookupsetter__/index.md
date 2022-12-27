@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/lookupSetter
 ---
+
 {{JSRef}}{{deprecated_header}}
 
 La méthode **`__lookupSetter__`** renvoie la fonction définie comme mutateur pour une propriété donnée.

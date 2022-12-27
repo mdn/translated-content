@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/box-shadow
 ---
+
 {{CSSRef}}
 
 La propriété CSS **`box-shadow`** ajoute des ombres à la boîte d'un élément via une liste d'ombres séparées par des virgules. Une boîte d'ombre est définie avec des décalages horizontal et vertical par rapport à l'élément, avec des rayons de flou et d'étalement et avec une couleur.

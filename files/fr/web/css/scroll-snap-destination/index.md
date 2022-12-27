@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-destination
 ---
+
 {{CSSRef}}{{deprecated_header}}
 
 La propriété **`scroll-snap-destination`** définit les coordonnées horizontale et verticale des points d'accroche dans le {{Glossary("viewport")}} du conteneur.

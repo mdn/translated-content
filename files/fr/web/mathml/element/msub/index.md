@@ -3,6 +3,7 @@ title: <msub>
 slug: Web/MathML/Element/msub
 translation_of: Web/MathML/Element/msub
 ---
+
 {{MathMLRef}}
 
 L'élément MathML `<msub>` est utilisé pour attaché un indice à une expression. On utilise la syntaxe suivante: `<msub> base indice </msub>`.

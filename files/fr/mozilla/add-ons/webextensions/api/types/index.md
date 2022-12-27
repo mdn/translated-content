@@ -10,6 +10,7 @@ tags:
   - WebExtensions
 translation_of: Mozilla/Add-ons/WebExtensions/API/types
 ---
+
 {{AddonSidebar}}
 
 Définit le type `BrowserSetting` , qui est utilisé pour représenter un paramètre de navigateur.

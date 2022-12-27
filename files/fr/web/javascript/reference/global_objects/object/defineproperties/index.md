@@ -11,6 +11,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/defineProperties
 ---
+
 {{JSRef}}
 
 La méthode **`Object.defineProperties()`** permet de définir ou de modifier les propriétés d'un objet directement sur celui-ci. La valeur renvoyée est l'objet modifié.

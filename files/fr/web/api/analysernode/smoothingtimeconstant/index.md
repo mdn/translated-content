@@ -3,6 +3,7 @@ title: AnalyserNode.smoothingTimeConstant
 slug: Web/API/AnalyserNode/smoothingTimeConstant
 translation_of: Web/API/AnalyserNode/smoothingTimeConstant
 ---
+
 {{ APIRef("Web Audio API") }}
 
 La propriété **`smoothingTimeConstant`** de l'interface {{ domxref("AnalyserNode") }} est un nombre flottant à double précision qui représente une moyenne entre le buffer courant et le buffer précédent - elle sert à lisser la transition entre les valeurs.

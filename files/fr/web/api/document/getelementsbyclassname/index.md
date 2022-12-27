@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/Document/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 Renvoie un objet de type tableau de tous les éléments enfants qui ont tous les noms de classe donnés. Lorsqu'il est appelé sur l'objet document, le document complet est recherché, y compris le nœud racine. Vous pouvez également appeler {{domxref ("Element.getElementsByClassName", "getElementsByClassName ()")}} sur n'importe quel élément; il retournera uniquement les éléments qui sont les descendants de l'élément racine spécifié avec les noms de classes donnés.

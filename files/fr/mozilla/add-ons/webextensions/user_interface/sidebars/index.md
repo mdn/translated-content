@@ -7,6 +7,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
 original_slug: Mozilla/Add-ons/WebExtensions/user_interface/barres_laterales
 ---
+
 {{AddonSidebar}}
 
 Une barre latérale est un volet qui s'affiche à gauche de la fenêtre du navigateur, à côté de la page Web. Cette page décrit les barres latérales, leur spécification, leur conception et des exemples d'utilisation.

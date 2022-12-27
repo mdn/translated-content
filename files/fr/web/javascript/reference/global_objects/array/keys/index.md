@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/keys
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/keys
 ---
+
 {{JSRef}}
 
 La méthode **`keys()`** renvoie un nouvel objet **`Array Iterator`** qui contient les clefs pour chaque indice du tableau.

@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/border-left-width
 ---
+
 {{CSSRef}}
 
 La propriété **`border-left-width`** définit l'épaisseur de la bordure pour le côté gauche d'un élément.

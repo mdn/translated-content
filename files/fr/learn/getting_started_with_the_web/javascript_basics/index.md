@@ -10,6 +10,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/JavaScript_basics
 original_slug: Apprendre/Commencer_avec_le_web/Les_bases_JavaScript
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_CSS", "Apprendre/Commencer_avec_le_web/Publier_votre_site_web","Apprendre/Commencer_avec_le_web")}}
 

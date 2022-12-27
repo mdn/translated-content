@@ -3,6 +3,7 @@ title: flex-wrap
 slug: Web/CSS/flex-wrap
 translation_of: Web/CSS/flex-wrap
 ---
+
 {{CSSRef}}
 
 La propriété **`flex-wrap`** indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. Si le retour à la ligne est autorisé, la propriété permet également de contrôler la direction dans laquelle les lignes sont empilées.

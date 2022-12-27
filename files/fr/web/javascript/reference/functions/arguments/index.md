@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments
 original_slug: Web/JavaScript/Reference/Fonctions/arguments
 ---
+
 {{jsSidebar("Fonctions")}}
 
 L'objet **`arguments`** est un objet, **semblable** à un tableau, correspondant aux arguments passés à une fonction.

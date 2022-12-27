@@ -15,6 +15,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
 original_slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experimentation
 ---
+
 {{AddonSidebar}}
 
 <table class="standard-table">

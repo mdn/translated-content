@@ -13,6 +13,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/setZoom
 ---
+
 {{AddonSidebar()}}
 
 Effectue un zoom sur l'onglet spécifié.

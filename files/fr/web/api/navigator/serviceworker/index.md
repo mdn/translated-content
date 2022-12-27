@@ -11,6 +11,7 @@ tags:
   - ServiceWorker
 translation_of: Web/API/Navigator/serviceWorker
 ---
+
 {{APIRef("Service Workers API")}}
 
 Le **`Navigator.serviceWorker`** est une propriété en lecture seule qui renvoie un objet {{domxref("ServiceWorkerContainer")}}, et qui permet d'accéder à l'enregistrement, la suppression, la mise à jour, et la communication avec les objets {{domxref("ServiceWorker")}} pour le [document associé](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).

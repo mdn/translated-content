@@ -7,6 +7,7 @@ tags:
   - Type
 translation_of: Web/CSS/string
 ---
+
 {{CSSRef}}
 
 Le type de donnée CSS **`<string>`** représente une chaîne de caractères. En CSS, les chaînes de caractères sont présentes dans de nombreuses propriétés comme {{cssxref("content")}}, {{cssxref("font-family")}} et {{cssxref("quotes")}}.

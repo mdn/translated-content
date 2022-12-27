@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/toString
 ---
+
 {{JSRef}}
 
 La méthode **`toString()`** renvoie une chaine de caractères représentant le tableau spécifié et ses éléments.

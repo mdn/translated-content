@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-align
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-snap-align`** définit la position de la boîte d'accroche (_snap positions_) comme un alignement entre la zone d'accroche et le conteneur (la boîte de défilement de l'élément). Les deux valeurs fournies à cette propriété s'appliquent respectivement à l'axe de bloc et à l'axe en ligne. Lorsqu'une seule valeur est fournie, la seconde prendra par défaut la valeur de la première.

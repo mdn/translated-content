@@ -9,6 +9,7 @@ tags:
 translation_of: Web/HTML/Global_attributes/data-*
 original_slug: Web/HTML/Attributs_universels/data-*
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 Les [attributs universels](/fr/docs/Web/HTML/Attributs_universels) **`data-*`** forment une classe d'attributs, appelés attributs de données (_data attributes_). Ils permettent d'échanger des données propriétaire entre le [HTML](/fr/docs/Web/HTML) et la représentation du [DOM](/fr/docs/Web/API/Référence_du_DOM_Gecko), qu'on peut manipuler avec des scripts.

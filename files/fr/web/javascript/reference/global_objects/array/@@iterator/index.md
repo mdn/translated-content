@@ -12,6 +12,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/@@iterator
 ---
+
 {{JSRef}}
 
 La valeur initiale de la propriété **`@@iterator`** correspond à la valeur initiale fournie par l'itérateur {{jsxref("Array.prototype.values()", "values")}}.

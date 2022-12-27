@@ -7,6 +7,7 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Content-Length
 ---
+
 {{HTTPSidebar}}
 
 L'en-tête (_header_) **`Content-Length`** indique la taille en octets (exprimée en base 10) du corps de la réponse envoyée au client.

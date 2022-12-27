@@ -12,6 +12,7 @@ tags:
 translation_of: Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.panels/onThemeChanged
 ---
+
 {{AddonSidebar()}}
 
 Remplacement quand le thème de devtools change

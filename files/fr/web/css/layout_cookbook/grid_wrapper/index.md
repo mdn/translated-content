@@ -7,6 +7,7 @@ tags:
   - Recette
 translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 ---
+
 {{CSSRef}}
 
 Ce motif permet d'aligner le contenu d'une grille au centre grâce à un élément qui l'enveloppe. On peut également choisir quels éléments aligner au centre et lesquels adosser aux côtés.

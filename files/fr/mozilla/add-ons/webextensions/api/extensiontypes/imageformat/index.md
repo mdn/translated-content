@@ -13,6 +13,7 @@ tags:
   - extensionTypes
 translation_of: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageFormat
 ---
+
 {{AddonSidebar()}}
 
 Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles sont : `"jpeg"`, `"png"`.

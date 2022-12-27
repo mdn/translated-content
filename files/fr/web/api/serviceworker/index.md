@@ -11,6 +11,7 @@ tags:
   - hors-ligne
 translation_of: Web/API/ServiceWorker
 ---
+
 {{APIRef("Service Workers API")}}
 
 L'interface **`ServiceWorker`** de l'[API ServiceWorker](/fr/docs/Web/API/ServiceWorker_API) met à disposition une référence vers un service worker. Plusieurs  {{glossary("browsing context", "contextes de navigations")}} (par exemple une page, un _worker_, etc.) peuvent être associés au même service worker, chacun à travers un unique objet `ServiceWorker`.

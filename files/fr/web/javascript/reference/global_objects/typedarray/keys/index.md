@@ -13,6 +13,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/keys
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/keys
 ---
+
 {{JSRef}}
 
 La méthode **`keys()`** renvoie un nouvel objet `Array Iterator` contenant les clés pour chaque indice du tableau typé.

@@ -12,6 +12,7 @@ tags:
 translation_of: Learn/Accessibility
 original_slug: Apprendre/a11y
 ---
+
 {{LearnSidebar}}
 
 Apprendre le HTML, le CSS et le JavaScript est utile si vous voulez devenir développeur web, mais vos connaissances devront aller au delà de la simple utilisation des technologies — vous devrez les utiliser de manière responsable, de la bonne manière, de façon à maximiser l'audience de vos sites web et ne priver personne de leur usage. Pour y parvenir, vous devrez respecter les bonnes pratiques (lesquelles sont démontrées à travers les sujets du [HTML](/fr/Apprendre/HTML), du [CSS](/fr/Apprendre/CSS) et du [JavaScript](/fr/Apprendre/JavaScript)), effectuer [des tests sur les différents navigateurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing) et prendre l'accessibilité en considération dès le départ. Dans ce module, nous allons traiter de cette dernière en détail.

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/initial
 ---
+
 {{CSSRef}}
 
 Le mot-clé **`initial`** applique la valeur initiale d'une propriété à un élément. La valeur initiale est fournie par le navigateur et peut être utilisée pour chaque propriété CSS. Cette propriété prendra alors [la valeur initiale](/fr/docs/Web/CSS/Valeur_initiale) spécifiée pour cette la propriété.

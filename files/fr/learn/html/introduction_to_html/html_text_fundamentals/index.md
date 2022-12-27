@@ -15,6 +15,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 original_slug: Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 L'un des principaux buts de HTML est de structurer du texte et lui donner du sens (ce que l'on appelle la {{glossary("sémantique")}}) afin que le navigateur puisse l'afficher correctement. Cet article explique comment {{glossary("HTML")}} peut être utilisé pour structurer une page en ajoutant des titres et des paragraphes, en marquant des emphases, en créant des listes, et bien plus encore.

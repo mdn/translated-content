@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/subarray
 ---
+
 {{JSRef}}
 
 La méthode `subarray()` permet de renvoyer un nouvel objet _TypedArray_ basé sur le même {{jsxref("ArrayBuffer")}} et dont les éléments sont du même type que l'objet _TypedArray_ courant. Le paramètre `début` est à considérer au sens large et le paramètre `end` est à considérer au sens strict. _TypedArray_ est l'un des types de [tableaux typés](/fr/docs/Web/JavaScript/Tableaux_typés#Les_objets_TypedArray).

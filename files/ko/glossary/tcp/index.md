@@ -1,7 +1,6 @@
 ---
 title: TCP
 slug: Glossary/TCP
-translation_of: Glossary/TCP
 ---
 TCP (전송 제어 프로토콜)은 두 개의 호스트를 연결하고 데이터 스트림을 교환하게 해주는 중요한 네트워크 프로토콜이다. TCP는 데이터와 패킷이 보내진 순서대로 전달하는 것을 보장해준다. Vint CERF와 Bob Kahn (당시 DARPA 과학자)는 TCP를 1970년 대에 설계하였다.
 

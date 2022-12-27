@@ -14,6 +14,7 @@ tags:
   - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/onActiveChanged
 ---
+
 {{AddonSidebar()}}
 
 > **Attention :** Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onActivated")}} à la place.

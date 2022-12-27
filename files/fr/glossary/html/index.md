@@ -9,6 +9,7 @@ tags:
 translation_of: Glossary/HTML
 original_slug: Glossaire/HTML
 ---
+
 {{QuickLinksWithSubpages("/fr/docs/Glossaire")}}
 
 **HTML** (HyperText Markup Language) est un langage descriptif qui définit la structure d'une page web.

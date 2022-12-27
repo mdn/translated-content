@@ -9,6 +9,7 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-padding-block
 ---
+
 {{CSSRef}}
 
 La propriété **`scroll-padding-block`** est une propriété raccourcie qui permet de définir le remplissage, sur l'axe de bloc, entre l'élément et la zone de défilement. Autrement dit, elle permet de définir `scroll-padding-block-end` et `scroll-padding-block-start`.

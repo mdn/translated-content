@@ -9,6 +9,7 @@ tags:
   - Propriétés
 translation_of: Web/API/Element/className
 ---
+
 {{APIRef("DOM")}}
 
 La propriété **className** de l'interface {{domxref("Element")}} récupère et définit la valeur de l'[attribut `class`](/fr/docs/Web/HTML/Attributs_universels/class) de l'élément spécifié.

@@ -14,6 +14,7 @@ tags:
 translation_of: Learn/HTML/Introduction_to_HTML/Getting_started
 original_slug: Apprendre/HTML/Introduction_à_HTML/Getting_started
 ---
+
 {{LearnSidebar}}{{NextMenu("Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML", "Apprendre/HTML/Introduction_à_HTML")}}
 
 Cet article porte sur les fondements du HTML, pour prendre un bon départ — nous définissons les éléments, les attributs et tout autre terme important que vous avez peut‑être entendu, ainsi que leur emplacement adéquat dans le langage. Nous montrons comment un élément HTML est structuré, comment une page HTML classique est structurée et expliquons les autres importants traits de base du langage. Dans ce parcours, nous jouons avec certains HTML pour exciter votre intérêt.

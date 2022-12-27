@@ -9,6 +9,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Lexical_grammar
 original_slug: Web/JavaScript/Reference/Grammaire_lexicale
 ---
+
 {{JsSidebar("More")}}
 
 Cette page décrit la grammaire lexicale de JavaScript. Le code source d'un script ECMAScript est analysé de gauche à droite et est converti en une série d'éléments qui sont : des jetons, des caractères de contrôle, des terminateurs de lignes, des commentaires ou des blancs. ECMAScript définit également certains mots-clés et littéraux. ECMAScript possède également des règles pour insérer automatiquement des points-virgules à la fin des instructions.

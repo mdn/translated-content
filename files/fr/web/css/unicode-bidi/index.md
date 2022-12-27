@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/unicode-bidi
 ---
+
 {{CSSRef}}
 
 La propriété **`unicode-bidi`**, associée à la propriété {{cssxref("direction")}}, permet de gérer du texte bidirectionnel dans un document. Par exemple, si un bloc de texte contient à la fois du texte qui se lit de droite à gauche et du texte qui se lit de gauche à droite, l'agent utilisateur utilisera un algorithme Unicode complexe pour savoir comment afficher le texte. Cette propriété prend le pas sur l'algorithme et permet au développeur de contrôler l'intégration du texte.

@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-user-focus
 ---
+
 {{CSSRef}}{{Non-standard_header}}
 
 La propriété **`-moz-user-focus`** est utilisée pour indiquer si l'élément peut recevoir le focus.

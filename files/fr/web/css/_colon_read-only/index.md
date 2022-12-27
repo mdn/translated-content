@@ -7,6 +7,7 @@ tags:
   - Refrence
 translation_of: Web/CSS/:read-only
 ---
+
 {{CSSRef}}
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:read-only`** permet de cibler un élément que l'utilisateur ne peut pas modifier (l'élément est en lecture seule).

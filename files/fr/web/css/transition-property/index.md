@@ -7,6 +7,7 @@ tags:
   - Reference
 translation_of: Web/CSS/transition-property
 ---
+
 {{CSSRef}}
 
 La propriété **`transition-property`** désigne les noms des propriétés CSS sur lesquelles [un effet de transition](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) devrait être appliqué.

@@ -10,6 +10,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCDate
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCDate
 ---
+
 {{JSRef}}
 
 La méthode **`getUTCDate()`** renvoie le jour du mois pour la date renseignée d'après UTC.

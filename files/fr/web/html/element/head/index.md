@@ -8,6 +8,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/head
 ---
+
 {{HTMLRef}}
 
 L'élément HTML **\<head>** fournit des informations générales (métadonnées) sur le document, incluant son titre et des liens ou des définitions vers des scripts et feuilles de style.

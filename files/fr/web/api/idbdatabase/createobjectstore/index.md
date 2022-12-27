@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/API/IDBDatabase/createObjectStore
 ---
+
 {{APIRef("IndexedDB")}}
 
 La méthode **`createObjectStore()`**, rattachée à l'interface {{domxref("IDBDatabase")}}, permet d'ajouter un magasin d’objet ou un index à la base de donnée et renvoie un accès vers celui-ci.
