@@ -5,35 +5,49 @@ slug: Web/HTML/Element/img
 
 {{HTMLSidebar}}
 
-**HTML `<img>` 元素**将一份图像嵌入文档。
+**`<img>`** [HTML](/zh-CN/docs/Web/HTML) 元素将一张图像嵌入文档。
 
 {{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
 
 上面的例子展示了 `<img>` 元素的用法：
 
-- `src` 属性是**必须的**，它包含了你想嵌入的图片的文件路径。
-- `alt` 属性包含一条对图像的文本描述，这不是强制性的，但对无障碍而言，它**难以置信地有用**——屏幕阅读器会将这些描述读给需要使用阅读器的使用者听，让他们知道图像的含义。如果由于某种原因无法加载图像，普通浏览器也会在页面上显示`alt` 属性中的备用文本：例如，网络错误、内容被屏蔽或链接过期时。
+- `src` 属性是**必须的**，它包含了你想嵌入的图片的路径。
+- `alt` 属性包含一条对图像的文本描述，这不是强制性的，但对无障碍而言，它**难以置信地有用**——屏幕阅读器会将这些描述读给需要使用阅读器的使用者听，让他们知道图像的含义。如果由于某种原因无法加载图像，普通浏览器也会在页面上显示 `alt` 属性中的备用文本：例如，网络错误、内容被屏蔽或链接过期。
 
 还有很多其他属性，可以实现各种不同的目的：
 
-- [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 {{htmlattrxref("crossorigin", "img")}} 属性和 {{htmlattrxref("referrerpolicy", "img")}} 属性。
-- 使用 {{htmlattrxref("width", "img")}}、{{htmlattrxref("height", "img")}} 和 {{htmlattrxref("intrinsicsize", "img")}} 设置 {{glossary("intrinsic size", "原始分辨率")}}：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
-- 使用 {{htmlattrxref("sizes", "img")}} 和 {{htmlattrxref("srcset", "img")}} 设置响应式图像（亦可参考 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程）。
+- [Referrer](/zh-CN/docs/Web/HTTP/Headers/Referrer-Policy)/{{glossary("CORS")}} 控制，保证安全与隐私：详见 {{htmlattrxref("crossorigin", "img")}} 和 {{htmlattrxref("referrerpolicy", "img")}} 属性。
+- 使用 {{htmlattrxref("width", "img")}} 和 {{htmlattrxref("height", "img")}} 设置图像的固有尺寸（intrinsic size）：这将设置图像应占用的空间，以确保图像被加载之前页面的布局是稳定的。
+- 使用 {{htmlattrxref("sizes", "img")}} 和 {{htmlattrxref("srcset", "img")}} 设置响应式图像（参见 {{htmlelement("picture")}} 元素和我们的[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程）。
 
 ## 支持的图像格式
 
-HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{glossary("user agent", "用户代理")}}支持一组不同的格式。MDN 另有一份完整的[网页浏览器图像格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)可供参考。
+HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{glossary("user agent", "用户代理")}}支持一组不同的格式。
 
-{{page("/zh-CN/docs/Web/Media/Formats/Image_types", "table-of-image-file-types")}}
+> **备注：** [网页浏览器图像格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)提供了有关图像格式及 Web 浏览器支持的综合信息。本节只是一个总结！
+
+Web 最常用的图像格式是：
+
+- [APNG（动态可移植网络图形）](/zh-CN/docs/Web/Media/Formats/Image_types#apng_animated_portable_network_graphics)——无损动画序列的不错选择（GIF 性能较差）。
+- [AVIF（AV1 图像文件格式）](/zh-CN/docs/Web/Media/Formats/Image_types#avif_image)——静态图像或动画的不错选择，其性能较好。
+- [GIF（图像互换格式）](/zh-CN/docs/Web/Media/Formats/Image_types#gif_graphics_interchange_format)——*简单*图像和动画的不错选择。
+- [JPEG（联合图像专家组）](/zh-CN/docs/Web/Media/Formats/Image_types#jpeg_joint_photographic_experts_group_image)——有损压缩静态图像的不错选择（目前最流行的格式）。
+- [PNG（便携式网络图形）](/zh-CN/docs/Web/Media/Formats/Image_types#png_portable_network_graphics)——对于无损压缩静态图像而言是不错的选择（质量略好于 JPEG）。
+- [SVG（可缩放矢量图形）](/zh-CN/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics)——矢量图像格式。用于必须以不同尺寸准确描绘的图像。
+- [WebP（网络图片格式）](/zh-CN/docs/Web/Media/Formats/Image_types#webp_image)——图像和动画的绝佳选择。
+
+推荐使用诸如 [WebP](/zh-CN/docs/Web/Media/Formats/Image_types#webp_image) 和 [AVIF](/zh-CN/docs/Web/Media/Formats/Image_types#avif_image) 等图像格式，因为它们在静态图像和动画的性能均比 PNG、JPEG、JIF 好得多。WebP 得到了广泛的支持，而 AVIF 则缺乏 Safari 的支持。
+
+对于必须以不同尺寸准确绘制的图像，则仍然推荐使用 SVG 格式。
 
 ## 图像加载错误
 
-如果在加载或渲染图像时发生错误，且设置了至少一个 {{htmlattrxref("onerror")}} 事件处理器来处理 [`error`](/zh-CN/docs/Web/API/Element/error_event) 事件，那么设置的事件处理器就会被调用。这样的错误可能发生在各种不同的情况下，包括：
+如果在加载或渲染图像时发生错误，且设置了至少一个 {{htmlattrxref("onerror")}} 事件处理器来处理 {{domxref("Element/error_event", "error")}} 事件，那么设置的事件处理器就会被调用。这样的错误可能发生在各种不同的情况下，包括：
 
 - `src` 属性的属性值为空（`""`）或者 `null`。
 - `src` 属性的 {{glossary("URL")}} 和用户正在浏览的页面的 URL 完全相同。
 - 图像出于某些原因损坏了，从而无法加载。
-- 图像的元数据被破坏了，无法检索它的分辨率/宽高，而且在 `<img>` 元素的属性中没有指定宽度和/或高度。
+- 图像的元数据被破坏了，无法检索它的分辨率/宽高，而且在 `<img>` 元素的属性中没有指定宽度/高度。
 - {{glossary("user agent", "用户代理")}}尚未支持该图片所用的格式。
 
 ## 属性
@@ -46,54 +60,83 @@ HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{g
     > **备注：** 浏览器并非总是会显示图像。比如：
     >
     > - 非可视化浏览器（Non-visual browsers）（比如有视力障碍的人使用的音频浏览器）
-    > - 用户选择不显示图像（比如为了节省带宽，或出于隐私等考虑不加载包括图片在内的第三方资源文件）
-    > - 图像文件无效，或是使用了[不支持的格式](#Supported_image_formats)在这些情况下，浏览器很可能会将图像替换为图像所属 `<img>` 元素的 `alt` 属性所提供的文本。基于上面罗列的原因，以及更多尚未列出的原因，建议尽可能地通过 `alt` 属性提供一些有用的信息。如果省略 `alt` 属性，则表明该图像是内容的关键部分，但没有等效的文本可用。
+    > - 用户选择不显示图像（比如为了节省带宽，或出于隐私考虑）
+    > - 图像文件无效，或是使用了[不支持的格式](#不支持的图像格式)
     >
-    > 如果把这个属性设置为空字符串（`alt=""`），则表明该图像*不是*内容的关键部分（这是一种装饰或者一个追踪像素点），非可视化浏览器在{{glossary("Rendering engine", "渲染")}}的时候可能会忽略它。而且，如果图片加载失败，可视化浏览器会隐藏表示图片损坏的图标。将图像复制并粘贴为文本，或是将图像的链接保存为浏览器书签时，也会用到此属性。
+    > 在这些情况下，浏览器很可能会将图像替换为图像所属 `<img>` 元素的 `alt` 属性所提供的文本。基于上面罗列的原因，建议尽可能地通过 `alt` 属性提供一些有用的信息。
+
+    如果把这个属性设置为空字符串（`alt=""`），则表明该图像*不是*内容的关键部分（这是一种装饰或者一个追踪像素点），非可视化浏览器在{{glossary("Rendering engine", "渲染")}}的时候可能会忽略它。而且，如果图片加载失败，可视化浏览器会隐藏表示图片损坏的图标。
+
+    将图像复制并粘贴为文本，或是将图像的链接保存为浏览器书签时，也会用到此属性。
+
 - {{htmlattrdef("crossorigin")}}
-  - : 这个枚举属性表明是否必须使用 CORS 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/CORS_Enabled_Image) 可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被[污染](/zh-CN/docs/Web/HTML/CORS_enabled_image#What_is_a_tainted_canvas)（tainted）。允许的值有：
+  - : 这个枚举属性表明是否必须使用 {{glossary("CORS")}} 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被标记为“[污染](/zh-CN/docs/Web/HTML/CORS_enabled_image#/zh-CN/docs/Web/HTML/CORS_enabled_image#安全性和“被污染”的_canvas)（tainted）”。
+
+    如果*未指定* `crossorigin` 属性，则会发送不启用 CORS 的请求（不会携带 {{httpheader("Origin")}} 请求标头），且浏览器会将图像标记为“被污染”并拒绝对图像数据的访问，阻止其在 {{HTMLElement("canvas")}} 元素中的使用。
+
+    如果*指定*了 `crossorigin` 属性，则会发送启用 CORS 的请求（会携带 {{httpheader("Origin")}} 请求标头）；但是如果服务器不选择允许源站点对图像数据进行跨源访问（不发送任何 {{httpheader("Access-Control-Allow-Origin")}} 响应标头，或发送的 {{httpheader("Access-Control-Allow-Origin")}} 标头中不包含源站点），浏览器则会阻止图像的加载，并在开发者工具的控制台中记录 CORS 错误。
+
+    允许的值有：
+
     - `anonymous`
-      - : 执行一个跨域请求（比如，有 {{httpheader("Origin")}} {{glossary("HTTP")}} header）。但是没有发送证书（比如，没有 cookie，没有 [X.509 证书](https://tools.ietf.org/html/rfc5280)，没有 [HTTP 基本授权认证](/zh-CN/docs/Web/HTTP/Authentication#Basic_authentication_scheme)）。如果服务器没有把证书给到源站（没有设置 {{httpheader("Access-Control-Allow-Origin")}} HTTP 头），图像会被污染，而且它的使用会被限制。
+      - : 发送忽略凭据的跨源请求（即，不携带 {{glossary("cookie")}}、[X.509 证书](https://datatracker.ietf.org/doc/html/rfc5280) 或 {{httpheader("Authorization")}} 请求标头）。
     - `use-credentials`
-      - : 一个有证书的跨域请求（比如，有 `Origin` HTTP header）被发送（比如，cookie，一份证书，或者 HTTP 基本验证信息）。如果服务器没有给源站发送证书（通过 `Access-Control-Allow-Credentials` HTTP header），图像将会被污染，且它的使用会受限制。当用户并未显式使用本属性时，默认不使用 CORS 发起请求（例如，不会向服务器发送`原有的`HTTP 头部信息），可防止其在 {{HTMLElement('canvas')}} 中的使用。如果无效，默认当做 `anonymous` 关键字生效。更多信息，请查看 [CORS 属性设置](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 。
+      - : 发送携带凭据的跨源请求（比如 cookie、X.509 证书和 `Authorization` 请求标头）。如果服务器不选择与源站共享凭据（通过返回 `Access-Control-Allow-Credentials: true` 响应标头） ，则浏览器会将图像标记为被污染且限制对其图像数据的访问。
+
+    如果属性是无效值，浏览器默认将其当做 `anonymous` 关键字。更多信息，请查看 [CORS 属性设置](/zh-CN/docs/Web/HTML/Attributes/crossorigin)。
+
 - {{htmlattrdef("decoding")}}
   - : 为浏览器提供图像解码方式上的提示。允许的值：
+
     - `sync`
-      - : 同步解码图像，实现与其他内容的显示相互斥的原子显示。此图像的解码将是一个原子操作，在完成解码显示之前，不被其他内容的显示而打断，因此其他内容的显示会被延迟。
+      - : 同步解码图像，实现与其它内容互斥的原子渲染。
     - `async`
-      - : 异步解码图像，以减少其他内容的显示延迟。
+      - : 异步解码图像，以减少其它内容的渲染延迟。
     - `auto`
       - : 默认值：不指定解码方式，由浏览器决定哪一种对用户来说是最合适的。
-- {{htmlattrdef("height")}}
-  - : 图像的高度，单位是 CSS 像素。可以只指定 `width` 和 `height` 中的一个值，浏览器会根据原始图像进行缩放。
-- {{htmlattrdef("importance")}} {{experimental_inline}}
-  - : 指示下载资源时相对重要性，或者说优先级。允许的值：
-    - `auto`
-      - : **不指定优先级。**浏览器可以使用自己的算法来为图像选择优先级。
+
+- {{htmlattrdef("fetchpriority")}} {{experimental_inline}}
+
+  - : 提供获取图像时要使用的相对的优先级提示。允许的值：
+
     - `high`
-      - : 此图像在下载时优先级**较高**。
+      - : 表示其获取优先级相对其它图像要高。
     - `low`
-      - : 此图像在下载时优先级**较低**。
-- {{htmlattrdef("intrinsicsize")}} {{deprecated_inline}}
-  - : This attribute tells the browser to ignore the actual {{glossary("intrinsic size")}} of the image and pretend it’s the size specified in the attribute. Specifically, the image would raster at these dimensions and `naturalWidth`/`naturalHeight` on images would return the values specified in this attribute. [Explainer](https://github.com/ojanvafai/intrinsicsize-attribute), [examples](https://googlechrome.github.io/samples/intrinsic-size/index.html)
+      - : 表示其获取优先级相对其它图像要低。
+    - `auto`
+      - : 默认值：表示自动确定其相对其它图像的获取优先级。
+
+- {{htmlattrdef("height")}}
+  - : 图像的固有高度，以像素为单位。必须是没有单位的整数值。
+  
+    > **备注：** 同时包括 `height` 和 [`width`](#attr-width) 使浏览器在加载图像之前计算图像的长宽比。此长宽比用于保留显示图像所需的空间，减少甚至防止在下载图像并将其绘制到屏幕上时布局的偏移。减少布局偏移是良好用户体验和 Web 性能的主要组成部分。
+
 - {{htmlattrdef("ismap")}}
-  - : 这个布尔属性表示图像是否是[服务器端 map](https://en.wikipedia.org/wiki/Image_map#Server-side) 的一部分。如果是，那么点击图片的精准坐标将会被发送到服务器。
+  - : 这个布尔属性表示图像是否是[服务器端图像映射](https://en.wikipedia.org/wiki/Image_map#Server-side)的一部分。如果是，那么点击图片的精准坐标将会被发送到服务器。
 
     > **备注：** 只有在 `<img>` 元素是一个拥有有效 {{htmlattrxref("href","a")}} 属性的 {{htmlelement("a")}} 元素的后代元素的情况下，这个属性才会被允许使用。
-- {{htmlattrdef("loading")}} {{experimental_inline}}
+
+- {{htmlattrdef("loading")}}
   - : 指示浏览器应当如何加载该图像。允许的值：
     - `eager`
       - : 立即加载图像，不管它是否在可视视口（visible viewport）之外（默认值）。
     - `lazy`
-      - : 延迟加载图像，直到它和视口接近到一个计算得到的距离，由浏览器定义。
-- {{htmlattrdef("referrerpolicy")}} {{experimental_inline}}
-  - : A string indicating which referrer to use when fetching the resource:
+      - : 延迟加载图像，直到它和视口接近到一个计算得到的距离（由浏览器定义）。目的是在需要图像之前，避免加载图像所需要的网络和存储带宽。这通常会提高大多数典型用场景中内容的性能。
 
-    - `no-referrer`: The {{httpheader("Referer")}} header will not be sent.
-    - `no-referrer-when-downgrade`: No `Referer` header is sent when navigating to an origin without {{glossary("HTTPS")}}. This is the default if no policy is otherwise specified.
-    - `origin`: The `Referer` header will include the page's origin ({{glossary("scheme")}}, {{glossary("host")}}, and {{glossary("port")}}).
-    - `origin-when-cross-origin`: Navigating to other origins will limit the included referral data to the scheme, host, and port, while navigating from the same origin will include the full path and query string.
-    - `unsafe-url`: The `Referer` header will always include the origin, path and query string, but not the fragment, password, or username. **This is unsafe** because it can leak information from TLS-protected resources to insecure origins.
+    > **备注：** 仅在启用 JavaScript 时才会延迟加载。这是一种反跟踪的措施，因为，如果用户代理在禁用脚本的情况下支持延迟加载，网站仍然跨源通过在图像中策略性地放置图像来跟踪用户在整个会话期间的大致滚动位置，这样服务器可以跟踪请求了多少图像以及请求在何时发起。
+
+- {{htmlattrdef("referrerpolicy")}}
+  - : 一个字符串，指示在获取资源时使用的引荐来源（referrer）：
+
+    - `no-referrer`：不会发送 {{httpheader("Referer")}} 标头。
+    - `no-referrer-when-downgrade`：若未使用 {{Glossary("TLS")}}（{{glossary("HTTPS")}}）导航到源站，则不发送 `Referer` 标头。
+    - `origin`：发送到源站的 referrer 将被限制为：[协议](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)、{{Glossary("host")}} 和 {{Glossary("port")}}。
+    - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
+    - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
+    - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
+    - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
+    - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
+
 - {{htmlattrdef("sizes")}}
   - : 表示资源大小的、以逗号隔开的一个或多个字符串。每一个资源大小包括：1. 一个[媒体条件](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax)。最后一项一定是被忽略的。2. 一个资源尺寸的值。Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px.资源尺寸的值被用来指定图像的预期尺寸。当 `srcset` 中的资源使用了宽度描述符 `w` 时，{{glossary("User agent", "用户代理")}}会使用当前图像大小来选择 `srcset` 中合适的一个图像 URL。被选中的尺寸影响图像的{{glossary("intrinsic size", "显示大小")}}（如果没有影响大小的 {{glossary("CSS")}} 样式被应用的话）。如果没有设置 `srcset` 属性，或者没有属性值，那么 `sizes` 属性也将不起作用。
 - {{htmlattrdef("src")}}
@@ -162,7 +205,7 @@ You can use the {{cssxref("object-position")}} property to position the image wi
      alt="MDN logo">
 ```
 
-{{ EmbedLiveSample('Alternative_text', '100%', '160') }}
+{{ EmbedLiveSample('备用文字', '100%', '160') }}
 
 ### 图像链接
 
@@ -175,7 +218,7 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 </a>
 ```
 
-{{ EmbedLiveSample('Image_link', '100%', '160') }}
+{{ EmbedLiveSample('图像链接', '100%', '160') }}
 
 ### 使用 `srcset` 属性
 
@@ -241,7 +284,7 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 
 `title` 属性也不该被用作一幅图片在 `alt` 之外的补充说明信息。如果一幅图片需要小标题，使用 [`figure`](/zh-CN/docs/Web/HTML/Element/figure) 或 [`figcaption`](/zh-CN/docs/Web/HTML/Element/figcaption) 元素。
 
-`title` 元素的值一般作为提示条 (tooltip) 呈现给用户，在光标于图片上停下后显示出来。尽管这*确实*能给用户提供更多的信息，您不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，选择上面提供的一种方法将其内联显示，而不是使用 `title` 。
+`title` 元素的值一般作为提示条（tooltip）呈现给用户，在光标于图片上停下后显示出来。尽管这*确实*能给用户提供更多的信息，您不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，选择上面提供的一种方法将其内联显示，而不是使用 `title`。
 
 - [Using the HTML title attribute – updated | The Paciello Group](https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/)
 
@@ -255,7 +298,7 @@ You can use the {{cssxref("object-position")}} property to position the image wi
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
-   <td>无，它是一个 {{Glossary("empty element", "空元素")}}。</td>
+   <td>无，它是一个{{Glossary("empty element", "空元素")}}。</td>
   </tr>
   <tr>
    <th scope="row">标签省略</th>
@@ -284,10 +327,10 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 
 {{Compat}}
 
-## 另见
+## 参见
 
 - [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
 - [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 - {{HTMLElement("picture")}}、{{HTMLElement("object")}} 和 {{HTMLElement("embed")}} 元素
-- 其他与图像相关的 CSS 属性：{{cssxref("object-fit")}}、{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}}，和 {{cssxref("image-resolution")}}。
+- 其他与图像相关的 CSS 属性：{{cssxref("object-fit")}}、{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}} 和 {{cssxref("image-resolution")}}。
