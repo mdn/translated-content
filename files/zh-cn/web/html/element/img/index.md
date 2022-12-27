@@ -61,7 +61,7 @@ Web 最常用的图像格式是：
     >
     > - 非可视化浏览器（Non-visual browsers）（比如有视力障碍的人使用的音频浏览器）
     > - 用户选择不显示图像（比如为了节省带宽，或出于隐私考虑）
-    > - 图像文件无效，或是使用了[不支持的格式](#不支持的图像格式)
+    > - 图像文件无效，或是使用了[不支持的格式](#支持的图像格式)
     >
     > 在这些情况下，浏览器很可能会将图像替换为图像所属 `<img>` 元素的 `alt` 属性所提供的文本。基于上面罗列的原因，建议尽可能地通过 `alt` 属性提供一些有用的信息。
 
@@ -286,13 +286,21 @@ Web 最常用的图像格式是：
 
 当图像上没有 `alt` 属性时，一些屏幕阅读器可能会读出图像的文件名。如果文件名不能代表图像的内容，甚至是一团乱码，这可只能造成令人迷惑的体验。
 
-- [An alt Decision Tree • Images • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/images/decision-tree/)
-- [Alt-texts: The Ultimate Guide — Axess Lab](https://axesslab.com/alt-texts/)
-- [How to Design Great Alt Text: An Introduction | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_—_Providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
+- [alt 决策树 • 图像 • WAI Web 无障碍教程](https://www.w3.org/WAI/tutorials/images/decision-tree/)
+- [备用文本：终极指南——Axess Lab](https://axesslab.com/alt-texts/)
+- [如何设计出色的替代文本：教程 | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
+- [MDN 理解 WCAG——指南 1.1 解析](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [了解成功的标准 1.1.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
-### `title` 属性
+### 将 SVG 识别为图像
+
+由于 [VoiceOver bug](https://bugs.webkit.org/show_bug.cgi?id=216364)，VoiceOver 无法正确地将 SVG 图像渲染为图像。在所有使用 SVG 资源文件的 `<img>` 元素中包含 [`role="img"`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role) 以保证无障碍技术正确地将 SVG 声明为图像内容。
+
+```html
+<img src="mdn.svg" alt="MDN logo" role="img" />
+```
+
+### title 属性
 
 {{htmlattrxref("title")}} 属性不是 `alt` 属性可接受的替代品。并且，避免将 `alt` 属性的值直接复制到同一幅图片的`title` 属性上。这样可能会让一些屏幕阅读器把同一段描述读两遍，造成一定程度上的困扰。
 
@@ -300,37 +308,127 @@ Web 最常用的图像格式是：
 
 `title` 元素的值一般作为提示条（tooltip）呈现给用户，在光标于图片上停下后显示出来。尽管这*确实*能给用户提供更多的信息，您不该假定用户真的能看到：用户可能只有键盘或触摸屏。如果要把特别重要的信息提供给用户，选择上面提供的一种方法将其内联显示，而不是使用 `title`。
 
-- [Using the HTML title attribute – updated | The Paciello Group](https://developer.paciellogroup.com/blog/2013/01/using-the-html-title-attribute-updated/)
+- [使用 HTML title 属性 | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
 
-## 技术信息
+## 技术总结
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row"><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories">内容类别</a></th>
-   <td><a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Flow_content">流式内容</a>、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Phrasing_content">短语内容</a>、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Embedded_content">嵌入内容</a>, <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#Palpable_content">palpable content</a>. If the element has a <code>usemap</code> attribute, it also is a part of the interactive content category.</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的内容</th>
-   <td>无，它是一个{{Glossary("empty element", "空元素")}}。</td>
-  </tr>
-  <tr>
-   <th scope="row">标签省略</th>
-   <td>必须有开始标签，不可有结束标签。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的父元素</th>
-   <td>接受嵌入内容的任意元素。</td>
-  </tr>
-  <tr>
-   <th scope="row">允许的 ARIA 角色</th>
-   <td>任意</td>
-  </tr>
-  <tr>
-   <th scope="row">DOM 接口</th>
-   <td>{{domxref("HTMLImageElement")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories"
+          >内容类别</a
+        >
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#流式内容"
+          >流式内容</a
+        >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#短语内容"
+          >短语内容</a
+        >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#嵌入内容"
+          >嵌入内容</a
+        >、<a href="/zh-CN/docs/Web/Guide/HTML/Content_categories#可感知内容"
+          >可感知内容</a
+        >。如果元素有 <code>usemap</code> 属性，则其也是交互式内容的一种。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>无；其为 {{Glossary("void element", "空元素")}}。</td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>必须有开始标签，且不能有结束标签。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>接受嵌入内容的任何元素。</td>
+    </tr>
+    <tr>
+      <th scope="row">隐式 ARIA 角色</th>
+      <td>
+        <ul>
+          <li>
+            具有非空 <code>alt</code> 属性或没有
+            <code>alt</code> 属性：<code
+              ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/img_role"
+                ><code>img</code></a
+              ></code
+            >
+          </li>
+          <li>
+            具有空 <code>alt</code> 属性：<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/presentation_role"
+              ><code>presentation</code></a
+            >
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>
+        <ul>
+          <li>
+            具有非空 <code>alt</code> 属性：
+            <ul>
+              <li>
+                <code
+                  ><a
+                    href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/button_role"
+                    >button</a
+                  ></code
+                >
+              </li>
+              <li>
+                <code
+                  ><a
+                    href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/checkbox_role"
+                    >checkbox</a
+                  ></code
+                >
+              </li>
+              <li>{{ARIARole("link")}}</li>
+              <li>{{ARIARole("menuitem")}}</li>
+              <li>{{ARIARole("menuitemcheckbox")}}</li>
+              <li>{{ARIARole("menuitemradio")}}</li>
+              <li>{{ARIARole("option")}}</li>
+              <li>{{ARIARole("progressbar")}}</li>
+              <li>{{ARIARole("scrollbar")}}</li>
+              <li>{{ARIARole("separator")}}</li>
+              <li>{{ARIARole("slider")}}</li>
+              <li>
+                <code
+                  ><a
+                    href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Switch_role"
+                    >switch</a
+                  ></code
+                >
+              </li>
+              <li>
+                <code
+                  ><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Tab_Role"
+                    >tab</a
+                  ></code
+                >
+              </li>
+              <li>{{ARIARole("treeitem")}}</li>
+            </ul>
+          </li>
+          <li>
+            具有空 <code>alt</code> 属性、{{ARIARole("none")}}
+            或 {{ARIARole("presentation")}}
+          </li>
+          <li>
+            没有 <code>alt</code> 属性，或没有允许的角色（<code>role</code>）
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLImageElement")}}</td>
+    </tr>
+  </tbody>
 </table>
 
 ## 规范
@@ -345,6 +443,6 @@ Web 最常用的图像格式是：
 
 - [HTML 中的图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
 - [图像文件类型与格式指南](/zh-CN/docs/Web/Media/Formats/Image_types)
-- [响应式图片](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 - {{HTMLElement("picture")}}、{{HTMLElement("object")}} 和 {{HTMLElement("embed")}} 元素
-- 其他与图像相关的 CSS 属性：{{cssxref("object-fit")}}、{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}} 和 {{cssxref("image-resolution")}}。
+- 其它与图像相关的 CSS 属性：{{cssxref("object-fit")}}、{{cssxref("object-position")}}、{{cssxref("image-orientation")}}、{{cssxref("image-rendering")}} 和 {{cssxref("image-resolution")}}。
