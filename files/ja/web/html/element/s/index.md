@@ -67,7 +67,7 @@ slug: Web/HTML/Element/s
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)のみがあります。
 
-> **Note:** **実装におけるメモ:** Gecko 1.9.2 以前はこの要素に {{domxref("HTMLSpanElement")}} インターフェイスを実装しています。
+> **メモ:** **実装におけるメモ:** Gecko 1.9.2 以前はこの要素に {{domxref("HTMLSpanElement")}} インターフェイスを実装しています。
 
 ## 例
 

@@ -55,7 +55,7 @@ browser.tabs.onCreated.addListener(handleCreated);
 
 {{Compat("webextensions.api.tabs.onCreated")}}
 
-> **Note:** この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onCreated) API に基づいています。このドキュメンテーションは Chromium code の中の[`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)からの派生です。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、ここに the Creative Commons Attribution 3.0 United States License のもとで含まれています。
+> **メモ:** この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/extensions/tabs#event-onCreated) API に基づいています。このドキュメンテーションは Chromium code の中の[`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)からの派生です。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、ここに the Creative Commons Attribution 3.0 United States License のもとで含まれています。
 
 <pre class="hidden">// Copyright 2015 The Chromium Authors. All rights reserved.
 //

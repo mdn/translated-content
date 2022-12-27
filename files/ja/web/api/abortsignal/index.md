@@ -58,9 +58,9 @@ function fetchVideo() {
 }
 ```
 
-> **Note:** `abort()` が呼ばれると、`fetch()` promise は `AbortError` で失敗します。
+> **メモ:** `abort()` が呼ばれると、`fetch()` promise は `AbortError` で失敗します。
 
-> **Warning:** 現在のバージョンの Firefox は、`DOMException` で失敗します。
+> **警告:** 現在のバージョンの Firefox は、`DOMException` で失敗します。
 
 GitHub で完全に動作する例を見ることができます — [abort-api](https://github.com/mdn/dom-examples/tree/master/abort-api) (または [実際に動作する様子](https://mdn.github.io/dom-examples/abort-api/) を参照) を参照してください。
 

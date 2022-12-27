@@ -53,7 +53,7 @@ Firefox aún no admite los siguientes permisos:
 - `nativeMessaging`
 - `unlimitedStorage`
 
-Obviamente, también no admite permisos para las [APIs que no son compatibles](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/API#Chrome_incompatibilities).
+Obviamente, también no admite permisos para las [APIs que no son compatibles](/en-US/Add-ons/WebExtensions/API#Chrome_incompatibilities).
 
 ## APIs JavaScript
 

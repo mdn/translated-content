@@ -18,9 +18,9 @@ fetch(url).then(function(response) {
 })
 ```
 
-> **Note:** `put()` は、リクエストに一致する、以前にキャッシュに保存されたキーと値のペアを上書きします。
+> **メモ:** `put()` は、リクエストに一致する、以前にキャッシュに保存されたキーと値のペアを上書きします。
 
-> **Note:** {{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は、200 の範囲にない `Response.status` 値を持つレスポンスをキャッシュしませんが、{{domxref("Cache.put")}} では、リクエストとレスポンスのペアを格納できます。 その結果、{{domxref("Cache.put")}} では可能ですが、{{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は不透明なレスポンスを格納するために使用できません。
+> **メモ:** {{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は、200 の範囲にない `Response.status` 値を持つレスポンスをキャッシュしませんが、{{domxref("Cache.put")}} では、リクエストとレスポンスのペアを格納できます。 その結果、{{domxref("Cache.put")}} では可能ですが、{{domxref("Cache.add")}} や {{domxref("Cache.addAll")}} は不透明なレスポンスを格納するために使用できません。
 
 ## 構文
 
@@ -41,7 +41,7 @@ cache.put(request, response).then(function() {
 
 `undefined` で解決する {{jsxref("Promise")}}。
 
-> **Note:** URL スキームが `http` または `https` でない場合、Promise は `TypeError` で拒否します。
+> **メモ:** URL スキームが `http` または `https` でない場合、Promise は `TypeError` で拒否します。
 
 ## 例
 

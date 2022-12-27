@@ -42,7 +42,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 - **URL**
   - : 新しい履歴項目の URL はこの引数で与えられます。ブラウザーは `pushState()` の呼び出しの後にはこの URL を読み込もうとしませんが、例えばユーザーがブラウザーを再起動した後などには URL を読み込もうとする可能性があることに注意してください。新しい URL は絶対的である必要はありません。相対的である場合、現在の URL に対して相対的に解決されます。新しい URL は現在の URL と同じオリジンでなければなりません。そうでない場合、`pushState()` は例外を発生します。この引数はオプションです。指定しなかった場合、文書の現在の URL が設定されます。
 
-> **Note:** Gecko 2.0 {{ geckoRelease("2.0") }} から Gecko 5.0 {{ geckoRelease("5.0") }} までの間では、渡されたオブジェクトは JSON を使用してシリアライズされます。 Gecko 6.0 {{ geckoRelease("6.0") }} より、オブジェクトは[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。これにより多種多様なオブジェクトを安全に渡せるようになります。
+> **メモ:** Gecko 2.0 {{ geckoRelease("2.0") }} から Gecko 5.0 {{ geckoRelease("5.0") }} までの間では、渡されたオブジェクトは JSON を使用してシリアライズされます。 Gecko 6.0 {{ geckoRelease("6.0") }} より、オブジェクトは[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。これにより多種多様なオブジェクトを安全に渡せるようになります。
 
 ある意味では、`pushState()` の呼び出しは `window.location = "#foo"` と設定するのと似ています。どちらも、現在の文書に関連する別の履歴項目の生成と有効化を行います。
 
@@ -63,7 +63,7 @@ history.pushState(stateObj, "page 2", "bar.html")
 
 具体的には、何らかのユーザーのアクションを受け、現在の履歴項目の URL または 状態オブジェクトを更新したい場合に `replaceState()` が役立ちます。
 
-> **Note:** Gecko 2.0 {{ geckoRelease("2.0") }} から Gecko 5.0 {{ geckoRelease("5.0") }} までの間では、渡されたオブジェクトは JSON を使用してシリアライズされます。 Gecko 6.0 {{ geckoRelease("6.0") }} より、オブジェクトは[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。これにより多種多様なオブジェクトを安全に渡せるようになります。
+> **メモ:** Gecko 2.0 {{ geckoRelease("2.0") }} から Gecko 5.0 {{ geckoRelease("5.0") }} までの間では、渡されたオブジェクトは JSON を使用してシリアライズされます。 Gecko 6.0 {{ geckoRelease("6.0") }} より、オブジェクトは[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を使用してシリアライズされます。これにより多種多様なオブジェクトを安全に渡せるようになります。
 
 ### replaceState() の例
 

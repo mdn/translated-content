@@ -65,4 +65,4 @@ fetch(browser.runtime.getURL('image.png'))
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.
+> **メモ:** This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard) API.

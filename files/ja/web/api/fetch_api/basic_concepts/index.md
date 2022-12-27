@@ -7,7 +7,7 @@ slug: Web/API/Fetch_API/Basic_concepts
 
 [Fetch](/ja/docs/Web/API/Fetch_API) は、（ネットワーク越しの場合も含めて）リソースを取得するインターフェイスを提供します。 {{domxref("XMLHttpRequest")}} を使っていた人にはなじみ深いでしょうが、より強力で柔軟な機能を提供します。この記事では、 Fetch API の基本概念のいくつかを説明します。
 
-> **Note:** この記事は随時加筆されます。より良い説明が必要な Fetch 概念を見つけた場合、[MDN ディスカッションフォーラム](https://discourse.mozilla-community.org/c/mdn) か [Matrix](https://wiki.mozilla.org/Matrix) の [MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org) ルームで誰かに知らせてください。
+> **メモ:** この記事は随時加筆されます。より良い説明が必要な Fetch 概念を見つけた場合、[MDN ディスカッションフォーラム](https://discourse.mozilla-community.org/c/mdn) か [Matrix](https://wiki.mozilla.org/Matrix) の [MDN Web Docs](https://chat.mozilla.org/#/room/#mdn:mozilla.org) ルームで誰かに知らせてください。
 
 ## 概要
 

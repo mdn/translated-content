@@ -15,7 +15,7 @@ slug: Web/API/Headers
 
 `Headers` を実装したオブジェクトは、{{domxref('Headers.entries()', 'entries()')}} の代わりに直接 {{jsxref("Statements/for...of", "for...of")}} 構文で使用できます： `for (var p of myHeaders)` と `for (var p of myHeaders.entries())` は同等です。
 
-> **Note:** **ノート**： 利用できるヘッダについては[HTTP ヘッダ](/ja/docs/Web/HTTP/Headers) を参照してください。
+> **メモ:** 利用できるヘッダについては[HTTP ヘッダ](/ja/docs/Web/HTTP/Headers) を参照してください。
 
 ## コンストラクタ
 
@@ -41,11 +41,11 @@ slug: Web/API/Headers
 - {{domxref("Headers.values()")}}
   - : このオブジェクトに含まれるキー/値 ペアのすべての値を通して処理するための {{jsxref("Iteration_protocols","iterator")}} を返す。
 
-> **Note:** **ノート**： {{domxref("Headers.set()")}} と {{domxref("Headers.append()")}} の明確な違いは、複数の値を受け入れる特定のヘッダが既に存在しているときの挙動です。{{domxref("Headers.set()")}} は既存の値を新しい値で上書きしますが、{{domxref("Headers.append()")}} は既存の値の末尾に新しい値を追加します。サンプルコードはそれぞれの専用ページで確認してください。
+> **メモ:** {{domxref("Headers.set()")}} と {{domxref("Headers.append()")}} の明確な違いは、複数の値を受け入れる特定のヘッダが既に存在しているときの挙動です。{{domxref("Headers.set()")}} は既存の値を新しい値で上書きしますが、{{domxref("Headers.append()")}} は既存の値の末尾に新しい値を追加します。サンプルコードはそれぞれの専用ページで確認してください。
 
-> **Note:** **ノート**： [有効な HTTP ヘッダ名](https://fetch.spec.whatwg.org/#concept-header-name) ではない名前の参照を渡そうとすると、すべての Headers メソッドは `TypeError` をスローします。ヘッダに immutable {{Glossary("Guard")}} がある場合、変更操作は `TypeError` をスローします。そのほかの場外の場合は、単にに失敗します。
+> **メモ:** [有効な HTTP ヘッダ名](https://fetch.spec.whatwg.org/#concept-header-name) ではない名前の参照を渡そうとすると、すべての Headers メソッドは `TypeError` をスローします。ヘッダに immutable {{Glossary("Guard")}} がある場合、変更操作は `TypeError` をスローします。そのほかの場外の場合は、単にに失敗します。
 
-> **Note:** **ノート**：ヘッダーをイテレートする時、自動的に辞書順への並び替えが行われ、重複する名前は結合されます。
+> **メモ:** ヘッダーをイテレートする時、自動的に辞書順への並び替えが行われ、重複する名前は結合されます。
 
 ### 廃止になった機能
 

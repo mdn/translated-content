@@ -5,7 +5,7 @@ slug: Web/HTML/Element/hgroup
 
 {{HTMLRef}}
 
-> **Warning:** `<hgroup>` は支援技術にサポートされていないため、使用すべきではありません。使用すると、中にある見出し要素の認識に悪影響を与えます。
+> **警告:** `<hgroup>` は支援技術にサポートされていないため、使用すべきではありません。使用すると、中にある見出し要素の認識に悪影響を与えます。
 >
 > 詳細については、以下の[使用上の注意](#usage_notes)を参照してください。
 
@@ -72,7 +72,7 @@ slug: Web/HTML/Element/hgroup
 
 ## 使用上の注意
 
-> **Note:** `<hgroup>` 要素は HTML5 (W3C) 仕様から削除されましたが、 WHATWG 版の HTML には依然として含まれています。ほとんどのブラウザーで部分的に実装されており、実装が削除される可能性は低くなっています。
+> **メモ:** `<hgroup>` 要素は HTML5 (W3C) 仕様から削除されましたが、 WHATWG 版の HTML には依然として含まれています。ほとんどのブラウザーで部分的に実装されており、実装が削除される可能性は低くなっています。
 > ただし、`<hgroup>` 要素の主要な目的は [HTML 仕様書で定義されたアウトラインのアルゴリズム](/ja/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#the_html5_outline_algorithm)によって見出しをどのように表示するかに作用することですが、**どのブラウザーでもアウトラインのアルゴリズムは実装されていないため**、 `<hgroup>` のセマンティクスは実際のところ、理論上のものになっています。
 > HTML5 (W3C) 仕様書では、`<hgroup>`を使用せずに[副見出し、サブタイトル、代替タイトル、スローガン](https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements)をマークアップする方法についてアドバイスを提供しています。
 

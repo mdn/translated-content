@@ -196,7 +196,7 @@ pip3 list
 
 ## Uso de Django dentro de un entorno virtual de Python
 
-Las bibliotecas que usaremos para crear nuestros entornos virtuales están en [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and Mac OS X) y [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), que utilizan a su vez la herramienta [virtualenv](https://developer.mozilla.org/en-US/docs/Python/Virtualenv). Las herramientas wrapper crean una interfaz consistente para la gestión de interfaces en todas las plataformas.
+Las bibliotecas que usaremos para crear nuestros entornos virtuales están en [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/index.html) (Linux and Mac OS X) y [virtualenvwrapper-win](https://pypi.python.org/pypi/virtualenvwrapper-win) (Windows), que utilizan a su vez la herramienta [virtualenv](/en-US/docs/Python/Virtualenv). Las herramientas wrapper crean una interfaz consistente para la gestión de interfaces en todas las plataformas.
 
 ### Instalación del software del entorno virtual
 

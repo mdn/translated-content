@@ -11,7 +11,7 @@ translation_of: Web/EXSLT/exsl/object-type
 
 `exsl:object-type()` devuelve una cadena que indica el tipo del objeto especificado.
 
-> **Nota:** La mayoría de tipos de objetos [XSLT](\"es/XSLT\") pueden ser convertidos en otros con seguridad; sin embargo, ciertas conversiones pueden aumentar las condiciones de error. En particular, el tratamiento de algo que no sea un conjunto de nodos (node-set) como un conjunto de nodos lo haría así. Esta función permite que los autores de plantillas con nombre y funciones de extensión proporcionen fácilmente flexibilidad en los valores de los parámetros.
+> **Nota:** La mayoría de tipos de objetos [XSLT](/es/XSLT) pueden ser convertidos en otros con seguridad; sin embargo, ciertas conversiones pueden aumentar las condiciones de error. En particular, el tratamiento de algo que no sea un conjunto de nodos (node-set) como un conjunto de nodos lo haría así. Esta función permite que los autores de plantillas con nombre y funciones de extensión proporcionen fácilmente flexibilidad en los valores de los parámetros.
 
 ### Sintaxis
 

@@ -48,4 +48,4 @@ OS の通知メカニズムを使って、ユーザーへの通知を表示し�
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.
+> **メモ:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/extensions/notifications) API.

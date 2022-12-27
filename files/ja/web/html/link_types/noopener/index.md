@@ -9,7 +9,7 @@ slug: Web/HTML/Link_types/noopener
 
 なお、 `noopener` を使用した場合、ターゲット名に `_top`, `_self`, `_parent` 以外の空でない名前を使用すると、新しいウィンドウやタブを開くかどうかの判断において、すべて `_blank` と同様に扱われます。
 
-> **Note:** #### 補足`target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作が `rel="noopener"` を設定した場合と同様、 `window.opener` を設定しないようになりました。対応状況については[ブラウザーの互換性](/ja/docs/Web/HTML/Element/a#browser_compatibility)を参照してください。
+> **メモ:** `target="_blank"` を `<a>` 要素に設定すると、暗黙的に `rel` の動作が `rel="noopener"` を設定した場合と同様、 `window.opener` を設定しないようになりました。対応状況については[ブラウザーの互換性](/ja/docs/Web/HTML/Element/a#browser_compatibility)を参照してください。
 
 ## 仕様書
 

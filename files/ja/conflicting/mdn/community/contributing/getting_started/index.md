@@ -161,7 +161,7 @@ origin    git@github.com:chrisdavidmills/content.git (push)
 git switch main
 ```
 
-> **Note:** #### 注他のチュートリアルで、リポジトリーのブランチを変更するのに `git checkout` を使っているのを見たことがあるかもしれません。このチュートリアルでは、より新しい `git switch` コマンドをお勧めします。これは純粋にブランチを変更するために設計されたもので、失敗する可能性が低いからです。これらのコマンドの関連性や違いに興味がある方は、 [Highlights from Git 2.23 > Experimental alternatives for git checkout](https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout) が良くまとまっています。
+> **メモ:** 他のチュートリアルで、リポジトリーのブランチを変更するのに `git checkout` を使っているのを見たことがあるかもしれません。このチュートリアルでは、より新しい `git switch` コマンドをお勧めします。これは純粋にブランチを変更するために設計されたもので、失敗する可能性が低いからです。これらのコマンドの関連性や違いに興味がある方は、 [Highlights from Git 2.23 > Experimental alternatives for git checkout](https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout) が良くまとまっています。
 
 ### 自分のメインブランチの更新
 
@@ -284,7 +284,7 @@ nothing to commit, working tree clean
     git add README.md
     ```
 
-    > **Note:** ### 注`README.md` は、変更したファイルの名前だけではなく、そのファイルへのパスを書きます。サブディレクトリーの中にあった場合は、そのファイルのフルパスを書かなければなりません。
+    > **メモ:** ### 注`README.md` は、変更したファイルの名前だけではなく、そのファイルへのパスを書きます。サブディレクトリーの中にあった場合は、そのファイルのフルパスを書かなければなりません。
 
 4. もう一度 `git status` を実行すると、このように表示されます。
 

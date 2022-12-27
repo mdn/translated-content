@@ -9,7 +9,7 @@ l10n:
 
 拡張機能でクリップボードを扱うのは、Web API の {{domxref("Document.execCommand()","document.execCommand")}} メソッド（非推奨）から {{domxref("Clipboard", "navigator.clipboard")}} メソッドに移行しています。
 
-> **Note:** {{domxref("Clipboard", "navigator.clipboard")}} API は最近追加された仕様であり、すべてのブラウザーで完全に実装されているとは限りません。この記事ではいくつかの制限事項を説明しますが、API があなたのニーズをサポートしていることを確認するために、使用する前に必ず各メソッドの互換性テーブルを確認するようにしてください。
+> **メモ:** {{domxref("Clipboard", "navigator.clipboard")}} API は最近追加された仕様であり、すべてのブラウザーで完全に実装されているとは限りません。この記事ではいくつかの制限事項を説明しますが、API があなたのニーズをサポートしていることを確認するために、使用する前に必ず各メソッドの互換性テーブルを確認するようにしてください。
 
 2 つの API の違いは、{{domxref("Document.execCommand()","document.execCommand")}} がキーボードのコピー、カット、ペーストの操作に似ていて、ウェブページとクリップボード間でデータを交換するのに対し、{{domxref("Clipboard", "navigator.clipboard")}} はクリップボードとの間で任意のデータの書き込みと読み出しを行うことです。
 
@@ -41,7 +41,7 @@ navigator.permissions.query({name: "clipboard-write"}).then((result) => {
 });
 ```
 
-> **Note:** `clipboard-write` のパーミッション名は Firefox ではサポートされておらず、Chromium ブラウザーでのみサポートされています。
+> **メモ:** `clipboard-write` のパーミッション名は Firefox ではサポートされておらず、Chromium ブラウザーでのみサポートされています。
 
 この関数は、文字列を受け取り、それをクリップボードに書き込みます。
 
@@ -102,7 +102,7 @@ browser.alarms.onAlarm.addListener(copy);
 
 このユースケースを有効にするには、`"clipboardWrite"` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)を要求する必要があります。つまり `"clipboardWrite"` は、ユーザーアクションのための短時間のイベントハンドラーの外側でクリップボードに書き込むことを可能にします。
 
-> **Note:** {{domxref("Document.execCommand", "document.execCommand()")}} は、`type="hidden"` の入力フィールド、HTML5 属性の `"hidden"`、または `"display: none;"` を使った CSS ルールにマッチするものでは機能しません。したがって、`span`, `div`, `p` タグに「クリップボードにコピー」ボタンを追加するには、入力の位置を絶対座標に設定し、ビューポートの外に移動させるなどの回避策をとる必要があります。
+> **メモ:** {{domxref("Document.execCommand", "document.execCommand()")}} は、`type="hidden"` の入力フィールド、HTML5 属性の `"hidden"`、または `"display: none;"` を使った CSS ルールにマッチするものでは機能しません。したがって、`span`, `div`, `p` タグに「クリップボードにコピー」ボタンを追加するには、入力の位置を絶対座標に設定し、ビューポートの外に移動させるなどの回避策をとる必要があります。
 
 ### 特定のブラウザーにおける留意事項
 

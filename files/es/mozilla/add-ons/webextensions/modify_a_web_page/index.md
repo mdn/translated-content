@@ -53,7 +53,7 @@ header.textContent = "This page has been eaten";
 document.body.appendChild(header);
 ```
 
-Ahora, [instala la extensión](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y visita <https://developer.mozilla.org/>:
+Ahora, [instala la extensión](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) y visita <https://developer.mozilla.org/>:
 
 {{EmbedYouTube("lxf2Tkg6U1M")}}
 
@@ -117,7 +117,7 @@ modify-page/
     page-eater.js
 ```
 
-Ahora [recarga la extensión](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), abre la página (cualquier página en esta ocasión), activa el menu de contexto y selecciona "Eat this page" (Comer esta página):
+Ahora [recarga la extensión](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on), abre la página (cualquier página en esta ocasión), activa el menu de contexto y selecciona "Eat this page" (Comer esta página):
 
 {{EmbedYouTube("zX4Bcv8VctA")}}
 

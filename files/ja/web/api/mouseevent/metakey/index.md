@@ -10,7 +10,7 @@ slug: Web/API/MouseEvent/metaKey
 多くのオペレーティングシステムでは、 <kbd>meta</kbd> キーに特殊な機能を割り当てているため、このプロパティは実際にはキーが押されていても `false` を返す可能性があることに注意してください。
 例えば、 Windows では、このキーはスタートメニューを開きます。
 
-> **Note:** Macintosh のキーボードでは、このキーは <kbd>command</kbd> キー (<kbd>⌘</kbd>) です。
+> **メモ:** Macintosh のキーボードでは、このキーは <kbd>command</kbd> キー (<kbd>⌘</kbd>) です。
 > Windows のキーボードでは、このキーは Windows キー (<kbd>⊞</kbd>) です。
 
 ## 値

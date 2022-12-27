@@ -66,7 +66,7 @@ Hay ciertos pasos los cuales pueden llevar a derminar el correcto tipo de valor 
 
 ### Cómo configurar su servidor para enviar los tipos MIME correctos
 
-- Si está usando un servidor de red Apache, simplemente copie esto [sample .htaccess file](es/Sample_.htaccess_file) en el directorio que contiene los archivos que quiere enviar con los tipos correctos MIME. Si tiene un subdirectorio entero de archivos, sólo ubique el archivo en el directorio principal; No necesita ubicarlo en cada subdirectorio.
+- Si está usando un servidor de red Apache, simplemente copie esto [sample .htaccess file](/es/Sample_.htaccess_file) en el directorio que contiene los archivos que quiere enviar con los tipos correctos MIME. Si tiene un subdirectorio entero de archivos, sólo ubique el archivo en el directorio principal; No necesita ubicarlo en cada subdirectorio.
 - Si usa Microsoft IIS, vea [este artículo](http://www.microsoft.com/technet/prodtechnol/windows2000serv/technologies/iis/maintain/featusability/mimeiis.mspx) en Microsoft TechNet.
 - Si utiliza un servidor script para generar contenido, puede generalmente agregar una línea cerca del principio de su script. Puede servir contenido otro que HTML desde Perl, PHP, ASP, ó Java — sólo cambie el tipo MIME adecuado.
 
@@ -77,7 +77,7 @@ Hay ciertos pasos los cuales pueden llevar a derminar el correcto tipo de valor 
 
 ### Enlaces Relacionados
 
-- [Tipo MIME incorrecto en archivos CSS](es/Tipo_MIME_incorrecto_en_archivos_CSS)
+- [Tipo MIME incorrecto en archivos CSS](/es/Tipo_MIME_incorrecto_en_archivos_CSS)
 - [IANA | MIME Media Types](http://www.iana.org/assignments/media-types/index.html)
 - [Hypertext Transfer Protocol — HTTP/1.0](http://www.w3.org/Protocols/HTTP/1.1/spec.html)
 - [Microsoft - 293336 - INFO: WebCast: MIME Type Handling in Microsoft Internet Explorer](http://support.microsoft.com/default.aspx?sd=msdn&scid=kb;en-us;293336)

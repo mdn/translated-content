@@ -46,7 +46,7 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 
 最後に `ResultObject` が持つ instance メンバーにアクセスして、エクスポートされた関数を実行しています。
 
-> **Note:** これを動作するようにするには、サーバが `.wasm` ファイルを `application/wasm` の MIME タイプで返す必要があります。
+> **メモ:** これを動作するようにするには、サーバが `.wasm` ファイルを `application/wasm` の MIME タイプで返す必要があります。
 
 ## 仕様書
 

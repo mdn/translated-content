@@ -28,7 +28,7 @@ Un {{domxref("DOMString")}} que se puede usar para identificar la animación, o 
 
 ## Ejemplos
 
-En el ejemplo [Follow the White Rabbit ](https://codepen.io/rachelnabors/pen/eJyWzm?editors=0010), puedes asignar a `rabbitDownAnimation` un `id` de esta manera:
+En el ejemplo [Follow the White Rabbit](https://codepen.io/rachelnabors/pen/eJyWzm?editors=0010), puedes asignar a `rabbitDownAnimation` un `id` de esta manera:
 
 ```js
 rabbitDownAnimation.effect.id = "rabbitGo";

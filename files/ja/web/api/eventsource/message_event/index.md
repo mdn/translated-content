@@ -27,7 +27,7 @@ evtSource.onmessage = function(e) {
 }
 ```
 
-> **Note:**  完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
+> **メモ:** 完全な例を GitHub から見つけることができます — [PHP を用いた簡単な SSE のデモ](https://github.com/mdn/dom-examples/tree/master/server-sent-events) を参照。
 
 ## 仕様
 

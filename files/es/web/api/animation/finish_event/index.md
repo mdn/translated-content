@@ -58,7 +58,6 @@ bringUI.onfinish = function() {
 
 {{Specifications}}
 
-
 ## Compatibilidad con navegadores
 
 {{Compat}}

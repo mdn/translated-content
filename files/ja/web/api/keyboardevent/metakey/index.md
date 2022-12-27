@@ -7,9 +7,9 @@ slug: Web/API/KeyboardEvent/metaKey
 
 **`KeyboardEvent.metaKey`** は読み取り専用のプロパティで、 プロパティは、イベントが発生したときに <kbd>Meta</kbd> キーが押されていたか (`true`) あるいは押されていなかった (`false`) かを示す論理値を返します。オペレーティングシステムによっては、キーが検出されないように遮蔽されることがあります。
 
-> **Note:** Macintosh のキーボードでは、これは <kbd>⌘ Command</kbd> キーです。
+> **メモ:** Macintosh のキーボードでは、これは <kbd>⌘ Command</kbd> キーです。
 
-> **Warning:** 少なくとも Firefox 48 の時点では、 <kbd>⊞ Windows</kbd> キーは "Meta" キーとみなされなくなりました。<kbd>⊞ Windows</kbd> キーが押されたとき `KeyboardEvent.metaKey` は `false` になります。
+> **警告:** 少なくとも Firefox 48 の時点では、 <kbd>⊞ Windows</kbd> キーは "Meta" キーとみなされなくなりました。<kbd>⊞ Windows</kbd> キーが押されたとき `KeyboardEvent.metaKey` は `false` になります。
 
 ## 値
 

@@ -29,7 +29,7 @@ source.stop();
 source.stop(3);
 ```
 
-> **Note:** stop()の使い方の完全な例は[`AudioContext.decodeAudioData`](/ja/docs/Web/API/AudioContext/decodeAudioData)を参照してください。[コードをすぐに実行する](http://mdn.github.io/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/decode-audio-data)こともできます。
+> **メモ:** stop()の使い方の完全な例は[`AudioContext.decodeAudioData`](/ja/docs/Web/API/AudioContext/decodeAudioData)を参照してください。[コードをすぐに実行する](http://mdn.github.io/decode-audio-data/)ことや、[ソースコードを閲覧する](https://github.com/mdn/decode-audio-data)こともできます。
 
 ## 引数
 

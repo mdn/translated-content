@@ -9,11 +9,11 @@ original_slug: Cadenas_del_User_Agent_de_Gecko
 ---
 ### Uso Apropiado
 
-No se recomienda el uso de las cadenas del User Agent como su principal opción para la detección del navegador. Vea [Deteccion Cross browser y Soporte Cross Browser](es/Deteccion_Cross_browser_y_Soporte_Cross_Browser) para una ojeada mas en profundo a varias técnicas sobre detección de navegadores con recomendaciones.
+No se recomienda el uso de las cadenas del User Agent como su principal opción para la detección del navegador. Vea [Deteccion Cross browser y Soporte Cross Browser](/es/Deteccion_Cross_browser_y_Soporte_Cross_Browser) para una ojeada mas en profundo a varias técnicas sobre detección de navegadores con recomendaciones.
 
 En particular, recomendamos usar la detección de la cadena del User Agent para detección del navegador del lado del servidor. Si su actual código del lado cliente usa detección de la cadena del User Agent, simplemente puede hacer una búsqueda por la cadena "Gecko" en el User Agent para detectar cualquier navegador basado en Gecko.
 
-Para todos los detalles que lidian con detecciones con Gecko los cuales lidian con bugs especificos o los cuales requieran conocimiento de strings especificos o fechas de la compilación, use el objeto [navigator](es/DOM_Client_Object_Cross-Reference/navigator).
+Para todos los detalles que lidian con detecciones con Gecko los cuales lidian con bugs especificos o los cuales requieran conocimiento de strings especificos o fechas de la compilación, use el objeto [navigator](/es/DOM_Client_Object_Cross-Reference/navigator).
 
 ### Lista de user agents liberados por Netscape y AOL basados en Gecko
 

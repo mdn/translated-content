@@ -59,7 +59,7 @@ self.addEventListener('notificationclick', function(event) {
 | ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------- |
 | {{SpecName('Web Notifications','#notificationevent','NotificationEvent')}} | {{Spec2('Web Notifications')}} | Living standard. |
 
-> **Note:** このインターフェイスは [Notifications API](/ja/docs/Web/API/Notifications_API) で定義されていますが、{{domxref("ServiceWorkerGlobalScope")}} を介してアクセスします。
+> **メモ:** このインターフェイスは [Notifications API](/ja/docs/Web/API/Notifications_API) で定義されていますが、{{domxref("ServiceWorkerGlobalScope")}} を介してアクセスします。
 
 ## ブラウザーの互換性
 

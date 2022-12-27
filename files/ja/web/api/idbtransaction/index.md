@@ -81,7 +81,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 {{ deprecated_header(13) }}
 
-> **Warning:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})
+> **警告:** These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ({{ bug(888598) }})
 
 Transactions can have one of three modes:
 

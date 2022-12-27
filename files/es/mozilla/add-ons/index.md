@@ -22,7 +22,7 @@ Existen varios tipos de complementos, pero el tipo más común son las extension
 
 En el pasado, habían varias juegos de herramientas para el desarrollo de las extensiones de Firefox, pero al finalizar el mes de noviembre de 2017, las extensiones deben crearse utilizando las [API de WebExtensions](/es/Add-ons/WebExtensions). Los otros juegos de herramientas, incluidos los complementos de overlay, los complementos de bootstrap y el complemento SDK, se espera que queden obsoletos durante el mismo período de tiempo.
 
-Si usted está escribiendo un nuevo complemento, le recomendamos que utilice la [API de WebExtensions](es/Add-ons/WebExtensions).
+Si usted está escribiendo un nuevo complemento, le recomendamos que utilice la [API de WebExtensions](/es/Add-ons/WebExtensions).
 
 Las WebExtensions están diseñadas para que sean compatibles cross-browser. En la mayoría de los casos podran ser ejecutadas por Chrome, Edge, y Opera con pocos o ningún cambio. También serán completamente compatibles con el multiproceso Firefox.
 
@@ -42,13 +42,13 @@ Hemos recolectado [recursos](https://wiki.mozilla.org/Add-ons/developer/communic
 
 No es requerido que tu registres tu complemento en AMO, pero tu complemento será firmado por Mozilla o los usuarios no podrán instalarlos.
 
-Para obtener una visión general del proceso de publicación de su complemento, consulte [Firme y distribuya su complemento](https://developer.mozilla.org/es/Add-ons/Distribution).
+Para obtener una visión general del proceso de publicación de su complemento, consulte [Firme y distribuya su complemento](/es/Add-ons/Distribution).
 
 ## Otros tipos de complementos
 
 Además de las extensiones, hay algunos otros tipos de complemento que permiten a los usuarios personalizar Firefox. Estos complementos incluyen:
 
-- [Temas ligeros](https://developer.mozilla.org/Add-ons/Themes/Background) Son una forma sencilla de proporcionar una personalización limitada para Firefox.
+- [Temas ligeros](/Add-ons/Themes/Background) Son una forma sencilla de proporcionar una personalización limitada para Firefox.
 - [Complementos para móviles](/es/Add-ons/Firefox_for_Android) son complementos de Firefox para Android. Observe que, aunque, tenemos la intención de reemplazar parte de la tecnología subyacente a estas API. En el futuro, WebExtensions será totalmente compatible con Firefox para Android.
 - [Plugins de motores de búsqueda](/es/docs/Creating_OpenSearch_plugins_for_Firefox) agrega nuevos motores de búsqueda a la barra de búsqueda del navegador.
 - [Diccionarios del usuario](/es/docs/Mozilla/Creating_a_spell_check_dictionary_add-on) son complementos que le permiten revisar la ortografía en diferentes idiomas.

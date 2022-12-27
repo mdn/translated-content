@@ -9,7 +9,7 @@ slug: Web/API/DataTransfer/mozGetDataAt
 
 **`DataTransfer.mozGetDataAt()`** メソッドは、与えられた `format` と `index` に基づいてドラッグイベントの{{domxref("DataTransfer", "データ転送", "", 1)}}オブジェクトの項目を取得するために使用されます。このメソッドは、指定した項目が存在しない場合や、インデックスが 0 から項目の数 - 1 の値までの範囲にない場合には、 `null` を返します。
 
-> **Note:** この方法は、Gecko に固有のものです。
+> **メモ:** この方法は、Gecko に固有のものです。
 
 ## 構文
 

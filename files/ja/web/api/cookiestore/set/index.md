@@ -47,7 +47,7 @@ var promise = cookieStore.set(options);
         - `"none"`
           - : Cookie は、すべてのコンテキストで送信されます。
 
-        > **Note:** SameSite cookies の詳細については、 [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) をご覧ください。
+        > **メモ:** SameSite cookies の詳細については、 [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) をご覧ください。
 
 ### 返値
 

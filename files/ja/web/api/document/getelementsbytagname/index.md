@@ -16,7 +16,7 @@ var elements = document.getElementsByTagName(name);
 - _elements_ は生きた {{domxref("HTMLCollection")}} であり、見つかった要素がツリーに出現する順に並んでいます (ただし、下記のメモを見てください)。
 - _name_ は文字列で、要素の名前を表します。特殊な文字列 "\*" は全ての要素を表します。
 
-> **Note:** [最新の W3C 仕様書](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) では `elements` は `HTMLCollection` です。しかし、 WebKit ブラウザーではこのメソッドは {{domxref("NodeList")}} を返します。詳しくは {{bug(14869)}} を見てください。
+> **メモ:** [最新の W3C 仕様書](https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html) では `elements` は `HTMLCollection` です。しかし、 WebKit ブラウザーではこのメソッドは {{domxref("NodeList")}} を返します。詳しくは {{bug(14869)}} を見てください。
 
 ## 例
 

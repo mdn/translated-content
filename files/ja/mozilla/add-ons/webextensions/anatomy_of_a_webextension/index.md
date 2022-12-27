@@ -84,7 +84,7 @@ slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 
 バックグラウンドスクリプトは、バックグラウンドページと呼ばれる特殊なページのコンテキストで実行されます。ここでは [`window`](/ja/docs/Web/API/Window) というグローバルオブジェクトが利用でき、そのオブジェクトによってすべての DOM API 標準が利用できます。
 
-> **Warning:** Firefox では、バックグラウンドページでは[`alert()`](/ja/docs/Web/API/Window/alert)、[`confirm()`](/ja/docs/Web/API/Window/confirm)、[`prompt()`](/ja/docs/Web/API/Window/prompt)の使用はサポートされません。
+> **警告:** Firefox では、バックグラウンドページでは[`alert()`](/ja/docs/Web/API/Window/alert)、[`confirm()`](/ja/docs/Web/API/Window/confirm)、[`prompt()`](/ja/docs/Web/API/Window/prompt)の使用はサポートされません。
 
 #### WebExtension API
 

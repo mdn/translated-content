@@ -64,7 +64,7 @@ slug: Web/HTML/Element/dialog
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
 
-> **Warning:** `tabindex` 属性を `<dialog>` 要素で使用してはいけません。
+> **警告:** `tabindex` 属性を `<dialog>` 要素で使用してはいけません。
 
 - {{htmlattrdef("open")}}
   - : ダイアログがアクティブで操作で使用できることを示します。 `open` 属性が設定されていないときは、ダイアログはユーザーに表示する*べきではありません*。

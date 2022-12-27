@@ -58,7 +58,7 @@ Ahora, cuando la bola toca el fondo, restamos una vida. Si no queda ninguna, el 
 
 ### Sacar por pantalla el contador de vidas
 
-Tienes que añadir una llamada a `drawLives()` dentro de `draw()` debajo de la llamada a `drawScore():`
+Tienes que añadir una llamada a `drawLives()` dentro de `draw()` debajo de la llamada a `drawScore()`:
 
 ```js
 drawLives();

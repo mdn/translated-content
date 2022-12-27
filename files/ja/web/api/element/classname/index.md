@@ -39,7 +39,7 @@ if (el.className === 'active'){
 elm.setAttribute('class', elm.getAttribute('class'))
 ```
 
-> **Note:** `class` は **HTML 属性**であり、 `className` は **DOM プロパティ**です。
+> **メモ:** `class` は **HTML 属性**であり、 `className` は **DOM プロパティ**です。
 
 ## 仕様書
 

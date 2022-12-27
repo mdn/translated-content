@@ -28,8 +28,10 @@ translation_of: Learn/JavaScript/First_steps
 
 En nuestro primer módulo de JavaScript, primero respondemos algunas preguntas fundamentales como "¿qué es JavaScript?", "¿cómo se ve?" y "¿qué puede hacer?", antes de pasar avanzar en la guía por tu primera experiencia práctica de escribir JavaScript. Después de eso, explicaremos en detalle algunos bloques de construcción clave, tal como variables, cadenas, números y arreglos.
 
-> **Observación:** 
+> **Observación:**
+>
 > #### ¿Quieres transformarte en un desarrollador de la interfaz de usuario web?
+>
 > Se elaboró un curso que incluye toda la información esencial que necesitas para alcanzar tu objetivo.
 >
 > [Empieza aquí](/es/docs/Learn/Front-end_web_developer)

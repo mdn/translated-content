@@ -55,4 +55,4 @@ Navegadores modernos que cumplen con el estándar HTML5 construyen automáticame
 
 ## Véase también
 
-- Elementos que pueden ser usados dentro de un elemento `<head>:` {{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}
+- Elementos que pueden ser usados dentro de un elemento `<head>`: {{HTMLElement("title")}}, {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("style")}}, {{HTMLElement("meta")}}, {{HTMLElement("script")}}, {{HTMLElement("noscript")}}

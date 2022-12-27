@@ -9,7 +9,7 @@ slug: Web/API/Fullscreen_API
 
 API の使い方についての詳細は、 [Fullscreen API ガイド](/ja/docs/Web/API/Fullscreen_API/Guide)をご覧ください。
 
-> **Note:** **メモ:** この API の対応はブラウザーによって、ベンダー接頭辞が必要かどうか、最新の仕様を実装しているかどうかがいくらか異なっています。この API の実装状況の詳細は、 [Browser compatibility](#browser_compatibility) の節を参照してください。ベンダーに依存せずに Fullscreen API にアクセスできる [Fscreen](https://github.com/rafrex/fscreen) のようなライブラリの使用を検討したほうが良いかもしれません。
+> **メモ:** この API の対応はブラウザーによって、ベンダー接頭辞が必要かどうか、最新の仕様を実装しているかどうかがいくらか異なっています。この API の実装状況の詳細は、 [Browser compatibility](#browser_compatibility) の節を参照してください。ベンダーに依存せずに Fullscreen API にアクセスできる [Fscreen](https://github.com/rafrex/fscreen) のようなライブラリの使用を検討したほうが良いかもしれません。
 
 ## インターフェイス
 
@@ -42,7 +42,7 @@ Fullscreen API は {{DOMxRef("Document")}} および {{DOMxRef("Element")}} イ�
 
 _Fullscreen API は二つのイベントを定義しており、全画面モードに移行したときと終了したとき、また全画面モードとウィンドウモードを切り替える途中でエラーが発生したことを検出するために利用することができます。これらのイベントのイベントハンドラーは {{DOMxRef("Document")}} および {{DOMxRef("Element")}} インターフェイスで利用できます。_
 
-> **Note:** **メモ:** これらのイベントハンドラープロパティは、 HTML の content 属性として利用することは*できません*。言い換えれば、 {{Event("fullscreenchange")}} および {{Event("fullscreenerror")}} のためのイベントハンドラーを HTML コンテンツから指定することができません。 JavaScript コードによって追加する必要があります。
+> **メモ:** これらのイベントハンドラープロパティは、 HTML の content 属性として利用することは*できません*。言い換えれば、 {{Event("fullscreenchange")}} および {{Event("fullscreenerror")}} のためのイベントハンドラーを HTML コンテンツから指定することができません。 JavaScript コードによって追加する必要があります。
 
 #### 文書のイベントハンドラー
 
@@ -64,7 +64,7 @@ _Fullscreen API は二つのイベントを定義しており、全画面モー�
 
   - : 真偽値で、文書に現在全画面モードで表示されている要素があるのであれば `true`、 それ以外は `false` を返します。
 
-    > **Note:** **メモ:** 代わりに {{DOMxRef("Document")}} または {{DOMxRef("ShadowRoot")}} の {{DOMxRef("Document.fullscreenElement", "fullscreenElement")}} プロパティを使用してください。これが `null` ではない場合、現在全画面モードで表示されている {{DOMxRef("Element")}} を表します。
+    > **メモ:** 代わりに {{DOMxRef("Document")}} または {{DOMxRef("ShadowRoot")}} の {{DOMxRef("Document.fullscreenElement", "fullscreenElement")}} プロパティを使用してください。これが `null` ではない場合、現在全画面モードで表示されている {{DOMxRef("Element")}} を表します。
 
 ## イベント
 
@@ -90,7 +90,7 @@ _Fullscreen API は二つのイベントを定義しており、全画面モー�
 
 ユーザーは全画面モードを解除するのを、サイトやアプリがプログラム的に行うのを待つのではなく、 <kbd>ESC</kbd> または <kbd>F11</kbd> キーを押すことで抜けることを選択することができます。ユーザーインターフェイスの中で、これができることをユーザーに知らせるための適切なユーザーインターフェイス要素を、ユーザーインターフェイスのどこかで提供することを忘れないでください。
 
-> **Note:** **メモ:** 全画面モードであるときに別のページへ移動する、タブを切り替える、あるいは別のアプリケーションに切り替える (例えば <kbd>Alt</kbd>-<kbd>Tab</kbd> を使用) と、同様に全画面モードを解除します。
+> **メモ:** 全画面モードであるときに別のページへ移動する、タブを切り替える、あるいは別のアプリケーションに切り替える (例えば <kbd>Alt</kbd>-<kbd>Tab</kbd> を使用) と、同様に全画面モードを解除します。
 
 ## 例
 

@@ -5,7 +5,7 @@ slug: Web/API/Document/origin
 
 {{APIRef("DOM")}}{{deprecated_header}}
 
-> **Note:** 代わりに `self.origin` を使用してください。
+> **メモ:** 代わりに `self.origin` を使用してください。
 
 **`Document.origin`** は読み取り専用プロパティで、文書のオリジンを返します。ほとんどの場合、このプロパティは `document.defaultView.location.origin` と等価です。
 

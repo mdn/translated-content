@@ -32,7 +32,7 @@ La propiedad innerHeight es soportada por cualquier objeto de ventana. Pudiendo 
 
 Es un algoritmo para obtener la altura del viewport, excluyendo si se representa la barra de desplazamiento horizontal
 
-### **Ejemplo**
+### Ejemplo
 
 ### Asumiendo un frameset
 

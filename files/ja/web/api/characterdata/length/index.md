@@ -13,7 +13,7 @@ slug: Web/API/CharacterData/length
 
 ## 例
 
-> **Note:** {{domxref("CharacterData")}} は抽象インターフェイスです。
+> **メモ:** {{domxref("CharacterData")}} は抽象インターフェイスです。
 > The examples below use {{domxref("Text")}}, a concrete interface implementing it.
 
 ```html

@@ -12,13 +12,13 @@ Una extensión se compone de una colección de archivos, empaquetados para su di
 
 Toda extensión debe contener un archivo llamado ["manifest.json"](/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#manifest.json). Este puede tener enlaces a otros tipos de archivos:
 
-- [Páginas en segundo plano](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_en_segundo_plano): Implementan la lógica de larga ejecución.
-- [Scripts de contenido](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_de_contenido): Interactúan con las páginas web (note que esto no es lo mismo que JavaScript en un elemento {{HTMLElement("script")}} dentro de una página).
-- [Archivos de acción del navegador](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_del_navegador_2): Implementan los botones de la barra de herramientas.
-- [Archivos de acción de la página:](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_de_las_páginas)Implementan botones en la barra de direcciones.
-- [Páginas de opciones](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Opciones_de_las_páginas): Definen una IU para que los usuarios vean y cambien las configuraciones de la extensión.
+- [Páginas en segundo plano](/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_en_segundo_plano): Implementan la lógica de larga ejecución.
+- [Scripts de contenido](/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Scripts_de_contenido): Interactúan con las páginas web (note que esto no es lo mismo que JavaScript en un elemento {{HTMLElement("script")}} dentro de una página).
+- [Archivos de acción del navegador](/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_del_navegador_2): Implementan los botones de la barra de herramientas.
+- [Archivos de acción de la página:](/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Acciones_de_las_páginas)Implementan botones en la barra de direcciones.
+- [Páginas de opciones](/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Opciones_de_las_páginas): Definen una IU para que los usuarios vean y cambien las configuraciones de la extensión.
 - [archivos de la barra lateral](/es/Add-ons/WebExtensions/user_interface/Sidebars): Agregue una barra lateral al navegador.
-- [Recursos Web accesibles](https://developer.mozilla.org/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Recursos_web_accesibles): Hace posible que el contenido empaquetado acceda a páginas web y scripts.
+- [Recursos Web accesibles](/es/Add-ons/WebExtensions/Anatomia_de_una_WebExtension#Recursos_web_accesibles): Hace posible que el contenido empaquetado acceda a páginas web y scripts.
 
 ![](https://mdn.mozillademos.org/files/13669/webextension-anatomy.png)
 
@@ -88,7 +88,7 @@ Los scripts en segundo plano no tienen acceso directo a las páginas web. Sin em
 
 #### Políticas de seguridad para el contenido
 
-Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de [`eval()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), a través de la Política de Seguridad del Contenido. Vea la [Política de Seguridad del Contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)para más detalles sobre esto.
+Los scripts de segundo plano están restringidos de algunas operaciones dañinas, como el uso de [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval), a través de la Política de Seguridad del Contenido. Vea la [Política de Seguridad del Contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)para más detalles sobre esto.
 
 ## Scripts de contenido
 
@@ -114,6 +114,6 @@ Mira el artículo [scripts de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/
 
 Los recursos web accesibles son recursos como imágenes, HTML, CSS y JavaScript que tu puedes incluir en la extensión y los quieres hacer accesible a los scripts en segundo plano y los scripts de las páginas. Los recursos que son hechos accesibles desde la web pueden ser referenciados desde scripts de páginas web y scripts de contenido mediante un esquema especial de URI.
 
-Por ejemplo, si un script de contenido quiere insertar algunas imágenes dentro de páginas web, tu puedes incluirlos en la extensión y hacerlos accesibles desde la web. El script de contenido creará y añadirá las etiquetas [`img`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) que referencia a las imágenes mediante el atributo `src`.
+Por ejemplo, si un script de contenido quiere insertar algunas imágenes dentro de páginas web, tu puedes incluirlos en la extensión y hacerlos accesibles desde la web. El script de contenido creará y añadirá las etiquetas [`img`](/en-US/docs/Web/HTML/Element/img) que referencia a las imágenes mediante el atributo `src`.
 
 Para aprender más, vea la documentación para la el parámetro [web_accessible_resource](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) del manifest.json.

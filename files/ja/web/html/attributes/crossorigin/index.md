@@ -49,7 +49,7 @@ slug: Web/HTML/Attributes/crossorigin
   </tbody>
 </table>
 
-> **Note:** Firefox 83 より前では、 `crossorigin` 属性は `rel="icon"` に対応していませんでした。 [Chrome についての未解決の問題](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)もあります。
+> **メモ:** Firefox 83 より前では、 `crossorigin` 属性は `rel="icon"` に対応していませんでした。 [Chrome についての未解決の問題](https://bugs.chromium.org/p/chromium/issues/detail?id=1121645)もあります。
 
 ### 例: `<script>` 要素の `crossorigin`
 

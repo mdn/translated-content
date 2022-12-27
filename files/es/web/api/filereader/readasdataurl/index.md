@@ -9,7 +9,7 @@ El método `readAsDataURL` es usado para leer el contenido del especificado {{do
 > **Nota:** El {{domxref("FileReader.result","result")}} de blob no puede ser
 > directamente decodificado como Base64 sin primero remover la delaración de Datos-URL
 > de la información codificada en Base64. Para recuperar únicamente la cadena codifidicada
-> en Base64, primero remueve `data:*/*;base64,` del resultado.
+> en Base64, primero remueve `data:*/*;base64`, del resultado.
 
 ## Sintaxis
 

@@ -104,7 +104,7 @@ body {
 
 {{EmbedLiveSample("without-ruby", "100%", 60)}}
 
-> **Note:** それ以外の例は、 {{HTMLElement("ruby")}} 要素についての記事を参照してください。
+> **メモ:** それ以外の例は、 {{HTMLElement("ruby")}} 要素についての記事を参照してください。
 
 ## 仕様書
 

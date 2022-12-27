@@ -12,7 +12,7 @@ slug: Web/API/Element/setHTML
 既定の `Sanitizer()` 設定では、{{HTMLElement("script")}} タグ、カスタム要素、コメントを含む XSS 関連の入力が取り除かれます。
 無害化の設定は {{domxref("Sanitizer.Sanitizer", "Sanitizer()")}} コンストラクターのオプションを使用してカスタマイズすることができます。
 
-> **Note:** 対象となる要素がまだない場合など、後の時点で DOM に文字列を挿入する必要がある場合は、このメソッドの代わりに {{domxref("Sanitizer.sanitizeFor()")}} を使用してください。
+> **メモ:** 対象となる要素がまだない場合など、後の時点で DOM に文字列を挿入する必要がある場合は、このメソッドの代わりに {{domxref("Sanitizer.sanitizeFor()")}} を使用してください。
 
 ## 構文
 
@@ -49,7 +49,7 @@ document.getElementById("target").setHTML(unsanitized_string, sanitizer);
 // 結果 (文字列): "abc  def"
 ```
 
-> **Note:** この例では既定の無害化を使用しています。
+> **メモ:** この例では既定の無害化を使用しています。
 > {{domxref("Sanitizer/Sanitizer","Sanitizer")}} コンストラクターで無害化のオプションを構成することができます。
 
 ## 仕様書
