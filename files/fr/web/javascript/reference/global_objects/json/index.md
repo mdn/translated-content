@@ -102,15 +102,11 @@ Des espaces blancs insignifiants peuvent être présents n’importe où sauf da
 
 ## Spécifications
 
-| Spécification                                                        | État                         | Commentaires         |
-| -------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES5.1', '#sec-15.12', 'JSON')}}             | {{Spec2('ES5.1')}}     | Définition initiale. |
-| {{SpecName('ES6', '#sec-json-object', 'JSON')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-json-object', 'JSON')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.JSON")}}
+{{Compat}}
 
 ## Voir aussi
 

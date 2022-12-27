@@ -56,16 +56,11 @@ Pour les valeurs (strictement) inférieures à -1 ou supérieures à 1, `Math.ac
 
 ## Spécifications
 
-| Spécification                                                            | Statut                       | Commentaires                                          |
-| ------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.8.2.2', 'Math.acos')}}     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-math.acos', 'Math.acos')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-math.acos', 'Math.acos')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.acos")}}
+{{Compat}}
 
 ## Voir aussi
 

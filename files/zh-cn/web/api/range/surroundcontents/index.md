@@ -50,7 +50,7 @@ range.surroundContents(newParent);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.surroundContents")}}
+{{Compat}}
 
 ## 参见
 

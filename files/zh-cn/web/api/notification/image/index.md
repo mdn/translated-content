@@ -23,7 +23,7 @@ var image = Notification.image;
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification.image")}}
+{{Compat}}
 
 ## 参见
 

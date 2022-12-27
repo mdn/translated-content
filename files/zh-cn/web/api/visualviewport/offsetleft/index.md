@@ -23,4 +23,4 @@ A double.
 
 ## Browser compatibility
 
-{{Compat("api.VisualViewport.offsetLeft")}}
+{{Compat}}

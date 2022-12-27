@@ -19,7 +19,9 @@ p:first-child {
 
 ## 構文
 
-{{csssyntax}}
+```
+:first-child
+```
 
 ## 例
 

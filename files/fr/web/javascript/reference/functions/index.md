@@ -785,17 +785,11 @@ Il est à noter que, dans le test `if`, on utilise une référence à `noFunc` -
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                     | Commentaires                                                                             |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------------------------------- |
-| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}     | Définition initiale. Implémentée avec JavaScript 1.0                                     |
-| {{SpecName('ES5.1', '#sec-13', 'Function Definition')}}                                         | {{Spec2('ES5.1')}} |                                                                                          |
-| {{SpecName('ES6', '#sec-function-definitions', 'Function definitions')}}                 | {{Spec2('ES6')}}     | Nouveautés : fonctions fléchées, générateurs, paramètres par défaut, paramètres du reste |
-| {{SpecName('ES6', '#', 'function*')}}                                                                 | {{Spec2('ES6')}}     | Définition initiale.                                                                     |
-| {{SpecName('ES6', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ES6')}}     | Définition initiale.                                                                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions")}}
+{{Compat}}
 
 ## Voir aussi
 

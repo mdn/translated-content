@@ -45,7 +45,7 @@ The result is:
 
 ## Browser compatibility
 
-{{Compat("api.NodeList.values")}}
+{{Compat}}
 
 ## See also
 

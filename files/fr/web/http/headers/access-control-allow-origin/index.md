@@ -59,15 +59,13 @@ Access-Control-Allow-Origin: https://developer.mozilla.org
 Vary: Origin
 ```
 
-## Caractéristiques
+## Spécifications
 
-| Caractéristiques                                                                                                     | Statue                   | Commentaire         |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | Initial definition. |
+{{Specifications}}
 
-## Compatibilité
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.Access-Control-Allow-Origin")}}
+{{Compat}}
 
 ## Voir aussi
 

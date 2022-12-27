@@ -18,7 +18,9 @@ slug: Web/CSS/:scope
 
 ## 構文
 
-{{csssyntax}}
+```
+:scope
+```
 
 ## 例
 

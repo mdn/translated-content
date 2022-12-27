@@ -31,7 +31,7 @@ var result = url.protocol; // Returns:"https:"
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.protocol")}}
+{{Compat}}
 
 ## 其他链接
 

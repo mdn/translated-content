@@ -35,7 +35,7 @@ TBD (does not yet appear to be supported anywhere).
 
 ## Browser compatibility
 
-{{Compat("api.Response.error")}}
+{{Compat}}
 
 ## See also
 

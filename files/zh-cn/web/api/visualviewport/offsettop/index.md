@@ -23,4 +23,4 @@ var offsetTop = VisualViewport.offsetTop
 
 ## 浏览器兼容性
 
-{{Compat("api.VisualViewport.offsetTop")}}
+{{Compat}}

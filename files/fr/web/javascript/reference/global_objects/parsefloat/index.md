@@ -105,16 +105,11 @@ Attention : ce code n'est qu'un exemple et renverra `NaN` pour des valeurs pourt
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES1')}}                                                             | {{Spec2('ES1')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.2.3', 'parseFloat')}}                 | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-parsefloat-string', 'parseFloat')}}     | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-parsefloat-string', 'parseFloat')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.parseFloat")}}
+{{Compat}}
 
 ## Voir aussi
 

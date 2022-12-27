@@ -55,14 +55,11 @@ console.log(clésDenses);  // [0, 1, 2]
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-array.prototype.keys', 'Array.prototype.keys')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-array.prototype.keys', 'Array.prototype.keys')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Array.keys")}}
+{{Compat}}
 
 ## Voir aussi
 

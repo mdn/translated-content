@@ -13,7 +13,9 @@ slug: Web/CSS/:blank
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:blank
+```
 
 ## 例
 

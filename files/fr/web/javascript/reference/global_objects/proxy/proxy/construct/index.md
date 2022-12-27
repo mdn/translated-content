@@ -100,14 +100,11 @@ new p(); // TypeError: p is not a constructor
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-construct-argumentslist-newtarget', '[[Construct]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-construct-argumentslist-newtarget', '[[Construct]]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Proxy.handler.construct")}}
+{{Compat}}
 
 ## Voir aussi
 

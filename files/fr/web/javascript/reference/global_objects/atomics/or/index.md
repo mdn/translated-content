@@ -76,13 +76,11 @@ Atomics.load(ta, 0);  // 3
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                   |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------ |
-| {{SpecName('ESDraft', '#sec-atomics.or', 'Atomics.or')}} | {{Spec2('ESDraft')}} | Définition initiale avec 2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.or")}}
+{{Compat}}
 
 ## Voir aussi
 

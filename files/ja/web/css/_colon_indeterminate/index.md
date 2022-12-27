@@ -22,7 +22,9 @@ input:indeterminate {
 
 ## 構文
 
-{{csssyntax}}
+```
+:indeterminate
+```
 
 ## 例
 

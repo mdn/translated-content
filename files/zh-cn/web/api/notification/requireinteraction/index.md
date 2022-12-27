@@ -31,7 +31,7 @@ function spawnNotification(theTitle,theBody,shouldRequireInteraction) {
 
 ## 浏览器支持
 
-{{Compat("api.Notification.requireInteraction")}}
+{{Compat}}
 
 ## 相关内容
 

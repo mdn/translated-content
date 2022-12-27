@@ -23,4 +23,4 @@ var url = Notification.badge
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification.badge")}}
+{{Compat}}

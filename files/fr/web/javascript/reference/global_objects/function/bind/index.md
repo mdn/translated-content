@@ -211,15 +211,11 @@ slice(arguments);
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                           |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------ |
-| {{SpecName('ES5.1', '#sec-15.3.4.5', 'Function.prototype.bind')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
-| {{SpecName('ES2015', '#sec-function.prototype.apply', 'Function.prototype.bind')}} | {{Spec2('ES2015')}}     |                                                        |
-| {{SpecName('ESDraft', '#sec-function.prototype.bind', 'Function.prototype.bind')}} | {{Spec2('ESDraft')}} |                                                        |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Function.bind")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -7,6 +7,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 O método `forEach()` executa uma dada função em cada elemento de um array.
 
+{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+
 ## Sintaxe
 
 ```

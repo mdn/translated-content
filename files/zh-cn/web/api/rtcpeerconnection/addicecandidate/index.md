@@ -74,7 +74,7 @@ pc.addIceCandidate(candidate).then(_=>{
 
 ## Browser compatibility
 
-{{Compat("api.RTCPeerConnection.addIceCandidate")}}
+{{Compat}}
 
 ## See also
 

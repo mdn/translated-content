@@ -126,13 +126,11 @@ Une prothèse pour cette fonctionnalité est disponible [dans le dépôt associ�
 
 ## Spécifications
 
-| Spécification                                                                                                                                                        | État                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
-| {{SpecName('ES Int Draft', '#sec-Intl.NumberFormat.prototype.formatToParts', 'Intl.NumberFormat.prototype.formatToParts')}} | {{Spec2('ES Int Draft')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.NumberFormat.formatToParts")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -47,13 +47,11 @@ Atomics.isLockFree(8); // true
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-atomics.islockfree', 'Atomics.isLockFree')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Atomics.isLockFree")}}
+{{Compat}}
 
 ## Voir aussi
 

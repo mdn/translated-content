@@ -50,13 +50,11 @@ fetch('simple.wasm').then(response =>
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires                                       |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblyvalidate', 'validate()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.validate")}}
+{{Compat}}
 
 ## Voir aussi
 

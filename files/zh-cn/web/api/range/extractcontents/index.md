@@ -32,7 +32,7 @@ document.body.appendChild(documentFragment);
 
 ## Browser compatibility
 
-{{Compat("api.Range.extractContents")}}
+{{Compat}}
 
 ## See also
 

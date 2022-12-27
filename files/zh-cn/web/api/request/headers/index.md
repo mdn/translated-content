@@ -48,7 +48,7 @@ myContentType = myRequest.headers.get('Content-Type'); // returns 'image/jpeg'
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.headers")}}
+{{Compat}}
 
 ## See also
 

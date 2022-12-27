@@ -571,7 +571,7 @@
 /zh-CN/docs/HTML/Block-level_elements	/zh-CN/docs/Web/HTML/Block-level_elements
 /zh-CN/docs/HTML/Canvas	/zh-CN/docs/Web/API/Canvas_API
 /zh-CN/docs/HTML/Canvas/Tutorial	/zh-CN/docs/Web/API/Canvas_API/Tutorial
-/zh-CN/docs/HTML/Content_Editable	/zh-CN/docs/Web/Guide/HTML/Editable_content
+/zh-CN/docs/HTML/Content_Editable	/zh-CN/docs/Web/HTML/Global_attributes/contenteditable
 /zh-CN/docs/HTML/Element	/zh-CN/docs/Web/HTML/Element
 /zh-CN/docs/HTML/Element/Input	/zh-CN/docs/Web/HTML/Element/Input
 /zh-CN/docs/HTML/Element/Source	/zh-CN/docs/Web/HTML/Element/source
@@ -2209,7 +2209,8 @@
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations
 /zh-CN/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/zh-CN/docs/Web/API/Canvas_API/Tutorial/Using_images
-/zh-CN/docs/Web/Guide/HTML/Content_Editable	/zh-CN/docs/Web/Guide/HTML/Editable_content
+/zh-CN/docs/Web/Guide/HTML/Content_Editable	/zh-CN/docs/Web/HTML/Global_attributes/contenteditable
+/zh-CN/docs/Web/Guide/HTML/Editable_content	/zh-CN/docs/Web/HTML/Global_attributes/contenteditable
 /zh-CN/docs/Web/Guide/HTML/Forms	/zh-CN/docs/Learn/Forms
 /zh-CN/docs/Web/Guide/HTML/Forms/How_to_build_custom_form_widgets	/zh-CN/docs/Learn/Forms/How_to_build_custom_form_controls
 /zh-CN/docs/Web/Guide/HTML/Forms/My_first_HTML_form	/zh-CN/docs/Learn/Forms/Your_first_form
@@ -2227,7 +2228,7 @@
 /zh-CN/docs/Web/HTML/Canvas	/zh-CN/docs/Web/API/Canvas_API
 /zh-CN/docs/Web/HTML/Canvas/Canvas教程	/zh-CN/docs/Web/API/Canvas_API/Tutorial
 /zh-CN/docs/Web/HTML/Canvas/Tutorial	/zh-CN/docs/Web/API/Canvas_API/Tutorial
-/zh-CN/docs/Web/HTML/Content_Editable	/zh-CN/docs/Web/Guide/HTML/Editable_content
+/zh-CN/docs/Web/HTML/Content_Editable	/zh-CN/docs/Web/HTML/Global_attributes/contenteditable
 /zh-CN/docs/Web/HTML/Controlling_spell_checking_in_HTML_forms	/en-US/docs/Web/HTML/Global_attributes/spellcheck
 /zh-CN/docs/Web/HTML/DASH_Adaptive_Streaming_for_HTML_5_Video	/zh-CN/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video
 /zh-CN/docs/Web/HTML/Element/Input/datetime	/zh-CN/docs/Web/HTML/Element/input/datetime-local

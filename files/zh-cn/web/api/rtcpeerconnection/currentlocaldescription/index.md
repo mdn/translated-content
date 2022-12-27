@@ -45,7 +45,7 @@ else {
 
 ## 浏览器兼容性
 
-{{Compat("api.RTCPeerConnection.currentLocalDescription")}}
+{{Compat}}
 
 > **备注：** The addition of `currentLocalDescription` and {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} to the WebRTC spec is relatively recent. In browsers which don't support them, just use {{domxref("RTCPeerConnection.localDescription", "localDescription")}}.
 

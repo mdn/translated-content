@@ -77,13 +77,11 @@ console.log(object2);
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires                     |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.fromentries', 'Object.fromEntries')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2019. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.fromEntries")}}
+{{Compat}}
 
 ## Voir aussi
 

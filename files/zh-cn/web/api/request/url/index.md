@@ -32,7 +32,7 @@ var myURL = myRequest.url; // "http://mdn.github.io/fetch-examples/fetch-request
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.url")}}
+{{Compat}}
 
 ## See also
 

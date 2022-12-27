@@ -17,7 +17,9 @@ slug: Web/CSS/:paused
 
 ## 構文
 
-{{csssyntax}}
+```
+:paused
+```
 
 ## 例
 

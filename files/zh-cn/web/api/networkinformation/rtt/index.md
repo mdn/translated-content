@@ -25,4 +25,4 @@ rtt = NetworkInformation.rtt
 
 ## Browser compatibility
 
-{{Compat("api.NetworkInformation.rtt")}}
+{{Compat}}

@@ -119,7 +119,7 @@ Mas para recuperar o valor de atributo `x` em um elemento SVG `rect`, você deve
 rect.getAttributeNS(null, 'x');
 ```
 
-Note que isto não é o caso para atributos _com_ um prefixo de _namespace_ (atributos que não pertencem ao mesmo dialeto XML como a tag). Atributos como o `xlink:href` requerem o nome de _namespace_ que foi designado para aquele prefixo (http\://www\.w3.org/1999/xlink para XLink). Consequentemente para pegar o valor do atributo `xlink:href` de um elemento `<a>` em SVG você deveria escrever:
+Note que isto não é o caso para atributos _com_ um prefixo de _namespace_ (atributos que não pertencem ao mesmo dialeto XML como a tag). Atributos como o `xlink:href` requerem o nome de _namespace_ que foi designado para aquele prefixo (`http://www.w3.org/1999/xlink` para XLink). Consequentemente para pegar o valor do atributo `xlink:href` de um elemento `<a>` em SVG você deveria escrever:
 
 ```javascript
 elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');

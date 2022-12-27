@@ -152,15 +152,11 @@ var int32 = new Int32Array(iterable);
 
 ## Spécifications
 
-| Spécification                                                                        | État                             | Commentaires                                                                                                                               |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                                                                                                            |
-| {{SpecName('ES2015', '#table-49', 'TypedArray constructors')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. `new` est obligatoire.                                                                     |
-| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 a modifié le constructeur afin de pouvoir utiliser l'opération interne `ToIndex` et permettre de l'utiliser sans argument. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Int32Array")}}
+{{Compat}}
 
 ## Notes de compatibilité
 

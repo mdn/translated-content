@@ -49,7 +49,7 @@ div {
 }
 ```
 
-Ambos fragmentos de texto tienen color negro por defecto. 
+Ambos fragmentos de texto tienen color negro por defecto.
 
 ### Ejemplo bueno
 

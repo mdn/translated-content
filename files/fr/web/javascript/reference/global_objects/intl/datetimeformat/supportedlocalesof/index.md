@@ -59,15 +59,11 @@ console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(", "))
 
 ## Spécifications
 
-| Spécification                                                                                                                                                | État                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('ES Int 1.0', '#sec-12.2.2', 'Intl.DateTimeFormat.supportedLocalesOf')}}                                             | {{Spec2('ES Int 1.0')}} | Définition initiale. |
-| {{SpecName('ES Int 2.0', '#sec-12.2.2', 'Intl.DateTimeFormat.supportedLocalesOf')}}                                             | {{Spec2('ES Int 2.0')}} |                      |
-| {{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.supportedLocalesOf', 'Intl.DateTimeFormat.supportedLocalesOf')}} | {{Spec2('ES Int Draft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf")}}
+{{Compat}}
 
 ## Voir aussi
 

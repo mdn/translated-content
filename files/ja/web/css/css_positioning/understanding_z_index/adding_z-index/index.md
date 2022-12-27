@@ -21,7 +21,7 @@ slug: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 - ...
 - 最上位レイヤー _(観ている人に最も近い)_
 
-> **Note:**
+> **メモ:**
 >
 > - z-index プロパティが定義されていなければ、要素は既定の描画レイヤー 0 (ゼロ) に描画されます。
 > - 同じ `z-index` 値を持つ要素が複数あれば (＝同じレイヤー上にある場合)、 [z-index なしの重ね合わせ](/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index)で説明した重ね合わせ規則が当てはまります。

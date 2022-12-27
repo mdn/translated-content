@@ -33,7 +33,7 @@ var result = url.href; // Returns: 'https://developer.mozilla.org/en-US/docs/Web
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.href")}}
+{{Compat}}
 
 ## 参考
 

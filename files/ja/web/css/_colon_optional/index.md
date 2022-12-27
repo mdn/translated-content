@@ -20,7 +20,9 @@ input:optional {
 
 ## 構文
 
-{{csssyntax}}
+```
+:optional
+```
 
 ## 例
 

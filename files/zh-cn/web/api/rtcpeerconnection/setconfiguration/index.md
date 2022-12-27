@@ -67,7 +67,7 @@ First, a new {{domxref("RTCConfiguration")}} is created, `restartConfig`, specif
 
 ## Browser compatibility
 
-{{Compat("api.RTCPeerConnection.setConfiguration")}}
+{{Compat}}
 
 ## See also
 

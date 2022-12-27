@@ -38,7 +38,7 @@ if (node.parentNode) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.parentNode")}}
+{{Compat}}
 
 ## 规范
 

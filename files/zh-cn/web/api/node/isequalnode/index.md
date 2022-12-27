@@ -50,7 +50,7 @@ output.innerHTML += "div 0 equals div 2: " + divList[0].isEqualNode(divList[2]) 
 
 ## 浏览器支持
 
-{{Compat("api.Node.isEqualNode")}}
+{{Compat}}
 
 ## 相关链接
 

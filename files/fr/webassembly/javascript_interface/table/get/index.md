@@ -52,13 +52,11 @@ On note ici qu'il est nécessaire d'avoir un deuxième opérateur d'appel après
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblytableprototypeget', 'get()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initial pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Table.get")}}
+{{Compat}}
 
 ## Voir aussi
 

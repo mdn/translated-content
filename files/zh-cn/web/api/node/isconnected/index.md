@@ -70,4 +70,4 @@ console.log(style.isConnected); // Returns true
 
 ## 浏览器兼容性
 
-{{Compat("api.Node.isConnected")}}
+{{Compat}}

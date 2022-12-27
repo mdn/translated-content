@@ -41,13 +41,11 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                 | Commentaires                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblyinstance-objects', 'WebAssembly.Instance objects')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Instance.exports")}}
+{{Compat}}
 
 ## Voir aussi
 

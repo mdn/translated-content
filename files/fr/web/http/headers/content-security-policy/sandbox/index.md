@@ -83,14 +83,11 @@ Content-Security-Policy: sandbox allow-scripts;
 
 ## Spécifications
 
-| Spécification                                                                | Statut                       | Commentaire          |
-| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{specName("CSP 3.0", "#directive-sandbox", "sandbox")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
-| {{specName("CSP 1.1", "#directive-sandbox", "sandbox")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.Content-Security-Policy.sandbox")}}
+{{Compat}}
 
 ## Voir aussi
 

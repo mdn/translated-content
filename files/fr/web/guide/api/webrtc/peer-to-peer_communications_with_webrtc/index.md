@@ -23,7 +23,4 @@ Un article de [Hacks](https://hacks.mozilla.org/category/webrtc/) décrit avec p
 
 ## Spécifications
 
-| Spécification                            | Statut                               | Commentaire                       |
-| ---------------------------------------- | ------------------------------------ | --------------------------------- |
-| {{SpecName("Media Capture")}} | {{Spec2("Media Capture")}} | Définition de `getUserMedia` API. |
-| {{SpecName("WebRTC 1.0")}}     | {{Spec2("WebRTC 1.0")}}     | Définition initiale.              |
+{{Specifications}}

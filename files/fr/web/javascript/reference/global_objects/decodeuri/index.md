@@ -60,16 +60,11 @@ try {
 
 ## Spécifications
 
-| Spécification                                                                            | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                 | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.1.3.1', 'decodeURI')}}                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-decodeuri-encodeduri', 'decodeURI')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-decodeuri-encodeduri', 'decodeURI')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.decodeURI")}}
+{{Compat}}
 
 ## Voir aussi
 

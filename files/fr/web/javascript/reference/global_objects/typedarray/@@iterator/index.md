@@ -55,14 +55,11 @@ console.log(eArr.next().value); // 50
 
 ## Spécifications
 
-| Spécification                                                                                                                                | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-%typedarray%.prototype-@@iterator', '%TypedArray%.prototype[@@iterator]()')}}     | {{Spec2('ES6')}}         | Définition initiale |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype-@@iterator', '%TypedArray%.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.@@iterator")}}
+{{Compat}}
 
 ## Voir aussi
 

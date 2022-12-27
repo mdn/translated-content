@@ -22,7 +22,9 @@ original_slug: Web/CSS/:host()
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:host( <compound-selector> )
+```
 
 ## 例
 

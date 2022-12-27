@@ -98,7 +98,7 @@ function fillTableWithParameters(tbl) {
 
 ## 浏览器兼容性
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## 另见
 

@@ -263,13 +263,11 @@ console.log(instance.msg);
 
 ## Spécifications
 
-| Spécification                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.classes.public_class_fields")}}
+{{Compat}}
 
 ## Voir aussi
 

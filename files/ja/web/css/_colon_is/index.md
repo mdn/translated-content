@@ -255,7 +255,9 @@ some-element::after {
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:is( <forgiving-selector-list> )
+```
 
 ## 仕様書
 

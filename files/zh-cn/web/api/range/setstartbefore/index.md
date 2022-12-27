@@ -33,7 +33,7 @@ range.setStartBefore(referenceNode);
 
 ## Browser compatibility
 
-{{Compat("api.Range.setStartBefore")}}
+{{Compat}}
 
 ## See also
 

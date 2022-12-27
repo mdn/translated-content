@@ -32,7 +32,7 @@ startRangeOffset = range.startOffset;
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.startOffset")}}
+{{Compat}}
 
 ## 参见
 

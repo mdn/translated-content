@@ -34,7 +34,7 @@ pc.ontrack = function(event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.RTCPeerConnection.ontrack")}}
+{{Compat}}
 
 ## 参见
 

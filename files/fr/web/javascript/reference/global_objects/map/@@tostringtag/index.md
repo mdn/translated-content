@@ -32,11 +32,8 @@ Object.prototype.toString.call(new Map()) // "[object Map]"
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-map.prototype-@@tostringtag', 'Map.prototype[@@toStringTag]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-map.prototype-@@tostringtag', 'Map.prototype[@@toStringTag]')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Map.@@toStringTag")}}
+{{Compat}}

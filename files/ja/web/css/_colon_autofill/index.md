@@ -20,7 +20,7 @@ original_slug: Web/CSS/:-webkit-autofill
 
 ## 構文
 
-```css
+```
 :autofill
 ```
 

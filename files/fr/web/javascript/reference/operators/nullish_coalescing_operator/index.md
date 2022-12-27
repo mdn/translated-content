@@ -128,13 +128,11 @@ console.log(toto.uneProprieteTiti?.toUpperCase()); // undefined
 
 ## Spécifications
 
-| Spécification                                                                                    |
-| ------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#prod-Nulli', 'nullish coalescing expression')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.operators.nullish_coalescing")}}
+{{Compat}}
 
 ## Voir aussi
 

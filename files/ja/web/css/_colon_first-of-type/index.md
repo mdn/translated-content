@@ -18,7 +18,9 @@ p:first-of-type {
 
 ## 構文
 
-{{csssyntax}}
+```
+:first-of-type
+```
 
 ## 例
 

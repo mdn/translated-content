@@ -90,9 +90,7 @@ Lorsque la compatibilité navigateur est cruciale, vous pouvez utiliser ces quel
 
 ## Spécifications
 
-| **Spécification**                                                        | **Statut**                       | **Commentaires** |
-| ------------------------------------------------------------------------ | -------------------------------- | ---------------- |
-| {{SpecName('HTML WHATWG', "#lazy-loading-attributes")}} | {{Spec2('HTML WHATWG')}} |                  |
+{{Specifications}}
 
 ## Voir aussi
 

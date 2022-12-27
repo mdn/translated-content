@@ -51,14 +51,11 @@ L'objet `Reflect` fournit des fonctions statiques qui ont les mêmes noms que le
 
 ## Spécifications
 
-| Spécification                                                                | État                         | Commentaires                   |
-| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------ |
-| {{SpecName('ES2015', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ES2015')}}     | Définition initiale.           |
-| {{SpecName('ESDraft', '#sec-reflect-object', 'Reflect')}} | {{Spec2('ESDraft')}} | Retrait de `Reflect.enumerate` |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect")}}
+{{Compat}}
 
 ## Voir aussi
 

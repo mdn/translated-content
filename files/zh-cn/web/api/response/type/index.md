@@ -50,7 +50,7 @@ fetch(myRequest).then(function(response) {
 
 ## Browser compatibility
 
-{{Compat("api.Response.type")}}
+{{Compat}}
 
 ## See also
 

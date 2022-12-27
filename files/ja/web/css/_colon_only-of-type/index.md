@@ -18,7 +18,9 @@ p:only-of-type {
 
 ## 構文
 
-{{csssyntax}}
+```
+:only-of-type
+```
 
 ## 例
 

@@ -18,7 +18,9 @@ input:valid {
 
 ## 構文
 
-{{csssyntax}}
+```
+:user-valid
+```
 
 ## 例
 

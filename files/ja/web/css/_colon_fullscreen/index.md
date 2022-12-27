@@ -9,7 +9,9 @@ slug: Web/CSS/:fullscreen
 
 ## 構文
 
-{{csssyntax}}
+```
+:fullscreen
+```
 
 ## 使用上のメモ
 

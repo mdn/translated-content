@@ -46,14 +46,11 @@ wm.has(window);    // Renvoie false. L'objet window n'est plus dans la WeakMap.
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                         | Commentaires        |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WeakMap.delete")}}
+{{Compat}}
 
 ## Voir aussi
 

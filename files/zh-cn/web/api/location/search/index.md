@@ -34,4 +34,4 @@ let q = parseInt(params.get("q")); // is the number 123
 
 ## Browser compatibility
 
-{{Compat("api.Location.search")}}
+{{Compat}}

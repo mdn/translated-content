@@ -36,6 +36,6 @@ navigator.clipboard.readText().then(
 
 ## 浏览器兼容性
 
-{{Compat("api.Navigator.clipboard")}}
+{{Compat}}
 
 {{APIRef("Clipboard API")}}

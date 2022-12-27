@@ -71,7 +71,13 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 
 </details>
 
-Actualmente trabajando en: <https://github.com/mdn/translated-content/issues/6562>
+## Formateo
+
+| Expresión | Como escribirlo |
+| --------- | --------------- |
+| 2<sup>5</sup> | 2^5         |
+
+Actualmente trabajando en: <https://github.com/mdn/translated-content/issues/8635>
 
 ## Charla con nosotros
 

@@ -59,7 +59,7 @@ fetch("awesome-picture.jpg", { redirect: "error" }).then(function(response) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.redirected")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -48,7 +48,7 @@ a=sendrecv
 
 ## Browser compatibility
 
-{{Compat("api.RTCRtpTransceiver.direction")}}
+{{Compat}}
 
 ## See also
 

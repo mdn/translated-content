@@ -123,14 +123,11 @@ if (!Object.entries) {
 
 ## Spécifications
 
-| Spécification                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ES8', '#sec-object.entries', 'Object.entries')}}     | {{Spec2('ES8')}}         | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.entries")}}
+{{Compat}}
 
 ## Voir aussi
 

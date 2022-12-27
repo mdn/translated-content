@@ -103,7 +103,7 @@ const response = await fetch(new URL('http://www.example.com/démonstration.html
 
 ## 浏览器兼容性
 
-{{Compat("api.URL")}}
+{{Compat}}
 
 ## 相关链接
 

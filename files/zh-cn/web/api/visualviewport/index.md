@@ -97,7 +97,7 @@ window.visualViewport.addEventListener('resize', viewportHandler);
 
 ## 浏览器兼容性
 
-{{Compat("api.VisualViewport")}}
+{{Compat}}
 
 ## 参照
 

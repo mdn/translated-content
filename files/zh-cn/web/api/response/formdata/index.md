@@ -36,7 +36,7 @@ response.formData()
 
 ## Browser compatibility
 
-{{Compat("api.Response.formData")}}
+{{Compat}}
 
 ## See also
 

@@ -54,15 +54,11 @@ dataview.getUint8(1); // 0
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                             | Commentaires                                    |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('Typed Array')}}                                                                                     | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
-| {{SpecName('ES2015', '#sec-dataview.prototype.getuint8', 'DataView.prototype.getUint8')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-dataview.prototype.getuint8', 'DataView.prototype.getUint8')}} | {{Spec2('ESDraft')}}     |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.DataView.getUint8")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -122,7 +122,7 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
             >protocolo de iteração</a>, e os objetos não podem ser iterados diretamente usando o <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of"
             >for...of</a
           > (por padrão).
-        </>
+        </p>
         <div class="notecard note">
           <p><strong>Nota:</strong></p>
           <ul>

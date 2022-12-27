@@ -202,18 +202,11 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## Spécifications
 
-| Spécification                                                                                                       | État                         | Commentaires                   |
-| ------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------ |
-| [Proposition pour les imports dynamiques « fonctionnels »](https://github.com/tc39/proposal-dynamic-import/#import) | Proposition de niveau 4      | Fera partie de ECMAScript 2020 |
-| {{SpecName("ESDraft", "#sec-imports", "Imports")}}                                                | {{Spec2("ESDraft")}} |                                |
-| {{SpecName("ES2018", "#sec-imports", "Imports")}}                                                    | {{Spec2("ES2018")}}     |                                |
-| {{SpecName("ES2017", "#sec-imports", "Imports")}}                                                    | {{Spec2("ES2017")}}     |                                |
-| {{SpecName("ES2016", "#sec-imports", "Imports")}}                                                    | {{Spec2("ES2016")}}     |                                |
-| {{SpecName("ES2015", "#sec-imports", "Imports")}}                                                    | {{Spec2("ES2015")}}     | Définition initiale.           |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.import")}}
+{{Compat}}
 
 ## Voir aussi
 

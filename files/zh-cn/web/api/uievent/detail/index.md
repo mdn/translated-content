@@ -19,4 +19,4 @@ slug: Web/API/UIEvent/detail
 
 ## Browser compatibility
 
-{{Compat("api.UIEvent.detail")}}
+{{Compat}}

@@ -13,7 +13,9 @@ slug: Web/CSS/:-moz-only-whitespace
 
 ## 構文
 
-{{CSSSyntax}}
+```
+:-moz-only-whitespace
+```
 
 ## 例
 

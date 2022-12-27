@@ -192,13 +192,11 @@ Ce script affichera :
 
 ## Spécifications
 
-| Spécification                                                                                                |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.split', 'String.prototype.split')}} |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.split")}}
+{{Compat}}
 
 ## Voir aussi
 

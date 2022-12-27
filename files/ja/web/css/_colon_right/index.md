@@ -20,7 +20,9 @@ slug: Web/CSS/:right
 
 ## 構文
 
-{{csssyntax}}
+```
+:right
+```
 
 ## 例
 

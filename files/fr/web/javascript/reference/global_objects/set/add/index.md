@@ -47,14 +47,11 @@ console.log(monSet);
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-set.prototype.add', 'Set.prototype.add')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-set.prototype.add', 'Set.prototype.add')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Set.add")}}
+{{Compat}}
 
 ## Voir aussi
 

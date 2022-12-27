@@ -48,7 +48,7 @@ fetch(myRequest)
 
 ## 浏览器兼容性
 
-{{Compat("api.Response.blob")}}
+{{Compat}}
 
 ## 另见
 

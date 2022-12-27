@@ -44,13 +44,11 @@ Content-Security-Policy: img-src https:
 
 ## Spécifications
 
-| Specification                                                                                                    | Statut                               | Commentaire          |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{specName("Mixed Content", "#block-all-mixed-content", "block-all-mixed-content")}} | {{Spec2('Mixed Content')}} | Définition initiale. |
+{{Specifications}}
 
-## Compatibilités navigateurs
+## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.block-all-mixed-content")}}
+{{Compat}}
 
 ## Voir aussi
 

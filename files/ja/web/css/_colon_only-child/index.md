@@ -18,7 +18,9 @@ p:only-child {
 
 ## 構文
 
-{{csssyntax}}
+```
+:only-child
+```
 
 ## 例
 

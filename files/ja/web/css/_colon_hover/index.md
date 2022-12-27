@@ -20,7 +20,9 @@ a:hover {
 
 ## 構文
 
-{{csssyntax}}
+```
+:hover
+```
 
 ## 例
 

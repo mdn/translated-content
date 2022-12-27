@@ -38,7 +38,7 @@ range.insertNode(newNode);
 
 ## Browser compatibility
 
-{{Compat("api.Range.insertNode")}}
+{{Compat}}
 
 ## See also
 

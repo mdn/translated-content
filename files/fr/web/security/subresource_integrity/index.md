@@ -66,14 +66,11 @@ Les navigateurs gèrent SRI en effectuant les étapes suivantes :
 
 ## Spécifications
 
-| Spécification                                    | État                                         | Commentaires |
-| ------------------------------------------------ | -------------------------------------------- | ------------ |
-| {{SpecName('Subresource Integrity')}} | {{Spec2('Subresource Integrity')}} |              |
-| {{SpecName('Fetch')}}                     | {{Spec2('Fetch')}}                     |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp.require-sri-for")}}
+{{Compat}}
 
 ## Voir aussi
 

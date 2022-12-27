@@ -21,7 +21,9 @@ input:in-range {
 
 ## 構文
 
-{{csssyntax}}
+```
+:in-range
+```
 
 ## 例
 

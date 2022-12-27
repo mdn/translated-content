@@ -30,7 +30,7 @@ offscreen.height = 512;
 
 ## 浏览器兼容性
 
-{{Compat("api.OffscreenCanvas.height")}}
+{{Compat}}
 
 ## 另外参阅
 

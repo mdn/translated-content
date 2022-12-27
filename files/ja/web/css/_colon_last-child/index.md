@@ -19,7 +19,9 @@ p:last-child {
 
 ## 構文
 
-{{csssyntax}}
+```
+:last-child
+```
 
 ## 例
 

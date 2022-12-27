@@ -19,7 +19,9 @@ p:read-only {
 
 ## 構文
 
-{{csssyntax}}
+```
+:read-only
+```
 
 ## 例
 

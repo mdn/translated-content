@@ -71,13 +71,11 @@ fetch(myRequest).then(function(response) {
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
-| {{SpecName('ESDraft', '#sec-promise.prototype.finally', 'Promise.prototype.finally')}} | {{Spec2('ESDraft')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.finally")}}
+{{Compat}}
 
 ## Voir aussi
 

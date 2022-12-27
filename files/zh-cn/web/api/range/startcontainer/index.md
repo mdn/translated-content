@@ -26,7 +26,7 @@ startRangeNode = range.startContainer;
 
 ## Browser compatibility
 
-{{Compat("api.Range.startContainer")}}
+{{Compat}}
 
 ## See also
 

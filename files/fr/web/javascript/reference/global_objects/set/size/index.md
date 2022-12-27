@@ -35,14 +35,11 @@ monSet.size; // 3
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-get-set.prototype.size', 'Set.prototype.size')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-get-set.prototype.size', 'Set.prototype.size')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Set.size")}}
+{{Compat}}
 
 ## Voir aussi
 

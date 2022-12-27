@@ -122,17 +122,11 @@ function calc_ventes(nb_produits_a, nb_produits_b, nb_produits_c) {
 
 ## Spécifications
 
-| Spécification                                                                                        | État                         | Commentaires                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function-definitions', 'Function definitions')}} | {{Spec2('ESDraft')}} |                                                       |
-| {{SpecName('ES6', '#sec-function-definitions', 'Définition de fonction')}} | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ES5.1', '#sec-13', 'Définition de fonction')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES3', '#sec-13', 'Définition de fonction')}}                         | {{Spec2('ES3')}}         |                                                       |
-| {{SpecName('ES1', '#sec-13', 'Définition de fonction')}}                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.statements.function")}}
+{{Compat}}
 
 ## Voir aussi
 

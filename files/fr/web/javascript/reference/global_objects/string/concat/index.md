@@ -62,16 +62,11 @@ Il est fortement recommandé d'utiliser les {{jsxref("Opérateurs/Opérateurs_d_
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
-| {{SpecName('ES5.1', '#sec-15.5.4.6', 'String.prototype.concat')}}                     | {{Spec2('ES5.1')}}     |                                                       |
-| {{SpecName('ES6', '#sec-string.prototype.concat', 'String.prototype.concat')}}     | {{Spec2('ES6')}}         |                                                       |
-| {{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}} | {{Spec2('ESDraft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.String.concat")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -25,7 +25,7 @@ var actions[] = Notification.actions;
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification.actions")}}
+{{Compat}}
 
 ## 更多
 

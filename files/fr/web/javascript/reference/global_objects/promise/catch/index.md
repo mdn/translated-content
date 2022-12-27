@@ -130,14 +130,11 @@ Promise.resolve().catch(function XXX(){});
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires                                    |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------- |
-| {{SpecName('ES2015', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}} | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-promise.prototype.catch', 'Promise.prototype.catch')}} | {{Spec2('ESDraft')}} |                                                 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Promise.catch")}}
+{{Compat}}
 
 ## Voir aussi
 

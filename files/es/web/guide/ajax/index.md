@@ -6,7 +6,7 @@ translation_of: Web/Guide/AJAX
 **[Primeros Pasos](/es/docs/Web/Guide/AJAX/Getting_Started)**
 Una introducción a AJAX.
 
-**JavaScript Asíncrono + XML (AJAX)** no es una tecnología por sí misma, es un término que describe un nuevo modo de utilizar conjuntamente varias tecnologías existentes. Esto incluye: [HTML](es/HTML) o [XHTML](es/XHTML), [CSS](es/CSS), [JavaScript](es/JavaScript), [DOM](es/DOM), [XML](es/XML), [XSLT](es/XSLT), y lo más importante, el objeto [XMLHttpRequest](es/XMLHttpRequest). Cuando estas tecnologías se combinan en un modelo AJAX, es posible lograr aplicaciones web capaces de actualizarse continuamente sin tener que volver a cargar la página completa. Esto crea aplicaciones más rápidas y con mejor respuesta a las acciones del usuario.
+**JavaScript Asíncrono + XML (AJAX)** no es una tecnología por sí misma, es un término que describe un nuevo modo de utilizar conjuntamente varias tecnologías existentes. Esto incluye: [HTML](/es/HTML) o [XHTML](/es/XHTML), [CSS](/es/CSS), [JavaScript](/es/JavaScript), [DOM](/es/DOM), [XML](/es/XML), [XSLT](/es/XSLT), y lo más importante, el objeto [XMLHttpRequest](/es/XMLHttpRequest). Cuando estas tecnologías se combinan en un modelo AJAX, es posible lograr aplicaciones web capaces de actualizarse continuamente sin tener que volver a cargar la página completa. Esto crea aplicaciones más rápidas y con mejor respuesta a las acciones del usuario.
 
 #### [Documentación](/Special:Tags?tag=AJAX&language=es)
 
@@ -56,8 +56,14 @@ Una introducción a AJAX.
 - [Kit de Integración Flash/AJAX](http://www.osflash.org/doku.php?id=flashjs)
 - [Una Simple Librería de Interfaz XMLHTTP](http://xkr.us/code/javascript/XHConn/)
 
-<!---->
+#### Temas relacionados
 
-- #### Temas relacionados
-
-  - : [HTML](es/HTML) · [XHTML](es/XHTML) · [CSS](es/CSS) · [DOM](es/DOM) · [JavaScript](es/JavaScript) · [XML](es/XML) · [XMLHttpRequest](es/XMLHttpRequest) · [XSLT](es/XSLT) · [DHTML](es/DHTML)
+- [HTML](/es/HTML)
+- [XHTML](/es/XHTML)
+- [CSS](/es/CSS)
+- [DOM](/es/DOM)
+- [JavaScript](/es/JavaScript)
+- [XML](/es/XML)
+- [XMLHttpRequest](/es/XMLHttpRequest)
+- [XSLT](/es/XSLT)
+- [DHTML](/es/DHTML)

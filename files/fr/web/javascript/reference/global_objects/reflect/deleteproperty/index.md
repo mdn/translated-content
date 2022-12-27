@@ -62,14 +62,11 @@ Reflect.deleteProperty(Object.freeze({toto: 1}),"toto"); // false
 
 ## Spécifications
 
-| Spécification                                                                                                | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Reflect.deleteProperty")}}
+{{Compat}}
 
 ## Voir aussi
 

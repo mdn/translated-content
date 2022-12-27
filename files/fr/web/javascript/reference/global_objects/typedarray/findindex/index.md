@@ -83,14 +83,11 @@ console.log(uint16.findIndex(estPremier)); // 2
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.TypedArray.findIndex")}}
+{{Compat}}
 
 ## Voir aussi
 

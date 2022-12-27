@@ -33,7 +33,7 @@ var bool = range.intersectsNode(document.getElementsByTagName("p").item(0));
 
 ## Browser compatibility
 
-{{Compat("api.Range.intersectsNode")}}
+{{Compat}}
 
 ## See also
 

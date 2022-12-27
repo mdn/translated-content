@@ -32,7 +32,7 @@ var result = new URL("blob:https://mozilla.org:443/").origin;
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.origin")}}
+{{Compat}}
 
 ## See also
 

@@ -75,7 +75,7 @@ fetch("some.json", {cache: "force-cache"})
 
 ## Browser compatibility
 
-{{Compat("api.Request.cache")}}
+{{Compat}}
 
 ## See also
 

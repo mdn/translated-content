@@ -53,15 +53,11 @@ ArrayBuffer.isView(dv); // true
 
 ## Spécifications
 
-| Spécification                                                                                    | État                             | Commentaires                               |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------ |
-| {{SpecName('Typed Array')}}                                                             | {{Spec2('Typed Array')}} | Remplacée par ECMAScript 2015              |
-| {{SpecName('ES2015', '#sec-arraybuffer.isview', 'ArrayBuffer.isView')}} | {{Spec2('ES2015')}}         | Définition initiale dans un standard ECMA. |
-| {{SpecName('ESDraft', '#sec-arraybuffer.isview', 'ArrayBuffer.isView')}} | {{Spec2('ESDraft')}}     |                                            |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.ArrayBuffer.isView")}}
+{{Compat}}
 
 ## Voir aussi
 

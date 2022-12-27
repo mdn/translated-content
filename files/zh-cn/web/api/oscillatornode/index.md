@@ -80,7 +80,7 @@ oscillator.start();
 
 ## 浏览器兼容性
 
-{{Compat("api.OscillatorNode")}}
+{{Compat}}
 
 ## See also
 

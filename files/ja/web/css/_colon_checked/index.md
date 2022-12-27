@@ -21,7 +21,9 @@ slug: Web/CSS/:checked
 
 ## 構文
 
-{{csssyntax}}
+```
+:checked
+```
 
 ## 例
 

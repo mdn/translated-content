@@ -68,11 +68,8 @@ Math.imul = Math.imul || function(a, b) {
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires        |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES6', '#sec-math.imul', 'Math.imul')}}     | {{Spec2('ES6')}}         | Définition initiale |
-| {{SpecName('ESDraft', '#sec-math.imul', 'Math.imul')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Math.imul")}}
+{{Compat}}

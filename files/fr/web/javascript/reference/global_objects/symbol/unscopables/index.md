@@ -62,14 +62,11 @@ with(obj) {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-symbol.unscopables', 'Symbol.unscopables')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-symbol.unscopables', 'Symbol.unscopables')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.unscopables")}}
+{{Compat}}
 
 ## Voir aussi
 

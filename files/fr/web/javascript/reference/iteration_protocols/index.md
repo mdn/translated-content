@@ -356,13 +356,6 @@ unObjetGénérateur[Symbol.iterator]() === unObjetGénérateur
 // [1, 2, 3]
 ```
 
-## Spécifications
-
-| Spécification                                                            | État                         | Commentaires        |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-iteration', 'Iteration')}} | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-iteration', 'Iteration')}} | {{Spec2('ESDraft')}} |                     |
-
 ## Voir aussi
 
 - Pour plus d'informations sur les générateurs définis par ES2015, voir [la page dédiée](/fr/docs/Web/JavaScript/Reference/Instructions/function*).

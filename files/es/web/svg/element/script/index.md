@@ -77,7 +77,7 @@ Los scripts sin atributo `async` o `defer`, así como las secuencias de comandos
 
 ## Atributos
 
-Este elemento contiene los [atributos globales](es/docs/Web/HTML/Atributos_Globales).
+Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Globales).
 
 - {{htmlattrdef("async")}} {{HTMLVersionInline(5)}}
 

@@ -54,14 +54,11 @@ Symbol.for("toto").toString() // "Symbol(toto)"
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('ES2015', '#sec-symbol.prototype.tostring', 'Symbol.prototype.toString')}}     | {{Spec2('ES2015')}}     | Définition initiale |
-| {{SpecName('ESDraft', '#sec-symbol.prototype.tostring', 'Symbol.prototype.toString')}} | {{Spec2('ESDraft')}} |                     |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Symbol.toString")}}
+{{Compat}}
 
 ## Voir aussi
 

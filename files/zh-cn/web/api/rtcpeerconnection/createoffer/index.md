@@ -105,4 +105,4 @@ myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{depr
 
 ## 浏览器兼容性
 
-{{Compat("api.RTCPeerConnection.createOffer")}}
+{{Compat}}

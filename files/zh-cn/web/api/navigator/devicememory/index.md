@@ -24,4 +24,4 @@ console.log ("This device has at least " + memory + "GiB of RAM.")
 
 ## Browser compatibility
 
-{{Compat("api.Navigator.deviceMemory")}}
+{{Compat}}

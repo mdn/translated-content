@@ -80,30 +80,11 @@ console.log(o.uneAutreValeur); // 5
 
 ## Spécifications
 
-<table class="spectable standard-table">
-  <tbody>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">État</th>
-      <th scope="col">Commentaires</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName('ESDraft', '#sec-object.prototype.__defineSetter__', 'Object.prototype.__defineSetter__()')}}
-      </td>
-      <td>{{Spec2('ESDraft')}}</td>
-      <td>
-        Incluse dans l'annexe normative pour les fonctionnalités historiques
-        liées aux navigateurs web (la spécification codifie ce qui est déjà
-        présent dans les différentes implémentations).
-      </td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.defineSetter")}}
+{{Compat}}
 
 ## Voir aussi
 

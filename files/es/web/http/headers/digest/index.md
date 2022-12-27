@@ -15,7 +15,7 @@ original_slug: Web/API/SubtleCrypto/encrypt
 
 El método **`digest()`** de la interfaz {{domxref("SubtleCrypto")}} genera un digest de los datos proveidos. Un {{domxref("digest")}} es un valor corto de longitud fija derivado de alguna entrada de longitud variable. Los digest criptográficos deben mostrar resistencia a colisiones, lo que significa que es difícil encontrar dos entradas diferentes que tengan el mismo valor de digest.
 
-Toma como argumento un identificador para el algoritmo digest a utilizar y los datos a codificar. Devuelve un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.") que se completará con el digest.
+Toma como argumento un identificador para el algoritmo digest a utilizar y los datos a codificar. Devuelve un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) que se completará con el digest.
 
 ## Sintaxis
 
@@ -36,7 +36,7 @@ const digest = crypto.subtle.digest(algorithm, data);
 
 ### Valor de retorno
 
-- `digest` es un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise "The Promise object represents the eventual completion (or failure) of an asynchronous operation, and its resulting value.") que se completa con un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) conteniendo el digest.
+- `digest` es un [`Promise`](/es/docs/Web/JavaScript/Reference/Global_Objects/Promise) que se completa con un [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) conteniendo el digest.
 
 ## Algoritmos soportados
 

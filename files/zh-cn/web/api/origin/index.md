@@ -35,4 +35,4 @@ If the origin is not a scheme/host/port tuple (say you are trying to run it loca
 
 ## Browser compatibility
 
-{{Compat("api.origin")}}
+{{Compat}}

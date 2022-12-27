@@ -76,13 +76,11 @@ Dans cet exemple, on montre comment créer et manipuler un tableau en JavaScript
 
 ## Spécifications
 
-| Spécification                                                                                    | État                                 | Commentaires                                       |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#webassemblytableprototypeset', 'set()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.WebAssembly.Table.set")}}
+{{Compat}}
 
 ## Voir aussi
 

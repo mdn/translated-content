@@ -40,16 +40,11 @@ f('w', 'y', 'k', 'o', 'p');
 
 ## Spécifications
 
-| Spécification                                                                                                                | Statut                       | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES6', '#sec-createunmappedargumentsobject', ' CreateUnmappedArgumentsObject')}}     | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ES6', '#sec-createmappedargumentsobject', ' CreateMappedArgumentsObject')}}         | {{Spec2('ES6')}}         | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-createunmappedargumentsobject', 'CreateUnmappedArgumentsObject')}} | {{Spec2('ESDraft')}} |                      |
-| {{SpecName('ESDraft', '#sec-createmappedargumentsobject', 'CreateMappedArgumentsObject')}}     | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.functions.arguments.@@iterator")}}
+{{Compat}}
 
 ## Voir aussi
 

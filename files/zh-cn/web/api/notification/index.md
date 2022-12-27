@@ -143,7 +143,7 @@ function notifyMe() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## 请参见
 

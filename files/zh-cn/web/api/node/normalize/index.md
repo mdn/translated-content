@@ -43,7 +43,7 @@ wrapper.normalize();
 
 ## Browser compatibility
 
-{{Compat("api.Node.normalize")}}
+{{Compat}}
 
 ## See also
 

@@ -58,7 +58,6 @@ MyElement.prototype.loadData = function (url) {
 ```
 
 ## queueMicrotask() が利用できない場合
-<!-- ## When queueMicrotask() isn't available -->
 
 以下のコードは基本的にはモダンエンジンの `queueMicrotask()` のモンキーパッチです。即時解決される promise を用いてマイクロタスクを生成します。
 

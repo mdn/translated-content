@@ -40,16 +40,11 @@ Cette fonction est destinée à fournir aux objets une méthode générique `toL
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
-| {{SpecName('ES5.1', '#sec-15.2.4.3', 'Object.prototype.toLocaleString')}}                                     | {{Spec2('ES5.1')}}     |                      |
-| {{SpecName('ES6', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}}         | {{Spec2('ES6')}}         |                      |
-| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Object.toLocaleString")}}
+{{Compat}}
 
 ## Voir aussi
 

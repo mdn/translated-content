@@ -73,14 +73,11 @@ Number.isNaN = Number.isNaN || function(value) {
 
 ## Spécifications
 
-| Spécification                                                                    | État                         | Commentaires         |
-| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-number.isnan', 'Number.isnan')}} | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-number.isnan', 'Number.isnan')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Number.isNaN")}}
+{{Compat}}
 
 ## Voir aussi
 

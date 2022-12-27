@@ -71,7 +71,7 @@ console.log(url.origin);    // https://developer.mozilla.org
 
 ## 浏览器兼容性
 
-{{Compat("api.Location")}}
+{{Compat}}
 
 ## 另见
 

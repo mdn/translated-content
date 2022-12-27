@@ -31,7 +31,7 @@ isCollapsed = range.collapsed;
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.collapsed")}}
+{{Compat}}
 
 ## 参阅
 

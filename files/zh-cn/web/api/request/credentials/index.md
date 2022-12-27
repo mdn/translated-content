@@ -36,7 +36,7 @@ var myCred = myRequest.credentials; // returns "same-origin" by default
 
 ## 浏览器兼容性
 
-{{Compat("api.Request.credentials")}}
+{{Compat}}
 
 ## See also
 

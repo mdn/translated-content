@@ -54,14 +54,11 @@ regexObj.compile("nouveau toto", "g");
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                       | Commentaires                                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ES6', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}}     | {{Spec2('ES6')}}         | Définition initiale dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web. |
-| {{SpecName('ESDraft', '#sec-regexp.prototype.compile', 'RegExp.prototype.compile')}} | {{Spec2('ESDraft')}} | Définition initiale dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.RegExp.compile")}}
+{{Compat}}
 
 ## Voir aussi
 

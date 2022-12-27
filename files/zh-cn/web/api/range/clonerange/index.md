@@ -29,7 +29,7 @@ clone = range.cloneRange();
 
 ## Browser compatibility
 
-{{Compat("api.Range.cloneRange")}}
+{{Compat}}
 
 ## See also
 

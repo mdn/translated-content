@@ -35,7 +35,7 @@ var queryString = url.search; // Returns:"?q=123"
 
 ## 浏览器兼容性
 
-{{Compat("api.URL.search")}}
+{{Compat}}
 
 ## 参考
 

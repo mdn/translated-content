@@ -65,14 +65,11 @@ g.throw(new Error("Quelque chose s'est mal passé"));
 
 ## Spécifications
 
-| Spécification                                                                                                        | Statut                       | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
-| {{SpecName('ES2015', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
-| {{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}} | {{Spec2('ESDraft')}} |                      |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Generator.throw")}}
+{{Compat}}
 
 ## Voir aussi
 

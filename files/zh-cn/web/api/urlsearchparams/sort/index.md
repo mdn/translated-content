@@ -42,4 +42,4 @@ a=2&a=1&b=3&c=4
 
 ## Browser compatibility
 
-{{Compat("api.URLSearchParams.sort")}}
+{{Compat}}

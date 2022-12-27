@@ -27,7 +27,7 @@ rectList = range.getClientRects();
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.getClientRects")}}
+{{Compat}}
 
 ## 参见
 

@@ -23,9 +23,9 @@ p:nth-last-of-type(4n) {
 
 構文の詳しい説明は {{Cssxref(":nth-last-child")}} を参照してください。
 
-### 形式文法
-
-{{csssyntax}}
+```
+:nth-last-of-type( <an-plus-b> | even | odd )
+```
 
 ## 例
 

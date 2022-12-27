@@ -37,7 +37,7 @@ range.setEnd(endNode, endOffset);
 
 ## 浏览器兼容性
 
-{{Compat("api.Range.setEnd")}}
+{{Compat}}
 
 ## 参见
 

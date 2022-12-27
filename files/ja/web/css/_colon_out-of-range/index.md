@@ -21,7 +21,9 @@ input:out-of-range {
 
 ## 構文
 
-{{csssyntax}}
+```
+:out-of-range
+```
 
 ## 例
 
