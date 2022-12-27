@@ -51,9 +51,7 @@ canvas.toBlob(function (blob) {
 
 ## 仕様
 
-| 仕様                                                                                     | ステータス                   | コメント |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName('File API','#readAsBinaryString','readAsBinaryString')}} | {{Spec2('File API')}} |          |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

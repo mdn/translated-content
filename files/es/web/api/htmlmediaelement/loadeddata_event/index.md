@@ -1,13 +1,6 @@
 ---
 title: 'HTMLMediaElement: loadeddata event'
 slug: Web/API/HTMLMediaElement/loadeddata_event
-tags:
-  - Audio
-  - HTMLMediaElement
-  - Referências
-  - Video
-  - eventos
-translation_of: Web/API/HTMLMediaElement/loadeddata_event
 ---
 
 {{APIRef("HTMLMediaElement")}}

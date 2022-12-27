@@ -52,7 +52,7 @@ null  == undefined // true
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.builtins.null")}}
+{{Compat}}
 
 ## Véase también
 

@@ -18,7 +18,7 @@ original_slug: Web/HTML/Elemento/div
 
     **Crea una caja**: En bloque.
 
-    **Puede contener**: Texto, y/o cero o más elementos [en bloque](es/HTML/Elemento/Tipos_de_elementos#enbloque) o [en linea](es/HTML/Elemento/Tipos_de_elementos#enlinea).
+    **Puede contener**: Texto, y/o cero o más elementos [en bloque](/es/HTML/Elemento/Tipos_de_elementos#enbloque) o [en linea](/es/HTML/Elemento/Tipos_de_elementos#enlinea).
 
 #### Atributos
 

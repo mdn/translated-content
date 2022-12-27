@@ -173,11 +173,7 @@ p {
 
 ## 仕様書
 
-| 仕様書                                                                                                   | 状態                             | 備考                                                                                                 |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-p-element', '&lt;p&gt;')}}         | {{Spec2('HTML WHATWG')}} | 最新の {{glossary("W3C")}} スナップショットである {{SpecName("HTML5 W3C")}} から変更なし |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-p-element', '&lt;p&gt;')}} | {{Spec2('HTML5 W3C')}}     | `align` 属性を廃止                                                                                   |
-| {{SpecName('HTML4.01', 'struct/text.html#h-9.3.1', '&lt;p&gt;')}}                 | {{Spec2('HTML4.01')}}     | 初回定義                                                                                             |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

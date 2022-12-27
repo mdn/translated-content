@@ -51,13 +51,11 @@ MediaRecorder.addEventListener('resume', function(event) { ... })
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                                         | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-onresume", "MediaRecorder.onresume")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
-{{Compat("api.MediaRecorder.onresume")}}
+{{Compat}}
 
 ## 関連情報
 

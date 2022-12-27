@@ -21,7 +21,7 @@ Instruções de processamento herdam métodos e propriedades do [`Node`](/pt-BR/
 
 ### Especificações
 
-- [DOM Level 1 Core: ProcessingInstruction interface](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1004215813)
+- [DOM Level 1 Core: ProcessingInstruction interface](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-1004215813)
 
 ### Veja também
 

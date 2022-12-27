@@ -1,12 +1,6 @@
 ---
 title: '::-webkit-progress-bar'
 slug: Web/CSS/::-webkit-progress-bar
-tags:
-  - CSS
-  - No estándar(2)
-  - Pseudo-elemento
-  - Referencia
-translation_of: Web/CSS/::-webkit-progress-bar
 ---
 
 {{CSSRef}}{{Non-standard_header}}

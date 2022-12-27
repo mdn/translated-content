@@ -2,6 +2,7 @@
 title: HTML의 이미지
 slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
 초창기의 웹에는 텍스트만 있었고 조금 지루했습니다. 다행히도 웹 페이지 안에 이미지 (및 보다 흥미로운 유형의 컨텐츠)를 삽입하는 기능이 추가되기까지는 오래 걸리지 않았습니다. 시작해볼 수 있는 다른 유형의 멀티미디어가 있지만 단순한 이미지를 웹 페이지에 삽입하는 데 사용되는 {{htmlelement ( "img")}} 요소로 쉽게 시작해 보겠습니다. 이 글에서는 기초내용 부터 심층적으로 사용하는 방법, {{htmlelement("figure")}}를 사용하여 캡션을 주석으로 추가하는 방법, {{htmlelement("CSS")}}배경 이미지와 관련된 사용 방법을 자세히 설명합니다.

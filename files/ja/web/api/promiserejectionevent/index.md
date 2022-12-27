@@ -42,9 +42,7 @@ window.onunhandledrejection = function(e) {
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                                 | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('HTML WHATWG', 'webappapis.html#promiserejectionevent', 'PromiseRejectionEvent')}} | {{ Spec2('HTML WHATWG') }} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

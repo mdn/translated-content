@@ -93,9 +93,7 @@ if (!String.prototype.repeat) {
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.repeat', 'String.prototype.repeat')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

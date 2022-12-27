@@ -31,4 +31,4 @@ Veja [Creating and triggering events](/pt-BR/docs/Web/Guide/DOM/Events/Creating_
 
 ## Especificações
 
-- [DOM Level 2 Events: dispatchEvent](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-dispatchEvent)
+- [DOM Level 2 Events: dispatchEvent](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventTarget-dispatchEvent)

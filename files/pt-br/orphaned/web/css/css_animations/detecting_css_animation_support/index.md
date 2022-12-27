@@ -12,6 +12,7 @@ tags:
 translation_of: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 original_slug: Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 ---
+
 {{CSSRef}}
 
 Animações CSS torna possível a criação de conteúdo animado e criativo utilizando nada além de CSS. No entando, haverá momentos em que este recurso não estará disponível, e você pode querer lidar com isso utilizando um código JavaScript que simule um efeito semelhante. Este artigo, baseado [neste post do blog](http://hacks.mozilla.org/2011/09/detecting-and-generating-css-animations-in-javascript/) de Chris Heilmann, demonstra uma técnica para fazer isso.

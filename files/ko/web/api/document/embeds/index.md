@@ -2,6 +2,7 @@
 title: Document.embeds
 slug: Web/API/Document/embeds
 ---
+
 {{ ApiRef() }}
 
 ### Summary

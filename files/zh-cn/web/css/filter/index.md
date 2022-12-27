@@ -513,7 +513,7 @@ table.standard-table td {
 
 #### grayscale()
 
-{{cssxref("filter-function/grayscale()", "grayscale()")}}  函数将改变输入图像灰度。`amount` 的值定义了转换的比例。值为 `100%` 则完全转为灰度图像，值为 `0%` 图像无变化。值在 `0%` 到 `100%` 之间，则是效果的线性乘数。若未设置值，默认是 `0`。
+{{cssxref("filter-function/grayscale()", "grayscale()")}} 函数将改变输入图像灰度。`amount` 的值定义了转换的比例。值为 `100%` 则完全转为灰度图像，值为 `0%` 图像无变化。值在 `0%` 到 `100%` 之间，则是效果的线性乘数。若未设置值，默认是 `0`。
 
 ```css
 filter: grayscale(100%)
@@ -773,7 +773,7 @@ table.standard-table td {
 
 #### opacity()
 
-{{cssxref("filter-function/opacity()", "opacity()")}}  转化图像的透明程度。`amount` 的值定义转换的比例。值为 `0%` 则是完全透明，值为 `100%` 则图像无变化。值在 `0%` 和 `100%` 之间，则是效果的线性乘数。也相当于图像样本乘以数量。若未设置值，则默认为 `1`。该函数与已有的 `opacity` 属性很相似，不同之处在于通过 `filter`，一些浏览器为了提升性能会提供硬件加速。
+{{cssxref("filter-function/opacity()", "opacity()")}} 转化图像的透明程度。`amount` 的值定义转换的比例。值为 `0%` 则是完全透明，值为 `100%` 则图像无变化。值在 `0%` 和 `100%` 之间，则是效果的线性乘数。也相当于图像样本乘以数量。若未设置值，则默认为 `1`。该函数与已有的 `opacity` 属性很相似，不同之处在于通过 `filter`，一些浏览器为了提升性能会提供硬件加速。
 
 ```css
 filter: opacity(50%)

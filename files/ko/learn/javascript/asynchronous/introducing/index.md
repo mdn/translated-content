@@ -2,6 +2,7 @@
 title: Introducing asynchronous JavaScript
 slug: Learn/JavaScript/Asynchronous/Introducing
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Asynchronous")}}
 
 이 글에선 비동기 프로그래밍이 무엇인지, 왜 필요한지 설명하고 역사상 JavaScript에서 비동기 함수가 구현된 몇 가지 방법에 대해 간략하게 설명 할 것입니다.

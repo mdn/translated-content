@@ -2,6 +2,7 @@
 title: PeriodicWave()
 slug: Web/API/PeriodicWave/PeriodicWave
 ---
+
 {{APIRef("Web Audio API")}}
 
 [Web Audio API](/ko/docs/Web/API/Web_Audio_API)의 **`PeriodicWave()`** 생성자는 새로운 {{domxref("PeriodicWave")}} 객체 인스턴스를 생성합니다.

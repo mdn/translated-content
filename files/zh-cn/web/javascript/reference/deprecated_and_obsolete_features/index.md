@@ -64,7 +64,7 @@ slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 
 - {{jsxref("Object.watch", "watch")}} 方法和 {{jsxref("Object.unwatch", "unwatch")}} 方法已被废弃。使用 {{jsxref("Proxy")}} 并编写相应的捕获器代替它们。
 - `__iterator__` 方法已被废弃。
-- {{jsxref("Object.noSuchMethod", "__noSuchMethod__")}} 方法已被废弃。使用 {{jsxref("Proxy")}} 并编写相应的捕获器作为代替。
+- `Object.prototype.__noSuchMethod__` 方法已被废弃。使用 {{jsxref("Proxy")}} 并编写相应的捕获器作为代替。
 
 ### Date 对象的方法
 
@@ -105,14 +105,18 @@ slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 
 ### Object 对象
 
-| 属性                                                                                     | 描述                                                             |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
-| {{jsxref("Global_Objects/Object/count", "__count__")}}                 | 返回用户自定义对象上的可枚举自身属性的个数。                     |
-| {{jsxref("Global_Objects/Object/Parent", "__parent__")}}             | 指向一个对象的上下文。                                           |
-| {{jsxref("Global_Objects/Object/eval", "Object.prototype.eval()")}} | 在指定对象的上下文上执行一个包含 JavaScript 代码的字符串。       |
-| {{jsxref("Object.observe()")}}                                                 | Asynchronously observing the changes to an object.               |
-| {{jsxref("Object.unobserve()")}}                                             | Remove observers.                                                |
-| {{jsxref("Object.getNotifier()")}}                                             | Creates an object that allows to synthetically trigger a change. |
+| 属性                          | 描述                                                      | 替换选择                                                                                                                                                             |
+| ---------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `__count__`                  | 返回用户自定义对象上的可枚举自身属性的个数。                     | [`Object.keys()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                 |
+| `__parent__`                 | 指向一个对象的上下文。                                       | 没有直接的代替                                                                                                                                                        |
+| `__iterator__`               | 与[遗留的迭代器](#遗留的生成器)一起使用。                      | [`Symbol.iterator`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) 以及新的[迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols) |
+| `__noSuchMethod__`           | 当调用不存在的属性作为方法时被调用的方法。                      | {{jsxref("Proxy")}}                                                                                                                                                 |
+| `Object.prototype.eval()`    | 在指定对象的上下文种执行字符串表示的 JavaScript 代码。          | 没有直接的代替                                                                                                                                                         |
+| `Object.observe()`           | 异步观察对象的变化。                                         | {{jsxref("Proxy")}}                                                                                                                                                  |
+| `Object.unobserve()`         | 移除观察者。                                                | {{jsxref("Proxy")}}                                                                                                                                                  |
+| `Object.getNotifier()`       | 创建一个通知对象，以分发 `Object.observe()` 观察到的变动的通知。 | 没有直接的代替                                                                                                                                                         |
+| `Object.prototype.watch()`   | 将一个处理器回调附加到一个属性上，以在属性被赋值时自动调用函数。    | {{jsxref("Proxy")}}                                                                                                                                                  |
+| `Object.prototype.unwatch()` | 移除属性上的监听处理器。                                      | {{jsxref("Proxy")}}                                                                                                                                                  |
 
 ### 函数
 

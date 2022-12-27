@@ -71,9 +71,7 @@ console.log(p(1, 2, 3)); // "called: 1, 2, 3"
 
 ## 仕様書
 
-| 仕様書                                                                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

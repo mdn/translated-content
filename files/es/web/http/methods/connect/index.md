@@ -1,10 +1,6 @@
 ---
 title: CONNECT
 slug: Web/HTTP/Methods/CONNECT
-tags:
-  - HTTP
-  - Método de petición
-translation_of: Web/HTTP/Methods/CONNECT
 ---
 
 {{HTTPSidebar}}

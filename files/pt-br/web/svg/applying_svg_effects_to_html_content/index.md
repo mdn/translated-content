@@ -170,7 +170,7 @@ Para borrar um texto há um webkit baseado dos navegadores com o (prefixo) filtr
 
 ```html
  <p class="blur">Time to clean my glasses</p>
- <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <svg xmlns="https://www.w3.org/2000/svg" version="1.1">
   <defs>
     <filter id="wherearemyglasses" x="0" y="0">
       <feGaussianBlur in="SourceGraphic" stdDeviation="1" />

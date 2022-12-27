@@ -1,13 +1,6 @@
 ---
 title: Link
 slug: Web/HTTP/Headers/Link
-tags:
-  - Enlaces
-  - HTTP
-  - HTTP Headers
-  - Links
-  - Referencia
-translation_of: Web/HTTP/Headers/Link
 ---
 
 {{HTTPSidebar}}

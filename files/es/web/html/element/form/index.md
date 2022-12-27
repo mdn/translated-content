@@ -23,7 +23,7 @@ Es posible usar las pseudo-clasess de CSS [`:valid`](/es/CSS/%3Avalid) e [`:inva
 
 Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/en/HTML/Global_attributes)
 
-- {{ htmlattrdef("accept") }}  {{deprecated_inline}}
+- {{ htmlattrdef("accept") }} {{deprecated_inline}}
 
   - : Una lista separada por comas de los tipos de contenido que el servidor acepta.
 

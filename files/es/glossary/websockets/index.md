@@ -24,9 +24,9 @@ Cualquier cliente o servidor de aplicaciones puede usar WebSockets, pero princip
 
 ### Referencia técnica
 
-- [WebSocket reference on MDN](/en-US/docs/Web/API/WebSocket)
+- [WebSocket reference on MDN](/es/docs/Web/API/WebSocket)
 
 ### Aprende sobre WebSockets
 
-- [Writing WebSocket client applications](/en-US/docs/WebSockets/Writing_WebSocket_client_applications)
-- [Writing WebSocket servers](/en-US/docs/WebSockets/Writing_WebSocket_servers)
+- [Writing WebSocket client applications](/es/docs/WebSockets/Writing_WebSocket_client_applications)
+- [Writing WebSocket servers](/es/docs/WebSockets/Writing_WebSocket_servers)

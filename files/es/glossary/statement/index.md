@@ -14,7 +14,7 @@ En un lenguaje de programación, una **sentencia** es una línea de código al m
 
 ### Referencia técnica
 
-- [Sentencias y declaraciones en JavaScript](/en-US/docs/Web/JavaScript/Reference/Statements) (en inglés)
+- [Sentencias y declaraciones en JavaScript](/es/docs/Web/JavaScript/Reference/Statements) (en inglés)
 
 ### Conocimientos generales
 

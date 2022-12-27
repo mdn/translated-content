@@ -19,4 +19,4 @@ La porción del viewport que se encuentra visible en ese momento se denomina **v
 - [What is viewport in HTML](https://stackoverflow.com/questions/2939693/what-is-viewport-in-html) en Stackoverflow
 - [Get viewport/window size (width and height) with javascript](https://andylangton.co.uk/blog/development/get-viewportwindow-size-width-and-height-javascript)
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)
-- [VisualViewport API](/en-US/docs/Web/API/Visual_Viewport_API)
+- [VisualViewport API](/es/docs/Web/API/Visual_Viewport_API)

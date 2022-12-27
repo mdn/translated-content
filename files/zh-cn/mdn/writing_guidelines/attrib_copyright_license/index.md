@@ -37,7 +37,7 @@ MDN 的内容是免费的，并在开源协议下提供。
 
 **贡献的内容的版权在作者未授予他人之前归原作者所有**。
 
-对于此处讨论的话题有任何问题，请联系 [MDN  Web 文档团队](https://github.com/mdn/mdn-community/discussions)。
+对于此处讨论的话题有任何问题，请联系 [MDN Web 文档团队](https://github.com/mdn/mdn-community/discussions)。
 
 ### 徽标、商标、服务标记和文字标记
 

@@ -78,7 +78,7 @@ Nesse arquivo específico, o argumento passado pode ser complementar para ser us
 
 ## Compatibilidade com navegadores
 
-{{Compat("javascript.statements.import_meta")}}
+{{Compat}}
 
 ## Veja também
 

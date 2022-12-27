@@ -2,6 +2,7 @@
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
 ---
+
 {{APIRef("WebRTC")}}
 
 **`RTCPeerConnection()`** 생성자는 로컬 기기와 원격 피어 간의 연결을 나타내는 {{domxref("RTCPeerConnection")}} 객체를 새로 만들어 반환합니다.

@@ -669,8 +669,10 @@ draw();
 
 两个可能的值：
 
-- **`"nonzero`**": [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule), 默认值。
-- **`"evenodd"`**: [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+- `nonzero`
+  - : [non-zero winding rule](http://en.wikipedia.org/wiki/Nonzero-rule), 默认值。
+- `evenodd`
+  - : [even-odd winding rule](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 这个例子，我们用填充规则 `evenodd`
 

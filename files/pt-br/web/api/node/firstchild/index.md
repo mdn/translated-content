@@ -55,5 +55,5 @@ Agora o console.log() irá exibir 'SPAN'.
 
 ## Especificação
 
-- [DOM nível 1 Core: firstChild](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-firstChild)
-- [DOM nível 2 Core: firstChild](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-169727388)
+- [DOM nível 1 Core: firstChild](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-firstChild)
+- [DOM nível 2 Core: firstChild](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-169727388)

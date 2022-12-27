@@ -137,7 +137,7 @@ Le second argument est une autre fonction qui sera appelée quand le pattern ser
 
 Les vues sont le coeur des applications web. Elles reçoivent des requêtes HTTP de clients web et renvoient des réponses HTTP. Entretemps, elles mobilisent les autres ressources du framework pour accéder aux bases de données, préparer le rendu des templates, etc.
 
-L'exemple ci-dessous montre une fonction vue minimale `index()`, qui pourrait être appelée par notre mapper URL de la section précédente. Comme toutes les fonctions vues, elle reçoit un objet  `HttpRequest` comme paramètre (`request`) et renvoie un objet `HttpResponse`. Dans notre cas on ne fait rien de spécial avec la requête; et notre réponse ne renvoie qu'une chaîne de caractères brute. Nous vons montrerons une requête plus intéressante dans une autre section.
+L'exemple ci-dessous montre une fonction vue minimale `index()`, qui pourrait être appelée par notre mapper URL de la section précédente. Comme toutes les fonctions vues, elle reçoit un objet `HttpRequest` comme paramètre (`request`) et renvoie un objet `HttpResponse`. Dans notre cas on ne fait rien de spécial avec la requête; et notre réponse ne renvoie qu'une chaîne de caractères brute. Nous vons montrerons une requête plus intéressante dans une autre section.
 
 ```python
 ## nom du fichier : view.py (fonction vue Django)
@@ -153,8 +153,8 @@ def index(request):
 
 > **Note :** Un peu de Python :
 >
-> - Les [modules Python](https://docs.python.org/3/tutorial/modules.html) sont des librairies de fonctions, stockés dans des fichiers séparés que l'on peut vouloir utiliser dans notre code. Ici, nous importons l'objet  `HttpResponse` du module `django.http` pour qu'on puisse l'utiliser dans notre vue : `from django.http import HttpResponse` . Il y a d'autres façons d'importer quelques objets (ou tous les objets) d'un module.
-> - Les fonctions sont déclarées en utilisant le mot-clé `def` comme indiqué ci-dessus, avec des paramètres nommés listés entre parenthèses après le nom de la fonction; la ligne se termine ensuite par deux points. Notez que les lignes suivantes sont **indentées**.  L'indentation est importante, car elle spécifie que les lignes de code sont contenues dans un bloc particulier (l'indentation obligatoire est un élément clé de Python, et une des raisons pour lesquelles le code Python est si simple à lire).
+> - Les [modules Python](https://docs.python.org/3/tutorial/modules.html) sont des librairies de fonctions, stockés dans des fichiers séparés que l'on peut vouloir utiliser dans notre code. Ici, nous importons l'objet `HttpResponse` du module `django.http` pour qu'on puisse l'utiliser dans notre vue : `from django.http import HttpResponse` . Il y a d'autres façons d'importer quelques objets (ou tous les objets) d'un module.
+> - Les fonctions sont déclarées en utilisant le mot-clé `def` comme indiqué ci-dessus, avec des paramètres nommés listés entre parenthèses après le nom de la fonction; la ligne se termine ensuite par deux points. Notez que les lignes suivantes sont **indentées**. L'indentation est importante, car elle spécifie que les lignes de code sont contenues dans un bloc particulier (l'indentation obligatoire est un élément clé de Python, et une des raisons pour lesquelles le code Python est si simple à lire).
 
 Les vues sont généralement stockées dans un fichier nommé **views.py**.
 
@@ -185,7 +185,7 @@ class Team(models.Model):
 >
 > - Python supporte la "programmation orientée-objet", un type de programmation où l'on organise notre code en objets, ce qui inclut les données et fonctions liées qui agiront sur les données. Les objets peuvent être hérités/étendus/dérivés d'autres objets, ce qui permet à ces objets de partager un comportement commun. En Python, on utilise le mot-clé `class` pour définir le "squelette" d'un objet. On peut créer plusieurs *instances* spécifiques de ce type d'objet d'après le modèle d'une classe.
 >
->   Ainsi par exemple, nous avons ici une classe `Team`, dérivée de la classe `Model`.  Cela signifie que c'est un modèle, et qu'elle contiendra toutes les méthodes d'un modèle, mais qu'on peut aussi lui donner des caractéristiques spécifiques. Dans notre modèle, nous définissons les champs dont aura besoin notre base de données, en leur donnant des noms spécifiques. Django utilisera ces définitions, ce qui inclut aussi le nom des champs, pour créer la base de données sous-jacente.
+>   Ainsi par exemple, nous avons ici une classe `Team`, dérivée de la classe `Model`. Cela signifie que c'est un modèle, et qu'elle contiendra toutes les méthodes d'un modèle, mais qu'on peut aussi lui donner des caractéristiques spécifiques. Dans notre modèle, nous définissons les champs dont aura besoin notre base de données, en leur donnant des noms spécifiques. Django utilisera ces définitions, ce qui inclut aussi le nom des champs, pour créer la base de données sous-jacente.
 
 ### Requêter les données (views.py)
 

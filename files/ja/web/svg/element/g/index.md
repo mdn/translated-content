@@ -50,10 +50,7 @@ html,body,svg { height:100% }
 
 ## 仕様
 
-| 仕様                                                                         | 状態                     | コメント   |
-| ---------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName("SVG2", "struct.html#GElement", "&lt;g&gt;")}} | {{Spec2("SVG2")}} |            |
-| {{SpecName("SVG1.1", "struct.html#Groups", "&lt;g&gt;")}} | {{Spec2("SVG1.1")}} | 最初の定義 |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

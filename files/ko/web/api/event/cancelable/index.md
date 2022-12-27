@@ -2,6 +2,7 @@
 title: Event.cancelable
 slug: Web/API/Event/cancelable
 ---
+
 {{ ApiRef("DOM") }}
 
 {{domxref("Event")}} 인터페이스의 **`cancelable`** 읽기 전용 속성은 이벤트의 취소가 가능한지를 나타냅니다.

@@ -1,11 +1,6 @@
 ---
 title: border-bottom-width
 slug: Web/CSS/border-bottom-width
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/border-bottom-width
 ---
 
 << [Volver](/es/Guía_de_referencia_de_CSS)

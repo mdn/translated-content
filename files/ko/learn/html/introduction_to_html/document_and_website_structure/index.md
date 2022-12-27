@@ -2,6 +2,7 @@
 title: Document and website structure
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}
 
 당신의 페이지의 (단락 또는 이미지 같은) 개개의 파트를 정의할 뿐 아니라, {{glossary("HTML")}}은 웹 사이트의 구역을 정의하는 ("헤더", "네비게이션 메뉴", "메인 컨텐츠 칼럼"과 같은) 수많은 블록 수준 요소들로 웹 사이트를 자랑합니다. 이번 글은 어떻게 기본 웹 구조를 설계하고, 어떻게 그 구조를 나타내는 HTML을 작성하는지 살펴봅니다.

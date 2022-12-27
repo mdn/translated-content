@@ -1,10 +1,6 @@
 ---
 title: Herramienta para seleccionar color
 slug: Web/CSS/CSS_Colors/Color_picker_tool
-tags:
-  - CSS
-  - Herramientas
-translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 original_slug: Web/CSS/CSS_Colors/Herramienta_para_seleccionar_color
 ---
 

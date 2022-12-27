@@ -42,7 +42,7 @@ var string = 'This is my string';
 
 ### 문자열의 길이 찾기
 
-간단합니다 — 간단하게  {{jsxref("String.prototype.length", "length")}} 프로퍼티를 사용할 수 있습니다. 다음 코드를 입력해 보세요.
+간단합니다 — 간단하게 {{jsxref("String.prototype.length", "length")}} 프로퍼티를 사용할 수 있습니다. 다음 코드를 입력해 보세요.
 
 ```js
 var browserType = 'mozilla';
@@ -137,7 +137,7 @@ browserType.replace('moz', 'van');
 
 이 섹션에서는 문자열을 다루는 방법을 설명합니다. 아래의 각 실습에서는 문자열로 이루어진 배열을 루프문을 사용해 bullet list(불릿 리스트)로 표현하였습니다. 지금 배열이나 루프를 이해할 필요가 없습니다. - 이러한 내용은 추후에 설명합니다. 중요한것은 각각의 문자열이 우리가 원하는 형식으로 출력하는 코드를 작성하는 것입니다.
 
-각 예제에는 리셋 버튼이 있고, 리셋 버튼은 실수를 했거나 코드가 작동하지 않아서 재설정하는데 사용할 수 있습니다. 해결 방법을 모를 때, 해답 버튼(solution button)을 누르면  해답을 볼 수 있습니다.
+각 예제에는 리셋 버튼이 있고, 리셋 버튼은 실수를 했거나 코드가 작동하지 않아서 재설정하는데 사용할 수 있습니다. 해결 방법을 모를 때, 해답 버튼(solution button)을 누르면 해답을 볼 수 있습니다.
 
 ### 인사말 필터링 하기
 
@@ -478,7 +478,7 @@ In this last exercise the array contains a bunch of strings containing informati
 MAN675847583748sjt567654;Manchester Piccadilly
 ```
 
-We want to extract the station code and name, and put them together in a  string with the following structure:
+We want to extract the station code and name, and put them together in a string with the following structure:
 
 ```
 MAN: Manchester Piccadilly

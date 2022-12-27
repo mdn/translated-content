@@ -34,9 +34,7 @@ class MyMap extends Map {
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-get-map-@@species', 'get Map [ @@species ]')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

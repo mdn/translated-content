@@ -2,6 +2,7 @@
 title: CustomEvent()
 slug: Web/API/CustomEvent/CustomEvent
 ---
+
 {{APIRef("DOM")}}
 
 **`CustomEvent()`** 생성자는 새로운 {{domxref("CustomEvent")}}를 생성합니다.

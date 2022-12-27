@@ -1,12 +1,6 @@
 ---
 title: font-style
 slug: Web/CSS/@font-face/font-style
-tags:
-  - '@font-face'
-  - CSS
-  - Fuentes
-  - Referências
-translation_of: Web/CSS/@font-face/font-style
 ---
 
 {{CSSRef}}

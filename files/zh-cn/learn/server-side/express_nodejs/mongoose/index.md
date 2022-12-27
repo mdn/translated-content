@@ -93,7 +93,7 @@ NPM 站点上有许多 ODM / ORM 解决方案（另请参阅 NPM 站点上的 [o
 
 > **备注：** 正如下文 [Mongoose 入门](#) 中所讲，通常应该把定义文档/模型关系的字段置于同一模型中（仍可通过在搜索相关 `_id` 来回寻模型间的关系）。以下的 Book 模式中定义了 Book/Genre 和 Book/Author 关系，BookInstance 模式中定义了 Book/BookInstance 关系。这样做是简便起见，但稍存歧义，让这些字段存在于其他模式中也是可以的。
 
-![Mongoose Library Model  with correct cardinality](library_website_-_mongoose_express.png)
+![Mongoose Library Model with correct cardinality](library_website_-_mongoose_express.png)
 
 > **备注：** 下面是一段入门知识，讲解如何定义和使用模型。请在阅读时想想将如何构建上图中的模型。
 

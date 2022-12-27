@@ -23,5 +23,5 @@ Para obtener más información, echa un vistazo a los siguientes enlaces
 
 ### Referencias técnicas
 
-- {{jsxref("Promise")}} in the [JavaScript Reference](/en-US/docs/Web/JavaScript/Reference).
-- [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises)
+- {{jsxref("Promise")}} en la [Referencia JavaScript](/es/docs/Web/JavaScript/Reference).
+- [Usando promesas](/es/docs/Web/JavaScript/Guide/Using_promises)

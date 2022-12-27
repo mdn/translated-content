@@ -4,6 +4,7 @@ slug: conflicting/Learn/JavaScript/Asynchronous/Introducing
 translation_of: Learn/JavaScript/Asynchronous/Concepts
 original_slug: Learn/JavaScript/Asynchronous/Concepts
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Asynchronous/Introducing", "Learn/JavaScript/Asynchronous")}}
 
 Neste artigo, nós vamos ver um número de conceitos importantes relativos à programação assíncrona e como ela se parece em navegadores modernos e em JavaScript. Você deve entender estes conceitos antes de trabalhar com outros artigos neste módulo.

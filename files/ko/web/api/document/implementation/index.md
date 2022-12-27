@@ -2,6 +2,7 @@
 title: Document.implementation
 slug: Web/API/Document/implementation
 ---
+
 {{ ApiRef("DOM") }}
 
 현재 document에 연관된 {{domxref("DOMImplementation")}} 객체를 반환합니다.

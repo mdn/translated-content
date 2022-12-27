@@ -1,12 +1,6 @@
 ---
 title: Console.table()
 slug: Web/API/Console/table
-tags:
-  - API
-  - Consola
-  - DOM
-  - Depuración
-translation_of: Web/API/Console/table
 original_slug: Web/API/Console/tabla
 ---
 

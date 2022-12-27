@@ -1,12 +1,6 @@
 ---
 title: border-image-repeat
 slug: Web/CSS/border-image-repeat
-tags:
-  - Bordes CSS
-  - CSS
-  - Propiedades CSS
-  - Referencia
-translation_of: Web/CSS/border-image-repeat
 ---
 
 {{CSSRef}}

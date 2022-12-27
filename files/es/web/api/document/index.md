@@ -1,8 +1,6 @@
 ---
 title: Document
 slug: Web/API/Document
-browser-compat: api.Document
-translation_of: Web/API/Document
 original_slug: Web/API/Document
 ---
 

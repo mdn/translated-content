@@ -149,7 +149,7 @@ A pesar de que los hiden input no se pueden ver en absoluto, sus datos se siguen
 
 ## Compatibilidad con el navegador
 
-{{Compat("html.elements.input.input-hidden")}}
+{{Compat}}
 
 ## Ver también
 

@@ -50,9 +50,9 @@ _親である {{DOMxRef("Element")}} からプロパティを継承していま�
 - {{DOMxRef("HTMLElement.nonce")}}
   - : 指定されたフェッチが実行を許可されるかどうかを判断するためにコンテンツセキュリティポリシーが使用する、一度だけ使用される暗号学的な数値を返します。
 - {{DOMxRef("HTMLElement.offsetHeight")}} {{ReadOnlyInline}}
-  - :  `double` 値で、レイアウトに対して相対的な要素の高さを返します。
+  - : `double` 値で、レイアウトに対して相対的な要素の高さを返します。
 - {{DOMxRef("HTMLElement.offsetLeft")}} {{ReadOnlyInline}}
-  - :  `double` 値で、この要素の左境界線からその `offsetParent` の左境界線までの距離を返します。
+  - : `double` 値で、この要素の左境界線からその `offsetParent` の左境界線までの距離を返します。
 - {{DOMxRef("HTMLElement.offsetParent")}} {{ReadOnlyInline}}
   - : {{DOMxRef("Element")}} で、すべてのオフセット計算が現在計算されている要素を返します。
 - {{DOMxRef("HTMLElement.offsetTop")}} {{ReadOnlyInline}}

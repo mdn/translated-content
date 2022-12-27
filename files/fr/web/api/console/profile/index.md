@@ -33,7 +33,7 @@ console.profile(profileName);
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.Console.profile")}}
+{{Compat}}
 
 ## Voir aussi
 

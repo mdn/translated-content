@@ -58,10 +58,7 @@ MathML の `<mfrac>` 要素は分数を表示するのに使います。
 
 ## 仕様
 
-| 仕様                                                                                 | ステータス                   | Comment    |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.mfrac', 'mfrac') }} | {{ Spec2('MathML3') }} | 現在の仕様 |
-| {{ SpecName('MathML2', 'chapter3.html#presm.mfrac', 'mfrac') }} | {{ Spec2('MathML2') }} | 初回の仕様 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

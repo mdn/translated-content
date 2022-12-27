@@ -115,7 +115,7 @@ Cache-Control: max-age=604800
 ...
 ```
 
-La caché que almacenó esa respuesta cuenta el tiempo transcurrido desde que la respuesta fue generada. El significado de `max-age` es que si la respuesta se creó hace menos de una semana, entonces es _fresh_, y si se creó hace más de una semana, entonces es  _stale_ .
+La caché que almacenó esa respuesta cuenta el tiempo transcurrido desde que la respuesta fue generada. El significado de `max-age` es que si la respuesta se creó hace menos de una semana, entonces es _fresh_, y si se creó hace más de una semana, entonces es _stale_ .
 
 Si esa respuesta está almacenada en una caché privada, estará disponible para su reutilización en respuesta a las solicitudes de los clientes durante una semana después de que se almacene. Si la caché compartida lo guarda, es necesario informar al cliente del tiempo transcurrido desde que fue almacenada en la caché compartida hasta que sea reutilizada por el cliente. Si la respuesta ha sido almacenada en la caché compartida durante un día y luego el cliente la reutilizó, entonces la siguiente respuesta será enviada desde la caché compartida al cliente.
 
@@ -236,7 +236,7 @@ Cache-Control: max-age=3600
 ...
 ```
 
-Si esa respuesta es  _stale_ , el cliente toma el valor del header de respuesta 'ETag' para la respuesta en caché y lo coloca en el header de solicitud 'If-None-Match', para preguntarle al servidor si el recurso ha sido modificado:
+Si esa respuesta es _stale_ , el cliente toma el valor del header de respuesta 'ETag' para la respuesta en caché y lo coloca en el header de solicitud 'If-None-Match', para preguntarle al servidor si el recurso ha sido modificado:
 
 ```http
 GET /index.html HTTP/1.1
@@ -280,7 +280,7 @@ A menudo se afirma que la combinación de `max-age=0` y `must-revalidate` tiene 
 Cache-Control: max-age=0, must-revalidate
 ```
 
-`max-age=0` significa que la respuesta es _stale_ de inmediato, y `must-revalidate` significa que no debe reutilizarse sin revalidación una vez que esté  _stale_ ; por lo tanto, en combinación, la semántica parece ser la misma que `no-cache`.
+`max-age=0` significa que la respuesta es _stale_ de inmediato, y `must-revalidate` significa que no debe reutilizarse sin revalidación una vez que esté _stale_ ; por lo tanto, en combinación, la semántica parece ser la misma que `no-cache`.
 
 Sin embargo, ese uso de `max-age=0` es un remanente del hecho de que muchas implementaciones anteriores a HTTP/1.1 no pudieron manejar la directiva `no-cache` y, por lo tanto, para lidiar con esa limitación, `max-age =0` se utilizó como solución alternativa.
 
@@ -449,7 +449,7 @@ Es posible que desee sobrescribir esa respuesta una vez que caduque en el servid
 
 Uno de los métodos mencionados en la especificación es enviar una solicitud de la misma URL con un método no seguro como `POST`, pero eso suele ser difícil de hacer intencionalmente en muchos clientes.
 
-También hay una especificación para un header y valor `Clear-Site-Data: cache`, pero [no todos los navegadores lo admiten] (<https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4>), e incluso cuando se usa, solo afecta los cachés del navegador, pero no tiene efecto en los cachés intermedios.
+También hay una especificación para un header y valor `Clear-Site-Data: cache`, pero [no todos los navegadores lo admiten](https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4), e incluso cuando se usa, solo afecta los cachés del navegador, pero no tiene efecto en los cachés intermedios.
 
 Por lo tanto, se debe suponer que cualquier respuesta almacenada permanecerá durante su período de `max-age` a menos que el usuario realice manualmente una acción de recarga, recarga forzada o borrado del historial.
 

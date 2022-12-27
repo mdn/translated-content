@@ -2,6 +2,7 @@
 title: BatteryManager.chargingTime (배터리관리기 충전시간)
 slug: Web/API/BatteryManager/chargingTime
 ---
+
 {{APIRef("Battery API")}}
 
 몇 초 단위로, 배터리가 완전히 충전될 때까지 남은 시간량을 가리킵니다.

@@ -498,7 +498,7 @@ Neste código nós temos:
 
     ```
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     ```
 
     No entanto, atualmente, ninguém se importa com eles, e eles são realmente apenas um artefato histórico que precisa ser incluído para que tudo funcione corretamente. \<! DOCTYPE html> é a menor cadeia de caracteres que conta como um doctype válido; é tudo o que você realmente precisa saber.

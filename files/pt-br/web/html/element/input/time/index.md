@@ -454,7 +454,7 @@ function populateMinutes() {
 
 ## Compatibilidade com navegadores
 
-{{Compat("html.elements.input.input-time")}}
+{{Compat}}
 
 ## See also
 

@@ -112,4 +112,4 @@ _Cette propriété ne fait partie d'aucune spécification._
 
 ## Compatibilité des navigateurs
 
-{{Compat("api.UIEvent.layerX")}}
+{{Compat}}

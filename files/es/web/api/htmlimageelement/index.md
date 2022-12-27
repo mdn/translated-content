@@ -1,12 +1,6 @@
 ---
 title: HTMLImageElement
 slug: Web/API/HTMLImageElement
-tags:
-  - API
-  - HTML DOM
-  - Interfaz
-  - Reference
-translation_of: Web/API/HTMLImageElement
 ---
 
 {{APIRef("HTML DOM")}}

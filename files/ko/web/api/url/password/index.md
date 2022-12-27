@@ -2,6 +2,7 @@
 title: URL.password
 slug: Web/API/URL/password
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} 인터페이스의** `password`** 속성은 도메인 이름 이전의 비밀번호를 포함한 {{domxref("USVString")}}을 반환합니다.

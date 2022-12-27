@@ -58,9 +58,7 @@ videoElement.audioTracks.onaddtrack = (event) => {
 
 ## 仕様
 
-| 仕様                                                                                                 | 状態                             |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', 'media.html#event-media-addtrack', 'addtrack')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

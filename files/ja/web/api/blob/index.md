@@ -131,4 +131,4 @@ const text = await blob.text();
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("URL.createObjectURL")}}
-- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [ウェブアプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

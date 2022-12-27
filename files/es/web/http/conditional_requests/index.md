@@ -1,11 +1,6 @@
 ---
 title: Peticiones condicionales en HTTP
 slug: Web/HTTP/Conditional_requests
-tags:
-  - Guía
-  - HTTP
-  - Peticiones condicionales
-translation_of: Web/HTTP/Conditional_requests
 original_slug: Web/HTTP/Peticiones_condicionales
 ---
 

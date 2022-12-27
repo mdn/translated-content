@@ -38,9 +38,7 @@ console.log(worldString.strike()); // <strike>Hello, world</strike>
 
 ## 仕様書
 
-| 仕様書                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-string.prototype.strike', 'String.prototype.strike')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

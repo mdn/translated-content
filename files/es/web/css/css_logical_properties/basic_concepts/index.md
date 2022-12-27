@@ -1,7 +1,6 @@
 ---
 title: Conceptos básicos de las Propiedades y Valores Lógicos
 slug: Web/CSS/CSS_Logical_Properties/Basic_concepts
-translation_of: Web/CSS/CSS_Logical_Properties/Basic_concepts
 ---
 
 {{CSSRef}}

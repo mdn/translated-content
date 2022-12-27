@@ -1,12 +1,6 @@
 ---
 title: Referencia atributos SVG
 slug: Web/SVG/Attribute
-tags:
-  - Atributo SVG
-  - Dibujo
-  - Gráficos vectoriales
-  - SVG
-translation_of: Web/SVG/Attribute
 ---
 
 {{SVGRef}}

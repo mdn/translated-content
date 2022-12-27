@@ -27,5 +27,5 @@ WCAG uses three levels of conformance:
 
 ### Technical knowledge
 
-- [Información sobre accesibilidad en MDN](/en-US/docs/Web/Accessibility/Information_for_Web_authors)
+- [Información sobre accesibilidad en MDN](/es/docs/Web/Accessibility/Information_for_Web_authors)
 - [Las recomendaciones del WCAG 2.0 en el W3C](http://www.w3.org/TR/WCAG20/)

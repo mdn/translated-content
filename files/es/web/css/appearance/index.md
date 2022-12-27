@@ -1,11 +1,6 @@
 ---
 title: '-moz-appearance (-webkit-appearance)'
 slug: Web/CSS/appearance
-tags:
-  - Apariencia CSS
-  - CSS Referencia(2)
-  - No-estándar
-translation_of: Web/CSS/appearance
 ---
 
 {{non-standard_header}}{{CSSRef}}

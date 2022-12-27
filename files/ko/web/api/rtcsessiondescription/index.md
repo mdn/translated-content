@@ -2,6 +2,7 @@
 title: RTCSessionDescription
 slug: Web/API/RTCSessionDescription
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`RTCSessionDescription`** interface describes one end of a connection—or potential connection—and how it's configured. Each `RTCSessionDescription` consists of a description {{domxref("RTCSessionDescription.type", "type")}} indicating which part of the offer/answer negotiation process it describes and of the {{Glossary("SDP")}} descriptor of the session.

@@ -2,6 +2,7 @@
 title: AudioParam.value
 slug: Web/API/AudioParam/value
 ---
+
 {{APIRef("Web Audio API")}}
 
 [Web Audio API](/ko/docs/Web/API/Web_Audio_API) {{domxref("AudioParam")}} 인터페이스의 **`value`** 속성은 현재 시간에서의 해당 {{domxref("AudioParam")}}의 값을 get하거나 set합니다. 초기 값은 {{domxref("AudioParam.defaultValue")}}으로 설정됩니다.

@@ -1,7 +1,6 @@
 ---
 title: following
 slug: Web/XPath/Axes/following
-translation_of: Web/XPath/Axes/following
 original_slug: Web/XPath/Ejes/following
 ---
 

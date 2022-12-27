@@ -46,7 +46,7 @@ document.addEventListener('paste', (event) => {
 
 ## ブラウザーの互換性
 
-{{Compat("api.Window.paste_event")}}
+{{Compat}}
 
 ## 関連情報
 

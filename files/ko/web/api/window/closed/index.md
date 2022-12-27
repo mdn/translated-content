@@ -2,6 +2,7 @@
 title: Window.closed
 slug: Web/API/Window/closed
 ---
+
 {{APIRef}}
 
 **`Window.closed`** 읽기 전용 속성은 참조한 창이 닫혔는지 여부를 나타냅니다.

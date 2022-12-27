@@ -142,7 +142,7 @@ slug: Web/HTML/Element/link
 - {{htmlattrdef("rev")}}{{Deprecated_Inline}}
   - : 此属性的值显示了 {{HTMLAttrxRef("href", "link")}} 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[Link type value](/zh-CN/docs/Web/HTML/Link_types)类似于{{HTMLAttrxRef("rel", "link")}}的可能值。
 
-    > **备注：**  WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，您应该使用具有相反链接类型值的{{HTMLAttrxRef("rel", "link")}}属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
+    > **备注：** WHATWG HTML 生活标准（MDN 将其视为规范的规范）认为该属性已过时。但是，值得注意的是，rev 在 W3C 规范中并未过时。就是说，鉴于不确定性，依靠 rev 是不明智的。相反，您应该使用具有相反链接类型值的{{HTMLAttrxRef("rel", "link")}}属性。例如，要建立反向链接，请指定作者。而且，即使许多站点都以这种方式滥用此属性，该属性也不代表“修订”，并且不得与版本号一起使用。
 
 ## 示例
 

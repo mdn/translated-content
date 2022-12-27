@@ -2,6 +2,7 @@
 title: PeriodicWave
 slug: Web/API/PeriodicWave
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`PeriodicWave`** 인터페이스는 {{domxref("OscillatorNode")}}의 출력을 형성하는데 사용될 수 있는 주기적인 파형을 정의합니다.

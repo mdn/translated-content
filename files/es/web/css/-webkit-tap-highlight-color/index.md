@@ -1,15 +1,6 @@
 ---
 title: '-webkit-tap-highlight-color'
 slug: Web/CSS/-webkit-tap-highlight-color
-tags:
-  - CSS
-  - NeedsCompatTable
-  - NeedsExample
-  - NeedsMobileBrowserCompatibility
-  - No estandar
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/-webkit-tap-highlight-color
 ---
 
 {{ CSSRef() }}

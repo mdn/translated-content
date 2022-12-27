@@ -45,28 +45,28 @@ html,body,svg { height:100% }
 
 - {{SVGAttr("height")}}
   - : Cet attribut détermine la hauteur du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
 - {{SVGAttr("preserveAspectRatio")}}
   - : Cet attribut définit comment le fragment svg doit être déformé s'il est inclus dans un conteneur ayant un ratio d'affichage (largeur:hauteur) différent.
     _Type de valeur_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)? ; _Valeur par défaut_: `xMidYMid meet`; _Animation_: **oui**
 - {{SVGAttr("refX")}}
   - : Cet attribut détermine la coordonnée x du point de référence du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|`left`|`center`|`right` ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage)|`left`|`center`|`right` ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("refY")}}
   - : Cet attribut détermine la coordonnée y du point de référence du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage)|`top`|`center`|`bottom` ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage)|`top`|`center`|`bottom` ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("viewBox")}}
   - : Cet attribut définit les limites de la zone d'affichage du symbole.
-    _Type de valeur_: **[\<list-of-numbers>](/docs/Web/SVG/Content_type#List-of-Ts)** ; _Valeur par défaut_: aucune; _Animation_: **oui**
+    _Type de valeur_: **[\<list-of-numbers>](/fr/docs/Web/SVG/Content_type#List-of-Ts)** ; _Valeur par défaut_: aucune; _Animation_: **oui**
 - {{SVGAttr("width")}}
   - : Cet attribut définit la largeur du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `auto`; _Animation_: **oui**
 - {{SVGAttr("x")}}
   - : Cet attribut détermine la coordonnée x du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
 - {{SVGAttr("y")}}
   - : Cet attribut détermine la coordonnée y du symbole.
-    _Type de valeur_: [**\<length>**](/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
+    _Type de valeur_: [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_: `0`; _Animation_: **oui**
 
 ### Attributs globaux
 

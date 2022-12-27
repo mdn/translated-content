@@ -2,6 +2,7 @@
 title: Django 개발 환경 세팅하기
 slug: Learn/Server-side/Django/development_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Introduction", "Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django")}}
 
 이제 장고가 무엇인지 알았으니, 윈도우, 리눅스(우분투), 맥 OS X에서 어떻게 장고 개발환경을 세팅하는지, 설치 후에는 어떻게 테스트하는지 살펴보겠습니다. 즉 이 문서를 통해서는 사용하고 있는 운영체제가 무엇인지와 상관없이 장고 어플리케이션 개발을 시작하기 위해 필요한 것들을 배우게 됩니다.

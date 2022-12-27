@@ -2,6 +2,7 @@
 title: element.firstChild
 slug: Web/API/Node/firstChild
 ---
+
 {{ ApiRef() }}
 
 ### 요약

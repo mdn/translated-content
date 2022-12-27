@@ -36,9 +36,7 @@ document.getAnimations().forEach(
 
 ## 仕様書
 
-| 仕様書                                                                                                                                   | 状態                                 | 備考 |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ---- |
-| {{SpecName('Web Animations', '#dom-documentorshadowroot-getanimations', 'document.getAnimations()' )}} | {{Spec2('Web Animations')}} |      |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

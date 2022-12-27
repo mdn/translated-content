@@ -95,7 +95,7 @@ Examples from other developers:
 
 ### WritableStream
 
-{{Compat("api.WritableStream")}}
+{{Compat}}
 
 ## See also
 

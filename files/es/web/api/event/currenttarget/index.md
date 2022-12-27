@@ -1,12 +1,6 @@
 ---
 title: Event.currentTarget
 slug: Web/API/Event/currentTarget
-tags:
-  - API
-  - DOM
-  - Gecko
-  - Property
-translation_of: Web/API/Event/currentTarget
 ---
 
 {{APIRef("DOM")}}

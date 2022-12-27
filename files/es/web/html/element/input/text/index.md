@@ -409,7 +409,7 @@ Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los ar
 
 ## Compatibilidad del navegador
 
-{{Compat("html.elements.input.input-text")}}
+{{Compat}}
 
 ## Ve también
 

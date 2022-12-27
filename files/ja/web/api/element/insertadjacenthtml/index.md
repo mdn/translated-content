@@ -55,9 +55,7 @@ d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
 
 ## 仕様
 
-| 仕様                                                                                                                                                                                 | ステータス                           | コメント |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('DOM Parsing', '#widl-Element-insertAdjacentHTML-void-DOMString-position-DOMString-text', 'Element.insertAdjacentHTML()')}} | {{ Spec2('DOM Parsing') }} |          |
+{{Specifications}}
 
 ## ブラウザ実装状況
 

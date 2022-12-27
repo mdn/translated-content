@@ -1,8 +1,6 @@
 ---
 title: Fetch API
 slug: Web/API/Fetch_API
-translation_of: Web/API/Fetch_API
-browser-compat: api.fetch
 ---
 
 {{DefaultAPISidebar("Fetch API")}}

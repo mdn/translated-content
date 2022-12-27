@@ -191,7 +191,7 @@ Comme vous pouvez le constater, le rapport inclus l'URI complète de la ressourc
 
 ## Compatibilité des navigateurs
 
-{{Compat("http.headers.csp")}}
+{{Compat}}
 
 _Il existe une incompatibilité spécifique dans certaines versions de Safari : si un en-tête `Content-Security-Policy` est défini mais qu'il n'y a pas d'en-tête `Same-Origin` , le navigateur bloquera le contenu du site courant et celui de l'extérieur en indiquant que la stratégie ne permet pas d'avoir ce contenu._
 

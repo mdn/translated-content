@@ -25,7 +25,7 @@ On peut retrouver les enregistrement sur une partie des clés, voir {{domxref("I
 
 ## Méthodes
 
-Hérite de: [EventTarget](/en/DOM/EventTarget)
+Hérite de: [EventTarget](/fr/docs/Web/API/EventTarget)
 
 - {{domxref("IDBIndex.count()")}}
   - : Fait un {{domxref("IDBRequest","requête")}} sur l'index. La requête compte le nombre d'enregistrements dans cet index ou sur l'{{domxref("IDBKeyRange","intervalle de clé")}} passé en paramètre.

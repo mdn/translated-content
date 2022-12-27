@@ -59,9 +59,7 @@ Server-Timing: total;dur=123.4
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                                 | 題名     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Server Timing','#the-server-timing-header-field', 'Server-Timing Header Field')}} | {{Spec2("Server Timing")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの対応
 

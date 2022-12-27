@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toSource
 original_slug: Web/JavaScript/Reference/Global_Objects/Array/toSource
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 O método **`toSource()`** retorna uma representação string do código fonte do array.

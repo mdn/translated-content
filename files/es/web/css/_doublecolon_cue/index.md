@@ -1,18 +1,6 @@
 ---
 title: '::cue'
 slug: Web/CSS/::cue
-tags:
-  - '::cue'
-  - Archivos multimedia
-  - CSS
-  - Formato de pistas de texto para la web
-  - Pseudo-elemento
-  - Referencia
-  - Selector
-  - WebVTT
-  - anotaciones
-  - subtítulos
-translation_of: Web/CSS/::cue
 ---
 
 {{CSSRef}}

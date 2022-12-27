@@ -2,6 +2,7 @@
 title: Clients
 slug: Web/API/Clients
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 The `Clients` interface provides access to {{domxref("Client")}} objects. Access it via `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` within a [service worker](/ko/docs/Web/API/ServiceWorker_API).

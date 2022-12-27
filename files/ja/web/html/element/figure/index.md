@@ -159,11 +159,7 @@ Love is a spirit all compact of fire,
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                             | 備考                  |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------- |
-| {{SpecName('HTML WHATWG', 'semantics.html#the-figure-element', '&lt;figure&gt;')}}         | {{Spec2('HTML WHATWG')}} |                       |
-| {{SpecName('HTML5.2', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}}     | {{Spec2('HTML5.2')}}     | HTML 5.0 から変更なし |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figure-element', '&lt;figure&gt;')}} | {{Spec2('HTML5 W3C')}}     |                       |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

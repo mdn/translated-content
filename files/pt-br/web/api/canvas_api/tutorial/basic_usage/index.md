@@ -14,7 +14,7 @@ Vamos começar esse tutorial olhando o elemento {{HTMLElement("canvas")}} em si.
 <canvas id="tutorial" width="150" height="150"></canvas>
 ```
 
-Se parece muito com o elemento `<img>`com a diferença de não possuir os atributos `src` e `alt`. O elemento `<canvas>` tem apenas dois atributos - **width**  e **height**. Ambos são opcionais e podem ser aplicados utilizando as propriedades [DOM](/pt-BR/docs/DOM) respectivas. Se não forem especificados, o canvas será iniciado com **300 _pixels_** de largura por **150 _pixels_** de altura. O elemento pode ser redimensionado por [CSS](/pt-BR/docs/Web/CSS), mas durante a renderização a imagem é escalonada para caber no tamanho do layout.
+Se parece muito com o elemento `<img>`com a diferença de não possuir os atributos `src` e `alt`. O elemento `<canvas>` tem apenas dois atributos - **width** e **height**. Ambos são opcionais e podem ser aplicados utilizando as propriedades [DOM](/pt-BR/docs/DOM) respectivas. Se não forem especificados, o canvas será iniciado com **300 _pixels_** de largura por **150 _pixels_** de altura. O elemento pode ser redimensionado por [CSS](/pt-BR/docs/Web/CSS), mas durante a renderização a imagem é escalonada para caber no tamanho do layout.
 
 > **Nota:** Se as suas renderizações parecerem distorcidas, tente especificar os atributos `width` e `height` no `<canvas>` e não usando CSS.
 

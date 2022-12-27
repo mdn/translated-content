@@ -3,6 +3,7 @@ title: 'Document: drag 이벤트'
 slug: Web/API/HTMLElement/drag_event
 original_slug: Web/API/Document/drag_event
 ---
+
 {{APIRef}}
 
 `drag` 이벤트는 사용자가 요소 또는 텍스트를 드래그하는 동안 매 수백 밀리초마다 발생합니다.

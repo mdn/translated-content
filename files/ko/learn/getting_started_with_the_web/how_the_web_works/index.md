@@ -3,6 +3,7 @@ title: 웹의 동작 방식
 slug: Learn/Getting_started_with_the_web/How_the_Web_works
 original_slug: Learn/Getting_started_with_the_web/웹의_동작_방식
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}

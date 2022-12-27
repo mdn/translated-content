@@ -2,6 +2,7 @@
 title: DOMRect
 slug: Web/API/DOMRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMRect`** 인터페이스는 직사각형의 크기와 위치를 나타냅니다.

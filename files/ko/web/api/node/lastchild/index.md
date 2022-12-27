@@ -2,6 +2,7 @@
 title: element.lastChild
 slug: Web/API/Node/lastChild
 ---
+
 {{ ApiRef() }}
 
 ### 요약

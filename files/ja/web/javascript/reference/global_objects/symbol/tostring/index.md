@@ -47,9 +47,7 @@ Symbol.for('foo').toString() // "Symbol(foo)"
 
 ## 仕様書
 
-| 仕様書                                                                                                               |
-| -------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-symbol.prototype.tostring', 'Symbol.prototype.toString')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

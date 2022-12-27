@@ -22,10 +22,7 @@ _固有のメソッドなし。親である {{domxref("HTMLElement")}}よりメ�
 
 ## 仕様書
 
-| 仕様                                                                                                             | 状態                             | 備考                                           |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------- |
-| {{SpecName('HTML WHATWG', "#htmlbrelement", "HTMLBRElement")}}                             | {{Spec2('HTML WHATWG')}} | {{SpecName("HTML5 W3C")}}より変更なし。 |
-| {{SpecName('HTML5 W3C', "textlevel-semantics.html#the-br-element", "HTMLBRElement")}} | {{Spec2('HTML5 W3C')}}     | {{SpecName("DOM2 HTML")}}より変更なし。 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

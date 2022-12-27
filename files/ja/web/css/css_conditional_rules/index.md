@@ -18,9 +18,7 @@ slug: Web/CSS/CSS_Conditional_Rules
 
 ## 仕様書
 
-| 仕様書                           | 状態                          | 備考     |
-| -------------------------------- | ----------------------------- | -------- |
-| {{SpecName('CSS3 Conditional')}} | {{Spec2('CSS3 Conditional')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

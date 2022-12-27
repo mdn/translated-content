@@ -2,6 +2,7 @@
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
+
 {{AddonSidebar}}
 
 Add event listeners for the various stages of making an HTTP request. The event listener receives detailed information about the request and can modify or cancel the request.

@@ -199,9 +199,7 @@ console.log(myInstance.constructor);              // logs 'MyConstructor'
 
 ## 仕様書
 
-| 仕様書                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-function.prototype.apply', 'Function.prototype.apply')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

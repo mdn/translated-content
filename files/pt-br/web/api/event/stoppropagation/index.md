@@ -29,13 +29,13 @@ Veja o exemplo 5: [Event Propagation](/pt-BR/docs/DOM/DOM_Reference/Examples#Exa
 
 ## Notas
 
-Veja [DOM specification](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) para a explicação do fluxo de eventos. (O [DOM Level 3 Events draft](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) possui uma ilustração.)
+Veja [DOM specification](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) para a explicação do fluxo de eventos. (O [DOM Level 3 Events draft](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) possui uma ilustração.)
 
 [preventDefault](/pt-BR/docs/Web/API/event.preventDefault) é um método de complemento que pode ser usado para previnir a ação padrão do evento que estiver acontecendo.
 
 ## Especificação
 
-[DOM Level 3 Events: stopPropagation](http://www.w3.org/TR/DOM-Level-3-Events/#events-event-type-stopPropagation)
+[DOM Level 3 Events: stopPropagation](https://www.w3.org/TR/DOM-Level-3-Events/#events-event-type-stopPropagation)
 
 ## Compatibilidade com navegadores
 

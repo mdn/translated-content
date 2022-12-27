@@ -1,14 +1,6 @@
 ---
 title: <color>
 slug: Web/CSS/color_value
-tags:
-  - CSS
-  - Layout
-  - Necesita Compatibilidad con Navegadores Móviles
-  - Referencia
-  - Tipos de datos CSS
-  - Web
-translation_of: Web/CSS/color_value
 ---
 
 {{CSSRef}}

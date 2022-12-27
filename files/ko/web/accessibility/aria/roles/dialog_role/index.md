@@ -2,6 +2,7 @@
 title: 'ARIA: dialog role'
 slug: Web/Accessibility/ARIA/Roles/dialog_role
 ---
+
 {{draft()}}
 
 {{ariaref}}

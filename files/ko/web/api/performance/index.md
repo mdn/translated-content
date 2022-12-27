@@ -2,6 +2,7 @@
 title: Performance
 slug: Web/API/Performance
 ---
+
 {{APIRef("High Resolution Time")}}
 
 The **`Performance`** interface represents timing-related performance information for the given page.

@@ -2,6 +2,7 @@
 title: Document.URL
 slug: Web/API/Document/URL
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} 인터페이스의 **`URL`** 읽기 전용 속성은 문서의 주소를 문자열로 반환합니다.

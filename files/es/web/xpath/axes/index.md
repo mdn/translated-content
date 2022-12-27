@@ -1,11 +1,6 @@
 ---
 title: Ejes
 slug: Web/XPath/Axes
-tags:
-  - Todas_las_Categorías
-  - XPath
-  - XSLT
-translation_of: Web/XPath/Axes
 original_slug: Web/XPath/Ejes
 ---
 

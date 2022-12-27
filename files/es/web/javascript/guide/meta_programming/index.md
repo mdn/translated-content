@@ -33,7 +33,7 @@ p.a = 1
 console.log(p.a, p.b) // 1, 42
 ```
 
-El objeto `Proxy` define un _`target`_ (un objeto vacío aquí) y un objeto _`handler`_, en el que se implementa un `get` _trap_. Aquí, un objeto que es proxy no devolverá `undefined` cuando obtenga propiedades indefinidas, sino que devolverá el número `42`.
+El objeto `Proxy` define un `target` (un objeto vacío aquí) y un objeto `handler`, en el que se implementa un `get` _trap_. Aquí, un objeto que es proxy no devolverá `undefined` cuando obtenga propiedades indefinidas, sino que devolverá el número `42`.
 
 Hay ejemplos adicionales disponibles en la página de referencia {{jsxref("Proxy")}}.
 

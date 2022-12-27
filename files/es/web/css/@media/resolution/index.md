@@ -1,10 +1,6 @@
 ---
 title: Resolución
 slug: Web/CSS/@media/resolution
-tags:
-  - Referencia
-  - resolución
-translation_of: Web/CSS/@media/resolution
 original_slug: Web/CSS/@media/resolución
 ---
 

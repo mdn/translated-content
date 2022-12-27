@@ -4,6 +4,7 @@ slug: orphaned/Web/API/FullscreenOptions
 translation_of: Web/API/FullscreenOptions
 original_slug: Web/API/FullscreenOptions
 ---
+
 {{APIRef("Fullscreen API")}}
 
 O dicionário **`FullscreenOptions`** é usado para prover configurações quando chamado {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} em um elemento para colocar este elmento em modo full-screen (tela inteira).

@@ -3,7 +3,7 @@ title: selectionchange
 slug: Web/API/Document/selectionchange_event
 ---
 
-[Selection API](/zh-CN/docs/Web/API/Selection_API) 的 **`selectionchange` **事件在文档上的当前文本选择被改变时触发。
+[Selection API](/zh-CN/docs/Web/API/Selection_API) 的 **`selectionchange`** 事件在文档上的当前文本选择被改变时触发。
 
 | Bubbles        | No                               |
 | -------------- | -------------------------------- |

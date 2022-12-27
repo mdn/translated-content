@@ -2,6 +2,7 @@
 title: Screen.orientation
 slug: Web/API/Screen/orientation
 ---
+
 {{APIRef("CSSOM View")}} {{SeeCompatTable}}
 
 ## Summary

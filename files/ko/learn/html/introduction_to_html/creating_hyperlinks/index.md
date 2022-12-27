@@ -2,6 +2,7 @@
 title: 하이퍼링크 만들기
 slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}
 
 하이퍼 링크는 중요하다. — 웹을 웹답게 만들기 때문이다. 이 글에서는 링크를 만드는데 필요한 구문을 보여주고 링크의 모범 사례를 설명한다.

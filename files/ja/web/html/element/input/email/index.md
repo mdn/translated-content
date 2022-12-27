@@ -262,7 +262,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 ```
 
-フォーム検証の仕組みと、 {{cssxref(":valid")}} や {{cssxref(":invalid")}} 擬似クラスを使用して、現在の値が有効かどうかに基づいて入力欄のスタイルを設定する方法については、[フォームデータの検証] (/ja/docs/Learn/Forms/Form_validation)を参照してください。
+フォーム検証の仕組みと、 {{cssxref(":valid")}} や {{cssxref(":invalid")}} 擬似クラスを使用して、現在の値が有効かどうかに基づいて入力欄のスタイルを設定する方法については、[フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)を参照してください。
 
 > **メモ:** 国際ドメイン名と HTML でのメールアドレスの検証については、仕様上の問題があることが知られています。詳しくは [W3C bug 15489](https://www.w3.org/Bugs/Public/show_bug.cgi?id=15489) を参照してください。
 

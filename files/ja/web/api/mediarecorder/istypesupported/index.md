@@ -40,9 +40,7 @@ for (var i in types) {
 
 ## 仕様
 
-| 仕様                                                                                                                             | 状態                                         | コメント |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| {{SpecName('MediaStream Recording', '#dom-mediarecorder-istypesupported', 'isTypeSupported()')}} | {{Spec2('MediaStream Recording')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

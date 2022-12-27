@@ -1,11 +1,6 @@
 ---
 title: Event.target
 slug: Web/API/Event/target
-tags:
-  - Evento
-  - Propiedad
-  - Referencia
-translation_of: Web/API/Event/target
 ---
 
 {{ApiRef("DOM")}}

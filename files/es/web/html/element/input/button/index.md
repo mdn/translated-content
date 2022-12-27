@@ -182,7 +182,7 @@ Se crea un nuevo input tipo botón con el valor 'Click me'.
 
 ## Compatibilidad entre navegadores
 
-{{Compat("html.elements.input.input-button")}}
+{{Compat}}
 
 ## Ver también
 

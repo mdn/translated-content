@@ -2,6 +2,7 @@
 title: Window.top
 slug: Web/API/Window/top
 ---
+
 {{APIRef}}
 
 Returns a reference to the topmost window in the window hierarchy.

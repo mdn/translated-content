@@ -38,9 +38,7 @@ Intl.getCanonicalLocales('EN_US');
 
 ## 仕様書
 
-| 仕様書                                                                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ES Int Draft', '#sec-intl.getcanonicallocales', 'Intl.getCanonicalLocales')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

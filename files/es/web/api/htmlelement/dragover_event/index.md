@@ -1,10 +1,7 @@
 ---
-title: "HTMLElement: dragover event"
+title: 'HTMLElement: dragover event'
 slug: Web/API/HTMLElement/dragover_event
-translation_of: Web/API/HTMLElement/dragover_event
 original_slug: Web/API/HTMLElement/dragover_event
-page-type: web-api-event
-browser-compat: api.HTMLElement.dragover_event
 ---
 
 {{APIRef}}
@@ -48,7 +45,7 @@ Aquí utilizamos tres manejadores de eventos:
 - En el manejador del evento `dragover` para el contenedor de destino, llamamos a `event.preventDefault()`, que lo habilita para recibir eventos de drop.
 - En el manejador de eventos `drop` para la zona de caída, manejamos el movimiento del elemento arrastrable desde el contenedor original a la zona de caída.
 
-Para un ejemplo más completo de drag y drop, ver la página del evento [`drag`](/en-US/docs/Web/API/HTMLElement/drag_event).
+Para un ejemplo más completo de drag y drop, ver la página del evento [`drag`](/es/docs/Web/API/HTMLElement/drag_event).
 
 #### HTML
 

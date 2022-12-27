@@ -1,16 +1,6 @@
 ---
 title: Animation.finish()
 slug: Web/API/Animation/finish
-tags:
-  - API
-  - Animacion
-  - Animaciones Web
-  - Experimental
-  - Finish
-  - Reference
-  - metodo
-  - waapi
-translation_of: Web/API/Animation/finish
 ---
 
 {{APIRef("Web Animations")}}

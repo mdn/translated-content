@@ -109,10 +109,7 @@ slug: Web/Accessibility/ARIA/Roles/Navigation_Role
 
 ## 仕様
 
-| 仕様                                                                                                                     | 状態                                             |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#navigation","ARIA Navigation Role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#aria_lh_navigation","Navigation Landmark Role")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## スクリーンリーダーのサポート
 

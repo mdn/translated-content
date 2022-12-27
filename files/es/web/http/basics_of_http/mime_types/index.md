@@ -1,15 +1,6 @@
 ---
 title: Tipos MIME
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
-tags:
-  - Cabecera de solicitud
-  - Guide
-  - HTTP
-  - Meta
-  - Tipos MIME
-  - Tipos de contenido
-  - application/json
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
 
 {{HTTPSidebar}}

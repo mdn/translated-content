@@ -31,9 +31,7 @@ if ('serviceWorker' in navigator) {
 
 ## 仕様書
 
-| 仕様書                                                                                                               | 状態                                 | 備考     |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#navigator-serviceworker', 'navigator.serviceWorker')}} | {{Spec2('Service Workers')}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

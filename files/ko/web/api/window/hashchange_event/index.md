@@ -3,6 +3,7 @@ title: WindowEventHandlers.onhashchange
 slug: Web/API/Window/hashchange_event
 original_slug: Web/API/WindowEventHandlers/onhashchange
 ---
+
 {{APIRef("HTML DOM")}}{{domxref("WindowEventHandlers")}} 믹스인의 **WindowEventHandlers.onhashchange** 속성은
 
 **hashchange** 이벤트를 처리하기 위한 {{event("Event_handlers", "event handler")}} 입니다.

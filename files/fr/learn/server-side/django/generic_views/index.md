@@ -171,7 +171,7 @@ Nous utilisons les balises de templates [`if`](https://docs.djangoproject.com/en
 {% endif %}
 ```
 
-La condition ci-dessus ne vérifie qu'un seul cas, mais vous pouvez ajouter d'autres tests grâce à la balise de template `elif` (par exemple `{% elif var2 %}`). Pour plus d'information sur les opérateurs conditionnels, voyez ici :  [if](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ifequal-and-ifnotequal), et [ifchanged](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ifchanged) dans [Built-in template tags and filters](https://docs.djangoproject.com/en/2.1/ref/templates/builtins) (Django Docs).
+La condition ci-dessus ne vérifie qu'un seul cas, mais vous pouvez ajouter d'autres tests grâce à la balise de template `elif` (par exemple `{% elif var2 %}`). Pour plus d'information sur les opérateurs conditionnels, voyez ici : [if](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#if), [ifequal/ifnotequal](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ifequal-and-ifnotequal), et [ifchanged](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#ifchanged) dans [Built-in template tags and filters](https://docs.djangoproject.com/en/2.1/ref/templates/builtins) (Django Docs).
 
 #### Boucles for
 
@@ -229,7 +229,7 @@ urlpatterns = [
 ]
 ```
 
-Pour le chemin *book-detail*, le pattern d'URL utilise une syntaxe spéciale pour capturer l'id exact du livre que nous voulons voir. La syntaxe est très simple : les chevrons ('<' et '>') définissent la partie de l'URL qui doit être capturée et encadrent le nom de la variable que la vue pourra utiliser pour accéder aux données capturées. Par exemple, **\<something>**  va capturer le pattern marqué et passer la valeur à la vue en tant que variable "something". De manière optionnelle, vous pouvez faire précéder le nom de variable d'une [spécification de convertisseur](https://docs.djangoproject.com/en/2.1/topics/http/urls/#path-converters), qui définit le type de la donnée (int, str, slug, uuid, path).
+Pour le chemin *book-detail*, le pattern d'URL utilise une syntaxe spéciale pour capturer l'id exact du livre que nous voulons voir. La syntaxe est très simple : les chevrons ('<' et '>') définissent la partie de l'URL qui doit être capturée et encadrent le nom de la variable que la vue pourra utiliser pour accéder aux données capturées. Par exemple, **\<something>** va capturer le pattern marqué et passer la valeur à la vue en tant que variable "something". De manière optionnelle, vous pouvez faire précéder le nom de variable d'une [spécification de convertisseur](https://docs.djangoproject.com/en/2.1/topics/http/urls/#path-converters), qui définit le type de la donnée (int, str, slug, uuid, path).
 
 Dans ce cas, nous utilisons `'<int:pk>'` pour capturer l'id du livre, qui doit être une chaîne formatée d'une certaine manière, et passer cet id à la vue en tant que paramètre nommé `pk` (abréviation pour primary key - clé primaire). C'est l'id qui doit être utilisé pour stocker le livre de manière unique dans la base de données, comme défini dans le modèle Book.
 
@@ -265,7 +265,7 @@ L'essentiel de ce que vous aurez besoin de savoir pour déclarer une recherche d
 | \*              | Recherche zéro ou plus occurrence(s) du caractère précédent. Par exemple, pour rechercher "rien ou un mot", vous pourriez utiliser `\w*`.                                                                                                                                  |
 | ( )             | Capture la partie du pattern contenue dans les parenthèses. Toutes les valeurs capturées seront passées à la vue en tant que paramètres non nommés (si plusieurs patterns sont capturés, les paramètres associés seront fournis dans l'ordre de déclaration des captures). |
 | (?P<_name_>...) | Capture le pattern (indiqué par…) en tant que variable nommée (dans ce cas "name"). Les valeurs capturées sont passées à la vue avec le nom spécifié. Votre vue doit par conséquent déclarer un argument avec le même nom !                                               |
-| [  ]            | Recherche l'un des caractères contenus dans cet ensemble. Par exemple, [abc] va rechercher "a" ou "b" ou "c". [-\w] va rechercher le caractère "-" ou tout caractère de mot.                                                                                               |
+| [ ]            | Recherche l'un des caractères contenus dans cet ensemble. Par exemple, [abc] va rechercher "a" ou "b" ou "c". [-\w] va rechercher le caractère "-" ou tout caractère de mot.                                                                                               |
 
 La plupart des autres caractères peuvent être pris littéralement.
 
@@ -570,7 +570,7 @@ Les liens de pagination sont affichés en bas de la page, avec les liens suivant
 Le challenge dans cet article consiste à créer les vues détail et liste nécessaires à l'achèvement du projet. Ces pages devront être accessibles aux URLs suivantes :
 
 - `catalog/authors/` — La liste de tous les auteurs.
-- `catalog/author/<id>` — La vue détail pour un auteur précis, avec un champ clé-primaire appelé *`<id>`*.
+- `catalog/author/<id>` — La vue détail pour un auteur précis, avec un champ clé-primaire appelé `<id>`.
 
 Le code requis pour le mappeur d'URL et les vues sera virtuellement identique aux vues liste et détail du modèle `Book`, créées ci-dessus. Les templates seront différents, mais auront un comportement semblable.
 

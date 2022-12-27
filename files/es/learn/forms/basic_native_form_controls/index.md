@@ -67,7 +67,7 @@ Los campos de texto de una sola línea solo tienen una restricción verdadera: s
 
 _La captura de pantalla siguiente muestra los tipos de entrada de texto predeterminado, activo (con el foco) y deshabilitado en Firefox 71 y Safari en macOS y en Chrome 79 y Edge 18 en Windows 10._
 
-![Captura de pantalla del atributo deshabilitado y predeterminado: estilo para  una entrada de texto activa (con el foco) en Firefox, Safari, Chrome y Edge.](https://mdn.mozillademos.org/files/17021/disabled.png)
+![Captura de pantalla del atributo deshabilitado y predeterminado: estilo para una entrada de texto activa (con el foco) en Firefox, Safari, Chrome y Edge.](https://mdn.mozillademos.org/files/17021/disabled.png)
 
 > **Nota:** HTML5 ha mejorado el campo de texto básico original de una sola línea al añadir valores especiales para el atributo {{htmlattrxref ("type", "input")}} que imponen restricciones de validación específicas y otras características, por ejemplo, específicas para introducir direcciones URL o números. Los expondremos en el artículo siguiente: [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types).
 

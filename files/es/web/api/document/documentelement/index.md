@@ -1,9 +1,6 @@
 ---
 title: document.documentElement
 slug: Web/API/Document/documentElement
-tags:
-  - Referencia_DOM_de_Gecko
-translation_of: Web/API/Document/documentElement
 ---
 
 {{ ApiRef("DOM") }}

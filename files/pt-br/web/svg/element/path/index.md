@@ -18,7 +18,7 @@ O elemento `path` é um elemento genérico para definir uma forma. Todas as form
 
 ```html
 <svg width="100%" height="100%" viewBox="0 0 400 400"
-     xmlns="http://www.w3.org/2000/svg">
+     xmlns="https://www.w3.org/2000/svg">
 
   <path d="M 100 100 L 300 100 L 200 300 z"
         fill="orange" stroke="black" stroke-width="3" />

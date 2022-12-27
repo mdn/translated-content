@@ -20,7 +20,7 @@ original_slug: Web/HTML/Elemento/param
 
     - **Puede contener**: Nada.
 
-      - : **Puede ser contenido por**: El elemento [object](es/HTML/Elemento/object), y el desaprobado [applet](es/HTML/Elemento/applet).
+      - : **Puede ser contenido por**: El elemento [object](/es/HTML/Elemento/object), y el desaprobado [applet](/es/HTML/Elemento/applet).
 
 #### Atributos
 

@@ -2,6 +2,7 @@
 title: Window.toolbar
 slug: Web/API/Window/toolbar
 ---
+
 {{APIRef}}
 
 ## 요약

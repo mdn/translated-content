@@ -1,7 +1,6 @@
 ---
 title: Una típica sesión de HTTP
 slug: Web/HTTP/Session
-translation_of: Web/HTTP/Session
 original_slug: Web/HTTP/Sesión
 ---
 

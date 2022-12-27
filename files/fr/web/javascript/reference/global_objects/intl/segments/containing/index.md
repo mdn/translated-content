@@ -33,7 +33,7 @@ Un objet qui décrit le segment faisant partie de la chaîne de caractères orig
 - `input`
   - : La chaîne de caractères originale.
 - `isWordLike`
-  - : Un booléen présent si `granularity` vaut `"word"`&nbsp;; sinon, `undefined`.  Si `granularity` vaut `"word"`, `isWordLike` vaudra `true` lorsque le segment est semblable à un mot (qu'il contient des lettres/nombres/idéogrammes/etc.) et `false` sinon.
+  - : Un booléen présent si `granularity` vaut `"word"`&nbsp;; sinon, `undefined`. Si `granularity` vaut `"word"`, `isWordLike` vaudra `true` lorsque le segment est semblable à un mot (qu'il contient des lettres/nombres/idéogrammes/etc.) et `false` sinon.
 
 ## Exemples
 

@@ -1,10 +1,6 @@
 ---
 title: align-content
 slug: Web/CSS/align-content
-tags:
-  - Cajas Flexibles CSS
-  - Propiedad CSS
-translation_of: Web/CSS/align-content
 ---
 
 {{CSSRef}}

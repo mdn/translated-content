@@ -2,6 +2,7 @@
 title: table
 slug: Web/API/HTMLTableElement
 ---
+
 {{ ApiRef() }}
 
 ### HTML Table 요소 인터페이스

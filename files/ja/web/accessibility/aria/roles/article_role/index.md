@@ -71,10 +71,7 @@ slug: Web/Accessibility/ARIA/Roles/Article_Role
 
 ## 仕様
 
-| 仕様                                                                     | 状態                                             |
-| ------------------------------------------------------------------------ | ------------------------------------------------ |
-| {{SpecName("ARIA","#article","article")}}                 | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices","#feed","feed")}} | {{Spec2('ARIA Authoring Practices')}} |
+{{Specifications}}
 
 ## 優先順位
 

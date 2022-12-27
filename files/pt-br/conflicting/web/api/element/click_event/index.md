@@ -4,6 +4,7 @@ slug: conflicting/Web/API/Element/click_event
 translation_of: Web/API/GlobalEventHandlers/onclick
 original_slug: Web/API/GlobalEventHandlers/onclick
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 A propriedade **`onclick`** do mixin {{domxref("GlobalEventHandlers")}} é o {{event("Event_handlers", "event handler")}} para o processamento de eventos de {{event("click")}} em um dado elemento.

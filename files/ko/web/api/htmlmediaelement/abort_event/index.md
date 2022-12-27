@@ -3,6 +3,7 @@ title: abort
 slug: Web/API/HTMLMediaElement/abort_event
 original_slug: Web/Events/abort
 ---
+
 **`abort`** 이벤트는 리소스의 로딩이 중단되었을 때, 발생합니다.
 
 ## 개요

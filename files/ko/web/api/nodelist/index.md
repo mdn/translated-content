@@ -2,6 +2,7 @@
 title: NodeList
 slug: Web/API/NodeList
 ---
+
 {{APIRef("DOM")}}
 
 **`NodeList` **객체는 일반적으로 {{domxref("element.childNodes")}}와 같은 속성(property)과 {{domxref("document.querySelectorAll")}} 와 같은 메서드에 의해 반환되는 [노드](/ko/docs/Glossary/Node/DOM)의 콜렉션입니다.

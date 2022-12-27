@@ -7,7 +7,7 @@ original_slug: Web/API/WindowEventHandlers/onpopstate
 
 {{APIRef}}
 
-La propiedad **`onpopstate`** del [mixin](/es/docs/Glossary/Mixin) {{domxref("WindowEventHandlers")}} es el [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) para procesar eventos [`popstate`](/en-US/docs/Web/API/Window/popstate_event) de la ventana.
+La propiedad **`onpopstate`** del [mixin](/es/docs/Glossary/Mixin) {{domxref("WindowEventHandlers")}} es el [`event handler`](/es/docs/Web/Reference/Events/Event_handlers) para procesar eventos [`popstate`](/es/docs/Web/API/Window/popstate_event) de la ventana.
 
 Se envía un evento `popstate` a la ventana cada vez que la entrada activa de la historia cambia entre otra otras dos entradas del mismo documento. Si la entrada de la historia fue creada al llamar a `history.pushState()`, o fue afectada por una llamada a `history.replaceState()`, la propiedad `state` del evento `popstate` contendrá una copia del objeto de estado de la entrada de la hisotria.
 
@@ -46,7 +46,7 @@ Tenga en cuenta que, a pesar de que la entrada original (para `http://example.co
 
 ## Compatibilidad con navegadores
 
-{{Compat("api.WindowEventHandlers.onpopstate")}}
+{{Compat}}
 
 ## Vea también
 

@@ -5,7 +5,7 @@ slug: Web/API/MediaStream/getTracks
 
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-{{domxref("MediaStream")}} 接口的**_`getTracks()`_** 方法会返回一个包含 [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set) 流中所有 {{domxref("MediaStreamTrack")}} 对象的序列，序列内容与{{domxref("MediaStreamTrack.kind")}} 无关。
+{{domxref("MediaStream")}} 接口的**`getTracks()`** 方法会返回一个包含 [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set) 流中所有 {{domxref("MediaStreamTrack")}} 对象的序列，序列内容与{{domxref("MediaStreamTrack.kind")}} 无关。
 
 ## 语法
 

@@ -2,6 +2,7 @@
 title: console.warn()
 slug: Web/API/console/warn
 ---
+
 {{APIRef("Console API")}}
 
 **`console.warn()`** 메서드는 웹 콘솔에 경고 메시지를 출력합니다.

@@ -56,9 +56,9 @@ slug: Web/API/Performance_API
 
 ## 实施状态
 
-As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers.
+As shown in the {{domxref("Performance")}} interface's [Browser Compatibility](/zh-CN/docs/Web/API/Performance#Browser_compatibility) table, most of these interfaces are broadly implemented by desktop browsers.
 
-如{{domxref("Performance")}}接口的“[浏览器兼容性](/Web/API/Performance#Browser_compatibility)”表所示，大部分接口由桌面浏览器广泛实现。
+如{{domxref("Performance")}}接口的“[浏览器兼容性](/zh-CN/docs/Web/API/Performance#Browser_compatibility)”表所示，大部分接口由桌面浏览器广泛实现。
 
 要测试你的浏览器对{{domxref("Performance")}}接口的支持，请运行 [`perf-api-support`](http://mdn.github.io/web-performance/perf-api-support.html) 应用。
 

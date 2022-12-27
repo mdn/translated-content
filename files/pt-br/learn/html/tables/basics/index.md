@@ -37,7 +37,7 @@ Uma tabela é um conjunto estruturado de dados composto de linhas e colunas (**d
 
 As tabelas são muito comumente usadas na sociedade humana, e têm sido por muito tempo, como evidenciado por este documento do Censo dos EUA de 1800:
 
-![Um documento de pergaminho muito antigo;  os dados não são facilmente legíveis, mas mostram claramente uma tabela de dados sendo usada.](https://mdn.mozillademos.org/files/14585/1800-census.jpg)
+![Um documento de pergaminho muito antigo; os dados não são facilmente legíveis, mas mostram claramente uma tabela de dados sendo usada.](https://mdn.mozillademos.org/files/14585/1800-census.jpg)
 
 Portanto, não é de se admirar que os criadores do HTML tenham fornecido um meio de estruturar e apresentar dados tabulares na web.
 

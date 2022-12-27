@@ -21,7 +21,7 @@ original_slug: Web/HTML/Elemento/area
 
     **Puede contener**: Nada.
 
-    **Solo puede ser hijo de**: Elementos [map](es/HTML/Elemento/map).
+    **Solo puede ser hijo de**: Elementos [map](/es/HTML/Elemento/map).
 
 #### Atributos
 
@@ -382,7 +382,7 @@ Puede consultar esta [comparativa](http://www.webdevout.net/browser_support_html
 
 ### Notas
 
-- **area** es un elemento antiguo con el que pueden hacerse mapas simples y poco accesibles. No se recomienda su uso, es preferible diseñar los mapas con elementos en bloque y [anclas](es/HTML/Elemento/a).
+- **area** es un elemento antiguo con el que pueden hacerse mapas simples y poco accesibles. No se recomienda su uso, es preferible diseñar los mapas con elementos en bloque y [anclas](/es/HTML/Elemento/a).
 
 ### Referencia
 

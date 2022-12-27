@@ -1,11 +1,6 @@
 ---
 title: Advanced animations
 slug: Web/API/Canvas_API/Tutorial/Advanced_animations
-tags:
-  - Canvas
-  - Tutoria
-  - graficos
-translation_of: Web/API/Canvas_API/Tutorial/Advanced_animations
 original_slug: Web/Guide/HTML/Canvas_tutorial/Advanced_animations
 ---
 
@@ -302,7 +297,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 ## Agregar control de ratón
 
-Para controlar la bola, podemos hacerla seguir nuestro ratón usando el evento [`mousemove`](/en-US/docs/Web/Reference/Events/mousemove), por ejemplo. El evento [`click`](/en-US/docs/Web/Events/click) solta la bola y la deja rebotar de nuevo.
+Para controlar la bola, podemos hacerla seguir nuestro ratón usando el evento [`mousemove`](/es/docs/Web/Reference/Events/mousemove), por ejemplo. El evento [`click`](/es/docs/Web/Events/click) solta la bola y la deja rebotar de nuevo.
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>

@@ -1,17 +1,6 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
-tags:
-  - CSS
-  - Imágenes CSS
-  - Layout
-  - Propiedad CSS
-  - Referencia
-  - css layout
-  - object-fit
-  - recipe:css-property
-  - size
-translation_of: Web/CSS/object-fit
 ---
 
 {{CSSRef}}

@@ -28,9 +28,7 @@ var newBlob = blob.slice(start, end, contentType);
 
 ## 仕様
 
-| 仕様                                                                     | ステータス                   | コメント   |
-| ------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName("File API", "#dfn-slice", "Blob.slice()")}} | {{Spec2("File API")}} | 初期定義。 |
+{{Specifications}}
 
 ## ブラウザの実装状況
 
@@ -39,4 +37,4 @@ var newBlob = blob.slice(start, end, contentType);
 ## あわせて参照
 
 - {{domxref("Blob")}}
-- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File/Using_files_from_web_applications)
+- [Web アプリケーションからのファイルの使用](/ja/docs/Web/API/File_API/Using_files_from_web_applications)

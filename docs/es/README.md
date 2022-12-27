@@ -104,7 +104,7 @@ Matrix link
 Grupo en community
 <https://community.mozilla.org/en/groups/mdn-localizacion-espanol/>
 
-Los `tags` no se usan para las traducciones de la documentación,  borremoslo.
+Los `tags` no se usan para las traducciones de la documentación, borremoslo.
 <https://github.com/mdn/translated-content/pull/4058#discussion_r802298455>
 
 Tutorial para crear el ambiente de desarrollo para MDN

@@ -11,6 +11,7 @@ tags:
 translation_of: Web/API/WindowEventHandlers
 original_slug: Web/API/WindowEventHandlers
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`WindowEventHandlers`** descreve os manipuladores de eventos comuns a várias interfaces como {{domxref("Window")}}, ou {{domxref("HTMLBodyElement")}} e {{domxref("HTMLFrameSetElement")}}. Cada uma dessas interfaces podendo implementar manipuladores de eventos específicos adicionais.

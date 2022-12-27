@@ -2,6 +2,7 @@
 title: Window.name
 slug: Web/API/Window/name
 ---
+
 {{APIRef}}
 
 ## 요약

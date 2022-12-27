@@ -1,13 +1,6 @@
 ---
 title: '::-moz-range-thumb'
 slug: Web/CSS/::-moz-range-thumb
-tags:
-  - CSS
-  - No estándar(2)
-  - Pseudo-elemento
-  - Pseudo-elemento CSS
-  - Referencia
-translation_of: Web/CSS/::-moz-range-thumb
 ---
 
 {{CSSRef}}{{Non-standard_header}}

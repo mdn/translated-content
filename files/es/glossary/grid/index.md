@@ -69,4 +69,4 @@ color: #d9480f;
 
 ### Otras lecturas
 
-- Guía de diseño CSS Grid: _[Conceptos Básicos de Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_
+- Guía de diseño CSS Grid: _[Conceptos Básicos de Grid Layout](/es/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout)_

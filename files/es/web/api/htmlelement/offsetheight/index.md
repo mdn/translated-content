@@ -1,11 +1,6 @@
 ---
 title: HTMLElement.offsetHeight
 slug: Web/API/HTMLElement/offsetHeight
-tags:
-  - API
-  - Propiedad
-  - Referencia
-translation_of: Web/API/HTMLElement/offsetHeight
 ---
 
 {{ APIRef("HTML DOM") }}

@@ -46,8 +46,8 @@ O argumento de string do `querySelector` deve seguir a sintaxe CSS. Veja exemplo
 
 ## Especificação
 
-- {{spec("http://www.w3.org/TR/selectors-api/","Selectors API Level 1","rec")}}
-- {{spec("http://www.w3.org/TR/selectors-api2/","Selectors API Level 2","wd")}}
+- {{spec("https://www.w3.org/TR/selectors-api/","Selectors API Level 1","rec")}}
+- {{spec("https://www.w3.org/TR/selectors-api2/","Selectors API Level 2","wd")}}
 - {{spec("http://dev.w3.org/2006/webapi/selectors-api2/","Selectors API Level 2","ed")}}
 
 ## Veja Também

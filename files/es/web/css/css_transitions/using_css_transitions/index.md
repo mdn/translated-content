@@ -1,11 +1,6 @@
 ---
 title: Transiciones de CSS
 slug: Web/CSS/CSS_Transitions/Using_CSS_transitions
-tags:
-  - CSS
-  - Gecko
-  - Transiciones de CSS
-translation_of: Web/CSS/CSS_Transitions/Using_CSS_transitions
 original_slug: Web/CSS/Transiciones_de_CSS
 ---
 

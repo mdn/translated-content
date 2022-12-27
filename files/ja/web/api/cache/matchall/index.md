@@ -47,9 +47,7 @@ caches.open('v1').then(function(cache) {
 
 ## 仕様
 
-| 仕様                                                                                             | 状態                                 | コメント |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------- |
-| {{SpecName('Service Workers', '#dom-cache-matchall', 'Cache: matchAll')}} | {{Spec2('Service Workers')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

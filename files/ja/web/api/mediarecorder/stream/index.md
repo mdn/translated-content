@@ -40,9 +40,7 @@ if (navigator.getUserMedia) {
 
 ## 仕様
 
-| 仕様                                                                                                                     | 状態                                         | コメント |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------- |
-| {{SpecName("MediaStream Recording", "#widl-MediaRecorder-stream", "MediaRecorder.stream")}} | {{Spec2("MediaStream Recording")}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

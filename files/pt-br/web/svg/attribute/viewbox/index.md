@@ -15,7 +15,7 @@ svg:not(:root) { display: inline-block; }
 ```
 
 ```xml
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
   <!--
   with relative unit such as percentage, the visual size
   of the square looks unchanged regardless of the viewBox
@@ -30,7 +30,7 @@ svg:not(:root) { display: inline-block; }
   <circle cx="50%" cy="50%" r="4" fill="white"/>
 </svg>
 
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 10 10" xmlns="https://www.w3.org/2000/svg">
   <!--
   with relative unit such as percentage, the visual size
   of the square looks unchanged regardless of the viewBox`
@@ -45,7 +45,7 @@ svg:not(:root) { display: inline-block; }
   <circle cx="50%" cy="50%" r="4" fill="white"/>
 </svg>
 
-<svg viewBox="-5 -5 10 10" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="-5 -5 10 10" xmlns="https://www.w3.org/2000/svg">
   <!--
   The point of coordinate 0,0 is now in the center of the viewport,
   and 100% is still resolve to a width or height of 10 user units so

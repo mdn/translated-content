@@ -46,7 +46,7 @@ Cette trappe permet d'intercepter les opérations suivantes :
 
 - {{jsxref("Object.getPrototypeOf()")}}
 - {{jsxref("Reflect.getPrototypeOf()")}}
-- {{jsxref("Object/proto", "__proto__")}}
+- [`Object.prototype.__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Opérateurs/instanceof", "instanceof")}}
 

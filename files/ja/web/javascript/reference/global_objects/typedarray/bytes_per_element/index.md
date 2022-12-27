@@ -31,9 +31,7 @@ Float64Array.BYTES_PER_ELEMENT;      // 8
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-typedarray.bytes_per_element', 'TypedArray.BYTES_PER_ELEMENT')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

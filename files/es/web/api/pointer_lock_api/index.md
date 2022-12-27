@@ -1,7 +1,6 @@
 ---
 title: API Pointer Lock
 slug: Web/API/Pointer_Lock_API
-translation_of: Web/API/Pointer_Lock_API
 original_slug: WebAPI/Pointer_Lock
 ---
 

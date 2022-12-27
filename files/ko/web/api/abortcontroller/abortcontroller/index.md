@@ -2,6 +2,7 @@
 title: AbortController.AbortController()
 slug: Web/API/AbortController/AbortController
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 **`AbortController()`** 생성자는 새로운 `AbortController` 객체 인터페이스를 생성한다.

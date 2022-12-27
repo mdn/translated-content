@@ -8,7 +8,7 @@ browser-compat: api.URL
 
 {{ApiRef("URL API")}}
 
-L'interface **`URL`** est utilisée afin d'analyser, de décomposer, de construire, de normaliser ou d'encoder des  [URL](/fr/docs/Glossary/URL). Elle fonctionne en exposant des propriétés qui permettent de lire et de modifier les différentes composantes d'une URL.
+L'interface **`URL`** est utilisée afin d'analyser, de décomposer, de construire, de normaliser ou d'encoder des [URL](/fr/docs/Glossary/URL). Elle fonctionne en exposant des propriétés qui permettent de lire et de modifier les différentes composantes d'une URL.
 
 On crée généralement un nouvel objet `URL` en fournissant l'URL sous la forme d'une chaîne de caractères à son constructeur, ou en fournissant une URL relative et une URL de base. On peut alors lire les composantes de l'URL et éventuellement la modifier.
 

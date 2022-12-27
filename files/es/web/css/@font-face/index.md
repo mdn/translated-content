@@ -1,7 +1,6 @@
 ---
 title: '@font-face'
 slug: Web/CSS/@font-face
-translation_of: Web/CSS/@font-face
 ---
 
 {{ CSSRef() }}

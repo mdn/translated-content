@@ -1,15 +1,6 @@
 ---
 title: transitionend
 slug: Web/API/Element/transitionend_event
-tags:
-  - DOM
-  - Event
-  - Referencia
-  - Transiciones CSS
-  - Transiciones CSS3
-  - TransitionEvent
-  - transitionend
-translation_of: Web/API/HTMLElement/transitionend_event
 original_slug: Web/API/HTMLElement/transitionend_event
 ---
 

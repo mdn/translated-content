@@ -2,6 +2,7 @@
 title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Document")}} 메소드 **`querySelectorAll()`** 는 지정된 셀렉터 그룹에 일치하는 다큐먼트의 엘리먼트 리스트를 나타내는 정적(살아 있지 않은) {{domxref("NodeList")}} 를 반환합니다.

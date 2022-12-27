@@ -2,6 +2,7 @@
 title: console.error()
 slug: Web/API/console/error
 ---
+
 {{APIRef("Console API")}}
 
 **`console.error()`** 메서드는 웹 콘솔에 에러 메시지를 출력합니다.

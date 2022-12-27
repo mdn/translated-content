@@ -1,13 +1,6 @@
 ---
 title: CanvasRenderingContext2D.drawImage()
 slug: Web/API/CanvasRenderingContext2D/drawImage
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContect2D
-  - Métodos
-  - Referencia
-translation_of: Web/API/CanvasRenderingContext2D/drawImage
 ---
 
 {{APIRef}}

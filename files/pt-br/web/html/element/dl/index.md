@@ -13,7 +13,7 @@ O elemento HTML _Definition List_ (`<dl>`) engloba uma lista de pares de termos 
 | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Omissão de Tag         | Nenhum, este é um {{Glossary("elemento vazio")}}.                                                                                                               |
 | Permite elementos pai  | Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/HTML/Content_categories#flow_content).                                     |
-| Documentação normativa | [HTML5, section 4.5.8](http://www.w3.org/TR/html5/grouping-content.html#the-dl-element); [HTML 4.01, section 10.3](http://www.w3.org/TR/html401/struct/lists.html#h-10.3) |
+| Documentação normativa | [HTML5, section 4.5.8](https://www.w3.org/TR/html5/grouping-content.html#the-dl-element); [HTML 4.01, section 10.3](https://www.w3.org/TR/html401/struct/lists.html#h-10.3) |
 
 ## Atributos
 

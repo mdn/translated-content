@@ -1,5 +1,5 @@
 ---
-title: Metadato
+title: Metadatos
 slug: Glossary/Metadata
 tags:
   - CodingScripting
@@ -17,6 +17,6 @@ Los **metadatos** son, en su definición más simple, datos que describen otros 
 
 - [Metadatos](https://es.wikipedia.org/wiki/Metadatos) en Wikipedia
 
-### HTML metadata
+### Metadatos HTML
 
-- The {{htmlelement("meta")}} element on MDN
+- El elemento {{htmlelement("meta")}} en MDN

@@ -1,7 +1,6 @@
 ---
 title: WindowOrWorkerGlobalScope.isSecureContext
 slug: Web/API/isSecureContext
-translation_of: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 original_slug: Web/API/WindowOrWorkerGlobalScope/isSecureContext
 ---
 

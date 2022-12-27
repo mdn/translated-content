@@ -332,7 +332,7 @@ class Teacher extends Person {
 }
 ```
 
-In our class above we have a getter and setter for the `subject` property. We use **`_` **to create a separate value in which to store our name property. Without using this convention, we would get errors every time we called get or set. At this point:
+In our class above we have a getter and setter for the `subject` property. We use **`_`** to create a separate value in which to store our name property. Without using this convention, we would get errors every time we called get or set. At this point:
 
 - To show the current value of the `_subject` property of the `snape` object we can use the `snape.subject` getter method.
 - To assign a new value to the `_subject` property we can use the `snape.subject="new value"` setter method.

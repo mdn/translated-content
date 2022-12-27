@@ -126,9 +126,7 @@ onmessage = function(e) {
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('WebAssembly JS', '#dom-webassembly-instantiate', 'instantiate()')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

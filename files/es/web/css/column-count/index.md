@@ -1,12 +1,6 @@
 ---
 title: column-count
 slug: Web/CSS/column-count
-tags:
-  - CSS
-  - CSS Multicolumna
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/column-count
 ---
 
 {{CSSRef}}

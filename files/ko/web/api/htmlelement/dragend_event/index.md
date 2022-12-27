@@ -3,6 +3,7 @@ title: 'Document: dragend 이벤트'
 slug: Web/API/HTMLElement/dragend_event
 original_slug: Web/API/Document/dragend_event
 ---
+
 {{APIRef}}
 
 `dragend` 이벤트는 마우스 버튼을 놓거나 이스케이프 키를 눌러 드래그 작업이 끝나게 되면 발생합니다.

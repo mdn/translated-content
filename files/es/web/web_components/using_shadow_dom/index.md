@@ -1,7 +1,6 @@
 ---
 title: Usando shadow DOM
 slug: Web/Web_Components/Using_shadow_DOM
-translation_of: Web/Web_Components/Using_shadow_DOM
 ---
 
 {{DefaultAPISidebar("Web Components")}}

@@ -14,7 +14,7 @@ html,body,svg { height:100% }
 ```
 
 ```html
-<svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 300 100" xmlns="https://www.w3.org/2000/svg">
   <!-- Preenchimento simples com apenas uma cor -->
   <circle cx="50" cy="50" r="40" fill="pink" />
 

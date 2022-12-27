@@ -67,9 +67,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(elem => elem >= 10);
 
 ## 仕様書
 
-| 仕様書                                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.filter', 'TypedArray.prototype.filter')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

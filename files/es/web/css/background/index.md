@@ -1,11 +1,6 @@
 ---
 title: background
 slug: Web/CSS/background
-tags:
-  - CSS
-  - CSS:Referencias
-  - Todas_las_Categorías
-translation_of: Web/CSS/background
 ---
 
 {{CSSRef}}

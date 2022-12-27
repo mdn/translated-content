@@ -2,6 +2,7 @@
 title: element.attributes
 slug: Web/API/Element/attributes
 ---
+
 {{ ApiRef() }}
 
 ### 요약

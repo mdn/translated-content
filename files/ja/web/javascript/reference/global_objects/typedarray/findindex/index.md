@@ -113,9 +113,7 @@ TypedArray.prototype.findIndex = Array.prototype.findIndex = Array.prototype.fin
 
 ## 仕様書
 
-| 仕様書                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

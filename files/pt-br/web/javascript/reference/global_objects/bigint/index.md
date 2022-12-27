@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt
 
 {{JSRef}}
 
-`BigInt` é um objeto nativo que fornece um modo de representar números inteiros maiores que 253, que é o maior número que o JavaScript consegue, com exatidão, representar com o tipo primitivo {{jsxref("Number")}}.
+`BigInt` é um objeto nativo que fornece um modo de representar números inteiros maiores que 2^53, que é o maior número que o JavaScript consegue, com exatidão, representar com o tipo primitivo {{jsxref("Number")}}.
 
 ## Sintaxe
 

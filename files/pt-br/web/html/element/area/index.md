@@ -58,7 +58,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
     Utilize este atributo somente se a **href** atributo está presente.
 
 - {{Htmlattrdef ("type")}}
-  - : Este atributo especifica o tipo de mídia na forma de um tipo MIME para o destino do link. Geralmente, este é fornecido informações estritamente como consultivo; no entanto, no futuro, um navegador pode adicionar um pequeno ícone para os tipos de multimédia. Por exemplo, um navegador pode adicionar um pequeno ícone de alto-falante quando o tipo está definido para áudio / wav. Para obter uma lista completa de tipos MIME reconhecidos, consulte [http://www.w3.org/TR/html4/references.html # REF-MIMETYPES](http://www.w3.org/TR/html4/references.html#ref-MIMETYPES) . Utilize este atributo somente se a **href** atributo está presente.
+  - : Este atributo especifica o tipo de mídia na forma de um tipo MIME para o destino do link. Geralmente, este é fornecido informações estritamente como consultivo; no entanto, no futuro, um navegador pode adicionar um pequeno ícone para os tipos de multimédia. Por exemplo, um navegador pode adicionar um pequeno ícone de alto-falante quando o tipo está definido para áudio / wav. Para obter uma lista completa de tipos MIME reconhecidos, consulte [https://www.w3.org/TR/html4/references.html # REF-MIMETYPES](https://www.w3.org/TR/html4/references.html#ref-MIMETYPES) . Utilize este atributo somente se a **href** atributo está presente.
 
 ## Exemplo
 

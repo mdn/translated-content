@@ -409,7 +409,7 @@ Les champs pour les dates et heures ([`datetime-local`](/fr/docs/Web/HTML/Elemen
 
 Toutefois, les parties internes du contrôle (le calendrier qui s'affiche pour sélectionner la date, le sélecteur pour incrémenter/décrémenter les valeurs) ne sont pas du tout personnalisables et on ne peut pas s'en débarrasser avec `appearance: none;`. Si vous devez maîtriser la forme de 1 à Z, vous devrez utiliser une bibliothèque tierce ou construire votre propre contrôle.
 
-> **Note :** On notera que [`<input type="number">`](/fr/docs/Web/HTML/Element/Input/number)  peut souffrir du même problème quant au mécanisme d'incrémentation/décrémentation. Toutefois, on peut contourner certains problèmes, lorsque les données collectées par le contrôle sont simples, en utilisant un champ de type `text` à la place.
+> **Note :** On notera que [`<input type="number">`](/fr/docs/Web/HTML/Element/Input/number) peut souffrir du même problème quant au mécanisme d'incrémentation/décrémentation. Toutefois, on peut contourner certains problèmes, lorsque les données collectées par le contrôle sont simples, en utilisant un champ de type `text` à la place.
 
 ### Les champs d'intervalle
 

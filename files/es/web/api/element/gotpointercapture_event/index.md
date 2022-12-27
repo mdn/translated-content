@@ -1,16 +1,6 @@
 ---
 title: Element.ongotpointercapture
 slug: Web/API/Element/gotpointercapture_event
-tags:
-  - API
-  - Controlador
-  - DOM
-  - Elemento
-  - Eventos Puntero
-  - Propiedad
-  - Referencia
-translation_of: Web/API/GlobalEventHandlers/ongotpointercapture
-translation_of_original: Web/API/Element/ongotpointercapture
 original_slug: Web/API/GlobalEventHandlers/ongotpointercapture
 ---
 

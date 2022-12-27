@@ -2,6 +2,7 @@
 title: table.width
 slug: Web/API/HTMLTableElement/width
 ---
+
 {{ ApiRef() }}
 
 ### 요약

@@ -2,6 +2,7 @@
 title: 문자열 다루기 — 문자열
 slug: Learn/JavaScript/First_steps/Strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
 다음으로, 프로그래밍에서 어떤 텍스트가 호출되는지 문자열에 대해 알아볼까요? 이 게시물에서는 문자열 작성, 문자열의 따옴표 이스케이프 및 문자열 결합과 같이 JavaScript를 배울 때 문자열에 대해 알아야 할 모든 일반적인 사항을 살펴보겠습니다.
@@ -79,7 +80,7 @@ slug: Learn/JavaScript/First_steps/Strings
     var badQuotes = 'What on earth?";
     ```
 
-3. 브라우저는 다른종류의 따옴표가 감싸고 있어 문자열이 아직 끝나지 않았다고 생각합니다.  예를 들어, 아래 두 가지 모두 괜찮습니다.
+3. 브라우저는 다른종류의 따옴표가 감싸고 있어 문자열이 아직 끝나지 않았다고 생각합니다. 예를 들어, 아래 두 가지 모두 괜찮습니다.
 
     ```js
     var sglDbl = 'Would you eat a "fish supper"?';

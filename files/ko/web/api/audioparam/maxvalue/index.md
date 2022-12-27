@@ -2,6 +2,7 @@
 title: AudioParam.maxValue
 slug: Web/API/AudioParam/maxValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 {{domxref("AudioParam")}} 인터페이스의 읽기 전용 **`maxValue`** 속성은 파라미터의 명목상의 (효과적인) 범위에 대해 최대로 가능한 값을 나타냅니다.

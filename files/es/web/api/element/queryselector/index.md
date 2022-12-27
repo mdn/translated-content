@@ -1,7 +1,6 @@
 ---
 title: Element.querySelector()
 slug: Web/API/Element/querySelector
-translation_of: Web/API/Element/querySelector
 ---
 
 {{APIRef}}

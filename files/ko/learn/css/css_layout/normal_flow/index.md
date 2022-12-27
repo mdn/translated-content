@@ -3,6 +3,7 @@ title: 일반 대열
 slug: Learn/CSS/CSS_layout/Normal_Flow
 original_slug: Learn/CSS/CSS_layout/일반_흐름
 ---
+
 {{LearnSidebar}}
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}

@@ -5,7 +5,7 @@ page-type: guide
 translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 
-{{ServiceWorkerSidebar}}
+{{DefaultAPISidebar}}
 
 Este artículo brinda información sobre cómo comenzar con el *service worker*, incluida la arquitectura básica, el registro de un *service worker*, el proceso de instalación y activación de un nuevo *service worker*, la actualización de tu *service worker*, el control de caché y las respuestas personalizadas, todo en el contexto de una aplicación simple, con funcionalidad fuera de línea.
 

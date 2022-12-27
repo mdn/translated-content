@@ -2,7 +2,8 @@
 title: Using Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 ---
-{{ServiceWorkerSidebar}}
+
+{{DefaultAPISidebar("Service Workers API")}}
 
 {{ SeeCompatTable() }}
 

@@ -1,12 +1,6 @@
 ---
 title: Usando plantillas y slots
 slug: Web/Web_Components/Using_templates_and_slots
-tags:
-  - Componentes Web
-  - Template
-  - shadow dom
-  - slot
-translation_of: Web/Web_Components/Using_templates_and_slots
 ---
 
 {{DefaultAPISidebar("Web Components")}}

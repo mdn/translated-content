@@ -57,7 +57,7 @@ var x = function*(y) {
 
 ## Compatibilidad con navegadores
 
-{{Compat("javascript.operators.function_star")}}
+{{Compat}}
 
 ## Vea también
 

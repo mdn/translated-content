@@ -47,5 +47,5 @@ x - y
 - [求幂运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)
 - [自增运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Increment)
 - [自减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [一元否运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [一元减运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
 - [一元加运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_plus)

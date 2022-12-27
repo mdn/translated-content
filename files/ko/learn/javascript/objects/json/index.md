@@ -2,6 +2,7 @@
 title: JSON으로 작업하기
 slug: Learn/JavaScript/Objects/JSON
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 JavaScript Object Notation (JSON)은 Javascript 객체 문법으로 구조화된 데이터를 표현하기 위한 문자 기반의 표준 포맷입니다. 웹 어플리케이션에서 데이터를 전송할 때 일반적으로 사용합니다(서버에서 클라이언트로 데이터를 전송하여 표현하려거나 반대의 경우). 여기저기서 자주 보았을테니 여기선 JSON을 파싱, 데이터에 접근하고 JSON을 생성하는 등 Javascript로 JSON을 다루는 법에 대해 알아봅시다.

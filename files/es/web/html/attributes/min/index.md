@@ -64,7 +64,7 @@ Si no se incluye explícitamente, `step` tiene como valor predeterminado 1 para 
 
 ## Compatibilidad del navegador
 
-{{Compat("html.elements.attributes.min")}}
+{{Compat}}
 
 ## Especificaciones
 

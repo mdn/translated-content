@@ -3,6 +3,7 @@ title: 비디오 그리고 오디오 컨텐츠
 slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 original_slug: Learn/HTML/Multimedia_and_embedding/ideo_and_audio_content
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
 
 이제 우리는 웹페이지에 간단한 이미지를 추가하는 것에 익숙해졌으므로, 다음 단계는 HTML 문서에 비디오와 오디오 플레이어를 추가하는 것이다! 이 기사에서는 {{htmlelement("video")}}와 {{htmlelement("audio")}} 요소들로 그렇게 하는 것에 대해 살펴보고, 동영상에 캡션/자막을 추가하는 방법을 살펴봄으로써 마무리하겠다.

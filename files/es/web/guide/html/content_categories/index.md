@@ -1,13 +1,6 @@
 ---
 title: Categorías de contenido
 slug: Web/Guide/HTML/Content_categories
-tags:
-  - Avanzado
-  - Guía
-  - HTML
-  - HTML5
-  - Web
-translation_of: Web/Guide/HTML/Content_categories
 original_slug: Web/Guide/HTML/categorias_de_contenido
 ---
 

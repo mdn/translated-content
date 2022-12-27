@@ -1,15 +1,6 @@
 ---
 title: ':-moz-locale-dir(ltr)'
 slug: Web/CSS/:-moz-locale-dir(ltr)
-tags:
-  - CSS
-  - Localización
-  - NeedsCompatTable
-  - NeedsExample
-  - No estandar
-  - Pseudo-clase
-  - Referencia CSS
-translation_of: Web/CSS/:-moz-locale-dir(ltr)
 ---
 
 {{Non-standard_header}}{{CSSRef}}

@@ -3,6 +3,7 @@ title: API 레퍼런스의 사이드바
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
 original_slug: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 ---
+
 {{MDNSidebar}}
 
 API 레퍼런스 문서에는 수정 가능한 사이드바 를 추가할 수 있습니다. 이 사이드바에 인터페이스, 튜토리얼, 혹은 API와 관련된 자료 링크를 노출합니다. 그 사용법을 설명합니다.

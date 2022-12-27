@@ -8,6 +8,7 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 original_slug: Web/JavaScript/Reference/Errors/For-each-in_loops_are_deprecated
 ---
+
 {{jsSidebar("Errors")}}
 
 ## Mensagem

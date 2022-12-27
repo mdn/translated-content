@@ -2,6 +2,7 @@
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
 ---
+
 {{APIRef}}
 브라우저 윈도우의 뷰포트 너비로, 수직 스크롤바가 존재한다면 포함합니다.
 

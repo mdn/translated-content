@@ -1,15 +1,6 @@
 ---
 title: Element.matches()
 slug: Web/API/Element/matches
-tags:
-  - API
-  - DOM
-  - Elemento
-  - Referencia
-  - metodo
-  - msMatchesSelector
-  - webkitMatchesSelector
-translation_of: Web/API/Element/matches
 ---
 
 {{APIRef}}
@@ -97,5 +88,5 @@ if (!Element.prototype.matches) {
 
 ## Véase también
 
-- [The syntax of Selectors](/en-US/docs/Web/Guide/CSS/Getting_started/Selectors)
+- [The syntax of Selectors](/es/docs/Web/Guide/CSS/Getting_started/Selectors)
 - Otros métodos que usan selectores: {{domxref("element.querySelector()")}} and {{domxref("element.closest()")}}.

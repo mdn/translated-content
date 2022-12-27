@@ -84,7 +84,7 @@ button {
     </tr>
     <tr>
       <th scope="row">Contenu autorisé</th>
-      <td>Zéro ou plusieurs occurrences de  <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>,  <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a>, et  <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>
+      <td>Zéro ou plusieurs occurrences de <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/script"><code>&lt;script&gt;</code></a>, et <a href="/fr/docs/Web/HTML/Element/template"><code>&lt;template&gt;</code></a>
       </td>
     </tr>
     <tr>

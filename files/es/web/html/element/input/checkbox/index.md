@@ -37,4 +37,4 @@ Esto crea dos casillas de verificación, que se ven así:
 
 ## Compatibilidad en navegadores
 
-{{Compat("html.elements.input.input-checkbox")}}
+{{Compat}}

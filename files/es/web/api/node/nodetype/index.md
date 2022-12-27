@@ -1,7 +1,6 @@
 ---
 title: Node.nodeType
 slug: Web/API/Node/nodeType
-translation_of: Web/API/Node/nodeType
 ---
 
 {{APIRef("DOM")}}La propiedad de solo lectura **`Node.nodeType`** retornará un valor positivo entero representando el tipo de nodo.

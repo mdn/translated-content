@@ -1,14 +1,6 @@
 ---
 title: ':right'
 slug: Web/CSS/:right
-tags:
-  - '@page'
-  - CSS
-  - Diseño
-  - Pseudo-clase
-  - Referencia
-  - Web
-translation_of: Web/CSS/:right
 ---
 
 {{ CSSRef() }}

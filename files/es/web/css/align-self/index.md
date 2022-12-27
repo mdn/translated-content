@@ -1,11 +1,6 @@
 ---
 title: align-self
 slug: Web/CSS/align-self
-tags:
-  - Cajas Flexibles CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/align-self
 ---
 
 {{CSSRef}}

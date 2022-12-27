@@ -1,15 +1,6 @@
 ---
 title: 101 Switching Protocols
 slug: Web/HTTP/Status/101
-tags:
-  - Códigos de estado
-  - Estados
-  - HTTP
-  - HTTP Status Code
-  - Información
-  - Referencia
-  - WebSockets
-translation_of: Web/HTTP/Status/101
 ---
 
 {{HTTPSidebar}}El código de respuesta **`101 Switching Protocols`** que el servidor está cambiando de protocolo al solicitado por un cliente que mandó un mensaje incluyendo la cabecera {{HTTPHeader("Upgrade")}}.

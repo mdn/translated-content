@@ -1,13 +1,6 @@
 ---
 title: Element.scrollHeight
 slug: Web/API/Element/scrollHeight
-tags:
-  - API
-  - Necesidad de Ejemplo de eliminación DHTML
-  - Propiedad
-  - Referencia
-  - Vista CSSOM
-translation_of: Web/API/Element/scrollHeight
 ---
 
 {{APIRef}}
@@ -56,7 +49,7 @@ element.scrollHeight - element.scrollTop === element.clientHeight
 
 ## scrollHeight Demo
 
-Asociada al evento `onscroll` , esta equivalencia puede ser útil para determinar si un usuario ha leido un texto o no (ver también las propiedades de [`element.scrollTop`](/en-US/docs/DOM/element.scrollTop) y [`element.clientHeight`](/en-US/docs/DOM/element.clientHeight) ). Por ejemplo:
+Asociada al evento `onscroll` , esta equivalencia puede ser útil para determinar si un usuario ha leido un texto o no (ver también las propiedades de [`element.scrollTop`](/es/docs/DOM/element.scrollTop) y [`element.clientHeight`](/es/docs/DOM/element.clientHeight) ). Por ejemplo:
 
 ### HTML
 

@@ -52,9 +52,7 @@ navigator.permissions.query({name:'geolocation'}).then(function(result) {
 
 ## 仕様
 
-| 仕様                                                                                     | 状態                                 | コメント |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('Permissions API','#dom-permissions-query','query()')}} | {{Spec2('Permissions API')}} | 初期定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

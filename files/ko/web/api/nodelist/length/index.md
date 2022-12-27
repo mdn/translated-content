@@ -2,6 +2,7 @@
 title: element.length
 slug: Web/API/NodeList/length
 ---
+
 {{ ApiRef() }}
 
 ### 요약

@@ -2,6 +2,7 @@
 title: console.count()
 slug: Web/API/console/count
 ---
+
 {{APIRef("Console API")}}
 
 **`console.count()`** 메서드는 특정 `count()` 호출의 횟수를 세어 출력합니다.

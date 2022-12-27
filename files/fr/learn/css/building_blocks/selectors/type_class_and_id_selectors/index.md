@@ -75,7 +75,7 @@ article *:first-child {
 
 ## Sélecteurs de classe
 
-Le sélecteur de classe commence par un point  `.` et sélectionne tout élément du document auquel cette classe est appliquée. Dans l'exemple live ci-dessous, nous avons créé une classe appelée `.highlight` et l'avons appliquée à plusieurs endroits du document. Tous les éléments auxquels la classe est appliquée sont mis en évidence.
+Le sélecteur de classe commence par un point `.` et sélectionne tout élément du document auquel cette classe est appliquée. Dans l'exemple live ci-dessous, nous avons créé une classe appelée `.highlight` et l'avons appliquée à plusieurs endroits du document. Tous les éléments auxquels la classe est appliquée sont mis en évidence.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/class.html", '100%', 750)}}
 

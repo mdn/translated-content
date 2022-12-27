@@ -1,14 +1,6 @@
 ---
 title: '::-moz-page-sequence'
 slug: Web/CSS/::-moz-page-sequence
-tags:
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsExample
-  - No estándar(2)
-  - Pseudo-elemento
-  - Referencia CSS
-translation_of: Web/CSS/::-moz-page-sequence
 ---
 
 {{CSSRef}}{{non-standard_header}}

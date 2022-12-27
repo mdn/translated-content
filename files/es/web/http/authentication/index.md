@@ -1,13 +1,6 @@
 ---
 title: Autenticación HTTP
 slug: Web/HTTP/Authentication
-tags:
-  - Acceso de control
-  - Autenticación
-  - Guía
-  - HTTP
-  - HTTP Basic
-translation_of: Web/HTTP/Authentication
 ---
 
 {{HTTPSidebar}}

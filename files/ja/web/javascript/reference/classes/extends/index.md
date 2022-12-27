@@ -60,9 +60,7 @@ class myDate extends Date {
 
 ## 仕様書
 
-| 仕様書                                                                           |
-| -------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-class-definitions', 'extends')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

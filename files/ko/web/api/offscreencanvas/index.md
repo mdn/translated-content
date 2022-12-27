@@ -2,6 +2,7 @@
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`OffscreenCanvas`**는 화면 밖에서 렌더링되는 캔버스 인터페이스입니다. window 객체와 [worker](/ko/docs/Web/API/Web_Workers_API) 객체 모두 지원합니다.

@@ -69,5 +69,5 @@ function adcElemento () {
 
 ## Especificações
 
-- [DOM 2 Core: createElement](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-2141741547)
+- [DOM 2 Core: createElement](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-2141741547)
 - [HTML5: APIs in HTML documents](http://www.whatwg.org/specs/web-apps/current-work/multipage/dom.html#apis-in-html-documents)

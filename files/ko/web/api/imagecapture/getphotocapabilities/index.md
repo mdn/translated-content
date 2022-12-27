@@ -2,6 +2,7 @@
 title: ImageCapture.getPhotoCapabilities()
 slug: Web/API/ImageCapture/getPhotoCapabilities
 ---
+
 {{APIRef("MediaStream Image")}}
 
 {{domxref("ImageCapture")}} 인터페이스의 **`getPhotoCapabilities()`** 메서드는 사용 가능한 설정 옵션을 담은 {{domxref("PhotoCapabilities")}} 객체로 이행하는 {{jsxref("Promise")}}를 반환합니다.

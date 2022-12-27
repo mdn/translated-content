@@ -1,7 +1,6 @@
 ---
 title: CSS Containment
 slug: Web/CSS/CSS_Containment
-translation_of: Web/CSS/CSS_Containment
 ---
 
 {{CSSRef}}

@@ -16,7 +16,7 @@ original_slug: Web/HTML/Elemento/col
   
     **Crea una caja**: No.
 
-    **Está definido como**: Elemento [para tablas.](es/HTML/Elemento/Tipos_de_elementos#para_tablas).
+    **Está definido como**: Elemento [para tablas.](/es/HTML/Elemento/Tipos_de_elementos#para_tablas).
 
     **Puede contener**: Nada.
 

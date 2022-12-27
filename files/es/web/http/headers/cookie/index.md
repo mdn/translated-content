@@ -1,11 +1,6 @@
 ---
 title: Cookie
 slug: Web/HTTP/Headers/Cookie
-tags:
-  - Cookies
-  - encabezado
-  - solicitud
-translation_of: Web/HTTP/Headers/Cookie
 ---
 
 {{HTTPSidebar}}

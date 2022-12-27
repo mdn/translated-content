@@ -36,9 +36,7 @@ class Counter {
 
 ## 仕様書
 
-| 仕様書                                                                                               |
-| ---------------------------------------------------------------------------------------------------- |
-| {{SpecName('WeakRefs', '#sec-weak-ref-constructor', 'WeakRef constructor')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

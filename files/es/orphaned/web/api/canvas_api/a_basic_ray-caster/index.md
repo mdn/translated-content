@@ -1,16 +1,6 @@
 ---
 title: A basic ray-caster
 slug: orphaned/Web/API/Canvas_API/A_basic_ray-caster
-tags:
-  - Avanzado
-  - Canvas
-  - Ejemplo
-  - Espanol(2)
-  - Gráficos(2)
-  - HTML
-  - Necesita traducción
-  - Web
-translation_of: Web/API/Canvas_API/A_basic_ray-caster
 original_slug: Web/API/Canvas_API/A_basic_ray-caster
 ---
 

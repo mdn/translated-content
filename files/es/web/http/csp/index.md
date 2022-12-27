@@ -1,9 +1,6 @@
 ---
 title: Content Security Policy (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - Política de Seguridad del Contenido
-translation_of: Web/HTTP/CSP
 ---
 
 {{HTTPSidebar}}
@@ -191,7 +188,7 @@ Como se puede ver, el informe incluye la ruta completa al recurso infractor en `
 
 ## Compatibilidad del navegador
 
-{{Compat("http.headers.csp")}}
+{{Compat}}
 
 Existe una incompatibilidad específica en algunas versiones del navegador web Safari, por lo que si se establece una cabecera de Política de Seguridad de Contenido, pero no una cabecera de Same Origin, el navegador bloqueará el contenido alojado de forma autónoma y el contenido externo, e informará incorrectamente de que esto es debido a que la Política de Seguridad del Contenido no permite el contenido.
 

@@ -4,6 +4,7 @@ slug: conflicting/Learn/JavaScript/Asynchronous/Promises
 translation_of: Learn/JavaScript/Asynchronous/Async_await
 original_slug: Learn/JavaScript/Asynchronous/Async_await
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}
 
 Adições mais recentes à linguagem JavaScript são as [funções assíncronas](/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function) e a palavra-chave [`await`](/pt-BR/docs/Web/JavaScript/Reference/Operators/await), adicionadas no ECMAScript 2017. Esses recursos atuam basicamente como um syntactic sugar em cima de promises, tornando o código assíncrono mais fácil de escrever e ler. Isso faz com que o código assíncrono pareça mais com o código síncrono old-school, então vale a pena aprender. Este artigo fornece o que você precisa saber.

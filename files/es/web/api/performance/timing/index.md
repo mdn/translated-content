@@ -1,15 +1,6 @@
 ---
 title: Performance.timing
 slug: Web/API/Performance/timing
-tags:
-  - API
-  - Deprecada
-  - Legado
-  - Propiedad
-  - Rendimiento
-  - Solo lectura
-  - Tiempo de navegación
-translation_of: Web/API/Performance/timing
 ---
 
 {{APIRef("Navigation Timing")}}{{deprecated_header}}

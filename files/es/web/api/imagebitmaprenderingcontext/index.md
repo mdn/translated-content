@@ -1,7 +1,6 @@
 ---
 title: ImageBitmapRenderingContext
 slug: Web/API/ImageBitmapRenderingContext
-translation_of: Web/API/ImageBitmapRenderingContext
 ---
 
 {{APIRef("Canvas API")}} {{SeeCompatTable}}

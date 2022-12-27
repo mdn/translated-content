@@ -2,6 +2,7 @@
 title: Location.reload()
 slug: Web/API/Location/reload
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`Location.reload()`** 메서드는 새로고침 버튼처럼 현재 리소스를 다시 불러옵니다.

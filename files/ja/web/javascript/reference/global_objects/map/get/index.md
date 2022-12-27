@@ -38,9 +38,7 @@ myMap.get('baz');   // undefined を返す
 
 ## 仕様書
 
-| 仕様書                                                                                       |
-| -------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-map.prototype.get', 'Map.prototype.get')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

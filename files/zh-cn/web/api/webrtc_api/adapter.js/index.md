@@ -3,7 +3,7 @@ title: Improving compatibility using WebRTC adapter.js
 slug: Web/API/WebRTC_API/adapter.js
 ---
 
-{{WebRTCSidebar}}
+{{DefaultAPISidebar("WebRTC")}}
 
 虽然 WebRTC [规范](http://www.w3.org/TR/webrtc/)已经相对健全稳固了，但是并不是所有的浏览器都实现了它所有的功能。除此之外。有些浏览器需要在一些或者所有的 WebRTC API 上添加前缀才能正常使用。尽管你可以自己写代码解决这种问题，但是还有一个比较简单的方法。WebRTC 组织在 github 上提供了一个 [WebRTC 适配器](https://github.com/webrtc/adapter/)（WebRTC adapter）来解决在不同浏览器上实现 WebRTC 的兼容性问题。这个适配器是一个 JavaScript 垫片，它可以让你根据 WebRTC 规范描述的那样去写代码，在所有支持 WebRTC 的浏览器中不用去写前缀或者其他兼容性解决方法。
 

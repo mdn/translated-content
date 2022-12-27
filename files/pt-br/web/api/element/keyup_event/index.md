@@ -9,7 +9,7 @@ O evento keyup é acionado quando uma tecla é liberada.
 ## Informações gerais
 
 - Especificação
-  - : [DOM L3](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-keyup)
+  - : [DOM L3](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-keyup)
 - Interface
   - : [KeyboardEvent](/pt-BR/docs/DOM/KeyboardEvent)
 - Método Bolha

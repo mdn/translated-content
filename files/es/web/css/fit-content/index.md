@@ -1,15 +1,6 @@
 ---
 title: fit-content()
 slug: Web/CSS/fit-content
-tags:
-  - CSS
-  - CSS Grid
-  - Experimental
-  - Función CSS
-  - Layout
-  - Referencia
-  - Web
-translation_of: Web/CSS/fit-content
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -95,4 +86,4 @@ Función que acepta un `<length>` o un `<percentage>` como un argumento.
 
 ## Browser compatibility
 
-{{Compat("css.properties.grid-template-columns.fit-content")}}
+{{Compat}}

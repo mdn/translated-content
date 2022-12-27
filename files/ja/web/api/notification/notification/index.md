@@ -47,9 +47,9 @@ new Notification(title, options)
     - `actions`
       - : 通知で表示するアクションの配列です。配列内のそれぞれの要素は、以下のメンバーを持つオブジェクトです。
 
-        - `action`:  通知上に表示されるユーザーアクションを特定する文字列。
-        - `title`:  ユーザーに表示するアクションテキストを含む文字列。
-        - `icon`:  アクションとともに表示されるアイコンの URL を含む文字列。
+        - `action`: 通知上に表示されるユーザーアクションを特定する文字列。
+        - `title`: ユーザーに表示するアクションテキストを含む文字列。
+        - `icon`: アクションとともに表示されるアイコンの URL を含む文字列。
 
         適切なレスポンスは `event.action` を使用して {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} イベント内で構築されます。
 

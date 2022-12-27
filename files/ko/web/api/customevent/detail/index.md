@@ -2,6 +2,7 @@
 title: CustomEvent.detail
 slug: Web/API/CustomEvent/detail
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("CustomEvent")}} 인터페이스의 **`detail`** 읽기 전용 속성은 이벤트를 초기화할 때 제공한 데이터를 반환합니다.

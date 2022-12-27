@@ -119,4 +119,4 @@ Aqui está o título!
 
 ## Veja Também
 
-- Espcificação de Seletores CSS - <http://www.w3.org/TR/selectors/#specificity>
+- Espcificação de Seletores CSS - <https://www.w3.org/TR/selectors/#specificity>

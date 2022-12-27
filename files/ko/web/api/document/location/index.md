@@ -2,6 +2,7 @@
 title: Document.location
 slug: Web/API/Document/location
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.location`** read-only property returns a {{domxref("Location")}} object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL.

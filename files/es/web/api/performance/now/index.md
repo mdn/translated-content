@@ -1,13 +1,6 @@
 ---
 title: performance.now()
 slug: Web/API/Performance/now
-tags:
-  - API
-  - Referencia
-  - Rendimiento
-  - Web Performance API
-  - metodo
-translation_of: Web/API/Performance/now
 ---
 
 {{APIRef("High Resolution Timing")}}

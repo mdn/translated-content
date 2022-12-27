@@ -1,19 +1,6 @@
 ---
 title: element.getBoundingClientRect
 slug: Web/API/Element/getBoundingClientRect
-tags:
-  - API
-  - Boundary
-  - Bounding
-  - Bounds
-  - CSSOM View
-  - Cliente
-  - DOM
-  - Elemento
-  - Minimo
-  - Referencia
-  - metodo
-translation_of: Web/API/Element/getBoundingClientRect
 ---
 
 {{APIRef}}

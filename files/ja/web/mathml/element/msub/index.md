@@ -48,10 +48,7 @@ Rendering in your browser: <math><msub><mi>X</mi> <mn>1</mn></msub></math>
 
 ## 仕様
 
-| Specification                                                                    | Status                       | Comment               |
-| -------------------------------------------------------------------------------- | ---------------------------- | --------------------- |
-| {{ SpecName('MathML3', 'chapter3.html#presm.msub', 'msub') }} | {{ Spec2('MathML3') }} | Current specification |
-| {{ SpecName('MathML2', 'chapter3.html#presm.msub', 'msub') }} | {{ Spec2('MathML2') }} | Initial specification |
+{{Specifications}}
 
 ## See also
 

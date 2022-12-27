@@ -35,7 +35,7 @@ Au delà de l'élément racine du document (ici l'élément `html`), un nouveau 
 - Les éléments avec {{cssxref("contain", "contain: layout", "#layout")}}, `content` ou `strict`
 - [Les élément flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox)
 - [Les éléments de grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)
-- [Les conteneurs multi-colonnes](fr/docs/Web/CSS/CSS_Columns/Concepts_base_multi-colonnes)
+- [Les conteneurs multi-colonnes](/fr/docs/Web/CSS/CSS_Columns/Concepts_base_multi-colonnes)
 - Les éléments avec {{cssxref("column-span")}}: `all`
 
 Prenons quelques exemples afin de voir les conséquences de la création d'un nouveau contexte de formatage de bloc.

@@ -33,10 +33,7 @@ slug: Web/API/PerformanceMark
 
 ## 仕様書
 
-| 仕様書                                                                                               | ステータス                                   | コメント     |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------ |
-| {{SpecName('User Timing Level 2', '#performancemark', 'PerformanceMark')}} | {{Spec2('User Timing Level 2')}} |              |
-| {{SpecName('User Timing', '#performancemark', 'PerformanceMark')}}             | {{Spec2('User Timing')}}             | 基本的な定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -28,9 +28,7 @@ A {{JSxRef("Boolean")}}
 
 ## 仕様書
 
-| 仕様書                                                                                                           | 状態                         | 備考     |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------- |
-| {{SpecName("WebDriver","#dom-navigatorautomationinformation-webdriver","webdriver")}} | {{Spec2("WebDriver")}} | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

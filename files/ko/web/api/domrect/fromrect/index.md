@@ -2,6 +2,7 @@
 title: DOMRect.fromRect()
 slug: Web/API/DOMRect/fromRect
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 {{domxref("DOMRect")}} 객체의 **`fromRect()`** 정적 메서드는 주어진 좌표와 크기를 가진 새로운 `DOMRect` 객체를 반환합니다.

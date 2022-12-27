@@ -35,7 +35,7 @@ Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla e
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.-moz-ui-invalid")}}
+{{Compat}}
 
 ## Voir aussi
 

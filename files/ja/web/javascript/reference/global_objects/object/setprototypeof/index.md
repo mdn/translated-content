@@ -181,9 +181,7 @@ if (!Object.setPrototypeOf) {
 
 ## 仕様書
 
-| 仕様書                                                                                                   |
-| -------------------------------------------------------------------------------------------------------- |
-| {{SpecName('ESDraft', '#sec-object.setprototypeof', 'Object.setPrototypeOf')}} |
+{{Specifications}}
 
 ## ブラウザーの互換性
 

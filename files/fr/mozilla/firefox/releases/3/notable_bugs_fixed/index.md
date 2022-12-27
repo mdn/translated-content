@@ -19,11 +19,11 @@ Cet article fait la liste des corrections importantes faisant partie de Firefox 
 - Les gestionnaires d'évènements sont conservés lorsque des éléments sont déplacés dans ou retirés d'un document XUL. ({{ Bug(286619) }})
 - Les évènements de mutation sont déclenchés aussi pour les documents non affichés. ({{ Bug(201238) }})
 - Divers problèmes dans l'ordre d'affichage des éléments ont été corrigés. ({{ Bug(317375) }})
-- [`getElementsByTagName()`](fr/DOM/element.getElementsByTagName) a été corrigé pour fonctionner correctement sur les sous-arbres dont des éléments ont des préfixes d'espaces de noms dans leur nom de balise ({{ Bug(206053) }}).
+- [`getElementsByTagName()`](/fr/DOM/element.getElementsByTagName) a été corrigé pour fonctionner correctement sur les sous-arbres dont des éléments ont des préfixes d'espaces de noms dans leur nom de balise ({{ Bug(206053) }}).
 - Les évènements `DOMNodeInserted` et `DOMNodeRemoved` s'appliquent à présent aux bons nœuds ({{ Bug(367164) }}).
 - `\d`, un des caractères spéciaux dans les expressions rationnelles, a été corrigé pour correspondre uniquement aux chiffres de base de l'alphabet latin (équivalent à `[0-9]`). ({{ Bug(378738) }})
 - La catégorie image-sniffing-services permet aux décodeurs d'images implémentés comme des extensions de décoder correctement des images envoyées avec des types MIME incorrects. ({{ Bug(391667) }})
 
 ### Voir aussi
 
-- [Firefox 3 pour les développeurs](fr/Firefox_3_pour_les_d%c3%a9veloppeurs)
+- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_d%c3%a9veloppeurs)

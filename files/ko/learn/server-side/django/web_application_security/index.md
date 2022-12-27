@@ -2,6 +2,7 @@
 title: Django web application security
 slug: Learn/Server-side/Django/web_application_security
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Deployment", "Learn/Server-side/Django/django_assessment_blog", "Learn/Server-side/Django")}}
 
 사용자의 데이터를 보호하는 것은 모든 웹사이트 개발에서 중요한 부분입니다. 우리는 이전의 강의 [Web security](/ko/docs/Web/Security) 에서 자주 나타나는 보안 위협에 대해 알아봤습니다. — 이번 강의에서는 장고의 내장 보안 기능이 이런 위험에 어떻게 대처하는지 실제 예시들을 통해 살펴보겠습니다.

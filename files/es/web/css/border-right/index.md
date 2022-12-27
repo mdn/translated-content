@@ -1,11 +1,6 @@
 ---
 title: border-right
 slug: Web/CSS/border-right
-tags:
-  - Bordes CSS
-  - Propiedad CSS
-  - Referencia
-translation_of: Web/CSS/border-right
 ---
 
 {{CSSRef}}

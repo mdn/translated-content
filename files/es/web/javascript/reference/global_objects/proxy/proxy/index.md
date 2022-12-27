@@ -55,7 +55,7 @@ Some non-standard traps are [obsolete and have been removed](/es/docs/Web/JavaSc
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.Proxy.handler")}}
+{{Compat}}
 
 ## See also
 

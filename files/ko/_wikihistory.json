@@ -10884,10 +10884,6 @@
     "modified": "2020-10-29T08:46:10.367Z",
     "contributors": ["limkukhyun", "jung-han", "04SeoHyun", "nakyong"]
   },
-  "WebAssembly/Caching_modules": {
-    "modified": "2019-03-18T21:26:57.835Z",
-    "contributors": ["limkukhyun"]
-  },
   "WebAssembly/Concepts": {
     "modified": "2020-12-08T12:12:26.855Z",
     "contributors": [
@@ -11958,6 +11954,10 @@
   "orphaned/Web/Security/Information_Security_Basics": {
     "modified": "2019-03-23T22:05:46.762Z",
     "contributors": ["daebum-lee"]
+  },
+  "orphaned/WebAssembly/Caching_modules": {
+    "modified": "2019-03-18T21:26:57.835Z",
+    "contributors": ["limkukhyun"]
   },
   "orphaned/Windows_and_menus_in_XULRunner": {
     "modified": "2019-01-16T15:50:48.799Z",

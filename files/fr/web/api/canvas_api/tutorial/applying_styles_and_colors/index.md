@@ -597,7 +597,7 @@ Le dernier arrêt de couleur dans chacun des quatre dégradés utilise une coule
 Dans l'un des exemples de la page précédente, nous avons utilisé une série de boucles pour créer un motif d'images. Il existe cependant une méthode beaucoup plus simple : la méthode `createPattern ()`.
 
 - {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
-  - : Crée et renvoie un nouvel objet de canvas. `image` est un {{domxref ("CanvasImageSource")}} (c'est-à-dire un {{domxref ("HTMLImageElement")}} ; un autre élément canvas,  `type` est une chaîne indiquant comment utiliser l'image.
+  - : Crée et renvoie un nouvel objet de canvas. `image` est un {{domxref ("CanvasImageSource")}} (c'est-à-dire un {{domxref ("HTMLImageElement")}} ; un autre élément canvas, `type` est une chaîne indiquant comment utiliser l'image.
 
 Le type spécifie comment utiliser l'image pour créer le motif et doit avoir l'une des valeurs de chaîne suivantes :
 
@@ -712,8 +712,10 @@ Lors de l'utilisation de `fill` (ou {{domxref ("CanvasRenderingContext2D.clip", 
 
 Deux valeurs sont possibles :
 
-- **`"nonzero`**": la [règle non-zero](http://en.wikipedia.org/wiki/Nonzero-rule), qui est la règle par défaut.
-- **`"evenodd"`**: La [règle even-odd](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
+- `nonzero`
+  - : la [règle non-zero](http://en.wikipedia.org/wiki/Nonzero-rule), qui est la règle par défaut.
+- `evenodd`
+  - : La [règle even-odd](http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule).
 
 Dans cet exemple, nous utilisons la règle `evenodd` .
 

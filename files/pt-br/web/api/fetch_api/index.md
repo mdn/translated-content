@@ -47,7 +47,7 @@ Você pode criar um pedido e uma resposta diretamente usando os construtores {{d
 
 ## Navegadores Compatíveis
 
-{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}
+{{Compat}}
 
 ## Veja também
 

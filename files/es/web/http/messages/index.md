@@ -1,7 +1,6 @@
 ---
 title: Mensajes HTTP
 slug: Web/HTTP/Messages
-translation_of: Web/HTTP/Messages
 ---
 
 {{HTTPSidebar}}

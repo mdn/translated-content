@@ -47,10 +47,7 @@ var elements = document.getElementsByName(name);
 
 ## 仕様書
 
-| 仕様書                                                                                                                       | 状態                                 | 備考     |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------- |
-| {{SpecName('HTML WHATWG', '#dom-document-getelementsbyname', "Document.getElementsByName()")}} | {{ Spec2('HTML WHATWG') }} |          |
-| {{SpecName("DOM2 HTML", "html.html#ID-71555259", "Document.getElementsByName()")}}                 | {{Spec2("DOM2 HTML")}}         | 初回定義 |
+{{Specifications}}
 
 ## ブラウザーの互換性
 
