@@ -7,7 +7,7 @@ tags:
   - Página de destino
 translation_of: MDN/Contribute
 ---
-{{MDNSidebar}}{{IncludeSubnav("/pt-BR/docs/MDN")}}
+{{MDNSidebar}}
 
 Bem-vindo! Ao visitar esta página, você deu o primeiro passo para se tornar um colaborador da MDN.
 

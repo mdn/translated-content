@@ -81,11 +81,11 @@ original_slug: Learn/Getting_started_with_the_web/파일들_다루기
 
 ## In this module
 
-- [Installing basic software](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
-- [What will your website look like?](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
-- [Dealing with files](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
-- [HTML basics](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/HTML_basics)
-- [CSS basics](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/CSS_basics)
-- [JavaScript basics](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
-- [Publishing your website](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
-- [How the web works](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)
+- [Installing basic software](/en-US/Learn/Getting_started_with_the_web/Installing_basic_software)
+- [What will your website look like?](/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [Dealing with files](/en-US/Learn/Getting_started_with_the_web/Dealing_with_files)
+- [HTML basics](/en-US/Learn/Getting_started_with_the_web/HTML_basics)
+- [CSS basics](/en-US/Learn/Getting_started_with_the_web/CSS_basics)
+- [JavaScript basics](/en-US/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [How the web works](/en-US/Learn/Getting_started_with_the_web/How_the_Web_works)

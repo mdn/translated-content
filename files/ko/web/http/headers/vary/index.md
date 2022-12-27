@@ -57,7 +57,7 @@ Vary: User-Agent
 
 {{Compat("http.headers.Vary")}}
 
-## <span class="trans_txt">호환성 노트</span>
+## 호환성 노트
 
 - [Vary with care – Vary header problems in IE6-9](https://blogs.msdn.microsoft.com/ieinternals/2009/06/17/vary-with-care/)
 

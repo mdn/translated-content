@@ -3,7 +3,7 @@ title: Inicializar el framework
 slug: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 translation_of: Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser", "Games/Workflows/2D_Breakout_game_Phaser/Scaling")}}
 

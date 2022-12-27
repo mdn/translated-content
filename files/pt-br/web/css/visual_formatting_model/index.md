@@ -213,4 +213,3 @@ With a _fixed positioned element_, the containing block is the viewport. The pos
 ## Veja Também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/CSS_Reference)
-- {{css_key_concepts}}

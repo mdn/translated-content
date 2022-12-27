@@ -62,4 +62,4 @@ Este elemento implementa a interface [`HTMLElement`](/en/DOM/element).
 - Outros elementos relacionados à seções: {{ HTMLElement("body") }}, {{ HTMLElement("article") }}, {{ HTMLElement("section") }}, {{ HTMLElement("aside") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};
 - [Seções e esboços de um documento HTML5](/pt-BR/docs/Seções_e_estrutura_HTML5)
 
-{{HTMLRef}}{{languages({ "ja": "ja/HTML/Element/nav" })}}
+{{HTMLRef}}

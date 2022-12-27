@@ -41,7 +41,7 @@ WebAssembly разработан для дополнения JavaScript – ис
 - {{jsxref("Global_objects/WebAssembly", "WebAssembly")}}
   - : Этот объект является пространством имён для всех функций, связанных с WebAssembly.
 - {{jsxref("Global_objects/WebAssembly/Module", "WebAssembly.Module()")}}
-  - : Объект `WebAssembly.Module` содержит не контролируемый WebAssembly код, который уже скомпилирован браузером и может эффективно использоваться совместно с[ Workers](/ru/docs/Web/API/Worker/postMessage), [кешироваться в IndexedDB](/ru/docs/WebAssembly/Caching_modules), и иметь несколько экземпляров.
+  - : Объект `WebAssembly.Module` содержит не контролируемый WebAssembly код, который уже скомпилирован браузером и может эффективно использоваться совместно с [Workers](/ru/docs/Web/API/Worker/postMessage), [кешироваться в IndexedDB](/ru/docs/WebAssembly/Caching_modules), и иметь несколько экземпляров.
 - {{jsxref("Global_objects/WebAssembly/Instance", "WebAssembly.Instance()")}}
   - : Объект `WebAssembly.Instance` это контролируемый, исполняемый экземпляр `Module`. `Instance` содержит все [экспортированные функции WebAssembly](/ru/docs/WebAssembly/Exported_functions), которые позволяют вызывать код WebAssembly из JavaScript.
 - {{jsxref("Global_objects/WebAssembly/instantiateStreaming", "WebAssembly.instantiateStreaming()")}}

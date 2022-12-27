@@ -10,7 +10,7 @@ tags:
 translation_of: MDN/About
 original_slug: MDN/About
 ---
-{{MDNSidebar}}{{IncludeSubNav("/pt-BR/docs/MDN")}}
+{{MDNSidebar}}
 
 A Rede de Desenvolvedores da Mozilla (MDN) é uma plataforma de aprendizagem em evolução para tecnologias da Web e o software que alimenta a Web, incluindo:
 

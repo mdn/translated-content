@@ -6,8 +6,6 @@ original_slug: Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Bounce_off
 ---
 {{GamesSidebar}}
 
-{{IncludeSubnav("/es/docs/Games")}}
-
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado")}}
 
 Este es el **tercer** paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Workflows/Breakout_game_from_scratch). Puedes encontrar el código fuente y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).

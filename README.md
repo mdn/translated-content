@@ -70,12 +70,12 @@ Now you need to fork and clone both the
 
 1. Once the above is done, cd into the content repo.
 
-1. Run the command `yarn install` to fetch the latest packages and get the local
+2. Run the command `yarn install` to fetch the latest packages and get the local
    MDN testing environment set up. It is also recommended that you run
    `yarn install` before every update you do to the source, to make sure you
    have the latest packages.
 
-1. Next, create an environment variable called `CONTENT_TRANSLATED_ROOT`
+3. Next, create an environment variable called `CONTENT_TRANSLATED_ROOT`
    containing the path to the *translated-content* repo’s `files` directory. You
    could do this for a single session like so:
 
@@ -94,7 +94,7 @@ Now you need to fork and clone both the
 
    (the `.env` file will be created for you if it does not already exist.)
 
-1. Now you’ve got this set up, enter the command `yarn start` to begin the local
+4. Now you’ve got this set up, enter the command `yarn start` to begin the local
    testing server running at `localhost:5042`.
 
 ### Working in the translated-content repo
@@ -104,15 +104,15 @@ then:
 
 1. Create a new branch to make your changes in.
 
-1. Switch to your new branch and make the changes you want to make. You can keep
+2. Switch to your new branch and make the changes you want to make. You can keep
    going back to `localhost:5042/<your_locale>` (e.g. `localhost:5042/fr` for
    French) to test your changes and make sure the content looks how you want it
    to look.
 
-1. When you are satisfied with your changes, create a pull request and one of
+3. When you are satisfied with your changes, create a pull request and one of
    our review teams will review it.
 
-1. Once the pull request has been merged, the edition may take up to 48 hours
+4. Once the pull request has been merged, the edition may take up to 48 hours
    (daily build and CDN caches). To see if your change has been deployed,
    you can check on
    [What's Deployed](https://whatsdeployed.io/s/16d/mdn/translated-content).

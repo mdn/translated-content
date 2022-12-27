@@ -68,7 +68,7 @@ HTTP 조건부 요청은 특정 헤더 값에 의존하여 기존과는 다르�
 
 ![With a stale cache, the conditional request is sent. The server can determine if the resource changed, and, as in this case, decide not to send it again as it is the same.](https://mdn.mozillademos.org/files/13731/HTTPCache2.png)
 
-리소스가 변경되었다면, 요청이 조건부가 아니었고 클라이언트가 이 새로운 리소스를 사용하는(그리고 그것을 캐시하는) 경우처럼, 서버는 리소스의 새로운 버전과 함께, {{HTTPStatus("200")}}` OK` 응답을 회신합니다.
+리소스가 변경되었다면, 요청이 조건부가 아니었고 클라이언트가 이 새로운 리소스를 사용하는(그리고 그것을 캐시하는) 경우처럼, 서버는 리소스의 새로운 버전과 함께, {{HTTPStatus("200")}} `OK` 응답을 회신합니다.
 
 ![In the case where the resource was changed, it is sent back as if the request wasn't conditional.](https://mdn.mozillademos.org/files/13733/HTTPCache3.png)
 

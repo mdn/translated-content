@@ -14,7 +14,7 @@ original_slug: Web/XSLT/fallback
 
 ```
 <xsl:fallback>
-	TEMPLATE
+  TEMPLATE
 </xsl:fallback>
 ```
 

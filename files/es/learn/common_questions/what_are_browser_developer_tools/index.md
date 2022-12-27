@@ -13,7 +13,6 @@ tags:
   - aprende
 translation_of: Learn/Common_questions/What_are_browser_developer_tools
 ---
-{{IncludeSubnav("/es/Learn")}}
 
 Todos los navegadores web modernos incluyen un potente conjunto de herramientas para desarrolladores. Estas herramientas hacen una variedad de cosas, desde inspeccionar HTML, CSS y JavaScript actualmente cargados, hasta mostrar qué activos ha solicitado la página y cuánto tiempo tardaron en cargarse. Este artículo explica cómo utilizar las funciones básicas de las herramientas de desarrollo de tu navegador.
 

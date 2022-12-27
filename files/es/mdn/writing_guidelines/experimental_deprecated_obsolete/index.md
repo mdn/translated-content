@@ -10,7 +10,7 @@ tags:
 translation_of: MDN/Guidelines/Conventions_definitions
 original_slug: MDN/Guidelines/Conventions_definitions
 ---
-{{MDNSidebar}}{{IncludeSubnav("/es/docs/MDN")}}
+{{MDNSidebar}}
 
 Este artículo define algunas convenciones y definiciones que se usan comúnmente en MDN, que pueden no ser obvias para algunas personas cuando las encuentran en la documentación.
 

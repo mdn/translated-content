@@ -89,7 +89,7 @@ A2HS 所需的字段如下：
 
 请注意，每个图标对象中的 `type` 成员都指定了该图标的 MIME 类型，因此浏览器可以快速读取该图标的类型，并在不支持此类型时将其忽略并采用其他图标。
 
-在设计图标方面，您应该遵循与任何 Android 图标相同的最佳做法（请参阅 [Android 图标设计指南](https://developer.android.com/guide/practices/ui_guidelines/icon_design.html)）。
+在设计图标方面，您应该遵循与任何 Android 图标相同的最佳做法（请参阅 [Google Play 图标设计规范](https://developer.android.google.cn/distribute/google-play/resources/icon-design-specifications)）。
 
 ### 将 HTML 链接到 manifest
 

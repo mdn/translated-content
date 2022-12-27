@@ -63,7 +63,7 @@ translation_of: Web/HTML/Element/data
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes "HTML/Global attributes")을 포함합니다
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다
 
 - {{htmlattrdef("value")}}
   - : 기계가 읽을 수 있는 형태의 콘텐츠 해석본.

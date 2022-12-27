@@ -30,9 +30,9 @@ _표준_ 웹 사이트를 선택하기 위한 서로 다른 방법들이 있습�
 
 예:
 
-1.  서버가 `http://www.example.org/whaddup` 에 대한 요청을 받습니다(표준 도메인이 example.org인 경우).
-2.  서버는 헤더인 {{HTTPHeader("Location<code>")}}: http\://example.org/whaddup 와 함께 {{HTTPStatus(301)}} 코드로 응답하게 됩니다.
-3.  클라이언트는 표준 도메인(`http://example.org/whatddup)`에 대한 요청을 발급합니다.
+1. 서버가 `http://www.example.org/whaddup` 에 대한 요청을 받습니다(표준 도메인이 example.org인 경우).
+2. 서버는 헤더인 {{HTTPHeader("Location")}}: `http://example.org/whaddup` 와 함께 {{HTTPStatus(301)}} 코드로 응답하게 됩니다.
+3. 클라이언트는 표준 도메인(`http://example.org/whatddup)`에 대한 요청을 발급합니다.
 
 [HTML5 보일러플레이트 프로젝트](https://github.com/h5bp/html5-boilerplate)는 [하나의 도메인을 다른 도메인으로 리다이렉티시키도록 Apache 서버 구성하는 방법](https://github.com/h5bp/html5-boilerplate/blob/7a22a33d4041c479d0962499e853501073811887/.htaccess#L219-L258)에 대한 예제를 가지고 있습니다.
 

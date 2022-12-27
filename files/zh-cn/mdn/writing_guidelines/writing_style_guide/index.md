@@ -436,7 +436,7 @@ _A confirmation dialog box appears, which asks the user for permission to use th
 
 ### 推荐样式指南
 
-如果你在撰写过程中或在格式方面遇到了本文尚未提及的问题，我们建议你参考 [微软的风格指南](https://docs.microsoft.com/zh-cn/style-guide)，如果还是不能解决问题，还可参考[芝加哥论文格式](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206)，网络上有一份非官方的[PDF 版本](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf)
+如果你在撰写过程中或在格式方面遇到了本文尚未提及的问题，我们建议你参考[微软的风格指南](https://docs.microsoft.com/zh-cn/style-guide)，如果还是不能解决问题，还可参考[芝加哥论文格式](https://www.amazon.com/Chicago-Manual-Style-16th/dp/0226104206)，网络上有一份非官方的[PDF 版本](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf)
 
 ### 推荐词典
 

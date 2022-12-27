@@ -108,5 +108,4 @@ CSS 2.0 defined only [computed value](/pt-BR/docs/CSS/computed_value) as the las
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/CSS_Reference)
-- {{ CSS_key_concepts() }}
 - [window.getComputedStyle](/pt-BR/docs/DOM/window.getComputedStyle)

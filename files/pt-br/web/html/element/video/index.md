@@ -129,5 +129,3 @@ Esse elemento implementa a interface [`HTMLVideoElement`](/en/DOM/HTMLVideoEleme
 - [TinyVid](http://tinyvid.tv/) - exemplos utilizando arquivos ogg em HTML5.
 - [The `video` element](http://www.whatwg.org/specs/web-apps/current-work/#video) (Especificação HTML 5)
 - [Configuring servers for Ogg media](/en/Configuring_servers_for_Ogg_media)
-
-{{ languages( { "fr": "fr/HTML/Element/video","es": "es/HTML/Elemento/video" } ) }}

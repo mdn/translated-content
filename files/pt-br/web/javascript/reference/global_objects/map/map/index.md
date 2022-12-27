@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Map.Map
 ---
 {{JSRef}}
 
-O **construtor `Map()`** cria objetos {{jsxref("Map")}}.  
+O **construtor `Map()`** cria objetos {{jsxref("Map")}}.
 
 ## Sintaxe
 

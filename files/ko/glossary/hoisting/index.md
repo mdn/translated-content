@@ -6,7 +6,7 @@ JavaScript에서 **호이스팅**(hoisting)이란, 인터프리터가 변수와 
 
 호이스팅을 설명할 땐 주로 "변수의 선언과 초기화를 분리한 후, 선언만 코드의 최상단으로 옮기는" 것으로 말하곤 합니다. 따라서 변수를 정의하는 코드보다 사용하는 코드가 앞서 등장할 수 있습니다. 다만 선언과 초기화를 함께 수행하는 경우, 선언 코드까지 실행해야 변수가 초기화된 상태가 됨을 주의하세요.
 
-<div class="notecard note"><p><strong>참고:</strong> 호이스팅은 (<code>let</code>과 <code>const</code>를 포함한) <a href="https://www.ecma-international.org/ecma-262/6.0/index.html">ECMAScript® 2015 언어 명세</a> 이전의 표준 명세에는 나타나지 않았습니다. 당시에는 호이스팅이 JavaScript에서 실행 맥락, 특히 생성 및 실행 단계의 동작 방식을 설명하는 일반적인 방법이었습니다.</p></div>
+> **참고:** 호이스팅은 (`let`과 `const`를 포함한) [ECMAScript® 2015 언어 명세](https://www.ecma-international.org/ecma-262/6.0/index.html) 이전의 표준 명세에는 나타나지 않았습니다. 당시에는 호이스팅이 JavaScript에서 실행 맥락, 특히 생성 및 실행 단계의 동작 방식을 설명하는 일반적인 방법이었습니다.
 
 ## 기술 예제
 

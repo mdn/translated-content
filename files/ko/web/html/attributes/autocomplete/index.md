@@ -20,9 +20,9 @@ translation_of: Web/HTML/Attributes/autocomplete
 
 > **참고:** `<input>`/`<select>`/`<textarea>` 요소가 다음 조건을 만족해야 사용자 에이전트가 자동완성을 제공할 수도 있습니다.
 >
-> 1.  `name` 또는 `id` 특성 존재
-> 2.  `<form>` 요소의 자손일 것
-> 3.  양식에 {{HTMLElement("input/submit", "제출")}} 버튼이 있을 것
+> 1. `name` 또는 `id` 특성 존재
+> 2. `<form>` 요소의 자손일 것
+> 3. 양식에 {{HTMLElement("input/submit", "제출")}} 버튼이 있을 것
 
 ## 값
 

@@ -14,7 +14,7 @@ original_slug: Web/XSLT/if
 
 ```
 <xsl:if test=EXPRESSION>
-	TEMPLATE
+  TEMPLATE
 </xsl:if>
 ```
 

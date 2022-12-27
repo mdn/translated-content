@@ -6,7 +6,7 @@ tags:
   - TopicStub
 translation_of: Games/Techniques
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
 This page lists essential core techniques for anyone wanting to develop games using open web technologies.
 

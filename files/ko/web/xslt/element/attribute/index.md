@@ -14,7 +14,7 @@ original_slug: Web/XSLT/attribute
 
 ```
 <xsl:attribute name=NAME namespace=URI>
-	TEMPLATE
+  TEMPLATE
 </xsl:attribute>
 ```
 

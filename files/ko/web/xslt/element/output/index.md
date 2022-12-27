@@ -14,16 +14,16 @@ original_slug: Web/XSLT/output
 
 ```
 <xsl:output
-	method="xml" | "html" | "text"
-	version=STRING
-	encoding=STRING
-	omit-xml-declaration="yes" | "no"
-	standalone="yes" | "no"
-	doctype-public=STRING
-	doctype-system=STRING
-	cdata-section-elements=LIST-OF-NAMES
-	indent="yes" | "no"
-	media-type=STRING  />
+  method="xml" | "html" | "text"
+  version=STRING
+  encoding=STRING
+  omit-xml-declaration="yes" | "no"
+  standalone="yes" | "no"
+  doctype-public=STRING
+  doctype-system=STRING
+  cdata-section-elements=LIST-OF-NAMES
+  indent="yes" | "no"
+  media-type=STRING  />
 ```
 
 ### 필수 속성

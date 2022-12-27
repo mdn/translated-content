@@ -55,5 +55,4 @@ A palavra-chave {{ Cssxref("inherit") }} permite aos autores especificar explici
 ## Veja também
 
 - [Referência CSS](/pt-BR/docs/Web/CSS/Reference)
-- {{ CSS_key_concepts() }}
 - {{ Cssxref("inherit") }}

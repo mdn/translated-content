@@ -16,7 +16,7 @@ tags:
 translation_of: MDN/Contribute/Howto/Tag
 original_slug: MDN/Contribute/Howto/Tag
 ---
-{{MDNSidebar}}{{IncludeSubnav("/pt-BR/docs/MDN")}}
+{{MDNSidebar}}
 
 As etiquetas dos artigos são uma forma importante de ajudar visitantes a encontrar o conteúdo procurado. Há muitas etiquetas usadas para ajudar a organizar as informações na MDN. Esta página vai lhe ensinar a melhor maneira de rotular as páginas, a fim de fazer com que as informações sejam organizadas, classificadas e localizadas mais facilmente. Cada página pode ser marcada por etiquetas que ajudam a classificar seu conteúdo.
 

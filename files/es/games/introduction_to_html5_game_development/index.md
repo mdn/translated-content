@@ -10,7 +10,6 @@ translation_of: Games/Introduction_to_HTML5_Game_Development_(summary)
 original_slug: Games/Introducción_al_desarrollo_de_juegos_HTML5_(resumen)
 ---
 {{GamesSidebar}}
-{{IncludeSubnav("/es/docs/Games")}}
 
 ## Ventajas
 

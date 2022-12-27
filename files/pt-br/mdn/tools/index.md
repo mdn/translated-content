@@ -6,7 +6,7 @@ tags:
   - MDN Meta
 translation_of: MDN/Tools
 ---
-{{MDNSidebar}}{{IncludeSubnav("/pt-BR/docs/MDN")}}
+{{MDNSidebar}}
 
 MDN oferece ferramentas tornando fácil o acompanhamento do progresso, gerenciamento de conteúdo e manter o site com as últimas atualizações.
 

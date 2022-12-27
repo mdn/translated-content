@@ -46,4 +46,3 @@ Margens de [elementos flutuantes](/pt-BR/docs/Web/CSS/float) e [posicionados de 
 ## Veja Também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/CSS_Reference)
-- {{css_key_concepts}}

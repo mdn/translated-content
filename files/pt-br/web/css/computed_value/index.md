@@ -37,4 +37,3 @@ The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API returns
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
-- {{CSS_key_concepts}}

@@ -56,7 +56,7 @@ Authorization: <type> <credentials>
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-HTTP basic 인증을 사용하여 비밀번호를 보호하기 위해 Apache 또는 nginx 서버를 어떻게 설정해야 하는지 예제를 보기 위해서는[ HTTP authentication](/ko/docs/Web/HTTP/Authentication) 를 보시기 바랍니다.
+HTTP basic 인증을 사용하여 비밀번호를 보호하기 위해 Apache 또는 nginx 서버를 어떻게 설정해야 하는지 예제를 보기 위해서는 [HTTP authentication](/ko/docs/Web/HTTP/Authentication) 를 보시기 바랍니다.
 
 ## 기술 사양
 

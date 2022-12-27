@@ -46,4 +46,3 @@ The `/* */` comment syntax is used for both single and multi line comments. Ther
 ## Veja também
 
 - [CSS Reference](/pt-BR/docs/Web/CSS/Reference)
-- {{CSS_key_concepts}}

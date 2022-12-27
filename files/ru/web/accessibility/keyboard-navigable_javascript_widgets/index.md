@@ -97,8 +97,8 @@ _Пример 2: Меню, использующее атрибут tabindex дл
 
 Когда пользователь уходит с виджета, а потом возвращается обратно, фокус должен вернутся на определённый элемент, у которого был фокус раньше. Например, на конкретный элемент дерева или ячейку. Есть два варианта, которыми этого можно добиться:
 
-1.  Переходящий `tabindex`: программное перемещение фокуса
-2.  `aria-activedescendant`: управление «виртуальным» фокусом
+1. Переходящий `tabindex`: программное перемещение фокуса
+2. `aria-activedescendant`: управление «виртуальным» фокусом
 
 #### Техника первая: Переходящий tabindex
 
@@ -106,9 +106,9 @@ _Пример 2: Меню, использующее атрибут tabindex дл
 
 Для этого необходимо обрабатывать событие keydown для каждого дочернего элемента виджета. Когда пользователь нажимает на стрелочки на клавиатуре, чтобы переместиться на другой элемент следует:
 
-1.  программно применить фокус к другому элементу
-2.  изменить tabindex элемента в фокусе на 0
-3.  изменить tabindex предыдущего элемента на -1
+1. программно применить фокус к другому элементу
+2. изменить tabindex элемента в фокусе на 0
+3. изменить tabindex предыдущего элемента на -1
 
 По ссылке вы можете увидеть пример [WAI-ARIA tree view](https://files.paciellogroup.com/training/WWW2012/samples/Samples/aria/tree/index.html), использующий эту технику.
 
@@ -126,7 +126,7 @@ _Пример 2: Меню, использующее атрибут tabindex дл
 
 #### Техника вторая: aria-activedescendant
 
-Эта техника позволяет объединить каждый отдельно взятый обработчик событий в контейнер графического элемента и использовать `aria-activedescendent` для слежения за "виртуальным" фокусом . (Для получения более подробной информации относительно ARIA обратите внимание на [обзор доступных веб-приложений и виджетов ](/ru/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets).)
+Эта техника позволяет объединить каждый отдельно взятый обработчик событий в контейнер графического элемента и использовать `aria-activedescendent` для слежения за "виртуальным" фокусом . (Для получения более подробной информации относительно ARIA обратите внимание на [обзор доступных веб-приложений и виджетов](/ru/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets).)
 
 The `aria-activedescendant` property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of `aria-activedescendant` and ensuring that the current item is styled appropriately (for example, with a border or background color).
 

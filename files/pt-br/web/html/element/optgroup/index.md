@@ -21,7 +21,7 @@ Em um Formulário Web, o elemento HTML `<optgroup>` cria um agrupamento de opç�
 - _Elemento pai permitido_ Um elemento {{HTMLElement("select")}}.
 - _Interface DOM_ {{domxref("HTMLOptGroupElement")}}
 
-{{Note("Elementos do tipo <strong>optgroup</strong> não podem ser aninhados.")}}
+> **Nota:** Elementos do tipo <strong>optgroup</strong> não podem ser aninhados.
 
 ## Atributos
 

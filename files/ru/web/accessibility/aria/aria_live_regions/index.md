@@ -11,8 +11,8 @@ In the past, a web page change could only be spoken in entirety which often anno
 
 Dynamic content which updates without a page reload is generally either a region or a widget. Simple content changes which are not interactive should be marked as live regions. Below is a list of each related ARIA live region property with a description.
 
-1.  **aria-live**: The aria-live=POLITENESS_SETTING is used to set the priority with which screen reader should treat updates to live regions - the possible settings are: off/polite/assertive. The default setting is 'off'. This attribute is by far the most important.
-2.  **aria-controls**: The aria-controls=\[IDLIST] is used to associate a control with the regions that it controls. Regions are identified just like an ID in a div, and multiple regions can be associated with a control using a space, e.g. aria-controls="myRegionID1 myRegionsID2".
+1. **aria-live**: The aria-live=POLITENESS_SETTING is used to set the priority with which screen reader should treat updates to live regions - the possible settings are: off/polite/assertive. The default setting is 'off'. This attribute is by far the most important.
+2. **aria-controls**: The aria-controls=\[IDLIST] is used to associate a control with the regions that it controls. Regions are identified just like an ID in a div, and multiple regions can be associated with a control using a space, e.g. aria-controls="myRegionID1 myRegionsID2".
 
     > **Предупреждение:** Not known if the aria-controls aspect of live regions is implemented in current ATs, or which. Needs research.
 
@@ -47,18 +47,18 @@ In the following well-known predefined cases it is better to use a specific prov
 
 (TBD: what is supported where?)
 
-1.  **aria-atomic**: The aria-atomic=BOOLEAN is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes - the possible settings are false/true where false is the default.
-2.  [**aria-relevant**](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute): The aria-relevant=\[LIST_OF_CHANGES] is used to set what types of changes are relevant to a live region - the possible settings are additions/removals/text/all where "additions text" is the default.
-3.  **aria-labelledby**: The aria-labelledby=\[IDLIST] is used to associate a region with its labels, similar to aria-controls but instead associating labels to the region and again label identifiers are separated with a space.
-4.  **aria-describedby**: The aria-describedby=\[IDLIST] is used to associate a region with its descriptions, similar to aria-controls but instead associating descriptions to the region and description identifiers are separated with a space.
+1. **aria-atomic**: The aria-atomic=BOOLEAN is used to set whether or not the screen reader should always present the live region as a whole, even if only part of the region changes - the possible settings are false/true where false is the default.
+2. [**aria-relevant**](/ru/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute): The aria-relevant=\[LIST_OF_CHANGES] is used to set what types of changes are relevant to a live region - the possible settings are additions/removals/text/all where "additions text" is the default.
+3. **aria-labelledby**: The aria-labelledby=\[IDLIST] is used to associate a region with its labels, similar to aria-controls but instead associating labels to the region and again label identifiers are separated with a space.
+4. **aria-describedby**: The aria-describedby=\[IDLIST] is used to associate a region with its descriptions, similar to aria-controls but instead associating descriptions to the region and description identifiers are separated with a space.
 
 ### Advanced Use Case: Roster
 
 A chat site would like to display a list of users currently logged on. Display a list of users where a user's log-in and log-out status will be reflected dynamically (without a page reload).
 
-```
+```html
 <ul id="roster" aria-live="polite" aria-relevant="additions removals">
-	<!-- use JavaScript to add remove users here-->
+  <!-- use JavaScript to add remove users here-->
 </ul>
 ```
 

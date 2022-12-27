@@ -87,13 +87,14 @@ Ya hemos visto el elemento {{htmlelement("title")}} en acción — se puede usar
 
 2. Ahora abre el archivo en tu navegador. Deberías ver algo como esto:
 
-   ![Una sencilla página web con el título configurado a <title> element, y el <h1> configurado a <h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)Ahora debería quedar claro dónde aparece el contenido de `<h1>` y dónde aparece el contenido de `<title>`.
+   ![Una sencilla página web con el título configurado a \<title> element, y el \<h1> configurado a \<h1> element.](title-example.png)
+   Ahora debería quedar claro dónde aparece el contenido de `<h1>` y dónde aparece el contenido de `<title>`.
 
 3. También podrías probar a abrir el código en tu editor de código, editar el contenido de estos elementos y luego actualizar la página en tu navegador. Juega un poco con ello.
 
 El contenido del elemento `<title>` también se usa de otras formas. Por ejemplo, si intentas marcar la página como favorita (**Marcadores → Marcar esta página**, o el icono en forma de estrella de Firefox), verás que el nombre que se sugiere para el marcado es el contenido del elemento `<title>`.
 
-![Se está marcando una página web en Firefox; el nombre del marcador se ha completado automáticamente con el contenido del elemento <title>](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
+![Se está marcando una página web en Firefox; el nombre del marcador se ha completado automáticamente con el contenido del elemento \<title>](bookmark-example.png)
 
 El contenido de `<title>` también se usa en el resultado de las búsquedas, como verás a continuación.
 

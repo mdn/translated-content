@@ -179,7 +179,7 @@ Simple file.
 
 ### `multipart/byteranges`
 
-`multipart/byteranges`는 브라우저로 회신하는 부분적인 응답 전송의 컨텍스트 내에서 사용됩니다. {{HTTPStatus("206")}}` Partial Content` 상태 코드가 전송된 경우, MIME 타입은 문서가 각각의 요청된 범위들 중 하나인 몇 가지 파트들로 구성되어 있음을 알려주기 위해 사용됩니다. 다른 멀티파트 타입처럼, {{HTTPHeader("Content-Type")}}은 경계선 문자열을 정의하기 위해 `boundary` 디렉티브를 사용합니다. 각각의 다른 파트들은 문서의 실제 타입을 가진 {{HTTPHeader("Content-Type")}} 헤더와 그들이 나타내는 범위를 가진 {{HTTPHeader("Content-Range")}}를 지니고 있습니다.
+`multipart/byteranges`는 브라우저로 회신하는 부분적인 응답 전송의 컨텍스트 내에서 사용됩니다. {{HTTPStatus("206")}} `Partial Content` 상태 코드가 전송된 경우, MIME 타입은 문서가 각각의 요청된 범위들 중 하나인 몇 가지 파트들로 구성되어 있음을 알려주기 위해 사용됩니다. 다른 멀티파트 타입처럼, {{HTTPHeader("Content-Type")}}은 경계선 문자열을 정의하기 위해 `boundary` 디렉티브를 사용합니다. 각각의 다른 파트들은 문서의 실제 타입을 가진 {{HTTPHeader("Content-Type")}} 헤더와 그들이 나타내는 범위를 가진 {{HTTPHeader("Content-Range")}}를 지니고 있습니다.
 
 ```
 HTTP/1.1 206 Partial Content

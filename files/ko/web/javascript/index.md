@@ -40,10 +40,10 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
   - : 비동기 JavaScript가 중요한 이유와, 비동기적 코드를 사용해 서버에서 리소스 가져오기 등 블록킹 연산을 효율적으로 처리하는 방법에 대해 알아봅니다.
 - [클라이언트측 웹 API](/ko/docs/Learn/JavaScript/Client-side_web_APIs)
   - : API란 무엇인지 탐색해보고, 개발 작업에서 자주 접하게 될 가장 일반적인 API를 사용하는 방법을 알아봅니다.
-- ### JavaScript 안내서
 
-  [JavaScript 가이드](/ko/docs/Web/JavaScript/Guide)
+### JavaScript 안내서
 
+- [JavaScript 가이드](/ko/docs/Web/JavaScript/Guide)
   - : JavaScript 또는 다른 언어로 프로그래밍 경험이 있는 독자들을 대상으로한 JavaScript 언어에 대한 상세 가이드입니다.
 
 ### 중급
@@ -79,7 +79,7 @@ JavaScript를 배우고 싶지만 JavaScript이나 프로그래밍에 대한 이
 - [표준 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects)
   - : {{jsxref("Array")}}, {{jsxref("Boolean")}}, {{jsxref("Date")}}, {{jsxref("Error")}}, {{jsxref("Function")}}, {{jsxref("JSON")}}, {{jsxref("Math")}}, {{jsxref("Number")}}, {{jsxref("Object")}}, {{jsxref("RegExp")}}, {{jsxref("String")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}} 등 표준 내장 객체 알아가기.
 - [표현식 및 연산자](/ko/docs/Web/JavaScript/Reference/Operators)
-  - : JavaScript 연산자 {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}의 동작, [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence "operator precedence") 등에 대해 더 알아보기.
+  - : JavaScript 연산자 {{jsxref("Operators/instanceof", "instanceof")}}, {{jsxref("Operators/typeof", "typeof")}}, {{jsxref("Operators/new", "new")}}, {{jsxref("Operators/this", "this")}}의 동작, [연산자 우선순위](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) 등에 대해 더 알아보기.
 - [명령문 및 선언문](/ko/docs/Web/JavaScript/Reference/Statements)
   - : {{jsxref("Statements/do...while", "do-while")}}, {{jsxref("Statements/for...in", "for-in")}}, {{jsxref("Statements/for...of", "for-of")}}, {{jsxref("Statements/try...catch", "try-catch")}}, {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/var", "var")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/if...else", "if-else")}}, {{jsxref("Statements/switch", "switch")}} 등의 JavaScript의 구문 및 키워드 작동법 배우기.
 - [함수](/ko/docs/Web/JavaScript/Reference/Functions)

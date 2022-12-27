@@ -14,7 +14,7 @@ original_slug: Web/XSLT/copy
 
 ```
 <xsl:copy use-attribute-sets=LIST-OF-NAMES>
-	TEMPLATE
+  TEMPLATE
 </xsl:copy>
 ```
 

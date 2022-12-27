@@ -55,5 +55,3 @@ Inclua este polyfill para fornecer suporte para navegadores mais antigos e atual
 
 - O elemento {{ HTMLElement("input") }}, especialmente seu atributo {{ htmlattrxref("list", "input") }};
 - O elemento {{ HTMLElement("option") }}.
-
-{{ languages({ "zh-cn": "zh-cn/HTML/Element/datalist", "ja": "ja/HTML/Element/datalist" }) }}

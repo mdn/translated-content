@@ -33,7 +33,7 @@ HTML5에서 DOCTYPE의 유일한 목적은 완전 표준 모드를 활성화하�
 
 ### XHTML
 
-여러분의 페이지가 `Content-Type` HTTP 헤더를 `application/xhtml+xml` MIME 타입으로 설정함으로써 [XHTML](/ko/docs/XHTML "XHTML")로 제공된다면, 이런 페이지들은 항상 표준 모드로 렌더링되기 때문에 DOCTYPE을 기술할 필요가 없다. 다만 인터넷 익스플로러는 9부터 XHTML을 지원하기 때문에 인터넷 익스플로러 8의 경우 `application/xhtml+xml`로 기술된 페이지를 표시하지 않고 알 수 없는 형식으로 판단해 [다운로드 창을 표시한다](/ko/docs/XHTML#Support).
+여러분의 페이지가 `Content-Type` HTTP 헤더를 `application/xhtml+xml` MIME 타입으로 설정함으로써 [XHTML](/ko/docs/XHTML)로 제공된다면, 이런 페이지들은 항상 표준 모드로 렌더링되기 때문에 DOCTYPE을 기술할 필요가 없다. 다만 인터넷 익스플로러는 9부터 XHTML을 지원하기 때문에 인터넷 익스플로러 8의 경우 `application/xhtml+xml`로 기술된 페이지를 표시하지 않고 알 수 없는 형식으로 판단해 [다운로드 창을 표시한다](/ko/docs/XHTML#Support).
 
 XHTML 같은(XHTML-like) 콘텐트를 `text/html` MIME 타입으로 제공한다면 웹 브라우저는 이를 HTML로 인식하므로, 표준 모드로 렌더링하려면 DOCTYPE을 기술해야 한다.
 

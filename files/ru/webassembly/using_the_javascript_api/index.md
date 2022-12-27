@@ -21,9 +21,9 @@ translation_of: WebAssembly/Using_the_JavaScript_API
 
 ### Подготовка примера
 
-1.  Для начала нам нужен wasm-модуль! Возьмите наш файл [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) и сохраните копию в новой директории на своём локальном компьютере.
-2.  Далее, давайте создадим в той же директории что и wasm-модуль простой HTML-файл и назовём его `index.html` (можно использовать [HTML шаблон](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) если вы этого ещё не сделали).
-3.  Теперь, для того чтобы понять что происходит в коде модуля, давайте взглянем на его текстовое представление (которое мы также встречали в [Перевод из текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)):
+1. Для начала нам нужен wasm-модуль! Возьмите наш файл [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) и сохраните копию в новой директории на своём локальном компьютере.
+2. Далее, давайте создадим в той же директории что и wasm-модуль простой HTML-файл и назовём его `index.html` (можно использовать [HTML шаблон](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) если вы этого ещё не сделали).
+3. Теперь, для того чтобы понять что происходит в коде модуля, давайте взглянем на его текстовое представление (которое мы также встречали в [Перевод из текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Text_format_to_wasm#A_first_look_at_the_text_format)):
 
     ```
     (module
@@ -33,7 +33,7 @@ translation_of: WebAssembly/Using_the_JavaScript_API
         call $i))
     ```
 
-4.  Во второй строчке вы видите что import имеет двухуровневое пространство имён - внутренняя функция `$i` импортирована из `imports.imported_func`. Нам нужно создать это двухуровневое пространство имён в JavaScript-объекте, который будет импортирован в wasm-модуль. Создайте `<script></script>` элемент в своём HTML-файле, и добавьте следующий код:
+4. Во второй строчке вы видите что import имеет двухуровневое пространство имён - внутренняя функция `$i` импортирована из `imports.imported_func`. Нам нужно создать это двухуровневое пространство имён в JavaScript-объекте, который будет импортирован в wasm-модуль. Создайте `<script></script>` элемент в своём HTML-файле, и добавьте следующий код:
 
     ```js
     var importObject = {
@@ -82,7 +82,7 @@ fetch('simple.wasm').then(response =>
 
 ![](https://mdn.mozillademos.org/files/15823/wasm-debug.png)
 
-В ближайших версиях в Firefox, в дополнении к просмотру wasm-кода как текста, разработчики будут иметь возможность отлаживать wasm используя текстовый формат (устанавливать точки останова, изучать стек вызовов, построчно переходить, и.т.д). См.[ WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) в видео-анонсе.
+В ближайших версиях в Firefox, в дополнении к просмотру wasm-кода как текста, разработчики будут иметь возможность отлаживать wasm используя текстовый формат (устанавливать точки останова, изучать стек вызовов, построчно переходить, и.т.д). См. [WebAssembly debugging with Firefox DevTools](https://www.youtube.com/watch?v=R1WtBkMeGds) в видео-анонсе.
 
 ## Память
 
@@ -96,7 +96,7 @@ fetch('simple.wasm').then(response =>
 
 Создайте ещё одну простую HTML страницу (скопируйте [HTML шаблон](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)) и назовите её `memory.html`. Добавьте `<script></script>` элемент на страницу.
 
-1.  Добавьте следующую строку в начало нашего скрипта, для создания экземпляра объекта памяти:
+1. Добавьте следующую строку в начало нашего скрипта, для создания экземпляра объекта памяти:
 
     ```js
     var memory = new WebAssembly.Memory({initial:10, maximum:100});
@@ -116,7 +116,7 @@ fetch('simple.wasm').then(response =>
     new Uint32Array(memory.buffer)[0]
     ```
 
-2.  Попробуйте сделать это в вашем примере - сохраните то, что вы сделали, загрузите его в браузере, после чего попробуйте ввести вышеупомянутые строчки в JavaScript-консоль.
+2. Попробуйте сделать это в вашем примере - сохраните то, что вы сделали, загрузите его в браузере, после чего попробуйте ввести вышеупомянутые строчки в JavaScript-консоль.
 
 ### Расширение памяти
 
@@ -136,11 +136,11 @@ memory.grow(1);
 
 Давайте сделаем вышеупомянутые утверждения понятнее, рассмотрев более сложный пример работы с памятью, где WebAssembly-модуль импортирует объект памяти, который мы определили ранее, после чего JavaScript-код наполняет его с помощью массива целых чисел, а экспортируемая wasm-функция суммирует их.
 
-1.  Скопируйте файл [memory.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm) в локальную директорию в которой вы работаете.
+1. Скопируйте файл [memory.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/memory.wasm) в локальную директорию в которой вы работаете.
 
     > **Примечание:** вы можете увидеть текстовое представление модуля в файле [memory.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.wat).
 
-2.  Откройте ваш файл `memory.html` и добавьте следующий код снизу вашего основного скрипта для загрузки, компилирования и создания экземпляра wasm-модуля:
+2. Откройте ваш файл `memory.html` и добавьте следующий код снизу вашего основного скрипта для загрузки, компилирования и создания экземпляра wasm-модуля:
 
     ```js
     WebAssembly.instantiateStreaming(fetch('memory.wasm'), { js: { mem: memory } })
@@ -149,7 +149,7 @@ memory.grow(1);
     });
     ```
 
-3.  Так как модуль экспортирует свою память, которая была передана экземпляру этого модуля при его создании, мы можем наполнить ранее импортированный массив прямо в линейной памяти экземпляра модуля (`mem`), и вызвать экспортированную функцию `accumulate()` для расчёта суммы значений. Добавьте следующий код, в обозначенном месте:
+3. Так как модуль экспортирует свою память, которая была передана экземпляру этого модуля при его создании, мы можем наполнить ранее импортированный массив прямо в линейной памяти экземпляра модуля (`mem`), и вызвать экспортированную функцию `accumulate()` для расчёта суммы значений. Добавьте следующий код, в обозначенном месте:
 
     ```js
     var i32 = new Uint32Array(memory.buffer);
@@ -187,12 +187,12 @@ memory.grow(1);
 
 Давайте взглянем на простой пример таблицы - модуль WebAssembly, который создаёт и экспортирует таблицу с двумя элементами: элемент под индексом 0 возвращает 13, а элемент под индексом 1 возвращает 42.
 
-1.  Сделайте локальную копию файла [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm) в новой директории.
+1. Сделайте локальную копию файла [table.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/table.wasm) в новой директории.
 
     > **Примечание:** вы можете посмотреть текстовое представление модуля в файле [table.wat](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat).
 
-2.  Создайте новую копию нашего [HTML шаблона](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) в той же директории и назовите его table.html.
-3.  Как и раньше загрузите, компилируйте, и создайте экземпляр вашего wasm-модуля, добавив следующий код в {{htmlelement("script")}} элемент в тело документа:
+2. Создайте новую копию нашего [HTML шаблона](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) в той же директории и назовите его table.html.
+3. Как и раньше загрузите, компилируйте, и создайте экземпляр вашего wasm-модуля, добавив следующий код в {{htmlelement("script")}} элемент в тело документа:
 
     ```js
     WebAssembly.instantiateStreaming(fetch('table.wasm'))
@@ -201,7 +201,7 @@ memory.grow(1);
     });
     ```
 
-4.  Теперь давайте получим доступ к данным в таблицах - добавим следующие строки в ваш код, в обозначенном месте:
+4. Теперь давайте получим доступ к данным в таблицах - добавим следующие строки в ваш код, в обозначенном месте:
 
     ```js
     var tbl = results.instance.exports.tbl;

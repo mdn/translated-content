@@ -85,12 +85,13 @@ var myAge;
 
 여기서 우리는 myName과 myAge라는 두 개의 변수를 생성합니다. 웹 브라우저의 콘솔 또는 아래 콘솔에서 두행을 입력해 보십시오 (원하는 경우, [콘솔](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html)을 별도의 탭이나 창에서 열 수 있음). 그 후, 자신이 명명한 변수를 만들어 보십시오.
 
-<div class="hidden"><h6 id="Hidden_code">Hidden code</h6><pre class="brush: html">&#x3C;!DOCTYPE html>
-&#x3C;html>
-  &#x3C;head>
-    &#x3C;meta charset="utf-8">
-    &#x3C;title>JavaScript console&#x3C;/title>
-    &#x3C;style>
+```html hidden
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JavaScript console</title>
+    <style>
       * {
         box-sizing: border-box;
       }
@@ -138,14 +139,14 @@ var myAge;
         clear: both;
       }
 
-    &#x3C;/style>
+    </style>
 
-&#x3C;/head>
-&#x3C;body>
+</head>
+<body>
 
-&#x3C;/body>
+</body>
 
-&#x3C;script>
+<script>
 var geval = eval;
 function createInput() {
 var inputDiv = document.createElement('div');
@@ -184,10 +185,11 @@ var inputForm = document.createElement('input');
 
     createInput();
 
-&#x3C;/script>
-&#x3C;/html></pre></div>
+</script>
+</html>
+```
 
-{{ EmbedLiveSample('Hidden_code', '100%', 300) }}
+{{ EmbedLiveSample('변수의_선언', '100%', 300) }}
 
 > **참고:** JavaScript에서는 모든 코드 명령어가 세미콜론 (;)으로 끝나야합니다. 코드를 한 줄로 작성해도 올바르게 작동할 지라도, 여러 줄의 코드를 함께 작성하는 경우에는 그렇지 않습니다. 그것을 포함시키는 습관을 갖도록 노력하십시오.
 

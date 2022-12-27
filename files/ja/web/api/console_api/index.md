@@ -42,7 +42,7 @@ console.log(myString)
 
 ## ブラウザーの互換性
 
-{{Compat("api.Console")}}
+{{Compat}}
 
 ## 関連情報
 

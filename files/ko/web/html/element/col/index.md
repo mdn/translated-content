@@ -109,7 +109,6 @@ The following attributes are deprecated and should not be used. They are documen
 - {{htmlattrdef("width")}} {{deprecated_inline}}
   - : This attribute specifies a default width for each column in the current column group. In addition to the standard pixel and percentage values, this attribute might take the special form `0*`, which means that the width of each column in the group should be the minimum width necessary to hold the column's contents. Relative widths such as `5*` also can be used.
 
-
 ## 예제
 
 `<col>` 요소의 예제는 {{htmlelement("table")}} 요소 문서에서 볼 수 있습니다.

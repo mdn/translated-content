@@ -11,7 +11,6 @@ tags:
 translation_of: Learn/Common_questions/Common_web_layouts
 original_slug: Learn/Common_questions/diseños_web_comunes
 ---
-{{IncludeSubnav("/en-US/Learn")}}
 
 Cuando diseña páginas para su sitio web es bueno tener una idea de los diseños más comunes.
 

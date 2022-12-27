@@ -91,7 +91,7 @@ person1.valueOf()
 
 所以該在哪裡定義所要繼承的屬性與函式呢？若看一下 [`Object`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object) 參考頁面，你就會看到左邊列出許多屬性與函式，遠超過上方擷圖所列 `person1` 物件所繼承的成員數量。有些繼承了，有些則無？為什麼呢？
 
-原因在於，繼承的成員就是在 `prototype` 屬性 (你也能稱之為子命名空間 sub namespace) 中定義的成員，也就是以「` Object.prototype.」開頭的成員；並非只以「``Object.」開頭的成員。``prototype ` 屬性值就是 1 個物件，基本上儲存了許多我們想「讓原型鍊上的物件一路繼承下去」的屬性與函式。
+原因在於，繼承的成員就是在 `prototype` 屬性 (你也能稱之為子命名空間 sub namespace) 中定義的成員，也就是以「`Object.prototype`.」開頭的成員；並非只以「`Object`.」開頭的成員。`prototype` 屬性值就是 1 個物件，基本上儲存了許多我們想「讓原型鍊上的物件一路繼承下去」的屬性與函式。
 
 所以如 [`Object.prototype.watch()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/watch)、[`Object.prototype.valueOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf) 等等，均可用於繼承自 `Object()` 的任何物件類型，包含以建構子建立的新物件實例。
 

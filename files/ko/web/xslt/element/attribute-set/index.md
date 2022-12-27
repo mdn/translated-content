@@ -14,7 +14,7 @@ original_slug: Web/XSLT/attribute-set
 
 ```
 <xsl:attribute-set name=NAME use-attribute-sets=LIST-OF-NAMES>
-	<xsl:attribute>
+  <xsl:attribute>
 </xsl:attribute-set>
 ```
 

@@ -27,7 +27,7 @@ p {
 
 ### 일반 지식
 
-- [CSS 배우기](https://developer.mozilla.org/en-US/Learn/CSS)
+- [CSS 배우기](/en-US/Learn/CSS)
 - 위키백과의 [CSS](https://ko.wikipedia.org/wiki/CSS)
 
 ### 기술 참고서

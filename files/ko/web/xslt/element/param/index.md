@@ -14,7 +14,7 @@ original_slug: Web/XSLT/param
 
 ```
 <xsl:param name=NAME select=EXPRESSION>
-	TEMPLATE
+  TEMPLATE
 </xsl:param>
 ```
 

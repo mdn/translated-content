@@ -14,7 +14,7 @@ original_slug: Web/XSLT/otherwise
 
 ```
 <xsl:otherwise>
-	TEMPLATE
+  TEMPLATE
 </xsl:otherwise>
 ```
 

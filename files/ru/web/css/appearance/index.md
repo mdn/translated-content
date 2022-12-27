@@ -242,6 +242,7 @@ The following values may be operational on historical browser versions using **`
 ## Formal definition
 
 {{cssinfo}}
+
 ### Формальный синтаксис
 
 {{CSSSyntax}}
@@ -270,5 +271,5 @@ The following values may be operational on historical browser versions using **`
 
 ## Смотрите также
 
-*   [Definition of `appearance` in CSS 3 Basic User Interface](http://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (Candidate Recommendation from 2004-05-11).
-*   [Dropped CSS3 features from the UI spec.4](http://wiki.csswg.org/spec/css4-ui#dropped-css3-features)
+- [Definition of `appearance` in CSS 3 Basic User Interface](http://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance) (Candidate Recommendation from 2004-05-11).
+- [Dropped CSS3 features from the UI spec.4](http://wiki.csswg.org/spec/css4-ui#dropped-css3-features)

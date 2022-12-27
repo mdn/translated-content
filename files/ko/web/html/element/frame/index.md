@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/frame
 
 ## 속성(=Attributes)
 
-다른 모든 HTML elments와 마찬가지로, \<frame> element는 전역속성([global attributes](/ko/docs/HTML/Global_attributes "HTML/Global attributes"))이 적용된다.
+다른 모든 HTML elments와 마찬가지로, \<frame> element는 전역속성([global attributes](/ko/docs/HTML/Global_attributes))이 적용된다.
 
 - {{htmlattrdef("src")}}
   - : 이 속성은 frame으로 표시될 문서를 기입합니다.

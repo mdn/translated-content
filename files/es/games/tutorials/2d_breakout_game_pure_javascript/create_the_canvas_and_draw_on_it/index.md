@@ -7,7 +7,7 @@ translation_of: >-
 original_slug: >-
   Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Create_the_Canvas_and_draw_on_it
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+{{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Mueve_la_bola")}}
 
