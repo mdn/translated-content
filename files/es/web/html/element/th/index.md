@@ -156,12 +156,9 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 See {{HTMLElement("table")}} for examples on `<th>`.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG','tables.html#the-th-element','th element')}}     | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C','tabular-data.html#the-th-element','th element')}} | {{Spec2('HTML5 W3C')}}     |         |
+{{Specifications}}
 
 ## Browser compatibility
 

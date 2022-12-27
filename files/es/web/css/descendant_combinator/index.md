@@ -36,11 +36,7 @@ div span { background-color: DodgerBlue; }
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                                   | Comentario |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| [Selector CSS Nivel 3](http://www.w3.org/TR/css3-selectors/#general-sibling-combinators) | {{ Spec2('CSS3 Selectors') }} |            |
-| [CSS 2.1](http://www.w3.org/TR/CSS21/selector.html#descendant-selectors)                 | {{ Spec2('CSS2.1') }}             |            |
-| [CSS 1](http://www.w3.org/TR/CSS1/#contextual-selectors)                                 | {{ Spec2('CSS1') }}                 |            |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

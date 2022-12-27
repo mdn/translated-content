@@ -184,11 +184,7 @@ El resultado final es el siguiente:
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('HTML WHATWG', 'the-input-element.html#the-input-element')}} | {{Spec2('HTML WHATWG')}} |                    |
-| {{SpecName('HTML5 W3C', 'forms.html#the-input-element')}}                     | {{Spec2('HTML5 W3C')}}     |                    |
-| {{SpecName('HTML4.01', 'interact/forms.html#h-17.4')}}                         | {{Spec2('HTML4.01')}}     | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

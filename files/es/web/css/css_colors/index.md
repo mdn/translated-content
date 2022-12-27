@@ -34,11 +34,7 @@ _Ninguna._
 
 ## Especificaciones
 
-| Especificación                                   | Estado                           | Comentario         |
-| ------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Colors')}}             | {{Spec2('CSS3 Colors')}} |                    |
-| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}         |                    |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}         | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

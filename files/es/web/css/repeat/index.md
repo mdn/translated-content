@@ -126,9 +126,7 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 
 ## Especificaciones
 
-| Specification                                                            | Status                       | Comment            |
-| ------------------------------------------------------------------------ | ---------------------------- | ------------------ |
-| {{SpecName("CSS Grid", "#funcdef-repeat", "repeat()")}} | {{Spec2("CSS Grid")}} | Initial definition |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

@@ -31,9 +31,7 @@ _Esta interfaz implementa las propiedades definidas en {{domxref("RandomSource")
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentario         |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName("Web Crypto API", "#crypto-interface", "Crypto")}} | {{Spec2("Web Crypto API")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

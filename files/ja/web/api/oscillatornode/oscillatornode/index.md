@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Web Audio API")}}
 
-**`OscillatorNode()`** は [ウェブ音声 API](/ja/docs/Web/API/Web_Audio_API) のコンストラクターで、正弦波のような周期的な波形を表現する {{domxref("AudioNode")}} オブジェクトを新しく作成し、オプションでノードのプロパティの値を指定したオブジェクトの値に合わせて設定することができます。
+**`OscillatorNode()`** は [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) のコンストラクターで、正弦波のような周期的な波形を表現する {{domxref("AudioNode")}} オブジェクトを新しく作成し、オプションでノードのプロパティの値を指定したオブジェクトの値に合わせて設定することができます。
 
 プロパティの既定値が受け入れられる場合 は、代わりに {{domxref("BaseAudioContext.createOscillator()")}} ファクトリーメソッドを任意で使用することができます。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#creating_an_audionode)をご覧ください。
 

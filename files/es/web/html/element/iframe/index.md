@@ -258,14 +258,7 @@ En este ejemplo, se muestra un mapa de Google en un marco.
 
 ## Especificaciones
 
-| Specification                                                                                                                                    | Status                                   | Comment                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrerpolicy attribute')}} | {{Spec2('Referrer Policy')}}     | Added the `referrerpolicy` attribute.                     |
-| {{SpecName('HTML WHATWG', 'iframe-embed-object.html#the-iframe-element', '&lt;iframe&gt;')}}                     | {{Spec2('HTML WHATWG')}}         |                                                           |
-| {{SpecName('HTML5 W3C', 'embedded-content-0.html#the-iframe-element', '&lt;iframe&gt;')}}                         | {{Spec2('HTML5 W3C')}}             |                                                           |
-| {{SpecName('HTML4.01', 'present/frames.html#h-16.5', '&lt;iframe&gt;')}}                                                 | {{Spec2('HTML4.01')}}             |                                                           |
-| {{SpecName('Screen Orientation')}}                                                                                                     | {{Spec2('Screen Orientation')}} | Adds `allow-orientation-lock` to the `sandbox` attribute. |
-| {{SpecName('Presentation','#sandboxing-and-the-allow-presentation-keyword','allow-presentation')}}             | {{Spec2('Presentation')}}         | Adds `allow-presentation` to the `sandbox` attribute      |
+{{Specifications}}
 
 ## Notes
 

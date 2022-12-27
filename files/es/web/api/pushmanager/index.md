@@ -76,11 +76,9 @@ navigator.serviceWorker.register('serviceworker.js').then(
   });
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                        | Status                       | Comment             |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName('Push API','#pushmanager-interface','PushManager')}} | {{Spec2('Push API')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

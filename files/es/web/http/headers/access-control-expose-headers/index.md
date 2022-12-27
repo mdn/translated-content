@@ -72,9 +72,7 @@ Access-Control-Expose-Headers: *, Authorization
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estado                   | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ---------- |
-| {{SpecName('Fetch','#http-access-control-expose-headers', 'Access-Control-Expose-Headers')}} | {{Spec2("Fetch")}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

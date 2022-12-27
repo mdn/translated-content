@@ -63,11 +63,9 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                       | Estatus                                          | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------ |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-end-style", "border-block-end-style")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

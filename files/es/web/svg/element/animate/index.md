@@ -73,10 +73,7 @@ Para más información (en inglés):
 
 ## Especificaciones
 
-| Specification                                                                                    | Status                                   | Comment            |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName("SVG Animations 2", "#AnimateElement", "&lt;animate&gt;")}}     | {{Spec2("SVG Animations 2")}} | Sin cambios        |
-| {{SpecName("SVG1.1", "animate.html#AnimateElement", "&lt;animate&gt;")}} | {{Spec2("SVG1.1")}}                 | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

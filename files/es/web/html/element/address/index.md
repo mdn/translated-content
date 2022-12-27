@@ -53,11 +53,7 @@ Aunque el elemento de dirección representa el texto con el mismo estilo predete
 
 ## Especificaciones
 
-| Specification                                                                                                    | Status                           | Comment |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', 'sections.html#the-address-element', '&lt;address&gt;')}} | {{Spec2('HTML WHATWG')}} |         |
-| {{SpecName('HTML5 W3C', 'sections.html#the-address-element', '&lt;address&gt;')}}     | {{Spec2('HTML5 W3C')}}     |         |
-| {{SpecName('HTML4.01', 'struct/global.html#h-7.5.6', '&lt;address&gt;')}}                 | {{Spec2('HTML4.01')}}     |         |
+{{Specifications}}
 
 ## Compatibilidad de navegador
 

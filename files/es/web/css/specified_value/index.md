@@ -17,9 +17,7 @@ El **valor especificado** (**specified value**) de una propiedad CSS es establec
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estatus                  | Comentarios        |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | ------------------ |
-| {{SpecName("CSS2.1", "cascade.html#specified-value", "cascaded value")}} | {{Spec2("CSS2.1")}} | Definición inicial |
+{{Specifications}}
 
 ## Véase también
 

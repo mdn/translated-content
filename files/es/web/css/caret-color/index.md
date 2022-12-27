@@ -69,9 +69,7 @@ input {
 
 ## Especificaciones
 
-| Especificación                                                                       | Estatus                      | Comentarios         |
-| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
-| {{SpecName("CSS3 UI", "#propdef-caret-color", "caret-color")}} | {{Spec2("CSS3 UI")}} | Initial definition. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

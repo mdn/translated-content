@@ -32,9 +32,7 @@ a:has(> img)
 
 ## Especificaciones
 
-| Especificación                                                               | Estado                                   | Comentario         |
-| ---------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{ SpecName('CSS4 Selectors', '#relational', ':has()') }} | {{ Spec2('CSS4 Selectors') }} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad entre los distintos navegadores
 

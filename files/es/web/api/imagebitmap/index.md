@@ -25,11 +25,9 @@ The **`ImageBitmap`** interface represents a bitmap image which can be drawn to 
 - {{domxref("ImageBitmap.close()")}}
   - : Disposes of all graphical resources associated with an `ImageBitmap`.
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------- |
-| {{SpecName('HTML WHATWG', "webappapis.html#imagebitmap", "ImageBitmap")}} | {{Spec2('HTML WHATWG')}} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

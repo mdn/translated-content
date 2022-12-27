@@ -39,9 +39,7 @@ fetch(peticion).then(function(respuesta) {
 
 ## Especificaciones
 
-| Especificación           | Estado                   | Comentario         |
-| ------------------------ | ------------------------ | ------------------ |
-| {{Spec2('Fetch')}} | {{Spec2('Fetch')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

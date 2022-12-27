@@ -44,7 +44,7 @@ l10n:
 
 ### サードパーティのサーバーにある
 
-ブラウザー API はブラウザーに組み込まれており、すぐに JavaScript からアクセスできます。たとえば、[紹介記事で見た](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#api_はどのように動作するのか)ウェブ音声 API は、ネイティブの {{domxref("AudioContext")}} オブジェクトを使ってアクセスします。例えば以下のようにします。
+ブラウザー API はブラウザーに組み込まれており、すぐに JavaScript からアクセスできます。たとえば、[紹介記事で見た](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#api_はどのように動作するのか)ウェブオーディオ API は、ネイティブの {{domxref("AudioContext")}} オブジェクトを使ってアクセスします。例えば以下のようにします。
 
 ```js
 const audioCtx = new AudioContext();

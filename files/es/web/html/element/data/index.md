@@ -43,10 +43,7 @@ El siguiente ejemplo muestra nombres de productos pero también asocia a cada un
 
 ## Especificaciones
 
-| Specification                                                                                                            | Status                           | Comment                                         |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-data-element', '&lt;data&gt;')}} | {{Spec2('HTML WHATWG')}} | No change from {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-data-element', '&lt;data&gt;')}}     | {{Spec2('HTML5 W3C')}}     | Initial definition.                             |
+{{Specifications}}
 
 ## Compatibilidad de navegador
 

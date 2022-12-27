@@ -80,7 +80,7 @@ Le paramètre `show-toc<code> contient le booléen <code>true`&nbsp;:
 <?xslt-param name="show-toc" select="true()"?>
 ```
 
-##### Le contexte de l'attribut*select*
+##### Le contexte de l'attribut select
 
 Le contexte suivant est utilisé pour analyser et évaluer l'expression de l'attribut **select**.
 

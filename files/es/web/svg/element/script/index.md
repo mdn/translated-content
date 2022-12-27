@@ -124,12 +124,7 @@ Este elemento contiene los [atributos globales](/es/docs/Web/HTML/Atributos_Glob
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                       | Comentario                    |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ----------------------------- |
-| {{SpecName('HTML WHATWG', "scripting.html#the-script-element", "&lt;script&gt;")}} | {{Spec2('HTML WHATWG')}}             | Agrega el tipo module.        |
-| {{SpecName('HTML5 W3C', 'scripting-1.html#script', '&lt;script&gt;')}}                 | {{Spec2('HTML5 W3C')}}                 |                               |
-| {{SpecName('HTML4.01', 'interact/scripts.html#h-18.2.1', '&lt;script&gt;')}}         | {{Spec2('HTML4.01')}}                 |                               |
-| {{SpecName('Subresource Integrity', '#htmlscriptelement', '&lt;script&gt;')}}     | {{Spec2('Subresource Integrity')}} | Agrega el atributo integrity. |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

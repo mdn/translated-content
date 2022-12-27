@@ -85,9 +85,7 @@ El siguiente CSS ajusta el estilo de las anotaciones para que el texto sea blanc
 
 ## Especificaciones
 
-| Especificacion                                                               | Estado                   | Comentario          |
-| ---------------------------------------------------------------------------- | ------------------------ | ------------------- |
-| {{SpecName("WebVTT", "#the-cue-pseudo-element", "::cue")}} | {{Spec2("WebVTT")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con los navegadores
 

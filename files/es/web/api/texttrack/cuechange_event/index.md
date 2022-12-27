@@ -88,9 +88,7 @@ textTrackElem.oncuechange = (event) => {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                           |
-| ---------------------------------------------------------------------------------------- | -------------------------------- |
-| {{SpecName('HTML WHATWG', '#event-media-cuechange', 'cuechange')}} | {{Spec2('HTML WHATWG')}} |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

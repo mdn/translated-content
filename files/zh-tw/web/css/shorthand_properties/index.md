@@ -3,6 +3,8 @@ title: 特性簡寫
 slug: Web/CSS/Shorthand_properties
 ---
 
+{{CSSRef}}
+
 ## 定義
 
 _特性簡寫，是一種可以同時設定許多其他 CSS 屬性值的 CSS 屬性。_ 使用特性簡寫，網頁開發者可以寫出更簡潔、且通常更具可讀性的樣式表，省時又省力。

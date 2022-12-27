@@ -75,11 +75,7 @@ h2 {
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                               | Comentario          |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('CSS3 Multicol', '#column-span', 'column-span')}} | {{Spec2('CSS3 Multicol')}} | Definición inicial. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

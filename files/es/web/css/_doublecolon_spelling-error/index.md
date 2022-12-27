@@ -41,9 +41,7 @@ Solo se puede usar un pequeño subconjunto de propiedades de CSS en una regla co
 
 ## Especificaciones
 
-| Especificación                                                                                                       | Estado                                       | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-spelling-error', '::spelling-error')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

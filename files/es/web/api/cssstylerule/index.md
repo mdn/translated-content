@@ -30,10 +30,7 @@ interface CSSStyleRule : CSSRule {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estatus                          | Comentario  |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{ SpecName('CSSOM', '#the-cssstylerule-interface', 'CSSStyleRule') }} | {{ Spec2('CSSOM') }}     | Sin cambios |
-| {{ SpecName('DOM2 Style', 'css.html#CSS-CSSStyleRule', 'CSSRule') }} | {{ Spec2('DOM2 Style') }} |             |
+{{Specifications}}
 
 ## Compatibilidad entre Navegadores
 

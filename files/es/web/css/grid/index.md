@@ -95,9 +95,7 @@ grid: unset;
 
 ## Especificaciones
 
-| Especificación                                                       | Estado                       | Comentario         |
-| -------------------------------------------------------------------- | ---------------------------- | ------------------ |
-| {{SpecName("CSS3 Grid", "#propdef-grid", "grid")}} | {{Spec2("CSS3 Grid")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

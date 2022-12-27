@@ -44,9 +44,7 @@ La característica `display-mode` se especifica como un valor de palabra clave e
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Manifest', '#the-display-mode-media-feature', 'display-mode')}} | {{Spec2('Manifest')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

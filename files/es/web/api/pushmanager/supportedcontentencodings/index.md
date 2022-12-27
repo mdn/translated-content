@@ -18,11 +18,9 @@ var encodings[] = PushManager.supportedContentEncodings
 
 Un _array_ de _Strings_
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                    | Status                       | Comment             |
-| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Push API','#dom-pushmanager-supportedcontentencodings','supportedContentEncodings')}} | {{Spec2('Push API')}} | Initial definition. |
+{{Specifications}}
 
 ## Browser Compatibility
 

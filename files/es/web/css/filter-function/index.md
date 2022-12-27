@@ -38,11 +38,9 @@ El tipo de datos `<filter-function>` se especifica utilizando una de las funcion
 - [`sepia()`](/en-US/docs/Web/CSS/filter-function/sepia)
   - : Convierte la imagen a sepia.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                   | Estado                               | Comentarios         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{ SpecName('Filters 1.0', '#typedef-filter-function', '&lt;filter-function&gt;') }} | {{ Spec2('Filters 1.0') }} | Definición inicial. |
+{{Specifications}}
 
 ## Ver también
 

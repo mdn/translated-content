@@ -63,9 +63,7 @@ border-image-outset: inherit;
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                                  | Comentarios        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-image-outset', 'border-image-outset')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

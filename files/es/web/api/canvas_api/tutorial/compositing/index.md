@@ -28,7 +28,7 @@ No solo podemos dibujar formas nuevas detrás de las ya existentes sino que las 
 
 Vea [ejemplos de composición](/es/docs/Web/API/Canvas_API/Tutorial/Compositing/Example) para el código de los siguientes ejemplos.
 
-{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
+{{EmbedLiveSample("Ejemplo_de_composición", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}
 
 ## Trazado de Recorte
 
@@ -110,6 +110,6 @@ En las primeras líneas de código, dibujamos un rectángulo negro del tamaño d
 
 Todo lo que se dibuja después de crear un recorte aparecerá dentro de su trazado. Se puede ver claramente esto en el dibujo de gradiente lineal que realizamos a continuación. Después se ubican estrellas en 50 posiciones alteatorias y escaladas utilizando la función `drawStar()`. Una vez más, las estrellas solo aparecen dentro del recorte trazado en el lienzo.
 
-{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}
+{{EmbedLiveSample("A_clip_example", "180", "190", "canvas_clip.png")}}
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Transformations", "Web/API/Canvas_API/Tutorial/Basic_animations")}}

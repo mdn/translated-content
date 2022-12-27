@@ -22,11 +22,7 @@ Este es un atributo enumerado y no uno _booleano ._ Esto significa que el uso ex
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estatus                          | Comentario                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', "editing.html#attr-contenteditable", "contenteditable")}} | {{Spec2('HTML WHATWG')}} | Sin cambio desde el último snapshot, {{SpecName('HTML5.1')}}                               |
-| {{SpecName('HTML5.1', "editing.html#attr-contenteditable", "contenteditable")}}         | {{Spec2('HTML5.1')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, sin cambio desde {{SpecName('HTML5 W3C')}} |
-| {{SpecName('HTML5 W3C', "editing.html#attr-contenteditable", "contenteditable")}}     | {{Spec2('HTML5 W3C')}}     | Snapshot de {{SpecName('HTML WHATWG')}}, definición inicial.                               |
+{{Specifications}}
 
 ## Compatiblidad en exploradores
 

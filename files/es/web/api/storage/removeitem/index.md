@@ -61,9 +61,7 @@ function populateSessionStorage() {
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentarios |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'webstorage.html#dom-storage-removeitem', 'Storage.removeItem')}} | {{Spec2('Web Storage')}} |             |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

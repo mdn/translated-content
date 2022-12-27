@@ -66,13 +66,9 @@ div {
 
 {{EmbedLiveSample("Ejemplo", 140, 140)}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                                   | Estado                                           | Comentario          |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-end-end-radius", "border-end-end-radius")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

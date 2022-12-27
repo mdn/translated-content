@@ -70,9 +70,7 @@ input {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                               | Comentario          |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#the-focus-within-pseudo", ":focus-within")}} | {{Spec2("CSS4 Selectors")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

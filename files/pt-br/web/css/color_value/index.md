@@ -1211,9 +1211,9 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 - \-moz-CellHighlightText
   - : Text color for a selected item in a tree. Should be used with the `-moz-CellHighlight background` color. See also `-moz-html-CellHighlightText`.
 - \-moz-Combobox
-  - : {{Gecko_minversion_inline("1.9.2")}} Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
+  - : Background color for combo-boxes. Should be used with the `-moz-ComboboxText` foreground color. In versions prior to 1.9.2, use `-moz-Field` instead.
 - \-moz-ComboboxText
-  - : {{Gecko_minversion_inline("1.9.2")}} Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
+  - : Text color for combo-boxes. Should be used with the `-moz-Combobox` background color. In versions prior to 1.9.2, use `-moz-FieldText` instead.
 - \-moz-Dialog
   - : Background color for dialog boxes. Should be used with the `-moz-DialogText` foreground color.
 - \-moz-DialogText
@@ -1222,16 +1222,16 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 
   \-moz-EvenTreeRow
 
-  - : {{gecko_minversion_inline("1.9")}} Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
+  - : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
 
 - \-moz-Field
   - : Text field background color. Should be used with the `-moz-FieldText` foreground color.
 - \-moz-FieldText
   - : Text field text color. Should be used with the `-moz-Field`, `-moz-EvenTreeRow`, or `-moz-OddTreeRow` background color.
 - \-moz-html-CellHighlight
-  - : {{gecko_minversion_inline("1.9")}} Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
+  - : Background color for highlighted item in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlightText` foreground color. Prior to Gecko 1.9, use `-moz-CellHighlight`.
 - \-moz-html-CellHighlightText
-  - : {{gecko_minversion_inline("1.9")}} Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
+  - : Text color for highlighted items in HTML {{HTMLElement("select")}}s. Should be used with the `-moz-html-CellHighlight` background color. Prior to Gecko 1.9, use `-moz-CellHighlightText`.
 - \-moz-mac-accentdarkestshadow
 
   \-moz-mac-accentdarkshadow
@@ -1248,10 +1248,7 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 
   \-moz-mac-chrome-active
 
-  - : {{Gecko_minversion_inline("1.9.1")}}
-
 - \-moz-mac-chrome-inactive
-  - : {{Gecko_minversion_inline("1.9.1")}}
 - \-moz-mac-focusring
 
   \-moz-mac-menuselect
@@ -1267,26 +1264,26 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 - \-moz-MenuHoverText
   - : Text color for hovered menu items. Often similar to `HighlightText`. Should be used with the `-moz-MenuHover` background color.
 - \-moz-MenuBarText
-  - : {{Gecko_minversion_inline("1.9.2")}} Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
+  - : Text color in menu bars. Often similar to `MenuText`. Should be used on top of `Menu` background.
 - \-moz-MenuBarHoverText
   - : Color for hovered text in menu bars. Often similar to `-moz-MenuHoverText`. Should be used on top of `-moz-MenuHover` background.
 - \-moz-nativehyperlinktext
-  - : {{Gecko_minversion_inline("1.9.1")}} Default platform hyperlink color.
+  - : Default platform hyperlink color.
 - \-moz-OddTreeRow
-  - : {{gecko_minversion_inline("1.9")}} Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
+  - : Background color for odd-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-EvenTreeRow`.
 - \-moz-win-communicationstext
-  - : {{gecko_minversion_inline("1.9")}} Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;`.
+  - : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-communications-toolbox;`.
 - \-moz-win-mediatext
-  - : {{gecko_minversion_inline("1.9")}} Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox`.
+  - : Should be used for text in objects with `{{cssxref("-moz-appearance")}}: -moz-win-media-toolbox`.
 
 ### Mozilla Color Preference Extensions
 
 - \-moz-activehyperlinktext
   - : User's preference for text color of active links. Should be used with the default document background color.
 - \-moz-default-background-color
-  - : {{Gecko_minversion_inline("5.0")}} User's preference for the document background color.
+  - : User's preference for the document background color.
 - \-moz-default-color
-  - : {{Gecko_minversion_inline("5.0")}} User's preference for the text color.
+  - : User's preference for the text color.
 - \-moz-hyperlinktext
   - : User's preference for the text color of unvisited links. Should be used with the default document background color.
 - \-moz-visitedhyperlinktext

@@ -33,12 +33,7 @@ Esto crea dos casillas de verificación, que se ven así:
 
 ## Especificaciones
 
-| Especificación                                                                                                               | Estatus                          |     |
-| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | --- |
-|                                                                                                                              |                                  |     |
-| {{SpecName('HTML WHATWG', 'forms.html#checkbox-state-(type=checkbox)', '&lt;checkbox&gt;')}} | {{Spec2('HTML WHATWG')}} |     |
-| {{SpecName('HTML5 W3C', 'forms.html#checkbox-state-(type=checkbox)', '&lt;checkbox&gt;')}}     | {{Spec2('HTML5 W3C')}}     |     |
-| {{SpecName('HTML4.01', 'interact/forms.html#checkbox', '&lt;checkbox&gt;')}}                         | {{Spec2('HTML4.01')}}     |     |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

@@ -102,12 +102,7 @@ El comportamiento ateriror esta implementado en muchos navegadores. NodeList.pro
 
 ## Especificaciones
 
-Especificación
-
-|                                                                                  | Status                           | Comentarios                                |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}} | {{ Spec2('DOM WHATWG') }} | Define `NodeList` como `<Nodo>iterable`      |
-| {{SpecName("WebIDL", "#es-forEach", "forEach")}}                 | {{Spec2("WebIDL")}}         | Define `forEach` en declaraciones `iterables` |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

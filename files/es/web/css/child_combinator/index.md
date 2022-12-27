@@ -41,11 +41,7 @@ div > span {
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estatus                              | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS4 Selectors', '#child-combinators', 'child combinator')}}     | {{Spec2('CSS4 Selectors')}} |                    |
-| {{SpecName('CSS3 Selectors', '#child-combinators', 'child combinators')}}     | {{Spec2('CSS3 Selectors')}} | Sin cambios        |
-| {{SpecName('CSS2.1', 'selector.html#child-selectors', 'child selectors')}} | {{Spec2('CSS2.1')}}             | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

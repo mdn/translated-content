@@ -110,11 +110,7 @@ svgns|a:hover, svgns|a:active {
 
 ## Especificaciones
 
-| Especificación                                                                                                                           | Estado                               | Comentatio                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------- |
-| {{SpecName('Referrer Policy', '#referrer-policy-delivery-referrer-attribute', 'referrer attribute')}} | {{Spec2('Referrer Policy')}} | Añadido el atributo `referrerpolicy`.                                                  |
-| {{SpecName("SVG2", "linking.html#Links", "&lt;a&gt;")}}                                                                 | {{Spec2("SVG2")}}             | Se sustituye el atributo {{SVGAttr("xlink:href")}} por {{SVGAttr("href")}} |
-| {{SpecName("SVG1.1", "linking.html#Links", "&lt;a&gt;")}}                                                             | {{Spec2("SVG1.1")}}             | Definición inicial                                                                     |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

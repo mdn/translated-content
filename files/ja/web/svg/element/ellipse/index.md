@@ -39,7 +39,7 @@ html,body,svg { height:100% }
   - : この属性は、使用単位での単位合計パス長さを指定します。
     _Value type_: [**\<number>**](/ja/docs/Web/SVG/Content_type#Number) ; _デフォルト値_: _none_; _アニメーション_: **yes**
 
-> **メモ:** SVG2 以降、`cx`、`cy`、`rx`、`ry` は、\_Geometry Propertie_s であり、これらの属性は要素の CSS プロパティとして使用することもできます。
+> **メモ:** SVG2 以降、`cx`、`cy`、`rx`、`ry` は、Geometry Properties であり、これらの属性は要素の CSS プロパティとして使用することもできます。
 
 ### グローバル属性
 

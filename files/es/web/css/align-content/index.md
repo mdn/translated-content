@@ -186,9 +186,7 @@ Su resultado es:
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentarios        |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS3 Flexbox', '#align-content', 'align-content')}} | {{Spec2('CSS3 Flexbox')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -36,9 +36,7 @@ function populateStorage() {
 
 ## Especificaciones
 
-| Especificacíon                                                                   | Estado                           | Comentario |
-| -------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('Web Storage', '#dom-storage-length', 'length')}} | {{Spec2('Web Storage')}} |            |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

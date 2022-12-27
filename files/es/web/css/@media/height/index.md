@@ -58,10 +58,7 @@ La característica `height` es especificada como un valor {{cssxref("&lt;length&
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                                   | Comentario                                                                |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#height', 'height')}} | {{Spec2('CSS4 Media Queries')}} | El valor ahora puede ser negativo, en cuyo caso se calcula como negativo. |
-| {{SpecName('CSS3 Media Queries', '#height', 'height')}} | {{Spec2('CSS3 Media Queries')}} | Definición inicial. El valor debe ser positivo.                           |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

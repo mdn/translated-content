@@ -101,11 +101,7 @@ Algunos ejemplos específicos:
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentarios                                                                             |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------------------------------------- |
-| {{SpecName('CSS3 Values', '#lengths', '&lt;length&gt;')}}                 | {{Spec2('CSS3 Values')}} | Añadidos `ch`, `rem`, `vw`, `vh`, `vmin`, `vmax` y `q`                                  |
-| {{SpecName('CSS2.1', 'syndata.html#length-units', '&lt;length&gt;')}} | {{Spec2('CSS2.1')}}         | `pt`, `pc`, `px` son definidos explícitamente (fueron definidos implícitamente en CSS1) |
-| {{SpecName('CSS1', '#length-units', '&lt;length&gt;')}}                     | {{Spec2('CSS1')}}         | Definición inicial                                                                      |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

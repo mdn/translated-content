@@ -105,7 +105,7 @@ L'élément **`<aside>`** (en français, « aparté ») représente une partie d
 
 Cet élément ne comprend que les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
-## **Notes d'utilisation**
+## Notes d'utilisation
 
 On ne doit pas utiliser l'élément `<aside>` pour marquer du texte entre parenthèses, ce type de texte est considéré comme faisant partie du flux principal.
 

@@ -71,9 +71,7 @@ CSS
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                       | Comentario        |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-column-gap", "grid-column-gap")}} | {{Spec2("CSS3 Grid")}} | Definición incial |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

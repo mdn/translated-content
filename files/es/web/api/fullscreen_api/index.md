@@ -128,9 +128,7 @@ De momento, no todos los navegadores están implementando la versión sin prefij
 
 ## Especificaciones
 
-| Especificación                       | Estatus                          | Comentarios      |
-| ------------------------------------ | -------------------------------- | ---------------- |
-| {{SpecName("Fullscreen")}} | {{Spec2("Fullscreen")}} | Versión inicial. |
+{{Specifications}}
 
 ## Browser compatibility
 

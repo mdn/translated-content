@@ -95,7 +95,7 @@ Vous pouvez également explorer en touchant le bouton _Déverrouiller_ en bas au
 
 TalkBack vous permet d'accéder aux menus contextuels globaux et locaux, où que vous ayez navigué sur l'appareil. Le premier fournit des options globales relatives à l'appareil dans son ensemble, et le second fournit des options relatives uniquement à l'application / à l'écran actuel.
 
-#### **Pour accéder à ces menus**:
+#### Pour accéder à ces menus
 
 1. Accédez au menu global en glissant rapidement vers le bas, puis à droite .
 2. Accédez au menu local en balayant rapidement vers le haut, puis à droite.

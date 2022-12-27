@@ -36,13 +36,9 @@ transform-style: unset;
 
 {{csssyntax}}
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                | Status                                   | Comment             |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS Transforms 2', '#transform-style-property', 'transform-style')}} | {{Spec2('CSS Transforms 2')}} | Initial definition. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Browser compatibility
 

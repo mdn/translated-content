@@ -11,9 +11,7 @@ translation_of: Web/CSS/@media/color
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                                   | Comentario         |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Media Queries', '#color', 'color')}} | {{Spec2('CSS3 Media Queries')}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 

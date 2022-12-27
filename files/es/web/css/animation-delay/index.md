@@ -48,9 +48,7 @@ Visitar [animaciones CSS](/es/CSS/Usando_animaciones_CSS) para ver algunos ejemp
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                                   | Comentario |
-| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation-delay', 'animation-delay') }} | {{ Spec2('CSS3 Animations') }} |            |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

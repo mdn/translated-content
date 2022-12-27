@@ -74,11 +74,7 @@ img {
 
 ## Especificaciones
 
-| Specification                                                                                                | Status                                   | Comment                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'vertical-align') }}             | {{ Spec2('CSS3 Transitions') }} | Defines `visibility` as animatable.                                                                                                                         |
-| {{ SpecName('CSS2.1', 'visudet.html#propdef-vertical-align', 'vertical-align') }} | {{ Spec2('CSS2.1') }}             | Add the {{cssxref("&lt;length&gt;")}} value and allows it to be applied to element with a {{ cssxref("display") }} type of `table-cell`. |
-| {{ SpecName('CSS1', '#vertical-align', 'vertical-align') }}                             | {{ Spec2('CSS1') }}                 | Initial definition.                                                                                                                                         |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

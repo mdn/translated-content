@@ -116,12 +116,9 @@ You can find a number of examples at these locations:
 - [WebVR.rocks Firefox demos](https://webvr.rocks/firefox#demos) — showcase examples
 - [A-Frame homepage](https://aframe.io/) — examples showing A-Frame usage
 
-## Specifications
+## Especificaciones
 
-| Specification                                | Status                                   | Comment                                                                                                      |
-| -------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("GamepadExtensions")}} | {{Spec2("GamepadExtensions")}} | Defines the [Experimental Gamepad extensions](/es/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions). |
-| {{SpecName('WebVR 1.1')}}             | {{Spec2('WebVR 1.1')}}             | Initial definition                                                                                           |
+{{Specifications}}
 
 ## Browser compatibility
 

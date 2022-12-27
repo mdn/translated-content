@@ -48,9 +48,7 @@ Hay muchos ejemplos de transiciones CSS en el artículo principal [CSS transitio
 
 ## Especificaciones
 
-| Specification                                                                        | Status                                   | Comment |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------- |
-| {{ SpecName('CSS3 Transitions', '#transition', 'transition') }} | {{ Spec2('CSS3 Transitions') }} |         |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

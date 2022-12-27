@@ -87,10 +87,7 @@ See the [example on the main Touch events article](/en/DOM/Touch_events#Example)
 
 ## Especificaciones
 
-| Specification                                                                                | Status                               | Comment                                                                                   |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------------------------- |
-| {{SpecName('Touch Events 2','#touchevent-interface', 'TouchEvent')}} | {{Spec2('Touch Events 2')}} | Added `ontouchstart`, `ontouchend`, `ontouchmove`, `ontouchend` global attribute handlers |
-| {{SpecName('Touch Events', '#touchevent-interface', 'TouchEvent')}}     | {{Spec2('Touch Events')}}     | Definición inicial.                                                                       |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

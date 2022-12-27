@@ -71,11 +71,9 @@ function errorMsg(msg, error) {
 }
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                        | Status                               | Comment            |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------ |
-| {{SpecName('Media Capture', '#mediadevices', 'MediaDevices')}} | {{Spec2('Media Capture')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

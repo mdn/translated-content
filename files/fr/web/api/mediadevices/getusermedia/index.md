@@ -138,7 +138,7 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 - `TypeError`
   - : La liste des contraintes spécifiées est vide ou toutes les contraintes sont définies comme `false` .
 
-## **Exemple**s
+## Exemples
 
 ### Largeur et hauteur
 

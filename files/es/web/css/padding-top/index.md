@@ -49,12 +49,7 @@ padding-top: unset;
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                                   | Comentarios                                                                                                  |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| {{ SpecName('CSS3 Box', '#the-padding', 'padding-top') }}                 | {{ Spec2('CSS3 Box') }}         | No change from {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top') }}. |
-| {{ SpecName('CSS3 Transitions', '#animatable-css', 'padding-top') }} | {{ Spec2('CSS3 Transitions') }} | Defines `padding-top` as animatable.                                                                         |
-| {{ SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top') }} | {{ Spec2('CSS2.1') }}             | No change from {{ Specname('CSS1', '#padding-top', 'padding-top') }}.                     |
-| {{ Specname('CSS1', '#padding-top', 'padding-top') }}                     | {{ Spec2('CSS1') }}                 | Initial definition                                                                                           |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

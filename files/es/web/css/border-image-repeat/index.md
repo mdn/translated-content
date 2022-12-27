@@ -92,9 +92,7 @@ repetition.addEventListener("change", function (evt) {
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estatus                                  | Comentarios        |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#border-image-repeat', 'border-image-repeat')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

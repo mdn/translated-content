@@ -109,15 +109,9 @@ focusNoScrollMethod = function getFocusWithoutScrolling() {
 
 {{ EmbedLiveSample('Focus_prevent_scroll') }}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                           | Estado                           | Comentarios |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ----------- |
-| {{SpecName('HTML WHATWG', 'editing.html#dom-focus', 'focus')}}     | {{Spec2('HTML WHATWG')}} |             |
-| {{SpecName('HTML5.1', 'editing.html#focus()-0', 'focus')}}             | {{Spec2('HTML5.1')}}     |             |
-| {{SpecName('HTML5 W3C', 'editing.html#dom-focus', 'focus')}}         | {{Spec2('HTML5 W3C')}}     |             |
-| {{SpecName('DOM2 HTML', 'html.html#ID-32130014', 'focus')}}         | {{Spec2('DOM2 HTML')}}     |             |
-| {{SpecName('DOM1', 'level-one-html.html#method-focus', 'focus')}} | {{Spec2('DOM1')}}         |             |
+{{Specifications}}
 
 ## Notas
 

@@ -27,9 +27,7 @@ _None._
 
 ## Especificaciones
 
-| Especificación                               | Estatus                                  | Comentario         |
-| -------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Conditional')}} | {{Spec2('CSS3 Conditional')}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

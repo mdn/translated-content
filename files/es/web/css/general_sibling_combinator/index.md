@@ -41,10 +41,7 @@ p ~ span {
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                               | Comentarios |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------- |
-| {{ SpecName('CSS4 Selectors', '#general-sibling-combinators', 'following-sibling combinator') }} | {{Spec2('CSS4 Selectors')}} |             |
-| {{ SpecName('CSS3 Selectors', '#general-sibling-combinators', 'general sibling combinator') }}     | {{Spec2('CSS3 Selectors')}} |             |
+{{Specifications}}
 
 ## Compatibilidad entre navegadores
 

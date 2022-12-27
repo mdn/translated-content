@@ -59,9 +59,7 @@ Hay varios ejemplos de transiciones CSS incluídos en el artículo principal [Tr
 
 ## Especificaciones
 
-| Especificación                                                                                           | Estado                                   | Comentario         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Transitions', '#transition-property', 'transition-property')}} | {{Spec2('CSS3 Transitions')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

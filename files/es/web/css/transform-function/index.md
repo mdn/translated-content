@@ -122,9 +122,7 @@ Existen varias funciones disponibles para describir transformaciones en CSS. Cad
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                               | Comentarios        |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Transforms', '#transform-property', 'transform')}} | {{Spec2('CSS3 Transforms')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

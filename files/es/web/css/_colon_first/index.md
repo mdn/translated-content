@@ -66,10 +66,7 @@ Presione el botón "Imprimir!" para imprimir el ejemplo. Las palabras en la prim
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                                   | Comentario          |
-| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Paged Media', '#left-right-first', ':first')}} | {{Spec2('CSS3 Paged Media')}} | Ningún cambio.      |
-| {{SpecName('CSS2.1', 'page.html#page-selectors', ':first')}}     | {{Spec2('CSS2.1')}}                 | Definición Inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

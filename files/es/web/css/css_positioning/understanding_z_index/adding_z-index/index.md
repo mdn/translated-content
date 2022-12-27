@@ -34,8 +34,6 @@ Esta propiedad es asignada con un valor entero (positivo o negativo), el cuál r
 
 En el siguiente ejempo, el orden de apilamiento de las capas es organizado usando z-index. El z-index del DIV#5 no hace efecto ya que este no es un elemento posicionado.
 
-{{ EmbedLiveSample('Example_source_code', '468', '365', '', 'Web/Guide/CSS/Understanding_z_index/Adding_z-index') }}
-
 ### Código fuente de ejemplo
 
 ```html
@@ -149,6 +147,8 @@ En el siguiente ejempo, el orden de apilamiento de las capas es organizado usand
 </body>
 </html>
 ```
+
+{{EmbedLiveSample('', '468', '365')}}
 
 ### También puedes ver
 

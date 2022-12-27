@@ -138,10 +138,7 @@ El elemento {{HTMLElement("blockquote")}} no usa los estilos predeterminados del
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                               | Comentarios                |
-| ------------------------------------------------------------------------ | ------------------------------------ | -------------------------- |
-| {{ SpecName('CSS4 Cascade', '#all-shorthand', 'all') }} | {{ Spec2('CSS4 Cascade') }} | Añadido el valor `revert`. |
-| {{ SpecName('CSS3 Cascade', '#all-shorthand', 'all') }} | {{ Spec2('CSS3 Cascade') }} | Definición inicial.        |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

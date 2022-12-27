@@ -91,10 +91,7 @@ Función que acepta un `<length>` o un `<percentage>` como un argumento.
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario                                                                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}} | {{Spec2("CSS3 Sizing")}} | Define la función como el tamaño de caja disponible para {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} y {{cssxref("max-height")}}. |
-| {{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}     | {{Spec2("CSS Grid")}}     | Define la función cuando es usada como un tamaño de track.                                                                                                                                                                                                    |
+{{Specifications}}
 
 ## Browser compatibility
 

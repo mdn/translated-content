@@ -186,13 +186,9 @@ function metaKeyUp (event) {
 </html>
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                    | Status                           | Comment             |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM3 Events', '#interface-KeyboardEvent', 'KeyboardEvent')}} | {{Spec2('DOM3 Events')}} | Initial definition. |
-
-The `KeyboardEvent` interface specification went through numerous draft versions, first under DOM Events Level 2 where it was dropped as no consensus arose, then under DOM Events Level 3. This led to the implementation of non-standard initialization methods, the early DOM Events Level 2 version, {{domxref("KeyboardEvent.initKeyEvent()")}} by Gecko browsers and the early DOM Events Level 3 version, {{domxref("KeyboardEvent.initKeyboardEvent()")}} by others. Both have been superseded by the modern usage of a constructor: {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}.
+{{Specifications}}
 
 ## Browser compatibility
 

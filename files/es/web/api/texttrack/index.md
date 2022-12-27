@@ -60,11 +60,9 @@ _This interface also inherits methods from {{domxref("EventTarget")}}._
 
 tbd
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                | Status                               | Comment |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------- |
-| {{ SpecName('HTML WHATWG', '#texttrack', 'TextTrack') }} | {{ Spec2('HTML WHATWG') }} |         |
+{{Specifications}}
 
 ## Browser compatibility
 

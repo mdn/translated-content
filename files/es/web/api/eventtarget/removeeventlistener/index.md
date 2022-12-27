@@ -129,11 +129,7 @@ mouseOverTarget.addEventListener('mouseover', function () {
 
 ## Especificaciones
 
-| Especificación                                                                                                                                   | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName("DOM WHATWG", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}         | {{Spec2("DOM WHATWG")}} |                    |
-| {{SpecName("DOM4", "#dom-eventtarget-removeeventlistener", "EventTarget.removeEventListener()")}}                 | {{Spec2("DOM4")}}         |                    |
-| {{SpecName("DOM2 Events", "#Events-EventTarget-removeEventListener", "EventTarget.removeEventListener()")}} | {{Spec2("DOM2 Events")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

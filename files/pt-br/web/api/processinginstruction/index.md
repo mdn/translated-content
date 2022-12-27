@@ -25,5 +25,5 @@ Instruções de processamento herdam métodos e propriedades do [`Node`](/pt-BR/
 
 ### Veja também
 
-- [document.createProcessingInstruction](/en/DOM/document.createProcessingInstruction)
+- [document.createProcessingInstruction](/pt-BR/DOM/document.createProcessingInstruction)
 - [whitespace no DOM](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)

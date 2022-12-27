@@ -40,11 +40,9 @@ translation_of: Web/CSS/CSS_Animations
 - [Using CSS animations](/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
   - : Step-by-step tutorial about how to create animations using CSS, this article describes each relevant CSS property and at-rule and explains how they interact.
 
-## Specifications
+## Especificaciones
 
-| Specification                                | Status                                   | Comment             |
-| -------------------------------------------- | ---------------------------------------- | ------------------- |
-| {{ SpecName('CSS3 Animations') }} | {{ Spec2('CSS3 Animations') }} | Initial definition. |
+{{Specifications}}
 
 ## Browser compatibility
 

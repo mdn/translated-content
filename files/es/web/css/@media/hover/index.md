@@ -49,9 +49,7 @@ La característica hover es especificada como un valor de palabra clave elegida 
 
 ## Especificaciones
 
-| Especificación                                                           | Estado                                   | Comentario          |
-| ------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
-| {{SpecName('CSS4 Media Queries', '#hover', 'hover')}} | {{Spec2('CSS4 Media Queries')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

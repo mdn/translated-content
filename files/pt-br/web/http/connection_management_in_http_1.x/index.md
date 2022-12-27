@@ -51,7 +51,7 @@ Em HTTP/1.1, persistencia é o padrão e o cabeçalho não é mais necessário (
 >
 > Por estas razões, o pipelining tem sido substituído por um algoritmo melhor, multiplexação, que é usado pelo HTTP/2.
 
-Por padrão, [HTTP](/en/HTTP) as solicitações são emitidas sequencialmente. A próxima solicitação só é emitida depois que recebeu a resposta para a solicitação atual. Como eles são afetados pelas latências de rede e as limitações de largura de banda, isso pode resultar em atrasos significativos antes que a próxima solicitação é vista pelo servidor.
+Por padrão, [HTTP](/pt-BR/HTTP) as solicitações são emitidas sequencialmente. A próxima solicitação só é emitida depois que recebeu a resposta para a solicitação atual. Como eles são afetados pelas latências de rede e as limitações de largura de banda, isso pode resultar em atrasos significativos antes que a próxima solicitação é vista pelo servidor.
 
 Pipelining é o processo para enviar solicitações sucessivas, sobre a mesma conexão persistente, sem esperar pela resposta. Isso evita a latência da conexão. Teoricamente, desempenho também poderia ser melhorado se duas solicitações HTTP para ser embalado na mesma mensagem TCP. O [MSS](https://en.wikipedia.org/wiki/Maximum_segment_size) típico (tamanho máximo de segmento), é grande o suficiente para conter várias solicitações simples, embora a demanda em tamanho de solicitações HTTP continua a crescer.
 

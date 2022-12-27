@@ -112,11 +112,7 @@ Puede inhabilitar el brillo con el siguiente CSS o anularlo por completo para mo
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                               | Comentarios                                                   |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-invalid', ':invalid')}}     | {{Spec2('HTML WHATWG')}}     | Ningún cambio.                                                |
-| {{SpecName('HTML5 W3C', '#selector-invalid', ':invalid')}}         | {{Spec2('HTML5 W3C')}}         | Define la semántica de HTML y la validación de restricciones. |
-| {{SpecName('CSS4 Selectors', '#validity-pseudos', ':invalid')}} | {{Spec2('CSS4 Selectors')}} | Definición Inicial.                                           |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

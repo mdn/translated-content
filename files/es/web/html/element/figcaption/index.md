@@ -72,10 +72,7 @@ Para ejemplos con `<figcaption>`, por favor ver la página {{HTMLElement("figure
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                           | Comentario |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'grouping-content.html#the-figcaption-element', '&lt;figcaption&gt;')}} | {{Spec2('HTML5 W3C')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 

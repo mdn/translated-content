@@ -83,10 +83,7 @@ article :last-of-type {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentarios                                             |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS3 Selectors')}} | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

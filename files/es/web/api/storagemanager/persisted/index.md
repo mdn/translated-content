@@ -42,9 +42,7 @@ if (navigator.storage && navigator.storage.persist)
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                       | Comentario          |
-| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('Storage','#dom-storagemanager-persisted','persisted')}} | {{Spec2('Storage')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

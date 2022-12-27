@@ -12,7 +12,7 @@ translation_of: Web/API/Node/firstChild
 
 {{APIRef("DOM")}}
 
-La propriété en lecture seule **`Node.firstChild` r**envoie le premier nœud enfant de l'arbre ou `null` s'il n'en a pas. Si le noeud est un `Document` , il renvoie le premier noeud de la liste de ses enfants directs.
+La propriété en lecture seule **`Node.firstChild`** renvoie le premier nœud enfant de l'arbre ou `null` s'il n'en a pas. Si le noeud est un `Document` , il renvoie le premier noeud de la liste de ses enfants directs.
 
 ## Syntaxe
 

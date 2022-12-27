@@ -118,12 +118,9 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
 > **Nota:** Puedes ver este ejemplo en accion en [element-details](https://github.com/mdn/web-components-examples/tree/master/element-details) (velo [running live](https://mdn.github.io/web-components-examples/element-details/)). Además, puedes encontrar una explicación en [Using templates and slots](/es/docs/Web/Web_Components/Using_templates_and_slots).
 
-## Especificaciónes
+## Especificaciones
 
-| Especificación                                                                                       | Estado                           | Comentario |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG','scripting.html#the-slot-element','&lt;slot&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('DOM WHATWG','#shadow-tree-slots','Slots')}}                             | {{Spec2('DOM WHATWG')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

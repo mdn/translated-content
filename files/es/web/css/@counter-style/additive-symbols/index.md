@@ -60,9 +60,7 @@ additive-symbols: 3 "0", 2 url(symbol.png);
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estatus                                      | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Counter Styles', '#counter-style-symbols', 'additive-symbols')}} | {{Spec2('CSS3 Counter Styles')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -84,11 +84,11 @@ var updateSlider = function (newValue) {
 
 ### Atributos ARIA usados
 
-- [aria-valuemin](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute)
-- [aria-valuemax](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute)
-- [aria-valuenow](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute)
-- [aria-valuetext](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute)
-- [aria-orientation](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute)
+- [aria-valuemin](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemin_attribute)
+- [aria-valuemax](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuemax_attribute)
+- [aria-valuenow](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuenow_attribute)
+- [aria-valuetext](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-valuetext_attribute)
+- [aria-orientation](/pt-BR/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-orientation_attribute)
 
 ### Related ARIA techniques
 

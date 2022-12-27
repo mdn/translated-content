@@ -56,6 +56,4 @@ La Web Crypto API puede ser usada para:
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario         |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName("Web Crypto API")}} | {{Spec2("Web Crypto API")}} | Initial definition |
+{{Specifications}}

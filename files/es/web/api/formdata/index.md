@@ -49,9 +49,7 @@ Un objeto que implementa `FormData` puede usarse directamente en una estructura 
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                               | Comentario                    |
-| ------------------------------------------------------------------------------------ | ------------------------------------ | ----------------------------- |
-| {{SpecName('XMLHttpRequest','#interface-formdata','FormData')}} | {{Spec2('XMLHttpRequest')}} | FormData definido en XHR spec |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

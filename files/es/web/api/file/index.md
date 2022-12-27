@@ -61,9 +61,7 @@ _La interfaz `File` no define algún método, pero los hereda de la interfaz {{d
 
 ## Especificaciones
 
-| Especificación                   | Estado                       | Comentario          |
-| -------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('File API')}} | {{Spec2('File API')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en Navegadores
 

@@ -119,9 +119,7 @@ El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}
 
 ## Especificaciones
 
-| Especificación                                                                                       | Estado                                       | Comentarios        |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------ |
-| {{SpecName('CSS4 Pseudo-Elements', '#placeholder-pseudo', '::placeholder')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

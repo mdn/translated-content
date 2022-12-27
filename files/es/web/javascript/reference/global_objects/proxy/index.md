@@ -185,7 +185,7 @@ person.age = 'young'; // Lanza una excepción
 person.age = 300; // Lanza una excepción
 ```
 
-### Extendiendo el contructor
+### Extendiendo el constructor
 
 Una función intermediaria podría fácilmente extender un constructor con un nuevo
 constructor. Este ejemplo usa los manipuladores

@@ -66,7 +66,7 @@ As informações ARIA nos blogues tendem a ficar desatualizadas rapidamente. Sem
 
 ### Encontrando Erros
 
-[Erros nos arquivos ARIA em navegadores, leitores de telas e bibliotecas JavaScript](/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs).
+[Erros nos arquivos ARIA em navegadores, leitores de telas e bibliotecas JavaScript](/pt-BR/Accessibility/ARIA/How_to_file_ARIA-related_bugs).
 
 ### Exemplos
 

@@ -17,9 +17,7 @@ var cryptoObj = window.crypto || window.msCrypto; // para IE 11
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario         |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('Web Crypto API')}} | {{Spec2('Web Crypto API')}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad de Navegadores
 

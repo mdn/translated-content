@@ -288,13 +288,13 @@ So here's the result with our three states:
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("Basic_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{EmbedLiveSample("Basic_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Active_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{EmbedLiveSample("Active_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
       <td>
-        {{EmbedLiveSample("Open_state",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_1")}}
+        {{EmbedLiveSample("Open_state",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_1")}}
       </td>
     </tr>
     <tr>
@@ -395,10 +395,10 @@ window.addEventListener("load", function () {
   <tbody>
     <tr>
       <td>
-        {{EmbedLiveSample("No_JS",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_2")}}
+        {{EmbedLiveSample("No_JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
       <td>
-        {{EmbedLiveSample("JS",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_2")}}
+        {{EmbedLiveSample("JS",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_2")}}
       </td>
     </tr>
     <tr>
@@ -571,7 +571,7 @@ At that point, our widget will change state according to our design, but its val
 
 | Live example                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_3")}}                       |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_3")}} |
 | [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_3) |
 
 ### Handling the widget's value
@@ -671,7 +671,7 @@ With that, we're done! Here's the result:
 
 | Live example                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_4")}}                       |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_4")}} |
 | [Check out the source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_4) |
 
 But wait a second, are we really done?
@@ -738,7 +738,7 @@ Here is the final result of all these changes (you'll get a better feel for this
 
 | Live example                                                                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{EmbedLiveSample("Change_states",120,130, "", "HTML/Forms/How_to_build_custom_form_widgets/Example_5")}}                             |
+| {{EmbedLiveSample("Change_states",120,130, "", "Learn/Forms/How_to_build_custom_form_controls/Example_5")}} |
 | [Check out the final source code](/es/docs/HTML/Forms/How_to_build_custom_form_widgets/Example_5) |
 
 ## Conclusion

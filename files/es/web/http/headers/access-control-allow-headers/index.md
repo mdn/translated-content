@@ -40,9 +40,7 @@ Access-Control-Allow-Headers: X-Custom-Header
 
 ## Especificaciones
 
-| Specification                                                                                                            | Status                   | Comment             |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------ | ------------------- |
-| {{SpecName('Fetch','#http-access-control-allow-headers', 'Access-Control-Allow-Headers')}} | {{Spec2("Fetch")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

@@ -73,9 +73,7 @@ font-display: optional;
 
 ## Especificaciones
 
-| Especificación                                                                       | Estado                           | Comentario         |
-| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------ |
-| {{SpecName('CSS4 Fonts', '#font-display-desc', 'font-display')}} | {{Spec2('CSS4 Fonts')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -97,11 +97,7 @@ ul li:first-child {
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                               | Comentarios                                             |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------- |
-| {{SpecName('CSS4 Selectors', '#first-child-pseudo', ':first-child')}} | {{Spec2('CSS4 Selectors')}} | Los elementos coincidentes no requieren tener un padre. |
-| {{SpecName('CSS3 Selectors', '#first-child-pseudo', ':first-child')}} | {{Spec2('CSS3 Selectors')}} | Ningún cambio.                                          |
-| {{SpecName('CSS2.1', 'selector.html#first-child', ':first-child')}}     | {{Spec2('CSS2.1')}}             | Definición Inicial.                                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

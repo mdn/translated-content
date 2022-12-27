@@ -56,9 +56,7 @@ a:-webkit-any-link {
 
 ## Especificaciones
 
-| Especificación                                                                           | Estado                               | Comentarios         |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName("CSS4 Selectors", "#the-any-link-pseudo", ":any-link")}} | {{Spec2('CSS4 Selectors')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

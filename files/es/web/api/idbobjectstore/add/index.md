@@ -107,11 +107,9 @@ function addData() {
 - key
   - : La llave a usar para identificar el registro. Si no es especificada, el resultado es nulo.
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                           | Estado                       | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------- |
-| {{SpecName('IndexedDB', '#widl-IDBObjectStore-add-IDBRequest-any-value-any-key', 'add()')}} | {{Spec2('IndexedDB')}} |            |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

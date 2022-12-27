@@ -187,11 +187,7 @@ Puede usar la pseudo-clase `:target` para crear un lightbox sin usar JavaScript.
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentarios                             |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------------------------- |
-| {{SpecName("HTML WHATWG", "browsers.html#selector-target", ":target")}} | {{Spec2("HTML WHATWG")}}     | Define la semántica específica de HTML. |
-| {{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}             | {{Spec2("CSS4 Selectors")}} | Ningún cambio.                          |
-| {{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}                 | {{Spec2("CSS3 Selectors")}} | Definición Inicial.                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

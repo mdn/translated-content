@@ -40,11 +40,7 @@ El color verde se usa comúnmente para indicar una entrada válida. Las personas
 
 ## Especificaciones
 
-| Specification                                                                    | Status                               | Comment                                                       |
-| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-valid', ':valid')}}     | {{Spec2('HTML WHATWG')}}     | Ningún cambio.                                                |
-| {{SpecName('HTML5 W3C', '#selector-valid', ':valid')}}         | {{Spec2('HTML5 W3C')}}         | Define la semántica de HTML y la validación de restricciones. |
-| {{SpecName('CSS4 Selectors', '#validity-pseudos', ':valid')}} | {{Spec2('CSS4 Selectors')}} | Definición Inicial.                                           |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

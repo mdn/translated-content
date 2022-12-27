@@ -191,13 +191,7 @@ li[aria-current='step']::after {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estatus                                      | Comentarios                                                           |
-| ------------------------------------------------------------------------------------------------ | -------------------------------------------- | --------------------------------------------------------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-before', '::before')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Sin cambios significativos desde la especificación previa.            |
-| {{Specname("CSS3 Transitions", "#animatable-properties", "")}}             | {{Spec2("CSS3 Transitions")}}     | Permite transiciones en propiedades definidas a los pseudo-elementos. |
-| {{Specname("CSS3 Animations", "", "")}}                                             | {{Spec2("CSS3 Animations")}}         | Permite animaciones en propiedades definidas a los pseudo-elementos.  |
-| {{SpecName('CSS3 Selectors', '#gen-content', '::before')}}                     | {{Spec2('CSS3 Selectors')}}         | Introduce la sintaxis de doble símbolo `:`                            |
-| {{SpecName('CSS2.1', 'generate.html#before-after-content', '::before')}} | {{Spec2('CSS2.1')}}                     | Definición inicial, usando la sintaxis de un símbolo `:`              |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

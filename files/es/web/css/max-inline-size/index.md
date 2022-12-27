@@ -64,11 +64,9 @@ La propiedad `max-inline-size` toma los mismos valores como las propiedades {{cs
 
 {{EmbedLiveSample("Ejemplo")}}
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                                   | Estado                                           | Comentario          |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-max-inline-size", "max-inline-size")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

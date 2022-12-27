@@ -35,9 +35,7 @@ var result = window.location.origin; // Devuelve:'https://developer.mozilla.org'
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                           | Comentario          |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('HTML WHATWG', '#dom-location-origin', 'origin')}} | {{Spec2('HTML WHATWG')}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

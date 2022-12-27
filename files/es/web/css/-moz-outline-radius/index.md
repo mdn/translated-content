@@ -86,7 +86,7 @@ border: 1px solid black; outline: dotted red;
 
 ### Result
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/-moz-outline-radius') }}
+{{EmbedLiveSample('', '', '')}}
 
 ## Notas
 

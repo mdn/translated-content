@@ -3634,6 +3634,7 @@
 /fr/docs/Web/API/Coordinates	/fr/docs/Web/API/GeolocationCoordinates
 /fr/docs/Web/API/DOMString	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/API/DOMString/Binary	/fr/docs/Web/API/btoa
+/fr/docs/Web/API/DOMTimeStamp	/fr/docs/Glossary/Unix_time
 /fr/docs/Web/API/DOMTokenList/DOMTokenList.add()	/fr/docs/Web/API/DOMTokenList/add
 /fr/docs/Web/API/DeviceOrientationEvent.absolute	/fr/docs/Web/API/DeviceOrientationEvent/absolute
 /fr/docs/Web/API/DeviceRotationRate	/fr/docs/Web/API/DeviceMotionEventRotationRate
@@ -4831,6 +4832,7 @@
 /fr/docs/Web/JavaScript/Performance_les_dangers_liés_à_la_modification_de_Prototype	/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 /fr/docs/Web/JavaScript/Reference/A_propos	/fr/docs/Web/JavaScript/Reference/About
 /fr/docs/Web/JavaScript/Reference/Classes/Class_fields	/fr/docs/Web/JavaScript/Reference/Classes/Public_class_fields
+/fr/docs/Web/JavaScript/Reference/Classes/Class_static_initialization_blocks	/fr/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
 /fr/docs/Web/JavaScript/Reference/Commentaires	/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Commentaires
 /fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /fr/docs/Web/JavaScript/Reference/Erreurs	/fr/docs/Web/JavaScript/Reference/Errors

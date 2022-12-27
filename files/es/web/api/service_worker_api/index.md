@@ -122,9 +122,7 @@ En el futuro, los service workers podrán hacer una cantidad de cosas útiles pa
 
 ## Especificaciones
 
-| Specification                            | Status                               | Comment             |
-| ---------------------------------------- | ------------------------------------ | ------------------- |
-| {{SpecName('Service Workers')}} | {{Spec2('Service Workers')}} | Definición inicial. |
+{{Specifications}}
 
 ## Ver también
 

@@ -284,12 +284,7 @@ Los elementos que se desplazan que contienen contenido `fixed` o `sticky` conten
 
 ## Especificaciones
 
-| Especificación                                                                           | Status                                   | Comentario                            |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------- |
-| {{SpecName('CSS2.1', 'visuren.html#propdef-position', 'position')}} | {{Spec2('CSS2.1')}}                 |                                       |
-| {{SpecName('CSS3 Positioning','#position-property','position')}}     | {{Spec2('CSS3 Positioning')}} | Añade valor de la propiedad `sticky`. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad
 

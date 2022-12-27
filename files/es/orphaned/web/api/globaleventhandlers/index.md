@@ -214,13 +214,7 @@ _Esta interfaz no define métodos_
 
 ## Especificaciones
 
-| Especificación                                                                                                                   | Estado                               | Comentario                                                                                                                                             |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName("Selection API",'', 'Extensión a GlobalEventHandlers')}}                                     | {{Spec2('Selection API')}} | Agrega `en el cambio de selección.`                                                                                                                    |
-| {{SpecName('Pointer Lock', '#extensions-to-the-document-interface', 'Extensión de Document')}} | {{Spec2('Pointer Lock')}}     | Agrega `onpointerlockchange` y `onpointerlockerror` en {{DOMxRef("Document")}}. Está implementado experimentalmente en `GlobalEventHandlers`. |
-| {{SpecName('HTML WHATWG', '#globaleventhandlers', 'GlobalEventHandlers')}}                             | {{ Spec2('HTML WHATWG') }} | Sin cambios desde la última instantánea, {{SpecName("HTML5.1")}}.                                                                             |
-| {{SpecName('HTML5.1', '#globaleventhandlers', 'GlobalEventHandlers')}}                                     | {{Spec2('HTML5.1')}}         | Instantánea de {{SpecName("HTML WHATWG")}}. Agregó `onsort` desde la instantánea de {{SpecName("HTML5 W3C")}}.                         |
-| {{SpecName("HTML5 W3C", "#globaleventhandlers", "GlobalEventHandlers")}}                                 | {{ Spec2('HTML5 W3C') }}     | Instantánea de {{SpecName("HTML WHATWG")}}. Creación de `GlobalEventHandlers` (propiedades en el destino anterior).                           |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

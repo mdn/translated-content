@@ -57,13 +57,9 @@ alert(elem1 === elem2); // muestra: "true"
 elem1 = document.forms["named.item.with.periods"];
 ```
 
-## Especificación
+## Especificaciones
 
-| Especificación                                                                                   | Estado                           | Comentario          |
-| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
-| {{SpecName('DOM WHATWG', '#htmlcollection', 'HTMLCollection')}}             | {{ Spec2('DOM WHATWG') }} |                     |
-| {{SpecName('DOM2 HTML', 'html.html#ID-75708506', 'HTMLCollection')}}     | {{ Spec2('DOM2 HTML') }} |                     |
-| {{SpecName('DOM1', 'level-one-html.html#ID-75708506', 'HTMLCollection')}} | {{ Spec2('DOM1') }}         | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

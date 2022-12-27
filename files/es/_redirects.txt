@@ -482,6 +482,7 @@
 /es/docs/Glossary/Estructura_de_datos	/es/docs/Glossary/Data_structure
 /es/docs/Glossary/Funcion_de_primera_clase	/es/docs/Glossary/First-class_Function
 /es/docs/Glossary/Función	/es/docs/Glossary/Function
+/es/docs/Glossary/Grid_Rows	/es/docs/Glossary/Grid_Row
 /es/docs/Glossary/Hilo_principal	/es/docs/Glossary/Main_thread
 /es/docs/Glossary/IU	/es/docs/Glossary/UI
 /es/docs/Glossary/Identificador	/es/docs/Glossary/Identifier

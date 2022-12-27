@@ -131,11 +131,7 @@ Se ha añadido un margen del tamaño de la sombra más ancha para asegurarse de 
 
 ## Especificaciones
 
-| Especificación                                                                   | Estado                                   | Comentario         |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#box-shadow', 'box-shadow')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
-
-cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad de los navegadores
 

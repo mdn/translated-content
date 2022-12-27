@@ -149,9 +149,7 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                                                               | Estado                                   | Comentarios        |
-| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------ |
-| {{SpecName('CSS3 Backgrounds', '#the-border-radius', 'border-top-left-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

@@ -38,6 +38,4 @@ original_slug: Web/CSS/Columnas_CSS
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Comentario         |
-| ---------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Multicol')}} | {{Spec2('CSS3 Multicol')}} | Definición inicial |
+{{Specifications}}

@@ -35,11 +35,7 @@ Cada elemento `<abbr>` usado es independiente de todos los otros; dar un `<title
 
 ## Especificaciones
 
-| Especificación                                                                                                           | Estado                           | Comentario |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ---------- |
-| {{SpecName('HTML WHATWG', 'text-level-semantics.html#the-abbr-element', '&lt;abbr&gt;')}} | {{Spec2('HTML WHATWG')}} |            |
-| {{SpecName('HTML5 W3C', 'text-level-semantics.html#the-abbr-element', '&lt;abbr&gt;')}}     | {{Spec2('HTML5 W3C')}}     |            |
-| {{SpecName('HTML4.01', 'struct/text.html#edef-ABBR', '&lt;abbr&gt;')}}                             | {{Spec2('HTML4.01')}}     |            |
+{{Specifications}}
 
 ## Compatibilidad de navegador
 

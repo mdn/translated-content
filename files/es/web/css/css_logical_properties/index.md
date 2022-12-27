@@ -118,9 +118,7 @@ Las propiedades y valores lógicos usan los términos abstractos de bloque (_blo
 
 ## Especificaciones
 
-| Especificación                                       | Estado                                           | Comentario          |
-| ---------------------------------------------------- | ------------------------------------------------ | ------------------- |
-| {{SpecName("CSS Logical Properties")}} | {{Spec2("CSS Logical Properties")}} | Definición inicial. |
+{{Specifications}}
 
 ## Compatibilidad en los Navegadores
 

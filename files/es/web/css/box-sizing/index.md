@@ -90,11 +90,7 @@ div {
 
 ## Especificaciones
 
-| Especificación                                                               | Estatus                              | Comentario         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | ------------------ |
-| {{SpecName('CSS3 Basic UI', '#box-sizing', 'box-sizing')}} | {{Spec2('CSS3 Basic UI')}} | Definición inicial |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

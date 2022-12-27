@@ -100,12 +100,7 @@ progress:indeterminate {
 
 ## Especificaciones
 
-| Especificación                                                                                   | Estado                               | Comentarios                                                   |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', '#selector-indeterminate', ':indeterminate')}} | {{Spec2('HTML WHATWG')}}     | Ningún cambio.                                                |
-| {{SpecName('HTML5 W3C', '#selector-indeterminate', ':indeterminate')}}     | {{Spec2('HTML5 W3C')}}         | Define la semántica de HTML y la validación de restricciones. |
-| {{SpecName('CSS4 Selectors', '#indeterminate', ':indeterminate')}}         | {{Spec2('CSS4 Selectors')}} | Ningún cambio.                                                |
-| {{SpecName('CSS3 Basic UI', '#indeterminate', ':indeterminate')}}         | {{Spec2('CSS3 Basic UI')}} | Define la pseudo-clase, pero no la semántica asociada.        |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

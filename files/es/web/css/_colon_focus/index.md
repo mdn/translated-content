@@ -68,12 +68,7 @@ Nunca elimines el outline de un foco sin reemplazarlo por otro tipo de indicador
 
 ## Especificaciones
 
-| Especificación                                                                                                   | Estado                               | Comentarios                             |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | --------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-focus', ':focus')}}                     | {{Spec2('HTML WHATWG')}}     | Define la semántica específica de HTML. |
-| {{SpecName('CSS4 Selectors', '#focus-pseudo', ':focus')}}                                     | {{Spec2('CSS4 Selectors')}} | Ningún cambio.                          |
-| {{SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':focus')}} | {{Spec2('CSS3 Selectors')}} | Ningún cambio.                          |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':focus')}}                 | {{Spec2('CSS2.1')}}             | Definición Inicial.                     |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

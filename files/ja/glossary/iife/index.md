@@ -7,7 +7,6 @@ slug: Glossary/IIFE
 
 IIFE という名前は [Ben Alman のブログ](https://web.archive.org/web/20171201033208/http://benalman.com/news/2010/11/immediately-invoked-function-expression/#iife)で付けられました。
 
-
 ```js
 (function () {
   // …

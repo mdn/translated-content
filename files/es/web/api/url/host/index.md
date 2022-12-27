@@ -35,11 +35,9 @@ url = new URL('https://developer.mozilla.org:4097/en-US/docs/Web/API/URL/host');
 console.log(url.host); // "developer.mozilla.org:4097"
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                    | Status               | Comment            |
-| ---------------------------------------------------------------- | -------------------- | ------------------ |
-| {{SpecName('URL', '#dom-url-host', 'URL.host')}} | {{Spec2('URL')}} | Initial definition |
+{{Specifications}}
 
 ## Browser compatibility
 

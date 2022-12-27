@@ -45,9 +45,7 @@ Ver ejemplos [CSS animations](/es/docs/CSS/Using_CSS_animations).
 
 ## Especificaciones
 
-| Especificaciones                                                                                                             | Estado                                   | Comentario |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------- |
-| {{ SpecName('CSS3 Animations', '#animation-iteration-count', 'animation-iteration-count') }} | {{ Spec2('CSS3 Animations') }} |            |
+{{Specifications}}
 
 ## Compatibilidad en navegadores
 

@@ -22,9 +22,7 @@ No se hereda ni es heredado de ningún elemento. Tampoco se hacen restricciones 
 
 ## Especificaciones
 
-| Especificación                                                                               | Estado                           | Comentario         |
-| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName('Fullscreen', '#::backdrop-pseudo-element', '::backdrop')}} | {{Spec2('Fullscreen')}} | Definición Inicial |
+{{Specifications}}
 
 ## Compatibilidad con los distintos navegadores
 

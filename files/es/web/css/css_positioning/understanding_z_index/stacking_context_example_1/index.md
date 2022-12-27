@@ -107,7 +107,7 @@ En términos de contextos de apilamiento, el DIV #1 y el DIV #3 son simplemente 
 
 ### Resultado
 
-{{ EmbedLiveSample('Example', '', '', '', 'Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1') }}
+{{EmbedLiveSample('', '', '')}}
 
 ### También puedes ver
 

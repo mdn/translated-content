@@ -33,9 +33,7 @@ Esta pieza de código lee el texto que hay en el portapapeles y lo añade al pri
 
 ## Especificaciones
 
-| Especificación                           | Estado                               | Observaciones         |
-| ---------------------------------------- | ------------------------------------ | --------------------- |
-| {{SpecName('Clipboard API')}} | {{Spec2('Clipboard API')}} | Definición primitiva. |
+{{Specifications}}
 
 ## Compatibilidad con navegadores
 

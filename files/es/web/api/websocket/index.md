@@ -144,9 +144,7 @@ socket.addEventListener('message', function (event) {
 
 ## Especificaciones
 
-| Specification                                                                            | Status                           | Comment            |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
-| {{SpecName("Websockets", "#the-websocket-interface", "WebSocket")}} | {{Spec2("Websockets")}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 

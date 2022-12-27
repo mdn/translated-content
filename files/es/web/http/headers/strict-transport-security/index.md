@@ -72,9 +72,7 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 ## Especificaciones
 
-| Especificación               | Estado                   | Comentario         |
-| ---------------------------- | ------------------------ | ------------------ |
-| {{SpecName('HSTS')}} | {{Spec2('HSTS')}} | Definición inicial |
+{{Specifications}}
 
 ## Compatibilidad de navegadores
 
