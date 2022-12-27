@@ -70,7 +70,7 @@ Web 最常用的图像格式是：
     将图像复制并粘贴为文本，或是将图像的链接保存为浏览器书签时，也会用到此属性。
 
 - {{htmlattrdef("crossorigin")}}
-  - : 这个枚举属性表明是否必须使用 {{glossary("CORS")}} 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被标记为“[污染](/zh-CN/docs/Web/HTML/CORS_enabled_image#/zh-CN/docs/Web/HTML/CORS_enabled_image#安全性和“被污染”的_canvas)（tainted）”。
+  - : 这个枚举属性表明是否必须使用 {{glossary("CORS")}} 完成相关图像的抓取。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会被标记为“[污染](/zh-CN/docs/Web/HTML/CORS_enabled_image#安全性和“被污染”的_canvas)（tainted）”。
 
     如果*未指定* `crossorigin` 属性，则会发送不启用 CORS 的请求（不会携带 {{httpheader("Origin")}} 请求标头），且浏览器会将图像标记为“被污染”并拒绝对图像数据的访问，阻止其在 {{HTMLElement("canvas")}} 元素中的使用。
 
@@ -140,7 +140,7 @@ Web 最常用的图像格式是：
 - {{htmlattrdef("sizes")}}
   - : 表示资源大小的、以逗号隔开的一个或多个字符串。每一个资源大小包括：
 
-    1. 一个[媒体条件](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax)。最后一项一定是被忽略的。
+    1. 一个[媒体条件](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#语法)。最后一项一定是被忽略的。
     2. 一个资源大小的值。
 
     媒体条件描述*视口*的属性，而不是*图像*的属性。例如，如果*视口*不高于 500px，则建议使用 1000px 宽的资源：`(max-height: 500px) 1000px`。
