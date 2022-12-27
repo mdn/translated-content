@@ -50,9 +50,9 @@ WebAssembly est conçu comme un standard web par le [groupe communautaire du W3C
 - {{jsxref("Objets_globaux/WebAssembly/instantiate", "WebAssembly.instantiate()")}}
   - : La fonction `WebAssembly.instantiate()` représente l'API principale pour compiler et instancier le code WebAssembly. Cette méthode renvoie un `Module` ainsi que sa première `Instance`.
 - {{jsxref("Objets_globaux/WebAssembly/Memory", "WebAssembly.Memory()")}}
-  - : Un objet ` WebAssembly.``Memory ` est un tableau {{jsxref("Objets_globaux/ArrayBuffer", "ArrayBuffer")}} redimensionnable qui contient les octets de mémoire brute auxquels on peut accéder via une `Instance`.
+  - : Un objet `WebAssembly.Memory` est un tableau {{jsxref("Objets_globaux/ArrayBuffer", "ArrayBuffer")}} redimensionnable qui contient les octets de mémoire brute auxquels on peut accéder via une `Instance`.
 - {{jsxref("Objets_globaux/WebAssembly/Table", "WebAssembly.Table()")}}
-  - : Un objet ` WebAssembly.``Table ` est un tableau typé contenant des valeurs opaques et qui peut être redimensionné. On peut accéder aux valeurs via un objet `Instance`.
+  - : Un objet `WebAssembly.Table` est un tableau typé contenant des valeurs opaques et qui peut être redimensionné. On peut accéder aux valeurs via un objet `Instance`.
 - {{jsxref("WebAssembly.CompileError()")}}
   - : Crée un nouvel objet WebAssembly `CompileError`.
 - {{jsxref("WebAssembly.LinkError()")}}

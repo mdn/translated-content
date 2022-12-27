@@ -55,23 +55,23 @@ Let's build a simple demo to explain those shaders in action. Be sure to read [T
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>MDN Games: Shaders demo</title>
-	<style>
-		body { margin: 0; padding: 0; font-size: 0; }
-		canvas { width: 100%; height: 100%; }
-	</style>
-	<script src="three.min.js"></script>
+  <meta charset="utf-8">
+  <title>MDN Games: Shaders demo</title>
+  <style>
+    body { margin: 0; padding: 0; font-size: 0; }
+    canvas { width: 100%; height: 100%; }
+  </style>
+  <script src="three.min.js"></script>
 </head>
 <body>
   <script id="vertexShader" type="x-shader/x-vertex">
-	// vertex shader's code goes here
+  // vertex shader's code goes here
   </script>
   <script id="fragmentShader" type="x-shader/x-fragment">
-	// fragment shader's code goes here
+  // fragment shader's code goes here
   </script>
   <script>
-	// scene setup goes here
+  // scene setup goes here
   </script>
 </body>
 </html>
@@ -79,9 +79,9 @@ Let's build a simple demo to explain those shaders in action. Be sure to read [T
 
 It contains some basic information like the document {{htmlelement("title")}}, and some CSS to set the `width` and `height` of the {{htmlelement("canvas")}} element that Three.js will insert on the page to be the full size of the viewport. The {{htmlelement("script")}} element in the {{htmlelement("head")}} includes the Three.js library in the page; we will write our code into three script tags in the {{htmlelement("body")}} tag:
 
-1.  The first one will contain the vertex shader.
-2.  The second one will contain the fragment shader.
-3.  The third one will contain the actual JavaScript code generating the scene.
+1. The first one will contain the vertex shader.
+2. The second one will contain the fragment shader.
+3. The third one will contain the actual JavaScript code generating the scene.
 
 Before reading on, copy this code to a new text file and save it in your working directory as `index.html`. We'll create a scene featuring a simple cube in this file to explain how the shaders work.
 
@@ -97,7 +97,7 @@ Go to the [cube.html file on GitHub](https://github.com/end3r/MDN-Games-3D/blob/
 
 ```glsl
 void main() {
-	gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(position.x+10.0, position.y, position.z+5.0, 1.0);
 }
 ```
 
@@ -113,7 +113,7 @@ Now we'll add the texture shader to the code — add the code below to the body'
 
 ```glsl
 void main() {
-	gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
+  gl_FragColor = vec4(0.0, 0.58, 0.86, 1.0);
 }
 ```
 
@@ -131,8 +131,8 @@ To actually apply the newly created shaders to the cube, comment out the `basicM
 
 ```js
 var shaderMaterial = new THREE.ShaderMaterial( {
-	vertexShader: document.getElementById( 'vertexShader' ).textContent,
-	fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+  vertexShader: document.getElementById( 'vertexShader' ).textContent,
+  fragmentShader: document.getElementById( 'fragmentShader' ).textContent
 });
 ```
 

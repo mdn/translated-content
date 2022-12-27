@@ -25,7 +25,7 @@ dateObj.getUTCFullYear()
 
 ### Valeur de retour
 
-La valeur renvoyée par ` getUTCFullYear``() ` est un nombre correspondant à l'année de la date indiquée selon le temps universel. Pour les dates entre les années 1000 et 9999, ` getUTCFullYear``() ` renvoie un nombre à quatre chiffres, par exemple 1995.
+La valeur renvoyée par `getUTCFullYear()` est un nombre correspondant à l'année de la date indiquée selon le temps universel. Pour les dates entre les années 1000 et 9999, `getUTCFullYear()` renvoie un nombre à quatre chiffres, par exemple 1995.
 
 ## Exemples
 

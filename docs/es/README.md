@@ -64,6 +64,7 @@ La comunidad de español sugiere utilizar las siguientes convenciones al traduci
 | Event listener                  | Detector de eventos            |
 | Event handler                   | Manejador de eventos           |
 | See also                        | Véase también                  |
+| Specifications                  | Especificaciones               |
 | Browser compatibility           | Compatibilidad con navegadores |
 | HTML Content o HTML             | HTML                           |
 | JavaScript Content o JavaScript | JavaScript                     |

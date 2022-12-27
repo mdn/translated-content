@@ -31,8 +31,8 @@ original_slug: >-
     <meta charset="utf-8" />
     <title>Gamedev Canvas Workshop</title>
     <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
+      * { padding: 0; margin: 0; }
+      canvas { background: #eee; display: block; margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -40,7 +40,7 @@ original_slug: >-
 <canvas id="myCanvas" width="480" height="320"></canvas>
 
 <script>
-	// JavaScript-код будем писать здесь
+  // JavaScript-код будем писать здесь
 </script>
 
 </body>

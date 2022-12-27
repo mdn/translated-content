@@ -34,7 +34,7 @@ Par défaut, lorsqu'il est fermé, le widget est seulement assez haut pour affic
 
 > **Note :** Malheureusement, à l'heure actuelle, il n'existe aucun moyen intégré d'animer la transition entre l'ouverture et la fermeture.
 
-Les implémentations entièrement conformes aux normes appliquent automatiquement le code CSS `display: list-item` à l'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary). Vous pouvez l'utiliser pour personnaliser davantage son apparence. Voir [personnaliser le marqueur de révélation](#customizing_the_disclosure_widget) pour plus de détails.
+Les implémentations entièrement conformes aux normes appliquent automatiquement le code CSS `display: list-item` à l'élément [`<summary>`](/fr/docs/Web/HTML/Element/summary). Vous pouvez l'utiliser pour personnaliser davantage son apparence. Voir [Personnaliser l'apparence](#personnaliser_lapparence) pour plus de détails.
 
 <table class="properties">
   <tbody>

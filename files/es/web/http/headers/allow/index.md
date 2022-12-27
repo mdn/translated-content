@@ -15,7 +15,7 @@ Esta cabecera debe ser enviada si el servidor responde con un estado {{HTTPStatu
 
 ## Sintáxis
 
-```
+```js
 Allow: <http-methods>
 ```
 

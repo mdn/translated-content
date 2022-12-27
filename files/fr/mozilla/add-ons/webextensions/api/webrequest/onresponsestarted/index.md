@@ -58,7 +58,7 @@ Les événements ont trois fonctions :
 
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous ne pouvez passer qu'une seule valeur :
 
-    - ` "``responseHeaders``" `: inclure `responseHeaders` dans l'objet `détails` transmis à l'auditeur
+    - `"responseHeaders"`: inclure `responseHeaders` dans l'objet `détails` transmis à l'auditeur
 
 ## Objets supplémentaires
 

@@ -18,7 +18,7 @@ El metodo **`Object.defineProperties()`** define nuevas o modifica propiedades e
 
 ## Sintáxis
 
-```
+```js
 Object.defineProperties(obj, propiedades)
 ```
 

@@ -101,7 +101,7 @@ a // "a"
 
 ## Generators
 
-Enquanto os iteradores são ferramentas muito úteis, sua criação requer um cuidado devido à necessidade de manter explícito seu estado interno. **{{jsxref("Global_Objects/Generator","Generators","","true")}}** provêm uma alternativa poderosa: eles te permitem definir um algorítimo iterativo escrevendo uma função simples que pode manter seu estado próprio.
+Enquanto os iteradores são ferramentas muito úteis, sua criação requer um cuidado devido à necessidade de manter explícito seu estado interno. **{{jsxref("Global_Objects/Generator","Generators","","true")}}** provêm uma alternativa poderosa: eles te permitem definir um algoritmo iterativo escrevendo uma função simples que pode manter seu estado próprio.
 
 Generator é um tipo especial de função que trabalha como uma factory para iteradores. A função vira um generator se ela contém uma ou mais expressões {{jsxref("Operators/yield","yield")}} e se ela usa a sintaxe {{jsxref("Statements/function*","function*")}}.
 

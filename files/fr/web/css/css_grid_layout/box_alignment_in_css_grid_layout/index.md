@@ -257,7 +257,7 @@ La propriété {{CSSxRef("place-items")}} est une propriété raccourcie qui syn
 
 ## Centrer un objet sur une zone
 
-En combinant les propriétés ` align-``* ` et `justify-*`, on peut facilement centrer un objet sur sa zone de grille.
+En combinant les propriétés `align-*` et `justify-*`, on peut facilement centrer un objet sur sa zone de grille.
 
 ```css hidden
 * {box-sizing: border-box;}

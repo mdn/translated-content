@@ -1004,7 +1004,7 @@ La propriété [`autoplayPolicy`](/fr/docs/Web/API/Document/autoplayPolicy), rat
 
 #### Méthodes convertPointFromNode(), convertRectFromNode(), et convertQuadFromNode() pour GeometryUtils
 
-Les méthodes `convertPointFromNode()`, `convertRectFromNode()`, et ``convertQuadFromNode() effectuent la correspondance entre un point, un rectangle ou un quadrilatère donné et le [`Node`](/fr/docs/Web/API/Node) depuis lequel ils sont appelés vers un autre nœud. Voir [le bug 918189](https://bugzilla.mozilla.org/show_bug.cgi?id=918189) pour plus de détails.
+Les méthodes `convertPointFromNode()`, `convertRectFromNode()`, et `convertQuadFromNode()` effectuent la correspondance entre un point, un rectangle ou un quadrilatère donné et le [`Node`](/fr/docs/Web/API/Node) depuis lequel ils sont appelés vers un autre nœud. Voir [le bug 918189](https://bugzilla.mozilla.org/show_bug.cgi?id=918189) pour plus de détails.
 
 <table class="standard-table">
   <thead>

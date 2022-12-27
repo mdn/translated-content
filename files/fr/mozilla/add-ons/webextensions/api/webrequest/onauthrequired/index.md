@@ -94,7 +94,7 @@ Les événements ont trois fonctions :
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
 
     - `"blocking"`: faire le blocage de la demande, afin que vous puissiez annuler la demande ou fournir des informations d'authentification.
-    - ` "``responseHeaders``" `: inclure `responseHeaders` dans l'objet `details` transmis à l'auditeur
+    - `"responseHeaders"`: inclure `responseHeaders` dans l'objet `details` transmis à l'auditeur
 
 ## Objets supplémentaires
 

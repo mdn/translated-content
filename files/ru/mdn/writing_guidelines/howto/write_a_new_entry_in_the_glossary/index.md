@@ -81,10 +81,10 @@ _**Узнать больше**_
 
 У англоязычного термина _signature_ как минимум три значения: одно в контексте безопасности, второе – подпись функции, и третье – подпись в контексте электронной почты. Вот как оформлена запись глоссария в этом случае:
 
-1.  Основная страница [Glossary/Signature](/ru/docs/Glossary/Signature) – это страница с перечислением всех значений термина. Она оформлена с помощью макроса {{TemplateLink("GlossaryDisambiguation")}}.
-2.  На подстранице [Glossary/Signature/Security](/ru/docs/Glossary/Signature/Security) дано определение термина signature в контексте безопасности.
-3.  Подстраница [Glossary/Signature/Function](/ru/docs/Glossary/Signature/Function) посвящена значению "подпись функции".
-4.  И, наконец, третья подстраница [Glossary/Signature/Email](/ru/docs/Glossary/Signature/Email) посвящена тому, что такое подпись в контексте электронной почты.
+1. Основная страница [Glossary/Signature](/ru/docs/Glossary/Signature) – это страница с перечислением всех значений термина. Она оформлена с помощью макроса {{TemplateLink("GlossaryDisambiguation")}}.
+2. На подстранице [Glossary/Signature/Security](/ru/docs/Glossary/Signature/Security) дано определение термина signature в контексте безопасности.
+3. Подстраница [Glossary/Signature/Function](/ru/docs/Glossary/Signature/Function) посвящена значению "подпись функции".
+4. И, наконец, третья подстраница [Glossary/Signature/Email](/ru/docs/Glossary/Signature/Email) посвящена тому, что такое подпись в контексте электронной почты.
 
 ## Как использовать макрос \\{{Glossary}}
 

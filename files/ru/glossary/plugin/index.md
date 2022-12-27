@@ -47,7 +47,7 @@ original_slug: Plugins/Roadmap
 - Май 2014 - [Отказ от обновлений NPAPI](https://blog.chromium.org/2014/05/update-on-npapi-deprecation.html)
 - Ноябрь 2014 - [Финальный отсчёт по отказу от NPAPI](https://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html)
 - Август 2016 - [Flash и Chrome](https://blog.google/products/chrome/flash-and-chrome/)
-- Декабрь 2016 -[ План развёртывания HTML5 по умолчанию](https://blog.chromium.org/2016/12/roll-out-plan-for-html5-by-default.html)
+- Декабрь 2016 - [План развёртывания HTML5 по умолчанию](https://blog.chromium.org/2016/12/roll-out-plan-for-html5-by-default.html)
 - Июль 2017 - [Скажем прощай Flash в Chrome](https://www.blog.google/products/chrome/saying-goodbye-flash-chrome/)
 
 #### Microsoft Edge и Internet Explorer
