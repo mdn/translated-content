@@ -32,7 +32,7 @@ Se você tiver dúvidas sobre os tópicos que gostaria de ver cobertos ou que es
 - Iniciante: Se você é um iniciante no desenvolvimento web, recomendamos que você comece trabalhando no nosso módulo [Introdução à Web](/pt-BR/docs/Aprender/Getting_started_with_the_web), que fornece uma introdução prática ao desenvolvimento web.
 - Perguntas específicas: Se você tiver uma pergunta específica sobre desenvolvimento web, nossa seção [Perguntas comuns](/pt-BR/docs/Learn/Common_questions) pode ter algo para ajudá-lo.
 - Além do básico: Se você já possui um pouco de conhecimento, o próximo passo é aprender {{glossary ("HTML")}} e {{glossary ("CSS")}} em detalhes: comece com o módulo [Introdução ao HTML](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML) e vá para nosso módulo [Primeiros passos com CSS](/pt-BR/docs/Learn/CSS/First_steps).
-- Passando para o script: Se você já está familiarizado com HTML e CSS ou se interessa principalmente por codificação, deve passar para o {{glossary ("JavaScript")}} ou para o desenvolvimento no servidor. Comece com nossos módulo [Primeiros passos com JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps) e[ Primeiros passos programando o site no servidor](/pt-BR/docs/Learn/Server-side/First_steps).
+- Passando para o script: Se você já está familiarizado com HTML e CSS ou se interessa principalmente por codificação, deve passar para o {{glossary ("JavaScript")}} ou para o desenvolvimento no servidor. Comece com nossos módulo [Primeiros passos com JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps) e [Primeiros passos programando o site no servidor](/pt-BR/docs/Learn/Server-side/First_steps).
 
 > **Nota:** Nosso [glossário](/pt-BR/docs/Glossario) fornece definições de terminologia.
 
@@ -61,29 +61,29 @@ A seguir, uma lista de todos os tópicos abordados na área de aprendizado da MD
 
 ## Obtendo nossos exemplos de código
 
-Os exemplos de código que você encontrará na Área de aprendizado estão[ disponíveis no GitHub](https://github.com/mdn/learning-area/). Se você deseja copiar todos eles para o seu computador, a maneira mais fácil é fazer o [download de um ZIP da última ramificação do código mestre](https://github.com/mdn/learning-area/archive/master.zip).
+Os exemplos de código que você encontrará na Área de aprendizado estão [disponíveis no GitHub](https://github.com/mdn/learning-area/). Se você deseja copiar todos eles para o seu computador, a maneira mais fácil é fazer o [download de um ZIP da última ramificação do código mestre](https://github.com/mdn/learning-area/archive/master.zip).
 
 Se você preferir copiar o repositório de uma maneira mais flexível que permita atualizações automáticas, siga as instruções mais complexas:
 
-1.  [Instale o Git ](https://git-scm.com/downloads)na sua máquina. Este é o software do sistema de controle de versão, no qual o GitHub trabalha.
-2.  Abra o [prompt de comando](https://www.lifewire.com/how-to-open-command-prompt-2618089) do seu computador (Windows) ou terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
-3.  Para copiar o repositório da área de aprendizado para uma pasta chamada learning-area no local atual para o qual o prompt de comando / terminal está apontando, use o seguinte comando:
+1. [Instale o Git](https://git-scm.com/downloads) na sua máquina. Este é o software do sistema de controle de versão, no qual o GitHub trabalha.
+2. Abra o [prompt de comando](https://www.lifewire.com/how-to-open-command-prompt-2618089) do seu computador (Windows) ou terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](https://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
+3. Para copiar o repositório da área de aprendizado para uma pasta chamada learning-area no local atual para o qual o prompt de comando / terminal está apontando, use o seguinte comando:
 
     ```bash
     git clone https://github.com/mdn/learning-area
     ```
 
-4.  Agora você pode entrar no diretório e encontrar os arquivos que procura (usando o Finder / File Explorer ou o [comando cd](<https://en.wikipedia.org/wiki/Cd_(command)>)).
+4. Agora você pode entrar no diretório e encontrar os arquivos que procura (usando o Finder / File Explorer ou o [comando cd](<https://en.wikipedia.org/wiki/Cd_(command)>)).
 
 Você pode atualizar o repositório `learning-area` com as alterações feitas na versão principal no GitHub com as seguintes etapas:
 
-1.  No prompt de comando / terminal, entre no diretório `learning-area` usando `cd`. Por exemplo, se você estivesse no diretório pai:
+1. No prompt de comando / terminal, entre no diretório `learning-area` usando `cd`. Por exemplo, se você estivesse no diretório pai:
 
     ```bash
     cd learning-area
     ```
 
-2.  Atualize o repositório usando o seguinte comando:
+2. Atualize o repositório usando o seguinte comando:
 
     ```bash
     git pull

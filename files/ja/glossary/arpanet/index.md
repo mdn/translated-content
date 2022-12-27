@@ -9,4 +9,4 @@ slug: Glossary/Arpanet
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "ARPANET")}}
+- Wikipedia 上の [ARPANET](https://ja.wikipedia.org/wiki/ARPANET)

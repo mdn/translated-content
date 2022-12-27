@@ -7,7 +7,7 @@ slug: Glossary/Crawler
 
 ## 理解を深める
 
-- Wikipedia の {{Interwiki("wikipedia", "クローラ")}}
+- Wikipedia の [クローラ](https://ja.wikipedia.org/wiki/クローラ)
 
 1. [MDN Web Docs 用語集](/ja/docs/Glossary)
 

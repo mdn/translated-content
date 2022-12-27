@@ -24,11 +24,11 @@ translation_of: Web/HTML/Element/input/radio
 
 {{ EmbedLiveSample('Basic_example', 600, 30) }}
 
-Исходный код к данному интерактивному примеру находиться на GitHub репозитории. Если вы желаете внести свой вклад в проект интерактивных примеров, то склонируйте удалённый репозиторий [https://github.com/mdn/interactive-examples ](https://github.com/mdn/interactive-examples)и отправьте нам запрос на включение сделанных вами изменений «pull request».
+Исходный код к данному интерактивному примеру находиться на GitHub репозитории. Если вы желаете внести свой вклад в проект интерактивных примеров, то склонируйте удалённый репозиторий [https://github.com/mdn/interactive-examples](https://github.com/mdn/interactive-examples) и отправьте нам запрос на включение сделанных вами изменений «pull request».
 
 Радиокнопки называются так потому, что выглядят и функционируют в схожей манере с кнопками старомодных радиоприёмников, подобных представленному ниже.
 
-![Shows what radio buttons looked like in the olden days.](https://mdn.mozillademos.org/files/15610/old-radio.jpg "Photo of an old-time radio")
+![Shows what radio buttons looked like in the olden days.](https://mdn.mozillademos.org/files/15610/old-radio.jpg)
 
 > **Примечание:** [Чекбоксы](/ru/docs/Web/HTML/Element/input/checkbox) похожи на радиокнопки, но с одним важным отличием: радиокнопки предназначены для выбора одного значения из предложенных, в то время как чекбоксы позволяют "включать" и "выключать" значения. Если существует несколько элементов управления, то с помощью радиокнопок пользователь сможет выбрать лишь один из них, а чекбоксы позволят выбрать несколько значений одновременно.
 

@@ -24,7 +24,6 @@ slug: Web/CSS/:not
 :not( <complex-selector-list> )
 ```
 
-
 ## 解説
 
 `:not()` を使用する際のふつうではない効果や結果がいくつかありますので、使用する際には気を付けてください。

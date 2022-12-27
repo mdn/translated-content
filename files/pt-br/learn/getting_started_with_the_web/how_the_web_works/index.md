@@ -55,10 +55,10 @@ Além do cliente e do servidor, também precisamos dizer oi para:
 
 Quando você digita um endereço da web no seu navegador (pela nossa analogia é como ir andando até a loja):
 
-1.  O navegador vai para o servidor de DNS e encontra o endereço verdadeiro de onde o site está hospedado (você encontra o endereço da loja).
-2.  O navegador manda uma mensagem de requisição HTTP para o servidor, pedindo que envie uma cópia do site ao cliente (você vai até a loja e pede suas mercadorias). Esta mensagem e todos os outros dados enviados entre o cliente e o servidor são enviados pela sua conexão à internet usando TCP/IP.
-3.  Se o servidor aprovar a requisição do cliente, o servidor enviará ao cliente uma mensagem "200 OK", que significa "Claro que você pode ver esse site! Aqui está" e então começa a enviar os arquivos do site para o navegador como uma série de pequenos pedaços chamados pacotes de dados (a loja dá a você as suas mercadorias e você as traz para sua casa).
-4.  O navegador monta os pequenos pedaços em um site completo e o mostra a você (as mercadorias chegam à sua porta — novas coisas brilhantes e incríveis!).
+1. O navegador vai para o servidor de DNS e encontra o endereço verdadeiro de onde o site está hospedado (você encontra o endereço da loja).
+2. O navegador manda uma mensagem de requisição HTTP para o servidor, pedindo que envie uma cópia do site ao cliente (você vai até a loja e pede suas mercadorias). Esta mensagem e todos os outros dados enviados entre o cliente e o servidor são enviados pela sua conexão à internet usando TCP/IP.
+3. Se o servidor aprovar a requisição do cliente, o servidor enviará ao cliente uma mensagem "200 OK", que significa "Claro que você pode ver esse site! Aqui está" e então começa a enviar os arquivos do site para o navegador como uma série de pequenos pedaços chamados pacotes de dados (a loja dá a você as suas mercadorias e você as traz para sua casa).
+4. O navegador monta os pequenos pedaços em um site completo e o mostra a você (as mercadorias chegam à sua porta — novas coisas brilhantes e incríveis!).
 
 ## DNS explicado
 

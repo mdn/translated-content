@@ -100,8 +100,8 @@ console.log(p.m()); // 13
 ```js
 var o = {a: 1};
 
-// O recém-criado objecto 'o' tem Object.prototype como o seu [[Prototype]]
-// 'o' não tem não tem uma propriedade chamada 'hasOwnProperty'
+// O recém-criado objeto 'o' tem Object.prototype como o seu [[Prototype]]
+// 'o' não tem uma propriedade chamada 'hasOwnProperty'
 // hasOwnProperty é uma propriedade própria de Object.prototype. Então 'o' herda hasOwnProperty de Object.prototype
 
 // Object.prototype tem null como seu protótipo.
@@ -172,7 +172,7 @@ Para verificar se um objeto tem uma propriedade definida em si mesmo e não em a
 
 [`hasOwnProperty`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) é a única alternativa em JavaScript que lida com propriedades sem atravessar a cadeia de protótipos.
 
-> **Nota:** Observação: **Não** é suficiente apenas verificar se o valor da propriedade é [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) para saber se ela existe. A propriedade pode muito bem existir e não ter sido inicializada, sendo assim o seu valor undefined.
+> **Nota:** Observação: **Não** é suficiente apenas verificar se o valor da propriedade é [`undefined`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined) para saber se ela existe. A propriedade pode muito bem existir e não ter sido inicializada, sendo assim o seu valor undefined.
 
 ### Má Pratica: Estender protótipos nativos
 

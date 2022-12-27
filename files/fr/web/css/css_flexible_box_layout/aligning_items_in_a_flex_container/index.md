@@ -1,13 +1,6 @@
 ---
 title: Aligner des éléments dans un conteneur flexible
-slug: Web/CSS/css_flexible_box_layout/aligning_items_in_a_flex_container
-tags:
-  - CSS
-  - Flex
-  - Guide
-  - Web
-  - flexbox
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
+slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 original_slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Aligner_des_éléments_dans_un_conteneur_flexible
 ---

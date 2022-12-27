@@ -55,11 +55,11 @@ if (condicao) {
 
 Aqui nós temos:
 
-1.  A palavra reservada `if` seguida de um par de parênteses.
-2.  Um teste condicional, localizado dentro dos parênteses (normalmente "este valor é maior que esse", ou "este valor existe"). Esta condição pode fazer uso dos [operadores de comparação](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators) que discutimos no último módulo, e podem retornar `true` ou `false`.
-3.  Um par de chaves, e dentro dele temos código — pode ser qualquer código que queiramos, e só vai ser executado se o teste condicional retornar `true`.
-4.  A palavra reservada `else`.
-5.  Outro par de chaves, dentro dele temos mais um pouco de código — pode ser qualquer código que queiramos, e só vai executar se o teste condicional retornar um valor diferente de `true`, neste caso `not true, `ou `false`.
+1. A palavra reservada `if` seguida de um par de parênteses.
+2. Um teste condicional, localizado dentro dos parênteses (normalmente "este valor é maior que esse", ou "este valor existe"). Esta condição pode fazer uso dos [operadores de comparação](/en-US/Learn/JavaScript/First_steps/Math#Comparison_operators) que discutimos no último módulo, e podem retornar `true` ou `false`.
+3. Um par de chaves, e dentro dele temos código — pode ser qualquer código que queiramos, e só vai ser executado se o teste condicional retornar `true`.
+4. A palavra reservada `else`.
+5. Outro par de chaves, dentro dele temos mais um pouco de código — pode ser qualquer código que queiramos, e só vai executar se o teste condicional retornar um valor diferente de `true`, neste caso `not true`, ou `false`.
 
 Este tipo de código é bem legível por seres humanos — ele diz: "**if** a condição for `true`, execute o bloco de código A, **else** execute o bloco de código B" (**se** a condição for **verdadeira**, execute o bloco de código A, **senão** execute o bloco de código B).
 
@@ -146,10 +146,10 @@ function setWeather() {
 
 {{ EmbedLiveSample('else_if', '100%', 100) }}
 
-1.  Aqui, temos um elemento HTML {{htmlelement("select")}} que nos permite fazer escolhas de clima diferentes e um simples parágrafo.
-2.  No JavaScript, estamos armazenando uma referência para ambos os elementos {{htmlelement("select")}} e {{htmlelement("p")}}, e adicionando um listener de evento ao elemento `<select>` para que, quando o valor for alterado, a função `setWeather()` é executada.
-3.  Quando esta função é executada, primeiro definimos uma variável chamada `choice` para o valor atual selecionado no elemento `<select>`. Em seguida, usamos uma instrução condicional para mostrar um texto diferente dentro do parágrafo, dependendo de qual é o valor de `choice` . Observe como todas as condições são testadas nos blocos `else if() {...}`, com exceção do primeiro, que é testado em um bloco `if() {...}`.
-4.  A última escolha, dentro do bloco `else {...}`, é basicamente uma opção de "último recurso" — o código dentro dele será executado se nenhuma das condições for `true`. Nesse caso, ele serve para esvaziar o texto do parágrafo, se nada for selecionado, por exemplo, se um usuário decidir selecionar novamente a opção de espaço reservado "- Make a choice--" mostrada no início.
+1. Aqui, temos um elemento HTML {{htmlelement("select")}} que nos permite fazer escolhas de clima diferentes e um simples parágrafo.
+2. No JavaScript, estamos armazenando uma referência para ambos os elementos {{htmlelement("select")}} e {{htmlelement("p")}}, e adicionando um listener de evento ao elemento `<select>` para que, quando o valor for alterado, a função `setWeather()` é executada.
+3. Quando esta função é executada, primeiro definimos uma variável chamada `choice` para o valor atual selecionado no elemento `<select>`. Em seguida, usamos uma instrução condicional para mostrar um texto diferente dentro do parágrafo, dependendo de qual é o valor de `choice` . Observe como todas as condições são testadas nos blocos `else if() {...}`, com exceção do primeiro, que é testado em um bloco `if() {...}`.
+4. A última escolha, dentro do bloco `else {...}`, é basicamente uma opção de "último recurso" — o código dentro dele será executado se nenhuma das condições for `true`. Nesse caso, ele serve para esvaziar o texto do parágrafo, se nada for selecionado, por exemplo, se um usuário decidir selecionar novamente a opção de espaço reservado "- Make a choice--" mostrada no início.
 
 > **Nota:** Você pode também [encontrar este exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) ([veja ele sendo executado](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html) lá também.)
 
@@ -293,13 +293,13 @@ switch (expression) {
 
 Aqui nós temos:
 
-1.  A palavra-chave `switch`, seguido por um par de parênteses.
-2.  Uma expressão ou valor dentro dos parênteses.
-3.  A palavra-chave `case`, seguido por uma escolha que a expressão / valor poderia ser, seguido por dois pontos.
-4.  Algum código para ser executado se a escolha corresponder à expressão.
-5.  Uma instrução `break`, seguido de um ponto e vírgula. Se a opção anterior corresponder à expressão / valor, o navegador interromperá a execução do bloco de código aqui e passará para qualquer código que aparecer abaixo da instrução switch.
-6.  Como muitos outros casos (marcadores 3 a 5) que você quiser.
-7.  A palavra-chave `default`, seguido por exatamente o mesmo padrão de código de um dos casos (marcadores 3 a 5), exceto que o `default` não tem escolha após ele, e você não precisa da instrução `break`, pois não há nada para executar depois disso o bloco de qualquer maneira. Esta é a opção padrão que é executada se nenhuma das opções corresponder.
+1. A palavra-chave `switch`, seguido por um par de parênteses.
+2. Uma expressão ou valor dentro dos parênteses.
+3. A palavra-chave `case`, seguido por uma escolha que a expressão / valor poderia ser, seguido por dois pontos.
+4. Algum código para ser executado se a escolha corresponder à expressão.
+5. Uma instrução `break`, seguido de um ponto e vírgula. Se a opção anterior corresponder à expressão / valor, o navegador interromperá a execução do bloco de código aqui e passará para qualquer código que aparecer abaixo da instrução switch.
+6. Como muitos outros casos (marcadores 3 a 5) que você quiser.
+7. A palavra-chave `default`, seguido por exatamente o mesmo padrão de código de um dos casos (marcadores 3 a 5), exceto que o `default` não tem escolha após ele, e você não precisa da instrução `break`, pois não há nada para executar depois disso o bloco de qualquer maneira. Esta é a opção padrão que é executada se nenhuma das opções corresponder.
 
 > **Nota:** Você não precisa incluir a seção `default` — você pode omiti-la com segurança se não houver chance de que a expressão possa se igualar a um valor desconhecido. Se houver uma chance disso, você precisará incluí-lo para lidar com casos desconhecidos.
 
@@ -351,7 +351,7 @@ function setWeather() {
 
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "", "hide-codepen-jsfiddle") }}
 
-> **Nota:** Você pode [encontrar este exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (veja-o em [execução ](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)lá também.)
+> **Nota:** Você pode [encontrar este exemplo no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-switch.html) (veja-o em [execução](http://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html) lá também.)
 
 ## Operador ternário
 
@@ -416,8 +416,8 @@ Neste exemplo, você nos ajudará a concluir um aplicativo de calendário simple
 
 Precisamos que você escreva uma instrução condicional dentro da função do manipulador onchange, logo abaixo do comentário `// ADD CONDITIONAL HERE`. Ele deve:
 
-1.  Olhar para o mês selecionado (armazenado na variavel `choice`. Este será o valor do elemento `<select>` após o valor ser alterado, portanto, "Janeiro", por exemplo.
-2.  Definir uma variável chamada `days` para ser igual ao número de dias no mês selecionado. Para fazer isso, você terá que procurar o número de dias em cada mês do ano. Você pode ignorar anos bissextos para os propósitos deste exemplo.
+1. Olhar para o mês selecionado (armazenado na variavel `choice`. Este será o valor do elemento `<select>` após o valor ser alterado, portanto, "Janeiro", por exemplo.
+2. Definir uma variável chamada `days` para ser igual ao número de dias no mês selecionado. Para fazer isso, você terá que procurar o número de dias em cada mês do ano. Você pode ignorar anos bissextos para os propósitos deste exemplo.
 
 Dicas:
 

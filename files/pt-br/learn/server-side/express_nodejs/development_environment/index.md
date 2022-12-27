@@ -81,12 +81,12 @@ Para utilizar o Express, você terá que instalar o Nodejs e o [NPM](https://doc
 
 Instalar o Node e o NPM no Windows ou no macOS é uma tarefa rápida e simples. Siga os seguintes passos:
 
-1.  Baixar o instalador:
+1. Baixar o instalador:
 
-    1.  Vá para <https://nodejs.org/en/>
-    2.  Selecione o botão de download da versão LTS, que é a recomendada para a maioria dos usuários.
+    1. Vá para <https://nodejs.org/en/>
+    2. Selecione o botão de download da versão LTS, que é a recomendada para a maioria dos usuários.
 
-2.  Instale o Node ao clicar duas vezes no arquivo de download. Siga a instalação a partir das janelas que vão aparecer na sua tela.
+2. Instale o Node ao clicar duas vezes no arquivo de download. Siga a instalação a partir das janelas que vão aparecer na sua tela.
 
 ### Ubuntu 16.04
 
@@ -117,7 +117,7 @@ O _NPM_ também deve ter sido instalado. Você pode checar da seguinte maneira:
 
 Uma maneira um pouco mais divertida de testar é criar um servidor web em "puro node". Vamos imprimir a tradicional frase "Hello World" no browser quando visitarmos uma determinada URL.
 
-1.  Crie um arquivo chamado hellonode.js e cole dentro dele o código abaixo. Estamos usando apenas o Node, sem o Express, e com sintaxe do ES6.
+1. Crie um arquivo chamado hellonode.js e cole dentro dele o código abaixo. Estamos usando apenas o Node, sem o Express, e com sintaxe do ES6.
 
     ```js
     //Chame o módulo HTTP
@@ -139,15 +139,16 @@ Uma maneira um pouco mais divertida de testar é criar um servidor web em "puro 
 
     O código importa o módulo "http" e o utiliza para criar um servidor (`createServer()`) que escuta as requisições HTTP na porta 8000. O script, então, imprime a mensagem no console. A função `createServer()` recebe como argumento uma função callback que é chamada quando recebe uma requisição HTTP - isso retorna uma resposta com um status 200 ("OK") do HTTP e o texto "Hello World".
 
-2.  > **Nota:** Não se preocupe se você não entendeu exatamente o que esse código faz. Nós vamos explicar isso em mais detalhes quando iniciarmos a parte do Express.
-3.  Inicie o servidor e navegue pelo mesmo diretório que o seu arquivo hellonode.js no terminal. Depois chame o Node da seguinte forma:
+    > **Nota:** Não se preocupe se você não entendeu exatamente o que esse código faz. Nós vamos explicar isso em mais detalhes quando iniciarmos a parte do Express.
+
+2. Inicie o servidor e navegue pelo mesmo diretório que o seu arquivo hellonode.js no terminal. Depois chame o Node da seguinte forma:
 
     ```bash
     >node hellonode.js
     Server running at http://127.0.0.1:8000/
     ```
 
-4.  Navegue até a URL (<http://127.0.0.1:8000/>). Se tudo estiver funcionando bem, o browser vai apresentar a frase "Hello World".
+3. Navegue até a URL (`http://127.0.0.1:8000/`). Se tudo estiver funcionando bem, o browser vai apresentar a frase "Hello World".
 
 ## Usando o NPM
 
@@ -163,14 +164,14 @@ Os passos seguintes mostram como baixar pacotes via NPM, salvá-los nas dependê
 
 > **Nota:** Nesta seção mostraremos como buscar e instalar o pacote do Express. Depois, explicaremos como esse e outros pacotes já estão especificados para nós graças ao _Express Application Generator_. É muito importante entendermos como o NPM funciona e o que é criado com o generator.
 
-1.  Primeiro passo é criar um diretório para sua aplicação. No prompt, insira os comandos a seguir.
+1. Primeiro passo é criar um diretório para sua aplicação. No prompt, insira os comandos a seguir.
 
     ```bash
     mkdir myapp
     cd myapp
     ```
 
-2.  Use o comando `npm init` para criar o arquivo **package.json** da sua aplicação. Esse comando registra para você uma série de informações, como o nome e a versão do seu aplicativo, além do nome do seu "entry point" (**index.js** por padrão). Por hora, vamos manter a configuração padrão.
+2. Use o comando `npm init` para criar o arquivo **package.json** da sua aplicação. Esse comando registra para você uma série de informações, como o nome e a versão do seu aplicativo, além do nome do seu "entry point" (**index.js** por padrão). Por hora, vamos manter a configuração padrão.
 
     ```bash
     npm init
@@ -192,8 +193,9 @@ Os passos seguintes mostram como baixar pacotes via NPM, salvá-los nas dependê
     }
     ```
 
-3.  Agora, instale o Express dentro do diretório **myapp**. O pacote será salvo automaticamente na lista de dependências do seu **package.json**.
-4.  ```bash
+3. Agora, instale o Express dentro do diretório **myapp**. O pacote será salvo automaticamente na lista de dependências do seu **package.json**.
+
+    ```bash
     npm install express
     ```
 
@@ -216,9 +218,9 @@ Os passos seguintes mostram como baixar pacotes via NPM, salvá-los nas dependê
     }
     ```
 
-5.  Para usar o Express, é preciso incluir a função `require()` no arquivo index.js dentro da sua aplicação. Crie esse arquivo agora mesmo na pasta raiz "**myapp**" e inclua o código a seguir.
+4. Para usar o Express, é preciso incluir a função `require()` no arquivo index.js dentro da sua aplicação. Crie esse arquivo agora mesmo na pasta raiz "**myapp**" e inclua o código a seguir.
 
-    ```
+    ```js
     var express = require('express')
     var app = express()
 
@@ -233,14 +235,14 @@ Os passos seguintes mostram como baixar pacotes via NPM, salvá-los nas dependê
 
     O código mostra uma aplicação web bem simples cujo objetivo único é imprimir a mensagem "HelloWorld". Em linhas gerais, esse arquivo importa o módulo do express e o utiliza para criar um servidor (`app`) que escuta as requisições HTTP pela porta 8000 e imprime a mensagem no console, além de definir qual URL usada para testar o servidor. A função `app.get()` responde apenas às requisições HTTP feitas com o método GET, desde que especificadas com o path ('/'). Nesse caso, chamando a função para enviar a mensagem _Hello World_!
 
-6.  Rode a linha de comando abaixo para iniciar o servidor.
+5. Rode a linha de comando abaixo para iniciar o servidor.
 
     ```bash
     >node index.js
     Example app listening on port 8000
     ```
 
-7.  Vá para a seguinte URL (<http://127.0.0.1:8000/>). Se tudo estiver funcionando corretamente, o browser vai mostrar a mensagem "Hello World!".
+6. Vá para a seguinte URL (`http://127.0.0.1:8000/`). Se tudo estiver funcionando corretamente, o browser vai mostrar a mensagem "Hello World!".
 
 ### Desenvolvendo dependências
 
@@ -252,7 +254,7 @@ npm install eslint --save-dev
 
 Assim, a esling vai aparecer da seguinte forma na lista de dependências do **package.json**.
 
-```js
+```json
   "devDependencies": {
     "eslint": "^4.12.1"
   }
@@ -268,7 +270,7 @@ Além de definir e buscar dependências, você também pode nomear scripts dentr
 
 Para definir o script que roda o _esling_, citado na seção acima, nós precisamos adicionar o seguinte bloco no nosso **package.json** (importante: sua aplicação precisa ter como source está na pasta /src/js):
 
-```js
+```json
 "scripts": {
   ...
   "lint": "eslint src/js"
@@ -358,7 +360,7 @@ O comando DEBUG gera um loggin bem útil, apresentando resultados, como abaixo:
   helloworld:server Listening on port 3000 +0ms
 ```
 
-Abre um browser e navegue para <http://127.0.0.1:3000/> e veja a página default apresentada pelo aplicativo.
+Abre um browser e navegue para `http://127.0.0.1:3000/` e veja a página default apresentada pelo aplicativo.
 
 ![Express - Generated App Default Screen](https://mdn.mozillademos.org/files/14331/express_default_screen.png)
 

@@ -56,18 +56,32 @@ In CSS Level 1, the `url()` functional notation described only true URLs. In CSS
 ### Values
 
 - `<string>`
-  - : _ \<url>
-    _ : A url, which is a relative or absolute address, or pointer, to the web resource to be included, or a data uri, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent: <css_property>: url("https://example.com/image.png")
-    <css_property>: url('https://example.com/image.png')
-    <css_property>: url(https://example.com/image.png)
+
+  - : A string which may specify a URL or the ID of an SVG shape.
+
+    - \<url>
+
+      - : A URL, which is a relative or absolute address, or pointer, to the web resource to be included, or a data URL, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
+
+        ```css
+        <css_property>: url("https://example.com/image.png")
+        <css_property>: url('https://example.com/image.png')
+        <css_property>: url(https://example.com/image.png)
+        ```
+
+        If you choose to write the URL without quotes, use a backslash (`\`) before any parentheses, whitespace characters, single quotes (`'`) and double quotes (`"`) that are part of the URL.
+
     - path
-      - : References the ID of an [SVG shape](/ru/docs/Web/SVG/Tutorial/Basic_Shapes) -- `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` -- using the shape's geometry as the path.
+      - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
+
 - `<url-modifier>` {{Experimental_Inline}}
-  - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string.This is not supported and not fully defined in the specification.
+  - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string. This is not supported and not fully defined in the specification.
 
 ### Formal syntax
 
-    url( <string> <url-modifier>* )
+```
+url( <string> <url-modifier>* )
+```
 
 ## Examples
 

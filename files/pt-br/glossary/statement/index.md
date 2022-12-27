@@ -19,5 +19,3 @@ Em uma linguagem de programação, uma **declaração** é uma linha de código 
 ### Referencia técnica
 
 - [JavaScript declarações](/pt-BR/docs/Web/JavaScript/Reference/Statements)
-
-<!---->

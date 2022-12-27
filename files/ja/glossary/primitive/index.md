@@ -94,7 +94,7 @@ console.log(foo);   // 5
 ### 基礎知識
 
 - [JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures)
-- Wikipedia の {{Interwiki("wikipedia", "プリミティブ型")}} の記事
+- Wikipedia の [プリミティブ型](https://ja.wikipedia.org/wiki/プリミティブ型) の記事
 
 1. [用語集](/ja/docs/Glossary)
 

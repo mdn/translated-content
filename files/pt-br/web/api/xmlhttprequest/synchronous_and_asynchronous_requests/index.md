@@ -239,4 +239,4 @@ function logData() {
 - [`XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest)
 - [Using XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [AJAX](/pt-BR/docs/AJAX)
-- [`navigator.sendBeacon`](/en-US/docs/Web/API/Navigator/sendBeacon)
+- [`navigator.sendBeacon`](/pt-BR/docs/Web/API/Navigator/sendBeacon)

@@ -10,4 +10,4 @@ slug: Glossary/NAT
 ### 一般知識
 
 - [WebRTC プロトコル](/ja/docs/Web/API/WebRTC_API/Protocols)
-- Wikipedia 上の「{{interwiki("wikipedia", "ネットワークアドレス変換", "NAT")}}」の記事
+- Wikipedia 上の「[NAT](https://ja.wikipedia.org/wiki/ネットワークアドレス変換)」の記事

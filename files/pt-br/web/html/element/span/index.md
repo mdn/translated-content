@@ -29,7 +29,7 @@ Esse elemento inclui apenas os [a](/pt-BR/docs/HTML/Global_attributes)[tributos 
 
 ## DOM interface
 
-Este elemento implementa a interface [`HTMLSpanElement`](/en-US/docs/HTMLSpanElement).
+Este elemento implementa a interface [`HTMLSpanElement`](/pt-BR/docs/HTMLSpanElement).
 
 ## Exemplos
 

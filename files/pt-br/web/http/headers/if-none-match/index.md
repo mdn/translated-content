@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Headers/If-None-Match
 ---
 {{HTTPSidebar}}
 
-O cabeçalho de requisição HTTP **`If-None-Match`** faz uma requisição condicional. Para os métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, o servidor irá mandar de volta o recurso requisitado, com um código de status {{HTTPStatus("200")}}, somente se ele não tiver um {{HTTPHeader("ETag")}} correspondendo as _tags_ dadas pela requisição. Para outros métodos, a requisição será processada somente o recurso existente eventualmente não possuir nenhuma\_ \_{{HTTPHeader("ETag")}} correspondente nos valores listados.
+O cabeçalho de requisição HTTP **`If-None-Match`** faz uma requisição condicional. Para os métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, o servidor irá mandar de volta o recurso requisitado, com um código de status {{HTTPStatus("200")}}, somente se ele não tiver um {{HTTPHeader("ETag")}} correspondendo as _tags_ dadas pela requisição. Para outros métodos, a requisição será processada somente o recurso existente eventualmente não possuir nenhuma {{HTTPHeader("ETag")}} correspondente nos valores listados.
 
 Quando a condição falha para métodos {{HTTPMethod("GET")}} e {{HTTPMethod("HEAD")}}, então o servidor deve retornar um código de status HTTP 304 (Not Modified). Para outros métodos que aplicam mudanças no lado do servidor, o código de status 412 (Precondition Failed) é utilizado. Note que o servidor gerando uma resposta 304 DEVE gerar qualquer um dos seguintes cabeçalhos que seriam enviados em uma resposta 200 (OK) para a mesma requisição: Cache-Control, Content-Location, Date, ETag, Expires, and Vary.
 
@@ -78,5 +78,5 @@ If-None-Match: *
 - {{HTTPHeader("If-Unmodified-Since")}}
 - {{HTTPHeader("If-Modified-Since")}}
 - {{HTTPHeader("If-Match")}}
-- {{HTTPStatus("304")}}` Not Modified`
-- {{HTTPStatus("412")}}` Precondition Failed`
+- {{HTTPStatus("304")}} `Not Modified`
+- {{HTTPStatus("412")}} `Precondition Failed`

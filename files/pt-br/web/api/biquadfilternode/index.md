@@ -80,7 +80,7 @@ _Herda os métodos de seu pai,_ _{{domxref("AudioNode")}}_.
 
 ## Exemplo
 
-{{page("/en-US/docs/Web/API/AudioContext.createBiquadFilter","Example")}}
+{{page("/pt-BR/docs/Web/API/AudioContext.createBiquadFilter","Example")}}
 
 ## Especificações
 

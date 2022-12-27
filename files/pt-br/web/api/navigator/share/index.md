@@ -18,13 +18,9 @@ var sharePromise = navigator.share(data);
 - `data`
   - : Um objeto que contém dados para compartilhar. Pelo menos um dos seguintes campos deve ser especificado. As opções disponíveis são:
 
-<!---->
-
-- `url`: Um {{domxref ("USVString")}} representando uma URL a ser compartilhada.
-- `text`: Um {{domxref ("USVString")}} representando texto a ser compartilhado.
-- `title`: Um {{domxref ("USVString")}} representando o título a ser compartilhado.
-
-<!---->
+    - `url`: Um {{domxref ("USVString")}} representando uma URL a ser compartilhada.
+    - `text`: Um {{domxref ("USVString")}} representando texto a ser compartilhado.
+    - `title`: Um {{domxref ("USVString")}} representando o título a ser compartilhado.
 
 ### Valor de retorno
 

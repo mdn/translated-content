@@ -24,7 +24,7 @@ TypeError: Redeclaration of const 'x' (IE)
 
 ## O que deu errado?
 
-Uma constante é um valor que não pode ser alterado pelo programa durante a execução normal. Ele não pode mudar através de reatribuição e não pode ser redeclarado. Em JavaScript, as constantes são declaradas usando a palavra-chave [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const).
+Uma constante é um valor que não pode ser alterado pelo programa durante a execução normal. Ele não pode mudar através de reatribuição e não pode ser redeclarado. Em JavaScript, as constantes são declaradas usando a palavra-chave [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const).
 
 ## Exemplos
 
@@ -55,7 +55,7 @@ const COLUNAS_LARGAS = 120;
 
 #### `const`, `let` ou `var`?
 
-Não use const se você não quis declarar uma constante. Talvez você quisesse declarar uma variável com escopo de bloco com [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) ou uma variável global com [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var).
+Não use const se você não quis declarar uma constante. Talvez você quisesse declarar uma variável com escopo de bloco com [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let) ou uma variável global com [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var).
 
 ```js example-good
 let colunas = 80;
@@ -95,6 +95,6 @@ obj; // Object { foo: "baz" }
 
 ## Veja também
 
-- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const)
+- [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)
+- [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)

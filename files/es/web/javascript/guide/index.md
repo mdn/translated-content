@@ -7,6 +7,7 @@ tags:
   - l10n:priority
 translation_of: Web/JavaScript/Guide
 ---
+
 {{jsSidebar("JavaScript Guide")}}
 
 La Guía de JavaScript te muestra cómo usar {{JSxRef("../../JavaScript", "JavaScript")}} y te brinda una perspectiva general del lenguaje. Si necesitas información exhaustiva sobre una característica del lenguaje, consulta la {{JSxRef("../Referencia", "Referencia de JavaScript")}}.
@@ -49,7 +50,7 @@ Esta guía se divide en varios capítulos:
   - {{JSxRef("../Guide/Bucles_e_iteracion", "for..in", "#instruccion_for...in")}}
   - {{JSxRef("../Guide/Bucles_e_iteracion", "for..of", "#instruccion_for...of")}}
 
-- {{web.link("/es/docs/Web/JavaScript/Guide/Functions", "Funciones")}}
+- [Funciones](/es/docs/Web/JavaScript/Guide/Functions)
 
   - {{JSxRef("../Guide/Funciones", "Definir funciones", "#Definir_funciones")}}
   - {{JSxRef("../Guide/Funciones", "Llamar funciones", "#Llamar_funciones")}}

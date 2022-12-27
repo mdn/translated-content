@@ -11,4 +11,4 @@ slug: Glossary/Reference
 
 ### 一般知識
 
-- Wikipedia 記事 {{Interwiki("wikipedia", "参照 (情報工学)")}}
+- Wikipedia 記事 [参照 (計算機科学)](https://ja.wikipedia.org/wiki/参照_(計算機科学))

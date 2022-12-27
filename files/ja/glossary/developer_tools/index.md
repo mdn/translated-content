@@ -11,7 +11,7 @@ slug: Glossary/Developer_Tools
 
 ### 基礎知識
 
-- Wikipedia 上の記事：{{interwiki("wikipedia", "Web development tools", "Web development tools")}}
+- Wikipedia 上の記事：[Web development tools](https://en.wikipedia.org/wiki/Web_development_tools)
 
 ### 技術リファレンス
 

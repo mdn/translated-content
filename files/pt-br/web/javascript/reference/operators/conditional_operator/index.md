@@ -23,9 +23,6 @@ condition ? expr1 : expr2
 
 - `condition`
   - : Uma expressão que é avaliada como `true` ou `false`.
-
-<!---->
-
 - `expr1`, `expr2`
   - : Expressões com valores de qualquer tipo.
 

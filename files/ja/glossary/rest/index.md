@@ -13,5 +13,5 @@ REST の基本的な考え方は、リソース、たとえば文書が、よく
 
 - [restapitutorial.com](https://www.restapitutorial.com/)
 - [restcookbook.com](https://restcookbook.com/)
-- ウィキペディア上の記事「{{Interwiki("wikipedia", "Representational_State_Transfer", "REST")}}」
+- ウィキペディア上の記事「[REST](https://ja.wikipedia.org/wiki/Representational_State_Transfer)」
 - [REST Architecture](https://www.service-architecture.com/articles/web-services/representational_state_transfer_rest.html)

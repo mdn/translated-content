@@ -14,7 +14,7 @@ JIT コンパイラーはたいてい透過的であり、性能のために使�
 
 ### 一般的な知識
 
-- {{Interwiki("wikipedia", "コンパイラ")}} (Wikipedia)
+- [コンパイラ](https://ja.wikipedia.org/wiki/コンパイラ) (Wikipedia)
 - [GNU Compiler Collection (GCC)](https://gcc.gnu.org)
 
 ### 学習資料

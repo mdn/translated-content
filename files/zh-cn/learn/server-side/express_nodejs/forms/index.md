@@ -132,7 +132,7 @@ const { sanitizeBody } = require('express-validator/filter');
 
   您还可以用菊花链式连接不同的验证器，并添加前面验证器为真时显示的消息。
 
-- ```js
+  ```js
   body('name').isLength({ min: 1 }).trim().withMessage('Name empty.')
       .isAlpha().withMessage('Name must be alphabet letters.'),
   ```

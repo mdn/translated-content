@@ -8,7 +8,8 @@ tags:
 translation_of: Glossary/Primitive
 original_slug: Glossary/Primitivo
 ---
-En {{Glossary("JavaScript")}}, un **primitive** (valor primitivo, tipo de dato primitivo) son datos que no son un {{Glossary("object", "objeto")}} y no tienen {{Glossary("method", "métodos")}}. Hay 6 tipos de datos primitivos: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}} y {{Glossary("symbol")}}. También hay {{Glossary("null")}}, que aparentemente es primitivo, pero de hecho es un caso especial para cada {{JSxRef("Object")}}: y cualquier tipo estructurado se deriva de `null` por la {{web.link("/es/docs/Learn/JavaScript/Objects/Inheritance", "Cadena de prototipos")}}.
+
+En {{Glossary("JavaScript")}}, un **primitive** (valor primitivo, tipo de dato primitivo) son datos que no son un {{Glossary("object", "objeto")}} y no tienen {{Glossary("method", "métodos")}}. Hay 6 tipos de datos primitivos: {{Glossary("string")}}, {{Glossary("number")}}, {{Glossary("bigint")}}, {{Glossary("boolean")}}, {{Glossary("undefined")}} y {{Glossary("symbol")}}. También hay {{Glossary("null")}}, que aparentemente es primitivo, pero de hecho es un caso especial para cada {{JSxRef("Object")}}: y cualquier tipo estructurado se deriva de `null` por la [Cadena de prototipos](/es/docs/Learn/JavaScript/Objects/Inheritance).
 
 La mayoría de las veces, un valor primitivo se representa directamente en el nivel más bajo de la implementación del lenguaje.
 
@@ -23,18 +24,18 @@ Este ejemplo te ayudará a comprender que los valores primitivos son **inmutable
 ```js
 // El uso de un método de cadena no modifica la cadena
 var bar = "baz";
-console.log(bar);               // baz
+console.log(bar); // baz
 bar.toUpperCase();
-console.log(bar);               // baz
+console.log(bar); // baz
 
 // El uso de un método de arreglo muta el arreglo
 var foo = [];
-console.log(foo);               // []
+console.log(foo); // []
 foo.push("plugh");
-console.log(foo);               // ["plugh"]
+console.log(foo); // ["plugh"]
 
 // La asignación le da al primitivo un nuevo valor (no lo muta)
-bar = bar.toUpperCase();       // BAZ
+bar = bar.toUpperCase(); // BAZ
 ```
 
 Un primitivo se puede reemplazar, pero no se puede modificar directamente.
@@ -51,21 +52,21 @@ let foo = 5;
 
 // Define una función que debería cambiar el valor primitivo
 function addTwo(num) {
-   num += 2;
+  num += 2;
 }
 // Otra función que intenta hacer lo mismo
 function addTwo_v2(foo) {
-   foo += 2;
+  foo += 2;
 }
 
 // Llama a tu primera función mientras pasas el primitivo como argumento
 addTwo(foo);
 // Obtiene el valor primitivo actual
-console.log(foo);   // 5
+console.log(foo); // 5
 
 // Intenta de nuevo con tu segunda función...
 addTwo_v2(foo);
-console.log(foo);   // 5
+console.log(foo); // 5
 ```
 
 ¿Esperaba que fuera `7` en lugar de `5`?, si es así, lee cómo se ejecuta este código:

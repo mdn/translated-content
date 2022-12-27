@@ -9,5 +9,5 @@ slug: Glossary/URI
 
 ## 関連情報
 
-- ウィキペディアの {{Interwiki("wikipedia", "URI")}} の記事
+- ウィキペディアの [URI](https://ja.wikipedia.org/wiki/URI) の記事
 - [RFC 3986 の URI](https://datatracker.ietf.org/doc/html/rfc3986)

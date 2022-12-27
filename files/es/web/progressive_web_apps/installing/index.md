@@ -20,17 +20,18 @@ tags:
 translation_of: Web/Progressive_web_apps/Developer_guide/Installing
 original_slug: Web/Progressive_web_apps/Developer_guide/Installing
 ---
+
 La instalación de aplicaciones web es una función disponible en los navegadores modernos que permite a los usuarios elegir "instalar" fácil y cómodamente una aplicación web en su dispositivo para que puedan acceder a ella de la misma manera que lo harían con cualquier otra aplicación. Dependiendo del dispositivo y las características del sistema operativo y el navegador, esto puede resultar en lo que esencialmente es una aplicación con todas las funciones (por ejemplo, usando [WebAPK](https://developers.google.com/web/fundamentals/integration/webapks) en Android) o como un acceso directo agregado a la pantalla de tu dispositivo. Esta guía explica cómo se realiza la instalación, qué significa y qué debes hacer como desarrollador para que los usuarios la aprovechen.
 
 ## ¿Por qué la instalación?
 
-La opción de instalar una aplicación web es parte de la filosofía {{web.link("/es/docs/Web/Progressive_web_apps", "Aplicación web progresiva")}}, que proporciona a las aplicaciones web las mismas ventajas de experiencia de usuario que las aplicaciones nativas para que puedan ser competitivas. Las aplicaciones instaladas se invocan de manera más conveniente ya que tienen presencia en la pantalla de inicio de un dispositivo o en la lista o barra de aplicaciones. Esto facilita que un usuario utilice un gesto para acceder a una aplicación tocando o haciendo clic en su icono. La aplicación en sí misma, se puede manifestar como en una vista sin bordes (sin el navegador Chrome completo) pero, no obstante, se está ejecutando de manera efectiva como una pestaña dentro del navegador.
+La opción de instalar una aplicación web es parte de la filosofía [Aplicación web progresiva](/es/docs/Web/Progressive_web_apps), que proporciona a las aplicaciones web las mismas ventajas de experiencia de usuario que las aplicaciones nativas para que puedan ser competitivas. Las aplicaciones instaladas se invocan de manera más conveniente ya que tienen presencia en la pantalla de inicio de un dispositivo o en la lista o barra de aplicaciones. Esto facilita que un usuario utilice un gesto para acceder a una aplicación tocando o haciendo clic en su icono. La aplicación en sí misma, se puede manifestar como en una vista sin bordes (sin el navegador Chrome completo) pero, no obstante, se está ejecutando de manera efectiva como una pestaña dentro del navegador.
 
 Para los usuarios, la experiencia de una PWA aparentemente nativa es más cómoda y conveniente que un sitio web típico. Al reducir la diferencia de experiencia del usuario entre la aplicación web y las aplicaciones nativas en el dispositivo del usuario, reduce tanto la pérdida de cualquier memoria muscular que tenga relacionada con la interfaz nativa del dispositivo como la sensación de que "algo no va del todo bien" que los usuarios pueden experimentar al cambiar entre aplicaciones nativas y basadas en web.
 
 ## ¿Qué navegadores admiten la instalación?
 
-La instalación es compatible con Chrome para Android y Android WebView versión 31 y posteriores, Opera para Android 32 en adelante, Samsung Internet a partir de la versión 4 y Firefox para Android {{web.link("/es/docs/Mozilla/Firefox/Releases/58", "versión 58")}} y posteriores.
+La instalación es compatible con Chrome para Android y Android WebView versión 31 y posteriores, Opera para Android 32 en adelante, Samsung Internet a partir de la versión 4 y Firefox para Android [versión 58](/es/docs/Mozilla/Firefox/Releases/58) y posteriores.
 
 Safari en iOS es un poco diferente. Algunas partes del ecosistema de PWA son compatibles, mientras que otras no. iOS 13 introdujo una experiencia de instalación mucho más comparable, que también se describe aquí.
 
@@ -64,7 +65,7 @@ _Si tienes Google Chrome para Android disponible, la experiencia es ligeramente 
 
 _![Captura de pantalla de un pasquín de Chrome que solicita permiso para instalar la aplicación de muestra Foxes](https://mdn.mozillademos.org/files/17159/chrome-a2hs-banner.png)_
 
-> **Nota:** Puedes obtener más información sobre los mensajes de instalación de Chrome en el artículo [Mensajes de instalación de aplicaciones web](https://developers.google.com/web/fundamentals/app-install-banners/)._
+> **Nota:** Puedes obtener más información sobre los mensajes de instalación de Chrome en el artículo [Mensajes de instalación de aplicaciones web](https://developers.google.com/web/fundamentals/app-install-banners/).
 
 _Si eliges no agregarlo a tu pantalla de inicio en este momento, los puedes hacer más tarde usando el ícono "Agregar a la pantalla de inicio" en el menú principal de Chrome._
 

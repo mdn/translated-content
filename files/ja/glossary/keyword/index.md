@@ -11,4 +11,4 @@ slug: Glossary/Keyword
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "Keyword_research", "Keyword")}}
+- Wikipedia の [Keyword](https://en.wikipedia.org/wiki/Keyword_research)

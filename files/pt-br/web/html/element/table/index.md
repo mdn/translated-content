@@ -20,15 +20,13 @@ O elemento HTML _Table_ (`<table>`) representa dados em duas dimensões ou mais.
     <tr>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories"
-          title="HTML/Content categories"
+          href="/pt-BR/docs/HTML/Content_categories"
           >Categoria de conteúdo</a
         >
       </td>
       <td>
         <a
-          href="/en-US/docs/HTML/Content_categories#Flow_content"
-          title="HTML/Content categories#Flow content"
+          href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >Fluxo de conteúdo</a
         >
       </td>
@@ -192,7 +190,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 
 ## DOM interface
 
-This element implements the [`HTMLTableElement`](/en-US/docs/DOM/HTMLTableElement) interface.
+This element implements the [`HTMLTableElement`](/pt-BR/docs/DOM/HTMLTableElement) interface.
 
 ## Examples
 

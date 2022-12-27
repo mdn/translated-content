@@ -204,7 +204,7 @@ Todas as instâncias `BigInt` são herdades de BigInt.prototype. O protótipo do
 
 ### Métodos
 
-{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype', 'Methods')}}
+{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/BigInt/prototype', 'Methods')}}
 
 ## Exemplos
 

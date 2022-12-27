@@ -9,4 +9,4 @@ slug: Glossary/hash
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "ハッシュ関数")}}
+- Wikipedia の [ハッシュ関数](https://ja.wikipedia.org/wiki/ハッシュ関数)

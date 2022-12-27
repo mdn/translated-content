@@ -75,4 +75,4 @@ background-position-x: unset;
 - {{cssxref("background-position-y")}}
 - {{cssxref("background-position-inline")}}
 - {{cssxref("background-position-block")}}
-- [Использование множественных фонов](/ru/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")
+- [Использование множественных фонов](/ru/docs/CSS/Multiple_backgrounds)

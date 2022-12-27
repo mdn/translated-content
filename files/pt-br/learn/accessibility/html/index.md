@@ -68,9 +68,9 @@ O elemento `<button>` possui vários estilos já aplicados nele mesmo por padrã
 
 A semântica do HTML não demora mais para escrever do que a versão não-semântica (ruim) se você escrevê-la consistentemente desde o começo do seu projeto. Existem também outros benefícios de utilizá-la, além da acessibilidade:
 
-1.  **Mais fácil de ser desenvolvida** — como mencionado acima, você consegue algumas funcionalidades por padrão, também torna o código mais fácil de ser lido e entendido.
-2.  **Melhor nos dispositivos móveis** — HTML semântico é mais leve que o código não-semântico (aquele código espaguete) em comparação de tamanho de arquivos, também é mais fácil de ser adaptado ao responsivo.
-3.  **Bom para o SEO** — mecanismos de busca dão mais importância para palavras-chave que são incluidas em títulos, links, etc. do que para palavras-chave incluídas em `<div>`s não semânticas, etc. Então suas páginas serão mais fáceis de serem encontradas pelos seus clientes.
+1. **Mais fácil de ser desenvolvida** — como mencionado acima, você consegue algumas funcionalidades por padrão, também torna o código mais fácil de ser lido e entendido.
+2. **Melhor nos dispositivos móveis** — HTML semântico é mais leve que o código não-semântico (aquele código espaguete) em comparação de tamanho de arquivos, também é mais fácil de ser adaptado ao responsivo.
+3. **Bom para o SEO** — mecanismos de busca dão mais importância para palavras-chave que são incluidas em títulos, links, etc. do que para palavras-chave incluídas em `<div>`s não semânticas, etc. Então suas páginas serão mais fáceis de serem encontradas pelos seus clientes.
 
 Então vamos dar uma olhada em como fazer o HTML mais acessível.
 
@@ -114,10 +114,10 @@ Uma das melhores formas de ajudar um leitor de tela a interpretar sua página é
 
 Nós preparamos uma versão com o texto mais longo para que você tente utilizar um leitor de tela (veja [good-semantics.html](http://mdn.github.io/learning-area/accessibility/html/good-semantics.html)). Se você tentar navegar dentro do documento, vai perceber que é bem fácil:
 
-1.  O leitor de tela lê cada título a medida que você progride pelo conteúdo, notificando ao usuário o que é um título, o que é um parágrafo, etc.
-2.  Ele para depois de cada elemento, deixando você ir na velocidade em que é mais confortável.
-3.  Você pode pular para o título mais próximo/anterior em muitos leitores de tela.
-4.  Você também pode fazer uma lista com todos os títulos em muitos leitores de tela, possibilitando a navegação em um sumário para encontrar conteúdos específicos.
+1. O leitor de tela lê cada título a medida que você progride pelo conteúdo, notificando ao usuário o que é um título, o que é um parágrafo, etc.
+2. Ele para depois de cada elemento, deixando você ir na velocidade em que é mais confortável.
+3. Você pode pular para o título mais próximo/anterior em muitos leitores de tela.
+4. Você também pode fazer uma lista com todos os títulos em muitos leitores de tela, possibilitando a navegação em um sumário para encontrar conteúdos específicos.
 
 As pessoas ás vezes escrevem títulos, parágrafos, etc. utilizando HTML para vizualização e quebras de linha, ás vezes como o seguinte:
 

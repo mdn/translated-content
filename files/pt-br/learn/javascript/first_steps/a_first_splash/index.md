@@ -164,30 +164,30 @@ Vamos imaginar que o seu chefe te deu as seguintes diretrizes para criar este jo
 
 Olhando para o enunciado, a primeira coisa que devemos fazer é quebrá-lo em pequenas tarefas, da forma mais parecida com o pensamento de um programador quanto possível:
 
-1.  Gerar um número aleatório entre 1 e 100.
-2.  Gravar o número do turno que o jogador está. Iniciar em 1.
-3.  Dar ao jogador uma forma de adivinhar o número.
-4.  Após a tentativa ter sido submetida, primeiro gravar em algum lugar para que o usuário possa ver as tentativas anteriores.
-5.  Depois, verificar se o palpite está correto.
-6.  Se estiver correto:
+1. Gerar um número aleatório entre 1 e 100.
+2. Gravar o número do turno que o jogador está. Iniciar em 1.
+3. Dar ao jogador uma forma de adivinhar o número.
+4. Após a tentativa ter sido submetida, primeiro gravar em algum lugar para que o usuário possa ver as tentativas anteriores.
+5. Depois, verificar se o palpite está correto.
+6. Se estiver correto:
 
-    1.  Escrever mensagem de parabéns.
-    2.  Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
-    3.  Mostrar controle que permita ao jogador reiniciar o jogo.
+    1. Escrever mensagem de parabéns.
+    2. Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
+    3. Mostrar controle que permita ao jogador reiniciar o jogo.
 
-7.  Se o palpite estiver errado e o jogador ainda tem turnos sobrando:
+7. Se o palpite estiver errado e o jogador ainda tem turnos sobrando:
 
-    1.  Dizer ao jogador que ele está errado.
-    2.  Permitir que ele insira outra resposta.
-    3.  Incrementar o número do turno em 1.
+    1. Dizer ao jogador que ele está errado.
+    2. Permitir que ele insira outra resposta.
+    3. Incrementar o número do turno em 1.
 
-8.  Se o jogador está errado mas não tem turnos sobrando:
+8. Se o jogador está errado mas não tem turnos sobrando:
 
-    1.  Dizer ao jogador que o jogo acabou.
-    2.  Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
-    3.  Mostrar controle que permita ao jogador reiniciar o jogo.
+    1. Dizer ao jogador que o jogo acabou.
+    2. Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
+    3. Mostrar controle que permita ao jogador reiniciar o jogo.
 
-9.  Quando reiniciar, tenha certeza de resetar todas as variáveis e a interface do jogo, então volte para o passo 1.
+9. Quando reiniciar, tenha certeza de resetar todas as variáveis e a interface do jogo, então volte para o passo 1.
 
 Então vamos em frente, olhando como podemos transformar esses passos em código, construindo esse exemplo e explorando as ferramentas do JavaScript ao longo do caminho.
 
@@ -569,9 +569,9 @@ for (var i = 1 ; i < 21 ; i++) { console.log(i) }
 
 O que aconteceu? Os números de 1 a 20 foram exibidos no seu console. Isso acontece por causa do loop. Um loop `for` utiliza a inserção de três valores (argumentos):
 
-1.  **Um valor inicial**: Nesse caso estamos iniciando a contagem em 1, mas poderia ser qualquer outro número que quisesse utilizar. Você pode substituir `i` por qualquer número que quiser também, mas `i` é utilizado por convenção porque é curto e fácil de lembrar.
-2.  **Uma condição de saída**: Aqui nós especificamos `i < 21` — o loop irá continuar rodando até que `i` não seja mais menor que 21. Quando `i` alcançar 21, o loop não será mais executado.
-3.  **Incremento**: Nós especificamos `i++`, que siginifica "adicione 1 à i". O loop irá rodar uma vez para cada valor de `i`, até que `i` alcance o valor de 21 (como abordado acima). Nesse caso, nós estamos simplesmente imprimindo o valor de `i` no console em cada iteração usando {{domxref("Console.log", "console.log()")}}.
+1. **Um valor inicial**: Nesse caso estamos iniciando a contagem em 1, mas poderia ser qualquer outro número que quisesse utilizar. Você pode substituir `i` por qualquer número que quiser também, mas `i` é utilizado por convenção porque é curto e fácil de lembrar.
+2. **Uma condição de saída**: Aqui nós especificamos `i < 21` — o loop irá continuar rodando até que `i` não seja mais menor que 21. Quando `i` alcançar 21, o loop não será mais executado.
+3. **Incremento**: Nós especificamos `i++`, que siginifica "adicione 1 à i". O loop irá rodar uma vez para cada valor de `i`, até que `i` alcance o valor de 21 (como abordado acima). Nesse caso, nós estamos simplesmente imprimindo o valor de `i` no console em cada iteração usando {{domxref("Console.log", "console.log()")}}.
 
 Agora vamos olhar o loop em nosso jogo de adivinhar o número — o código seguinte pode ser encontrado dentro da função `reiniciarJogo()`:
 
@@ -616,11 +616,11 @@ Variáveis que não contém referências a elementos de formulário não terão 
 
 Vamos brincar um pouco com alguns objetos do navegador.
 
-1.  Primeiro abra seu programa em um navegador.
-2.  Em seguida, abra as [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools), e certifique-se de que a aba do console JavaScript esteja aberta.
-3.  Digite `campoPalpite` e o console irá lhe mostrar que a variável contém um elemento {{htmlelement("input")}}. Você também irá notar que o console completa automaticamente os nomes de objetos existentes dentro do ambiente de execução, incluindo suas variáveis!
+1. Primeiro abra seu programa em um navegador.
+2. Em seguida, abra as [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/What_are_browser_developer_tools), e certifique-se de que a aba do console JavaScript esteja aberta.
+3. Digite `campoPalpite` e o console irá lhe mostrar que a variável contém um elemento {{htmlelement("input")}}. Você também irá notar que o console completa automaticamente os nomes de objetos existentes dentro do ambiente de execução, incluindo suas variáveis!
 
-    1.  Agora digite o seguinte:
+    1. Agora digite o seguinte:
 
         ```js
         campoPalpite.value = 'Olá';
@@ -628,8 +628,8 @@ Vamos brincar um pouco com alguns objetos do navegador.
 
         A propriedade `value` representa o valor atual inserido no campo de texto. Você verá que inserindo esse comando, nós mudamos o valor desse objeto!
 
-4.  Agora tente digitar `palpites` e pressione _return_. O console irá mostrar que a variável contém um elemento {{htmlelement("p")}}.
-5.  Agora tente inserir a linha seguinte:
+4. Agora tente digitar `palpites` e pressione _return_. O console irá mostrar que a variável contém um elemento {{htmlelement("p")}}.
+5. Agora tente inserir a linha seguinte:
 
     ```js
     palpites.value
@@ -637,13 +637,13 @@ Vamos brincar um pouco com alguns objetos do navegador.
 
     O navegador irá retornar `undefined`, porque `value` não existe em parágrafos.
 
-6.  Para mudar o texto dentro de um parágrafo, você precisa da propriedade {{domxref("Node.textContent", "textContent")}}. Tente isso:
+6. Para mudar o texto dentro de um parágrafo, você precisa da propriedade {{domxref("Node.textContent", "textContent")}}. Tente isso:
 
     ```js
     palpites.textContent = 'Onde está meu parágrafo?';
     ```
 
-7.  Agora algo divertido. Tente inserir as linhas abaixo, uma por uma:
+7. Agora algo divertido. Tente inserir as linhas abaixo, uma por uma:
 
     ```js
     palpites.style.backgroundColor = 'yellow';

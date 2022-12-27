@@ -50,7 +50,7 @@ Clear-Site-Data: "*"
 - `"cache"`
   - : Indica que o servidor quer remover localmente os dados cacheados (i.e. o cache do navegador, veja [HTTP caching](/pt-BR/docs/Web/HTTP/Caching)) para a URL de origem da resposta. Dependendo do navegador, essa diretiva pode acabar apagando outras coisas como páginas pré-renderizadas, _scripts_ armazenados, shaders WebGL ou sugestões na barra de endereço.
 - `"cookies"`
-  - : Indica que o servidor quer remover todos os _cookies_ da URL de origem da resposta. Credenciais de autenticação HTTP também são limpas. Isso afeta o registro inteiro do domínio, incluindo subdomínios. Então, https\://example.com também como https\://stage.example.com, terão seus _cookies_ limpos.
+  - : Indica que o servidor quer remover todos os _cookies_ da URL de origem da resposta. Credenciais de autenticação HTTP também são limpas. Isso afeta o registro inteiro do domínio, incluindo subdomínios. Então, `https://example.com` também como `https://stage.example.com`, terão seus _cookies_ limpos.
 - `"storage"`
 
   - : Indica que o servidor quer remover todo o armezenamento DOM para a URL de origem da resposta. Isso incluí mecanismos de armazenamento como:
@@ -73,7 +73,7 @@ Clear-Site-Data: "*"
 
 ### Deslogar de um site
 
-Se um usuário se desloga de um site ou serviço, você talvez queira remover dados armazenados localmente. Você pode atingir isso adicionando o cabeçalho `Clear-Site-Data` quando enviando a página confirmando o desligamento da autenticação da pessoa do site foi feito com sucesso (https\://example.com/logout, por exemplo):
+Se um usuário se desloga de um site ou serviço, você talvez queira remover dados armazenados localmente. Você pode atingir isso adicionando o cabeçalho `Clear-Site-Data` quando enviando a página confirmando o desligamento da autenticação da pessoa do site foi feito com sucesso (`https://example.com/logout`, por exemplo):
 
 ```
 Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
@@ -81,7 +81,7 @@ Clear-Site-Data: "cache", "cookies", "storage", "executionContexts"
 
 ### Limpando cookies
 
-Se o cabeçalho é entregue com a resposta em https\://example.com/clear-cookies, todos os _cookies_ no mesmo domínio e qualquer subdomínio (como https\://stage.example.com, etc), serão limpos.
+Se o cabeçalho é entregue com a resposta em `https://example.com/clear-cookies`, todos os _cookies_ no mesmo domínio e qualquer subdomínio (como `https://stage.example.com`, etc), serão limpos.
 
 ```
 Clear-Site-Data: "cookies"

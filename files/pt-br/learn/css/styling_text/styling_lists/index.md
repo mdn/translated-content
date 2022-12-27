@@ -7,11 +7,11 @@ original_slug: Web/CSS/Getting_Started/Lists
 ---
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
-Este é o 10º seção do [CSS Introdução](/pt-BR/docs/Web/Guide/CSS/Getting_Started "EN-US / docs / Web / Guia / CSS / Introdução") tutorial; ele descreve como você pode usar CSS para especificar o aparecimento de listas. Você cria um novo documento de amostra contendo listas, e um novo estilo que os estilos das listas.
+Este é o 10º seção do [CSS Introdução](/pt-BR/docs/Web/Guide/CSS/Getting_Started) tutorial; ele descreve como você pode usar CSS para especificar o aparecimento de listas. Você cria um novo documento de amostra contendo listas, e um novo estilo que os estilos das listas.
 
 ## Informação: Lists
 
-Se você aceitou o desafio na [última ](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Content "/ en-US / docs / Web / Guia / CSS / Getting_Started / Conteúdo")seção, em seguida, você viu como você pode adicionar conteúdo antes de qualquer elemento para exibi-lo como um item da lista.
+Se você aceitou o desafio na [última](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Content) seção, em seguida, você viu como você pode adicionar conteúdo antes de qualquer elemento para exibi-lo como um item da lista.
 
 CSS proporciona propriedades especiais que são projetados para listas. Geralmente é mais conveniente usar estas propriedades sempre que puder.
 
@@ -102,7 +102,7 @@ Browsers diferem na maneira de implementar os estilos para listas. Não espere q
 
 ### Contadores
 
-**Nota:** Alguns navegadores não suportam contadores. O [conteúdo CSS e compatibilidade do navegador](http://www.quirksmode.org/css/contents.html) página no [site de modo Quirks](http://www.quirksmode.org/) contém um gráfico detalhado de compatibilidade do navegador para este e outros recursos CSS. Páginas individuais na [referência CSS](/pt-BR/docs/Web/CSS/Reference "https://developer.mozilla.org/en-US/docs/Web/Guide/CSS_Reference") neste local também têm tabelas de compatibilidade do navegador.
+**Nota:** Alguns navegadores não suportam contadores. O [conteúdo CSS e compatibilidade do navegador](http://www.quirksmode.org/css/contents.html) página no [site de modo Quirks](http://www.quirksmode.org/) contém um gráfico detalhado de compatibilidade do navegador para este e outros recursos CSS. Páginas individuais na [referência CSS](/pt-BR/docs/Web/CSS/Reference) neste local também têm tabelas de compatibilidade do navegador.
 
 Você pode usar contadores para numerar quaisquer elementos, não somente itens da lista. Por exemplo, em alguns documentos você pode querer numerar cabeçalhos ou parágrafos.
 
@@ -240,10 +240,10 @@ Adicione uma regra à sua folha de estilo, para numerar os oceanos usando numera
 
 Mude sua folha de estilo para identificar os títulos com letras maiúsculas em parênteses como este:
 
-| **(A) The oceans\*\***. . .\***\*(B) Numbered paragraphs\*\***. . .\*\* |
+| **(A) The oceans**. . .**(B) Numbered paragraphs**. . . |
 | ----------------------------------------------------------------------- |
 
-[Ver soluções para esses desafios.](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Challenge_solutions#Lists "EN-US / docs / Web / Guia / CSS / Introdução / desafio soluções # Lists")
+[Ver soluções para esses desafios.](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Challenge_solutions#Lists)
 
 ## Qual o proximo?
 

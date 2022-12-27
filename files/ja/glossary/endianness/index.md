@@ -23,7 +23,7 @@ slug: Glossary/Endianness
 
 2. Wikipedia 記事
 
-    1. {{Interwiki("wikipedia", "エンディアン")}}
+    1. [エンディアン](https://ja.wikipedia.org/wiki/エンディアン)
 
 3. [用語集](/ja/docs/Glossary)
 

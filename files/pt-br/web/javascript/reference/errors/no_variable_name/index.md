@@ -85,5 +85,5 @@ var arr = [1,2,3,4,5];
 ## Veja também
 
 - Bons nomes de variáveis
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)
 - Declarações de variáveis ​​no Guia JavaScript

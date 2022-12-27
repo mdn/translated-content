@@ -12,7 +12,7 @@ Se você esta procurando por coisas específicas sobre como determinado tipo de 
 
 Os aspetos relacionado a linguagem desta guia aplicam-se principalmente a documentação em Inglês. Outras idiomas devem ter (e são bem-vindos a criar) seu próprio guia de estilo. Estes devem ser publicados como sub-páginas da página do time de localização.
 
-Para os estilos padrão que se aplicam ao conteúdo escrito por outros sites que não sejam a MDN, referir-se a [guia de estilo Única Mozilla](http://www.mozilla.org/en-US/styleguide/).
+Para os estilos padrão que se aplicam ao conteúdo escrito por outros sites que não sejam a MDN, referir-se a [guia de estilo Única Mozilla](http://www.mozilla.org/pt-BR/styleguide/).
 
 ## Básico
 
@@ -296,7 +296,7 @@ In running text, use commas only in five-digit and larger numbers.
 - **Correct**: I will travel on trains, planes, and automobiles.
 - **Incorrect**: I will travel on trains, planes and automobiles.
 
-> **Nota:** This is in contrast to the [One Mozilla style guide](http://www.mozilla.org/en-US/styleguide/), which specifies that the serial comma is not to be used. MDN is an exception to this rule.
+> **Nota:** This is in contrast to the [One Mozilla style guide](http://www.mozilla.org/pt-BR/styleguide/), which specifies that the serial comma is not to be used. MDN is an exception to this rule.
 
 ### Spelling
 

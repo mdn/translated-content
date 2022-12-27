@@ -9,7 +9,7 @@ slug: Glossary/Statement
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "文_(プログラミング)")}}
+- Wikipedia の [文_(プログラミング)](https://ja.wikipedia.org/wiki/文_(プログラミング))
 
 ### 技術リファレンス
 

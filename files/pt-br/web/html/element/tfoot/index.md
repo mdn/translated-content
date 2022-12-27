@@ -13,7 +13,7 @@ O **`<tfoot>` **é um **elemento HTML** que define um conjunto de linhas as quai
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/pt-BR/docs/Web/Guide/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </th>

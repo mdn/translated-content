@@ -48,7 +48,7 @@ O {{glossary("Head", "head")}} de um documento HTML é a parte que não é exibi
 
 ## O que há no cabeçalho HTML?
 
-Vamos rever o simples[ ](/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Anatomy_of_an_HTML_document)[Documento HTML que abordamos no artigo anterior:](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started#Anatomia_de_um_elemento_HTML)
+Vamos rever o simples [Documento HTML que abordamos no artigo anterior:](/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started#Anatomia_de_um_elemento_HTML)
 
 ```html
 <!DOCTYPE html>
@@ -83,26 +83,26 @@ Nós já vimos o elemento {{htmlelement("title")}} em ação — ele pode ser us
 
 ### Aprendizado ativo: observando um exemplo simples
 
-1.  Para começar esta aprendizagem ativa, gostaríamos que você fosse ao nosso depósito GitHub e baixasse uma cópia do nossa página [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html). Para fazer isso:
+1. Para começar esta aprendizagem ativa, gostaríamos que você fosse ao nosso depósito GitHub e baixasse uma cópia do nossa página [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html). Para fazer isso:
 
-    1.  Copie e cole o código em um novo arquivo de texto no seu editor e salve-o com o nome de index.html em um lugar de fácil acesso.
-    2.  Pressione o botão "Raw" na página do GitHub, que faz com que o código bruto apareça (possivelmente em uma nova guia do navegador). Em seguida, escolha o menu _Arquivo do navegador> Salvar página como ..._ e escolha um local adequado para salvar o arquivo.
+    1. Copie e cole o código em um novo arquivo de texto no seu editor e salve-o com o nome de index.html em um lugar de fácil acesso.
+    2. Pressione o botão "Raw" na página do GitHub, que faz com que o código bruto apareça (possivelmente em uma nova guia do navegador). Em seguida, escolha o menu _Arquivo do navegador> Salvar página como ..._ e escolha um local adequado para salvar o arquivo.
 
-2.  Agora abra o arquivo no seu navegador. Você deve ver algo assim:
+2. Agora abra o arquivo no seu navegador. Você deve ver algo assim:
 
-    ![A simple web page with the title set to <title> element, and the <h1> set to <h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)Agora deve ser completamente óbvio onde o conteúdo `<h1>` aparece e onde o conteúdo `<title>` aparece!
+    ![A simple web page with the title set to \<title> element, and the \<h1> set to \<h1> element.](https://mdn.mozillademos.org/files/12323/title-example.png)Agora deve ser completamente óbvio onde o conteúdo `<h1>` aparece e onde o conteúdo `<title>` aparece!
 
-3.  Você também deve tentar abrir o código no seu editor, editar o conteúdo desses elementos e atualizar a página no seu navegador. divirta-se.
+3. Você também deve tentar abrir o código no seu editor, editar o conteúdo desses elementos e atualizar a página no seu navegador. divirta-se.
 
 O conteúdo do elemento `<title>` também é usado de outras maneiras. Por exemplo, se você tentar favoritar a página, (_Favoritos > Adicionar página aos favoritos_ ou o ícone da estrela na barra de URL no Fireofx), você verá o conteúdo `<title>` preenchido como o nome sugerido do favorito.
 
-![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the <title> element ](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
+![A webpage being bookmarked in firefox; the bookmark name has been automatically filled in with the contents of the \<title> element ](https://mdn.mozillademos.org/files/12337/bookmark-example.png)
 
 Os conteúdos `<title>` também são usados nos resultados de pesquisa, conforme você verá abaixo.
 
 ## Metadados: o elemento \<meta>
 
-Metadados é dado descreve dados, e HTML possui uma maneira "oficial" de adicionar metadados a um documento — o elemento {{htmlelement("meta")}}. Claro, as outras coisas em que estamos falando neste artigo também podem ser pensadas como metadados. Existem muitos tipos diferentes de elementos `<meta>` que podem ser incluídos no \<head>\*\* \*\*da sua página, mas não tentaremos explicar todos eles nesta fase, pois seria muito confuso. Em vez disso, explicaremos algumas coisas que você pode ver comumente, apenas para lhe dar uma idéia.
+Metadados é dado descreve dados, e HTML possui uma maneira "oficial" de adicionar metadados a um documento — o elemento {{htmlelement("meta")}}. Claro, as outras coisas em que estamos falando neste artigo também podem ser pensadas como metadados. Existem muitos tipos diferentes de elementos `<meta>` que podem ser incluídos no \<head> da sua página, mas não tentaremos explicar todos eles nesta fase, pois seria muito confuso. Em vez disso, explicaremos algumas coisas que você pode ver comumente, apenas para lhe dar uma idéia.
 
 ### Especificando a codificação de caracteres do seu documento
 
@@ -122,7 +122,7 @@ Este elemento simplesmente especifica a codificação de caracteres do documento
 
 ### Aprendizagem ativa: Experimento com a codificação de caracteres
 
-Para experimentar isso, revise o modelo HTML simples que você obteve na seção anterior em `<title>` (a página [title-example.html ](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)), tente alterar o valor do meta charset para `ISO-8859-1` e adicione o Japonês à sua página . Este é o código que usamos:
+Para experimentar isso, revise o modelo HTML simples que você obteve na seção anterior em `<title>` (a página [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)), tente alterar o valor do meta charset para `ISO-8859-1` e adicione o Japonês à sua página . Este é o código que usamos:
 
 ```html
 <p>Exemplo Japonês:ご飯が熱い</p>
@@ -152,14 +152,14 @@ Especificar uma descrição que inclua palavras-chave relacionadas ao conteúdo 
 
 A descrição também é usada nas páginas de resultados do mecanismo de pesquisa. Vamos passar por um exercício para explorar isso
 
-1.  Vá para a [página inicial da Mozilla Developer Network.](https://developer.mozilla.org/en-US/)
-2.  Veja a fonte da página (botão direito do mouse/
+1. Vá para a [página inicial da Mozilla Developer Network.](https://developer.mozilla.org/en-US/)
+2. Veja a fonte da página (botão direito do mouse/
 
     <kbd>Ctrl</kbd>
 
-    &#x20;\+ clique na página, escolha _Ver código-fonte da página_ no menu de contexto).
+    \+ clique na página, escolha _Ver código-fonte da página_ no menu de contexto).
 
-3.  Encontre a meta tag de descrição. Isso parecerá assim:
+3. Encontre a meta tag de descrição. Isso parecerá assim:
 
     ```html
     <meta name="description" content="A Mozilla Developer Network (MDN) fornece
@@ -167,7 +167,7 @@ A descrição também é usada nas páginas de resultados do mecanismo de pesqui
     Sites e aplicativos HTML5. Ele também documenta produtos Mozilla, como o sistema operacional Firefox.">
     ```
 
-4.  Agora, procure por "Mozilla Developer Network" no seu motor de busca favorito (Utilizamos o Yahoo.) Você notará a descrição `<meta>` e `<title>` elemento usado no resultado da pesquisa — definitivamente vale a pena ter!
+4. Agora, procure por "Mozilla Developer Network" no seu motor de busca favorito (Utilizamos o Yahoo.) Você notará a descrição `<meta>` e `<title>` elemento usado no resultado da pesquisa — definitivamente vale a pena ter!
 
     ![A Yahoo search result for "Mozilla Developer Network"](https://mdn.mozillademos.org/files/12347/search-result.png)
 
@@ -205,8 +205,8 @@ O humilde favicon existe há muitos anos. É o primeiro ícone desse tipo: um í
 
 Um favicon pode ser adicionado à sua página:
 
-1.  Salvando-o no mesmo diretório que a página de índice do site, salvo no formato `.ico` (a maioria dos navegadores suportará favicons em formatos mais comuns como `.gif` ou `.png`, mas usar o formato ICO irá garantir que ele funcione tão bem como o Internet Explorer 6 .)
-2.  Adicionando a seguinte linha ao HTML `<head>` para fazer referência a ele:
+1. Salvando-o no mesmo diretório que a página de índice do site, salvo no formato `.ico` (a maioria dos navegadores suportará favicons em formatos mais comuns como `.gif` ou `.png`, mas usar o formato ICO irá garantir que ele funcione tão bem como o Internet Explorer 6 .)
+2. Adicionando a seguinte linha ao HTML `<head>` para fazer referência a ele:
 
     ```html
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -235,7 +235,7 @@ Os comentários explicam onde cada ícone é usado - esses elementos cobrem cois
 
 Não se preocupe muito com a implementação de todos esses tipos de ícone agora — este é um recurso bastante avançado, e você não precisará ter conhecimento disso para avançar no curso. O objetivo principal aqui é permitir que você saiba o que são essas coisas, no caso de você encontrá-las enquanto navega no código-fonte dos outros sites.
 
-> **Nota:** Se o seu site usa uma Política de Segurança de Conteúdo (CSP) para aumentar sua segurança, a política se aplica ao favicon. Se você encontrar problemas com o favicon não carregando, verifique se a diretiva [`img-src`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) do cabeçalho [`Content-Security-Policy`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy "The HTTP Content-Security-Policy response header allows web site administrators to control resources the user agent is allowed to load for a given page. With a few exceptions, policies mostly involve specifying server origins and script endpoints. This helps guard against cross-site scripting attacks (XSS).") não está impedindo o acesso a ele.
+> **Nota:** Se o seu site usa uma Política de Segurança de Conteúdo (CSP) para aumentar sua segurança, a política se aplica ao favicon. Se você encontrar problemas com o favicon não carregando, verifique se a diretiva [`img-src`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) do cabeçalho [`Content-Security-Policy`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) não está impedindo o acesso a ele.
 
 ## Aplicando CSS e JavaScript ao HTML
 
@@ -247,7 +247,7 @@ Todos os sites que você usar nos dias atuais empregarão o {{glossary("CSS")}} 
   <link rel="stylesheet" href="meu-arquivo-css.css">
   ```
 
-- O elemento {{htmlelement("script")}} não precisa ir no cabeçalho; na verdade, muitas vezes é melhor colocá-lo na parte inferior do corpo do documento (antes da tag` </body>` de fechamento), para garantir que todo o conteúdo HTML tenha sido lido pelo navegador antes de tentar aplicar o JavaScript nele (se o JavaScript tentar acessar um elemento que ainda não existe, o navegador gerará um erro.)
+- O elemento {{htmlelement("script")}} não precisa ir no cabeçalho; na verdade, muitas vezes é melhor colocá-lo na parte inferior do corpo do documento (antes da tag `</body>` de fechamento), para garantir que todo o conteúdo HTML tenha sido lido pelo navegador antes de tentar aplicar o JavaScript nele (se o JavaScript tentar acessar um elemento que ainda não existe, o navegador gerará um erro.)
 
   ```html
   <script src="meu-arquivo-js.js"></script>
@@ -257,9 +257,9 @@ Todos os sites que você usar nos dias atuais empregarão o {{glossary("CSS")}} 
 
 ### Aprendizagem ativa: aplicar CSS e JavaScript a uma página
 
-1.  Para iniciar esta aprendizagem ativa, pegue uma cópia dos nossos arquivos [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) e [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) e salve-os em seu computador local no mesmo diretório. Verifique se eles são salvos com os nomes e extensões de arquivo corretos.
-2.  Abra o arquivo HTML em seu navegador e seu editor de texto.
-3.  Ao seguir as informações fornecidas acima, adicione os elementos {{htmlelement("link")}} e {{htmlelement("script")}} ao seu HTML, para que seu CSS e JavaScript sejam aplicados ao seu HTML.
+1. Para iniciar esta aprendizagem ativa, pegue uma cópia dos nossos arquivos [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) e [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) e salve-os em seu computador local no mesmo diretório. Verifique se eles são salvos com os nomes e extensões de arquivo corretos.
+2. Abra o arquivo HTML em seu navegador e seu editor de texto.
+3. Ao seguir as informações fornecidas acima, adicione os elementos {{htmlelement("link")}} e {{htmlelement("script")}} ao seu HTML, para que seu CSS e JavaScript sejam aplicados ao seu HTML.
 
 Se for feito corretamente, quando você salvar seu HTML e atualizar seu navegador, verá que as coisas mudaram:
 

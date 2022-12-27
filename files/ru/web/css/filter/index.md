@@ -48,11 +48,15 @@ filter: unset;
 
 С помощью функции, используйте:
 
-    filter: <filter-function> [<filter-function>]* | none
+```
+filter: <filter-function> [<filter-function>]* | none
+```
 
 Для ссылки на SVG {{SVGElement("filter")}} элемент, используйте:
 
-    filter: url(svg-url#element-id)
+```
+filter: url(svg-url#element-id)
+```
 
 ### Формальный синтаксис
 
@@ -611,7 +615,7 @@ table.standard-table td {
 
 ### `hue-rotate() [изменение оттенка]`
 
-Applies a hue rotation on the input image. The value of ‘`angle`’ defines the number of degrees around the color circle the input samples will be adjusted. A value of `0deg `leaves the input unchanged. If the ‘`angle`’ parameter is missing, a value of `0deg` is used. Though there is no maximum value, the effect of values above `360deg` wraps around.
+Applies a hue rotation on the input image. The value of ‘`angle`’ defines the number of degrees around the color circle the input samples will be adjusted. A value of `0deg`leaves the input unchanged. If the ‘`angle`’ parameter is missing, a value of `0deg` is used. Though there is no maximum value, the effect of values above `360deg` wraps around.
 
 ```css
 filter: hue-rotate(90deg)

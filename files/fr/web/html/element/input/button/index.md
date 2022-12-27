@@ -1,13 +1,6 @@
 ---
 title: <input type ="button">
-slug: Web/HTML/Element/Input/button
-tags:
-  - Element
-  - HTML
-  - Input
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input/button
+slug: Web/HTML/Element/input/button
 ---
 
 {{HTMLRef}}

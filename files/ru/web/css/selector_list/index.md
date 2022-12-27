@@ -22,7 +22,9 @@ div {
 
 ## Синтаксис
 
-    element, element, element { свойства стиля }
+```
+element, element, element { свойства стиля }
+```
 
 ## Примеры
 

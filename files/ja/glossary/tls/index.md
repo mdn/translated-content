@@ -15,7 +15,7 @@ slug: Glossary/TLS
 
 2. Wikipedia の記事
 
-    1. {{Interwiki("wikipedia", "Transport Layer Security")}}
+    1. [Transport Layer Security](https://ja.wikipedia.org/wiki/Transport_Layer_Security)
 
 3. 関連情報
 

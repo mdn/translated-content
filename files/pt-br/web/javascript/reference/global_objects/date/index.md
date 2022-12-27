@@ -21,7 +21,7 @@ new Date(dataString);
 new Date(ano, mês, dia, hora, minuto, segundo, milissegundo);
 ```
 
-{{ note('Note que objetos JavaScript <code>Date</code> só podem ser instanciados chamando JavaScript <code>Date</code> como um construtor: chamá-lo como uma função regular (ou seja, sem o operador <a href="/en-US/docs/Web/JavaScript/Reference/Operators/new">new</a>) irá retornar uma string ao invés de um objeto <code>Date</code>; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript <code>Date</code> não têm sintaxe literal.') }}
+{{ note('Note que objetos JavaScript <code>Date</code> só podem ser instanciados chamando JavaScript <code>Date</code> como um construtor: chamá-lo como uma função regular (ou seja, sem o operador <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/new">new</a>) irá retornar uma string ao invés de um objeto <code>Date</code>; ao contrário de outros tipos de objetos JavaScript, objetos JavaScript <code>Date</code> não têm sintaxe literal.') }}
 
 ### Parâmetros para o constructor Date
 
@@ -105,7 +105,7 @@ Todas as instâncias `Date` são herdadas de {{jsxref("Date.prototype")}}. O obj
 
 ### Métodos
 
-{{ page("/en-US/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}
+{{ page("/pt-BR/docs/JavaScript/Reference/Global_Objects/Date/prototype", "Methods") }}
 
 ## Exemplos
 

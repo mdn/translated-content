@@ -9,4 +9,4 @@ slug: Glossary/Information_architecture
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "情報アーキテクチャ")}}
+- Wikipedia 上の [情報アーキテクチャ](https://ja.wikipedia.org/wiki/情報アーキテクチャ)

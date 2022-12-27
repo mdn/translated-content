@@ -115,10 +115,10 @@ Como você pode ver, o domínio não existe no banco de dados `whois` (neste mom
 
 O processo é bastante simples:
 
-1.  Ir para o site de um registrador.
-2.  Geralmente há um apelo chamativo “Obeter um domain name” call to action. Clique nele.
-3.  Preencher o formulário com todos os detalhes requeridos. Certifique-se especialmente de que você não digitou incorretamente o domain name desejado. Uma vez pago, é tarde demais!
-4.  O registrador informará quando o domain name estiver registrado corretamente. Dentro de algumas horas, todos os servidores de DNS receberão suas informações de DNS.
+1. Ir para o site de um registrador.
+2. Geralmente há um apelo chamativo “Obeter um domain name” call to action. Clique nele.
+3. Preencher o formulário com todos os detalhes requeridos. Certifique-se especialmente de que você não digitou incorretamente o domain name desejado. Uma vez pago, é tarde demais!
+4. O registrador informará quando o domain name estiver registrado corretamente. Dentro de algumas horas, todos os servidores de DNS receberão suas informações de DNS.
 
 > **Nota:** Este tempo é frequentemente chamado de **tempo de propagação.** No entanto, este termo não é preciso, pois a atualização não está se propagando (top → down). Os servidores DNS consultados pelo seu computador (abaixo) são aqueles que buscam as informações do servidor autoritativo (superior) quando precisam.
 
@@ -132,10 +132,10 @@ Bancos de dados DNS são armazenados em todos os servidores DNS em todo o mundo,
 
 Como já vimos, quando você deseja exibir uma página da Web em seu navegador, é mais fácil digitar um nome de domínio do que um endereço IP. Vamos dar uma olhada no processo:
 
-1.  Digite mozilla.org na barra de localização do seu navegador.
-2.  Seu navegador pergunta ao seu computador se ele já reconhece o endereço IP identificado por esse nome de domínio (usando um cache DNS local). Em caso afirmativo, o nome é traduzido para o endereço IP e o navegador negocia o conteúdo com o servidor da Web. Fim da história.
-3.  Se o seu computador não sabe qual IP está por trás do nome mozilla.org, ele vai perguntar a um servidor DNS, cujo trabalho é precisamente informar ao seu computador qual endereço IP corresponde a cada nome de domínio registrado.
-4.  Agora que o computador conhece o endereço IP solicitado, seu navegador pode negociar o conteúdo com o servidor da web.
+1. Digite mozilla.org na barra de localização do seu navegador.
+2. Seu navegador pergunta ao seu computador se ele já reconhece o endereço IP identificado por esse nome de domínio (usando um cache DNS local). Em caso afirmativo, o nome é traduzido para o endereço IP e o navegador negocia o conteúdo com o servidor da Web. Fim da história.
+3. Se o seu computador não sabe qual IP está por trás do nome mozilla.org, ele vai perguntar a um servidor DNS, cujo trabalho é precisamente informar ao seu computador qual endereço IP corresponde a cada nome de domínio registrado.
+4. Agora que o computador conhece o endereço IP solicitado, seu navegador pode negociar o conteúdo com o servidor da web.
 
 ![Explanation of the steps needed to obtain the result to a DNS request](https://mdn.mozillademos.org/files/8961/2014-10-dns-request2.png)
 
@@ -146,4 +146,4 @@ Ok, conversamos muito sobre processos e arquitetura. Hora de seguir em frente.
 - Se você quer se envolver, é um bom momento para começar a investigar o design e explorar a [anatomia de uma página da web.](/en-US/Learn/Anatomy_of_a_web_page)
 - É importante notar também que alguns aspectos da construção de um site custam dinheiro. Por favor, [consulte quanto custa construir um site](/pt-BR/docs/Learn/How_much_does_it_cost).
 - Ou leia mais sobre o [nome de domínio](http://en.wikipedia.org/wiki/Domain_name) na Wikipedia.
-- Você também pode encontrar [aqui ](https://howdns.works/)uma explicação divertida e colorida de como o DNS funciona.
+- Você também pode encontrar [aqui](https://howdns.works/) uma explicação divertida e colorida de como o DNS funciona.

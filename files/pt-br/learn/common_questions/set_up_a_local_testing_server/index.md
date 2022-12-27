@@ -62,7 +62,7 @@ Para contornar o problema de requisições assíncronas, precisamos testar esses
 
 Para fazer isso:
 
-1.  Instale o Python. Se você estiver usando Linux ou macOS, ele já deverá estár disponível em seu sistema. Se você é um usuário do Windows, pode obter um instalador na página inicial do Python e seguir as instruções para instalá-lo:
+1. Instale o Python. Se você estiver usando Linux ou macOS, ele já deverá estár disponível em seu sistema. Se você é um usuário do Windows, pode obter um instalador na página inicial do Python e seguir as instruções para instalá-lo:
 
     - Vá para [python.org](https://www.python.org/) (em inglês)
     - Na seção Download, clique no link para Python "3.xxx".
@@ -71,13 +71,13 @@ Para fazer isso:
     - Na primeira página do instalador, certifique-se de marcar a caixa de seleção "Adicionar Python 3.xxx ao PATH".
     - Clique em _Instalar_ e então, clique em _Fechar_ quando a instalação terminar.
 
-2.  Abra seu prompt de comando (Windows)/ terminal (macOS/ Linux). Para verificar se o Python está instalado, digite o seguinte comando:
+2. Abra seu prompt de comando (Windows)/ terminal (macOS/ Linux). Para verificar se o Python está instalado, digite o seguinte comando:
 
     ```bash
     python -V
     ```
 
-3.  Isso deve retornar um número de versão. Se estiver tudo OK, navegue até o diretório em que seu exemplo está dentro, usando o comando `cd`.
+3. Isso deve retornar um número de versão. Se estiver tudo OK, navegue até o diretório em que seu exemplo está dentro, usando o comando `cd`.
 
     ```bash
     # incluir o nome do diretório para entrar, por exemplo
@@ -86,7 +86,7 @@ Para fazer isso:
     cd ..
     ```
 
-4.  Digite o comando para inicializar o servidor nesse diretório:
+4. Digite o comando para inicializar o servidor nesse diretório:
 
     ```bash
     # Se a versão do Python retornada acima for 3.X
@@ -96,7 +96,7 @@ Para fazer isso:
     python -m SimpleHTTPServer
     ```
 
-5.  Por padrão, isso executará o conteúdo do diretório em um servidor web local, na porta 8000. Você pode ir para esse servidor acessando a URL `localhost:8000` no seu navegador web. Aqui você verá o conteúdo do diretório listado — clique no arquivo HTML que você deseja executar.
+5. Por padrão, isso executará o conteúdo do diretório em um servidor web local, na porta 8000. Você pode ir para esse servidor acessando a URL `localhost:8000` no seu navegador web. Aqui você verá o conteúdo do diretório listado — clique no arquivo HTML que você deseja executar.
 
 > **Nota:** Se você já tiver algo em execução na porta 8000, você poderá escolher outra porta executando o comando do servidor seguido por um número de porta alternativo, por exemplo `python3 -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Você pode acessar seu conteúdo em `localhost:7800`.
 
@@ -109,6 +109,6 @@ Os módulos `SimpleHTTPServer (python 2.0)` e `http.server (python 3.0)` do Pyth
 - Para executar o código PHP no lado do servidor, inicie o [servidor de desenvolvimento interno do PHP](https://www.php.net/manual/pt_BR/features.commandline.webserver.php):
 
 ```
-$ cd path/to/your/php/code
-$ php -S localhost:8000
+cd path/to/your/php/code
+php -S localhost:8000
 ```

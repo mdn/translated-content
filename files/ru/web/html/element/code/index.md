@@ -24,7 +24,7 @@ translation_of: Web/HTML/Element/code
 
 ## Атрибуты
 
-Этот элемент включает в себя только [глобальные атрибуты](/ru/Web/HTML/Global_attributes "HTML/Global attributes").
+Этот элемент включает в себя только [глобальные атрибуты](/ru/Web/HTML/Global_attributes).
 
 ## Пример
 

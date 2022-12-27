@@ -139,11 +139,11 @@ Quando reprensentando datas, a melhor escolha é utilizar o [`Date` utility](/pt
 
 ### Coleções indexadas: Arrays e Arrays tipados
 
-[Arrays](/pt-BR/docs/JavaScript/Reference/Global_Objects/Array) são objetos comuns nos quais existe uma relação particular entre propriedades de chaveamento inteiro e a propriedade 'length'. Além disso, arrays herdam de `Array.prototype` que nos dá vários metodos úteis para manipulação de arrays. Por exemplo, [`indexOf`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (procura um valor no array) ou [`push`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/push) (adiciona um valor no array), etc. Isso faz com que os Arrays sejam candidatos perfeitos para representação de listas e conjuntos.
+[Arrays](/pt-BR/docs/JavaScript/Reference/Global_Objects/Array) são objetos comuns nos quais existe uma relação particular entre propriedades de chaveamento inteiro e a propriedade 'length'. Além disso, arrays herdam de `Array.prototype` que nos dá vários metodos úteis para manipulação de arrays. Por exemplo, [`indexOf`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) (procura um valor no array) ou [`push`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Array/push) (adiciona um valor no array), etc. Isso faz com que os Arrays sejam candidatos perfeitos para representação de listas e conjuntos.
 
 [Typed Arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays) (arrays tipados) são novos no JavaScript com ECMAScript Edition 6 e apresenta uma visão básica similar a de um array para um data buffer binário. A tabela a seguir mostra o equivalente aos tipos de dados em C:
 
-{{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects", "", 0, 3)}}
+{{page("/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects", "", 0, 3)}}
 
 ### Coleções chaveadas: Maps, Sets, WeakMaps, WeakSets
 

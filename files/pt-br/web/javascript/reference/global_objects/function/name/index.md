@@ -90,7 +90,7 @@ foo.bind({}).name; // "bound foo"
 
 ### Nomes de função para _getters_ e _setters_
 
-Ao usar propriedades acessórias [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get) e [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set), "get" ou "set" aparecerão no nome da função.
+Ao usar propriedades acessórias [`get`](/pt-BR/docs/Web/JavaScript/Reference/Functions/get) e [`set`](/pt-BR/docs/Web/JavaScript/Reference/Functions/set), "get" ou "set" aparecerão no nome da função.
 
 ```js
 var o = {

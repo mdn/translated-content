@@ -48,9 +48,9 @@ Cobriremos esses termos e tecnologias com mais detalhes à medida que exploramos
 
 Vamos ver uma analogia simples - uma biblioteca pública. Isto é o que você geralmente faria ao visitar uma biblioteca:
 
-1.  Procura no índice de buscas e verifica o título do livro que você deseja.
-2.  Anota o número de catálogo do livro desejado.
-3.  Se dirige à seção particular que contém o livro, encontra o número catalográfico correto, e então apanha o livro.
+1. Procura no índice de buscas e verifica o título do livro que você deseja.
+2. Anota o número de catálogo do livro desejado.
+3. Se dirige à seção particular que contém o livro, encontra o número catalográfico correto, e então apanha o livro.
 
 Comparemos a biblioteca com um servidor web:
 
@@ -58,8 +58,6 @@ Comparemos a biblioteca com um servidor web:
 - As diferentes seções (Ciências, Matemática, História, etc.) na biblioteca são como os sites. Cada seção é como um único site (duas seções não conterão os mesmos livros).
 - Os livros em cada seção correspondem às páginas web. Um website pode conter diversas páginas, por exemplo, na seção de Ciências (o site) terá livros sobre calor, som, termodinâmica, estática, etc. (as páginas web). As páginas da web podem ser encontradas em um local exclusivo (URL).
 - O índice de buscas é como o mecanismo de busca. Cada livro possui sua própria localização exclusiva na biblioteca (dois livros não podem ser armazenados no mesmo local), o que é especificado pelo código catalográfico.
-
-<!---->
 
 ## Aprendizado ativo
 

@@ -115,7 +115,7 @@ translation_of: Web/SVG/Content_type
 
 - \<coordinate>
 
-  - : A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](/pt-BR/docs/SVG/Content_type#length "https://developer.mozilla.org/en/SVG/Content_type#length").
+  - : A \<coordinate> is a length in the user coordinate system that is the given distance from the origin of the user coordinate system along the relevant axis (the x-axis for X coordinates, the y-axis for Y coordinates). Its syntax is the same as that for [\<length>](/pt-BR/docs/SVG/Content_type#length).
 
     Within the SVG DOM, a \<coordinate> is represented as an {{domxref("SVGLength")}} or an {{domxref("SVGAnimatedLength")}}.
 
@@ -123,7 +123,7 @@ translation_of: Web/SVG/Content_type
 
 - \<frequency>
 
-  - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [\<number>](/pt-BR/docs/SVG/Content_type#Number "https://developer.mozilla.org/en/SVG/Content_type#Number") immediately followed by a frequency unit identifier. The frequency unit identifiers are:
+  - : Frequency values are used with aural properties. As defined in CSS2, a frequency value is a [\<number>](/pt-BR/docs/SVG/Content_type#Number) immediately followed by a frequency unit identifier. The frequency unit identifiers are:
 
     - `Hz`: Hertz
     - `kHz`: kilo Hertz
@@ -169,7 +169,7 @@ translation_of: Web/SVG/Content_type
 
   - : An Internationalized Resource Identifier.
 
-    On the Internet, resources are identified using _IRI_s (Internationalized Resource Identifiers). For example, an SVG file called someDrawing.svg located at <http://example.com> might have the following \_IRI_:
+    On the Internet, resources are identified using _IRI_s (Internationalized Resource Identifiers). For example, an SVG file called someDrawing.svg located at `http://example.com` might have the following _IRI_:
 
     ```
     http://example.com/someDrawing.svg
@@ -296,7 +296,7 @@ translation_of: Web/SVG/Content_type
 ## Opacity value
 
 - \<opacity-value>
-  - : A opacidade da cor ou do conteúdo do objeto atual é preenchida através de um [\<number>](/pt-BR/docs/SVG/Content_type#Number "SVG/Content_type#Number"). Quaisquer valores fora da faixa de 0.0 (totalmente transparente) a 1.0 (totalmente opaco) será ajustada para este intervalo.
+  - : A opacidade da cor ou do conteúdo do objeto atual é preenchida através de um [\<number>](/pt-BR/docs/SVG/Content_type#Number). Quaisquer valores fora da faixa de 0.0 (totalmente transparente) a 1.0 (totalmente opaco) será ajustada para este intervalo.
 
 ## Paint
 

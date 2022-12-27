@@ -28,5 +28,5 @@ original_slug: Localization
 
 ### 一般知識
 
-- ウィキペディアの{{interwiki("wikipedia", "ローカライゼーション")}}
-- ウィキペディアの{{interwiki("wikipedia", "国際化と地域化")}}
+- ウィキペディアの[ローカライゼーション](https://ja.wikipedia.org/wiki/ローカライゼーション)
+- ウィキペディアの[国際化と地域化](https://ja.wikipedia.org/wiki/国際化と地域化)

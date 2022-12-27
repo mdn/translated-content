@@ -49,4 +49,4 @@ Como qualquer outro elemento HTML, este também tem [global attributes](/en/HTML
 - [MDN canvas portal](/en/HTML/Canvas)
 - Um [canvas tutorial](/en/Canvas_tutorial)
 - [Canvas cheat sheet](http://blog.nihilogic.dk/2009/02/html5-canvas-cheat-sheet.html)
-- [Canvas-related demos](/en-US/demos/tag/tech:canvas)
+- [Canvas-related demos](/pt-BR/demos/tag/tech:canvas)

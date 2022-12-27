@@ -54,9 +54,9 @@ Estes guias passam por algumas técnicas mais avançadas, que você achará úti
 
 Estes guias para estilizar formulários com CSS realmente deveriam estar nos tópicos sobre [CSS](/pt-BR/docs/Aprender/CSS), mas estamos mantendo-os aqui por enquanto até uma oportunidade apropriada de movê-los.
 
-- [Estilizando formulários HTML](/pt-BR/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms "/en-US/docs/Advanced_styling_for_HTML_forms")
+- [Estilizando formulários HTML](/pt-BR/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)
   - : Este artigo fornece uma introdução à personalização de estilos de formulário com CSS, incluindo todo o básico que você precisa para tarefas básicas de estilização.
-- [Estilos avançados para HTML forms](/pt-BR/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms "/en-US/docs/Advanced_styling_for_HTML_forms")
+- [Estilos avançados para HTML forms](/pt-BR/docs/Web/Guide/HTML/Forms/Advanced_styling_for_HTML_forms)
   - : Aqui vemos algumas técnicas mais avançadas de estilização de formulários que precisam ser usadas quando tiver de lidar com alguns dos elementos mais difíceis de personalizar.
 - [Tabela de compatibilidade das Propriedades dos widgets](/pt-BR/docs/Property_compatibility_table_for_form_widgets)
   - : Este último artigo fornece uma referência prática que te permite procurar quais propriedades CSS são compatíveis com quais elementos de formulário.

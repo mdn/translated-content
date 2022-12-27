@@ -47,7 +47,7 @@ No mundo moderno do desenvolvimento web, aprender sobre desenvolvimento do lado 
 
 Navegadores comunicam-se com [web servers](/pt-BR/docs/Learn/Common_questions/What_is_a_web_server) utilizando o **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). Quando você clica em um link em uma página da web, envia um formulário ou faz uma pesquisa, uma **HTTP request(solicitação HTTP)** é enviada do seu navegador para o servidor de destino.
 
-A solicitação inclui uma URL que identifica o recurso afetado, um método que define a ação necessária (por exemplo, para obter, excluir ou postar o recurso) e pode incluir informações adicionais codificadas em parâmetros de URL(Os pares field-value(campo-valor) são enviados por meio de uma [query string](https://en.wikipedia.org/wiki/Query_string)), como dados POST (dados enviados pelo método [HTTP POST ](/pt-BR/docs/Web/HTTP/Methods/POST)), ou em associado {{glossary("Cookie", "cookies")}} .
+A solicitação inclui uma URL que identifica o recurso afetado, um método que define a ação necessária (por exemplo, para obter, excluir ou postar o recurso) e pode incluir informações adicionais codificadas em parâmetros de URL(Os pares field-value(campo-valor) são enviados por meio de uma [query string](https://en.wikipedia.org/wiki/Query_string)), como dados POST (dados enviados pelo método [HTTP POST](/pt-BR/docs/Web/HTTP/Methods/POST)), ou em associado {{glossary("Cookie", "cookies")}} .
 
 Os servidores da web esperam por mensagens de solicitação do cliente, processam-nas quando chegam e respondem ao navegador da web com uma mensagem **HTTP response** . A resposta contém uma linha de status indicando se a solicitação foi bem-sucedida ou não (e.g. "HTTP/1.1 200 OK" for success).
 
@@ -123,9 +123,9 @@ Como as informações estão em um banco de dados, elas também podem ser mais f
 
 > **Nota:** Sua imaginação não precisa trabalhar muito para ver os benefícios do código do lado do servidor para armazenamento e entrega eficientes de informações:
 >
-> 1.  Vá em [Amazon](https://www.amazon.com) ou em outro site comercial.
-> 2.  Pesquise várias palavras-chave e observe como a estrutura da página não muda, embora os resultados mudem.
-> 3.  Abra dois ou três produtos diferentes. Observe novamente como eles têm uma estrutura e layout comuns, mas o conteúdo de diferentes produtos foi retirado do banco de dados.
+> 1. Vá em [Amazon](https://www.amazon.com) ou em outro site comercial.
+> 2. Pesquise várias palavras-chave e observe como a estrutura da página não muda, embora os resultados mudem.
+> 3. Abra dois ou três produtos diferentes. Observe novamente como eles têm uma estrutura e layout comuns, mas o conteúdo de diferentes produtos foi retirado do banco de dados.
 >
 > Para um termo de pesquisa comum ("peixe", digamos), você pode ver literalmente milhões de valores retornados. O uso de um banco de dados permite que sejam armazenados e compartilhados de forma eficiente, além de permitir que a apresentação das informações seja controlada em um só lugar.
 
@@ -139,9 +139,9 @@ Uma análise mais profunda dos hábitos do usuário pode ser usada para antecipa
 >
 > Os resultados de pesquisa do Google são otimizados com base em pesquisas anteriores.
 >
-> 1.  Vá em [Google search](https:\\google.com).
-> 2.  Pesquise por "futeboll".
-> 3.  Agora tente digitar "favorito" na caixa de pesquisa e observe as previsões de pesquisa do preenchimento automático.
+> 1. Vá em [Google search](https:\\google.com).
+> 2. Pesquise por "futeboll".
+> 3. Agora tente digitar "favorito" na caixa de pesquisa e observe as previsões de pesquisa do preenchimento automático.
 >
 > Coincidência ? Nada!
 

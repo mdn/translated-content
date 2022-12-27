@@ -63,7 +63,7 @@ function f(foo, values) {
 }
 ```
 
-Se você chamar `f([1,2,3], obj)` em um ambiente ECMAScript 5, então a referência de `values` dentro da declaração `with` irá ser `obj`. No entando, ECMAScript 6 introduz uma propriedade `values` no [`Array.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) (então isso estará disponível em todas as arrays). Então, em um ambiente JavaScript que suporta ECMAScript 6, a referência de `values` dentro da declaração `with` irá ser `[1,2,3].values`.
+Se você chamar `f([1,2,3], obj)` em um ambiente ECMAScript 5, então a referência de `values` dentro da declaração `with` irá ser `obj`. No entando, ECMAScript 6 introduz uma propriedade `values` no [`Array.prototype`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) (então isso estará disponível em todas as arrays). Então, em um ambiente JavaScript que suporta ECMAScript 6, a referência de `values` dentro da declaração `with` irá ser `[1,2,3].values`.
 
 ## Exemplos
 

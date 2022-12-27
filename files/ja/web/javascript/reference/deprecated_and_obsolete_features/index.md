@@ -114,7 +114,7 @@ slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 
 ### Date のメソッド
 
-- {{jsxref("Global_Objects/Date/getYear", "getYear")}} と {{jsxref("Global_Objects/Date/setYear", "setYear")}} は「{{interwiki('wikipedia', '2000年問題')}}」の影響を受けます。代替策として、{{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} および {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}} の使用が推奨されます。
+- {{jsxref("Global_Objects/Date/getYear", "getYear")}} と {{jsxref("Global_Objects/Date/setYear", "setYear")}} は「[2000年問題](https://ja.wikipedia.org/wiki/2000年問題)」の影響を受けます。代替策として、{{jsxref("Global_Objects/Date/getFullYear", "getFullYear")}} および {{jsxref("Global_Objects/Date/setFullYear", "setFullYear")}} の使用が推奨されます。
 - 新しいコードでは {{jsxref("Global_Objects/Date/toUTCString", "toUTCString")}} を非推奨の {{jsxref("Global_Objects/Date/toGMTString", "toGMTString")}} メソッドの代わりに使用してください。
 - {{jsxref("Global_Objects/Date/toLocaleFormat", "toLocaleFormat")}} は非推奨です。
 

@@ -25,9 +25,6 @@ p.then(function(valor) {
 
 - quandoRealizada
   - : Uma {{jsxref("Function")}} chamada quando a **Promise** é cumprida (Sucesso). Essa função tem um argumento, o valor do cumprimento.
-
-<!---->
-
 - quandoRejeitada
   - : Uma {{jsxref("Function")}} chamada quando a Promise é rejeitada. Essa função tem um argumento, o motivo da recusa.
 

@@ -7,4 +7,4 @@ slug: Glossary/Operand
 
 ## 詳細情報
 
-- Wikipedia の {{Interwiki("wikipedia", "被演算子")}}
+- Wikipedia の [被演算子](https://ja.wikipedia.org/wiki/被演算子)

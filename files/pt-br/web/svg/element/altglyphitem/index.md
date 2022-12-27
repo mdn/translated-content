@@ -22,7 +22,7 @@ O elemento `altGlyphItem` fornece uma série de candidados para a substituição
 
 ### Atributos globais
 
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
 
 ### Atributos específicos
 
@@ -30,7 +30,7 @@ _Nenhum_
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGAltGlyphItemElement`](/pt-BR/DOM/SVGAltGlyphItemElement "en/DOM/SVGAltGlyphItemElement").
+Este elemento implementa a interface do [`SVGAltGlyphItemElement`](/pt-BR/DOM/SVGAltGlyphItemElement).
 
 ## Veja também
 

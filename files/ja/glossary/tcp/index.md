@@ -15,7 +15,7 @@ TCP の役割は、パケットがエラーなく信頼性高く配信される�
 
 2. Wikipedia の記事
 
-    1. {{Interwiki("wikipedia", "Transmission Control Protocol")}}
+    1. [Transmission Control Protocol](https://ja.wikipedia.org/wiki/Transmission_Control_Protocol)
 
 3. 関連情報
 

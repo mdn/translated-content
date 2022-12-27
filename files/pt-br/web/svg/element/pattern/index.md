@@ -23,10 +23,10 @@ Um padrão é utilizado para preenchimento ou traçado de um objeto utilizando u
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Atributos principais](/pt-BR/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
-- [Atributos XLink](/pt-BR/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
+- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
+- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos XLink](/pt-BR/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -46,4 +46,4 @@ Um padrão é utilizado para preenchimento ou traçado de um objeto utilizando u
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGPatternElement`](/pt-BR/DOM/SVGPatternElement "en/DOM/SVGPatternElement").
+Este elemento implementa a interface do [`SVGPatternElement`](/pt-BR/DOM/SVGPatternElement).

@@ -11,7 +11,7 @@ _WebSocket_ は、{{Glossary("Server", "サーバー")}}とクライアント間
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "WebSocket")}}
+- Wikipedia の [WebSocket](https://ja.wikipedia.org/wiki/WebSocket)
 
 ### 技術リファレンス
 

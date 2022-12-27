@@ -7,11 +7,11 @@ translation_of: Web/CSS/@supports
 
 ## Описание
 
-The `@supports` [CSS](/en/CSS "CSS") [at-rule](/en/CSS/At-rule "en/CSS/At-rule") associates a set of nested statements, in a CSS block, that is delimited by curly braces, with a condition consisting of testing of CSS declarations, that is property-value pairs, combined with arbitrary conjunctions, disjunctions, and negations of them. Such a condition is called a _supports condition_.
+The `@supports` [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) associates a set of nested statements, in a CSS block, that is delimited by curly braces, with a condition consisting of testing of CSS declarations, that is property-value pairs, combined with arbitrary conjunctions, disjunctions, and negations of them. Such a condition is called a _supports condition_.
 
 `@supports` gives CSS the ability to perform a _feature query_.
 
-The `@supports` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en/CSS/At-rule#Conditional_Group_Rules "en/CSS/At-rule#Conditional_Group_Rules") and can be accessed via the CSS object model interface {{domxref("CSSSupportsRule")}}.
+The `@supports` at-rule may be used not only at the top level of a CSS, but also inside any [CSS conditional-group at-rule](/en/CSS/At-rule#Conditional_Group_Rules) and can be accessed via the CSS object model interface {{domxref("CSSSupportsRule")}}.
 
 ## Синтаксис
 

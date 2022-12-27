@@ -179,7 +179,7 @@ O comprimento de "mozilla" é 7, mas porque a contagem começa de 0, a posição
 
 ### Encontrando uma substring dentro de uma string e extraindo-a
 
-1.  Às vezes você quer saber se uma string menor está presente dentro de uma maior (geralmente dizemos _se uma substring está presente dentro de uma string_). Isso pode ser feito usando o método {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, que leva um único {{glossary ("parameter")}} - a substring que deseja procurar. Experimente isso:
+1. Às vezes você quer saber se uma string menor está presente dentro de uma maior (geralmente dizemos _se uma substring está presente dentro de uma string_). Isso pode ser feito usando o método {{jsxref ("String.prototype.indexOf ()", "indexOf ()")}}, que leva um único {{glossary ("parameter")}} - a substring que deseja procurar. Experimente isso:
 
     ```js
     browserType.indexOf('zilla');
@@ -187,7 +187,7 @@ O comprimento de "mozilla" é 7, mas porque a contagem começa de 0, a posição
 
     Isso nos dá o resultado 2, porque a substring "zilla" se inicia na posição 2 (0, 1, 2 — então, 3 caraceteres) dentro de "mozilla". Esse código poderia ser usado para filtrar cadeias de caracteres. Por exemplo, podemos ter uma lista de endereços da web e apenas queremos imprimir aqueles que contenham "mozilla".
 
-2.  Isso pode ser feito de outro jeito, que é possivelmente mais eficaz. Experimente isso:
+2. Isso pode ser feito de outro jeito, que é possivelmente mais eficaz. Experimente isso:
 
     ```js
     browserType.indexOf('vanilla');
@@ -203,7 +203,7 @@ O comprimento de "mozilla" é 7, mas porque a contagem começa de 0, a posição
     }
     ```
 
-3.  Quando você sabe onde uma substring começa dentro de uma string e você sabe em qual caractere você deseja que ela termine, {{jsxref ("String.prototype.slice ()", "slice ()")}} pode ser usado para extrair isto. Tente o seguinte:
+3. Quando você sabe onde uma substring começa dentro de uma string e você sabe em qual caractere você deseja que ela termine, {{jsxref ("String.prototype.slice ()", "slice ()")}} pode ser usado para extrair isto. Tente o seguinte:
 
     ```js
     browserType.slice(0,3);
@@ -255,9 +255,9 @@ Cada exemplo vem com um botão "Reset", que você pode usar para redefinir o có
 
 No primeiro exercício, começaremos com simplicidade - temos várias mensagens de cartão, mas queremos classificá-las para listar apenas as mensagens de Natal. Queremos que você preencha um teste condicional dentro da estrutura if (...), para testar cada string e apenas imprimi-la na lista se for uma mensagem de Natal.
 
-1.  Primeiro pense em como você poderia testar se a mensagem em cada caso é uma mensagem de Natal. Qual string está presente em todas essas mensagens e que método você poderia usar para testar se ela está presente?
-2.  Em seguida, você precisará escrever um teste condicional do formulario operando2 operador operando1. A coisa à esquerda é igual à coisa à direita? Ou neste caso, o método chama à esquerda retorna o resultado à direita?
-3.  Dica: Nesse caso, é provavelmente mais útil testar se a chamada do método não é igual a um determinado resultado.
+1. Primeiro pense em como você poderia testar se a mensagem em cada caso é uma mensagem de Natal. Qual string está presente em todas essas mensagens e que método você poderia usar para testar se ela está presente?
+2. Em seguida, você precisará escrever um teste condicional do formulario operando2 operador operando1. A coisa à esquerda é igual à coisa à direita? Ou neste caso, o método chama à esquerda retorna o resultado à direita?
+3. Dica: Nesse caso, é provavelmente mais útil testar se a chamada do método não é igual a um determinado resultado.
 
 ```html hidden
 <div class="output" style="min-height: 125px;">
@@ -328,10 +328,10 @@ window.addEventListener('load', updateCode);
 
 Neste exercício, temos os nomes das cidades no Reino Unido, mas a capitalização está toda desarrumada. Nós queremos que você as altere para que elas sejam todas minúsculas, exceto pela primeira letra maiúscula. Uma boa maneira de fazer isso é:
 
-1.  Converta toda a cadeia contida na variável de entrada para minúscula e armazene-a em uma nova variável.
-2.  Pegue a primeira letra da string nesta nova variável e armazene-a em outra variável.
-3.  Usando esta última variável como substring, substitua a primeira letra da string em minúsculas pela primeira letra da string em minúsculas alterada para maiúscula. Armazene o resultado desse procedimento de substituição em outra nova variável.
-4.  Altere o valor da variável `result` para igual ao resultado final, não a `input`.
+1. Converta toda a cadeia contida na variável de entrada para minúscula e armazene-a em uma nova variável.
+2. Pegue a primeira letra da string nesta nova variável e armazene-a em outra variável.
+3. Usando esta última variável como substring, substitua a primeira letra da string em minúsculas pela primeira letra da string em minúsculas alterada para maiúscula. Armazene o resultado desse procedimento de substituição em outra nova variável.
+4. Altere o valor da variável `result` para igual ao resultado final, não a `input`.
 
 > **Nota:** Uma dica — os parâmetros dos métodos de string não precisam ser literais de string; eles também podem ser variáveis, ou mesmo variáveis com um método sendo invocado nelas.
 
@@ -409,11 +409,11 @@ MAN: Manchester Piccadilly
 
 Nós recomendamos que faça assim:
 
-1.  Extraia o código da estação de três letras e armazene-o em uma nova variável.
-2.  Encontre o número de índice do caractere do ponto e vírgula.
-3.  Extraia o nome da estação legível usando o número do índice de caracteres de ponto-e-vírgula como ponto de referência e armazene-o em uma nova variável.
-4.  Concatene as duas novas variáveis e uma string literal para fazer a string final.
-5.  Altere o valor da variável `result` para igual à string final, não a `input`.
+1. Extraia o código da estação de três letras e armazene-o em uma nova variável.
+2. Encontre o número de índice do caractere do ponto e vírgula.
+3. Extraia o nome da estação legível usando o número do índice de caracteres de ponto-e-vírgula como ponto de referência e armazene-o em uma nova variável.
+4. Concatene as duas novas variáveis e uma string literal para fazer a string final.
+5. Altere o valor da variável `result` para igual à string final, não a `input`.
 
 ```html hidden
 <div class="output" style="min-height: 125px;">

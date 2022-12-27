@@ -122,9 +122,9 @@ Podemos ver uma lista de links e explorar como funcionam os valores universais. 
 
 Por exemplo:
 
-1.  O segundo item da lista tem a classe my-class-1 aplicada. Isso define a cor do elemento \<a> aninhado dentro para herdar. Se você remover a regra, como ela muda a cor do link?
-2.  Você consegue entende por que o terceiro e o quarto links são da mesma cor? Verifique a descrição dos valores acima se não.
-3.  Qual dos links mudará de cor se você definir uma nova cor para o elemento \<a> - por exemplo, um {color: red; }?
+1. O segundo item da lista tem a classe my-class-1 aplicada. Isso define a cor do elemento \<a> aninhado dentro para herdar. Se você remover a regra, como ela muda a cor do link?
+2. Você consegue entende por que o terceiro e o quarto links são da mesma cor? Verifique a descrição dos valores acima se não.
+3. Qual dos links mudará de cor se você definir uma nova cor para o elemento \<a> - por exemplo, um {color: red; }?
 
 {{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 700)}}
 
@@ -144,9 +144,9 @@ Agora entendemos por que um parágrafo aninhado profundamente na estrutura do se
 
 Há três fatores a serem considerados, listados aqui em ordem crescente de importância. Os posteriores anulam os anteriores:
 
-1.  **Ordem da Fonte**
-2.  **Especificidade**
-3.  **Importância**
+1. **Ordem da Fonte**
+2. **Especificidade**
+3. **Importância**
 
 Vamos dar uma olhada neles para ver como os navegadores descobrem exatamente o que CSS deve ser aplicado.
 
@@ -170,10 +170,10 @@ Vamos agora dar uma olhada em como o navegador calculará a especificidade. Já 
 
 A quantidade de especificidade que um seletor tem é medida usando quatro valores (ou componentes) diferentes, que podem ser considerados como milhares, centenas, dezenas e uns - quatro dígitos únicos em quatro colunas:
 
-1.  **Thousands**: marque um nesta coluna se a declaração estiver dentro de um atributo {{htmlattrxref ("style")}}, também conhecido como estilos embutidos. Essas declarações não têm seletores, portanto, sua especificidade é sempre simplesmente 1000.
-2.  **Hundreds**: marque um nesta coluna para cada seletor de ID contido no seletor geral.
-3.  **Tens**: marque um nesta coluna para cada seletor de classe, seletor de atributo ou pseudoclasse contido no seletor geral.
-4.  **Ones**: marque um nesta coluna para cada seletor de elemento ou pseudoelemento contido dentro do seletor geral.
+1. **Thousands**: marque um nesta coluna se a declaração estiver dentro de um atributo {{htmlattrxref ("style")}}, também conhecido como estilos embutidos. Essas declarações não têm seletores, portanto, sua especificidade é sempre simplesmente 1000.
+2. **Hundreds**: marque um nesta coluna para cada seletor de ID contido no seletor geral.
+3. **Tens**: marque um nesta coluna para cada seletor de classe, seletor de atributo ou pseudoclasse contido no seletor geral.
+4. **Ones**: marque um nesta coluna para cada seletor de elemento ou pseudoelemento contido dentro do seletor geral.
 
 > **Nota:** O Seletor universal (`*`), combinadores (`+`, `>`, `~`, ' '), e pseudo-classe de negação (`:not`) não tem efeito de especificidade.
 
@@ -211,10 +211,10 @@ Dê uma olhada neste exemplo onde temos dois parágrafos, um dos quais tem um ID
 
 Vamos examinar isso para ver o que está acontecendo - tente remover algumas das propriedades para ver o que acontece e se você tiver dificuldade de entender:
 
-1.  Você verá que os valores da terceira regra {{cssxref ("color")}} e {{cssxref ("padding")}} foram aplicados, mas o {{cssxref ("background-color")}} não foram?. Por quê? Na verdade, todos os três devem ser aplicados, porque as regras posteriores na ordem de origem geralmente substituem as regras anteriores.
-2.  No entanto, as regras acima vencem, porque os seletores de classe têm uma especificidade mais alta do que os seletores de elemento.
-3.  Ambos elementos tem {{htmlattrxref("class")}} de `better (melhor)`, mas o segundo tem um **id** {{htmlattrxref("id")}} que é mais forte. Como os IDs têm uma especificidade ainda maior do que as classes (você só pode ter um elemento com cada ID exclusivo em uma página, mas muitos elementos com a mesma classe - os seletores de ID são muito específicos no que se destinam), a cor de fundo vermelha e A borda preta de 1 pixel deve ser aplicada ao segundo elemento, com o primeiro elemento recebendo a cor de fundo cinza, e sem borda, conforme especificado pela classe.
-4.  O segundo elemento obtém a cor de fundo vermelha, mas sem borda. Por quê? Por causa da declaração! Important na segunda regra - incluindo isso depois de border: none significa que essa declaração vai superar o valor de border na regra anterior, embora o ID tenha uma especificidade mais alta.
+1. Você verá que os valores da terceira regra {{cssxref ("color")}} e {{cssxref ("padding")}} foram aplicados, mas o {{cssxref ("background-color")}} não foram?. Por quê? Na verdade, todos os três devem ser aplicados, porque as regras posteriores na ordem de origem geralmente substituem as regras anteriores.
+2. No entanto, as regras acima vencem, porque os seletores de classe têm uma especificidade mais alta do que os seletores de elemento.
+3. Ambos elementos tem {{htmlattrxref("class")}} de `better (melhor)`, mas o segundo tem um **id** {{htmlattrxref("id")}} que é mais forte. Como os IDs têm uma especificidade ainda maior do que as classes (você só pode ter um elemento com cada ID exclusivo em uma página, mas muitos elementos com a mesma classe - os seletores de ID são muito específicos no que se destinam), a cor de fundo vermelha e A borda preta de 1 pixel deve ser aplicada ao segundo elemento, com o primeiro elemento recebendo a cor de fundo cinza, e sem borda, conforme especificado pela classe.
+4. O segundo elemento obtém a cor de fundo vermelha, mas sem borda. Por quê? Por causa da declaração! Important na segunda regra - incluindo isso depois de border: none significa que essa declaração vai superar o valor de border na regra anterior, embora o ID tenha uma especificidade mais alta.
 
 > **Nota:** A única maneira de sobrescrever essa declaração! Importante seria incluir outra declaração! Importante em uma declaração com a mesma especificidade posteriormente na ordem de origem, ou uma com uma especificidade mais alta.
 
@@ -230,11 +230,11 @@ Por fim, também é útil observar que a importância de uma declaração CSS de
 
 As declarações conflitantes serão aplicadas na seguinte ordem, com as posteriores substituindo as anteriores:
 
-1.  Declarações nas folhas de estilo do agente do usuário (por exemplo, os estilos padrão do navegador, usados quando nenhum outro estilo está definido).
-2.  Declarações normais em folhas de estilo do usuário (estilos personalizados definidos por um usuário).
-3.  Declarações normais em folhas de estilo do autor (esses são os estilos definidos por nós, os desenvolvedores da web).
-4.  Declarações importantes nas folhas de estilo do autor
-5.  Declarações importantes nas folhas de estilo do usuário
+1. Declarações nas folhas de estilo do agente do usuário (por exemplo, os estilos padrão do navegador, usados quando nenhum outro estilo está definido).
+2. Declarações normais em folhas de estilo do usuário (estilos personalizados definidos por um usuário).
+3. Declarações normais em folhas de estilo do autor (esses são os estilos definidos por nós, os desenvolvedores da web).
+4. Declarações importantes nas folhas de estilo do autor
+5. Declarações importantes nas folhas de estilo do usuário
 
     Faz sentido que as folhas de estilo dos desenvolvedores da web substituam as folhas de estilo do usuário, para que o design possa ser mantido conforme pretendido, mas às vezes os usuários têm bons motivos para substituir os estilos do desenvolvedor da web, conforme mencionado acima - isso pode ser feito usando! Important em suas regras.
 
@@ -254,21 +254,21 @@ Volte aqui se você começar a encontrar problemas estranhos com estilos que nã
 
 ## In this module
 
-1.  [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/pt-BR/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/pt-BR/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/pt-BR/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/pt-BR/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/pt-BR/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/pt-BR/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Organizing)

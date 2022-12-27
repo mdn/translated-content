@@ -16,5 +16,5 @@ slug: Glossary/Signature/Security
 
 ## 関連情報
 
-- Wikipedia 上の {{Interwiki("wikipedia", "デジタル署名")}}
+- Wikipedia 上の [デジタル署名](https://ja.wikipedia.org/wiki/デジタル署名)
 - {{glossary("digest", "ダイジェスト")}}, {{glossary("encryption", "暗号化")}} を参照

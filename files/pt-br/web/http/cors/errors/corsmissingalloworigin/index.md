@@ -24,7 +24,7 @@ A resposta à requisição {{Glossary ("CORS")}} está sem o cabeçalho {{HTTPHe
 
 Se o servidor estiver sob seu controle, adicione a origem do site solicitante ao conjunto de domínios de acesso permitido, adicionando-o ao valor do cabeçalho `Access-Control-Allow-Origin`.
 
-Por exemplo, para permitir que um site da origem https\://amazing.site acesse ao recurso usando CORS, o cabeçalho deve conter:
+Por exemplo, para permitir que um site da origem `https://amazing.site` acesse ao recurso usando CORS, o cabeçalho deve conter:
 
 ```
 Access-Control-Allow-Origin: https://amazing.site

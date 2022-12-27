@@ -19,7 +19,7 @@ var connectionState = RTCPeerConnection.connectionState;
 
 O estado atual da conexão, como um valor do enum [`RTCPeerConnectionState`](#RTCPeerConnectionState_enum).
 
-{{page("/en-US/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1)}}
+{{page("/pt-BR/docs/Web/API/RTCPeerConnection", "RTCPeerConnectionState enum", 0, 1)}}
 
 ## Example
 

@@ -292,7 +292,7 @@ O servidor responde com `Access-Control-Allow-Methods` e diz que `POST`, `GET`, 
 
 O servidor envia também `Access-Control-Allow-Headers` com um valor de "`X-PINGOTHER, Content-Type`", confirmando estes são cabeçalhos permitidos a serem usados com a requisição efetiva. Assim como `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers` é uma lista de cabeçalhos aceitáveis, separados por vírgula.
 
-Por fim, {{HTTPHeader("Access-Control-Max-Age")}} traz o valor em segundos de quão longo pode ser mantida em cache a resposta da requisição pré-envio sem o envio de outra requisição pré-envio. Neste caso, 86400 segundos são 24 horas. Note que cada browser tem um[ valor interno máximo](/pt-BR/docs/Web/HTTP/Headers/Access-Control-Max-Age) que toma precedência quado `Access-Control-Max-Age` for maior.
+Por fim, {{HTTPHeader("Access-Control-Max-Age")}} traz o valor em segundos de quão longo pode ser mantida em cache a resposta da requisição pré-envio sem o envio de outra requisição pré-envio. Neste caso, 86400 segundos são 24 horas. Note que cada browser tem um [valor interno máximo](/pt-BR/docs/Web/HTTP/Headers/Access-Control-Max-Age) que toma precedência quado `Access-Control-Max-Age` for maior.
 
 #### Requisições com pré-envio e redirecionamento
 
@@ -311,8 +311,8 @@ So until all browsers catch up with the spec, you may be able to work around thi
 
 But if it’s not possible to make those changes, then another way that may be possible is to this:
 
-1.  Make a [simple request](/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS$edit#Simple_requests) (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.
-2.  Make another request (the “real” request) using the URL you obtained from `Response.url` or `XMLHttpRequest.responseURL` in the first step.
+1. Make a [simple request](/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS$edit#Simple_requests) (using {{domxref("Response.url")}} for the Fetch API, or {{domxref("XMLHttpRequest.responseURL")}}) to determine what URL the real preflighted request would end up at.
+2. Make another request (the “real” request) using the URL you obtained from `Response.url` or `XMLHttpRequest.responseURL` in the first step.
 
 However, if the request is one that triggers a preflight due to the presence of the `Authorization` header in the request, you won’t be able to work around the limitation using the steps above. And you won’t be able to work around it at all unless you have control over the server the request is being made to.
 
@@ -402,7 +402,7 @@ Access-Control-Allow-Origin: <origin> | *
 
 The `origin` parameter specifies a URI that may access the resource. The browser must enforce this. For requests **without** credentials, the server may specify "\*" as a wildcard, thereby allowing any origin to access the resource.
 
-For example, to allow http\://mozilla.org to access the resource, you can specify:
+For example, to allow `http://mozilla.org` to access the resource, you can specify:
 
 ```
 Access-Control-Allow-Origin: http://mozilla.org

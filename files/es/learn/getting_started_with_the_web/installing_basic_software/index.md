@@ -16,6 +16,7 @@ tags:
 translation_of: Learn/Getting_started_with_the_web/Installing_basic_software
 original_slug: Learn/Getting_started_with_the_web/Instalacion_de_software_basico
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
 La _Instalación de software básico_, te muestra las herramientas que necesitas para hacer el desarrollo web simple, y la forma de instalarlas correctamente.
@@ -56,17 +57,17 @@ Antes de continuar, deberías instalar al menos dos de estos navegadores y tener
 
 ### Instalación de un servidor web local
 
-Algunos ejemplos necesitarás ejecutarlos a través de un servidor web para que funcionen exitosamente. Puedes encontrar cómo hacer esto en {{web.link("/es/docs/Learn/Common_questions/set_up_a_local_testing_server", "¿Cómo se configura un servidor de prueba local?")}}
+Algunos ejemplos necesitarás ejecutarlos a través de un servidor web para que funcionen exitosamente. Puedes encontrar cómo hacer esto en [¿Cómo se configura un servidor de prueba local?](/es/docs/Learn/Common_questions/set_up_a_local_testing_server)
 
 {{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
 
 ## En este módulo
 
-- {{web.link("/es/Learn/Getting_started_with_the_web/Instalacion_de_software_basico", "Instalación de software básico")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/What_will_your_website_look_like", "¿Cómo se verá tu sitio web?")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/Manejando_los_archivos", "Manejo de archivos")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/HTML_basics", "Conceptos básicos de HTML")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/CSS_basics", "Conceptos básicos de CSS")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/JavaScript_basics", "Conceptos básicos de JavaScript")}}
-- {{web.link("/es/Learn/Getting_started_with_the_web/Publishing_your_website", "Publicar tu sitio web")}}
-- {{web.link("/es/docs/Learn/Getting_started_with_the_web/Cómo_funciona_la_Web", "Cómo funciona la Web")}}
+- [Instalación de software básico](/es/Learn/Getting_started_with_the_web/Instalacion_de_software_basico)
+- [¿Cómo se verá tu sitio web?](/es/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+- [Manejo de archivos](/es/Learn/Getting_started_with_the_web/Manejando_los_archivos)
+- [Conceptos básicos de HTML](/es/Learn/Getting_started_with_the_web/HTML_basics)
+- [Conceptos básicos de CSS](/es/Learn/Getting_started_with_the_web/CSS_basics)
+- [Conceptos básicos de JavaScript](/es/Learn/Getting_started_with_the_web/JavaScript_basics)
+- [Publicar tu sitio web](/es/Learn/Getting_started_with_the_web/Publishing_your_website)
+- [Cómo funciona la Web](/es/docs/Learn/Getting_started_with_the_web/Cómo_funciona_la_Web)

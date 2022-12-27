@@ -32,7 +32,7 @@ cursor: unset;
 ### Значения
 
 - <`url`>
-  - : Ссылка или разделённый запятыми список ссылок: `url(…), url(…), …`, указывающие на файл изображения. Дополнительные ссылки могут быть предоставлены в качестве запасных значений, на случай если изображение по основной ссылке не поддерживается в качестве курсора. Запасное значение, не являющееся ссылкой (одно или несколько ключевых слов) **должно** находиться в конце списка значений. See [Using URL values for the cursor property](/ru/docs/CSS/Using_URL_values_for_the_cursor_property "Using_URL_values_for_the_cursor_property") for more details.
+  - : Ссылка или разделённый запятыми список ссылок: `url(…), url(…), …`, указывающие на файл изображения. Дополнительные ссылки могут быть предоставлены в качестве запасных значений, на случай если изображение по основной ссылке не поддерживается в качестве курсора. Запасное значение, не являющееся ссылкой (одно или несколько ключевых слов) **должно** находиться в конце списка значений. See [Using URL values for the cursor property](/ru/docs/CSS/Using_URL_values_for_the_cursor_property) for more details.
 - `<x>` `<y>` {{experimental_inline}}
   - : Необязательные значения х- и у- координат. Два безразмерных неотрицательных числа меньше 32.
 - Ключевые слова
@@ -332,6 +332,6 @@ cursor: unset;
 
 ## Смотрите также
 
-- [Using URL values for the cursor property](/ru/docs/CSS/Using_URL_values_for_the_cursor_property "Using URL values for the cursor property")
+- [Using URL values for the cursor property](/ru/docs/CSS/Using_URL_values_for_the_cursor_property)
 - {{cssxref("pointer-events")}}
 - [Cursor Property (MSDN)](http://msdn.microsoft.com/en-us/library/aa358795.aspx)

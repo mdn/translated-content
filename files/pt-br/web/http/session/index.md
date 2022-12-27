@@ -9,9 +9,9 @@ translation_of: Web/HTTP/Session
 
 Em protocolos cliente-servidor, como o HTTP, sessões consistem de três partes:
 
-1.  O cliente estabelece uma conexão TCP (ou a conexão apropriada caso o protocolo TCP não seja o protocolo usado na camada de transporte).
-2.  O cliente envia sua requisição, e então aguarda por uma resposta.
-3.  O servidor processa a requisição, enviando de volta sua resposta, fornecendo um "status code" (código de status), e os dados apropriados.
+1. O cliente estabelece uma conexão TCP (ou a conexão apropriada caso o protocolo TCP não seja o protocolo usado na camada de transporte).
+2. O cliente envia sua requisição, e então aguarda por uma resposta.
+3. O servidor processa a requisição, enviando de volta sua resposta, fornecendo um "status code" (código de status), e os dados apropriados.
 
 Na versão HTTP/1.1 a conexão não é mais fechada após a terceira etapa completar-se, mas é garantida ao cliente uma nova requisição, implicando na possibilidade da segunda e terceira etapa serem novamente realizadas quantas vezes forem desejadas.
 
@@ -22,23 +22,23 @@ Em protocolos cliente-servidor é o cliente quem estabelece as conexões. Abrir 
 Usando o protocolo TCP, a porta padrão para um servidor HTTP em um computador é a porta 80, porém outras portas podem ser utilizadas, como a 8000 ou 8080.
 A URL da página a se requisitar contém o nome do domínio e o número da porta, embora este último pode ser omitido caso a porta seja a 80. Leia [Identificando recursos na Web](/pt-BR/docs/Web/HTTP/Basico_sobre_HTTP/Identifying_resources_on_the_Web) para mais informações.
 
-> **Nota:** O modelo cliente-servidor não permite o servidor enviar dados ao cliente sem uma requisição explícita. Para contornar esse problema, os desenvolvedores Web usam várias técnicas: executar ping no servidor periodicamente por meio das APIs {{domxref ("XMLHTTPRequest")}}, {{domxref ("Fetch")}}, usando a [WebSockets API](/pt-BR/docs/WebSockets "en/WebSockets") ou protocolos semelhantes.
+> **Nota:** O modelo cliente-servidor não permite o servidor enviar dados ao cliente sem uma requisição explícita. Para contornar esse problema, os desenvolvedores Web usam várias técnicas: executar ping no servidor periodicamente por meio das APIs {{domxref ("XMLHTTPRequest")}}, {{domxref ("Fetch")}}, usando a [WebSockets API](/pt-BR/docs/WebSockets) ou protocolos semelhantes.
 
 ## Enviando uma requisição de cliente
 
 Depois que a conexão é estabelecida, o _user-agent_ pode enviar a solicitação (um _user-agent_ normalmente é um navegador Web, podendo ser também qualquer outra coisa, como um _crawler_, por exemplo). Uma solicitação de cliente consiste em diretivas de texto, separadas por quebras de linhas (CRLF), divididas em três blocos:
 
-1.  A primeira linha contém um método de requisição seguido por seus parâmetros:
+1. A primeira linha contém um método de requisição seguido por seus parâmetros:
 
     - o caminho do documento, ou seja, uma URL absoluta sem o protocolo ou nome de domínio
     - a versão do protocolo HTTP
 
-2.  As linhas subsequentes representam um cabeçalho HTTP, fornecendo ao servidor informações sobre o tipo de dado apropriado (por exemplo, qual o idioma, quais os tipos MIME) ou outros dados que alteram seu comportamento (por exemplo, não enviando uma resposta se já estiver em cache). Esses cabeçalhos HTTP formam um bloco que termina com uma linha vazia.
-3.  O bloco final é um bloco de dados opcional, que pode conter dados adicionais usados principalmente pelo método POST.
+2. As linhas subsequentes representam um cabeçalho HTTP, fornecendo ao servidor informações sobre o tipo de dado apropriado (por exemplo, qual o idioma, quais os tipos MIME) ou outros dados que alteram seu comportamento (por exemplo, não enviando uma resposta se já estiver em cache). Esses cabeçalhos HTTP formam um bloco que termina com uma linha vazia.
+3. O bloco final é um bloco de dados opcional, que pode conter dados adicionais usados principalmente pelo método POST.
 
 ### Exemplos de requisições
 
-Buscando a página raiz do developer.mozilla.org ([http://developer.mozilla.org/](/ "Linkification: http://developer.mozilla.org/")), e dizendo ao servidor que o _user-agent_ preferiria a página em francês, se possível:
+Buscando a página raiz do developer.mozilla.org ([http://developer.mozilla.org/](/)), e dizendo ao servidor que o _user-agent_ preferiria a página em francês, se possível:
 
 ```
 GET / HTTP/1.1
@@ -70,9 +70,9 @@ HTTP define um conjunto de [métodos de requisição](/pt-BR/docs/Web/HTTP/Metho
 
 Depois que o agente conectado envia sua solicitação, esta é processada pelo servidor, que por fim, retorna uma resposta. Semelhante a uma requisição do cliente, uma resposta do servidor é formada por diretivas de texto, separadas por quebras de linhas, embora divididas em três blocos:
 
-1.  A primeira linha, a linha de status, consiste em uma confirmação da versão HTTP usada, seguida por uma requisição de status (e seu breve significado em texto legível por humanos).
-2.  As linhas subsequentes representam cabeçalhos HTTP específicos, fornecendo ao cliente informações sobre os dados enviados (por exemplo, tipo, tamanho dos dados, algoritmo de compressão usado, dicas sobre armazenamento em cache). Da mesma forma que o bloco de cabeçalhos HTTP para uma requisição do cliente, esses cabeçalhos HTTP formam um bloco que termina com uma linha vazia.
-3.  O bloco final é um bloco de dados, que contém os dados opcionais.
+1. A primeira linha, a linha de status, consiste em uma confirmação da versão HTTP usada, seguida por uma requisição de status (e seu breve significado em texto legível por humanos).
+2. As linhas subsequentes representam cabeçalhos HTTP específicos, fornecendo ao cliente informações sobre os dados enviados (por exemplo, tipo, tamanho dos dados, algoritmo de compressão usado, dicas sobre armazenamento em cache). Da mesma forma que o bloco de cabeçalhos HTTP para uma requisição do cliente, esses cabeçalhos HTTP formam um bloco que termina com uma linha vazia.
+3. O bloco final é um bloco de dados, que contém os dados opcionais.
 
 ### Exemplo de respostas
 

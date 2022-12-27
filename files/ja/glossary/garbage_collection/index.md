@@ -9,8 +9,8 @@ slug: Glossary/Garbage_collection
 
 ### 一般知識
 
-- Wikipedia 上の {{interwiki("wikipedia", "メモリ管理")}}
-- Wikipedia 上の {{interwiki("wikipedia", "ガベージコレクション")}}
+- Wikipedia 上の [メモリ管理](https://ja.wikipedia.org/wiki/メモリ管理)
+- Wikipedia 上の [ガベージコレクション](https://ja.wikipedia.org/wiki/ガベージコレクション)
 
 ### 技術文書
 

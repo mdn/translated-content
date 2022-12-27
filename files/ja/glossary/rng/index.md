@@ -18,7 +18,7 @@ slug: Glossary/RNG
 
 ### 一般知識
 
-- Wikipedia の{{Interwiki("wikipedia", "Pseudorandom number generator")}}
+- Wikipedia の[擬似乱数](https://ja.wikipedia.org/wiki/擬似乱数)
 - JavaScript の組み込み PRNG 関数である {{jsxref("Math.random()")}}。これは暗号学的に安全な PRNG ではありません。
 - {{domxref("Crypto.getRandomValues()")}}: 暗号学的に安全な数値を提供するためのものです。
 

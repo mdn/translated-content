@@ -16,9 +16,11 @@ original_slug: Web/CSS/transform-function/skew()
 
 Функция `skew()` задаётся одним или двумя значениями которые отображают наклон в каждом из направлений.
 
-    skew(ax)
+```
+skew(ax)
 
-    skew(ax, ay)
+skew(ax, ay)
+```
 
 ### Значения
 

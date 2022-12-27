@@ -183,7 +183,7 @@ Simple file.
 
 ### `multipart/byteranges`
 
-O tipo MIME `multipart/byteranges `é usado no contexto de enviar respostas parciais para o navegador. Quando o código de status de conteúdo parcial {{HTTPStatus("206")}}` `é enviado, este tipo MIME é usado para indicar que o documento é composto de várias partes, uma para cada um do intervalo solicitado. Como outros tipos de multipart, o {{HTTPHeader("Content-Type")}} usa a diretiva de limite para definir a seqüência de limites. Cada uma das diferentes partes tem um cabeçalho {{HTTPHeader("Content-Type")}} com o tipo real do documento e um {{HTTPHeader("Content-Range")}} com o intervalo que representam.
+O tipo MIME `multipart/byteranges` é usado no contexto de enviar respostas parciais para o navegador. Quando o código de status de conteúdo parcial {{HTTPStatus("206")}} é enviado, este tipo MIME é usado para indicar que o documento é composto de várias partes, uma para cada um do intervalo solicitado. Como outros tipos de multipart, o {{HTTPHeader("Content-Type")}} usa a diretiva de limite para definir a seqüência de limites. Cada uma das diferentes partes tem um cabeçalho {{HTTPHeader("Content-Type")}} com o tipo real do documento e um {{HTTPHeader("Content-Range")}} com o intervalo que representam.
 
 ```
 HTTP/1.1 206 Partial Content

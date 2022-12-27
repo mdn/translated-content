@@ -18,4 +18,4 @@ slug: Glossary/Digest
 ## 関連項目
 
 - {{glossary("hash function", "ハッシュ関数")}}
-- Wikipedia の {{interwiki("wikipedia", "暗号学的ハッシュ関数", "ハッシュ関数")}}
+- Wikipedia の [ハッシュ関数](https://ja.wikipedia.org/wiki/暗号学的ハッシュ関数)

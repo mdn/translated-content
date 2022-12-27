@@ -61,4 +61,4 @@ The following guides show you what need to do to implement a PWA, by examining a
 - [Offline-capable Pokédex web site](https://www.pokedex.org/)
 - [Hacker News readers as Progressive Web Apps](https://hnpwa.com/)
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Apps/Progressive/")}}
+{{QuickLinksWithSubpages("/pt-BR/docs/Web/Apps/Progressive/")}}

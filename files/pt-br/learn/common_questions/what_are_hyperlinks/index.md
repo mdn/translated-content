@@ -35,9 +35,9 @@ Hyperlinks, geralmente chamados de links, são um conceito fundamental da Web. P
 
 Em 1989, Tim Berners-Lee, o inventor da Web, falou sobre os três pilares sobre os quais a Web se sustenta:
 
-1.  "URL", um sistema de endereços que mantém o controle de documentos da Web;
-2.  "HTTP", um protocolo de transferência para encontrar documentos ao receber seus URLs;
-3.  "HTML", um formato de documento que permite incorporar _hyperlinks;_
+1. "URL", um sistema de endereços que mantém o controle de documentos da Web;
+2. "HTTP", um protocolo de transferência para encontrar documentos ao receber seus URLs;
+3. "HTML", um formato de documento que permite incorporar _hyperlinks;_
 
 Como você pode ver nos três pilares, tudo na Web gira em torno de documentos e como acessá-los. O propósito original da Web era fornecer uma maneira fácil de acessar, ler e navegar por documentos de texto. Desde então, a Web evoluiu para fornecer acesso a imagens, vídeos e dados binários, mas essas melhorias dificilmente mudaram os três pilares.
 
@@ -89,4 +89,4 @@ Os links influenciam a rapidez com que um mecanismo de pesquisa se vincula ao se
 Agora você vai querer configurar algumas páginas da web com links.
 
 - Para obter mais informações teóricas, aprenda sobre [URLs e sua estrutura](/pt-BR/docs/Learn/Common_questions/What_is_a_URL), já que cada link aponta para um URL.
-- Quer algo um pouco mais prático? O [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) _(em inglês)_, artigo da nossa [Introdução ao HTML ](/pt-BR/docs/Learn/HTML/Introduction_to_HTML)_(em inglês)_, explica como implementar links em detalhes.
+- Quer algo um pouco mais prático? O [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) _(em inglês)_, artigo da nossa [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML) _(em inglês)_, explica como implementar links em detalhes.

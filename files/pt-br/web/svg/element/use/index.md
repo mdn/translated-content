@@ -12,7 +12,7 @@ translation_of: Web/SVG/Element/use
 ---
 {{SVGRef}}
 
-O elemento `use` cria instâncias dentro de um documento SVG e os duplica em outro local. O efeito é o mesmo se as instâncias forem profundamente clonadas em um DOM não exposto, e então coladas onde o elemento `use` está (muito parecido com [elementos de template](/pt-BR/docs/Web/HTML/Element/template) clonados no HTML5). Como as instâncias clonadas não são expostas, é preciso ter cuidado ao utilizar [CSS](/pt-BR/CSS "en/CSS") para estilizar o elemento `use` e seus descendentes ocultos. Não há garantia de que atributos CSS sejam herdados pelo DOM oculto e clonado, a menos que você os solicite explicitamente usando [herança CSS](/pt-BR/CSS/inheritance "en/CSS/inheritance").
+O elemento `use` cria instâncias dentro de um documento SVG e os duplica em outro local. O efeito é o mesmo se as instâncias forem profundamente clonadas em um DOM não exposto, e então coladas onde o elemento `use` está (muito parecido com [elementos de template](/pt-BR/docs/Web/HTML/Element/template) clonados no HTML5). Como as instâncias clonadas não são expostas, é preciso ter cuidado ao utilizar [CSS](/pt-BR/CSS) para estilizar o elemento `use` e seus descendentes ocultos. Não há garantia de que atributos CSS sejam herdados pelo DOM oculto e clonado, a menos que você os solicite explicitamente usando [herança CSS](/pt-BR/CSS/inheritance).
 
 Por motivos de segurança alguns navegadores poderão aplicar uma política de "mesma origem" com elementos `use`, bem como poderão recusar o carregamento de uma URI de múltiplas origens no atributo `xlink:href`.
 
@@ -46,11 +46,11 @@ Por motivos de segurança alguns navegadores poderão aplicar uma política de "
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos de eventos gráficos](/pt-BR/docs/Web/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
-- [Atributos XLink](/pt-BR/docs/Web/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Atributos de processamento condicional](/pt-BR/docs/Web/SVG/Attribute#ConditionalProccessing) »
+- [Atributos principais](/pt-BR/docs/Web/SVG/Attribute#Core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/Web/SVG/Attribute#GraphicalEvent) »
+- [Atributos de apresentação](/pt-BR/docs/Web/SVG/Attribute#Presentation) »
+- [Atributos XLink](/pt-BR/docs/Web/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -66,7 +66,7 @@ Por motivos de segurança alguns navegadores poderão aplicar uma política de "
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGUseElement`](/pt-BR/DOM/SVGUseElement "en/DOM/SVGUseElement").
+Este elemento implementa a interface do [`SVGUseElement`](/pt-BR/DOM/SVGUseElement).
 
 ## Compatibilidade dos navegadores
 

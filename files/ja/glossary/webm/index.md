@@ -9,4 +9,4 @@ slug: Glossary/webm
 
 ### 基礎知識
 
-- ウィキペディアの「{{Interwiki("wikipedia", "WebM")}}」の記事
+- ウィキペディアの「[WebM](https://ja.wikipedia.org/wiki/WebM)」の記事

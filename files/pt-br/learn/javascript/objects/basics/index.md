@@ -256,7 +256,7 @@ var pessoa2 = {
 }
 ```
 
-Neste caso, `pessoa1.saudacao()`\*\* **gerará "Oi! Meu nome é Chris."; No entanto, `pessoa2.saudacao()`** \*\*retornará "Oi! Meu nome é Brian.", mesmo que os códigos dos métodos sejam idênticos. Como dissemos antes, o `this` é igual ao código do objeto dentro dele — não é exatamente útil quando estamos escrevendo objetos literais na mão, mas é realmente incrível quando adicionamos objetos gerados dinamicamente (por exemplo usando construtores). Tudo ficará mais claro mais para frente.
+Neste caso, `pessoa1.saudacao()` gerará "Oi! Meu nome é Chris."; No entanto, `pessoa2.saudacao()` retornará "Oi! Meu nome é Brian.", mesmo que os códigos dos métodos sejam idênticos. Como dissemos antes, o `this` é igual ao código do objeto dentro dele — não é exatamente útil quando estamos escrevendo objetos literais na mão, mas é realmente incrível quando adicionamos objetos gerados dinamicamente (por exemplo usando **construtores**). Tudo ficará mais claro mais para frente.
 
 ## Você vem usando objetos o tempo todo
 
@@ -281,7 +281,7 @@ Você está usando métodos disponíveis na instância da class [`Document`](/en
 
 O mesmo pode ser dito de basicamente qualquer outro objeto/API embutido que esteja usando — [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array), [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math), etc.
 
-Note que Objetos/APIs embutidos nem sempre criam instâncias de objetos automaticamente. Por exemplo, a [API de Notificações ](/pt-BR/docs/Web/API/Notifications_API)— que permite que navegadores modernos disparem notificações de sistema — requerem que você inicialize uma nova instância de objeto usando o construtor para cada notificação que queira disparar. Tente entrar o seguinte no seu console Javascript:
+Note que Objetos/APIs embutidos nem sempre criam instâncias de objetos automaticamente. Por exemplo, a [API de Notificações](/pt-BR/docs/Web/API/Notifications_API) — que permite que navegadores modernos disparem notificações de sistema — requerem que você inicialize uma nova instância de objeto usando o construtor para cada notificação que queira disparar. Tente entrar o seguinte no seu console Javascript:
 
 ```js
 var minhaNotificacao = new Notification('Hello!');

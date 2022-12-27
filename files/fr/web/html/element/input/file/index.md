@@ -1,11 +1,6 @@
 ---
 title: <input type="file">
-slug: Web/HTML/Element/Input/file
-tags:
-  - HTML
-  - Input
-  - Reference
-translation_of: Web/HTML/Element/input/file
+slug: Web/HTML/Element/input/file
 ---
 
 {{HTMLRef}}

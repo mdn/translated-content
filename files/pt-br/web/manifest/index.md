@@ -72,7 +72,7 @@ Manifesto de aplicativos web são implementados em suas páginas HTML usando uma
 
 Manifest can contain the following keys:
 
-{{ListSubpages("/en-US/docs/Web/Manifest")}}
+{{ListSubpages("/pt-BR/docs/Web/Manifest")}}
 
 ### background_color
 

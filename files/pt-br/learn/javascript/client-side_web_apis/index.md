@@ -21,7 +21,7 @@ Se você decidir usar JavaScript no lado do cliente para sites ou aplicativos, v
 
 ## Pré-requisitos
 
-Para tirar o máximo proveito deste módulo, é recomendável a leitura dos módulos anteriores de JavaScript da série ([Primeiros passos](/pt-BR/docs/Learn/JavaScript/First_steps), [Construindo blocos](/pt-BR/docs/Learn/JavaScript/Building_blocks), e [Objetos javaScript ](/pt-BR/docs/Learn/JavaScript/Objects)). Esses módulos envolvem bastante uso de API simples, e não é facil escrever exemplos Javascript do lado do cliente sem eles. Aqui, subimos um nível, assumindo o conhecimento da linguagem core JavaScript e explorando as APIs comuns da Web com um pouco mais de detalhes.
+Para tirar o máximo proveito deste módulo, é recomendável a leitura dos módulos anteriores de JavaScript da série ([Primeiros passos](/pt-BR/docs/Learn/JavaScript/First_steps), [Construindo blocos](/pt-BR/docs/Learn/JavaScript/Building_blocks), e [Objetos javaScript](/pt-BR/docs/Learn/JavaScript/Objects)). Esses módulos envolvem bastante uso de API simples, e não é facil escrever exemplos Javascript do lado do cliente sem eles. Aqui, subimos um nível, assumindo o conhecimento da linguagem core JavaScript e explorando as APIs comuns da Web com um pouco mais de detalhes.
 
 Conhecimento básico de [HTML](/pt-BR/docs/Learn/HTML) e [CSS](/pt-BR/docs/Learn/CSS) serão utéis.
 

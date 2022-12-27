@@ -13,7 +13,7 @@ slug: Glossary/NaN
 
 ### 一般的な知識
 
-- Wikipedia による{{Interwiki("wikipedia", "NaN")}}
+- Wikipedia による[NaN](https://ja.wikipedia.org/wiki/NaN)
 
 ### 技術情報
 

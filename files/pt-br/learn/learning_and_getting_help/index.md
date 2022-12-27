@@ -29,9 +29,9 @@ This is why it is usually good to read some introductory material first to get a
 
 It is also why you can sometimes get really stuck on a problem, but then figure out the answer when you go for a coffee break (or a walk). You might:
 
-1.  Know how to fix problem A with tool A.
-2.  Know how to fix problem B with tool B.
-3.  Not know how to fix problem C.
+1. Know how to fix problem A with tool A.
+2. Know how to fix problem B with tool B.
+3. Not know how to fix problem C.
 
 Let's say you focus on problem C for a while and get frustrated because you can't think how to solve it. But then after going on a walk to get some fresh air, you may well find that as your mind wanders, you suddenly make a connection between tool A and tool B, and realize that you can use them together to fix problem C! It isn't always this simple, but it is also surprising how many times this does happen. This also highlights the importance of taking regular breaks when you are studying in front of the computer.
 

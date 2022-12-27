@@ -11,7 +11,7 @@ Python は OSI に承認されたオープンソースライセンスのもと�
 
 1. Learn more
 
-    1. Wikipedia の {{interwiki('wikipedia','ja:Python','Python')}}
+    1. Wikipedia の [Python](https://ja.wikipedia.org/wiki/Python)
     2. [Official Python docs tutorials](https://docs.python.org/3/tutorial/index.html)
     3. [Tutorialspoint Python tutorial](http://www.tutorialspoint.com/python/index.htm)
     4. [AlphaCodingSkills Python Tutorial](https://www.alphacodingskills.com/python/python-tutorial.php)

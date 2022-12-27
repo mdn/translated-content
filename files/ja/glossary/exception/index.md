@@ -9,4 +9,4 @@ slug: Glossary/Exception
 
 ### 一般知識
 
-- Wikipedia での {{Interwiki("wikipedia", "例外処理")}}
+- Wikipedia での [例外処理](https://ja.wikipedia.org/wiki/例外処理)

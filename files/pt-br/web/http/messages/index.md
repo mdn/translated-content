@@ -22,10 +22,10 @@ O mecanismo de enquadramento binário foi projetado de modo a não requerer qual
 
 Requisições e respostas HTTP compartilham estrutura similar e são compostas de:
 
-1.  Uma _linha inicial_ (_start-line)_ que descreve as requisições a serem implementadas, ou seu status de sucesso ou falha. Esta linha inicial é sempre uma única.
-2.  Um conjunto opcional de cabeçalhos HTTP especificando a requisição, ou descrevendo o corpo incluso na mensagem.
-3.  Uma linha em branco (_empty line_) indicando que toda meta-informação para a requisição já foi enviada.
-4.  Um _corpo_ (_body_) contendo dados associados à requisição (como o conteúdo de um formulário HTML), ou o documento associado à resposta. A presença do corpo e seu tamanho são especificados pela linha inicial e os cabeçalhos HTTP.
+1. Uma _linha inicial_ (_start-line)_ que descreve as requisições a serem implementadas, ou seu status de sucesso ou falha. Esta linha inicial é sempre uma única.
+2. Um conjunto opcional de cabeçalhos HTTP especificando a requisição, ou descrevendo o corpo incluso na mensagem.
+3. Uma linha em branco (_empty line_) indicando que toda meta-informação para a requisição já foi enviada.
+4. Um _corpo_ (_body_) contendo dados associados à requisição (como o conteúdo de um formulário HTML), ou o documento associado à resposta. A presença do corpo e seu tamanho são especificados pela linha inicial e os cabeçalhos HTTP.
 
 A linha inicial e os cabeçalhos HTTP da mensagem HTTP são conjuntamente chamados de _cabeça_ (_head_) da requisição, enquanto o que ela carrega, a sua carga, é conhecida como corpo.
 
@@ -37,8 +37,8 @@ A linha inicial e os cabeçalhos HTTP da mensagem HTTP são conjuntamente chamad
 
 Requisições HTTP são mensagens enviadas pelo cliente para iniciar uma ação no servidor. Suas linhas iniciais contêm três elementos:
 
-1.  Um _[método HTTP](/pt-BR/docs/Web/HTTP/Methods)_, um verbo (como {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} ou {{HTTPMethod("POST")}}) ou um nome (como {{HTTPMethod("HEAD")}} ou {{HTTPMethod("OPTIONS")}}), que descrevem a ação a ser executada. Por exemplo, `GET` indica que um recurso deve ser obtido ou `POST` significa que dados são inseridos no servidor (criando ou modificando um recurso, ou gerando um documento temporário para mandar de volta).
-2.  O _alvo da requisição_, normalmente um {{glossary("URL")}}, ou o caminho absoluto do protocolo, porta e domínio são em geral caracterizados pelo contexto da requisição. O formato deste alvo varia conforme o método HTTP. Pode ser
+1. Um _[método HTTP](/pt-BR/docs/Web/HTTP/Methods)_, um verbo (como {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} ou {{HTTPMethod("POST")}}) ou um nome (como {{HTTPMethod("HEAD")}} ou {{HTTPMethod("OPTIONS")}}), que descrevem a ação a ser executada. Por exemplo, `GET` indica que um recurso deve ser obtido ou `POST` significa que dados são inseridos no servidor (criando ou modificando um recurso, ou gerando um documento temporário para mandar de volta).
+2. O _alvo da requisição_, normalmente um {{glossary("URL")}}, ou o caminho absoluto do protocolo, porta e domínio são em geral caracterizados pelo contexto da requisição. O formato deste alvo varia conforme o método HTTP. Pode ser
 
     - Um caminho absoluto, seguido de um `'?'` e o texto da consulta. Esta é a forma mais comum, conhecida como a _forma original_, e é usada com os métodos `GET`, `POST`, `HEAD`, e `OPTIONS`.
       `POST / HTTP/1.1 GET /background.png HTTP/1.0 HEAD /test.html?query=alibaba HTTP/1.1 OPTIONS /anypage.html HTTP/1.0`
@@ -49,7 +49,7 @@ Requisições HTTP são mensagens enviadas pelo cliente para iniciar uma ação 
     - A _forma asterisco_, um simples asterisco (`'*'`), usada com `OPTIONS`. Representa o servidor como um todo.
       `OPTIONS * HTTP/1.1`
 
-3.  A _versão HTTP_, que define a estrutura do restante da mensagem, atuando como um indicador da versão esperada para uso na resposta.
+3. A _versão HTTP_, que define a estrutura do restante da mensagem, atuando como um indicador da versão esperada para uso na resposta.
 
 ### Cabeçalhos
 
@@ -78,9 +78,9 @@ Corpos podem ser divididos, a grosso modo, em duas categorias:
 
 A linha inicial de uma resposta HTTP, chamada de _linha de status_, contém a seguinte informação:
 
-1.  A versão do _protocolo_, normalmente `HTTP/1.1`.
-2.  Um _código de status_, indicando o sucesso ou falha da requisição. Códigos de status comuns são {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, ou {{HTTPStatus("302")}}
-3.  Um texto de status. Uma descrição textual breve, puramente informativa, do código de status a fim de auxiliar o entendimento da mensagem HTTP por humanos.
+1. A versão do _protocolo_, normalmente `HTTP/1.1`.
+2. Um _código de status_, indicando o sucesso ou falha da requisição. Códigos de status comuns são {{HTTPStatus("200")}}, {{HTTPStatus("404")}}, ou {{HTTPStatus("302")}}
+3. Um texto de status. Uma descrição textual breve, puramente informativa, do código de status a fim de auxiliar o entendimento da mensagem HTTP por humanos.
 
 Uma linha de status típica se parece com: `HTTP/1.1 404 Not Found.`
 

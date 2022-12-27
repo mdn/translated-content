@@ -1,13 +1,6 @@
 ---
 title: <input type="color">
-slug: Web/HTML/Element/Input/color
-tags:
-  - Element
-  - HTML
-  - Input
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/input/color
+slug: Web/HTML/Element/input/color
 ---
 
 {{HTMLRef}}

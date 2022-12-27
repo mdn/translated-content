@@ -32,7 +32,7 @@ Uma {{domxref("USVString")}}.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString"
+  "https://developer.mozilla.org/pt-BR/docs/Web/API/URL/toString"
 );
 url.toString(); // deve rerornar a URL como string
 ```

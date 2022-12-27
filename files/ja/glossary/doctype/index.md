@@ -9,7 +9,7 @@ slug: Glossary/Doctype
 
 ### 一般知識
 
-- Wikipedia 上の {{interwiki("wikipedia", "文書型宣言", "DOCTYPE宣言")}}
+- Wikipedia 上の [DOCTYPE宣言](https://ja.wikipedia.org/wiki/文書型宣言)
 - [HTML 仕様における DOCTYPE の定義](https://html.spec.whatwg.org/multipage/syntax.html#the-doctype)（英語）
 - [後方互換モードと標準準拠モード](/ja/docs/Quirks_Mode_and_Standards_Mode)
 

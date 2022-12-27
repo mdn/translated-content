@@ -16,5 +16,5 @@ slug: Glossary/MitM
 ## より詳しく知る
 
 - OWASP の記事: [Man-in-the-middle attack](https://www.owasp.org/index.php/Man-in-the-middle_attack) （英語）
-- Wikipedia 上の {{Interwiki("wikipedia", "中間者攻撃")}}
+- Wikipedia 上の [中間者攻撃](https://ja.wikipedia.org/wiki/中間者攻撃)
 - {{HTTPHeader("Public-Key-Pins")}} ヘッダー（{{Glossary("HPKP")}}）は、ウェブサイトへのその後のすべての接続にホワイトリスト証明書を要求するようにブラウザーに指示することで、MITM のリスクを大幅に低減できます。

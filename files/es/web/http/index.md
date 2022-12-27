@@ -22,16 +22,10 @@ Aprende cómo utilizar HTTP con guías y tutoriales.
   - : Se presentan las características básicas del protocolo y su estructura cliente-servidor: qué puede hacer y cuáles son sus usos.
 - [HTTP Caché](/es/docs/Mozilla/HTTP_cache)
   - : La gestión de la Caché es fundamental para la eficiencia de sitios Web. En este artículo se presentan los distintos tipos de caché y cómo usar las cabeceras HTTP para su configuración y control.
-
-<!---->
-
 - [HTTP Cookies](/es/docs/Web/HTTP/Cookies)
   - : El funcionamiento de las cookies se define en [RFC 6265](http://tools.ietf.org/html/rfc6265). Al recibir una petición HTTP, un servidor puede enviar una cabecera `Set-Cookie` junto con la respuesta. Posteriormente el cliente devuelve el valor de la cookie en cada petición al mismo servidor en forma de cabecera de solicitud `Cookie`. La cookie también puede tener una fecha de expiración determinada, o puede estar restringida a un dominio y path específico.
 - [Control de Acceso HTTP (CORS)](/es/docs/HTTP/Access_control_CORS)
-  - : Las **Solicitudes Inter-Sitio HTTP** (Cross-site HTTP requests en inglés), son peticiones HTTP por recursos pertenecientes a un dominio distinto al dominio del recurso que está haciendo la petición. Por ejemplo, una página HTML de un dominio A (http\://dominioa.ejemplo/) hace una solicitud por una imagen en un dominio B (http\://dominiob.foo/imagen.jpg) a través del elemento `img`. Hoy en día, las webs utilizan recursos de otros orígenes muy a menudo, incluyendo hojas de estilo CSS, imágenes, scripts y otros recursos. El Control de Acceso HTTP posibilita a los desarrolladores web a controlar cómo su sitio web responde a solicitudes de otros orígenes.
-
-<!---->
-
+  - : Las **Solicitudes Inter-Sitio HTTP** (Cross-site HTTP requests en inglés), son peticiones HTTP por recursos pertenecientes a un dominio distinto al dominio del recurso que está haciendo la petición. Por ejemplo, una página HTML de un dominio A (`http://dominioa.ejemplo/`) hace una solicitud por una imagen en un dominio B (`http://dominiob.foo/imagen.jpg`) a través del elemento `img`. Hoy en día, las webs utilizan recursos de otros orígenes muy a menudo, incluyendo hojas de estilo CSS, imágenes, scripts y otros recursos. El Control de Acceso HTTP posibilita a los desarrolladores web a controlar cómo su sitio web responde a solicitudes de otros orígenes.
 - [Evolución de HTTP](/es/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
   - : Una breve descripción de los cambios del protocolo HTTP desde sus primeras versiones hasta el moderno HTTP/2 y más allá.
 - [Consejos de Seguridad Web de Mozilla](https://wiki.mozilla.org/Security/Guidelines/Web_Security)

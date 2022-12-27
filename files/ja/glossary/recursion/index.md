@@ -38,5 +38,5 @@ recurse(10)
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "再帰")}}
+- Wikipedia の [再帰](https://ja.wikipedia.org/wiki/再帰)
 - [JavaScript での再帰についての詳細](/ja/docs/Web/JavaScript/Guide/Functions#Recursion)

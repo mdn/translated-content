@@ -17,7 +17,7 @@ slug: Glossary/User_agent
 
 ### 一般知識
 
-- Wikipedia の{{Interwiki("wikipedia", "ユーザーエージェント")}}
+- Wikipedia の[ユーザーエージェント](https://ja.wikipedia.org/wiki/ユーザーエージェント)
 
 ### 技術リファレンス
 

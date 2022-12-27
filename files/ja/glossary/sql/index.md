@@ -9,7 +9,7 @@ slug: Glossary/SQL
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "SQL")}}
+- Wikipedia 上の [SQL](https://ja.wikipedia.org/wiki/SQL)
 
 ### SQL を学ぶ
 

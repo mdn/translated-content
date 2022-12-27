@@ -25,14 +25,13 @@ Não há nenhuma limitação para a profundidade e a imbricação das listas def
   <tbody>
     <tr>
       <td>
-        <a href="/en/HTML/Content_categories" title="en/HTML/Content categories"
+        <a href="/en/HTML/Content_categories"
           >Categorias de conteúdo</a
         >
       </td>
       <td>
         <a
           href="/en/HTML/Content_categories#flow_content"
-          title="en/HTML/Content categories#Flow content"
           >Flutuantes</a
         >
       </td>

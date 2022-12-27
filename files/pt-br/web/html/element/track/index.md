@@ -36,7 +36,7 @@ O **elemento HTML `<track>` **é usado como filho dos elementos de mídia{{HTMLE
       <th scope="row">Permite Parentes</th>
       <td>
         Um elemento de mídia, antes de qualquer
-        <a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/HTML/Content_categories#Flow_content"
           >conteúdo de fluxo</a
         >.
       </td>
@@ -89,7 +89,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
 - {{htmlattrdef("label")}}
   - : A user-readable title of the text track which is used by the browser when listing available text tracks.
 - {{htmlattrdef("src")}}
-  - : Address of the track (`.vtt` file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the `track` element has a [`crossorigin`](/en-US/docs/Web/HTML/CORS_settings_attributes) attribute.
+  - : Address of the track (`.vtt` file). Must be a valid URL. This attribute must be specified and its URL value must have the same origin as the document — unless the {{HTMLElement("audio")}} or {{HTMLElement("video")}} parent element of the `track` element has a [`crossorigin`](/pt-BR/docs/Web/HTML/CORS_settings_attributes) attribute.
 - {{htmlattrdef("srclang")}}
   - : Language of the track text data. It must be a valid [BCP 47](https://r12a.github.io/app-subtags/) language tag. If the `kind` attribute is set to `subtitles`, then `srclang` must be defined.
 

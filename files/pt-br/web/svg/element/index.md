@@ -11,7 +11,7 @@ tags:
   - l10n:prioridade
 translation_of: Web/SVG/Element
 ---
-« [SVG](/pt-BR/docs/Web/SVG "SVG") / [SVG Attribute reference](/pt-BR/docs/Web/SVG/Attribute "SVG/Attribute") »
+« [SVG](/pt-BR/docs/Web/SVG) / [SVG Attribute reference](/pt-BR/docs/Web/SVG/Attribute) »
 
 Os desenhos e imagens SVG são criados usando uma grande variedade de elementos dedicados a construção, desenho e leiaute de imagens e diagramas vetoriais. Aqui você encontrará documentação de referência para cada um dos elementos SVG.
 

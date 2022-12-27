@@ -9,7 +9,7 @@ slug: Glossary/Hyperlink
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "Hyperlink", "Hyperlink")}}
+- Wikipedia の [Hyperlink](https://ja.wikipedia.org/wiki/Hyperlink)
 - MDN の [ハイパーリンク](/ja/docs/Web/Guide/HTML/Hyperlink) ガイド
 
 ### 技術リファレンス

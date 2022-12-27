@@ -17,4 +17,4 @@ SSL (Secure Sockets Layer) は古いセキュリティ標準技術で、サー�
 
 3. Wikipedia の記事
 
-    1. {{Interwiki("wikipedia", "Transport Layer Security")}}
+    1. [Transport Layer Security](https://ja.wikipedia.org/wiki/Transport_Layer_Security)

@@ -65,7 +65,7 @@ while(i < 5){
 
 1. General Knowledge
 
-    1. Wikipedia の {{Interwiki("wikipedia", "制御構造#ループ", "制御構造")}}
+    1. Wikipedia の [制御構造](https://ja.wikipedia.org/wiki/制御構造#ループ)
 
 2. [MDN Web Docs 用語集](/ja/docs/Glossary)
 

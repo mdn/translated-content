@@ -108,7 +108,7 @@ Firefox 50 は、米国時間 2016 年 11 月 15 日にリリースされまし�
 ### Web Audio API
 
 - {{domxref("PannerNode")}} インターフェイスで、オーディオソースの位置 ({{domxref("PannerNode.positionX")}}、{{domxref("PannerNode.positionY")}}、{{domxref("PannerNode.positionZ")}}) や方向性 ({{domxref("PannerNode.orientationX")}}、{{domxref("PannerNode.orientationY")}}、{{domxref("PannerNode.orientationZ")}}) に関する 3D 直交座標系のプロパティをサポートしました。
-- 一般的な {{interwiki("wikipedia", "無限インパルス応答")}} (IIR) フィルターを生成する、{{domxref("IIRFilterNode")}} インターフェイスを実装しました。
+- 一般的な [無限インパルス応答](https://ja.wikipedia.org/wiki/無限インパルス応答) (IIR) フィルターを生成する、{{domxref("IIRFilterNode")}} インターフェイスを実装しました。
 - {{domxref("WindowTimers.setInterval", "Window.setInterval()")}} および {{domxref("WindowTimers.setTimeout", "Window.setTimeout()")}} で作成したタイマーをバッググラウンドのタブで抑制する機能は、[Web Audio API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("AudioContext")}} がアクティブで音声を再生しているときに実施しないようになりました。これは、タイミングに敏感な音声再生 (タイマーを使用して個々の音を生成する音楽プレイヤーなど) をバックグラウンドで行う際の問題を避ける助けになります ({{bug(1181073)}})。
 
 ### Audio/Video

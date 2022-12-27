@@ -19,34 +19,24 @@ Agora que estamos à vontade para adicionar imagens simples a uma página da Web
     <tr>
       <th scope="row">Pré-requisitos:</th>
       <td>
-        <span class="short_text" id="result_box" lang="pt"
-          ><span>Alfabetização básica em informática</span></span
-        >,
+        Alfabetização básica em informática,
         <a
           href="/pt-BR/docs/Aprender/Getting_started_with_the_web/instalando_programas_basicos"
           >software básico instalado</a
         >,
-        <span class="short_text" id="result_box" lang="pt"
-          ><span
-            >conhecimento básico de
+        conhecimento básico de
             <a
               href="/pt-BR/docs/Aprender/Getting_started_with_the_web/lidando_com_arquivos"
               >trabalhar com arquivos</a
-            ></span
-          ></span
-        >,
-        <span class="short_text" id="result_box" lang="pt"
-          ><span>familiaridade com os fundamentos HTML</span></span
+            >
+        ,
+        familiaridade com os fundamentos HTML</span></span
         >
-        (<span class="short_text" id="result_box" lang="pt"
-          ><span
-            >Como coberto em
+        (Como coberto em
             <a
               href="/pt-BR/docs/Aprender/HTML/Introducao_ao_HTML/Getting_started"
               >Introdução ao HTML</a
-            ></span
-          ></span
-        >) e
+            >) e
         <a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
           >Images in HTML</a
         >.
@@ -55,12 +45,8 @@ Agora que estamos à vontade para adicionar imagens simples a uma página da Web
     <tr>
       <th scope="row">Objetivo:</th>
       <td>
-        <span id="result_box" lang="pt"
-          ><span
-            >Para aprender a incorporar conteúdo de vídeo e áudio em uma página
-            da Web e adicionar legendas/subtítulos ao vídeo.</span
-          ></span
-        >
+        Para aprender a incorporar conteúdo de vídeo e áudio em uma página
+            da Web e adicionar legendas/subtítulos ao vídeo.
       </td>
     </tr>
   </tbody>
@@ -185,7 +171,7 @@ Isso nos dará uma saída parecida com esta:
 
     - `"none"` não armazena em buffer o arquivo
     - `"auto"` armazena em buffer o arquivo de mídia
-    - `"metadata" `armazena em buffer apenas os metadados do arquivo
+    - `"metadata"` armazena em buffer apenas os metadados do arquivo
 
 Você pode encontrar o exemplo acima disponível para [tocar ao vivo no Github](https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html) (veja também o [código fonte](https://github.com/mdn/learning-area/blob/gh-pages/html/multimedia-and-embedding/video-and-audio-content/extra-video-features.html).) Observe que não incluímos o atributo `autoplay` na versão ao vivo - se o vídeo começar a ser reproduzido assim que a página for carregada, você não poderá ver o pôster!
 
@@ -245,7 +231,7 @@ Agora discutiremos um conceito um pouco mais avançado que é realmente útil pa
 - As pessoas que não falam o idioma do vídeo podem querer uma transcrição de texto ou mesmo tradução para ajudá-las a entender o conteúdo da mídia.
 - Da mesma forma, em ambientes em que a reprodução do áudio seria uma distração ou perturbação (como em uma biblioteca ou quando um parceiro está tentando dormir), ter legendas pode ser muito útil.
 
-Não seria bom poder fornecer a essas pessoas uma transcrição das palavras que estão sendo ditas no áudio / vídeo? Bem, graças ao vídeo HTML5, você pode, com o formato [WebVTT ](/pt-BR/docs/Web/API/WebVTT_API)e o elemento {{htmlelement ("track")}}.
+Não seria bom poder fornecer a essas pessoas uma transcrição das palavras que estão sendo ditas no áudio / vídeo? Bem, graças ao vídeo HTML5, você pode, com o formato [WebVTT](/pt-BR/docs/Web/API/WebVTT_API) e o elemento {{htmlelement ("track")}}.
 
 > **Nota:** "Transcrever" significa "escrever as palavras faladas como texto". O texto resultante é uma "transcrição".
 
@@ -276,8 +262,8 @@ This is the second.
 
 Para que isso seja exibido juntamente com a reprodução de mídia HTML, você precisa:
 
-1.  Salve-o como um arquivo `.vtt` em um local adequado.
-2.  Vincule ao arquivo `.vtt` com o elemento {{htmlelement ("track")}}. `<track>` deve ser colocado dentro de `<audio>` ou `<video>`, mas depois de todos os elementos `<source>`. Use o atributo {{htmlattrxref ("kind", "track")}} para especificar se as pistas são `subtitles`, `captions, `ou `descriptions`. Além disso, use {{htmlattrxref ("srclang", "track")}} para informar ao navegador em que idioma você escreveu as legendas.
+1. Salve-o como um arquivo `.vtt` em um local adequado.
+2. Vincule ao arquivo `.vtt` com o elemento {{htmlelement ("track")}}. `<track>` deve ser colocado dentro de `<audio>` ou `<video>`, mas depois de todos os elementos `<source>`. Use o atributo {{htmlattrxref ("kind", "track")}} para especificar se as pistas são `subtitles`, `captions,`ou `descriptions`. Além disso, use {{htmlattrxref ("srclang", "track")}} para informar ao navegador em que idioma você escreveu as legendas.
 
 Aqui está um exemplo:
 
@@ -305,11 +291,11 @@ Se você não conseguir obter nenhum vídeo ou áudio, pode usar nossos [exemplo
 
 Gostaríamos que você:
 
-1.  Salve seus arquivos de áudio e vídeo em um novo diretório no seu computador.
-2.  Crie um novo arquivo HTML no mesmo diretório, chamado `index.html`.
-3.  Adicione elementos `<audio>` e `<video>` à página; faça com que eles exibam os controles padrão do navegador.
-4.  Forneça os dois elementos `<source>` para que os navegadores encontrem o formato de áudio mais compatível e o carreguem. Isso deve incluir atributos de `type`.
-5.  Dê ao elemento `<video>` um pôster que será exibido antes que o vídeo comece a ser reproduzido. Divirta-se criando seu próprio gráfico de pôster.
+1. Salve seus arquivos de áudio e vídeo em um novo diretório no seu computador.
+2. Crie um novo arquivo HTML no mesmo diretório, chamado `index.html`.
+3. Adicione elementos `<audio>` e `<video>` à página; faça com que eles exibam os controles padrão do navegador.
+4. Forneça os dois elementos `<source>` para que os navegadores encontrem o formato de áudio mais compatível e o carreguem. Isso deve incluir atributos de `type`.
+5. Dê ao elemento `<video>` um pôster que será exibido antes que o vídeo comece a ser reproduzido. Divirta-se criando seu próprio gráfico de pôster.
 
 Para um bônus adicional, você pode tentar pesquisar faixas de texto e descobrir como adicionar legendas ao seu vídeo.
 
@@ -328,5 +314,3 @@ E isso é um tudo; esperamos que você tenha se divertido brincando com vídeo e
 - Opções automatizadas para [traduzir multimídia.](http://www.inwhatlanguage.com/blog/translate-video-audio/)
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}
-
-<!---->

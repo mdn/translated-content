@@ -94,6 +94,6 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 ## Veja também
 
-- [Negociação de conteúdo ](/pt-BR/docs/Web/HTTP/Content_negotiation)HTTP
+- [Negociação de conteúdo HTTP](/pt-BR/docs/Web/HTTP/Content_negotiation)
 - Cabeçalho com o resultado do conteúdo de negociação: {{HTTPHeader("Content-Encoding")}}
 - Outros cabeçalhos similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}

@@ -25,7 +25,7 @@ WebGL コンテンツを描画するときに実行される 2 つのシェー�
 
 頂点シェーダーは頂点の位置で必要な変換を実行し、頂点ごとに行う必要がある他の調整または計算を行い、GLSL によって提供される `gl_Position` と呼ばれる特別な変数に保存して、変換された頂点を返す必要があります。
 
-シェーダーは必要に応じて {{interwiki("wikipedia", "texel_(graphics)", "texel")}} の面のテクスチャ内の座標を決定して頂点に適用したり、法線を適用して頂点に適用する照明係数を決定したりすることもできます。この情報は、フラグメントシェーダーと共有するために、必要に応じて [varyings](/ja/docs/Web/API/WebGL_API/Data#Varyings) または [attributes](/ja/docs/Web/API/WebGL_API/Data#Attributes) に保存できます。
+シェーダーは必要に応じて [texel](https://en.wikipedia.org/wiki/texel_(graphics)) の面のテクスチャ内の座標を決定して頂点に適用したり、法線を適用して頂点に適用する照明係数を決定したりすることもできます。この情報は、フラグメントシェーダーと共有するために、必要に応じて [varyings](/ja/docs/Web/API/WebGL_API/Data#Varyings) または [attributes](/ja/docs/Web/API/WebGL_API/Data#Attributes) に保存できます。
 
 以下の頂点シェーダーは `aVertexPosition` と呼ばれる定義した属性から頂点位置の値を受け取ります。次に、その位置に `uProjectionMatrix` および `uModelViewMatrix`という 2 つの 4 x 4 行列を乗算します。`gl_Position` は結果に設定されます。投影法およびその他のマトリックスの詳細については、[この記事が役立つ場合があります](https://webglfundamentals.org/webgl/lessons/ja/webgl-3d-perspective.html)。
 

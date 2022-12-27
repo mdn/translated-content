@@ -10,7 +10,7 @@ HTML の **`<time>` 要素**は、特定の時の区間を表します。 `datet
 次のうちの一つを表します。
 
 - 24 時間制の時刻
-- {{interwiki("wikipedia", "グレゴリオ暦")}}の正確な日付 (時刻やタイムゾーンを伴うことも可能)
+- [グレゴリオ暦](https://ja.wikipedia.org/wiki/グレゴリオ暦)の正確な日付 (時刻やタイムゾーンを伴うことも可能)
 - [妥当な期間](https://www.w3.org/TR/2014/REC-html5-20141028/infrastructure.html#valid-duration-string)
 
 {{EmbedInteractiveExample("pages/tabbed/time.html", "tabbed-shorter")}}

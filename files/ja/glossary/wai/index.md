@@ -10,4 +10,4 @@ WAI または Web Accessibility Initiative は、標準外の{{Glossary("browser
 ### 一般知識
 
 - [WAI のウェブサイト](http://www.w3.org/WAI/)（英語）
-- ウィキペディアの {{Interwiki("wikipedia", "Web Accessibility Initiative")}}
+- ウィキペディアの [Web Accessibility Initiative](https://ja.wikipedia.org/wiki/Web_Accessibility_Initiative)

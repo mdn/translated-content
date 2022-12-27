@@ -98,9 +98,6 @@ Alguns valores possíveis para estas etiquetas:
 
 - `Read-only`
   - : Aplique esta etiqueta para páginas que descrevem atributos ou propriedades que são "somente leitura".
-
-<!---->
-
 - `Non-standard`
   - : Indica que a tecnologia ou API não pertence a qualquer padrão, mas é considerada estável no(s) navegador(es) que a tem implementada. Se você não usar esta etiqueta os leitores vão presumir que o artigo é padronizado. A tabela de compatibilidade da página deve esclarecer quais navegadores suportam essa tecnologia ou API.
 - `Deprecated`

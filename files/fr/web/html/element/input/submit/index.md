@@ -1,13 +1,6 @@
 ---
 title: <input type="submit">
-slug: Web/HTML/Element/Input/submit
-tags:
-  - Element
-  - Formulaire
-  - HTML
-  - Input
-  - Reference
-translation_of: Web/HTML/Element/input/submit
+slug: Web/HTML/Element/input/submit
 ---
 
 {{HTMLRef}}

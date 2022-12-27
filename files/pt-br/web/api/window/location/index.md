@@ -21,7 +21,7 @@ location = newLocation;
 ### Exemplo básico
 
 ```js
-alert(location); // alerta "https://developer.mozilla.org/en-US/docs/Web/API/Window.location"
+alert(location); // alerta "https://developer.mozilla.org/pt-BR/docs/Web/API/Window.location"
 ```
 
 ### Exemplo #1: Navegando para uma nova página

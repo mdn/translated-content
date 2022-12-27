@@ -13,7 +13,9 @@ translation_of: Web/CSS/General_sibling_combinator
 
 ## Синтаксис
 
-    element ~ element { style properties }
+```
+element ~ element { style properties }
+```
 
 ## Пример
 

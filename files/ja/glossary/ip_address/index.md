@@ -11,4 +11,4 @@ IP アドレスはネットワークに接続された、インターネット�
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "IP address", "IPアドレス")}}
+- Wikipedia の [IPアドレス](https://ja.wikipedia.org/wiki/IP_address)

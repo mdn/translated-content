@@ -397,7 +397,7 @@ More and more browsers now support the constraint validation API, and it's becom
 | {{domxref("HTMLFormElement.reportValidity()")}} | Returns `true` if the element or its child controls satisfy validation constraints. When `false` is returned, cancelable {{event("invalid")}} events are fired for each invalid element and validation problems are reported to the user.                                                                                                                                                                                    |
 | `setCustomValidity(message)`                                     | Adds a custom error message to the element; if you set a custom error message, the element is considered to be invalid, and the specified error is displayed. This lets you use JavaScript code to establish a validation failure other than those offered by the standard constraint validation API. The message is shown to the user when reporting the problem. If the argument is the empty string, the custom error is cleared. |
 
-For legacy browsers, it's possible to use a [polyfill such as Hyperform ](https://hyperform.js.org/)to compensate for the lack of support for the constraint validation API. Since you're already using JavaScript, using a polyfill isn't an added burden to your Web site or Web application's design or implementation.
+For legacy browsers, it's possible to use a [polyfill such as Hyperform](https://hyperform.js.org/) to compensate for the lack of support for the constraint validation API. Since you're already using JavaScript, using a polyfill isn't an added burden to your Web site or Web application's design or implementation.
 
 #### Example using the constraint validation API
 

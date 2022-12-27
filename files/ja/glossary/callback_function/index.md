@@ -28,4 +28,4 @@ processUserInput(greeting);
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "Callback_(computer_programming)", "コールバック_(情報工学)")}}
+- Wikipedia の [コールバック](https://ja.wikipedia.org/wiki/コールバック_(情報工学))

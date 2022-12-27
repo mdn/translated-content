@@ -12,7 +12,7 @@ slug: Glossary/caret
 ### 一般知識
 
 - Wikipedia 上の [Caret navigation](https://en.wikipedia.org/wiki/Caret_navigation)（英語）
-- Wikipedia 上の {{Interwiki("wikipedia", "キャレット")}}
+- Wikipedia 上の [キャレット](https://ja.wikipedia.org/wiki/キャレット)
 
 ### キャレットに関連する CSS
 

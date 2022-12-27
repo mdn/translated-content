@@ -9,7 +9,7 @@ slug: Glossary/Tag
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "HTML要素")}}
+- Wikipedia 上の [HTML要素](https://ja.wikipedia.org/wiki/HTML要素)
 - {{glossary("WHATWG")}} 上の [HTML 要素の構文](https://html.spec.whatwg.org/multipage/syntax.html#elements-2)
 
 ### 技術リファレンス

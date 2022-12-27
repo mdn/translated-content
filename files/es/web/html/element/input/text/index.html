@@ -113,18 +113,18 @@ original_slug: Web/HTML/Elemento/input/text
 
 <p>El número máximo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de {{HTMLAttrDef("text")}}. Debe ser un valor entero 0 o superior. Si no se especifica {{HTMLAttrDef("maxlength")}}, o se especifica un valor no válido, el {{HTMLAttrDef("text")}} de la entrada no tiene una longitud máxima. Este valor también debe ser mayor o igual que el valor de {{HTMLAttrxRef("minlength", "input")}}.</p>
 
-<p>La entrada fallará {{web.link("/es/docs/Web/Guide/HTML/HTML5/Constraint_validation", "restricción de validación")}} si la longitud del valor de texto del campo es mayor que {{HTMLAttrxRef("maxlength", "input")}} Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.</p>
+<p>La entrada fallará <a href="/es/docs/Web/Guide/HTML/HTML5/Constraint_validation">restricción de validación</a> si la longitud del valor de texto del campo es mayor que {{HTMLAttrxRef("maxlength", "input")}} Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.</p>
 
 <h3 id="HTMLAttrDefminlength">{{HTMLAttrDef("minlength")}}</h3>
 
 <p>El número mínimo de caracteres (como unidades de código UTF-16) que el usuario puede ingresar en la entrada de {{HTMLAttrDef("texto")}}. Debe ser un valor entero no negativo menor o igual al valor especificado por {{HTMLAttrxRef("maxlength", "input")}}. Si no se especifica {{HTMLAttrDef("minlength")}}, o se especifica un valor no válido, la entrada de {{HTMLAttrDef("text")}} no tiene una longitud mínima.</p>
 
-<p>La entrada fallará {{web.link("/es/docs/Web/Guide/HTML/HTML5/Constraint_validation", "restricción de validación")}} si la longitud del texto ingresado en el campo es menor que {{HTMLAttrDef("minlength")}} Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.</p>
+<p>La entrada fallará <a href="/es/docs/Web/Guide/HTML/HTML5/Constraint_validation">restricción de validación</a> si la longitud del texto ingresado en el campo es menor que {{HTMLAttrDef("minlength")}} Unidades de código UTF-16 de longitud. La validación de la restricción solo se aplica cuando el usuario cambia el valor.</p>
 
 <h3 id="HTMLAttrDefpattern">{{HTMLAttrDef("pattern")}}</h3>
 
 <div id="pattern-include">
-<p>El atributo {{HTMLAttrDef("pattern")}}, cuando se especifica, es una expresión regular que el {{HTMLAttrxRef("value")}} de la entrada debe coincidir para que el valor pase {{web.link("/es/docs/Web/Guide/HTML/HTML5/Constraint_validation", "restricciones de validación")}}. Debe ser una expresión regular de JavaScript válida, como la usada por el tipo {{JSxRef("RegExp")}} y como se documenta en la {{web.link("/es/docs/Web/JavaScript/Guide/Regular_Expressions", "guía sobre expresiones regulares")}}; el indicador <code>'u'</code> se especifica al compilar la expresión regular, de modo que el patrón se trata como una secuencia de puntos de código Unicode, en lugar de ASCII. No se deben especificar barras diagonales alrededor del texto del patrón.</p>
+<p>El atributo {{HTMLAttrDef("pattern")}}, cuando se especifica, es una expresión regular que el {{HTMLAttrxRef("value")}} de la entrada debe coincidir para que el valor pase <a href="/es/docs/Web/Guide/HTML/HTML5/Constraint_validation">restricciones de validación</a>. Debe ser una expresión regular de JavaScript válida, como la usada por el tipo {{JSxRef("RegExp")}} y como se documenta en la <a href="/es/docs/Web/JavaScript/Guide/Regular_Expressions">guía sobre expresiones regulares</a>; el indicador <code>'u'</code> se especifica al compilar la expresión regular, de modo que el patrón se trata como una secuencia de puntos de código Unicode, en lugar de ASCII. No se deben especificar barras diagonales alrededor del texto del patrón.</p>
 
 <p>Si el patrón especificado no se especifica o no es válido, no se aplica ninguna expresión regular y este atributo se ignora por completo.</p>
 
@@ -226,7 +226,7 @@ original_slug: Web/HTML/Elemento/input/text
 
 <h2 id="Usar_entradas_de_texto">Usar entradas de texto</h2>
 
-<p>Los elementos {{HTMLElement("input")}} de tipo {{HTMLAttrDef("text")}} crean entradas básicas de una sola línea. Los debes usar en cualquier lugar donde desees que el usuario ingrese un valor de una sola línea y no hay un tipo de entrada más específico disponible para recopilar ese valor (por ejemplo, si es un {{web.link("/es/docs/Web/HTML/Element/input/datetime-local", "date")}}, {{web.link("/es/docs/Web/HTML/Element/input/url", "URL")}}, {{web.link("/es/docs/Web/HTML/Element/input/email", "email")}}, o {{web.link("/es/docs/Web/HTML/Element/input/search", "término de búsqueda")}}, tiene mejores opciones disponibles).</p>
+<p>Los elementos {{HTMLElement("input")}} de tipo {{HTMLAttrDef("text")}} crean entradas básicas de una sola línea. Los debes usar en cualquier lugar donde desees que el usuario ingrese un valor de una sola línea y no hay un tipo de entrada más específico disponible para recopilar ese valor (por ejemplo, si es un <a href="/es/docs/Web/HTML/Element/input/datetime-local">date</a>, <a href="/es/docs/Web/HTML/Element/input/url">URL</a>, <a href="/es/docs/Web/HTML/Element/input/email">email</a>, o <a href="/es/docs/Web/HTML/Element/input/search">término de búsqueda</a>, tiene mejores opciones disponibles).</p>
 
 <h3 id="Ejemplo_básico">Ejemplo básico</h3>
 
@@ -379,7 +379,7 @@ input:valid+span:after {
 
 <h3 id="Especificación_de_un_patrón">Especificación de un patrón</h3>
 
-<p>Puedes utilizar el atributo {{HTMLAttrxRef("pattern", "input")}} para especificar una expresión regular con la que el valor ingresado debe coincidir para que se considere válido (ve un curso intensivo simple en {{web.link("/es/docs/Learn/HTML/Forms/Form_validation#Validación_con_una_expresión_regular", "Validación con una expresión regular")}} sobre el uso de expresiones regulares para validar entradas).</p>
+<p>Puedes utilizar el atributo {{HTMLAttrxRef("pattern", "input")}} para especificar una expresión regular con la que el valor ingresado debe coincidir para que se considere válido (ve un curso intensivo simple en <a href="/es/docs/Learn/HTML/Forms/Form_validation#Validación_con_una_expresión_regular">Validación con una expresión regular</a> sobre el uso de expresiones regulares para validar entradas).</p>
 
 <p>El siguiente ejemplo restringe el valor a 4-8 caracteres y requiere que contenga solo letras minúsculas.</p>
 
@@ -430,7 +430,7 @@ input:valid+span:after {
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<p>Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los artículos {{web.link("/es/docs/Learn/HTML/Forms/Your_first_HTML_form", "Mi primer formulario HTML")}} y {{web.link("/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form", "Cómo estructurar un formulario HTML")}}.</p>
+<p>Puedes ver buenos ejemplos de entradas de texto utilizadas en contexto en los artículos <a href="/es/docs/Learn/HTML/Forms/Your_first_HTML_form">Mi primer formulario HTML</a> y <a href="/es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">Cómo estructurar un formulario HTML</a>.</p>
 
 <h2 id="Especificaciones">Especificaciones</h2>
 
@@ -465,9 +465,9 @@ input:valid+span:after {
 <h2 id="Ve_también">Ve también</h2>
 
 <ul>
- <li>{{web.link("/es/docs/Learn/HTML/Forms", "Formularios HTML")}}</li>
+ <li><a href="/es/docs/Learn/HTML/Forms">Formularios HTML</a></li>
  <li>{{HTMLElement("input")}} y la interfaz {{DOMxRef("HTMLInputElement")}} en que se basa.</li>
  <li><code><a href="/en-US/docs/Web/HTML/Element/input/search">&lt;input type="search"&gt;</a></code></li>
  <li>{{HTMLElement("textarea")}}: Campo de entrada de texto multilínea</li>
- <li>{{web.link("/es/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets", "Compatibilidad de propiedades CSS")}}</li>
+ <li><a href="/es/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Compatibilidad de propiedades CSS</a></li>
 </ul>

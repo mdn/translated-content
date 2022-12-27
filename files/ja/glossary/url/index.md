@@ -13,7 +13,7 @@ URL は、ファイル転送 ({{Glossary("FTP")}}) や電子メール ({{Glossar
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "URL")}}
+- Wikipedia 上の [URL](https://ja.wikipedia.org/wiki/URL)
 
 ### この項目について学ぶ
 

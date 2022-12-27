@@ -28,4 +28,4 @@ HTTP の **`418 I'm a teapot`** クライアントエラーレスポンスコー
 
 ## 関連情報
 
-- {{interwiki("wikipedia", "Hyper Text Coffee Pot Control Protocol", "Wikipedia: Hyper Text Coffee Pot Control Protocol")}}
+- [Wikipedia: Hyper Text Coffee Pot Control Protocol](https://ja.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol)

@@ -15,15 +15,13 @@ The **HTML `<content>` element**—an obsolete part of the [Web Components](/pt-
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/HTML/Content_categories"
-          title="HTML/Content_categories"
+          href="/pt-BR/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Content_categories#Transparent_content_model"
-          title="HTML/Content_categories#Transparent_content_model"
+          href="/pt-BR/docs/Web/HTML/Content_categories#Transparent_content_model"
           >Transparent content</a
         >.
       </td>
@@ -31,7 +29,7 @@ The **HTML `<content>` element**—an obsolete part of the [Web Components](/pt-
     <tr>
       <th scope="row">Permitted content</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/pt-BR/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >.
       </td>

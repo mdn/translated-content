@@ -9,7 +9,7 @@ translation_of: Web/HTML/Element/col
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/HTML/Content_categories">Content categories</a>
+        <a href="/pt-BR/docs/HTML/Content_categories">Content categories</a>
       </th>
       <td>None.</td>
     </tr>

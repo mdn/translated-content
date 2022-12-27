@@ -42,8 +42,8 @@ Neste artigo vamos revisar o que são web servers, como eles funcionam, e por qu
 
 "Servidor web (_web server_)" pode referir ao hardware ou ao software, ou ambos trabalhando juntos.
 
-1.  Referente ao hardware, um servidor web é um computador que armazena arquivos que compõem os sites (por exemplo, documentos HTML, imagens, folhas de estilo, e arquivos JavaScript) e os entrega para o dispositivo do usuário final. Está conectado a Internet e pode ser acessado através do seu nome de domínio (DNS), como por exemplo `mozilla.org`.
-2.  Referente ao software, um servidor web inclui diversos componentes que controlam como os usuários acessam os arquivos hospedados (armazenados para disponibilização), no mínimo um _servidor HTTP._ Um servidor HTTP é um software que compreende {{Glossary("URL","URLs")}} (endereços web) e {{Glossary("HTTP")}} (o protocolo que seu navegador utiliza para visualizar páginas web.
+1. Referente ao hardware, um servidor web é um computador que armazena arquivos que compõem os sites (por exemplo, documentos HTML, imagens, folhas de estilo, e arquivos JavaScript) e os entrega para o dispositivo do usuário final. Está conectado a Internet e pode ser acessado através do seu nome de domínio (DNS), como por exemplo `mozilla.org`.
+2. Referente ao software, um servidor web inclui diversos componentes que controlam como os usuários acessam os arquivos hospedados (armazenados para disponibilização), no mínimo um _servidor HTTP._ Um servidor HTTP é um software que compreende {{Glossary("URL","URLs")}} (endereços web) e {{Glossary("HTTP")}} (o protocolo que seu navegador utiliza para visualizar páginas web.
 
 Em um nível mais básico, o navegador fará uma requisição utilizando o protocolo HTTP sempre que necessitar de um um arquivo hospedado em um servidor web. Quando a requisição alcançar o servidor web correto (hardware), o _servidor HTTP_ (software) enviará o documento requerido, também via HTTP.
 
@@ -99,9 +99,9 @@ O HTTP fornece regras claras sobre como um cliente e um servidor se comunicam. A
 
 [![The MDN 404 page as an example of such error page](https://mdn.mozillademos.org/files/8661/mdn-404.jpg)](https://developer.mozilla.org/en-US/404)Em um servidor web, o servidor HTTP é responsável por processar e responder as requisições recebidas.
 
-1.  Ao receber uma requisição, um servidor HTTP primeiramente confirma se a URL requisitada corresponde ao arquivo existente.
-2.  Se confirmar, o servidor web envia o conteúdo do arquivo de volta ao navegador. Senão, o servidor de aplicações cria o arquivo necessário.
-3.  Se nenhum dos processos for possível, o servidor web retorna uma mensagem de erro ao navegador, mais conhecido como "404 Not Found". (Esse erro é tão comum que muitos desevolvedores web passam um bom tempo criando [páginas de erro do 404](http://www.404notfound.fr/).)
+1. Ao receber uma requisição, um servidor HTTP primeiramente confirma se a URL requisitada corresponde ao arquivo existente.
+2. Se confirmar, o servidor web envia o conteúdo do arquivo de volta ao navegador. Senão, o servidor de aplicações cria o arquivo necessário.
+3. Se nenhum dos processos for possível, o servidor web retorna uma mensagem de erro ao navegador, mais conhecido como "404 Not Found". (Esse erro é tão comum que muitos desevolvedores web passam um bom tempo criando [páginas de erro do 404](http://www.404notfound.fr/).)
 
 ### Conteúdo estático vs. dinâmico
 

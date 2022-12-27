@@ -144,14 +144,8 @@ Diretivas de Relatório controlam o processo de reportar as violações CSP. Vej
   - : Obriga o uso de {{Glossary("SRI")}} para _scripts_ ou estilos na página.
 - {{CSP("require-trusted-types-for")}}{{experimental_inline}}
   - : Impõe [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) (Tipos confiáveis) em coletores de eventos (vide: [Sink (Computing)](<https://en.wikipedia.org/wiki/Sink_(computing)>)) para evitar injeção de DOM XSS.
-
-<!---->
-
 - {{CSP("trusted-types")}}{{experimental_inline}}
   - : Usado para especificar uma lista branca de políticas [Trusted Types](https://w3c.github.io/webappsec-trusted-types/dist/spec/) (Tipos confiáveis) (Tipos confiáveis permitem aplicações travarem injeções DOM XSS em coletores de eventos (_sinks_) para aceitarem somente valores tipados não falsificáveis no lugar de _strings_.
-
-<!---->
-
 - {{CSP("upgrade-insecure-requests")}}
   - : Instrui o usuário de agente a tratar todas as URLs inseguras de um site (aquelas servidas através do HTTP) a serem trocadas por URLs seguras (aqueles servidas através de HTTPS). Essa diretiva tem como foco sites com grande número de URLs inseguras e legadas que precisam ser reescritas.
 
@@ -209,7 +203,7 @@ Veja as [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines
 | {{specName("Subresource Integrity")}}         | {{Spec2("Subresource Integrity")}}         | Adiciona `require-sri-for`.                                                                                                                                  |
 | {{specName("Upgrade Insecure Requests")}} | {{Spec2("Upgrade Insecure Requests")}} | Adiciona `upgrade-insecure-requests`.                                                                                                                        |
 | {{specName("CSP 1.1")}}                         | {{Spec2("CSP 1.1")}}                         | Adiciona `base-uri`, `child-src`, `form-action`, `frame-ancestors`, `plugin-types`, `referrer`, and `report-uri`. Deprecia `frame-src`.                      |
-| {{specName("CSP 1.0")}}                         | {{Spec2("CSP 1.0")}}                         | Define `connect-src`, `default-src`, `font-src`, `frame-src`, `img-src`, `media-src`, `object-src`, `report-uri`, `sandbox`, `script-src,` e `style-src`.    |
+| {{specName("CSP 1.0")}}                         | {{Spec2("CSP 1.0")}}                         | Define `connect-src`, `default-src`, `font-src`, `frame-src`, `img-src`, `media-src`, `object-src`, `report-uri`, `sandbox`, `script-src`, e `style-src`.    |
 
 ## Compatibilidade com navegadores
 

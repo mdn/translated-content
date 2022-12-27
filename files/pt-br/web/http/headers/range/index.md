@@ -40,9 +40,6 @@ Range: <unit>=-<suffix-length>
 
 - \<unit>
   - : A unidade no qual os intervalos são especificados. É geralmente em `bytes`.
-
-<!---->
-
 - \<range-start>
   - : Um inteiro na dada unidade indicando o começo da requisição de intervalo.
 - \<range-end>

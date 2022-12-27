@@ -12,4 +12,4 @@ HTTP はテクスチュアルであり(すべての通信はプレーンテキ�
 ## 関連項目
 
 - [MDN 上の HTTP](/ja/docs/Web/HTTP)
-- Wikipedia 上の {{interwiki("wikipedia", "Hypertext Transfer Protocol", "HTTP")}}
+- Wikipedia 上の [HTTP](https://ja.wikipedia.org/wiki/Hypertext_Transfer_Protocol)

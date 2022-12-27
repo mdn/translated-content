@@ -113,7 +113,7 @@ Un {{jsxref("Promise")}} qui reçoit en objet {{domxref("MediaStream")}} lorsque
 
 ### Erreurs
 
-Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un objet erreur [`DOMException`](https://translate.googleusercontent.com/translate_c?depth=1&hl=fr&prev=search&rurl=translate.google.fr&sl=en&sp=nmt4&u=https://developer.mozilla.org/en-US/docs/Web/API/DOMException&usg=ALkJrhgnRUAs3RQR8I7ulOitmhRQUlVEUA) au gestionnaire d'erreurs. Les erreurs possibles sont:
+Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un objet erreur [`DOMException`](/fr/docs/Web/API/DOMException) au gestionnaire d'erreurs. Les erreurs possibles sont:
 
 - `AbortError`
   - : Bien que l'utilisateur et le système d'exploitation aient tous deux accédé à l'équipement matériel, et qu'aucun problème de matériel ne causerait un `NotReadableError` , un problème s'est produit, ce qui a empêché l'utilisation du périphérique.
@@ -142,7 +142,7 @@ Les rejets du {{jsxref("Promise")}} retourné sont effectués en passant un obje
 
 ### Largeur et hauteur
 
-Cet exemple donne une préférence pour la résolution de la caméra et attribue l'objet [`MediaStream`](https://translate.googleusercontent.com/translate_c?depth=1&hl=fr&prev=search&rurl=translate.google.fr&sl=en&sp=nmt4&u=https://developer.mozilla.org/en-US/docs/Web/API/MediaStream&usg=ALkJrhipdR5n2jQ-BGrPTomESH_A7nof4g) résultant à un élément vidéo.
+Cet exemple donne une préférence pour la résolution de la caméra et attribue l'objet [`MediaStream`](/fr/docs/Web/API/MediaStream) résultant à un élément vidéo.
 
 ```js
 // Prefer camera resolution nearest to 1280x720.
@@ -231,7 +231,7 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
 
 ## Permissions
 
-Pour utiliser `getUserMedia()` dans une application installable (par exemple, une [application Firefox OS](https://translate.googleusercontent.com/translate_c?depth=1&hl=fr&prev=search&rurl=translate.google.fr&sl=en&sp=nmt4&u=https://developer.mozilla.org/en-US/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial&usg=ALkJrhjjqOGYUEn75gZx3AcoQDArrosa9Q) ), vous devez spécifier un ou les deux champs suivants dans votre fichier manifeste:
+Pour utiliser `getUserMedia()` dans une application installable (par exemple, une [application Firefox OS](/fr/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial) ), vous devez spécifier un ou les deux champs suivants dans votre fichier manifeste:
 
 ```js
 "permissions": {

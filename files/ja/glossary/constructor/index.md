@@ -33,7 +33,7 @@ var defaultReference = new Default();
 
 ### 一般知識
 
-- ウィキペディアの{{Interwiki("wikipedia", "コンストラクタ")}}の記事
+- ウィキペディアの[コンストラクタ](https://ja.wikipedia.org/wiki/コンストラクタ)の記事
 
 ### 技術リファレンス
 

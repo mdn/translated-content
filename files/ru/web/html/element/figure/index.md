@@ -19,11 +19,11 @@ translation_of: Web/HTML/Element/figure
 
 {{EmbedInteractiveExample("pages/tabbed/figure.html","tabbed-shorter")}}
 
-| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток "HTML/Content categories#Flow content"), [секционный корень](/ru/docs/Web/Guide/HTML/Content_categories#Прочие_модели_контента), явный контент                                                                               |
+| [Категории контента](/ru/docs/Web/Guide/HTML/Content_categories) | [Основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток), [секционный корень](/ru/docs/Web/Guide/HTML/Content_categories#Прочие_модели_контента), явный контент                                                                               |
 | ---------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое                                           | Элемент {{HTMLElement("figcaption")}} за которым следует [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток "HTML/Content categories#Flow content"); или поточный контент за которым следует элемент {{HTMLElement("figcaption")}}; или поточный контент. |
+| Разрешённое содержимое                                           | Элемент {{HTMLElement("figcaption")}} за которым следует [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток); или поточный контент за которым следует элемент {{HTMLElement("figcaption")}}; или поточный контент. |
 | Пропуск тегов                                                    | {{no_tag_omission}}                                                                                                                                                                                                                                                                                |
-| Разрешённые родители                                             | Любые элементы принимающие [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток "HTML/Content categories#Flow content").                                                                                                                                                          |
+| Разрешённые родители                                             | Любые элементы принимающие [основной поток](/ru/docs/Web/Guide/HTML/Content_categories#Основной_поток).                                                                                                                                                          |
 | Разрешённые ARIA-роли                                            | {{ARIARole("group")}}, {{ARIARole("presentation")}}                                                                                                                                                                                                                                      |
 | DOM-интерфейс                                                    | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                    |
 
@@ -34,7 +34,7 @@ translation_of: Web/HTML/Element/figure
 ## Примечания по использованию
 
 - Обычно `<figure>` это рисунок, иллюстрация, диаграмма, фрагмент кода, и т.д., на который ссылаются в основном потоке документа, но может быть перенесён в другую часть документа или в приложение не нарушив основной поток.
-- Являясь [секционным корнем](/ru/docs/Web/Guide/HTML/Content_categories#Прочие_модели_контента "Sections and Outlines of an HTML5 document#Sectioning root"), структура содержимого элемента `<figure>` исключается из основной структуры документа.
+- Являясь [секционным корнем](/ru/docs/Web/Guide/HTML/Content_categories#Прочие_модели_контента), структура содержимого элемента `<figure>` исключается из основной структуры документа.
 - Подпись может быть связана с элементом `<figure>` с помощью вставки {{HTMLElement("figcaption")}} внутри него (как первый или последний потомок). Первый элемент `<figcaption>` в иллюстрации предоставляет её подпись (заголовок).
 
 ## Примеры

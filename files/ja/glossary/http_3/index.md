@@ -8,7 +8,7 @@ slug: Glossary/HTTP_3
 1. 一般知識
 
     1. MDN 上の [HTTP](/ja/docs/Web/HTTP)
-    2. Wikipedia 上の {{interwiki("wikipedia", "HTTP/3", "HTTP/3")}}
+    2. Wikipedia 上の [HTTP/3](https://ja.wikipedia.org/wiki/HTTP/3)
 
 2. [用語集](/ja/docs/Glossary)
 

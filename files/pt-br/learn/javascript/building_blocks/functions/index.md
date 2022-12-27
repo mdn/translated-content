@@ -289,9 +289,9 @@ O zelador do zoológico é como o escopo global — ele ou ela tem as chaves par
 
 Vamos observar um exemplo real para mostrar escopo.
 
-1.  Primeiro, faça uma cópia local de nosso exmplo [function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html). Isto contém duas funções chamadas `a()` e `b()`, e três variáveis — `x`, `y`, e `z` — duas das quais estão definidas dentro de funções, e uma no escopo global. Ele também contém uma terceira função chamada `output()`, que leva um simples parâmetro e mostra-o em um parágrafo na página.
-2.  Abra o exemplo em um navegador e em um editor de textos.
-3.  Abra o console JavaScript no developer tools de seu navegador. No console JavaScript, digite o seguinte comando:
+1. Primeiro, faça uma cópia local de nosso exmplo [function-scope.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-scope.html). Isto contém duas funções chamadas `a()` e `b()`, e três variáveis — `x`, `y`, e `z` — duas das quais estão definidas dentro de funções, e uma no escopo global. Ele também contém uma terceira função chamada `output()`, que leva um simples parâmetro e mostra-o em um parágrafo na página.
+2. Abra o exemplo em um navegador e em um editor de textos.
+3. Abra o console JavaScript no developer tools de seu navegador. No console JavaScript, digite o seguinte comando:
 
     ```js
     output(x);
@@ -299,7 +299,7 @@ Vamos observar um exemplo real para mostrar escopo.
 
     Você deve ver o valor da variável `x` exibida na página.
 
-4.  Agora tente digitar o seguinte no seu console:
+4. Agora tente digitar o seguinte no seu console:
 
     ```js
     output(y);
@@ -308,7 +308,7 @@ Vamos observar um exemplo real para mostrar escopo.
 
     Ambos dever retornar um erro com as seguintes linhas "[ReferenceError: y is not defined](/pt-BR/docs/Web/JavaScript/Reference/Errors/Not_defined)". Por que isso? Porque o escopo da função — `y` e `z` estão trancadas dentro das funções `a()` e `b()`, então `output()` não pode acessá-las quando chamadas do escopo global.
 
-5.  Contudo, que tal chamá-las de dentro de outra função? Tente editar `a()` e `b()` para que fiquem desta forma:
+5. Contudo, que tal chamá-las de dentro de outra função? Tente editar `a()` e `b()` para que fiquem desta forma:
 
     ```js
     function a() {
@@ -331,7 +331,7 @@ Vamos observar um exemplo real para mostrar escopo.
 
     Você verá os valores de `y` e `z` mostrados na página. Isso funciona bem, desde que a função `output()` está sendo chamada dentro de outra função — no mesmo escopo que as variáveis que estam imprimindo são definidas, em cada caso. `output()` em si é acessível de qualquer lugar, como é definido no escopo global.
 
-6.  Agora tente atualizar seu código como este:
+6. Agora tente atualizar seu código como este:
 
     ```js
     function a() {
@@ -347,14 +347,14 @@ Vamos observar um exemplo real para mostrar escopo.
 
     Salve e atualize novamente, e tente isso novamente em seu console JavaScript:
 
-7.  ```js
+    ```js
     a();
     b();
     ```
 
     Ambas chamadas de `a()` e `b()` devem mostrar o valor de x — 1. Isso dá certo porque até mesmo a chamada de `output()` não está no mesmo escopo em que `x` é definido, `x` é uma variável global então é disponível dentro de todo código, em toda parte.
 
-8.  Finalmente, tente atualizar o código o seguinte:
+7. Finalmente, tente atualizar o código o seguinte:
 
     ```js
     function a() {
@@ -370,7 +370,7 @@ Vamos observar um exemplo real para mostrar escopo.
 
     Salve e atualize novamente, e tente isso novamente em seu console JavaScript:
 
-9.  ```js
+    ```js
     a();
     b();
     ```
@@ -440,8 +440,6 @@ Este arquivo explorou os conceitos fundamentais por trás das funções, pavimen
 - [Guia detalhado de funções](/pt-BR/docs/Web/JavaScript/Guide/Functions) — cobre algumas características avançadas não includas aqui.
 - [Referências de funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
 - [Parâmetros padrão](/pt-BR/docs/Web/JavaScript/Reference/Functions/Default_parameters), [Funções de flexa](/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions) — referências de conceito avançado
-
-<!---->
 
 {{PreviousMenuNext("Learn/JavaScript/Building_blocks/Looping_code","Learn/JavaScript/Building_blocks/Build_your_own_function", "Learn/JavaScript/Building_blocks")}}
 

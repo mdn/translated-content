@@ -115,7 +115,7 @@ name = "<script>alert('I am John in an annoying alert!')</script>";
 el.innerHTML = name; // この場合は無害
 ```
 
-これは{{interwiki("wikipedia", "クロスサイトスクリプティング")}}攻撃のように見えますが、結果的には無害です。 HTML5 では `innerHTML` で挿入された {{HTMLElement("script")}} タグは[実行するべきではない](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)と定義しているからです。
+これは[クロスサイトスクリプティング](https://ja.wikipedia.org/wiki/クロスサイトスクリプティング)攻撃のように見えますが、結果的には無害です。 HTML5 では `innerHTML` で挿入された {{HTMLElement("script")}} タグは[実行するべきではない](https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0)と定義しているからです。
 
 しかし、次のように {{HTMLElement("script")}} を使わずに JavaScript を実行する方法もあるので、制御することができない文字列を設定するために `innerHTML` を使用するたびに、セキュリティリスクは残ります。
 

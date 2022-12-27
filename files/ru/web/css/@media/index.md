@@ -46,7 +46,7 @@ A `<media-query>` is composed of a optional media type and/or a number of media 
 - all
   - : Подходит для всех устройств.
 - print
-  - : Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on [paged media](/en/CSS/Paged_Media "https://developer.mozilla.org/en/CSS/Paged_Media"), and the [media section of the Getting Started tutorial](/en/CSS/Getting_Started/Media "https://developer.mozilla.org/en/CSS/Getting_Started/Media") for information about formatting issues that are specific to paged media.
+  - : Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on [paged media](/en/CSS/Paged_Media), and the [media section of the Getting Started tutorial](/en/CSS/Getting_Started/Media) for information about formatting issues that are specific to paged media.
 - screen
   - : Предназначен в первую очередь для цветных компьютерных экранов.
 - speech
@@ -120,5 +120,5 @@ Each _media feature_ tests for one specific feature of the browser or device.
 
 ## Смотрите также
 
-- [Media queries](/en/CSS/Media_queries "En/CSS/Media queries")
+- [Media queries](/en/CSS/Media_queries)
 - The CSSOM {{ domxref("CSSMediaRule") }} associated with this at-rule.

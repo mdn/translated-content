@@ -47,12 +47,12 @@ Nós aprendemos o básico de CSS, porque e como escrever simples folhas de estí
 
 Quando um navegador redenriza um documento, ele combina o documento com suas informações de estilo. E o documento é processado em estágios, nos quais estão listados abaixo. É sugerível ter em mente que esta é uma versão simplificada do que ocorre quando um navegador redenriza uma página web, e que diferentes navegadores podem manipular estes processos de diferentes formas. De toda forma, esta listagem é muito aproximada do processo comum feito pela maioria dos navegadores.
 
-1.  O navegador carrega o HTML (e.g. que é recebido pela internet).
-2.  Ele então converte o {{Glossary("HTML")}} para um {{Glossary("DOM")}} (_Document Object Model_). O DOM representa o documento na memória do computador. O DOM será também melhor detalhado na próxima seção.
-3.  O navegador então requisita a maioria dos recursos que estão lincados no documento HTML, elementos como imagens encorporadas e vídeos, e também, folhas de estilo CSS. O código em JavaScript é manipulado um pouco mais tarde durante o processo, e não falaremos muito sobre a manipulação do JavaScript agora para mantermos as coisas simples.
-4.  O navegador analisa o CSS encontrado (fetched) e interpreta as diferentes regras por meio de seus diferentes tipos de seletores em diferentes baldes (buckets), tais como elementos (ex: h1, h2), classes (.myElement), ID (#myNav), e outros mais. Baseado nos seletores encontrados, o navegador insere as regras de estilização que devem ser aplicadas para cada node no DOM, e anexa o estilo para os elementos como foram especificados nas folhas de estilização (este processo intermediário é chamado de render tree ou árvore de renderização).
-5.  A árvore de renderização é organizada na estrutura e deve aparecer depois das regras de estilo serem aplicadas ao documento.
-6.  O visual de visualização da página é por fim mostrado na tela (este estágio é chamado de _painting_ ou pintura).
+1. O navegador carrega o HTML (e.g. que é recebido pela internet).
+2. Ele então converte o {{Glossary("HTML")}} para um {{Glossary("DOM")}} (_Document Object Model_). O DOM representa o documento na memória do computador. O DOM será também melhor detalhado na próxima seção.
+3. O navegador então requisita a maioria dos recursos que estão lincados no documento HTML, elementos como imagens encorporadas e vídeos, e também, folhas de estilo CSS. O código em JavaScript é manipulado um pouco mais tarde durante o processo, e não falaremos muito sobre a manipulação do JavaScript agora para mantermos as coisas simples.
+4. O navegador analisa o CSS encontrado (fetched) e interpreta as diferentes regras por meio de seus diferentes tipos de seletores em diferentes baldes (buckets), tais como elementos (ex: h1, h2), classes (.myElement), ID (#myNav), e outros mais. Baseado nos seletores encontrados, o navegador insere as regras de estilização que devem ser aplicadas para cada node no DOM, e anexa o estilo para os elementos como foram especificados nas folhas de estilização (este processo intermediário é chamado de render tree ou árvore de renderização).
+5. A árvore de renderização é organizada na estrutura e deve aparecer depois das regras de estilo serem aplicadas ao documento.
+6. O visual de visualização da página é por fim mostrado na tela (este estágio é chamado de _painting_ ou pintura).
 
 O diagrama a seguir também apresenta uma visão simples do processo.
 
@@ -177,8 +177,8 @@ Você está quase encerrando este módulo; só temos mais uma tarefa para fazer.
 
 ## Neste módulo
 
-1.  [O que é CSS?](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Começando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Como o CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-4.  [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
-5.  [Utilizando seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)
+1. [O que é CSS?](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Começando com CSS](/pt-BR/docs/Learn/CSS/First_steps/Getting_started)
+3. [Como o CSS é estruturado](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured)
+4. [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works)
+5. [Utilizando seu novo conhecimento](/pt-BR/docs/Learn/CSS/First_steps/Using_your_new_knowledge)

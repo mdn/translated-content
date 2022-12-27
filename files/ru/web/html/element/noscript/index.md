@@ -9,12 +9,12 @@ translation_of: Web/HTML/Element/noscript
 
 Элемент HTML** `<noscript>` **определяет секцию html кода, которая будет вставлена, если в браузере пользователя нет либо отключена поддержка JavaScript.
 
-- _[Content categories](/ru/docs/HTML/Content_categories "HTML/Content_categories")_ [Metadata content](/ru/docs/HTML/Content_categories#Metadata_content "HTML/Content_categories#Metadata_content"), [flow content](/ru/docs/HTML/Content_categories#Flow_content "HTML/Content categories#Flow content"), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content categories#Phrasing content").
+- _[Content categories](/ru/docs/HTML/Content_categories)_ [Metadata content](/ru/docs/HTML/Content_categories#Metadata_content), [flow content](/ru/docs/HTML/Content_categories#Flow_content), [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content).
 - _Permitted content_ When scripting is disabled and when it is a descendant of the {{HTMLElement("head")}} element: in any order, zero or more {{HTMLElement("link")}} elements, zero or more {{HTMLElement("style")}} elements, and zero or more {{HTMLElement("meta")}} elements.
   When scripting is disabled and when it isn't a descendant of the {{HTMLElement("head")}} element: any transparent content, but no `<noscript>` element must be among its descendants.
   Otherwise: flow content or phrasing content.
 - _Tag omission_ {{no_tag_omission}}
-- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content "HTML/Content_categories#Phrasing_content"), if there are no ancestor `<noscript>` element, or in a {{HTMLElement("head")}} element (but only for an HTML document), here again if there are no ancestor `<noscript>` element.
+- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/HTML/Content_categories#Phrasing_content), if there are no ancestor `<noscript>` element, or in a {{HTMLElement("head")}} element (but only for an HTML document), here again if there are no ancestor `<noscript>` element.
 - _DOM interface_ {{domxref("HTMLElement")}}
 
 ## Атрибуты

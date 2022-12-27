@@ -32,7 +32,7 @@ var geolocation = Components.classes["@mozilla.org/geolocation;1"]
 
 ### Obtendo a posição atual
 
-Para obter a localização atual do usuário, você pode utiliza o método `getCurrentPosition().` Isto inicia uma requisição assíncrona para identificar a posição do usuário, e consulta o hardware de localização para conseguir informações atualizadas. Quando a posição é determinada, uma rotina específica de retorno é executada. Você pode opcionalmente gerar uma segunda rotina de retorno se um erro ocorrer. Um terceiro, e opcional, parâmetro é a interface "opções" onde você pode configurar o tempo máximo da posição recebida e o tempo a se esperar por uma solicitação.
+Para obter a localização atual do usuário, você pode utiliza o método `getCurrentPosition()`. Isto inicia uma requisição assíncrona para identificar a posição do usuário, e consulta o hardware de localização para conseguir informações atualizadas. Quando a posição é determinada, uma rotina específica de retorno é executada. Você pode opcionalmente gerar uma segunda rotina de retorno se um erro ocorrer. Um terceiro, e opcional, parâmetro é a interface "opções" onde você pode configurar o tempo máximo da posição recebida e o tempo a se esperar por uma solicitação.
 
 Use `getCurrentPosition()` se você deseja uma única posição rapidamente, independente da precisão. Dispositivos com GPS, por exemplo, podem levar um minuto ou mais para conseguir a localização, e portanto dados menos precisos (localização do IP location ou rede wifi) podem retornar do método `getCurrentPosition()`.
 
@@ -200,4 +200,4 @@ prompt(window,
 - `nsIDOMGeoPositionOptions`
 - `nsIDOMNavigatorGeolocation`
 - [Geolocation API on w3.org](http://dev.w3.org/geo/api/spec-source.html)
-- [Demos about the Geolocation API](/en-US/demos/tag/tech:geolocation)
+- [Demos about the Geolocation API](/pt-BR/demos/tag/tech:geolocation)

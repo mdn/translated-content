@@ -126,7 +126,7 @@ Outros ataques e vulnerabilidades comuns incluem:
 - [Inclusão de arquivo](/pt-BR/docs/). Nesse ataque, um usuário pode especificar um arquivo "não intencional" para exibição ou execução nos dados passados ​​para o servidor. Quando carregado, esse arquivo pode ser executado no servidor da web ou no lado do cliente (levando a um ataque XSS). A solução é limpar a entrada antes de usá-la.
 - [Injeção de comando](/pt-BR/docs/). Os ataques de injeção de comando permitem que um usuário mal-intencionado execute comandos arbitrários do sistema no sistema operacional host. A solução é limpar a entrada do usuário antes que ela possa ser usada nas chamadas do sistema.
 
-Para obter uma lista abrangente das ameaças à segurança do site, consulte [Categoria: explorações de segurança da Web ](/pt-BR/docs/)(Wikipedia) e [Categoria: Ataque](/pt-BR/docs/) (Projeto de Segurança para Aplicações Web Abertos).
+Para obter uma lista abrangente das ameaças à segurança do site, consulte [Categoria: explorações de segurança da Web](/pt-BR/docs/)(Wikipedia) e [Categoria: Ataque](/pt-BR/docs/) (Projeto de Segurança para Aplicações Web Abertos).
 
 ## Algumas mensagens-chave
 
@@ -137,7 +137,7 @@ Quase todas as explorações de segurança nas seções anteriores são bem-suce
 Uma série de outras etapas concretas que você pode executar são:
 
 - Use um gerenciamento de senhas mais eficaz. Incentive senhas fortes que são alteradas regularmente. Considere a autenticação de dois fatores para o seu site, para que, além de uma senha, o usuário insira outro código de autenticação (geralmente um código fornecido com algum hardware físico que somente o usuário terá, como um código em um SMS enviado para seu telefone).
-- Configure seu servidor da web para usar [HTTPS ](/pt-BR/docs/)e [HTTP Strict Transport Security](/pt-BR/docs/) (HSTS). O HTTPS criptografa os dados enviados entre seu cliente e servidor. Isso garante que credenciais de login, cookies, dados de solicitações `POST` e informações de cabeçalho não estejam facilmente disponíveis para os invasores.
+- Configure seu servidor da web para usar [HTTPS](/pt-BR/docs/) e [HTTP Strict Transport Security](/pt-BR/docs/) (HSTS). O HTTPS criptografa os dados enviados entre seu cliente e servidor. Isso garante que credenciais de login, cookies, dados de solicitações `POST` e informações de cabeçalho não estejam facilmente disponíveis para os invasores.
 - Acompanhe as ameaças mais populares ([a lista atual do OWASP está aqui](/pt-BR/docs/)) e resolva as vulnerabilidades mais comuns primeiro.
 - Use as [ferramentas de verificação de vulnerabilidades](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) para executar testes de segurança automatizados em seu site. Posteriormente, seu site bem-sucedido também poderá encontrar bugs oferecendo uma recompensa de bugs, [como a Mozilla faz aqui](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/).
 - Armazene e exiba apenas os dados necessários. Por exemplo, se seus usuários precisam armazenar informações confidenciais, como detalhes do cartão de crédito, exiba apenas o número do cartão suficiente para que possa ser identificado pelo usuário e não o suficiente para que possa ser copiado por um invasor e usado em outro site. O padrão mais comum no momento é exibir apenas os últimos 4 dígitos de um número de cartão de crédito.

@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Methods
 
 {{HTTPSidebar}}
 
-O protocolo HTTP define um conjunto de **métodos de requisição** responsáveis por indicar a ação a ser executada para um dado recurso. Embora esses métodos possam ser descritos como substantivos, eles também são comumente referenciados como **_HTTP Verbs (Verbos HTTP)_**.**\_ \_**Cada um deles implementa uma semântica diferente, mas alguns recursos são compartilhados por um grupo deles, como por exemplo, qualquer método de requisição pode ser do tipo {{glossary("safe")}}, {{glossary("idempotent")}} ou {{glossary("cacheable")}}.
+O protocolo HTTP define um conjunto de **métodos de requisição** responsáveis por indicar a ação a ser executada para um dado recurso. Embora esses métodos possam ser descritos como substantivos, eles também são comumente referenciados como **_HTTP Verbs (Verbos HTTP)_**. Cada um deles implementa uma semântica diferente, mas alguns recursos são compartilhados por um grupo deles, como por exemplo, qualquer método de requisição pode ser do tipo {{glossary("safe")}}, {{glossary("idempotent")}} ou {{glossary("cacheable")}}.
 
 - [`GET`](/pt-BR/docs/Web/HTTP/Methods/GET)
   - : O método `GET` solicita a representação de um recurso específico. Requisições utilizando o método `GET` devem retornar apenas dados.

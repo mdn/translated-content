@@ -1,12 +1,6 @@
 ---
 title: <input type="radio">
-slug: Web/HTML/Element/Input/radio
-tags:
-  - Formulaires
-  - HTML
-  - Input
-  - Reference
-translation_of: Web/HTML/Element/input/radio
+slug: Web/HTML/Element/input/radio
 ---
 
 {{HTMLRef}}

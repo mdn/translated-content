@@ -84,5 +84,5 @@ form { max-height: none; }
 
 ## Смотрите также
 
-- [Блочная модель](/ru/docs/CSS/box_model "en/CSS/box_model")
+- [Блочная модель](/ru/docs/CSS/box_model)
 - {{ Cssxref("max-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("min-height") }}

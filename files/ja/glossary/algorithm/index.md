@@ -20,7 +20,7 @@ slug: Glossary/Algorithm
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "アルゴリズム")}}
+- Wikipedia の [アルゴリズム](https://ja.wikipedia.org/wiki/アルゴリズム)
 
 ### 技術リファレンス
 

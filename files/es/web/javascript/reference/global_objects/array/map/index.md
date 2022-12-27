@@ -56,6 +56,9 @@ var nuevo_array = arr.map(function callback(currentValue, index, array) {
 - `thisArg`
   - : Opcional. Valor a usar como `this`al ejecutar `callback`.
 
+### Valor devuelto
+  - : Un nuevo array en la que cada elemento es el resultado de ejecutar `callback`.
+
 ## Descripción
 
 `map` llama a la función `callback` provista **una vez por elemento** de un array, en orden, y construye un nuevo array con los resultados. `callback` se invoca sólo para los índices del array que tienen valores asignados; no se invoca en los índices que han sido borrados o a los que no se ha asignado valor.

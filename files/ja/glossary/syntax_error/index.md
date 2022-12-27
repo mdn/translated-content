@@ -11,5 +11,5 @@ slug: Glossary/Syntax_error
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "en:Syntax error", "Syntax error")}} (英語)
+- Wikipedia 上の [Syntax error](https://en.wikipedia.org/wiki/Syntax_error) (英語)
 - {{jsxref("SyntaxError")}} JavaScript オブジェクト

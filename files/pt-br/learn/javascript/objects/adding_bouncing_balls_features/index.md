@@ -51,11 +51,11 @@ As seções a seguir descrevem o que você precisa fazer.
 
 Primeiro de tudo, altere seu construtor `Ball()` existente para que ele se torne um construtor `Shape()` e adicione um novo construtor `Ball()`:
 
-1.  O construtor `Shape()` deve definir as propriedades `x`, `y`, `velX`, e `velY` da mesma maneira que o construtor `Ball()` fez originalmente, mas não as propriedades de `color` e `size`.
-2.  Também deve definir uma nova propriedade chamada `exists`, que é usada para rastrear se as bolas existem no programa (não foram comidas pelo círculo do mal). Este deve ser um booleano (`true`/`false`).
-3.  O construtor `Ball()` deve herdar as propriedades `x`, `y`, `velX`, `velY`, e `exists` do construtor `Shape()`.
-4.  Ele também deve definir uma propriedade `color` e uma `size`, como fez o construtor `Ball()` original.
-5.  Lembre-se de definir o `prototype` e o `constructor` do construtor `Ball()` adequadamente.
+1. O construtor `Shape()` deve definir as propriedades `x`, `y`, `velX`, e `velY` da mesma maneira que o construtor `Ball()` fez originalmente, mas não as propriedades de `color` e `size`.
+2. Também deve definir uma nova propriedade chamada `exists`, que é usada para rastrear se as bolas existem no programa (não foram comidas pelo círculo do mal). Este deve ser um booleano (`true`/`false`).
+3. O construtor `Ball()` deve herdar as propriedades `x`, `y`, `velX`, `velY`, e `exists` do construtor `Shape()`.
+4. Ele também deve definir uma propriedade `color` e uma `size`, como fez o construtor `Ball()` original.
+5. Lembre-se de definir o `prototype` e o `constructor` do construtor `Ball()` adequadamente.
 
 As definições do método ball `draw()`, `update()`, e `collisionDetect()` devem permanecer exatamente iguais às anteriores.
 
@@ -122,7 +122,7 @@ Assim, quando uma tecla é pressionada, a propriedade [keyCode](/pt-BR/docs/Web/
 
 #### `collisionDetect()`
 
-Este método irá agir de forma muito semelhante ao método` ``collisionDetect()` do `Ball()`, então você pode usar uma cópia disso como base deste novo método. Mas há algumas diferenças:
+Este método irá agir de forma muito semelhante ao método `collisionDetect()` do `Ball()`, então você pode usar uma cópia disso como base deste novo método. Mas há algumas diferenças:
 
 - Na declaração `if` externa, você não precisa mais verificar se a bola atual na iteração é igual à bola que está fazendo a verificação - porque ela não é mais uma bola, é o círculo do mal! Em vez disso, você precisa fazer um teste para ver se a bola que está sendo checada existe (com qual propriedade você poderia fazer isso?). Se não existe, já foi comido pelo círculo do mal, por isso não há necessidade de verificá-lo novamente.
 - Na instrução `if` interna, você não quer mais que os objetos mudem de cor quando uma colisão é detectada — em vez disso, você quer definir quaisquer bolas que colidam com o círculo maligno para não existir mais (novamente, como você pensa? d fazer isso?).
@@ -139,8 +139,8 @@ Agora nós definimos o círculo do mal, precisamos realmente fazer isso aparecer
 
 Para implementar o contador de pontuação, siga os seguintes passos:
 
-1.  No seu arquivo HTML, adicione um elemento {{HTMLElement("p")}} logo abaixo do elemento {{HTMLElement("h1")}} contendo o texto "Contagem de bolas:".
-2.  No seu arquivo CSS, adicione a seguinte regra na parte inferior:
+1. No seu arquivo HTML, adicione um elemento {{HTMLElement("p")}} logo abaixo do elemento {{HTMLElement("h1")}} contendo o texto "Contagem de bolas:".
+2. No seu arquivo CSS, adicione a seguinte regra na parte inferior:
 
     ```css
     p {
@@ -152,7 +152,7 @@ Para implementar o contador de pontuação, siga os seguintes passos:
     }
     ```
 
-3.  Em seu JavaScript, faça as seguintes atualizações:
+3. Em seu JavaScript, faça as seguintes atualizações:
 
     - Crie uma variável que armazene uma referência ao parágrafo.
     - Mantenha uma contagem do número de bolas na tela de alguma forma.

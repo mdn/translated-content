@@ -45,19 +45,19 @@ Você deve aprender o básico das principais linguagens para web(**HTML**, **CSS
 >
 > Se você precisar conferir seu código em relação à nossa versão, você pode encontrar a versão finalizada do código de exemplo da aplicação React em nosso [repositório todo-react](https://github.com/mdn/todo-react). Para uma versão executada ao vivo, veja <https://mdn.github.io/todo-react-build/>.
 
-- [1. ](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)[Começando com o React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [1. Começando com o React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
   - : Neste artigo nós vamos dar olá para o React. Descobriremos um pouco dos detalhes sobre seu histórico e casos de uso, configurar uma cadeia de ferramentas React básica em nosso computador local, e criar e brincar com um aplicativo inicial simples, aprendendo um pouco sobre como o React funciona no processo.
-- [2. ](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)[Começando com a nossa lista "to do" do React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
+- [2. Começando com a nossa lista "to do" do React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - : Digamos que recebemos a tarefa de criar uma prova de conceito em React - uma aplicação que permite aos usuários adicionar, editar e deletar tarefas nas quais desejam trabalhar e também marcar tarefas como concluídas sem excluí-las. Este artigo irá orientá-lo sobre como colocar a estrutura básica e estilizações do componente `App` no lugar, pronto para a definição e interatividade de componentes individuais, que adicionaremos mais tarde.
-- [3. ](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)[Componetizando o nosso app React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
+- [3. Componetizando o nosso app React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - : Neste ponto, nossa aplicação é um monólito. Antes que possamos fazê-lo fazer as coisas, nós precisamos dividi-lo em componentes gerenciáveis e descritivos. React não tem regras rígidas para o que é ou não um componente – isso é com você! Neste artigo mostraremos a você uma forma sensível de dividir nossa aplicação em componentes.
-- [4. ](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)[Interatividade React : Eventos e estado](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
+- [4. Interatividade React : Eventos e estado](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
   - : Com nosso plano de componentes realizado, agora é hora de começar a atualizar nossa aplicação de uma interface de usuário completamente estática para uma que realmente nos permita interagir e alterar as coisas. Neste artigo faremos isso, investigando os eventos e estados ao longo do caminho.
-- [5. ](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)[Interatividade com o React : Editando, filltrando e renderizando](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
+- [5. Interatividade com o React : Editando, filltrando e renderizando](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering)
   - : À medida que nos aproximamos do final da nossa jornada React (pelo menos por enquanto), adicionaremos os toques finais para as principais áreas de funcionalidade da nossa aplicação de lista "to do". Isso inclui permitir que você edite tarefas existentes e filtre a lista de tarefas entre todas as tarefas, concluídas e incompletas. Veremos a renderização condicional da interface de usuário ao longo do caminho.
-- [6. ](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)[Acessibilidade com o React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
+- [6. Acessibilidade com o React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility)
   - : Em nosso artigo tutorial final, vamos focar (trocadilho intencional) na acessibilidade, incluindo o gerenciamento de foco no React, que pode melhorar a usabilidade e reduzir a confusão tanto para os usuários de teclado quanto usuários leitores de tela.
-- [7. ](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)[Recursos do React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
+- [7. Recursos do React](/pt-BR/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources)
   - : Nosso artigo final fornece uma lista de recursos do React que você pode usar para avançar no seu aprendizado.
 
 ## Ember tutorials

@@ -66,9 +66,9 @@ slug: Web/API/PerformanceResourceTiming
 - {{domxref("PerformanceResourceTiming.toJSON()")}}
   - : 返回{{domxref("DOMString")}}，它是 {{domxref("PerformanceResourceTiming")}} 对象的 JSON 表示形式。
 
-## Example
+## 示例
 
-See the example in [Using the Resource Timing API](/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API).
+在[使用 Resource Timing API](/zh-CN/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API) 中查看相关示例。
 
 ## 规范
 
@@ -81,4 +81,4 @@ See the example in [Using the Resource Timing API](/Web/API/Resource_Timing_API/
 ## 参考
 
 - [Resource Timing (Overview)](/Web/API/Resource_Timing)
-- [Using the Resource Timing API](/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)
+- [使用 Resource Timing API](/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)

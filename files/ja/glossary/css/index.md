@@ -27,7 +27,7 @@ p {
 ### 一般知識
 
 - [CSS を学ぶ](/ja/Learn/CSS)
-- Wikipedia の {{interwiki("wikipedia", "CSS")}} 記事
+- Wikipedia の [CSS](https://ja.wikipedia.org/wiki/CSS) 記事
 
 ### 技術的な文書
 

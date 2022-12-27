@@ -36,10 +36,12 @@ translation_of: Web/CSS/::selection
 
 ## Синтаксис
 
-    /* синтаксис Firefox */
-    ::-moz-selection
+```css
+/* синтаксис Firefox */
+::-moz-selection
+```
 
-    {{csssyntax}}
+{{csssyntax}}
 
 ## Пример
 

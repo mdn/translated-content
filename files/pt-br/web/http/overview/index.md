@@ -81,8 +81,8 @@ HTTP é sem estado: não existe uma relação entre duas requisições sendo fei
 
 > **Nota:** \* O problema do carrinho de compras de _e-commerces_ e o protocolo HTTP: como o protocolo HTTP não guarda o estado das requisições e respostas, é **impossível** fazer com que um site guarde as informações de um carrinho de compras **somente através do HTTP**. Por exemplo, imagine que você irá comprar um computador novo e um jogo de xícaras de chá. Para que esses dados possam ser mantidos enquanto você navega no site do _e-commerce_ olhando mais produtos (cada página visitada gera um novo par de requisição/resposta), duas estratégias podem ser usadas, já que o HTTP por si só, não permitiria isso:
 >
-> 1.  Você possui um cadastro no _e-commerce_ e um programa escrito no servidor é responsável por armazenar suas informações do carrinho; ou
-> 2.  Um programa escrito em linguagem cliente (como JavaScript), gerencia essas informações através dos _cookies_ e de bancos de dados que os próprios navegadores disponibilizam para as aplicações, para armazenamento **temporário** dessas informações de carrinho.
+> 1. Você possui um cadastro no _e-commerce_ e um programa escrito no servidor é responsável por armazenar suas informações do carrinho; ou
+> 2. Um programa escrito em linguagem cliente (como JavaScript), gerencia essas informações através dos _cookies_ e de bancos de dados que os próprios navegadores disponibilizam para as aplicações, para armazenamento **temporário** dessas informações de carrinho.
 
 ### HTTP e conexões
 
@@ -115,8 +115,8 @@ Aqui está uma lista de funcionalidades comuns, controláveis com HTTP:
 
 Quando o cliente quer comunicar com um servidor, este sendo um servidor final ou um _proxy_, ele realiza os seguintes passos:
 
-1.  Abre uma conexão TCP: A conexão TCP será usada para enviar uma requisição, ou várias, e receber uma resposta. O cliente pode abrir uma nova conexão, reusar uma conexão existente, ou abrir várias conexões aos servidores.
-2.  Envia uma mensagem HTTP: mensagens HTTP (antes do HTTP/2.0) são legíveis às pessoas. Com o HTTP/2.0, essas mensagens simples são encapsuladas dentro de quadros (_frames_), tornando-as impossíveis de ler diretamente, mas o princípio se mantém o mesmo.
+1. Abre uma conexão TCP: A conexão TCP será usada para enviar uma requisição, ou várias, e receber uma resposta. O cliente pode abrir uma nova conexão, reusar uma conexão existente, ou abrir várias conexões aos servidores.
+2. Envia uma mensagem HTTP: mensagens HTTP (antes do HTTP/2.0) são legíveis às pessoas. Com o HTTP/2.0, essas mensagens simples são encapsuladas dentro de quadros (_frames_), tornando-as impossíveis de ler diretamente, mas o princípio se mantém o mesmo.
 
     ```html
     GET / HTTP/1.1
@@ -124,7 +124,7 @@ Quando o cliente quer comunicar com um servidor, este sendo um servidor final ou
     Accept-Language: fr
     ```
 
-3.  Lê a resposta do servidor:
+3. Lê a resposta do servidor:
 
     ```html
     HTTP/1.1 200 OK
@@ -139,7 +139,7 @@ Quando o cliente quer comunicar com um servidor, este sendo um servidor final ou
     <!DOCTYPE html... (here comes the 29769 bytes of the requested web page)
     ```
 
-4.  Fecha ou reutiliza a conexão para requisições futuras.
+4. Fecha ou reutiliza a conexão para requisições futuras.
 
 Se a linha de montagem (_pipelining_) estiver ativada, várias requisições podem ser enviadas sem que a primeira resposta seja totalmente recebida. A linha de montagem HTTP se provou difícil de ser implementada nas redes existentes, onde peças antigas de _software_ coexistem com versões modernas. A linha de montagem HTTP tem sido substituída no HTTP/2.0 com multiplexação mais robusta de requisições dentro de um quadro (_frame_).
 

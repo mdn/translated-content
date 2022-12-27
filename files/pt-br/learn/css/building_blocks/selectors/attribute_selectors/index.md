@@ -51,8 +51,6 @@ No exemplo abaixo você pode ver esses seletores sendo usados.
 - `li[class="a"]` corresponde a um seletor com uma classe de a, mas não a um seletor com uma classe de a com outra classe separada por espaço como parte do valor. Ele seleciona o segundo item da lista.
 - `li[class~="a"]` corresponderá a uma classe de a, mas também a um valor que contém a classe de a como parte de uma lista separada por espaços em branco. Ele seleciona o segundo e o terceiro itens da lista.
 
-<!---->
-
 {{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 800)}}
 
 ## Seletores de SubString
@@ -93,21 +91,21 @@ Agora que terminamos com os seletores de atributo, você pode continuar no próx
 
 ## In this module
 
-1.  [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2.  [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+2. [CSS selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
 
     - [Type, class, and ID selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Attribute selectors](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-3.  [The box model](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model)
-4.  [Backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5.  [Handling different text directions](/pt-BR/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6.  [Overflowing content](/pt-BR/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7.  [Values and units](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units)
-8.  [Sizing items in CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9.  [Images, media, and form elements](/pt-BR/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
+3. [The box model](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model)
+4. [Backgrounds and borders](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+5. [Handling different text directions](/pt-BR/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
+6. [Overflowing content](/pt-BR/docs/Learn/CSS/Building_blocks/Overflowing_content)
+7. [Values and units](/pt-BR/docs/Learn/CSS/Building_blocks/Values_and_units)
+8. [Sizing items in CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+9. [Images, media, and form elements](/pt-BR/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
 10. [Styling tables](/pt-BR/docs/Learn/CSS/Building_blocks/Styling_tables)
 11. [Debugging CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 12. [Organizing your CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Organizing)

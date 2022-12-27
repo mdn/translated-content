@@ -99,7 +99,7 @@ To add the data, you need to create a new file or files to store your compat dat
 - JS: One file per JS object, contained in [browser-compat-data/javascript/builtins](https://github.com/mdn/browser-compat-data/tree/master/javascript/builtins). The file should be called the exact name of the object, with the casing preserved, e.g. `Date.json` or `InternalError.json`.
 - APIs: One file per interface contained in the API, put in [browser-compat-data/api](https://github.com/mdn/browser-compat-data/tree/master/api). Each file should be called the exact name of the interface, with the casing preserved, e.g. The WebVR API has `VRDisplay.json`, `VRDisplayCapabilities.json`, etc.
 
-> **Nota:** You'll notice that the repo also contains data for [Browser Extensions](/en-US/Add-ons/WebExtensions) and [HTTP](/pt-BR/docs/Web/HTTP). These data sets are basically finished as they stand, but more features may need to be added in the future.
+> **Nota:** You'll notice that the repo also contains data for [Browser Extensions](/pt-BR/Add-ons/WebExtensions) and [HTTP](/pt-BR/docs/Web/HTTP). These data sets are basically finished as they stand, but more features may need to be added in the future.
 
 Each file you create has to follow the pattern defined in the schema contained within our repo; you can see the [detailed schema description here](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md).
 
@@ -137,7 +137,7 @@ In HTML, CSS, and JS pages, you'll normally only need one feature. API interface
 
 Inside a feature `__compat` member, you need to include the following members:
 
-- `mdn_url`: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. `/docs/...` not `/docs/en-US/...` (or whatever). This is added in by the macro when the data is put on the page, for localization purposes.
+- `mdn_url`: Contains the URL of the reference page for this feature on MDN. Note that this needs to be written without the locale directory inside, e.g. `/docs/...` not `/docs/pt-BR/...` (or whatever). This is added in by the macro when the data is put on the page, for localization purposes.
 - `support`: Contains members representing the browser support information for this feature in all the different browsers we want to report.
 - `status`: Contains members reporting the standards track status of this feature.
 

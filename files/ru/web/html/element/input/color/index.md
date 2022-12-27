@@ -96,7 +96,7 @@ colorWell.select();
 
 ### HTML
 
-HTML довольно прост — пара абзацев описательного материала с {{HTMLElement ("input")}} типа `color `с идентификатором `colorWell`, который мы будем использовать для изменения цвета текста абзацев.
+HTML довольно прост — пара абзацев описательного материала с {{HTMLElement ("input")}} типа `color` с идентификатором `colorWell`, который мы будем использовать для изменения цвета текста абзацев.
 
 ```html
 <p>An example demonstrating the use of the <code>&lt;input type="color"&gt;</code>
@@ -138,7 +138,7 @@ function startup() {
 }
 ```
 
-Это возвращает ссылку на элемент color\*\* **`<input>`** \*\*в переменной `colorWell`, а затем устанавливает значение входного цвета в значение `defaultColor`. То цвет входное {{domxref("HTMLElement/input_event", "input")}} событие настроено, чтобы вызвать `updateFirst()` функцию и {{domxref("HTMLElement/change_event", "change")}} событие, вызывается `updateAll()`. Они оба видны ниже.
+Это возвращает ссылку на элемент color **`<input>`** в переменной `colorWell`, а затем устанавливает значение входного цвета в значение `defaultColor`. То цвет входное {{domxref("HTMLElement/input_event", "input")}} событие настроено, чтобы вызвать `updateFirst()` функцию и {{domxref("HTMLElement/change_event", "change")}} событие, вызывается `updateAll()`. Они оба видны ниже.
 
 Наконец, мы вызываем {{domxref ("HTMLInputElement.select", " select ()")}} для выбора текстового содержимого цветового ввода, если элемент управления реализован в виде текстового поля (это не имеет никакого эффекта, если вместо него предусмотрен интерфейс выбора цвета).
 

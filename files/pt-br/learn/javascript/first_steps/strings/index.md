@@ -145,7 +145,7 @@ Em um primeiro relance, strings são tratadas de forma parecida como números, m
 
 ### Criando uma string
 
-1.  Para começar, digite as linhas seguintes:
+1. Para começar, digite as linhas seguintes:
 
     ```js
     var string = 'The revolution will not be televised.';
@@ -154,7 +154,7 @@ Em um primeiro relance, strings são tratadas de forma parecida como números, m
 
     Como fizemos com números, nós declaramos uma variável, inicializando-a com um valor string, e então retornamos o valor. A única diferença aqui é que quando escrevemos uma string, você precisa colocá-la entre aspas.
 
-2.  Se você não fez isso, ou esqueceu uma das aspas, você recebeu um erro. Experimente digitar as linhas seguintes:
+2. Se você não fez isso, ou esqueceu uma das aspas, você recebeu um erro. Experimente digitar as linhas seguintes:
 
     ```js example-bad
     var badString = This is a test;
@@ -164,7 +164,7 @@ Em um primeiro relance, strings são tratadas de forma parecida como números, m
 
     Estas linhas não funcionam porque todo texto sem aspas são interpretados como um nome de variável, propriedade do nome, palavra reservada ou algo assim. Se o navegador não puder encontrar, então um é erro é apresentado (ex.: "faltando; declaração anterior"). Se o navegador puder ver onde a string começa, mas não conseguir encontrar o fim, como indicado com as segundas aspas, é retornado um erro (com "string não terminada"). Se seu programa retorna tais erros, então volte e verifique todas suas strings para ter certeza que não faltam aspas.
 
-3.  O seguinte funcionará se você definiu previamente a variável `string` - tente isto agora:
+3. O seguinte funcionará se você definiu previamente a variável `string` - tente isto agora:
 
     ```js
     var badString = string;
@@ -175,7 +175,7 @@ Em um primeiro relance, strings são tratadas de forma parecida como números, m
 
 ### Aspas simples x aspas duplas
 
-1.  Em JavaScript, você pode escolher aspas simples ou duplas para envolver suas strings. Ambas linhas abaixo funcionará bem:
+1. Em JavaScript, você pode escolher aspas simples ou duplas para envolver suas strings. Ambas linhas abaixo funcionará bem:
 
     ```js
     var sgl = 'Single quotes.';
@@ -184,13 +184,13 @@ Em um primeiro relance, strings são tratadas de forma parecida como números, m
     dbl;
     ```
 
-2.  Há poucas diferenças entre as duas, e qual você usar é de preferência pessoal. Você deve escolher uma e permanecer nela, entretanto; diferentes aspas no código pode ser confuso, especialmente se você usa diferentes aspas na mesma string! O seguinte retornará erro:
+2. Há poucas diferenças entre as duas, e qual você usar é de preferência pessoal. Você deve escolher uma e permanecer nela, entretanto; diferentes aspas no código pode ser confuso, especialmente se você usa diferentes aspas na mesma string! O seguinte retornará erro:
 
     ```js example-bad
     var badQuotes = 'What on earth?";
     ```
 
-3.  O navegador interpretará como a string não tivesse fechada, porque o outro tipo de aspas pode aparecer dentro da sua string. Por exemplo, ambos exemplos abaixo são okay:
+3. O navegador interpretará como a string não tivesse fechada, porque o outro tipo de aspas pode aparecer dentro da sua string. Por exemplo, ambos exemplos abaixo são okay:
 
     ```js
     var sglDbl = 'Would you eat a "fish supper"?';
@@ -199,7 +199,7 @@ Em um primeiro relance, strings são tratadas de forma parecida como números, m
     dblSgl;
     ```
 
-4.  Entretanto, você não pode incluir o mesmo tipo de aspas dentro da sua string, se você usa para conter seu texto. O seguinte será um erro, como é confuso para o navegador onde a string termina:
+4. Entretanto, você não pode incluir o mesmo tipo de aspas dentro da sua string, se você usa para conter seu texto. O seguinte será um erro, como é confuso para o navegador onde a string termina:
 
     ```js example-bad
     var bigmouth = 'I've got no right to take my place...';
@@ -220,7 +220,7 @@ Isto funciona bem. Você pode escapar outros caracteres do mesmo jeito, ex.: `\"
 
 ## Concatenando strings
 
-1.  Concatenar é uma palavra chique da programação que significa "colocar junto". Para colocar strings juntas em JavaScript, usamos o operador (+), o mesmo usamos para adicionar números, mas neste contexto é algo diferente. Vamos tentar este exemplo no console.
+1. Concatenar é uma palavra chique da programação que significa "colocar junto". Para colocar strings juntas em JavaScript, usamos o operador (+), o mesmo usamos para adicionar números, mas neste contexto é algo diferente. Vamos tentar este exemplo no console.
 
     ```js
     var one = 'Hello, ';
@@ -231,14 +231,14 @@ Isto funciona bem. Você pode escapar outros caracteres do mesmo jeito, ex.: `\"
 
     O resultado disso é uma variável chamada `joined`, que contém o valor "Hello, how are you?".
 
-2.  No último exemplo, nós somente juntamos duas strings, mas você pode fazer quantas quiser, contanto que inclua um `+` entre cada uma.Experimente isso:
+2. No último exemplo, nós somente juntamos duas strings, mas você pode fazer quantas quiser, contanto que inclua um `+` entre cada uma.Experimente isso:
 
     ```js
     var multiple = one + one + one + one + two;
     multiple;
     ```
 
-3.  Você pore usar um mix de variáveis e strings reais. Tente isso:
+3. Você pore usar um mix de variáveis e strings reais. Tente isso:
 
     ```js
     var response = one + 'I am fine — ' + two;
@@ -270,7 +270,7 @@ Aqui estamos usando uma função {{domxref("Window.prompt()", "Window.prompt()")
 
 ### Números x strings
 
-1.  Então o que acontece quando tentamos adicionar (ou concatenar) uma string e um número? Vamos tentar isso no console:
+1. Então o que acontece quando tentamos adicionar (ou concatenar) uma string e um número? Vamos tentar isso no console:
 
     ```js
     'Front ' + 242;
@@ -278,14 +278,14 @@ Aqui estamos usando uma função {{domxref("Window.prompt()", "Window.prompt()")
 
     Você pode esperar um erro disto, mas funciona correto. Tentando representar uma string como um número, realmente não faz sentido. Mas representando um número como string, faz. Então o navegador espertamente converte o número em string e concatena as duas.
 
-2.  Você pode fazer isto até com dois números — você pode forçar um número a ser string colocando ele entre aspas. Experimente o seguinte (nós estamos usando o operador `typeof` para checar o que a variável é, se um número ou string):
+2. Você pode fazer isto até com dois números — você pode forçar um número a ser string colocando ele entre aspas. Experimente o seguinte (nós estamos usando o operador `typeof` para checar o que a variável é, se um número ou string):
 
     ```js
     var myDate = '19' + '67';
     typeof myDate;
     ```
 
-3.  Se você tem uma variável numérica que precisa converter em string, mas não mudar completamente, ou uma string e quer converter em número, você pode usar a construção seguinte:
+3. Se você tem uma variável numérica que precisa converter em string, mas não mudar completamente, ou uma string e quer converter em número, você pode usar a construção seguinte:
 
     - O objeto {{jsxref("Number")}} converterá qualquer coisa passada em um número, se for possível. Tente o seguinte:
 

@@ -9,4 +9,4 @@ slug: Glossary/IDE
 
 ### 一般知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "統合開発環境")}}
+- Wikipedia 上の [統合開発環境](https://ja.wikipedia.org/wiki/統合開発環境)

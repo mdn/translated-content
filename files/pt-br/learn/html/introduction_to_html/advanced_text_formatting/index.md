@@ -217,9 +217,9 @@ As citações são estilizadas em fonte itálica por padrão. Você pode ver ess
 
 Hora de outro exemplo de aprendizado ativo! Neste exemplo, gostaríamos que você:
 
-1.  Transforme o parágrafo do meio em uma citação em bloco, que inclui um atributo `cite`.
-2.  Transforme parte do terceiro parágrafo em uma citação embutida, que inclui um atributo de `cite`.
-3.  Inclua um elemento `<cite>` para cada link.
+1. Transforme o parágrafo do meio em uma citação em bloco, que inclui um atributo `cite`.
+2. Transforme parte do terceiro parágrafo em uma citação embutida, que inclui um atributo de `cite`.
+3. Inclua um elemento `<cite>` para cada link.
 
 Pesquise on-line para encontrar fontes de citação apropriadas.
 

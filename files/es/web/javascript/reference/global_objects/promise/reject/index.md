@@ -10,7 +10,6 @@ El método **`Promise.reject(reason)`** retorna un objeto `Promise` que es recha
 
 {{EmbedInteractiveExample("pages/js/promise-reject.html")}}
 
-
 ## Sintaxis
 
 ```

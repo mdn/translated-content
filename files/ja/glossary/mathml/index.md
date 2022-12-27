@@ -7,7 +7,7 @@ slug: Glossary/MathML
 
 1. 一般知識
 
-    1. Wikipedia 上の {{interwiki("wikipedia", "MathML", "MathML")}}
+    1. Wikipedia 上の [MathML](https://ja.wikipedia.org/wiki/MathML)
 
 2. 技術リファレンス
 

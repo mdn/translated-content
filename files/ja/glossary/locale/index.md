@@ -12,4 +12,4 @@ slug: Glossary/Locale
 ### 一般知識
 
 - Wikipedia 上の [Locale](https://en.wikipedia.org/wiki/Locale)（英語）
-- Wikipedia 上の {{Interwiki("wikipedia", "国際化と地域化")}}
+- Wikipedia 上の [国際化と地域化](https://ja.wikipedia.org/wiki/国際化と地域化)

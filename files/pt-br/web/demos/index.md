@@ -85,8 +85,6 @@ Se você conhece uma boa demonstração ou aplicação da tecnologia web aberta,
 
 - [HTML5 Notifications](http://elfoxero.github.io/html5notifications/) ([source code](https://github.com/elfoxero/html5notifications))
 
-<!---->
-
 ### API de áudio da Web
 
 - [Web Audio Fireworks](http://ondras.github.io/fireworks-webgl/)

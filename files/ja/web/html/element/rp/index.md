@@ -68,7 +68,7 @@ slug: Web/HTML/Element/rp
 
 ### ルビの使用
 
-この例はそれぞれの文字に等価な{{interwiki("wikipedia", "ローマ字")}}を表示するためのにルビを使用しています。
+この例はそれぞれの文字に等価な[ローマ字](https://ja.wikipedia.org/wiki/ローマ字)を表示するためのにルビを使用しています。
 
 ```html
 <ruby>

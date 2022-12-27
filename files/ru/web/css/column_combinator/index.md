@@ -19,9 +19,11 @@ col.selected || td {
 
 ## Синтаксис
 
-    column-selector || cell-selector {
-      /* свойства стиля */
-    }
+```
+column-selector || cell-selector {
+  /* свойства стиля */
+}
+```
 
 ## Примеры
 

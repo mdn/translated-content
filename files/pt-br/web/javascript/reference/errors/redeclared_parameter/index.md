@@ -21,7 +21,7 @@ SyntaxError: Identifier "x" has already been declared (Chrome)
 
 ## O que deu errado?
 
-O mesmo nome de variável ocorre como parâmetro da função e é então redeclarada atribuindo [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) no corpo da função. Redeclarando a mesma variável dentro da mesma função ou no escopo do bloco usando `let` não é permitido em JavaScript.
+O mesmo nome de variável ocorre como parâmetro da função e é então redeclarada atribuindo [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let) no corpo da função. Redeclarando a mesma variável dentro da mesma função ou no escopo do bloco usando `let` não é permitido em JavaScript.
 
 ## Exemplos
 
@@ -53,7 +53,7 @@ function f(arg) {
 
 ## Veja também
 
-- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
+- [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let)
+- [`const`](/pt-BR/docs/Web/JavaScript/Reference/Statements/const)
+- [`var`](/pt-BR/docs/Web/JavaScript/Reference/Statements/var)
 - [Declaring variables](/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations) in the [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)

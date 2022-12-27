@@ -58,7 +58,7 @@ O evento **`keypress`** é disparado quando uma tecla que produz um valor do tip
       <td><code>view</code> {{readonlyInline}}</td>
       <td>WindowProxy</td>
       <td>
-        <a href="/en-US/docs/Web/API/Document/defaultView"
+        <a href="/pt-BR/docs/Web/API/Document/defaultView"
           ><code>document.defaultView</code></a
         >( <code>window</code>do documento)
       </td>
@@ -84,7 +84,7 @@ O evento **`keypress`** é disparado quando uma tecla que produz um valor do tip
         imprimível, esse valor será uma string Unicode não vazia contendo esse
         caractere. Se a chave não tiver uma representação imprimível, esta é uma
         string vazia. Veja
-        <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+        <a href="/pt-BR/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
           >nomes de chaves e valores de caracteres</a
         >
         para os detalhes.
@@ -103,16 +103,16 @@ O evento **`keypress`** é disparado quando uma tecla que produz um valor do tip
           O valor-chave da chave representada pelo evento. Se o valor tiver uma
           representação impressa, o valor desse atributo será o mesmo da
           <code>char</code>propriedade. Caso contrário, é uma das cadeias de
-          <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values"
+          <a href="/pt-BR/docs/Web/API/KeyboardEvent/key/Key_Values"
             >valores de chave</a
           >
           especificadas nos
-          <a href="/en-US/docs/Web/API/KeyboardEvent/key/Key_Values"
+          <a href="/pt-BR/docs/Web/API/KeyboardEvent/key/Key_Values"
             >valores de chave</a
           >
           . Se a chave não puder ser identificada, seu valor será a string
           "Unidentified". Veja
-          <a href="/en-US/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
+          <a href="/pt-BR/docs/Web/API/KeyboardEvent#Key_names_and_Char_values"
             >os nomes das chaves e os valores de caracteres</a
           >
           para mais detalhes. Somente leitura.
@@ -135,7 +135,7 @@ O evento **`keypress`** é disparado quando uma tecla que produz um valor do tip
       <td>
         O número de referência Unicode da chave; esse atributo é usado apenas
         pelo
-        <a href="/en-US/docs/Mozilla_event_reference/keypress"
+        <a href="/pt-BR/docs/Mozilla_event_reference/keypress"
           ><code>keypress</code></a
         >evento. Para chaves cujo <code>char</code>atributo contém vários
         caracteres, esse é o valor Unicode do primeiro caractere nesse atributo.

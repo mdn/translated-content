@@ -47,4 +47,4 @@ original_slug: Web/HTML/CORS_settings_attributes
 
 ## Смотрите также
 
-- [HTTP access control](/En/HTTP_access_control "en/HTTP access control")
+- [HTTP access control](/En/HTTP_access_control)

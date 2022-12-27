@@ -11,7 +11,7 @@ translation_of_original: Web/CSS/margin-new
 ---
 {{CSSRef}}
 
-Свойство **`margin`** [CSS](/ru/CSS "CSS") определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.
+Свойство **`margin`** [CSS](/ru/CSS) определяет [внешний отступ](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model) на всех четырёх сторонах элемента. Это сокращение, которое устанавливает все отдельные поля одновременно: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} и {{cssxref("margin-left")}}.
 
 ```css
 /* Применяется ко всем четырём сторонам */
@@ -115,7 +115,7 @@ html,body {
 
 ## Синтаксис
 
-Свойство `margin` может быть задано с использованием одного, двух, трёх или четырёх значений. Каждое значение имеет тип [`<length>`](#<length>), [`<percentage>`](#<percentage>) или является ключевым словом [`auto`](#auto). Каждое значение может быть положительным, отрицательным или равным нулю.
+Свойство `margin` может быть задано с использованием одного, двух, трёх или четырёх значений. Каждое значение имеет тип [`<length>`](#length), [`<percentage>`](#percentage) или является ключевым словом [`auto`](#auto). Каждое значение может быть положительным, отрицательным или равным нулю.
 
 - Когда определено **одно** значение, такое значение определено для **всех четырёх сторон**.
 - Когда определены **два** значения, то первое значение определяет внешний отступ для **верхней и нижней** стороны, а второе значение определяет отступ для **левой и правой стороны**.
@@ -213,5 +213,5 @@ margin: auto;               /* верх и низ: отступ 0 */
 
 ## Смотрите также
 
-- [CSS Box Model](/ru/docs/Web/CSS/box_model "en/CSS/box model")
-- [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing "en/CSS/margin collapsing")
+- [CSS Box Model](/ru/docs/Web/CSS/box_model)
+- [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)

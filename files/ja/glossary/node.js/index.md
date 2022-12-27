@@ -9,7 +9,7 @@ Node.js は、クロスプラットフォームの {{Glossary("JavaScript")}} �
 
 ### 一般知識
 
-- Wikipedia 上の{{Interwiki("wikipedia", "Node.js")}}
+- Wikipedia 上の[Node.js](https://ja.wikipedia.org/wiki/Node.js)
 - [Node.js のウェブサイト](https://nodejs.org/ja/)
 
 ### 技術的情報

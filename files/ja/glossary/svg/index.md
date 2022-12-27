@@ -15,7 +15,7 @@ SVG 画像は、[ベクター画像形式](https://ja.wikipedia.org/wiki/%E3%83%
 
 ### 基礎知識
 
-- Wikipedia 上の {{Interwiki("wikipedia", "Scalable_Vector_Graphics", "SVG")}}
+- Wikipedia 上の [SVG](https://ja.wikipedia.org/wiki/Scalable_Vector_Graphics)
 
 ### SVG を学ぶ
 

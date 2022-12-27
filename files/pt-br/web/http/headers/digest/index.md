@@ -69,4 +69,4 @@ Este cabeçalho foi originalmente definido na [RFC 3230](https://tools.ietf.org/
 
 - {{HTTPHeader("Want-Digest")}}
 - [Requisições de intervalo HTTP](/pt-BR/docs/Web/HTTP/Range_requests)
-- [`206 Partial Content`](/pt-BR/docs/Web/HTTP/Status/206 "The HTTP 206 Partial Content success status response code indicates that the request has succeeded and has the body contains the requested ranges of data, as described in the Range header of the request.")
+- [`206 Partial Content`](/pt-BR/docs/Web/HTTP/Status/206)

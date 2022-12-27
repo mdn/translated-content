@@ -76,7 +76,7 @@ l10n:
         >
       </td>
       <td>
-        {{ Source("/dom/webidl/Event.webidl", "Event.webidl") }}
+        <a href="https://dxr.mozilla.org/mozilla-central/source/dom/webidl/Event.webidl">Event.webidl</a>
       </td>
       <td>
         {{ Non-standard_inline() }} イベントが無名の境界通過以外の理由で再ターゲットされた場合、再ターゲットが発生する前にターゲットに設定されます。例えば、マウスイベントがテキストノードの上で発生した場合、その親ノードに再ターゲットされます（{{ Bug("185889") }}）。その場合、 <code>.target</code> は親ノードを表示し、<code>.explicitOriginalTarget</code> はテキストノードを表示します。

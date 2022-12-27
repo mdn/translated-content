@@ -59,9 +59,9 @@ O texto é difícil de ler devido ao esquema de cores atual. Você pode fazer um
 
 ### HTML semântico
 
-1.  O conteúdo ainda não é muito acessível - relate o que acontece quando você tenta navegar utilizando um leitor de telas.
-2.  Você consegue atualizar o texto do artigo para facilitar a navegação de usuários de leitores de telas?
-3.  A parte do menu de navegação do site (agrupada em `<div class="nav"></div>`) poderia estar mais acessível se estivesse dentro de um elemento semântico de HTML5 mais adequado. Qual elemento deve ser utilizado? Atualize-o.
+1. O conteúdo ainda não é muito acessível - relate o que acontece quando você tenta navegar utilizando um leitor de telas.
+2. Você consegue atualizar o texto do artigo para facilitar a navegação de usuários de leitores de telas?
+3. A parte do menu de navegação do site (agrupada em `<div class="nav"></div>`) poderia estar mais acessível se estivesse dentro de um elemento semântico de HTML5 mais adequado. Qual elemento deve ser utilizado? Atualize-o.
 
 > **Nota:** Você precisará atualizar os seletores de CSS que estilizam as respectivas tags para seus equivalentes aos cabeçalhos semânticos. Depois de adicionar elementos de parágrafo, você perceberá que a estilização parecerá bem melhor.
 
@@ -71,13 +71,13 @@ As imagens estão atualmente inacessíveis para os usuários do leitor de tela. 
 
 ### O "player" de áudio
 
-1.  Foi utilizada o elemento `<audio>` para exibir o "player", porém ele não é acessível para pessoas com deficiência auditiva (surdos) - você consegue adicionar algum tipo de alternativa acessível para esses usuários?
-2.  O elemento `<audio>` para utilizar o "player" não é acessível para aqueles que usam navegadores mais antigos que não suportam HTML5. Como você pode fazer com que esses usuários consigam ter acesso ao áudio?
+1. Foi utilizada o elemento `<audio>` para exibir o "player", porém ele não é acessível para pessoas com deficiência auditiva (surdos) - você consegue adicionar algum tipo de alternativa acessível para esses usuários?
+2. O elemento `<audio>` para utilizar o "player" não é acessível para aqueles que usam navegadores mais antigos que não suportam HTML5. Como você pode fazer com que esses usuários consigam ter acesso ao áudio?
 
 ### Os formulários
 
-1.  O elemento `<input>` no formulário de pesquisa no topo poderia ter um rótulo, mas não queremos adicionar um rótulo de texto visível que possa prejudicar o design e não seja realmente necessário para os usuários com visão. Como você pode adicionar um rótulo acessível apenas aos leitores de tela?
-2.  Os dois elementos `<input>` no formulário de comentários possui rótulos de texto visíveis, mas não estão associados corretamente entre eles. Como você poderia fazer isso? Note que você precisará atualizar algumas regras de CSS também.
+1. O elemento `<input>` no formulário de pesquisa no topo poderia ter um rótulo, mas não queremos adicionar um rótulo de texto visível que possa prejudicar o design e não seja realmente necessário para os usuários com visão. Como você pode adicionar um rótulo acessível apenas aos leitores de tela?
+2. Os dois elementos `<input>` no formulário de comentários possui rótulos de texto visíveis, mas não estão associados corretamente entre eles. Como você poderia fazer isso? Note que você precisará atualizar algumas regras de CSS também.
 
 ### Os controles de comentários "exibir/ocultar"
 

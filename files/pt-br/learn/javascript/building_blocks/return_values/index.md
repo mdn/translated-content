@@ -105,8 +105,8 @@ As chamadas de função na linha são executadas primeiro e seus valores de reto
 
 Vamos escrever nossas próprias funções com valores de retorno.
 
-1.  Primeiro de tudo, faça uma cópia local do arquivo [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) do GitHub. Esta é uma página HTML simples contendo um campo de texto {{htmlelement("input")}} e um parágrafo. Há também um elemento {{htmlelement("script")}} no qual armazenamos uma referência a ambos os elementos HTML em duas variáveis. Esta pequena página permitirá que você insira um número na caixa de texto e exiba diferentes números relacionados a ele no parágrafo abaixo.
-2.  Vamos adicionar algumas funções úteis para este elemento `<script>`. Abaixo das duas linhas existentes de JavaScript, adicione as seguintes definições de função:
+1. Primeiro de tudo, faça uma cópia local do arquivo [function-library.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library.html) do GitHub. Esta é uma página HTML simples contendo um campo de texto {{htmlelement("input")}} e um parágrafo. Há também um elemento {{htmlelement("script")}} no qual armazenamos uma referência a ambos os elementos HTML em duas variáveis. Esta pequena página permitirá que você insira um número na caixa de texto e exiba diferentes números relacionados a ele no parágrafo abaixo.
+2. Vamos adicionar algumas funções úteis para este elemento `<script>`. Abaixo das duas linhas existentes de JavaScript, adicione as seguintes definições de função:
 
     ```js
     function squared(num) {
@@ -129,7 +129,7 @@ Vamos escrever nossas próprias funções com valores de retorno.
 
     As funções `squared()` e `cubed()` são bastante óbvias — elas retornam o quadrado ou cubo do número dado como um parâmetro. A função `factorial()` retorna o [fatorial](https://pt.wikipedia.org/wiki/Fatorial) do número fornecido.
 
-3.  Em seguida, vamos incluir uma maneira de imprimir informações sobre o número digitado na entrada de texto. Digite o seguinte manipulador de eventos abaixo das funções existentes:
+3. Em seguida, vamos incluir uma maneira de imprimir informações sobre o número digitado na entrada de texto. Digite o seguinte manipulador de eventos abaixo das funções existentes:
 
     ```js
     input.onchange = function() {
@@ -150,7 +150,7 @@ Vamos escrever nossas próprias funções com valores de retorno.
 
     Se o teste retorna `false`, o valor `num` é um número, então imprimimos uma frase dentro do elemento de parágrafo informando o que é o quadrado, o cubo e o fatorial do número. A sentença chama as funções `squared()`, `cubed()`, e `factorial()` para obter os valores necessários.
 
-4.  Salve seu código, carregue-o em um navegador e experimente.
+4. Salve seu código, carregue-o em um navegador e experimente.
 
 > **Nota:** Se você tiver problemas para fazer o exemplo funcionar, sinta-se à vontade para verificar seu código na [versão finalizada no GitHub](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html) ([consulte também sua execução](http://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)), ou peça ajuda.
 

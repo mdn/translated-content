@@ -10,14 +10,14 @@ translation_of: Web/HTML/Attributes/min
 original_slug: Web/HTML/Atributos/min
 ---
 <div id="step-include">
-<p><span class="seoSummary">El atributo {{HTMLAttrxRef("min", "input")}} define el valor mínimo que es aceptable y válido para el {{HTMLElement("input")}} que contiene el atributo. Si el {{web.link("/es/docs/Web/HTML/Element/input#attr-value", "value")}} del elemento es menor que esto, el elemento falla la {{web.link("/es/docs/Web/Guide/HTML/HTML5/Constraint_validation", "restricción de validación")}}. Este valor debe ser menor o igual que el valor del atributo {{HTMLAttrxRef("max", "input")}}. Si se especifica un valor para {{HTMLAttrxRef("min", "input")}} que no es un número válido, la entrada no tiene un valor mínimo.</span></p>
+<p><span class="seoSummary">El atributo {{HTMLAttrxRef("min", "input")}} define el valor mínimo que es aceptable y válido para el {{HTMLElement("input")}} que contiene el atributo. Si el <a href="/es/docs/Web/HTML/Element/input#attr-value">value</a> del elemento es menor que esto, el elemento falla la <a href="/es/docs/Web/Guide/HTML/HTML5/Constraint_validation">restricción de validación</a>. Este valor debe ser menor o igual que el valor del atributo {{HTMLAttrxRef("max", "input")}}. Si se especifica un valor para {{HTMLAttrxRef("min", "input")}} que no es un número válido, la entrada no tiene un valor mínimo.</span></p>
 
 <p>Válido para los tipos de entrada numérica, incluidos los tipos {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} y {{HTMLElement("input/range", "range")}}, y el elemento {{htmlelement('meter')}}, el atributo {{HTMLAttrxRef("min", "input")}} es un número que especifica el valor mínimo de un control de formulario para ser considerado válido.</p>
 
 <h3 id="Sintaxis">Sintaxis</h3>
 
 <div id="step-include">
-<p>Si <code>any</code> no se establece explícitamente, los valores válidos para el <code>número</code>, los tipos de entrada de fecha/hora y los tipos de entrada de <code>range</code> son iguales a la base de paso a paso: el valor {{HTMLAttrxRef("min", "input")}} y los incrementos del valor del paso, hasta el valor {{web.link("/es/docs/Web/HTML/Attributes/max", "max")}}, si se especifica. Por ejemplo, si tienes <code>&lt;input type="number" min="10" step="2"&gt;</code>, cualquier entero par, 10 o mayor, es válido. Si se omite, <code>&lt;input type="number"&gt;</code>, cualquier número entero es válido, pero los flotantes, como 4.2, no son válidos, ya que el <code>step</code> predeterminado es 1. Para que 4.2 sea válido, <code>step</code> se debería haber configurado en <code>any</code>, 0.1, 0.2, o cualquiera, el valor mínimo tendría que ser un número terminado en 0.2 , como <code>&lt;input type="number" min="-5.2"&gt;</code></p>
+<p>Si <code>any</code> no se establece explícitamente, los valores válidos para el <code>número</code>, los tipos de entrada de fecha/hora y los tipos de entrada de <code>range</code> son iguales a la base de paso a paso: el valor {{HTMLAttrxRef("min", "input")}} y los incrementos del valor del paso, hasta el valor <a href="/es/docs/Web/HTML/Attributes/max">max</a>, si se especifica. Por ejemplo, si tienes <code>&lt;input type="number" min="10" step="2"&gt;</code>, cualquier entero par, 10 o mayor, es válido. Si se omite, <code>&lt;input type="number"&gt;</code>, cualquier número entero es válido, pero los flotantes, como 4.2, no son válidos, ya que el <code>step</code> predeterminado es 1. Para que 4.2 sea válido, <code>step</code> se debería haber configurado en <code>any</code>, 0.1, 0.2, o cualquiera, el valor mínimo tendría que ser un número terminado en 0.2 , como <code>&lt;input type="number" min="-5.2"&gt;</code></p>
 
 <table class="standard-table">
  <caption>Sintaxis para valores {{HTMLAttrxRef("min", "input")}} por <code>&lt;input type="" /&gt;</code></caption>
@@ -56,12 +56,12 @@ original_slug: Web/HTML/Atributos/min
   </tr>
   <tr>
    <td>{{HTMLElement("input/number", "number")}}</td>
-   <td>{{web.link("/es/docs/Web/CSS/number", "number")}}</td>
+   <td><a href="/es/docs/Web/CSS/number">number</a></td>
    <td><code class="brush: html">&lt;input type="number" min="0" step="5" max="100"&gt;</code></td>
   </tr>
   <tr>
    <td>{{HTMLElement("input/range", "range")}}</td>
-   <td>{{web.link("/es/docs/Web/CSS/number", "number")}}</td>
+   <td><a href="/es/docs/Web/CSS/number">number</a></td>
    <td><code class="brush: html">&lt;input type="range" min="60" step="5" max="100"&gt;</code></td>
   </tr>
  </tbody>
@@ -72,9 +72,9 @@ original_slug: Web/HTML/Atributos/min
 </div>
 </div>
 
-<p>Consulta {{web.link("/es/docs/Web/Guide/HTML/HTML5/Constraint_validation", "Validación del lado del cliente")}} y {{DOMxRef("ValidityState.rangeUnderflow", "rangeUnderflow")}} para más información.</p>
+<p>Consulta <a href="/es/docs/Web/Guide/HTML/HTML5/Constraint_validation">Validación del lado del cliente</a> y {{DOMxRef("ValidityState.rangeUnderflow", "rangeUnderflow")}} para más información.</p>
 
-<p>Para el elemento {{HTMLElement('meter')}}, el atributo {{HTMLAttrxRef("min", "input")}} define el límite numérico inferior del rango medido. Debe ser menor que el valor mínimo (atributo {{web.link("/es/docs/Web/HTML/Attributes/max", "max")}}), si se especifica. En ambos casos, si se omite, el valor predeterminado es 1.</p>
+<p>Para el elemento {{HTMLElement('meter')}}, el atributo {{HTMLAttrxRef("min", "input")}} define el límite numérico inferior del rango medido. Debe ser menor que el valor mínimo (atributo <a href="/es/docs/Web/HTML/Attributes/max">max</a>, si se especifica. En ambos casos, si se omite, el valor predeterminado es 1.</p>
 
 <table class="standard-table">
  <caption>Sintaxis para valores {{HTMLAttrxRef("min", "input")}} para otros elementos</caption>
@@ -88,7 +88,7 @@ original_slug: Web/HTML/Atributos/min
  <tbody>
   <tr>
    <td>{{HTMLElement("meter")}}</td>
-   <td>{{web.link("/es/docs/Web/CSS/number", "number")}}</td>
+   <td><a href="/es/docs/Web/CSS/number">number</a></td>
    <td><code>&lt;meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="40"&gt; at 40/100&lt;/meter&gt;</code></td>
   </tr>
  </tbody>
@@ -147,14 +147,14 @@ original_slug: Web/HTML/Atributos/min
 
 <h2 id="Problemas_de_accesibilidad">Problemas de accesibilidad</h2>
 
-<p>Proporciona instrucciones para ayudar a los usuarios a comprender cómo completar el formulario y utilizar controles de formulario individuales. Indica cualquier entrada requerida y opcional, formatos de datos y otra información relevante. Cuando utilices el atributo {{HTMLAttrxRef("min", "input")}}, asegúrate de que el usuario comprenda este requisito mínimo. Posiblemente sea suficiente proporcionar instrucciones dentro de un {{HTMLElement('label')}}. Si proporcionas instrucciones fuera de las etiquetas, lo cual permite un posicionamiento y un diseño más flexibles, considera usar {{web.link("/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute", "aria-labelledby")}} o {{web.link("/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-descriptionsby_attribute", "aria-describedby")}}.</p>
+<p>Proporciona instrucciones para ayudar a los usuarios a comprender cómo completar el formulario y utilizar controles de formulario individuales. Indica cualquier entrada requerida y opcional, formatos de datos y otra información relevante. Cuando utilices el atributo {{HTMLAttrxRef("min", "input")}}, asegúrate de que el usuario comprenda este requisito mínimo. Posiblemente sea suficiente proporcionar instrucciones dentro de un {{HTMLElement('label')}}. Si proporcionas instrucciones fuera de las etiquetas, lo cual permite un posicionamiento y un diseño más flexibles, considera usar <a href="/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a> o <a href="/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-descriptionsby_attribute">aria-describedby</a>.</p>
 
 <h2 id="Ve_también">Ve también</h2>
 
 <ul>
- <li>{{web.link("/es/docs/Web/HTML/Attributes/step", "step")}}</li>
- <li>{{web.link("/es/docs/Web/HTML/Attributes/max", "max")}}</li>
- <li>{{web.link("/es/docs/Web/Guide/HTML/HTML5/Constraint_validation", "restricciones de validación")}}</li>
+ <li><a href="/es/docs/Web/HTML/Attributes/step">step</a></li>
+ <li><a href="/es/docs/Web/HTML/Attributes/max">max</a></li>
+ <li><a href="/es/docs/Web/Guide/HTML/HTML5/Constraint_validation">restricciones de validación</a></li>
  <li>{{DOMxRef('Constraint_validation')}}</li>
  <li>{{DOMxRef('validityState.rangeUnderflow')}}</li>
  <li>{{CSSxRef(':out-of-range')}}</li>

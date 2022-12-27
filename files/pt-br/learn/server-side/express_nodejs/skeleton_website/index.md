@@ -31,11 +31,11 @@ Neste segundo [Express Tutorial](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tu
 
 ## Visão Geral
 
-Nesse artigo mostraremos como criar a estrutura do website usando a ferramenta "[Express Application Generator](https://expressjs.com/en/starter/generator.html) ". Neste caso, usaremos a ferramenta para criar o framework para nosso [website "LocalLibrary" ](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website), tpara o qual adicionaremos mais tarde todo o outro código necessário para o site. O processo é extremamente simples, com apenas a requisição de invocar o "Generator" na linha de comando com um novo nome de projeto, e, se quiser, especificar o _template_ do site e o gerador de CSS.
+Nesse artigo mostraremos como criar a estrutura do website usando a ferramenta "[Express Application Generator](https://expressjs.com/en/starter/generator.html) ". Neste caso, usaremos a ferramenta para criar o framework para nosso [website "LocalLibrary"](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website), tpara o qual adicionaremos mais tarde todo o outro código necessário para o site. O processo é extremamente simples, com apenas a requisição de invocar o "Generator" na linha de comando com um novo nome de projeto, e, se quiser, especificar o _template_ do site e o gerador de CSS.
 
 As seguintes sessões mostrará como chamar o "Application Generator", e prover uma pequena explicação sobre as diferentes opções de CSS. Também aprenderemos como a estrutura do site é definida. No final, será mostrado como podemos rodar o site para ver se funciona.
 
-> **Nota:** **Nota**: O "_Express Application Generator"_ não é o único gerador para as aplicações do Express, e o projeto gerado não é a única maneira viável de estruturar seus arquivos e diretórios. O site gerado, entretanto, tem um estrutura modular que é fácil de extender e ser entendida. Para aprender melhor sobre a aplicação do "_minimal_ Express", veja [Exemplo"Hello world" ](https://expressjs.com/en/starter/hello-world.html).
+> **Nota:** **Nota**: O "_Express Application Generator"_ não é o único gerador para as aplicações do Express, e o projeto gerado não é a única maneira viável de estruturar seus arquivos e diretórios. O site gerado, entretanto, tem um estrutura modular que é fácil de extender e ser entendida. Para aprender melhor sobre a aplicação do "_minimal_ Express", veja [Exemplo"Hello world"](https://expressjs.com/en/starter/hello-world.html).
 
 ## Usando o "Application Generator"
 
@@ -76,7 +76,7 @@ express
 
 Também pode ser escolhido um "view" (_template)_ usando`--view` e/ou um gerador de CSS usando `--css`.
 
-> **Nota:** As outras opções para escolher os mecanismos de modelo (e.g. `--hogan`, `--ejs`, `--hbs` etc.) são preteridas. Use `--view` (ou` -v`)!
+> **Nota:** As outras opções para escolher os mecanismos de modelo (e.g. `--hogan`, `--ejs`, `--hbs` etc.) são preteridas. Use `--view` (ou `-v`)!
 
 ### Qual _engine_ de "view" devo usar?
 
@@ -167,14 +167,14 @@ At the end of the output, the generator provides instructions on how you install
 
 At this point, we have a complete skeleton project. The website doesn't actually _do_ very much yet, but it's worth running it to show how it works.
 
-1.  First, install the dependencies (the `install` command will fetch all the dependency packages listed in the project's **package.json** file).
+1. First, install the dependencies (the `install` command will fetch all the dependency packages listed in the project's **package.json** file).
 
     ```bash
     cd express-locallibrary-tutorial
     npm install
     ```
 
-2.  Then run the application.
+2. Then run the application.
 
     - On Windows, use this command:
 
@@ -188,7 +188,7 @@ At this point, we have a complete skeleton project. The website doesn't actually
       DEBUG=express-locallibrary-tutorial:* npm start
       ```
 
-3.  Then load <http://localhost:3000/> in your browser to access the app.
+3. Then load `http://localhost:3000/` in your browser to access the app.
 
 You should see a browser page that looks like this:
 
@@ -459,7 +459,7 @@ module.exports = router;
 
 The route defines a callback that will be invoked whenever an HTTP `GET` request with the correct pattern is detected. The matching pattern is the route specified when the module is imported ('`/users`') plus whatever is defined in this file ('`/`'). In other words, this route will be used when an URL of `/users/` is received.
 
-> **Nota:** **Tip:** Try this out by running the server with node and visiting the URL in your browser: <http://localhost:3000/users/>. You should see a message: 'respond with a resource'.
+> **Nota:** **Tip:** Try this out by running the server with node and visiting the URL in your browser: `http://localhost:3000/users/`. You should see a message: 'respond with a resource'.
 
 One thing of interest above is that the callback function has the third argument '`next`', and is hence a middleware function rather than a simple route callback. While the code doesn't currently use the `next` argument, it may be useful in the future if you want to add multiple route handlers to the `'/'` route path.
 
@@ -486,7 +486,7 @@ block content
 
 ## Challenge yourself
 
-Create a new route in **/routes/users.js** that will display the text "_You're so cool"_ at URL `/users/cool/`. Test it by running the server and visiting <http://localhost:3000/users/cool/> in your browser
+Create a new route in **/routes/users.js** that will display the text "_You're so cool"_ at URL `/users/cool/`. Test it by running the server and visiting `http://localhost:3000/users/cool/` in your browser
 
 ## Summary
 

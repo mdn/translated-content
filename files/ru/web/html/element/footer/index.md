@@ -31,7 +31,7 @@ translation_of: Web/HTML/Element/footer
 ## Примечание
 
 - Заключите информацию об авторе в элемент {{HTMLElement("address")}}, который может быть добавлен в элемент `<footer>`.
-- Элемент `<footer>` не относится к секционному контенту, а значит не создаёт новый раздел в [структуре HTML-документа](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document "Разделы и структура документа HTML5").
+- Элемент `<footer>` не относится к секционному контенту, а значит не создаёт новый раздел в [структуре HTML-документа](/ru/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document).
 
 ## Примеры
 

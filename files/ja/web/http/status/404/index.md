@@ -40,4 +40,4 @@ ErrorDocument 404 /notfound.html
 ## 関連情報
 
 - {{HTTPStatus("410")}}
-- {{interwiki("wikipedia", "HTTP_404", "Wikipedia: HTTP 404")}}
+- [Wikipedia: HTTP 404](https://ja.wikipedia.org/wiki/HTTP_404)

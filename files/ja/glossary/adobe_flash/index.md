@@ -14,4 +14,4 @@ Flash は Adobe によって開発された廃れつつある技術で、表現�
 
 5. Wikipedia の記事
 
-    1. {{Interwiki("wikipedia", "Adobe Flash")}}
+    1. [Adobe_Flash](https://ja.wikipedia.org/wiki/Adobe_Flash)

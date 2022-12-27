@@ -43,7 +43,7 @@ Resultado:
 
 ### Atributos globais
 
-- [Atributos centrais](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
+- [Atributos centrais](/en/SVG/Attribute#Core) »
 
 ### Atributos específicos
 
@@ -53,7 +53,7 @@ Resultado:
 
 ## Interface DOM
 
-O elemento implementa a interface do [`SVGStyleElement`](/en/DOM/SVGStyleElement "en/DOM/SVGStyleElement").
+O elemento implementa a interface do [`SVGStyleElement`](/en/DOM/SVGStyleElement).
 
 ## Compatibilidade com navegadores
 
@@ -61,4 +61,4 @@ O elemento implementa a interface do [`SVGStyleElement`](/en/DOM/SVGStyleElement
 
 ## Veja também
 
-- [Elemento \<style> no HTML](/en/HTML/Element/style "en/HTML/Element/style")
+- [Elemento \<style> no HTML](/en/HTML/Element/style)

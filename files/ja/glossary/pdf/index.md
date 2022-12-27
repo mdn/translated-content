@@ -9,4 +9,4 @@ slug: Glossary/PDF
 
 ### 一般知識
 
-- Wikipedia の {{Interwiki("wikipedia", "Portable_Document_Format", "PDF")}}
+- Wikipedia の [PDF](https://ja.wikipedia.org/wiki/Portable_Document_Format)

@@ -9,4 +9,4 @@ slug: Glossary/Copyleft
 
 ### 一般知識
 
-- ウィキペディアの{{Interwiki("wikipedia", "コピーレフト")}}の記事です。
+- ウィキペディアの[コピーレフト](https://ja.wikipedia.org/wiki/コピーレフト)の記事です。

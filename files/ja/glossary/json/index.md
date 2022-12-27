@@ -13,7 +13,7 @@ JSON は伝統的な CSV 形式とは異なり、XML のような階層データ
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "JSON", "JSON")}} の記事
+- Wikipedia の [JSON](https://ja.wikipedia.org/wiki/JSON) の記事
 
 ### 技術リファレンス
 

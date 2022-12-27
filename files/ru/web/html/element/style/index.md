@@ -14,7 +14,7 @@ translation_of: Web/HTML/Element/style
 
 _HTML-элемент **\<style>**_ содержит стилевую информацию для документа или его части. По умолчанию стилевые инструкции внутри этого элемента считаются написанными на [CSS](/ru/docs/Web/CSS).
 
-- _[Категории содержимого](/ru/docs/HTML/Content_categories)_[Metadata content](/ru/docs/Web/HTML/Content_categories#Metadata_content), and if the `scoped` attribute is present: [flow content ](/ru/docs/Web/HTML/Content_categories#Flow_content).
+- _[Категории содержимого](/ru/docs/HTML/Content_categories)_[Metadata content](/ru/docs/Web/HTML/Content_categories#Metadata_content), and if the `scoped` attribute is present: [flow content](/ru/docs/Web/HTML/Content_categories#Flow_content).
 - _Permitted content_ Style information matching the language of the `type` attribute.
 - _Tag omission_ {{no_tag_omission}}
 - _Допустимые родительские элементы_ ...

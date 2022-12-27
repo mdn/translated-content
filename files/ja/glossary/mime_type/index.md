@@ -11,7 +11,7 @@ Windows 上で従来行われていたファイル拡張子と同じ目的を果
 
 ### 一般知識
 
-- Wikipedia 上の {{interwiki("wikipedia", "メディアタイプ")}}
+- Wikipedia 上の [メディアタイプ](https://ja.wikipedia.org/wiki/メディアタイプ)
 
 ### 技術リファレンス
 

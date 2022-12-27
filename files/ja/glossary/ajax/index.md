@@ -11,7 +11,7 @@ AJAX によって、ウェブページ全体を再読み込みせずに、 {{Glo
 
 ## 関連情報
 
-- {{interwiki("wikipedia", "AJAX")}} (ウィキペディア)
+- [AJAX](https://ja.wikipedia.org/wiki/AJAX) (ウィキペディア)
 - [AJAX](/ja/docs/Web/Guide/AJAX)
 - [AJAX - 始めましょう](/ja/docs/Web/Guide/AJAX/Getting_Started)
 - [用語集](/ja/docs/Glossary):

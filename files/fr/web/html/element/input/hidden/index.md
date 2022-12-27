@@ -1,11 +1,6 @@
 ---
 title: <input type="hidden">
-slug: Web/HTML/Element/Input/hidden
-tags:
-  - Element
-  - Input
-  - Reference
-translation_of: Web/HTML/Element/input/hidden
+slug: Web/HTML/Element/input/hidden
 ---
 
 {{HTMLRef}}

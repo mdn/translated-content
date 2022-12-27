@@ -14,7 +14,7 @@ original_slug: Glossary/ルーター
 
 ネットワーク層の文脈:
 
-- {{Interwiki("wikipedia", "ルーター")}} (ウィキペディア)
+- [ルーター](https://ja.wikipedia.org/wiki/ルーター) (ウィキペディア)
 
 アプリケーション層の SPA の文脈 (主要な SPA フレームワークのライブラリー):
 

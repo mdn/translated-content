@@ -13,4 +13,4 @@ slug: Glossary/Dynamic_typing
 
 ### 一般知識
 
-- Wikipedia の {{interwiki("wikipedia", "型システム#静的型付けと動的型付け_2", "型システム")}}
+- Wikipedia の [型システム](https://ja.wikipedia.org/wiki/型システム#静的型付けと動的型付け_2)

@@ -313,7 +313,7 @@ Access-Control-Allow-Origin: <origin> | *
 
 El parámetro `origin` específica una URI que puede tener acceso al recurso. El explorador debe asegurar esto. Para solicitudes **sin** credenciales, el servidor debe especificar "\*" como un comodín permitiendo, de este modo, el acceso al recurso a cualquier origen.
 
-Por ejemplo, para permitir a http\://mozilla.com acceder al recurso, usted puede especificar:
+Por ejemplo, para permitir a `http://mozilla.com` acceder al recurso, usted puede especificar:
 
 ```
 Access-Control-Allow-Origin: http://mozilla.com

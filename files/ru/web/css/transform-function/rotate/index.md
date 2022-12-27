@@ -19,7 +19,9 @@ original_slug: Web/CSS/transform-function/rotate()
 
 ## Синтаксис
 
-    rotate(a)
+```
+rotate(a)
+```
 
 ## Значения
 

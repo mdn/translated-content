@@ -9,4 +9,4 @@ slug: Glossary/Engine
 
 ### 一般知識
 
-- Wikipedia の{{Interwiki("wikipedia", "en:JavaScript engine")}}の記事
+- Wikipedia の [JavaScript エンジン](https://ja.wikipedia.org/wiki/JavaScriptエンジン)の記事

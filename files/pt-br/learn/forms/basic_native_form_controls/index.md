@@ -542,7 +542,7 @@ There are a few other widgets that cannot be easily classified due to their very
 
 ### File picker
 
-HTML forms are able to send files to a server; this specific action is detailed in the article [Sending and retrieving form data](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data "/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data"). The file picker widget is how the user can choose one or more files to send.
+HTML forms are able to send files to a server; this specific action is detailed in the article [Sending and retrieving form data](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data). The file picker widget is how the user can choose one or more files to send.
 
 To create a file picker widget, you use the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to `file`. The types of files that are accepted can be constrained using the {{htmlattrxref("accept","input")}} attribute. In addition, if you want to let the user pick more than one file, you can do so by adding the {{htmlattrxref("multiple","input")}} attribute.
 
@@ -585,7 +585,7 @@ So for example when you click on the image of this widget, you are sent to a URL
 http://foo.com?pos.x=123&pos.y=456
 ```
 
-This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the [Sending and retrieving form data](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data "/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data") article.
+This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the [Sending and retrieving form data](/pt-BR/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data) article.
 
 ### Meters and progress bars
 

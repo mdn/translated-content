@@ -9,7 +9,7 @@ slug: Glossary/Apple_Safari
 
 ### 基礎知識
 
-- ウィキペディア上の記事「{{Interwiki("wikipedia", "Safari (web browser)", "Safari")}}」
+- ウィキペディア上の記事「[Safari](https://ja.wikipedia.org/wiki/Safari)」
 - [apple.com の Safari](https://www.apple.com/safari/)
 
 ### 技術情報

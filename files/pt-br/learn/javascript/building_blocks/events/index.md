@@ -54,7 +54,7 @@ No caso da web, eventos são disparados dentro da janela do navegador, e tende a
 - Um video sendo reproduzido, interrompido, ou terminando sua reprodução.
 - Um erro ocorrendo.
 
-Você vai perceber com isso (e dando uma olhada no [Event reference](/pt-BR/docs/Web/Events) MDN) que\*\* **há uma **série\*\* de eventos que podem ser utilizados.
+Você vai perceber com isso (e dando uma olhada no [Event reference](/pt-BR/docs/Web/Events) MDN) que **há uma** série de eventos que podem ser utilizados.
 
 Cada evento disponivel possui um **manipulador de eventos** (event handler), que é um bloco de código (geralmente uma função JavaScript definida pelo usuário) que será executado quando o evento for disparado. Quando esse bloco de código é definido para rodar em resposta a um evento que foi disparado, nós dizemos que estamos **registrando um manipulador de eventos**. Note que manipuladores de eventos são, em alguns casos, chamados de **ouvinte de eventos** (event listeners) — eles são praticamente intercambiáveis para nossos propósitos, embora estritamente falando, eles trabalhem juntos. Os ouvintes escutam o evento acontecendo, e o manipulador é o codigo que roda em resposta a este acontecimento.
 
