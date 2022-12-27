@@ -126,39 +126,57 @@ Web 最常用的图像格式是：
     > **备注：** 仅在启用 JavaScript 时才会延迟加载。这是一种反跟踪的措施，因为，如果用户代理在禁用脚本的情况下支持延迟加载，网站仍然跨源通过在图像中策略性地放置图像来跟踪用户在整个会话期间的大致滚动位置，这样服务器可以跟踪请求了多少图像以及请求在何时发起。
 
 - {{htmlattrdef("referrerpolicy")}}
-  - : 一个字符串，指示在获取资源时使用的引荐来源（referrer）：
+  - : 一个字符串，指示在获取资源时使用的来源地址（referrer）：
 
     - `no-referrer`：不会发送 {{httpheader("Referer")}} 标头。
     - `no-referrer-when-downgrade`：若未使用 {{Glossary("TLS")}}（{{glossary("HTTPS")}}）导航到源站，则不发送 `Referer` 标头。
-    - `origin`：发送到源站的 referrer 将被限制为：[协议](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)、{{Glossary("host")}} 和 {{Glossary("port")}}。
-    - `origin-when-cross-origin`: The referrer sent to other origins will be limited to the scheme, the host, and the port. Navigations on the same origin will still include the path.
-    - `same-origin`: A referrer will be sent for {{Glossary("Same-origin policy", "same origin")}}, but cross-origin requests will contain no referrer information.
-    - `strict-origin`: Only send the origin of the document as the referrer when the protocol security level stays the same (HTTPS→HTTPS), but don't send it to a less secure destination (HTTPS→HTTP).
-    - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
-    - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
+    - `origin`：发送到源站的来源地址将被限制为：[协议](/zh-CN/docs/Learn/Common_questions/What_is_a_URL)、{{Glossary("host", "主机")}} 和 {{Glossary("port", "端口")}}。
+    - `origin-when-cross-origin`：发送到其它来源的来源地址会被限制为协议、主机和端口。同源导航仍将包含路径。
+    - `same-origin`：仅{{Glossary("Same-origin policy", "同源")}}请求发送来源地址，而跨源请求则不包含来源地址信息。
+    - `strict-origin`：仅在协议安全级别保持不变（HTTPS→HTTPS）的情况下将文档的来源作为来源地址发送。而在目标的安全性降低（HTTPS→HTTP）时则不发送来源地址。
+    - `strict-origin-when-cross-origin`（默认值）：执行同源请求时发送完整的 URL，且仅在协议安全级别保持不变（HTTPS→HTTPS）时发送来源（origin），在目标安全性降低（HTTPS→HTTP）时则不发送来源。
+    - `unsafe-url`：来源地址包括来源（origin）*和*路径（path）（但不包括 [分片](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为它将来源和路径从受 TLS 保护的资源泄露到不安全的来源。
 
 - {{htmlattrdef("sizes")}}
-  - : 表示资源大小的、以逗号隔开的一个或多个字符串。每一个资源大小包括：1. 一个[媒体条件](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax)。最后一项一定是被忽略的。2. 一个资源尺寸的值。Media Conditions describe properties of the _viewport_, not of the _image_. For example, `(max-height: 500px) 1000px` proposes to use a source of 1000px width, if the _viewport_ is not higher than 500px.资源尺寸的值被用来指定图像的预期尺寸。当 `srcset` 中的资源使用了宽度描述符 `w` 时，{{glossary("User agent", "用户代理")}}会使用当前图像大小来选择 `srcset` 中合适的一个图像 URL。被选中的尺寸影响图像的{{glossary("intrinsic size", "显示大小")}}（如果没有影响大小的 {{glossary("CSS")}} 样式被应用的话）。如果没有设置 `srcset` 属性，或者没有属性值，那么 `sizes` 属性也将不起作用。
+  - : 表示资源大小的、以逗号隔开的一个或多个字符串。每一个资源大小包括：
+
+    1. 一个[媒体条件](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Syntax)。最后一项一定是被忽略的。
+    2. 一个资源大小的值。
+
+    媒体条件描述*视口*的属性，而不是*图像*的属性。例如，如果*视口*不高于 500px，则建议使用 1000px 宽的资源：`(max-height: 500px) 1000px`。
+
+    资源尺寸的值被用来指定图像的预期尺寸。当 `srcset` 中的资源使用了宽度描述符 `w` 时，{{glossary("User agent", "用户代理")}}会使用当前图像大小来选择 `srcset` 中合适的一个图像 URL。被选中的尺寸影响图像的{{glossary("intrinsic size", "显示大小")}}（如果没有影响大小的 {{glossary("CSS")}} 样式被应用的话）。如果没有设置 `srcset` 属性，或者没有属性值，那么 `sizes` 属性也将不起作用。
+
 - {{htmlattrdef("src")}}
-  - : 图像的 {{glossary("URL")}}，这个属性对 `<img>` 元素来说是必需的。在支持 `srcset` 的浏览器中，`src` 被当做拥有一个像素密度的描述符 `1x` 的候选图像处理，除非一个图像拥有这个像素密度描述符已经被在 `srcset` 或者 `srcset` 包含 `w` 描述符中定义了。
+  - : 图像的 {{glossary("URL")}}，这个属性对 `<img>` 元素来说是必需的。在支持 `srcset` 的{{glossary("Browser", "浏览器")}}中，`src` 被当做拥有一个像素密度的描述符 `1x` 的候选图像处理，除非一个图像拥有这个像素密度描述符已经被在 `srcset` 或者 `srcset` 包含 `w` 描述符中定义了。
 - {{htmlattrdef("srcset")}}
 
-  - : 以逗号分隔的一个或多个字符串列表表明一系列用户代理使用的可能的图像。每一个字符串由以下组成：1. 指向图像的 {{glossary("URL")}}。2. 可选地，再加一个空格之后，附加以下的其一：
+  - : 以逗号分隔的一个或多个字符串列表表明一系列用户代理使用的可能的图像。每一个字符串由以下组成：
 
-    - 一个宽度描述符，这是一个正整数，后面紧跟 '`w`' 符号。该整数宽度除以 sizes 属性给出的资源（source）大小来计算得到有效的像素密度，即换算成和 x 描述符等价的值。
-    - 一个像素密度描述符，这是一个正浮点数，后面紧跟 '`x`' 符号。如果没有指定源描述符，那它会被指定为默认的 `1x`。在相同的 `srcset` 属性中混合使用宽度描述符和像素密度描述符时，会导致该值无效。重复的描述符（比如，两个源在相同的 `srcset` 两个源都是 `2x`）也是无效的。The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or {{glossary("bandwidth")}} conditions. See our [Responsive images](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) tutorial for an example.
+    1. 指向图像的 {{glossary("URL")}}。
+    2. 可选地，再加一个空格之后，附加以下的其一：
+
+        - 一个宽度描述符（一个正整数，后面紧跟 `w` 符号）。该整数宽度除以 `sizes` 属性给出的资源（source）大小来计算得到有效的像素密度，即换算成和 x 描述符等价的值。
+        - 一个像素密度描述符（一个正浮点数，后面紧跟 `x` 符号）。
+
+    如果没有指定源描述符，那它会被指定为默认的 `1x`。
+
+    在相同的 `srcset` 属性中混合使用宽度描述符和像素密度描述符时，会导致该值无效。重复的描述符（比如，两个源在相同的 `srcset` 两个源都是 `2x`）也是无效的。
+
+    用户代理自行决定选择任何可用的来源。这位它们提供了一个很大的选择余地，可以根据用户偏好或{{glossary("bandwidth", "带宽")}}条件等因素来进行选择。有关示例，可以参阅[响应式图像](/zh-CN/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)教程。
 
 - {{htmlattrdef("width")}}
-  - : 图像的宽度，在单位是 CSS 像素。
+  - : 图像的宽度，以像素为单位。必须是没有单位的整数。
 - {{htmlattrdef("usemap")}}
-  - : 与元素相关联的 [image map](/zh-CN/docs/HTML/Element/map) 的部分 URL（以 '#' 开始的部分）。
+  - : 与元素相关联的[图像映射（image map）](/zh-CN/docs/HTML/Element/map)的部分 URL（以 `#` 开始的部分）。
 
     > **备注：** 如果 `<img>` 元素是 {{htmlelement("a")}} 或 {{HTMLElement("button")}} 元素的后代元素则不能使用这个属性。
 
 ### 已废弃的属性
 
-- {{htmlattrdef("align")}} {{Deprecated_Inline}} 使用 {{cssxref('vertical-align')}} CSS 属性
-  - : 图像相对于它周围上下文的对齐。使用 {{cssxref('float')}} 和/或 {{cssxref('vertical-align')}} 这两个 {{glossary("CSS")}} 属性作为代替，而不是这个废弃的属性。允许的值：
+- {{htmlattrdef("align")}} {{Deprecated_Inline}}
+  - : 图像相对于它周围上下文的对齐。使用 {{cssxref('float')}} 和/或 {{cssxref('vertical-align')}} 这两个 {{glossary("CSS")}} 属性作为代替。允许的值：
+
     - `top`
       - : 等价于 `vertical-align: top` 或 `vertical-align: text-top`
     - `middle`
@@ -169,30 +187,30 @@ Web 最常用的图像格式是：
       - : 等价于 `float: left`
     - `right`
       - : 等价于 `float: right`
+
 - {{htmlattrdef("border")}} {{Deprecated_Inline}}
   - : 图像周围的边框宽度。使用 {{glossary("CSS")}} 属性 {{cssxref('border')}} 代替此废弃属性。
 - {{htmlattrdef("hspace")}} {{Deprecated_Inline}}
   - : 插入到图像的左侧和右侧的空白像素的值。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。
 - {{htmlattrdef("longdesc")}} {{Deprecated_Inline}}
-  - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其他元素的 {{htmlattrxref("id")}}。
+  - : 一个指向更详细的图像描述的链接。可能的值是一个 {{glossary("URL")}} 或一个页面上其它元素的 {{htmlattrxref("id")}}。
 
-    > **备注：** 此属性的当前最新的 {{glossary("W3C")}} 版本，[HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc) 中被提到，但在 {{glossary("WHATWG")}} 组织的 [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) 中依然处于被移除的状态。它的未来尚无定数；authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
+    > **备注：** 此属性在当前最新的 {{glossary("W3C")}} 版本——[HTML 5.2](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc) 中被提到，但在 {{glossary("WHATWG")}} 组织的 [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element) 中依然处于被移除的状态。它的未来尚无定数；开发者应使用 {{glossary("WAI")}}-{{glossary("ARIA")}} 这一代替方法，例如：[`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) 或 [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details)。
+
 - {{htmlattrdef("name")}} {{Deprecated_Inline}}
   - : 元素的名字。使用 {{htmlattrxref("id")}} 属性代替此废弃属性。
 - {{htmlattrdef("vspace")}} {{Deprecated_Inline}}
   - : 插入到图像的上方和下方的空白像素的数组。使用 CSS 属性 {{cssxref('margin')}} 代替此废弃属性。
 
-## 使用 CSS 为 `<img>` 附加样式
+## 使用 CSS 添加样式
 
-`<img>` 是一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)。它的 {{cssxref("display")}} 属性的默认值是 `inline`，但是它的默认分辨率是由被嵌入的图片的原始宽高来确定的，使得它就像 `inline-block` 一样。你可以为 `<img>` 设置 {{cssxref("border")}}/{{cssxref("border-radius")}}、{{cssxref("padding")}}/{{cssxref("margin")}}、{{cssxref("width")}}、{{cssxref("height")}} 等等的 CSS 属性。
+`<img>` 是一个[可替换元素](/zh-CN/docs/Web/CSS/Replaced_element)。它的 {{cssxref("display")}} 属性的默认值是 `inline`，但是它的默认分辨率是由被嵌入的图片的原始宽高来确定的，使得它就像 `inline-block` 一样。你可以为 `<img>` 设置 {{cssxref("border")}}/{{cssxref("border-radius")}}、{{cssxref("padding")}}/{{cssxref("margin")}}、{{cssxref("width")}}、{{cssxref("height")}} 等 CSS 属性。
 
-`<img>` 没有基线（baseline），这意味着，当在一个行内格式的上下文（an inline formatting context）中使用 {{cssxref("vertical-align")}}`: baseline` 时，图像的底部将会与容器的文字基线对齐。
+`<img>` 没有基线（baseline），这意味着，当在一个内联格式化上下文（inline formatting context）中使用 {{cssxref("vertical-align")}}`: baseline` 时，图像的底部将会与容器的文字基线对齐。
 
-You can use the {{cssxref("object-position")}} property to position the image within the element's box, and the {{cssxref("object-fit")}} property to adjust the sizing of the image within the box (for example, whether the image should fit the box or fill it even if clipping is required).
+你可以使用 {{cssxref("object-position")}} 属性将图形定位在元素的框内，并使用 {{cssxref("object-fit")}} 属性调整框内图像的大小（例如，如果图像需要裁剪，则其是否需要调整以符合框的大小，或填满整个框）。
 
-根据图像文件的类型，图像可能会有一个原始分辨率（intrinsic dimension）或者叫原始宽高。对于一些类型的图像，原始分辨率并不是必要的。比如说，{{glossary("SVG")}} 图像，如果它们的根 {{SVGElement("svg")}} 元素没有 `width` 或 `height` 属性，SVG 图像就可以没有原始分辨率。
-
-> **备注：** 原始分辨率/原始宽高是图像的固有属性，基本上就是图像本身的分辨率/宽高。只与图像本身有关，与 `<img>` 元素的属性、显示分辨率等等无关。点阵图像通常有且只有一个随图片宽高变化的原始分辨率，而矢量图像可以没有。不过，编辑矢量图像时，通常可以手动/编辑器自动为其设置原始分辨率。
+根据图像的类型，其可能会有一个原始的宽和高（原始分辨率）。对于一些类型的图像，原始分辨率并不是必要的。比如说，{{glossary("SVG")}} 图像，如果它们的根 {{SVGElement("svg")}} 元素没有 `width` 或 `height` 属性，SVG 图像就可以没有原始分辨率。
 
 ## 示例
 
@@ -201,8 +219,7 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 下面的示例将图像嵌入到页面中，且包含用于改善无障碍的备用文本。
 
 ```html
-<img src="favicon144.png"
-     alt="MDN logo">
+<img src="favicon144.png" alt="MDN logo" />
 ```
 
 {{ EmbedLiveSample('备用文字', '100%', '160') }}
@@ -213,35 +230,32 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 
 ```html
 <a href="https://developer.mozilla.org">
-  <img src="favicon144.png"
-       alt="Visit the MDN site">
+  <img src="favicon144.png" alt="Visit the MDN site" />
 </a>
 ```
 
 {{ EmbedLiveSample('图像链接', '100%', '160') }}
 
-### 使用 `srcset` 属性
+### 使用 srcset 属性
 
 在这个例子中，我们包含了一个 `srcset` 属性，它引用了 MDN 标志高清版本；在高分辨率设备上，它将被优先加载，取代 `src` 属性中的图像。在支持 `srcset` 的{{glossary("User agent", "用户代理")}}中，`src` 属性中的图片被作为 `1x` 候选项。
 
 ```html
- <img src="favicon72.png"
-      alt="MDN logo"
-      srcset="favicon144.png 2x">
+<img src="favicon72.png" alt="MDN logo" srcset="favicon144.png 2x" />
 ```
 
-{{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}
+{{EmbedLiveSample("使用 srcset 属性", "100%", "160")}}
 
-### 使用 `srcset` 和 `sizes` 属性
+### 使用 srcset 和 sizes 属性
 
-在支持 `srcset` 的用户代理中，当使用 `w` 描述符时，src 属性会被忽略。当匹配了媒体条件 `(max-width: 600px)` 时，图像将宽 200px，否则宽 50vw（视图宽度的 50%）。
+在支持 `srcset` 的用户代理中，当使用 `w` 描述符时，`src` 属性会被忽略。当匹配了媒体条件 `(max-width: 600px)` 时，将加载 200 像素宽的图像（最匹配的图像），否则将加载另一幅图像。
 
 ```html
- <img src="clock-demo-200px.png"
-      alt="Clock"
-      srcset="clock-demo-200px.png 200w,
-          clock-demo-400px.png 400w"
-      sizes="(max-width: 600px) 200px, 50vw">
+<img
+  src="clock-demo-200px.png"
+  alt="Clock"
+  srcset="clock-demo-200px.png 200w, clock-demo-400px.png 400w"
+  sizes="(max-width: 600px) 200px, 50vw" />
 ```
 
 {{EmbedLiveSample("使用 srcset 和 sizes 属性", "100%", 350)}}
@@ -250,13 +264,13 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 
 ## 安全与隐私方面的考量
 
-虽然 `<img>` 元素的用途是很单纯（原文：innocent）的，但是它们可对用户安全和隐私造成不良的后果。See [Referer header: privacy and security concerns](/zh-CN/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for more information and mitigations.
+虽然 `<img>` 元素的用途是很单纯（innocent）的，但是它们可对用户安全和隐私造成不良的后果。参见 [Referer 标头：隐私与安全性考量](/zh-CN/docs/Web/Security/Referer_header:_privacy_and_security_concerns)以获取更多信息和缓解措施。
 
 ## 无障碍考量
 
 ### 使用有实际意义的备用描述
 
-`alt` 属性的值应该清晰、简洁地描述图像的内容。它不应该描述“图像的存在”，或仅仅包含图像的文件名。如果因为图像没有等价的文本描述， `alt` 属性只得不写或留白，那么可以考虑使用其他方法来呈现图像试图传递的内容。
+`alt` 属性的值应该清晰、简洁地描述图像的内容。它不应该描述“图像的存在”，或仅仅包含图像的文件名。如果因为图像没有等价的文本描述，`alt` 属性只得不写或留白，那么可以考虑使用其它方法来呈现图像试图传递的内容。
 
 #### 不要
 
