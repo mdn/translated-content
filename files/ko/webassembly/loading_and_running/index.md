@@ -1,7 +1,6 @@
 ---
 title: Loading and running WebAssembly code
 slug: WebAssembly/Loading_and_running
-translation_of: WebAssembly/Loading_and_running
 ---
 {{WebAssemblySidebar}}
 

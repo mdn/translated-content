@@ -8,7 +8,7 @@ slug: Web/HTML/Element/Input/week
 
 {{EmbedInteractiveExample("pages/tabbed/input-week.html", "tabbed-shorter")}}
 
-控件的用户界面因浏览器而异；跨浏览器的支持目前受到限制，目前只有 Chrome/Opera 和 Microsoft Edge 支持。在不支持的浏览器中，该控件会优雅降级至与 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 相同的功能。
+控件的用户界面因浏览器而异；跨浏览器的支持目前受到限制，目前只有 Chrome/Opera 和 Microsoft Edge 支持。在不支持的浏览器中，该控件会优雅降级至与 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/Input/text) 相同的功能。
 
 在 Chrome/Opera 中，`week` 控件提供了用于填写星期和年的插槽，弹出式日历界面（可以更直观地选择它们）以及“X”按钮以清除控件的值。
 
@@ -231,13 +231,13 @@ input:valid + span::after {
 - `2017-W01`
 - 等等。
 
-目前，以跨浏览器方式处理星期/年的最佳方法是让用户在单独的控件中输入星期数和年份（特别是在 ({{htmlelement("select")}} 元素中，参见下面的示例），或使用 JavaScript 库（例如 [jQuery 日期选择器](https://jqueryui.com/datepicker/)。
+目前，以跨浏览器方式处理星期/年的最佳方法是让用户在单独的控件中输入星期数和年份（特别是在 {{htmlelement("select")}} 元素中，参见下面的示例），或使用 JavaScript 库（例如 [jQuery 日期选择器](https://jqueryui.com/datepicker/)）。
 
-## 例子
+## 示例
 
 在此示例中，我们创建了两组用于选择星期的 UI 元素：使用 `<input type="week">` 创建的原生选择器，以及为不支持 `week` 输入类型的旧版浏览器准备的两个用于选择星期/年的 {{htmlelement("select")}} 元素。
 
-{{EmbedLiveSample('例子', 600, 140)}}
+{{EmbedLiveSample('示例', 600, 140)}}
 
 HTML 看起来像这样：
 
@@ -361,5 +361,5 @@ function populateWeeks() {
 
 - 通用 {{HTMLElement("input")}} 元素和用于操作该元素的接口 {{domxref("HTMLInputElement")}}
 - [HTML 中使用的日期和时间格式](/zh-CN/docs/Web/HTML/Date_and_time_formats)
-- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/input/date)、[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month)
+- [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/Input/datetime-local)、[`<input type="date">`](/zh-CN/docs/Web/HTML/Element/Input/date)、[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/Input/time) 和 [`<input type="month">`](/zh-CN/docs/Web/HTML/Element/Input/month)
 - [表单控件 CSS 兼容性列表](/zh-CN/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

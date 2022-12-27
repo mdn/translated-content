@@ -65,8 +65,8 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
  <dt>{{CSP("media-src")}}</dt>
  <dd>Especifica origens válidas para carregar dados de media usando os elementos {{HTMLElement("audio")}} , {{HTMLElement("video")}} e {{HTMLElement("track")}}.</dd>
  <dt>{{CSP("object-src")}}</dt>
- <dd>Especifica origens válidas para os elementos {{HTMLElement("object")}}, {{HTMLElement("embed")}}, e {{HTMLElement("applet")}}.</dd>
- <dd class="note">Elementos controlados por <code>object-src</code> sejam talvez considerados elementos HTML legados e não estão recebendo novas funcionalidades padrão (como os atributos de segurança <code>sandbox</code> ou <code>allow</code> para <code>&lt;iframe&gt;</code>). Sendo assim é <strong>recomendado</strong> restringir o uso desta diretiva (e.g. colocar explicitamente <code>object-src 'none'</code> se possível).</dd>
+ <dd>Especifica origens válidas para os elementos {{HTMLElement("object")}}, {{HTMLElement("embed")}}, e {{HTMLElement("applet")}}.
+ <div class="note">Elementos controlados por <code>object-src</code> sejam talvez considerados elementos HTML legados e não estão recebendo novas funcionalidades padrão (como os atributos de segurança <code>sandbox</code> ou <code>allow</code> para <code>&lt;iframe&gt;</code>). Sendo assim é <strong>recomendado</strong> restringir o uso desta diretiva (e.g. colocar explicitamente <code>object-src 'none'</code> se possível).</div></dd>
  <dt>{{CSP("prefetch-src")}}{{experimental_inline}}</dt>
  <dd>Especifica origens válidas para serem pré-carregadas ou pré-renderizadas.</dd>
  <dt>{{CSP("script-src")}}</dt>
@@ -75,9 +75,6 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
  <dd>Especifica origens válidas para elementos JavaScript {{HTMLElement("script")}}.</dd>
  <dt>{{CSP("script-src-attr")}}{{experimental_inline}}</dt>
  <dd>Especifica origens válidas para <em>handlers</em> de eventos JavaScript <em>inline</em>.</dd>
-</dl>
-
-<dl>
  <dt>{{CSP("style-src")}}</dt>
  <dd>Especifica origens válidas para arquivos de estilo.</dd>
  <dt>{{CSP("style-src-elem")}}{{experimental_inline}}</dt>

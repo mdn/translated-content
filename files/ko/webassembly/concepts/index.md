@@ -1,7 +1,6 @@
 ---
 title: 웹어셈블리의 컨셉
 slug: WebAssembly/Concepts
-translation_of: WebAssembly/Concepts
 ---
 {{WebAssemblySidebar}}
 

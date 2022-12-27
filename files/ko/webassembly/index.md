@@ -1,13 +1,6 @@
 ---
 title: 웹어셈블리
 slug: WebAssembly
-tags:
-  - Landing
-  - NeedsTranslation
-  - TopicStub
-  - WebAssembly
-  - wasm
-translation_of: WebAssembly
 ---
 {{WebAssemblySidebar}}
 

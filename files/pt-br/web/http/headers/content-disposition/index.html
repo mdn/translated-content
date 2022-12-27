@@ -56,8 +56,8 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"</pre>
 
 <dl>
  <dt><code>name</code></dt>
- <dd>O nome é seguido por uma cadeia de caracteres contendo o nome do campo HTML no formulário que o conteúdo dessa subparte se refere. Quando lidando com múltiplos arquivos no mesmo campo (por exemplo, o atributo {{htmlattrxref("multiple", "input")}} de um elemento <code>{HTMLElement("input","&lt;input type=\"file\"&gt;")}}</code>), podem haver diversas subpartes com o mesmo nome.</dd>
- <dd>Um <code>name</code> com o valor de <code>'_charset_'</code> indica que a parte não é um campo HTML, mas uma codificação para usar em partes sem explicitar a informação de codificação.</dd>
+ <dd><p>O nome é seguido por uma cadeia de caracteres contendo o nome do campo HTML no formulário que o conteúdo dessa subparte se refere. Quando lidando com múltiplos arquivos no mesmo campo (por exemplo, o atributo {{htmlattrxref("multiple", "input")}} de um elemento <code>{HTMLElement("input","&lt;input type=\"file\"&gt;")}}</code>), podem haver diversas subpartes com o mesmo nome.</p>
+ <p>Um <code>name</code> com o valor de <code>'_charset_'</code> indica que a parte não é um campo HTML, mas uma codificação para usar em partes sem explicitar a informação de codificação.</p></dd>
  <dt><code>filename</code></dt>
  <dd>É seguido por uma cadeia de caracteres contendo o nome original do arquivo transmitido. O nome do arquivo é sempre opcional e não deve ser usado cegamente pela aplicação: informação de caminho deve ser removida, e conversão para as regras do sistema de arquivo do servidor devem ser feitas. Este parâmetro provém a maior parte da informação indicativa. Quando usado em combinação com <code>Content-Disposition: attachment</code>, ele é usado como nome de arquivo padrão para uma eventual caixa de diálogo "Salvar como" apresentado ao usuário.</dd>
  <dt><code>filename*</code></dt>

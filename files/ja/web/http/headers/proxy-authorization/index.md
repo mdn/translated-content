@@ -40,7 +40,7 @@ Proxy-Authorization: <type> <credentials>
     - コロンで結合したユーザー名とパスワード (`aladdin:opensesame`)。
     - 結果の文字列は [Base64](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding) でエンコードされます (`YWxhZGRpbjpvcGVuc2VzYW1l`)。
 
-    > **Note:** **メモ**: Base64 エンコードは暗号化でもハッシュでもありません。この方法の安全性はクリアテキストで認証情報を送るのと同等です (Base64 は可逆エンコーディングです)。 Basic 認証は HTTPS との組み合わせで使用することをお勧めします。
+    > **Note:**  Base64 エンコードは暗号化でもハッシュでもありません。この方法の安全性はクリアテキストで認証情報を送るのと同等です (Base64 は可逆エンコーディングです)。 Basic 認証は HTTPS との組み合わせで使用することをお勧めします。
 
 ## 例
 

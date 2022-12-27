@@ -1,7 +1,6 @@
 ---
 title: Exported WebAssembly functions
 slug: WebAssembly/Exported_functions
-translation_of: WebAssembly/Exported_functions
 ---
 {{WebAssemblySidebar}}
 
