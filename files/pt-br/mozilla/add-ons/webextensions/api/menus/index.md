@@ -23,7 +23,7 @@ Antes do Firefox 55, esta API foi também nomeada, originalmente, de `contextMen
 
 Para usar essa API, você precisa da [permissão](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) de `menus`. Você também pode usar o alias `contextMenus` em vez de `menus`, mas se usar, a API deve ser acessada como `browser.contextMenus`.
 
-Exceto para [`menus.getTargetElement()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), essa API não pode ser usada de scripts de conteúdo (content scripts).
+Exceto para [`menus.getTargetElement()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), essa API não pode ser usada de scripts de conteúdo (content scripts).
 
 ## Criando itens de menu
 
@@ -46,7 +46,7 @@ Se você criou mais de um item de menu de contexto ou mais de um item de menu de
 
 ## Ícones
 
-Se você especificou ícones para sua extensão usando a [chave "icons" do manifest](/en-US/Add-ons/WebExtensions/manifest.json/icons), o item de menu exibirá o ícone especificado ao lado do rótulo. O navegador tentará escolher um ícone de 16x16 pixels para uma exibição normal ou um ícone de 32x32 pixels para uma exibição de alta densidade:
+Se você especificou ícones para sua extensão usando a [chave "icons" do manifest](/pt-BR/Add-ons/WebExtensions/manifest.json/icons), o item de menu exibirá o ícone especificado ao lado do rótulo. O navegador tentará escolher um ícone de 16x16 pixels para uma exibição normal ou um ícone de 32x32 pixels para uma exibição de alta densidade:
 
 ![](https://mdn.mozillademos.org/files/15433/menus-2.png)
 

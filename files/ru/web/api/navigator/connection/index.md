@@ -27,5 +27,5 @@ connectionInfo = navigator.connection
 ## Смотрите также
 
 - [Network Information API](/ru/docs/WebAPI/Network_Information)
-- [Онлайн- и офлайн-события](/en/Online_and_offline_events "en/Online_and_offline_events")
-- [Firefox OS Image Uploader Sample App](https://github.com/soapdog/firefoxos-sample-app-image-uploader "Firefox OS Image Uploader Sample App")
+- [Онлайн- и офлайн-события](/en/Online_and_offline_events)
+- [Firefox OS Image Uploader Sample App](https://github.com/soapdog/firefoxos-sample-app-image-uploader)

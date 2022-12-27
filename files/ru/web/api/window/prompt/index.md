@@ -47,7 +47,7 @@ The following text is shared between this article, DOM:window\.confirm and DOM:w
 
 Пожалуйста, обратите внимание, что результатом является строка. Это значит, что вы должны определять значение заданное пользователем. Например, если ответ должен быть Number, вы должны привести значение к Number: var aNumber = Number(window\.prompt("Type a number", ""));
 
-Пользователи [Mozilla Firefox](/Mozilla/Firefox "Firefox") (например, расширений Firefox) должны использовать методы `nsIPromptService`.
+Пользователи [Mozilla Firefox](/Mozilla/Firefox) (например, расширений Firefox) должны использовать методы `nsIPromptService`.
 
 Начиная с Chrome {{CompatChrome(46.0)}}, этот метод блокируется внутри объекта {{htmlelement("iframe")}}, пока атрибут sandbox не будет установлен в значение `allow-modal`.
 

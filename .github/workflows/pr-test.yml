@@ -31,7 +31,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-          cache: 'yarn'
+          cache: "yarn"
           cache-dependency-path: mdn/content/yarn.lock
 
       - name: Install all yarn packages
@@ -60,7 +60,7 @@ jobs:
           # Now, this gets used by the `git diff ...` inside get-diff-action.
           git config --global core.quotePath false
 
-      - uses: technote-space/get-diff-action@v6.1.1
+      - uses: technote-space/get-diff-action@v6
         id: git_diff_content
         with:
           PATTERNS: files/**/*.+(html|md)
@@ -161,7 +161,7 @@ jobs:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
 
-      - uses: technote-space/get-diff-action@v6.1.1
+      - uses: technote-space/get-diff-action@v6
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true

@@ -36,9 +36,9 @@ See also the [extensions to the Gamepad interface](/fr/docs/Web/API/Gamepad#Expe
 #### Window events
 
 - {{domxref("Window.ongamepadconnected")}}
-  - : Represents an event handler that will run when a gamepad is connected (when the {{event('gamepadconnected')}} event fires).
+  - : Represents an event handler that will run when a gamepad is connected (when the [`gamepadconnected`](/fr/docs/Web/API/Window/gamepadconnected_event) event fires).
 - {{domxref("Window.ongamepaddisconnected")}}
-  - : Represents an event handler that will run when a gamepad is disconnected (when the {{event('gamepaddisconnected')}} event fires).
+  - : Represents an event handler that will run when a gamepad is disconnected (when the [`gamepadisdisconnected`](/fr/docs/Web/API/Window/gamepadisdisconnected_event) event fires).
 
 ## Tutoriels et guides
 

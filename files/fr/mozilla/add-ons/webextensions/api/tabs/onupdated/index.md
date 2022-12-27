@@ -50,7 +50,7 @@ Les événements ont trois fonctions :
     - `tabId`
       - : `integer`. ID de l'onglet qui a été mis à jour.
     - `changeInfo`
-      - : [`object`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated$edit#changeInfo). ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir [`changeInfo`](/fr/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo) ci-dessous.
+      - : [`object`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo). ontient les propriétés des propriétés de l'onglet qui ont été modifiées. Voir [`changeInfo`](/fr/Add-ons/WebExtensions/API/tabs/onUpdated#changeInfo) ci-dessous.
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Le nouvel état de l'onglet.
 

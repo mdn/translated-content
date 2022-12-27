@@ -108,7 +108,7 @@ FTP ainda é aceito em alguns casos específicos de acesso direto, como quando a
 ## Exemplos
 
 ```
-https://developer.mozilla.org/en-US/docs/Learn
+https://developer.mozilla.org/pt-BR/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
 ftp://example.org/resource.txt

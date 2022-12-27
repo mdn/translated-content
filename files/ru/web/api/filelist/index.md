@@ -7,7 +7,7 @@ tags:
   - Files
 translation_of: Web/API/FileList
 ---
-{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}Объект этого типа возвращается свойством {{HTMLElement("input")}} элемента, что позволяет получить список выбранных файлов из `<input type="file">`. Также используется для получения списка файлов, брошенных в область веб-контента (**Web content**) по средствам drag and drop API. Смотрите [DataTransfer](/ru/docs/DragDrop/DataTransfer "DragDrop/DataTransfer") для детального понимания как это использовать.
+{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}Объект этого типа возвращается свойством {{HTMLElement("input")}} элемента, что позволяет получить список выбранных файлов из `<input type="file">`. Также используется для получения списка файлов, брошенных в область веб-контента (**Web content**) по средствам drag and drop API. Смотрите [DataTransfer](/ru/docs/DragDrop/DataTransfer) для детального понимания как это использовать.
 
 > **Примечание:** До версии {{Gecko("1.9.2")}}, input элемент поддерживает только один выбранный файл, это значит что FileList содержит только один файл. Начиная с {{Gecko("1.9.2")}}, если input содержит атрибут multiple=true, то FileList может содержать несколько файлов.
 
@@ -40,7 +40,7 @@ var file = document.getElementById('fileItem').files[0];
 
 ### item()
 
-Возвращает [`File`](/ru/docs/DOM/File "DOM/File") объект по его индексу в списке.
+Возвращает [`File`](/ru/docs/DOM/File) объект по его индексу в списке.
 
 ```
  File item(
@@ -128,6 +128,6 @@ document.querySelector("#myfiles").onchange=pullfiles;
 
 ## Смотрите также
 
-- [Using files from web applications](/ru/docs/Using_files_from_web_applications "Using files from web applications")
-- [`File`](/en-US/docs/DOM/File "DOM/File")
-- [`FileReader`](/en-US/docs/DOM/FileReader "DOM/FileReader")
+- [Using files from web applications](/ru/docs/Using_files_from_web_applications)
+- [`File`](/en-US/docs/DOM/File)
+- [`FileReader`](/en-US/docs/DOM/FileReader)

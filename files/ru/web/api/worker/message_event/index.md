@@ -45,7 +45,7 @@ onmessage = function(e) {
 }
 ```
 
-Посмотрите как в скрипте `worker.js` вызывается обработчик ` onmessage``. ` В нем присутствует только глобальное свойство `onmessage,` потому что worker-объект фактически является областью видимости ({{domxref("DedicatedWorkerGlobalScope")}}).
+Посмотрите как в скрипте `worker.js` вызывается обработчик `onmessage`. В нем присутствует только глобальное свойство `onmessage`, потому что worker-объект фактически является областью видимости ({{domxref("DedicatedWorkerGlobalScope")}}).
 
 Для полного примера смотрите наш [Basic dedicated worker example](https://github.com/mdn/simple-web-worker) ([run dedicated worker](http://mdn.github.io/simple-web-worker/)).
 

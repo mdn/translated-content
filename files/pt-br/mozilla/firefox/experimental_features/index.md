@@ -8,7 +8,7 @@ original_slug: Mozilla/Firefox/Novas_funcionalidades
 
 Com intuito de testar as novas funcionalidades, a Mozilla publica uma versão de testes do navegador Firefox, [Firefox Nightly](https://nightly.mozilla.org/), diariamente. Funcionalidades experimentais, por exemplo implementações de propostas de padrões para plataforma Web, estão disponíveis. Essa página lista funcionalidades que estão nas versões Nightly do Firefox juntamente com informações de como ativá-las, se necessário. Você pode testar seus websites e aplicações antes dessas funcionalidades serem lançadas e garantir que tudo ainda irá funcionar com os recursos mais recentes da tecnologia da Web.
 
-Para testar essas funcionalidades experimentais, você precisa baixar o [Firefox Nightly](https://nightly.mozilla.org/) ou o [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
+Para testar essas funcionalidades experimentais, você precisa baixar o [Firefox Nightly](https://nightly.mozilla.org/) ou o [Firefox Developer Edition](https://www.mozilla.org/pt-BR/firefox/developer/).
 
 ## CSS
 
@@ -77,4 +77,4 @@ See also [ECMAScript Next support](/pt-BR/docs/Web/JavaScript/New_in_JavaScript/
 
 - [Firefox developer release notes](/pt-BR/docs/Mozilla/Firefox/Releases)
 - [Firefox Nightly](https://nightly.mozilla.org/)
-- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+- [Firefox Developer Edition](https://www.mozilla.org/pt-BR/firefox/developer/)

@@ -761,30 +761,30 @@ interface VTTRegion {
 
 The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:
 
-- ### VTTCue
+### VTTCue
 
-  - The methods which are available in this interface are:
+- The methods which are available in this interface are:
 
-    - GetCueAsHTML to get the HTML of that Cue.
-    - VTT Constructor for creating new objects of Cues.
-    - Autokeyword.
-    - DirectionSetting: to set the direction of caption or text in a file.
-    - LineAlignment: to adjust the line alignment.
-    - PositionAlignSetting: to adjust the position of text.
+  - GetCueAsHTML to get the HTML of that Cue.
+  - VTT Constructor for creating new objects of Cues.
+  - Autokeyword.
+  - DirectionSetting: to set the direction of caption or text in a file.
+  - LineAlignment: to adjust the line alignment.
+  - PositionAlignSetting: to adjust the position of text.
 
-- ### VTTRegion
+### VTTRegion
 
-  - The methods used for region are listed below along with description of their functionality:
+- The methods used for region are listed below along with description of their functionality:
 
-    - ScrollSetting: For adjusting the scrolling setting of all nodes present in given region.
-    - VTT Region Constructor: for construction of new VTT Regions.
+  - ScrollSetting: For adjusting the scrolling setting of all nodes present in given region.
+  - VTT Region Constructor: for construction of new VTT Regions.
 
 ## Tutorial on how to write a WebVTT file
 
 There are few steps that can be followed to write a simple webVTT file. Before start, it must be noted that you can make use of a notepad and then save the file as ‘.vtt’ file. Steps are given below:
 
-1.  Open a notepad.
-2.  The first line of WebVTT is standardized similar in the way some other languages require you to put headers as the file starts to indicate the file type. One the very first line you have to write.
+1. Open a notepad.
+2. The first line of WebVTT is standardized similar in the way some other languages require you to put headers as the file starts to indicate the file type. One the very first line you have to write.
 
 ```
 WEBVTT
@@ -796,8 +796,8 @@ WEBVTT
 00:01.000 --> 00:05.000
 ```
 
-1.  On the next line you can write the caption for this cue which will run from 1st second to the 5th second, inclusive.
-2.  Following the similar steps, a complete WebVTT file for specific video or audio file can be made.
+1. On the next line you can write the caption for this cue which will run from 1st second to the 5th second, inclusive.
+2. Following the similar steps, a complete WebVTT file for specific video or audio file can be made.
 
 ## CSS pseudo-classes
 

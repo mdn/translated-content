@@ -35,7 +35,7 @@ A cada noite nós geramos uma _build_ do Firefox com o código mais recente no [
 
 Esta é uma versão do Firefox feita para desenvolvedores. A cada seis semanas, nós pegamos as funcionalidades que estão no Firefox Nightly e são estáveis o suficiente e criamos uma nova versão do Firefox Developer Edition. Nós também adicionamos alguns recursos extras que estão disponíveis apenas neste canal.
 
-[Saiba mais sobre o Firefox Developer Edition](/en-US/Firefox/Developer_Edition).
+[Saiba mais sobre o Firefox Developer Edition](/pt-BR/Firefox/Developer_Edition).
 
 [Baixar o Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)
 
@@ -55,7 +55,7 @@ Após estabilizar por outras seis semanas no Beta, nós estamos prontos para ent
 
 Firefox ESR é uma edição de suporte de longo prazo do Firefox para desktop. Feito para ser usado em organizações como escolas, universidades, empresas e outras que necessitam de suporte extendido para distribuições em massa.
 
-[Saiba mais sobre o Firefox Extended Support Release.](/en-US/Firefox/Firefox_ESR)
+[Saiba mais sobre o Firefox Extended Support Release.](/pt-BR/Firefox/Firefox_ESR)
 
 [Baixar o Firefox ESR](https://www.mozilla.org/firefox/organizations/all/)
 

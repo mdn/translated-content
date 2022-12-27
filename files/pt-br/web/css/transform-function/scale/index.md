@@ -18,7 +18,7 @@ Essa transformação de redimensionamento é caracterizada por um vetor bidimens
 
 Quando o valor de uma coordenada está fora do alcance \[-1, 1], o elemento cresce ao longo daquela dimensão; quando está dentro, ele encolhe. Se for negativo, o resultado é um [ponto de reflexão](https://en.wikipedia.org/wiki/Point_reflection) naquela dimensão. O valor 1 não tem efeito.
 
-> **Note:** **Nota:** A função `scale()` apenas redimensiona em 2D Para redimensionar em 3D, use [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d) ao invés.
+> **Note:** **Nota:** A função `scale()` apenas redimensiona em 2D Para redimensionar em 3D, use [`scale3d()`](/pt-BR/docs/Web/CSS/transform-function/scale3d) ao invés.
 
 ## Sintaxe
 
@@ -162,10 +162,10 @@ div {
 
 ## Compatibilidade com navegadores
 
-Veja o dado do tipo [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
+Veja o dado do tipo [`<transform-function>`](/pt-BR/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
 
 ## Ver também
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d)
+- [`scale3d()`](/pt-BR/docs/Web/CSS/transform-function/scale3d)

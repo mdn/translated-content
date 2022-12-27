@@ -22,7 +22,7 @@ translation_of: Web/HTML/Element/object
 
 ## 속성
 
-이 속성은 [전역 속성](/ko/docs/HTML/Global_attributes "HTML/Global attributes")을 포함합니다.
+이 속성은 [전역 속성](/ko/docs/HTML/Global_attributes)을 포함합니다.
 
 - {{htmlattrdef("archive")}} {{deprecated_inline}}
   - : A space-separated list of URIs for archives of resources for the object.

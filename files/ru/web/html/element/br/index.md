@@ -20,9 +20,9 @@ translation_of: Web/HTML/Element/br
 
 Этот элемент включает в себя [глобальные атрибуты](ru/docs/HTML/Global_attributes).
 
-- ### Устаревшие атрибуты
+### Устаревшие атрибуты
 
-  {{htmlattrdef("clear")}}
+- {{htmlattrdef("clear")}}
 
   - : Определяет, где начинается следующая строка после перевода строки.
 

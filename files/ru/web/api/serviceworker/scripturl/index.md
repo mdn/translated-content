@@ -5,7 +5,7 @@ translation_of: Web/API/ServiceWorker/scriptURL
 ---
 {{APIRef("Service Workers API")}}
 
-Возвращает URL, указывающий на скрипт данного Service Worker, определённый с помощью [`ServiceWorkerRegistration`](/ru/docs/Web/API/ServiceWorkerRegistration "ServiceWorkerRegistion is an interface object representing the service worker registration. You register a service worker to control one or more pages that share the same origin."). URL должен находиться в том же домене, что и документ, регистрирующий `ServiceWorker`.
+Возвращает URL, указывающий на скрипт данного Service Worker, определённый с помощью [`ServiceWorkerRegistration`](/ru/docs/Web/API/ServiceWorkerRegistration). URL должен находиться в том же домене, что и документ, регистрирующий `ServiceWorker`.
 
 ## Синтаксис
 

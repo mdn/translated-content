@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLCanvasElement/transferControlToOffscreen
 ---
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
-**`HTMLCanvasElement`\*\***`.transferControlToOffscreen()`\*\*
+**`HTMLCanvasElement.transferControlToOffscreen()`**
 передаёт управление объекту {{domxref("OffscreenCanvas")}}, который может использоваться либо в основном потоке, либо в {{domxref("Worker")}}.
 
 ## Синтаксис

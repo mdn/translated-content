@@ -31,7 +31,7 @@ XMLHttpRequest.send(body)
   - : Данные из параметра body оправляются в запросе через XHR. Это могут быть:
 
     - {{domxref("Document")}}, и в этом случае данные будут сериализованы перед отправкой.
-    - `BodyInit`, которые, согласно спецификации [Fetch ](https://fetch.spec.whatwg.org/#bodyinit)могут быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, или объектом {{domxref("USVString")}}.
+    - `BodyInit`, которые, согласно спецификации [Fetch](https://fetch.spec.whatwg.org/#bodyinit) могут быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, или объектом {{domxref("USVString")}}.
 
 Лучший способ передать двоичные данные (например при загрузке файлов) - это использование [ArrayBufferView](/ru/docs/Web/API/ArrayBufferView) или [Blobs](/ru/docs/Web/API/Blob) в сочетании с методом`send()`.
 

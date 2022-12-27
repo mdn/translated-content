@@ -132,17 +132,17 @@ Obviamente hay un problema en la lógica del juego en alguna parte — el juego 
 
     Y la que genera el número aleatorio antes de cada juego subsiguiente está alrededor de la línea 113:
 
-2. ```js
+    ```js
     randomNumber = Math.floor(Math.random()) + 1;
     ```
 
-3. Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga `console.log()` — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
+2. Para comprobar si estas líneas son realmente el problema, volvamos a echar mano de nuestra amiga `console.log()` — inserta la siguiente línea directamente debajo de cada una de las dos líneas anteriores:
 
     ```js
     console.log(randomNumber);
     ```
 
-4. Guarda y refresca, luego juega un par de veces — verás que `randomNumber` es igual a 1 en cada punto en el que se registra en la consola.
+3. Guarda y refresca, luego juega un par de veces — verás que `randomNumber` es igual a 1 en cada punto en el que se registra en la consola.
 
 ### Desentrañando la lógica
 

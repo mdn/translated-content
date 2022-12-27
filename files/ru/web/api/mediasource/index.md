@@ -46,9 +46,10 @@ _Наследует свойства родительского интерфей
   - : Удаляет указанный {{domxref("SourceBuffer")}} из списка {{domxref("SourceBuffers")}}, связанного с текущим `MediaSource-объектом`.
 - {{domxref("MediaSource.endOfStream()")}}
   - : Сигнализирует об окончании потока.
-- ## Статичные методы
 
-  {{domxref("MediaSource.isTypeSupported()")}}
+## Статичные методы
+
+- {{domxref("MediaSource.isTypeSupported()")}}
 
   - : Возвращает значение {{domxref("Boolean")}}, поясняющее, поддерживается ли клиентом полученный MIME-тип — если это так, то можно успешно создать объект типа {{domxref("SourceBuffer")}} для этого MIME-типа.
 

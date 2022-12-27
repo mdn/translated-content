@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '*.md'
+      - "*.md"
       - .github/workflows/markdown-lint.yml
       - .markdownlint.json
 

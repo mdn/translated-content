@@ -41,7 +41,7 @@ translation_of: Web/API/Element/keydown_event
 
 ### Примеры addEventListener keydown
 
-Этот пример отображает значение [`KeyboardEvent.code`](/ru/docs/Web/API/KeyboardEvent/code "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!") всякий раз, когда вы нажимаете клавишу внутри [`<input>`](/ru/docs/Web/HTML/Element/input "Элемент HTML <input> используется для создания интерактивных элементов управления в веб-формах для принятия данных от пользователя; в зависимости от устройства и user agent, доступен широкий выбор типов входных данных и виджетов управления.") элемента.
+Этот пример отображает значение [`KeyboardEvent.code`](/ru/docs/Web/API/KeyboardEvent/code) всякий раз, когда вы нажимаете клавишу внутри [`<input>`](/ru/docs/Web/HTML/Element/input) элемента.
 
 ```html
 <input placeholder="Кликните здесь, затем нажмите клавишу." size="40">

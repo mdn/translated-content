@@ -7,7 +7,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/bookmarks
 
 A API [WebExtensions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} permite uma extensão interagir e manipular o sistema de favoritos do navegador. Você pode pode usá-lo para favoritar páginas, obter favoritos existentes e, editar, remover ou organizar os favoritos.
 
-Para utilizar esta API, uma extensão deve ser requisitada para o "bookmarks" [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) em seu arquivo [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) .
+Para utilizar esta API, uma extensão deve ser requisitada para o "bookmarks" [permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) em seu arquivo [`manifest.json`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json) .
 
 ## Tipos
 

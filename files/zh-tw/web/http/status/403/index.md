@@ -26,7 +26,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 {{Specifications}}
 
-## [瀏覽器相容性](/zh-TW/docs/Web/HTTP/Status/100$edit#%E7%80%8F%E8%A6%BD%E5%99%A8%E7%9B%B8%E5%AE%B9%E6%80%A7)
+## 瀏覽器相容性
 
 {{Compat}}
 

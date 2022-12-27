@@ -86,7 +86,7 @@ a("premier appel, premierarg")@file:///C:/exemple.html:19
 
 ### Pile d'un code evalué
 
-À partir de Firefox 30 {{geckoRelease("30")}}, la pile d'erreur du code dans les appels à `Function()` et `eval()` produit désormais des piles avec des informations plus détaillées sur les numéros de lignes et de colonnes dans ces appels. Les appels de fonction sont indiqués par `"> Function"` et les appels d'`eval` par `"> eval"`. Voir {{bug("332176")}}.
+À partir de Firefox 30, la pile d'erreur du code dans les appels à `Function()` et `eval()` produit désormais des piles avec des informations plus détaillées sur les numéros de lignes et de colonnes dans ces appels. Les appels de fonction sont indiqués par `"> Function"` et les appels d'`eval` par `"> eval"`. Voir {{bug("332176")}}.
 
 ```js
 try {

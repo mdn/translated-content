@@ -2,6 +2,8 @@
 title: Response.formData()
 slug: Web/API/Response/formData
 original_slug: Web/API/Body/formData
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
 {{APIRef("Fetch")}}
@@ -12,11 +14,8 @@ original_slug: Web/API/Body/formData
 
 ## 構文
 
-```js
-response.formData()
-.then(function(formdata) {
-  // formdata を使った何らかの処理
-});
+```js-nolint
+formData()
 ```
 
 ### 引数
@@ -41,6 +40,6 @@ TBD.
 
 ## 関連情報
 
-- [ServiceWorker API](/ja/docs/Web/API/Service_Worker_API)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

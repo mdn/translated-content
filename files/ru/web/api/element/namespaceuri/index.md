@@ -16,7 +16,7 @@ namespace = node.namespaceURI
 
 ## Пример
 
-В этом сниппете, узел рассматривается для его [localName](/ru/docs/DOM/Node.localName "DOM/Node.localName") и его `namespaceURI`. Если `namespaceURI` возвращает XUL пространство имён и `localName` возвращая "browser", затем узел XUL согласует `<browser/>`.
+В этом сниппете, узел рассматривается для его [localName](/ru/docs/DOM/Node.localName) и его `namespaceURI`. Если `namespaceURI` возвращает XUL пространство имён и `localName` возвращая "browser", затем узел XUL согласует `<browser/>`.
 
 ```js
 if (node.localName == "browser" &&
@@ -31,9 +31,9 @@ if (node.localName == "browser" &&
 
 В Firefox 3.5 и выше, пространство имён URI для HTML-элементов в HTML документах это `null`. В более поздних версиях, в соответствии с HTML5, это [`http://www.w3.org/1999/xhtml`](http://www.w3.org/1999/xhtml) как в XHTML. {{gecko_minversion_inline("1.9.2")}}
 
-Для узлов любого [nodeType](/ru/docs/DOM/Node.nodeType "DOM/Node/NodeType/Node.nodeType") кроме `ELEMENT_NODE` и `ATTRIBUTE_NODE` значение `namespaceURI` всегда `null`.
+Для узлов любого [nodeType](/ru/docs/DOM/Node.nodeType) кроме `ELEMENT_NODE` и `ATTRIBUTE_NODE` значение `namespaceURI` всегда `null`.
 
-Вы можете создать элемент с конкретным `namespaceURI` используйте метод DOM Level 2 [document.createElementNS](/ru/docs/DOM/document.createElementNS "DOM/document.createElementNS").
+Вы можете создать элемент с конкретным `namespaceURI` используйте метод DOM Level 2 [document.createElementNS](/ru/docs/DOM/document.createElementNS).
 
 Через [пространство имён в XML](http://www.w3.org/TR/xml-names11/) спецификации, атрибуты не наследуют пространство имён для элемента к которому он прикреплён. Если у атрибута не задано явно пространство имён, он не имеет пространства имён.
 

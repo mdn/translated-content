@@ -37,4 +37,4 @@ wrapper.normalize();
 
 ## Смотрите также
 
-- [`Text.splitText`](/ru/docs/DOM/Text.splitText "DOM/Text.splitText")
+- [`Text.splitText`](/ru/docs/DOM/Text.splitText)

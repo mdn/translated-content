@@ -28,7 +28,7 @@ Color - строка, содержащая имя цвета (например, 
 
 Другой альтернативой является document.body.aLink, хотя это [устарело в HTML 4.01](http://www.w3.org/TR/html401/struct/global.html#adef-alink) в пользу альтернативы CSS.
 
-[Gecko](en/Gecko) поддерживает оба варианта `alinkColor`/`:active` and {{ Cssxref(":focus") }}. Internet Explorer 6 и 7 поддерживает `alinkColor`/`:active` только для[ HTML ссылок с якорем (\<a>)](en/HTML/Element/a) и поведение у них такое же, как `:focus` в Gecko. В IE нет поддержки :focus.
+[Gecko](en/Gecko) поддерживает оба варианта `alinkColor`/`:active` and {{ Cssxref(":focus") }}. Internet Explorer 6 и 7 поддерживает `alinkColor` / `:active` только для [HTML ссылок с якорем (\<a>)](en/HTML/Element/a) и поведение у них такое же, как `:focus` в Gecko. В IE нет поддержки `:focus`.
 
 ## Браузерная поддержка
 

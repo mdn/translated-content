@@ -34,7 +34,7 @@ li.espaçoso.elegante {
 .classe_nome { propriedades de estilo }
 ```
 
-Observe que isso é o mesmo que [`seletor de atributo`](/en-US/docs/Web/CSS/Attribute_selectors):
+Observe que isso é o mesmo que [`seletor de atributo`](/pt-BR/docs/Web/CSS/Attribute_selectors):
 
 ```
 [classe~=classe_nome] { propriedades de estilo  }

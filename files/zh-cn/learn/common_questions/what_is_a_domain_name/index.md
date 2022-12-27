@@ -60,7 +60,7 @@ _还没有可用的资料。请考虑为此投稿 \[[Please, consider contributi
 - 标签 (或者说是组件)
   - : 标签都是紧随着 TLD 的。标签由 1 到 63 个大小写不敏感的字符组成，这些字符包含字母 A-z，数字 0-9，甚至“-”这个符号（当然，“-”不应该出现在标签开头或者标签的结尾）。举几个例子，`a`，`97`，或者 `hello-strange-person-16-how-are-you` 都是合法的标签。
 - Secondary Level Domain, 二级域名
-  - : 刚好位于 TLD 前面的标签也被称为二级域名 (SLD)。一个域名可以有多个标签（或者说是组件），没有强制规定必须要 3 个标签来构成域名。例如，www\.inf.ed.ac.uk 是一个正确的域名。当拥有了“上级”部分 (例如 [mozilla.org](https://mozilla.org))，你还可以创建另外的域名 (有时被称为 "子域名") (例如 [developer.mozilla.org](https://developer.mozilla.org)).
+  - : 刚好位于 TLD 前面的标签也被称为二级域名 (SLD)。一个域名可以有多个标签（或者说是组件），没有强制规定必须要 3 个标签来构成域名。例如，www\.inf.ed.ac.uk 是一个正确的域名。当拥有了“上级”部分 (例如 [mozilla.org](https://mozilla.org))，你还可以创建另外的域名 (有时被称为 "子域名") (例如 [developer.mozilla.org](/)).
 
 ### 购买域名
 

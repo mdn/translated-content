@@ -9,7 +9,7 @@ translation_of: Mozilla/Add-ons/WebExtensions
 ---
 Extensões são capazes de extender e modificar a capacidade de um navegador. As extensões para Firefox são criadas usando a API WebExtensions, um sistema comum a vários navegadores para desenvolvimento de extensões. Em grande parte, o sistema é compatível com a [API de extensões](https://developer.chrome.com/extensions) suportada pelo Google Chrome, Opera e [W3C Draft Community Group](https://browserext.github.io/browserext/).
 
-Extensões escritas para esses navegadores na maioria dos casos vão funcionar no Firefox ou [Microsoft Edge](https://developer.microsoft.com/microsoft-edge/platform/documentation/extensions/) com [apenas algumas alterações](/en-US/Add-ons/WebExtensions/Porting_from_Google_Chrome). A API é também totalmente compatível com o [multiprocessamento do Firefox](/en-US/docs/Mozilla/Firefox/Multiprocess_Firefox).
+Extensões escritas para esses navegadores na maioria dos casos vão funcionar no Firefox ou [Microsoft Edge](https://developer.microsoft.com/microsoft-edge/platform/documentation/extensions/) com [apenas algumas alterações](/pt-BR/Add-ons/WebExtensions/Porting_from_Google_Chrome). A API é também totalmente compatível com o [multiprocessamento do Firefox](/pt-BR/docs/Mozilla/Firefox/Multiprocess_Firefox).
 
 Se você tem dúvidas ou sugestões, ou precisa de ajuda para migrar um complemento legado para usar APIs WebExtensions, pode entrar em contato conosco pela [newsletter de desenvolvimento de complementos](https://mail.mozilla.org/listinfo/dev-addons) ou [#webextensions](irc://irc.mozilla.org/webextensions) no [IRC](https://wiki.mozilla.org/IRC).
 
@@ -98,7 +98,7 @@ Se você tem dúvidas ou sugestões, ou precisa de ajuda para migrar um compleme
 - [Visão geral da API JavaScript](/docs/Mozilla/Add-ons/WebExtensions/API)
 - [Tabelas de compatibilidade de navegadores com APIs JavaScript](/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
 
-{{ ListSubpages ("/en-US/Add-ons/WebExtensions/API") }}
+{{ ListSubpages ("/pt-BR/Add-ons/WebExtensions/API") }}
 
 #### Chaves do Manifest
 

@@ -96,4 +96,4 @@ btn.addEventListener('click', handleButtonClick);
 
 ## Смотрите также
 
-- {{domxref("Element.scrollIntoViewIfNeeded()")}}[ ](/ru/docs/Web/API/Element/scrollIntoViewIfNeeded){{non-standard_inline}}
+- {{domxref("Element.scrollIntoViewIfNeeded()")}} {{non-standard_inline}}

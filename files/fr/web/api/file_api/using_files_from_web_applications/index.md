@@ -145,7 +145,7 @@ function updateSize() {
 
 ## Utiliser des éléments _input_ masqués de type _file_ avec l'événement `click`
 
-Il est possible depuis Gecko 2.0 {{ geckoRelease("2.0") }} de masquer l'élément {{ HTMLElement("input") }} de type file, généralement considéré comme laid, et de présenter votre propre interface pour l'ouverture du sélecteur de fichiers et l'affichage du ou des fichiers sélectionnés par l'utilisateur. Vous devez pour cela attribuer à votre élément `input` un style incluant `display:none` et gérer l'événement `click` sur votre élément {{ HTMLElement("input") }}.
+Il est possible depuis Gecko 2.0 de masquer l'élément {{ HTMLElement("input") }} de type file, généralement considéré comme laid, et de présenter votre propre interface pour l'ouverture du sélecteur de fichiers et l'affichage du ou des fichiers sélectionnés par l'utilisateur. Vous devez pour cela attribuer à votre élément `input` un style incluant `display:none` et gérer l'événement `click` sur votre élément {{ HTMLElement("input") }}.
 
 Examinez cet extrait de code HTML&nbsp;:
 
@@ -197,7 +197,7 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-Dans cet exemple, l'élément portant l'ID `dropbox` devient notre zone de dépôt en y ajoutant les gestionnaires d'écoute des événements {{event('dragenter')}}, {{event('dragover')}}, et {{event('drop')}}.
+Dans cet exemple, l'élément portant l'ID `dropbox` devient notre zone de dépôt en y ajoutant les gestionnaires d'écoute des événements [`dragenter`](/fr/docs/Web/API/HTMLElement/dragenter_event), [`dragover`](/fr/docs/Web/API/HTMLElement/dragover_event), et [`drop`](/fr/docs/Web/API/HTMLElement/drop_event).
 
 Nous n'avons pas vraiment besoin dans notre cas de gérer les événements `dragenter` et `dragover`. Les deux fonctions associées restent donc assez simples, elle ne servent qu'à stopper la propagation de l'événement et empêcher le déclenchement de l'action par défaut&nbsp;:
 
@@ -263,7 +263,7 @@ Nous définissons ensuite le {{ domxref("FileReader") }} qui gérera le chargeme
 
 ## Utiliser un objet URLs
 
-Gecko 2.0 {{ geckoRelease("2.0") }} introduit la prise en charge des méthodes du DOM {{ domxref("window.URL.createObjectURL()") }} et {{ domxref("window.URL.revokeObjectURL()") }}. Elles vous permettent de créer des chaînes d'URL simples qui peuvent être utilisées pour repérer n'importe quelle donnée pouvant être référencée à l'aide d'un objet DOM {{ domxref("File") }}, y compris des fichiers locaux sur l'ordinateur de l'utilisateur.
+Gecko 2.0 introduit la prise en charge des méthodes du DOM {{ domxref("window.URL.createObjectURL()") }} et {{ domxref("window.URL.revokeObjectURL()") }}. Elles vous permettent de créer des chaînes d'URL simples qui peuvent être utilisées pour repérer n'importe quelle donnée pouvant être référencée à l'aide d'un objet DOM {{ domxref("File") }}, y compris des fichiers locaux sur l'ordinateur de l'utilisateur.
 
 Vous pouvez procéder ainsi pour créer un objet URL lorsque vous souhaitez référencer un objet {{ domxref("File") }} par URL depuis HTML&nbsp;:
 
@@ -414,7 +414,7 @@ Il est nécessaire de prévoir quelques étapes préparatoires avant le téléch
 5. L'objet `FileReader` est utilisé pour la conversion du fichier en chaîne binaire.
 6. La fonction `send()` du XMLHttpRequest est appelée en dernier pour télécharger le contenu du fichier complètement chargé.
 
-> **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }}&nbsp;; utilisez plutôt la méthode standard `send(Blob data)`.
+> **Note :** la méthode non standard `sendAsBinary` utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31&nbsp;; utilisez plutôt la méthode standard `send(Blob data)`.
 
 ### Gérer le processus de téléchargement d'un fichier de manière asynchrone
 

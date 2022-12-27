@@ -38,14 +38,14 @@ translation_of: Web/HTML/Element/video
   - : 이 속성이 존재하면, 소리 조절(volume), 동영상 탐색(seek), 일시 정지(pause)/재시작(resume)을 할 수 있는 컨트롤러를 제공합니다.
 - {{htmlattrdef("crossorigin")}}
 
-  - : crossorigin 속성은 CORS를 사용해서 관련 이미지를 패치해야 하는지 여부를 나타냅니다. [CORS-enabled resources](/ko/docs/CORS_Enabled_Image "CORS_Enabled_Image") 는 {{HTMLElement("canvas")}} 요소에서 재사용 될 수 있으며 오염되지 않습니다. 허용되는 값은 다음과 같습니다:
+  - : crossorigin 속성은 CORS를 사용해서 관련 이미지를 패치해야 하는지 여부를 나타냅니다. [CORS-enabled resources](/ko/docs/CORS_Enabled_Image) 는 {{HTMLElement("canvas")}} 요소에서 재사용 될 수 있으며 오염되지 않습니다. 허용되는 값은 다음과 같습니다:
 
     - anonymous
       - : CORS(`Origin:` HTTP 헤더 사용)를 수행 합니다. 하지만 credential가 전송되지 않습니다. (즉, cookie, X.509 certificate, HTTP 기본 인증이 전송되지 않습니다). 서버가 원본 사이트에 credentials를 제공하지 않는 경우 (즉, `Access-Control-Allow-Origin:` HTTP 헤더를 설정하지 않음으로써), 이미지가 오염되고 사용이 제한됩니다.
     - use-credentials
       - : credential을 포함한 CORS를 (`Origin:` HTTP 헤더 사용) 수행 합니다. (즉, cookie, certificate, HTTP 기본 인증이 수행됩니다.) 서버가 원본 사이트에 credentials를 제공하지 않는 경우 (즉, `Access-Control-Allow-Origin:` HTTP 헤더를 설정하지 않음으로써), 이미지가 오염되고 사용이 제한됩니다.
 
-    crossorigin이 존재하지 않는 경우, CORS 요청 없이 (즉, `Origin:` HTTP 헤더를 사용 보내지 않고), 리소스를 가져와 {{HTMLElement('canvas')}} 요소에 오염되는 것을 방지합니다. 값을 설정하지 않을 경우 **anonymous**가 사용 됩니다. 추가 정보는 [CORS settings attributes](/ko/docs/HTML/CORS_settings_attributes "CORS settings attributes") 를 참조하십시오.
+    crossorigin이 존재하지 않는 경우, CORS 요청 없이 (즉, `Origin:` HTTP 헤더를 사용 보내지 않고), 리소스를 가져와 {{HTMLElement('canvas')}} 요소에 오염되는 것을 방지합니다. 값을 설정하지 않을 경우 **anonymous**가 사용 됩니다. 추가 정보는 [CORS settings attributes](/ko/docs/HTML/CORS_settings_attributes) 를 참조하십시오.
 
 - {{htmlattrdef("height")}}
   - : 비디오의 출력 영역 높이이며, CSS 픽셀 단위 입니다.
@@ -124,7 +124,7 @@ AddType video/webm .webm
 
 ## DOM 인터페이스
 
-이 요소는 [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement "DOM/HTMLVideoElementInterface") 인터페이스를 구현하고 있습니다.
+이 요소는 [`HTMLVideoElement`](/en-US/docs/Web/API/HTMLVideoElement) 인터페이스를 구현하고 있습니다.
 
 ## 브라우저 호환성
 
@@ -132,11 +132,11 @@ AddType video/webm .webm
 
 ## 참고
 
-- [Media formats supported by the audio and video elements](/ko/docs/Media_formats_supported_by_the_audio_and_video_elements "Media formats supported by the audio and video elements")
+- [Media formats supported by the audio and video elements](/ko/docs/Media_formats_supported_by_the_audio_and_video_elements)
 - {{htmlelement("audio")}}
-- [Using HTML5 audio and video](/ko/docs/Using_HTML5_audio_and_video "Using audio and video in Firefox")
-- [Manipulating video using canvas](/ko/docs/Manipulating_video_using_canvas "Manipulating video using canvas")
-- [`nsIDOMHTMLMediaElement`](/ko/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement "NsIDOMHTMLMediaElement")
+- [Using HTML5 audio and video](/ko/docs/Using_HTML5_audio_and_video)
+- [Manipulating video using canvas](/ko/docs/Manipulating_video_using_canvas)
+- [`nsIDOMHTMLMediaElement`](/ko/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
 - [TinyVid](http://tinyvid.tv/) - examples using ogg files in HTML5.
 - [The `video` element](http://www.whatwg.org/specs/web-apps/current-work/#video) (HTML5 specification)
-- [Configuring servers for Ogg media](/ko/docs/Configuring_servers_for_Ogg_media "Configuring servers for Ogg media")
+- [Configuring servers for Ogg media](/ko/docs/Configuring_servers_for_Ogg_media)

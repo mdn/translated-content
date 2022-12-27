@@ -9,7 +9,7 @@ translation_of: Web/API/Element/clientLeft
 
 [Gecko](en/Gecko)-based applications support `clientLeft` starting with Gecko 1.9 ([Firefox 3](en/Firefox_3), implemented in {{ Bug(111207) }}). This property is not supported in Firefox 2 and earlier.
 
-Когда [`layout.scrollbar.side` ](http://kb.mozillazine.org/Layout.scrollbar.side)значение установлено от 1 до 3 и направление текста справа налево, **то вертикальный scrollbar будет спозиционирован слева** и как следствие будет вычислен clientLeft.
+Когда [`layout.scrollbar.side`](http://kb.mozillazine.org/Layout.scrollbar.side) значение установлено от 1 до 3 и направление текста справа налево, **то вертикальный scrollbar будет спозиционирован слева** и как следствие будет вычислен clientLeft.
 
 > **Примечание:** **Внимание:** Это свойство округлит значение к целому числу. Если нужно дробное значение используйте {{ domxref("element.getBoundingClientRect()") }}.
 

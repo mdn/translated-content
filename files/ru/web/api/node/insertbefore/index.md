@@ -47,7 +47,7 @@ parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
-Однако нет метода insertAfter. Он может быть заменён использованием метода insertBefore в связке с [`nextSibling`](/en-US/docs/DOM/Node.nextSibling "DOM/Node.nextSibling").
+Однако нет метода insertAfter. Он может быть заменён использованием метода insertBefore в связке с [`nextSibling`](/en-US/docs/DOM/Node.nextSibling).
 
 В предыдущем примере sp1 может быть вставлен после sp2 следующим образом:
 
@@ -55,11 +55,11 @@ parentDiv.insertBefore(sp1, sp2);
 parentDiv.insertBefore(sp1, sp2.nextSibling);
 ```
 
-Если sp2 не имеет следующего элемента, то он будет последним дочерним элементом, `sp2.nextSibling вернёт `null, а `sp1` вставится в конец дочернего узла (сразу после sp2).
+Если `sp2` не имеет следующего элемента, то он будет последним дочерним элементом, `sp2.nextSibling` вернёт `null`, а `sp1` вставится в конец дочернего узла (сразу после sp2).
 
 ## Пример 2
 
-Вставка элемента перед первым дочерним элементом с помощью [firstChild](/ru/docs/DOM/Node.firstChild "Node.firstChild").
+Вставка элемента перед первым дочерним элементом с помощью [firstChild](/ru/docs/DOM/Node.firstChild).
 
 ```js
 // Получаем ссылку на элемент в который мы хотим добавить новый элемент

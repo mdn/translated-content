@@ -20,8 +20,8 @@ var timeoutID = window.setTimeout(code [, delay]);
 где
 
 - `timeoutID -` это _числовой_ ID, который может быть использован позже с {{domxref("window.clearTimeout()")}}.
-- `func -` это [функция](/ru/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/Core_JavaScript_1.5_Reference/Global_Objects/Function"), которую требуется вызвать после `delay` миллисекунд.
-- `code` - в альтернативном варианте применения это строка, содержащая код, который вы хотите выполнить после `delay` миллисекунд (использовать этот метод **не рекомендуется** по тем же причинам, что и [eval()](/ru/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval! "en-US/docs/Core JavaScript 1.5 Reference/Global Functions/Eval#Don't use eval!"))
+- `func -` это [функция](/ru/docs/JavaScript/Reference/Global_Objects/Function), которую требуется вызвать после `delay` миллисекунд.
+- `code` - в альтернативном варианте применения это строка, содержащая код, который вы хотите выполнить после `delay` миллисекунд (использовать этот метод **не рекомендуется** по тем же причинам, что и [eval()](/ru/docs/JavaScript/Reference/Global_Objects/eval#Don%27t_use_eval!))
 - `delay` {{optional_inline}} - задержка в миллисекундах (тысячных долях секунды), после которой будет выполнен вызов функции. Реальная задержка может быть больше; см. [Notes](#notes) ниже.
 
 Необходимо принять во внимание, что передача дополнительных параметров функции в первом варианте не работает в Internet Explorer 9 и ниже. Для использования этой функциональности в таких браузерах, необходимо использовать код для совместимости (см. раздел [Аргументы колбэк-функции](#Аргументы_колбэк-функции)).
@@ -61,7 +61,7 @@ function clearAlert() {
 
 {{ EmbedLiveSample('Example') }}
 
-Смотрите также [`пример clearTimeout()`](/ru/docs/DOM/window.clearTimeout#Example "en-US/docs/DOM/window.clearTimeout#Example").
+Смотрите также [`пример clearTimeout()`](/ru/docs/DOM/window.clearTimeout#Example).
 
 ## Аргументы колбэк-функции
 
@@ -141,7 +141,7 @@ Another possibility is to use an anonymous function to call your callback, but t
 var intervalID = setTimeout(function() { myFunc("one", "two", "three"); }, 1000);
 ```
 
-Yet another possibility is to use [function's bind](/ru/docs/JavaScript/Reference/Global_Objects/Function/bind "/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind"). Example:
+Yet another possibility is to use [function's bind](/ru/docs/JavaScript/Reference/Global_Objects/Function/bind). Example:
 
 ```js
 setTimeout(function(arg1){}.bind(undefined, 10));
@@ -149,7 +149,7 @@ setTimeout(function(arg1){}.bind(undefined, 10));
 
 ## Проблема с "`this`"
 
-Когда вы передаёте метод в `setTimeout()` (или в любую другую функцию, если на то пошло), то вызов будет осуществлён с неправильным значением `this`. Эта проблема разъясняется детально в [JavaScript reference](/ru/docs/JavaScript/Reference/Operators/this#Method_binding "en-US/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator#Method_binding").
+Когда вы передаёте метод в `setTimeout()` (или в любую другую функцию, если на то пошло), то вызов будет осуществлён с неправильным значением `this`. Эта проблема разъясняется детально в [JavaScript reference](/ru/docs/JavaScript/Reference/Operators/this#Method_binding).
 
 ### Объяснение
 
@@ -213,11 +213,11 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2.5 s
 
 Это не нативные решения _ad hoc_ для этой проблемы.
 
-> **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind "en-US/docs/JavaScript/Reference/Global Objects/Function/bind") method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called.
+> **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called.
 
 ## Замечания
 
-Отложенное выполнение кода можно отменить, используя [`window.clearTimeout()`](/en-US/docs/DOM/window.clearTimeout "en-US/docs/DOM/window.clearTimeout"). Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать [`window.setInterval()`](/en-US/docs/DOM/window.setInterval "en-US/docs/DOM/window.setInterval").
+Отложенное выполнение кода можно отменить, используя [`window.clearTimeout()`](/en-US/docs/DOM/window.clearTimeout). Если функция должна вызываться неоднократно (например, каждые N миллисекунд), необходимо использовать [`window.setInterval()`](/en-US/docs/DOM/window.setInterval).
 
 Важно заметить, что функция или код не могут быть выполнены, пока не завершится поток, вызвавший `setTimeout()`.
 

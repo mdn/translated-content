@@ -155,7 +155,7 @@ O recurso HTTP [Client hints](/pt-BR/docs/Glossary/Client_hints) ainda está em 
 - {{HTTPHeader("Origin")}}
   - : Inddica de onde uma busca se origina.
 - {{HTTPHeader("Timing-Allow-Origin")}}
-  - : Especifica as origens que tem permissão para ver valores de atributos recuperados por meio de recursos da API de Tempo de Recurso ([Resource Timing API](/pt-BR/en-US/docs/Web/API/Resource_Timing_API)) que, de outra forma, seriam relatados como zero devido a restrições de origem cruzada (cross-origin restrictions).
+  - : Especifica as origens que tem permissão para ver valores de atributos recuperados por meio de recursos da API de Tempo de Recurso ([Resource Timing API](/pt-BR/pt-BR/docs/Web/API/Resource_Timing_API)) que, de outra forma, seriam relatados como zero devido a restrições de origem cruzada (cross-origin restrictions).
 
 ## Do Not Track
 

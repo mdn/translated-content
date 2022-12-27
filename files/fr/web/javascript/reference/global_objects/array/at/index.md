@@ -36,7 +36,7 @@ L'exemple qui suit fournit une fonction qui renvoie le dernier élément trouvé
 
 ```js
 // Le tableau avec des éléments
-const corbeille = ['pomme', 'banane', 'poiree'];
+const corbeille = ['pomme', 'banane', 'poire'];
 
 // Une fonction qui renvoie le dernier 
 // élément d'un tableau
@@ -48,7 +48,7 @@ function dernierElem(arr) {
 // tableau 'corbeille'
 const item1 = dernierElem(corbeille);
 console.log(item1);
-// Affiche 'pear' dans la console
+// Affiche 'poire' dans la console
 
 // On ajoute un élément au tableau
 // 'corbeille'

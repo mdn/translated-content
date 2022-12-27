@@ -27,7 +27,7 @@ translation_of: Web/API/FileReader
 FileReader FileReader();
 ```
 
-Более детально, с примерами см. [использование файлов в веб-приложениях](/ru/Using_files_from_web_applications "ru/Using files from web applications").
+Более детально, с примерами см. [использование файлов в веб-приложениях](/ru/Using_files_from_web_applications).
 
 ## Свойства
 
@@ -57,9 +57,9 @@ FileReader FileReader();
 
 ### Константы состояния
 
-- `EMPTY `: `0` : Данные ещё не были загружены.
+- `EMPTY`: `0` : Данные ещё не были загружены.
 - `LOADING` : `1` : Данные в данный момент загружаются.
-- `DONE `: `2` : Операция чтения была завершена.
+- `DONE`: `2` : Операция чтения была завершена.
 
 ## Методы
 
@@ -94,7 +94,7 @@ FileReader FileReader();
 
 ## Смотрите также
 
-- [Использование файлов в веб-приложениях](/ru/Using_files_from_web_applications "ru/Using files from web applications")
+- [Использование файлов в веб-приложениях](/ru/Using_files_from_web_applications)
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}
 - [nsIDOMFileReader](/ru/docs/nsIDOMFileReader) - For addons/privileged scope

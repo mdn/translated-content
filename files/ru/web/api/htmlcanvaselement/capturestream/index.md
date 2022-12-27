@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLCanvasElement/captureStream
 ---
 {{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
 
-**`HTMLCanvasElement`\*\***`.captureStream()`\*\* метод возвращает {{domxref("CanvasCaptureMediaStream")}}, который является видеозахватчиком (оцифровщиком) в реальном времени на поверхности canvas.
+**`HTMLCanvasElement.captureStream()`** метод возвращает {{domxref("CanvasCaptureMediaStream")}}, который является видеозахватчиком (оцифровщиком) в реальном времени на поверхности canvas.
 
 ## Синтаксис
 

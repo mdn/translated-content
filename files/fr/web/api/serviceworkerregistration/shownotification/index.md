@@ -39,7 +39,7 @@ serviceWorkerRegistration.showNotification(title, [options])
       - title: Une {{domxref("DOMString")}} contenant le texte d'action à montrer à l'utilisateur.
       - icon: Une {{domxref("USVString")}} contenant l'URL d'une icône à afficher avec l'action.
 
-      Les réponses appropriées sont construites à l'aide de `event.action` dans l'événement {{event("notificationclick")}}.
+      Les réponses appropriées sont construites à l'aide de `event.action` dans l'événement [`notificationclick`](/fr/docs/Web/API/ServiceWorkerGlobalScope/notificationclick_event).
 
     - `badge`: Un {{domxref ("USVString")}} contenant l'URL de l'image utilisée pour représenter la notification lorsqu'il n'y a pas assez d'espace pour afficher la notification elle-même.
     - `body`: Un {{domxref ("DOMString")}} représentant le corps du texte de la notification, qui est affiché sous le titre.

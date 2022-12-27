@@ -16,8 +16,8 @@ Este evento reemplaza el evento obsoleto no estándar {{domxref("Element/mousewh
 | Burbujas                             | Sí                                                                                                   |
 |--------------------------------------|------------------------------------------------------------------------------------------------------|
 | Cancelable                           | Sí                                                                                                   |
-| Interfaz                             | [`WheelEvent`](https://developer.mozilla.org/es/docs/Web/API/WheelEvent)                             |
-| Propiedades del manejador de eventos | [`onwheel`](https://developer.mozilla.org/es/docs/conflicting/Web/API/Element/wheel_event "onwheel") |
+| Interfaz                             | [`WheelEvent`](/es/docs/Web/API/WheelEvent)                             |
+| Propiedades del manejador de eventos | [`onwheel`](/es/docs/conflicting/Web/API/Element/wheel_event) |
 
 > **Nota:** No confundir el evento `wheel` con el evento {{domxref("Element/scroll_event", "scroll")}}. La acción predeterminada de un evento `wheel` es específica de la implementación y no necesariamente envía un evento `scroll`. Incluso cuando lo hace, los valores `delta*` en el evento `wheel` no reflejan necesariamente la dirección de desplazamiento del contenido. Por lo tanto, no confíe en las propiedades `delta*` del evento `wheel` para obtener la dirección de desplazamiento. En su lugar, detecte los cambios de valor de {{domxref("Element.scrollLeft", "scrollLeft")}} y {{domxref("Element.scrollTop", "scrollTop")}} del objetivo en el evento `scroll`.
 

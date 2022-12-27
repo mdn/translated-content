@@ -5,7 +5,7 @@ translation_of: Web/API/Element/attachShadow
 ---
 {{APIRef('Shadow DOM')}} {{SeeCompatTable}}
 
-Метод **`Element.attachShadow()`** добавляет теневое DOM дерево к указанному элементу и возвращает ссылку на его [`ShadowRoot`](/ru/docs/Web/API/ShadowRoot "Use Element.attachShadow to create an instance of shadow DOM. When shadow DOM is created, it is always attached to an existing element. After the shadow DOM is created, the element that it is attached to is called the shadow root.")( корневой элемент созданного дерева).
+Метод **`Element.attachShadow()`** добавляет теневое DOM дерево к указанному элементу и возвращает ссылку на его [`ShadowRoot`](/ru/docs/Web/API/ShadowRoot) (корневой элемент созданного дерева).
 
 #### Элементы которые можно добавить в теневой DOM
 
@@ -45,7 +45,7 @@ var shadowroot = element.attachShadow(shadowRootInit);
 
     `mode`: Строка указывающая на режим инкапсуляции для shadowDOM:
 
-    - `open. `Указывает на открытие режима инкапсуляции.
+    - `open.` Указывает на открытие режима инкапсуляции.
       Это означает что элементы shadowRoot доступны для внешнего мира _element.shadowRoot_
 
       ```

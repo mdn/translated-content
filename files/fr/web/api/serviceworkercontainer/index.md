@@ -23,11 +23,11 @@ Parmi le plus important, cette interface expose la méthode {{domxref("ServiceWo
 ### Gestionnaires d'événement
 
 - {{domxref("ServiceWorkerContainer.oncontrollerchange")}}
-  - : Un gestionnaire d’événement lancé quand un événement {{Event("controllerchange")}} se produit — quand le {{domxref("ServiceWorkerRegistration")}} associé au document ajoute un nouveau worker en état {{domxref("ServiceWorkerRegistration.active")}}.
+  - : Un gestionnaire d’événement lancé quand un événement [`controllerchange`](/fr/docs/Web/API/ServiceWorkerContainer/controllerchange_event) se produit — quand le {{domxref("ServiceWorkerRegistration")}} associé au document ajoute un nouveau worker en état {{domxref("ServiceWorkerRegistration.active")}}.
 - {{domxref("ServiceWorkerContainer.onerror")}}
-  - : Un gestionnaire d’événement lancé quand un événement {{Event("error")}} se produit dans le service worker associé.
+  - : Un gestionnaire d’événement lancé quand un événement [`error`](/fr/docs/Web/API/ServiceWorkerContainer/error_event) se produit dans le service worker associé.
 - {{domxref("ServiceWorkerContainer.onmessage")}}
-  - : Un gestionnaire d’événement lancé quand un événement {{Event("message")}} se produit — quand des messages entrants sont reçus par l’objet {{domxref("ServiceWorkerContainer")}} (e.g. par un appel à {{domxref("MessagePort.postMessage()")}}.)
+  - : Un gestionnaire d’événement lancé quand un événement [`message`](/fr/docs/Web/API/ServiceWorkerContainer/message_event) se produit — quand des messages entrants sont reçus par l’objet {{domxref("ServiceWorkerContainer")}} (e.g. par un appel à {{domxref("MessagePort.postMessage()")}}.)
 
 ## Méthodes
 

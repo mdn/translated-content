@@ -11,7 +11,7 @@ El método `Element.attachShadow()` adjunta un árbol DOM "sombra" al elemento e
 
 No se puede adjuntar un DOM "sombra" a cualquier tipo de elemento. Hay algunos que no pueden tenerlo por razones de seguridad (por ejemplo {{htmlelement("a")}}), y algunos más. Los siguientes elementos de la lista **pueden** adjuntar un DOM "sombra":
 
-- Cualquier elemento autónomo con un [nombre válido](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name "nombre válido")
+- Cualquier elemento autónomo con un [nombre válido](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)
 - {{htmlelement("article")}}
 - {{htmlelement("aside")}}
 - {{htmlelement("blockquote")}}

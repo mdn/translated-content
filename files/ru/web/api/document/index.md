@@ -7,16 +7,16 @@ translation_of: Web/API/Document
 ---
 {{ ApiRef("DOM") }}
 
-Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект **document**. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [DOM](/ru/docs/Using_the_W3C_DOM_Level_1_Core "Using_the_W3C_DOM_Level_1_Core") - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).
+Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект **document**. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего [DOM](/ru/docs/Using_the_W3C_DOM_Level_1_Core) - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).
 
 Объект **document** может быть получен из разных API:
 
-- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/HTML/Element/Script "HTML/Element/Script") которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
-- Через свойство [`contentDocument`](/en-US/docs/Web/API/HTMLIFrameElement#Properties "DOM/HTMLIFrameElement#Properties") объекта iframe.
-- Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responseXML "XMLHttpRequest#responseXML") объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest "XMLHttpRequest")
+- Чаще всего используется прямой доступ к объекту **document** из сценариев [scripts](/ru/docs/HTML/Element/Script) которые подгружаются документом. (Этот же объект доступен как {{domxref("window.document")}}.)
+- Через свойство [`contentDocument`](/en-US/docs/Web/API/HTMLIFrameElement#Properties) объекта iframe.
+- Как ответ [`responseXML`](/ru/docs/Web/API/XMLHttpRequest#responseXML) объекта [`XMLHttpRequest.`](/ru/docs/Web/API/XMLHttpRequest)
 - Доступ к документу может быть получен из элемента или узла через свойство {{domxref("Node.ownerDocument","ownerDocument")}}.
 
-В зависимости от вида документа (т.е. [HTML](/ru/docs/HTML "HTML") или [XML](/ru/docs/XML "XML")) у объекта **document** могут быть доступны разные API.
+В зависимости от вида документа (т.е. [HTML](/ru/docs/HTML) или [XML](/ru/docs/XML)) у объекта **document** могут быть доступны разные API.
 
 - Все объекты документов реализуют интерфейс [`Document`](http://dom.spec.whatwg.org/#interface-document) (и следовательно {{domxref("Node")}} и {{domxref("EventTarget")}} интерфейсы). Таким образом основные свойства и методы, описанные на этой странице, доступны для всех видов документов.
 - В современных браузерах некоторые документы (т.е. те, которые содержат контент `text/html`) также реализуют {{domxref("HTMLDocument")}} интерфейс.
@@ -228,7 +228,7 @@ The `Document` interface is extended with the {{domxref("ParentNode")}} interfac
 The `Document` interface is extended with the {{domxref("XPathEvaluator")}} interface:
 
 - {{domxref("Document.createExpression","Document.createExpression(String expression, XPathNSResolver resolver)")}}
-  - : Compiles an [`XPathExpression`](/en-US/docs/XPathExpression "XPathExpression") which can then be used for (repeated) evaluations.
+  - : Compiles an [`XPathExpression`](/en-US/docs/XPathExpression) which can then be used for (repeated) evaluations.
 - {{domxref("Document.createNSResolver","Document.createNSResolver(Node resolver)")}}
   - : Creates an {{domxref("XPathNSResolver")}} object.
 - {{domxref("Document.evaluate","Document.evaluate(String expression, Node contextNode, XPathNSResolver resolver, Number type, Object result)")}}
@@ -306,7 +306,7 @@ Mozilla also define some non-standard methods:
 - {{domxref("Document.getBoxObjectFor")}} {{deprecated_inline}}
   - : Use the {{domxref("Element.getBoundingClientRect()")}} method instead.
 - {{domxref("Document.loadOverlay")}}
-  - : Loads a [XUL overlay](/ru/docs/XUL_Overlays "XUL_Overlays") dynamically. This only works in XUL documents.
+  - : Loads a [XUL overlay](/ru/docs/XUL_Overlays) dynamically. This only works in XUL documents.
 - {{domxref("document.queryCommandText")}} {{deprecated_inline}}
   - : This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
 

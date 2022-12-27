@@ -27,9 +27,9 @@ See a full list of [key values](/docs/Web/API/KeyboardEvent/key/Key_Values).
 
 Every `KeyboardEvent` is fired in a pre-determined sequence. For a given key press, the sequence of `KeyboardEvent`s fired is as follows assuming that {{domxref("Event.preventDefault")}} is not called:
 
-1.  A {{event("keydown")}} event is first fired. If the key is held down further and the key produces a character key, then the event continues to be emitted in a platform implementation dependent interval and the {{domxref("KeyboardEvent.repeat")}} read only property is set to `true`.
-2.  If the key produces a character key that would result in a character being inserted into possibly an {{HTMLElement("input")}}, {{HTMLElement("textarea")}} or an element with {{domxref("HTMLElement.contentEditable")}} set to true, the {{event("beforeinput")}} and {{event("input")}} event types are fired in that order. Note that some other implementations may fire {{event("keypress")}} event if supported. The events will be fired repeatedly while the key is held down.
-3.  A {{event("keyup")}} event is fired once the key is released. This completes the process.
+1. A {{event("keydown")}} event is first fired. If the key is held down further and the key produces a character key, then the event continues to be emitted in a platform implementation dependent interval and the {{domxref("KeyboardEvent.repeat")}} read only property is set to `true`.
+2. If the key produces a character key that would result in a character being inserted into possibly an {{HTMLElement("input")}}, {{HTMLElement("textarea")}} or an element with {{domxref("HTMLElement.contentEditable")}} set to true, the {{event("beforeinput")}} and {{event("input")}} event types are fired in that order. Note that some other implementations may fire {{event("keypress")}} event if supported. The events will be fired repeatedly while the key is held down.
+3. A {{event("keyup")}} event is fired once the key is released. This completes the process.
 
 In sequence 1 & 3, the `KeyboardEvent.key` attribute is defined and is set appropriately to a value according to the rules defined ealier.
 
@@ -39,7 +39,7 @@ Consider the event sequence generated when we interact with the <kbd>Shift</kbd>
 
 Try experimenting using the following two test cases:
 
-1.  Press and hold the&#x20;
+1. Press and hold the&#x20;
 
     <kbd>Shift</kbd>
 
@@ -53,7 +53,7 @@ Try experimenting using the following two test cases:
 
     &#x20;key.
 
-2.  Press and hold the&#x20;
+2. Press and hold the&#x20;
 
     <kbd>Shift</kbd>
 

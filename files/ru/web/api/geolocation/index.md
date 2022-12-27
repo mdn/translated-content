@@ -43,4 +43,4 @@ _Интерфейс `Geolocation` ни реализует, ни наследуе
 
 ## Смотрите также
 
-- [Использование геолокации](/ru/docs/WebAPI/Geolocaion/Using_geolocation "/en-US/docs/WebAPI/Using_geolocation")
+- [Использование геолокации](/ru/docs/WebAPI/Geolocaion/Using_geolocation)

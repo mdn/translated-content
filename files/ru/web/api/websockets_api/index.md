@@ -14,11 +14,11 @@ original_slug: WebSockets
 
 ## Документация
 
-- [Writing WebSocket client applications](/ru/docs/WebSockets/Writing_WebSocket_client_applications "WebSockets/Writing WebSocket client applications")
+- [Writing WebSocket client applications](/ru/docs/WebSockets/Writing_WebSocket_client_applications)
   - : Учебник описывающий как написать WebSocket клиента работающего в браузере.
-- [Справочник по WebSocket](/ru/docs/WebSockets/WebSockets_reference "WebSockets/WebSockets reference")
+- [Справочник по WebSocket](/ru/docs/WebSockets/WebSockets_reference)
   - : A reference to the client-side WebSocket API.
-- [(TBD) Writing WebSocket servers](/ru/docs/WebSockets/Writing_WebSocket_servers "WebSockets/Writing WebSocket servers")
+- [(TBD) Writing WebSocket servers](/ru/docs/WebSockets/Writing_WebSocket_servers)
   - : A guide to writing server-side code to handle the WebSocket protocol.
 
 ## Tools
@@ -29,7 +29,7 @@ original_slug: WebSockets
 
 ## Related Topics
 
-- [AJAX](/ru/docs/AJAX "AJAX"), [JavaScript](/ru/docs/JavaScript "JavaScript")
+- [AJAX](/ru/docs/AJAX), [JavaScript](/ru/docs/JavaScript)
 
 ## Совместимость с браузерами
 
@@ -39,5 +39,5 @@ original_slug: WebSockets
 
 - [RFC 6455 - The WebSocket Protocol](http://tools.ietf.org/html/rfc6455)
 - [WebSocket API Specification](http://www.w3.org/TR/websockets/)
-- [Server-Sent Events](/ru/docs/Server-sent_events "Server-sent_events")
+- [Server-Sent Events](/ru/docs/Server-sent_events)
 - [WebSocket.us](http://websocket.us/) - a community-run, not-for-profit site about WebSocket

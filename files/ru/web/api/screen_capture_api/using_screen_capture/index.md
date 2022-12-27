@@ -127,7 +127,7 @@ const gdmOptions = {
 
 Захват аудио всегда необязателен, и даже когда веб-контент запрашивает поток с аудио и видео, возвращаемый {{domxref ("MediaStream")}} может по-прежнему иметь только одну видеодорожку без звука.
 
-> **Примечание:** **Примечание :** Некоторые свойства не реализованы широко и могут не использоваться движком. К примеру, `cursor `[имеет ограниченную поддержку](/ru/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility).
+> **Примечание:** **Примечание :** Некоторые свойства не реализованы широко и могут не использоваться движком. К примеру, `cursor` [имеет ограниченную поддержку](/ru/docs/Web/API/MediaTrackConstraints/cursor#Browser_compatibility).
 
 ## Using the captured stream
 
@@ -282,10 +282,10 @@ Click the Start Capture button to begin.</p>
 
 The key parts of the HTML are:
 
-1.  A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
-2.  A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
-3.  A {{HTMLElement("video")}} into which the captured screen contents are streamed.
-4.  A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("Console")}}method.
+1. A {{HTMLElement("button")}} labeled "Start Capture" which, when clicked, calls the `startCapture()` function to request access to, and begin capturing, screen contents.
+2. A second button, "Stop Capture", which upon being clicked calls `stopCapture()` to terminate capture of screen contents.
+3. A {{HTMLElement("video")}} into which the captured screen contents are streamed.
+4. A {{HTMLElement("pre")}} block into which logged text is placed by the intercepted {{domxref("Console")}}method.
 
 #### CSS
 

@@ -19,7 +19,7 @@ translation_of: Web/API/Element/closest
 var elt = element.closest(selectors);
 ```
 
-- **`selectors` _-_ **строка, а точнее {{domxref("DOMString")}}`, `содержащая CSS-селектор, к примеру: _**"#id", ".class", "div"**..._
+- **`selectors`** - строка, а точнее {{domxref("DOMString")}}, содержащая CSS-селектор, к примеру: "#id", ".class", "div" ...
 - Результат - элемент DOM ({{domxref("Element")}}), либо null.
 
 ## Исключения

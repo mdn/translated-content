@@ -26,7 +26,7 @@ Web Animations API позволяет нам создать анимацию и 
 
 ### CSS версия
 
-Вот такая анимация написана в CSS, показывающая, как Алиса падает в кроличью нору, которая ведёт в страну чудес (см. полный код на[ Codepen](http://codepen.io/rachelnabors/pen/QyOqqW)):
+Вот такая анимация написана в CSS, показывающая, как Алиса падает в кроличью нору, которая ведёт в страну чудес (см. полный код на [Codepen](http://codepen.io/rachelnabors/pen/QyOqqW)):
 
 [![Alice Tumbling down the rabbit's hole.](https://mdn.mozillademos.org/files/13843/tumbling-alice_optimized.gif)](http://codepen.io/rachelnabors/pen/rxpmJL)
 

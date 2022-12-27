@@ -35,7 +35,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resou
 
 As vezes, você precisa empacotar recursos — por exemplo, imagens, HTML, CSS ou Javascript — com a sua extensão e fazê-la acessível para as páginas web.
 
-Por exemplo, a [extensão de exemplo Beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) substitui uma página por uma imagem de um animal selecionado pelo usuário. As imagens foram empacotadas com a extensão. Para fazer visível a imagem selecionada, a extensão adiciona elementos [`<img>`](/en-US/docs/Web/HTML/Element/img) cujo atributo `src` aponta para a imagem do animal. Para que a página da web possa carregar as imagens, elas devem estar disponíveis na extensão.
+Por exemplo, a [extensão de exemplo Beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) substitui uma página por uma imagem de um animal selecionado pelo usuário. As imagens foram empacotadas com a extensão. Para fazer visível a imagem selecionada, a extensão adiciona elementos [`<img>`](/pt-BR/docs/Web/HTML/Element/img) cujo atributo `src` aponta para a imagem do animal. Para que a página da web possa carregar as imagens, elas devem estar disponíveis na extensão.
 
 With the `web_accessible_resources` key, you list all the packaged resources that you want to make available to web pages. You specify them as paths relative to the manifest.json file.
 
@@ -55,7 +55,7 @@ my-extension-files/
         my-image.png
 ```
 
-To enable a web page to use an [`<img>`](/en-US/docs/Web/HTML/Element/img) element whose `src` attribute points to this image, you would specify `web_accessible_resources` like this:
+To enable a web page to use an [`<img>`](/pt-BR/docs/Web/HTML/Element/img) element whose `src` attribute points to this image, you would specify `web_accessible_resources` like this:
 
 ```json
 "web_accessible_resources": ["images/my-image.png"]
@@ -71,7 +71,7 @@ moz-extension://<extension-UUID>/images/my-image.png"
 
 > **Nota:** In Chrome, an extension's ID is fixed. When a resource is listed in `web_accessible_resources`, it is accessible as `chrome-extension://<your-extension-id>/<path/to/resource>`.
 
-The recommended approach to obtaining the URL of the resource is to use [`runtime.getURL`](/en-US/Add-ons/WebExtensions/API/runtime/getURL) passing the path relative to manifest.json, for example:
+The recommended approach to obtaining the URL of the resource is to use [`runtime.getURL`](/pt-BR/Add-ons/WebExtensions/API/runtime/getURL) passing the path relative to manifest.json, for example:
 
 ```js
 browser.runtime.getURL("images/my-image.png");

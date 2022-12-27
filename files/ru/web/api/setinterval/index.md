@@ -384,7 +384,7 @@ setTimeout.call(myArray, myArray.myMethod, 2000); // prints "zero,one,two" after
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 seconds
 ```
 
-Another, more complex, solution for\*\* **the [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) problem** \*\*is [the following framework](#A_little_framework).
+Another, more complex, solution for **the [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this) problem** is [the following framework](#A_little_framework).
 
 > **Примечание:** JavaScript 1.8.5 introduces the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function. This lets you easily bypass problems where it's unclear what this will be, depending on the context from which your function was called. Also, ES2015 supports [arrow functions](/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions), with lexical this allowing us to write setInterval( () => this.myMethod) if we're inside myArray method.
 
@@ -471,7 +471,9 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 ### Синтаксис
 
-` var myDaemon = new MiniDaemon(thisObject, callback[``, rate``[, length]]); `
+```
+var myDaemon = new MiniDaemon(thisObject, callback[, rate[, length]]);
+```
 
 ### Описание
 
@@ -556,7 +558,7 @@ Returns a JavaScript [`Object`](/ru/docs/Web/JavaScript/Reference/Global_Objects
 </html>
 ```
 
-[View this example in action](/files/3995/minidaemon_example.html "MiniDaemon Example")
+[View this example in action](/files/3995/minidaemon_example.html)
 
 ## Примечания
 

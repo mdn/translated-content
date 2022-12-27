@@ -5,7 +5,7 @@ translation_of: Web/API/HTMLElement/offsetTop
 ---
 {{ APIRef("HTML DOM") }}
 
-**`HTMLElement.offsetTop - `**`свойство элемента доступно только для чтения,` возвращает расстояние текущего элемента по отношению к верхней части {{domxref("HTMLelement.offsetParent","offsetParent")}} узла.
+**`HTMLElement.offsetTop`** - свойство элемента доступно только для чтения,` возвращает расстояние текущего элемента по отношению к верхней части {{domxref("HTMLelement.offsetParent","offsetParent")}} узла.
 
 ## Синтаксис
 

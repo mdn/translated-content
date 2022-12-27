@@ -1,7 +1,9 @@
 ---
-title: <textarea>
+title: <textarea>：文本区元素
 slug: Web/HTML/Element/textarea
 ---
+
+{{HTMLRef}}
 
 **HTML `<textarea>` 元素**表示一个多行纯文本编辑控件，当你希望用户输入一段相当长的、不限格式的文本，例如评论或反馈表单中的一段意见时，这很有用。
 

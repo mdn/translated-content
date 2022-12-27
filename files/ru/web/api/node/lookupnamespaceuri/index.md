@@ -7,7 +7,7 @@ translation_of: Web/API/Node/lookupNamespaceURI
 
 Метод **`Node.lookupNamespaceURI()`** берёт префикс и возвращает пространство имён URI связанное с ним в данном узле, если найден (и `null` если нет). Устанавливает `null` для префикса который возвращает пространство имён по умолчанию.
 
-Из-за ошибки [bug 312019](https://bugzilla.mozilla.org/show_bug.cgi?id=312019), этот метод не работает с динамическим назначением пространства имён (т.е., с уставленным тем же [Node.prefix](/en/DOM/Node.prefix "En/DOM/Node.prefix")).
+Из-за ошибки [bug 312019](https://bugzilla.mozilla.org/show_bug.cgi?id=312019), этот метод не работает с динамическим назначением пространства имён (т.е., с уставленным тем же [Node.prefix](/en/DOM/Node.prefix)).
 
 ## Смотрите также
 

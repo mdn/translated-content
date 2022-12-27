@@ -6,7 +6,7 @@ original_slug: Web/API/Window/performance
 ---
 {{APIREf}}
 
-The Web Performance API allows web pages access to certain functions for measuring the performance of web pages and web applications, including the [Navigation Timing ](/ru/docs/Navigation_timing)API and high-resolution time data.
+The Web Performance API allows web pages access to certain functions for measuring the performance of web pages and web applications, including the [Navigation Timing](/ru/docs/Navigation_timing) API and high-resolution time data.
 
 ## Methods
 

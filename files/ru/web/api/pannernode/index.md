@@ -45,7 +45,7 @@ translation_of: Web/API/PannerNode
 
 Наследует свойства от своего родителя*, {{domxref("AudioNode")}}*.
 
-Значения направления и положения устанавливаются и получаются различными вариантами синтаксиса, поскольку они хранятся в виде значений {{domxref("AudioParam")}}. Получение значения осуществляется через обращение, например так,` PannerNode.positionX`. Установка того же свойства делается так,` PannerNode.positionX.value`. This is why these values are not marked read only, which is how they appear in the WebIDL.
+Значения направления и положения устанавливаются и получаются различными вариантами синтаксиса, поскольку они хранятся в виде значений {{domxref("AudioParam")}}. Получение значения осуществляется через обращение, например так, `PannerNode.positionX`. Установка того же свойства делается так, `PannerNode.positionX.value`. This is why these values are not marked read only, which is how they appear in the WebIDL.
 
 - {{domxref("PannerNode.coneInnerAngle")}}
   - : Это значение типа `double`, представляющее угол конуса (в градусах), внутри которого не будет уменьшения громкости.

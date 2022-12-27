@@ -299,13 +299,13 @@ La expresión dentro de `if (... )` es el criterio — este usa al operador de i
 
 Las {{Glossary("Function", "funciones")}} son una manera de encapsular una funcionalidad que quieres reutilizar, de manera que puedes llamar esa función con un solo nombre, y no tendrás que escribir el código entero cada vez que la utilices. Ya has visto algunas funciones más arriba, por ejemplo:
 
-1. ```js
-    let nombreDeLaVariable = document.querySelector('h1');
-    ```
+```js
+let nombreDeLaVariable = document.querySelector('h1');
+```
 
-2. ```js
-    alert('¡Hola!');
-    ```
+```js
+alert('¡Hola!');
+```
 
 Estas funciones `document.querySelector` y `alert` están integradas en el navegador para poder utilizarlas en cualquier momento.
 

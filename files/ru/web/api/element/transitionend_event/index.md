@@ -58,4 +58,4 @@ element.addEventListener("transitionend", showMessage, false);
 
 ## Также
 
-- The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/ru/docs/Mozilla_event_reference/transitionend "The 'transitionend' event") event.
+- The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/ru/docs/Mozilla_event_reference/transitionend) event.

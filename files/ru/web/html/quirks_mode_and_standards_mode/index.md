@@ -45,4 +45,4 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 ## В чем разница между режимами?
 
-См. [список странностей (list of quirks)](/ru/docs/Mozilla_Quirks_Mode_Behavior) и [частично стандартный режим](/ru/docs/Gecko's_"Almost_Standards"_Mode "Gecko%27s_%22Almost_Standards%22_Mode") для того, чтобы увидеть разницу между режимами.
+См. [список странностей (list of quirks)](/ru/docs/Mozilla_Quirks_Mode_Behavior) и [частично стандартный режим](/ru/docs/Gecko's_"Almost_Standards"_Mode) для того, чтобы увидеть разницу между режимами.

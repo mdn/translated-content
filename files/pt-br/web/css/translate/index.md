@@ -12,7 +12,7 @@ translation_of: Web/CSS/translate
 
 {{CSSRef}}
 
-A propriedade **`translate`** [CSS](/en-US/docs/Web/CSS) do CSS, permite que você especifique transformações `translate` individualmente e independentemente da propriedade {{CSSxRef("transform")}}. É mais adequado para o uso de interface de usuário, e nos poupa quando se trata de lembrar a ordem exata que devemos especificar nos valores das funções de `transform`.
+A propriedade **`translate`** [CSS](/pt-BR/docs/Web/CSS) do CSS, permite que você especifique transformações `translate` individualmente e independentemente da propriedade {{CSSxRef("transform")}}. É mais adequado para o uso de interface de usuário, e nos poupa quando se trata de lembrar a ordem exata que devemos especificar nos valores das funções de `transform`.
 
 ## Syntax
 

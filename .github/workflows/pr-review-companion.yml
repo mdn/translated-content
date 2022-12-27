@@ -24,7 +24,7 @@ jobs:
       github.event.workflow_run.conclusion == 'success' }}
 
     steps:
-      - name: 'Download artifact'
+      - name: "Download artifact"
         uses: actions/github-script@v6
         with:
           script: |
@@ -82,7 +82,7 @@ jobs:
           key: dotlocal-${{ runner.os }}-${{ steps.setup-python.outputs.python-version }}-0
 
       - name: Install Python poetry
-        uses: snok/install-poetry@v1.3
+        uses: snok/install-poetry@v1
         with:
           virtualenvs-create: true
           virtualenvs-in-project: true

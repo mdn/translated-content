@@ -24,11 +24,11 @@ dump(window.navigator.doNotTrack);
 
 ## Спецификация
 
-[Tracking Preference Expression](http://www.w3.org/TR/tracking-dnt/) (Working проект) основан на более ранней версии этой спецификации, где `navigator.doNotTrack` **это** значение\*\* \*\*посланное заголовком do-not-track.
+[Tracking Preference Expression](http://www.w3.org/TR/tracking-dnt/) (Working проект) основан на более ранней версии этой спецификации, где `navigator.doNotTrack` **это** значение посланное заголовком `do-not-track`.
 
 ## Смотрите также
 
-- [The Do Not Track field guide](/en/The_Do_Not_Track_Field_Guide "https://developer.mozilla.org/en/The_Do_Not_Track_Field_Guide")
+- [The Do Not Track field guide](/en/The_Do_Not_Track_Field_Guide)
 
 ## Совместимость с браузерами
 

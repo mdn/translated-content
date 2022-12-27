@@ -8,7 +8,7 @@ original_slug: Web/API/KeyboardEvent/key/Key_Values
 
 Узнайте, как использовать эти пары "ключ-значение" в JavaScript с помощью [KeyboardEvent.key](/docs/Web/API/KeyboardEvent/key)
 
-[Special Values ](#Special_values)| [Modifier Keys](#Modifier_keys) | [Whitespace Keys](#Whitespace_keys) | [Navigation Keys](#Navigation_keys) | [Editing Keys](#Editing_keys) | [UI Keys](#UI_keys) | [Device Keys](#Device_keys) | [IME and Composition Keys](#IME_and_composition_keys) | [Function Keys](#Function_keys) | [Phone Keys](#Phone_keys) | [Multimedia Keys](#Multimedia_keys) | [Audio Control Keys](#Audio_control_keys) | [TV Control Keys](#TV_control_keys) | [Media Controller Keys](#Media_controller_keys) | [Speech Recognition Keys](#Speech_recognition_keys) | [Document Keys](#Document_keys) | [Application Selector Keys](#Application_selector_keys) | [Browser Control Keys](#Browser_control_keys) | [Numeric Keypad Keys](#Numeric_keypad_keys)
+[Special Values](#Special_values) | [Modifier Keys](#Modifier_keys) | [Whitespace Keys](#Whitespace_keys) | [Navigation Keys](#Navigation_keys) | [Editing Keys](#Editing_keys) | [UI Keys](#UI_keys) | [Device Keys](#Device_keys) | [IME and Composition Keys](#IME_and_composition_keys) | [Function Keys](#Function_keys) | [Phone Keys](#Phone_keys) | [Multimedia Keys](#Multimedia_keys) | [Audio Control Keys](#Audio_control_keys) | [TV Control Keys](#TV_control_keys) | [Media Controller Keys](#Media_controller_keys) | [Speech Recognition Keys](#Speech_recognition_keys) | [Document Keys](#Document_keys) | [Application Selector Keys](#Application_selector_keys) | [Browser Control Keys](#Browser_control_keys) | [Numeric Keypad Keys](#Numeric_keypad_keys)
 
 ## Специальные значения
 
@@ -322,7 +322,7 @@ original_slug: Web/API/KeyboardEvent/key/Key_Values
 
 \[1] В Internet Explorer (проверено на релизах 9 и 11), а также во всех версиях Firefox, клавиша <kbd>Windows</kbd> сообщается как `"OS"` а не `"Meta"`. Это будет изменено в Firefox в {{bug(1232918)}}. Пока это не будет исправлено, эти ключи возвращаются как `"OS"` в Firefox: `VK_LWIN` (0x5B) и `VK_RWIN` (0x5C) в Windows, и `GDK_KEY_Super_L (0xFFEB)`, `GDK_KEY_Super_R (0xFFEC)`, `GDK_KEY_Hyper_L (0xFFED)`, и `GDK_KEY_Hyper_R (0xFFEE)` в Linux.
 
-\[2] Internet Explorer (проверено на релизах 9 и 11) сообщает `"Scroll"` вместо` "ScrollLock"` для клавиши <kbd>Scroll Lock</kbd>.
+\[2] Internet Explorer (проверено на релизах 9 и 11) сообщает `"Scroll"` вместо `"ScrollLock"` для клавиши <kbd>Scroll Lock</kbd>.
 
 \[3] Firefox не поддерживает клавишу <kbd>Symbol</kbd> до версии Firefox 37.
 
@@ -1397,7 +1397,7 @@ original_slug: Web/API/KeyboardEvent/key/Key_Values
 
 \[1] В _X Window System_, клавиша <kbd>Compose</kbd> называется <kbd>Multi</kbd>.
 
-\[2] Клавиша <kbd>NonConvert</kbd> возвращает значение `"Nonconvert"` вместо корректного` "NonConvert"` в Internet Explorer (проверено в версиях 9 и 11) и Firefox версии 36 и более ранних.
+\[2] Клавиша <kbd>NonConvert</kbd> возвращает значение `"Nonconvert"` вместо корректного `"NonConvert"` в Internet Explorer (проверено в версиях 9 и 11) и Firefox версии 36 и более ранних.
 
 \[3] Клавиша <kbd>Process</kbd> в настоящее время возвращает `"Unidentified"` в Firefox и Internet Explorer. Google Chrome возвращает значение клавиши так, как если бы IME не использовался.
 
@@ -1656,7 +1656,7 @@ You can find a table of the dead keys and the characters they can be used with t
 
 The value of {{domxref("CompositionEvent.data", "data")}} will be one of the following:
 
-| **Значение` CompositionEvent.data`**                                                  | Символ | Комментарии                                               |
+| **Значение `CompositionEvent.data`**                                                  | Символ | Комментарии                                               |
 | ------------------------------------------------------------------------------------- | ------ | --------------------------------------------------------- |
 | `GDK_KEY_dead_grave` (0xFE50) `Qt::Key_Dead_Grave` (0x01001250)                       | \`     |                                                           |
 | `GDK_KEY_dead_acute` (0xFE51) `Qt::Key_Dead_Acute` (0x01001251)                       | ´      |                                                           |
@@ -2820,7 +2820,7 @@ The value of {{domxref("CompositionEvent.data", "data")}} will be one of the fol
 
 - [DTV Application Software Environment](http://atsc.org/standard/a100-dtv-application-software-environment-level-1-dase-1/) (часть спецификации {{interwiki("wikipedia", "ATSC")}})
 - [Open Cable Application Platform 1.1.3](http://www.cablelabs.com/specifications/OC-SP-OCAP1.1.3-100603.pdf)
-- [ANSI/CEA-2014-B](http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI%29.aspx): Веб-протокол и фреймворк для удалённого пользовательского интерфейса в сетях UPnP ™ и Интернете
+- [ANSI/CEA-2014-B](<http://www.ce.org/Standards/Standard-Listings/R7-Home-Network-Committee/CEA-2014-B-(ANSI).aspx>): Веб-протокол и фреймворк для удалённого пользовательского интерфейса в сетях UPnP ™ и Интернете
 - [Android KeyEvent key code values](http://developer.android.com/reference/android/view/KeyEvent.html)
 
 > **Примечание:** Пульт дистанционного управления обычно содержит кнопки, значения которых уже определены где-то ещё, например _Мультимедийные клавиши_ или _Клавиши управления звуком_. Значения этих кнопок будут соответствовать тому, что задокументировано в этих таблицах.

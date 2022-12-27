@@ -195,7 +195,7 @@ Dans ces environnements, malheureusement, il n'y a aucun moyen pour que le conte
 
 #### Gestion de l'auto-répétition avant Gecko 5.0
 
-Avant Gecko 5.0 {{geckoRelease('5.0')}}, la gestion du clavier était moins cohérente entre les plates-formes.
+Avant Gecko 5.0, la gestion du clavier était moins cohérente entre les plates-formes.
 
 - Windows
   - : Le comportement de la répétition automatique est le même que dans Gecko 4.0 et ultérieur.

@@ -19,7 +19,7 @@ someURL = ServiceWorker.state
 
 ## Примеры
 
-Это фрагмент кода из [примера событий Service Worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([демо](https://googlechrome.github.io/samples/service-worker/registration-events/)). Данный код возвращает значение [`ServiceWorker.state`](/ru/docs/Web/API/ServiceWorker/state "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!") при каждом изменении состояния.
+Это фрагмент кода из [примера событий Service Worker](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html) ([демо](https://googlechrome.github.io/samples/service-worker/registration-events/)). Данный код возвращает значение [`ServiceWorker.state`](/ru/docs/Web/API/ServiceWorker/state) при каждом изменении состояния.
 
 ```js
 var serviceWorker;

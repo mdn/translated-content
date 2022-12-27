@@ -2,6 +2,8 @@
 title: Response.blob()
 slug: Web/API/Response/blob
 original_slug: Web/API/Body/blob
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
 {{APIRef("Fetch")}}
@@ -10,10 +12,8 @@ original_slug: Web/API/Body/blob
 
 ## 構文
 
-```js
-response.blob().then(function(myBlob) {
-  // do something with myBlob
-});
+```js-nolint
+blob()
 ```
 
 ### 引数
@@ -28,19 +28,19 @@ response.blob().then(function(myBlob) {
 
 ## 例
 
-[fetch request の例](https://github.com/mdn/fetch-examples/tree/master/fetch-request) ([fetch request をライブで](https://mdn.github.io/fetch-examples/fetch-request/)実行) では、{{domxref("Request.Request","Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して JPG を読み取ります。読み取りが成功したら、`blob()` を使用してレスポンスから {{domxref("Blob")}} を読み取り、それを {{domxref("URL.createObjectURL")}} を使用してオブジェクト URL に入れ、その URL を {{htmlelement("img")}} 要素のソースとして設定して画像を表示します。
+[fetch request の例](https://github.com/mdn/fetch-examples/tree/main/fetch-request) ([fetch request をライブで](https://mdn.github.io/fetch-examples/fetch-request/)実行) では、{{domxref("Request.Request","Request()")}} コンストラクターを使用して新しいリクエストを作成し、それを使用して JPG を読み取ります。読み取りが成功したら、`blob()` を使用してレスポンスから {{domxref("Blob")}} を読み取り、それを {{domxref("URL.createObjectURL")}} を使用してオブジェクト URL に入れ、その URL を {{htmlelement("img")}} 要素のソースとして設定して画像を表示します。
 
 ```js
-var myImage = document.querySelector('img');
+const myImage = document.querySelector('img');
 
-var myRequest = new Request('flowers.jpg');
+const myRequest = new Request('flowers.jpg');
 
 fetch(myRequest)
-.then(response => response.blob())
-.then(function(myBlob) {
-  var objectURL = URL.createObjectURL(myBlob);
-  myImage.src = objectURL;
-});
+  .then((response) => response.blob())
+  .then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
+    myImage.src = objectURL;
+  });
 ```
 
 ## 仕様書
@@ -53,6 +53,6 @@ fetch(myRequest)
 
 ## 関連情報
 
-- [ServiceWorker API](/ja/docs/Web/API/Service_Worker_API)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

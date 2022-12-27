@@ -237,14 +237,14 @@ div {
 
 ### 참고
 
-1.  파일 입력 칸의 값을 스크립트에서 설정할 수는 없습니다. 따라서 다음 코드는 아무런 효과도 내지 않습니다.
+1. 파일 입력 칸의 값을 스크립트에서 설정할 수는 없습니다. 따라서 다음 코드는 아무런 효과도 내지 않습니다.
 
     ```js
     const input = document.querySelector("input[type=file]");
     input.value = "foo";
     ```
 
-2.  `<input type="file">`로 선택한 원본 파일의 실제 경로는 명확한 보안상 문제로 인해 알 수 없습니다. 대신 앞에 `C:\fakepath\` 를 붙인 파일 이름을 경로로 보여줍니다. 하필 이런 모습이 된 것에는 역사적인 이유가 있지만 이 동작은 모든 최신 브라우저에서 지원하고 있으며, 사실 [명세에도 포함](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)되어 있습니다.
+2. `<input type="file">` 로 선택한 원본 파일의 실제 경로는 명확한 보안상 문제로 인해 알 수 없습니다. 대신 앞에 `C:\fakepath\` 를 붙인 파일 이름을 경로로 보여줍니다. 하필 이런 모습이 된 것에는 역사적인 이유가 있지만 이 동작은 모든 최신 브라우저에서 지원하고 있으며, 사실 [명세에도 포함](https://html.spec.whatwg.org/multipage/forms.html#fakepath-srsly)되어 있습니다.
 
 ## 예제
 

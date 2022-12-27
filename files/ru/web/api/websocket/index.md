@@ -45,15 +45,15 @@ WebSocket WebSocket(
 
 | Атрибут          | Тип                                                        | Описание                                                                                                                                                                                                                                                                                                                 |
 | ---------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `binaryType`     | {{ DOMXref("DOMString") }}                       | Строка, указывающая на тип двоичных данных, которые будут переданы по соединению. Это может быть "blob" если будут использованы {{ domxref("Blob") }} объекты или "arraybuffer" если будут использованы объекты [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer "en/JavaScript typed arrays/ArrayBuffer") |
-| `bufferedAmount` | [`unsigned long`](/en/unsigned_long "en/unsigned long")    | Количество байтов данных, которые были поставлены в очередь, используя вызовы [send](#send), но ещё не переданные в сеть. Это значение не сбрасывается в ноль, при закрытии соединения; если продолжить вызывать [send](#send), значение будет расти. **Только чтение.**                                                 |
+| `binaryType`     | {{ DOMXref("DOMString") }}                       | Строка, указывающая на тип двоичных данных, которые будут переданы по соединению. Это может быть "blob" если будут использованы {{ domxref("Blob") }} объекты или "arraybuffer" если будут использованы объекты [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer) |
+| `bufferedAmount` | [`unsigned long`](/en/unsigned_long)    | Количество байтов данных, которые были поставлены в очередь, используя вызовы [send](#send), но ещё не переданные в сеть. Это значение не сбрасывается в ноль, при закрытии соединения; если продолжить вызывать [send](#send), значение будет расти. **Только чтение.**                                                 |
 | `extensions`     | {{ DOMXref("DOMString") }}                       | Расширения, выбранные сервером. В настоящее время это только пустая строка или список расширений, согласованных соединением.                                                                                                                                                                                             |
-| `onclose`        | {{ domxref("EventListener") }}                   | Обработчик событий, вызываемый, когда `readyState `WebSocket соединения изменяется на `CLOSED`. Наблюдатель получает [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent "en/WebSockets/WebSockets reference/CloseEvent") с именем "close".                                                                    |
+| `onclose`        | {{ domxref("EventListener") }}                   | Обработчик событий, вызываемый, когда `readyState` WebSocket соединения изменяется на `CLOSED`. Наблюдатель получает [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) с именем "close".                                                                    |
 | `onerror`        | {{ domxref("EventListener") }}                   | Обработчик событий, вызываемый, когда происходит ошибка. Это простое событие, называемое "error".                                                                                                                                                                                                                        |
-| `onmessage`      | {{ domxref("EventListener") }}                   | Обработчик событий , вызываемый, когда получается сообщение с сервера. Наблюдатель получает [`MessageEvent`](en-US/docs/Web/API/MessageEvent "en-US/docs/Web/API/MessageEvent"), называемое "message".                                                                                                                   |
+| `onmessage`      | {{ domxref("EventListener") }}                   | Обработчик событий , вызываемый, когда получается сообщение с сервера. Наблюдатель получает [`MessageEvent`](en-US/docs/Web/API/MessageEvent), называемое "message".                                                                                                                   |
 | `onopen`         | {{ domxref("EventListener") }}                   | Наблюдатель событий, вызываемый, когда `readyState` WebSocket - соединения изменяется на `OPEN`; это показывает, что соединение готово отсылать и принимать данные. Это простое событие, называемое "open".                                                                                                              |
 | `protocol`       | {{ DOMXref("DOMString") }}                       | Строка, обозначающая имя подпротокола выбранного сервера; это будет одной из строк, указываемой в параметре `protocols` при создании WebSocket - объекта.                                                                                                                                                                |
-| `readyState`     | [`unsigned short`](/en/unsigned_short "en/unsigned short") | Текущее состояние подключения; это одно из [Ready state constants](#ready_state_constants). **Только для чтения\*\***.\*\*                                                                                                                                                                                               |
+| `readyState`     | [`unsigned short`](/en/unsigned_short) | Текущее состояние подключения; это одно из [Ready state constants](#ready_state_constants). **Только для чтения**.                                                                                                                                                                                               |
 | `url`            | {{ DOMXref("DOMString") }}                       | URL, создаваемый конструктором. Это всегда абсолютный URL. **Только для чтения.**                                                                                                                                                                                                                                        |
 
 ## Константы
@@ -85,7 +85,7 @@ void close(
 ###### Параметры
 
 - `code` {{ optional_inline() }}
-  - : Числовое значение, обозначающее статус-код, описывающий почему подключение будет закрыто. Если параметр не указан, значение по умолчанию равно 1000(обозначает "обмен завершён"). Смотрите [list of status codes](en-US/docs/Web/API/CloseEvent#properties) для [`CloseEvent`](en-US/docs/Web/API/CloseEvent "en-US/docs/Web/API/CloseEvent"), чтобы узнать разрешённые значения.
+  - : Числовое значение, обозначающее статус-код, описывающий почему подключение будет закрыто. Если параметр не указан, значение по умолчанию равно 1000(обозначает "обмен завершён"). Смотрите [list of status codes](en-US/docs/Web/API/CloseEvent#properties) для [`CloseEvent`](en-US/docs/Web/API/CloseEvent), чтобы узнать разрешённые значения.
 - `reason` {{ optional_inline() }}
   - : Читаемая человеком строка, объясняющая, почему подключение закрывается. Строка должна быть не длиннее, чем 123 байта UTF-8 текста (**не** символов).
 
@@ -132,7 +132,7 @@ void send(
 
 > **Примечание:** **Заметьте:** Gecko - реализация метода `send()` несколько отличается от специфицированной в {{Gecko("6.0")}}; Gecko возвращает `boolean`, обозначающий, открыто ли соединение до сих пор (и, в дополнение, были ли доставлены данные); это было исправлено в {{Gecko("8.0")}}.
 >
-> Начиная с {{Gecko("11.0")}}, поддержка [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer "en/JavaScript typed arrays/ArrayBuffer") была реализована, но не {{ domxref("Blob") }} типы данных.
+> Начиная с {{Gecko("11.0")}}, поддержка [`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer) была реализована, но не {{ domxref("Blob") }} типы данных.
 
 ## Спецификации
 
@@ -163,5 +163,5 @@ socket.addEventListener('message', function (event) {
 
 ## Смотрите также
 
-- [Writing WebSocket client applications](/en/WebSockets/Writing_WebSocket_client_applications "en/WebSockets/Writing WebSocket client applications")
+- [Writing WebSocket client applications](/en/WebSockets/Writing_WebSocket_client_applications)
 - [HTML5: WebSockets](http://dev.w3.org/html5/websockets/)

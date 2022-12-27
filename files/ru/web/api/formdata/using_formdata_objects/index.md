@@ -35,7 +35,7 @@ request.send(formData);
 
 ## Получение объекта FormData из HTML формы
 
-Для создания объекта `FormDatа`, содержащего данные существующей формы` ({{ HTMLElement("form") }}`) передайте форму в качестве аргумента при создании объекта `FormData:`
+Для создания объекта `FormDatа`, содержащего данные существующей формы ({{ HTMLElement("form") }}) передайте форму в качестве аргумента при создании объекта `FormData:`
 
 > **Примечание:**FormData будет использовать только те поля ввода, которые используют атрибут name.
 
@@ -52,7 +52,7 @@ request.open("POST", "submitform.php");
 request.send(new FormData(formElement));
 ```
 
-Вы так же можете добавить дополнительные данные в объект `FormData `после его создания и до отправки данных:
+Вы так же можете добавить дополнительные данные в объект `FormData` после его создания и до отправки данных:
 
 ```js
 var formElement = document.querySelector("form");
@@ -67,7 +67,7 @@ request.send(formData);
 
 ## Отправка файлов при помощи объекта FormData
 
-Вы так же можете отправлять файлы при помощи `FormData. `Просто включите `{{ HTMLElement("input") }}` с типом `file `в форму.
+Вы так же можете отправлять файлы при помощи `FormData`. Просто включите {{ HTMLElement("input") }} с типом `file` в форму.
 
 ```html
 <form enctype="multipart/form-data" method="post" name="fileinfo">
@@ -116,7 +116,7 @@ form.addEventListener('submit', function(ev) {
 data.append("myfile", myBlob, "filename.txt");
 ```
 
-Метод` {{domxref("FormData.append","append()")}} `принимает 3й опциональный параметр - название файла, которое добавляется в заголовок `Content-Disposition `при отправке на сервер. Если название файла не указано (или данный параметр не поддерживается) используется имя "blob".
+Метод {{domxref("FormData.append","append()")}} принимает 3й опциональный параметр - название файла, которое добавляется в заголовок `Content-Disposition` при отправке на сервер. Если название файла не указано (или данный параметр не поддерживается) используется имя "blob".
 
 Вы так же можете использовать `FormData` с jQuery:
 
@@ -134,7 +134,7 @@ $.ajax({
 
 ## Отправка форм и файлов при помощи AJAX _без использования_ объекта `FormData`
 
-Если вы заинтересованы в отправке форм и файлов при помощи [AJAX](/ru/docs/AJAX) _без использования_ FormData, прочитайте [/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files "данную статью")
+Если вы заинтересованы в отправке форм и файлов при помощи [AJAX](/ru/docs/AJAX) _без использования_ FormData, прочитайте [/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files](/ru/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files)
 
 ## See also
 

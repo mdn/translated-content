@@ -1,7 +1,9 @@
 ---
-title: <i>
+title: <i>：术语文本元素
 slug: Web/HTML/Element/i
 ---
+
+{{HTMLRef}}
 
 ## 概述
 

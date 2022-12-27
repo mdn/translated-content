@@ -31,7 +31,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 
 Nome abreviado (short name) da extensão. Se informado, ele será usado em contextos onde o campo de nome for muito longo. É recomendado que o nome abreviado não deva exceder 12 caracteres. Se o campo do nome abreviado não for incluído no manifest.json, então o nome será usado em vez disso e pode ser truncado.
 
-Isto é um [propriedade localizável](/en-US/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+Isto é um [propriedade localizável](/pt-BR/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
 
 ## Exemplo
 

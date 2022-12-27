@@ -6,7 +6,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/pre-requisitos
 ---
 Para desenvolver utilizando as APIs de uma WebExtension, você precisa de uma configuração mínima.
 
-- baixar, instalar e abrir o [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) ou o [Firefox Nightly](https://nightly.mozilla.org/). Use o Nightly caso queira as atualizações mais recentes.
+- baixar, instalar e abrir o [Firefox Developer Edition](https://www.mozilla.org/pt-BR/firefox/developer/) ou o [Firefox Nightly](https://nightly.mozilla.org/). Use o Nightly caso queira as atualizações mais recentes.
 - altere a preferência que permite que o Firefox instale add-ons sem assinatura. Essa opção de configuração só está disponível nas versões do Firefox citadas no item anterior.
 
   - digite `about:config` na barra de endereço do Firefox

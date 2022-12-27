@@ -40,9 +40,7 @@ _Il hérite de propriétés de son parent, {{domxref("EventTarget")}}, et implé
 - {{domxref("Worker.onmessage")}}
   - : Un {{ domxref("EventListener") }} qui est appelé quand un {{domxref("MessageEvent")}} de type `message` arrive dans le worker — i.e. quand un message est envoyé au document parent depuis le worker via {{domxref("DedicatedWorkerGlobalScope.postMessage")}}. Le message est stocké dans la propriété {{domxref("MessageEvent.data", "data")}} de l'événement.
 - {{domxref("Worker.onmessageerror")}}
-  - : Un {{event("Event_handlers", "event handler")}} qui indique le code à appeler quand un message {{event("messageerror")}} arrive.
-
-<!---->
+  - : Un gestionnaire d'évènement qui indique le code à appeler quand un message [`messageerror`](/fr/docs/Web/API/Worker/messageerror_event) arrive.
 
 ## Méthodes
 
@@ -93,7 +91,7 @@ Pour un exemple complet, voir [Exemple basique de worker dédié](https://github
 
 ### Comportement des erreur Cross-origin sur les worker
 
-Dans les premières versions des spécifications, charger un scripte worker en cross-origin lève une exception `SecurityError`. Désormais, à la place un évènement {{event("error")}} lancé.
+Dans les premières versions des spécifications, charger un scripte worker en cross-origin lève une exception `SecurityError`. Désormais, à la place un évènement [`error`](/fr/docs/Web/API/Worker/error_event) lancé.
 
 ## Voir aussi
 

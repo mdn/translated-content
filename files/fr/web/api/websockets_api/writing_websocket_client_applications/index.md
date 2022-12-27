@@ -172,7 +172,7 @@ Ici nous utilisons [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON
 
 Le texte reçu à travers une connexion WebSocket est encodé au format UTF-8.
 
-Avant Gecko 9.0 {{ geckoRelease("9.0") }}, certains charactères spéciaux dans une chaîne UTF-8 provoquaient l'interruption de la connexion. Maintenant Gecko accepte ces caractères.
+Avant Gecko 9.0, certains charactères spéciaux dans une chaîne UTF-8 provoquaient l'interruption de la connexion. Maintenant Gecko accepte ces caractères.
 
 ## Fermeture de la connexion
 

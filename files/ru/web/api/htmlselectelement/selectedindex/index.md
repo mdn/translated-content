@@ -8,7 +8,7 @@ translation_of: Web/API/HTMLSelectElement/selectedIndex
 ---
 {{APIRef("HTML DOM")}}
 
-**`HTMLSelectElement.selectedIndex `**показывает порядковый номер первого выбранного элемента `{{HTMLElement("option")}}`. Значение -1 означает, что ни один из элементов не выбран.
+**`HTMLSelectElement.selectedIndex`** показывает порядковый номер первого выбранного элемента `{{HTMLElement("option")}}`. Значение -1 означает, что ни один из элементов не выбран.
 
 ## Синтаксис
 

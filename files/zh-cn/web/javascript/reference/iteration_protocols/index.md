@@ -73,17 +73,18 @@ slug: Web/JavaScript/Reference/Iteration_protocols
   </tbody>
 </table>
 
-> **备注：** 不可能判断一个特定的对象是否实现了迭代器协议，然而，创造一个*同时*满足迭代器协议和可迭代协议的对象是很容易的（如下面的示例中所示）。这样做允许一个迭代器能被各种需要可迭代对象的语法所使用。因此，很少会只实现迭代器协议，而不实现可迭代协议。```js example-good
-> var myIterator = {
-> next: function() {
-> // ...
-> },
-> [Symbol.iterator]: function() { return this }
-> }
->
-> ```
->
-> ```
+> **备注：** 不可能判断一个特定的对象是否实现了迭代器协议，然而，创造一个*同时*满足迭代器协议和可迭代协议的对象是很容易的（如下面的示例中所示）。这样做允许一个迭代器能被各种需要可迭代对象的语法所使用。因此，很少会只实现迭代器协议，而不实现可迭代协议。
+
+```js example-good
+var myIterator = {
+  next: function() {
+    // ...
+  },
+  [Symbol.iterator]: function() {
+    return this;
+  }
+};
+```
 
 ## 使用迭代协议的例子
 

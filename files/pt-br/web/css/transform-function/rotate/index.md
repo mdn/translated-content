@@ -122,10 +122,10 @@ div {
 
 ## Compatibilidade do navegador
 
-Por favor, veja o tipo de dados [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
+Por favor, veja o tipo de dados [`<transform-function>`](/pt-BR/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
 
 ## Veja também
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`rotate3d()`](/en-US/docs/Web/CSS/transform-function/rotate3d)
+- [`rotate3d()`](/pt-BR/docs/Web/CSS/transform-function/rotate3d)

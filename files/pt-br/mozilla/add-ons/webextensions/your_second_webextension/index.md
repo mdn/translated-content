@@ -88,7 +88,7 @@ Agora crie um novo arquivo chamado "manifest.json", e insira o seguinte conteúd
 ```
 
 - As primeiras três chaves : **`manifest_version`**, **`name`**, e **`version`**, são obrigatórias e contém metadados básicos para a extensão.
-- **`permissions`** lista as permisões que a extensão precisa. Nós iremos apenas perguntar se pediremos permissão para modificar todas as páginas HTTP e HTTPS : veja a documentação para as chaves de [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Nós prefirimos por usar a permissão `activeTab` aqui , mas atualmente não é suportada pela Firefox.
+- **`permissions`** lista as permisões que a extensão precisa. Nós iremos apenas perguntar se pediremos permissão para modificar todas as páginas HTTP e HTTPS : veja a documentação para as chaves de [`permissions`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Nós prefirimos por usar a permissão `activeTab` aqui , mas atualmente não é suportada pela Firefox.
 - **`browser_action`** especifica o botão da barra de ferramentas. Iremos fornecer três informações aqui:
 
   - **`default_icon`** é obrigatório, e aponta para o icone do botão

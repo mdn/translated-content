@@ -54,7 +54,7 @@ _Наследует свойства от его родителя, {{domxref("HT
 - {{domxref("HTMLAreaElement.shape")}}
   - : Это {{domxref("DOMString")}} который отображается {{ htmlattrxref("shape", "area") }} HTML атрибут, включающий вид активного участка, ограниченный известными значениями.
 - {{domxref("HTMLAreaElement.tabIndex")}}
-  - : Как `long `содержащий положение элемента в порядке табуляции.
+  - : Как `long` содержащий положение элемента в порядке табуляции.
 - {{domxref("HTMLAreaElement.target")}}
   - : Это {{domxref("DOMString")}} которое отображает {{ htmlattrxref("target", "area") }} HTML атрибут, включая контекст просмотра, в котором открыт связанный с ним ресурс.
 - {{domxref("HTMLAreaElement.type")}}

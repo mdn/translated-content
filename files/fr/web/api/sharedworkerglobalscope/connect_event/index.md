@@ -7,7 +7,7 @@ original_slug: Web/API/SharedWorkerGlobalScope/onconnect
 
 {{APIRef("Web Workers API")}}
 
-La proriété **`onconnect`** de l'interface {{domxref("SharedWorkerGlobalScope")}} est un gestionnaire d'évènement pour l'évènement {{event("connect")}}, c'est à dire quand une connexion {{domxref("MessagePort")}} est ouverte entre le {{domxref("SharedWorker")}} et le _thread_ principale.
+La proriété **`onconnect`** de l'interface {{domxref("SharedWorkerGlobalScope")}} est un gestionnaire d'évènement pour l'évènement `connect`, c'est à dire quand une connexion {{domxref("MessagePort")}} est ouverte entre le {{domxref("SharedWorker")}} et le _thread_ principale.
 
 ## Syntaxe
 

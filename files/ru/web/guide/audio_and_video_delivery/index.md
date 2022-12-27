@@ -21,10 +21,10 @@ Whether we are dealing with pre-recorded audio files or live streams, the mechan
 
 To deliver video and audio, the general workflow is usually something like this:
 
-1.  Check what format the browser supports via feature detection (usually a choice of two, as stated above.)
-2.  If the browser doesn't support playback of any of the provided formats natively, provide a fallback (such as a Flash movie.)
-3.  Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
-4.  Deliver the media file to the player.
+1. Check what format the browser supports via feature detection (usually a choice of two, as stated above.)
+2. If the browser doesn't support playback of any of the provided formats natively, provide a fallback (such as a Flash movie.)
+3. Identify how you want to play/instantiate the media (e.g. a {{ htmlelement("video") }} element, or `document.createElement('video')` perhaps?)
+4. Deliver the media file to the player.
 
 ### HTML Audio
 
@@ -302,7 +302,7 @@ window.onload = function() {
 }
 ```
 
-You can [try this example out here](http://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](https://developer.mozilla.org/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player).
+You can [try this example out here](http://jsbin.com/jujeladu/2/edit). For more information, see [Creating your own custom audio player](/en-US/Apps/Build/Manipulating_media/Cross-browser_audio_basics#Creating_your_own_custom_audio_player).
 
 ## Other tips for audio/video
 
@@ -350,13 +350,13 @@ The time can be specified as a number of seconds (as a floating-point value) or 
 
 A few examples:
 
-- http\://example.com/video.ogv#t=10,20
+- `http://example.com/video.ogv#t=10,20`
   - : Specifies that the video should play the range 10 seconds through 20 seconds.
-- http\://example.com/video.ogv#t=,10.5
+- `http://example.com/video.ogv#t=,10.5`
   - : Specifies that the video should play from the beginning through 10.5 seconds.
-- http\://example.com/video.ogv#t=,02:00:00
+- `http://example.com/video.ogv#t=,02:00:00`
   - : Specifies that the video should play from the beginning through two hours.
-- http\://example.com/video.ogv#t=60
+- `http://example.com/video.ogv#t=60`
   - : Specifies that the video should start playing at 60 seconds and play through the end of the video.
 
 > **Примечание:** The playback range portion of the media element URI specification was added to Gecko 9.0 {{ geckoRelease("9.0") }}. At this time, this is the only part of the [Media Fragments URI specification](http://www.w3.org/TR/media-frags/) implemented by Gecko, and it can only be used when specifying the source for media elements, and not in the address bar.
@@ -515,7 +515,7 @@ A number of audio and video JavaScript libaries exist. The most popular librarie
 ## Advanced tutorials
 
 - [Adding captions and subtitles to HTML5 video](/en-US/Apps/Build/Manipulating_media/Adding_captions_and_subtitles_to_HTML5_video)
-  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/ru/docs/Web/API/Web_Video_Text_Tracks_Format "WebVTT is a format for displaying timed text tracks (e.g. subtitles) with the <track> element. The primary purpose of WebVTT files is to add subtitles to a <video>.") and the {{ htmlelement("track") }} element.
+  - : This article explains how to add captions and subtitles to HTML5 {{ htmlelement("video") }}, using [Web_Video_Text_Tracks_Format](/ru/docs/Web/API/Web_Video_Text_Tracks_Format) and the {{ htmlelement("track") }} element.
 - [Writing Web Audio API code that works in every browser](/ru/docs/Web/Apps/Developing/Manipulating_media/Web_Audio_API_cross_browser)
   - : A guide to writing cross browser Web Audio API code.
 - [H.264 support in Firefox](/en-US/Apps/Developing/Manipulating_media/H.264_support_in_Firefox)

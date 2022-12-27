@@ -15,7 +15,7 @@ translation_of: Web/API/Event/type
 
 Аргумент _`event`_ функций {{ domxref("EventTarget.addEventListener()") }} и {{ domxref("EventTarget.removeEventListener()") }} не чувствителен к регистру.
 
-Для получения списка доступных типов событий смотри [event reference](/ru/docs/Web/Events "Mozilla event reference")
+Для получения списка доступных типов событий смотри [event reference](/ru/docs/Web/Events)
 
 ## Синтаксис
 

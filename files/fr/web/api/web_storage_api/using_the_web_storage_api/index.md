@@ -162,7 +162,7 @@ imageForm.onchange = populateStorage;
 
 ## Répondre aux changements du stockage avec StorageEvent
 
-L'événement {{event("StorageEvent")}} est lancé dès lors qu'un changement est fait sur l'objet {{domxref("Storage")}}. Cela ne va pas marcher sur la même page qui a provoqué le changement: c'est vraiment un moyen pour que les autres pages du domaine qui utilisent le stockage local puissent se synchroniser avec tous les changements qui ont été fait.
+L'événement [`StorageEvent`](/fr/docs/Web/API/StorageEvent) est lancé dès lors qu'un changement est fait sur l'objet {{domxref("Storage")}}. Cela ne va pas marcher sur la même page qui a provoqué le changement: c'est vraiment un moyen pour que les autres pages du domaine qui utilisent le stockage local puissent se synchroniser avec tous les changements qui ont été fait.
 
 Les pages des autres domaines ne peuvent pas accéder aux mêmes objets de stockage.
 

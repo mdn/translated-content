@@ -531,39 +531,39 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : A string specifying a name for the input control. This name is submitted along with the control's value when the form data is submitted.
 
-    ##### What's in a name
+##### What's in a name
 
-    Consider the `name` a required attribute (even though it's not). If an input has no `name` specified, or `name` is empty, the input's value is not submitted with the form. (Disabled controls, unchecked radio buttons, unchecked checkboxes, and reset buttons are also not sent.)
+Consider the `name` a required attribute (even though it's not). If an input has no `name` specified, or `name` is empty, the input's value is not submitted with the form. (Disabled controls, unchecked radio buttons, unchecked checkboxes, and reset buttons are also not sent.)
 
-    There are two special cases:
+There are two special cases:
 
-    1.  `_charset_` : If used as the name of an `<input>` element of type [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden), the input's `value` is automatically set by the [user agent](/ko/docs/Glossary/user_agent "user agent: A user agent is a computer program representing a person, for example, a browser in a Web context.") to the character encoding being used to submit the form.
-    2.  `isindex`: For historical reasons, the name [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) is not allowed.
+1. `_charset_` : If used as the name of an `<input>` element of type [`hidden`](/en-US/docs/Web/HTML/Element/input/hidden), the input's `value` is automatically set by the [user agent](/ko/docs/Glossary/user_agent) to the character encoding being used to submit the form.
+2. `isindex`: For historical reasons, the name [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) is not allowed.
 
-    ##### `name` and radio buttons
+##### `name` and radio buttons
 
-    The [name](#name) attribute creates a unique behavior for radio buttons.
+The [name](#name) attribute creates a unique behavior for radio buttons.
 
-    Only one radio button in a same-named group of radio buttons can be checked at a time. Selecting any radio button in that group automatically deselects any currently-selected radio button in the same group. The value of that one checked radio button is sent along with the name if the form is submitted,
+Only one radio button in a same-named group of radio buttons can be checked at a time. Selecting any radio button in that group automatically deselects any currently-selected radio button in the same group. The value of that one checked radio button is sent along with the name if the form is submitted,
 
-    When tabbing into a series of same-named group of radio buttons, if one is checked, that one will receive focus. If they aren't grouped together in source order, if one of the group is checked, tabbing into the group starts when the first one in the group is encountered, skipping all those that aren't checked. In other words, if one is checked, tabbing skips the unchecked radio buttons in the group. If none are checked, the radio button group receives focus when the first button in the same name group is reached.
+When tabbing into a series of same-named group of radio buttons, if one is checked, that one will receive focus. If they aren't grouped together in source order, if one of the group is checked, tabbing into the group starts when the first one in the group is encountered, skipping all those that aren't checked. In other words, if one is checked, tabbing skips the unchecked radio buttons in the group. If none are checked, the radio button group receives focus when the first button in the same name group is reached.
 
-    Once one of the radio buttons in a group has focus, using the arrow keys will navigate thru all the radio buttons of the same name, even if the radio buttons are not grouped together in the source order.
+Once one of the radio buttons in a group has focus, using the arrow keys will navigate thru all the radio buttons of the same name, even if the radio buttons are not grouped together in the source order.
 
-    ##### {{domxref("HTMLFormElement.elements")}}
+##### {{domxref("HTMLFormElement.elements")}}
 
-    When an input element is given a `name`, that name becomes a property of the owning form element's {{domxref("HTMLFormElement.elements")}} property. If you have an input whose `name` is set to `guest` and another whose `name` is `hat-size`, the following code can be used:
+When an input element is given a `name`, that name becomes a property of the owning form element's {{domxref("HTMLFormElement.elements")}} property. If you have an input whose `name` is set to `guest` and another whose `name` is `hat-size`, the following code can be used:
 
-    ```js
-    let form = document.querySelector("form");
+```js
+let form = document.querySelector("form");
 
-    let guestName = form.elements.guest;
-    let hatSize = form.elements["hat-size"];
-    ```
+let guestName = form.elements.guest;
+let hatSize = form.elements["hat-size"];
+```
 
-    When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} for the `guest` field, and `hatSize` the object for the `hat-size` field.
+When this code has run, `guestName` will be the {{domxref("HTMLInputElement")}} for the `guest` field, and `hatSize` the object for the `hat-size` field.
 
-    > **경고:** You should avoid giving form elements a `name` that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.
+> **경고:** You should avoid giving form elements a `name` that corresponds to a built-in property of the form, since you would then override the predefined property or method with this reference to the corresponding input.
 
 - {{htmlattrdef("pattern")}}
 
@@ -619,7 +619,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
   - : A string specifying the type of control to render. For example, to create a checkbox, a value of `checkbox` is used. If omitted (or an unknown value is specified), the input type `text` is used, creating a plaintext input field.
 
-    Permitted values are listed in [\<input> types](#<input>_types) above.
+    Permitted values are listed in [\<input> types](#input_types) above.
 
 - {{htmlattrdef("value")}}
   - : The input control's value. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's `value` property. The `value` attribute is always optional, though should be considered mandatory for `checkbox`, `radio`, and `hidden`.
@@ -634,8 +634,6 @@ A few additional non-standard attributes are listed following the descriptions o
 <!-- A basic input -->
 <input type="text" name="input" value="Type here">
 ```
-
-<input>
 
 ### A common use-case scenario
 

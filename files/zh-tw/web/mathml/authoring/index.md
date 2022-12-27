@@ -356,7 +356,7 @@ There are even more sophisticated tools to convert arbitrary LaTeX documents int
   latexmlpost --dest foo.html --format=html5 foo.xml
 ```
 
-If you want to have a MathJax fallback for non-Gecko browsers, copy the [Javascript lines given above](/zh-TW/docs/Web/MathML/Authoring$edit#mathjax-fallback) into a `mathjax.js` file and use the `--javascript` parameter to tell LaTeXML to include that file:
+If you want to have a MathJax fallback for non-Gecko browsers, copy the [Javascript lines given above](/zh-TW/docs/Web/MathML/Authoring#mathjax-fallback) into a `mathjax.js` file and use the `--javascript` parameter to tell LaTeXML to include that file:
 
 ```bash
   latexmlpost --dest foo.html --format=html5 --javascript=mathjax.js foo.xml

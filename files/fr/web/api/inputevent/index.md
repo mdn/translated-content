@@ -26,7 +26,7 @@ Cette interface hérite des propriétés de ses parents, {{domxref("UIEvent")}} 
 - {{domxref("InputEvent.inputType")}}{{readonlyinline}}
   - : Retourne le type de modification du le contenu éditable tel que, par exemple, l’insertion, la suppression ou le formatage de texte. Voir la page de la propriété pour une liste complète des types de modification.
 - {{domxref("InputEvent.isComposing")}}{{readOnlyInline}}
-  - : Retourne une valeur {{jsxref("Boolean", "booléenne")}} indiquant si l’évènement est émis après {{event("compositionstart")}} et avant {{event("compositionend")}}.
+  - : Retourne une valeur {{jsxref("Boolean", "booléenne")}} indiquant si l’évènement est émis après [`compositionstart`](/fr/docs/Web/API/Element/compositionstart_event) et avant [`compositionend`](/fr/docs/Web/API/Element/compositionend_event).
 
 ## Méthodes
 

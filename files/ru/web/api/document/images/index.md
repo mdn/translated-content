@@ -11,7 +11,7 @@ original_slug: DOM/document.images
 
 ### Кратко об объекте
 
-`document.images` возвращает коллекцию [изображений](/ru/Web/API/HTMLImageElement "en/DOM/Image") в текущем HTML документе.
+`document.images` возвращает коллекцию [изображений](/ru/Web/API/HTMLImageElement) в текущем HTML документе.
 
 ### Синтаксис
 

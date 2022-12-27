@@ -373,5 +373,5 @@ console.log(Symbol.iterator in aGeneratorObject)
 
 ## 関連情報
 
-- {{jsxref("Statements/function*", "<code>function*</code> のドキュメント", "", 1)}}
+- [`function*` のドキュメント](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 - [Iteration in the ECMAScript specification](https://tc39.es/ecma262/#sec-iteration)

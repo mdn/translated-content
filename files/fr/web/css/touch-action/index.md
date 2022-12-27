@@ -31,7 +31,7 @@ touch-action: initial;
 touch-action: unset;
 ```
 
-Par défaut, le déplacement et le zoom sont exclusivement gérés par le navigateur, ce qui déclenche un évènement {{event("pointercancel")}} à destination de l'application. En désactivant la prise en charge de ces gestes, l'application peut alors fournir ses propres gestionnaires d'évènements pour {{event("pointermove")}}, {{event("pointerup")}}.
+Par défaut, le déplacement et le zoom sont exclusivement gérés par le navigateur, ce qui déclenche un évènement [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event) à destination de l'application. En désactivant la prise en charge de ces gestes, l'application peut alors fournir ses propres gestionnaires d'évènements pour [`pointermove`](/fr/docs/Web/API/Element/pointermove_event), [`pointerup`](/fr/docs/Web/API/Element/pointerup_event).
 
 On utilise parfois cette propriété pour désactiver les interactions tactiles sur un élément pour un jeu ou une carte qui fournissent leur propre gestion tactile.
 
@@ -102,7 +102,7 @@ ul > li {
 
 {{EmbedLiveSample('Exemples')}}
 
-> **Note :** La propriété `touch-action` est également utilisée afin de supprimer le délai donné à l'évènement {{event("click")}} pour prendre en charge le zoom via la double-touche.
+> **Note :** La propriété `touch-action` est également utilisée afin de supprimer le délai donné à l'évènement `click` pour prendre en charge le zoom via la double-touche.
 
 ## Accessibilité
 

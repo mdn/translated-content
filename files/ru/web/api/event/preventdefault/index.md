@@ -50,7 +50,7 @@ document.getElementById('my-checkbox').addEventListener(
 </html>
 ```
 
-Вы можете посмотреть работу `preventDefault` в действии [здесь](/samples/domref/dispatchEvent.html "samples/domref/dispatchEvent.html").
+Вы можете посмотреть работу `preventDefault` в действии [здесь](/samples/domref/dispatchEvent.html).
 
 В следующем примере некорректный ввод останавливается и вводимый символ не добавляется в поле с `preventDefault()`.
 

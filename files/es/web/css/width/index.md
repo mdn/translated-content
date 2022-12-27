@@ -177,4 +177,3 @@ p.minblue {
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}
 - Las propiedades lógicas asignadas: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
-

@@ -25,7 +25,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) の **`plugin-types`** 
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} による代替</th>
-      <td>なし。これを設定しないと何も許可されない。</td>
+      <td>なし。これを設定しないと何でも許可される。</td>
     </tr>
   </tbody>
 </table>

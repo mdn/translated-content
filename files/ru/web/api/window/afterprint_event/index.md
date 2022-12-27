@@ -32,4 +32,4 @@ window.onafterprint = код обработки события
 
 - {{domxref("window.print")}}
 - {{domxref("window.onbeforeprint")}}
-- [Printing](/ru/docs/Printing "Printing")
+- [Printing](/ru/docs/Printing)

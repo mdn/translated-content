@@ -5,7 +5,7 @@ translation_of: Web/API/Element/hasAttributes
 ---
 {{ApiRef("DOM")}}
 
-Метод **`Element`\*\***`.hasAttributes()`** возвращает **Boolean\*\* значение, указывая содержит данный элемент какие-либо атрибуты или нет.
+Метод **`Element.hasAttributes()`** возвращает **Boolean** значение, указывая содержит данный элемент какие-либо атрибуты или нет.
 
 ## Синтаксис
 

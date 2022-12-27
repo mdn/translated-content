@@ -24,10 +24,10 @@ translation_of: Web/Guide/Audio_and_video_manipulation
 
 Обычно это происходит следующим образом:
 
-1.  Write a frame from the {{htmlelement("video")}} element to an intermediary {{htmlelement("canvas")}} element.
-2.  Read the data from the intermediary `<canvas>` element and manipulate it.
-3.  Write the manipulated data to your "display" `<canvas>`.
-4.  Pause and repeat.
+1. Write a frame from the {{htmlelement("video")}} element to an intermediary {{htmlelement("canvas")}} element.
+2. Read the data from the intermediary `<canvas>` element and manipulate it.
+3. Write the manipulated data to your "display" `<canvas>`.
+4. Pause and repeat.
 
 For example, let's process a video to display it in greyscale. In this case, we'll show both the source video and the output greyscale frames. Ordinarily, if you were implementing a "play video in greyscale" feature, you'd probably add `display: none` to the style for the `<video>` element, to keep the source video from being drawn to the screen while showing only the canvas showing the altered frames.
 

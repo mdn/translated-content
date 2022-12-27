@@ -288,7 +288,7 @@ p {
 
 ### Détecter le début et la fin d'une transition
 
-L'évènement {{event("transitionend")}} est déclenché lorsqu'une transition est terminée. C'est un objet {{domxref("TransitionEvent")}} qui possède deux propriétés supplémentaires qu'un {{domxref("Event")}} :
+L'évènement [`transitionend`](/fr/docs/Web/API/Element/transitionend_event) est déclenché lorsqu'une transition est terminée. C'est un objet {{domxref("TransitionEvent")}} qui possède deux propriétés supplémentaires qu'un {{domxref("Event")}} :
 
 - `propertyName`
   - : Une chaîne de caractères qui indique le nom de la propriété CSS pour laquelle la transition est terminée.
@@ -301,7 +301,7 @@ Comme pour les différents évènements, on pourra utiliser {{domxref("eventtarg
 el.addEventListener("transitionend", updateTransition, true);
 ```
 
-Pour détecter le début d'une transition, on pourra utiliser l'évènement {{event("transitionrun")}} qui est déclenché avant tout retardement et l'évènement {{event("transitionstart")}} qui est déclenché après tout retardement :
+Pour détecter le début d'une transition, on pourra utiliser l'évènement [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event) qui est déclenché avant tout retardement et l'évènement [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event) qui est déclenché après tout retardement :
 
 ```js
 el.addEventListener("transitionrun", signalStart, true);
@@ -316,5 +316,5 @@ el.addEventListener("transitionstart", signalStart, true);
 
 ## Voir aussi
 
-- L'interface {{domxref("TransitionEvent")}} et l'événement {{event("transitionend")}}
+- L'interface {{domxref("TransitionEvent")}} et l'événement [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
 - [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)

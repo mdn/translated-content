@@ -19,25 +19,25 @@ The **`<filter-function>`** [CSS](/pt-BR/docs/Web/CSS) [data type](/pt-BR/docs/W
 
 The `<filter-function>` data type is specified using one of the filter functions listed below. Each function requires an argument which, if invalid, results in no filter being applied.
 
-- [`blur()`](/en-US/docs/Web/CSS/filter-function/blur)
+- [`blur()`](/pt-BR/docs/Web/CSS/filter-function/blur)
   - : Blurs the image.
-- [`brightness()`](/en-US/docs/Web/CSS/filter-function/brightness)
+- [`brightness()`](/pt-BR/docs/Web/CSS/filter-function/brightness)
   - : Makes the image brighter or darker.
-- [`contrast()`](/en-US/docs/Web/CSS/filter-function/contrast)
+- [`contrast()`](/pt-BR/docs/Web/CSS/filter-function/contrast)
   - : Increases or decreases the image's contrast.
-- [`drop-shadow()`](/en-US/docs/Web/CSS/filter-function/drop-shadow)
+- [`drop-shadow()`](/pt-BR/docs/Web/CSS/filter-function/drop-shadow)
   - : Applies a drop shadow behind the image.
-- [`grayscale()`](/en-US/docs/Web/CSS/filter-function/grayscale)
+- [`grayscale()`](/pt-BR/docs/Web/CSS/filter-function/grayscale)
   - : Converts the image to grayscale.
-- [`hue-rotate()`](/en-US/docs/Web/CSS/filter-function/hue-rotate)
+- [`hue-rotate()`](/pt-BR/docs/Web/CSS/filter-function/hue-rotate)
   - : Changes the overall hue of the image.
-- [`invert()`](/en-US/docs/Web/CSS/filter-function/invert)
+- [`invert()`](/pt-BR/docs/Web/CSS/filter-function/invert)
   - : Inverts the colors of the image.
-- [`opacity()`](/en-US/docs/Web/CSS/filter-function/opacity)
+- [`opacity()`](/pt-BR/docs/Web/CSS/filter-function/opacity)
   - : Makes the image transparent.
-- [`saturate()`](/en-US/docs/Web/CSS/filter-function/saturate)
+- [`saturate()`](/pt-BR/docs/Web/CSS/filter-function/saturate)
   - : Super-saturates or desaturates the input image.
-- [`sepia()`](/en-US/docs/Web/CSS/filter-function/sepia)
+- [`sepia()`](/pt-BR/docs/Web/CSS/filter-function/sepia)
   - : Converts the image to sepia.
 
 ## Specification

@@ -22,7 +22,7 @@ event.stopPropagation();
 
 ## Пример
 
-См. Пример 5: [Event Propagation](/ru/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation "Gecko_DOM_Reference/Examples#Example_5:_Event_Propagation") для более детального объяснения данного метода и всего механизма передачи событий в DOM документе.
+См. Пример 5: [Event Propagation](/ru/docs/DOM/DOM_Reference/Examples#Example_5:_Event_Propagation) для более детального объяснения данного метода и всего механизма передачи событий в DOM документе.
 
 ## Спецификация
 

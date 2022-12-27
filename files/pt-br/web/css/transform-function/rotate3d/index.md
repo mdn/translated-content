@@ -173,7 +173,7 @@ div {
 
 ## Compatibilidade com navegadores
 
-Veja o tipo de dado [`<transform-function>`](/en-US/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
+Veja o tipo de dado [`<transform-function>`](/pt-BR/docs/Web/CSS/transform-function#Browser_compatibility) para informações de compatibilidade.
 
 ## Ver também
 

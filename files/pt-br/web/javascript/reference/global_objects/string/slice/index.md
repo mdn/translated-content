@@ -15,6 +15,8 @@ translation_of: Web/JavaScript/Reference/Global_Objects/String/slice
 
 O método `slice()` extrai uma parte de uma string e a retorna como uma nova string, sem modificar a string original.
 
+{{EmbedInteractiveExample("pages/js/string-slice.html", "taller")}}
+
 ## Sintaxe
 
 ```
