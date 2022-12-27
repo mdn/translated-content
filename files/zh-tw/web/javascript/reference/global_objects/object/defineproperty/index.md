@@ -2,6 +2,7 @@
 title: Object.defineProperty()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
+
 {{JSRef}}
 
 靜態方法 **`Object.defineProperty()`** 會直接對一個物件定義、或是修改現有的屬性。執行後會回傳定義完的物件。

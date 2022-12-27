@@ -31,9 +31,11 @@ input:read-only {
 
 > **Nota:** El selector no solo selecciona {{htmlElement("input")}} marcados como {{htmlattrxref("readonly", "input")}}; también selecccionará cualquier elemento que no pueda ser editar por el usuario. Lea sobre el atributo [contenteditable](/es/docs/Web/HTML/Global_attributes/contenteditable).
 
-## Sintaxis
+## Síntaxis
 
-    :read-only
+```
+:read-only
+```
 
 ## Ejemplo
 

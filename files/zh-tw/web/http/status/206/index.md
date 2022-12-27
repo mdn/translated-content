@@ -2,6 +2,7 @@
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`206 Partial Content`** 成功狀態碼表明請求成功，且主體包含在請求標頭{{HTTPHeader("Range")}} 中所指定的資料區間。

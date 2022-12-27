@@ -2,6 +2,7 @@
 title: PNG
 slug: Glossary/PNG
 ---
+
 **PNG** (_便攜式網路圖形_) 是一種支持無損數據壓縮的圖片文件格式。
 
 ## 了解更多

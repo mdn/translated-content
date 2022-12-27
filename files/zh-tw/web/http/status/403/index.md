@@ -2,6 +2,7 @@
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`403 Forbidden`** 客戶端錯誤狀態碼表示伺服器理解該請求但拒絕核准。

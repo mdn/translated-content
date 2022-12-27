@@ -2,6 +2,7 @@
 title: Math.ceil()
 slug: Web/JavaScript/Reference/Global_Objects/Math/ceil
 ---
+
 {{JSRef}}
 
 **`Math.ceil()`** 函式會回傳大於等於所給數字的最小整數。

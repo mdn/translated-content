@@ -2,6 +2,7 @@
 title: applications
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

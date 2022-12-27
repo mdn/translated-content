@@ -2,6 +2,7 @@
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 ## 總覽

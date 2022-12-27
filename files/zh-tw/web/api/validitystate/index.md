@@ -2,6 +2,7 @@
 title: ValidityState
 slug: Web/API/ValidityState
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`ValidityState`** 介面表示了一個元素目前在其檢核條件下驗證的*正確性狀態（validity states）*。同時，它們也可以協助解釋元素值檢核失敗的原因，如果元素值為不合法的。

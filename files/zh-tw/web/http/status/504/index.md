@@ -2,6 +2,7 @@
 title: 504 Gateway Timeout
 slug: Web/HTTP/Status/504
 ---
+
 {{HTTPSidebar}}
 
 **`504 Gateway Timeout`** 錯誤表明伺服器以閘道器或代理訪問時，並沒有上游伺服器即時收到完成請求所需的回應。

@@ -2,6 +2,7 @@
 title: <summary>
 slug: Web/HTML/Element/summary
 ---
+
 {{HTMLRef}}
 
 ## Summary

@@ -47,4 +47,4 @@ window.onload = function() {
 
 ### Información técnica
 
-- [Documentación de referencia de la API](https://api.jquery.com/)[](https://api.jquery.com/)
+- [Documentación de referencia de la API](https://api.jquery.com/)

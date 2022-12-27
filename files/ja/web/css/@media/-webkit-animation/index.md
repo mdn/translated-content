@@ -1,14 +1,6 @@
 ---
 title: '-webkit-animation'
 slug: Web/CSS/@media/-webkit-animation
-tags:
-  - '@media'
-  - CSS
-  - リファレンス
-  - WebKit
-  - メディア特性
-browser-compat: css.at-rules.media.-webkit-animation
-translation_of: Web/CSS/@media/-webkit-animation
 ---
 {{ CSSRef }} {{ Non-standard_header }}
 

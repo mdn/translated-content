@@ -2,6 +2,7 @@
 title: Blob()
 slug: Web/API/Blob/Blob
 ---
+
 {{APIRef("File API")}}
 
 **`Blob()`** 建構式會回傳一個新建立的 {{domxref("Blob")}} 物件。新物件的內容是由 _array_ 參數的成員值串連所構成。

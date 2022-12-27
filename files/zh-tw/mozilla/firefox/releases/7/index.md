@@ -2,6 +2,7 @@
 title: Firefox 7 技術文件
 slug: Mozilla/Firefox/Releases/7
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 7 shipped on September 27, 2011. This article provides information about the changes that affect developers -- both of web content and of Firefox add-ons.

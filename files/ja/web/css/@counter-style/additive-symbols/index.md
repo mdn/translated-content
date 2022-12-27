@@ -1,15 +1,6 @@
 ---
 title: additive-symbols
 slug: Web/CSS/@counter-style/additive-symbols
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.additive-symbols
-translation_of: Web/CSS/@counter-style/additive-symbols
 ---
 {{CSSRef}}
 

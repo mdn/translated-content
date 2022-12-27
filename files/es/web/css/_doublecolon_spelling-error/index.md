@@ -32,9 +32,11 @@ Solo se puede usar un pequeño subconjunto de propiedades de CSS en una regla co
 - {{cssxref("text-emphasis-color")}}
 - {{cssxref("text-shadow")}}
 
-## Sintaxis
+## Síntaxis
 
-    ::spelling-error
+```
+::spelling-error
+```
 
 ## Especificaciones
 

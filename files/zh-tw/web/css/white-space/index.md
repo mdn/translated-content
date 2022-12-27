@@ -2,6 +2,7 @@
 title: white-space
 slug: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
 此 CSS **`white-space`** 屬性決定如何處理元素內的空白字元。

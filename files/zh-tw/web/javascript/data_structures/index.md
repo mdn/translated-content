@@ -2,6 +2,7 @@
 title: JavaScript 的資料型別與資料結構
 slug: Web/JavaScript/Data_structures
 ---
+
 {{jsSidebar("More")}}
 
 程式語言都具有資料結構，但在不同的程式語言之間會有些差異。這裡將列出可以在 JavaScript 中使用的資料結構，以及它們的特性；它們可以用來構成其他的資料結構。如果可以的話，會標示與其他語言不同的地方。

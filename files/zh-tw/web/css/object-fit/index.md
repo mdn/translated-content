@@ -2,6 +2,7 @@
 title: object-fit
 slug: Web/CSS/object-fit
 ---
+
 {{CSSRef}}
 
 ## Summary

@@ -1,14 +1,6 @@
 ---
 title: initial-value
 slug: Web/CSS/@property/initial-value
-tags:
-  - CSS
-  - リファレンス
-  - ウェブ
-  - プロパティ
-  - Houdini
-browser-compat: css.at-rules.property.initial-value
-translation_of: Web/CSS/@property/initial-value
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

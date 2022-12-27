@@ -2,6 +2,7 @@
 title: ':target'
 slug: Web/CSS/:target
 ---
+
 {{CSSRef}}
 
 The` :target `[pseudo-class](/zh-TW/docs/Web/CSS/Pseudo-classes) represents the unique element, if any, with an **id** matching the fragment identifier of the URI of the document..

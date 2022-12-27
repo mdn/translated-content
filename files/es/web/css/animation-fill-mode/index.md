@@ -13,23 +13,30 @@ translation_of: Web/CSS/animation-fill-mode
 
 ## Definición
 
-La propiedad [CSS](/en/CSS "CSS") `animation-fill-mode` especifica el modo en que una animación CSS aplica sus estilos, estableciendo su persistencia y estado final tras su ejecución.
+La propiedad [CSS](/en/CSS) `animation-fill-mode` especifica el modo en que una animación CSS aplica sus estilos, estableciendo su persistencia y estado final tras su ejecución.
 
 {{cssinfo}}
 
 ## Sintaxis
 
-    Formal syntax: {{csssyntax("animation-fill-mode")}}
+```css
+/* Single animation */
+animation-fill-mode: none;
+animation-fill-mode: forwards;
+animation-fill-mode: backwards;
+animation-fill-mode: both;
 
-    animation-fill-mode: none
-    animation-fill-mode: forwards
-    animation-fill-mode: backwards
-    animation-fill-mode: both
+/* Multiple animations */
+animation-fill-mode: none, backwards;
+animation-fill-mode: both, forwards, none;
 
-    El caracter # indica que pueden darse varios valores separados por comas.
-    Cada uno de los valores se aplicará en el mismo orden en que se ha declarado en la propiedad 'animation'
-    animation-fill-mode: none, backwards
-    animation-fill-mode: both, forwards, none
+/* Global values */
+animation-fill-mode: inherit;
+animation-fill-mode: initial;
+animation-fill-mode: revert;
+animation-fill-mode: revert-layer;
+animation-fill-mode: unset;
+```
 
 ### Valores
 
@@ -114,5 +121,5 @@ CSS
 
 ## Ver también
 
-- [Usando CSS Animations](/es/docs/CSS/Tutorials/Using_CSS_animations "Tutorial about CSS animations")
+- [Usando CSS Animations](/es/docs/CSS/Tutorials/Using_CSS_animations)
 - {{ domxref("AnimationEvent", "AnimationEvent") }}

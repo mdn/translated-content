@@ -2,6 +2,7 @@
 title: FormData
 slug: Web/API/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData`** 介面可為表單資料中的欄位/值建立相對應的的鍵/值對（key/value）集合，之後便可使用 {{domxref("XMLHttpRequest.send()")}} 方法來送出資料。它在編碼類型設定為 `multipart/form-data` 時會採用與表單相同的格式送出。

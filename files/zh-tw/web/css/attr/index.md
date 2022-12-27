@@ -3,6 +3,7 @@ title: attr
 slug: Web/CSS/attr
 original_slug: Web/CSS/attr()
 ---
+
 {{CSSRef}}
 
 ## 概要

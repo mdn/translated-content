@@ -2,6 +2,7 @@
 title: URL
 slug: Web/API/URL
 ---
+
 {{ApiRef("URL API")}} {{SeeCompatTable}}
 
 **`URL`** 介面提供了建立 `URL` 物件的靜態方法。

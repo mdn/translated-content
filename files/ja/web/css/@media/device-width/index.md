@@ -1,15 +1,6 @@
 ---
 title: device-width
 slug: Web/CSS/@media/device-width
-tags:
-  - '@media'
-  - CSS
-  - 非推奨
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.device-width
-translation_of: Web/CSS/@media/device-width
 ---
 {{CSSRef}} {{deprecated_header}}
 

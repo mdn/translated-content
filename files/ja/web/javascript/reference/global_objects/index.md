@@ -1,12 +1,6 @@
 ---
 title: 標準組み込みオブジェクト
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - JavaScript
-  - Landing page
-  - Overview
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects
 ---
 {{JSSidebar("Objects")}}
 

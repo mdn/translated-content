@@ -2,6 +2,7 @@
 title: Document.defaultView
 slug: Web/API/Document/defaultView
 ---
+
 {{ApiRef}}
 
 在瀏覽器中，**`document.defaultView`** 屬性會指向一個目前 {{Glossary("Browsing_context", "document")}} 所屬的 {{domxref("Window", "window")}} 物件，若無則為 `null`。

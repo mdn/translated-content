@@ -2,6 +2,7 @@
 title: super
 slug: Web/JavaScript/Reference/Operators/super
 ---
+
 {{jsSidebar("Operators")}}
 
 super 關鍵字被使用於通過函式存取父層

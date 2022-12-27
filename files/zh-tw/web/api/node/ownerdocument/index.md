@@ -2,6 +2,7 @@
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.ownerDocument`** 唯讀屬性會回傳一個此節點所屬的的頂層 `document` 物件。

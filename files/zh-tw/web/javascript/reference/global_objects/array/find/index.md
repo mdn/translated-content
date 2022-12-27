@@ -2,6 +2,7 @@
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 ---
+
 {{JSRef}}
 
 **`find()`** 方法會回傳第一個滿足所提供之測試函式的元素**值**。否則回傳 {{jsxref("undefined")}}。

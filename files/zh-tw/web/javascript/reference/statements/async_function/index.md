@@ -2,6 +2,7 @@
 title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
 ---
+
 {{jsSidebar("Statements")}}
 
 **`async function`** 宣告被定義為一個回傳 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} 物件的*非同步函式* 。

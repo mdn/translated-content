@@ -2,6 +2,7 @@
 title: Firefox 5 技術文件
 slug: Mozilla/Firefox/Releases/5
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 5，基於 Gecko 5.0，在 2011 年六月 21 日發行。本文將提供這次發行會對開發者所生影響之資訊。

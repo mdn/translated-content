@@ -1,15 +1,6 @@
 ---
 title: ascent-override
 slug: Web/CSS/@font-face/ascent-override
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - リファレンス
-  - 記述子
-  - ascent-override
-browser-compat: css.at-rules.font-face.ascent-override
-translation_of: Web/CSS/@font-face/ascent-override
 ---
 {{CSSRef}}
 

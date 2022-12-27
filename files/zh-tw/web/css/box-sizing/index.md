@@ -2,6 +2,7 @@
 title: box-sizing
 slug: Web/CSS/box-sizing
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概要

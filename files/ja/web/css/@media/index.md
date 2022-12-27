@@ -1,14 +1,6 @@
 ---
 title: '@media'
 slug: Web/CSS/@media
-tags:
-  - '@media'
-  - アットルール
-  - CSS
-  - 条件付き
-  - リファレンス
-browser-compat: css.at-rules.media
-translation_of: Web/CSS/@media
 ---
 {{CSSRef}}
 

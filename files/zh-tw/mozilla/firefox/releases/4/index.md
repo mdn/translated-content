@@ -2,6 +2,7 @@
 title: Firefox 4 技術文件
 slug: Mozilla/Firefox/Releases/4
 ---
+
 {{FirefoxSidebar}}
 
 2010 年六月起進入 Beta 測試期的 Firefox 4，增進了效能、加強針對 HTML 5 及其他創新網際科技的支援程度，也更加安全。本文為網頁、附加元件、Gecko 平台開發者們提供這一版的簡要技術相關資訊。

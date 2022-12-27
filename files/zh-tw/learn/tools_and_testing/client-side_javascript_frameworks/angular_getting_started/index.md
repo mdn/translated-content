@@ -3,6 +3,7 @@ title: Angular 新手入門
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 現在該看一下 Google 的 Angular 框架了，這是另一個你經常會遇到的前端框架。在本文中，我們將會探索 Angular 所提供的功能、安裝必備工具、建立範例應用程式，並進一步瞭解 Angular 的基本架構。

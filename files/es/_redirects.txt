@@ -1605,6 +1605,8 @@
 /es/docs/Web/API/Document/height	/es/docs/conflicting/Web/API/Element/clientHeight
 /es/docs/Web/API/Document/keydown_event	/es/docs/Web/API/Element/keydown_event
 /es/docs/Web/API/Document/keyup_event	/es/docs/Web/API/Element/keyup_event
+/es/docs/Web/API/Document/pointerlockchange_event	/es/docs/Web/API/Element/pointerlockchange_event
+/es/docs/Web/API/Document/selectstart_event	/es/docs/Web/API/Node/selectstart_event
 /es/docs/Web/API/DocumentOrShadowRoot/getSelection	/es/docs/Web/API/Document/getSelection
 /es/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/es/docs/Web/API/Document/pointerLockElement
 /es/docs/Web/API/DocumentOrShadowRoot/styleSheets	/es/docs/Web/API/Document/styleSheets
@@ -1642,7 +1644,7 @@
 /es/docs/Web/API/GlobalEventHandlers/onresize	/es/docs/Web/API/Window/resize_event
 /es/docs/Web/API/GlobalEventHandlers/onscroll	/es/docs/Web/API/Element/scroll_event
 /es/docs/Web/API/GlobalEventHandlers/onselect	/es/docs/Web/API/HTMLInputElement/select_event
-/es/docs/Web/API/GlobalEventHandlers/onselectstart	/es/docs/Web/API/Document/selectstart_event
+/es/docs/Web/API/GlobalEventHandlers/onselectstart	/es/docs/Web/API/Node/selectstart_event
 /es/docs/Web/API/GlobalEventHandlers/onsubmit	/es/docs/Web/API/HTMLFormElement/submit_event
 /es/docs/Web/API/GlobalEventHandlers/ontouchstart	/es/docs/Web/API/Element/touchstart_event
 /es/docs/Web/API/GlobalEventHandlers/onwheel	/es/docs/conflicting/Web/API/Element/wheel_event
@@ -1867,7 +1869,7 @@
 /es/docs/Web/Events/loadend	/es/docs/Web/API/XMLHttpRequest/loadend_event
 /es/docs/Web/Events/mousedown	/es/docs/Web/API/Element/mousedown_event
 /es/docs/Web/Events/offline	/es/docs/Web/API/Window/offline_event
-/es/docs/Web/Events/pointerlockchange	/es/docs/Web/API/Document/pointerlockchange_event
+/es/docs/Web/Events/pointerlockchange	/es/docs/Web/API/Element/pointerlockchange_event
 /es/docs/Web/Events/scroll	/es/docs/Web/API/Document/scroll_event
 /es/docs/Web/Events/tecla	/es/docs/Web/API/Element/keyup_event
 /es/docs/Web/Events/timeupdate	/es/docs/Web/API/HTMLMediaElement/timeupdate_event
@@ -2661,7 +2663,7 @@
 /es/docs/Web/Reference/Events/load	/es/docs/Web/API/Window/load_event
 /es/docs/Web/Reference/Events/loadend	/es/docs/Web/API/XMLHttpRequest/loadend_event
 /es/docs/Web/Reference/Events/mousedown	/es/docs/Web/API/Element/mousedown_event
-/es/docs/Web/Reference/Events/pointerlockchange	/es/docs/Web/API/Document/pointerlockchange_event
+/es/docs/Web/Reference/Events/pointerlockchange	/es/docs/Web/API/Element/pointerlockchange_event
 /es/docs/Web/Reference/Events/scroll	/es/docs/Web/API/Document/scroll_event
 /es/docs/Web/Reference/Events/tecla	/es/docs/Web/API/Element/keyup_event
 /es/docs/Web/Reference/Events/timeupdate	/es/docs/Web/API/HTMLMediaElement/timeupdate_event

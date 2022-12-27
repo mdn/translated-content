@@ -1,14 +1,6 @@
 ---
 title: prefers-reduced-data
 slug: Web/CSS/@media/prefers-reduced-data
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.prefers-reduced-data
-translation_of: Web/CSS/@media/prefers-reduced-data
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D
 slug: Web/API/CanvasRenderingContext2D
 ---
+
 {{APIRef}}**CanvasRenderingContext2D** 介面被使用於繪製矩形、文字、影像以及其它基於 canvas 元素的物件。此介面提供了繪製 {{ HTMLElement("canvas") }} 元素外觀的 2D 渲染環境。
 
 要取得此實作此介面的實體物件，可以於一個 `<canvas>` 元素上以 "2d" 為參數呼叫 {{domxref("HTMLCanvasElement.getContext()", "getContext()")}} 方法：

@@ -2,6 +2,7 @@
 title: <time>
 slug: Web/HTML/Element/time
 ---
+
 **HTML `<time>` element** 用以表示時間，可以是 24 小時制時間或以[公曆](https://zh.wikipedia.org/zh-tw/%E5%85%AC%E5%8E%86)紀年的日期（日期可以添加時間和時區的資訊）
 
 此 element 旨在以機器可讀的格式顯示時間。這能幫助使用者代理調度使用者的日期。

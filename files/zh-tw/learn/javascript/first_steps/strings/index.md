@@ -2,6 +2,7 @@
 title: 處理文字 - JavaScript中的字串
 slug: Learn/JavaScript/First_steps/Strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
 接下來我們將把注意力轉向字串——這就是程式設計中調用的文字片段。在本文中，我們將介紹在學習 JavaScript 時您應該了解所有有關字串的常見事項，例如建立字串，跳脫字串中的引號以及將字串連接在一起。

@@ -2,6 +2,7 @@
 title: Basics of HTTP
 slug: Web/HTTP/Basics_of_HTTP
 ---
+
 {{HTTPSidebar}}
 
 HTTP is a pretty extensible protocol. It relies on a few basic concepts like the notion of resources and URIs, a simple structure of messages, and a client-server structure for the communication flow. On top of these basic concepts, numerous extensions have appeared over the years, adding new functionality and new semantics by creating new HTTP methods or headers.

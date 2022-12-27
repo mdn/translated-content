@@ -80,6 +80,6 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
 ## Ver también
 
 - [Mobile performance checklist](/es/docs/Web/Performance/Mobile_performance_checklist)
-- [Optimizing Startup Performance](/es/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)[](/es/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
+- [Optimizing Startup Performance](/es/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
 
 {{LandingPageListSubpages}}

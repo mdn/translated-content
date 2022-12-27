@@ -2,6 +2,7 @@
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
+
 {{JSRef}}
 
 **`concat()`** 方法被用來合併兩個或多個陣列。此方法不會改變現有的陣列，回傳一個包含呼叫者陣列本身的值，作為代替的是回傳一個新陣列。

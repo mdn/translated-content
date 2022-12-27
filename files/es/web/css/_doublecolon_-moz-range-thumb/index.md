@@ -13,7 +13,7 @@ translation_of: Web/CSS/::-moz-range-thumb
 
 ## Resumen
 
-El [pseudo-elemento ](/es/docs/Web/CSS/Pseudo-elements)`CSS`**` ::-moz-range-thumb`** representa el elemento que el usuario puede usar en el _"camino"_ marcado por un elemento {{HTMLElement("input")}} con `type="range"` para alterar su valor numérico.
+El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) CSS **`::-moz-range-thumb`** representa el elemento que el usuario puede usar en el _"camino"_ marcado por un elemento {{HTMLElement("input")}} con `type="range"` para alterar su valor numérico.
 
 > **Nota:** Si se usa `::-moz-range-thumb` en cualquier elemento que no sea `<input type="range">` ni se seleccionará nada ni se conseguirá efecto alguno.
 
@@ -43,7 +43,7 @@ input[type=range]::-moz-range-thumb {
 
 Una barra de progreso que utilizara este estilo se visualizarías de la siguiente manera:
 
-![The thumb of the <input type=right> styled in green](https://mdn.mozillademos.org/files/12027/Screen%20Shot%202015-12-04%20at%2013.30.08.png)
+![The thumb of the \<input type=right> styled in green](https://mdn.mozillademos.org/files/12027/Screen%20Shot%202015-12-04%20at%2013.30.08.png)
 
 ## Especificaciones
 

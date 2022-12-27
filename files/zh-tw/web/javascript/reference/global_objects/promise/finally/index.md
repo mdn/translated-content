@@ -2,6 +2,7 @@
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
+
 {{JSRef}}
 
 **`finally()`** 方法會回傳一個 {{jsxref("Promise")}}。當 promise 被 settled 後，無論其結果是 fulfilled 還是 rejected ，都會執行指定的回呼函數。它提供了一個讓 `Promise` 在被確認後，無論是 fulfilled 或是 rejected 都會執行某些程式碼的一種手段。

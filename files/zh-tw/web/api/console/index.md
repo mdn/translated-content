@@ -2,6 +2,7 @@
 title: Console
 slug: Web/API/Console
 ---
+
 {{APIRef("Console API")}}
 
 The **`Console`** object provides access to the browser's debugging console (e.g. the [Web Console](/zh-TW/docs/Tools/Web_Console) in Firefox). The specifics of how it works varies from browser to browser, but there is a _de facto_ set of features that are typically provided.

@@ -2,6 +2,7 @@
 title: Object
 slug: Web/JavaScript/Reference/Global_Objects/Object
 ---
+
 {{JSRef}}
 
 **`Object`** 建構式可用於建立物件包裝（object wrapper）。

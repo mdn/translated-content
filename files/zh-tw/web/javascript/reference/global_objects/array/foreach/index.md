@@ -2,6 +2,7 @@
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
+
 {{JSRef}}
 
 **`forEach()`** 方法會將陣列內的每個元素，皆傳入並執行給定的函式一次。

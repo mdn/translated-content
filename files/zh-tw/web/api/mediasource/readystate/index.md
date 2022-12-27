@@ -2,6 +2,7 @@
 title: MediaSource.readyState
 slug: Web/API/MediaSource/readyState
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("MediaSource")}} 介面的唯讀屬性 **`readyState`** 回傳表示當前 `MediaSource` 狀態的列舉值。三種可能的值為：

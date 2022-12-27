@@ -3794,10 +3794,6 @@
     "modified": "2019-03-23T22:05:31.350Z",
     "contributors": ["arquigames"]
   },
-  "Web/API/Document/pointerlockchange_event": {
-    "modified": "2019-03-18T21:16:43.654Z",
-    "contributors": ["ExE-Boss", "fscholz", "arquigames"]
-  },
   "Web/API/Document/querySelector": {
     "modified": "2019-03-23T22:58:51.923Z",
     "contributors": ["BrodaNoel", "Luis_Calvo", "dannysalazar90"]
@@ -3835,10 +3831,6 @@
       "PatoDeTuring",
       "Thargelion"
     ]
-  },
-  "Web/API/Document/selectstart_event": {
-    "modified": "2019-03-18T21:23:16.974Z",
-    "contributors": ["Grijander81"]
   },
   "Web/API/Document/styleSheets": {
     "modified": "2019-03-23T23:58:05.224Z",
@@ -4110,6 +4102,10 @@
   "Web/API/Element/outerHTML": {
     "modified": "2019-03-23T22:32:38.203Z",
     "contributors": ["Grijander81"]
+  },
+  "Web/API/Element/pointerlockchange_event": {
+    "modified": "2019-03-18T21:16:43.654Z",
+    "contributors": ["ExE-Boss", "fscholz", "arquigames"]
   },
   "Web/API/Element/prefix": {
     "modified": "2019-03-23T22:25:56.753Z",
@@ -5062,6 +5058,10 @@
   "Web/API/Node/replaceChild": {
     "modified": "2019-03-23T22:46:30.428Z",
     "contributors": ["pakitometal"]
+  },
+  "Web/API/Node/selectstart_event": {
+    "modified": "2019-03-18T21:23:16.974Z",
+    "contributors": ["Grijander81"]
   },
   "Web/API/Node/textContent": {
     "modified": "2020-10-15T21:21:16.429Z",

@@ -2,6 +2,7 @@
 title: <meter>
 slug: Web/HTML/Element/meter
 ---
+
 ## 摘要
 
 **HTML `<meter>` Element** represents either a scalar value within a known range or a fractional value.

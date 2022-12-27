@@ -49,11 +49,11 @@ translation_of: WebAssembly/Rust_to_wasm
 
 <p>Дальше запустите в командой строке <code>npm adduser</code>:</p>
 
-<pre class="brush: bash"><code class="rust language-rust">&gt; npm adduser
+<pre class="brush: bash">&gt; npm adduser
 Username: yournpmusername
 Password:
 Email: (this IS public) you@example.com
-</code></pre>
+</pre>
 
 <p>Вам понадобится ввести своё пользовательское имя, пароль и email. Если все получится, вы увидите:</p>
 
@@ -72,23 +72,23 @@ Email: (this IS public) you@example.com
 
 <p>Это создаст новую библиотеку в под-директории, называемой <code>hello-wasm</code>, со всем, что вам нужно:</p>
 
-<pre><code class="shell language-shell">+-- Cargo.toml
+<pre>+-- Cargo.toml
 +-- src
     +-- lib.rs
-</code></pre>
+</pre>
 
 <p>Для начала, у нас есть <code>Cargo.toml</code>; с его помощью мы можем сконфигурировать наш билд. Если вы пользуетесь <code>Gemfile</code> из Bundler или <code>package.json</code> из npm, то вы почувствуете себя, как дома; Cargo работает аналогично обоим.</p>
 
 <p>Дальше, Cargo сгенерировал кое-какой код для нас на Rust в <code>src/lib.rs</code>:</p>
 
-<pre><code class="rust language-rust">#[cfg(test)]
+<pre>#[cfg(test)]
 mod tests {
     #[test]
     fn it_works() {
         assert_eq!(2 + 2, 4);
     }
 }
-</code></pre>
+</pre>
 
 <p>Мы не будем использовать этот тестовый код вообще, так что можете просто удалить его.</p>
 
@@ -96,7 +96,7 @@ mod tests {
 
 <p>Вместо этого поместите этот код в <code>src/lib.rs</code>:</p>
 
-<pre><code class="rust language-rust">extern crate wasm_bindgen;
+<pre>extern crate wasm_bindgen;
 
 use wasm_bindgen::prelude::*;
 
@@ -109,7 +109,7 @@ extern {
 pub fn greet(name: &amp;str) {
     alert(&amp;format!("Hello, {}!", name));
 }
-</code></pre>
+</pre>
 
 <p>Это содержимое нашего проекта на Rust. У него есть три основные части, давайте пройдёмся по ним по очереди. Мы дадим здесь обобщённое пояснение и поясним некоторые детали; чтобы узнать больше о Rust, пожалуйста, просмотрите бесплатную online-книгу <a href="https://doc.rust-lang.org/book/">The Rust Programming Language</a>.</p>
 
@@ -117,12 +117,12 @@ pub fn greet(name: &amp;str) {
 
 <p>Первая часть выглядит вот так:</p>
 
-<pre><code class="rust language-rust">extern crate wasm_bindgen;
+<pre>extern crate wasm_bindgen;
 
 use wasm_bindgen::prelude::*;
 </code></pre>
 
-<p>Первая строка гласит: "эй, Rust, мы используем библиотеку, называемую wasm_bindgen." Библиотеки в Rust называются "<code class="rust language-rust">crates</code>" (контейнеры), а так как мы используем внешнюю, то "<code class="rust language-rust">extern</code>".</p>
+<p>Первая строка гласит: "эй, Rust, мы используем библиотеку, называемую wasm_bindgen." Библиотеки в Rust называются "<code>crates</code>" (контейнеры), а так как мы используем внешнюю, то "<code>extern</code>".</p>
 
 <p>Поняли? <strong>Cargo поставляет контейнеры</strong>.</p>
 
@@ -138,11 +138,11 @@ use wasm_bindgen::prelude::*;
 
 <p>Следующая часть выглядит так:</p>
 
-<pre><code class="rust language-rust">#[wasm_bindgen]
+<pre>#[wasm_bindgen]
 extern {
     pub fn alert(s: &amp;str);
 }
-</code></pre>
+</pre>
 
 <p>Частичка внутри <code>#[]</code> называется "атрибутом", и она кое-как модифицирует следующее за ней утверждение. В нашем случае, это утверждение <code>extern</code>, которое говорит Rust-у, что мы хотим вызвать некоторую функцию, определённую во внешнем пространстве. Атрибут говорит: "wasm-bindgen знает, как найти эти функции".</p>
 
@@ -156,11 +156,11 @@ extern {
 
 <p>Финальная часть следующая:</p>
 
-<pre><code class="rust language-rust">#[wasm_bindgen]
+<pre>#[wasm_bindgen]
 pub fn greet(name: &amp;str) {
     alert(&amp;format!("Hello, {}!", name));
 }
-</code></pre>
+</pre>
 
 <p>Ещё раз, мы видим <code>#[wasm_bindgen]</code> атрибут. В этом случае, он модифицирует не блок <code>extern</code>, а <code>fn</code>; это значит, что мы хотим, чтобы эта функция на Rust была доступна для JavaScript. Прямо противоположно <code>extern</code>: это не те функции, которые нам нужны, а те, что мы предоставляем миру!</p>
 
@@ -208,7 +208,7 @@ wasm-bindgen = "0.2"
 
 <ol>
  <li>Компилирует ваш Rust-код в WebAssembly.</li>
- <li><code><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Запускает </span></font>wasm-bindgen</code> с этим WebAssembly, генерируя JavaScript файл, который оборачивает WebAssembly файл в модуль. который может понять npm.</li>
+ <li><code>Запускает wasm-bindgen</code> с этим WebAssembly, генерируя JavaScript файл, который оборачивает WebAssembly файл в модуль. который может понять npm.</li>
  <li>Создаёт папку <code>pkg</code>, куда перемещает этот JavaScript файл и ваш код WebAssembly.</li>
  <li>Читает ваш <code>Cargo.toml</code> и создаёт эквивалентный <code>package.json</code>.</li>
  <li>Копирует ваш <code>README.md</code> (если есть) в пакет.</li>

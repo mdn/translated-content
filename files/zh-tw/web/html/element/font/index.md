@@ -2,6 +2,7 @@
 title: <font>
 slug: Web/HTML/Element/font
 ---
+
 {{deprecated_header}}
 
 ## 概要

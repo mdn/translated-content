@@ -16,7 +16,9 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) [CSS](/es/docs/Web/CSS) `:-mo
 
 ## Síntaxis
 
-    :-moz-focusring
+```
+:-moz-focusring
+```
 
 ## Ejemplo
 

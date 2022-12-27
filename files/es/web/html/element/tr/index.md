@@ -19,7 +19,7 @@ El elemento HTML _fila de tabla_ (_table row_) `<tr>` define una fila de celdas 
 
 ## Contexto de uso
 
-| [Content categories](/es/docs/HTML/Content_categories "HTML/Content categories") | Ninguno                                                                                                                                                                                                                                                                                                                                                                  |
+| [Content categories](/es/docs/HTML/Content_categories) | Ninguno                                                                                                                                                                                                                                                                                                                                                                  |
 | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Contenido permitido                                                              | Cero o más {{HTMLElement("td")}} o elementos {{HTMLElement("th")}}, o una mezcla de ellos                                                                                                                                                                                                                                                                  |
 | Omisión de Etiqueta                                                              | La etiqueta de inicio es obligatoria. La etiqueta final puede ser omitida si el elemento {{HTMLElement("tr")}} va inmediatamente seguido por un elemento {{HTMLElement("tr")}}, o si el grupo de tabla pariente ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}} o el elemento {{HTMLElement("tfoot")}}) no tiene mas contenido |
@@ -28,7 +28,7 @@ El elemento HTML _fila de tabla_ (_table row_) `<tr>` define una fila de celdas 
 
 ## Atributos
 
-Este elemento incluye los [global attributes](/es/docs/HTML/Global_attributes "HTML/Global attributes").
+Este elemento incluye los [global attributes](/es/docs/HTML/Global_attributes).
 
 - {{htmlattrdef("align")}} {{deprecatedGeneric("inline","html4.01")}}, {{obsoleteGeneric("inline","html5")}}
   - : Este atributo enumerado especifica como será gestionado el alineamiento horizontal del contenido de cada celda. Hay varios valores:
@@ -37,9 +37,10 @@ Este elemento incluye los [global attributes](/es/docs/HTML/Global_attributes "H
     - `right`, alinea el contenido a la derecha de las celdas
     - `justify`, amplia los espacios en el contenido textual de hecho el contenido es justificado in las celdas
     - `char`, alinea el contenido textual en un carácter especial con una mínima inclinación definida por el {{htmlattrxref("char", "tr")}} y {{htmlattrxref("charoff", "tr")}} atributos {{unimplemented_inline("2212")}}
-    
+
     Si este atributo no está establecido, se hereda el valor del nodo principal.
     > **Nota:** **No utilice este atributo, ya que es obsoleta (no soportado) en el último estándar**.
+    >
     > - Para lograr el mismo efecto que los valores `left`, `center`, `right` o `justify`, utilice la propiedad CSS {{cssxref("text-align")}}.
     > - Para lograr el mismo efecto que el valor char, en CSS3, puede utilizar el valor de la {{htmlattrxref("char", "tr")}} como el valor de la {{cssxref("text-align")}} propiedad {{unimplemented_inline}}.
 

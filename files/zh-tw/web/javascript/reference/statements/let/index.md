@@ -2,6 +2,7 @@
 title: let
 slug: Web/JavaScript/Reference/Statements/let
 ---
+
 {{jsSidebar("Statements")}}
 
 **`let`**用於宣告一個「只作用在當前區塊的變數」，初始值可選擇性的設定。

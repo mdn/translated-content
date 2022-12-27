@@ -1,12 +1,6 @@
 ---
 title: prefers-contrast
 slug: Web/CSS/@media/prefers-contrast
-tags:
-  - CSS
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.prefers-contrast
-translation_of: Web/CSS/@media/prefers-contrast
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

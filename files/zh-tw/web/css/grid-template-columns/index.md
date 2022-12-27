@@ -2,6 +2,7 @@
 title: 网格模板列
 slug: Web/CSS/grid-template-columns
 ---
+
 {{CSSRef}}
 
 ## Summary

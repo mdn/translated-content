@@ -3,6 +3,7 @@ title: 基本表單應用
 slug: conflicting/Web/Accessibility/ARIA
 original_slug: Web/Accessibility/ARIA/forms/Basic_form_hints
 ---
+
 ## 表單的 label
 
 當使用傳統的 HTML 表單元素建立表單時，提供控制用的標籤（label）以及將標籤與對應表單元素建立關聯是非常重要的。當  screen reader （例如瀏覽器、電子郵件……等等）瀏覽一個頁面時，screen reader 會顯示  form controls ，但若沒有標示 control 和  label 之間的關聯，  screen reader 沒法知道哪個 label 是對應哪個 control。

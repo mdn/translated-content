@@ -2,6 +2,7 @@
 title: 閉包
 slug: Glossary/Closure
 ---
+
 定義可執行範圍(**{{glossary("scope")}})**的綁定：在 {{glossary("JavaScript")}}, **{{glossary("function","functions")}}**會創建一個閉包上下文。
 
 ## 了解更多

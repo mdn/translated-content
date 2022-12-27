@@ -1,14 +1,6 @@
 ---
 title: update
 slug: Web/CSS/@media/update-frequency
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - メディア特性
-  - リファレンス
-browser-compat: css.at-rules.media.update
-translation_of: Web/CSS/@media/update-frequency
 ---
 {{CSSRef}}
 

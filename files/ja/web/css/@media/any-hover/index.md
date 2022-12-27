@@ -1,14 +1,6 @@
 ---
 title: any-hover
 slug: Web/CSS/@media/any-hover
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - メディア特性
-  - リファレンス
-browser-compat: css.at-rules.media.any-hover
-translation_of: Web/CSS/@media/any-hover
 ---
 {{CSSRef}}
 

@@ -2,6 +2,7 @@
 title: Web Audio API
 slug: Web/API/Web_Audio_API
 ---
+
 {{SeeCompatTable}}
 
 **Web Audio API** 可於 Web App 或網頁上操作並播放音訊檔案。

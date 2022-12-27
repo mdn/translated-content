@@ -1,14 +1,6 @@
 ---
 title: monochrome
 slug: Web/CSS/@media/monochrome
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.monochrome
-translation_of: Web/CSS/@media/monochrome
 ---
 {{CSSRef}}
 

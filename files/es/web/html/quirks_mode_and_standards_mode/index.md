@@ -52,4 +52,4 @@ En Internet Explorer, pulsa _F12_, y buscar _Modo de Documento_ (Document Mode)
 
 ## ¿Cuáles son las diferencias entre los modos?
 
-Lee la [lista de quirks](/es/docs/Mozilla_Quirks_Mode_Behavior) y [modo casi estándar](/es/docs/Gecko's_"Almost_Standards"_Mode "Gecko%27s_%22Almost_Standards%22_Mode") para ver las diferencias entre los modos.
+Lee la [lista de quirks](/es/docs/Mozilla_Quirks_Mode_Behavior) y [modo casi estándar](/es/docs/Gecko's_"Almost_Standards"_Mode) para ver las diferencias entre los modos.

@@ -1,17 +1,6 @@
 ---
 title: display-mode
 slug: Web/CSS/@media/display-mode
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - display
-  - display-mode
-  - メディア特性
-  - ウェブアプリマニフェスト
-browser-compat: css.at-rules.media.display-mode
-translation_of: Web/CSS/@media/display-mode
 ---
 {{CSSRef}}
 

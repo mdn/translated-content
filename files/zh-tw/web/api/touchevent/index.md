@@ -2,6 +2,7 @@
 title: TouchEvent
 slug: Web/API/TouchEvent
 ---
+
 {{ APIRef("Touch Events") }}
 
 **`TouchEvent`** 介面表示了一個由觸控平面因觸碰而改變狀態所發出的事件。平面可以是觸控螢幕或是觸控板，`TouchEvent` 能描述一或多個觸碰點，並且支援偵測其移動、增加或減少觸碰點等等功能。

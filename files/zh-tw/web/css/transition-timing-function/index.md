@@ -2,6 +2,7 @@
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 ---
+
 {{CSSRef}}
 
 **`transition-timing-function`** CSS 屬性用於表示各個被[動畫特效](/zh-TW/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)影響的屬性的區間值計算方式。

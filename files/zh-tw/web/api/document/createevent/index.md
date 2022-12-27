@@ -3,6 +3,7 @@ title: Event.createEvent()
 slug: Web/API/Document/createEvent
 original_slug: Web/API/Event/createEvent
 ---
+
 {{APIRef("DOM")}}
 
 建立一個新的事件，該事件必須先以其 `init()` method 初始化才行。

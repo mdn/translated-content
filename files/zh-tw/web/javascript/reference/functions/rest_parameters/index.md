@@ -2,6 +2,7 @@
 title: 其餘參數
 slug: Web/JavaScript/Reference/Functions/rest_parameters
 ---
+
 {{jsSidebar("Functions")}}
 
 **其餘參數（rest parameter）** 語法可以讓我們表示不確定數量的參數，並將其視為一個陣列。

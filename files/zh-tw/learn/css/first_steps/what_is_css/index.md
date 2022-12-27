@@ -2,6 +2,7 @@
 title: CSS 是什麼？
 slug: Learn/CSS/First_steps/What_is_CSS
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps")}}
 
 **{{Glossary("CSS")}}** （階層式樣式表）可以讓您建立出好看的網頁，但是它背後是怎麼運作的？在這個主題裡，藉由簡單的語法範例來說明 CSS 是什麼，以及含蓋這個語言的一些關鍵項目。

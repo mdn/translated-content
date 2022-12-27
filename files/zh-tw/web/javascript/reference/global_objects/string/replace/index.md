@@ -2,6 +2,7 @@
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 ---
+
 {{JSRef}}
 
 **`replace()`** 方法會傳回一個新字串，此新字串是透過將原字串與 `pattern` 比對，以 `replacement` 取代吻合處而生成。`pattern` 可以是字串或 {{jsxref("RegExp")}}，而 `replacement` 可以是字串或函式（會在每一次匹配時被呼叫）。
@@ -166,6 +167,7 @@ A string made out of the characters `x`, `-` and `_`
 ```plain
 x-x_
 x---x---x---x---
+
 x-xxx-xx-x-
 x_x_x___x___x___
 ```

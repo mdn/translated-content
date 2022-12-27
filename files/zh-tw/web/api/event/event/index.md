@@ -2,6 +2,7 @@
 title: Event()
 slug: Web/API/Event/Event
 ---
+
 {{APIRef("DOM")}}
 
 **`Event()`** constructor 能用來建立一個 {{domxref("Event", "事件")}} 。

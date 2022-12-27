@@ -2,6 +2,7 @@
 title: 200 OK
 slug: Web/HTTP/Status/200
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`200 OK`** 成功狀態碼表明請求成功。200 回應預設上是緩存的（cacheable）。

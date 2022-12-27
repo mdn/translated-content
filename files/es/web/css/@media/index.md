@@ -7,7 +7,7 @@ translation_of: Web/CSS/@media
 
 ## Resumen
 
-La [regla-at](/es/docs/Web/CSS/At-rule "en/CSS/At-rule") [CSS](/es/docs/Web/CSS "CSS") `@media` asocia un grupo de declaraciones anidadas, en un bloque CSS delimitado por llaves, con una condición definida por un [media query](/es/docs/CSS/Media_queries "CSS media queries"). La regla-at `@media` puede ser usada no solo en el nivel superior de la hoja de estilos, sino también dentro de cualquier [grupo de reglas conditionales](/es/docs/Web/CSS/At-rule#Grupos_de_Reglas_Condicionales "en/CSS/At-rule#Conditional_Group_Rules").
+La [regla-at](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) `@media` asocia un grupo de declaraciones anidadas, en un bloque CSS delimitado por llaves, con una condición definida por un [media query](/es/docs/CSS/Media_queries). La regla-at `@media` puede ser usada no solo en el nivel superior de la hoja de estilos, sino también dentro de cualquier [grupo de reglas conditionales](/es/docs/Web/CSS/At-rule#Grupos_de_Reglas_Condicionales).
 
 La regla-at `@media` puede ser accesible por medio de la interfaz de modelo de objeto {{domxref("CSSMediaRule")}}.
 
@@ -22,7 +22,7 @@ Un `<media-query>` está compuesto por un tipo de medio opcional y/o un conjunto
 - all
   - : Aplicable a todos los dispositivos.
 - print
-  - : Destinado material paginado y para documentos visibles en pantalla en modo de vista previa para impresión. Por favor, consulte la sección de [medios paginados](/es/docs/Web/CSS/Paged_Media), y la [sección de Media en el tutorial de Introducción](/es/docs/Web/CSS/Introducción/Media "https://developer.mozilla.org/en/CSS/Getting_Started/Media") para más información acerca de problemas de formateo específicos para los medios paginados.
+  - : Destinado material paginado y para documentos visibles en pantalla en modo de vista previa para impresión. Por favor, consulte la sección de [medios paginados](/es/docs/Web/CSS/Paged_Media), y la [sección de Media en el tutorial de Introducción](/es/docs/Web/CSS/Introducción/Media) para más información acerca de problemas de formateo específicos para los medios paginados.
 - screen
   - : Destinado a principalmente a pantallas de computadora a color.
 - speech
@@ -102,5 +102,5 @@ Cada _característica de medios_ verifica una característica específica del na
 
 ## Véase también
 
-- [Media queries](/en/CSS/Media_queries "En/CSS/Media queries")
+- [Media queries](/en/CSS/Media_queries)
 - El modelo CSSOM {{ domxref("CSSMediaRule") }} asociado a esta regla-at.

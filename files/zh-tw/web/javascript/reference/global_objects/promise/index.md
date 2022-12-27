@@ -2,6 +2,7 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。

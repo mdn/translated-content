@@ -1,14 +1,6 @@
 ---
 title: scripting
 slug: Web/CSS/@media/scripting
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.scripting
-translation_of: Web/CSS/@media/scripting
 ---
 {{CSSRef}}
 

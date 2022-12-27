@@ -2,6 +2,7 @@
 title: HTMLFormElement
 slug: Web/API/HTMLFormElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLFormElement`** 介面提供了建立及修改 {{HTMLElement("form")}} 元素的方法。

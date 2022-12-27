@@ -2,6 +2,7 @@
 title: MIME 類別 (IANA 媒體類別)
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
+
 {{HTTPSidebar}}
 
 **媒體類別**(多用途網際網路郵件擴展或是**MIME 類別**)是一種表示文件、檔案或各式位元組的標準。它被定義並規範在 IETF 的 {{RFC(6838)}}。

@@ -1,14 +1,6 @@
 ---
 title: aural
 slug: Web/CSS/@media/aural
-tags:
-  - CSS
-  - 非推奨
-  - リファレンス
-  - aural
-  - メディア特性
-  - speech
-translation_of: Web/CSS/@media/aural
 original_slug: Web/CSS/aural
 ---
 {{CSSRef}} {{deprecated_header}}

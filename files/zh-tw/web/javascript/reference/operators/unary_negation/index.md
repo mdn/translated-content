@@ -2,6 +2,7 @@
 title: 一元負號運算子 (-)
 slug: Web/JavaScript/Reference/Operators/Unary_negation
 ---
+
 {{jsSidebar("Operators")}}
 
 一元負號運算子 (`-`) 置於運算元之前，並將運算元轉為其負值。

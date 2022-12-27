@@ -1,14 +1,6 @@
 ---
 title: orientation
 slug: Web/CSS/@media/orientation
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.orientation
-translation_of: Web/CSS/@media/orientation
 ---
 {{CSSRef}}
 

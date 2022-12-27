@@ -1,9 +1,6 @@
 ---
 title: UUID
 slug: Glossary/UUID
-tags:
-  - Glossary
-  - Infrastructure
 ---
 **Universally Unique Identifier** (**UUID**) とは、あるリソースを、同じ種類の他のすべてのリソースの中から一意に識別するために使用されるラベルです。
 

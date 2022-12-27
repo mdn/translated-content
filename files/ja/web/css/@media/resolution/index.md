@@ -1,14 +1,6 @@
 ---
 title: resolution
 slug: Web/CSS/@media/resolution
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.resolution
-translation_of: Web/CSS/@media/resolution
 ---
 {{CSSRef}}
 

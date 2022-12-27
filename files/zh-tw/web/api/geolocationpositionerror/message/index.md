@@ -2,6 +2,7 @@
 title: PositionError.message
 slug: Web/API/GeolocationPositionError/message
 ---
+
 {{APIRef("Geolocation API")}}
 
 **`PositionError.message`** 是一個可讀的 {{domxref("DOMString")}} 來描述錯誤的詳細訊息。

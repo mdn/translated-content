@@ -1,10 +1,6 @@
 ---
 title: Mozilla におけるリッチテキスト編集
 slug: orphaned/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
-tags:
-  - Midas
-  - ガイド
-translation_of: Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 original_slug: Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla
 ---
 > **Note:** この文書は古くなっています。[コンテンツを編集可能にする](/ja/docs/Web/Guide/HTML/Editable_content)にある最新のドキュメントを参照することをお勧めします。

@@ -1,14 +1,6 @@
 ---
 title: color
 slug: Web/CSS/@media/color
-tags:
-  - '@media'
-  - CSS
-  - リファレンス
-  - メディアクエリー
-  - メディア特性
-browser-compat: css.at-rules.media.color
-translation_of: Web/CSS/@media/color
 ---
 {{CSSRef}}
 

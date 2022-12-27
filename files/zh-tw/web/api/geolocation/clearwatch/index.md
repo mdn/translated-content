@@ -2,6 +2,7 @@
 title: Geolocation.clearWatch()
 slug: Web/API/Geolocation/clearWatch
 ---
+
 {{ APIref("Geolocation API") }}
 
 **`Geolocation.clearWatch()`** 這個函式是用來取消 {{domxref("Geolocation.watchPosition()")}} 註冊的函式。

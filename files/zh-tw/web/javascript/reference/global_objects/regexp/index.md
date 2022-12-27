@@ -2,6 +2,7 @@
 title: RegExp
 slug: Web/JavaScript/Reference/Global_Objects/RegExp
 ---
+
 {{JSRef}}
 
 **`RegExp`** 物件被用來比對符合自訂規則的文字。

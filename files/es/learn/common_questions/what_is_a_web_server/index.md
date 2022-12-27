@@ -53,7 +53,7 @@ Por ejemplo, para producir las páginas web que finalmente ves en tu navegador, 
 
 ## Aprendizaje activo
 
-_No hay aprendizaje activo disponible. [](https://developer.mozilla.org/es/docs/MDN/Getting_started) **Por favor, considere colaborar.**_
+_No hay aprendizaje activo disponible. [**Por favor, considere colaborar.**](/es/docs/MDN/Getting_started)_
 
 ## Inmersión más profunda
 

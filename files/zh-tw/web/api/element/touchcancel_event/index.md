@@ -2,6 +2,7 @@
 title: touchcancel
 slug: Web/API/Element/touchcancel_event
 ---
+
 {{APIRef}}
 
 `touchcancel 觸控點發生失效的事件被觸發(例如太多觸控點時)`

@@ -2,6 +2,7 @@
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
+
 {{JSRef}}
 
 **Reflect** 是一個內建物件，提供了用於獲取可截取之 JavaScript 操作的方法。這些方法與 [proxy handlers](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler) 的方法相同。`Reflect` 不是一個函式物件，因此它是不可建構的。

@@ -3,6 +3,7 @@ title: 開始寫我們的Svelte待辦清單應用程式
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning
 ---
+
 {{LearnSidebar}}
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 

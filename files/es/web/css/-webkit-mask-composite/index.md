@@ -19,7 +19,9 @@ La propiedad `-webkit-mask-composite` especifica la forma en la que múltiples i
 
 ## Síntaxis
 
-    -webkit-mask-composite: <composite-style>[, <composite-style>]*
+```
+-webkit-mask-composite: <composite-style>[, <composite-style>]*
+```
 
 Donde:
 

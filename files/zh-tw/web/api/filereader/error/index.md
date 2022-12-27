@@ -2,6 +2,7 @@
 title: FileReader.error
 slug: Web/API/FileReader/error
 ---
+
 {{APIRef("File API")}}
 
 ## 總覽

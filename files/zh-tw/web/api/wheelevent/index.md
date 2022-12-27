@@ -2,6 +2,7 @@
 title: WheelEvent
 slug: Web/API/WheelEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 WheelEvent DOM 事件會在用戶滚动滑鼠滚轮或操作其它類似滑鼠的設備時觸發。

@@ -1,13 +1,6 @@
 ---
 title: shape
 slug: Web/CSS/@media/shape
-tags:
-  - '@media'
-  - CSS
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.shape
-translation_of: Web/CSS/@media/shape
 ---
 {{CSSRef}}
 

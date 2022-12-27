@@ -2,6 +2,7 @@
 title: HTMLMediaElement.readyState
 slug: Web/API/HTMLMediaElement/readyState
 ---
+
 {{APIRef("HTML DOM")}}**`HTMLMediaElement.readyState` **屬性回傳目前媒體的就緒狀態。
 
 ## 語法

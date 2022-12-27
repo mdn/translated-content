@@ -1,16 +1,6 @@
 ---
 title: size
 slug: Web/CSS/@page/size
-tags:
-  - '@page'
-  - At-rule descriptor
-  - CSS
-  - CSS Descriptor
-  - Experimental
-  - NeedsBrowserCompatibility
-  - Reference
-  - Web
-translation_of: Web/CSS/@page/size
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

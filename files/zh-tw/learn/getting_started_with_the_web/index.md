@@ -2,6 +2,7 @@
 title: Web 入門
 slug: Learn/Getting_started_with_the_web
 ---
+
 {{LearnSidebar}}
 
 *〈Web 入門〉*是一系列簡潔的文章，介紹網頁開發的實用範例。你將運用相關工具建構簡易網頁並發布自己的程式碼。

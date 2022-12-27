@@ -2,6 +2,7 @@
 title: 文檔操作(文件操作)
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
 
 當你在撰寫網頁(web pages)或網路應用程式(web apps)，其中一個最常見的事，你會希望能夠操作(網頁)文件結構。最常看見的方式是基於[**文件物件模型** ( Document Object Model, DOM )](/zh-TW/docs/Web/API/Document_Object_Model) 概念上，透過使用 API ([Web APIs](/zh-TW/docs/Web/API/)) 來控制 HTML 及 樣式；而這種方式也被大量使用在操作 [`Document`](/zh-TW/docs/Web/API/Document) 物件上。接下來的文章中，我們將會詳細的介紹如何操作 DOM，藉著使用有趣的 API 能帶來些新奇的體驗。

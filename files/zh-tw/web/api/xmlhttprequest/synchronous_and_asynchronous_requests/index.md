@@ -2,6 +2,7 @@
 title: Synchronous and asynchronous requests
 slug: Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests
 ---
+
 `XMLHttpRequest 支持同步和非同步請求，一般來說，建議使用非同步請求。`
 
 In short, synchronous requests block the execution of code which creates "freezing" on the screen and an unresponsive user experience.

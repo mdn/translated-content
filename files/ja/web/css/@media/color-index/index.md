@@ -1,14 +1,6 @@
 ---
 title: color-index
 slug: Web/CSS/@media/color-index
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - メディア特性
-  - リファレンス
-browser-compat: css.at-rules.media.color-index
-translation_of: Web/CSS/@media/color-index
 ---
 {{CSSRef}}
 

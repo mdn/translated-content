@@ -13,9 +13,11 @@ Las propiedades personalizadas tienen como alcance los elementos en los que se d
 
 ## Sintaxis
 
-    --somekeyword: left;
-    --somecolor: #0000ff;
-    --somecomplexvalue: 3px 6px rgb(20, 32, 54);
+```css
+--somekeyword: left;
+--somecolor: #0000ff;
+--somecomplexvalue: 3px 6px rgb(20, 32, 54);
+```
 
 - `<declaración-valor>`
   - : Este valor coincide con cualquier secuencia de uno o más tokens, siempre que la secuencia no contenga un token no permitido.

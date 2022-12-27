@@ -2,6 +2,7 @@
 title: 建構 Angular 應用程式與更多資源
 slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 這篇文章內容涵蓋，如何建立一個生產版本（production）的應用程式，以及提供後續的學習資源。

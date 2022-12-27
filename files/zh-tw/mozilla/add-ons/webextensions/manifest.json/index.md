@@ -2,6 +2,7 @@
 title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
 ---
+
 {{AddonSidebar}}
 
 manifest.json 是所有採用 WebExtension API 的擴充功能中、唯一一個必須包含的檔案。

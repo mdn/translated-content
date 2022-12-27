@@ -1,14 +1,6 @@
 ---
 title: syntax
 slug: Web/CSS/@property/syntax
-tags:
-  - CSS
-  - リファレンス
-  - ウェブ
-  - プロパティ
-  - Houdini
-browser-compat: css.at-rules.property.syntax
-translation_of: Web/CSS/@property/syntax
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

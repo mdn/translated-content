@@ -2,6 +2,7 @@
 title: XMLHttpRequest.withCredentials
 slug: Web/API/XMLHttpRequest/withCredentials
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 **`XMLHttpRequest.withCredentials`** 屬性是一個 {{jsxref("Boolean")}} 型別，它指出無論是否使用 `Access-Control` 標頭在跨站的要求上，都應該使用像 Cookies、Authorization 標頭或 TLS 用戶端憑證來進行驗證。在相同來源的要求設定 `withCredentials` 沒有任何效果。

@@ -1,14 +1,6 @@
 ---
 title: overflow-inline
 slug: Web/CSS/@media/overflow-inline
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.overflow-inline
-translation_of: Web/CSS/@media/overflow-inline
 ---
 {{CSSRef}}
 

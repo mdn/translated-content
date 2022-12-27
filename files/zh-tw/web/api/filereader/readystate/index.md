@@ -2,6 +2,7 @@
 title: FileReader.readyState
 slug: Web/API/FileReader/readyState
 ---
+
 {{APIRef("File API")}}
 
 提供目前讀取狀態

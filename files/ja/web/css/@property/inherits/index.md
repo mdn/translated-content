@@ -1,14 +1,6 @@
 ---
 title: inherits
 slug: Web/CSS/@property/inherits
-tags:
-  - CSS
-  - リファレンス
-  - ウェブ
-  - プロパティ
-  - Houdini
-browser-compat: css.at-rules.property.inherits
-translation_of: Web/CSS/@property/inherits
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

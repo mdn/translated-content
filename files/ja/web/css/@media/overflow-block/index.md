@@ -1,14 +1,6 @@
 ---
 title: overflow-block
 slug: Web/CSS/@media/overflow-block
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.overflow-block
-translation_of: Web/CSS/@media/overflow-block
 ---
 {{CSSRef}}
 

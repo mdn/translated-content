@@ -1,12 +1,6 @@
 ---
 title: '@document'
 slug: Web/CSS/@document
-tags:
-  - アットルール
-  - CSS
-  - リファレンス
-browser-compat: css.at-rules.document
-translation_of: Web/CSS/@document
 ---
 {{CSSRef}}{{Deprecated_header}}
 

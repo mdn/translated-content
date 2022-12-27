@@ -1,14 +1,6 @@
 ---
 title: aspect-ratio
 slug: Web/CSS/@media/aspect-ratio
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - リファレンス
-  - メディア特性
-browser-compat: css.at-rules.media.aspect-ratio
-translation_of: Web/CSS/@media/aspect-ratio
 ---
 {{CSSRef}}
 

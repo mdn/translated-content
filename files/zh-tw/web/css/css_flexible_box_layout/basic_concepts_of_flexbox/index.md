@@ -3,6 +3,7 @@ title: CSS彈性盒子用法
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes
 ---
+
 {{CSSRef}}
 
 CSS3 **彈性盒子**，又稱**flexbox**，是為了適應不同螢幕尺寸和顯示設備而生的[佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)。針對許多應用而言，不用 floats 的彈性盒子模型會比塊狀模型（block model）易用，彈性容器的邊緣也不會與內容的邊緣重疊。

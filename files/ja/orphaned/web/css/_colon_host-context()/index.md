@@ -1,18 +1,7 @@
 ---
 title: ':host-context()'
 slug: orphaned/Web/CSS/:host-context()
-tags:
-  - ':host-context()'
-  - CSS
-  - 実験的
-  - レイアウト
-  - 擬似クラス
-  - リファレンス
-  - セレクター
-  - ウェブ
-translation_of: Web/CSS/:host-context()
 original_slug: Web/CSS/:host-context()
-browser-compat: css.selectors.host-context
 ---
 <div>{{CSSRef}}</div>
 

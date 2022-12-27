@@ -1,14 +1,6 @@
 ---
 title: color-gamut
 slug: Web/CSS/@media/color-gamut
-tags:
-  - '@media'
-  - CSS
-  - メディアクエリー
-  - メディア特性
-  - リファレンス
-browser-compat: css.at-rules.media.color-gamut
-translation_of: Web/CSS/@media/color-gamut
 ---
 {{CSSRef}}
 

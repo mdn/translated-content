@@ -2,6 +2,7 @@
 title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
 ---
+
 {{jsSidebar("Statements")}}
 
 ## Summary

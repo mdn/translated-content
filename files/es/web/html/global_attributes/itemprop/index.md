@@ -11,11 +11,13 @@ Podemos dar más información al motor de búsqueda acerca de imágenes o datos 
 
 Aquí hay un ejemplo .
 
-    <div itemscope itemtype="http://schema.org/Movie">
-      <h1 itemprop="name">Avatar</h1>
-      <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
-      <span itemprop="genre">Ciencia ficcion</span>
-      <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">Trailer</a>
-    </div>
+```html
+<div itemscope itemtype="http://schema.org/Movie">
+  <h1 itemprop="name">Avatar</h1>
+  <span>Director: <span itemprop="director">James Cameron</span> (born August 16, 1954)</span>
+  <span itemprop="genre">Ciencia ficcion</span>
+  <a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">Trailer</a>
+</div>
+```
 
 Para más información acerca de los atributos relacionados consultar https\://schema.org/docs/gs.html

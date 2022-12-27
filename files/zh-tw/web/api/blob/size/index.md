@@ -2,6 +2,7 @@
 title: Blob.size
 slug: Web/API/Blob/size
 ---
+
 {{APIRef("File API")}}
 
 **`Blob.size`** 屬性回傳以 byte 為單位的 {{domxref("Blob")}} 或一個 {{domxref("File")}} 的大小。

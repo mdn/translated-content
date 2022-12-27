@@ -1,16 +1,6 @@
 ---
 title: src
 slug: Web/CSS/@font-face/src
-tags:
-  - '@font-face'
-  - アットルール記述子
-  - CSS
-  - CSS 記述子
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-browser-compat: css.at-rules.font-face.src
-translation_of: Web/CSS/@font-face/src
 ---
 {{CSSRef}}
 

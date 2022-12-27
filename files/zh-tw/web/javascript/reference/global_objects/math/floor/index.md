@@ -2,6 +2,7 @@
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
+
 {{JSRef}}
 
 **`Math.floor()`** 函式會回傳小於等於所給數字的最大整數。

@@ -1,15 +1,6 @@
 ---
 title: fallback
 slug: Web/CSS/@counter-style/fallback
-tags:
-  - '@counter-style'
-  - At-rule descriptor
-  - CSS
-  - CSS Counter Styles
-  - CSS Descriptor
-  - Reference
-browser-compat: css.at-rules.counter-style.fallback
-translation_of: Web/CSS/@counter-style/fallback
 ---
 {{CSSRef}}
 
