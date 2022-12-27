@@ -35,7 +35,7 @@ None.
 
 ### Исключения
 
-`gl.INVALID_ENUM` исключение если `target` не`gl.TEXTURE_2D`, `gl.TEXTURE_CUBE_MAP`, `gl.TEXTURE_3D`, или `gl.TEXTURE_2D_ARRAY`.
+`gl.INVALID_ENUM` исключение если `target` не `gl.TEXTURE_2D`, `gl.TEXTURE_CUBE_MAP`, `gl.TEXTURE_3D`, или `gl.TEXTURE_2D_ARRAY`.
 
 ## Примеры
 
@@ -51,7 +51,7 @@ gl.bindTexture(gl.TEXTURE_2D, texture);
 
 ### Получить текущую привязку
 
-Для проверки текущей привязки текстуры, вызовите`gl.TEXTURE_BINDING_2D` или `gl.TEXTURE_BINDING_CUBE_MAP`.
+Для проверки текущей привязки текстуры, вызовите `gl.TEXTURE_BINDING_2D` или `gl.TEXTURE_BINDING_CUBE_MAP`.
 
 ```js
 gl.getParameter(gl.TEXTURE_BINDING_2D);

@@ -20,7 +20,7 @@ escape(str)
 
 ## Описание
 
-Функция `escape()` является свойством _глобального объекта_, т.е. относится к глобальным функциям. Эта функция кодирует специальные символы, за исключением:`@*_+-./`
+Функция `escape()` является свойством _глобального объекта_, т.е. относится к глобальным функциям. Эта функция кодирует специальные символы, за исключением: `@*_+-./`
 
 The hexadecimal form for characters, whose code unit value is 0xFF or less, is a two-digit escape sequence: %xx. For characters with a greater code unit, the four-digit format %**u**xxxx is used.
 

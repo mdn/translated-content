@@ -91,13 +91,13 @@ En el futuro, los service workers podrán hacer una cantidad de cosas útiles pa
 - {{domxref("Clients") }}
   - : Representa un contenedor para una lista de objetos {{domxref("Client")}}; principal vía de acceso de los clientes service worker al origen actual.
 - {{domxref("ExtendableEvent") }}
-  - : Extiende el tiempo de vida de los eventos`install` y `activate` lanzados en {{domxref("ServiceWorkerGlobalScope")}} como parte del ciclo de vida del service worker. Esto asegura que cualquier evento funcional (como {{domxref("FetchEvent")}}) no se despachan al {{domxref("ServiceWorker")}} hasta que actualiza los esquemas de base de datos, borra entradas de caché antiguas, etc.
+  - : Extiende el tiempo de vida de los eventos `install` y `activate` lanzados en {{domxref("ServiceWorkerGlobalScope")}} como parte del ciclo de vida del service worker. Esto asegura que cualquier evento funcional (como {{domxref("FetchEvent")}}) no se despachan al {{domxref("ServiceWorker")}} hasta que actualiza los esquemas de base de datos, borra entradas de caché antiguas, etc.
 - {{domxref("ExtendableMessageEvent") }}
   - : Es el objeto evento de un {{event("message_(ServiceWorker)","message")}} lanzado en un service worker (cuando se recibe un mensaje en el {{domxref("ServiceWorkerGlobalScope")}} desde otro contexto) — extiende el tiempo de vida de tales eventos.
 - {{domxref("FetchEvent") }}
   - : Parametro pasado en el controlador {{domxref("ServiceWorkerGlobalScope.onfetch")}}, `FetchEvent` representa una acción de consulta (fetch) despachada en el {{domxref("ServiceWorkerGlobalScope")}} de un {{domxref("ServiceWorker")}}. Contiene información sobre la petición y respuesta resultante, y proporciona el método {{domxref("FetchEvent.respondWith", "FetchEvent.respondWith()")}}, que nos permite proporcionar una respuesta arbitraria a la página controlada.
 - {{domxref("InstallEvent") }}
-  - : Parámetro pasado en el controlador {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}}, el interfaz`InstallEvent` representa una acctión de instalación realizada en el {{domxref("ServiceWorkerGlobalScope")}} de un {{domxref("ServiceWorker")}}. Como hijo de {{domxref("ExtendableEvent")}}, asegura que los eventos funcionales como {{domxref("FetchEvent")}} no se llevan a cabo durante la instalación.
+  - : Parámetro pasado en el controlador {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}}, el interfaz `InstallEvent` representa una acctión de instalación realizada en el {{domxref("ServiceWorkerGlobalScope")}} de un {{domxref("ServiceWorker")}}. Como hijo de {{domxref("ExtendableEvent")}}, asegura que los eventos funcionales como {{domxref("FetchEvent")}} no se llevan a cabo durante la instalación.
 - {{domxref("Navigator.serviceWorker") }}
   - : Devuelve un objeto {{domxref("ServiceWorkerContainer")}}, que proporciona acceso al registro, eliminación, actualización y comunicación con los objetos {{domxref("ServiceWorker")}} para el [documento asociado](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{domxref("NotificationEvent") }}

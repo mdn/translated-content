@@ -6,7 +6,8 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/fill-opacity
 ---
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
+
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Этот атрибут определяет прозрачность цвета заполнения содержимого элемента.
 
@@ -14,7 +15,7 @@ translation_of: Web/SVG/Attribute/fill-opacity
 
 | Категория                  | Атрибут оформления                                                                                    |
 | -------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Значение                   | [\<opacity-value>](/en/SVG/Content_type#Opacity_value "en/SVG/Content_type#Opacity_value") \| inherit |
+| Значение                   | [\<opacity-value>](/en/SVG/Content_type#Opacity_value) \| inherit |
 | Предустановленное значение | 1                                                                                                     |
 | Анимируемый                | Да                                                                                                    |
 | Спецификация               | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#FillOpacityProperty)                   |
@@ -40,8 +41,8 @@ translation_of: Web/SVG/Attribute/fill-opacity
 
 Следующие группы элементов могут быть использованы с атрибутом `fill-opacity`:
 
-- [Элементы графических форм (Shape elements](/en/SVG/Element#Shape "en/SVG/Element#Shape")) »
-- [Текстовые элементы](/en/SVG/Element#TextContent "en/SVG/Element#TexteContent") »
+- [Элементы графических форм (Shape elements](/en/SVG/Element#Shape))
+- [Текстовые элементы](/en/SVG/Element#TextContent)
 
 ## Смотрите также
 

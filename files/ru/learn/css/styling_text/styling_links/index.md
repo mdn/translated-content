@@ -331,7 +331,7 @@ a[href*="http"] {
 
 Ну вот и все — попробуйте посетить секцию активного изучения выше и испытайте этот новый метод!
 
-> **Примечание:** **Обратите внимание**: Не переживайте если вы ещё не знакомы с [фоном ](/ru/docs/Learn/CSS/Building_blocks)и [адаптивным (отзывчивым) веб-дизайном](/ru/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks); это объяснено в других местах
+> **Примечание:** **Обратите внимание**: Не переживайте если вы ещё не знакомы с [фоном](/ru/docs/Learn/CSS/Building_blocks) и [адаптивным (отзывчивым) веб-дизайном](/ru/docs/Web/Progressive_web_apps/Responsive/responsive_design_building_blocks); это объяснено в других местах
 
 ## Стилизация ссылок в виде кнопок
 

@@ -73,7 +73,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 - {{htmlattrdef("sizes")}}
   - : Este atributo define los tamaños de los íconos para medios visuales contenidos en el recurso. Debe estar presente solo si el atributo {{htmlattrxref("rel","link")}} contiene el [tipo de enlace](/es/docs/Web/HTML/Tipos_de_enlaces) icon. Puede tener los siguientes valores:
     - `any`, significa que el ícono puede ser escalado a cualquier tamaño, ya que está en un formato vectorial, como `image/svg+xml`.
-    - una lista de tamaños separados por espacios en blanco, cada uno en formato `<anchura en píxeles>`x`<altura en píxeles>` or `<anchura en píxeles>`X`<altura en píxeles>`. Cada uno de estos tamaños debe estar contenido en el recurso.
+    - una lista de tamaños separados por espacios en blanco, cada uno en formato `<anchura en píxeles>` x `<altura en píxeles>` or `<anchura en píxeles>` X `<altura en píxeles>`. Cada uno de estos tamaños debe estar contenido en el recurso.
       > **Nota:**
       >
       > - La mayoría de los formatos de ícono solo permiten almacenar un ícono; por lo que la mayoría de las ocasiones, el atributo {{htmlattrxref("sizes")}} contiene solamente una entrada. El formato ICO de Microsoft lo hace, así como el formato ICN de Apple. Siendo ICO más común, es el que se recomienda usar.

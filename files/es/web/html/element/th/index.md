@@ -75,7 +75,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
     > **Nota:** No usar este atributo, ya que está obsoleto en el último estándar.
     >
-    > - Para lograr el mismo efecto que con los valores `left`, `center`, `right`o `justify`, aplicar la propiedad CSS {{cssxref("text-align")}} al elemento.
+    > - Para lograr el mismo efecto que con los valores `left`, `center`, `right` o `justify`, aplicar la propiedad CSS {{cssxref("text-align")}} al elemento.
     > - Para lograr el mismo efecto que con el valor `char`, dar a la propiedad {{cssxref("text-align")}} el mismo valor que usarías para {{htmlattrxref("char", "th")}}. {{unimplemented_inline}} in CSS3.
 
 - {{htmlattrdef("axis")}} {{obsolete_inline}} in {{HTMLVersionInline("5")}}

@@ -9,15 +9,15 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 ---
 ## Antecedentes
 
-Es bastante común encontrar enlaces de páginas web a recursos que no usan protocolos \`http\`. Un ejemplo es el protocolo \`mailto:\`
+Es bastante común encontrar enlaces de páginas web a recursos que no usan protocolos `http`. Un ejemplo es el protocolo `mailto:`
 
 ```html
 <a href="mailto:webmaster@example.com">Web Master</a>
 ```
 
-Los autores de la Web pueden usar un enlace \`mailto:\` cuando quieren proporcionar una forma conveniente para que los usuarios envién un correo electrónico, directamente desde la página web. Cuando el enlace está activo, el navegador debería lanzar la aplicación de escritorio predeterminada para gestionar correos electrónicos. Se puede pensar en esto como un controlador de protocolos _basados en escritorio_.
+Los autores de la Web pueden usar un enlace `mailto:` cuando quieren proporcionar una forma conveniente para que los usuarios envién un correo electrónico, directamente desde la página web. Cuando el enlace está activo, el navegador debería lanzar la aplicación de escritorio predeterminada para gestionar correos electrónicos. Se puede pensar en esto como un controlador de protocolos _basados en escritorio_.
 
-Los controladores de protocolos basados en web permiten a las aplicaciones basadas en web participar en el proceso también. Esto es cada vez más importante a medida que más tipos de aplicaciones migren a la web. De hecho, hay muchas aplicaciones basadas en web que gestionan correo electrónicos podrían procesar un enlace \`mailto\`.
+Los controladores de protocolos basados en web permiten a las aplicaciones basadas en web participar en el proceso también. Esto es cada vez más importante a medida que más tipos de aplicaciones migren a la web. De hecho, hay muchas aplicaciones basadas en web que gestionan correo electrónicos podrían procesar un enlace `mailto`.
 
 ## Registro
 
@@ -32,7 +32,7 @@ navigator.registerProtocolHandler("burger",
 En donde los parámetros son:
 
 - El protocolo.
-- La plantilla de la URL, usada como el controlador. El "%s" es reemplazado con el \`href\` del enlace y una petición GET es ejecutada en la URL resultante.
+- La plantilla de la URL, usada como el controlador. El "%s" es reemplazado con el `href` del enlace y una petición GET es ejecutada en la URL resultante.
 - El nombre fácil de usar para el controlador del protocolo.
 
 Cuando un navegador ejecuta este código, se le mostrará un mensaje al usuario, pidiendo permiso para permitir a la aplicación web registrase como controlador para el protocolo. Firefox muestra un mensaje en el área de la barra de notificaciones:
@@ -83,7 +83,7 @@ Ahora, cada vez que el usuario active un enlace que usa el protocolo registrado,
 
 ## Controlando
 
-La siguiente fase es controlar la acción. El navgador extrae el \`href\` desde el enlace activado, lo combina con la plantilla de la URL suministrada durante el registro del controlador y realzia una petición HTTP GET sobre la URL. Luego, usando los ejemplos anteriores, el navegador realizará una petición GET sobre esta URL:
+La siguiente fase es controlar la acción. El navgador extrae el `href` desde el enlace activado, lo combina con la plantilla de la URL suministrada durante el registro del controlador y realzia una petición HTTP GET sobre la URL. Luego, usando los ejemplos anteriores, el navegador realizará una petición GET sobre esta URL:
 
 ```
 http://www.google.co.uk/?uri=burger:cheeseburger
@@ -91,7 +91,7 @@ http://www.google.co.uk/?uri=burger:cheeseburger
 
 El código del lado del servidor puede extraer los parámetros de la cadena de petición y realizar la acción deseada.
 
-> **Nota:** Al código del lado del servidor se le pasa todo el contenido del \`href\`. Esto significa que el código del lado del servidor tendrá que analizar el protocolo desde los datos.
+> **Nota:** Al código del lado del servidor se le pasa todo el contenido del `href`. Esto significa que el código del lado del servidor tendrá que analizar el protocolo desde los datos.
 
 ### Example
 

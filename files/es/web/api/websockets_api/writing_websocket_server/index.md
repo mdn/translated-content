@@ -35,7 +35,7 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 Métodos:
 
 - `Start()`
-- S`ystem.Net.Sockets.TcpClient AcceptTcpClient()`
+- `System.Net.Sockets.TcpClient AcceptTcpClient()`
   Espera por una conexión TCP, la acepta y la devuelve como un objeto TcpClient.
 
 Aquí está como utilizar lo que hemos aprendido:

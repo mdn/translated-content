@@ -69,4 +69,4 @@ Link: <https://fonts.gstatic.com/>; rel=dns-prefetch
 - [crossorigin](/ru/docs/Web/HTML/CORS_settings_attributes)
 - [Cross-Origin Resource Sharing (CORS)](/ru/docs/Web/HTTP/CORS)
 - [HTTP заголовки](/ru/docs/Web/HTTP/Headers)
-- [HTTP заголовок ](/ru/docs/Web/HTTP/Headers/Link)[Link](/ru/docs/Web/HTTP/Headers/Link "The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML <link> element.")
+- [HTTP заголовок Link](/ru/docs/Web/HTTP/Headers/Link)

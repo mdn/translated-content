@@ -54,7 +54,7 @@ svgns|a:hover, svgns|a:active {
 
 {{EmbedLiveSample('Exemple', 100, 100)}}
 
-> **Advertencia:** Puesto que este elemento comparte su nombre de etiqueta con el [elemento `<a>`de HTML](/es/docs/Web/HTML/Element/a), la selección de "`a`" con CSS o [`querySelector`](/es/docs/Web/API/Document/querySelector) puede aplicarse al tipo incorrecto de elemento. Pruebe [la regla `@namespace`](/es/docs/Web/CSS/@namespace) para distinguir entre los dos.
+> **Advertencia:** Puesto que este elemento comparte su nombre de etiqueta con el [elemento `<a>` de HTML](/es/docs/Web/HTML/Element/a), la selección de "`a`" con CSS o [`querySelector`](/es/docs/Web/API/Document/querySelector) puede aplicarse al tipo incorrecto de elemento. Pruebe [la regla `@namespace`](/es/docs/Web/CSS/@namespace) para distinguir entre los dos.
 
 ## Atributos
 

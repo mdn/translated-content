@@ -49,7 +49,7 @@ article::before {
 }
 ```
 
-Также можно использовать [селекторы атрибутов ](/ru/docs/Web/CSS/Attribute_selectors)в CSS для изменения стилей в соответствии с данным:
+Также можно использовать [селекторы атрибутов](/ru/docs/Web/CSS/Attribute_selectors) в CSS для изменения стилей в соответствии с данным:
 
 ```css
 article[data-columns='3']{

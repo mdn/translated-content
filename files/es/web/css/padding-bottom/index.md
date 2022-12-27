@@ -7,7 +7,7 @@ translation_of: Web/CSS/padding-bottom
 
 ## Sumario
 
-La propiedad **`padding-bottom`** [CSS](https://developer.mozilla.org/en/CSS) establece el espacio de relleno requerido en la parte inferior del elemento. El [área de padding](https://developer.mozilla.org/en/CSS/box_model#padding) es el espacio entre el contenido del elemento y su borde. Contrariamente de la propiedad **`margin-bottom`**, valores negativos no son válidos.
+La propiedad **`padding-bottom`** [CSS](/en/CSS) establece el espacio de relleno requerido en la parte inferior del elemento. El [área de padding](/en/CSS/box_model#padding) es el espacio entre el contenido del elemento y su borde. Contrariamente de la propiedad **`margin-bottom`**, valores negativos no son válidos.
 
 {{cssinfo}}
 

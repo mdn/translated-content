@@ -114,7 +114,7 @@ Nota: Dado que el parámetro `thisArg` (this) se referencia en el `forEach()`, s
 
 ### Ejemplo: Función que copia objetos
 
-El siguiente código crea una copia de un objeto dado. Hay diferentes formas de crear una copia de un objeto, ésta es sólo una de ellas y sirve para explicar cómo funciona `Array.prototype.forEach`utilizando funciones `Object.*` de ECMAScript 5.
+El siguiente código crea una copia de un objeto dado. Hay diferentes formas de crear una copia de un objeto, ésta es sólo una de ellas y sirve para explicar cómo funciona `Array.prototype.forEach` utilizando funciones `Object.*` de ECMAScript 5.
 
 ```js
 function copy(o){

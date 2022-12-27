@@ -121,7 +121,7 @@ En esta sección, veremos los usos más básicos y más complejos de `<input typ
 
 ### Usos básicos del tipo fecha
 
-El uso más simple de `<input type="date">` consta de una etiqueta `<input>`combinada con su {{htmlelement("label")}}, como se puede ver a continuación:
+El uso más simple de `<input type="date">` consta de una etiqueta `<input>` combinada con su {{htmlelement("label")}}, como se puede ver a continuación:
 
 ```html
 <form action="https://example.com">
@@ -159,7 +159,7 @@ Como resultado, obtenemos que solo los días del mes de abril de 2017 pueden ser
 
 ### Controlando el tamaño del input
 
-`<input type="date">`no soporta los atributos de tamaño como lo es {{htmlattrxref("size", "input")}}. Mejor usa [CSS](/es/docs/Web/CSS) para adaptar su tamaño.
+`<input type="date">` no soporta los atributos de tamaño como lo es {{htmlattrxref("size", "input")}}. Mejor usa [CSS](/es/docs/Web/CSS) para adaptar su tamaño.
 
 ## Validación
 

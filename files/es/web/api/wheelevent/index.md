@@ -27,7 +27,7 @@ El interface **`WheelEvent`** retrata los eventos que ocurren cuando el usuario 
 
 ## Propiedades
 
-_Este interfaz hereda propiedades de estos padres_, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} y {{domxref("Event")}}.\_\_
+_Este interfaz hereda propiedades de estos padres, {{domxref("MouseEvent")}}, {{domxref("UIEvent")}} y {{domxref("Event")}}._
 
 - {{domxref("WheelEvent.deltaX")}} {{readonlyinline}}
   - : Devuelve un doble (número de doble precisión) que representa la cantidad de desplazamiento horizontal.

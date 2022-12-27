@@ -49,5 +49,3 @@ Actualmente, XSLT es muy usado en la edición web, generando páginas HTML o XHT
 Categorías
 
 Interwiki Language Links
-
-{{ languages( { "en": "en/XSLT", "fr": "fr/XSLT", "it": "it/XSLT", "ja": "ja/XSLT", "ko": "ko/XSLT", "pl": "pl/XSLT", "pt": "pt/XSLT" } ) }}

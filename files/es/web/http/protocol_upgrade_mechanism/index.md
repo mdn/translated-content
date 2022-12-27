@@ -172,7 +172,7 @@ Sec-WebSocket-Accept: hash
 
 ### Mejora a HTTP sobre TLS iniciada por el cliente
 
-You can also upgrade an HTTP/1.1 connection to TLS/1.0. The main advantages to this are that you can avoid using URL redirection from "http\://" to "https\://" on the server and you can easily use TLS on virtual hosts. This may, however, introduce problems with proxy servers.
+You can also upgrade an HTTP/1.1 connection to TLS/1.0. The main advantages to this are that you can avoid using URL redirection from `http://` to `https://` on the server and you can easily use TLS on virtual hosts. This may, however, introduce problems with proxy servers.
 
 Upgrading an HTTP connection to use {{Glossary("TLS")}} uses the {{HTTPHeader("Upgrade")}} header with the token `"TLS/1.0"`. If the switch is made successfully, the original request (which included `Upgrade`) is completed as normal, but on the TLS connection.
 

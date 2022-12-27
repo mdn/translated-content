@@ -42,7 +42,7 @@ Finalmente, puede aprovechar las nuevas posibilidades ofrecidas por los disposit
 
 ## Desarrollo para diferentes navegadores
 
-### Escribir código para diferentes navegadores (_cross-browser_)
+### Escribir código para diferentes navegadores (cross-browser)
 
 Para crear sitios web que funcionen aceptablemente en diferentes navegadores móviles:
 
@@ -56,7 +56,7 @@ Vea esta [lista de propiedades específicas para Gecko](/es/docs/Web/CSS/Referen
 
 Usar herramientas como [CSS Lint](http://csslint.net/) puede ayudar a encontrar problemas como este en el código y preprocesadores como [SASS](http://sass-lang.com/) y [LESS](http://lesscss.org/) pueden ser de ayuda para crear código compatible con diferentes navegadores.
 
-### Precaución al husmear el agente de usuario (_user agent_)
+### Precaución al husmear el agente de usuario (user agent)
 
 Es preferible para los sitios web usar las técnicas enumeradas anteriormente con el objetivo de detectar características específicas del dispositivo, como el tamaño de pantalla y las pantallas táctiles, y adaptarse a ellas adecuadamente. Pero a veces esto no es práctico y los sitios web recurren a analizar la cadena de agente de usuario del navegador (_user agent_) para intentar distinguir entre ordenadores de escritorio, tabletas y teléfonos, y servir diferente contenido a cada tipo de dispositivo.
 

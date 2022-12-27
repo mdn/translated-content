@@ -238,7 +238,7 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 
 - Use a [`while`](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop to empty the previous contents of the preview `<div>`.
 - Grab the {{domxref("FileList")}} object that contains the information on all the selected files, and store it in a variable called `curFiles`.
-- Check to see if no files were selected, by checking if`curFiles.length` is equal to 0. If so, print a message into the preview `<div>` stating that no files have been selected.
+- Check to see if no files were selected, by checking if `curFiles.length` is equal to 0. If so, print a message into the preview `<div>` stating that no files have been selected.
 - If files _have_ been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:
 - We use the custom `validFileType()` function to check whether the file is of the correct type (e.g. the image types specified in the `accept` attribute).
 - If it is, we:

@@ -66,9 +66,9 @@ The following properties are listed in the most up-to-date spec, but are not sup
 #### 事件處理器
 
 - {{domxref("Notification.onclick")}}
-  - : 一個 {{event("click")}} 事件的 handler。每次使用者點擊 Notification 都會被觸發。
+  - : 一個 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件的 handler。每次使用者點擊 Notification 都會被觸發。
 - {{domxref("Notification.onerror")}}
-  - : 一個 {{event("error")}} 事件的 handler. 每次 Notification 發生 Error 都會被觸發。
+  - : 一個 [`error`](/zh-TW/docs/Web/API/Element/error_event) 事件的 handler. 每次 Notification 發生 Error 都會被觸發。
 
 #### 停止支援的事件處理器
 
@@ -77,7 +77,7 @@ The following properties are listed in the most up-to-date spec, but are not sup
 - {{domxref("Notification.onclose")}}
   - : A handler for the {{event("close")}} event. It is triggered when the user closes the notification.
 - {{domxref("Notification.onshow")}}
-  - : A handler for the {{event("show")}} event. It is triggered when the notification is displayed.
+  - : A handler for the [`show`](/zh-TW/docs/Web/API/Element/show_event) event. It is triggered when the notification is displayed.
 
 ## 方法
 

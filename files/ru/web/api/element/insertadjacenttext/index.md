@@ -67,9 +67,9 @@ afterBtn.addEventListener('click', function() {
 
 ## Полифил
 
-Можно создать polyfill для insertAdjacentText`() method` который будет работать в Internet Explorer 5.5 (возможно и в более ранних версиях) и последующих версиях, с помощью данного кода:
+Можно создать polyfill для `insertAdjacentText()` method который будет работать в Internet Explorer 5.5 (возможно и в более ранних версиях) и последующих версиях, с помощью данного кода:
 
-```
+```js
 if (!Element.prototype.insertAdjacentText)
   Element.prototype.insertAdjacentText = function(type, txt){
     this.insertAdjacentHTML(

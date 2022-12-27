@@ -1467,7 +1467,6 @@
 /ja/docs/DOM/window.frameElement	/ja/docs/Web/API/Window/frameElement
 /ja/docs/DOM/window.frames	/ja/docs/Web/API/Window/frames
 /ja/docs/DOM/window.fullScreen	/ja/docs/Web/API/Window/fullScreen
-/ja/docs/DOM/window.getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
 /ja/docs/DOM/window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/DOM/window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/DOM/window.history	/ja/docs/Web/API/Window/history
@@ -1519,7 +1518,6 @@
 /ja/docs/DOM/window.pageYOffset	/ja/docs/Web/API/Window/scrollY
 /ja/docs/DOM/window.parent	/ja/docs/Web/API/Window/parent
 /ja/docs/DOM/window.personalbar	/ja/docs/Web/API/Window/personalbar
-/ja/docs/DOM/window.pkcs11	/ja/docs/orphaned/Web/API/Window/pkcs11
 /ja/docs/DOM/window.postMessage	/ja/docs/Web/API/Window/postMessage
 /ja/docs/DOM/window.print	/ja/docs/Web/API/Window/print
 /ja/docs/DOM/window.print-redirect-1	/ja/docs/Web/API/Window/print
@@ -1690,7 +1688,6 @@
 /ja/docs/DOM:window.frameElement	/ja/docs/Web/API/Window/frameElement
 /ja/docs/DOM:window.frames	/ja/docs/Web/API/Window/frames
 /ja/docs/DOM:window.fullScreen	/ja/docs/Web/API/Window/fullScreen
-/ja/docs/DOM:window.getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
 /ja/docs/DOM:window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/DOM:window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/DOM:window.history	/ja/docs/Web/API/Window/history
@@ -1733,7 +1730,6 @@
 /ja/docs/DOM:window.pageYOffset	/ja/docs/Web/API/Window/scrollY
 /ja/docs/DOM:window.parent	/ja/docs/Web/API/Window/parent
 /ja/docs/DOM:window.personalbar	/ja/docs/Web/API/Window/personalbar
-/ja/docs/DOM:window.pkcs11	/ja/docs/orphaned/Web/API/Window/pkcs11
 /ja/docs/DOM:window.postMessage	/ja/docs/Web/API/Window/postMessage
 /ja/docs/DOM:window.print	/ja/docs/Web/API/Window/print
 /ja/docs/DOM:window.prompt	/ja/docs/Web/API/Window/prompt
@@ -3632,11 +3628,8 @@
 /ja/docs/Web/API/Window/animationstart_event	/ja/docs/Web/API/Element/animationstart_event
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/Window/crypto	/ja/docs/Web/API/crypto_property
-/ja/docs/Web/API/Window/dialogArguments	/ja/docs/orphaned/Web/API/Window/dialogArguments
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
-/ja/docs/Web/API/Window/getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
-/ja/docs/Web/API/Window/isSecureContext	/ja/docs/orphaned/Web/API/Window/isSecureContext
 /ja/docs/Web/API/Window/mozPaintCount	/ja/docs/Web/API/Window
 /ja/docs/Web/API/Window/onafterprint	/ja/docs/Web/API/Window/afterprint_event
 /ja/docs/Web/API/Window/onappinstalled	/ja/docs/Web/API/Window/appinstalled_event
@@ -3644,7 +3637,6 @@
 /ja/docs/Web/API/Window/onchange	/ja/docs/Web/API/HTMLElement/change_event
 /ja/docs/Web/API/Window/onclick	/ja/docs/Web/API/Element/click_event
 /ja/docs/Web/API/Window/ondevicemotion	/ja/docs/Web/API/Window/devicemotion_event
-/ja/docs/Web/API/Window/ondeviceproximity	/ja/docs/orphaned/Web/API/Window/ondeviceproximity
 /ja/docs/Web/API/Window/onfocus	/ja/docs/Web/API/Window/focus_event
 /ja/docs/Web/API/Window/ongamepadconnected	/ja/docs/Web/API/Window/gamepadconnected_event
 /ja/docs/Web/API/Window/ongamepaddisconnected	/ja/docs/Web/API/Window/gamepaddisconnected_event
@@ -3656,7 +3648,6 @@
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/HTMLFormElement/reset_event
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/Window/resize_event
 /ja/docs/Web/API/Window/performance	/ja/docs/Web/API/performance_property
-/ja/docs/Web/API/Window/pkcs11	/ja/docs/orphaned/Web/API/Window/pkcs11
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/setTimeout
@@ -3836,7 +3827,6 @@
 /ja/docs/Web/API/window.content	/ja/docs/Web/API/Window/content
 /ja/docs/Web/API/window.crypto	/ja/docs/Web/API/crypto_property
 /ja/docs/Web/API/window.defaultStatus	/ja/docs/Web/API/Window/defaultStatus
-/ja/docs/Web/API/window.dialogArguments	/ja/docs/orphaned/Web/API/Window/dialogArguments
 /ja/docs/Web/API/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/Web/API/window.dump	/ja/docs/Web/API/Window/dump
 /ja/docs/Web/API/window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -3846,7 +3836,6 @@
 /ja/docs/Web/API/window.frameElement	/ja/docs/Web/API/Window/frameElement
 /ja/docs/Web/API/window.frames	/ja/docs/Web/API/Window/frames
 /ja/docs/Web/API/window.fullScreen	/ja/docs/Web/API/Window/fullScreen
-/ja/docs/Web/API/window.getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
 /ja/docs/Web/API/window.getComputedStyle	/ja/docs/Web/API/Window/getComputedStyle
 /ja/docs/Web/API/window.getSelection	/ja/docs/Web/API/Window/getSelection
 /ja/docs/Web/API/window.history	/ja/docs/Web/API/Window/history
@@ -3898,7 +3887,6 @@
 /ja/docs/Web/API/window.outerWidth	/ja/docs/Web/API/Window/outerWidth
 /ja/docs/Web/API/window.parent	/ja/docs/Web/API/Window/parent
 /ja/docs/Web/API/window.personalbar	/ja/docs/Web/API/Window/personalbar
-/ja/docs/Web/API/window.pkcs11	/ja/docs/orphaned/Web/API/Window/pkcs11
 /ja/docs/Web/API/window.prompt	/ja/docs/Web/API/Window/prompt
 /ja/docs/Web/API/window.releaseEvents	/ja/docs/Web/API/Window/releaseEvents
 /ja/docs/Web/API/window.requestAnimationFrame	/ja/docs/Web/API/Window/requestAnimationFrame

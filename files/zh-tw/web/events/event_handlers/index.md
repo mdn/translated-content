@@ -10,7 +10,7 @@ Web 平台提供了多種獲得 [DOM 事件](/zh-TW/docs/Web/Events)通知的方
 
 _**on-event**_ 處理器為一群由 DOM 元素提供的屬性（{{Glossary("property")}}），用來協助管理元素要如何應對事件。元素可以是具互動性的（如：links、buttons、images、forms）或非互動性的（如頁面基礎 document）。事件為一個操作，像是點擊（clicked）、偵測按下按鍵（pressed keys）、取得焦點（focus）等。on-event 處理器通常是根據它被設計來應對的事件，例如 `onclick`、`onkeypress`、`onfocus` 等等。
 
-你可以使用兩種不同的方式來為一個物件的特定事件（例如：{{event("click")}}）指定一個 `on<...>` 事件處理器：
+你可以使用兩種不同的方式來為一個物件的特定事件（例如：[`click`](/zh-TW/docs/Web/API/Element/click_event)）指定一個 `on<...>` 事件處理器：
 
 - 在元素上使用一個名稱為 `on{eventtype}` 的 HTML 標籤屬性（{{Glossary("attribute")}}），例如：
 `<button onclick="return handleClick(event);">`,

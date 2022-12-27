@@ -15,7 +15,7 @@ original_slug: Web/JavaScript/Referencia/Operadores/await
 - `expression`
   - : Una {{jsxref("Promise")}} o cualquier otro valor por el cual haya que esperar.
 - `rv`
-  - : Regresa el valor terminado de la promesa o solamente un valor si no es una`Promise`.
+  - : Regresa el valor terminado de la promesa o solamente un valor si no es una `Promise`.
 
 ## Descripción
 

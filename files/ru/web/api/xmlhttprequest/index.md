@@ -38,7 +38,7 @@ var myRequest = new XMLHttpRequest();
 | `DOMString? getResponseHeader(DOMString header);`                                                                                                                                                  |
 | `void open(DOMString method, DOMString url, optional boolean async, optional DOMString? user, optional DOMString? password);`                                                                      |
 | `void overrideMimeType(DOMString mime);`                                                                                                                                                           |
-| `void send();` ~~`void send(ArrayBuffer data);`~~ `void send(ArrayBufferView data);` `void send(Blob data);` `void send(Document data);` `void send(DOMString? data);` `void send(FormData data);` |
+| `void send();` `void send(ArrayBufferView data);` `void send(Blob data);` `void send(Document data);` `void send(DOMString? data);` `void send(FormData data);` |
 | `void setRequestHeader(DOMString header, DOMString value);`                                                                                                                                        |
 | Нестандартные методы                                                                                                                                                                               |
 | `[noscript] void init(in nsIPrincipal principal, in nsIScriptContext scriptContext, in nsPIDOMWindow ownerWindow);`                                                                                |
@@ -600,7 +600,7 @@ void send(FormData data);
 
 Если тип _data_ - `Document`, то он будет сериализован перед отправкой. Firefox до версии 3 всегда отправляет такой запрос в кодировке UTF-8; [Firefox 3](/en/Firefox_3) отправляет данные в той кодировке, которая указаны в `body.xmlEncoding`, или UTF-8 если такой информации нет.
 
-If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()`method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()` method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](<#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") method prior to calling `send()`.
+If it's an `nsIInputStream`, it must be compatible with `nsIUploadChannel`'s `setUploadStream()` method. In that case, a Content-Length header is added to the request, with its value obtained using `nsIInputStream`'s `available()` method. Any headers included at the top of the stream are treated as part of the message body. The stream's MIMEtype should be specified by setting the Content-Type header using the [`setRequestHeader()`](<#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") method prior to calling `send()`.
 
 The best way to send binary content (like in files upload) is using an [ArrayBufferView](/ru/docs/JavaScript/Typed_arrays/ArrayBufferView) or [Blobs](/ru/docs/DOM/Blob) in conjuncton with the `send()` method. However, if you want to send a [stringifiable](/ru/docs/JavaScript/Reference/Global_Objects/JSON/stringify) raw data, use the [`sendAsBinary()`](</ru/docs/DOM/XMLHttpRequest#sendAsBinary()>) method instead, or the [`StringView`](/ru/docs/Web/JavaScript/Typed_arrays/StringView) Non native typed arrays superclass.
 

@@ -5,7 +5,8 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/font-weight
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
+
+« [SVG Attribute reference home](/en/SVG/Attribute)
 
 `Атрибут font-weight` позволяет выбрать из шрифтового семейства начертание шрифта с указанной насыщенностью (иначе говоря, толщиной линий знаков, "жирностью") .
 
@@ -53,7 +54,7 @@ p.thicker {font-weight:900;}
 
 Следующие элементы могут использовать атрибут `font-weight`.
 
-- [Text content elements](/en/SVG/Element#Text_content_elements "en/SVG/Element#Text_content_elements") »
+- [Text content elements](/en/SVG/Element#Text_content_elements)
 
 ## Поддержка браузерами
 

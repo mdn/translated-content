@@ -6,13 +6,13 @@ original_slug: Server-sent_events/utilizando_server_sent_events_sse
 ---
 Desarrollar una aplicación web que utilice server-sent events es muy fácil. Solo necesitas un pequeño código del lado del servidor para transmitir los eventos a la aplicación web, pero del lado de la aplicacion web se trabaja prácticamente igual que con cualquier otro tipo de eventos.
 
-Puedes ver un ejemplo [aqui](https://developer.mozilla.org/samples/sse/) (actualmente no funciona).
+Puedes ver un ejemplo [aqui](/samples/sse/) (actualmente no funciona).
 
 [ejemplo2](http://www.w3schools.com/html/tryit.asp?filename=tryhtml5_sse)
 
 ## Recibiendo eventos desde el servidor
 
-El server-sent event API está contenido en la interfaz [`EventSource`](https://developer.mozilla.org/en/Server-sent_events/EventSource); para abrir una conexión al servidor para recibir eventos de él. Se crea un nuevo objeto new [EventSource](https://developer.mozilla.org/en/Server-sent_events/EventSource), especificando el URI de un script que genera los eventos, Por ejemplo:
+El server-sent event API está contenido en la interfaz [`EventSource`](/en/Server-sent_events/EventSource); para abrir una conexión al servidor para recibir eventos de él. Se crea un nuevo objeto new [EventSource](/en/Server-sent_events/EventSource), especificando el URI de un script que genera los eventos, Por ejemplo:
 
 ```js
 var evtSource = new EventSource("ssedemo.php");

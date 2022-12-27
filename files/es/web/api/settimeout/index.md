@@ -186,7 +186,7 @@ Como puedes ver no hay forma de pasar el objeto `this` a la función callback.
 
 ### Una posible solución
 
-Una posible forma de resolver el problema del "`this`" es reemplazar las dos funciones globales nativas `setTimeout()` or `setInterval()por dos no-nativas`que permitan su invocación a través del método [`Function.prototype.call`](en-US/docs/JavaScript/Reference/Global_Objects/Function/call). El siguiente ejemplo muestra un posible reemplazo:
+Una posible forma de resolver el problema del "`this`" es reemplazar las dos funciones globales nativas `setTimeout()` or `setInterval()por dos no-nativas` que permitan su invocación a través del método [`Function.prototype.call`](en-US/docs/JavaScript/Reference/Global_Objects/Function/call). El siguiente ejemplo muestra un posible reemplazo:
 
 ```js
 // Enable the passage of the 'this' object through the JavaScript timers
@@ -231,11 +231,11 @@ No hay soluciones nativas _ad hoc_ a este problema.
 
 Puede cancelar el temporizador usando [`window.clearTimeout()`](/en-US/docs/DOM/window.clearTimeout). Si desea tener una función llamada repetidamente (p.e., cada N milisegundos), considere usar [`window.setInterval()`](/en-US/docs/DOM/window.setInterval).
 
-Es importante notar que la función o fragmento de código no puede ser ejecutado hasta que el hilo que llamó `setTimeout()`haya terminado.
+Es importante notar que la función o fragmento de código no puede ser ejecutado hasta que el hilo que llamó `setTimeout()` haya terminado.
 
 ### Pasando cadenas literales
 
-Pasando una cadena en vez de una función a `setTimeout()`pasa lo mismo que al usar `eval.`
+Pasando una cadena en vez de una función a `setTimeout()` pasa lo mismo que al usar `eval.`
 
 ```js
 // Correcto

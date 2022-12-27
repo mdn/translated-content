@@ -6,15 +6,15 @@ original_slug: Web/API/Media_Streams_API
 ---
 {{SeeCompatTable}}
 
-La **API de proceso [**\[i\]**](#_edn1)\_MediaStream_**, a veces llamada*Media Stream API* o _Stream API_, es parte de la norma [WebRTC \[en\]](/es/docs/WebRTC) y describe un flujo de datos de audio o video, los métodos para trabajar con ellos, las limitaciones asociadas con este tipo de datos, las respuestas de error y éxito al usar los datos asincrónicamente y los eventos que se disparan durante el proceso.
+La **API de proceso **_MediaStream_**, a veces llamada *Media Stream API* o _Stream API_, es parte de la norma [WebRTC](/es/docs/WebRTC) y describe un flujo de datos de audio o video, los métodos para trabajar con ellos, las limitaciones asociadas con este tipo de datos, las respuestas de error y éxito al usar los datos asincrónicamente y los eventos que se disparan durante el proceso.
 
 ## Conceptos Básicos
 
 La API está basada sobre la manipulación de un objeto {{domxref("MediaStream")}} que representa un flujo de datos de audio o video. Generalmente, un objeto `MediaStream` es una simple cadena URL que puede ser usada para referirse a datos almacenados en un {{domxref("Archivo")}} DOM o un objeto {{domxref("Blob")}} creado con {{domxref("window.URL.createObjectURL()")}}, como se lo describe en[**Obtener el video**](/es/docs/WebRTC/taking_webcam_photos#Get_the_video).
 
-Un `MediaStream` está compuesto por más objetos [\[i\]](#_edn1){{domxref("MediaStreamTrack")}} que representan varias **pistas** de audio o video. Cada `MediaStreamTrack`puede tener uno o más **canales**. El canal representa la unidad menor de un flujo de medio, como una señal de audio asociada a un parlante específico, como el _izquierdo_ o el _derecho_ en una pista de audio estéreo.
+Un `MediaStream` está compuesto por más objetos [\[i\]](#_edn1){{domxref("MediaStreamTrack")}} que representan varias **pistas** de audio o video. Cada `MediaStreamTrack` puede tener uno o más **canales**. El canal representa la unidad menor de un flujo de medio, como una señal de audio asociada a un parlante específico, como el _izquierdo_ o el _derecho_ en una pista de audio estéreo.
 
-Los objetos `MediaStream` poseen una sola **entrada** y **salida[**\[ii\]**](#\_edn2).** Un objeto `MediaStream` creado con [**getUserMedia()**](/es/docs/Web/API/Navigator.getUserMedia?redirectlocale=en-US&redirectslug=WebRTC%2Fnavigator.getUserMedia) se denomina _local_ y tiene como origen de entrada una de las cámaras o micrófonos del usuario. Un MediaStream no local puede estar representando un elemento de medio como {{HTMLElement("video")}} o {{HTMLElement("audio")}}, un flujo originado en la red y obtenido a través de la [\[iii\]](#_edn3)[_**PeerConnection API**_](/es/docs/WebRTC/PeerConnection_API) o un flujo creado con la [**API de Audio Web**](/es/docs/Web_Audio_API) [\[iv\]](#_edn4){{domxref("MediaStreamAudioSourceNode")}}. La salida de un objeto `MediaStream` está enlazada a un **consumidor.** El mismo puede ser un elemento de medio como `<audio> o <video>`, la [**PeerConnection API**](/es/docs/WebRTC/PeerConnection_API) de WebRTC o una [**API de Audio Web**](/es/docs/Web_Audio_API) [\[v\]](#_edn5){{domxref("MediaStreamAudioDestinationNode")}}.
+Los objetos `MediaStream` poseen una sola **entrada** y **salida[**\[ii\]**](#edn2).** Un objeto `MediaStream` creado con [**getUserMedia()**](/es/docs/Web/API/Navigator.getUserMedia?redirectlocale=en-US&redirectslug=WebRTC%2Fnavigator.getUserMedia) se denomina _local_ y tiene como origen de entrada una de las cámaras o micrófonos del usuario. Un MediaStream no local puede estar representando un elemento de medio como {{HTMLElement("video")}} o {{HTMLElement("audio")}}, un flujo originado en la red y obtenido a través de la [\[iii\]](#_edn3)[_**PeerConnection API**_](/es/docs/WebRTC/PeerConnection_API) o un flujo creado con la [**API de Audio Web**](/es/docs/Web_Audio_API) [\[iv\]](#edn4){{domxref("MediaStreamAudioSourceNode")}}. La salida de un objeto `MediaStream` está enlazada a un **consumidor.** El mismo puede ser un elemento de medio como `<audio> o <video>`, la [**PeerConnection API**](/es/docs/WebRTC/PeerConnection_API) de WebRTC o una [**API de Audio Web**](/es/docs/Web_Audio_API) [\[v\]](#_edn5){{domxref("MediaStreamAudioDestinationNode")}}.
 
 ## Referencia
 
@@ -123,7 +123,7 @@ Aplica una lista de opciones optativas a la pista. Sobrescribe cualquier otra re
 
 ### constraints()
 
-Devuelte todas las [\[i\]](#_edn1)restricciones en la pista, obligatorias y optativas. Si tanto\_ `mandatory`\_u `optional` no tienen restricciones, ese campo será `undefined`. Si ninguno tiene restricciones, entonces`constraints()` devolverá `null.`
+Devuelte todas las [\[i\]](#_edn1)restricciones en la pista, obligatorias y optativas. Si tanto `mandatory` u `optional` no tienen restricciones, ese campo será `undefined`. Si ninguno tiene restricciones, entonces `constraints()` devolverá `null.`
 
 - Parámetros
   - : None.
@@ -137,8 +137,8 @@ Devuelte todas las [\[i\]](#_edn1)restricciones en la pista, obligatorias y opta
 Trae una restricción específica, por nombre, de la pista. Este método puede devolver una de varias posibilidades:
 
 - Si su restricción no existe, devuelve `null.`
-- Si no provee true para parámetro optativo`mandatory`y su búsqueda resulta en más de una restricción, este método devolverá una lista. Cada ítem de la lista será el nombre de la búsqueda así como su valor o un objeto `MinMaxConstraint`. La lista se agrupa con la entrada 0º como la más importante y cada entrada posterior es progresivamente menos importante.
-- Si provee`True`al parámetro `mandatory` y su búsqueda es miembro del `MediaTrackConstraintSet`de la pista, este método devuelve su valor primitivo o su `MinMaxConstraint`, cualquiera que aplique al caso.
+- Si no provee true para parámetro optativo `mandatory` y su búsqueda resulta en más de una restricción, este método devolverá una lista. Cada ítem de la lista será el nombre de la búsqueda así como su valor o un objeto `MinMaxConstraint`. La lista se agrupa con la entrada 0º como la más importante y cada entrada posterior es progresivamente menos importante.
+- Si provee `True` al parámetro `mandatory` y su búsqueda es miembro del `MediaTrackConstraintSet` de la pista, este método devuelve su valor primitivo o su `MinMaxConstraint`, cualquiera que aplique al caso.
 
 <!---->
 

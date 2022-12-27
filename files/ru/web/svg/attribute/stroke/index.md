@@ -6,7 +6,8 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/stroke
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
+
+« [SVG Attribute reference home](/en/SVG/Attribute)
 
 Атрибут обводки определяет цвет контура в данном графическом элементе. Значение по умолчанию для атрибута обводки — **None**.
 
@@ -14,7 +15,7 @@ translation_of: Web/SVG/Attribute/stroke
 
 | Категория            | Presentation attribute                                                                               |
 | -------------------- | ---------------------------------------------------------------------------------------------------- |
-| Значения             | [\<paint>](/en/SVG/Content_type#Paint "en/SVG/Content_type#Paint"), `context-fill`, `context-stroke` |
+| Значения             | [\<paint>](/en/SVG/Content_type#Paint), `context-fill`, `context-stroke` |
 | Анимируемый          | Да                                                                                                   |
 | Нормативный документ | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/painting.html#StrokeProperty)                       |
 
@@ -50,5 +51,5 @@ translation_of: Web/SVG/Attribute/stroke
 
 Следующие элементы могут использовать атрибут `stroke`.
 
-- [Shape elements](/en/SVG/Element#Shape "en/SVG/Element#Shape") »
-- [Text content elements](/en/SVG/Element#TextContent "en/SVG/Element#TextContent") »
+- [Shape elements](/en/SVG/Element#Shape)
+- [Text content elements](/en/SVG/Element#TextContent)

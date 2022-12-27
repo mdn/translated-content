@@ -6,7 +6,8 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/transform
 ---
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
+
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 В атрибуте `transform` перечисляются описания преобразований, применяемых как к самому элементу, так и к его последователям. Описания в списке разделяются пробелами или запятыми и применяются в порядке слева направо.
 
@@ -124,4 +125,4 @@ SVG:
 - {{ SVGElement("g") }}
 - {{ SVGElement("switch") }}
 - {{ SVGElement("use") }}
-- [Графические элементы](/en/SVG/Element#Graphics "en/SVG/Element#Graphics") »
+- [Графические элементы](/en/SVG/Element#Graphics) »

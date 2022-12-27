@@ -240,7 +240,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
   - : Si el elemento input es de tipo `submit` o `image`, este atributo es el nombre o palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario. Este es el nombre, o palabra clave, de un _contexto de navegación_ (por ejemplo, pestaña, ventana o frame incrustado). Si este atributo está especificado, reemplaza al atributo {{htmlattrxref("target", "form")}} del formulario al que pertenece el elemento. Las siguientes palabras clave tienen significado especial:
 
-    - \_`self`: Carga la respuesta en el mismo contexto de navegación actual. Este valor es el predeterminado cuando no se especifica el atributo.
+    - `_self`: Carga la respuesta en el mismo contexto de navegación actual. Este valor es el predeterminado cuando no se especifica el atributo.
     - `_blank`: Carga la respuesta en un contexto de navegación nuevo.
     - `_parent`: Carga la respuesta en el contexto de navegación padre del actual. Si no hay contexto padre, se comporta de la misma forma que `_self`.
     - `_top`: Carga la respuesta en el contexto de navegación principal (es decir, el contexto que es ancestro del actual y que no tenga padre). Si no hay contexto padre, se comporta de la misma forma que `_self`.

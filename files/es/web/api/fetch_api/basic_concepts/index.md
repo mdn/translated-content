@@ -67,4 +67,4 @@ Un guarda (guard) de encabezado afecta los métodos {{domxref("Headers.set","set
 
 - guard es `request` y el nombre del encabezado no es un {{Glossary("forbidden header name")}} .
 - guard es `request-no-cors` y el encabezado _nombre/valor_ es un {{Glossary("simple header")}} .
-- guard es `response` y el \_nombre \_del encabezado no es {{Glossary("forbidden response header name")}}.
+- guard es `response` y el nombre del encabezado no es {{Glossary("forbidden response header name")}}.

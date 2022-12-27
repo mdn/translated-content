@@ -229,7 +229,7 @@ original_slug: Web/API/Document/keypress_event
 
 ## Примечания
 
-Chrome не запускает событие `keypress` для известных сочетаний клавиш ([reference](https://bugs.chromium.org/p/chromium/issues/detail?id=13891#c50)). Какие сочетания клавиш известны, зависит от системы пользователя. Используйте событие`keydown` для реализации сочетаний клавиш.
+Chrome не запускает событие `keypress` для известных сочетаний клавиш ([reference](https://bugs.chromium.org/p/chromium/issues/detail?id=13891#c50)). Какие сочетания клавиш известны, зависит от системы пользователя. Используйте событие `keydown` для реализации сочетаний клавиш.
 
 ## Связанные события
 

@@ -1,23 +1,23 @@
 ---
-title: 逻辑空赋值 (??=)
+title: 逻辑空赋值（??=）
 slug: Web/JavaScript/Reference/Operators/Logical_nullish_assignment
 ---
 
 {{jsSidebar("Operators")}}
 
-逻辑空赋值运算符 (`x ??= y`) 仅在 `x` 是 {{Glossary("nullish")}} (`null` 或 `undefined`) 时对其赋值。
+逻辑空赋值运算符（`x ??= y`）仅在 `x` 是{{Glossary("nullish", "空值")}}（`null` 或 `undefined`）时对其赋值。
 
 {{EmbedInteractiveExample("pages/js/expressions-logical-nullish-assignment.html")}}
 
 ## 语法
 
-```plain
+```js-nolint
 expr1 ??= expr2
 ```
 
 ## 描述
 
-### 语法短路求值
+### 短路评估
 
 [空值合并](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)运算符从左至右求值，其使用以下规则测试是否可能进行语法短路求值：
 
@@ -37,7 +37,7 @@ x ?? (x = y);
 x = x ?? y;
 ```
 
-## 例子
+## 示例
 
 ### 使用逻辑空赋值
 
@@ -60,9 +60,9 @@ config({}); // { duration: 100, speed: 25 }
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
-- [The nullish coalescing operator (`??`)](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
-- {{Glossary("Nullish")}}
-- {{Glossary("Truthy")}}
-- {{Glossary("Falsy")}}
+- [空值合并运算符（`??`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- {{Glossary("Nullish", "空值")}}
+- {{Glossary("Truthy", "真值")}}
+- {{Glossary("Falsy", "假值")}}

@@ -74,5 +74,3 @@ Aunque un poco de SVG puede dar mucho recorrido a la hora de mejorar contenidos 
 Categorías
 
 Interwiki Language Links
-
-{{ languages( { "en": "en/SVG", "fr": "fr/SVG", "it": "it/SVG", "ja": "ja/SVG", "pl": "pl/SVG", "pt": "pt/SVG" } ) }}

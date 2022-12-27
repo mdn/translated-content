@@ -100,7 +100,7 @@ document.querySelector(".runButton").addEventListener("click", play, false);
 
 Simplemente removemos {{cssxref("animation-name")}} aplicado al elemento que hace que eso salte o corte a su siguiente estado.Si, en cambio, desea que la animación se complete y luego se detenga, debe probar un enfoque diferente. Los principales trucos son:
 
-1. Haga que su animación sea lo más autónoma posible. Esto significa que no se debe confiar en`animation-direction: alternate`. En su lugar, debe escribir explícitamente una animación de fotogramas clave que pase por la animación completa en una repetición hacia adelante.
+1. Haga que su animación sea lo más autónoma posible. Esto significa que no se debe confiar en `animation-direction: alternate`. En su lugar, debe escribir explícitamente una animación de fotogramas clave que pase por la animación completa en una repetición hacia adelante.
 2. Use JavaScript y borre la animación que se esta utilizando cuando se activa el evento `animationiteration`.
 
 El siguiente demo muestra como puedes lograr las técnicas JavaScript mencionandas anteriormente:

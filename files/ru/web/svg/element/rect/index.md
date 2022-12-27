@@ -15,7 +15,7 @@ original_slug: Web/SVG/Элемент/rect
 
 | Категория              | Простая фигура, Графический элемент                                                                                                                                                                                   |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Разрешённое содержимое | Любое количество указанных элементов в любом порядке: [Элементы анимации](/en/SVG/Element#Animation "en/SVG/Attribute#Animation") » [Элементы описания](/en/SVG/Element#Descriptive "en/SVG/Attribute#Descriptive") » |
+| Разрешённое содержимое | Любое количество указанных элементов в любом порядке: [Элементы анимации](/en/SVG/Element#Animation) » [Элементы описания](/en/SVG/Element#Descriptive) » |
 | Нормативный документ   | [SVG 1.1 (2ое издание)](http://www.w3.org/TR/SVG/shapes.html#RectElement)                                                                                                                                             |
 
 ## Пример
@@ -55,10 +55,10 @@ original_slug: Web/SVG/Элемент/rect
 
 ### Глобальные атрибуты
 
-- [Атрибуты условной обработки](/en/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Атрибуты ядра](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Атрибуты графических собы](/en/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent")тий »
-- [Атрибуты представления](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
+- [Атрибуты условной обработки](/en/SVG/Attribute#ConditionalProccessing)
+- [Атрибуты ядра](/en/SVG/Attribute#Core)
+- [Атрибуты графических собы](/en/SVG/Attribute#GraphicalEvent)тий
+- [Атрибуты представления](/en/SVG/Attribute#Presentation)
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -75,7 +75,7 @@ original_slug: Web/SVG/Элемент/rect
 
 ## DOM Интерфейс
 
-Данный элемент реализует интерфейс [`SVGRectElement`](/en/DOM/SVGRectElement "en/DOM/SVGRectElement") .
+Данный элемент реализует интерфейс [`SVGRectElement`](/en/DOM/SVGRectElement).
 
 ## Совместимость с браузерами
 

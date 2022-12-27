@@ -25,7 +25,7 @@ translation_of: Web/HTML/Element/meta
   - : Этот атрибут задаёт кодировку символов, используемую на странице. Он должен содержать [стандартное имя IANA MIME для кодировки символов](https://www.iana.org/assignments/character-sets). Хотя стандарт не требует определённой кодировки, он рекомендует:
     - Авторам рекомендуется использовать `{{glossary("UTF-8")}}`.
     - Не следует использовать ASCII-несовместимые кодировки, чтобы избежать угроз безопасности: браузеры, не поддерживающие их, могут интерпретировать вредоносный контент как HTML. Это относится к семейству кодировок `JIS_C6226-1983`, `JIS_X0212-1990`, `HZ-GB-2312`, `JOHAB` и `EBCDIC`.
-      > **Примечание:** ASCII-несовместимые кодировки - это те, которые не преобразуют 8-битные коды точек `0x20`,`0x7E`, `0x0020`, `0x007E` в коды Unicode точек.
+      > **Примечание:** ASCII-несовместимые кодировки - это те, которые не преобразуют 8-битные коды точек `0x20`, `0x7E`, `0x0020`, `0x007E` в коды Unicode точек.
 
       > **Предупреждение:**
       >
@@ -38,7 +38,7 @@ translation_of: Web/HTML/Element/meta
       > - `<meta>` элемент должен находиться внутри элемента {{HTMLElement("head")}} и задаваться в **1024 первых байтах** HTML страницы, поскольку некоторые браузеры смотрят только эти байты перед выбором кодировки.
       > - Этот `<meta>` элемент - часть алгоритма, определяющего набор символов ([algorithm to determine the character set](https://www.whatwg.org/specs/web-apps/current-work/multipage/parsing.html#encoding-sniffing-algorithm)) страницы, который браузер поддерживает. Заголовок {{HTTPHeader("Content-Type")}} и любые {{Glossary("Byte-Order Mark","Byte-Order Marks")}} элементы переопределяют данный элемент.
       > - Настоятельно рекомендуется определить кодировку символов. Если для страницы не определён набор символов, то некоторые cross-scripting технологии могут повредить страницу, например такие как [UTF-7 fallback cross-scripting technique](https://code.google.com/p/doctype-mirror/wiki/ArticleUtf7). Постоянная установка этого элемента будет защищать вас от этого риска.
-      > - Этот {{HTMLElement("meta")}} элемент это синоним для pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">`где *`IANAcharset` *соответствует значению эквивалентного {{htmlattrxref("charset", "meta")}} атрибута.
+      > - Этот {{HTMLElement("meta")}} элемент это синоним для pre-HTML5 `<meta http-equiv="Content-Type" content="text/html; charset=IANAcharset">` где *`IANAcharset` *соответствует значению эквивалентного {{htmlattrxref("charset", "meta")}} атрибута.
       >   Этот синтаксис по-прежнему разрешён, хотя и устарел и больше не рекомендуется.
 
 - {{htmlattrdef("content")}}

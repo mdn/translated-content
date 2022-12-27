@@ -215,7 +215,7 @@ var multiply = function(x, y) {
 };
 ```
 
-_Функция-выражение_ с именем `func_name`, приравненное к переменной`multiply:`
+_Функция-выражение_ с именем `func_name`, приравненное к переменной `multiply:`
 
 ```js
 var multiply = function func_name(x, y) {
@@ -408,4 +408,4 @@ result = padZeros(5,4);  // возвращает "0005"
 
 - [`Function`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - [Инструкция `function`](/ru/docs/Web/JavaScript/Reference/Statements/function)
-- [Оператор`function`](/ru/docs/Web/JavaScript/Reference/Operators/function)
+- [Оператор `function`](/ru/docs/Web/JavaScript/Reference/Operators/function)

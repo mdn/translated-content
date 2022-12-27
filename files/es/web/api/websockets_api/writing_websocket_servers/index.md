@@ -105,7 +105,7 @@ Los RSV1-3 se pueden ignorar, son para las extensiones.
 
 El bit MASK simplemente indica si el mensaje está codificado. Los mensajes del cliente deben estar enmascarados, por lo que tu servidor debe esperar que valga 1. (De hecho, la [sección 5.1 de las espeficicaciones](http://tools.ietf.org/html/rfc6455#section-5.1) dice que tu servidor debe desconectarse de un cliente si ese cliente envía un mensaje sin enmascarar). Cuando se envía una trama al cliente, no lo ocultes y no pongas el bit de la máscara. Te explicaremos el enmascaramiento más tarde. _Nota: Tienes que enmascarar los mensajes incluso cuando uses un socket seguro._
 
-El campo opcode define cómo interpretar los datos de la carga útil:`0x0` para continuar, `0x1` para texto (que siempre se codifica con UTF-8), `0x2` para datos binarios, otros llamados "códigos de control" se explican más tarde. En esta versión de WebSockets, de `0x3` a `0x7` y de `0xB` a `0xF` no tienen significado.
+El campo opcode define cómo interpretar los datos de la carga útil: `0x0` para continuar, `0x1` para texto (que siempre se codifica con UTF-8), `0x2` para datos binarios, otros llamados "códigos de control" se explican más tarde. En esta versión de WebSockets, de `0x3` a `0x7` y de `0xB` a `0xF` no tienen significado.
 
 El bit FIN indica si este es el último mensaje de una serie. Si es 0, el servidor seguirá escuchando más partes del mensaje; de lo contrario, el servidor debería considerar el mensaje entregado. Más sobre esto después.
 

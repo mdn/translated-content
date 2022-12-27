@@ -36,5 +36,3 @@ Este elemento implementa la interfaz [`HTMLElement`](/en/DOM/element).
 
 - Otros elementos relacionados con esta sección: {{ HTMLElement("body") }}, {{ HTMLElement("article") }}, {{ HTMLElement("section") }}, {{ HTMLElement("nav") }}, {{ HTMLElement("h1") }}, {{ HTMLElement("h2") }}, {{ HTMLElement("h3") }}, {{ HTMLElement("h4") }}, {{ HTMLElement("h5") }}, {{ HTMLElement("h6") }}, {{ HTMLElement("hgroup") }}, {{ HTMLElement("header") }}, {{ HTMLElement("footer") }}, {{ HTMLElement("address") }};
 - [Secciones y líneas generales de un documento HTML 5](/en/Sections_and_Outlines_of_an_HTML5_document) .
-
-{{ languages ( { "en": "en/HTML/Element/aside","es":"es/docs/HTML/Elemento/aside" } ) }}

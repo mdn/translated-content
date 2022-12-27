@@ -33,7 +33,7 @@ _Inherits properties from its parent, {{domxref("CharacterData")}}._
 
 ### Свойства (included) от Slotable
 
-_Интерфейс `Text`включает следующее свойство, определяемое при смешивании {{domxref("Slotable")}} ._
+_Интерфейс `Text` включает следующее свойство, определяемое при смешивании {{domxref("Slotable")}}._
 
 - {{domxref("Slotable.assignedSlot")}} {{readonlyInline}}
   - : Возвращает {{domxref("HTMLSlotElement")}}, представляющий {{htmlelement("slot")}}, в который вставлен данный узел.

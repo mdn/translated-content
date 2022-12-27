@@ -65,7 +65,7 @@ En los siguientes ejemplos céntrate en los siguientes aspectos:
 - El tamaño del contexto en el que se aplica no cambia. En los ejemplos el array parte con cinco elementos y siempre mantiene cinco elementos.
 - `start` y `end` trabajan juntos para decidir qué se copiará. Siempre tienen valor por defecto aunque omitas `end`, o `start` y `end`.
 - `target` trabaja solo y debe especificarse. Indica el lugar para en el que la copia comenzará a sobreescribir datos existentes. Debe estar dentro de los límites en el contexto que se aplique.
-- escribir `arr.copyWithin( n )`es lo mismo que `arr.copyWithin( n, 0, arr.length)`
+- escribir `arr.copyWithin( n )` es lo mismo que `arr.copyWithin( n, 0, arr.length)`
 
 ```js
 [1, 2, 3, 4, 5].copyWithin(-2);

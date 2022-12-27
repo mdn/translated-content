@@ -3,7 +3,8 @@ title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
 translation_of: Web/SVG/Attribute/repeatCount
 ---
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
+
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Данный атрибут задаёт, сколько раз должна выполняться анимация.
 
@@ -15,7 +16,7 @@ translation_of: Web/SVG/Attribute/repeatCount
 
 | Категория          | Атрибут времени анимации                                                                                            |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| Значение           | [\<number>](/en/SVG/Content_type#Number "https://developer.mozilla.org/en/SVG/Content_type#Number") \| "indefinite" |
+| Значение           | [\<number>](/en/SVG/Content_type#Number) \| "indefinite" |
 | Анимируемый        | Нет                                                                                                                 |
 | Ссылка на стандарт | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG/animate.html#RepeatCountAttribute)                                 |
 
@@ -27,4 +28,4 @@ translation_of: Web/SVG/Attribute/repeatCount
 
 Данные элементы могут использовать атрибут repeatCount
 
-- [Animation elements](/en/SVG/Element#Animation "en/SVG/Element#Animation") »
+- [Animation elements](/en/SVG/Element#Animation)

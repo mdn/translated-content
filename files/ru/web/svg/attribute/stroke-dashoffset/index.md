@@ -6,9 +6,10 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
-> **Примечание:** **Прежняя редакция:** « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
+
+> **Примечание:** **Прежняя редакция:** « [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 > Этот атрибут определяет смещение обводки относительно начального положения.
-> При использовании [\<percentage>](/ru/SVG/Content_type#Percentage "ru/SVG/Content_type#Percentage"), значение будет вычисляться от текущего viewport.
+> При использовании [\<percentage>](/ru/SVG/Content_type#Percentage), значение будет вычисляться от текущего viewport.
 > Значение может быть отрицательным.
 
 {{SVGRef}}
@@ -66,7 +67,7 @@ html,body,svg { height:100% }
 
 | Категория         | Атрибут оформления                                                                                                                                                    |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Значение          | [\<percentage>](/en/SVG/Content_type#Percentage "en/SVG/Content_type#Percentage") \| [\<length>](/en/SVG/Content_type#Length "en/SVG/Content_type#Length") \| inherit |
+| Значение          | [\<percentage>](/en/SVG/Content_type#Percentage) \| [\<length>](/en/SVG/Content_type#Length) \| inherit |
 | Исходное значение | 0                                                                                                                                                                     |
 | Анимируемый       | Да                                                                                                                                                                    |
 | Спецификация      | [SVG 1.1 (2nd Edition)](http://www.w3.org/TR/SVG11/painting.html#StrokeDashoffsetProperty)                                                                            |
@@ -136,5 +137,5 @@ version="1.1" xmlns="http://www.w3.org/2000/svg">
 
 Следующие элементы могут использовать атрибут `stroke-dashoffset`
 
-- [Элементы форм](/ru/SVG/Element#Shape "ru/SVG/Element#Shape") »
-- [Текстовые элементы](/ru/SVG/Element#TextContent "ru/SVG/Element#TextContent") »
+- [Элементы форм](/ru/SVG/Element#Shape)
+- [Текстовые элементы](/ru/SVG/Element#TextContent)

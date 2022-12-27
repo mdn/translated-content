@@ -3,7 +3,8 @@ title: text-rendering
 slug: Web/SVG/Attribute/text-rendering
 translation_of: Web/SVG/Attribute/text-rendering
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
+
+« [SVG Attribute reference home](/en/SVG/Attribute)
 
 При создание SVG есть возможность указать браузеру о том, как рекомендуется рендерить (отрисовывать) текст. `text-rendering` предоставляет возможность указывать данные рекомендации.
 

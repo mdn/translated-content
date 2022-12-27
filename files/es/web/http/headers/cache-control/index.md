@@ -95,7 +95,7 @@ Esta sección lista directivas que afectan al almacenamiento caché — directiv
 
 ### `max-age`
 
-La directiva de respuesta `max-age=N`indica que la respuesta es reciente hasta los _N_ segundos posteriores a su generación.
+La directiva de respuesta `max-age=N` indica que la respuesta es reciente hasta los _N_ segundos posteriores a su generación.
 
 ```
 Cache-Control: max-age=604800
@@ -188,7 +188,7 @@ La directiva de respuesta `must-understand` indica que una caché debería de al
 Cache-Control: must-understand, no-store
 ```
 
-Si una caché no soporta `must-understand`, será ignorada. Si `no-store`está tambíen presente, la respuesta no es almacenada.
+Si una caché no soporta `must-understand`, será ignorada. Si `no-store` está tambíen presente, la respuesta no es almacenada.
 
 Si una caché soporta `must-understand`, almacena la respuesta de acuerdo con los requisitos de cache basados en su código de estado.
 

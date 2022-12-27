@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Operators/instanceof
 ---
 {{jsSidebar("Operators")}}
 
-Оператор **`instanceof` **проверяет, принадлежит ли объект к определённому классу. Другими словами, `object instanceof constructor` проверяет, присутствует ли объект `constructor.prototype` в цепочке прототипов `object`.
+Оператор **`instanceof`** проверяет, принадлежит ли объект к определённому классу. Другими словами, `object instanceof constructor` проверяет, присутствует ли объект `constructor.prototype` в цепочке прототипов `object`.
 
 {{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
 

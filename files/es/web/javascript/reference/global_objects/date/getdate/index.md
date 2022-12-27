@@ -20,7 +20,7 @@ Ninguno.
 
 ### Valor de retorno
 
-El valor devuelto por `getDate() es u`n número entero, entre 1 y 31, que representa el día del mes para la fecha dada según la hora local.
+El valor devuelto por `getDate()` es un número entero, entre 1 y 31, que representa el día del mes para la fecha dada según la hora local.
 
 ## Ejemplos
 

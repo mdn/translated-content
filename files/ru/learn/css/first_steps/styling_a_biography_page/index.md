@@ -40,11 +40,11 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 Измените значения свойств CSS, чтобы поменять внешний вид биографии.
 
-1.  Сделайте заголовок розовым, используя CSS-цвет `hotpink`.
-2.  Значение свойства заголовка {{cssxref("border-bottom")}} сделайте пунктирным (10px dotted) и добавьте цвет `purple`.
-3.  Примените к подзаголовку `<h2>` курсив.
-4.  Установите цвет `#eeeeee` для фона {{cssxref("background-color")}} маркированного списка с контактными данными и значение 5px solid purple для {{cssxref("border")}}. Используйте {{cssxref("padding")}}, чтобы отделить содержимое блока от границы.
-5.  Сделайте ссылки `зелёными` при наведении.
+1. Сделайте заголовок розовым, используя CSS-цвет `hotpink`.
+2. Значение свойства заголовка {{cssxref("border-bottom")}} сделайте пунктирным (10px dotted) и добавьте цвет `purple`.
+3. Примените к подзаголовку `<h2>` курсив.
+4. Установите цвет `#eeeeee` для фона {{cssxref("background-color")}} маркированного списка с контактными данными и значение 5px solid purple для {{cssxref("border")}}. Используйте {{cssxref("padding")}}, чтобы отделить содержимое блока от границы.
+5. Сделайте ссылки `зелёными` при наведении.
 
 У вас должно получиться примерно как-то так:
 
@@ -60,8 +60,8 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 Если вы хотите, чтобы вашу работу оценили, или вы не справляетесь, и вам нужна помощь:
 
-1.  Загрузите ваш код на [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/).
-2.  Напишите пост с просьбой о помощи и / или оценке на [форуме MDN](https://discourse.mozilla.org/c/mdn). Добавьте тег "learning" к вашему посту, чтобы нам легче было его найти. В вашем посте должны быть:
+1. Загрузите ваш код на [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/).
+2. Напишите пост с просьбой о помощи и / или оценке на [форуме MDN](https://discourse.mozilla.org/c/mdn). Добавьте тег "learning" к вашему посту, чтобы нам легче было его найти. В вашем посте должны быть:
 
     - Заголовок с описанием наподобие "Assessment wanted for CSS First Steps".
     - Описание того, что вам нужно, — к примеру, что вы уже пробовали, что у вас не получается и вам нужна помощь.
@@ -76,7 +76,7 @@ original_slug: Learn/CSS/First_steps/Using_your_new_knowledge
 
 ## В этом модуле
 
-1.  [Что такое CSS?](/ru/docs/Learn/CSS/First_steps/What_is_CSS)
-2.  [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)
-3.  [Как структурирован CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
-4.  [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
+1. [Что такое CSS?](/ru/docs/Learn/CSS/First_steps/What_is_CSS)
+2. [Начало работы с CSS](/ru/docs/Learn/CSS/First_steps/Getting_started)
+3. [Как структурирован CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)
+4. [Как работает CSS](/ru/docs/Learn/CSS/First_steps/How_CSS_works)

@@ -5,7 +5,8 @@ tags:
   - SVG
 translation_of: Web/SVG/Attribute/viewBox
 ---
-« [SVG Attribute reference home](/en/SVG/Attribute "en/SVG/Attribute")
+
+« [SVG Attribute reference home](/en/SVG/Attribute)
 
 `Аттрибут viewBox` определяет расположение и размеры окна отображения SVG.
 
@@ -125,4 +126,4 @@ svg:not(:root) {
 
 ## Смотрите также
 
-- [SVG Getting Started: Positions](/en/SVG/Tutorial/Positions "https://developer.mozilla.org/en/SVG/Tutorial/Positions")
+- [SVG Getting Started: Positions](/en/SVG/Tutorial/Positions)

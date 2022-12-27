@@ -118,7 +118,7 @@ The [structured cloning](/es/docs/Web/Guide/DOM/The_structured_clone_algorithm) 
 
 ### Ejemplos pasando datos
 
-#### Example #1: Crear un "`eval() asíncrono`" genérico
+#### Example 1: Crear un "`eval() asíncrono`" genérico
 
 El siguiente ejemplo muestra como usar un worker para ejecutar **asíncronamente** cualquier tipo de código en Javascript a traves de [`eval`](/es/docs/JavaScript/Reference/Global_Objects/eval) dentro del worker:
 
@@ -163,7 +163,7 @@ asyncEval("\"Hello World!!!\"", function (sHTML) {
 asyncEval("(function () {\n\tvar oReq = new XMLHttpRequest();\n\toReq.open(\"get\", \"http://www.mozilla.org/\", false);\n\toReq.send(null);\n\treturn oReq.responseText;\n})()");
 ```
 
-#### Ejemplo #2: Paso avanzado de JSON Data y creación de un sistema de conmutación
+#### Ejemplo 2: Paso avanzado de JSON Data y creación de un sistema de conmutación
 
 Si tiene que pasar datos complejos y tienes que llamar a muchas funciones diferentes tanto en la página principal como en el Worker, puede crear un sistema como el siguiente.
 

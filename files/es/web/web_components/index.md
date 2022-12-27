@@ -105,7 +105,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
   - : Extensiones a la interfaz `Event` relacionada al shadow DOM:
 
-    - {{domxref("Event.composed")}}: Retorna un {{jsxref("Boolean")}} que indica si el evento se va a propagar a través de los límites del _shadow DOM_ hacia el\_ \_DOM normal (`true`), o no (`false`).
+    - {{domxref("Event.composed")}}: Retorna un {{jsxref("Boolean")}} que indica si el evento se va a propagar a través de los límites del _shadow DOM_ hacia el DOM normal (`true`), o no (`false`).
     - {{domxref("Event.composedPath")}}: Retorna la ruta del evento (objetos en los que oyentes serán invocados). Esto no incluye nodos en _shadow trees_ si el _shadow root_ fue creado con {{domxref("ShadowRoot.mode")}} cerrado.
 
 ### Plantillas HTML

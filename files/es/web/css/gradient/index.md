@@ -26,7 +26,7 @@ Un gradiente de CSS no es un {{cssxref("&lt;color&gt;")}} pero tampoco es una im
 
 Hay tres tipos de gradientes de color:
 
-#### _**Linear gradients**(gradiente lineal)_,
+#### Linear gradients (gradiente lineal)
 
 Generados por la función {{cssxref("linear-gradient", "linear-gradient()")}}, donde el color se desvanece suavemente a lo largo de una línea imaginaria.
 
@@ -46,7 +46,7 @@ background: linear-gradient(to right,red,orange,yellow, green, blue,indigo,viole
 
 {{ EmbedLiveSample('linear-gradient', 600, 20) }}
 
-#### _**Radial gradient** (gradientes radiales)_,
+#### Radial gradient (gradientes radiales)
 
 Generados por la función {{cssxref("radial-gradient", "radial-gradient()")}}. Cuanto más lejos de un origen sea un punto, más lejos del color original será.
 
@@ -64,7 +64,7 @@ background: radial-gradient(red, yellow, rgb(30, 144, 255));
 
 {{ EmbedLiveSample('radial-gradient', 600, 20) }}
 
-#### _**Repeating gradient** (gradientes de repetición)_,
+#### Repeating gradient (gradientes de repetición)
 
 Donde se repiten gradientes lineales o radiales tanto como sea necesario para llenar toda la caja.
 

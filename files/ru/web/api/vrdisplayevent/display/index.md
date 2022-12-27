@@ -5,8 +5,10 @@ tags:
   - Виртуальная реальность
 translation_of: Web/API/VRDisplayEvent/display
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
-Свойство **`display`**только для чтения интерфейса {{domxref ("VRDisplayEvent")}} возвращает параметр {{domxref ("VRDisplay")}}, связанный с этим событием.
+
+{{APIRef("WebVR API")}} {{SeeCompatTable}}
+
+Свойство **`display`** только для чтения интерфейса {{domxref ("VRDisplayEvent")}} возвращает параметр {{domxref ("VRDisplay")}}, связанный с этим событием.
 
 ## Синтаксис
 

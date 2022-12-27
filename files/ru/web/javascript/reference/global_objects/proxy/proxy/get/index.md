@@ -41,7 +41,7 @@ const p = new Proxy(target, {
 
 Эта ловушка может перехватывать следующие операции:
 
-- Доступ к свойству: `proxy[foo]`and `proxy.bar`
+- Доступ к свойству: `proxy[foo]` and `proxy.bar`
 - Доступ к наследованному свойству: `Object.create(proxy)[foo]`
 - {{jsxref("Reflect.get()")}}
 

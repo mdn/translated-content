@@ -43,7 +43,7 @@ var obj = {
 };
 ```
 
-> **Nota:** La sintaxis abreviada usa funciones con nombre en lugar de funciones anónimas (como en …`foo: function() {}`…). Las funciones con nombre pueden ser llamadas desde el cuerpo de la función (esto es imposible con funciones anónimas, ya que no existe un identificador al que referirse). Para más detalles, ver {{jsxref("Operators/function","function","#Examples")}}.
+> **Nota:** La sintaxis abreviada usa funciones con nombre en lugar de funciones anónimas (como en … `foo: function() {}`…). Las funciones con nombre pueden ser llamadas desde el cuerpo de la función (esto es imposible con funciones anónimas, ya que no existe un identificador al que referirse). Para más detalles, ver {{jsxref("Operators/function","function","#Examples")}}.
 
 ### Abreviatura de métodos generadores
 

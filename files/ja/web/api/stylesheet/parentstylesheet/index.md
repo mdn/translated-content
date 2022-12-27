@@ -1,40 +1,33 @@
 ---
 title: StyleSheet.parentStyleSheet
 slug: Web/API/StyleSheet/parentStyleSheet
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
-{{ApiRef}}
+{{APIRef("CSSOM")}}
 
-## 概要
+**`parentStyleSheet`** は {{domxref("StyleSheet")}} インターフェイスのプロパティで、指定されたスタイルシートをインクルードしている場合、そのスタイルシートを返します。
 
-対象のスタイルシートを含む親スタイルシートが存在する場合は、それを返します。
+## 値
 
-## 構文
-
-```
-parentStyleSheetObj = stylesheet.parentStyleSheet
-```
-
-## 注記
-
-対象スタイルシートがトップレベルのスタイルシートの場合、または対象スタイルシートがインクルードをサポートしていない場合、戻り値は `null` となります。
+{{domxref("StyleSheet")}} オブジェクトです。
 
 ## 例
 
 ```js
-var stylesheet = document.styleSheets[0]; // 文書中の最初のスタイルシート
-
-
-// 親スタイルシートが存在する場合はそれを、
-// 無ければ自身への参照を変数 sheet に代入しています。
-if (stylesheet.parentStyleSheet) {
-  sheet = stylesheet.parentStyleSheet;
-} else {
-  sheet = stylesheet;
-}
+// 最上位のスタイルシートを探す
+const sheet = stylesheet.parentStyleSheet ?? stylesheet;
 ```
+
+## メモ
+
+対象スタイルシートが最上位のスタイルシートの場合、または対象スタイルシートがインクルードに対応していない場合、返値は `null` となります。
 
 ## 仕様書
 
-- [parentStyleSheet](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-parentStyleSheet)
-- [CSS Object Model (CSSOM)](http://dev.w3.org/csswg/cssom/#widl-StyleSheet-parentStyleSheet)
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}

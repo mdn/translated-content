@@ -33,7 +33,7 @@ El valor devuelto por getMonth() es un entero entre 0 y 11, donde 0 corresponde 
 
 ### Usando `getMonth()`
 
-En el siguiente ejemplo, la segunda línea asigna el valor 11 a la variable mes, basado en el valor del objeto {{jsxref("Date")}} N`avidad`.
+En el siguiente ejemplo, la segunda línea asigna el valor 11 a la variable mes, basado en el valor del objeto {{jsxref("Date")}} `Navidad`.
 
 ```js
 var Navidad = new Date('December 25, 2014 23:15:30');

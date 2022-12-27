@@ -205,4 +205,4 @@ console.log(typeof y); // undefined, так как y это локальная �
 
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
-- [How One Missing \`var\` Ruined our Launch](http://blog.safeshepherd.com/23/how-one-missing-var-ruined-our-launch/)
+- [How One Missing `var` Ruined our Launch](http://blog.safeshepherd.com/23/how-one-missing-var-ruined-our-launch/)

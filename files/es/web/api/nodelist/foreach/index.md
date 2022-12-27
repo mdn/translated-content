@@ -31,10 +31,10 @@ nodeList.forEach(callback[, thisArg]);
     - `currentIndex`
       - : El índice del elemento que esta siendo procesado en la lista de nodos.
     - _`listObj`_
-      - : El objeto NodeList al que se está aplicando el método`forEach()`.
+      - : El objeto NodeList al que se está aplicando el método `forEach()`.
 
 - `thisArg` {{Optional_inline}}
-  - : Valor a ser usado como {{jsxref("this")}} al ejecutar`callback`.
+  - : Valor a ser usado como {{jsxref("this")}} al ejecutar `callback`.
 
 ### Valor Retornado
 
@@ -105,8 +105,8 @@ Especificación
 
 |                                                                                  | Status                           | Comentarios                                |
 | -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------ |
-| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}} | {{ Spec2('DOM WHATWG') }} | Define`NodeList` como`<Nodo>iterable`      |
-| {{SpecName("WebIDL", "#es-forEach", "forEach")}}                 | {{Spec2("WebIDL")}}         | Define`forEach`en declaraciones`iterables` |
+| {{SpecName('DOM WHATWG', '#interface-nodelist', 'NodeList')}} | {{ Spec2('DOM WHATWG') }} | Define `NodeList` como `<Nodo>iterable`      |
+| {{SpecName("WebIDL", "#es-forEach", "forEach")}}                 | {{Spec2("WebIDL")}}         | Define `forEach` en declaraciones `iterables` |
 
 ## Compatibilidad en Navegadores
 

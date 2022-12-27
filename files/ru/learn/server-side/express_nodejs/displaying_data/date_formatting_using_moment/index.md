@@ -19,8 +19,8 @@ npm install moment
 
 ## Создание виртуального свойства
 
-1.  Откройте файл **./models/bookinstance.js**.
-2.  В начало файла введите строку для импортирования _moment_.
+1. Откройте файл **./models/bookinstance.js**.
+2. В начало файла введите строку для импортирования _moment_.
 
     ```js
     var moment = require('moment');

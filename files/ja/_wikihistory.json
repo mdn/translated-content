@@ -31593,26 +31593,6 @@
     "modified": "2020-10-15T22:16:27.874Z",
     "contributors": ["Uemmra3", "takaneichinose"]
   },
-  "orphaned/Web/API/Window/dialogArguments": {
-    "modified": "2019-10-10T16:53:47.113Z",
-    "contributors": ["teoli", "ethertank"]
-  },
-  "orphaned/Web/API/Window/getAttention": {
-    "modified": "2019-03-23T23:51:10.969Z",
-    "contributors": ["teoli", "khalid32", "ethertank", "Potappo"]
-  },
-  "orphaned/Web/API/Window/isSecureContext": {
-    "modified": "2019-03-18T21:45:12.086Z",
-    "contributors": ["YuichiNukiyama"]
-  },
-  "orphaned/Web/API/Window/ondeviceproximity": {
-    "modified": "2019-03-23T22:15:34.678Z",
-    "contributors": ["YuichiNukiyama"]
-  },
-  "orphaned/Web/API/Window/pkcs11": {
-    "modified": "2019-03-23T23:50:17.917Z",
-    "contributors": ["teoli", "AshfaqHossain", "ethertank", "Potappo"]
-  },
   "orphaned/Web/API/XMLHttpRequest/openRequest": {
     "modified": "2020-07-29T10:05:34.264Z",
     "contributors": ["eltociear"]

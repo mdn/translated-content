@@ -362,7 +362,7 @@ Generally speaking, it is preferable to avoid resorting to window\.open() for se
 
 If you want to offer to open a link in a new window, then follow tested and recommendable usability and accessibility guidelines:
 
-#### _Never_ use this form of code for links: `<a href="javascript:window.open(...)" ...>`
+#### Never use this form of code for links: `<a href="javascript:window.open(...)" ...>`
 
 "javascript:" links break accessibility and usability of webpages in every browser.
 

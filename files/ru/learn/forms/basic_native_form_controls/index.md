@@ -12,9 +12,9 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 | ----------- | ------------------------------------------------------------------------------------------------------------------------ |
 | Цель:       | Понять, какие типы стандартных виджетов форм доступны в браузерах для сбора информации, как внедрять их, используя HTML. |
 
-Сейчас мы сосредоточимся на виджетах форм, встроенных в браузеры, но поскольку формы HTML остаются несколько ограниченными и особенности их реализации различаются для разных браузеров, веб-разработчики иногда создают собственные виджеты форм - прочтите статью [Как создать собственную форму](/ru/docs/Learn/Forms/How_to_build_custom_form_controls "/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets") позже в данном модуле для более подробного изучения.
+Сейчас мы сосредоточимся на виджетах форм, встроенных в браузеры, но поскольку формы HTML остаются несколько ограниченными и особенности их реализации различаются для разных браузеров, веб-разработчики иногда создают собственные виджеты форм - прочтите статью [Как создать собственную форму](/ru/docs/Learn/Forms/How_to_build_custom_form_controls) позже в данном модуле для более подробного изучения.
 
-> **Примечание:** Большая часть признаков обсуждаемых в этой статье имеют широкую поддержку в браузерах; мы отметим исключения из этого правила. Если вы хотите больше точных сведений, вам следует обратиться к [HTML forms element reference, ](/ru/docs/Web/HTML/Element#forms)и в частости к нашей обширной ссылке [\<input> types.](/ru/docs/Web/HTML/Element/input)
+> **Примечание:** Большая часть признаков обсуждаемых в этой статье имеют широкую поддержку в браузерах; мы отметим исключения из этого правила. Если вы хотите больше точных сведений, вам следует обратиться к [HTML forms element reference](/ru/docs/Web/HTML/Element#forms), и в частости к нашей обширной ссылке [\<input> types](/ru/docs/Web/HTML/Element/input).
 
 ## Стандартные атрибуты
 
@@ -32,14 +32,14 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 Текстовые поля {{htmlelement("input")}} являются самыми базовыми виджетами форм. Эти поля наиболее удобны для пользовательского ввода различной информации. Однако, некоторые текстовые поля отличаются от данного и используются для специфических нужд. Мы уже видели несколько простых примеров.
 
-> **Примечание:** HTML form text fields are simple plain text input controls. This means that you cannot use them to perform [rich editing](/ru/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla "/en-US/docs/Rich-Text_Editing_in_Mozilla") (bold, italic, etc.). All rich text editors you'll encounter out there are custom widgets created with HTML, CSS, and JavaScript.
+> **Примечание:** HTML form text fields are simple plain text input controls. This means that you cannot use them to perform [rich editing](/ru/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla) (bold, italic, etc.). All rich text editors you'll encounter out there are custom widgets created with HTML, CSS, and JavaScript.
 
 Все текстовые поля имеют общие атрибуты:
 
 - Они могут быть помечены как {{htmlattrxref("readonly","input")}} (пользователь не может изменять начальное значение) или даже {{htmlattrxref("disabled","input")}} начальное значение никогда не посылается вместе с остальными данными формами).
 - Они могут иметь атрибут {{htmlattrxref("placeholder","input")}}; это текст, который появляется внутри теста поля формы и кратко описывает, для чего используется данная форма.
-- Существуют общие характеристики {{htmlattrxref("size","input")}} (физический размер поля) и [длину](/ru/docs/Web/HTML/Element/input#attr-maxlength "/en-US/docs/HTML/Element/input#attr-maxlength") (максимальное количество символов, которые может ввести пользователь).
-- Они могут быть определены с помощью [spell checking](/ru/docs/Web/HTML/Element/input#attr-spellcheck "/en-US/docs/HTML/Element/input#attr-spellcheck"), если браузер поддерживает данную функцию.
+- Существуют общие характеристики {{htmlattrxref("size","input")}} (физический размер поля) и [длину](/ru/docs/Web/HTML/Element/input#attr-maxlength) (максимальное количество символов, которые может ввести пользователь).
+- Они могут быть определены с помощью [spell checking](/ru/docs/Web/HTML/Element/input#attr-spellcheck), если браузер поддерживает данную функцию.
 
 > **Примечание:** The {{htmlelement("input")}} element is special because it can be almost anything. By simply setting its `type` attribute, it can change radically, and it is used for creating most types of form widget including single line text fields, controls without text input, time and date controls, and buttons. However, there are some exceptions, like {{htmlelement("textarea")}} for multi-line inputs. Take careful note of these as you read the article.
 
@@ -127,7 +127,7 @@ It adds special validation constraints to the field, with the browser reporting 
 
 > **Примечание:** Just because the URL is well-formed doesn't necessarily mean that it refers to a location that actually exists.
 
-> **Примечание:** Fields that have special constraints and are in error prevent the form from being sent; in addition, they can be styled so as to make the error clear. We will discuss this in detail in the article: [Data form validation](/ru/docs/Learn/Forms/Form_validation "/en-US/docs/HTML/Forms/Data_form_validation").
+> **Примечание:** Fields that have special constraints and are in error prevent the form from being sent; in addition, they can be styled so as to make the error clear. We will discuss this in detail in the article: [Data form validation](/ru/docs/Learn/Forms/Form_validation).
 
 ### Multi-line text fields
 
@@ -516,7 +516,7 @@ There are a few other widgets that cannot be easily classified due to their very
 
 ### File picker
 
-HTML forms are able to send files to a server; this specific action is detailed in the article [Sending and retrieving form data](/ru/docs/Learn/Forms/Sending_and_retrieving_form_data "/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data"). The file picker widget is how the user can choose one or more files to send.
+HTML forms are able to send files to a server; this specific action is detailed in the article [Sending and retrieving form data](/ru/docs/Learn/Forms/Sending_and_retrieving_form_data). The file picker widget is how the user can choose one or more files to send.
 
 To create a file picker widget, you use the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to `file`. The types of files that are accepted can be constrained using the {{htmlattrxref("accept","input")}} attribute. In addition, if you want to let the user pick more than one file, you can do so by adding the {{htmlattrxref("multiple","input")}} attribute.
 
@@ -559,7 +559,7 @@ So for example when you click on the image of this widget, you are sent to a URL
 http://foo.com?pos.x=123&pos.y=456
 ```
 
-This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the [Sending and retrieving form data](/ru/docs/Learn/Forms/Sending_and_retrieving_form_data "/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data") article.
+This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the [Sending and retrieving form data](/ru/docs/Learn/Forms/Sending_and_retrieving_form_data) article.
 
 ### Meters and progress bars
 

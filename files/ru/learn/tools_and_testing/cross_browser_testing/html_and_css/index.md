@@ -47,11 +47,11 @@ However, it is not very convenient to have to copy and paste your code over to a
 
 Many code editors have linter plugins. Github's [Atom](https://atom.io/) code editor for example has a rich plugin ecosystem available, with many linting options. To show you an example of how such plugins generally work:
 
-1.  Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
-2.  Go to Atom's _Preferences..._ dialog (e.g. by Choosing _Atom > Preferences..._ on Mac, or _File > Preferences..._ on Windows/Linux) and choose the _Install_ option in the left hand menu.
-3.  In the _Search packages_ text field, type "lint" and press Enter/Return to search for linting-related packages.
-4.  You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-csslint** plugin for linting CSS, and the **linter-tidy** plugin for linting HTML.
-5.  After the packages have finished installing, try loading up an HTML file and a CSS file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
+1. Install Atom (if you haven't got an up-to-date version already installed) — download it from the Atom page linked above.
+2. Go to Atom's _Preferences..._ dialog (e.g. by Choosing _Atom > Preferences..._ on Mac, or _File > Preferences..._ on Windows/Linux) and choose the _Install_ option in the left hand menu.
+3. In the _Search packages_ text field, type "lint" and press Enter/Return to search for linting-related packages.
+4. You should see a package called **lint** at the top of the list. Install this first (using the _Install_ button), as other linters rely on it to work. After that, install the **linter-csslint** plugin for linting CSS, and the **linter-tidy** plugin for linting HTML.
+5. After the packages have finished installing, try loading up an HTML file and a CSS file: you'll see any issues highlighted with green (for warnings) and red (for errors) circles next to the line numbers, and a separate panel at the bottom provides line numbers, error messages, and sometimes suggested values or other fixes.
 
 ![](https://mdn.mozillademos.org/files/14109/atom-htmltidy.png)![](https://mdn.mozillademos.org/files/14107/atom-csslint.png)
 
@@ -273,9 +273,9 @@ form > #date
 
 However, another issue that appears in versions of IE older than 9 is that none of the newer selectors (mainly pseudo-classes and pseudo-elements like [`:nth-of-type`](/en-US/docs/Web/CSS/:nth-of-type), [`:not`](/en-US/docs/Web/CSS/:not), [`::selection`](/en-US/docs/Web/CSS/::selection), etc.) work. If you want to use these in your CSS and you need to support older IE versions, a good move is to use Keith Clark's [Selectivizr](http://selectivizr.com/) library — this is a small JavaScript library that works on top of an existing JavaScript library like [jQuery](http://jquery.com/) or [MooTools](http://mootools.net/).
 
-1.  To try this example, make a local copy of [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). If you look at this running live, you'll see that it contains two paragraphs, one of which is styled. We've selected the paragraph with `p:first-child`, which won't work in old versions of IE.
-2.  Now download [MooTools](http://mootools.net/) and [Selectivizr](http://selectivizr.com/), and save them in the same directory as your sample HTML.
-3.  Put the following code into the head of your HTML document, just before the opening `<style>` tag:
+1. To try this example, make a local copy of [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). If you look at this running live, you'll see that it contains two paragraphs, one of which is styled. We've selected the paragraph with `p:first-child`, which won't work in old versions of IE.
+2. Now download [MooTools](http://mootools.net/) and [Selectivizr](http://selectivizr.com/), and save them in the same directory as your sample HTML.
+3. Put the following code into the head of your HTML document, just before the opening `<style>` tag:
 
     ```html
     <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
@@ -310,26 +310,26 @@ The first line shows a {{cssxref("transform")}} property with a `-webkit-` prefi
 
 The last three lines show three different versions of the [`linear-gradient()`](/en-US/docs/Web/CSS/linear-gradient) function, which is used to generate a linear gradient in the background of an element:
 
-1.  The first one has a `-moz-` prefix, and shows a slightly older version of the syntax (Firefox)
-2.  The second one has a `-webkit-` prefix, and shows an even older, proprietary version of the syntax (this is actually from a really old version of the WebKit engine).
-3.  The third one has no prefix, and shows the final version of the syntax (included in the [CSS Image Values and Replaced Content Module Level 3 spec](https://drafts.csswg.org/css-images-3/#linear-gradients), which defines this feature).
+1. The first one has a `-moz-` prefix, and shows a slightly older version of the syntax (Firefox)
+2. The second one has a `-webkit-` prefix, and shows an even older, proprietary version of the syntax (this is actually from a really old version of the WebKit engine).
+3. The third one has no prefix, and shows the final version of the syntax (included in the [CSS Image Values and Replaced Content Module Level 3 spec](https://drafts.csswg.org/css-images-3/#linear-gradients), which defines this feature).
 
-Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. This is particularly a problem when developers decide to only use say, the `-webkit- `version of a property — meaning that the site won't work in other browsers. This actually happens so much that other browsers have started to implement `-webkit-` prefixed versions of various CSS properties, so they will work with such code. Usage of prefixes by browser vendors has declined recently precisely because of these types of problems, but there are still some that need attention.
+Prefixed features were never supposed to be used in production websites — they are subject to change or removal without warning, and cause cross browser issues. This is particularly a problem when developers decide to only use say, the `-webkit-` version of a property — meaning that the site won't work in other browsers. This actually happens so much that other browsers have started to implement `-webkit-` prefixed versions of various CSS properties, so they will work with such code. Usage of prefixes by browser vendors has declined recently precisely because of these types of problems, but there are still some that need attention.
 
 If you insist on using prefixed features, make sure you use the right ones. You can look up what browsers require prefixes on MDN reference pages, and sites like [caniuse.com](http://caniuse.com/). If you are unsure, you can also find out by doing some testing directly in browsers.
 
 Try this simple example:
 
-1.  Open up google.com, or another site that has a prominent heading or other block level element.
-2.  Right/Cmd + click on the element in question and choose Inspect/Inspect element (or whatever the option is in your browser) — this should open up the dev tools in your browser, with the element highlighted in the DOM inspector.
-3.  Look for a feature you can use to select that element. For example, at the time of writing, the main Google logo had an ID of `hplogo`.
-4.  Store a reference to this element in a variable, for example:
+1. Open up google.com, or another site that has a prominent heading or other block level element.
+2. Right/Cmd + click on the element in question and choose Inspect/Inspect element (or whatever the option is in your browser) — this should open up the dev tools in your browser, with the element highlighted in the DOM inspector.
+3. Look for a feature you can use to select that element. For example, at the time of writing, the main Google logo had an ID of `hplogo`.
+4. Store a reference to this element in a variable, for example:
 
     ```js
     var test = document.getElementById('hplogo');
     ```
 
-5.  Now try to set a new value for the CSS property you are interested in on that element; you can do this using the [style](/ru/docs/Web/API/HTMLElement/style) property of the element, for example try typing these into the JavaScript console:
+5. Now try to set a new value for the CSS property you are interested in on that element; you can do this using the [style](/ru/docs/Web/API/HTMLElement/style) property of the element, for example try typing these into the JavaScript console:
 
     ```js
     test.style.transform = 'rotate(90deg)'
@@ -364,9 +364,9 @@ Autoprefixer can also be used in other, more convenient ways — see [Autoprefix
 
 You can also use a plugin for a text editor such as Atom or Sublime text. For example, in Atom:
 
-1.  You can install it by going to _Preferences > Install_, searching for _Autoprefixer_, then hitting install.
-2.  You can set a browser query by pressing the Autoprefixer _Settings_ button and entering the query in the text field in the _Settings_ section on the page.
-3.  In your code, you can select sections of CSS you want to add prefixes to, open the command pallette (_Cmd/Ctrl + Shift + P_), then type in Autoprefixer and select the Autoprefixer result that autocompletes.
+1. You can install it by going to _Preferences > Install_, searching for _Autoprefixer_, then hitting install.
+2. You can set a browser query by pressing the Autoprefixer _Settings_ button and entering the query in the text field in the _Settings_ section on the page.
+3. In your code, you can select sections of CSS you want to add prefixes to, open the command pallette (_Cmd/Ctrl + Shift + P_), then type in Autoprefixer and select the Autoprefixer result that autocompletes.
 
 As an example, we entered the following code:
 
@@ -395,7 +395,7 @@ Another problem that might come up is differences in layouts between browsers. H
 
 > **Примечание:** Historically web developers used to use CSS files called resets, which removed all the default browser styling applied to HTML, and then applied their own styles for everything over the top — this was done to make styling on a project more consistent, and reduce possible cross browser issues, especially for things like layout. However, it has more recently been seen as overkill. The best equivalent we have in modern times is [normalize.css](https://necolas.github.io/normalize.css/), a neat bit of CSS that builds slightly on the default browser styling to make things more consistent and fix some layout issues. You are advised to apply normalize.css to all your HTML pages.
 
-> **Примечание:** When trying to track down a tricky layout issue, a good technique is to add a brightly colored {{cssxref("outline")}} to the offending element, or all the elements nearby. This makes it a lot easier to see where everything is placed. See [Debug your CSS with outline visualizations](http://www.otsukare.info/2016/10/05/debugging-css "Permalink to Debug your CSS with outline visualizations.") for more details.
+> **Примечание:** When trying to track down a tricky layout issue, a good technique is to add a brightly colored {{cssxref("outline")}} to the offending element, or all the elements nearby. This makes it a lot easier to see where everything is placed. See [Debug your CSS with outline visualizations](http://www.otsukare.info/2016/10/05/debugging-css) for more details.
 
 #### Support for new layout features
 

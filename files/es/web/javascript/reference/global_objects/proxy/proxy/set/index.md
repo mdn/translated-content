@@ -24,7 +24,7 @@ var p = new Proxy(target, {
 
 ### Parámetros
 
-El método `set` recibe los siguientes parámetros.`this` se asocia al handler.
+El método `set` recibe los siguientes parámetros. `this` se asocia al handler.
 
 - `target`
   - : El objeto objetivo.

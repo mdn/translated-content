@@ -12,7 +12,7 @@ translation_of: Web/CSS/outline-style
 
 La propiedad CSS **`outline-style`** es usada para establecer el estilo del contorno de un elemento. Un contorno es una línea que se dibuja al rededor de elementos, fuera de los límites del borde, para resaltar un elemento.
 
-Por lo general, es más conveniente usar la propiedad de forma reducida {{cssxref("outline")}} en vez de`outline-style`,`outline-width`y`outline-color` por separado.
+Por lo general, es más conveniente usar la propiedad de forma reducida {{cssxref("outline")}} en vez de `outline-style`, `outline-width` y `outline-color` por separado.
 
 {{cssinfo}}
 
@@ -39,10 +39,10 @@ outline-style: unset;
 
 ## Valores
 
-`<br-style>`puede ser uno de los siguientes:
+`<br-style>` puede ser uno de los siguientes:
 
 - none
-  - : Sin contorno ({{Cssxref("outline-width")}} es`0`).
+  - : Sin contorno ({{Cssxref("outline-width")}} es `0`).
 - dotted
   - : Línea punteada. El contorno es una serie de puntos.
 - dashed

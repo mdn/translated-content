@@ -20,13 +20,13 @@ original_slug: Web/SVG/Элемент/animateMotion
 
 ### Глобальные атрибуты
 
-- [Условные атрибуты обработки](/ru/docs/SVG/Attribute#Conditional_processing_attributes "en/SVG/Attribute#ConditionalProccessing") »
-- [Основные атрибуты](/ru/docs/SVG/Attribute#Core_attributes "en/SVG/Attribute#Core") »
-- [Атрибуты события анимации](/ru/docs/SVG/Attribute#Animation_event_attributes "en/SVG/Attribute#AnimationEvent") »
-- [Атрибуты Xlink](/ru/docs/SVG/Attribute#XLink_attributes "en/SVG/Attribute#XLink") »
-- [Атрибуты времени анимации](/ru/docs/SVG/Attribute#Animation_timing_attributes "en/SVG/Attribute#AnimationTiming") »
-- [Величина атрибутов анимации](/ru/docs/SVG/Attribute#Animation_value_attributes "en/SVG/Attribute#AnimationValue") »
-- [Атрибуты добавления анимации](/ru/docs/SVG/Attribute#Animation_addition_attributes "en/SVG/Attribute#AnimationAddition") »
+- [Условные атрибуты обработки](/ru/docs/SVG/Attribute#Conditional_processing_attributes)
+- [Основные атрибуты](/ru/docs/SVG/Attribute#Core_attributes)
+- [Атрибуты события анимации](/ru/docs/SVG/Attribute#Animation_event_attributes)
+- [Атрибуты Xlink](/ru/docs/SVG/Attribute#XLink_attributes)
+- [Атрибуты времени анимации](/ru/docs/SVG/Attribute#Animation_timing_attributes)
+- [Величина атрибутов анимации](/ru/docs/SVG/Attribute#Animation_value_attributes)
+- [Атрибуты добавления анимации](/ru/docs/SVG/Attribute#Animation_addition_attributes)
 - {{SVGAttr("externalResourcesRequired")}}
 
 ### Собственные атрибуты

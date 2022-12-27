@@ -6,7 +6,8 @@ tags:
   - SVG атрибуты
 translation_of: Web/SVG/Attribute/cx
 ---
-« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute "Справочник SVG атрибутов")
+
+« [Справочник SVG атрибутов](/ru/docs/Web/SVG/Attribute)
 
 Для элементов {{ SVGElement("circle") }} и {{ SVGElement("ellipse") }} этот атрибут определяет координату центра элемента по оси x. Если атрибут не определён, то эффект такой, как если бы было указано значение "0".
 
@@ -16,7 +17,7 @@ translation_of: Web/SVG/Attribute/cx
 
 | Категории                  | Нет                                                                                                                                                                                                                                                                                                                                                  |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Значение                   | [\<coordinate>](/en/SVG/Content_type#Coordinate "https://developer.mozilla.org/en/SVG/Content_type#Coordinate")                                                                                                                                                                                                                                      |
+| Значение                   | [\<coordinate>](/en/SVG/Content_type#Coordinate)                                                                                                                                                                                                                                      |
 | Анимируемый                | Да                                                                                                                                                                                                                                                                                                                                                   |
 | Нормативные документы (en) | [SVG 1.1 (2nd Edition): The circle element](http://www.w3.org/TR/SVG/shapes.html#CircleElementCXAttribute) [SVG 1.1 (2nd Edition): The ellipse element](http://www.w3.org/TR/SVG/shapes.html#EllipseElementCXAttribute) [SVG 1.1 (2nd Edition): The radialGradient element](http://www.w3.org/TR/SVG/pservers.html#RadialGradientElementCXAttribute) |
 

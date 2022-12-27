@@ -40,7 +40,7 @@ Si una propiedad se modifica en una iteración y luego se visita en un momento p
 
 En general, es mejor no agregar, modificar o eliminar propiedades del objeto durante la iteración, aparte de la propiedad que se está visitando actualmente. No hay garantía de si se visitará una propiedad agregada, si se visitará una propiedad modificada (distinta de la actual) antes o después de que se modifique, o si se visitará una propiedad eliminada antes de eliminarla.
 
-### Iteración en arreglos y `for`...`in`
+### Iteración en arreglos y `for...in`
 
 > **Nota:** `for...in` no se debe usar para iterar sobre un {{JSxRef("Array")}} donde el orden del índice es importante.
 
@@ -52,7 +52,7 @@ Debido a que el orden de iteración depende de la implementación, es posible qu
 
 Si solo deseas considerar las propiedades adjuntas al objeto en sí mismo, y no sus prototipos, usa {{JSxRef("Object.getOwnPropertyNames", "getOwnPropertyNames()")}} o realiza una {{JSxRef("Object.prototype.hasOwnProperty", "hasOwnProperty()")}} verificación ({{jsxref("Object.prototype.propertyIsEnumerable", "propertyIsEnumerable()")}} también se puede utilizar). Alternativamente, si sabes que no habrá ninguna interferencia de código externo, puedes extender los prototipos incorporados con un método de verificación.
 
-## ¿Por qué usar `for`...`in`?
+## ¿Por qué usar `for...in`?
 
 Dado que `for...in` está construido para iterar propiedades de objeto, no se recomienda su uso con arreglos y opciones como `Array.prototype.forEach()` y existe `for...of`, ¿cuál podría ser el uso de `for...in`?
 
@@ -60,7 +60,7 @@ Es posible que se utilice de forma más práctica con fines de depuración, ya q
 
 ## Ejemplos
 
-### Utilizar `for`...`in`
+### Utilizar `for...in`
 
 El siguiente bucle `for...in` itera sobre todas las propiedades enumerables que no son símbolos del objeto y registra una cadena de los nombres de propiedad y sus valores.
 
