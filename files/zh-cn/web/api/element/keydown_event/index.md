@@ -32,11 +32,11 @@ slug: Web/API/Element/keydown_event
   </tbody>
 </table>
 
-`keydown` 与 [`keyup`](/en-US/docs/Web/API/Element/keyup_event) 事件捕获了键盘按键的操作，而 `keypress` 反映了具体输入某个字符的值。比如，小写"a" 在`keydown` 和 `keyup`事件中输出的是大写 A 的 Unicode 编码 65，但是在`keypress`中输出的就是小写"a"的 Unicode 编码 97。大写 "A"在这些事件中输出的都是 Unicode 编码 65。
+`keydown` 与 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件捕获了键盘按键的操作，而 `keypress` 反映了具体输入某个字符的值。比如，小写"a" 在`keydown` 和 `keyup`事件中输出的是大写 A 的 Unicode 编码 65，但是在`keypress`中输出的就是小写"a"的 Unicode 编码 97。大写 "A"在这些事件中输出的都是 Unicode 编码 65。
 
 键盘事件只能由 `<inputs>`, `<textarea>` 以及任何具有 `contentEditable` 或 `tabindex="-1"`属性的组件触发。
 
-自 Firefox 65 起， `keydown` 与 [`keyup`](/en-US/docs/Web/API/Element/keyup_event) 事件会在 IME（输入法编辑器）复合事件中被触发，目的是为了提升 CJKT（中日韩台地区）用户跨浏览器性能，({{bug(354358)}}). 若要忽略复合事件中所有 `keydown` 事件，可以按照如下代码修改 (229 是某个在 IME 中触发的键盘事件对应的 `keyCode`):
+自 Firefox 65 起， `keydown` 与 [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event) 事件会在 IME（输入法编辑器）复合事件中被触发，目的是为了提升 CJKT（中日韩台地区）用户跨浏览器性能，({{bug(354358)}}). 若要忽略复合事件中所有 `keydown` 事件，可以按照如下代码修改 (229 是某个在 IME 中触发的键盘事件对应的 `keyCode`):
 
 ```js
 eventTarget.addEventListener("keydown", event => {
@@ -87,7 +87,7 @@ input.onkeydown = logKey;
 
 ## See also
 
-- [`input`](/en-US/docs/Web/API/HTMLElement/input_event)
-- [`keypress`](/en-US/docs/Web/API/Element/keypress_event)
-- [`keyup`](/en-US/docs/Web/API/Element/keyup_event)
+- [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)
+- [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)
+- [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event)
 - [Document `keydown` event](/zh-CN/docs/Web/API/Document/keydown_event)

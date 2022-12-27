@@ -1,15 +1,6 @@
 ---
 title: Intl.Locale
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale
-tags:
-  - クラス
-  - 国際化
-  - Intl
-  - JavaScript
-  - Locale
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale
 ---
 {{JSRef}}
 

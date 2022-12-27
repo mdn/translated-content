@@ -52,7 +52,7 @@ slug: Web/HTML/Element/table
     <tr>
       <th scope="row">允许的父元素</th>
       <td>
-        任何支持<a href="/en-US/docs/HTML/Content_categories#Flow_content"
+        任何支持<a href="/zh-CN/docs/HTML/Content_categories#Flow_content"
           >流内容</a
         >的元素
       </td>

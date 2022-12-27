@@ -1,13 +1,6 @@
 ---
 title: Web API
 slug: Web/API
-tags:
-  - API
-  - DOM
-  - JavaScript
-  - Reference
-  - ウェブ
-translation_of: Web/API
 ---
 ウェブのコードを書く時は、数多くの Web API が利用できます。以下に、ウェブアプリやサイトを開発する際に利用することができる可能性があるすべてのインターフェイス (オブジェクト型) のリストを挙げます。
 

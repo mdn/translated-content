@@ -12,7 +12,7 @@ HTML 文件的 {{glossary("Head", "head")}} 是網頁在加載完畢之後，不
       <th scope="row">需求：</th>
       <td>
         對 HTML 的基礎認識，內容我們已在
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >HTML 入門</a
         >中提及。
       </td>

@@ -120,9 +120,9 @@ myCar.year = 1969
 
 ## Enumerar las propiedades de un objeto
 
-A partir de [ECMAScript 5](/es/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla "/es/docs/JavaScript/ECMAScript_5_support_in_Mozilla"), hay tres formas nativas para enumerar/recorrer las propiedades de objetos:
+A partir de [ECMAScript 5](/es/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla), hay tres formas nativas para enumerar/recorrer las propiedades de objetos:
 
-- [`bucles for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in "/es/docs/JavaScript/Reference/Statements/for...in")
+- [`bucles for...in`](/es/docs/Web/JavaScript/Reference/Statements/for...in)
   Este método recorre todas las propiedades enumerables de un objeto y su cadena de prototipos
 - {{jsxref("Object.keys", "Object.keys(o)")}}
   Este método devuelve un arreglo con todos los nombres de propiedades enumerables ("`claves`") propias (no en la cadena de prototipos) de un objeto `o`.
@@ -188,8 +188,8 @@ También puedes utilizar iniciadores de objetos para crear arreglos. Consulta [a
 
 Como alternativa, puedes crear un objeto con estos dos pasos:
 
-1.  Definir el tipo de objeto escribiendo una función constructora. Existe una fuerte convención, con buena razón, para utilizar en mayúscula la letra inicial.
-2.  Crear una instancia del objeto con el operador `new`.
+1. Definir el tipo de objeto escribiendo una función constructora. Existe una fuerte convención, con buena razón, para utilizar en mayúscula la letra inicial.
+2. Crear una instancia del objeto con el operador `new`.
 
 Para definir un tipo de objeto, crea una función para el objeto que especifique su nombre, propiedades y métodos. Por ejemplo, supongamos que deseas crear un tipo de objeto para coches. Quieres llamar `Car` a este tipo de objeto, y deseas que tenga las siguientes propiedades: `make`, `model` y `year`. Para ello, podrías escribir la siguiente función:
 
@@ -311,7 +311,7 @@ Car.prototype.color = null;
 car1.color = 'black';
 ```
 
-Para más información, consulta la [propiedad `prototype`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype "/es/docs/JavaScript/Reference/Global Objects/Function/prototype") del objeto `Function` en la [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
+Para más información, consulta la [propiedad `prototype`](/es/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) del objeto `Function` en la [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
 
 ## Definición de métodos
 

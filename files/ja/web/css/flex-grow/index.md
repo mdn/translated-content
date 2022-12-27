@@ -1,15 +1,6 @@
 ---
 title: flex-grow
 slug: Web/CSS/flex-grow
-tags:
-  - CSS
-  - CSS Flexible Boxes
-  - CSS Property
-  - NeedsContent
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.flex-grow
-translation_of: Web/CSS/flex-grow
 ---
 {{CSSRef}}
 

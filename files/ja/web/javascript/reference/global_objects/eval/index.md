@@ -1,15 +1,6 @@
 ---
 title: eval()
 slug: Web/JavaScript/Reference/Global_Objects/eval
-tags:
-  - Evaluating JavaScript
-  - JavaScript
-  - メソッド
-  - リファレンス
-  - 警告
-  - eval
-browser-compat: javascript.builtins.eval
-translation_of: Web/JavaScript/Reference/Global_Objects/eval
 ---
 {{jsSidebar("Objects")}}
 

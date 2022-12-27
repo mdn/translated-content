@@ -1,13 +1,6 @@
 ---
 title: 428 Precondition Required
 slug: Web/HTTP/Status/428
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - クライアントエラー
-  - ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/428
 ---
 {{HTTPSidebar}}
 

@@ -336,7 +336,7 @@ a?.b.c;        // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` �
             <td><code>… &lt;= …</code></td>
         </tr>
         <tr>
-            <td><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than">大于 (&gt;)</a></td>
+            <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than">大于 (&gt;)</a></td>
             <td><code>… &gt; …</code></td>
         </tr>
         <tr>

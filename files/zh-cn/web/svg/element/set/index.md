@@ -16,12 +16,12 @@ slug: Web/SVG/Element/set
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [动画事件属性](/en/SVG/Attribute#AnimationEvent) »
-- [Xlink 属性](/en/SVG/Attribute#XLink) »
-- [动画属性目标属性](/en/SVG/Attribute#AnimationAttributeTarget) »
-- [动画定时属性](/en/SVG/Attribute#AnimationTiming) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [动画事件属性](/zh-CN/SVG/Attribute#AnimationEvent) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
+- [动画属性目标属性](/zh-CN/SVG/Attribute#AnimationAttributeTarget) »
+- [动画定时属性](/zh-CN/SVG/Attribute#AnimationTiming) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### 专有属性
@@ -30,7 +30,7 @@ slug: Web/SVG/Element/set
 
 ## DOM 接口
 
-该元素实现了[`SVGSetElement`](/en/DOM/SVGSetElement) 接口。
+该元素实现了[`SVGSetElement`](/zh-CN/DOM/SVGSetElement) 接口。
 
 ## 参见
 

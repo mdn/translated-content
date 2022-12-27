@@ -1,17 +1,6 @@
 ---
 title: Intl.DisplayNames.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
-tags:
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Intl.DisplayNames.resolvedOptions
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions
 ---
 {{JSRef}}
 

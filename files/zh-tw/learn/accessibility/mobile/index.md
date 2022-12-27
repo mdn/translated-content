@@ -13,7 +13,7 @@ With web access on mobile devices being so popular, and popular platforms such a
       <td>
         Basic computer literacy, a basic understanding of HTML, CSS, and
         JavaScript, and an understanding of the
-        <a href="/en-US/docs/Learn/Accessibility"
+        <a href="/zh-TW/docs/Learn/Accessibility"
           >previous articles in the course</a
         >.
       </td>

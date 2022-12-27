@@ -4,7 +4,7 @@ slug: Web/CSS/flex-grow
 ---
 {{CSSRef}}
 
-CSS 属性 **`flex-grow`** [CSS](/en-US/docs/Web/CSS) 设置 flex 项 [主尺寸](https://www.w3.org/TR/css-flexbox/#main-size) 的 flex 增长系数。
+CSS 属性 **`flex-grow`** [CSS](/zh-CN/docs/Web/CSS) 设置 flex 项 [主尺寸](https://www.w3.org/TR/css-flexbox/#main-size) 的 flex 增长系数。
 
 {{EmbedInteractiveExample("pages/css/flex-grow.html")}}
 

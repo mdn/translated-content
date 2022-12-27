@@ -49,4 +49,4 @@ function init() {
 
 ## 相关链接
 
-- [{{event("pointerup")}}](/en-US/docs/Web/Events/pointerup)
+- [{{event("pointerup")}}](/zh-CN/docs/Web/Events/pointerup)

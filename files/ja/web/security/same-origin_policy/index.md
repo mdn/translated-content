@@ -1,16 +1,6 @@
 ---
 title: 同一オリジンポリシー
 slug: Web/Security/Same-origin_policy
-tags:
-  - CORS
-  - Host
-  - JavaScript
-  - Same-origin policy
-  - Security
-  - URL
-  - origin
-  - secure
-translation_of: Web/Security/Same-origin_policy
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 

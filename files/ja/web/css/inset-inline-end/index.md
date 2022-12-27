@@ -1,15 +1,6 @@
 ---
 title: inset-inline-end
 slug: Web/CSS/inset-inline-end
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - NeedsContent
-  - リファレンス
-  - 'recipe:css-property'
-translation_of: Web/CSS/inset-inline-end
 ---
 {{CSSRef}}
 

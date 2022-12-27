@@ -1,14 +1,6 @@
 ---
 title: unicode-bidi
 slug: Web/CSS/unicode-bidi
-tags:
-  - BiDi
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.unicode-bidi
-translation_of: Web/CSS/unicode-bidi
 ---
 {{CSSRef}}
 

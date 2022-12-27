@@ -4,7 +4,7 @@ slug: Web/API/MediaRecorder/pause
 ---
 {{APIRef("MediaStream Recording")}}
 
-The **`Media.pause()`** method (part of the [MediaRecorder API](/en-US/docs/Web/API/MediaRecorder_API)) is used to pause recording of media streams.
+The **`Media.pause()`** method (part of the [MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API)) is used to pause recording of media streams.
 
 When a `MediaRecorder` object’s `pause()`method is called, the browser queues a task that runs the below steps:
 
@@ -51,7 +51,7 @@ MediaRecorder.pause()
 
 ## See also
 
-- [Using the MediaRecorder API](/en-US/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
+- [Using the MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API)
 - [Web Dictaphone](http://mdn.github.io/web-dictaphone/): MediaRecorder + getUserMedia + Web Audio API visualization demo, by [Chris Mills](https://twitter.com/chrisdavidmills) ([source on Github](https://github.com/mdn/web-dictaphone/).)
 - [simpl.info MediaStream Recording demo](http://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12).
 - {{domxref("Navigator.getUserMedia")}}

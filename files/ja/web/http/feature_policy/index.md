@@ -1,14 +1,6 @@
 ---
 title: Feature Policy
 slug: Web/HTTP/Feature_Policy
-tags:
-  - Feature-Policy
-  - HTTP
-  - Reference
-  - セキュリティ
-  - ヘッダー
-  - 機能ポリシー
-translation_of: Web/HTTP/Feature_Policy
 ---
 {{HTTPSidebar}}
 

@@ -1,12 +1,6 @@
 ---
 title: protocol_handlers
 slug: Web/Manifest/protocol_handlers
-tags:
-  - protocol_handlers
-  - マニフェスト
-  - ウェブ
-  - 標準外
-translation_of: Web/Manifest/protocol_handlers
 ---
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{Non-standard_Header}}
 

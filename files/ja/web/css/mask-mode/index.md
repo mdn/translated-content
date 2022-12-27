@@ -1,15 +1,6 @@
 ---
 title: mask-mode
 slug: Web/CSS/mask-mode
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-mode
-translation_of: Web/CSS/mask-mode
 ---
 {{CSSRef}}
 

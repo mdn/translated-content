@@ -1,20 +1,6 @@
 ---
 title: text-shadow
 slug: Web/CSS/text-shadow
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スタイル
-  - CSS テキスト装飾
-  - HTML 色
-  - HTML スタイル
-  - Reference
-  - スタイル
-  - HTML のスタイル付け
-  - color
-  - recipe:css-property
-browser-compat: css.properties.text-shadow
-translation_of: Web/CSS/text-shadow
 ---
 {{CSSRef}}
 

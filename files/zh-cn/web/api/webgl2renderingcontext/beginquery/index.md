@@ -4,7 +4,7 @@ slug: Web/API/WebGL2RenderingContext/beginQuery
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
-[WebGL 2 API](/en-US/docs/Web/API/WebGL_API) 的**`WebGL2RenderingContext.beginQuery()`** 方法启动一个异步查询，`target` 参数表明是哪种类型的查询。
+[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 的**`WebGL2RenderingContext.beginQuery()`** 方法启动一个异步查询，`target` 参数表明是哪种类型的查询。
 
 ## 语法
 

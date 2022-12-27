@@ -37,7 +37,7 @@ if (condition);       // Caution, this "if" does nothing!
    killTheUniverse()  // So this gets always executed!!!
 ```
 
-另一个例子：[`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) 语句不带花括号（`{}`）。如果`three`为`true`, 不会发生任何事，`four`不会执行，同时`else`从句中的`launchRocket()`函数也不会执行。
+另一个例子：[`if...else`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句不带花括号（`{}`）。如果`three`为`true`, 不会发生任何事，`four`不会执行，同时`else`从句中的`launchRocket()`函数也不会执行。
 
 ```js
 if (one)

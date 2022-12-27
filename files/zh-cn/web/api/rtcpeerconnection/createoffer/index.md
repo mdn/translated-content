@@ -21,7 +21,7 @@ myPeerConnection.createOffer(successCallback, failureCallback, [options]) {{depr
 
 `RTCOfferOptions` 词典被用于自定义通过此方法创建 offer。
 
-- [`iceRestart`](/en-US/docs/Web/API/RTCOfferOptions/iceRestart) {{optional_inline}}
+- [`iceRestart`](/zh-CN/docs/Web/API/RTCOfferOptions/iceRestart) {{optional_inline}}
   - : 要在活动连接上重新启动 ICE，请将其设置为`true`。 这将导致返回的 offer 与已经存在的凭证不同。 如果您应用返回的 offer，则 ICE 将重新启动。 指定`false`以保留相同的凭据，因此不重新启动 ICE。 默认值为`false`。
 - `offerToReceiveAudio` {{optional_inline}} (Legacy)
 

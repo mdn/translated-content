@@ -1,14 +1,6 @@
 ---
 title: grid-row-start
 slug: Web/CSS/grid-row-start
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-row-start
-tra: Web/CSS/grid-row-start
 ---
 {{CSSRef}}
 

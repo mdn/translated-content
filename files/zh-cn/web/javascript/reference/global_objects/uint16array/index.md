@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
 
 ## 构造函数
 
-- [`Uint16Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array)
+- [`Uint16Array()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array)
   - : 创建一个新的 `Uint16Array` 对象。
 
 ## 静态属性
@@ -132,6 +132,6 @@ var uint16 = new Uint16Array(iterable);
 
 ## 可参阅
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

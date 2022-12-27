@@ -5,7 +5,7 @@ original_slug: Web/JavaScript/Reference/Operators/相等
 ---
 {{jsSidebar("Operators")}}
 
-等于运算符（`==`）检查其两个操作数是否相等，并返回`Boolean`结果。与[严格相等](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)运算符（`===`）不同，它会尝试强制类型转换并且比较不同类型的操作数。
+等于运算符（`==`）检查其两个操作数是否相等，并返回`Boolean`结果。与[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)运算符（`===`）不同，它会尝试强制类型转换并且比较不同类型的操作数。
 
 {{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
 
@@ -37,7 +37,7 @@ x == y
   - `Number`：`true`仅当两个操作数具有相同的值时才返回。`+0`并被`-0`视为相同的值。如果任一操作数为`NaN`，则返回`false`。
   - `Boolean`：`true`仅当操作数为两个`true`或两个`false`时才返回`true`。
 
-此运算符与[严格等于](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)（`===`）运算符之间最显着的区别在于，严格等于运算符不尝试类型转换。相反，严格相等运算符始终将不同类型的操作数视为不同。
+此运算符与[严格等于](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)（`===`）运算符之间最显着的区别在于，严格等于运算符不尝试类型转换。相反，严格相等运算符始终将不同类型的操作数视为不同。
 
 ## 例子
 
@@ -109,6 +109,6 @@ console.log(d == s);    //true
 
 ## 参见
 
-- [不等式运算符](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [严格相等运算符](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-- [严格的不等式运算符](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
+- [不等式运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [严格相等运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [严格的不等式运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

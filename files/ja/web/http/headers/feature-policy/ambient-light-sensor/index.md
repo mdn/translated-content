@@ -1,13 +1,6 @@
 ---
 title: 'Feature-Policy: ambient-light-sensor'
 slug: Web/HTTP/Headers/Feature-Policy/ambient-light-sensor
-tags:
-  - Ambient Light Sensor
-  - 機能ポリシー
-  - HTTP
-  - 実験的
-browser-compat: http.headers.Feature-Policy.ambient-light-sensor
-translation_of: Web/HTTP/Headers/Feature-Policy/ambient-light-sensor
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

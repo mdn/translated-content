@@ -107,7 +107,7 @@ var a, b = a = "A";
 console.log(x + y); // undefinedA
 </pre>
 
-<p>Então, <span style="font-family: consolas,monaco,andale mono,monospace;">x</span> e <span style="font-family: consolas,monaco,andale mono,monospace;">y</span> são declarados antes de qualquer código seja executado, a atribuição ocorre posteriormente. Quando "<span style="font-family: consolas,monaco,andale mono,monospace;">x = y</span>" for executado, y existe e nenhum exceção <span style="font-family: consolas,monaco,andale mono,monospace;">ReferenceError</span> é lançada, e o valor de y será considerado como '<code style="font-style: normal;">undefined</code>'. Por este motivo, este valor é atribuido a <span style="font-family: consolas,monaco,andale mono,monospace;">x</span>. Depois disso, o valor 'A' é atribuido a variável <span style="font-family: consolas,monaco,andale mono,monospace;">y</span>. Consequentemente, depois da primeira linha, <span style="font-family: consolas,monaco,andale mono,monospace;">x === undefined &amp;&amp; y === 'A'</span>, então o resultado.</p>
+<p>Então, x e y são declarados antes de qualquer código seja executado, a atribuição ocorre posteriormente. Quando "x = y" for executado, y existe e nenhum exceção ReferenceError é lançada, e o valor de y será considerado como '<code style="font-style: normal;">undefined</code>'. Por este motivo, este valor é atribuido a x. Depois disso, o valor 'A' é atribuido a variável y. Consequentemente, depois da primeira linha, x === undefined &amp;&amp; y === 'A', então o resultado.</p>
 
 <h3 id="Iniciando_diversas_variáveis">Iniciando diversas variáveis</h3>
 

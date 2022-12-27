@@ -1,13 +1,6 @@
 ---
 title: SourceMap
 slug: Web/HTTP/Headers/SourceMap
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - ヘッダー
-  - リファレンス
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/SourceMap
 ---
 {{HTTPSidebar}}
 

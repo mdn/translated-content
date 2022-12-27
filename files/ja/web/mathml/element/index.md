@@ -1,10 +1,6 @@
 ---
 title: MathML 要素リファレンス
 slug: Web/MathML/Element
-tags:
-  - MathML
-  - MathML Reference
-translation_of: Web/MathML/Element
 ---
 これは、MathML **プレゼンテーション** 要素のアルファベット順のリストです。
 

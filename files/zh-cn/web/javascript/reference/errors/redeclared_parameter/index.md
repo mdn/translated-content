@@ -18,7 +18,7 @@ SyntaxError: Cannot declare a let variable twice: 'x' (WebKit)
 
 ## 哪里出错了？
 
-某个变量名称已经作为函数参数出现了，但是又使用了 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) 在函数体里重声明了。在 JavaScript 中不允许使用 let 在相同的函数或块范围内重新声明相同的变量。
+某个变量名称已经作为函数参数出现了，但是又使用了 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 在函数体里重声明了。在 JavaScript 中不允许使用 let 在相同的函数或块范围内重新声明相同的变量。
 
 ## 示例
 
@@ -50,7 +50,7 @@ function f(arg) {
 
 ## 相关
 
-- [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)
-- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
-- [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)
-- [Declaring variables](/en-US/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations) in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)
+- [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const)
+- [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)
+- [Declaring variables](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_Types#Declarations) in the [JavaScript Guide](/zh-CN/docs/Web/JavaScript/Guide)

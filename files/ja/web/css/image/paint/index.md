@@ -1,17 +1,7 @@
 ---
 title: paint()
 slug: Web/CSS/image/paint
-tags:
-  - CSS
-  - CSS 関数
-  - CSS4-images
-  - 関数
-  - Houdini
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/image/paint()
 original_slug: Web/CSS/image/paint()
-browser-compat: css.types.image.paint
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

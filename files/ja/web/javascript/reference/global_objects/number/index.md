@@ -1,14 +1,6 @@
 ---
 title: Number
 slug: Web/JavaScript/Reference/Global_Objects/Number
-tags:
-  - クラス
-  - JavaScript
-  - Number
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Number
-translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
 {{JSRef}}**`Number`** は[プリミティブラッパーオブジェクト](/ja/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript)で、 `37` や `-9.25` のような数値を表現したり操作したりするために使用されます。
 

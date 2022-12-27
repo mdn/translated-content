@@ -1,12 +1,6 @@
 ---
 title: <xsl:processing-instruction>
 slug: Web/XSLT/Element/processing-instruction
-tags:
-  - XSLT
-  - processing-instruction
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/processing-instruction
 ---
 {{ XsltRef() }}
 

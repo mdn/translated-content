@@ -42,4 +42,4 @@ slug: Web/API/Element/animationstart_event
 
 ## 另请参阅
 
-- [Using CSS Animations](/en-US/docs/CSS/Using_CSS_animations)
+- [Using CSS Animations](/zh-CN/docs/CSS/Using_CSS_animations)

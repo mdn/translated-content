@@ -1,12 +1,6 @@
 ---
 title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Status/505
-tags:
-  - HTTP
-  - サーバーエラー
-  - ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/505
 ---
 {{HTTPSidebar}}
 

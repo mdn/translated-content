@@ -1,15 +1,6 @@
 ---
 title: リソースと URI
 slug: Web/HTTP/Resources_and_URIs
-tags:
-  - HTTP
-  - MIME
-  - MIME タイプ
-  - URI
-  - URL
-  - リソース
-  - 概要
-translation_of: Web/HTTP/Resources_and_URIs
 ---
 {{HTTPSidebar}}
 

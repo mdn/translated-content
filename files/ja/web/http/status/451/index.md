@@ -1,12 +1,6 @@
 ---
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
-tags:
-  - Client error
-  - HTTP
-  - Reference
-  - Status code
-translation_of: Web/HTTP/Status/451
 ---
 {{HTTPSidebar}}
 

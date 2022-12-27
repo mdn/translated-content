@@ -4,7 +4,7 @@ slug: Web/API/Element/pointerleave_event
 ---
 {{APIRef("HTML DOM")}}
 
-就像在{{domxref("Element")}}或{{domxref("Window")}}中点击类似，在某目标区域内，发生触点（鼠标指针，触摸等）行为时会触发源于{{event("pointerleave")}}事件{{domxref("GlobalEventHandlers","global event handler", "", 1)}}行为。 这个事件本身属于 [Pointer Events API](/en-US/docs/Web/API/Pointer_events) 的一部分。
+就像在{{domxref("Element")}}或{{domxref("Window")}}中点击类似，在某目标区域内，发生触点（鼠标指针，触摸等）行为时会触发源于{{event("pointerleave")}}事件{{domxref("GlobalEventHandlers","global event handler", "", 1)}}行为。 这个事件本身属于 [Pointer Events API](/zh-CN/docs/Web/API/Pointer_events) 的一部分。
 
 ## 语法
 
@@ -41,7 +41,7 @@ function init() {
 </html>
 ```
 
-查看 [Using Pointer Events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events) 以了解更多详情。
+查看 [Using Pointer Events](/zh-CN/docs/Web/API/Pointer_events/Using_Pointer_Events) 以了解更多详情。
 
 ## 规格
 
@@ -53,6 +53,6 @@ function init() {
 
 ## 参考
 
-- [Pointer events](/en-US/docs/Web/API/Pointer_events)
-- [Using pointer events](/en-US/docs/Web/API/Pointer_events/Using_Pointer_Events)
+- [Pointer events](/zh-CN/docs/Web/API/Pointer_events)
+- [Using pointer events](/zh-CN/docs/Web/API/Pointer_events/Using_Pointer_Events)
 - {{event("pointerleave")}} 以及它实现的 {{domxref("PointerEvent")}} 接口

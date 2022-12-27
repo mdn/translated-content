@@ -1,13 +1,6 @@
 ---
 title: SharedArrayBuffer() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
-tags:
-  - コストラクター
-  - JavaScript
-  - リファレンス
-  - SharedArrayBuffer
-browser-compat: javascript.builtins.SharedArrayBuffer.SharedArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer
 ---
 {{JSRef}}
 

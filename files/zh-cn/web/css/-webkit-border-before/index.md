@@ -4,7 +4,7 @@ slug: Web/CSS/-webkit-border-before
 ---
 {{CSSRef}}{{Non-standard_header}}
 
-**`-webkit-border-before`** [CSS](/en-US/docs/Web/CSS) 属性 是一种用于简写的属性。它用于在样式表的单个位置设置各个起始边框属性值。
+**`-webkit-border-before`** [CSS](/zh-CN/docs/Web/CSS) 属性 是一种用于简写的属性。它用于在样式表的单个位置设置各个起始边框属性值。
 
 ```css
 /* Border values */

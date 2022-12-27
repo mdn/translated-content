@@ -2,7 +2,7 @@
 title: 结构化克隆算法
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 ---
-结构化克隆算法是[由 HTML5 规范定义](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data)的用于复制复杂 JavaScript 对象的算法。通过来自 [Workers](https://developer.mozilla.org/en-US/docs/Web/API/Worker)的 `postMessage()` 或使用 [IndexedDB](https://developer.mozilla.org/en-US/docs/Glossary/IndexedDB) 存储对象时在内部使用。它通过递归输入对象来构建克隆，同时保持先前访问过的引用的映射，以避免无限遍历循环。
+结构化克隆算法是[由 HTML5 规范定义](http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#safe-passing-of-structured-data)的用于复制复杂 JavaScript 对象的算法。通过来自 [Workers](/zh-CN/docs/Web/API/Worker)的 `postMessage()` 或使用 [IndexedDB](/zh-CN/docs/Glossary/IndexedDB) 存储对象时在内部使用。它通过递归输入对象来构建克隆，同时保持先前访问过的引用的映射，以避免无限遍历循环。
 
 ## 结构化克隆所不能做到的
 
@@ -39,6 +39,6 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 - [HTML5 Specification: Safe passing of structured data](http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data)
 - {{ domxref("window.history") }}
 - {{ domxref("window.postMessage()") }}
-- [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)
-- [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
-- [Components.utils.cloneInto](https://developer.mozilla.org/en-US/docs/Components.utils.cloneInto)
+- [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)
+- [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)
+- [Components.utils.cloneInto](/zh-CN/docs/Components.utils.cloneInto)

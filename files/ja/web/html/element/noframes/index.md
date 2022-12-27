@@ -1,17 +1,6 @@
 ---
 title: '<noframes>: フレームフォールバック要素'
 slug: Web/HTML/Element/noframes
-tags:
-  - 要素
-  - フレーム
-  - HTML
-  - HTML フレーム
-  - 非推奨
-  - リファレンス
-  - ウェブ
-  - noframes
-browser-compat: html.elements.noframes
-translation_of: Web/HTML/Element/noframes
 ---
 
 {{deprecated_header}}

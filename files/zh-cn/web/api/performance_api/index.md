@@ -43,7 +43,7 @@ slug: Web/API/Performance_API
 - {{domxref('PerformanceMeasure')}}
   - : 条目类型为"`measure`"的{{domxref('PerformanceEntry')}}抽象接口，该类型的条目通过调用{{domxref("Performance.measure","measure()")}}在浏览器的性能时间轴的两个标记之间添加一个命名的{{domxref("DOMHighResTimeStamp")}}（measure）来创建。
 - {{domxref('PerformanceNavigationTiming')}}
-  - : 提供方法和属性，用于存储和检索有关浏览器文档导航事件的[高采样率时间戳](/en-US/docs/Web/API/DOMHighResTimeStamp)或其他指标。
+  - : 提供方法和属性，用于存储和检索有关浏览器文档导航事件的[高采样率时间戳](/zh-CN/docs/Web/API/DOMHighResTimeStamp)或其他指标。
 - {{domxref('PerformanceObserver')}}
   - : 提供方法和属性，用于观察性能测量事件，并在浏览器的性能时间轴中记录新的{{domxref('PerformanceEntry')}}时进行通知。
 - {{domxref('PerformanceResourceTiming')}}

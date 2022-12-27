@@ -26,7 +26,7 @@ slug: Web/API/ExtendableEvent
 _从他的父辈继承，{{domxref("Event")}}。_
 
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : 延长事件的生存期。它将在 service worker 的 [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install) 和 [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate) 事件中被调用。
+  - : 延长事件的生存期。它将在 service worker 的 [`install`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/install) 和 [`activate`](/zh-CN/docs/Web/API/ServiceWorkerGlobalScope/activate) 事件中被调用。
 
 ## 实例
 

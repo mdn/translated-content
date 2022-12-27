@@ -1,13 +1,6 @@
 ---
 title: インクリメント (++)
 slug: Web/JavaScript/Reference/Operators/Increment
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-browser-compat: javascript.operators.increment
-translation_of: Web/JavaScript/Reference/Operators/Increment
 ---
 {{jsSidebar("Operators")}}
 

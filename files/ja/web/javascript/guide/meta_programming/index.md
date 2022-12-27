@@ -1,14 +1,6 @@
 ---
 title: メタプログラミング
 slug: Web/JavaScript/Guide/Meta_programming
-tags:
-  - ECMAScript 2015
-  - Guide
-  - JavaScript
-  - Proxy
-  - Reflect
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Iterators_and_Generators", "Web/JavaScript/Guide/Modules")}}
 

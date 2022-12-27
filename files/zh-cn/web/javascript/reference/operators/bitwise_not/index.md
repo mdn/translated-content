@@ -66,4 +66,4 @@ Note that due to using 32-bit representation for numbers both `~-1` and `~429496
 
 ## 参见
 
-- [Bitwise operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)
+- [Bitwise operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise)

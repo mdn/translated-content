@@ -1,14 +1,6 @@
 ---
 title: translate
 slug: Web/CSS/translate
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - 座標変換
-  - recipe:css-property
-browser-compat: css.properties.translate
-translation_of: Web/CSS/translate
 ---
 {{CSSRef}}
 

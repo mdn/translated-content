@@ -1,15 +1,6 @@
 ---
 title: transform-style
 slug: Web/CSS/transform-style
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 座標変換
-  - 実験的
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.transform-style
-translation_of: Web/CSS/transform-style
 ---
 {{CSSRef}}
 

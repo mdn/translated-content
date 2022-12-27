@@ -211,7 +211,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
     &#x20;key or clicks a "Close dialog" button which is part of the browser's UI.
     Also available via the {{DOMxRef("GlobalEventHandlers/oncancel", "oncancel")}} property.
 
-- [`error`](/en-US/docs/Web/API/Element/error_event)
+- [`error`](/zh-CN/docs/Web/API/Element/error_event)
   - : Fired when when a resource failed to load, or can't be used. For example, if a script has an execution error or an image can't be found or is invalid.
     Also available via the {{DOMxRef("GlobalEventHandlers/onerror", "onerror")}} property.
 - {{DOMxRef("Element/scroll_event", "scroll")}}
@@ -221,7 +221,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
   - : Fired when some text has been selected.
     Also available via the {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}} property.
 - {{DOMxRef("Element/show_event", "show")}}
-  - : Fired when a [contextmenu](/zh-CN/docs/Mozilla_event_reference/contextmenu) event was fired on/bubbled to an element that has a [contextmenu](/en-US/DOM/element.contextmenu) attribute. {{deprecated_inline}}
+  - : Fired when a [contextmenu](/zh-CN/docs/Mozilla_event_reference/contextmenu) event was fired on/bubbled to an element that has a [contextmenu](/zh-CN/DOM/element.contextmenu) attribute. {{deprecated_inline}}
     Also available via the {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}} property.
 - {{DOMxRef("Element/wheel_event","wheel")}}
   - : Fired when the user rotates a wheel button on a pointing device (typically a mouse).

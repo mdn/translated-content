@@ -1,13 +1,6 @@
 ---
 title: デクリメント (--)
 slug: Web/JavaScript/Reference/Operators/Decrement
-tags:
-  - デクリメント
-  - JavaScript
-  - 言語機能
-  - 演算子
-browser-compat: javascript.operators.decrement
-translation_of: Web/JavaScript/Reference/Operators/Decrement
 ---
 {{jsSidebar("Operators")}}
 

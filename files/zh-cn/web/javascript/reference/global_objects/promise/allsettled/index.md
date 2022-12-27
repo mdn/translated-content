@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
 {{JSRef}}
 
-该**`Promise.allSettled()`**方法返回一个在所有给定的 promise 都已经`fulfilled`或`rejected`后的 promise，并带有一个对象数组，每个对象表示对应的 promise 结果。
+该 **`Promise.allSettled()`** 方法返回一个在所有给定的 promise 都已经`fulfilled`或`rejected`后的 promise，并带有一个对象数组，每个对象表示对应的 promise 结果。
 
 当您有多个彼此不依赖的异步任务成功完成时，或者您总是想知道每个`promise`的结果时，通常使用它。
 

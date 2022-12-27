@@ -1,21 +1,6 @@
 ---
 title: x1
 slug: Web/SVG/Attribute/x1
-tags:
-  - Drawing Lines
-  - Gradients
-  - LInes
-  - SVG
-  - SVG Attribute
-  - SVG Gradients
-  - SVGグラデーション
-  - SVG属性
-  - Vector Graphics
-  - グラデーション
-  - ベクター画像
-  - 描画
-  - 直線
-translation_of: Web/SVG/Attribute/x1
 ---
 {{SVGRef}}
 

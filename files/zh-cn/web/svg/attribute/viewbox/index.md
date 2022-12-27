@@ -2,7 +2,7 @@
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
 ---
-« [SVG 属性参考](/en/SVG/Attribute)
+« [SVG 属性参考](/zh-CN/SVG/Attribute)
 
 viewBox 属性允许指定一个给定的一组图形伸展以适应特定的容器元素。
 
@@ -90,4 +90,4 @@ viewBox 属性的值是一个包含 4 个参数的列表 `min-x`, `min-y`, `widt
 
 ## See also
 
-- [SVG Getting Started: Positions](/en/SVG/Tutorial/Positions)
+- [SVG Getting Started: Positions](/zh-CN/SVG/Tutorial/Positions)

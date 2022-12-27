@@ -176,7 +176,7 @@ La façon dont un élément `<input>` fonctionne dépend grandement de la valeur
     </tr>
     <tr>
       <td><a href="/fr/docs/Web/HTML/Element/input/search"><code>search</code></a></td>
-      <td>Un champ texte sur une ligne pour des termes de recherche. Les sauts de ligne sont automatiquement retirés. Le contrôle peut disposer d'une icône permettant de réinitialiser le champ. Une icône de recherche est affichée à la place de la touche <kdb>Entrée</kbd>/ pour certains appareils avec des claviers dynamiques.</td>
+      <td>Un champ texte sur une ligne pour des termes de recherche. Les sauts de ligne sont automatiquement retirés. Le contrôle peut disposer d'une icône permettant de réinitialiser le champ. Une icône de recherche est affichée à la place de la touche <kbd>Entrée</kbd>/ pour certains appareils avec des claviers dynamiques.</td>
       <td id="examplesearch">
         <pre class="brush: html hidden">
 &#x3C;input type="search" name="search"/></pre>

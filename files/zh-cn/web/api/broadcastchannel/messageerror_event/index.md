@@ -24,7 +24,7 @@ slug: Web/API/BroadcastChannel/messageerror_event
       <th scope="row">Event handler property</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/API/BroadcastChannel/onmessageerror"
+          ><a href="/zh-CN/docs/Web/API/BroadcastChannel/onmessageerror"
             >onmessageerror</a
           ></code
         >
@@ -35,7 +35,7 @@ slug: Web/API/BroadcastChannel/messageerror_event
 
 ## 示例
 
-以下代码使用 [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) 来监听消息和错误：
+以下代码使用 [`addEventListener`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 来监听消息和错误：
 
 ```js
 const channel = new BroadcastChannel('example-channel');
@@ -49,7 +49,7 @@ channel.addEventListener('messageerror', (event) => {
 });
 ```
 
-使用 [`onmessage`](/en-US/docs/Web/API/BroadcastChannel/onmessage) 和 [`onmessageerror`](/en-US/docs/Web/API/BroadcastChannel/onmessageerror) 事件处理程序来实现相同效果：
+使用 [`onmessage`](/zh-CN/docs/Web/API/BroadcastChannel/onmessage) 和 [`onmessageerror`](/zh-CN/docs/Web/API/BroadcastChannel/onmessageerror) 事件处理程序来实现相同效果：
 
 ```js
 const channel = new BroadcastChannel('example-channel');

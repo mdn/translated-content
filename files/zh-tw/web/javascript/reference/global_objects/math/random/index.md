@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/random
 
 > **備註：** `Math.random()` 所產生的偽隨機小數不符合加密學安全性要求。_請勿使用於任何加密、資安相關領域。_
 >
-> _如有加密需求建議參考 Web Crypto API_[`window.crypto.getRandomValues()`](/en-US/docs/Web/API/RandomSource/getRandomValues)
+> _如有加密需求建議參考 Web Crypto API_[`window.crypto.getRandomValues()`](/zh-TW/docs/Web/API/RandomSource/getRandomValues)
 
 ## 語法
 
@@ -78,4 +78,4 @@ function getRandomIntInclusive(min, max) {
 
 ## 其他參考資料
 
-- [`window.crypto.getRandomValues()`](/en-US/docs/Web/API/RandomSource/getRandomValues)
+- [`window.crypto.getRandomValues()`](/zh-TW/docs/Web/API/RandomSource/getRandomValues)

@@ -1,23 +1,6 @@
 ---
 title: '複数の部分に分かれたラベル: 内部にフィールドがあるラベルに ARIA を使用'
 slug: Web/Accessibility/ARIA/forms/Multipart_labels
-tags:
-  - ARIA
-  - アクセシビリティ
-  - Ben Millard
-  - Firefox
-  - ガイド
-  - HELP
-  - HTML
-  - HTML 4
-  - JAWS
-  - NeedsContent
-  - aria-labelledby
-  - label
-  - solution
-  - trouble shoot
-  - troubleshoot
-translation_of: Web/Accessibility/ARIA/forms/Multipart_labels
 ---
 ## 問題点
 

@@ -1,10 +1,6 @@
 ---
 title: system-property
 slug: Web/XPath/Functions/system-property
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/system-property
 ---
 {{ XsltRef() }}
 

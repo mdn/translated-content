@@ -1,15 +1,6 @@
 ---
 title: inset-inline
 slug: Web/CSS/inset-inline
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.inset-inline
-translation_of: Web/CSS/inset-inline
 ---
 {{CSSRef}}
 

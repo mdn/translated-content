@@ -1,11 +1,6 @@
 ---
 title: stroke-linejoin
 slug: Web/SVG/Attribute/stroke-linejoin
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/stroke-linejoin
 ---
 « [SVG 属性リファレンスホーム](/ja/docs/Web/SVG/Attribute)
 

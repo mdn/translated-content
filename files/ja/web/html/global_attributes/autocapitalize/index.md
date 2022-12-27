@@ -1,13 +1,6 @@
 ---
 title: autocapitalize
 slug: Web/HTML/Global_attributes/autocapitalize
-tags:
-  - Autocapitalize
-  - HTML
-  - Reference
-  - ウェブ
-  - グローバル属性
-translation_of: Web/HTML/Global_attributes/autocapitalize
 ---
 {{HTMLSidebar("Global_attributes")}}
 

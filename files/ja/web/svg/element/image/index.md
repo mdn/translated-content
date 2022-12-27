@@ -1,12 +1,6 @@
 ---
 title: <image>
 slug: Web/SVG/Element/image
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-translation_of: Web/SVG/Element/image
 ---
 {{SVGRef}}
 

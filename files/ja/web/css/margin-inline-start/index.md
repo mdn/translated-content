@@ -1,17 +1,6 @@
 ---
 title: margin-inline-start
 slug: Web/CSS/margin-inline-start
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - margin-inline
-  - margin-inline-start
-  - recipe:css-property
-browser-compat: css.properties.margin-inline-start
-translation_of: Web/CSS/margin-inline-start
 ---
 {{CSSRef}}
 

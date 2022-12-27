@@ -1061,10 +1061,6 @@
     "modified": "2019-03-18T21:20:16.521Z",
     "contributors": ["mikelmg", "BubuAnabelas"]
   },
-  "Glossary/jQuery": {
-    "modified": "2019-03-23T22:02:49.153Z",
-    "contributors": ["yancarq", "velizluisma"]
-  },
   "Glossary/jpeg": {
     "modified": "2019-03-23T22:15:35.380Z",
     "contributors": ["gparra989"]
@@ -13772,10 +13768,6 @@
       "orasio"
     ]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-03-12T19:44:40.392Z",
-    "contributors": ["davidenriq11", "mamptecnocrata"]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-10-15T21:37:33.978Z",
     "contributors": ["Nachec", "LeoE"]
@@ -14947,6 +14939,10 @@
     "modified": "2020-03-12T19:47:17.832Z",
     "contributors": ["lajaso", "jpmontoya182"]
   },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
+    "modified": "2020-03-12T19:44:40.392Z",
+    "contributors": ["davidenriq11", "mamptecnocrata"]
+  },
   "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
     "modified": "2020-10-15T22:13:14.699Z",
     "contributors": ["xochilpili"]
@@ -15294,6 +15290,10 @@
   "orphaned/Glossary/elemento": {
     "modified": "2019-01-16T19:38:18.287Z",
     "contributors": ["BubuAnabelas", "HerberWest"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2019-03-23T22:02:49.153Z",
+    "contributors": ["yancarq", "velizluisma"]
   },
   "orphaned/Guía_para_el_desarrollador_de_agregados_para_Firefox": {
     "modified": "2019-01-16T14:29:03.747Z",

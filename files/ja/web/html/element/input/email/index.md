@@ -1,14 +1,6 @@
 ---
 title: <input type="email">
 slug: Web/HTML/Element/input/email
-tags:
-  - Email
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - 入力型
-  - リファレンス
-translation_of: Web/HTML/Element/input/email
 ---
 
 {{HTMLRef("Input_types")}}

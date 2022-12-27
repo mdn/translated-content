@@ -13,10 +13,10 @@ slug: Learn/Server-side/Express_Nodejs/Introduction
     <tr>
       <th scope="row">前置需求:</th>
       <td>
-        基本的電腦知識。 對<a href="/en-US/docs/Learn/Server-side/First_steps"
+        基本的電腦知識。 對<a href="/zh-TW/docs/Learn/Server-side/First_steps"
           >伺服器端網站程式設計</a
         >的基本了解，特別是網站中<a
-          href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
+          href="/zh-TW/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >客戶端 - 伺服器交互的機制</a
         >。
       </td>
@@ -281,7 +281,7 @@ Most apps will use _third-party_ middleware in order to simplify common web deve
 To use third party middleware you first need to install it into your app using NPM. For example, to install the [morgan](http://expressjs.com/en/resources/middleware/morgan.html) HTTP request logger middleware, you'd do this:
 
 ```bash
-$ npm install morgan
+npm install morgan
 ```
 
 You could then call `use()` on the _Express application object_ to add the middleware to the stack:
@@ -396,7 +396,7 @@ _Express_ apps can use any database mechanism supported by _Node_ (_Express_ its
 In order to use these you have to first install the database driver using NPM. For example, to install the driver for the popular NoSQL MongoDB you would use the command:
 
 ```bash
-$ npm install mongodb
+npm install mongodb
 ```
 
 The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.

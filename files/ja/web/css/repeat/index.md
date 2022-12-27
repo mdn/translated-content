@@ -1,17 +1,7 @@
 ---
 title: repeat()
 slug: Web/CSS/repeat
-tags:
-  - CSS
-  - CSS 関数
-  - CSS グリッド
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/repeat()
 original_slug: Web/CSS/repeat()
-browser-compat: css.properties.grid-template-columns.repeat
 ---
 {{CSSRef}}
 

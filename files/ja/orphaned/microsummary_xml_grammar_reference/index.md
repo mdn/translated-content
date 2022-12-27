@@ -80,7 +80,7 @@ _なし。_
 
 各 [XSLT](ja/XSLT) について、`<stylesheet>` あるいは `<transform>` タグのどちらかを用いたスタイルシート子要素を指定します。これらはどちらも同じ機能を果たします。
 
-> **Note:** **注意：**\<template> 要素は必ずマイクロサマリ名前空間 (http\://www\.mozilla.org/microsummaries/0.1) 内になければなりませんが、その `<stylesheet>`/`<transform>` 子要素は必ず XSLT 名前空間 (http\://www\.w3.org/1999/XSL/Transform) 内になければなりません。
+> **Note:** **注意：**\<template> 要素は必ずマイクロサマリ名前空間 (`http://www.mozilla.org/microsummaries/0.1`) 内になければなりませんが、その `<stylesheet>`/`<transform>` 子要素は必ず XSLT 名前空間 (`http://www.w3.org/1999/XSL/Transform`) 内になければなりません。
 
 ## `<pages>` 要素
 

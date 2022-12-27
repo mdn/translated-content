@@ -1,13 +1,6 @@
 ---
 title: グリッドラッパー
 slug: Web/CSS/Layout_cookbook/Grid_wrapper
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - 料理帳
-  - レシピ
-translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 ---
 {{CSSRef}}
 

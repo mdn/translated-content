@@ -1,11 +1,6 @@
 ---
 title: 厳格モードへの移行
 slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
-tags:
-  - 上級者
-  - ガイド
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 ---
 {{jsSidebar("More")}}
 

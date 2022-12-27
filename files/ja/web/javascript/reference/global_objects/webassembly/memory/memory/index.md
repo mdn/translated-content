@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Memory() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
-tags:
-  - コンストラクター
-  - JavaScript
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Memory.Memory
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/Memory
 ---
 {{JSRef}}
 

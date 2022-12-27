@@ -1,17 +1,6 @@
 ---
 title: Intl.Collator.prototype.compare()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
-tags:
-  - Collator
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Collator.compare
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 ---
 {{JSRef}}
 

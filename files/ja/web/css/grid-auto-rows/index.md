@@ -1,13 +1,6 @@
 ---
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-browser-compat: css.properties.grid-auto-rows
-translation_of: Web/CSS/grid-auto-rows
 ---
 {{CSSRef}}
 

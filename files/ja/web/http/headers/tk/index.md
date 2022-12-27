@@ -1,15 +1,6 @@
 ---
 title: Tk
 slug: Web/HTTP/Headers/Tk
-tags:
-  - DNT
-  - HTTP
-  - ヘッダー
-  - リファレンス
-  - レスポンス
-  - レスポンスヘッダー
-  - 追跡
-translation_of: Web/HTTP/Headers/Tk
 ---
 {{HTTPSidebar}}
 

@@ -2,7 +2,9 @@
 title: ServiceWorkerRegistration.update()
 slug: Web/API/ServiceWorkerRegistration/update
 ---
-{{APIRef("Service Workers API")}}{{domxref("ServiceWorkerRegistration")}} 的**`update`**方法尝试更新 service worker。获得 worker 脚本的 URL，逐字节匹配新获取的 worker 和当前的 worker，存在差异的时候安装新的 worker。获取 worker 脚本的更新操作会忽略浏览器缓存的 24 小时前的内容。
+{{APIRef("Service Workers API")}}
+
+{{domxref("ServiceWorkerRegistration")}} 的 **`update`** 方法尝试更新 service worker。获得 worker 脚本的 URL，逐字节匹配新获取的 worker 和当前的 worker，存在差异的时候安装新的 worker。获取 worker 脚本的更新操作会忽略浏览器缓存的 24 小时前的内容。
 
 > **备注：** 这个特性也应用于 [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API).
 

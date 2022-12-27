@@ -1,19 +1,6 @@
 ---
 title: min-height
 slug: Web/CSS/min-height
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - 最小
-  - リファレンス
-  - 寸法
-  - height
-  - min-height
-  - recipe:css-property
-  - size
-browser-compat: css.properties.min-height
-translation_of: Web/CSS/min-height
 ---
 {{CSSRef}}
 

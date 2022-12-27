@@ -16,7 +16,7 @@ SVG 绘画中的每个容器元素或图形元素都可以提供一个`desc`描�
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 

@@ -1,9 +1,6 @@
 ---
 title: XSLT - パラメータの設定
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
-tags:
-  - XSLT
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Setting_Parameters
 ---
 ## パラメータの設定
 

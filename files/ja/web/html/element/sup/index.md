@@ -1,16 +1,6 @@
 ---
 title: '<sup>: 上付き文字要素'
 slug: Web/HTML/Element/sup
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/sup
 ---
 {{HTMLRef}}
 

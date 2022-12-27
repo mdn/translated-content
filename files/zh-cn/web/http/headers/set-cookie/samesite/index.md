@@ -90,6 +90,6 @@ RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRul
 
 ## 另请参阅
 
-- [HTTP cookies](/en-US/docs/Web/HTTP/Cookies)
+- [HTTP cookies](/zh-CN/docs/Web/HTTP/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}

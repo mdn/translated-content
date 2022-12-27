@@ -1,23 +1,6 @@
 ---
 title: XML のパースとシリアライズ
 slug: Web/Guide/Parsing_and_serializing_XML
-tags:
-  - AJAX
-  - Add-ons
-  - DOM
-  - DOM Parsing
-  - Extensions
-  - Guide
-  - HTMLDocument
-  - JSON
-  - Parsing
-  - Parsing XML
-  - Serializing
-  - Serializing XML
-  - XML
-  - XMLDocument
-  - XMLHttpRequest
-translation_of: Web/Guide/Parsing_and_serializing_XML
 ---
 場合によっては、{{Glossary("XML")}} のコンテンツを解析して {{Glossary("DOM")}} ツリーに変換する必要があるでしょう。または逆に、既存の DOM ツリーを XML にシリアライズすることもあります。この記事では、XML のシリアライズと解析の一般的な作業を容易にするため、ウェブプラットフォームで提供されるオブジェクトに注目します。
 

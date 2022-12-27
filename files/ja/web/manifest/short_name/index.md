@@ -1,12 +1,6 @@
 ---
 title: short_name
 slug: Web/Manifest/short_name
-tags:
-  - マニフェスト
-  - ウェブ
-  - short_name
-browser-compat: html.manifest.short_name
-translation_of: Web/Manifest/short_name
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

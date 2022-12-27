@@ -1,15 +1,6 @@
 ---
 title: scroll-padding-right
 slug: Web/CSS/scroll-padding-right
-tags:
-  - CSS
-  - Reference
-  - Web
-  - recipe:css-property
-  - scroll-padding
-  - scroll-padding-right
-browser-compat: css.properties.scroll-padding-right
-translation_of: Web/CSS/scroll-padding-right
 ---
 {{CSSRef}}
 

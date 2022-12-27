@@ -1,14 +1,6 @@
 ---
 title: tab-size
 slug: Web/CSS/tab-size
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.tab-size
-translation_of: Web/CSS/tab-size
 ---
 {{CSSRef}}
 

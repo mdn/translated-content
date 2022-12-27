@@ -1,13 +1,6 @@
 ---
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
-tags:
-  - Class
-  - ECMAScript 2015
-  - JavaScript
-  - Reference
-  - WeakMap
-translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap
 ---
 {{JSRef}}
 

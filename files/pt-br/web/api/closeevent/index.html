@@ -5,7 +5,7 @@ translation_of: Web/API/CloseEvent
 ---
 <p>{{APIRef("Websockets API")}}</p>
 
-<p>Um <code>CloseEvent</code> é enviado aos clientes que usam {{Glossary("WebSockets")}} quando a conexão está fechada (closed). Ele<span id="result_box" lang="pt"> <span>é enviado ao</span> ouvinte(listener) <span>pelo</span> <span>atributo</span> <code><span>onclose</span></code> <span>do objeto</span> <code><span>WebSocket</span></code><span>.</span></span></p>
+<p>Um <code>CloseEvent</code> é enviado aos clientes que usam {{Glossary("WebSockets")}} quando a conexão está fechada (closed). Ele é enviado ao ouvinte(listener) pelo atributo <code>onclose</code> do objeto <code>WebSocket</code>.</p>
 
 <h2 id="Construtor">Construtor</h2>
 
@@ -46,7 +46,7 @@ translation_of: Web/API/CloseEvent
    <tr>
     <td><code>1002</code></td>
     <td><code>CLOSE_PROTOCOL_ERROR</code></td>
-    <td>O "endpoint" finalizou a conexão <span id="result_box" lang="pt"><span> devido a</span> <span>um erro de protocolo</span><span>.</span></span></td>
+    <td>O "endpoint" finalizou a conexão  devido a um erro de protocolo.</td>
    </tr>
    <tr>
     <td><code>1003</code></td>
@@ -91,7 +91,7 @@ translation_of: Web/API/CloseEvent
    <tr>
     <td><code>1011</code></td>
     <td>Internal Error</td>
-    <td>O servidor está finalizando uma conexão por causa de que ele <span id="result_box" lang="pt"><span>encontrou uma condição inesperada</span> <span>que o impediu</span> <span>de cumprir</span> <span>a solicitação.</span></span></td>
+    <td>O servidor está finalizando uma conexão por causa de que ele encontrou uma condição inesperada que o impediu de cumprir a solicitação.</td>
    </tr>
    <tr>
     <td><code>1012</code></td>
@@ -104,7 +104,7 @@ translation_of: Web/API/CloseEvent
     <td><code>1013</code></td>
     <td>Try Again Later</td>
     <td>
-     <p><span id="result_box" lang="pt"><span>O servidor</span> <span>está </span></span> finalizando <span lang="pt"><span>a conexão devido a</span> <span>uma condição temporária</span><span>, por exemplo,</span> <span>ele</span> <span>estar sobrecarregado e</span> <span>estar rejeitando</span><span> alguns dos</span> <span>seus clientes.</span></span> [<a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Ref</a>]</p>
+     <p>O servidor está  finalizando a conexão devido a uma condição temporária, por exemplo, ele estar sobrecarregado e estar rejeitando alguns dos seus clientes. [<a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Ref</a>]</p>
     </td>
    </tr>
    <tr>
@@ -116,7 +116,7 @@ translation_of: Web/API/CloseEvent
     <td><code>1015</code></td>
     <td>TLS Handshake</td>
     <td>
-     <p><strong>Reservado.</strong> <span id="result_box" lang="pt"><span>Indica que a conexão</span> <span>foi fechada</span> <span>devido a uma falha</span> <span>para executar</span> <span>um "</span></span> TLS handshake" (por exemplo, o certificado do servidor não pode ser verificado).</p>
+     <p><strong>Reservado.</strong> Indica que a conexão foi fechada devido a uma falha para executar um " TLS handshake" (por exemplo, o certificado do servidor não pode ser verificado).</p>
     </td>
    </tr>
    <tr>
@@ -156,7 +156,7 @@ translation_of: Web/API/CloseEvent
 
 <dl>
  <dt>{{domxref("CloseEvent.initCloseEvent()")}} {{Non-standard_inline}} {{Obsolete_inline}}</dt>
- <dd>Inicializa o valor de um <code>CloseEvent</code> criado. Se o evento já tenha sido enviado, este método não realiza nada.  <span class="short_text" id="result_box" lang="pt"><span>Não use</span> <span>este método</span> <span>mais</span></span>, use o construtor {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} em vez disso.</dd>
+ <dd>Inicializa o valor de um <code>CloseEvent</code> criado. Se o evento já tenha sido enviado, este método não realiza nada.  Não use este método mais, use o construtor {{domxref("CloseEvent.CloseEvent", "CloseEvent()")}} em vez disso.</dd>
 </dl>
 
 <h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>

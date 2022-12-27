@@ -1,16 +1,6 @@
 ---
 title: text-transform
 slug: Web/CSS/text-transform
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト
-  - レイアウト
-  - Reference
-  - recipe:css-property
-  - 日本語処理
-browser-compat: css.properties.text-transform
-translation_of: Web/CSS/text-transform
 ---
 {{CSSRef}}
 

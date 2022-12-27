@@ -40,7 +40,7 @@ pointer-events: unset;
 - `auto`
   - : 与`pointer-events`属性未指定时的表现效果相同，对于 SVG 内容，该值与`visiblePainted`效果相同
 - `none`
-  - : 元素永远不会成为鼠标事件的[target](https://developer.mozilla.org/en-US/docs/Web/API/event.target)。但是，当其后代元素的`pointer-events`属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。
+  - : 元素永远不会成为鼠标事件的[target](/zh-CN/docs/Web/API/event.target)。但是，当其后代元素的`pointer-events`属性指定其他值时，鼠标事件可以指向后代元素，在这种情况下，鼠标事件将在捕获或冒泡阶段触发父元素的事件侦听器。
 - `visiblePainted`
 
   - : 只适用于 SVG。元素只有在以下情况才会成为鼠标事件的目标：

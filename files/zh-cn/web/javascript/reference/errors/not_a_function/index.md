@@ -168,4 +168,4 @@ import helpers from './helpers'
 
 ## 相关
 
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions)

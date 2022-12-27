@@ -32,5 +32,5 @@ a &= 2; // 0
 
 ## 参见
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Bitwise AND operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)
+- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Bitwise AND operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)

@@ -1,14 +1,6 @@
 ---
 title: <strike>
 slug: Web/HTML/Element/strike
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.strike
-translation_of: Web/HTML/Element/strike
 ---
 
 {{HTMLRef}}{{deprecated_header}}

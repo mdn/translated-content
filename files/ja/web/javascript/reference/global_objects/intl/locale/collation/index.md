@@ -1,17 +1,6 @@
 ---
 title: Intl.Locale.prototype.collation
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Locale.collation
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation
 ---
 {{JSRef}}
 

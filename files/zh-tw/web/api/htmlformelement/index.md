@@ -100,7 +100,7 @@ Extract information from a form element and set some of its attributes:
 </script>
 ```
 
-Submit a form in a [popup window](/en-US/docs/Web/API/Window/open):
+Submit a form in a [popup window](/zh-TW/docs/Web/API/Window/open):
 
 ```html
 <!doctype html>
@@ -149,7 +149,7 @@ function popupSend (oFormElement) {
 
 ### 使用 `XMLHttpRequest` 提交表單及上傳檔案
 
-If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read [this paragraph](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
+If you want to know how to serialize and submit a form using the {{domxref("XMLHttpRequest")}} API, please read [this paragraph](/zh-TW/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
 
 ## 規範
 

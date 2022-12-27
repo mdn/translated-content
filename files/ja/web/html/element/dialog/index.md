@@ -1,18 +1,6 @@
 ---
 title: '<dialog>: ダイアログ要素'
 slug: Web/HTML/Element/dialog
-tags:
-  - Dialog
-  - Experimental
-  - HTML
-  - HTML 対話操作
-  - HTML:フローコンテンツ
-  - HTML:区分化ルート
-  - Reference
-  - ウェブ
-  - ダイアログ
-  - 要素
-translation_of: Web/HTML/Element/dialog
 ---
 {{HTMLRef}}
 

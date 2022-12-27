@@ -1,14 +1,6 @@
 ---
 title: 右シフト (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.right_shift
-translation_of: Web/JavaScript/Reference/Operators/Right_shift
 ---
 {{jsSidebar("Operators")}}
 

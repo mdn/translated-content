@@ -7,7 +7,7 @@ slug: Web/API/WebGLRenderingContext/vertexAttribPointer
 The **`WebGLRenderingContext.vertexAttribPointer()`** method of the [WebGL API](/zh-CN/docs/Web/API/WebGL_API) binds the buffer currently bound to `gl.ARRAY_BUFFER` to a generic vertex attribute of the current vertex buffer object and specifies its layout.
 告诉显卡从当前绑定的缓冲区（bindBuffer() 指定的缓冲区）中读取顶点数据。
 
-WebGL API 的**`WebGLRenderingContext.vertexAttribPointer()`**方法绑定当前缓冲区范围到`gl.ARRAY_BUFFER`,成为当前顶点缓冲区对象的通用顶点属性并指定它的布局 (缓冲区对象中的偏移量)。
+WebGL API 的 **`WebGLRenderingContext.vertexAttribPointer()`** 方法绑定当前缓冲区范围到`gl.ARRAY_BUFFER`,成为当前顶点缓冲区对象的通用顶点属性并指定它的布局 (缓冲区对象中的偏移量)。
 
 ## Syntax
 

@@ -1,16 +1,6 @@
 ---
 title: instanceof
 slug: Web/JavaScript/Reference/Operators/instanceof
-tags:
-  - JavaScript
-  - 言語機能
-  - オブジェクト
-  - 演算子
-  - プロトタイプ
-  - 関連演算子
-  - instanceof
-browser-compat: javascript.operators.instanceof
-translation_of: Web/JavaScript/Reference/Operators/instanceof
 ---
 {{jsSidebar("Operators")}}
 

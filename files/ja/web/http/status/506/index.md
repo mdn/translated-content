@@ -1,11 +1,6 @@
 ---
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Status/506
-tags:
-  - HTTP
-  - Server error
-  - Status code
-translation_of: Web/HTTP/Status/506
 ---
 {{HTTPSidebar}}
 

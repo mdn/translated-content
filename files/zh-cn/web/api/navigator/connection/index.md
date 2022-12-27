@@ -26,4 +26,4 @@ connectionInfo = navigator.connection
 
 ## 参考资料
 
-- [Online and offline events](/en-US/docs/Online_and_offline_events)
+- [Online and offline events](/zh-CN/docs/Online_and_offline_events)

@@ -1,16 +1,6 @@
 ---
 title: <area>
 slug: Web/HTML/Element/area
-tags:
-  - Content
-  - Element
-  - HTML
-  - HTML:Flow content
-  - HTML:Phrasing content
-  - Multimedia
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/area
 ---
 {{HTMLRef}}
 

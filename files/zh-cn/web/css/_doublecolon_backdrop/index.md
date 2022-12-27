@@ -4,7 +4,7 @@ slug: Web/CSS/::backdrop
 ---
 {{CSSRef}} {{SeeCompatTable}}
 
-**`::backdrop`** [CSS](/en-US/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是在任何处于[全屏模式](/zh-CN/docs/Web/API/Fullscreen_API)的元素下的即刻渲染的盒子（并且在所有其他在堆中的层级更低的元素之上）。
+**`::backdrop`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) 是在任何处于[全屏模式](/zh-CN/docs/Web/API/Fullscreen_API)的元素下的即刻渲染的盒子（并且在所有其他在堆中的层级更低的元素之上）。
 
 ```css
 /* Backdrop 只有通过 dialog.showModal() 打开对话框时会被显示 */

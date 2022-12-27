@@ -1,15 +1,6 @@
 ---
 title: MDN 시작하기
 slug: MDN/Community/Contributing/Getting_started
-tags:
-  - MDN 메타
-  - 가이드
-  - 공헌하기
-  - 기여하기
-  - 도움말
-  - 시작하기
-  - 초보자
-translation_of: MDN/Contribute/Getting_started
 original_slug: MDN/Contribute/Getting_started
 ---
 <div>{{MDNSidebar}}</div>

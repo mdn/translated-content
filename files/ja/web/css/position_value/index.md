@@ -1,15 +1,6 @@
 ---
 title: <position>
 slug: Web/CSS/position_value
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.position
-translation_of: Web/CSS/position_value
 ---
 {{CSSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: await
 slug: Web/JavaScript/Reference/Operators/await
-tags:
-  - 関数
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Primary Expression
-browser-compat: javascript.operators.await
-translation_of: Web/JavaScript/Reference/Operators/await
 ---
 {{jsSidebar("Operators")}}
 

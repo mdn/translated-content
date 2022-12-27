@@ -10,15 +10,15 @@ Resize Observer API 提供了一种高性能的机制，通过该机制，代码
 
 存在大量的响应式设计（以及其他相关）技术，它们可以响应元素大小的变化，但是以前，它们的实现常常很笨拙或者说生硬。
 
-举个例子，当视口更改大小时， [媒介查询](/en-US/docs/Web/CSS/Media_Queries) / {{domxref("window.matchMedia")}} 非常适合在特定点更新布局，但是如果要响应于特定元素的大小更改而更改布局，该元素又不是外部容器时，该怎么办？
+举个例子，当视口更改大小时， [媒介查询](/zh-CN/docs/Web/CSS/Media_Queries) / {{domxref("window.matchMedia")}} 非常适合在特定点更新布局，但是如果要响应于特定元素的大小更改而更改布局，该元素又不是外部容器时，该怎么办？
 
-为此，一种有限的解决方案是监听对适当事件的更改，该事件会提示您对更改大小感兴趣的元素 (例如 window [resize event](/en-US/docs/Web/API/Window/resize_event))，然后找出该元素之后新的尺寸或其他功能，例如，使用{{domxref("Element.getBoundingClientRect")}} 或者{{domxref("Window.getComputedStyle")}}，来调整大小。
+为此，一种有限的解决方案是监听对适当事件的更改，该事件会提示您对更改大小感兴趣的元素 (例如 window [resize event](/zh-CN/docs/Web/API/Window/resize_event))，然后找出该元素之后新的尺寸或其他功能，例如，使用{{domxref("Element.getBoundingClientRect")}} 或者{{domxref("Window.getComputedStyle")}}，来调整大小。
 
 这样的解决方案仅适用于有限的场景，对性能不利（不断调用上述方法会导致性能严重下降），并且在不更改浏览器窗口大小的情况下通常不起作用。
 
 Resize Observer API 提供了一种解决此类问题的解决方案，此外，它还使您能够轻松观察和响应元素内容或边框的大小变化，并以高效的方式做出响应。 它为 Web 平台中经常讨论的缺少[element queries](https://www.xanthir.com/b4PR0) 提供了 JavaScript 解决方案。
 
-用法很简单，并且与其他观察者（例如 [Performance Observer](/en-US/docs/Web/API/PerformanceObserver) 或者 [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API) )— 几乎相同，您可以使用 [`ResizeObserver()`](/en-US/docs/Web/API/ResizeObserver/ResizeObserver)构造函数创建一个新的{{domxref("ResizeObserver")}} ，然后使用 {{domxref("ResizeObserver.observe()")}}使其寻找特定元素大小的更改。 每次更改大小时，构造函数中设置的回调函数便会运行，从而提供对新维度的访问权限，并允许您根据需要执行任何操作。
+用法很简单，并且与其他观察者（例如 [Performance Observer](/zh-CN/docs/Web/API/PerformanceObserver) 或者 [Intersection Observer](/zh-CN/docs/Web/API/Intersection_Observer_API) )— 几乎相同，您可以使用 [`ResizeObserver()`](/zh-CN/docs/Web/API/ResizeObserver/ResizeObserver)构造函数创建一个新的{{domxref("ResizeObserver")}} ，然后使用 {{domxref("ResizeObserver.observe()")}}使其寻找特定元素大小的更改。 每次更改大小时，构造函数中设置的回调函数便会运行，从而提供对新维度的访问权限，并允许您根据需要执行任何操作。
 
 ## 接口
 

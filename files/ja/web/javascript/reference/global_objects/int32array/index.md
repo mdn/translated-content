@@ -1,14 +1,6 @@
 ---
 title: Int32Array
 slug: Web/JavaScript/Reference/Global_Objects/Int32Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Int32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int32Array
 ---
 {{JSRef}}
 

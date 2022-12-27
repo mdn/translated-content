@@ -1,14 +1,6 @@
 ---
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
-tags:
-  - クラス
-  - JavaScript
-  - 共有メモリー
-  - SharedArrayBuffer
-  - 型付き配列
-browser-compat: javascript.builtins.SharedArrayBuffer
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
 {{JSRef}}
 

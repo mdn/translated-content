@@ -1,18 +1,6 @@
 ---
 title: WebAssembly.instantiateStreaming()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - WebAssembly
-  - instantiate
-  - instantiateStreaming
-  - streaming
-browser-compat: javascript.builtins.WebAssembly.instantiateStreaming
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiateStreaming
 ---
 {{JSRef}}
 

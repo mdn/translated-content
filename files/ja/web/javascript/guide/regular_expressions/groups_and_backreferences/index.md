@@ -1,13 +1,6 @@
 ---
 title: グループと範囲
 slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Backreferences
-tags:
-  - Guide
-  - JavaScript
-  - Reference
-  - Regular Expressions
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 original_slug: Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges
 ---
 {{jsSidebar("JavaScript Guide")}}

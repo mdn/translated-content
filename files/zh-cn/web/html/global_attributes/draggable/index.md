@@ -25,4 +25,4 @@ slug: Web/HTML/Global_attributes/draggable
 
 ## 参考资料
 
-- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- All [global attributes](/zh-CN/docs/Web/HTML/Global_attributes).

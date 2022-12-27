@@ -264,7 +264,7 @@ setTimeout.call(myArray, myArray.myMethod, 2500, 2); // prints "two" after 2,5 s
 
 针对这个问题并没有原生的解决方案。
 
-> **备注：** JavaScript 1.8.5 引入了 [`Function.prototype.bind()`](/en-US/docs/JavaScript/Reference/Global_Objects/Function/bind) 方法，该方法允许显式地指定函数调用时 this 所指向的值 。该方法可以帮助你解决 this 指向不确定的问题。
+> **备注：** JavaScript 1.8.5 引入了 [`Function.prototype.bind()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Function/bind) 方法，该方法允许显式地指定函数调用时 this 所指向的值 。该方法可以帮助你解决 this 指向不确定的问题。
 
 使用`bind()`的例子：
 
@@ -288,7 +288,7 @@ setTimeout(myBoundMethod, 1500, "1"); // prints "one" after 1.5 seconds
 
 ### 传递字符串字面量
 
-向`setTimeout()`传递一个字符串而不是函数会遭受到与使用[`eval`](/en-US/docs/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21)一样的风险。
+向`setTimeout()`传递一个字符串而不是函数会遭受到与使用[`eval`](/zh-CN/docs/JavaScript/Reference/Global_Objects/eval#Don.27t_use_eval.21)一样的风险。
 
 ```js
 // 推荐

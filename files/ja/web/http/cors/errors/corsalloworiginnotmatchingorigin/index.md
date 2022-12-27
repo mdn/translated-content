@@ -1,19 +1,6 @@
 ---
 title: 'Reason: CORS header ''Access-Control-Allow-Origin'' does not match ''xyz'''
 slug: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
-tags:
-  - CORS
-  - CORSAllowOriginNotMatchingOrigin
-  - HTTP
-  - HTTPS
-  - エラー
-  - オリジン間
-  - コンソール
-  - セキュリティ
-  - トラブルシューティング
-  - メッセージ
-  - 理由
-translation_of: Web/HTTP/CORS/Errors/CORSAllowOriginNotMatchingOrigin
 ---
 {{HTTPSidebar}}
 

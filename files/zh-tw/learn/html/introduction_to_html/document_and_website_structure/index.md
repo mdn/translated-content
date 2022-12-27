@@ -12,15 +12,15 @@ slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
       <th scope="row">預備知識:</th>
       <td>
         Basic HTML familiarity, as covered in
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >Getting started with HTML</a
         >. HTML text formatting, as covered in
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML text fundamentals</a
         >. How hyperlinks work, as covered in
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
+          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
           >Creating hyperlinks</a
         >.
       </td>

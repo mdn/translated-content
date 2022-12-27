@@ -12,7 +12,7 @@ original_slug: Web/API/GlobalEventHandlers/onreset
 ---
 {{ ApiRef() }}
 
-La propriété **`GlobalEventHandlers.onreset`** contient un {{event("Event_handlers", "event handler")}} (_gestionnaire d'évènements_) déclenché quand un évènement {{event("reset")}} est reçu.
+La propriété **`GlobalEventHandlers.onreset`** contient Un gestionnaire d'évènement déclenché quand un évènement {{event("reset")}} est reçu.
 
 ## Syntaxe
 

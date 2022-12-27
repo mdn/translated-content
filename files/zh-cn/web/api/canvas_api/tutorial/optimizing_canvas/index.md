@@ -70,7 +70,7 @@ ctx.drawImage(myImage, 0.3, 0.5);
 
 ### 用 CSS transforms 特性缩放画布
 
-[CSS transforms](/en-US/docs/Web/Guide/CSS/Using_CSS_transforms) 使用 GPU，因此速度更快。最好的情况是不直接缩放画布，或者具有较小的画布并按比例放大，而不是较大的画布并按比例缩小。
+[CSS transforms](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transforms) 使用 GPU，因此速度更快。最好的情况是不直接缩放画布，或者具有较小的画布并按比例放大，而不是较大的画布并按比例缩小。
 
 ```js
 var scaleX = window.innerWidth / canvas.width;
@@ -85,7 +85,7 @@ stage.style.transform = 'scale(' + scaleToFit + ')';
 
 ### 关闭透明度
 
-如果你的游戏使用画布而且不需要透明，当使用 [`HTMLCanvasElement.getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext) 创建一个绘图上下文时把 `alpha` 选项设置为 `false` 。这个选项可以帮助浏览器进行内部优化。
+如果你的游戏使用画布而且不需要透明，当使用 [`HTMLCanvasElement.getContext()`](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 创建一个绘图上下文时把 `alpha` 选项设置为 `false` 。这个选项可以帮助浏览器进行内部优化。
 
 ```js
 var ctx = canvas.getContext('2d', { alpha: false });
@@ -97,7 +97,7 @@ var ctx = canvas.getContext('2d', { alpha: false });
 - 避免不必要的画布状态改变
 - 渲染画布中的不同点，而非整个新状态
 - 尽可能避免 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}特性
-- 尽可能避免[text rendering](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
+- 尽可能避免[text rendering](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
 - 尝试不同的方法来清除画布 ({{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}} vs. {{domxref("CanvasRenderingContext2D.fillRect", "fillRect()")}} vs. 调整 canvas 大小)
 - 有动画，请使用{{domxref("window.requestAnimationFrame()")}} 而非{{domxref("window.setInterval()")}}
 - 请谨慎使用大型物理库

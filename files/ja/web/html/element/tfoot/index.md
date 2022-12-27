@@ -1,14 +1,6 @@
 ---
 title: '<tfoot>: 表フッター要素'
 slug: Web/HTML/Element/tfoot
-tags:
-  - Element
-  - HTML
-  - HTML 表形式データ
-  - リファレンス
-  - 表
-  - ウェブ
-translation_of: Web/HTML/Element/tfoot
 ---
 
 {{HTMLRef}}

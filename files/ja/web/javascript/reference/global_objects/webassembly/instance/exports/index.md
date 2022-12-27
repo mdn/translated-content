@@ -1,15 +1,6 @@
 ---
 title: WebAssembly.Instance.prototype.exports
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports
-tags:
-  - API
-  - JavaScript
-  - プロパティ
-  - リファレンス
-  - WebAssembly
-  - exports
-  - instance
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/exports
 ---
 {{JSRef}}
 

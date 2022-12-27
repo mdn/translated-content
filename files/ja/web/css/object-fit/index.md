@@ -1,18 +1,6 @@
 ---
 title: object-fit
 slug: Web/CSS/object-fit
-tags:
-  - CSS
-  - CSS 画像
-  - CSS プロパティ
-  - レイアウト
-  - Reference
-  - css レイアウト
-  - object-fit
-  - recipe:css-property
-  - 寸法
-browser-compat: css.properties.object-fit
-translation_of: Web/CSS/object-fit
 ---
 {{CSSRef}}
 

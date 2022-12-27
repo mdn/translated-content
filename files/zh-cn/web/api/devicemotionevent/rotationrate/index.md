@@ -41,4 +41,4 @@ rotationRates 属性是一个只读对象，用于描述设备围绕其每个轴
 - {{ event("deviceorientation") }}
 - {{ domxref("DeviceOrientationEvent") }}
 - [Detecting device orientation](/zh-CN/docs/WebAPI/Detecting_device_orientation)
-- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)
+- [Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained)

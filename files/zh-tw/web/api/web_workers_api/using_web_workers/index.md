@@ -2,7 +2,7 @@
 title: 使用 Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
 ---
-Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行程式，而不干擾使用者介面運行，另外，Worker 也可以利用 [XMLHttpRequest](/en/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)；一個 worker 可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。
+Web Workers 提供簡單的方法讓網頁在背景執行緒 (Thread) 中執行程式，而不干擾使用者介面運行，另外，Worker 也可以利用 [XMLHttpRequest](/zh-TW/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)；一個 worker 可以藉由事件處理器來和 web worker 創造端互相傳送訊息，接下來本文會提供使用 web worker 的詳細說明。
 
 ## Web Workers API
 
@@ -16,7 +16,7 @@ Dedicated worker (專有 worker) 是一般 worker，只能被產生它的檔案�
 
 主執行緒和 worker 執行緒之間用 postMessage() 方法發送訊息，然後透過 `onmessage` 事件接受訊息 (訊息存在 {{event("Message")}} 事件的 data 屬性之中)，其中被傳送的資料並非共享而是複製一份後傳送。
 
-worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 [XMLHttpRequest](/en/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)。
+worker 可以產生新 worker，只要新 worker 的來源 (origin) 和父頁面相同，也可以利用 [XMLHttpRequest](/zh-TW/nsIXMLHttpRequest) 執行輸出/輸入(但是 responseXML 和 channel 這兩個屬性為 null)。
 
 ## Dedicated workers
 
@@ -641,7 +641,7 @@ onmessage 事件處理器會接收 worker 回傳的運算結果，然後顯示�
 除了 dedicated 和 shared web workers，還有其他種類：
 
 - [ServiceWorkers](/zh-TW/docs/Web/API/ServiceWorker_API) 基本上如同介於 web app 和瀏覽器以及網路之間的代理伺服器 (proxy server)，這類 worker 重點在實現離線服務，service worker 會攔截網路請求，然後依據網路連線和資源狀態做出反應，他們可以存取推播和背景同步 APIs。
-- Chrome Workers 是 Firefox 唯一的 worker 類型，他們可以用在開發 add-ons，或是想要使用 [js-ctypes](/en/js-ctypes)。詳情請見 {{domxref("ChromeWorker")}}。
+- Chrome Workers 是 Firefox 唯一的 worker 類型，他們可以用在開發 add-ons，或是想要使用 [js-ctypes](/zh-TW/js-ctypes)。詳情請見 {{domxref("ChromeWorker")}}。
 - [Audio Workers](/zh-TW/docs/Web/API/Web_Audio_API#Audio_Workers) 主要用於音效處理部分。
 
 ## Worker 可存取之函數與介面
@@ -663,7 +663,7 @@ worker 無法操作主頁面的物件與 DOM，如有相關需求，必須要間
 
 ## 延伸閱讀
 
-- [`Worker`](/en-US/docs/Web/API/Worker) interface
-- [`SharedWorker`](/en-US/docs/Web/API/SharedWorker) interface
+- [`Worker`](/zh-TW/docs/Web/API/Worker) interface
+- [`SharedWorker`](/zh-TW/docs/Web/API/SharedWorker) interface
 - [Functions available to workers](/zh-TW/docs/Web/API/Worker/Functions_and_classes_available_to_workers)
 - [Advanced concepts and examples](/zh-TW/docs/Web/API/Web_Workers_API/Using_web_workers)

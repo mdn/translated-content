@@ -1,13 +1,6 @@
 ---
 title: BigInt
 slug: Web/JavaScript/Reference/Global_Objects/BigInt
-tags:
-  - BigInt
-  - クラス
-  - JavaScript
-  - リファレンス
-browser-compat: javascript.builtins.BigInt
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt
 ---
 {{JSRef}}
 

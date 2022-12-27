@@ -2,7 +2,7 @@
 title: WebGLRenderingContext.createFramebuffer()
 slug: Web/API/WebGLRenderingContext/createFramebuffer
 ---
-{{APIRef("WebGL")}}**`WebGLRenderingContext.creatFramebuffer()`** 是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的一个方法，用来创建和初始化{{domxref("WebGLFramebuffer")}} 对象。
+{{APIRef("WebGL")}}**`WebGLRenderingContext.creatFramebuffer()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一个方法，用来创建和初始化{{domxref("WebGLFramebuffer")}} 对象。
 
 ## 语法
 

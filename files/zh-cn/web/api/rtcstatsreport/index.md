@@ -38,6 +38,6 @@ _... 即将到来 ..._
 
 ## 参见
 
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)
 - {{domxref("RTCPeerConnection")}}
 - {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpReceiver.getStats()")}}, and {{domxref("RTCRtpSender.getStats()")}}

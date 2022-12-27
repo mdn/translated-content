@@ -1,13 +1,6 @@
 ---
 title: 413 Payload Too Large
 slug: Web/HTTP/Status/413
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
-translation_of: Web/HTTP/Status/413
 ---
 {{HTTPSidebar}}
 

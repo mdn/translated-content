@@ -1,14 +1,6 @@
 ---
 title: JavaScript エラーリファレンス
 slug: Web/JavaScript/Reference/Errors
-tags:
-  - Debugging
-  - Error
-  - Errors
-  - Exception
-  - JavaScript
-  - exceptions
-translation_of: Web/JavaScript/Reference/Errors
 ---
 {{jsSidebar("Errors")}}
 

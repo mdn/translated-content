@@ -22,7 +22,7 @@ If the {{domxref("IdleDeadline")}} object's {{domxref("IdleDeadline.didTimeout",
 
 ## Example
 
-See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#Example) in the article [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API).
+See our [complete example](/zh-CN/docs/Web/API/Background_Tasks_API#Example) in the article [Cooperative Scheduling of Background Tasks API](/zh-CN/docs/Web/API/Background_Tasks_API).
 
 ## Specifications
 
@@ -34,7 +34,7 @@ See our [complete example](/en-US/docs/Web/API/Background_Tasks_API#Example) in 
 
 ## See also
 
-- [Collaborative Scheduling of Background Tasks](/en-US/docs/Web/API/Background_Tasks_API)
+- [Collaborative Scheduling of Background Tasks](/zh-CN/docs/Web/API/Background_Tasks_API)
 - {{domxref("IdleDeadline")}}
 - {{domxref("Window.requestIdleCallback()")}}
 - {{domxref("Window.cancelIdleCallback()")}}

@@ -1,20 +1,6 @@
 ---
 title: '<iframe>: インラインフレーム要素'
 slug: Web/HTML/Element/iframe
-tags:
-  - Content
-  - Element
-  - Embedded content
-  - Embedding
-  - Frames
-  - HTML
-  - HTML embedded content
-  - Inline Frames
-  - Reference
-  - Web
-  - embedded
-  - iframe
-translation_of: Web/HTML/Element/iframe
 ---
 {{HTMLRef}}
 

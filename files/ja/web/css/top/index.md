@@ -1,14 +1,6 @@
 ---
 title: top
 slug: Web/CSS/top
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.top
-translation_of: Web/CSS/top
 ---
 {{CSSRef}}
 

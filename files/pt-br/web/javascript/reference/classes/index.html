@@ -127,59 +127,59 @@ console.log(Ponto.distancia(p1, p2));</pre>
 
 <p>Quando um método estático ou protótipo é chamado sem um objeto "this" configurado (ou com "this" como boolean, string, number, undefined ou null), então o valor "this" será <strong><code>undefined</code></strong> dentro da função chamada. Autoboxing não vai acontecer. O comportamento será o mesmo se escrevemos o código no modo não-estrito.</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">class</span> <span class="class-name token">Animal</span> <span class="punctuation token">{</span>
-  falar<span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">static</span> comer<span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js">class Animal {
+  falar() {
+    return this;
+  }
+  static comer() {
+    return this;
+  }
+}
 
-<span class="keyword token">let</span> obj <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Animal</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;
-obj.falar(); // Animal {}</span>
-<span class="keyword token">let</span> falar <span class="operator token">=</span> obj<span class="punctuation token">.</span>falar<span class="punctuation token">;</span>
-falar<span class="punctuation token">()</span><span class="punctuation token">;</span> <span class="comment token">// undefined</span>
+let obj = new Animal();
+obj.falar(); // Animal {}
+let falar = obj.falar;
+falar(); // undefined
 
 Animal.comer(); // class Animal
-<span class="keyword token">let</span> comer <span class="operator token">=</span> Animal<span class="punctuation token">.</span>comer<span class="punctuation token">;</span>
-<span class="function token">comer</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// undefined</span></code></pre>
+let comer = Animal.comer;
+comer(); // undefined</pre>
 
 <p>Se escrevemos o código acima usando classes baseadas em função tradicional, então o autoboxing acontecerá com base no valor de "this" para o qual a função foi chamada.</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">Animal</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">}</span>
+<pre class="brush: js">function Animal() { }
 
-Animal<span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>falar <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+Animal.prototype.falar = function() {
+  return this;
+}
 
-Animal<span class="punctuation token">.</span>comer <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+Animal.comer = function() {
+  return this;
+}
 
-<span class="keyword token">let</span> obj <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Animal</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">let</span> falar <span class="operator token">=</span> obj<span class="punctuation token">.</span>falar<span class="punctuation token">;</span>
-falar<span class="punctuation token">()</span><span class="punctuation token">;</span> <span class="comment token">// objeto global</span>
+let obj = new Animal();
+let falar = obj.falar;
+falar(); // objeto global
 
-<span class="keyword token">let</span> comer <span class="operator token">=</span> Animal<span class="punctuation token">.</span>comer<span class="punctuation token">;</span>
-comer<span class="punctuation token">()</span><span class="punctuation token">;</span> <span class="comment token">// objeto global</span></code></pre>
+let comer = Animal.comer;
+comer(); // objeto global</pre>
 
 <h3 id="Propriedades_de_instância">Propriedades de instância</h3>
 
 <p>Propriedades de instâncias devem ser definidas dentro dos métodos da classe:</p>
 
-<pre><code>class Retangulo {
+<pre>class Retangulo {
   constructor(altura, largura) {
     this.altura = altura;
     this.largura = largura;
   }
-}</code>
+}
 </pre>
 
 <p>Propriedades de dados estáticos e propriedades de dados prototipados (prototype) devem ser definidos fora da declaração do corpo da classe.</p>
 
-<pre><code>Retangulo.larguraEstatico = 20;
-Retangulo.prototype.larguraPrototipagem = 25;</code></pre>
+<pre>Retangulo.larguraEstatico = 20;
+Retangulo.prototype.larguraPrototipagem = 25;</pre>
 
 <h2 id="Sub_classes_com_o_extends">Sub classes com o <code>extends</code></h2>
 
@@ -201,8 +201,8 @@ class Cachorro extends Animal {
   }
 }
 
-<code class="language-js"><span class="keyword token">let</span> cachorro <span class="operator token">=</span> <span class="keyword token">new</span> </code>Cachorro<code class="language-js"><span class="punctuation token">(</span><span class="string token">'Mat'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-cachorro<span class="punctuation token">.</span></code>falar<code class="language-js"><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+let cachorro = new Cachorro('Mat');
+cachorro.falar();
 </pre>
 
 <p>Se existir um contrutor nas subclasses, é necessário primeiro chamar super() antes de usar a keyword "this".</p>
@@ -228,7 +228,7 @@ cachorro.falar(); // Mitzie lati.</pre>
 
 <p>Note que classes não extendem objetos normais (não construíveis). Se você quer herdar de um objeto, é necessário utilizar {{jsxref("Object.setPrototypeOf()")}}:</p>
 
-<pre class="brush: js"><code>let Animal = {
+<pre class="brush: js">let Animal = {
    falar() {
       console.log(this.nome + ' faça barulho.');
    }
@@ -237,7 +237,7 @@ cachorro.falar(); // Mitzie lati.</pre>
 class Cachorro {
    constructor(nome) {
       this.nome = nome;
-</code>   }
+   }
 }
 
 Object.setPrototypeOf(Cachorro.prototype, Animal);

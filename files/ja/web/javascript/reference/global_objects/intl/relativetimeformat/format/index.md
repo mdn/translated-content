@@ -1,14 +1,6 @@
 ---
 title: Intl.RelativeTimeFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
-tags:
-  - IntI
-  - Internationalization
-  - JavaScript
-  - Method
-  - Reference
-  - RelativeTimeFormat
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
 ---
 {{JSRef}}
 

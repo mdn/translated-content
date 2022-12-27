@@ -1,14 +1,6 @@
 ---
 title: overflow-inline
 slug: Web/CSS/overflow-inline
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.overflow-inline
-translation_of: Web/CSS/overflow-inline
 ---
 {{CSSRef}}
 

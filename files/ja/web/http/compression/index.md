@@ -1,12 +1,6 @@
 ---
 title: HTTP の圧縮
 slug: Web/HTTP/Compression
-tags:
-  - Guide
-  - HTTP
-  - ガイド
-  - 圧縮
-translation_of: Web/HTTP/Compression
 ---
 {{HTTPSidebar}}
 

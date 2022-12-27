@@ -51,7 +51,7 @@ var x = function*(y) {
 
 - {{jsxref("Statements/function*", "function* statement")}}
 - {{jsxref("GeneratorFunction")}} 对象
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
 - {{jsxref("Function")}} 对象

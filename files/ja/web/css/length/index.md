@@ -1,16 +1,6 @@
 ---
 title: <length>
 slug: Web/CSS/length
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - length
-browser-compat: css.types.length
-translation_of: Web/CSS/length
 ---
 {{CSSRef}}
 

@@ -17,14 +17,14 @@ Promise<ResultObject> WebAssembly.instantiateStreaming(source, importObject);
 - _source_
   - : 一个{{domxref("Response")}}对象 或 一个可以履行（fulfill）一个（Response）的 {{jsxref("Promise")}}，表示你想要传输、编译和实例化的 .wasm 模块基础源。
 - _importObject_ {{optional_inline}}
-  - : 包含一些想要导入到新创建`Instance`中值的对象，例如方法 或 {{jsxref("WebAssembly.Memory")}} 对象。每个已编译模块的声明导入必须有一个匹配属性，否则抛出 [WebAssembly.LinkError](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError) 异常。
+  - : 包含一些想要导入到新创建`Instance`中值的对象，例如方法 或 {{jsxref("WebAssembly.Memory")}} 对象。每个已编译模块的声明导入必须有一个匹配属性，否则抛出 [WebAssembly.LinkError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError) 异常。
 
 ### Return value
 
 一个 `Promise`，通过 resolve 返回一个包含两个属性的 `ResultObject` ：
 
-- `module`: {{jsxref("WebAssembly.Module")}} 对象表示编译完成的 WebAssembly 模块。这个`Module`能够再次被实例化 或 通过[postMessage()](/en-US/docs/Web/API/Worker/postMessage)共享。
-- `instance`: {{jsxref("WebAssembly.Instance")}} 对象包含 WebAssembly 所有公开方法 [Exported WebAssembly functions](/en-US/docs/WebAssembly/Exported_functions).
+- `module`: {{jsxref("WebAssembly.Module")}} 对象表示编译完成的 WebAssembly 模块。这个`Module`能够再次被实例化 或 通过[postMessage()](/zh-CN/docs/Web/API/Worker/postMessage)共享。
+- `instance`: {{jsxref("WebAssembly.Instance")}} 对象包含 WebAssembly 所有公开方法 [Exported WebAssembly functions](/zh-CN/docs/WebAssembly/Exported_functions).
 
 ### Exceptions
 
@@ -54,8 +54,8 @@ WebAssembly.instantiateStreaming(fetch('simple.wasm'), importObject)
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
+- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)
 - [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [使用 Fetch](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch)

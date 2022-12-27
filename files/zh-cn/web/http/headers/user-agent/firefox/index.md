@@ -159,15 +159,15 @@ Firefox iOS 版使用 Safari 移动版的默认 User Agent 再加上 **FxiOS/\<v
 
 ## 对于应用、供应商、扩展程序的注意事项
 
-在 Firefox 4 和 Gecko 2.0 之前，扩展程序可以通过 `general.useragent.extra.identifier` 附加 User Agent 值，（参考 [废弃的 User Agent 值参考](https://developer.mozilla.org/En/User_Agent_Strings_Reference)）。不过 {{ Bug(581008) }} 出现后，这种操作已被禁止。
+在 Firefox 4 和 Gecko 2.0 之前，扩展程序可以通过 `general.useragent.extra.identifier` 附加 User Agent 值，（参考 [废弃的 User Agent 值参考](/En/User_Agent_Strings_Reference)）。不过 {{ Bug(581008) }} 出现后，这种操作已被禁止。
 
-在过去，特定的插件、扩展程序会在 User Agent 中添加字段，以表明他们被安装的来源网站。如果非要如此（请注意，这会减慢每个请求的发送速度），推荐的做法是 [设定自定义 HTTP 请求头](https://developer.mozilla.org/en/Setting_HTTP_request_headers)。
+在过去，特定的插件、扩展程序会在 User Agent 中添加字段，以表明他们被安装的来源网站。如果非要如此（请注意，这会减慢每个请求的发送速度），推荐的做法是 [设定自定义 HTTP 请求头](/zh-CN/Setting_HTTP_request_headers)。
 
 ## 参见
 
 - [Firefox OS User Agent](http://lawrencemandel.com/2012/07/27/decision-made-firefox-os-user-agent-string/) （参考博客文章以及 [bug 777710](https://bugzilla.mozilla.org/show_bug.cgi?id=777710)）
 - [Firefox 4 的最终 User Agent](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/)（博客文章）
-- [检测 UA 字符串以获得跨浏览器支持](/en/Browser_Detection_and_Cross_Browser_Support)
+- [检测 UA 字符串以获得跨浏览器支持](/zh-CN/Browser_Detection_and_Cross_Browser_Support)
 - [window.navigator.userAgent](../../../../en/DOM/window.navigator.userAgent)
 - [为 Fennec UA 字符串添加 Android 版本 (bug 1169772)](https://bugzilla.mozilla.org/show_bug.cgi?id=)
 

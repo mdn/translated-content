@@ -24,5 +24,5 @@ var mediaDevices = navigator.mediaDevices;
 
 ## 参考阅读
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API): The entry point to the documentation about the entire media stream API.
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API): Documentation about the WebRTC API, which is closely related.
+- [Media Capture and Streams API](/zh-CN/docs/Web/API/Media_Streams_API): The entry point to the documentation about the entire media stream API.
+- [WebRTC API](/zh-CN/docs/Web/API/WebRTC_API): Documentation about the WebRTC API, which is closely related.

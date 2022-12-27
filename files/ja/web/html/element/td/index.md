@@ -1,22 +1,6 @@
 ---
 title: '<td>: 表データセル要素'
 slug: Web/HTML/Element/td
-tags:
-  - Cells
-  - Data Cell
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Cell
-  - Table Data
-  - Tables
-  - Web
-  - cell
-  - data
-  - td
-browser-compat: html.elements.td
-translation_of: Web/HTML/Element/td
 ---
 
 {{HTMLRef}}

@@ -2,13 +2,14 @@
 title: ByteLengthQueuingStrategy.size()
 slug: Web/API/ByteLengthQueuingStrategy/size
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 {{domxref("ByteLengthQueuingStrategy")}} 接口的 **`size()`** 方法返回给定分块的 `byteLength` 属性。
 
 ## 语法
 
-```js
+```js-nolint
 size(chunk)
 ```
 
@@ -28,17 +29,17 @@ const queuingStrategy = new ByteLengthQueuingStrategy({ highWaterMark: 1 });
 
 const readableStream = new ReadableStream({
   start(controller) {
-    ...
+    // …
   },
   pull(controller) {
-    ...
+    // …
   },
   cancel(err) {
     console.log("stream error:", err);
   }
 }, queuingStrategy);
 
-var size = queueingStrategy.size(chunk);
+const size = queueingStrategy.size(chunk);
 ```
 
 ## 规范

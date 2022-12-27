@@ -4,7 +4,7 @@ slug: Web/CSS/border-top-style
 ---
 {{ CSSRef}}
 
-**`border-top-style`** [CSS](/en/CSS) 设置元素上边框的 {{cssxref("border")}}.
+**`border-top-style`** [CSS](/zh-CN/CSS) 设置元素上边框的 {{cssxref("border")}}.
 
 {{EmbedInteractiveExample("pages/css/border-top-style.html")}}
 

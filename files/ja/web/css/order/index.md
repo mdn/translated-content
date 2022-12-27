@@ -1,14 +1,6 @@
 ---
 title: order
 slug: Web/CSS/order
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.order
-translation_of: Web/CSS/order
 ---
 {{CSSRef}}
 

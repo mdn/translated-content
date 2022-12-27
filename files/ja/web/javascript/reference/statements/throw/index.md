@@ -1,14 +1,6 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
-tags:
-  - JavaScript
-  - Language feature
-  - Reference
-  - Statement
-  - 文
-  - 言語機能
-translation_of: Web/JavaScript/Reference/Statements/throw
 ---
 {{jsSidebar("Statements")}}
 

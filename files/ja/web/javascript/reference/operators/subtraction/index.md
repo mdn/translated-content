@@ -1,13 +1,6 @@
 ---
 title: 減算 (-)
 slug: Web/JavaScript/Reference/Operators/Subtraction
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.subtraction
-translation_of: Web/JavaScript/Reference/Operators/Subtraction
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,9 +1,6 @@
 ---
 title: コミュニティ
 slug: Web/Guide/AJAX/Community
-tags:
-  - AJAX
-translation_of: Web/Guide/AJAX/Community
 ---
 AJAX に関する有用なメーリングリスト、ニュースグループ、フォーラム、その他のコミュニティを御存知の場合は、リンクを追加してください。
 

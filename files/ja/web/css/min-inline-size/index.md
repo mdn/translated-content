@@ -1,16 +1,6 @@
 ---
 title: min-inline-size
 slug: Web/CSS/min-inline-size
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - Experimental
-  - リファレンス
-  - min-inline-size
-  - recipe:css-property
-browser-compat: css.properties.min-inline-size
-translation_of: Web/CSS/min-inline-size
 ---
 {{CSSRef}}
 

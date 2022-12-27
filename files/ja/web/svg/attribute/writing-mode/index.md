@@ -1,11 +1,6 @@
 ---
 title: writing-mode
 slug: Web/SVG/Attribute/writing-mode
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/writing-mode
 ---
 {{SVGRef}}
 

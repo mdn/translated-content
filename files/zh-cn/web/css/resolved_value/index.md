@@ -12,7 +12,7 @@ CSS 属性的解析值（**resolved value** ）是 {{domxref("Window.getComputed
 
 ## 参考
 
-- [CSS Reference](/en-US/docs/Web/CSS/Reference)
+- [CSS Reference](/zh-CN/docs/Web/CSS/Reference)
 - CSS 重要概念：
 
   - [CSS 语法](/zh-CN/docs/Web/CSS/Syntax)

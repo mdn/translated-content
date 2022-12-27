@@ -11,12 +11,12 @@ slug: Learn/CSS/CSS_layout/Media_queries
     <tr>
       <th scope="row">学习前提：</th>
       <td>
-        HTML 基础知识（学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        HTML 基础知识（学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >），对 CSS 工作方式的大致了解（学习<a
-          href="/en-US/docs/Learn/CSS/First_steps"
+          href="/zh-CN/docs/Learn/CSS/First_steps"
           >CSS first steps</a
-        >和<a href="/en-US/docs/Learn/CSS/Building_blocks"
+        >和<a href="/zh-CN/docs/Learn/CSS/Building_blocks"
           >CSS building blocks</a
         >）
       </td>

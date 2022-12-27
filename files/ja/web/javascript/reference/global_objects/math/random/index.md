@@ -1,14 +1,6 @@
 ---
 title: Math.random()
 slug: Web/JavaScript/Reference/Global_Objects/Math/random
-tags:
-  - JavaScript
-  - Math
-  - Math.random()
-  - Method
-  - Random
-  - Reference
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/random
 ---
 {{JSRef}}
 

@@ -4,7 +4,7 @@ slug: Web/MathML/Element/msqrt
 ---
 {{MathMLRef}}
 
-MathML**`<msqrt>`**元素用于表示一个平方根（不显示根指数）。它只接受一个参数，语法如下：**`<msqrt> base </msqrt>`**。
+MathML **`<msqrt>`** 元素用于表示一个平方根（不显示根指数）。它只接受一个参数，语法如下：**`<msqrt> base </msqrt>`**。
 
 ## 属性
 
@@ -13,9 +13,9 @@ MathML**`<msqrt>`**元素用于表示一个平方根（不显示根指数）。�
 - href
   - : 用来设置标签点击后跳转的链接
 - mathbackground
-  - : 用来设置标签的背景色，可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+  - : 用来设置标签的背景色，可以使用 **`#rgb`**、**`#rrggbb`** 或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
 - mathcolor
-  - : 用来设置文字（包括根底数、根指数和根号本身）的颜色，同样可以使用**`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
+  - : 用来设置文字（包括根底数、根指数和根号本身）的颜色，同样可以使用 **`#rgb`**、**`#rrggbb`**或者[HTML 颜色名](/zh-CN/docs/Web/CSS/color_value)。
 
 ## 例子
 

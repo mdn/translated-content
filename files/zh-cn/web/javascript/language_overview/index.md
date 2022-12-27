@@ -189,7 +189,7 @@ JavaScript 支持包括 `&&`（逻辑与）、`||` （逻辑或）和`!`（逻�
 
 ## 变量
 
-在 JavaScript 中声明一个新变量的方法是使用关键字 [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) 、[`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) 和 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)：
+在 JavaScript 中声明一个新变量的方法是使用关键字 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 、[`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 和 [`var`](/zh-CN/docs/Web/JavaScript/Reference/Statements/var)：
 
 **`let`** 语句声明一个块级作用域的本地变量，并且可选的将其初始化为一个值。
 
@@ -238,7 +238,7 @@ for (var myVarVariable = 0; myVarVariable < 5; myVarVariable++) {
 
 如果声明了一个变量却没有对其赋值，那么这个变量的类型就是 `undefined`。
 
-JavaScript 与其他语言的（如 Java）的重要区别是在 JavaScript 中语句块（blocks）是没有作用域的，只有函数有作用域。因此如果在一个复合语句中（如 if 控制结构中）使用 var 声明一个变量，那么它的作用域是整个函数（复合语句在函数中）。 但是从 ECMAScript Edition 6 开始将有所不同的， [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) 和 [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) 关键字允许你创建块作用域的变量。
+JavaScript 与其他语言的（如 Java）的重要区别是在 JavaScript 中语句块（blocks）是没有作用域的，只有函数有作用域。因此如果在一个复合语句中（如 if 控制结构中）使用 var 声明一个变量，那么它的作用域是整个函数（复合语句在函数中）。 但是从 ECMAScript Edition 6 开始将有所不同的， [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 和 [`const`](/zh-CN/docs/Web/JavaScript/Reference/Statements/const) 关键字允许你创建块作用域的变量。
 
 ## 运算符
 
@@ -776,7 +776,7 @@ s.fullName(); // "Simon Willison"
 s.fullNameReversed(); // Willison, Simon
 ```
 
-上面的代码里有一些我们之前没有见过的东西：关键字 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)。当使用在函数中时，`this` 指代当前的对象，也就是调用了函数的对象。如果在一个对象上使用[点或者方括号](https://developer.mozilla.org/en/JavaScript/Reference/Operators/Member_Operators)来访问属性或方法，这个对象就成了 `this`。如果并没有使用“点”运算符调用某个对象，那么 `this` 将指向全局对象（global object）。这是一个经常出错的地方。例如：
+上面的代码里有一些我们之前没有见过的东西：关键字 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)。当使用在函数中时，`this` 指代当前的对象，也就是调用了函数的对象。如果在一个对象上使用[点或者方括号](/zh-CN/JavaScript/Reference/Operators/Member_Operators)来访问属性或方法，这个对象就成了 `this`。如果并没有使用“点”运算符调用某个对象，那么 `this` 将指向全局对象（global object）。这是一个经常出错的地方。例如：
 
 ```js
 s = makePerson("Simon", "Willison");

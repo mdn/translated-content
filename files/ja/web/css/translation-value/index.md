@@ -1,14 +1,6 @@
 ---
 title: <translation-value>
 slug: Web/CSS/translation-value
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Transforms
-  - Data Type
-  - Reference
-browser-compat: css.types.transform-function
-translation_of: Web/CSS/translation-value
 ---
 {{CSSRef}}
 

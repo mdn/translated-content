@@ -50,4 +50,4 @@ Notifications which set the renotify flag must specify a non-empty tag.
 
 ## 参见
 
-- [使用通知 API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用通知 API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

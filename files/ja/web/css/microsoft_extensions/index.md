@@ -1,14 +1,6 @@
 ---
 title: Microsoft CSS 拡張
 slug: Web/CSS/Microsoft_Extensions
-tags:
-  - CSS
-  - CSS:Microsoft 拡張
-  - ガイド
-  - 標準外
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/Microsoft_Extensions
 ---
 {{CSSRef}}
 

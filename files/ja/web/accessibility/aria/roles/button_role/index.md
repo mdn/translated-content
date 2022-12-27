@@ -1,13 +1,6 @@
 ---
 title: 'ARIA: button ロール'
 slug: Web/Accessibility/ARIA/Roles/button_role
-tags:
-  - ARIA
-  - ARIA Role
-  - ARIA button
-  - Accessibility
-  - Button Role
-  - Reference
 ---
 ボタン (**[button](https://www.w3.org/WAI/PF/aria/roles#button)**) ロールは、ユーザーによってアクティブ化されたときに反応を引き起こすクリック可能な要素に使用する必要があります。 `role="button"` を追加すると、要素がスクリーンリーダーにボタンコントロールとして表示されます。 このロールを `aria-pressed` 属性と組み合わせて使用することで、トグルボタンを作成できます。
 

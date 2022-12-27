@@ -1,13 +1,6 @@
 ---
 title: べき乗 (**)
 slug: Web/JavaScript/Reference/Operators/Exponentiation
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.exponentiation
-translation_of: Web/JavaScript/Reference/Operators/Exponentiation
 ---
 {{jsSidebar("Operators")}}
 

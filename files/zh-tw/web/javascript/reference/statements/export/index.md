@@ -29,7 +29,7 @@ export { import1 as name1, import2 as name2, …, nameN } from …;
 ```
 
 - `nameN`
-  - : 外部檔案使用 [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) 時，用於辨認的名稱。
+  - : 外部檔案使用 [`import`](/zh-TW/docs/Web/JavaScript/Reference/Statements/import) 時，用於辨認的名稱。
 
 ## 使用說明
 

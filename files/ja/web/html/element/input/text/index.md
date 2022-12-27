@@ -1,18 +1,6 @@
 ---
 title: <input type="text">
 slug: Web/HTML/Element/input/text
-tags:
-  - フォーム入力
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - Input
-  - 入力型
-  - リファレンス
-  - Text
-  - テキスト入力
-  - text input
-translation_of: Web/HTML/Element/input/text
 ---
 
 {{HTMLRef("Input_types")}}

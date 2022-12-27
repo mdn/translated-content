@@ -1,15 +1,6 @@
 ---
 title: SVG イベント属性
 slug: Web/SVG/Attribute/Events
-tags:
-  - 上級者
-  - 属性
-  - 草稿
-  - Landing
-  - NeedsUpdate
-  - SVG
-browser-compat: svg.attributes.events.global
-translation_of: Web/SVG/Attribute/Events
 ---
 イベント属性は、常に "on" で始まる名前を持ち、その後に目的とするイベントの名前が続きます。これらの属性は、属性が指定された要素に与えられた種類のイベントが発行されたときに実行される何らかのスクリプトを指定します。
 

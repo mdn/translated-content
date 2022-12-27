@@ -1,11 +1,6 @@
 ---
 title: 演算子の優先順位
 slug: Web/JavaScript/Reference/Operators/Operator_Precedence
-tags:
-  - ガイド
-  - JavaScript
-  - 優先順位
-translation_of: Web/JavaScript/Reference/Operators/Operator_Precedence
 ---
 {{jsSidebar("Operators")}}
 

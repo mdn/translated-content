@@ -4,7 +4,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
 ---
 {{jsSidebar("JavaScript Guide")}}
 
-断言的组成之一是边界。对于文本、词或模式，边界可以用来表明它们的起始或终止部分（如向前断言，向后断言以及条件表达式）。
+断言的组成之一是边界。对于文本、词或模式，边界可以用来表明它们的起始或终止部分（如先行断言，后行断言以及条件表达式）。
 
 {{EmbedInteractiveExample("pages/js/regexp-assertions.html", "taller")}}
 
@@ -117,7 +117,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
           <tbody>
             <tr>
               <td>
-                <strong>向前断言：</strong> x 被 y 跟随时匹配
+                <strong>先行断言：</strong> x 被 y 跟随时匹配
                 x。例如，对于/<code>Jack(?=Sprat)</code>/，“Jack”在跟有“Sprat”的情况下才会得到匹配．<code
                   >/Jack(?=Sprat|Frost)/</code
                 >
@@ -136,7 +136,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
           <tbody>
             <tr>
               <td>
-                <strong>向前否定断言：</strong> x 没有被 y 紧随时匹配
+                <strong>先行否定断言：</strong> x 没有被 y 紧随时匹配
                 x。例如，对于<code>/\d+(?!\.)/</code>，数字后没有跟随小数点的情况下才会得到匹配。对于<code>/\d+(?!\.)/.exec(3.141)</code>，匹配‘141’而不是‘3’。
               </td>
             </tr>
@@ -151,7 +151,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
           <tbody>
             <tr>
               <td>
-                <strong>向后断言：</strong> x 跟随 y 的情况下匹配
+                <strong>后行断言：</strong> x 跟随 y 的情况下匹配
                 x。例如，对于<code>/(?&#x3C;=Jack)Sprat/</code>，“Sprat”紧随“Jack”时才会得到匹配。对于<code>/(?&#x3C;=Jack|Tom)Sprat</code>，“Sprat”在紧随“Jack”或“Tom”的情况下才会得到匹配。不过，匹配结果中不包括“Jack”或“Tom”。
               </td>
             </tr>
@@ -166,7 +166,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
           <tbody>
             <tr>
               <td>
-                <strong>向后否定断言：</strong> x 不跟随 y 时匹配
+                <strong>后行否定断言：</strong> x 不跟随 y 时匹配
                 x。例如，对于<code>/(?&#x3C;!-)\d+/</code>，数字不紧随 -
                 符号的情况下才会得到匹配。对于<code
                   >/(?&#x3C;!-)\d+/.exec(3)</code
@@ -249,10 +249,10 @@ let enEdSelection = fruitsWithDescription.filter(descr => /(en|ed)\b/.test(descr
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 ```
 
-### 向前断言
+### 先行断言
 
 ```plain
-// JS 向前断言 x(?=y) 匹配被 y 跟随的 x
+// JS 先行断言 x(?=y) 匹配被 y 跟随的 x
 
 let regex = /First(?= test)/g;
 
@@ -262,7 +262,7 @@ console.log('This is a First test in a year.'.match(regex)); // [ 'First' ]
 console.log('This is a First peach in a month.'.match(regex)); // null
 ```
 
-### 向前否定断言
+### 先行否定断言
 
 例如， `/\d+(?!\.)/` 匹配没有被小数点跟随且至少有一位的数字。 `/\d+(?!\.)/.exec('3.141')` 匹配 "141" 而不是 "3"
 
@@ -284,7 +284,7 @@ let selectNotOrangeRegex = /[^?!]+have(?! an orange)[^?!]+[?!]/gi
 console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not want to have a lemon!' ]
 ```
 
-### 向后断言
+### 后行断言
 
 ```plain
 let oranges = ['ripe orange A ', 'green orange B', 'ripe orange C',];

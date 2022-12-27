@@ -4,7 +4,7 @@ slug: Web/API/Window/scrollMaxY
 ---
 {{APIRef}} {{Non-standard_header}}
 
-只读属性**`Window.scrollMaxY`**返回`document`可以纵向滚动的最大像素数目
+只读属性 **`Window.scrollMaxY`** 返回`document`可以纵向滚动的最大像素数目
 
 ## 语法
 

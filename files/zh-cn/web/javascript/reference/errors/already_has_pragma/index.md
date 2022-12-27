@@ -36,5 +36,5 @@ X-SourceMap: /path/to/file.js.map
 
 ## 另见
 
-- [如何使用源码映射 – Firefox Tools documentation](/en-US/docs/Tools/Debugger/How_to/Use_a_source_map)
+- [如何使用源码映射 – Firefox Tools documentation](/zh-CN/docs/Tools/Debugger/How_to/Use_a_source_map)
 - [源码映射简介 – HTML5 rocks](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)

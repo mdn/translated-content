@@ -1,15 +1,6 @@
 ---
 title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Reference
-  - Symbol
-  - シンボル
-  - プロパティ
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ---
 {{JSRef}}
 

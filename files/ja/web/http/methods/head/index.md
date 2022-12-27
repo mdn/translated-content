@@ -1,12 +1,6 @@
 ---
 title: HEAD
 slug: Web/HTTP/Methods/HEAD
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-browser-compat: http.methods.HEAD
-translation_of: Web/HTTP/Methods/HEAD
 ---
 {{HTTPSidebar}}
 

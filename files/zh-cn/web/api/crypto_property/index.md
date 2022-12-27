@@ -14,7 +14,7 @@ var cryptoObj = window.crypto || window.msCrypto; // for IE 11
 
 ## 范例
 
-#### 使用 {{domxref("Window.crypto")}} 来访问[getRandomValues()](/en-US/docs/Web/API/RandomSource/getRandomValues) 方法。
+#### 使用 {{domxref("Window.crypto")}} 来访问[getRandomValues()](/zh-CN/docs/Web/API/RandomSource/getRandomValues) 方法。
 
 ### JavaScript
 

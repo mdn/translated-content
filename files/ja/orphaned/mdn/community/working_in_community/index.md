@@ -31,7 +31,7 @@ Mozilla コミュニティで作業する際の品行に関する、一般的な
 
 > Hi, **MrBigglesworth**, I've been noticing your contributions to **the Wormhole API documentation**, and it's fantastic to have your help! I particularly like **the way you balanced your level of detail with readability**. That said, though, you could make these articles even better and more helpful if you **added the correct tags to the pages** as you go.
 >
-> **See the MDN tagging guide (https\://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag) for details.**
+> **See the MDN tagging guide (<https://developer.mozilla.org/en-US/docs/MDN/Contribute/Howto/Tag>) for details.**
 >
 > Thanks again, and I look forward to your future contributions!
 

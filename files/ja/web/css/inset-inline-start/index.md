@@ -1,15 +1,6 @@
 ---
 title: inset-inline-start
 slug: Web/CSS/inset-inline-start
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.inset-inline-start
-translation_of: Web/CSS/inset-inline-start
 ---
 {{CSSRef}}
 

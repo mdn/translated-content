@@ -36,7 +36,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         附帶<a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
           >彈出視窗</a
         >的工具列按鈕
       </td>
@@ -69,7 +69,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         附帶<a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups"
           >彈出視窗</a
         >的網址列按鈕
       </td>
@@ -86,7 +86,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items"
           >快捷選單</a
         >
       </td>
@@ -103,7 +103,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars"
           >側邊欄</a
         >
       </td>
@@ -117,7 +117,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages"
           >選項頁面</a
         >
       </td>
@@ -150,7 +150,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Notifications"
           >通知</a
         >
       </td>
@@ -167,7 +167,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Omnibox"
           >網址列建議</a
         >
       </td>
@@ -182,7 +182,7 @@ slug: Mozilla/Add-ons/WebExtensions/user_interface
     <tr>
       <td>
         <a
-          href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
+          href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels"
           >開發者工具面板</a
         >
       </td>

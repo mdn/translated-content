@@ -1,11 +1,6 @@
 ---
 title: パブリッククラスフィールド
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
-tags:
-  - Classes
-  - JavaScript
-  - Language feature
-translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
 ---
 {{JsSidebar("Classes")}}
 

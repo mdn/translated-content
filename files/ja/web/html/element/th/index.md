@@ -1,22 +1,6 @@
 ---
 title: '<th>: 表見出し要素'
 slug: Web/HTML/Element/th
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Heading Cell
-  - Reference
-  - Table Cell
-  - Table Head
-  - Table Header
-  - Table Heading
-  - Table Heading Cell
-  - Tables
-  - Web
-  - cell
-browser-compat: html.elements.th
-translation_of: Web/HTML/Element/th
 ---
 
 {{HTMLRef}}

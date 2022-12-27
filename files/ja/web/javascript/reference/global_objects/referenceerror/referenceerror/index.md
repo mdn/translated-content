@@ -1,12 +1,6 @@
 ---
 title: ReferenceError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - ReferenceError
-translation_of: Web/JavaScript/Reference/Global_Objects/ReferenceError/ReferenceError
 ---
 {{JSRef}}
 

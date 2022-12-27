@@ -1,12 +1,6 @@
 ---
 title: g
 slug: Web/SVG/Element/g
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Container
-translation_of: Web/SVG/Element/g
 ---
 {{SVGRef}}
 

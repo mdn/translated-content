@@ -1,18 +1,6 @@
 ---
 title: プログラムによるメディアクエリーの評価
 slug: Web/CSS/Media_Queries/Testing_media_queries
-tags:
-  - 上級者
-  - CSS
-  - DOM
-  - ガイド
-  - JavaScript
-  - メディアクエリー
-  - MediaQueryList
-  - レスポンシブデザイン
-  - ウェブ
-  - matchMedia
-translation_of: Web/CSS/Media_Queries/Testing_media_queries
 ---
 {{CSSRef}}
 

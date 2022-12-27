@@ -38,6 +38,6 @@ a |= 2; // 7
 
 ## See also
 
-- [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
-- [Bitwise OR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
-- [Logical OR assignment (`||=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)
+- [Assignment operators in the JS guide](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment)
+- [Bitwise OR operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_OR)
+- [Logical OR assignment (`||=`)](/zh-CN/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)

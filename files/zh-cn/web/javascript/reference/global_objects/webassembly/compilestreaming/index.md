@@ -23,7 +23,7 @@ Promise<WebAssembly.Module> WebAssembly.compileStreaming(source);
 
 ### 异常
 
-- 如果 `bufferSource` 不是一个 [typed array](/en-US/docs/Web/JavaScript/Typed_arrays)，将会抛出 {{jsxref("TypeError")}} 异常。
+- 如果 `bufferSource` 不是一个 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays)，将会抛出 {{jsxref("TypeError")}} 异常。
 - 如果编译失败，promise 会通过拒绝（reject）来返回一个 {{jsxref("WebAssembly.CompileError")}}。
 
 ## 例子
@@ -50,6 +50,6 @@ WebAssembly.compileStreaming(fetch('simple.wasm'))
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
+- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)

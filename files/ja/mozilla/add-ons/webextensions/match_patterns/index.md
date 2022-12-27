@@ -54,7 +54,7 @@ _path_ の値は、URL パスに [URL クエリーストリング](https://en.wi
 
 [URL フラグメント識別子](https://en.wikipedia.org/wiki/Fragment_identifier)や、`#` の後についているものは、_path_ とみなされません。
 
-> **Note:** **注**: path パターン文字列にポート番号を含めるべきではありません。_"http\://localhost:1234/\*"_ のようにポート番号を追加するとマッチパターンは無視されます。しかし、"_http\://localhost:1234_" は "_http\://localhost/\*_" にマッチします。
+> **Note:** **注**: path パターン文字列にポート番号を含めるべきではありません。`http://localhost:1234/*` のようにポート番号を追加するとマッチパターンは無視されます。しかし、`http://localhost:1234` は `http://localhost/*` にマッチします。
 
 ### \<all_urls>
 

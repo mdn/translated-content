@@ -4,7 +4,7 @@ slug: Web/API/Animation/play
 ---
 {{ APIRef("Web Animations") }}{{SeeCompatTable}}
 
-[Web Animations API](/en-US/docs/Web/API/Web_Animations_API)的{{ domxref("Animation") }}接口中的**`play()`** 方法 可开始或恢复动画的播放。如果动画结束，则调用`play()`重新启动动画，从头开始播放。
+[Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)的{{ domxref("Animation") }}接口中的**`play()`** 方法 可开始或恢复动画的播放。如果动画结束，则调用`play()`重新启动动画，从头开始播放。
 
 ## 语法
 
@@ -65,7 +65,7 @@ cake.addEventListener("touchstart", growAlice, false);
 
 ## 了解更多
 
-- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("Animation")}} for other methods and properties you can use to control web page animation.
 - {{domxref("Animation.pause()")}} to pause an animation.
 - {{domxref("Animation.reverse()")}} to play an animation backwards.

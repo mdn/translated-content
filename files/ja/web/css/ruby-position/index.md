@@ -1,14 +1,6 @@
 ---
 title: ruby-position
 slug: Web/CSS/ruby-position
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS ルビ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.ruby-position
-translation_of: Web/CSS/ruby-position
 ---
 {{CSSRef}}
 

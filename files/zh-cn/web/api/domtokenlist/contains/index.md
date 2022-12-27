@@ -4,7 +4,7 @@ slug: Web/API/DOMTokenList/contains
 ---
 {{APIRef("DOM")}}
 
-{{domxref("DOMTokenList")}}接口的**`contains()`**方法返回{{domxref("Boolean")}}类型。若传入的参数`token`包含在列表中时则返回`true` ，否则返回 `false`。
+{{domxref("DOMTokenList")}}接口的 **`contains()`** 方法返回 {{domxref("Boolean")}} 类型。若传入的参数 `token` 包含在列表中时则返回`true`，否则返回 `false`。
 
 ## 语法
 

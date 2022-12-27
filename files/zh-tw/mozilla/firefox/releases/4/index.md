@@ -140,18 +140,18 @@ For helpful tips on updating existing extensions for Firefox 4, see [Updating ex
 
 #### tabbrowser (gBrowser) changes
 
-Several changes were made to the {{ XULElem("tabbrowser") }} element that impact extensions that interact with tabs.
+Several changes were made to the [`<xul:tabbrowser>`](/zh-TW/docs/Mozilla/Tech/XUL/tabbrowser) element that impact extensions that interact with tabs.
 
-- TabClose/TabSelect/TabOpen events no longer bubble up to the {{ XULElem("tabbrowser") }} element (gBrowser). Event listeners for those events should be added to gBrowser.tabContainer rather than to gBrowser directly.
-- The tab context menu is no longer an anonymous child of the {{ XULElem("tabbrowser") }}. It can therefore be overlaid directly with [XUL overlays](/zh-TW/XUL_Overlays). It can also be accessed more directly in JS via gBrowser.tabContextMenu. See [this blog post](http://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
+- TabClose/TabSelect/TabOpen events no longer bubble up to the [`<xul:tabbrowser>`](/zh-TW/docs/Mozilla/Tech/XUL/tabbrowser) element (gBrowser). Event listeners for those events should be added to gBrowser.tabContainer rather than to gBrowser directly.
+- The tab context menu is no longer an anonymous child of the [`<xul:tabbrowser>`](/zh-TW/docs/Mozilla/Tech/XUL/tabbrowser). It can therefore be overlaid directly with [XUL overlays](/zh-TW/XUL_Overlays). It can also be accessed more directly in JS via gBrowser.tabContextMenu. See [this blog post](http://www.gavinsharp.com/blog/2010/03/31/accessingmodifying-the-firefox-tab-context-menu-from-extensions/) for more details.
 
 #### Miscellaneous XUL changes
 
-- The {{ xulattr("readonly") }} attribute now correctly works for fields.
-- The {{ xulelem("resizer") }} element now lets you use the {{ xulattr("element") }} attribute to specify an element to resize, instead of resizing the window.
+- The `readonly` attribute now correctly works for fields.
+- The [`<xul:resizer>`](/zh-TW/docs/Mozilla/Tech/XUL/resizer) element now lets you use the [`element`](/zh-TW/docs/Mozilla/Tech/XUL/Attribute/element) attribute to specify an element to resize, instead of resizing the window.
 - The "active" attribute no longer gets set on active XUL windows. Instead, you can use the new {{ cssxref(":-moz-window-inactive") }} pseudoclass in order to assign different styles to background windows.
-- The {{ xulattr("emptytext") }} attribute is now deprecated; you should use {{ xulattr("placeholder") }} instead.
-- The {{ xulelem("popup") }} element is no longer supported; you should use {{ xulelem("menupopup") }} instead.
+- The [`emptytext`](/zh-TW/docs/Mozilla/Tech/XUL/Attribute/emptytext) attribute is now deprecated; you should use [`placeholder`](/zh-TW/docs/Mozilla/Tech/XUL/Attribute/placeholder) instead.
+- The [`<xul:popup>`](/zh-TW/docs/Mozilla/Tech/XUL/popup) element is no longer supported; you should use [`<xul:menupopup>`](/zh-TW/docs/Mozilla/Tech/XUL/menupopup) instead.
 
 ### Storage
 

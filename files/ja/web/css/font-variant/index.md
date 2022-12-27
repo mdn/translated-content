@@ -1,14 +1,6 @@
 ---
 title: font-variant
 slug: Web/CSS/font-variant
-tags:
-  - CSS
-  - CSS Fonts
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
-browser-compat: css.properties.font-variant
-translation_of: Web/CSS/font-variant
 ---
 {{CSSRef}}
 

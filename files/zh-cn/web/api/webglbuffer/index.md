@@ -4,7 +4,7 @@ slug: Web/API/WebGLBuffer
 ---
 {{APIRef("WebGL")}}
 
-**WebGLBuffer** 接口属于 [WebGL API](/en-US/docs/Web/API/WebGL_API) 的一部分，表示一个不透明的缓冲区对象，储存诸如顶点或着色之类的数据。
+**WebGLBuffer** 接口属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，表示一个不透明的缓冲区对象，储存诸如顶点或着色之类的数据。
 
 ## 描述
 

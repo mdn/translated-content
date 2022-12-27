@@ -1,14 +1,7 @@
 ---
 title: 'null'
 slug: Web/JavaScript/Reference/Operators/null
-tags:
-  - JavaScript
-  - 言語機能
-  - リテラル
-  - プリミティブ
-translation_of: Web/JavaScript/Reference/Global_Objects/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
-browser-compat: javascript.builtins.null
 ---
 {{jsSidebar("Objects")}}
 

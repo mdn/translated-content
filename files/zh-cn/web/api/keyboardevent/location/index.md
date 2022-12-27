@@ -84,7 +84,7 @@ slug: Web/API/KeyboardEvent/location
         <div class="note">
           <strong>Note: </strong>Gecko always returns
           <code>DOM_KEY_LOCATION_MOBILE</code> on Android (Prior to 18), Maemo,
-          and <a href="/en-US/docs/Mozilla/Boot_to_Gecko">Boot to Gecko</a>.
+          and <a href="/zh-CN/docs/Mozilla/Boot_to_Gecko">Boot to Gecko</a>.
           However, at {{gecko("38")}}, this is dropped.
         </div>
       </td>

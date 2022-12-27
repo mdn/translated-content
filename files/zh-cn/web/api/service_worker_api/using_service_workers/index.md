@@ -8,7 +8,7 @@ slug: Web/API/Service_Worker_API/Using_Service_Workers
 
 ## 背景
 
-有一个困扰 web 用户多年的难题——丢失网络连接。即使是世界上最好的 web app，如果下载不了它，也是非常糟糕的体验。如今虽然已经有很多种技术去尝试着解决这一问题。而随着[离线](https://developer.mozilla.org/en-US/Apps/Build/Offline)页面的出现，一些问题已经得到了解决。但是，最重要的问题是，仍然没有一个好的统筹机制对资源缓存和自定义的网络请求进行控制。
+有一个困扰 web 用户多年的难题——丢失网络连接。即使是世界上最好的 web app，如果下载不了它，也是非常糟糕的体验。如今虽然已经有很多种技术去尝试着解决这一问题。而随着[离线](/zh-CN/Apps/Build/Offline)页面的出现，一些问题已经得到了解决。但是，最重要的问题是，仍然没有一个好的统筹机制对资源缓存和自定义的网络请求进行控制。
 
 之前的尝试 — AppCache — 看起来是个不错的方法，因为它可以很容易地指定需要离线缓存的资源。但是，它假定你使用时会遵循诸多规则，如果你不严格遵循这些规则，它会把你的 APP 搞得一团糟。关于 APPCache 的更多详情，请看 Jake Archibald 的文章： [Application Cache is a Douchebag](http://alistapart.com/article/application-cache-is-a-douchebag).
 

@@ -1,15 +1,6 @@
 ---
 title: '<figure>: キャプションが付けられる図要素'
 slug: Web/HTML/Element/figure
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Information
-  - Presentation
-  - Reference
-  - figure
-translation_of: Web/HTML/Element/figure
 ---
 {{HTMLRef}}
 

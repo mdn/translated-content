@@ -1,15 +1,6 @@
 ---
 title: text-combine-upright
 slug: Web/CSS/text-combine-upright
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 書字方向
-  - 実験的
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.text-combine-upright
-translation_of: Web/CSS/text-combine-upright
 ---
 {{CSSRef}}
 

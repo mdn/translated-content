@@ -4,7 +4,7 @@ slug: Web/API/AnalyserNode/getByteFrequencyData
 ---
 {{ APIRef("Web Audio API") }}
 
-{{ domxref("AnalyserNode") }}接口的**`getByteFrequencyData()`**方法将当前频率数据复制到传入的 Uint8Array（无符号字节数组）中。
+{{ domxref("AnalyserNode") }}接口的 **`getByteFrequencyData()`** 方法将当前频率数据复制到传入的 Uint8Array（无符号字节数组）中。
 
 如果数组的长度小于 {{domxref("AnalyserNode.frequencyBinCount")}}, 那么 Analyser 多出的元素会被删除。如果是大于，那么数组多余的元素会被忽略。
 
@@ -80,4 +80,4 @@ draw();
 
 ## 相关内容
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

@@ -1,14 +1,6 @@
 ---
 title: String.prototype.toUpperCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 ---
 {{JSRef}}
 

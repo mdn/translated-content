@@ -1,10 +1,6 @@
 ---
 title: d
 slug: Web/SVG/Attribute/d
-tags:
-  - SVG
-  - SVG Attribute
-translation_of: Web/SVG/Attribute/d
 ---
 {{SVGRef}}
 

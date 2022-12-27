@@ -4,7 +4,7 @@ slug: Web/CSS/:first-child
 ---
 {{CSSRef}}
 
-`:first-child`是[CSS](/en-US/docs/Web/CSS)當中的一種[偽類別（pseudo-class）](/en-US/docs/Web/CSS/Pseudo-classes)，代表任何身為長子的元素（親元素的第一個子元素）。
+`:first-child`是[CSS](/zh-TW/docs/Web/CSS)當中的一種[偽類別（pseudo-class）](/zh-TW/docs/Web/CSS/Pseudo-classes)，代表任何身為長子的元素（親元素的第一個子元素）。
 
 ## 語法
 

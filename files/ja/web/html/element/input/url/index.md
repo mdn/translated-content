@@ -1,21 +1,6 @@
 ---
 title: <input type="url">
 slug: Web/HTML/Element/input/url
-tags:
-  - 要素
-  - Form Control
-  - フォーム入力
-  - フォーム
-  - HTML
-  - HTML 入力型
-  - HTML フォーム
-  - Input
-  - 入力型
-  - リファレンス
-  - Text
-  - URL
-  - control
-translation_of: Web/HTML/Element/input/url
 ---
 
 {{HTMLRef("Input_types")}}

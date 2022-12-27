@@ -71,49 +71,47 @@ original_slug: Web/HTML/Dicas_para_criar_páginas_HTML_de_carregamento_rápido
 <p>Note, contudo, que muitas das dicas listadas neste artigo são técnicas de senso comum que se aplicam a qualquer agente-usuário, e podem ser aplicadas a qualquer página web, independentemente de requisitos de compatibilidade em <em>browsers</em>.</p>
 <h2 id="Exemplo_de_estrutura_de_página" name="Exemplo_de_estrutura_de_página">Exemplo de estrutura de página</h2>
 <p>· <code>HTML</code></p>
-<dl>
-  <dd>
-    · <code>HEAD</code></dd>
-</dl>
-<dl>
-  <dd>
-    <dl>
-      <dd>
+<ul>
+  <li>
+    · <code>HEAD</code></li>
+  <li>
+    <ul>
+      <li>
         · <code>LINK </code>...<br>
-        Arquivos CSS requeridos para a aparência da página. Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.</dd>
-    </dl>
-  </dd>
-</dl>
-<dl>
-  <dd>
-    <dl>
-      <dd>
+        Arquivos CSS requeridos para a aparência da página. Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.</li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    <ul>
+      <li>
         · <code>SCRIPT </code>...<br>
-        Arquivos JavaScript para funções <strong>requeridas</strong> durante o carregamento da página, sem qualquer DHTML que só pode ser executado após o carregamento completo.</dd>
-      <dd>
-        Minimize o número de arquivos para performance enquanto mantém JavaScript não-relacionado em arquivos separados para manutenção.</dd>
-    </dl>
-  </dd>
-</dl>
-<dl>
-  <dd>
-    · <code>BODY</code></dd>
-  <dd>
-    · Páginas de conteúdo visíveis ao usuário em pequenas divisões (tabelas / divs) que podem ser exibidas sem esperar a página inteira ser baixada.</dd>
-</dl>
-<dl>
-  <dd>
-    <dl>
-      <dd>
+        Arquivos JavaScript para funções <strong>requeridas</strong> durante o carregamento da página, sem qualquer DHTML que só pode ser executado após o carregamento completo.</li>
+      <li>
+        Minimize o número de arquivos para performance enquanto mantém JavaScript não-relacionado em arquivos separados para manutenção.</li>
+    </ul>
+  </li>
+</ul>
+<ul>
+  <li>
+    · <code>BODY</code></li>
+  <li>
+    · Páginas de conteúdo visíveis ao usuário em pequenas divisões (tabelas / divs) que podem ser exibidas sem esperar a página inteira ser baixada.</li>
+</ul>
+<ul>
+  <li>
+    <ul>
+      <li>
         · <code>SCRIPT </code>...<br>
-        Quaisquer scripts que forem usados para realizar DHTML. Um script DHTML geralmente só pode ser executado após o carregamento completo da página e a inicialização de todos os objetos necessários. Não há necessidade de carregar esses scripts antes do conteúdo. Isso apenas desacelera a aparência inicial do carregamento da página.</dd>
-      <dd>
-        Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.</dd>
-      <dd>
-        Se uma ou mais imagens forem usadas para efeitos de <em>rollover</em>, você deve pré-carregá-las aqui após o conteúdo da página ter sido baixado.</dd>
-    </dl>
-  </dd>
-</dl>
+        Quaisquer scripts que forem usados para realizar DHTML. Um script DHTML geralmente só pode ser executado após o carregamento completo da página e a inicialização de todos os objetos necessários. Não há necessidade de carregar esses scripts antes do conteúdo. Isso apenas desacelera a aparência inicial do carregamento da página.</li>
+      <li>
+        Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.</li>
+      <li>
+        Se uma ou mais imagens forem usadas para efeitos de <em>rollover</em>, você deve pré-carregá-las aqui após o conteúdo da página ter sido baixado.</li>
+    </ul>
+  </li>
+</ul>
 <h2 id="Use_async_and_defer_se_possível" name="Use_async_and_defer_se_possível">Use async and defer, se possível</h2>
 <p>Faça com que scripts JavaScript sejam compatíveis tanto com <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/script#Attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Element/script">async</a> como <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/script#Attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Element/script">defer</a> e use <a href="https://developer.mozilla.org/en-US/docs/HTML/Element/script#Attributes" title="https://developer.mozilla.org/en-US/docs/HTML/Element/script">async</a> sempre que possível, especialmente se você tiver múltiplas tags de script.</p>
 <p>Com isso, a página pode parar de renderizar enquanto o JavaScript ainda estiver sendo carregado. Do contrário, o <em>browser</em> não renderizará nada que estiver após as tags de script sem esses atributos.</p>

@@ -1,14 +1,6 @@
 ---
 title: <frequency>
 slug: Web/CSS/frequency
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.frequency
-translation_of: Web/CSS/frequency
 ---
 {{CSSRef}}
 

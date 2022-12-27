@@ -86,15 +86,14 @@ original_slug: Web/Guide/HTML/Forms/Form_validation
 <p>Let's start with a simple example — an input that allows you to choose your favorite fruit out of a choice of banana or cherry. This involves a simple text {{HTMLElement("input")}} with a matching label, and a submit {{htmlelement("button")}}. You can find the source code on GitHub as <a href="https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html">fruit-start.html</a>, and a live example below:</p>
 
 <div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;Would you prefer a banana or cherry?&lt;/label&gt;
   &lt;input id="choose" name="i_like"&gt;
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -113,7 +112,7 @@ input:valid {
 
 <p>Add a <code>required</code> attribute to your input, as shown below:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;Would you prefer a banana or cherry?&lt;/label&gt;
   &lt;input id="choose" name="i_like" required&gt;
   &lt;button&gt;Submit&lt;/button&gt;
@@ -121,7 +120,7 @@ input:valid {
 
 <p>Also, take note of the CSS included in the example file:</p>
 
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -149,14 +148,14 @@ input:valid {
 
 <p>Anyway, let's implement an example — update your HTML to add a <code>pattern</code> attribute, like so:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="choose"&gt;Would you prefer a banana or a cherry?&lt;/label&gt;
   &lt;input id="choose" name="i_like" required pattern="banana|cherry"&gt;
   &lt;button&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</pre>
 
 <div class="hidden">
-<pre class="brush: css notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -189,7 +188,7 @@ input:valid {
 
 <p>Now delete the contents of the <code>&lt;body&gt;</code> element, and replace it with the following:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
     &lt;label for="choose"&gt;Would you prefer a banana or a cherry?&lt;/label&gt;
     &lt;input type="text" id="choose" name="i_like" required minlength="6" maxlength="6"&gt;
@@ -209,7 +208,7 @@ input:valid {
 </ul>
 
 <div class="hidden">
-<pre class="notranslate">input:invalid {
+<pre class="brush: css">input:invalid {
   border: 2px dashed red;
 }
 
@@ -234,7 +233,7 @@ div {
 
 <p>Here is a full example to show off usage of HTML's built-in validation features:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;
     &lt;fieldset&gt;
       &lt;legend&gt;Title&lt;abbr title="This field is mandatory"&gt;*&lt;/abbr&gt;&lt;/legend&gt;
@@ -278,7 +277,7 @@ div {
   &lt;/p&gt;
 &lt;/form&gt;</pre>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font: 1em sans-serif;
   padding: 0;
   margin : 0;
@@ -365,7 +364,7 @@ input:focus:invalid {
 
 <p>HTML5 provides the <a href="/en-US/docs/Web/API/Constraint_validation" rel="external">constraint validation API</a> to check and customize the state of a form element. Among other things, it's possible to change the text of the error message. Let's see a quick example:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label for="mail"&gt;I would like you to provide me an e-mail&lt;/label&gt;
   &lt;input type="email" id="mail" name="mail"&gt;
   &lt;button&gt;Submit&lt;/button&gt;
@@ -373,7 +372,7 @@ input:focus:invalid {
 
 <p>In JavaScript, you call the <a href="/en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()"><code>setCustomValidity()</code></a> method:</p>
 
-<pre class="brush: js notranslate">var email = document.getElementById("mail");
+<pre class="brush: js">var email = document.getElementById("mail");
 
 email.addEventListener("input", function (event) {
   if (email.validity.typeMismatch) {
@@ -460,7 +459,7 @@ email.addEventListener("input", function (event) {
 
 <p>Let's see how to use this API to build custom error messages. First, the HTML:</p>
 
-<pre class="brush: html notranslate">&lt;form novalidate&gt;
+<pre class="brush: html">&lt;form novalidate&gt;
   &lt;p&gt;
     &lt;label for="mail"&gt;
       &lt;span&gt;Please enter an email address:&lt;/span&gt;
@@ -479,7 +478,7 @@ email.addEventListener("input", function (event) {
 
 <p>This CSS styles our form and the error output to look more attractive.</p>
 
-<pre class="brush: css notranslate">/* This is just to make the example nicer */
+<pre class="brush: css">/* This is just to make the example nicer */
 body {
   font: 1em sans-serif;
   padding: 0;
@@ -540,7 +539,7 @@ input:focus:invalid {
 
 <p>The following JavaScript code handles the custom error validation.</p>
 
-<pre class="brush: js notranslate">// There are many ways to pick a DOM node; here we get the form itself and the email
+<pre class="brush: js">// There are many ways to pick a DOM node; here we get the form itself and the email
 // input box, as well as the span element into which we will place the error message.
 
 var form  = document.getElementsByTagName('form')[0];
@@ -603,7 +602,7 @@ form.addEventListener("submit", function (event) {
 
 <p>In order to illustrate this, let's rebuild the previous example so that it works with legacy browsers:</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;p&gt;
     &lt;label for="mail"&gt;
         &lt;span&gt;Please enter an email address:&lt;/span&gt;
@@ -622,7 +621,7 @@ form.addEventListener("submit", function (event) {
 
 <p>Similarly, the CSS doesn't need to change very much; we just turn the {{cssxref(":invalid")}} CSS pseudo-class into a real class and avoid using the attribute selector that does not work on Internet Explorer 6.</p>
 
-<pre class="brush: css notranslate">/* This is just to make the example nicer */
+<pre class="brush: css">/* This is just to make the example nicer */
 body {
   font: 1em sans-serif;
   padding: 0;
@@ -683,7 +682,7 @@ input:focus.invalid {
 
 <p>The big changes are in the JavaScript code, which needs to do much more of the heavy lifting.</p>
 
-<pre class="brush: js notranslate">// There are fewer ways to pick a DOM node with legacy browsers
+<pre class="brush: js">// There are fewer ways to pick a DOM node with legacy browsers
 var form  = document.getElementsByTagName('form')[0];
 var email = document.getElementById('mail');
 

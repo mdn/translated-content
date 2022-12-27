@@ -24,7 +24,7 @@ Las imágenes adaptables son solo una parte del diseño web responsivo, un tema 
     </tr>
     <tr>
       <th scope="row">
-        <span class="hidden"></span>Objetivo:<span class="hidden"></span>
+        Objetivo:
       </th>
       <td>
         Aprende a usar características como

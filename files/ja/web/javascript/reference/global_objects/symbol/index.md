@@ -1,14 +1,6 @@
 ---
 title: Symbol (シンボル)
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
-tags:
-  - データ型
-  - ECMAScript 2015
-  - 用語集
-  - JavaScript
-  - Sharing
-  - Symbol
-translation_of: Glossary/Symbol
 original_slug: Glossary/Symbol
 ---
 {{Glossary("JavaScript")}} では、シンボルは{{Glossary("Primitive", "プリミティブ値")}}です。

@@ -12,7 +12,7 @@ slug: Web/Progressive_web_apps/Installable_PWAs
 
 可安装网站需要满足以下条件：
 
-- 一份网页清单，填好[正确的字段](/en-US/Apps/Progressive/Add_to_home_screen#Manifest)
+- 一份网页清单，填好[正确的字段](/zh-CN/Apps/Progressive/Add_to_home_screen#Manifest)
 - 网站的协议必须是安全的（即使用 HTTPS 协议）
 - 一个在设备上代表应用的图标
 - 一个注册好的 Service Worker，可以让应用离线工作（这仅对于安卓设备上的 Chrome 浏览器是必需的）

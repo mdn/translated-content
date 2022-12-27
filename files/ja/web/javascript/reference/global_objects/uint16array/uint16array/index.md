@@ -1,12 +1,6 @@
 ---
 title: Uint16Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array
 ---
 {{JSRef}}
 

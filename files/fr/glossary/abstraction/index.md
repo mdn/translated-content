@@ -36,7 +36,6 @@ obj.display();
 // b = 20
 ```
 
-
 ## Voir aussi
 
 - [Abstraction](https://fr.wikipedia.org/wiki/Abstraction_(informatique)) sur Wikipédia.

@@ -42,7 +42,7 @@ var myRequest = new Request(input[, init]);
 
 | 型          | 説明                                                                                                                                                                       |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TypeError` | [Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) 以降、http\://user:password\@example.com のような認証情報を含む URL だった場合、Request() は TypeError をスローします。 |
+| `TypeError` | [Firefox 43](/ja/docs/Mozilla/Firefox/Releases/43) 以降、`http://user:password@example.com` のような認証情報を含む URL だった場合、Request() は TypeError をスローします。 |
 
 ## 例
 

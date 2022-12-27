@@ -12,7 +12,7 @@ slug: Web/API/User_Timing_API
 
 ## 性能`标记`
 
-性能**`标记`**是一个由应用创建并指定名称的{{domxref("PerformanceEntry","性能条目")}}。这个标记是浏览器性能时间线上的一个{{domxref("DOMHighResTimeStamp","时间戳")}}。
+性能 **`标记`** 是一个由应用创建并指定名称的{{domxref("PerformanceEntry","性能条目")}}。这个标记是浏览器性能时间线上的一个{{domxref("DOMHighResTimeStamp","时间戳")}}。
 
 ### 创建一个性能`标记`
 

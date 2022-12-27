@@ -76,7 +76,7 @@ if (document.cookie.replace(/(?:(?:^|.*;\s*)someCookieName\s*\=\s*([^;]*).*$)|^.
 
 ## 一个小框架：一个完整支持 unicode 的 cookie 读取/写入器
 
-作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和[`Storage 对象`](/en-US/docs/Web/Guide/API/DOM/Storage#Storage)部分`一致的`对象（docCookies），简化`document.cookie` 的获取方法。它提供完全的 Unicode 支持。
+作为一个格式化过的字符串，cookie 的值有时很难被自然地处理。下面的库的目的是通过定义一个和[`Storage 对象`](/zh-CN/docs/Web/Guide/API/DOM/Storage#Storage)部分`一致的`对象（docCookies），简化`document.cookie` 的获取方法。它提供完全的 Unicode 支持。
 
 ```js
 /*\
@@ -160,7 +160,7 @@ docCookies.setItem(name, value[, end[, path[, domain[, secure]]]])
 - `value` (必要)
   - : cookie 的值 ([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String))。
 - `end` _(可选)_
-  - : [`最大年龄`](#new-cookie_max-age)的秒数 (一年为 31536e3， 永不过期的 cookie 为[`Infinity`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Infinity)) ，或者过期时间的[`GMTString`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/toGMTString)格式或[`Date 对象`](/en-US/docs/JavaScript/Reference/Global_Objects/Date); 如果没有定义则会在会话结束时过期 ([`number`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Number) – 有限的或 [`Infinity`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Infinity) – [`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String), [`Date` object](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
+  - : [`最大年龄`](#new-cookie_max-age)的秒数 (一年为 31536e3， 永不过期的 cookie 为[`Infinity`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Infinity)) ，或者过期时间的[`GMTString`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date/toGMTString)格式或[`Date 对象`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date); 如果没有定义则会在会话结束时过期 ([`number`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Number) – 有限的或 [`Infinity`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Infinity) – [`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String), [`Date` object](/zh-CN/docs/JavaScript/Reference/Global_Objects/Date) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。
 - `path` _(可选)_
   - : 例如 '/', '/mydir'。 如果没有定义，默认为当前文档位置的路径。([`string`](/zh-CN/docs/JavaScript/Reference/Global_Objects/String) or [`null`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/null))。路径必须为绝对路径（参见 [RFC 2965](http://www.ietf.org/rfc/rfc2965.txt)）。关于如何在这个参数使用相对路径的方法请参见[这段](#Using_relative_URLs_in_the_path_parameter)。
 - `domain` _(可选)_

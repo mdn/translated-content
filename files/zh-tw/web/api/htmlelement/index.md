@@ -23,7 +23,7 @@ _Inherits properties from its parent, {{domxref("Element")}}, and implements tho
 - {{domxref("HTMLElement.contextMenu")}}
   - : Is a {{domxref("HTMLMenuElement")}} representing the contextual menu associated with the element. It may be `null`.
 - {{domxref("HTMLElement.dataset")}} {{readonlyInline}}
-  - : Returns a {{domxref("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Web/Guide/HTML/Using_data_attributes) (`data-*`) .
+  - : Returns a {{domxref("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/zh-TW/docs/Web/Guide/HTML/Using_data_attributes) (`data-*`) .
 - {{domxref("HTMLElement.dir")}}
   - : Is a {{domxref("DOMString")}}, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
 - {{domxref("HTMLElement.draggable")}}
@@ -59,7 +59,7 @@ _Inherits properties from its parent, {{domxref("Element")}}, and implements tho
 - {{domxref("HTMLElement.properties")}} {{readonlyInline}}{{experimental_inline}}
   - : Returns a {{domxref("HTMLPropertiesCollection")}}…
 - {{domxref("HTMLElement.spellcheck")}}
-  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/en-US/docs/HTML/Controlling_spell_checking_in_HTML_forms). It is present on all HTML elements, though it doesn't have an effect on all of them.
+  - : Is a {{jsxref("Boolean")}} that controls [spell-checking](/zh-TW/docs/HTML/Controlling_spell_checking_in_HTML_forms). It is present on all HTML elements, though it doesn't have an effect on all of them.
 - {{domxref("HTMLElement.style")}}
   - : Is a {{domxref("CSSStyleDeclaration")}}, an object representing the declarations of an element's style attributes.
 - {{domxref("HTMLElement.tabIndex")}}

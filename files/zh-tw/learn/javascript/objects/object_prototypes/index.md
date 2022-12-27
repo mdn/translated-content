@@ -12,12 +12,12 @@ JavaScript 的物件即透過原型 (Prototype) 機制相互繼承功能，且�
       <th scope="row">必備條件：</th>
       <td>
         基本的電腦素養、已初步了解 HTML 與 CSS、熟悉 JavaScript (參閱〈<a
-          href="/en-US/docs/Learn/JavaScript/First_steps"
+          href="/zh-TW/docs/Learn/JavaScript/First_steps"
           >First steps</a
-        >〉與〈<a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        >〉與〈<a href="/zh-TW/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >〉以及 OOJS 基礎概念 (參閱〈<a
-          href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+          href="/zh-TW/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introduction to objects</a
         >〉。
       </td>

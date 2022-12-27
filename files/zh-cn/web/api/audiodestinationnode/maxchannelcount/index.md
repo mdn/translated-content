@@ -44,4 +44,4 @@ gainNode.connect(audioCtx.destination);
 
 ## 其他
 
-- [Using the Web Audio API](/en-US/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)

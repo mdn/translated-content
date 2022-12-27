@@ -1,12 +1,6 @@
 ---
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Status/407
-tags:
-  - HTTP
-  - クライアントエラー
-  - ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/407
 ---
 {{HTTPSidebar}}
 

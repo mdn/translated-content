@@ -112,10 +112,8 @@ var myRequest = new Request('flowers.jpg', myInit);
 
 <p><span class="tlid-translation translation"><span title="">Você também pode passar um objeto {{domxref ("Request")}} para o construtor</span></span> <code>Request() </code><span class="tlid-translation translation"><span title="">para criar uma cópia do Request (isso é semelhante a chamar o método {{domxref("Request.clone", "clone()")}}</span> <span title="">.)</span></span></p>
 
-<div class="codehilite" style="background: #f0f3f3;">
-<pre style="line-height: 125%;">var copy = new Request(myRequest);
+<pre class="brush: js">var copy = new Request(myRequest);
 </pre>
-</div>
 
 <div class="note">
 <p><strong>Nota</strong>: Este último uso é provavelmente útil apenas em <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a>.</p>

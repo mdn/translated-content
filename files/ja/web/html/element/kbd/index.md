@@ -1,20 +1,6 @@
 ---
 title: '<kbd>: キーボード入力要素'
 slug: Web/HTML/Element/kbd
-tags:
-  - Element
-  - HTML
-  - HTML 文字レベルの意味付け
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - Reference
-  - Web
-  - ウェブ
-  - キーボード
-  - リファレンス
-  - 要素
-translation_of: Web/HTML/Element/kbd
 ---
 {{HTMLRef}}
 

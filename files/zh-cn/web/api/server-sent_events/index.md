@@ -8,7 +8,7 @@ slug: Web/API/Server-sent_events
 
 ## 概念与使用
 
-可以前往我们这篇文章 [《使用 “server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)”》学习怎么使用 server-sent events。
+可以前往我们这篇文章 [《使用 “server-sent events](/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)”》学习怎么使用 server-sent events。
 
 ## 接口
 
@@ -35,9 +35,9 @@ slug: Web/API/Server-sent_events
 
 ### 相关话题
 
-- [AJAX](/en-US/docs/AJAX)
-- [JavaScript](/en-US/docs/JavaScript)
-- [WebSockets](/en-US/docs/WebSockets)
+- [AJAX](/zh-CN/docs/AJAX)
+- [JavaScript](/zh-CN/docs/JavaScript)
+- [WebSockets](/zh-CN/docs/WebSockets)
 
 ### 其他资源
 

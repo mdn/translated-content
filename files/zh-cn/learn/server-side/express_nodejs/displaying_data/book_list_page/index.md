@@ -57,7 +57,7 @@ block content
 
 ## 它看起來像是？
 
-运行本应用 (参见 [测试路由](/en-US/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes) 有相关的命令) ，并打开你的浏览器，访问 <http://localhost:3000/>。然后选择 所有书本 连结。如果每样东西都设定正确了，你的网站看起来应该像底下的截图。
+运行本应用 (参见 [测试路由](/zh-CN/docs/Learn/Server-side/Express_Nodejs/routes#Testing_the_routes) 有相关的命令) ，并打开你的浏览器，访问 <http://localhost:3000/>。然后选择 所有书本 连结。如果每样东西都设定正确了，你的网站看起来应该像底下的截图。
 
 ![Book List Page - Express Local Library site](new_book_list.png)
 

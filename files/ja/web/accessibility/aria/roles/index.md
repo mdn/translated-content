@@ -1,7 +1,6 @@
 ---
 title: WAI-ARIA ロール
 slug: Web/Accessibility/ARIA/Roles
-translation_of: Web/Accessibility/ARIA/Roles
 ---
 このページは、MDN で説明されているすべての WAI-ARIA ロールをカバーするリファレンスページを一覧にしています。ロールの完全なリストについては、[ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques)をご覧ください。
 

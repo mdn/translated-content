@@ -1,14 +1,6 @@
 ---
 title: <switch>
 slug: Web/SVG/Element/switch
-tags:
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Container
-  - SVG コンテナー
-  - 要素
-translation_of: Web/SVG/Element/switch
 ---
 {{SVGRef}}
 

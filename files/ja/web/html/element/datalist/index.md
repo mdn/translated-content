@@ -1,21 +1,6 @@
 ---
 title: <datalist>
 slug: Web/HTML/Element/datalist
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML フォーム
-  - HTML5
-  - HTML:フローコンテンツ
-  - HTML:記述コンテンツ
-  - Reference
-  - Web
-  - ウェブ
-  - フォーム
-  - リファレンス
-  - 要素
-translation_of: Web/HTML/Element/datalist
 ---
 {{HTMLRef}}
 

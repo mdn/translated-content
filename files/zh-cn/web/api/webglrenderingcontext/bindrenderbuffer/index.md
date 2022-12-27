@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/bindRenderbuffer
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindRenderbuffer()`** 方法将给定的 {{domxref("WebGLRenderbuffer")}} 绑定到一个目标，它必须是 gl.RENDERBUFFER 。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindRenderbuffer()`** 方法将给定的 {{domxref("WebGLRenderbuffer")}} 绑定到一个目标，它必须是 gl.RENDERBUFFER 。
 
 ## 语法
 

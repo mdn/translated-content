@@ -56,5 +56,5 @@ padding-bottom: unset;
 
 ## See also
 
-- [CSS Box Model](/en/CSS/box_model)
+- [CSS Box Model](/zh-CN/CSS/box_model)
 - The {{cssxref("padding")}} shorthand property can be used to set paddings on all four sides of an element with a single declaration: {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, `padding-bottom`, and {{cssxref("padding-left")}}.

@@ -1,11 +1,6 @@
 ---
 title: Content-Language
 slug: Web/HTTP/Headers/Content-Language
-tags:
-  - HTTP
-  - Headers
-  - Reference
-translation_of: Web/HTTP/Headers/Content-Language
 ---
 {{HTTPSidebar}}
 

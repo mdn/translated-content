@@ -83,7 +83,7 @@ element::after { style properties }  /* CSS3 语法 */
 
 ### 提示用法
 
-接下来的示例展示了用`::after`[伪元素](/en/CSS/Pseudo-elements)，[`attr()`](/zh-CN/docs/CSS/attr)CSS 表达式和一个[自定义数据属性](/en/HTML/Global_attributes#attr-data-*) `data-descr` 创建一个纯 CSS，词汇表提示工具。在[单独页面](https://developer.mozilla.org/files/4591/css-only_tooltips.html)看这个例子。
+接下来的示例展示了用`::after`[伪元素](/zh-CN/CSS/Pseudo-elements)，[`attr()`](/zh-CN/docs/CSS/attr)CSS 表达式和一个[自定义数据属性](/zh-CN/HTML/Global_attributes#attr-data-*) `data-descr` 创建一个纯 CSS，词汇表提示工具。在[单独页面](/files/4591/css-only_tooltips.html)看这个例子。
 
 ```html
 <p>这是上面代码的实现<br />

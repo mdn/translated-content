@@ -1,12 +1,6 @@
 ---
 title: '<ul>: 順序なしリスト要素'
 slug: Web/HTML/Element/ul
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/ul
 ---
 {{HTMLRef}}
 

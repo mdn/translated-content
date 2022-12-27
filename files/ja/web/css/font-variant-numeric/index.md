@@ -1,14 +1,6 @@
 ---
 title: font-variant-numeric
 slug: Web/CSS/font-variant-numeric
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-variant-numeric
-translation_of: Web/CSS/font-variant-numeric
 ---
 {{CSSRef}}
 

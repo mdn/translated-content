@@ -1,21 +1,6 @@
 ---
 title: 'メディアの種類と形式のガイド: 画像、音声、動画コンテンツ'
 slug: Web/Media/Formats
-tags:
-  - API
-  - Audio
-  - Codecs
-  - Containers
-  - File Types
-  - Files
-  - Filetypes
-  - Landing
-  - Media
-  - Types
-  - Video
-  - Web
-  - formats
-translation_of: Web/Media/Formats
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Media")}}
 

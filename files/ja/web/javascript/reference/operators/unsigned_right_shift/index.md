@@ -1,14 +1,6 @@
 ---
 title: 符号なし右シフト (>>>)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
-tags:
-  - ビット演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.unsigned_right_shift
-translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 ---
 {{jsSidebar("Operators")}}
 

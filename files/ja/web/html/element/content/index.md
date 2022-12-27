@@ -1,15 +1,6 @@
 ---
 title: '<content>: シャドウ DOM のコンテンツのプレイスホルダー要素'
 slug: Web/HTML/Element/content
-tags:
-  - Deprecated
-  - Element
-  - HTML
-  - NeedsContent
-  - Reference
-  - Web
-  - Web Components
-translation_of: Web/HTML/Element/content
 ---
 {{Deprecated_header}}
 

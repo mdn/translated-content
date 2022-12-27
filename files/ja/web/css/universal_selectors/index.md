@@ -1,12 +1,6 @@
 ---
 title: 全称セレクター
 slug: Web/CSS/Universal_selectors
-tags:
-  - CSS
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.universal
-translation_of: Web/CSS/Universal_selectors
 ---
 {{CSSRef}}
 

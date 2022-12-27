@@ -1,14 +1,6 @@
 ---
 title: empty-cells
 slug: Web/CSS/empty-cells
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 表
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.empty-cells
-translation_of: Web/CSS/empty-cells
 ---
 {{CSSRef}}
 

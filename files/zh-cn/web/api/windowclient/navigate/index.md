@@ -4,7 +4,7 @@ slug: Web/API/WindowClient/navigate
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-{{domxref("WindowClient")}} 接口的**` navigate() `**方法加载特定的 URL 地址到一个被控制的浏览器页面，并返回一个当前 {{domxref("WindowClient")}} 议的 {{jsxref("Promise")}} 对象。
+{{domxref("WindowClient")}} 接口的 **`navigate()`** 方法加载特定的 URL 地址到一个被控制的浏览器页面，并返回一个当前 {{domxref("WindowClient")}} 议的 {{jsxref("Promise")}} 对象。
 
 ## 语法
 

@@ -1,14 +1,6 @@
 ---
 title: Vary
 slug: Web/HTTP/Headers/Vary
-tags:
-  - HTTP
-  - Reference
-  - ヘッダー
-  - リファレンス
-  - レスポンス
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Vary
 ---
 {{HTTPSidebar}}
 

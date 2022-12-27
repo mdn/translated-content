@@ -1,12 +1,6 @@
 ---
 title: <mn>
 slug: Web/MathML/Element/mn
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:Token Elements
-translation_of: Web/MathML/Element/mn
 ---
 {{MathMLRef}}
 

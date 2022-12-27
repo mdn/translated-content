@@ -80,7 +80,7 @@ Esto puede parecer un poco espantoso al principio, pero no te preocupes — que 
     git push -u origin master
     ```
 
-4. Ahora necesitas crear la rama gh-pages de tu repositorio; actualiza la página actual y verá una página del repositorio algo así como la de abajo. Tú necesitas presionar el boton que dice _Branch: **master**_, digita _gh-pages_ en el campo de texto, luego presiona el boton azul que dice _Create branch: gh-pages_. Esto crea una rama de código especial llamada gh-pages que es publicada en una ubicación especial. La URL toma la forma _username.github.io/my-repository-name_, asi en mi caso de ejemplo, la URL debería ser _https\://chrisdavidmills.github.io/my-repository_. La página mostrada es la página index.html.
+4. Ahora necesitas crear la rama gh-pages de tu repositorio; actualiza la página actual y verá una página del repositorio algo así como la de abajo. Tú necesitas presionar el boton que dice _Branch: **master**_, digita _gh-pages_ en el campo de texto, luego presiona el boton azul que dice _Create branch: gh-pages_. Esto crea una rama de código especial llamada gh-pages que es publicada en una ubicación especial. La URL toma la forma _username.github.io/my-repository-name_, asi en mi caso de ejemplo, la URL debería ser `https://chrisdavidmills.github.io/my-repository`. La página mostrada es la página index.html.
 
     ![](https://mdn.mozillademos.org/files/12145/repo-site.png)
 

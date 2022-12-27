@@ -1,18 +1,6 @@
 ---
 title: delete 演算子
 slug: Web/JavaScript/Reference/Operators/delete
-tags:
-  - JavaScript
-  - 言語機能
-  - メモリーー管理
-  - Object
-  - Operator
-  - リファレンス
-  - 解放
-  - Unary
-  - delete
-browser-compat: javascript.operators.delete
-translation_of: Web/JavaScript/Reference/Operators/delete
 ---
 {{jsSidebar("Operators")}}
 

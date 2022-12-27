@@ -1,14 +1,6 @@
 ---
 title: overflow-x
 slug: Web/CSS/overflow-x
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.overflow-x
-translation_of: Web/CSS/overflow-x
 ---
 {{CSSRef}}
 

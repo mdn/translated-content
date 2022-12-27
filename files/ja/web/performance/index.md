@@ -1,21 +1,6 @@
 ---
 title: ウェブパフォーマンス
 slug: Web/Performance
-tags:
-  - API
-  - App
-  - App Performance
-  - HTML
-  - JavaScript
-  - Landing
-  - Mobile
-  - Mobile Performance
-  - Performance
-  - Performance Budget
-  - Start-Up Performance
-  - Web
-  - Web Performance
-translation_of: Web/Performance
 ---
 ウェブパフォーマンスは客観的な測定値と、読み込み時や実行時のユーザーエクスペリエンスの知覚状況から成ります。ウェブパフォーマンスとは、サイトが読み込まれるまでの時間、操作可能・応答可能になるまでの時間、そしてユーザーが操作する際のコンテンツのスムーズさを意味します。スクロールはスムーズか、ボタンはクリックしやすいか、ポップアップはすぐに読み込まれて表示されるか、表示の際にスムーズにアニメーションするか。ウェブパフォーマンスには、読み込み時間、 1 秒あたりのフレーム数、操作可能になるまでの時間などの客観的な測定値と、コンテンツが読み込まれるまでにどのくらいの時間がかかったように感じたかという主観的な体験の両方が含まれます。
 

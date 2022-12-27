@@ -37,7 +37,7 @@ original_slug: Web/Accessibility/ARIA/widgets
 ## ライトボックス
 
 - [WCAG 2.0 and ARIA-](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox)[conformant](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/table) [lightbox application](https://wiki.github.com/fnagel/jQuery-Accessible-RIA/lightbox)
-- <a class="external free" href="http://majx-js.digissime.net/js/popin/" rel="nofollow">http://majx-js.digissime.net/js/popin/</a>
+- <http://majx-js.digissime.net/js/popin/>
 
 ## フォーム検証
 

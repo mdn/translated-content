@@ -1,21 +1,6 @@
 ---
 title: '<address>: 連絡先要素'
 slug: Web/HTML/Element/address
-tags:
-  - Address
-  - Author
-  - Contact
-  - Contact Information
-  - Element
-  - Email
-  - Email Address
-  - HTML
-  - HTML sections
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/address
 ---
 {{HTMLRef}}
 

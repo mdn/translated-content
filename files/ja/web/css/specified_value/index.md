@@ -1,12 +1,6 @@
 ---
 title: 指定値
 slug: Web/CSS/specified_value
-tags:
-  - CSS
-  - Guide
-  - Reference
-spec-urls: https://www.w3.org/TR/CSS22/cascade.html#specified-value
-translation_of: Web/CSS/specified_value
 ---
 {{CSSRef}}
 

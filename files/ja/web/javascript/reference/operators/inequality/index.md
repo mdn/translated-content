@@ -1,13 +1,6 @@
 ---
 title: 不等価 (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.inequality
-translation_of: Web/JavaScript/Reference/Operators/Inequality
 ---
 {{jsSidebar("Operators")}}
 

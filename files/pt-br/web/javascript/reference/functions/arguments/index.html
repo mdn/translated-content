@@ -81,7 +81,7 @@ var args = [...arguments];</code></pre>
 
 <h3 id="Definindo_uma_função_que_concatena_várias_strings">Definindo uma função que concatena várias strings</h3>
 
-<p>Este exemplo define uma função que <span id="result_box" lang="pt"><span class="hps">concatena</span> </span>várias strings. O único argumento formal para a função é uma string que especifica os caracteres que separam os itens a concatenar. A função é definida como se segue:</p>
+<p>Este exemplo define uma função que concatena várias strings. O único argumento formal para a função é uma string que especifica os caracteres que separam os itens a concatenar. A função é definida como se segue:</p>
 
 <pre class="brush:js">function myConcat(separator) {
   var args = Array.prototype.slice.call(arguments, 1);
@@ -101,7 +101,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");</pre>
 
 <h3 id="Definindo_uma_função_que_cria_listas_HTML">Definindo uma função que cria listas HTML</h3>
 
-<p>Este exemplo define uma função que cria uma string contatenado HTML para uma lista. O único argumento formal para a função é uma string que é "u" se a lista for <span class="short_text" id="result_box" lang="pt"><span class="hps">desordenada</span></span> (<span class="short_text" id="result_box" lang="pt"><span class="hps">marcadores</span></span>), ou "o" se a lista for ordenada (<span class="short_text" id="result_box" lang="pt"><span class="hps">numerada</span></span>). A função é definida como se segue:</p>
+<p>Este exemplo define uma função que cria uma string contatenado HTML para uma lista. O único argumento formal para a função é uma string que é "u" se a lista for desordenada (marcadores), ou "o" se a lista for ordenada (numerada). A função é definida como se segue:</p>
 
 <pre class="brush:js">function list(type) {
   var result = "&lt;" + type + "l&gt;&lt;li&gt;";
@@ -172,19 +172,19 @@ func(10); // 10</code></pre>
 }
 func(); // undefined</code></pre>
 
-<h2 id="Especificações"><span class="short_text" id="result_box" lang="pt"><span class="hps">Especificações</span></span></h2>
+<h2 id="Especificações">Especificações</h2>
 
 <table class="standard-table">
  <tbody>
   <tr>
-   <th scope="col"><span class="short_text" id="result_box" lang="pt"><span class="hps">Especificações</span></span></th>
+   <th scope="col">Especificações</th>
    <th scope="col">Status</th>
    <th scope="col">Comentário</th>
   </tr>
   <tr>
    <td>{{SpecName('ES1')}}</td>
    <td>{{Spec2('ES1')}}</td>
-   <td><span class="short_text" id="result_box" lang="pt"><span class="hps">Definição</span> <span class="hps">inicial.</span> <span class="hps">Implementado em</span> <span class="hps">JavaScript 1.1</span></span></td>
+   <td>Definição inicial. Implementado em JavaScript 1.1</td>
   </tr>
   <tr>
    <td>{{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}</td>

@@ -1,11 +1,6 @@
 ---
 title: Accept-CH
 slug: Web/HTTP/Headers/Accept-CH
-tags:
-  - Client hints
-  - HTTP
-  - HTTP Header
-translation_of: Web/HTTP/Headers/Accept-CH
 ---
 {{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
 

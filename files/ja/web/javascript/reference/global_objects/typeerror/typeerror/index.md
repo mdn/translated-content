@@ -1,12 +1,6 @@
 ---
 title: TypeError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypeError
-translation_of: Web/JavaScript/Reference/Global_Objects/TypeError/TypeError
 ---
 {{JSRef}}
 

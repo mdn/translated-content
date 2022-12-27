@@ -56,7 +56,7 @@ window.history.go(1);
 
 HTML5 引入了 [history.pushState()](/zh-CN/docs/Web/API/History/pushState) 和 [history.replaceState()](</zh-CN/docs/Web/API/History_API#The_replaceState()_method>) 方法，它们分别可以添加和修改历史记录条目。这些方法通常与{{ domxref("window.onpopstate") }} 配合使用。
 
-使用 `history.pushState()` 可以改变 referrer，它在用户发送 [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) 请求时在 HTTP 头部使用，改变 state 后创建的 [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) 对象的 referrer 都会被改变。因为 referrer 是标识创建 [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) 对象时 `this` 所代表的 window 对象中 document 的 URL。
+使用 `history.pushState()` 可以改变 referrer，它在用户发送 [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest) 请求时在 HTTP 头部使用，改变 state 后创建的 [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest) 对象的 referrer 都会被改变。因为 referrer 是标识创建 [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest) 对象时 `this` 所代表的 window 对象中 document 的 URL。
 
 ### pushState() 方法的例子
 
@@ -95,7 +95,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 - **标题** — Firefox 目前忽略这个参数，但未来可能会用到。在此处传一个空字符串应该可以安全的防范未来这个方法的更改。或者，你可以为跳转的 state 传递一个短标题。
 - **URL** — 该参数定义了新的历史 URL 记录。注意，调用 `pushState()` 后浏览器并不会立即加载这个 URL，但可能会在稍后某些情况下加载这个 URL，比如在用户重新打开浏览器时。新 URL 不必须为绝对路径。如果新 URL 是相对路径，那么它将被作为相对于当前 URL 处理。新 URL 必须与当前 URL 同源，否则 `pushState()` 会抛出一个异常。该参数是可选的，缺省为当前 URL。
 
-> **备注：** 从 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，传递的对象是使用 JSON 进行序列化的。 从 Gecko 6.0 {{ geckoRelease("6.0") }}开始，该对象的序列化将使用[结构化克隆算法](/en/DOM/The_structured_clone_algorithm)。这将会使更多对象可以被安全的传递。
+> **备注：** 从 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}，传递的对象是使用 JSON 进行序列化的。 从 Gecko 6.0 {{ geckoRelease("6.0") }}开始，该对象的序列化将使用[结构化克隆算法](/zh-CN/DOM/The_structured_clone_algorithm)。这将会使更多对象可以被安全的传递。
 
 在某种意义上，调用 `pushState()` 与 设置 `window.location = "#foo"` 类似，二者都会在当前页面创建并激活新的历史记录。但 `pushState()` 具有如下几条优点：
 

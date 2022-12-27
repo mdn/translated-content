@@ -1,13 +1,6 @@
 ---
 title: 426 Upgrade Required
 slug: Web/HTTP/Status/426
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - クライアントエラー
-  - ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/426
 ---
 {{HTTPSidebar}}
 

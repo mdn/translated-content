@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Classes
 
 ## 定義類別
 
-類別實際上是一種特別的函數([functions](/en-US/docs/Web/JavaScript/Reference/Functions))，就跟你可以定義函數敘述和函數宣告一樣，類別的語法有兩個元件：類別敘述([class expressions](/en-US/docs/Web/JavaScript/Reference/Operators/class))和類別宣告([class declarations](/en-US/docs/Web/JavaScript/Reference/Statements/class))。
+類別實際上是一種特別的函數([functions](/zh-TW/docs/Web/JavaScript/Reference/Functions))，就跟你可以定義函數敘述和函數宣告一樣，類別的語法有兩個元件：類別敘述([class expressions](/zh-TW/docs/Web/JavaScript/Reference/Operators/class))和類別宣告([class declarations](/zh-TW/docs/Web/JavaScript/Reference/Statements/class))。
 
 ### 類別宣告
 
@@ -36,7 +36,7 @@ class Polygon {}
 
 ### 類別敘述
 
-**類別敘述**是定義類別的另一種方法。類別敘述可以有名稱或是無名稱。賦予一個有名稱類別敘述的名稱只在類別主體(class's body)中有作用。（但是類別敘述的名稱可以透過該類別（不是實例）的 [.name](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/name) 屬性存取。）
+**類別敘述**是定義類別的另一種方法。類別敘述可以有名稱或是無名稱。賦予一個有名稱類別敘述的名稱只在類別主體(class's body)中有作用。（但是類別敘述的名稱可以透過該類別（不是實例）的 [.name](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function/name) 屬性存取。）
 
 ```js
 // unnamed
@@ -64,7 +64,7 @@ var Polygon = class Polygon {
 
 ### Strict mode
 
-*類別宣告*與*類別敘述*的主體都會以[嚴格模式(strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode))執行，也就是說，建構子、靜態方法和原型方法、getter 及 setter 函數等都會以嚴格模式執行。
+*類別宣告*與*類別敘述*的主體都會以[嚴格模式(strict mode](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode))執行，也就是說，建構子、靜態方法和原型方法、getter 及 setter 函數等都會以嚴格模式執行。
 
 ### 建構子
 
@@ -74,7 +74,7 @@ var Polygon = class Polygon {
 
 ### 原型方法
 
-參見 [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
+參見 [method definitions](/zh-TW/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
 
 ```js
 class Polygon {
@@ -99,7 +99,7 @@ console.log(square.area); //100
 
 ### 靜態方法(Static methods)
 
-關鍵字 [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) 定義了一個類別的靜態方法，靜態方法不需要[實體化](/zh-TW/docs/Learn/JavaScript/Objects)它所屬類別的實例就可以被呼叫，它也**無法**被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。
+關鍵字 [`static`](/zh-TW/docs/Web/JavaScript/Reference/Classes/static) 定義了一個類別的靜態方法，靜態方法不需要[實體化](/zh-TW/docs/Learn/JavaScript/Objects)它所屬類別的實例就可以被呼叫，它也**無法**被已實體化的類別物件呼叫。靜態方法經常被用來建立給應用程式使用的工具函數。
 
 ```js
 class Point {
@@ -230,7 +230,7 @@ eat(); // 全域物件
 
 ## 用 `extends` 建立子類別
 
-關鍵字 [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) 是在類別宣告或是類別敘述中建立子類別的方法。
+關鍵字 [`extends`](/zh-TW/docs/Web/JavaScript/Reference/Classes/extends) 是在類別宣告或是類別敘述中建立子類別的方法。
 
 ```js
 class Animal {
@@ -319,7 +319,7 @@ console.log(mapped instanceof Array);   // true
 
 ## 用 `super` 呼叫父類別
 
-關鍵字 [`super`](/en-US/docs/Web/JavaScript/Reference/Operators/super) 是用來提供一個類別呼叫其父類別的函數。
+關鍵字 [`super`](/zh-TW/docs/Web/JavaScript/Reference/Operators/super) 是用來提供一個類別呼叫其父類別的函數。
 
 ```js
 class Cat {
@@ -363,9 +363,9 @@ TBD
 
 ## 參見
 
-- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
-- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+- [Functions](/zh-TW/docs/Web/JavaScript/Reference/Functions)
+- [`class` declaration](/zh-TW/docs/Web/JavaScript/Reference/Statements/class)
+- [`class` expression](/zh-TW/docs/Web/JavaScript/Reference/Operators/class)
 - {{jsxref("Operators/super", "super")}}
 - [Blog post: "ES6 In Depth: Classes"](https://hacks.mozilla.org/2015/07/es6-in-depth-classes/)
 - [extends](/zh-TW/docs/Web/JavaScript/Reference/Classes/extends)

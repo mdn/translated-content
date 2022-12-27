@@ -17,9 +17,9 @@ TypeError: Cannot delete property 'x' of #<Object> (Chrome)
 
 ## 哪里有问题？
 
-尝试删除某个属性，但是这个属性是 [不可配置的](/en-US/docs/Web/JavaScript/Data_structures#Properties)。`configurable`属性控制是否该属性能从对象上删除，以及它的属性（除了`writable`）能否被修改。
+尝试删除某个属性，但是这个属性是 [不可配置的](/zh-CN/docs/Web/JavaScript/Data_structures#Properties)。`configurable`属性控制是否该属性能从对象上删除，以及它的属性（除了`writable`）能否被修改。
 
-这个错误仅仅在[严格模式](/en-US/docs/Web/JavaScript/Reference/Strict_mode)下出现。在非严格模式下，这个操作返回 `false`。
+这个错误仅仅在[严格模式](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)下出现。在非严格模式下，这个操作返回 `false`。
 
 ## 示例
 
@@ -49,6 +49,6 @@ delete Math.PI;  // TypeError
 
 ## 另见
 
-- [delete operator](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
+- [delete operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.freeze()")}}

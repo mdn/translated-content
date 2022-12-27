@@ -1,15 +1,6 @@
 ---
 title: Uint16Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint16Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - Uint16Array
-  - ポリフィル
-browser-compat: javascript.builtins.Uint16Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint16Array
 ---
 {{JSRef}}
 

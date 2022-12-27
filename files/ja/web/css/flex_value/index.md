@@ -1,14 +1,6 @@
 ---
 title: <flex>
 slug: Web/CSS/flex_value
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-translation_of: Web/CSS/flex_value
 ---
 {{CSSRef}}
 

@@ -1,15 +1,6 @@
 ---
 title: scroll-snap-coordinate
 slug: Web/CSS/scroll-snap-coordinate
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スクロールスナップ
-  - 非推奨
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.scroll-snap-coordinate
-translation_of: Web/CSS/scroll-snap-coordinate
 ---
 {{CSSRef}}{{deprecated_header}}
 

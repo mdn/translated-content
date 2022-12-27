@@ -1,17 +1,6 @@
 ---
 title: overscroll-behavior-inline
 slug: Web/CSS/overscroll-behavior-inline
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - NeedsExample
-  - リファレンス
-  - overscroll-behavior-inline
-  - recipe:css-property
-browser-compat: css.properties.overscroll-behavior-inline
-translation_of: Web/CSS/overscroll-behavior-inline
 ---
 {{CSSRef}}
 

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
 <div>{{JSRef}}</div>
 
-<p>O método <code><strong>bind()</strong></code> cria uma nova função que, quando chamada, tem sua palavra-chave <code>this</code> definida com o valor fornecido, com uma sequência determinada de argumentos precedendo quaisquer outros que sejam fornecidos <span id="result_box" lang="pt"><span>quando</span> <span>a nova</span> <span>função é chamada</span></span>.</p>
+<p>O método <code><strong>bind()</strong></code> cria uma nova função que, quando chamada, tem sua palavra-chave <code>this</code> definida com o valor fornecido, com uma sequência determinada de argumentos precedendo quaisquer outros que sejam fornecidos quando a nova função é chamada.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/function-bind.html", "taller")}}</p>
 
@@ -13,18 +13,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <pre class="syntaxbox"><code><var>function</var>.bind(<var>thisArg</var>[, <var>arg1</var>[, <var>arg2</var>[, ...]]])</code></pre>
 
-<h3 id="Parâmetros"><span class="short_text" id="result_box" lang="es"><span>Parâmetros</span></span></h3>
+<h3 id="Parâmetros">Parâmetros</h3>
 
 <dl>
  <dt><code>thisArg</code></dt>
- <dd><span id="result_box" lang="pt"><span>O valor a ser</span> <span>passado como </span><span>parâmetro <code>this</code> para</span> <span>a função de destino</span> <span>quando a função</span> <span>vinculada</span> <span>é chamada.</span> <span>O</span> <span>valor é ignorado</span> <span>se a função</span> <span>ligada é</span> <span>construída usando o</span></span> operador {{jsxref("Operators/new", "new")}}.</dd>
+ <dd>O valor a ser passado como parâmetro <code>this</code> para a função de destino quando a função vinculada é chamada. O valor é ignorado se a função ligada é construída usando o operador {{jsxref("Operators/new", "new")}}.</dd>
  <dt><code>arg1, arg2, ...</code></dt>
- <dd><span id="result_box" lang="pt"><span>Argumentos que precedem outros</span></span><span lang="pt"> <span>argumentos fornecidos</span> <span>para a função</span> vinculada <span>ao invocar</span> <span>a função de destino</span><span>.</span></span></dd>
+ <dd>Argumentos que precedem outros argumentos fornecidos para a função vinculada ao invocar a função de destino.</dd>
 </dl>
 
-<h3 id="Valor_de_retorno"><span lang="pt"><span>Valor de retorno</span></span></h3>
+<h3 id="Valor_de_retorno">Valor de retorno</h3>
 
-<p><span lang="pt"><span>Uma cópia da função fornecida com o valor <code>this</code> especificado e argumentos iniciais.</span></span></p>
+<p>Uma cópia da função fornecida com o valor <code>this</code> especificado e argumentos iniciais.</p>
 
 <h2 id="Descrição">Descrição</h2>
 
@@ -47,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <h3 id="Criando_uma_função_vinculada">Criando uma função vinculada</h3>
 
-<p><span id="result_box" lang="pt"><span>O uso</span> <span>mais simples de</span> <code><span>bind()</span></code> <span class="alt-edited">é fazer com que</span> <span>uma função que</span><span>, independentemente da</span><span> chamada,</span> <span>é chamada com</span> <span>um determinado</span> valor <code><span>this</span></code></span>.<span id="result_box" lang="pt"><span> Um erro comum</span> <span>para </span><span>programadores JavaScript</span> novatos <span>é extrair</span> <span>um método</span> <span>de um objeto e</span></span>, <span id="result_box" lang="pt"><span>em seguida, </span> <span>chamar essa função</span> <span>e esperar que ele</span> <span>use</span> <span>o objeto original</span> <span>como</span> o seu <code><span>this</span></code> <span>(por exemplo,</span> <span>usando</span> <span>esse método</span> <span>num código baseado em</span></span> <em>callback</em><span lang="pt"><span>)</span><span>.</span> <span>Sem</span> <span>a devida atenção</span><span>,</span> <span>no entanto</span><span>,</span> <span>o objeto original</span> <span>é normalmente</span> <span>perdido</span><span>.</span> <span>Criar</span> <span>uma função</span> <span class="alt-edited">vinculada</span> <span>a partir da função</span><span>,</span> <span>usando o objeto</span> <span>original,</span> <span>resolve perfeitamente</span> <span>esse</span> <span>problema:</span></span></p>
+<p>O uso mais simples de <code>bind()</code> é fazer com que uma função que, independentemente da chamada, é chamada com um determinado valor <code>this</code>. Um erro comum para programadores JavaScript novatos é extrair um método de um objeto e, em seguida,  chamar essa função e esperar que ele use o objeto original como o seu <code>this</code> (por exemplo, usando esse método num código baseado em <em>callback</em>). Sem a devida atenção, no entanto, o objeto original é normalmente perdido. Criar uma função vinculada a partir da função, usando o objeto original, resolve perfeitamente esse problema:</p>
 
 <pre class="brush: js">this.x = 9; //this aqui se refere ao objeto global "window" do navegador
 var module = {

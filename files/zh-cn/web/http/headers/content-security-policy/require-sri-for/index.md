@@ -50,4 +50,4 @@ Content-Security-Policy: require-sri-for script style
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+- [Subresource Integrity](/zh-CN/docs/Web/Security/Subresource_Integrity)

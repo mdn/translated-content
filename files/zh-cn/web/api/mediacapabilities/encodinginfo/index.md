@@ -4,7 +4,7 @@ slug: Web/API/MediaCapabilities/encodingInfo
 ---
 {{APIRef("Media Capabilities API")}}
 
-[Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)的**`MediaCapabilitiesInfo`** 接口在 {{domxref("MediaCapabilities")}}接口的 {{domxref("MediaCapabilities.encodingInfo()")}} 或 {{domxref("MediaCapabilities.decodingInfo()")}} 方法返回的 promise 完成时变得可用。它提供了媒体类型是否支持，在编码或解码此媒体时是否流畅和能效等信息。
+[Media Capabilities API](/zh-CN/docs/Web/API/Media_Capabilities_API)的**`MediaCapabilitiesInfo`** 接口在 {{domxref("MediaCapabilities")}}接口的 {{domxref("MediaCapabilities.encodingInfo()")}} 或 {{domxref("MediaCapabilities.decodingInfo()")}} 方法返回的 promise 完成时变得可用。它提供了媒体类型是否支持，在编码或解码此媒体时是否流畅和能效等信息。
 
 ## 属性
 

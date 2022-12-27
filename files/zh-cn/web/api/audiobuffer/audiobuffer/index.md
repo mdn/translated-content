@@ -4,7 +4,7 @@ slug: Web/API/AudioBuffer/AudioBuffer
 ---
 {{APIRef("Web Audio API")}}
 
-[Web Audio API](/en-US/docs/Web/API/Web_Audio_API) 的 **`AudioBuffer`** 构造函数将创建一个新的 {{domxref("AudioBuffer")}} 对象。
+[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 的 **`AudioBuffer`** 构造函数将创建一个新的 {{domxref("AudioBuffer")}} 对象。
 
 ## 语法
 

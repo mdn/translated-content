@@ -12,12 +12,12 @@ slug: Learn/Server-side/Express_Nodejs/Tutorial_local_library_website
       <th scope="row">前置條件:</th>
       <td>
         閱讀
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction"
+        <a href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/Introduction"
           >Express 介紹。</a
         >
         在底下的教程，你將需要
         <a
-          href="/en-US/docs/Learn/Server-side/Express_Nodejs/development_environment"
+          href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/development_environment"
           >架設一個 Node 開發環境。</a
         >
       </td>

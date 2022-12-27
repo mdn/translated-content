@@ -131,4 +131,4 @@ div {
 
 - {{cssxref("transform")}}
 - {{cssxref("&lt;transform-function&gt;")}}
-- [`rotate3d()`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d)
+- [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d)

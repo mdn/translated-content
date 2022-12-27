@@ -89,4 +89,4 @@ Multicol 与 CSS 中的任何其他布局方法不同，它将内容（包括所
 
 ## 下一步
 
-在本指南中，我们学习了多列布局的基本用法。在[下一个指南](/en-US/docs/Web/CSS/CSS_Columns/Styling_Columns)中，我们将看看我们可以为列本身设置多少样式。
+在本指南中，我们学习了多列布局的基本用法。在[下一个指南](/zh-CN/docs/Web/CSS/CSS_Columns/Styling_Columns)中，我们将看看我们可以为列本身设置多少样式。

@@ -63,7 +63,7 @@ function test() {
 
 `eval()` 通常比其他替代方法更慢，因为它必须调用 JS 解释器，而许多其他结构则可被现代 JS 引擎进行优化。
 
-此外，现代 JavaScript 解释器将 JavaScript 转换为机器代码。这意味着任何变量命名的概念都会被删除。因此，任意一个 eval 的使用都会强制浏览器进行冗长的变量名称查找，以确定变量在机器代码中的位置并设置其值。另外，新内容将会通过 `eval()` 引进给变量，比如更改该变量的类型，因此会强制浏览器重新执行所有已经生成的机器代码以进行补偿。但是（谢天谢地）存在一个非常好的 eval 替代方法：只需使用 [window.Function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)。这有个例子方便你了解如何将`eval()`的使用转变为`Function()`。
+此外，现代 JavaScript 解释器将 JavaScript 转换为机器代码。这意味着任何变量命名的概念都会被删除。因此，任意一个 eval 的使用都会强制浏览器进行冗长的变量名称查找，以确定变量在机器代码中的位置并设置其值。另外，新内容将会通过 `eval()` 引进给变量，比如更改该变量的类型，因此会强制浏览器重新执行所有已经生成的机器代码以进行补偿。但是（谢天谢地）存在一个非常好的 eval 替代方法：只需使用 [window.Function](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)。这有个例子方便你了解如何将`eval()`的使用转变为`Function()`。
 
 使用 eval 的糟糕代码：
 

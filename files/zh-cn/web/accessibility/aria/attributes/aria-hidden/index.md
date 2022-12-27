@@ -66,5 +66,5 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 
 ## 另见
 
-- [使用展示角色](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role)
-- [role="none"](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_none_role)
+- [使用展示角色](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role)
+- [role="none"](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_none_role)

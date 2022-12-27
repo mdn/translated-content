@@ -37,5 +37,5 @@ function potentiallyBuggyCode() {
 
 ## 相关链接
 
-- [JavaScript 调试](https://developer.mozilla.org/en-US/docs/Debugging_JavaScript)
-- [在火狐开发者工具中调试](https://developer.mozilla.org/en-US/docs/Tools/Debugger)
+- [JavaScript 调试](/zh-CN/docs/Debugging_JavaScript)
+- [在火狐开发者工具中调试](/zh-CN/docs/Tools/Debugger)

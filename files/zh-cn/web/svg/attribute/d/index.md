@@ -176,7 +176,7 @@ _Moveto_ 指令可以被想象成拎起绘图笔，落脚到另一处。即，�
       </td>
       <td>
         <p>
-          将<em>当前位置</em>移动到坐标 
+          将<em>当前位置</em>移动到坐标
           <code><var>x</var></code
           >,<code><var>y</var></code
           >。后续子坐标序列将被解释为隐式的绝对位置的
@@ -265,7 +265,7 @@ _Lineto_ 指令将绘制一条直线段。这个直线段从*当前位置*（_P<
       <td>(<code>x</code>, <code>y</code>)+</td>
       <td>
         <p>
-          在<em>当前位置</em>和<em>指定位置</em> 
+          在<em>当前位置</em>和<em>指定位置</em>
           <code><var>x</var></code
           >,<code><var>y</var></code
           > 之间绘制一条线段。后续子坐标序列将被解释为隐式的绝对位置的
@@ -416,7 +416,6 @@ html,body,svg { height:100% }
            h -40" />
 </svg>
 ```
-
 
 {{EmbedLiveSample('Lineto 路径命令', '100%', 200)}}
 

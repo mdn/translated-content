@@ -1,10 +1,6 @@
 ---
 title: unparsed-entity-url
 slug: Web/XPath/Functions/unparsed-entity-url
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/unparsed-entity-url
 ---
 {{ XsltRef() }}
 

@@ -110,11 +110,11 @@ Quand le cadre parent est déchargé, les événements sont lancés dans l'ordre
 
 ## Événements liés
 
-- {{event("DOMContentLoaded")}}
-- {{event("readystatechange")}}
-- {{event("load")}}
-- {{event("beforeunload")}}
-- {{event("unload")}}
+- [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event)
+- [`readystatechange`](/fr/docs/Web/API/Document/readystatechange_event)
+- [`load`](/fr//docs/Web/API/Window/load_event)
+- [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event)
+- [`unload`](/fr/docs/Web/API/Window/unload_event)
 
 ## Spécifications
 

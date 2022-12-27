@@ -1,17 +1,6 @@
 ---
 title: mask
 slug: Web/CSS/mask
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - Layout
-  - リファレンス
-  - SVG
-  - Web
-  - recipe:css-shorthand-property
-browser-compat: css.properties.mask
-translation_of: Web/CSS/mask
 ---
 {{CSSRef}}
 

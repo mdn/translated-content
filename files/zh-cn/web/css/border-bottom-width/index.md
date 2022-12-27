@@ -4,7 +4,7 @@ slug: Web/CSS/border-bottom-width
 ---
 {{CSSRef}}
 
-[CSS](/en/CSS) 属性 **`border-bottom-width`** 设置一个元素的底部边框宽度。
+[CSS](/zh-CN/CSS) 属性 **`border-bottom-width`** 设置一个元素的底部边框宽度。
 
 ```css
 /* Keyword values */

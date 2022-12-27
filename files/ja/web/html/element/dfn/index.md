@@ -1,17 +1,6 @@
 ---
 title: '<dfn>: 定義要素'
 slug: Web/HTML/Element/dfn
-tags:
-  - Definition
-  - Definitions
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Semantic Markup
-  - Web
-  - dfn
-translation_of: Web/HTML/Element/dfn
 ---
 {{HTMLRef}}
 

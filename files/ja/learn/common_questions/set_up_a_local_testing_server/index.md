@@ -96,6 +96,6 @@ Python の `http.server` （Python 2.0 では `SimpleHTTPServer`）モジュー�
 - PHP サーバー側コードを実行するには、[PHP の組み込み開発サーバー](http://php.net/manual/ja/features.commandline.webserver.php)を起動してください。
 
   ```bash
-  $ cd path/to/your/php/code
-  $ php -S localhost:8000
+  cd path/to/your/php/code
+  php -S localhost:8000
   ```

@@ -62,7 +62,7 @@ function f(p,) {}
 (p,) => {};
 ```
 
-尾后逗号也可用于类或对象的[方法定义](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
+尾后逗号也可用于类或对象的[方法定义](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)。
 
 ```js
 class C {
@@ -90,7 +90,7 @@ Math.max(10, 20,);
 
 ### 不合法的尾后逗号
 
-仅仅包含逗号的函数参数定义或者函数调用会抛出 {{Jsxref("SyntaxError")}}。 而且，当使用[剩余参数](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)的时候，并不支持尾后逗号：
+仅仅包含逗号的函数参数定义或者函数调用会抛出 {{Jsxref("SyntaxError")}}。 而且，当使用[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)的时候，并不支持尾后逗号：
 
 ```js example-bad
 function f(,) {} // SyntaxError: missing formal parameter
@@ -103,7 +103,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ## 解构中的尾后逗号
 
-在使用[解构赋值](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)时，尾后逗号也可以用于左侧：
+在使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)时，尾后逗号也可以用于左侧：
 
 ```js
 // 带有尾后逗号的数组解构

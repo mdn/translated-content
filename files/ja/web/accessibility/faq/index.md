@@ -1,10 +1,6 @@
 ---
 title: アクセシビリティのよくある質問
 slug: Web/Accessibility/FAQ
-tags:
-  - アクセシビリティ
-  - FAQ
-translation_of: Web/Accessibility/FAQ
 original_slug: Web/Accessibility/Accessibility_FAQ
 ---
 ## アクセシビリティについて、どこから始めたらよいですか?

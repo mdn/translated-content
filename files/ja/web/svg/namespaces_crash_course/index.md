@@ -1,10 +1,6 @@
 ---
 title: 名前空間の速修講座
 slug: Web/SVG/Namespaces_Crash_Course
-tags:
-  - SVG
-  - XML
-translation_of: Web/SVG/Namespaces_Crash_Course
 ---
 ### 導入
 
@@ -121,7 +117,7 @@ document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 rect.getAttributeNS(null, 'x');
 ```
 
-これは名前空間接頭辞)*付き*の属性(タグと同じ XML 派生言語に属していない属性)はこの限りではないことに注意してください。xlink:href 属性の様な属性はその接頭辞に割り当てられた名前空間名(XLink は http\://www\.w3.org/1999/xlink)が必要です。従って SVG の `<a>` 要素の `xlink:href` 属性の値を手に入れるにはこう書くでしょう:
+これは名前空間接頭辞)*付き*の属性(タグと同じ XML 派生言語に属していない属性)はこの限りではないことに注意してください。xlink:href 属性の様な属性はその接頭辞に割り当てられた名前空間名(XLink は `http://www.w3.org/1999/xlink`)が必要です。従って SVG の `<a>` 要素の `xlink:href` 属性の値を手に入れるにはこう書くでしょう:
 
 ```
 elt.getAttributeNS('http://www.w3.org/1999/xlink', 'href');

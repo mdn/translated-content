@@ -1,9 +1,6 @@
 ---
 title: 前書き
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
-tags:
-  - XSLT
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/Introduction
 ---
 ## 前書き
 

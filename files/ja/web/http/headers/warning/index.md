@@ -1,12 +1,6 @@
 ---
 title: Warning
 slug: Web/HTTP/Headers/Warning
-tags:
-  - General Header
-  - HTTP
-  - Reference
-  - header
-translation_of: Web/HTTP/Headers/Warning
 ---
 {{HTTPSidebar}}
 

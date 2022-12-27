@@ -19,6 +19,6 @@ Reason: CORS preflight channel did not succeed
 
 ## See also
 
-- [CORS 错误](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS 简介](/en-US/docs/Web/HTTP/CORS)
+- [CORS 简介](/zh-CN/docs/Web/HTTP/CORS)

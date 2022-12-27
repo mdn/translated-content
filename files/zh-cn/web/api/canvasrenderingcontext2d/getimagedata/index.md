@@ -36,7 +36,7 @@ ImageData ctx.getImageData(sx, sy, sw, sh);
 
 ### 使用 `getImageData` 方法
 
-这是一段使用 `getImageData` 方法的简单的代码片段。 获取更多信息，请看 [canvas 像素控制](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)和 {{domxref("ImageData")}} 对象。
+这是一段使用 `getImageData` 方法的简单的代码片段。 获取更多信息，请看 [canvas 像素控制](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)和 {{domxref("ImageData")}} 对象。
 
 #### HTML
 
@@ -72,4 +72,4 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 
 - 接口定义， {{domxref("CanvasRenderingContext2D")}}.
 - {{domxref("ImageData")}}
-- [Pixel manipulation with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- [Pixel manipulation with canvas](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)

@@ -15,7 +15,7 @@ var myHeaders = new Headers(init);
 ### Parameters
 
 - _init_ {{optional_inline}}
-  - : 通过一个包含任意 [HTTP headers](/en-US/docs/Web/HTTP/Headers) 的对象来预设你的 `Headers`. 可以是一个{{domxref("ByteString")}} 对象; 或者是一个已存在的 `Headers` 对象.
+  - : 通过一个包含任意 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers) 的对象来预设你的 `Headers`. 可以是一个{{domxref("ByteString")}} 对象; 或者是一个已存在的 `Headers` 对象.
 
 ## Example
 
@@ -56,6 +56,6 @@ secondHeadersObj.get('Content-Type'); // Would return 'image/jpeg' — it inheri
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/Access_control_CORS)
-- [HTTP](/en-US/docs/Web/HTTP)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [HTTP](/zh-CN/docs/Web/HTTP)

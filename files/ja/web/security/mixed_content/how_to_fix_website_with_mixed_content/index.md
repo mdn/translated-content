@@ -1,10 +1,6 @@
 ---
 title: 混在コンテンツでブロックされるウェブサイトを修正するには
 slug: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
-tags:
-  - HTTPS
-  - Security
-translation_of: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 ---
 [Firefox 23](/ja/docs/Mozilla/Firefox/Releases/23) より、 Firefox は[能動的な混在コンテンツ](/ja/docs/Security/MixedContent#Mixed_active_content)を既定でブロックします。この機能は Internet Explorer ([バージョン 9 以降](http://blogs.msdn.com/b/ie/archive/2011/06/23/internet-explorer-9-security-part-4-protecting-consumers-from-malicious-mixed-content.aspx)) や [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1) でも採用されています。
 

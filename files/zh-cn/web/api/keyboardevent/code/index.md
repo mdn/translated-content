@@ -2112,7 +2112,7 @@ On Mac OS X, it's hard to get scancode or something which can distinguish a phys
         <div class="note">
           <p>
             Prior to
-            <a href="/en-US/docs/Mozilla/Firefox/Releases/37">Firefox 37</a>,
+            <a href="/zh-CN/docs/Mozilla/Firefox/Releases/37">Firefox 37</a>,
             this key incorrectly generated the key code
             <code>"RomanCharacters"</code>.
           </p>

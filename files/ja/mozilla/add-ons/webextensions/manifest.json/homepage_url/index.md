@@ -17,9 +17,9 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
     <tr>
       <th scope="row">例</th>
       <td>
-        <pre
-          class="brush: json no-line-numbers language-json"
-        ><code class="language-json"><span class="key token">"homepage_url":</span> <span class="string token">"https://example.org/my-addon"</span></code></pre>
+        <pre class="brush: json">
+"homepage_url": "https://example.org/my-addon"</pre
+        >
       </td>
     </tr>
   </tbody>

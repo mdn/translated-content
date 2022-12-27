@@ -95,7 +95,7 @@ Specifically, in the past, event handlers were not correctly implemented as stan
 
 #### Detecting the presence of event handler properties
 
-You can now detect the presence of an event handler property (that is, for example, `onload`), using the JavaScript [`in`](/en-US/JavaScript/Reference/Operators/in "en/JavaScript/Reference/Operators/in") operator. For example:
+You can now detect the presence of an event handler property (that is, for example, `onload`), using the JavaScript [`in`](/zh-TW/JavaScript/Reference/Operators/in) operator. For example:
 
 ```js
 if ("onsomenewfeature" in window) {

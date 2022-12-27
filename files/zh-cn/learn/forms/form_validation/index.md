@@ -12,11 +12,11 @@ original_slug: Learn/HTML/Forms/Data_form_validation
     <tr>
       <th scope="row">预备知识：</th>
       <td>
-        计算机基础能力，对 <a href="/en-US/docs/Learn/HTML">HTML</a>、<a
-          href="/en-US/docs/Learn/CSS"
+        计算机基础能力，对 <a href="/zh-CN/docs/Learn/HTML">HTML</a>、<a
+          href="/zh-CN/docs/Learn/CSS"
           >CSS</a
         >
-        和 <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> 有一定的理解。
+        和 <a href="/zh-CN/docs/Learn/JavaScript">JavaScript</a> 有一定的理解。
       </td>
     </tr>
     <tr>
@@ -362,7 +362,7 @@ HTML5 提供 [constraint validation API](http://www.w3.org/TR/html5/forms.html#t
 </form>
 ```
 
-在 JavaScript 中，你调用 [`setCustomValidity()`](</en-US/docs/HTML/HTML5/Constraint_validation#Constraint_API's_element.setCustomValidity()>) 方法：
+在 JavaScript 中，你调用 [`setCustomValidity()`](/zh-CN/docs/Web/API/HTMLObjectElement/setCustomValidity) 方法：
 
 ```js
 var email = document.getElementById("mail");

@@ -12,7 +12,7 @@ slug: Learn/Server-side/Django/Deployment
       <th scope="row">Prerequisites:</th>
       <td>
         Complete all previous tutorial topics, including
-        <a href="/en-US/docs/Learn/Server-side/Django/Testing"
+        <a href="/zh-TW/docs/Learn/Server-side/Django/Testing"
           >Django Tutorial Part 10: Testing a Django web application</a
         >.
       </td>

@@ -1,11 +1,6 @@
 ---
 title: 共通 (exsl)
 slug: Web/EXSLT/exsl
-tags:
-  - EXSLT
-  - 概要
-  - リファレンス
-translation_of: Web/EXSLT/exsl
 ---
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 

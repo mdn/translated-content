@@ -100,7 +100,7 @@ try {
 // @file:///C:/example.html:7:6
 ```
 
-你也可以使用`//# sourceURL` 命名 eval 源的指令。 也可以查看在 [Debugger](/en-US/docs/Tools/Debugger)文档中的[Debug eval 源](/en-US/docs/Tools/Debugger/How_to/Debug_eval_sources)和[blog post 博客 。](http://fitzgeraldnick.com/weblog/59/)
+你也可以使用`//# sourceURL` 命名 eval 源的指令。 也可以查看在 [Debugger](/zh-CN/docs/Tools/Debugger)文档中的[Debug eval 源](/zh-CN/docs/Tools/Debugger/How_to/Debug_eval_sources)和[blog post 博客 。](http://fitzgeraldnick.com/weblog/59/)
 
 ## 规范
 
@@ -112,7 +112,7 @@ try {
 
 ## 另请参阅
 
-- [Components.stack](/en-US/docs/Components.stack)
+- [Components.stack](/zh-CN/docs/Components.stack)
 - 外部项目：[TraceKit](https://github.com/csnover/TraceKit/) and [javascript-stacktrace](https://github.com/eriwen/javascript-stacktrace)
 - MSDN：[error.stack](http://msdn.microsoft.com/en-us/library/windows/apps/hh699850.aspx) docs
 - [Overview of the V8 JavaScript stack trace API](https://github.com/v8/v8/wiki/Stack%20Trace%20API)

@@ -1,15 +1,6 @@
 ---
 title: '<map>: イメージマップ要素'
 slug: Web/HTML/Element/map
-tags:
-  - Element
-  - HTML
-  - HTML embedded content
-  - Multimedia
-  - Reference
-  - Web
-browser-compat: html.elements.map
-translation_of: Web/HTML/Element/map
 ---
 
 {{HTMLRef}}

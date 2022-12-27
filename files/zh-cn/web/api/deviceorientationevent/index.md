@@ -42,5 +42,5 @@ window.addEventListener('deviceorientation', function(event) {
 - {{ event("deviceorientation") }}
 - {{ domxref("DeviceMotionEvent") }}
 - {{ event("devicemotion") }}
-- [监测设备方向](/en-US/docs/WebAPI/Detecting_device_orientation)
-- [转动与运动的数据说明](/en/DOM/Orientation_and_motion_data_explained)
+- [监测设备方向](/zh-CN/docs/WebAPI/Detecting_device_orientation)
+- [转动与运动的数据说明](/zh-CN/DOM/Orientation_and_motion_data_explained)

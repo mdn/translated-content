@@ -1,20 +1,6 @@
 ---
 title: オブジェクト初期化子
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-tags:
-  - ECMAScript 2015
-  - JSON
-  - JavaScript
-  - 言語機能
-  - リテラル
-  - メソッド
-  - オブジェクト
-  - Primary Expression
-  - computed
-  - mutation
-  - プロパティ
-browser-compat: javascript.operators.object_initializer
-translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 ---
 {{JsSidebar("Operators")}}
 

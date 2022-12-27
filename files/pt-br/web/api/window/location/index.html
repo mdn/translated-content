@@ -23,7 +23,7 @@ location = <em>newLocation</em>;
 
 <h3 id="Exemplo_1_Navegando_para_uma_nova_página">Exemplo #1: Navegando para uma nova página</h3>
 
-<p>Sempre que um novo valor é atribuído a um objeto de localização, um documento será carregado usando a URL como se <code>location.assign() </code>tivesse sido chamado com a URL modificada. <span id="result_box" lang="pt"><span class="hps">Observe que as configurações</span> <span class="hps">de segurança</span><span>, como</span> <span class="hps">CORS</span><span>,</span> <span class="hps">pode impedir</span> <span class="hps">que isso aconteça</span> <span class="hps">de forma eficaz.</span></span></p>
+<p>Sempre que um novo valor é atribuído a um objeto de localização, um documento será carregado usando a URL como se <code>location.assign() </code>tivesse sido chamado com a URL modificada. Observe que as configurações de segurança, como CORS, pode impedir que isso aconteça de forma eficaz.</p>
 
 <pre class="brush: js">location.assign("http://www.mozilla.org"); // ou
 location = "http://www.mozilla.org";
@@ -43,7 +43,7 @@ location = "http://www.mozilla.org";
 }
 </pre>
 
-<div class="note"><strong>Nota: </strong>O exemplo acima funciona em situações onde <code>location.hash</code> não precisa ser retida. Contudo, em navegadores baseados em Gecko, definindo <code>location.pathname</code> desta forma irá apagar qualquer informação em <code>location.hash</code>, enquanto que no WebKit(e possivelmente em outro navegador), definir o pathname não vai alterar  o hash. Se você precisa mudar o pathname mas manter o hash como é, use o <code>método replace(), </code><span id="result_box" lang="pt"><span class="hps">que deve funcionar</span> <span class="hps">de forma consistente</span> <span class="hps">em todos os navegadores</span><span>.</span></span></div>
+<div class="note"><strong>Nota: </strong>O exemplo acima funciona em situações onde <code>location.hash</code> não precisa ser retida. Contudo, em navegadores baseados em Gecko, definindo <code>location.pathname</code> desta forma irá apagar qualquer informação em <code>location.hash</code>, enquanto que no WebKit(e possivelmente em outro navegador), definir o pathname não vai alterar  o hash. Se você precisa mudar o pathname mas manter o hash como é, use o <code>método replace(), </code>que deve funcionar de forma consistente em todos os navegadores.</div>
 
 <h3 id="Exemplo_4_Mostrar_as_propriedades_da_URL_atual_em_um_alerta">Exemplo #4: Mostrar as propriedades da URL atual em um alerta:</h3>
 

@@ -1,16 +1,6 @@
 ---
 title: WebAssembly.Table.prototype.grow()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow
-tags:
-  - API
-  - JavaScript
-  - メソッド
-  - Reference
-  - WebAssembly
-  - grow
-  - table
-browser-compat: javascript.builtins.WebAssembly.Table.grow
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/grow
 ---
 {{JSRef}}
 

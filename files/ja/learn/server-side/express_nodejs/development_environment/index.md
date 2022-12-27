@@ -124,7 +124,7 @@ _Nodejs_ パッケージマネージャー _NPM_ もインストールされて�
     Server running at http://127.0.0.1:3000/
     ```
 
-3. http\://127.0.0.1:3000 の URL に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World" を表示するはずです。
+3. `http://127.0.0.1:3000` の URL に移動します。すべてがうまくいったら、ブラウザーは単に文字列 "Hello World" を表示するはずです。
 
 ## NPM の使用
 
@@ -341,7 +341,7 @@ DEBUG コマンドは有用なロギングを作成し、その結果、以下�
   helloworld:server Listening on port 3000 +0ms
 ```
 
-ブラウザーを開いて http\://127.0.0.1:3000/ に移動し、デフォルトの Express ウェルカムページを表示します。
+ブラウザーを開いて `http://127.0.0.1:3000/` に移動し、デフォルトの Express ウェルカムページを表示します。
 
 ![Express - Generated App Default Screen](express_default_screen.png)
 

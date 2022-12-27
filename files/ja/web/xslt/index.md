@@ -1,11 +1,6 @@
 ---
 title: 'XSLT: 拡張可能なスタイルシートの言語変換'
 slug: Web/XSLT
-tags:
-  - Landing
-  - Web
-  - XSLT
-translation_of: Web/XSLT
 ---
 {{XSLTRef}}
 

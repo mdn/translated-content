@@ -14,8 +14,8 @@ slug: Web/SVG/Element/feFuncA
 
 ### 全局属性
 
-- [核心属性](/en-US/docs/Web/SVG/Attribute#Core_attributes)
-- [Transfer function attributes](/en-US/docs/Web/SVG/Attribute#Transfer_function_attributes)
+- [核心属性](/zh-CN/docs/Web/SVG/Attribute#Core_attributes)
+- [Transfer function attributes](/zh-CN/docs/Web/SVG/Attribute#Transfer_function_attributes)
 
 ### 专有属性
 
@@ -42,4 +42,4 @@ _无_
 - {{ SVGElement("feFuncR") }}
 - {{ SVGElement("feFuncB") }}
 - {{ SVGElement("feFuncG") }}
-- [SVG 教程：滤镜效果](/en/SVG/Tutorial/Filter_effects)
+- [SVG 教程：滤镜效果](/zh-CN/SVG/Tutorial/Filter_effects)

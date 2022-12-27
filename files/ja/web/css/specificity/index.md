@@ -1,14 +1,6 @@
 ---
 title: 詳細度
 slug: Web/CSS/Specificity
-tags:
-  - CSS
-  - Example
-  - Guide
-  - Reference
-  - Web
-spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
-translation_of: Web/CSS/Specificity
 ---
 {{CSSRef}}
 

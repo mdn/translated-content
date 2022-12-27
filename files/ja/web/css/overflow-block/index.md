@@ -1,14 +1,6 @@
 ---
 title: overflow-block
 slug: Web/CSS/overflow-block
-tags:
-  - CSS
-  - CSS ボックスモデル
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.overflow-block
-translation_of: Web/CSS/overflow-block
 ---
 {{CSSRef}}
 

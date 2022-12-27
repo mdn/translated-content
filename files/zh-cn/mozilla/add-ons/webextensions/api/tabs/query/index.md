@@ -7,7 +7,7 @@ original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
 
 获取具有指定属性的所有选项卡，如果未指定任何属性，则获取所有选项卡。
 
-这是返回 的异步函数。[`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+这是返回 的异步函数。[`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
 ## 语法
 
@@ -30,7 +30,7 @@ let querying = browser.tabs.query(queryObj)
     - `autoDiscardable` {{optional_inline}}
       - : `boolean`.当资源不足时，浏览器是否可以自动丢弃选项卡。
     - `cookieStoreId` {{optional_inline}}
-      - : `string`.使用此仅返回其 Cookie 存储 ID 为 的选项卡。此选项仅在加载项具有权限时[才可用](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。`cookieStoreId` `cookies`
+      - : `string`.使用此仅返回其 Cookie 存储 ID 为 的选项卡。此选项仅在加载项具有权限时[才可用](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。`cookieStoreId` `cookies`
     - `currentWindow` {{optional_inline}}
       - : `boolean`.选项卡是否在当前窗口中。
     - `discarded` {{optional_inline}}
@@ -52,7 +52,7 @@ let querying = browser.tabs.query(queryObj)
     - `title` {{optional_inline}}
       - : `string`.将页面标题与图案匹配。
     - `url` {{optional_inline}}
-      - : `string`或。将选项卡与一个或多个匹配[模式匹配](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)。请注意，片段标识符不匹配。`array of string`
+      - : `string`或。将选项卡与一个或多个匹配[模式匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)。请注意，片段标识符不匹配。`array of string`
     - `windowId`{{optional_inline}}
       - : `integer`. The of the parent window, or {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} for the current window.`id`
     - `windowType`{{optional_inline}}
@@ -60,7 +60,7 @@ let querying = browser.tabs.query(queryObj)
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of `{{WebExtAPIRef('tabs.Tab')}}` objects, containing information about each matching tab.
+A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of `{{WebExtAPIRef('tabs.Tab')}}` objects, containing information about each matching tab.
 
 If any error occurs, the promise will be rejected with an error message.
 

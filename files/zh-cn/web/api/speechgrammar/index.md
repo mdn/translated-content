@@ -4,7 +4,7 @@ slug: Web/API/SpeechGrammar
 ---
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-[Web Speech API](/en-US/docs/Web/API/Web_Speech_API) 的 **`SpeechGrammar`** 接口 表示了语音识别对象服务想要识别的一系列词语或模式。
+[Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API) 的 **`SpeechGrammar`** 接口 表示了语音识别对象服务想要识别的一系列词语或模式。
 
 文法通过 [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**.) 来定义，其他格式的文法会在以后支持。
 
@@ -44,4 +44,4 @@ console.log(speechRecognitionList[0].weight); // 应该返回 1 - 与上面第�
 
 ## 相关链接
 
-- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)

@@ -1,16 +1,6 @@
 ---
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - レスポンスヘッダー
-  - ヘッダー
-  - WWW-Authenticate
-  - 認証
-browser-compat: http.headers.WWW-Authenticate
-translation_of: Web/HTTP/Headers/WWW-Authenticate
 ---
 {{HTTPSidebar}}
 

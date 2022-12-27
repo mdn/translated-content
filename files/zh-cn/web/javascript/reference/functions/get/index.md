@@ -147,9 +147,9 @@ console.log(
 
 ## 相关链接
 
-- [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Operators/delete", "delete")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineGetter", "__defineGetter__")}}
 - {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- 在 Javascript 指南中 [定义 Getters 和 Setters](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
+- 在 Javascript 指南中 [定义 Getters 和 Setters](/zh-CN/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)

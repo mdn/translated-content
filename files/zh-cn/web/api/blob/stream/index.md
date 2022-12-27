@@ -40,4 +40,4 @@ var stream = blob.stream();
 ## 另请参阅
 
 - {{domxref("Body.body")}}
-- [Streams API](/en-US/docs/Web/API/Streams_API)
+- [Streams API](/zh-CN/docs/Web/API/Streams_API)

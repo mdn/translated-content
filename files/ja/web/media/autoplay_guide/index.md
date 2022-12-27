@@ -1,24 +1,6 @@
 ---
 title: メディアおよびウェブオーディオ API の自動再生ガイド
 slug: Web/Media/Autoplay_guide
-tags:
-  - API
-  - Audio
-  - Draft
-  - Guide
-  - HTML
-  - JavaScript
-  - Media
-  - Muting
-  - Playback
-  - Video
-  - Web
-  - Web Audio API
-  - autoplay
-  - mute
-  - muted
-  - play
-translation_of: Web/Media/Autoplay_guide
 ---
 ページが読み込まれるとすぐに音声（または音声トラックを含む動画）の再生を自動的に開始することは、ユーザーにとって歓迎されない驚きです。 メディアの自動再生は便利な目的に役立ちますが、注意して必要なときにだけ使用してください。 ユーザーがこれを制御できるようにするために、ブラウザーは多くの場合、さまざまな形式の自動再生のブロック（autoplay blocking）を提供します。 このガイドでは、さまざまなメディアおよびウェブオーディオ API（Web Audio API）の自動再生機能について説明します — 自動再生の使用方法と自動再生のブロックを適切に処理するためのブラウザーの操作方法の簡単な概要を含みます。
 

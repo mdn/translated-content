@@ -8,7 +8,7 @@ slug: Web/CSS/@media/aspect-ratio
 
 ## 语法
 
-宽高比属性被指定为{{cssxref("&lt;ratio&gt;")}}值来代表 viewport 的宽高比。其为一个范围，这意味着你可以使用**`min-aspect-ratio`**和**`max-aspect-ratio`**分别查询最小和最大的值。
+宽高比属性被指定为{{cssxref("&lt;ratio&gt;")}}值来代表 viewport 的宽高比。其为一个范围，这意味着你可以使用 **`min-aspect-ratio`** 和 **`max-aspect-ratio`** 分别查询最小和最大的值。
 
 ## 示例
 

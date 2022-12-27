@@ -1,13 +1,6 @@
 ---
 title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
-tags:
-  - Class
-  - FinalizationRegistry
-  - JavaScript
-  - Reference
-browser-compat: javascript.builtins.FinalizationRegistry
-translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 ---
 {{JSRef}}
 

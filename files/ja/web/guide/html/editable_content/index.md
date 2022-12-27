@@ -1,18 +1,6 @@
 ---
 title: コンテンツを編集可能にする
 slug: Web/Guide/HTML/Editable_content
-tags:
-  - Advanced
-  - Example
-  - Guide
-  - HTML
-  - HTML5
-  - Text
-  - Web
-  - contenteditable
-  - text entry
-  - text input
-translation_of: Web/Guide/HTML/Editable_content
 ---
 > **Warning:** [`execCommand()` 仕様書](https://w3c.github.io/editing/docs/execCommand/)で警告しているように、この機能は"すべてのユーザーエージェントで一貫した、または完全な実装が行われているわけではなく"、それに加えて、 [`Document.execCommand()`](/ja/docs/Web/API/Document/execCommand) リファレンスページでは非推奨とされています。したがって、このページの内容の多くは、本番コードで使用するには信頼できません。
 

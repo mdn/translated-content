@@ -533,8 +533,8 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 ```
 36 cache-control max-age=0
-37 cache-control max-age=2592000
-38 cache-control max-age=604800
+37 cache-control max-age=604800
+38 cache-control max-age=2592000
 39 cache-control no-cache
 40 cache-control no-store
 41 cache-control public, max-age=31536000
@@ -552,7 +552,7 @@ bundle.js?v=YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 > **备注：** 只有在设置了 `Authorization` 标头时需要存储响应时才应使用 `public` 指令。否则不需要，因为只要给出了 `max-age`，响应就会存储在共享缓存中。
 
-因此，如果响应是使用基本身份验证进行个性化的，`public` 的存在可能会导致问题。如果您对此感到担忧，您可以选择第二长的值 “37”（1 个月）。
+因此，如果响应是使用基本身份验证进行个性化的，`public` 的存在可能会导致问题。如果您对此感到担忧，您可以选择第二长的值 “38”（1 个月）。
 
 ```http
 # response for bundle.v123.js

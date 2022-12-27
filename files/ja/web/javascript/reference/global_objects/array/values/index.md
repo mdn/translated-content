@@ -1,16 +1,6 @@
 ---
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
-tags:
-  - Array
-  - ECMAScript2015
-  - Iterator
-  - JavaScript
-  - Method
-  - Prototype
-  - メソッド
-  - 反復子
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
 {{JSRef}}
 

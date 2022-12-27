@@ -1,19 +1,6 @@
 ---
 title: Intl.Locale.prototype.textInfo
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-  - textInfo
-  - 書字方向
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/textInfo
-browser-compat: javascript.builtins.Intl.Locale.textInfo
 ---
 {{JSRef}}
 

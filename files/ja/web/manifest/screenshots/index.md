@@ -1,12 +1,6 @@
 ---
 title: screenshots
 slug: Web/Manifest/screenshots
-tags:
-  - マニフェスト
-  - Screenshots
-  - ウェブ
-browser-compat: html.manifest.screenshots
-translation_of: Web/Manifest/screenshots
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

@@ -1,12 +1,6 @@
 ---
 title: <math>
 slug: Web/MathML/Element/math
-tags:
-  - MathML
-  - MathML Reference
-  - MathML:Element
-  - MathML:要素
-translation_of: Web/MathML/Element/math
 ---
 {{MathMLRef}}
 

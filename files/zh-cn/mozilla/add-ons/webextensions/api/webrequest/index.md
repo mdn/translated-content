@@ -18,7 +18,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 这个监听函数接收一个`details`对象，这个对象包含这个请求的信息。他包含一个请求 ID, 在插件中这个 ID 可以关联唯一个请求事件。这个 ID 是浏览器会话和插件上下文中唯一的。他始终在同一个请求中，贯穿着转发和授权等事件中。
 
-在一个给定的主机上使用 webRequest API, 你必须有这个主机的相关权限，包括"webRequest" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 和 [host permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions). 为了使用 "blocking" 特性，你必须有 "webRequestBlocking" API 权限。
+在一个给定的主机上使用 webRequest API, 你必须有这个主机的相关权限，包括"webRequest" [API permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) 和 [host permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions). 为了使用 "blocking" 特性，你必须有 "webRequestBlocking" API 权限。
 
 这个 webRequest API 不能让你进入一些安全敏感的请求，比如[update checks and OCSP checks](https://bugzilla.mozilla.org/show_bug.cgi?id=1279371).
 
@@ -51,7 +51,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 为了完成这些操作，你需要在`extraInfoSpec`参数中添加"blocking"的值到事件的`addListener()`。这将使得监听器变成同步执行。在监听器中，你可以返回一个表明需要作修改的{{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}对象：比如说，你想要发送的修改后的请求头。
 
-从 Firefox 52 开始，监听器会返回一个`resolve(BlockingResponse)` 的 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)，而不是直接返回一个`BlockingResponse`。这使得监听器可以异步地处理请求。
+从 Firefox 52 开始，监听器会返回一个`resolve(BlockingResponse)` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，而不是直接返回一个`BlockingResponse`。这使得监听器可以异步地处理请求。
 
 ## Types
 
@@ -69,7 +69,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 ## Properties
 
 - {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
-  - : The maximum number of times that [`handlerBehaviorChanged()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged) can be called in a 10 minute period.
+  - : The maximum number of times that [`handlerBehaviorChanged()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest/handlerBehaviorChanged) can be called in a 10 minute period.
 
 ## Functions
 

@@ -1,11 +1,6 @@
 ---
 title: JavaScript について
 slug: Web/JavaScript/About_JavaScript
-tags:
-  - Beginner
-  - Introduction
-  - JavaScript
-translation_of: Web/JavaScript/About_JavaScript
 ---
 {{JsSidebar}}
 

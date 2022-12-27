@@ -1,15 +1,6 @@
 ---
 title: inset-block-end
 slug: Web/CSS/inset-block-end
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.inset-block-end
-translation_of: Web/CSS/inset-block-end
 ---
 {{CSSRef}}
 

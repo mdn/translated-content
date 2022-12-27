@@ -1,14 +1,6 @@
 ---
 title: 要素型セレクター
 slug: Web/CSS/Type_selectors
-tags:
-  - CSS
-  - HTML
-  - Node
-  - リファレンス
-  - セレクター
-browser-compat: css.selectors.type
-translation_of: Web/CSS/Type_selectors
 ---
 {{CSSRef}}
 

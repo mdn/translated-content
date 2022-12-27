@@ -10,7 +10,7 @@ slug: Web/API/WebGL_API/Tutorial
 
 ## 開始之前
 
-使用`<canvas>` 元件不會非常困難，但你需要有對[HTML](/en-US/docs/Web/HTML) 與 [JavaScript](/en-US/docs/Web/JavaScript) 的基礎認識。`<canvas>` 元件跟 WebGL 在某些舊瀏覽器中不支援，但近來的每個主流瀏覽器都有支援。我們用 JavaScript context object 在 canvas 繪製圖形，這樣圖形就能動態(on the fly)產生。
+使用`<canvas>` 元件不會非常困難，但你需要有對[HTML](/zh-TW/docs/Web/HTML) 與 [JavaScript](/zh-TW/docs/Web/JavaScript) 的基礎認識。`<canvas>` 元件跟 WebGL 在某些舊瀏覽器中不支援，但近來的每個主流瀏覽器都有支援。我們用 JavaScript context object 在 canvas 繪製圖形，這樣圖形就能動態(on the fly)產生。
 
 ## 教學文件
 
@@ -22,11 +22,11 @@ slug: Web/API/WebGL_API/Tutorial
   - : 示範如何使用 shaders 在圖形上上色
 - [WebGL 產生動畫](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL)
   - : 示範如何旋轉與移動物件以製作簡單的動畫
-- [建立三維物件](/en-US/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL)
+- [建立三維物件](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL)
   - : 示範如何創造並讓 3D 物件(立方體)有動畫
-- [在物件表面貼上材質](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
+- [在物件表面貼上材質](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
   - : 示範如何在物件的表面上貼上材質圖
-- [模擬打光](/en-US/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)
+- [模擬打光](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL)
   - : 如何在 WebGL 環境模擬打光效果
-- [讓材質產生動畫](/en-US/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
+- [讓材質產生動畫](/zh-TW/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
   - : 如何移動材質圖，在範例中是將 Ogg 影片 貼到一個旋轉中的立方體

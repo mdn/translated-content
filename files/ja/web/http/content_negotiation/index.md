@@ -1,13 +1,6 @@
 ---
 title: コンテンツ交渉
 slug: Web/HTTP/Content_negotiation
-tags:
-  - コンテンツ交渉
-  - コンテンツ交渉リファレンス
-  - HTTP
-  - リファレンス
-  - コンテンツ交渉
-translation_of: Web/HTTP/Content_negotiation
 ---
 {{HTTPSidebar}}
 

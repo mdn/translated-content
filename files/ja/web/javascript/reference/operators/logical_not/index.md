@@ -1,14 +1,6 @@
 ---
 title: 論理否定 (!)
 slug: Web/JavaScript/Reference/Operators/Logical_NOT
-tags:
-  - JavaScript
-  - 言語機能
-  - 論理演算子
-  - 演算子
-  - リファレンス
-browser-compat: javascript.operators.logical_not
-translation_of: Web/JavaScript/Reference/Operators/Logical_NOT
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,17 +1,6 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - 寸法
-  - recipe:css-property
-  - size
-  - width
-browser-compat: css.properties.width
-translation_of: Web/CSS/width
 ---
 {{CSSRef}}
 

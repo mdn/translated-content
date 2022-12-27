@@ -1,15 +1,6 @@
 ---
 title: '<canvas>: グラフィックキャンバス要素'
 slug: Web/HTML/Element/canvas
-tags:
-  - Canvas
-  - Element
-  - HTML
-  - HTML scripting
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/canvas
 ---
 {{HTMLRef}}
 

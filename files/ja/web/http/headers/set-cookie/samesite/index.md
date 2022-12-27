@@ -1,12 +1,6 @@
 ---
 title: SameSite cookies
 slug: Web/HTTP/Headers/Set-Cookie/SameSite
-tags:
-  - Cookies
-  - HTTP
-  - Reference
-  - samesite
-translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 ---
 {{HTTPSidebar}}
 

@@ -34,7 +34,7 @@ A copy of the given function with the specified **`this`** value and initial arg
 
 When bound function is called, it calls internal method **\[\[Call]]** on **\[\[BoundTargetFunction]],** with following arguments **Call(_boundThis_, _args_).** Where, **_boundThis_** is **\[\[BoundThis]]**, **args** is **\[\[BoundArguments]]** followed by the arguments passed by the function call.
 
-A bound function may also be constructed using the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator: doing so acts as though the target function had instead been constructed. The provided **`this`** value is ignored, while prepended arguments are provided to the emulated function.
+A bound function may also be constructed using the [`new`](/zh-TW/docs/Web/JavaScript/Reference/Operators/new) operator: doing so acts as though the target function had instead been constructed. The provided **`this`** value is ignored, while prepended arguments are provided to the emulated function.
 
 ## 範例
 

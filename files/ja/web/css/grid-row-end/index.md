@@ -1,13 +1,6 @@
 ---
 title: grid-row-end
 slug: Web/CSS/grid-row-end
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-row-end
 ---
 {{CSSRef}}
 

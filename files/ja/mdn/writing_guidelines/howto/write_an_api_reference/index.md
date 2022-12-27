@@ -202,7 +202,7 @@ API の概要ページは、 API の役割、最上位のインターフェイ�
   - end
   - …
 
-リストの各インターフェイスは、 https\://developer.mozilla.org/ja/docs/Web/API のサブページとして独立したページが作成されています。例えば、 {{domxref("AudioContext")}} の記事は、https://developer.mozilla.org/ja/docs/Web/API/AudioContext の場所にあります。各[インターフェイスページ](#インターフェイスページ)では、そのインターフェイスが何をするのかを説明し、そのインターフェイスを構成するメソッドとプロパティのリストを提供しています。そして、各メソッドとプロパティは、それがメンバーであるインターフェイスのサブページとして作成され、それ自身のページで文書化されます。例えば、 {{domxref("BaseAudioContext/currentTime")}} は、 https\://developer.mozilla.org/ja/docs/Web/API/AudioContext/currentTime で文書化されています。
+リストの各インターフェイスは、 `https://developer.mozilla.org/ja/docs/Web/API` のサブページとして独立したページが作成されています。例えば、 {{domxref("AudioContext")}} の記事は、`https://developer.mozilla.org/ja/docs/Web/API/AudioContext` の場所にあります。各[インターフェイスページ](#インターフェイスページ)では、そのインターフェイスが何をするのかを説明し、そのインターフェイスを構成するメソッドとプロパティのリストを提供しています。そして、各メソッドとプロパティは、それがメンバーであるインターフェイスのサブページとして作成され、それ自身のページで文書化されます。例えば、 {{domxref("BaseAudioContext/currentTime")}} は、 `https://developer.mozilla.org/ja/docs/Web/API/AudioContext/currentTime` で文書化されています。
 
 ## ページの作成
 

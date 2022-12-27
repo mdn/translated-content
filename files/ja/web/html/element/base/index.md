@@ -1,14 +1,6 @@
 ---
 title: '<base>: 文書の基底 URL 要素'
 slug: Web/HTML/Element/base
-tags:
-  - 要素
-  - HTML
-  - HTML 文書メタデータ
-  - HTML:メタデータコンテンツ
-  - リファレンス
-browser-compat: html.elements.base
-translation_of: Web/HTML/Element/base
 ---
 
 {{HTMLRef}}

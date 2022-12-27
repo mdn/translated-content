@@ -1,15 +1,6 @@
 ---
 title: place-content
 slug: Web/CSS/place-content
-tags:
-  - CSS
-  - CSS ボックス配置
-  - CSS プロパティ
-  - リファレンス
-  - place-content
-  - recipe:css-shorthand-property
-browser-compat: css.properties.place-content
-translation_of: Web/CSS/place-content
 ---
 {{CSSRef}}
 

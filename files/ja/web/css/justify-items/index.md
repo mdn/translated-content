@@ -1,14 +1,6 @@
 ---
 title: justify-items
 slug: Web/CSS/justify-items
-tags:
-  - CSS
-  - CSS ボックス配置
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.justify-items
-translation_of: Web/CSS/justify-items
 ---
 {{CSSRef}}
 

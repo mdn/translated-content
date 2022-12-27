@@ -1,16 +1,6 @@
 ---
 title: transform-box
 slug: Web/CSS/transform-box
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS Transforms
-  - Experimental
-  - NeedsExample
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.transform-box
-translation_of: Web/CSS/transform-box
 ---
 {{CSSRef}}
 

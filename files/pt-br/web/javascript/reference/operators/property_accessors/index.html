@@ -15,7 +15,7 @@ object["property"]
 
 <h2 id="Descrição">Descrição</h2>
 
-<p><span id="result_box" lang="pt"><span>Pode-se</span> <span>pensar em</span> <span>um objeto</span> <span>como uma matriz associativa</span></span> (a.k.a. <em>map</em>, <em>dictionary</em>, <em>hash</em>, <em>lookup table</em>). As chaves nesta matriz são os nomes das propriedades dos objetos. <span id="result_box" lang="pt"><span>É típico</span> <span>quando se fala de</span> <span>propriedades de um objeto</span> <span>para fazer uma</span> <span>distinção entre</span> <span>propriedades e métodos</span></span>. No entanto, a distinção entre propriedade/método é um pouco mais do que convenção. <span id="result_box" lang="pt"><span>Um método</span> <span>é simplesmente</span> <span>uma propriedade que</span> <span>pode ser chamada</span><span>, por exemplo</span><span>, se tiver</span> <span>uma referência</span> <span>a uma instância</span> <span>de <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions">Function</a></span> <span>como seu valor.</span></span></p>
+<p>Pode-se pensar em um objeto como uma matriz associativa (a.k.a. <em>map</em>, <em>dictionary</em>, <em>hash</em>, <em>lookup table</em>). As chaves nesta matriz são os nomes das propriedades dos objetos. É típico quando se fala de propriedades de um objeto para fazer uma distinção entre propriedades e métodos. No entanto, a distinção entre propriedade/método é um pouco mais do que convenção. Um método é simplesmente uma propriedade que pode ser chamada, por exemplo, se tiver uma referência a uma instância de <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions">Function</a> como seu valor.</p>
 
 <p>Há duas maneira de acessar propriedades: notação de ponto ou a notação de colchetes.</p>
 
@@ -30,7 +30,7 @@ object.property = set;
 <pre class="brush: js">document.createElement('pre');
 </pre>
 
-<p>Aqui, o método chamado "createElement" <span class="short_text" id="result_box" lang="pt"><span>é recuperado do</span> <span>documento e</span> <span>é chamado.</span></span></p>
+<p>Aqui, o método chamado "createElement" é recuperado do documento e é chamado.</p>
 
 <p>Se você usar um método para um literal numérico e o literal numérico não tem expoente e nenhum ponto decimal, deixar de espaço em branco antes do ponto que precede a chamada de método para evitar que o ponto seja interpretado como um ponto decimal.</p>
 
@@ -63,9 +63,9 @@ object[property_name] = set;
 
 <pre class="brush: js">document ['createElement']('pre');</pre>
 
-<h3 id="Nomes_de_propriedades"><span class="short_text" id="result_box" lang="pt"><span>Nomes de propriedades</span></span></h3>
+<h3 id="Nomes_de_propriedades">Nomes de propriedades</h3>
 
-<p><span class="short_text" id="result_box" lang="pt"><span>Nomes de propriedades</span></span> devem ser strings. Isto significa que objetos não-string não podem ser usados como chave em um objeto. Qualquer objeto não-string, incluindo um número, é <span class="short_text" id="result_box" lang="pt"><span>estereotipado</span></span> como uma string pelo método <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">toString</a>.</p>
+<p>Nomes de propriedades devem ser strings. Isto significa que objetos não-string não podem ser usados como chave em um objeto. Qualquer objeto não-string, incluindo um número, é estereotipado como uma string pelo método <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString">toString</a>.</p>
 
 <pre class="brush: js">var object = {};
 object['1'] = 'value';

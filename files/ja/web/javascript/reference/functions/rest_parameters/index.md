@@ -1,13 +1,6 @@
 ---
 title: 残余引数
 slug: Web/JavaScript/Reference/Functions/rest_parameters
-tags:
-  - 関数
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.functions.rest_parameters
-translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
 {{jsSidebar("Functions")}}
 

@@ -15,7 +15,7 @@ new Int8Array(object);
 new Int8Array(buffer [, byteOffset [, length]]);
 ```
 
-有关构造函数语法和参数的更多信息，请访问 _[TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+有关构造函数语法和参数的更多信息，请访问 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
 ## 属性
 
@@ -157,6 +157,6 @@ var dv = new Int8Array([1, 2, 3]);
 
 ## 相关链接
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

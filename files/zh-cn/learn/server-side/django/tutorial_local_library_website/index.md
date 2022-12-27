@@ -12,10 +12,10 @@ slug: Learn/Server-side/Django/Tutorial_local_library_website
       <th scope="row">前提：</th>
       <td>
         阅读
-        <a href="/en-US/docs/Learn/Server-side/Django/Introduction"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/Introduction"
           >Django 介绍</a
         >。在接下来的文章里你需要
-        <a href="/en-US/docs/Learn/Server-side/Django/development_environment"
+        <a href="/zh-CN/docs/Learn/Server-side/Django/development_environment"
           >创建 Django 开发环境</a
         >.
       </td>
@@ -66,6 +66,6 @@ slug: Learn/Server-side/Django/Tutorial_local_library_website
 
 ## 总结
 
-现在你对本地图书馆网站有了一些了解并知道你会学到什么。是时候创建我们例子会用到的[网站框架](/en-US/docs/Learn/Server-side/Django/skeleton_website)了。
+现在你对本地图书馆网站有了一些了解并知道你会学到什么。是时候创建我们例子会用到的[网站框架](/zh-CN/docs/Learn/Server-side/Django/skeleton_website)了。
 
 {{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}

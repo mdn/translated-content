@@ -2,7 +2,6 @@
 title: MediaDevices
 slug: Web/API/MediaDevices
 ---
-
 {{APIRef("Media Capture and Streams")}}
 
 <code>MediaDevices</code>介面可以存取連接的媒體輸入設備，像是相機、麥克風，以及螢幕分享。它可以存取任何硬體資源的媒體數據。
@@ -87,9 +86,9 @@ function errorMsg(msg, error) {
 
 ## 參見
 
-- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Streams_API): The API this interface is part of.
-- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): The API defining the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method.
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Media Capture and Streams API](/zh-TW/docs/Web/API/Media_Streams_API): The API this interface is part of.
+- [Screen Capture API](/zh-TW/docs/Web/API/Screen_Capture_API): The API defining the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method.
+- [WebRTC API](/zh-TW/docs/Web/API/WebRTC_API)
 - {{domxref("Navigator.mediaDevices")}}: Returns a reference to a `MediaDevices` object that can be used to access devices.
 - [CameraCaptureJS:](https://github.com/chrisjohndigital/CameraCaptureJS) HTML5 video capture and playback using `MediaDevices` and the MediaStream Recording API ([source on GitHub](https://github.com/chrisjohndigital/CameraCaptureJS))
 - [OpenLang](https://github.com/chrisjohndigital/OpenLang): HTML5 video language lab web application using `MediaDevices` and the MediaStream Recording API for video recording ([source on GitHub](https://github.com/chrisjohndigital/OpenLang))

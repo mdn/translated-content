@@ -1,15 +1,6 @@
 ---
 title: scroll-padding-left
 slug: Web/CSS/scroll-padding-left
-tags:
-  - CSS
-  - CSS プロパティ
-  - Reference
-  - recipe:css-property
-  - scroll-padding
-  - scroll-padding-left
-browser-compat: css.properties.scroll-padding-left
-translation_of: Web/CSS/scroll-padding-left
 ---
 {{CSSRef}}
 

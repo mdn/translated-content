@@ -1,13 +1,6 @@
 ---
 title: 視覚整形モデル
 slug: Web/CSS/Visual_formatting_model
-tags:
-  - CSS
-  - CSS Box Model
-  - Guide
-  - Reference
-  - visual formatting model
-translation_of: Web/CSS/Visual_formatting_model
 ---
 {{CSSRef}}
 

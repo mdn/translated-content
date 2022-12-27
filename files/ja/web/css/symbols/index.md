@@ -1,14 +1,7 @@
 ---
 title: symbols()
 slug: Web/CSS/symbols
-tags:
-  - CSS
-  - CSS カウンタースタイル
-  - Function
-  - リファレンス
-translation_of: Web/CSS/symbols()
 original_slug: Web/CSS/symbols()
-browser-compat: css.properties.list-style-type.symbols
 ---
 {{CSSRef}}
 

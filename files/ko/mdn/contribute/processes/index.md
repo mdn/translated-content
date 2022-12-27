@@ -1,11 +1,6 @@
 ---
 title: 문서 작업 절차
 slug: MDN/Contribute/Processes
-tags:
-  - MDN 메타
-  - 시작하기
-  - 프로세스
-translation_of: MDN/Contribute/Processes
 ---
 {{MDNSidebar}}
 

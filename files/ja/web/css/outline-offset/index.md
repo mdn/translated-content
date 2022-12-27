@@ -1,14 +1,6 @@
 ---
 title: outline-offset
 slug: Web/CSS/outline-offset
-tags:
-  - CSS
-  - CSS 輪郭線
-  - CSS プロパティ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.outline-offset
-translation_of: Web/CSS/outline-offset
 ---
 {{CSSRef}}
 

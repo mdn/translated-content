@@ -36,4 +36,4 @@ None.
 
 ## See also
 
-- [Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API)
+- [Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API)

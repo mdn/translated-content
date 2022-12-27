@@ -1,15 +1,7 @@
 ---
 title: hue-rotate()
 slug: Web/CSS/filter-function/hue-rotate
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/hue-rotate()
 original_slug: Web/CSS/filter-function/hue-rotate()
-browser-compat: css.types.filter-function.hue-rotate
 ---
 {{CSSRef}}
 

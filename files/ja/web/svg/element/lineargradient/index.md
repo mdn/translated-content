@@ -1,11 +1,6 @@
 ---
 title: linearGradient
 slug: Web/SVG/Element/linearGradient
-tags:
-  - Element
-  - SVG
-  - SVG Gradient
-translation_of: Web/SVG/Element/linearGradient
 ---
 {{SVGRef}}
 

@@ -4,7 +4,7 @@ slug: Web/API/USB
 ---
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
-[WebUSB API](/en-US/docs/Web/API/WebUSB_API) 接口提供了从网页查找和连接 USB 设备的属性和方法
+[WebUSB API](/zh-CN/docs/Web/API/WebUSB_API) 接口提供了从网页查找和连接 USB 设备的属性和方法
 
 ## 属性
 

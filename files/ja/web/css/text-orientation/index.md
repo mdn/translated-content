@@ -1,15 +1,6 @@
 ---
 title: text-orientation
 slug: Web/CSS/text-orientation
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS Writing Modes
-  - Reference
-  - recipe:css-property
-  - 日本語処理
-browser-compat: css.properties.text-orientation
-translation_of: Web/CSS/text-orientation
 ---
 {{CSSRef}}
 

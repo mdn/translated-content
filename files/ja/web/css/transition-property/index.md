@@ -1,14 +1,6 @@
 ---
 title: transition-property
 slug: Web/CSS/transition-property
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS トランジション
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.transition-property
-translation_of: Web/CSS/transition-property
 ---
 {{CSSRef}}
 

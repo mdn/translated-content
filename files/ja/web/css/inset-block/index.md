@@ -1,15 +1,6 @@
 ---
 title: inset-block
 slug: Web/CSS/inset-block
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.inset-block
-translation_of: Web/CSS/inset-block
 ---
 {{CSSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: HTTP リクエストメソッド
 slug: Web/HTTP/Methods
-tags:
-  - HTTP
-  - メソッド
-  - リファレンス
-browser-compat: http.methods
-translation_of: Web/HTTP/Methods
 ---
 {{HTTPSidebar}}
 

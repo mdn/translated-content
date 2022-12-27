@@ -46,4 +46,4 @@ function showType(fileInput) {
 
 ## 另见
 
-- [在 Web 应用中使用文件](/en-US/docs/Using_files_from_web_applications)
+- [在 Web 应用中使用文件](/zh-CN/docs/Using_files_from_web_applications)

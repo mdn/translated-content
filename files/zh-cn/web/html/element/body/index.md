@@ -10,11 +10,11 @@ slug: Web/HTML/Element/body
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories">内容分类</a>
+        <a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a>
       </th>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
+          href="/zh-CN/docs/Web/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_roots"
           >Sectioning root</a
         >.
       </td>
@@ -22,7 +22,7 @@ slug: Web/HTML/Element/body
     <tr>
       <th scope="row">允许的内容</th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#Flow_content"
+        <a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content"
           >Flow content</a
         >.
       </td>

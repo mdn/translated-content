@@ -1,13 +1,6 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - JavaScript
-  - Landing
-  - Landing page
-  - Learn
-  - l10n:priority
-translation_of: Web/JavaScript
 ---
 {{JsSidebar}}
 

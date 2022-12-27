@@ -4,7 +4,7 @@ slug: Web/API/Document/getElementById
 ---
 {{ ApiRef("DOM") }}
 
-{{domxref("Document")}}的方法 {{domxref("Document.getElementById", "getElementById()")}}返回一个匹配特定 [ID](/en-US/docs/DOM/element.id)的元素。由于元素的 ID 在大部分情况下要求是独一无二的，这个方法自然而然地成为了一个高效查找特定元素的方法。
+{{domxref("Document")}}的方法 {{domxref("Document.getElementById", "getElementById()")}}返回一个匹配特定 [ID](/zh-CN/docs/DOM/element.id)的元素。由于元素的 ID 在大部分情况下要求是独一无二的，这个方法自然而然地成为了一个高效查找特定元素的方法。
 
 如果需要查找到那些没有 ID 的元素，你可以考虑通过 CSS 选择器使用 {{domxref("Document.querySelector", "querySelector()")}}。
 
@@ -88,7 +88,7 @@ function changeColor(newColor) {
 
 如果没有查找到对应的元素，方法会返回 null。注意 ID 参数是大小写敏感的，所以 document.getElementById("**M**ain") 无法获取到元素\<div id="**m**ain">，因为'M'和'm'是不一样的。
 
-getElementById 方法不会搜索**不在文档中的元素。**当创建一个元素，并且分配 ID 后，你必须要使用[insertBefore](/en-US/docs/DOM/Node.insertBefore)或其他类似的方法把元素插入到文档中，之后才能使用 getElementById 获取到：
+getElementById 方法不会搜索**不在文档中的元素。**当创建一个元素，并且分配 ID 后，你必须要使用[insertBefore](/zh-CN/docs/DOM/Node.insertBefore)或其他类似的方法把元素插入到文档中，之后才能使用 getElementById 获取到：
 
 ```js
 var element = document.createElement("div");
@@ -96,7 +96,7 @@ element.id = 'testqq';
 var el = document.getElementById('testqq'); // el 是个 null
 ```
 
-**非 HTML 文档（Non-HTML documents**）。 DOM 的实现必须说明哪个属性是 ID 类型。只有 DTD 定义了'id'是 ID 属性时’id‘才会被认为是 ID 属性。在 [XHTML](/en-US/docs/XHTML), [XUL](/en-US/docs/XUL)或者其他文档中，'id'通常被定义为 ID 类型的属性。不知道哪个属性是 ID 类型的实现中，这会返回 null 结果。
+**非 HTML 文档（Non-HTML documents**）。 DOM 的实现必须说明哪个属性是 ID 类型。只有 DTD 定义了'id'是 ID 属性时’id‘才会被认为是 ID 属性。在 [XHTML](/zh-CN/docs/XHTML), [XUL](/zh-CN/docs/XUL)或者其他文档中，'id'通常被定义为 ID 类型的属性。不知道哪个属性是 ID 类型的实现中，这会返回 null 结果。
 
 ## 规范
 

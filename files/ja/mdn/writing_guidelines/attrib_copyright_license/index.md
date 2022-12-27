@@ -22,7 +22,7 @@ MDN Web Docs のコンテンツは無料で利用でき、様々なオープン�
 
 ### コード例
 
-2010 年 8 月 20 日以降に追加された例は、[パブリックドメイン](https://creativecommons.org/publicdomain/zero/1.0/) ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)) にあります。ライセンス表記は必要ありませんが、必要な場合は、 "すべての著作権はパブリックドメインに帰属します。http\://creativecommons.org/publicdomain/zero/1.0/" を使用できます。
+2010 年 8 月 20 日以降に追加された例は、[パブリックドメイン](https://creativecommons.org/publicdomain/zero/1.0/) ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)) にあります。ライセンス表記は必要ありませんが、必要な場合は、 "すべての著作権はパブリックドメインに帰属します。<http://creativecommons.org/publicdomain/zero/1.0/>" を使用できます。
 
 2010 年 8 月 20 日より前に追加されたコードサンプルは [MIT ライセンス](https://opensource.org/licenses/mit-license.php)の下で利用可能です。帰属情報 "© \<ページの最終改訂日> \<Wiki に掲載した人の名前>" を MIT のテンプレートに挿入する必要があります。
 

@@ -1,11 +1,6 @@
 ---
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-translation_of: Web/HTTP/Status/401
 ---
 {{HTTPSidebar}}
 

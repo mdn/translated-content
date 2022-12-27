@@ -1,26 +1,6 @@
 ---
 title: '<bdi>: 書字方向分離要素'
 slug: Web/HTML/Element/bdi
-tags:
-  - BiDi
-  - HTML
-  - HTML 文字レベルの意味付け
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - Reference
-  - i18n
-  - ltr
-  - rtl
-  - ウェブ
-  - テキスト
-  - リファレンス
-  - 右書き
-  - 国際化
-  - 左書き
-  - 書字方向
-  - 要素
-translation_of: Web/HTML/Element/bdi
 ---
 {{HTMLRef}}
 

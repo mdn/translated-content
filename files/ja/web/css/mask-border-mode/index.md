@@ -1,17 +1,6 @@
 ---
 title: mask-border-mode
 slug: Web/CSS/mask-border-mode
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 実験的
-  - NeedsContent
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-border-mode
-translation_of: Web/CSS/mask-border-mode
 ---
 {{CSSRef}}
 

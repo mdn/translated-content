@@ -1,16 +1,6 @@
 ---
 title: offset-position
 slug: Web/CSS/offset-position
-tags:
-  - CSS
-  - CSS モーションパス
-  - CSS プロパティ
-  - 実験的
-  - プロパティ
-  - offset-position
-  - recipe:css-property
-browser-compat: css.properties.offset-position
-translation_of: Web/CSS/offset-position
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

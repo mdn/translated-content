@@ -1,14 +1,6 @@
 ---
 title: font-smooth
 slug: Web/CSS/font-smooth
-tags:
-  - CSS
-  - CSS プロパティ
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-smooth
-translation_of: Web/CSS/font-smooth
 ---
 {{ CSSRef }} {{ Non-standard_header }}
 

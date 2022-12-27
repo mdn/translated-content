@@ -1,9 +1,6 @@
 ---
 title: Mozilla JavaScript インターフェイスを使用した XSL 変換
 slug: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
-tags:
-  - XSLT
-translation_of: Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 ---
 この文書では、 Mozilla 1.2 の JavaScript インターフェイスと XSLT 処理エンジン (TransforMiiX) について説明します。
 

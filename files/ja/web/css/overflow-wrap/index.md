@@ -1,14 +1,6 @@
 ---
 title: overflow-wrap
 slug: Web/CSS/overflow-wrap
-tags:
-  - CSS
-  - CSS テキスト
-  - CSS プロパティ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.overflow-wrap
-translation_of: Web/CSS/overflow-wrap
 ---
 {{CSSRef}}
 

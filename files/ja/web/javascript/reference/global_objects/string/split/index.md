@@ -1,17 +1,6 @@
 ---
 title: String.prototype.split()
 slug: Web/JavaScript/Reference/Global_Objects/String/split
-tags:
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
-  - プロトタイプ
-  - メソッド
-  - 正規表現
-translation_of: Web/JavaScript/Reference/Global_Objects/String/split
 ---
 {{JSRef}}
 

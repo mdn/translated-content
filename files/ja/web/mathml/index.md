@@ -1,13 +1,6 @@
 ---
 title: MathML
 slug: Web/MathML
-tags:
-  - Landing
-  - MathML
-  - Reference
-  - Web
-  - XML
-translation_of: Web/MathML
 ---
 {{MathMLRef}}
 

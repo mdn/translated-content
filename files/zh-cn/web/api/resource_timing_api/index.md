@@ -2,7 +2,9 @@
 title: Resource Timing API
 slug: Web/API/Resource_Timing_API
 ---
-{{DefaultAPISidebar("Resource Timing API")}}通过**`Resource Timing API`**可以获取和分析应用资源加载的详细网络计时数据，应用程序可以使用时间度量标准来确定加载特定资源所需要的时间，比如 {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, 图片，或者脚本。
+{{DefaultAPISidebar("Resource Timing API")}}
+
+通过 **`Resource Timing API`** 可以获取和分析应用资源加载的详细网络计时数据，应用程序可以使用时间度量标准来确定加载特定资源所需要的时间，比如 {{domxref("XMLHttpRequest")}}, {{SVGElement("SVG","SVG element")}}, 图片，或者脚本。
 
 **`Resource Timing API`**为网络事件 (如重定向的开始和结束事件，DNS 查找的开始和结束事件，请求开始，响应开始和结束时间等) 生成有高分辨率时间戳 ( {{domxref("DOMHighResTimeStamp","high-resolution timestamps", "", 1)}} ) 的资源加载时间线，并提供了资源大小和资源类型。
 

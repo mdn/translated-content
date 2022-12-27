@@ -85,7 +85,7 @@ The exception to this is Chrome, starting with version 56 (desktop, Chrome for a
 
 ## 範例
 
-See the [example on the main Touch events article](/en/DOM/Touch_events#Example).
+See the [example on the main Touch events article](/zh-TW/DOM/Touch_events#Example).
 
 ## 規範
 

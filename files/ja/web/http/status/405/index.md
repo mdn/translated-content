@@ -1,13 +1,6 @@
 ---
 title: 405 Method Not Allowed
 slug: Web/HTTP/Status/405
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - Reference
-  - クライアントエラー
-  - リファレンス
-translation_of: Web/HTTP/Status/405
 ---
 {{HTTPSidebar}}
 

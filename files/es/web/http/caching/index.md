@@ -449,7 +449,7 @@ Es posible que desee sobrescribir esa respuesta una vez que caduque en el servid
 
 Uno de los métodos mencionados en la especificación es enviar una solicitud de la misma URL con un método no seguro como `POST`, pero eso suele ser difícil de hacer intencionalmente en muchos clientes.
 
-También hay una especificación para un header y valor `Clear-Site-Data: cache`, pero [no todos los navegadores lo admiten] (https://groups.google.com/a/mozilla.org/g/dev-platform /c/I939w1yrTp4), e incluso cuando se usa, solo afecta los cachés del navegador, pero no tiene efecto en los cachés intermedios.
+También hay una especificación para un header y valor `Clear-Site-Data: cache`, pero [no todos los navegadores lo admiten] (<https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4>), e incluso cuando se usa, solo afecta los cachés del navegador, pero no tiene efecto en los cachés intermedios.
 
 Por lo tanto, se debe suponer que cualquier respuesta almacenada permanecerá durante su período de `max-age` a menos que el usuario realice manualmente una acción de recarga, recarga forzada o borrado del historial.
 

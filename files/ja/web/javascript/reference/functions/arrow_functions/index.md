@@ -1,15 +1,6 @@
 ---
 title: アロー関数式
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript 2015
-  - 関数
-  - 中級者
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.functions.arrow_functions
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
 {{jsSidebar("Functions")}}
 

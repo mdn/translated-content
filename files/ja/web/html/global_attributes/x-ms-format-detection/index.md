@@ -1,7 +1,6 @@
 ---
 title: x-ms-format-detection
 slug: Web/HTML/Global_attributes/x-ms-format-detection
-translation_of: Web/HTML/Global_attributes/x-ms-format-detection
 ---
 {{HTMLSidebar("Global_attributes")}}{{Non-standard_Header}}
 

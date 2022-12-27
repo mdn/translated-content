@@ -1,15 +1,6 @@
 ---
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-browser-compat: html.global_attributes.itemtype
-translation_of: Web/HTML/Global_attributes/itemtype
 ---
 
 {{HTMLSidebar("Global_attributes")}}

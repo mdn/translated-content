@@ -1,17 +1,6 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Element/input/button
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Input
-  - Input Element
-  - Input Type
-  - Reference
-  - button
-translation_of: Web/HTML/Element/input/button
 ---
 {{HTMLRef("Input_types")}}
 

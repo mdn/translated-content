@@ -1,12 +1,6 @@
 ---
 title: 文と宣言
 slug: Web/JavaScript/Reference/Statements
-tags:
-  - JavaScript
-  - Landing page
-  - Reference
-  - statements
-translation_of: Web/JavaScript/Reference/Statements
 ---
 {{jsSidebar("Statements")}}
 

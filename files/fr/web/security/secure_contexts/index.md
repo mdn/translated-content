@@ -17,7 +17,7 @@ Certaines APIs du web peuvent donner beaucoup de pouvoir à un attaqueur, lui pe
 
 Un contexte sera considéré comme sécurisé s'il est servi locallement, ou depuis un serveur sécurisé. Un contexte qui n'est pas à la racine (une page qui n'est pas dans une fenêtre, iframe, ...) doit avoir tous ses contextes parents sécurisés.
 
-Les fichiers servis locallement avec des chemins comme *http\://localhost* et *file://* sont considérés sécurisés.
+Les fichiers servis locallement avec des chemins comme `http://localhost` et `file://` sont considérés sécurisés.
 
 Les contextes qui ne sont pas servis locallement doivent être servis avec *https\://* ou *wss\://* et les protocoles utilisés ne doivent pas être considérés obsolètes.
 
@@ -134,7 +134,7 @@ Certains navigateurs peuvent décider de demander à certaines APIs d'être dans
   </tbody>
 </table>
 
-Pour vérifier le support de votre navigateur, utilisez le site: http\://permission.site
+Pour vérifier le support de votre navigateur, utilisez le site: `http://permission.site`
 
 _Note: Safari et Chrome ne supportent pas complètement la spécification des Secure Contexts, certaines APIs peuvent fonctionner avec des iframes utilisant du HTTPS dans une page utilisant du HTTP ou dans une page qui a un contexte ouvert avec une page non sécurisée (c'est le cas quand une page utilisant du HTTP utilise window\.open ou target="\_blank")._
 

@@ -1,12 +1,6 @@
 ---
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-browser-compat: http.methods.TRACE
-translation_of: Web/HTTP/Methods/TRACE
 ---
 {{HTTPSidebar}}
 

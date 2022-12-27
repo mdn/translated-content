@@ -36,19 +36,19 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <p>O JavaScript possui tanto operadores <em>binários</em> quanto <em>unários</em> e um operador ternário, o operador condicional. Um operador binário exige dois operandos, um antes do operador e outro depois:</p>
 
-<pre class="notranslate"><em>operando1</em> <em>operador</em> <em>operando2</em>
+<pre><em>operando1</em> <em>operador</em> <em>operando2</em>
 </pre>
 
 <p>Por exemplo, <code>3+4</code> ou <code>x*y</code>.</p>
 
 <p>Um operador unário exige um único operando, seja antes ou depois do operador:</p>
 
-<pre class="notranslate"><em>operador</em> <em>operando</em>
+<pre><em>operador</em> <em>operando</em>
 </pre>
 
 <p>ou</p>
 
-<pre class="notranslate"><em>operando</em> <em>operador</em>
+<pre><em>operando</em> <em>operador</em>
 </pre>
 
 <p>Por exemplo, <code>x++</code> ou <code>++x</code>.</p>
@@ -139,9 +139,9 @@ translation_of: Web/JavaScript/Guide/Expressions_and_Operators
 
 <h3 id="Operadores_de_comparação"><a id="operador_comparacao" name="operador_comparacao">Operadores de comparação</a></h3>
 
-<p><span class="comment">This seems to me kind of poorly explained, mostly the difference betwen "==" and "==="...</span> Um operador de comparação compara seus operandos e retorna um valor lógico baseado em se a comparação é verdadeira. Os operandos podem ser numéricos, strings, lógicos ou objetos. Strings são comparadas com base em ordenação lexográfica utilizando valores Unicode. Na maioria dos casos, se dois operandos não são do mesmo tipo, o JavaScript tenta convertê-los para um tipo apropriado. Isto geralmente resulta na realização de uma comparação numérica. As únicas exceções a esta regra são os operadores <code>===</code> e o <code>!==</code>, que realizam comparações de igualdade e desigualdade "estritas". Estes operadores não tentam converter os operandos em tipos compatíveis antes de verificar a igualdade. A tabela a seguir descreve os operadores de comparação levando em conta o seguinte código:</p>
+<p>This seems to me kind of poorly explained, mostly the difference betwen "==" and "==="... Um operador de comparação compara seus operandos e retorna um valor lógico baseado em se a comparação é verdadeira. Os operandos podem ser numéricos, strings, lógicos ou objetos. Strings são comparadas com base em ordenação lexográfica utilizando valores Unicode. Na maioria dos casos, se dois operandos não são do mesmo tipo, o JavaScript tenta convertê-los para um tipo apropriado. Isto geralmente resulta na realização de uma comparação numérica. As únicas exceções a esta regra são os operadores <code>===</code> e o <code>!==</code>, que realizam comparações de igualdade e desigualdade "estritas". Estes operadores não tentam converter os operandos em tipos compatíveis antes de verificar a igualdade. A tabela a seguir descreve os operadores de comparação levando em conta o seguinte código:</p>
 
-<pre class="brush: js notranslate">var var1 = 3;
+<pre class="brush: js">var var1 = 3;
 var var2 = 4;
 </pre>
 
@@ -214,7 +214,7 @@ var var2 = 4;
 
 <p>Operadores aritméticos tomam valores numéricos (sejam literais ou variáveis) como seus operandos e retornam um único valor númerico. Os operadores aritméticos padrão são os de soma (<code>+</code>), subtração (<code>-</code>), multiplicação (<code>*</code>) e divisão (<code>/</code>). Estes operadores trabalham da mesma forma como na maioria das linguagens de programação quando utilizados com números de ponto flutuante (em particular, repare que divisão por zero produz um <a href="/pt-BR/docs/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a>). Por exemplo:</p>
 
-<pre class="brush: js notranslate">console.log(1 / 2); /* imprime 0.5 */
+<pre class="brush: js">console.log(1 / 2); /* imprime 0.5 */
 console.log(1 / 2 == 1.0 / 2.0); /* isto também é verdadeiro */
 </pre>
 
@@ -339,8 +339,10 @@ console.log(1 / 2 == 1.0 / 2.0); /* isto também é verdadeiro */
  <li>Os operandos são convertidos em inteiros de 32 bits e expressos como uma série de bits (zeros e uns). Números com representação maior que 32 bits terão seus bits truncados. Por exemplo, o seguinte inteiro tem representação binária maior que 32 bits será convertido em um inteiro de 32 bits.</li>
 </ul>
 
-<pre class="line-numbers  language-html notranslate">Antes:<code> </code><code class="language-html">11100110111110100000000000000110000000000001
-Depois: </code><code class="language-html">           10100000000000000110000000000001</code></pre>
+<pre>
+Antes: 11100110111110100000000000000110000000000001
+Depois:            10100000000000000110000000000001
+</pre>
 
 <ul>
  <li>Cada bit do primeiro operando é pareado com o bit correspondente do segundo operando: primeiro bit com primeiro bit, segundo bit com segundo bit e assim por diante.</li>
@@ -465,7 +467,7 @@ Depois: </code><code class="language-html">           10100000000000000110000000
 
 <p>O código a seguir mostra exemplos do operador &amp;&amp; (E lógico).</p>
 
-<pre class="brush: js notranslate">var a1 =  true &amp;&amp; true;     // t &amp;&amp; t retorna true
+<pre class="brush: js">var a1 =  true &amp;&amp; true;     // t &amp;&amp; t retorna true
 var a2 =  true &amp;&amp; false;    // t &amp;&amp; f retorna false
 var a3 = false &amp;&amp; true;     // f &amp;&amp; t retorna false
 var a4 = false &amp;&amp; (3 == 4); // f &amp;&amp; f retorna false
@@ -476,7 +478,7 @@ var a7 = "Gato" &amp;&amp; false;   // t &amp;&amp; f retorna false
 
 <p>O código a seguir mostra exemplos do operador || (OU lógico).</p>
 
-<pre class="brush: js notranslate">var o1 =  true || true;     // t || t retorna true
+<pre class="brush: js">var o1 =  true || true;     // t || t retorna true
 var o2 = false || true;     // f || t retorna true
 var o3 =  true || false;    // t || f retorna true
 var o4 = false || (3 == 4); // f || f retorna false
@@ -487,7 +489,7 @@ var o7 = "Gato" || false;   // t || f retorna Gato
 
 <p>O código a seguir mostra exemplos do operador ! (negação lógica).</p>
 
-<pre class="brush: js notranslate">var n1 = !true;   // !t retorna false
+<pre class="brush: js">var n1 = !true;   // !t retorna false
 var n2 = !false;  // !f retorna true
 var n3 = !"Gato"; // !t retorna false
 </pre>
@@ -509,27 +511,27 @@ var n3 = !"Gato"; // !t retorna false
 
 <p>Por exemplo,</p>
 
-<pre class="notranslate"> console.log(<code>"minha " + "string"</code>); // exibe a string <code>"minha string"</code>.</pre>
+<pre> console.log("minha " + "string"); // exibe a string "minha string".</pre>
 
 <p>O operador de atribuição encurtado += também pode ser utilizado para concatenar strings.</p>
 
 <p>Por exemplo,</p>
 
-<pre class="notranslate">var minhaString = "alfa";
-minhaString += "beto"; // É avaliada como "alfabeto" e atribui este valor a <code>minhastring</code>.</pre>
+<pre>var minhaString = "alfa";
+minhaString += "beto"; // É avaliada como "alfabeto" e atribui este valor a minhastring.</pre>
 
 <h3 id="Operador_condicional_ternário"><a name="operador_condicional_ternario">Operador condicional (ternário)</a></h3>
 
 <p>O operador condicional é o único operador JavaScript que utiliza três operandos. O operador pode ter um de dois valores baseados em uma condição. A sintaxe é:</p>
 
-<pre class="notranslate"><em>condicao</em> ? <em>valor1</em> : <em>valor2</em>
+<pre><em>condicao</em> ? <em>valor1</em> : <em>valor2</em>
 </pre>
 
 <p>Se <code>condicao</code> for verdadeira, o operador terá o valor de <code>valor1</code>. Caso contrário, terá o valor de <code>valor2</code>. Você pode utilizar o operador condicional em qualquer lugar onde utilizaria um operador padrão.</p>
 
 <p>Por exemplo,</p>
 
-<pre class="brush: js notranslate">var status = (idade &gt;= 18) ? "adulto" : "menor de idade";
+<pre class="brush: js">var status = (idade &gt;= 18) ? "adulto" : "menor de idade";
 </pre>
 
 <p>Esta declaração atribui o valor "adulto" à variável <code>status</code> caso <code>idade</code> seja dezoito ou mais. Caso contrário, atribui o valor "menor de idade".</p>
@@ -540,7 +542,7 @@ minhaString += "beto"; // É avaliada como "alfabeto" e atribui este valor a <co
 
 <p>Por exemplo, se <code>a</code> é uma matriz bidimensional com 10 elementos em um lado, o código a seguir utiliza o operador vírgula para incrementar duas variáveis de uma só vez. O código imprime os valores dos elementos diagonais da matriz:</p>
 
-<pre class="brush: js notranslate">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
+<pre class="brush: js">for (var i = 0, j = 9; i &lt;= 9; i++, j--)
   console.log("a[" + i + "][" + j + "]= " + a[i][j]);
 </pre>
 
@@ -552,8 +554,8 @@ minhaString += "beto"; // É avaliada como "alfabeto" e atribui este valor a <co
 
 <p>O operador <code>delete</code> apaga um objeto, uma propriedade de um objeto ou um elemento no índice especificado de uma matriz. A sintaxe é:</p>
 
-<pre class="brush: js notranslate">delete nomeObjeto;
-delete <span style="font-size: 1rem;">nomeObjeto</span><span style="font-size: 1rem;">.propriedade;</span>
+<pre class="brush: js">delete nomeObjeto;
+delete nomeObjeto.propriedade;
 delete nomeObjeto[indice];
 delete propriedade; // válido apenas dentro de uma declaração with
 </pre>
@@ -566,7 +568,7 @@ delete propriedade; // válido apenas dentro de uma declaração with
 
 <p>Se o operador <code>delete</code> for bem-sucedido, ele define a propriedade ou elemento para <code>undefined</code>. O operador <code>delete</code> retorna verdadeiro se a operação for possível; ele retorna falso se a operação não for possível.</p>
 
-<pre class="brush: js notranslate">x = 42;
+<pre class="brush: js">x = 42;
 var y = 43;
 meuobj = new Number();
 meuobj.h = 4;    // cria a propriedade h
@@ -583,7 +585,7 @@ delete meuobj;   // retorna true (pode apagar se declarado implicitamente)
 
 <p>Quando o operador <code>delete</code> remove um elemento do array, aquele elemento não pertence mais ao array. No exemplo a seguir, <code>arvores[3]</code> é removido com <code>delete</code>. Entretanto, <code>arvores[3]</code> ainda é endereçável e retorna <code>undefined</code>.</p>
 
-<pre class="brush: js notranslate">var arvores = new Array("pau-brasil", "loureiro", "cedro", "carvalho", "sicômoro");
+<pre class="brush: js">var arvores = new Array("pau-brasil", "loureiro", "cedro", "carvalho", "sicômoro");
 delete arvores[3];
 if (3 in arvores) {
   // isto não é executado
@@ -592,7 +594,7 @@ if (3 in arvores) {
 
 <p>Se você quer que um elemento do array exista, mas tenha um valor indefinido, utilize a palavra-chave <code>undefined</code> em vez do operador <code>delete</code>. No exemplo a seguir, o valor <code>undefined</code> é atribuído a <code>arvores[3]</code>, mas o elemento da matriz ainda existe:</p>
 
-<pre class="brush: js notranslate">var arvores = new Array("pau-brasil", "loureiro", "cedro", "carvalho", "sicômoro");
+<pre class="brush: js">var arvores = new Array("pau-brasil", "loureiro", "cedro", "carvalho", "sicômoro");
 arvores[3] = undefined;
 if (3 in arvores) {
   // isto será executado
@@ -603,7 +605,7 @@ if (3 in arvores) {
 
 <p>O operador <code>typeof</code> é utilizado em qualquer uma das seguintes formas:</p>
 
-<pre class="brush: js notranslate">typeof operando
+<pre class="brush: js">typeof operando
 typeof (operando)
 </pre>
 
@@ -611,7 +613,7 @@ typeof (operando)
 
 <p>Suponha que você defina as seguintes variáveis:</p>
 
-<pre class="brush: js notranslate">var meuLazer = new Function("5 + 2");
+<pre class="brush: js">var meuLazer = new Function("5 + 2");
 var forma = "redondo";
 var tamanho = 1;
 var hoje = new Date();
@@ -619,7 +621,7 @@ var hoje = new Date();
 
 <p>O operador <code>typeof</code> retornaria o seguinte resultado para aquelas variáveis:</p>
 
-<pre class="brush: js notranslate">typeof meuLazer;  // retorna "function"
+<pre class="brush: js">typeof meuLazer;  // retorna "function"
 typeof forma;     // retorna "string"
 typeof tamanho;   // retorna "number"
 typeof hoje;      // retorna "object"
@@ -628,26 +630,26 @@ typeof naoExiste; // retorna "undefined"
 
 <p>Para as palavras-chave <code>true</code> e <code>null</code>, o <code>typeof</code> retorna os seguintes resultados:</p>
 
-<pre class="brush: js notranslate">typeof true; // retorna "boolean"
+<pre class="brush: js">typeof true; // retorna "boolean"
 typeof null; // retorna "object"
 </pre>
 
 <p>Para um número ou uma string, o <code>typeof</code> retorna os seguintes resultados:</p>
 
-<pre class="brush: js notranslate">typeof 62;          // retorna "number"
+<pre class="brush: js">typeof 62;          // retorna "number"
 typeof 'Olá mundo'; // retorna "string"
 </pre>
 
 <p>Para valores de propriedades, o <code>typeof</code> retorna o tipo do valor que a propriedade possui:</p>
 
-<pre class="brush: js notranslate">typeof document.lastModified; // retorna "string"
+<pre class="brush: js">typeof document.lastModified; // retorna "string"
 typeof window.length;         // retorna "number"
 typeof Math.LN2;              // retorna "number"
 </pre>
 
 <p>Para métodos e funções, o <code>typeof</code> retorna os seguintes resultados:</p>
 
-<pre class="brush: js notranslate">typeof blur;        // retorna "function"
+<pre class="brush: js">typeof blur;        // retorna "function"
 typeof eval;        // retorna "function"
 typeof parseInt;    // retorna "function"
 typeof forma.split; // retorna "function"
@@ -655,7 +657,7 @@ typeof forma.split; // retorna "function"
 
 <p>Para objetos predefinidos, o <code>typeof</code> retorna os seguintes resultados:</p>
 
-<pre class="brush: js notranslate">typeof Date;     // retorna "function"
+<pre class="brush: js">typeof Date;     // retorna "function"
 typeof Function; // retorna "function"
 typeof Math;     // retorna "object"
 typeof Option;   // retorna "function"
@@ -666,7 +668,7 @@ typeof String;   // retorna "function"
 
 <p>O operador <code>void</code> é utilizado de qualquer uma das seguintes formas:</p>
 
-<pre class="brush: js notranslate">void (expressao)
+<pre class="brush: js">void (expressao)
 void expressao
 </pre>
 
@@ -676,12 +678,12 @@ void expressao
 
 <p>O código a seguir cria um link de hipertexto que não faz coisa alguma quando clicado pelo usuário. Quando o usuário clica no link, <code>void(0)</code> é avaliado como indefinido, que não tem efeito em JavaScript.</p>
 
-<pre class="brush: html notranslate">&lt;a href="javascript:void(0)"&gt;Clique aqui para fazer nada&lt;/a&gt;
+<pre class="brush: html">&lt;a href="javascript:void(0)"&gt;Clique aqui para fazer nada&lt;/a&gt;
 </pre>
 
 <p>O código a seguir cria um link de hipertexto que submete um formulário quando clicado pelo usuário.</p>
 
-<pre class="brush: html notranslate">&lt;a href="javascript:void(document.form.submit())"&gt;
+<pre class="brush: html">&lt;a href="javascript:void(document.form.submit())"&gt;
 Clique aqui para enviar&lt;/a&gt;</pre>
 
 <h3 id="in" name="in"><a name="operadores_relacionais">Operadores relacionais</a></h3>
@@ -692,14 +694,14 @@ Clique aqui para enviar&lt;/a&gt;</pre>
 
 <p>O operador <code>in</code> retorna verdadeiro se a propriedade especificada estiver no objeto especificado. A sintaxe é:</p>
 
-<pre class="brush: js notranslate">nomePropriedadeOuNumero in nomeObjeto
+<pre class="brush: js">nomePropriedadeOuNumero in nomeObjeto
 </pre>
 
 <p>onde <code>nomePropriedadeOuNumero</code> é uma string ou uma expressão numérica que representa um nome de propriedade ou um índice de um array, e <code>nomeObjeto</code> é o nome de um objeto.</p>
 
 <p>Os exemplos a seguir mostram alguns usos do operador <code>in</code>.</p>
 
-<pre class="brush: js notranslate">// Arrays
+<pre class="brush: js">// Arrays
 var arvores = new Array("pau-brasil", "loureiro", "cedro", "carvalho", "sicômoro");
 0 in arvores;        // retorna verdadeiro
 3 in arvores;        // retorna verdadeiro
@@ -723,7 +725,7 @@ var meucarro = {marca: "Honda", modelo: "Accord", ano: 1998};
 
 <p>O operador <code>instanceof</code> retorna verdadeiro se o objeto especificado for do tipo de objeto especificado. A sintaxe é:</p>
 
-<pre class="brush: js notranslate">nomeObjeto instanceof tipoObjeto
+<pre class="brush: js">nomeObjeto instanceof tipoObjeto
 </pre>
 
 <p>onde <code>nomeObjeto</code> é o nome do objeto a ser comparado com <code>tipoObjeto</code>, e <code>tipoObjeto</code> é um tipo de objeto como <code>Date</code> ou <code>Array</code>.</p>
@@ -732,7 +734,7 @@ var meucarro = {marca: "Honda", modelo: "Accord", ano: 1998};
 
 <p>Por exemplo, o código a seguir utiliza o <code>instanceof</code> para determinar se <code>dia</code> é um objeto <code>Date</code>. Como <code>dia</code> é um objeto <code>Date</code>, as declarações do <code>if</code> são executadas.</p>
 
-<pre class="brush: js notranslate">var dia = new Date(1995, 12, 17);
+<pre class="brush: js">var dia = new Date(1995, 12, 17);
 if (dia instanceof Date) {
   // declarações a serem executadas
 }
@@ -850,13 +852,13 @@ if (dia instanceof Date) {
 
 <p>Utilize a palavra reservada <code>this</code> para se referir ao objeto atual. Em geral, o <code>this</code> se refere ao objeto chamado em um método. Utilize o <code>this</code> das seguintes formas:</p>
 
-<pre class="brush: js notranslate">this["nomePropriedade"]
+<pre class="brush: js">this["nomePropriedade"]
 this.nomePropriedade
 </pre>
 
 <p>Suponha uma função chamada <code>valide</code> que valida a propriedade <code>valor</code> de um objeto, dado o objeto e os valores máximo e mínimo:</p>
 
-<pre class="brush: js notranslate">function valide(obj, minimo, maximo){
+<pre class="brush: js">function valide(obj, minimo, maximo){
   if ((obj.valor &lt; minimo) || (obj.valor &gt; maximo))
     alert("Valor inválido!");
 }
@@ -864,7 +866,7 @@ this.nomePropriedade
 
 <p>Você poderia chamar <code>valide</code> em cada manipulador de evento <code>onChange</code> de um formulário utilizando <code>this</code> para passar o elemento do formulário, como no exemplo a seguir:</p>
 
-<pre class="brush: html notranslate">&lt;b&gt;Informe um número entre 18 e 99:&lt;/b&gt;
+<pre class="brush: html">&lt;b&gt;Informe um número entre 18 e 99:&lt;/b&gt;
 &lt;input type="text" name="idade" size=3
    onChange="valide(this, 18, 99);"&gt;
 </pre>
@@ -873,21 +875,21 @@ this.nomePropriedade
 
 <p>O operador de agrupamento <code>( )</code> controla a precedência de avaliação de expressões. Por exemplo, você pode substituir a precedência da divisão e multiplicação para que a adição e subtração sejam avaliadas primeiro.</p>
 
-<pre class="brush:js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> a <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> b <span class="operator token">=</span> <span class="number token">2</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> c <span class="operator token">=</span> <span class="number token">3</span><span class="punctuation token">;</span>
+<pre class="brush:js">var a = 1;
+var b = 2;
+var c = 3;
 
-<span class="comment token">// Precedência padrão</span>
-a <span class="operator token">+</span> b <span class="operator token">*</span> c     <span class="comment token">// 7</span>
-<span class="comment token">// a avaliação padrão pode ser assim</span>
-a <span class="operator token">+</span> <span class="punctuation token">(</span>b <span class="operator token">*</span> c<span class="punctuation token">)</span>   <span class="comment token">// 7</span>
+// Precedência padrão
+a + b * c     // 7
+// a avaliação padrão pode ser assim
+a + (b * c)   // 7
 
-<span class="comment token">// Agora substitui a precedência</span>
-<span class="comment token">// soma antes de multiplicar   </span>
-<span class="punctuation token">(</span>a <span class="operator token">+</span> b<span class="punctuation token">)</span> <span class="operator token">*</span> c   <span class="comment token">// 9</span>
+// Agora substitui a precedência
+// soma antes de multiplicar   
+(a + b) * c   // 9
 
-<span class="comment token">// o que é equivalente a</span>
-a <span class="operator token">*</span> c <span class="operator token">+</span> b <span class="operator token">*</span> c <span class="comment token">// 9</span></code></pre>
+// o que é equivalente a
+a * c + b * c // 9</pre>
 
 <h4 id="new" name="new">Comprehensions</h4>
 
@@ -901,12 +903,12 @@ a <span class="operator token">*</span> c <span class="operator token">+</span> 
 
 <p>Comprehensions existem em muitas linguagens de programação e permitem que você rapidamente monte um novo array com base em um existente, por exemplo:</p>
 
-<pre class="brush:js line-numbers  language-js notranslate"><code class="language-js"><span class="punctuation token">[</span><span class="keyword token">for</span> <span class="punctuation token">(</span>i <span class="keyword token">of</span> <span class="punctuation token">[</span> <span class="number token">1</span><span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">,</span> <span class="number token">3</span> <span class="punctuation token">]</span><span class="punctuation token">)</span> i<span class="operator token">*</span>i <span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="comment token">// [ 1, 4, 9 ]</span>
+<pre class="brush:js">[for (i of [ 1, 2, 3 ]) i*i ];
+// [ 1, 4, 9 ]
 
-<span class="keyword token">var</span> abc <span class="operator token">=</span> <span class="punctuation token">[</span> <span class="string token">"A"</span><span class="punctuation token">,</span> <span class="string token">"B"</span><span class="punctuation token">,</span> <span class="string token">"C"</span> <span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="punctuation token">[</span><span class="keyword token">for</span> <span class="punctuation token">(</span>letras <span class="keyword token">of</span> abc<span class="punctuation token">)</span> letras<span class="punctuation token">.</span><span class="function token">toLowerCase</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="comment token">// [ "a", "b", "c" ]</span></code></pre>
+var abc = [ "A", "B", "C" ];
+[for (letras of abc) letras.toLowerCase()];
+// [ "a", "b", "c" ]</pre>
 
 <h3 id="new" name="new">Expressão lado esquerdo</h3>
 
@@ -916,14 +918,14 @@ a <span class="operator token">*</span> c <span class="operator token">+</span> 
 
 <p>Você pode utilizar o <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/new">operador new</a> para criar uma instância de um tipo de objeto definido pelo usuário ou de um dos tipos de objeto predefinidos: <code>Array</code>, <code>Boolean</code>, <code>Date</code>, <code>Function</code>, <code>Image</code>, <code>Number</code>, <code>Object</code>, <code>Option</code>, <code>RegExp </code>ou <code>String</code>. No servidor, você pode também utilizar <code>DbPool</code>, <code>Lock</code>, <code>File </code>ou <code>SendMail</code>. Utilize o operador <code>new</code> da seguinte forma:</p>
 
-<pre class="brush: js notranslate">var nomeObjeto = new tipoObjeto([parametro1, parametro2, ..., parametroN]);
+<pre class="brush: js">var nomeObjeto = new tipoObjeto([parametro1, parametro2, ..., parametroN]);
 </pre>
 
 <h4 id="super"><code>super</code></h4>
 
 <p>A palavra <a href="/pt-BR/docs/Web/JavaScript/Reference/Operators/super">reservada super</a> é utilizada para chamar a função pai de um objeto. É útil para nas classes para a chamada do construtor pai, por exemplo:</p>
 
-<pre class="syntaxbox notranslate">super([argumentos]); //chama o construtor pai.
+<pre class="syntaxbox">super([argumentos]); //chama o construtor pai.
 super.funcaoDoPai([argumentos]);</pre>
 
 <h4 id="Operador_spread"><code>Operador spread</code></h4>
@@ -932,13 +934,13 @@ super.funcaoDoPai([argumentos]);</pre>
 
 <p>Exemplo: Se você tem um array e deseja criar um novo array com os elementos do array já existente sendo parte do novo array, a sintaxe do array não será suficiente e você terá de usar uma combinação de push, splice, concat, etc. Com a sintaxe <code>spread</code>, isto torna-se muito mais sucinto:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> partes <span class="operator token">=</span> <span class="punctuation token">[</span><span class="string token">'ombro'</span><span class="punctuation token">,</span> <span class="string token">'joelhos'</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> musica <span class="operator token">=</span> <span class="punctuation token">[</span><span class="string token">'cabeca'</span><span class="punctuation token">,</span> <span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>partes<span class="punctuation token">,</span> <span class="string token">'e'</span><span class="punctuation token">,</span> <span class="string token">'pés'</span><span class="punctuation token">]</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">var partes = ['ombro', 'joelhos'];
+var musica = ['cabeca', ...partes, 'e', 'pés'];</pre>
 
 <p id="typeof">Da mesma forma, o operador <code>spread</code> funciona com chamadas de função:</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">f</span><span class="punctuation token">(</span>x<span class="punctuation token">,</span> y<span class="punctuation token">,</span> z<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="punctuation token">}</span>
-<span class="keyword token">var</span> args <span class="operator token">=</span> <span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">1</span><span class="punctuation token">,</span> <span class="number token">2</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-<span class="function token">f</span><span class="punctuation token">(</span><span class="punctuation token">.</span><span class="punctuation token">.</span><span class="punctuation token">.</span>args<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">function f(x, y, z) { }
+var args = [0, 1, 2];
+f(...args);</pre>
 
 <div>{{PreviousNext("Web/JavaScript/Guide/Functions", "Web/JavaScript/Guide/Numbers_and_dates")}}</div>

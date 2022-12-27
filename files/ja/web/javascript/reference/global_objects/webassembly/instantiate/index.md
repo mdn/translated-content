@@ -1,17 +1,6 @@
 ---
 title: WebAssembly.instantiate()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Object
-  - Reference
-  - WebAssembly
-  - instantiate
-  - オブジェクト
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/instantiate
 ---
 {{JSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: 数量詞
 slug: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
-tags:
-  - Guide
-  - JavaScript
-  - Reference
-  - Regular Expressions
-  - quantifiers
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Quantifiers
 ---
 {{jsSidebar("JavaScript Guide")}}
 

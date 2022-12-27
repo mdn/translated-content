@@ -1,21 +1,6 @@
 ---
 title: <input type="month">
 slug: Web/HTML/Element/input/month
-tags:
-  - Date picker
-  - 要素
-  - Form input
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - HTML input
-  - Input
-  - 入力要素
-  - 入力型
-  - Number
-  - リファレンス
-  - month
-translation_of: Web/HTML/Element/input/month
 ---
 
 {{HTMLRef("Input_types")}}

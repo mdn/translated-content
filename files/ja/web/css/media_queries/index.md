@@ -1,14 +1,6 @@
 ---
 title: メディアクエリー
 slug: Web/CSS/Media_Queries
-tags:
-  - CSS
-  - ガイド
-  - メディアクエリー
-  - 概要
-  - リファレンス
-  - レスポンシブデザイン
-translation_of: Web/CSS/Media_Queries
 ---
 {{CSSRef}}
 

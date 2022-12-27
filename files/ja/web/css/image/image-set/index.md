@@ -1,16 +1,7 @@
 ---
 title: image-set()
 slug: Web/CSS/image/image-set
-tags:
-  - CSS
-  - CSS Function
-  - CSS-4 Images
-  - Function
-  - Reference
-  - Web
-translation_of: Web/CSS/image/image-set()
 original_slug: Web/CSS/image/image-set()
-browser-compat: css.types.image.image-set
 ---
 {{cssref}}
 

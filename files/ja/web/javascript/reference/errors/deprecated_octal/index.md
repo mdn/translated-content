@@ -1,11 +1,6 @@
 ---
 title: 'SyntaxError: "0"-prefixed octal literals and octal escape seq. are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_octal
-tags:
-  - Error
-  - Errors
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Deprecated_octal
 ---
 {{jsSidebar("Errors")}}
 

@@ -1,16 +1,6 @@
 ---
 title: String.prototype.replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
-tags:
-  - Expressions
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-  - Regular
-  - String
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replace
-browser-compat: javascript.builtins.String.replace
 ---
 {{JSRef}}
 

@@ -34,7 +34,7 @@ Rust と WebAssembly には、主に 2 つの用途があります。
 パッケージをビルドするには、`wasm-pack` という追加のツールが必要です。これは `npm` 向けに正しくパッケージングをすることだけでなく、WebAssembly にコードをコンパイルするのにも役立ちます。ダウンロードしてインストールするには、ターミナルに次のコマンドを入力します。
 
 ```bash
-$ cargo install wasm-pack
+cargo install wasm-pack
 ```
 
 ## WebAssembly パッケージのビルド
@@ -182,7 +182,7 @@ wasm-bindgen = "0.2"
 すべてのセットアップが完了したので、ビルドしましょう。ターミナルに以下のものを入力してください。
 
 ```bash
-$ wasm-pack build --target web
+wasm-pack build --target web
 ```
 
 このコマンドは多くのことをします (そして時間がかかます。特に初めて `wasm-pack` を実行したときはそうです)。それらについて詳しく学ぶには、[Mozilla Hacks のこのブログ投稿](https://hacks.mozilla.org/2018/04/hello-wasm-pack/)を確認してください。手短に説明すると、`wasm-pack build` は次のことをします。
@@ -239,7 +239,7 @@ WebAssembly モジュールを npm で使用する場合、いくつかの変更
 まず、Rust を target bundler オプションで再コンパイルすることから始めましょう。
 
 ```bash
-$ wasm-pack build --target bundler
+wasm-pack build --target bundler
 ```
 
 ### Node.js と npm のインストール
@@ -251,8 +251,8 @@ Node.js と npm を入手するには、 [Get npm!](https://docs.npmjs.com/getti
 次に、インストールした他の JavaScript パッケージがこのパッケージを利用できるようにするために、 \`npm link\` を使用しましょう。
 
 ```bash
-$ cd pkg
-$ npm link
+cd pkg
+npm link
 ```
 
 Rust で書かれ、 WebAssembly にコンパイルされた npm パッケージができました。JavaScript から利用する準備ができており、ユーザーが Rust をインストールすることを必要としません。コードに含まれているのは WebAssembly コードであり、Rust のソースではないのです。
@@ -264,10 +264,10 @@ Rust で書かれ、 WebAssembly にコンパイルされた npm パッケージ
 `pkg` ディレクトリーの外に戻り、新たなディレクトリー `site` を作成し、そこでこれを試してみましょう。
 
 ```bash
-$ cd ..
-$ mkdir site
-$ cd site
-$ npm link hello-wasm
+cd ..
+mkdir site
+cd site
+npm link hello-wasm
 ```
 
 新しいファイル `package.json` を作成し、次のコードをそこに書き込んでください。
@@ -330,8 +330,8 @@ import("./node_modules/hello-wasm/hello_wasm.js").then((js) => {
 ファイルを作りました。これを試してみましょう。
 
 ```bash
-$ npm install
-$ npm run serve
+npm install
+npm run serve
 ```
 
 これでウェブサーバーが起動します。 `http://localhost:8080` を読み込んでください。 `Hello, WebAssembly!` と書かれたアラートボックスが画面に出てくるはずです。JavaScript からの Rust の呼び出しと Rust からの JavaScript の呼び出しに成功しました。

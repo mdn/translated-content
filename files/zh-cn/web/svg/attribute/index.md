@@ -388,9 +388,9 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}, {{SVGAttr("autoReverse")}}, {{SVGAttr("accelerate")}}, {{SVGAttr("decelerate")}}
 
-#### 动画额外属性
+#### 动画累加属性
 
-{{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
+{{SVGAttr("additive")}}、{{SVGAttr("accumulate")}}
 
 ### 事件属性
 

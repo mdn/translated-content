@@ -1,18 +1,6 @@
 ---
 title: for await...of
 slug: Web/JavaScript/Reference/Statements/for-await...of
-tags:
-  - Iterate
-  - Iteration
-  - JavaScript
-  - Reference
-  - Statement
-  - asynchronous
-  - await
-  - 文
-  - 繰り返し
-  - 非同期
-translation_of: Web/JavaScript/Reference/Statements/for-await...of
 ---
 {{jsSidebar("Statements")}}
 

@@ -1,13 +1,6 @@
 ---
 title: 'リンク種別: noopener'
 slug: Web/HTML/Link_types/noopener
-tags:
-  - Attribute
-  - HTML
-  - Link types
-  - Reference
-translation_of: Web/HTML/Link_types/noopener
-browser-compat: html.elements.a.rel.noopener
 ---
 **`noopener`** キーワードを {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}} の各要素の [`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性に指定すると、ターゲットリソースへ移動する際、開いた元の文書へのアクセスを新しい閲覧コンテキストに許可しないことをブラウザーに指示します。開かれたウィンドウの {{DOMxRef("Window.opener")}} プロパティプロパティは設定されません (`null` を返します)。
 

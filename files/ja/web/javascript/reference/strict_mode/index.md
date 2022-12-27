@@ -1,12 +1,6 @@
 ---
 title: 厳格モード
 slug: Web/JavaScript/Reference/Strict_mode
-tags:
-  - ECMAScript 5
-  - ガイド
-  - JavaScript
-  - 厳格モード
-translation_of: Web/JavaScript/Reference/Strict_mode
 ---
 {{JsSidebar("More")}}
 

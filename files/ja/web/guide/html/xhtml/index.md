@@ -1,17 +1,6 @@
 ---
 title: XHTML
 slug: Web/Guide/HTML/XHTML
-tags:
-  - Guide
-  - HTML
-  - Web
-  - Web Development
-  - Web Standards
-  - XML
-  - ウェブ標準
-  - ウェブ開発
-  - ガイド
-translation_of: Web/Guide/HTML/XHTML
 ---
 **XHTML** は、 [HTML](/ja/docs/Web/HTML) 文書のうち {{Glossary("XML")}} の構文規則に適合して書かれたものを指すために歴史的に使用されてきた用語です。
 

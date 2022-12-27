@@ -1,14 +1,6 @@
 ---
 title: font-variant-position
 slug: Web/CSS/font-variant-position
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-variant-position
-translation_of: Web/CSS/font-variant-position
 ---
 {{CSSRef}}
 

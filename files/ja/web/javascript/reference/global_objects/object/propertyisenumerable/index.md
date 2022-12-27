@@ -1,13 +1,6 @@
 ---
 title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
-tags:
-  - JavaScript
-  - メソッド
-  - Object
-  - プロトタイプ
-browser-compat: javascript.builtins.Object.propertyIsEnumerable
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
 {{JSRef}}
 

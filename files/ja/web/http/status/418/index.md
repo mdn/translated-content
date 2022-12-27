@@ -1,11 +1,6 @@
 ---
 title: 418 I'm a teapot
 slug: Web/HTTP/Status/418
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-translation_of: Web/HTTP/Status/418
 ---
 {{HTTPSidebar}}
 

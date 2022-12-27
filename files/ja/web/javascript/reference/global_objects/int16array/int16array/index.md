@@ -1,12 +1,6 @@
 ---
 title: Int16Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
 ---
 {{JSRef}}
 

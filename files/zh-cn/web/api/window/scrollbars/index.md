@@ -39,8 +39,8 @@ objRef = window.scrollbars
 
 ### 参见
 
-- [window.locationbar](/en/DOM/window.locationbar)
-- [window.menubar](/en/DOM/window.menubar)
-- [window.personalbar](/en/DOM/window.personalbar)
-- [window.statusbar](/en/DOM/window.statusbar)
-- [window.toolbar](/en/DOM/window.toolbar)
+- [window.locationbar](/zh-CN/DOM/window.locationbar)
+- [window.menubar](/zh-CN/DOM/window.menubar)
+- [window.personalbar](/zh-CN/DOM/window.personalbar)
+- [window.statusbar](/zh-CN/DOM/window.statusbar)
+- [window.toolbar](/zh-CN/DOM/window.toolbar)

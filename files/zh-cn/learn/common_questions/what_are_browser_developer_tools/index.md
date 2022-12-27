@@ -15,7 +15,7 @@ original_slug: Learn/Discover_browser_developer_tools
 
 **如何打开它？有三种方式：**
 
-- **_键盘快捷键_** *Ctrl + Shift + I ，*除了以下的特例
+- **_键盘快捷键_** *Ctrl + Shift + I*，除了以下的特例
 
   - **Internet Explorer.** _F12_
   - **Mac OS X.** _⌘ + ⌥ + I_

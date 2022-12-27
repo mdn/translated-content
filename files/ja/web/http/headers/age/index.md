@@ -1,12 +1,6 @@
 ---
 title: Age
 slug: Web/HTTP/Headers/Age
-tags:
-  - Caching
-  - HTTP
-  - ヘッダー
-  - レスポンス
-translation_of: Web/HTTP/Headers/Age
 ---
 {{HTTPSidebar}}
 

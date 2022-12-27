@@ -1,16 +1,6 @@
 ---
 title: scroll-snap-type-x
 slug: Web/CSS/scroll-snap-type-x
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スクロールスナップ
-  - NeedsExample
-  - Non-standard
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.scroll-snap-type-x
-translation_of: Web/CSS/scroll-snap-type-x
 ---
 {{CSSRef}}{{deprecated_header}}
 

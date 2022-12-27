@@ -40,11 +40,11 @@ slug: Web/SVG/Element/tref
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [图形事件属性](/en/SVG/Attribute#GraphicalEvent) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [图形事件属性](/zh-CN/SVG/Attribute#GraphicalEvent) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -55,7 +55,7 @@ slug: Web/SVG/Element/tref
 
 ## DOM 接口
 
-该元素实现了[`SVGTRefElement`](/en/DOM/SVGTRefElement)接口。
+该元素实现了[`SVGTRefElement`](/zh-CN/DOM/SVGTRefElement)接口。
 
 ## 浏览器兼容性
 

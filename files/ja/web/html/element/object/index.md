@@ -1,14 +1,6 @@
 ---
 title: '<object>: 外部オブジェクト要素'
 slug: Web/HTML/Element/object
-tags:
-  - 要素
-  - HTML
-  - HTML 埋め込みコンテンツ
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.object
-translation_of: Web/HTML/Element/object
 ---
 
 {{HTMLRef}}

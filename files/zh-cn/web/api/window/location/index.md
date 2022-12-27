@@ -222,7 +222,7 @@ span.intLink {
 </html>
 ```
 
-> **备注：** The function `showNode` is also an example of the use of the [`for`](https://developer.mozilla.org/en/JavaScript/Reference/Statements/for) cycle without a `statement`section. In this case **a semicolon is always put immediately after the declaration of the cycle**.
+> **备注：** The function `showNode` is also an example of the use of the [`for`](/zh-CN/JavaScript/Reference/Statements/for) cycle without a `statement`section. In this case **a semicolon is always put immediately after the declaration of the cycle**.
 
 下面代码做同样的事，但是页面滚动带有动画效果：
 
@@ -280,5 +280,5 @@ var showBookmark = (function () {
 
 - The interface of the returned value, {{domxref("Location")}}.
 - A similar information, but attached to the browsing context, {{domxref("Document.location")}}
-- [Manipulating the browser history](https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history)
+- [Manipulating the browser history](/zh-CN/DOM/Manipulating_the_browser_history)
 - [hashchange](/zh-CN/docs/DOM/Mozilla_event_reference/hashchange)

@@ -1,7 +1,6 @@
 ---
 title: class
 slug: Web/SVG/Attribute/href
-translation_of: Web/SVG/Attribute/href
 ---
 {{SVGRef}}
 

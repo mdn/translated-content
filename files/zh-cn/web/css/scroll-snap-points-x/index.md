@@ -6,7 +6,7 @@ slug: Web/CSS/scroll-snap-points-x
 
 ## 摘要
 
-**`scroll-snap-points-x`** [CSS](/en-US/docs/Web/CSS)属性定义滚动容器中内容的 snap 点的水平位置。
+**`scroll-snap-points-x`** [CSS](/zh-CN/docs/Web/CSS)属性定义滚动容器中内容的 snap 点的水平位置。
 
 {{cssinfo}}
 

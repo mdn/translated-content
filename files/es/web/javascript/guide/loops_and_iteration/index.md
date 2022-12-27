@@ -45,16 +45,18 @@ Un ciclo {{JSxRef("Statements/for", "for")}} se repite hasta que una condición 
 
 Una declaración `for` tiene el siguiente aspecto:
 
-    for ([expresiónInicial]; [expresiónCondicional]; [expresiónDeActualización])
-      instrucción
+```
+for ([expresiónInicial]; [expresiónCondicional]; [expresiónDeActualización])
+  instrucción
+```
 
 Cuando se ejecuta un bucle `for`, ocurre lo siguiente:
 
-1.  Se ejecuta la expresión de iniciación `expresiónInicial`, si existe. Esta expresión normalmente inicia uno o más contadores de bucle, pero la sintaxis permite una expresión de cualquier grado de complejidad. Esta expresión también puede declarar variables.
-2.  Se evalúa la expresión `expresiónCondicional`. Si el valor de `expresiónCondicional` es verdadero, se ejecutan las instrucciones del bucle. Si el valor de `condición` es falso, el bucle `for` termina. (Si la expresión `condición` se omite por completo, se supone que la condición es verdadera).
-3.  Se ejecuta la `instrucción`. Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones.
-4.  Si está presente, se ejecuta la expresión de actualización `expresiónDeActualización`.
-5.  El control regresa al paso 2.
+1. Se ejecuta la expresión de iniciación `expresiónInicial`, si existe. Esta expresión normalmente inicia uno o más contadores de bucle, pero la sintaxis permite una expresión de cualquier grado de complejidad. Esta expresión también puede declarar variables.
+2. Se evalúa la expresión `expresiónCondicional`. Si el valor de `expresiónCondicional` es verdadero, se ejecutan las instrucciones del bucle. Si el valor de `condición` es falso, el bucle `for` termina. (Si la expresión `condición` se omite por completo, se supone que la condición es verdadera).
+3. Se ejecuta la `instrucción`. Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones.
+4. Si está presente, se ejecuta la expresión de actualización `expresiónDeActualización`.
+5. El control regresa al paso 2.
 
 ### Ejemplo
 
@@ -100,9 +102,11 @@ La instrucción {{JSxRef("Statements/do...while", "do...while")}} se repite hast
 
 Una declaración `do...while` tiene el siguiente aspecto:
 
-    do
-      expresión
-    while (condición);
+```
+do
+  expresión
+while (condición);
+```
 
 _`exposición`_ siempre se ejecuta una vez antes de que se verifique la condición. (Para ejecutar varias instrucciones, usa una declaración de bloque (`{ ... }`) para agrupar esas declaraciones).
 
@@ -118,8 +122,10 @@ let i = 0; do { i += 1; console.log(i); } while (i < 5);
 
 Una declaración {{JSxRef("Statements/while", "while")}} ejecuta sus instrucciones siempre que una condición especificada se evalúe como `true`. Una instrucción `while` tiene el siguiente aspecto:
 
-    while (condición)
-      expresión
+```
+while (condición)
+  expresión
+```
 
 Si la _`condición`_ se vuelve `false`, la `instrucción` dentro del bucle se deja de ejecutar y el control pasa a la instrucción que sigue al bucle.
 
@@ -178,11 +184,13 @@ Usa la instrucción {{JSxRef("Statements/break", "break")}} para terminar un buc
 
 La sintaxis de la instrucción `break` se ve así:
 
-    break;
-    break [label];
+```
+break;
+break [label];
+```
 
-1.  La primera forma de la sintaxis termina el bucle envolvente más interno o el `switch.`
-2.  La segunda forma de la sintaxis termina la instrucción etiquetada específica.
+1. La primera forma de la sintaxis termina el bucle envolvente más interno o el `switch.`
+2. La segunda forma de la sintaxis termina la instrucción etiquetada específica.
 
 ### **Ejemplo** **1**
 
@@ -226,7 +234,9 @@ La instrucción {{JSxRef("Statements/continue", "continue")}} se puede usar para
 
 La sintaxis de la instrucción `continue` se parece a la siguiente:
 
-    continue [label];
+```
+continue [label];
+```
 
 ### Ejemplo 1
 
@@ -271,8 +281,10 @@ let i = 0; let j = 10; checkiandj: while (i < 4) { console.log(i); i += 1; check
 
 La instrucción {{JSxRef("Statements/for...in", "for...in")}} itera una variable especificada sobre todas las propiedades enumerables de un objeto. Para cada propiedad distinta, JavaScript ejecuta las instrucciones especificadas. Una declaración `for...in` tiene el siguiente aspecto:
 
-    for (variable in objeto)
-      instrucción
+```
+for (variable in objeto)
+  instrucción
+```
 
 ### Ejemplo
 
@@ -306,8 +318,10 @@ Por lo tanto, es mejor usar un bucle {{JSxRef("Statements/for", "for")}} tradici
 
 La declaración {{JSxRef("Statements/for...of", "for...of")}} crea un bucle que se repite sobre [objetos iterables](/es/docs/Web/JavaScript/Reference/Iteration_protocols) (incluidos {{JSxRef("Array")}}, {{JSxRef("Map")}}, {{JSxRef("Set")}}, objetos {{JSxRef("Functions/arguments", "arguments")}} y así sucesivamente), invocando un bucle de iteración personalizado con declaraciones que se ejecutarán para el valor de cada distinta propiedad.
 
-    for (variable of objeto)
-      expresión
+```
+for (variable of objeto)
+  expresión
+```
 
 El siguiente ejemplo muestra la diferencia entre un bucle `for...of` y un bucle {{JSxRef("Statements/for...in", "for...in")}}. Mientras que `for...in` itera sobre los nombres de propiedad, `for...of` itera sobre los valores de propiedad:
 

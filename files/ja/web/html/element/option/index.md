@@ -1,14 +1,6 @@
 ---
 title: '<option>: HTML 選択肢要素'
 slug: Web/HTML/Element/option
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Select
-translation_of: Web/HTML/Element/option
 ---
 {{HTMLRef}}
 

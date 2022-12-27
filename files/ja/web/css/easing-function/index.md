@@ -1,17 +1,6 @@
 ---
 title: <easing-function>
 slug: Web/CSS/easing-function
-tags:
-  - API
-  - CSS
-  - CSS Animations
-  - CSS Data Type
-  - CSS Transitions
-  - Data Type
-  - Layout
-  - Reference
-  - easing-function
-translation_of: Web/CSS/easing-function
 ---
 {{CSSRef}}
 

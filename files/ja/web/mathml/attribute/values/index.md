@@ -1,11 +1,6 @@
 ---
 title: Values
 slug: Web/MathML/Attribute/Values
-tags:
-  - Guide
-  - MathML
-  - MathML Reference
-translation_of: Web/MathML/Attribute/Values
 ---
 {{MathMLRef}}
 

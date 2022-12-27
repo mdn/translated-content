@@ -17,7 +17,7 @@ Promise.all(iterable);
 ### 参数
 
 - iterable
-  - : 一个[可迭代](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)对象，如 {{jsxref("Array")}} 或 {{jsxref("String")}}。
+  - : 一个[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)对象，如 {{jsxref("Array")}} 或 {{jsxref("String")}}。
 
 ### 返回值
 

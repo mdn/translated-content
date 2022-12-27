@@ -76,7 +76,7 @@ slug: Web/HTML/Element/a
     - `_parent`: 加载响应到当前框架的 HTML4 父框架或当前的 HTML5 浏览上下文的父浏览上下文。如果没有 parent 框架或者浏览上下文，此选项的行为方式与 `_self` 相同。
     - `_top`: IHTML4 中：加载的响应成完整的，原来的窗口，取消所有其它 frame。 HTML5 中：加载响应进入顶层浏览上下文（即，浏览上下文，它是当前的一个的祖先，并且没有 parent）。如果没有 parent 框架或者浏览上下文，此选项的行为方式相同\_self
 
-      > **备注：** 在 `<a>` 元素上使用 `target="_blank"` 隐式提供了与使用 [`rel="noopener"`](/en-US/docs/Web/HTML/Link_types/noopener) 相同的 `rel` 行为，即不会设置 `window.opener`。
+      > **备注：** 在 `<a>` 元素上使用 `target="_blank"` 隐式提供了与使用 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Link_types/noopener) 相同的 `rel` 行为，即不会设置 `window.opener`。
 - {{htmlattrdef("type")}}
   - : 该属性指定在一个 {{Glossary("MIME type")}} 链接目标的形式的媒体类型。其仅提供建议，并没有内置的功能。
 

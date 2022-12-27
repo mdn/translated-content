@@ -16,7 +16,7 @@ var url = aWebSocket.url;
 
 ## 返回值
 
-A [`DOMString`](https://developer.mozilla.org/en-US/docs/Web/API/DOMString).
+A [`DOMString`](/zh-CN/docs/Web/API/DOMString).
 
 ## 规范
 

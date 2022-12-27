@@ -1,16 +1,6 @@
 ---
 title: BigUint64Array
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array
-tags:
-  - BigInt
-  - BigUInt64Array
-  - クラス
-  - JavaScript
-  - Reference
-  - TypedArray
-  - 型付き配列
-browser-compat: javascript.builtins.BigUint64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/BigUint64Array
 ---
 {{JSRef}}
 

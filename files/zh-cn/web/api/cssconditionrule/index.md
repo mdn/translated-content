@@ -39,4 +39,4 @@ The `CSSConditionRule` derives from {{domxref("CSSRule")}}, {{domxref("CSSGroupi
 
 ## See also
 
-- [Using dynamic styling information](/en/DOM/Using_dynamic_styling_information)
+- [Using dynamic styling information](/zh-CN/DOM/Using_dynamic_styling_information)

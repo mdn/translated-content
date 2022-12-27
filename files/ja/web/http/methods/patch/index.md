@@ -1,11 +1,6 @@
 ---
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-translation_of: Web/HTTP/Methods/PATCH
 ---
 {{HTTPSidebar}}
 

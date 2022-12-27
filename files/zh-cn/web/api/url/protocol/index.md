@@ -2,7 +2,7 @@
 title: URL.protocol
 slug: Web/API/URL/protocol
 ---
-{{ApiRef("URL API")}}{{domxref("URL")}}接口的**`protocol`**是一个包含 URL 协议的{{domxref("USVString")}}值，此值包含协议后的`':'`.
+{{ApiRef("URL API")}}{{domxref("URL")}}接口的 **`protocol`** 是一个包含 URL 协议的{{domxref("USVString")}}值，此值包含协议后的`':'`.
 
 {{AvailableInWorkers}}
 

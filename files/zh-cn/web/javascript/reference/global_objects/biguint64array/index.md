@@ -16,7 +16,7 @@ new BigUint64Array(object);
 new BigUint64Array(buffer [, byteOffset [, length]]);
 ```
 
-更多有关构造方法和参数的信息，参见 _[TypedArray](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
+更多有关构造方法和参数的信息，参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_.
 
 ## 属性
 
@@ -149,6 +149,6 @@ var biguint64 = new BigUint64Array(iterable);
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("BigInt64Array")}}
 - {{jsxref("DataView")}}

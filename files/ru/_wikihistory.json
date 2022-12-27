@@ -355,10 +355,6 @@
       "jaguardev"
     ]
   },
-  "Glossary/Bootstrap": {
-    "modified": "2020-10-30T10:23:10.825Z",
-    "contributors": ["ksam"]
-  },
   "Glossary/Browser": {
     "modified": "2019-03-23T22:40:32.512Z",
     "contributors": [
@@ -1110,10 +1106,6 @@
   "Glossary/https": {
     "modified": "2019-01-17T02:14:25.160Z",
     "contributors": ["bazoooker", "dzandut"]
-  },
-  "Glossary/jQuery": {
-    "modified": "2020-11-17T03:47:58.520Z",
-    "contributors": ["SphinxKnight", "annamolodcova1909", "Sparks"]
   },
   "Glossary/jpeg": {
     "modified": "2019-03-18T21:38:25.986Z",
@@ -15702,17 +15694,6 @@
     "modified": "2020-10-15T22:22:53.977Z",
     "contributors": ["leshkin", "ekirpichyov"]
   },
-  "Web/JavaScript/Shells": {
-    "modified": "2020-05-02T11:17:13.805Z",
-    "contributors": [
-      "RenJeka",
-      "helenasilkina",
-      "fscholz",
-      "Alex_Howlett",
-      "teoli",
-      "Millionnaire"
-    ]
-  },
   "Web/JavaScript/Typed_arrays": {
     "modified": "2020-03-12T19:45:54.627Z",
     "contributors": [
@@ -16990,6 +16971,17 @@
     "modified": "2020-03-12T19:37:58.256Z",
     "contributors": ["nnragmailcom", "fscholz", "teoli", "uleming"]
   },
+  "conflicting/Web/JavaScript/JavaScript_technologies_overview_0191f05ec18a4ee4d771b548feb0701d": {
+    "modified": "2020-05-02T11:17:13.805Z",
+    "contributors": [
+      "RenJeka",
+      "helenasilkina",
+      "fscholz",
+      "Alex_Howlett",
+      "teoli",
+      "Millionnaire"
+    ]
+  },
   "conflicting/Web/JavaScript/Reference/Deprecated_and_obsolete_features": {
     "modified": "2019-03-23T22:45:00.856Z",
     "contributors": ["teoli", "WispProxy", "casfcitizen"]
@@ -17263,6 +17255,10 @@
     "modified": "2019-03-18T21:40:10.986Z",
     "contributors": ["PaulineNemchak"]
   },
+  "orphaned/Glossary/Bootstrap": {
+    "modified": "2020-10-30T10:23:10.825Z",
+    "contributors": ["ksam"]
+  },
   "orphaned/Glossary/Dynamic_programming_language": {
     "modified": "2019-03-23T22:22:41.086Z",
     "contributors": ["pust0ta", "thecodecreator"]
@@ -17270,6 +17266,10 @@
   "orphaned/Glossary/Polifill": {
     "modified": "2019-03-23T22:18:26.835Z",
     "contributors": ["pk.prog"]
+  },
+  "orphaned/Glossary/jQuery": {
+    "modified": "2020-11-17T03:47:58.520Z",
+    "contributors": ["SphinxKnight", "annamolodcova1909", "Sparks"]
   },
   "orphaned/Learn/HTML/Forms/HTML5_updates": {
     "modified": "2019-03-23T22:35:16.060Z",

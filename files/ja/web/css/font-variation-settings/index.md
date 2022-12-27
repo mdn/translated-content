@@ -1,14 +1,6 @@
 ---
 title: font-variation-settings
 slug: Web/CSS/font-variation-settings
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-variation-settings
-translation_of: Web/CSS/font-variation-settings
 ---
 {{CSSRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: '<meter>: HTML メーター要素'
 slug: Web/HTML/Element/meter
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML5
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/meter
 ---
 {{HTMLRef}}
 

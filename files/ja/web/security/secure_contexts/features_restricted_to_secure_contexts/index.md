@@ -1,19 +1,6 @@
 ---
 title: 安全なコンテキストに制限されている機能
 slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
-tags:
-  - API
-  - Browsers
-  - Reference
-  - Secure contexts
-  - Security
-  - Web
-  - features
-  - support
-  - セキュリティ
-  - ブラウザー
-  - 安全なコンテキスト
-translation_of: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 ---
 このリファレンスは、安全なコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です — 定義や詳細については、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)を参照してください。
 

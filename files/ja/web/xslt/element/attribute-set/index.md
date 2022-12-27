@@ -1,12 +1,6 @@
 ---
 title: <xsl:attribute-set>
 slug: Web/XSLT/Element/attribute-set
-tags:
-  - XSLT
-  - attribute-set
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/attribute-set
 ---
 {{ XsltRef() }}
 

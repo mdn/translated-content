@@ -1,18 +1,6 @@
 ---
 title: text-decoration-skip-ink
 slug: Web/CSS/text-decoration-skip-ink
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト装飾
-  - Experimental
-  - レイアウト
-  - Reference
-  - Web
-  - recipe:css-property
-  - text-decoration-skip-ink
-browser-compat: css.properties.text-decoration-skip-ink
-translation_of: Web/CSS/text-decoration-skip-ink
 ---
 {{CSSRef}}
 

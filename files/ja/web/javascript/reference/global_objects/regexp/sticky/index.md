@@ -1,17 +1,6 @@
 ---
 title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Property
-  - Prototype
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - プロパティ
-  - 正規表現
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ---
 {{JSRef}}
 

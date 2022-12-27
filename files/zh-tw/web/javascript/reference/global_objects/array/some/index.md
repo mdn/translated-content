@@ -42,7 +42,7 @@ The `some()` method executes the `callback` function once for each element prese
 
 `callback` is invoked with three arguments: the value of the element, the index of the element, and the Array object being traversed.
 
-If a `thisArg` parameter is provided to `some()`, it will be used as the callback's `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+If a `thisArg` parameter is provided to `some()`, it will be used as the callback's `this` value. Otherwise, the value {{jsxref("undefined")}} will be used as its `this` value. The `this` value ultimately observable by `callback` is determined according to [the usual rules for determining the `this` seen by a function](/zh-TW/docs/Web/JavaScript/Reference/Operators/this).
 
 `some()` does not mutate the array on which it is called.
 

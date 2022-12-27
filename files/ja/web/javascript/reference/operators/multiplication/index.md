@@ -1,13 +1,6 @@
 ---
 title: 乗算 (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
-tags:
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.multiplication
-translation_of: Web/JavaScript/Reference/Operators/Multiplication
 ---
 {{jsSidebar("Operators")}}
 

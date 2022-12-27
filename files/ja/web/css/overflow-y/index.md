@@ -1,14 +1,6 @@
 ---
 title: overflow-y
 slug: Web/CSS/overflow-y
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS ボックスモデル
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.overflow-y
-translation_of: Web/CSS/overflow-y
 ---
 {{CSSRef}}
 

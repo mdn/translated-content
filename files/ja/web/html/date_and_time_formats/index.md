@@ -1,28 +1,6 @@
 ---
 title: HTML で使われる日付や時刻の形式
 slug: Web/HTML/Date_and_time_formats
-tags:
-  - Date
-  - Element
-  - Format
-  - HTML
-  - ISO 8601
-  - Input
-  - Reference
-  - String
-  - Time
-  - Week
-  - datetime
-  - datetime-local
-  - del
-  - ins
-  - month
-  - month-year
-  - week-year
-  - 日付
-  - 時刻
-  - 週
-translation_of: Web/HTML/Date_and_time_formats
 ---
 {{HTMLRef}}
 

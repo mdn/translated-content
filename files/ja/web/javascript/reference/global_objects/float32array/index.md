@@ -1,14 +1,6 @@
 ---
 title: Float32Array
 slug: Web/JavaScript/Reference/Global_Objects/Float32Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Float32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Float32Array
 ---
 {{JSRef}}
 

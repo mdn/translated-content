@@ -4,7 +4,7 @@ slug: Web/API/URL/password
 ---
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}}接口的**`password`**属性为{{domxref("USVString")}}，其中包含在域名之前指定的密码。
+{{domxref("URL")}}接口的 **`password`** 属性为{{domxref("USVString")}}，其中包含在域名之前指定的密码。
 
 如果在未设置[username](/zh-CN/docs/Web/API/URL/username)属性的情况下进行调用，默认失败。
 

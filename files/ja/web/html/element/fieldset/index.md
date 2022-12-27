@@ -1,14 +1,6 @@
 ---
 title: '<fieldset>: フィールドセット要素'
 slug: Web/HTML/Element/fieldset
-tags:
-  - Element
-  - Forms
-  - HTML
-  - HTML forms
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/fieldset
 ---
 {{HTMLRef}}
 

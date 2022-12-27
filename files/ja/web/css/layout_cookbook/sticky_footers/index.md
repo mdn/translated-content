@@ -1,15 +1,6 @@
 ---
 title: 張りつくフッター
 slug: Web/CSS/Layout_cookbook/Sticky_footers
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - 料理帳
-  - フレックスボックス
-  - グリッド
-  - 張りつくフッター
-translation_of: Web/CSS/Layout_cookbook/Sticky_footers
 ---
 {{CSSRef}}
 

@@ -1,22 +1,6 @@
 ---
 title: '<title>: 文書題名要素'
 slug: Web/HTML/Element/title
-tags:
-  - Element
-  - HTML
-  - HTML document metadata
-  - HTML:Metadata content
-  - Page Name
-  - Page Title
-  - Reference
-  - Tab Name
-  - Tab Title
-  - Title
-  - Web
-  - Window Name
-  - Window Title
-translation_of: Web/HTML/Element/title
-browser-compat: html.elements.title
 ---
 {{HTMLRef}}
 

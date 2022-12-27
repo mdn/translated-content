@@ -1,7 +1,6 @@
 ---
 title: points
 slug: Web/SVG/Attribute/points
-translation_of: Web/SVG/Attribute/points
 ---
 {{SVGRef}}
 

@@ -83,7 +83,7 @@ parentDiv.insertBefore(sp1, sp2);
 </script>
 ```
 
-There is no `insertAfter` method. It can be emulated by combining the `insertBefore` method with [`nextSibling`](/en-US/docs/DOM/Node.nextSibling).
+There is no `insertAfter` method. It can be emulated by combining the `insertBefore` method with [`nextSibling`](/zh-TW/docs/DOM/Node.nextSibling).
 
 In the previous example, `sp1` could be inserted after `sp2` using:
 

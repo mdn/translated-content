@@ -1,15 +1,6 @@
 ---
 title: <transform-function>
 slug: Web/CSS/transform-function
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 座標変換
-  - データ型
-  - レイアウト
-  - リファレンス
-browser-compat: css.types.transform-function
-translation_of: Web/CSS/transform-function
 ---
 {{CSSRef}}
 

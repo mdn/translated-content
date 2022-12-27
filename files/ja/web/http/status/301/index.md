@@ -1,14 +1,6 @@
 ---
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
-tags:
-  - HTTP
-  - Redirect
-  - Reference
-  - Status code
-  - ステータスコード
-  - リダイレクト
-translation_of: Web/HTTP/Status/301
 ---
 {{HTTPSidebar}}
 

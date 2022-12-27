@@ -14,7 +14,7 @@ slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 
 {{Glossary("CORS")}} 请求只能使用 HTTPS URL 方案，但请求指定的 URL 可能是不同类型。这种情况经常发生在 URL 指定本地文件，例如使用了 `file:///` 的 URL。
 
-要解决此问题，请确保在发出涉及 CORS 的请求时使用 HTTPS URL，例如 {{domxref("XMLHttpRequest")}}，[Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API，或 Web Fonts（`@font-face`），或 [WebGL 纹理](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL), 或 XSL 样式表。
+要解决此问题，请确保在发出涉及 CORS 的请求时使用 HTTPS URL，例如 {{domxref("XMLHttpRequest")}}，[Fetch](/zh-CN/docs/Web/API/Fetch_API) API，或 Web Fonts（`@font-face`），或 [WebGL 纹理](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL), 或 XSL 样式表。
 
 ### 自 Firefox 68 本地文件安全性的改变
 

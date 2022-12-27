@@ -27,7 +27,7 @@ var arr = [element0, element1, ..., elementN];
 
 `element0, element1, ..., elementN` 是数组元素的值的列表。当这些值被指定后，数组将被初始化，他们将被作为数组元素。数组的 length 属性也会被设为参数的个数。
 
-括号语法被称为 "数组字面值" 或 "数组初始化器", 它比其他创建数组的方式更便捷，所以通常是首选。详细内容参见 [Array literals](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals) 。
+括号语法被称为 "数组字面值" 或 "数组初始化器", 它比其他创建数组的方式更便捷，所以通常是首选。详细内容参见 [Array literals](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals) 。
 
 为了创建一个长度不为 0，但是又没有任何元素的数组，可选以下任何一种方式：
 
@@ -40,7 +40,7 @@ var arr = [];
 arr.length = arrayLength;
 ```
 
-> **备注：** 以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。 调用 `arr.length` 会返回数组长度，但是数组实际上包含了空的（`undefined`）元素。 因此在数组上使用 [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 循环，将不会返回任何的值 。
+> **备注：** 以上代码，数组长度（arrayLength）必须为一个数字（Number）。否则，将会创建一个只有单个（所输入的）元素的数组。 调用 `arr.length` 会返回数组长度，但是数组实际上包含了空的（`undefined`）元素。 因此在数组上使用 [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环，将不会返回任何的值 。
 
 除了如上所示创建新定义的变量，数组 (array) 也可以作为一个属性 (property) 分配给一个新的或者已存在的对象 (object)：
 
@@ -156,7 +156,7 @@ for (var i = 0; i < colors.length; i++) {
 }
 ```
 
-如果你确定数组中没有一个元素的求值是 false —— 如果你的数组只包含[DOM](/en-US/docs/DOM)节点，如下，你可以选择一个更高效的土法子：
+如果你确定数组中没有一个元素的求值是 false —— 如果你的数组只包含[DOM](/zh-CN/docs/DOM)节点，如下，你可以选择一个更高效的土法子：
 
 ```js
 var divs = document.getElementsByTagName('div');
@@ -198,7 +198,7 @@ array.forEach(function(element) {
 })
 ```
 
-一旦 JavaScript 元素被保存为标准的对象属性，通过[`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) 循环来迭代数组将变得不明智，因为正常元素和所有可枚举的属性都会被列出。
+一旦 JavaScript 元素被保存为标准的对象属性，通过[`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 循环来迭代数组将变得不明智，因为正常元素和所有可枚举的属性都会被列出。
 
 ### 数组的方法 (array methods)
 
@@ -416,11 +416,11 @@ Row 3: [3,0] [3,1] [3,2] [3,3]
 
 ### 数组和正则表达式
 
-当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。 [`RegExp.exec()`](/en-US/docs/JavaScript/Reference/Global_Objects/RegExp/exec), `String.match() 和` `String.split() 的返回值是一个数组。` 使用数组和正则表达式的的更多信息，请看 [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions).
+当一个数组作为字符串和正则表达式的匹配结果时，该数组将会返回相关匹配信息的属性和元素。 [`RegExp.exec()`](/zh-CN/docs/JavaScript/Reference/Global_Objects/RegExp/exec), `String.match() 和` `String.split() 的返回值是一个数组。` 使用数组和正则表达式的的更多信息，请看 [Regular Expressions](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions).
 
 ### 使用类数组对象 (array-like objects)
 
-一些 JavaScript 对象，例如 {{domxref("document.getElementsByTagName()")}} 返回的 {{domxref("NodeList")}} 或者函数内部可用的 [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) 对象，他们表面上看起来，外观和行为像数组，但是不共享他们所有的方法。例如 `arguments` 对象就提供一个 [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 属性，但是不实现 {{jsxref("Array.forEach", "forEach()")}} 方法。
+一些 JavaScript 对象，例如 {{domxref("document.getElementsByTagName()")}} 返回的 {{domxref("NodeList")}} 或者函数内部可用的 [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments) 对象，他们表面上看起来，外观和行为像数组，但是不共享他们所有的方法。例如 `arguments` 对象就提供一个 [`length`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length) 属性，但是不实现 {{jsxref("Array.forEach", "forEach()")}} 方法。
 
 Array 的原生 (prototype) 方法可以用来处理类似数组行为的对象，例如： :
 
@@ -442,7 +442,7 @@ Array.prototype.forEach.call("a string", function(chr) {
 
 ## 数组推导式（Array comprehensions）
 
-在[JavaScript 1.7](/en-US/docs/Web/JavaScript/New_in_JavaScript/1.7) 被介绍并计划在 [ECMAScript 7](/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_7_support_in_Mozilla), [array comprehensions](/en-US/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) 被规范化并提供一个有用的快捷方式，用来实现如何在另一个数组的基础上构造一个新的数组。推导式可以经常被用在那些需要调用 `map()` 和 `filter() 函数的地方，`或作为一种结合这两种方式。
+在[JavaScript 1.7](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/1.7) 被介绍并计划在 [ECMAScript 7](/zh-CN/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_7_support_in_Mozilla), [array comprehensions](/zh-CN/docs/Web/JavaScript/Reference/Operators/Array_comprehensions) 被规范化并提供一个有用的快捷方式，用来实现如何在另一个数组的基础上构造一个新的数组。推导式可以经常被用在那些需要调用 `map()` 和 `filter() 函数的地方，`或作为一种结合这两种方式。
 
 下面的推导式创建一个数字数组并且创建一个新的数组，数组的每个元素都是原来数值的两倍（译者注：这种形式类似于 Python 的列表推导式）。
 
@@ -480,9 +480,9 @@ var doubledEvens = [i * 2 for (i of numbers) if (i % 2 === 0)];
 console.log(doubledEvens); // logs 4,44,60
 ```
 
-数组推导式隐含了块作用域。新的变量 (如例子中的 i) 类似于是采用 [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)声明的。这意味着他们不能在推导式以外访问。
+数组推导式隐含了块作用域。新的变量 (如例子中的 i) 类似于是采用 [`let`](/zh-CN/docs/Web/JavaScript/Reference/Statements/let)声明的。这意味着他们不能在推导式以外访问。
 
-数组推导式的输入不一定必须是数组; [迭代器和生成器](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) 也是可以的。
+数组推导式的输入不一定必须是数组; [迭代器和生成器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators) 也是可以的。
 
 甚至字符串也可以用来作为输入; 实现 filter 或者 map 行为 (参考上面类似数组行为的对象) 如下：
 
@@ -496,7 +496,7 @@ var interpolatedZeros = [c+'0' for (c of str) ].join(''); // 'a0b0c0d0e0f0'
 
 ## 类型化数组 (Typed Arrays )
 
-[JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) 是类数组对象（array-like object），其提供访问原始二进制数据的机制。 就像你知道的那样，{{jsxref("Array")}} 对象动态增长和收缩，可以有任何 JavaScript 值。但对于类型化数组，JavaScript 引擎执行优化使得这些数组访问速度快速。 随着 Web 应用程序变得越来越强大，添加音频和视频处理等功能、可以使用 [WebSockets](/en-US/docs/WebSockets) 、使用原始数据， 这都需要访问原始的二进制数据，所以专门的优化将有助于 JavaScript 代码能够快速和容易地操纵原始二进制数据类型的数组。
+[JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays) 是类数组对象（array-like object），其提供访问原始二进制数据的机制。 就像你知道的那样，{{jsxref("Array")}} 对象动态增长和收缩，可以有任何 JavaScript 值。但对于类型化数组，JavaScript 引擎执行优化使得这些数组访问速度快速。 随着 Web 应用程序变得越来越强大，添加音频和视频处理等功能、可以使用 [WebSockets](/zh-CN/docs/WebSockets) 、使用原始数据， 这都需要访问原始的二进制数据，所以专门的优化将有助于 JavaScript 代码能够快速和容易地操纵原始二进制数据类型的数组。
 
 ### 缓冲区和视图：类型化的数组结构
 
@@ -510,10 +510,10 @@ var interpolatedZeros = [c+'0' for (c of str) ].join(''); // 'a0b0c0d0e0f0'
 
 ### 类型数组视图 (Typed array views)
 
-类型数组视图具有自描述性的名字，并且提供数据类型信息，例如`Int8`, `Uint32`, `Float64 等等。`如一个特定类型数组视图`Uint8ClampedArray`. 它意味着数据元素只包含 0 到 255 的整数值。它通常用于[Canvas 数据处理](/en-US/docs/Web/API/ImageData),例如。
+类型数组视图具有自描述性的名字，并且提供数据类型信息，例如`Int8`, `Uint32`, `Float64 等等。`如一个特定类型数组视图`Uint8ClampedArray`. 它意味着数据元素只包含 0 到 255 的整数值。它通常用于[Canvas 数据处理](/zh-CN/docs/Web/API/ImageData),例如。
 
 {{page("/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray", "TypedArray_objects")}}
 
-更多信息参考 [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) 与参考文档中 {{jsxref("TypedArray")}}对象的不同
+更多信息参考 [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays) 与参考文档中 {{jsxref("TypedArray")}}对象的不同
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}

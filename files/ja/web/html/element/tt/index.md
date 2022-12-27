@@ -1,21 +1,6 @@
 ---
 title: '<tt>: テレタイプテキスト要素'
 slug: Web/HTML/Element/tt
-tags:
-  - 要素
-  - HTML
-  - Monospace
-  - Monotype
-  - Non-proportional Type
-  - 非推奨
-  - リファレンス
-  - Teletype
-  - Teletype Text
-  - ウェブ
-  - font-family
-  - tt
-browser-compat: html.elements.tt
-translation_of: Web/HTML/Element/tt
 ---
 
 {{HTMLRef}}{{deprecated_header}}

@@ -1,19 +1,6 @@
 ---
 title: ウェブのグラフィック
 slug: Web/Guide/Graphics
-tags:
-  - 2D
-  - 3D
-  - Canvas
-  - Graphics
-  - HTML5
-  - SVG
-  - Web
-  - WebGL
-  - WebRTC
-  - ウェブ
-  - グラフィック
-translation_of: Web/Guide/Graphics
 ---
 ウェブサイトやアプリケーションは、画像などのグラフィックを表現する必要がある場合がよくあります。静的な画像であれば、 {{HTMLElement("img")}} 要素を使ったり、 {{cssxref("background-image")}} プロパティで HTML 要素の背景を設定したりすることで、簡単に表示することができます。その場でグラフィックを構築したり、事後に画像を操作したりすることもできます。これらの記事は、このような操作を行う方法についての詳しい情報を提供しています。
 

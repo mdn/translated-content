@@ -38,7 +38,7 @@ slug: Web/HTML/Element/menu
 
 ## 属性
 
-该元素支持[全局属性](/en-US/HTML/Global_attributes)，以及以下属性。
+该元素支持[全局属性](/zh-CN/HTML/Global_attributes)，以及以下属性。
 
 - {{HTMLAttrDef("label")}} {{Deprecated_inline}}
   - : The name of the menu as shown to the user. Used within nested menus, to provide a label through which the submenu can be accessed. Must only be specified when the parent element is a {{HTMLElement("menu")}} in the _context menu_ state.

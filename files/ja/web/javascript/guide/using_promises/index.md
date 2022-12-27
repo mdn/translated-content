@@ -1,15 +1,6 @@
 ---
 title: プロミスの使用
 slug: Web/JavaScript/Guide/Using_promises
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Promise
-  - Promises
-  - asynchronous
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Using_promises
 ---
 {{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Details_of_the_Object_Model", "Web/JavaScript/Guide/Iterators_and_Generators")}}
 

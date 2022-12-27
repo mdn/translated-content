@@ -1,17 +1,6 @@
 ---
 title: mask-border-outset
 slug: Web/CSS/mask-border-outset
-tags:
-  - CSS
-  - CSS マスク
-  - CSS プロパティ
-  - 実験的
-  - NeedsCompatTable
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-border-outset
-translation_of: Web/CSS/mask-border-outset
 ---
 {{CSSRef}}
 

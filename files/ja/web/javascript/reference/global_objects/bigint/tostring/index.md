@@ -1,14 +1,6 @@
 ---
 title: BigInt.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
-tags:
-  - BigInt
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - toString()
-browser-compat: javascript.builtins.BigInt.toString
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 ---
 {{JSRef}}
 

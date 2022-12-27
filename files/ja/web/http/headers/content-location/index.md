@@ -1,13 +1,6 @@
 ---
 title: Content-Location
 slug: Web/HTTP/Headers/Content-Location
-tags:
-  - HTTP
-  - Reference
-  - エンティティヘッダー
-  - ヘッダー
-  - リファレンス
-translation_of: Web/HTTP/Headers/Content-Location
 ---
 {{HTTPSidebar}}
 

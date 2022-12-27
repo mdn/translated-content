@@ -1,15 +1,6 @@
 ---
 title: FinalizationRegistry() コンストラクター
-slug: >-
-  Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
-tags:
-  - Constructor
-  - FinalizationRegistry
-  - JavaScript
-  - Reference
-  - コンストラクター
-translation_of: >-
-  Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
+slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
 ---
 {{JSRef}}
 

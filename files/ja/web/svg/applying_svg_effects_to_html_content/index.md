@@ -1,12 +1,6 @@
 ---
 title: SVG 効果の HTML コンテンツへの適用
 slug: Web/SVG/Applying_SVG_effects_to_HTML_content
-tags:
-  - CSS
-  - Guide
-  - HTML
-  - SVG
-translation_of: Web/SVG/Applying_SVG_effects_to_HTML_content
 ---
 最近のブラウザーは、 [SVG](/ja/docs/Web/SVG) を [CSS](/ja/docs/Web/CSS) スタイルの中で使用して、 HTML コンテンツに対してグラフィカルな効果を適用することに対応しています。
 

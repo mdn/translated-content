@@ -46,4 +46,4 @@ slug: Web/API/XMLHttpRequest/loadstart_event
 
 ## 了解更多
 
-- [Monitoring progress](/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)
+- [Monitoring progress](/zh-CN/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)

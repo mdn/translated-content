@@ -4,7 +4,7 @@ slug: Web/API/EventSource/close
 ---
 {{APIRef('WebSockets API')}}
 
-{{domxref("EventSource")}} 的方法**`close()`**用于关闭当前的连接，如果调用了此方法，则会将{{domxref("EventSource.readyState")}}这个属性值设置为 2 (closed)
+{{domxref("EventSource")}} 的方法 **`close()`** 用于关闭当前的连接，如果调用了此方法，则会将{{domxref("EventSource.readyState")}}这个属性值设置为 2 (closed)
 
 > **备注：** 如果连接已经被关闭，此方法不会做任何事情
 

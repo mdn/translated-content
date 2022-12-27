@@ -1,17 +1,6 @@
 ---
 title: <shape>
 slug: Web/CSS/shape
-tags:
-  - CSS
-  - CSS データ型
-  - CSS 関数
-  - データ型
-  - 非推奨
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.shape
-translation_of: Web/CSS/shape
 ---
 {{CSSRef}}{{deprecated_header}}
 

@@ -1,15 +1,6 @@
 ---
 title: SharedArrayBuffer.prototype.slice()
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
-tags:
-  - JavaScript
-  - メソッド
-  - Prototype
-  - 共有メモリー
-  - SharedArrayBuffer
-  - 型付き配列
-browser-compat: javascript.builtins.SharedArrayBuffer.slice
-translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice
 ---
 {{JSRef}}
 

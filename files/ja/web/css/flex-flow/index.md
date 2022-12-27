@@ -1,14 +1,6 @@
 ---
 title: flex-flow
 slug: Web/CSS/flex-flow
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.flex-flow
-translation_of: Web/CSS/flex-flow
 ---
 {{CSSRef}}
 

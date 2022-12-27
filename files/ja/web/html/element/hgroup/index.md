@@ -1,16 +1,6 @@
 ---
 title: <hgroup>
 slug: Web/HTML/Element/hgroup
-tags:
-  - Deprecated
-  - Element
-  - Experimental
-  - HTML
-  - HTML5
-  - Reference
-  - Web
-browser-compat: html.elements.hgroup
-translation_of: Web/HTML/Element/hgroup
 ---
 {{HTMLRef}}
 

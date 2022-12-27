@@ -11,7 +11,7 @@ slug: Learn/Server-side/Express_Nodejs/mongoose
     <tr>
       <th scope="row">前置條件:</th>
       <td>
-        <a href="/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
+        <a href="/zh-TW/docs/Learn/Server-side/Express_Nodejs/skeleton_website"
           >Express 教學 2: 創建一個骨架網站</a
         >
       </td>

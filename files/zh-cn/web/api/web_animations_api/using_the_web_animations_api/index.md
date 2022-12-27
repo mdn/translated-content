@@ -311,7 +311,7 @@ drinking.pause();
 
 现在，所有三个动画只有一个持续时间，我们可以从一个地方容易地改变。
 
-我们还可以使用 Web 动画 API 来确定动画当前的时间。 当你用尽蛋糕吃或者清空瓶子时，游戏就结束了。 哪个角色扮演者取决于爱丽丝在她的动画中有多远，无论她是否变得太大，不能进入小门太小，无法达到打开门的钥匙。 我们可以弄清楚她是否在动画的大端或小端，让她的动画当前时间 ([`currentTime`](/en-US/docs/Web/API/Animation/currentTime)) 被她的 activeDuration 分成：
+我们还可以使用 Web 动画 API 来确定动画当前的时间。 当你用尽蛋糕吃或者清空瓶子时，游戏就结束了。 哪个角色扮演者取决于爱丽丝在她的动画中有多远，无论她是否变得太大，不能进入小门太小，无法达到打开门的钥匙。 我们可以弄清楚她是否在动画的大端或小端，让她的动画当前时间 ([`currentTime`](/zh-CN/docs/Web/API/Animation/currentTime)) 被她的 activeDuration 分成：
 
 ```js
 var endGame = function() {
@@ -348,8 +348,8 @@ var endGame = function() {
 
 CSS 动画和转换有自己的事件侦听器，这些也可以通过 Web 动画 API：
 
-- [`onfinish`](/en-US/docs/Web/API/Animation/onfinish) is the event handler for the `finish` event and can be triggered manually with [`finish()`](/en-US/docs/Web/API/Animation/finish).
-- [`oncancel`](/en-US/docs/Web/API/Animation/oncancel) is the event handler for the `cancel` event and can be triggers with [`cancel()`](/en-US/docs/Web/API/Animation/cancel).
+- [`onfinish`](/zh-CN/docs/Web/API/Animation/onfinish) is the event handler for the `finish` event and can be triggered manually with [`finish()`](/zh-CN/docs/Web/API/Animation/finish).
+- [`oncancel`](/zh-CN/docs/Web/API/Animation/oncancel) is the event handler for the `cancel` event and can be triggers with [`cancel()`](/zh-CN/docs/Web/API/Animation/cancel).
 
 在这里，我们为蛋糕，瓶子和爱丽丝设置回调来触发 endGame 功能：
 
@@ -362,7 +362,7 @@ drinking.onfinish = endGame;
 aliceChange.onfinish = endGame;
 ```
 
-Prefer promises? The Web Animations API also specifies two promises: [`onfinish`](/en-US/docs/Web/API/Animation/onfinish) and [`oncancel`](/en-US/docs/Web/API/Animation/oncancel).
+Prefer promises? The Web Animations API also specifies two promises: [`onfinish`](/zh-CN/docs/Web/API/Animation/onfinish) and [`oncancel`](/zh-CN/docs/Web/API/Animation/oncancel).
 
 > **备注：** These promises are not fully supported as of this writing.
 

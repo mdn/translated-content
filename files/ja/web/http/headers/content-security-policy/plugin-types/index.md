@@ -1,18 +1,6 @@
 ---
 title: 'CSP: plugin-types'
 slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
-tags:
-  - CSP
-  - Content-Security-Policy
-  - Directive
-  - Flash
-  - HTTP
-  - Java
-  - Plugin
-  - Plugins
-  - Security
-browser-compat: http.headers.Content-Security-Policy.plugin-types
-translation_of: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 ---
 {{HTTPSidebar}}{{deprecated_header}}
 

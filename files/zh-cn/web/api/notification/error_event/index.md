@@ -31,4 +31,4 @@ A {{jsxref("function")}} which serves as the event handler for the {{event("erro
 ## See also
 
 - {{domxref("Notification")}}
-- [Using the Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

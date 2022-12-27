@@ -1,18 +1,6 @@
 ---
 title: margin-inline-end
 slug: Web/CSS/margin-inline-end
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - NeedsContent
-  - リファレンス
-  - margin-inline
-  - margin-inline-end
-  - recipe:css-property
-browser-compat: css.properties.margin-inline-end
-translation_of: Web/CSS/margin-inline-end
 ---
 {{CSSRef}}
 

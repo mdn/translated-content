@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/blendEquationSeparate
 ---
 {{APIRef("WebGL")}}
 
-The **`WebGLRenderingContext.blendEquationSeparate()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) is used to set the RGB blend equation and alpha blend equation separately.
+The **`WebGLRenderingContext.blendEquationSeparate()`** method of the [WebGL API](/zh-CN/docs/Web/API/WebGL_API) is used to set the RGB blend equation and alpha blend equation separately.
 
 The blend equation determines how a new pixel is combined with a pixel already in the {{domxref("WebGLFramebuffer")}}.
 

@@ -1,16 +1,6 @@
 ---
 title: inset
 slug: Web/CSS/inset
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - Property
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.inset
-translation_of: Web/CSS/inset
 ---
 {{CSSRef}}
 

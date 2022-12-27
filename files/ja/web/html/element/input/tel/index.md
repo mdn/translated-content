@@ -1,19 +1,6 @@
 ---
 title: <input type="tel">
 slug: Web/HTML/Element/input/tel
-tags:
-  - 要素
-  - フォーム入力
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - HTML input
-  - Input
-  - 入力要素
-  - 入力型
-  - Phone Numbers
-  - リファレンス
-translation_of: Web/HTML/Element/input/tel
 ---
 
 {{HTMLRef("Input_types")}}

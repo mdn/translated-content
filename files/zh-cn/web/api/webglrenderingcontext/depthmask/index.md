@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/depthMask
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.depthMask()`** 方法设置是否启用写入深度缓冲。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.depthMask()`** 方法设置是否启用写入深度缓冲。
 
 ## 语法
 

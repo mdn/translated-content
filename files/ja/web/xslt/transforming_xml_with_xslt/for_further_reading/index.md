@@ -1,13 +1,6 @@
 ---
 title: XSLT - さらなる読書のために
 slug: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
-tags:
-  - NeedsContent
-  - NeedsHelp
-  - Transforming_XML_with_XSLT
-  - XML
-  - XSLT
-translation_of: Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading
 ---
 [« Transforming XML with XSLT](/ja/docs/Transforming_XML_with_XSLT)
 

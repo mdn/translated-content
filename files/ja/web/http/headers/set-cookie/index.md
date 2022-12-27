@@ -1,15 +1,6 @@
 ---
 title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
-tags:
-  - Cookies
-  - HTTP
-  - リファレンス
-  - レスポンス
-  - ヘッダー
-  - samesite
-browser-compat: http.headers.Set-Cookie
-translation_of: Web/HTTP/Headers/Set-Cookie
 ---
 {{HTTPSidebar}}
 

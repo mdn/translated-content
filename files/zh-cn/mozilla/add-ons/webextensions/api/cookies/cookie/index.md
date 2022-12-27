@@ -15,7 +15,7 @@ The `Cookie` type of the {{WebExtAPIRef("cookies")}} API represents information 
 - `expirationDate`{{optional_inline}}
   - : A `number` representing the expiration date of the cookie as the number of seconds since the UNIX epoch. Not provided for session cookies.
 - `firstPartyDomain`
-  - : A `string` representing the first-party domain associated with the cookie. This will be an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/en-US/Add-ons/WebExtensions/API/cookies#First-party_isolation).
+  - : A `string` representing the first-party domain associated with the cookie. This will be an empty string if the cookie was set while first-party isolation was off. See [First-party isolation](/zh-CN/Add-ons/WebExtensions/API/cookies#First-party_isolation).
 - `hostOnly`
   - : A `boolean`, `true` if the cookie is a host-only cookie (i.e. the request's host must exactly match the domain of the cookie), or `false` otherwise.
 - `httpOnly`

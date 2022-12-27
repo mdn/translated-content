@@ -1,15 +1,6 @@
 ---
 title: 後方互換モードと標準準拠モード
 slug: Web/HTML/Quirks_Mode_and_Standards_Mode
-tags:
-  - Gecko
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Web Development
-  - Web Standards
-  - XHTML
-translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 ---
 {{HTMLRef}}
 

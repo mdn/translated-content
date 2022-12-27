@@ -29,6 +29,6 @@ const state = track.readyState
 
 ## 看看别的
 
-- [Media Stream API](/en-US/docs/Web/API/Media_Streams_API)
-- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+- [Media Stream API](/zh-CN/docs/Web/API/Media_Streams_API)
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
 - {{domxref("MediaStreamTrack.onended")}}

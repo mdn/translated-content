@@ -26,5 +26,5 @@ Object.queryCommandState(String command)
 
 - {{domxref("document.contentEditable")}}
 - {{domxref("document.designMode")}}
-- [Rich-Text Editing in Mozilla](/en-US/docs/Rich-Text_Editing_in_Mozilla)
+- [Rich-Text Editing in Mozilla](/zh-CN/docs/Rich-Text_Editing_in_Mozilla)
 - Browser bugs related to `queryCommandState()`: [Scribe's "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate)

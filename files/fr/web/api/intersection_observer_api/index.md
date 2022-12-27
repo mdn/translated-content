@@ -364,7 +364,7 @@ Les constantes et variables que nous préparons sont :
 - `decreasingColor`
   - : De même, il s'agit d'une chaîne de caractères qui définit une couleur que nous appliquerons lorsque le ratio de visibilité diminue.
 
-On appelle {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} pour commencer à écouter l'évènement {{event("load")}} ; une fois que la page a finit de charger, on obtient une référence de l'élément avec l'identifiant `"box"` grâce à {{domxref("Document.querySelector", "querySelector()")}}, puis on appelle la méthode `createObserver()` que l'on va définir un peu plus tard pour gérer la création et l'installation de l'observateur d'intersection.
+On appelle {{domxref("EventTarget.addEventListener", "Window.addEventListener()")}} pour commencer à écouter l'évènement [`load`](/fr//docs/Web/API/Window/load_event) ; une fois que la page a finit de charger, on obtient une référence de l'élément avec l'identifiant `"box"` grâce à {{domxref("Document.querySelector", "querySelector()")}}, puis on appelle la méthode `createObserver()` que l'on va définir un peu plus tard pour gérer la création et l'installation de l'observateur d'intersection.
 
 #### Création de l'observateur d'intersection
 

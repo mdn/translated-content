@@ -1,15 +1,6 @@
 ---
 title: font-optical-sizing
 slug: Web/CSS/font-optical-sizing
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - NeedsExample
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-optical-sizing
-translation_of: Web/CSS/font-optical-sizing
 ---
 {{CSSRef}}
 

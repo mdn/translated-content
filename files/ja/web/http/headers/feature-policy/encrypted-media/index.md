@@ -1,16 +1,6 @@
 ---
 title: 'Feature-Policy: encrypted-media'
 slug: Web/HTTP/Headers/Feature-Policy/encrypted-media
-tags:
-  - ディレクティブ
-  - EME
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - リファレンス
-  - Experimental
-browser-compat: http.headers.Feature-Policy.encrypted-media
-translation_of: Web/HTTP/Headers/Feature-Policy/encrypted-media
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 

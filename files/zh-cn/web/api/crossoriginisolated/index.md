@@ -38,5 +38,5 @@ if(crossOriginIsolated) {
 
 ## 参见
 
-- [Service Workers](/en-US/docs/Web/API/ServiceWorker_API)
-- [Web Workers](/en-US/docs/Web/API/Web_Workers_API)
+- [Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [Web Workers](/zh-CN/docs/Web/API/Web_Workers_API)

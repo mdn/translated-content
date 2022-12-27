@@ -1,18 +1,6 @@
 ---
 title: '<tr>: 表の行要素'
 slug: Web/HTML/Element/tr
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Tables
-  - Web
-  - tag
-  - tr
-  - tr tag
-browser-compat: html.elements.tr
-translation_of: Web/HTML/Element/tr
 ---
 
 {{HTMLRef}}

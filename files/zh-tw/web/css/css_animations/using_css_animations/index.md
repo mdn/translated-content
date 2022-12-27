@@ -330,4 +330,4 @@ function listener(e) {
 ## 更多資訊
 
 - {{ domxref("Event/AnimationEvent", "AnimationEvent") }}
-- [Detecting CSS animation support](/en/CSS/CSS_animations/Detecting_CSS_animation_support)
+- [Detecting CSS animation support](/zh-TW/CSS/CSS_animations/Detecting_CSS_animation_support)

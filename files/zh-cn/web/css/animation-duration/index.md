@@ -36,7 +36,7 @@ animation-duration: 10s, 30s, 230ms
 
 ## 示例
 
-See [CSS animations](/en/CSS/CSS_animations) for examples.
+See [CSS animations](/zh-CN/CSS/CSS_animations) for examples.
 
 ## 规范
 

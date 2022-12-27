@@ -1,15 +1,6 @@
 ---
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
-tags:
-  - Constructor
-  - ECMAScript 2015
-  - GeneratorFunction
-  - Iterator
-  - JavaScript
-  - Reference
-  - コンストラクター
-translation_of: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
 {{JSRef}}
 

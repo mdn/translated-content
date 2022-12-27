@@ -1,15 +1,6 @@
 ---
 title: Setting up adaptive streaming media sources
 slug: Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
-tags:
-  - Audio
-  - HLS
-  - HTML5
-  - HTTP ライブストリーミング
-  - MPEG-DASH
-  - Video
-  - adaptive streaming
-translation_of: Web/Guide/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources
 ---
 たとえば、 HTML5 メディア要素内で利用するために、サーバー上の適応型ストリーミングメディアソースを設定するとします。あなたはどうしますか？この記事では、最も一般的な形式である MPEG-DASH と HLS (HTTP Live Streaming) の二つについて見ていきます。
 

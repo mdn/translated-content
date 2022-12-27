@@ -39,13 +39,13 @@ _History 接口不继承任何方法。_
 
   - : 按指定的名称和 URL（如果提供该参数）将数据 push 进会话历史栈，数据被 DOM 进行不透明处理；你可以指定任何可以被序列化的 javascript 对象。注意到 Firefox 现在忽略了这个 title 参数，更多的信息，请看[manipulating the browser history](/zh-CN/docs/Web/API/History_API)。
 
-    > **备注：** 在 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}中， 被传递的对象使用 JSON 进行序列化。从 Gecko 6.0 {{ geckoRelease("6.0") }}开始，使用[结构化克隆算法](/en/DOM/The_structured_clone_algorithm)进行序列化。这样，就可以让更多类型的对象被安全地传输。
+    > **备注：** 在 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }}中， 被传递的对象使用 JSON 进行序列化。从 Gecko 6.0 {{ geckoRelease("6.0") }}开始，使用[结构化克隆算法](/zh-CN/DOM/The_structured_clone_algorithm)进行序列化。这样，就可以让更多类型的对象被安全地传输。
 
 - {{domxref("History.replaceState()")}}
 
   - : 按指定的数据，名称和 URL(如果提供该参数)，更新历史栈上最新的入口。这个数据被 DOM 进行了不透明处理。你可以指定任何可以被序列化的 javascript 对象。注意到 Firefox 现在忽略了这个 title 参数，更多的信息，请看[manipulating the browser history](/zh-CN/docs/Web/API/History_API)。
 
-    > **备注：** 在 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }} 中，the passed object is serialized using JSON. Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, the object is serialized using [the structured clone algorithm](/en/DOM/The_structured_clone_algorithm). This allows a wider variety of objects to be safely passed.
+    > **备注：** 在 Gecko 2.0 {{ geckoRelease("2.0") }} 到 Gecko 5.0 {{ geckoRelease("5.0") }} 中，the passed object is serialized using JSON. Starting in Gecko 6.0 {{ geckoRelease("6.0") }}, the object is serialized using [the structured clone algorithm](/zh-CN/DOM/The_structured_clone_algorithm). This allows a wider variety of objects to be safely passed.
 
 ## 规范
 

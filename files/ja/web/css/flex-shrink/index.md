@@ -1,15 +1,6 @@
 ---
 title: flex-shrink
 slug: Web/CSS/flex-shrink
-tags:
-  - CSS
-  - CSS フレックスボックス
-  - CSS プロパティ
-  - NeedsContent
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.flex-shrink
-translation_of: Web/CSS/flex-shrink
 ---
 {{CSSRef}}
 

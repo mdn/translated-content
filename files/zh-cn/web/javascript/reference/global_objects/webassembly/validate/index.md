@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
 {{JSRef}}
 
-**`WebAssembly.validate()`** 方法用于验证包含 WebAssembly 二进制码的一个 [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) 是否合法，返回 `true` 如果这些字节能构成一个合法的 wasm 模块，否则返回 `false`。
+**`WebAssembly.validate()`** 方法用于验证包含 WebAssembly 二进制码的一个 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays) 是否合法，返回 `true` 如果这些字节能构成一个合法的 wasm 模块，否则返回 `false`。
 
 ## 语法
 
@@ -15,7 +15,7 @@ WebAssembly.validate(bufferSource);
 ### 参数
 
 - `bufferSource`
-  - : 一个包含 WebAssembly 二进制码的 [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) 或 [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
+  - : 一个包含 WebAssembly 二进制码的 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays) 或 [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)。
 
 ### 返回值
 
@@ -23,7 +23,7 @@ WebAssembly.validate(bufferSource);
 
 ### 异常
 
-如果给定的 `bufferSource` 不是 [typed array](/en-US/docs/Web/JavaScript/Typed_arrays) 或 [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 类型，将会抛出 {{jsxref("TypeError")}} 异常。
+如果给定的 `bufferSource` 不是 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays) 或 [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 类型，将会抛出 {{jsxref("TypeError")}} 异常。
 
 ## 例子
 
@@ -49,6 +49,6 @@ fetch('simple.wasm').then(response =>
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
+- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)

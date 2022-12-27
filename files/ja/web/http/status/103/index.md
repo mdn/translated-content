@@ -1,14 +1,6 @@
 ---
 title: 103 Early Hints
 slug: Web/HTTP/Status/103
-tags:
-  - Draft
-  - HTTP
-  - Informational
-  - NeedsCompatTable
-  - NeedsContent
-  - Status code
-translation_of: Web/HTTP/Status/103
 ---
 {{HTTPSidebar}}
 

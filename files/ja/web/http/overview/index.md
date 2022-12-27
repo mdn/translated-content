@@ -1,13 +1,6 @@
 ---
 title: HTTP の概要
 slug: Web/HTTP/Overview
-tags:
-  - HTML
-  - HTTP
-  - Overview
-  - WebMechanics
-  - 概要
-translation_of: Web/HTTP/Overview
 ---
 {{HTTPSidebar}}
 

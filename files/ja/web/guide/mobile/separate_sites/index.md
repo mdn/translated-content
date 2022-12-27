@@ -1,10 +1,6 @@
 ---
 title: モバイルとデスクトップで別々のサイト
 slug: Web/Guide/Mobile/Separate_sites
-tags:
-  - Mobile
-  - Web Development
-translation_of: Web/Guide/Mobile/Separate_sites
 ---
 モバイルウェブ開発への「別々のサイト」アプローチは、モバイルウェブユーザーとデスクトップウェブユーザーのために異なるサイトを作成することを含みます。このアプローチにはプラス面とマイナス面があります。
 

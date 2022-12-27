@@ -1,14 +1,6 @@
 ---
 title: Uint8ClampedArray
 slug: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Uint8ClampedArray
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray
 ---
 {{JSRef}}
 

@@ -69,9 +69,9 @@ Github 中的 [webextensions-examples 仓库](https://github.com/mdn/webextensio
 
 原生应用清单需要与原生应用一起安装，浏览器仅会查阅清单而不会安装或管理原生应用。因此，何时采用何种方式来安装或更新这些文件的安全模型比起使用 WebExtensions APIs 更像原生应用。（我也搞不懂这句啥意思，原文：Thus the security model for when and how these files are installed and updated is much more like that for native applications than that for extensions using WebExtension APIs.）
 
-关于原生应用清单的详细语法和路径规则，可参考 [原生应用清单](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)。
+关于原生应用清单的详细语法和路径规则，可参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests)。
 
-> **警告：** 除清单外，原生应用还**必需**配置路径规则，你可以参考 [原生应用清单](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) 来配置路径。
+> **警告：** 除清单外，原生应用还**必需**配置路径规则，你可以参考 [原生应用清单](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) 来配置路径。
 
 这有一个例子，是关于 "ping_pong" 原生应用的清单：
 
@@ -252,7 +252,7 @@ while True:
 
 ## 常见问题 Troubleshooting
 
-如果有什么地方出错，可以检查[浏览器控制台](/en-US/Add-ons/WebExtensions/Debugging#Viewing_log_output)。原生应用发送的任何 stderr 都会被反应在浏览器控制台中。所以如果你已经运行了原生应用，你可以看到原生应用发出的所有错误信息。
+如果有什么地方出错，可以检查[浏览器控制台](/zh-CN/Add-ons/WebExtensions/Debugging#Viewing_log_output)。原生应用发送的任何 stderr 都会被反应在浏览器控制台中。所以如果你已经运行了原生应用，你可以看到原生应用发出的所有错误信息。
 
 如果你没有配置好原生应用，你应该会看到一些错误信息。
 

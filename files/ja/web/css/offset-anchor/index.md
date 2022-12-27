@@ -1,16 +1,6 @@
 ---
 title: offset-anchor
 slug: Web/CSS/offset-anchor
-tags:
-  - CSS
-  - CSS モーションパス
-  - 実験的
-  - モーションパス
-  - リファレンス
-  - offset-anchor
-  - recipe:css-property
-browser-compat: css.properties.offset-anchor
-translation_of: Web/CSS/offset-anchor
 ---
 {{CSSRef}}
 

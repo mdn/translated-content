@@ -1,13 +1,6 @@
 ---
 title: 言明
 slug: Web/JavaScript/Guide/Regular_Expressions/Assertions
-tags:
-  - Assertions
-  - JavaScript
-  - Reference
-  - Regular Expressions
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions/Assertions
 ---
 {{jsSidebar("JavaScript Guide")}}
 

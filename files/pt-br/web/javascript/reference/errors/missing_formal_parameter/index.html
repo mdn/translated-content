@@ -29,7 +29,7 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 
 <p>Parâmetros de função devem ser identificadores ao se configurar uma função. Todas essas declarações de função abaixo falham, pois estão fornecendo valores para seus parâmetros:</p>
 
-<pre class="brush: js example-bad highlight:[1,6,11]">function quadrado(3) {
+<pre class="brush: js example-bad">function quadrado(3) {
   return numero * numero;
 };
 // SyntaxError: missing formal parameter
@@ -47,7 +47,7 @@ function log({ obj: "valor"}) {
 
 <p>Você terá de usar identificadores nas declarações de função:</p>
 
-<pre class="brush: js example-good highlight:[1,5,9]">function quadrado(numero) {
+<pre class="brush: js example-good">function quadrado(numero) {
   return numero * numero;
 };
 

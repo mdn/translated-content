@@ -4,7 +4,7 @@ slug: Web/CSS/@layer
 ---
 {{CSSRef}}{{SeeCompatTable}}
 
-[CSS](/en-US/docs/Web/CSS) [@规则](/en-US/docs/Web/CSS/At-rule) 中的`@layer`声明了一个 _级联层_， 同一层内的规则将级联在一起， 这给予了开发者对层叠机制的更多控制。
+[CSS](/zh-CN/docs/Web/CSS) [@规则](/zh-CN/docs/Web/CSS/At-rule) 中的`@layer`声明了一个 _级联层_， 同一层内的规则将级联在一起， 这给予了开发者对层叠机制的更多控制。
 
 ```css
 @layer utilities {

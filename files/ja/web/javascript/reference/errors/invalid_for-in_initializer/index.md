@@ -1,12 +1,6 @@
 ---
 title: 'SyntaxError: for-in loop head declarations may not have initializers'
 slug: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
-tags:
-  - Error
-  - JavaScript
-  - Strict Mode
-  - SyntaxError
-translation_of: Web/JavaScript/Reference/Errors/Invalid_for-in_initializer
 ---
 {{jsSidebar("Errors")}}
 

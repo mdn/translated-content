@@ -1,10 +1,6 @@
 ---
 title: プロパティの列挙可能性と所有権
 slug: Web/JavaScript/Enumerability_and_ownership_of_properties
-tags:
-  - Guide
-  - JavaScript
-translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 ---
 {{JsSidebar("More")}}
 

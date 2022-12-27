@@ -35,4 +35,4 @@ console.log(obj.currentTime);
 ## 相关链接
 
 - The interface defining it, {{domxref("HTMLMediaElement")}}.
-- [`HTMLMediaElement.fastSeek()`](/en-US/docs/Web/API/HTMLMediaElement/fastSeek) for another method of setting the time
+- [`HTMLMediaElement.fastSeek()`](/zh-CN/docs/Web/API/HTMLMediaElement/fastSeek) for another method of setting the time

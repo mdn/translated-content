@@ -1,16 +1,6 @@
 ---
 title: Intl.PluralRules
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
-tags:
-  - クラス
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - PluralRules
-  - リファレンス
-browser-compat: javascript.builtins.Intl.PluralRules
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules
 ---
 {{JSRef}}
 

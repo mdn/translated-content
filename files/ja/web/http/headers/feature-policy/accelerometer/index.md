@@ -1,15 +1,6 @@
 ---
 title: 'Feature-Policy: accelerometer'
 slug: Web/HTTP/Headers/Feature-Policy/accelerometer
-tags:
-  - Accelerometer
-  - ディレクティブ
-  - 機能ポリシー
-  - HTTP
-  - リファレンス
-  - 実験的
-browser-compat: http.headers.Feature-Policy.accelerometer
-translation_of: Web/HTTP/Headers/Feature-Policy/accelerometer
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

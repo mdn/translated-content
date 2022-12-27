@@ -1,14 +1,6 @@
 ---
 title: font-feature-settings
 slug: Web/CSS/font-feature-settings
-tags:
-  - CSS
-  - CSS フォント
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.font-feature-settings
-translation_of: Web/CSS/font-feature-settings
 ---
 {{CSSRef}}
 

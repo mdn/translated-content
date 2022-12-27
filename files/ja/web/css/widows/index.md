@@ -1,15 +1,6 @@
 ---
 title: widows
 slug: Web/CSS/widows
-tags:
-  - CSS
-  - CSS 断片化
-  - CSS 段組みレイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.widows
-translation_of: Web/CSS/widows
 ---
 {{CSSRef}}
 

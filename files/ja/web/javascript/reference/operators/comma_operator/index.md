@@ -1,16 +1,6 @@
 ---
 title: カンマ演算子 (,)
 slug: Web/JavaScript/Reference/Operators/Comma_Operator
-tags:
-- カンマ
-- 合成
-- 式
-- JavaScript
-- 言語機能
-- 演算子
-- リファレンス
-browser-compat: javascript.operators.comma
-translation_of: Web/JavaScript/Reference/Operators/Comma_Operator
 ---
 {{jsSidebar("Operators")}}
 

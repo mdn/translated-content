@@ -2,7 +2,7 @@
 title: Stacking context example 1
 slug: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1
 ---
-« [CSS](/en/CSS) « [理解 CSS 的 z-index](/en/CSS/Understanding_z-index)
+« [CSS](/zh-TW/CSS) « [理解 CSS 的 z-index](/zh-TW/CSS/Understanding_z-index)
 
 ### 堆疊環境範例 1
 
@@ -112,9 +112,9 @@ span.bold {字體重量：大膽的; }
 
 ### 另請參見
 
-- [無堆疊的 z-index](/en/CSS/Understanding_z-index/Stacking_without_z-index) ：默認規則疊加
-- [堆疊和浮動](/en/CSS/Understanding_z-index/Stacking_and_float) ：如何浮動元素的處理方式
-- [添加的 z-index](/en/CSS/Understanding_z-index/Adding_z-index) ：使用的 z-index 來改變默認的堆疊
-- [堆疊背景](/en/CSS/Understanding_z-index/The_stacking_context) ：在堆疊環境票據
-- [堆疊環境例子 2](/en/CSS/Understanding_z-index/Stacking_context_example_2) ：在所有層面上 2 級 HTML 層次，Z 指數
-- [堆疊上下文例 3](/en/CSS/Understanding_z-index/Stacking_context_example_3) ：3 級的 HTML 等級，在第二級上的 z 索引
+- [無堆疊的 z-index](/zh-TW/CSS/Understanding_z-index/Stacking_without_z-index) ：默認規則疊加
+- [堆疊和浮動](/zh-TW/CSS/Understanding_z-index/Stacking_and_float) ：如何浮動元素的處理方式
+- [添加的 z-index](/zh-TW/CSS/Understanding_z-index/Adding_z-index) ：使用的 z-index 來改變默認的堆疊
+- [堆疊背景](/zh-TW/CSS/Understanding_z-index/The_stacking_context) ：在堆疊環境票據
+- [堆疊環境例子 2](/zh-TW/CSS/Understanding_z-index/Stacking_context_example_2) ：在所有層面上 2 級 HTML 層次，Z 指數
+- [堆疊上下文例 3](/zh-TW/CSS/Understanding_z-index/Stacking_context_example_3) ：3 級的 HTML 等級，在第二級上的 z 索引

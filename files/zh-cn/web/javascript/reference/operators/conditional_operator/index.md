@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Operators/Conditional_Operator
 ---
 {{jsSidebar("Operators")}}
 
-**条件（三元）运算符**是 JavaScript 仅有的使用三个操作数的运算符。一个条件后面会跟一个问号（?），如果条件为 {{Glossary("truthy")}} ，则问号后面的表达式 A 将会执行；表达式 A 后面跟着一个冒号（:），如果条件为 {{Glossary("falsy")}} ，则冒号后面的表达式 B 将会执行。本运算符经常作为 [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) 语句的简捷形式来使用。
+**条件（三元）运算符**是 JavaScript 仅有的使用三个操作数的运算符。一个条件后面会跟一个问号（?），如果条件为 {{Glossary("truthy")}} ，则问号后面的表达式 A 将会执行；表达式 A 后面跟着一个冒号（:），如果条件为 {{Glossary("falsy")}} ，则冒号后面的表达式 B 将会执行。本运算符经常作为 [`if`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句的简捷形式来使用。
 
 {{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
 
@@ -48,7 +48,7 @@ console.log(greeting({name: 'Alice'}));  // "Howdy, Alice"
 console.log(greeting(null));             // "Howdy, stranger"
 ```
 
-> **备注：** [The optional chaining operator](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 设计用来处理这种使用场景。在本文档写成的时候 (2019.01)，这个运算符还处于实验阶段并且没有实现。
+> **备注：** [The optional chaining operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining) 设计用来处理这种使用场景。在本文档写成的时候 (2019.01)，这个运算符还处于实验阶段并且没有实现。
 
 ### 条件链
 
@@ -82,7 +82,7 @@ function example(…) {
 
 ## 参见
 
-- [if statement](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
-- [Making decisions in your code — conditionals](/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-- [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+- [if statement](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else)
+- [Optional chaining](/zh-CN/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+- [Making decisions in your code — conditionals](/zh-CN/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Expressions and operators](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_Operators)

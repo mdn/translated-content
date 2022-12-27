@@ -30,11 +30,11 @@ _Cette interface hérite également des propriétés fournies par l'objet parent
 ### Gestionnaires d'évènement
 
 - {{domxref("EventSource.onerror")}}
-  - : Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'une erreur se produit et que l'évènement {{event("error")}} est envoyé à l'objet `EventSource`.
+  - : Un gestionnaire d'évènement qui est appelé lorsqu'une erreur se produit et que l'évènement {{event("error")}} est envoyé à l'objet `EventSource`.
 - {{domxref("EventSource.onmessage")}}
-  - : Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un évènement {{event("message")}} est reçu (ce qui signifie qu'on a reçu un message de la source).
+  - : Un gestionnaire d'évènement qui est appelé lorsqu'un évènement {{event("message")}} est reçu (ce qui signifie qu'on a reçu un message de la source).
 - {{domxref("EventSource.onopen")}}
-  - : Un objet {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un évènement {{event("open")}} est reçu, ce qui indique que la connexion vient d'être ouverte.
+  - : Un gestionnaire d'évènement qui est appelé lorsqu'un évènement {{event("open")}} est reçu, ce qui indique que la connexion vient d'être ouverte.
 
 ## Méthodes
 

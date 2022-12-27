@@ -1,12 +1,6 @@
 ---
 title: background_color
 slug: Web/Manifest/background_color
-tags:
-  - Manifest
-  - Web
-  - background_color
-  - マニフェスト
-translation_of: Web/Manifest/background_color
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

@@ -14,18 +14,18 @@ XPath 使用路径标识符通过层级结构来导航 XML 文档。它使用非
 
 - [在 JavaScript 中使用 XPath 的介绍](/zh-CN/docs/Introduction_to_using_XPath_in_JavaScript)
   - : 描述了 XPath 的一个非 XSLT 使用。
-- [XPath:Axes](/en-US/docs/XPath/Axes)
+- [XPath:Axes](/zh-CN/docs/XPath/Axes)
   - : List and definition of the axes defined in the XPath specification. Axes are used to describe the relationships between nodes.
-- [XPath:Functions](/en-US/docs/XPath/Functions)
+- [XPath:Functions](/zh-CN/docs/XPath/Functions)
   - : List and description of the core XPath functions and XSLT-specific additions to XPath.
-- [Transforming XML with XSLT](/en-US/docs/Transforming_XML_with_XSLT)
+- [Transforming XML with XSLT](/zh-CN/docs/Transforming_XML_with_XSLT)
   - : XSLT uses XPath to address code segments in a XML document that it wishes to transform.
-- [XPath snippets](/en-US/docs/Web/XPath/Snippets)
+- [XPath snippets](/zh-CN/docs/Web/XPath/Snippets)
   - : JavaScript utility functions to use in your own code, based on [DOM Level 3 XPath](http://www.w3.org/TR/DOM-Level-3-XPath/) APIs.
 - [What is XSLT?](http://www.xml.com/pub/a/2000/08/holman/)
   - : This extensive introduction to XSLT and XPath assumes no prior knowledge of the technologies, and guides the reader through background, context, structure, concepts and introductory terminology.
-- [JXON](/en-US/docs/JXON)
-  - : **JXON** (lossless **J**avaScript **X**ML **O**bject **N**otation) is a generic name by which is defined the representation of JavaScript Objects using [XML](/en/XML). There are some cases in which the whole content of an XML document must be read from the JavaScript interpreter (like for web-apps languages or settings XML documents, for example). In these cases JXON could represent the most practical way and a valid alternative to XPath.
+- [JXON](/zh-CN/docs/JXON)
+  - : **JXON** (lossless **J**avaScript **X**ML **O**bject **N**otation) is a generic name by which is defined the representation of JavaScript Objects using [XML](/zh-CN/XML). There are some cases in which the whole content of an XML document must be read from the JavaScript interpreter (like for web-apps languages or settings XML documents, for example). In these cases JXON could represent the most practical way and a valid alternative to XPath.
 
 ## 工具
 

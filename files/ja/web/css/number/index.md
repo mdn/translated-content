@@ -1,15 +1,6 @@
 ---
 title: <number>
 slug: Web/CSS/number
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - レイアウト
-  - リファレンス
-  - ウェブ
-browser-compat: css.types.number
-translation_of: Web/CSS/number
 ---
 {{CSSRef}}
 

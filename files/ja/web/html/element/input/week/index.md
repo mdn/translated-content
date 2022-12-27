@@ -1,20 +1,6 @@
 ---
 title: <input type="week">
 slug: Web/HTML/Element/input/week
-tags:
-  - 要素
-  - フォーム
-  - HTML
-  - HTML 入力型
-  - HTML フォーム
-  - HTML input
-  - Input
-  - 入力要素
-  - 入力型
-  - リファレンス
-  - Week
-  - 週
-translation_of: Web/HTML/Element/input/week
 ---
 
 {{HTMLRef("Input_types")}}

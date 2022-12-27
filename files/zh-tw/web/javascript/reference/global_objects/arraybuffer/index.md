@@ -31,7 +31,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 
 ### 從既有的資料取得 ArrayBuffer
 
-- [From a Base64 string](/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
+- [From a Base64 string](/zh-TW/docs/Web/API/WindowBase64/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
 - [從本地端檔案](</zh-TW/docs/Web/API/FileReader#readAsArrayBuffer()>)
 
 ## 屬性
@@ -46,7 +46,7 @@ The `ArrayBuffer` constructor creates a new `ArrayBuffer` of the given length in
 ## 方法
 
 - {{jsxref("ArrayBuffer.isView", "ArrayBuffer.isView(arg)")}}
-  - : Returns `true` if `arg` is one of the ArrayBuffer views, such as [typed array objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}}. Returns `false` otherwise.
+  - : Returns `true` if `arg` is one of the ArrayBuffer views, such as [typed array objects](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a {{jsxref("DataView")}}. Returns `false` otherwise.
 - {{jsxref("ArrayBuffer.transfer", "ArrayBuffer.transfer(oldBuffer [, newByteLength])")}} {{experimental_inline}}
   - : Returns a new `ArrayBuffer` whose contents are taken from the `oldBuffer`'s data and then is either truncated or zero-extended by `newByteLength`.
 

@@ -1,7 +1,6 @@
 ---
 title: <mtd>
 slug: Web/MathML/Element/mtd
-translation_of: Web/MathML/Element/mtd
 ---
 {{MathMLRef()}}
 

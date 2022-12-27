@@ -292,7 +292,7 @@ The following table shows the different available predefined messages:
           {{WebExtAPIRef("runtime.id")}}, and that can be set using
           the
           <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications"
+            href="/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/applications"
             >applications</a
           >
           key in manifest.json. It's the generated UUID that appears in the

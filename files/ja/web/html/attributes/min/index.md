@@ -1,15 +1,6 @@
 ---
 title: 'HTML 属性: min'
 slug: Web/HTML/Attributes/min
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - HTML
-  - min
-  - Reference
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#the-min-and-max-attributes
-translation_of: Web/HTML/Attributes/min
 ---
 
 {{HTMLSidebar}}

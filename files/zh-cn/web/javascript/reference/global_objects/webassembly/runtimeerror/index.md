@@ -28,7 +28,7 @@ _`RuntimeError`构造函数不包含其自身特有的属性，但是，它确�
 - `WebAssembly.RuntimeError.prototype.constructor`
   - : 创建示例原型的特定函数。
 - {{jsxref("Error.prototype.message", "WebAssembly.RuntimeError.prototype.message")}}
-  - : 错误信息。 尽管 ECMA-262 指定{{jsxref("URIError")}}应提供自己的`message`属性，但在[SpiderMonkey](https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey)中，它继承了{{jsxref("Error.prototype.message")}}。
+  - : 错误信息。 尽管 ECMA-262 指定{{jsxref("URIError")}}应提供自己的`message`属性，但在[SpiderMonkey](/zh-CN/docs/Mozilla/Projects/SpiderMonkey)中，它继承了{{jsxref("Error.prototype.message")}}。
 - {{jsxref("Error.prototype.name", "WebAssembly.RuntimeError.prototype.name")}}
   - : 错误名称。继承自 {{jsxref("Error")}}.
 - {{jsxref("Error.prototype.fileName", "WebAssembly.RuntimeError.prototype.fileName")}}
@@ -77,6 +77,6 @@ try {
 
 ## 参见
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
+- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)

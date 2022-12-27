@@ -1,15 +1,6 @@
 ---
 title: メディアクエリーの使用
 slug: Web/CSS/Media_Queries/Using_media_queries
-tags:
-  - 上級者
-  - CSS
-  - ガイド
-  - ウェブ
-  - メディア
-  - メディアクエリー
-  - レスポンシブデザイン
-translation_of: Web/CSS/Media_Queries/Using_media_queries
 ---
 {{CSSRef}}
 

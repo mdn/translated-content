@@ -1,18 +1,6 @@
 ---
 title: revert
 slug: Web/CSS/revert
-tags:
-  - CSS
-  - CSS カスケード
-  - CSS 値
-  - カスケード
-  - キーワード
-  - レイアウト
-  - リファレンス
-  - スタイル
-  - revert
-browser-compat: css.types.global_keywords.revert
-translation_of: Web/CSS/revert
 ---
 {{CSSRef}}
 

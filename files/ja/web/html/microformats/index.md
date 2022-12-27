@@ -1,13 +1,6 @@
 ---
 title: マイクロフォーマット
 slug: Web/HTML/microformats
-tags:
-  - HTML
-  - Microformat
-  - NeedsContent
-  - NeedsMarkupWork
-  - Reference
-translation_of: Web/HTML/microformats
 ---
 ## 概要
 

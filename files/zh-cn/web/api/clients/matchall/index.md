@@ -4,7 +4,7 @@ slug: Web/API/Clients/matchAll
 ---
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
-{{domxref("Clients")}} 接口的 **`matchAll()`** 方法返回 service worker {{domxref("Client")}} 对象列表的 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) . 包含 `options` 参数以返回域与关联的 service worker 的域相同所有 service worker 的 clients. 如果未包含 options，该方法仅返回由 service worker 控制的 service worker clients.
+{{domxref("Clients")}} 接口的 **`matchAll()`** 方法返回 service worker {{domxref("Client")}} 对象列表的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) . 包含 `options` 参数以返回域与关联的 service worker 的域相同所有 service worker 的 clients. 如果未包含 options，该方法仅返回由 service worker 控制的 service worker clients.
 
 ## 语法
 
@@ -25,7 +25,7 @@ ServiceWorkerClients.matchAll(options).then(function(clients) {
 
 ### 返回值
 
-resolve 为一个 {{domxref("Client")}} 对象数组的 [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) . 在 Chrome 46/Firefox 54 以及更高版本中，该方法以最近关注的顺序返回 clients , 根据规范更正。
+resolve 为一个 {{domxref("Client")}} 对象数组的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) . 在 Chrome 46/Firefox 54 以及更高版本中，该方法以最近关注的顺序返回 clients , 根据规范更正。
 
 ## 示例
 

@@ -4,7 +4,7 @@ slug: Web/API/Web_Workers_API/Using_web_workers
 ---
 {{DefaultAPISidebar("Web Workers API")}}
 
-Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用[`XMLHttpRequest`](https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)执行 I/O (尽管`responseXML`和`channel`属性总是为空)。一旦创建， 一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用 Web Worker 的详细介绍。
+Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用[`XMLHttpRequest`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)执行 I/O (尽管`responseXML`和`channel`属性总是为空)。一旦创建， 一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用 Web Worker 的详细介绍。
 
 ## Web Workers API
 
@@ -234,7 +234,7 @@ Content-Security-Policy: script-src 'self'
 
 ## worker 中数据的接收与发送：详细介绍
 
-在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用[结构化拷贝](/en/DOM/The_structured_clone_algorithm)来实现该特性。
+在主页面与 worker 之间传递的数据是通过**拷贝**，而不是共享来完成的。传递给 `worker` 的对象需要经过序列化，接下来在另一端还需要反序列化。页面与 `worker` **不会共享同一个实例**，最终的结果就是在每次通信结束时生成了数据的**一个副本**。大部分浏览器使用[结构化拷贝](/zh-CN/DOM/The_structured_clone_algorithm)来实现该特性。
 
 在往下进行之前，出于教学的目的，让我们创建一个名为 `emulateMessage()` 的函数，它将模拟在从 `worker` 到主页面 (反之亦然) 的通信过程中，变量的「_拷贝而非共享_」行为：
 
@@ -610,7 +610,7 @@ onmessage = function (oEvent) {
 
 ### 通过转让所有权 (可转让对象) 来传递数据
 
-Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象 ([可转让对象](http://w3c.github.io/html/infrastructure.html#transferable-objects)) 传递给一个 worker/从 worker 传回 。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 [ArrayBuffer](/en/JavaScript_typed_arrays/ArrayBuffer) 对象从主应用转让到 Worker 中，原始的 `ArrayBuffer` 被清除并且无法使用。它包含的内容会 (完整无差的) 传递给 Worker 上下文。
+Google Chrome 17 与 Firefox 18 包含另一种性能更高的方法来将特定类型的对象 ([可转让对象](http://w3c.github.io/html/infrastructure.html#transferable-objects)) 传递给一个 worker/从 worker 传回 。可转让对象从一个上下文转移到另一个上下文而不会经过任何拷贝操作。这意味着当传递大数据时会获得极大的性能提升。如果你从 C/C++ 世界来，那么把它想象成按照引用传递。然而与按照引用传递不同的是，一旦对象转让，那么它在原来上下文的那个版本将不复存在。该对象的所有权被转让到新的上下文内。例如，当你将一个 [ArrayBuffer](/zh-CN/JavaScript_typed_arrays/ArrayBuffer) 对象从主应用转让到 Worker 中，原始的 `ArrayBuffer` 被清除并且无法使用。它包含的内容会 (完整无差的) 传递给 Worker 上下文。
 
 ```js
 // Create a 32MB "file" and fill it.
@@ -788,7 +788,7 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 除了专用和共享的 web worker，还有一些其它类型的 worker：
 
 - [ServiceWorkers](/zh-CN/docs/Web/API/ServiceWorker_API) （服务 worker）一般作为 web 应用程序、浏览器和网络（如果可用）之前的代理服务器。它们旨在（除开其他方面）创建有效的离线体验，拦截网络请求，以及根据网络是否可用采取合适的行动并更新驻留在服务器上的资源。他们还将允许访问推送通知和后台同步 API。
-- Chrome Workers 是一种仅适用于 firefox 的 worker。如果您正在开发附加组件，希望在扩展程序中使用 worker 且有在你的 worker 中访问 [js-ctypes](https://developer.mozilla.org/en/js-ctypes) 的权限，你可以使用 Chrome Workers。详情请参阅{{domxref("ChromeWorker")}}。
+- Chrome Workers 是一种仅适用于 firefox 的 worker。如果您正在开发附加组件，希望在扩展程序中使用 worker 且有在你的 worker 中访问 [js-ctypes](/zh-CN/js-ctypes) 的权限，你可以使用 Chrome Workers。详情请参阅{{domxref("ChromeWorker")}}。
 - [Audio Workers](/zh-CN/docs/Web/API/Web_Audio_API#Audio_Workers) （音频 worker）使得在 web worker 上下文中直接完成脚本化音频处理成为可能。
 
 ## worker 中可用的函数和接口
@@ -810,6 +810,6 @@ worker 将属性 `onmessage` 设置为一个函数，当 worker 对象调用 `po
 
 ## 相关链接
 
-- [`Worker`](https://developer.mozilla.org/en-US/docs/Web/API/Worker) 接口
-- [`SharedWorker`](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker) 接口
+- [`Worker`](/zh-CN/docs/Web/API/Worker) 接口
+- [`SharedWorker`](/zh-CN/docs/Web/API/SharedWorker) 接口
 - [worker 提供的方法](/zh-CN/docs/Web/API/Worker/Functions_and_classes_available_to_workers)

@@ -28,7 +28,7 @@ slug: Web/HTTP/CORS
 - Web 字体 (CSS 中通过 `@font-face` 使用跨源字体资源)，[因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用](https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements)。
 - [WebGL 贴图](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)
 - 使用 [`drawImage`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/drawImage) 将 Images/video 画面绘制到 canvas。
-- [来自图像的 CSS 图形](/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- [来自图像的 CSS 图形](/zh-CN/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
 
 本文概述了跨源资源共享机制及其所涉及的 HTTP 头。
 

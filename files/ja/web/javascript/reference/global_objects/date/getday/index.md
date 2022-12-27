@@ -1,15 +1,6 @@
 ---
 title: Date.prototype.getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
-tags:
-  - Date
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - getDay
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 ---
 {{JSRef}}
 

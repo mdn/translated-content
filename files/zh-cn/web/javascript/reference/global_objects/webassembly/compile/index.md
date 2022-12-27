@@ -15,7 +15,7 @@ Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 ### 参数
 
 - _bufferSource_
-  - : 一个包含你想编译的 wasm 模块二进制代码的 [typed array](/en-US/docs/Web/JavaScript/Typed_arrays)(类型数组) or [ArrayBuffer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(数组缓冲区)
+  - : 一个包含你想编译的 wasm 模块二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays)(类型数组) or [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(数组缓冲区)
 
 ### 返回值
 
@@ -23,12 +23,12 @@ Promise<WebAssembly.Module> WebAssembly.compile(bufferSource);
 
 ### 异常
 
-- 如果 `bufferSource` 不是一个 [typed array](/en-US/docs/Web/JavaScript/Typed_arrays), 将抛出一个 {{jsxref("TypeError")}} 。
+- 如果 `bufferSource` 不是一个 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays), 将抛出一个 {{jsxref("TypeError")}} 。
 - 如果编译失败 promise 将会 reject 一个 {{jsxref("WebAssembly.CompileError")}}。
 
 ## 例子
 
-下面的例子 (查看 GitHub 上的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) 例子，并且也能 [查看运行效果](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)) 使用 `compile()` 方法编译加载进来的 simple.wasm 二进制代码并且使用 [postMessage()](/en-US/docs/Web/API/Worker/postMessage) 发送给一个 [worker](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API)。
+下面的例子 (查看 GitHub 上的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) 例子，并且也能 [查看运行效果](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)) 使用 `compile()` 方法编译加载进来的 simple.wasm 二进制代码并且使用 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 发送给一个 [worker](/zh-CN/docs/Web/API/Web_Workers_API)。
 
 ```js
 var worker = new Worker("wasm_worker.js");
@@ -76,6 +76,6 @@ onmessage = function(e) {
 
 ## See also
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
+- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)

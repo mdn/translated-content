@@ -8,7 +8,7 @@ Worker 接口是 [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API) 的一�
 
 Worker 也可以创建新的 Worker，当然，所有 Worker 必须与其创建者[同源](/zh-CN/docs/Web/Security/Same-origin_policy)（注意：[Blink](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/5R3B4RN4GHU)暂时不支持嵌套 Worker）。
 
-需要注意的是，不是所有函数和构造函数 (或者说…类) 都可以在 Worker 中使用。具体参考页面 [Worker 所支持的函数和类](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)。Worker 可以使用 [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) 发送请求，但是请求的 `responseXML` 与 `channel` 两个属性值始终返回 `null` （`fetch` 仍可正常使用，没有类似的限制）。
+需要注意的是，不是所有函数和构造函数 (或者说…类) 都可以在 Worker 中使用。具体参考页面 [Worker 所支持的函数和类](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)。Worker 可以使用 [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest) 发送请求，但是请求的 `responseXML` 与 `channel` 两个属性值始终返回 `null` （`fetch` 仍可正常使用，没有类似的限制）。
 
 > **备注：** 如果你要在火狐浏览器的扩展使用 Worker 访问 [js-ctypes](/zh-CN/docs/Mozilla/js-ctypes)，应使用 {{ domxref("ChromeWorker") }} 对象来替代。(译者注：这里没有看懂，希望有人能驳正，或添加说明)
 

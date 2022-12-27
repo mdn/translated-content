@@ -26,5 +26,5 @@ let workerContainerInstance = navigator.serviceWorker;
 
 ## 也可以看看
 
-- [ServiceWorker API](/en-US/docs/Web/API/ServiceWorker_API)
-- [Using Service Workers](/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
+- [Using Service Workers](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)

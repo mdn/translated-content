@@ -1,15 +1,6 @@
 ---
 title: 画像とキャンバスをオリジン間で利用できるようにする
 slug: Web/HTML/CORS_enabled_image
-tags:
-  - Advanced
-  - CORS
-  - Canvas
-  - HTML
-  - セキュリティ
-  - リファレンス
-  - 上級者
-translation_of: Web/HTML/CORS_enabled_image
 ---
 HTML では画像に {{ htmlattrxref("crossorigin", "img") }} 属性を提供し、適切な {{Glossary("CORS")}} ヘッダーと組み合わせることで、 {{ HTMLElement("img") }} 要素で定義されている他のオリジンから読み込まれた画像を、 {{HTMLElement("canvas")}} の中で現在のオリジンから読み込まれた画像であるかのように扱うことができます。
 

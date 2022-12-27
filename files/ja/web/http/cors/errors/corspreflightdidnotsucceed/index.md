@@ -1,19 +1,6 @@
 ---
 title: 'Reason: CORS preflight channel did not succeed'
 slug: Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
-tags:
-  - CORS
-  - CORSPreflightDidNotSucceed
-  - HTTP
-  - HTTPS
-  - エラー
-  - オリジン間
-  - コンソール
-  - セキュリティ
-  - トラブルシューティング
-  - メッセージ
-  - 理由
-translation_of: Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 ---
 {{HTTPSidebar}}
 

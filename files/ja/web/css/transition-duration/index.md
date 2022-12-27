@@ -1,14 +1,6 @@
 ---
 title: transition-duration
 slug: Web/CSS/transition-duration
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS トランジション
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.transition-duration
-translation_of: Web/CSS/transition-duration
 ---
 {{CSSRef}}
 

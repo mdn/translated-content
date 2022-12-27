@@ -1,17 +1,6 @@
 ---
 title: padding-block-start
 slug: Web/CSS/padding-block-start
-tags:
-  - CSS
-  - CSS 論理的プロパティ
-  - CSS プロパティ
-  - 実験的
-  - リファレンス
-  - padding-block
-  - padding-block-start
-  - recipe:css-property
-browser-compat: css.properties.padding-block-start
-translation_of: Web/CSS/padding-block-start
 ---
 {{CSSRef}}
 

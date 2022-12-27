@@ -1,19 +1,6 @@
 ---
 title: Intl.Locale.prototype.timeZones
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/timeZones
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-  - timeZones
-  - タイムゾーン
-browser-compat: javascript.builtins.Intl.Locale.timeZones
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/timeZones
 ---
 {{JSRef}}
 

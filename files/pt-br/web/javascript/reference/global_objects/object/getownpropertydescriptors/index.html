@@ -13,11 +13,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 
 <pre class="syntaxbox notranslate">Object.getOwnPropertyDescriptors(<var>obj</var>)</pre>
 
-<h3 id="Parâmetro">P<span><span>arâmetro</span></span></h3>
+<h3 id="Parâmetro">Parâmetro</h3>
 
 <dl>
  <dt><code>obj</code></dt>
- <dd><span class="tlid-translation translation" lang="pt"><span title="">O objeto pelo o qual deseja obter todos os descritores de propriedade próprios.</span></span></dd>
+ <dd>O objeto pelo o qual deseja obter todos os descritores de propriedade próprios.</dd>
 </dl>
 
 <h3 id="Valor_retornado">Valor retornado</h3>
@@ -40,9 +40,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
  <dt><code>set</code></dt>
  <dd>Uma função que serve como um configurador para a propriedade, ou {{jsxref("undefined")}} se não existir um configurador (somente descritores de acesso).</dd>
  <dt><code>configurable</code></dt>
- <dd><code>true</code> se e somente se o tipo da propriedade descritora pode ser alterada e se a propriedade pode ser deletada do objeto <span><span>correspondente</span></span>.</dd>
+ <dd><code>true</code> se e somente se o tipo da propriedade descritora pode ser alterada e se a propriedade pode ser deletada do objeto correspondente.</dd>
  <dt><code>enumerable</code></dt>
- <dd><code>true</code> se e somente se essa propriedade se mostrar durante a enumeração da propriedade no objeto <span><span>correspondente</span></span>.</dd>
+ <dd><code>true</code> se e somente se essa propriedade se mostrar durante a enumeração da propriedade no objeto correspondente.</dd>
 </dl>
 
 <h2 id="Exemplos">Exemplos</h2>
@@ -59,7 +59,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDes
 
 <h3 id="Criando_uma_subclasse">Criando uma subclasse</h3>
 
-<p>Um modo típico de criar uma subclasse é definir a subclasse, configurar um <span><span>protótipo para uma instância da superclasse e depois difinir as propriedades daquela instância. Isso pode ficar estranho especialmente para os capturadores e configuradores. Ao invés disso, você pode usar esse código para configurar o protótipo </span></span>:</p>
+<p>Um modo típico de criar uma subclasse é definir a subclasse, configurar um protótipo para uma instância da superclasse e depois difinir as propriedades daquela instância. Isso pode ficar estranho especialmente para os capturadores e configuradores. Ao invés disso, você pode usar esse código para configurar o protótipo :</p>
 
 <pre class="brush: js notranslate">function superclass() {}
 superclass.prototype = {

@@ -1,15 +1,7 @@
 ---
 title: rotate3d()
 slug: Web/CSS/transform-function/rotate3d
-tags:
-  - CSS
-  - CSS 関数
-  - CSS 座標変換
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/transform-function/rotate3d()
 original_slug: Web/CSS/transform-function/rotate3d()
-browser-compat: css.types.transform-function.rotate3d
 ---
 {{CSSRef}}
 

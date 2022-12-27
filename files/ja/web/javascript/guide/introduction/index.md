@@ -1,13 +1,6 @@
 ---
 title: 入門編
 slug: Web/JavaScript/Guide/Introduction
-tags:
-  - Beginner
-  - Guide
-  - Introduction
-  - JavaScript
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Introduction
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 

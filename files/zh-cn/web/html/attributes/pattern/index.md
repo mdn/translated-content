@@ -2,7 +2,6 @@
 title: 'HTML attribute: pattern'
 slug: Web/HTML/Attributes/pattern
 ---
-
 {{HTMLSidebar}}
 
 **`pattern`** 属性规定了一个表单控件的值应该匹配的 [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。 如果一个非 `null` 值不满足 `pattern` 值设置的约束，{{domxref('ValidityState')}} 对象的只读 {{domxref('ValidityState.patternMismatch','patternMismatch')}} 属性将为真。
@@ -19,7 +18,7 @@ slug: Web/HTML/Attributes/pattern
 
 ### 可用性
 
-当包括一个 `pattern` 时，在控件附近的可见文本中提供对模式的描述。此外，包括一个 [`title`](/en-US/docs/Web/HTML/Global_attributes/title) 属性，对该模式进行描述。用户代理可以在约束验证期间使用标题内容来告诉用户该模式不匹配。一些浏览器会显示标题内容的工具提示，以提高视力障碍者的可用性。此外，当控件获得焦点时，辅助技术可能会大声朗读标题，但这不应该是无障碍的依据。
+当包括一个 `pattern` 时，在控件附近的可见文本中提供对模式的描述。此外，包括一个 [`title`](/zh-CN/docs/Web/HTML/Global_attributes/title) 属性，对该模式进行描述。用户代理可以在约束验证期间使用标题内容来告诉用户该模式不匹配。一些浏览器会显示标题内容的工具提示，以提高视力障碍者的可用性。此外，当控件获得焦点时，辅助技术可能会大声朗读标题，但这不应该是无障碍的依据。
 
 ### 约束验证
 

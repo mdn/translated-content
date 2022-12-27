@@ -1,14 +1,6 @@
 ---
 title: position
 slug: Web/CSS/position
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.position
-translation_of: Web/CSS/position
 ---
 {{CSSRef}}
 

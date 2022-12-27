@@ -1,15 +1,8 @@
 ---
 title: Array
 slug: Web/JavaScript/Reference/Global_Objects/Array
-tags:
-  - Array
-  - クラス
-  - 例
-  - グローバルオブジェクト
-  - JavaScript
-  - リファレンス
-browser-compat: javascript.builtins.Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Array
+l10n:
+  sourceCommit: 8eef3c0803bdbd1e911761742c0e05fa42b5395b
 ---
 {{JSRef}}
 
@@ -21,7 +14,7 @@ JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)�
 
 - **JavaScript の配列はリサイズ可能**であり、**異なる[データ型](/ja/docs/Web/JavaScript/Data_structures)を交ぜて格納することができます**。（これらの性質が望ましくない場合は、代わりに[型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)を使用してください）。
 
-- **JavaScript の配列は連想配列ではなく**、[配列の要素は添字として文字列を使用してアクセスすることができません](#メモ)。整数を添字として使用してアクセスする必要があります。
+- **JavaScript の配列は連想配列ではありません**。[配列の要素は添字として文字列を使用してアクセスすることができません](#メモ)。非負の整数（またはそれぞれの文字列表現）を添字として使用してアクセスする必要があります。
 
 - **JavaScript の配列は[ゼロオリジン](https://ja.wikipedia.org/wiki/オリジン)です**。配列の最初の要素は `0` の位置にあり、 2 番目の要素は `1` の位置にあるといった具合です。そして、最後の要素は配列の {{jsxref("Array.length", "length")}} プロパティの値から `1` を引いた位置になります。
 
@@ -70,18 +63,22 @@ JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)�
 - {{jsxref("Array.prototype.filter()")}}
   - : 指定したフィルタリング関数が `true` を返す、配列中の要素を格納した新しい配列を生成します。
 - {{jsxref("Array.prototype.find()")}}
-  - : 指定したテスト関数を満たす、配列中の要素の値を返します。1 個も見つからない場合は `undefined` を返します。
+  - : 指定されたたテスト関数を満たす、配列の最初の要素の値を返します。適切な要素が見つからない場合は `undefined` を返します。
 - {{jsxref("Array.prototype.findIndex()")}}
-  - : 指定したテスト関数を満たす、配列中の要素のインデックスを返します。1 個も見つからない場合は `-1` を返します。
+  - : 指定されたテスト関数を満たす、配列の最初の要素の添字を返します。適切な要素が見つからなかった場合は `-1` を返します。
+- {{jsxref("Array.prototype.findLast()")}}
+  - : 指定されたたテスト関数を満たす、配列の最後の要素の値を返します。適切な要素が見つからない場合は `undefined` を返します。
+- {{jsxref("Array.prototype.findLastIndex()")}}
+  - : 指定されたテスト関数を満たす、配列の最後の要素の添字を返します。適切な要素が見つからなかった場合は `-1` を返します。
 - {{jsxref("Array.prototype.flat()")}}
   - : すべての部分配列の要素を指定された深さまで再帰的に連結した新しい配列を返します。
 - {{jsxref("Array.prototype.flatMap()")}}
   - : コールバック関数を呼び出し元の配列の各要素に適用し、その結果を一段階平坦化した新しい配列を返します。
 - {{jsxref("Array.prototype.forEach()")}}
   - : 配列中のそれぞれの要素について関数を呼び出します。
-- {{jsxref("Array.prototype.groupBy()")}} {{Experimental_Inline}}
+- {{jsxref("Array.prototype.group()")}} {{Experimental_Inline}}
   - : テスト関数が返す文字列に従って、配列の要素をオブジェクトにグループ化します。
-- {{jsxref("Array.prototype.groupByToMap()")}} {{Experimental_Inline}}
+- {{jsxref("Array.prototype.groupToMap()")}} {{Experimental_Inline}}
   - : テスト関数が返す値に従って、配列の要素を {{jsxref("Map")}} にグループ化します。
 - {{jsxref("Array.prototype.includes()")}}
   - : この配列が特定の要素を含むかどうか判定し、その結果を `true` または `false` で返します。
@@ -122,7 +119,7 @@ JavaScript では、配列は[プリミティブ](/ja/docs/Glossary/Primitive)�
 - {{jsxref("Array.prototype.unshift()")}}
   - : 配列の最初に 1 個以上の要素を追加し、配列の変更後の `length` を返します。
 - {{jsxref("Array.prototype.values()")}}
-  - : 新しい[_配列イテレーター_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中の各添字の値を保持します。
+  - : 新しい[_配列反復子_](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)オブジェクトを返します。このオブジェクトは、配列中の各添字の値を保持します。
 - [`Array.prototype[@@iterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
   - : 既定では [`values()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 関数を返します。
 
@@ -142,14 +139,14 @@ const fruits = ['りんご', 'バナナ'];
 console.log(fruits.length);
 // 2
 
-// 'fruits' 配列が Array() コンストラクターで作成されています。
-const fruits = new Array('りんご', 'バナナ');
-console.log(fruits.length);
+// 'fruits2' 配列が Array() コンストラクターで作成されています。
+const fruits2 = new Array('りんご', 'バナナ');
+console.log(fruits2.length);
 // 2
 
-// 'fruits' 配列が String.prototype.split() を使用して作成されています。
-const fruits = 'りんご, バナナ'.split(', ');
-console.log(fruits.length);
+// 'fruits3' 配列が String.prototype.split() を使用して作成されています。
+const fruits3 = 'りんご, バナナ'.split(', ');
+console.log(fruits3.length);
 // 2
 ```
 
@@ -188,7 +185,7 @@ fruits[99]; // undefined
 
 ### 配列内の項目の添字を検索
 
-この例では [`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) メソッドを使用して、文字列 "`バナナ`" の位置（添字）を配列 `fruits` の中から探します。
+この例では [`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) メソッドを使用して、文字列 `"バナナ"` の位置（添字）を配列 `fruits` の中から探します。
 
 ```js
 const fruits = ['りんご', 'バナナ'];
@@ -198,7 +195,7 @@ console.log(fruits.indexOf('バナナ'));
 
 ### 配列内に特定の項目があるかどうかを検査
 
-この例では、配列 `fruits` が "`バナナ`" と "`さくらんぼ`" を含んでいるかどうかを確認する 2 つの方法を示しています。最初は [`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) メソッドで、次に [`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) メソッドで、添字の値が `-1` でないことを確認します。
+この例では、配列 `fruits` が `"バナナ"` と `"さくらんぼ"` を含んでいるかどうかを確認する 2 つの方法を示しています。最初は [`includes()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) メソッドで、次に [`indexOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) メソッドで、添字の値が `-1` でないことを確認します。
 
 ```js
 const fruits = ['りんご', 'バナナ'];
@@ -307,12 +304,12 @@ const newLength = fruits.unshift('いちご');
 console.log(fruits);
 // ["いちご", "バナナ", "マンゴー"]
 console.log(newLength);
-// 2
+// 3
 ```
 
 ### 添字を指定して単一の項目を取り除く
 
-この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、文字列 "`バナナ`" を配列 `fruits` から取り除きます。 "`バナナ`" の位置の添字を指定します。
+この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、文字列 `"バナナ"` を配列 `fruits` から取り除きます。 `"バナナ"` の位置の添字を指定します。
 
 ```js
 const fruits = ['いちご', 'バナナ', 'マンゴー'];
@@ -327,7 +324,7 @@ console.log(removedItems);
 
 ### 添字を指定して複数の項目を取り除く
 
-この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、文字列 "`バナナ`" および "`いちご`" を配列 `fruits` から取り除きます。 "`バナナ`" の位置の添字と共に、取り除く項目の総数を指定します。
+この例では [`splice()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) メソッドを使用して、文字列 `"バナナ"` および `"いちご"` を配列 `fruits` から取り除きます。 `"バナナ"` の位置の添字と共に、取り除く項目の総数を指定します。
 
 ```js
 const fruits = ['りんご', 'バナナ', 'いちご', 'マンゴー'];
@@ -377,7 +374,7 @@ for (const fruit of fruits) {
 
 ```js
 const fruits = ['りんご', 'マンゴー', 'さくらんぼ'];
-fruits.forEach(function(item, index, array) {
+fruits.forEach((item, index, array) => {
   console.log(item, index);
 });
 // りんご 0
@@ -417,11 +414,11 @@ const fruitsCopy = [...fruits];
 // ["いちご", "マンゴー"]
 
 // from() メソッドで複製を作成します。
-const fruitsCopy = Array.from(fruits);
+const fruitsCopy2 = Array.from(fruits);
 // ["いちご", "マンゴー"]
 
 // slice() メソッドで複製を作成します。
-const fruitsCopy = fruits.slice();
+const fruitsCopy3 = fruits.slice();
 // ["いちご", "マンゴー"]
 ```
 
@@ -450,7 +447,7 @@ console.log(fruitsAlias);
 
 ### 配列の要素をグループ化
 
-{{jsxref("Array.prototype.groupBy()")}} メソッドを使用して、配列の要素をグループ化することができます。現在の要素のグループを示す文字列を返すテスト関数を使用します。
+{{jsxref("Array.prototype.group()")}} メソッドを使用して、配列の要素をグループ化することができます。現在の要素のグループを示す文字列を返すテスト関数を使用します。
 
 ここでは、`name` と `type` を持つ "food" オブジェクトを含む、単純な配列 inventory を用意しています。
 
@@ -460,27 +457,27 @@ const inventory = [
   { name: 'バナナ',  type: 'fruit' },
   { name: '羊', type: 'meat' },
   { name: 'さくらんぼ', type: 'fruit' },
-  { name: '魚', type: 'meat' }
+  { name: '魚', type: 'meat' },
 ];
 ```
 
-`groupBy()` を使用するには、現在の要素、およびオプションで現在の添字と配列を指定して呼び出され、要素のグループを示す文字列を返すコールバック関数を指定します。
+`group()` を使用するには、現在の要素、およびオプションで現在の添字と配列を指定して呼び出され、要素のグループを示す文字列を返すコールバック関数を指定します。
 
 以下のコードでは、アロー関数を使用してそれぞれの配列要素の `type` を返しています（これは、[関数引数のオブジェクト構造化構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_fields_from_objects_passed_as_a_function_parameter)を使用して、渡されたオブジェクトから型要素を展開するものです）。
 結果は、コールバックから返された一意の文字列を名前とするプロパティを持つオブジェクトになります。
 各プロパティには、グループ内の要素を含む配列が割り当てられます。
 
 ```js
-let result = inventory.groupBy( ({ type }) => type );
-console.log(result.vegetables)
-// expected output: Array [Object { name: "アスパラガス", type: "vegetables" }]
+const result = inventory.group(({ type }) => type);
+console.log(result.vegetables);
+// 期待される出力: Array [Object { name: "アスパラガス", type: "vegetables" }]
 ```
 
 返されたオブジェクトは、元の配列と*同じ*要素を参照していることに注意してください（深い複製ではありません）。
 これらの要素の内部構造を変更すると、元の配列と返されたオブジェクトの両方に反映されます。
 
-例えば、グループ化する情報が変更される可能性のあるオブジェクトに関連する場合など、キーとして文字列を使用できない場合は、代わりに {{jsxref("Array.prototype.groupByToMap()")}} を使用することができます。
-これは `groupBy` と非常に似ていますが、配列の要素を、任意の値（{{Glossary("object", "オブジェクト")}}または{{Glossary("primitive", "プリミティブ")}}）をキーとして使用できる {{jsxref("Map")}} にグループ化する点が異なります。
+例えば、グループ化する情報が変更される可能性のあるオブジェクトに関連する場合など、キーとして文字列を使用できない場合は、代わりに {{jsxref("Array.prototype.groupToMap()")}} を使用することができます。
+これは `group` と非常に似ていますが、配列の要素を、任意の値（{{Glossary("object", "オブジェクト")}}または{{Glossary("primitive", "プリミティブ")}}）をキーとして使用できる {{jsxref("Map")}} にグループ化する点が異なります。
 
 ## その他の例
 
@@ -499,7 +496,7 @@ const board = [
   ['p','p','p','p','p','p','p','p'],
   ['r','n','b','q','k','b','n','r'] ];
 
-console.log(board.join('\n') + '\n\n');
+console.log(`${board.join('\n')}\n\n`);
 
 // キングの前のポーンを 2 つ前へ移動
 board[4][4] = board[6][4];
@@ -560,52 +557,39 @@ console.table(values);
 
 ## メモ
 
-`Array` オブジェクトは要素の添字として（[連想配列](https://ja.wikipedia.org/wiki/連想配列)のように）文字列を使用することはできず、整数を使用する必要があります。[ブラケット記法](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)（または [ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)）を使用して設定またはアクセスすると、配列のリスト自身からは要素が設定または取得されませんが、その配列に結びつけられた[オブジェクトのプロパティ集合](/ja/docs/Web/JavaScript/Data_structures#properties)に関連付けられた変数に設定またはアクセスされます。配列のオブジェクトプロパティと配列のリストの要素は別なものであり、配列の[走査や変更操作](/ja/docs/Web/JavaScript/Guide/Indexed_collections#array_methods)をこれらの名前付きプロパティに適用することはできません。
+`Array` オブジェクトは要素の添字として任意の文字列を（[連想配列](https://en.wikipedia.org/wiki/Associative_array)のように）使用することはできません。非負の整数（またはその文字列形式）を使用しなければなりません。整数以外の値で設定したりアクセスしたりすると、配列のリスト自体の要素を設定したり取り出したりすることはできませんが、その配列の [オブジェクトプロパティの集合](/ja/docs/Web/JavaScript/Data_structures#プロパティ)に関連する変数を設定したりアクセスしたりすることができます。配列のオブジェクトプロパティと配列要素のリストは別個のものであり、配列の[探索や変更操作](/ja/docs/Web/JavaScript/Guide/Indexed_collections#array_methods)はこれらの名前付きプロパティに適用することができません。
 
 `toString` が一つのプロパティであるのと同様に（ただし厳密には `toString()` はメソッドですが）、配列における配列要素はオブジェクトのプロパティです。しかし、次のように配列にアクセスしようとすると、プロパティ名が妥当でないため、構文エラーが発生します。
 
-```js
+```js example-bad
 console.log(arr.0); // 構文エラー
 ```
 
-これは、JavaScript の配列とそのプロパティに限った話ではありません。数字から始まるプロパティは、ドット演算子を用いて参照できないため、ブラケット記法を用いる必要があります。
-
-例えば `3d` というプロパティを持つオブジェクトがあった場合は、ドット記法ではなくブラケット記法を用いて参照しなければなりません。
-
-```js
-const years = [1950, 1960, 1970, 1980, 1990, 2000, 2010];
-console.log(years.0);   // 構文エラー
-console.log(years[0]);  // 正しく動作
-```
-
-```js
-renderer.3d.setTexture(model, 'character.png');     // 構文エラー
-renderer['3d'].setTexture(model, 'character.png');  // 正しく動作
-```
-
-`3d` の例では、`'3d'` は（数字で始まるため）引用符で括らなければならないことに注意してください。 JavaScript 配列の添字も同様に引用符でくくることができますが (例えば `years[2]` でなく `years['2']`)、そうする必要はないでしょう。
+JavaScript の構文では、数字で始まるプロパティには[ブラケット記法](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#objects_and_properties)を使う必要があり、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors)を使うことはできません。また、配列の添字を引用符で囲むことができますが（`years[2]` の代わりに `years['2']` のように）、ふつうはそうする必要はありません。
 
 `years[2]` の `2` は最終的に、JavaScript エンジンが内部的に `toString` メソッドで型変換することで文字列にされます。これは '2' と '02' が `years` オブジェクトの異なる場所を指すようにするためでです。このため、以下の例は `true` がログ出力されます。
 
 ```js
-console.log(years['2'] != years['02']);
+console.log(years['2'] !== years['02']);
 ```
+
+`years['2']` だけが実際の配列の添字です。 `years['02']` は自由な文字列のプロパティであり、配列の反復処理では処理されません。
 
 ### length と数値プロパティとの関係
 
 JavaScript の配列の {{jsxref("Array.length", "length")}} プロパティと数値プロパティは関連しています。
 
-配列の一部の組込みメソッド (例えば {{jsxref("Array.join", "join()")}}, {{jsxref("Array.slice", "slice()")}}, {{jsxref("Array.indexOf", "indexOf()")}}, など) は、配列の {{jsxref("Array.length", "length")}} プロパティの値はメソッドの呼び出し時の値を考慮します。
+配列の一部の組込みメソッド（例えば {{jsxref("Array.join", "join()")}}, {{jsxref("Array.slice", "slice()")}}, {{jsxref("Array.indexOf", "indexOf()")}}, など）は、配列の {{jsxref("Array.length", "length")}} プロパティの値はメソッドの呼び出し時の値を考慮します。
 
-他にも (例えば {{jsxref("Array.push", "push()")}}, {{jsxref("Array.splice", "splice()")}}, 等)、結果として配列の {{jsxref("Array.length", "length")}} プロパティを更新するメソッドがあります。
+他にも（例えば {{jsxref("Array.push", "push()")}}, {{jsxref("Array.splice", "splice()")}}, など）、結果として配列の {{jsxref("Array.length", "length")}} プロパティを更新するメソッドがあります。
 
 ```js
 const fruits = [];
-fruits.push('バナナ', 'りんご', 'peach');
+fruits.push('バナナ', 'りんご', 'もも');
 console.log(fruits.length); // 3
 ```
 
-JavaScript の配列に、配列の添字として妥当なプロパティであり、かつ現在の配列の範囲の外にある添字を設定すると、エンジンは配列の {{jsxref("Array.length", "length")}} プロパティを更新します。
+JavaScript の配列で、配列の添字として妥当なプロパティであり、かつ現在の配列の範囲の外にある添字を設定すると、エンジンは配列の {{jsxref("Array.length", "length")}} プロパティを更新します。
 
 ```js
 fruits[5] = 'マンゴー';
@@ -618,7 +602,7 @@ console.log(fruits.length);        // 6
 
 ```js
 fruits.length = 10;
-console.log(fruits);              // ['バナナ', 'りんご', 'peach', empty x 2, 'マンゴー', empty x 4]
+console.log(fruits);              // ['バナナ', 'りんご', 'もも', 空 x 2, 'マンゴー', 空 x 4]
 console.log(Object.keys(fruits)); // ['0', '1', '2', '5']
 console.log(fruits.length);       // 10
 console.log(fruits[8]);           // undefined
@@ -634,11 +618,11 @@ console.log(fruits.length);       // 2
 
 これらについては {{jsxref("Array.length")}} のページで詳しく解説します。
 
-### 照合の結果を使用して配列を作成
+### 照合結果を使用して配列を作成
 
-正規表現 ({{jsxref("RegExp")}}) と文字列の照合の結果から配列を生成することができます。この配列には、プロパティと、一致したものに関する情報を提供する要素を持ちます。このような配列は {{jsxref("RegExp.exec()")}} や {{jsxref("String.match()")}} から返されます。
+正規表現 ({{jsxref("RegExp")}}) と文字列の照合結果から配列を生成することができます。この配列には、プロパティと、一致したものに関する情報を提供する要素を持ちます。このような配列は {{jsxref("RegExp.prototype.exec()")}} や {{jsxref("String.prototype.match()")}} から返されます。
 
-これらのプロパティと要素を理解しやすくするために、以下の例と表を参照してください。
+例えば、次のようになります。
 
 ```js
 // 1 文字の d と、続く 1 文字以上の b と、続く 1 文字の d に一致します
@@ -646,48 +630,14 @@ console.log(fruits.length);       // 2
 // 大文字小文字は区別しません
 
 const myRe = /d(b+)(d)/i;
-const myArray = myRe.exec('cdbBdbsbz');
+const execResult = myRe.exec('cdbBdbsbz');
+
+console.log(execResult.input); // 'cdbBdbsbz'
+console.log(execResult.index); // 1
+console.log(execResult); // Array(3) [ "dbBd", "bB", "d" ]
 ```
 
-この一致から返されるプロパティと要素は次の通りです。
-
-<table class="fullwidth-table standard-table">
-  <thead>
-    <tr>
-      <th class="header" scope="col">プロパティ/要素</th>
-      <th class="header" scope="col">説明</th>
-      <th class="header" scope="col">例</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>input</code><br />{{ReadOnlyInline}}</td>
-      <td>
-        正規表現が一致する文字列を反映する読み取り専用プロパティです。
-      </td>
-      <td><code>"cdbBdbsbz"</code></td>
-    </tr>
-    <tr>
-      <td><code>index</code><br />{{ReadOnlyInline}}</td>
-      <td>文字列中で一致する場所を、0 から始まる位置で示します。</td>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <td><code>[0]</code><br />{{ReadOnlyInline}}</td>
-      <td>最後に一致した文字列です。</td>
-      <td><code>"dbBd"</code></td>
-    </tr>
-    <tr>
-      <td><code>[1], ...[n]</code><br />{{ReadOnlyInline}}</td>
-      <td>
-        正規表現に含まれる場合、括弧で囲まれた一致た部分文字列を指定する読み取り専用の要素です。括弧で囲まれた部分文字列の数は無制限です。
-      </td>
-      <td>
-        <code>[1]: "bB"<br />[2]: "d"</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
+照合結果についての詳しい情報は、 {{jsxref("RegExp.prototype.exec()")}} および {{jsxref("String.prototype.match()")}} のページを参照してください。
 
 ## 仕様書
 
@@ -701,7 +651,7 @@ const myArray = myRe.exec('cdbBdbsbz');
 
 - JavaScript ガイドより
 
-  - [オブジェクトプロパティのインデックス付け](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#indexing_object_properties)
+  - [オブジェクトプロパティのインデックス付け](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#オブジェクトプロパティのインデックス付け)
   - [インデックス付きコレクション: `Array` オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
 
 - [型付き配列](/ja/docs/Web/JavaScript/Typed_arrays)

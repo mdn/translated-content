@@ -1,12 +1,6 @@
 ---
 title: HTTP の進化
 slug: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
-tags:
-  - Guide
-  - HTTP
-  - NeedsUpdate
-  - NeedsUpdate(HTTP/3)
-translation_of: Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP
 ---
 {{HTTPSidebar}}
 

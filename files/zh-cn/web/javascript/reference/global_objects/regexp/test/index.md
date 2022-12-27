@@ -56,7 +56,7 @@ function testinput(re, str){
 
 ### 当设置全局标志的正则使用`test()`
 
-如果正则表达式设置了全局标志，`test()` 的执行会改变正则表达式 [`lastIndex`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex)属性。连续的执行`test()`方法，后续的执行将会从 lastIndex 处开始匹配字符串，({{jsxref("RegExp.prototype.exec()", "<code>exec()</code>")}} 同样改变正则本身的 `lastIndex属性值`).
+如果正则表达式设置了全局标志，`test()` 的执行会改变正则表达式 [`lastIndex`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex)属性。连续的执行`test()`方法，后续的执行将会从 lastIndex 处开始匹配字符串，({{jsxref("RegExp.prototype.exec()", "<code>exec()</code>")}} 同样改变正则本身的 `lastIndex属性值`).
 
 下面的实例表现了这种行为：
 

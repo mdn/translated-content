@@ -1,15 +1,6 @@
 ---
 title: yield
 slug: Web/JavaScript/Reference/Operators/yield
-tags:
-  - ECMAScript 2015
-  - ジェネレーター
-  - 反復子
-  - JavaScript
-  - 言語機能
-  - 演算子
-browser-compat: javascript.operators.yield
-translation_of: Web/JavaScript/Reference/Operators/yield
 ---
 {{jsSidebar("Operators")}}
 

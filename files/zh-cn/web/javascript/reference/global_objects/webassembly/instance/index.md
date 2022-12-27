@@ -19,13 +19,13 @@ var myInstance = new WebAssembly.Instance(module, importObject);
 ### 参数
 
 - _module_
-  - : 要被实例化的 [`WebAssembly.Module`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) 对象。
+  - : 要被实例化的 [`WebAssembly.Module`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Module) 对象。
 - _importObject_ {{optional_inline}}
-  - : 一个包含值的对象，导入到新创建的 `实例`, 比如函数或 [`WebAssembly.Memory`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) 对象. There must be one matching property for each declared import of `module` 否则抛出 [WebAssembly.LinkError](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError) 异常。
+  - : 一个包含值的对象，导入到新创建的 `实例`, 比如函数或 [`WebAssembly.Memory`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory) 对象. There must be one matching property for each declared import of `module` 否则抛出 [WebAssembly.LinkError](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/LinkError) 异常。
 
 ## 实例化
 
-所有的 `Instance` 实例继承自`Instance()` [属性对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/prototype)— 修改它会影响所有的`Instance` 实例。
+所有的 `Instance` 实例继承自`Instance()` [属性对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/prototype)— 修改它会影响所有的`Instance` 实例。
 
 ### 实例属性
 
@@ -42,6 +42,6 @@ var myInstance = new WebAssembly.Instance(module, importObject);
 
 ## 参考
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) overview page
+- [WebAssembly concepts](/zh-CN/docs/WebAssembly/Concepts)
+- [Using the WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Using_the_JavaScript_API)

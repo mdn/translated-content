@@ -13,7 +13,7 @@ original_slug: learn/Accessibility/多媒体
       <th scope="row">先决条件：</th>
       <td>
         基本的计算机素养，对 HTML，CSS 和 JavaScript 的基本理解，<a
-          href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
+          href="/zh-CN/docs/Learn/Accessibility/What_is_accessibility"
           >对无障碍</a
         >
         的理解。

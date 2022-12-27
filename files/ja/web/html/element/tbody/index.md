@@ -1,17 +1,6 @@
 ---
 title: '<tbody>: テーブル本体要素'
 slug: Web/HTML/Element/tbody
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - Reference
-  - Table Body
-  - Table Contents
-  - Tables
-  - Web
-  - tbody
-translation_of: Web/HTML/Element/tbody
 ---
 {{HTMLRef}}
 

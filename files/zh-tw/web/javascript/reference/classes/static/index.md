@@ -49,6 +49,6 @@ console.log(tp.triple());             // 'tp.triple is not a function'.
 
 ## 你可能會需要看看
 
-- [`class` expression](/en-US/docs/Web/JavaScript/Reference/Operators/class)
-- [`class` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/class)
-- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
+- [`class` expression](/zh-TW/docs/Web/JavaScript/Reference/Operators/class)
+- [`class` declaration](/zh-TW/docs/Web/JavaScript/Reference/Statements/class)
+- [Classes](/zh-TW/docs/Web/JavaScript/Reference/Classes)

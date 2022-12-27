@@ -1,13 +1,6 @@
 ---
 title: 'Feature-Policy: web-share'
 slug: Web/HTTP/Headers/Feature-Policy/web-share
-tags:
-  - Feature-Policy
-  - HTTP
-  - Web Share
-  - 実験的
-browser-compat: http.headers.Feature-Policy.web-share
-translation_of: Web/HTTP/Headers/Feature-Policy/web-share
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

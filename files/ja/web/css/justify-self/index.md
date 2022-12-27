@@ -1,14 +1,6 @@
 ---
 title: justify-self
 slug: Web/CSS/justify-self
-tags:
-  - CSS
-  - CSS ボックス配置
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.justify-self
-translation_of: Web/CSS/justify-self
 ---
 {{CSSRef}}
 

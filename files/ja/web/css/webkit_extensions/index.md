@@ -1,14 +1,6 @@
 ---
 title: WebKit の CSS 拡張
 slug: Web/CSS/WebKit_Extensions
-tags:
-  - CSS
-  - CSS:WebKit 拡張
-  - ガイド
-  - 標準外
-  - 概要
-  - リファレンス
-translation_of: Web/CSS/WebKit_Extensions
 ---
 {{CSSRef}}
 

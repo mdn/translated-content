@@ -1,16 +1,6 @@
 ---
 title: Promise.prototype.finally()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/finally
-tags:
-  - JavaScript
-  - メソッド
-  - Promise
-  - プロトタイプ
-  - リファレンス
-  - finally
-  - ポリフィル
-browser-compat: javascript.builtins.Promise.finally
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/finally
 ---
 {{JSRef}}
 

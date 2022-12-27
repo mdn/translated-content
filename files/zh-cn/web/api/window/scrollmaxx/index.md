@@ -25,7 +25,7 @@ window.scrollTo(maxX, 0);
 
 ## 提示
 
-不要用这个属性来获得文档总宽度，文档总宽度不等于[window.innerWidth](/en-US/docs/DOM/window.innerWidth) + window\.scrollMaxX。因为 {{domxref("window.innerWidth")}}包含所有可见的垂直滚动条的宽度，所以结果会超出文档总宽度，多出所有可见的垂直滚动条的宽度。作为替代，可使用{{domxref("element.scrollWidth","document.body.scrollWidth")}}。查看相关：{{domxref("window.scrollMaxY")}}。
+不要用这个属性来获得文档总宽度，文档总宽度不等于[window.innerWidth](/zh-CN/docs/DOM/window.innerWidth) + window\.scrollMaxX。因为 {{domxref("window.innerWidth")}}包含所有可见的垂直滚动条的宽度，所以结果会超出文档总宽度，多出所有可见的垂直滚动条的宽度。作为替代，可使用{{domxref("element.scrollWidth","document.body.scrollWidth")}}。查看相关：{{domxref("window.scrollMaxY")}}。
 
 ## 规范
 

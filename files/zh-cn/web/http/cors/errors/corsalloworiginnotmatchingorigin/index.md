@@ -32,7 +32,7 @@ add_header 'Access-Control-Allow-Origin' 'origin-list'
 
 ## 查看更多
 
-- [CORS 错误](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS 错误](/zh-CN/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS 介绍](/en-US/docs/Web/HTTP/CORS)
+- [CORS 介绍](/zh-CN/docs/Web/HTTP/CORS)
 - [开启 CORS: 我希望在自己的服务器上添加对 CORS 的支持](https://enable-cors.org/server.html)

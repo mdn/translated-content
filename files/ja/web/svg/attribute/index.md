@@ -1,20 +1,6 @@
 ---
 title: SVG 属性リファレンス
 slug: Web/SVG/Attribute
-tags:
-  - Drawing
-  - Landing
-  - Responsive Design
-  - SVG
-  - SVG Attribute
-  - SVG Reference
-  - SVG リファレンス
-  - SVG 属性
-  - Vector Graphics
-  - ベクターグラフィックス
-  - レスポンシブデザイン
-  - 描画
-translation_of: Web/SVG/Attribute
 ---
 {{SVGRef}}
 

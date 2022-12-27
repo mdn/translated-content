@@ -18,7 +18,7 @@ slug: >-
             >CSS</a
           >、以及<a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a
           >程式語言，具備<a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >終端機/命令列環境</a
           >的基本知識。
         </p>

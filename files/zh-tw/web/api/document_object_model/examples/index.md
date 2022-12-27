@@ -369,11 +369,11 @@ for (var i = 0; i < 2; i++) {
 
 - 表格的{{domxref("element.innerHTML","innerHTML")}}屬性絕不應該被用來修改表，雖然你可以用它來寫一個完整的表格或細格中的內容。
 - 如果用 DOM 核心方法 {{domxref("document.createElement")}} 和 {{domxref("Node.appendChild")}} 來建立表格的行和細格，IE 會要求它們附加到一個 tbody 元素，而其它瀏覽器允許它們附加到一個 table 元素（行會被添加到最後的 tbody 元素）。
-- [表格介面](/en-US/docs/Web/API/HTMLTableElement#Methods)還有一些可用於創建和修改的表格的便利方法。
+- [表格介面](/zh-TW/docs/Web/API/HTMLTableElement#Methods)還有一些可用於創建和修改的表格的便利方法。
 
 ## Subnav
 
-- [DOM Reference](/en-US/docs/Web/API/Document_Object_Model)
-- [Introduction to the DOM](/en-US/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/en-US/docs/Web/API/Document_Object_Model/Events)
-- [Examples](/en-US/docs/Web/API/Document_Object_Model/Examples)
+- [DOM Reference](/zh-TW/docs/Web/API/Document_Object_Model)
+- [Introduction to the DOM](/zh-TW/docs/Web/API/Document_Object_Model/Introduction)
+- [Events and the DOM](/zh-TW/docs/Web/API/Document_Object_Model/Events)
+- [Examples](/zh-TW/docs/Web/API/Document_Object_Model/Examples)

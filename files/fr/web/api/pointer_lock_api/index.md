@@ -70,7 +70,7 @@ if (document.pointerLockElement === someElement) {
 }
 ```
 
-La méthode {{domxref("Document.exitPointerLock()")}} est utilisée pour libérer le verrouillage du pinteur, et, comme {{domxref("Element.requestPointerLock","requestPointerLock")}}, marche de manière asynchrone, on utilise les événements {{event("pointerlockchange")}} et {{event("pointerlockerror")}}, que vous verrez plus en détails ci-dessous.
+La méthode {{domxref("Document.exitPointerLock()")}} est utilisée pour libérer le verrouillage du pinteur, et, comme {{domxref("Element.requestPointerLock","requestPointerLock")}}, marche de manière asynchrone, on utilise les événements [`pointerlockchange`](/fr/docs/Web/API/Document/pointerlockchange_event) et [`pointerlockerror`](/fr/docs/Web/API/Document/pointerlockerror_event), que vous verrez plus en détails ci-dessous.
 
 ```js
 document.exitPointerLock = document.exitPointerLock    ||
@@ -83,7 +83,7 @@ document.exitPointerLock();
 
 ## Événement pointerlockchange
 
-Quand l'état de verrouillage du pointeur change — par exemple quand on appelle {{domxref("Element.requestPointerLock","requestPointerLock()")}}, {{domxref("Document.exitPointerLock","exitPointerLock()")}}, que l'utilisateur presse la touche ECHAP, etc.—l'événement {{event("pointerlockchange")}} est envoyé au `document`. C'est un simple événement qui ne contient pas de données supplémentaires.
+Quand l'état de verrouillage du pointeur change — par exemple quand on appelle {{domxref("Element.requestPointerLock","requestPointerLock()")}}, {{domxref("Document.exitPointerLock","exitPointerLock()")}}, que l'utilisateur presse la touche ECHAP, etc.—l'événement [`pointerlockchange`](/fr/docs/Web/API/Document/pointerlockchange_event) est envoyé au `document`. C'est un simple événement qui ne contient pas de données supplémentaires.
 
 ```js
 document.pointerLockElement = document.pointerLockElement    ||
@@ -105,7 +105,7 @@ document.addEventListener('webkitpointerlockchange', pointerLockChange, false);
 
 ## Événement pointerlockerror
 
-Quand une erreur est causée par l'appel de {{domxref("Element.requestPointerLock","requestPointerLock()")}} ou {{domxref("Document.exitPointerLock","exitPointerLock()")}}, l'événement {{event("pointerlockerror")}} est envoyé au `document`. C'est un simple événement qui ne contient pas de données supplémentaires.
+Quand une erreur est causée par l'appel de {{domxref("Element.requestPointerLock","requestPointerLock()")}} ou {{domxref("Document.exitPointerLock","exitPointerLock()")}}, l'événement [`pointerlockerror`](/fr/docs/Web/API/Document/pointerlockerror_event) est envoyé au `document`. C'est un simple événement qui ne contient pas de données supplémentaires.
 
 ```js
 document.addEventListener('pointerlockerror', lockError, false);
@@ -121,7 +121,7 @@ function lockError(e) {
 
 ## Extensions aux événements de souris
 
-L'API Pointer lock étend l'interface {{domxref("MouseEvent")}} normale avec les attributs de mouvement. Deux nouveaux attributs sont ajoutés aux événements de souris —{{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}}— fournissant le changement de position de la souris. Ces paramètres ont pour valeur les différences entre les valeurs des propriétés de {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}} stockées dans les événements {{event("mousemove")}}, `eNow` et `ePrevious`. En d'autres termes, `movementX = eNow.screenX - ePrevious.screenX`.
+L'API Pointer lock étend l'interface {{domxref("MouseEvent")}} normale avec les attributs de mouvement. Deux nouveaux attributs sont ajoutés aux événements de souris —{{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}}— fournissant le changement de position de la souris. Ces paramètres ont pour valeur les différences entre les valeurs des propriétés de {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}} stockées dans les événements [`mousemove`](/fr/docs/Web/API/Element/mousemove_event), `eNow` et `ePrevious`. En d'autres termes, `movementX = eNow.screenX - ePrevious.screenX`.
 
 ### État verrouillé
 

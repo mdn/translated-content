@@ -13,10 +13,10 @@ slug: Learn/JavaScript/Building_blocks/Return_values
       <td>
         <p>
           Basic computer literacy, a basic understanding of HTML and CSS,
-          <a href="/en-US/docs/Learn/JavaScript/First_steps"
+          <a href="/zh-TW/docs/Learn/JavaScript/First_steps"
             >JavaScript first steps</a
           >,
-          <a href="/en-US/docs/Learn/JavaScript/Building_blocks/Functions"
+          <a href="/zh-TW/docs/Learn/JavaScript/Building_blocks/Functions"
             >Functions — reusable blocks of code</a
           >.
         </p>

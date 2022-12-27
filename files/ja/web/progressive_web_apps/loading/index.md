@@ -1,13 +1,6 @@
 ---
 title: プログレッシブ読み込み
 slug: Web/Progressive_web_apps/Loading
-tags:
-  - Loading
-  - PWA
-  - Progressive web apps
-  - js13kGames
-  - progressive
-translation_of: Web/Progressive_web_apps/Loading
 ---
 {{PreviousMenu("Web/Progressive_web_apps/Re-engageable_Notifications_Push", "Web/Progressive_web_apps")}}
 

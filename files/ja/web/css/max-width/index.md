@@ -1,20 +1,6 @@
 ---
 title: max-width
 slug: Web/CSS/max-width
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - Limits
-  - 最大
-  - リファレンス
-  - 寸法
-  - max-width
-  - recipe:css-property
-  - size
-  - width
-browser-compat: css.properties.max-width
-translation_of: Web/CSS/max-width
 ---
 {{CSSRef}}
 

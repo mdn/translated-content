@@ -16,7 +16,7 @@ HTTP **`101 Switching Protocols`** 回應碼表示伺服器正在切換到用戶
 
 ## 範例
 
-通訊協定切換可能會用於 [WebSockets](/en-US/docs/Web/API/WebSockets_API) 中。
+通訊協定切換可能會用於 [WebSockets](/zh-TW/docs/Web/API/WebSockets_API) 中。
 
 ```plain
 HTTP/1.1 101 Switching Protocols
@@ -30,7 +30,7 @@ Connection: Upgrade
 
 ## 參見
 
-- [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
-- [WebSockets](/en-US/docs/Web/API/WebSockets_API)
+- [Protocol upgrade mechanism](/zh-TW/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPStatus("426")}} `Upgrade Required`

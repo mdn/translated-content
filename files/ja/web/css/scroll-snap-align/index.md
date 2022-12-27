@@ -1,15 +1,6 @@
 ---
 title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
-tags:
-  - 上級者
-  - CSS
-  - Example
-  - NeedsLiveSample
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.scroll-snap-align
-translation_of: Web/CSS/scroll-snap-align
 ---
 {{CSSRef}}
 

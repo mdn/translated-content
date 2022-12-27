@@ -12,8 +12,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 ## 语法
 
-```plain
-arr.lastIndexOf(searchElement[, fromIndex])
+```js
+lastIndexOf(searchElement)
+lastIndexOf(searchElement, fromIndex)
 ```
 
 ### 参数
@@ -131,7 +132,8 @@ if (!Array.prototype.lastIndexOf) {
 
 {{Compat}}
 
-## 相关链接
+## 参见
 
+- [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.indexOf()")}}
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}

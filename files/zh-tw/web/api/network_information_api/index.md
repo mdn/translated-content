@@ -4,7 +4,7 @@ slug: Web/API/Network_Information_API
 ---
 {{ SeeCompatTable() }}
 
-Network Information API 將提供系統連線的相關資訊，如使用者裝置的現有頻寬，或目前的連線狀態。根據使用者的連線情形，可進一步選擇高解析度或低解析度的內容。此完整的 API 另包含 domxref("Connection") 介面，以及 [`Navigator`](/en-US/docs/Web/API/Navigator) 介面的單一屬性 ─ [`Navigator.connection`](/en-US/docs/Web/API/Navigator.connection)。
+Network Information API 將提供系統連線的相關資訊，如使用者裝置的現有頻寬，或目前的連線狀態。根據使用者的連線情形，可進一步選擇高解析度或低解析度的內容。此完整的 API 另包含 domxref("Connection") 介面，以及 [`Navigator`](/zh-TW/docs/Web/API/Navigator) 介面的單一屬性 ─ [`Navigator.connection`](/zh-TW/docs/Web/API/Navigator.connection)。
 
 ## 偵測連線變化
 
@@ -35,5 +35,5 @@ updateConnectionStatus();
 ## See also
 
 - [Network Information API Specification](http://dvcs.w3.org/hg/dap/raw-file/tip/network-api/Overview.html)
-- [線上與離線事件](/en/Online_and_offline_events)
+- [線上與離線事件](/zh-TW/Online_and_offline_events)
 - {{domxref("window.navigator.connection")}}

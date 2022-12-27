@@ -1,7 +1,6 @@
 ---
 title: API 레퍼런스의 사이드바
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
-translation_of: MDN/Structures/API_references/API_reference_sidebars
 original_slug: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 ---
 {{MDNSidebar}}

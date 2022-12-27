@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.RuntimeError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.RuntimeError.RuntimeError
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError/RuntimeError
 ---
 {{JSRef}}
 

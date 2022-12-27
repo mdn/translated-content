@@ -13,13 +13,13 @@ slug: >-
       <th scope="row">預備知識：</th>
       <td>
         <p>
-          知道 <a href="/en-US/docs/Learn/HTML">HTML</a>,
-          <a href="/en-US/docs/Learn/CSS">CSS</a>與<a
-            href="/en-US/docs/Learn/JavaScript"
+          知道 <a href="/zh-TW/docs/Learn/HTML">HTML</a>,
+          <a href="/zh-TW/docs/Learn/CSS">CSS</a>與<a
+            href="/zh-TW/docs/Learn/JavaScript"
             >JavaScript</a
           >的核心語法、操作基本終端機指令
           <a
-            href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
+            href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
             >terminal/command line</a
           >.
         </p>

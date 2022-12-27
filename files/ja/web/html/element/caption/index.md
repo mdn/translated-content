@@ -1,18 +1,6 @@
 ---
 title: '<caption>: 表キャプション要素'
 slug: Web/HTML/Element/caption
-tags:
-  - Element
-  - HTML
-  - HTML Tables
-  - HTML tabular data
-  - Reference
-  - Table Captions
-  - Table Titles
-  - Tables
-  - Web
-  - caption
-translation_of: Web/HTML/Element/caption
 ---
 {{HTMLRef}}
 

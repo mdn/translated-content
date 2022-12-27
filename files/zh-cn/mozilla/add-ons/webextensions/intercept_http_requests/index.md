@@ -51,9 +51,9 @@ chrome.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-这里我们在请求开始之前用{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}调用`logURL()`函数。`logURL()` 函数 抓取从事件对象发出的请求中的 URL，然后将其打印到浏览器的控制台窗口中。[参数](/en-US/Add-ons/WebExtensions/Match_patterns)`{urls: ["<all_urls>"]}`表示拦截发往所有 URL 的 HTTP 请求。
+这里我们在请求开始之前用{{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}调用`logURL()`函数。`logURL()` 函数 抓取从事件对象发出的请求中的 URL，然后将其打印到浏览器的控制台窗口中。[参数](/zh-CN/Add-ons/WebExtensions/Match_patterns)`{urls: ["<all_urls>"]}`表示拦截发往所有 URL 的 HTTP 请求。
 
-测试方法是：[安装该 WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)， [打开浏览器的控制台](/en-US/docs/Tools/Browser_Console)，然后开启某个网页即可。在浏览器控制台中就能见到浏览器请求所有资源的 URL：
+测试方法是：[安装该 WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)， [打开浏览器的控制台](/zh-CN/docs/Tools/Browser_Console)，然后开启某个网页即可。在浏览器控制台中就能见到浏览器请求所有资源的 URL：
 
 {{EmbedYouTube("X3rMgkRkB1Q")}}
 
@@ -82,7 +82,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 }
 ```
 
-这里唯一的变化是[`权限`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)里 新增了 `webRequestBlocking` 项。新增这个权限是为了随时都能修改请求。
+这里唯一的变化是[`权限`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)里 新增了 `webRequestBlocking` 项。新增这个权限是为了随时都能修改请求。
 
 下一步替换 `"background.js"` 文件内容如下：
 
@@ -109,7 +109,7 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 刚才我们忽略了 `blocking` 选项。要修改请求 就要用到 `blocking` 选项，该选项让侦听器函数阻塞住发往网络请求，浏览器将会等待侦听器返回才会继续处理。阅读{{WebExtAPIRef("webRequest.onBeforeRequest")}}以了解更多有关 `blocking` 的细节。
 
-测试时打开 MDN 上的一个包含诸多图片的页面（如[https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor](/en-US/docs/Tools/Network_Monitor) ），重新加载[WebExtension](/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)，然后重新加载这个页面：
+测试时打开 MDN 上的一个包含诸多图片的页面（如[https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor](/zh-CN/docs/Tools/Network_Monitor) ），重新加载[WebExtension](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)，然后重新加载这个页面：
 
 {{EmbedYouTube("ix5RrXGr0wA")}}
 
@@ -154,4 +154,4 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 
 ## 了解更多
 
-学习你能使用的所有`webRequest` API，查看 [reference documentation](/en-US/Add-ons/WebExtensions/API/WebRequest)。
+学习你能使用的所有`webRequest` API，查看 [reference documentation](/zh-CN/Add-ons/WebExtensions/API/WebRequest)。

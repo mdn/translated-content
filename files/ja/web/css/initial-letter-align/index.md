@@ -1,20 +1,6 @@
 ---
 title: initial-letter-align
 slug: Web/CSS/initial-letter-align
-tags:
-  - Align
-  - CSS
-  - CSS Inline
-  - CSS Property
-  - CSS プロパティ
-  - Experimental
-  - Graphics
-  - Layout
-  - NeedsL
-  - Reference
-  - Web
-  - recipe:css-property
-translation_of: Web/CSS/initial-letter-align
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

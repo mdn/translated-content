@@ -1,17 +1,6 @@
 ---
 title: scroll-margin
 slug: Web/CSS/scroll-margin
-tags:
-  - CSS
-  - プロパティ
-  - Reference
-  - margin
-  - recipe:css-shorthand-property
-  - scroll-margin
-  - scrollbar
-  - scrolling
-browser-compat: css.properties.scroll-margin
-translation_of: Web/CSS/scroll-margin
 ---
 {{CSSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: OPTIONS
 slug: Web/HTTP/Methods/OPTIONS
-tags:
-  - HTTP
-  - リファレンス
-  - リクエストメソッド
-browser-compat: http.methods.OPTIONS
-translation_of: Web/HTTP/Methods/OPTIONS
 ---
 {{HTTPSidebar}}
 

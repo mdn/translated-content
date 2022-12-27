@@ -1,12 +1,6 @@
 ---
 title: undefined
 slug: Web/JavaScript/Reference/Global_Objects/undefined
-tags:
-  - JavaScript
-  - 言語機能
-  - リファレンス
-browser-compat: javascript.builtins.undefined
-translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 ---
 {{jsSidebar("Objects")}}
 

@@ -78,7 +78,7 @@ console.log('original === cast ? ' + (original === cast));
 */
 ```
 
-日志顺序颠倒其实是由于异步地调用 `then` 方法。在[这里](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value)查看 `then` 是如何工作的。
+日志顺序颠倒其实是由于异步地调用 `then` 方法。在[这里](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#Return_value)查看 `then` 是如何工作的。
 
 ### resolve thenable 并抛出错误
 

@@ -1,16 +1,6 @@
 ---
 title: 'CSP: require-sri-for'
 slug: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
-tags:
-  - CSP
-  - Directive
-  - HTTP
-  - Reference
-  - Security
-  - Subresource Integrity
-  - require-sri-for
-browser-compat: http.headers.Content-Security-Policy.require-sri-for
-translation_of: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 ---
 {{deprecated_header}}
 

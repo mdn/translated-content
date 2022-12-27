@@ -12,12 +12,12 @@ slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
       <th scope="row">需求：</th>
       <td>
         我們在
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+        <a href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
           >HTML 入門</a
         >
         中介紹過的 HTML 基礎，以及在
         <a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
+          href="/zh-TW/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
           >HTML 的文字基礎知識</a
         >
         中介紹過的文字格式化技巧。

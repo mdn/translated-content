@@ -51,5 +51,5 @@ navigator.getBattery().then(function(battery) {
 
 ## 另见
 
-- [Retrieving battery status information - demo & article](/en-US/Apps/Build/gather_and_modify_data/retrieving_battery_status_information)
+- [Retrieving battery status information - demo & article](/zh-CN/Apps/Build/gather_and_modify_data/retrieving_battery_status_information)
 - [Hacks blog post - Using the Battery API](http://hacks.mozilla.org/2012/02/using-the-battery-api-part-of-webapi/)

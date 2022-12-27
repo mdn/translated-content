@@ -1,14 +1,6 @@
 ---
 title: arguments オブジェクト
 slug: Web/JavaScript/Reference/Functions/arguments
-tags:
-  - 関数
-  - JavaScript
-  - 名前空間
-  - リファレンス
-  - arguments
-browser-compat: javascript.functions.arguments
-translation_of: Web/JavaScript/Reference/Functions/arguments
 ---
 {{JSSidebar("Functions")}}
 

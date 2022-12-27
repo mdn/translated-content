@@ -1,16 +1,6 @@
 ---
 title: Intl.DisplayNames() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
-tags:
-  - Constructor
-  - DisplayNames
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Reference
-browser-compat: javascript.builtins.Intl.DisplayNames.DisplayNames
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames
 ---
 {{JSRef}}
 

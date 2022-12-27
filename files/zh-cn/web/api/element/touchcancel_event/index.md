@@ -42,4 +42,4 @@ slug: Web/API/Element/touchcancel_event
 ## 参见
 
 - {{ domxref("GlobalEventHandlers.ontouchcancel","ontouchcancel")}}
-- 目标为 [`Document`](/en-US/docs/Web/API/Document) 的相同事件： [`touchcancel`](/en-US/docs/Web/API/Document/touchcancel_event)
+- 目标为 [`Document`](/zh-CN/docs/Web/API/Document) 的相同事件： [`touchcancel`](/zh-CN/docs/Web/API/Document/touchcancel_event)

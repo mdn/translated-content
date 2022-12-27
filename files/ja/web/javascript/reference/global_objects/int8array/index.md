@@ -1,15 +1,6 @@
 ---
 title: Int8Array
 slug: Web/JavaScript/Reference/Global_Objects/Int8Array
-tags:
-  - クラス
-  - Int8Array
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Int8Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Int8Array
 ---
 {{JSRef}}
 

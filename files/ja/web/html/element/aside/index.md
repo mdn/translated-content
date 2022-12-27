@@ -1,20 +1,6 @@
 ---
 title: '<aside>: 余談要素'
 slug: Web/HTML/Element/aside
-tags:
-  - Element
-  - HTML
-  - HTML セクション
-  - HTML5
-  - HTML:フローコンテンツ
-  - HTML:区分コンテンツ
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - Web
-  - ウェブ
-  - リファレンス
-  - 要素
-translation_of: Web/HTML/Element/aside
 ---
 {{HTMLRef}}
 

@@ -1,14 +1,6 @@
 ---
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSSOM View
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.scroll-behavior
-translation_of: Web/CSS/scroll-behavior
 ---
 {{CSSRef}}
 

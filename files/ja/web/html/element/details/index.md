@@ -1,17 +1,6 @@
 ---
 title: '<details>: 詳細折りたたみ要素'
 slug: Web/HTML/Element/details
-tags:
-  - Disclosure Box
-  - Disclosure Widget
-  - Element
-  - HTML
-  - HTML interactive elements
-  - Reference
-  - Web
-  - details
-browser-compat: html.elements.details
-translation_of: Web/HTML/Element/details
 ---
 
 {{HTMLRef}}

@@ -1,12 +1,6 @@
 ---
 title: プロパティアクセサー
 slug: Web/JavaScript/Reference/Operators/Property_Accessors
-tags:
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-translation_of: Web/JavaScript/Reference/Operators/Property_Accessors
 ---
 {{jsSidebar("Operators")}}
 

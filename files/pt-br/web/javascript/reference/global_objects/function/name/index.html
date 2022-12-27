@@ -5,14 +5,11 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/name
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">A propriedade somente-leitura <code><strong>name</strong></code> de um objeto {{jsxref("Function")}} indica o nome da função como especificado quando esta foi criada, ou <code>"anonymous"</code> para funções criadas anonimamente.</span></p>
+<p>A propriedade somente-leitura <code><strong>name</strong></code> de um objeto {{jsxref("Function")}} indica o nome da função como especificado quando esta foi criada, ou <code>"anonymous"</code> para funções criadas anonimamente.</p>
 
 <div>{{EmbedInteractiveExample("pages/js/function-name.html")}}</div>
 
-<p class="hidden">O código-fonte deste exemplo interativo está mantido em um repositório do GitHub. Se você gostaria de contribuir com o projeto de exemplos interativos, clone por favor <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> e nos envie um <em>pull request</em>.</p>
-
-<div>{{js_property_attributes(0,0,1)}}<br>
- </div>
+<div>{{js_property_attributes(0,0,1)}}</div>
 
 <div class="note">
 <p>Note que em implementações não-standard anteriores à ES2015 o atributo <code>configurable</code> tinha também o valor <code>false</code>.</p>
@@ -59,10 +56,6 @@ try { object_someMethod } catch(e) { console.log(e); }
 </pre>
 
 <p>Você não pode mudar o nome de uma função, pois a propriedade é somente-leitura:</p>
-
-<div class="hidden">
-<p>O exemplo abaixo contradiz o que é dito no começo desta seção e não funciona como descrito.</p>
-</div>
 
 <pre class="brush: js">var object = {
   // anonymous

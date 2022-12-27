@@ -1,20 +1,6 @@
 ---
 title: SVG 要素リファレンス
 slug: Web/SVG/Element
-tags:
-  - Drawing
-  - Elements
-  - Responsive Design
-  - SVG
-  - SVG Reference
-  - SVG リファレンス
-  - Vector Graphics
-  - l10n:priority
-  - ベクターグラフィック
-  - レスポンシブデザイン
-  - 描画
-  - 要素
-translation_of: Web/SVG/Element
 ---
 « [SVG](/ja/docs/SVG) / [SVG 属性リファレンス](/ja/docs/SVG/Attribute) »
 

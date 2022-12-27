@@ -4,7 +4,7 @@ slug: Web/API/WebGLShader
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **WebGLShader** 可以是一个顶点着色器（vertex shader）或片元着色器（fragment shader）。每个 {{domxref("WebGLProgram")}} 都需要这两种类型的着色器。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **WebGLShader** 可以是一个顶点着色器（vertex shader）或片元着色器（fragment shader）。每个 {{domxref("WebGLProgram")}} 都需要这两种类型的着色器。
 
 ## 描述
 

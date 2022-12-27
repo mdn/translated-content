@@ -1,12 +1,6 @@
 ---
 title: substring-after
 slug: Web/XPath/Functions/substring-after
-tags:
-  - XPath 関数
-  - XSLT
-  - XSLT_Reference
-  - substring-after
-translation_of: Web/XPath/Functions/substring-after
 ---
 {{ XsltRef() }}
 

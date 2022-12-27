@@ -36,7 +36,7 @@ _変更なし。_
 
 ### セキュリティ
 
-- Firefox で _http\://localhost/_ や _http\://dev.localhost/_ のような `localhost` URL が、ローカルホストのループバックインターフェイス (例えば _http\://127.0.0.1_) を参照するものとして保証されるようになりました。この結果、`localhost` から読み込まれるリソースが安全に提供された ([安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) を参照) とみなされ、[混在コンテンツ](/ja/docs/Web/Security/Mixed_content) として扱われなくなります ({{bug(1220810)}}, {{bug(1488740)}})。
+- Firefox で `http://localhost/` や `http://dev.localhost/` のような `localhost` URL が、ローカルホストのループバックインターフェイス (例えば `http://127.0.0.1`) を参照するものとして保証されるようになりました。この結果、`localhost` から読み込まれるリソースが安全に提供された ([安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) を参照) とみなされ、[混在コンテンツ](/ja/docs/Web/Security/Mixed_content) として扱われなくなります ({{bug(1220810)}}, {{bug(1488740)}})。
 
 ### API
 

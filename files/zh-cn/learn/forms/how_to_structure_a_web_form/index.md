@@ -13,7 +13,7 @@ original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
       <th scope="row">前提条件：</th>
       <td>
         基本的计算机能力，和基本的
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的理解</a
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML">对 HTML 的理解</a
         >。
       </td>
     </tr>

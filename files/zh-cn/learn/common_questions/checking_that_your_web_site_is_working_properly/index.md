@@ -9,7 +9,7 @@ slug: Learn/Common_questions/Checking_that_your_web_site_is_working_properly
     <tr>
       <th scope="row">前提 :</th>
       <td>
-        你需要知道怎么<a href="/en-US/docs/Learn/Upload_files_to_a_web_server"
+        你需要知道怎么<a href="/zh-CN/docs/Learn/Upload_files_to_a_web_server"
           >上传文件到 web 服务器</a
         >。
       </td>

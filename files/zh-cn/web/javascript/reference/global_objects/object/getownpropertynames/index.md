@@ -133,7 +133,7 @@ Firefox 28 {{geckoRelease("28")}}之前，`Object.getOwnPropertyNames` 不会获
 
 ## 相关链接
 
-- [Enumerability and ownership of properties](/en-US/docs/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-CN/docs/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.prototype.hasOwnProperty")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable")}}
 - {{jsxref("Object.create")}}

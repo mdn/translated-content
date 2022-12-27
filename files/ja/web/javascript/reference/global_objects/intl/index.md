@@ -1,13 +1,6 @@
 ---
 title: Intl
 slug: Web/JavaScript/Reference/Global_Objects/Intl
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - 名前空間
-browser-compat: javascript.builtins.Intl
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
 {{JSRef}}
 

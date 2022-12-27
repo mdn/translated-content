@@ -1,14 +1,6 @@
 ---
 title: 字句文法
 slug: Web/JavaScript/Reference/Lexical_grammar
-tags:
-  - ガイド
-  - JavaScript
-  - キーワード
-  - 字句文法
-  - リテラル
-browser-compat: javascript.grammar
-translation_of: Web/JavaScript/Reference/Lexical_grammar
 ---
 {{JsSidebar("More")}}
 

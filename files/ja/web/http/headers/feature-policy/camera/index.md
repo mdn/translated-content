@@ -1,16 +1,6 @@
 ---
 title: 'Feature-Policy: camera'
 slug: Web/HTTP/Headers/Feature-Policy/camera
-tags:
-  - ディレクティブ
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - リファレンス
-  - camera
-  - 実験的
-browser-compat: http.headers.Feature-Policy.camera
-translation_of: Web/HTTP/Headers/Feature-Policy/camera
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

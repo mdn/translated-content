@@ -7,7 +7,7 @@ original_slug: Web/CSS/url()
 
 ## 概述
 
-[CSS](/en/CSS) 数据类型 `<url> 指向一个资源。它没有独有的表达形式，只能通过 url() 函数定义。`
+[CSS](/zh-CN/CSS) 数据类型 `<url> 指向一个资源。它没有独有的表达形式，只能通过 url() 函数定义。`
 
 > **备注：** **URI 和 URL?**
 >
@@ -21,7 +21,7 @@ original_slug: Web/CSS/url()
 >
 > 注意，这些语义信息并不会影响 Web 开发者的开发和对此数据类型的具体实现。
 
-许多 [CSS 属性](/en/CSS_Reference) 将 URL 作为属性值，例如 {{ Cssxref("background-image") }}、{{ Cssxref("cursor") }}、{{ Cssxref("@font-face") }}、{{ cssxref("list-style") }} 等。
+许多 [CSS 属性](/zh-CN/CSS_Reference) 将 URL 作为属性值，例如 {{ Cssxref("background-image") }}、{{ Cssxref("cursor") }}、{{ Cssxref("@font-face") }}、{{ cssxref("list-style") }} 等。
 
 ## url() 函数
 

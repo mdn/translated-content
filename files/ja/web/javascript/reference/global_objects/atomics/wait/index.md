@@ -1,13 +1,6 @@
 ---
 title: Atomics.wait()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/wait
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.wait
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/wait
 ---
 {{JSRef}}
 

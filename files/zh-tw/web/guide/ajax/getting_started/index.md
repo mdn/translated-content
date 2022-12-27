@@ -169,9 +169,9 @@ if (httpRequest.status === 200) {
 
 > **備註：** 如果你傳送一個要求到一段代碼，而這段代碼將回應 XML 而非靜態的 HTML 檔，那則必須要設定一個可以在 IE 中運作的 header。如果我們不設定 header `Content-Type: application/xml`，IE 將會在我們試圖運作的 XML 項目行下，回應一個"Object Expected" 的錯誤。
 
-> **備註：** 如果我們沒有設定 header `Cache-Control: no-cache`，那瀏覽器將會藏匿 response 並且不再重新傳送 request，造成除錯上的挑戰。我們也可以增加一個 always-different GET 參數，像是 timestamp 或 random number (詳見[bypassing the cache](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache))
+> **備註：** 如果我們沒有設定 header `Cache-Control: no-cache`，那瀏覽器將會藏匿 response 並且不再重新傳送 request，造成除錯上的挑戰。我們也可以增加一個 always-different GET 參數，像是 timestamp 或 random number (詳見[bypassing the cache](/zh-TW/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache))
 
-> **備註：** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/en/JavaScript/Guide/Closures) containing the AJAX functions avoids this.
+> **備註：** If the `httpRequest` variable is used globally, competing functions calling `makeRequest()` can overwrite each other, causing a race condition. Declaring the `httpRequest` variable local to a [closure](/zh-TW/JavaScript/Guide/Closures) containing the AJAX functions avoids this.
 
 In the event of a communication error (such as the server going down), an exception will be thrown in the `onreadystatechange` method when accessing the response status. To mitigate this problem, you could wrap your `if...then` statement in a `try...catch`:
 

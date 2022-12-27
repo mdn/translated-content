@@ -1,14 +1,6 @@
 ---
 title: 擬似要素
 slug: Web/CSS/Pseudo-elements
-tags:
-  - CSS
-  - ガイド
-  - 概要
-  - 擬似要素
-  - リファレンス
-  - セレクター
-translation_of: Web/CSS/Pseudo-elements
 ---
 {{CSSRef}}
 

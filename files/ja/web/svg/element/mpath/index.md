@@ -1,11 +1,6 @@
 ---
 title: <mpath>
 slug: Web/SVG/Element/mpath
-tags:
-  - SVGアニメーション
-  - リファレンス
-  - 要素
-translation_of: Web/SVG/Element/mpath
 ---
 {{SVGRef}}
 

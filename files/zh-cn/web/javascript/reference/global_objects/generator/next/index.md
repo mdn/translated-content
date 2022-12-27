@@ -19,7 +19,7 @@ gen.next(value)
 
 ### 返回值
 
-返回的[对象](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)包含两个属性：
+返回的[对象](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)包含两个属性：
 
 - `done` (布尔类型)
 
@@ -78,5 +78,5 @@ g.next(2);
 
 ## 相关链接
 
-- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
-- [Iterators and generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)
+- [Iterators and generators](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)

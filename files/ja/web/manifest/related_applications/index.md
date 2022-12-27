@@ -1,12 +1,6 @@
 ---
 title: related_applications
 slug: Web/Manifest/related_applications
-tags:
-  - マニフェスト
-  - ウェブ
-  - related_applications
-browser-compat: html.manifest.related_applications
-translation_of: Web/Manifest/related_applications
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

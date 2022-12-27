@@ -1,13 +1,6 @@
 ---
 title: シャドウ DOM の使用
 slug: Web/Web_Components/Using_shadow_DOM
-tags:
-  - API
-  - DOM
-  - ガイド
-  - ウェブコンポーネント
-  - シャドウ DOM
-translation_of: Web/Web_Components/Using_shadow_DOM
 ---
 {{DefaultAPISidebar("Web Components")}}
 

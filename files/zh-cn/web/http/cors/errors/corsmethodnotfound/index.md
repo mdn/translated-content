@@ -28,7 +28,7 @@ Access-Control-Allow-Methods: GET,HEAD,POST
 
 ## 相关内容
 
-- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS errors](/zh-CN/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/en-US/docs/Web/HTTP/CORS)
-- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [CORS introduction](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP request methods](/zh-CN/docs/Web/HTTP/Methods)

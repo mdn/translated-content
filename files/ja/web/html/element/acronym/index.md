@@ -1,15 +1,6 @@
 ---
 title: <acronym>
 slug: Web/HTML/Element/acronym
-tags:
-  - 要素
-  - HTML
-  - HTML:フローコンテンツ
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.acronym
-translation_of: Web/HTML/Element/acronym
 ---
 
 {{deprecated_header}}

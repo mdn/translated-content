@@ -61,7 +61,7 @@ l10n:
 
 フォントを選ぶには次のようにします。
 
-1.  [Google Fonts](https://fonts.google.com/) へ行き、好きなフォントを探します。
+1. [Google Fonts](https://fonts.google.com/) へ行き、好きなフォントを探します。
 2. Google が提供するコードの行をテキストエディターにコピーし、後で保存します。
 3. Google Fonts を使用する際の詳細については、[このページ](https://developers.google.com/fonts/docs/getting_started)を参照してください。
 

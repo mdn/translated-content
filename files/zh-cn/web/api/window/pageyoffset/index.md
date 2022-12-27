@@ -16,4 +16,4 @@ slug: Web/API/Window/pageYOffset
 
 ## 相关链接
 
-- [`window.pageXOffset`](/en-US/docs/Web/API/Window/pageXOffset)
+- [`window.pageXOffset`](/zh-CN/docs/Web/API/Window/pageXOffset)

@@ -1,10 +1,6 @@
 ---
 title: contains
 slug: Web/XPath/Functions/contains
-tags:
-  - XSLT
-  - XSLT_Reference
-translation_of: Web/XPath/Functions/contains
 ---
 {{ XsltRef() }}
 

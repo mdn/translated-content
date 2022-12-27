@@ -17,7 +17,7 @@ original_slug: Web/Guide/HTML/Canvas_tutorial/Compositing/Exemplo
 
 <h2 id="Exemplo_de_composição">Exemplo de composição</h2>
 
-<p><span id="result_box" lang="pt"><span>Este código configura os valores globais usados pelo restante do programa.</span></span></p>
+<p>Este código configura os valores globais usados pelo restante do programa.</p>
 
 <pre class="brush: js">var canvas1 = document.createElement("canvas");
 var canvas2 = document.createElement("canvas");
@@ -28,8 +28,8 @@ var gco = [ 'Source-over','Source-in','Source-out','Source-atop',
             'Difference', 'Exclusion', 'HUE', 'Saturation', 'Color', 'Luminosity'
           ].reverse();
 var gcoText = [
-'<span id="result_box" lang="pt"><span>Essa é a configuração padrão e desenha novas formas sobre o conteúdo da tela (canvas) existente</span></span>.',
-'<span id="result_box" lang="pt"><span class="alt-edited">A nova forma é desenhada apenas onde a nova forma e a tela (canvas) de destino se sobrepõem.</span> <span class="alt-edited">Todo o resto é transparente.</span></span> ',
+'Essa é a configuração padrão e desenha novas formas sobre o conteúdo da tela (canvas) existente.',
+'A nova forma é desenhada apenas onde a nova forma e a tela (canvas) de destino se sobrepõem. Todo o resto é transparente. ',
 'A nova forma é desenhada onde ela não sobrepõe o conteúdo da tela (canvas) existente.',
 'A nova forma é somente desenahda onde ela sobrepõe o conteúdo da tela (canvas) existente.',
 'Novas formas são desenhadas por trás do conteúdo da tela (canvas) existente.',
@@ -39,28 +39,28 @@ var gcoText = [
 'Onde ambas formas se sebrepõem a cor é determinada adicionando seus respectivos valores de cores.',
 'Somente a nova forma é mostrada.',
 'Formas são feitas transparentes onde ambos se sobrepõem e todo o resto é desenhado normalmente.',
-'<span id="result_box" lang="pt"><span>Os pixels da camada superior são multiplicados pelo pixel correspondente da camada inferior.</span> <span>Uma imagem mais escura é o resultado.</span></span> ',
-'<span id="result_box" lang="pt"><span>Os pixels são invertidos, multiplicados e invertidos novamente.</span> <span>Uma imagem mais clara é o resultado (oposto de multiplicar)</span></span>',
-'<span id="result_box" lang="pt"><span>Uma combinação de multiplicação e tela.</span> <span>As partes escuras na camada base tornam-se mais escuras e as partes claras tornam-se mais claras.</span></span>',
+'Os pixels da camada superior são multiplicados pelo pixel correspondente da camada inferior. Uma imagem mais escura é o resultado. ',
+'Os pixels são invertidos, multiplicados e invertidos novamente. Uma imagem mais clara é o resultado (oposto de multiplicar)',
+'Uma combinação de multiplicação e tela. As partes escuras na camada base tornam-se mais escuras e as partes claras tornam-se mais claras.',
 'Mantêm os pixels mais escuro de ambas camadas.',
 'Mantêm os pixels mais claro de ambas camadas.',
-'<span id="result_box" lang="pt"><span>Divide a camada inferior pela camada superior invertida.</span></span>',
-'<span id="result_box" lang="pt"><span>Divide a camada inferior invertida pela camada superior e, em seguida, inverte o resultado.</span></span>',
-'<span id="result_box" lang="pt"><span>Uma combinação de multiplicação e tela como sobreposição, mas com a camada superior e inferior trocada.</span></span>',
-'<span id="result_box" lang="pt"><span>Uma versão mais suave da luz.</span> <span>Preto ou branco puro não resulta em preto ou branco puro.</span></span>',
-'<span id="result_box" lang="pt"><span>Subtrai a camada inferior da camada superior ou vice-versa para obter sempre um valor positivo.</span></span>',
-'<span class="short_text" id="result_box" lang="pt"><span>Como diferença, mas com menor contraste.</span></span>',
-'<span id="result_box" lang="pt"><span>Preserva o luma e o croma da camada inferior, enquanto adota a tonalidade da camada superior.</span></span>',
-'<span id="result_box" lang="pt"><span>Preserva o luma e a tonalidade da camada inferior, enquanto adota o croma da camada superior.</span></span>',
-'<span id="result_box" lang="pt"><span>Preserva a luma da camada inferior, enquanto adota a tonalidade e o croma da camada superior.</span></span>',
-'<span id="result_box" lang="pt"><span>Preserva a tonalidade e o croma da camada inferior, enquanto adota a luma da camada superior.</span></span>'
+'Divide a camada inferior pela camada superior invertida.',
+'Divide a camada inferior invertida pela camada superior e, em seguida, inverte o resultado.',
+'Uma combinação de multiplicação e tela como sobreposição, mas com a camada superior e inferior trocada.',
+'Uma versão mais suave da luz. Preto ou branco puro não resulta em preto ou branco puro.',
+'Subtrai a camada inferior da camada superior ou vice-versa para obter sempre um valor positivo.',
+'Como diferença, mas com menor contraste.',
+'Preserva o luma e o croma da camada inferior, enquanto adota a tonalidade da camada superior.',
+'Preserva o luma e a tonalidade da camada inferior, enquanto adota o croma da camada superior.',
+'Preserva a luma da camada inferior, enquanto adota a tonalidade e o croma da camada superior.',
+'Preserva a tonalidade e o croma da camada inferior, enquanto adota a luma da camada superior.'
           ].reverse();
 var width = 320;
 var height = 340;</pre>
 
 <h3 id="Programa_principal">Programa principal</h3>
 
-<p><span id="result_box" lang="pt"><span>Quando a página é carregada, esse código é executado para configurar e executar o exemplo:</span></span></p>
+<p>Quando a página é carregada, esse código é executado para configurar e executar o exemplo:</p>
 
 <pre class="brush: js">window.onload = function() {
     // lum em sRGB
@@ -81,7 +81,7 @@ var height = 340;</pre>
 };
 </pre>
 
-<p><span id="result_box" lang="pt"><span>E esse código, <code>runComposite ()</code>, manipula a maior parte do trabalho, contando com várias funções utilitárias para fazer as partes difíceis.</span></span></p>
+<p>E esse código, <code>runComposite ()</code>, manipula a maior parte do trabalho, contando com várias funções utilitárias para fazer as partes difíceis.</p>
 
 <pre class="brush: js">function createCanvas() {
     var canvas = document.createElement("canvas");
@@ -157,7 +157,7 @@ function runComposite() {
 
 <h3 id="Funções_Utilitárias">Funções Utilitárias</h3>
 
-<p><span id="result_box" lang="pt"><span>O programa depende de várias funções utilitárias.</span></span></p>
+<p>O programa depende de várias funções utilitárias.</p>
 
 <pre class="brush: js">var lightMix = function() {
     var ctx = canvas2.getContext("2d");

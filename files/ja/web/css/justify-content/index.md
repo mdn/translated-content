@@ -1,14 +1,6 @@
 ---
 title: justify-content
 slug: Web/CSS/justify-content
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS ボックス配置
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.justify-content
-translation_of: Web/CSS/justify-content
 ---
 {{CSSRef}}
 

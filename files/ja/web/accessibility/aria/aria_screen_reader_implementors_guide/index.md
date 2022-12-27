@@ -1,7 +1,6 @@
 ---
 title: ARIA Screen Reader Implementors Guide
 slug: Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
-translation_of: Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide
 ---
 ## Live Regions
 

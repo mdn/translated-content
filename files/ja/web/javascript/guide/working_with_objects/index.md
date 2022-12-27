@@ -1,16 +1,6 @@
 ---
 title: オブジェクトでの作業
 slug: Web/JavaScript/Guide/Working_with_Objects
-tags:
-  - Beginner
-  - Document
-  - Guide
-  - JavaScript
-  - Object
-  - l10n:priority
-  - オブジェクトの比較
-  - コンストラクター
-translation_of: Web/JavaScript/Guide/Working_with_Objects
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}
 

@@ -1,9 +1,6 @@
 ---
 title: <msubsup>
 slug: Web/MathML/Element/msubsup
-tags:
-  - MathML
-translation_of: Web/MathML/Element/msubsup
 ---
 {{MathMLRef}}
 

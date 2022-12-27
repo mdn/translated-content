@@ -1,14 +1,6 @@
 ---
 title: transition-delay
 slug: Web/CSS/transition-delay
-tags:
-  - CSS
-  - CSS トランジション
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.transition-delay
-translation_of: Web/CSS/transition-delay
 ---
 {{CSSRef}}
 

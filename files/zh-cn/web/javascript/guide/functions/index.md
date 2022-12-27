@@ -8,7 +8,7 @@ slug: Web/JavaScript/Guide/Functions
 
 一个 JavaScript 函数用`function`关键字定义，后面跟着函数名和圆括号。
 
-查看 [JavaScript 函数详细参考文档](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) 了解更多。
+查看 [JavaScript 函数详细参考文档](/zh-CN/docs/Web/JavaScript/Reference/Functions) 了解更多。
 
 ## 定义函数
 
@@ -28,7 +28,7 @@ function square(number) {
 }
 ```
 
-函数`square`使用了一个参数，叫作`number`。这个函数只有一个语句，它说明该函数将函数的参数（即`number`）自乘后返回。函数的[`return`](/en-US/docs/JavaScript/Reference/Statements/return)语句确定了函数的返回值：
+函数`square`使用了一个参数，叫作`number`。这个函数只有一个语句，它说明该函数将函数的参数（即`number`）自乘后返回。函数的[`return`](/zh-CN/docs/JavaScript/Reference/Statements/return)语句确定了函数的返回值：
 
 ```js
 return number * number;
@@ -147,7 +147,7 @@ const square = function (n) {
 }
 ```
 
-函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 `show_props`（其定义参见 [用对象编程](https://developer.mozilla.org/en-US/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)）就是一个将对象作为参数的例子。
+函数的参数并不局限于字符串或数字。你也可以将整个对象传递给函数。函数 `show_props`（其定义参见 [用对象编程](/zh-CN/docs/JavaScript/Guide/Working_with_Objects#Objects_and_Properties)）就是一个将对象作为参数的例子。
 
 函数可以被递归，就是说函数可以调用其本身。例如，下面这个函数就是用递归计算阶乘：
 
@@ -213,7 +213,7 @@ getScore(); // 返回 "Chamahk scored 5"
 一个函数可以指向并调用自身。有三种方法可以达到这个目的：
 
 1. 函数名
-2. [`arguments.callee`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+2. [`arguments.callee`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments/callee)
 3. 作用域下的一个指向该函数的变量名
 
 例如，思考一下如下的函数定义：
@@ -544,7 +544,7 @@ function multiply(a, b = 1) {
 multiply(5); // 5
 ```
 
-了解更多[默认参数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)的信息。
+了解更多[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)的信息。
 
 ### 剩余参数
 

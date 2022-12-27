@@ -12,11 +12,11 @@ slug: Learn/Server-side/Django/web_application_security
       <th scope="row">Prerequisites:</th>
       <td>
         Read the Server-side progamming "<a
-          href="/en-US/docs/Learn/Server-side/First_steps/Website_security"
+          href="/zh-TW/docs/Learn/Server-side/First_steps/Website_security"
           >Website security</a
         >" topic. Complete the Django tutorial topics up to (and including) at
         least
-        <a href="/en-US/docs/Learn/Server-side/Django/Forms"
+        <a href="/zh-TW/docs/Learn/Server-side/Django/Forms"
           >Django Tutorial Part 9: Working with forms</a
         >.
       </td>

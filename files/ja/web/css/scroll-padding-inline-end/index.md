@@ -1,15 +1,6 @@
 ---
 title: scroll-padding-inline-end
 slug: Web/CSS/scroll-padding-inline-end
-tags:
-  - CSS
-  - CSS プロパティ
-  - Web
-  - recipe:css-property
-  - scroll-padding-inline
-  - scroll-padding-inline-end
-browser-compat: css.properties.scroll-padding-inline-end
-translation_of: Web/CSS/scroll-padding-inline-end
 ---
 {{CSSRef}}
 

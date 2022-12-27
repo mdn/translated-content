@@ -1,14 +1,6 @@
 ---
 title: grid-template-areas
 slug: Web/CSS/grid-template-areas
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-template-areas
-translation_of: Web/CSS/grid-template-areas
 ---
 {{CSSRef}}
 

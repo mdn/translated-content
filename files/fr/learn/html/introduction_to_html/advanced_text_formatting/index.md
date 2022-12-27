@@ -298,8 +298,8 @@ Il est temps de faire un autre apprentissage actif&nbsp;! Dans cet exemple, nous
 
 L'origine des citations dont vous aurez besoin se trouvent aux pages&nbsp;:
 
-- http\://www\.brainyquote.com/quotes/authors/c/confucius.html pour la citation de Confucius,
-- http\://www\.affirmationsforpositivethinking.com/index.html pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
+- `http://www.brainyquote.com/quotes/authors/c/confucius.html` pour la citation de Confucius,
+- `http://www.affirmationsforpositivethinking.com/index.html` pour «&nbsp;The Need To Eliminate Negative Self Talk&nbsp;» (_De la nécessité d'éliminer un discours négatif sur soi‑même_).
 
 Si vous faites une erreur, vous pourrez toujours tout réinitialiser en pressant le bouton de même nom. Si vous êtes vraiment bloqué, pressez le bouton _Voir la solution_ pour obtenir la réponse.
 

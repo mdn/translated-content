@@ -1,12 +1,6 @@
 ---
 title: リソース URL
 slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
-tags:
-  - Guide
-  - HTTP
-  - Intermediate
-  - Resource
-translation_of: Web/HTTP/Basics_of_HTTP/Resource_URLs
 ---
 {{HTTPSidebar}}{{non-standard_header}}
 

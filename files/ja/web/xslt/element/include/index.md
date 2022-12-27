@@ -1,12 +1,6 @@
 ---
 title: <xsl:include>
 slug: Web/XSLT/Element/include
-tags:
-  - XSLT
-  - include
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/include
 ---
 {{ XsltRef() }}
 

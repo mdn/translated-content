@@ -1,13 +1,6 @@
 ---
 title: 'HTML attribute: pattern'
 slug: Web/HTML/Attributes/pattern
-tags:
-  - Attribute
-  - Attributes
-  - Constraint Validation API
-  - HTML
-  - Reference
-translation_of: Web/HTML/Attributes/pattern
 ---
 {{HTMLSidebar}}
 

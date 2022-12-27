@@ -1,17 +1,6 @@
 ---
 title: プロトコルのアップグレードメカニズム
 slug: Web/HTTP/Protocol_upgrade_mechanism
-tags:
-  - HTTP
-  - HTTP/2
-  - TLS
-  - WebSocket
-  - WebSockets
-  - アップグレード
-  - ガイド
-  - ネットワーキング
-  - プロトコル
-translation_of: Web/HTTP/Protocol_upgrade_mechanism
 ---
 {{HTTPSidebar}}
 

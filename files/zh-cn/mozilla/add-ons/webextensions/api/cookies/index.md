@@ -6,7 +6,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 使用 WebExtensions 获取或设置 cookies, 并且在修改时能够获得通知。
 
-你需要在 [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中开启“cookies”[API 权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，并且需要对应站点的 [主机权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 才能设置指定站点的 cookie。详细信息查看 [cookie 权限](/en-US/Add-ons/WebExtensions/API/cookies#Permissions).
+你需要在 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中开启“cookies”[API 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，并且需要对应站点的 [主机权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 才能设置指定站点的 cookie。详细信息查看 [cookie 权限](/zh-CN/Add-ons/WebExtensions/API/cookies#Permissions).
 
 ## 类型
 
@@ -37,7 +37,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 ## 权限
 
-为了使用这个 API，插件必须在它的 manifest 中指定"cookies" [API 权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，和它想要使用 cookie 的任何网站的 [host 权限](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 。插件将能读取或写入 host 权限中所匹配的 URL 可以读取或写入的任何 cookie。例如：
+为了使用这个 API，插件必须在它的 manifest 中指定"cookies" [API 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions)，和它想要使用 cookie 的任何网站的 [host 权限](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) 。插件将能读取或写入 host 权限中所匹配的 URL 可以读取或写入的任何 cookie。例如：
 
 - `http://*.example.com/`
 

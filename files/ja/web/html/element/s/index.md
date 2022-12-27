@@ -1,14 +1,6 @@
 ---
 title: <s>
 slug: Web/HTML/Element/s
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Reference
-  - Web
-  - text-decoration
-translation_of: Web/HTML/Element/s
 ---
 {{HTMLRef}}
 

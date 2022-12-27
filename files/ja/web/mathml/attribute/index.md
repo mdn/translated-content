@@ -1,10 +1,6 @@
 ---
 title: MathML 属性リファレンス
 slug: Web/MathML/Attribute
-tags:
-  - MathML
-  - MathML Reference
-translation_of: Web/MathML/Attribute
 ---
 {{MathMLRef}}
 

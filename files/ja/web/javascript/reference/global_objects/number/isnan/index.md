@@ -1,15 +1,6 @@
 ---
 title: Number.isNaN()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isNaN
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Number
-  - isNaN
-  - ポリフィル
-browser-compat: javascript.builtins.Number.isNaN
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 ---
 {{JSRef}}
 

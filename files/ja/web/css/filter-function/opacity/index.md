@@ -1,15 +1,7 @@
 ---
 title: opacity()
 slug: Web/CSS/filter-function/opacity
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/opacity()
 original_slug: Web/CSS/filter-function/opacity()
-browser-compat: css.types.filter-function.opacity
 ---
 {{CSSRef}}
 

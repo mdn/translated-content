@@ -1,12 +1,6 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-tags:
-  - Classes
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 {{jsSidebar("Classes")}}
 

@@ -64,5 +64,5 @@ function notifyMe() {
 
 ## See also
 
-- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - {{domxref("Permissions_API","Permissions API")}}

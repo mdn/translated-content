@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Memory()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
-tags:
-  - クラス
-  - JavaScript
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Memory
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
 ---
 {{JSRef}}
 

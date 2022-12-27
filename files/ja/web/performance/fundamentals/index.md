@@ -1,13 +1,6 @@
 ---
 title: パフォーマンスの基礎
 slug: Web/Performance/Fundamentals
-tags:
-  - Apps
-  - Firefox
-  - Gecko
-  - Guide
-  - Performance
-translation_of: Web/Performance/Fundamentals
 ---
 パフォーマンスとは、効率性を意味します。この文書では、オープンウェブアプリの観点から、パフォーマンスとは何か、ブラウザープラットフォームでどのようにパフォーマンスを向上させるか、テストや改善にどのようなツールやプロセスを使用できるかについて一般的な説明をします。.
 

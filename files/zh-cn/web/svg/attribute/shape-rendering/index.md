@@ -45,7 +45,7 @@ slug: Web/SVG/Attribute/shape-rendering
 
 下面的元素可以使用这个属性
 
-- [Shape elements](/en/SVG/Element#Shape) »
+- [Shape elements](/zh-CN/SVG/Element#Shape) »
 
 ## 规范
 

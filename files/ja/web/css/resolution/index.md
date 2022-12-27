@@ -1,15 +1,6 @@
 ---
 title: <resolution>
 slug: Web/CSS/resolution
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - ウェブ
-  - レイアウト
-browser-compat: css.types.resolution
-translation_of: Web/CSS/resolution
 ---
 {{CSSRef}}
 

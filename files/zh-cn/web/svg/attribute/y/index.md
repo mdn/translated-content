@@ -2,7 +2,7 @@
 title: 'y'
 slug: Web/SVG/Attribute/y
 ---
-« [SVG 属性参考主页](/en/SVG/Attribute)
+« [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 该属性在用户坐标系统中标识了一个 y 轴坐标。本坐标的确切效果依赖于每个元素。大多数时候，它体现了引用元素的矩形区域的左上角的 y 轴坐标（请阅读每个元素的文档以了解例外情况）。
 
@@ -12,7 +12,7 @@ slug: Web/SVG/Attribute/y
 
 | 类别   | 无                                              |
 | ------ | ----------------------------------------------- |
-| 值     | [\<coordinate>](/en/SVG/Content_type#Coordinate) |
+| 值     | [\<coordinate>](/zh-CN/SVG/Content_type#Coordinate) |
 | 可变性 | Yes                                             |
 
 {{ page("/en/SVG/Content_type","coordinate") }}
@@ -21,7 +21,7 @@ slug: Web/SVG/Attribute/y
 
 下列元素可以使用`y`属性：
 
-- [滤镜元素](/en/SVG/Element#FilterPrimitive) »
+- [滤镜元素](/zh-CN/SVG/Element#FilterPrimitive) »
 - {{ SVGElement("altGlyph") }}
 - {{ SVGElement("fePointLight") }}
 - {{ SVGElement("feSpotLight") }}

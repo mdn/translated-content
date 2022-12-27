@@ -1,11 +1,6 @@
 ---
 title: ハイブリッドアプローチ
 slug: Web/Guide/Mobile/A_hybrid_approach
-tags:
-  - Mobile
-  - Responsive Design
-  - Web Development
-translation_of: Web/Guide/Mobile/A_hybrid_approach
 ---
 銀の弾丸はウェブ開発で見つけるのが難しいです — 状況に応じてさまざまなテクニックを最大限に活用する戦略に出くわす可能性が高くなります。 これは私たちの 3 つ目のアプローチです。 これは、[別々のサイト](/ja/docs/Web/Guide/Mobile/Separate_sites)と[レスポンシブデザイン](/ja/docs/Web_Development/Mobile/Responsive_design)のアプローチを組み合わせることでそれらの欠点のいくつかを回避することを目的としています。
 

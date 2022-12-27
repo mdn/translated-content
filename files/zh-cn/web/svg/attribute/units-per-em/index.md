@@ -12,7 +12,7 @@ Only one element is using this attribute: {{SVGElement("font-face")}}
 
 ## Usage notes
 
-| Value         | [`<number>`](/en-US/docs/Web/SVG/Content_type#Number) |
+| Value         | [`<number>`](/zh-CN/docs/Web/SVG/Content_type#Number) |
 | ------------- | ----------------------------------------------------- |
 | Default value | `1000`                                                |
 | Animatable    | No                                                    |

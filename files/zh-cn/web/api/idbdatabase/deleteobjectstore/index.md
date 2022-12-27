@@ -6,7 +6,7 @@ slug: Web/API/IDBDatabase/deleteObjectStore
 
 **`deleteObjectStore()`** 方法从 {{domxref("IDBDatabase")}} 中销毁指定名称的对象存储，及这个对象存储所包含的任何索引。
 
-与 {{ domxref("IDBDatabase.createObjectStore") }} 一样，此方法*只能*在[`versionchange`](https://developer.mozilla.org/en-US/docs/IndexedDB/IDBTransaction#VERSION_CHANGE)事务中调用。
+与 {{ domxref("IDBDatabase.createObjectStore") }} 一样，此方法*只能*在[`versionchange`](/zh-CN/docs/IndexedDB/IDBTransaction#VERSION_CHANGE)事务中调用。
 
 {{AvailableInWorkers}}
 
@@ -63,7 +63,7 @@ request.onupgradeneeded = function(e) {
 
 ## See also
 
-- [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
+- [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Starting transactions: {{domxref("IDBDatabase")}}
 - Using transactions: {{domxref("IDBTransaction")}}
 - Setting a range of keys: {{domxref("IDBKeyRange")}}

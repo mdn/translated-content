@@ -12,10 +12,10 @@ slug: Learn/CSS/CSS_layout/Introduction
       <th scope="row">前提条件：</th>
       <td>
         对 HTML 有一些基本的了解 (学习“<a
-          href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >HTML 介绍</a
         >”), 并且理解 CSS 的工作原理 (学习“<a
-          href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+          href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >CSS 介绍</a
         >”).
       </td>

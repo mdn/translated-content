@@ -28,7 +28,7 @@ _從父代繼承的方法,_ _{{domxref("HTMLElement")}}._
 - {{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}
   - : Returns a {{domxref("CanvasCaptureMediaStream")}} that is a real-time video capture of the surface of the canvas.
 - {{domxref("HTMLCanvasElement.getContext()")}}
-  - : Returns a drawing context on the canvas, or null if the context ID is not supported. A drawing context lets you draw on the canvas. Calling getContext with `"2d"` returns a {{domxref("CanvasRenderingContext2D")}} object, whereas calling it with `"experimental-webgl"` (or `"webgl"`) returns a {{domxref("WebGLRenderingContext")}} object. This context is only available on browsers that implement [WebGL](/en-US/docs/Web/WebGL).
+  - : Returns a drawing context on the canvas, or null if the context ID is not supported. A drawing context lets you draw on the canvas. Calling getContext with `"2d"` returns a {{domxref("CanvasRenderingContext2D")}} object, whereas calling it with `"experimental-webgl"` (or `"webgl"`) returns a {{domxref("WebGLRenderingContext")}} object. This context is only available on browsers that implement [WebGL](/zh-TW/docs/Web/WebGL).
 - {{domxref("HTMLCanvasElement.toDataURL()")}}
   - : Returns a data-URL containing a representation of the image in the format specified by the `type` parameter (defaults to `png`). The returned image is in a resolution of 96dpi.
 - {{domxref("HTMLCanvasElement.toBlob()")}}

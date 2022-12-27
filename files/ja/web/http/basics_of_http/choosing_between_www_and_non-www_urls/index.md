@@ -1,11 +1,6 @@
 ---
 title: www 付きと www なしの URL の選択
 slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
-tags:
-  - Guide
-  - HTTP
-  - URL
-translation_of: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
 ---
 {{HTTPSidebar}}
 

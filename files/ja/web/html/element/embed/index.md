@@ -1,18 +1,6 @@
 ---
 title: '<embed>: 埋め込み外部コンテンツ要素'
 slug: Web/HTML/Element/embed
-tags:
-  - Element
-  - Embedding Content
-  - External content
-  - HTML
-  - HTML embedded content
-  - HTML5
-  - Plugins
-  - Reference
-  - Web
-  - embed
-translation_of: Web/HTML/Element/embed
 ---
 {{HTMLRef}}
 

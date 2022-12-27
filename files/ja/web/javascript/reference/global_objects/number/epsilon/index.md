@@ -1,14 +1,6 @@
 ---
 title: Number.EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Number
-  - プロパティ
-  - ポリフィル
-browser-compat: javascript.builtins.Number.EPSILON
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 ---
 {{JSRef}}
 

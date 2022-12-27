@@ -1,20 +1,7 @@
 ---
 title: var()
 slug: Web/CSS/var
-tags:
-  - CSS
-  - CSS カスタムプロパティ
-  - CSS 変数
-  - CSS 関数
-  - 実験的
-  - 関数
-  - リファレンス
-  - 変数
-  - var
-  - var()
-translation_of: Web/CSS/var()
 original_slug: Web/CSS/var()
-browser-compat: css.properties.custom-property.var
 ---
 {{CSSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: title
 slug: Web/HTML/Global_attributes/title
-tags:
-  - Global attributes
-  - HTML
-  - Reference
-  - Title
-translation_of: Web/HTML/Global_attributes/title
 ---
 {{HTMLSidebar("Global_attributes")}}
 

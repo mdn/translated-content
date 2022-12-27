@@ -4,7 +4,7 @@ slug: Web/API/RTCPeerConnection/addTrack
 ---
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCPeerConnection")}} 对象的**`addTrack()`**方法将一个新的媒体音轨添加到一组音轨中，这些音轨将被传输给另一个对等点。
+{{domxref("RTCPeerConnection")}} 对象的 **`addTrack()`** 方法将一个新的媒体音轨添加到一组音轨中，这些音轨将被传输给另一个对等点。
 
 > **备注：** 通过触发一个{{event("negotiationneeded")}}事件，向连接添加一个跟踪将触发重新协商。详情请参见{{SectionOnPage("/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling", "Starting negotiation")}}。
 
@@ -21,7 +21,7 @@ rtpSender = rtcPeerConnection.addTrack(track, stream...);
 - `stream...` {{optional_inline}}
   - : 一个或多个本地的{{domxref("MediaStream")}}对象，该轨迹应添加到其中。
 
-指定的**`track`**不一定已经是任何指定**`streams`**的一部分。相反，**`streams`**只是在连接的接收端将轨迹分组在一起的一种方式，以确保它们是同步的。在连接的本地端添加到相同流的任何轨道都将位于远程端相同的流上。
+指定的 **`track`** 不一定已经是任何指定 **`streams`** 的一部分。相反，**`streams`** 只是在连接的接收端将轨迹分组在一起的一种方式，以确保它们是同步的。在连接的本地端添加到相同流的任何轨道都将位于远程端相同的流上。
 
 ### 返回值
 
@@ -40,11 +40,11 @@ rtpSender = rtcPeerConnection.addTrack(track, stream...);
 
 ### 向多个流添加轨道
 
-在**`track`**参数之后，您可以选择指定一个或多个{{domxref("MediaStream")}}对象来添加**`track`**。只有轨道从一个点发送到另一个点，而不是一个媒体流。由于流是特定于每个对等点的，因此指定一个或多个流意味着另一个对等点将在连接的另一端自动创建一个相应的流 (或多个流)，然后自动将接收到的轨道添加到这些流中。
+在 **`track`** 参数之后，您可以选择指定一个或多个{{domxref("MediaStream")}}对象来添加**`track`**。只有轨道从一个点发送到另一个点，而不是一个媒体流。由于流是特定于每个对等点的，因此指定一个或多个流意味着另一个对等点将在连接的另一端自动创建一个相应的流 (或多个流)，然后自动将接收到的轨道添加到这些流中。
 
 #### 无流承载的轨道
 
-如果没有指定媒体流，则轨道是无流的。这是完全可以接受的，尽管要由远程对等点决定将轨道插入到哪个流 (如果有的话)。当构建一个多类型的简单应用只有一个媒体流时，使用**`addTrack()`**是一个非常常用的办法。例如，如果您与远程对等点共享的只是带有音频轨道和视频轨道的单个流，那么您不需要管理流中的哪个轨道，所以您不妨让**transceriver**为您处理它。
+如果没有指定媒体流，则轨道是无流的。这是完全可以接受的，尽管要由远程对等点决定将轨道插入到哪个流 (如果有的话)。当构建一个多类型的简单应用只有一个媒体流时，使用 **`addTrack()`** 是一个非常常用的办法。例如，如果您与远程对等点共享的只是带有音频轨道和视频轨道的单个流，那么您不需要管理流中的哪个轨道，所以您不妨让**transceriver**为您处理它。
 
 下面是一个使用{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}从用户的摄像机和麦克风获取一个流，然后将流中的每条轨迹添加到对等连接，而不为每条轨迹指定一个流：
 
@@ -76,7 +76,7 @@ pc.ontrack = ev => {
 }
 ```
 
-在这里，如果指定了流，则**`track`**事件处理程序将跟踪添加到事件指定的第一个流。否则，在第一次调用**`ontrack`**时，将创建一个新流并附加到视频元素，然后将音轨添加到新流中。从那时起，新的堆**track**被添加到这个流中。
+在这里，如果指定了流，则 **`track`** 事件处理程序将跟踪添加到事件指定的第一个流。否则，在第一次调用 **`ontrack`** 时，将创建一个新流并附加到视频元素，然后将音轨添加到新流中。从那时起，新的堆**track**被添加到这个流中。
 
 你也可以为每个接收到的**track**创建一个新的流：
 
@@ -124,7 +124,7 @@ pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
 - **`RTCRtpTransceiver`** 的{{domxref("RTCRtpTransceiver.stopped", "stopped")}}属性为**`false`**。
 - 正在考虑的 **`RTCRtpSender`** 从未被用于发送数据。如果收发器的{{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} 曾经是“**`sendrecv`**”或“**`sendonly`**”，发送方不能被重用。
 
-如果所有这些条件都满足，发送方会被重用，这将导致现有**`RTCRtpSender`**和它的**`RTCRtpTransceiver`**发生这些变化：
+如果所有这些条件都满足，发送方会被重用，这将导致现有 **`RTCRtpSender`** 和它的 **`RTCRtpTransceiver`** 发生这些变化：
 
 - **`RTCRtpSender`** 的{{domxref("RTCRtpSender.track", "track")}}被设置为指定的 track。
 - 发送方的相关流集被设置为传递到这个方法的流列表，**`stream…`**
@@ -134,15 +134,15 @@ pc.ontrack = ({streams: [stream]} => videoElem.srcObject = stream;
 
 如果现有的发送方不存在可重用，则创建一个新的发送方。这也会导致必须存在的关联对象的创建。创建新发送方的过程会导致以下更改：
 
-- 使用指定的**`track`**和**`streams`**集创建新的**`RTCRtpSender`**。
-- 新{{domxref("RTCRtpReceiver")}}被创建，新{{domxref("MediaStreamTrack")}}作为它的{{domxref("RTCRtpReceiver.track", "track")}} 属性 (不是调用**`addTrack()`**时指定作为参数的 track)。这跟踪的{{domxref("MediaStreamTrack.kind", "kind")}}设置为与作为输入参数提供的音轨类型匹配。
+- 使用指定的 **`track`** 和 **`streams`** 集创建新的**`RTCRtpSender`**。
+- 新{{domxref("RTCRtpReceiver")}}被创建，新{{domxref("MediaStreamTrack")}}作为它的{{domxref("RTCRtpReceiver.track", "track")}} 属性 (不是调用 **`addTrack()`** 时指定作为参数的 track)。这跟踪的{{domxref("MediaStreamTrack.kind", "kind")}}设置为与作为输入参数提供的音轨类型匹配。
 - 将创建一个新的{{domxref("RTCRtpTransceiver")}}，并与新的发送方和接收方关联。
 - 新的 **`transceiver`** 的 {{domxref("RTCRtpTransceiver.direction", "direction")}} 设置为"**`sendrecv`**"。
 - 新的 **`transceiver`** 被添加到 RTCPeerConnection 的收发器集合中。
 
 ## 实例
 
-这个例子是从文章中给出的[Signaling and video calling](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)及其相应的示例代码中提取的。它来自那里的**`handleVideoOfferMsg()`**方法，该方法在从远程对等方接收到报价消息时被调用。
+这个例子是从文章中给出的[Signaling and video calling](/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)及其相应的示例代码中提取的。它来自那里的 **`handleVideoOfferMsg()`** 方法，该方法在从远程对等方接收到报价消息时被调用。
 
 ```js
 var mediaConstraints = {
@@ -164,7 +164,7 @@ pc.setRemoteDescription(desc).then(function () {
 
 这段代码获取从远程对等方接收到的 SDP，并构造一个新的{{domxref("RTCSessionDescription")}}传递到{{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}。成功之后，它使用{{domxref(" mediadevic. getusermedia()")}}获得对本地摄像头和麦克风的访问。
 
-如果成功，结果流将被分配为变量**`previewElement`**引用的{{HTMLElement("video")}}元素的源。
+如果成功，结果流将被分配为变量 **`previewElement`** 引用的{{HTMLElement("video")}}元素的源。
 
 最后一步是开始通过对等连接向调用者发送本地视频。通过遍历{{domxref("MediaStream.getTracks()")}}返回的列表，并将它们与作为其组件的流一起传递给**`addTrack()`**，从而在流中添加每条跟踪。
 

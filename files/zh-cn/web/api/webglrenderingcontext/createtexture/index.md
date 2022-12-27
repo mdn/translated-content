@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/createTexture
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.createTexture()`** 方法创建并初始化了一个{{domxref("WebGLTexture")}} 目标。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.createTexture()`** 方法创建并初始化了一个{{domxref("WebGLTexture")}} 目标。
 
 ## 语法
 
@@ -22,7 +22,7 @@ WebGLTexture gl.createTexture();
 
 ## 示例
 
-另见 [Using textures in WebGL](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)上的[WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial)
+另见 [Using textures in WebGL](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)上的[WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial)
 
 ### 创建一个纹理
 

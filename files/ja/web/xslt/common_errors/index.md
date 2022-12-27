@@ -1,9 +1,6 @@
 ---
 title: 一般的な XSLT エラー
 slug: Web/XSLT/Common_errors
-tags:
-  - XSLT
-translation_of: Web/XSLT/Common_errors
 ---
 ### MIME タイプ
 

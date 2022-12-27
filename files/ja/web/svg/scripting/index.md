@@ -1,15 +1,6 @@
 ---
 title: スクリプティング
 slug: Web/SVG/Scripting
-tags:
-  - グラフィック
-  - SVG
-  - スクリプト
-  - default
-  - eventListeners
-  - preventing
-  - setProperty
-translation_of: Web/SVG/Scripting
 ---
 ブラウザーの既定の動作を `evt.preventDefault( )` メソッドで上書きしたり、イベントリスナーを `element.addEventListener(event, function, useCapture)` という構文でオブジェクトに追加したり、要素のプロパティを `svgElement.style.setProperty("fill-opacity", "0.0", "")` などで設定することが可能です。 3 つの引数がすべてプロパティを設定していることに注意してください。
 

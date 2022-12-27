@@ -6,7 +6,7 @@ original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 ---
 <h2 id="Introdução">Introdução</h2>
 
-<p>Por que uma reintrodução? Porque <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a> é conhecida como <a class="external" href="http://javascript.crockford.com/javascript.html">a mais incompreendida linguagem de programação do mundo</a>. Embora muitas vezes ridicularizada como um brinquedo, <span id="result_box" lang="pt"><span class="hps">por baixo de sua</span> <span class="hps">simplicidade enganosa</span> estão <span class="hps">alguns recursos poderosos da linguagem, </span></span><span id="result_box" lang="pt"><span class="hps">que</span> <span class="hps">agora</span> <span class="hps">é usado por</span> <span class="hps">um número incrível de</span> <span class="hps">aplicações</span> <span class="hps">de alto nível</span><span>, mostrando</span> <span class="hps">que o conhecimento</span> <span class="hps">mais profundo</span> <span class="hps">desta tecnologia é</span> <span class="hps">uma habilidade importante para</span> <span class="hps">qualquer</span> <span class="hps">desenvolvedor</span> <span class="hps">web, mobile ou desktop. </span></span></p>
+<p>Por que uma reintrodução? Porque <a href="/en/JavaScript" title="en/JavaScript">JavaScript</a> é conhecida como <a class="external" href="http://javascript.crockford.com/javascript.html">a mais incompreendida linguagem de programação do mundo</a>. Embora muitas vezes ridicularizada como um brinquedo, por baixo de sua simplicidade enganosa estão alguns recursos poderosos da linguagem, que agora é usado por um número incrível de aplicações de alto nível, mostrando que o conhecimento mais profundo desta tecnologia é uma habilidade importante para qualquer desenvolvedor web, mobile ou desktop. </p>
 
 <p>É sempre bom começar com a história da linguagem. A JavaScript foi criada em 1995 por Brendan Eich, um engenheiro da Netscape, e lançada pela primeira vez com o Netscape 2 no início de 1996. Foi inicialmente chamada de LiveScript, mas logo foi rebatizada, em uma decisão de marketing malfeita, para tentar crescer sobre a popularidade da linguagem Java da Sun Microsystem - apesar das duas terem muito pouco em comum. Esta tem sido uma fonte de confusão desde então.</p>
 
@@ -58,7 +58,7 @@ original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 <pre class="eval">0.1 + 0.2 == 0.30000000000000004
 </pre>
 
-<p><span lang="pt"><span class="hps">Na prática,</span> <span class="hps">valores inteiros</span> <span class="hps">são tratados como</span> <span class="hps">inteiros</span> <span class="hps">de 32 bits</span> <span class="atn hps">(</span><span>e são armazenados</span> <span class="hps">dessa forma</span> <span class="hps">em algumas implementações</span> <span class="hps">do navegador)</span><span class="alt-edited">, que podem ser</span> <span class="alt-edited hps">importantes para as operações</span> <span class="hps">bit a bit</span><span>.</span> <span class="hps">Para mais detalhes</span><span>, consulte</span> <span class="hps"><a class="external" href="http://www.hunlock.com/blogs/The_Complete_Javascript_Number_Reference">The Complete JavaScript Number Reference</a>.</span></span></p>
+<p>Na prática, valores inteiros são tratados como inteiros de 32 bits (e são armazenados dessa forma em algumas implementações do navegador), que podem ser importantes para as operações bit a bit. Para mais detalhes, consulte <a class="external" href="http://www.hunlock.com/blogs/The_Complete_Javascript_Number_Reference">The Complete JavaScript Number Reference</a>.</p>
 
 <p>Os <a href="/en/JavaScript/Reference/Operators/Arithmetic_Operators">operadores numéricos</a> padrões são suportados, incluindo adição, subtração, módulo (ou resto) aritmético e assim por diante. Há também um objeto embutido que eu esqueci de mencionar mais cedo chamado <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math">Math</a> para manipular funções e constantes matemáticas mais avançadas:</p>
 
@@ -122,7 +122,7 @@ false
 false
 </pre>
 
-<div class="note"><strong>Nota:</strong> As funções <a href="/en/JavaScript/Reference/Global_Objects/parseInt" title="en/JavaScript/Reference/Global Objects/parseInt"><code>parseInt()</code></a> e <code><a href="/en/JavaScript/Reference/Global_Objects/parseFloat" title="en/JavaScript/Reference/Global Objects/parseFloat">parseFloat()</a></code> fazem a conversão da string até alcançarem um caracter que não é válido para o formato numérico especificado, então elas retornam o número convertido até aquele ponto. Contudo, o operador "+" simplesmente converte a string em <code>NaN</code> se tiver algum caracter inválido nela. Apenas tente por si mesmo converter a string "10.2abc" usando cada um desses métodos <span style="line-height: 1.5;">no console </span><span style="line-height: 1.5;">e entenderá melhor essas diferenças.</span></div>
+<div class="note"><strong>Nota:</strong> As funções <a href="/en/JavaScript/Reference/Global_Objects/parseInt" title="en/JavaScript/Reference/Global Objects/parseInt"><code>parseInt()</code></a> e <code><a href="/en/JavaScript/Reference/Global_Objects/parseFloat" title="en/JavaScript/Reference/Global Objects/parseFloat">parseFloat()</a></code> fazem a conversão da string até alcançarem um caracter que não é válido para o formato numérico especificado, então elas retornam o número convertido até aquele ponto. Contudo, o operador "+" simplesmente converte a string em <code>NaN</code> se tiver algum caracter inválido nela. Apenas tente por si mesmo converter a string "10.2abc" usando cada um desses métodos no console e entenderá melhor essas diferenças.</div>
 
 <h2 id="Strings">Strings</h2>
 
@@ -167,7 +167,7 @@ true
 
 <p>Contudo, essa é uma necessidade rara, uma vez que JavaScript silenciosamente fará essa conversão quando for esperado um boolean, como em uma instrução <code>if</code>. Por isso, algumas vezes falamos simplesmente em "valores true" e "valores false" nos referindo a valores que se tornaram <code>true</code> e <code>false</code>, respectivamente, quando convertidos em boolean. Alternativamente, esses valores podem ser chamados de "truthy" (verdade/verdadeiro) e "falsy" (falso/falsidade), respectivamente.</p>
 
-<p>Operações booleanas como <code>&amp;&amp;</code> (<em>and </em><span style="line-height: 1.5;">lógico</span><span style="line-height: 1.5;">), </span><code style="font-style: normal; line-height: 1.5;">||</code><span style="line-height: 1.5;"> (</span><em>or </em><span style="line-height: 1.5;">lógico</span><span style="line-height: 1.5;">), e </span><code style="font-style: normal; line-height: 1.5;">!</code><span style="line-height: 1.5;"> (</span><em>not </em><span style="line-height: 1.5;">lógico</span><span style="line-height: 1.5;">) são suportadas.</span></p>
+<p>Operações booleanas como <code>&amp;&amp;</code> (<em>and </em>lógico), <code style="font-style: normal; line-height: 1.5;">||</code> (<em>or </em>lógico), e <code style="font-style: normal; line-height: 1.5;">!</code> (<em>not </em>lógico) são suportadas.</p>
 
 <h2 id="Variáveis">Variáveis</h2>
 
@@ -181,7 +181,7 @@ var name = "simon";
 
 <p>Uma diferença importante de outras linguagens como Java é que em JavaScript, blocos não tem escopo; somente funções tem escopo. De modo que se uma variável é definida usando <code>var</code> numa instrução composta (por exemplo dentro de uma estrutura de controle <code>if</code>), ela será visível por toda a função.</p>
 
-<p>Obs: A definição de variáveis usando o <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">let</span></font> foi introduzida no ECMAScript 6. O <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">let</span></font> permite escopo de bloco, ou seja, é possível definir uma variável em um bloco <code>if</code>, e esta variável ter escopo limitado ao bloco <code>if</code>- por exemplo.</p>
+<p>Obs: A definição de variáveis usando o let foi introduzida no ECMAScript 6. O let permite escopo de bloco, ou seja, é possível definir uma variável em um bloco <code>if</code>, e esta variável ter escopo limitado ao bloco <code>if</code>- por exemplo.</p>
 
 <h2 id="Operadores">Operadores</h2>
 
@@ -193,7 +193,7 @@ x = x + 5
 
 <p>Você pode usar <code>++</code> e <code>--</code> para incrementar ou decrementar respectivamente. Eles podem ser usados como operadores tanto antes como depois.</p>
 
-<p>O <a href="/en/JavaScript/Reference/Operators/String_Operators" title="en/Core_JavaScript_1.5_Reference/Operators/String_Operators">operador</a> <code style="line-height: 1.5;"><a href="/en/JavaScript/Reference/Operators/String_Operators" style="line-height: 1.5;" title="en/Core_JavaScript_1.5_Reference/Operators/String_Operators">+</a> </code><span style="line-height: 1.5;">também faz concatenação de string:</span></p>
+<p>O <a href="/en/JavaScript/Reference/Operators/String_Operators" title="en/Core_JavaScript_1.5_Reference/Operators/String_Operators">operador</a> <code style="line-height: 1.5;"><a href="/en/JavaScript/Reference/Operators/String_Operators" style="line-height: 1.5;" title="en/Core_JavaScript_1.5_Reference/Operators/String_Operators">+</a> </code>também faz concatenação de string:</p>
 
 <pre class="brush: js">&gt; "hello" + " world"
 hello world
@@ -457,7 +457,7 @@ undefined
 <pre class="brush: js">a[a.length] = item;                 // é o mesmo que a.push(item);
 </pre>
 
-<p><span style="line-height: 1.5;">Vetores vem com vários métodos:</span></p>
+<p>Vetores vem com vários métodos:</p>
 
 <table style="height: 124px; width: 598px;">
  <thead>
@@ -469,11 +469,11 @@ undefined
  <tbody>
   <tr>
    <td><code>a.toString()</code></td>
-   <td>Retorna uma string com o <span style="font-family: courier new,andale mono,monospace;">toString()</span>de cada elemento separado por vírgulas.</td>
+   <td>Retorna uma string com o toString()de cada elemento separado por vírgulas.</td>
   </tr>
   <tr>
    <td><code>a.toLocaleString()</code></td>
-   <td>Retorna uma string com o <span style="font-family: courier new,andale mono,monospace;">toLocaleString()</span>de cada elemento separado por vírgulas.</td>
+   <td>Retorna uma string com o toLocaleString()de cada elemento separado por vírgulas.</td>
   </tr>
   <tr>
    <td><code>a.concat(item[, itemN])</code></td>
@@ -481,7 +481,7 @@ undefined
   </tr>
   <tr>
    <td><code>a.join(sep)</code></td>
-   <td>Converte um vetor em uma string com os valores do vetor separados pelo valor do parâmetro <span style="font-family: courier new,andale mono,monospace;">sep</span></td>
+   <td>Converte um vetor em uma string com os valores do vetor separados pelo valor do parâmetro sep</td>
   </tr>
   <tr>
    <td><code>a.pop()</code></td>
@@ -533,7 +533,7 @@ undefined
 <p>Os parâmetros nomeados se parecem mais com orientações do que com outra coisa. Você pode chamar a função sem passar o parâmetro esperado, nesse caso eles receberão o valor <code>undefined</code>.</p>
 
 <pre class="brush: js">&gt; add()
-NaN // Você não pode executar adição em <span style="background-color: #ffffff; font-family: courier new,andale mono,monospace; line-height: 1.5;">undefined</span>
+NaN // Você não pode executar adição em undefined
 </pre>
 
 <p>Você também pode passar mais argumentos do que a função está esperando:</p>

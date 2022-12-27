@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/viewport
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.viewport()`** 方法，用来设置视口，即指定从标准设备到窗口坐标的 x、y 仿射变换。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.viewport()`** 方法，用来设置视口，即指定从标准设备到窗口坐标的 x、y 仿射变换。
 
 ## 语法
 

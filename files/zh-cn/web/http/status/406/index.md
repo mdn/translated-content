@@ -28,4 +28,4 @@ HTTP 协议中的 **`406 Not Acceptable`** 状态码表示客户端错误，指�
 
 - {{HTTPHeader("Accept-Language")}}
 - {{HTTPHeader("Accept-Charset")}}
-- HTTP [内容协商](/en-US/docs/Web/HTTP/Content_negotiation)
+- HTTP [内容协商](/zh-CN/docs/Web/HTTP/Content_negotiation)

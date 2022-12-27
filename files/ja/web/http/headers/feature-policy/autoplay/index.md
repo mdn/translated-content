@@ -1,16 +1,6 @@
 ---
 title: 'Feature-Policy: autoplay'
 slug: Web/HTTP/Headers/Feature-Policy/autoplay
-tags:
-  - ディレクティブ
-  - 機能ポリシー
-  - Feature-Policy
-  - HTTP
-  - リファレンス
-  - autoplay
-  - 実験的
-browser-compat: http.headers.Feature-Policy.autoplay
-translation_of: Web/HTTP/Headers/Feature-Policy/autoplay
 ---
 {{HTTPSidebar}} {{SeeCompatTable}}
 

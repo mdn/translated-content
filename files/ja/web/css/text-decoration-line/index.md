@@ -1,14 +1,6 @@
 ---
 title: text-decoration-line
 slug: Web/CSS/text-decoration-line
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS テキスト装飾
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.text-decoration-line
-translation_of: Web/CSS/text-decoration-line
 ---
 {{CSSRef}}
 

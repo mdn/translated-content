@@ -1,14 +1,6 @@
 ---
 title: grid-row
 slug: Web/CSS/grid-row
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.grid-row
-translation_of: Web/CSS/grid-row
 ---
 {{CSSRef}}
 

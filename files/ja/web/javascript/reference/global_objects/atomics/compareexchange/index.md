@@ -1,13 +1,6 @@
 ---
 title: Atomics.compareExchange()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.compareExchange
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 ---
 {{JSRef}}
 

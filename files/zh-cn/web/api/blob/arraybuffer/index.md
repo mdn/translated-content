@@ -43,5 +43,5 @@ var buffer = await blob.arrayBuffer();
 ## 另见
 
 - {{domxref("Body.arrayBuffer()")}}
-- [Streams API](/en-US/docs/Web/API/Streams_API)
+- [Streams API](/zh-CN/docs/Web/API/Streams_API)
 - {{domxref("FileReader.readAsArrayBuffer()")}}

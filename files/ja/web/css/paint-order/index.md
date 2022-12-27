@@ -1,14 +1,6 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-tags:
-  - CSS
-  - Experimental
-  - Reference
-  - SVG
-  - ウェブ
-  - 描画順序
-translation_of: Web/CSS/paint-order
 ---
 {{CSSRef}}{{SeeCompatTable}}
 

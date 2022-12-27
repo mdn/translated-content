@@ -53,7 +53,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("style-src")}}
   - : 限制层叠样式表文件源。
 - {{CSP("webrtc-src")}} {{experimental_inline}}
-  - : 指定[WebRTC](https://developer.mozilla.org/docs/Web/API/WebRTC_API)连接的合法源地址。
+  - : 指定[WebRTC](/docs/Web/API/WebRTC_API)连接的合法源地址。
 - {{CSP("worker-src")}}
   - : 限制 {{domxref("Worker")}}、{{domxref("SharedWorker")}} 或 {{domxref("ServiceWorker")}} 脚本源。
 

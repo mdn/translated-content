@@ -8,7 +8,7 @@ slug: Web/API/Event/type
 
 传给 {{ domxref("EventTarget.addEventListener()") }} 和 {{ domxref("EventTarget.removeEventListener()") }} 方法的 event 参数的值是忽略大小写的。
 
-要了解所有的事件类型，请查看 [Mozilla 事件类型参考](/en-US/docs/Mozilla_event_reference).
+要了解所有的事件类型，请查看 [Mozilla 事件类型参考](/zh-CN/docs/Mozilla_event_reference).
 
 ## 语法
 

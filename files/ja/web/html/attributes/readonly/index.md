@@ -1,14 +1,6 @@
 ---
 title: 'HTML 属性: readonly'
 slug: Web/HTML/Attributes/readonly
-tags:
-  - 属性
-  - Attributes
-  - 制約検証
-  - フォーム
-  - required
-spec-urls: https://html.spec.whatwg.org/multipage/forms.html#attr-input-readonly
-translation_of: Web/HTML/Attributes/readonly
 ---
 
 {{HTMLSidebar}}

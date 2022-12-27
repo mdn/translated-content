@@ -5,11 +5,11 @@ translation_of: Web/API/IDBCursor
 ---
 <p>{{APIRef("IndexedDB")}}</p>
 
-<p>O <code><strong>IDBCursor </strong></code>é uma interface da <a href="/en-US/docs/IndexedDB">API IndexedDB</a> que representa o <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor">cursor</a> para atravessar ou interagir <span id="result_box" lang="pt"><span class="hps">sobre</span> <span class="hps">vários registros</span> <span class="hps">em</span> <span class="hps">um banco de dados</span><span>.</span></span></p>
+<p>O <code><strong>IDBCursor </strong></code>é uma interface da <a href="/en-US/docs/IndexedDB">API IndexedDB</a> que representa o <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor">cursor</a> para atravessar ou interagir sobre vários registros em um banco de dados.</p>
 
-<p><span id="result_box" lang="pt"><span class="hps">O</span> <span class="hps">cursor</span> <span class="hps">tem uma fonte</span> <span class="hps">que indica qual</span> <span class="hps">índice ou</span> <span class="hps">armazenamento o objeto</span> <span class="hps">está sobre a</span></span><span lang="pt"><span class="hps"> iteração</span><span>.</span> <span class="hps">Ele tem uma posição</span> <span class="hps">dentro do intervalo</span><span>,</span> <span class="hps">e</span> <span class="hps">move-se</span> <span class="hps">numa direcção</span> <span class="hps">que</span> <span class="hps">é</span> <span class="hps">aumentar ou diminuir</span> <span class="hps">na ordem</span> <span class="hps">de</span> <span class="hps">chaves</span> <span class="hps">ficha</span><span>.</span> <span class="hps">O</span> <span class="hps">cursor</span> <span class="hps">permite que um aplicativo</span> <span class="hps">para processar</span> <span class="hps">de forma assíncrona</span> <span class="hps">todos os registros</span> <span class="hps">na faixa</span> <span class="hps">do</span> <span class="hps">cursor.</span></span></p>
+<p>O cursor tem uma fonte que indica qual índice ou armazenamento o objeto está sobre a iteração. Ele tem uma posição dentro do intervalo, e move-se numa direcção que é aumentar ou diminuir na ordem de chaves ficha. O cursor permite que um aplicativo para processar de forma assíncrona todos os registros na faixa do cursor.</p>
 
-<p><span id="result_box" lang="pt"><span class="hps">Pode</span> <span class="hps">ter um número ilimitado</span> <span class="hps">de</span> <span class="hps">cursores</span> <span class="hps">ao mesmo</span> <span class="hps">tempo</span><span>.</span> <span class="hps">Você sempre consegue</span> <span class="hps">o mesmo objeto</span> <span class="hps">IDBCursor</span> <span class="hps">representando</span> <span class="hps">um determinado</span> <span class="hps">cursor.</span> <span class="hps">As operações são</span> <span class="hps">realizadas</span> <span class="hps">na</span> <span class="hps">loja de</span> <span class="hps">índice ou</span> <span class="hps">objeto subjacente</span><span>.</span></span></p>
+<p>Pode ter um número ilimitado de cursores ao mesmo tempo. Você sempre consegue o mesmo objeto IDBCursor representando um determinado cursor. As operações são realizadas na loja de índice ou objeto subjacente.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -17,26 +17,26 @@ translation_of: Web/API/IDBCursor
 
 <dl>
  <dt>{{domxref("IDBCursor.advance()")}}</dt>
- <dd><span id="result_box" lang="pt"><span class="hps">Define</span> <span class="hps">o número de vezes</span> <span class="hps">um</span> <span class="hps">cursor</span> <span class="hps">deve mover</span> <span class="hps">a sua posição</span> <span class="hps">para a frente.</span></span></dd>
+ <dd>Define o número de vezes um cursor deve mover a sua posição para a frente.</dd>
  <dt>{{domxref("IDBCursor.continue()")}}</dt>
- <dd><span id="result_box" lang="pt"><span class="hps">Avança o</span> <span class="hps">cursor</span> <span class="hps">para a próxima posição</span> <span class="hps">ao longo de sua</span> <span class="hps">direção,</span> <span class="hps">para o item</span> <span class="hps">cuja chave</span> <span class="hps">corresponde ao</span> <span class="hps">parâmetro <code>chave</code></span><code> </code><span class="hps">opcional.</span></span></dd>
+ <dd>Avança o cursor para a próxima posição ao longo de sua direção, para o item cuja chave corresponde ao parâmetro <code>chave</code><code> </code>opcional.</dd>
  <dt>{{domxref("IDBCursor.delete()")}}</dt>
- <dd>Retorna um {{domxref("IDBRequest")}} <span id="result_box" lang="pt"><span class="hps">objeto</span><span>,</span> <span class="hps">e</span><span>,</span> <span class="hps">em um segmento separado</span><span>,</span> <span class="hps">exclui o registro</span> <span class="hps">na posição do</span> <span class="hps">cursor</span><span>,</span> <span class="hps">sem alterar</span> <span class="hps">a posição do</span> <span class="hps">cursor.</span> <span class="hps">Isso pode ser usado</span> <span class="hps">para excluir registros</span> <span class="hps">específicos.</span></span></dd>
+ <dd>Retorna um {{domxref("IDBRequest")}} objeto, e, em um segmento separado, exclui o registro na posição do cursor, sem alterar a posição do cursor. Isso pode ser usado para excluir registros específicos.</dd>
  <dt>{{domxref("IDBCursor.update()")}}</dt>
- <dd>Retorna um {{domxref("IDBRequest")}} objeto, <span id="result_box" lang="pt"><span class="hps">e</span><span>,</span> <span class="hps">em um segmento separado</span><span>,</span> <span class="hps">atualiza o valor</span> <span class="hps">na posição atual</span> <span class="hps">do</span> <span class="hps">cursor</span> <span class="hps">em armazenar o objeto</span><span>.</span> <span class="hps">Isso pode ser usado</span> <span class="hps">para atualizar registros</span> <span class="hps">específicos.</span></span></dd>
+ <dd>Retorna um {{domxref("IDBRequest")}} objeto, e, em um segmento separado, atualiza o valor na posição atual do cursor em armazenar o objeto. Isso pode ser usado para atualizar registros específicos.</dd>
 </dl>
 
 <h2 id="Propriedades">Propriedades</h2>
 
 <dl>
  <dt>{{domxref("IDBCursor.source")}} {{readonlyInline}}</dt>
- <dd>Retorna um {{domxref("IDBObjectStore")}} ou {{domxref("IDBIndex")}} <span id="result_box" lang="pt"><span class="hps">que</span> <span class="hps">o cursor é</span> <span class="hps">a iteração</span><span>.</span> <span class="hps">Esta função</span> <span class="hps">nunca retorna</span> <span class="hps">nulo ou</span> <span class="hps">gera uma exceção</span><span>, mesmo se o</span> <span class="hps">cursor</span> <span class="hps">está actualmente a ser</span> <span class="hps">iterativo,</span> <span class="hps">tem</span> <span class="hps">iterated</span> <span class="hps">além de seu fim</span><span>,</span> <span class="hps">ou a sua</span> <span class="hps">operação não</span> <span class="hps">está ativa.</span></span></dd>
+ <dd>Retorna um {{domxref("IDBObjectStore")}} ou {{domxref("IDBIndex")}} que o cursor é a iteração. Esta função nunca retorna nulo ou gera uma exceção, mesmo se o cursor está actualmente a ser iterativo, tem iterated além de seu fim, ou a sua operação não está ativa.</dd>
  <dt>{{domxref("IDBCursor.direction")}} {{readonlyInline}}</dt>
- <dd><span id="result_box" lang="pt"><span class="hps">Retorna</span> <span class="hps">a direcção do</span> <span class="hps">percurso</span> <span class="hps">do cursor</span><span>.</span> <span class="hps">Veja</span> <span class="hps"><a href="#">constantes </a>para</span> <span class="hps">os possíveis valores.</span></span></dd>
+ <dd>Retorna a direcção do percurso do cursor. Veja <a href="#">constantes </a>para os possíveis valores.</dd>
  <dt>{{domxref("IDBCursor.key")}} {{readonlyInline}}</dt>
  <dd>Returns the key for the record at the cursor's position. If the cursor is outside its range, this is set to <code>undefined</code>. The cursor's key can be any data type.</dd>
  <dt>{{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}</dt>
- <dd><span id="result_box" lang="pt"><span class="hps">Retorna a chave</span> <span class="hps">para o registro</span> <span class="hps">na posição do</span> <span class="hps">cursor.</span> <span class="hps">Se o cursor estiver</span> <span class="hps">fora do seu</span> <span class="hps">alcance,</span> <span class="hps">isso é definido como</span> <span class="hps">indefinido.</span> <span class="hps">A chave do</span> <span class="hps">cursor</span> <span class="hps">pode ser qualquer</span> <span class="hps">tipo de dados.</span></span></dd>
+ <dd>Retorna a chave para o registro na posição do cursor. Se o cursor estiver fora do seu alcance, isso é definido como indefinido. A chave do cursor pode ser qualquer tipo de dados.</dd>
 </dl>
 
 <h2 id="Constants" name="Constants">Constantes</h2>
@@ -56,9 +56,9 @@ translation_of: Web/API/IDBCursor
 
 <h2 id="Example">Example</h2>
 
-<p>In this simple fragment we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. T<span style="line-height: 1.5;">he cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using </span><code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code><span style="line-height: 1.5;">. For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a></span><span style="line-height: 1.5;"> (</span><a href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a><span style="line-height: 1.5;">.)</span></p>
+<p>In this simple fragment we create a transaction, retrieve an object store, then use a cursor to iterate through all the records in the object store. The cursor does not require us to select the data based on a key; we can just grab all of it. Also note that in each iteration of the loop, you can grab data from the current record under the cursor object using <code style="font-style: normal; line-height: 1.5;">cursor.value.foo</code>. For a complete working example, see our <a href="https://github.com/mdn/IDBcursor-example/">IDBCursor example</a> (<a href="http://mdn.github.io/IDBcursor-example/" style="line-height: 1.5;">view example live</a>.)</p>
 
-<pre><span style="line-height: 1.5;">function displayData() {</span>
+<pre>function displayData() {
   var transaction = db.transaction(['rushAlbumList'], "readonly");
   var objectStore = transaction.objectStore('rushAlbumList');
 

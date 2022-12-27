@@ -1,16 +1,6 @@
 ---
 title: Intl.Collator.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
-tags:
-  - Collator
-  - 国際化
-  - Intl
-  - JavaScript
-  - ローカライズ
-  - メソッド
-  - リファレンス
-browser-compat: javascript.builtins.Intl.Collator.supportedLocalesOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 ---
 {{JSRef}}
 

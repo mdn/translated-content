@@ -1,14 +1,6 @@
 ---
 title: grid-column-end
 slug: Web/CSS/grid-column-end
-tags:
-  - CSS
-  - CSS グリッド
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.grid-column-end
-translation_of: Web/CSS/grid-column-end
 ---
 {{CSSRef}}
 

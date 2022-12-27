@@ -1,11 +1,6 @@
 ---
 title: <feColorMatrix>
 slug: Web/SVG/Element/feColorMatrix
-tags:
-  - Element
-  - SVG
-  - SVG Filter
-translation_of: Web/SVG/Element/feColorMatrix
 ---
 {{SVGRef}}
 

@@ -46,13 +46,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 <dl>
  <dt>{{jsxref("Atomics.wait()")}}</dt>
  <dd>
- <p>Verifica se a posição informada no array ainda contém a valor recebido e <span id="result_box" lang="pt"><span>dorme</span> <span>à espera</span> <span>ou</span> até o <span>tempo limite. Retorna </span></span> <code>"ok"</code>, <code>"not-equal"</code>, ou <code>"timed-out"</code>. <span id="result_box" lang="pt"><span>Se</span> a <span>espera não</span> for<span> permitida</span> <span>no agente</span> <span>de chamada</span> <span>ele irá lançar uma exceção</span> <span>de erro (muitos navegadores não permitem </span></span> <code>wait()</code> na thread main do navegador).</p>
+ <p>Verifica se a posição informada no array ainda contém a valor recebido e dorme à espera ou até o tempo limite. Retorna  <code>"ok"</code>, <code>"not-equal"</code>, ou <code>"timed-out"</code>. Se a espera não for permitida no agente de chamada ele irá lançar uma exceção de erro (muitos navegadores não permitem  <code>wait()</code> na thread main do navegador).</p>
  </dd>
  <dt>{{jsxref("Atomics.wake()")}}</dt>
  <dd>"Acorda" alguns agentes que estavam "dormindo" na lista de espera na posição recebida do array. Retorna o número de agentes que estão sendo "acordados".</dd>
  <dt>{{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}</dt>
  <dd>
- <p><span id="result_box" lang="pt"><span>Uma otimização</span> <span>primitiva</span> <span>que</span> <span>pode</span> <span>ser usada para</span> <span>determinar se deve ser usado</span> lock<span> ou</span> <span>operações</span> <span>atômicas. Retorna <code>true</code>, se</span> <span>uma operação</span> <span>atômica</span> <span>em matrizes</span> <span>de</span> um <span>dado</span> <span>tamanho do elemento</span> <span>vai</span> <span>ser</span> <span>implementado</span> <span>utilizando uma operação</span> <span>atômica</span> <span>de hardware</span> <span>(</span><span>como</span> <span>oposição a lock)</span><span>.</span> <span>Só para experientes</span><span>.</span></span></p>
+ <p>Uma otimização primitiva que pode ser usada para determinar se deve ser usado lock ou operações atômicas. Retorna <code>true</code>, se uma operação atômica em matrizes de um dado tamanho do elemento vai ser implementado utilizando uma operação atômica de hardware (como oposição a lock). Só para experientes.</p>
  </dd>
 </dl>
 

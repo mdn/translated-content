@@ -1,15 +1,6 @@
 ---
 title: <time-percentage>
 slug: Web/CSS/time-percentage
-tags:
-  - CSS
-  - CSS データ型
-  - データ型
-  - リファレンス
-  - time-percentage
-  - 単位
-  - 値
-translation_of: Web/CSS/time-percentage
 ---
 {{CSSRef}}
 

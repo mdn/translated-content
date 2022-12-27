@@ -1,15 +1,6 @@
 ---
 title: itemref
 slug: Web/HTML/Global_attributes/itemref
-tags:
-  - Attribute
-  - Global attribute
-  - HTML
-  - HTML Microdata
-  - Microdata
-  - Reference
-browser-compat: html.global_attributes.itemref
-translation_of: Web/HTML/Global_attributes/itemref
 ---
 {{HTMLSidebar("Global_attributes")}}
 

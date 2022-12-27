@@ -1,15 +1,6 @@
 ---
 title: 共有メモリーに関する変更予定
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Planned_changes
-tags:
-  - Fetch
-  - ガイド
-  - HTML
-  - JavaScript
-  - セキュリティ
-  - SharedArrayBuffer
-  - Spectre
-  - postMessage
 ---
 {{JSRef}}
 

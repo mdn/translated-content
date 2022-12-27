@@ -1,15 +1,6 @@
 ---
 title: Set.prototype.add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-  - set
-browser-compat: javascript.builtins.Set.add
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 ---
 {{JSRef}}
 

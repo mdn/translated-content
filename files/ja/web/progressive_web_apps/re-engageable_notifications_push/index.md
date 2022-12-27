@@ -1,14 +1,6 @@
 ---
 title: 通知とプッシュを利用して PWA を再エンゲージ可能にするには
 slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
-tags:
-  - Notifications
-  - PWAs
-  - Progressive web apps
-  - Push
-  - js13kGames
-  - progressive
-translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 {{PreviousMenuNext("Web/Progressive_web_apps/Installable_PWAs", "Web/Progressive_web_apps/Loading", "Web/Progressive_web_apps")}}
 

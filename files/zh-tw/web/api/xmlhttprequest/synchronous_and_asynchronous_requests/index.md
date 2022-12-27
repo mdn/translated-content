@@ -143,7 +143,7 @@ Line 5 checks the status code after the transaction is completed. If the result 
 
 ### Example: Synchronous HTTP request from a `Worker`
 
-One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/en/DOM/Worker).
+One of the few cases in which a synchronous request does not usually block execution is the use of `XMLHttpRequest` within a [`Worker`](/zh-TW/DOM/Worker).
 
 **`example.html`** (the main page):
 
@@ -166,13 +166,13 @@ One of the few cases in which a synchronous request does not usually block execu
 </html>
 ```
 
-**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) invocation):
+**`myFile.txt`** (the target of the synchronous [`XMLHttpRequest`](/zh-TW/DOM/XMLHttpRequest) invocation):
 
 ```plain
 Hello World!!
 ```
 
-**`myTask.js`** (the [`Worker`](/en/DOM/Worker)):
+**`myTask.js`** (the [`Worker`](/zh-TW/DOM/Worker)):
 
 ```js
 self.onmessage = function (event) {
@@ -191,7 +191,7 @@ It could be useful in order to interact in background with the server or to prel
 
 ### Irreplaceability of the synchronous use
 
-There are some few cases in which the synchronous usage of XMLHttpRequest is not replaceable. This happens for example during the [`window.onunload`](/en/DOM/window.onunload) and [`window.onbeforeunload`](/en/DOM/window.onbeforeunload) events ([see also below](#XMLHttpRequests_being_stopped)).
+There are some few cases in which the synchronous usage of XMLHttpRequest is not replaceable. This happens for example during the [`window.onunload`](/zh-TW/DOM/window.onunload) and [`window.onbeforeunload`](/zh-TW/DOM/window.onbeforeunload) events ([see also below](#XMLHttpRequests_being_stopped)).
 
 Sending the usual XMLHttpRequest when the page unloaded poses a problem with the asynchronous response from the server: by the time the response comes back, the page has unloaded and the callback function won’t exist anymore. This generates a JavaScript “function is not defined” error.
 

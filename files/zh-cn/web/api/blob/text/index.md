@@ -42,5 +42,5 @@ var text = await blob.text();
 ## 另见
 
 - {{domxref("Body.text()")}}
-- [Streams API](/en-US/docs/Web/API/Streams_API)
+- [Streams API](/zh-CN/docs/Web/API/Streams_API)
 - {{domxref("FileReader.readAsText()")}}

@@ -12,14 +12,14 @@ slug: Web/SVG/Element/marker
 
 ## 示例
 
-» [marker.svg](https://developer.mozilla.org/files/3267/marker.svg)
+» [marker.svg](/files/3267/marker.svg)
 
 ## 属性
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -38,7 +38,7 @@ slug: Web/SVG/Element/marker
 
 ## DOM 接口
 
-该元素实现了[`SVGMarkerElement`](/en/DOM/SVGMarkerElement) 接口。
+该元素实现了[`SVGMarkerElement`](/zh-CN/DOM/SVGMarkerElement) 接口。
 
 ## Example
 

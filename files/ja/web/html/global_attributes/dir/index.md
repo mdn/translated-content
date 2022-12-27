@@ -1,12 +1,6 @@
 ---
 title: dir
 slug: Web/HTML/Global_attributes/dir
-tags:
-  - BiDi
-  - Global attributes
-  - HTML
-  - Reference
-translation_of: Web/HTML/Global_attributes/dir
 ---
 {{HTMLSidebar("Global_attributes")}}
 

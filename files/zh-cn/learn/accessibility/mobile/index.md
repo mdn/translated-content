@@ -12,7 +12,7 @@ slug: Learn/Accessibility/Mobile
       <th scope="row">前置条件：</th>
       <td>
         基本的计算机素养，对 Javascript,html,css 有基本的认识，对<a
-          href="/en-US/docs/Learn/Accessibility"
+          href="/zh-CN/docs/Learn/Accessibility"
           >之前的课程</a
         >有一定的理解。
       </td>

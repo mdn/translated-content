@@ -110,7 +110,7 @@ slug: Web/HTML/Element/Input/reset
 
 您可以在运行时通过简单地将 `disable` 设置为 `true` 或 `false` 来启用和禁用按钮。在 JavaScript 中，使用`btn.disabled = true` 或 `btn.disabled = false`。
 
-> **备注：** 有关启用和禁用按钮的更多想法，请参见 [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 页面。
+> **备注：** 有关启用和禁用按钮的更多想法，请参见 [`<input type="button">`](/zh-CN/docs/Web/HTML/Element/input/button#Disabling_and_enabling_a_button) 页面。
 
 ## 验证方式
 

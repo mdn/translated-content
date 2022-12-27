@@ -31,7 +31,7 @@ if (window.confirm("Do you really want to leave?")) {
 
 The following text is shared between this article, DOM:window\.prompt and DOM:window\.alert 对话框是弹出式 (modal) 的 (也即 alert 样式，译者注). 直到这个对话框被点击后，后面的脚本才会运行。请勿滥用此功能，这里列出了很多个理由: [请放弃使用对话框来确认信息](http://alistapart.com/article/neveruseawarning).
 
-[Mozilla Chrome](/en-US/Chrome) 的用户 (比如 Firefox 插件开发者) 应该使用`nsIPromptService`这个方法。
+[Mozilla Chrome](/zh-CN/Chrome) 的用户 (比如 Firefox 插件开发者) 应该使用`nsIPromptService`这个方法。
 
 Chrome 浏览器版本 V46.0 开始屏蔽内部{{htmlelement("iframe")}}元素，除非用户在沙箱内开启了`allow-modal 选项。`
 

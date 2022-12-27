@@ -83,4 +83,4 @@ spriteFrames, {
 - [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API)
 - {{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}, and {{domxref("AnimationEffect.updateTiming()")}} all accept an object of timing properties including this one.
 - The value of this property corresponds to the one in {{domxref("EffectTiming")}} (which is returned from {{domxref("AnimationEffect.getTiming()")}} and {{domxref("AnimationEffect.getComputedTiming()")}}).
-- CSS's [`animation-timing-function`](/en-US/docs/Web/CSS/animation-timing-function) and [`transition-timing-function`](/en-US/docs/Web/CSS/transition-timing-function).
+- CSS's [`animation-timing-function`](/zh-CN/docs/Web/CSS/animation-timing-function) and [`transition-timing-function`](/zh-CN/docs/Web/CSS/transition-timing-function).

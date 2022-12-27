@@ -1,14 +1,6 @@
 ---
 title: ruby-align
 slug: Web/CSS/ruby-align
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS ルビ
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.ruby-align
-translation_of: Web/CSS/ruby-align
 ---
 {{CSSRef}}
 

@@ -13,20 +13,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 ## 语法
 
 ```js
-// Arrow function
-findLastIndex((element) => { /* ... */ } )
-findLastIndex((element, index) => { /* ... */ } )
-findLastIndex((element, index, array) => { /* ... */ } )
+// 箭头函数
+findLastIndex((element) => { /* … */ } )
+findLastIndex((element, index) => { /* … */ } )
+findLastIndex((element, index, array) => { /* … */ } )
 
-// Callback function
+// 回调函数
 findLastIndex(callbackFn)
 findLastIndex(callbackFn, thisArg)
 
-// Inline callback function
-findLastIndex(function(element) { /* ... */ })
-findLastIndex(function(element, index) { /* ... */ })
-findLastIndex(function(element, index, array){ /* ... */ })
-findLastIndex(function(element, index, array) { /* ... */ }, thisArg)
+// 内联回调函数
+findLastIndex(function(element) { /* … */ })
+findLastIndex(function(element, index) { /* … */ })
+findLastIndex(function(element, index, array){ /* … */ })
+findLastIndex(function(element, index, array) { /* … */ }, thisArg)
 ```
 
 ### 参数

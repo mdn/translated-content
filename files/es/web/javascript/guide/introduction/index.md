@@ -132,8 +132,8 @@ En las siguientes páginas, esta guía te presenta la sintaxis de JavaScript y l
 
 Pero por ahora, recuerda incluir siempre el `(function() { "use strict";` antes de tu código, y agrega `})();` al final de tu código. Aprenderás {{Glossary("IIFE", "qué significa IIFE")}} , pero por ahora puedes pensar que hacen lo siguiente:
 
-1.  Mejoran enormemente el rendimiento.
-2.  Evitan la semántica estúpida en JavaScript que hace tropezar a los principiantes.
-3.  Evitan que los fragmentos de código ejecutados en la consola interactúen entre sí (por ejemplo, que algo creado en una ejecución de consola se utilice para una ejecución de consola diferente).
+1. Mejoran enormemente el rendimiento.
+2. Evitan la semántica estúpida en JavaScript que hace tropezar a los principiantes.
+3. Evitan que los fragmentos de código ejecutados en la consola interactúen entre sí (por ejemplo, que algo creado en una ejecución de consola se utilice para una ejecución de consola diferente).
 
 {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}

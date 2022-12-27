@@ -1,19 +1,6 @@
 ---
 title: '<blockquote>: ブロック引用要素'
 slug: Web/HTML/Element/blockquote
-tags:
-  - Blockquote
-  - HTML
-  - HTML コンテンツグループ化
-  - HTML:フローコンテンツ
-  - HTML:区分化ルート
-  - HTML:知覚可能コンテンツ
-  - Reference
-  - Web
-  - ウェブ
-  - 引用
-  - 要素
-translation_of: Web/HTML/Element/blockquote
 ---
 {{HTMLRef}}
 

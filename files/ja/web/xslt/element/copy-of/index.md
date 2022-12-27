@@ -1,12 +1,6 @@
 ---
 title: <xsl:copy-of>
 slug: Web/XSLT/Element/copy-of
-tags:
-  - XSLT
-  - copy-of
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/copy-of
 ---
 {{ XsltRef() }}
 

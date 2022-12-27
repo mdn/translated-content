@@ -4,7 +4,7 @@ slug: Web/API/PaymentAddress
 ---
 {{SeeCompatTable}}{{APIRef("Payment Request API")}}
 
-The **`PaymentAddress`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) stores address information.
+The **`PaymentAddress`** interface of the [Payment Request API](/zh-CN/docs/Web/API/Payment_Request_API) stores address information.
 
 ## Properties
 

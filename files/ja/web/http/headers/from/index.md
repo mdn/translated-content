@@ -1,11 +1,6 @@
 ---
 title: From
 slug: Web/HTTP/Headers/From
-tags:
-  - HTTP
-  - Reference
-  - ヘッダー
-translation_of: Web/HTTP/Headers/From
 ---
 {{HTTPSidebar}}
 

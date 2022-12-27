@@ -37,7 +37,7 @@ slug: >-
 
 为了计算出有多少可用空间能布局于 flex 子元素，浏览器必须知道这个 item 有多大才能开始。它是如何解决没有应用于绝对单位的宽度和高度的 flex 子元素？
 
-在 [`min-content`](/en-US/docs/Web/CSS/width#min-content) 和 [`max-content`](/en-US/docs/Web/CSS/width#max-content) 的 CSS 中有一个概念— 这些关键字定义在 [CSS Intrinsic and Extrinsic Sizing Specification](https://drafts.csswg.org/css-sizing-3/#width-height-keywords), 并且可以用一个 [length](/zh-CN/docs/Web/CSS/length)单位代替。
+在 [`min-content`](/zh-CN/docs/Web/CSS/width#min-content) 和 [`max-content`](/zh-CN/docs/Web/CSS/width#max-content) 的 CSS 中有一个概念— 这些关键字定义在 [CSS Intrinsic and Extrinsic Sizing Specification](https://drafts.csswg.org/css-sizing-3/#width-height-keywords), 并且可以用一个 [length](/zh-CN/docs/Web/CSS/length)单位代替。
 
 例如下面的例子，我有两段包含一个文本字符串的段落。第一段设置了`min-content`的宽度。在支持这个关键字的浏览器你可以看见文本已尽可能抓住机会来自动换行，变得尽可能小且没有溢出。此之后就是那个字符串的 min-content 大小。本质上讲，字符串中最长的单词决定了大小。
 

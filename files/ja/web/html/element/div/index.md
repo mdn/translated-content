@@ -1,17 +1,6 @@
 ---
 title: '<div>: コンテンツ区分要素'
 slug: Web/HTML/Element/div
-tags:
-  - Content Division
-  - Element
-  - HTML
-  - HTML grouping content
-  - HTML:Flow content
-  - Layout
-  - Reference
-  - Web
-  - div
-translation_of: Web/HTML/Element/div
 ---
 {{HTMLRef}}
 

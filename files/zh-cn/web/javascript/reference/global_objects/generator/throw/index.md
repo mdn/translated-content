@@ -32,7 +32,7 @@ gen.throw(exception)
 
 ### 使用 `throw()`
 
-下面的例子展示了一个简单的生成器并使用 throw 方法向该生成器抛出一个异常，该异常通常可以通过 [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) 块进行捕获。
+下面的例子展示了一个简单的生成器并使用 throw 方法向该生成器抛出一个异常，该异常通常可以通过 [`try...catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 块进行捕获。
 
 ```js
 function* gen() {
@@ -60,4 +60,4 @@ g.throw(new Error("Something went wrong")); // "Error caught!"
 
 ## 相关链接
 
-- [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*)
+- [`function*`](/zh-CN/docs/Web/JavaScript/Reference/Statements/function*)

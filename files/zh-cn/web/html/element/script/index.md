@@ -2,7 +2,6 @@
 title: <script>
 slug: Web/HTML/Element/script
 ---
-
 HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌入或者指向 JavaScript 代码。`<script>` 元素也能在其他语言中使用，比如 WebGL 的 GLSL 着色器语言。
 
 <table class="properties">
@@ -83,7 +82,7 @@ HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌�
     如果 MIME 类型不是 JavaScript 类型（上述支持的类型），则该元素所包含的内容会被当作数据块而不会被浏览器执行。
     如果 type 属性为`module`，代码会被当作 JavaScript 模块 {{experimental_inline}}。请参见[ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
     在 Firefox 中可以通过定义 type=application/javascript;version=1.8 来使用如 let 声明这类的 JS 高版本中的先进特性。 但请注意这是个非标准功能，其他浏览器，特别是基于 Chrome 的浏览器可能会不支持。
-    关于如何引入特殊编程语言，请参见[这篇文章](/en-US/Add-ons/Code_snippets/Rosetta)。
+    关于如何引入特殊编程语言，请参见[这篇文章](/zh-CN/Add-ons/Code_snippets/Rosetta)。
 - {{htmlattrdef("text")}}
   - : 和 textContent 属性类似，本属性用于设置元素的文本内容。但和 textContent 不一样的是，本属性在节点插入到 DOM 之后，此属性被解析为可执行代码。
 

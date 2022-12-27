@@ -1,13 +1,6 @@
 ---
 title: Content-Length
 slug: Web/HTTP/Headers/Content-Length
-tags:
-  - HTTP
-  - Reference
-  - エンティティヘッダー
-  - ヘッダー
-  - リファレンス
-translation_of: Web/HTTP/Headers/Content-Length
 ---
 {{HTTPSidebar}}
 

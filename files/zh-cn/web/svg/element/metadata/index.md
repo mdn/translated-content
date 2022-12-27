@@ -16,7 +16,7 @@ slug: Web/SVG/Element/metadata
 
 ### 全局属性
 
-- [核心属性](/en-US/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 
 ### 专有属性
 
@@ -24,7 +24,7 @@ _没有专有属性_
 
 ## DOM 接口
 
-该元素实现了[`SVGMetadataElement`](/en-US/DOM/SVGMetadataElement)接口。
+该元素实现了[`SVGMetadataElement`](/zh-CN/DOM/SVGMetadataElement)接口。
 
 ## 浏览器兼容性
 

@@ -59,7 +59,7 @@ id = navigator.geolocation.watchPosition(success, error, options);
 
 ## 相关链接
 
-- [使用地理位置定位](/en-US/docs/WebAPI/Using_geolocation)
+- [使用地理位置定位](/zh-CN/docs/WebAPI/Using_geolocation)
 - {{domxref("Geolocation")}}
 - {{domxref("Geolocation.watchPosition()")}}
 - {{domxref("Geolocation.getCurrentPosition()")}}

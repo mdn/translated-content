@@ -1,7 +1,6 @@
 ---
 title: <mtable>
 slug: Web/MathML/Element/mtable
-translation_of: Web/MathML/Element/mtable
 ---
 {{MathMLRef()}}
 

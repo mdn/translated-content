@@ -1,18 +1,6 @@
 ---
 title: よくある MIME タイプ
 slug: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
-tags:
-  - HTTP
-  - MIME
-  - MIME タイプ
-  - Reference
-  - タイプ
-  - テキスト
-  - ファイル
-  - ファイルタイプ
-  - 動画
-  - 音声
-translation_of: Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
 ---
 {{HTTPSidebar}}
 

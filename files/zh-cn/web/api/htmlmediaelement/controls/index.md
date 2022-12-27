@@ -4,7 +4,7 @@ slug: Web/API/HTMLMediaElement/controls
 ---
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.controls`** 这个负责控制 html 中的[`controls`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attr-controls)HTML 属性，它负责控制播放的媒体 (视频或音频) 的控制条是否显示。.
+**`HTMLMediaElement.controls`** 这个负责控制 html 中的[`controls`](/zh-CN/docs/Web/HTML/Element/video#attr-controls)HTML 属性，它负责控制播放的媒体 (视频或音频) 的控制条是否显示。.
 
 ## 语法
 

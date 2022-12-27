@@ -1,17 +1,6 @@
 ---
 title: 分割代入
 slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
-tags:
-  - Destructuring
-  - 分割代入
-  - ECMAScript 2015
-  - ES6
-  - JavaScript
-  - 言語機能
-  - 階層オブジェクトと配列の分割代入
-  - 演算子
-browser-compat: javascript.operators.destructuring
-translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,19 +1,7 @@
 ---
 title: max()
 slug: Web/CSS/max
-tags:
-  - CSS
-  - CSS 関数
-  - Calculate
-  - Compute
-  - 関数
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - max
-translation_of: Web/CSS/max()
 original_slug: Web/CSS/max()
-browser-compat: css.types.max
 ---
 {{CSSRef}}
 

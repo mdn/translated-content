@@ -16,7 +16,7 @@ slug: Web/SVG/Element/font-face-name
 
 ### 全局属性
 
-- [核心属性](/en/SVG/Attribute#Core) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
 
 ### 专有属性
 
@@ -24,9 +24,9 @@ slug: Web/SVG/Element/font-face-name
 
 ## DOM 接口
 
-该对象实现了[`SVGFontFaceNameElement`](/en/DOM/SVGFontFaceNameElement)接口。
+该对象实现了[`SVGFontFaceNameElement`](/zh-CN/DOM/SVGFontFaceNameElement)接口。
 
 ## 相关内容
 
 - {{ SVGElement("font-face-src") }}
-- [SVG 教程：SVG 字体](/en/SVG/Tutorial/SVG_fonts)
+- [SVG 教程：SVG 字体](/zh-CN/SVG/Tutorial/SVG_fonts)

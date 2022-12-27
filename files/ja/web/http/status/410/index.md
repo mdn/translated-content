@@ -1,13 +1,6 @@
 ---
 title: 410 Gone
 slug: Web/HTTP/Status/410
-tags:
-  - Client error
-  - HTTP
-  - Reference
-  - クライアントエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/410
 ---
 {{HTTPSidebar}}
 

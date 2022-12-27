@@ -144,7 +144,7 @@ _滚轮事件实现了以下事件的方法： {{domxref("WheelEvent")}}, {{domx
 
 ### 滚轮事件和其它的鼠标滚动事件
 
-如果一个用户真实操作触发的滚轮事件没有被处理，这会触发一个 `DOMMouseScroll` 事件和一个 `MozMousePixelScroll` 事件以向下兼容。它们的属性值由滚轮事件 delta 值和最近的 ancestor clipped 元素计算出。(i.e., [`overflow`](/en-US/CSS/overflow) 不可见). 如果滚轮事件或其它任意一个剩余事件被 {{ domxref("event.preventDefault()") }}阻止，将什么都不会发生。
+如果一个用户真实操作触发的滚轮事件没有被处理，这会触发一个 `DOMMouseScroll` 事件和一个 `MozMousePixelScroll` 事件以向下兼容。它们的属性值由滚轮事件 delta 值和最近的 ancestor clipped 元素计算出。(i.e., [`overflow`](/zh-CN/CSS/overflow) 不可见). 如果滚轮事件或其它任意一个剩余事件被 {{ domxref("event.preventDefault()") }}阻止，将什么都不会发生。
 
 以下为事件顺序：
 

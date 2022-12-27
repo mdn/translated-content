@@ -4,7 +4,7 @@ slug: Web/API/CanvasRenderingContext2D/setLineDash
 ---
 {{APIRef}}
 
-Canvas 2D API 的{{domxref("CanvasRenderingContext2D")}}接口的**`setLineDash()`**方法在填充线时使用虚线模式。它使用一组值来指定描述模式的线和间隙的交替长度。
+Canvas 2D API 的{{domxref("CanvasRenderingContext2D")}}接口的 **`setLineDash()`** 方法在填充线时使用虚线模式。它使用一组值来指定描述模式的线和间隙的交替长度。
 
 > **备注：** 如果要切换回至实线模式，将 dash list 设置为一个空数组即可。
 

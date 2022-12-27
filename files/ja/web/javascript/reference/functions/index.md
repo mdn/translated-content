@@ -1,15 +1,6 @@
 ---
 title: 関数
 slug: Web/JavaScript/Reference/Functions
-tags:
-  - Function
-  - 関数
-  - ガイド
-  - JavaScript
-  - Parameter
-  - 引数
-browser-compat: javascript.functions
-translation_of: Web/JavaScript/Reference/Functions
 ---
 {{jsSidebar("Functions")}}
 

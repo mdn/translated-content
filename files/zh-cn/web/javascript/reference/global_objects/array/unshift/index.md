@@ -82,6 +82,7 @@ arr.unshift([-7, -6], [-5]);  // 新的数组长度为 8
 
 ## 参见
 
+- [Polyfill of `Array.prototype.unshift` in `core-js` with fixes of this method](https://github.com/zloirock/core-js#ecmascript-array)
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.pop()")}}
 - {{jsxref("Array.prototype.shift()")}}

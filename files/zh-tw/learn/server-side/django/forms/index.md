@@ -13,7 +13,7 @@ slug: Learn/Server-side/Django/Forms
       <td>
         完成先前所有的教程, 包含
         <a
-          href="/en-US/docs/Learn/Server-side/Django/authentication_and_sessions"
+          href="/zh-TW/docs/Learn/Server-side/Django/authentication_and_sessions"
           >Django Tutorial Part 8: User authentication and permissions</a
         >.
       </td>
@@ -605,11 +605,11 @@ Then navigate to the author create page: <http://127.0.0.1:8000/catalog/author/c
 
 ![Form Example: Create Author](forms_example_create_author.png)
 
-Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like _http\://127.0.0.1:8000/catalog/author/10_.
+Enter values for the fields and then press **Submit** to save the author record. You should now be taken to a detail view for your new author, with a URL of something like `http://127.0.0.1:8000/catalog/author/10`.
 
-You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/update/_) — we don't show a screenshot, because it looks just like the "create" page!
+You can test editing records by appending _/update/_ to the end of the detail view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/update/`) — we don't show a screenshot, because it looks just like the "create" page!
 
-Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. _http\://127.0.0.1:8000/catalog/author/10/delete/_). Django should display the delete page shown below. Press **Yes, delete.** to remove the record and be taken to the list of all authors.
+Last of all we can delete the page, by appending delete to the end of the author detail-view URL (e.g. `http://127.0.0.1:8000/catalog/author/10/delete/`). Django should display the delete page shown below. Press **Yes, delete.** to remove the record and be taken to the list of all authors.
 
 ![](forms_example_delete_author.png)
 

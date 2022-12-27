@@ -1,11 +1,6 @@
 ---
 title: ユーザーエージェント文字列を用いたブラウザーの判定
 slug: Web/HTTP/Browser_detection_using_the_user_agent
-tags:
-  - Compatibility
-  - HTTP
-  - Web Development
-translation_of: Web/HTTP/Browser_detection_using_the_user_agent
 ---
 {{HTTPSidebar}}
 

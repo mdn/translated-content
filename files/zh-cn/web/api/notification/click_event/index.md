@@ -14,7 +14,7 @@ slug: Web/API/Notification/click_event
 Notification.onclick = function(event) { ... };
 ```
 
-该方法的默认行为是将焦点移到与该通知相关联的 [browsing context](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context) 的窗口。如果你不希望这样，可以在 event 对象上调用 [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
+该方法的默认行为是将焦点移到与该通知相关联的 [browsing context](https://html.spec.whatwg.org/multipage/browsers.html#browsing-context) 的窗口。如果你不希望这样，可以在 event 对象上调用 [`preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault).
 
 ## Examples
 
@@ -38,4 +38,4 @@ notification.onclick = function(event) {
 ## See also
 
 - {{domxref("Notification")}}
-- [Using the Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Using the Notifications API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)

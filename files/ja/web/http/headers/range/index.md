@@ -1,14 +1,6 @@
 ---
 title: Range
 slug: Web/HTTP/Headers/Range
-tags:
-  - HTTP
-  - HTTP Header
-  - Range Requests
-  - Reference
-  - Request header
-  - リクエストヘッダー
-translation_of: Web/HTTP/Headers/Range
 ---
 {{HTTPSidebar}}
 

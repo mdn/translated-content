@@ -48,7 +48,7 @@ _这个元素继承了 {{domxref("HTMLElement")}} 的属性。_
 - {{domxref("HTMLFormElement.reset()")}}
   - : Resets the forms to its initial state.
 - {{domxref("HTMLFormElement.reportValidity()")}}
-  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable [`invalid`](https://developer.mozilla.org/en-US/docs/Web/Events/invalid) events are fired for each invalid child and validation problems are reported to the user.
+  - : Returns `true` if the element's child controls satisfy their validation constraints. When `false` is returned, cancelable [`invalid`](/zh-CN/docs/Web/Events/invalid) events are fired for each invalid child and validation problems are reported to the user.
 
 ## Examples
 

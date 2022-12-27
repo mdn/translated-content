@@ -1,16 +1,6 @@
 ---
 title: '<table>: 表要素'
 slug: Web/HTML/Element/table
-tags:
-  - Element
-  - HTML
-  - HTML tabular data
-  - NeedsLiveSample
-  - Reference
-  - Sorting
-  - Tables
-  - Web
-translation_of: Web/HTML/Element/table
 ---
 {{HTMLRef}}
 

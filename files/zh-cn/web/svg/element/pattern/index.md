@@ -12,16 +12,16 @@ slug: Web/SVG/Element/pattern
 
 ## 示例
 
-» [pattern.svg](https://developer.mozilla.org/files/3268/pattern.svg)
+» [pattern.svg](/files/3268/pattern.svg)
 
 ## 属性
 
 ### 全局属性
 
-- [条件处理属性](/en/SVG/Attribute#ConditionalProccessing) »
-- [核心属性](/en/SVG/Attribute#Core) »
-- [外观属性](/en/SVG/Attribute#Presentation) »
-- [Xlink 属性](/en/SVG/Attribute#XLink) »
+- [条件处理属性](/zh-CN/SVG/Attribute#ConditionalProccessing) »
+- [核心属性](/zh-CN/SVG/Attribute#Core) »
+- [外观属性](/zh-CN/SVG/Attribute#Presentation) »
+- [Xlink 属性](/zh-CN/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -41,4 +41,4 @@ slug: Web/SVG/Element/pattern
 
 ## DOM 接口
 
-该元素实现了[`SVGPatternElement`](/en/DOM/SVGPatternElement)接口。
+该元素实现了[`SVGPatternElement`](/zh-CN/DOM/SVGPatternElement)接口。

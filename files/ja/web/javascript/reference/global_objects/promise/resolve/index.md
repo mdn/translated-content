@@ -1,14 +1,6 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - メソッド
-  - Promise
-  - リファレンス
-browser-compat: javascript.builtins.Promise.resolve
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 {{JSRef}}
 

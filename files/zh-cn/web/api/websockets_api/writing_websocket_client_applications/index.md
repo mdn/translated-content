@@ -10,7 +10,7 @@ WebSocket 客户端应用程序使用 WebSocket API 通过 WebSocket 协议与 W
 
 ## 创建 WebSocket 对象
 
-为了使用 WebSocket 协议通信，你需要创建一个 [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) 对象；这将会自动地尝试建立与服务器的连接。
+为了使用 WebSocket 协议通信，你需要创建一个 [`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) 对象；这将会自动地尝试建立与服务器的连接。
 
 WebSocket 构造函数接受一个必要参数和一个可选参数：
 
@@ -33,9 +33,9 @@ WebSocket WebSocket(
 
 ### 连接错误
 
-如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 [`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) 对象（然后调用其`onerror` handler），然后 [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) 被发送给[`WebSocket`](/en/WebSockets/WebSockets_reference/WebSocket) （然后调用其 `onclose` handler）以说明连接关闭的原因。
+如果尝试连接过程中发生错误，那么首先一个名为 "error" 的事件会被发送给 [`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) 对象（然后调用其`onerror` handler），然后 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 被发送给[`WebSocket`](/zh-CN/WebSockets/WebSockets_reference/WebSocket) （然后调用其 `onclose` handler）以说明连接关闭的原因。
 
-在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/en/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
+在 Firefox 11 中，通常会从 Mozilla 平台的控制台中收到一个描述性的错误信息，以及一个通过 [`CloseEvent`](/zh-CN/WebSockets/WebSockets_reference/CloseEvent) 在 [RFC 6455, Section 7.4](http://tools.ietf.org/html/rfc6455#section-7.4) 中定义的错误代码。
 
 ### 示例
 
@@ -65,7 +65,7 @@ var exampleSocket = new WebSocket("ws://www.example.com/socketserver", ["protoco
 exampleSocket.send("Here's some text that the server is urgently awaiting!");
 ```
 
-你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/en/JavaScript_typed_arrays/ArrayBuffer)来发送。
+你可以把数据作为字符串，{{ domxref("Blob") }}，或者[`ArrayBuffer`](/zh-CN/JavaScript_typed_arrays/ArrayBuffer)来发送。
 
 > **备注：** 在版本 11 之前，Firefox 只支持以字符串的形式发送数据。
 
@@ -79,7 +79,7 @@ exampleSocket.onopen = function (event) {
 
 ### 使用 JSON 发送对象
 
-你可以方便地使用[JSON](/en/JSON) 来向服务器发送复杂一些的数据。例如一个聊天程序与服务器交互的协议可以通过封装在 JSON 里的数据来实现：
+你可以方便地使用[JSON](/zh-CN/JSON) 来向服务器发送复杂一些的数据。例如一个聊天程序与服务器交互的协议可以通过封装在 JSON 里的数据来实现：
 
 ```js
 // 服务器向所有用户发送文本
@@ -158,7 +158,7 @@ exampleSocket.onmessage = function(event) {
 };
 ```
 
-这里我们使用 [`JSON.parse()`](/en/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
+这里我们使用 [`JSON.parse()`](/zh-CN/JavaScript/Reference/Global_Objects/JSON/parse) 来将 JSON 转换回原始对象，然后检查并根据其内容做下一步动作。
 
 ### 文本数据的格式
 

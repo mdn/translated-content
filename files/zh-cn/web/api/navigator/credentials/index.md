@@ -4,7 +4,7 @@ slug: Web/API/Navigator/credentials
 ---
 {{SeeCompatTable}}{{APIRef("")}}
 
-{{domxref("Navigator")}}接口的**`credentials`**属性返回{{domxref("CredentialsContainer")}}接口，该接口暴露了请求凭证的方法。 {{domxref("CredentialsContainer")}}接口还会在下相关事件发生时通知用户，例如登录或注销成功。该接口可用于特征检测。
+{{domxref("Navigator")}}接口的 **`credentials`** 属性返回{{domxref("CredentialsContainer")}}接口，该接口暴露了请求凭证的方法。 {{domxref("CredentialsContainer")}}接口还会在下相关事件发生时通知用户，例如登录或注销成功。该接口可用于特征检测。
 
 ## 语法
 

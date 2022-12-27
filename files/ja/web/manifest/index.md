@@ -1,14 +1,6 @@
 ---
 title: ウェブアプリマニフェスト
 slug: Web/Manifest
-tags:
-  - アプリ
-  - マニフェスト
-  - PWA
-  - プログレッシブウェブアプリ
-  - リファレンス
-  - ウェブ
-translation_of: Web/Manifest
 ---
 {{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
 

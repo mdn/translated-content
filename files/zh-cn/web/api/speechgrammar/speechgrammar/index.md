@@ -40,4 +40,4 @@ speechRecognitionList[1] = newGrammar; // 将 SpeechGrammar 对象添加到列�
 
 ## 相关链接
 
-- [Web Speech API](/en-US/docs/Web/API/Web_Speech_API)
+- [Web Speech API](/zh-CN/docs/Web/API/Web_Speech_API)

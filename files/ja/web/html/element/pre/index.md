@@ -1,16 +1,6 @@
 ---
 title: '<pre>: 整形済みテキスト要素'
 slug: Web/HTML/Element/pre
-tags:
-  - HTML
-  - HTML コンテンツグループ化
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - ウェブ
-  - リファレンス
-  - 要素
-translation_of: Web/HTML/Element/pre
-browser-compat: html.elements.pre
 ---
 {{HTMLRef}}
 

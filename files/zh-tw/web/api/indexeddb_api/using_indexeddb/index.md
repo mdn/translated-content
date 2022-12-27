@@ -57,7 +57,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 注意到了嗎，開啟資料庫必須要進行請求。
 
-開啟請求並不會立刻開啟資料庫或交易，呼叫 open()方法會回傳一個[`IDBOpenDBRequest`](/zh-TW/docs/IndexedDB/IDBOpenDBRequest)物件，這個物件擁有兩個事件(success 和 error)。大部分 IndexedDB 的非同步功能都會回傳一個[`IDBDatabase`](/en-US/docs/IndexedDB/IDBDatabase)類物件，然後我們可以註冊成功和失敗事件處理器。
+開啟請求並不會立刻開啟資料庫或交易，呼叫 open()方法會回傳一個[`IDBOpenDBRequest`](/zh-TW/docs/IndexedDB/IDBOpenDBRequest)物件，這個物件擁有兩個事件(success 和 error)。大部分 IndexedDB 的非同步功能都會回傳一個[`IDBDatabase`](/zh-TW/docs/IndexedDB/IDBDatabase)類物件，然後我們可以註冊成功和失敗事件處理器。
 
 Open 方法第二個參數是資料庫版本，資料庫版本決定了資料庫結構，也就是資料庫物件存檔的結構。如果請求版本不存在(比如因為這是一個新資料庫或是資料庫版本已升級)，onupgradeneeded 事件會被觸發，然後我們可以在 onupgradeneeded 事件處理器中再建立新的版本，下面[升級資料庫版本](#Updating_the_version_of_the_database)有更詳細的說明。
 
@@ -78,7 +78,7 @@ request.onsuccess = function(event) {
 
 IndexedDB 的 API 設計上盡量減少錯誤處理，所以不太常看到錯誤事件，不過開啟資料庫的時候還是有一些狀況會產產生錯誤，最常見的狀況是使用者拒絕我們建立資料庫。
 
-IndexedDB 設計目標之一為存放大量資料以供離線使用(請參考["儲存限制"](/en/IndexedDB#Storage_limits)了解更多細節)。但很明顯地，瀏覽器又不樂見一些廣告網站或惡意網站汙染電腦，所以當任一個網路應用第一次開啟 IndexedDB 資料庫，瀏覽器會徵詢使用者是否准許其作業；同時在私密瀏覽中開啟作業也會失敗，因為私密瀏覽不會留下任何瀏覽痕跡。
+IndexedDB 設計目標之一為存放大量資料以供離線使用(請參考["儲存限制"](/zh-TW/IndexedDB#Storage_limits)了解更多細節)。但很明顯地，瀏覽器又不樂見一些廣告網站或惡意網站汙染電腦，所以當任一個網路應用第一次開啟 IndexedDB 資料庫，瀏覽器會徵詢使用者是否准許其作業；同時在私密瀏覽中開啟作業也會失敗，因為私密瀏覽不會留下任何瀏覽痕跡。
 
 這裡呼叫 indexedDB.open()開啟 indexedDB 資料庫並回傳 request 物件，假設使用者允許我們建立 indexedDB 資料庫，我們也收到 suceess 事件觸發了 success 回呼函數(callback)，request 物件的 result 屬性會是一個 IDBDatabase 物件 ，接下來便是要儲存這個物件之後使用。下方是整個作業的示範程式碼:
 
@@ -135,7 +135,7 @@ Webkit 支援最新標準不過只有 Chrome 23 才開始導入，而較舊不�
 
 ### 結構化資料庫
 
-indexedDB 不用資料表而是物件存檔，物件存檔可以有很多。一筆物件存檔裡的資料值對應一筆資料鍵，依據使用{資料鍵路徑([key path](/en/IndexedDB#gloss_key_path))}或{資料鍵產生器([key generator](/en/IndexedDB#gloss_key_generator))}。
+indexedDB 不用資料表而是物件存檔，物件存檔可以有很多。一筆物件存檔裡的資料值對應一筆資料鍵，依據使用{資料鍵路徑([key path](/zh-TW/IndexedDB#gloss_key_path))}或{資料鍵產生器([key generator](/zh-TW/IndexedDB#gloss_key_generator))}。
 
 下表列出資料建各類產生途徑:
 
@@ -398,7 +398,7 @@ index.openKeyCursor().onsuccess = function(event) {
 
 ### 設定指標查詢範圍和方向
 
-如果想要限定指標查詢範圍，那麼在乎叫 openCursor()或 openKeyCursor()時第一個參數要傳入[IDBKeyRange](/en/IndexedDB/IDBKeyRange)物件以限制範圍。IDBKeyRange 物件能夠只聚焦在單一資料鍵上或者一段上下限區間；上下限區間可以是封閉(含界限)或開放(不含界限)，請看以下範例:
+如果想要限定指標查詢範圍，那麼在乎叫 openCursor()或 openKeyCursor()時第一個參數要傳入[IDBKeyRange](/zh-TW/IndexedDB/IDBKeyRange)物件以限制範圍。IDBKeyRange 物件能夠只聚焦在單一資料鍵上或者一段上下限區間；上下限區間可以是封閉(含界限)或開放(不含界限)，請看以下範例:
 
 ```js
 // Only match "Donna"
@@ -1195,7 +1195,7 @@ input {
 
 參照
 
-- [IndexedDB API Reference](/en/IndexedDB)
+- [IndexedDB API Reference](/zh-TW/IndexedDB)
 - [Indexed Database API Specification](http://www.w3.org/TR/IndexedDB/)
 - [Using IndexedDB in chrome](/zh-TW/docs/IndexedDB/Using_IndexedDB_in_chrome)
 

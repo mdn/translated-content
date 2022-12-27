@@ -1,15 +1,6 @@
 ---
 title: writing-mode
 slug: Web/CSS/writing-mode
-tags:
-  - CSS
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - recipe:css-property
-  - 日本語処理
-browser-compat: css.properties.writing-mode
-translation_of: Web/CSS/writing-mode
 ---
 {{CSSRef}}
 

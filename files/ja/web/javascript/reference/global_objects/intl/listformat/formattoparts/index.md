@@ -1,17 +1,6 @@
 ---
 title: Intl.ListFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - ListFormat
-  - ローカライズ
-  - メソッド
-  - プロトタイプ
-  - リファレンス
-browser-compat: javascript.builtins.Intl.ListFormat.formatToParts
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/formatToParts
 ---
 {{JSRef}}
 

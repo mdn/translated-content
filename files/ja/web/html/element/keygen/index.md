@@ -1,16 +1,6 @@
 ---
 title: <keygen>
 slug: Web/HTML/Element/keygen
-tags:
-  - 非推奨
-  - 要素
-  - HTML
-  - HTML5
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.keygen
-translation_of: Web/HTML/Element/keygen
 ---
 
 {{HTMLRef}}{{deprecated_header}}

@@ -1,18 +1,6 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Element/input/file
-tags:
-  - Directory Picker
-  - File
-  - File Picker
-  - Files
-  - Form input
-  - HTML
-  - HTML forms
-  - Input Type
-  - Reference
-  - Type
-translation_of: Web/HTML/Element/input/file
 ---
 {{HTMLRef("Input_types")}}
 

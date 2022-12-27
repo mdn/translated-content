@@ -15,10 +15,10 @@ original_slug: learn/Performance/感知性能
       <th scope="row">预备知识：</th>
       <td>
         基础计算机知识，<a
-          href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
           >基本软件安装</a
         >，
-        <a href="/en-US/docs/Learn/Getting_started_with_the_web"
+        <a href="/zh-CN/docs/Learn/Getting_started_with_the_web"
           >客户端 web 技术</a
         >的基础知识
       </td>

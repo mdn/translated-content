@@ -1,16 +1,6 @@
 ---
 title: right
 slug: Web/CSS/right
-tags:
-  - CSS
-  - CSS 位置指定レイアウト
-  - CSS プロパティ
-  - レイアウト
-  - リファレンス
-  - ウェブ
-  - recipe:css-property
-browser-compat: css.properties.right
-translation_of: Web/CSS/right
 ---
 {{CSSRef}}
 

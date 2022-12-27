@@ -1,17 +1,6 @@
 ---
 title: '<image>: 画像要素'
 slug: Web/HTML/Element/image
-tags:
-  - 要素
-  - HTML
-  - HTML 要素リファレンス
-  - HTML リファレンス
-  - HTML 要素
-  - 標準外
-  - 非推奨
-  - リファレンス
-browser-compat: html.elements.image
-translation_of: Web/HTML/Element/image
 ---
 {{HTMLRef}}{{deprecated_header}}
 

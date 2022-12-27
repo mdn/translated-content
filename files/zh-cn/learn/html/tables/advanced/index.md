@@ -12,7 +12,7 @@ slug: Learn/HTML/Tables/Advanced
       <th scope="row">学习本章节的前提条件：</th>
       <td>
         HTML 的基础知识 (see
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >).
       </td>
@@ -323,11 +323,11 @@ slug: Learn/HTML/Tables/Advanced
 
 屏幕阅读设备会识别所有的标题，然后在它们和它们所关联的单元格之间产生编程关联。列和行标题的组合将标识和解释每个单元格中的数据，以便屏幕阅读器用户可以类似于视力正常的用户的操作来理解表格。
 
-我们之前的文章就提到过这一点，可见 [Adding headers with \<th> elements](/en-US/docs/Learn/HTML/Tables/Basics#Adding_headers_with_%3Cth%3E_elements).
+我们之前的文章就提到过这一点，可见[使用 \<th> 元素添加标题](/zh-CN/docs/Learn/HTML/Tables/Basics#使用_th_元素添加标题)。
 
 ### scope 属性
 
-本篇文章的一个新话题是 {{htmlattrxref("scope","th")}} 属性，可以添加在`<th>` 元素中，用来帮助屏幕阅读设备更好地理解那些标题单元格，这个标题单元格到底是列标题呢，还是行标题。比如：回顾我们之前的支出记录示例，你可以明确地将列标题这样定义：
+本篇文章的一个新话题是 {{htmlattrxref("scope","th")}} 属性，可以添加在 `<th>` 元素中，用来帮助屏幕阅读设备更好地理解那些标题单元格，这个标题单元格到底是列标题呢，还是行标题。比如：回顾我们之前的支出记录示例，你可以明确地将列标题这样定义：
 
 ```html
 <thead>

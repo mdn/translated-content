@@ -5,7 +5,7 @@ original_slug: Web/CSS/filter-function/brightness()
 ---
 {{cssref}}
 
-**`brightness()`** [CSS](/en-US/docs/Web/CSS)函数将线性乘数应用于输入图像，使其看起来更亮或更暗。结果是一个{{cssxref("&lt;filter-function&gt;")}}.
+**`brightness()`** [CSS](/zh-CN/docs/Web/CSS)函数将线性乘数应用于输入图像，使其看起来更亮或更暗。结果是一个{{cssxref("&lt;filter-function&gt;")}}.
 
 {{EmbedInteractiveExample("pages/css/function-brightness.html")}}
 

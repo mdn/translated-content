@@ -67,4 +67,4 @@ _The `URL` interface implements methods defined in {{domxref("URLUtils")}}._
 ## 參見
 
 - Property allowing to get such an object: {{domxref("Window.URL")}}.
-- [Components.utils.importGlobalProperties](/en-US/docs/Components.utils.importGlobalProperties)
+- [Components.utils.importGlobalProperties](/zh-TW/docs/Components.utils.importGlobalProperties)

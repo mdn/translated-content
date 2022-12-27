@@ -1,13 +1,6 @@
 ---
 title: arguments[@@iterator]()
 slug: Web/JavaScript/Reference/Functions/arguments/@@iterator
-tags:
-  - 関数
-  - JavaScript
-  - プロパティ
-  - arguments
-browser-compat: javascript.functions.arguments.@@iterator
-translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
 ---
 {{jsSidebar("Functions")}}
 

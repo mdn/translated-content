@@ -1,17 +1,6 @@
 ---
 title: WebAssembly.Module.customSections()
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections
-tags:
-  - API
-  - JavaScript
-  - Method
-  - Module
-  - Object
-  - Reference
-  - WebAssembly
-  - customSections
-browser-compat: javascript.builtins.WebAssembly.Module.customSections
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Module/customSections
 ---
 {{JSRef}}
 

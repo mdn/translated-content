@@ -12,7 +12,7 @@ translation_of: Web/API/History_API
 
 <h2 id="Navegando_através_do_histórico">Navegando através do histórico</h2>
 
-<p><span id="result_box" lang="pt"><span>Mover para trás e para a frente através do histórico do usuário é feito usando os métodos <code>back()</code>, <code>forward()</code> e <code>go()</code>. </span></span></p>
+<p>Mover para trás e para a frente através do histórico do usuário é feito usando os métodos <code>back()</code>, <code>forward()</code> e <code>go()</code>. </p>
 
 <h3 id="Movendo_para_frente_e_para_trás">Movendo para frente e para trás</h3>
 
@@ -21,9 +21,9 @@ translation_of: Web/API/History_API
 <pre class="brush: js">window.history.back();
 </pre>
 
-<p><span id="result_box" lang="pt"><span>Isso funcionará exatamente como se o usuário clicasse no botão Voltar na barra de ferramentas do navegador.</span><br>
+<p>Isso funcionará exatamente como se o usuário clicasse no botão Voltar na barra de ferramentas do navegador.<br>
  <br>
- <span>Da mesma forma, você pode avançar (como se o usuário clicasse no botão Avançar), assim:</span></span></p>
+ Da mesma forma, você pode avançar (como se o usuário clicasse no botão Avançar), assim:</p>
 
 <pre class="brush: js">window.history.forward();
 </pre>
@@ -60,17 +60,17 @@ translation_of: Web/API/History_API
 
 <h3 id="Exemplo_do_método_pushState()">Exemplo do método pushState()</h3>
 
-<p>Suponha que <span class="nowiki">http://mozilla.org/foo.html executa o seguinte JavaScript:</span></p>
+<p>Suponha que http://mozilla.org/foo.html executa o seguinte JavaScript:</p>
 
 <pre class="brush: js">const stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 </pre>
 
-<p>Isto fará com que a barra URL mostre <span class="nowiki">http://mozilla.org/bar.html, porém não fará com que o navegador carregue </span><code>bar.html</code> ou verifique se <code>bar.html</code> existe. </p>
+<p>Isto fará com que a barra URL mostre http://mozilla.org/bar.html, porém não fará com que o navegador carregue <code>bar.html</code> ou verifique se <code>bar.html</code> existe. </p>
 
-<p>Agora suponha que o usuário navegue para <span class="nowiki">http://google.com e logo em seguida clique no botão Voltar. Nesse momento, a barra de URL mostrará http://mozilla.org/bar.html, e se você ler o <code>history.state</code> você receberá o <code>stateObj</code>. O evento <code>popstate</code> não será disparado pois a página foi recarregada. A página carregada será <code>bar.html</code>.</p>
+<p>Agora suponha que o usuário navegue para http://google.com e logo em seguida clique no botão Voltar. Nesse momento, a barra de URL mostrará http://mozilla.org/bar.html, e se você ler o <code>history.state</code> você receberá o <code>stateObj</code>. O evento <code>popstate</code> não será disparado pois a página foi recarregada. A página carregada será <code>bar.html</code>.</p>
 
-<p>Se clicarmos no botão Voltar novamente, a URL modificará para <span class="nowiki">http://mozilla.org/foo.html, e o documento receberá um evento </span><code>popstate</code>, dessa vez com objeto de estado sendo nulo. Nesse momento, o documento também não altera seu conteúdo em relação ao passo anterior, porém o documento pode atualizar seu conteúdo manualmente após o recebimento do evento <code>popstate</code>.</p>
+<p>Se clicarmos no botão Voltar novamente, a URL modificará para http://mozilla.org/foo.html, e o documento receberá um evento <code>popstate</code>, dessa vez com objeto de estado sendo nulo. Nesse momento, o documento também não altera seu conteúdo em relação ao passo anterior, porém o documento pode atualizar seu conteúdo manualmente após o recebimento do evento <code>popstate</code>.</p>
 
 <h3 id="O_método_pushState()">O método pushState()</h3>
 
@@ -118,7 +118,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <h3 id="Exemplo_do_método_replaceState()">Exemplo do método replaceState()</h3>
 
-<p>Suponha que <span class="nowiki">http://mozilla.org/foo.html</span> execute o seguinte JavaScript:</p>
+<p>Suponha que http://mozilla.org/foo.html execute o seguinte JavaScript:</p>
 
 <pre class="brush: js">const stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");

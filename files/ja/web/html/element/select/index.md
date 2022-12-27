@@ -1,16 +1,6 @@
 ---
 title: '<select>: HTML 選択要素'
 slug: Web/HTML/Element/select
-tags:
-  - HTML
-  - HTML フォーム
-  - Reference
-  - events
-  - ウェブ
-  - フォーム
-  - リファレンス
-  - 要素
-translation_of: Web/HTML/Element/select
 ---
 {{HTMLRef}}
 

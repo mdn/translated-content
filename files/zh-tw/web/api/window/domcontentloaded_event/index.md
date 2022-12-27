@@ -9,7 +9,7 @@ original_slug: Web/Events/DOMContentLoaded
 
 ## Speeding up
 
-If you want DOM to get parsed as fast as possible after the user had requested the page, some things you could do is turn your [JavaScript asynchronous](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) and to [optimize loading of stylesheets](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery) which if used as usual, slow down page load due to being loaded in parallel, "stealing" traffic from the main html document.
+If you want DOM to get parsed as fast as possible after the user had requested the page, some things you could do is turn your [JavaScript asynchronous](/zh-TW/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) and to [optimize loading of stylesheets](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery) which if used as usual, slow down page load due to being loaded in parallel, "stealing" traffic from the main html document.
 
 ## General info
 

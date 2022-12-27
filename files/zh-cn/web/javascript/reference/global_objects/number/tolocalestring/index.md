@@ -18,7 +18,7 @@ numObj.toLocaleString([locales [, options]])
 
 查阅[浏览器兼容性](#浏览器兼容性)部分，了解哪些浏览器支持 `locales` 和 `options` 参数，通过[示例：检查 `locales` 和 `options` 参数的支持](#Checking_for_support_for_locales_and_options_arguments)了解特征检测。
 
-> **备注：** ECMAScript 国际化 API，在 Firefox 29 中得以实施，增加了 `locales` 参数的 [`Number.toLocaleString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) 方法。如果参数为 `undefined`，此方法返回本地操作系统指定的位数，而 Firefox 的早期版本中返回[阿拉伯语](https://en.wikipedia.org/wiki/Arabic_numerals)数字。这一变化已被报告为向后影响的兼容性问题并可能会被尽快修复。({{ bug(999003) }})
+> **备注：** ECMAScript 国际化 API，在 Firefox 29 中得以实施，增加了 `locales` 参数的 [`Number.toLocaleString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString) 方法。如果参数为 `undefined`，此方法返回本地操作系统指定的位数，而 Firefox 的早期版本中返回[阿拉伯语](https://en.wikipedia.org/wiki/Arabic_numerals)数字。这一变化已被报告为向后影响的兼容性问题并可能会被尽快修复。({{ bug(999003) }})
 
 {{page('/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat', '参数')}}
 

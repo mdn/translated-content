@@ -1,14 +1,6 @@
 ---
 title: Float64Array
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - ポリフィル
-browser-compat: javascript.builtins.Float64Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array
 ---
 {{JSRef}}
 

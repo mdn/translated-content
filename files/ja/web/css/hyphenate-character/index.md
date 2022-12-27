@@ -1,12 +1,6 @@
 ---
 title: hyphenate-character
 slug: Web/CSS/hyphenate-character
-tags:
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-browser-compat: css.properties.hyphenate-character
-translation_of: Web/CSS/hyphenate-character
 ---
 {{CSSRef}}
 

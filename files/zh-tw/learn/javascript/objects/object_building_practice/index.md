@@ -12,12 +12,12 @@ slug: Learn/JavaScript/Objects/Object_building_practice
       <th scope="row">必備條件：</th>
       <td>
         基礎的計算機素養、了解 HTML 與 CSS 的基本概念、熟悉 JavaScript (參閱〈<a
-          href="/en-US/docs/Learn/JavaScript/First_steps"
+          href="/zh-TW/docs/Learn/JavaScript/First_steps"
           >First steps</a
-        >〉與〈<a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        >〉與〈<a href="/zh-TW/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >〉) 與 OOJS 基本概念 (參閱〈<a
-          href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+          href="/zh-TW/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introduction to objects</a
         >〉)。
       </td>

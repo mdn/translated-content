@@ -10,10 +10,10 @@ slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
       <th scope="row">前提：</th>
       <td>
         你应该已经知道如何<a
-          href="/en-US/Learn/HTML/Write_a_simple_page_in_HTML"
+          href="/zh-CN/Learn/HTML/Write_a_simple_page_in_HTML"
           >create a basic HTML document</a
         >
-        以及<a href="/en-US/Learn/HTML/Howto/Add_images_to_a_webpage"
+        以及<a href="/zh-CN/Learn/HTML/Howto/Add_images_to_a_webpage"
           >add accessible images to a webpage.</a
         >
       </td>

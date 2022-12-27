@@ -1,16 +1,6 @@
 ---
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
-tags:
-  - クラス
-  - Date
-  - 元期
-  - JavaScript
-  - Time
-  - Unix 元期
-  - timeStamp
-browser-compat: javascript.builtins.Date
-translation_of: Web/JavaScript/Reference/Global_Objects/Date
 ---
 {{JSRef}}
 

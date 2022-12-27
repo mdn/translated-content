@@ -1,20 +1,6 @@
 ---
 title: text-rendering
 slug: Web/CSS/text-rendering
-tags:
-  - CSS
-  - CSS プロパティ
-  - Legibility
-  - Ligatures
-  - Precision
-  - リファレンス
-  - SVG
-  - テキスト
-  - テキスト特性
-  - テキスト描画
-  - recipe:css-property
-browser-compat: css.properties.text-rendering
-translation_of: Web/CSS/text-rendering
 ---
 {{CSSRef}}
 

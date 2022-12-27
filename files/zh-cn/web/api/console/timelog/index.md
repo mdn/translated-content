@@ -4,7 +4,7 @@ slug: Web/API/Console/timeLog
 ---
 {{APIRef("Console API")}}在控制台输出计时器的值，该计时器必须已经通过 {{domxref("console.time()")}} 启动。
 
-参阅文档中的 [Timers](/en-US/docs/Web/API/console#Timers) 部分获取详细说明和示例。
+参阅文档中的 [Timers](/zh-CN/docs/Web/API/console#Timers) 部分获取详细说明和示例。
 
 {{AvailableInWorkers}}
 

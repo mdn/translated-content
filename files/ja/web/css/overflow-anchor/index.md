@@ -1,14 +1,6 @@
 ---
 title: overflow-anchor
 slug: Web/CSS/overflow-anchor
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS スクロールアンカリング
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.overflow-anchor
-translation_of: Web/CSS/overflow-anchor
 ---
 {{CSSRef}}
 

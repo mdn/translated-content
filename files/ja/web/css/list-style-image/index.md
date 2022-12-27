@@ -1,14 +1,6 @@
 ---
 title: list-style-image
 slug: Web/CSS/list-style-image
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS リスト
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.list-style-image
-translation_of: Web/CSS/list-style-image
 ---
 {{CSSRef}}
 

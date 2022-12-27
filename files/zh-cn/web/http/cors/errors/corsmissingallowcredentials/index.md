@@ -23,6 +23,6 @@ CORS 请求要求服务器允许使用凭据，但是服务器的 HTTPHeader：A
 
 ## 更多
 
-- [CORS errors](/en-US/docs/Web/HTTP/CORS/Errors)
+- [CORS errors](/zh-CN/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/en-US/docs/Web/HTTP/CORS)
+- [CORS introduction](/zh-CN/docs/Web/HTTP/CORS)

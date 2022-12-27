@@ -1,12 +1,6 @@
 ---
 title: 205 Reset Content
 slug: Web/HTTP/Status/205
-tags:
-  - HTTP
-  - HTTP ステータスコード
-  - ステータスコード
-  - リファレンス
-translation_of: Web/HTTP/Status/205
 ---
 {{HTTPSidebar}}
 

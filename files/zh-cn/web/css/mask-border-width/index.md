@@ -48,7 +48,7 @@ mask-border-width: unset;
 - \<number>
   - : mask 边框宽度为元素`border-width`的倍数。不能为负数。
 - `auto`
-  - : 使`mask-border`的宽度等于相应[`mask-border-slice`](https://developer.mozilla.org/en-US/docs/Web/CSS/mask-border-slice)的固有宽度或高度（以适用者为准），如果图像没有所需的固有尺寸，则使用相应的边框宽度。
+  - : 使`mask-border`的宽度等于相应[`mask-border-slice`](/zh-CN/docs/Web/CSS/mask-border-slice)的固有宽度或高度（以适用者为准），如果图像没有所需的固有尺寸，则使用相应的边框宽度。
 
 ### Formal syntax
 

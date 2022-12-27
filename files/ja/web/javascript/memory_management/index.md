@@ -1,10 +1,6 @@
 ---
 title: メモリ管理
 slug: Web/JavaScript/Memory_Management
-tags:
-  - JavaScript
-  - memory
-translation_of: Web/JavaScript/Memory_Management
 ---
 {{JsSidebar("Advanced")}}
 

@@ -1,14 +1,6 @@
 ---
 title: Float64Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - TypedArrays
-  - コンストラクター
-  - 型付き配列
-translation_of: Web/JavaScript/Reference/Global_Objects/Float64Array/Float64Array
 ---
 {{JSRef}}
 

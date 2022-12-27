@@ -1,16 +1,6 @@
 ---
 title: 配置
 slug: Web/SVG/Tutorial/Positions
-tags:
-  - Beginner
-  - Coordinate systems
-  - Coordinates
-  - Drawing
-  - Graphics
-  - NeedsBeginnerUpdate
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Positions
 ---
 {{ PreviousNext("Web/SVG/Tutorial/Getting_Started", "Web/SVG/Tutorial/Basic_Shapes") }}
 

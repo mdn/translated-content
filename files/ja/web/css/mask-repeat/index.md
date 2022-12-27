@@ -1,15 +1,6 @@
 ---
 title: mask-repeat
 slug: Web/CSS/mask-repeat
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS マスク
-  - Experimental
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.mask-repeat
-translation_of: Web/CSS/mask-repeat
 ---
 {{CSSRef}}
 

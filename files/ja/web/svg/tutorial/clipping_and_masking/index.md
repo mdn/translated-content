@@ -1,10 +1,6 @@
 ---
 title: クリッピングとマスキング
 slug: Web/SVG/Tutorial/Clipping_and_masking
-tags:
-  - SVG
-  - SVG:Tutorial
-translation_of: Web/SVG/Tutorial/Clipping_and_masking
 ---
 {{PreviousNext("SVG/Tutorial/Basic_Transformations", "SVG/Tutorial/Other_content_in_SVG")}}
 

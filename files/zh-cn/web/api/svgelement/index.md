@@ -9,7 +9,7 @@ slug: Web/API/SVGElement
 ## 属性
 
 - {{domxref("SVGElement.dataset")}}{{readonlyInline}}
-  - : A {{domxref("DOMStringMap")}} object which provides a list of key/value pairs of named data attributes which correspond to [custom data attributes](/en-US/docs/Web/Guide/HTML/Using_data_attributes) attached to the element. These can also be defined in SVG using attributes of the form {{SVGAttr("data-*")}}, where `*` is the key name for the pair. This works just like HTML's {{domxref("HTMLElement.dataset")}} property and HTML's {{htmlattrxref("data-*")}} global attribute.
+  - : A {{domxref("DOMStringMap")}} object which provides a list of key/value pairs of named data attributes which correspond to [custom data attributes](/zh-CN/docs/Web/Guide/HTML/Using_data_attributes) attached to the element. These can also be defined in SVG using attributes of the form {{SVGAttr("data-*")}}, where `*` is the key name for the pair. This works just like HTML's {{domxref("HTMLElement.dataset")}} property and HTML's {{htmlattrxref("data-*")}} global attribute.
 - {{domxref("SVGElement.id")}}{{readonlyInline}}
   - : A {{domxref("DOMString")}} representing the value of the {{SVGAttr("id")}} attribute on the given element, or the empty string if `id` is not present.
 - {{domxref("SVGElement.xmlbase")}}{{readonlyInline}}

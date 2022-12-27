@@ -164,7 +164,7 @@ background-size: 50% 25%, contain, 3em;
 
 ### Formal syntax
 
-[如何阅读 CSS 语法。](https://developer.mozilla.org/docs/Web/CSS/Value_definition_syntax)
+[如何阅读 CSS 语法。](/docs/Web/CSS/Value_definition_syntax)
 
 {{csssyntax}}
 

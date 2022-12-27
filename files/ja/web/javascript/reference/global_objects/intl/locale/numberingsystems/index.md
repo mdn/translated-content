@@ -1,18 +1,6 @@
 ---
 title: Intl.Locale.prototype.numberingSystems
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystems
-tags:
-  - 国際化
-  - Intl
-  - JavaScript
-  - プロパティ
-  - Locale
-  - ローカライズ
-  - プロトタイプ
-  - リファレンス
-  - numberingSystems
-browser-compat: javascript.builtins.Intl.Locale.numberingSystems
-translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystems
 ---
 {{JSRef}}
 

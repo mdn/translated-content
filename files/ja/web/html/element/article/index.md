@@ -1,13 +1,6 @@
 ---
 title: '<article>: 記事コンテンツ要素'
 slug: Web/HTML/Element/article
-tags:
-  - Element
-  - HTML
-  - HTML sections
-  - Reference
-  - Web
-translation_of: Web/HTML/Element/article
 ---
 {{HTMLRef}}
 

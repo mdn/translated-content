@@ -1,14 +1,6 @@
 ---
 title: <xmp>
 slug: Web/HTML/Element/xmp
-tags:
-  - 要素
-  - HTML
-  - 非推奨
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.xmp
-translation_of: Web/HTML/Element/xmp
 ---
 
 {{deprecated_header}}

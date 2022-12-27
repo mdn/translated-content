@@ -57,5 +57,5 @@ _此介面亦繼承其父－－ {{domxref("Event")}} 的方法：_
 
 ## 參見
 
-- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Introduction to events](/zh-TW/docs/Learn/JavaScript/Building_blocks/Events)
 - {{domxref("Event")}}

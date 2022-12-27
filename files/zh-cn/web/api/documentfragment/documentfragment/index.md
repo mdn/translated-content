@@ -28,4 +28,4 @@ fragment = new DocumentFragment();
 
 ## 参见
 
-- [DOM 接口索引](/en-US/docs/DOM/DOM_Reference)
+- [DOM 接口索引](/zh-CN/docs/DOM/DOM_Reference)

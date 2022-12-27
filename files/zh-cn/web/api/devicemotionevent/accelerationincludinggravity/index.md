@@ -40,5 +40,5 @@ var acceleration = instanceOfDeviceMotionEvent.accelerationIncludingGravity;
 - {{ domxref("window.ondevicemotion") }}
 - {{ event("deviceorientation") }}
 - {{ domxref("DeviceOrientationEvent") }}
-- [Detecting device orientation](/en-US/docs/WebAPI/Detecting_device_orientation)
-- [Orientation and motion data explained](/en/DOM/Orientation_and_motion_data_explained)
+- [Detecting device orientation](/zh-CN/docs/WebAPI/Detecting_device_orientation)
+- [Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained)

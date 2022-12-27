@@ -33,4 +33,4 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## 相关内容
 
-- [HTTP authentication](/en-US/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/zh-CN/docs/Web/HTTP/Authentication)

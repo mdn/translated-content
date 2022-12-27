@@ -4,7 +4,7 @@ slug: Web/API/Console/profile
 ---
 {{APIRef("Console API")}}{{Non-standard_header}}
 
-开始记录性能描述信息 (例如， [Firefox performance tool](/en-US/docs/Tools/Performance))。
+开始记录性能描述信息 (例如， [Firefox performance tool](/zh-CN/docs/Tools/Performance))。
 
 你可以选择提供一个参数来命名描述信息，这将允许你在有多个描述信息被记录时来选择只停止那个描述信息（被你命名的那个）。请查阅{{domxref("Console.profileEnd()")}}来确认这个参数是如何被解释的。
 

@@ -27,7 +27,7 @@ Para añadir un nuevo lector de canales basado en la web, todo lo que tiene que 
 
 - `browser.contentHandlers.types.5.title`: Lector Sencillo
 - `browser.contentHandlers.types.5.type`: application/vnd.mozilla.maybe.feed
-- `browser.contentHandlers.types.5.uri`: http\://www\.urllectorsencillo.com?feed=%s
+- `browser.contentHandlers.types.5.uri`: `http://www.urllectorsencillo.com?feed=%s`
 
 Puede añadir estas preferencias manualmente, visitando about:config, o puede programarlo, si una extensión desea instalar un nuevo lector de canales.
 

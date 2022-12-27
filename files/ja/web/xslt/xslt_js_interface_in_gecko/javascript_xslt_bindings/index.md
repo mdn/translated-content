@@ -1,12 +1,6 @@
 ---
 title: JavaScript/XSLT バインディング
 slug: Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
-tags:
-  - DOM
-  - JavaScript
-  - XML
-  - XSLT
-translation_of: Web/XSLT/XSLT_JS_interface_in_Gecko/JavaScript_XSLT_Bindings
 ---
 ## JavaScript/XSLT バインディング
 

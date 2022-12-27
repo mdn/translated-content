@@ -28,7 +28,7 @@ navigator.registerProtocolHandler("mailto",
 
 ### 參考資料
 
-1. [DOM:window.navigator.registerProtocolHandler 原始網頁](/en/docs/DOM:window.navigator.registerProtocolHandler)
+1. [DOM:window.navigator.registerProtocolHandler 原始網頁](/zh-TW/docs/DOM:window.navigator.registerProtocolHandler)
 
 ### 延伸閱讀
 

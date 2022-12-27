@@ -1,16 +1,6 @@
 ---
 title: scroll-padding-block
 slug: Web/CSS/scroll-padding-block
-tags:
-  - CSS
-  - CSS スクロールスナップ
-  - Reference
-  - Web
-  - recipe:css-shorthand-property
-  - scroll-padding
-  - scroll-padding-block
-browser-compat: css.properties.scroll-padding-block
-translation_of: Web/CSS/scroll-padding-block
 ---
 {{CSSRef}}
 

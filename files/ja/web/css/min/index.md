@@ -1,18 +1,7 @@
 ---
 title: min()
 slug: Web/CSS/min
-tags:
-  - CSS
-  - CSS 関数
-  - Calculate
-  - Compute
-  - 関数
-  - レイアウト
-  - リファレンス
-  - min
-translation_of: Web/CSS/min()
 original_slug: Web/CSS/min()
-browser-compat: css.types.min
 ---
 {{CSSRef}}
 

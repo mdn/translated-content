@@ -72,13 +72,13 @@ HTML 内容如下：
 </div>
 ```
 
-在 [CSS-based dropdown menu example](https://developer.mozilla.org/@api/deki/files/6238/=css_dropdown_menu.html) 看示例。
+在 [CSS-based dropdown menu example](/@api/deki/files/6238/=css_dropdown_menu.html) 看示例。
 
 ### 可全图预览的画廊
 
 `:hover` 伪类可以让你实现一个当鼠标悬停在图片上时全图预览的画廊功能。 在 [this demo](/@api/deki/files/6247/=css-gallery.zip) 看示例。
 
-> **备注：** 一个类似的效果，是基于 :checked 伪类（用于隐藏单选框）实现的，看 [this demo](/@api/deki/files/6268/=css-checked-gallery.zip)，源于 [En/CSS/:checked](/en/CSS/%3Achecked)。
+> **备注：** 一个类似的效果，是基于 :checked 伪类（用于隐藏单选框）实现的，看 [this demo](/@api/deki/files/6268/=css-checked-gallery.zip)，源于 [En/CSS/:checked](/zh-CN/CSS/%3Achecked)。
 
 ## 规范
 

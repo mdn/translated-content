@@ -12,7 +12,7 @@ original_slug: Web/API/EventSource/onopen
 ---
 {{APIRef('Server Sent Events')}}
 
-La propriété **`onopen`** de l'interface {{domxref("EventSource")}} est un {{event("Event_handlers", "event handler")}} qui est appelé lorsqu'un est évènement {{event("open")}} est reçu, indiquant que la connexion vient d'être établie.
+La propriété **`onopen`** de l'interface {{domxref("EventSource")}} est un gestionnaire d'évènement qui est appelé lorsqu'un est évènement {{event("open")}} est reçu, indiquant que la connexion vient d'être établie.
 
 ## Syntaxe
 

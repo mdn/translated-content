@@ -34,7 +34,7 @@ translation_of: Web/API/Window/getSelection
 
 <p>No exemplo acima, <code>selObj.toString()</code> é chamado automaticamente quando é passado para {{domxref("window.alert()")}}. Contudo,  tentar usar propriedades ou métodos do objeto JavaScript <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" title="JS/String">String</a> como <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length" title="JS/String.length">length</a></code> ou <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr" title="JS/String.substr">substr</a> diretamente no objeto</code> {{domxref("Selection")}} resultará em erro se o objeto não possuir essa propriedade ou método e pode retornar valores inesperados mesmo se os tiver. Para usar um objecto <code>Selection</code> como uma string, faça a chamada do seu método <code>toString()</code> diretamente:</p>
 
-<pre class="brush:js;gutter:false;">var selectedText = selObj.toString();</pre>
+<pre class="brush:js">var selectedText = selObj.toString();</pre>
 
 <ul>
  <li><code>selObj</code> é um objeto <code>Selection</code>.</li>

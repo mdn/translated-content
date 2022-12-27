@@ -12,11 +12,11 @@ JavaScript 对象表示法（JSON）是用于将结构化数据表示为 JavaScr
       <th scope="row">前提：</th>
       <td>
         计算机基础知识，HTML 和 CSS 基础 (see
-        <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
-        <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
+        <a href="/zh-CN/docs/Learn/JavaScript/First_steps">First steps</a> and
+        <a href="/zh-CN/docs/Learn/JavaScript/Building_blocks"
           >Building blocks</a
         >) 和 JS 面向对象基础 (see
-        <a href="/en-US/docs/Learn/JavaScript/Object-oriented/Introduction"
+        <a href="/zh-CN/docs/Learn/JavaScript/Object-oriented/Introduction"
           >Introduction to objects</a
         >)。
       </td>

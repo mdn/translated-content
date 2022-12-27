@@ -26,10 +26,8 @@ original_slug: Web/JavaScript/Guide/Trabalhando_com_Objetos
 
 <p>Um objeto em JavaScript tem propriedades associadas a ele. Uma propriedade de um objeto pode ser explicada como uma variável que é ligada ao objeto. Propriedades de objetos são basicamente as mesmas que variáveis normais em JavaScript, exceto pelo fato de estarem ligadas a objetos. As propriedades de um objeto definem as características do objeto. Você acessa as propriedades de um objeto com uma simples notação de ponto:</p>
 
-<div style="margin-right: 270px;">
 <pre class="brush: js">nomeDoObjeto.nomeDaPropriedade
 </pre>
-</div>
 
 <p>Como as variáveis em JavaScript, o nome do objeto (que poderia ser uma variável normal) e um nome de propriedade diferem em maiúsculas/minúsculas (por exemplo, cor e Cor são propriedades diferentes). Você pode definir uma propriedade atribuindo um valor a ela. Por exemplo, vamos criar um objeto chamado <code>meuCarro</code> e dar a ele propriedades chamadas <code>fabricacao</code>, <code>modelo</code>, e <code>ano</code>, conforme mostrado a seguir:</p>
 
@@ -69,14 +67,12 @@ console.log(meuObj);
 
 <p>Você pode também acessar propriedades usando um valor de string que está armazenado em uma variável:</p>
 
-<div style="width: auto;">
 <pre class="brush: js">var nomeDaPropriedade = "fabricacao";
 meuCarro[nomeDaPropriedade] = "Ford";
 
 nomeDaPropriedade = "modelo";
 meuCarro[nomeDaPropriedade] = "Mustang";
 </pre>
-</div>
 
 <p>Você pode usar a notação de colchetes com o comando <a class="internal" href="/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in" title="pt-BR/docs/Web/JavaScript/Reference/Statements/for...in">for...in</a> para iterar por todas as propriedades enumeráveis de um objeto. Para ilustrar como isso funciona, a seguinte função mostra as propriedades de um objeto quando você passa o objeto e o nome do objeto como argumentos para a função:</p>
 
@@ -242,22 +238,22 @@ var carro2 = new Carro("Nissan", "300ZX", 1992, paulo);
 
 <p>Objetos podem também ser criados usando-se o método <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create()</a></code>. Esse método pode ser muito útil, pois permite que você escolha o objeto protótipo para o objeto que você quer criar, sem a necessidade de se definir uma função construtora.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Encapsulamento das propriedades e métodos de Animal</span>
-<span class="keyword token">var</span> Animal <span class="operator token">=</span> <span class="punctuation token">{</span>
-  tipo<span class="punctuation token">:</span> <span class="string token">"Invertebrados"</span><span class="punctuation token">,</span> <span class="comment token">// Propriedades de valores padrão</span>
-  qualTipo <span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>  <span class="comment token">// Método que ira mostrar o tipo de Animal</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">.tipo</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js">// Encapsulamento das propriedades e métodos de Animal
+var Animal = {
+  tipo: "Invertebrados", // Propriedades de valores padrão
+  qualTipo : function() {  // Método que ira mostrar o tipo de Animal
+    console.log(this.tipo);
+  }
+}
 
-<span class="comment token">// Cria um novo tipo de animal chamado animal1</span>
-<span class="keyword token">var</span> animal1 <span class="operator token">=</span> Object<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span>Animal<span class="punctuation token">)</span><span class="punctuation token">;</span>
-animal1<span class="punctuation token">.</span><span class="function token">qualTipo</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Saída:Invertebrados</span>
+// Cria um novo tipo de animal chamado animal1
+var animal1 = Object.create(Animal);
+animal1.qualTipo(); // Saída:Invertebrados
 
-<span class="comment token">// Cria um novo tipo de animal chamado Peixes</span>
-<span class="keyword token">var</span> peixe <span class="operator token">=</span> Object<span class="punctuation token">.</span><span class="function token">create</span><span class="punctuation token">(</span>Animal<span class="punctuation token">)</span><span class="punctuation token">;</span>
-peixe<span class="punctuation token">.</span>tipo <span class="operator token">=</span> <span class="string token">"Peixes"</span><span class="punctuation token">;</span>
-peixe<span class="punctuation token">.</span><span class="function token">qualTipo</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Saída: Peixes</span></code></pre>
+// Cria um novo tipo de animal chamado Peixes
+var peixe = Object.create(Animal);
+peixe.tipo = "Peixes";
+peixe.qualTipo(); // Saída: Peixes</pre>
 
 <h3 id="Herança">Herança</h3>
 
@@ -298,7 +294,7 @@ var meuObjeto = {
 
 <p>Em seguida, você pode chamar o método no contexto do objeto da seguinte forma:</p>
 
-<pre class="brush: js">objeto.<code>nomedometodo</code>(parametros);
+<pre class="brush: js">objeto.nomedometodo(parametros);
 </pre>
 
 <p>Você pode definir métodos para um tipo de objeto incluindo uma definição de metodo na função construtora do objeto. Por exemplo, você poderia definir uma função que iria formatar e mostrar as propriedades do objeto <code>carro</code> previamente definido; por exemplo,</p>
@@ -367,20 +363,20 @@ carro2.mostreCarro();
 
 <p>O código a seguir ilustra como getters e setters podem funcionar para um objeto<code> o </code>definido pelo usuário.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> o <span class="operator token">=</span> <span class="punctuation token">{</span>
-  a<span class="punctuation token">:</span> <span class="number token">7</span><span class="punctuation token">,</span>
-  <span class="keyword token">get</span> <span class="function token">b</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">.</span>a <span class="operator token">+</span> <span class="number token">1</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="keyword token">set</span> <span class="function token">c</span><span class="punctuation token">(</span>x<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>a <span class="operator token">=</span> x <span class="operator token">/</span> <span class="number token">2</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
+<pre class="brush: js">var o = {
+  a: 7,
+  get b() {
+    return this.a + 1;
+  },
+  set c(x) {
+    this.a = x / 2
+  }
+};
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>o<span class="punctuation token">.</span>a<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 7</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>o<span class="punctuation token">.</span>b<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 8</span>
-o<span class="punctuation token">.</span>c <span class="operator token">=</span> <span class="number token">50</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>o<span class="punctuation token">.</span>a<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 25</span></code></pre>
+console.log(o.a); // 7
+console.log(o.b); // 8
+o.c = 50;
+console.log(o.a); // 25</pre>
 
 <p>As propriedades do objeto <code>o</code> são:</p>
 
@@ -398,19 +394,19 @@ Objects/Object/defineGetter">Object.prototype.__defineGetter__</a></code>).</p>
 
 <p>Estes estados definem um getter e setter para a propriedade <code>ano</code>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> d <span class="operator token">=</span> Date<span class="punctuation token">.</span>prototype<span class="punctuation token">;</span>
-Object<span class="punctuation token">.</span><span class="function token">defineProperty</span><span class="punctuation token">(</span>d<span class="punctuation token">,</span> <span class="string token">"year"</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
-  <span class="keyword token">get</span><span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">.</span><span class="function token">getFullYear</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">}</span><span class="punctuation token">,</span>
-  <span class="keyword token">set</span><span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>y<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">this</span><span class="punctuation token">.</span><span class="function token">setFullYear</span><span class="punctuation token">(</span>y<span class="punctuation token">)</span> <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">var d = Date.prototype;
+Object.defineProperty(d, "year", {
+  get: function() { return this.getFullYear() },
+  set: function(y) { this.setFullYear(y) }
+});</pre>
 
 <p>Estes estados usam o getter e setter em um objeto <code>Date</code>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> now <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>now<span class="punctuation token">.</span>year<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// 2000</span>
-now<span class="punctuation token">.</span>year <span class="operator token">=</span> <span class="number token">2001</span><span class="punctuation token">;</span> <span class="comment token">// 987617605170</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>now<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="comment token">// Wed Apr 18 11:13:25 GMT-0700 (Pacific Daylight Time) 2001</span></code></pre>
+<pre class="brush: js">var now = new Date();
+console.log(now.year); // 2000
+now.year = 2001; // 987617605170
+console.log(now);
+// Wed Apr 18 11:13:25 GMT-0700 (Pacific Daylight Time) 2001</pre>
 
 <p>A principio, getters e setters podem ser ou</p>
 
@@ -468,20 +464,20 @@ delete g;
 
 <p>Em JavaScript, objetos são um tipo de referência. Dois objetos distintos nunca são iguais, mesmo que tenham as mesmas propriedades. Apenas comparando o mesmo objeto de referência com ele mesmo produz verdadeiro.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Duas variáveis, dois objetos distintos com as mesmas propriedades</span>
-<span class="keyword token">var</span> fruit <span class="operator token">=</span> <span class="punctuation token">{</span>name<span class="punctuation token">:</span> <span class="string token">"apple"</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> fruitbear <span class="operator token">=</span> <span class="punctuation token">{</span>name<span class="punctuation token">:</span> <span class="string token">"apple"</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
+<pre class="brush: js">// Duas variáveis, dois objetos distintos com as mesmas propriedades
+var fruit = {name: "apple"};
+var fruitbear = {name: "apple"};
 
-fruit <span class="operator token">==</span> fruitbear <span class="comment token">// return false</span>
-fruit <span class="operator token">===</span> fruitbear <span class="comment token">// return false</span></code></pre>
+fruit == fruitbear // return false
+fruit === fruitbear // return false</pre>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Duas variáveis, um único objeto</span>
-<span class="keyword token">var</span> fruit <span class="operator token">=</span> <span class="punctuation token">{</span>name<span class="punctuation token">:</span> <span class="string token">"apple"</span><span class="punctuation token">}</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> fruitbear <span class="operator token">=</span> fruit<span class="punctuation token">;</span>  <span class="comment token">// assign fruit object reference to fruitbear</span>
+<pre class="brush: js">// Duas variáveis, um único objeto
+var fruit = {name: "apple"};
+var fruitbear = fruit;  // assign fruit object reference to fruitbear
 
-<span class="comment token">// Here fruit and fruitbear are pointing to same object</span>
-fruit <span class="operator token">==</span> fruitbear <span class="comment token">// return true</span>
-fruit <span class="operator token">===</span> fruitbear <span class="comment token">// return true</span></code></pre>
+// Here fruit and fruitbear are pointing to same object
+fruit == fruitbear // return true
+fruit === fruitbear // return true</pre>
 
 <p>Para mais informações sobre comparaçāo de operadores, veja <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">Operadores de comparaçāo</a>.</p>
 

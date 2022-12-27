@@ -2,7 +2,7 @@
 title: repeatCount
 slug: Web/SVG/Attribute/repeatCount
 ---
-« [SVG 属性参考](/en/SVG/Attribute)
+« [SVG 属性参考](/zh-CN/SVG/Attribute)
 
 这个属性表示动画将发生的次数。
 
@@ -12,7 +12,7 @@ slug: Web/SVG/Attribute/repeatCount
 
 | 类别       | 动画时间属性                                            |
 | ---------- | ------------------------------------------------------- |
-| Value      | [\<number>](/en/SVG/Content_type#Number) \| "indefinite" |
+| Value      | [\<number>](/zh-CN/SVG/Content_type#Number) \| "indefinite" |
 | Animatable | No                                                      |
 
 {{ page("/en/SVG/Content_type","Number") }}
@@ -23,7 +23,7 @@ slug: Web/SVG/Attribute/repeatCount
 
 The following elements can use the `repeatCount` attribute
 
-- [Animation elements](/en/SVG/Element#Animation) »
+- [Animation elements](/zh-CN/SVG/Element#Animation) »
 
 ## 规范
 

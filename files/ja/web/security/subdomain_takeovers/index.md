@@ -1,7 +1,6 @@
 ---
 title: Subdomain takeovers
 slug: Web/Security/Subdomain_takeovers
-translation_of: Web/Security/Subdomain_takeovers
 ---
 subdomain takeover は、攻撃者がターゲットドメインのサブドメインの制御権を獲得したときに発生します。一般的には、サブドメインがドメインネームシステム ([DNS](/ja/docs/Glossary/DNS)) に正規名 ([CNAME](https://en.wikipedia.org/wiki/CNAME_record)) を持っているが、そのサブドメインにコンテンツを提供しているホストがいない場合に発生します。これは、バーチャルホストがまだ公開されていないか、バーチャルホストが削除されているために起こる可能性があります。攻撃者は、自分のバーチャルホストを提供して、そのサブドメインのコンテンツをホストすることで、そのサブドメインを乗っ取ることができます。
 

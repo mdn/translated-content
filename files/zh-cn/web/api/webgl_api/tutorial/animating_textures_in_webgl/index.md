@@ -141,6 +141,6 @@ function updateTexture(gl, texture, video) {
 
 ## 参见
 
-- [Using audio and video in Firefox](/en/Using_HTML5_audio_and_video)
+- [Using audio and video in Firefox](/zh-CN/Using_HTML5_audio_and_video)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

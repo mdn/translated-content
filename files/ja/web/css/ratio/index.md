@@ -1,14 +1,6 @@
 ---
 title: <ratio>
 slug: Web/CSS/ratio
-tags:
-  - CSS
-  - CSS Data Type
-  - Data Type
-  - Layout
-  - Reference
-  - Web
-translation_of: Web/CSS/ratio
 ---
 {{CSSRef}}
 

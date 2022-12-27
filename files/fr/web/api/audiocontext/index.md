@@ -47,7 +47,7 @@ Un contexte audio peut être la cible d'événements, par conséquent il implém
 ### Event handlers
 
 - {{domxref("AudioContext.onstatechange")}}
-  - : Un gestionnaire d'évènement déclenché par un évènement du type {{event("statechange")}}. Cela a lieu quand l'état du contexte audio change, en raison de l'appel des méthodes de changement d'état ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, ou {{domxref("AudioContext.close")}}.)
+  - : Un gestionnaire d'évènement déclenché par un évènement du type `statechange`. Cela a lieu quand l'état du contexte audio change, en raison de l'appel des méthodes de changement d'état ({{domxref("AudioContext.suspend")}}, {{domxref("AudioContext.resume")}}, ou {{domxref("AudioContext.close")}}.)
 
 ## Méthodes
 

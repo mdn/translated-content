@@ -1,18 +1,6 @@
 ---
 title: '<var>: 変数要素'
 slug: Web/HTML/Element/var
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - HTML:Flow content
-  - HTML:Palpable Content
-  - HTML:Phrasing content
-  - Reference
-  - Web
-  - var
-  - variable
-translation_of: Web/HTML/Element/var
 ---
 {{HTMLRef}}
 

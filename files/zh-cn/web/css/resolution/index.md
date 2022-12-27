@@ -19,7 +19,7 @@ slug: Web/CSS/resolution
 - `dpcm`
   - : [每厘米上的点数](https://en.wikipedia.org/wiki/Dots_per_inch)。1 英寸是 2.54 厘米，`1dpcm ≈ 2.54dpi`.
 - `dppx`
-  - : 表示每个[`px`](/en-US/docs/Web/CSS/length#px)的点数。 由于 CSS px 的固定比率为 1:96，因此 1dppx 相当于 96dpi。 which corresponds to the default resolution of images displayed in CSS as defined by {{cssxref("image-resolution")}}.
+  - : 表示每个[`px`](/zh-CN/docs/Web/CSS/length#px)的点数。 由于 CSS px 的固定比率为 1:96，因此 1dppx 相当于 96dpi。 which corresponds to the default resolution of images displayed in CSS as defined by {{cssxref("image-resolution")}}.
 - `x`
   - : `dppx` 的别名
 

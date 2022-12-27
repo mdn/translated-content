@@ -69,7 +69,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
           href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/CORS_settings_attributes"
           >CORS 设置</a
         >的{{ domxref("DOMString") }}。从
-        <a href="/en-US/docs/HTML/CORS_settings_attributes"
+        <a href="/zh-CN/docs/HTML/CORS_settings_attributes"
           >CORS settings attributes</a
         >
         查看更多详情
@@ -177,7 +177,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
         {{htmlelement("audio")}} or {{htmlelement("video")}}
         element will play in, on a Firefox OS device. See
         <a
-          href="/en-US/docs/Web/API/AudioChannels_API/Using_the_AudioChannels_API"
+          href="/zh-CN/docs/Web/API/AudioChannels_API/Using_the_AudioChannels_API"
           >Using the AudioChannels API</a
         >
         for more details.
@@ -229,7 +229,7 @@ _从父级 {{domxref("HTMLElement")}}, {{domxref("Element")}}, {{domxref("Node")
       <td>{{domxref("MediaStream")}}</td>
       <td>
         Lets you set or get the
-        <a href="/en-US/docs/WebRTC/MediaStream_API">Media Stream</a> to be
+        <a href="/zh-CN/docs/WebRTC/MediaStream_API">Media Stream</a> to be
         played or being played.
       </td>
     </tr>

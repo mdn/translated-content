@@ -4,7 +4,7 @@ slug: Web/API/WebGL2RenderingContext/drawBuffers
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
-[WebGL 2 API](/en-US/docs/Web/API/WebGL_API)的 **`WebGL2RenderingContext.drawBuffers()`** 方法定义了将写入零散数据（fragment colors）的绘制缓存 (draw buffer)。绘制缓存设置了上一次绑定帧缓存状态，如果没有帧缓存可用的话，则用绘制缓存。
+[WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API)的 **`WebGL2RenderingContext.drawBuffers()`** 方法定义了将写入零散数据（fragment colors）的绘制缓存 (draw buffer)。绘制缓存设置了上一次绑定帧缓存状态，如果没有帧缓存可用的话，则用绘制缓存。
 
 ## 语法
 

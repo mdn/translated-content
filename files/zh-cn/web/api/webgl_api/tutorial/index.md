@@ -10,7 +10,7 @@ slug: Web/API/WebGL_API/Tutorial
 
 ## 开始之前
 
-使用 `<canvas>` 元素并不困难，但你需要基本的 [HTML](/en-US/docs/Web/HTML) 和 [JavaScript](/en-US/docs/Web/JavaScript) 知识。一些老浏览器不支持`<canvas>` 元素和 WebGL，但所有最近的主流浏览器都支持它们.。为了能在 canvas 中绘制图形，我们使用 Javascript 的上下文环境（context）对象，此对象可以动态创建图形。
+使用 `<canvas>` 元素并不困难，但你需要基本的 [HTML](/zh-CN/docs/Web/HTML) 和 [JavaScript](/zh-CN/docs/Web/JavaScript) 知识。一些老浏览器不支持`<canvas>` 元素和 WebGL，但所有最近的主流浏览器都支持它们.。为了能在 canvas 中绘制图形，我们使用 Javascript 的上下文环境（context）对象，此对象可以动态创建图形。
 
 ## 在本教程中
 

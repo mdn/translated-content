@@ -1,16 +1,6 @@
 ---
 title: import
 slug: Web/JavaScript/Reference/Statements/import
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Language feature
-  - Modules
-  - Reference
-  - Statement
-  - dynamic import
-  - import
-translation_of: Web/JavaScript/Reference/Statements/import
 ---
 {{jsSidebar("Statements")}}
 

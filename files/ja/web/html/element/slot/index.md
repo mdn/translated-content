@@ -1,15 +1,6 @@
 ---
 title: '<slot>: ウェブコンポーネントのスロット要素'
 slug: Web/HTML/Element/slot
-tags:
-  - Element
-  - HTML
-  - HTML ウェブコンポーネント
-  - リファレンス
-  - ウェブコンポーネント
-  - シャドウ DOM
-  - slot
-translation_of: Web/HTML/Element/slot
 ---
 
 {{HTMLRef}}

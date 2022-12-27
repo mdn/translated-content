@@ -1,15 +1,7 @@
 ---
 title: brightness()
 slug: Web/CSS/filter-function/brightness
-tags:
-  - CSS
-  - CSS 関数
-  - フィルター効果
-  - 関数
-  - リファレンス
-translation_of: Web/CSS/filter-function/brightness()
 original_slug: Web/CSS/filter-function/brightness()
-browser-compat: css.types.filter-function.brightness
 ---
 {{CSSRef}}
 

@@ -8,7 +8,7 @@ slug: Web/HTML/Element/abbr
 
 {{EmbedInteractiveExample("pages/tabbed/abbr.html", "tabbed-shorter")}}
 
-这篇文章： _[How to mark abbreviations and make them understandable](/en-US/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable)_ 是一份学习使用 `<abbr>` 与其他相关元素的指南。
+这篇文章： _[How to mark abbreviations and make them understandable](/zh-CN/Learn/HTML/Howto/Mark_abbreviations_and_make_them_understandable)_ 是一份学习使用 `<abbr>` 与其他相关元素的指南。
 
 <table class="properties">
  <tbody>

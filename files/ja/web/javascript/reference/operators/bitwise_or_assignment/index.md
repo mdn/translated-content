@@ -1,14 +1,6 @@
 ---
 title: ビット論理和代入 (|=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.bitwise_or_assignment
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,16 +1,6 @@
 ---
 title: CSS カスタムプロパティ (変数) の使用
 slug: Web/CSS/Using_CSS_custom_properties
-tags:
-  - CSS
-  - CSS Variables
-  - CSS 変数
-  - Guide
-  - Web
-  - ウェブ
-  - カスケード変数
-  - カスタムプロパティ
-translation_of: Web/CSS/Using_CSS_custom_properties
 ---
 {{cssref}}
 

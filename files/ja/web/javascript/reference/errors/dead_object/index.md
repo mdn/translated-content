@@ -1,12 +1,6 @@
 ---
 title: 'TypeError: can''t access dead object'
 slug: Web/JavaScript/Reference/Errors/Dead_object
-tags:
-  - Addons
-  - Error
-  - Errors
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Errors/Dead_object
 ---
 {{JSSidebar("Errors")}}
 

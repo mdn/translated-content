@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/activeTexture
 ---
 {{APIRef("WebGL")}}
 
-**`WebGLRenderingContext.activeTexture()`** 是 [WebGL API](/en-US/docs/Web/API/WebGL_API) 方法之一，用来激活指定的纹理单元。
+**`WebGLRenderingContext.activeTexture()`** 是 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 方法之一，用来激活指定的纹理单元。
 
 ## 句法
 

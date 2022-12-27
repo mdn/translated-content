@@ -1,15 +1,6 @@
 ---
 title: Uint32Array
 slug: Web/JavaScript/Reference/Global_Objects/Uint32Array
-tags:
-  - クラス
-  - JavaScript
-  - TypedArray
-  - 型付き配列
-  - Uint32Array
-  - ポリフィル
-browser-compat: javascript.builtins.Uint32Array
-translation_of: Web/JavaScript/Reference/Global_Objects/Uint32Array
 ---
 {{JSRef}}
 

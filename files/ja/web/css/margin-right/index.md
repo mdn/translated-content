@@ -1,13 +1,6 @@
 ---
 title: margin-right
 slug: Web/CSS/margin-right
-tags:
-  - CSS
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.margin-right
-translation_of: Web/CSS/margin-right
 ---
 {{CSSRef}}
 

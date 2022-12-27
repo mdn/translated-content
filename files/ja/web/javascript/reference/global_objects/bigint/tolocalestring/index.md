@@ -1,15 +1,6 @@
 ---
 title: BigInt.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
-tags:
-  - BigInt
-  - 国際化
-  - Intl
-  - JavaScript
-  - メソッド
-  - プロトタイプ
-browser-compat: javascript.builtins.BigInt.toLocaleString
-translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 ---
 {{JSRef}}
 

@@ -4,7 +4,7 @@ slug: Web/API/IDBKeyRange/lowerBound
 ---
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBKeyRange")}} 接口的**`lowerBound()`**方法创建一个只有下限的新的键范围。默认情况下，它包含较低的端点值。
+{{domxref("IDBKeyRange")}} 接口的 **`lowerBound()`** 方法创建一个只有下限的新的键范围。默认情况下，它包含较低的端点值。
 
 {{AvailableInWorkers}}
 

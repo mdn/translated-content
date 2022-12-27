@@ -1,14 +1,6 @@
 ---
 title: 除算代入 (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
-tags:
-  - 代入演算子
-  - JavaScript
-  - 言語機能
-  - 演算子
-  - Reference
-browser-compat: javascript.operators.division_assignment
-translation_of: Web/JavaScript/Reference/Operators/Division_assignment
 ---
 {{jsSidebar("Operators")}}
 

@@ -1,15 +1,6 @@
 ---
 title: 正規表現
 slug: Web/JavaScript/Guide/Regular_Expressions
-tags:
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Reference
-  - RegExp
-  - Regular Expressions
-  - regex
-translation_of: Web/JavaScript/Guide/Regular_Expressions
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 

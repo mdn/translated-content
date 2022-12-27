@@ -1,11 +1,6 @@
 ---
 title: イベントリファレンス
 slug: Web/Events
-tags:
-  - Event
-  - Overview
-  - Reference
-translation_of: Web/Events
 ---
 [イベント](/ja/docs/Learn/JavaScript/Building_blocks/Events)は、コードの実行に影響を与える可能性のある「興味深い変化」をコードに通知するために発行されます。これは、マウス操作やウィンドウのサイズ変更などのユーザー操作や、環境の変化 (バッテリー残量の低下や OS のメディアイベントなど)、その他の原因によって発行されます。
 

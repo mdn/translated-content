@@ -1,17 +1,6 @@
 ---
 title: '<form>: フォーム要素'
 slug: Web/HTML/Element/form
-tags:
-  - 要素
-  - フォーム要素
-  - フォーム
-  - HTML
-  - HTML フォーム要素
-  - HTML フォーム
-  - リファレンス
-  - ウェブ
-browser-compat: html.elements.form
-translation_of: Web/HTML/Element/form
 ---
 
 {{HTMLRef}}

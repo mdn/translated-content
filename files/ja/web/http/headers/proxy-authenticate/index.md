@@ -1,13 +1,6 @@
 ---
 title: Proxy-Authenticate
 slug: Web/HTTP/Headers/Proxy-Authenticate
-tags:
-  - HTTP
-  - HTTP ヘッダー
-  - Reference
-  - プロキシ
-  - レスポンスヘッダー
-translation_of: Web/HTTP/Headers/Proxy-Authenticate
 ---
 {{HTTPSidebar}}
 

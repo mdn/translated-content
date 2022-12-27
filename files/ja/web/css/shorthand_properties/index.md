@@ -1,15 +1,6 @@
 ---
 title: 一括指定プロパティ
 slug: Web/CSS/Shorthand_properties
-tags:
-  - CSS
-  - Guide
-  - Layout
-  - Reference
-  - Shorthand Properties
-  - properties
-  - shorthand
-translation_of: Web/CSS/Shorthand_properties
 ---
 {{CSSRef}}
 

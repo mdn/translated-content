@@ -58,4 +58,4 @@ foo();
 
 ## 相关
 
-- [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- [Strict mode](/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)

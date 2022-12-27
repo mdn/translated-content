@@ -15,13 +15,13 @@ var gl = canvas.getContext('webgl');
 
 当你获取到 canvas 元素的 WebGL 绘图上下文，你便可以在里面绘图。
 
-点击 [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) 获取更多资料，例子，和关于如何开始 WebGL 编程的知识。
+点击 [WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial) 获取更多资料，例子，和关于如何开始 WebGL 编程的知识。
 
 > 补充：以下内容很多函数都没有提供参数，所以最好还是参见具体 API。
 
 ## 常量
 
-请参考 [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) 。
+请参考 [WebGL constants](/zh-CN/docs/Web/API/WebGL_API/Constants) 。
 
 ## WebGL 上下文
 

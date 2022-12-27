@@ -12,7 +12,7 @@ You can then restore a window or tab using the {{WebExtAPIRef("sessions.restore(
 
 This API also provides a group of functions that enable an extension to store additional state associated with a tab or a window. Then, if the tab or window is closed and subsequently restored, the extension can retrieve the state. For example, a tab grouping extension might use this to remember which group a tab is in, so as to restore it into the right group if the user restores the tab.
 
-To use the sessions API you must have the "sessions" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions).
+To use the sessions API you must have the "sessions" [API permission](/zh-CN/Add-ons/WebExtensions/manifest.json/permissions#API_permissions).
 
 ## Types
 
@@ -24,7 +24,7 @@ To use the sessions API you must have the "sessions" [API permission](/en-US/Add
 ## Properties
 
 - {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}
-  - : The maximum number of sessions that will be returned by a call to [`sessions.getRecentlyClosed()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed).
+  - : The maximum number of sessions that will be returned by a call to [`sessions.getRecentlyClosed()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed).
 
 ## Functions
 

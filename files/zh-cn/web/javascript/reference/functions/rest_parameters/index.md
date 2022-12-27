@@ -138,10 +138,10 @@ console.log(sortArguments(5, 3, 7, 1)); // shows 1, 3, 5, 7
 
 ## 相关链接
 
-- [Spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also ‘`...`’)
-- [Arguments object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)
-- [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Spread operator](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_operator) (also ‘`...`’)
+- [Arguments object](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Array](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [Functions](/zh-CN/docs/Web/JavaScript/Reference/Functions)
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
 - [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)
-- [Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [Destructuring assignment](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

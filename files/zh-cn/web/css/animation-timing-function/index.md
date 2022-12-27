@@ -6,7 +6,7 @@ slug: Web/CSS/animation-timing-function
 
 ## 概述
 
-[CSS](/en-US/docs/CSS) `animation-timing-function属性定义CSS动画在每一动画周期中执行的节奏。`可能值为一或多个 {{cssxref("&lt;timing-function&gt;")}}。
+[CSS](/zh-CN/docs/CSS) `animation-timing-function属性定义CSS动画在每一动画周期中执行的节奏。`可能值为一或多个 {{cssxref("&lt;timing-function&gt;")}}。
 
 对于关键帧动画来说，timing function 作用于一个关键帧周期而非整个动画周期，即从关键帧开始开始，到关键帧结束结束。
 
@@ -53,7 +53,7 @@ animation-timing-function: unset;
 
 ## 示例
 
-参见 [CSS animations](/en-US/docs/CSS/CSS_animations)
+参见 [CSS animations](/zh-CN/docs/CSS/CSS_animations)
 
 ## 规范
 
@@ -65,5 +65,5 @@ animation-timing-function: unset;
 
 ## 参见
 
-- [Using CSS animations](/en-US/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [Using CSS animations](/zh-CN/docs/Web/Guide/CSS/Using_CSS_transitions)
 - {{domxref("AnimationEvent", "AnimationEvent")}}

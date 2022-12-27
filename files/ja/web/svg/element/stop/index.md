@@ -1,13 +1,6 @@
 ---
 title: <stop>
 slug: Web/SVG/Element/stop
-tags:
-  - 要素
-  - リファレンス
-  - SVG
-  - SVG グラデーション
-browser-compat: svg.elements.stop
-translation_of: Web/SVG/Element/stop
 ---
 {{SVGRef}}
 

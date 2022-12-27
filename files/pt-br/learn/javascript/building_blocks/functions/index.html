@@ -27,9 +27,7 @@ original_slug: Aprender/JavaScript/Elementos_construtivos/Functions
 
 <p>Em JavaScript, você encontrará funções em todos os lugares, de fato, nós vamos usar funções ao longo de todo o curso; nós só não falaremos sobre elas em damasia. Agora está na hora, contudo, para falarmos sobre funções explicitamente, e realmente explorar sua sintaxe.</p>
 
-<div id="gt-res-content">
-<div class="trans-verified-button-large" dir="ltr" id="gt-res-dir-ctr"><span class="short_text" id="result_box" lang="pt"><span>Praticamente sempre que você faz uso de um</span></span> uma estrutura JavaScript em que tem um par de parenteses — <code>()</code> — e você <strong>não</strong> está usando uma estrutura  embutida da linguagem como um <a href="/en-US/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop">for loop</a>, <a href="/en-US/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while">while or do...while loop</a>, ou <a href="/en-US/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements">if...else statement</a>, você está fazendo uso de uma função.</div>
-</div>
+<div>Praticamente sempre que você faz uso de um uma estrutura JavaScript em que tem um par de parenteses — <code>()</code> — e você <strong>não</strong> está usando uma estrutura  embutida da linguagem como um <a href="/en-US/Learn/JavaScript/Building_blocks/Looping_code#The_standard_for_loop">for loop</a>, <a href="/en-US/Learn/JavaScript/Building_blocks/Looping_code#while_and_do_..._while">while or do...while loop</a>, ou <a href="/en-US/Learn/JavaScript/Building_blocks/conditionals#if_..._else_statements">if...else statement</a>, você está fazendo uso de uma função.</div>
 
 <h2 id="Funções_embutidas_do_navegador">Funções embutidas do navegador</h2>
 
@@ -64,7 +62,7 @@ console.log(madeAString);
 <p><strong>Nota</strong>: Fique a vontade para inserir essas linhas no console JavaScript do navegador para refamiliarizar-se com suas funcionalidades, se necessário.</p>
 </div>
 
-<p>A linguagem JavaScript tem muitas funções embutidas que o permitem fazer coisas úteis sem que você mesmo tenha que escrever aquele código. De fato, alguns dos códigos que você está chamando quando você <strong>invoca</strong> (uma palavra rebuscada para rodar, ou executar) uma função embutida de navegador não poderia ser escrita em JavaScript — muitas dessa funções são chamadas a partes de código base do navegador, que é escrita grandemente em linguages de<span class="short_text" id="result_box" lang="pt"><span> sistema de baixo nível</span></span> como C++, não linguagem Web como JavaScript.</p>
+<p>A linguagem JavaScript tem muitas funções embutidas que o permitem fazer coisas úteis sem que você mesmo tenha que escrever aquele código. De fato, alguns dos códigos que você está chamando quando você <strong>invoca</strong> (uma palavra rebuscada para rodar, ou executar) uma função embutida de navegador não poderia ser escrita em JavaScript — muitas dessa funções são chamadas a partes de código base do navegador, que é escrita grandemente em linguages de sistema de baixo nível como C++, não linguagem Web como JavaScript.</p>
 
 <p>Tenha em mente que algumas funções embutidas de navegador não são parte do core da linguagem JavaScript — algumas são definidas como partes de APIs do navegador, que são construídas no topo da linguagem padão para prover ainda mais funcionalidades (recorra a <a href="/en-US/Learn/JavaScript/First_steps/What_is_JavaScript#So_what_can_it_really_do">esta seção inicial de nosso curso</a> para mais descrições). Nós olharemos o uso de APIs de navegador em mais detalhes em um módulo posterior.</p>
 
@@ -74,7 +72,7 @@ console.log(madeAString);
 
 <p>A distinção é que métodos são funções definidas dentro de objetos. Funções embutidas de navegador (métodos) e variáveis (que são chamadas <strong>propriedades</strong>) são armazenadas dentro de objetos estruturados, para tornar o código mais estruturado e fácil de manipular.</p>
 
-<p>Você não precisa aprender sobre o<span class="short_text" id="result_box" lang="pt"><span> funcionamento interno</span></span> de objetos estruturados em JavaScript ainda — você pode esperar nosso módulo posterior que ensinará tudo sobre <span class="short_text" id="result_box" lang="pt"><span>funcionamento interno</span></span> de objetos, e como criar o seu próprio. Por hora, nós só queremos esclarecer qualquer confusão possível de método versus função — é pr<span class="short_text" id="result_box" lang="pt"><span>ovável que você encontre ambos</span></span> termos enquanto você olhar os recursos disponível pela  Web.</p>
+<p>Você não precisa aprender sobre o funcionamento interno de objetos estruturados em JavaScript ainda — você pode esperar nosso módulo posterior que ensinará tudo sobre funcionamento interno de objetos, e como criar o seu próprio. Por hora, nós só queremos esclarecer qualquer confusão possível de método versus função — é provável que você encontre ambos termos enquanto você olhar os recursos disponível pela  Web.</p>
 
 <h2 id="Funções_personalizadas">Funções personalizadas</h2>
 
@@ -94,7 +92,7 @@ console.log(madeAString);
 
 <pre class="brush: js">draw();</pre>
 
-<p>ao invés de ter que escrever todo o código novamente todas as vezes que queremos repetí-lo. <span class="short_text" id="result_box" lang="pt"><span>E funções podem conter qualquer código que você gosta</span></span> — você pode até chamar outra função dentro das funções. A função acima por exemplo chama a função <code>random()</code> três vezes, o qual é definido pelo seguinte código:</p>
+<p>ao invés de ter que escrever todo o código novamente todas as vezes que queremos repetí-lo. E funções podem conter qualquer código que você gosta — você pode até chamar outra função dentro das funções. A função acima por exemplo chama a função <code>random()</code> três vezes, o qual é definido pelo seguinte código:</p>
 
 <pre class="brush: js">function random(number) {
   return Math.floor(Math.random()*number);
@@ -127,7 +125,7 @@ myFunction()
   alert('hello');
 }</pre>
 
-<p>Isto é chamado<strong> Função anônima</strong> — não tem nome! E também não fará nada em si mesma. Você geralmente cria funções anônimas junto com um<span class="short_text" id="result_box" lang="pt"><span>  manipulador de eventos</span></span>, o exemplo a seguir poderia rodar o código dentro da função sempre que o botão associado é clicado:</p>
+<p>Isto é chamado<strong> Função anônima</strong> — não tem nome! E também não fará nada em si mesma. Você geralmente cria funções anônimas junto com um  manipulador de eventos, o exemplo a seguir poderia rodar o código dentro da função sempre que o botão associado é clicado:</p>
 
 <pre class="brush: js">var myButton = document.querySelector('button');
 
@@ -174,7 +172,7 @@ anotherGreeting();</pre>
 
 <h2 id="Parâmetro_de_funções">Parâmetro de funções</h2>
 
-<p>Algumas funções requerem <strong>parâmetros</strong> <span class="short_text" id="result_box" lang="pt"><span>a ser especificado quando você está invocando-os</span></span> — esses são valores que precisam ser inclusos dentro dos parênteses da função, o que é necessário para fazer seu trabalho apropriado.</p>
+<p>Algumas funções requerem <strong>parâmetros</strong> a ser especificado quando você está invocando-os — esses são valores que precisam ser inclusos dentro dos parênteses da função, o que é necessário para fazer seu trabalho apropriado.</p>
 
 <div class="note">
 <p><strong>Nota</strong>: Parâmetros algumas vezes são chamados de argumentos, propriedades, ou até atributos.</p>
@@ -274,7 +272,7 @@ function b() {
 
   <pre class="brush: js">a();
 b();</pre>
-  Você verá os valores de <code>y</code> e <code>z</code> mostrados na página. <span class="short_text" id="result_box" lang="pt"><span>Isso funciona bem</span></span>, desde que a função <code>output()</code> está sendo chamada dentro de outra função — <span id="result_box" lang="pt"><span>no mesmo escopo que as variáveis que estam imprimindo são definidas</span></span>, em cada caso. <code>output()</code> em si é acessível de qualquer lugar, <span class="short_text" id="result_box" lang="pt"><span>como é definido no escopo global.</span></span></li>
+  Você verá os valores de <code>y</code> e <code>z</code> mostrados na página. Isso funciona bem, desde que a função <code>output()</code> está sendo chamada dentro de outra função — no mesmo escopo que as variáveis que estam imprimindo são definidas, em cada caso. <code>output()</code> em si é acessível de qualquer lugar, como é definido no escopo global.</li>
  <li>Agora tente atualizar seu código como este:
   <pre class="brush: js">function a() {
   var y = 2;

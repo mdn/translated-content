@@ -1,16 +1,6 @@
 ---
 title: '<samp>: サンプル出力要素'
 slug: Web/HTML/Element/samp
-tags:
-  - Element
-  - HTML
-  - HTML text-level semantics
-  - Inline Sample
-  - Reference
-  - Sample Output
-  - Sample Text
-  - Web
-translation_of: Web/HTML/Element/samp
 ---
 {{HTMLRef}}
 

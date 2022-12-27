@@ -1,12 +1,6 @@
 ---
 title: SVG In HTML Introduction
 slug: Web/SVG/Tutorial/SVG_In_HTML_Introduction
-tags:
-  - Intermediate
-  - NeedsUpdate
-  - SVG
-  - 中級者
-translation_of: Web/SVG/Tutorial/SVG_In_HTML_Introduction
 ---
 ## 概要
 

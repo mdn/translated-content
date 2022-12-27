@@ -1,12 +1,6 @@
 ---
 title: <xsl:namespace-alias>
 slug: Web/XSLT/Element/namespace-alias
-tags:
-  - XSLT
-  - namespace-alias
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/namespace-alias
 ---
 {{ XsltRef() }}
 

@@ -1,15 +1,6 @@
 ---
 title: 料理帳テンプレート
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
-tags:
-  - CSS
-  - 協力
-  - ガイド
-  - レイアウト
-  - テンプレート
-  - 料理帳
-  - レシピ
-translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
 ---
 {{CSSRef}}
 

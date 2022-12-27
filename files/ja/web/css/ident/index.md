@@ -1,7 +1,6 @@
 ---
 title: ident
 slug: Web/CSS/ident
-translation_of: Web/CSS/ident
 ---
 {{CSSRef}}
 

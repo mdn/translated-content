@@ -166,7 +166,7 @@ macOS をお使いの場合は、 QuickTime Player が利用できるはずで�
 ```
 
 マクロ呼び出しで取得されるプロパティは、URL全体ではなく、動画のURLの末尾にある文字列の1つです。
-例えば、[ページインスペクター 3 ペインモード](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/3-pane_mode/index.html)の記事に埋め込まれている動画は、 https\://www\.youtube.com/watch?v=ELS2OOUvxIw で公開されているので、必要なマクロ呼び出しは次のようになります。
+例えば、[ページインスペクター 3 ペインモード](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/3-pane_mode/index.html)の記事に埋め込まれている動画は、 <https://www.youtube.com/watch?v=ELS2OOUvxIw> で公開されているので、必要なマクロ呼び出しは次のようになります。
 
 ```
 \{{EmbedYouTube("ELS2OOUvxIw")}}

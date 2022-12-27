@@ -23,7 +23,7 @@ new Intl.RelativeTimeFormat([locales[, options]])
   - : 可选的。具有以下部分或全部属性的对象：
 
     - `localeMatcher`
-      要使用的区域设置匹配算法。可能的值是`"lookup"`和`"best fit"`; 默认是`"best fit"`。有关此选项的信息，请参阅[`Intl`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation)。
+      要使用的区域设置匹配算法。可能的值是`"lookup"`和`"best fit"`; 默认是`"best fit"`。有关此选项的信息，请参阅[`Intl`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#Locale_negotiation)。
     - `numeric`
       输出消息的格式。可能的值是：
 

@@ -1,16 +1,6 @@
 ---
 title: 要素を中央に配置
 slug: Web/CSS/Layout_cookbook/Center_an_element
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - レシピ
-  - ボックス配置
-  - センタリング
-  - 料理帳
-  - フレックスボックス
-translation_of: Web/CSS/Layout_cookbook/Center_an_element
 ---
 {{CSSRef}}
 

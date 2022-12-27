@@ -4,7 +4,7 @@ slug: Web/API/WebGLRenderingContext/blendEquation
 ---
 {{APIRef("WebGL")}}
 
-[WebGL API](/en-US/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.blendEquation()`** 方法用于将 RGB 混合方程和阿尔法混合方程设置为单个方程。
+[WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.blendEquation()`** 方法用于将 RGB 混合方程和阿尔法混合方程设置为单个方程。
 
 混合方程式确定新像素如何与 {{domxref("WebGLFramebuffer")}} 中的像素组合。
 

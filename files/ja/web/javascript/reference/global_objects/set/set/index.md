@@ -1,14 +1,6 @@
 ---
 title: Set() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Set/Set
-tags:
-  - コンストラクター
-  - JavaScript
-  - リファレンス
-  - set
-  - ポリフィル
-browser-compat: javascript.builtins.Set.Set
-translation_of: Web/JavaScript/Reference/Global_Objects/Set/Set
 ---
 {{JSRef}}
 

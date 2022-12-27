@@ -80,7 +80,7 @@ JSON.stringify({ [Symbol.for('foo')]: 'foo' }, function(k, v) {
 
 <h4 id="Exemplo_de_uma_função">Exemplo de uma função</h4>
 
-<pre class="brush: js notranslate">function <span style="font-size: 1rem;">replacer</span><span style="font-size: 1rem;">(key, value) {</span>
+<pre class="brush: js notranslate">function replacer(key, value) {
   if (typeof value === "string") {
     return undefined;
   }
@@ -123,7 +123,7 @@ var jsonString = JSON.stringify(foo, replacer);
 
 <h3 id="toJSON_behavior" name="toJSON_behavior">Comportamento de <code>toJSON()</code></h3>
 
-<p>Se um objeto sendo stringificado tiver uma propriedade denominada <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">toJSON()</span></font> cujo valor é uma função, o método <code>toJSON()</code> personaliza o comportamento da stringificação JSON, em vez de o objeto ser serializado, o valor retornado pelo método <code>toJSON()</code> quando chamado será serializado. Por exemplo:</p>
+<p>Se um objeto sendo stringificado tiver uma propriedade denominada <font face="consolas, Liberation Mono, courier, monospace">toJSON()</font> cujo valor é uma função, o método <code>toJSON()</code> personaliza o comportamento da stringificação JSON, em vez de o objeto ser serializado, o valor retornado pelo método <code>toJSON()</code> quando chamado será serializado. Por exemplo:</p>
 
 <pre class="brush: js notranslate">var obj = {
   foo: 'foo',

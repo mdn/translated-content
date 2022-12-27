@@ -103,6 +103,7 @@ let myArray = ['Wind', 'Rain', 'Fire']
 Puedes referirte al primer elemento del arreglo como `myArray[0]`, al segundo elemento del arreglo como `myArray[1]`, etc… El índice de los elementos comienza en cero.
 
 > **Nota:** También puedes utilizar la [propiedad `accessors`](/es/docs/Web/JavaScript/Reference/Operators/Property_Accessors) para acceder a otras propiedades del arreglo, como con un objeto.
+>
 > ```js
 > let arr = ['one', 'two', 'three']
 > arr[2] // three
@@ -121,6 +122,7 @@ emp[2] = 'August West'
 ```
 
 > **Nota:** Si proporcionas un valor no entero al operador `array` en el código anterior, se creará una propiedad en el objeto que representa al arreglo, en lugar de un elemento del arreglo.
+>
 > ```js
 > let arr = []
 > arr[3.4] = 'Oranges'
@@ -330,7 +332,7 @@ myArray.sort()
 
 `sort()` también puede tomar una función retrollamada para determinar cómo se comparan los elementos del arreglo.
 
-El método `sort` (y otros a continuación) que reciben una retrollamada se conocen como _métodos iterativos_, porque iteran sobre todo el arreglo de alguna manera. Cada uno toma un segundo argumento opcional llamado `thisObject`. Si se proporciona, `thisObject` se convierte en el valor de la palabra clave `this` dentro del cuerpo de la función retrollamada. Si no se proporciona, como en otros casos en los que se invoca una función fuera de un contexto de objeto explícito, `this` se referirá al objeto global ([`window`](/es/docs/Web/API/Window "La interfaz <code>Window</code> representa una ventana que contiene un documento DOM; la propiedad <code>document</code> apunta al documento DOM cargado en esa ventana.")) cuando se usa la función de flecha como retrollamada, o `undefined` cuando se usa una función normal como retrollamada.
+El método `sort` (y otros a continuación) que reciben una retrollamada se conocen como _métodos iterativos_, porque iteran sobre todo el arreglo de alguna manera. Cada uno toma un segundo argumento opcional llamado `thisObject`. Si se proporciona, `thisObject` se convierte en el valor de la palabra clave `this` dentro del cuerpo de la función retrollamada. Si no se proporciona, como en otros casos en los que se invoca una función fuera de un contexto de objeto explícito, `this` se referirá al objeto global ([`window`](/es/docs/Web/API/Window)) cuando se usa la función de flecha como retrollamada, o `undefined` cuando se usa una función normal como retrollamada.
 
 La función retrollamada se invoca con dos argumentos, que son elementos del arreglo.
 
@@ -460,10 +462,12 @@ for (let i = 0; i < 4; i++) {
 
 Este ejemplo crea un arreglo con las siguientes filas:
 
-    Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
-    Row 1: [1, 0] [1, 1] [1, 2] [1, 3]
-    Row 2: [2, 0] [2, 1] [2, 2] [2, 3]
-    Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
+```
+Row 0: [0, 0] [0, 1] [0, 2] [0, 3]
+Row 1: [1, 0] [1, 1] [1, 2] [1, 3]
+Row 2: [2, 0] [2, 1] [2, 2] [2, 3]
+Row 3: [3, 0] [3, 1] [3, 2] [3, 3]
+```
 
 ### Usar arreglos para almacenar otras propiedades
 
@@ -481,7 +485,7 @@ Cuando un arreglo es el resultado de una coincidencia entre una expresión regul
 
 ### Trabajar con objetos tipo array
 
-Algunos objetos JavaScript, como [`NodeList`](/es/docs/Web/API/NodeList "Los objetos <code>NodeList</code> son colecciones de nodos, generalmente devueltos por propiedades como ↑Node.childNodes↓ y métodos como ↑document.querySelectorAll()↓.") devueltos por [`document.getElementsByTagName()`](/es/docs/Web/API/Document/getElementsByTagName "devuelve una <code>HTMLCollection</code> de elementos con el nombre de etiqueta dado.") o un objeto {{jsxref("Functions/arguments", "arguments")}} disponible dentro del cuerpo de una función, se ven y se comportan como arreglos en la superficie pero no comparten todos sus métodos. El objeto `arguments` proporciona un atributo {{jsxref("Global_Objects/Function/length", "length")}} pero no implementa el método {{jsxref("Array.forEach", "forEach()")}}, por ejemplo.
+Algunos objetos JavaScript, como [`NodeList`](/es/docs/Web/API/NodeList) devueltos por [`document.getElementsByTagName()`](/es/docs/Web/API/Document/getElementsByTagName) o un objeto {{jsxref("Functions/arguments", "arguments")}} disponible dentro del cuerpo de una función, se ven y se comportan como arreglos en la superficie pero no comparten todos sus métodos. El objeto `arguments` proporciona un atributo {{jsxref("Global_Objects/Function/length", "length")}} pero no implementa el método {{jsxref("Array.forEach", "forEach()")}}, por ejemplo.
 
 Los métodos de arreglo no se pueden llamar directamente en objetos similares a un arreglo.
 

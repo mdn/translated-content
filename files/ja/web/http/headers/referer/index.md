@@ -1,15 +1,6 @@
 ---
 title: Referer
 slug: Web/HTTP/Headers/Referer
-tags:
-  - HTTP
-  - HTTP リクエストヘッダー
-  - Reference
-  - referer
-  - ヘッダー
-  - リクエストヘッダー
-  - リファラー
-translation_of: Web/HTTP/Headers/Referer
 ---
 {{HTTPSidebar}}
 

@@ -1,17 +1,6 @@
 ---
 title: String.prototype.big()
 slug: Web/JavaScript/Reference/Global_Objects/String/big
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/big
-browser-compat: javascript.builtins.String.big
 ---
 {{JSRef}} {{deprecated_header}}
 

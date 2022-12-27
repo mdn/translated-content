@@ -1,14 +1,6 @@
 ---
 title: 古い反復子プロトコル
-slug: >-
-  Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
-tags:
-  - ES2015
-  - ガイド
-  - JavaScript
-  - 古い反復子
-translation_of: >-
-  Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
+slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol
 ---
 {{jsSidebar("More")}}
 

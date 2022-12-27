@@ -1,12 +1,6 @@
 ---
 title: 非推奨の機能、廃止された機能
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
-tags:
-  - 非推奨
-  - ガイド
-  - JavaScript
-  - 廃止
-translation_of: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 ---
 {{JsSidebar("More")}}
 

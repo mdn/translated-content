@@ -1,12 +1,6 @@
 ---
 title: Network Error Logging
 slug: Web/HTTP/Network_Error_Logging
-tags:
-  - Guide
-  - HTTP
-  - Network Error Logging
-  - Reference
-translation_of: Web/HTTP/Network_Error_Logging
 ---
 {{HTTPSidebar}}{{SeeCompatTable}}
 

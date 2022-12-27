@@ -1,12 +1,6 @@
 ---
 title: rect
 slug: Web/SVG/Element/rect
-tags:
-  - Element
-  - Reference
-  - SVG
-  - SVG Graphics
-translation_of: Web/SVG/Element/rect
 ---
 {{SVGRef}}
 

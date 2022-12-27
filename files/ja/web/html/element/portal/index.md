@@ -1,17 +1,6 @@
 ---
 title: '<portal>: ポータル要素'
 slug: Web/HTML/Element/portal
-tags:
-  - Content
-  - Element
-  - Embedded content
-  - Embedding
-  - HTML
-  - HTML embedded content
-  - Reference
-  - Web
-  - Portal
-translation_of: Web/HTML/Element/portal
 ---
 {{HTMLRef}}
 

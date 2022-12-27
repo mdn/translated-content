@@ -127,7 +127,7 @@ log("Logging mouse events inside this container...");
 
 La fonction `log()` crée la sortie du journal en récupérant l'heure actuelle à partir d'un objet {{jsxref ("Date")}} en utilisant {{jsxref ("Date.toLocaleTimeString", "toLocaleTimeString ()")}} et en créant une chaîne avec l'horodatage et le texte du message. Ensuite, le message est ajouté à la boîte avec la classe `"log"`.
 
-Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que {{event ("mousedown")}}, {{event ("click")}} et {{event ("mouseenter") }}) :
+Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que [`mousedown`](/fr/docs/Web/API/Element/mousedown_event), {{event ("click")}} et [`mouseenter`](/fr/docs/Web/API/Element/mouseenter_event)) :
 
 ```js
 function logEvent(event) {

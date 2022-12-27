@@ -18,7 +18,7 @@ slug: Web/API/Channel_Messaging_API
 
 当你想要停止通过信道发送消息时，你可以调用来关闭 {{domxref("MessagePort.close")}} 端口。
 
-更多使用这个 API 的资料参见：[Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging) 。
+更多使用这个 API 的资料参见：[Using channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging) 。
 
 ## Channel 通信接口
 
@@ -44,6 +44,6 @@ slug: Web/API/Channel_Messaging_API
 
 ## 参见
 
-- [Using channel messaging](/en-US/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
-- [Web Workers API](/en-US/docs/Web/API/Web_Workers_API)
-- [Broadcast Channel API](/en-US/docs/Web/API/Broadcast_Channel_API)
+- [Using channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [Web Workers API](/zh-CN/docs/Web/API/Web_Workers_API)
+- [Broadcast Channel API](/zh-CN/docs/Web/API/Broadcast_Channel_API)

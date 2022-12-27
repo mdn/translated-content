@@ -1,12 +1,6 @@
 ---
 title: レイアウトモード
 slug: Web/CSS/Layout_mode
-tags:
-  - CSS
-  - ガイド
-  - レイアウト
-  - リファレンス
-translation_of: Web/CSS/Layout_mode
 ---
 {{CSSRef}}
 

@@ -51,12 +51,13 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
  <dd>Uma função que atribui valores a propriedades. Retorna um {{jsxref ("Boolean")}} com o valor <code>true</code> se a atualização foi bem sucedida.</dd>
  <dt>{{jsxref("Reflect.setPrototypeOf()", "Reflect.setPrototypeOf(<var>target</var>, <var>prototype</var>)")}}</dt>
  <dd>Uma função que define o <a href="/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype">protótipo de um objeto</a>. Retorna um {{jsxref ("Boolean")}} com o valor <code>true</code> se a atualização foi bem sucedida.</dd>
- <dt>
- <h2 id="Exemplos">Exemplos</h2>
+</dl>
 
- <h3 id="Verificando_se_um_objeto_contém_determinadas_propriedades">Verificando se um objeto contém determinadas propriedades</h3>
+<h2 id="Exemplos">Exemplos</h2>
 
- <pre class="brush: js notranslate">const duck = {
+<h3 id="Verificando_se_um_objeto_contém_determinadas_propriedades">Verificando se um objeto contém determinadas propriedades</h3>
+
+<pre class="brush: js notranslate">const duck = {
   name: 'Maurice',
   color: 'white',
   greeting: function() {
@@ -69,18 +70,16 @@ Reflect.has(duck, 'color');
 Reflect.has(duck, 'haircut');
 // false</pre>
 
- <h3 id="Retornando_as_próprias_chaves_do_objeto">Retornando as próprias chaves do objeto</h3>
+<h3 id="Retornando_as_próprias_chaves_do_objeto">Retornando as próprias chaves do objeto</h3>
 
- <pre class="brush: js notranslate">Reflect.ownKeys(duck);
+<pre class="brush: js notranslate">Reflect.ownKeys(duck);
 // [ "name", "color", "greeting" ]</pre>
 
- <h3 id="Adicionando_uma_nova_propriedade_ao_objeto">Adicionando uma nova propriedade ao objeto</h3>
+<h3 id="Adicionando_uma_nova_propriedade_ao_objeto">Adicionando uma nova propriedade ao objeto</h3>
 
- <pre class="brush: js notranslate">Reflect.set(duck, 'eyes', 'black');
+<pre class="brush: js notranslate">Reflect.set(duck, 'eyes', 'black');
 // returns "true" if successful
 // "duck" now contains the property "eyes: 'black'"</pre>
- </dt>
-</dl>
 
 <h2 id="Especificações">Especificações</h2>
 

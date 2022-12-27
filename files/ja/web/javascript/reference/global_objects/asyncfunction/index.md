@@ -1,12 +1,6 @@
 ---
 title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
-tags:
-  - Constructor
-  - JavaScript
-  - Reference
-  - コンストラクター
-translation_of: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ---
 {{JSRef}}
 

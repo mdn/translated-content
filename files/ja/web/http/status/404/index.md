@@ -1,14 +1,6 @@
 ---
 title: 404 Not Found
 slug: Web/HTTP/Status/404
-tags:
-  - Browser
-  - HTTP
-  - Reference
-  - Status code
-  - クライアントエラー
-  - ステータスコード
-translation_of: Web/HTTP/Status/404
 ---
 {{HTTPSidebar}}
 

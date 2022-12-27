@@ -1,12 +1,6 @@
 ---
 title: <xsl:transform>
 slug: Web/XSLT/Element/transform
-tags:
-  - XSLT
-  - transform
-  - リファレンス
-  - 要素
-translation_of: Web/XSLT/Element/transform
 ---
 {{ XsltRef() }}
 

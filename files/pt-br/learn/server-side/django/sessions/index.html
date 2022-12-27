@@ -42,15 +42,13 @@ original_slug: Learn/Server-side/Django/Sessões
 
 <p>O site <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a> que criamos nos tutoriais anteriores permite que os usuarios busquem por livros e autores no catálogo. Enquanto o conteúdo é dinamicamente gerado a partir da base de dados, todos os usuários terão acessos às mesmas páginas e às mesmas informações quando acessarem o site.</p>
 
-<p><span class="tlid-translation translation"><span title="">Em uma biblioteca "real", você pode querer fornecer uma experiência personalizada para cada usuário, com base no uso anterior do site, nas preferências, etc. Por exemplo, você pode ocultar mensagens de aviso que o usuário reconheceu anteriormente na próxima visita deles ao</span> <span title="">site ou armazenar e respeitar suas preferências (por exemplo, o número de resultados de pesquisa que eles querem exibir em cada página).</span></span></p>
+<p>Em uma biblioteca "real", você pode querer fornecer uma experiência personalizada para cada usuário, com base no uso anterior do site, nas preferências, etc. Por exemplo, você pode ocultar mensagens de aviso que o usuário reconheceu anteriormente na próxima visita deles ao site ou armazenar e respeitar suas preferências (por exemplo, o número de resultados de pesquisa que eles querem exibir em cada página).</p>
 
-<div class="text-wrap tlid-copy-target">
-<div class="result-shield-container tlid-copy-target"><span class="tlid-translation translation"><span title="">A estrutura da sessão permite implementar esse tipo de comportamento, permitindo que você armazene e recupere dados arbitrários baseados em cada visitante do site.</span></span></div>
-</div>
+<div>A estrutura da sessão permite implementar esse tipo de comportamento, permitindo que você armazene e recupere dados arbitrários baseados em cada visitante do site.</div>
 
 <h2 id="O_que_são_sessões">O que são sessões?</h2>
 
-<p>Toda a comunicação entre os navegadores web e os servidores é feita via protocolo HTTP, qual é <em>stateless</em> (sem estados). O fato do protocolo ser stateless significa que as mensagenns entre o cliente e o servidor são completamente independentes uma da outra — não há uma noção de "sequência" ou comportamento diferente baseado nas mensagens anteriores. <span class="tlid-translation translation"><span title="">Como resultado, se você quiser ter um site que monitore os relacionamentos contínuos com um cliente, é necessário implementá-lo por conta própria.</span></span></p>
+<p>Toda a comunicação entre os navegadores web e os servidores é feita via protocolo HTTP, qual é <em>stateless</em> (sem estados). O fato do protocolo ser stateless significa que as mensagenns entre o cliente e o servidor são completamente independentes uma da outra — não há uma noção de "sequência" ou comportamento diferente baseado nas mensagens anteriores. Como resultado, se você quiser ter um site que monitore os relacionamentos contínuos com um cliente, é necessário implementá-lo por conta própria.</p>
 
 <p>Sessões são o mecanismo usado pelo Django (e muitos outros na Internet) para monitorar o "estado" entre o site e um navegador web em particular. Sessões permitem que você armazene dados arbitrários por navegador web, e têm esse dado disponível no site sempre que o navegador conectar. Dados de itens individuais associados com a sessão são referenciados por uma "chave", que é usada para armazenar e recuperar os dados.</p>
 
@@ -74,7 +72,7 @@ MIDDLEWARE = [
 
 <h2 id="Usando_Sessões">Usando Sessões</h2>
 
-<p>Você pode acessar o atributo <code>session</code> na view a partir do parâmetro <code>request</code> (um <code>HttpRequest</code> passado como primeiro argumento na view). Esse atributo de sessão representa a conexão atual específica com um usuário<span class="tlid-translation translation"><span title=""> (ou, para ser mais preciso, a conexão com o navegador atual, conforme identificado pelo id da sessão no cookie do navegador para este site)</span></span>.</p>
+<p>Você pode acessar o atributo <code>session</code> na view a partir do parâmetro <code>request</code> (um <code>HttpRequest</code> passado como primeiro argumento na view). Esse atributo de sessão representa a conexão atual específica com um usuário (ou, para ser mais preciso, a conexão com o navegador atual, conforme identificado pelo id da sessão no cookie do navegador para este site).</p>
 
 <p>O atributo <code>session</code> é como um objeto dicionário que você pode ler e escrever quantas vezes você quiser na sua view, modificando-o como desejar. Você pode fazer todas as operações normais de um dicionário, incluindo limpar todos os dados, testar se uma chave está presente, loop em torno dos dados, etc. Na maior parte do tempo, você usará apenas a API padrão "dictionary" para obter e setar valores.</p>
 

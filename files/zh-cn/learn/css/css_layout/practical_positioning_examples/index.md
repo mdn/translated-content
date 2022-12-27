@@ -12,10 +12,10 @@ slug: Learn/CSS/CSS_layout/Practical_positioning_examples
       <th scope="row"><p>预备知识：</p></th>
       <td>
         <p>
-          HTML 基础 (学习<a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+          HTML 基础 (学习<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
             >Introduction to HTML</a
           >),和 CSS 怎么工作的 (学习<a
-            href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+            href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
             >Introduction to CSS</a
           >.)
         </p>

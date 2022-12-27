@@ -24,8 +24,8 @@ translation_of: Web/API/EventTarget/removeEventListener
  <dt><code>listener</code></dt>
  <dd>A função {{ domxref("EventListener") }}  a ser removida do event target.</dd>
  <dt><code>useCapture</code> {{ optional_inline() }}</dt>
- <dd>Indica quando o {{ domxref("EventListener") }} a ser removido foi registrado ou não como <em>capturing listener</em>. Caso este parâmetro seja omitido, o valor <em>false</em> será assumido por padrão.</dd>
- <dd>Se um listener foi registrado duas vezes, uma com o parâmetro <em>capture</em> especificado e outra sem, cada um deve ser removido separadamente. A remoção de um <em>capturing listener</em> não afeta a versão <em>non-capturing</em> do mesmo listener, e vice versa.</dd>
+ <dd><p>Indica quando o {{ domxref("EventListener") }} a ser removido foi registrado ou não como <em>capturing listener</em>. Caso este parâmetro seja omitido, o valor <em>false</em> será assumido por padrão.</p>
+ <p>Se um listener foi registrado duas vezes, uma com o parâmetro <em>capture</em> especificado e outra sem, cada um deve ser removido separadamente. A remoção de um <em>capturing listener</em> não afeta a versão <em>non-capturing</em> do mesmo listener, e vice versa.</p></dd>
 </dl>
 
 <div class="note"><strong>Nota:</strong> <code>useCapture</code> era obrigatório em versões mais antigas dos navegadores. Para ampla compatibilidade, sempre informe o parâmetro <code>useCapture.</code></div>

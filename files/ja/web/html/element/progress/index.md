@@ -1,15 +1,6 @@
 ---
 title: '<progress>: 進捗表示要素'
 slug: Web/HTML/Element/progress
-tags:
-  - Element
-  - HTML
-  - HTML forms
-  - HTML5
-  - Reference
-  - Web
-browser-compat: html.elements.progress
-translation_of: Web/HTML/Element/progress
 ---
 {{HTMLRef}}
 

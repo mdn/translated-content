@@ -1,16 +1,6 @@
 ---
 title: '<b>: 注目付け要素'
 slug: Web/HTML/Element/b
-tags:
-  - HTML
-  - HTML 文字レベルの意味付け
-  - HTML:フローコンテンツ
-  - HTML:知覚可能コンテンツ
-  - HTML:記述コンテンツ
-  - Reference
-  - ウェブ
-  - 要素
-translation_of: Web/HTML/Element/b
 ---
 {{HTMLRef}}
 

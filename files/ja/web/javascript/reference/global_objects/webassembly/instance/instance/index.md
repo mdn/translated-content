@@ -1,13 +1,6 @@
 ---
 title: WebAssembly.Instance() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance
-tags:
-  - コンストラクター
-  - JavaScript
-  - Reference
-  - WebAssembly
-browser-compat: javascript.builtins.WebAssembly.Instance.Instance
-translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/Instance
 ---
 {{JSRef}}
 

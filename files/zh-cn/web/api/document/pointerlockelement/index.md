@@ -28,4 +28,4 @@ An {{domxref("Element")}} or `null`.
 
 - {{ domxref("Document.exitPointerLock()") }}
 - {{ domxref("Element.requestPointerLock()") }}
-- [Pointer Lock](/en-US/docs/WebAPI/Pointer_Lock)
+- [Pointer Lock](/zh-CN/docs/WebAPI/Pointer_Lock)

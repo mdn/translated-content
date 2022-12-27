@@ -8,7 +8,7 @@ IndexedDB api 中的 IDBRequest 接口提供了根据绑定事件处理函数访
 
 该 request 对象初始时不包括任何关于操作结果的信息，当 request 上的事件触发时，可以通过 IDBRequest 实例上的事件处理函数访问相关信息。
 
-继承自：[EventTarget](/en/DOM/EventTarget)
+继承自：[EventTarget](/zh-CN/DOM/EventTarget)
 
 ## About this document
 
@@ -70,7 +70,7 @@ request.onupgradeneeded= function(event) {
         <code><a name="attr_errorCode">error</a></code>
       </td>
       <td>
-        <code>readonly <a href="/en-US/docs/DOM/DOMError">DOMError</a></code>
+        <code>readonly <a href="/zh-CN/docs/DOM/DOMError">DOMError</a></code>
       </td>
       <td>
         <p>The following error codes are returned under certain conditions:</p>
@@ -193,7 +193,7 @@ request.onupgradeneeded= function(event) {
 
 ## Derived interface
 
-- [`IDBOpenDBRequest`](/en/IndexedDB/IDBOpenDBRequest)
+- [`IDBOpenDBRequest`](/zh-CN/IndexedDB/IDBOpenDBRequest)
 
 ## 规范
 

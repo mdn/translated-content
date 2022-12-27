@@ -47,13 +47,13 @@ slug: Web/HTML/Element/ul
     > **备注：** 不要使用这个属性，因为它已经被废弃了：{{ HTMLElement("ul") }} 元素应当使用 [CSS](/zh-CN/docs/CSS) 来更改样式。（CSS）可以提供与 `compact` 属性相同的效果，将 [CSS](/zh-CN/docs/CSS) 属性 [line-height](/zh-CN/docs/CSS/line-height) 的值设为 `80%` 即可。
 
 - {{ htmlattrdef("type") }}{{ Deprecated_inline() }}
-  - : 用于设置列表的着重号样式 ，被定义在 [HTML3.2](/en/HTML3.2) 和过渡版本 [HTML 4.0/4.01](/en/HTML4.01) 中的可用值有：
+  - : 用于设置列表的着重号样式 ，被定义在 [HTML3.2](/zh-CN/HTML3.2) 和过渡版本 [HTML 4.0/4.01](/zh-CN/HTML4.01) 中的可用值有：
 
     - `circle`
     - `disc`
-    - `square`第四种着重号样式被定义在 WebTV 接口中，但并不是所有浏览器都支持：`triangle`如果未设置此 HTML 属性且没有 [CSS](/en/CSS) {{ cssxref("list-style-type") }} 属性作用于这个元素，用户代理会决定使用哪种着重号样式，一般来说这也和嵌套的层级数有关。
+    - `square`第四种着重号样式被定义在 WebTV 接口中，但并不是所有浏览器都支持：`triangle`如果未设置此 HTML 属性且没有 [CSS](/zh-CN/CSS) {{ cssxref("list-style-type") }} 属性作用于这个元素，用户代理会决定使用哪种着重号样式，一般来说这也和嵌套的层级数有关。
 
-    > **备注：** 不要使用这个属性，它已经被废弃了：使用 [CSS](/en/CSS) {{ cssxref("list-style-type") }} 属性作为代替。
+    > **备注：** 不要使用这个属性，它已经被废弃了：使用 [CSS](/zh-CN/CSS) {{ cssxref("list-style-type") }} 属性作为代替。
 
 ## 使用说明
 
@@ -157,7 +157,7 @@ slug: Web/HTML/Element/ul
 - 其他列表相关的 HTML 元素: {{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} 和绝对元素 {{ HTMLElement("dir") }};
 - 特别作用于 \<ul>元素的 CSS 属性：
 
-  - [list-style](/en/CSS/list-style) 属性，作用于选择哪种序数的样式来显示，
-  - [CSS counters](/en/CSS_Counters), 作用于操作复杂的嵌套列表，
-  - [line-height](/en/CSS/line-height) 属性，作用于模拟过时的 {{ htmlattrxref("compact", "ul") }} 属性，
-  - [margin](/en/CSS/margin) 属性，作用于控制列表的缩进。
+  - [list-style](/zh-CN/CSS/list-style) 属性，作用于选择哪种序数的样式来显示，
+  - [CSS counters](/zh-CN/CSS_Counters), 作用于操作复杂的嵌套列表，
+  - [line-height](/zh-CN/CSS/line-height) 属性，作用于模拟过时的 {{ htmlattrxref("compact", "ul") }} 属性，
+  - [margin](/zh-CN/CSS/margin) 属性，作用于控制列表的缩进。

@@ -4,7 +4,7 @@ slug: Web/API/WebGLSampler
 ---
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
-[WebGL 2](/en-US/docs/Web/API/WebGL_API) API 的 **`WebGLSampler`** 接口存储一系列采样参数，供 {{domxref("WebGLTexture")}} 在着色器中访问。
+[WebGL 2](/zh-CN/docs/Web/API/WebGL_API) API 的 **`WebGLSampler`** 接口存储一系列采样参数，供 {{domxref("WebGLTexture")}} 在着色器中访问。
 
 当使用 `WebGLSampler` 对象时，有以下 {{domxref("WebGL2RenderingContext")}} 相关方法：
 

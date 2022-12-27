@@ -24,7 +24,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
 - `lastModified`
   - : `number`。选项卡或窗口关闭的时间，[自 epoch 以来的毫秒数](https://en.wikipedia.org/wiki/Unix_time)。
 - `tab`{{optional_inline}}
-  - : `object`。如果对象表示关闭的选项卡，则此属性存在，并且将是{{WebExtAPIRef("tabs.Tab")}}对象。仅当扩展名具有“tabs” [许可](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)权时`url`，它才会包含`title`和。`favIconUrl`
+  - : `object`。如果对象表示关闭的选项卡，则此属性存在，并且将是{{WebExtAPIRef("tabs.Tab")}}对象。仅当扩展名具有“tabs” [许可](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)权时`url`，它才会包含`title`和。`favIconUrl`
 - `window`{{optional_inline}}
   - : `object`。如果对象表示一个关闭的窗口，则此属性存在并且将是{{WebExtAPIRef("windows.Window")}}对象。
 

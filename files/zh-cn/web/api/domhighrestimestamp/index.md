@@ -86,7 +86,7 @@ let elapsedTime = performance.now() - startTime;
 
 ## 相关内容
 
-- [Navigation Timing API](/en-US/docs/Navigation_timing)
-- [Performance.now()](/en-US/docs/Web/API/Performance/now)
+- [Navigation Timing API](/zh-CN/docs/Navigation_timing)
+- [Performance.now()](/zh-CN/docs/Web/API/Performance/now)
 - <https://www.w3.org/TR/hr-time/#sec-DOMHighResTimeStamp>
 - <https://www.w3.org/TR/hr-time-2/>

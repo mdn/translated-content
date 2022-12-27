@@ -47,4 +47,4 @@ window.addEventListener("gamepaddisconnected", function(e) {
 
 ## 另请参阅
 
-[使用 Gamepad API](/en-US/docs/Web/Guide/API/Gamepad)
+[使用 Gamepad API](/zh-CN/docs/Web/Guide/API/Gamepad)

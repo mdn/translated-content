@@ -1,10 +1,6 @@
 ---
 title: self
 slug: Web/XPath/Axes/self
-tags:
-  - Axe
-  - XPath
-translation_of: Web/XPath/Axes/self
 ---
 `self` 軸はコンテキストノード自体を表します。単一のピリオド (`.`) に省略することができます。
 

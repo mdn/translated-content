@@ -1,13 +1,6 @@
 ---
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
-tags:
-  - Boolean
-  - クラス
-  - JavaScript
-  - リファレンス
-browser-compat: javascript.builtins.Boolean
-translation_of: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 {{JSRef}}
 

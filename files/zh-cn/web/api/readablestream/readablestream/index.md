@@ -2,7 +2,7 @@
 title: ReadableStream.ReadableStream()
 slug: Web/API/ReadableStream/ReadableStream
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+{{APIRef("Streams")}}
 
 **`ReadableStream()`** 构造函数创建并从给定的处理程序返回一个可读的流对象。
 

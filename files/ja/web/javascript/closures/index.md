@@ -1,14 +1,6 @@
 ---
 title: クロージャ
 slug: Web/JavaScript/Closures
-tags:
-  - Closure
-  - ES5
-  - Guide
-  - Intermediate
-  - JavaScript
-  - Reference
-translation_of: Web/JavaScript/Closures
 ---
 {{jsSidebar("Intermediate")}}
 

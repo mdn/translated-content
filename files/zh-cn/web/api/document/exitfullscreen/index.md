@@ -37,7 +37,7 @@ document.onclick = function (event) {
 
 ## 参阅
 
-- [Using full-screen mode](/en/DOM/Using_full-screen_mode)
+- [Using full-screen mode](/zh-CN/DOM/Using_full-screen_mode)
 - {{ domxref("Element.requestFullscreen()") }}
 - {{ domxref("Document.exitFullscreen()") }}
 - {{ domxref("Document.fullscreen") }}

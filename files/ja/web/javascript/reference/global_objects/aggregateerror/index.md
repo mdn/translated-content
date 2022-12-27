@@ -1,14 +1,6 @@
 ---
 title: AggregateError
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError
-tags:
-  - AggregateError
-  - クラス
-  - インターフェイス
-  - JavaScript
-  - ポリフィル
-browser-compat: javascript.builtins.AggregateError
-translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 ---
 {{JSRef}}
 

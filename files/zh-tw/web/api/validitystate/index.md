@@ -43,5 +43,5 @@ For each of these Boolean properties, a value of `true` indicates that the speci
 
 ## 參見
 
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation)
-- [Forms: Data form validation](/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation)
+- [Constraint validation](/zh-TW/docs/Web/Guide/HTML/HTML5/Constraint_validation)
+- [Forms: Data form validation](/zh-TW/docs/Web/Guide/HTML/Forms/Data_form_validation)

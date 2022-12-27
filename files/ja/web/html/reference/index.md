@@ -1,13 +1,6 @@
 ---
 title: HTML リファレンス
 slug: Web/HTML/Reference
-tags:
-  - HTML
-  - Landing
-  - Reference
-  - Web
-  - ウェブ
-translation_of: Web/HTML/Reference
 ---
 {{HTMLSidebar}}
 

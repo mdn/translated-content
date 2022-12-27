@@ -1,13 +1,6 @@
 ---
 title: Atomics.and()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/and
-tags:
-  - Atomics
-  - JavaScript
-  - メソッド
-  - 共有メモリー
-browser-compat: javascript.builtins.Atomics.and
-translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/and
 ---
 {{JSRef}}
 

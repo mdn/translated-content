@@ -1,14 +1,6 @@
 ---
 title: FinalizationRegistry.prototype.register()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
-tags:
-  - FinalizationRegistry
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - メソッド
-translation_of: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/register
 ---
 {{JSRef}}
 

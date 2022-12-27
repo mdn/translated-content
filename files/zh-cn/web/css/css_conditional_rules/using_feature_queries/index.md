@@ -4,11 +4,11 @@ slug: Web/CSS/CSS_Conditional_Rules/Using_Feature_Queries
 ---
 {{CSSRef}}
 
-**特性查询** 使用 CSS 的 at 规则 [@supports](/en-US/docs/Web/CSS/@supports) 创建。它给予 web 开发者一种测试浏览器是否有对某个确定特性的支持，而后提供基于测试结果生效的 CSS 的方法。在此指南中你将学习如何使用特性查询实现渐进式增强。
+**特性查询** 使用 CSS 的 at 规则 [@supports](/zh-CN/docs/Web/CSS/@supports) 创建。它给予 web 开发者一种测试浏览器是否有对某个确定特性的支持，而后提供基于测试结果生效的 CSS 的方法。在此指南中你将学习如何使用特性查询实现渐进式增强。
 
 ## 语法
 
-CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-conditional-3/) 标准的一部分，这一标准也包含了媒体查询 [@media](/en-US/docs/Web/CSS/@media) 规则；在你使用特性查询的时候，你会发现它们的行为方式与媒体查询类似。不同点在于媒体查询是测试网页运行的环境相关内容，但特性查询测试的是浏览器对 CSS 特性的支持。
+CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-conditional-3/) 标准的一部分，这一标准也包含了媒体查询 [@media](/zh-CN/docs/Web/CSS/@media) 规则；在你使用特性查询的时候，你会发现它们的行为方式与媒体查询类似。不同点在于媒体查询是测试网页运行的环境相关内容，但特性查询测试的是浏览器对 CSS 特性的支持。
 
 特性查询由 `@supports` 规则组成，紧跟着是属性名以及你想测试的属性值。你不能测试一个单单的属性名比如 `display`；规则需要你提供一个属性名以及一个值：
 
@@ -77,11 +77,11 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 让我们看一个非常简单的例子，在这个例子中，特性查询就派上用场了，它使用上述的方式来组织 CSS。
 
-假设我们想要创建一行三个盒子的布局，理想情况下，我们想要使用 [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_Grid_Layout) 布局。但是，我们希望有一个使用浮动（floats）的旧浏览器的布局。我们可以先用下面的代码创建浮动布局，它提供了三个列。
+假设我们想要创建一行三个盒子的布局，理想情况下，我们想要使用 [CSS Grid Layout](/zh-CN/docs/Web/CSS/CSS_Grid_Layout) 布局。但是，我们希望有一个使用浮动（floats）的旧浏览器的布局。我们可以先用下面的代码创建浮动布局，它提供了三个列。
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
 
-浏览器会忽略其无法识别的 CSS 属性或者值。所以我们可以开始使用 CSS Grid 来增强我们的布局。不支持 Grid 的浏览器将会忽略 `display` 属性的 `grid` 值。一旦一个浮动项成为网格项，浮动就会被移除——你可以阅读 [Supporting Older Browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers) 来了解更多。因此浮动的版本就会被网格的版本替代。
+浏览器会忽略其无法识别的 CSS 属性或者值。所以我们可以开始使用 CSS Grid 来增强我们的布局。不支持 Grid 的浏览器将会忽略 `display` 属性的 `grid` 值。一旦一个浮动项成为网格项，浮动就会被移除——你可以阅读 [Supporting Older Browsers](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers) 来了解更多。因此浮动的版本就会被网格的版本替代。
 
 然而问题来了，起因于我们为了使浮动项目显示为三列而在上面设置的 `width` 属性，它现在被网格解释为列在网格中的宽度，而不是容器的宽度（相对于浮动布局）。
 
@@ -105,7 +105,7 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 ### 参见
 
-- [@supports](/en-US/docs/Web/CSS/@supports) 规则
-- 学习布局：[Supporting Older Browsers](/en-US/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
+- [@supports](/zh-CN/docs/Web/CSS/@supports) 规则
+- 学习布局：[Supporting Older Browsers](/zh-CN/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
+- [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
 - [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)

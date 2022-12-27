@@ -1,17 +1,6 @@
 ---
 title: user-modify
 slug: Web/CSS/user-modify
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS:Mozilla 拡張
-  - CSS:WebKit 拡張
-  - 非推奨
-  - 標準外
-  - リファレンス
-  - recipe:css-property
-browser-compat: css.properties.user-modify
-translation_of: Web/CSS/user-modify
 ---
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 

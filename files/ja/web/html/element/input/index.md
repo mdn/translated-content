@@ -1,18 +1,6 @@
 ---
 title: '<input>: 入力欄 (フォーム入力) 要素'
 slug: Web/HTML/Element/input
-tags:
-  - データ入力
-  - 要素
-  - フォーム
-  - HTML
-  - HTML フォーム
-  - HTML input tag
-  - Input
-  - MakeBrowserAgnostic
-  - リファレンス
-  - ウェブ
-translation_of: Web/HTML/Element/input
 ---
 
 {{HTMLRef}}

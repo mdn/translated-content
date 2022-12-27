@@ -1,13 +1,6 @@
 ---
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
-tags:
-  - JavaScript
-  - Number
-  - プロパティ
-  - リファレンス
-browser-compat: javascript.builtins.Number.POSITIVE_INFINITY
-translation_of: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
 {{JSRef}}
 

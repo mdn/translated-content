@@ -1,7 +1,6 @@
 ---
 title: 攻撃の種類
 slug: Web/Security/Types_of_attacks
-translation_of: Web/Security/Types_of_attacks
 ---
 この記事では、様々な種類のセキュリティ攻撃とそれを軽減するためのテクニックについて解説しています。
 

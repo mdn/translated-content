@@ -1,13 +1,6 @@
 ---
 title: 関数
 slug: Web/JavaScript/Guide/Functions
-tags:
-  - Beginner
-  - Functions
-  - Guide
-  - JavaScript
-  - l10n:priority
-translation_of: Web/JavaScript/Guide/Functions
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Loops_and_iteration", "Web/JavaScript/Guide/Expressions_and_Operators")}}
 

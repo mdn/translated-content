@@ -1,15 +1,6 @@
 ---
 title: quotes
 slug: Web/CSS/quotes
-tags:
-  - CSS
-  - CSS プロパティ
-  - CSS 生成コンテンツ
-  - リファレンス
-  - ウェブ
-  - レイアウト
-  - 生成コンテンツ
-translation_of: Web/CSS/quotes
 ---
 {{CSSRef}}
 

@@ -1,16 +1,6 @@
 ---
 title: <gradient>
 slug: Web/CSS/gradient
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Images
-  - Data Type
-  - グラフィック
-  - Layout
-  - Reference
-browser-compat: css.types.image.gradient
-translation_of: Web/CSS/gradient
 ---
 {{CSSRef}}
 

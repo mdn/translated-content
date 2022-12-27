@@ -1,13 +1,6 @@
 ---
 title: '<figcaption>: 図キャプション要素'
 slug: Web/HTML/Element/figcaption
-tags:
-  - Element
-  - HTML
-  - HTML grouping content
-  - Reference
-translation_of: Web/HTML/Element/figcaption
-browser-compat: html.elements.figcaption
 ---
 {{HTMLRef}}
 

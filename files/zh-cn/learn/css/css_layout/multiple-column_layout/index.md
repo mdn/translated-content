@@ -12,10 +12,10 @@ slug: Learn/CSS/CSS_layout/Multiple-column_Layout
       <th scope="row">前提：</th>
       <td>
         HTML 基础 (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), 和了解 CSS 如何工作的 (study
-        <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS"
+        <a href="/zh-CN/docs/Learn/CSS/Introduction_to_CSS"
           >Introduction to CSS</a
         >.)
       </td>

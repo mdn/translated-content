@@ -1,15 +1,6 @@
 ---
 title: ピタゴラスの定理の証明
 slug: Web/MathML/Examples/MathML_Pythagorean_Theorem
-tags:
-  - Beginner
-  - Example
-  - Guide
-  - HTML5 Math
-  - 数学教育
-  - MathML
-  - NeedsBeginnerUpdate
-translation_of: Web/MathML/Examples/MathML_Pythagorean_Theorem
 ---
 ピタゴラスの定理を証明します。
 

@@ -4,7 +4,7 @@ slug: Web/API/Element/transitionend_event
 ---
 {{APIRef("CSS3 Transitions")}}
 
-{{domxref("GlobalEventHandlers")}} 混入对象的 **`ontransitionend`** 属性是一个处理 {{event("transitionend")}} 事件的 [事件处理函数](/en-US/docs/Web/Events/Event_handlers)。
+{{domxref("GlobalEventHandlers")}} 混入对象的 **`ontransitionend`** 属性是一个处理 {{event("transitionend")}} 事件的 [事件处理函数](/zh-CN/docs/Web/Events/Event_handlers)。
 
 `transitionend` 事件的事件处理函数，在某个 [CSS transition](/zh-CN/docs/Web/CSS/CSS_Transitions) 完成时触发。
 

@@ -21,7 +21,7 @@ A `<media-query>` is composed of a optional media type and/or a number of media 
 - all
   - : Suitable for all devices.
 - print
-  - : Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on [paged media](/en/CSS/Paged_Media), and the [media section of the Getting Started tutorial](/en/CSS/Getting_Started/Media) for information about formatting issues that are specific to paged media.
+  - : Intended for paged material and for documents viewed on screen in print preview mode. Please consult the section on [paged media](/zh-TW/CSS/Paged_Media), and the [media section of the Getting Started tutorial](/zh-TW/CSS/Getting_Started/Media) for information about formatting issues that are specific to paged media.
 - screen
   - : Intended primarily for color computer screens.
 - speech
@@ -47,7 +47,7 @@ Each _media feature_ tests for one specific feature of the browser or device.
 | [`overflow-inline`](/zh-TW/docs/Web/CSS/@media/overflow-inline)                                                        | Can content that overflows the viewport along the inline axis be scrolled?                                                      | Added in Media Queries Level 4                                                                                                        |
 | [`color`](/zh-TW/docs/Web/CSS/@media/color)                                                                            | Number of bits per color component of the output device, or zero if the device isn't color.                                     |                                                                                                                                       |
 | [`color-index`](/zh-TW/docs/Web/CSS/@media/color-index)                                                                | Number of entries in the output device's color lookup table, or zero if the device does not use such a table.                   |                                                                                                                                       |
-| [`display-mode`](/en-US/docs/Web/CSS/@media/display-mode)                                                              | The display mode of the application, as specified in the web app manifest's [display member](/zh-TW/docs/Web/Manifest#display). | Defined in the [Web App Manifest spec](http://w3c.github.io/manifest/#the-display-mode-media-feature).                                |
+| [`display-mode`](/zh-TW/docs/Web/CSS/@media/display-mode)                                                              | The display mode of the application, as specified in the web app manifest's [display member](/zh-TW/docs/Web/Manifest#display). | Defined in the [Web App Manifest spec](http://w3c.github.io/manifest/#the-display-mode-media-feature).                                |
 | [`monochrome`](/zh-TW/docs/Web/CSS/@media/monochrome)                                                                  | Bits per pixel in the output device's monochrome frame buffer, or 0 if the device is not monochrome.                            |                                                                                                                                       |
 | [`inverted-colors`](/zh-TW/docs/Web/CSS/@media/inverted-colors)                                                        | Is the user agent or underlying OS inverting colors?                                                                            | Added in Media Queries Level 4                                                                                                        |
 | [`pointer`](/zh-TW/docs/Web/CSS/@media/pointer)                                                                        | Is the primary input mechanism a pointing device, and if so, how accurate is it?                                                | Added in Media Queries Level 4                                                                                                        |
@@ -95,5 +95,5 @@ Each _media feature_ tests for one specific feature of the browser or device.
 
 ## See also
 
-- [Media queries](/en/CSS/Media_queries)
+- [Media queries](/zh-TW/CSS/Media_queries)
 - The CSSOM {{ domxref("CSSMediaRule") }} associated with this at-rule.

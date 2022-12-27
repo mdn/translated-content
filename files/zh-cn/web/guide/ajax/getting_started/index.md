@@ -8,7 +8,7 @@ slug: Web/Guide/AJAX/Getting_Started
 
 ## 什么是 AJAX？
 
-AJAX 是异步的 JavaScript 和 XML（**A**synchronous **J**avaScript **A**nd **X**ML）。简单点说，就是使用 [`XMLHttpRequest`](/en/DOM/XMLHttpRequest) 对象与服务器通信。 它可以使用 JSON，XML，HTML 和 text 文本等格式发送和接收数据。AJAX 最吸引人的就是它的“异步”特性，也就是说它可以在不重新刷新页面的情况下与服务器通信，交换数据，或更新页面。
+AJAX 是异步的 JavaScript 和 XML（**A**synchronous **J**avaScript **A**nd **X**ML）。简单点说，就是使用 [`XMLHttpRequest`](/zh-CN/DOM/XMLHttpRequest) 对象与服务器通信。 它可以使用 JSON，XML，HTML 和 text 文本等格式发送和接收数据。AJAX 最吸引人的就是它的“异步”特性，也就是说它可以在不重新刷新页面的情况下与服务器通信，交换数据，或更新页面。
 
 你可以使用 AJAX 最主要的两个特性做下列事：
 
@@ -97,7 +97,7 @@ if (httpRequest.readyState === XMLHttpRequest.DONE) {
 
 ([Source](http://msdn.microsoft.com/en-us//library/ms534361%28en-us,VS.85%29.aspx))
 
-接下来，点击 HTTP 响应的 [response code](/en/HTTP#HTTP_Response_Codes)。 可能的响应码都已经列在 [W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)这个列表里。在下面的例子中，我们通过检查响应码 `200 OK` 判断 AJAX 有没有成功。
+接下来，点击 HTTP 响应的 [response code](/zh-CN/HTTP#HTTP_Response_Codes)。 可能的响应码都已经列在 [W3C](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)这个列表里。在下面的例子中，我们通过检查响应码 `200 OK` 判断 AJAX 有没有成功。
 
 ```js
 if (httpRequest.status === 200) {
@@ -162,7 +162,7 @@ if (httpRequest.status === 200) {
 
 > **备注：** 如果你向一个代码片段发送请求，将返回 XML，而不是静态 XML 文件，在 IE 浏览器上则必须要设置响应头才能正常工作。如果不设置响应头为 `Content-Type:application/xml` ，IE 浏览器会在你访问 XML 元素时抛出 “Object Expected” 错误。
 
-> **备注：** 如果不设置响应头 `Cache-Control: no-cache` 浏览器将会把响应缓存下来而且再也无法重新提交请求。你也可以添加一个总是不同的 GET 参数，比如时间戳或者随机数 (详情见 [bypassing the cache](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache))
+> **备注：** 如果不设置响应头 `Cache-Control: no-cache` 浏览器将会把响应缓存下来而且再也无法重新提交请求。你也可以添加一个总是不同的 GET 参数，比如时间戳或者随机数 (详情见 [bypassing the cache](/zh-CN/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache))
 
 > **备注：** 如果变量 `httpRequest` 在全局范围内使用，它会在 `makeRequest()` 函数中被相互覆盖，从而导致资源竞争。为了避免这个情况，请在包含 AJAX 函数的[闭包](/zh-CN/docs/Web/JavaScript/Closures)中声明 `httpRequest` 变量。
 

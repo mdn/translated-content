@@ -1,12 +1,6 @@
 ---
 title: padding-block
 slug: Web/CSS/padding-block
-tags:
-  - CSS
-  - padding-block
-  - recipe:css-shorthand-property
-browser-compat: css.properties.padding-block
-translation_of: Web/CSS/padding-block
 ---
 {{CSSRef}}
 

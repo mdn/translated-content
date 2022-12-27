@@ -17,7 +17,7 @@ Web Storage 包含如下两种机制：
 
 > **备注：** 从 Firefox 45 开始，当浏览器崩溃或重启时，每个源的存储大小将限制在 10M，以避免因过度使用 web storage 引起的内存问题。
 
-> **备注：** 若用户[禁用第三方 cookie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies)，那么将不允许来自第三方 IFrames 对 Web Storage 的访问。（从[Firefox 43](https://developer.mozilla.org/en-US/Firefox/Releases/43)版本开始实行）
+> **备注：** 若用户[禁用第三方 cookie](https://support.mozilla.org/en-US/kb/disable-third-party-cookies)，那么将不允许来自第三方 IFrames 对 Web Storage 的访问。（从[Firefox 43](/zh-CN/Firefox/Releases/43)版本开始实行）
 
 > **备注：** 本地存储不同于 mozStorage（Mozilla's XPCOM interfaces to SQLite）或[Session store API](/zh-CN/docs/Session_store_API)（an [XPCOM](/zh-CN/docs/XPCOM) storage utility for use by extensions）。
 

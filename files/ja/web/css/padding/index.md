@@ -1,14 +1,6 @@
 ---
 title: padding
 slug: Web/CSS/padding
-tags:
-  - CSS
-  - CSS パディング
-  - CSS プロパティ
-  - リファレンス
-  - recipe:css-shorthand-property
-browser-compat: css.properties.padding
-translation_of: Web/CSS/padding
 ---
 {{CSSRef}}
 

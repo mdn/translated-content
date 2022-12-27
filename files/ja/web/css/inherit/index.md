@@ -1,19 +1,6 @@
 ---
 title: inherit
 slug: Web/CSS/inherit
-tags:
-  - CSS
-  - CSS カスケード
-  - CSS 値
-  - カスケード
-  - 継承
-  - キーワード
-  - レイアウト
-  - リファレンス
-  - スタイル
-  - inherit
-browser-compat: css.types.global_keywords.inherit
-translation_of: Web/CSS/inherit
 ---
 {{CSSRef}}
 

@@ -48,7 +48,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
       <td><code>ReadOnlyError</code></td>
       <td>
         The transaction associated with this operation is in read-only
-        <a href="/en-US/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
+        <a href="/zh-CN/docs/IndexedDB/IDBTransaction#mode_constants">mode</a>.
       </td>
     </tr>
     <tr>

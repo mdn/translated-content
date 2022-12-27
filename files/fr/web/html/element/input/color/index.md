@@ -89,7 +89,7 @@ Le fragment de code HTML utilisé est relativement simple. On utilise quelques p
 
 ### JavaScript
 
-Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire {{event("load")}} afin de lancer les actions de démarrage lorsque la page est chargée.
+Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire [`load`](/fr//docs/Web/API/Window/load_event) afin de lancer les actions de démarrage lorsque la page est chargée.
 
 ```js
 var colorWell

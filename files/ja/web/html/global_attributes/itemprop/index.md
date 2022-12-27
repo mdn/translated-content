@@ -1,15 +1,6 @@
 ---
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
-tags:
-  - 属性
-  - グローバル属性
-  - HTML
-  - HTML マイクロデータ
-  - マイクロデータ
-  - リファレンス
-browser-compat: html.global_attributes.itemprop
-translation_of: Web/HTML/Global_attributes/itemprop
 ---
 {{HTMLSidebar("Global_attributes")}}
 

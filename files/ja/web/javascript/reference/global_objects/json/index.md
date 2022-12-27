@@ -1,14 +1,6 @@
 ---
 title: JSON
 slug: Web/JavaScript/Reference/Global_Objects/JSON
-tags:
-  - JSON
-  - JavaScript
-  - 名前空間
-  - オブジェクト
-  - リファレンス
-browser-compat: javascript.builtins.JSON
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON
 ---
 {{JSRef}}
 

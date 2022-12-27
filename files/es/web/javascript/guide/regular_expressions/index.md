@@ -102,7 +102,7 @@ Los paréntesis alrededor de cualquier parte del patrón de expresión regular h
 
 ## Usar expresiones regulares en JavaScript
 
-Las expresiones regulares se utilizan con los métodos `RegExp` `test()` y `exec()` y con los métodos de `String`, `match()`, `replace()`, `search()` y `split()`. Estos métodos se explican en detalle en la [referencia de JavaScript](/es/docs/Web/JavaScript/Reference "/es/docs/JavaScript/Reference").
+Las expresiones regulares se utilizan con los métodos `RegExp` `test()` y `exec()` y con los métodos de `String`, `match()`, `replace()`, `search()` y `split()`. Estos métodos se explican en detalle en la [referencia de JavaScript](/es/docs/Web/JavaScript/Reference).
 
 | Método                                                           | Descripción                                                                                                                                  |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -290,6 +290,7 @@ La bandera `m` se utiliza para especificar que una cadena de entrada de varias l
 ## Ejemplos
 
 > **Nota:** También hay varios ejemplos disponibles en:
+>
 > - Las páginas de referencia para {{jsxref("RegExp.exec", "exec()")}}, {{jsxref("RegExp.test", "test()")}}, {{jsxref("String.match", "match()")}}, {{jsxref("String.matchAll", "matchAll()")}}, {{jsxref("String.search", "search()")}}, {{jsxref("String.replace", "replace()")}}, {{jsxref("String.split", "split()")}}
 > - Artículos de esta guía: [clases de caracteres](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes), [aserciones](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions), [grupos y rangos](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges), [cuantificadores](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers), [escapes de propiedades Unicode](/es/docs/Web/JavaScript/Guide/Regular_Expressions/Unicode_Property_Escapes)
 

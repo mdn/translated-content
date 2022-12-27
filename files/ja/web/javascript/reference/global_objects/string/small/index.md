@@ -1,17 +1,6 @@
 ---
 title: String.prototype.small()
 slug: Web/JavaScript/Reference/Global_Objects/String/small
-tags:
-  - Deprecated
-  - HTML wrapper methods
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - String
-  - Polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/String/small
-browser-compat: javascript.builtins.String.small
 ---
 {{JSRef}} {{deprecated_header}}
 

@@ -1,14 +1,6 @@
 ---
 title: Object.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/entries
-tags:
-  - JavaScript
-  - メソッド
-  - Object
-  - リファレンス
-  - ポリフィル
-browser-compat: javascript.builtins.Object.entries
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 ---
 {{JSRef}}
 

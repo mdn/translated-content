@@ -1,11 +1,6 @@
 ---
 title: id
 slug: Web/SVG/Attribute/id
-tags:
-  - SVG
-  - SVG Attribute
-  - SVG 属性
-translation_of: Web/SVG/Attribute/id
 ---
 {{SVGRef}}
 

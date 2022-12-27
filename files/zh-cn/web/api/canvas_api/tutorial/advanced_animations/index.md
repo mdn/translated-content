@@ -295,7 +295,7 @@ ball.draw();
 
 ## 添加鼠标控制
 
-为了更好地控制小球，我们可以用 [`mousemove`](/en-US/docs/Web/Reference/Events/mousemove)事件让它跟随鼠标活动。下面例子中，[click](/zh-CN/docs/Web/Events/click) 事件会释放小球然后让它重新跳起。
+为了更好地控制小球，我们可以用 [`mousemove`](/zh-CN/docs/Web/Reference/Events/mousemove)事件让它跟随鼠标活动。下面例子中，[click](/zh-CN/docs/Web/Events/click) 事件会释放小球然后让它重新跳起。
 
 ```html hidden
 <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>

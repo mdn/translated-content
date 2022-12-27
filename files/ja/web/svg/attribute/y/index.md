@@ -1,19 +1,6 @@
 ---
-title: 'y'
+title: y
 slug: Web/SVG/Attribute/y
-tags:
-  - SVG
-  - SVG Attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-y
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-y
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-y
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-y
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-y
-  - https://svgwg.org/svg2-draft/geometry.html#Y
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementYAttribute
-  - https://svgwg.org/svg2-draft/text.html#TextElementYAttribute
-translation_of: Web/SVG/Attribute/y
 ---
 {{SVGRef}}
 
