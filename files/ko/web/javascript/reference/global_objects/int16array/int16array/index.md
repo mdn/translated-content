@@ -5,7 +5,9 @@ slug: Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array
 
 {{JSRef}}
 
-**`Int16Array`** 유형 배열의 생성자는 플랫폼의 바이트 순서를 따르는 2의 보수 16비트의 부호있는 정수의 배열을 나타냅니다. 바이트 순서를 제어해야 하는 경우 대신 {{jsxref("DataView")}}를 사용합니다. 배열의 내용은 0으로 초기화됩니다. 배열이 생성되면 객체의 메서드를 사용하거나 표준 배열 인덱스 구문(즉, 대괄호 표기법 사용)을 사용하여 배열의 요소를 참조할 수 있습니다.
+**`Int16Array`** 형식화 배열의 생성자는 플랫폼의 바이트 순서를 따르는 2의 보수 16비트의 부호있는 정수 배열을 생성합니다.
+바이트 순서를 제어해야 하는 경우 대신 {{jsxref("DataView")}}를 사용합니다. 배열의 내용은 0으로 초기화됩니다.
+배열이 생성되면 객체의 메서드를 사용하거나 표준 배열 인덱스 구문(즉, 대괄호 표기법 사용)을 사용하여 배열의 요소를 참조할 수 있습니다.
 
 ## 구문
 
@@ -14,6 +16,7 @@ new Int16Array()
 new Int16Array(length)
 new Int16Array(typedArray)
 new Int16Array(object)
+
 new Int16Array(buffer)
 new Int16Array(buffer, byteOffset)
 new Int16Array(buffer, byteOffset, length)
@@ -74,6 +77,6 @@ console.log(int16FromIterable);
 ## 같이 보기
 
 - [`core-js`에서 `Int16Array` 폴리필](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript 유형 배열](/ko/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript 형식화 배열](/ko/docs/Web/JavaScript/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

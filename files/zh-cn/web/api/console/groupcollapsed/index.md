@@ -7,7 +7,7 @@ slug: Web/API/Console/groupCollapsed
 
 ## 概述
 
-在 [Web 控制台](../Tools/Web_Console)上创建一个新的分组。随后输出到控制台上的内容都会被添加一个缩进，表示该内容属于当前分组，直到调用[`console.groupEnd()`](../../Article_not_found?uri=zh-cn/DOM/console.groupEnd) 之后，当前分组结束。和 {{ domxref("console.group()") }}方法的不同点是，新建的分组默认是折叠的。用户必须点击一个按钮才能将折叠的内容打开。
+在 [Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)上创建一个新的分组。随后输出到控制台上的内容都会被添加一个缩进，表示该内容属于当前分组，直到调用 {{domxref("console.groupEnd()")}} 之后，当前分组结束。和 {{ domxref("console.group()") }}方法的不同点是，新建的分组默认是折叠的。用户必须点击一个按钮才能将折叠的内容打开。
 
 ## 语法
 

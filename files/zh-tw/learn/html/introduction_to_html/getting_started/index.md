@@ -528,7 +528,7 @@ textarea.addEventListener("input", drawOutput);
 window.addEventListener("load", drawOutput);
 ```
 
-{{ EmbedLiveSample('主動學習：在HTML文檔中加入一些特徵', 700, 600) }}
+{{ EmbedLiveSample('主動學習：在 HTML 文檔中加入一些特徵', 700, 600) }}
 
 ### HTML 中的空格(Whitespace)
 

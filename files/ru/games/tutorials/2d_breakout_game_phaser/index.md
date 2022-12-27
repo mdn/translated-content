@@ -14,9 +14,7 @@ translation_of: Games/Tutorials/2D_breakout_game_Phaser
 original_slug: Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser
 ---
 
-{{GamesSidebar}}{{IncludeSubnav("/ru/docs/")}}
-
-{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
+{{GamesSidebar}}{{Next("Games/Tutorials/Создание_2D_Breakout_игры_на_Phaser/Initialize_the_framework")}}
 
 В этом пошаговом руководстве мы создадим простую мобильную игру **MDN Breakout** с помощью JavaScript и фреймворка [Phaser](https://phaser.io/).
 

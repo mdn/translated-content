@@ -14,7 +14,8 @@ tags:
   - уроки
 translation_of: Games/Tutorials
 ---
-{{GamesSidebar}}{{IncludeSubnav("/en-US/docs/Games")}}
+
+{{GamesSidebar}}
 
 Эта страница содержит несколько серий уроков, в которых освещаются различные рабочие процессы для эффективного создания разных типов веб-игр.
 

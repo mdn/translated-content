@@ -105,7 +105,7 @@ if (canvas.getContext){
 
 這是我們的範本實際看起來的樣子:
 
-{{EmbedLiveSample("A_skeleton_template", 160, 160)}}
+{{EmbedLiveSample("一個範本", 160, 160)}}
 
 ## 一個簡單的範例
 
@@ -137,6 +137,6 @@ if (canvas.getContext){
 
 本範例的結果如下:
 
-{{EmbedLiveSample("A_simple_example", 160, 160, "canvas_ex1.png")}}
+{{EmbedLiveSample("一個簡單的範例", 160, 160, "canvas_ex1.png")}}
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial", "Web/Guide/HTML/Canvas_tutorial/Drawing_shapes")}}
