@@ -1,13 +1,6 @@
 ---
 title: Pseudo-clase
 slug: Glossary/Pseudo-class
-tags:
-  - CSS
-  - Glosario
-  - Pseudo-clase
-  - Selector
-  - Selectores
-translation_of: Glossary/Pseudo-class
 original_slug: Glossary/Pseudo-clase
 ---
 

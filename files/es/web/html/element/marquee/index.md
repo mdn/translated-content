@@ -1,16 +1,6 @@
 ---
 title: <marquee>
 slug: Web/HTML/Element/marquee
-tags:
-  - Elemento
-  - HTML
-  - Referencia
-  - Web
-  - etiqueta
-  - marquee
-  - marquesina
-  - obsoleta
-translation_of: Web/HTML/Element/marquee
 original_slug: Web/HTML/Elemento/marquee
 ---
 

@@ -3,7 +3,7 @@ title: 基本的动画
 slug: Web/API/Canvas_API/Tutorial/Basic_animations
 ---
 
-{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
+{{DefaultAPISidebar("Canvas API")}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Web/API/Canvas_API/Tutorial/Advanced_animations")}}
 
 由于我们是用 JavaScript 去操控 {{HTMLElement("canvas")}} 对象，这样要实现一些交互动画也是相当容易的。在本章中，我们将看看如何做一些基本的动画。
 
@@ -52,9 +52,9 @@ var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init(){
-  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  sun.src = 'canvas_sun.png';
+  moon.src = 'canvas_moon.png';
+  earth.src = 'canvas_earth.png';
   window.requestAnimationFrame(draw);
 }
 
@@ -101,7 +101,7 @@ init();
 <canvas id="canvas" width="300" height="300"></canvas>
 ```
 
-{{EmbedLiveSample("太阳系的动画", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}
+{{EmbedLiveSample("太阳系的动画", "310", "310", "canvas_animation1.png")}}
 
 ## 动画时钟
 
@@ -212,11 +212,11 @@ window.requestAnimationFrame(clock);
 <canvas id="canvas" width="150" height="150"></canvas>
 ```
 
-{{EmbedLiveSample("动画时钟", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}
+{{EmbedLiveSample("动画时钟", "180", "180", "canvas_animation2.png")}}
 
 ## 循环全景照片
 
-在这个例子中，会有一个自左向右滑动的全景图。我们使用了在维基百科中找到的[尤塞米提国家公园的图片](https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg)，当然你可以随意找一张任何尺寸大于 canvas 的图片。
+在这个例子中，会有一个自左向右滑动的全景图。我们使用了在维基百科中找到的[尤塞米提国家公园的图片](capitan_meadows,_yosemite_national_park.jpg)，当然你可以随意找一张任何尺寸大于 canvas 的图片。
 
 ```js
 var img = new Image();
@@ -224,7 +224,7 @@ var img = new Image();
 // User Variables - customize these to change the image being scrolled, its
 // direction, and the speed.
 
-img.src = 'https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg';
+img.src = 'capitan_meadows,_yosemite_national_park.jpg';
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; // lower is faster

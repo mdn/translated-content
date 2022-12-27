@@ -5,7 +5,7 @@ slug: Web/JavaScript/Guide/Regular_Expressions
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
-正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。 JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp.exec", "exec()")}} および {{jsxref("RegExp.test", "test()")}} メソッドや、{{jsxref("String")}} の {{jsxref("String.match", "match()")}}、 {{jsxref("String.matchAll", "matchAll()")}}、{{jsxref("String.replace", "replace()")}}、{{jsxref("String.replaceAll", "replaceAll()")}}、{{jsxref("String.search", "search()")}}、{{jsxref("String.split", "split()")}} メソッドで使用できます。本章では、 JavaScript の正規表現について説明します。
+正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。 JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp.exec", "exec()")}} および {{jsxref("RegExp.test", "test()")}} メソッドや、{{jsxref("String")}} の {{jsxref("String.match", "match()")}}、{{jsxref("String.matchAll", "matchAll()")}}、{{jsxref("String.replace", "replace()")}}、{{jsxref("String.replaceAll", "replaceAll()")}}、{{jsxref("String.search", "search()")}}、{{jsxref("String.split", "split()")}} メソッドで使用できます。本章では、 JavaScript の正規表現について説明します。
 
 ## 正規表現の作成
 
@@ -305,7 +305,7 @@ console.log(`The value of lastIndex is ${/d(b+)d/g.lastIndex}`);
 | `g`  | グローバル検索を行います。                                                                                                                           | {{jsxref("RegExp.prototype.global")}}     |
 | `i`  | 大文字・小文字を区別しない検索です。                                                                                                                 | {{jsxref("RegExp.prototype.ignoreCase")}} |
 | `m`  | 複数行の検索です。                                                                                                                       | {{jsxref("RegExp.prototype.multiline")}}  |
-| `s`  | `.` が改行文字に一致するようにします。                                                                                                  | {{jsxref("RegExp.prototype.dotAll")}}     |
+| `s`  | `.` が改行文字に一致するようにします。                                                                                                  | {{jsxref("RegExp.prototype.dotAll")}}     |
 | `u`  | "unicode" です。パターンを一連の Unicode コードポイントとして扱います。                                                                         | {{jsxref("RegExp.prototype.unicode")}}    |
 | `y`  | 対象文字列の現在の位置から始まる部分に一致するものを探す「先頭固定」 (sticky) 検索を行います。 {{jsxref("RegExp.sticky", "sticky")}} を参照してください。 | {{jsxref("RegExp.prototype.sticky")}}     |
 

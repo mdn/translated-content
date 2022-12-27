@@ -1,13 +1,7 @@
 ---
 title: PositionOptions
 slug: conflicting/Web/API/Geolocation/getCurrentPosition
-tags:
-  - Geolocalización
-  - Interfaz
-  - Referencia
-translation_of: Web/API/PositionOptions
 original_slug: Web/API/PositionOptions
-browser-compat: api.Geolocation.getCurrentPosition
 ---
 
 {{APIRef("Geolocation API")}}

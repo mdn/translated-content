@@ -1,12 +1,6 @@
 ---
 title: Tipos de datos y estructuras en JavaScript
 slug: Web/JavaScript/Data_structures
-tags:
-  - JavaScript
-  - Novato
-  - Principiante
-  - Tipado
-translation_of: Web/JavaScript/Data_structures
 ---
 
 {{jsSidebar("More", "Más")}}
@@ -243,9 +237,7 @@ Lee la [página de referencia](/es/docs/Web/JavaScript/Reference/Operators/typeo
 
 ## Especificaciones
 
-| Especificación                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-ecmascript-data-types-and-values', 'Tipos Data y Values ECMAScript')}} |
+{{Specifications}}
 
 ## Ve también
 

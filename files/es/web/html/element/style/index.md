@@ -1,11 +1,6 @@
 ---
 title: style
 slug: Web/HTML/Element/style
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/style
 original_slug: Web/HTML/Elemento/style
 ---
 

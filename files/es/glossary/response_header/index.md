@@ -1,7 +1,6 @@
 ---
 title: Cabecera de respuesta
 slug: Glossary/Response_header
-translation_of: Glossary/Response_header
 ---
 
 Una **cabecera de respuesta** (en inglés _response header_) es una {{Glossary("HTTP header")}} que puede ser usada en una respuesta HTTP y que no tiene que ver con el contenido del mensaje. Las cabeceras de respuesta, como {{HTTPHeader("Age")}}, {{HTTPHeader("Location")}} o {{HTTPHeader("Server")}} son usadas para dar un contexto más detallado de la respuesta.

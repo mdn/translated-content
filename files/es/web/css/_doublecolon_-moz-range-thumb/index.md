@@ -37,7 +37,7 @@ input[type=range]::-moz-range-thumb {
 
 Una barra de progreso que utilizara este estilo se visualizarías de la siguiente manera:
 
-![The thumb of the \<input type=right> styled in green](https://mdn.mozillademos.org/files/12027/Screen%20Shot%202015-12-04%20at%2013.30.08.png)
+![The thumb of the \<input type=right> styled in green](screen_shot_2015-12-04_at_13.30.08.png)
 
 ## Especificaciones
 

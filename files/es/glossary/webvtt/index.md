@@ -1,13 +1,6 @@
 ---
 title: WebVTT
 slug: Glossary/WebVTT
-tags:
-  - Audio
-  - Glosario
-  - Video
-  - Web
-  - WebVTT
-translation_of: Glossary/WebVTT
 ---
 
 WebVTT (Pistas de Texto para Videos Wev) es una especificación del {{Glossary("W3C")}} para un formato de archivo para crear pistas de texto en combinación con el elemento HTML {{HTMLElement("track")}}.

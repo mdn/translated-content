@@ -1,13 +1,6 @@
 ---
 title: Window.closed
 slug: Web/API/Window/closed
-tags:
-  - API
-  - HTML DOM
-  - Propiedad
-  - Referencia
-  - Ventana
-translation_of: Web/API/Window/closed
 ---
 
 {{APIRef}}

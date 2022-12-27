@@ -1,11 +1,6 @@
 ---
 title: p
 slug: Web/HTML/Element/p
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/p
 original_slug: Web/HTML/Elemento/p
 ---
 

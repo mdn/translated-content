@@ -1,15 +1,6 @@
 ---
 title: Win the game
 slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
-tags:
-  - 2D
-  - JavaS
-  - Lienzo
-  - Phaser
-  - Principiante
-  - Tutorial
-  - ganando
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 ---
 
 {{GamesSidebar}}

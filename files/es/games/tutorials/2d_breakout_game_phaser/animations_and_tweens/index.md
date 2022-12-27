@@ -1,17 +1,6 @@
 ---
 title: Animaciones e interpolaciones
 slug: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
-tags:
-  - 2D
-  - Animacion
-  - Canvas
-  - Interpolaciones
-  - JavaScript
-  - Phaser
-  - Principiante
-  - Tutorial
-  - juegos
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens
 ---
 
 {{GamesSidebar}}

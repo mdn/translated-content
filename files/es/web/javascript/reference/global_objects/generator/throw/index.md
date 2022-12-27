@@ -1,7 +1,6 @@
 ---
 title: Generator.prototype.throw()
 slug: Web/JavaScript/Reference/Global_Objects/Generator/throw
-translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Generador/throw
 ---
 

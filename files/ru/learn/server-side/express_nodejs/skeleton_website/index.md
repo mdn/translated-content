@@ -170,7 +170,7 @@ express express-locallibrary-tutorial --view=pug
 
 3. Откроем <http://localhost:3000/> в браузере. Мы должны увидеть такую страницу:
 
-![Browser for default Express app generator website](https://mdn.mozillademos.org/files/14375/ExpressGeneratorSkeletonWebsite.png)
+![Browser for default Express app generator website](expressgeneratorskeletonwebsite.png)
 
 У нас получилось веб-приложение на базе Express, работающее по адресу _localhost:3000_.
 

@@ -1,11 +1,6 @@
 ---
 title: var
 slug: Web/HTML/Element/var
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/var
 original_slug: Web/HTML/Elemento/var
 ---
 

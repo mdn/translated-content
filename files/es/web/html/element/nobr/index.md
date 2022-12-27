@@ -1,15 +1,6 @@
 ---
 title: <nobr>
 slug: Web/HTML/Element/nobr
-tags:
-  - Elemento
-  - HTML
-  - No-estándar
-  - Obsoleto
-  - Referencia
-  - Web
-  - nobr
-translation_of: Web/HTML/Element/nobr
 original_slug: Web/HTML/Elemento/nobr
 ---
 

@@ -21,4 +21,3 @@ const element = document.rootElement
 ## 仕様書
 
 {{Specifications}}
-

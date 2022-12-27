@@ -84,5 +84,5 @@ The interface also supports the following properties which are listed in the ord
 
 ## あわせて参照
 
-- [Resource Timing (Overview)](/Web/API/Resource_Timing)
+- [Resource Timing (Overview)](/ja/docs/Web/API/Resource_Timing)
 - [Using the Resource Timing API](/ja/docs/Web/API/Resource_Timing_API/Using_the_Resource_Timing_API)

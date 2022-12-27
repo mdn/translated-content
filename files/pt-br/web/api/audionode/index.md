@@ -7,7 +7,7 @@ slug: Web/API/AudioNode
 
 A interface AudioNode é uma interface genérica para representar um módulo de processamento como uma fonte de áudio (ex. um elemento HTML {{HTMLElement("audio")}} ou {{HTMLElement("video")}} , um {{domxref("OscillatorNode")}}, etc.), um destino do áudio, um módulo intermediário de processamento (ex. um filtro como {{domxref("BiquadFilterNode")}} ou {{domxref("ConvolverNode")}}), ou um controle de volume (como o {{domxref("GainNode")}}).
 
-![AudioNodes participating in an AudioContext create a audio routing graph.](https://mdn.mozillademos.org/files/12535/WebAudioBasicspt-br.png)
+![AudioNodes participating in an AudioContext create a audio routing graph.](webaudiobasicspt-br.png)
 
 Um `AudioNode` tem entradas (inputs) e saídas (outputs), cada uma delas com uma determinada quantidade de canais. Um `AudioNode` sem nenhuma entrada e uma ou múltiplas saídas é chamado de _source node_. The exact processing done varies from one `AudioNode` to another but, in general, a node reads its inputs, does some audio-related processing, and generates new values for its outputs, or simply lets the audio pass through (for example in the {{domxref("AnalyserNode")}}, where the result of the processing is accessed separately).
 

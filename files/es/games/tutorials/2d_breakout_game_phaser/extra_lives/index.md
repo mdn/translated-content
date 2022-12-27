@@ -1,17 +1,6 @@
 ---
 title: Extra lives
 slug: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
-tags:
-  - 2D
-  - JavaScript
-  - Lienzo
-  - Lona
-  - Phaser
-  - Principiante
-  - Tutorial
-  - Vidas
-  - juegos
-translation_of: Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 ---
 
 {{GamesSidebar}}

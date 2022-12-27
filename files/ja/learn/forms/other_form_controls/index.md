@@ -124,7 +124,7 @@ l10n:
 
 {{EmbedLiveSample("Using_optgroup", 120, 120)}}
 
-{{HTMLElement("optgroup")}} 要素では、 [`label`](/ja/docs/Web/HTML/Element/optgroup#attr-label)  属性の値が入れ子になったオプションの値の前に表示されます。ブラウザーは通常、それらをオプションから視覚的に離して（すなわち太字にしたり、入れ子レベルを変えたりして）表示しますので、実際のオプションと混同される可能性は低くなります。
+{{HTMLElement("optgroup")}} 要素では、 [`label`](/ja/docs/Web/HTML/Element/optgroup#attr-label) 属性の値が入れ子になったオプションの値の前に表示されます。ブラウザーは通常、それらをオプションから視覚的に離して（すなわち太字にしたり、入れ子レベルを変えたりして）表示しますので、実際のオプションと混同される可能性は低くなります。
 
 #### value 属性の使用
 

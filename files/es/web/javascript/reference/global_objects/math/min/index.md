@@ -1,12 +1,6 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
-tags:
-  - JavaScript
-  - Math
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/min
 ---
 

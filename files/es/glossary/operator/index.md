@@ -1,10 +1,6 @@
 ---
 title: Operador
 slug: Glossary/Operator
-tags:
-  - Glosario
-  - Scripting
-translation_of: Glossary/Operator
 original_slug: Glossary/Operador
 ---
 

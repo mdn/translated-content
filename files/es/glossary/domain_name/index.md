@@ -1,7 +1,6 @@
 ---
 title: Nombre de dominio
 slug: Glossary/Domain_name
-translation_of: Glossary/Domain_name
 original_slug: Glossary/Nombre_de_dominio
 ---
 

@@ -1,16 +1,7 @@
 ---
-title: >-
-  Cómo hacer que las PWAs se puedan volver a conectar usando Notificaciones y
+title: Cómo hacer que las PWAs se puedan volver a conectar usando Notificaciones y
   Push
 slug: Web/Progressive_web_apps/Re-engageable_Notifications_Push
-tags:
-  - Notificaciones
-  - PWAs
-  - Push
-  - aplicaciones web progresivas
-  - js13kGames
-  - progresiva
-translation_of: Web/Progressive_web_apps/Re-engageable_Notifications_Push
 ---
 
 {{PreviousMenuNext("Web/Apps/Progressive/Installable_PWAs", "Web/Apps/Progressive/Loading", "Web/Apps/Progressive")}}
@@ -44,7 +35,7 @@ button.addEventListener("click", function (e) {
 
 Esto muestra una ventana emergente usando el propio servicio de notificaciones del sistema operativo:
 
-![Notificación de js13kPWA.](https://mdn.mozillademos.org/files/15930/js13kpwa-notification.png)
+![Notificación de js13kPWA.](js13kpwa-notification.png)
 
 Cuando el usuario confirma recibir notificaciones, la aplicación las puede mostrar. El resultado de la acción del usuario puede ser predeterminada, otorgada o denegada. La opción predeterminada se elige cuando el usuario no hace una elección, y las otras dos se establecen cuando el usuario hace clic en sí o no, respectivamente.
 

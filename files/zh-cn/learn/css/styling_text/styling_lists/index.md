@@ -216,7 +216,7 @@ ul li {
 
 效果显示如下：
 
-![an unordered list with the bullet points set as little star images](https://mdn.mozillademos.org/files/12956/image-bullets.png)
+![an unordered list with the bullet points set as little star images](image-bullets.png)
 
 ### list-style 速记
 

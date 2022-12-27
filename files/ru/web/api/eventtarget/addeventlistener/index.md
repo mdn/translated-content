@@ -48,7 +48,7 @@ wantsUntrusted {{Non-standard_inline}}]); // только Gecko/Mozilla
 
   - : Если равно `true`, `useCapture` указывает, что пользователь желает начать захват. После инициализации захвата все события указанного типа будут отправлены в зарегистрированный `listener` перед отправкой в какой-либо `EventTarget` под ним в дереве DOM. События, восходящие вверх по дереву, не будут вызывать обработчиков, которым назначено использовать захват. Смотрите [DOM Level 3 Events](http://www.w3.org/TR/DOM-Level-3-Events/#event-flow) для более детального объяснения. Значение `useCapture` по умолчанию равно `false`.
 
-    > **Примечание:**Для обработчиков событий прикреплённых к цели события, событие находиться в целевой фазе, а не в фазах захвата или всплытия. События в целевой фазе инициируют все обработчики на элементе в том порядке, в котором они были зарегистрированы независимо от параметра `useCapture`.
+    > **Примечание:** Для обработчиков событий прикреплённых к цели события, событие находиться в целевой фазе, а не в фазах захвата или всплытия. События в целевой фазе инициируют все обработчики на элементе в том порядке, в котором они были зарегистрированы независимо от параметра `useCapture`.
 
     > **Примечание:** `useCapture` не всегда был опциональным. Лучше указывать данный параметр для повышения совместимости.
 
@@ -186,7 +186,7 @@ el = document.getElementById("outside");
 el.addEventListener("click", function(){modifyText("четыре")}, false);
 ```
 
-Notice that the listener is an anonymous function that encapsulates code that is then, in turn, able to send parameters to the `modifyText()` function, which is responsible for actually responding to the event.
+Обратите внимание, что addEvenListener - это анонимная функция, которая инкапсулирует код, который, в свою очередь, может отправлять параметры функции modifyText(), которая отвечает за фактический ответ на событие.
 
 #### Результат
 
@@ -230,7 +230,7 @@ el.addEventListener("click", () => { modifyText("four"); }, false);
 `addEventListener` — это способ зарегистрировать обработчик события, описанный в документации W3C DOM. Вот список преимуществ его использования:
 
 - Позволяет добавлять множество обработчиков для одного события. Это особенно полезно для [DHTML](/ru/docs/DHTML) библиотек или [Mozilla extensions](/ru/docs/Extensions), которые должны работать в условиях использования сторонних библиотек/расширений.
-- Предоставляет точный контроль фазы срабатывания(вызова) обработчика (захват или всплытие)
+- Предоставляет точный контроль фазы срабатывания(вызова) обработчика (захват или всплытие).
 - Срабатывает на любом DOM-элементе, а не только на HTML-элементах.
 
 Ниже описан другой, [более старый способ регистрации обработчиков](#Older_way_to_register_event_listeners).
@@ -319,7 +319,7 @@ if (el.addEventListener) {
 
 Вы можете обойти методы `addEventListener`, `removeEventListener`, `Event.preventDefault` и `Event.stopPropagation` не поддерживаемы в IE 8 используя следующий код в начале вашего скрипта. Этот код поддерживает использование `handleEvent` и события `DOMContentLoaded`.
 
-> **Примечание:**useCapture не поддерживается, так как IE 8 не имеет альтернативного метода для этого. Также заметьте, что следующий код только добавляет поддержку IE 8. Также, он работает только при соблюдении стандартов: объявление DOCTYPE страницы обязательно.
+> **Примечание:** useCapture не поддерживается, так как IE 8 не имеет альтернативного метода для этого. Также заметьте, что следующий код только добавляет поддержку IE 8. Также, он работает только при соблюдении стандартов: объявление DOCTYPE страницы обязательно.
 
 ```js
 (function() {
@@ -442,7 +442,7 @@ for(i=0 ; i<els.length ; i++){
 Значение по умолчанию для параметра `passive` - `false`. Начиная с Chrome 56 (desktop, Chrome for Android, Android webview) значение по умолчанию для {{event("touchstart")}} и {{event("touchmove")}} равно `true`, а вызовы `preventDefault()` не разрешены. Чтобы отменить это поведение, необходимо установить параметр `passive` в `false` (см. пример ниже). Это изменение не позволяет обработчику блокировать показ страницы во время прокрутки пользователя. Демонстрация доступна на [сайте разработчиков Google](https://developers.google.com/web/updates/2016/06/passive-event-listeners). Обратите внимание, что Edge вообще не поддерживает `options`, и добавление его без [проверки поддержки](/ru/docs/Web/API/EventTarget/addEventListener#Safely_detecting_option_support) помешает использовать аргумент `useCapture`.
 
 ```js
-/* Feature detection */
+/* Не позволяем обработчику блокировать показ страницы */
 var passiveSupported = false;
 try {
     window.addEventListener(
@@ -451,7 +451,7 @@ try {
         Object.defineProperty({}, "passive", { get: function() { passiveSupported = true; } }));
 } catch(err) {}
 
-/* Event Listener */
+/* Добавляем обработчик событий */
 var elem = document.getElementById('elem');
 elem.addEventListener(
     'touchmove',
@@ -474,7 +474,7 @@ elem.addEventListener(
 
 - Несмотря на то, что в WebKit параметр `useCapture` был объявлен необязательным [только в июне 2011 года](http://trac.webkit.org/changeset/89781), это работало и до этого изменения. Новые изменения были добавлены в Safari 5.1 и Chrome 13.
 
-## Specifications
+## Спецификации
 
 | Specification                                                                                                                            | Status                           | Comment            |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------ |
@@ -482,11 +482,11 @@ elem.addEventListener(
 | {{SpecName("DOM4", "#dom-eventtarget-addeventlistener", "EventTarget.addEventListener()")}}                 | {{Spec2("DOM4")}}         |                    |
 | {{SpecName("DOM2 Events", "#Events-EventTarget-addEventListener", "EventTarget.addEventListener()")}} | {{Spec2("DOM2 Events")}} | Initial definition |
 
-## Browser compatibility
+## Кроссбраузерность
 
 {{Compat("api.EventTarget.addEventListener", 3)}}
 
-## See also
+## Дополнительная информация
 
 - {{domxref("EventTarget.removeEventListener()")}}
 - [Creating and triggering custom events](/ru/docs/Web/Guide/Events/Creating_and_triggering_events)

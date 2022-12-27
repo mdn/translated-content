@@ -1,7 +1,6 @@
 ---
 title: Cross browser testing
 slug: Learn/Tools_and_testing/Cross_browser_testing
-translation_of: Learn/Tools_and_testing/Cross_browser_testing
 original_slug: Learn/Herramientas_y_pruebas/Cross_browser_testing
 ---
 

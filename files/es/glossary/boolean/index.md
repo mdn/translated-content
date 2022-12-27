@@ -1,11 +1,6 @@
 ---
 title: Boolean
 slug: Glossary/Boolean
-tags:
-  - Glosario
-  - JavaScript
-  - Tipos de datos
-translation_of: Glossary/Boolean
 ---
 
 En ciencias de informática, un **boolean** es un dato lógico que solo puede tener los valores true o false.

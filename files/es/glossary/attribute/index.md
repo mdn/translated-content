@@ -1,7 +1,6 @@
 ---
 title: Atributo
 slug: Glossary/Attribute
-translation_of: Glossary/Attribute
 original_slug: Glossary/Atributo
 ---
 

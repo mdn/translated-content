@@ -11,7 +11,7 @@ Mensagens HTTP são compostas de informação textual codificada em ASCII, e se 
 
 Desenvolvedores Web, ou webmasters, raramente lidam com essas mensagens textuais diretamente: um programa, um navegador, um proxy, ou um servidor Web, executam essa ação. Eles proveem mensagens HTTP por meio de arquivos de configuração (para proxys ou servidores), APIs (para navegadores) ou outras interfaces.
 
-![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](https://mdn.mozillademos.org/files/13825/HTTPMsg2.png)
+![From a user-, script-, or server- generated event, an HTTP/1.x msg is generated, and if HTTP/2 is in use, it is binary framed into an HTTP/2 stream, then sent.](httpmsg2.png)
 
 O mecanismo de enquadramento binário foi projetado de modo a não requerer qualquer alteração das APIs ou arquivos de configuração aplicados: ele é transparente para o usuário.
 
@@ -24,7 +24,7 @@ Requisições e respostas HTTP compartilham estrutura similar e são compostas d
 
 A linha inicial e os cabeçalhos HTTP da mensagem HTTP são conjuntamente chamados de _cabeça_ (_head_) da requisição, enquanto o que ela carrega, a sua carga, é conhecida como corpo.
 
-![Requests and responses share a common structure in HTTP](https://mdn.mozillademos.org/files/13827/HTTPMsgStructure2.png)
+![Requests and responses share a common structure in HTTP](httpmsgstructure2.png)
 
 ## Requisições HTTP
 
@@ -56,7 +56,7 @@ Há numerosos cabeçalhos de requisição disponíveis. Eles podem ser divididos
 - _Cabeçalhos de requisição_, como {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Accept-Type")}}, modificam a requisição, especificando-a mais (como {{HTTPHeader("Accept-Language")}}), dando-a contexto (como {{HTTPHeader("Referer")}}), ou restringindo-a condicionalmente (como {{HTTPHeader("If-None")}}).
 - _Cabeçalhos de entidade_, como {{HTTPHeader("Content-Length")}} que se aplicam ao corpo da mensagem. Obviamente este cabeçalho não será transmitido se não houver corpo na requisição.
 
-![Example of headers in an HTTP request](https://mdn.mozillademos.org/files/13821/HTTP_Request_Headers2.png)
+![Example of headers in an HTTP request](http_request_headers2.png)
 
 ### Corpo
 
@@ -89,7 +89,7 @@ Há numerosos cabeçalhos de resposta disponíveis. Eles podem ser divididos em 
 - _Cabeçalhos de resposta_, como {{HTTPHeader("Vary")}} e {{HTTPHeader("Accept-Ranges")}}, dão informação adicional sobre o servidor, que não cabe na linha de status.
 - _Cabeçalhos de entidade_, como {{HTTPHeader("Content-Length")}}, aplicam-se ao corpo da resposta. Obviamente este cabeçalho não será transmitido se não houver corpo na resposta.
 
-![Example of headers in an HTTP response](https://mdn.mozillademos.org/files/13823/HTTP_Response_Headers2.png)
+![Example of headers in an HTTP response](http_response_headers2.png)
 
 ### Corpo
 
@@ -111,7 +111,7 @@ Mensagens HTTP/1.x têm algumas desvantagens quanto ao desempenho:
 
 HTTP/2 introduz um passo extra: ele divide mensagens HTTP/1.x em quadros que são embutidos em um fluxo. Quadros de dados e de cabeçalho são separados, isto permite a compressão do cabeçalho. Muitos fluxos podem ser conjugados, um processo chamado de multiplexação, permitindo mais eficiência nas conexões TCP subjacentes.
 
-![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](https://mdn.mozillademos.org/files/13819/Binary_framing2.png)
+![HTTP/2 modify the HTTP message to divide them in frames (part of a single stream), allowing for more optimization.](binary_framing2.png)
 
 ```
 Connection

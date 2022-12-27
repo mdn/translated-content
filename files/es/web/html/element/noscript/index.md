@@ -1,11 +1,6 @@
 ---
 title: noscript
 slug: Web/HTML/Element/noscript
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/noscript
 original_slug: Web/HTML/Elemento/noscript
 ---
 

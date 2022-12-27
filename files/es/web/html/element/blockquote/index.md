@@ -1,11 +1,6 @@
 ---
 title: blockquote
 slug: Web/HTML/Element/blockquote
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/blockquote
 original_slug: Web/HTML/Elemento/blockquote
 ---
 

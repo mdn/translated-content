@@ -168,7 +168,7 @@ Você pode ver um exemplo mais avançado de tal ajuste sobre [a página API do C
 
 O exemplo anterior está certo se você deseja incorporar conteúdo básico de aprendizagem ativa. No entanto, se você quiser lidar com um código complexo, pode tornar-se um pouco estranho para lidar com esse wrapper de classe `oculto`.
 
-Então, outra opção e escreva o código do seu conteúdo de aprendizagem em uma página MDN e, em seguida, incorpora-lo em outra página. Para fazer isso, podemos usar o {{TemplateLink ("EmbedDistLiveSample")}} macro em vez de {{TemplateLink ("EmbedLiveSample")}} macro.
+Então, outra opção e escreva o código do seu conteúdo de aprendizagem em uma página MDN e, em seguida, incorpora-lo em outra página. Para fazer isso, podemos usar o [EmbedDistLiveSample](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro em vez de [EmbedLiveSample](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro.
 
 Vamos ver como esse exemplo quando configurado como se estivesse sendo incorporado de uma origem remota:
 

@@ -1,13 +1,6 @@
 ---
 title: Range.getClientRects()
 slug: Web/API/Range/getClientRects
-tags:
-  - API
-  - Experimental
-  - Rango
-  - Vista CSSOM
-  - metodo
-translation_of: Web/API/Range/getClientRects
 ---
 
 {{ApiRef("DOM")}}{{ seeCompatTable }}

@@ -1,18 +1,11 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
-tags:
-  - HTTP
-  - HTTP Status
-  - Range Requests
-  - Success
-  - 성공
-translation_of: Web/HTTP/Status/206
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`206 Partial Content`**는 {{HTTPHeader("Range")}} 헤더에 기술된 데이터 범위에 대한 요청이 성공적으로 응답되어 바디에 해당되는 데이터를 담고 있다는 것을 알려줍니다.
+HTTP **`206 Partial Content`** 는 {{HTTPHeader("Range")}} 헤더에 기술된 데이터 범위에 대한 요청이 성공적으로 응답되어 본문에 해당되는 데이터를 담고 있다는 것을 알려줍니다.
 
 만약 단일 범위 요청을 한 경우에는 응답에 포함된 데이터의 타입은 {{HTTPHeader("Content-Type")}}이며, {{HTTPHeader("Content-Range")}}가 제공될 것입니다.
 
@@ -67,7 +60,7 @@ Content-Range: bytes 4590-7999/8000
 
 ## 브라우저 호환성
 
-{{Compat("http.status.206")}}
+{{Compat}}
 
 ## 함께 참고할 내용
 

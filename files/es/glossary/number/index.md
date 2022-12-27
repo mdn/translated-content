@@ -1,10 +1,6 @@
 ---
 title: Number
 slug: Glossary/Number
-tags:
-  - Glosario
-  - JavaScript
-translation_of: Glossary/Number
 original_slug: Glossary/Numero
 ---
 

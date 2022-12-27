@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/Tips
 
 ## Using advanced JavaScript features from ECMAScript 6 and 7
 
-Firefox は[たくさんの独創的な ECMAScript6](/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla)の特徴を含んでいます。いくつかの新しい、そして実験的な特徴は、デフォルトでは Web や WebExtension では使用できません。もしあなたがこれらの機能を使いたい場合、[Babel](https://babeljs.io/)のようなトランスパイラを使用するのがベストでしょう。
+Firefox は[たくさんの独創的な ECMAScript6](/ja/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla)の特徴を含んでいます。いくつかの新しい、そして実験的な特徴は、デフォルトでは Web や WebExtension では使用できません。もしあなたがこれらの機能を使いたい場合、[Babel](https://babeljs.io/)のようなトランスパイラを使用するのがベストでしょう。
 
 Babel は大半の ES6 の特徴に対する transformations を提供します
 

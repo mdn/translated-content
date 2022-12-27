@@ -1,11 +1,6 @@
 ---
 title: dfn
 slug: Web/HTML/Element/dfn
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/dfn
 original_slug: Web/HTML/Elemento/dfn
 ---
 

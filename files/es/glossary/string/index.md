@@ -1,12 +1,6 @@
 ---
 title: String
 slug: Glossary/String
-tags:
-  - Cadena de caracteres
-  - Glosario
-  - Principiante
-  - String
-translation_of: Glossary/String
 ---
 
 En cualquier lenguaje de programación, un string es una secuencia de {{Glossary("character","caracteres")}} usado para representar el texto.

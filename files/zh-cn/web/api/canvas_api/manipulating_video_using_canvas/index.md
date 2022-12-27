@@ -3,7 +3,7 @@ title: 使用 canvas 处理视频
 slug: Web/API/Canvas_API/Manipulating_video_using_canvas
 ---
 
-{{CanvasSidebar}}
+{{DefaultAPISidebar("Canvas API")}}
 
 通过在一个 canvas（画布）上结合 video 元素功能，你可以实时地操纵视频数据来合成各种视觉特效到正在呈现的视频画面中。本教程示范如何使用 JavaScript 代码执行色度键控（也被称为“绿屏效果”）。
 

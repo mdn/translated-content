@@ -1,16 +1,6 @@
 ---
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
-tags:
-  - API
-  - Complementos
-  - Interfaz
-  - No estandar
-  - Reference
-  - WebExtensions
-  - extensiones
-  - i18n
-translation_of: Mozilla/Add-ons/WebExtensions/API/i18n
 ---
 
 {{AddonSidebar}}

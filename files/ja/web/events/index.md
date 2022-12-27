@@ -1020,4 +1020,3 @@ slug: Web/Events
 ## 仕様書
 
 {{Specifications}}
-

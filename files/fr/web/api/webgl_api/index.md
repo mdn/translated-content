@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fff0462a1f0cdd479b62808e810e9fd030622c8e
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 **WebGL** (<i lang="en">Web Graphics Library</i>, qu'on pourrait traduire en «&nbsp;bibliothèque de graphismes pour le Web&nbsp;») est une API JavaScript permettant le rendu de graphismes en 2D ou 3D avec de hautes performances, sans avoir à utiliser de plugin. WebGL introduit une API qui est conforme de près à OpenGL ES 2.0 et qui peut être utilisée sur les éléments HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas). Cette conformité permet à l'API de tirer parti de l'accélération matérielle graphique fournie par l'appareil.
 

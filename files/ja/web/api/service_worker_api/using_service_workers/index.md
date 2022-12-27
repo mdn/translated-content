@@ -3,7 +3,7 @@ title: サービスワーカーの使用
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 ---
 
-{{ServiceWorkerSidebar}}
+{{DefaultAPISidebar("Service Workers API")}}
 
 この記事はサービスワーカーを使い始めるための情報を提供するページです。基本的な構造、サービスワーカーの登録、新しいサービスワーカーのインストールと有効化のプロセス、サービスワーカーの更新、キャッシュや応答の操作を含めた、オフラインで動作するシンプルなアプリケーションの機能についてです。
 

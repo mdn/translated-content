@@ -1,11 +1,6 @@
 ---
 title: meta
 slug: Web/HTML/Element/meta
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/meta
 original_slug: Web/HTML/Elemento/meta
 ---
 

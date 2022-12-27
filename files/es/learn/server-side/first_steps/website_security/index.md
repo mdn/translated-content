@@ -1,17 +1,6 @@
 ---
 title: Seguridad de Sitios Web
 slug: Learn/Server-side/First_steps/Website_security
-tags:
-  - Aprendizaje
-  - Codificación de scripts
-  - Guía
-  - Principiante
-  - Programación de lado servidor
-  - Seguridad
-  - Seguridad Web
-  - Seguridad de sitios Web
-  - introducción
-translation_of: Learn/Server-side/First_steps/Website_security
 original_slug: Learn/Server-side/Primeros_pasos/seguridad_sitios_web
 ---
 

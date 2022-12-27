@@ -1,12 +1,6 @@
 ---
 title: Árbol de accesibilidad (AOM)
 slug: Glossary/Accessibility_tree
-tags:
-  - AOM
-  - Accesibilidad
-  - DOM
-  - Glosario
-translation_of: Glossary/Accessibility_tree
 ---
 
 El **árbol de accesibilidad** o **modelo de objeto de accesibillidad (AOM)**, contiene información relacionada con {{Glossary("accessibility")}} para la mayoría de los elementos HTML.

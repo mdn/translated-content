@@ -1,7 +1,6 @@
 ---
 title: Private class fields
 slug: Web/JavaScript/Reference/Classes/Private_class_fields
-translation_of: Web/JavaScript/Reference/Classes/Private_class_fields
 original_slug: Web/JavaScript/Referencia/Classes/Private_class_fields
 ---
 
@@ -182,11 +181,9 @@ new ClassWithPrivateAccessor();
 // expected output: "✨hello worl​d✨"
 ```
 
-## Specifications
+## Especificaciones
 
-| Specification                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}} |
+{{Specifications}}
 
 ## Browser compatibility
 

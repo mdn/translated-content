@@ -1,7 +1,6 @@
 ---
 title: '<progress>: Elemento indicador de progreso'
 slug: Web/HTML/Element/progress
-translation_of: Web/HTML/Element/progress
 original_slug: Web/HTML/Elemento/progress
 ---
 

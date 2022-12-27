@@ -101,7 +101,7 @@ followed by more inline text.
 
 此时会产生两个匿名块盒子：一个是 `<span>` 元素前面的文本（`Some inline text`），另一个是其之后的文本（`followed by more inline text.`）。此时会生成下面的块结构：
 
-![](https://mdn.mozillademos.org/files/13625/anonymous_block_box_break.png)
+![](anonymous_block_box_break.png)
 
 显示为：
 

@@ -1,11 +1,6 @@
 ---
 title: Validador
 slug: Glossary/Validator
-tags:
-  - Glosario
-  - Principiante
-  - Seguridad
-translation_of: Glossary/Validator
 original_slug: Glossary/Validador
 ---
 

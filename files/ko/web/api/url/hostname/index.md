@@ -4,7 +4,7 @@ slug: Web/API/URL/hostname
 ---
 {{ApiRef("URL API")}}
 
-{{domxref("URL")}} 인터페이스의** `hostname`** 속성은 URL의 {{glossary("domain name", "도메인 이름")}}을 담은 {{domxref("USVString")}}을 반환합니다.
+{{domxref("URL")}} 인터페이스의 **`hostname`** 속성은 URL의 {{glossary("domain name", "도메인 이름")}}을 담은 {{domxref("USVString")}}을 반환합니다.
 
 {{AvailableInWorkers}}
 

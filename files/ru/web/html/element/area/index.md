@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/area
 ---
 **HTML `<area>` элемент** определяет активную область на изображении и, при желании, связывает её с {{Glossary("Hyperlink", "гипертекстовой ссылкой")}}. Этот элемент используется только внутри элемента {{HTMLElement("map")}}.{{EmbedInteractiveExample("pages/tabbed/area.html", "tabbed-taller")}}
 
-| [Категории содержимого](en-US/docs/HTML/Content_categories) | [Элементы потока](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразового контента](ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                   |
+| [Категории содержимого](en-US/docs/HTML/Content_categories) | [Элементы потока](/ru/docs/Web/HTML/Content_categories#Flow_content), [фразового контента](/ru/docs/Web/Guide/HTML/Content_categories#Phrasing_content).                                                                   |
 | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Разрешённое содержимое                                      | Нет, это {{Glossary("пустой элемент")}}.                                                                                                                                                        |
 | Пропуск тегов                                               | Открывающий тег обязателен, закрывающего быть не должно.                                                                                                                                                                  |

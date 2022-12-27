@@ -1,11 +1,6 @@
 ---
 title: acronym
 slug: Web/HTML/Element/acronym
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/acronym
 original_slug: Web/HTML/Elemento/acronym
 ---
 ### Definición

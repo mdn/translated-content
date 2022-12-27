@@ -1,7 +1,6 @@
 ---
 title: Flex Container
 slug: Glossary/Flex_Container
-translation_of: Glossary/Flex_Container
 ---
 
 Una plantilla con {{glossary("flexbox")}} puede ser definida usando los valores `flex` o `inline-flex` en las propiedades de `display`. Este elemento es un **contenedor flex**, y cada uno de los contenedores que heredan propiedades de este, son conocidos como {{glossary("flex item")}}.

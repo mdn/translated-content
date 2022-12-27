@@ -1,7 +1,6 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 original_slug: Web/JavaScript/Referencia/Objetos_globales/String/fromCodePoint
 ---
 

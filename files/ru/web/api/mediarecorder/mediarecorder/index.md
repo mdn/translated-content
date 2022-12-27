@@ -18,7 +18,7 @@ var mediaRecorder = new MediaRecorder(stream[, options]);
 
 - **`stream`**
   - : Объект потока {{domxref("MediaStream")}} источника из которого будет производиться запись. Может быть потоком, созданным {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} или {{HTMLElement("audio")}}, {{HTMLElement("video")}} или {{HTMLElement("canvas")}} элементами.
-- **`options` **{{optional_inline}}
+- **`options`** {{optional_inline}}
 
   - : Объект, содержащий следующие свойства:
 

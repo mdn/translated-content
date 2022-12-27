@@ -1,7 +1,6 @@
 ---
 title: transition-delay
 slug: Web/CSS/transition-delay
-translation_of: Web/CSS/transition-delay
 ---
 
 {{ CSSRef() }}

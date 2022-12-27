@@ -9,7 +9,7 @@ l10n:
 
 ## 参考情報
 
-- [STUN](https://ja.wikipedia.org/wiki/STUN)  (ウィキペディア)
+- [STUN](https://ja.wikipedia.org/wiki/STUN) (ウィキペディア)
 - [WebRTC プロトコル](/ja/docs/Web/API/WebRTC_API/Protocols)
 
 ### 技術リファレンス

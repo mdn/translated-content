@@ -1,13 +1,6 @@
 ---
 title: Extensiones del navegador
 slug: Mozilla/Add-ons/WebExtensions
-tags:
-  - Complementos
-  - Dónde empezar
-  - Manifiesto
-  - WebExtensions
-  - extensiones
-translation_of: Mozilla/Add-ons/WebExtensions
 ---
 
 {{AddonSidebar}}
@@ -37,25 +30,25 @@ Si tiene alguna idea, pregunta, o necesita ayuda en el proceso de migración de 
 - [Las mejores prácticas de seguridad](/es/docs/Mozilla/Add-ons/WebExtensions/Security_best_practices)
 - [Política de seguridad de contenido](/es/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
 - [Mensajería nativa](/es/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)
-- [Utilización de las APIs de devtools](/en-US/Add-ons/WebExtensions/Extending_the_developer_tools)
-- [Buenas prácticas para la experiencia de usuario](/en-US/Add-ons/WebExtensions/User_experience_best_practices)
-- [Manifestaciones nativas](/en-US/Add-ons/WebExtensions/Native_manifests)
+- [Utilización de las APIs de devtools](/es/Add-ons/WebExtensions/Extending_the_developer_tools)
+- [Buenas prácticas para la experiencia de usuario](/es/Add-ons/WebExtensions/User_experience_best_practices)
+- [Manifestaciones nativas](/es/Add-ons/WebExtensions/Native_manifests)
 - [Acciones de los usuarios](/es/docs/Mozilla/Add-ons/WebExtensions/User_actions)
 
 ## Interfaz de usuario
 
 - [Introducción](/es/Add-ons/WebExtensions/user_interface)
 - [Botón en la barra de herramientas del navegador](/es/Add-ons/WebExtensions/user_interface/Accion_navegador)
-- [Botón en barra de herramientas del navegador con una ventana emergente](/en-US/Add-ons/WebExtensions/user_interface/Popups)
-- [Botón en la barra de direcciones](/en-US/Add-ons/WebExtensions/user_interface/Page_actions)
-- [Botón en barra de direcciones con una ventana emergente](/en-US/Add-ons/WebExtensions/user_interface/Popups)
-- [Elementos en el menú contextual](/en-US/Add-ons/WebExtensions/user_interface/Context_menu_items)
-- [Barras laterales](/en-US/Add-ons/WebExtensions/user_interface/Sidebars)
-- [Página de opciones](/en-US/Add-ons/WebExtensions/user_interface/Options_pages)
-- [Páginas de extensiones](/en-US/Add-ons/WebExtensions/user_interface/Extension_pages)
-- [Notificaciones](/en-US/Add-ons/WebExtensions/user_interface/Notifications)
-- [Sugerencias en la barra de direcciones](/en-US/Add-ons/WebExtensions/user_interface/Omnibox)
-- [Paneles de herramientas para desarrolladores](/en-US/Add-ons/WebExtensions/user_interface/devtools_panels)
+- [Botón en barra de herramientas del navegador con una ventana emergente](/es/Add-ons/WebExtensions/user_interface/Popups)
+- [Botón en la barra de direcciones](/es/Add-ons/WebExtensions/user_interface/Page_actions)
+- [Botón en barra de direcciones con una ventana emergente](/es/Add-ons/WebExtensions/user_interface/Popups)
+- [Elementos en el menú contextual](/es/Add-ons/WebExtensions/user_interface/Context_menu_items)
+- [Barras laterales](/es/Add-ons/WebExtensions/user_interface/Sidebars)
+- [Página de opciones](/es/Add-ons/WebExtensions/user_interface/Options_pages)
+- [Páginas de extensiones](/es/Add-ons/WebExtensions/user_interface/Extension_pages)
+- [Notificaciones](/es/Add-ons/WebExtensions/user_interface/Notifications)
+- [Sugerencias en la barra de direcciones](/es/Add-ons/WebExtensions/user_interface/Omnibox)
+- [Paneles de herramientas para desarrolladores](/es/Add-ons/WebExtensions/user_interface/devtools_panels)
 - [Estilos del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
 
 ## Cómo
@@ -65,37 +58,37 @@ Si tiene alguna idea, pregunta, o necesita ayuda en el proceso de migración de 
 - [Agregar un botón a la barra de herramientas](/es/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
 - [Implementar una página de configuración](/es/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
 - [Interactuar con el portapapapeles](/es/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard)
-- [Trabajar con el API de las pestañas](/en-US/Add-ons/WebExtensions/Working_with_the_Tabs_API)
-- [Trabajar con el API de los marcadores](/en-US/Add-ons/WebExtensions/Work_with_the_Bookmarks_API)
-- [Trabajar con el API de las cookies](/en-US/Add-ons/WebExtensions/Work_with_the_Cookies_API)
-- [Trabjar con identidades contextuales](/en-US/Add-ons/WebExtensions/Work_with_contextual_identities)
-- [Insertar contenido externo](/en-US/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page)
+- [Trabajar con el API de las pestañas](/es/Add-ons/WebExtensions/Working_with_the_Tabs_API)
+- [Trabajar con el API de los marcadores](/es/Add-ons/WebExtensions/Work_with_the_Bookmarks_API)
+- [Trabajar con el API de las cookies](/es/Add-ons/WebExtensions/Work_with_the_Cookies_API)
+- [Trabjar con identidades contextuales](/es/Add-ons/WebExtensions/Work_with_contextual_identities)
+- [Insertar contenido externo](/es/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page)
 
 ## Portado
 
 - [Portar una extensión de Google Chrome](/es/Add-ons/WebExtensions/Porting_from_Google_Chrome)
 - [Portar un complemento heredado de Firefox](/es/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on)
-- [Desarrollo para Firefox para Android](/en-US/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android)
+- [Desarrollo para Firefox para Android](/es/Add-ons/WebExtensions/Developing_WebExtensions_for_Firefox_for_Android)
 - [WebExtensions integradas](/es/docs/Mozilla/Add-ons/WebExtensions/Embedded_WebExtensions)
 - [Comparación con el complemento SDK](/es/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_the_Add-on_SDK)
 - [Comparación con las extensiones XUL/XPCOM](/es/docs/Mozilla/Add-ons/WebExtensions/Comparison_with_XUL_XPCOM_extensions)
 - [Incompatibilidades con Chrome](/es/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
-- [Diferencias entre el escritorio y Android](/en-US/Add-ons/WebExtensions/Differences_between_desktop_and_Android)
+- [Diferencias entre el escritorio y Android](/es/Add-ons/WebExtensions/Differences_between_desktop_and_Android)
 - [Diferencias entre implementaciones de API](/es/docs/Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations)
 
 ## Flujo de trabajo de Firefox
 
-- [Experiencia de usuario](/en-US/Add-ons/WebExtensions/User_experience_best_practices)
+- [Experiencia de usuario](/es/Add-ons/WebExtensions/User_experience_best_practices)
 - [Instalación](/es/Add-ons/WebExtensions/Temporary_Installation_in_Firefox)
 - [Depuración](/es/Add-ons/WebExtensions/Debugging)
-- [Prueba de funciones persistentes y de reinicio](/en-US/Add-ons/WebExtensions/Testing_persistent_and_restart_features)
+- [Prueba de funciones persistentes y de reinicio](/es/Add-ons/WebExtensions/Testing_persistent_and_restart_features)
 - [Primeros pasos con web-ext](/es/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)
 - [Referencia del comando web-ext](/es/docs/Mozilla/Add-ons/WebExtensions/web-ext_command_reference)
 - [Extensiones y el ID del complemento](/es/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID)
-- [Opciones alternativas de distribución](/en-US/Add-ons/WebExtensions/Alternative_distribution_options)
-- [Solicite los permisos correctos](/en-US/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
-- [Compartir objetos con guiones de página](/en-US/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
-- [Retirando su extensión](/en-US/Add-ons/Distribution/Retiring_your_extension)
+- [Opciones alternativas de distribución](/es/Add-ons/WebExtensions/Alternative_distribution_options)
+- [Solicite los permisos correctos](/es/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
+- [Compartir objetos con guiones de página](/es/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)
+- [Retirando su extensión](/es/Add-ons/Distribution/Retiring_your_extension)
 - [Consejos y trucos](/es/docs/Mozilla/Add-ons/WebExtensions/Tips)
 - [Herramientas de desarrollo para las extensiones del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/Development_Tools)
 

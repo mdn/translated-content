@@ -1,11 +1,6 @@
 ---
 title: s
 slug: Web/HTML/Element/s
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/s
 original_slug: Web/HTML/Elemento/s
 ---
 

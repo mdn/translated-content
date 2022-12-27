@@ -1,19 +1,6 @@
 ---
 title: Publicación de juegos
 slug: Games/Publishing_games
-tags:
-  - Games
-  - HTML5
-  - JavaScript
-  - Monetization
-  - NeedsTranslation
-  - Promotion
-  - Publicacion
-  - TopicStub
-  - distribution
-  - juegos
-  - publishing
-translation_of: Games/Publishing_games
 ---
 
 {{GamesSidebar}}

@@ -1,13 +1,6 @@
 ---
 title: function*
 slug: Web/JavaScript/Reference/Statements/function*
-tags:
-  - Declaración
-  - Experimental
-  - Expérimental(2)
-  - Iterador
-  - función
-translation_of: Web/JavaScript/Reference/Statements/function*
 original_slug: Web/JavaScript/Referencia/Sentencias/function*
 ---
 

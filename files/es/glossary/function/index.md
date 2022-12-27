@@ -1,12 +1,6 @@
 ---
 title: Función
 slug: Glossary/Function
-tags:
-  - CodingScripting
-  - Glosario
-  - IIFE
-  - JavaScript
-translation_of: Glossary/Function
 original_slug: Glossary/Función
 ---
 

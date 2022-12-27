@@ -1,12 +1,6 @@
 ---
 title: Referencia de Atributos HTML
 slug: Web/HTML/Attributes
-tags:
-  - HTML
-  - Referencia
-  - Web
-  - atributo
-translation_of: Web/HTML/Attributes
 original_slug: Web/HTML/Atributos
 ---
 

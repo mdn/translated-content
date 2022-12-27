@@ -21,4 +21,3 @@ slug: Web/CSS/CSS_Writing_Modes
 ## 仕様書
 
 {{Specifications}}
-

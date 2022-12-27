@@ -1,7 +1,6 @@
 ---
 title: window.cancelAnimationFrame()
 slug: Web/API/Window/cancelAnimationFrame
-translation_of: Web/API/Window/cancelAnimationFrame
 ---
 
 {{APIRef}}{{SeeCompatTable}}

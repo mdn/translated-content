@@ -22,4 +22,3 @@ slug: Web/CSS/CSS_Scroll_Snap_Points
 ## 仕様書
 
 {{Specifications}}
-

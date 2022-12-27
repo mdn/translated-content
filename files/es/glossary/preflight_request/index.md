@@ -1,7 +1,6 @@
 ---
 title: Preflight petición
 slug: Glossary/Preflight_request
-translation_of: Glossary/Preflight_request
 original_slug: Glossary/Preflight_peticion
 ---
 

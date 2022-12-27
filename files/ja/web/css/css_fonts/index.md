@@ -82,4 +82,3 @@ p {
 ## 仕様書
 
 {{Specifications}}
-

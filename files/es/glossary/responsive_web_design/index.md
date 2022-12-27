@@ -1,7 +1,6 @@
 ---
 title: Diseño web responsivo
 slug: Glossary/Responsive_web_design
-translation_of: Glossary/Responsive_web_design
 ---
 
 Diseño web responsivo (del inglés _**R**esponsive **W**eb **D**esign_) o **RWD** es un concepto de desarrollo web que se centra en hacer que los sitios se vean y se comporten de manera óptima en todos los dispositivos informáticos personales, desde el escritorio hasta el móvil.

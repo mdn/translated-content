@@ -39,7 +39,7 @@ Nossa demo com bola saltitante é divertida, mas agora queremos torná-la um pou
 
 A imagem seguinte dá-lhe uma ideia do que deve ser o programa final:
 
-![](https://mdn.mozillademos.org/files/13875/bouncing-evil-circle.png)
+![](bouncing-evil-circle.png)
 
 Para lhe dar mais uma ideia, dê uma olhada no [exemplo finalizado](http://mdn.github.io/learning-area/javascript/oojs/assessment/) (não espreitar o código-fonte!)
 

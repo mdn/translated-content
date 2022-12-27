@@ -1,17 +1,6 @@
 ---
 title: Estructura de una aplicación web progresiva
 slug: Web/Progressive_web_apps/App_structure
-tags:
-  - Estructura
-  - Intérprete de la aplicación
-  - PWAs
-  - Servicio workers
-  - Streams
-  - Transmisiones
-  - aplicaciones web progresivas
-  - js13kGames
-  - progresiva
-translation_of: Web/Progressive_web_apps/App_structure
 ---
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Introduction", "Web/Progressive_web_apps/Offline_Service_workers", "Web/Progressive_web_apps")}}
@@ -67,7 +56,7 @@ Para obtener ejemplos trabajando y más información, consulta la [documentació
 
 La estructura del sitio web [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) es bastante simple: consta de un solo archivo HTML ([index.html](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/index.html)) con estilo CSS básico ([style.css](https://github.com/mdn/pwa-examples/blob/master/js13kpwa/style.css)) y algunas imágenes, scripts y tipos de letra. La estructura de la carpeta se ve así:
 
-![Estructura del directorio de js13kPWA.](https://mdn.mozillademos.org/files/15925/js13kpwa-directory.png)
+![Estructura del directorio de js13kPWA.](js13kpwa-directory.png)
 
 ### El HTML
 

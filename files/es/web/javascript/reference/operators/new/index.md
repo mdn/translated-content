@@ -1,14 +1,6 @@
 ---
 title: Operador new
 slug: Web/JavaScript/Reference/Operators/new
-tags:
-  - Expresiones del lado izquierdo
-  - JavaScript
-  - Left-hand-side expressions
-  - Operador
-  - Operator
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators/new
 original_slug: Web/JavaScript/Referencia/Operadores/new
 ---
 
@@ -152,9 +144,7 @@ car2.owner.name
 
 ## Especificaciones
 
-| Especificación                                                                       |
-| ------------------------------------------------------------------------------------ |
-| {{SpecName('ESDraft', '#sec-new-operator', 'El operador new')}} |
+{{Specifications}}
 
 ## Compatibilidad del navegador
 

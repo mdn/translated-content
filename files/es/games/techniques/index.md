@@ -1,9 +1,8 @@
 ---
 title: Técnicas para el desarrollo de juegos web
 slug: Games/Techniques
-translation_of: Games/Techniques
 l10n:
-  sourceCommit: 048f6b1c75e22103ddb0304d67ee79d6d8a014f0
+  sourceCommit: '048f6b1c75e22103ddb0304d67ee79d6d8a014f0'
 ---
 
 {{GamesSidebar}}

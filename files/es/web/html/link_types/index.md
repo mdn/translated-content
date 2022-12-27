@@ -1,7 +1,6 @@
 ---
 title: Tipos de enlaces
 slug: Web/HTML/Link_types
-translation_of: Web/HTML/Link_types
 original_slug: Web/HTML/Tipos_de_enlaces
 ---
 

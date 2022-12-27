@@ -1,11 +1,6 @@
 ---
 title: frameset
 slug: Web/HTML/Element/frameset
-tags:
-  - HTML
-  - HTML:Elemento
-  - Todas_las_Categorías
-translation_of: Web/HTML/Element/frameset
 original_slug: Web/HTML/Elemento/frameset
 ---
 
