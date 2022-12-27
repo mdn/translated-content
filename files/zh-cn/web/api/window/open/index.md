@@ -22,13 +22,13 @@ let windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeature
 ## 参数与返回值
 
 - `WindowObjectReference`
-  - : 打开的新窗口对象的引用。如果调用失败，返回值会是 `null 。如果`父子窗口满足“[同源策略](/zh-CN/JavaScript%E7%9A%84%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5)”，你可以通过这个引用访问新窗口的属性或方法。
+  - : 打开的新窗口对象的引用。如果调用失败，返回值会是 `null`。如果父子窗口满足“[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)”，你可以通过这个引用访问新窗口的属性或方法。
 - `strUrl`
   - : 新窗口需要载入的 url 地址。*strUrl*可以是 web 上的 html 页面也可以是图片文件或者其他任何浏览器支持的文件格式。
 - `strWindowName`
   - : 新窗口的名称。该字符串可以用来作为超链接 {{HTMLElement("a")}} 或表单 {{HTMLElement("form")}} 元素的目标属性值。字符串中不能含有空白字符。注意：_strWindowName_ 并不是新窗口的标题。
 - `strWindowFeatures`
-  - : 可选参数。是一个字符串值，这个值列出了将要打开的窗口的一些特性 (窗口功能和工具栏) 。 字符串中不能包含任何空白字符，特性之间用逗号分隔开。参考下文的[位置和尺寸特征](#Position_and_size_features>)。
+  - : 可选参数。是一个字符串值，这个值列出了将要打开的窗口的一些特性 (窗口功能和工具栏) 。字符串中不能包含任何空白字符，特性之间用逗号分隔开。参考下文的[位置和尺寸特征](#Position_and_size_features>)。
 
 ## 说明
 
@@ -70,7 +70,7 @@ const openRequestedPopup = () => {
 }
 ```
 
-如果已经存在以 _strWindowName_ 为名称的窗口，则不再打开一个新窗口，而是把 _strUrl_ 加载到这个窗口中。在这种情况下，方法的返回值是这个已经打开的窗口，并忽略参数 _strWindowFeatures_ 。*strUrl*设为空字符串时，可以在不改变窗口地址的情况下获得一个已经打开的同名窗口的引用。如果要在每次调用 `window.open()`时都打开一个新窗口，则要把参数 _strWindowName_ 设置为 `_blank`。
+如果已经存在以 _strWindowName_ 为名称的窗口，则不再打开一个新窗口，而是把 _strUrl_ 加载到这个窗口中。在这种情况下，方法的返回值是这个已经打开的窗口，并忽略参数 _strWindowFeatures_。*strUrl*设为空字符串时，可以在不改变窗口地址的情况下获得一个已经打开的同名窗口的引用。如果要在每次调用 `window.open()`时都打开一个新窗口，则要把参数 _strWindowName_ 设置为 `_blank`。
 
 _strWindowFeatures_ 是一个可选的字符串，包含了新窗口的一组用逗号分割的特性，在窗口打开之后，就不能用 JavaScript 改变窗口的功能和工具栏的设置。如果名称是 _strWindowName_ 的窗口不存在并且又没有提供 _strWindowFeatures_ 参数（或者 _strWindowFeatures_ 参数为空字符串），则子窗口以父窗口默认的工具栏渲染。
 

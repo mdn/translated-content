@@ -29,29 +29,29 @@ An API reference will generally contain the following pages. You can find more d
 
 ### 概要ページ
 
-A single API overview page is used to describe the role of the API, its top-level interfaces, related features contained in other interfaces, and other high level details. Its name and slug should be the name of the API plus "API" on the end. It is placed at the top level of the API reference, as a child of [https://developer.mozilla.org/en-US/docs/Web/API](/ja/docs/Web/API).
+A single API overview page is used to describe the role of the API, its top-level interfaces, related features contained in other interfaces, and other high level details. Its name and slug should be the name of the API plus "API" on the end. It is placed at the top level of the API reference, as a child of [https://developer.mozilla.org/ja/docs/Web/API](/ja/docs/Web/API).
 
 例:
 
 - Title: _Web Audio API_
 - Slug: _Web_Audio_API_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API](/ja/docs/Web/API/Web_Audio_API)
+- URL: [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API](/ja/docs/Web/API/Web_Audio_API)
 
 ### インターフェイスページ
 
-Each interface will have its own page too, describing the purpose of the interface, listing any members (constructors, methods, properties, etc. it contains), and showing what browsers it is compatible with. A page's name and slug should be the name of the interface, exactly as written in the spec. Each page is placed at the top level of the API reference, as a child of [https://developer.mozilla.org/en-US/docs/Web/API](/ja/docs/Web/API).
+Each interface will have its own page too, describing the purpose of the interface, listing any members (constructors, methods, properties, etc. it contains), and showing what browsers it is compatible with. A page's name and slug should be the name of the interface, exactly as written in the spec. Each page is placed at the top level of the API reference, as a child of [https://developer.mozilla.org/ja/docs/Web/API](/ja/docs/Web/API).
 
 例:
 
 - Title: _AudioContext_
 - Slug: _AudioContext_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioContext](/ja/docs/Web/API/AudioContext)
+- URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioContext](/ja/docs/Web/API/AudioContext)
 
 <!---->
 
 - Title: _AudioNode_
 - Slug: _AudioNode_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioNode](/ja/docs/Web/API/AudioNode)
+- URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioNode](/ja/docs/Web/API/AudioNode)
 
 > **Note:** We document every member appearing in the interface. You should bear the following rules in mind:
 >
@@ -69,7 +69,7 @@ Example:
 
 - Title: _AudioContext.AudioContext()_
 - Slug: _AudioContext_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/AudioContext](/ja/docs/Web/API/AudioContext/AudioContext)
+- URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioContext/AudioContext](/ja/docs/Web/API/AudioContext/AudioContext)
 
 ### プロパティページ
 
@@ -79,13 +79,13 @@ Examples:
 
 - Title: _AudioContext.state_
 - Slug: _state_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/state](/ja/docs/Web/API/AudioContext/state)
+- URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioContext/state](/ja/docs/Web/API/AudioContext/state)
 
 <!---->
 
 - Title: _AudioContext.onstatechange_
 - Slug: _onstatechange_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/onstatechange](/ja/docs/Web/API/AudioContext/onstatechange)
+- URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioContext/onstatechange](/ja/docs/Web/API/AudioContext/onstatechange)
 
 > **Note:** Event handler properties are treated in the same way as regular properties; they are generally listed in a separate section on the interface page though.
 
@@ -97,23 +97,23 @@ Examples:
 
 - Title: _AudioContext.close()_
 - Slug: _close_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/close](/ja/docs/Web/API/AudioContext/close)
+- URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioContext/close](/ja/docs/Web/API/AudioContext/close)
 
 <!---->
 
 - Title: _AudioContext.createGain()_
 - Slug: _createGain_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioContext/createGain](/ja/docs/Web/API/AudioContext/createGain)
+- URL: [https://developer.mozilla.org/ja/docs/Web/API/AudioContext/createGain](/ja/docs/Web/API/AudioContext/createGain)
 
 ### イベントページ
 
-Each event handler property you create will have a corresponding event page, describing the event that causes the handler to fire, documented on a subpage of [https://developer.mozilla.org/en-US/docs/Web/Events](/ja/docs/Web/Events). Each page describes the purpose of the event and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug and title is the name of the event.
+Each event handler property you create will have a corresponding event page, describing the event that causes the handler to fire, documented on a subpage of [https://developer.mozilla.org/ja/docs/Web/Events](/ja/docs/Web/Events). Each page describes the purpose of the event and shows what its syntax looks like, usage examples, browser compatibility information, etc. Its slug and title is the name of the event.
 
 Example:
 
 - Title: _statechange_
 - Slug: _statechange_
-- URL: [https://developer.mozilla.org/en-US/docs/Web/Events/statechange](/ja/docs/Web/Events/statechange)
+- URL: [https://developer.mozilla.org/ja/docs/Web/Events/statechange](/ja/docs/Web/Events/statechange)
 
 ### Concept/guide pages
 
@@ -123,11 +123,11 @@ If required, you can also including a concepts article called "_name-of-api_ con
 
 These articles should all be created as subpages of the API overview page. For example, the Web Audio has four guides and a concept article:
 
-- [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
-- [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext](/ja/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
-- [https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
+- [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API](/ja/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
+- [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics](/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext](/ja/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext)
+- [https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API](/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API)
 
 ### 例
 

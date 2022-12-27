@@ -29,7 +29,7 @@ It is this controller function that we extend to get information from our models
 
 The index controller function needs to fetch information about how many `Book`, `BookInstance`, available `BookInstance`, `Author`, and `Genre` records we have in the database, render this data in a template to create an HTML page, and then return it in an HTTP response.
 
-> **Note:** We use the [`countDocuments()`](http://mongoosejs.com/docs/api.html#model_Model.countDocuments) method to get the number of instances of each model. This is called on a model with an optional set of conditions to match against in the first argument and a callback in the second argument (as discussed in [Using a Database (with Mongoose)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose), and you can also return a `Query` and then execute it with a callback later. The callback will be returned when the database returns the count, with an error value (or `null`) as the first parameter and the count of records (or null if there was an error) as the second parameter.
+> **メモ:** We use the [`countDocuments()`](http://mongoosejs.com/docs/api.html#model_Model.countDocuments) method to get the number of instances of each model. This is called on a model with an optional set of conditions to match against in the first argument and a callback in the second argument (as discussed in [Using a Database (with Mongoose)](/ja/docs/Learn/Server-side/Express_Nodejs/mongoose), and you can also return a `Query` and then execute it with a callback later. The callback will be returned when the database returns the count, with an error value (or `null`) as the first parameter and the count of records (or null if there was an error) as the second parameter.
 >
 > ```js
 > SomeModel.countDocuments({ a_model_field: 'match_value' }, function (err, count) {
@@ -86,7 +86,7 @@ The `async.parallel()` method is passed an object with functions for getting the
 
 On success the callback function calls [`res.render()`](http://expressjs.com/en/4x/api.html#res.render), specifying a view (template) named '**index**' and an object containing the data that is to be inserted into it (this includes the results object that contains our model counts). The data is supplied as key-value pairs, and can be accessed in the template using the key.
 
-> **Note:** The callback function from `async.parallel()` above is a little unusual in that we render the page whether or not there was an error (normally you might use a separate execution path for handling the display of errors).
+> **メモ:** The callback function from `async.parallel()` above is a little unusual in that we render the page whether or not there was an error (normally you might use a separate execution path for handling the display of errors).
 
 ## View
 
@@ -118,7 +118,7 @@ The view is straightforward. We extend the **layout.pug** base template, overrid
 
 Under the _Dynamic content_ heading we check whether the error variable passed in from the `render()` function has been defined. If so, we note the error. If not, we get and list the number of copies of each model from the `data` variable.
 
-> **Note:** We didn't escape the count values (i.e. we used the `!{}` syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.
+> **メモ:** We didn't escape the count values (i.e. we used the `!{}` syntax) because the count values are calculated. If the information was supplied by end-users then we'd escape the variable for display.
 
 ## What does it look like?
 
@@ -126,7 +126,7 @@ At this point we should have created everything needed to display the index page
 
 ![Home page - Express Local Library site](LocalLibary_Express_Home.png)
 
-> **Note:** You won't be able to use the sidebar links yet because the urls, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on. These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.
+> **メモ:** You won't be able to use the sidebar links yet because the urls, views, and templates for those pages haven't been defined. If you try you'll get errors like "NOT IMPLEMENTED: Book list" for example, depending on the link you click on. These string literals (which will be replaced with proper data) were specified in the different controllers that live inside your "controllers" file.
 
 ## Next steps
 

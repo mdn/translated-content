@@ -31,7 +31,7 @@ void gl.texImage3D(target, level, internalformat, width, height, depth, border, 
     - `gl.TEXTURE_2D_ARRAY`: 一个 2D 数组贴图
 
 - `level`
-  - : {{domxref("GLint")}}指定细节等级。level0 是基础图片等级， n 是第 n 个 mipmap 纹理衰减等级。（译者注：原文中衰减应该指像素，并且注意，webgl 的 Mipmapping 技术要求顶层图像的行和列的维数均为 2 的幂）
+  - : {{domxref("GLint")}}指定细节等级。level0 是基础图片等级，n 是第 n 个 mipmap 纹理衰减等级。（译者注：原文中衰减应该指像素，并且注意，webgl 的 Mipmapping 技术要求顶层图像的行和列的维数均为 2 的幂）
 - `internalformat`
 
   - : {{domxref("GLint")}}指定贴图的颜色组成，可能值为：

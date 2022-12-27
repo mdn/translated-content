@@ -103,9 +103,9 @@ StackOverflow の突っ込んだ議論、 ["What's a good way to extend Error in
 
 #### ES6 独自のエラークラス
 
-> **Warning:** Babel 7 以前では独自のエラークラスのメソッドを使用することができますが、 [Object.defineProperty()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) で宣言された場合に限定されます。 そうでない場合、古い Babel やそれ以外のトランスパイラは、下記のコードを正しく処理するために[追加の設定](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)を必要とします。
+> **警告:** Babel 7 以前では独自のエラークラスのメソッドを使用することができますが、 [Object.defineProperty()](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) で宣言された場合に限定されます。 そうでない場合、古い Babel やそれ以外のトランスパイラは、下記のコードを正しく処理するために[追加の設定](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)を必要とします。
 
-> **Note:** ES2015 クラスを使用した場合、一部のブラウザのスタックトレース上に、 CustomError コンストラクタが含まれます。
+> **メモ:** ES2015 クラスを使用した場合、一部のブラウザのスタックトレース上に、 CustomError コンストラクタが含まれます。
 
 ```js
 class CustomError extends Error {
@@ -137,7 +137,7 @@ try {
 
 #### ES5 独自のエラーオブジェクト
 
-> **Warning:** **すべて**のブラウザーのスタックトレース上に、 `CustomError` コンストラクターが含まれます。
+> **警告:** **すべて**のブラウザーのスタックトレース上に、 `CustomError` コンストラクターが含まれます。
 
 ```js
 function CustomError(foo, message, fileName, lineNumber) {

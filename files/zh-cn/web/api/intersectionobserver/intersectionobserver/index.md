@@ -5,7 +5,7 @@ slug: Web/API/IntersectionObserver/IntersectionObserver
 
 {{APIRef("Intersection Observer API")}}
 
-**`IntersectionObserver()`**构造器创建并返回一个{{domxref("IntersectionObserver")}}对象。 如果指定`rootMargin`则会检查其是否符合语法规定，检查阈值以确保全部在 0.0 到 1.0 之间，并且阈值列表会按升序排列。如果阈值列表为空，则默认为一个 \[0.0] 的数组。
+**`IntersectionObserver()`**构造器创建并返回一个{{domxref("IntersectionObserver")}}对象。如果指定`rootMargin`则会检查其是否符合语法规定，检查阈值以确保全部在 0.0 到 1.0 之间，并且阈值列表会按升序排列。如果阈值列表为空，则默认为一个 \[0.0] 的数组。
 
 ## 语法
 

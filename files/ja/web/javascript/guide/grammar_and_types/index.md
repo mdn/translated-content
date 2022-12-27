@@ -23,7 +23,7 @@ JavaScript では、命令は{{Glossary("Statement", "文")}} (statement) と呼
 
 文が単独の行で書かれている場合、文の後にセミコロンは必要ではありません。しかし、行の中に複数の文が必要な場合は、セミコロンで区切る*必要*があります。
 
-> **Note:** ECMAScript も文末に自動的にセミコロンを挿入する規則があります ([ASI](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion))。(詳しくは、JavaScript の [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)についての詳細なリファレンスを参照してください。)
+> **メモ:** ECMAScript も文末に自動的にセミコロンを挿入する規則があります ([ASI](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Automatic_semicolon_insertion))。(詳しくは、JavaScript の [字句文法](/ja/docs/Web/JavaScript/Reference/Lexical_grammar)についての詳細なリファレンスを参照してください。)
 
 必須ではないとしても、文の後に常にセミコロンを記述することをお勧めします。これによって、コード中にバグが発生する機会を減らすことができます。
 
@@ -45,7 +45,7 @@ JavaScript のソーステキストは左から右にスキャンされ、_ト�
 
 コメントはホワイトスペースのように扱われ、スクリプトの実行から除外されます。
 
-> **Note:** 一部の JavaScript ファイルの先頭で、`#!/usr/bin/env node` のような第三の種類のコメントを見かけることもあるかもしれません。
+> **メモ:** 一部の JavaScript ファイルの先頭で、`#!/usr/bin/env node` のような第三の種類のコメントを見かけることもあるかもしれません。
 >
 > これは**ハッシュバンコメント**構文と呼ばれ、スクリプトの実行に使用したい特定の JavaScript エンジンへのパスを指定するのに使用される特殊なコメントです。詳しくは[ハッシュバンコメント](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Hashbang_comments)を参照してください。
 
@@ -357,7 +357,7 @@ y = 42 + ' が答え' // "42 が答え"
 
 `parseInt` は整数のみを返すので、小数は切り捨てられます。
 
-> **Note:** さらに、`parseInt` を使う最も良い方法は、常に基数を引数に含めるようにすることです。基数の引数は使用されている*基数*法を指定するのに使われます。
+> **メモ:** さらに、`parseInt` を使う最も良い方法は、常に基数を引数に含めるようにすることです。基数の引数は使用されている*基数*法を指定するのに使われます。
 
 ```js
 parseInt('101', 2) // 5
@@ -393,11 +393,11 @@ JavaScript では値の表現に*リテラル*を使います。これらは固�
 let coffees = ['French Roast', 'Colombian', 'Kona'];
 ```
 
-> **Note:** 配列リテラルは*オブジェクト初期化子*の一種です。[オブジェクト初期化子の使用](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers)を参照してください。
+> **メモ:** 配列リテラルは*オブジェクト初期化子*の一種です。[オブジェクト初期化子の使用](/ja/docs/Web/JavaScript/Guide/Working_with_Objects#Using_object_initializers)を参照してください。
 
 トップレベルのスクリプト内でリテラルを用いて配列を作成した場合、JavaScript は配列リテラルを含む式を評価するたびに配列を解釈します。さらに関数内で使用されたリテラルは、関数が呼び出されるたびに生成されます。
 
-> **Note:** 配列リテラルは `Array` オブジェクトでもあります。`Array` オブジェクトの詳細は {{jsxref("Array")}} と[インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)をご覧ください。
+> **メモ:** 配列リテラルは `Array` オブジェクトでもあります。`Array` オブジェクトの詳細は {{jsxref("Array")}} と[インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)をご覧ください。
 
 #### 配列リテラルでの余分なカンマ
 
@@ -417,7 +417,7 @@ let fish = ['Lion', , 'Angel'];
 
 次の例では、配列の長さ (`length`) は 3 です。`myList[3]` は存在しません。リスト内の他のカンマはすべて、新しい要素を示します。
 
-> **Note:** 末尾にカンマを置くと古いブラウザーでエラーになる場合があるので、取り除くのが最善です。
+> **メモ:** 末尾にカンマを置くと古いブラウザーでエラーになる場合があるので、取り除くのが最善です。
 
 ```js
 let myList = ['home', , 'school', ];
@@ -443,7 +443,7 @@ let myList = ['home', , 'school', , ];
 
 真偽値型は 2 つのリテラル値、`true` と `false` があります。
 
-> **Note:** **忠告:** プリミティブ型の真偽値である `true` や `false` と、{{jsxref("Boolean")}} オブジェクトの `true` や `false` という値とを混同してはいけません。
+> **メモ:** プリミティブ型の真偽値である `true` や `false` と、{{jsxref("Boolean")}} オブジェクトの `true` や `false` という値とを混同してはいけません。
 >
 > Boolean オブジェクトは、プリミティブな真偽値型のラッパーです。詳細は {{jsxref("Boolean")}} を参照してください。
 
@@ -497,7 +497,7 @@ let myList = ['home', , 'school', , ];
 
 オブジェクトリテラルとは、プロパティ名とそれに関連付けられたオブジェクトの値との 0 個以上の組が波括弧 (`{}`) で囲まれたもので作られたリストです。
 
-> **Warning:** **オブジェクトリテラルを文の先頭で使わないようにしてください。** `{` がブロックの始まりと解釈されるため、エラーや予期せぬ動作を引き起こすことになります。
+> **警告:** **オブジェクトリテラルを文の先頭で使わないようにしてください。** `{` がブロックの始まりと解釈されるため、エラーや予期せぬ動作を引き起こすことになります。
 
 以下にオブジェクトリテラルの例を示します。`car` オブジェクトの最初の要素には `myCar` プロパティが定義され、新規文字列 "`Saturn`" が割り当てられています。2 番目の要素、`getCar` プロパティには関数 `(carTypes("Honda"));` によって呼び出された結果が即座に割り当てられます。3 番目の要素、`special` プロパティには既存の変数 (`sales`) が使われています。
 

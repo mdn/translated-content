@@ -16,7 +16,7 @@ var CurrentWritingDirection = elementNodeReference.dir;
 elementNodeReference.dir = NewWritingDirection;
 ```
 
-`CurrentWritingDirection`是一个字符串，表示当前元素的元素内容的文本书写方向. NewWritingDirection 是一个变量，表示当前元素新的文本书写方向。
+`CurrentWritingDirection`是一个字符串，表示当前元素的元素内容的文本书写方向。NewWritingDirection 是一个变量，表示当前元素新的文本书写方向。
 
 **dir** 的值可以是**`ltr`, 表示从左到右**, 和**`rtl`, 表示从右到左**.
 

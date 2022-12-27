@@ -26,7 +26,7 @@ slug: Web/CSS/-webkit-box-reflect
 -webkit-box-reflect: unset;
 ```
 
-> **Warning:** この機能は**ウェブサイトで使うためのものではありません**。ウェブで反射効果を実現する上で、標準の方法は CSS の {{CSSxRef("element()", "element()")}} 関数を使用することです。
+> **警告:** この機能は**ウェブサイトで使うためのものではありません**。ウェブで反射効果を実現する上で、標準の方法は CSS の {{CSSxRef("element()", "element()")}} 関数を使用することです。
 
 ## 構文
 

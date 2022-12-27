@@ -1,15 +1,6 @@
 ---
 title: 게임 개발
 slug: Games
-tags:
-  - HTML5
-  - HTML5 게임
-  - 게임
-  - 게임 개발
-  - 앱
-  - 웹
-  - 자바스크립트 게임
-translation_of: Games
 ---
 {{GamesSidebar}}
 

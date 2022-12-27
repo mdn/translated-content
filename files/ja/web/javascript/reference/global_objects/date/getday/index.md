@@ -32,7 +32,7 @@ var weekday = Xmas95.getDay();
 console.log(weekday); // 1
 ```
 
-> **Note:** 必要であれば、曜日の完全な名前 (例えば "`Monday`") は {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} に `options` 引数を設定することで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
+> **メモ:** 必要であれば、曜日の完全な名前 (例えば "`Monday`") は {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} に `options` 引数を設定することで取得することができます。このメソッドを使用すれば、国際化がより簡単になります。
 >
 > ```js
 > var options = { weekday: 'long'};

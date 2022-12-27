@@ -121,7 +121,7 @@ export { function1, function2 };
 
 現在のモジュール内で `function1` と `function2` が利用できない場合。
 
-> **Note:** **メモ:** 以下は、インポートに相当するにもかかわらず、構文的に無効です。
+> **メモ:** 以下は、インポートに相当するにもかかわらず、構文的に無効です。
 
 ```js
 import DefaultExport from 'bar.js'; // 有効

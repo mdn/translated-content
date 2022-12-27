@@ -13,7 +13,7 @@ slug: Web/API/HTML_Drag_and_Drop_API
 
 ## 拖拽事件
 
-HTML 的 drag & drop 使用了 {{domxref("Event","DOM event model")}} 以及从 {{domxref("MouseEvent","mouse events")}} 继承而来的 _{{domxref("DragEvent","drag events")}}_ 。一个典型的拖拽操作是这样的：用户选中一个*可拖拽的（draggable）*元素，并将其拖拽（鼠标不放开）到一个*可放置的（droppable）*元素，然后释放鼠标。
+HTML 的 drag & drop 使用了 {{domxref("Event","DOM event model")}} 以及从 {{domxref("MouseEvent","mouse events")}} 继承而来的 _{{domxref("DragEvent","drag events")}}_。一个典型的拖拽操作是这样的：用户选中一个*可拖拽的（draggable）*元素，并将其拖拽（鼠标不放开）到一个*可放置的（droppable）*元素，然后释放鼠标。
 
 在操作期间，会触发一些事件类型，有一些事件类型可能会被多次触发（比如{{event("drag")}} 和 {{event("dragover")}} 事件类型）。
 
@@ -48,11 +48,11 @@ HTML 的拖拽接口有 {{domxref("DragEvent")}}, {{domxref("DataTransfer")}}, {
 
 {{domxref("DataTransfer")}} 和 {{domxref("DataTransferItem")}} 接口的一个主要的不同是前者使用同步的 {{domxref("DataTransfer.getData","getData()")}} 方法去得到拖拽项的数据，而后者使用异步的 {{domxref("DataTransferItem.getAsString","getAsString()")}} 方法得到拖拽项的数据。
 
-注意: {{domxref("DragEvent")}} 和 {{domxref("DataTransfer")}} 接口是所有桌面浏览器都支持的。但是， {{domxref("DataTransferItem")}} 和{{domxref("DataTransferItemList")}} 接口并不被所有浏览器支持。请移步 [互操作性](#互操作性) 了解更多关于拖拽行为的信息。
+注意：{{domxref("DragEvent")}} 和 {{domxref("DataTransfer")}} 接口是所有桌面浏览器都支持的。但是， {{domxref("DataTransferItem")}} 和{{domxref("DataTransferItemList")}} 接口并不被所有浏览器支持。请移步 [互操作性](#互操作性) 了解更多关于拖拽行为的信息。
 
 ### Gecko 专用接口
 
-Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。 它们是一些帮助实现拖拽多个项目和拖拽非文本内容（如文件）的便捷函数。想要了解更多信息，请参见 [拖放多个项目](/zh-CN/docs/DragDrop/Dragging_and_Dropping_Multiple_Items)。另外，请查看 {{domxref("DataTransfer")}} 参考页以获取所有 [Gecko 专有属性](/zh-CN/docs/Web/API/DataTransfer#Gecko_properties) 和 [Gecko 专有方法](/zh-CN/docs/Web/API/DataTransfer#Gecko_methods)。
+Mozilla 和 Firefox 支持一些不在标准拖放模型中的特性。它们是一些帮助实现拖拽多个项目和拖拽非文本内容（如文件）的便捷函数。想要了解更多信息，请参见 [拖放多个项目](/zh-CN/docs/DragDrop/Dragging_and_Dropping_Multiple_Items)。另外，请查看 {{domxref("DataTransfer")}} 参考页以获取所有 [Gecko 专有属性](/zh-CN/docs/Web/API/DataTransfer#Gecko_properties) 和 [Gecko 专有方法](/zh-CN/docs/Web/API/DataTransfer#Gecko_methods)。
 
 ## 基础
 

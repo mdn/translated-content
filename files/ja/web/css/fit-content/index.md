@@ -9,7 +9,7 @@ slug: Web/CSS/fit-content
 
 {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, {{cssxref("max-height")}} のレイアウトされたボックスの大きさとして使用される場合、最大寸法と最小寸法は、コンテンツの寸法を参照します。
 
-> **Note:** CSS Sizing の仕様では、{{cssxref("fit-content()", "fit-content()")}} という関数も定義されています。このページではキーワード版について詳しく説明します。
+> **メモ:** CSS Sizing の仕様では、{{cssxref("fit-content()", "fit-content()")}} という関数も定義されています。このページではキーワード版について詳しく説明します。
 
 ## 構文
 

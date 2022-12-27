@@ -3,7 +3,7 @@ title: <button>
 slug: Web/HTML/Element/button
 ---
 
-**HTML `<button>` 元素**表示一个可点击的按钮，可以用在[表单](/zh-CN/docs/Learn/HTML/Forms)或文档其它需要使用简单标准按钮的地方。 默认情况下，HTML 按钮的显示样式接近于 {{Glossary("user agent")}} 所在的宿主系统平台（用户操作系统）的按钮， 但你可以使用 [CSS](/zh-CN/docs/Web/CSS) 来改变按钮的样貌。
+**HTML `<button>` 元素**表示一个可点击的按钮，可以用在[表单](/zh-CN/docs/Learn/HTML/Forms)或文档其它需要使用简单标准按钮的地方。默认情况下，HTML 按钮的显示样式接近于 {{Glossary("user agent")}} 所在的宿主系统平台（用户操作系统）的按钮，但你可以使用 [CSS](/zh-CN/docs/Web/CSS) 来改变按钮的样貌。
 
 <table class="properties">
  <tbody>
@@ -90,7 +90,7 @@ IE7 在使用 `<button type="submit" name="myButton" value="foo">Click me</butto
 IE6 的 BUG 更糟糕，在提交表单的时候会把表单内所有的按钮都提交上去，同时还有和 IE7 一样的 BUG。
 IE8 已经修复了这个问题。
 
-Firefox 出于使用方便的目的，会在获得焦点的按钮上添加一个细小的虚线框。 这个边框由浏览器内部的样式表中的 CSS 定义，但如果有必要的话，你可以用 `button{{cssxref("::-moz-focus-inner")}} { }` 重写这个样式。
+Firefox 出于使用方便的目的，会在获得焦点的按钮上添加一个细小的虚线框。这个边框由浏览器内部的样式表中的 CSS 定义，但如果有必要的话，你可以用 `button{{cssxref("::-moz-focus-inner")}} { }` 重写这个样式。
 
 Firefox 在默认情况下会在页面加载时让 {{HTMLElement("button")}} [保持动态禁用状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) ，这个行为在其它浏览器上是没有的。将 {{htmlattrxref("autocomplete","button")}} 属性设置为 `off` 可以禁用这项特性。参见 {{bug(654072)}}。
 
@@ -121,7 +121,7 @@ Firefox 在默认情况下会在页面加载时让 {{HTMLElement("button")}} [�
 
 {{ EmbedLiveSample('示例', 200, 64) }}
 
-请注意上例中应用了 CSS 。
+请注意上例中应用了 CSS。
 
 ## 规范
 

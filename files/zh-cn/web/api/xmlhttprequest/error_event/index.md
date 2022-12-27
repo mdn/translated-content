@@ -119,5 +119,5 @@ xhrButtonAbort.addEventListener('click', () => {
 
 ## 其他
 
-- 相关事件: {{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
+- 相关事件：{{domxref("XMLHttpRequest/loadstart_event", "loadstart")}}, {{domxref("XMLHttpRequest/load_event", "load")}}, {{domxref("XMLHttpRequest/progress_event", "progress")}}, {{domxref("XMLHttpRequest/loadend_event", "loadend")}}, {{domxref("XMLHttpRequest/abort_event", "abort")}}
 - [监视进度](/zh-CN/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Monitoring_progress)

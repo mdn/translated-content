@@ -19,7 +19,7 @@ slug: Glossary/Falsy
 | {{Glossary("undefined")}} | [undefined](/ja/docs/Web/JavaScript/Reference/Global_Objects/undefined) - プリミティブ値                                                             |
 | {{Glossary("NaN")}}         | [NaN](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) - 非数                                                                                   |
 
-> **Note:** オブジェクトは、 [\[\[IsHTMLDDA\]\] 内部スロット](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot)がある場合のみ偽値になります。このスロットは {{domxref("document.all")}} にのみ存在し、 JavaScript を使用して設定することはできません。
+> **メモ:** オブジェクトは、 [\[\[IsHTMLDDA\]\] 内部スロット](https://tc39.es/ecma262/#sec-IsHTMLDDA-internal-slot)がある場合のみ偽値になります。このスロットは {{domxref("document.all")}} にのみ存在し、 JavaScript を使用して設定することはできません。
 
 ## 例
 

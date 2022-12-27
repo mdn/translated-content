@@ -17,7 +17,7 @@ slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
 
 [Simple Mapquest API の例](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/)を参考に、サードパーティ API とブラウザー API の違いを説明します。
 
-> **Note:** 一度に[すべてのコード例を取得](/ja/docs/Learn#Getting_our_code_examples)したい場合があります。その場合は、各セクションで必要なサンプルファイルをレポジトリーで検索するだけで済みます。
+> **メモ:** 一度に[すべてのコード例を取得](/ja/docs/Learn#Getting_our_code_examples)したい場合があります。その場合は、各セクションで必要なサンプルファイルをレポジトリーで検索するだけで済みます。
 
 ### それらはサードパーティのサーバーにあります
 
@@ -53,7 +53,7 @@ let map = L.mapquest.map('map', {
 
 これが、Mapquest API が単純な地図を描くために必要なすべての情報です。接続しているサーバーは、表示されている地域の正しい地図タイルを表示するなど、複雑なものをすべて処理します。
 
-> **Note:** API の中には、機能へのアクセスをわずかに異なる方法で処理するものがあり、開発者はデータを取得するために特定の URL パターンに対して HTTP リクエストを行う必要があります。これらは [RESTful API と呼ばれ、後で例が出てきます](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs#A_RESTful_API_—_NYTimes)。
+> **メモ:** API の中には、機能へのアクセスをわずかに異なる方法で処理するものがあり、開発者はデータを取得するために特定の URL パターンに対して HTTP リクエストを行う必要があります。これらは [RESTful API と呼ばれ、後で例が出てきます](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs#A_RESTful_API_—_NYTimes)。
 
 ### 通常は API キーが必要です
 
@@ -69,7 +69,7 @@ L.mapquest.key = 'YOUR-API-KEY-HERE';
 
 この行では、アプリケーションで使用する API キーまたは開発者キーを指定します。アプリケーションの開発者は、キーを取得して API の機能へのアクセス許可を得るためにコードに含める必要があります。この例では、プレースホルダーを用意しました。
 
-> **Note:** 独自の例を作成するときは、プレースホルダーの代わりに独自の API キーを使用します。
+> **メモ:** 独自の例を作成するときは、プレースホルダーの代わりに独自の API キーを使用します。
 
 他の API では、少し異なる方法でキーを含める必要があるかもしれませんが、ほとんどのパターンは比較的似ています。
 
@@ -137,7 +137,7 @@ L.marker([53.480759, -2.242631], {
 
 ドキュメントに記載されているその他のオプションを試してみて、何ができるか見てみましょう。Mapquest には、道案内や検索など、かなり高度な機能があります。
 
-> **Note:** サンプルがうまく動作しない場合は、完成版のコードをチェックしてみてください。[expanded-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/expanded-example.html) を参照してください ([ここでライブで実行しているのも見てください](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/expanded-example.html))。
+> **メモ:** サンプルがうまく動作しない場合は、完成版のコードをチェックしてみてください。[expanded-example.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/mapquest/expanded-example.html) を参照してください ([ここでライブで実行しているのも見てください](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/expanded-example.html))。
 
 ## Google マップはどうですか？
 
@@ -231,9 +231,9 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=YOUR-API-KEY-HE
 &fq=document_type:("article")&begin_date=20170301&end_date=20170312
 ```
 
-> **Note:** どのような URL パラメーターを含めることができるかについての詳細は、[NYTimes developer docs](https://developer.nytimes.com/) を参照してください。
+> **メモ:** どのような URL パラメーターを含めることができるかについての詳細は、[NYTimes developer docs](https://developer.nytimes.com/) を参照してください。
 
-> **Note:** この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (`required` 属性を使用して達成されます)。日付フィールドには `pattern` 属性が指定されており、値が 8 個の数字 (`pattern="[0-9]{8}"`) で構成されていないと送信されません。これらがどのように機能するかについての詳細は [Form data validation](/ja/docs/Learn/HTML/Forms/Form_validation) を参照してください。
+> **メモ:** この例では初歩的なフォームデータの検証を行っています — 検索語フィールドは、フォームを送信する前に入力しなければなりません (`required` 属性を使用して達成されます)。日付フィールドには `pattern` 属性が指定されており、値が 8 個の数字 (`pattern="[0-9]{8}"`) で構成されていないと送信されません。これらがどのように機能するかについての詳細は [Form data validation](/ja/docs/Learn/HTML/Forms/Form_validation) を参照してください。
 
 ### API からデータを要求する
 
@@ -363,7 +363,7 @@ function displayResults(json) {
 
     2 番目の関数は逆の方法でほぼ正確に同じように動作しますが、`pageNumber` がすでに 0 ではないことを確認するという余分なステップを踏まなければなりません — もしフェッチリクエストがマイナスの `page` パラメーターで実行された場合、エラーを引き起こす可能性があります。もし `pageNumber` がすでに 0 であれば、処理能力を無駄にしないように、単に関数から [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) します (すでに最初のページにいるのであれば、同じ結果を再び読み込む必要はありません)。
 
-> **Note:** 完成した [nytimes API のサンプルコードは GitHub で見ることができます](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html) ([ここでもライブで動作しています](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)) 。
+> **メモ:** 完成した [nytimes API のサンプルコードは GitHub で見ることができます](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/index.html) ([ここでもライブで動作しています](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/)) 。
 
 ## YouTube の例
 

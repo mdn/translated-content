@@ -85,7 +85,7 @@ export default function Todo() {
 }
 ```
 
-> **Note:** コンポーネントは常に何かを返さなければなりません。もし今後あなたが何も返さないコンポーネントをレンダリングしようとしたら、React はブラウザーにエラーを表示するでしょう。
+> **メモ:** コンポーネントは常に何かを返さなければなりません。もし今後あなたが何も返さないコンポーネントをレンダリングしようとしたら、React はブラウザーにエラーを表示するでしょう。
 
 これで `Todo` コンポーネントは完成しました。`App.js` で、ファイルの先頭付近に次の行を追加して  `Todo`  をインポートします。
 
@@ -235,7 +235,7 @@ ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
 
 この配列は、 App コンポーネントで `props.tasks` として利用できるようになりました。よかったら `console.log()` で確認してください。
 
-> **Note:** すべて大文字の（`ALL_CAPS` のような）定数名に JavaScript で特別な意味があるわけではありません。他の開発者に「このデータはここで定義された後は変更されません」と伝えるための慣習です。
+> **メモ:** すべて大文字の（`ALL_CAPS` のような）定数名に JavaScript で特別な意味があるわけではありません。他の開発者に「このデータはここで定義された後は変更されません」と伝えるための慣習です。
 
 ## 反復処理によるレンダリング
 
@@ -372,7 +372,7 @@ function FilterButton(props) {
 export default FilterButton;
 ```
 
-> **Note:** ここでは、最初に `<Todo />` コンポーネントで行ったのと同じ間違いをしていることに気づくかもしれません。つまり、それぞれのボタンは同じものになるということです。これでいいのです。このコンポーネントの修正は、後ほどで行います。（[フィルターボタンへ戻る](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons)）
+> **メモ:** ここでは、最初に `<Todo />` コンポーネントで行ったのと同じ間違いをしていることに気づくかもしれません。つまり、それぞれのボタンは同じものになるということです。これでいいのです。このコンポーネントの修正は、後ほどで行います。（[フィルターボタンへ戻る](/ja/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons)）
 
 ## すべてのコンポーネントのインポート
 

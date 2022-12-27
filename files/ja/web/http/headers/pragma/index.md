@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Pragma
 
 **`Pragma`** は HTTP/1.0 の一般ヘッダーで、実装固有のヘッダーであり、リクエスト - レスポンスチェーンに沿ってさまざまな影響を与えます。 `Cache-Control` HTTP/1.1 ヘッダーがまだ存在しない HTTP/1.0 キャッシュとの下位互換性のために使用されます。
 
-> **Note:**  `Pragma` は HTTP レスポンスには指定されていないため、リクエストの `Cache-Control` ヘッダーフィールドが省略されている場合は `Cache-Control: no-cache` と同じように動作しますが、一般的な HTTP/1.1 `Cache-Control` ヘッダーの代わりに信頼できるものではありません。`Pragma` は HTTP/1.0 クライアントとの下位互換性のためにのみ使用してください。
+> **メモ:** `Pragma` は HTTP レスポンスには指定されていないため、リクエストの `Cache-Control` ヘッダーフィールドが省略されている場合は `Cache-Control: no-cache` と同じように動作しますが、一般的な HTTP/1.1 `Cache-Control` ヘッダーの代わりに信頼できるものではありません。`Pragma` は HTTP/1.0 クライアントとの下位互換性のためにのみ使用してください。
 
 <table class="properties">
   <tbody>

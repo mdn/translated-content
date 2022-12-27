@@ -101,7 +101,7 @@ if (y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","395")}}
 
-> **Note:** 壁に当たるたびにボールの色をランダムに変えてみてください。
+> **メモ:** 壁に当たるたびにボールの色をランダムに変えてみてください。
 
 ## 次のステップ
 

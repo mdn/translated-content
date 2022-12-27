@@ -58,7 +58,7 @@ slug: Web/SVG/Tutorial/Gradients
 <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
 ```
 
-> **Note:** グラデーションに `xlink:href` 属性を用いることもできます。これを使用すると、あるグラデーションの属性や経由点を別のグラデーションに含めることができます。上記の例では、 Gradient2 のすべての経由点を再作成する必要はありません。
+> **メモ:** グラデーションに `xlink:href` 属性を用いることもできます。これを使用すると、あるグラデーションの属性や経由点を別のグラデーションに含めることができます。上記の例では、 Gradient2 のすべての経由点を再作成する必要はありません。
 >
 > ```html
 > <linearGradient id="Gradient1">

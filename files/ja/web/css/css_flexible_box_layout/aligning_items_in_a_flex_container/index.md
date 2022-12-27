@@ -99,7 +99,7 @@ slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 
 {{EmbedGHLiveSample("css-examples/flexbox/alignment/align-content-column.html", '100%', 860)}}
 
-> **Note:** `space-evenly` はフレックスボックス仕様書では定義されておらず、あとからボックス配置仕様書に追加されたものです。この値に対するブラウザーの対応は、フレックスボックス仕様書に定義されている他の値より遅れています。
+> **メモ:** `space-evenly` はフレックスボックス仕様書では定義されておらず、あとからボックス配置仕様書に追加されたものです。この値に対するブラウザーの対応は、フレックスボックス仕様書に定義されている他の値より遅れています。
 
 上述の値についての詳細とブラウザーの対応状況については [MDN の `justify-content` のページ](/ja/docs/Web/CSS/justify-content)を参照してください。
 

@@ -9,7 +9,7 @@ slug: Web/CSS/:user-invalid
 
 `:user-invalid` 擬似クラスは、ユーザーがフォームの送信を試みた後、そのフォーム要素を再び操作するまで、 {{CSSxRef(":invalid")}}, {{CSSxRef(":out-of-range")}}, {{CSSxRef(":required")}} で空欄の要素に一致します。
 
-> **Note:** この擬似クラスは標準外の `:-moz-ui-invalid` 擬似クラスと同じように動作します。
+> **メモ:** この擬似クラスは標準外の `:-moz-ui-invalid` 擬似クラスと同じように動作します。
 
 ## 構文
 

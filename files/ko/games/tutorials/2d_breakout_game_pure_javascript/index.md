@@ -1,13 +1,6 @@
 ---
 title: 순수한 자바스크립트를 이용한 2D 벽돌깨기 게임
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
-tags:
-  - 2D
-  - 게임
-  - 자바스크립트
-  - 캔버스
-  - 튜토리얼
-translation_of: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임
 ---
 {{GamesSidebar}}

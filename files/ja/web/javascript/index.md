@@ -13,7 +13,7 @@ JavaScript の標準仕様は [ECMAScript Language Specification](https://tc39.e
 
 JavaScript を[プログラミング言語 Java](https://ja.wikipedia.org/wiki/Java) と混同しないでください。 Java と JavaScript は両方ともアメリカやその他の国においてオラクルの商標または登録商標です。しかし、この 2 つのプログラミング言語は構文、セマンティック、利用形態が大きく異なります。
 
-> **Callout:** **フロントエンドのウェブ開発者を目指している方へ**
+> **注目:** **フロントエンドのウェブ開発者を目指している方へ**
 >
 > ゴールに向かって頑張るために必要な情報をまとめたコースをご用意しました。
 >

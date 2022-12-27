@@ -14,7 +14,7 @@ XMLHttpRequest.overrideMimeType(mimeType)
 ### Parameters
 
 - `mimeType`
-  - : 一个 {{domxref("DOMString")}} 指定具体的 MIME 类型去代替有服务器指定的 MIME 类型. 如果服务器没有指定类型，那么 `XMLHttpRequest` 将会默认为 `"text/xml"`.
+  - : 一个 {{domxref("DOMString")}} 指定具体的 MIME 类型去代替有服务器指定的 MIME 类型。如果服务器没有指定类型，那么 `XMLHttpRequest` 将会默认为 `"text/xml"`.
 
 ### Return value
 

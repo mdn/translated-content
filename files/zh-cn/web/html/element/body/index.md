@@ -127,7 +127,7 @@ slug: Web/HTML/Element/body
 - {{htmlattrdef("topmargin")}} {{Deprecated_Inline}}
   - : `body` 的上外边距。此方法不符合规范，请使用 _CSS 的 {{cssxref("margin-top")}} 属性替代。_
 - {{htmlattrdef("vlink")}} {{Deprecated_Inline}}
-  - : 访问过的超链接的文本颜色。 此方法不符合规范，请使用 _CSS {{cssxref("color")}} 属性和 {{cssxref(":visited")}} 伪类替代。_
+  - : 访问过的超链接的文本颜色。此方法不符合规范，请使用 _CSS {{cssxref("color")}} 属性和 {{cssxref(":visited")}} 伪类替代。_
 
 ## 例子
 

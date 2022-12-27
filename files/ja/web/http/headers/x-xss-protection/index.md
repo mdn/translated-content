@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/X-XSS-Protection
 
 HTTP の **`X-XSS-Protection`** レスポンスヘッダーは Internet Explorer, Chrome, Safari の機能で、反射型クロスサイトスクリプティング ({{Glossary("XSS")}}) 攻撃を検出したときに、ページの読み込みを停止するためのものです。強い {{HTTPHeader("Content-Security-Policy")}} をサイトが実装して、インライン JavaScript の使用を無効にしていれば (`'unsafe-inline'`)、現在のブラウザーではこれらの防御は大枠で不要なものですが、まだ {{Glossary("CSP")}} に対応していない古いウェブブラウザーを使用しているユーザーには防御になります。
 
-> **Note:** - Chrome は [XSS Auditor を削除](https://www.chromestatus.com/feature/5021976655560704)しました
+> **メモ:** - Chrome は [XSS Auditor を削除](https://www.chromestatus.com/feature/5021976655560704)しました
 >
 > - Firefox は対応しておらず、 [`X-XSS-Protection` を今後も実装しません](https://bugzilla.mozilla.org/show_bug.cgi?id=528661)
 > - Edge は [XSS filter を廃止しました](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)つまり、レガシーブラウザーをサポートする必要がない場合は、代わりに [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) を使用し `unsafe-inline` を許可しないことをお勧めします。

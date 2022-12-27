@@ -5,7 +5,7 @@ slug: Web/HTML/Element/object
 
 {{HTMLRef}}
 
-**`<object>`** は [HTML](/en-US/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。
+**`<object>`** は [HTML](/ja/docs/Web/HTML) の要素で、画像、内部の閲覧コンテキスト、プラグインによって扱われるリソースなどのように扱われる外部リソースを表します。
 
 {{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
 

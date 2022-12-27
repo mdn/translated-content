@@ -7,7 +7,7 @@ slug: Web/API/StorageEvent
 
 `StorageEvent` は、ストレージエリアが変化したときに window へ送信されます。
 
-> **Note:** {{Gecko("2.0")}} より前にもこのイベントは存在していましたが、仕様書に合致していませんでした。古いイベント形式は `nsIDOMStorageEventObsolete` インターフェイスで表します。
+> **メモ:** {{Gecko("2.0")}} より前にもこのイベントは存在していましたが、仕様書に合致していませんでした。古いイベント形式は `nsIDOMStorageEventObsolete` インターフェイスで表します。
 
 ## メソッドの概要
 

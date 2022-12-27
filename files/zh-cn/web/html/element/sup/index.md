@@ -40,7 +40,7 @@ slug: Web/HTML/Element/sup
 
 ## 用法注解
 
-- 这个元素应该只用于排版目的，也就是改变文本的位置会改变含义，例如在数学中（_f4_，也可以考虑使用 [MathML](/zh-CN/docs/MathML) 公式）或者在法语缩写中（ Mlle，Mme 或者 Cie）。
+- 这个元素应该只用于排版目的，也就是改变文本的位置会改变含义，例如在数学中（_f4_，也可以考虑使用 [MathML](/zh-CN/docs/MathML) 公式）或者在法语缩写中（Mlle，Mme 或者 Cie）。
 - 这个元素不能用于样式上的目的，比如产品名称 LaTeX 的样式，这时应该使用 [CSS](/zh-CN/docs/CSS)样式： {{ cssxref("vertical-align") }} 属性的 `super` 值能实现相同效果。
 
 ## 示例

@@ -1,56 +1,39 @@
 ---
 title: SubmitEvent()
 slug: Web/API/SubmitEvent/SubmitEvent
-page-type: web-api-constructor
-tags:
-  - API
-  - Allocate
-  - Constructor
-  - Event
-  - Forms
-  - HTML DOM
-  - Initialize
-  - Reference
-  - SubmitEvent
-  - submit
-browser-compat: api.SubmitEvent.SubmitEvent
+l10n:
+  sourceCommit: 16e398809d62247dbadc89ff4024a0ffa4781f0e
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`SubmitEvent()`** constructor creates and returns a new {{domxref("SubmitEvent")}} object,
-which is used to represent a {{domxref("HTMLFormElement.submit_event", "submit")}} event
-fired at an {{Glossary("HTML")}} [form](/en-US/docs/Learn/Forms).
+**`SubmitEvent()`** コンストラクターは、新しい {{domxref("SubmitEvent")}} オブジェクトを作成して返します。これは {{Glossary("HTML")}} [フォーム](/ja/docs/Learn/Forms)で発行された {{domxref("HTMLFormElement.submit_event", "submit")}} イベントを表現するために使用されます。
 
-## Syntax
+## 構文
 
 ```js-nolint
 new SubmitEvent(type)
 new SubmitEvent(type, options)
 ```
 
-### Parameters
+### 引数
 
 - `type`
-  - : A string with the name of the event.
-    It is case-sensitive and browsers always set it to `submit`.
+  - : イベントの名前を表す文字列。
+    大文字と小文字は区別され、ブラウザーは常に `submit` に設定します。
 - `options` {{optional_inline}}
-  - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
+  - : オブジェクトで、 _{{domxref("Event/Event", "Event()")}} で定義されているプロパティに加え_、以下のプロパティを持つことができます。
     - `submitter` {{optional_inline}}
-      - : An {{domxref('HTMLElement')}} object that is the submit button that triggered the form submission.
+      - : フォームを送信するきっかけとなった送信ボタンである {{domxref('HTMLElement')}} オブジェクトです。
 
-### Return value
+### 返値
 
-A {{domxref("SubmitEvent")}} object configured using the given inputs.
+指定された入力コントロールを使用して構成された {{domxref("SubmitEvent")}} オブジェクト。
 
-## Examples
+## 例
 
-This code snippet locates a form in the current document, and then an HTML
-{{HTMLElement("button")}} within the form with the class `submit` on it.
-Next, a new {{domxref("SubmitEvent")}} is created, configured with
-its {{domxref("SubmitEvent.submitter", "submitter")}} set to the identified button
-(or `null` if the button wasn't found). Then the event is sent to the form,
-telling the form that it's been submitted by the button.
+このコードでは、現在の文書内のフォームを探し、そのフォームに `submit` クラスを持つ HTML {{HTMLElement("button")}} 探します。
+次に、新しい {{domxref("SubmitEvent")}} を作成し、その {{domxref("SubmitEvent.submitter", "submitter")}} には、特定したボタン（またはボタンが見つからなかった場合は `null` ）を設定します。そして、イベントをフォームに送信し、ボタンによって送信されたことをフォームに指示します。
 
 ```js
 const form = document.querySelector("form");
@@ -60,13 +43,12 @@ const submitEvent = new SubmitEvent("submit", { submitter: formTrigger });
 form.dispatchEvent(submitEvent);
 ```
 
-This is a somewhat contrived example, as you can do nearly all of this much more
-easily, but this gives you deep control over the process that can be useful.
+この例はやや作為的なもので、ほぼすべての処理をもっと簡単に行うことができますが、これによって処理を深く制御することができ、それが有用となる場合があります。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}

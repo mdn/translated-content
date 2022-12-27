@@ -7,7 +7,7 @@ slug: Web/CSS/:-moz-only-whitespace
 
 {{Non-standard_Header}}
 
-> **Note:** {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} では、 {{CSSxRef(":empty")}} セレクターが `:-moz-only-whitespace` のように動作するよう変更されましたが、まだこれに対応しているブラウザーはありません。
+> **メモ:** {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} では、 {{CSSxRef(":empty")}} セレクターが `:-moz-only-whitespace` のように動作するよう変更されましたが、まだこれに対応しているブラウザーはありません。
 
 **`:-moz-only-whitespace`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{Glossary("whitespace", "ホワイトスペース")}}のみが入ったテキストノードのみを含む要素に一致します。（これには空のテキストノードや子ノードを持たない要素も含みます。）
 

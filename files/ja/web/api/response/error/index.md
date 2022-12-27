@@ -7,9 +7,9 @@ slug: Web/API/Response/error
 
 {{domxref("Response")}} インターフェイスの **`error()`** メソッドはネットワークエラーに関連付けられた新規の `Response` オブジェクトを返します。
 
-> **Note:** これは主に [ServiceWorkers](/ja/docs/Web/API/ServiceWorker_API) に関連しています。エラーメソッドは、必要に応じてエラーを返す為に使用されます。 エラーレスポンスの {{domxref("Response.type","type")}} は `error` に設定されています。
+> **メモ:** これは主に [ServiceWorkers](/ja/docs/Web/API/ServiceWorker_API) に関連しています。エラーメソッドは、必要に応じてエラーを返す為に使用されます。 エラーレスポンスの {{domxref("Response.type","type")}} は `error` に設定されています。
 
-> **Note:** "エラー" `Response` は実際にスクリプトに公開されません。 {{domxref("GlobalFetch.fetch","fetch()")}} に対するそのような応答は、 promise を拒否します。
+> **メモ:** "エラー" `Response` は実際にスクリプトに公開されません。 {{domxref("GlobalFetch.fetch","fetch()")}} に対するそのような応答は、 promise を拒否します。
 
 ## 構文
 

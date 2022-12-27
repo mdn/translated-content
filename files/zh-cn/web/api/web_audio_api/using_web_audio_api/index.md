@@ -48,7 +48,7 @@ const audioContext = new AudioContext();
 
 ## 加载声音
 
-现在，需要通过我们创建的音频上下文播放一些声音。Web Audio API 中有几种方法可以实现这一点。让我们通过一个简单的方法开始 — 因为我们有一个音箱，我们可能想播放一首完整的歌曲。 此外，为了便于访问，我们可以在在 DOM 中暴露该音轨。我们将使用 {{htmlelement("audio")}} 元素在页面上暴露这首歌曲。
+现在，需要通过我们创建的音频上下文播放一些声音。Web Audio API 中有几种方法可以实现这一点。让我们通过一个简单的方法开始 — 因为我们有一个音箱，我们可能想播放一首完整的歌曲。此外，为了便于访问，我们可以在在 DOM 中暴露该音轨。我们将使用 {{htmlelement("audio")}} 元素在页面上暴露这首歌曲。
 
 ```js
 <audio src="myCoolTrack.mp3" type="audio/mpeg"></audio>
@@ -187,7 +187,7 @@ volumeControl.addEventListener('input', function() {
 
 如果用户拥有立体声功能，可用 {{domxref("StereoPannerNode")}} 节点改变左右扬声器的平衡。
 
-> **备注：** `StereoPannerNode` 用于你只想从左到右进行立体声平移的简单情况。还有一个 {{domxref("PannerNode")}}， 它允许对 3D 空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和 3D 应用程序中生成小鸟飞过头顶或者来自用户身后的声音。
+> **备注：** `StereoPannerNode` 用于你只想从左到右进行立体声平移的简单情况。还有一个 {{domxref("PannerNode")}}，它允许对 3D 空间或声音空间化进行大量控制以创建更复杂的效果。这在游戏和 3D 应用程序中生成小鸟飞过头顶或者来自用户身后的声音。
 
 为了使其可视化，我们将使我们的音频图如下：
 
@@ -240,7 +240,7 @@ track.connect(gainNode).connect(panner).connect(audioContext.destination);
 
 ![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](voice-change-o-matic.png)
 
-另一个专门用于演示 Web Audio API 的例子是 [Violent Theremin](http://mdn.github.io/violent-theremin/)， 一个允许你通过移动鼠标来改变它的音调音量的简单的应用程序。它还提供了一个迷幻的灯光秀（[查看 Violent Theremin 源代码](https://github.com/mdn/violent-theremin)）
+另一个专门用于演示 Web Audio API 的例子是 [Violent Theremin](http://mdn.github.io/violent-theremin/)，一个允许你通过移动鼠标来改变它的音调音量的简单的应用程序。它还提供了一个迷幻的灯光秀（[查看 Violent Theremin 源代码](https://github.com/mdn/violent-theremin)）
 
 ![A page full of rainbow colours, with two buttons labeled Clear screen and mute. ](violent-theremin.png)
 
@@ -289,7 +289,7 @@ var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 现在我们有了 AudioContext，可以用这个来做很多事。第一件我们需要做的事是玩音乐。音频可以来自于多样的地方：
 
 - 通过 JavaScript 直接生成一个音频节点比如 oscillator. 一个 {{ domxref("OscillatorNode") }}是利用{{ domxref("AudioContext.createOscillator") }} 方法来构建。
-- 从原 PCM 数据构建: AudioContext 有解密被支持的音频格式的多种方法。 看 {{ domxref("AudioContext.createBuffer()") }}, {{ domxref("AudioContext.createBufferSource()") }}, 以及 {{ domxref("AudioContext.decodeAudioData()") }}.
+- 从原 PCM 数据构建：AudioContext 有解密被支持的音频格式的多种方法。看 {{ domxref("AudioContext.createBuffer()") }}, {{ domxref("AudioContext.createBufferSource()") }}, 以及 {{ domxref("AudioContext.decodeAudioData()") }}.
 - 来自于 HTML 音频元素例如 {{HTMLElement("video")}} 或者{{HTMLElement("audio")}}: 可以看 {{ domxref("AudioContext.createMediaElementSource()") }}.
 - 直接来自于 [WebRTC](/zh-CN/docs/WebRTC)，{{domxref("MediaStream")}} 例如来自于摄像头或麦克风。可以看{{ domxref("AudioContext.createMediaStreamSource()") }}.
 

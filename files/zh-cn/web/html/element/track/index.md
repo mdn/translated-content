@@ -74,7 +74,7 @@ slug: Web/HTML/Element/track
 
     - `metadata`
 
-      - 脚本使用的 track。 对用户不可见。
+      - 脚本使用的 track。对用户不可见。
 
 - {{htmlattrdef("label")}}
   - : 当列出可用的 text tracks 时，给浏览器使用的 text track 的标题，这种标题是用户可读的。

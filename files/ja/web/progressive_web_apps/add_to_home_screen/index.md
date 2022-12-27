@@ -33,7 +33,7 @@ URL バーの横にあるメニューを開きます。
 
 ![アプリをインストールするオプション付きメニュー](menu_install_app.png)
 
-> **Note:** 古いバージョンのブラウザーでは、「ホーム」アイコンの中にプラス (+) アイコンが表示される場合があります。
+> **メモ:** 古いバージョンのブラウザーでは、「ホーム」アイコンの中にプラス (+) アイコンが表示される場合があります。
 > これは同じことを行います。
 >
 > ![ホーム画面に追加するアイコン（古いブラウザーで使用するもの）](add-to-home-screen-icon.png)
@@ -45,7 +45,7 @@ URL バーの横にあるメニューを開きます。
 
 ![Pixelランチャーでのアプリのインストール](pixel_launcher_add_app.png)
 
-> **Note:** Chrome のインストールバナーについては、[自分自身でウェブインストール体験を指定された方法](https://web.dev/customize-install/)の記事から、いろいろと調べることができます。
+> **メモ:** Chrome のインストールバナーについては、[自分自身でウェブインストール体験を指定された方法](https://web.dev/customize-install/)の記事から、いろいろと調べることができます。
 
 どのブラウザーで使用しているかにかかわらず、ホーム画面に追加することを選ぶと、ネイティブアプリと同じように、短いタイトルとともにアプリが表示されるのがわかります。
 
@@ -66,7 +66,7 @@ URL バーの横にあるメニューを開きます。
 
 マニフェストファイルは JSON 形式で書かれ、ウェブアプリ内のどこかに設置される必要があります (置き場所はルートディレクトリにするのがよいです)。またファイルの拡張子は `.webmanifest` にします。ここでは `manifest.webmanifest` といファイル名にしました。このファイルにはウェブアプリについての情報やどのような挙動をするのかについての設定が記されています。
 
-> **Note:** 拡張子 `.webmanifest` はドキュメントの中の [Media type registration](https://w3c.github.io/manifest/#media-type-registration) の節の中で定義されています。ただ、多くの場合ブラウザーは他の適切な拡張し、たとえば `.json` に対応するでしょう。
+> **メモ:** 拡張子`.webmanifest` は W3C の[WebAppManifest についてのドキュメント](/ja/docs/)の中の [Media type registration](https://w3c.github.io/manifest/#media-type-registration) の節の中で定義されています。ただ、多くの場合ブラウザーは拡張子 `.json` マニフェストファイルをサポートしています。
 
 A2HS に必要なフィールドは次の通りです。
 
@@ -124,7 +124,7 @@ A2HS に対応しているブラウザーは、これによってマニフェス
 
 本来はモバイル OS での使い勝手を向上させるためのものですが、PWA をデスクトッププラットフォームにもインストールする動きが出てきてい ます。
 
-> **Note:** この説明の時点では、以下の機能は新しいバージョンのChromeでのみ対応しています。Windowsでは既定で、 macOS では `#enable-desktop-pwas` フラグの後ろで対応しています。
+> **メモ:** この説明の時点では、以下の機能は新しいバージョンのChromeでのみ対応しています。Windowsでは既定で、 macOS では `#enable-desktop-pwas` フラグの後ろで対応しています。
 
 ### インストールボタンの追加
 
@@ -207,7 +207,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
 
 ユーザーが \[キャンセル] を選択すると、アプリの状態はボタンがクリックされる前の状態に戻ります。
 
-> **Note:** この章のコードは多くを [How to provide your own in-app install experience](https://web.dev/customize-install/) (Pete LePage) から引用しました。
+> **メモ:** この章のコードは多くを [How to provide your own in-app install experience](https://web.dev/customize-install/) (Pete LePage) から引用しました。
 
 ## 関連情報
 

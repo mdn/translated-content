@@ -1,46 +1,35 @@
 ---
 title: SubmitEvent
 slug: Web/API/SubmitEvent
-page-type: web-api-interface
-tags:
-  - API
-  - Form Submission
-  - Forms
-  - HTML DOM
-  - Interface
-  - Reference
-  - SubmitEvent
-  - Web
-  - events
-  - submit
-browser-compat: api.SubmitEvent
+l10n:
+  sourceCommit: e0e09b1df51489867f2e74c18586d168ba5e00d1
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`SubmitEvent`** interface defines the object used to represent an {{Glossary("HTML")}} form's {{domxref("HTMLFormElement.submit_event", "submit")}} event. This event is fired at the {{HTMLElement("form")}} when the form's submit action is invoked.
+**`SubmitEvent`** インターフェイスは、 {{Glossary("HTML")}} フォームの {{domxref("HTMLFormElement.submit_event", "submit")}} イベントを表現するために使用されるオブジェクトを定義します。このイベントは、フォームの送信操作が呼び出されたときに {{HTMLElement("form")}} で発行されます。
 
 {{InheritanceDiagram}}
 
-## Constructor
+## コンストラクター
 
 - {{domxref("SubmitEvent.SubmitEvent", "SubmitEvent()")}}
-  - : Creates and returns a new `SubmitEvent` object whose {{domxref("Event.type", "type")}} and other options are configured as specified. Note that currently the only valid `type` for a `SubmitEvent` is `submit`.
+  - : {{domxref("Event.type", "type")}} と他のオプションが指定された `SubmitEvent` オブジェクトを新しく作成して返します。現在、`SubmitEvent` の有効な `type` は `submit` だけであることに注意してください。
 
-## Properties
+## プロパティ
 
-_In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
+_以下のプロパティに加えて、このインターフェイスには親インターフェイスである {{domxref("Event")}} から継承したプロパティがあります。_
 
 - {{domxref("SubmitEvent.submitter", "submitter")}} {{ReadOnlyInline}}
-  - : An {{domxref("HTMLElement")}} object which identifies the button or other element which was invoked to trigger the form being submitted.
+  - : フォーム送信のきっかけとなったボタンやその他の要素を特定する {{domxref("HTMLElement")}} オブジェクトです。
 
-## Methods
+## メソッド
 
-_While `SubmitEvent` offers no methods of its own, it inherits any specified by its parent interface, {{domxref("Event")}}._
+_`SubmitEvent` には自身のメソッドがありませんが、親インターフェイスである {{domxref("Event")}} から継承したメソッドがあります。_
 
-## Examples
+## 例
 
-In this example, a shopping cart may have an assortment of different submit buttons depending on factors such as the user's settings, the shop's settings, and any minimum or maximum shopping card totals established by the payment processors. Each of the submit elements' {{domxref("Element.id", "id")}} is used to identify which payment processor the button corresponds to.
+この例では、ユーザーの設定、店舗の設定、決済業者によって確立された商品券の合計額の最小値または最大値等の要因に応じて、ショッピングカートに様々な組み合わせの送信ボタンが表示される可能性があります。それぞれの送信要素の {{domxref("Element.id", "id")}} で、ボタンに対応する決済業者を識別します。
 
 ```js
 let form = document.querySelector("form");
@@ -51,17 +40,17 @@ form.addEventListener("submit", (event) => {
   if (handler) {
     processOrder(form, handler);
   } else {
-    showAlertMessage("An unknown or unaccepted payment type was selected. Please try again.", "OK");
+    showAlertMessage("不明または未対応の支払い方法が選択されました。やり直してください。", "OK");
   }
 });
 ```
 
-The handler ID is obtained by using the `submit` event's {{domxref("SubmitEvent.submitter", "submitter")}} property to get the submit button, from which we then get the ID. With that in hand, we can call a `processOrder()` function to handle the order, passing along the form and the handler ID.
+ハンドラー ID は、 `submit` イベントの {{domxref("SubmitEvent.submitter", "submitter")}} プロパティを使用して送信ボタンを取得し、そこから ID を取得します。これで、 `processOrder()` 関数を呼び出して、フォームとハンドラー ID を渡しながら注文を処理することができます。
 
-## Specifications
+## 仕様書
 
 {{Specifications}}
 
-## Browser compatibility
+## ブラウザーの互換性
 
 {{Compat}}

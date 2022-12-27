@@ -8,7 +8,7 @@ original_slug: MDN/Writing_guidelines/Page_structures/Code_examples
 
 MDN では、ウェブプラットフォームの機能の使い方を示すために、ページ中に数多くのコードサンプルが挿入されています。この記事では、ページにコードサンプルを追加するためのさまざまな仕組みと、どのような場合にどのような仕組みを使うべきかについて説明します。
 
-> **Note:** もし、コードを入れる様々な方法ではなく、 MDN の記事に現れるコードのスタイルやゴミ取りについてアドバイスが欲しいなら、[コードスタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)を参照してください。
+> **メモ:** もし、コードを入れる様々な方法ではなく、 MDN の記事に現れるコードのスタイルやゴミ取りについてアドバイスが欲しいなら、[コードスタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)を参照してください。
 
 ## 利用できるコードサンプルの種類
 

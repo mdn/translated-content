@@ -40,4 +40,4 @@ window.location.replace('https://developer.mozilla.org/en-US/docs/Web/API/Locati
 ## 参见
 
 - {{domxref("Location")}} 对象。
-- 类似方法: {{domxref("Location.assign()")}} 和 {{domxref("Location.reload()")}}。
+- 类似方法：{{domxref("Location.assign()")}} 和 {{domxref("Location.reload()")}}。

@@ -45,7 +45,7 @@ _`Location` 没有继承任何方法_，但实现了来自{{domxref("URLUtils")}
 - {{domxref("Location.replace()")}}
   - : 用给定的 URL 替换掉当前的资源。与 `assign()` 方法不同的是用 `replace()`替换的新页面不会被保存在会话的历史 {{domxref("History")}}中，这意味着用户将不能用后退按钮转到该页面。
 - {{domxref("Location.toString()")}}
-  - : 返回一个{{domxref("DOMString")}}，包含整个 URL。 它和读取{{domxref("URLUtils.href")}}的效果相同。但是用它是不能够修改 Location 的值的。
+  - : 返回一个{{domxref("DOMString")}}，包含整个 URL。它和读取{{domxref("URLUtils.href")}}的效果相同。但是用它是不能够修改 Location 的值的。
 
 ## 例子
 

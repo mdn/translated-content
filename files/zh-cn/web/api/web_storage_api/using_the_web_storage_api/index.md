@@ -7,7 +7,7 @@ Web Storage API 提供了存储机制，通过该机制，浏览器可以安全�
 
 ## 基本概念
 
-存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。您可以像访问对象一样访问这些值，或者使用 {{domxref("Storage.getItem()")}} 和 {{domxref("Storage.setItem()")}} 方法 。这三行都设置了（相同的）colorSetting 条目：
+存储对象是简单的键值存储，类似于对象，但是它们在页面加载时保持完整。键和值始终是字符串（请注意，与对象一样，整数键将自动转换为字符串）。您可以像访问对象一样访问这些值，或者使用 {{domxref("Storage.getItem()")}} 和 {{domxref("Storage.setItem()")}} 方法。这三行都设置了（相同的）colorSetting 条目：
 
 ```
 localStorage.colorSetting = '#a4509b';

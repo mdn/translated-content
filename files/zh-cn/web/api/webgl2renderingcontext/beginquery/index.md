@@ -17,10 +17,10 @@ void gl.beginQuery(target, query);
 
 - target
 
-  - : {{domxref("GLenum")}} 指定查询个的 target， 可能的值有：
+  - : {{domxref("GLenum")}} 指定查询个的 target，可能的值有：
 
     - `gl.ANY_SAMPLES_PASSED`: Specifies an occlusion query: these queries detect whether an object is visible (whether the scoped drawing commands pass the depth test and if so, how many samples pass).
-    - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`: 和以上一样， 但是是一个不精确和更快的版本。
+    - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`: 和以上一样，但是是一个不精确和更快的版本。
     - `gl.TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN`: Number of primitives that are written to transform feedback buffers.
 
 - `query`

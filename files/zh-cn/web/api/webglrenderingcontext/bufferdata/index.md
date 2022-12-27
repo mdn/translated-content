@@ -39,7 +39,7 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 - size
   - : {{domxref("GLsizeiptr")}} 设定 Buffer 对象的数据存储区大小。
 - srcData {{optional_inline}}
-  - : 一个{{jsxref("ArrayBuffer")}}，{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("ArrayBufferView")}} 类型的数组对象，将被复制到 Buffer 的数据存储区。 如果为`null`，数据存储区仍会被创建，但是不会进行初始化和定义。
+  - : 一个{{jsxref("ArrayBuffer")}}，{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("ArrayBufferView")}} 类型的数组对象，将被复制到 Buffer 的数据存储区。如果为`null`，数据存储区仍会被创建，但是不会进行初始化和定义。
 - usage
 
   - : {{domxref("GLenum")}} 指定数据存储区的使用方法。可取以下值：

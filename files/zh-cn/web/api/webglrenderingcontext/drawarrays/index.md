@@ -28,7 +28,7 @@ void gl.drawArrays(mode, first, count);
     - `gl.TRIANGLES`: 绘制一系列三角形。每三个点作为顶点。
 
 - first
-  - : {{domxref("GLint")}} 类型 ，指定从哪个点开始绘制。
+  - : {{domxref("GLint")}} 类型，指定从哪个点开始绘制。
 - count
   - : {{domxref("GLsizei")}} 类型，指定绘制需要使用到多少个点。
 

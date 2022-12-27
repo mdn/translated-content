@@ -1,13 +1,6 @@
 ---
 title: 웹 게임 개발에 대해
 slug: Games/Introduction
-tags:
-  - 가이드
-  - 게임
-  - 모바일
-  - 모바일 게임
-  - 파이어폭스OS
-translation_of: Games/Introduction
 ---
 {{GamesSidebar}}
 

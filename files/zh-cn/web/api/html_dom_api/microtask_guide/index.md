@@ -5,7 +5,7 @@ slug: Web/API/HTML_DOM_API/Microtask_guide
 
 {{APIRef("HTML DOM")}}
 
-一个 **微任务（microtask）**就是一个简短的函数，当创建该函数的函数执行之后，_并且_ 只有当 Javascript 调用栈为空，而控制权尚未返还给被 {{Glossary("user agent")}} 用来驱动脚本执行环境的事件循环之前，该微任务才会被执行。 事件循环既可能是浏览器的主事件循环也可能是被一个 [web worker](/zh-CN/docs/Web/API/Web_Workers_API) 所驱动的事件循环。这使得给定的函数在没有其他脚本执行干扰的情况下运行，也保证了微任务能在用户代理有机会对该微任务带来的行为做出反应之前运行。
+一个 **微任务（microtask）**就是一个简短的函数，当创建该函数的函数执行之后，_并且_ 只有当 Javascript 调用栈为空，而控制权尚未返还给被 {{Glossary("user agent")}} 用来驱动脚本执行环境的事件循环之前，该微任务才会被执行。事件循环既可能是浏览器的主事件循环也可能是被一个 [web worker](/zh-CN/docs/Web/API/Web_Workers_API) 所驱动的事件循环。这使得给定的函数在没有其他脚本执行干扰的情况下运行，也保证了微任务能在用户代理有机会对该微任务带来的行为做出反应之前运行。
 
 JavaScript 中的 [promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 和 [Mutation Observer API](/zh-CN/docs/Web/API/Mutation_Observer_API) 都使用微任务队列去运行它们的回调函数，但当能够推迟工作直到当前事件循环过程完结时，也是可以执行微任务的时机。为了允许第三方库、框架、polyfills 能使用微任务，{{domxref("Window")}} 暴露了 {{domxref("queueMicrotask()")}} 方法，而 {{domxref("Worker")}} 接口则通过 `WindowOrWorkerGlobalScope` mixin 提供了同名的 queueMicrotask() 方法。
 
@@ -33,7 +33,7 @@ JavaScript 中的 [promises](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 
 首先，每当一个任务存在，事件循环都会检查该任务是否正把控制权交给其他 JavaScript 代码。如若不然，事件循环就会运行微任务队列中的所有微任务。接下来微任务循环会在事件循环的每次迭代中被处理多次，包括处理完事件和其他回调之后。
 
-其次，如果一个微任务通过调用 {{domxref("queueMicrotask()")}}, 向队列中加入了更多的微任务，则那些新加入的微任务 _会早于下一个任务运行_ 。这是因为事件循环会持续调用微任务直至队列中没有留存的，即使是在有更多微任务持续被加入的情况下。
+其次，如果一个微任务通过调用 {{domxref("queueMicrotask()")}}, 向队列中加入了更多的微任务，则那些新加入的微任务 _会早于下一个任务运行_。这是因为事件循环会持续调用微任务直至队列中没有留存的，即使是在有更多微任务持续被加入的情况下。
 
 > **警告：** 因为微任务自身可以入列更多的微任务，且事件循环会持续处理微任务直至队列为空，那么就存在一种使得事件循环无尽处理微任务的真实风险。如何处理递归增加微任务是要谨慎而行的。
 

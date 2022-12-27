@@ -9,7 +9,7 @@ slug: Web/API/Push_API
 
 ## プッシュ通知の概念と使い方
 
-> **Warning:** PushManager へのサブスクリプションを実装する場合、アプリで CSRF/XSRF 問題を起こさないように保護することが非常に重要です。詳しくは以下の記事を参照してください。
+> **警告:** PushManager へのサブスクリプションを実装する場合、アプリで CSRF/XSRF 問題を起こさないように保護することが非常に重要です。詳しくは以下の記事を参照してください。
 >
 > - [Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 > - [Preventing CSRF and XSRF Attacks](https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/)

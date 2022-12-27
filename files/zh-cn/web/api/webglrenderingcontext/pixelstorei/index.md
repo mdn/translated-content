@@ -16,7 +16,7 @@ void gl.pixelStorei(pname, param);
 ### 参数
 
 - pname
-  - : {{domxref("Glenum")}} 类型 ，表示处理的方式。关于该参数可选值，请见下面表格。
+  - : {{domxref("Glenum")}} 类型，表示处理的方式。关于该参数可选值，请见下面表格。
 - param
   - : {{domxref("GLint")}} 类型，表示 pname 处理方式的参数。关于该参数可选值，请见下面表格。
 

@@ -18,7 +18,7 @@ slug: Web/Accessibility/ARIA/Roles/Complementary_role
 
 補足 (`complementary`) ロールは[ランドマークロール](/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles)です。 ランドマーク (landmark) は、支援技術によって使用され、文書の大きなセクションを迅速に識別してナビゲートすることができます。 補足 (`complementary`) ランドマークロールを持つコンテナー内にリストされたコンテンツは、文書のメインのコンテンツから分離されている場合でも意味をなすべきです。
 
-> **Note:** {{htmlelement("aside")}} 要素を使用すると、自動的にセクションが補足 (`complementary`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきです。
+> **メモ:** {{htmlelement("aside")}} 要素を使用すると、自動的にセクションが補足 (`complementary`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきです。
 
 ## 例
 

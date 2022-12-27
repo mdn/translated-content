@@ -29,7 +29,7 @@ entry.startTime;
 
 {{domxref("PerformanceEntry","パフォーマンスエントリ")}}が作成されたときの最初のタイムスタンプを表す {{domxref("DOMHighResTimeStamp")}}。
 
-> **Note:** パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが{{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは{{domxref("PerformanceEntry.fetchStart")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
+> **メモ:** パフォーマンスエントリが "`resource`" の {{domxref("PerformanceEntry.entryType","entryType")}} を持つ場合 (つまり、エントリが{{domxref("PerformanceResourceTiming")}} オブジェクトである場合)、このプロパティは{{domxref("PerformanceEntry.fetchStart")}} {{domxref("DOMHighResTimeStamp","タイムスタンプ")}}を返します。
 
 ## 例
 

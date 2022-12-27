@@ -66,11 +66,11 @@ l10n:
     さらに、 _"Initialize this repository with a README"_ ボックスをチェックし、 _Create repository_ をクリックしてください。![](github-create-repo.png)
 4. ウェブサイトのフォルダーをリポジトリーの中にドラッグアンドドロップしたら、 _Commit changes_ をクリックしましょう。
 
-    > **Note:** フォルダーの中に `index.html` ファイルがあるかを確認しましょう。
+    > **メモ:** フォルダーの中に `index.html` ファイルがあるかを確認しましょう。
 
 5. では、ウェブサイトをオンライン上で見るために、ブラウザーから username.github.io に移動しましょう。例えば、ユーザー名が chrisdavidmills なら、[chrisdavidmills.github.io](https://chrisdavidmills.github.io/) に移動しましょう。
 
-    > **Note:** ウェブサイトに使えるようになるには少し時間がかかるかもしれません。ウェブサイトがすぐに表示されない場合は、少し待ってみてください。そしてもう一度試してみましょう。
+    > **メモ:** ウェブサイトに使えるようになるには少し時間がかかるかもしれません。ウェブサイトがすぐに表示されない場合は、少し待ってみてください。そしてもう一度試してみましょう。
 
 もっと詳しく知りたい人は [GitHub Pages Help](https://docs.github.com/en/pages/getting-started-with-github-pages) を見てください。
 

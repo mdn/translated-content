@@ -9,7 +9,7 @@ slug: Web/CSS/list-style
 
 {{EmbedInteractiveExample("pages/css/list-style.html")}}
 
-> **Note:** このプロパティはリスト項目、すなわち `{{cssxref("display")}}: list-item;` の要素に適用されます。[既定では](https://www.w3.org/TR/html5/rendering.html#lists) {{HTMLElement("li")}} 要素が含まれます。このプロパティは継承されるので、親要素 (ふつうは {{HTMLElement("ol")}} または {{HTMLElement("ul")}}) に設定すれば、同じリストスタイルを内部のすべての項目に適用できます。
+> **メモ:** このプロパティはリスト項目、すなわち `{{cssxref("display")}}: list-item;` の要素に適用されます。[既定では](https://www.w3.org/TR/html5/rendering.html#lists) {{HTMLElement("li")}} 要素が含まれます。このプロパティは継承されるので、親要素 (ふつうは {{HTMLElement("ol")}} または {{HTMLElement("ul")}}) に設定すれば、同じリストスタイルを内部のすべての項目に適用できます。
 
 ## 構成要素のプロパティ
 

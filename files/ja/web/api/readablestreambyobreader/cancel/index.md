@@ -7,7 +7,7 @@ slug: Web/API/ReadableStreamBYOBReader/cancel
 
 {{domxref("ReadableStreamBYOBReader")}} インターフェイスの **`cancel()`** メソッドはストリームをキャンセルし、コンシューマーがストリームに興味を失ったことを通知します。 提供された `reason` パラメーターは、基になるソースに与えられ、使用する場合もしない場合もあります。
 
-> **Note:** **注**：リーダーがアクティブな場合、`cancel()` メソッドは、関連するストリームの場合（{{domxref("ReadableStream.cancel()")}}）と同じように振る舞います。
+> **メモ:** リーダーがアクティブな場合、`cancel()` メソッドは、関連するストリームの場合（{{domxref("ReadableStream.cancel()")}}）と同じように振る舞います。
 
 ## 構文
 

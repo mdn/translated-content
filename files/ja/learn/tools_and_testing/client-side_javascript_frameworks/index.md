@@ -37,7 +37,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## React チュートリアル
 
-> **Note:** この React チュートリアルは React/ReactDOM 16.13.1 と create-react-app 3.4.1 で、2020 年 5 月に動作確認を行いました。
+> **メモ:** この React チュートリアルは React/ReactDOM 16.13.1 と create-react-app 3.4.1 で、2020 年 5 月に動作確認を行いました。
 >
 > もし、あなたのコードとサンプルのバージョンとを確認する必要があれば、[todo-react repository](https://github.com/mdn/todo-react) で最新版を見ることができます。実行中のライブバージョンについては、[https://mdn.github.io/todo-react-build/](https://mdn.github.io/todo-react-build/) から確認ができます。
 
@@ -58,7 +58,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Ember チュートリアル
 
-> **Note:** この Ember チュートリアルは Ember/Ember CLI version 3.18.0 で、2020 年 5 月に動作確認を行いました。
+> **メモ:** この Ember チュートリアルは Ember/Ember CLI version 3.18.0 で、2020 年 5 月に動作確認を行いました。
 >
 > もし、あなたのコードとサンプルのバージョンとを確認する必要があれば、[ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) で最新版を見ることができます。実行中のライブバージョンについては [https://nullvoxpopuli.github.io/ember-todomvc-tutorial/](https://nullvoxpopuli.github.io/ember-todomvc-tutorial/) から確認ができます(ただしチュートリアルで取り扱っていない機能も含まれています)。
 
@@ -77,7 +77,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Vue チュートリアル
 
-> **Note:** この Vue チュートリアルは Vue 2.6.11 で、2020 年 5 月に動作確認を行いました。
+> **メモ:** この Vue チュートリアルは Vue 2.6.11 で、2020 年 5 月に動作確認を行いました。
 >
 > もし、あなたのコードとサンプルのバージョンとを確認する必要があれば、 [todo-vue repository](https://github.com/mdn/todo-vue) で最新版を見ることができます。実行中のライブバージョンについては [https://mdn.github.io/todo-vue/dist/](https://mdn.github.io/todo-vue/dist/) から確認ができます。
 
@@ -102,7 +102,7 @@ JavaScript フレームワークは、最新のフロントエンドウェブ開
 
 ## Angular チュートリアル
 
-> **Note:** この Angular チュートリアルは Angular CLI (NG) 13.3.4 で、 2022 年 5 月に動作確認を行いました。
+> **メモ:** この Angular チュートリアルは Angular CLI (NG) 13.3.4 で、 2022 年 5 月に動作確認を行いました。
 >
 > もし、コードをこのバージョンと照合する必要がある場合は、サンプルの Angular アプリコードの完成版を [angular-to-do-example](https://github.com/kapunahelewong/angular-to-do-example/tree/main/src) で確認ができます。
 

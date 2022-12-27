@@ -13,7 +13,7 @@ slug: Web/CSS/display-listitem
 
 `list-item` は {{CSSxRef("&lt;display-outside&gt;")}} キーワードのいずれかと、 {{CSSxRef("&lt;display-inside&gt;")}} の `flow` または `flow-root` キーワードと組み合わせることもできます。
 
-> **Note:** 二つの値の構文に対応しているブラウザーでは、内部表示種別がないと既定で `flow` になります。外部表示種別が指定されないと、基本ボックスは外部表示種別が `block` になります。
+> **メモ:** 二つの値の構文に対応しているブラウザーでは、内部表示種別がないと既定で `flow` になります。外部表示種別が指定されないと、基本ボックスは外部表示種別が `block` になります。
 
 <h2 id="Examples">例</h2>
 

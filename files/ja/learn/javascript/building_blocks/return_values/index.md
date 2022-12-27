@@ -144,7 +144,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 4. コードを保存して、それをブラウザーで表示してみましょう。
 
-> **Note:** もしサンプルがうまく動作しない場合は、[GitHub 上の完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)と比較などしてみてください（[実際に動かして確認もできます](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)）。またはお問い合わせください。
+> **メモ:** もしサンプルがうまく動作しない場合は、[GitHub 上の完成版](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-library-finished.html)と比較などしてみてください（[実際に動かして確認もできます](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)）。またはお問い合わせください。
 
 ## あなたの番です!
 

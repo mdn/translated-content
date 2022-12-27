@@ -78,7 +78,7 @@ if (y + dy < ballRadius) {
 
 {{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/L61c9y50/","","395")}}
 
-> **Note:** ボールがパドルに当たったときに速く動くようにしましょう。
+> **メモ:** ボールがパドルに当たったときに速く動くようにしましょう。
 
 ## 次のステップ
 

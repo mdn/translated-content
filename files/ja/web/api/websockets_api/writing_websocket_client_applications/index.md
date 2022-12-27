@@ -9,7 +9,7 @@ WebSocket クライアントアプリケーションは [WebSocket API](/ja/docs
 
 {{AvailableInWorkers}}
 
-> **Note:** この記事のサンプルスニペットは WebSocket チャットクライアント/サーバーサンプルから取得したものです。[コードはこちらからご覧ください](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
+> **メモ:** この記事のサンプルスニペットは WebSocket チャットクライアント/サーバーサンプルから取得したものです。[コードはこちらからご覧ください](https://github.com/mdn/samples-server/tree/master/s/websocket-chat)。
 
 ## WebSocket オブジェクトの作成
 

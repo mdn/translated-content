@@ -49,7 +49,7 @@ html,body,svg { height:100% }
 
 ## altGlyph
 
-> **Warning:** As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.
+> **警告:** As of SVG2 {{SVGElement('altGlyph')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('altGlyph')}}, `fill` is a presentation attribute that defines the color of the glyph.
 
@@ -58,7 +58,7 @@ For {{SVGElement('altGlyph')}}, `fill` is a presentation attribute that defines 
 | Default value | `black`                                             |
 | Animatable    | Yes                                                 |
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## animate
 
@@ -71,7 +71,7 @@ For {{SVGElement('animate')}}, `fill` defines the final state of the animation.
 
 ## animateColor
 
-> **Warning:** As of SVG Animation 2 {{SVGElement('animateColor')}} is deprecated and shouldn't be used. Use {{SVGElement('animate')}} instead.
+> **警告:** As of SVG Animation 2 {{SVGElement('animateColor')}} is deprecated and shouldn't be used. Use {{SVGElement('animate')}} instead.
 
 For {{SVGElement('animateColor')}}, `fill` defines the final state of the animation.
 
@@ -107,7 +107,7 @@ For {{SVGElement('circle')}}, `fill` is a presentation attribute that defines th
 | Default value | `black`                                             |
 | Animatable    | Yes                                                 |
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## ellipse
 
@@ -118,7 +118,7 @@ For {{SVGElement('ellipse')}}, `fill` is a presentation attribute that defines t
 | Default value | `black`                                             |
 | Animatable    | Yes                                                 |
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## path
 
@@ -129,7 +129,7 @@ For {{SVGElement('path')}}, `fill` is a presentation attribute that defines the 
 | Default value | `black`                                             |
 | Animatable    | Yes                                                 |
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## polygon
 
@@ -140,7 +140,7 @@ For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines t
 | Default value | `black`                                             |
 | Animatable    | Yes                                                 |
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## polyline
 
@@ -151,7 +151,7 @@ For {{SVGElement('polyline')}}, `fill` is a presentation attribute that defines 
 | Default value | `black`                                             |
 | Animatable    | Yes                                                 |
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## rect
 
@@ -162,7 +162,7 @@ For {{SVGElement('rect')}}, `fill` is a presentation attribute that defines the 
 | Default value | `black`                                             |
 | Animatable    | Yes                                                 |
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## set
 
@@ -182,7 +182,7 @@ For {{SVGElement('text')}}, `fill` is a presentation attribute that defines what
 | Default value | `black`                                             |
 | Animatable    | Yes                                                 |
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## textPath
 
@@ -193,11 +193,11 @@ For {{SVGElement('textPath')}}, `fill` is a presentation attribute that defines 
 | Default value | `black`                                             |
 | Animatable    | Yes                                                 |
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## tref
 
-> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
+> **警告:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('tref')}}, `fill` is a presentation attribute that defines the color of the text.
 
@@ -206,7 +206,7 @@ For {{SVGElement('tref')}}, `fill` is a presentation attribute that defines the 
 | Default value | `black`                                             |
 | Animatable    | Yes                                                 |
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## tspan
 
@@ -217,7 +217,7 @@ For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the
 | Default value | `black`                                             |
 | Animatable    | Yes                                                 |
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> **メモ:** As a presentation attribute `fill` can be used as a CSS property.
 
 ## Specifications
 
@@ -232,4 +232,4 @@ For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the
 
 {{Compat("svg.attributes.presentation.fill")}}
 
-> **Note:** For information on using the `context-fill` (and `context-stroke`) values from HTML documents, see the documentation for the non-standard {{cssxref("-moz-context-properties")}} property.
+> **メモ:** For information on using the `context-fill` (and `context-stroke`) values from HTML documents, see the documentation for the non-standard {{cssxref("-moz-context-properties")}} property.

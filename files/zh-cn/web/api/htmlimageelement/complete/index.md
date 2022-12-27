@@ -5,7 +5,7 @@ slug: Web/API/HTMLImageElement/complete
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLImageElement")}} 的只读属性 **`complete`** 是一个布尔值， 表示图片是否完全加载完成。
+{{domxref("HTMLImageElement")}} 的只读属性 **`complete`** 是一个布尔值，表示图片是否完全加载完成。
 
 ## 语法
 
@@ -15,7 +15,7 @@ let doneLoading = htmlImageElement.complete;
 
 ### 值
 
-当图片完全加载完成时值为 `true` ； 否则，值为 `false`。
+当图片完全加载完成时值为 `true`；否则，值为 `false`。
 
 以下任意一条为 true 则认为图片完全加载完成：
 

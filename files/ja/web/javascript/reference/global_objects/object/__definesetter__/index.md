@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 
 {{JSRef}}
 
-> **Warning:** この機能は非推奨となり、[オブジェクト初期化子の構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)または {{jsxref("Object.defineProperty()")}} API を使用してセッターを定義する方法で置き換えられました。
+> **警告:** この機能は非推奨となり、[オブジェクト初期化子の構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)または {{jsxref("Object.defineProperty()")}} API を使用してセッターを定義する方法で置き換えられました。
 >
 > ただし、ウェブ上では広く実装され利用されているため、ブラウザーが実装をやめる可能性は極めて低いと考えられます。
 

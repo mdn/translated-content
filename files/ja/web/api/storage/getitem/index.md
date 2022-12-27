@@ -42,7 +42,7 @@ function setStyles() {
 }
 ```
 
-> **Note:** 実際の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
+> **メモ:** 実際の例として、[Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/) をご覧ください。
 
 ## 仕様
 

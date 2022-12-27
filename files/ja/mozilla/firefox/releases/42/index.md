@@ -5,7 +5,7 @@ slug: Mozilla/Firefox/Releases/42
 
 {{FirefoxSidebar}}
 
-> **Callout:** [Firefox の最新の開発者向け機能をテストするには、
+> **注目:** [Firefox の最新の開発者向け機能をテストするには、
 > Firefox Developer Edition をインストールしてください](https://www.mozilla.org/firefox/developer/) Firefox 42 は、米国時間 2015 年 11 月 3 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。
 
 ## ウェブ開発者向けの変更点一覧

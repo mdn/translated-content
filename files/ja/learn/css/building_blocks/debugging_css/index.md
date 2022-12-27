@@ -59,7 +59,7 @@ DevTools を使ってプロパティを追加することができます。お�
 
 ![DevToolsパネル、新しいプロパティをルールに追加し、フォントのオートコンプリートを開く](inspecting3-font-size.png)
 
-> **Note:** ルールビューには他にも便利な機能があります。**たとえば**、無効な値の宣言には**取り消し線が引か**れています。詳しくは[、CSS の確認と編集を](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)ご覧ください。
+> **メモ:** ルールビューには他にも便利な機能があります。**たとえば**、無効な値の宣言には**取り消し線が引か**れています。詳しくは[、CSS の確認と編集を](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_CSS)ご覧ください。
 
 ## ボックスモデルについて
 
@@ -75,7 +75,7 @@ DevTools を使ってプロパティを追加することができます。お�
 
 ![DevToolsのレイアウトセクション](inspecting4-box-model.png)
 
-> **Note:** 詳細については[、ボックスモデルの調査と検査を](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)ご覧ください。
+> **メモ:** 詳細については[、ボックスモデルの調査と検査を](/ja/docs/Tools/Page_Inspector/How_to/Examine_and_edit_the_box_model)ご覧ください。
 
 ## 詳細度に関する問題の解決
 

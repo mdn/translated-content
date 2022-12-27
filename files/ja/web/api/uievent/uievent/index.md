@@ -28,7 +28,7 @@ event = new UIEvent(typeArg [, UIEventInit])
     - **`sourceCapabilities`**: {{non-standard_inline}}
       {{domxref("InputDeviceCapabilities")}} インターフェイスのインスタンスで、タッチイベントを生成する原因となった物理的な危機についての情報を提供します。
 
-    > **Note:** `UIEventInit` は {{domxref("Event.Event", "EventInit")}} 辞書のフィールドも受け入れます。
+    > **メモ:** `UIEventInit` は {{domxref("Event.Event", "EventInit")}} 辞書のフィールドも受け入れます。
 
 ## 仕様書
 

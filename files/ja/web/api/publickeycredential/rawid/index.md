@@ -9,7 +9,7 @@ slug: Web/API/PublicKeyCredential/rawId
 
 {{domxref("PublicKeyCredential.id")}} プロパティはこの識別子が [base64url エンコード](/ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding)されたものです。
 
-> **Note:** **メモ:** このプロパティは最上位のコンテキストでしか使えない可能性があり、例えば {{HTMLElement("iframe")}} の中では利用できません。
+> **メモ:** このプロパティは最上位のコンテキストでしか使えない可能性があり、例えば {{HTMLElement("iframe")}} の中では利用できません。
 
 ## 構文
 
