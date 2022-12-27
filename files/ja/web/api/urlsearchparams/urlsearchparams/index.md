@@ -23,7 +23,7 @@ new URLSearchParams(options)
 - `options` {{optional_inline}}
   - : 以下のいずれか。
     - 文字列。先頭の文字 `'?'` は無視され、`application/x-www-form-urlencoded` 形式としてパースされます。
-    - 名前を表す文字列と値を表す文字列のペアのリテラル列、もしくはそのような文字列のペアの列を生成する[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators#%E3%82%A4%E3%83%86%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC)を持つ任意のオブジェクト (たとえば {{domxref("FormData")}} のオブジェクト)。なお、{{domxref("File")}} のエントリは (`application/x-www-form-urlencoded` 形式で期待される) ファイル名ではなく `[object File]` としてシリアライズされます。
+    - 名前を表す文字列と値を表す文字列のペアのリテラル列、もしくはそのような文字列のペアの列を生成する[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators#%E3%82%A4%E3%83%86%E3%83%AC%E3%83%BC%E3%82%BF%E3%83%BC)を持つ任意のオブジェクト (たとえば {{domxref("FormData")}} のオブジェクト)。なお、{{domxref("File")}} のエントリーは (`application/x-www-form-urlencoded` 形式で期待される) ファイル名ではなく `[object File]` としてシリアライズされます。
     - 文字列のキーと文字列の値からなるレコード。なお、ネストには対応していません。
 
 ### 戻り値
