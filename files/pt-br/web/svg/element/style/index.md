@@ -1,12 +1,6 @@
 ---
 title: style
 slug: Web/SVG/Element/style
-tags:
-  - Elemento
-  - Estilo
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/style
 ---
 {{SVGRef}}
 

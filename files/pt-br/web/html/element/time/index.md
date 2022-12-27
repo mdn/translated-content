@@ -1,7 +1,6 @@
 ---
 title: <time>
 slug: Web/HTML/Element/time
-translation_of: Web/HTML/Element/time
 ---
 ## Resumo
 

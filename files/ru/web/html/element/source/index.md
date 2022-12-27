@@ -63,4 +63,4 @@ For more examples, see [Using audio and video in Firefox](/ru/docs/Using_HTML5_a
 - Элемент {{HTMLElement("audio")}}
 - Элемент {{HTMLElement("video")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

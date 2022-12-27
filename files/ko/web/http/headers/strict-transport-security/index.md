@@ -3,6 +3,7 @@ title: Strict-Transport-Security
 slug: Web/HTTP/Headers/Strict-Transport-Security
 translation_of: Web/HTTP/Headers/Strict-Transport-Security
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `Strict-Transport-Security`** response header (종종 {{Glossary("HSTS")}} 로 약칭) 는 HTTP 대신 HTTPS만을 사용하여 통신해야한다고 웹사이트가 브라우저에 알리는 보안 기능.

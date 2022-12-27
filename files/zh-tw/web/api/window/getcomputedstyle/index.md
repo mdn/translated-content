@@ -20,7 +20,7 @@ var style = window.getComputedStyle(element[, pseudoElt]);
 - pseudoElt {{optional_inline}}
   - : A string specifying the pseudo-element to match. Must be omitted (or `null`) for regular elements.
 
-> **備註：** Prior to Gecko 2.0 {{geckoRelease("2.0")}}, the `pseudoElt` parameter was required. No other major browser required this parameter be specified if null. Gecko has been changed to match the behavior of other browsers.
+> **備註：** Prior to Gecko 2.0, the `pseudoElt` parameter was required. No other major browser required this parameter be specified if null. Gecko has been changed to match the behavior of other browsers.
 
 The returned `style` is a _live_ {{domxref("CSSStyleDeclaration")}} object, which updates itself automatically when the element's style is changed.
 
@@ -79,7 +79,7 @@ function dumpComputedStyles(elem,prop) {
 
 The returned object is of the same type that the object returned from the element's {{domxref("HTMLElement.style", "style")}} property; however, the two objects have different purposes. The object returned from `getComputedStyle` is read-only and can be used to inspect the element's style (including those set by a `<style>` element or an external stylesheet). The `elt.style` object should be used to set styles on a specific element.
 
-The first argument must be an Element (passing a non-Element Node, like a #text Node, will throw an error). Starting in Gecko 1.9.2 {{geckoRelease("1.9.2")}}, returned URL values now have quotes around the URL, like this: `url("http://foo.com/bar.jpg")`.
+The first argument must be an Element (passing a non-Element Node, like a #text Node, will throw an error). Starting in Gecko 1.9.2, returned URL values now have quotes around the URL, like this: `url("http://foo.com/bar.jpg")`.
 
 ## `defaultView`
 

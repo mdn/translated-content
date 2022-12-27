@@ -1,7 +1,6 @@
 ---
 title: Exemplos
 slug: Games/Examples
-translation_of: Games/Examples
 ---
 
 {{GamesSidebar}}

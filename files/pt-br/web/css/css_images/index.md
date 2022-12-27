@@ -1,15 +1,8 @@
 ---
 title: CSS Images
 slug: Web/CSS/CSS_Images
-tags:
-  - CSS
-  - CSS Images
-  - NeedsTranslation
-  - Overview
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/CSS_Images
 ---
+
 {{CSSRef}}
 
 **CSS Images** is a module of CSS that defines what types of images can be used (the {{cssxref("&lt;image&gt;")}} type, containing URLs, gradients and other types of images), how to resize them and how they, and other replaced content, interact with the different layout models.

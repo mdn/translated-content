@@ -13,7 +13,6 @@ tags:
 translation_of: Web/API/File/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
-{{ gecko_minversion_header("1.9.2") }}
 
 El uso de la API File añadida al DOM en HTML5, ahora hace posible que la página web solicite al usuario que seleccione archivos locales y, a continuación, leer el contenido de esos archivos. Esta selección se puede hacer, ya sea usando un elemento {{HTMLElement ( "input")}} de HTML o mediante arrastrar y soltar.
 
@@ -35,7 +34,7 @@ Si se prefiere permitir al usuario elegir varios ficheros, entonces se pone el a
 
 En este caso, la lista de ficheros pasada a la función `handleFiles()` contiene un objeto [`File`](/en/DOM/File) por cada fichero seleccionado por el usuario.
 
-Comenzando en Gecko 2.0 {{ geckoRelease("2.0") }}, se puede ocultar el realmente feo {{ HTMLElement("input") }} y representar tu propio interfaz para abrir el picker de ficheros y pintar que fichero o ficheros ha seleccionado el usuario. Esto se puede hacer añadiendo al elemento input la característica "display:none" en su css, o estilo y llamando al método `click()` del elemento {{ HTMLElement("input") }}.
+Comenzando en Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1), se puede ocultar el realmente feo {{ HTMLElement("input") }} y representar tu propio interfaz para abrir el picker de ficheros y pintar que fichero o ficheros ha seleccionado el usuario. Esto se puede hacer añadiendo al elemento input la característica "display:none" en su css, o estilo y llamando al método `click()` del elemento {{ HTMLElement("input") }}.
 
 Como aparece en este HTML:
 
@@ -77,7 +76,7 @@ function handleFiles() {
 
 Nota: en este caso, la función `handleFiles()` mira la lista de ficheros con la finalidad de aceptar un parametro, mientras los eventos listeners sean añadidos de esta manera no pueden aceptar un parametro del input.
 
-Gecko 2.0 {{ geckoRelease("2.0") }} introduce soporte para los métodos de DOM {{ domxref("window.createBlobURL()") }} y {{ domxref("window.revokeBlobURL()") }}. El cual te permite crear un simple string con la URL que referenciar cualquier dato que pueda referenciar usando un objeto [`File`](/en/DOM/File) DOM, esto incluye los ficheros locales del usuario del dispositivo.
+Gecko 2.0 (Firefox 4 / Thunderbird 3.3 / SeaMonkey 2.1) introduce soporte para los métodos de DOM {{ domxref("window.createBlobURL()") }} y {{ domxref("window.revokeBlobURL()") }}. El cual te permite crear un simple string con la URL que referenciar cualquier dato que pueda referenciar usando un objeto [`File`](/en/DOM/File) DOM, esto incluye los ficheros locales del usuario del dispositivo.
 
 Cuando tienes un objeto[`File`](/en/DOM/File) te gusta poder referenciarlo con una URL desde el HTML, la manera de crear tu propio blob URL para poder hacer esto es la siguiente:
 

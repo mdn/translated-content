@@ -222,11 +222,11 @@ function handleUserlistMsg(msg) {
 
 > **备注：** 显然，通过添加和删除单个用户而不是每次更改时都重新构建整个列表来更新列表会更有效，但对于本例而言，这已经足够好了。
 
-然后我们使用 {{jsxref("Array.forEach", "forEach()")}} 迭代用户名数组。对于每个名称，我们创建一个新的 {{HTMLElement("li")}} 元素，然后使用{{domxref("Document.createTextNode", "createTextNode()")}} 创建一个包含用户名的新文本节点。该文本节点被添加为 `<li>` 元素的子节点。接下来，我们为列表项上的 {{event("click")}} 事件设置一个处理程序，单击用户名将调用 `invite()` 方法，我们将在下一节中查看该方法。
+然后我们使用 {{jsxref("Array.forEach", "forEach()")}} 迭代用户名数组。对于每个名称，我们创建一个新的 {{HTMLElement("li")}} 元素，然后使用{{domxref("Document.createTextNode", "createTextNode()")}} 创建一个包含用户名的新文本节点。该文本节点被添加为 `<li>` 元素的子节点。接下来，我们为列表项上的 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件设置一个处理程序，单击用户名将调用 `invite()` 方法，我们将在下一节中查看该方法。
 
 #### 开始一个通话
 
-当用户单击要调用的用户名时，将调用 `invite()` 函数作为该事件的事件处理程序 {{event("click")}} 事件：
+当用户单击要调用的用户名时，将调用 `invite()` 函数作为该事件的事件处理程序 [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件：
 
 ```js
 var mediaConstraints = {

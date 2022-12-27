@@ -218,7 +218,7 @@ urlpatterns = [
 
 _book-detail URL 패턴은 우리가 원하는 책의 id를 캡처하기 위해 특별한 구문을 사용합니다. 구문은 간단합니다: 꺾쇠 괄호는_ 캡처하는 URL의 일부를 정의하고 뷰가 캡처 된 데이터에 액세스하는 데 사용할 수있는 변수의 이름을 지정합니다. _예를 들어,_ **\<something>**은 패턴을 캡처해서 "something"이라는 변수에 데이터를 담아 전달합니다. 우리는 선택적으로 변수 이름 앞에 데이터 형식 (int, str, slug, uuid, path)을 정의하는 [converter specification](https://docs.djangoproject.com/en/2.0/topics/http/urls/#path-converters)을 사용할 수 있습니다.
 
-여기에서 우리는 book id을 캡쳐하기 위해 `'<uuid:pk>'`\*\* \*\*라는 특별히 포맷화된 문자열을 활용할 것입니다. 그리고 `pk` (primary key의 단축어)라는 이름의 파라미터로서 뷰로 넘겨줄 것입니다. This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.
+여기에서 우리는 book id을 캡쳐하기 위해 `'<uuid:pk>'` 라는 특별히 포맷화된 문자열을 활용할 것입니다. 그리고 `pk` (primary key의 단축어)라는 이름의 파라미터로서 뷰로 넘겨줄 것입니다. This is the id that is being used to store the book uniquely in the database, as defined in the Book Model.
 
 (번역 봉사자 주: uuid를 읽지 못한다면\[NoReverseMatch] \<int:pk>로 해보십시오.)
 
@@ -262,7 +262,7 @@ _Regular expressions_ 은 정말로 파워풀한 매핑 툴 입니다. 하지만
 
 | Pattern                        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **r'^book/(?P\<pk>\d+)$'**      | 이것은 우리가 URL mapper에서 사용한 Regular Expression입니다. 이 표현식은 먼저 문자열이 `book/` 으로 시작하는지 검사하고 (**^book/**), 그 다음에 한 개이상의 숫자가 오는지 (`\d+`), 그리고 문자열이 끝나기 전에 숫자가 아닌 문자가 들어 있지는 않는 지 검사합니다.또한 이 표현식은 모든 숫자들을 변환하고 **(?P\<pk>\d+)** 변환된 값을 view 에 'pk'라는 이름의 parameter로 넘깁니다. **변환된 값은 항상 String type으로 넘어갑니다\*\***!\*\*예를 들어, 이 표현식은 `book/1234` 을 매칭합니다. 그리고 변수 `pk='1234'` 를 view에 넘깁니다. |
+| **r'^book/(?P\<pk>\d+)$'**      | 이것은 우리가 URL mapper에서 사용한 Regular Expression입니다. 이 표현식은 먼저 문자열이 `book/` 으로 시작하는지 검사하고 (**^book/**), 그 다음에 한 개이상의 숫자가 오는지 (`\d+`), 그리고 문자열이 끝나기 전에 숫자가 아닌 문자가 들어 있지는 않는 지 검사합니다.또한 이 표현식은 모든 숫자들을 변환하고 **(?P\<pk>\d+)** 변환된 값을 view 에 'pk'라는 이름의 parameter로 넘깁니다. **변환된 값은 항상 String type으로 넘어갑니다**!예를 들어, 이 표현식은 `book/1234` 을 매칭합니다. 그리고 변수 `pk='1234'` 를 view에 넘깁니다. |
 | **r'^book/(\d+)$'**            | 이 표현식은 위의 표현식과 동일한 URL들을 매칭합니다. 변환된 정보는 명명되지 않은 argument로 view에 전달됩니다.                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **r'^book/(?P\<stub>[-\w]+)$'** | 이 표현식은 문자열 처음 부분에 `book/` 으로 시작하는지 검사하고 (**^book/**), 그리고 한 개 또는 그 이상의 '-' 나 word character가 오고 (**\[-\w]+**), 그렇게 끝내는지를 매칭합니다. 이 표현식 또한 매칭된 부분을 변환하고 view 에 'stub' 라는 이름의 parameter로 전달합니다.This is a fairly typical pattern for a "stub". Stubs are URL-friendly word-based primary keys for data. You might use a stub if you wanted your book URL to be more informative. For example `/catalog/book/the-secret-garden` rather than `/catalog/book/33`. |
 
@@ -387,7 +387,7 @@ def book_detail_view(request, primary_key):
 >   allow_empty_first_page=allow_empty_first_page, **kwargs)
 > ```
 >
-> 이것은 [paginator object](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects) 가 데이터베이스에서 ORDER BY 명령어가 실행되었을 것이라고 예상하기 때문에 발생하는 것입니다. 이러한 것이 없다면, 레코드들이 정확한 순서로 반환되었는지 알 수가 없어요!\*\*\*\*
+> 이것은 [paginator object](https://docs.djangoproject.com/en/2.0/topics/pagination/#paginator-objects) 가 데이터베이스에서 ORDER BY 명령어가 실행되었을 것이라고 예상하기 때문에 발생하는 것입니다. 이러한 것이 없다면, 레코드들이 정확한 순서로 반환되었는지 알 수가 없어요!
 >
 > 이 튜토리얼은 아직 **Pagination** 에 도달하지는 않았습니다.(곧 하게될 거에요) `sort_by()` 에 parameter를 전달하여 사용하는 것은 (위에서 이야기했던 `filter()` 와 동일한 역할을 합니다.) 사용할 수 없기 때문에, 당신은 3개의 선택권중에 하나를 골라야합니다:
 >

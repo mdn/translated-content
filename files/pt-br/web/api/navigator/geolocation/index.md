@@ -1,8 +1,8 @@
 ---
 title: Navigator.geolocation
 slug: Web/API/Navigator/geolocation
-translation_of: Web/API/Navigator/geolocation
 ---
+
 {{APIRef("Geolocation API")}}
 
 A propriedade de apenas leitura **`Navigator.geolocation`** retorna um objeto {{domxref("Geolocation")}} que disponibiliza acesso de conteúdo Web à localização do dispositivo. Isso permite que um Web site ou aplicativo ofereçam resultados customizados baseado na localização do usuário.

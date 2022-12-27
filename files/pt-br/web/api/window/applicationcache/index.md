@@ -1,8 +1,8 @@
 ---
 title: Window.applicationCache
 slug: Web/API/Window/applicationCache
-translation_of: Web/API/Window/applicationCache
 ---
+
 {{APIRef}}
 
 ## Sumário

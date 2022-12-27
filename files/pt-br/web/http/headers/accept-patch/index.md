@@ -1,14 +1,8 @@
 ---
 title: Accept-Patch
 slug: Web/HTTP/Headers/Accept-Patch
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de Resposta
-  - HTTP
-  - Reference
-  - Referencia
-translation_of: Web/HTTP/Headers/Accept-Patch
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de resposta HTTP **`Accept-Patch`** indica qual tipo de mídia o servidor está apto a entender.

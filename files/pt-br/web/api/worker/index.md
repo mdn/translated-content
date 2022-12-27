@@ -1,8 +1,8 @@
 ---
 title: Worker
 slug: Web/API/Worker
-translation_of: Web/API/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 A interface **Worker** da [API do Web Worker](/pt-BR/docs/Web/API/Web_Workers_API) representa uma tarefa em background (segundo plano) que pode ser facilmente criada e emitir mensagens de volta ao seu criador. Criar um worker é possível chamando o construtor `Worker("path/to/worker/script")` e especificando um script para ser executado em sua própria thread.

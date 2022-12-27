@@ -1,15 +1,8 @@
 ---
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
-tags:
-  - API
-  - DOM
-  - Gecko
-  - NeedsBrowserCompatibility
-  - Propriedade
-  - Referência(2)
-translation_of: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 A propriedade **`Element.innerHTML`** define ou obtém a sintaxe HTML ou XML descrevendo os elementos descendentes.

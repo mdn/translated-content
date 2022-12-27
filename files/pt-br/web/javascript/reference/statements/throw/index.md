@@ -1,10 +1,6 @@
 ---
 title: throw
 slug: Web/JavaScript/Reference/Statements/throw
-tags:
-  - Instrução
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Statements/throw
 ---
 {{jsSidebar("Statements")}}
 

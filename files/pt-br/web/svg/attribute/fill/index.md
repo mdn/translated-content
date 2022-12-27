@@ -1,10 +1,6 @@
 ---
 title: fill
 slug: Web/SVG/Attribute/fill
-tags:
-  - Atributo SVG
-  - SVG
-translation_of: Web/SVG/Attribute/fill
 ---
 {{SVGRef}}O atributo **`fill`** pode ter duas diferentes interpretações. Para formas e textos, é definido como um atributo de apresentação que define a cor (ou qualquer modelo de pintura SVG como gradientes ou padrões) utilizada para colorir um elemento; para animações ele é quem define o estado final de uma animação.
 

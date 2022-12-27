@@ -8,7 +8,7 @@ l10n:
 {{DefaultAPISidebar("Network Information API")}}{{SeeCompatTable}}
 
 ネットワーク情報 API はシステムのネットワーク接続に関する情報を、一般的な接続の種類 ('wifi' や 'cellular' など) の観点から提供します。
-これは、ユーザーの接続に基づき、高解像度コンテンツや低解像度コンテンツを選択するために使用することができます。 
+これは、ユーザーの接続に基づき、高解像度コンテンツや低解像度コンテンツを選択するために使用することができます。
 
 API は単一の {{domxref("NetworkInformation")}} オブジェクトで構成されます。これは {{domxref("Navigator.connection")}} プロパティから返されるインスタンスです。
 

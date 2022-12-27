@@ -270,7 +270,7 @@ button:before {
     media.addEventListener('ended', stopMedia);
     ```
 
-    {{event("click")}} 事件很明显——我们想要在点击停止按钮的时候停止视频通过运行我们的 `stopMedia()` 函数。然而我们也希望停止视频当视频播放完成时——由{{event("ended")}} 事件标记，所以我们也会设置一个监听器在此事件触发时运行函数。
+    [`click`](/zh-CN/docs/Web/API/Element/click_event) 事件很明显——我们想要在点击停止按钮的时候停止视频通过运行我们的 `stopMedia()` 函数。然而我们也希望停止视频当视频播放完成时——由[`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event) 事件标记，所以我们也会设置一个监听器在此事件触发时运行函数。
 
 2. 接下来，让我们定义 `stopMedia()`—— 在 `playPauseMedia()` 后面添加以下函数：
 
@@ -374,7 +374,7 @@ button:before {
 
 #### 更新已用时间
 
-我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在\<video>元素上触发 {{event("timeupdate")}}事件时更新时间显示。此事件触发的频率取决于您的浏览器，CPU 电源等（[see this stackoverflow post](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
+我们要实施的媒体播放器的最后一块是显示的时间。为此，我们将运行一个函数，以便每次在\<video>元素上触发 [`timeupdate`](/zh-CN/docs/Web/API/HTMLMediaElement/timeupdate_event)事件时更新时间显示。此事件触发的频率取决于您的浏览器，CPU 电源等（[see this stackoverflow post](http://stackoverflow.com/questions/9678177/how-often-does-the-timeupdate-event-fire-for-an-html5-video)）。
 
 在代码下方添加`addEventListener（）`行：
 

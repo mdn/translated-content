@@ -21,7 +21,7 @@ The interface:
 
 - Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers, even though the {{SpecName('Service Workers')}} spec defines it).
 
-  > **Nota:** [Chrome and Safari only expose \`CacheStorage\` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} will be undefined unless an SSL certificate is configured.
+  > **Nota:** [Chrome and Safari only expose `CacheStorage` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("window.caches")}} will be undefined unless an SSL certificate is configured.
 
 - Maintains a mapping of string names to corresponding {{domxref("Cache")}} objects.
 

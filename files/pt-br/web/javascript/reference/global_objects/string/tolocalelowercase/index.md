@@ -1,15 +1,6 @@
 ---
 title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
-tags:
-  - Internacionalização
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - toLocaleLowerCase()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 ---
 {{JSRef}}
 

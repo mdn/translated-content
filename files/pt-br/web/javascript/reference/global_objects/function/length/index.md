@@ -1,7 +1,6 @@
 ---
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
-translation_of: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
 {{JSRef}}
 

@@ -1,17 +1,8 @@
 ---
 title: Output
 slug: Web/HTML/Element/Output
-tags:
-  - Elemento
-  - Formulário HTML
-  - HTML
-  - HTML5
-  - Internet
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/output
 ---
+
 ## Sumário
 
 O elemento de saída (\<output>) é um elemento no qual um site ou aplicativo pode injetar os resultados de um cálculo ou o resultado de uma ação do usuário.
@@ -54,4 +45,4 @@ O elemento implementa a interface [HTMLOutputElement](/en/DOM/HTMLOutputElement)
 
 Outros elementos relacionados ao form: {{ HTMLElement("form") }}, {{ HTMLElement("input") }}, {{ HTMLElement("button") }}, {{ HTMLElement("datalist") }}, {{ HTMLElement("legend") }}, {{ HTMLElement("label") }}, {{ HTMLElement("select") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("textarea") }}, {{ HTMLElement("keygen") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("progress") }} and {{ HTMLElement("meter") }}.
 
-{{ HTMLRef }}
+{{ HTMLSidebar }}

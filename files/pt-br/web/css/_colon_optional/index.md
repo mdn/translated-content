@@ -1,8 +1,8 @@
 ---
 title: ':optional'
 slug: Web/CSS/:optional
-translation_of: Web/CSS/:optional
 ---
+
 {{ CSSRef }}
 
 A [pseudo-classe](/pt-BR/docs/Web/CSS/Pseudo-classes) [CSS](/pt-BR/docs/Web/CSS) **`:optional`** representa qualquer elemento {{HTMLElement("input")}}, {{HTMLElement("select")}}, ou {{HTMLElement("textarea")}} que não contenha o atributo {{ htmlattrxref("required", "input") }}.

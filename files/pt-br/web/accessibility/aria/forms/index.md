@@ -1,15 +1,8 @@
 ---
 title: Formulários
 slug: Web/Accessibility/ARIA/forms
-tags:
-  - ARIA
-  - Accessibility
-  - Acessibilidade
-  - Rótulos
-  - WebMechanics
-  - formulários
-translation_of: Web/Accessibility/ARIA/forms
 ---
+
 As páginas a seguir fornecem várias técnicas para melhorar a acessibilidade nos formulários _web_:
 
 - [Dicas básicas sobre formulários](/en/Accessibility/ARIA/Basic_form_hints): Adicionando dicas e descrições para campos inválidos, ou obrigatórios

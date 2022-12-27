@@ -1,13 +1,9 @@
 ---
 title: IIFE
 slug: Glossary/IIFE
-tags:
-  - DesignPattern
-  - Glossário
-  - JavaScript
-translation_of: Glossary/IIFE
 original_slug: Glossario/IIFE
 ---
+
 **IIFE** (Immediately Invoked Function Expression) é uma função em {{glossary("JavaScript")}} que é executada assim que definida.
 
 É um {{glossary("Design Pattern")}} também conhecido como {{glossary("Self-Executing Anonymous Function")}} e contém duas partes principais. A primeira é a função anônima cujo escopo léxico é encapsulado entre parênteses. Isso previne o acesso externo às variáveis declaradas na IIFE, bem como evita que estas variáveis locais poluam o escopo global.

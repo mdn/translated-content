@@ -551,7 +551,7 @@ Este método es necesario porque has declarado un campo `ForeignKey` (uno-a-much
 
 ## ¿Cómo se ve?
 
-En este punto deberíamos haber creado todo lo necesario para desplegar tanto la lista de libros como las páginas de detalles de libros. Ejecuta el servidor (`python3 manage.py runserver`) y dirígete en tu navegador a <http://127.0.0.1:8000/>.
+En este punto deberíamos haber creado todo lo necesario para desplegar tanto la lista de libros como las páginas de detalles de libros. Ejecuta el servidor (`python3 manage.py runserver`) y dirígete en tu navegador a `http://127.0.0.1:8000/`.
 
 > **Advertencia:** No hagas click aún en ningún enlace de autor o de detalles de autores -- ¡los crearás en el reto!
 

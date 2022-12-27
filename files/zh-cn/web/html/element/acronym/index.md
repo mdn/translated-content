@@ -49,4 +49,4 @@ HTML Acronym 元素 (`<acronym>)` 允许作者明确地声明一个字符序列�
 
 - {{HTMLElement("abbr")}} HTML 元素
 
-{{HTMLRef}}
+{{HTMLSidebar}}

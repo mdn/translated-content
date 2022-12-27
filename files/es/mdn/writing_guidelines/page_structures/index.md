@@ -463,7 +463,7 @@ En este punto, solo tienes que esperar. Un revisor examinará tu solicitud de ex
 
 ## Insertar los datos en páginas MDN
 
-Una vez que tus nuevos datos se hayan incluido en el repositorio principal, puedes comenzar a generar dinámicamente tablas de compatibilidad del navegador basadas en esos datos en las páginas MDN usando la macro {{TemplateLink("Compat")}}. Esta toma un solo parámetro, la notación de puntos requerida para recorrer los datos JSON y encontrar el objeto que representa la característica para la que deseas generar la tabla de compatibilidad.
+Una vez que tus nuevos datos se hayan incluido en el repositorio principal, puedes comenzar a generar dinámicamente tablas de compatibilidad del navegador basadas en esos datos en las páginas MDN usando la macro [`Compat`](https://github.com/mdn/yari/tree/main/kumascript/macros/Compat.ejs). Esta toma un solo parámetro, la notación de puntos requerida para recorrer los datos JSON y encontrar el objeto que representa la característica para la que deseas generar la tabla de compatibilidad.
 
 Por encima de la llamada a la macro, para ayudar a otros colaboradores a encontrar su camino, debes agregar un texto oculto que solo sea visible a los colaboradores de MDN en el modo de edición:
 

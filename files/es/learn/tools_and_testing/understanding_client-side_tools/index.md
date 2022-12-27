@@ -27,7 +27,7 @@ Debes aprender el núcleo básico de los lenguajes [HTML](/es/docs/Learn/HTML), 
 
 > **Observación:**
 >
-> ### ¿Quieres convertirte en un desarrollador _front-end_?
+> ### ¿Quieres convertirte en un desarrollador front-end?
 >
 > Tenemos un curso que incluye toda la información esencial que necesitas para lograr tu objetivo.
 >

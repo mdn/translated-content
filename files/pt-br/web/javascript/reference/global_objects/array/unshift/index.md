@@ -1,13 +1,6 @@
 ---
 title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
-tags:
-  - Array
-  - JavaScript
-  - Prototype
-  - Referencia
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/unshift
 ---
 {{JSRef("Global_Objects", "Array")}}
 

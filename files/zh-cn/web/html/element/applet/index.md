@@ -61,4 +61,4 @@ HTML 中的 Applet 元素 (`<applet>`) 标志着包含了 Java 的 applet。
 
 W3C 规范不鼓励使用`<applet>，更`倾向于使用{{HTMLElement("object")}}标签。因为 HTML 4.01 的严格定义，这个元素已经完全过时，在 HTML5 中不再被使用。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

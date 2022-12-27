@@ -1,15 +1,8 @@
 ---
 title: initial
 slug: Web/CSS/initial
-tags:
-  - Estado inicial
-  - Herança
-  - Iniciante
-  - Referencia
-  - User-agent
-  - estado padrão
-translation_of: Web/CSS/initial
 ---
+
 {{CSSRef}}
 
 A palavra-chave CSS **`initial`** CSS se aplica ao [valor inicial (ou padrão)](/pt-BR/docs/Web/CSS/initial_value) de uma propriedade para um elemento. Este valor inicial é definido pelo navegador. Este valor pode ser aplicado em qualquer propriedade CSS.

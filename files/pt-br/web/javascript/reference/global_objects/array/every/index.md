@@ -1,12 +1,6 @@
 ---
 title: Array.prototype.every()
 slug: Web/JavaScript/Reference/Global_Objects/Array/every
-tags:
-  - Array
-  - JavaScript
-  - Método(2)
-  - Prototype
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/every
 ---
 {{JSRef}}
 

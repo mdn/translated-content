@@ -1,16 +1,9 @@
 ---
 title: Estruturando a web com HTML
 slug: Learn/HTML
-tags:
-  - Aprender
-  - Guía
-  - HTML
-  - Iniciante
-  - Introdução
-  - Tópico
-translation_of: Learn/HTML
 original_slug: Aprender/HTML
 ---
+
 {{LearnSidebar}}
 
 Para construir websites, você deve conhecer sobre {{Glossary('HTML')}} — a tecnologia fundamental usada para definir a estrutura de uma página web. HTML é usado para especificar se o conteúdo da web deve ser reconhecido como um parágrafo, uma lista, um título, um link, uma imagem, um visualizador multimídia, um formulário ou um dos muitos outros elementos disponíveis ou até mesmo um novo elemento definido por você.

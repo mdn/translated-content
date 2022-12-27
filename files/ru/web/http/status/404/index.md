@@ -23,7 +23,7 @@ translation_of: Web/HTTP/Status/404
 ErrorDocument 404 /notfound.html
 ```
 
-Вы можете взять [MDN's 404 page](https://developer.mozilla.org/en-US/404) в качестве вдохновения.
+Вы можете взять [MDN's 404 page](/en-US/404) в качестве вдохновения.
 
 > **Примечание:** Примечание: дизайн на 404 страницах - [an endless source of inspiration](https://www.google.fr/search?q=awesome+404+pages), но имейте в виду, что в нем также существует [a set of best practices](http://alistapart.com/article/perfect404), которые делают эти страницы полезными для пользователей веб-сайтов.
 

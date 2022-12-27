@@ -80,7 +80,7 @@ fetch(resource, options)
     - `integrity`
       - : リクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します（`sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=` など）。
     - `keepalive`
-      - : `keepalive` オプションは、ページの終了後のリクエストを許可するのに使用されます。。`keepalive` フラグつきのフェッチは {{domxref("Navigator.sendBeacon()")}} API の置き換えです。
+      - : `keepalive` オプションは、ページの終了後のリクエストを許可するのに使用されます。`keepalive` フラグつきのフェッチは {{domxref("Navigator.sendBeacon()")}} API の置き換えです。
     - `signal`
       - : {{domxref("AbortSignal")}} オブジェクトのインスタンスです。つまり {{domxref("AbortController")}} 経由でフェッチリクエストと通信したり望む場合には中止したりできます。
 

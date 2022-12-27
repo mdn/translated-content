@@ -1,11 +1,6 @@
 ---
 title: How to Turn Off Form Autocompletion
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
-tags:
-  - Desenvolvimento Web
-  - Formulário
-  - Seguranca(2)
-translation_of: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 ---
 Este artigo explica como um Site da Web pode desabilitar a função autocompletar de campos de formulário.
 

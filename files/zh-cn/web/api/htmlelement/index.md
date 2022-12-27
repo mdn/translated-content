@@ -47,17 +47,17 @@ _继承自父接口 {{domxref("Element")}} 和 {{domxref("GlobalEventHandlers")}
 The events properties, of the form `onXYZ`, are defined on the {{domxref("GlobalEventHandlers")}}, implemented by `HTMLElement`. A few more are specific to `HTMLElement`.
 
 - {{domxref("HTMLElement.onTouchStart")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchstart")}} event.
+  - : Returns the event handling code for the [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) event.
 - {{domxref("HTMLElement.onTouchEnd")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchend")}} event.
+  - : Returns the event handling code for the [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event) event.
 - {{domxref("HTMLElement.onTouchMove")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchmove")}} event.
+  - : Returns the event handling code for the [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) event.
 - {{domxref("HTMLElement.onTouchEnter")}} {{non-standard_inline}}
   - : Returns the event handling code for the {{event("touchenter")}} event.
 - {{domxref("HTMLElement.onTouchLeave")}} {{non-standard_inline}}
   - : Returns the event handling code for the {{event("touchleave")}} event.
 - {{domxref("HTMLElement.onTouchCancel")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchcancel")}} event.
+  - : Returns the event handling code for the [`touchcancel`](/zh-CN/docs/Web/API/Element/touchcancel_event) event.
 
 ## 方法
 

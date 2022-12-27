@@ -75,9 +75,9 @@ translation_of: Web/HTTP
 
 ## Смотрите также
 
-- [Controlling DNS prefetching](/En/Controlling_DNS_prefetching "En/Controlling DNS prefetching")
-- [HTTP pipelining FAQ](/en/HTTP_Pipelining_FAQ "https://developer.mozilla.org/en/HTTP_Pipelining_FAQ")
-- [HTTP-куки (HTTP cookies)](/ru/docs/Web/HTTP/Cookies "HTTP cookies")
+- [Controlling DNS prefetching](/En/Controlling_DNS_prefetching)
+- [HTTP pipelining FAQ](/en/HTTP_Pipelining_FAQ)
+- [HTTP-куки (HTTP cookies)](/ru/docs/Web/HTTP/Cookies)
 - [HTTP заголовки](/ru/docs/Web/HTTP/Headers)
 - [Basic access authentication](/ru/docs/HTTP/Basic_access_authentication)
 - [HTTP контроль доступа (CORS)](/ru/docs/Web/HTTP/CORS)

@@ -205,7 +205,7 @@ dropbox.addEventListener("dragover", dragover, false);
 dropbox.addEventListener("drop", drop, false);
 ```
 
-在这个例子中，我们将 ID 为`dropbox`的元素变为了我们的 drop 区域。这是通过给元素添加{{event('dragenter')}}, {{event('dragover')}}, 和{{event('drop')}} 事件监听器实现的。
+在这个例子中，我们将 ID 为`dropbox`的元素变为了我们的 drop 区域。这是通过给元素添加[`dragenter`](/zh-CN/docs/Web/API/HTMLElement/dragenter_event), [`dragover`](/zh-CN/docs/Web/API/HTMLElement/dragover_event), 和[`drop`](/zh-CN/docs/Web/API/HTMLElement/drop_event) 事件监听器实现的。
 
 我们其实并不需要对`dragenter` and `dragover` 事件进行处理，所以这些函数都很简单。他们只需要包括禁止事件传播和阻止默认事件：
 
@@ -271,7 +271,7 @@ function handleFiles(files) {
 
 ## 使用对象 URL
 
-Gecko 2.0 {{ geckoRelease("2.0") }}引入了对 DOM {{ domxref("window.URL.createObjectURL()") }} 和 {{ domxref("window.URL.revokeObjectURL()") }} 方法的支持。这使得你可以创建用于引用任何数据的简单 URL 字符串，也可以引用一个包括用户电脑上的本地文件的 DOM {{ domxref("File") }}对象。
+Gecko 2.0 引入了对 DOM {{ domxref("window.URL.createObjectURL()") }} 和 {{ domxref("window.URL.revokeObjectURL()") }} 方法的支持。这使得你可以创建用于引用任何数据的简单 URL 字符串，也可以引用一个包括用户电脑上的本地文件的 DOM {{ domxref("File") }}对象。
 
 当你需要在 HTML 中通过 URL 来引用一个{{ domxref("File") }}对象时，你可以创建一个对象 URL，就像这样：
 
@@ -425,7 +425,7 @@ function FileUpload(img, file) {
 5. `FileReader`对象用于将文件转换为二进制字符串。
 6. 最后，当内容被加载时，会调用`XMLHttpRequest`的`send()`函数来上传文件内容。
 
-> **备注：** 上面例子中使用的非标准的`sendAsBinary`方法在 Gecko 31 {{ geckoRelease(31) }} 中已废弃。请使用标准的`send(Blob data)`方法代替。
+> **备注：** 上面例子中使用的非标准的`sendAsBinary`方法在 Gecko 31 中已废弃。请使用标准的`send(Blob data)`方法代替。
 
 ### 异步处理文件上传
 

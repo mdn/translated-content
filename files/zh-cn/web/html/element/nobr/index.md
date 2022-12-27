@@ -18,4 +18,4 @@ HTML `<nobr>` 元素阻止文本自动拆分成新行，所以它展示为长的
 - {{Cssxref("white-space")}}
 - {{Cssxref("overflow")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,15 +1,9 @@
 ---
 title: Seleção
 slug: Web/API/Selection
-tags:
-  - API
-  - Experimental
-  - Interface
-  - Referencia
-  - Seleção
-translation_of: Web/API/Selection
 original_slug: Web/API/Seleção
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 Um objeto **`Selection`** representa um intervalo do texto selecionado pelo usuário ou a posição atual do cursor. Para obter o objeto Selection para inspecionar ou modificar, use {{DOMxRef("Window.getSelection()")}}.

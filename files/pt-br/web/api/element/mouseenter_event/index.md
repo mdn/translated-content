@@ -1,8 +1,8 @@
 ---
 title: mouseenter
 slug: Web/API/Element/mouseenter_event
-translation_of: Web/API/Element/mouseenter_event
 ---
+
 {{APIRef}}
 
 O evento `mouseenter` é disparado quando um dispositivo de apontamento (geralmente um mouse) se move sobre um elemento (para dentro do mesmo).

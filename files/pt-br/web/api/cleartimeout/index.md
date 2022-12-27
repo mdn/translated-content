@@ -1,13 +1,9 @@
 ---
 title: WindowTimers.clearTimeout()
 slug: Web/API/clearTimeout
-tags:
-  - API
-  - Method
-  - Window
-translation_of: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 ## Sumário

@@ -108,8 +108,6 @@ _Без изменений._
 - Прекращена поддержка {{domxref("CSSValue")}}, {{domxref("CSSPrimitiveValue")}} и {{domxref("CSSValueList")}} ({{bug(1459871)}}).
 - {{domxref("window.getComputedStyle()")}} больше не возвращает `null`, если вызван на `Window`, у которого нет представления ({{bug(1467722)}}).
 
-
-
 ### HTTP
 
 #### Удалено

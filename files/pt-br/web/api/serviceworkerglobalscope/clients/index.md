@@ -1,16 +1,8 @@
 ---
 title: ServiceWorkerGlobalScope.clients
 slug: Web/API/ServiceWorkerGlobalScope/clients
-tags:
-  - API
-  - Clients
-  - Service Worker
-  - Service Workers
-  - ServiceWorker
-  - ServiceWorkerGlobalScope
-  - ServiceWorkers
-translation_of: Web/API/ServiceWorkerGlobalScope/clients
 ---
+
 {{APIRef("Service Workers API")}}
 
 A propriedade somente-leitura **`clients`** da interface {{domxref("ServiceWorkerGlobalScope")}} retorna os objetos dos [`Clients`](/pt-BR/docs/Web/API/Clients) associatos ao _service worker_.

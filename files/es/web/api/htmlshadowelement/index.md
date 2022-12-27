@@ -5,7 +5,7 @@ tags:
   - Necesita traducción
 translation_of: Web/API/HTMLShadowElement
 ---
-{{APIRef("Web Components")}}{{obsolete_header}}
+{{APIRef("Web Components")}}{{Deprecated_Header}}
 
 The **`HTMLShadowElement`** interface represents a {{HTMLElement("shadow")}} HTML Element, which is used in [Shadow DOM](/es/docs/Web/Web_Components/Shadow_DOM).
 

@@ -195,7 +195,7 @@ Pongamos en práctica estas ideas y creemos un formulario un poco más complicad
     </form>
     ```
 
-4. Añade un encabezado y un párrafo dentro de las etiquetas `<form>`> para informar a los usuarios cómo se marcan los campos obligatorios:
+4. Añade un encabezado y un párrafo dentro de las etiquetas `<form>` para informar a los usuarios cómo se marcan los campos obligatorios:
 
     ```html
     <h1>Forma de pago</h1>

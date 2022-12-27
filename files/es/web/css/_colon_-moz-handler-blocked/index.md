@@ -7,7 +7,8 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/:-moz-handler-blocked
 ---
-{{Non-standard_header}}{{ CSSRef() }}{{ gecko_minversion_header("1.9.1") }}
+
+{{Non-standard_header}}{{ CSSRef() }}
 
 ## Resumen
 

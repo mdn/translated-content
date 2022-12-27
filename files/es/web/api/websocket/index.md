@@ -88,7 +88,7 @@ void close(
 - `SYNTAX_ERR`
   - : La `reason` cadena es demasiado larga o continene caracteres no validos.
 
-> **Nota:** En Gecko, este métido no soporta ningun parámetro antes de Gecko 8.0 {{geckoRelease("8.0")}}.
+> **Nota:** En Gecko, este método no soporta ningun parámetro antes de Gecko 8.0 (Firefox 8.0 / Thunderbird 8.0 / SeaMonkey 2.5).
 
 ### send()
 

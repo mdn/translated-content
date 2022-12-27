@@ -1,14 +1,6 @@
 ---
 title: String.fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
-tags:
-  - JavaScript
-  - Referencia
-  - String
-  - UTF-16
-  - Unicode
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 ---
 {{JSRef}}
 

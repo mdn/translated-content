@@ -3,7 +3,7 @@ title: <img>：图像嵌入元素
 slug: Web/HTML/Element/img
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<img>` 元素**将一份图像嵌入文档。
 
@@ -28,7 +28,7 @@ HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{g
 
 ## 图像加载错误
 
-如果在加载或渲染图像时发生错误，且设置了至少一个 {{htmlattrxref("onerror")}} 事件处理器来处理 {{event("error")}} 事件，那么设置的事件处理器就会被调用。这样的错误可能发生在各种不同的情况下，包括：
+如果在加载或渲染图像时发生错误，且设置了至少一个 {{htmlattrxref("onerror")}} 事件处理器来处理 [`error`](/zh-CN/docs/Web/API/Element/error_event) 事件，那么设置的事件处理器就会被调用。这样的错误可能发生在各种不同的情况下，包括：
 
 - `src` 属性的属性值为空（`""`）或者 `null`。
 - `src` 属性的 {{glossary("URL")}} 和用户正在浏览的页面的 URL 完全相同。

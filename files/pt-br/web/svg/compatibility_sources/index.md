@@ -1,10 +1,6 @@
 ---
 title: Compatibility sources
 slug: Web/SVG/Compatibility_sources
-tags:
-  - Links
-  - SVG
-translation_of: Web/SVG/Compatibility_sources
 ---
 As seguintes fontes são usada para as tabelas de compatibilidade no elemento SVG e atributos:
 

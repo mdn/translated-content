@@ -1,7 +1,6 @@
 ---
 title: Meta programação
 slug: Web/JavaScript/Guide/Meta_programming
-translation_of: Web/JavaScript/Guide/Meta_programming
 ---
 {{jsSidebar("JavaScript Guide")}} {{Previous("Web/JavaScript/Guide/Iterators_and_Generators")}}
 

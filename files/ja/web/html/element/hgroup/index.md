@@ -3,7 +3,7 @@ title: <hgroup>
 slug: Web/HTML/Element/hgroup
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 > **警告:** `<hgroup>` は支援技術にサポートされていないため、使用すべきではありません。使用すると、中にある見出し要素の認識に悪影響を与えます。
 >

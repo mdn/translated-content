@@ -1,15 +1,8 @@
 ---
 title: padding-left
 slug: Web/CSS/padding-left
-tags:
-  - CSS
-  - CSS Padding
-  - La
-  - Reference
-  - Referencia
-  - Web
-translation_of: Web/CSS/padding-left
 ---
+
 {{ CSSRef() }}
 
 ## Resumo

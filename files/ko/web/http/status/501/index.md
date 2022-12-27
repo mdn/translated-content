@@ -3,6 +3,7 @@ title: 501 Not Implemented
 slug: Web/HTTP/Status/501
 translation_of: Web/HTTP/Status/501
 ---
+
 {{HTTPSidebar}}
 
 HyperText Transfer Protocol (HTTP) **`501 Not Implemented`** 서버 응답 코드는 **요청을 수행할 수 있는 기능을 서버가 지원하지 않는다**는 것을 의미합니다.요청자에게 서버에서 기능이 지원될 때, 다시 확인해볼 수 있도록 {{HTTPHeader("Retry-After")}} 헤더를 전송해줄 수 있습니다.

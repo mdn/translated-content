@@ -1,17 +1,9 @@
 ---
 title: Window.crypto
 slug: Web/API/crypto_property
-tags:
-  - API
-  - HTML DOM
-  - Janela
-  - NeedsCompatTable
-  - Propriedade
-  - Referencia
-  - Window
-translation_of: Web/API/Window/crypto
 original_slug: Web/API/Window/crypto
 ---
+
 {{APIRef}}
 
 {{domxref("Window.crypto")}} propriedade somente de leitura, devolve um objeto do tipo {{domxref("Crypto")}} associado ao objeto global. Este objeto permite que páginas da web utilizem recursos de criptografia.

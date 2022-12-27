@@ -7,6 +7,7 @@ tags:
   - 가이드
 translation_of: Web/HTTP/Range_requests
 ---
+
 {{HTTPSidebar}}
 
 HTTP 범위 요청은 HTTP의 일정 부분만 서버에서 클라이언트로 보내도록 허락하는 것입니다. 부분 요청은 예를들어 대형 미디어나 파일 다운로드 도중 일시정지와 다시 시작 기능에 유용합니다.

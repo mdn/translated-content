@@ -1,13 +1,8 @@
 ---
 title: Node.lastChild
 slug: Web/API/Node/lastChild
-tags:
-  - API
-  - DOM
-  - Elements
-  - lastChild
-translation_of: Web/API/Node/lastChild
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.lastChild`** é uma propriedade do tipo somente leitura (read-only) que retorna o último elemento filho (node) de uma estrutura DOM. Se seu parentNode for um Element, ele retornará um Element node, um text node, ou um comment node. Retornará null se o elemento de referência não tiver elementos filhos child. É extremamente recomendável que você conheça a estrutura DOM para um melhor aprendizado e entendimento.

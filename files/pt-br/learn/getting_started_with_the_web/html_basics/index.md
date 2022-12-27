@@ -1,16 +1,9 @@
 ---
 title: HTML básico
 slug: Learn/Getting_started_with_the_web/HTML_basics
-tags:
-  - Aprender
-  - Codificação de Scripts
-  - HTML
-  - Iniciante
-  - Web
-  - l10:prioridade
-translation_of: Learn/Getting_started_with_the_web/HTML_basics
 original_slug: Aprender/Getting_started_with_the_web/HTML_basico
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
 HTML (Linguagem de Marcação de Hipertexto) é o código que você usa para estruturar uma página web e seu conteúdo. Por exemplo, o conteúdo pode ser estruturado em parágrafos, em uma lista com marcadores ou usando imagens e tabelas. Como o título sugere, este artigo fornecerá uma compreensão básica do HTML e suas funções.

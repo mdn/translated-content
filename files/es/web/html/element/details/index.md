@@ -99,4 +99,4 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Atributos_Globa
 
 - {{HTMLElement("summary")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

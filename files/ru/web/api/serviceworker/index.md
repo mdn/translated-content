@@ -76,7 +76,7 @@ if ('serviceWorker' in navigator) {
 
 ## Смотрите Также
 
-- [ServiceWorker Cookbook](https://serviceworke.rs)
+- [ServiceWorker Cookbook](https://github.com/mdn/serviceworker-cookbook)
 - [Использование Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Базовый пример для Service Worker](https://github.com/mdn/sw-test)
 - [Поддержка ServiceWorker браузерами](https://jakearchibald.github.io/isserviceworkerready/)

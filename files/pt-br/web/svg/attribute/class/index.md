@@ -1,12 +1,6 @@
 ---
 title: class
 slug: Web/SVG/Attribute/class
-tags:
-  - Atributos SVG
-  - Classe
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Attribute/class
 ---
 « [Página inicial da referência de atributos do SVG](/en/SVG/Attribute)
 

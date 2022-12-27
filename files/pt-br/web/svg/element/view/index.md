@@ -1,11 +1,6 @@
 ---
 title: view
 slug: Web/SVG/Element/view
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/view
 ---
 {{SVGRef}}
 

@@ -3,7 +3,7 @@ title: '<th>: 表見出し要素'
 slug: Web/HTML/Element/th
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<th>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のセルのグループ用の見出しであるセルを定義します。このグループの正確な性質は、{{htmlattrxref("scope", "th")}} 属性と {{htmlattrxref("headers", "th")}} 属性で定義します。
 

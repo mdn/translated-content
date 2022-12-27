@@ -1,12 +1,6 @@
 ---
 title: hkern
 slug: Web/SVG/Element/hkern
-tags:
-  - Elemento
-  - Fonte SVG
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/hkern
 ---
 {{SVGRef}}
 

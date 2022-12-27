@@ -8,7 +8,7 @@ original_slug: Using_Firefox_1.5_caching
 
 ### Введение
 
-[Firefox 1.5](/en/Firefox_1.5_for_developers "en/Firefox_1.5_for_developers") использует кеширование целых Web-страниц, включая их JavaScript-состояния, в рамках сессии браузера. Переходы по посещённым страницам вперёд-назад не требуют загрузки страниц, а JavaScript-состояния сохраняются. Эта функция, обозначаемая иногда как **bfcache** (Back-Forward Cache), делает навигацию по страницам очень быстрой. Такое кешированное состояние сохраняется, пока пользователь не закроет браузер.
+[Firefox 1.5](/en/Firefox_1.5_for_developers) использует кеширование целых Web-страниц, включая их JavaScript-состояния, в рамках сессии браузера. Переходы по посещённым страницам вперёд-назад не требуют загрузки страниц, а JavaScript-состояния сохраняются. Эта функция, обозначаемая иногда как **bfcache** (Back-Forward Cache), делает навигацию по страницам очень быстрой. Такое кешированное состояние сохраняется, пока пользователь не закроет браузер.
 
 Есть случаи, в которых Firefox не кеширует страницы. Вот некоторые обычные программные причины того, что страница не кеширована:
 
@@ -40,9 +40,9 @@ original_slug: Using_Firefox_1.5_caching
 
 Стандартное поведение для Web-страниц следующее:
 
-1.  Пользователь переходит на страницу.
-2.  По мере загрузки страницы выполняются инлайновые скрипты.
-3.  Как только страница загрузилась, срабатывает обработчик `onload`.
+1. Пользователь переходит на страницу.
+2. По мере загрузки страницы выполняются инлайновые скрипты.
+3. Как только страница загрузилась, срабатывает обработчик `onload`.
 
 Некоторые страницы включают четвёртый шаг. Если страница использует обработчик `unload` или `beforeunload` handler, он срабатывает прежде чем пользователь уходит со страницы. Если присутствует обработчик `unload`, эта страница не будет кеширована.
 
@@ -79,11 +79,11 @@ window.addEventListener('pageshow', PageShowHandler, false);
 window.addEventListener('unload', UnloadHandler, false);
 
 function PageShowHandler() {
-	window.addEventListener('unload', UnloadHandler, false);
+  window.addEventListener('unload', UnloadHandler, false);
 }
 
 function UnloadHandler() {
-	window.removeEventListener('unload', UnloadHandler, false);
+  window.removeEventListener('unload', UnloadHandler, false);
 }
 ```
 
@@ -95,7 +95,7 @@ function UnloadHandler() {
 
 - В Firefox 1.5 при первой загрузке страницы событие `load` работает так же, как и в других браузерах. Кроме того, срабатывает событие `pageshow`, и, так как `persisted` установлено в `false`, не предпринимается никаких дополнительных действий.
 
-- В Firefox 1.5 при загрузке страницы из кеша срабатывает только событие `pageshow`. Так как` persisted` установлено в `true`, вызывается только JavaScript-код в функции `onPageShow`.
+- В Firefox 1.5 при загрузке страницы из кеша срабатывает только событие `pageshow`. Так как `persisted` установлено в `true`, вызывается только JavaScript-код в функции `onPageShow`.
 
 В этом примере:
 
@@ -106,55 +106,55 @@ function UnloadHandler() {
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-	<head>
-		<title>Order query : Firefox 1.5 Example</title>
-		<style type="text/css">
-		body, p {
-			font-family: Verdana, sans-serif;
-			font-size: 12px;
-			}
-		</style>
-		<script type="text/javascript">
-			function onLoad() {
-				loadOnlyFirst();
-				onPageShow();
-			}
+  <head>
+    <title>Order query : Firefox 1.5 Example</title>
+    <style type="text/css">
+    body, p {
+      font-family: Verdana, sans-serif;
+      font-size: 12px;
+      }
+    </style>
+    <script type="text/javascript">
+      function onLoad() {
+        loadOnlyFirst();
+        onPageShow();
+      }
 
-			function onPageShow() {
-				//вычисление текущего времени
-				var currentTime= new Date();
-				var year=currentTime.getFullYear();
-				var month=currentTime.getMonth()+1;
-				var day=currentTime.getDate();
-				var hour=currentTime.getHours();
-				var min=currentTime.getMinutes();
-				var sec=currentTime.getSeconds();
-				var mil=currentTime.getMilliseconds();
-				var displayTime = (month + "/" + day + "/" + year + " " +
-					hour + ":" + min + ":" + sec + ":" + mil);
-				document.getElementById("timefield").value=displayTime;
-			}
+      function onPageShow() {
+        //вычисление текущего времени
+        var currentTime= new Date();
+        var year=currentTime.getFullYear();
+        var month=currentTime.getMonth()+1;
+        var day=currentTime.getDate();
+        var hour=currentTime.getHours();
+        var min=currentTime.getMinutes();
+        var sec=currentTime.getSeconds();
+        var mil=currentTime.getMilliseconds();
+        var displayTime = (month + "/" + day + "/" + year + " " +
+          hour + ":" + min + ":" + sec + ":" + mil);
+        document.getElementById("timefield").value=displayTime;
+      }
 
-			function loadOnlyFirst() {
-				document.zipForm.name.focus();
-			}
-		</script>
-	</head>
-	<body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
-		<h2>Order query</h2>
+      function loadOnlyFirst() {
+        document.zipForm.name.focus();
+      }
+    </script>
+  </head>
+  <body onload="onLoad();" onpageshow="if (event.persisted) onPageShow();">
+    <h2>Order query</h2>
 
-		<form name="zipForm" action="http://www.example.com/formresult.html" method="get">
-			<label for="timefield">Date and time:</label>
-			<input type="text" id="timefield"><br>
-			<label for="name">Name:</label>
-			<input type="text" id="name"><br>
-			<label for="address">Email address:</label>
-			<input type="text" id="address"><br>
-			<label for="order">Order number:</label>
-			<input type="text" id="order"><br>
-			<input type="submit" name="submit" value="Submit Query">
-		</form>
-	</body>
+    <form name="zipForm" action="http://www.example.com/formresult.html" method="get">
+      <label for="timefield">Date and time:</label>
+      <input type="text" id="timefield"><br>
+      <label for="name">Name:</label>
+      <input type="text" id="name"><br>
+      <label for="address">Email address:</label>
+      <input type="text" id="address"><br>
+      <label for="order">Order number:</label>
+      <input type="text" id="order"><br>
+      <input type="submit" name="submit" value="Submit Query">
+    </form>
+  </body>
 </html>
 ```
 
@@ -162,34 +162,34 @@ function UnloadHandler() {
 
 ```html
 <head>
-	<script>
-		function onLoad() {
-			loadOnlyFirst();
+  <script>
+    function onLoad() {
+      loadOnlyFirst();
 
-			//calculate current time
-			var currentTime= new Date();
-			var year = currentTime.getFullYear();
-			var month = currentTime.getMonth()+1;
-			var day = currentTime.getDate();
-			var hour=currentTime.getHours();
-			var min=currentTime.getMinutes();
-			var sec=currentTime.getSeconds();
-			var mil=currentTime.getMilliseconds();
-			var displayTime = (month + "/" + day + "/" + year + " " +
-				hour + ":" + min + ":" + sec + ":" + mil);
-			document.getElementById("timefield").value=displayTime;
-		}
+      //calculate current time
+      var currentTime= new Date();
+      var year = currentTime.getFullYear();
+      var month = currentTime.getMonth()+1;
+      var day = currentTime.getDate();
+      var hour=currentTime.getHours();
+      var min=currentTime.getMinutes();
+      var sec=currentTime.getSeconds();
+      var mil=currentTime.getMilliseconds();
+      var displayTime = (month + "/" + day + "/" + year + " " +
+        hour + ":" + min + ":" + sec + ":" + mil);
+      document.getElementById("timefield").value=displayTime;
+    }
 
-		function loadOnlyFirst() {
-			document.zipForm.name.focus();
-		}
-	</script>
+    function loadOnlyFirst() {
+      document.zipForm.name.focus();
+    }
+  </script>
 </head>
 <body onload="onLoad();">
 ```
 
 ### Developing Firefox extensions
 
-Firefox 1.5 [extensions](/en/Building_an_Extension "en/Building_an_Extension") need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the `load` event for triggers that can be cached and listens for the `pageshow` event for triggers that shouldn’t be cached.
+Firefox 1.5 [extensions](/en/Building_an_Extension) need to allow for this caching functionality. If you are developing a Firefox extension that you want to be compatible with both 1.5 and earlier versions, make sure that it listens for the `load` event for triggers that can be cached and listens for the `pageshow` event for triggers that shouldn’t be cached.
 
 For instance, the Google Toolbar for Firefox should listen for the `load` event for the autolink function and to the `pageshow` event for the PageRank function in order to be compatible with both 1.5 and earlier versions.

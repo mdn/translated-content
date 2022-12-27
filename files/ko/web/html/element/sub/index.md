@@ -12,7 +12,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/sub
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML** **`<sub>`** 요소는 활자 배치를 아래 첨자로 해야 하는 인라인 텍스트를 지정합니다. 아래 첨자는 보통 더 작은 글씨 크기를 가지고, 기준선을 아래로 내려 렌더링 합니다.
 

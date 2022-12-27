@@ -1,15 +1,6 @@
 ---
 title: Usando custom elements
 slug: Web/Web_Components/Using_custom_elements
-tags:
-  - Autonomos
-  - Classes
-  - Guide
-  - HTML
-  - Web Components
-  - custom elements
-  - customized
-translation_of: Web/Web_Components/Using_custom_elements
 original_slug: Web/Web_Components/Usando_custom_elements
 ---
 {{DefaultAPISidebar("Web Components")}}

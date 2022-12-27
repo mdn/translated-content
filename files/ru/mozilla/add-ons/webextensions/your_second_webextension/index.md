@@ -122,7 +122,7 @@ cd beastify
 
 Кнопка панели инструментов также нуждается в иконке, и наш manifest.json обещает, что у нас будет иконка для панели инструментов по адресу "icons/beasts-32.png".
 
-Сохраните иконку с именем "beasts-32.png" в папке "icons". Вы можете использовать [иконку из нашего примера](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png), которая взята из набора [IconBeast Lite ](http://www.iconbeast.com/free)и используется на условиях этой [лицензии](http://www.iconbeast.com/faq/).
+Сохраните иконку с именем "beasts-32.png" в папке "icons". Вы можете использовать [иконку из нашего примера](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png), которая взята из набора [IconBeast Lite](http://www.iconbeast.com/free) и используется на условиях этой [лицензии](http://www.iconbeast.com/faq/).
 
 Если вы не предоставите всплывающую панель, то событие click отправляется в ваше дополнение, когда пользователь кликает кнопку. Если вы предоставите всплывающую панель, то событие click не отправляется, зато появляется всплывающая панель. Мы хотим панель, давайте создадим её.
 

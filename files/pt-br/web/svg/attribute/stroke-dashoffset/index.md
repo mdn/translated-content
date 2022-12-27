@@ -1,11 +1,6 @@
 ---
 title: stroke-dashoffset
 slug: Web/SVG/Attribute/stroke-dashoffset
-tags:
-  - Animação SVG
-  - Atributo SVG
-  - SVG
-translation_of: Web/SVG/Attribute/stroke-dashoffset
 ---
 « [SVG Attribute reference home](/en/SVG/Attribute)
 

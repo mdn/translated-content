@@ -120,7 +120,7 @@ Here, we're specifying a timeout of 2000 ms.
 
 ## Synchronous request
 
-> **備註：** Starting with Gecko 30.0 {{ geckoRelease("30.0") }}, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
+> **備註：** Starting with Gecko 30.0, synchronous requests on the main thread have been deprecated due to the negative effects to the user experience.
 
 In rare cases, the use of a synchronous method is preferable to an asynchronous one.
 

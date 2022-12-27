@@ -2,6 +2,7 @@
 title: flex-flow
 slug: Web/CSS/flex-flow
 ---
+
 {{CSSRef}}
 
 **`flex-flow`** [CSS](/ko/docs/Web/CSS) 속성은 {{cssxref("flex-direction")}}, {{cssxref("flex-wrap")}} 속성의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다.

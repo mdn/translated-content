@@ -51,4 +51,4 @@ browser.notifications.onClicked.addListener(handleClick);
 
 ## Примеры
 
-Репозиторий образцов расширений [webextensions-examples ](https://github.com/mdn/webextensions-examples)на GitHub включает в себя расширение [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n), которое реализует систему уведомлений.
+Репозиторий образцов расширений [webextensions-examples](https://github.com/mdn/webextensions-examples) на GitHub включает в себя расширение [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n), которое реализует систему уведомлений.

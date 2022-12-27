@@ -1,10 +1,8 @@
 ---
 title: ':first-child'
 slug: Web/CSS/:first-child
-tags:
-  - Referencia
-translation_of: Web/CSS/:first-child
 ---
+
 {{ CSSRef() }}
 
 ## Sumário

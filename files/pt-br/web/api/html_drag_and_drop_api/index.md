@@ -1,17 +1,9 @@
 ---
 title: Arrastar e soltar
 slug: Web/API/HTML_Drag_and_Drop_API
-tags:
-  - Avançado
-  - Guia(2)
-  - HTML5
-  - Visão Geral
-  - XUL
-  - arrastar e soltar
-  - eventos
-translation_of: Web/API/HTML_Drag_and_Drop_API
 original_slug: DragDrop/Drag_and_Drop
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 As interfaces de Drag and Drop (arrastar e soltar) habilitam aplicações a usar funcionalidades de arrastar e soltar através do navegador. Por exemplo, com essas funcionalidades, o usuário pode selecionar elementos arrastáveis (_draggable_) com o mouse, arrastar elementos até um elemento soltável (_droppable_), e soltar o elemento ao soltar o botão do mouse. Uma representação translúcida de elementos arrastáveis (_draggable)_ seguem o ponteiro do mouse durante a operação de arrastar (drag).

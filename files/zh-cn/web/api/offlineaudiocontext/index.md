@@ -22,7 +22,7 @@ _从父级 {{domxref("AudioContext")}} 获取属性。_
 ### 事件处理程序
 
 - {{domxref("OfflineAudioContext.oncomplete")}}
-  - : 当进程完成时，基于事件版本的{{domxref("OfflineAudioContext.startRendering()")}} 被使用之后，{{event("Event_handlers", "event handler")}} 将会被调用，{{event("complete")}} 事件类型为 {{domxref("OfflineAudioCompletionEvent")}}）被触发。
+  - : 当进程完成时，基于事件版本的{{domxref("OfflineAudioContext.startRendering()")}} 被使用之后，{{event("Event_handlers", "event handler")}} 将会被调用，[`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event) 事件类型为 {{domxref("OfflineAudioCompletionEvent")}}）被触发。
 
 ## 方法
 

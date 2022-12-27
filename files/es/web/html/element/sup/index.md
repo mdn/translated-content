@@ -127,4 +127,4 @@ Este elemento sólo incluye los [atributos globales](/es/docs/HTML/Global_attrib
 
 - Los elementos MathML[`<msub>`](/es/docs/MathML/Element/msub), [`<msup>`](/es/docs/MathML/Element/msup), y [`<msubsup>`](/es/docs/MathML/Element/msubsup) .
 
-{{HTMLRef}}
+{{HTMLSidebar}}

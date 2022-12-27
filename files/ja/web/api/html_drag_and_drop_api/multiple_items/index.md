@@ -1,7 +1,9 @@
 ---
-title: 複数のアイテムのドラッグ＆ドロップ
+title: 複数のアイテムのドラッグ & ドロップ
 slug: Web/API/HTML_Drag_and_Drop_API/Multiple_items
 original_slug: DragDrop/Dragging_and_Dropping_Multiple_Items
+l10n:
+  sourceCommit: 277e5969c63b97cfb55ab4a0e612e8040810f49b
 ---
 
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
@@ -18,7 +20,7 @@ Mozilla はいくつかの標準外の機能を使用した、複数のアイテ
 複数のアイテムを追加することができます。これは {{domxref("DataTransfer.setData","setData()")}} と似ています。
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.mozSetDataAt("text/plain", "ドラッグされるデータ", 0);
 dt.mozSetDataAt("text/plain", "ドラッグされる 2 つ目のデータ", 1);
 ```
@@ -34,7 +36,7 @@ event.dataTransfer.mozClearDataAt("text/plain", 1);
 注意: ある位置で示されるアイテムについて、最後のデータ形式の削除によってアイテム全体を削除すると、残りのアイテムが繰り上がってアイテムの位置が変わることに注意してください。例えば、次のようのコードを見てください。
 
 ```js
-var dt = event.dataTransfer;
+const dt = event.dataTransfer;
 dt.mozSetDataAt("text/uri-list", "URL1", 0);
 dt.mozSetDataAt("text/plain",    "URL1", 0);
 dt.mozSetDataAt("text/uri-list", "URL2", 1);
@@ -71,11 +73,10 @@ dt.mozClearDataAt("text/plain", 1);
 それに対して、任意の位置のアイテムをデータトランスファーから取得するには {{domxref("DataTransfer.mozGetDataAt","mozGetDataAt()")}} メソッドを使います。以下の例は、ドラッグされたファイルを取得し、それらを配列に追加するものです。
 
 ```js
-function onDrop(event)
-{
-  var files = [];
-  var dt = event.dataTransfer;
-  for (var i = 0; i < dt.mozItemCount; i++)
+function onDrop(event) {
+  const files = [];
+  const dt = event.dataTransfer;
+  for (let i = 0; i < dt.mozItemCount; i++)
     files.push(dt.mozGetDataAt("application/x-moz-file", i));
 }
 ```
@@ -83,7 +84,7 @@ function onDrop(event)
 {{domxref("DataTransfer.mozTypesAt","mozTypesAt")}} メソッドを使って、望んでいる形式のデータが存在しているかどうかを確かめたくなるかもしれません。 {{domxref("DataTransfer.types","types")}} プロパティと同様に、このメソッドは、そのアイテムが保持しているデータの型の文字列を返します。 {{domxref("DataTransfer.types","types")}} プロパティを取得する事は、位置が 0 のアイテムの型のリストを取得する事に等しくなります。
 
 ```js
-var types = event.dataTransfer.mozTypesAt(1);
+const types = event.dataTransfer.mozTypesAt(1);
 ```
 
 ## 文字列でないデータのドラッグ
@@ -103,65 +104,58 @@ dt.mozSetDataAt("application/x-moz-file", file, 0);
 次の例では、ドロップしたアイテムとフォーマットのリストが表示されるボックスが用意されています。
 
 ```html
-<html>
-<head>
-<script>
+<html lang="en">
+  <head>
+    <script>
+      function doDrop(event) {
+        const dt = event.dataTransfer;
+        const count = dt.mozItemCount;
+        output(`Items: ${count}\n`);
 
-function dodrop(event)
-{
-  var dt = event.dataTransfer;
-  var count = dt.mozItemCount;
-  output("Items: " + count + "\n");
-
-  for (var i = 0; i < count; i++) {
-    output(" Item " + i + ":\n");
-    var types = dt.mozTypesAt(i);
-    for (var t = 0; t < types.length; t++) {
-      output("  " + types[t] + ": ");
-      try {
-        var data = dt.mozGetDataAt(types[t], i);
-        output("(" + (typeof data) + ") : <" + data + " >\n");
-      } catch (ex) {
-        output("<<error>>\n");
-        dump(ex);
+        for (let i = 0; i < count; i++) {
+          output(` Item ${i}:\n`);
+          const types = dt.mozTypesAt(i);
+          for (let t = 0; t < types.length; t++) {
+            output(`  ${types[t]}: `);
+            try {
+              const data = dt.mozGetDataAt(types[t], i);
+              output(`(${typeof data}) : <${data} >\n`);
+            } catch (ex) {
+              output("<<error>>\n");
+              dump(ex);
+            }
+          }
+        }
       }
-    }
-  }
-}
 
-function output(text)
-{
-  document.getElementById("output").textContent += text;
-  dump(text);
-}
-
-</script>
-</head>
-<body>
-
-<div id="output" style="min-height: 100px; white-space: pre; border: 1px solid black;"
+      function output(text) {
+        document.getElementById("output").textContent += text;
+        dump(text);
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      id="output"
+      style="min-height: 100px; white-space: pre; border: 1px solid black;"
       ondragenter="document.getElementById('output').textContent = ''; event.stopPropagation(); event.preventDefault();"
       ondragover="event.stopPropagation(); event.preventDefault();"
-      ondrop="event.stopPropagation(); event.preventDefault(); dodrop(event);">
-
-<div>
-
-  Fix</div>
-</div>
-
-</body>
+      ondrop="event.stopPropagation(); event.preventDefault(); doDrop(event);">
+      <div>Fix</div>
+    </div>
+  </body>
 </html>
 ```
 
 この例では、 {{domxref("HTMLElement/dragenter_event", "dragenter")}} と `{{domxref("HTMLElement/dragover_event", "dragover")}}` の両イベントを {{domxref("Event.preventDefault","preventDefault()")}} メソッドでキャンセルします。これにより、要素の上でのドロップが可能になっています。
 
-アイテムをドロップした時に、 `dodrop` イベントハンドラーが呼び出されます。この関数は {{domxref("DataTransfer.mozItemCount","mozItemCount")}} プロパティを見て、いくつのアイテムがドロップされたのかを調べ、それらに繰り返し処理を行います。それぞれのアイテムについて、型の一覧を得るために {{domxref("DataTransfer.mozTypesAt","mozTypesAt")}} メソッドが呼ばれます。この一覧の生成処理は、ドラッグに対して関連づけられたすべてのデータに対して繰り返されます。
+アイテムをドロップした時に、 `doDrop` イベントハンドラーが呼び出されます。この関数は {{domxref("DataTransfer.mozItemCount","mozItemCount")}} プロパティを見て、いくつのアイテムがドロップされたのかを調べ、それらに繰り返し処理を行います。それぞれのアイテムについて、型の一覧を得るために {{domxref("DataTransfer.mozTypesAt","mozTypesAt")}} メソッドが呼ばれます。この一覧の生成処理は、ドラッグに対して関連づけられたすべてのデータに対して繰り返されます。
 
 この例は、あるドラッグ操作が保持しているデータを確かめたい時に便利です。ただアイテムをこの例のドロップ対象にドロップするだけで、ドラッグされたどのアイテムがどんな形式でどのようなデータを保持しているのかを見ることができます。
 
 ## 関連情報
 
-- [HTML ドラッグ＆ドロップ API （概要）](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
+- [HTML ドラッグ & ドロップ API （概要）](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - [ドラッグ操作](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
 - [推奨されるドラッグ型](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [HTML Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)

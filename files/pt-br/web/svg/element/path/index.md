@@ -1,15 +1,6 @@
 ---
 title: path
 slug: Web/SVG/Element/path
-tags:
-  - Caminho
-  - Elemento
-  - Forma
-  - Path
-  - Referencia
-  - SVG
-  - graficos
-translation_of: Web/SVG/Element/path
 ---
 {{SVGRef}}**[Primeiros passos](/pt-BR/docs/SVG/Tutorial/Paths)**
 Este tutorial irá te ajudar a utilizar caminhos no SVG.

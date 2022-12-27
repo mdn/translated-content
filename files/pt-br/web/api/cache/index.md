@@ -1,18 +1,8 @@
 ---
 title: Cache
 slug: Web/API/Cache
-tags:
-  - API
-  - Armazenamento
-  - Cache
-  - Experimental
-  - Interface
-  - Offline
-  - Rascunho
-  - Referencia
-  - Service Workers
-translation_of: Web/API/Cache
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 A interface de **Cache** provê um mecanismo de pares de objeto [Request](http://fetch.spec.whatwg.org/#request) / [Response](http://fetch.spec.whatwg.org/#response) que estão cacheados, por exemplo, como parte do ciclo de vida de um {{domxref("ServiceWorker")}}. Note que a interface do `Cache` é exposta a escopos de janela como também aos workers. Você não precisa utiliza-la em conjunto com os service workers em si, mesmo que ela esteja definida na especificação dos mesmos.

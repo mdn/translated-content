@@ -1,11 +1,6 @@
 ---
 title: linearGradient
 slug: Web/SVG/Element/linearGradient
-tags:
-  - Elemento
-  - Gradiente
-  - SVG
-translation_of: Web/SVG/Element/linearGradient
 ---
 {{SVGRef}}
 
@@ -17,7 +12,7 @@ O elemento `linearGradient` permite que os autores definam gradientes lineares p
 
 ## Example
 
-» [linearGradient.svg](https://developer.mozilla.org/files/3265/linearGradient.svg)
+» [linearGradient.svg](/files/3265/linearGradient.svg)
 
 ## Atributos
 

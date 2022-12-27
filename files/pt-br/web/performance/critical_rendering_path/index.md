@@ -1,7 +1,6 @@
 ---
 title: Caminho de renderização crítico
 slug: Web/Performance/Critical_rendering_path
-translation_of: Web/Performance/Critical_rendering_path
 original_slug: Web/Performance/caminho_de_renderizacao_critico
 ---
 **O caminho de renderização crítico** é a sequência de passos que o navegador passa para converter HTML, CSS e JavaScript em pixels na tela. Otimizando o caminho de renderização crítico melhora a performance.The critical rendering path includes the [Document Object Model](/pt-BR/docs/Web/API/Document_Object_Model)(DOM), [CSS Object Model](/pt-BR/docs/Web/API/CSS_Object_Model) (CSSOM), render tree and layout.

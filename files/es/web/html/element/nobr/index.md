@@ -27,4 +27,4 @@ El elemento HTML `<nobr>` previene que una línea de texto se divida en una nuev
 - {{Cssxref("white-space")}}
 - {{Cssxref("overflow")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

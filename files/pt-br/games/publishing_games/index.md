@@ -1,16 +1,8 @@
 ---
 title: Publishing games
 slug: Games/Publishing_games
-tags:
-  - HTML5
-  - JavaScript
-  - Jogos
-  - Monetização
-  - Promoção
-  - distribuição
-  - publicação
-translation_of: Games/Publishing_games
 ---
+
 {{GamesSidebar}}Jogos em HTML5 possuem uma grande vantagem sobre jogos nativos em termos de publicação e distribuição — você possui a liberdade de distribuição, promoção e monetização do seu jogo na Web, ao invés de que cada versão ficará presa em uma única loja controlada por uma empresa. Você pode se beneficiar com a Web sendo realmenete multiplataforma. Essa série de artigos demonstra as opções que você têm quando for publicar e distribuir o se jogo, e ter algum retorno enquanto você espera para se tornar famoso.
 
 ## Distribuição do jogo

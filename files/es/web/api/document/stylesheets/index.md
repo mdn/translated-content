@@ -23,10 +23,7 @@ styleSheetList = document.styleSheets
 
 El objeto devuelto es del tipo [StyleSheetList](https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-DocumentStyle-styleSheets).
 
-Es una colección ordenada de objetos de tipo [stylesheet](/es/DOM/stylesheet). `styleSheetList.item(index)` o simplemente `styleSheetList{{ mediawiki.external('
- <i>
-  index</i>
- ') }}` devuelve un único objeto de tipo stylesheet con el índice especificado (el índice es de origen 0).
+Es una colección ordenada de objetos de tipo [stylesheet](/es/DOM/stylesheet). `styleSheetList.item(index)` o simplemente `styleSheetList[ index ]` devuelve un único objeto de tipo stylesheet con el índice especificado (el índice es de origen 0).
 
 ## Especificaciones
 

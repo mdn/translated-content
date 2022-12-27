@@ -1,8 +1,8 @@
 ---
 title: Window
 slug: Web/API/Window
-translation_of: Web/API/Window
 ---
+
 {{APIRef}}
 
 O objeto `window` representa uma janela que contém um elemento DOM; a propriedade `document` aponta para o [documento DOM document](/pt-BR/docs/DOM/document) carregado naquela janela. Uma janela para um dado documento pode ser obtido usando a propriedade {{Domxref("document.defaultView")}}.

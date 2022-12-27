@@ -26,7 +26,7 @@ This event handler is not currently part of any specification.
 
 ## See also
 
-- {{ event("deviceorientation") }}
+- [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)
 - {{ domxref("DeviceOrientationEvent") }}
 - {{domxref("Window.ondeviceorientation","ondeviceorientation")}}
 - [Detecting device orientation](/zh-CN/Detecting_device_orientation)

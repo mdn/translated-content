@@ -3,6 +3,7 @@ title: 시작하기
 slug: Web/SVG/Tutorial/Getting_Started
 original_slug: Web/SVG/Tutorial/시작하기
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Introduction", "Web/SVG/Tutorial/Positions") }}
 
 ### 간단한 예제

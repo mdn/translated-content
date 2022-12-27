@@ -5,7 +5,7 @@ browser-compat: html.elements.menu
 translation_of: Web/HTML/Element/menu
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<menu>`** est une alternative sémantique à [`<ul>`](/fr/docs/Web/HTML/Element/ul), mais est traité par les navigateurs, et en termes d'accessibilité comme un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul). Il représente une liste d'éléments non-ordonnée (chaque élément de la liste étant représenté par un élément [`<li>`](/fr/docs/Web/HTML/Element/li)).
 

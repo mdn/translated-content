@@ -1,8 +1,8 @@
 ---
 title: '@font-face'
 slug: Web/CSS/@font-face
-translation_of: Web/CSS/@font-face
 ---
+
 {{CSSRef}}
 
 O **`@font-face`** [CSS](/pt-BR/docs/CSS) [at-rule](/pt-BR/docs/CSS/At-rule) especifica uma fonte customizada com a qual exibe o texto; a fonte pode ser carregada de um servidor remoto ou de uma fonte instalada localmente no computador do usuário.

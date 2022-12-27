@@ -1,8 +1,8 @@
 ---
 title: Window.location
 slug: Web/API/Window/location
-translation_of: Web/API/Window/location
 ---
+
 {{APIRef}}
 
 O **`Window.location`**é uma propriedade de leitura que retorna um objeto {{domxref("Location")}} com informações de localização do documento atual.

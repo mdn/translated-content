@@ -35,7 +35,7 @@ border-bottom-color: unset;
 
 ### Valeurs
 
-- <`color>`
+- `<color>`
   - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté inférieur.
 
 ## Définition formelle

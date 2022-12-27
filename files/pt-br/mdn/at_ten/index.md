@@ -1,12 +1,9 @@
 ---
 title: 10 anos de MDN
 slug: MDN/At_ten
-tags:
-  - História
-  - MDN
-translation_of: MDN_at_ten
 original_slug: dez_anos_de_MDN
 ---
+
 Celebrando 10 anos documentando sua Web.
 
 ## A história do MDN

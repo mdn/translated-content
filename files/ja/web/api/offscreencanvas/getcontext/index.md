@@ -65,7 +65,7 @@ A {{domxref("RenderingContext")}} which is either a
 
 If the `contextType` doesn't match a possible drawing context, `null` is returned.
 
-## **例**
+## 例
 
 ```js
 var offscreen = new OffscreenCanvas(256, 256);
@@ -75,13 +75,13 @@ gl; // WebGLRenderingContext
 gl.canvas; // OffscreenCanvas
 ```
 
-## **仕様書**
+## 仕様書
 
 | Specification                                                                                                                | Status                           | Comment |
 | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------- |
 | {{SpecName('HTML WHATWG', "#dom-offscreencanvas-getcontext", "OffscreenCanvas.getContext()")}} | {{Spec2('HTML WHATWG')}} |         |
 
-## **ブラウザの互換性**
+## ブラウザの互換性
 
 {{Compat("api.OffscreenCanvas.getContext")}}
 

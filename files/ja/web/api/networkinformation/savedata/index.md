@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
-**`NetworkInformation.saveData`** は {{domxref("NetworkInformation")}} の読み取り専用プロパティで、ユーザーがユーザーエージェントにデータ使用量削減オプションを設定している場合、 `true `を返します。
+**`NetworkInformation.saveData`** は {{domxref("NetworkInformation")}} の読み取り専用プロパティで、ユーザーがユーザーエージェントにデータ使用量削減オプションを設定している場合、 `true` を返します。
 
 ## 値
 

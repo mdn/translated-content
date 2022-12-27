@@ -11,7 +11,7 @@ tags:
   - 대화 상자
 translation_of: Web/HTML/Element/dialog
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<dialog>` 요소**는 닫을 수 있는 경고, 검사기, 창 등 대화 상자 및 기타 다른 상호작용 가능한 컴포넌트를 나타냅니다.
 

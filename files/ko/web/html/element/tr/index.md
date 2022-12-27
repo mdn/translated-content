@@ -3,6 +3,7 @@ title: <tr>
 slug: Web/HTML/Element/tr
 translation_of: Web/HTML/Element/tr
 ---
+
 ## 개요
 
 The _HTML Table Row Element_ (`<tr>`) defines a row of cells in a table. Those can be a mix of {{HTMLElement("td")}} and {{HTMLElement("th")}} elements.
@@ -93,4 +94,4 @@ See {{HTMLElement("table")}} for examples on `<tr>`.
   - the {{cssxref(":nth-child")}} pseudo-class to set the alignment on the cells of the column;
   - the {{cssxref("text-align")}} property to align all cells content on the same character, like '.'.<
 
-{{HTMLRef}}
+{{HTMLSidebar}}

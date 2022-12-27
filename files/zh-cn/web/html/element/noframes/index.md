@@ -30,4 +30,4 @@ slug: Web/HTML/Element/noframes
 - {{HTMLElement("frameset")}}
 - {{HTMLElement("frame")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -44,7 +44,7 @@ La interfaz **`DOMError`** describe un objeto de error que contiene un nombre de
 
 ## Especificaciones
 
-- {{ spec("http://www.w3.org/TR/dom/#interface-domerror", "DOM 4 DOMError specification", "WD") }}
+- [DOM 4 DOMError specification](https://www.w3.org/TR/dom/#interface-domerror)
 
 ## Véase también
 

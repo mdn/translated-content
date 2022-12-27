@@ -66,7 +66,7 @@ console.log(ctx.createImageData(100, 100));
 
 ### 兼容性注解
 
-- 从 {{geckoRelease("5.0")}}开始：
+- 从 Gecko 5.0 开始：
 
   - 如果矩形小于指定的 1 个像素，`createImageData()` 会返回图像数据至少 1 个像素值。
   - 当调用 `createImageData()` 指定非限制值时，会抛出`NOT_SUPPORTED_ERR` exception 异常。

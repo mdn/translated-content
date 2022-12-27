@@ -2,6 +2,7 @@
 title: border-image-width
 slug: Web/CSS/border-image-width
 ---
+
 {{CSSRef}}
 
 **`border-image-width`** [CSS](/ko/docs/Web/CSS) 속성은 요소 [테두리 이미지](/ko/docs/Web/CSS/border-image)의 너비를 설정합니다.

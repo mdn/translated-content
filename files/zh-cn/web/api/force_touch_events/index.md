@@ -12,17 +12,17 @@ slug: Web/API/Force_Touch_events
 ## Events
 
 - {{event("webkitmouseforcewillbegin")}} {{non-standard_inline}}
-  - : This event is fired before the {{event("mousedown")}} event. Its main use is that it can be {{domxref("Event.preventDefault()")}}ed.
+  - : This event is fired before the [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event) event. Its main use is that it can be {{domxref("Event.preventDefault()")}}ed.
 - {{event("webkitmouseforcedown")}} {{non-standard_inline}}
-  - : This event is fired after the {{event("mousedown")}} event as soon as sufficient pressure has been applied for it to qualify as a "force click".
+  - : This event is fired after the [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event) event as soon as sufficient pressure has been applied for it to qualify as a "force click".
 - {{event("webkitmouseforceup")}} {{non-standard_inline}}
   - : This event is fired after the {{event("webkitmouseforcedown")}} event as soon as the pressure has been reduced sufficiently to end the "force click".
 - {{event("webkitmouseforcechanged")}} {{non-standard_inline}}
-  - : This event is fired each time the amount of pressure changes. This event first fires after the {{event("mousedown")}} event and stops firing before the {{event("mouseup")}} event.
+  - : This event is fired each time the amount of pressure changes. This event first fires after the [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event) event and stops firing before the [`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event) event.
 
 ## Event properties
 
-The following property is known to be available on the {{event("webkitmouseforcewillbegin")}}, {{event("mousedown")}}, {{event("webkitmouseforcechanged")}}, {{event("webkitmouseforcedown")}}, {{event("webkitmouseforceup")}}, {{event("mousemove")}}, and {{event("mouseup")}} event objects:
+The following property is known to be available on the {{event("webkitmouseforcewillbegin")}}, [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event), {{event("webkitmouseforcechanged")}}, {{event("webkitmouseforcedown")}}, {{event("webkitmouseforceup")}}, [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event), and [`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event) event objects:
 
 - {{domxref("MouseEvent.webkitForce")}} {{non-standard_inline()}} {{readonlyinline}}
   - : 当前施加于触控板/触摸屏的压力量

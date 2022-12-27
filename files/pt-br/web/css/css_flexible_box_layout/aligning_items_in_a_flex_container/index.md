@@ -1,8 +1,8 @@
 ---
 title: Aligning Items in a Flex Container
 slug: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 ---
+
 {{CSSRef}}
 
 Uma das razões pela qual flexbox rapidamente despertou interesse dos desenvolvedores web é que ela trouxe capacidade de alinhamento apropriada para web pela primeira vez. Tem capacidade de alinhamento vertical apropriada, e assim finalmente podemos de modo fácil centralizar uma caixa. Neste guia, veremos detalhadamente como as propriedades de alinhamento e justificação funcionam no Flexbox.

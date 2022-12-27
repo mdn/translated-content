@@ -1,13 +1,6 @@
 ---
 title: ellipse
 slug: Web/SVG/Element/ellipse
-tags:
-  - Elemento
-  - Forma
-  - Referencia
-  - Referência(2)
-  - SVG
-translation_of: Web/SVG/Element/ellipse
 ---
 {{SVGRef}}
 
@@ -21,7 +14,7 @@ As elipses são incapazes de especificar a orientação exatada dela mesma (se, 
 
 ## Exemplo
 
-» [ellipse.svg](https://developer.mozilla.org/files/3253/ellipse.svg)
+» [ellipse.svg](/files/3253/ellipse.svg)
 
 ## Atributos
 

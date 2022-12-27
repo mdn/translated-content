@@ -1,11 +1,6 @@
 ---
 title: Objetos Globais
 slug: Web/JavaScript/Reference/Global_Objects
-tags:
-  - JavaScript
-  - Reference
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects
 ---
 {{jsSidebar("Objects")}}
 

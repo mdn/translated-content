@@ -2,6 +2,7 @@
 title: <a>
 slug: Web/SVG/Element/a
 ---
+
 {{SVGRef}}
 
 The **\<a>** SVG element creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL.

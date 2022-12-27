@@ -1,15 +1,9 @@
 ---
 title: Primeiros Passos no MDN
 slug: MDN/Community/Contributing/Getting_started
-tags:
-  - Documentação
-  - Primeiros Passos
-  - Guia
-  - MDN
-  - Projeto MDN
-  - Novos Contribuidores
 original_slug: MDN/Contribute/Getting_started
 ---
+
 {{MDNSidebar}}
 
 Somos uma comunidade aberta de desenvolvedores construindo recursos para uma web melhor, independente de marca, navegador ou plataforma. Qualquer pessoa pode contribuir e cada contribuição nos torna mais fortes. Juntos podemos conduzir inovações na Web para servir ao bem maior. E começa aqui, com você.

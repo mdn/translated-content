@@ -1,15 +1,6 @@
 ---
 title: mpath
 slug: Web/SVG/Element/mpath
-tags:
-  - Animação
-  - Caminho
-  - Contorno
-  - Elemento
-  - Movimento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/mpath
 ---
 {{SVGRef}}
 

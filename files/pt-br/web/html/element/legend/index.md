@@ -1,18 +1,8 @@
 ---
 title: <legend>
 slug: Web/HTML/Element/legend
-tags:
-  - Element
-  - Elemento
-  - Forms
-  - HTML
-  - Web
-  - campos
-  - conjunto de campos
-  - formulários
-  - rótulo
-translation_of: Web/HTML/Element/legend
 ---
+
 ## Resumo
 
 O **Elemento HTML \<legend> **(ou _Elemento_ _HTML Campo "Legend"_) representa um rótulo para o conteúdo do seu ancestral {{HTMLElement("fieldset")}}.
@@ -48,4 +38,4 @@ Veja {{HTMLElement("form")}} para exemplos sobre `<legend>`.
 
 - Outros elementos relacionados a formulários: {{HTMLElement("form")}}, {{HTMLElement("option")}}, {{HTMLElement("label")}}, {{HTMLElement("button")}}, {{HTMLElement("select")}}, {{HTMLElement("datalist")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("textarea")}}, {{HTMLElement("keygen")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}} and {{HTMLElement("meter")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

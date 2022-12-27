@@ -2,6 +2,7 @@
 title: Audio and Video Delivery
 slug: Web/Guide/Audio_and_video_delivery
 ---
+
 We can deliver audio and video on the web in a number of ways, ranging from 'static' media files to adaptive live streams. This article is intended as a starting point for exploring the various delivery mechanisms of web based media and compatibility with popular browsers.
 
 ## The Audio and Video Elements

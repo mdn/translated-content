@@ -100,7 +100,7 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 
     > **Nota:** [`console.log()`](/es/docs/Web/API/Console/log) es una función de depuración realmente útil que imprime un valor en la consola. Por lo tanto, imprimirá el valor de `lowOrHi` en la consola tan pronto como intentemos configurarlo en la línea 48.
 
-7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](https://mdn.mozillademos.org/files/13494/console-log-output.png)Efectivamente, el valor de `lowOrHi`es `null` en este punto, así que definitivamente hay un problema con la línea 48.
+7. Guarda y refresca, y ahora deberías ver el resultado de `console.log()` en tu consola. ![](https://mdn.mozillademos.org/files/13494/console-log-output.png)Efectivamente, el valor de `lowOrHi` es `null` en este punto, así que definitivamente hay un problema con la línea 48.
 8. Pensemos en cuál podría ser el problema. La línea 48 está utilizando un método [`document.querySelector()`](/es/docs/Web/API/Document/querySelector) para obtener una referencia a un elemento seleccionándolo con un selector CSS. Buscando más adelante en nuestro archivo, podemos encontrar el párrafo en cuestión:
 
     ```js

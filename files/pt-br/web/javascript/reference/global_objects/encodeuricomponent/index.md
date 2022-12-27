@@ -1,7 +1,6 @@
 ---
 title: encodeURIComponent()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
 {{jsSidebar("Objects")}}
 

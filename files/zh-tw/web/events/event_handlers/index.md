@@ -90,7 +90,7 @@ When discussing the various methods of listening to events,
 
 ### Event handler changes in Firefox 9
 
-In order to better match the specifications, and improve cross-browser compatibility, the way event handlers were implemented at a fundamental level changed in Gecko 9.0 {{ geckoRelease("9.0") }}.
+In order to better match the specifications, and improve cross-browser compatibility, the way event handlers were implemented at a fundamental level changed in Gecko 9.0.
 
 Specifically, in the past, event handlers were not correctly implemented as standard IDL attributes. In Gecko 9.0, this was changed. Because of this, certain behaviors of event handlers in Gecko have changed. In particular, they now behave in all the ways standard IDL attributes behave. In most cases, this shouldn't affect web or add-on content at all; however, there are a few specific things to watch out for.
 

@@ -1,7 +1,6 @@
 ---
 title: break
 slug: Web/JavaScript/Reference/Statements/break
-translation_of: Web/JavaScript/Reference/Statements/break
 ---
 {{jsSidebar("Statements")}}
 

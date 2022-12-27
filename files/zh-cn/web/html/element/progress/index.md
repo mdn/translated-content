@@ -3,7 +3,7 @@ title: <progress>：进度指示元素
 slug: Web/HTML/Element/progress
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 ## 概述
 

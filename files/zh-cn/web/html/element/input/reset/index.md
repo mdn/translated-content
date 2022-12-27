@@ -3,7 +3,7 @@ title: <input type="reset">
 slug: Web/HTML/Element/Input/reset
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar("Input_types")}}
 
 **`reset`** 类型的 {{HTMLElement("input")}} 元素将渲染为按钮，且带有默认的 {{domxref("Element/click_event", "click")}} 事件，用于将表单中的所有输入重置为其初始值。
 

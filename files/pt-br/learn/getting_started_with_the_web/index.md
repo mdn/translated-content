@@ -1,19 +1,9 @@
 ---
 title: Introdução à Web
 slug: Learn/Getting_started_with_the_web
-tags:
-  - CSS
-  - Design
-  - Guía
-  - HTML
-  - Iniciante
-  - l10:prioridade
-  - publicação
-  - teoria
-  - Índice
-translation_of: Learn/Getting_started_with_the_web
 original_slug: Aprender/Getting_started_with_the_web
 ---
+
 {{LearnSidebar}}
 
 _Introdução à Web_ é uma série concisa que apresenta os aspectos práticos do desenvolvimento web. Você configurará as ferramentas necessárias para construir uma página web simples e publicará seu próprio código.

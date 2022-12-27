@@ -1,10 +1,6 @@
 ---
 title: JavaScript
 slug: Web/JavaScript
-tags:
-  - Aprender
-  - JavaScript
-translation_of: Web/JavaScript
 ---
 {{JsSidebar}}
 

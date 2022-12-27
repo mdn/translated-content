@@ -253,7 +253,7 @@ textarea.onkeyup = function () {
 
 HTML también dispone de elementos para el marcado de citas; cual elemento utilices depende de si estás marcando la cita como un bloque o como un elemento en línea.
 
-### Cita en bloque independiente (_blockquote_)
+### Cita en bloque independiente (blockquote)
 
 Si una sección de contenido a nivel de bloque (ya sea un párrafo, varios párrafos, una lista, etc.) se cita en otro lugar, debes envolverla dentro de un elemento {{HTMLElement("blockquote")}} para indicarlo, e incluye una URL que apunte a la fuente de la cita dentro de un atributo {{HTMLAttrxRef("cite", "blockquote")}}. Por ejemplo, el siguiente marcado tomado de la página del elemento `<blockquote>` de MDN:
 

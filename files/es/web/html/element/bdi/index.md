@@ -56,4 +56,4 @@ Esta palabra arábica REDLOHECALP_CIBARA se muestra automáticamente de derecha 
 - Elementos HTML relacionados: {{HTMLElement("bdo")}}
 - Propiedades HTML relacionadas: {{cssxref("direction")}}, {{cssxref("unicode-bidi")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

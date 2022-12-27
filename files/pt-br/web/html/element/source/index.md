@@ -1,8 +1,8 @@
 ---
 title: source
 slug: Web/HTML/Element/Source
-translation_of: Web/HTML/Element/source
 ---
+
 ## Sumário
 
 O elemento `source` é utilizado para especificar múltiplos recursos de mídia de elementos {{HTMLElement("picture")}}, {{HTMLElement("audio")}} ou {{HTMLElement("video")}} em HTML5. É um elemento vazio. É normalmente usado para disponibilizar [multiple formats supported by different browsers](/En/Media_formats_supported_by_the_audio_and_video_elements).

@@ -1,15 +1,6 @@
 ---
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
-tags:
-  - Internacionalização
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - localeCompare()
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
 {{JSRef}}
 

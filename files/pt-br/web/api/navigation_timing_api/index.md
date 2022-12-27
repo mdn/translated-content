@@ -1,10 +1,8 @@
 ---
 title: Navigation Timing
 slug: Web/API/Navigation_timing_API
-tags:
-  - Web Performance API
-translation_of: Web/API/Navigation_timing_API
 ---
+
 A **API Navigation Timing** fornece dados que podem ser usados para medir a performance de um website. Diferente de outros mecanismos baseados em Javascript que já foram usados para o mesmo propósito, esta API pode fornecer dados sobre a latência do começo ao fim que podem ser mais precisas e relevantes.
 
 O exemplo a seguir mostra como você pode medir o tempo de carregamento percebido:

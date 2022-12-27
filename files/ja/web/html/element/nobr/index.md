@@ -3,7 +3,7 @@ title: '<nobr>: 無改行文字列要素'
 slug: Web/HTML/Element/nobr
 ---
 
-{{HTMLRef}}{{Non-standard_Header}}{{deprecated_header}}
+{{HTMLSidebar}}{{Non-standard_Header}}{{deprecated_header}}
 
 **`<nobr>`** は [HTML](/ja/docs/Web/HTML) の要素で、その内包する文字列の自動改行を無効化します。行内に収まらない文字列は、領域からはみ出てレンダリングされるか、スクロールバーを伴って表示されます。
 

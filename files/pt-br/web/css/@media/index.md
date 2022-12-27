@@ -1,15 +1,8 @@
 ---
 title: '@media'
 slug: Web/CSS/@media
-tags:
-  - '@media'
-  - At-rule
-  - CSS
-  - NeedsTranslation
-  - Reference
-  - TopicStub
-translation_of: Web/CSS/@media
 ---
+
 {{CSSRef}}
 
 The **`@media`** [CSS](/en/CSS) [at-rule](/en/CSS/At-rule) pode ser usada para aplicar estilos com base no resultado de uma ou mais consultas de mídia, que testam o tipo, as características específicas e o ambiente de um dispositivo.

@@ -1,15 +1,8 @@
 ---
 title: <time>
 slug: Web/CSS/time
-tags:
-  - Layout
-  - Referencia
-  - Time
-  - Time Refência
-  - Tipo de Dados CSS
-  - Web
-translation_of: Web/CSS/time
 ---
+
 {{CSSRef}}
 
 O tipo de dado CSS **`<time>`** representa um valor de tempo expresso em segundo ou milissegundos. É usado em animações( {{cssxref("animation")}} ), transições( {{cssxref("transition")}} ) e propriedades relacionadas.

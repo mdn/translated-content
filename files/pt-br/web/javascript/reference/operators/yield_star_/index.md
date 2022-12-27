@@ -1,17 +1,6 @@
 ---
 title: yield*
 slug: Web/JavaScript/Reference/Operators/yield*
-tags:
-  - ECMAScript 2015
-  - Generators
-  - Iterable
-  - Iterator
-  - JavaScript
-  - Operador
-  - Operator
-  - Reference
-  - Referencia
-translation_of: Web/JavaScript/Reference/Operators/yield*
 ---
 {{jsSidebar("Operators")}}
 

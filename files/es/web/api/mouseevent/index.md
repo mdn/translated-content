@@ -28,7 +28,7 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 
 - {{domxref("MouseEvent.button")}} {{readonlyinline}}
   - : The button number that was pressed when the mouse event was fired.
-- {{domxref("MouseEvent.buttons")}} {{readonlyinline}} {{gecko_minversion_inline("15.0")}}
+- {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
   - : The buttons being pressed when the mouse event was fired
 - {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
   - : The X coordinate of the mouse pointer in local (DOM content) coordinates.

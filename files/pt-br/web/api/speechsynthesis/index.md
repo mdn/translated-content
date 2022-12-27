@@ -1,18 +1,8 @@
 ---
 title: SpeechSynthesis
 slug: Web/API/SpeechSynthesis
-tags:
-  - API
-  - Elocução
-  - Experimental
-  - Fala
-  - Interface
-  - Referencia
-  - SpeechSynthesis
-  - Web Speech API
-  - sintetização
-translation_of: Web/API/SpeechSynthesis
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 A interface **`SpeechSynthesis`** da [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API) é a interface controladora para o serviço de fala; este pode ser usado para obter informações sobre as vozes sintetizadas disponíveis no dispositivo, reproduzir e pausar uma elocução, além de outros comandos.

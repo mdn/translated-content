@@ -155,4 +155,4 @@ The output from this HTML looks like this:
 
 - {{htmlelement("code")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

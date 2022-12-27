@@ -71,7 +71,7 @@ objeto[foo] = 'valor';
 alert(objeto[bar]);
 ```
 
-Ésto también tiene como resultado "valor", ya que tanto foo como bar se convierten a la misma cadena. En el motor de JavaScript [SpiderMonkey](/es/docs/Mozilla/SpiderMonkey), esta cadena sería "{{ mediawiki.external('objeto Object') }}".
+Ésto también tiene como resultado "valor", ya que tanto foo como bar se convierten a la misma cadena. En el motor de JavaScript [SpiderMonkey](/es/docs/Mozilla/SpiderMonkey), esta cadena sería `[objeto Object]`.
 
 ### Enlace a métodos
 

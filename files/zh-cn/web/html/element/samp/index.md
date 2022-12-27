@@ -64,4 +64,4 @@ Regular text. `This is sample text.` Regular text.
 
 - [HTML Code Element](/zh-CN/HTML/Element/code)
 
-{{ HTMLRef }}
+{{HTMLSidebar}}

@@ -28,7 +28,7 @@ Firefox 28 был выпущен 18 марта 2014 года. Список кл�
 - Inspector: added a color picker in rules view and various tooltips.
 - Browser Toolbox: allows add-on and platform developers to use almost all of the developer tools while targeting the browser itself.
 
-Больше деталей [в этой публикации](https://hacks.mozilla.org/2013/12/split-console-pretty-print-minified-js-and-more-firefox-developer-tools-episode-28/ "Split console, pretty-print minified JS and more – Firefox Developer Tools Episode 28").
+Больше деталей [в этой публикации](https://hacks.mozilla.org/2013/12/split-console-pretty-print-minified-js-and-more-firefox-developer-tools-episode-28/).
 
 ### CSS
 

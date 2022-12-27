@@ -1,7 +1,6 @@
 ---
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
-translation_of: Web/JavaScript/Reference/Functions/get
 ---
 {{jsSidebar("Functions")}}A sintaxe de **get** associa uma propriedade de um objeto a uma função que será chamada quando tal propriedade é acessada.
 

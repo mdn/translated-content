@@ -1,8 +1,8 @@
 ---
 title: <ins>
 slug: Web/HTML/Element/ins
-translation_of: Web/HTML/Element/ins
 ---
+
 ## Summary
 
 The **HTML `<ins>` Element** (or _HTML Inserted Text_) HTML represents a range of text that has been added to a document.
@@ -44,4 +44,4 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
 - {{HTMLElement("del")}} element for marking deletion into a document
 
-{{HTMLRef}}
+{{HTMLSidebar}}

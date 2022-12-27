@@ -99,7 +99,7 @@ _No hay ningún cambio._
 - Los URL `resource://` ya no filtran información ({{bug(863246)}})
 - Los URI de datos ahora se manipulan como orígenes opacos únicos, en vez de heredar el origen del objeto de configuración responsable de la navegación ({{bug(1324406)}}).
 
-### _Plugins_
+### Plugins
 
 _No hay ningún cambio._
 

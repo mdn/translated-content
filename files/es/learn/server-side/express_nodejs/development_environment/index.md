@@ -280,7 +280,7 @@ Por ejemplo, para definir un script para ejecutar la dependencia de desarrollo d
 }
 ```
 
-Para explicar un poco más, `eslint src/js` es un comando que podríamos ingresar en nuestra línea de terminal/linea de comandos para ejecutar `eslint`en archivos JavaScript contenidos en el directorio `src/js` dentro de nuestro directorio de aplicaciones. Incluir lo anterior dentro del archivo package.json de nuestra aplicación proporciona un acceso directo para este comando: `lint`.
+Para explicar un poco más, `eslint src/js` es un comando que podríamos ingresar en nuestra línea de terminal/linea de comandos para ejecutar `eslint` en archivos JavaScript contenidos en el directorio `src/js` dentro de nuestro directorio de aplicaciones. Incluir lo anterior dentro del archivo package.json de nuestra aplicación proporciona un acceso directo para este comando: `lint`.
 
 Entonces podríamos ejecutar eslint usando NPM llamando a:
 
@@ -367,7 +367,7 @@ El comando DEBUG crea registros útiles, lo que resulta en una salida como la qu
   helloworld:server Listening on port 3000 +0ms
 ```
 
-Abra un navegador y navegue a <http://127.0.0.1:3000/> para ver la página de bienvenida Express predeterminada.
+Abra un navegador y navegue a `http://127.0.0.1:3000/` para ver la página de bienvenida Express predeterminada.
 
 ![Express - Generated App Default Screen](https://mdn.mozillademos.org/files/14331/express_default_screen.png)
 

@@ -109,4 +109,3 @@ padding: env(x, 50px, 20px); /* ignored because '50px, 20px' is not a valid padd
 - [CSS Custom Properties for Cascading Variables](/zh-CN/docs/Web/CSS/CSS_Variables)
 - [Custom Properties (--\*)](/zh-CN/docs/Web/CSS/--*)
 - [Using CSS custom properties (variables)](/zh-CN/docs/Web/CSS/Using_CSS_variables)
-- {{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}

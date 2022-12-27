@@ -2,6 +2,7 @@
 title: border-right-width
 slug: Web/CSS/border-right-width
 ---
+
 {{CSSRef}}
 
 [CSS](/ko/docs/Web/CSS) **`border-right-width`** 속성은 요소의 오른쪽 테두리 너비를 지정합니다.

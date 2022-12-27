@@ -2,6 +2,7 @@
 title: d
 slug: Web/SVG/Attribute/d
 ---
+
 {{SVGRef}}
 
 **`d`** 속성은 그릴 패스를 정의합니다.

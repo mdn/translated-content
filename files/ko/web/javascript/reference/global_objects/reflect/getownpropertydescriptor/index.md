@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 ---
 {{JSRef}}
 
-**`Reflect`\*\***`.getOwnPropertyDescriptor()`\*\* 정적 메서드는 객체에 주어진 속성이 존재하면, 해당 속성의 서술자를 반환합니다. {{jsxref("Object.getOwnPropertyDescriptor()")}}와 유사합니다.
+**`Reflect.getOwnPropertyDescriptor()`** 정적 메서드는 객체에 주어진 속성이 존재하면, 해당 속성의 서술자를 반환합니다. {{jsxref("Object.getOwnPropertyDescriptor()")}}와 유사합니다.
 
 {{EmbedInteractiveExample("pages/js/reflect-getownpropertydescriptor.html")}}
 

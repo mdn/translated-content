@@ -1,14 +1,6 @@
 ---
 title: String.prototype.italics()
 slug: Web/JavaScript/Reference/Global_Objects/String/italics
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - String
-  - italics()
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/italics
 ---
 {{JSRef}} {{deprecated_header}}
 

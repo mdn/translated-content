@@ -1,8 +1,8 @@
 ---
 title: Document.body
 slug: Web/API/Document/body
-translation_of: Web/API/Document/body
 ---
+
 {{APIRef("DOM")}}
 
 Retorna o elemento {{HTMLElement("body")}} ou o {{HTMLElement("frameset")}} do documento atual, ou `null` se nenhum destes elementos existir.

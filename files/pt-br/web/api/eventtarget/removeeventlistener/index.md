@@ -1,15 +1,8 @@
 ---
 title: EventTarget.removeEventListener()
 slug: Web/API/EventTarget/removeEventListener
-tags:
-  - API
-  - DOM
-  - Gecko
-  - JavaScript
-  - Method
-  - events
-translation_of: Web/API/EventTarget/removeEventListener
 ---
+
 {{APIRef("DOM Events")}}
 
 Remove o event listener anteriormente registrado com {{domxref("EventTarget.addEventListener()")}}.

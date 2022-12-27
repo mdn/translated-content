@@ -5,13 +5,13 @@ slug: Web/API/DataTransfer/setDragImage
 
 {{APIRef("HTML Drag and Drop API")}}
 
-发生拖动时，从拖动目标 ({{event("dragstart")}}事件触发的元素) 生成半透明图像，并在拖动过程中跟随鼠标指针。这个图片是自动创建的，你不需要自己去创建它。然而，如果想要设置为自定义图像，那么 **`DataTransfer.setDragImage()`** 方法就能派上用场。
+发生拖动时，从拖动目标 ([`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event)事件触发的元素) 生成半透明图像，并在拖动过程中跟随鼠标指针。这个图片是自动创建的，你不需要自己去创建它。然而，如果想要设置为自定义图像，那么 **`DataTransfer.setDragImage()`** 方法就能派上用场。
 
 图像通常是一个 {{HTMLElement("image")}} 元素，但也可以是{{HTMLElement("canvas")}} 或任何其他图像元素。该方法的 x 和 y 坐标是图像应该相对于鼠标指针出现的偏移量。
 
 坐标指定鼠标指针相对于图片的偏移量。例如，要使图像居中，请使用图像宽度和高度的一半。
 
-通常在 {{event("dragstart")}} 事件处理程序中调用此方法。
+通常在 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件处理程序中调用此方法。
 
 ## 语法
 

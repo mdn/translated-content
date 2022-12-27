@@ -2,6 +2,7 @@
 title: keypress
 slug: Web/API/Element/keypress_event
 ---
+
 The `keypress` event is fired when a key is pressed down and that key normally produces a character value (use [`input`](/zh-CN/Mozilla_event_reference/input) instead).
 
 ## General info
@@ -23,10 +24,10 @@ The `keypress` event is fired when a key is pressed down and that key normally p
 
 ## Related Events
 
-- {{event("keydown")}}
-- {{event("keyup")}}
-- {{event("keypress")}}
-- {{event("input")}}
+- [`keydown`](/zh-CN/docs/Web/API/Element/keydown_event)
+- [`keyup`](/zh-CN/docs/Web/API/Element/keyup_event)
+- [`keypress`](/zh-CN/docs/Web/API/Element/keypress_event)
+- [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event)
 
 <table class="standard-table">
   <thead>

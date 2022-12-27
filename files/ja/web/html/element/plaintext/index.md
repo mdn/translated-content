@@ -36,4 +36,4 @@ slug: Web/HTML/Element/plaintext
 - {{HTMLElement("pre")}} 及び {{HTMLElement("code")}} 要素を代わりに使用してください。
 - {{HTMLElement("plaintext")}} と似た {{HTMLElement("listing")}} と {{HTMLElement("xmp")}} も廃止されています。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

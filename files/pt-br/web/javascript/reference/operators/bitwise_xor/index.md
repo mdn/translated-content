@@ -1,7 +1,6 @@
 ---
 title: Bitwise XOR (^)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
-translation_of: Web/JavaScript/Reference/Operators/Bitwise_XOR
 ---
 {{jsSidebar("Operators")}}
 

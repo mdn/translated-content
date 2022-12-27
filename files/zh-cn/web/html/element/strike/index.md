@@ -3,7 +3,7 @@ title: <strike>
 slug: Web/HTML/Element/strike
 ---
 
-{{HTMLRef}}{{deprecated_header}}
+{{HTMLSidebar}}{{deprecated_header}}
 
 [HTML](/zh-CN/docs/Web/HTML) **`<strike>`** 元素在文本上放置水平的删除线。
 

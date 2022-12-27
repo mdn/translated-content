@@ -6,6 +6,7 @@ tags:
   - 폐기됨
 translation_of: Web/HTML/Element/font
 ---
+
 ## 개요
 
 _HTML에서의 Font 요소_ (`<font>`) 는 본문의 글자 크기, 색상과 및면을 정의합니다.
@@ -37,4 +38,4 @@ This element implements the {{domxref("HTMLFontElement")}} interface.
 
 {{Compat("html.elements.font")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

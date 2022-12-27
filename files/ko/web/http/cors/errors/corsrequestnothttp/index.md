@@ -15,6 +15,7 @@ tags:
   - 크로스 오리진
 translation_of: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
+
 {{HTTPSidebar}}
 
 ## 이유

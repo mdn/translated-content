@@ -105,7 +105,7 @@ This output will look like this:
 
 #### Using string substitutions
 
-Gecko 9.0 {{geckoRelease("9.0")}} introduced support for string substitutions. When passing a string to one of the console object's methods that accepts a string, you may use these substitution strings:
+Gecko 9.0 introduced support for string substitutions. When passing a string to one of the console object's methods that accepts a string, you may use these substitution strings:
 
 | Substitution string | Description                                                                                                                                                                 |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

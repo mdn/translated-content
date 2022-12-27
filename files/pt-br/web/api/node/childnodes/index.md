@@ -1,8 +1,8 @@
 ---
 title: Node.childNodes
 slug: Web/API/Node/childNodes
-translation_of: Web/API/Node/childNodes
 ---
+
 {{ApiRef("DOM")}}
 
 A propriedade somente leitura **`Node.childNodes`** retorna uma _coleção viva_ de nós filhos de um dado elemento.

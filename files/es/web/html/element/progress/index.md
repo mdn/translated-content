@@ -4,7 +4,7 @@ slug: Web/HTML/Element/progress
 translation_of: Web/HTML/Element/progress
 original_slug: Web/HTML/Elemento/progress
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 La etiqueta **HTML `<progress>`** se utiliza para visualizar el progreso de una tarea. Aunque los detalles de como se muestran depende directamente del navegador que utiliza el cliente, aunque básicamente aparece una barra de progreso.
 

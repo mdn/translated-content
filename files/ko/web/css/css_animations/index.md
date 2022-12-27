@@ -2,6 +2,7 @@
 title: CSS Animations
 slug: Web/CSS/CSS_Animations
 ---
+
 {{CSSRef}}
 
 **CSS Animations** is a module of CSS that lets you animate the values of CSS properties over time, using keyframes. The behavior of these keyframe animations can be controlled by specifying their timing function, duration, their number of repetitions, and other attributes.

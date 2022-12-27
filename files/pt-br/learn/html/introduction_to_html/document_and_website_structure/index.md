@@ -1,9 +1,9 @@
 ---
 title: Estrutura de documento e sites
 slug: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
-translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 original_slug: Aprender/HTML/Introducao_ao_HTML/Estrutura_de_documento_e_sites
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML/Debugging_HTML", "Learn/HTML/Introduction_to_HTML")}}Além de definir as partes individuais de sua página (como "um parágrafo" ou "uma imagem"),
 
 o {{glossary("HTML")}} também conta com vários elementos de nível de bloco usados para definir as áreas de seu site (como "o cabeçalho", "o menu de navegação", "a coluna de conteúdo príncipal"). Este artigo explora como planejar uma estrutura básica de website, e escrever o HTML para representar essa estrutura.

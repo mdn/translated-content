@@ -1,15 +1,6 @@
 ---
 title: encodeURI()
 slug: Web/JavaScript/Reference/Global_Objects/encodeURI
-tags:
-  - Codificação
-  - JavaScript
-  - Texto
-  - URI
-  - URL
-  - encodeURI
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/encodeURI
 ---
 {{jsSidebar("Objects")}}
 

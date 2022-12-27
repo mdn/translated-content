@@ -119,7 +119,7 @@ var myString = 'Esto es mi String.';
 
 `myString` inmediatamente tiene una serie de métodos útiles disponibles en él, como [`split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace), etc.
 
-> **Advertencia:** **Importante**: La propiedad `prototype`es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this`apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype`es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
+> **Advertencia:** **Importante**: La propiedad `prototype` es una de las partes más confusamente nombradas de JavaScript - podría pensarse que `this` apunta al objeto prototipo del objeto actual, pero no lo hace (es un objeto interno al que puede accederse mediante `__proto__`, ¿recuerda?). en su lugar, `prototype` es una propiedad que contiene un objeto en el que se definen los miembros que se desea que se hereden.
 
 ## Revisando create()
 
@@ -141,9 +141,9 @@ Esto devolverá el objeto Persona.
 
 ## La propiedad constructor
 
-Cada función de constructor tiene una propiedad `prototype` cuyo valor es un objeto que contiene una propiedad `constructor`. Esta propiedad `constructor`apunta a la función constructor original.
+Cada función de constructor tiene una propiedad `prototype` cuyo valor es un objeto que contiene una propiedad `constructor`. Esta propiedad `constructor` apunta a la función constructor original.
 
-Como verá en la siguiente sección, las propiedades definidas en la propiedad Person.prototype (o en general en la propiedad `prototype` de una función de constructor, que es un objeto, como se mencionó en la sección anterior) se hacen disponibles a todas las instancias de objetos creadas utilizando el constructor `Person()`. Por lo tanto, la propiedad del constructor también está disponible tanto para los objetos `person1`como para los objetos `person2`.
+Como verá en la siguiente sección, las propiedades definidas en la propiedad Person.prototype (o en general en la propiedad `prototype` de una función de constructor, que es un objeto, como se mencionó en la sección anterior) se hacen disponibles a todas las instancias de objetos creadas utilizando el constructor `Person()`. Por lo tanto, la propiedad del constructor también está disponible tanto para los objetos `person1` como para los objetos `person2`.
 
 1. Por ejemplo, pruebe estos comandos en la consola:
 

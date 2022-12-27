@@ -45,7 +45,7 @@ Cuando se utiliza este valor {{htmlattrxref("type","input")}} , se le obliga al 
 
 ![﻿An invalid email input showing the message "Please enter an email address."](https://mdn.mozillademos.org/files/17027/email_address_invalid.png)
 
-Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) en combinación con el tipo input`email` para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:
+Puedes utilizar también el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) en combinación con el tipo input `email` para permitir que sean introducidas varias direcciones de correo electrónico separadas por comas en el mismo input:
 
 ```html
 <input type="email" id="email" name="email" multiple>

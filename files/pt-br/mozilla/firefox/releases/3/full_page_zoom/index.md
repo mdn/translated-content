@@ -1,13 +1,9 @@
 ---
 title: Zoom de página inteira
 slug: Mozilla/Firefox/Releases/3/Full_page_zoom
-tags:
-  - Extensões
-  - Firefox 3
-  - XUL
-translation_of: Mozilla/Firefox/Releases/3/Full_page_zoom
 original_slug: Mozilla/Firefox/Releases/3/Zoom_de_página_inteira
 ---
+
 {{FirefoxSidebar}}
 
 {{ Gecko_minversion_header("1.9") }}

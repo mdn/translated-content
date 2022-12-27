@@ -12,7 +12,7 @@ translation_of: Web/MathML/Authoring
 
 Математические обозначения ещё более сложны со структурами такими, как дроби, квадратные корни или матрицы, которые, вероятно, потребуют собственных тегов. Поэтому инструменты разработки, связанные с MathML, очень важны. Некоторые из этих инструментов мы описываем ниже. В частности, команда Mozilla MathML разрабатывала [TeXZilla](https://github.com/fred-wang/TeXZilla/) (Javascript Unicode LaTeX-to-MathML конвертер), который предназначен для использования во многих сценариях, описанных здесь. Конечно, этот список ни в коем случае не является исчерпывающим и вам предлагается проверить [W3C MathML software list](https://www.w3.org/Math/Software/), где вы можете найти некоторые другие инструменты.
 
-Заметим, что MathML хорошо интегрирован в HTML5. В частности, вы можете использовать обычные Web-инструменты, такие как CSS, DOM, Javascript или SVG. Данная тема выходит за рамки этого документа, но любой, у кого есть базовые знания Web-языков, сможет легко совместить эти инструменты с MathML. Ознакомьтесь с [нашими примерами](/ru/docs/Mozilla/MathML_Project#Sample_MathML_Documents) и [справочными данными по MathML](/ru/docs/Web/MathML "ru/MathML/Element") для получения более подробной информации.
+Заметим, что MathML хорошо интегрирован в HTML5. В частности, вы можете использовать обычные Web-инструменты, такие как CSS, DOM, Javascript или SVG. Данная тема выходит за рамки этого документа, но любой, у кого есть базовые знания Web-языков, сможет легко совместить эти инструменты с MathML. Ознакомьтесь с [нашими примерами](/ru/docs/Mozilla/MathML_Project#Sample_MathML_Documents) и [справочными данными по MathML](/ru/docs/Web/MathML) для получения более подробной информации.
 
 ## Использование MathML
 
@@ -88,7 +88,7 @@ var isWebKit = ua.indexOf('AppleWebKit') > -1 && ua.indexOf('Chrome') === -1;
 
 #### Математические шрифты
 
-Для того, чтобы получить хорошую разметку или обеспечить нужный стиль, важно иметь математические шрифты. Всегда полезно обеспечить ссылку на [инструкцию по шрифтам MDN ](/ru/docs/Mozilla/MathML_Project/Fonts), чтобы ваши посетители могли проверить - установлены ли соответствующие шрифты в их системе. Хорошо также, если будет создана резервная копия веб-шрифтов.
+Для того, чтобы получить хорошую разметку или обеспечить нужный стиль, важно иметь математические шрифты. Всегда полезно обеспечить ссылку на [инструкцию по шрифтам MDN](/ru/docs/Mozilla/MathML_Project/Fonts), чтобы ваши посетители могли проверить - установлены ли соответствующие шрифты в их системе. Хорошо также, если будет создана резервная копия веб-шрифтов.
 
 До Gecko 31.0 {{GeckoRelease("31.0")}} было утомительно устанавливать математические шрифты (смотрите [инструкцию по установке шрифтов для Mozilla 2.0](/ru/docs/Mozilla/MathML_Project/FontsMozilla2.0#MathML_Font_Selection_with_CSS)). Для Gecko 31.0 {{GeckoRelease("31.0")}} это намного проще и совместимо со всеми движками Web рендеринга с поддержкой MathML. Например, здесь представлена минимальная таблица стилей для использования шрифта Latin Modern для текста и шрифта Latin Modern Math для математических выражений:
 
@@ -319,13 +319,13 @@ cat input.html | itex2MML > output.html
 
   - Это может быть немного сложнее настроить, так как вам нужны права администратора на вашем сервере.
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://dlmf.nist.gov/LaTeXML/) и [Mathoid](https://github.com/gwicke/mathoid) могут использоваться для выполнения преобразования LaTeX-to-MathML на стороне сервера.[ Instiki](http://instiki.org/show/HomePage) и [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) - это два wiki движка, которые поддерживают преобразование LaTeX-to-MathML.
+[TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://dlmf.nist.gov/LaTeXML/) и [Mathoid](https://github.com/gwicke/mathoid) могут использоваться для выполнения преобразования LaTeX-to-MathML на стороне сервера. [Instiki](http://instiki.org/show/HomePage) и [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) - это два wiki движка, которые поддерживают преобразование LaTeX-to-MathML.
 
 ## Графический интерфейс
 
 ### Поле ввода
 
-[TeXZilla](https://github.com/fred-wang/TeXZilla) имеет несколько интерфейсов, включая плагин [CKEditor](https://ckeditor.com/addon/texzilla), используемый в MDN, [онлайн демо](http://fred-wang.github.io/TeXZilla/) и [дополнение Firefox](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) или [FirefoxOS Webapp](https://marketplace.firefox.com/app/texzilla-1/). Он также был интегрирован в [SeaMonkey](https://www.seamonkey-project.org/) с версии 2.28 и в [Thunderbird](https://www.mozilla.org/thunderbird/) с версии 31.[ Abiword](http://abisource.org/) содержит небольшой редактор уравнений, основанный на itex2MML. Наконец, [Bluegriffon](http://www.bluegriffon.com/) имеет дополнение для вставки формул MathML в ваш документ, используя синтаксис, подобный ASCII/LaTeX.
+[TeXZilla](https://github.com/fred-wang/TeXZilla) имеет несколько интерфейсов, включая плагин [CKEditor](https://ckeditor.com/addon/texzilla), используемый в MDN, [онлайн демо](http://fred-wang.github.io/TeXZilla/) и [дополнение Firefox](https://addons.mozilla.org/en-US/firefox/addon/texzilla/) или [FirefoxOS Webapp](https://marketplace.firefox.com/app/texzilla-1/). Он также был интегрирован в [SeaMonkey](https://www.seamonkey-project.org/) с версии 2.28 и в [Thunderbird](https://www.mozilla.org/thunderbird/) с версии 31. [Abiword](http://abisource.org/) содержит небольшой редактор уравнений, основанный на itex2MML. Наконец, [Bluegriffon](http://www.bluegriffon.com/) имеет дополнение для вставки формул MathML в ваш документ, используя синтаксис, подобный ASCII/LaTeX.
 
 ![BlueGriffon](mathml-shot1.png)
 

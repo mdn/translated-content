@@ -1,12 +1,6 @@
 ---
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
-tags:
-  - Array
-  - ECMAScript6
-  - JavaScript
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
 {{JSRef}}
 

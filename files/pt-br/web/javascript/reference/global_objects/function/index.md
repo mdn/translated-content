@@ -1,13 +1,6 @@
 ---
 title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
-tags:
-  - Constructor
-  - Function
-  - JavaScript
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Function
 ---
 {{JSRef("Global_Objects", "Function")}}
 

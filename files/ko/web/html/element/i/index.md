@@ -9,7 +9,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/i
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<i>` 요소**는 텍스트에서 어떤 이유로 주위와 구분해야 하는 부분을 나타냅니다. 기술 용어, 외국어 구절, 등장인물의 생각 등을 예시로 들 수 있습니다. 보통 기울임꼴로 표시합니다.
 

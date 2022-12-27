@@ -1,15 +1,6 @@
 ---
 title: Expressão de função (function expression)
 slug: Web/JavaScript/Reference/Operators/function
-tags:
-  - Expressões Primárias
-  - Função
-  - Internet
-  - JavaScript
-  - Operador
-  - Rede
-  - Web
-translation_of: Web/JavaScript/Reference/Operators/function
 ---
 {{jsSidebar("Operators")}}
 

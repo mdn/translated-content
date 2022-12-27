@@ -1,18 +1,8 @@
 ---
 title: Primeiros passos com CSS
 slug: Learn/CSS/First_steps
-tags:
-  - Beginner
-  - CSS
-  - Iniciante
-  - Landing
-  - Learn
-  - Module
-  - Primeiros passos
-  - aprenda
-  - first steps
-translation_of: Learn/CSS/First_steps
 ---
+
 {{LearnSidebar}}
 
 CSS ( Planilhas de estilo em cascata) é usada para estilizar e arranjar páginas web — por exemplo, para alterar a fonte, cor, tamanho e espaçamento do seu conteúdo, separá-lo em multiplas colunas, ou então adicionar animações e outras implementações decorativas. Esse módulo provê um começo sutil em seu caminho pelo domínio do CSS com o básico de como ele funciona, como é a aparência da sintaxe e como você pode começar a utilizá-lo para estilizar seu HTML.

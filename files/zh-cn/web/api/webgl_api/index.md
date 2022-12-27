@@ -167,7 +167,7 @@ WebGL 2 是 WebGL 的一个主要更新，它通过{{domxref("WebGL2RenderingCon
 
 #### WebGL 调试与检测
 
-开始使用 Gecko 10.0 {{geckoRelease("10.0")}}, 在测试中，这里有两个参数可以让你来控制 WebGL 性能：
+开始使用 Gecko 10.0，在测试中，这里有两个参数可以让你来控制 WebGL 性能：
 
 - `webgl.min_capability_mode`
   - : 一个以布尔值存储的属性。当它的值为`True`时，将会启用最小性能模式。当这个模式启用时，WebGL 将会仅提供由其标准指定的最基本的功能集和性能支持。这样可以确保您的 WebGL 代码能够在性能的设备和浏览器上正确运行。它的默认值是`False`。

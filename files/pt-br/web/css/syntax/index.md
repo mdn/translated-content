@@ -1,9 +1,9 @@
 ---
 title: Sintaxe
 slug: Web/CSS/Syntax
-translation_of: Web/CSS/Syntax
 original_slug: Web/CSS/sintaxe
 ---
+
 O Objetivo básico da linguagem de folhas de estilo em cascata ([CSS](/en/CSS)) é permitir que um motor do navegador pinte elementos na página com características específicas como cores, posições, ou decorações. A sintaxe _CSS_ reflete estes objetivos e seus blocos de contrução básicos são:
 
 - A **propriedade** é um identificador que possui um nome legível, que define o que será considerado ou editado;

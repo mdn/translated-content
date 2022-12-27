@@ -1,14 +1,8 @@
 ---
 title: EventSource()
 slug: Web/API/EventSource/EventSource
-tags:
-  - API
-  - Construtor
-  - EventSource
-  - Eventos enviados pelo servidor
-  - Referencia
-translation_of: Web/API/EventSource/EventSource
 ---
+
 {{APIRef('WebSockets API')}}
 
 O construtor **`EventSource()`** retorna uma nova {{domxref("EventSource")}}, que representa um recurso remoto.

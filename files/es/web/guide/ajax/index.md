@@ -3,6 +3,7 @@ title: AJAX
 slug: Web/Guide/AJAX
 translation_of: Web/Guide/AJAX
 ---
+
 **[Primeros Pasos](/es/docs/Web/Guide/AJAX/Getting_Started)**
 Una introducción a AJAX.
 
@@ -13,27 +14,17 @@ Una introducción a AJAX.
 - [Primeros pasos con AJAX](/es/docs/Web/Guide/AJAX/Getting_Started)
   - : Este artículo te guiará por los conceptos básicos de AJAX y te proporcionará dos ejemplos prácticos para que empieces.
 
-<!---->
-
 - [Técnicas Ajax Alternativas](http://www.webreference.com/programming/ajax_tech/)
   - : La mayoría de los artículos sobre Ajax se enfocaron en utilizar XMLHttp como el medio para llevar a cabo dicha comunicación, pero las técnicas Ajax no están limitadas solo a XMLHttp. Existen otros métodos más.
-
-<!---->
 
 - [Ajax con PHP, JSON y CSS](http://thinkcoderepeat.blogspot.com/2006/02/tutorial-de-ajax-con-php-y-json.html)
   - : Con este tutorial puedes programar con AJAX utilizando PHP y JSON, un nuevo estándar más simple que XML. Programarás en AJAX, PHP y CSS de forma simple y natural.
 
-<!---->
-
 - [Ajax Upload File](http://webdev20.blogspot.com/2006/02/ajax-upload-file.html)
   - : Artículo en el que se explica la carga de archivos de un formulario usando AJAX y PHP, además de otros ejemplos en los que se puede visualizar la barra de progreso de la carga.
 
-<!---->
-
 - [Creando formulario editables in situ](http://www.baluart.net/articulo/346/edicion-in-situ-con-ajax.php)
   - : Breve tutorial que nos muestra como crear nuestros formularios editables in situ con AJAX, PHP y MySQL, al estilo Flickr.
-
-<!---->
 
 - [Arquitectura Cliente Servidor con AJAX](http://thinkcoderepeat.blogspot.com/2006/08/arquitectura-cliente-servidor-con-ajax.html)
   - : Artículo avanzado que muestra un patrón de diseño para desarrollar con AJAX, haciendo el modelo de la aplicación como web-services, la interface (view) con HTML y el controlador (controller) en Javascript, para crear aplicaciones siguiendo el paradigma MVC. Herramientas: Prototype, JSON y CSS.
@@ -41,12 +32,10 @@ Una introducción a AJAX.
 #### Comunidad
 
 - [Ajax-es](http://groups.google.es/group/Ajax-es?lnk=sg&hl=es). Foro sobre AJAX.
-
-<!---->
-
 - Foros sobre AJAX en la comunidad Mozilla en inglés:
-
-{{ DiscussionList("dev-ajax", "mozilla.dev.ajax") }}
+- [como lista de correo](https://lists.mozilla.org/listinfo/dev-ajax)
+- [como grupo de noticias](https://groups.google.com/group/mozilla.dev.ajax)
+- [como RSS](https://groups.google.com/group/mozilla.dev.ajax/feeds)
 
 #### Herramientas
 

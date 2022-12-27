@@ -8,6 +8,7 @@ tags:
   - 리다이렉트
 translation_of: Web/HTTP/Status/302
 ---
+
 {{HTTPSidebar}}
 
 하이퍼텍스트 전송 프로토콜 (HTTP)의 302 Found 리다이렉트 상태 응답 코드는 클라이언트가 요청한 리소스가 {{HTTPHeader("Location")}} 헤더에 주어진 URL에 일시적으로 이동되었음을 가리킨다. 브라우저는 사용자를 이 URL의 페이지로 리다이렉트시키지만 검색 엔진은 그 리소스가 일시적으로 이동되었다고 해서 그에 대한 링크를 갱신하지는 않는다 ('SEO 관점' 에서 말하자면, 링크 주스(Link Juice)가 새로운 URL로 보내지지는 않는다).

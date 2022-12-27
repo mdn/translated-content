@@ -131,7 +131,7 @@ Hay muchas más. Para un lisado completo ver [Category:Web security exploits](ht
 
 Casi todos los exploits de las secciones anteriores tienen éxito cuando la aplicación web confía en los datos que vienen del explorador. Sea lo que sea que hagas para mejorar la seguridad de tu sitio web, deberías desinfectar todos los datos originados por el usuario antes de ser mostrados en el explorador, usados en queries SQL o pasados en una llamada al sistema operativo o fichero de sistema.
 
-> **Advertencia:** La lección más importante que debes aprender acerca de la seguridad de sitios web es **nunca confíes en los datos del explorador web**. Esto incluye los datos en parámetros URL de las peticiones`GET`, datos `POST`, cabeceras HTTP y cookies, ficheros subidos por los usuarios, etc. Comprueba siempre y desinfecta todos los datos entrantes. Siempre asume lo peor.
+> **Advertencia:** La lección más importante que debes aprender acerca de la seguridad de sitios web es **nunca confíes en los datos del explorador web**. Esto incluye los datos en parámetros URL de las peticiones `GET`, datos `POST`, cabeceras HTTP y cookies, ficheros subidos por los usuarios, etc. Comprueba siempre y desinfecta todos los datos entrantes. Siempre asume lo peor.
 
 Otras cuantas medidas concretas que puedes tomar son:
 

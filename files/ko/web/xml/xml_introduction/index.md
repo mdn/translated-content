@@ -2,6 +2,7 @@
 title: XML Introduction
 slug: Web/XML/XML_Introduction
 ---
+
 ### XML이란?
 
 XML은 **Extensible Markup Language**을 뜻하며, [W3C 권고](http://www.w3.org/) 범용 마크업 언어다. XML은 SGML의 부분집합이다.

@@ -1,13 +1,8 @@
 ---
 title: ruby-align
 slug: Web/CSS/ruby-align
-tags:
-  - CSS
-  - Propriedade
-  - Referencia
-  - Referencia CSS
-translation_of: Web/CSS/ruby-align
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Summary

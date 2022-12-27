@@ -1,9 +1,9 @@
 ---
 title: Usando o slider role
 slug: Web/Accessibility/ARIA/Roles/slider_role
-translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_slider_role
 ---
+
 ### Descrição
 
 Essa técnica demonstrará como usar o [slider](http://www.w3.org/TR/wai-aria/roles#slider) role.

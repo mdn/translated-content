@@ -1,18 +1,8 @@
 ---
 title: Accept-Charset
 slug: Web/HTTP/Headers/Accept-Charset
-tags:
-  - Cabeçalho HTTP
-  - Cabeçalho de requisição
-  - Content Negotiation
-  - HTTP
-  - HTTP Header
-  - Negociação de conteúdo
-  - Reference
-  - Referencia
-  - Request header
-translation_of: Web/HTTP/Headers/Accept-Charset
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição HTTP **`Accept-Charset`** anuncia quais {{glossary("character encoding", "character encodings")}} o cliente entende. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor seleciona uma das codificações, a utiliza, e informa o cliente da sua escolha dentro do cabeçalho de resposta {{HTTPHeader("Content-Type")}}, geralmente em um parâmetro `charset=`. Navegadores geralmente não mandam este cabeçalho, por que o valor padrão para cada recurso geralmente está correto e transmiti-lo iria permitir [fingerprinting](/pt-BR/docs/Mozilla/Firefox/Privacy/Tracking_Protection).

@@ -1,17 +1,9 @@
 ---
 title: Introduction to HTML5 Game Development (summary)
 slug: Games/Introduction_to_HTML5_Game_Development
-tags:
-  - API
-  - Desenvolvimento Web
-  - Desenvolvimento mobile
-  - Firefox OS
-  - HTML5
-  - JavaScript
-  - Jogos
-translation_of: Games/Introduction_to_HTML5_Game_Development_(summary)
 original_slug: Games/Introduction_to_HTML5_Game_Gevelopment_(summary)
 ---
+
 {{GamesSidebar}}
 
 ## Vantagens

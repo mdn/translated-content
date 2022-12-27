@@ -1,13 +1,6 @@
 ---
 title: Arrow functions
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
-tags:
-  - ECMAScript 2015
-  - Funções
-  - Intermediário
-  - JavaScript
-  - Referencia
-translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 ---
 {{jsSidebar("Functions")}}
 

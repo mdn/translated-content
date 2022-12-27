@@ -1,8 +1,8 @@
 ---
 title: ':link'
 slug: Web/CSS/:link
-translation_of: Web/CSS/:link
 ---
+
 {{ CSSRef() }}
 
 ## Resumo

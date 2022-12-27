@@ -1,18 +1,9 @@
 ---
 title: env()
 slug: Web/CSS/env
-tags:
-  - CSS
-  - CSS Function
-  - CSS Variables
-  - Draft
-  - Reference
-  - Variables
-  - env
-  - env()
-translation_of: Web/CSS/env()
 original_slug: Web/CSS/env()
 ---
+
 {{CSSRef}}
 
 A função [CSS](/pt-BR/docs/Web/CSS) **`env()`** pode ser usada para inserir o valor de uma variável de ambiente definida pelo agente do usuário em seu CSS, de uma maneira semelhante à função {{cssxref("var")}} e [propriedades personalizadas](/pt-BR/docs/Web/CSS/--*). A diferença é que, além de serem definidas pelo agente do usuário em vez de serem definidas pelo usuário, as variáveis de ambiente têm escopo global para um documento, enquanto as propriedades personalizadas têm um escopo para o(s) elemento(s) no(s) qual(is) é/são declarado(s).

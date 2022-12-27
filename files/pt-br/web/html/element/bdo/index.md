@@ -1,14 +1,9 @@
 ---
 title: <bdo>
 slug: Web/HTML/Element/bdo
-tags:
-  - HTML
-  - bdo
-  - ltr
-  - rtl
-translation_of: Web/HTML/Element/bdo
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 O **_elemento_ HTML `<bdo>` **(_bidirectional override_) é usado para substituir a direcionalidade atual do texto. Isso faz com que a direcionalidade dos personagens seja ignorada em favor da direcionalidade especificada.
 

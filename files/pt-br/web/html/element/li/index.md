@@ -1,16 +1,8 @@
 ---
 title: <li>
 slug: Web/HTML/Element/li
-tags:
-  - Elementos
-  - Guía
-  - HTML
-  - Indentação
-  - Referencia
-  - listagem <li>
-  - menu+HTML
-translation_of: Web/HTML/Element/li
 ---
+
 ## Resumo
 
 O **_elemento_** **_HTML_ `<li>`** (ou a Lista dos Itens de um elemento HTML) é usado para representar um item que faz parte de uma lista. Este item deve estar contido em um elemento pai: uma lista ordenada ({{HTMLElement("ol")}}), uma lista desordenada ({{HTMLElement("ul")}}) , ou um menu ({{HTMLElement("menu")}}) e representa uma única entidade dessa lista. Em menus e listas desordenadas a relação de itens é exibida, normalmente, usando pontos de marcação (as bolinhas). Em listas ordenadas eles são, comumente, mostrados com algum contador ascendente - como um número, ou letra - à sua esquerda.
@@ -98,4 +90,4 @@ Para exemplos mais detalhados veja as páginas [\<ol>](/pt-BR/docs/Web/HTML/Elem
   - [contadores CSS](/Web/Guide/CSS/Counters) para controlar listas aninhadas complexas,
   - a propriedade {{cssxref("margin")}}, para controlar a indentação dos itens da lista.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

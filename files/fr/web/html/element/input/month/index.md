@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/input/month
 browser-compat: html.elements.input.input-month
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`month`** permettent de créer des contrôles où l'utilisatrice ou l'utilisateur peut saisir un mois et année. La valeur associée à un tel élément suit le format `YYYY-MM`, où `YYYY` représente l'année sur quatre chiffre et `MM` le mois sur deux chiffres.
 

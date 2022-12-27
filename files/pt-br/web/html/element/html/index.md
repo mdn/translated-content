@@ -1,16 +1,8 @@
 ---
 title: <html>
 slug: Web/HTML/Element/html
-tags:
-  - Elemento
-  - Elemento raiz HTML
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/html
 ---
+
 ## Sumário
 
 O elemento **HTML \<html> **(ou _HTML root element_) representa a raiz de um HTML ou XHTML documento. Todos os outros elementos devem ser descendentes desse elemento.
@@ -64,4 +56,4 @@ Desde que o elemento `<html>` seja o primeiro em documento outro que comenta, es
 - Elemento de alto nível MathML: {{MathMLElement("math")}}
 - Elemento de alto nível SVG: {{SVGElement("svg")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

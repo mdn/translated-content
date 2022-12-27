@@ -1,9 +1,9 @@
 ---
 title: HTML table basics
 slug: Learn/HTML/Tables/Basics
-translation_of: Learn/HTML/Tables/Basics
 original_slug: Aprender/HTML/Tables/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Aprender/HTML/Tabelas/Avançado", "Aprender/HTML/Tabelas")}}
 
 Este artigo é uma introdução às tabelas HTML, cobrindo o básico, como linhas e células, cabeçalhos, fazendo as células ocuparem várias colunas e linhas e como agrupar todas as células em uma coluna para fins de estilo.

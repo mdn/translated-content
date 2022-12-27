@@ -1,8 +1,8 @@
 ---
 title: resize
 slug: Web/API/Window/resize_event
-translation_of: Web/API/Window/resize_event
 ---
+
 O evento **`resize`** é disparado quando o document view é redimensionado.
 
 O evento manipulador pode ser registrado para o evento `resize` usando o atributo `window.onresize` ou usando `window.addEventListener('resize', ...)`

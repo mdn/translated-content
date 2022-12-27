@@ -1,11 +1,9 @@
 ---
 title: API
 slug: Glossary/API
-tags:
-  - Glossario(2)
-translation_of: Glossary/API
 original_slug: Glossario/API
 ---
+
 Uma API (_Application Programming Interface_) é um conjunto de características e regras existentes em uma aplicação que possibilitam interações com essa através de um software - ao contrário de uma interface de usuário humana. A API pode ser entendida como um simples contrato entre a aplicação que a fornece e outros itens, como outros componentes do software, ou software de terceiros.
 
 No desenvolvimento Web, uma API é geralmente um conjunto de {{glossary("method","methods")}} padronizados, {{Glossary("property","properties")}}, eventos, e {{Glossary("URL","URLs")}} que um desenvolvedor pode usar em seus aplicativos para interagir com componentes do navegador da Web de um usuário ou outro software / hardware no computador do usuário ou sites e serviços de terceiros.

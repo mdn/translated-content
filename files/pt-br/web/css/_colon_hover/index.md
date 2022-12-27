@@ -1,8 +1,8 @@
 ---
 title: ':hover'
 slug: Web/CSS/:hover
-translation_of: Web/CSS/:hover
 ---
+
 {{ CSSRef() }}
 
 ## Resumo

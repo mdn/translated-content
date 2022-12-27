@@ -18,7 +18,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 ## Объявление в manifest.json
 
-За кнопку на панели инструментов отвечает свойство манифеста [`browser_action`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action):
+За кнопку на панели инструментов отвечает свойство манифеста [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action):
 
 ```json
 "browser_action": {
@@ -34,7 +34,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Browser_action
 
 Расширение может иметь только одну кнопку для панели инструментов.
 
-Возможны два способа реакции на нажатие кнопки: отображение [всплывающего окна](/en-US/Add-ons/WebExtensions/Popups) (описано в отдельном разделе) или отправка события в background script расширения. В таком случае реакция на нажатие обеспечивают обработчики событий, подключённые к [`browserAction.onClicked`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked "Fired when a browser action icon is clicked. This event will not fire if the browser action has a popup."):
+Возможны два способа реакции на нажатие кнопки: отображение [всплывающего окна](/en-US/Add-ons/WebExtensions/Popups) (описано в отдельном разделе) или отправка события в background script расширения. В таком случае реакция на нажатие обеспечивают обработчики событий, подключённые к [`browserAction.onClicked`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/BrowserAction/onClicked):
 
 ```js
 browser.browserAction.onClicked.addListener(handleClick);
@@ -42,7 +42,7 @@ browser.browserAction.onClicked.addListener(handleClick);
 
 Если же указать в качестве реакции на нажатие всплывающее окно, то событие передано не будет. Вместо этого около кнопки отобразится всплывающее окно - отдельная маленькая страница, дальнейшее взаимодействие с пользователем берёт на себя она. Подробнее этот сценарий описан на отдельной странице, посвящённой [всплывающим окнам](/en-US/Add-ons/WebExtensions/Popups).
 
-Все свойства кнопки на панели инструментов можно изменить программно через API [`browserAction`](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
+Все свойства кнопки на панели инструментов можно изменить программно через API [`browserAction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
 
 ## Примеры
 

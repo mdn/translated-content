@@ -70,6 +70,6 @@ if (connection) {
 
 ## Véase también
 
-- {{spec("http://w3c.github.io/netinfo/", "Network Information API Specification", "ED")}}
+- [Network Information API Specification](http://w3c.github.io/netinfo/)
 - [Online and offline events](/es/docs/Online_and_offline_events)
 - {{domxref("Navigator.connection", "window.navigator.connection")}}

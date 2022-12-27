@@ -3,7 +3,7 @@ title: <menu>
 slug: Web/HTML/Element/menu
 translation_of: Web/HTML/Element/menu
 ---
-{{HTMLRef}}{{SeeCompatTable}}
+{{HTMLSidebar}}{{SeeCompatTable}}
 
 **HTML-элемент `<menu>`** представляет группу команд, которые пользователь может выполнить или активировать. Он включает как меню-списки, которые могут отображаться в верхней части экрана, так и [контекстные меню](/ru/docs/Web/HTML/Element/menu#Context_menu), например, такие, что могут появиться под кнопкой после нажатия.
 

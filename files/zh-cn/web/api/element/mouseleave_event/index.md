@@ -7,7 +7,7 @@ slug: Web/API/Element/mouseleave_event
 
 指点设备（通常是鼠标）的指针移出某个元素时，会触发`mouseleave`事件。
 
-`mouseleave` 和 {{event('mouseout')}} 是相似的，但是两者的不同在于`mouseleave` 不会冒泡而`mouseout` 会冒泡。
+`mouseleave` 和 [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event) 是相似的，但是两者的不同在于`mouseleave` 不会冒泡而`mouseout` 会冒泡。
 这意味着当指针离开元素及其所有后代时，会触发`mouseleave`，而当指针离开元素或离开元素的后代（即使指针仍在元素内）时，会触发`mouseout`。
 
 <table class="standard" style="border: solid 1px">
@@ -161,13 +161,13 @@ slug: Web/API/Element/mouseleave_event
 
 ## 相关链接
 
-- {{Event("mousedown")}}
-- {{Event("mouseup")}}
-- {{Event("mousemove")}}
-- {{Event("click")}}
-- {{Event("dblclick")}}
-- {{Event("mouseover")}}
-- {{Event("mouseout")}}
-- {{Event("mouseenter")}}
-- {{Event("mouseleave")}}
-- {{Event("contextmenu")}}
+- [`mousedown`](/zh-CN/docs/Web/API/Element/mousedown_event)
+- [`mouseup`](/zh-CN/docs/Web/API/Element/mouseup_event)
+- [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event)
+- [`click`](/zh-CN/docs/Web/API/Element/click_event)
+- [`dblclick`](/zh-CN/docs/Web/API/Element/dblclick_event)
+- [`mouseover`](/zh-CN/docs/Web/API/Element/mouseover_event)
+- [`mouseout`](/zh-CN/docs/Web/API/Element/mouseout_event)
+- [`mouseenter`](/zh-CN/docs/Web/API/Element/mouseenter_event)
+- [`mouseleave`](/zh-CN/docs/Web/API/Element/mouseleave_event)
+- [`contextmenu`](/zh-CN/docs/Web/API/Element/contextmenu_event)

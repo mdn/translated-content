@@ -55,9 +55,9 @@ function main() {
 
 如果 WebGL 上下文成功初始化，变量‘gl’会用来引用该上下文。在这个例子里，我们用黑色清除上下文内已有的元素。（用背景颜色重绘 canvas）。
 
-{{EmbedGHLiveSample('webgl-examples/tutorial/sample1/index.html', 670, 510) }}
+{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample1/index.html', 670, 510) }}
 
-[看源码](https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial/sample1) | [看 DEMO](http://mdn.github.io/webgl-examples/tutorial/sample1/)
+[查看完整的源码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample1) | [在新标签页中查看演示](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample1/)
 
 ## 参见
 

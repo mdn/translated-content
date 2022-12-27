@@ -1,15 +1,6 @@
 ---
 title: String.prototype.repeat()
 slug: Web/JavaScript/Reference/Global_Objects/String/repeat
-tags:
-  - JavaScript
-  - Prototype
-  - Referencia
-  - Repetir
-  - String
-  - metodo
-  - repeat()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/repeat
 ---
 {{JSRef}}
 

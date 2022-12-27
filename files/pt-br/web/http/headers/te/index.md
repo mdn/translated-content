@@ -1,12 +1,8 @@
 ---
 title: TE
 slug: Web/HTTP/Headers/TE
-tags:
-  - HTTP
-  - Referencia
-  - cabeçalho
-translation_of: Web/HTTP/Headers/TE
 ---
+
 {{HTTPSidebar}}
 
 O cabeçalho de requisição **`TE`** especifica a codificação de transferência que o agente de usuário está propício a aceitar (você poderia informalmente chamar ele de _`Accept-Transfer-Encoding`_, o que seria mais intuitivo).

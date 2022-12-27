@@ -8,6 +8,7 @@ tags:
   - Reference
 translation_of: Web/HTML/Global_attributes/contextmenu
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 > **경고:** [contextmenu 특성은 폐기되었으며](https://html.spec.whatwg.org/multipage/obsolete.html#attr-contextmenu), 모든 브라우저에서 제거될 것입니다.

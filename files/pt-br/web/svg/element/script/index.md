@@ -1,11 +1,6 @@
 ---
 title: script
 slug: Web/SVG/Element/script
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/script
 ---
 Um elemento `script` é equivalente a um elemento [`script`](/pt-BR/HTML/Element/Script) em HTML e, portanto, é o lugar para os scripts (por exemplo, ECMAScript).
 

@@ -1,8 +1,8 @@
 ---
 title: <del>
 slug: Web/HTML/Element/del
-translation_of: Web/HTML/Element/del
 ---
+
 ## Sumário
 
 O **elemento** **HTML `<del>`** (ou _Elemento_ _HTML_ _de Texto Excluído_) representa uma parte do texto que foi excluída de um documento. Este elemento é (não necessariamente) renderizado pelos navegadores com uma linha entre o texto.
@@ -48,4 +48,4 @@ This element includes the [global attributes](/pt-BR/docs/HTML/Global_attributes
 
 - {{HTMLElement("ins")}} element for insertions into a text
 
-{{HTMLRef}}
+{{HTMLSidebar}}

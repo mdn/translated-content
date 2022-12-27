@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/input/datetime-local
 browser-compat: html.elements.input.input-datetime-local
 ---
 
-{{HTMLRef("Input_types")}}
+{{HTMLSidebar}}
 
 Les éléments [`<input>`](/fr/docs/Web/HTML/Element/Input) dont l'attribut `type` vaut **`"datetime-local"`** permettent de créer des champs destinés à saisir simplement une date (définie par une année, un mois, et un jour) et une heure (définie par une heure et une minute). Il n'y a pas de secondes dans ce contrôle.
 

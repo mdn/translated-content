@@ -9,6 +9,7 @@ tags:
   - 성공
 translation_of: Web/HTTP/Status/206
 ---
+
 {{HTTPSidebar}}
 
 HTTP **`206 Partial Content`**는 {{HTTPHeader("Range")}} 헤더에 기술된 데이터 범위에 대한 요청이 성공적으로 응답되어 바디에 해당되는 데이터를 담고 있다는 것을 알려줍니다.

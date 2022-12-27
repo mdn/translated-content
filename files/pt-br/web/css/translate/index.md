@@ -1,13 +1,6 @@
 ---
 title: translate
 slug: Web/CSS/translate
-tags:
-  - CSS
-  - CSS Property
-  - Reference
-  - Transforms
-  - recipe:css-property
-translation_of: Web/CSS/translate
 ---
 
 {{CSSRef}}

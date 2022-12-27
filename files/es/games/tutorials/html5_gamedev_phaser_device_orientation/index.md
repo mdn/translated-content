@@ -267,7 +267,7 @@ De esa manera podemos verificar qué tecla es presionada en determinado _frame_ 
 
 #### Implementando la API de Orientación del Dispositivo
 
-Probablemente la parte más interesante del juego es que utiliza la API de Orientación para Dispositivos móviles. Gracias a esto puedes jugar el juego inclinando el dispositivo en la dirección que quieres que la pelota ruede. Aquí está el código de la función `create()`\* \*responsable por esto:
+Probablemente la parte más interesante del juego es que utiliza la API de Orientación para Dispositivos móviles. Gracias a esto puedes jugar el juego inclinando el dispositivo en la dirección que quieres que la pelota ruede. Aquí está el código de la función `create()` responsable por esto:
 
 ```js
 window.addEventListener("deviceorientation", this.handleOrientation, true);

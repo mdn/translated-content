@@ -15,7 +15,7 @@ tags:
 translation_of: Web/HTML/Element/q
 original_slug: Web/HTML/Elemento/q
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El **elemento HTML `<q>`** indica que el texto adjunto es una cita corta en línea. La mayoría de los navegadores modernos implementan esto rodeando el texto entre comillas. Este elemento está destinado a citas breves que no requieren saltos de párrafo; para citas de bloque independiente, utiliza el elemento {{HTMLElement("blockquote")}}.
 

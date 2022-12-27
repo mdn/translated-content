@@ -20,7 +20,7 @@ translation_of: Mozilla/Firefox/Releases/64
   - Возможность просмотреть [историю выражений консоли](/ru/docs/Tools/Web_Console/The_command_line_interpreter#Command_history) с помощью bash-подобного обратного поиска ({{bug(1024913)}}).
   - Подсветка [оценённого кода](/ru/docs/Tools/Web_Console/The_command_line_interpreter) и при вводе, и при выводе ({{bug(1463669)}}).
 
-- Пошаговое выполнение кода в [отладчике JavaScript ](/ru/docs/Tools/Debugger)также было улучшено:
+- Пошаговое выполнение кода в [отладчике JavaScript](/ru/docs/Tools/Debugger) также было улучшено:
 
   - Отладчик сохраняет [развёрнутые переменные](/ru/docs/Tools/Debugger/UI_Tour#Scopes) при пошаговом выполнении кода ({{bug(1491471)}}).
   - [Выход из функции](/ru/docs/Tools/Debugger/How_to/Step_through_code) пропускает возвращаемое значение ({{bug(923975)}}).

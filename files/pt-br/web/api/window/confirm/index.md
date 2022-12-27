@@ -1,8 +1,8 @@
 ---
 title: Window.confirm()
 slug: Web/API/Window/confirm
-translation_of: Web/API/Window/confirm
 ---
+
 {{ApiRef("Window")}}
 
 O método **`Window.confirm()`** mostra uma janela modal com uma mensagem opcional e dois botões, OK e Cancelar.

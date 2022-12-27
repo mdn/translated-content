@@ -1,8 +1,8 @@
 ---
 title: Ordering Flex Items
 slug: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
-translation_of: Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items
 ---
+
 {{CSSRef}}
 
 Os novos métodos de layout, como Flexbox e Grid, trazem a possibilidade de controlar a ordem do conteúdo. Neste artigo, veremos como você pode alterar a ordem visual do seu conteúdo ao usar o Flexbox. Também consideraremos as implicações de reordenar itens do ponto de vista da acessibilidade..

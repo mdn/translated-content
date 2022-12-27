@@ -1,7 +1,6 @@
 ---
 title: TypeError
 slug: Web/JavaScript/Reference/Global_Objects/TypeError
-translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 ---
 {{JSRef}}
 

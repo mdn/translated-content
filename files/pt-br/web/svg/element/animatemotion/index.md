@@ -1,12 +1,6 @@
 ---
 title: animateMotion
 slug: Web/SVG/Element/animateMotion
-tags:
-  - Animação
-  - Elemento
-  - Forma
-  - SVG
-translation_of: Web/SVG/Element/animateMotion
 ---
 {{SVGRef}}
 

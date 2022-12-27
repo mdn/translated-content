@@ -47,7 +47,7 @@ slug: Learn/Getting_started_with_the_web/Publishing_your_website
 試試以下網站，看看你能想到什麼點子：
 
 - [JSFiddle](https://jsfiddle.net/)
-- [Thimble](https://thimble.mozilla.org)
+- [Glitch](https://glitch.com/)
 - [JS Bin](http://jsbin.com/)
 - [CodePen](https://codepen.io/)
 

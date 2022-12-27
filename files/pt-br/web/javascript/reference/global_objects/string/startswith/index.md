@@ -1,16 +1,6 @@
 ---
 title: String.prototype.startsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/startsWith
-tags:
-  - Começa com
-  - ECMAScript6
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - startsWith()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 ---
 {{JSRef}}
 

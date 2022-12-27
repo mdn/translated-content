@@ -1,14 +1,9 @@
 ---
 title: WindowBase64.atob()
 slug: Web/API/atob
-tags:
-  - API
-  - Referencia
-  - WindowBase64
-  - metodo
-translation_of: Web/API/WindowOrWorkerGlobalScope/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
+
 {{APIRef("HTML DOM")}}
 
 A função **`WindowBase64.atob()`** decodifica uma string de dados que foi codificada através da codificação base-64. Você pode usar o método {{domxref("WindowBase64.btoa","window.btoa()")}} para codificar e transmitir dados que, se não codificados, podem causar problemas de comunicação. Após transmití-los pode-se usar o método `window.atob()` para decodificar os dados novamente. Por exemplo, você pode codificar, transmitir, e decodificar caracteres de controle como valores ASCII de 0 a 31.

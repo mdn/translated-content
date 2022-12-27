@@ -1,12 +1,8 @@
 ---
 title: HTMLElement.offsetTop
 slug: Web/API/HTMLElement/offsetTop
-tags:
-  - API
-  - ApenasLeitura
-  - Propriedade
-translation_of: Web/API/HTMLElement/offsetTop
 ---
+
 {{ APIRef("HTML DOM") }}
 
 O **`HTMLElement.offsetTop`** é um método apenas de leitura que retorna a medida, em pixels, da distância do elemento atual em relação ao topo do {{domxref("HTMLelement.offsetParent","offsetParent")}}.

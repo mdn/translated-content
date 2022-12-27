@@ -3,7 +3,7 @@ title: <footer>
 slug: Web/HTML/Element/footer
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML \<footer> 元素**表示最近一个[章节内容](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Defining_Sections_in_HTML5)或者[根节点](/zh-CN/docs/Web/Guide/HTML/Sections_and_Outlines_of_an_HTML5_document#Sectioning_root)（sectioning root）元素的页脚。一个页脚通常包含该章节作者、版权数据或者与文档相关的链接等信息。
 

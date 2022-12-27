@@ -9,7 +9,8 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/:-moz-broken
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}
+
+{{Non-standard_header}}{{CSSRef}}
 
 ## Resumen
 

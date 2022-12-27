@@ -16,7 +16,7 @@ translation_of: Web/HTML/Applying_color
 original_slug: Web/HTML/Applying_color
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 La couleur fait partie intégrante des moyens d'expressions. Lorsqu'on écrit un site web, il est naturel d'y ajouter des couleurs dans la mise en forme. Avec [CSS](/fr/docs/Web/CSS), il existe de nombreuses façons d'ajouter de la couleur aux [éléments](/fr/docs/Web/HTML/Element) [HTML](/fr/docs/Web/HTML) afin d'obtenir le résultat souhaité. Cet article est une introduction détaillée aux différentes méthodes permettant d'appliquer des couleurs CSS en HTML.
 
@@ -96,7 +96,7 @@ Pour des informations plus détaillées sur chaque type de valeur, vous pouvez c
 
 ### Mots-clés
 
-Un ensemble standard de noms de couleurs a été défini et il est possible d'utiliser l'un de ces mots-clés plutôt qu'une représentation numérique s'il existe un mot-clé pour la valeur qu'on souhaite utiliser. Les mots-clés désignant les couleurs regroupent les couleurs primaires et secondaires (tels que`red` pour rouge, `blue` pour bleu, `orange`), les tons de gris (allant de `black` pour noir à `white` pour blanc et incluant des niveaux tels que `darkgray` (gris foncé) et `lightgrey` (gris clair)). D'autres couleurs sont également disponibles avec un mot-clé comme `lightseagreen`, `cornflowerblue` ou `rebeccapurple`.
+Un ensemble standard de noms de couleurs a été défini et il est possible d'utiliser l'un de ces mots-clés plutôt qu'une représentation numérique s'il existe un mot-clé pour la valeur qu'on souhaite utiliser. Les mots-clés désignant les couleurs regroupent les couleurs primaires et secondaires (tels que `red` pour rouge, `blue` pour bleu, `orange`), les tons de gris (allant de `black` pour noir à `white` pour blanc et incluant des niveaux tels que `darkgray` (gris foncé) et `lightgrey` (gris clair)). D'autres couleurs sont également disponibles avec un mot-clé comme `lightseagreen`, `cornflowerblue` ou `rebeccapurple`.
 
 Vous pouvez consulter [cette liste](/fr/docs/Web/CSS/color_value#color_keywords) pour connaître l'ensemble des mots-clés disponibles.
 

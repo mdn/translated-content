@@ -1,15 +1,6 @@
 ---
 title: Referência de elementos SVG
 slug: Web/SVG/Element
-tags:
-  - Desenho
-  - Design Responsivo
-  - Elementos
-  - Gráficos Vetoriais
-  - Referência SVG
-  - SVG
-  - l10n:prioridade
-translation_of: Web/SVG/Element
 ---
 « [SVG](/pt-BR/docs/Web/SVG) / [SVG Attribute reference](/pt-BR/docs/Web/SVG/Attribute) »
 

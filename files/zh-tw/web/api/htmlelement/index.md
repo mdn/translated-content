@@ -86,10 +86,6 @@ Most events properties, of the form `onXYZ`, are defined on the {{domxref("Globa
   - : Returns the event handling code for the [`touchend`](/zh-TW/docs/Web/API/Element/touchend_event) event.
 - {{domxref("TouchEventHandlers.ontouchmove")}} {{non-standard_inline}}
   - : Returns the event handling code for the [`touchmove`](/zh-TW/docs/Web/API/Element/touchmove_event) event.
-- {{domxref("TouchEventHandlers.ontouchenter")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchenter")}} event.
-- {{domxref("TouchEventHandlers.ontouchleave")}} {{non-standard_inline}}
-  - : Returns the event handling code for the {{event("touchleave")}} event.
 - {{domxref("TouchEventHandlers.ontouchcancel")}} {{non-standard_inline}}
   - : Returns the event handling code for the [`touchcancel`](/zh-TW/docs/Web/API/Element/touchcancel_event) event.
 

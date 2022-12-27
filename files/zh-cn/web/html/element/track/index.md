@@ -128,4 +128,4 @@ slug: Web/HTML/Element/track
 
 - [WebVTT text track format](/zh-CN/docs/HTML/WebVTT)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

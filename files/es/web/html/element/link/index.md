@@ -12,7 +12,7 @@ tags:
 translation_of: Web/HTML/Element/link
 original_slug: Web/HTML/Elemento/link
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El **elemento HTML `<link>`** especifica la relación entre el documento actual y un recurso externo. Los usos posibles de este elemento incluyen la definición de un marco relacional para navegación. Este elemento es más frecuentemente usado para enlazar hojas de estilos.
 

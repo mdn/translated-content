@@ -1,15 +1,6 @@
 ---
 title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-tags:
-  - Internacionalização
-  - Prototype
-  - data
-  - data formatada
-  - fuso horário
-  - metodo
-  - time zone
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 ---
 {{JSRef}}O método **`toLocaleTimeString()`** retorna uma string com uma representação sensível ao idioma de uma porção de tempo desta data. Os novos argumentos `locales` e `options` possibilitam aplicações especificarem que formato de linguagem deve ser usado, podendo customizar o comportamento da função. Em implementações antigas, que ignoram os argumentos `locales` e `options`, o local utilizado e o formato retornado da string são implementações completamente dependentes.{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
 

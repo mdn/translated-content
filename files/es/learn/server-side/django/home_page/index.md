@@ -355,7 +355,7 @@ TEMPLATES = [
 
 ## ¿Cómo se ve?
 
-En este punto deberíamos haber creado todo lo necesario para desplegar la página index. Corre el servidor (`python3 manage.py runserver`) y dirige tu navegador a <http://127.0.0.1:8000/>. Si todo se configuró correctamente, tu sitio debería verse similar a la siguiente captura de pantalla.
+En este punto deberíamos haber creado todo lo necesario para desplegar la página index. Corre el servidor (`python3 manage.py runserver`) y dirige tu navegador a `http://127.0.0.1:8000/`. Si todo se configuró correctamente, tu sitio debería verse similar a la siguiente captura de pantalla.
 
 ![Index page for LocalLibrary website](https://mdn.mozillademos.org/files/14045/index_page_ok.png)
 

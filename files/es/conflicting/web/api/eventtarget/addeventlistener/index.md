@@ -34,4 +34,4 @@ Como la interfaz es marcada con la bandera [function], todas los objetos [Functi
 
 ## Mira también
 
-- {{ spec("http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener","Document Object Model Events: EventListener","REC") }}
+- [Document Object Model Events: EventListener](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener)

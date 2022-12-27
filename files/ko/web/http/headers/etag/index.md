@@ -3,6 +3,7 @@ title: ETag
 slug: Web/HTTP/Headers/ETag
 translation_of: Web/HTTP/Headers/ETag
 ---
+
 {{HTTPSidebar}}
 
 **ETag** HTTP 응답 헤더는 특정 버전의 리소스를 식별하는 식별자입니다. 웹 서버가 내용을 확인하고 변하지 않았으면, 웹 서버로 full 요청을 보내지 않기 때문에, 캐쉬가 더 효율적이게 되고, 대역폭도 아낄 수 있습니다. 허나, 만약 내용이 변경되었다면, "mid-air collisions" 이라는 리소스 간의 동시 다발적 수정 및 덮어쓰기 현상을 막는데 유용하게 사용됩니다.

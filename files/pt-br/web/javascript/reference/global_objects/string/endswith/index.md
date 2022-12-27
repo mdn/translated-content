@@ -1,14 +1,6 @@
 ---
 title: String.prototype.endsWith()
 slug: Web/JavaScript/Reference/Global_Objects/String/endsWith
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - endsWith()
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/String/endsWith
 ---
 {{JSRef}}
 

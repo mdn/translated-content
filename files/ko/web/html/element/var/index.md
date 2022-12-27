@@ -12,7 +12,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/var
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTM `<var>` 요소**는 수학 표현 또는 프로그래밍에서 변수의 이름을 나타냅니다. 보통 현재 글씨체의 기울임꼴로 표시하지만, 브라우저마다 다를 수 있습니다.
 

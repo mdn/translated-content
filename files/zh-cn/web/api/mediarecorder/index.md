@@ -54,7 +54,7 @@ slug: Web/API/MediaRecorder
 - {{domxref("MediaRecorder.onerror")}}
   - : An {{event("Event_handlers", "event handler")}} called to handle the {{event("recordingerror")}} event, including reporting errors that arise with media recording. These are fatal errors that stop recording.
 - {{domxref("MediaRecorder.onpause")}}
-  - : 用来处理 {{event("pause")}} 事件，该事件在媒体暂停录制时触发（{{domxref("MediaRecorder.pause()")}}）.
+  - : 用来处理 [`pause`](/zh-CN/docs/Web/API/HTMLMediaElement/pause_event) 事件，该事件在媒体暂停录制时触发（{{domxref("MediaRecorder.pause()")}}）.
 - {{domxref("MediaRecorder.onresume")}}
   - : 用来处理 {{event("resume")}} 事件，该事件在暂停后回复录制视频时触发（{{domxref("MediaRecorder.resume()")}}）.
 - {{domxref("MediaRecorder.onstart")}}

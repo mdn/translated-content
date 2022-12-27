@@ -237,7 +237,7 @@ original_slug: Web/HTML/Elemento/col
       <td>Carácter que se usará como punto de alineación.</td>
       <td>
         Un carácter, Uno de estos:
-        {{ mediawiki.external('ISO10646') }}.
+        [ISO10646].
       </td>
       <td>Lo fija el navegador.</td>
     </tr>

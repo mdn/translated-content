@@ -1,17 +1,9 @@
 ---
 title: Cacheamento HTTP
 slug: Web/HTTP/Caching
-tags:
-  - Cache
-  - Cacheamento
-  - Guía
-  - HTTP
-  - Internet
-  - Rede
-  - Web
-translation_of: Web/HTTP/Caching
 original_slug: Web/HTTP/HTTP
 ---
+
 {{HTTPSidebar}}
 
 A performance de websites e aplicações podem ser melhoradas significativamente ao reusar recursos previamente buscados. Caches em web reduzem latência e o tráfego de rede e assim diminuir o tempo necesário para exibir uma representação do recurso. Ao usar _caching_ em HTTP, websites se tornam mais responsivos.

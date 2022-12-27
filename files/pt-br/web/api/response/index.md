@@ -1,18 +1,8 @@
 ---
 title: Response
 slug: Web/API/Response
-tags:
-  - API
-  - Experimental
-  - Fetch
-  - Fetch API
-  - Interface
-  - Reference
-  - Referencia
-  - Response
-  - Resposta
-translation_of: Web/API/Response
 ---
+
 {{APIRef("Fetch API")}}
 
 A interface **`Response`** da [Fetch API](/pt-BR/docs/Web/API/Fetch_API) representa a resposta para uma requisição.

@@ -206,13 +206,13 @@ browser.runtime.sendMessage({
 - [`tabs.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage)
 - [`runtime.sendMessage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 - [`runtime.onMessage`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
-- Ejemplos con`content_scripts`:
+- Ejemplos con `content_scripts`:
 
   - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
   - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
   - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
 
-- Ejemplos con`tabs.executeScript()`:
+- Ejemplos con `tabs.executeScript()`:
 
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [context-menu-demo](https://github.com/mdn/webextensions-examples/tree/master/context-menu-demo)

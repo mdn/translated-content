@@ -27,4 +27,4 @@ var alpha = instanceOfDeviceOrientationEvent.alpha;
 - [Detecting device orientation](/zh-CN/Detecting_device_orientation)
 - [Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained)
 - {{ domxref("window.ondeviceorientation") }}
-- {{ event("deviceorientation") }}
+- [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)

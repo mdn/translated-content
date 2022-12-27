@@ -1,19 +1,6 @@
 ---
 title: Seletor de cores
 slug: Web/CSS/CSS_Colors/Color_picker_tool
-tags:
-  - CSS
-  - Cores CSS
-  - Cores HTML
-  - Ferramenta para Seleção de Cores CSS
-  - Ferramenta para Seleção de Cores HTML
-  - Ferramentas
-  - Seletor de Cores
-  - Seletor de Cores CSS
-  - Seletor de Cores HTML
-  - cor
-  - cores
-translation_of: Web/CSS/CSS_Colors/Color_picker_tool
 original_slug: Web/CSS/CSS_Colors/seletor_de_cores
 ---
 ```html hidden

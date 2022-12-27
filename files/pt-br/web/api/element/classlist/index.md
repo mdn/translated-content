@@ -1,8 +1,8 @@
 ---
 title: Element.classList
 slug: Web/API/Element/classList
-translation_of: Web/API/Element/classList
 ---
+
 {{APIRef("DOM")}}
 
 O **Element.classList** é uma propriedade somente leitura que retorna uma coleção {{domxref ("DOMTokenList")}} ativa dos atributos de classe do elemento.

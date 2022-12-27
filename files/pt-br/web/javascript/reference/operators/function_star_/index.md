@@ -1,7 +1,6 @@
 ---
 title: Expressão function*
 slug: Web/JavaScript/Reference/Operators/function*
-translation_of: Web/JavaScript/Reference/Operators/function*
 ---
 {{jsSidebar("Operators")}}
 

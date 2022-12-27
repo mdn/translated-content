@@ -64,7 +64,7 @@ every(function(element, index, array) { /* … */ }, thisArg)
 
 `every` 和数学中的"所有"类似，当所有的元素都符合条件才会返回 `true`。正因如此，若传入一个空数组，无论如何都会返回 `true`。（这种情况属于[无条件正确](http://en.wikipedia.org/wiki/Vacuous_truth)：正因为一个[空集合](https://en.wikipedia.org/wiki/Empty_set#Properties)没有元素，所以它其中的所有元素都符合给定的条件。)
 
-## 例子
+## 示例
 
 ### 检测所有数组元素的大小
 

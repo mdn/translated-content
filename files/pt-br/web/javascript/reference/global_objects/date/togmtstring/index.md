@@ -1,18 +1,6 @@
 ---
 title: Date.prototype.toGMTString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
-tags:
-  - Date
-  - Deprecated
-  - Depreciado
-  - JavaScript
-  - Method
-  - Prototipo
-  - Prototype
-  - Referencia
-  - data
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 ---
 {{JSRef}} {{deprecated_header}}
 

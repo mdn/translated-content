@@ -1,10 +1,6 @@
 ---
 title: label (Etiqueta)
 slug: Web/JavaScript/Reference/Statements/label
-tags:
-  - JavaScript
-  - Statement
-translation_of: Web/JavaScript/Reference/Statements/label
 ---
 {{jsSidebar("Statements")}}
 

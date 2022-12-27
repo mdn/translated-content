@@ -37,7 +37,7 @@ Este código fuente contiene un par de avances de línea después del `DOCTYPE` 
 
 Esto es para que los espacios en blanco no afecten el diseño de tu página. Crear espacio alrededor y dentro de los elementos es el trabajo de CSS.
 
-### ¿Qué _sucede_ con los espacios en blanco?
+### ¿Qué sucede con los espacios en blanco?
 
 Sin embargo, no solo desaparecen.
 

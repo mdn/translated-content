@@ -1,15 +1,13 @@
 ---
 title: PointerEvent.getCoalescedEvents()
 slug: Web/API/PointerEvent/getCoalescedEvents
-page-type: web-api-instance-method
-browser-compat: api.PointerEvent.getCoalescedEvents
 l10n:
-  sourceCommit: 1732201134d732af9bfd49ee9e10f7e2086cc783
+  sourceCommit: 708baf34eabb75789bcd3314a6879da3702024d1
 ---
 
 {{APIRef("Pointer Events")}}
 
-{{domxref("PointerEvent")}} インターフェイスの **`getCoalescedEvents()`** メソッドは、ディスパッチされた {{domxref('Element/pointermove_event', 'pointermove')}} イベントと連動した全ての `PointerEvent` インスタンスのシーケンスを返します。
+**`getCoalescedEvents()`** は {{domxref("PointerEvent")}} インターフェイスのメソッドで、送出された {{domxref('Element/pointermove_event', 'pointermove')}} イベントに合成されるすべての `PointerEvent` インスタンスの列を返します。
 
 ## 構文
 
@@ -21,11 +19,11 @@ getCoalescedEvents()
 
 なし。
 
-### 戻り値
+### 返値
 
-{{domxref('PointerEvent')}} インスタンスのシーケンス。
+{{domxref('PointerEvent')}} インスタンスの列。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

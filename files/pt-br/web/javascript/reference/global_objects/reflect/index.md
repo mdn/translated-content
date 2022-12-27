@@ -1,14 +1,6 @@
 ---
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
-tags:
-  - ECMAScript6
-  - JavaScript
-  - NeedsTranslation
-  - Overview
-  - Reflect
-  - TopicStub
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
 {{JSRef}}
 

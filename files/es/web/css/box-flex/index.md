@@ -8,7 +8,9 @@ tags:
 translation_of: Web/CSS/box-flex
 original_slug: Web/CSS/-moz-box-flex
 ---
-{{CSSRef}}{{warning("Esta propiedad es para controlar parte del modelo de caja XUL. No coincide ni con el antiguo borrador del módulo CSS para el diseño de caja flexibles  '<code>box-flex</code>' (que se basa en esta propiedad) ni con el comportamiento de '<code>-webkit-box-flex</code>' (que se basa en esos borradores).")}}
+{{CSSRef}}
+
+> **Advertencia:** Esta propiedad es para controlar parte del modelo de caja XUL. No coincide ni con el antiguo borrador del módulo CSS para el diseño de caja flexibles  '`box-flex`' (que se basa en esta propiedad) ni con el comportamiento de '`-webkit-box-flex`' (que se basa en esos borradores).
 
 Ver [Flexbox](/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) para más información acerca de qué usar en vez de esta propiedad.
 

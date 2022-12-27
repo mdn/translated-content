@@ -3,7 +3,7 @@ title: '<map>: イメージマップ要素'
 slug: Web/HTML/Element/map
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<map>`** は [HTML](/ja/docs/Web/HTML) の要素で、イメージマップ（クリック可能なリンク領域）を定義するために {{HTMLElement("area")}} 要素とともに使用します。
 

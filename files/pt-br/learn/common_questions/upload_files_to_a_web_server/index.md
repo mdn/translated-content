@@ -1,16 +1,8 @@
 ---
 title: Como eu faço o upload de arquivos para um servidor web ?
 slug: Learn/Common_questions/Upload_files_to_a_web_server
-tags:
-  - FTP
-  - GitHub
-  - Iniciante
-  - MecanismosWeb
-  - hospedagem
-  - rsync
-  - sftp
-translation_of: Learn/Common_questions/Upload_files_to_a_web_server
 ---
+
 Este artigo mostra como publicar seu site online usando ferramentas de transferência de arquivos.
 
 <table class="learn-box standard-table">
@@ -166,7 +158,7 @@ Novamente, você teria que obter as credenciais de conexão do seu provedor de h
 
 Github permite você publicar páginas por meio do [GitHub pages](https://pages.github.com/) (gh-pages).
 
-Cobrimos o básico de como usar isso no [Publishing your website](https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Publishing_your_website) artigo do guia [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) , então não vamos repetir tudo aqui.
+Cobrimos o básico de como usar isso no [Publishing your website](/en-US/Learn/Getting_started_with_the_web/Publishing_your_website) artigo do guia [Getting started with the Web](/en-US/Learn/Getting_started_with_the_web) , então não vamos repetir tudo aqui.
 
 No entanto, é importante saber que você também pode hospedar um site no GitHub, mas usar um domínio personalizado com ele. Para obter um guia detalhado, consulte [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/) .
 

@@ -1,8 +1,8 @@
 ---
 title: Blob.type
 slug: Web/API/Blob/type
-translation_of: Web/API/Blob/type
 ---
+
 {{APIRef("File API")}}
 
 A propriedade **`type`** de um objeto [`Blob`](/pt-BR/docs/Web/API/Blob) fornece [MIME type](/pt-BR/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types) do arquivo. Ela retorna uma string vazia se o tipo não puder ser determinado.

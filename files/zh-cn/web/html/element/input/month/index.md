@@ -4,7 +4,7 @@ slug: Web/HTML/Element/input/month
 original_slug: Web/HTML/Element/Input/月份
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 类型为 **`month`** 的 {{htmlelement("input")}} 可以让你容易地创建一个方便输入年份或月份的一个 {{htmlelement("input")}}。
 
@@ -28,7 +28,7 @@ Edge 的 `month` 看起来像这样的：
   </tr>
   <tr>
    <td><strong>Events</strong></td>
-   <td>{{event("change")}} 和 {{event("input")}}.</td>
+   <td>[`change`](/zh-CN/docs/Web/API/HTMLElement/change_event) 和 [`input`](/zh-CN/docs/Web/API/HTMLElement/input_event).</td>
   </tr>
   <tr>
    <td><strong>Supported Common Attributes</strong></td>

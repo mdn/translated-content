@@ -46,4 +46,4 @@ slug: Web/HTML/Element/bgsound
 
 - {{htmlelement("audio")}} 要素。文書に音声を埋め込むための標準要素です。
 
-{{HTMLRef}}
+{{HTMLSidebar}}

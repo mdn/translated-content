@@ -2,6 +2,7 @@
 title: transition
 slug: Web/CSS/transition
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## Summary

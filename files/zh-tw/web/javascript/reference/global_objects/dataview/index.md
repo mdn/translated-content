@@ -86,7 +86,7 @@ dv.getInt16(1); //42
 
 ## Firefox-specific notes
 
-Starting with Gecko / SpiderMonkey 40 {{geckoRelease(40)}}, `DataView` requires to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling `DataView()` as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
+Starting with Gecko / SpiderMonkey 40, `DataView` requires to be constructed with a {{jsxref("Operators/new", "new")}} operator. Calling `DataView()` as a function without `new`, will throw a {{jsxref("TypeError")}} from now on.
 
 ```js example-bad
 var dv = DataView(buffer, 0);

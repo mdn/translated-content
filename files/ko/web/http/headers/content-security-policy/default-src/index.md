@@ -3,9 +3,10 @@ title: 'CSP: default-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/default-src
 translation_of: Web/HTTP/Headers/Content-Security-Policy/default-src
 ---
+
 {{HTTPSidebar}}
 
-HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default`\*\***`-src`\*\* 구문은 다른 CSP 구문이 정의되지 않았을때 이를 대체하는 용도로 사용됩니다. as a fallback for the other CSP {{Glossary("fetch directive", "fetch directives")}}. 다음과 같은 구문이 없는 경우, `default-src` 구문을 찾아서 사용합니다:
+HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`default-src`** 구문은 다른 CSP 구문이 정의되지 않았을때 이를 대체하는 용도로 사용됩니다. as a fallback for the other CSP {{Glossary("fetch directive", "fetch directives")}}. 다음과 같은 구문이 없는 경우, `default-src` 구문을 찾아서 사용합니다:
 
 - {{CSP("child-src")}}
 - {{CSP("connect-src")}}

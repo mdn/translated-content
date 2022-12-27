@@ -2,6 +2,7 @@
 title: number
 slug: Web/XPath/Functions/number
 ---
+
 {{ XsltRef() }}
 
 `number` 함수는 개체를 숫자로 변환하고 그 숫자를 반환합니다.

@@ -29,7 +29,7 @@ window.print()
 
 ## Notas
 
-Empezando con Chrome {{CompatChrome(46.0)}} este método esta bloqueado dentro de un {{htmlelement("iframe")}} a menos que el atributo del contenedor tenga el valor `allow-modal`.
+Empezando con Chrome 46.0 este método esta bloqueado dentro de un {{htmlelement("iframe")}} a menos que el atributo del contenedor tenga el valor `allow-modal`.
 
 ## Especificación
 

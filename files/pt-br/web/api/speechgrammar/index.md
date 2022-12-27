@@ -1,17 +1,8 @@
 ---
 title: SpeechGrammar
 slug: Web/API/SpeechGrammar
-tags:
-  - API
-  - Experimental
-  - Fala
-  - Interface
-  - Referencia
-  - SpeechGrammar
-  - Web Speech API
-  - reconhecimento
-translation_of: Web/API/SpeechGrammar
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 A interface **`SpeechGrammar`** da [Web Speech API](/pt-BR/docs/Web/API/Web_Speech_API) representa um conjunto de palavras ou padrões de palavras, os quais, nós queremos que o serviço de reconhecimento reconheça.

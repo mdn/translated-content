@@ -179,9 +179,9 @@ Para cada página debes asignar distintos tipos de etiquetas, por ejemplo:
 
 **Un tutorial sobre WebGL para principiantes:** `WebGL, Gráficos, Guía, Principiante`
 
-**Página de referencia para `{{HTMLElement ("Canvas")}}:`** `Canvas, HTML, elemento, gráficos`
+**Página de referencia para {{HTMLElement ("Canvas")}}:** `Canvas, HTML, elemento, gráficos`
 
-**Una página de inicio de herramientas para desarrolladores de Firefox OS**`: Herramientas, Firefox OS, Inicio`
+**Una página de inicio de herramientas para desarrolladores de Firefox OS**: `Herramientas, Firefox OS, Inicio`
 
 ## Filtros de etiquetas y búsqueda
 

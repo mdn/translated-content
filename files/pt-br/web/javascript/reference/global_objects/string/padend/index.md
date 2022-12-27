@@ -1,14 +1,6 @@
 ---
 title: String.prototype.padEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/padEnd
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - padEnd()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/padEnd
 ---
 {{JSRef}}
 

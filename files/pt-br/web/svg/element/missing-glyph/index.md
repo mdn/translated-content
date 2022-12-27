@@ -1,11 +1,6 @@
 ---
 title: missing-glyph
 slug: Web/SVG/Element/missing-glyph
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/missing-glyph
 ---
 {{SVGRef}}
 

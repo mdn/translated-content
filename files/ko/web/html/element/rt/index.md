@@ -10,7 +10,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/rt
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<rt>` 요소**는 동아시아 문자의 루비 주석에서 발음, 번역 등을 나타내는 텍스트 부분을 지정합니다.
 

@@ -1,7 +1,6 @@
 ---
 title: Reflect.construct()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 ---
 {{JSRef}}
 

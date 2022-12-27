@@ -3,6 +3,7 @@ title: <content>
 slug: Web/HTML/Element/content
 translation_of: Web/HTML/Element/content
 ---
+
 {{Deprecated_header}}
 
 The **HTML `<content>` element**—an obsolete part of the [Web Components](/ko/docs/Web/Web_Components) suite of technologies—was used inside of [Shadow DOM](/ko/docs/Web/Web_Components/Shadow_DOM) as an {{glossary("insertion point")}}, and wasn't meant to be used in ordinary HTML. It has now been replaced by the {{HTMLElement("slot")}} element, which creates a point in the DOM at which a shadow DOM can be inserted.
@@ -105,4 +106,4 @@ If you display this in a web browser it should look like the following.
 - [Web Components](/ko/docs/Web/Web_Components)
 - {{HTMLElement("shadow")}}, {{HTMLElement("slot")}}, {{HTMLElement("template")}}, {{HTMLElement("element")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

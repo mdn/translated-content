@@ -8,7 +8,8 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/-moz-image-rect
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("2.0")}}
+
+{{Non-standard_header}}{{CSSRef}}
 
 ## Resumen
 

@@ -1,14 +1,6 @@
 ---
 title: Array.prototype.indexOf()
 slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
-tags:
-  - Array
-  - JavaScript
-  - Método(2)
-  - Prototype
-  - Referência(2)
-  - polyfill
-translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
 {{JSRef}}
 

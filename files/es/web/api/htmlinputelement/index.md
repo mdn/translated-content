@@ -115,9 +115,7 @@ Properties that apply only to text/number-containing or elements
   - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("placeholder", "input") }} attribute, containing a hint to the user of what can be entered in the control. The placeholder text must not contain carriage returns or line-feeds. This attribute applies when the value of the {{htmlattrxref("type","input")}} attribute is `text`, `search`, `tel`, `url` or `email`; otherwise it is ignored.
 - `readOnly`
 
-  - : _`boolean`:_ **Returns / Sets** the element's {{ htmlattrxref("readonly", "input") }} attribute, indicating that the user cannot modify the value of the control.
-
-    {{HTMLVersionInline(5)}} This is ignored if the value of the {{htmlattrxref("type","input")}} attribute is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
+  - : _`boolean`:_ **Returns / Sets** the element's {{ htmlattrxref("readonly", "input") }} attribute, indicating that the user cannot modify the value of the control. This is ignored if the value of the {{htmlattrxref("type","input")}} attribute is `hidden`, `range`, `color`, `checkbox`, `radio`, `file`, or a button type.
 
 - `min`
   - : _`string`:_ **Returns / Sets** the element's {{ htmlattrxref("min", "input") }} attribute, containing the minimum (numeric or date-time) value for this item, which must not be greater than its maximum ({{htmlattrxref("max","input")}} attribute) value.

@@ -1,12 +1,6 @@
 ---
 title: textPath
 slug: Web/SVG/Element/textPath
-tags:
-  - Conteúdo Textual
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/textPath
 ---
 {{SVGRef}}
 

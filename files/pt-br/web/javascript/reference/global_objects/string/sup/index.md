@@ -1,15 +1,6 @@
 ---
 title: String.prototype.sup()
 slug: Web/JavaScript/Reference/Global_Objects/String/sup
-tags:
-  - Descontinuado
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - sup()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
 ---
 {{JSRef}} {{deprecated_header}}
 

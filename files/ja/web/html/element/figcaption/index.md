@@ -3,7 +3,7 @@ title: '<figcaption>: 図キャプション要素'
 slug: Web/HTML/Element/figcaption
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML の `<figcaption>` 要素または図キャプション要素**は、親の {{HTMLElement("figure")}} 要素内にあるその他のコンテンツを説明するキャプションや凡例を表します。
 

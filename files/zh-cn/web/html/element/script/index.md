@@ -56,7 +56,7 @@ HTML `<script>` 元素用于嵌入或引用可执行脚本。这通常用作嵌�
     ```
 
 - {{htmlattrdef("defer")}}
-  - : 这个布尔属性被设定用来通知浏览器该脚本将在文档完成解析后，触发 {{event("DOMContentLoaded")}} 事件前执行。
+  - : 这个布尔属性被设定用来通知浏览器该脚本将在文档完成解析后，触发 [`DOMContentLoaded`](/zh-CN/docs/Web/API/Window/DOMContentLoaded_event) 事件前执行。
     有 `defer` 属性的脚本会阻止 `DOMContentLoaded` 事件，直到脚本被加载并且解析完成。
     > **警告：** 如果缺少 `src` 属性（即内嵌脚本），该属性不应被使用，因为这种情况下它不起作用。`defer` 属性对模块脚本没有作用 —— 他们默认 defer。
 - {{htmlattrdef("integrity")}}
@@ -130,4 +130,4 @@ Browsers that support the `module` value for the `type` attribute ignore any scr
 - {{domxref("document.currentScript")}}
 - [Ryan Grove's \<script> and \<link> node event compatibility chart](http://pieisgood.org/test/script-link-events/)
 
-{{HTMLRef}}
+{{HTMLSidebar}}

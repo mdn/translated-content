@@ -2,6 +2,7 @@
 title: animation-direction
 slug: Web/CSS/animation-direction
 ---
+
 {{CSSRef}}
 
 **`animation-direction`** [CSS](/ko/docs/CSS) 속성은 애니메이션이 앞으로, 뒤로 또는 앞뒤로 번갈아 재생되어야하는지 여부를 지정합니다.

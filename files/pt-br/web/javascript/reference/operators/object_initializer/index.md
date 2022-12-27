@@ -1,16 +1,6 @@
 ---
 title: Inicializador de Objeto
 slug: Web/JavaScript/Reference/Operators/Object_initializer
-tags:
-  - ECMAScript 2015
-  - JSON
-  - JavaScript
-  - Literal
-  - Métodos
-  - Objeto
-  - Propriedades
-  - mutação
-translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 original_slug: Web/JavaScript/Reference/Operators/Inicializador_Objeto
 ---
 {{JsSidebar("Operadores")}}

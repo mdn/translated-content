@@ -73,7 +73,7 @@ Puedes consultar la lista en pwa.rocks para obtener más ejemplos. Vale la pena 
 
 Incluso puedes generar PWA en línea utilizando el sitio web [PWABuilder](https://www.pwabuilder.com/).
 
-Para obtener información específica sobre el servicio _worker_ y la inserción, asegúrate de consultar el [Libro de recetas del servicio _worker_](https://serviceworke.rs/), una colección de recetas que utilizan los servicios _worker_ en sitios modernos.
+Para obtener información específica sobre el servicio _worker_ y la inserción, asegúrate de consultar el [Libro de recetas del servicio _worker_](https://github.com/mdn/serviceworker-cookbook/), una colección de recetas que utilizan los servicios _worker_ en sitios modernos.
 
 Vale la pena probar un enfoque de PWA, para que puedas ver por ti mismo si funciona para tu aplicación.
 

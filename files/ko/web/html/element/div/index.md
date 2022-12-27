@@ -11,7 +11,7 @@ tags:
   - Web
 translation_of: Web/HTML/Element/div
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<div>` 요소**는 플로우 콘텐츠를 위한 통용 컨테이너입니다. {{glossary("CSS")}}로 꾸미기 전에는 콘텐츠나 레이아웃에 어떤 영향도 주지 않습니다.
 

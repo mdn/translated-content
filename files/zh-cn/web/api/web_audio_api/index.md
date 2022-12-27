@@ -43,7 +43,7 @@ Web Audio API 中与生成音频图相关的定义与通用容器。
   - : **`音频节点`** 接口是一个音频处理模块，例如音频源（{{HTMLElement("audio")}}或{{HTMLElement("video")}}），音频输出、中间处理模块（例如：滤波器 {{domxref("BiquadFilterNode")}} 或者音量控制器 {{domxref("GainNode")}}）。
 - {{domxref("AudioParam")}}
   - : **`AudioParam`** 接口代表音频相关的参数，比如一个 {{domxref("AudioNode")}}的参数。它可以设置为特定值或值的变化，并且可以在指定的时间之后以指定模式变更。
-- {{event("ended")}}结束事件
+- [`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event)结束事件
   - : 当媒体播放停止时，会触发`ended`事件。
 
 ### 定义音频源
@@ -124,7 +124,7 @@ Web Audio API 使用的音频源接口。
 
 - {{domxref("ScriptProcessorNode")}}
   - : **`ScriptProcessorNode`** 接口用于通过 JavaScript 代码生成，处理，分析音频。它是一个{{domxref("AudioNode")}}类型的音频处理模块，但是它与两个缓冲区相连接，一个缓冲区里包含当前的输入数据，另一个缓冲区里包含着输出数据。每当新的音频数据被放入输入缓冲区，就会产生一个{{domxref("AudioProcessingEvent")}}事件，当这个事件处理结束时，输出缓冲区里应该写好了新数据。
-- {{event("audioprocess")}} (event)
+- [`audioprocess`](/zh-CN/docs/Web/API/ScriptProcessorNode/audioprocess_event) (event)
   - : 当一个 Web Audio API {{domxref("ScriptProcessorNode")}}已经准备好进行处理时，这个事件回调会被调用。
 - {{domxref("AudioProcessingEvent")}}
   - : 当{{domxref("ScriptProcessorNode")}}的输入流数据准备好了时，`AudioProcessingEvent`事件会产生。
@@ -135,7 +135,7 @@ Web Audio API 使用的音频源接口。
 
 - {{domxref("OfflineAudioContext")}}
   - : **`OfflineAudioContext`** 离线音频上下文也是音频上下文{{domxref("AudioContext")}}，也表示把{{domxref("AudioNode")}}连接到一起的一个音频处理图。但是，与一个标准的音频上下文相比，离线上下文不能把音频渲染到扬声器，仅仅是把音频渲染到一个缓冲区。
-- {{event("complete")}} (event)
+- [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event) (event)
   - : Complete 事件，当离线音频上下文被终止时产生。
 - {{domxref("OfflineAudioCompletionEvent")}}
   - : `OfflineAudioCompletionEvent`表示上下文被终止时的事件。
@@ -370,12 +370,12 @@ function voiceMute() { // toggle to mute and unmute sound
     6. {{domxref("AudioListener")}}
     7. {{domxref("AudioNode")}}
     8. {{domxref("AudioParam")}}
-    9. {{event("audioprocess")}} (event)
+    9. [`audioprocess`](/zh-CN/docs/Web/API/ScriptProcessorNode/audioprocess_event) (event)
     10. {{domxref("AudioProcessingEvent")}}
     11. {{domxref("BiquadFilterNode")}}
     12. {{domxref("ChannelMergerNode")}}
     13. {{domxref("ChannelSplitterNode")}}
-    14. {{event("complete")}} (event)
+    14. [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event) (event)
     15. {{domxref("ConvolverNode")}}
     16. {{domxref("DelayNode")}}
     17. {{domxref("DynamicsCompressorNode")}}

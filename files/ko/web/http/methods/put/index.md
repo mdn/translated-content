@@ -8,6 +8,7 @@ tags:
   - Request method
 translation_of: Web/HTTP/Methods/PUT
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `PUT` 메서드**는 요청 페이로드를 사용해 새로운 리소스를 생성하거나, 대상 리소스를 나타내는 데이터를 대체합니다.

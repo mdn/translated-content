@@ -1,14 +1,9 @@
 ---
 title: Etiqueta básica para projetos open source
 slug: MDN/Community/Open_source_etiquette
-tags:
-  - Boas práticas
-  - Comunidade
-  - Código aberto
-  - MDN
-  - Iniciantes
 original_slug: MDN/Contribute/Open_source_etiquette
 ---
+
 {{MDNSidebar}}
 
 Se você nunca trabalhou em um projeto open source (OSP) antes, é uma boa ideia ler este artigo antes de começar a contribuir ao MDN (ou outros projetos open source). Existem algumas boas práticas para adotar que vão ajudar a garantir que você e outros contribuidores do projeto se sintam valorizados e seguros, e continuem produtivos.

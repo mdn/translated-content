@@ -1,7 +1,6 @@
 ---
 title: Compilando um novo módulo C/C++ para WebAssembly
 slug: WebAssembly/C_to_wasm
-translation_of: WebAssembly/C_to_wasm
 ---
 {{WebAssemblySidebar}}
 

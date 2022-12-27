@@ -27,7 +27,7 @@ slug: Web/API/DataTransfer
 - {{domxref("DataTransfer.items")}} {{readonlyInline}}
   - : 提供一个包含所有拖动数据列表的 {{domxref("DataTransferItemList")}} 对象。
 - {{domxref("DataTransfer.types")}} {{readonlyInline}}
-  - : 一个提供 {{event("dragstart")}} 事件中设置的格式的 {{domxref("DOMString","strings")}} 数组。
+  - : 一个提供 [`dragstart`](/zh-CN/docs/Web/API/HTMLElement/dragstart_event) 事件中设置的格式的 {{domxref("DOMString","strings")}} 数组。
 
 ### Gecko 属性
 

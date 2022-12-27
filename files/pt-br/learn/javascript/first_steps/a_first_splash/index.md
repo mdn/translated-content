@@ -1,8 +1,8 @@
 ---
 title: Um primeiro mergulho no JavaScript
 slug: Learn/JavaScript/First_steps/A_first_splash
-translation_of: Learn/JavaScript/First_steps/A_first_splash
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
 Agora você poderá aprender um pouco sobre a Teoria do Javascript e o que você poderá fazer com ele. Nós vamos lhe fornecer aqui um Curso rápido sobre as características básicas do JavaScript através de um tutorial completamente prático. Você irá construir um simples jogo de "Adivinhe o número", passo a passo.

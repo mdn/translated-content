@@ -2,6 +2,7 @@
 title: key
 slug: Web/XPath/Functions/key
 ---
+
 {{ XsltRef() }}
 
 `key` 함수는 인수로 준 키와 값을 갖는 노드 집합을 반환합니다.

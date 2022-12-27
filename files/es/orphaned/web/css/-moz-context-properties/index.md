@@ -32,7 +32,7 @@ Si mencionas una imagen SVG en una pagina web({{htmlelement("img")}} como elemen
 - `stroke`
   - : Expone el valor de `stroke` determinado en la imagen del SVG..
 - `fill-opacity`
-  - : Expone el valor de`fill-opacity` determinado en la imagen del SVG.
+  - : Expone el valor de `fill-opacity` determinado en la imagen del SVG.
 - `stroke-opacity`
   - : Expone el valor de `stoke-opacity` determinado en la imagen del SVG.
 
@@ -64,7 +64,7 @@ Ahora que has hecho eso la imagen SVG puede utlizar los valores de {{cssxref("fi
                        fill='context-fill red' stroke='context-stroke' fill-opacity='0.5'/></svg>">
 ```
 
-Aqui hemos puesto que la imagen `src` sea una URL de datos que contiene una imagen SVG simple; el `<rect>`de dentro ha sido hecho para coger sus valores de `fill` y `stroke` de {{cssxref("fill")}} y {{cssxref("stroke")}} puestos en el elemento `<img>`poniendo `context-fill`/`context-stroke` en sus valores asi como un color para rellenar(rojo) que sera utilizado en caso que el SVG es cargado independientemente en una ventana superior(donde no tendra contexto para dar los valores ). Tener en cuenta que si un colore es directamente puesto en el SVG, pero el color del contexto tambien es especificado, el color del contexto sobreescribe el color directo.
+Aqui hemos puesto que la imagen `src` sea una URL de datos que contiene una imagen SVG simple; el `<rect>` de dentro ha sido hecho para coger sus valores de `fill` y `stroke` de {{cssxref("fill")}} y {{cssxref("stroke")}} puestos en el elemento `<img>` poniendo `context-fill`/`context-stroke` en sus valores asi como un color para rellenar(rojo) que sera utilizado en caso que el SVG es cargado independientemente en una ventana superior(donde no tendra contexto para dar los valores ). Tener en cuenta que si un colore es directamente puesto en el SVG, pero el color del contexto tambien es especificado, el color del contexto sobreescribe el color directo.
 
 > **Nota:** Puedes en contrar un [ejemplo de ejecucion en Github](https://mdn.github.io/css-examples/moz-context-properties/).
 

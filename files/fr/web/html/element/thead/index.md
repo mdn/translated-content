@@ -5,7 +5,7 @@ translation_of: Web/HTML/Element/thead
 browser-compat: html.elements.thead
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<thead>`** définit un ensemble de lignes qui définit l'en-tête des colonnes d'un tableau.
 

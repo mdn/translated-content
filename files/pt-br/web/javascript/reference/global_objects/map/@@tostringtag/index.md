@@ -1,14 +1,6 @@
 ---
 title: Map.prototype[@@toStringTag]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
-tags:
-  - ECMAScript 2015
-  - JavaScript
-  - Map
-  - Property
-  - Prototype
-  - Reference
-browser-compat: javascript.builtins.Map.@@toStringTag
 ---
 {{JSRef}}
 

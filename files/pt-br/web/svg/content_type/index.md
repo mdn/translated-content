@@ -1,10 +1,6 @@
 ---
 title: Content type
 slug: Web/SVG/Content_type
-tags:
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Content_type
 ---
 ## Angle
 

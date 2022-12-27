@@ -15,7 +15,7 @@ tags:
 translation_of: Web/HTML/Element/dd
 original_slug: Web/HTML/Elemento/dd
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El **elemento HTML `<dd>`** provee detalles acerca de o la definición de un término precedente ({{HTMLElement("dt")}}) en una lista de descripciones ({{HTMLElement("dl")}}).
 

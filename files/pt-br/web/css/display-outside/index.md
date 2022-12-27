@@ -1,8 +1,8 @@
 ---
 title: <display-outside>
 slug: Web/CSS/display-outside
-translation_of: Web/CSS/display-outside
 ---
+
 {{CSSRef}}
 
 O `<display-outside>` as palavras-chave especificam a parte externa do elemento {{CSSxRef("display")}} type, que é essencialmente seu papel no layout de fluxo. Essas palavras-chave são usadas como valores do `display` e pode ser usada para fins legados como uma única palavra-chave ou conforme definido na especificação do Nível 3, juntamente com um valor do {{CSSxRef("&lt;display-inside&gt;")}} palavras-chave.

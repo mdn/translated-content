@@ -228,7 +228,7 @@ record.save()
 all_books = Book.objects.all()
 ```
 
-장고의 `filter()`는 반환된 `QuerySet`이 지정된 문자(**text**) 또는 숫자(**numeric**)\*\* \*\*필드를 특정한 기준에 맞추어 필터링할 수 있게 합니다. 예를 들어서, "wild"를 제목 안에 포함하는 책들을 필터링하여 그 숫자를 세어 보려면, 아래와 같이 하면 됩니다.
+장고의 `filter()`는 반환된 `QuerySet`이 지정된 문자(**text**) 또는 숫자(**numeric**) 필드를 특정한 기준에 맞추어 필터링할 수 있게 합니다. 예를 들어서, "wild"를 제목 안에 포함하는 책들을 필터링하여 그 숫자를 세어 보려면, 아래와 같이 하면 됩니다.
 
 ```python
 wild_books = Book.objects.filter(title__contains='wild')

@@ -19,14 +19,14 @@ Firefox 29 был выпущен 29 апреля 2014 года. Список к�
 Важные изменения:
 
 - Vastly improved web console - Arrays are shown inline without clicking to bring up in the right inspector, window objects show their url, etc.
-- Added the [console API](https://developer.mozilla.org/docs/Web/API/console) to Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Now you can log messages to the Web Console from Web Workers.
+- Added the [console API](/docs/Web/API/console) to Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Now you can log messages to the Web Console from Web Workers.
 - The [Network Monitor](/ru/docs/Tools/Network_Monitor) tool now shows performance statistics using pie charts ({{bug(846601)}}).
 - On the [Inspector](/ru/docs/Tools/Page_Inspector), preview tooltips of CSS transforms are now available ({{bug(726427)}}).
 - DOM elements seen in the debugger and console can be removed or inspected directly, via the new buttons to the right of the variable listing.
 - A CSS source map is now supported by the [Style Editor](/ru/docs/Tools/Style_Editor) ({{bug(926014)}}).
 - Autocompletion of CSS properties and values has been added to the [Style Editor](/ru/docs/Tools/Style_Editor) ({{bug(717369)}}).
 
-_Больше деталей и изменений смотрите в [блоге Mozilla Hacks](https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/ "CSS source map support, network performance analysis & more – Firefox Developer Tools Episode 29 ✩ Mozilla Hacks – the Web developer blog")._
+_Больше деталей и изменений смотрите в [блоге Mozilla Hacks](https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/)._
 
 ### CSS
 

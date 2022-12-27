@@ -21,7 +21,7 @@ var x = instanceOfMouseEvent.screenX
 
 ## 示例
 
-这个例子展示了当触发 {{Event("mousemove")}} 事件时鼠标的坐标。
+这个例子展示了当触发 [`mousemove`](/zh-CN/docs/Web/API/Element/mousemove_event) 事件时鼠标的坐标。
 
 #### HTML
 

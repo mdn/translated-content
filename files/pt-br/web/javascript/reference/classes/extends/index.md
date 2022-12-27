@@ -1,14 +1,6 @@
 ---
 title: extends
 slug: Web/JavaScript/Reference/Classes/extends
-tags:
-  - Classes
-  - ECMAScript6
-  - Experimental
-  - Herança
-  - JavaScript
-  - extends
-translation_of: Web/JavaScript/Reference/Classes/extends
 ---
 {{jsSidebar("Classes")}}
 

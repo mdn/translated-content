@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/kbd
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 L'élément HTML **`<kbd>`** représente une plage de texte en ligne indiquant la saisie de texte par l'utilisateur à partir d'un clavier, d'une saisie vocale ou de tout autre dispositif de saisie de texte. Par convention, le {{Glossary("user agent")}} rend par défaut le contenu d'un élément `<kbd>` en utilisant sa police monospace, bien que cela ne soit pas requis par le standard HTML.
 

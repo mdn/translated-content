@@ -45,4 +45,4 @@ Este elemento no es parte del estándar ni de alguna espeficación . Si no nos c
 - {{htmlelement("marquee")}}, otro elemento similar que no pertenece a un estándar.
 - Las [animaciones CSS](/es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS) son la forma correcta de crear tal efecto .
 
-{{HTMLRef}}
+{{HTMLSidebar}}

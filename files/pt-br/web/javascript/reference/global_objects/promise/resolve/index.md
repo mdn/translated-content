@@ -1,13 +1,6 @@
 ---
 title: Promise.resolve()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/resolve
-tags:
-  - ECMAScript6
-  - ES6
-  - JavaScript
-  - Método(2)
-  - Promise
-translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 ---
 {{JSRef}}
 

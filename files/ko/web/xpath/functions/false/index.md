@@ -2,6 +2,7 @@
 title: 'false'
 slug: Web/XPath/Functions/false
 ---
+
 {{ XsltRef() }}
 
 `false` 함수는 boolean false를 반환합니다.

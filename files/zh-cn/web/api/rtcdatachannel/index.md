@@ -50,11 +50,11 @@ RTCDataChannel 接口代表在两者之间建立了一个双向数据通道的�
 - {{domxref("RTCDataChannel.onopen")}}
   - : 当接收到{{event("open")}} 事件时的事件处理器，当底层链路数据传输成功，端口状态处于 established 的时候会触发该事件。
 - {{domxref("RTCDataChannel.onmessage")}}
-  - : 当接收到{{event("message")}}事件时的事件处理器。当有数据被接收的时候会触发该事件。
+  - : 当接收到[`message`](/zh-CN/docs/Web/API/BroadcastChannel/message_event)事件时的事件处理器。当有数据被接收的时候会触发该事件。
 - {{domxref("RTCDataChannel.onclose")}}
   - : 当接收到{{event("close")}}事件时候的事件处理器。当底层链路被关闭的时候会触发该事件。
 - {{domxref("RTCDataChannel.onerror")}}
-  - : 当接收到{{event("error")}} 事件时候的事件处理器。当遇到错误的时候会触发该事件。
+  - : 当接收到[`error`](/zh-CN/docs/Web/API/Element/error_event) 事件时候的事件处理器。当遇到错误的时候会触发该事件。
 
 ## 方法
 

@@ -1,19 +1,9 @@
 ---
 title: 'Tutorial e exemplo: Teclado de Sintetizador Simples'
 slug: Web/API/Web_Audio_API/Simple_synth
-tags:
-  - Audio
-  - Exemplo
-  - Guía
-  - Media
-  - Oscilador
-  - Piano
-  - Sintetizador
-  - Tutorial
-  - Web Audio API
-translation_of: Web/API/Web_Audio_API/Simple_synth
 original_slug: Web/API/API_Web_Audio/Sintetizador_simples
 ---
+
 {{DefaultAPISidebar("Web Audio API")}}
 
 Este artigo apresenta o código e uma demonstração funcional de um teclado que você pode tocar usando seu mouse. O teclado lhe permite alternar entre formas de onda padrões e customizadas. Esse exemplo utiliza das seguintes interfaces de Web API: {{domxref("AudioContext")}}, {{domxref("OscillatorNode")}}, {{domxref("PeriodicWave")}}, e {{domxref("GainNode")}}.

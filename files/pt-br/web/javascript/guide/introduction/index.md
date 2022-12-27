@@ -1,12 +1,6 @@
 ---
 title: Introdução
 slug: Web/JavaScript/Guide/Introduction
-tags:
-  - Guia(2)
-  - Introdução
-  - JavaScript
-  - básico
-translation_of: Web/JavaScript/Guide/Introduction
 ---
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 

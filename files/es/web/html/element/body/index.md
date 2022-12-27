@@ -11,7 +11,7 @@ tags:
 translation_of: Web/HTML/Element/body
 original_slug: Web/HTML/Elemento/body
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El **elemento `<body>` de HTML** representa el contenido de un documento HTML. Solo puede haber un elemento `<body>` en un documento.
 

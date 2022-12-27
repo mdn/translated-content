@@ -1,7 +1,6 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
 ---
 {{JSRef}}
 

@@ -3,7 +3,7 @@ title: <ul>
 slug: Web/HTML/Element/ul
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<ul>` 元素**（或称 HTML 无序列表元素）表示一个内可含多个元素的无序列表或项目符号列表。
 

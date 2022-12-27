@@ -11,7 +11,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-required_at
 
 El atributo [`aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required) es usado para indicar al usuario que un input es requerido en un elemento antes de que un form pueda ser enviado. Este atributo puede ser usado en un form con cualquier elemento HTML típico; no se limita a elementosque tengan un `role` ARIA asignado.
 
-{{ HTMLVersionInline("5") }} ahora tiene el atributo `required`, pero aria-required todavía es útil para un agente de usuario que no soporta HTML5.
+HTML5 ahora tiene el atributo `required`, pero aria-required todavía es útil para un agente de usuario que no soporta HTML5.
 
 ### Value
 
@@ -66,4 +66,4 @@ Por determinar: Agregar información de soporte para combinaciones comunes de pr
 
 - [Especificación WAI-ARIA para `aria-required`](http://www.w3.org/TR/wai-aria/states_and_properties#aria-required)
 - [WAI-ARIA Authoring Practices for forms](http://www.w3.org/TR/wai-aria-practices/#ariaform)
-- [Constraint validation](/en/HTML/HTML5/Constraint_validation) in {{ HTMLVersionInline("5") }}
+- [Constraint validation](/en/HTML/HTML5/Constraint_validation) in HTML5

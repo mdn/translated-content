@@ -1,13 +1,9 @@
 ---
 title: Modelo de formatação visual
 slug: Web/CSS/Visual_formatting_model
-tags:
-  - CSS
-  - CSS conceitos basicos
-  - Intermediário
-translation_of: Web/CSS/Visual_formatting_model
 original_slug: Web/CSS/Modelo_Visual
 ---
+
 {{CSSRef}}
 
 The CSS _visual formatting model_ is an algorithm that processes a document and displays it on visual media. This model is a basic concept of CSS.

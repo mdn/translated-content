@@ -1,8 +1,8 @@
 ---
 title: IDBCursor
 slug: Web/API/IDBCursor
-translation_of: Web/API/IDBCursor
 ---
+
 {{APIRef("IndexedDB")}}
 
 O **`IDBCursor`** é uma interface da [API IndexedDB](/pt-BR/docs/IndexedDB) que representa o [cursor](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_cursor) para atravessar ou interagir sobre vários registros em um banco de dados.

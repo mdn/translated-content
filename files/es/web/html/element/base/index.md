@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/base
 original_slug: Web/HTML/Elemento/base
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 ## Resumen
 

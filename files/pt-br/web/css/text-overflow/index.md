@@ -1,8 +1,8 @@
 ---
 title: text-overflow
 slug: Web/CSS/text-overflow
-translation_of: Web/CSS/text-overflow
 ---
+
 {{ CSSRef() }}
 
 ## Sumário

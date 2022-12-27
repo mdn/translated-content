@@ -1,7 +1,6 @@
 ---
 title: Tutorial SVG
 slug: Web/SVG/Tutorial
-translation_of: Web/SVG/Tutorial
 ---
 Scalable Vector Graphics (Gráficos vetoriais escaláveis), [SVG](/pt-BR/Web/SVG), é uma linguagem W3C XML para marcação de gráficos. Ela é parcialmente implementada no Firefox, Opera, Navegadores com WebKit , Internet Explorer e outros navegadores.
 

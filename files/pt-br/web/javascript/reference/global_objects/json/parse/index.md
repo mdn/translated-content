@@ -1,10 +1,6 @@
 ---
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
-tags:
-  - JSON
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
 {{JSRef}}
 

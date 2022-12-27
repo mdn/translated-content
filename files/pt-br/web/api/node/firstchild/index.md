@@ -1,13 +1,8 @@
 ---
 title: Node.firstChild
 slug: Web/API/Node/firstChild
-tags:
-  - API
-  - DOM
-  - Node
-  - Node.firstChild
-translation_of: Web/API/Node/firstChild
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.firstChild`** é uma propriedade do tipo somente leitura que retorna o node (nó) do primeiro elemento filho de uma árvore DOM ou null no caso do elemento não ter filhos (children).

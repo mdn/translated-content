@@ -1,13 +1,6 @@
 ---
 title: if...else
 slug: Web/JavaScript/Reference/Statements/if...else
-tags:
-  - Instrução
-  - JavaScript
-  - condicional
-  - if else
-  - se então
-translation_of: Web/JavaScript/Reference/Statements/if...else
 ---
 {{jsSidebar("Statements")}}
 

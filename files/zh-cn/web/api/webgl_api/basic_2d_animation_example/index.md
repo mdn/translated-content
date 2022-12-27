@@ -107,7 +107,7 @@ let previousTime = 0.0;
 let degreesPerSecond = 90.0;
 ```
 
-Initializing the program is handled through a {{event("load")}} event handler called `startup()`:
+Initializing the program is handled through a [`load`](/zh-CN/docs/Web/API/Window/load_event) event handler called `startup()`:
 
 ```js
 window.addEventListener("load", startup, false);

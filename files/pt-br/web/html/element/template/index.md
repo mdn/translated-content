@@ -1,15 +1,8 @@
 ---
 title: <template>
 slug: Web/HTML/Element/template
-tags:
-  - Componentes
-  - Elemento
-  - HTML
-  - Referência(2)
-  - Web
-  - Web Componentes
-translation_of: Web/HTML/Element/template
 ---
+
 ## Sumário
 
 O elemento **[HTML](/pt-BR/docs/Web/HTML) `<template>`** é um mecanismo para encapsular um conteúdo do lado do cliente que não é renderizado quando a página é carregada, mas que pode ser instanciado posteriormente em tempo de execução usando JavaScript.
@@ -170,4 +163,4 @@ table td {
 
 - Web components: {{HTMLElement("content")}}, {{HTMLElement("shadow")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -1,11 +1,6 @@
 ---
 title: stop
 slug: Web/SVG/Element/stop
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/stop
 ---
 {{SVGRef}}
 

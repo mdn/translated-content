@@ -1,15 +1,6 @@
 ---
 title: String.prototype.trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
-tags:
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - Remover espaços ao final da string
-  - String
-  - metodo
-  - trimEnd()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 ---
 {{JSRef}}
 

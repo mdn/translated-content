@@ -3,7 +3,7 @@ title: <style>
 slug: Web/HTML/Element/style
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 ## 概要
 

@@ -1,7 +1,6 @@
 ---
 title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
-translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ---
 {{JSRef}}
 

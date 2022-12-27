@@ -1,15 +1,8 @@
 ---
 title: dl
 slug: Web/HTML/Element/dl
-tags:
-  - Elemento
-  - HTML
-  - Internet
-  - Rede
-  - Referencia
-  - Web
-translation_of: Web/HTML/Element/dl
 ---
+
 ## Resumo
 
 O elemento HTML _Definition List_ (`<dl>`) engloba uma lista de pares de termos e descrições. Um uso comum para este elemento é para implementar um glossário ou exibir metadados(uma lista de pares chave e valor).
@@ -107,4 +100,4 @@ Para mudar a indentação de um termo, use a propriedade [CSS](/en/CSS) [margin]
 - Elemento {{ HTMLElement("dt") }}
 - Elemento {{ HTMLElement("dd") }}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

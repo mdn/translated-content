@@ -1,11 +1,6 @@
 ---
 title: set
 slug: Web/SVG/Element/set
-tags:
-  - Elemento
-  - Referencia
-  - SVG
-translation_of: Web/SVG/Element/set
 ---
 {{SVGRef}}
 

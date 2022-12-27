@@ -86,4 +86,4 @@ translation_of: Web/HTML/Element/strong
 - Элемент {{HTMLElement("em")}}
 - Элемент {{cssxref("font-weight")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

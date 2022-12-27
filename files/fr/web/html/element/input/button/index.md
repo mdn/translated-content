@@ -3,7 +3,7 @@ title: <input type ="button">
 slug: Web/HTML/Element/input/button
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 Les éléments {{HTMLElement("input")}} de type **`button`** sont affichés comme des boutons poussoirs qui peuvent être programmés afin de contrôler des fonctionnalités de la page via un gestionnaire d'évènement (la plupart du temps pour l'évènement [`click`](/fr/docs/Web/API/Element/click_event)).
 

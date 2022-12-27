@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
 {{JSRef}}
 
-**`Reflect`\*\***`.apply()`\*\* 정적 메서드는 대상 함수를 주어진 매개변수로 호출합니다.
+**`Reflect.apply()`** 정적 메서드는 대상 함수를 주어진 매개변수로 호출합니다.
 
 {{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
 

@@ -1,14 +1,6 @@
 ---
 title: Classes
 slug: Web/JavaScript/Reference/Classes
-tags:
-  - Classes
-  - Constructor
-  - ECMAScript6
-  - Herança
-  - Intermediário
-  - JavaScript
-translation_of: Web/JavaScript/Reference/Classes
 ---
 {{JsSidebar("Classes")}}
 

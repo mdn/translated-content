@@ -69,7 +69,7 @@ var array_emparejamientos = cadena.match(expresion);
 console.log(array_emparejamientos);
 ```
 
-`array_emparejamientos` será `{{ mediawiki.external('\'A\', \'B\', \'C\', \'D\', \'E\', \'a\', \'b\', \'c\', \'d\', \'e\'') }}`
+`array_emparejamientos` será `['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']`
 
 ## Vea También
 

@@ -1,16 +1,8 @@
 ---
 title: <button>
 slug: Web/HTML/Element/button
-tags:
-  - Elemento
-  - Formulários HTML
-  - HTML
-  - Intermediário
-  - Referência(2)
-  - Web
-  - formulários
-translation_of: Web/HTML/Element/button
 ---
+
 ## Sumário
 
 O **Elemento HTML _`<button>`_** representa um botão clicável.
@@ -128,4 +120,4 @@ Firefox <35 para Android define um padrão {{ cssxref("background-image") }} gra
 
 Outros elementos que são usados para criar formulários: {{HTMLElement("form")}}, {{HTMLElement("datalist")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}},{{HTMLElement("keygen")}}, {{HTMLElement("label")}}, {{HTMLElement("legend")}}, {{HTMLElement("meter")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("option")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

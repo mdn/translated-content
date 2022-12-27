@@ -1,8 +1,8 @@
 ---
 title: <blend-mode>
 slug: Web/CSS/blend-mode
-translation_of: Web/CSS/blend-mode
 ---
+
 {{CSSRef}}
 
 [O tipo básico de dados](/pt-BR/docs/Web/CSS/CSS_Tipos) [CSS](/pt-BR/docs/Web/CSS) **`<blend-mode>`** (modo de mesclagem) descreve como as cores devem aparecer, quando objetos se sobrepõem. Usa-se nas propriedades {{cssxref("background-blend-mode")}} e {{cssxref("mix-blend-mode")}}.

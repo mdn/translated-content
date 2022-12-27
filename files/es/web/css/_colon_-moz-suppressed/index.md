@@ -10,7 +10,8 @@ tags:
   - Referencia CSS
 translation_of: Web/CSS/:-moz-suppressed
 ---
-{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}
+
+{{Non-standard_header}}{{CSSRef}}
 
 ## Resumen
 

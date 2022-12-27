@@ -1,11 +1,6 @@
 ---
 title: contentStyleType
 slug: Web/SVG/Attribute/contentStyleType
-tags:
-  - Atributo SVG
-  - Obsoleto
-  - SVG
-translation_of: Web/SVG/Attribute/contentStyleType
 ---
 « [Página inicial de referência do atributo SVG](/en/SVG/Attribute)
 

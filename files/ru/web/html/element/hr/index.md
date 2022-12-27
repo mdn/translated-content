@@ -3,7 +3,7 @@ title: '<hr>: The Thematic Break (Horizontal Rule) element'
 slug: Web/HTML/Element/hr
 translation_of: Web/HTML/Element/hr
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML `<hr>` элемент** служит для тематического разделения абзацев.Рисует горизонтальную прямую
 

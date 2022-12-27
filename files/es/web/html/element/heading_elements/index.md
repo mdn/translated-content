@@ -143,4 +143,4 @@ Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros
 - {{HTMLElement("div")}}
 - {{HTMLElement("section")}}
 
-{{HTMLRef}}
+{{HTMLSidebar}}

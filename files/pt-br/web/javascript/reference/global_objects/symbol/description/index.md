@@ -1,7 +1,6 @@
 ---
 title: Symbol.prototype.description
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/description
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/description
 ---
 {{JSRef}}
 

@@ -1,15 +1,8 @@
 ---
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
-tags:
-  - API
-  - DOM
-  - Precisa de compatibilidade entre Browsers
-  - Referencia
-  - Referência DOM
-  - metodo
-translation_of: Web/API/Node/cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 O método **`Node.cloneNode()`** duplica um elemento node (nó) da estrutura de um documento DOM. Ele retorna um clone do elemento para o qual foi invocado.

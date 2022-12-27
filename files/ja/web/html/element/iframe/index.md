@@ -3,7 +3,7 @@ title: '<iframe>: インラインフレーム要素'
 slug: Web/HTML/Element/iframe
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **HTML のインラインフレーム要素 (`<iframe>`)** は、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに他のページを埋め込むことができます。
 
@@ -165,7 +165,7 @@ slug: Web/HTML/Element/iframe
 
 - {{htmlattrdef("mozbrowser")}} {{non-standard_inline}}
 
-  - :&#x20;
+  - : &#x20;
 
     > **メモ:** これを Firefox のウェブ拡張機能に公開するには {{bug(1318532)}} を参照してください。
 

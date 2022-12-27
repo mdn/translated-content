@@ -1,9 +1,9 @@
 ---
 title: Pré-requisitos
 slug: Mozilla/Add-ons/WebExtensions/Prerequisites
-translation_of: Mozilla/Add-ons/WebExtensions/Prerequisites
 original_slug: Mozilla/Add-ons/WebExtensions/pre-requisitos
 ---
+
 Para desenvolver utilizando as APIs de uma WebExtension, você precisa de uma configuração mínima.
 
 - baixar, instalar e abrir o [Firefox Developer Edition](https://www.mozilla.org/pt-BR/firefox/developer/) ou o [Firefox Nightly](https://nightly.mozilla.org/). Use o Nightly caso queira as atualizações mais recentes.

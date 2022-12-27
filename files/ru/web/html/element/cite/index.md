@@ -54,4 +54,4 @@ To avoid the default italic style from being used for the \<cite> element use th
 - Элемент {{HTMLElement("blockquote")}} для длинных цитат.
 - Элемент {{HTMLElement("q")}} для встраиваемых цитат.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

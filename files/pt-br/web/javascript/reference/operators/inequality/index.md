@@ -1,8 +1,6 @@
 ---
 title: Desigualdade (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
-browser-compat: javascript.operators.inequality
-translation_of: Web/JavaScript/Reference/Innequality
 ---
 
 {{jsSidebar("Operators")}}

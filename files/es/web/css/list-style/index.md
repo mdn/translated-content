@@ -23,7 +23,7 @@ La propiedad de estilo de lista (`list-style`) permite definir de golpe todos lo
 
 ## Sintaxis
 
-list-style: {{ mediawiki.external(' list-style-type || list-style-position || list-style-image ') }} | inherit
+list-style: [ list-style-type || list-style-position || list-style-image ] | inherit
 
 ### Valores
 

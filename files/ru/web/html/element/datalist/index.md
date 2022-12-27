@@ -64,4 +64,4 @@ translation_of: Web/HTML/Element/datalist
 - Элемент {{HTMLElement("input")}} , в особенности его атрибут {{htmlattrxref("list", "input")}};
 - Элемент {{HTMLElement("option")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

@@ -106,4 +106,4 @@ Incluya este polyfill para proporcionar soporte para navegadores antiguos y actu
 - El elemento {{HTMLElement("input")}}, y más especificamente este atributo {{htmlattrxref("list", "input")}};
 - El elemento {{HTMLElement("option")}}.
 
-{{HTMLRef}}
+{{HTMLSidebar}}

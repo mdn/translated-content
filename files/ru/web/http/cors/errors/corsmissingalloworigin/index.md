@@ -15,7 +15,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 
 Если у вас есть доступ к серверу, то добавьте домен запрашивающего сайта в список разрешённых доменов, добавив его в значение заголовка `Access-Control-Allow-Origin`.
 
-Например, для предоставления сайту https\://amazing.site доступа к ресурсам с использованием CORS, заголовок должен выглядеть так:
+Например, для предоставления сайту `https://amazing.site` доступа к ресурсам с использованием CORS, заголовок должен выглядеть так:
 
 ```
 Access-Control-Allow-Origin: https://amazing.site

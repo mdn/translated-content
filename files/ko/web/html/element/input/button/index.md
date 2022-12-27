@@ -10,7 +10,7 @@ tags:
   - Input Type
 translation_of: Web/HTML/Element/input/button
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`button`** 유형의 {{htmlelement("input")}} 요소는 단순한 푸시 버튼으로 렌더링 됩니다. 이벤트 처리기(주로 {{event("click")}} 이벤트)를 부착하면, 사용자 지정 기능을 웹 페이지 어느 곳에나 제공할 수 있습니다.
 

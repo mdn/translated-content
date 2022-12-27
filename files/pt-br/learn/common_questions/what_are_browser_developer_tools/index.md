@@ -1,7 +1,6 @@
 ---
 title: O que são as ferramentas de desenvolvimento do navegador
 slug: Learn/Common_questions/What_are_browser_developer_tools
-translation_of: Learn/Common_questions/What_are_browser_developer_tools
 original_slug: Learn/Common_questions/ferramentas_de_desenvolvimento_do_navegador
 ---
 

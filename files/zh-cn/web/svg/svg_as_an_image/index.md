@@ -10,7 +10,7 @@ SVG 图像可以作为一种图片格式用在很多环境中。很多浏览器�
 
 ## Gecko 专有的环境
 
-另外，Gecko 2.0 {{geckoRelease("2.0")}}引入了在以下环境中支持使用 SVG：
+另外，Gecko 2.0 引入了在以下环境中支持使用 SVG：
 
 - CSS 的{{cssxref("list-style-image")}}属性
 - SVG 的{{SVGElement("image")}}元素

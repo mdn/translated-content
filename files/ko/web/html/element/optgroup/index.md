@@ -10,7 +10,8 @@ tags:
   - Web
 translation_of: Web/HTML/Element/optgroup
 ---
-{{HTMLRef}}
+
+{{HTMLSidebar}}
 
 **HTML `<optgroup>` 요소**는 {{HTMLElement("select")}} 요소의 옵션을 묶을 수 있습니다.
 

@@ -9,7 +9,7 @@ tags:
 translation_of: Web/HTML/Element/figcaption
 original_slug: Web/HTML/Elemento/figcaption
 ---
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 El elemento **HTML `<figcaption>`** representa un subtítulo o leyenda asociado al contenido del elemento padre {{HTMLElement("figure")}}, pudiendo ser colocado como primer o último hijo. Es importante destacar que el elemento **`<figcaption>`** es opcional.
 

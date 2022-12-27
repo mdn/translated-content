@@ -5,7 +5,7 @@ slug: Web/API/PushMessageData/json
 
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
-{{domxref("PushMessageData")}} インターフェースの **`json()`**メソッドは、プッシュメッセージデータを [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) オブジェクトとして抜き出します。
+{{domxref("PushMessageData")}} インターフェースの **`json()`** メソッドは、プッシュメッセージデータを [JSON](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON) オブジェクトとして抜き出します。
 
 ## 構文
 

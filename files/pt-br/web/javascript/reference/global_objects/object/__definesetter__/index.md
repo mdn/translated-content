@@ -1,17 +1,6 @@
 ---
 title: Object.prototype.__defineSetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
-tags:
-  - Deprecated
-  - Depreciado
-  - JavaScript
-  - Method
-  - Object
-  - Objeto
-  - Prototipo
-  - Prototype
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 ---
 {{JSRef}}
 

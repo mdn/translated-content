@@ -1,7 +1,6 @@
 ---
 title: Symbol.toStringTag
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag
 ---
 {{JSRef}}
 

@@ -1,11 +1,8 @@
 ---
 title: grid-template-columns
 slug: Web/CSS/grid-template-columns
-tags:
-  - CSS
-  - CSS Grid
-translation_of: Web/CSS/grid-template-columns
 ---
+
 A propriedade `grid-template-columns` do CSS define os nomes das linhas e funções de dimensionamento (track sizing) do {{glossary("grid column", "grid columns")}}.
 
 ```css

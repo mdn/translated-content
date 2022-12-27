@@ -1,12 +1,6 @@
 ---
 title: Reflect.apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
-tags:
-  - ECMAScript6
-  - JavaScript
-  - Reflect
-  - metodo
-translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
 {{JSRef}}
 

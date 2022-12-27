@@ -1,16 +1,6 @@
 ---
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
-tags:
-  - Expressão Regular
-  - JavaScript
-  - Prototipo
-  - Referencia
-  - String
-  - metodo
-  - regex
-  - replaceAll()
-translation_of: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
 {{JSRef}}
 

@@ -1,12 +1,6 @@
 ---
 title: MathML element reference
 slug: Web/MathML/Element
-tags:
-  - MathML
-  - MathML Reference
-  - NeedsTranslation
-  - TopicStub
-translation_of: Web/MathML/Element
 ---
 Essa é uma lista alfabética dos elementos de **apresentação** de MathML.
 

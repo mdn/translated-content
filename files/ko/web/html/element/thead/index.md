@@ -3,7 +3,7 @@ title: '<thead>: 표 머릿글 요소'
 slug: Web/HTML/Element/thead
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 **`<thead>`** [HTML](/ko/docs/Web/HTML) 요소는 테이블의 열의 머리글인 행들의 집합입니다.
 
