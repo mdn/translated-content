@@ -2,6 +2,7 @@
 title: Web Storage API
 slug: Web/API/Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 **Web Storage API** は、{{Glossary("Cookie","クッキー")}}を使用するよりも直感的な方法で、ブラウザーがキーと値のペアを保存できる仕組みを提供します。

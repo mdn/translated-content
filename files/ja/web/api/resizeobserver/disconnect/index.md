@@ -2,6 +2,7 @@
 title: ResizeObserver.disconnect()
 slug: Web/API/ResizeObserver/disconnect
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`disconnect()`** は {{domxref("ResizeObserver")}} インターフェイスのメソッドで、すべての監視されている {{domxref('Element')}} または  {{domxref('SVGElement')}} をターゲットとした監視を解除します。

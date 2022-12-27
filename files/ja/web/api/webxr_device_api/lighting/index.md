@@ -2,6 +2,7 @@
 title: WebXR 設定の照明
 slug: Web/API/WebXR_Device_API/Lighting
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API) は、シーンのすべてのレンダリング、テクスチャリング、およびライティング（照明）を実行するために他のテクノロジー（つまり、[WebGL](/ja/docs/Web/API/WebGL_API) とそれに基づくフレームワーク）に依存しているため、WebXR 設定またはシーンには、他の WebGL で生成されたディスプレイと同じ一般的な照明の概念が適用されます。

@@ -21,7 +21,7 @@ Sempre que um objeto precisa ser iterado (como no início de um loop `for..of`),
 
 O protocolo **iterador** define uma maneira padrão de produzir uma sequência de valores (finito ou infinito).
 
-Um objeto é um iterador quando implementa um método **`next()`\*\*** \*\*com a semântica adiante:
+Um objeto é um iterador quando implementa um método **`next()`** com a semântica adiante:
 
 <table class="standard-table">
   <tbody>

@@ -2,6 +2,7 @@
 title: i18n
 slug: Mozilla/Add-ons/WebExtensions/API/i18n
 ---
+
 {{AddonSidebar}}
 
 拡張機能を国際化する関数です。これらの API は、拡張機能に同梱したロケールファイルからローカライズ文字列を取得したり、ブラウザーの現在の言語や、その [Accept-Language ヘッダー](/ja/docs/Web/HTTP/Content_negotiation#The_Accept-Language_header) を調べるために使用します。

@@ -161,11 +161,11 @@ Este é um algoritmo de colisão que pode detectar uma colisão entre quaisquer 
 
 A implementação do SAT está fora do escopo desta página, portanto, veja os tutoriais recomendados abaixo:
 
-1.  [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/)
-2.  [Collision detection and response](http://www.metanetsoftware.com/technique/tutorialA.html)
-3.  [Collision detection Using the Separating Axis Theorem](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)
-4.  [SAT (Separating Axis Theorem)](http://www.codezealot.org/archives/55)
-5.  [Separation of Axis Theorem (SAT) for Collision DDetection](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/)
+1. [Separating Axis Theorem (SAT) explanation](http://www.sevenson.com.au/actionscript/sat/)
+2. [Collision detection and response](http://www.metanetsoftware.com/technique/tutorialA.html)
+3. [Collision detection Using the Separating Axis Theorem](http://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)
+4. [SAT (Separating Axis Theorem)](http://www.codezealot.org/archives/55)
+5. [Separation of Axis Theorem (SAT) for Collision DDetection](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/)
 
 ## Performance de Colisão
 

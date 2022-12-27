@@ -25,7 +25,7 @@ if (condição) afirmação1 [else afirmação2]
 <!---->
 
 - `condição1`
-  - : Condicional que será executada caso a condição em _if_ seja verdadeira (true). Pode ser qualquer instrução, incluindo mais condicionais _if_ aninhadas à instrução. Para executar multiplas instruções, faça um agrupamento com uma instrução em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block "en/JavaScript/Reference/Statements/block") ({ ... }). Para não executar nenhuma instrução, utilize uma instrução vazia ([empty](/pt-BR/docs/Web/JavaScript/Reference/Statements/Empty)).
+  - : Condicional que será executada caso a condição em _if_ seja verdadeira (true). Pode ser qualquer instrução, incluindo mais condicionais _if_ aninhadas à instrução. Para executar multiplas instruções, faça um agrupamento com uma instrução em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block) ({ ... }). Para não executar nenhuma instrução, utilize uma instrução vazia ([empty](/pt-BR/docs/Web/JavaScript/Reference/Statements/Empty)).
 
 <!---->
 
@@ -71,7 +71,7 @@ if (condição) {
 }
 ```
 
-Não confunda os valores boolean primitivos `true` e `false` com os valores true e false do objeto [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean "en/JavaScript/Reference/Global_Objects/Boolean"). Qualquer valor que não for `undefined`, `null`, `0`, `NaN`, ou uma string vazia (`""`), e qualquer objeto, incluíndo um objeto Boolean cujo valor é false, é avaliado como true quando passado por uma condicional. Por exemplo:
+Não confunda os valores boolean primitivos `true` e `false` com os valores true e false do objeto [Boolean](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Boolean). Qualquer valor que não for `undefined`, `null`, `0`, `NaN`, ou uma string vazia (`""`), e qualquer objeto, incluíndo um objeto Boolean cujo valor é false, é avaliado como true quando passado por uma condicional. Por exemplo:
 
 ```js
 var b = new Boolean(false);

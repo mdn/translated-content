@@ -198,7 +198,7 @@ var array = [...obj]; // TypeError: obj is not iterable
 
 ### Espalhamento com muitos valores
 
-Quando usar a sintaxe de espalhamento para chamada de funções, esteja ciente da possibilidade de exceder tamanho máximo de argumentos do motor do Javascript. Veja [`apply()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).") para mais detalhes.
+Quando usar a sintaxe de espalhamento para chamada de funções, esteja ciente da possibilidade de exceder tamanho máximo de argumentos do motor do Javascript. Veja [`apply()`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) para mais detalhes.
 
 ## Sintaxe Rest (parâmetros)
 

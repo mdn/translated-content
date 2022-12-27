@@ -2,6 +2,7 @@
 title: VRFrameData.pose
 slug: Web/API/VRFrameData/pose
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`pose`** は {{domxref("VRFrameData")}} インターフェイスの読み取り専用プロパティで、現在の {{domxref("VRFrameData.timestamp")}} の時点での {{domxref("VRDisplay")}} の {{domxref("VRPose")}} を返します。

@@ -2,6 +2,7 @@
 title: 'Window: hashchange イベント'
 slug: Web/API/Window/hashchange_event
 ---
+
 {{APIRef}}
 
 **`hashchange`** イベントは、 URL のフラグメント識別子 (URL の `#` 記号で始まり続く部分) が変化したときに発生します。

@@ -2,6 +2,7 @@
 title: windows.WindowState
 slug: Mozilla/Add-ons/WebExtensions/API/windows/WindowState
 ---
+
 {{AddonSidebar()}}
 
 ブラウザウィンドウの状態。

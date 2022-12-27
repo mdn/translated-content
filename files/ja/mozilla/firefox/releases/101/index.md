@@ -2,6 +2,7 @@
 title: Firefox 101 for developers
 slug: Mozilla/Firefox/Releases/101
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 101 の変更点をまとめています。Firefox 101 は、米国時間 2022 年 5 月 31 日にリリースされました。

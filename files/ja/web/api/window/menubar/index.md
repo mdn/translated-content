@@ -2,6 +2,7 @@
 title: Window.menubar
 slug: Web/API/Window/menubar
 ---
+
 {{ APIRef() }}
 
 **`Window.menubar`** プロパティは `menubar` オブジェクトを返します。これによって表示状態を確認することができます。

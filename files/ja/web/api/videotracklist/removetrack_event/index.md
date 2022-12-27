@@ -2,6 +2,7 @@
 title: 'VideoTrackList: removetrack イベント'
 slug: Web/API/VideoTrackList/removetrack_event
 ---
+
 {{APIRef}}
 
 `removeTrack` イベントは、トラックが {{domxref("VideoTrackList")}} から取り除かれたときに発生します。

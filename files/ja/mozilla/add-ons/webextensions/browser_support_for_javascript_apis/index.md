@@ -2,6 +2,7 @@
 title: JavaScript API 群のブラウザーの互換性
 slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 ---
+
 {{AddonSidebar}}
 
 {{WebExtAllCompatTables}}

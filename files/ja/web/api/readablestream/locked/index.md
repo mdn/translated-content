@@ -2,6 +2,7 @@
 title: ReadableStream.locked
 slug: Web/API/ReadableStream/locked
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} インターフェイスの **`locked`** 読み取り専用プロパティは、読み取り可能なストリームが[リーダーにロックされている](https://streams.spec.whatwg.org/#lock)かどうかを返します。

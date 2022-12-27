@@ -2,6 +2,7 @@
 title: web_accessible_resources
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

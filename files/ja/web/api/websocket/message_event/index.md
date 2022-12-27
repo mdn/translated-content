@@ -2,6 +2,7 @@
 title: 'WebSocket: message イベント'
 slug: Web/API/WebSocket/message_event
 ---
+
 {{APIRef}}
 
 `message` イベントは、 `WebSocket` を通してデータを受け取ったときに発生します。

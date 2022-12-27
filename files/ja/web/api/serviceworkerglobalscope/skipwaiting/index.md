@@ -2,6 +2,7 @@
 title: ServiceWorkerGlobalScope.skipWaiting()
 slug: Web/API/ServiceWorkerGlobalScope/skipWaiting
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} スコープの **`ServiceWorkerGlobalScope.skipWaiting()`** メソッドは、待機している Service Worker がアクティブになるように強制します。

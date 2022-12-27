@@ -2,6 +2,7 @@
 title: XMLHttpRequest.upload
 slug: Web/API/XMLHttpRequest/upload
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 {{domxref("XMLHttpRequest")}} の `upload` プロパティは、アップロードの進捗を監視することができる {{domxref("XMLHttpRequestUpload")}} オブジェクトを返します。

@@ -2,6 +2,7 @@
 title: commands
 slug: Mozilla/Add-ons/WebExtensions/API/commands
 ---
+
 {{AddonSidebar}}
 
 [`commands` manifest.json キー](/ja/Add-ons/WebExtensions/manifest.json/commands)を使って、登録したコマンドをユーザーが実行するのをリッスンします。

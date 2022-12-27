@@ -41,6 +41,6 @@ Muitos disparadores de eventos (incluindo elements, documents, e windows) també
 
 ## Veja também
 
-- [Referência de eventos](/pt-BR/docs/Web/Reference/Events "/en-US/docs/Web/Reference/Events") - os eventos disponíveis na plataforma.
-- [Guia do desenvolvedor sobre Eventos](/pt-BR/docs/Web/Guide/DOM/Events "/en-US/docs/Web/Guide/DOM/Events")
+- [Referência de eventos](/pt-BR/docs/Web/Reference/Events) - os eventos disponíveis na plataforma.
+- [Guia do desenvolvedor sobre Eventos](/pt-BR/docs/Web/Guide/DOM/Events)
 - Interface {{domxref("Event")}}

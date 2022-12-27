@@ -47,7 +47,7 @@ array.reduceRight(function(previousValue, currentValue, index, array) {
 
 A primeira vez que a função é chamada, o `previousValue` e o `currentValue` podem ser um de dois valores. Se um `initialValue` foi recebido na chamada do `reduceRight`, então o `previousValue` sera iqual ao `initialValue` e o `currentValue` será igual ao ultimo valor no array. Se o `initialValue` não foi recebido, então o ` previousValue será igual ao ultimo valor no array e o ``currentValue ` será igual ao penultimo valor no array.
 
-Se o array é vazio e nenhum `initialValue `foi recebido, {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançado. Se o array somente tem um elemento (independentemente da posição dele) e o `initialValue `não foi recebido, ou se o `initialValue` foi recebido mas o array é vazio, o valor em si será retornado sem chamar o `callback`.
+Se o array é vazio e nenhum `initialValue` foi recebido, {{jsxref("Global_Objects/TypeError", "TypeError")}} será lançado. Se o array somente tem um elemento (independentemente da posição dele) e o `initialValue` não foi recebido, ou se o `initialValue` foi recebido mas o array é vazio, o valor em si será retornado sem chamar o `callback`.
 
 Alguns exemplos de execuções da função e como será parecida a chamada:
 

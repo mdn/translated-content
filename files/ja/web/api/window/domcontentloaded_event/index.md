@@ -2,6 +2,7 @@
 title: 'Window: DOMContentLoaded イベント'
 slug: Web/API/Window/DOMContentLoaded_event
 ---
+
 {{APIRef}}
 
 **`DOMContentLoaded`** イベントは、最初の HTML 文書の読み込みと解析が完了したとき、スタイルシート、画像、サブフレームの読み込みが完了するのを待たずに発生します。

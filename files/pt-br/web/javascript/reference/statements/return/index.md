@@ -122,5 +122,5 @@ answer(1337); // 56154
 
 ## Veja também
 
-- [Funções](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope "En/Core_JavaScript_1.5_Reference/Functions")
+- [Funções](/pt-BR/docs/Web/JavaScript/Reference/Functions_and_function_scope)
 - [Closures](/pt-BR/docs/Web/JavaScript/Closures)

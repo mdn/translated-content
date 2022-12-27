@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader.ReadableStreamDefaultReader()
 slug: Web/API/ReadableStreamDefaultReader/ReadableStreamDefaultReader
 ---
+
 {{APIRef("Streams")}}
 
 **`ReadableStreamDefaultReader()`** コンストラクターは、`ReadableStreamDefaultReader` オブジェクトのインスタンスを作成して返します。

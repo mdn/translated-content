@@ -2,6 +2,7 @@
 title: VRFrameData()
 slug: Web/API/VRFrameData/VRFrameData
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`VRFrameData()`** コンストラクターは、 {{domxref("VRFrameData")}} オブジェクトのインスタンスを生成します。

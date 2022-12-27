@@ -39,7 +39,7 @@ min-height: inherit
   - : The intrinsic preferred height.
 - `min-content` {{ experimental_inline() }}
   - : The intrinsic minimum height.
-- `fill-available`{{ experimental_inline() }}
+- `fill-available` {{ experimental_inline() }}
   - : The containing block height minus horizontal margin, border and padding. Some browsers implement an ancient name for this keyword, `available`.
 - `fit-content` {{ experimental_inline() }}
   - : According CSS3 Box, this is a synonym of `min-content.` CSS3 Sizing defines a more complex algorithm, but no browser implements it, even in an experimental way.
@@ -68,4 +68,4 @@ form { min-height: 0; }
 ## Ver também
 
 - {{ Cssxref("width") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
-- The [box model](/pt-BR/docs/CSS/box_model "en/CSS/box_model"), {{ Cssxref("min-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}
+- The [box model](/pt-BR/docs/CSS/box_model), {{ Cssxref("min-width") }}, {{ Cssxref("box-sizing") }}, {{ Cssxref("height") }}, {{ Cssxref("max-height") }}

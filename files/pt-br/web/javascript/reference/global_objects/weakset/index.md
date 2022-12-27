@@ -14,16 +14,16 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 ### Parâmetros
 
 - iterable
-  - : Se um[ objeto interagível ](pt-BR/docs/Web/JavaScript/Reference/Statements/for...of)é passado, todos os seus elementos serão adicionados ao novo `WeakSet`.
+  - : Se um[objeto interagível](pt-BR/docs/Web/JavaScript/Reference/Statements/for...of) é passado, todos os seus elementos serão adicionados ao novo `WeakSet`.
 
 ## Descrição
 
-Objetos `WeakSet` são coleções de objetos. Um objeto no `WeakSet `pode ocorrer uma vez; é único na coleção do `WeakSet`.
+Objetos `WeakSet` são coleções de objetos. Um objeto no `WeakSet` pode ocorrer uma vez; é único na coleção do `WeakSet`.
 
 As principais diferenças para o objeto {{jsxref("Set")}} são:
 
-- Em contraste ao `Sets`, `WeakSets `são **coleções apenas de objetos** e não de valores arbitrários de qualquer tipo.
-- O `WeakSet `é _fraco_. Referências aos objetos nas coleções são mantidas "fracamente". Se não há outra referência para um objeto mantido na `WeakSet`, eles pode ser coletados pelo gerenciamento de memória (_garbage collection_).
+- Em contraste ao `Sets`, `WeakSets` são **coleções apenas de objetos** e não de valores arbitrários de qualquer tipo.
+- O `WeakSet` é _fraco_. Referências aos objetos nas coleções são mantidas "fracamente". Se não há outra referência para um objeto mantido na `WeakSet`, eles pode ser coletados pelo gerenciamento de memória (_garbage collection_).
 
 ## Propriedades
 

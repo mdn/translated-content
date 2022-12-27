@@ -2,6 +2,7 @@
 title: ReadableStreamBYOBReader.ReadableStreamBYOBReader()
 slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 **`ReadableStreamBYOBReader()`** コンストラクターは、`ReadableStreamBYOBReader` オブジェクトのインスタンスを作成して返します。

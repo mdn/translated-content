@@ -2,6 +2,7 @@
 title: 初めての拡張機能
 slug: Mozilla/Add-ons/WebExtensions/Your_first_WebExtension
 ---
+
 {{AddonSidebar}}
 
 この記事では、Firefox 用の拡張機能をどのように作ればよいのか、その初めから最後までを一通り説明します。この拡張機能は "mozilla.org" とそのサブドメインから読み込まれたページに赤い枠を付けるだけです。

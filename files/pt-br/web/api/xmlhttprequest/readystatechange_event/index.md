@@ -13,7 +13,7 @@ original_slug: Web/API/XMLHttpRequest/onreadystatechange
 ---
 {{APIRef}}
 
-Um [`EventHandler`](/pt-BR/docs/Web/API/EventHandler "A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an event handler using:") é chamado sempre que o atributo `readyState` é modificado. O callback é chamado a partir da interface do usuário. A propriedade **`XMLHttpRequest.onreadystatechange`** contém o manipulador de eventos que é chamado quando o evento [readystatechange](/pt-BR/docs/Web/Events/readystatechange) é disparado, ou seja, toda vez que a propriedade {{domxref("XMLHttpRequest.readyState", "readyState")}} do {{domxref("XMLHttpRequest")}} é modificada.
+Um [`EventHandler`](/pt-BR/docs/Web/API/EventHandler) é chamado sempre que o atributo `readyState` é modificado. O callback é chamado a partir da interface do usuário. A propriedade **`XMLHttpRequest.onreadystatechange`** contém o manipulador de eventos que é chamado quando o evento [readystatechange](/pt-BR/docs/Web/Events/readystatechange) é disparado, ou seja, toda vez que a propriedade {{domxref("XMLHttpRequest.readyState", "readyState")}} do {{domxref("XMLHttpRequest")}} é modificada.
 
 > **Aviso:** **Atenção:** Isso não deve ser usado com solicitações síncronas e não deve ser usado como código nativo.
 

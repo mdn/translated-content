@@ -78,4 +78,4 @@ O elemento poderá não ser movido completamento ao topo ou ao fundo dependendo 
 
 ## Veja também
 
-- {{domxref("Element.scrollIntoViewIfNeeded()")}}[ ](/pt-BR/docs/Web/API/Element/scrollIntoViewIfNeeded){{non-standard_inline}}
+- {{domxref("Element.scrollIntoViewIfNeeded()")}} {{non-standard_inline}}

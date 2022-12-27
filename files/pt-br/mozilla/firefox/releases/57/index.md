@@ -64,7 +64,7 @@ Sem mudanças.
 #### Novas APIs
 
 - A {{DOMxRef("PerformanceObserver")}} está habilitado por padrão(default). ({{bug(1386021)}}).
-- As interfaces {{DOMxRef("AbortController")}} e {{DOMxRef("AbortSignal")}} (conhecidos como o Abort API) foram adicionados, permitindo requisições DOM (tal como[ fetch requests](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch)) ser abortado se desejar. ({{bug(1378342)}}).
+- As interfaces {{DOMxRef("AbortController")}} e {{DOMxRef("AbortSignal")}} (conhecidos como o Abort API) foram adicionados, permitindo requisições DOM (tal como [fetch requests](/pt-BR/docs/Web/API/WindowOrWorkerGlobalScope/fetch)) ser abortado se desejar. ({{bug(1378342)}}).
 - \[2] O [Storage API](/pt-BR/docs/Web/API/Storage_API) está implementado e habilitado por padrão(default). ({{bug(1399038)}}).
 
 #### DOM

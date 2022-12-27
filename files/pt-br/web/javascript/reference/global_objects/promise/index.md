@@ -127,7 +127,7 @@ Este exemplo é executado pelo click do botão. Você precisa de uma versão de 
 
 ### Carregando uma imagem com XHR
 
-Outro simples exemplo usando `Promise` e [`XMLHTTPRequest`](/en-US/docs/Web/API/XMLHttpRequest) para carregar imagens está disponível no repositório GitHub MDN[ promise-test](https://github.com/mdn/js-examples/blob/master/promises-test/index.html). Você também pode [vê-lo em ação](https://mdn.github.io/js-examples/promises-test/). Cada passo é comentado e lhe permite acompanhar de perto a arquitetura de Promise e XHR.
+Outro simples exemplo usando `Promise` e [`XMLHTTPRequest`](/en-US/docs/Web/API/XMLHttpRequest) para carregar imagens está disponível no repositório GitHub MDN [promise-test](https://github.com/mdn/js-examples/blob/master/promises-test/index.html). Você também pode [vê-lo em ação](https://mdn.github.io/js-examples/promises-test/). Cada passo é comentado e lhe permite acompanhar de perto a arquitetura de Promise e XHR.
 
 ## Especificações
 

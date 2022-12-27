@@ -46,7 +46,7 @@ O evento `mouseover` é acionado quando um dispositivo ponteiro é movido para o
 
 ## Example
 
-The following example illustrates the difference between `mouseover` and [`mouseenter`](/pt-BR/docs/Web/Events/mouseenter "/en/Mozilla_event_reference/mouseenter") events.
+The following example illustrates the difference between `mouseover` and [`mouseenter`](/pt-BR/docs/Web/Events/mouseenter) events.
 
 ```html
 <ul id="test">

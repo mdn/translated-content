@@ -2,6 +2,7 @@
 title: Storage.key()
 slug: Web/API/Storage/key
 ---
+
 {{APIRef}}
 
 {{domxref("Storage")}} インターフェイスの `key()` メソッドは数値 n を渡すと、ストレージ内で n 番目のキーの名称を返します。キーの順序はユーザエージェント依存であり、この順序に頼るべきではありません。

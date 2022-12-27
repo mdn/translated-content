@@ -41,14 +41,8 @@ RegExp(padrão[, flags])
       - : ignorar maiúsc./minúsc.; Se a _flag <kbd>u</kbd>_ estiver ativa, deve ser utilizado o _Unicode case folding_
     - `m`
       - : multilinha; trata caracteres de início e fim (^ e $) ao operar sobre múltiplas linhas (ou seja, corresponder o início ou fim de _cada_ linha (delimitado por \n ou \r), e não apenas o começo ou fim de toda a string de entrada)
-
-    <!---->
-
-    - `u `{{experimental_inline}}
+    - `u` {{experimental_inline}}
       - : unicode; trata o padrão como uma sequência de código unicode
-
-    <!---->
-
     - `y` {{experimental_inline}}
       - : aderente; corresponde apenas pelo index indicado pela propriedade `lastIndex` dessa expressão regular na string alvo (e não tenta corresponder de qualquer indexes posteriores).
 

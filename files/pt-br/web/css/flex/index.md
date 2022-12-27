@@ -137,19 +137,19 @@ The `flex` property may be specified using one, two, or three values.
 
 - **One-value syntax**: the value must be one of:
 
-  - a `<number>`: In this case it is interpreted as `flex: <number> 1 0`; the [`<flex-shrink>`](#<'flex-shrink'>) value is assumed to be 1 and the [`<flex-basis>`](#<'flex-basis'>) value is assumed to be `0`.
+  - a `<number>`: In this case it is interpreted as `flex: <number> 1 0`; the [`<flex-shrink>`](#flex-shrink) value is assumed to be 1 and the [`<flex-basis>`](#flex-basis) value is assumed to be `0`.
   - one of the keywords: [`none`](#none), [`auto`](#auto), or `initial`.
 
-- **Two-value syntax**: the first value must be a {{cssxref("&lt;number&gt;")}} and it is interpreted as [`<flex-grow>`](#<'flex-grow'>). The second value must be one of:
+- **Two-value syntax**: the first value must be a {{cssxref("&lt;number&gt;")}} and it is interpreted as [`<flex-grow>`](#flex-grow). The second value must be one of:
 
-  - a {{cssxref("&lt;number&gt;")}}: then it is interpreted as [`<flex-shrink>`](#<'flex-shrink'>).
-  - a valid value for {{cssxref("width")}}: then it is interpreted as [`<flex-basis>`](#<'flex-basis'>).
+  - a {{cssxref("&lt;number&gt;")}}: then it is interpreted as [`<flex-shrink>`](#flex-shrink).
+  - a valid value for {{cssxref("width")}}: then it is interpreted as [`<flex-basis>`](#flex-basis).
 
 - **Three-value syntax:** the values must be in the following order:
 
-  1.  a {{cssxref("&lt;number&gt;")}} for [`<flex-grow>`](#<'flex-grow'>).
-  2.  a {{cssxref("&lt;number&gt;")}} for [`<flex-shrink>`](#<'flex-grow'>).
-  3.  a valid value for {{cssxref("width")}} for [`<flex-basis>`](#<'flex-basis'>).
+  1. a {{cssxref("&lt;number&gt;")}} for [`<flex-grow>`](#flex-grow).
+  2. a {{cssxref("&lt;number&gt;")}} for [`<flex-shrink>`](#flex-grow).
+  3. a valid value for {{cssxref("width")}} for [`<flex-basis>`](#flex-basis).
 
 ### Values
 

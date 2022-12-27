@@ -48,9 +48,9 @@ Para usar esta API, uma extensão especificar a "cookies" [API permission](/en-U
 
 Cookies de terceiros são aquleles enviados por sites em que você está num dado momento, por exemplo:
 
-1.  Você acessa [bbc.com](http://bbc.com). Ele contém uma publicidade do [tracker.com](http://tracker.com) que atribui um cookie associado com o domínio "[tracker.com](http://tracker.com)".
-2.  Você acessa [cnn.com](http://cnn.com). Ele também contém uma publicidade do [tracker.com](http://tracker.com) que atribui um cookie associado ao domínio "[tracker.com](http://tracker.com)".
-3.  Eventualmente ambos os cookies podem ser enviados para [tracker.com](http://tracker.com). Quem então pode descobrir que o mesmo usuário visitou ambos os sites.
+1. Você acessa [bbc.com](http://bbc.com). Ele contém uma publicidade do [tracker.com](http://tracker.com) que atribui um cookie associado com o domínio "[tracker.com](http://tracker.com)".
+2. Você acessa [cnn.com](http://cnn.com). Ele também contém uma publicidade do [tracker.com](http://tracker.com) que atribui um cookie associado ao domínio "[tracker.com](http://tracker.com)".
+3. Eventualmente ambos os cookies podem ser enviados para [tracker.com](http://tracker.com). Quem então pode descobrir que o mesmo usuário visitou ambos os sites.
 
 Quando um isolamento de primeira parte está ativo, cookies são ainda qualificados pelo domínio da página original visitada pelo usuário (essencialmente, o domínio exibe o usuário na barra da URL, também conhecido como "domínio de primeira parte). Isto significa que não é possivel para um rastreador correlacionar o cookie da [bbc.com](http://bbc.com) com o cookie da [cnn.com](http://cnn.com), então o rastreador não pode monitorar um simples usuários através de ambos os sites.
 

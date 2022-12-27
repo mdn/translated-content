@@ -13,10 +13,10 @@ Um objeto document pode ser obtido por meio de várias APIs:
 
 - A mais comum; você trabalha com o script do documento que está rodando o script com o objeto document. (O mesmo document também pode ser referenciado como {{domxref("window.document")}}.)
 - O documento de um iframe através da propriedade `contentDocument.`
-- O [`responseXML` de um objeto `XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest#responseXML "XMLHttpRequest#responseXML").
+- O [`responseXML` de um objeto `XMLHttpRequest`](/pt-BR/docs/Web/API/XMLHttpRequest#responseXML).
 - O documento ao qual um determinado node ou elemento pertence pode ser recuperado usando a propriedade do node {{domxref("Node.ownerDocument","ownerDocument")}}
 
-Dependendo do tipo do documento (e.g. [HTML](/pt-BR/docs/HTML "HTML") ou [XML](/pt-BR/docs/XML "XML")), diferentes APIs estarão disponívels no objeto **`Document`**.
+Dependendo do tipo do documento (e.g. [HTML](/pt-BR/docs/HTML) ou [XML](/pt-BR/docs/XML)), diferentes APIs estarão disponívels no objeto **`Document`**.
 
 Todo objeto **`Document`** implementa a interface [`Document`](http://dom.spec.whatwg.org/#interface-document) (e consequentemente as interfaces {{domxref("Node")}} e {{domxref("EventTarget")}}). Portanto, as principais propriedades e métodos documentados nesta página estarão disponíveis para todos os tipos de documents.
 
@@ -229,7 +229,7 @@ The `Document` interface is extended with the {{domxref("ParentNode")}} interfac
 The `Document` interface is extended with the {{domxref("XPathEvaluator")}} interface:
 
 - {{domxref("Document.createExpression","Document.createExpression(String expression, XPathNSResolver resolver)")}}
-  - : Compiles an [`XPathExpression`](/en-US/docs/XPathExpression "XPathExpression") which can then be used for (repeated) evaluations.
+  - : Compiles an [`XPathExpression`](/en-US/docs/XPathExpression) which can then be used for (repeated) evaluations.
 - {{domxref("Document.createNSResolver","Document.createNSResolver(Node resolver)")}}
   - : Creates an {{domxref("XPathNSResolver")}} object.
 - {{domxref("Document.evaluate","Document.evaluate(String expression, Node contextNode, XPathNSResolver resolver, Number type, Object result)")}}
@@ -307,7 +307,7 @@ Mozilla also define some non-standard methods:
 - {{domxref("Document.getBoxObjectFor")}} {{obsolete_inline}}
   - : Use the {{domxref("Element.getBoundingClientRect()")}} method instead.
 - {{domxref("Document.loadOverlay")}}
-  - : Loads a [XUL overlay](/pt-BR/docs/XUL_Overlays "XUL_Overlays") dynamically. This only works in XUL documents.
+  - : Loads a [XUL overlay](/pt-BR/docs/XUL_Overlays) dynamically. This only works in XUL documents.
 - {{domxref("document.queryCommandText")}} {{obsolete_inline("14.0")}}
   - : This method never did anything but throw an exception, and was removed in Gecko 14.0 {{geckoRelease("14.0")}}.
 

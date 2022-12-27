@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **`WebGLRenderingContext.bindBuffer()`** メソッドは、与えられた {{domxref("WebGLBuffer")}} をターゲットに結合します。

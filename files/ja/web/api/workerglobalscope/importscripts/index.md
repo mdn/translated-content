@@ -4,6 +4,7 @@ slug: Web/API/WorkerGlobalScope/importScripts
 l10n:
   sourceCommit: 0fe2d3ee23b1b23be971d42c7c56729bd23a3f83
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`importScripts()`** は {{domxref("WorkerGlobalScope")}} インターフェイスのメソッドで、 1 つ以上のスクリプトをワーカーのスコープ内に同期的に読み込みます。

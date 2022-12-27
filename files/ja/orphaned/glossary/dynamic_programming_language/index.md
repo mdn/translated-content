@@ -3,6 +3,7 @@ title: Dynamic programming language (動的プログラミング言語)
 slug: orphaned/Glossary/Dynamic_programming_language
 original_slug: Glossary/Dynamic_programming_language
 ---
+
 **動的プログラミング言語**は一般の言語がコンパイル時に行う操作を実行時に行うプログラミング言語です。例えば、JavaScript は変数の型の変更やオブジェクトに対する新しいプロパティやメソッドの追加をプログラムの実行中に行うことができます。
 
 これは、そのような変更が普通はできない静的プログラミング言語と呼ばれるものの反対語です。

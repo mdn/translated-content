@@ -53,8 +53,8 @@ Firefox (SpiderMonkey) também implementa a versão anterior do generator em [Ja
 
 ### Métodos legacy generator
 
-- `Generator.prototype.next() `{{non-standard_inline}}
-  - : Retorna o valor fornecido pela expressão {{jsxref("Operators/yield", "yield")}}. Isto corresponde ao `next() `do ES6.
+- `Generator.prototype.next()` {{non-standard_inline}}
+  - : Retorna o valor fornecido pela expressão {{jsxref("Operators/yield", "yield")}}. Isto corresponde ao `next()` do ES6.
 - `Generator.prototype.close()` {{non-standard_inline}}
   - : Fecha o generator, então quando chamar `next()` um erro {{jsxref("StopIteration")}} será lançado. Isto corresponde ao método `return()` do ES6.
 - `Generator.prototype.send()` {{non-standard_inline}}

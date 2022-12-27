@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration.index
 slug: Web/API/ServiceWorkerRegistration/index
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`index`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスの読み取り専用プロパティで、オフラインコンテンツの索引付けができる {{domxref('ContentIndex')}} インターフェイスへの参照を返します。

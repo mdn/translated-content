@@ -31,7 +31,7 @@ O elemento removido do array; {{jsxref("undefined")}} se o array estiver vazio.
 
 O método shift remove o elemento de índice zero, diminui em 1 os indices dos demais valores e retorna o valor removido. Se a propriedade {{jsxref("Array.length", "length")}} for 0, então {{jsxref("undefined")}} é retornado.
 
-`shift` é intencionalmente genérico; esse método pode ser {{jsxref("Function.call", "chamado", "", 1)}} ou {{jsxref("Function.apply", "aplicado", "", 1)}} para objetos parecidos com arrays. Objetos que não contém a propriedade `length `representando o tamanho de uma série consecutiva, começando em zero, podem não se comportar de maneira correta.
+`shift` é intencionalmente genérico; esse método pode ser {{jsxref("Function.call", "chamado", "", 1)}} ou {{jsxref("Function.apply", "aplicado", "", 1)}} para objetos parecidos com arrays. Objetos que não contém a propriedade `length` representando o tamanho de uma série consecutiva, começando em zero, podem não se comportar de maneira correta.
 
 ## Exemplos
 

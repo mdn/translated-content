@@ -13,7 +13,7 @@ A interface `EventSource` é usada para receber eventos enviados pelo servidor (
 
 Assim que a conexão estiver aberta, mensagens recebidas do servidor são entregues para o seu código na forma de eventos {{event("message")}}.
 
-Ao contrário dos [WebSockets](/pt-BR/docs/Web/API/WebSockets_API), server-sent events são unidirecionais; ou seja, mensagens são entregues em uma direção, do servidor para o cliente (por exemplo, um navegador web). Isso torna-os uma excelente escolha quando não há necessidade de enviar mensagens do cliente para o servidor. Por exemplo, `EventSource` é uma abordagem útil para lidar com atualizações de status de mídias sociais, feeds de notícias, or entregar dados para um mecanismo de [armazenamento do lado cliente ](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)como o [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API) ou o [web storage](/pt-BR/docs/Web/API/Web_Storage_API).
+Ao contrário dos [WebSockets](/pt-BR/docs/Web/API/WebSockets_API), server-sent events são unidirecionais; ou seja, mensagens são entregues em uma direção, do servidor para o cliente (por exemplo, um navegador web). Isso torna-os uma excelente escolha quando não há necessidade de enviar mensagens do cliente para o servidor. Por exemplo, `EventSource` é uma abordagem útil para lidar com atualizações de status de mídias sociais, feeds de notícias, or entregar dados para um mecanismo de [armazenamento do lado cliente](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) como o [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API) ou o [web storage](/pt-BR/docs/Web/API/Web_Storage_API).
 
 ## Construtor
 
@@ -30,12 +30,11 @@ _Essa interface também herda propriedades do seu pai, {{domxref("EventTarget")}
   - : Uma {{domxref("DOMString")}} representando a URL da origem.
 - {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
   - : Um {{domxref("Boolean")}} indicando se a `EventSource` foi instanciada com credenciais cross-origin ([CORS](/pt-BR/docs/Web/HTTP/CORS)) definidas (`true`) ou não (`false`, o padrão).
-- ### Eventos
 
-  {{domxref("EventSource.onerror")}}
+### Eventos
 
+- {{domxref("EventSource.onerror")}}
   - : É um {{event("Event_handlers", "event handler")}} chamado quando um erro ocorre e o evento {{event("error")}} é despachado para o objeto `EventSource`.
-
 - {{domxref("EventSource.onmessage")}}
   - : É um {{event("Event_handlers", "event handler")}} chamado quando um evento {{event("message")}} é recebido, ou seja, quando uma mensagem está sendo recebida da origem.
 - {{domxref("EventSource.onopen")}}
@@ -81,4 +80,4 @@ Cada evento recebido faz com que o handler do evento `onmessage` no objeto `Even
 ## Veja também
 
 - [Server-sent events](/pt-BR/docs/Web/API/Server-sent_events)
-- [Usando server-sent events](/pt-BR/docs/Web/API/Server-sent_events/Using_server-sent_events "en/Server-sent events/Using server-sent events")
+- [Usando server-sent events](/pt-BR/docs/Web/API/Server-sent_events/Using_server-sent_events)

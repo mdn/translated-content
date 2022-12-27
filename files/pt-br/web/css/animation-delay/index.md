@@ -43,7 +43,7 @@ Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}
 
 ## Exemplos
 
-Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations "CSS/CSS_animations") para exemplos.
+Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations) para exemplos.
 
 ## Especificação
 
@@ -57,5 +57,5 @@ Veja [CSS animations](/pt-BR/docs/CSS/CSS_animations "CSS/CSS_animations") para 
 
 ## Veja também
 
-- [Using CSS animations](/pt-BR/docs/CSS/Tutorials/Using_CSS_animations "Tutorial about CSS animations")
+- [Using CSS animations](/pt-BR/docs/CSS/Tutorials/Using_CSS_animations)
 - JavaScript {{domxref("AnimationEvent")}} API

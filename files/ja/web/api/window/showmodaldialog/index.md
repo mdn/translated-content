@@ -2,6 +2,7 @@
 title: Window.showModalDialog()
 slug: Web/API/Window/showModalDialog
 ---
+
 {{deprecated_header}}{{APIRef}}
 
 > **Warning:** この機能は削除されました。ウェブサイトやアプリケーションを修正してください。

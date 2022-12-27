@@ -2,6 +2,7 @@
 title: ウェブページを変更する
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
+
 {{AddonSidebar}}
 
 拡張機能の一般的な事例の１つはウェブページを変更することです。例えば、ページのスタイルを変更、特定の DOM ノードを隠す、別の DOM ノードをページに挿入する、といいでしょう。

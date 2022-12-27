@@ -2,6 +2,7 @@
 title: アドオン
 slug: Mozilla/Add-ons
 ---
+
 {{AddonSidebarMain}}
 
 開発者はアドオン (add-on) を作成して Firefox の機能を拡張したり変更したりすることができます。 アドオンは JavaScript、HTML、CSS といったウェブ標準技術と、幾つかの専用の JavaScript API を使って作成します。

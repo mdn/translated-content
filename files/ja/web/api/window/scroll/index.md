@@ -2,6 +2,7 @@
 title: window.scroll
 slug: Web/API/Window/scroll
 ---
+
 {{ApiRef}}
 
 ## 概要

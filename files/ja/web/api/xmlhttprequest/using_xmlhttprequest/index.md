@@ -2,6 +2,7 @@
 title: XMLHttpRequest の使用
 slug: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 このガイドでは、ウェブサイトとサーバーの間でデータ交換をするために、 {{domxref("XMLHttpRequest")}} を使用して [HTTP](/ja/docs/Web/HTTP) リクエストを発行する方法を紹介します。 `XMLHttpRequest` のよくある使用例やもっと分かりにくい使用例も含まれています。

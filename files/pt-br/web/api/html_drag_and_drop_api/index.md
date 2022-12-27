@@ -31,13 +31,13 @@ Todos os [tipos de evento drag](/pt-BR/docs/Web/API/DragEvent#Event_types) são 
 | Event                        | On Event Handler                                                                 | Description                                                                                                                                                                                                                        |
 | ---------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | {{event('drag')}}     | {{domxref('GlobalEventHandlers.ondrag','ondrag')}}             | Acionado quando um elemento ou seleção de texto está sendo arrastado.                                                                                                                                                              |
-| {{event('dragend')}} | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | Acionado quando uma operação de arrastar está terminando (por eexmplo, ao soltar o botão do mouse ou pressionar a tecla esc). (Veja [Terminando um evento Drag](/pt-BR/docs/DragDrop/Drag_Operations#dragend "Finishing a Drag").) |
-| {{event('dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | Acionado quando um elemento arrastável ou seleção de texto entra em um ponto de soltura (drop target). (Veja [Determinando Drop Targets](/pt-BR/docs/DragDrop/Drag_Operations#droptargets "Specifying Drop Targets").)             |
+| {{event('dragend')}} | {{domxref('GlobalEventHandlers.ondragend','ondragend')}}     | Acionado quando uma operação de arrastar está terminando (por eexmplo, ao soltar o botão do mouse ou pressionar a tecla esc). (Veja [Terminando um evento Drag](/pt-BR/docs/DragDrop/Drag_Operations#dragend).) |
+| {{event('dragenter')}} | {{domxref('GlobalEventHandlers.ondragenter','ondragenter')}} | Acionado quando um elemento arrastável ou seleção de texto entra em um ponto de soltura (drop target). (Veja [Determinando Drop Targets](/pt-BR/docs/DragDrop/Drag_Operations#droptargets).)             |
 | {{event('dragexit')}} | {{domxref('GlobalEventHandlers.ondragexit','ondragexit')}}     | Acionado quando um elemento não é mais o ponto de seleção imediata da operação drag.                                                                                                                                               |
 | {{event('dragleave')}} | {{domxref('GlobalEventHandlers.ondragleave','ondragleave')}} | Acionado quando um elemento arrastável ou seleção de texto abandona um ponto de soltura (drop target) válido.                                                                                                                      |
 | {{event('dragover')}} | {{domxref('GlobalEventHandlers.ondragover','ondragover')}}     | Acionado quando um elemento ou seleção de texto está sendo arrastado sobre um ponto de soltura válido (a cada aproximadamente 100 milisegundos).                                                                                   |
-| {{event('dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | Acionado quando o usuário começa a arrastar um elemento válido ou seleção de texto. (Veja [Começando uma Operação Drag](/pt-BR/docs/DragDrop/Drag_Operations#dragstart "Starting a Drag Operation").)                              |
-| {{event('drop')}}     | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}             | Acionado quando um elemento ou seleção de texto é solta em um ponto d soltura (drop target) válido. (Veja [Realizando um Drop](/pt-BR/docs/DragDrop/Drag_Operations#drop "Performing a Drop").)                                    |
+| {{event('dragstart')}} | {{domxref('GlobalEventHandlers.ondragstart','ondragstart')}} | Acionado quando o usuário começa a arrastar um elemento válido ou seleção de texto. (Veja [Começando uma Operação Drag](/pt-BR/docs/DragDrop/Drag_Operations#dragstart).)                              |
+| {{event('drop')}}     | {{domxref('GlobalEventHandlers.ondrop','ondrop')}}             | Acionado quando um elemento ou seleção de texto é solta em um ponto d soltura (drop target) válido. (Veja [Realizando um Drop](/pt-BR/docs/DragDrop/Drag_Operations#drop).)                                    |
 
 Note que eventos `dragstart` e `dragend` não são acionados ao arrastar um arquivo vindo do sistema operacional para o navegador.
 
@@ -57,7 +57,7 @@ Note: as interfaces {{domxref("DragEvent")}} e a {{domxref("DataTransfer")}} sã
 
 ### Interfaces específicas para o Gecko
 
-A Mozilla e o Firefox suportam algumas funcionalidades fora dos padrões do modelo drag and drop. Elas são _cfunções convenientes_ para facilitar o arraste múltiplo de elementos e a manipulação de dados que não são strings (como arquivos). Para mais informações, veja [Dragging and Dropping Multiple Items](/pt-BR/docs/DragDrop/Dragging_and_Dropping_Multiple_Items "Dragging and Dropping Multiple Items"). Para mais informações, veja a página de referência {{domxref("DataTransfer")}} para todas as [propriedades específicas para o Gecko](/pt-BR/docs/Web/API/DataTransfer#Gecko_properties) e [Métodos específicos para o Gecko](/pt-BR/docs/Web/API/DataTransfer#Gecko_methods).
+A Mozilla e o Firefox suportam algumas funcionalidades fora dos padrões do modelo drag and drop. Elas são _cfunções convenientes_ para facilitar o arraste múltiplo de elementos e a manipulação de dados que não são strings (como arquivos). Para mais informações, veja [Dragging and Dropping Multiple Items](/pt-BR/docs/DragDrop/Dragging_and_Dropping_Multiple_Items). Para mais informações, veja a página de referência {{domxref("DataTransfer")}} para todas as [propriedades específicas para o Gecko](/pt-BR/docs/Web/API/DataTransfer#Gecko_properties) e [Métodos específicos para o Gecko](/pt-BR/docs/Web/API/DataTransfer#Gecko_methods).
 
 ## O básico
 
@@ -79,7 +79,7 @@ function dragstart_handler(ev) {
 </body>
 ```
 
-Veja a [referência do atributo draggable](/pt-BR/docs/Web/HTML/Global_attributes/draggable "draggable global attribute") e o [Guia de operações drag](/pt-BR/docs/Web/Guide/HTML/Drag_operations#draggableattribute) para mais informações.
+Veja a [referência do atributo draggable](/pt-BR/docs/Web/HTML/Global_attributes/draggable) e o [Guia de operações drag](/pt-BR/docs/Web/Guide/HTML/Drag_operations#draggableattribute) para mais informações.
 
 ### Defina os dados do drag
 
@@ -96,7 +96,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-Para uma lista de tipos de dados mais comuns utilizados pelo drag and drop (como texto, HTML, links, e files), veja [Tipos recomendados de Drag Types](/pt-BR/docs/DragDrop/Recommended_Drag_Types "Recommended Drag Types") e para mais informações sobre os dados do arraste (drag data), veja [Drag Data](/pt-BR/docs/Web/Guide/HTML/Drag_operations#dragdata "Drag Data").
+Para uma lista de tipos de dados mais comuns utilizados pelo drag and drop (como texto, HTML, links, e files), veja [Tipos recomendados de Drag Types](/pt-BR/docs/DragDrop/Recommended_Drag_Types) e para mais informações sobre os dados do arraste (drag data), veja [Drag Data](/pt-BR/docs/Web/Guide/HTML/Drag_operations#dragdata).
 
 ### Defina uma imagem de arraste (drag image)
 
@@ -113,7 +113,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-Para aprender mais sobre arrastar imagens de retorno, veja [Definindo a imagem de retorno do arraste (Drag)](/pt-BR/docs/DragDrop/Drag_Operations#dragfeedback "Setting the Drag Feedback Image").
+Para aprender mais sobre arrastar imagens de retorno, veja [Definindo a imagem de retorno do arraste (Drag)](/pt-BR/docs/DragDrop/Drag_Operations#dragfeedback).
 
 ### Defina o _efeito_ do arraste (_Drag effect_)
 
@@ -138,7 +138,7 @@ function dragstart_handler(ev) {
 }
 ```
 
-Veja [Efeitos do Arraste (Drag Effects)](/pt-BR/docs/Web/Guide/HTML/Drag_operations#drageffects "Drag Effects") para mais detalhes.
+Veja [Efeitos do Arraste (Drag Effects)](/pt-BR/docs/Web/Guide/HTML/Drag_operations#drageffects) para mais detalhes.
 
 ### Defina uma zona de soltura _(drop zone)_
 
@@ -200,7 +200,7 @@ Para mais informações, veja [Realizando uma soltura (Drop)](/pt-BR/docs/Web/Gu
 
 No início da operação de arraste (drag), o evento {{event("dragend")}} é acionado no elemento de origem (_source)_ - o elemento que foi o alvo do início do arraste (drag start). Este evento é acionado sempre quando o arraste é completado ou cancelado. O manipulador de eventos {{event("dragend")}} pode verificar o valor da propriedade {{domxref("DataTransfer.dropEffect","dropEffect")}} para determinar se a operação de arraste foi bem sucedida ou não.
 
-Para mais informações sobre manipular o final de uma operação de arraste, veja [Finalizando um arraste (Drag)](/pt-BR/docs/DragDrop/Drag_Operations#dragend "Finishing a Drag").
+Para mais informações sobre manipular o final de uma operação de arraste, veja [Finalizando um arraste (Drag)](/pt-BR/docs/DragDrop/Drag_Operations#dragend).
 
 ## Interoperabilidade
 
@@ -215,8 +215,8 @@ Como podem ser visto no [DataTransferItem interface's Browser Compatibility tabl
 
 ## Veja também
 
-- [Operações de Arraste](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations "Drag Operations")
-- [Arrastando e Soltando múltiplos elementos](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items "Dragging and Dropping Multiple Items")
-- [Tipos re arraste (Drag Types) recomendados](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types "Recommended Drag Types")
-- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd "Drag and Drop Standard")
-- [Dados de unteroperabilidade Drag and Drop de acordo com o CanIUse](http://caniuse.com/#search=draganddrop "Drag and Drop interoperability data from CanIUse")
+- [Operações de Arraste](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [Arrastando e Soltando múltiplos elementos](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
+- [Tipos re arraste (Drag Types) recomendados](/pt-BR/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
+- [HTML5 Living Standard: Drag and Drop](https://html.spec.whatwg.org/multipage/interaction.html#dnd)
+- [Dados de unteroperabilidade Drag and Drop de acordo com o CanIUse](http://caniuse.com/#search=draganddrop)

@@ -2,6 +2,7 @@
 title: XRInputSource
 slug: Web/API/XRInputSource
 ---
+
 {{securecontext_header}}{{APIRef("WebXR Device API")}}
 
 [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API) の **`XRInputSource`** インターフェースは、ユーザーの WebXR 互換の仮想現実または拡張現実のシステムの一部であるコントロール入力の単一ソースを記述します。 デバイスは使用されているプラットフォームに固有ですが、それが向けられている方向を提供し、ユーザーがデバイスを使用してアクションを実行することをトリガーにした場合、オプションでイベントを生成することができます。

@@ -2,6 +2,7 @@
 title: TransformStream
 slug: Web/API/TransformStream
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 `TransformStream` は [Streams API](/ja/docs/Web/API/Streams_API) のインターフェイスで一連の変換可能なデータを表します。

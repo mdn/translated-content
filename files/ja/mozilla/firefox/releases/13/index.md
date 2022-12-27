@@ -2,6 +2,7 @@
 title: Firefox 13 for developers
 slug: Mozilla/Firefox/Releases/13
 ---
+
 Firefox 13 は 米国時間 2012 年 6 月 5 日にリリースされました。この記事は開発者に影響がある Firefox 13 での変更点をまとめています。
 
 ## Web 開発者向けの変更点一覧

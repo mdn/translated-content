@@ -3,6 +3,7 @@ title: フレームタイミング API の使用
 slug: orphaned/Web/API/Frame_Timing_API/Using_the_Frame_Timing_API
 original_slug: Web/API/Frame_Timing_API/Using_the_Frame_Timing_API
 ---
+
 {{DefaultAPISidebar("Frame Timing API")}}{{SeeCompatTable}}
 
 The **`PerformanceFrameTiming`** interface provides _frame_ timing data about the browser's event loop. A _frame_ represents the amount of work a browser does in [one event loop iteration](https://html.spec.whatwg.org/multipage/webappapis.html#processing-model-8) such as processing DOM events, resizing, scrolling, rendering, CSS animations, etc. A _frame rate_ of 60 fps (frames per second) for a 60 Hz refresh rate is a common target for a good _responsive_ user experience. This means the browser should process a frame in about 16.7ms.

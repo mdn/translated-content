@@ -127,7 +127,7 @@ new Array(arrayLength)
 - `element0, element1, ..., elementN`
   - : Um array JavaScript é inicializado com os elementos contém, exceto no caso onde um único argumento é passado para o construtor do `Array` e esse argumento é um número (veja o parâmetro arrayLength abaixo). Esse caso especial só se aplica para os arrays JavaScript criados com o construtor `Array` , e não para literais de array criados com a sintaxe de colchetes \[].
 - `arrayLength`
-  - : Se o único argumento passado para o construtor do `Array` for um número inteiro entre 0 e 232-1 (inclusive), um novo array com o tamanho desse número é retornado. Se o argumento for qualquer outro número, uma exceção [`RangeError`](/en-US/docs/JavaScript/Reference/Global_Objects/RangeError "JavaScript/Reference/Global_Objects/RangeError") é lançada.
+  - : Se o único argumento passado para o construtor do `Array` for um número inteiro entre 0 e 232-1 (inclusive), um novo array com o tamanho desse número é retornado. Se o argumento for qualquer outro número, uma exceção [`RangeError`](/en-US/docs/JavaScript/Reference/Global_Objects/RangeError) é lançada.
 
 ## Descrição
 
@@ -137,7 +137,7 @@ Arrays não podem usar strings como índices (como em um [array associativo](htt
 
 ### Accessando elementos de um array
 
-Arrays JavaScript começam com índice zero: o primeiro elemento de um array está na posição `0` e o último elemento está na posição equivalente ao valor da propriedade [`length`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/length "JavaScript/Reference/Global_Objects/Array/length") (tamanho) menos 1.
+Arrays JavaScript começam com índice zero: o primeiro elemento de um array está na posição `0` e o último elemento está na posição equivalente ao valor da propriedade [`length`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/length) (tamanho) menos 1.
 
 ```js
 var arr = ['este é o primeiro elemento', 'este é o segundo elemento'];
@@ -146,7 +146,7 @@ console.log(arr[1]);              // exibe 'este é o segundo elemento'
 console.log(arr[arr.length - 1]); // exibe 'este é o segundo elemento'
 ```
 
-Elementos de um array são somente propriedades de objetos, da forma que [`toString`](/en-US/docs/toString "toString") é uma propriedade. Contudo, note que tentando acessar o primeiro elemento de um array da seguinte forma causará um erro de sintaxe, pois o nome da propriedade é inválido:
+Elementos de um array são somente propriedades de objetos, da forma que [`toString`](/en-US/docs/toString) é uma propriedade. Contudo, note que tentando acessar o primeiro elemento de um array da seguinte forma causará um erro de sintaxe, pois o nome da propriedade é inválido:
 
 ```js
 console.log(arr.0); // um erro de sintaxe
@@ -184,7 +184,7 @@ console.log(promessa['var']);
 
 ### Relação entre _`length`_ e propriedades numéricas
 
-As propriedades [`length`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/length "JavaScript/Reference/Global_Objects/Array/length") e numéricas de um array Javascript são conectadas. Varios dos métodos javascript pré-definidos (por exemplo, [`join`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/join "JavaScript/Reference/Global_Objects/Array/join"), [`slice`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/slice "JavaScript/Reference/Global_Objects/Array/slice"), [`indexOf`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/indexOf "JavaScript/Reference/Global_Objects/Array/indexOf") etc.) levam em conta o valor da propriedade `length` de um array quando eles são chamados. Outros métodos (por exemplo, [`push`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/push "JavaScript/Reference/Global_Objects/Array/push"), [`splice`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/splice "JavaScript/Reference/Global_Objects/Array/splice") etc.) também resultam em uma atualização na propriedade `length` do array.
+As propriedades [`length`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/length) e numéricas de um array Javascript são conectadas. Varios dos métodos javascript pré-definidos (por exemplo, [`join`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/join), [`slice`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/slice), [`indexOf`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/indexOf) etc.) levam em conta o valor da propriedade `length` de um array quando eles são chamados. Outros métodos (por exemplo, [`push`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/push), [`splice`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/splice) etc.) também resultam em uma atualização na propriedade `length` do array.
 
 ```js
 var frutas = [];
@@ -263,7 +263,7 @@ As propriedades e elementos retornados desta comparação são os seguintes:
 
 ## Instâncias de `Array`
 
-Todas as instâncias de `Array` herdam de [`Array.prototype`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/prototype "Core_JavaScript_1.5_Reference/Global_Objects/Array/prototype"). O protótipo do construtor `Array` pode ser modificado de forma a afetar todas as instâncias de `Array`.
+Todas as instâncias de `Array` herdam de [`Array.prototype`](/en-US/docs/JavaScript/Reference/Global_Objects/Array/prototype). O protótipo do construtor `Array` pode ser modificado de forma a afetar todas as instâncias de `Array`.
 
 ### Propriedades
 
@@ -287,7 +287,7 @@ Todas as instâncias de `Array` herdam de [`Array.prototype`](/en-US/docs/JavaSc
 
 > **Aviso:** **Métodos genéricos de arrays não seguem o padrão, são obsoletos e serão removidos em breve.**
 
-Algumas vezes você poderá querer aplicar métodos de arrays para strings ou outros objetos parecidos com arrays (como em [`argumentos`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments "https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments") de funções). Ao fazer isto, você trata uma string como um array de caracteres (ou em outros casos onde trata-se não-arrays como um array). Por exemplo, para checar se cada caractere em uma varivável _str_ é uma letra, você poderia escrever:
+Algumas vezes você poderá querer aplicar métodos de arrays para strings ou outros objetos parecidos com arrays (como em [`argumentos`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments) de funções). Ao fazer isto, você trata uma string como um array de caracteres (ou em outros casos onde trata-se não-arrays como um array). Por exemplo, para checar se cada caractere em uma varivável _str_ é uma letra, você poderia escrever:
 
 ```js
 function isLetter(character) {
@@ -414,16 +414,16 @@ console.table(values)
 Saída:
 
 ```
-0	1	0
-1	2	2
-2	4	8
-3	8	18
-4	16	32
-5	32	50
-6	64	72
-7	128	98
-8	256	128
-9	512	162
+0  1  0
+1  2  2
+2  4  8
+3  8  18
+4  16  32
+5  32  50
+6  64  72
+7  128  98
+8  256  128
+9  512  162
 ```
 
 ## Especificações
@@ -441,7 +441,7 @@ Saída:
 
 ## Ver também
 
-- ["Indexing object properties" in JavaScript Guide: "Working with objects"](/pt-BR/docs/JavaScript/Guide/Working_with_Objects#Indexing_object_properties "JavaScript/Guide/Working_with_objects#Indexing_object_properties")
-- [New in JavaScript 1.7: Array comprehensions](/pt-BR/docs/JavaScript/New_in_JavaScript/1.7#Array_comprehensions "New_in_JavaScript_1.7#Array_comprehensions")
-- [New in JavaScript 1.6: Array extras](/pt-BR/docs/JavaScript/New_in_JavaScript/1.6#Array_extras "New_in_JavaScript_1.6#Array_extras")
-- [Draft: Typed Arrays](/pt-BR/docs/JavaScript_typed_arrays "JavaScript_typed_arrays")
+- ["Indexing object properties" in JavaScript Guide: "Working with objects"](/pt-BR/docs/JavaScript/Guide/Working_with_Objects#Indexing_object_properties)
+- [New in JavaScript 1.7: Array comprehensions](/pt-BR/docs/JavaScript/New_in_JavaScript/1.7#Array_comprehensions)
+- [New in JavaScript 1.6: Array extras](/pt-BR/docs/JavaScript/New_in_JavaScript/1.6#Array_extras)
+- [Draft: Typed Arrays](/pt-BR/docs/JavaScript_typed_arrays)

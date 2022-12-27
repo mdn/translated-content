@@ -38,7 +38,7 @@ For a detailed overview and Q\&A of KumaScript, watch the MDN dev team's [KumaSc
 
 KumaScript is used on MDN in [embedded JavaScript templates](https://github.com/visionmedia/ejs). These templates can be invoked in document content by any MDN author, through the use of macros.
 
-A script in KumaScript is a _template_, and each template is a file in [the macros directory of the KumaScript repository](https://github.com/mdn/kumascript/tree/master/macros) on Github. A [template](https://github.com/mdn/kumascript/blob/master/macros/hello.ejs "hello.ejs") looks like this:
+A script in KumaScript is a _template_, and each template is a file in [the macros directory of the KumaScript repository](https://github.com/mdn/kumascript/tree/master/macros) on Github. A [template](https://github.com/mdn/kumascript/blob/master/macros/hello.ejs) looks like this:
 
 ```
 <% for (var i = 0; i < $0; i++) { %>
@@ -285,12 +285,12 @@ There are a set of modules editable as wiki templates that are automatically loa
 
 For the most part, these attempt to provide stand-ins for legacy DekiScript features to ease template migration. But, going forward, these can be used to share common variables and methods between templates:
 
-- `mdn.*` - [MDN-Common](https://github.com/mdn/kumascript/blob/master/macros/MDN-Common.ejs "MDN:Common")
-- `Page.*` - [DekiScript-Page](https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Page.ejs "DekiScript:Page")
-- `String.*` - [DekiScript-String](https://github.com/mdn/kumascript/blob/master/macros/DekiScript-String.ejs "DekiScript:String")
-- `Uri.*` - [DekiScript-Uri](https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Uri.ejs "DekiScript:Uri")
-- `Web.*` - [DekiScript-Web](https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Web.ejs "DekiScript:Web")
-- `Wiki.*` - [DekiScript-Wiki](https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Wiki.ejs "DekiScript:Wiki")
+- `mdn.*` - [MDN-Common](https://github.com/mdn/kumascript/blob/master/macros/MDN-Common.ejs)
+- `Page.*` - [DekiScript-Page](https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Page.ejs)
+- `String.*` - [DekiScript-String](https://github.com/mdn/kumascript/blob/master/macros/DekiScript-String.ejs)
+- `Uri.*` - [DekiScript-Uri](https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Uri.ejs)
+- `Web.*` - [DekiScript-Web](https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Web.ejs)
+- `Wiki.*` - [DekiScript-Wiki](https://github.com/mdn/kumascript/blob/master/macros/DekiScript-Wiki.ejs)
 
 **Note:** You might notice that the DekiScript modules use a built-in method named `buildAPI()`, like so:
 
@@ -339,7 +339,7 @@ This causes the bookmark editing dialog to appear. Fill that out as follows:
 
   - :&#x20;
 
-    <kbd>https://github.com/mdn/kumascript/blob/master/macros/%s</kbd>
+    <https://github.com/mdn/kumascript/blob/master/macros/%s>
 
 - Tags {{optional_inline}}
   - : A list of tags used to organize your bookmarks; these are entirely optional and what (if any) tags you use is up to you.
@@ -505,12 +505,12 @@ var s_title = mdn.localString({
 <span class="title"><%= s_title %></span>
 ```
 
-This is more concise than the switch statement, and may be a better choice where a single string is concerned. However, if many strings need to be translated (e.g., as in [CSSRef](https://github.com/mdn/kumascript/blob/master/macros/CSSRef.ejs "CSSRef")), a switch statement might help keep all the strings grouped by locale and more easily translated that way.
+This is more concise than the switch statement, and may be a better choice where a single string is concerned. However, if many strings need to be translated (e.g., as in [CSSRef](https://github.com/mdn/kumascript/blob/master/macros/CSSRef.ejs)), a switch statement might help keep all the strings grouped by locale and more easily translated that way.
 
 When the object does not have the appropriate locale, the value of "en-US" is used as the initial value.
 
 ## See also
 
-- [Getting started with Kuma](http://kuma.readthedocs.io/en/latest/ "Getting started with Kuma")
-- [KumaScript reference](https://github.com/mdn/kumascript "Project:en/KumaScript reference")
+- [Getting started with Kuma](http://kuma.readthedocs.io/en/latest/)
+- [KumaScript reference](https://github.com/mdn/kumascript)
 - [Kuma wiki](https://wiki.mozilla.org/MDN/Kuma)

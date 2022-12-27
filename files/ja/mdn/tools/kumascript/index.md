@@ -2,6 +2,7 @@
 title: KumaScript
 slug: MDN/Tools/KumaScript
 ---
+
 {{MDNSidebar}}
 
 MDN を動かしている [Yari](/ja/docs/MDN/Yari) プラットフォームでは、コンテンツの特定の側面を自動化するために、 [KumaScript](https://github.com/mdn/yari/tree/main/kumascript) と呼ばれる古くからのテンプレート/マクロシステムがまだ利用可能です。このシステムの使用をいつか中止したいと考えていますが、それまでは MDN はこのシステムに依存しています。この記事では、 KumaScript の使用に関する基本的な情報を提供します。

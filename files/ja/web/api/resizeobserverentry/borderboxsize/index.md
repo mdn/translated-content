@@ -2,6 +2,7 @@
 title: ResizeObserverEntry.borderBoxSize
 slug: Web/API/ResizeObserverEntry/borderBoxSize
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`borderBoxSize`** は {{domxref("ResizeObserverEntry")}} インターフェイスの読み取り専用プロパティで、コールバック実行時に、監視された要素の新しい境界ボックスサイズを含む配列を返します。

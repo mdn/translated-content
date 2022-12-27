@@ -3,6 +3,7 @@ title: devtools.inspectedWindow.eval()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
 original_slug: Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/eval
 ---
+
 {{AddonSidebar()}}
 
 devtools が接続されているウィンドウで JavaScript を実行します。

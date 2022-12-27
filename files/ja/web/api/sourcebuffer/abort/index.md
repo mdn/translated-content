@@ -2,6 +2,7 @@
 title: SourceBuffer.abort()
 slug: Web/API/SourceBuffer/abort
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`abort()`** メソッドは、現在のセグメントを打ち切り、セグメントパーサーをリセットします。

@@ -2,6 +2,7 @@
 title: URL.host
 slug: Web/API/URL/host
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`host`** プロパティは、ホストを含む {{domxref("USVString")}} です。 ホストは、*ホスト名*の後に、URL の*ポート*が空でない場合、`':'`、および URL の*ポート*が続きます。

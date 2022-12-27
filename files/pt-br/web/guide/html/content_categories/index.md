@@ -19,7 +19,7 @@ Há três tipos de categorias de conteúdo:
 - Categorias de conteúdo relacionado, as quais decrevem regras comuns de conteúdo para elementos relacioados;
 - Categorias de conteúdo específico, as quais descrevem categorias raras compartilhadas somente por poucos elementos, às vezes apenas em um contexto específico.
 
-[![Content_categories_venn.png](/@api/deki/files/6244/=Content_categories_venn.png?size=webview)](/@api/deki/files/6244/=Content_categories_venn.png "Content_categories_venn.png")
+[![Content_categories_venn.png](/@api/deki/files/6244/=Content_categories_venn.png?size=webview)](/@api/deki/files/6244/=Content_categories_venn.png)
 
 ## Principais categorias de conteúdo
 
@@ -36,21 +36,21 @@ Elementos pertencentes a categoria de conteúdo de fluxo tipicamente contém tex
 Alguns outros elementos pertencem a essa categoria, mas somente se uma condição específica é realizada:
 
 - {{HTMLElement("area")}}, se for um descendente de um elemento {{HTMLElement("map")}}
-- {{HTMLElement("link")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#attr-itemprop "HTML/Global attributes#itemprop") **estiver presente
-- {{HTMLElement("meta")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#attr-itemprop "HTML/Global attributes#itemprop") estiver presente
+- {{HTMLElement("link")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#attr-itemprop)** estiver presente
+- {{HTMLElement("meta")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#attr-itemprop)** estiver presente
 - {{HTMLElement("style")}}, se o atributo {{htmlattrxref("scoped","style")}} estiver presente
 
 ### Conteúdo de seccionamento
 
-Os elementos pertencentes ao modelo de conteúdo de seccionamento criam uma [seção no esboço atual](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document "Sections and Outlines of an HTML5 document") que define o escopo dos elementos {{HTMLElement("header")}}, elementos {{HTMLElement("footer")}} e na [conteúdo do cabeçalho](#Heading_content "#heading content").
+Os elementos pertencentes ao modelo de conteúdo de seccionamento criam uma [seção no esboço atual](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document) que define o escopo dos elementos {{HTMLElement("header")}}, elementos {{HTMLElement("footer")}} e na [conteúdo do cabeçalho](#Heading_content).
 
 Elementos pertencentes a essa categoria são {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} e {{HTMLElement("section")}}.
 
-> **Nota:** Não confunda esse modelo de conteúdo com a categoria de [seccionamento raiz](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root "Sections and Outlines of an HTML5 document#sectioning root") que isola seus conteúdos dos esboços regulares.
+> **Nota:** Não confunda esse modelo de conteúdo com a categoria de [seccionamento raiz](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document#sectioning_root) que isola seus conteúdos dos esboços regulares.
 
 ### Conteúdo do cabeçalho
 
-O conteúdo do cabeçalho define o título de uma seção, se é marcada por um explícito elemento do [conteúdo de seccionamento](#Sectioning_content "#sectioning content") ou implicitamente definido pelo próprio conteúdo do cabeçalho.
+O conteúdo do cabeçalho define o título de uma seção, se é marcada por um explícito elemento do [conteúdo de seccionamento](#Sectioning_content) ou implicitamente definido pelo próprio conteúdo do cabeçalho.
 
 Os elementos pertencentes a essa categoria são {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} e {{HTMLElement("hgroup")}}.
 
@@ -68,9 +68,9 @@ Alguns outros elementos pertencem a essa categoria, mas somente se uma condiçã
 - {{HTMLElement("area")}}, se for um descendente de um elemento {{HTMLElement("map")}}
 - {{HTMLElement("del")}}, se contém somente conteúdo fraseado
 - {{HTMLElement("ins")}}, se contém somente conteúdo fraseado
-- {{HTMLElement("link")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#attr-itemprop "HTML/Global attributes#itemprop") estiver presente
+- {{HTMLElement("link")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#attr-itemprop) estiver presente
 - {{HTMLElement("map")}}, se contém somente conteúdo fraseado
-- {{HTMLElement("meta")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#attr-itemprop "HTML/Global attributes#itemprop") estiver presente
+- {{HTMLElement("meta")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#attr-itemprop) estiver presente
 
 ### Conteúdo embutido
 
@@ -106,7 +106,7 @@ O conteúdo associado ao **form** compreende elementos que têm um formulário d
 Essa categoria contém várias sub-categorias:
 
 - listed
-  - : Elementos que estão listados nas coleções IDL [form.elements](/pt-BR/docs/DOM/form.elements "DOM/form.elements") e fieldset.elements. Contém {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} e {{HTMLElement("textarea")}}.
+  - : Elementos que estão listados nas coleções IDL [form.elements](/pt-BR/docs/DOM/form.elements) e fieldset.elements. Contém {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} e {{HTMLElement("textarea")}}.
 - labelable
   - : Elementos que podem ser associados com elementos {{HTMLElement("label")}}. Contém {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("keygen")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} e {{HTMLElement("textarea")}}.
 - submittable

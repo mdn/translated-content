@@ -26,7 +26,7 @@ A **área de margem** (margin area) estende a área de borda com um espaço vazi
 
 O tamanho da área de margem é controlada utilizando as seguintes propriedades CSS {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }} e na forma generalizada {{ cssxref("margin") }}.
 
-Quando ocorre um [colapso de margens](/pt-BR/docs/Web/CSS/margin_collapsing "pt-BR/docs/Web/CSS/margin_collapsing"), a área de margem não está claramente definida, uma vez que as margens são compartilhadas entre os boxes.
+Quando ocorre um [colapso de margens](/pt-BR/docs/Web/CSS/margin_collapsing), a área de margem não está claramente definida, uma vez que as margens são compartilhadas entre os boxes.
 
 Finalmente, note que, para elementos não substituídos inline, o total de espaço ocupado (para a altura da linha) é determinado pela propriedade {{ cssxref('line-height') }}, mesmo que a borda e o padding aparecerem visualmente em torno do conteúdo.
 
@@ -39,6 +39,6 @@ Finalmente, note que, para elementos não substituídos inline, o total de espa�
 
 ## Veja também
 
-- [Referência CSS](/pt-BR/docs/Web/CSS/CSS_Reference "Referência CSS")
+- [Referência CSS](/pt-BR/docs/Web/CSS/CSS_Reference)
 - {{ CSS_key_concepts() }}
 - Propriedades CSS relacionadas: {{ cssxref("box-sizing") }}, {{ cssxref("background-clip") }}, {{ cssxref("height") }}, {{ cssxref("max-height") }}, {{ cssxref("min-height") }}, {{ cssxref("width") }}, {{ cssxref("max-height") }}, {{ cssxref("min-height") }}, {{ cssxref("padding") }}, {{ cssxref("padding-top") }}, {{ cssxref("padding-right") }}, {{ cssxref("padding-bottom") }}, {{ cssxref("padding-left") }}, {{ cssxref("border") }}, {{ cssxref("border-top") }}, {{ cssxref("border-right") }}, {{ cssxref("border-bottom") }}, {{ cssxref("border-left") }}, {{ cssxref("border-width") }}, {{ cssxref("border-top-width") }}, {{ cssxref("border-right-width") }}, {{ cssxref("border-bottom-width") }}, {{ cssxref("border-left-width") }}, {{ cssxref("margin") }}, {{ cssxref("margin-top") }}, {{ cssxref("margin-right") }}, {{ cssxref("margin-bottom") }}, {{ cssxref("margin-left") }}

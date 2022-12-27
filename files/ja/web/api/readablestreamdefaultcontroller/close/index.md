@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultController.close()
 slug: Web/API/ReadableStreamDefaultController/close
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultController")}} インターフェイスの **`close()`** メソッドは、関連するストリームを閉じます。

@@ -5,6 +5,7 @@ original_slug: MDN/Structures/Syntax_sections
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---
+
 {{MDNSidebar}}
 
 MDN リファレンスページの構文の節には、機能が持つ正確な構文を定義する構文ボックスがあります（例えば、どのような引数が受け入れられるか、どれがオプションかなど）。この記事では、リファレンス記事の構文ボックスの書き方を説明します。

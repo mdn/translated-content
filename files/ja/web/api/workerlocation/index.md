@@ -2,6 +2,7 @@
 title: WorkerLocation
 slug: Web/API/WorkerLocation
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`WorkerLocation`** インタフェースは、{{domxref("Worker")}} で実行されているスクリプトの絶対的な場所を表します。それぞれの Worker はこのインタフェースを持つオブジェクトを持っており、{{domxref("WorkerGlobalScope.location")}} 属性からアクセスできます。なおこの属性は、`self.location` で参照できます。

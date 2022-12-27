@@ -2,6 +2,7 @@
 title: idle
 slug: Mozilla/Add-ons/WebExtensions/API/idle
 ---
+
 {{AddonSidebar}}
 
 ユーザーのシステムがアイドル状態、ロックされた状態、アクティブな状態であるのを発見します。

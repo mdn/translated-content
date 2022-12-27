@@ -23,10 +23,10 @@ No exemplo acima, `theArgs` irá coletar o terceiro argumento da função (porqu
 
 ### Diferença entre _rest parameters_ e _`arguments` object_
 
-Há três diferenças principais entre _rest parameters_ e os [`arguments`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments "arguments") objects:
+Há três diferenças principais entre _rest parameters_ e os [`arguments`](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments) objects:
 
 - _rest parameters_ são os únicos que não foram atribuidos a um nome separado, enquanto os `arguments` object contêm todos os argumentos passados para a função;
-- o objeto `arguments` não é um array, enquanto rest parameters são instâncias [`Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"), isso significa que métodos como [`sort`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort "Array sort method"), [`map`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map "Array map method"), [`forEach`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach "Array forEach method") ou [`pop`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/pop "Array pop method") podem ser aplicados diretamente;
+- o objeto `arguments` não é um array, enquanto rest parameters são instâncias [`Array`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array), isso significa que métodos como [`sort`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort), [`map`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`forEach`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) ou [`pop`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) podem ser aplicados diretamente;
 - o objeto `arguments` possui a funcionalidade adicional de especificar ele mesmo (como a propriedade `callee`).
 
 ### De arguments para array
@@ -108,9 +108,9 @@ a fim de usar o objeto `arguments`, você precisará converte-lo para um array a
 
 ## Veja também
 
-- [Arguments object](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments "arguments")
-- [Array](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array "Array")
-- [Functions](/pt-BR/docs/Web/JavaScript/Reference/Functions "Functions and function scope")
-- [Spread Operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator "spread operator")
+- [Arguments object](/pt-BR/docs/Web/JavaScript/Reference/Functions/arguments)
+- [Array](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [Functions](/pt-BR/docs/Web/JavaScript/Reference/Functions)
+- [Spread Operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator)
 - [Original proposal at ecmascript.org](http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters)
 - [JavaScript arguments object and beyond](http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/)

@@ -72,24 +72,24 @@ _Inherits propriedades dos parentes,_ _{{domxref("HTMLElement")}}._
         HTML attribute, indicating whether the value of the control can be
         automatically completed by the browser. Ignored if the value of the
         {{htmlattrxref("type","input")}} attribute is
-        <span style="font-family: courier new">hidden</span>,
-        <span style="font-family: courier new">checkbox</span>,
-        <span style="font-family: courier new">radio</span>,
-        <span style="font-family: courier new">file</span>, or a button type
-        (<span style="font-family: courier new">button</span>,
-        <span style="font-family: courier new">submit</span>,
-        <span style="font-family: courier new">reset</span>,
-        <span style="font-family: courier new">image</span>). Possible values
+        <code>hidden</code>,
+        <code>checkbox</code>,
+        <code>radio</code>,
+        <code>file</code>, or a button type
+        (<code>button</code>,
+        <code>submit</code>,
+        <code>reset</code>,
+        <code>image</code>). Possible values
         are:
         <ul>
           <li>
-            <span style="font-family: courier new">off</span>: The user must
+            <code>off</code>: The user must
             explicitly enter a value into this field for every use, or the
             document provides its own auto-completion method; the browser does
             not automatically complete the entry.
           </li>
           <li>
-            <span style="font-family: courier new">on</span>: The browser can
+            <code>on</code>: The browser can
             automatically complete the value based on values that the user has
             entered during previous uses.
           </li>
@@ -240,7 +240,7 @@ _Inherits propriedades dos parentes,_ _{{domxref("HTMLElement")}}._
         Reflects the {{ htmlattrxref("height", "input") }} HTML
         attribute, which defines the height of the image displayed for the
         button, if the value of {{htmlattrxref("type","input")}} is
-        <span style="font-family: courier new">image</span>.
+        <code>image</code>.
       </td>
     </tr>
     <tr>
@@ -266,10 +266,10 @@ _Inherits propriedades dos parentes,_ _{{domxref("HTMLElement")}}._
         browser displays only options that are valid values for this input
         element. This attribute is ignored when the
         {{htmlattrxref("type","input")}} attribute's value is
-        <span style="font-family: courier new">hidden</span>,
-        <span style="font-family: courier new">checkbox</span>,
-        <span style="font-family: courier new">radio</span>,
-        <span style="font-family: courier new">file</span>, or a button type.
+        <code>hidden</code>,
+        <code>checkbox</code>,
+        <code>radio</code>,
+        <code>file</code>, or a button type.
       </td>
     </tr>
     <tr>
@@ -334,11 +334,11 @@ _Inherits propriedades dos parentes,_ _{{domxref("HTMLElement")}}._
         subset. Use the {{htmlattrxref("title","input")}} attribute
         to describe the pattern to help the user. This attribute applies when
         the value of the {{htmlattrxref("type","input")}} attribute
-        is <span style="font-family: courier new">text</span>,
-        <span style="font-family: courier new">search</span>,
-        <span style="font-family: courier new">tel</span>,
-        <span style="font-family: courier new">url</span> or
-        <span style="font-family: courier new">email</span>; otherwise it is
+        is <code>text</code>,
+        <code>search</code>,
+        <code>tel</code>,
+        <code>url</code> or
+        <code>email</code>; otherwise it is
         ignored.
       </td>
     </tr>
@@ -351,11 +351,11 @@ _Inherits propriedades dos parentes,_ _{{domxref("HTMLElement")}}._
         the control. The placeholder text must not contain carriage returns or
         line-feeds. This attribute applies when the value of the
         {{htmlattrxref("type","input")}} attribute is
-        <span style="font-family: courier new">text</span>,
-        <span style="font-family: courier new">search</span>,
-        <span style="font-family: courier new">tel</span>,
-        <span style="font-family: courier new">url</span> or
-        <span style="font-family: courier new">email</span>; otherwise it is
+        <code>text</code>,
+        <code>search</code>,
+        <code>tel</code>,
+        <code>url</code> or
+        <code>email</code>; otherwise it is
         ignored.
       </td>
     </tr>
@@ -368,12 +368,12 @@ _Inherits propriedades dos parentes,_ _{{domxref("HTMLElement")}}._
           attribute, indicating that the user cannot modify the value of the
           control.<br />{{HTMLVersionInline(5)}}This is ignored if the
           value of the {{htmlattrxref("type","input")}} attribute is
-          <span style="font-family: courier new">hidden</span>,
-          <span style="font-family: courier new">range</span>,
-          <span style="font-family: courier new">color</span>,
-          <span style="font-family: courier new">checkbox</span>,
-          <span style="font-family: courier new">radio</span>,
-          <span style="font-family: courier new">file</span>, or a button type.
+          <code>hidden</code>,
+          <code>range</code>,
+          <code>color</code>,
+          <code>checkbox</code>,
+          <code>radio</code>,
+          <code>file</code>, or a button type.
         </p>
       </td>
     </tr>
@@ -418,17 +418,17 @@ _Inherits propriedades dos parentes,_ _{{domxref("HTMLElement")}}._
         Reflects the {{ htmlattrxref("size", "input") }} HTML
         attribute, containing size of the control. This value is in pixels
         unless the value of {{htmlattrxref("type","input")}} is
-        <span style="font-family: courier new">text</span> or
-        <span style="font-family: courier new">password</span>, in which case,
+        <code>text</code> or
+        <code>password</code>, in which case,
         it is an integer number of characters.
         {{ HTMLVersionInline(5) }} Applies only when
         {{htmlattrxref("type","input")}} is set to
-        <span style="font-family: courier new">text</span>,
-        <span style="font-family: courier new">search</span>,
-        <span style="font-family: courier new">tel</span>,
-        <span style="font-family: courier new">url</span>,
-        <span style="font-family: courier new">email</span>, or
-        <span style="font-family: courier new">password</span>; otherwise it is
+        <code>text</code>,
+        <code>search</code>,
+        <code>tel</code>,
+        <code>url</code>,
+        <code>email</code>, or
+        <code>password</code>; otherwise it is
         ignored.
       </td>
     </tr>
@@ -440,7 +440,7 @@ _Inherits propriedades dos parentes,_ _{{domxref("HTMLElement")}}._
         attribute, which specifies a URI for the location of an image to display
         on the graphical submit button, if the value of
         {{htmlattrxref("type","input")}} is
-        <span style="font-family: courier new">image</span>; otherwise it is
+        <code>image</code>; otherwise it is
         ignored.
       </td>
     </tr>
@@ -453,9 +453,9 @@ _Inherits propriedades dos parentes,_ _{{domxref("HTMLElement")}}._
         > </strong>{{htmlattrxref("min","input")}} and
         {{htmlattrxref("max","input")}} to limit the increments at
         which a numeric or date-time value can be set. It can be the string
-        <span style="font-family: courier new">any</span> or a positive floating
+        <code>any</code> or a positive floating
         point number. If this is not set to
-        <span style="font-family: courier new">any</span>, the control accepts
+        <code>any</code>, the control accepts
         only values at multiples of the step value greater than the minimum.
       </td>
     </tr>
@@ -550,7 +550,7 @@ _Inherits propriedades dos parentes,_ _{{domxref("HTMLElement")}}._
         Reflects the {{ htmlattrxref("width", "input") }} HTML
         attribute, which defines the width of the image displayed for the
         button, if the value of {{htmlattrxref("type","input")}} is
-        <span style="font-family: courier new">image</span>.
+        <code>image</code>.
       </td>
     </tr>
     <tr>

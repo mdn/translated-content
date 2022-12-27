@@ -21,7 +21,7 @@ Você pode associar um popup junto ao botão. O popup é especificado usando HTM
 
 Se você especificar um popup ele está exibido — e o conteúdo será carregado — quando o usuário clicar no ícone. Você não especificar um popup, quando o usuário clicar no ícone um evento será disparado para sua extensão.
 
-Você pode definir muitas ações de propriedades do navegador de modo declarativo usando a chave `browser_action `no arquivo manifest.json.
+Você pode definir muitas ações de propriedades do navegador de modo declarativo usando a chave `browser_action` no arquivo manifest.json.
 
 Com a API `browserAction você pode`:
 

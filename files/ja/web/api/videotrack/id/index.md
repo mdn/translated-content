@@ -2,6 +2,7 @@
 title: VideoTrack.id
 slug: Web/API/VideoTrack/id
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`id`** プロパティは、**{{domxref("VideoTrack")}}** によって表されるトラックを一意に識別する文字列を含みます。 この ID を {{domxref("VideoTrackList.getTrackById()")}} メソッドと共に使用して、メディア要素に関連付けられたメディア内の特定のトラックを見つけることができます。

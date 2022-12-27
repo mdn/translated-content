@@ -11,7 +11,7 @@ translation_of: Web/API/EventSource/EventSource
 ---
 {{APIRef('WebSockets API')}}
 
-O construtor **`EventSource`\*\***`()`\*\* retorna uma nova {{domxref("EventSource")}}, que representa um recurso remoto.
+O construtor **`EventSource()`** retorna uma nova {{domxref("EventSource")}}, que representa um recurso remoto.
 
 ## Sintaxe
 

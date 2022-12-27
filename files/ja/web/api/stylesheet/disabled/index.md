@@ -2,6 +2,7 @@
 title: StyleSheet.disabled
 slug: Web/API/StyleSheet/disabled
 ---
+
 {{ApiRef}}
 
 ## 概要

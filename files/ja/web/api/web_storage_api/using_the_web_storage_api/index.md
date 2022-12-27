@@ -2,6 +2,7 @@
 title: Web Storage API の使用
 slug: Web/API/Web_Storage_API/Using_the_Web_Storage_API
 ---
+
 {{DefaultAPISidebar("Web Storage API")}}
 
 Web Storage API は、ブラウザーがキーと値のペアを安全に保存できる仕組みを提供します。

@@ -2,6 +2,7 @@
 title: WebSocket サーバーの記述
 slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 ---
+
 {{APIRef("Websockets API")}}
 
 WebSocket サーバーは、特定のプロトコルに従うサーバーの任意のポートを待ち受けする TCP アプリケーションに他なりません。カスタムサーバーを作成する作業は人々を悩ませる傾向があります。ただし、選択したプラットフォームに簡単な WebSocket サーバーを実装するのは簡単です。

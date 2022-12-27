@@ -3,6 +3,7 @@ title: MDN の動画コンテンツ
 slug: MDN/Writing_guidelines/Howto/Images_media
 original_slug: MDN/Guidelines/Video
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs は動画が多いサイトではありませんが、動画コンテンツを記事の一部として使用することに意味がある場所がいくつかあります。この記事では、 MDN の記事に動画を含めることが適切な場合について説明し、シンプルだが効果的な動画を予算内で作成するためのヒントを提供します。

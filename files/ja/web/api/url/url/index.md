@@ -2,6 +2,7 @@
 title: URL()
 slug: Web/API/URL/URL
 ---
+
 {{APIRef("URL API")}}
 
 **`URL()`** コンストラクターは、パラメーターによって定義された URL を表す、新しく生成された {{domxref("URL")}} オブジェクトを返します。

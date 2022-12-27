@@ -2,6 +2,7 @@
 title: XRRigidTransform.position
 slug: Web/API/XRRigidTransform/position
 ---
+
 {{APIRef("WebXR Device API")}}
 
 {{domxref("XRRigidTransform")}} の **`position`** 読み取り専用プロパティは、変換の平行移動成分を記述する、メートルで指定された 3D 点を提供する {{domxref("DOMPointReadOnly")}} オブジェクトです。

@@ -89,8 +89,6 @@ p2.then(function(value) {
 });
 ```
 
-##
-
 ## Especificações
 
 | Especificações                                                                                       | Status               | Comentários                                |

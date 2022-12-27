@@ -18,7 +18,7 @@ Retorna o primeiro elemento descendente do elemento em que a função foi invoca
 elemento = elementoBase.querySelector(seletores);
 ```
 
-- `elemento` e` elementoBase` são objetos {{domxref("element")}}.
+- `elemento` e `elementoBase` são objetos {{domxref("element")}}.
 - `selectores` é um grupo de [selectores](/pt-BR/docs/Web/Guide/CSS/Getting_Started/Selectors).
 
 ## Exemplo
@@ -31,7 +31,7 @@ var el = document.body.querySelector("style[type='text/css'], style:not([type])"
 
 ## Notas
 
-Retorna `null `se nenhum elemento for encontrado; caso contrário retorna o primeiro elemento;
+Retorna `null` se nenhum elemento for encontrado; caso contrário retorna o primeiro elemento;
 
 Lança uma exceção `SYNTAX_ERR` se o grupo de seletores é inválido.
 

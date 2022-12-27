@@ -2,6 +2,7 @@
 title: sidebar_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">

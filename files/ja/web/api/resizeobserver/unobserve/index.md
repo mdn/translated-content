@@ -2,6 +2,7 @@
 title: ResizeObserver.unobserve()
 slug: Web/API/ResizeObserver/unobserve
 ---
+
 {{APIRef("Resize Observer API")}}
 
 **`unobserve()`** は {{domxref("ResizeObserver")}} インターフェイスのメソッドで、指定された {{domxref('Element')}} または {{domxref('SVGElement')}} の監視を終了します。

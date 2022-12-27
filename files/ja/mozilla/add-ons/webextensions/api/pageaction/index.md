@@ -2,6 +2,7 @@
 title: pageAction
 slug: Mozilla/Add-ons/WebExtensions/API/pageAction
 ---
+
 {{AddonSidebar}}
 
 [ページアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/Page_actions) は、ブラウザーのアドレスバーの中のクリックできるアイコンです。

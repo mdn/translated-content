@@ -2,6 +2,7 @@
 title: ValidityState
 slug: Web/API/ValidityState
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`ValidityState`** インターフェイスは、制約の検証に関して、要素が取りうる*妥当性の状態*を表します。要素の値が不正な場合、なぜ検証に失敗したのかを知る手がかりにもなります。

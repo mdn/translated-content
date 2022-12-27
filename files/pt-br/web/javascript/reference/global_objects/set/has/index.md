@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/has
 ---
 {{JSRef}}
 
-O método **`has()`\*\*** \*\*retorna um valor booleano indicando se um elemento com o valor especificado existe em um objecto `Set` ou não.
+O método **`has()`** retorna um valor booleano indicando se um elemento com o valor especificado existe em um objecto `Set` ou não.
 
 {{EmbedInteractiveExample("pages/js/set-prototype-has.html")}}
 

@@ -2,6 +2,7 @@
 title: ServiceWorkerContainer.ready
 slug: Web/API/ServiceWorkerContainer/ready
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerContainer")}} インターフェイスの **`ready`** 読み取り専用プロパティは、サービスワーカーがアクティブになるまでコードの実行を遅らせる方法を提供します。 決して拒否しない {{jsxref("Promise")}} を返し、現在のページに関連する {{domxref("ServiceWorkerRegistration")}} がアクティブ（{{domxref("ServiceWorkerRegistration.active","active")}}）ワーカーを持つまで無期限に待機します。 その条件が満たされると、{{domxref("ServiceWorkerRegistration")}} で解決されます。

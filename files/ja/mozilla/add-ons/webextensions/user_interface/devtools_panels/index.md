@@ -2,6 +2,7 @@
 title: 開発者ツールパネル
 slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
 ---
+
 {{AddonSidebar}}
 
 > **Note:** この機能は Firefox 54 以降で利用できます。

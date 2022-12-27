@@ -3,6 +3,7 @@ title: XMLDocument.async
 slug: Web/API/XMLDocument/async
 original_slug: Web/API/Document/async
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}{{Deprecated_header}}
 
 `document.async` は、 {{DOMxRef("XMLDocument.load()")}} の呼び出しを同期で行うか、または非同期で行うかの指示を真偽値で設定します。 `true` が初期値であり、これは文書を非同期的に読み込むよう要求するものです。

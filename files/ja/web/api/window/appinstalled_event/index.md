@@ -2,6 +2,7 @@
 title: 'Window: appinstalled イベント'
 slug: Web/API/Window/appinstalled_event
 ---
+
 {{APIRef}}
 
 **`appinstalled`** は [Web Manifest API](/ja/docs/Web/Manifest) のイベントで、ブラウザーがあるページをアプリケーションとして成功裏にインストールしたとき発行されます。

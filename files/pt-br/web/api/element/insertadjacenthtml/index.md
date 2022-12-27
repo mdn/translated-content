@@ -7,7 +7,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 ## Resumo
 
-`insertAdjacentHTML `analisa o texto especificado como HTML ou XML e insere os nós que resultam na árvore DOM em uma posição especificada. Não reanalisa o elemento que está a ser utilizado e, portanto, não corrompe os elementos existentes dentro do elemento. Esta, e evitando a etapa extra de serialização, torna-o muito mais rápido do que a manipulação direta innerHTML.
+`insertAdjacentHTML` analisa o texto especificado como HTML ou XML e insere os nós que resultam na árvore DOM em uma posição especificada. Não reanalisa o elemento que está a ser utilizado e, portanto, não corrompe os elementos existentes dentro do elemento. Esta, e evitando a etapa extra de serialização, torna-o muito mais rápido do que a manipulação direta innerHTML.
 
 ## Sintaxe
 
@@ -26,7 +26,7 @@ element.insertAdjacentHTML(posição, texto);
 - `'afterend'`
   - : Após o elemento.
 
-`texto `é a string a ser analisada como HTML ou XML e inserido na árvore.
+`texto` é a string a ser analisada como HTML ou XML e inserido na árvore.
 
 ### Visualização da posição de nomes
 

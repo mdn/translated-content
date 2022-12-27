@@ -2,6 +2,7 @@
 title: 拡張機能の例
 slug: Mozilla/Add-ons/WebExtensions/Examples
 ---
+
 {{AddonSidebar}}
 
 拡張機能の開発方法を分かりやすく説明するため、シンプルな拡張機能のサンプルを集めたリポジトリ <https://github.com/mdn/webextensions-examples> を公開しています。この記事では、そのリポジトリで使われている WebExtension API について説明します。

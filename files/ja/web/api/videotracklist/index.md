@@ -2,6 +2,7 @@
 title: VideoTrackList
 slug: Web/API/VideoTrackList
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`VideoTrackList`** インターフェイスは、{{HTMLElement("video")}} 要素内に含まれる動画トラックのリストを表すために使用します。 各トラックはリスト内の個別の {{domxref("VideoTrack")}} オブジェクトで表します。

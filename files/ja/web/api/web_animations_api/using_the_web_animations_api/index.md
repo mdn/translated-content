@@ -2,6 +2,7 @@
 title: Web Animations API を利用する
 slug: Web/API/Web_Animations_API/Using_the_Web_Animations_API
 ---
+
 {{DefaultAPISidebar("Web Animations")}}
 
 Web Animations API は JavaScript を使い、アニメーションを構築したりプレイバックを制御することが出来ます。この記事では「ふしぎの国のアリス」を利用した楽しいデモとチュートリアルで正しい利用方法を説明します。

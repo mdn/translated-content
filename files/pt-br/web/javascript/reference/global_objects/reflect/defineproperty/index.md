@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/defineProperty
 ---
 {{JSRef}}
 
-O método estático **`Reflect`\*\***`.defineProperty()`\*\* é como o {{jsxref("Object.defineProperty()")}}, mas retorna um {{jsxref("Boolean")}}.
+O método estático **`Reflect.defineProperty()`** é como o {{jsxref("Object.defineProperty()")}}, mas retorna um {{jsxref("Boolean")}}.
 
 {{EmbedInteractiveExample("pages/js/reflect-defineproperty.html")}}
 

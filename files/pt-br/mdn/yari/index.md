@@ -12,7 +12,7 @@ Kuma é a plataforma wiki que auxilia o Mozilla Developer Network. É uma plataf
 
 ## Documentação do Kuma
 
-- [A API Kuma](/pt-BR/docs/Project:MDN/Kuma/API "/en-US/docs/Project:About")
+- [A API Kuma](/pt-BR/docs/Project:MDN/Kuma/API)
   - : Kuma provê de uma simples API que lhe permite acessar informações através das páginas, e até enviar novas páginas de conteúdo.
 - [Introdução ao KumaScript](/pt-BR/docs/Project:Introduction_to_KumaScript):
   - : ...o modelo de linguagem Kuma.

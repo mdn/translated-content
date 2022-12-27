@@ -3,6 +3,7 @@ title: 文字列の表示位置がずれる
 slug: orphaned/Web/Compatibility_FAQ/Misaligned_Text.html
 original_slug: Web/Compatibility_FAQ/Misaligned_Text.html
 ---
+
 ## 概要
 
 文字列の表示位置が上下左右にずれて表示されたり、プルダウンメニュー等の表示領域をはみ出して表示したりすることがあります。

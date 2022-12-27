@@ -4,6 +4,7 @@ slug: Web/API/Worker
 l10n:
   sourceCommit: 6fefcdd237a377af5c066dc2734c118feadbbef9
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`Worker`** は[ウェブワーカー API](/ja/docs/Web/API/Web_Workers_API) のインターフェイスで、スクリプトで生成することができるバックグラウンドタスクを表し、作成元にメッセージを送り返すことができます。

@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 ---
 {{JSRef}} {{SeeCompatTable}}
 
-O objeto **`Atomics `**fornece operações atômicas como metodos estáticos. Eles são usados com objetos {{jsxref("SharedArrayBuffer")}}.
+O objeto **`Atomics`** fornece operações atômicas como metodos estáticos. Eles são usados com objetos {{jsxref("SharedArrayBuffer")}}.
 
 As operações atômicas estão localizadas no modulo `Atomics`. Diferente de outros _global objects_, `Atomics` não é um construtor. Você não deve usa-lo com o [`new` operator](/pt-BR/docs/Web/JavaScript/Reference/Operators/new) ou invocar objetos `Atomics` como funções. Todas as propriedades e método do `Atomics` são estáticos (como é o caso com o objeto {{jsxref("Math")}}, por exemplo).
 
@@ -72,5 +72,5 @@ Os métodos `wait()` e `wake()` são modelados no Linux futexes ("fast user-spac
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
 - [Web Workers](/pt-BR/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– a simple library providing synchronization and work distribution abstractions.
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)

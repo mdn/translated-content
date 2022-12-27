@@ -27,7 +27,7 @@ Você pode fazer muito mais com WebGL. Há alguns conceitos avançados que você
 
 ### Shaders
 
-É importante mencionar os shaders, que tem uma história separada por sí próprios. Shaders usam GLSL, uma "Linguagem de Sombreamento" OpenGL especial com sintaxe similar a C, que é executada diretamente pelos pipelines de gráficos. Podem ser divididos em Vertex Shaders e Fragment Shaders (ou Pixel Shaders) — o primeiro transforma as posições das formas em coordenadas reais de desenho 3D, enquanto o segundo calcula cores de renderização e outros atributos. Recomendamos fortemente que você veja o artigo [GLSL Shaders ](/pt-BR/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders)para aprender mais sobre eles.
+É importante mencionar os shaders, que tem uma história separada por sí próprios. Shaders usam GLSL, uma "Linguagem de Sombreamento" OpenGL especial com sintaxe similar a C, que é executada diretamente pelos pipelines de gráficos. Podem ser divididos em Vertex Shaders e Fragment Shaders (ou Pixel Shaders) — o primeiro transforma as posições das formas em coordenadas reais de desenho 3D, enquanto o segundo calcula cores de renderização e outros atributos. Recomendamos fortemente que você veja o artigo [GLSL Shaders](/pt-BR/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders) para aprender mais sobre eles.
 
 ### Detecção de Colisão
 

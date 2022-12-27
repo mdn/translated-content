@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Date/now
 
 ## Resumo
 
-O método**` Date.now()`** retorna o número de milisegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC.
+O método **`Date.now()`** retorna o número de milisegundos decorridos desde 1 de janeiro de 1970 00:00:00 UTC.
 
 ## Sintaxe
 

@@ -10,7 +10,9 @@ tags:
   - polyfill
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 ---
-{{JSRef}}O método **`indexOf() `**retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
+{{JSRef}}
+
+O método **`indexOf()`** retorna o primeiro índice em que o elemento pode ser encontrado no array, retorna -1 caso o mesmo não esteja presente.
 
 ## Sintaxe
 
@@ -23,7 +25,7 @@ array.indexOf(elementoDePesquisa, [pontoInicial = 0])
 - `elementoDePesquisa`
   - : `Elemento a ser pesquisado no array.`
 - `pontoInicial`
-  - : O índice para iniciar a procura. Se o índice for maior ou igual ao tamanho do array, é retornado -1 e signfica que o item não será procurado. Se o` pontoInicial é fornecido` com um número negativo, é tomado como deslocamento da extremidade do array. Nota: se o `pontoInicial` fornecido é negativo, a procura no array acontece de frente para trás. Se o `pontoInicial` fornecido é 0, então o array inteiro será pesquisado. Padrão: 0 (pesquisa em todo array).
+  - : O índice para iniciar a procura. Se o índice for maior ou igual ao tamanho do array, é retornado -1 e signfica que o item não será procurado. Se o `pontoInicial` é fornecido com um número negativo, é tomado como deslocamento da extremidade do array. Nota: se o `pontoInicial` fornecido é negativo, a procura no array acontece de frente para trás. Se o `pontoInicial` fornecido é 0, então o array inteiro será pesquisado. Padrão: 0 (pesquisa em todo array).
 
 ## Descrição
 
@@ -81,7 +83,7 @@ atualizarColecaoVegetais(vegetais, 'espinafre');
 
 ## Polyfill
 
-`indexOf() `foi adicionado ao ECMA-262 standard em sua 5 edição; como tal, não pode estar presente em todos navegadores.Você pode contornar isso utilizando o seguinte codigo no inicio de seus scripts. Isto permitirá que voce use o `indexOf() `quando não possuir suporte nativo. Esse algoritmo corresponde ao especificado no ECMA-262, edição 5, assumindo {{jsxref("Global_Objects/TypeError", "TypeError")}} e {{jsxref("Math.abs()")}} tem seus valores originais.
+`indexOf()` foi adicionado ao ECMA-262 standard em sua 5 edição; como tal, não pode estar presente em todos navegadores.Você pode contornar isso utilizando o seguinte codigo no inicio de seus scripts. Isto permitirá que voce use o `indexOf()` quando não possuir suporte nativo. Esse algoritmo corresponde ao especificado no ECMA-262, edição 5, assumindo {{jsxref("Global_Objects/TypeError", "TypeError")}} e {{jsxref("Math.abs()")}} tem seus valores originais.
 
 ```js
 // Passos para a produção do ECMA-262, Edition 5, 15.4.4.14

@@ -2,6 +2,7 @@
 title: UIEvent.initUIEvent()
 slug: Web/API/UIEvent/initUIEvent
 ---
+
 {{APIRef("DOM Events")}} {{deprecated_header}}
 
 **`UIEvent.initUIEvent()`** メソッドは、一度作成された UI イベントを初期化します。

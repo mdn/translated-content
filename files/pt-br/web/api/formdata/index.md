@@ -7,7 +7,7 @@ translation_of: Web/API/FormData
 
 A interface **`FormData`** fornece uma maneira fácil de construir um conjunto de pares chave/valor representando campos de um elemento `form` e seus valores, os quais podem ser facilmente enviados utilizado o método [`send()`](</pt-BR/docs/DOM/XMLHttpRequest#send()> "XMLHttpRequest#send()") do XMLHttpRequest. Essa interface utiliza o mesmo formato que um `form` utilizaria se o tipo de codificação estivesse configurado como "multipart/form-data".
 
-Um objeto `FormData` pode ser usado diretamente em uma estrutura {{jsxref("Statements/for...of", "for...of")}} em vez de {{domxref('FormData.entries()', 'entries()')}}: `for (var p of myFormData) `é o mesmo que `for (var p of myFormData.entries())`.
+Um objeto `FormData` pode ser usado diretamente em uma estrutura {{jsxref("Statements/for...of", "for...of")}} em vez de {{domxref('FormData.entries()', 'entries()')}}: `for (var p of myFormData)` é o mesmo que `for (var p of myFormData.entries())`.
 
 > **Nota:** Esse recurso está disponível em [https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Workers_API](/pt-BR/docs/Web/API/Web_Workers_API)
 
@@ -46,6 +46,6 @@ Um objeto `FormData` pode ser usado diretamente em uma estrutura {{jsxref("State
 ## Veja também
 
 - {{domxref("XMLHTTPRequest")}}
-- [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest "Using XMLHttpRequest")
-- [Usando objetos FormData](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects "DOM/XMLHttpRequest/FormData/Using_FormData_objects")
+- [Usando XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+- [Usando objetos FormData](/pt-BR/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

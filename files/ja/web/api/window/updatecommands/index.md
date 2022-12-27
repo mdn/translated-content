@@ -2,6 +2,7 @@
 title: Window.updateCommands()
 slug: Web/API/Window/updateCommands
 ---
+
 {{ ApiRef() }}{{Non-standard_header}}
 
 ## 概要

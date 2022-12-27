@@ -43,10 +43,10 @@ Quando você precisar adicionar vários artigos sobre um tópico ou um assunto d
 
 Por exemplo, considere a guia [JavaScript](/pt-BR/docs/Web/JavaScript), que é estruturada da seguinte forma:
 
-- [JavaScript/Guide](/pt-BR/docs/Web/JavaScript/Guide "JavaScript/Guide") - Página principal do sumário.
-- [JavaScript/Guide/JavaScript Overview](/pt-BR/docs/Web/JavaScript/Guide/JavaScript_Overview "JavaScript/Guide/JavaScript_Overview")
-- [JavaScript/Guide/Functions](/pt-BR/docs/JavaScript/Guide/Functions "JavaScript/Guide/Functions")
-- [JavaScript/Guide/Details of the Object Model](/pt-BR/docs/JavaScript/Guide/Details_of_the_Object_Model "JavaScript/Guide/Details_of_the_Object_Model")
+- [JavaScript/Guide](/pt-BR/docs/Web/JavaScript/Guide) - Página principal do sumário.
+- [JavaScript/Guide/JavaScript Overview](/pt-BR/docs/Web/JavaScript/Guide/JavaScript_Overview)
+- [JavaScript/Guide/Functions](/pt-BR/docs/JavaScript/Guide/Functions)
+- [JavaScript/Guide/Details of the Object Model](/pt-BR/docs/JavaScript/Guide/Details_of_the_Object_Model)
 
 Tente evitar colocar seu artigo no topo da hierarquia, o que torna lento o site e menos eficiente a pesquisa e a navegação.
 
@@ -390,11 +390,11 @@ By default, the first pagragraph of the page is used as the SEO summary. However
 
 ### Landing pages
 
-**Landing pages** are pages at the root of a topic area of the site, such as the main [CSS](/pt-BR/docs/CSS "CSS") or [HTML](/pt-BR/docs/HTML "HTML") pages. They have a standard format that consists of three areas:
+**Landing pages** are pages at the root of a topic area of the site, such as the main [CSS](/pt-BR/docs/CSS) or [HTML](/pt-BR/docs/HTML) pages. They have a standard format that consists of three areas:
 
-1.  A brief (typically one paragraph) overview of what the technology is and what it's used for. See [Writing a landing page overview](#writing_a_landing_page_overview) for tips.
-2.  A two-column list of links with appropriate headings. See [Creating a page link list](#creating_a_page_link_list) for guidelines.
-3.  An **optional** "Browser compatibility" section at the bottom of the page.
+1. A brief (typically one paragraph) overview of what the technology is and what it's used for. See [Writing a landing page overview](#writing_a_landing_page_overview) for tips.
+2. A two-column list of links with appropriate headings. See [Creating a page link list](#creating_a_page_link_list) for guidelines.
+3. An **optional** "Browser compatibility" section at the bottom of the page.
 
 #### Creating a page link list
 
@@ -428,10 +428,10 @@ The right column should contain one or more of the following sections, in order:
 
 It's sometimes helpful to provide an image in an article you create or modify, especially if the article is very technical. To include an image:
 
-1.  Attach the desired image file to the article (at the bottom of every article in edit mode)
-2.  Create an image in the WYSIWYG editor
-3.  In the WYSIWYG editor in the drop-down list listing attachments, select the newly created attachment which is your image
-4.  Press OK.
+1. Attach the desired image file to the article (at the bottom of every article in edit mode)
+2. Create an image in the WYSIWYG editor
+3. In the WYSIWYG editor in the drop-down list listing attachments, select the newly created attachment which is your image
+4. Press OK.
 
 ## Other References
 
@@ -443,12 +443,12 @@ If you have questions about usage and style not covered here, we recommend refer
 
 For questions of spelling, please refer to [Answers.com](http://www.answers.com/library/Dictionary). The spell-checker for this site uses American English. Please do not use variant spellings (e.g., use _honor_ rather than _honour_).
 
-We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, please send them to the [MDC mailing list](/pt-BR/docs/Project:Community "Project:en/Community") or [project lead](/User:Sheppy "User:Sheppy") so we know what should be added.
+We will be expanding the guide over time, so if you have specific questions that aren't covered in this document, please send them to the [MDC mailing list](/pt-BR/docs/Project:Community) or [project lead](/User:Sheppy) so we know what should be added.
 
 ### MDN-specific
 
-- [Custom CSS classes](/pt-BR/docs/Project:Custom_CSS_Classes "Project:en/Custom_CSS_Classes") defined for all MDC pages.
-- [Custom templates](/pt-BR/docs/Project:Custom_Templates "Project:en/Custom_Templates") created for use on MDC, with explanations.
+- [Custom CSS classes](/pt-BR/docs/Project:Custom_CSS_Classes) defined for all MDC pages.
+- [Custom templates](/pt-BR/docs/Project:Custom_Templates) created for use on MDC, with explanations.
 
 ### Language, grammar, spelling
 

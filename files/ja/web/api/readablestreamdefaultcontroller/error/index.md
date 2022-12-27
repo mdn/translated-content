@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultController.error()
 slug: Web/API/ReadableStreamDefaultController/error
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultController")}} インターフェイスの **`error()`** メソッドにより、関連するストリームとの今後のやり取りがエラーになります。

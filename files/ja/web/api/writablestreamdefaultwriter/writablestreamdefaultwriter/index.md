@@ -2,6 +2,7 @@
 title: WritableStreamDefaultWriter.WritableStreamDefaultWriter()
 slug: Web/API/WritableStreamDefaultWriter/WritableStreamDefaultWriter
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 **`WritableStreamDefaultWriter()`** コンストラクターは、新しい {{domxref("WritableStreamDefaultWriter")}} オブジェクトのインスタンスを作成します。

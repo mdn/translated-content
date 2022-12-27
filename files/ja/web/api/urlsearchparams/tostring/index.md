@@ -2,6 +2,7 @@
 title: URLSearchParams.toString()
 slug: Web/API/URLSearchParams/toString
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URLSearchParams")}} インターフェイスの **`toString()`** メソッドは、URL での使用に適したクエリー文字列を返します。

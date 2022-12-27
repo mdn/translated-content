@@ -2,6 +2,7 @@
 title: ServiceWorkerGlobalScope
 slug: Web/API/ServiceWorkerGlobalScope
 ---
+
 {{APIRef("Service Workers API")}}
 
 `ServiceWorkerGlobalScope` は [ServiceWorker API](/ja/docs/Web/API/ServiceWorker_API) のインターフェイスで、サービスワーカーのグローバル実行コンテキストを表します。

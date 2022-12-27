@@ -2,6 +2,7 @@
 title: 'ServiceWorkerContainer: message イベント'
 slug: Web/API/ServiceWorkerContainer/message_event
 ---
+
 {{APIRef}}
 
 **`message`** イベントは、サービスワーカーからメッセージを受信するために、サービスワーカーによって制御されるページで使用します。

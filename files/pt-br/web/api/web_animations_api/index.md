@@ -44,12 +44,11 @@ The Web Animations API adds some new features to {{domxref("document")}} and {{d
   - : The `DocumentTimeline` object representing the default document timeline.
 - {{domxref("document.getAnimations()")}}
   - : Returns an Array of {{domxref("Animation")}} objects currently in effect on elements in the `document`.
-- ### Extensions to the `Element` interface
 
-  {{domxref("Element.animate()")}}
+### Extensions to the `Element` interface
 
+- {{domxref("Element.animate()")}}
   - : A shortcut method for creating and playing an animation on an element. It returns the created {{domxref("Animation")}} object instance.
-
 - {{domxref("Element.getAnimations()")}}
   - : Returns an Array of {{domxref("Animation")}} objects currently affecting an element or which are scheduled to do so in future.
 

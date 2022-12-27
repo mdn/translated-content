@@ -17,7 +17,7 @@ translation_of: Web/API/XMLHttpRequest
 
 `XMLHttpRequest` é um objeto que fornece funcionalidade ao cliente para transferir dados entre um cliente e um servidor. Ele fornece uma maneira fácil de recuperar dados de um URL sem ter que fazer uma atualização de página inteira. Isso permite que uma página da Web atualize apenas uma parte do conteúdo sem interromper o que o usuário esteja fazendo. XMLHttpRequest é usado constantemente na programação de [AJAX](/pt-BR/docs/AJAX).
 
-`XMLHttpRequest` foi originalmente projetado pela Microsoft e adotado pela Mozilla, Apple e Google. Está sendo padronizado pela [WHATWG](https://xhr.spec.whatwg.org/). Apesar do nome, XMLHttpRequest pode ser usado para recuperar qualquer tipo de dados, e não apenas XML, suportando também, protocolos diferentes de [HTTP](/en/HTTP "en/HTTP") (incluindo file e ftp ).
+`XMLHttpRequest` foi originalmente projetado pela Microsoft e adotado pela Mozilla, Apple e Google. Está sendo padronizado pela [WHATWG](https://xhr.spec.whatwg.org/). Apesar do nome, XMLHttpRequest pode ser usado para recuperar qualquer tipo de dados, e não apenas XML, suportando também, protocolos diferentes de [HTTP](/en/HTTP) (incluindo file e ftp ).
 
 Para criar uma instância de XMLHttpRequest , basta fazer isso:
 
@@ -25,7 +25,7 @@ Para criar uma instância de XMLHttpRequest , basta fazer isso:
 var myRequest = new XMLHttpRequest();
 ```
 
-Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest "En/Using XMLHttpRequest").
+Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
 ## Métodos
 
@@ -419,10 +419,9 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
           Por favor Utilize
           <a
             href="/en-US/docs/Server-sent_events"
-            title="/en-US/docs/Server-sent_events"
             >Server-Sent Events</a
           >,
-          <a href="/en-US/docs/WebSockets" title="/en-US/docs/WebSockets"
+          <a href="/en-US/docs/WebSockets"
             >Web Sockets</a
           >
           ou <code>responseText</code> de eventos de progresso em seu lugar.
@@ -455,7 +454,7 @@ Para obter detalhes sobre como usar XMLHttpRequest , consulte [Usando XMLHttpReq
 
 O construtor inicia um XMLHttpRequest. Ele deve ser chamado antes de quaisquer outras chamadas de método.
 
-Gecko/Firefox 16 acrescenta um parâmetro não-padrão para o construtor que pode ativar o modo anônimo (veja [Bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677 "692677 – Relax same-origin XHR restrictions for privileged applications")). Definir o mozAnon bandeira de true eficácia se assemelha a [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest "see AnonXMLHttpRequest in the XMLHttpRequest specification") construtor descrito na especificação XMLHttpRequest que não tenha sido implementado em qualquer navegador ainda (em setembro de 2012).
+Gecko/Firefox 16 acrescenta um parâmetro não-padrão para o construtor que pode ativar o modo anônimo (veja [Bug 692677](https://bugzilla.mozilla.org/show_bug.cgi?id=692677)). Definir o mozAnon bandeira de true eficácia se assemelha a [`AnonXMLHttpRequest()`](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#dom-anonxmlhttprequest) construtor descrito na especificação XMLHttpRequest que não tenha sido implementado em qualquer navegador ainda (em setembro de 2012).
 
 ```
 XMLHttpRequest (
@@ -470,9 +469,9 @@ XMLHttpRequest (
   - : Há dois sinalizadores que você pode definir:
 
     - `mozAnon`
-      - : Boolean: Definir esse sinalizador de true fará com que o navegador para não expor a origem e as [credenciais do usuário](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials "Defintion of “User credentials” in the XMLHttpRequest specification.") ao buscar recursos. Mais importante, isto significa que os cookies não será enviado a menos que explicitamente adicionado usando setRequestHeader.
+      - : Boolean: Definir esse sinalizador de true fará com que o navegador para não expor a origem e as [credenciais do usuário](http://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) ao buscar recursos. Mais importante, isto significa que os cookies não será enviado a menos que explicitamente adicionado usando setRequestHeader.
     - `mozSystem`
-      - : Boolean: Definir esse sinalizador de true . permite fazer conexões entre sites sem a necessidade de o servidor para opt-in usando CORS requer a configuração mozAnon: true . Ou seja, este não pode ser combinada com o envio de cookies ou outras credenciais do usuário. Isso* [só funciona em privilegiados (revisto) Apps](https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68 "Bug 692677 comment 68");ele não funciona em páginas da web arbitrários carregados no Firefox.*
+      - : Boolean: Definir esse sinalizador de true . permite fazer conexões entre sites sem a necessidade de o servidor para opt-in usando CORS requer a configuração mozAnon: true . Ou seja, este não pode ser combinada com o envio de cookies ou outras credenciais do usuário. Isso* [só funciona em privilegiados (revisto) Apps](https://bugzilla.mozilla.org/show_bug.cgi?id=692677#c68);ele não funciona em páginas da web arbitrários carregados no Firefox.*
 
 ## Métodos
 
@@ -550,7 +549,7 @@ void send(FormData data);
 
 ###### Notas
 
-Se os dados são um Document , ele é serializado antes de serem enviados. Ao enviar um documento, as versões do Firefox antes da versão 3 sempre enviavam a solicitação usando codificação UTF-8; [Firefox 3](/en/Firefox_3 "en/Firefox_3") envia corretamente o documento usando a codificação especificada por body.xmlEncoding , ou UTF-8 se nenhum encoding é especificado.
+Se os dados são um Document , ele é serializado antes de serem enviados. Ao enviar um documento, as versões do Firefox antes da versão 3 sempre enviavam a solicitação usando codificação UTF-8; [Firefox 3](/en/Firefox_3) envia corretamente o documento usando a codificação especificada por body.xmlEncoding , ou UTF-8 se nenhum encoding é especificado.
 
 Se são uma nsIInputStream , deve ser compatível com nsIUploadChannel 's setUploadStream() método. Nesse caso, um cabeçalho Content-Length é adicionado ao pedido, com o seu valor obtido usando nsIInputStream 's available() método. Quaisquer cabeçalhos incluídos na parte superior da corrente são tratados como parte do corpo da mensagem. MIMEType da transmissão deve ser especificado definindo o cabeçalho Content-Type usando o [`setRequestHeader()`](</en/nsIXMLHttpRequest#setRequestHeader()> "/en/XMLHttpRequest#setRequestHeader()") método antes de chamar send().
 
@@ -613,7 +612,7 @@ void sendAsBinary(
 );
 ```
 
-Este método, usado em conjuncton com o [`readAsBinaryString`](</pt-BR/docs/DOM/FileReader#readAsBinaryString()>) método do [`FileReader`](/pt-BR/docs/DOM/FileReader) API tornar possível [read and **upload** any type of file](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files "/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files") e para [stringify](/pt-BR/docs/JavaScript/Reference/Global_Objects/JSON/stringify) os dados brutos.
+Este método, usado em conjuncton com o [`readAsBinaryString`](/pt-BR/docs/DOM/FileReader#readAsBinaryString) método do [`FileReader`](/pt-BR/docs/DOM/FileReader) API tornar possível [read and **upload** any type of file](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files) e para [stringify](/pt-BR/docs/JavaScript/Reference/Global_Objects/JSON/stringify) os dados brutos.
 
 ##### Parametros
 
@@ -658,9 +657,9 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
 
 `onreadystatechange` como uma propriedade do `XMLHttpRequest` instância é suportado em todos os navegadores.
 
-Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest "En/XMLHttpRequest/Using_XMLHttpRequest").
+Desde então, foram implementadas uma série de manipuladores de eventos adicionais em vários navegadores ( onload , onerror , onprogress , etc.). Estes são suportados no Firefox. Em particular, veja `nsIXMLHttpRequestEventTarget` and [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest).
 
-avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/en/DOM/element.addEventListener "element.addEventListener") APIs Além de definir on\* propriedades para uma função de manipulador.
+avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpRequest eventos via padrão [`addEventListener`](/en/DOM/element.addEventListener) APIs Além de definir on\* propriedades para uma função de manipulador.
 
 ## Compatibilidade do navegador
 
@@ -670,10 +669,10 @@ avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpR
 
 - MDN artigos sobre XMLHttpRequest:
 
-  - [AJAX - Getting Started](/en/AJAX/Getting_Started "en/AJAX/Getting_Started")
-  - [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest "En/Using XMLHttpRequest")
-  - [HTML in XMLHttpRequest](/en/HTML_in_XMLHttpRequest "en/HTML_in_XMLHttpRequest")
-  - [`FormData`](/en/DOM/XMLHttpRequest/FormData "en/XMLHttpRequest/FormData")
+  - [AJAX - Getting Started](/en/AJAX/Getting_Started)
+  - [Using XMLHttpRequest](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest)
+  - [HTML in XMLHttpRequest](/en/HTML_in_XMLHttpRequest)
+  - [`FormData`](/en/DOM/XMLHttpRequest/FormData)
 
 - XMLHttpRequest referencias da W3C e navegador fornecedores:
 

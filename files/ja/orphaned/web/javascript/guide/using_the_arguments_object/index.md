@@ -3,6 +3,7 @@ title: arguments オブジェクトの使用
 slug: orphaned/Web/JavaScript/Guide/Using_the_arguments_object
 original_slug: Web/JavaScript/Guide/Using_the_arguments_object
 ---
+
 <div class="onlyinclude"><h3 id="arguments_オブジェクトの使用"><code>arguments</code> オブジェクトの使用</h3><p>関数の引数は配列のようなオブジェクトで管理されます。関数内では、次のようにして渡された引数を指すことができます。</p><pre class="eval">arguments[i]
 </pre><p>ここで <code>i</code> は引数の順序を表す数を指します。これは 0 から始まります。関数に渡された第 1 引数は <code>arguments{{ mediawiki.external(0) }}</code> となります。引数のトータルの数は <code>arguments.length</code> で示されます。</p><p><code>arguments</code> オブジェクトを使用すると、宣言時の仮引数の数よりも多くの引数を使って関数を呼び出すことができます。これはその関数に渡す引数の数が前もってわかっていない場合に役立ちます。<code>arguments</code>.length を使用することで実際にその関数に渡された引数の数を特定することができます。また、<code>arguments</code> オブジェクトを使用することで各引数を扱うことができます。</p><p>例えば、複数の文字列を連結する関数を考えます。この関数の仮引数は、連結するアイテムを区切るのに用いる文字列のみです。この関数は次のように定義されています。</p><pre class="eval">function myConcat(separator) {
    var result = ""; // リストを初期化する

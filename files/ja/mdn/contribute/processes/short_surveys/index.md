@@ -2,6 +2,7 @@
 title: 短いアンケートの実施プロセス
 slug: MDN/Contribute/Processes/Short_surveys
 ---
+
 {{MDNSidebar}}
 
 この文書では、 MDN での短いアンケートの実施プロセスを定義しています。

@@ -2,6 +2,7 @@
 title: 'XRReferenceSpace: reset イベント'
 slug: Web/API/XRReferenceSpace/reset_event
 ---
+
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
 ネイティブの原点または実際の原点のいずれかで不連続が検出されると、**`reset`** イベントが {{domxref("XRReferenceSpace")}} オブジェクトに送信され、参照空間を使用して方向付けられたオブジェクトの位置または方向がジャンプします。 これは、ユーザーが XR デバイスを較正または再較正する場合、またはデバイスがユーザーの追跡を失った後に原点を自動的に変更してから再び取得する場合によく見られます。

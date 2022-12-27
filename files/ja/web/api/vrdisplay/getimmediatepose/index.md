@@ -3,6 +3,7 @@ title: VRDisplay.getImmediatePose()
 slug: Web/API/VRDisplay/getImmediatePose
 original_slug: Web/API/VRDevice/getImmediatePose
 ---
+
 {{deprecated_header}}{{APIRef("WebVR API")}}
 
 **`getImmediatePose()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、 `VRDisplay` の現在のポーズを定義した {{domxref("VRPose")}} オブジェクトを返します。

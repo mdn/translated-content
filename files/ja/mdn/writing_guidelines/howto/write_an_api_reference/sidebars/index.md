@@ -3,6 +3,7 @@ title: API リファレンスサイドバー
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
 original_slug: MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 ---
+
 {{MDNSidebar}}
 
 API リファレンスページにカスタムサイドバーを追加して、関連するインターフェイス、チュートリアル、およびその API に関連する他のリソースへのリンクを表示することができます。この記事ではその方法を説明します。

@@ -3,6 +3,7 @@ title: MDN にリンクするには
 slug: orphaned/MDN/About/Linking_to_MDN
 original_slug: MDN/About/Linking_to_MDN
 ---
+
 {{MDNSidebar}}
 
 MDN にリンクするガイドラインやそもそもリンクして良いのか聞かれることがありますが、もちろん **OK です。MDN にリンクして頂いて構いません。**その際のガイドラインやベストプラクティスが必要であれば続けて読んでください。

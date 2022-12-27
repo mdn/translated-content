@@ -5,7 +5,7 @@ translation_of: Web/CSS/background-size
 ---
 {{CSSRef}}
 
-A propriedade **`background-size`** do [CSS](/pt-BR/docs/CSS "CSS") especifica o tamanho das imagens de fundo. O tamanho da imagem pode ser totalmente ou apenas parcialmente comprimido com o objetivo de preservar sua proporção.
+A propriedade **`background-size`** do [CSS](/pt-BR/docs/CSS) especifica o tamanho das imagens de fundo. O tamanho da imagem pode ser totalmente ou apenas parcialmente comprimido com o objetivo de preservar sua proporção.
 
 ```css
 /* Sintaxe */
@@ -103,7 +103,7 @@ Para especificar usando _width_ e _height_, você pode fornecer um ou dois valor
 - se apenas um valor for fornecido, ele valerá para a _width_ e height será[`auto`](#auto).
 - Se dois valores forem fornecidos, o primeiro corresponde a _width_ e o segundo a _height_.
 
-Cada valor pode ser um [`<length>`](#length), uma [`<percentage>`](#<percentage>), ou [`auto`](#auto).
+Cada valor pode ser um [`<length>`](#length), uma [`<percentage>`](#percentage), ou [`auto`](#auto).
 
 Por exemplo:
 
@@ -167,11 +167,11 @@ Observe que o dimensionamento de fundo para vectors que não possuem dimensões 
 
 ## Exemplos
 
-[Essa demonstração do `background-size: cover`](http://whereswalden.com/files/mozilla/background-size/page-cover.html) e [essa demonstração do `background-size: contain`](http://whereswalden.com/files/mozilla/background-size/page-contain.html) foram feitas para você abrir em uma nova aba para ver como `contain` e `cover` se comportam quando as dimensões da área do elemento pai varia. [Essa séria de demonstrações de como `background-size` funciona e interage com outras propriedades `background-*` ](http://whereswalden.com/files/mozilla/background-size/more-examples.html)devem ser suficientes para entender como usar `background-size` sozinho e em conjunto com outras propriedades.
+[Essa demonstração do `background-size: cover`](http://whereswalden.com/files/mozilla/background-size/page-cover.html) e [essa demonstração do `background-size: contain`](http://whereswalden.com/files/mozilla/background-size/page-contain.html) foram feitas para você abrir em uma nova aba para ver como `contain` e `cover` se comportam quando as dimensões da área do elemento pai varia. [Essa séria de demonstrações de como `background-size` funciona e interage com outras propriedades `background-*`](http://whereswalden.com/files/mozilla/background-size/more-examples.html) devem ser suficientes para entender como usar `background-size` sozinho e em conjunto com outras propriedades.
 
 ## Notas
 
-Se você estiver especificando um gradient como plano de fundo e tiver especificado um `background-size` junto, é melhor não especificar um tamanho que use um único componente setado como auto ou seja especificado usando apenas um valor de largura (por exemplo, `background-size: 50%`). A renderização de gradients em tais casos mudou no Firefox 8 e, no momento, geralmente é inconsistente em todos os navegadores, pois nem todos implementam a renderização em total conformidade com a especificação [`background-size` ](http://www.w3.org/TR/css3-background/#the-background-size)do CSS3 e com a [especificação do CSS3 para valores d](http://dev.w3.org/csswg/css3-images/#gradients)[e gradient](http://dev.w3.org/csswg/css3-images/#gradients).
+Se você estiver especificando um gradient como plano de fundo e tiver especificado um `background-size` junto, é melhor não especificar um tamanho que use um único componente setado como auto ou seja especificado usando apenas um valor de largura (por exemplo, `background-size: 50%`). A renderização de gradients em tais casos mudou no Firefox 8 e, no momento, geralmente é inconsistente em todos os navegadores, pois nem todos implementam a renderização em total conformidade com a especificação [`background-size`](http://www.w3.org/TR/css3-background/#the-background-size) do CSS3 e com a [especificação do CSS3 para valores de gradient](http://dev.w3.org/csswg/css3-images/#gradients).
 
 ```css
 .bar {
@@ -233,6 +233,6 @@ Enquanto essa propriedade foi adicionada no Firefox 3.6, é possível esticar to
 
 ## Veja também
 
-- [CSS Reference](/pt-BR/docs/CSS/CSS_Reference "CSS Reference")
-- [Multiple backgrounds](/pt-BR/docs/CSS/Multiple_backgrounds "CSS/Multiple backgrounds")
-- [Scaling background images](/pt-BR/docs/CSS/Scaling_background_images "CSS/Scaling_background_images")
+- [CSS Reference](/pt-BR/docs/CSS/CSS_Reference)
+- [Multiple backgrounds](/pt-BR/docs/CSS/Multiple_backgrounds)
+- [Scaling background images](/pt-BR/docs/CSS/Scaling_background_images)

@@ -2,6 +2,7 @@
 title: 国際化
 slug: Mozilla/Add-ons/WebExtensions/Internationalization
 ---
+
 {{AddonSidebar}}
 
 [WebExtensions](/ja/docs/Mozilla/Add-ons/WebExtensions) API には、拡張機能を国際化するとても簡単なモジュール — [i18n](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n) があります。この記事ではその機能を見てみて、どのように動作するのかの実例を提供します。WebExtensions API を使った拡張機能用の i18n システムは、[i18n.js](http://i18njs.com/) のような、よくある i10n 用 JavaScript ライブラリーと同様です。

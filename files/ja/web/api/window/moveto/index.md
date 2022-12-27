@@ -2,6 +2,7 @@
 title: Window.moveTo()
 slug: Web/API/Window/moveTo
 ---
+
 {{APIRef}}
 
 **`moveTo()`** は {{domxref("Window")}} インターフェイスのメソッドで、現在のウィンドウを指定された座標へ移動します。

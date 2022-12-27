@@ -2,6 +2,7 @@
 title: Text.wholeText
 slug: Web/API/Text/wholeText
 ---
+
 {{ apiref("DOM") }}
 
 **`wholeText`** は {{domxref("Text")}} インターフェイスのプロパティで、そのノードに論理的に隣接するすべての {{domxref("Text")}} ノードのすべてのテキストを返すものです。

@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.compileShader()
 slug: Web/API/WebGLRenderingContext/compileShader
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/ja/docs/Web/API/WebGL_API) の **WebGLRenderingContext.compileShader()** メソッドは、GLSL シェーダーをバイナリへコンパイルします。これは {{domxref("WebGLProgram")}} に使用することができます。

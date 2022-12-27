@@ -2,6 +2,7 @@
 title: Firefox 93 for developers
 slug: Mozilla/Firefox/Releases/93
 ---
+
 {{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 93 の変更点をまとめています。Firefox 93 は、2021 年 10 月 5 日にリリースされました。

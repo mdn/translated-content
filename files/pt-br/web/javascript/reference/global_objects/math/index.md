@@ -130,7 +130,7 @@ Ao contrário de outros objetos globais, `Math` não é um construtor. Todas as 
 - {{jsxref("Global_Objects/Math/floor", "Math.floor(x)")}}
   - : Retorna o maior inteiro que é menor ou igual a um número.
 - {{jsxref("Global_Objects/Math/fround", "Math.fround(x)")}} {{experimental_inline}}
-  - : Retorna a mais próxima representação de ponto flutuante de [precisão-única](http://en.wikipedia.org/wiki/Single_precision "link to the wikipedia page on single precision") de um número.
+  - : Retorna a mais próxima representação de ponto flutuante de [precisão-única](http://en.wikipedia.org/wiki/Single_precision) de um número.
 - {{jsxref("Global_Objects/Math/hypot", "Math.hypot([x[,y[,…]]])")}} {{experimental_inline}}
 
   - : Retorna a raiz quadrada da soma dos quadrados dos argumentos (

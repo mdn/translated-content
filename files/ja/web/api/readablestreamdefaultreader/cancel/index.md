@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultReader.cancel()
 slug: Web/API/ReadableStreamDefaultReader/cancel
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStreamDefaultReader")}} インターフェイスの **`cancel()`** メソッドはストリームをキャンセルし、コンシューマーがストリームに興味を失ったことを通知します。 提供された reason 引数は、基になるソースに与えられ、使用する場合もしない場合もあります。

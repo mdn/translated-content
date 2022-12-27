@@ -2,6 +2,7 @@
 title: Firefox 42 for developers
 slug: Mozilla/Firefox/Releases/42
 ---
+
 {{FirefoxSidebar}}
 
 > **Callout:** [Firefox の最新の開発者向け機能をテストするには、

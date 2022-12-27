@@ -122,9 +122,9 @@ Se falará mais sobre isso depois.
 
 Para ler o `payload data`, você deve saber quando parar de ler. Por isso é importante saber o tamanho do payload (payload length). Infelizmente, conseguir essa informação é de certa forma complicado. Para obte-lá, seguimos esses passos:
 
-1.  Ler os bits 9-15 (inclusivo) e interpretar como um unsigned integer. Se o valor for de 125 ou menor, esse é o tamanho; temos a resposta. Se o valor é igual a 126, então vai para o passo 2, ou se for 127, então vai para o passo 3.
-2.  Ler os próximos 16 bits e interpretar como um unsined integer, esse é o tamanho; temos a resposta
-3.  Ler os próximos 64 bits e interpretar como um unsigned integer (o bit mais significante DEVE ser 0), esse é o tamanho; temos a resposta.
+1. Ler os bits 9-15 (inclusivo) e interpretar como um unsigned integer. Se o valor for de 125 ou menor, esse é o tamanho; temos a resposta. Se o valor é igual a 126, então vai para o passo 2, ou se for 127, então vai para o passo 3.
+2. Ler os próximos 16 bits e interpretar como um unsined integer, esse é o tamanho; temos a resposta
+3. Ler os próximos 64 bits e interpretar como um unsigned integer (o bit mais significante DEVE ser 0), esse é o tamanho; temos a resposta.
 
 ### Lendo e Desmascarando o Dado
 

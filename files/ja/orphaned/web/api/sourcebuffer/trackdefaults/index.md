@@ -3,6 +3,7 @@ title: SourceBuffer.trackDefaults
 slug: orphaned/Web/API/SourceBuffer/trackDefaults
 original_slug: Web/API/SourceBuffer/trackDefaults
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} インターフェイスの **`trackDefaults`** プロパティは、`SourceBuffer` に追加されるメディアの初期化セグメント（[initialization segment](https://w3c.github.io/media-source/#init-segment)）で、種類、ラベル、言語情報が利用できない場合に使用するデフォルト値を指定します。

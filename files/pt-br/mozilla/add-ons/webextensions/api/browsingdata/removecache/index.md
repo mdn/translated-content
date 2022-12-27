@@ -31,7 +31,7 @@ let removing = browser.browsingData.removeCache(
 
 ### Parâmetros
 
-- `removalOptions`{{optional_inline}}
+- `removalOptions` {{optional_inline}}
   - : `object`. Um objeto {{WebExtAPIRef("browsingData.RemovalOptions")}}. Este parâmetro não tem efeito.
 
 ### Valor retornado

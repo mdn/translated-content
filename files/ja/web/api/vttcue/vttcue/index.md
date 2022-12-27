@@ -2,6 +2,7 @@
 title: VTTCue()
 slug: Web/API/VTTCue/VTTCue
 ---
+
 {{APIRef("WebVTT")}}
 
 **`VTTCue()`** コンストラクタは新しい {{domxref("VTTCue")}} オブジェクトを返します。

@@ -2,6 +2,7 @@
 title: 'ServiceWorkerGlobalScope: notificationclick イベント'
 slug: Web/API/ServiceWorkerGlobalScope/notificationclick_event
 ---
+
 {{APIRef}}
 
 **`notificationclick`** イベントは、 {{domxref("ServiceWorkerRegistration.showNotification()")}} によって生み出されたシステム通知がクリックされたことを示すために発生します。

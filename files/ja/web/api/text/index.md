@@ -2,6 +2,7 @@
 title: Text
 slug: Web/API/Text
 ---
+
 {{ApiRef("DOM")}}
 
 **`Text`** インターフェイスは、 DOM ツリー内でテキストノード ({{domxref("Node", "node")}}) を表します。

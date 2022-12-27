@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/add
 ---
 {{JSRef}}
 
-O método estátitico **`Atomics`\*\***`.add()`\*\* adiciona um dado valor em uma determinada posição no array e retorna o valor antigo daquela posição. Esta operação atômica garante que nenhuma outra escrita ocorra até que o valor modificado seja escrito de volta.
+O método estátitico **`Atomics.add()`** adiciona um dado valor em uma determinada posição no array e retorna o valor antigo daquela posição. Esta operação atômica garante que nenhuma outra escrita ocorra até que o valor modificado seja escrito de volta.
 
 ## Sintaxe
 

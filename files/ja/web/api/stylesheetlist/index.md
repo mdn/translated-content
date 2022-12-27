@@ -2,6 +2,7 @@
 title: StyleSheetList
 slug: Web/API/StyleSheetList
 ---
+
 {{APIRef("CSSOM")}}
 
 `StyleSheetList` インターフェイスは {{domxref("StyleSheet")}} のリストを表します。

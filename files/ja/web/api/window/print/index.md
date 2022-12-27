@@ -2,6 +2,7 @@
 title: Window.print()
 slug: Web/API/Window/print
 ---
+
 {{ ApiRef() }}
 
 現在の文書を印刷するための印刷ダイアログを開きます。

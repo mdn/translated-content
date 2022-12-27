@@ -2,6 +2,7 @@
 title: bookmarks.onImportEnded
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onImportEnded
 ---
+
 {{AddonSidebar()}}
 
 ブックマークのインポートが終了した際に発火します。

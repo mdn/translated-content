@@ -2,6 +2,7 @@
 title: 'Window: pageshow イベント'
 slug: Web/API/Window/pageshow_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`pageshow`** イベントは、操作によってブラウザーがウィンドウの文書を表示したときに {{domxref("Window")}} へ送られます。これには以下のようなものがあります。

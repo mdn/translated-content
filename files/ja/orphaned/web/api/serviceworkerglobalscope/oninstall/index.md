@@ -3,6 +3,7 @@ title: ServiceWorkerGlobalScope.oninstall
 slug: orphaned/Web/API/ServiceWorkerGlobalScope/oninstall
 original_slug: Web/API/ServiceWorkerGlobalScope/oninstall
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **oninstall** プロパティは、（Service Worker がインストールされたときの）{{Event("install")}} イベントが発生するたびに発火するイベントハンドラーです。これはアクティブ化の前に発生します。

@@ -46,11 +46,11 @@ Note que nesse exemplo, "Mozilla Contributors" leva para a história da página 
 
 Amostras de código adicionadas a esta wiki antes de 20 de agosto de 2010 estão disponíveis sob a [MIT license](http://www.opensource.org/licenses/mit-license.php); você deveria inserir a seguinte informação de atribuição no template MIT: "© \<data da última revisão da página da wiki> \<nome da pessoa que a inseriu na wiki>".
 
-Amostras de código adicionadas no dia 20 de agosto de 2010 ou depois estão no [public domain](http://creativecommons.org/publicdomain/zero/1.0/). Não é necessário um aviso de licença, mas se você precisa de um, você pode utilizar: "Qualquer direito de cópia é dedicado ao Domínio Público. http\://creativecommons.org/publicdomain/zero/1.0/".
+Amostras de código adicionadas no dia 20 de agosto de 2010 ou depois estão no [public domain](http://creativecommons.org/publicdomain/zero/1.0/). Não é necessário um aviso de licença, mas se você precisa de um, você pode utilizar: "Qualquer direito de cópia é dedicado ao Domínio Público. <http://creativecommons.org/publicdomain/zero/1.0/>".
 
 Se você deseja contribuir para esta wiki, você deve tornar sua documentação disponível pela licença Attribution-ShareAlike (ou ocasionalmente uma licença alternativa já especificada pela página que você está editando), e suas amostras de código disponívels sob a [Creative Commons CC-0](http://creativecommons.org/publicdomain/zero/1.0/) (uma dedicação de Domínio Público). Acrescentar a esta wiki significa que você concorda que suas contribuições serão feitas sob estas licenças.
 
-Alguns conteúdos mais antigos foram disponibilizados sob uma licença diferente das citadas acima; estas são indicadas no final de cada página em um [Alternate License Block](/Project:en/Examples/Alternate_License_Block "Project:En/Examples/Alternate License Block").
+Alguns conteúdos mais antigos foram disponibilizados sob uma licença diferente das citadas acima; estas são indicadas no final de cada página em um [Alternate License Block](/Project:en/Examples/Alternate_License_Block).
 
 > **Aviso:** **Importante:** Nenhuma nova página deve ser criada usando licenças alternativas.
 
@@ -93,7 +93,7 @@ Obviamente, já que a MDN é uma wiki, a melhor coisa que você pode fazer é co
 
 Como tudo o que é Mozilla, você pode reportar um problema na documentação registrando um bug. É aí que entra o registro de um [documentation request bug](https://bugzilla.mozilla.org/form.doc). Nosso útil formulário de solicitação de documentação reunirá as informações necessárias para que possamos começar a consertar o problema.
 
-Naturalmente, nossa comunidade de escrita é atarefada, então às vezes a forma mais rápida de ver um problema de documentação resolvido é consertá-lo você mesmo. Veja [Criando e editando páginas](/pt-BR/docs/MDN/Contribute/Creating_and_editing_pages "/en-US/docs/Project:MDN/Contributing/Creating_and_editing_pages") para detalhes.
+Naturalmente, nossa comunidade de escrita é atarefada, então às vezes a forma mais rápida de ver um problema de documentação resolvido é consertá-lo você mesmo. Veja [Criando e editando páginas](/pt-BR/docs/MDN/Contribute/Creating_and_editing_pages) para detalhes.
 
 ### Bugs do site ou solicitar recursos
 
@@ -101,7 +101,7 @@ Naturalmente, nossa comunidade de escrita é atarefada, então às vezes a forma
 
 ## História da MDN
 
-O projeto Mozilla Developer Network (a.k.a. Mozilla Developer Center (MDC), a.k.a. _Devmo_) começou no início de 2005, quando a [Mozilla Foundation](http://www.mozillafoundation.org) obteve uma licença da AOL para utilizar o conteúdo original [DevEdge](/Project:en/DevEdge "Project:en/DevEdge"). Os materiais ainda úteis foram extraídos do conteúdo DevEdge, e então migrados por voluntários para essa wiki, pra que a manutenção e atualização fossem mais fáceis.
+O projeto Mozilla Developer Network (a.k.a. Mozilla Developer Center (MDC), a.k.a. _Devmo_) começou no início de 2005, quando a [Mozilla Foundation](http://www.mozillafoundation.org) obteve uma licença da AOL para utilizar o conteúdo original [DevEdge](/Project:en/DevEdge). Os materiais ainda úteis foram extraídos do conteúdo DevEdge, e então migrados por voluntários para essa wiki, pra que a manutenção e atualização fossem mais fáceis.
 
 Desde então, o projeto continuou a crescer e agora forma um nexo central para toda a documentação para desenvolvedores relacionada ao Mozilla Project e tecnologias abertas da web. Em 2010, o nome mudou para Mozilla Developer Network; 2011 viu a adição do [Demo Studio](http://developer.mozilla.org/en-US/demos) para desenvolvedores web compartilharem e exibirem seu código, e páginas [Learning](http://developer.mozilla.org/en-US/learn) para fornecer links de tutoriais. (O nome MDC ainda vive como "MDN Doc Center" para a seção de documentação.) A tempo, espera-se que a Mozilla Developer Network se torne um recurso que web designers, desenvolvedores de aplicações, e escritores de extensões e temas visitam regularmente.
 

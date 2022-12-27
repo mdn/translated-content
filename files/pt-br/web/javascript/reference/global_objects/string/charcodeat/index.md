@@ -131,8 +131,6 @@ function knownCharCodeAt(str, idx) {
 
 {{Compat("javascript.builtins.String.charCodeAt")}}
 
-##
-
 ## Veja também
 
 - {{jsxref("String.fromCharCode()")}}

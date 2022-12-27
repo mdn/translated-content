@@ -2,6 +2,7 @@
 title: ウェブ認証 API
 slug: Web/API/Web_Authentication_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Web Authentication API")}}
 
 ウェブ認証 API は、公開鍵暗号を用いて強力な認証を可能にする[資格情報管理 API](/ja/docs/Web/API/Credential_Management_API) の拡張機能で、パスワードレス認証や、 SMS テキストを用いない安全な二要素認証を実現します。

@@ -2,6 +2,7 @@
 title: SpeechSynthesisUtterance
 slug: Web/API/SpeechSynthesisUtterance
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechSynthesisUtterance`** インターフェイスは、発話リクエストを表します。これには、speech サービスが読み上げるコンテンツと、その読み上げ方についての情報 (言語、音の高低、音量) が含まれます。

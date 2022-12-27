@@ -199,7 +199,7 @@ Mas o relacionamento entre objetos e interfaces que são implementadas no DOM po
 
 ### Interfaces e Objetos
 
-Muitos objetos pegam emprestados de várias interfaces diferentes. O objeto table por exemplo implementa uma interface especializada {{domxref("HTMLTableElement")}}, que inclui métodos como `createCaption` e `insertRow`. Mas como é também um elemento HTML, `table `implementa a interface `Element `descrita no capítulo DOM {{domxref("Element")}} Reference. E finalmente, já que um elemento HTML é também, no que diz respeito ao DOM, um nó na árvore de nós que fazem o modelo de objeto para uma página HTML ou XML, o objeto table também implementa a interface `Node` mais básica, de onde deriva `Element`.
+Muitos objetos pegam emprestados de várias interfaces diferentes. O objeto table por exemplo implementa uma interface especializada {{domxref("HTMLTableElement")}}, que inclui métodos como `createCaption` e `insertRow`. Mas como é também um elemento HTML, `table` implementa a interface `Element` descrita no capítulo DOM {{domxref("Element")}} Reference. E finalmente, já que um elemento HTML é também, no que diz respeito ao DOM, um nó na árvore de nós que fazem o modelo de objeto para uma página HTML ou XML, o objeto table também implementa a interface `Node` mais básica, de onde deriva `Element`.
 
 Quando você pegar a referência para um objeto `table`, como no exemplo a seguir, você rotineiramente usa todas as três interfaces de forma intercambiável no objeto, talvez sem saber.
 
@@ -217,7 +217,7 @@ table.summary = "nota: aumento de borda";
 
 ### Interfaces Core no DOM
 
-Essa seção lista algumas das interfaces mais utilizadas no DOM. A ideia não é descrever o que essas APIs fazem aqui mas para te dar uma ideia de que tipos de métodos e propriedades você verá bastante conforme for usando o DOM. Essas APIs são usadas nos exemplos mais extensos no capítulo de [DOM Examples ](/pt-BR/docs/Web/API/Document_Object_Model/Examples)ao fim desse livro.
+Essa seção lista algumas das interfaces mais utilizadas no DOM. A ideia não é descrever o que essas APIs fazem aqui mas para te dar uma ideia de que tipos de métodos e propriedades você verá bastante conforme for usando o DOM. Essas APIs são usadas nos exemplos mais extensos no capítulo de [DOM Examples](/pt-BR/docs/Web/API/Document_Object_Model/Examples) ao fim desse livro.
 
 Objetos `Document` e `window` são os objetos cujas interfaces você geralmente utiliza mais frequentemente em programação DOM. De forma simples, o objeto `window` representa algo como o browser, e o objeto `document` é a raiz de todo o documento em si. `Element` herda dessa interface `Node` genérica, e juntamente com essas duas interfaces fornecem muitos dos métodos e propriedades que você utiliza em elementos individuais. Esses elementos podem também ter interfaces específicas para lidar com o tipo de dado que esses elementos contêm, como no exemplo do objeto `table` na seção anterior.
 

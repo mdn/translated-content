@@ -98,7 +98,7 @@ A saída disso é "Entrada 0 na matriz de 32 bits agora é 32". Em outras palavr
 
 ### Trabalhando com Estruturas de Dados Complexas
 
-Ao combinar um único buffer com várias exibições de diferentes tipos, iniciando em diferentes deslocamentos no buffer, você pode interagir com objetos de dados contendo vários tipos de dados. Isso permite, por exemplo, interagir com estruturas de dados complexas de WebGL, arquivos de dados ou estruturas C que você precisa usar ao usar [js-ctypes](/pt-BR/docs/Mozilla/js-ctypes "js-ctypes").
+Ao combinar um único buffer com várias exibições de diferentes tipos, iniciando em diferentes deslocamentos no buffer, você pode interagir com objetos de dados contendo vários tipos de dados. Isso permite, por exemplo, interagir com estruturas de dados complexas de WebGL, arquivos de dados ou estruturas C que você precisa usar ao usar [js-ctypes](/pt-BR/docs/Mozilla/js-ctypes).
 
 Considere esta estrutura em C:
 
@@ -148,7 +148,7 @@ normalArray.constructor === Array;
 ## Veja também
 
 - [Getting `ArrayBuffer`s or typed arrays from _Base64_-encoded strings](/pt-BR/docs/Web/JavaScript/Base64_encoding_and_decoding#Appendix.3A_Decode_a_Base64_string_to_Uint8Array_or_ArrayBuffer)
-- [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Code_snippets/StringView "/en-US/docs/Web/JavaScript/Typed_arrays/StringView")
+- [`StringView` – a C-like representation of strings based on typed arrays](/pt-BR/docs/Code_snippets/StringView)
 - [Faster Canvas Pixel Manipulation with Typed Arrays](https://hacks.mozilla.org/2011/12/faster-canvas-pixel-manipulation-with-typed-arrays)
 - [Typed Arrays: Binary Data in the Browser](http://www.html5rocks.com/en/tutorials/webgl/typed_arrays)
 - {{Glossary("Endianness")}}

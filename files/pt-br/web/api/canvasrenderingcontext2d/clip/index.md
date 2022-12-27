@@ -5,7 +5,7 @@ translation_of: Web/API/CanvasRenderingContext2D/clip
 ---
 {{APIRef}}
 
-O método**` CanvasRenderingContext2D`\*\***`.clip()`\*\* da API do Canvas 2D transforma o caminho atualmente construido em um caminho atual de recorte.
+O método **`CanvasRenderingContext2D.clip()`** da API do Canvas 2D transforma o caminho atualmente construido em um caminho atual de recorte.
 
 ## Sintaxe
 

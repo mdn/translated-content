@@ -5,6 +5,7 @@ original_slug: MDN/Contribute/Help_beginners
 i10n:
   sourceCommit: 8dbe0b2acd7fdbf533a9bd2f517999cc2035d952
 ---
+
 {{MDNSidebar}}
 
 [ウェブ開発を学ぶ](/ja/docs/Learn)のページ群は、毎月 100 万回以上の閲覧があり、一般的な助けを求めたり、評価の採点を依頼したりするための[アクティブなフォーラム](https://discourse.mozilla.org/c/mdn/learn/250)があります。投稿に回答したり、学習コミュニティを成長させたりする手伝いをしてくださると幸いです。

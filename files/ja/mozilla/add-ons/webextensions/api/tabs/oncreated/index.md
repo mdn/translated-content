@@ -2,6 +2,7 @@
 title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 ---
+
 {{AddonSidebar()}}
 
 タブが生成されたときに発火します。

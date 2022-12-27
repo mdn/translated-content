@@ -3,6 +3,7 @@ title: ブラウザごとの表示の違い(User-Agent-Stylesheetによる表示
 slug: orphaned/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
 original_slug: Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
 ---
+
 ## 概要
 
 ブラウザ毎で独自のスタイルシートを持っており、使用するタグによっては、ブラウザ毎で表示が異なる場合があります。

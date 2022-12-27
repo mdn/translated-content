@@ -70,9 +70,6 @@ align-items: unset;
   - : Os itens são posicionados para a borda do container de alinhamento do lado inicial do item, no eixo apropriado.
 - `self-end`
   - : Os itens são posicionados para a borda do container de alinhamento do lado final do item, no eixo apropriado.
-
-<!---->
-
 - `baseline`
 
   `first baseline`

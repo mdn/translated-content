@@ -158,7 +158,7 @@ for (var i = 0; i < cores.length; i++) {
 }
 ```
 
-Se você sabe que nenhum dos elemnetos no seu array é avaliado como `false` em um contexto booleano — se o seu array consiste apenas de nodos do [DOM](/pt-BR/docs/DOM/Referencia_do_DOM "en-US/docs/DOM"), como exemplo, você pode usar um idioma mais eficiente:
+Se você sabe que nenhum dos elemnetos no seu array é avaliado como `false` em um contexto booleano — se o seu array consiste apenas de nodos do [DOM](/pt-BR/docs/DOM/Referencia_do_DOM), como exemplo, você pode usar um idioma mais eficiente:
 
 ```js
 var divs = document.getElementsByTagName('div');

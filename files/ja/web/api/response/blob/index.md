@@ -3,6 +3,7 @@ title: Response.blob()
 slug: Web/API/Response/blob
 original_slug: Web/API/Body/blob
 ---
+
 {{APIRef("Fetch")}}
 
 **`blob()`** は {{domxref("Response")}} インターフェイスのメソッドで、 {{domxref("Response")}} ストリームを取得して完全に読み込みます。 {{domxref("Blob")}} で解決するプロミスを返します。

@@ -4,6 +4,7 @@ slug: Web/API/WorkerGlobalScope/offline_event
 l10n:
   sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`offline`** は {{domxref("WorkerGlobalScope")}} のイベントで、端末がインターネットへの接続を失ったときに発行されます。

@@ -9,7 +9,7 @@ tags:
 translation_of: Glossary/IndexedDB
 original_slug: Glossario/IndexedDB
 ---
-IndexedDB é uma {{glossary("API")}} de web para armazenar volumosas estruturas de dados dentro dos navegadores e indexá-los para buscas de alta performance. Sendo um [RDBMS](https://en.wikipedia.org/wiki/Relational_database_management_system "Sistema de Gerenciamento para Banco de Dados Relacionais") baseado em {{glossary("SQL")}}, IndexedDB é um sistema de banco de dados transacionais. Porém ele usa objetos {{glossary("JavaScript")}} ao invés de tabelas em colunas fixas para armazenar os dados.
+IndexedDB é uma {{glossary("API")}} de web para armazenar volumosas estruturas de dados dentro dos navegadores e indexá-los para buscas de alta performance. Sendo um [RDBMS](https://en.wikipedia.org/wiki/Relational_database_management_system) baseado em {{glossary("SQL")}}, IndexedDB é um sistema de banco de dados transacionais. Porém ele usa objetos {{glossary("JavaScript")}} ao invés de tabelas em colunas fixas para armazenar os dados.
 
 ## Aprenda mais
 

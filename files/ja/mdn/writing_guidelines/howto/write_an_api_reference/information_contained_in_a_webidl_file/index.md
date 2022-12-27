@@ -3,6 +3,7 @@ title: WebIDL ファイルに含まれる情報
 slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 original_slug: MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 ---
+
 {{MDNSidebar}}
 
 API についての記事を書くとき、情報源はたくさんあります。仕様書にはモデルと同様に何が実装されるべきかが記述され、実装には実際にブラウザーに置かれたものが記述されています。 WebIDL ファイルは、 API に関する情報のすべてではありませんが、多くの情報を提供する非常に凝縮された方法です。この記事では、 WebIDL 構文を理解するためのリファレンスを提供します。

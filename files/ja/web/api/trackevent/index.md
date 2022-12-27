@@ -2,6 +2,7 @@
 title: TrackEvent
 slug: Web/API/TrackEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTML DOM 仕様の一部である **`TrackEvent`** インターフェイスは、HTML メディア要素で使用可能なトラックのセットに対する変更を表すイベントに使用されます。 これらのイベントは {{event("addtrack")}} と {{event("removetrack")}} です。 `TrackEvent` を {{domxref("RTCPeerConnection")}} の一部であるトラックに使用される {{domxref("RTCTrackEvent")}} インターフェイスと混同しないでください。

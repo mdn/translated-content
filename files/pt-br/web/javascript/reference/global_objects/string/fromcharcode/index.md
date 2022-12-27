@@ -33,7 +33,7 @@ Uma string contendo os caracteres correspondentes à sequência de valores Unico
 
 Esse método retorna uma string e não um objeto {{jsxref("String")}}.
 
-Como `fromCharCode() `é um método estático de {{jsxref("String")}}, você sempre o usará como `String.fromCharCode()`, ao invés de um método de um objeto {{jsxref("String")}} que você tenha criado.
+Como `fromCharCode()` é um método estático de {{jsxref("String")}}, você sempre o usará como `String.fromCharCode()`, ao invés de um método de um objeto {{jsxref("String")}} que você tenha criado.
 
 ## Exemplos
 

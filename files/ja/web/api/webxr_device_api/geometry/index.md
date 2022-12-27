@@ -2,6 +2,7 @@
 title: WebXR の形状と参照空間
 slug: Web/API/WebXR_Device_API/Geometry
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 基本的なレベルでは、拡張現実または仮想現実のコンテキストでの [WebXR](/ja/docs/Web/API/WebXR_Device_API) プレゼンテーションのシーンのレンダリングは [WebGL](/ja/docs/Web/API/WebGL_API) を使用して実行されるため、 2 つの API は同じ設計言語の多くを共有します。ただし、XR ヘッドセットなどの機器を使用して真の三次元でシーンを提示する機能を提供するために、WebXR には理解する必要がある追加の概念があります。

@@ -2,6 +2,7 @@
 title: 帰属表示と著作権使用許諾
 slug: MDN/Writing_guidelines/Attrib_copyright_license
 ---
+
 {{MDNSidebar}}
 
 MDN Web Docs のコンテンツは無料で利用でき、様々なオープンソースライセンスのもとで利用することができます。

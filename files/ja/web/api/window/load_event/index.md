@@ -2,6 +2,7 @@
 title: 'Window: load イベント'
 slug: Web/API/Window/load_event
 ---
+
 {{APIRef}}
 
 **`load`** イベントは、ページ全体が、スタイルシートや画像などのすべての依存するリソースを含めて読み込まれたときに発生します。これは {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} が、ページの DOM の読み込みが完了すれば、リソースの読み込みが完了するのを待たずに発生するのと対照的です。

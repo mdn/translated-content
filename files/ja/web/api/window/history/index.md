@@ -2,6 +2,7 @@
 title: Window.history
 slug: Web/API/Window/history
 ---
+
 {{APIRef}}
 
 `Window.history` は読み取り専用プロパティで、 {{domxref("History")}} オブジェクトへの参照を返します。これはブラウザーの*セッション履歴* (現在のページが読み込まれているタブまたはフレームで訪れたことがあるページ群) を操作するためのインターフェイスを提供します。

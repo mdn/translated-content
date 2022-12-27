@@ -2,6 +2,7 @@
 title: XMLDocument
 slug: Web/API/XMLDocument
 ---
+
 {{APIRef("DOM")}}
 
 **XMLDocument** インターフェイスは XML ドキュメントを示します。汎用的な {{DOMxRef("Document")}} を継承し、特定のメソッドやプロパティを追加しません: それでも２つのタイプのドキュメントでは、いくつかのアルゴリズムの動作がことなります。

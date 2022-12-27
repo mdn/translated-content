@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/stroke
 ---
 {{APIRef}}
 
-O método **`CanvasRenderingContext2D`\*\***`.stroke()`\*\* da API Canvas 2D contorna um dado _path_ ou o _path_ atual com o estilo atual de traçado usando uma regra de controle diferente de zero.
+O método **`CanvasRenderingContext2D.stroke()`** da API Canvas 2D contorna um dado _path_ ou o _path_ atual com o estilo atual de traçado usando uma regra de controle diferente de zero.
 
 ## Sintaxe
 

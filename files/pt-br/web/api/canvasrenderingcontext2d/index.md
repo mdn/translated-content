@@ -28,7 +28,7 @@ ctx.fillStyle = "rgb(200,0,0)"; // define a cor de preenchimento do retângulo
 ctx.fillRect(10, 10, 55, 50);   // desenha o retângulo na posição 10, 10 com 55 pixels de largura e uma altura de 50
 ```
 
-Veja as propriedades e métodos no menu lateral e abaixo. O [tutorial canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial "Canvas tutorial") tem mais informações, exemplos e recursos.
+Veja as propriedades e métodos no menu lateral e abaixo. O [tutorial canvas](/pt-BR/docs/Web/API/Canvas_API/Tutorial) tem mais informações, exemplos e recursos.
 
 ## Desenhando Retângulos
 
@@ -149,7 +149,7 @@ Os seguintes métodos podem ser usados para manipular caminhos de desenhos.
 - {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}}
   - : Scrolls the current path or a given path into the view.
 - {{domxref("CanvasRenderingContext2D.clip()")}}
-  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing "Clipping paths") in the Canvas tutorial.
+  - : Creates a clipping path from the current sub-paths. Everything drawn after `clip()` is called appears inside the clipping path only. For an example, see [Clipping paths](/pt-BR/docs/Web/API/Canvas_API/Tutorial/Compositing) in the Canvas tutorial.
 - {{domxref("CanvasRenderingContext2D.isPointInPath()")}}
   - : Reports whether or not the specified point is contained in the current path.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}

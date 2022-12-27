@@ -2,6 +2,7 @@
 title: SpeechRecognitionResult.isFinal
 slug: Web/API/SpeechRecognitionResult/isFinal
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 {{domxref("SpeechRecognitionResult")}}インターフェイスの **`isFinal`** リードオンリーのプロパティは結果がファイナルかどうかの ({{domxref("Boolean")}} 型) のことです。true の場合は、これは結果を返す最終の時間です。false の場合は、暫定の結果を返し、後々それは更新されます。

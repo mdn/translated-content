@@ -3,6 +3,7 @@ title: API リファレンスには何が必要ですか？
 slug: orphaned/MDN/Structures/API_references/What_does_an_API_reference_need
 original_slug: MDN/Structures/API_references/What_does_an_API_reference_need
 ---
+
 {{MDNSidebar}}
 
 この記事では、完全な API リファレンスに必要なページについて説明します。

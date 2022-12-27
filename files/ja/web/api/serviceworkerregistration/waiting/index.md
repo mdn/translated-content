@@ -2,6 +2,7 @@
 title: ServiceWorkerRegistration.waiting
 slug: Web/API/ServiceWorkerRegistration/waiting
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`waiting`** は {{domxref("ServiceWorkerRegistration")}} インターフェイスのプロパティで、サービスワーカーのうち {{domxref("ServiceWorker.state")}} がインストール済み (`installed`) のものを返します。 このプロパティは、最初は `null` に設定されています。

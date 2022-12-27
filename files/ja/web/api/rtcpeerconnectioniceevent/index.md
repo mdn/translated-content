@@ -2,6 +2,7 @@
 title: RTCPeerConnectionIceEvent
 slug: Web/API/RTCPeerConnectionIceEvent
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnectionIceEvent`** インタフェースは、通常 {{domxref("RTCPeerConnection")}}の ICE 候補に関連して発生するイベントを表現します。イベントのタイプは{{event("icecandidate")}}です。

@@ -78,8 +78,6 @@ function openWindow() {
 
 {{Compat("api.Document.hasFocus")}}
 
-##
-
 ## Veja também
 
 - [Usando a API de Page Visibility](/pt-BR/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API)

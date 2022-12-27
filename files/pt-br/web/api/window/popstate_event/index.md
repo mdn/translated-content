@@ -3,11 +3,11 @@ title: popstate
 slug: Web/API/Window/popstate_event
 translation_of: Web/API/Window/popstate_event
 ---
-O evento `popstate `é disparado quando a entrada do histórico ativa é alterado. Se o histórico de entrada a ser ativado for criado por uma chamada `history.pushState() `ou for afetada por uma chamada `history.replaceState(),` a propriedade dos eventos` popstate `contém uma cópia do histórico de entrada do objeto.
+O evento `popstate` é disparado quando a entrada do histórico ativa é alterado. Se o histórico de entrada a ser ativado for criado por uma chamada `history.pushState()` ou for afetada por uma chamada `history.replaceState(),` a propriedade dos eventos `popstate` contém uma cópia do histórico de entrada do objeto.
 
-Note que apenas chamando `history.pushState()` ou `history.replaceState()` não ira disparar um evento `popstate. `O evento `popstate `apenas é disparado após uma ação no navegador como um click no botão de voltar (ou chamando `history.back() por javascript`)
+Note que apenas chamando `history.pushState()` ou `history.replaceState()` não ira disparar um evento `popstate`. O evento `popstate` apenas é disparado após uma ação no navegador como um click no botão de voltar (ou chamando `history.back() por javascript`)
 
-Navegadores tendem a lidar com o evento `popstate `diferentemente no carregamento da página. Chrome (anterior versão 34) e Safari sempre emitem um evento `popstate` no carregamento da página, mas o Firefox não.
+Navegadores tendem a lidar com o evento `popstate` diferentemente no carregamento da página. Chrome (anterior versão 34) e Safari sempre emitem um evento `popstate` no carregamento da página, mas o Firefox não.
 
 ## Informação geral
 
@@ -54,7 +54,7 @@ history.back(); // Logs "location: http://example.com/example.html, state: null
 history.go(2);  // Logs "location: http://example.com/example.html?page=3, state: {"page":3}
 ```
 
-Observe que mesmo que a entrada do histórico inicial(para `http://example.com/example.html`) não tem nenhum estado associado a ele, um evento `popstate `é ainda disparado quando nós ativamos essa entrada após a segunda chamada para` history.back ().`
+Observe que mesmo que a entrada do histórico inicial(para `http://example.com/example.html`) não tem nenhum estado associado a ele, um evento `popstate`é ainda disparado quando nós ativamos essa entrada após a segunda chamada para `history.back()`.
 
 ## Eventos relacionados
 

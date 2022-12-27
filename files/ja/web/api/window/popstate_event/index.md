@@ -2,6 +2,7 @@
 title: 'Window: popstate イベント'
 slug: Web/API/Window/popstate_event
 ---
+
 {{APIRef}}
 
 **`popstate`** は {{domxref("Window")}} インターフェイスのイベントで、ユーザーがセッション履歴を操作している間にアクティブな履歴項目が変更されたときに発行されます。これは現在の履歴項目をユーザーが最後に訪れたページのものに変更するか、または {{domxref("history.pushState()")}} が履歴項目を履歴スタックに追加するために使用されていた場合、その履歴項目が代わりに使用されます。

@@ -2,6 +2,7 @@
 title: Tabs API を使う
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ---
+
 {{AddonSidebar}}
 
 タブを使うとユーザーはブラウザーウィンドウに複数のウェブページを開いてウェブページ間をスイッチできるようになります。Tabs API により、タブを操作して、新しい方法でタブを使ったり拡張機能の機能として配布できます。

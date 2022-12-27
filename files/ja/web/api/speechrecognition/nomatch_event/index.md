@@ -3,6 +3,7 @@ title: SpeechRecognition.onnomatch
 slug: Web/API/SpeechRecognition/nomatch_event
 original_slug: Web/API/SpeechRecognition/onnomatch
 ---
+
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
 {{domxref("SpeechRecognition")}}インターフェイスの **`onnomatch`** プロパティ、文法の辞書による音声認識サービスの最終結果として何も認識されていない場合 ({{event("nomatch")}}イベントが発生した時)、実行するイベントハンドラーになります。

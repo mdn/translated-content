@@ -2,6 +2,7 @@
 title: ReadableStream.getReader()
 slug: Web/API/ReadableStream/getReader
 ---
+
 {{APIRef("Streams")}}
 
 {{domxref("ReadableStream")}} インターフェイスの **`getReader()`** メソッドはリーダーを作成し、それでストリームをロックします。 ストリームがロックされている間は、このリーダーが開放されるまで他のリーダーを取得できません。

@@ -2,6 +2,7 @@
 title: ReadableByteStreamController.close()
 slug: Web/API/ReadableByteStreamController/close
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("ReadableByteStreamController")}} インターフェイスの **`close()`** メソッドは、関連するストリームを閉じます。

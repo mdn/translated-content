@@ -2,6 +2,7 @@
 title: events
 slug: Mozilla/Add-ons/WebExtensions/API/events
 ---
+
 {{AddonSidebar}}
 
 イベントをディスパッチする API から使われる共通の型です。

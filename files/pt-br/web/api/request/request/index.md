@@ -43,11 +43,11 @@ var myRequest = new Request(input[, init]);
 
 | Tipo        | Descrição                                                                                                                                                              |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `TypeError` | Desde [Firefox 43](/pt-BR/docs/Mozilla/Firefox/Releases/43), `Request()` lançará um TypeError se o URL tiver credenciais, tal como http\://user:password\@example.com. |
+| `TypeError` | Desde [Firefox 43](/pt-BR/docs/Mozilla/Firefox/Releases/43), `Request()` lançará um TypeError se o URL tiver credenciais, tal como `http://user:password@example.com`. |
 
 ## Exemplo
 
-Em nosso [exemplo Fetch Request ](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init)(veja [Fetch Request live](http://mdn.github.io/fetch-examples/fetch-request/)) nós criamos um novo objeto `Request` usando o construtor, em seguida, busque-o usando uma chamada {{domxref("GlobalFetch.fetch")}}. Como estamos buscando uma imagem, executamos o {{domxref("Body.blob")}} na resposta para fornecer o tipo MIME adequado para que ela seja manipulada corretamente. Em seguida, criamos uma URL do objeto e a exibimos em um Elemento {{htmlelement("img")}}.
+Em nosso [exemplo Fetch Request](https://github.com/mdn/fetch-examples/tree/master/fetch-request-with-init)(veja [Fetch Request live](http://mdn.github.io/fetch-examples/fetch-request/)) nós criamos um novo objeto `Request` usando o construtor, em seguida, busque-o usando uma chamada {{domxref("GlobalFetch.fetch")}}. Como estamos buscando uma imagem, executamos o {{domxref("Body.blob")}} na resposta para fornecer o tipo MIME adequado para que ela seja manipulada corretamente. Em seguida, criamos uma URL do objeto e a exibimos em um Elemento {{htmlelement("img")}}.
 
 ```js
 var myImage = document.querySelector('img');
@@ -103,7 +103,7 @@ var myInit = { method: 'GET',
 var myRequest = new Request('flowers.jpg', myInit);
 ```
 
-Você também pode passar um objeto {{domxref ("Request")}} para o construtor `Request() `para criar uma cópia do Request (isso é semelhante a chamar o método {{domxref("Request.clone", "clone()")}} .)
+Você também pode passar um objeto {{domxref ("Request")}} para o construtor `Request()` para criar uma cópia do Request (isso é semelhante a chamar o método {{domxref("Request.clone", "clone()")}} .)
 
 ```js
 var copy = new Request(myRequest);

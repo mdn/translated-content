@@ -3,6 +3,7 @@ title: VRDisplay.getEyeParameters()
 slug: Web/API/VRDisplay/getEyeParameters
 original_slug: Web/API/VRDevice/getEyeParameters
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`getEyeParameters()`** は {{domxref("VRDisplay")}} インターフェイスのメソッドで、指定された目の視線パラメーターを持つ {{domxref("VREyeParameters")}} オブジェクトを返します。

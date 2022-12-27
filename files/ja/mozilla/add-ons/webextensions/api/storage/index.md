@@ -2,6 +2,7 @@
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
 ---
+
 {{AddonSidebar}}
 
 拡張機能にデータの保存、取得と、保存項目の変更をリッスンできるようにします。

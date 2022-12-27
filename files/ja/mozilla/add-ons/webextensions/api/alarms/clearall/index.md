@@ -2,6 +2,7 @@
 title: alarms.clearAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
 ---
+
 {{AddonSidebar()}}
 
 予約されたアラームすべてを解除します。

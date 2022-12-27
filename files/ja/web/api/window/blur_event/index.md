@@ -2,6 +2,7 @@
 title: 'Window: blur イベント'
 slug: Web/API/Window/blur_event
 ---
+
 {{APIRef}}
 
 **`blur`** イベントは、要素がフォーカスを失ったときに発生します。

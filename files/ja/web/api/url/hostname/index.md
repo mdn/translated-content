@@ -2,6 +2,7 @@
 title: URL.hostname
 slug: Web/API/URL/hostname
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}} インターフェイスの **`hostname`** プロパティは、URL のドメインを含む {{domxref("USVString")}} です。

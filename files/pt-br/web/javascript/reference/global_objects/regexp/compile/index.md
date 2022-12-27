@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 ---
 {{JSRef}} {{deprecated_header}}
 
-O método **`compile`\*\***`()`\*\* está depreciado, é usado para (re-)compilar uma expressão regular durante a execução de um script. É basicamente o mesmo que o construtor `RegExp`.
+O método **`compile()`** está depreciado, é usado para (re-)compilar uma expressão regular durante a execução de um script. É basicamente o mesmo que o construtor `RegExp`.
 
 ## Sintaxe
 

@@ -20,12 +20,12 @@ PWAs should be discoverable, installable, linkable, network independent, progres
 
 The following guides show you what need to do to implement a PWA, by examining a simple example and showing you how all the pieces work.
 
-1.  [Introduction to progressive web apps](/pt-BR/docs/Web/Apps/Progressive/Introduction)
-2.  [Progressive web app structure](/pt-BR/docs/Web/Apps/Progressive/App_structure)
-3.  [Making PWAs work offline with Service workers](/pt-BR/docs/Web/Apps/Progressive/Offline_Service_workers)
-4.  [How to make PWAs installable](/pt-BR/docs/Web/Apps/Progressive/Installable_PWAs)
-5.  [How to make PWAs re-engageable using Notifications and Push](/pt-BR/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)
-6.  [Progressive loading](/pt-BR/docs/Web/Apps/Progressive/Loading)
+1. [Introduction to progressive web apps](/pt-BR/docs/Web/Apps/Progressive/Introduction)
+2. [Progressive web app structure](/pt-BR/docs/Web/Apps/Progressive/App_structure)
+3. [Making PWAs work offline with Service workers](/pt-BR/docs/Web/Apps/Progressive/Offline_Service_workers)
+4. [How to make PWAs installable](/pt-BR/docs/Web/Apps/Progressive/Installable_PWAs)
+5. [How to make PWAs re-engageable using Notifications and Push](/pt-BR/docs/Web/Apps/Progressive/Re-engageable_Notifications_Push)
+6. [Progressive loading](/pt-BR/docs/Web/Apps/Progressive/Loading)
 
 ## Technology guides
 

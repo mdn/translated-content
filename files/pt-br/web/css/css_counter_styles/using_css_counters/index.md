@@ -6,9 +6,9 @@ original_slug: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 ---
 {{CSSRef}}
 
-Contadores CSS são em essência, as variáveis mantidas pelo CSS cujos valores podem ser incrementado por regras do CSS para controlar quantas vezes eles são usados.Isso permite ajustar a aparência do conteúdo com base na sua colocação no documento. contadores CSS são uma implementação de [Contadores automáticos e numeração ](http://www.w3.org/TR/CSS21/generate.html#counters)em CSS 2.1.
+Contadores CSS são em essência, as variáveis mantidas pelo CSS cujos valores podem ser incrementado por regras do CSS para controlar quantas vezes eles são usados.Isso permite ajustar a aparência do conteúdo com base na sua colocação no documento. contadores CSS são uma implementação de [Contadores automáticos e numeração](http://www.w3.org/TR/CSS21/generate.html#counters) em CSS 2.1.
 
-O valor de um contador é manipulado através da utilização de {{cssxref("counter-reset")}}. {{cssxref("counter-increment")}} pode ser exibido em uma página usando o `counter()` ou `counters()` função da propriedade de [`conteúdo`](/en-US/docs/CSS/content "CSS/content").
+O valor de um contador é manipulado através da utilização de {{cssxref("counter-reset")}}. {{cssxref("counter-increment")}} pode ser exibido em uma página usando o `counter()` ou `counters()` função da propriedade de [`conteúdo`](/en-US/docs/CSS/content).
 
 ## Usando contadores
 
@@ -101,7 +101,7 @@ Produz este resultado:
 
 ## Veja mais
 
-- [counter-reset](/pt-BR/docs/CSS/counter-reset "CSS/counter-reset")
-- [counter-increment](/pt-BR/docs/CSS/counter-increment "CSS/counter-increment")
+- [counter-reset](/pt-BR/docs/CSS/counter-reset)
+- [counter-increment](/pt-BR/docs/CSS/counter-increment)
 
 _There is an additional example available at [http://www.mezzoblue.com/archives/20.../counter_intu/](http://www.mezzoblue.com/archives/2006/11/01/counter_intu/). This blog entry was posted on November 01, 2006, but appears to be accurate._

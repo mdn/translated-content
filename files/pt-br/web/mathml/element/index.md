@@ -104,5 +104,5 @@ O termo **marcação de apresentação** é usado para descrever a estrutura da 
 
 ## Ver também
 
-- [MathML](/pt-BR/docs/Web/MathML "/en-US/docs/Web/MathML")
-- [Referência de atributos de MathML](/pt-BR/docs/Web/MathML/Attribute "/en-US/docs/Web/MathML/Attribute")
+- [MathML](/pt-BR/docs/Web/MathML)
+- [Referência de atributos de MathML](/pt-BR/docs/Web/MathML/Attribute)

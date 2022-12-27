@@ -2,6 +2,7 @@
 title: Window.innerHeight
 slug: Web/API/Window/innerHeight
 ---
+
 {{APIRef}}
 
 **`innerHeight`** は {{domxref("Window")}} インターフェイスの読み取り専用プロパティで、ウィンドウの内部の高さをピクセル単位で返します。水平スクロールバーがあれば、その高さを含みます。

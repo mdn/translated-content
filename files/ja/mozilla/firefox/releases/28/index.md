@@ -2,6 +2,7 @@
 title: Firefox 28 for developers
 slug: Mozilla/Firefox/Releases/28
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 28 は米国時間 2014 年 3 月 18 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者やアドオン開発者にとっても有益な主な変更点を紹介します。

@@ -2,6 +2,7 @@
 title: Request.mode
 slug: Web/API/Request/mode
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 {{domxref("Request")}} インターフェースの **`mode`** 読み取り専用プロパティは、リクエストのモード（たとえば、`cors`、`no-cors`、`cors-with-forced-preflight`、`same-origin`）を含みます。これは、クロスオリジンリクエストに対して有効なレスポンスができるか、またレスポンスのプロパティが読み取り可能かどうかを判定するために使用されます。

@@ -28,7 +28,7 @@ str.search(regexp)
 
 ### Valor retornado
 
-O índice na string do primeiro trecho que satisfaz a expressão regular. Do contrário, o valor `-1`\*\* \*\*será retornado.
+O índice na string do primeiro trecho que satisfaz a expressão regular. Do contrário, o valor `-1` será retornado.
 
 ## Descrição
 

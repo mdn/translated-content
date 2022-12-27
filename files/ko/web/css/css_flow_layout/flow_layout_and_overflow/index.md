@@ -1,5 +1,5 @@
 ---
-title: 대열 조판과 대열이탈
+title: 대열 레이아웃과 대열이탈
 slug: Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow
 original_slug: Web/CSS/CSS_Flow_Layout/흐름_레이아웃과_오버플로
 ---

@@ -2,6 +2,7 @@
 title: extensionTypes.RunAt
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/RunAt
 ---
+
 {{AddonSidebar()}}
 
 JavaScript や CSS がどの時点でタブに挿入されるか。

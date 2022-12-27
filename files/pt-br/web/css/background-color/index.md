@@ -42,7 +42,7 @@ background-color: initial;
 background-color: unset;
 ```
 
-A propriedade `background-color` recebe um único valor [`<color>`](#<color>).
+A propriedade `background-color` recebe um único valor [`<color>`](#color).
 
 ### Valores
 

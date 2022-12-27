@@ -28,7 +28,7 @@ O seguinte código vai lançar um {{jsxref("TypeError")}}:
 // não Symbol.match não é modificado.
 ```
 
-Entretanto, se você configurar `Symbol.match` para `false`, a verificação `isRegExp `(que usa a propriedade `match` ) que o objeto não é uma expressão regular. O método `startsWith` e `endsWith` não vão lançar um `TypeError` como consequência.
+Entretanto, se você configurar `Symbol.match` para `false`, a verificação `isRegExp` (que usa a propriedade `match` ) que o objeto não é uma expressão regular. O método `startsWith` e `endsWith` não vão lançar um `TypeError` como consequência.
 
 ```js
 var re = /foo/;

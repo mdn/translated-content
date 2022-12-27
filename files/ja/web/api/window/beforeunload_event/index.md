@@ -2,6 +2,7 @@
 title: 'Window: beforeunload イベント'
 slug: Web/API/Window/beforeunload_event
 ---
+
 {{APIRef}}
 
 **`beforeunload`** イベントは、ウィンドウ、文書、およびそのリソースがアンロードされる直前に発生します。文書はまだ表示されており、この時点ではイベントはキャンセル可能です。

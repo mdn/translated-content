@@ -2,6 +2,7 @@
 title: Window.event
 slug: Web/API/Window/event
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Window")}} の読み取り専用プロパティである **`event`** は、現在サイトのコードが処理している {{domxref("Event")}} を返します。イベントハンドラーのコンテキスト外では、値が常に `undefined` になります。

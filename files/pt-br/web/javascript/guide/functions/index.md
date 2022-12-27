@@ -19,7 +19,7 @@ Veja também o capítulo de [referência sobre funções JavaScript](/pt-BR/docs
 
 ### Declarando uma função
 
-A **definição da função** (também chamada de **declaração de função**) consiste no uso da palavra chave [`function`](/pt-BR/docs/JavaScript/Reference/Statements/function "function"), seguida por:
+A **definição da função** (também chamada de **declaração de função**) consiste no uso da palavra chave [`function`](/pt-BR/docs/JavaScript/Reference/Statements/function), seguida por:
 
 - Nome da Função.
 - Lista de argumentos para a função, entre parênteses e separados por vírgulas.
@@ -33,7 +33,7 @@ function square(numero) {
 }
 ```
 
-A função `square` recebe um argumento chamado `numero`. A função consiste em uma instrução que indica para retornar o argumento da função (isto é, `numero`) multiplicado por si mesmo. A declaração [`return`](/pt-BR/docs/JavaScript/Reference/Statements/return "return") especifica o valor retornado pela função.
+A função `square` recebe um argumento chamado `numero`. A função consiste em uma instrução que indica para retornar o argumento da função (isto é, `numero`) multiplicado por si mesmo. A declaração [`return`](/pt-BR/docs/JavaScript/Reference/Statements/return) especifica o valor retornado pela função.
 
 ```js
 return numero * numero;
@@ -41,7 +41,7 @@ return numero * numero;
 
 Parâmetros primitivos (como um número) são passados para as funções por **valor**; o valor é passado para a função, mas se a função altera o valor do parâmetro, esta mudança não reflete globalmente ou na função chamada.
 
-Se você passar um objeto (ou seja, um [valor não primitivo](/pt-BR/docs/JavaScript/Glossary "en-US/docs/JavaScript/Glossary"), tal como {{jsxref("Array")}} ou um objeto definido por você) como um parâmetro e a função alterar as propriedades do objeto, essa mudança é visível fora da função, conforme mostrado no exemplo a seguir:
+Se você passar um objeto (ou seja, um [valor não primitivo](/pt-BR/docs/JavaScript/Glossary), tal como {{jsxref("Array")}} ou um objeto definido por você) como um parâmetro e a função alterar as propriedades do objeto, essa mudança é visível fora da função, conforme mostrado no exemplo a seguir:
 
 ```js
 function minhaFuncao(objeto) {
@@ -75,7 +75,7 @@ var fatorial = function fac(n) {return n<2 ? 1 : n*fac(n-1)};
 console.log(fatorial(3));
 ```
 
-As expressões de função são convenientes ao passar uma função como um argumento para outra função. O exemplo a seguir mostra uma função `map `sendo definida e, em seguida, chamada com uma função anônima como seu primeiro parâmetro:
+As expressões de função são convenientes ao passar uma função como um argumento para outra função. O exemplo a seguir mostra uma função `map` sendo definida e, em seguida, chamada com uma função anônima como seu primeiro parâmetro:
 
 ```js
 function map(f,a) {
@@ -106,9 +106,9 @@ if (num == 0){
 }
 ```
 
-Além de definir funções, você também pode usar o construtor {{jsxref("Function")}} para criar funções a partir de uma string` `em tempo real, como no método {{jsxref("eval()")}}.
+Além de definir funções, você também pode usar o construtor {{jsxref("Function")}} para criar funções a partir de uma string em tempo real, como no método {{jsxref("eval()")}}.
 
-Um **método** é uma função invocada por um objeto. Leia mais sobre objetos e métodos em [Trabalhando com Objetos](/pt-BR/docs/JavaScript/Guide/Working_with_Objects "en-US/docs/JavaScript/Guide/Working with Objects").
+Um **método** é uma função invocada por um objeto. Leia mais sobre objetos e métodos em [Trabalhando com Objetos](/pt-BR/docs/JavaScript/Guide/Working_with_Objects).
 
 ## Chamando funções
 
@@ -203,9 +203,9 @@ getScore(); // Retorna "Chamahk scored 5"
 
 Uma função pode referir-se e chamar a si própria. Há três maneiras de uma função referir-se a si mesma:
 
-1.  o nome da função
-2.  [`arguments.callee`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee)
-3.  uma variável no escopo que se refere a função
+1. o nome da função
+2. [`arguments.callee`](/pt-BR/docs/JavaScript/Reference/Functions_and_function_scope/arguments/callee)
+3. uma variável no escopo que se refere a função
 
 Por exemplo, considere a seguinte definição de função:
 
@@ -217,9 +217,9 @@ var foo = function bar() {
 
 Dentro do corpo da função, todos, a seguir, são equivalentes:
 
-1.  `bar()`
-2.  `arguments.callee()`
-3.  `foo()`
+1. `bar()`
+2. `arguments.callee()`
+3. `foo()`
 
 Uma função que chama a si mesma é chamada de função recursiva. Em alguns casos, a recursividade é análoga a um laço. Ambos executam o código várias vezes, e ambos necessitam de uma condição (para evitar um laço infinito, ou melhor, recursão infinita, neste caso). Por exemplo, o seguinte laço:
 
@@ -353,9 +353,9 @@ A(1); // Exibe um alerta com o valor 6 (1 + 2 + 3)
 
 Neste exemplo, `C` acessa `y` do `B` e `x` do `A`. Isso pode ser feito porque:
 
-1.  B forma uma _closure_ incluindo `A`, isto é, `B` pode acessar argumentos e variáveis de `A`.
-2.  C forma uma _closure_ incluindo `B`.
-3.  Devido a closure `B` inclui `A`, a _closure_ `C` inclui `A`, `C` pode acessar tanto argumentos e variáveis de `B` como de `A`. Em outras palavras, `C` _encadeia_ o escopo de `B` e `A`, nesta ordem.
+1. B forma uma _closure_ incluindo `A`, isto é, `B` pode acessar argumentos e variáveis de `A`.
+2. C forma uma _closure_ incluindo `B`.
+3. Devido a closure `B` inclui `A`, a _closure_ `C` inclui `A`, `C` pode acessar tanto argumentos e variáveis de `B` como de `A`. Em outras palavras, `C` _encadeia_ o escopo de `B` e `A`, nesta ordem.
 
 O inverso, no entanto, não é verdadeiro. `A` não pode acessar `C`, porque `A` não pode acessar qualquer argumento ou variável de `B`. Assim, `C` é privado somente a `B`.
 
@@ -627,7 +627,7 @@ JavaScript tem várias funções pré-definidas:
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
   - : A função global **`isFinite()`** determina se o valor passado é um número finito. Se necessário, o parâmetro é primeiro convertido para um número.
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-  - : A função **`isNaN()`** determina se um valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não. Nota: coerção dentro da função `isNaN` tem [regras interessantes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description); você pode, alternativamente, querer usar {{jsxref("Number.isNaN()")}}, como definido no ECMAScript 6, ou você pode usar `typeof `para determinar se o valor não é um número.
+  - : A função **`isNaN()`** determina se um valor é {{jsxref("Global_Objects/NaN", "NaN")}} ou não. Nota: coerção dentro da função `isNaN` tem [regras interessantes](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/isNaN#Description); você pode, alternativamente, querer usar {{jsxref("Number.isNaN()")}}, como definido no ECMAScript 6, ou você pode usar `typeof` para determinar se o valor não é um número.
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
   - : A função **`parseFloat()`** analisa um argumento do tipo _string_ e retorna um número de ponto flutuante.
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}

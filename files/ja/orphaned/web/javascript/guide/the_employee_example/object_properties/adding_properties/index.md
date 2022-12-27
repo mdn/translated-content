@@ -3,6 +3,7 @@ title: Adding Properties
 slug: orphaned/Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties
 original_slug: Web/JavaScript/Guide/The_Employee_Example/Object_Properties/Adding_Properties
 ---
+
 ### プロパティの追加
 
 JavaScript では実行時にどんなオブジェクトにもプロパティを追加することができます。コンストラクタ関数で与えられるプロパティだけを使う必要はありません。ある 1 つのオブジェクト固有のプロパティを追加するには、次のようにしてオブジェクトに値を代入します。

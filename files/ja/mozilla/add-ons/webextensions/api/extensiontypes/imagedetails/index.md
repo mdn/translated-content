@@ -2,6 +2,7 @@
 title: extensionTypes.ImageDetails
 slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageDetails
 ---
+
 {{AddonSidebar()}}
 
 画像のフォーマットと品質に関する詳細。

@@ -8,8 +8,6 @@ translation_of: Mozilla/Firefox/Releases/49
 [Para testar estes novos recursos do Firefox,
 Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 49 foi lançado em 20 de Setembro de 2016. Este artigo faz uma lista das principais alterações não só para desenvolvedores web, mas também desenvolvedores Firefox e Gecko e de extensões.
 
-##
-
 ## Mudanças para desenvolvedores web
 
 ### Ferramentas de desenvolvimento
@@ -17,7 +15,7 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 - Erros de JavaScript registrados no console [Agora com um link \[Leia Mais\]](https://hacks.mozilla.org/2016/06/helping-web-developers-with-javascript-errors/) para ajuda complementar na depuração ({{bug("1179876")}}).
 - CSS autocompletar: mostra mais sugestões para o autocompletar
   ({{bug("1260419")}}).
-- O inspector de animação agora [fornece informações do desempenho da animação ](/pt-BR/docs/Tools/Page_Inspector/How_to/Work_with_animations#Further_information_about_animation_compositing)nas ferramentas de desenvolvimento ({{bug("1254408")}}).
+- O inspector de animação agora [fornece informações do desempenho da animação](/pt-BR/docs/Tools/Page_Inspector/How_to/Work_with_animations#Further_information_about_animation_compositing) nas ferramentas de desenvolvimento ({{bug("1254408")}}).
 - O [menu de contexto do Inspector](/pt-BR/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#Element_popup_context_menu) foi reorganizado ser mais claro e fácil de usar ({{bug("1211613")}}).
 - O Inspector agora suporta sintaxe para valores de cores em `#RRGGBBAA` e `#RGBA` ({{bug("1271191")}}).
 - As ferramentas de desvenvolvedor deixa de exibir marcas de fechamento automático (tal como {{HTMLElement("br")}} e {{HTMLElement("img")}} como se eles tivessem uma tag de fechamento em páginas HTML ; o comportamento é inalteravel para páginas XHTML ({{bug("820926")}}).
@@ -29,7 +27,7 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 
 - O [Monitor de Rede](/pt-BR/docs/Tools/Network_Monitor) agora mostra uma coluna de Causa, onde fornece e indica o que causa de cada requerimento de rede específico ({{bug(1134073)}}).
 - Na _about:debugging_ página de extesões, o botão de recarregar é o único abilitado para extensões temporárias. Será desabilitado para todas as outras extensões ({{bug(1273184)}}).
-- Na página Workers em _about:debbuging_, uma mensagem de alerta será exibida na seção Service Workers se o [service workers for incompatíveil ](/pt-BR/docs/Tools/about:debugging#Service_workers_not_compatible)com as configurações atuais do navegador ({{bug(1266415)}}).
+- Na página Workers em _about:debbuging_, uma mensagem de alerta será exibida na seção Service Workers se o [service workers for incompatíveil](/pt-BR/docs/Tools/about:debugging#Service_workers_not_compatible) com as configurações atuais do navegador ({{bug(1266415)}}).
 - _about:debugging_ agora existe uma [nova página de Tabs](/pt-BR/docs/Tools/about:debugging#Tabs) disponível, quer fornece uma lista completa de todas abas abertas debugaveis na instancia do Firefox ({{bug(1266128)}}).
 - A opção _Desabilitar Cache_ na [Caixa de ferramentas de configurações avançadas](/pt-BR/docs/Tools/Settings#Advanced_settings) foi renomeada para Desabilitar HTTP Cache, para clarear que isso afeta o cache do HTTP, e não [Service Workers](/pt-BR/docs/Web/API/Service_Worker_API)/o [Cache API](/pt-BR/docs/Web/API/Cache) (bug(1253018)).
 - O [Inspector de armazenamento agora permite IndexedDB databases ser deletado](/pt-BR/docs/Tools/Storage_Inspector#IndexedDB) através de seu próprio menu ({{bug("1205123")}}), e mostrará uma mensagem de alerta se a IndexedDB poder ser deletada por alguma rasão (Se ainda existir conexão ativa, por exemplo) ({{bug(1268460)}}).
@@ -52,7 +50,7 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 - Adicionado suporte a cores específicas como o canal alpha usando 4- e 8-digitos CSS hex [cor](/pt-BR/docs/Web/CSS/color_value) de valores (#RRGGBBAA e #RGBA) ({{bug("567283")}}).
 - A pseudo-class {{cssxref(":dir()")}} foi desprezado ({{bug(859301)}}).
 - Em nossa implementação experimental (ainda não ativa por padrão) de {{cssxref("clip-path")}}, podemos agora interpolar entre valores {{cssxref("&lt;basic-shape&gt;")}} ({{bug(1110460)}}).
-- Adicionado a [`unidade de comprimento q` ](/pt-BR/docs/Web/CSS/length#q)({{bug(1274526)}}).
+- Adicionado a [`unidade de comprimento q`](/pt-BR/docs/Web/CSS/length#q) ({{bug(1274526)}}).
 - A propiedade {{cssxref("text-align-last")}} foi desprezada ({{bug(1039541)}}).
 - Adicionado suporte para {{cssxref("overflow-wrap")}}, substituindo {{cssxref("word-wrap")}} que ainda é suportado como nome alternativo ({{bug(955857)}}).
 - Nossa experiencia com a implementação do [CSS Grids](/pt-BR/docs/Web/CSS/CSS_Grid_Layout) foi melhorado:
@@ -149,13 +147,13 @@ Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) F
 - Qualquer tipode de dado pode ser agora recuperado da área de tranferência usada {{domxref("DataTransfer.getData()")}}: anteriormente, apenas alguns tipos de dados do tipo MIME eram suportados {{bug(860857)}}.
 - Nossa implementação da [API da cronometragrm de frames](/pt-BR/docs/Web/API/Frame_Timing_API), consistindo nas duas interfaces `PerformanceCompositeTiming` e `PerformanceRenderTiming`, foram removidas pois as especificações foram totalmente reescritas ({{bug(1271846)}}).
 - Para especificações correspondentes, a propriedade {{domxref("VTTCue.positionAlign")}} agora retorna um `PositionAlign` enum em vez de `Align` enum ({{bug(1276129)}}).
-- A parte de síntese da [API Web Speech ](/pt-BR/docs/Web/API/Web_Speech_API#Speech_synthesis)agora é ativo por padrão ({{bug(1268633)}}).
+- A parte de síntese da [API Web Speech](/pt-BR/docs/Web/API/Web_Speech_API#Speech_synthesis) agora é ativo por padrão ({{bug(1268633)}}).
 - A [API Timeline de performace](/pt-BR/docs/Web/API/Performance_Timeline) agora está disponível de padrão no Nightly (embrora não no Aurora, Beta ou Release).
 - O evento {{event("install")}}, e o {{domxref("Window.oninstall")}} manipulador de evento, são agora suportado por [Web Manifests](/pt-BR/docs/Web/Manifest) ({{bug(1265279)}}).
 - Quando usar o metodo {{domxref("AudioContext.createPeriodicWave()")}} de [Web Audio API](/pt-BR/docs/Web/API/Web_Audio_API), você pode específicar se a onda periódica resultante deve ser normalizada incluindo um objeto de dicionário como o terceiro parâmetro, que inclui um único parâmetro — `{disableNormalization: true}` ({{bug(1265405)}}).
 - Na APIWebVTT, {{domxref("VTTCue.positionAlign")}} retorna corretamente um `PositionAlignSetting` enum conforme a especificação; anteriormente ele retornava um `AlignSetting` enum ({{bug(1276129)}}).
 - A parte de síntese de fala da API Web Speech agora é habilitado por padrão em todos os navegadores desktop ({{bug(1268633)}}).
-- O contrutor de [API Web Animations ](/pt-BR/docs/Web/API/Web_Animations_API){{domxref("Animation.Animation()", "Animation()")}} agora aceita null na timeline ({{bug(1096776)}}).
+- O contrutor de [API Web Animations](/pt-BR/docs/Web/API/Web_Animations_API) {{domxref("Animation.Animation()", "Animation()")}} agora aceita null na timeline ({{bug(1096776)}}).
 
 ### MathML
 

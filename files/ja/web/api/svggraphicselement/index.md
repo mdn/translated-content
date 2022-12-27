@@ -2,6 +2,7 @@
 title: SVGGraphicsElement
 slug: Web/API/SVGGraphicsElement
 ---
+
 {{APIRef("SVG")}}
 
 **`SVGGraphicsElement`** インターフェイスは、直接グループにグラフィックを描画することを主な目的とした SVG 要素を表します。

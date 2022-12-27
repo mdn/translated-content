@@ -2,6 +2,7 @@
 title: WritableStreamDefaultController.error()
 slug: Web/API/WritableStreamDefaultController/error
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 {{domxref("WritableStreamDefaultController")}} インターフェイスの **`error()`** メソッドにより、関連するストリームとの今後のやり取りがエラーになります。

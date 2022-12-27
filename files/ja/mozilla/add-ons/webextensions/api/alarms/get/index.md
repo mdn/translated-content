@@ -2,6 +2,7 @@
 title: alarms.get()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
 ---
+
 {{AddonSidebar()}}
 
 与えた名前に対応するアラームを取得します。取得したアラームは、コールバック関数に渡す {{WebExtAPIRef('alarms.Alarm')}} オブジェクトとして用いることがあります。

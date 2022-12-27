@@ -2,6 +2,7 @@
 title: VRDisplayCapabilities.maxLayers
 slug: Web/API/VRDisplayCapabilities/maxLayers
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VRDisplayCapabilities")}} インターフェイスの **`maxLayers`** 読取専用プロパティは，その VR ディスプレイが同時に表示できる {{domxref("VRLayer")}} の最大値を示す数値を返します（例えば {{domxref("Display.requestPresent()")}} が受け取ることのできる配列の最大長です)．

@@ -3,6 +3,7 @@ title: XMLSerializer
 slug: Web/API/XMLSerializer
 original_slug: XMLSerializer
 ---
+
 {{APIRef("XMLSerializer")}}
 
 `XMLSerializer` インターフェースは、{{Glossary("DOM")}} ツリーを表す XML 文字列を構築するための {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} メソッドを提供します。

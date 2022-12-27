@@ -5,6 +5,7 @@ original_slug: MDN/Structures/Page_types/API_reference_page_template
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
+
 {{MDNSidebar}}
 
 ## ページの先頭部分

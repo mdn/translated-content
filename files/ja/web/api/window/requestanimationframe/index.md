@@ -2,6 +2,7 @@
 title: Window.requestAnimationFrame()
 slug: Web/API/Window/requestAnimationFrame
 ---
+
 {{APIRef}}
 
 **`window.requestAnimationFrame()`** メソッドは、ブラウザーにアニメーションを行いたいことを知らせ、指定した関数を呼び出して次の再描画の前にアニメーションを更新することを要求します。このメソッドは、再描画の前に呼び出されるコールバック 1 個を引数として取ります。

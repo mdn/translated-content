@@ -2,6 +2,7 @@
 title: Firefox 51 for developers
 slug: Mozilla/Firefox/Releases/51
 ---
+
 Firefox 51 は、米国時間 2017 年 1 月 24 日にリリースされました。このページでは、開発者に影響する Firefox 51 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

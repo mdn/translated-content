@@ -3,6 +3,7 @@ title: 画面外に不要な空白が発生する
 slug: orphaned/Web/Compatibility_FAQ/No_Wrap.html
 original_slug: Web/Compatibility_FAQ/No_Wrap.html
 ---
+
 ## 概要
 
 一部のコンテンツが画面の右側にはみ出して表示されることにより、はみ出していないコンテンツの右側に空白が出来てしまう場合があります。

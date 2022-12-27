@@ -2,6 +2,7 @@
 title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 **`WebSocket()`** コンストラクターは、新しい {{domxref("WebSocket")}} オブジェクトを返します。

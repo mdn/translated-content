@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/clearRect
 ---
 {{APIRef}}
 
-O método **`CanvasRenderingContext2D`\*\***`.clearRect()`\*\* da API Canvas 2D limpa todos os pixels de um retângulo definido na posição _(x, y)_ e tamanho (_width_ (largura)_, height_ (altura)) para uma cor preta transparente, apagando algum conteúdo anterior.
+O método **`CanvasRenderingContext2D.clearRect()`** da API Canvas 2D limpa todos os pixels de um retângulo definido na posição _(x, y)_ e tamanho (_width_ (largura), _height_ (altura)) para uma cor preta transparente, apagando algum conteúdo anterior.
 
 ## Sintaxe
 

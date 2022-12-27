@@ -5,7 +5,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set/entries
 ---
 {{JSRef}}
 
-O método **`entries()`** retorna um novo objeto Iterador (`Iterator`) que contém **um array de \[valor, valor]** para cada elemento de um objeto `Set `em ordem de inserção. Os objetos `Set `não possuem `chaves (key) `como objetos do tipo `Map`. Entretanto, para manter a API similar a objetos `Map`, cada entrada (_entry_) tem o mesmo valor para sua chave (`key`) e valor (`value`), então uma matriz `array [valor, valor]` é retornado.
+O método **`entries()`** retorna um novo objeto Iterador (`Iterator`) que contém **um array de \[valor, valor]** para cada elemento de um objeto `Set`em ordem de inserção. Os objetos `Set` não possuem `chaves (key)` como objetos do tipo `Map`. Entretanto, para manter a API similar a objetos `Map`, cada entrada (_entry_) tem o mesmo valor para sua chave (`key`) e valor (`value`), então uma matriz `array [valor, valor]` é retornado.
 
 ## Sintaxe
 

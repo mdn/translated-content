@@ -5,6 +5,7 @@ original_slug: MDN/Structures/Page_types/API_method_subpage_template
 l10n:
   sourceCommit: 73dd350fd93be16bee3b9a6b860757265209b4b7
 ---
+
 {{MDNSidebar}}
 
 > **Note:** _この説明文全体を削除してから公開してください_

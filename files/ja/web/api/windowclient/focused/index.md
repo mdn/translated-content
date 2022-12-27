@@ -2,6 +2,7 @@
 title: WindowClient.focused
 slug: Web/API/WindowClient/focused
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("WindowClient")}} インターフェイスの **`focused`** 読み取り専用プロパティは、現在のクライアントにフォーカスがあるかどうかを示す {{jsxref("Boolean")}} です。

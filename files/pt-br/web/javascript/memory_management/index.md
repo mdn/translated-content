@@ -16,9 +16,9 @@ Linguagens de baixo nível, como C, tem primitivas de gerenciamento de memória 
 
 Independentemente da linguagem de programação, o ciclo de vida da memória é praticamente sempre o mesmo:
 
-1.  Alocar a memória que você precisa
-2.  Utilizar a memória alocada (ler, escrever)
-3.  Liberar a memória alocada quando não é mais necessária
+1. Alocar a memória que você precisa
+2. Utilizar a memória alocada (ler, escrever)
+3. Liberar a memória alocada quando não é mais necessária
 
 A primeira e a segunda parte são explícitas em todas as linguagens. A última parte é explicita em linguagens de baixo nível, porém implícito em linguagens de alto nível como JavaScript.
 

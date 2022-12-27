@@ -3,6 +3,7 @@ title: ページの背景色が抜けている
 slug: orphaned/Web/Compatibility_FAQ/No_Background_Shown.html
 original_slug: Web/Compatibility_FAQ/No_Background_Shown.html
 ---
+
 ## 概要
 
 他ブラウザにて表示される背景色が、mobile 版 Firefox にて表示されません。

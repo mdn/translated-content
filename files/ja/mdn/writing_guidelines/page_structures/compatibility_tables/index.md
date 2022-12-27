@@ -5,6 +5,7 @@ original_slug: MDN/Structures/Compatibility_tables
 l10n:
   sourceCommit: 1c5c86c721a5935e89065246d49506f1d4cf9567
 ---
+
 {{MDNSidebar}}
 
 MDN には、オープンウェブのドキュメントにおいて、互換性一覧表の標準形式があります。これは、すべてのブラウザーにわたって共有される DOM, HTML, CSS, JavaScript, SVG などの技術の文書で使用されます。この記事は、作成した互換性一覧表をデータベースにどのように追加して維持するか、また、一覧表を記事に統合する方法についての「始め方」のガイドです。
@@ -477,6 +478,7 @@ slug: Web/API/AbortController
 
 browser-compat: api.AbortController
 ---
+
 ```
 
 そして、そのキーに対応する互換性一覧表と仕様書一覧表が、ソース中の `\{{Compat}}` と `\{{Specifications}}` マクロの代わりに自動的にレンダリングされます。

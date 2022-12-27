@@ -62,7 +62,7 @@ Isto pode fazer as coisas um pouco difíceis para qualquer usuário do DOM que q
 ></div>
 ```
 
-O código Javascript abaixo define funções diversas que fazem a manipulação de [whitespace ](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM)no DOM mais fácil.
+O código Javascript abaixo define funções diversas que fazem a manipulação de [whitespace](/pt-BR/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM) no DOM mais fácil.
 
 ```js
 /**

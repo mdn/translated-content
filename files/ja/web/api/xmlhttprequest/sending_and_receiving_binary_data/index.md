@@ -2,6 +2,7 @@
 title: バイナリデータの送信と受信
 slug: Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data
 ---
+
 ## JavaScript 型付き配列を使ったバイナリデータの受信
 
 XMLHttpRequest オブジェクトの `responseType` プロパティで、サーバーに期待する応答の種類を変更することができます。設定可能な値は空文字列 (既定), `"arraybuffer"`, `"blob"`, `"document"`, `"json"`, `"text"` です。 `response` プロパティにはエンティティの本体が `responseType` に応じて `ArrayBuffer`, `Blob`, `Document`, `JSON` または文字列で格納されます。要求が不完全であったり成功しなかった場合は `null` になります。

@@ -2,6 +2,7 @@
 title: Request.clone()
 slug: Web/API/Request/clone
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 {{domxref("Request")}} インターフェースの **`clone()`** メソッドは、現在の `Request` オブジェクトのコピーを生成します。

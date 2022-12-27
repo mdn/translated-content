@@ -2,6 +2,7 @@
 title: cookies
 slug: Mozilla/Add-ons/WebExtensions/API/cookies
 ---
+
 {{AddonSidebar}}
 
 拡張機能に cookie の取得と設定と、変更された時の通知を可能にします。

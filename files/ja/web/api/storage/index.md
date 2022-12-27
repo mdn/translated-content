@@ -2,6 +2,7 @@
 title: Storage
 slug: Web/API/Storage
 ---
+
 {{APIRef("Web Storage API")}}
 
 Web Storage API の `Storage` インターフェイスは、特定のドメインのセッションストレージまたはローカルストレージへのアクセス機能を提供して、例えば保存されているデータアイテムを追加、変更、削除することができます。

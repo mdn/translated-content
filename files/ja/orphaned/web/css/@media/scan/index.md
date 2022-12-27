@@ -3,6 +3,7 @@ title: scan
 slug: orphaned/Web/CSS/@media/scan
 original_slug: Web/CSS/@media/scan
 ---
+
 {{cssref}}
 
 **`scan`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、 (もしあれば) 出力端末で使用されているスキャン方式を調べるために使用することができます。ここで使われる*スキャン*という言葉は、写真をディジタル化するためのイメージスキャナを指すものではありません。そうではなく、テレビ画面 (またはその他の端末) に画像を描画するプロセスを意味します。

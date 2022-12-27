@@ -2,6 +2,7 @@
 title: downloads
 slug: Mozilla/Add-ons/WebExtensions/API/downloads
 ---
+
 {{AddonSidebar}}
 
 拡張機能にブラウザーのダウンロードマネージャーとのやりとりを可能にします。この API モジュールを、ファイルマネージャーでのファイルのダウンロード、キャンセル、停止、ダウンロードの再開、ダウンロード済みのファイルの表示に使用できます。

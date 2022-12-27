@@ -2,6 +2,7 @@
 title: ReadableStreamDefaultController
 slug: Web/API/ReadableStreamDefaultController
 ---
+
 {{APIRef("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`ReadableStreamDefaultController`** インターフェイスは、{{domxref("ReadableStream")}} の状態と内部キューを制御できるコントローラーを表します。 デフォルトのコントローラーは、バイトストリームではないストリーム用です。

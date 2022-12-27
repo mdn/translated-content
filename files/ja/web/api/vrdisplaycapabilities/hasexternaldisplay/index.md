@@ -2,6 +2,7 @@
 title: VRDisplayCapabilities.hasExternalDisplay
 slug: Web/API/VRDisplayCapabilities/hasExternalDisplay
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 {{domxref("VRDisplayCapabilities")}} インターフェイスの **`hasExternalDisplay`** 読取専用プロパティは，デバイスのプライマリディスプレイから分離した VR ディスプレイかどうかを示す {{domxref("Boolean")}} を返します．

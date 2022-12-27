@@ -2,6 +2,7 @@
 title: Request()
 slug: Web/API/Request/Request
 ---
+
 {{APIRef("Fetch")}}
 
 **`Request()`** コンストラクターは、新しい {{domxref("Request")}} オブジェクトを生成します。

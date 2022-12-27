@@ -2,6 +2,7 @@
 title: タッチイベント
 slug: Web/API/Touch_events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 タッチベースのユーザーインターフェイスを高度にサポートするため、端末やトラックパッドでの指 (あるいはスタイラス) の動きを解釈する機能を、タッチイベントが提供します。

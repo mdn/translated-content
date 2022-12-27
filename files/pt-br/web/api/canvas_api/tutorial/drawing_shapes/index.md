@@ -300,7 +300,7 @@ O próximo tipo de caminhos disponíveis são as Curvas de Bézier, disponíveis
 
 ![](https://mdn.mozillademos.org/files/223/Canvas_curves.png)A diferença entre estes métodos pode ser descrita de forma melhor usando a imagem à direita. Uma curva quadrática de Bézier tem um ponto inicial e final (pontos azuis) e apenas um ponto de controle (indicado pelo ponto vermelho) enquanto que uma curva cúbica de Bézier utiliza dois pontos de controles.
 
-Os parâmetros `x` e `y` em ambos os métodos são as coordenadas do ponto final. `cp1x` e` cp1y` são as coordenadas do primeiro ponto de controle, e `cp2x` e `cp2y` são as coordenadas do segundo ponto de controle.
+Os parâmetros `x` e `y` em ambos os métodos são as coordenadas do ponto final. `cp1x` e `cp1y` são as coordenadas do primeiro ponto de controle, e `cp2x` e `cp2y` são as coordenadas do segundo ponto de controle.
 
 Usando curvas de Bézier quadráticas e cúbicas pode ser algo bastante desafiador, porque ao contrário de um software de desenho vetorial, como o Adobe Illustrator, não temos resultados visuais imediatos sobre o que estamos fazendo. Isso torna bastante difícil desenhar formas complexas. No exemplo a seguir, vamos desenhar algumas formas orgânicas simples, mas se você tiver tempo e, acima de tudo, paciência, formas muito mais complexas podem ser criadas.
 

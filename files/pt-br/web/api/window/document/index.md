@@ -29,7 +29,7 @@ doc = window.document
 
 ### Parâmetros
 
-- `doc` é um objeto referência de um objeto para um [document](/pt-BR/docs/DOM/document "DOM/document").
+- `doc` é um objeto referência de um objeto para um [document](/pt-BR/docs/DOM/document).
 
 ## Exemplo
 

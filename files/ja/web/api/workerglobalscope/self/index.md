@@ -4,6 +4,7 @@ slug: Web/API/WorkerGlobalScope/self
 l10n:
   sourceCommit: 74f46a45c075037d7591a6cdbda96734b5b6f7fd
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`self`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、 `WorkerGlobalScope` 自体への参照を返します。ほとんどの場合、これは {{domxref("DedicatedWorkerGlobalScope")}} や {{domxref("SharedWorkerGlobalScope")}}、{{domxref("ServiceWorkerGlobalScope")}} などの特有のスコープです。

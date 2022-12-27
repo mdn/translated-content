@@ -2,6 +2,7 @@
 title: XMLHttpRequest における HTML の扱い
 slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 W3C の {{domxref("XMLHttpRequest")}} 仕様書では、もともと {{Glossary("XML")}} の解析しか対応していなかった {{domxref("XMLHttpRequest")}} に [HTML](/ja/docs/Web/HTML) の解析を追加しています。この機能によって、ウェブアプリは `XMLHttpRequest` を使って HTML を解析済の {{Glossary("DOM")}} として取得することができます。

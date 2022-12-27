@@ -3,6 +3,7 @@ title: VRDisplay.depthNear
 slug: Web/API/VRDisplay/depthNear
 original_slug: Web/API/VRDevice/depthNear
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 **`depthNear`** は {{domxref("VRDisplay")}} インターフェイスのプロパティで、 [eye view frustum](https://en.wikipedia.org/wiki/Viewing_frustum) (ビューフラスタム；つまりシーンの可視領域の境界) の near 平面を定義している z-depth の取得と設定を行います。

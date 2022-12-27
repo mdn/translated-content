@@ -4,6 +4,7 @@ slug: Web/API/WorkerGlobalScope/location
 l10n:
   sourceCommit: 0fe2d3ee23b1b23be971d42c7c56729bd23a3f83
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`location`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、このワーカーに関連付けられた {{domxref("WorkerLocation")}} を返します。これは特有の location オブジェクトであり、大部分は閲覧スコープの {{domxref("Location")}} のサブセットですが、ワーカーに合わせたものです。

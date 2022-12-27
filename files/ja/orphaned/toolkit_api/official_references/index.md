@@ -3,6 +3,7 @@ title: Official References
 slug: orphaned/Toolkit_API/Official_References
 original_slug: Toolkit_API/Official_References
 ---
+
 Official References. Do not add to this list without contacting Benjamin Smedberg. Note that this page is included from the pages listed below. So: Don't Add Breadcrumbs!
 
 - [インストール可能な Bundle の構造](ja/Bundles): 拡張機能、テーマ、および XULRunner アプリケーションを含むインストール可能な Bundle の共通の構造についての記述

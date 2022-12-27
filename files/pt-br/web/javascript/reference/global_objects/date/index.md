@@ -165,12 +165,12 @@ var decorrido = fim.getTime() - inicio.getTime(); // tempo decorrido em milisegu
 ```js
 // para testar uma função e obter o seu retorno
 function imprimirTempoDecorrido(fTeste) {
-	var nHoraInicial = Date.now(),
-        vRetorno = fTeste(),
-        nHoraFinal = Date.now();
+  var nHoraInicial = Date.now(),
+      vRetorno = fTeste(),
+      nHoraFinal = Date.now();
 
-	alert("Tempo decorrido: " + String(nHoraFinal - nHoraInicial) + " milisegundos");
-	return vRetorno;
+  alert("Tempo decorrido: " + String(nHoraFinal - nHoraInicial) + " milisegundos");
+  return vRetorno;
 }
 
 retornoDaSuaFuncao = imprimirTempoDecorrido(suaFuncao);

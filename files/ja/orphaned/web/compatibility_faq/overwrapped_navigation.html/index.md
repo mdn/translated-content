@@ -3,6 +3,7 @@ title: ナビゲーションメニューが他のアイコンと重なって表�
 slug: orphaned/Web/Compatibility_FAQ/Overwrapped_Navigation.html
 original_slug: Web/Compatibility_FAQ/Overwrapped_Navigation.html
 ---
+
 ## 概要
 
 他のブラウザで正しく表示されているナビゲーションメニューが、Firefox で表示すると大幅に崩れてしまう場合があります。
