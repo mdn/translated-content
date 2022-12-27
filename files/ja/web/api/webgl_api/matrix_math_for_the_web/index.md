@@ -3,7 +3,7 @@ title: ウェブの行列計算
 slug: Web/API/WebGL_API/Matrix_math_for_the_web
 ---
 
-{{WebGLSidebar}}
+{{DefaultAPISidebar("WebGL")}}
 
 行列は、空間内のオブジェクトの変換を表すために使用でき、画像を構築したり、ウェブ上でデータを視覚化したりするときに、多くの主要な種類の計算を実行するために使用されます。 この記事では、行列を作成する方法と、[CSS transform](/ja/docs/Web/Guide/CSS/Using_CSS_transforms) および `matrix3d` transform 型でそれらを使用する方法について説明します。
 

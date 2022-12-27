@@ -1,8 +1,8 @@
 ---
 title: Firefox 107 for developers
 slug: Mozilla/Firefox/Releases/107
-l10n:
-  sourceCommit: 6981069687e0bf594a783ffffdeba8e55e581f42
+l10n: 
+  sourceCommit: 27ae7e9c347490290a7327a48842575d333b2f31
 ---
 
 {{FirefoxSidebar}}
@@ -24,8 +24,8 @@ l10n:
 
 - [`contain-intrinsic-size`](/ja/docs/Web/CSS/contain-intrinsic-size) ショートハンド CSS プロパティを、[サイズの封じ込め](/ja/docs/Web/CSS/CSS_Containment#size_containment) の対象になる UI 要素のサイズを指定するために適用できるようになりました。
   これはユーザーエージェントが、子要素をレンダリングせずに要素のサイズを特定することを可能にします。
-  ショートハンドプロパティの [`contain-intrinsic-width`](/ja/docs/Web/CSS/contain-intrinsic-width) および [`contain-intrinsic-height`](/ja/docs/Web/CSS/contain-intrinsic-height) とともに、[論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) の [`contain-intrinsic-block-size`](/ja/docs/Web/CSS/contain-intrinsic-block-size) および [`contain-intrinsic-inline-size`](/ja/docs/Web/CSS/contain-intrinsic-inline-size) もサポートしました
-  ({{bug(1597529)}})。
+  ショートハンドプロパティの [`contain-intrinsic-width`](/ja/docs/Web/CSS/contain-intrinsic-width) および [`contain-intrinsic-height`](/ja/docs/Web/CSS/contain-intrinsic-height) とともに、[論理的プロパティ](/ja/docs/Web/CSS/CSS_Logical_Properties) の [`contain-intrinsic-block-size`](/ja/docs/Web/CSS/contain-intrinsic-block-size) および [`contain-intrinsic-inline-size`](/ja/docs/Web/CSS/contain-intrinsic-inline-size) もサポートしました ({{bug(1597529)}})。
+- [font-palette](/ja/docs/Web/CSS/font-palette) によって、カラーフォントをサポートしました ({{bug(1791558)}})。また、[@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) CSS アットルールと、その記述子である [font-family](/ja/docs/Web/CSS/@font-palette-values/font-family)、[base-palette](/ja/docs/Web/CSS/@font-palette-values/base-palette)、[override-colors](/ja/docs/Web/CSS/@font-palette-values/override-colors) でも、カラーフォントをサポートしました。これらを合わせて、カラーパレットの定義を支援します ({{bug(1791558)}})。
 
 ### JavaScript
 
@@ -35,8 +35,7 @@ l10n:
 
 #### 廃止
 
-- 非標準かつ非推奨である [`SVGSVGElement.useCurrentView`](/ja/docs/Web/API/SVGSVGElement#svgsvgelement.usecurrentview) プロパティを削除しました
-  (詳しくは {{bug(1174097)}} をご覧ください)。
+- 非標準かつ非推奨である [`SVGSVGElement.useCurrentView`](/ja/docs/Web/API/SVGSVGElement#svgsvgelement.usecurrentview) プロパティを削除しました (詳しくは {{bug(1174097)}} をご覧ください)。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -63,6 +62,8 @@ l10n:
 ### 廃止
 
 ### その他
+
+- {{WebExtAPIRef("scripting.executeScript")}} でエラーが発生したときに返される `error` プロパティが、メッセージプロパティを持つオブジェクトだけでなく、スクリプトがスローしたり拒否拒否したりした任意の値を表すようになりました ({{bug(1740608)}})。
 
 ## 過去のバージョン
 

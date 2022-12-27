@@ -15,18 +15,18 @@ slug: Web/Tutorials
 
 ### 初级课程
 
-- [HTML 简介](/zh-CN/docs/Web/Guide/HTML/Introduction)
+- [HTML 简介](/zh-CN/docs/Learn/HTML/Introduction_to_HTML)
   - : HTML 是什么，干什么，以及其简要历史，还有一个 HTML 文档的结构是什么样子的。其后的文章会更深入 HTML 的每一个部分。
 - [网页的基本构架](http://reference.sitepoint.com/html/page-structure) _（由出版社提供）_
   - : 学习 HTML 元素是如何组装在一起从而构成一个更大的图块的。
-- [MDN 的 HTML 元素参考](/zh-CN/docs/HTML/Element)
+- [MDN 的 HTML 元素参考](/zh-CN/docs/Web/HTML/Element)
   - : 一个 HTML 元素综合性性参考，还有不同浏览器对它们的支持。
 - [HTML 挑战](http://wikiversity.org/wiki/Web_Design/HTML_Challenges)_（来自维基大学）_
   - : 参与这些挑战来巩固你的 HTML 技能。（例如，“我到底是应该使用一个 \<h2> 元素还是用 \<strong> 呢？”）专注于有意义的小点滴。
 
 ### 高级课程
 
-- [编写出能够快速加载 HTML 页面的小贴士](/zh-CN/docs/Tips_for_Authoring_Fast-loading_HTML_Pages)
+- [编写出能够快速加载 HTML 页面的小贴士](/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
   - : 优化网页，以减少您的 Web 服务器上的负载和网络连接和为游客提供一个响应迅速的网站。
 - [HTML5 入门](http://www.html5rocks.com/tutorials/)_（HTML5 Rocks）_
   - : 通过指南来指导使用 HTML5 特征来写代码。
@@ -45,7 +45,7 @@ slug: Web/Tutorials
 
 - [Codecademy](http://www.codecademy.com/) *（*来自 Codecademy 网站*）*
   - : Codecademy 是学习如何编写 JavaScript 最容易的方式。它互动、有趣，你能够和你的朋友们一起来学习。
-- [开始使用 JavaScript](/zh-CN/docs/JavaScript/Getting_Started)
+- [开始使用 JavaScript](/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
   - : JavaScript 是什么以及它如何帮助你？
 - [JavaScript 最佳实践](http://dev.opera.com/articles/view/javascript-best-practices/) _（来自 WebPlatform.org 网站）_
   - : 学习一些明显或者不是很明显的编写 JavaScript 最佳实践。
@@ -54,7 +54,7 @@ slug: Web/Tutorials
 
 ### 中级课程
 
-- [JavaScrit 再深入](/zh-CN/docs/A_re-introduction_to_JavaScript)
+- [JavaScript 再深入](/zh-CN/docs/Web/JavaScript/Language_Overview)
   - : 针对于中等水平的开发者的关于 Javascript 编程语言的一个回顾。
 - [Eloquent JavaScript](http://eloquentjavascript.net/contents.html)
   - : 一本中级和高级 JavaScript 使用方法的全面指南。（译者注：简体中文版《JavaScript 编程精解》已由机械工业出版社华章公司出版发行）
@@ -62,12 +62,10 @@ slug: Web/Tutorials
   - : 介绍基本的 JavaScript 设计模式。
 - [JavaScript 编程语言](http://www.yuiblog.com/blog/2007/01/24/video-crockford-tjpl/) _(YUI Blog)_
   - : Douglas Crockford 探讨了如今这个语言的情况，还有如何来实现。
-- [介绍面向对象的 JavaScript](/zh-CN/docs/Introduction_to_Object-Oriented_JavaScript)
-  - : 学习 JavaScript 的面向对象编程模型。
 
 ### 高级课程
 
-- [JavaScript 指南](/zh-CN/docs/JavaScript/Guide)
+- [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)
   - : 一个为所有的学习者从初级到高级的全面、定期更新的 JavaScript 指南。
 - [学习高级别的 JavaScript](http://ejohn.org/apps/learn/) _(John Resig)_
   - : John Resig 的高级 JavaScript 指南。
@@ -79,8 +77,6 @@ slug: Web/Tutorials
   - : Douglas Crockford 审视代码的模式，以便程序员在创建应用的时候可以选择。
 - [JavaScript 花园](http://bonsaiden.github.com/JavaScript-Garden/)
   - : 关于 Javascript 最古怪部分的资料。
-- [哪个 JavaScript 框架？](https://web.archive.org/web/20140101004220/http://stackoverflow.com/questions/394601/which-javascript-framework-jquery-vs-dojo-vs) (StackOverflow)
-  - : 选择 JavaScript 框架的建议。
 - [非阻塞 JavaScript 加载](http://yuiblog.com/blog/2008/07/22/non-blocking-scripts/) (YUI Blog)
   - : 提高含 Javascript 页面加载性能的一些提示。
 
@@ -88,22 +84,22 @@ slug: Web/Tutorials
 
 ### 初级课程
 
-- [CSS 入门](/zh-CN/docs/CSS/Getting_Started)
+- [CSS 入门](/zh-CN/docs/Learn/Getting_started_with_the_web/CSS_basics)
   - : 这个教程向您介绍层叠样式表（CSS），通过具体的实例引导你熟悉基本的 CSS 功能，你可以试着在自己电脑上练习这些实例。
 - [CSS 类选择器](http://en.wikiversity.org/wiki/Web_Design/CSS_Classes) (来自维基大学)
   - : 在 CSS 里类是什么？
 - [外部 CSS](http://en.wikiversity.org/wiki/Web_Design/External_CSS) (来自维基大学)
   - : 从外部样式表使用 CSS。
-- [添加一点样式](http://www.w3.org/MarkUp/Guide/Style) (W3C)
+- [添加一点样式](https://www.w3.org/MarkUp/Guide/Style) (W3C)
   - : 入门介绍使用 CSS 样式化网页。
-- [常见 CSS 问题](/zh-CN/docs/Common_CSS_Questions)
+- [常见 CSS 问题](/zh-CN/docs/Learn/CSS/Howto/CSS_FAQ)
   - : 初学者一些常见问题和解答。
 - [代码复仇者](http://codeavengers.com/) (CodeAvengers.com)
   - : 代码复仇者用有趣、高效的方式学习使用 HTML，CSS，JavaScript 开发 Web 应用和游戏。
 
 ### 中级课程
 
-- [CSS 参考](/zh-CN/docs/CSS/CSS_Reference)
+- [CSS 参考](/zh-CN/docs/Web/CSS/Reference)
   - : CSS 完整参考，包含 Firefox 和另外浏览器支持的详细信息。
 - [CSS 挑战](http://en.wikiversity.org/wiki/Web_Design/CSS_challenges) (维基大学)
   - : 让你的 CSS 技巧更灵活，看你是否需要更多的练习。
@@ -118,9 +114,9 @@ slug: Web/Tutorials
 
 ### 高级课程
 
-- [应用 CSS 转换](/zh-CN/docs/CSS/Using_CSS_transforms)
+- [应用 CSS 转换](/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
   - : 使用 CSS 旋转、倾斜、缩放和变换。
-- [CSS 过渡](/zh-CN/docs/CSS/CSS_transitions)
+- [CSS 过渡](/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
   - : CSS 过渡是 CSS3 草案规范的一部分，提供了渐变动画来改变 CSS 属性，而不是突变生效。
 - [应用网页字体快速指南 - 使用 @font-face](http://www.html5rocks.com/tutorials/webfonts/quick/) (HTML5 Rocks)
   - : 来自 CSS3 的 @font-face 功能，允许你以可访问的，可操作的，易扩展的方式使用 web 上的自定义字体。
