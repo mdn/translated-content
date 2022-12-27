@@ -2,6 +2,7 @@
 title: 'ReferenceError: assignment to undeclared variable "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の [strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)独自の例外 "Assignment to undeclated variable" は、値が宣言されていない変数に代入されたときに発生します。

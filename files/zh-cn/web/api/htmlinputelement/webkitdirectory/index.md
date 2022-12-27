@@ -2,6 +2,7 @@
 title: HTMLInputElement.webkitdirectory
 slug: Web/API/HTMLInputElement/webkitdirectory
 ---
+
 {{APIRef("HTML DOM")}}{{non-standard_header}}
 
 **`HTMLInputElement.webkitdirectory`**是属于{{HTMLElement("input")}}元素的一个 HTML 属性{{htmlattrxref("webkitdirectory", "input")}}，它指示`<input>`元素应该允许用户选择文件目录，而不是文件。当一个文件目录被选中，该目录及其整个内容层次结构将包含在所选项目集里面。可以使用{{domxref("HTMLInputElement.webkitEntries",
@@ -90,7 +91,7 @@ document.getElementById("filepicker").addEventListener("change", function(event)
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLInputElement.webkitdirectory")}}
+{{Compat}}
 
 ## 参见
 

@@ -44,7 +44,7 @@ console.log(mySet);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Set.add")}}
+{{Compat}}
 
 ## 另見
 

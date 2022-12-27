@@ -2,6 +2,7 @@
 title: HTTP Cookie
 slug: Web/HTTP/Cookies
 ---
+
 {{HTTPSidebar}}
 
 HTTP Cookie（也叫 Web Cookie 或浏览器 Cookie）是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器下次向同一服务器再发起请求时被携带并发送到服务器上。通常，它用于告知服务端两个请求是否来自同一浏览器，如保持用户的登录状态。Cookie 使基于[无状态](/zh-CN/docs/Web/HTTP/Overview#HTTP_is_stateless_but_not_sessionless)的 HTTP 协议记录稳定的状态信息成为了可能。

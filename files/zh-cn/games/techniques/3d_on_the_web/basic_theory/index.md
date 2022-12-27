@@ -2,6 +2,7 @@
 title: 解释基本的 3D 原理
 slug: Games/Techniques/3D_on_the_web/Basic_theory
 ---
+
 {{GamesSidebar}}
 
 这篇文章解释了当你开始使用 3D 工作的时候需要的所有有用的基本理论

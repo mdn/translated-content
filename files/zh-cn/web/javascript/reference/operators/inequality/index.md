@@ -2,6 +2,7 @@
 title: 不等于 (!=)
 slug: Web/JavaScript/Reference/Operators/Inequality
 ---
+
 {{jsSidebar("Operators")}}
 
 不等于运算符 (`!=`) 检查其两个操作数是否不相等，并返回布尔结果。 与严格的不等式运算符不同，它尝试转换和比较不同类型的操作数。

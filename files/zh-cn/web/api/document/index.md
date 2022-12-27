@@ -2,6 +2,7 @@
 title: Document
 slug: Web/API/Document
 ---
+
 {{APIRef("DOM")}}
 
 **`Document`** 接口表示任何在浏览器中载入的网页，并作为网页内容的入口，也就是 [DOM 树](/zh-CN/docs/Using_the_W3C_DOM_Level_1_Core)。

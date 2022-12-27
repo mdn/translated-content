@@ -2,6 +2,7 @@
 title: Math.tanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tanh
 ---
+
 {{JSRef}}
 
 **`Math.tanh()`** 関数は、引数として与えた数のハイパーボリックタンジェントを返します。すなわち

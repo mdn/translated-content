@@ -2,6 +2,7 @@
 title: HTMLImageElement.hspace
 slug: Web/API/HTMLImageElement/hspace
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`hspace`** は {{domxref("HTMLImageElement")}} インターフェイスの*廃止された*プロパティで、ページをレイアウトする際に {{HTMLElement("img")}} 要素の左右に何ピクセル分の空きを残すかを指定します。

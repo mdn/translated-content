@@ -55,7 +55,7 @@ Math.abs();         // NaN
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Math.abs")}}
+{{Compat}}
 
 ## 參見
 

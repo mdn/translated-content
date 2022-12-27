@@ -2,6 +2,7 @@
 title: MIME 类型
 slug: Web/HTTP/Basics_of_HTTP/MIME_types
 ---
+
 {{HTTPSidebar}}
 
 **媒体类型**（通常称为 **Multipurpose Internet Mail Extensions** 或 **MIME** 类型）是一种标准，用来表示文档、文件或字节流的性质和格式。它在[IETF RFC 6838](https://tools.ietf.org/html/rfc6838)中进行了定义和标准化。

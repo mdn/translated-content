@@ -2,6 +2,7 @@
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLOptionElement`** インターフェイスは {{HTMLElement("option")}} 要素を表し、 {{domxref("HTMLElement")}} インターフェイスのすべてのクラスとメソッドを継承しています。

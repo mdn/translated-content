@@ -2,6 +2,7 @@
 title: FormData()
 slug: Web/API/FormData/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData()`** 构造函数用于创建一个新的{{domxref("FormData")}}对象。
@@ -66,7 +67,7 @@ formData = new FormData(myForm);
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.FormData")}}
+{{Compat}}
 
 ## 附注
 

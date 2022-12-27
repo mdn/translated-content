@@ -2,6 +2,7 @@
 title: NonDocumentTypeChildNode.previousElementSibling
 slug: Web/API/Element/previousElementSibling
 ---
+
 {{ ApiRef() }}
 
 ### 概述
@@ -47,4 +48,4 @@ Siblings of div-03
 
 ### 浏览器兼容性
 
-{{Compat("api.Element.previousElementSibling")}}
+{{Compat}}

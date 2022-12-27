@@ -2,6 +2,7 @@
 title: DataTransfer.dropEffect
 slug: Web/API/DataTransfer/dropEffect
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.dropEffect`** 属性控制在拖放操作中给用户的反馈（通常是视觉上的）。它会影响在拖拽过程中光标的手势。例如，当用户 hover 在一个放置目标元素上，浏览器的光标可能会预示了将会发生什么操作。

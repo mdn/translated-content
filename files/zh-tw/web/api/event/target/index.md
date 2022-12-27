@@ -44,7 +44,7 @@ ul.addEventListener('click', hide, false);
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.target")}}
+{{Compat}}
 
 ## Compatibility notes
 

@@ -2,6 +2,7 @@
 title: String.prototype.replaceAll()
 slug: Web/JavaScript/Reference/Global_Objects/String/replaceAll
 ---
+
 {{JSRef}}
 
 **`replaceAll()`** 方法返回一个新字符串，新字符串所有满足 `pattern` 的部分都已被`replacement` 替换。`pattern`可以是一个字符串或一个 {{jsxref("RegExp")}}， `replacement`可以是一个字符串或一个在每次匹配被调用的函数。

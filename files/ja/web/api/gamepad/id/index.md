@@ -2,6 +2,7 @@
 title: Gamepad.id
 slug: Web/API/Gamepad/id
 ---
+
 {{APIRef("Gamepad API")}}
 
 {{domxref("Gamepad") }} インターフェイスの **`Gamepad.id`** プロパティはコントローラーに関するいくつかの情報を含む文字列を返します。

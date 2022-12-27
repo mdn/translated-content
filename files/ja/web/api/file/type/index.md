@@ -2,6 +2,7 @@
 title: File.type
 slug: Web/API/File/type
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("File")}} オブジェクトによって表されるファイルのメディアタイプ ([MIME](/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types)) を返します。

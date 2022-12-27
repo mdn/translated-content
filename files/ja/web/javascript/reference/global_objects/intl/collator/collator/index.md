@@ -2,6 +2,7 @@
 title: Intl.Collator() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 ---
+
 {{JSRef}}
 
 **`Intl.Collator()`** コンストラクターは、言語を考慮した文字列の比較を可能にする

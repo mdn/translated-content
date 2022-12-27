@@ -2,6 +2,7 @@
 title: HTMLInputElement.labels
 slug: Web/API/HTMLInputElement/labels
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLInputElement.labels`** は読み取り専用プロパティで、 `hidden` 以外の {{HTMLElement("input")}} 要素に関連付けられた {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。この要素が `hidden` 型であった場合は、このプロパティは `null` を返します。

@@ -3,6 +3,7 @@ title: 鼠标控制
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 original_slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/鼠标控制
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}

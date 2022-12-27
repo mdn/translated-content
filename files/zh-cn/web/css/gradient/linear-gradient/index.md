@@ -3,6 +3,7 @@ title: linear-gradient()
 slug: Web/CSS/gradient/linear-gradient
 original_slug: Web/CSS/gradient/linear-gradient()
 ---
+
 {{CSSRef}}
 
 CSS **`linear-gradient()`** 函数用于创建一个表示两种或多种颜色线性渐变的图片。其结果属于{{cssxref("&lt;gradient&gt;")}}数据类型，是一种特别的{{cssxref("&lt;image&gt;")}}数据类型。

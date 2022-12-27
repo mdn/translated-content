@@ -2,6 +2,7 @@
 title: Screen.lockOrientation()
 slug: Web/API/Screen/lockOrientation
 ---
+
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
 `lockOrientation` 此方法会把屏幕锁定为指定的方向。

@@ -2,6 +2,7 @@
 title: <maction>
 slug: Web/MathML/Element/maction
 ---
+
 {{MathMLRef}}
 
 MathML **`<maction>`** 元素提供了一种让表达式（或子表达式）具有某种特定行为的可能性。具体行为方式由 **`actiontype`** 属性的取值来确定。也可以使用 **`selection`** 属性来手动指定该行为作用在哪个子元素上。

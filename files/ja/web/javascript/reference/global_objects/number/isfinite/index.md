@@ -2,6 +2,7 @@
 title: Number.isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 ---
+
 {{JSRef}}
 
 **`Number.isFinite()`** メソッドは、渡された値が有限数であるかどうかを判断します。すなわち、指定された値が {{jsxref("Number")}} であり、その数値が正の無限大 ({{jsxref("Infinity")}})、負の無限大 (`Infinity`)、非数 ({{jsxref("NaN")}}) のどれでもないことをチェックします。

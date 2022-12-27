@@ -2,6 +2,7 @@
 title: Falsy
 slug: Glossary/Falsy
 ---
+
 **falsy** 值（虚值）是在 {{Glossary("Boolean")}} 上下文中认定为 false 的值。
 
 {{Glossary("JavaScript")}} 在需要用到布尔类型值的上下文中使用强制类型转换 ({{Glossary("Type_Conversion", "Type Conversion")}} ) 将值转换为布尔值，例如[条件语句](/zh-CN/docs/learn/JavaScript/Building_blocks/conditionals)和循环语句。
@@ -21,7 +22,7 @@ slug: Glossary/Falsy
 | {{Glossary("undefined")}} | [undefined](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined) - 原始值                                                                                                   |
 | {{Glossary("NaN")}}         | [NaN](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) - 非数值                                                                                                               |
 
-## 例子
+## 示例
 
 JavaScript 中 _falsy_ 值的例子 (在布尔值上下文中被转换为 false，从而*绕过*了 `if` 代码块):
 

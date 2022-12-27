@@ -2,6 +2,7 @@
 title: MouseEvent()
 slug: Web/API/MouseEvent/MouseEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent()`** 构造器创建一个 {{domxref("MouseEvent")}}。

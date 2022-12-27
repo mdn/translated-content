@@ -24,7 +24,7 @@ CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加
 
 ## 使用方法
 
-> **Note:** **注意:** [Chrome のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261)が原因で、クロスオリジンリソースポリシーが PDF の描画を破壊し、訪問者が PDF の 1 ページ目以降を読めない可能性があります。本番環境ではこのヘッダーの仕様には注意してください。
+> **Note:** [Chrome のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=1074261)が原因で、クロスオリジンリソースポリシーが PDF の描画を破壊し、訪問者が PDF の 1 ページ目以降を読めない可能性があります。本番環境ではこのヘッダーの仕様には注意してください。
 
 ウェブアプリケーションは、次の 3 つの値の中から 1 つ受け取ることができる {{HTTPHeader("Cross-Origin-Resource-Policy")}} の HTTP レスポンスヘッダーを介してクロスオリジンリソースポリシーを設定します。
 

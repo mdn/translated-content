@@ -2,6 +2,7 @@
 title: Node.parentElement
 slug: Web/API/Node/parentElement
 ---
+
 {{ ApiRef() }}
 
 返回当前节点的父元素节点，如果该元素没有父节点，或者父节点不是一个 DOM {{domxref("Element", "元素")}}，则返回 `null`。

@@ -2,6 +2,7 @@
 title: types
 slug: Mozilla/Add-ons/WebExtensions/API/types
 ---
+
 {{AddonSidebar}}
 
 Defines the `BrowserSetting` type, which is used to represent a browser setting.

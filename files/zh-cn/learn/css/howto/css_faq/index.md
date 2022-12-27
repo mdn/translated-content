@@ -3,6 +3,7 @@ title: CSS 常见问题
 slug: Learn/CSS/Howto/CSS_FAQ
 original_slug: Web/CSS/Common_CSS_Questions
 ---
+
 ## 为什么有效的 CSS 没有正确的渲染？
 
 浏览器使用 DOCTYPE 声明来选择是否使用更符合 Web 标准或兼容旧浏览器的 bug 的模式。在你的 HTML 的开始使用一个正确的和现代的 DOCTYPE 声明将改善浏览器标准执行。

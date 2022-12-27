@@ -2,6 +2,7 @@
 title: seed
 slug: Web/SVG/Attribute/seed
 ---
+
 « [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `seed`属性代表了{{SVGElement("feTurbulence")}}元素生成的伪随机数的开始数字。

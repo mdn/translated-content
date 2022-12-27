@@ -25,7 +25,7 @@ var state = instanceOfFileReader.readyState
 
 ## 瀏覽器相容性
 
-{{Compat("api.FileReader.readyState")}}
+{{Compat}}
 
 ## 閱讀更多
 

@@ -2,6 +2,7 @@
 title: XMLDocument.async
 slug: Web/API/XMLDocument/async
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}{{Deprecated_header}}
 
 `document.async` 可以被赋值，用来表明 [`document.load`](/zh-CN/DOM/document.load) 被调用时，是使用异步模式还是同步模式进行请求。`true` 为默认值，表明该文档应该被异步加载。

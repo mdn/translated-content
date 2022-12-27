@@ -2,6 +2,7 @@
 title: 字句文法
 slug: Web/JavaScript/Reference/Lexical_grammar
 ---
+
 {{JsSidebar("More")}}
 
 このページでは、 JavaScript の字句文法について説明します。 ECMAScript スクリプトのソーステキストは、左から右へスキャンされ、入力要素、すなわちトークン、制御文字、行末、コメント、[ホワイトスペース](/ja/docs/Glossary/Whitespace)の並びに変換されます。 ECMAScript も、特定のキーワードとリテラルを定義しており、文を終了するにはセミコロンを自動挿入するためのルールがあります。

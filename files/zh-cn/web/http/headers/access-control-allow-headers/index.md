@@ -2,6 +2,7 @@
 title: Access-Control-Allow-Headers
 slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
+
 {{HTTPSidebar}}
 
 响应首部 **`Access-Control-Allow-Headers`** 用于 {{glossary("preflight request")}}（预检请求）中，列出了将会在正式请求的 {{HTTPHeader("Access-Control-Request-Headers")}} 字段中出现的首部信息。

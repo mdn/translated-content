@@ -2,6 +2,7 @@
 title: grid-template
 slug: Web/CSS/grid-template
 ---
+
 **`grid-template`**，CSS 属性简写，用以定义网格中{{glossary("grid rows", "行")}}、{{glossary("grid column", "列")}}与{{glossary("grid areas", "分区")}}。
 
 {{EmbedInteractiveExample("pages/css/grid-template.html")}}
@@ -112,7 +113,7 @@ footer {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.grid-template")}}
+{{Compat}}
 
 ## 相关链接
 

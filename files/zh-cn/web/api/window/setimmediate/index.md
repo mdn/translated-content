@@ -2,6 +2,7 @@
 title: window.setImmediate
 slug: Web/API/Window/setImmediate
 ---
+
 {{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 该方法用来把一些需要长时间运行的操作放在一个回调函数里，在浏览器完成后面的其他语句后，就立刻执行这个回调函数。
@@ -36,7 +37,7 @@ var immediateID = setImmediate(func);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.setImmediate")}}
+{{Compat}}
 
 ## 相关链接
 

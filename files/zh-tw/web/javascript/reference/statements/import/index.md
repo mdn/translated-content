@@ -196,7 +196,7 @@ for (const link of document.querySelectorAll("nav > a")) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.import")}}
+{{Compat}}
 
 ## 參見
 

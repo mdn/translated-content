@@ -84,7 +84,7 @@ reader.readAsArrayBuffer(blob);
 
 ## 瀏覽器相容性
 
-{{Compat("api.Blob")}}
+{{Compat}}
 
 ## 參見
 

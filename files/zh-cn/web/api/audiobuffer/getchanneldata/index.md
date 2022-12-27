@@ -2,6 +2,7 @@
 title: AudioBuffer.getChannelData()
 slug: Web/API/AudioBuffer/getChannelData
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AudioBuffer") }} 接口的 getChannelData() 方法返回一{{domxref("Float32Array")}} ，其中包含与通道关联的 PCM 数据，通道参数定义 (0 表示第一个通道)。
@@ -74,7 +75,7 @@ button.onclick = function() {
 
 ## Browser compatibility
 
-{{Compat("api.AudioBuffer.getChannelData")}}
+{{Compat}}
 
 ## See also
 

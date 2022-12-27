@@ -2,6 +2,7 @@
 title: <dir>：目录元素
 slug: Web/HTML/Element/dir
 ---
+
 {{deprecated_header}}
 
 已废弃的 **HTML 目录元素**（**`<dir>`**）被作为一个文件和/或文件夹的目录的容器，可能还有 {{Glossary("user agent", "用户代理")}} 应用的样式与图标。 Do not use this obsolete element; instead, you should use the {{HTMLElement("ul")}} element for lists, including lists of files.

@@ -2,6 +2,7 @@
 title: HTMLImageElement.longDesc
 slug: Web/API/HTMLImageElement/longDesc
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`longDesc`** は {{domxref("HTMLImageElement")}} インターフェイスの*非推奨の*プロパティで、この画像の長い説明のテキストまたは HTML ファイルの URL を指定します。これは、 {{htmlattrxref("title")}} 属性で提供される短い説明の他に、オプションで追加された詳細を提供するために使用することができます。

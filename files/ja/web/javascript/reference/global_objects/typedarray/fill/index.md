@@ -2,6 +2,7 @@
 title: TypedArray.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/fill
 ---
+
 {{JSRef}}
 
 **`fill()`** メソッドは、型付き配列の開始位置から終了位置までのすべての要素を固定値で埋めます。このメソッドのアルゴリズムは {{jsxref("Array.prototype.fill()")}} と同じです。ここで _TypedArray_ は、[型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの 1 つです。

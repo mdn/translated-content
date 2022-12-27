@@ -158,7 +158,7 @@ If you want to know how to serialize and submit a form using the {{domxref("XMLH
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLFormElement")}}
+{{Compat}}
 
 ## 參見
 

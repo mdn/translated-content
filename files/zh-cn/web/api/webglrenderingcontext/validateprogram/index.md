@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.validateProgram()
 slug: Web/API/WebGLRenderingContext/validateProgram
 ---
+
 {{APIRef("WebGL")}}
 
 **`WebGLRenderingContext.validateProgram()`** 是一种 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) ，主要是用来验证 {{domxref("WebGLProgram")}}。 它在检查 WebGLProgram 程序是否链接成功的同时还会检查其是否能在当前的 WebGL 中使用。
@@ -47,7 +48,7 @@ gl.useProgram(program);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.validateProgram")}}
+{{Compat}}
 
 ## See also
 

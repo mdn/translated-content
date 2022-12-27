@@ -2,6 +2,7 @@
 title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
 ---
+
 {{ APIRef }}
 
 {{domxref("Element")}} 的 **`scrollTo()`** 方法可以使界面滚动到给定元素的指定坐标位置。
@@ -44,7 +45,7 @@ element.scrollTo({
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.scrollTo")}}
+{{Compat}}
 
 ## 参考
 

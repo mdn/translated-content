@@ -2,6 +2,7 @@
 title: DOMTokenList.toggle()
 slug: Web/API/DOMTokenList/toggle
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("DOMTokenList")}} 接口的 **`toggle()`** 方法从列表中删除一个给定的标记并返回 `false`。如果标记不存在，则添加并且函数返回 `true`。

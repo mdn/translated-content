@@ -2,6 +2,7 @@
 title: Array() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 ---
+
 {{JSRef}}
 
 **`Array()`** コンストラクターは {{jsxref("Array")}} オブジェクトを生成するために使用します。

@@ -2,6 +2,7 @@
 title: RTCTrackEvent()
 slug: Web/API/RTCTrackEvent/RTCTrackEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 **`RTCTrackEvent()`** 构造函数创建并返回一个新的 {{domxref("RTCTrackEvent")}} 对象，用于描述已经被添加到 {{domxref("RTCPeerConnection")}} 的轨道。

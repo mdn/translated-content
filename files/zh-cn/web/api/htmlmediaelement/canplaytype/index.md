@@ -2,6 +2,7 @@
 title: HTMLMediaElement.canPlayType()
 slug: Web/API/HTMLMediaElement/canPlayType
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.canPlayType()`** 方法会判断传递的媒体格式参数是否能够被播放。
@@ -42,7 +43,7 @@ console.log(obj.canPlayType('video/mp4')); // "maybe"
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.canPlayType")}}
+{{Compat}}
 
 ## 其他
 

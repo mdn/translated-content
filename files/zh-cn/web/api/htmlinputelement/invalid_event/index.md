@@ -2,6 +2,7 @@
 title: 'HTMLInputElement: invalid event'
 slug: Web/API/HTMLInputElement/invalid_event
 ---
+
 {{APIRef}}
 
 若一个可提交元素在检查有效性时，不符合对它的约束条件，则会触发 **`invalid`** 事件。

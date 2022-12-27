@@ -2,6 +2,7 @@
 title: Node.baseURI
 slug: Web/API/Node/baseURI
 ---
+
 {{APIRef("DOM")}}
 
 **`Node.baseURI`** 是只读属性，返回一个节点的绝对基址 URL。

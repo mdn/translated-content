@@ -2,6 +2,7 @@
 title: Firefox 用户代理字符串 (user agent string) 参考
 slug: Web/HTTP/Headers/User-Agent/Firefox
 ---
+
 {{HTTPSidebar}}
 
 此文档描述了 Firefox 4 及之后版本的 Firefox 浏览器，以及基于 [Gecko](/zh-CN/docs/Mozilla/Gecko) 2.0 及以后版本的应用所使用的 User Agent(user agent)。对于 Gecko 2.0 之后产生的变化，可参考 [Firefox 4 中最终的 User Agent 值](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/)（博客文章）。也可以参考 [检测 User Agent](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)，以及这篇 Mozilla Hacks 博文：[User Agent 检测的历史与操作清单](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)。

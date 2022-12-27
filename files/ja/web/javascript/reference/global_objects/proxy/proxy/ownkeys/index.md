@@ -2,6 +2,7 @@
 title: handler.ownKeys()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 ---
+
 {{JSRef}}
 
 **`handler.ownKeys()`** メソッドは {{jsxref("Reflect.ownKeys()")}} に対するトラップです。

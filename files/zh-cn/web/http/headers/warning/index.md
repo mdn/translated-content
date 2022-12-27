@@ -2,6 +2,7 @@
 title: Warning
 slug: Web/HTTP/Headers/Warning
 ---
+
 {{HTTPSidebar}}
 
 **`Warning`** 是一个通用报文首部，包含报文当前状态可能存在的问题。在响应中可以出现多个 Warning 首部。

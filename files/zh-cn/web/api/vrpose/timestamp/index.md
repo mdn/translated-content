@@ -2,6 +2,7 @@
 title: VRPose.timestamp
 slug: Web/API/VRPose/timeStamp
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 **`timestamp`** 是 {{domxref("VRPose")}} 接口的只读属性，返回为系统此时的时间戳 — 一个单调递增的数值，代表这个软件启动到现在的时间。

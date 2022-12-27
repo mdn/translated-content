@@ -147,7 +147,7 @@ Note 注意預設輸出不能使用 var, let , const。
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.export")}}
+{{Compat}}
 
 ## 參見
 

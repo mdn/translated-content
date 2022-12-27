@@ -2,6 +2,7 @@
 title: style
 slug: Web/SVG/Element/style
 ---
+
 {{SVGRef}}
 
 `style`元素元素样式表直接在 SVG 内容中间嵌入。SVG 的`style`元素的属性与 HTML 中的相应的元素并无二致（请阅读 HTML 的 {{HTMLElement("style")}} 元素）。
@@ -51,7 +52,7 @@ slug: Web/SVG/Element/style
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.style")}}
+{{Compat}}
 
 ## 参见
 

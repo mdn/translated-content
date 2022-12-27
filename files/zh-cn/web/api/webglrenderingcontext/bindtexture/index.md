@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.bindTexture()
 slug: Web/API/WebGLRenderingContext/bindTexture
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGLRenderingContext.bindTexture()`** 方法将给定的 {{domxref("WebGLTexture")}} 绑定到目标（绑定点）。
@@ -62,7 +63,7 @@ gl.getParameter(gl.TEXTURE_BINDING_2D);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindTexture")}}
+{{Compat}}
 
 ## 另见
 

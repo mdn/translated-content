@@ -2,6 +2,7 @@
 title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
+
 {{JSRef}}
 
 **`Boolean`** オブジェクトは論理値のオブジェクトラッパーです。

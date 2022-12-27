@@ -2,6 +2,7 @@
 title: ArrayBuffer.isView()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer.isView()`** メソッドは、渡された値が `ArrayBuffer` のビューのうちの一つ、例えば[型付き配列オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)や {{jsxref("DataView")}} であるかどうかを判断します。

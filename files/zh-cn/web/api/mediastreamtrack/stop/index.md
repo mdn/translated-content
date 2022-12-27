@@ -2,6 +2,7 @@
 title: MediaStreamTrack.stop()
 slug: Web/API/MediaStreamTrack/stop
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack.stop()`**方法停止跟踪。
@@ -49,7 +50,7 @@ Finally, `srcObject` is set to `null` to sever the link to the {{domxref("MediaS
 
 ## 浏览器兼容性
 
-{{Compat("api.MediaStreamTrack.stop")}}
+{{Compat}}
 
 ## 看看别的
 

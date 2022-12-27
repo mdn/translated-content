@@ -2,6 +2,7 @@
 title: 'Element: compositionupdate イベント'
 slug: Web/API/Element/compositionupdate_event
 ---
+
 {{APIRef}}
 
 **`compositionupdate`** イベントは、 {{glossary("input method editor", "IME")}} などのテキスト変換システムによって制御されているテキスト変換セッションに新しい文字が入力されたときに発生します。

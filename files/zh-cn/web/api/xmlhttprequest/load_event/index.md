@@ -2,6 +2,7 @@
 title: 'XMLHttpRequest: load event'
 slug: Web/API/XMLHttpRequest/load_event
 ---
+
 {{APIRef}}
 
 当一个{{domxref("XMLHttpRequest")}}请求完成的时候会触发`load` 事件。
@@ -114,7 +115,7 @@ xhrButtonAbort.addEventListener('click', () => {
 
 ## 浏览器兼容性
 
-{{Compat("api.XMLHttpRequest.load_event")}}
+{{Compat}}
 
 **了解更多**
 

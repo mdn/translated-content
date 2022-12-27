@@ -2,6 +2,7 @@
 title: 工具和测试
 slug: Learn/Tools_and_testing
 ---
+
 {{LearnSidebar}}
 
 一旦你开始使用 web 的核心技术（如 HTML,CSS 和 Javascript）进行编程，并且开始获得更多的体验，读更多的资料，学习更多的提示和技巧，你就会遇到各种工具，从优化的 CSS 和 Javascript 到测试和自动化应用，再到其他更多的领域。当你的 web 项目变得更大更复杂，如果你希望利用一些工具为你的代码做出可靠的测试计划。本节教程旨在帮助你开始并做出明智的选择。

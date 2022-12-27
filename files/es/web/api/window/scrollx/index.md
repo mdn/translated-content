@@ -60,4 +60,4 @@ var y = (window.pageYOffset !== undefined)
 
 ## Ver también
 
-- [window.scrollY](/es/docs/DOM/window.scrollY "window.scrollX | Document Object Model (DOM) | MDN")
+- [window.scrollY](/es/docs/DOM/window.scrollY)

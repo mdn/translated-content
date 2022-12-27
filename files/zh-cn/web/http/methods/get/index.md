@@ -2,6 +2,7 @@
 title: GET
 slug: Web/HTTP/Methods/GET
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `GET` 方法**请求指定的资源。使用 `GET` 的请求应该只用于获取数据。

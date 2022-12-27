@@ -2,6 +2,7 @@
 title: HTMLScriptElement
 slug: Web/API/HTMLScriptElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 HTML の {{HTMLElement("script")}} 要素は **`HTMLScriptElement`** インターフェイスの公開しています。これは（通常の {{domxref("HTMLElement")}} から継承によって利用できるものに加えて） `<script>` 要素の動作や実行を操作するための特別なプロパティやメソッドを提供します。

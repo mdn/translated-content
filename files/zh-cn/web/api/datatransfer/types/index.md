@@ -2,6 +2,7 @@
 title: DataTransfer.types
 slug: Web/API/DataTransfer/types
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.types`** 是只读属性。它返回一个我们在{{event("dragstart")}}事件中设置的拖动数据格式 (如 {{domxref("DOMString","字符串")}}) 的数组。 格式顺序与拖动操作中包含的数据顺序相同。

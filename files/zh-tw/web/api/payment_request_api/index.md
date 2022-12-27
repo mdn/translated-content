@@ -70,7 +70,7 @@ Payment Request API 提供商家與用戶雙方一致的用戶體驗。它並不
 
 ### PaymentRequest 介面
 
-{{Compat("api.PaymentRequest", 0)}}
+{{Compat}}
 
 ## 參見
 

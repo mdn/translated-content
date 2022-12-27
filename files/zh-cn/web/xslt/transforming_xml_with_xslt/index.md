@@ -2,6 +2,7 @@
 title: Transforming XML with XSLT
 slug: Web/XSLT/Transforming_XML_with_XSLT
 ---
+
 ### [An Overview](cn/Transforming_XML_with_XSLT/An_Overview)
 
 The separation of content and presentation is a key design feature of [XML](cn/XML). The structure of an XML document is designed to reflect and clarify important relationships among the individual aspects of the content itself, unhindered by a need to provide any indication about how this data should eventually be presented. This intelligent structuring is particularly important as more and more data transfers are automated and take place between highly heterogeneous machines linked by a network.

@@ -4,6 +4,7 @@ slug: Web/API/HTML_Sanitizer_API
 l10n:
   sourceCommit: b40b71d87ab041f2f36a4675bc09af983b22422a
 ---
+
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 **HTML Sanitizer API** は、信頼できない HTML 文字列と {{domxref('Document')}} または {{domxref('DocumentFragment')}} オブジェクトを受け取り、それらを安全にドキュメントの DOM に挿入するためのサニタイズ処理を行うことができます。

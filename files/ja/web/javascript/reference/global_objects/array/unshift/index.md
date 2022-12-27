@@ -2,6 +2,7 @@
 title: Array.prototype.unshift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/unshift
 ---
+
 {{JSRef}}
 
 **`unshift()`** メソッドは、配列の最初に 1 つ以上の要素を追加し、新しい配列の長さを返します。

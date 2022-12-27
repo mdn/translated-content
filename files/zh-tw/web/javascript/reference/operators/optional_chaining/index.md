@@ -165,7 +165,7 @@ console.log(customerCity); // Unknown city
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.operators.optional_chaining")}}
+{{Compat}}
 
 ## 參見
 

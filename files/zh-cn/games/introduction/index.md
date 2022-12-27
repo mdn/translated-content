@@ -3,6 +3,7 @@ title: Web 游戏开发简介
 slug: Games/Introduction
 original_slug: Games/简介
 ---
+
 {{GamesSidebar}}
 
 现代的 web 已经高速发展成为一个可行可靠的平台，它不仅能够用来创建高质量的酷炫游戏，同时也能够用来发布和传播这些游戏。

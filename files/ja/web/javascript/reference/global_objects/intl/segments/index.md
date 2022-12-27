@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments
 l10n:
   sourceCommit: 46c0f5269f597ad055d0b6322f736f5c70996c4c
 ---
+
 {{JSRef}}
 
 **`Intl.Segments`** のインスタンスは、テキスト文字列のセグメントを反復可能なコレクションとして保持します。[`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトの [`segment()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment) メソッドをコールすると、このインスタンスが返されます。

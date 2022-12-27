@@ -3,6 +3,7 @@ title: repeating-radial-gradient()
 slug: Web/CSS/gradient/repeating-radial-gradient
 original_slug: Web/CSS/gradient/repeating-radial-gradient()
 ---
+
 {{CSSRef}}
 
 CSS 函数**`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的{{cssxref("&lt;image&gt;")}} 。它类似于{{cssxref("radial-gradient")}} 并且采用相同的参数，但是它会在所有方向上重复颜色，以覆盖其整个容器。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，是一种特殊的{{cssxref("&lt;image&gt;")}}类型。

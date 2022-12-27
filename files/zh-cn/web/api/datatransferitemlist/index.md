@@ -2,6 +2,7 @@
 title: DataTransferItemList
 slug: Web/API/DataTransferItemList
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransferItemList`** 对象是一组代表被拖动项的{{domxref("DataTransferItem")}} 对象的列表。在拖动操作期间，每个{{domxref("DragEvent")}} 都有一个 {{domxref("DragEvent.dataTransfer","dataTransfer")}} 属性，该属性是 `DataTransferItemList`.

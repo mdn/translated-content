@@ -2,6 +2,7 @@
 title: 作业：构建行星数据
 slug: Learn/HTML/Tables/Structuring_planet_data
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 在我们的表格评定中，我们为你提供有关太阳系中行星的一些数据，并让你将其结构化成 HTML 表。

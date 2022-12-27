@@ -2,6 +2,7 @@
 title: Window.scrollTo()
 slug: Web/API/Window/scrollTo
 ---
+
 {{ APIRef }}
 
 ## 摘要

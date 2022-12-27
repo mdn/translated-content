@@ -2,6 +2,7 @@
 title: SourceBuffer.remove()
 slug: Web/API/SourceBuffer/remove
 ---
+
 {{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
 
 {{domxref("SourceBuffer")}} 接口的 **`remove()`** 方法从 `SourceBuffer` 中移除指定时间范围的媒体片段。该方法仅能在 {{domxref("SourceBuffer.updating")}} 为 `false` 时调用。如果 `SourceBuffer.updating` 不等于 `false`，请调用 {{domxref("SourceBuffer.abort()")}}。

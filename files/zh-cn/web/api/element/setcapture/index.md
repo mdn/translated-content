@@ -2,6 +2,7 @@
 title: element.setCapture
 slug: Web/API/Element/setCapture
 ---
+
 {{ ApiRef() }}
 
 ### 概要

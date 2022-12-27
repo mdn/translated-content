@@ -2,6 +2,7 @@
 title: 移动无障碍清单
 slug: Web/Accessibility/Mobile_accessibility_checklist
 ---
+
 该文档为移动应用开发者提供一个无障碍需求的简要清单。此文档将随着技术模式的发展而不断演进。
 
 ## 颜色

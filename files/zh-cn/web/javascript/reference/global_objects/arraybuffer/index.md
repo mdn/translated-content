@@ -2,6 +2,7 @@
 title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 ---
+
 {{JSRef}}
 
 **`ArrayBuffer`** 对象用来表示通用的、固定长度的原始二进制数据缓冲区。

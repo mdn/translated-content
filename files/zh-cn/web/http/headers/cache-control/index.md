@@ -2,6 +2,7 @@
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
 ---
+
 {{HTTPSidebar}}
 
 **`Cache-Control`** 通用消息头字段，被用于在 http 请求和响应中，通过指定指令来实现缓存机制。缓存指令是单向的，这意味着在请求中设置的指令，不一定被包含在响应中。

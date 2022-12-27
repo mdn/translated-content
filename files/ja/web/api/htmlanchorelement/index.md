@@ -2,6 +2,7 @@
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAnchorElement`** インターフェイスはハイパーリンク要素を表し、そのような要素のレイアウトと表示を操作するための特別なプロパティとメソッド（継承元である通常の {{domxref("HTMLElement")}} オブジェクトインターフェイスにないもの）を提供します。 このインターフェイスは [`<a>`](/ja/docs/Web/HTML/Element/a) 要素に対応しています。 [`<link>`](/ja/docs/Web/HTML/Element/link) は [`HTMLLinkElement`](/ja/docs/Web/API/HTMLLinkElement) で表されるものであり、混同しないでください。

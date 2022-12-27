@@ -2,6 +2,7 @@
 title: Selection.rangeCount
 slug: Web/API/Selection/rangeCount
 ---
+
 {{ ApiRef("DOM") }}{{SeeCompatTable}}
 
 The **`Selection.rangeCount`**是一个返回选区 (selection) 中 range 对象数量的只读属性。
@@ -47,7 +48,7 @@ window.setInterval(function () {
 
 ## Browser compatibility
 
-{{Compat("api.Selection.rangeCount")}}
+{{Compat}}
 
 ## See also
 

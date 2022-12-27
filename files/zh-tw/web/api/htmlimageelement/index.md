@@ -100,7 +100,7 @@ alert(document.images[0].src);
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLImageElement")}}
+{{Compat}}
 
 ## See also
 

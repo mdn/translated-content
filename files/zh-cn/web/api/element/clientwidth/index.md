@@ -2,6 +2,7 @@
 title: Element.clientWidth
 slug: Web/API/Element/clientWidth
 ---
+
 {{APIRef("DOM")}}
 
 只读属性 **`Element.clientWidth`** 对于内联元素以及没有 CSS 样式的元素为 0；否则，它是元素内部的宽度（以像素为单位）。该属性包括内边距（padding），但不包括边框（border）、外边距（margin）和垂直滚动条（如果存在）。

@@ -2,6 +2,7 @@
 title: 'TypeError: can''t delete non-configurable array element'
 slug: Web/JavaScript/Reference/Errors/Non_configurable_array_element
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の例外 "can't delete non-configurable array element" は、配列を[短縮](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length#shortening_an_array)しようとしたときに配列の要素の 1 つが[設定不可](/ja/docs/Web/JavaScript/Data_structures#properties)であった場合に発生します。

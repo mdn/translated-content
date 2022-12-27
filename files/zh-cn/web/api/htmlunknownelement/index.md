@@ -2,6 +2,7 @@
 title: HTMLUnknownElement
 slug: Web/API/HTMLUnknownElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLUnknownElement`** 代表着一个无效的 HTML 元素，派生自 {{domxref("HTMLElement")}} 接口,，但它没有任何可用的附加属性或方法.
@@ -20,7 +21,7 @@ _没有指定方法;继承来自父级的属性, {{domxref("HTMLElement")}}._
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLUnknownElement")}}
+{{Compat}}
 
 ## 相关内容
 

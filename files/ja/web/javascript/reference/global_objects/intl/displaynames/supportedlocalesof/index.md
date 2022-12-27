@@ -2,6 +2,7 @@
 title: Intl.DisplayNames.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 **`Intl.DisplayNames.supportedLocalesOf()`** メソッドは、指定されたロケールのうち、ランタイムの既定のロケールで代替せずに表示名に対応しているものの配列を返します。

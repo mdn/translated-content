@@ -2,6 +2,7 @@
 title: DOMTokenList.keys()
 slug: Web/API/DOMTokenList/keys
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("DOMTokenList")}} **的** **`keys()`** 方法返回一个{{jsxref("Iteration_protocols",'iterator')}}, 可以用来遍历这个对象中的所有的键，键的类型是`无符号整型`。
@@ -52,4 +53,4 @@ for(var value of iterator) {
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMTokenList.keys")}}
+{{Compat}}

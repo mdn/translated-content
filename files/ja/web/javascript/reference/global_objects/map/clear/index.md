@@ -2,6 +2,7 @@
 title: Map.prototype.clear()
 slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 ---
+
 {{JSRef}}
 
 **`clear()`** メソッドは `Map` オブジェクトからすべての要素を削除します。

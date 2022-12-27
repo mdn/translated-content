@@ -2,6 +2,7 @@
 title: HTMLMediaElement.volume
 slug: Web/API/HTMLMediaElement/volume
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.volume`** プロパティは、メディアを再生する音量を設定します。

@@ -2,6 +2,7 @@
 title: 継承とプロトタイプチェーン
 slug: Web/JavaScript/Inheritance_and_the_prototype_chain
 ---
+
 {{jsSidebar("Advanced")}}
 
 JavaScript は動的で、 `class` の実装それ自体を提供しないことから、 Java や C++ のようなクラスベースの言語を経験した開発者にとって、やや紛らわしいものです（`class` キーワードは ES6 で導入されましたが、シンタックスシュガーであり、JavaScript は引き続きプロトタイプベースです）。

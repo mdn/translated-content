@@ -2,6 +2,7 @@
 title: 'HTMLMedia​Element: canplaythrough イベント'
 slug: Web/API/HTMLMediaElement/canplaythrough_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `canplaythrough` イベントは、ユーザーエージェントがメディアを再生可能なときに発生し、コンテンツをさらにバッファリングするために再生を停止することなく、メディアを最後まで再生するのに十分なデータが読み込まれたと推定します。

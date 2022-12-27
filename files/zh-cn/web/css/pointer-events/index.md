@@ -2,6 +2,7 @@
 title: pointer-events
 slug: Web/CSS/pointer-events
 ---
+
 {{CSSRef}}
 
 **`pointer-events` **CSS 属性指定在什么情况下 (如果有) 某个特定的图形元素可以成为鼠标事件的 [target](/zh-CN/docs/Web/API/event.target)。
@@ -116,7 +117,7 @@ Its extension to HTML elements, though present in early drafts of CSS Basic User
 
 ## 浏览器兼容
 
-{{Compat("css.properties.pointer-events")}}
+{{Compat}}
 
 ## 相关链接
 

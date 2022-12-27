@@ -2,6 +2,7 @@
 title: ResizeObserver.ResizeObserver()
 slug: Web/API/ResizeObserver/ResizeObserver
 ---
+
 {{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 
 **`ResizeObserver`** 构造器创新一个新的 {{domxref("ResizeObserver")}} 对象，用于接收 {{domxref('Element')}}内容区域的改变 或 {{domxref('SVGElement')}} 的边界框改变改变。

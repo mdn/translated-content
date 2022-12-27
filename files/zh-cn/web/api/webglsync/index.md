@@ -2,6 +2,7 @@
 title: WebGLSync
 slug: Web/API/WebGLSync
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 The **`WebGLSync`** interface is part of the [WebGL 2](/zh-CN/docs/Web/API/WebGL_API) API and is used to synchronize activities between the GPU and the application.
@@ -31,7 +32,7 @@ var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLSync.WebGLSync")}}
+{{Compat}}
 
 ## 相关链接
 

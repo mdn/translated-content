@@ -2,6 +2,7 @@
 title: InstallEvent
 slug: Web/API/InstallEvent
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 该参数传递到 {{domxref("ServiceWorkerGlobalScope.oninstall", "oninstall")}} 事件处理程序，`InstallEvent` 接口表示一个 {{domxref("ServiceWorker")}} 的 {{domxref("ServiceWorkerGlobalScope")}} 上分派的安装操作。作为 {{domxref("ExtendableEvent")}} 的一个子类，它确保在安装期间不调度诸如 {{domxref("FetchEvent")}} 之类的功能事件。

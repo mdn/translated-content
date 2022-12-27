@@ -2,6 +2,7 @@
 title: super
 slug: Web/JavaScript/Reference/Operators/super
 ---
+
 {{jsSidebar("Operators")}}
 
 **super** 关键字用于访问和调用一个对象的父对象上的函数。

@@ -2,6 +2,7 @@
 title: captivePortal
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal
 ---
+
 {{AddonSidebar}}
 
 Determine the captive portal state of the user’s connection. A captive portal is a web page displayed when a user first connects to a Wi-Fi network. The user provides information or acts on the captive portal web page to gain broader access to network resources, such as accepting terms and conditions or making a payment.
@@ -29,7 +30,7 @@ To use this API you need to have the "captivePortal" [permission](/zh-CN/docs/Mo
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.captivePortal")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

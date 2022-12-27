@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.closePath()
 slug: Web/API/CanvasRenderingContext2D/closePath
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.closePath()`** 是 Canvas 2D API 将笔点返回到当前子路径起始点的方法。它尝试从当前点到起始点绘制一条直线。如果图形已经是封闭的或者只有一个点，那么此方法不会做任何操作。
@@ -89,7 +90,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.closePath")}}
+{{Compat}}
 
 ## 参见
 

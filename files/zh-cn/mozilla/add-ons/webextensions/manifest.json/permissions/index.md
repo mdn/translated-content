@@ -2,6 +2,7 @@
 title: 权限 - permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -163,4 +164,4 @@ API 权限有关键字指定，每个关键字标志着一类 WebExtension API �
 
 本页的兼容列表是从结构化数据生成的。如果你想参与修改此数据，请参考 <https://github.com/mdn/browser-compat-data> 并发送 pull 请求。
 
-{{Compat("webextensions.manifest.permissions")}}
+{{Compat}}

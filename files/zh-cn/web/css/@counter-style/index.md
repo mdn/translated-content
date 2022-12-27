@@ -2,6 +2,7 @@
 title: '@counter-style'
 slug: Web/CSS/@counter-style
 ---
+
 {{ CSSRef() }}
 
 ## 概要

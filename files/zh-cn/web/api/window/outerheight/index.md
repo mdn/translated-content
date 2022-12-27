@@ -2,6 +2,7 @@
 title: Window.outerHeight
 slug: Web/API/Window/outerHeight
 ---
+
 {{APIRef}}
 
 ## 概述
@@ -32,7 +33,7 @@ outWindowHeight = window.outerHeight;
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.outerHeight")}}
+{{Compat}}
 
 ## 规范
 

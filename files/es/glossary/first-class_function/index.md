@@ -86,7 +86,7 @@ function diHola() {
 diHola()();
 ```
 
-Usamos parétesis dobre `()()` para invocar también a la función retornada.
+Usamos paréntesis doble `()()` para invocar también a la función retornada.
 
 ## Aprender más
 

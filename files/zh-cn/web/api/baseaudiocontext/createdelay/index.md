@@ -2,6 +2,7 @@
 title: AudioContext.createDelay()
 slug: Web/API/BaseAudioContext/createDelay
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createDelay()` 是 {{ domxref("AudioContext") }} 的一个方法，作用是将输入音频信号延迟一定时间。（比如可以实现 对着话筒说句话，然后几秒后 这句话从音响里播放出来）
@@ -130,7 +131,7 @@ synthDelay.delayTime.value = delay1;
 
 ## Browser compatibility
 
-{{Compat("api.BaseAudioContext.createDelay")}}
+{{Compat}}
 
 ## See also
 

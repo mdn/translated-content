@@ -2,6 +2,7 @@
 title: HTMLSlotElement
 slug: Web/API/HTMLSlotElement
 ---
+
 {{APIRef('Web Components')}}
 
 **`HTMLSlotElement`** は [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) のインターフェイスで、 HTML の {{HTMLElement("slot")}} 要素の名前と割り当てられたノードにアクセスできるようにします。

@@ -99,7 +99,7 @@ The script should be served with the `text/javascript` MIME type, but browsers a
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.script", 2)}}
+{{Compat}}
 
 ## 相容性註解
 

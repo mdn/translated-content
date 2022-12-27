@@ -2,6 +2,7 @@
 title: 短名称 - short_name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -33,4 +34,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.short_name")}}
+{{Compat}}

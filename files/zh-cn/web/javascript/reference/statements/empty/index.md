@@ -2,6 +2,7 @@
 title: empty
 slug: Web/JavaScript/Reference/Statements/Empty
 ---
+
 {{jsSidebar("Statements")}}
 
 **空语句**用来表明没有语句，尽管 JavaScript 语法希望有语句。

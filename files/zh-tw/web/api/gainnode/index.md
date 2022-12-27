@@ -62,7 +62,7 @@ _No specific method; inherits methods from its parent,_ _{{domxref("AudioNode")}
 
 ## Browser compatibility
 
-{{Compat("api.GainNode")}}
+{{Compat}}
 
 ## See also
 

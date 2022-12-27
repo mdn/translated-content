@@ -115,7 +115,7 @@ When the element does not have a first child, then `firstChild` is `null`. The e
 
 ## Browser compatibility
 
-{{Compat("api.Node.insertBefore")}}
+{{Compat}}
 
 ## Specifications
 

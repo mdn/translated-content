@@ -2,6 +2,7 @@
 title: windows.create()
 slug: Mozilla/Add-ons/WebExtensions/API/windows/create
 ---
+
 {{AddonSidebar()}}
 
 创建一个新的窗口。

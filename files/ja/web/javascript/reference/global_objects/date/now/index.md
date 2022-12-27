@@ -2,6 +2,7 @@
 title: Date.now()
 slug: Web/JavaScript/Reference/Global_Objects/Date/now
 ---
+
 {{JSRef}}
 
 **`Date.now()`** メソッドは、UTC (協定世界時) での 1970 年 1 月 1 日 0 時 0 分 0 秒 から現在までの経過時間をミリ秒単位で返します。

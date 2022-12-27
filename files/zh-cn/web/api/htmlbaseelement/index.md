@@ -2,6 +2,7 @@
 title: HTMLBaseElement
 slug: Web/API/HTMLBaseElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLBaseElement`** 接口包含一份 HTML 文件的基础 URI 设定，该对象继承了所有 {{domxref("HTMLElement")}} 接口中定义的方法与属性。
@@ -25,7 +26,7 @@ _没有特殊的方法，继承了其父级 {{domxref("HTMLElement")}} 的所有
 
 ## Browser compatibility
 
-{{Compat("api.HTMLBaseElement")}}
+{{Compat}}
 
 ## See also
 

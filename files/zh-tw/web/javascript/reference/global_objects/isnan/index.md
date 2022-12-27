@@ -147,7 +147,7 @@ isNaN() == isNaN(Number())   // false，因為 isNaN() == true 且 Number() == 0
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.isNaN")}}
+{{Compat}}
 
 ## 參見
 

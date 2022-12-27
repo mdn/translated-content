@@ -2,6 +2,7 @@
 title: mask-border-slice
 slug: Web/CSS/mask-border-slice
 ---
+
 {{CSSRef}}
 
 的[CSS](/zh-CN/docs/Web/CSS)属性除以{{cssxref("掩模边界源")}}成区域的图像集合。这些区域用于形成元素的[遮罩边框](/zh-CN/docs/Web/CSS/mask-border)的组成部分。**`mask-border-slice`**

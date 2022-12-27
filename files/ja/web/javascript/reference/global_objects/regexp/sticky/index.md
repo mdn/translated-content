@@ -2,6 +2,7 @@
 title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ---
+
 {{JSRef}}
 
 **`sticky`** プロパティは、検索が粘着的 (sticky) である (文字列内の検索を、この正規表現の {{jsxref("RegExp.lastIndex", "lastIndex")}} プロパティで示されたインデックスからのみ開始する) かどうかを表します。 `sticky` は個々の正規表現オブジェクトが持つ読み取り専用のプロパティです。

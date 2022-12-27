@@ -2,6 +2,7 @@
 title: Intl.NumberFormat.supportedLocalesOf()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocalesOf
 ---
+
 {{JSRef}}
 
 **`Intl.ListFormat.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替する必要なく数値の書式で対応されているものを含む配列を返します。

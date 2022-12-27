@@ -2,6 +2,7 @@
 title: DOMException()
 slug: Web/API/DOMException/DOMException
 ---
+
 {{ APIRef("DOM") }}
 
 **`DOMException()`** 构造函数返回一个包含指定的信息和名称的 `DOMException` 对象。
@@ -36,4 +37,4 @@ TBD
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMException.DOMException")}}
+{{Compat}}

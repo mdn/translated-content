@@ -2,6 +2,7 @@
 title: Array.prototype.values()
 slug: Web/JavaScript/Reference/Global_Objects/Array/values
 ---
+
 {{JSRef}}
 
 **`values()`** メソッドは、配列の各インデックスの値を含む新しい **`Array Iterator`** オブジェクトを返します。

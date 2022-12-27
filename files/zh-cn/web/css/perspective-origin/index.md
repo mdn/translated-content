@@ -2,6 +2,7 @@
 title: perspective-origin
 slug: Web/CSS/perspective-origin
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) 属性 **`perspective-origin`** 指定了观察者的位置，用作 {{cssxref("perspective")}} 属性的消失点。
@@ -353,7 +354,7 @@ th, p, td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.perspective-origin")}}
+{{Compat}}
 
 ## 相关连接
 

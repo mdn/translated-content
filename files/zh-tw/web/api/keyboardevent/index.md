@@ -191,4 +191,4 @@ More compatibility data is available on other pages:
 - `.key`：請參考《瀏覽器支援度》的 {{domxref("KeyboardEvent.key")}} 部分。
 - `.getModifierState()` ：請參考《瀏覽器支援度》的 {{domxref("KeyboardEvent.getModifierState")}} 部分。
 
-{{Compat("api.KeyboardEvent")}}
+{{Compat}}

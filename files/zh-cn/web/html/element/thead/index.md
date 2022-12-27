@@ -2,6 +2,7 @@
 title: <thead>
 slug: Web/HTML/Element/thead
 ---
+
 **HTML**的**\<thead>**元素定义了一组定义表格的列头的行。
 
 {{EmbedInteractiveExample("pages/tabbed/thead.html","tabbed-taller")}}

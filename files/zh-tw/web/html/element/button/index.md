@@ -98,7 +98,7 @@ Please note that this button has CSS applied.
 
 ## Browser compatibility
 
-{{Compat("html.elements.button")}}
+{{Compat}}
 
 ## See also
 

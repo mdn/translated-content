@@ -2,6 +2,7 @@
 title: 'Reason: CORS request did not succeed'
 slug: Web/HTTP/CORS/Errors/CORSDidNotSucceed
 ---
+
 {{HTTPSidebar}}
 
 ## 原因

@@ -2,6 +2,7 @@
 title: Element.animate()
 slug: Web/API/Element/animate
 ---
+
 {{APIRef('Web Animations')}}
 
 {{domxref("Element")}} インターフェイスの **`animate()`** メソッドは、新しい {{domxref("Animation")}} の生成、この要素への適用、そしてアニメーションの再生を行うショートカットメソッドです。生成した {{domxref("Animation")}} オブジェクトのインスタンスを返します。

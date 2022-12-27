@@ -2,6 +2,7 @@
 title: window.cancelIdleCallback()
 slug: Web/API/Window/cancelIdleCallback
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 ## 概述
@@ -33,4 +34,4 @@ window.cancelIdleCallback(handle);
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.cancelIdleCallback")}}
+{{Compat}}

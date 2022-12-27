@@ -2,6 +2,7 @@
 title: <head>
 slug: Web/HTML/Element/head
 ---
+
 ## 概述
 
 **HTML head 元素** 规定文档相关的配置信息（元数据），包括文档的标题，引用的文档样式和脚本等。

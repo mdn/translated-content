@@ -47,7 +47,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage
 
 ## 瀏覽器兼容性
 
-{{Compat("webextensions.api.storage")}}
+{{Compat}}
 
 {{WebExtExamples("h2")}}
 

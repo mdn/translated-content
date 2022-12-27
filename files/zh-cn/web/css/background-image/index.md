@@ -2,6 +2,7 @@
 title: background-image
 slug: Web/CSS/background-image
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) **`background-image`** 属性用于为一个元素设置一个或者多个背景图像。
@@ -100,7 +101,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-image")}}
+{{Compat}}
 
 \[1] 如果 `about:config` 中 `browser.display.use_document_colors` 被设置为 `false`, 背景图像将不会展示。
 

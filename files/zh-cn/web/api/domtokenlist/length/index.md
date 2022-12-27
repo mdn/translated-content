@@ -2,6 +2,7 @@
 title: DOMTokenList.length
 slug: Web/API/DOMTokenList/length
 ---
+
 {{APIRef("DOM")}}
 
 **`length`**是 **`DOMTokenList`** 接口的一个只读属性，以整数来表示，代表着当前对象中值的个数。
@@ -46,4 +47,4 @@ span.textContent = 'classList length = ' + length;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMTokenList.length")}}
+{{Compat}}

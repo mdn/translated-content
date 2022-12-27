@@ -20,7 +20,9 @@ Debe tenerse cuidado con las cabeceras relacionadas con la caché, ya que un est
 
 ## Estado
 
-    503 Servicio No Disponible
+```
+503 Servicio No Disponible
+```
 
 ## Especificaciones
 

@@ -2,6 +2,7 @@
 title: document.contentType
 slug: Web/API/Document/contentType
 ---
+
 {{ ApiRef() }}
 
 ### 概述

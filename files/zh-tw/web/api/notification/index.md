@@ -159,7 +159,7 @@ function spawnNotification(theBody,theIcon,theTitle) {
 
 ## 瀏覽器支援度
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## 延伸閱讀
 

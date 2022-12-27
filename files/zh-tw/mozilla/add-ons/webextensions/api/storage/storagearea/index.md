@@ -26,7 +26,7 @@ Values of this type are objects.
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.storage.StorageArea")}}
+{{Compat}}
 
 {{WebExtExamples}}
 

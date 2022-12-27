@@ -2,6 +2,7 @@
 title: StyleSheetList
 slug: Web/API/StyleSheetList
 ---
+
 {{APIRef("CSSOM")}}
 
 StyleSheetLists 接口表示一个 StyleSheet 的列表。

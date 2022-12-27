@@ -116,7 +116,7 @@ async function getProcessedData(url) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.async_function")}}
+{{Compat}}
 
 ## 參見
 

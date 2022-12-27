@@ -2,6 +2,7 @@
 title: Window.back()
 slug: Web/API/Window/back
 ---
+
 {{APIRef}}{{ Non-standard_header() }}{{deprecated_header}}
 
 ## 总结

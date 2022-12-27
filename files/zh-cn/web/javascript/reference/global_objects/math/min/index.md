@@ -2,6 +2,7 @@
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
 ---
+
 {{JSRef}}
 
 **`Math.min()`** 返回零个或更多个数值的最小值。

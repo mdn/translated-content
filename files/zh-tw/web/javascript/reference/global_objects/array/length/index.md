@@ -94,7 +94,7 @@ console.log(numbers.length); // 3
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.length")}}
+{{Compat}}
 
 ## 其他
 

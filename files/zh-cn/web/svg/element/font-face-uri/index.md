@@ -2,6 +2,7 @@
 title: font-face-uri
 slug: Web/SVG/Element/font-face-uri
 ---
+
 {{SVGRef}}
 
 `font-face-uri`元素指向远程字义的当前字体。

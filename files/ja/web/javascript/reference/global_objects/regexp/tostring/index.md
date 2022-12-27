@@ -2,6 +2,7 @@
 title: RegExp.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは正規表現を表す文字列を返します。

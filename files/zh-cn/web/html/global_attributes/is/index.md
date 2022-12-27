@@ -2,6 +2,7 @@
 title: is
 slug: Web/HTML/Global_attributes/is
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 is 全局属性 ( [global attribute](/zh-CN/docs/Web/HTML/Global_attributes) ) 允许您指定标准 HTML 元素像定义的内置元素一样工作（请参阅使用自定义元素 ( [Using custom elements](/zh-CN/docs/Web/Web_Components/Using_custom_elements) ) 以获取更多详细信息）。

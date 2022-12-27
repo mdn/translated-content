@@ -118,7 +118,7 @@ Googlebot/2.1 (+http://www.google.com/bot.html)
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.User-Agent")}}
+{{Compat}}
 
 ## 參閱
 

@@ -2,6 +2,7 @@
 title: Array.prototype.forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 ---
+
 {{JSRef}}
 
 **`forEach()`** 方法对数组的每个元素执行一次给定的函数。

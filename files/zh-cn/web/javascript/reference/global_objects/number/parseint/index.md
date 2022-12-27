@@ -2,6 +2,7 @@
 title: Number.parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/Number/parseInt
 ---
+
 {{JSRef}}
 
 ## 概述

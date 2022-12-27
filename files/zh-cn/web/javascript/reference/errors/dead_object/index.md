@@ -2,6 +2,7 @@
 title: 'TypeError: can''t access dead object'
 slug: Web/JavaScript/Reference/Errors/Dead_object
 ---
+
 {{JSSidebar("Errors")}}
 
 ## 错误提示

@@ -2,6 +2,7 @@
 title: WebGLRenderingContext
 slug: Web/API/WebGLRenderingContext
 ---
+
 {{APIRef("WebGL")}}
 
 **WebGLRenderingContext** 接口提供基于 OpenGL ES 2.0 的绘图上下文，用于在 HTML {{HTMLElement("canvas")}} 元素内绘图。
@@ -316,7 +317,7 @@ var gl = canvas.getContext('webgl');
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext")}}
+{{Compat}}
 
 ## 相关内容
 

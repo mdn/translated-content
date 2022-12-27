@@ -53,7 +53,7 @@ slug: Web/API/KeyboardEvent/KeyboardEvent
 
 ## 瀏覽器支援度
 
-{{Compat("api.KeyboardEvent.KeyboardEvent")}}
+{{Compat}}
 
 ## 延伸閱讀
 

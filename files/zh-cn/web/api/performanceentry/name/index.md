@@ -2,6 +2,7 @@
 title: PerformanceEntry.name
 slug: Web/API/PerformanceEntry/name
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`name`** 是 {{domxref("PerformanceEntry")}} 接口的属性，此属性的返回值是 {{domxref("PerformanceEntry.entryType")}} 的返回值的一个补充，例如 entry.entryType="navigation",entry.name="document". 这是一个只读属性。

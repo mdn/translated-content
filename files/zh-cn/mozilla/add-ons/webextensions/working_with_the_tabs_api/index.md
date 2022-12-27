@@ -2,6 +2,7 @@
 title: Working with the Tabs API
 slug: Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
 ---
+
 {{AddonSidebar}}
 
 选项卡允许用户在其浏览器窗口中打开多个网页，然后在这些网页之间切换。使用 Tabs API，您可以使用和操作这些选项卡来创建实用程序，为用户提供使用选项卡或提供扩展功能的新方法。

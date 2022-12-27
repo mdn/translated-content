@@ -2,6 +2,7 @@
 title: Notification.close()
 slug: Web/API/notification/close
 ---
+
 {{APIRef("Web Notifications")}}
 
 {{domxref("Notification")}} 接口的 `close()` 的方法用于关闭一个以前显示的通知。

@@ -2,6 +2,7 @@
 title: IDBCursor.key
 slug: Web/API/IDBCursor/key
 ---
+
 {{APIRef("IndexedDB")}}
 
 **key**是只读属性，返回在游标中的位置。如果游标在范围之外，这个值会被置为 undefined。游标的 key 可以是任何数据类型。
@@ -51,7 +52,7 @@ function displayData() {
 
 ## 浏览器兼容性
 
-{{Compat("api.IDBCursor.key")}}
+{{Compat}}
 
 ## 相关链接
 

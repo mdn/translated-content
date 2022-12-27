@@ -25,7 +25,7 @@ A {{domxref("DOMError")}}
 
 ## 瀏覽器相容性
 
-{{Compat("api.FileReader.error")}}
+{{Compat}}
 
 ## 閱讀更多
 

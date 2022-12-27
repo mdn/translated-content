@@ -48,7 +48,7 @@ console.log(weekday); // 1
 
 ## 瀏覽器兼容性
 
-{{Compat("javascript.builtins.Date.getDay")}}
+{{Compat}}
 
 ## See also
 

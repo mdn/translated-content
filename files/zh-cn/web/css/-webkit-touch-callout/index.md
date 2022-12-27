@@ -2,6 +2,7 @@
 title: '-webkit-touch-callout'
 slug: Web/CSS/-webkit-touch-callout
 ---
+
 {{CSSRef}} {{Non-standard_header}}
 
 ## 概述
@@ -42,4 +43,4 @@ Formal syntax: default | none
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.-webkit-touch-callout")}}
+{{Compat}}

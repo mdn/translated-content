@@ -2,6 +2,7 @@
 title: continue
 slug: Web/JavaScript/Reference/Statements/continue
 ---
+
 {{jsSidebar("Statements")}}
 
 **continue 声明**终止当前循环或标记循环的当前迭代中的语句执行，并在下一次迭代时继续执行循环。

@@ -2,6 +2,7 @@
 title: new 演算子
 slug: Web/JavaScript/Reference/Operators/new
 ---
+
 {{jsSidebar("Operators")}}
 
 **`new` 演算子**を使用すると、開発者はユーザー定義のオブジェクト型やコンストラクター関数を持つ組み込みオブジェクト型のインスタンスを作成することができます。

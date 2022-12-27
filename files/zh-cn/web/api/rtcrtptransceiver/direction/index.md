@@ -2,6 +2,7 @@
 title: RTCRtpTransceiver.direction
 slug: Web/API/RTCRtpTransceiver/direction
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpTransceiver")}} property **`direction`** is a string which indicates the transceiver's preferred directionality. Its value must be one of the strings defined by the {{domxref("RTCRtpTransceiverDirection")}} enumeration.

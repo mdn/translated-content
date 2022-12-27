@@ -2,6 +2,7 @@
 title: TypedArray.prototype.subarray()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/subarray
 ---
+
 {{JSRef}}`subarray()` 返回一个新的、基于相同 {{jsxref("ArrayBuffer")}}、元素类型也相同的的 _TypedArray_。开始的索引将会被包括，而结束的索引将不会被包括。_TypedArray_ 是指 [typed array types](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 的其中之一。
 
 {{EmbedInteractiveExample("pages/js/typedarray-subarray.html")}}

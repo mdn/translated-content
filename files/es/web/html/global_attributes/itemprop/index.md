@@ -20,4 +20,4 @@ Aquí hay un ejemplo .
 </div>
 ```
 
-Para más información acerca de los atributos relacionados consultar https\://schema.org/docs/gs.html
+Para más información acerca de los atributos relacionados consultar <https://schema.org/docs/gs.html>

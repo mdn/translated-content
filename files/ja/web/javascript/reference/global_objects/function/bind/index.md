@@ -2,6 +2,7 @@
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 ---
+
 {{JSRef}}
 
 **`bind()`** メソッドは、呼び出された際に `this` キーワードに指定された値が設定される新しい関数を生成します。この値は新しい関数が呼び出されたとき、一連の引数の前に置かれます。

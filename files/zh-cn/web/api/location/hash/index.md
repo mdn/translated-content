@@ -2,6 +2,7 @@
 title: 'Location: hash'
 slug: Web/API/Location/hash
 ---
+
 {{ APIRef("Location") }}
 
 {{domxref("Location")}} 接口的 **`hash`** 属性返回一个 {{domxref("USVString")}}，其中会包含 URL 标识中的 `'#'` 和 后面 URL 片段标识符。

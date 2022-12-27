@@ -2,6 +2,7 @@
 title: flex 布局的基本概念
 slug: Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 ---
+
 {{CSSRef}}
 
 Flexible Box 模型，通常被称为 flexbox，是一种一维的布局模型。它给 flexbox 的子元素之间提供了强大的空间分布和对齐能力。本文给出了 flexbox 的主要特性，更多的细节将在别的文档中探索。

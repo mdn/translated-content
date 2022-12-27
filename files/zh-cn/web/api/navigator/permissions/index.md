@@ -2,6 +2,7 @@
 title: Navigator.permissions
 slug: Web/API/Navigator/permissions
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 **`permissions`** 是 **`Navigator`** 读属性，返回一个可用于查询或更新某些 APIs（由 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 覆盖）的权限状态的对象。

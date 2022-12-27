@@ -30,15 +30,15 @@ Copie el código y guárdelo como demo1.svg. Luego ábralo en Firefox. Lo verá 
 
 El proceso de renderizado incluye lo siguiente :
 
-1.  Comenzamos con el elemento raiz del `svg`:
+1. Comenzamos con el elemento raiz del `svg`:
 
     - La declaracion de tipo de documento (doctype) usual en (X)HTML debería dejarse de lado debido a que la validación DTD based SVG conduce a mas problemas que soluciones.
-    - En cambio, los atributos `version` y `baseProfile `deberian ser usados siempre para identificar la version de SVG para otro tipo de validaciones.
-    - Debido a SVG es una especie de dialecto de XML, SVG debe unir siempre los namespaces correctamente (en el atributo xmlns). Para mayor información, vea [Namespaces Crash Course](/es/docs/Web/SVG/Namespaces_Crash_Course "en/SVG/Namespaces_Crash_Course").
+    - En cambio, los atributos `version` y `baseProfile`deberian ser usados siempre para identificar la version de SVG para otro tipo de validaciones.
+    - Debido a SVG es una especie de dialecto de XML, SVG debe unir siempre los namespaces correctamente (en el atributo xmlns). Para mayor información, vea [Namespaces Crash Course](/es/docs/Web/SVG/Namespaces_Crash_Course).
 
-2.  El fondo esta puesto en rojo dibujando un rectangulo [`<rect/>`](/en/SVG/Element/rect "en/SVG/Element/rect") que cubre el area de la imagen.
-3.  Un circulo verde [`<circle/>`](/en/SVG/Element/circle "en/SVG/Element/circle") con un radio de 80px y se dibuja en el centro del rectangulo rojo(offset 30+120px inward, and 50+50px upward).
-4.  El texto "SVG" esta dibujado. El interior de cada letra esta relleno con blanco.El texto se coloca mediante el establecimiento de un ancla en donde queremos que el punto medio sea: en este caso, el punto medio debe corresponder al centro del circulo verde. Los ajustes finos se pueden hacer con el tamaño de la fuente y la posición vertical para garantizar que el resultado final sea estéticamente agradable.
+2. El fondo esta puesto en rojo dibujando un rectangulo [`<rect/>`](/en/SVG/Element/rect) que cubre el area de la imagen.
+3. Un circulo verde [`<circle/>`](/en/SVG/Element/circle) con un radio de 80px y se dibuja en el centro del rectangulo rojo(offset 30+120px inward, and 50+50px upward).
+4. El texto "SVG" esta dibujado. El interior de cada letra esta relleno con blanco.El texto se coloca mediante el establecimiento de un ancla en donde queremos que el punto medio sea: en este caso, el punto medio debe corresponder al centro del circulo verde. Los ajustes finos se pueden hacer con el tamaño de la fuente y la posición vertical para garantizar que el resultado final sea estéticamente agradable.
 
 ### Basic properties of SVG files
 
@@ -49,18 +49,22 @@ El proceso de renderizado incluye lo siguiente :
   - If the HTML is HTML5, and the browser is a conforming HTML5 browser, the SVG can be directly embedded, too. However, there may be syntax changes necessary to conform to the HTML5 specification
   - The SVG file can be referenced with an `object` element:
 
-                <object data="image.svg" type="image/svg+xml" />
+    ```html
+    <object data="image.svg" type="image/svg+xml" />
+    ```
 
   - Likewise an `iframe` element can be used:
 
-                <iframe src="image.svg"></iframe>
+    ```html
+    <iframe src="image.svg"></iframe>
+    ```
 
   - An `img` element can be used theoretically, too. However this technique doesn't work in Firefox before 4.0.
   - Finally SVG can be created dynamically with JavaScript and injected into the HTML DOM. This has the advantage, that replacement technologies for browsers, that can't process SVG, can be implemented.
 
-  See [this dedicated article](/en/SVG_In_HTML_Introduction "en/svg in html introduction") for an in-depth dealing with the topic.
+  See [this dedicated article](/en/SVG_In_HTML_Introduction) for an in-depth dealing with the topic.
 
-- How SVG handles sizes and units will be explained [on the next page](/en/SVG/Tutorial/Positions "en/SVG/Tutorial/Positions").
+- How SVG handles sizes and units will be explained [on the next page](/en/SVG/Tutorial/Positions).
 
 ### SVG File Types
 
@@ -72,12 +76,16 @@ Due to the potentially massive size SVG files can reach when used for some appli
 
 Now that you have an idea of how to create basic SVG files, the next stage is to upload them to a Webserver. There are some gotchas at this stage though. For normal SVG files, servers should send the HTTP header:
 
-    Content-Type: image/svg+xml
+```
+Content-Type: image/svg+xml
+```
 
 For gzip-compressed SVG files, servers should send the HTTP headers:
 
-    Content-Type: image/svg+xml
-    Content-Encoding: gzip
+```
+Content-Type: image/svg+xml
+Content-Encoding: gzip
+```
 
 You can check that your server is sending the correct HTTP headers with your SVG files by using a site such as [web-sniffer.net](http://web-sniffer.net/). Submit the URL of one of your SVG files and look at the HTTP response headers. If you find that your server is not sending the headers with the values given above, then you should contact your Web host. If you have problems convincing them to correctly configure their servers for SVG, there may be ways to do it yourself. See the [server configuration page](http://svg-whiz.com/wiki/index.php?title=Server_Configuration) on the SVG wiki for a range of simple solutions.
 

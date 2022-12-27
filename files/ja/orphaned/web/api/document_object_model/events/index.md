@@ -32,7 +32,7 @@ function greet(event){
 
 これが最近のウェブページで使われる方法です。
 
-> **Note:** **注:** Internet Explorer 6 から 8 はこの方法をサポートせず、 {{domxref("EventTarget.attachEvent")}} という似た API を代わりにサポートします。ブラウザー間の互換性を確保するには、数多くある JavaScript ライブラリのうちの一つを使用してください。
+> **Note:** Internet Explorer 6 から 8 はこの方法をサポートせず、 {{domxref("EventTarget.attachEvent")}} という似た API を代わりにサポートします。ブラウザー間の互換性を確保するには、数多くある JavaScript ライブラリのうちの一つを使用してください。
 
 さらに詳細を知りたい場合は {{domxref("EventTarget.addEventListener")}} のリファレンスを参照してください。
 

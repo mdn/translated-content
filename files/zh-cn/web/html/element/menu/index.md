@@ -2,6 +2,7 @@
 title: <menu>
 slug: Web/HTML/Element/menu
 ---
+
 {{HTMLRef}}{{SeeCompatTable}}
 
 **HTML `<menu>` 元素**呈现了一组用户可执行或激活的命令。这既包含了可能出现在屏幕顶端的列表菜单，也包含了那些隐藏在按钮之下、当点击按钮后显示出来的文本菜单。
@@ -160,7 +161,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.menu")}}
+{{Compat}}
 
 ## 参见
 

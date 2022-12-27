@@ -3,6 +3,7 @@ title: <input type="range">
 slug: Web/HTML/Element/input/range
 original_slug: Web/HTML/Element/Input/范围
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} **`range`** 类型的元素允许用户指定一个数值，该数值必须不小于给定值，并且不得大于另一个给定值。但是，精确值并不重要。通常使用滑块或拨号控件而不是像 {{HTMLElement('input/number', 'number')}} 输入类型这样的文本输入框来表示。 由于这种小部件不精确，因此除非控件的确切值不重要，否则通常不应使用它。

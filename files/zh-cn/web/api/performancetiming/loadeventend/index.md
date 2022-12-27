@@ -2,6 +2,7 @@
 title: PerformanceTiming.loadEventEnd
 slug: Web/API/PerformanceTiming/loadEventEnd
 ---
+
 {{APIRef("Navigation Timing")}}
 
 ## 概要

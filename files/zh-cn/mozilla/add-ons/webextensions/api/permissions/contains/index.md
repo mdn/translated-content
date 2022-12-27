@@ -2,6 +2,7 @@
 title: permissions.contains()
 slug: Mozilla/Add-ons/WebExtensions/API/permissions/contains
 ---
+
 {{AddonSidebar()}}
 
 检查扩展名是否具有给定 {{WebExtAPIRef("permissions.Permissions")}} 对象中列出的权限。
@@ -29,7 +30,7 @@ A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.permissions.contains")}}
+{{Compat}}
 
 ## Examples
 

@@ -2,6 +2,7 @@
 title: Stream API
 slug: Web/API/Streams_API
 ---
+
 {{DefaultAPISidebar("Streams")}}
 
 Streams API 允许 JavaScript 以编程方式访问从网络接收的数据流，并且允许开发人员根据需要处理它们。

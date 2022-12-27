@@ -3,6 +3,7 @@ title: How to write an API reference
 slug: MDN/Writing_guidelines/Howto/Write_an_api_reference
 original_slug: MDN/Contribute/Howto/Write_an_API_reference
 ---
+
 {{MDNSidebar}}
 
 This guide takes you through all you need to know to write an API reference on MDN.

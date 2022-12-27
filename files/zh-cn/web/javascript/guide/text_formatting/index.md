@@ -2,6 +2,7 @@
 title: 文本格式化
 slug: Web/JavaScript/Guide/Text_formatting
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_dates", "Web/JavaScript/Guide/Regular_Expressions")}}
 
 本章介绍在 Javascript 中如何使用字符串与文本内容。

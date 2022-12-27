@@ -82,7 +82,7 @@ For an alphabetical listing see the sidebar on the left.
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements")}}
+{{Compat}}
 
 ## 參見
 

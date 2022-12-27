@@ -3,6 +3,7 @@ title: dragenter
 slug: Web/API/HTMLElement/dragenter_event
 original_slug: Web/API/Document/dragenter_event
 ---
+
 当拖动的元素或被选择的文本进入有效的放置目标时， `dragenter` 事件被触发。
 
 ## 基本信息
@@ -67,7 +68,7 @@ original_slug: Web/API/Document/dragenter_event
 
 ## 浏览器支持
 
-{{Compat("api.Document.dragenter_event")}}
+{{Compat}}
 
 ## 相关
 

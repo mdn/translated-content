@@ -3,6 +3,7 @@ title: <url>
 slug: Web/CSS/url
 original_slug: Web/CSS/url()
 ---
+
 {{ CssRef() }}
 
 ## 概述
@@ -53,4 +54,4 @@ ul { list-style: square url(http://www.example.com/redball.png) }
 
 ## 浏览器兼容性
 
-{{Compat("css.types.url")}}
+{{Compat}}

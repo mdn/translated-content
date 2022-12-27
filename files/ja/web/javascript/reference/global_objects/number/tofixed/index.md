@@ -2,6 +2,7 @@
 title: Number.prototype.toFixed()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 ---
+
 {{JSRef}}
 
 **`toFixed()`** メソッドは、数を固定小数点表記を用いて整形します。

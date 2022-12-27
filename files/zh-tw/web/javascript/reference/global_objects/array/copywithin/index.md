@@ -108,7 +108,7 @@ if (!Array.prototype.copyWithin) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.copyWithin")}}
+{{Compat}}
 
 ## 參見
 

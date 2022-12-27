@@ -2,6 +2,7 @@
 title: Window.getSelection
 slug: Web/API/Window/getSelection
 ---
+
 {{ ApiRef() }}
 
 返回一个 {{domxref("Selection")}} 对象，表示用户选择的文本范围或光标的当前位置。
@@ -48,7 +49,7 @@ var selectedText = selObj.toString();
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.getSelection")}}
+{{Compat}}
 
 ## 相关链接
 

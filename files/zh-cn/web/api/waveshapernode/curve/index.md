@@ -2,6 +2,7 @@
 title: WaveShaperNode.curve
 slug: Web/API/WaveShaperNode/curve
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("WaveShaperNode") }} 接口的 `curve` 属性是一个描述要被应用的畸变的{{domxref("Float32Array")}} 数组。

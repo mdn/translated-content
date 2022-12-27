@@ -2,6 +2,7 @@
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
+
 {{JSRef}}
 
 **`some()`** 方法测试数组中是不是至少有 1 个元素通过了被提供的函数测试。它返回的是一个 Boolean 类型的值。

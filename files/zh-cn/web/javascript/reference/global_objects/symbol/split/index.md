@@ -2,6 +2,7 @@
 title: Symbol.split
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 ---
+
 {{JSRef}}
 
 **`Symbol.split`** 指向 一个正则表达式的索引处分割字符串的方法。 这个方法通过 {{jsxref("String.prototype.split()")}} 调用。

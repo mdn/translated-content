@@ -2,6 +2,7 @@
 title: background-color
 slug: Web/CSS/background-color
 ---
+
 {{CSSRef}}
 
 ## 概览
@@ -93,7 +94,7 @@ background-color: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.background-color")}}
+{{Compat}}
 
 ## 查看更多
 

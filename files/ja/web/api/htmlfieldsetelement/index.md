@@ -2,6 +2,7 @@
 title: HTMLFieldSetElement
 slug: Web/API/HTMLFieldSetElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLFieldSetElement`** インターフェイスは、 ({{domxref("HTMLElement")}} から継承したものより詳細に) {{ HTMLElement("fieldset") }} 要素のレイアウトと表示を操作するための特別なプロパティやメソッドを提供します。

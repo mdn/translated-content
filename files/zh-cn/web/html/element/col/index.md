@@ -2,6 +2,7 @@
 title: <col>
 slug: Web/HTML/Element/col
 ---
+
 {{HTMLRef}}
 
 **HTML `<col>` 元素** 定义表格中的列，并用于定义所有公共单元格上的公共语义。它通常位于{{HTMLElement("colgroup")}}元素内。
@@ -78,7 +79,7 @@ slug: Web/HTML/Element/col
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.col")}}
+{{Compat}}
 
 ## 相关链接
 

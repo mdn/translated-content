@@ -2,6 +2,7 @@
 title: <area>
 slug: Web/HTML/Element/area
 ---
+
 ## 简要
 
 _HTML `<area>` 元素 在图片上定义一个热点区域，可以关联一个超链接。\<area>元素仅在\<map>元素内部使用。_
@@ -68,7 +69,7 @@ _HTML `<area>` 元素 在图片上定义一个热点区域，可以关联一个�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.area")}}
+{{Compat}}
 
 ## 注意
 

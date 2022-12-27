@@ -2,6 +2,7 @@
 title: <input type="tel">
 slug: Web/HTML/Element/Input/tel
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} **`"tel"`** 类型的元素用于让用户输入和编辑电话号码。不同于[`<input type="email">`](/zh-CN/docs/Web/HTML/Element/input/email) 和 [`<input type="url">`](/zh-CN/docs/Web/HTML/Element/input/url) , 在提交表格之前，输入值不会被自动验证为特定格式，因为世界各地的电话号码格式差别很大。

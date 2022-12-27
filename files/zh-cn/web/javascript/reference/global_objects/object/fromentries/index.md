@@ -2,6 +2,7 @@
 title: Object.fromEntries()
 slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 ---
+
 {{JSRef}}
 
 **`Object.fromEntries()`** 方法把键值对列表转换为一个对象。

@@ -2,6 +2,7 @@
 title: block
 slug: Web/JavaScript/Reference/Statements/block
 ---
+
 {{jsSidebar("Statements")}}
 
 **块语句**（或其他语言的**复合语句**）用于组合零个或多个语句。该块由一对大括号界定，可以是{{jsxref("Statements/label", "labelled")}}：

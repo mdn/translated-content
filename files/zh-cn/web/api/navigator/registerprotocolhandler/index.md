@@ -2,6 +2,7 @@
 title: Navigator.registerProtocolHandler()
 slug: Web/API/Navigator/registerProtocolHandler
 ---
+
 {{APIRef("HTML DOM")}}{{securecontext_header}}
 
 **{{domxref("Navigator")}}** 的方法 **`registerProtocolHandler()`** 让 web 站点为自身注册用于打开或处理特定 URL 方案（又名协议）的能力。

@@ -2,6 +2,7 @@
 title: Math.SQRT1_2
 slug: Web/JavaScript/Reference/Global_Objects/Math/SQRT1_2
 ---
+
 {{JSRef}}
 
 **`Math.SQRT2`** プロパティは、 1/2 の平方根、約 0.707 を表します。

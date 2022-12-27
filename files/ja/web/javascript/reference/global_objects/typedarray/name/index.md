@@ -2,6 +2,7 @@
 title: TypedArray.name
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 ---
+
 {{JSRef}}
 
 **`TypedArray.name`** プロパティは、型付き配列のコンストラクターの名称を文字列値で表します。

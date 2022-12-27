@@ -2,6 +2,7 @@
 title: Window.devicePixelRatio
 slug: Web/API/Window/devicePixelRatio
 ---
+
 {{APIRef}}
 
 {{domxref("Window")}} 接口的 **`devicePixelRatio`** 返回当前显示设备的*物理像素*分辨率与*CSS 像素*分辨率之比。 此值也可以解释为像素大小的比率：一个 CSS 像素的大小与一个物理像素的大小。 简单来说，它告诉浏览器应使用多少屏幕实际像素来绘制单个 CSS 像素。

@@ -2,6 +2,7 @@
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
 ---
+
 {{JSRef}}
 
 **`Math.atan()`** 関数は、引数として与えた数値のアークタンジェントをラジアン単位で返します。

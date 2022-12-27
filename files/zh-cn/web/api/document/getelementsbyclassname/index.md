@@ -2,6 +2,7 @@
 title: Document.getElementsByClassName()
 slug: Web/API/Document/getElementsByClassName
 ---
+
 {{APIRef("DOM")}}
 
 返回一个包含了所有指定类名的子元素的类数组对象。当在 document 对象上调用时，会搜索整个 DOM 文档，包含根节点。你也可以在任意元素上调用{{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} 方法，它将返回的是以当前元素为根节点，所有指定类名的子元素。

@@ -122,7 +122,7 @@ if ((x = y)) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.if_else")}}
+{{Compat}}
 
 ## 參見
 

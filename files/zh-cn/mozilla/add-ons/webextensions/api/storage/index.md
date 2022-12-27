@@ -2,6 +2,7 @@
 title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
 ---
+
 {{AddonSidebar}}使浏览器扩展能够储存及获取数据，以及监听储存的数据的变化。
 
 此存储系统 API 基于 [Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API), 并有少许不同。
@@ -35,7 +36,7 @@ storage 有 3 个属性，每一个代表不同的存储区域。
 
 ## 浏览器兼容性
 
-{{Compat("webextensions.api.storage")}}
+{{Compat}}
 
 > **备注：** "Chrome 不兼容"这部分来源于 [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) 使用[WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >

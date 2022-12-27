@@ -2,6 +2,7 @@
 title: Crypto.subtle
 slug: Web/API/Crypto/subtle
 ---
+
 {{APIRef("Web Crypto API")}}
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
@@ -24,7 +25,7 @@ var crypto = crypto.subtle;
 
 ## 浏览器支持
 
-{{Compat("api.Crypto.subtle")}}
+{{Compat}}
 
 ## 另见
 

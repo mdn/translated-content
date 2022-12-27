@@ -9,7 +9,7 @@ original_slug: Web/API/SpeechRecognition/onnomatch
 
 {{domxref("SpeechRecognitionAlternative.confidence","confidence")}}の閾値を超えたり満たしたりしない程度の認識がされた場合も含まれます。
 
-> **Note:** 注意：`onnomatch` ハンドラーは Firefox でまだ良く動作していませんので — 音声認識 API は正規なマッチを返し、文法の辞書による項目を推測します。この不具合は今対応中です。
+> **Note:** `onnomatch` ハンドラーは Firefox でまだ良く動作していませんので — 音声認識 API は正規なマッチを返し、文法の辞書による項目を推測します。この不具合は今対応中です。
 
 ## 構文
 

@@ -2,6 +2,7 @@
 title: HTMLAnchorElement
 slug: Web/API/HTMLAnchorElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAnchorElement`** 接口表示超链接元素，并提供一些特别的属性和方法（除了那些继承自普通 {{domxref("HTMLElement")}}对象接口的之外）以用于操作这些元素的布局和显示。
@@ -82,7 +83,7 @@ The `blur()` and `focus()` methods are inherited from {{domxref("HTMLElement")}}
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAnchorElement")}}
+{{Compat}}
 
 ## See also
 

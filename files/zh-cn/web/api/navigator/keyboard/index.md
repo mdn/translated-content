@@ -2,6 +2,7 @@
 title: Navigator.keyboard
 slug: Web/API/Navigator/keyboard
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`keyboard`** read-only property of the {{domxref("navigator")}} interface returns a {{domxref('Keyboard')}} object which provides access to functions that retrieve keyboard layout maps and toggle capturing of key presses from the physical keyboard.

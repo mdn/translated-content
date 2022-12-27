@@ -2,6 +2,7 @@
 title: handler.preventExtensions()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 ---
+
 {{JSRef}}
 
 **`handler.preventExtensions()`** は {{jsxref("Object.preventExtensions()")}} に対するトラップです。

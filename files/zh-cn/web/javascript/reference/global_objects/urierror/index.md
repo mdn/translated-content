@@ -2,6 +2,7 @@
 title: URIError
 slug: Web/JavaScript/Reference/Global_Objects/URIError
 ---
+
 {{JSRef}}
 
 URIError 对象用来表示以一种错误的方式使用全局 URI 处理函数而产生的错误。

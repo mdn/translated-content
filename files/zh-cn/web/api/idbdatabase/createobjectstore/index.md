@@ -2,6 +2,7 @@
 title: IDBDatabase.createObjectStore()
 slug: Web/API/IDBDatabase/createObjectStore
 ---
+
 {{ APIRef("IndexedDB") }}
 
 {{domxref("IDBDatabase")}} 接口的 **`createObjectStore()`** 方法创建并返回一个新的 object store 或 index。

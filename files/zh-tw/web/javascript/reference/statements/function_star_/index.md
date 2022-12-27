@@ -133,7 +133,7 @@ const bar = foo();console.log(bar.next()); // {value: 10, done: false}
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.statements.generator_function")}}
+{{Compat}}
 
 ## Firefox 規範註記
 

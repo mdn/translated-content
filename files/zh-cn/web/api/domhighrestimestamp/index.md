@@ -2,6 +2,7 @@
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
 ---
+
 {{APIRef("High Resolution Time")}}
 
 **`DOMHighResTimeStamp`** 是一个 double 类型，用于存储毫秒级的时间值。这种类型可以用来描述离散的时间点或者一段时间（两个离散时间点之间的时间差）。
@@ -82,7 +83,7 @@ let elapsedTime = performance.now() - startTime;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMHighResTimestamp")}}
+{{Compat}}
 
 ## 相关内容
 

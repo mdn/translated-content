@@ -287,7 +287,7 @@ border: 1px solid black;
 
 ## `瀏覽器相容性`
 
-{{Compat("html.elements.table")}}
+{{Compat}}
 
 ## 參見
 

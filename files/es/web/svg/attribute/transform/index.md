@@ -127,4 +127,4 @@ The following elements can use the `transform` attribute:
 - {{ SVGElement("switch") }}
 - {{ SVGElement("use") }}
 - {{ SVGElement("svg") }} (SVG 2 onwards)
-- [Graphics elements](/en/SVG/Element#Graphics "en/SVG/Element#Graphics") »
+- [Graphics elements](/en/SVG/Element#Graphics) »

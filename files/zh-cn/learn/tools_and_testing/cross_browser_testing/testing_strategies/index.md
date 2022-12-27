@@ -3,6 +3,7 @@ title: 进行测试的策略
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 original_slug: Learn/Tools_and_testing/Cross_browser_testing/测试策略
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 这篇文章主要是讨论如何进行跨浏览器测试，回答一些比较常见的疑惑，譬如：“什么是跨浏览器测试？”，“会遇到哪些常见的问题？”以及“如何测试、区分以及修复问题？”

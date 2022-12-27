@@ -2,6 +2,7 @@
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 ---
+
 {{JSRef}}
 
 JavaScript の **`Date`** オブジェクトは、単一の瞬間の時刻をプラットフォームに依存しない形式で表します。 `Date` オブジェクトは協定世界時 (UTC) の 1970 年 1 月 1 日からの経過ミリ秒数を表す `Number` の値を含んでいます。

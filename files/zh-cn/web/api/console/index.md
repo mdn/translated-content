@@ -2,6 +2,7 @@
 title: Console
 slug: Web/API/Console
 ---
+
 {{APIRef("Console API")}}
 
 **`Console`** 对象提供了浏览器控制台调试的接口（如：Firefox 的 [Web Console](/zh-CN/docs/Tools/Web_Console)）。在不同浏览器上它的工作方式可能不一样，但通常都会提供一套共性的功能。

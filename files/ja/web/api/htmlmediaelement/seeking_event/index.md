@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: seeking イベント'
 slug: Web/API/HTMLMediaElement/seeking_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `seeking` イベントは、シーク操作が開始されると発生します。つまり、論理属性の `seeking` を `true` に変更し、メディアが新しい位置をシークしている状態になります。

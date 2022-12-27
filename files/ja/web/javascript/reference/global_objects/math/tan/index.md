@@ -2,6 +2,7 @@
 title: Math.tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 ---
+
 {{JSRef}}
 
 **`Math.tan()`** 関数は、数値のタンジェントを返します。

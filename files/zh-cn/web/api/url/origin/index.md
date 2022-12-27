@@ -2,6 +2,7 @@
 title: URL.origin
 slug: Web/API/URL/origin
 ---
+
 {{APIRef("URL API")}}
 
 **`URL.origin`** 是一个只读属性，返回一个 {{domxref("USVString")}} 类型值，包含 URL 源经过 Unicode 序列化之后的值，也就是：

@@ -2,6 +2,7 @@
 title: RTCPeerConnection()
 slug: Web/API/RTCPeerConnection/RTCPeerConnection
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 **`RTCPeerConnection()`** 构造函数，返回一个新建的 {{domxref("RTCPeerConnection")}} 实例，它代表了本地端机器与远端机器的一条连接。

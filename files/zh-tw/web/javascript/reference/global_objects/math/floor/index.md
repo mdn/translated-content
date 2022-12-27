@@ -121,7 +121,7 @@ Math.ceil10(-59, 1);       // -50
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Math.floor")}}
+{{Compat}}
 
 ## 參見
 

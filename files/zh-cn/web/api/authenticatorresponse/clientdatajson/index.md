@@ -2,6 +2,7 @@
 title: AuthenticatorResponse.clientDataJSON
 slug: Web/API/AuthenticatorResponse/clientDataJSON
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`clientDataJSON`** property of the {{domxref("AuthenticatorResponse")}} interface stores a [JSON](/zh-CN/docs/Learn/JavaScript/Objects/JSON) string in an {{domxref("ArrayBuffer")}}, representing the client data that was passed to {{domxref("CredentialsContainer.create()")}} or {{domxref("CredentialsContainer.get()")}}. This property is only accessed on one of the child objects of `AuthenticatorResponse`, specifically {{domxref("AuthenticatorAttestationResponse")}} or {{domxref("AuthenticatorAssertionResponse")}}.
@@ -58,4 +59,4 @@ console.log(clientDataObj.origin);    // the window.origin
 
 ## 浏览器兼容性
 
-{{Compat("api.AuthenticatorResponse.clientDataJSON")}}
+{{Compat}}

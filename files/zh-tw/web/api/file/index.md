@@ -55,7 +55,7 @@ _`File` 介面沒有定義任何方法，但繼承了 {{domxref("Blob")}} 介面
 
 ## 瀏覽器相容性
 
-{{Compat("api.File")}}
+{{Compat}}
 
 ### 實作備註
 

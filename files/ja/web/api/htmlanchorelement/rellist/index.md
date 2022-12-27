@@ -2,6 +2,7 @@
 title: HTMLAnchorElement.relList
 slug: Web/API/HTMLAnchorElement/relList
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAnchorElement.relList`** 読み取り専用プロパティは、{{htmlattrxref("rel", "a")}} 属性を反映しています。 これは生きた {{domxref("DOMTokenList")}} で、{{HTMLElement("a")}} 要素で表されるリソースと現在のドキュメントの間の関係を示す[リンク種別](/ja/docs/Web/HTML/Link_types)のセットが入ります。

@@ -2,6 +2,7 @@
 title: Element.setAttribute()
 slug: Web/API/Element/setAttribute
 ---
+
 {{APIRef("DOM")}}
 
 设置指定元素上的某个属性值。如果属性已经存在，则更新该值；否则，使用指定的名称和值添加一个新的属性。
@@ -75,7 +76,7 @@ b.setAttribute("disabled", "");
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.setAttribute")}}
+{{Compat}}
 
 ### Gecko 备注
 

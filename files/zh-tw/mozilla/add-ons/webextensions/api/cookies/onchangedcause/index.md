@@ -24,7 +24,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies/OnChangedCause
 
 ## 瀏覽器相容性
 
-{{Compat("webextensions.api.cookies.OnChangedCause")}}
+{{Compat}}
 
 ## 示例
 

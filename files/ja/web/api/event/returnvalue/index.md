@@ -2,6 +2,7 @@
 title: Event.returnValue
 slug: Web/API/Event/returnValue
 ---
+
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
 {{domxref("Event")}} の **`returnValue`** は、このイベントの既定のアクションが禁止されているかどうかを示します。

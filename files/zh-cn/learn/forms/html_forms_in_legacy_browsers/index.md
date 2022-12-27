@@ -2,6 +2,7 @@
 title: 旧式浏览器中的 HTML 表单
 slug: Learn/Forms/HTML_forms_in_legacy_browsers
 ---
+
 {{LearnSidebar}}
 
 所有 web 开发者很快就会（有时候是痛苦地）发现 Web 是一个令人不快的地方。我们碰到的最恶毒的诅咒是旧式浏览器。好吧，让我们承认吧，当我们提到“旧式浏览器”时，脑海中出现就是 Safari 和 Internet Explorer……但是，这远远不是全部。那么，在移动世界呢？当浏览器和 OS（操作系统）都不能更新时？是的，有非常多老版本的 Android 手机或 iPhone 没有更新到最新的浏览器。它们同样是旧式浏览器。

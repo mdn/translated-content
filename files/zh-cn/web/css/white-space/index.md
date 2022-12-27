@@ -2,6 +2,7 @@
 title: white-space
 slug: Web/CSS/white-space
 ---
+
 {{CSSRef}}
 
 **`white-space`** CSS 属性是用来设置如何处理元素中的 {{Glossary("whitespace", "空白")}}。

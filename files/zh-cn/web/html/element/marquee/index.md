@@ -2,6 +2,7 @@
 title: <marquee>
 slug: Web/HTML/Element/marquee
 ---
+
 {{HTMLRef}}{{deprecated_header}}
 
 HTML marquee 元素（`<marquee>）` 用来插入一段滚动的文字。你可以使用它的属性控制当文本到达容器边缘发生的事情。
@@ -71,4 +72,4 @@ HTML marquee 元素（`<marquee>）` 用来插入一段滚动的文字。你可�
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.marquee")}}
+{{Compat}}

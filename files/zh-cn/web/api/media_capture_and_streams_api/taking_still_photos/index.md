@@ -2,6 +2,7 @@
 title: Taking still photos with WebRTC
 slug: Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 ---
+
 {{WebRTCSidebar}}
 
 本文介绍如何使用 WebRTC 在 支持 WebRTC 的计算机或手机上访问摄像机，并用其拍照。 [尝试一下这个示例](https://mdn-samples.mozilla.org/s/webrtc-capturestill)，然后继续阅读，了解它的工作原理。

@@ -2,6 +2,7 @@
 title: Event.initEvent()
 slug: Web/API/Event/initEvent
 ---
+
 {{ ApiRef("DOM") }}{{deprecated_header}}
 
 **`Event.initEvent()`** 方法可以用来初始化由{{domxref("Document.createEvent()") }} 创建的 {{ domxref("event") }} 实例。
@@ -49,7 +50,7 @@ elem.dispatchEvent(event);
 
 ## 浏览器兼容
 
-{{Compat("api.Event.initEvent")}}
+{{Compat}}
 
 ## 另见
 

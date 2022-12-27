@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.fillRect()
 slug: Web/API/CanvasRenderingContext2D/fillRect
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.fillRect()`** 是 Canvas 2D API 绘制填充矩形的方法。当前渲染上下文中的`fillStyle` 属性决定了对这个矩形对的填充样式。
@@ -107,7 +108,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.fillRect")}}
+{{Compat}}
 
 ## 参见
 

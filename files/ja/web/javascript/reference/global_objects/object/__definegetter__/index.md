@@ -2,6 +2,7 @@
 title: Object.prototype.__defineGetter__()
 slug: Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__
 ---
+
 {{JSRef}}
 
 > **Warning:** この機能は非推奨となり、[オブジェクト初期化子の構文](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)または {{jsxref("Object.defineProperty()")}} API を使用してゲッターを定義する方法で置き換えられました。この機能は広く実装されていますが、古い使い方であるために [ECMAScript 仕様書](https://tc39.github.io/ecma262/#sec-additional-ecmascript-features-for-web-browsers)で非推奨となっています。よりよい代替策が存在するので、このメソッドを使用しないでください。

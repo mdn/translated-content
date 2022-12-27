@@ -2,6 +2,7 @@
 title: Element.classList
 slug: Web/API/Element/classList
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.classList`** は読み取り専用のプロパティで、生きた {{domxref("DOMTokenList")}} コレクションでその要素の `class` 属性を返します。これを使用してクラスリストを操作することができます。

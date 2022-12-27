@@ -2,6 +2,7 @@
 title: Ajax
 slug: Web/Guide/AJAX
 ---
+
 **[新手入门](/zh-CN/docs/Web/Guide/AJAX/Getting_Started)**
 Ajax 简介
 

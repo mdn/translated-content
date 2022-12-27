@@ -2,6 +2,7 @@
 title: Reflect.has()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 ---
+
 {{JSRef}}
 
 静态方法 **`Reflect.has()`** 作用与 [`in` 操作符](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 相同。

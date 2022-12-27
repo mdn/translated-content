@@ -2,6 +2,7 @@
 title: get Map[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
+
 {{JSRef}}
 
 **`Map[@@species]`** アクセサープロパティは、 `Map` コンストラクターを返します。

@@ -2,6 +2,7 @@
 title: 乘法 (*)
 slug: Web/JavaScript/Reference/Operators/Multiplication
 ---
+
 {{jsSidebar("Operators")}}
 
 乘法运算符 (`*`) 计算操作数的乘积。

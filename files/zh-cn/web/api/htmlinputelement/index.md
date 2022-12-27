@@ -2,6 +2,7 @@
 title: HTMLInputElement
 slug: Web/API/HTMLInputElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLInputElement`** 接口提供了特定的属性和方法（继承自常规的{{domxref("HTMLElement", "HTML元素")}}接口）用于管理输入元素的布局和外观。
@@ -305,7 +306,7 @@ slug: Web/API/HTMLInputElement
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLInputElement")}}
+{{Compat}}
 
 ## 参见
 

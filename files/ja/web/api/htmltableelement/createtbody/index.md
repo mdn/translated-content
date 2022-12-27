@@ -2,6 +2,7 @@
 title: HTMLTableElement.createTBody()
 slug: Web/API/HTMLTableElement/createTBody
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`createTBody()`** は {{domxref("HTMLTableElement")}} オブジェクトのメソッドで、この {{HtmlElement("table")}} に関連付けられた新しい {{HTMLElement("tbody")}} 要素を返します。

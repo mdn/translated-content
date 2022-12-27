@@ -3,6 +3,7 @@ title: Autoplay guide for media and Web Audio APIs
 slug: Web/Media/Autoplay_guide
 original_slug: Web/媒体/Autoplay_guide
 ---
+
 网页加载完成后立即播放音频（或带有音频轨道的视频）可能会意外地打扰到用户。尽管自动播放媒体文件是一个很实用的功能，但是我们也应该谨慎地使用它，保证只有在它被需要的时候才使用。为了让用户拥有控制权，通常浏览器会提供各种方式禁用自动播放音频功能。在这篇文章中，我们将介绍各种媒体和 Web Audio APIs 的自动播放功能，包括关于如何使用自动播放功能、如何优雅的处理阻止自动播放功能的一些简短的介绍。
 
 Autoplay blocking is _not_ applied to {{HTMLElement("video")}} elements when the source media does not have an audio track, or if the audio track is muted. Media with an active audio track are considered to be **audible**, and autoplay blocking applies to them. **Inaudible** media are not affected by autoplay blocking.

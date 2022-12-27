@@ -2,6 +2,7 @@
 title: ':dir()'
 slug: Web/CSS/:dir
 ---
+
 {{ CSSRef() }}
 
 {{ SeeCompatTable() }}
@@ -39,7 +40,7 @@ slug: Web/CSS/:dir
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.dir")}}
+{{Compat}}
 
 ## 参见
 

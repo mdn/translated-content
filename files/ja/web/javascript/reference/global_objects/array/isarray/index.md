@@ -2,6 +2,7 @@
 title: Array.isArray()
 slug: Web/JavaScript/Reference/Global_Objects/Array/isArray
 ---
+
 {{JSRef}}
 
 **`Array.isArray()`** メソッドは、渡された値が {{jsxref("Array")}} かどうかを判断します。

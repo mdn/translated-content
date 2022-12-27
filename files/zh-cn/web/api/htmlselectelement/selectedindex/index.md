@@ -2,6 +2,7 @@
 title: HTMLSelectElement.selectedIndex
 slug: Web/API/HTMLSelectElement/selectedIndex
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLSelectElement.selectedIndex`** 是一个长整型数，它反映了被选中的第一个 {{HTMLElement("option")}} 元素的索引值。值为-1 时表明没有元素被选中。
@@ -51,4 +52,4 @@ selectElem.addEventListener('change', function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLSelectElement.selectedIndex")}}
+{{Compat}}

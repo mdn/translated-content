@@ -39,7 +39,7 @@ console.log(1 / Infinity     ); /* 0 */
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Infinity")}}
+{{Compat}}
 
 ## 參見
 

@@ -2,6 +2,7 @@
 title: Touch.screenX
 slug: Web/API/Touch/screenX
 ---
+
 {{ ApiRef() }}
 
 ### 概述

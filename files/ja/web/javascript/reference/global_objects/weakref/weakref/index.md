@@ -2,6 +2,7 @@
 title: WeakRef() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef/WeakRef
 ---
+
 {{JSRef}}
 
 **`WeakRef`** コンストラクターは、指定された対象オブジェクトを参照する {{jsxref("WeakRef")}} オブジェクトを生成します。

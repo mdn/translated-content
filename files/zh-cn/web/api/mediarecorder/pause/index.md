@@ -2,6 +2,7 @@
 title: MediaRecorder.pause()
 slug: Web/API/MediaRecorder/pause
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 The **`Media.pause()`** method (part of the [MediaRecorder API](/zh-CN/docs/Web/API/MediaRecorder_API)) is used to pause recording of media streams.
@@ -47,7 +48,7 @@ MediaRecorder.pause()
 
 ## Browser compatibility
 
-{{Compat("api.MediaRecorder.pause")}}
+{{Compat}}
 
 ## See also
 

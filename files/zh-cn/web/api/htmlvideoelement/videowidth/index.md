@@ -2,6 +2,7 @@
 title: HTMLVideoElement.videoWidth
 slug: Web/API/HTMLVideoElement/videoWidth
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLVideoElement")}} 接口提供只读的 **`videoWidth`** 属性，指示视频的 [固有宽度](/zh-CN/docs/Web/API/HTMLVideoElement/videoHeight#about_intrinsic_width_and_height)，使用css的像素值表示。

@@ -2,6 +2,7 @@
 title: HTML 文字处理基础
 slug: Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML 的主要工作是编辑文本结构和文本内容（也称为语义{{glossary("semantics")}}），以便浏览器能正确的显示。本文介绍了 {{glossary("HTML")}}的使用方法：在一段文本中添加标题和段落，强调语句，创建列表等等。

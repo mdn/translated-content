@@ -2,6 +2,7 @@
 title: Canvas size and WebGL
 slug: Web/API/WebGL_API/By_example/Canvas_size_and_WebGL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Basic_scissoring","Learn/WebGL/By_example/Boilerplate_1")}}
 
 此 WebGL 案例将探究设置（或不设置）Canvas 属性的宽高值在浏览器中显示的影响。

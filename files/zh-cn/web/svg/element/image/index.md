@@ -2,6 +2,7 @@
 title: image
 slug: Web/SVG/Element/image
 ---
+
 {{SVGRef}}
 
 SVG 文档中的 SVG 元素包含图像信息。它表现为图像文件或者其他 SVG 文件。

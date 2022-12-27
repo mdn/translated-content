@@ -105,7 +105,7 @@ str3.match(null);       // returns ["null"]
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.String.match")}}
+{{Compat}}
 
 ## Firefox-specific notes
 

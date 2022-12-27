@@ -2,6 +2,7 @@
 title: FinalizationRegistry() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/FinalizationRegistry
 ---
+
 {{JSRef}}
 
 **`FinalizationRegistry`** コンストラクターは、指定されたコールバックを使用する {{jsxref("FinalizationRegistry")}} オブジェクトを生成します。

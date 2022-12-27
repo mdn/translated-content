@@ -31,7 +31,7 @@ This API has no official W3C or WHATWG specification.
 
 ## 瀏覽器相容性
 
-{{Compat("api.FileSystem")}}
+{{Compat}}
 
 ## 參見
 

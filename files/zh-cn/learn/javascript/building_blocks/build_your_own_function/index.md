@@ -2,6 +2,7 @@
 title: 创建您自己的函数
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
 我们在之前的文章里大多学的是理论，这篇文章将提供一个练习的机会——您将练习构建一些您自己风格的函数。在练习过程中，我们也会解释一些针对函数的更深层的实用细节。

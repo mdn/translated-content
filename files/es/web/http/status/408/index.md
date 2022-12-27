@@ -15,7 +15,9 @@ Esta respuesta es usada mucho más desde que algunos navegadores, como Chrome, F
 
 ## Estado
 
-    408 Request Timeout
+```
+408 Request Timeout
+```
 
 ## Especificaciones
 

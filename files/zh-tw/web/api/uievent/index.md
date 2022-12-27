@@ -54,7 +54,7 @@ _此介面亦繼承其父－－ {{domxref("Event")}} 的方法：_
 
 ## 瀏覽器相容性
 
-{{Compat("api.UIEvent")}}
+{{Compat}}
 
 ## 參見
 

@@ -2,6 +2,7 @@
 title: Array.prototype.shift()
 slug: Web/JavaScript/Reference/Global_Objects/Array/shift
 ---
+
 {{JSRef}}
 
 **`shift()`** メソッドは、配列から**最初**の要素を取り除き、その要素を返します。このメソッドは配列の長さを変えます。

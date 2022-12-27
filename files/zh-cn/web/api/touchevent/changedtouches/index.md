@@ -2,6 +2,7 @@
 title: TouchEvent.changedTouches
 slug: Web/API/TouchEvent/changedTouches
 ---
+
 {{ ApiRef() }}
 
 ### 概述

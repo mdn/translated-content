@@ -2,6 +2,7 @@
 title: ArrayBuffer.prototype.byteLength
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength
 ---
+
 {{JSRef}}
 
 `byteLength访问器属性`表示一个{{jsxref("ArrayBuffer")}} 对象的字节长度。

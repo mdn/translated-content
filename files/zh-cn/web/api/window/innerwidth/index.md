@@ -2,6 +2,7 @@
 title: Window.innerWidth
 slug: Web/API/Window/innerWidth
 ---
+
 {{APIRef}}
 
 只读的 {{domxref("Window")}} 属性 **`innerWidth`** 返回以像素为单位的窗口的内部宽度。如果垂直滚动条存在，则这个属性将包括它的宽度。
@@ -48,7 +49,7 @@ var intOuterFramesetWidth = top.innerWidth;
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.innerWidth")}}
+{{Compat}}
 
 ## 参考
 

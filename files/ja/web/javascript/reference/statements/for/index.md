@@ -2,6 +2,7 @@
 title: for
 slug: Web/JavaScript/Reference/Statements/for
 ---
+
 {{jsSidebar("Statements")}}
 
 **for 文**は、括弧で囲みセミコロンで区切った 3 つの引数と、続いてループ内で実行される文 (ふつうは[ブロック文](/ja/docs/Web/JavaScript/Reference/Statements/block)) から成るループを構成します。
@@ -112,7 +113,7 @@ showOffsetPos('content');
 // top: 153px;"
 ```
 
-> **Note:** **注:** これは、**セミコロンが必須**となる JavaScript の数少ないケースの 1 つです。セミコロンがないと、繰り返し宣言の次の行が繰り返す文と見なされます。
+> **Note:** これは、**セミコロンが必須**となる JavaScript の数少ないケースの 1 つです。セミコロンがないと、繰り返し宣言の次の行が繰り返す文と見なされます。
 
 ## 仕様書
 

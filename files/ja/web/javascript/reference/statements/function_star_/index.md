@@ -2,6 +2,7 @@
 title: function* 宣言
 slug: Web/JavaScript/Reference/Statements/function*
 ---
+
 {{jsSidebar("Statements")}}
 
 **`function*`** 宣言 (`function` キーワードにアスタリスクが付いたもの) は、 {{jsxref("Global_Objects/Generator","Generator")}} オブジェクトを返すジェネレーター関数を定義します。

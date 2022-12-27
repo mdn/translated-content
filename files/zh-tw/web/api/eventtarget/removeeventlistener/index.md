@@ -85,7 +85,7 @@ mouseOverTarget.addEventListener('mouseover', function () {
 
 ## 瀏覽器相容性
 
-{{Compat("api.EventTarget.removeEventListener")}}
+{{Compat}}
 
 ## Polyfill to support older browsers
 

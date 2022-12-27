@@ -2,6 +2,7 @@
 title: RTCPeerConnection.peerIdentity
 slug: Web/API/RTCPeerConnection/peerIdentity
 ---
+
 {{APIRef("WebRTC")}}
 
 只读属性 {{domxref("RTCPeerConnection")}} **`peerIdentity`** ，返回{{jsxref("Promise")}} 对象，成功时返回 {{domxref("RTCIdentityAssertion")}} ，该结构 {{domxref("DOMString")}} 标识了远端的 ID。这个身份标识在连接过程中将不会改变（直到连接结束）.

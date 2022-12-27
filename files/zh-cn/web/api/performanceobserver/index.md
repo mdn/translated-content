@@ -2,6 +2,7 @@
 title: 性能监测对象
 slug: Web/API/PerformanceObserver
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`PerformanceObserver`** 用于*监测*性能度量事件，在浏览器的性能时间轴记录新的 {{domxref("PerformanceEntry","performance entry", '', 'true')}} 的时候将会被通知。

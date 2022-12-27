@@ -2,6 +2,7 @@
 title: Node.textContent
 slug: Web/API/Node/textContent
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref ("Node")}} 接口的 **`textContent`** 属性表示一个节点及其后代的文本内容。

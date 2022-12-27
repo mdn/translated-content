@@ -2,6 +2,7 @@
 title: Web Audio API
 slug: Web/API/Web_Audio_API
 ---
+
 Web Audio API 提供了在 Web 上控制音频的一个非常有效通用的系统，允许开发者来自选音频源，对音频添加特效，使音频可视化，添加空间效果（如平移），等等。
 
 ## Web audio 概念与使用
@@ -329,7 +330,7 @@ function voiceMute() { // toggle to mute and unmute sound
 
 ## 浏览器兼容性
 
-{{Compat("api.AudioContext", 0)}}
+{{Compat}}
 
 ## 相关链接
 

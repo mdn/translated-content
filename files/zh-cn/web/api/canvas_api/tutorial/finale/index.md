@@ -2,6 +2,7 @@
 title: 终曲
 slug: Web/API/Canvas_API/Tutorial/Finale
 ---
+
 恭喜你！你已经结束了 Canvas 的教程！这些知识将帮助你在 web 中创建优秀的 2D 图形。
 
 ## 更多的例子以及教程

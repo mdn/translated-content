@@ -2,6 +2,7 @@
 title: webRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 ---
+
 {{AddonSidebar}}为发出的 HTTP 请求在不同阶段添加事件监听器。事件监听器可以接收到请求的详细信息，也可以修改或取消请求。
 
 ## 概况

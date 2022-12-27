@@ -45,7 +45,7 @@ slug: Web/HTML/Element/ruby
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.ruby")}}
+{{Compat}}
 
 ## 參閱
 

@@ -2,6 +2,7 @@
 title: HTMLMediaElement.load()
 slug: Web/API/HTMLMediaElement/load
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`load()`** 方法重置媒体成初始化状态，选择一个播放源， 为载入媒体重新播放做准备。 媒体预播放的信息是由 **`preload`** 这个参数决定的。
@@ -51,4 +52,4 @@ mediaElem.load();
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLMediaElement.load")}}
+{{Compat}}

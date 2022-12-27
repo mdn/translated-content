@@ -2,6 +2,7 @@
 title: String.prototype.search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 ---
+
 {{JSRef}}
 
 **`search()`** メソッドは、対象の {{jsxref("String")}} オブジェクトが正規表現で一致するかどうかを調べるためのメソッドです。

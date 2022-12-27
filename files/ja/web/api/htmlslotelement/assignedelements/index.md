@@ -2,6 +2,7 @@
 title: HTMLSlotElement.assignedElements()
 slug: Web/API/HTMLSlotElement/assignedElements
 ---
+
 {{APIRef("Shadow DOM API")}}
 
 **`assignedElements()`** は {{domxref("HTMLSlotElement")}} インターフェイスのメソッドで、このスロットに割り当てられた一連の要素を返します (そしてそれ以外の要素を除きます)。

@@ -2,6 +2,7 @@
 title: get Array[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 ---
+
 {{JSRef}}
 
 **`Array[@@species]`** アクセサープロパティは、`Array` コンストラクターを返します。

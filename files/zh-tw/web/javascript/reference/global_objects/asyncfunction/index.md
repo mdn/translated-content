@@ -83,7 +83,7 @@ a(10, 20).then(v => {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.AsyncFunction")}}
+{{Compat}}
 
 ## 參見
 

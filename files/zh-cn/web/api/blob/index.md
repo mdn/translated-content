@@ -2,6 +2,7 @@
 title: Blob
 slug: Web/API/Blob
 ---
+
 {{APIRef("File API")}}
 
 `Blob` 对象表示一个不可变、原始数据的类文件对象。它的数据可以按文本或二进制的格式进行读取，也可以转换成 {{DOMxRef("ReadableStream")}} 来用于数据操作。

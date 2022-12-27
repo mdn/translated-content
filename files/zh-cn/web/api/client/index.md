@@ -2,6 +2,7 @@
 title: Client
 slug: Web/API/Client
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 `Client` 接口表示一个可执行的上下文，如{{domxref("Worker")}}或{{domxref("SharedWorker")}}。{{domxref("Window")}} 客户端由更具体的{{domxref("WindowClient")}}表示。你可以从{{domxref("Clients.matchAll","Clients.matchAll()")}} 和{{domxref("Clients.get","Clients.get()")}}等方法获取`Client`/`WindowClient`对象。

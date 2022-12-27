@@ -2,6 +2,7 @@
 title: Element.localName
 slug: Web/API/Element/localName
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.localName`** 只读属性，返回本地名称的。
@@ -69,7 +70,7 @@ name = element.localName
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.localName")}}
+{{Compat}}
 
 ## 相关链接
 

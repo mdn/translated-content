@@ -3,13 +3,14 @@ title: window.onclose
 slug: Web/API/HTMLDialogElement/close_event
 original_slug: Web/API/GlobalEventHandlers/onclose
 ---
+
 {{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
 **`onclose`** は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、ダイアログ要素に送信された {{event("close")}} イベントを処理するための {{domxref("EventHandler", "イベントハンドラー")}} です。
 
 `close` イベントは、ユーザーが `<dialog>` を閉じたときに発生します。
 
-> **Note:** **注:** ウィンドウのクローズを処理するには、{{domxref("WindowEventHandlers.onbeforeunload", "onbeforeunload")}} または {{domxref("WindowEventHandlers.onunload", "onunload")}} を使用します。
+> **Note:** ウィンドウのクローズを処理するには、{{domxref("WindowEventHandlers.onbeforeunload", "onbeforeunload")}} または {{domxref("WindowEventHandlers.onunload", "onunload")}} を使用します。
 
 ## 構文
 

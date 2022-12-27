@@ -2,6 +2,7 @@
 title: DataTransferItem.getAsString()
 slug: Web/API/DataTransferItem/getAsString
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransferItem.getAsString()`** 当 DataTransferItem 对象的 kind 属性是一个普通 Unicode 字符串时，该方法会用 DataTransferItem 对象的 kind 属性作为入参来执行传入的回调函数 (i.e. `kind` is `string`).
@@ -70,7 +71,7 @@ function drop_handler(ev) {
 
 ## Browser compatibility
 
-{{Compat("api.DataTransferItem.getAsString")}}
+{{Compat}}
 
 ## See also
 

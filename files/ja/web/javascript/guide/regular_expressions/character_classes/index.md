@@ -2,6 +2,7 @@
 title: 文字クラス
 slug: Web/JavaScript/Guide/Regular_Expressions/Character_Classes
 ---
+
 {{JSSidebar("JavaScript Guide")}}
 
 文字クラスは、文字や数字の区別など、文字の種類を区別します。

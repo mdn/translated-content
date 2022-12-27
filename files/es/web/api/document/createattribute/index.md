@@ -51,7 +51,6 @@ console.log(nodo.getAttribute("miAtributo")); // "nuevoVal"
 
 {{Compat}}
 
-
 ## Ver ademas
 
 - {{domxref("Document.createElement()")}}

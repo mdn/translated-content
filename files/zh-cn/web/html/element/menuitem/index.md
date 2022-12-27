@@ -2,6 +2,7 @@
 title: <menuitem>
 slug: Web/HTML/Element/menuitem
 ---
+
 {{HTMLRef}}{{Deprecated_Header("HTML5.2")}}
 
 用户可以通过**HTML `<menuitem>` 元素**生成一个弹出式菜单。这包括上下文菜单，以及按钮可能附带的菜单。

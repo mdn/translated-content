@@ -3,6 +3,7 @@ title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 original_slug: Web/JavaScript/Reference/Global_Objects/Atomics/wake
 ---
+
 {{JSRef}}
 
 静的メソッドである **`Atomics.notify()`** は、待ち行列で休眠状態にあるエージェントに通知します。

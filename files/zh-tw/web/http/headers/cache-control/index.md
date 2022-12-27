@@ -151,7 +151,7 @@ Cache-Control: max-age=0, must-revalidate
 
 ## Browser compatibility
 
-{{Compat("http.headers.Cache-Control")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: Console.debug()
 slug: Web/API/Console/debug
 ---
+
 {{APIRef("Console API")}}
 
 `{{domxref("Console")}}`.**`debug()`** 输出“调试”级别的消息且仅仅控制台配置为显示调试输出时才显示该消息。

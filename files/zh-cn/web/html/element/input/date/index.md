@@ -2,6 +2,7 @@
 title: <input type="date">
 slug: Web/HTML/Element/Input/date
 ---
+
 {{HTMLRef}}
 
 **`type="date"`** 类型的 {{htmlelement("input")}} 元素会创建一个让用户输入一个日期的输入区域，可以使用自动验证内容的文本框，也可以使用特殊的日期选择器界面。结果值包括年份，月份和日期，但*不*包括时间。{{HTMLElement("input/time", "time")}} 和 {{HTMLElement("input/datetime-local", "datetime-local")}} 类型支持时间和日期时间输入。

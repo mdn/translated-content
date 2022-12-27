@@ -2,6 +2,7 @@
 title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
 ---
+
 {{JSRef}}
 
 **`Reflect`** は、JavaScript 操作を受け付けるためのメソッドを提供する組み込みオブジェクトです。メソッドは[プロキシーハンドラー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)のメソッドと同じです。`Reflect` は関数オブジェクトではありませんので、構築することはできません。

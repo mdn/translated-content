@@ -2,6 +2,7 @@
 title: feConvolveMatrix
 slug: Web/SVG/Element/feConvolveMatrix
 ---
+
 {{SVGRef}}
 
 `feConvolveMatrix`元素应用了一个矩阵卷积滤镜效果。一个卷积在输入图像中把像素与邻近像素组合起来制作出结果图像。通过卷积可以实现各种成像操作，包括模糊、边缘检测、锐化、压花和斜角。

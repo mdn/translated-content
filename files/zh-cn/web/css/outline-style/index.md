@@ -2,6 +2,7 @@
 title: outline-style
 slug: Web/CSS/outline-style
 ---
+
 {{CSSRef}}
 
 ## 概要

@@ -2,6 +2,7 @@
 title: handler.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 ---
+
 {{JSRef}}
 
 **`handler.getPrototypeOf()`** メソッドは `[[GetPrototypeOf]]` 内部メソッドに対するトラップです。

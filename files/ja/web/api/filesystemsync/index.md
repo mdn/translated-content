@@ -2,6 +2,7 @@
 title: FileSystemSync
 slug: Web/API/FileSystemSync
 ---
+
 {{APIRef("File System API")}} {{non-standard_header}}
 
 [File System API](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction) では、 `FileSystemSync` オブジェクトはファイルシステムを表します。 それは 2 つの特性を有する。

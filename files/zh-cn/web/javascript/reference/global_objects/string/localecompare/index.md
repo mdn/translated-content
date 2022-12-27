@@ -2,6 +2,7 @@
 title: String.prototype.localeCompare()
 slug: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
+
 {{JSRef}}
 
 **`localeCompare()`** 方法返回一个数字来指示一个参考字符串是否在排序顺序前面或之后或与给定字符串相同。

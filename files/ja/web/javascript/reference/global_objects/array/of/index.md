@@ -2,6 +2,7 @@
 title: Array.of()
 slug: Web/JavaScript/Reference/Global_Objects/Array/of
 ---
+
 {{JSRef}}
 
 **`Array.of()`** メソッドは、引数の数や型にかかわらず、可変長引数から、新しい `Array` インスタンスを生成します。

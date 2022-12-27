@@ -2,6 +2,7 @@
 title: 使用 Service Workers
 slug: Web/API/Service_Worker_API/Using_Service_Workers
 ---
+
 {{ServiceWorkerSidebar}}
 
 本文是关于使用 service workers 的教程，包括讲解 service worker 的基本架构、怎么注册一个 service worker、一个新 service worker 的 install 及 activation 过程、怎么更新 service worker 还有它的缓存控制和自定义响应，这一切都在一个简单的离线的应用程序中。

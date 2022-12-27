@@ -2,6 +2,7 @@
 title: animation-delay
 slug: Web/CSS/animation-delay
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 ## 概述
@@ -44,7 +45,7 @@ animation-delay: 2s, 4ms;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.animation-delay")}}
+{{Compat}}
 
 ## 参见
 

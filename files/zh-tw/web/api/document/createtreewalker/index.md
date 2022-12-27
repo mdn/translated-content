@@ -63,7 +63,7 @@ while(treeWalker.nextNode()) nodeList.push(treeWalker.currentNode);
 
 ## Browser compatibility
 
-{{Compat("api.Document.createTreeWalker")}}
+{{Compat}}
 
 ## See also
 

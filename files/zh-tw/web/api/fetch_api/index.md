@@ -47,7 +47,7 @@ Fetch 提供了 {{domxref("Request")}} 與 {{domxref("Response")}} 物件，還�
 
 ## 瀏覽器相容性
 
-{{Compat("api.fetch")}}
+{{Compat}}
 
 ## 參見
 

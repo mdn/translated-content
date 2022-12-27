@@ -2,6 +2,7 @@
 title: Clients
 slug: Web/API/Clients
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Workers API")}}
 
 `Clients` 接口提供对 {{domxref("Client")}} 对象的访问。通过在 [service worker](/zh-CN/docs/Web/API/ServiceWorker_API) 中使用 `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` 访问它。
@@ -60,7 +61,7 @@ addEventListener('notificationclick', event => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clients")}}
+{{Compat}}
 
 ## See also
 

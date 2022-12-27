@@ -43,7 +43,7 @@ En el código anterior, _`nuevacookie`_ es una cadena de la forma _`clave=valor`
     - El valor _`strict`_ impide que la cookie sea enviada por el navegador al sitio destino en contexto de navegador cross-site, incluso cuando sigue un enlace regular.
     - El valor _`lax`_ sólo envía cookies a las peticiones de GET de ALTO NIVEL. Es suficiente para seguir al usuario, pero evitará muchos ataques CSRF.
 
-- El valor de la cookie puede ser evaluado mediante [encodeURIComponent()](/es/Referencia_de_JavaScript_1.5/Funciones_globales/encodeURIComponent "encodeURIComponent") para asegurarse de que dicha cadena no incluya comas, punto y coma, ni espacios en blanco (lo cual no está permitido en el valor de una cookie).
+- El valor de la cookie puede ser evaluado mediante [encodeURIComponent()](/es/Referencia_de_JavaScript_1.5/Funciones_globales/encodeURIComponent) para asegurarse de que dicha cadena no incluya comas, punto y coma, ni espacios en blanco (lo cual no está permitido en el valor de una cookie).
 - Algunas implementaciones de agente de usuario soporta los siguientes prefijos de cookie:
 
   - `__Secure-` Señales para el navegador que solo deben incluirse en las perticiones de cookie transmitidas por un canal seguro.
@@ -110,13 +110,13 @@ function hazUnaVez() {
 
 ### Seguridad
 
-Es importante mencionar que la restricción path no protege contra la lectura no autorizada de cookies de una ruta distinta. Puede ser fácilmente resuelto mediante DOM (por ejemplo creando un [iframe](/en/HTML/Element/iframe "en/HTML/Element/iframe") oculto con la ruta de la cookie y accediendo a la propiedad contentDocument.cookie del iframe). La única manera de proteger el acceso a cookies es ocupando un dominio o subdominio diferente, debido a la [política de mismo origen](/en/Same_origin_policy_for_JavaScript "Same origin policy for JavaScript").
+Es importante mencionar que la restricción path no protege contra la lectura no autorizada de cookies de una ruta distinta. Puede ser fácilmente resuelto mediante DOM (por ejemplo creando un [iframe](/en/HTML/Element/iframe) oculto con la ruta de la cookie y accediendo a la propiedad contentDocument.cookie del iframe). La única manera de proteger el acceso a cookies es ocupando un dominio o subdominio diferente, debido a la [política de mismo origen](/en/Same_origin_policy_for_JavaScript).
 
 ### Notas
 
-- Empezando con Firefox 2, está disponible un mejor mecanismo de almacenamiento en cliente - [WHATWG DOM Storage](/es/DOM/Storage "es/DOM/Storage").
+- Empezando con Firefox 2, está disponible un mejor mecanismo de almacenamiento en cliente - [WHATWG DOM Storage](/es/DOM/Storage).
 - Puedes eliminar una cookie simplemente estableciendo su fecha de expiración a cero.
-- Cabe mencionar que entre más cookies se tengan, mayor cantidad de datos serán transferidos entre el servidor y el cliente en cada solicitud. Esto reducirá el tiempo entre cada solicitud. Es altamente recomendado que se utilice [WHATWG DOM Storage](/es/DOM/Storage "es/DOM/Storage") si se van a mantener los datos solamente en el cliente.
+- Cabe mencionar que entre más cookies se tengan, mayor cantidad de datos serán transferidos entre el servidor y el cliente en cada solicitud. Esto reducirá el tiempo entre cada solicitud. Es altamente recomendado que se utilice [WHATWG DOM Storage](/es/DOM/Storage) si se van a mantener los datos solamente en el cliente.
 
 ## Especificaciones
 

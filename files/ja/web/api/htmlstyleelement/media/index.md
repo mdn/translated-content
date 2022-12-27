@@ -2,6 +2,7 @@
 title: HTMLStyleElement.media
 slug: Web/API/HTMLStyleElement/media
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLStyleElement.media`** プロパティは、スタイル情報の対象と想定するメディアを指定します。

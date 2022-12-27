@@ -2,6 +2,7 @@
 title: TypedArray.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/find
 ---
+
 {{JSRef}}
 
 如果某个元素满足所提供的测试函数，**`find()`**方法返回类型化数组中的 **值**。否则返回{{jsxref("undefined")}} 。 _TypedArray_ 是这里的 [类型化数组类型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 之一。

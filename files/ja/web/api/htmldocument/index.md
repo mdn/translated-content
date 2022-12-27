@@ -2,6 +2,7 @@
 title: HTMLDocument
 slug: Web/API/HTMLDocument
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 **`HTMLDocument`** は、document オブジェクトに HTML 特有の機能を追加するために、{{domxref("Document")}} インターフェイスを拡張する抽象的なインターフェイスです。これは HTML 文書のルートを表し、その中に [DOM](/ja/docs/Web/API/Document_Object_Model) の階層全体が存在しています。

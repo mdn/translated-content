@@ -2,6 +2,7 @@
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述

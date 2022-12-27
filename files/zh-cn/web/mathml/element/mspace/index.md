@@ -2,6 +2,7 @@
 title: <mspace>
 slug: Web/MathML/Element/mspace
 ---
+
 {{MathMLRef}}
 
 MathML\<mspace>元素用来表示一段空白，空白的大小由它自身的属性决定。

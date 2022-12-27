@@ -2,6 +2,7 @@
 title: prefers-reduced-motion
 slug: Web/CSS/@media/prefers-reduced-motion
 ---
+
 [CSS](/zh-CN/docs/CSS) [媒体查询特性](/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`prefers-reduced-motion`** 用于检测用户的系统是否被开启了动画减弱功能。
 
 ## 语法
@@ -103,7 +104,7 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.media.prefers-reduced-motion")}}
+{{Compat}}
 
 ## 参考
 

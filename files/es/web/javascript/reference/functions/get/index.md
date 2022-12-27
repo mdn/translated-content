@@ -28,7 +28,7 @@ A veces es deseable permitir acceso a una propiedad que retorna un valor dinámi
 Tenga en cuenta lo siguiente al trabajar con la sintaxis `get`:
 
 - Puede tener un identificador que sea un número o una cadena.
-- Debe tener exactamente cero parametros (ver [Cambio ES5 incompatible: las funciones getter y setter literal deben tener ahora exactamente cero o un argumento ](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/)para mas información);
+- Debe tener exactamente cero parametros (ver [Cambio ES5 incompatible: las funciones getter y setter literal deben tener ahora exactamente cero o un argumento](http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) para mas información);
 - No debe haber múltiples getters para una misma propiedad (`{ get x() { }, get x() { } }` y `{ x: ..., get x() { } }` están prohibidos).
 
 El getter puede ser removido usando el operador {{jsxref("Operadores/delete", "delete")}}.
@@ -76,4 +76,4 @@ Sin soporte (notablemente en IE6-8) significa que el script lanzará un error de
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.defineGetter", "__defineGetter__")}}
 - {{jsxref("Object.defineSetter", "__defineSetter__")}}
-- [Defining Getters and Setters](/es/JavaScript/Guide/Working_with_Objects#Defining_Getters_and_Setters "en/JavaScript/Guide/Working with Objects#Defining Getters and Setters") in JavaScript Guide
+- [Defining Getters and Setters](/es/JavaScript/Guide/Working_with_Objects#Defining_Getters_and_Setters) in JavaScript Guide

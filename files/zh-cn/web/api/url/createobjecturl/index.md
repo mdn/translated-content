@@ -2,6 +2,7 @@
 title: URL.createObjectURL()
 slug: Web/API/URL/createObjectURL
 ---
+
 {{ApiRef("URL")}}
 
 **`URL.createObjectURL()`** 静态方法会创建一个 {{domxref("DOMString")}}，其中包含一个表示参数中给出的对象的 URL。这个 URL 的生命周期和创建它的窗口中的 {{domxref("document")}} 绑定。这个新的 URL 对象表示指定的 {{domxref("File")}} 对象或 {{domxref("Blob")}} 对象。

@@ -57,7 +57,7 @@ function sourceOpen (_) {
 
 ## 相容性表格
 
-{{Compat("api.MediaSource.duration")}}
+{{Compat}}
 
 ## 相關資料
 

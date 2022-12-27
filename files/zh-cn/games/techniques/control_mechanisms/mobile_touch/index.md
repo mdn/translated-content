@@ -3,6 +3,7 @@ title: 移动端触摸控制
 slug: Games/Techniques/Control_mechanisms/Mobile_touch
 original_slug: Games/Techniques/Control_mechanisms/移动端触摸控制
 ---
+
 {{GamesSidebar}}
 
 {{NextMenu("Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard", "Games/Techniques/Control_mechanisms")}}

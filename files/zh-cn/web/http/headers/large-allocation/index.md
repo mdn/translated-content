@@ -2,6 +2,7 @@
 title: Large-Allocation
 slug: Web/HTTP/Headers/Large-Allocation
 ---
+
 {{HTTPSidebar}}
 
 非标准的**`Large-Allocation`** 响应头部是用来告诉浏览器加载该页面可能需要申请大内存。当前只有 Firefox 实现该特性，但是对其他浏览器也无损害。
@@ -58,7 +59,7 @@ Large-Allocation: 500
 
 ## 浏览器兼容性
 
-{{Compat("http.headers.Large-Allocation")}}
+{{Compat}}
 
 ## 参见
 

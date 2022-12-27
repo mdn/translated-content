@@ -2,6 +2,7 @@
 title: 从服务器获取数据
 slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 在现代网站和应用中另一个常见的任务是从服务端获取个别数据来更新部分网页而不用加载整个页面。 这看起来是小细节却对网站性能和行为产生巨大的影响。所以我们将在这篇文章介绍概念和技术使它成为可能，例如：XMLHttpRequest 和 Fetch API.

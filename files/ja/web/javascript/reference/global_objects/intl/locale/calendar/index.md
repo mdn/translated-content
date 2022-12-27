@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.calendar
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.calendar`** プロパティは、 `Locale` で使用される暦の種類を返すアクセサープロパティです。

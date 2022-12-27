@@ -35,10 +35,10 @@ translation_of: Web/SVG/Element/g
 
 ### Atributos globales
 
-- [Conditional processing attributes](/es/docs/SVG/Attribute#ConditionalProccessing "SVG/Attribute#ConditionalProccessing") »
-- [Core attributes](/es/docs/SVG/Attribute#Core "SVG/Attribute#Core") »
-- [Graphical event attributes](/es/docs/SVG/Attribute#GraphicalEvent "SVG/Attribute#GraphicalEvent") »
-- [Presentation attributes](/es/docs/SVG/Attribute#Presentation "SVG/Attribute#Presentation") »
+- [Conditional processing attributes](/es/docs/SVG/Attribute#ConditionalProccessing) »
+- [Core attributes](/es/docs/SVG/Attribute#Core) »
+- [Graphical event attributes](/es/docs/SVG/Attribute#GraphicalEvent) »
+- [Presentation attributes](/es/docs/SVG/Attribute#Presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
@@ -50,7 +50,7 @@ _No hay atributos específicos_
 
 ## Interfaz DOM
 
-Este elemento implementa la interfaz [`SVGGElement`](/en-US/docs/DOM/SVGGElement "DOM/SVGGElement").
+Este elemento implementa la interfaz [`SVGGElement`](/en-US/docs/DOM/SVGGElement).
 
 ## Compatibilidad con navegadores
 

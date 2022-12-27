@@ -2,6 +2,7 @@
 title: border-top-style
 slug: Web/CSS/border-top-style
 ---
+
 {{ CSSRef}}
 
 **`border-top-style`** [CSS](/zh-CN/CSS) 设置元素上边框的 {{cssxref("border")}}.
@@ -99,7 +100,7 @@ tr, td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-top-style")}}
+{{Compat}}
 
 ## 相关词条
 

@@ -2,6 +2,7 @@
 title: Navigator.share
 slug: Web/API/Navigator/share
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}} {{securecontext_header}}
 
 **`Navigator.share()`** 方法通过调用本机的共享机制作为 Web Share API 的一部分。如果不支持 Web Share API，则此方法为 `undefined`。

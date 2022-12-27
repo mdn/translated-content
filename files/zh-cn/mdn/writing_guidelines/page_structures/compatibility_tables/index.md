@@ -2,6 +2,7 @@
 title: 兼容性表格和浏览器兼容性数据仓库（BCD）
 slug: MDN/Writing_guidelines/Page_structures/Compatibility_tables
 ---
+
 {{MDNSidebar}}
 
 MDN 为我们的开放 web 文档提供了兼容性表格的标准格式；它是对比所有浏览器之间，包含 DOM、HTML、CSS、JavaScript、SVG 等技术的文档。本文将介绍如何添加和维护生成兼容性表格的数据库，以及如何将表格添加到文章中。
@@ -474,6 +475,7 @@ slug: Web/API/AbortController
 
 browser-compat: api.AbortController
 ---
+
 ```
 
 然后源码中的 `\{{Compat}}` 和 `\{{Specifications}}` 宏将会被自动渲染为与元数据对应的兼容性表格和规范表格。

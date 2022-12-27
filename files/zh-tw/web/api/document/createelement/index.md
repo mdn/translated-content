@@ -70,7 +70,7 @@ function addElement () {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.createElement")}}
+{{Compat}}
 
 ## 參見
 

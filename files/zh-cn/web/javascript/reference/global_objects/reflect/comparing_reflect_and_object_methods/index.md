@@ -4,6 +4,7 @@ slug: >-
   Web/JavaScript/Reference/Global_Objects/Reflect/Comparing_Reflect_and_Object_methods
 original_slug: Web/JavaScript/Reference/Global_Objects/Reflect/比较_Reflect_和_Object_方法
 ---
+
 {{jssidebar}}
 
 ES2015 中引入的 {{jsxref("Reflect")}} 对象是一个内置对象，提供了与 JavaScript 对象交互的方法。`Reflect` 上存在的一些静态函数也对应于 ES2015 之前的{{jsxref("Object")}}上可用的方法。尽管某些方法在行为上看似相似，但它们之间常常存在细微的差异。

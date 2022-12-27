@@ -2,6 +2,7 @@
 title: ImageData()
 slug: Web/API/ImageData/ImageData
 ---
+
 {{APIRef("Canvas API")}}
 
 **`ImageData()`** 构造函数返回一个新的实例化的 `ImageData` 对象， 此对象由给定的类型化数组和指定的宽度与高度组成。
@@ -38,7 +39,7 @@ var imageData = new ImageData(100, 100); // Creates a 100x100 black rectangle
 
 ## 浏览器兼容性
 
-{{Compat("api.ImageData.ImageData")}}
+{{Compat}}
 
 ## 参见
 

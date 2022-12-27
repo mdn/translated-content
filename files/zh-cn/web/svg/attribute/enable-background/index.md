@@ -2,6 +2,7 @@
 title: enable-background
 slug: Web/SVG/Attribute/enable-background
 ---
+
 {{SVGRef}} {{deprecated_header("SVG 2")}}
 
 该 **`enable-background`** 属性指定如何管理背景图像的累积。

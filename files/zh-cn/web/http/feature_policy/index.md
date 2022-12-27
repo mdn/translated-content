@@ -3,6 +3,7 @@ title: Feature Policy
 slug: Web/HTTP/Feature_Policy
 original_slug: Web/HTTP/策略特征
 ---
+
 {{SeeCompatTable}}{{HTTPSidebar}}
 
 特征策略允许 web 开发者在浏览器中选择启用、禁用和修改确切特征和 API 的行为。比如{{Glossary("CSP","内容安全策略")}}，但是它控制的是浏览器的特征非安全行为。

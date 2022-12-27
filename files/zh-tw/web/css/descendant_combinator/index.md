@@ -39,4 +39,4 @@ div span { background-color: DodgerBlue; }
 
 ## Browser compatibility
 
-{{Compat("css.selectors.descendant")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: Symbol.prototype[@@toPrimitive]
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive
 ---
+
 {{JSRef}}
 
 **`[@@toPrimitive]()`** 方法可将 Symbol 对象转换为原始值。

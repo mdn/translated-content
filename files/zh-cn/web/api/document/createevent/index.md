@@ -2,6 +2,7 @@
 title: Document.createEvent()
 slug: Web/API/Document/createEvent
 ---
+
 > **警告：** `createEvent` 使用的许多方法，如 `initCustomEvent`，都被废弃了。请使用 [event constructors](/zh-CN/docs/Web/API/CustomEvent) 来替代。
 
 {{ ApiRef("DOM") }}

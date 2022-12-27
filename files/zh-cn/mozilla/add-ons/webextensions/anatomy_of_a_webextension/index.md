@@ -2,6 +2,7 @@
 title: 扩展剖析
 slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
 ---
+
 {{AddonSidebar}}
 
 扩展是指一个包含若干文件的安装包，可直接分发至用户。本文中，我们快速地介绍一遍安装包内可能出现的文件。

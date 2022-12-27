@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segments/@@iterator
 l10n:
   sourceCommit: 6dfc15fbe7a8679ec06140d7cdb37d6908512426
 ---
+
 {{JSRef}}
 
 **`[@@iterator]()`** メソッドは、[iterable プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)の一部で、`Intl.Segmenter` オブジェクトのエントリーを反復処理できる新しいイテレーターオブジェクトを返します。各エントリーは、オブジェクトとして返されます。

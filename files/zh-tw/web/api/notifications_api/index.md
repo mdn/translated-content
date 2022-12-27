@@ -54,7 +54,7 @@ btn.addEventListener('click', function() {
 
 ## 瀏覽器相容性
 
-{{Compat("api.Notification")}}
+{{Compat}}
 
 ## Firefox OS permissions
 

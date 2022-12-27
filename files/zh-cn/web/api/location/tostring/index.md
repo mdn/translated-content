@@ -2,6 +2,7 @@
 title: 'Location: toString()'
 slug: Web/API/Location/toString
 ---
+
 {{ApiRef("Location")}}
 
 **`toString()`**{{domxref("Location")}}接口的 stringifier 方法返回包含整个 URL 的{{domxref("USVString")}}}。它是{{domxref("Location.href")}}的只读版本。

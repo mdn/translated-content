@@ -2,6 +2,7 @@
 title: notification
 slug: Web/API/notification
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 [Notifications API](/zh-CN/docs/Web/API/Notifications_API) 的**通知**接口用于向用户配置和显示桌面通知。

@@ -2,6 +2,7 @@
 title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
 ---
+
 {{jsSidebar("Statements")}}
 
 **`debugger` 文**は、ブレークポイントの設定のような任意の利用可能なデバッグ機能を呼び出します。デバッグ機能が利用可能ではない場合、この文は効果がありません。

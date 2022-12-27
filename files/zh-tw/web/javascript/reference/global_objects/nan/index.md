@@ -49,7 +49,7 @@ valueIsNaN(Number.NaN); // true
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.NaN")}}
+{{Compat}}
 
 ## 參見
 

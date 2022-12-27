@@ -2,6 +2,7 @@
 title: parseFloat
 slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 ---
+
 {{jsSidebar("Objects")}}
 
 **`parseFloat()`** 函数解析一个参数（必要时先转换为字符串）并返回一个浮点数。

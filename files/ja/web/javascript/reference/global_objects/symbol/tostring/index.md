@@ -2,6 +2,7 @@
 title: Symbol.prototype.toString()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/toString
 ---
+
 {{JSRef}}
 
 **`toString()`** メソッドは、指定された {{jsxref("Symbol")}} オブジェクトを表す文字列を返します。

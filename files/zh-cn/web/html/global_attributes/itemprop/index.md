@@ -2,6 +2,7 @@
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 全局属性 **`itemprop`**被用于向一个物体中添加属性。每一个 HTML 元素都可以指定一个 itemprop 属性，一个`itemprop`属性由 name-value 对组成。每一个键值对称为一个属性，一个元素可以有一个或者多个属性。属性值可以是一个 string 或者一个 URL，并且可以和大部分元素进行组合，包括{{HTMLElement("audio")}}， {{HTMLElement("embed")}}， {{HTMLElement("iframe")}}， {{HTMLElement("img")}}， {{HTMLElement("link")}}， {{HTMLElement("object")}}， {{HTMLElement("source")}} ， {{HTMLElement("track")}}， 和 {{HTMLElement("video")}}。

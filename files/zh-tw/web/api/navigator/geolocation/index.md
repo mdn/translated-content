@@ -21,7 +21,7 @@ geo = navigator.geolocation
 
 ## 瀏覽器相容性
 
-{{Compat("api.Navigator.geolocation")}}
+{{Compat}}
 
 ## 請參考
 

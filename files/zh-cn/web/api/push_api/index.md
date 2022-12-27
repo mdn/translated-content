@@ -2,6 +2,7 @@
 title: 开发式平台
 slug: Web/API/Push_API
 ---
+
 {{DefaultAPISidebar("Push API")}}{{SeeCompatTable}}
 
 **Push API** 给与了 Web 应用程序接收从服务器发出的推送消息的能力，无论 Web 应用程序是否在用户设备前台，甚至刚加载完成。这样，开发人员就可以向用户投放异步通知和更新，从而让用户能更及时地获取新内容。

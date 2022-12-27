@@ -2,6 +2,7 @@
 title: Intl.PluralRules() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules
 ---
+
 {{JSRef}}
 
 **`Intl.PluralRules()`** コンストラクターは {{jsxref("Intl/PluralRules", "Intl.PluralRules")}} オブジェクトを作成します。

@@ -2,6 +2,7 @@
 title: Array.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@iterator
 ---
+
 {{JSRef}}
 
 **`@@iterator`** メソッドは[反復プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能_iterable_プロトコル)の一部であり、値の列を同期的に反復する方法を定義します。

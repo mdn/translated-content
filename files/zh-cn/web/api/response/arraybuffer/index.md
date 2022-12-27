@@ -2,6 +2,7 @@
 title: Response.arrayBuffer()
 slug: Web/API/Response/arrayBuffer
 ---
+
 {{APIRef("Fetch")}}{{ SeeCompatTable() }}
 
 {{domxref("Response")}}上的方法 **`arrayBuffer()`** 接受一个 {{domxref("Response")}} 流，并等待其读取完成。它返回一个 promise 实例，并 resolve 一个 {{domxref("ArrayBuffer")}} 对象。

@@ -2,6 +2,7 @@
 title: PATCH
 slug: Web/HTTP/Methods/PATCH
 ---
+
 {{HTTPSidebar}}
 
 在 HTTP 协议中，请求方法 **PATCH** 用于对资源进行部分修改。

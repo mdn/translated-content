@@ -2,6 +2,7 @@
 title: ':root'
 slug: Web/CSS/:root
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -29,4 +30,4 @@ slug: Web/CSS/:root
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.root")}}
+{{Compat}}

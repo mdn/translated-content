@@ -2,6 +2,7 @@
 title: Math.LN2
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
 ---
+
 {{JSRef("Global_Objects", "Math")}}
 
 ## 概述

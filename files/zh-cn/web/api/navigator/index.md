@@ -2,6 +2,7 @@
 title: Navigator
 slug: Web/API/Navigator
 ---
+
 {{apiref("DOM4")}}
 
 `Navigator` 接口表示用户代理的状态和标识。它允许脚本查询它和注册自己进行一些活动。

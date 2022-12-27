@@ -2,6 +2,7 @@
 title: HTMLFormElement.submit
 slug: Web/API/HTMLFormElement/submit
 ---
+
 {{ApiRef}}
 
 ## 概要

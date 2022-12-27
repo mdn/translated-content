@@ -2,6 +2,7 @@
 title: window.opener
 slug: Web/API/Window/opener
 ---
+
 {{ ApiRef() }}
 
 ### 概述

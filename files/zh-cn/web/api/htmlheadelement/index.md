@@ -2,6 +2,7 @@
 title: HTMLHeadElement
 slug: Web/API/HTMLHeadElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLHeadElement`** 接口包含一个文档的描述信息（或者称作元信息）这类对象继承了{{domxref("HTMLElement")}}接口的全部属性和方法。
@@ -23,7 +24,7 @@ _没有特殊的方法； 继承了父对象 {{domxref("HTMLElement")}} 的方�
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLHeadElement")}}
+{{Compat}}
 
 ## 另见
 

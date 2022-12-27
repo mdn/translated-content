@@ -71,7 +71,7 @@ HTML `<marquee>` 元素用作插入一段文字的捲動區域。你可以透過
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.marquee")}}
+{{Compat}}
 
 ## 參見
 

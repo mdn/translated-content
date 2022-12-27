@@ -2,6 +2,7 @@
 title: Animation.oncancel
 slug: Web/API/Animation/cancel_event
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations") }}
 
 [Web Animations API](/zh-CN/docs/Web/API/Web_Animations_API) 的 {{domxref("Animation")}} 接口的 **`oncancel`** 属性是 {{event("cancel")}} 事件的事件处理程序。
@@ -36,7 +37,7 @@ animation.oncancel = animation.effect.target.remove();
 
 ## 浏览器兼容性
 
-{{Compat("api.Animation.cancel_event")}}
+{{Compat}}
 
 ## 参见
 

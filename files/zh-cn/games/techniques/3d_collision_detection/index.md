@@ -2,6 +2,7 @@
 title: 3D 碰撞检测
 slug: Games/Techniques/3D_collision_detection
 ---
+
 {{GamesSidebar}}
 
 本文介绍了用于在 3D 环境中实现不同边界体积碰撞检测的技术。 后续文章将讨论特定 3D 库中的实现。

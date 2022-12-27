@@ -2,6 +2,7 @@
 title: Element.requestPointerLock()
 slug: Web/API/Element/requestPointerLock
 ---
+
 {{ APIRef("DOM") }}{{ SeeCompatTable }}
 
 **`Element.requestPointerLock()`** メソッドで、ポインターをこの要素にロックすることを非同期にリクエストすることができます。

@@ -2,6 +2,7 @@
 title: 索引集合类 (Indexed collections)
 slug: Web/JavaScript/Guide/Indexed_collections
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Regular_Expressions", "Web/JavaScript/Guide/Keyed_Collections")}}
 
 这个章节主要介绍了以索引进行排序的数据集合。包括数组以及类似于数组的数据结构，如 **{{jsxref("Array")}}** 、**{{jsxref("TypedArray")}}** 。

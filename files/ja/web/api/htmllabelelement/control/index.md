@@ -2,6 +2,7 @@
 title: HTMLLabelElement.control
 slug: Web/API/HTMLLabelElement/control
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLLabelElement.control`** は読み取り専用プロパティで、この {{HTMLElement("label")}} 要素に関連付けられているコントロールへの参照（{{domxref("HTMLElement")}} 型のオブジェクトまたはその派生物のうちの 1 つ）を返します。ラベルがコントロールと関連付けられていない場合は `null` を返します。

@@ -2,6 +2,7 @@
 title: Element.insertAdjacentText()
 slug: Web/API/Element/insertAdjacentText
 ---
+
 {{APIRef("DOM")}}
 
 `insertAdjacentText()` メソッドは、与えられたテキストノードを、メソッドを実行した要素に対する相対的な位置に挿入します。
@@ -48,7 +49,7 @@ foo
 <!-- afterend -->
 ```
 
-> **Note:** **注記:** `beforebegin` および `afterend` の positions が使えるのは、対象ノードがツリーの中にあって、親要素を持つ時に限られます。
+> **Note:** `beforebegin` および `afterend` の positions が使えるのは、対象ノードがツリーの中にあって、親要素を持つ時に限られます。
 
 ```js
 beforeBtn.addEventListener('click', function() {

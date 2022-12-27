@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.setProperty()
 slug: Web/API/CSSStyleDeclaration/setProperty
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSStyleDeclaration.setProperty()`** 方法接口为一个声明了 CSS 样式的对象设置一个新的值 。

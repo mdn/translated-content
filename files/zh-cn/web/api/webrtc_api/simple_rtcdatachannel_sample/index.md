@@ -2,6 +2,7 @@
 title: RTCDataChannel 简单示例
 slug: Web/API/WebRTC_API/Simple_RTCDataChannel_sample
 ---
+
 {{WebRTCSidebar}}
 
 {{domxref("RTCDataChannel")}} 接口是[WebRTC API](/zh-CN/docs/Web/API/WebRTC_API)的一个功能，可以让您在两个对等体之间打开一个通道，您可以通过该通道发送和接收任意数据。 API 有意地类似于[WebSocket API](/zh-CN/docs/Web/API/WebSocket_API)，因此可以为每个 API 使用相同的编程模型。

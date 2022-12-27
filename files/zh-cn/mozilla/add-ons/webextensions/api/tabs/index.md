@@ -2,6 +2,7 @@
 title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
 ---
+
 {{AddonSidebar}}
 
 与浏览器标签系统进行交互。
@@ -121,7 +122,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs")}}
+{{Compat}}
 
 > **备注：** The "Chrome incompatibilities" section is included from [https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Chrome_incompatibilities](/zh-CN/Add-ons/WebExtensions/Chrome_incompatibilities) using the [WebExtChromeCompat](/zh-CN/docs/Template:WebExtChromeCompat) macro.
 >

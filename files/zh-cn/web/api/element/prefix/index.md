@@ -2,6 +2,7 @@
 title: Element.prefix
 slug: Web/API/Element/prefix
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.prefix`** 只读属性返回指定元素的命名空间前缀，如果未指定前缀，则返回 null。
@@ -32,7 +33,7 @@ This will only work when a namespace-aware parser is used, i.e. when a document 
 
 ## Browser compatibility
 
-{{Compat("api.Element.prefix")}}
+{{Compat}}
 
 ## See also
 

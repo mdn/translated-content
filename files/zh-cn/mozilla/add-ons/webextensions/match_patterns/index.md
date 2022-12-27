@@ -2,6 +2,7 @@
 title: 匹配模式
 slug: Mozilla/Add-ons/WebExtensions/Match_patterns
 ---
+
 {{AddonSidebar}}
 
 匹配模式是一种指定网址组的方法：: 一个匹配模式匹配特定的一组 URL。 它们由 WebExtensions 在几个地方使用，最明显的是指定要将[内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)加载到哪些文档中，并指定要向其中添加 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) 侦听器的 URL。

@@ -2,6 +2,7 @@
 title: Number.MAX_SAFE_INTEGER
 slug: Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER
 ---
+
 {{JSRef}}
 
 **`Number.MAX_SAFE_INTEGER`** 常量表示在 JavaScript 中最大的安全整数（maxinum safe integer)（`2^53 - 1）。`

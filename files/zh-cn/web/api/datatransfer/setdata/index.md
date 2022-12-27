@@ -2,6 +2,7 @@
 title: DataTransfer.setData()
 slug: Web/API/DataTransfer/setData
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.setData()`** 方法用来设置拖放操作的{{domxref("DataTransfer","drag data")}}到指定的数据和类型。

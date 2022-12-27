@@ -2,6 +2,7 @@
 title: 使用服务器发送事件
 slug: Web/API/Server-sent_events/Using_server-sent_events
 ---
+
 {{DefaultAPISidebar("Server Sent Events")}}
 
 开发一个使用服务器发送的事件的 Web 应用程序是很容易的。你需要在服务器上的一些代码将事件流传输到 Web 应用程序，但 Web 应用程序端的事情几乎完全相同，处理任何其他类型的事件。
@@ -185,4 +186,4 @@ data: {"username": "bobby", "time": "02:34:11", "text": "Hi everyone."}
 
 ## 浏览器兼容性
 
-{{Compat("api.EventSource")}}
+{{Compat}}

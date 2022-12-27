@@ -2,6 +2,7 @@
 title: イテレーターとジェネレーター
 slug: Web/JavaScript/Guide/Iterators_and_Generators
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Using_promises", "Web/JavaScript/Guide/Meta_programming")}}
 
 コレクション内の各アイテムに対する処理は非常に一般的な操作です。JavaScript では簡単な {{jsxref("Statements/for","for")}} ループから {{jsxref("Global_Objects/Array/map","map()")}}、{{jsxref("Global_Objects/Array/filter","filter()")}} にいたるまで、コレクションに対する反復処理の複数の方法を提供します。

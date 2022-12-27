@@ -2,6 +2,7 @@
 title: Symbol.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 ---
+
 {{JSRef}}
 
 **`valueOf()`** メソッドは、 Symbol オブジェクトのプリミティブ値を返します。

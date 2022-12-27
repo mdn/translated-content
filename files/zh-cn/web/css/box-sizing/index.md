@@ -2,6 +2,7 @@
 title: box-sizing
 slug: Web/CSS/box-sizing
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) 中的 **`box-sizing`** 属性定义了 {{glossary("user agent")}} 应该如何计算一个元素的总宽度和总高度。
@@ -104,7 +105,7 @@ div {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.box-sizing")}}
+{{Compat}}
 
 ## 参见
 

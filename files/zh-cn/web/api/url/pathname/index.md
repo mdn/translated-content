@@ -2,6 +2,7 @@
 title: URL.pathname
 slug: Web/API/URL/pathname
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}}接口的 **`pathname`** 属性是一个{{domxref("USVString")}}，包含一个初始 `'/'` 和 URL 的路径 (如果没有路径，则为空字符串)

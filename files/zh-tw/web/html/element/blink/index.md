@@ -62,7 +62,7 @@ blink {
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.blink")}}
+{{Compat}}
 
 ## 參見
 

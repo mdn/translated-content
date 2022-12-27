@@ -3,6 +3,7 @@ title: 渲染页面：浏览器的工作原理
 slug: Web/Performance/How_browsers_work
 original_slug: Web/Performance/浏览器渲染页面的工作原理
 ---
+
 页面内容快速加载和流畅的交互是用户希望得到的 Web 体验，因此，开发者应力争实现这两个目标。
 
 了解如何提升性能和感知性能，有助于了解浏览器的工作原理。

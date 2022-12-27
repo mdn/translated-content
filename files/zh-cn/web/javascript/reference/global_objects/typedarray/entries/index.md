@@ -2,6 +2,7 @@
 title: TypedArray.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/entries
 ---
+
 {{JSRef}}
 
 The **`entries()`**返回新的`Array Iterator`对象，包含数组每个下标处的键值对。

@@ -35,4 +35,4 @@ The `document` object returned by this property is the main object with which al
 
 ## 瀏覽器相容性
 
-{{Compat("api.Node.ownerDocument")}}
+{{Compat}}

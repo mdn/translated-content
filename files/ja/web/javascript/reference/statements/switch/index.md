@@ -2,6 +2,7 @@
 title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 ---
+
 {{jsSidebar("Statements")}}
 
 **`switch` 文**は[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators)を評価し、その式の値が `case` 節と一致した場合は、その `case` に関連付けられた[文](/ja/docs/Web/JavaScript/Reference/Statements)を実行し、一致した `case` の後にある文も同様に実行します。

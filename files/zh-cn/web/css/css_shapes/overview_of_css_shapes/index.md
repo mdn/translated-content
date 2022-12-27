@@ -2,6 +2,7 @@
 title: CSS 的图形（Shape）概览
 slug: Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes
 ---
+
 {{CSSRef}}
 
 [CSS Shapes Level 1 Specification](https://www.w3.org/TR/css-shapes/) 在 CSS 中描述了几何图形的 shape（以下叫做形状）。在“Level 1 of the specification”中定义的形状被设计用来绘制浮动的元素。这篇文章提供关于“你能如何绘制这些形状”的概览。

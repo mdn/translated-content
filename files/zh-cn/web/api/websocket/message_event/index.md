@@ -2,6 +2,7 @@
 title: 'WebSocket: message event'
 slug: Web/API/WebSocket/message_event
 ---
+
 {{APIRef}}
 
 `message` 事件会在 `WebSocket` 接收到新消息时被触发。

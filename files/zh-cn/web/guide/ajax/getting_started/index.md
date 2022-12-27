@@ -2,6 +2,7 @@
 title: Getting Started
 slug: Web/Guide/AJAX/Getting_Started
 ---
+
 {{DefaultAPISidebar("XMLHttpRequest")}}
 
 这篇文章旨在帮助你了解 AJAX 基础，并提供两个可上手的简单案例供你学习。

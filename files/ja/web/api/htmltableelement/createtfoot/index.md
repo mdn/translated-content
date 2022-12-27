@@ -2,6 +2,7 @@
 title: HTMLTableElement.createTFoot()
 slug: Web/API/HTMLTableElement/createTFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`createTFoot()`** は {{domxref("HTMLTableElement")}} オブジェクトのメソッドで、この {{HtmlElement("table")}} に関連付けられた {{HTMLElement("tfoot")}} 要素を返します。表内にフッターが存在しない場合、このメソッドはそれを作成して返します。

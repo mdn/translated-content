@@ -2,6 +2,7 @@
 title: Element.toggleAttribute()
 slug: Web/API/Element/toggleAttribute
 ---
+
 {{APIRef("DOM")}}
 
 **`toggleAttribute()`** は {{domxref("Element")}} インターフェイスのメソッドで、この要素に対して論理属性をトグル切り替えします（存在する場合は取り除き、存在しない場合は追加します）。

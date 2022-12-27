@@ -2,6 +2,7 @@
 title: mousemove
 slug: Web/API/Element/mousemove_event
 ---
+
 {{APIRef}}
 
 当指针设备 ( 通常指鼠标 ) 在元素上移动时，mousemove 事件被触发。

@@ -2,6 +2,7 @@
 title: fill
 slug: Web/SVG/Attribute/fill
 ---
+
 « [SVG 属性参考主页](/zh-CN/SVG/Attribute)
 
 `fill`属性根据它的使用环境，拥有两个意义。

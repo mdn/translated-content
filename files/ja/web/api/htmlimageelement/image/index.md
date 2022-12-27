@@ -2,6 +2,7 @@
 title: Image()
 slug: Web/API/HTMLImageElement/Image
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Image()`** コンストラクターは、新しい {{DOMxRef("HTMLImageElement")}} インスタンスを作成します。機能的には {{DOMxRef("Document.createElement()", "document.createElement('img')")}} と同等です。

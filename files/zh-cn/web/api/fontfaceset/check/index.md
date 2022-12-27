@@ -2,6 +2,7 @@
 title: FontFaceSet.check()
 slug: Web/API/FontFaceSet/check
 ---
+
 {{APIRef()}} {{SeeCompatTable}}
 
 {{domxref("FontFaceSet")}} 的`check()`方法会返回是否在给定的字体列表中的所有字体已经被加载并可用。
@@ -36,4 +37,4 @@ document.fonts.check("12px MyFont"，"ß"); 如果字体“MyFont”具有ß字�
 
 ## 浏览器兼容性
 
-{{Compat("api.FontFaceSet.check")}}
+{{Compat}}

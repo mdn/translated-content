@@ -2,6 +2,7 @@
 title: <animate>
 slug: Web/SVG/Element/animate
 ---
+
 {{SVGRef}}
 
 动画元素放在形状元素的内部，用来定义一个元素的某个属性如何踩着时点改变。在指定持续时间里，属性从开始值变成结束值。

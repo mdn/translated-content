@@ -4,6 +4,7 @@ title: >-
   CORS preflight channel
 slug: Web/HTTP/CORS/Errors/CORSMissingAllowHeaderFromPreflight
 ---
+
 {{HTTPSidebar}}
 
 ## 原因

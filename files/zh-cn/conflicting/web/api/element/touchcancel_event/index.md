@@ -3,6 +3,7 @@ title: 'Document: touchcancel event'
 slug: conflicting/Web/API/Element/touchcancel_event
 original_slug: Web/API/Document/touchcancel_event
 ---
+
 {{APIRef}}
 
 `touchcancel`当一个或多个触摸点以特定于实现的方式中断时（例如，创建了太多的触摸点），将触发该事件。

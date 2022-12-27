@@ -2,6 +2,7 @@
 title: 向严格模式过渡
 slug: Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode
 ---
+
 {{jsSidebar("More")}}
 
 ECMAScript 5 引入了 [strict mode](/zh-CN/docs/JavaScript/Strict_mode) ,现在已经被大多浏览器实现 (包括 IE10. 会使 web 浏览器更容易的解析代码 (只需要添加 `"use strict";` 在源码的最上面), 由现有的代码到严格模式的过渡需要一些事做。

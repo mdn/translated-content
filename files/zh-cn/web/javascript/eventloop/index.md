@@ -2,6 +2,7 @@
 title: 并发模型与事件循环
 slug: Web/JavaScript/EventLoop
 ---
+
 {{JsSidebar("Advanced")}}
 
 JavaScript 有一个基于**事件循环**的并发模型，事件循环负责执行代码、收集和处理事件以及执行队列中的子任务。这个模型与其它语言中的模型截然不同，比如 C 和 Java。

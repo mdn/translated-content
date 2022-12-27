@@ -2,6 +2,7 @@
 title: JavaScript 数据类型和数据结构
 slug: Web/JavaScript/Data_structures
 ---
+
 {{jsSidebar("More")}}
 
 编程语言都具有内建的数据结构，但各种编程语言的数据结构常有不同之处。本文试图列出 JavaScript 语言中内建的数据结构及其属性，它们可以用来构建其他的数据结构。同时尽可能地描述与其他语言的不同之处。

@@ -2,6 +2,7 @@
 title: Math.cbrt()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cbrt
 ---
+
 {{JSRef}}
 
 **`Math.cbrt()`** 関数は、引数として与えた数の立方根を返します。すなわち、

@@ -76,7 +76,7 @@ Cuando especificas el atributo `itemscope` para un elemento, un nuevo item es cr
 
 ### Ejemplo
 
-Hay 4 atributos `itemscope` en el siguiente ejemplo. Cada atributo `itemscope` establecen el scope correspondiente a sus atributos `itemtype`. El `itemtype`s, `Recipe`, `AggregateRating`, y `NutritionInformation` en el siguiente ejemplo son parte de la informacion estructura por medio de [schema.org](www.schema.org), se especifico el primer `itemtype`, http\://schema.org/Recipe.
+Hay 4 atributos `itemscope` en el siguiente ejemplo. Cada atributo `itemscope` establecen el scope correspondiente a sus atributos `itemtype`. El `itemtype`s, `Recipe`, `AggregateRating`, y `NutritionInformation` en el siguiente ejemplo son parte de la informacion estructura por medio de [schema.org](https://schema.org), se especifico el primer `itemtype`, `http://schema.org/Recipe`.
 
 ```html
 <div itemscope itemtype="http://schema.org/Recipe">

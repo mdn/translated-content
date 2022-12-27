@@ -2,6 +2,7 @@
 title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 ---
+
 {{JSRef}}
 
 `Proxy` オブジェクトにより別なオブジェクトのプロキシを作成することができ、そのオブジェクトの基本的な操作を傍受したり再定義したりすることができます。

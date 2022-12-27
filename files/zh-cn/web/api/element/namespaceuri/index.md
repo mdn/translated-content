@@ -2,6 +2,7 @@
 title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.namespaceURI`** 是一个只读属性，它返回元素的命名空间，若该元素不在命名空间中则返回`null` .
@@ -41,7 +42,7 @@ DOM 本身不处理或执行名称空间验证。 它由 DOM 应用程序完成�
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.namespaceURI")}}
+{{Compat}}
 
 ## See also
 

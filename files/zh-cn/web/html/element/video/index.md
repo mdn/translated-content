@@ -2,6 +2,7 @@
 title: '<video>: 视频嵌入元素'
 slug: Web/HTML/Element/video
 ---
+
 {{HTMLRef}}
 
 **HTML `<video>` 元素** 用于在 HTML 或者 XHTML 文档中嵌入媒体播放器，用于支持文档内的视频播放。你也可以将 `<video>` 标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。

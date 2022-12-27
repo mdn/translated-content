@@ -40,7 +40,7 @@ var file = new File(["foo"], "foo.txt", {
 
 ## 瀏覽器相容性
 
-{{Compat("api.File.File")}}
+{{Compat}}
 
 ## 看更多
 

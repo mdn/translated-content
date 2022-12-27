@@ -2,6 +2,7 @@
 title: column-span
 slug: Web/CSS/column-span
 ---
+
 {{ CSSRef("CSS Multi-columns") }}
 
 ## 概述
@@ -67,4 +68,4 @@ h2 {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.column-span")}}
+{{Compat}}

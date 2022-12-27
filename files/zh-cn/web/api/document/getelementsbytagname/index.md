@@ -2,6 +2,7 @@
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
 ---
+
 {{ ApiRef("DOM") }}
 
 返回一个包括所有给定标签名称的元素的 HTML 集合{{domxref("HTMLCollection")}}。 整个文件结构都会被搜索，包括根节点。返回的 `HTML 集合`是动态的，意味着它可以自动更新自己来保持和 DOM 树的同步而不用再次调用 `document.getElementsByTagName()` 。

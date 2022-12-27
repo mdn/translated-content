@@ -2,6 +2,7 @@
 title: HTMLFormElement.length
 slug: Web/API/HTMLFormElement/length
 ---
+
 {{ApiRef}}
 
 ## 概要

@@ -2,6 +2,7 @@
 title: 'Element: compositionend イベント'
 slug: Web/API/Element/compositionend_event
 ---
+
 {{APIRef}}
 
 **`compositionend`** イベントは、 {{glossary("input method editor", "IME")}} などのテキスト編集システムが現在の編集セッションを完了またはキャンセルした時に発生します。

@@ -2,6 +2,7 @@
 title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 ---
+
 {{CSSRef}}
 
 ## 概述
@@ -61,7 +62,7 @@ animation-timing-function: unset;
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.animation-timing-function")}}
+{{Compat}}
 
 ## 参见
 

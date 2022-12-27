@@ -2,6 +2,7 @@
 title: EventTarget()
 slug: Web/API/EventTarget/EventTarget
 ---
+
 {{APIRef("DOM")}}
 
 **`EventTarget()`** コンストラクターは、新しい {{domxref("EventTarget")}} オブジェクトのインスタンスを作成します。

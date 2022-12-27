@@ -2,6 +2,7 @@
 title: JavaScript で queueMicrotask() によるマイクロタスクの使用
 slug: Web/API/HTML_DOM_API/Microtask_guide
 ---
+
 {{APIRef("HTML DOM")}}
 
 **マイクロタスク**は、それを作成した関数やプログラムが終了した後、 [JavaScript 実行スタック](/ja/docs/Web/JavaScript/EventLoop#stack)が空の場合にのみ実行され、{{Glossary("user agent", "ユーザーエージェント")}}がスクリプトの実行環境を動かすために使用しているイベントループにコントロールを返す前に実行される短い関数です。

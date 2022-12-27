@@ -2,6 +2,7 @@
 title: WebGL2RenderingContext.bindBufferBase()
 slug: Web/API/WebGL2RenderingContext/bindBufferBase
 ---
+
 {{APIRef("WebGL")}} {{SeeCompatTable}}
 
 [WebGL 2 API](/zh-CN/docs/Web/API/WebGL_API) 的 **`WebGL2RenderingContext.bindBufferBase()`** 方法将一个 {{domxref("WebGLBuffer")}} 绑定到某个点 (`target`) 的特定的 `index`上。
@@ -42,7 +43,7 @@ gl.bindBufferBase(gl.TRANSFORM_FEEDBACK_BUFFER, 0, buffer);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGL2RenderingContext.bindBufferBase")}}
+{{Compat}}
 
 ## 相关链接
 

@@ -205,7 +205,7 @@ div.lightbox figure .closemsg, div.lightbox figure figcaption {
 
 ## 瀏覽器兼容性
 
-{{Compat("css.selectors.target")}}
+{{Compat}}
 
 ## 參見
 

@@ -39,7 +39,7 @@ _此介面繼承了其父介面 {{domxref("Node")}} 的方法，以及實作了 
 
 ## 瀏覽器相容性
 
-{{Compat("api.DocumentType")}}
+{{Compat}}
 
 ## 參見
 

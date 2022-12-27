@@ -2,6 +2,7 @@
 title: TypedArray.prototype.reverse()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
 ---
+
 {{JSRef}}
 
 **`reverse()`** メソッドは、その場で型付き配列を反転します。型付き配列の先頭の要素は末尾になり、末尾の要素は先頭になります。このメソッドは {{jsxref("Array.prototype.reverse()")}} と同じアルゴリズムです。 _TypedArray_ は、ここでは [型付き配列型](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)のうちの一つです。

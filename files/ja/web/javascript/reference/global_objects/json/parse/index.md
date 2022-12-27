@@ -2,6 +2,7 @@
 title: JSON.parse()
 slug: Web/JavaScript/Reference/Global_Objects/JSON/parse
 ---
+
 {{JSRef}}
 
 **`JSON.parse()`** メソッドは文字列を JSON として解析し、文字列によって記述されている JavaScript の値やオブジェクトを構築します。任意の **reviver** 関数で、生成されたオブジェクトが返される前に変換を実行することができます。

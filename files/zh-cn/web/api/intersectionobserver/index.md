@@ -2,6 +2,7 @@
 title: Intersection Observer
 slug: Web/API/IntersectionObserver
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 **`IntersectionObserver`** 接口 (从属于[Intersection Observer API](/zh-CN/docs/Web/API/Intersection_Observer_API)) 提供了一种异步观察目标元素与其祖先元素或顶级文档视窗 ({{Glossary('viewport')}}) 交叉状态的方法。祖先元素与视窗 ({{Glossary('viewport')}}) 被称为**根 (root)。

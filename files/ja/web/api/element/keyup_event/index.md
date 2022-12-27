@@ -2,6 +2,7 @@
 title: 'Element: keyup イベント'
 slug: Web/API/Element/keyup_event
 ---
+
 {{APIRef}}
 
 **`keyup`** イベントは、キーが離されたときに発生します。

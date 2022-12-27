@@ -2,6 +2,7 @@
 title: Command line crash course
 slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
 
 在您的开发过程中，您无疑需要在终端上运行一些命令 (或者在“命令行”上，它们实际上是相同的)。本文介绍了终端、需要输入的基本命令、如何将命令链接在一起，以及如何添加自己的命令行接口 (CLI) 工具。

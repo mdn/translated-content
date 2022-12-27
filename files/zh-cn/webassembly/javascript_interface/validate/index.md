@@ -3,6 +3,7 @@ title: WebAssembly.validate()
 slug: WebAssembly/JavaScript_interface/validate
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/validate
 ---
+
 {{JSRef}}
 
 **`WebAssembly.validate()`** 方法用于验证包含 WebAssembly 二进制码的一个 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays) 是否合法，返回 `true` 如果这些字节能构成一个合法的 wasm 模块，否则返回 `false`。
@@ -26,7 +27,7 @@ WebAssembly.validate(bufferSource);
 
 如果给定的 `bufferSource` 不是 [typed array](/zh-CN/docs/Web/JavaScript/Typed_arrays) 或 [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) 类型，将会抛出 {{jsxref("TypeError")}} 异常。
 
-## 例子
+## 示例
 
 下面的例子（查看 validate.html [源代码](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/validate.html)，或者[在线预览](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html)）通过 `fetch` 获取了一个 .wasm 模块并将其转换为一个 typed array。接下来用 `validate()` 方法来验证这个模块是否合法。
 

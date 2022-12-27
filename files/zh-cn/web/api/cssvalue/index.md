@@ -2,6 +2,7 @@
 title: CSSValue
 slug: Web/API/CSSValue
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}`CSSValue` 接口表示经过计算的当前 CSS 属性值。
 
 ## 属性

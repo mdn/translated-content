@@ -2,6 +2,7 @@
 title: Object.prototype.isPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 ---
+
 {{JSRef}}
 
 **`isPrototypeOf()`** メソッドは、オブジェクトが別のオブジェクトのプロトタイプチェーンに存在するかどうかを判定します。

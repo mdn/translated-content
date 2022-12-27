@@ -2,6 +2,7 @@
 title: Document.mozSyntheticDocument
 slug: Web/API/Document/mozSyntheticDocument
 ---
+
 ## 概述
 
 {{ ApiRef("DOM") }}

@@ -2,6 +2,7 @@
 title: overflow
 slug: Web/CSS/overflow
 ---
+
 {{ CSSRef() }}
 
 CSS 属性 **overflow** 定义当一个元素的内容太大而无法适应 [块级格式化上下文](/zh-CN/docs/CSS/block_formatting_context) 时候该做什么。它是 {{cssxref("overflow-x")}} 和{{cssxref("overflow-y")}}的 [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)。
@@ -119,7 +120,7 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.overflow")}}
+{{Compat}}
 
 ## See also
 

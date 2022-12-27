@@ -2,6 +2,7 @@
 title: TransformStream
 slug: Web/API/TransformStream
 ---
+
 {{APIRef("Streams")}}
 
 [Streams API](/zh-CN/docs/Web/API/Streams_API) 接口的 `TransformStream` 表示一组可转换的数据。

@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.bindBuffer()
 slug: Web/API/WebGLRenderingContext/bindBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)的 WebGLRenderingContext.bindBuffer() 方法将给定的{{domxref("WebGLBuffer")}}绑定到目标。
@@ -69,7 +70,7 @@ gl.getParameter(gl.ELEMENT_ARRAY_BUFFER_BINDING);
 
 ## 浏览器兼容性
 
-{{Compat("api/WebGLRenderingContext", "WebGLRenderingContext.bindBuffer")}}
+{{Compat}}
 
 ## 另见
 

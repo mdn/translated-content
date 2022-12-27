@@ -2,6 +2,7 @@
 title: 条件运算符
 slug: Web/JavaScript/Reference/Operators/Conditional_Operator
 ---
+
 {{jsSidebar("Operators")}}
 
 **条件（三元）运算符**是 JavaScript 仅有的使用三个操作数的运算符。一个条件后面会跟一个问号（?），如果条件为 {{Glossary("truthy")}} ，则问号后面的表达式 A 将会执行；表达式 A 后面跟着一个冒号（:），如果条件为 {{Glossary("falsy")}} ，则冒号后面的表达式 B 将会执行。本运算符经常作为 [`if`](/zh-CN/docs/Web/JavaScript/Reference/Statements/if...else) 语句的简捷形式来使用。

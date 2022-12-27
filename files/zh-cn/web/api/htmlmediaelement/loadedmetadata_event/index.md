@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onloadedmetadata
 slug: Web/API/HTMLMediaElement/loadedmetadata_event
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 {{domxref("GlobalEventHandlers")}} mixin 的 **`onloadedmetadata`** 属性是处理{{event("loadedmetadata")}}事件的{{event("Event_handlers", "event handler")}}。

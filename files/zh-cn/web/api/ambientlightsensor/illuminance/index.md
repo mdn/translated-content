@@ -2,6 +2,7 @@
 title: reading
 slug: Web/API/AmbientLightSensor/illuminance
 ---
+
 {{SeeCompatTable}}{{APIRef("Ambient Light Sensor API")}}
 
 {{domxref("AmbientLightSensor")}} 接口的 read-only 属性 **reading** 返回一个访问 {{domxref('AmbientLightSensorReading')}} 的接口，包含当前的光亮级别。
@@ -28,4 +29,4 @@ var sensorReading = AmbientLightLevel.reading
 
 ## 浏览器兼容性
 
-{{Compat("api.AmbientLightSensor.illuminance")}}
+{{Compat}}

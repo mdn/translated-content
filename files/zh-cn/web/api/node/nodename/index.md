@@ -2,6 +2,7 @@
 title: Node.nodeName
 slug: Web/API/Node/nodeName
 ---
+
 {{APIRef}}概述
 
 返回当前节点的节点名称

@@ -2,6 +2,7 @@
 title: unload
 slug: Web/API/Window/unload_event
 ---
+
 {{APIRef}}
 
 当文档或一个子资源正在被卸载时，触发 **unload**事件。

@@ -2,6 +2,7 @@
 title: inherit
 slug: Web/CSS/inherit
 ---
+
 {{CSSRef}}
 
 **`inherit`** 关键字使得元素获取其父元素的[计算值](/zh-CN/docs/Web/CSS/computed_value)。它可以应用于任何 CSS 属性，包括 CSS 简写 {{cssxref("all")}}。
@@ -32,7 +33,7 @@ div#current { color: blue; }
 
 ## 浏览器兼容性
 
-{{Compat("css.types.global_keywords.inherit")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: Performance API
 slug: Web/API/Performance_API
 ---
+
 {{DefaultAPISidebar("High Resolution Time")}}
 
 [高时间采样率](https://www.w3.org/TR/hr-time/)标准定义了{{domxref("Performance")}}接口，该接口支持应用程序中客户端的延时测量。{{domxref("Performance")}}接口被认为是*高采样率*的，因为其精确度可达千分之一毫秒（受硬件或软件限制）。这些接口支持许多使用情形，包括计算帧速率（在动画中可能很重要）和基准测试（例如加载资源的时间）。

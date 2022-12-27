@@ -21,7 +21,7 @@ slug: Web/Guide/WOFF
 
 ## 瀏覽器相容性
 
-{{Compat("css.at-rules.font-face")}}
+{{Compat}}
 
 ## 詳見
 

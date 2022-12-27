@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onpointerout
 slug: Web/API/Element/pointerout_event
 ---
+
 {{ApiRef("HTML DOM")}}
 
 一个{{domxref("GlobalEventHandlers","global event handler")}} 用于处理 {{event("pointerout")}} 事件。
@@ -45,7 +46,7 @@ function init() {
 
 ## 浏览器兼容性
 
-{{Compat("api.GlobalEventHandlers.onpointerout")}}
+{{Compat}}
 
 ## 相关链接
 

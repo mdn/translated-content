@@ -151,4 +151,4 @@ var currentState = history.state;
 
 ## 瀏覽器相容性
 
-{{Compat("api.History")}}
+{{Compat}}

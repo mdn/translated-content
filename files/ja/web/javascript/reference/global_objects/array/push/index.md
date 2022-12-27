@@ -2,6 +2,7 @@
 title: Array.prototype.push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 ---
+
 {{JSRef}}
 
 **`push()`** メソッドは、配列の末尾に 1 つ以上の要素を追加することができます。また戻り値として新しい配列の要素数を返します。

@@ -2,6 +2,7 @@
 title: Function.length
 slug: Web/JavaScript/Reference/Global_Objects/Function/length
 ---
+
 {{JSRef}}
 
 **`length`** プロパティは、関数が期待する引数の数を示します。

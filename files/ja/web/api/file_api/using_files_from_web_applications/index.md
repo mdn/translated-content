@@ -3,6 +3,7 @@ title: ウェブアプリケーションからのファイルの使用
 slug: Web/API/File_API/Using_files_from_web_applications
 original_slug: Web/API/File/Using_files_from_web_applications
 ---
+
 {{APIRef("File API")}}
 
 File API は DOM に HTML5 で追加されたもので、ウェブコンテンツがユーザーにローカルファイルを選択するように指示し、それらのファイルを読み取ることができるようになりました。この選択は HTML の `{{HTMLElement("input/file", '&lt;input type="file"&gt;')}}` 要素を使用したり、ドラッグ＆ドロップを行ったりすることで行うことができます。

@@ -2,6 +2,7 @@
 title: FetchEvent.replacesClientId
 slug: Web/API/FetchEvent/replacesClientId
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("FetchEvent")}} インターフェイスの **`replacesClientId`** 読み取り専用プロパティは、ページナビゲーション中に置き換えられる{{domxref("Client", "クライアント")}}の {{domxref("Client.id", "id")}} です。

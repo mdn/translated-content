@@ -2,6 +2,7 @@
 title: Array() 构造器
 slug: Web/JavaScript/Reference/Global_Objects/Array/Array
 ---
+
 {{JSRef}}
 
 **`Array()`** 构造器用于创建 {{jsxref("Array")}} 对象。

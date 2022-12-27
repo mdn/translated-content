@@ -3,6 +3,7 @@ title: <input type="month">
 slug: Web/HTML/Element/input/month
 original_slug: Web/HTML/Element/Input/月份
 ---
+
 {{HTMLRef}}
 
 类型为 **`month`** 的 {{htmlelement("input")}} 可以让你容易地创建一个方便输入年份或月份的一个 {{htmlelement("input")}}。

@@ -2,6 +2,7 @@
 title: Date.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 ---
+
 {{JSRef("Global_Objects", "Date")}}
 
 **`toLocaleString()`** 方法返回该日期对象的字符串，该字符串格式因不同语言而不同。新增的参数 `locales` 和 `options` 使程序能够指定使用哪种语言格式化规则，允许定制该方法的表现（behavior）。在旧版本浏览器中， `locales` 和 `options` 参数被忽略，使用的语言环境和返回的字符串格式是各自独立实现的。

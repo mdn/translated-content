@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: ended イベント'
 slug: Web/API/HTMLMediaElement/ended_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `ended` イベントは、メディアの終わりに達したため、またはそれ以上利用できるデータがないために再生またはストリーミングが停止したときに発生します。

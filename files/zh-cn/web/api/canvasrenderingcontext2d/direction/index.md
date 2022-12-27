@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.direction
 slug: Web/API/CanvasRenderingContext2D/direction
 ---
+
 {{APIRef}} {{SeeCompatTable}}
 
 **`CanvasRenderingContext2D.direction`** 是 Canvas 2D API 用来在绘制文本时，描述当前文本方向的属性。
@@ -73,7 +74,7 @@ ctx.fillText('Hi!', 150, 130);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.direction")}}
+{{Compat}}
 
 ## 参见
 

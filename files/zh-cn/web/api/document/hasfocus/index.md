@@ -2,6 +2,7 @@
 title: document.hasFocus
 slug: Web/API/Document/hasFocus
 ---
+
 {{ ApiRef }}
 
 ### 概述
@@ -60,4 +61,4 @@ focused = document.hasFocus();
 
 ### 浏览器兼容性
 
-{{Compat("api.Document.hasFocus")}}
+{{Compat}}

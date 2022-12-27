@@ -2,6 +2,7 @@
 title: HTMLHRElement
 slug: Web/API/HTMLHRElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLHRElement`** インターフェイスは、（継承によって利用できる通常の {{domxref("HTMLElement")}} インターフェイスの他に） {{HTMLElement("hr")}} 要素を操作するための特別なプロパティを提供します。

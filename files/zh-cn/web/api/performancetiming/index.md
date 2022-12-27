@@ -2,6 +2,7 @@
 title: PerformanceTiming
 slug: Web/API/PerformanceTiming
 ---
+
 {{APIRef("Navigation Timing")}}
 
 **`PerformanceTiming`** 接口是为保持向后兼容性而保留的传统接口，并且提供了在加载和使用当前页面期间发生的各种事件的性能计时信息。

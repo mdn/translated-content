@@ -2,6 +2,7 @@
 title: TypedArray.prototype[@@iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator
 ---
+
 {{JSRef}}
 
 `@@iterator` プロパティは、初期値が {{jsxref("TypedArray.prototype.values()", "values")}} プロパティの同じ関数オブジェクトです。

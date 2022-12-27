@@ -11,4 +11,4 @@ slug: Web/CSS/@media/height
 
 ## 瀏覽器相容性
 
-{{Compat("css.at-rules.media.height")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: 处理 Multicol 中的溢出
 slug: Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
 ---
+
 {{CSSRef}}
 
 在本指南中，我们将了解 multicol 如何处理溢出，包括在列框内以及内容超出容器容量的情况。

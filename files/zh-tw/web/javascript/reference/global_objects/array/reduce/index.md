@@ -347,7 +347,7 @@ if (!Array.prototype.reduce) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.reduce")}}
+{{Compat}}
 
 ## 參見
 

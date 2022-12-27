@@ -2,6 +2,7 @@
 title: CSS 的简写属性
 slug: Web/CSS/Shorthand_properties
 ---
+
 {{CSSRef}}
 
 **简写属性**是可以让你同时设置好几个 CSS 属性值的 CSS 属性。使用简写属性，Web 开发人员可以编写更简洁、更具可读性的样式表，节省时间和精力。

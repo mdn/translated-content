@@ -2,6 +2,7 @@
 title: 'Window: rejectionhandled event'
 slug: Web/API/Window/rejectionhandled_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 `当 Promise 被 rejected 且有 rejection 处理器时会在全局触发`**`rejectionhandled`** 事件 (通常是发生在 window 下，但是也可能发生在 Worker 中)。应用于调试一般应用回退。当 Promise 被 rejected 且没有 rejection 处理器处理时会触发**unhandledrejection**`事件。这两个事件协同工作。`
@@ -43,7 +44,7 @@ window.addEventListener("rejectionhandled", event => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.rejectionhandled_event")}}
+{{Compat}}
 
 ## 参阅
 

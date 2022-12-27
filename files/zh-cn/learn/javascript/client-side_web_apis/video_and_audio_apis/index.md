@@ -2,6 +2,7 @@
 title: 视频和音频 API
 slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs/Client-side_storage", "Learn/JavaScript/Client-side_web_APIs")}}
 
 HTML5 提供了用于在文档中嵌入富媒体的元素 — {{htmlelement("video")}}和{{htmlelement("audio")}} — 这些元素通过自带的 API 来控制视频或音频的播放，定位进度等。本文将向你展示如何执行一些常见的任务，如创建自定义播放控件。

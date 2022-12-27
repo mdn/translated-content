@@ -2,6 +2,7 @@
 title: Element.matches()
 slug: Web/API/Element/matches
 ---
+
 {{APIRef("DOM")}}
 
 如果元素被指定的选择器字符串选择，**`Element.matches()`** 方法返回 true; 否则返回 false。
@@ -86,4 +87,4 @@ if (!Element.prototype.matches) {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.matches")}}
+{{Compat}}

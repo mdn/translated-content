@@ -2,6 +2,7 @@
 title: 循环与迭代
 slug: Web/JavaScript/Guide/Loops_and_iteration
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Control_flow_and_error_handling", "Web/JavaScript/Guide/Functions")}}
 
 循环提供了一种快速和简单的方式去做一些重复的事。[JavaScript 入门](/zh-CN/docs/Web/JavaScript/Guide)的这个章节会介绍在 JavaScript 中存在哪些不同的迭代语句。

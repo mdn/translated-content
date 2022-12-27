@@ -2,6 +2,7 @@
 title: MediaStreamTrack.readyState
 slug: Web/API/MediaStreamTrack/readyState
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack.readyState`**只读属性返回一个枚举的值，该值给出了轨道的状态。

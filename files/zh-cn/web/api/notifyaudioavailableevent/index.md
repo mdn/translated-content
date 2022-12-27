@@ -2,6 +2,7 @@
 title: NotifyAudioAvailableEvent
 slug: Web/API/NotifyAudioAvailableEvent
 ---
+
 {{APIRef("Web Audio API")}}{{Non-standard_header}}{{Deprecated_header}}
 
 非标准的、过时的，**`NotifyAudioAvailableEvent`**事件接口定义当音频缓冲器满时发送到音频元素的事件。

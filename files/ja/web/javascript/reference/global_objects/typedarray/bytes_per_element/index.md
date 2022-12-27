@@ -2,6 +2,7 @@
 title: TypedArray.BYTES_PER_ELEMENT
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT
 ---
+
 {{JSRef}}
 
 **`TypedArray.BYTES_PER_ELEMENT`** プロパティは、型付き配列内の各要素の大きさをバイト単位で表します。

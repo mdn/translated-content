@@ -58,7 +58,7 @@ Number.isFinite = Number.isFinite || function(value) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Number.isFinite")}}
+{{Compat}}
 
 ## 參見
 

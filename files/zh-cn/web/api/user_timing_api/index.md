@@ -2,6 +2,7 @@
 title: 自定义时间测量 API
 slug: Web/API/User_Timing_API
 ---
+
 {{DefaultAPISidebar("自定义时间测量 API")}}
 
 **`User Timing`**接口允许开发者在浏览器性能时间线中创建针对特定应用的 {{domxref("DOMHighResTimeStamp","时间戳")}}。有两种自定义时间测量事件类型："`mark`" {{domxref("PerformanceEntry.entryType","事件类型")}}和"`measure`" {{domxref("PerformanceEntry.entryType","事件类型")}}。

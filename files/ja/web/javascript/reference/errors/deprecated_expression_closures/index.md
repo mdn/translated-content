@@ -2,6 +2,7 @@
 title: 'Warning: expression closures are deprecated'
 slug: Web/JavaScript/Reference/Errors/Deprecated_expression_closures
 ---
+
 {{jsSidebar("Errors")}}
 
 JavaScript の警告 "expression closures are deprecated" は、標準外の[式クロージャ](/ja/docs/Web/JavaScript/Reference/Operators/Expression_closures)構文 (略記関数構文) が使用されたときに発生します。

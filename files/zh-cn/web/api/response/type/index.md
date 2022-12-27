@@ -2,6 +2,7 @@
 title: Response.type
 slug: Web/API/Response/type
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 **`type`** 是{{domxref("Response")}} 接口包含的一种响应类型，是只读属性。它可以是以下某一种值：

@@ -2,6 +2,7 @@
 title: Transfer-Encoding
 slug: Web/HTTP/Headers/Transfer-Encoding
 ---
+
 {{HTTPSidebar}}
 
 **`Transfer-Encoding`** 消息首部指明了将 {{Glossary("Entity header","entity")}} 安全传递给用户所采用的编码形式。

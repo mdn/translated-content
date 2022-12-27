@@ -2,6 +2,7 @@
 title: Element.innerHTML
 slug: Web/API/Element/innerHTML
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} オブジェクトの **`innerHTML`** プロパティは、要素内の HTML または XML のマークアップを取得したり設定したりします。

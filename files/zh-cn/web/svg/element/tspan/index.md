@@ -2,6 +2,7 @@
 title: tspan
 slug: Web/SVG/Element/tspan
 ---
+
 {{SVGRef}}
 
 在 {{SVGElement("text")}}元素中，利用内含的`tspan`元素，可以调整文本和字体的属性以及当前文本的位置、绝对或相对坐标值。
@@ -42,7 +43,7 @@ slug: Web/SVG/Element/tspan
 
 ## 浏览器兼容性
 
-{{Compat("svg.elements.tspan")}}
+{{Compat}}
 
 ## 参见
 

@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.onclose
 slug: Web/API/HTMLDialogElement/close_event
 ---
+
 {{ApiRef("HTML DOM")}} {{SeeCompatTable}}
 
 {{domxref("GlobalEventHandlers")}} mixin 的 **`onclose`** 属性是一个 {{event("Event_handlers", "event handler")}}, 用来处理发送给 {{HTMLElement("dialog")}} 元素的 {{event("close")}} 事件。

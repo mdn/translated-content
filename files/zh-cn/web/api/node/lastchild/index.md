@@ -2,6 +2,7 @@
 title: Node.lastChild
 slug: Web/API/Node/lastChild
 ---
+
 {{APIRef()}}
 
 ## 概述

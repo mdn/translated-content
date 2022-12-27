@@ -2,6 +2,7 @@
 title: Subtraction assignment (-=)
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The subtraction assignment operator (`-=`) subtracts the value of the right operand from a variable and assigns the result to the variable.

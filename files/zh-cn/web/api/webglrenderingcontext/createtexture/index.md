@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.createTexture()
 slug: Web/API/WebGLRenderingContext/createTexture
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API)的**`WebGLRenderingContext.createTexture()`** 方法创建并初始化了一个{{domxref("WebGLTexture")}} 目标。
@@ -38,7 +39,7 @@ var texture = gl.createTexture();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.createTexture")}}
+{{Compat}}
 
 ## 另见
 

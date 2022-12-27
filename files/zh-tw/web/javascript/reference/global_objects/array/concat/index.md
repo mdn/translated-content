@@ -103,7 +103,7 @@ console.log(nums);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.concat")}}
+{{Compat}}
 
 ## 參見
 

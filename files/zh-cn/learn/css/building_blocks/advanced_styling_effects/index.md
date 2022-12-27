@@ -2,6 +2,7 @@
 title: 高级区块效果
 slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Styling tables", "Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
 
 这篇文章展示了盒子的小技巧，提供了一些高级特性的介绍，这些特性不适合其他类别的样式，比如盒子阴影、混合模式和滤镜。

@@ -2,6 +2,7 @@
 title: navigator.getUserMedia
 slug: Web/API/Navigator/getUserMedia
 ---
+
 > **备注：** 此 API 已更名为 {{domxref("MediaDevices.getUserMedia()")}}。请使用那个版本进行替代！这个已废弃的 API 版本仅为了向后兼容而存在。
 
 {{APIRef}}{{deprecated_header}}

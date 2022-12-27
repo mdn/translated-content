@@ -2,6 +2,7 @@
 title: AudioContext.sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{domxref("AudioContext")}} 的 `sampleRate` 属性返回一个浮点数表示采样率（每秒采样数），同一个 AudioContext 中的所有节点采样率相同，所以不支持采样率转换。
@@ -37,7 +38,7 @@ console.log(audioCtx.sampleRate);
 
 ## 浏览器兼容性
 
-{{Compat("api.BaseAudioContext.sampleRate")}}
+{{Compat}}
 
 ## 另见
 

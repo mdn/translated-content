@@ -2,6 +2,7 @@
 title: Date.prototype.getYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`getYear()`** メソッドは、地方時に基づき、指定された日付の「年」を返します。`getYear()` は完全な桁数の値を返さないため (いわゆる 2000 年問題)、使用されなくなり、{{jsxref("Date.prototype.getFullYear", "getFullYear()")}} メソッドに置き換えられました。

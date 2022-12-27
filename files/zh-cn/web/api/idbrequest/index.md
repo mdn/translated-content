@@ -2,6 +2,7 @@
 title: IDBRequest
 slug: Web/API/IDBRequest
 ---
+
 {{APIRef("IndexedDB")}}
 
 IndexedDB api 中的 IDBRequest 接口提供了根据绑定事件处理函数访问结果集的方法。其中结果集来自对数据库和数据库对象发起的异步查询。对数据库的读写操作都是通过 request 的方式来实现。

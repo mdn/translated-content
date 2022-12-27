@@ -2,6 +2,7 @@
 title: Function.displayName
 slug: Web/JavaScript/Reference/Global_Objects/Function/displayName
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 **`function.displayName`** プロパティは、関数の表示名を返します。

@@ -2,6 +2,7 @@
 title: Exponentiation assignment (**=)
 slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 The exponentiation assignment operator (`**=`) raises the value of a variable to the power of the right operand.

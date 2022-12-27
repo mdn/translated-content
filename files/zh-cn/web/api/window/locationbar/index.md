@@ -2,6 +2,7 @@
 title: Window.locationbar
 slug: Web/API/Window/locationbar
 ---
+
 {{APIRef}}
 
 ## 概要

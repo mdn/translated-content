@@ -2,6 +2,7 @@
 title: '::spelling-error'
 slug: Web/CSS/::spelling-error
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`::spelling-error`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/CSS/Pseudo-elements) 表示浏览器标记为不正确拼写的文本段。
@@ -37,7 +38,7 @@ slug: Web/CSS/::spelling-error
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.spelling-error")}}
+{{Compat}}
 
 ## 参见
 

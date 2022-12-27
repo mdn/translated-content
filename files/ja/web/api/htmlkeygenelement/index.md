@@ -2,6 +2,7 @@
 title: HTMLKeygenElement
 slug: Web/API/HTMLKeygenElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 > **Note:** このページでは、仕様としての Keygen 要素インターフェースを説明しており、現在 Gecko に実装されているものではありません。詳細と状態については、{{Bug(101019)}} を見てください。

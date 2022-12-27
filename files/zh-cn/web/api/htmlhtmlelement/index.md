@@ -2,6 +2,7 @@
 title: HTMLHtmlElement
 slug: Web/API/HTMLHtmlElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLHtmlElement`** 接口是给定 HTML 文档的根节点。它继承了 {{domxref("HTMLElement")}} 对象的属性和方法。
@@ -27,7 +28,7 @@ _没有明确的方法； 可从父项继承—— {{domxref("HTMLElement")}}。
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLHtmlElement")}}
+{{Compat}}
 
 ## 还可以看看
 

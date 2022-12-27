@@ -2,6 +2,7 @@
 title: Animation.finished
 slug: Web/API/Animation/finished
 ---
+
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
 Animation.finished 只读属性允许您返回动画的完成状态。
@@ -42,7 +43,7 @@ Promise.all(
 
 ## 浏览器支持
 
-{{Compat("api.Animation.finished")}}
+{{Compat}}
 
 ## 相关内容
 

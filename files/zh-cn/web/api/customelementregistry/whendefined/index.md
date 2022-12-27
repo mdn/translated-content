@@ -2,6 +2,7 @@
 title: CustomElementRegistry.whenDefined()
 slug: Web/API/CustomElementRegistry/whenDefined
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 当一个元素被定义时{{domxref("CustomElementRegistry")}} 中的方法**`whenDefined()`** 接口返回 {{jsxref("Promise")}}.
@@ -65,4 +66,4 @@ container.removeChild(placeholder);
 
 ## 浏览器兼容性
 
-{{Compat("api.CustomElementRegistry.whenDefined")}}
+{{Compat}}

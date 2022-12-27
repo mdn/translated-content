@@ -2,6 +2,7 @@
 title: 'Element: touchcancel event'
 slug: Web/API/Element/touchcancel_event
 ---
+
 {{APIRef}}
 
 `touchcancel` イベントは、１つ以上のタッチポイントが実装固有の方法で中断されたときに発生します(例えば、タッチポイントが多すぎるとき)。

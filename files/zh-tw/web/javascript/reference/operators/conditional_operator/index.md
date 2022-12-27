@@ -76,7 +76,7 @@ function example(…) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.operators.conditional")}}
+{{Compat}}
 
 ## 參見
 

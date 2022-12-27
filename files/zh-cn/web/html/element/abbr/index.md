@@ -2,6 +2,7 @@
 title: <abbr>
 slug: Web/HTML/Element/abbr
 ---
+
 {{HTMLRef}}
 
 **HTML 缩写元素**（**`<abbr>`**）用于代表缩写，并且可以通过可选的 {{htmlattrxref("title")}} 属性提供完整的描述。若使用 `title` 属性，则它必须且仅可包含完整的描述内容。
@@ -166,7 +167,7 @@ accessed.</p>
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.abbr")}}
+{{Compat}}
 
 ## 参见
 

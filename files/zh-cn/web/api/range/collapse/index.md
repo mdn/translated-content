@@ -2,6 +2,7 @@
 title: Range.collapse()
 slug: Web/API/Range/collapse
 ---
+
 {{APIRef("DOM")}}
 
 **`Range.collapse()`** 方法向边界点折叠该 {{domxref("Range")}} 。

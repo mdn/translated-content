@@ -2,6 +2,7 @@
 title: document.write
 slug: Web/API/Document/write
 ---
+
 {{ApiRef("DOM")}}
 
 **`Document.write()`** 方法将一个文本字符串写入一个由 {{domxref("document.open()")}} 打开的文档流（document stream）。

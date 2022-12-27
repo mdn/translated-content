@@ -358,7 +358,7 @@ console.log(docCookies.my_cookie1);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Proxy", 2)}}
+{{Compat}}
 
 ## Gecko specific notes
 

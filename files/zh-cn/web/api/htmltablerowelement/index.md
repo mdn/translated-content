@@ -2,6 +2,7 @@
 title: HTMLTableRowElement
 slug: Web/API/HTMLTableRowElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLTableRowElement`** interface provides special properties and methods (beyond the {{domxref("HTMLElement")}} interface it also has available to it by inheritance) for manipulating the layout and presentation of rows in an HTML table.
@@ -44,7 +45,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
 ## Browser compatibility
 
-{{Compat("api.HTMLTableRowElement")}}
+{{Compat}}
 
 ## See also
 

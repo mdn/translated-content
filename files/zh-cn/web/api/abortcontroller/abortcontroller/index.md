@@ -2,6 +2,7 @@
 title: AbortController.AbortController()
 slug: Web/API/AbortController/AbortController
 ---
+
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
 **`AbortController()`** 构造函数创建了一个新的 `AbortController` 实例。

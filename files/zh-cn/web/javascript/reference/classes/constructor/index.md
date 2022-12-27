@@ -2,6 +2,7 @@
 title: 构造方法
 slug: Web/JavaScript/Reference/Classes/constructor
 ---
+
 {{jsSidebar("Classes")}}
 
 **`constructor`** 是一种用于创建和初始化[`class`](/zh-CN/docs/Web/JavaScript/Reference/Statements/class)创建的对象的特殊方法。

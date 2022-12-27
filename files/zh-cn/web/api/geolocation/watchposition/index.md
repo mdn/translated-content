@@ -2,6 +2,7 @@
 title: Geolocation.watchPosition()
 slug: Web/API/Geolocation/watchPosition
 ---
+
 {{ APIref("Geolocation API") }}
 
 **`Geolocation.watchPosition()`** 用于注册监听器，在设备的地理位置发生改变的时候自动被调用。也可以选择特定的错误处理函数。

@@ -2,6 +2,7 @@
 title: Request.url
 slug: Web/API/Request/url
 ---
+
 {{APIRef("Fetch")}}{{SeeCompatTable}}
 
 The **`url`** read-only property of the {{domxref("Request")}} interface contains the URL of the request.

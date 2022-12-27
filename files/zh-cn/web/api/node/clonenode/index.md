@@ -2,6 +2,7 @@
 title: Node.cloneNode
 slug: Web/API/Node/cloneNode
 ---
+
 {{ApiRef("DOM")}}
 
 **`Node.cloneNode()`** 方法返回调用该方法的节点的一个副本。

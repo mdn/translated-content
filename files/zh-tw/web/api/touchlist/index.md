@@ -29,7 +29,7 @@ See the [example on the main Touch events article](/zh-TW/docs/DOM/Touch_events#
 
 ## 瀏覽器相容性
 
-{{Compat("api.TouchList")}}
+{{Compat}}
 
 ## 參見
 

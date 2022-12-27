@@ -37,7 +37,7 @@ Location: http://www.example.org/index.asp
 
 ## 瀏覽器相容性
 
-{{Compat("http.status.301")}}
+{{Compat}}
 
 ## 參見
 

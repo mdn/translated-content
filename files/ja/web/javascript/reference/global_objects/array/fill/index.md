@@ -2,6 +2,7 @@
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 ---
+
 {{JSRef}}
 
 **`fill()`** メソッドは、開始インデックス（デフォルトは `0`）から終了インデックス（デフォルトは `array.length`）までのすべての要素を、静的な値に変更した配列を返します。

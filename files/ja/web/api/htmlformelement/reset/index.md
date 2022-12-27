@@ -2,6 +2,7 @@
 title: HTMLFormElement.reset
 slug: Web/API/HTMLFormElement/reset
 ---
+
 ## 概要
 
 `reset` はフォームを初期状態にリセットします。

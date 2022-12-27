@@ -2,6 +2,7 @@
 title: EventSource
 slug: Web/API/EventSource
 ---
+
 {{APIRef("Server Sent Events")}}
 
 **`EventSource`** インターフェイスは、 [Server-sent event](/ja/docs/Web/API/Server-sent_events) のウェブコンテンツのインターフェイスです。 `EventSource` インターフェイスは、 [HTTP](/ja/docs/Web/HTTP) サーバーとの間で永続的なコネクションを開き、[イベント](/ja/docs/Web/API/Document_Object_Model/Events)を `text/event-stream` の形式で受け取ります。コネクションは {{domxref("EventSource.close()")}} を呼び出して閉じられるまで開いたままになります。

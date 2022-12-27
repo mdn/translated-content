@@ -108,7 +108,7 @@ function addStylesheetRules (rules) {
 
 ## Browser compatibility
 
-{{Compat("api.CSSStyleSheet.insertRule")}}
+{{Compat}}
 
 ## See also
 

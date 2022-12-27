@@ -2,6 +2,7 @@
 title: 等価 (==)
 slug: Web/JavaScript/Reference/Operators/Equality
 ---
+
 {{jsSidebar("Operators")}}
 
 等価演算子 (`==`) は、二つのオペランドが等しいことを検査し、論理値で結果を返します。[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)演算子とは異なり、オペランドの型が異なる場合には型の変換を試みてから比較を行います。

@@ -2,6 +2,7 @@
 title: RegExp.prototype.exec()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/exec
 ---
+
 {{JSRef}}
 
 **`exec()`** メソッドは、指定された文字列内で一致するものの検索を実行します。結果の配列、または {{jsxref("null")}} を返します。

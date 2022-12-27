@@ -2,6 +2,7 @@
 title: 关于该参考
 slug: Web/JavaScript/Reference/About
 ---
+
 {{JsSidebar}}
 
 该 JavaScript 参考提供 Javascript 语言的知识仓库。 详细的描述了完整的 Javascript 语言的信息。如果你编写 JavaScript 代码， 你会经常使用这些页面 (因此标题为 "JavaScript 参考文档")。如果你正在学习 JavaScript， 或需要帮助理解一些 Javascript 的功能或特性，请查看 [JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)。

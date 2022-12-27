@@ -2,6 +2,7 @@
 title: NodeList.entries()
 slug: Web/API/NodeList/entries
 ---
+
 {{APIRef("DOM")}}
 
 该方法返回一个迭代协议，允许遍历此对象中包含的所有键/值。该值也是一个{{domxref("Node")}} 对象。

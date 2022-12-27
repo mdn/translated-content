@@ -2,6 +2,7 @@
 title: 构建内容丰富的网页
 slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 构建页面内容是一项重要技能，页面构建清晰才能顺利交付进行 CSS 布局。本测验将测试你是否能构思出页面的最终外观，以及是否会选用适当的结构语义。

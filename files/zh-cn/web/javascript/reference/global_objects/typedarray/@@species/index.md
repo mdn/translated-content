@@ -2,6 +2,7 @@
 title: get TypedArray[@@species]
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/@@species
 ---
+
 {{JSRef}}
 
 **`TypedArray[@@species]`** 访问器属性返回[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)的构造器。

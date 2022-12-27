@@ -2,6 +2,7 @@
 title: RTCPeerConnection.createDataChannel()
 slug: Web/API/RTCPeerConnection/createDataChannel
 ---
+
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 {{domxref("RTCPeerConnection")}} 的 `createDataChannel()` 方法创建一个可以发送任意数据的数据通道 (data channel)。常用于后台传输内容，例如: 图像，文件传输，聊天文字，游戏数据更新包，等等。

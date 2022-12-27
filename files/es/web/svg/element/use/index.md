@@ -10,7 +10,7 @@ translation_of: Web/SVG/Element/use
 ---
 {{SVGRef}}
 
-El elemento `use` toma los nodos que están dentro del documento SVG y duplica el contenido donde éste esté siendo utilizado. El efecto es el mismo, como si éstos nodos hubiesen sido profundamente clonados en un elemento DOM no expuesto, y luego pegados donde se encuentra el elemento `use`, al igual que los [elementos plantilla](/es/docs/Web/HTML/Element/template) son clonados en HTML5. Desde que los elementos clonados no sean expuestos como DOM, su cuidado debe tomarse en cuenta durante el uso de [CSS](/en/CSS "en/CSS") para estilizar un elemento `use` y sus descendientes ocultos. Los atributos CSS no ofrecen la garantía de heredarse en los elementos DOM clonados y escondidos, a no ser que lo realice utilizando [herencia CSS](/en/CSS/inheritance "en/CSS/inheritance").
+El elemento `use` toma los nodos que están dentro del documento SVG y duplica el contenido donde éste esté siendo utilizado. El efecto es el mismo, como si éstos nodos hubiesen sido profundamente clonados en un elemento DOM no expuesto, y luego pegados donde se encuentra el elemento `use`, al igual que los [elementos plantilla](/es/docs/Web/HTML/Element/template) son clonados en HTML5. Desde que los elementos clonados no sean expuestos como DOM, su cuidado debe tomarse en cuenta durante el uso de [CSS](/en/CSS) para estilizar un elemento `use` y sus descendientes ocultos. Los atributos CSS no ofrecen la garantía de heredarse en los elementos DOM clonados y escondidos, a no ser que lo realice utilizando [herencia CSS](/en/CSS/inheritance).
 
 Por razones de seguridad, algunos navegadores podrían aplicar una política del mismo origen sobre los elementos `use` y podrían negarse a cargar una URI de origen cruzado dentro del atributo `xlink:href`.
 
@@ -44,11 +44,11 @@ Por razones de seguridad, algunos navegadores podrían aplicar una política del
 
 ### Atributos Globales
 
-- [Atributos de procesamiento condicional](/en/SVG/Attribute#ConditionalProccessing "en/SVG/Attribute#ConditionalProccessing") »
-- [Atributos núcleo](/en/SVG/Attribute#Core "en/SVG/Attribute#Core") »
-- [Atributos de eventos gráficos](/en/SVG/Attribute#GraphicalEvent "en/SVG/Attribute#GraphicalEvent") »
-- [Atributos de presentación](/en/SVG/Attribute#Presentation "en/SVG/Attribute#Presentation") »
-- [Atributos Xlink](/en/SVG/Attribute#XLink "en/SVG/Attribute#XLink") »
+- [Atributos de procesamiento condicional](/en/SVG/Attribute#ConditionalProccessing) »
+- [Atributos núcleo](/en/SVG/Attribute#Core) »
+- [Atributos de eventos gráficos](/en/SVG/Attribute#GraphicalEvent) »
+- [Atributos de presentación](/en/SVG/Attribute#Presentation) »
+- [Atributos Xlink](/en/SVG/Attribute#XLink) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -64,7 +64,7 @@ Por razones de seguridad, algunos navegadores podrían aplicar una política del
 
 ## Interfaz DOM
 
-Este elemento implementa la interface [`SVGUseElement`](/en/DOM/SVGUseElement "en/DOM/SVGUseElement").
+Este elemento implementa la interface [`SVGUseElement`](/en/DOM/SVGUseElement).
 
 ## Compatibilidad entre navegadores
 

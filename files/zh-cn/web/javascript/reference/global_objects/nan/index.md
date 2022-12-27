@@ -2,6 +2,7 @@
 title: NaN
 slug: Web/JavaScript/Reference/Global_Objects/NaN
 ---
+
 {{jsSidebar("Objects")}}
 
 全局属性 **`NaN`** 的值表示不是一个数字（Not-A-Number）。

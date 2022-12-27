@@ -2,13 +2,14 @@
 title: label
 slug: Web/JavaScript/Reference/Statements/label
 ---
+
 {{jsSidebar("Statements")}}
 
 **ラベル付き文**は、 {{jsxref("Statements/break", "break")}} 文や {{jsxref("Statements/continue", "continue")}} 文と組み合わせて使用することができます。これは文に参照先となる識別子の接頭辞をつけます。
 
 {{EmbedInteractiveExample("pages/js/statement-label.html")}}
 
-> **Note:** **注:** ループやブロックに名前を付けることはめったにありません。ふつうは、ジャンプによるループの代わりに関数呼び出しを使用することができます。
+> **Note:** ループやブロックに名前を付けることはめったにありません。ふつうは、ジャンプによるループの代わりに関数呼び出しを使用することができます。
 
 ## 構文
 

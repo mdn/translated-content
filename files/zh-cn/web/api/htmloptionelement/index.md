@@ -2,6 +2,7 @@
 title: HTMLOptionElement
 slug: Web/API/HTMLOptionElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLOptionElement`** 接口表示了 {{HTMLElement("option")}} 元素并继承{{domxref("HTMLElement")}}接口所有的类和方法。
@@ -35,7 +36,7 @@ _方法继承自其父类, {{domxref("HTMLElement")}}._
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLOptionElement")}}
+{{Compat}}
 
 ## 参见
 

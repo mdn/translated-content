@@ -82,7 +82,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
 ## 瀏覽器相容性
 
-{{Compat("html.global_attributes")}}
+{{Compat}}
 
 ## 參見
 

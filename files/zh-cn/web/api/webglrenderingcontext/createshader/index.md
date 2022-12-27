@@ -2,6 +2,7 @@
 title: WebGLRenderingContext.createShader()
 slug: Web/API/WebGLRenderingContext/createShader
 ---
+
 {{APIRef("WebGL")}}
 
 **WebGLRenderingContext.createShader()** 用于创建一个 {{domxref("WebGLShader")}} 着色器对象，该对象可以使用 {{domxref("WebGLRenderingContext.shaderSource()")}} 和 {{domxref("WebGLRenderingContext.compileShader()")}} 方法配置着色器代码。
@@ -27,7 +28,7 @@ WebGLShader gl.createShader(type);
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLRenderingContext.createShader")}}
+{{Compat}}
 
 ## 其他相关
 

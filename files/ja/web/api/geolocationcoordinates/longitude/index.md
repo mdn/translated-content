@@ -2,6 +2,7 @@
 title: GeolocationCoordinates.longitude
 slug: Web/API/GeolocationCoordinates/longitude
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 {{domxref("GeolocationCoordinates")}} インターフェイスの **`longitude`** プロパティは読み取り専用であり、地理的な位置の経度 10 進数で表す倍精度浮動小数点値です。計測時刻を表す {{domxref("DOMTimeStamp")}} と共に、 `GeolocationCoordinates` オブジェクトは {{domxref("GeolocationPosition")}} インターフェイスの一部であり、地理位置を取得して返す位置情報 API 関数が返すオブジェクト型です。

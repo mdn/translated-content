@@ -2,6 +2,7 @@
 title: WaveShaperNode.oversample
 slug: Web/API/WaveShaperNode/oversample
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("WaveShaperNode") }} 接口的 `oversample` 属性是一个指示过采样是否必须使用的枚举值。 过采样是一个用于在将畸变应用到音频信号之前创建更多的采样（上采样）的技术。

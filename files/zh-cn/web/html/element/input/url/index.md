@@ -2,6 +2,7 @@
 title: <input type="url">
 slug: Web/HTML/Element/Input/url
 ---
+
 {{HTMLRef}}
 
 {{HTMLElement("input")}} 元素有一个 **`url`** 来让用户输入 URL{{EmbedInteractiveExample("pages/tabbed/input-url.html", "tabbed-shorter")}}

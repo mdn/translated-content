@@ -2,6 +2,7 @@
 title: Array.prototype.concat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/concat
 ---
+
 {{JSRef}}
 
 **`concat()`** メソッドは、2 つ以上の配列を結合するために使用します。このメソッドは既存の配列を変更せず、新しい配列を返します。
@@ -32,7 +33,7 @@ const new_array = old_array.concat([value1[, value2[, ...[, valueN]]]])
 - オブジェクトの参照 (実際のオブジェクトではなく): `concat` はオブジェクトの参照を新しい配列にコピーします。元の配列も新しい配列も同じオブジェクトを参照します。これはつまり、もし参照されているオブジェクトが修正されれば、その変更は元の配列と新しい配列の両方に現れるわけです。
 - 文字列や数値、真偽値 ({{jsxref("Global_Objects/String", "String")}} オブジェクトや {{jsxref("Global_Objects/Number", "Number")}} オブジェクト、{{jsxref("Global_Objects/Boolean", "Boolean")}} オブジェクトではなく): `concat` は文字列や数値の値を新しい配列にコピーします。
 
-> **Note:** **注:** 連結した配列/値は元の配列には手を付けません。さらに、新しい配列へどんな操作をしても、元の配列には影響しません。逆もまた同様です（要素がオブジェクト参照ではない場合のみです）。
+> **Note:** 連結した配列/値は元の配列には手を付けません。さらに、新しい配列へどんな操作をしても、元の配列には影響しません。逆もまた同様です（要素がオブジェクト参照ではない場合のみです）。
 
 ## 例
 

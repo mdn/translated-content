@@ -2,6 +2,7 @@
 title: Blob.stream()
 slug: Web/API/Blob/stream
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}}接口的**`stream()`** 方法返回一个{{domxref("ReadableStream")}}对象，读取它将返回包含在`Blob`中的数据。
@@ -35,7 +36,7 @@ var stream = blob.stream();
 
 ## 浏览器兼容性
 
-{{Compat("api.Blob.stream")}}
+{{Compat}}
 
 ## 另请参阅
 

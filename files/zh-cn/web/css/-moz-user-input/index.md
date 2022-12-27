@@ -2,6 +2,7 @@
 title: '-moz-user-input'
 slug: Web/CSS/-moz-user-input
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 ## Summary

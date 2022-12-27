@@ -2,6 +2,7 @@
 title: 学习论坛
 slug: MDN/Community/Learn_forum
 ---
+
 {{MDNSidebar}}
 
 我们的[学习 web 开发](/zh-CN/docs/Learn)页面每个月可以获得上百万次的浏览量，且拥有[活跃的论坛](https://discourse.mozilla.org/c/mdn/learn/250)可供人们寻求普遍的帮助，或请求对他们的测验进行评估。我们乐于帮助人们回答帖子中的问题，以让这个学习社区更加壮大。

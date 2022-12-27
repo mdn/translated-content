@@ -2,6 +2,7 @@
 title: Animation.currentTime
 slug: Web/API/Animation/currentTime
 ---
+
 {{APIRef("Web Animations API")}}{{SeeCompatTable}}
 
 Animation.currentTime 属性返回或设置动画的当前时间值（以毫秒为单位），无论动画正在运行还是已暂停。
@@ -41,7 +42,7 @@ animation.currentTime =
 
 ## 浏览器支持
 
-{{Compat("api.Animation.currentTime")}}
+{{Compat}}
 
 ## 相关内容
 

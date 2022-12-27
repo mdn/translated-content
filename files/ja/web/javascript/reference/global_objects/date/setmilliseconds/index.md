@@ -2,6 +2,7 @@
 title: Date.prototype.setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 ---
+
 {{JSRef}}
 
 **`setMilliseconds()`** メソッドは、地方時に基づき、指定された日時の「ミリ秒」を設定します。

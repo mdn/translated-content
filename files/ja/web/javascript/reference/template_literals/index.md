@@ -2,6 +2,7 @@
 title: テンプレートリテラル (テンプレート文字列)
 slug: Web/JavaScript/Reference/Template_literals
 ---
+
 {{JsSidebar("More")}}
 
 テンプレートリテラルはバックティック (\`) で区切られたリテラルで、*substitution*と呼ばれる埋め込み式が利用できます。

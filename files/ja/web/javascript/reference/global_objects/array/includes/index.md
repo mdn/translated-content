@@ -2,6 +2,7 @@
 title: Array.prototype.includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 ---
+
 {{JSRef}}
 
 **`includes()`** メソッドは、特定の要素が配列に含まれているかどうかを `true` または `false` で返します。

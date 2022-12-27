@@ -2,6 +2,7 @@
 title: rx
 slug: Web/SVG/Attribute/rx
 ---
+
 {{SVGRef}}
 
 **`rx`** 属性用于定义水平轴向的圆角半径尺寸。

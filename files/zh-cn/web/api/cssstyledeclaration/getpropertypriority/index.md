@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.getPropertyPriority()
 slug: Web/API/CSSStyleDeclaration/getPropertyPriority
 ---
+
 {{ APIRef("CSSOM") }}
 
 **CSSStyleDeclaration.getPropertyPriority()** 方法会根据传入的 CSS 属性，返回一个 {{domxref('DOMString')}} 来表示该属性的优先级。

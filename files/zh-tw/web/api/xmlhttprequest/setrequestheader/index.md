@@ -38,7 +38,7 @@ XMLHttpRequest.setRequestHeader(header, value)
 
 ## 瀏覽器相容性
 
-{{Compat("api.XMLHttpRequest.setRequestHeader")}}
+{{Compat}}
 
 ## 參見
 

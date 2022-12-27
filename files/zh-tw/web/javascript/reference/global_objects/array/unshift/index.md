@@ -51,7 +51,7 @@ arr.unshift([-3]);
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.unshift")}}
+{{Compat}}
 
 ## 參見
 

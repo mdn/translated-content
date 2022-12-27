@@ -2,6 +2,7 @@
 title: Event()
 slug: Web/API/Event/Event
 ---
+
 {{APIRef("DOM")}}
 
 **`Event()`** 构造函数，创建一个新的事件对象 {{domxref("Event")}}。

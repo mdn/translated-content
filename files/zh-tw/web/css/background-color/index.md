@@ -78,7 +78,7 @@ background-color: inherit;
 
 ## Browser compatibility
 
-{{Compat("css.properties.background-color")}}
+{{Compat}}
 
 ## 延伸閱讀
 

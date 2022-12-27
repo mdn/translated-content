@@ -2,6 +2,7 @@
 title: Symbol.matchAll
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/matchAll
 ---
+
 {{JSRef}}
 
 **`Symbol.matchAll`** は、文字列に対する正規表現の一致を生成するイテレーターを返します。この関数は {{jsxref("String.prototype.matchAll()")}} メソッドによって呼び出されます。

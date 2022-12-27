@@ -2,6 +2,7 @@
 title: list-style-image
 slug: Web/CSS/list-style-image
 ---
+
 {{ CSSRef}}
 
 ## 概要

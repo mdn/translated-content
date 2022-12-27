@@ -65,7 +65,7 @@ l10n:
 </form>
 ```
 
-これは、フォームを正式に定義します。これは {{HTMLElement("section")}} や {{HTMLElement("footer")}} 要素と同様にコンテナー要素ですが、フォームを含めるのに特化しています。フォームの動作方法を設定するための特有の属性もにも対応しています。すべての属性は省略可能ですが、少なくとも [`action`](/ja/docs/Web/HTML/Element/form#attr-action) 属性と [`method`](/ja/docs/Web/HTML/Element/form#attr-method) 属性は常に設定するのがふつうです。
+これは、フォームを正式に定義します。これは {{HTMLElement("section")}} や {{HTMLElement("footer")}} 要素と同様にコンテナー要素ですが、フォームを含めるのに特化しています。フォームの動作方法を設定するための特有の属性にも対応しています。すべての属性は省略可能ですが、少なくとも [`action`](/ja/docs/Web/HTML/Element/form#attr-action) 属性と [`method`](/ja/docs/Web/HTML/Element/form#attr-method) 属性は常に設定するのがふつうです。
 
 - `action` 属性は、フォームで収集したデータを送信すべき場所 (URL) を定義します。
 - `method` 属性は、データを送信するために使用する HTTP メソッド（`get` または `post`）を定義します。

@@ -2,6 +2,7 @@
 title: HTMLCollection
 slug: Web/API/HTMLCollection
 ---
+
 {{APIRef("DOM")}}
 
 **`HTMLCollection`** 接口表示一个包含了元素（元素顺序为文档流中的顺序）的通用集合（与 {{jsxref("Functions/arguments", "arguments")}} 相似的类数组 (array-like) 对象），还提供了用来从该集合中选择元素的方法和属性。

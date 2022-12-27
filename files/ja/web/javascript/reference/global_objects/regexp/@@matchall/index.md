@@ -2,6 +2,7 @@
 title: RegExp.prototype[@@matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 ---
+
 {{JSRef}}
 
 **`[@@matchAll]`** メソッドは、文字列に対する正規表現で一致するすべてのものを返します。

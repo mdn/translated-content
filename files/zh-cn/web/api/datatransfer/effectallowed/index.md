@@ -2,6 +2,7 @@
 title: DataTransfer.effectAllowed
 slug: Web/API/DataTransfer/effectAllowed
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.effectAllowed`** 属性指定拖放操作所允许的一个效果。_copy_ 操作用于指示被拖动的数据将从当前位置复制到放置位置。*move 操作用于指定被拖动的数据将被移动。 link*操作用于指示将在源和放置位置之间创建某种形式的关系或连接。

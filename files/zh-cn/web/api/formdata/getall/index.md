@@ -2,6 +2,7 @@
 title: FormData.getAll()
 slug: Web/API/FormData/getAll
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`getAll()`** 方法会返回该 {{domxref("FormData")}} 对象指定 key 的所有值。
@@ -50,7 +51,7 @@ formData.getAll('username'); // Returns ["Chris", "Bob"]
 
 ## 浏览器兼容性
 
-{{Compat("api.FormData.getAll")}}
+{{Compat}}
 
 ## 相关链接
 

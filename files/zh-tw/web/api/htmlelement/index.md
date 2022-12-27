@@ -112,7 +112,7 @@ _Inherits methods from its parent, {{domxref("Element")}}._
 
 ## 瀏覽器相容性
 
-{{Compat("api.HTMLElement")}}
+{{Compat}}
 
 ## 參見
 

@@ -2,6 +2,7 @@
 title: OffscreenCanvas()
 slug: Web/API/OffscreenCanvas/OffscreenCanvas
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`OffscreenCanvas()`**构造函数，返回一个新的 `OffscreenCanvas` 对象

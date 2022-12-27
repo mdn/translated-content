@@ -2,6 +2,7 @@
 title: Object.isExtensible()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isExtensible
 ---
+
 {{JSRef("Global_Objects", "Object")}}
 
 ## 概述

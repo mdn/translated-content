@@ -2,6 +2,7 @@
 title: Screen.availHeight
 slug: Web/API/Screen/availHeight
 ---
+
 {{APIRef}}
 
 ## 概述

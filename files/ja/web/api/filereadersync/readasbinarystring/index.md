@@ -2,6 +2,7 @@
 title: FileReaderSync.readAsBinaryString()
 slug: Web/API/FileReaderSync/readAsBinaryString
 ---
+
 {{APIRef("File API")}}{{deprecated_header}}
 
 > **Note:** このメソッドは非推奨であり、 {{DOMxRef("FileReaderSync.readAsArrayBuffer", "readAsArrayBuffer()")}} に取って代わられました。

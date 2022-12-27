@@ -2,6 +2,7 @@
 title: CacheStorage.keys()
 slug: Web/API/CacheStorage/keys
 ---
+
 {{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 {{domxref("CacheStorage")}} 接口的 **`keys()`** 方法返回一个 {{jsxref("Promise")}}对象，它使用一个数组 resolve，该数组包含 {{domxref("CacheStorage")}} 对象按创建顺序跟踪的所有命名 {{domxref("Cache")}} 对象对应的字符串。使用此方法迭代所有 {{domxref("Cache")}} 对象。
@@ -48,7 +49,7 @@ this.addEventListener('activate', function(event) {
 
 ## 浏览器兼容
 
-{{Compat("api.CacheStorage.keys")}}
+{{Compat}}
 
 ## 亦可参考
 

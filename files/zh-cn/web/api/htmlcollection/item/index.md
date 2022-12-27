@@ -2,6 +2,7 @@
 title: HTMLCollection.item
 slug: Web/API/HTMLCollection/item
 ---
+
 {{APIRef("HTML DOM")}}
 
 `HTMLCollection.item()` 由位置获取元素.

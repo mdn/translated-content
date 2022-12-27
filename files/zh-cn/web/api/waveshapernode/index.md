@@ -2,6 +2,7 @@
 title: WaveShaperNode
 slug: Web/API/WaveShaperNode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`WaveShaperNode`** 接口表示一个非线性的畸变器。是一个使用曲线来将一个波形畸变应用到一个声音信号中的{{domxref("AudioNode")}}。除了明显的失真效果之外，它通常用来给信号添加一个暖调的感觉。

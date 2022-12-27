@@ -2,6 +2,7 @@
 title: Contribute a recipe
 slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 ---
+
 {{CSSRef}}
 
 如果您愿意为 Layout Cookbook 贡献示例文件，那么本页将通过阐释步骤指导您发布示例。

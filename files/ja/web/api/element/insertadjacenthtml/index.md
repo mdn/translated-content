@@ -2,6 +2,7 @@
 title: element.insertAdjacentHTML
 slug: Web/API/Element/insertAdjacentHTML
 ---
+
 {{ApiRef("DOM")}}
 
 ## 概要
@@ -39,7 +40,7 @@ foo
 <!-- afterend -->
 ```
 
-> **Note:** **注記:** `beforebegin` および `afterend` の位置指定で動作するのは、ノードがツリー内にあり、かつ親要素が存在する場合のみとなります。
+> **Note:** `beforebegin` および `afterend` の位置指定で動作するのは、ノードがツリー内にあり、かつ親要素が存在する場合のみとなります。
 
 ## 例
 

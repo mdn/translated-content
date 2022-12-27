@@ -3,6 +3,7 @@ title: 如何构造 HTML 表单
 slug: Learn/Forms/How_to_structure_a_web_form
 original_slug: Learn/HTML/Forms/How_to_structure_an_HTML_form
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Your_first_HTML_form", "Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms")}}
 
 有了基础知识，我们现在更详细地了解了用于为表单的不同部分提供结构和意义的元素。

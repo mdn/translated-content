@@ -30,4 +30,4 @@ window.onclose = resetThatServerThing;
 
 ## 瀏覽器相容性
 
-{{Compat("api.GlobalEventHandlers.onclose")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: <time>
 slug: Web/HTML/Element/time
 ---
+
 ## 概述
 
 HTML _time_ 标签 (`<time>`) 用来表示 24 小时制时间或者[公历日期](http://en.wikipedia.org/wiki/Gregorian_calendar)，若表示日期则也可包含时间和时区。

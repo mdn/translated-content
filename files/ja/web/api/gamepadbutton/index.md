@@ -2,6 +2,7 @@
 title: GamepadButton
 slug: Web/API/GamepadButton
 ---
+
 {{APIRef("Gamepad API")}}
 
 **`GamepadButton`** インタフェースはゲームパッドやその他のコントローラーの各ボタンを定義します。このインタフェースによって、コントローラー上で使用できるボタンの状態を確認することができます。

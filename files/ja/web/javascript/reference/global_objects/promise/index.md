@@ -2,6 +2,7 @@
 title: Promise
 slug: Web/JavaScript/Reference/Global_Objects/Promise
 ---
+
 {{JSRef}}
 
 **`Promise`** オブジェクトは、非同期処理の完了 (もしくは失敗) の結果およびその結果の値を表します。

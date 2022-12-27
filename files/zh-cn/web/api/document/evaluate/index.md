@@ -2,6 +2,7 @@
 title: Document.evaluate()
 slug: Web/API/Document/evaluate
 ---
+
 {{ ApiRef("DOM") }}
 
 根据传入的 [XPath](/zh-CN/docs/XPath) 表达式以及其他参数，返回一个 {{domxref("XPathResult")}} 对象。
@@ -85,7 +86,7 @@ Results of `NODE_SNAPSHOT` types are snapshots, which are essentially lists of m
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.evaluate")}}
+{{Compat}}
 
 ## 参见
 

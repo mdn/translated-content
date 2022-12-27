@@ -3,6 +3,7 @@ title: 样式列表
 slug: Learn/CSS/Styling_text/Styling_lists
 original_slug: Learn/CSS/为文本添加样式/Styling_lists
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}
 
 [List 列表](/zh-CN/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists) 大体上和其他文本一样，但是仍有一些你需要知道的特殊 CSS 属性，和一些可供参考的最佳实践，这篇文章将阐述这一切。

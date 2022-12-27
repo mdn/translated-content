@@ -193,7 +193,7 @@ if (!Array.prototype.filter)
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.filter")}}
+{{Compat}}
 
 ## 參見
 

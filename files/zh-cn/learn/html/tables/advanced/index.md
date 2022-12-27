@@ -2,6 +2,7 @@
 title: HTML 表格高级特性和无障碍
 slug: Learn/HTML/Tables/Advanced
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
 
 这个模块的第二篇文章中，我们来看一下 HTML 表格更高级的功能，比如像 表格的标题/摘要，以及将你表格中的各行分组成头部、正文、页脚部分，提高视力受损用户的无障碍。

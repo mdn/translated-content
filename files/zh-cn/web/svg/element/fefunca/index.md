@@ -2,6 +2,7 @@
 title: feFuncA
 slug: Web/SVG/Element/feFuncA
 ---
+
 {{SVGRef}}
 
 [SVG](/zh-CN/docs/Web/SVG) 滤镜 **`<feFuncA>`** 为它的父元素 {{SVGElement("feComponentTransfer")}} 的输入图形的透明度（alpha）组件定义了变换函数。

@@ -4,6 +4,7 @@ slug: >-
   Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系
 ---
+
 {{CSSRef}}
 
 在本文中，我们将了解弹性盒子（Flexbox）如何与所有其他 CSS 模块相适应。如果您想学习 flexbox，我们将一起找出需要注意的规范和 flexbox 与一些其他模块不同的原因。

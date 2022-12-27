@@ -2,6 +2,7 @@
 title: 使用 Web Workers
 slug: Web/API/Web_Workers_API/Using_web_workers
 ---
+
 {{DefaultAPISidebar("Web Workers API")}}
 
 Web Worker 为 Web 内容在后台线程中运行脚本提供了一种简单的方法。线程可以执行任务而不干扰用户界面。此外，他们可以使用[`XMLHttpRequest`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXMLHttpRequest)执行 I/O (尽管`responseXML`和`channel`属性总是为空)。一旦创建， 一个 worker 可以将消息发送到创建它的 JavaScript 代码，通过将消息发布到该代码指定的事件处理程序（反之亦然）。本文提供了有关使用 Web Worker 的详细介绍。

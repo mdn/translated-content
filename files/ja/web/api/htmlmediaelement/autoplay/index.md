@@ -2,6 +2,7 @@
 title: HTMLMediaElement.autoplay
 slug: Web/API/HTMLMediaElement/autoplay
 ---
+
 {{APIRef("HTML DOM")}}
 
 **HTMLMediaElement.autoplay** プロパティは、 HTML の {{htmlattrxref("autoplay", "video")}} 属性を反映しています。これは、再生に必要なメディアが揃った時点で自動的に再生を開始するかどうかを示します。

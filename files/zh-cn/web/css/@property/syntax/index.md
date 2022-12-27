@@ -2,6 +2,7 @@
 title: syntax
 slug: Web/CSS/@property/syntax
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`syntax`** [CSS](/zh-CN/docs/Web/CSS) 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它描述了该属性所允许的语法结构。
@@ -98,7 +99,7 @@ window.CSS.registerProperty({
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.property")}}
+{{Compat}}
 
 ## 另见
 

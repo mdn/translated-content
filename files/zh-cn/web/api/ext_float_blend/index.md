@@ -2,6 +2,7 @@
 title: EXT_float_blend
 slug: Web/API/EXT_float_blend
 ---
+
 {{APIRef("WebGL")}}
 
 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的 `EXT_float_blend` 扩展允许使用 32 位浮点数组件来混合和绘制缓冲区。
@@ -48,7 +49,7 @@ gl.drawArrays(gl.POINTS, 0, 1);
 
 ## 浏览器兼容性
 
-{{Compat("api.EXT_float_blend")}}
+{{Compat}}
 
 ## 其它参考
 

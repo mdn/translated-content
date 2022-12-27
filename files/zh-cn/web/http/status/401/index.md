@@ -2,6 +2,7 @@
 title: 401 Unauthorized
 slug: Web/HTTP/Status/401
 ---
+
 {{HTTPSidebar}}
 
 状态码 **`401 Unauthorized`** 代表客户端错误，指的是由于缺乏目标资源要求的身份验证凭证，发送的请求未得到满足。

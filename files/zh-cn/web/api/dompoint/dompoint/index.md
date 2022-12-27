@@ -2,6 +2,7 @@
 title: DOMPoint.DOMPoint()
 slug: Web/API/DOMPoint/DOMPoint
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint()`**构造函数创建并返回一个 {{domxref("DOMPoint")}} 对象，可提供部分或全部属性值作为其参数。
@@ -42,7 +43,7 @@ newTopLeft.y += 100;
 
 ## 浏览器兼容性
 
-{{Compat("api.DOMPoint.DOMPoint")}}
+{{Compat}}
 
 ## 相关链接
 

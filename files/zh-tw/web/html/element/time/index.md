@@ -55,7 +55,7 @@ slug: Web/HTML/Element/time
 
 ## 瀏覽器支援度
 
-{{Compat("html.elements.time")}}
+{{Compat}}
 
 ## 延伸閱讀
 

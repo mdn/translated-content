@@ -2,6 +2,7 @@
 title: 'CSP: frame-ancestors'
 slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 ---
+
 {{HTTPSidebar}}
 
 HTTP 头部 {{HTTPHeader("Content-Security-Policy")}} (CSP) `中的frame-ancestors` 指令指定了一个可以包含{{HTMLElement("frame")}}，{{HTMLElement("iframe")}}，{{HTMLElement("object")}}，{{HTMLElement("embed")}}，or {{HTMLElement("applet")}}等元素的有效父级。

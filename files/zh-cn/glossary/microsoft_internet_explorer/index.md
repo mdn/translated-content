@@ -2,6 +2,7 @@
 title: Microsoft Internet Explorer
 slug: Glossary/Microsoft_Internet_Explorer
 ---
+
 Internet Explorer (or IE) 是一个由微软为遗留企业用户维护的免费的可视化 {{glossary("浏览器")}} 。{{glossary("Microsoft Edge")}} 是 Windows 现在默认的浏览器。
 
 微软在 1995 年首次将 IE 和 Windows 捆绑，作为 "Microsoft Plus!" 包的一部分出售。在大约 2002，Internet Explorer 已经成了世界上使用最多的浏览器，但目前已经落后于 Chrome、Firefox、Edge 和 Safari。

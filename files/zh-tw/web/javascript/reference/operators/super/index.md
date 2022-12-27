@@ -155,7 +155,7 @@ obj2.method2(); // logs "method 1"
 
 ## Browser compatibility
 
-{{Compat("javascript.operators.super")}}
+{{Compat}}
 
 ## 參考
 

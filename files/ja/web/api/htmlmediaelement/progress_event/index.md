@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: progress イベント'
 slug: Web/API/HTMLMediaElement/progress_event
 ---
+
 {{APIRef}}
 
 **`progress`** イベントは、ブラウザーがリソースを読み込むときに定期的に発生します。

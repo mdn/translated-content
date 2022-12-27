@@ -141,7 +141,7 @@ for (var k in typedArrayTypes)
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.TypedArray")}}
+{{Compat}}
 
 ## 相容性備註
 

@@ -2,6 +2,7 @@
 title: 基础变形
 slug: Web/SVG/Tutorial/Basic_Transformations
 ---
+
 {{PreviousNext("Web/SVG/Tutorial/Texts", "Web/SVG/Tutorial/Clipping_and_masking")}}
 
 现在我们准备好开始扭曲我们美丽的图像了。但是首先，让我们正式地介绍{{SVGElement("g")}}元素。利用这个助手，你可以把属性赋给一整个元素集合。实际上，这是它唯一的目的。一个示例：

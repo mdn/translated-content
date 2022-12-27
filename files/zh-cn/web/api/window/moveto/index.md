@@ -2,6 +2,7 @@
 title: window.moveTo
 slug: Web/API/Window/moveTo
 ---
+
 {{ApiRef}}
 
 ## 概述

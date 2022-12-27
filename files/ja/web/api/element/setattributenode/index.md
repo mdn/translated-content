@@ -2,6 +2,7 @@
 title: element.setAttributeNode
 slug: Web/API/Element/setAttributeNode
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Summary

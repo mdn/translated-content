@@ -2,6 +2,7 @@
 title: Request.headers
 slug: Web/API/Request/headers
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Request")}}接口的只读属性 **`headers`** 包含与当前请求关联的{{domxref("Headers")}}对象。

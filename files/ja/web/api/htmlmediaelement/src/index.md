@@ -2,6 +2,7 @@
 title: HTMLMediaElement.src
 slug: Web/API/HTMLMediaElement/src
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.src`** プロパティは、 HTML のメディア要素の `src` 属性の値を反映します。これは、要素で使用するメディアリソースの URL を示します。

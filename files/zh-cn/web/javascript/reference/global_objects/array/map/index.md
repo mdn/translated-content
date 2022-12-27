@@ -2,6 +2,7 @@
 title: Array.prototype.map()
 slug: Web/JavaScript/Reference/Global_Objects/Array/map
 ---
+
 {{JSRef}}
 
 **`map()`** 方法创建一个新数组，这个新数组由原数组中的每个元素都调用一次提供的函数后的返回值组成。

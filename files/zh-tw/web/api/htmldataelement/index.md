@@ -26,7 +26,7 @@ _無具體的方法; 從它的父繼承, {{domxref("HTMLElement")}}._
 
 ## Browser compatibility
 
-{{Compat("api.HTMLDataElement")}}
+{{Compat}}
 
 ## See also
 

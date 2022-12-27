@@ -2,6 +2,7 @@
 title: SourceBuffer
 slug: Web/API/SourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 **`SourceBuffer`** 接口表示通过 {{domxref("MediaSource")}} 对象传递到 {{domxref("HTMLMediaElement")}} 并播放的媒体分块。它可以由一个或者多个媒体片段组成。

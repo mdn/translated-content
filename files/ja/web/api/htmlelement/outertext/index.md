@@ -2,6 +2,7 @@
 title: HTMLElement.outerText
 slug: Web/API/HTMLElement/outerText
 ---
+
 {{APIRef("DOM")}}
 
 **`outerText`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、 {{domxref("HTMLElement.innerText")}} と同じ値を返します。

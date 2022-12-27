@@ -2,6 +2,7 @@
 title: border-top-right-radius
 slug: Web/CSS/border-top-right-radius
 ---
+
 {{ CSSRef("CSS Borders") }}
 
 ## 概要

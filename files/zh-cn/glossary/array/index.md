@@ -2,6 +2,7 @@
 title: Array
 slug: Glossary/array
 ---
+
 数组对象是一个有序的数据（数据可以是 {{Glossary("primitive","原始类型")}} 或 {{Glossary("object","对象类型")}}）集合。相对于变量，数组可用于在一个变量中存储多个变量值。
 
 数组中的每一项都有一个数字附于其上，被称为索引。在 JavaScript 中，数组索引从 0 开始，并可以使用多种 {{Glossary("Method", "方法")}} 操作。

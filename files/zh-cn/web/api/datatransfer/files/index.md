@@ -2,6 +2,7 @@
 title: DataTransfer.files
 slug: Web/API/DataTransfer/files
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`DataTransfer.files`**属性在拖动操作中表示{{domxref("FileList","文件列表")}}。如果操作不包含文件，则此列表为空。
@@ -31,4 +32,4 @@ dataTransfer.files;
 
 ## 浏览器兼容性
 
-{{Compat("api.DataTransfer.files")}}
+{{Compat}}

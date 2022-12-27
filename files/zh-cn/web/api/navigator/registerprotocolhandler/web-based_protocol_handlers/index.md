@@ -2,6 +2,7 @@
 title: Web-based protocol handlers
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
+
 ## 背景
 
 利用非 HTTP 协议，从网页链接到一些别的资源，这种做法是相当普遍的。比如 `mailto:` 协议：

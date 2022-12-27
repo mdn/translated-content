@@ -2,6 +2,7 @@
 title: Document.querySelectorAll
 slug: Web/API/Document/querySelectorAll
 ---
+
 {{ ApiRef("DOM") }}
 
 ## 概述
@@ -125,7 +126,7 @@ inner.length; // 0
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.querySelectorAll")}}
+{{Compat}}
 
 ## 相关连接
 

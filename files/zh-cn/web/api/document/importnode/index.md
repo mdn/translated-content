@@ -2,6 +2,7 @@
 title: document.importNode
 slug: Web/API/Document/importNode
 ---
+
 {{ ApiRef() }}
 
 ## 概述
@@ -44,7 +45,7 @@ document.getElementById("container").appendChild(newNode);
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.importNode")}}
+{{Compat}}
 
 ## 规范
 

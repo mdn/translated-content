@@ -6,7 +6,7 @@ slug: Web/API/DOMParser
 
 **`DOMParser`** インターフェイスは、 {{Glossary("XML")}} や {{Glossary("HTML")}} ソースコードを文字列から DOM の {{domxref("Document")}} に解釈する機能を提供します。
 
-> **Note:** **注:** {{domxref("XMLHttpRequest")}} は URL で指すことができるリソースから直接 XML や HTML を解釈することができ、 `Document` を {{domxref("XMLHttpRequest.response", "response")}} プロパティでを返します。
+> **Note:** {{domxref("XMLHttpRequest")}} は URL で指すことができるリソースから直接 XML や HTML を解釈することができ、 `Document` を {{domxref("XMLHttpRequest.response", "response")}} プロパティでを返します。
 
 {{domxref("XMLSerializer")}} インターフェイスを使い、DOM ツリーを XML もしく HTML ソースに転換する、逆の操作を行うことができます。
 

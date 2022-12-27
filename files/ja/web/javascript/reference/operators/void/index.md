@@ -2,6 +2,7 @@
 title: void 演算子
 slug: Web/JavaScript/Reference/Operators/void
 ---
+
 {{jsSidebar("Operators")}}
 
 **`void` 演算子**は与えられた式 (`expression`) を評価し、{{jsxref("undefined")}} を返します。

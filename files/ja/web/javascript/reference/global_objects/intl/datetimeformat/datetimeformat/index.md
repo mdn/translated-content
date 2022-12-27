@@ -2,6 +2,7 @@
 title: Intl.DateTimeFormat() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat()`** コンストラクターは、言語に応じた日付と時刻の書式化を可能にする

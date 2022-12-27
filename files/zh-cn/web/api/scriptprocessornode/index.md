@@ -2,6 +2,7 @@
 title: ScriptProcessorNode
 slug: Web/API/ScriptProcessorNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 > **备注：** 这个特性在 2014 年 8 月 29 日发布的 Web Audio API 规范中已经标记为不推荐，将很快会被[Audio Workers](/zh-CN/docs/Web/API/Web_Audio_API#Audio_Workers)代替。

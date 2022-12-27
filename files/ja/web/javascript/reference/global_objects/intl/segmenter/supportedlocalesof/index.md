@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/supportedLocalesOf
 l10n:
   sourceCommit: 2d6d6a1d9f8ba2073c9f8e1bbc6b4e20204fb53c
 ---
+
 {{JSRef}}
 
 **`Intl.Segmenter.supportedLocalesOf()`** メソッドは、指定したロケールのうち、ランタイムのデフォルトロケールにフォールバックすることなくサポートされているものを含む配列を返します。

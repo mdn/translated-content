@@ -2,6 +2,7 @@
 title: itemtype
 slug: Web/HTML/Global_attributes/itemtype
 ---
+
 {{HTMLSidebar("Global_attributes")}}
 
 **`itemtype`** [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) 指定了词汇的 URL，它将会用于定义数据结构中的 `itemprop`（条目属性）。{{htmlattrxref("itemscope")}} 用于设置词汇的生效范围，其中词汇在数据结构中由 `itemtype` 设置。

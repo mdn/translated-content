@@ -49,7 +49,7 @@ _The `History`_ _interface doesn't inherit any methods._
 
 ## 瀏覽器相容性
 
-{{Compat("api.History")}}
+{{Compat}}
 
 ## 參見
 

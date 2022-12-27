@@ -41,4 +41,4 @@ dragTarget.addEventListener("dragend", function(ev) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.DragEvent.dataTransfer")}}
+{{Compat}}

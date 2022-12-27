@@ -2,6 +2,7 @@
 title: ResizeObserver
 slug: Web/API/ResizeObserver
 ---
+
 {{APIRef("Resize Observer API")}}{{SeeCompatTable}}
 
 **`ResizeObserver`** 接口可以监听到 {{domxref('Element')}} 的内容区域或 {{domxref('SVGElement')}}的边界框改变。内容区域则需要减去内边距 padding。（有关内容区域、内边距资料见[盒子模型](/docs/Learn/CSS/Introduction_to_CSS/Box_model) ）

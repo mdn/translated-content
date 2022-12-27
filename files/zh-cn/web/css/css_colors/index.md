@@ -3,6 +3,7 @@ title: CSS Color
 slug: Web/CSS/CSS_Colors
 original_slug: Web/CSS/CSS_Color
 ---
+
 {{CSSRef}}
 
 **CSS Color** 是一个处理颜色的 CSS 模块，包括颜色类型、颜色混合、不透明度、以及你如何将这些颜色和效果应用于 HTML 内容。

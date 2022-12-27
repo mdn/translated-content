@@ -2,6 +2,7 @@
 title: this
 slug: Web/JavaScript/Reference/Operators/this
 ---
+
 {{jsSidebar("Operators")}}
 
 **関数の `this` キーワード** は、JavaScript ではほかの言語と少々異なる動作をします。また、[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)であるかどうかでも違いがあります。

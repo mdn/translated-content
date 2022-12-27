@@ -2,6 +2,7 @@
 title: Element.querySelectorAll()
 slug: Web/API/Element/querySelectorAll
 ---
+
 {{APIRef("DOM")}}
 
 返回一个 non-live 的[`NodeList`](NodeList), 它包含所有元素的非活动节点，该元素来自与其匹配指定的 CSS 选择器组的元素。(基础元素本身不包括，即使它匹配。)
@@ -72,7 +73,7 @@ var matches = el.querySelectorAll('iframe[data-src]');
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.querySelectorAll")}}
+{{Compat}}
 
 ## 规范
 

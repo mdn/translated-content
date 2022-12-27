@@ -2,6 +2,7 @@
 title: Clients.claim()
 slug: Web/API/Clients/claim
 ---
+
 {{SeeCompatTable}}{{APIRef("Service Worker Clients")}}
 
 {{domxref("Clients")}} 接口的 **`claim()`** 方法允许一个激活的 service worker 将自己设置为其 {{domxref("ServiceWorkerRegistration.scope", "scope")}} 内所有 clients 的{{domxref("ServiceWorkerContainer.controller", "controller")}} . 这会在由此 service worker 控制的任何 clients 中触发 {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} 上的 "`controllerchange`" 事件。
@@ -38,7 +39,7 @@ self.addEventListener('activate', event => {
 
 ## 浏览器兼容性
 
-{{Compat("api.Clients.claim")}}
+{{Compat}}
 
 ## See also
 

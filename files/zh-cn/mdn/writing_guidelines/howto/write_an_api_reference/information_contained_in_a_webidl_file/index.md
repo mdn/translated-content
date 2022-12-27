@@ -5,6 +5,7 @@ slug: >-
 original_slug: >-
   MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file
 ---
+
 {{MDNSidebar}}
 
 在编写有关 API 的文档时，信息来源很多：规范描述了应该实现的内容以及模型，实现描述了实际放在浏览器中的内容。WebIDL 文件是一种非常简洁的方式，可以提供很多（但不是全部）有关 API 的信息。本文档提供了有助于理解 WebIDL 语法的参考。

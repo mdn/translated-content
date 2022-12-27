@@ -2,6 +2,7 @@
 title: Atomics.store()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
 ---
+
 {{JSRef}}
 
 静的な **`Atomics.store()`** メソッドは、指定された値を配列内の指定した位置に格納し、その値を返します。

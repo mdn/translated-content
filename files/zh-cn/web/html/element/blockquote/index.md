@@ -2,6 +2,7 @@
 title: <blockquote>：块级引用元素
 slug: Web/HTML/Element/blockquote
 ---
+
 {{HTMLRef}}
 
 **HTML `<blockquote>` 元素**（或者 HTML 块级引用元素），代表其中的文字是引用内容。通常在渲染时，这部分的内容会有一定的缩进（[注](/zh-CN/docs/Web/HTML/Element/blockquote#Notes) 中说明了如何更改）。若引文来源于网络，则可以将原内容的出处 URL 地址设置到 cite 特性上，若要以文本的形式告知读者引文的出处时，可以通过 {{HTMLElement("cite")}} 元素。
@@ -82,7 +83,7 @@ slug: Web/HTML/Element/blockquote
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.blockquote")}}
+{{Compat}}
 
 ## 参见
 

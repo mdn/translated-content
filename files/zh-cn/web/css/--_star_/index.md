@@ -2,6 +2,7 @@
 title: 自定义属性 (--*)：CSS 变量
 slug: Web/CSS/--*
 ---
+
 {{CSSRef}}
 
 带有前缀`--`的属性名，比如`--example--name`，表示的是带有值的自定义属性，其可以通过 {{cssxref("var")}} 函数在全文档范围内复用的。
@@ -75,7 +76,7 @@ CSS 自定义属性是可以级联的：每一个自定义属性可以多次出�
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.custom-property")}}
+{{Compat}}
 
 ## 参阅
 

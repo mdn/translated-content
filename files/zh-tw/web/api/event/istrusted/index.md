@@ -29,4 +29,4 @@ var bool = event.isTrusted;
 
 ## 瀏覽器相容性
 
-{{Compat("api.Event.isTrusted")}}
+{{Compat}}

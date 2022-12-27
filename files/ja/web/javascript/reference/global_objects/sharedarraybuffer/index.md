@@ -2,6 +2,7 @@
 title: SharedArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer
 ---
+
 {{JSRef}}
 
 **`SharedArrayBuffer`** オブジェクトは、固定長の生バイナリデータバッファーのジェネリックを表すために使用されます。{{jsxref("ArrayBuffer")}} オブジェクトと似ていますが、こちらは共有メモリー上にビューを生成するために使用されます。 `ArrayBuffer` と異なり、`SharedArrayBuffer` は分離できません。

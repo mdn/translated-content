@@ -2,6 +2,7 @@
 title: HTMLTableElement.deleteTFoot()
 slug: Web/API/HTMLTableElement/deleteTFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.deleteTFoot()`** は、 {{HTMLElement("tfoot")}} 要素をこの {{HtmlElement("table")}} から取り除きます。

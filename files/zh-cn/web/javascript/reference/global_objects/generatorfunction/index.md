@@ -2,6 +2,7 @@
 title: GeneratorFunction
 slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 ---
+
 {{JSRef("Global_Objects", "生成器函数")}}
 
 **`GeneratorFunction`构造器**生成新的{{jsxref("Statements/function*", "生成器函数")}} 对象。在 JavaScript 中，生成器函数实际上都是`GeneratorFunction`的实例对象。

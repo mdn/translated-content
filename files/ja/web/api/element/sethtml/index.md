@@ -2,6 +2,7 @@
 title: Element.setHTML()
 slug: Web/API/Element/setHTML
 ---
+
 {{SeeCompatTable}}{{DefaultAPISidebar("HTML Sanitizer API")}}
 
 **`setHTML()`** は {{domxref("Element")}} インターフェイスのメソッドで、 HTML の文字列を解釈して無害化し、この要素のサブツリーとして DOM に挿入します。

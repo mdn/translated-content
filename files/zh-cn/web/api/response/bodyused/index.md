@@ -2,6 +2,7 @@
 title: Response.bodyUsed
 slug: Web/API/Response/bodyUsed
 ---
+
 {{APIRef("Fetch")}}{{ SeeCompatTable }}
 
 **`bodyUsed`** 是 {{domxref("Response")}} mixin 中的一个只读属性。用以表示该 body 是否被使用过。

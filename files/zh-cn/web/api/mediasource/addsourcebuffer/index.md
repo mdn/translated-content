@@ -2,6 +2,7 @@
 title: MediaSource.addSourceBuffer()
 slug: Web/API/MediaSource/addSourceBuffer
 ---
+
 {{APIRef("Media Source Extensions")}}
 
 {{domxref("MediaSource")}} 的 **`addSourceBuffer()`** 方法会根据给定的 MIME 类型创建一个新的 {{domxref("SourceBuffer")}} 对象，然后会将它追加到 `MediaSource` 的 {{domxref("SourceBuffers")}} 列表中。

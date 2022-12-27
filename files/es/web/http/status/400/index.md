@@ -16,7 +16,9 @@ La respuesta de código de estado del Protocolo de Transferencia de Hipertexto (
 
 ## Estado
 
-    400 Petición mala
+```
+400 Petición mala
+```
 
 ## Specifications
 

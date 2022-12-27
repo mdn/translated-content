@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.ontransitioncancel
 slug: Web/API/Element/transitioncancel_event
 ---
+
 {{APIRef("CSS3 Transitions")}}
 
 {{domxref("GlobalEventHandlers")}}混合 的 **`ontransitioncancel`** 属性 是处理 {{event("transitioncancel")}} 事件的手柄{{event("Event_handlers", "event handler")}}.

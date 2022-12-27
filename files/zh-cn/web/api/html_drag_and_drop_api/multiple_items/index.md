@@ -2,6 +2,7 @@
 title: 拖拽和放置多个项目
 slug: Web/API/HTML_Drag_and_Drop_API/Multiple_items
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 > **警告：** 所有带有 **moz** 前缀的属性和方法（例如 **mozSetDataAt()** ）都是 Gecko 浏览器引擎所特有的接口。这些接口只能在基于 Gecko 引擎的浏览器上使用。

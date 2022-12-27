@@ -39,4 +39,4 @@ original_slug: WebSockets/WebSockets_reference/CloseEvent
 
 ## 瀏覽器兼容
 
-{{Compat("api.CloseEvent")}}
+{{Compat}}

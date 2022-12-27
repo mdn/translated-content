@@ -2,6 +2,7 @@
 title: WeakSet.prototype.has()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 ---
+
 {{JSRef}}
 
 **`has()`** メソッドは、特定の値をもつ要素が `WeakSet` オブジェクト内に存在するかどうかを示す真偽値を返します。

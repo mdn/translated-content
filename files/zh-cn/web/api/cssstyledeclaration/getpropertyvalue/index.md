@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
 ---
+
 {{ APIRef("CSSOM") }}
 
 **CSSStyleDeclaration.getPropertyValue()** 接口返回一个 {{domxref('DOMString')}} ，其中包含请求的 CSS 属性的值。

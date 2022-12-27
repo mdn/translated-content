@@ -2,6 +2,7 @@
 title: WeakMap
 slug: Web/JavaScript/Reference/Global_Objects/WeakMap
 ---
+
 {{JSRef}}
 
 **`WeakMap`** オブジェクトは、キーが弱く参照されるキーと値の組のコレクションです。キーはオブジェクトでなければならず、値は任意の値を取ることができます。

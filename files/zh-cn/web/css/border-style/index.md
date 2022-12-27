@@ -2,6 +2,7 @@
 title: border-style
 slug: Web/CSS/border-style
 ---
+
 ## 概述
 
 {{ CSSRef("CSS Borders") }}
@@ -119,7 +120,7 @@ tr, td {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.border-style")}}
+{{Compat}}
 
 ## 另请参阅
 

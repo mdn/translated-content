@@ -2,6 +2,7 @@
 title: Hello GLSL
 slug: Web/API/WebGL_API/By_example/Hello_GLSL
 ---
+
 {{PreviousNext("Learn/WebGL/By_example/Raining_rectangles","Learn/WebGL/By_example/Hello_vertex_attributes")}}
 
 该例子将演示一个绘制固态颜色的矩形的简单着色器程序。

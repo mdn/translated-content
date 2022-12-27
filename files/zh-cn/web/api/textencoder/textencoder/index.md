@@ -2,6 +2,7 @@
 title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
 ---
+
 {{apiref("TextEncoder")}}{{seeCompatTable}}
 
 The **`TextEncoder()`** 构造函数返回一个新创建的{{domxref("TextEncoder")}}对象。

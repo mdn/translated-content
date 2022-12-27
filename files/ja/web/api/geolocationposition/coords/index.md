@@ -2,6 +2,7 @@
 title: GeolocationPosition.coords
 slug: Web/API/GeolocationPosition/coords
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 **`GeolocationPosition.coords`** は読み取り専用のプロパティで、地理的な位置を表す {{domxref("GeolocationCoordinates")}} オブジェクトを返します。このオブジェクトには、地球上の位置（経度、緯度）、高度、速度が含まれ、グループ化して返されます。また、これらの値に関する精度情報も含まれます。

@@ -2,6 +2,7 @@
 title: developer
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/developer
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -43,4 +44,4 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/developer
 
 ## Browser compatibility
 
-{{Compat("webextensions.manifest.developer")}}
+{{Compat}}

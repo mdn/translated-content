@@ -2,6 +2,7 @@
 title: handler.set()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/set
 ---
+
 {{JSRef}}
 
 **`handler.set()`** はプロパティの値を設定することに対するトラップです。

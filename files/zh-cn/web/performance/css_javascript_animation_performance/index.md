@@ -2,6 +2,7 @@
 title: CSS and JavaScript animation performance
 slug: Web/Performance/CSS_JavaScript_animation_performance
 ---
+
 对众多应用程序而言，动画对提供友好的用户体验有着关键的作用，我们有很多方式生成 web 动画，比如 CSS {{cssxref("transition","transitions")}}/{{cssxref("animation","animations")}} 或者 JavaScript 动画 (使用 {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}}).
 
 在这篇文章中，我们分析 CSS 动画和 JavaScript 动画的性能差异

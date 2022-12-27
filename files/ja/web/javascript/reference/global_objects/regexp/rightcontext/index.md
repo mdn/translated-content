@@ -2,6 +2,7 @@
 title: RegExp.rightContext ($')
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/rightContext
 ---
+
 {{JSRef}} {{non-standard_header}}
 
 標準外の **rightContext** プロパティは静的かつ読み取り専用の正規表現のプロパティで、最新の一致に続く部分文字列が入ります。 `` RegExp.$` `` はこのプロパティのエイリアスです。

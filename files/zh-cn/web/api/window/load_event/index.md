@@ -2,6 +2,7 @@
 title: Window：load 事件
 slug: Web/API/Window/load_event
 ---
+
 {{APIRef}}
 
 **`load`** 事件在整个页面及所有依赖资源如样式表和图片都已完成加载时触发。它与 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 不同，后者只要页面 DOM 加载完成就触发，无需等待依赖资源的加载。

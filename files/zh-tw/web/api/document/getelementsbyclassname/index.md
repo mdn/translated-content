@@ -80,7 +80,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 ## 瀏覽器相容性
 
-{{Compat("api.Document.getElementsByClassName")}}
+{{Compat}}
 
 ## 規範
 

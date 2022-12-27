@@ -2,6 +2,7 @@
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 ---
+
 {{JSRef}}
 
 **`Math.floor()`** 返回小于或等于一个给定数字的最大整数。

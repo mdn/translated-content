@@ -2,6 +2,7 @@
 title: HTMLIFrameElement.referrerPolicy
 slug: Web/API/HTMLIFrameElement/referrerPolicy
 ---
+
 {{APIRef}}
 
 **`HTMLIFrameElement.referrerPolicy`** プロパティは HTML の

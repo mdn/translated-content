@@ -2,6 +2,7 @@
 title: document.getElementById
 slug: Web/API/Document/getElementById
 ---
+
 {{ ApiRef("DOM") }}
 
 {{domxref("Document")}}的方法 {{domxref("Document.getElementById", "getElementById()")}}返回一个匹配特定 [ID](/zh-CN/docs/DOM/element.id)的元素。由于元素的 ID 在大部分情况下要求是独一无二的，这个方法自然而然地成为了一个高效查找特定元素的方法。
@@ -104,7 +105,7 @@ var el = document.getElementById('testqq'); // el 是个 null
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.getElementById")}}
+{{Compat}}
 
 ## 相关链接
 

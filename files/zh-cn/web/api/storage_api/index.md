@@ -2,6 +2,7 @@
 title: Storage API
 slug: Web/API/Storage_API
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Storage")}}
 
 Web 存储标准，the Storage Standard，定义了一个通用的、共享的存储系统，供所有 API 和技术使用，以存储各个网站的内容可访问数据。 Storage API 允许网站的代码、Web 应用程序知道它们可以使用、已经使用多少存储空间。空间不足时，{{Glossary("user agent", "用户代理")}}会自动清理站点数据，以便为其他用途腾出空间。而 Storage API 甚至可以控制：在执行清理之前，是否需要提醒代码或 Web 应用程序，以便作出反应。

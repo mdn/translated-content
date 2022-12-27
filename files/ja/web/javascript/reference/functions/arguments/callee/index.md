@@ -2,6 +2,7 @@
 title: arguments.callee
 slug: Web/JavaScript/Reference/Functions/arguments/callee
 ---
+
 {{jsSidebar("Functions")}}
 
 **`arguments.callee`** プロパティは現在実行中の関数を示します。

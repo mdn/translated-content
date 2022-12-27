@@ -2,6 +2,7 @@
 title: MessageEvent
 slug: Web/API/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`MessageEvent`** 是接口代表一段被目标对象接收的消息。
@@ -103,4 +104,4 @@ onconnect = function(e) {
 
 ## 浏览器兼容性
 
-{{Compat("api.MessageEvent")}}
+{{Compat}}

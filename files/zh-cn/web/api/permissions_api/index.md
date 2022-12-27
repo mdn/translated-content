@@ -2,6 +2,7 @@
 title: Permissions API
 slug: Web/API/Permissions_API
 ---
+
 {{DefaultAPISidebar("Permissions API")}}
 
 The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied.
@@ -46,7 +47,7 @@ Read more about how it works in our article [Using the Permissions API](/zh-CN/d
 
 ### Permissions interface
 
-{{Compat("api.Permissions")}}
+{{Compat}}
 
 ## See also
 

@@ -3,6 +3,7 @@ title: 发送表单数据
 slug: Learn/Forms/Sending_and_retrieving_form_data
 original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}
 
 本文将讨论当用户提交表单时发生了什么——数据去了哪，以及当它到达时该如何处理？我们还研究了与发送表单数据相关的一些安全问题。

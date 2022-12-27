@@ -40,7 +40,7 @@ For each of these Boolean properties, a value of `true` indicates that the speci
 
 ## 瀏覽器相容性
 
-{{Compat("api.ValidityState")}}
+{{Compat}}
 
 ## 參見
 

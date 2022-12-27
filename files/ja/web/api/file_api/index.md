@@ -2,6 +2,7 @@
 title: ファイル API
 slug: Web/API/File_API
 ---
+
 {{DefaultAPISidebar("File API")}}
 
 ## 概念と使い方

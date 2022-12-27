@@ -2,6 +2,7 @@
 title: Object.isSealed()
 slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 ---
+
 {{JSRef}}
 
 **`Object.isSealed()`** メソッドは、オブジェクトが封印されているかどうかを判定します。

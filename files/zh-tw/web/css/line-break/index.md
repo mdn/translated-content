@@ -48,4 +48,4 @@ line-break: unset;
 
 ## Browser compatibility
 
-{{Compat("css.properties.line-break")}}
+{{Compat}}

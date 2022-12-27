@@ -3,6 +3,7 @@ title: repeating-linear-gradient()
 slug: Web/CSS/gradient/repeating-linear-gradient
 original_slug: Web/CSS/gradient/repeating-linear-gradient()
 ---
+
 {{CSSRef}}
 
 CSS 函数 **`repeating-linear-gradient()`** 创建一个由重复线性渐变组成的{{cssxref("&lt;image&gt;")}}， 这是一个类似 {{cssxref("linear-gradient")}} 的函数，并且采用相同的参数，但是它会在所有方向上重复渐变以覆盖其整个容器。这个函数的结果是一个{{cssxref("&lt;gradient&gt;")}} 数据类型的对象，这是一个特殊的{{cssxref("&lt;image&gt;")}}类型。

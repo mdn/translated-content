@@ -219,7 +219,7 @@ console.log(/[^.]+/.exec(url)[0].substr(7)) // logs 'xxx'
 
 ## Browser compatibility
 
-{{Compat("javascript.builtins.RegExp")}}
+{{Compat}}
 
 ### Firefox-specific notes
 

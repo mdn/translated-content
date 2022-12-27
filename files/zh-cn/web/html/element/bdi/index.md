@@ -2,6 +2,7 @@
 title: <bdi>
 slug: Web/HTML/Element/bdi
 ---
+
 ## Summary
 
 {{HTMLRef}}

@@ -80,7 +80,7 @@ EventTarget.prototype.dispatchEvent = function(event) {
 
 ## 瀏覽器相容性
 
-{{Compat("api.EventTarget")}}
+{{Compat}}
 
 ## 參見
 

@@ -2,6 +2,7 @@
 title: Location
 slug: Web/API/Location
 ---
+
 {{APIRef("URLUtils")}}
 
 **`Location`** 接口表示其链接到的对象的位置（URL）。所做的修改反映在与之相关的对象上。 {{domxref("Document")}} 和 {{domxref("Window")}} 接口都有这样一个链接的 Location，分别通过 {{domxref("Document.location")}}和{{domxref("Window.location")}} 访问。

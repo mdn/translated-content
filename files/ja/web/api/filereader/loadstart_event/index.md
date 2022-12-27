@@ -2,6 +2,7 @@
 title: 'FileReader: loadstart イベント'
 slug: Web/API/FileReader/loadstart_event
 ---
+
 {{APIRef}}
 
 `loadstart` イベントは、ファイル読み込み操作が始まったときに発生します。

@@ -2,6 +2,7 @@
 title: Navigator.language
 slug: Web/API/Navigator/language
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Navigator.language`** 为只读属性，返回一个表示用户偏好语言（通常是浏览器界面语言）的字符串。

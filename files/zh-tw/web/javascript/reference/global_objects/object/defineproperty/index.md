@@ -309,7 +309,7 @@ console.log(instance.myname); // this is my name string
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Object.defineProperty")}}
+{{Compat}}
 
 ## Compatibility notes
 

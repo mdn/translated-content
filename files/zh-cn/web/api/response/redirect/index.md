@@ -2,6 +2,7 @@
 title: Response.redirect()
 slug: Web/API/Response/redirect
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} 接口的 **`redirect()`** 方法返回一个可以重定向到指定 URL 的 `Response` 。

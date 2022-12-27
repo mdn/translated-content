@@ -2,6 +2,7 @@
 title: Worker()
 slug: Web/API/Worker/Worker
 ---
+
 {{APIRef("Web Workers API")}}
 
 **`Worker()`** 构造函数创建一个 {{domxref("Worker")}} 对象，该对象执行指定的 URL 脚本。这个脚本必须遵守 [同源策略](/zh-CN/Same_origin_policy_for_JavaScript) 。
@@ -63,7 +64,7 @@ first.onchange = function() {
 
 ## 浏览器兼容性
 
-{{Compat("api.Worker.Worker")}}
+{{Compat}}
 
 > **备注：** 浏览器可以被标记为对`Worker()`的完全支持尽管他并不支持一个以 modules 类型编写的脚本。截至 2019 年 8 月 1 日，暂无浏览器支持以模块类型编写的脚本。如果没有这种支持，moduleds 类型的脚本必须使用编译器翻译成无 module 代码才能在浏览器上运行。
 

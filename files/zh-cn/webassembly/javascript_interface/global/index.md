@@ -3,6 +3,7 @@ title: WebAssembly.Global
 slug: WebAssembly/JavaScript_interface/Global
 original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 ---
+
 {{JSRef}}
 
 **`WebAssembly.Global`** 对象表示一个全局变量实例，可以被 JavaScript 和 importable/exportable 访问 ,跨越一个或多个{{jsxref("WebAssembly.Module")}} 实例。他允许被多个 modules 动态连接。
@@ -31,7 +32,7 @@ original_slug: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 - `Global.prototype.valueOf()`
   - : 旧式的方法，返回全局变量包含的值。
 
-## 例子
+## 示例
 
 ### 创建 Global 实例
 

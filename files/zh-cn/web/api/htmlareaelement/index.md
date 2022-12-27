@@ -2,6 +2,7 @@
 title: HTMLAreaElement
 slug: Web/API/HTMLAreaElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLAreaElement`** 接口提供了一些属性和方法 (除了常见的对象{{domxref("HTMLElement")}} 接口提供的属性和方法通过继承也能获取到) 用来控制一个 area 元素的布局和展现。
@@ -72,7 +73,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}} and implement thos
 
 ## Browser compatibility
 
-{{Compat("api.HTMLAreaElement")}}
+{{Compat}}
 
 ## See also
 

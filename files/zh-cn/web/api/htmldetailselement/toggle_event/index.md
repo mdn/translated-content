@@ -2,6 +2,7 @@
 title: 'HTMLDetailsElement: toggle event'
 slug: Web/API/HTMLDetailsElement/toggle_event
 ---
+
 {{APIRef}}
 
 当{{HtmlElement("details")}}元素`打开`/`关闭`状态被切换时，切换事件会触发。

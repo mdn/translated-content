@@ -16,7 +16,9 @@ El código fuente para este ejemplo interactivo se encuentra almacenado en un re
 
 ## Sintaxis
 
-    constructor([argumentos]) { ... }
+```
+constructor([argumentos]) { ... }
+```
 
 ## Descripción
 

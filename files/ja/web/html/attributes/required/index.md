@@ -16,7 +16,7 @@ slug: Web/HTML/Attributes/required
 
 同じ名前が付けられた {{HTMLElement("input/checkbox","checkbox")}} 入力型のグループでは、 `required` 属性がついたチェックボックスのみが必須になります。
 
-> **Note:** 注: `aria-required="true"` を設定すると、ある要素 (任意の要素) が必須であることを読み上げソフトに伝えますが、その要素が任意であるかどうかには関係ありません。
+> **Note:** `aria-required="true"` を設定すると、ある要素 (任意の要素) が必須であることを読み上げソフトに伝えますが、その要素が任意であるかどうかには関係ありません。
 
 ### 属性の相互作用
 

@@ -2,6 +2,7 @@
 title: DataView.prototype.setUint8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
 ---
+
 {{JSRef}}
 
 **`setUint8()`** メソッドは、符号なし 8 ビット整数 (byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。

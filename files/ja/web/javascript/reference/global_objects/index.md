@@ -2,6 +2,7 @@
 title: 標準組み込みオブジェクト
 slug: Web/JavaScript/Reference/Global_Objects
 ---
+
 {{JSSidebar("Objects")}}
 
 本章では JavaScript の標準組み込みオブジェクトについて、それらのメソッドやプロパティと共にすべて文書化しています。

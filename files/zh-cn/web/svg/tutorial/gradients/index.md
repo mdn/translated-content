@@ -2,6 +2,7 @@
 title: 渐变
 slug: Web/SVG/Tutorial/Gradients
 ---
+
 {{ PreviousNext("Web/SVG/Tutorial/Fills_and_Strokes", "Web/SVG/Tutorial/Patterns") }}
 
 并非只能简单填充颜色和描边，更令人兴奋的是，你还可以创建和并在填充和描边上应用渐变色。

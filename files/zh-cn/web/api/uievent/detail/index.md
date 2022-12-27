@@ -2,6 +2,7 @@
 title: UIEvent.detail
 slug: Web/API/UIEvent/detail
 ---
+
 {{APIRef("DOM Events")}}
 
 **`UIEvent.detail`** 是只读属性, 当值为非空的时候，提供当前点击数 (和环境有关) 。

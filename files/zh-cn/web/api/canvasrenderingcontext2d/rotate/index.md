@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.rotate()
 slug: Web/API/CanvasRenderingContext2D/rotate
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.rotate()`** 是 Canvas 2D API 在变换矩阵中增加旋转的方法。角度变量表示一个顺时针旋转角度并且用弧度表示。
@@ -94,7 +95,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.rotate")}}
+{{Compat}}
 
 ## 参见
 

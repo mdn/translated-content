@@ -2,6 +2,7 @@
 title: AnalyserNode.smoothingTimeConstant
 slug: Web/API/AnalyserNode/smoothingTimeConstant
 ---
+
 {{ APIRef("Web Audio API") }}
 
 {{ domxref("AnalyserNode") }} 接口的 **`smoothingTimeConstant`** 属性是一个双精度浮点型 (double) 的值， 表示最后一个分析帧的平均常数。它基本上是当前缓冲区和 AnalyserNode 处理的最后一个缓冲区之间的平均值，并导致在值变化时随着时间推移得到一个更平滑的集合。
@@ -79,7 +80,7 @@ draw();
 
 ## 浏览器兼容性
 
-{{Compat("api.AnalyserNode.smoothingTimeConstant")}}
+{{Compat}}
 
 ## 相关内容
 

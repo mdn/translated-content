@@ -2,6 +2,7 @@
 title: HTMLImageElement.complete
 slug: Web/API/HTMLImageElement/complete
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("HTMLImageElement")}} インターフェイスの **`complete`** プロパティは読み取り専用で、画像の読み込みが完了したかどうかを示す論理値です。

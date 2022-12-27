@@ -2,6 +2,7 @@
 title: 如何关闭表单自动填充
 slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 ---
+
 本文介绍了网站如何禁用表单字段的自动完成功能。
 
 默认情况下，浏览器会记录用户网页上提交的 {{HTMLElement("input")}} 框的信息。这使得浏览器能够提供自动补全（在用户开始输入的时候给用户提供可能的内容）和自动填充（在加载的时候预先填充某些字段）功能。

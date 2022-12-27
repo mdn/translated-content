@@ -3,6 +3,7 @@ title: 媒体查询
 slug: Web/CSS/Media_Queries
 original_slug: Web/CSS/媒体查询
 ---
+
 {{CSSRef}}
 
 通过**媒体查询**（**Media queries**），您可以根据各种设备特征和参数的值或者是否存在来调整您的网站或应用。

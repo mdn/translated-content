@@ -2,6 +2,7 @@
 title: Window.screenLeft
 slug: Web/API/Window/screenLeft
 ---
+
 {{APIRef}}
 
 **`Window.screenLeft`** 是一个只读属性，它返回浏览器左边框到左边屏幕边缘的 CSS 像素数。

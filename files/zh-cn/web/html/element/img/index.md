@@ -2,6 +2,7 @@
 title: <img>：图像嵌入元素
 slug: Web/HTML/Element/img
 ---
+
 {{HTMLRef}}
 
 **HTML `<img>` 元素**将一份图像嵌入文档。
@@ -281,7 +282,7 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.img")}}
+{{Compat}}
 
 ## 另见
 

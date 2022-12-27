@@ -2,6 +2,7 @@
 title: Array.prototype.reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 ---
+
 {{JSRef}}
 
 **`reduceRight()`** メソッドは、アキュームレーターと配列のそれぞれの値に対して (右から左へ) 関数を適用して、単一の値にします。

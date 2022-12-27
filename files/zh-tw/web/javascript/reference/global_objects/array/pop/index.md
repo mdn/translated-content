@@ -49,7 +49,7 @@ console.log(popped); // 'sturgeon'
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.pop")}}
+{{Compat}}
 
 ## 參見
 

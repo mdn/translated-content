@@ -2,6 +2,7 @@
 title: DataView.prototype.setUint32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint32
 ---
+
 {{JSRef}}
 
 **`setUint32()`** メソッドは、符号なし 32 ビット整数 (unsigned long) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。

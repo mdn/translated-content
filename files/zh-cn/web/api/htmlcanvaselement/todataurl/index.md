@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.toDataURL()
 slug: Web/API/HTMLCanvasElement/toDataURL
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.toDataURL()`** 方法返回一个包含图片展示的 [data URI](/zh-CN/docs/Web/HTTP/data_URIs) 。可以使用 `type` 参数其类型，默认为 [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics) 格式。图片的分辨率为 96dpi。
@@ -115,7 +116,7 @@ function removeColors() {
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLCanvasElement.toDataURL")}}
+{{Compat}}
 
 ## 参考
 

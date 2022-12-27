@@ -2,6 +2,7 @@
 title: 反復処理プロトコル
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
+
 {{jsSidebar("More")}}
 
 ECMAScript 2015 で追加されたいくつかの機能の中で、**反復処理プロトコル**は新しい組み込みオブジェクトや構文ではなく**プロトコル**です。これらのプロトコルは以下のような単純な約束事によって、すべてのオブジェクトで実装することができます。

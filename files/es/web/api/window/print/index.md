@@ -39,6 +39,6 @@ Empezando con Chrome {{CompatChrome(46.0)}} este método esta bloqueado dentro d
 
 ## Ver también
 
-- [Impresión](/en/Printing "en/Printing")
+- [Impresión](/en/Printing)
 - {{ domxref("window.onbeforeprint") }}
 - {{ domxref("window.onafterprint") }}

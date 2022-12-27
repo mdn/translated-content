@@ -2,6 +2,7 @@
 title: URL.密码
 slug: Web/API/URL/password
 ---
+
 {{ApiRef("URL API")}}
 
 {{domxref("URL")}}接口的 **`password`** 属性为{{domxref("USVString")}}，其中包含在域名之前指定的密码。

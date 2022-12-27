@@ -2,6 +2,7 @@
 title: Strict equality (===)
 slug: Web/JavaScript/Reference/Operators/Strict_equality
 ---
+
 {{jsSidebar("Operators")}}
 
 全等运算符 (===) 会检查它的两个操作数是否相等，并且返回一个布尔值结果。与相等运算符不同，全等运算符总是认为不同类型的操作数是不同的。

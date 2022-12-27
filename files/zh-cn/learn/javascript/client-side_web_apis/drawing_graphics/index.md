@@ -2,6 +2,7 @@
 title: 绘图
 slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
 
 浏览器包含一些非常强大的图形编程工具，从可缩放矢量图形（Scalable Vector Graphics，简称 [SVG](/zh-CN/docs/Web/SVG)）语言到用于在 HTML {{htmlelement("canvas")}} 元素上绘制图形的 API（参阅 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 和 [WebGL](/zh-CN/docs/Web/API/WebGL_API)）。本文对 {{htmlelement("canvas")}} 进行介绍，并提供更多的学习资源。

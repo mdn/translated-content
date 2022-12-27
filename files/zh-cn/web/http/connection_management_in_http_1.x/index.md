@@ -2,6 +2,7 @@
 title: HTTP/1.x 的连接管理
 slug: Web/HTTP/Connection_management_in_HTTP_1.x
 ---
+
 {{HTTPSidebar}}
 
 连接管理是一个 HTTP 的关键话题：打开和保持连接在很大程度上影响着网站和 Web 应用程序的性能。在 HTTP/1.x 里有多种模型：_短连接_, _长连接_, 和 _HTTP 流水线。_

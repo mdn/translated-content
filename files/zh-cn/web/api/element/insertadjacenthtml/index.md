@@ -2,6 +2,7 @@
 title: element.insertAdjacentHTML
 slug: Web/API/Element/insertAdjacentHTML
 ---
+
 {{APIRef("DOM")}}
 
 **`insertAdjacentHTML()`** 方法将指定的文本解析为 {{domxref("Element")}} 元素，并将结果节点插入到 DOM 树中的指定位置。它不会重新解析它正在使用的元素，因此它不会破坏元素内的现有元素。这避免了额外的序列化步骤，使其比直接使用 innerHTML 操作更快。
@@ -63,7 +64,7 @@ d1.insertAdjacentHTML('afterend', '<div id="two">two</div>');
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.insertAdjacentHTML")}}
+{{Compat}}
 
 ## 相关链接
 

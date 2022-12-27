@@ -2,6 +2,7 @@
 title: HTMLSelectElement.autofocus
 slug: Web/API/HTMLSelectElement/autofocus
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLSelectElement.autofocus`** プロパティは、 HTML の {{htmlattrxref("autofocus", "select")}} 属性を反映した `true` または `false` の値を持ちます。これはユーザーが上書きしない限り、ページが読み込まれた際に関連付けられた {{HTMLElement("select")}} 要素がページ読み込み時に入力フォーカスを得るかどうかを示します。

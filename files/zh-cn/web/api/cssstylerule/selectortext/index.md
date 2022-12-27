@@ -2,6 +2,7 @@
 title: CSSStyleRule.selectorText
 slug: Web/API/CSSStyleRule/selectorText
 ---
+
 {{APIRef("CSSOM") }}
 
 ## 概述

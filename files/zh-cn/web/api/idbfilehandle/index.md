@@ -2,6 +2,7 @@
 title: LockedFile
 slug: Web/API/IDBFileHandle
 ---
+
 {{APIRef("File System API")}} {{non-standard_header}}
 
 ## 概要

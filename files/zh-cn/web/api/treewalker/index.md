@@ -2,6 +2,7 @@
 title: TreeWalker
 slug: Web/API/TreeWalker
 ---
+
 {{ APIRef("DOM") }}
 
 **`TreeWalker`** 对象用于表示文档子树中的节点和它们的位置。
@@ -68,7 +69,7 @@ _这个接口不继承任何方法。_
 
 ## 浏览器兼容性
 
-{{Compat("api.TreeWalker")}}
+{{Compat}}
 
 ## 参见
 

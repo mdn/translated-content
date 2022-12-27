@@ -2,6 +2,7 @@
 title: Number.POSITIVE_INFINITY
 slug: Web/JavaScript/Reference/Global_Objects/Number/POSITIVE_INFINITY
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 ## 概述

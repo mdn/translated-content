@@ -2,6 +2,7 @@
 title: Promise.allSettled()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettled
 ---
+
 {{JSRef}}
 
 该 **`Promise.allSettled()`** 方法返回一个在所有给定的 promise 都已经`fulfilled`或`rejected`后的 promise，并带有一个对象数组，每个对象表示对应的 promise 结果。

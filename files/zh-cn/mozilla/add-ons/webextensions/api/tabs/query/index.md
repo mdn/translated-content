@@ -3,6 +3,7 @@ title: tabs.query()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
 original_slug: Mozilla/Add-ons/WebExtensions/API/tabs/查询
 ---
+
 \[阿登侧边栏（）]
 
 获取具有指定属性的所有选项卡，如果未指定任何属性，则获取所有选项卡。
@@ -140,7 +141,7 @@ querying.then(logTabs, onError);
 
 ## Browser compatibility
 
-{{Compat("webextensions.api.tabs.query")}}
+{{Compat}}
 
 > **备注：** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/extensions/tabs#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 >

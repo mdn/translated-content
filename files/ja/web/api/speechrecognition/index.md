@@ -6,7 +6,7 @@ slug: Web/API/SpeechRecognition
 
 [Web Speech API](/ja/docs/Web/API/Web_Speech_API) の **`SpeechRecognition`** インターフェイスは、認識サービスの制御インターフェイスです。これは、認識サービスから送信された {{domxref("SpeechRecognitionEvent")}} も扱います。
 
-> **Note:** **注記**: Chrome では、ウェブページ上で音声認識を使用するとサーバーベースの認識エンジンが使用されます。あなたの音声を認識処理するためにウェブサービスへ送信するのでオフラインでは動作しません。
+> **Note:** Chrome では、ウェブページ上で音声認識を使用するとサーバーベースの認識エンジンが使用されます。あなたの音声を認識処理するためにウェブサービスへ送信するのでオフラインでは動作しません。
 
 ## コンストラクター
 

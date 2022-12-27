@@ -2,6 +2,7 @@
 title: HTMLTableElement.insertRow()
 slug: Web/API/HTMLTableElement/insertRow
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLTableElement.insertRow()`** メソッドは、新しい行を表す ({{HtmlElement("tr")}}) をこの {{HtmlElement("table")}} に挿入し、その新しい行への参照を返します。

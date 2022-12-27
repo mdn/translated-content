@@ -3,6 +3,7 @@ title: Data URLs
 slug: Web/HTTP/Basics_of_HTTP/Data_URLs
 original_slug: Web/HTTP/Basics_of_HTTP/Data_URIs
 ---
+
 {{HTTPSidebar}}
 
 **Data URLs**，即前缀为 `data:` 协议的 URL，其允许内容创建者向文档中嵌入小文件。

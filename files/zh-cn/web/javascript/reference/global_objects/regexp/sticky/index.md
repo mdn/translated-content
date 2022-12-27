@@ -2,6 +2,7 @@
 title: RegExp.prototype.sticky
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/sticky
 ---
+
 {{JSRef}}
 
 **`sticky`** 属性反映了搜索是否具有粘性（ 仅从正则表达式的 {{jsxref("RegExp.lastIndex", "lastIndex")}} 属性表示的索引处搜索 ）。`sticky` 是正则表达式对象的只读属性。

@@ -2,6 +2,7 @@
 title: handler.has()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 ---
+
 {{JSRef}}
 
 **`handler.has()`** は {{jsxref("Operators/in", "in")}} 演算子に対するトラップです。

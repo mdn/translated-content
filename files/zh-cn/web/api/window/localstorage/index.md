@@ -2,6 +2,7 @@
 title: Window.localStorage
 slug: Web/API/Window/localStorage
 ---
+
 {{APIRef()}}
 
 只读的`localStorage` 属性允许你访问一个{{domxref("Document")}} 源（origin）的对象 {{domxref("Storage")}}；存储的数据将保存在浏览器会话中。`localStorage` 类似 {{DOMxRef("Window.sessionStorage", "sessionStorage")}}，但其区别在于：存储在 `localStorage` 的数据可以长期保留；而当页面会话结束——也就是说，当页面被关闭时，存储在 `sessionStorage` 的数据会被清除 。
@@ -60,7 +61,7 @@ localStorage.clear();
 
 ## 浏览器兼容性
 
-{{Compat("api.Window.localStorage")}}
+{{Compat}}
 
 ## 参见
 

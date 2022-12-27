@@ -2,6 +2,7 @@
 title: Event.composedPath()
 slug: Web/API/Event/composedPath
 ---
+
 {{APIRef("Shadow DOM")}}
 
 **`composedPath()`** 是 {{domxref("Event")}} 接口的一个方法，当对象数组调用该侦听器时返回事件路径。 如果影子根节点被创建并且{{domxref("ShadowRoot.mode")}}是关闭的，那么该路径不包括影子树中的节点。
@@ -78,4 +79,4 @@ Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-compon
 
 ## 浏览器兼容性
 
-{{Compat("api.Event.composedPath")}}
+{{Compat}}

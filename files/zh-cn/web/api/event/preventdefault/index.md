@@ -2,6 +2,7 @@
 title: event.preventDefault
 slug: Web/API/Event/preventDefault
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("Event")}} 接口的 **`preventDefault()`**方法，告诉{{Glossary("user agent")}}：如果此事件没有被显式处理，它默认的动作也不应该照常执行。此事件还是继续传播，除非碰到事件侦听器调用{{domxref("Event.stopPropagation", "stopPropagation()")}} 或{{domxref("Event.stopImmediatePropagation", "stopImmediatePropagation()")}}，才停止传播。
@@ -155,4 +156,4 @@ function displayWarning(msg) {
 
 ## 浏览器兼容
 
-{{Compat("api.Event.preventDefault")}}
+{{Compat}}

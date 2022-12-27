@@ -3,6 +3,7 @@ title: 相等（==）
 slug: Web/JavaScript/Reference/Operators/Equality
 original_slug: Web/JavaScript/Reference/Operators/相等
 ---
+
 {{jsSidebar("Operators")}}
 
 等于运算符（`==`）检查其两个操作数是否相等，并返回`Boolean`结果。与[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)运算符（`===`）不同，它会尝试强制类型转换并且比较不同类型的操作数。

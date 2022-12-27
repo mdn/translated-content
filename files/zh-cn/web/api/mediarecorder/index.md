@@ -2,6 +2,7 @@
 title: MediaRecorder
 slug: Web/API/MediaRecorder
 ---
+
 {{APIRef("Media Recorder API")}}
 
 **`MediaRecorder`** 是 [MediaStream Recording API](/zh-CN/docs/Web/API/MediaStream_Recording_API) 提供的用来进行媒体轻松录制的接口，他需要通过调用 {{domxref("MediaRecorder.MediaRecorder", "MediaRecorder()")}} 构造方法进行实例化。
@@ -152,7 +153,7 @@ if (navigator.mediaDevices) {
 
 ## Browser compatibility
 
-{{Compat("api.MediaRecorder")}}
+{{Compat}}
 
 ## See also
 

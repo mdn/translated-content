@@ -3,6 +3,7 @@ title: 複数のアイテムのドラッグ＆ドロップ
 slug: Web/API/HTML_Drag_and_Drop_API/Multiple_items
 original_slug: DragDrop/Dragging_and_Dropping_Multiple_Items
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 > **Warning:** **moz** の接頭辞がついたメソッドやプロパティ（**mozSetDataAt()** など）は Gecko 固有のインターフェイスです。これらのインターフェイスは Gecko ベースのブラウザーで**しか**動作しません。

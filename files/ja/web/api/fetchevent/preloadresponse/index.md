@@ -2,6 +2,7 @@
 title: FetchEvent.preloadResponse
 slug: Web/API/FetchEvent/PreloadResponse
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("FetchEvent")}} インターフェイスの **`preloadResponse`** 読み取り専用プロパティは、ナビゲーションプリロードがトリガーされた場合はナビゲーションプリロード {{domxref("Response")}} に解決され、それ以外の場合は `undefined` に解決される {{jsxref("Promise")}} を返します。

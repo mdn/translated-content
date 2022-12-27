@@ -2,6 +2,7 @@
 title: with
 slug: Web/JavaScript/Reference/Statements/with
 ---
+
 > **警告：** 不建议使用`with`语句，因为它可能是混淆错误和兼容性问题的根源。有关详细信息，请参阅下面“描述”一节中的“语意不明的弊端”部分。
 
 {{jsSidebar("Statements")}}**with 语句** 扩展一个语句的作用域链。

@@ -2,6 +2,7 @@
 title: 公有类字段
 slug: Web/JavaScript/Reference/Classes/Public_class_fields
 ---
+
 {{JsSidebar("Classes")}}
 
 公有静态字段和公有实例字段都是可编辑、可枚举和可配置的属性。因此，不同于私有对应值（private counterpart）的是，它们参与原型的继承。

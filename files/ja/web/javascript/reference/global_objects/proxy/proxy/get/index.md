@@ -2,6 +2,7 @@
 title: handler.get()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 ---
+
 {{JSRef}}
 
 **`handler.get()`** はプロパティの値を取得することに対するトラップです。

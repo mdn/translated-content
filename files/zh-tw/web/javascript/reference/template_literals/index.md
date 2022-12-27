@@ -226,7 +226,7 @@ let bad = `bad escape sequence: \unicode`;
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.grammar.template_literals")}}
+{{Compat}}
 
 ## 參見
 

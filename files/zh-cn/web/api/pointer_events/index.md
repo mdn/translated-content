@@ -2,6 +2,7 @@
 title: Pointer events 指针事件
 slug: Web/API/Pointer_events
 ---
+
 {{DefaultAPISidebar("Pointer Events")}}
 
 目前绝大多数的 Web 内容都假设用户的指针定点设备为鼠标。然而，近年来的新兴设备支持更多不同方式的指针定点输入，如各类触控笔和触摸屏幕等。这就有必要扩展现存的定点设备事件模型，以有效追踪各类*[指针事件](#term_pointer_event)*。
@@ -331,7 +332,7 @@ button#tiny {
 
 ## 浏览器兼容性
 
-{{Compat("api.PointerEvent")}}
+{{Compat}}
 
 在 [Pointer Events](https://w3c.github.io/pointerevents/) 规范中，{{cssxref("touch-action", "CSS touch-action")}} 定义了一些新的值，但目前支持这些新值的浏览器实现很有限。
 

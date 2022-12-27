@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: loadeddata イベント'
 slug: Web/API/HTMLMediaElement/loadeddata_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 **`loadeddata`** イベントは、メディアの現在の再生位置のフレームの読み込みが完了したときに発生します。ふつうは最初のフレームです。

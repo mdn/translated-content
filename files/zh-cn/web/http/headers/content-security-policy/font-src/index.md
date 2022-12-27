@@ -2,6 +2,7 @@
 title: 'CSP: font-src'
 slug: Web/HTTP/Headers/Content-Security-Policy/font-src
 ---
+
 {{HTTPSidebar}}
 
 HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP 内容安全策略) 中 **`font-src`** 指令定义了 {{cssxref("@font-face")}} 加载字体的有效源规则。

@@ -2,6 +2,7 @@
 title: Number.prototype.toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 ---
+
 {{JSRef("Global_Objects", "Number")}}
 
 **`toLocaleString()`** 方法返回这个数字在特定语言环境下的表示字符串。

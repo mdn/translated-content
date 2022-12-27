@@ -2,6 +2,7 @@
 title: オブジェクト初期化子
 slug: Web/JavaScript/Reference/Operators/Object_initializer
 ---
+
 {{JsSidebar("Operators")}}
 
 オブジェクトは [`new Object()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object)、[`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create)、*リテラル*表記法 (*初期化子*表記法) を使用して初期化されます。オブジェクト初期化子はオブジェクトのプロパティ名と関連した値のゼロ以上のペアのリストで、中括弧 (`{}`) で囲まれます。

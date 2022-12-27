@@ -2,6 +2,7 @@
 title: Pointer Lock API
 slug: Web/API/Pointer_Lock_API
 ---
+
 {{ SeeCompatTable() }}
 
 **指针锁定**(以前叫做鼠标锁定) 提供了一种输入方法，这种方法是基于鼠标随着时间推移的运动的（也就是，deltas），而不仅是鼠标光标的绝对位置。通过它可以访问原始的鼠标运动，把鼠标事件的目标锁定到一个单独的元素，这就消除了鼠标在一个单独的方向上到底可以移动多远这方面的限制，并从视图中删去光标。
@@ -205,7 +206,7 @@ partial interface MouseEvent {
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.requestPointerLock")}}
+{{Compat}}
 
 ## 参见
 

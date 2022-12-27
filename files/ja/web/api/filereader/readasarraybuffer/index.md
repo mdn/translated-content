@@ -2,6 +2,7 @@
 title: FileReader.readAsArrayBuffer()
 slug: Web/API/FileReader/readAsArrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("FileReader")}} インターフェイスの **`readAsArrayBuffer()`** メソッドは、指定された {{domxref("Blob")}} ないし {{domxref("File")}} オブジェクトの内容を読み込むために使用します。読み込み処理が終了すると {{domxref("FileReader.readyState","readyState")}} が `DONE` に変わり、 {{domxref("FileReader/loadend_event", "loadend")}} イベントが発行されます。それと同時に、 {{domxref("FileReader.result","result")}} プロパティにはファイルのデータを表す {{domxref("ArrayBuffer")}} が格納されます。

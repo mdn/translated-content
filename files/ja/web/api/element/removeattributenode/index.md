@@ -2,6 +2,7 @@
 title: element.removeAttributeNode
 slug: Web/API/Element/removeAttributeNode
 ---
+
 {{ ApiRef("DOM") }}
 
 ### Summary

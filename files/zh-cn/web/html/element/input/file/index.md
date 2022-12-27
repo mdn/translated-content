@@ -2,6 +2,7 @@
 title: <input type="file">
 slug: Web/HTML/Element/Input/file
 ---
+
 {{HTMLRef}}
 
 使用 **`type="file"`** 的 {{HTMLElement("input")}} 元素使得用户可以选择一个或多个元素以[提交表单](/zh-CN/docs/Learn/HTML/Forms)的方式上传到服务器上，或者通过 Javascript 的 [File API](/zh-CN/docs/Web/API/File/Using_files_from_web_applications) 对文件进行操作。
@@ -74,7 +75,7 @@ slug: Web/HTML/Element/Input/file
 
 ### {{htmlattrdef("accept")}}
 
-[`accept`](/zh-CN/docs/Web/HTML/Attributes/accept) 属性是一个字符串，它定义了文件 input 应该接受的文件类型。这个字符串是一个以逗号为分隔的**[唯一文件类型说明符](#唯一文件类型说明符)**列表。由于给定的文件类型可以用多种方式指定，因此当你需要给定格式的文件时，提供一组完整的类型指定符是非常有用的。
+[`accept`](/zh-CN/docs/Web/HTML/Attributes/accept) 属性是一个字符串，它定义了文件 input 应该接受的文件类型。这个字符串是一个以逗号为分隔的[**唯一文件类型说明符**](#唯一文件类型说明符)列表。由于给定的文件类型可以用多种方式指定，因此当你需要给定格式的文件时，提供一组完整的类型指定符是非常有用的。
 
 例如，有许多方法可以识别 Microsoft Word 文件，所以接受 Word 文件的站点可以使用一个`<input>`：
 

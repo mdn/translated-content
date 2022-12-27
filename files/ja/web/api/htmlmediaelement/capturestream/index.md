@@ -2,6 +2,7 @@
 title: HTMLMediaElement.captureStream()
 slug: Web/API/HTMLMediaElement/captureStream
 ---
+
 {{APIRef("HTML Media Capture")}}
 
 **`captureStream()`** は {{domxref("HTMLMediaElement")}} インターフェイスのプロパティで、このメディア要素でレンダリングされているコンテンツのリアルタイムキャプチャをストリーミングしている {{domxref('MediaStream')}} オブジェクトを返します。

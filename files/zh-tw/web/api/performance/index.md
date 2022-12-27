@@ -63,4 +63,4 @@ _The `Performance` interface doesn't inherit any methods_.
 
 ## Browser compatibility
 
-{{Compat("api.Performance")}}
+{{Compat}}

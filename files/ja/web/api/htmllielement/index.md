@@ -2,6 +2,7 @@
 title: HTMLLIElement
 slug: Web/API/HTMLLIElement
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLLIElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて）リスト要素を操作するための特別なプロパティを提供します。

@@ -2,6 +2,7 @@
 title: 'Element: keyup event'
 slug: Web/API/Element/keyup_event
 ---
+
 {{APIRef}}
 
 **`keyup`** 事件在按键被松开时触发。
@@ -79,7 +80,7 @@ input.onkeyup = logKey;
 
 ## 浏览器兼容性
 
-{{Compat("api.Element.keyup_event")}}
+{{Compat}}
 
 ## 更多
 

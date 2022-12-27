@@ -22,7 +22,9 @@ El resultado exitoso de un método {{HTTPMethod("PUT")}} o uno {{HTTPMethod("DEL
 
 ## Estado
 
-    200 OK
+```
+200 OK
+```
 
 ## Especificaciones
 

@@ -2,6 +2,7 @@
 title: window.postMessage
 slug: Web/API/Window/postMessage
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **window.postMessage()** 方法可以安全地实现跨源通信。通常，对于两个不同页面的脚本，只有当执行它们的页面位于具有相同的协议（通常为 https），端口号（443 为 https 的默认值），以及主机 (两个页面的模数 {{domxref("Document.domain")}}设置为相同的值) 时，这两个脚本才能相互通信。**window.postMessage()** 方法提供了一种受控机制来规避此限制，只要正确的使用，这种方法就很安全。

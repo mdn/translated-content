@@ -41,7 +41,7 @@ for (let e of iterator) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.entries")}}
+{{Compat}}
 
 ## 參見
 

@@ -41,7 +41,7 @@ navigator.doNotTrack; // "0" or "1"
 
 ## 瀏覽器相容性
 
-{{Compat("http.headers.DNT")}}
+{{Compat}}
 
 ## 參見
 

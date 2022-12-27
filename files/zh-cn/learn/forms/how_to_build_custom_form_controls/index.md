@@ -3,6 +3,7 @@ title: 如何构建表单小工具
 slug: Learn/Forms/How_to_build_custom_form_controls
 original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms/Sending_forms_through_JavaScript", "Learn/HTML/Forms")}}
 
 在许多情况下，[可用的 HTML 表单小组件](/zh-CN/docs/HTML/Forms/The_native_form_widgets)_是不够的_。如果要在某些小部件（例如 {{HTMLElement("select")}}元素）上执行[高级样式](/zh-CN/docs/Advanced_styling_for_HTML_forms)，或者如果要提供自定义表现，则别无选择，只能构建自己的小部件。

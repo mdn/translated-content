@@ -2,6 +2,7 @@
 title: 对象原型
 slug: Learn/JavaScript/Objects/Object_prototypes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 
 通过原型这种机制，JavaScript 中的对象从其他对象继承功能特性；这种继承机制与经典的面向对象编程语言的继承机制不同。本文将探讨这些差别，解释原型链如何工作，并了解如何通过 `prototype` 属性向已有的构造器添加方法

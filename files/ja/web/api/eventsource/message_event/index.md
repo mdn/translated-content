@@ -3,6 +3,7 @@ title: EventSource.onmessage
 slug: Web/API/EventSource/message_event
 original_slug: Web/API/EventSource/onmessage
 ---
+
 {{APIRef('WebSockets API')}}
 
 {{domxref("EventSource")}} インターフェースの **`onmessage`** プロパティは、メッセージイベントが受信されたとき、つまりソースからメッセージが送信されたときに呼び出される {{event("Event_handlers", "event handler")}} です。

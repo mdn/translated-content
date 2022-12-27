@@ -2,6 +2,7 @@
 title: page-break-after
 slug: Web/CSS/page-break-after
 ---
+
 {{CSSRef}}
 
 **`page-break-after`** CSS 属性调整当前元素之后的分页符。
@@ -82,7 +83,7 @@ div.footnotes {
 
 ## Browser compatibility
 
-{{Compat("css.properties.page-break-after")}}
+{{Compat}}
 
 ## See also
 

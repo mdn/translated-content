@@ -2,6 +2,7 @@
 title: ExtendableMessageEvent.ports
 slug: Web/API/ExtendableMessageEvent/ports
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ExtendableMessageEvent")}} インターフェイスの **`ports`** 読み取り専用プロパティは、関連するメッセージチャンネル（メッセージが送信されるチャンネル）のポートを表す {{domxref("MessagePort")}} オブジェクトを含む配列を返します。

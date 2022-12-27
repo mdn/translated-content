@@ -2,6 +2,7 @@
 title: Response.blob()
 slug: Web/API/Response/blob
 ---
+
 {{APIRef("Fetch")}}
 
 {{domxref("Response")}} mixin 的 **`blob()`**方法使用一个 {{domxref("Response")}} 流，并将其读取完成。它返回一个使用{{domxref("Blob")}}解决的 promise。

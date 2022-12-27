@@ -2,6 +2,7 @@
 title: 小于或等于
 slug: Web/JavaScript/Reference/Operators/Less_than_or_equal
 ---
+
 {{jsSidebar("Operators")}}
 
 The less than or equal operator (`<=`) returns `true` if the left operand is less than or equal to the right operand, and `false` otherwise.

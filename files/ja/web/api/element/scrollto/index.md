@@ -2,6 +2,7 @@
 title: Element.scrollTo()
 slug: Web/API/Element/scrollTo
 ---
+
 {{APIRef}}
 
 **`scrollTo()`** は {{domxref("Element")}} インターフェイスのメソッドで、指定された要素内を指定された座標までスクロールします。

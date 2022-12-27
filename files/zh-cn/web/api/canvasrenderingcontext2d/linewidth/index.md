@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.lineWidth
 slug: Web/API/CanvasRenderingContext2D/lineWidth
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.lineWidth`** 是 Canvas 2D API 设置线段厚度的属性（即线段的宽度）。
@@ -60,7 +61,7 @@ ctx.stroke();
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.lineWidth")}}
+{{Compat}}
 
 ### WebKit/Blink-specific 注解
 

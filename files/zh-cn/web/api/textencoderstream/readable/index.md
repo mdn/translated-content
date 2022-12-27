@@ -2,6 +2,7 @@
 title: TextEncoderStream.readable
 slug: Web/API/TextEncoderStream/readable
 ---
+
 {{APIRef("Encoding API")}}
 
 {{domxref("TextEncoderStream")}} 接口的只读属性 **`readable`** 返回一个 {{domxref("ReadableStream")}}。

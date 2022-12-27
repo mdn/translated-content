@@ -2,6 +2,7 @@
 title: WeakSet.prototype.delete()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 ---
+
 {{JSRef}}
 
 **`delete()`** メソッドは、`WeakSet` オブジェクトから指定された要素を取り除きます。

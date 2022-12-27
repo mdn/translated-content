@@ -4,6 +4,7 @@ title: >-
   ‘Access-Control-Allow-Origin’ is ‘*’
 slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ---
+
 {{HTTPSidebar}}
 
 ## 原因

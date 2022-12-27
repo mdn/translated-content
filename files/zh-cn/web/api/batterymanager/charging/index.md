@@ -2,6 +2,7 @@
 title: 电池管理器
 slug: Web/API/BatteryManager/charging
 ---
+
 {{APIRef("Battery API")}}
 
 指示设备电池当前是否正在充电的 Boolean 值

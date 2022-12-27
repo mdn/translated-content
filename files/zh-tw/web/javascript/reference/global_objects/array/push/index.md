@@ -93,7 +93,7 @@ console.log(obj.length);
 
 ## 瀏覽器支援度
 
-{{Compat("javascript.builtins.Array.push")}}
+{{Compat}}
 
 ## 參見
 

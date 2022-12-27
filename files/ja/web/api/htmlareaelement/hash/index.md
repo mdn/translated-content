@@ -3,6 +3,7 @@ title: HTMLAreaElement.hash
 slug: Web/API/HTMLAreaElement/hash
 original_slug: Web/API/HTMLHyperlinkElementUtils/hash
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`HTMLAreaElement.hash`** プロパティは、`'#'` の後に URL のフラグメント識別子が続く文字列を返します。

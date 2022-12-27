@@ -3,6 +3,7 @@ title: GlobalEventHandlers.onpointerdown
 slug: Web/API/Element/pointerdown_event
 original_slug: Web/API/GlobalEventHandlers/onpointerdown
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`ontransitioncancel`** は {{domxref("GlobalEventHandlers")}} のイベントハンドラーで、ポインティングデバイスが最初に押されたときに発生する {{event("pointerdown")}} イベントのイベントハンドラーを指定するために使用します。このイベントは {{domxref("Window")}}, {{domxref("Document")}}, {{domxref("Element")}} の各オブジェクトに送信されることがあります。

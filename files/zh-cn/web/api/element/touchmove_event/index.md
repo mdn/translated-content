@@ -2,6 +2,7 @@
 title: GlobalEventHandlers.ontouchmove
 slug: Web/API/Element/touchmove_event
 ---
+
 {{ApiRef("HTML DOM")}}
 
 A {{domxref("GlobalEventHandlers","global event handler")}} for the {{event("touchmove")}} event.

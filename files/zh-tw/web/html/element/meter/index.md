@@ -64,7 +64,7 @@ On Google Chrome, the resulting meter looks like this:
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.meter")}}
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: const
 slug: Web/JavaScript/Reference/Statements/const
 ---
+
 {{jsSidebar("Statements")}}
 
 常量是块级范围的，非常类似用 [let](/zh-CN/docs/Web/JavaScript/Reference/Statements/let) 语句定义的变量。但常量的值是无法（通过重新赋值）改变的，也不能被重新声明。

@@ -2,6 +2,7 @@
 title: Date.prototype.setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`setYear()`** メソッドは、地方時に基づき、指定された日付の「年」を設定します。 `setYear()` は完全な桁数の値を設定しないため (いわゆる 2000 年問題)、使用されなくなり、{{jsxref("Date.prototype.setFullYear", "setFullYear()")}} メソッドに置き換えられました。

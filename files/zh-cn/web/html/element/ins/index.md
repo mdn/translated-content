@@ -2,6 +2,7 @@
 title: <ins>
 slug: Web/HTML/Element/ins
 ---
+
 ## 简介
 
 {{HTMLRef}}

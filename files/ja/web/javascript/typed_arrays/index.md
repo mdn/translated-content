@@ -2,6 +2,7 @@
 title: JavaScript の型付き配列
 slug: Web/JavaScript/Typed_arrays
 ---
+
 {{JsSidebar("Advanced")}}
 
 **JavaScript の型付き配列**は配列状のオブジェクトであり、生のバイナリーデータにアクセスする手段を提供します。

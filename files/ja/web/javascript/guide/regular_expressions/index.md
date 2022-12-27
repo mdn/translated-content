@@ -2,6 +2,7 @@
 title: 正規表現
 slug: Web/JavaScript/Guide/Regular_Expressions
 ---
+
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Text_formatting", "Web/JavaScript/Guide/Indexed_collections")}}
 
 正規表現とは、文字列内で文字の組み合わせを照合するために用いられるパターンです。 JavaScript では、正規表現はオブジェクトでもあります。これらのパターンは {{jsxref("RegExp")}} の {{jsxref("RegExp.exec", "exec()")}} および {{jsxref("RegExp.test", "test()")}} メソッドや、{{jsxref("String")}} の {{jsxref("String.match", "match()")}}、 {{jsxref("String.matchAll", "matchAll()")}}、{{jsxref("String.replace", "replace()")}}、{{jsxref("String.replaceAll", "replaceAll()")}}、{{jsxref("String.search", "search()")}}、{{jsxref("String.split", "split()")}} メソッドで使用できます。本章では、 JavaScript の正規表現について説明します。

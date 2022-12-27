@@ -2,6 +2,7 @@
 title: HTMLHtmlElement.version
 slug: Web/API/HTMLHtmlElement/version
 ---
+
 {{ APIRef("HTML DOM") }}
 
 ## 概述

@@ -2,6 +2,7 @@
 title: 从对象到 iframe - 其他嵌入技术
 slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding")}}
 
 到目前为止，你应该掌握了将图像、视频和音频嵌入到网页上的诀窍了。此刻，让我们继续深入学习，来看一些能让你在网页中嵌入各种内容类型的元素：{{htmlelement("iframe")}}, {{htmlelement("embed")}}

@@ -2,6 +2,7 @@
 title: FormDataEvent.formData
 slug: Web/API/FormDataEvent/formData
 ---
+
 {{APIRef("DOM")}}
 
 `formData` は {{domxref("FormDataEvent")}} インターフェイスの読み取り専用プロパティで、このイベントが発行された時点のフォームに含まれていたデータを表す {{domxref("FormData")}} オブジェクトが入っています。

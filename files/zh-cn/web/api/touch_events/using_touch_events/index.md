@@ -2,6 +2,7 @@
 title: 使用触摸事件
 slug: Web/API/Touch_events/Using_Touch_Events
 ---
+
 {{DefaultAPISidebar("Touch Events")}}
 
 今天，大多数 Web 内容是为键盘和鼠标输入而设计的。然而，具有触摸屏（特别是便携式设备）的设备是主流的，Web 应用程序可以使用 {{domxref("Touch_events","Touch Events")}} 直接处理基于触摸的输入，或者应用程序可以使用可解释的鼠标事件以处理应用程序的输入。使用鼠标事件的缺点是它们不支持并发用户输入，而触摸事件支持多个同时输入（可能在触摸面上的不同位置），从而增强用户体验。

@@ -59,7 +59,7 @@ numObj.toFixed(6);      // Returns '12345.678900': note added zeros
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Number.toFixed")}}
+{{Compat}}
 
 ## 參見
 

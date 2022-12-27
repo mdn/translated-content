@@ -2,6 +2,7 @@
 title: HTMLDListElement
 slug: Web/API/HTMLDListElement
 ---
+
 {{ApiRef("HTML DOM")}}
 
 **`HTMLDListElement`** インターフェイスは、（継承によって使用できる通常の {{domxref("HTMLElement")}} インターフェイスのものに加えて）定義リスト要素 ({{HtmlElement("dl")}}) を操作するための特別なプロパティを提供します。

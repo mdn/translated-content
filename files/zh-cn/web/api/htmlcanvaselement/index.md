@@ -2,6 +2,7 @@
 title: HTMLCanvasElement
 slug: Web/API/HTMLCanvasElement
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement`**接口提供用于操纵{{HtmlElement("canvas")}}元素的布局和表示的属性和方法。 **`HTMLCanvasElement`**接口还继承了{{domxref("HTMLElement")}}接口的属性和方法。

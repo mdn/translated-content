@@ -2,6 +2,7 @@
 title: Event.originalTarget
 slug: Web/API/Event/originalTarget
 ---
+
 {{ ApiRef("DOM") }} {{Non-standard_header}}
 
 ## 简介

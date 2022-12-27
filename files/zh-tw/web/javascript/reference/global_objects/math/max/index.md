@@ -76,7 +76,7 @@ However, both spread (`...`) and `apply` will either fail or return the wrong re
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Math.max")}}
+{{Compat}}
 
 ## 參見
 

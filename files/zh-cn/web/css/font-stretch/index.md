@@ -2,6 +2,7 @@
 title: font-stretch
 slug: Web/CSS/font-stretch
 ---
+
 {{CSSRef}}
 
 ## Summary
@@ -83,4 +84,4 @@ The CSS property `font-stretch` was initially defined in CSS 2, but dropped in C
 
 ## Browser compatibility
 
-{{Compat("css.properties.font-stretch")}}
+{{Compat}}

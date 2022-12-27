@@ -43,7 +43,7 @@ console.log(reversed); // ['three', 'two', 'one']
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.reverse")}}
+{{Compat}}
 
 ## 參見
 

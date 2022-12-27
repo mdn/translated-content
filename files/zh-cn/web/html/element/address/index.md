@@ -2,6 +2,7 @@
 title: <address>
 slug: Web/HTML/Element/address
 ---
+
 {{HTMLRef}}
 
 **HTML `<address>` 元素** 表示其中的 HTML 提供了某个人或某个组织（等等）的联系信息。
@@ -82,7 +83,7 @@ slug: Web/HTML/Element/address
 
 ## 浏览器兼容性
 
-{{Compat("html.elements.address")}}
+{{Compat}}
 
 ## 另请参阅
 

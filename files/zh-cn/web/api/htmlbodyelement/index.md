@@ -2,6 +2,7 @@
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
 ---
+
 {{APIRef("HTML DOM")}}
 **`HTMLBodyElement`** 接口提供了特殊的属性（除了它们继承的常规的{{ domxref("HTMLElement") }}接口）以外，还可以处理 body 元素。
 
@@ -71,7 +72,7 @@ No specific event handlers; inherits event handlers from its parent, {{domxref("
 
 ## 浏览器兼容性
 
-{{Compat("api.HTMLBodyElement")}}
+{{Compat}}
 
 ## 参考阅读
 

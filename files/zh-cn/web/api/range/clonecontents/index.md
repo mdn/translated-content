@@ -2,6 +2,7 @@
 title: Range.cloneContents()
 slug: Web/API/Range/cloneContents
 ---
+
 {{ APIRef("DOM") }}
 
 **`Range.cloneContents()`** 返回一个 {{ domxref("DocumentFragment") }}，它是 {{ domxref("Range") }} 中所有的 {{ domxref("Node") }} 对象的副本。

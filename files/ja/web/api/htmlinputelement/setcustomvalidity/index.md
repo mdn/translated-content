@@ -2,6 +2,7 @@
 title: HTMLInputElement.setCustomValidity()
 slug: Web/API/HTMLInputElement/setCustomValidity
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLInputElement.setCustomValidity()`** メソッドは、その要素にカスタム検証メッセージを設定します。

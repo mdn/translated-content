@@ -2,6 +2,7 @@
 title: Generator
 slug: Web/JavaScript/Reference/Global_Objects/Generator
 ---
+
 {{JSRef}}
 
 **生成器**对象是由一个 {{jsxref("Statements/function*", "generator function", "", 1)}} 返回的，并且它符合[可迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterable)和[迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#iterator)。

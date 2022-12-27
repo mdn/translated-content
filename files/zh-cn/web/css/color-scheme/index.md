@@ -2,6 +2,7 @@
 title: color-scheme
 slug: Web/CSS/color-scheme
 ---
+
 {{CSSRef}}
 
 **`color-scheme`** CSS 属性允许元素指示它可以轻松呈现的配色方案。

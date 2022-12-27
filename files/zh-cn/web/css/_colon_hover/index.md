@@ -2,6 +2,7 @@
 title: ':hover'
 slug: Web/CSS/:hover
 ---
+
 {{ CSSRef() }}
 
 ## 概要
@@ -86,4 +87,4 @@ HTML 内容如下：
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.hover")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: Clear-Site-Data
 slug: Web/HTTP/Headers/Clear-Site-Data
 ---
+
 {{HTTPSidebar}}
 
 **`Clear-Site-Data`** 响应头，表示清除当前请求网站有关的浏览器数据（cookie，存储，缓存）。它让 Web 开发人员对浏览器本地存储的数据有更多控制能力。

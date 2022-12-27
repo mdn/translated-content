@@ -2,6 +2,7 @@
 title: SVGPathElement.getTotalLength()
 slug: Web/API/SVGGeometryElement/getTotalLength
 ---
+
 {{APIRef("SVG")}}
 
 **`SVGPathElement.getTotalLength()`** 该方法返回用户代理对路径总长度(以用户单位为单位)的计算值。
@@ -24,7 +25,7 @@ float someElement.getTotalLength();
 
 ## 浏览器兼容性
 
-{{Compat("api.SVGPathElement.getTotalLength")}}
+{{Compat}}
 
 ## 另请参阅
 

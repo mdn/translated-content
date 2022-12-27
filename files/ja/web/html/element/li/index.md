@@ -92,7 +92,7 @@ slug: Web/HTML/Element/li
 
     もし親の {{HTMLElement("ol")}} 要素で使用されていた場合は、それよりも優先されます。
 
-    > **Note:** **注意:** この属性は非推奨になっています。代わりに CSS の {{cssxref("list-style-type")}} プロパティを使用してください。
+    > **Note:** この属性は非推奨になっています。代わりに CSS の {{cssxref("list-style-type")}} プロパティを使用してください。
 
 ## 例
 

@@ -2,6 +2,7 @@
 title: Intl.Locale.prototype.script
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/script
 ---
+
 {{JSRef}}
 
 **`Intl.Locale.prototype.script`** プロパティは、ロケールで使われている特定の言語を書くための文字体系を返すアクセサープロパティです。

@@ -2,6 +2,7 @@
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
 ---
+
 {{HTTPSidebar}}
 
 **HTTP `TRACE` 方法** 实现沿通向目标资源的路径的消息环回（loop-back）测试 ，提供了一种实用的 debug 机制。

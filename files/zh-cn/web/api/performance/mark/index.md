@@ -2,6 +2,7 @@
 title: Performance.mark()
 slug: Web/API/Performance/mark
 ---
+
 {{APIRef("User Timing API")}}
 
 **`mark()`** 方法在浏览器的性能缓冲区中使用给定名称添加一个{{domxref("DOMHighResTimeStamp","timestamp(时间戳)")}} _。_
@@ -65,4 +66,4 @@ performance.clearMarks();
 
 ## 浏览器兼容
 
-{{Compat("api.Performance.mark")}}
+{{Compat}}

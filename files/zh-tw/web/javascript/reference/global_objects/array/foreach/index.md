@@ -244,7 +244,7 @@ if (!Array.prototype.forEach) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.forEach")}}
+{{Compat}}
 
 ## 參見
 

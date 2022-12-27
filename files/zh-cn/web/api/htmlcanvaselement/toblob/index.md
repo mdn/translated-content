@@ -2,6 +2,7 @@
 title: HTMLCanvasElement.toBlob()
 slug: Web/API/HTMLCanvasElement/toBlob
 ---
+
 {{APIRef("Canvas API")}}
 
 **`HTMLCanvasElement.toBlob()`** 方法创造 {{domxref("Blob")}} 对象，用以展示 canvas 上的图片；这个图片文件可以被缓存或保存到本地（由用户代理自行决定）。

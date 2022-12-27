@@ -3,6 +3,7 @@ title: 'null'
 slug: Web/JavaScript/Reference/Operators/null
 original_slug: Web/JavaScript/Reference/Global_Objects/null
 ---
+
 {{jsSidebar("Objects")}}
 
 值 `null` 特指对象的值未设置。它是 JavaScript {{Glossary("Primitive", "基本类型")}} 之一，在布尔运算中被认为是[falsy](/zh-CN/docs/Glossary/Falsy)。

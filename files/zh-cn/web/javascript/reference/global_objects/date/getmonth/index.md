@@ -2,6 +2,7 @@
 title: Date.prototype.getMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMonth
 ---
+
 {{JSRef}}
 
 根据本地时间，返回一个指定的日期对象的月份，为基于 0 的值（0 表示一年中的第一月）。

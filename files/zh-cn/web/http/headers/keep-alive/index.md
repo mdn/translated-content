@@ -2,6 +2,7 @@
 title: Keep-Alive
 slug: Web/HTTP/Headers/Keep-Alive
 ---
+
 {{HTTPSidebar}}
 
 **`Keep-Alive`** 是一个通用消息头，允许消息发送者暗示连接的状态，还可以用来设置超时时长和最大请求数。

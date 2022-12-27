@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: waiting イベント'
 slug: Web/API/HTMLMediaElement/waiting_event
 ---
+
 {{APIRef("HTMLMediaElement")}}
 
 `waiting` イベントは、一時的にデータが欠落しているために再生が停止したときに発生します。

@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.stroke()
 slug: Web/API/CanvasRenderingContext2D/stroke
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.stroke()`** 是 Canvas 2D API 使用非零环绕规则，根据当前的画线样式，绘制当前或已经存在的路径的方法。
@@ -86,7 +87,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.stroke")}}
+{{Compat}}
 
 ## 参见
 

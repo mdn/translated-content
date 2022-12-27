@@ -2,6 +2,7 @@
 title: AbortSignal.throwIfAborted()
 slug: Web/API/AbortSignal/throwIfAborted
 ---
+
 {{APIRef("DOM")}}
 
 如果 signal 已经被中止，则 **`throwIfAborted()`** 方法抛出中止的 {{domxref("AbortSignal.reason", "reason")}}；否则它什么也不做。

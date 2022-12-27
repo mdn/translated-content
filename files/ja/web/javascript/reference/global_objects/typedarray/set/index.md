@@ -2,6 +2,7 @@
 title: TypedArray.prototype.set()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/set
 ---
+
 {{JSRef}}
 
 **`set()`** メソッドは、複数の値を指定した配列から入力値を読み込み、型付き配列に格納します。

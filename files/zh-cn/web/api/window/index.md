@@ -2,6 +2,7 @@
 title: Window
 slug: Web/API/Window
 ---
+
 {{APIRef("DOM")}}
 
 `window` 对象表示一个包含 DOM 文档的窗口，其 `document` 属性指向窗口中载入的 [DOM 文档](/zh-CN/docs/Web/API/Document) 。使用 {{ Domxref("document.defaultView") }} 属性可以获取指定文档所在窗口。
@@ -647,7 +648,7 @@ See [DOM Reference](/zh-CN/docs/DOM/DOM_Reference)
 
 ## 浏览器兼容性
 
-{{Compat("api.Window")}}
+{{Compat}}
 
 ## 参见
 

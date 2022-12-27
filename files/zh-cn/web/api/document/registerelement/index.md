@@ -2,6 +2,7 @@
 title: Document.registerElement()
 slug: Web/API/Document/registerElement
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 > **警告：** 不建议使用`document.registerElement（）`,请使用{{DOMxRef("CustomElementRegistry.define()","customElements.define()")}}。
@@ -46,7 +47,7 @@ mytag.textContent = "I am a my-tag element.";
 
 ## 浏览器兼容性
 
-{{Compat("api.Document.registerElement")}}
+{{Compat}}
 
 ## 另请参阅
 

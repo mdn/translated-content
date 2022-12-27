@@ -2,6 +2,7 @@
 title: Array.prototype.flatMap()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flatMap
 ---
+
 {{JSRef}}
 
 **`flatMap()`** メソッドは、最初にマッピング関数を使用してそれぞれの要素をマップした後、結果を新しい配列内にフラット化します。これは、{{jsxref("Array.prototype.map","map()")}} の後に深さ 1 の {{jsxref("Array.prototype.flat","flat()")}} を行うのと同じですが、これら 2 つのメソッドを別々にコールするよりもわずかに効率的です。

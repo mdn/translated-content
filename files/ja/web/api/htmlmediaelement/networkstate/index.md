@@ -2,6 +2,7 @@
 title: HTMLMediaElement.networkState
 slug: Web/API/HTMLMediaElement/networkState
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`HTMLMediaElement.networkState`** プロパティは、ネットワークを介したメディアの現在の取得状況を示します。

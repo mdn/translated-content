@@ -8,19 +8,21 @@ Las propiedades de la clase son públicas de forma predeterminada y se pueden ex
 
 ## Syntax
 
-    class ClassWithPrivateField {
-      #privateField
-    }
+```js
+class ClassWithPrivateField {
+  #privateField
+}
 
-    class ClassWithPrivateMethod {
-      #privateMethod() {
-        return 'hello world'
-     }
-    }
+class ClassWithPrivateMethod {
+  #privateMethod() {
+    return 'hello world'
+  }
+}
 
-    class ClassWithPrivateStaticField {
-      static #PRIVATE_STATIC_FIELD
-    }
+class ClassWithPrivateStaticField {
+  static #PRIVATE_STATIC_FIELD
+}
+```
 
 ### Campos estáticos privados
 

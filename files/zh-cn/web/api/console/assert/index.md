@@ -2,6 +2,7 @@
 title: Console.assert()
 slug: Web/API/Console/assert
 ---
+
 {{APIRef("Console API")}}
 
 如果断言为 false，则将一个错误消息写入控制台。如果断言是 `true`，没有任何反应。

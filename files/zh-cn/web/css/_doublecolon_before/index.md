@@ -2,6 +2,7 @@
 title: '::before (:before)'
 slug: Web/CSS/::before
 ---
+
 {{CSSRef}}
 
 CSS 中，**`::before`** 创建一个[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)，其将成为匹配选中的元素的第一个子元素。常通过 {{ cssxref("content") }} 属性来为一个元素添加修饰性的内容。此元素默认为行内元素。
@@ -202,7 +203,7 @@ line to flow under it.</span>
 
 ## 浏览器兼容性
 
-{{Compat("css.selectors.before")}}
+{{Compat}}
 
 ## 参见
 

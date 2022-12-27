@@ -2,6 +2,7 @@
 title: Proxy servers and tunneling
 slug: Web/HTTP/Proxy_servers_and_tunneling
 ---
+
 {{HTTPSidebar}}
 
 当访问不同的网站时，代理服务器和 HTTP 管道帮助访问万维网 . 一个代理可以是用户的本地计算机，或者介于用户计算机和终端服务器之间的地方。本章节概述一些关于代理和相关配置选项的基础知识。

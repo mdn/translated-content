@@ -2,6 +2,7 @@
 title: transition-timing-function
 slug: Web/CSS/transition-timing-function
 ---
+
 {{ CSSRef() }}{{SeeCompatTable}}
 
 ## 概述
@@ -553,7 +554,7 @@ var intervalID = window.setInterval(updateTransition, 7000);
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.transition-timing-function")}}
+{{Compat}}
 
 ## 参考
 

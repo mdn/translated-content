@@ -2,6 +2,7 @@
 title: Window.open()
 slug: Web/API/Window/open
 ---
+
 {{APIRef}}
 
 `Window` 接口的 **`open()`** 方法，是用指定的名称将指定的资源加载到浏览器上下文（窗口 `window` ，内嵌框架 `iframe` 或者标签 `tab` ）。如果没有指定名称，则一个新的窗口会被打开并且指定的资源会被加载进这个窗口的浏览器上下文中。

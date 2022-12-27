@@ -2,6 +2,7 @@
 title: 'HTMLMediaElement: error イベント'
 slug: Web/API/HTMLMediaElement/error_event
 ---
+
 {{APIRef}}
 
 **`error`** イベントは、リソースがエラーのために読み込めなかったときに発生します（例えば、ネットワーク接続の問題など）。

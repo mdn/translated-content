@@ -2,6 +2,7 @@
 title: HTML 调试
 slug: Learn/HTML/Introduction_to_HTML/Debugging_HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML/Marking_up_a_letter", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML 优雅明了，但要是出了错，你会不会一头雾水呢，本节将介绍一些查找和修复 HTML 错误的工具。

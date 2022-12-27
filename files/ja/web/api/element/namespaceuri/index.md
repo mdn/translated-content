@@ -3,6 +3,7 @@ title: Element.namespaceURI
 slug: Web/API/Element/namespaceURI
 original_slug: Web/API/Node/namespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 **`Element.namespaceURI`** は読み取り専用のプロパティで、この要素の名前空間 URI を返します。この要素が名前空間に所属していない場合は `null` を返します。

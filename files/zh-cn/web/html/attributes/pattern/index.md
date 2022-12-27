@@ -2,6 +2,7 @@
 title: 'HTML attribute: pattern'
 slug: Web/HTML/Attributes/pattern
 ---
+
 {{HTMLSidebar}}
 
 **`pattern`** 属性规定了一个表单控件的值应该匹配的 [正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)。 如果一个非 `null` 值不满足 `pattern` 值设置的约束，{{domxref('ValidityState')}} 对象的只读 {{domxref('ValidityState.patternMismatch','patternMismatch')}} 属性将为真。

@@ -2,6 +2,7 @@
 title: font-face
 slug: Web/SVG/Element/font-face
 ---
+
 {{SVGRef}}
 
 font-face 元素相当于 (corresponds to) CSS 的 @font-face 规则声明，font-face 元素定义了一个字体的外部属性 (a font's outer properties)。

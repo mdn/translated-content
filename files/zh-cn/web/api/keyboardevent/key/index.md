@@ -2,6 +2,7 @@
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
 ---
+
 {{APIRef("DOM Events")}}
 
 只读属性 **`KeyboardEvent.key`** 返回用户按下的物理按键的值。它还与 `shiftKey` 等调节性按键的状态和键盘的区域 / 和布局有关。它的值由以下因素决定：
@@ -261,4 +262,4 @@ window.addEventListener("keydown", function (event) {
 
 ## 浏览器兼容性
 
-{{Compat("api.KeyboardEvent.key")}}
+{{Compat}}

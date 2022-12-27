@@ -2,6 +2,7 @@
 title: 继承性
 slug: Web/CSS/@property/inherits
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`inherits`** [CSS](/zh-CN/docs/Web/CSS) 描述符在使用{{cssxref("@property")}} {{cssxref("at-rule")}}时是必需的，它控制由 `@property`声明注册的自定义属性默认情况下是否会被继承。
@@ -70,7 +71,7 @@ window.CSS.registerProperty({
 
 ## 浏览器兼容性
 
-{{Compat("css.at-rules.property.inherits")}}
+{{Compat}}
 
 ## 另见
 

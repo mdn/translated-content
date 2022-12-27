@@ -2,6 +2,7 @@
 title: URLSearchParams.getAll()
 slug: Web/API/URLSearchParams/getAll
 ---
+
 {{ApiRef("URL API")}}{{SeeCompatTable}}
 
 {{domxref("URLSearchParams")}}接口的 getAll() 方法，以数组的形式返回与指定搜索参数对应的所有值。

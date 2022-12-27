@@ -2,6 +2,7 @@
 title: document.execCommand
 slug: Web/API/Document/execCommand
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 当一个 HTML 文档切换到设计模式时，`document`暴露 **`execCommand` **方法，该方法允许运行命令来操纵[可编辑内容区域](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable)的元素。

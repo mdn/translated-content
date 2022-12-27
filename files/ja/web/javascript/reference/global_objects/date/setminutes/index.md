@@ -2,6 +2,7 @@
 title: Date.prototype.setMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMinutes
 ---
+
 {{JSRef}}
 
 **`setMinutes()`** メソッドは、地方時に基づき、指定された日時の「分」を設定します。

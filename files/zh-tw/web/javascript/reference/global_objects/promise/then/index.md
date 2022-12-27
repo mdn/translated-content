@@ -248,7 +248,7 @@ p3.then(function(v) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript/promise","Promise.prototype.then")}}
+{{Compat}}
 
 ## 參見
 

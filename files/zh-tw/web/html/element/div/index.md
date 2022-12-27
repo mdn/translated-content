@@ -38,7 +38,7 @@ slug: Web/HTML/Element/div
 
 ## 瀏覽器相容性
 
-{{Compat("html.elements.div")}}
+{{Compat}}
 
 ## 詳閱
 

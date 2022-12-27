@@ -2,6 +2,7 @@
 title: Client.postMessage()
 slug: Web/API/Client/postMessage
 ---
+
 {{SeeCompatTable}}{{APIRef("Client")}}
 
 {{domxref("Client")}} 接口的 **`Client.postMessage()`** 方法允许一个 service worker 客户端向一个 {{domxref("ServiceWorker")}}发送一个消息，会触发 service worker 的 message 事件，通过监听这个事件，可以获取这个消息。
@@ -64,4 +65,4 @@ navigator.serviceWorker.addEventListener('message', event => {
 
 ## Browser compatibility
 
-{{Compat("api.Client.postMessage")}}
+{{Compat}}

@@ -101,7 +101,7 @@ catch(error)
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.RangeError")}}
+{{Compat}}
 
 ## 另見
 

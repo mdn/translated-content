@@ -2,6 +2,7 @@
 title: Math.atanh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atanh
 ---
+
 {{JSRef}}
 
 **`Math.atanh()`** 関数は、数値の双曲線逆正接 (ハイパーボリックアークタンジェント) を返します。

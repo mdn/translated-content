@@ -2,6 +2,7 @@
 title: search
 slug: Mozilla/Add-ons/WebExtensions/API/search
 ---
+
 {{AddonSidebar}}
 
 Retrieves search engines and executes a search with a specific search engine.

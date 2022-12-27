@@ -103,4 +103,4 @@ if (y === void 0) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.undefined")}}
+{{Compat}}

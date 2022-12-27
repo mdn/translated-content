@@ -2,6 +2,7 @@
 title: Document.bgColor
 slug: Web/API/Document/bgColor
 ---
+
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 
 `bgColor` 获取/设置当前文档的背景颜色

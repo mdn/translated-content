@@ -2,6 +2,7 @@
 title: HTMLElement.innerText
 slug: Web/API/HTMLElement/innerText
 ---
+
 {{APIRef("DOM")}}
 
 **`innerText`** 属性表示一个节点及其后代的“渲染”文本内容。 As a getter, it approximates the text the user would get if they highlighted the contents of the element with the cursor and then copied it to the clipboard.

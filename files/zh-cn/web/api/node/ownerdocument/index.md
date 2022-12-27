@@ -2,6 +2,7 @@
 title: Node.ownerDocument
 slug: Web/API/Node/ownerDocument
 ---
+
 {{ APIRef("DOM")}}
 
 **Node.ownerDocument** 只读属性会返回当前节点的顶层的 document 对象。

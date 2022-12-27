@@ -2,6 +2,7 @@
 title: 論理積代入 (&&=)
 slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 論理積代入 (`x &&= y`) 演算子は、`x` が{{Glossary("truthy", "真値")}}である場合にのみ代入を行います。

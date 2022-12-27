@@ -13,7 +13,7 @@ translation_of: Web/API/Document/createElement
 
 En un documento [HTML](/es/docs/Web/HTML), el método **`Document.createElement()`** crea un elemento HTML especificado por su `tagName`, o un {{domxref("HTMLUnknownElement")}} si su `tagName` no se reconoce. En un documento [XUL](/es/docs/Mozilla/Tech/XUL), crea el elemento XUL especificado. En otros documentos, crea un elemento con un namespace URI `null`.
 
-Para declarar el namespace URI del elemento, utiliza [`document.createElementNS()`](/es/docs/Web/API/Document/createElementNS "Creates an element with the specified namespace URI and qualified name.").
+Para declarar el namespace URI del elemento, utiliza [`document.createElementNS()`](/es/docs/Web/API/Document/createElementNS).
 
 ## Sintaxis
 
@@ -27,13 +27,13 @@ var element = document.createElement(tagName, [options]);
   - : Cadena que especifica el tipo de elemento a crear. El {{domxref("Node.nodeName", "nodeName")}} del elemento creado se inicializa con el valor de `tagName`. No utilizar nombres reservados (como "html:a") con este método. Al ser invocado en un documento HTML, `createElement()` convierte `tagName` a minúsculas antes de crear el elemento. En Firefox, Opera, y Chrome, `createElement(null)` funciona como `createElement("null")`.
 - `options`{{optional_inline}}
 
-  - : Un objeto opcional `ElementCreationOptions` que contiene una única propiedad llamada `is`, cuyo valor es el de la etiqueta name de un elemento personalizado definido previamente utilizando `customElements.define()`. Para compatibilidad con versiones anteriores de[ Elements specification](https://www.w3.org/TR/custom-elements/), algunos navegadores podrían permitir pasar una cadena aquí en vez de un objeto, donde el valor de la cadena es la etiqueta name del elemento creado. Ver [Extending native HTML elements](https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml) para más información sobre como usar este parámetro.
+  - : Un objeto opcional `ElementCreationOptions` que contiene una única propiedad llamada `is`, cuyo valor es el de la etiqueta name de un elemento personalizado definido previamente utilizando `customElements.define()`. Para compatibilidad con versiones anteriores de [Elements specification](https://www.w3.org/TR/custom-elements/), algunos navegadores podrían permitir pasar una cadena aquí en vez de un objeto, donde el valor de la cadena es la etiqueta name del elemento creado. Ver [Extending native HTML elements](https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml) para más información sobre como usar este parámetro.
 
     El nuevo elemento recibirá el atributo cuyo valor es la etiqueta name del elemento personalizado. Los elementos personalizados son una característica experimental solo disponible en algunos navegadores.
 
 ### Retorna
 
-El nuevo [`Element`](/es/docs/Web/API/Element "The Element interface represents an object of a Document. This interface describes methods and properties common to all kinds of elements. Specific behaviors are described in interfaces which inherit from Element but add additional functionality.").
+El nuevo [`Element`](/es/docs/Web/API/Element).
 
 ## Ejemplo
 
@@ -80,7 +80,6 @@ function addElement () {
 ## Compatibilidad del Navegador
 
 {{Compat}}
-
 
 ## Ver también
 

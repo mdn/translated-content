@@ -2,6 +2,7 @@
 title: 拖拽操作
 slug: Web/API/HTML_Drag_and_Drop_API/Drag_operations
 ---
+
 {{DefaultAPISidebar("HTML Drag and Drop API")}}
 
 本文描述了拖放操作中发生的步骤。

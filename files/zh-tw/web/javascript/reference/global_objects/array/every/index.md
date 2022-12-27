@@ -148,7 +148,7 @@ if (!Array.prototype.every) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Array.every")}}
+{{Compat}}
 
 ## 參見
 

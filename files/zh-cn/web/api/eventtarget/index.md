@@ -2,6 +2,7 @@
 title: EventTarget
 slug: Web/API/EventTarget
 ---
+
 {{ApiRef("DOM")}}
 
 `EventTarget` 接口由可以接收事件、并且可以创建侦听器的对象实现。换句话说，任何事件目标都会实现与该接口有关的这三个方法。

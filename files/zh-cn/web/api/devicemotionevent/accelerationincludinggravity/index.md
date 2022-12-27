@@ -2,6 +2,7 @@
 title: DeviceMotionEvent.accelerationIncludingGravity
 slug: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 ---
+
 {{ ApiRef("Device Orientation Events") }}
 
 accelerationIncludingGravity 属性返回设备的加速度的记录，单位为[米每秒平方（m / s2）](https://en.wikipedia.org/wiki/Meter_per_second_squared)。与已移除重力加速度的{{domxref("DeviceMotionEvent.acceleration")}}不同，此值是由用户引起的设备的加速度和由重力加速度的总和。
@@ -31,7 +32,7 @@ var acceleration = instanceOfDeviceMotionEvent.accelerationIncludingGravity;
 
 ## 浏览器兼容性
 
-{{Compat("api.DeviceMotionEvent.accelerationIncludingGravity")}}
+{{Compat}}
 
 ## 推荐浏览
 

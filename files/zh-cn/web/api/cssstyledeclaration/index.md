@@ -2,6 +2,7 @@
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSStyleDeclaration`** 接口表示一个对象，它是一个 CSS 声明块，CSS 属性键值对的集合。它暴露了样式信息和各种与样式相关的方法和属性。
@@ -57,7 +58,7 @@ console.log(styleObj.cssText);
 
 ## 浏览器兼容性
 
-{{Compat("api.CSSStyleDeclaration")}}
+{{Compat}}
 
 ## 参见
 

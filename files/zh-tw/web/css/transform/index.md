@@ -116,7 +116,7 @@ p {
 
 ## 瀏覽器相容性
 
-{{Compat("css.properties.transform")}}
+{{Compat}}
 
 ## 參見
 

@@ -2,6 +2,7 @@
 title: WebGLBuffer
 slug: Web/API/WebGLBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 **WebGLBuffer** 接口属于 [WebGL API](/zh-CN/docs/Web/API/WebGL_API) 的一部分，表示一个不透明的缓冲区对象，储存诸如顶点或着色之类的数据。
@@ -31,7 +32,7 @@ var buffer = gl.createBuffer();
 
 ## 浏览器兼容性
 
-{{Compat("api.WebGLBuffer")}}
+{{Compat}}
 
 ## 另请参阅
 

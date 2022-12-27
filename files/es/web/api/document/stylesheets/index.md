@@ -9,7 +9,7 @@ original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 
 ### Resumen
 
-Devuelve una lista de objetos de tipo [stylesheet](/es/DOM/stylesheet "es/DOM/stylesheet") para las hojas de estilo que están específicamente enlazadas o contenidas en el documento.
+Devuelve una lista de objetos de tipo [stylesheet](/es/DOM/stylesheet) para las hojas de estilo que están específicamente enlazadas o contenidas en el documento.
 
 ### Propiedades
 
@@ -23,7 +23,7 @@ styleSheetList = document.styleSheets
 
 El objeto devuelto es del tipo [StyleSheetList](https://www.w3.org/TR/DOM-Level-2-Style/stylesheets.html#StyleSheets-DocumentStyle-styleSheets).
 
-Es una colección ordenada de objetos de tipo [stylesheet](/es/DOM/stylesheet "es/DOM/stylesheet"). `styleSheetList.item(index)` o simplemente `styleSheetList{{ mediawiki.external('
+Es una colección ordenada de objetos de tipo [stylesheet](/es/DOM/stylesheet). `styleSheetList.item(index)` o simplemente `styleSheetList{{ mediawiki.external('
  <i>
   index</i>
  ') }}` devuelve un único objeto de tipo stylesheet con el índice especificado (el índice es de origen 0).

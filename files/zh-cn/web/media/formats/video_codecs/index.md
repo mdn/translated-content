@@ -2,6 +2,7 @@
 title: 网页视频编码指南
 slug: Web/Media/Formats/Video_codecs
 ---
+
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/Media")}}
 
 本文介绍了你在网络中最常遇见的视频编码，总结了这些编码方式的能力、兼容性以及使用时需要考虑的事项，并且提供了一些为你的项目的视频选择编码的建议。

@@ -3,6 +3,7 @@ title: 'Document: transitionstart イベント'
 slug: Web/API/Element/transitionstart_event
 original_slug: Web/API/Document/transitionstart_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`transitionstart`** イベントは、 [CSS トランジション](/ja/docs/CSS/Using_CSS_transitions)が実際に始まったとき、すなわち {{cssxref("transition-delay")}} が終了した後に発生します。

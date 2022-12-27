@@ -53,7 +53,7 @@ field.addEventListener("change", function() {
 });
 ```
 
-> **Note:** **注記**: 詳細な使用例は [Web Storage API を使用する](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
+> **Note:** 詳細な使用例は [Web Storage API を使用する](/ja/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) の記事を参照してください。
 
 ## 仕様
 

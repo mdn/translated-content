@@ -2,6 +2,7 @@
 title: Element.getAnimations()
 slug: Web/API/Element/getAnimations
 ---
+
 {{ SeeCompatTable() }}{{APIRef("Web Animations")}}
 
 `getAnimations()` は {{domxref("Element")}} インターフェイスのメソッドで（`Animatable` ミックスインで指定されており）、この要素に影響を与える、あるいは将来的に影響を与える予定のすべての {{domxref("Animation")}} オブジェクトの配列を返します。オプションとして、子孫要素の {{domxref("Animation")}} オブジェクトも返すことができます。

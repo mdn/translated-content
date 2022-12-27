@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.rect()
 slug: Web/API/CanvasRenderingContext2D/rect
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.rect()`** 是 Canvas 2D API 创建矩形路径的方法，矩形的起点位置是 _(x, y)_ ，尺寸为 _width_ 和 _height_。矩形的 4 个点通过直线连接，子路径做为闭合的标记，所以你可以填充或者描边矩形。
@@ -91,7 +92,7 @@ window.addEventListener("load", drawCanvas);
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.rect")}}
+{{Compat}}
 
 ## 参见
 

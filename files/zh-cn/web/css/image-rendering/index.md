@@ -2,6 +2,7 @@
 title: image-rendering
 slug: Web/CSS/image-rendering
 ---
+
 {{CSSRef}}
 
 [CSS](/zh-CN/docs/CSS) 属性 **`image-rendering`** 用于设置图像缩放算法。它适用于元素本身，适用于元素其他属性中的图像，也应用于子元素。
@@ -87,7 +88,7 @@ img {
 
 ## 浏览器兼容性
 
-{{Compat("css.properties.image-rendering")}}
+{{Compat}}
 
 ### 备注
 

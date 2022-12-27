@@ -88,7 +88,7 @@ const response = new Response();
 
 ## 瀏覽器相容性
 
-{{Compat("api.Response")}}
+{{Compat}}
 
 ## 參考
 

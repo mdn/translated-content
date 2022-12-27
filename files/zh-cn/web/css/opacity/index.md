@@ -2,6 +2,7 @@
 title: opacity
 slug: Web/CSS/opacity
 ---
+
 {{CSSRef}}
 
 ## 概述

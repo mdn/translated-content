@@ -2,6 +2,7 @@
 title: Bluetooth
 slug: Web/API/Bluetooth
 ---
+
 {{ apiref("Web Bluetooth API") }} {{Non-standard_header()}}
 
 [Web Bluetooth API](/Web/API/Web_Bluetooth_API) 的**`Bluetooth`**`接口`返回指代{{domxref("BluetoothDevice")}}带有指定选项的对象的{{jsxref("Promise")}}。
@@ -33,4 +34,4 @@ Bluetooth implements ServiceEventHandlers;
 
 ## 浏览器兼容性
 
-{{Compat("api.Bluetooth")}}
+{{Compat}}

@@ -2,6 +2,7 @@
 title: Array.prototype.some()
 slug: Web/JavaScript/Reference/Global_Objects/Array/some
 ---
+
 {{JSRef}}
 
 **`some()`** メソッドは、配列の少なくとも一つの要素が、指定された関数で実装されたテストに合格するかどうかをテストします。これはブール値を返します。
@@ -46,7 +47,7 @@ arr.some(callback(element[, index[, array]])[, thisArg])
 
 `some()` によって処理される要素の範囲は、`callback` が最初に呼び出される前に設定されます。`some()` の呼び出しが開始された後に追加された要素に対しては、`callback` は実行されません。既存の配列要素が変更されたり、削除されたりした場合、`callback` に渡される値は `some()` がそれらを訪れた時点での値になり、削除された要素を訪問することはありません。
 
-> **Note:** **注**: このメソッドは空の配列ではあらゆる条件式に対して `false` を返します。
+> **Note:** このメソッドは空の配列ではあらゆる条件式に対して `false` を返します。
 
 ## Polyfill
 

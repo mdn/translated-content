@@ -2,6 +2,7 @@
 title: HTMLElement.hidden
 slug: Web/API/HTMLElement/hidden
 ---
+
 {{ APIRef("HTML DOM") }}
 
 {{domxref("HTMLElement")}} の **`hidden`** プロパティは論理値で、この要素が非表示の場合は `true` で、それ以外の場合は `false` です。 これは、CSS プロパティの {{cssxref("display")}} を使用して要素の可視性を制御することとはまったく異なります。

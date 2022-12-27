@@ -159,7 +159,7 @@ p2.then(function (value) {
 
 ## 瀏覽器相容性
 
-{{Compat("javascript.builtins.Promise.catch")}}
+{{Compat}}
 
 ## 參見
 

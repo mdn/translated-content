@@ -2,6 +2,7 @@
 title: 按位异或赋值 (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 ---
+
 {{jsSidebar("Operators")}}
 
 按位异或赋值操作符 (`^=`) 使用二进制表示操作数，进行一次按位异或操作并赋值。

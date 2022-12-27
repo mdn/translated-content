@@ -2,6 +2,7 @@
 title: mouseenter
 slug: Web/API/Element/mouseenter_event
 ---
+
 {{APIRef}}
 
 当一个定点设备（通常指鼠标）第一次移动到触发事件元素中的激活区域时，**`mouseenter`** 事件在该 {{domxref("Element")}} 中触发。

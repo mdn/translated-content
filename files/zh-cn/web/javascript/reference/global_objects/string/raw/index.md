@@ -2,6 +2,7 @@
 title: String.raw()
 slug: Web/JavaScript/Reference/Global_Objects/String/raw
 ---
+
 {{JSRef()}}
 
 **String.raw()** 是一个[模板字符串](/zh-CN/docs/Web/JavaScript/Reference/template_strings)的标签函数，它的作用类似于 Python 中的字符串前缀 `r` 和 C# 中的字符串前缀 `@`（还是有点区别的，详见隔壁 Chromium 那边的[这个 issue](https://bugs.chromium.org/p/v8/issues/detail?id=5016)），是用来获取一个模板字符串的原始字符串的，比如说，占位符（例如 `${foo}`）会被处理为它所代表的其他字符串，而转义字符（例如 `\n`）不会。

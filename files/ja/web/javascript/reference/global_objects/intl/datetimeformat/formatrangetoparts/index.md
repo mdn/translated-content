@@ -2,6 +2,7 @@
 title: Intl.DateTimeFormat.prototype.formatRangeToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
 ---
+
 {{JSRef}}
 
 **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** メソッドは、 {{jsxref("Intl.DateTimeFormat")}} フォーマッターで生成される期間の各部品を表すロケール特有のトークンを提供します。

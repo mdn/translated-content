@@ -2,6 +2,7 @@
 title: Symbol.unscopables
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/unscopables
 ---
+
 {{JSRef}}
 
 **`Symbol.unscopables`** ウェルノウンシンボルは、自身のプロパティ名と継承されたプロパティ名が、関連付けられたオブジェクトの [`with`](/ja/docs/Web/JavaScript/Reference/Statements/with) 環境バインディングから除外されているオブジェクトの値を指定するために使用されます。

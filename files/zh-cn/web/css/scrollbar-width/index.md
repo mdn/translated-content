@@ -2,6 +2,7 @@
 title: scrollbar-width
 slug: Web/CSS/scrollbar-width
 ---
+
 {{CSSRef}}{{SeeCompatTable}}
 
 **`scrollbar-width`** 属性允许开发者设置滚动条出现时的厚度

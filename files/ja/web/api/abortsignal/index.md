@@ -57,7 +57,7 @@ function fetchVideo() {
 }
 ```
 
-> **Note:** **注記**: `abort()` が呼ばれると、`fetch()` promise は `AbortError` で失敗します。
+> **Note:** `abort()` が呼ばれると、`fetch()` promise は `AbortError` で失敗します。
 
 > **Warning:** 現在のバージョンの Firefox は、`DOMException` で失敗します。
 

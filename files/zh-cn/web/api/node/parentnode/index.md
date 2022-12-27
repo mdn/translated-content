@@ -2,6 +2,7 @@
 title: Node.parentNode
 slug: Web/API/Node/parentNode
 ---
+
 {{ ApiRef() }}
 
 ## 概述

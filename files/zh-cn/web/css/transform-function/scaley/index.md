@@ -3,6 +3,7 @@ title: scaleY()
 slug: Web/CSS/transform-function/scaleY
 original_slug: Web/CSS/transform-function/scaleY()
 ---
+
 {{CSSRef}}
 
 The **`scaleY()`** [CSS](/zh-CN/docs/Web/CSS) function defines a transformation that resizes an element along the y-axis (vertically). Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.

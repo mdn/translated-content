@@ -2,6 +2,7 @@
 title: window.openDialog
 slug: Web/API/Window/openDialog
 ---
+
 {{ ApiRef() }}
 
 ### 简介

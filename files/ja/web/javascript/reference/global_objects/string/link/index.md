@@ -2,6 +2,7 @@
 title: String.prototype.link()
 slug: Web/JavaScript/Reference/Global_Objects/String/link
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 **`link()`** メソッドは、他の URL へのハイパーテキストリンクとして使用される HTML の {{HTMLElement("a")}} 要素を生成します。

@@ -2,6 +2,7 @@
 title: ETag
 slug: Web/HTTP/Headers/ETag
 ---
+
 {{HTTPSidebar}}
 
 **`ETag`**HTTP 响应头是资源的特定版本的标识符。这可以让缓存更高效，并节省带宽，因为如果内容没有改变，Web 服务器不需要发送完整的响应。而如果内容发生了变化，使用 ETag 有助于防止资源的同时更新相互覆盖（“空中碰撞”）。

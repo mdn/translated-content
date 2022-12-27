@@ -2,6 +2,7 @@
 title: OffscreenCanvas
 slug: Web/API/OffscreenCanvas
 ---
+
 {{APIRef("Canvas API")}} {{SeeCompatTable}}
 
 **`OffscreenCanvas`** 提供了一个可以脱离屏幕渲染的 canvas 对象。它在窗口环境和[web worker](/zh-CN/docs/Web/API/Web_Workers_API)环境均有效。

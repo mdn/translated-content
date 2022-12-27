@@ -2,6 +2,7 @@
 title: ExtendableMessageEvent.source
 slug: Web/API/ExtendableMessageEvent/source
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ExtendableMessageEvent")}} インターフェイスの **`source`** 読み取り専用プロパティは、メッセージの送信元の {{domxref("Client")}} オブジェクトへの参照を返します。

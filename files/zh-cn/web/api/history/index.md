@@ -2,6 +2,7 @@
 title: History
 slug: Web/API/History
 ---
+
 {{ APIRef("HTML DOM") }}
 
 **`History`** 接口允许操作浏览器的曾经在标签页或者框架里访问的会话历史记录。

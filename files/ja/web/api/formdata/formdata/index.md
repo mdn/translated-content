@@ -2,6 +2,7 @@
 title: FormData()
 slug: Web/API/FormData/FormData
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 **`FormData()`** コンストラクターは、新しい {{domxref("FormData")}} オブジェクトを生成します。

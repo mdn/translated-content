@@ -2,6 +2,7 @@
 title: TypedArray.name
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/name
 ---
+
 {{JSRef}}
 
 `TypedArray.name` ?属性是描述类型数组构造名的字符串值。

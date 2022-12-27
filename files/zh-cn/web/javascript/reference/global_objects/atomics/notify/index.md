@@ -2,6 +2,7 @@
 title: Atomics.notify()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/notify
 ---
+
 {{JSRef}}
 
 静态方法 **`Atomics.notify()`** 提醒一些在等待队列中休眠的代理。

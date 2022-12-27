@@ -2,6 +2,7 @@
 title: RegExp.prototype.compile()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/compile
 ---
+
 {{JSRef}} {{deprecated_header}}
 
 `已废弃的compile`**`()`** 方法被用于在脚本执行过程中（重新）编译正则表达式。与`RegExp`构造函数基本一样。

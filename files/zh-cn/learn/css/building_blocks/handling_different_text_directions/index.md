@@ -3,6 +3,7 @@ title: 处理不同方向的文本
 slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 original_slug: Learn/CSS/Building_blocks/处理_不同_方向的_文本
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
 
 目前为止我们在 CSS 学习中遇到的许多属性和属性值与显示器的物理尺度紧密相关。例如，我们会在上、右、下、左设置边框。这些物理尺寸与水平排布的文本相得益彰，并且，默认浏览器对方向从左到右的文本（如英文或法文）的支持，要优于从右到左的文本（如阿拉伯语）的支持。

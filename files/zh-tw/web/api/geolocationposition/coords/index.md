@@ -19,7 +19,7 @@ coord = position.coords
 
 ## 瀏覽器的相容性
 
-{{Compat("api.GeolocationPosition.coords")}}
+{{Compat}}
 
 ## 請參考
 

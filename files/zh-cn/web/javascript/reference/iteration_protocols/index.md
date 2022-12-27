@@ -2,6 +2,7 @@
 title: 迭代协议
 slug: Web/JavaScript/Reference/Iteration_protocols
 ---
+
 {{jsSidebar("More")}}
 
 作为 ECMAScript 2015 的一组补充规范，迭代协议并不是新的内置实现或语法，而是*协议*。这些协议可以被任何遵循某些约定的对象来实现。

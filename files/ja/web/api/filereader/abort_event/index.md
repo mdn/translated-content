@@ -2,6 +2,7 @@
 title: 'FileReader: abort イベント'
 slug: Web/API/FileReader/abort_event
 ---
+
 {{APIRef}}
 
 `abort` イベントは、読み込みが中断されたときに発生します。つまり、プログラムが {{domxref("FileReader.abort()")}} を呼び出したためです。

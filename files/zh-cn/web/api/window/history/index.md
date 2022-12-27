@@ -2,6 +2,7 @@
 title: Window.history
 slug: Web/API/Window/history
 ---
+
 {{ ApiRef("Window") }}
 
 **`Window.history`**是一个只读属性，用来获取{{domxref("History")}} 对象的引用，{{domxref("History")}} 对象提供了操作浏览器*会话历史*（浏览器地址栏中访问的页面，以及当前页面中通过框架加载的页面）的接口。

@@ -2,6 +2,7 @@
 title: Headers.entries()
 slug: Web/API/Headers/entries
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 **`Headers.entries()`** 以 {{jsxref("Iteration_protocols","迭代器")}} 的形式返回 Headers 对象中所有的键值对.

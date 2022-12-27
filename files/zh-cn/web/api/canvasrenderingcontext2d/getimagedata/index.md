@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.getImageData()
 slug: Web/API/CanvasRenderingContext2D/getImageData
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.getImageData()`** 返回一个{{domxref("ImageData")}}对象，用来描述 canvas 区域隐含的像素数据，这个区域通过矩形表示，起始点为*(sx, sy)、*宽为*sw、*高为*sh。*
@@ -62,7 +63,7 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 
 ## 浏览器兼容性
 
-{{Compat("api.CanvasRenderingContext2D.getImageData")}}
+{{Compat}}
 
 ### 兼容性注解
 
