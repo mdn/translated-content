@@ -17,7 +17,7 @@ slug: Web/API/Notifications_API
 
 从这里，用户可以选择允许来自此来源的通知，阻止来自此来源的通知，或不选择此点。一旦做出选择，该设置通常将持续用于当前会话。
 
-> **备注：** 从 Firefox 44 开始， 通知（Notifications）和推送（[Push](/zh-CN/docs/Web/API/Push_API)）的权限已合并。如果为通知授予权限，推送也将启用。
+> **备注：** 从 Firefox 44 开始，通知（Notifications）和推送（[Push](/zh-CN/docs/Web/API/Push_API)）的权限已合并。如果为通知授予权限，推送也将启用。
 
 接下来，使用 {{domxref("Notification.Notification","Notification()")}} 构造函数创建一个新通知。这个方法可以传入两个参数。这必须传递一个标题参数，并可以选择性地传递一个选项对象来指定选项，如文本方向，正文，显示图标，通知声音播放，等等。
 
@@ -51,7 +51,7 @@ slug: Web/API/Notifications_API
 
 ## Firefox OS permissions
 
-当你在 Firefox OS app 中使用通知时，请确保在 manifest 文件中添加了`desktop-notification` 权限 。 Notifications can be used at any permission level, hosted or above:
+当你在 Firefox OS app 中使用通知时，请确保在 manifest 文件中添加了`desktop-notification` 权限。Notifications can be used at any permission level, hosted or above:
 
 ```json
 "permissions": {

@@ -7,7 +7,7 @@ slug: Web/API/Event/originalTarget
 
 ## 简介
 
-original target 是事件重定向之前的原始目标. (Mozilla-特有)
+original target 是事件重定向之前的原始目标。(Mozilla-特有)
 
 在 XBL 的匿名内容中，这将是该事件最初触发的匿名节点。看到匿名的内容。查看[Anonymous Content#Event_Flow_and_Targeting](/zh-CN/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting) 获取更多细节。
 

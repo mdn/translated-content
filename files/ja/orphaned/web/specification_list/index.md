@@ -23,7 +23,7 @@ The Open Web Platform is defined in numerous specifications. This page lists the
       <td>
         <a
           class="external"
-          href="http://www.whatwg.org/specs/web-apps/current-work/"
+          href="https://www.whatwg.org/specs/web-apps/current-work/"
           >HTML</a
         >
         (one page)<br />{{ SpecName("HTML WHATWG") }}<br />

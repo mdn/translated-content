@@ -5,7 +5,7 @@ slug: Web/API/MediaDevices/enumerateDevices
 
 {{APIRef("WebRTC")}}
 
-{{domxref("MediaDevices")}} 的方法 **`enumerateDevices()`** 请求一个可用的媒体输入和输出设备的列表，例如麦克风，摄像机，耳机设备等。 返回的 {{domxref("Promise")}} 完成时，会带有一个描述设备的 {{domxref("MediaDeviceInfo")}} 的数组。
+{{domxref("MediaDevices")}} 的方法 **`enumerateDevices()`** 请求一个可用的媒体输入和输出设备的列表，例如麦克风，摄像机，耳机设备等。返回的 {{domxref("Promise")}} 完成时，会带有一个描述设备的 {{domxref("MediaDeviceInfo")}} 的数组。
 
 ## 语法
 

@@ -20,7 +20,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Generator
 
 <p>Этот объект не может быть инстанциирован напрямую. Вместо этого, экземпляр <code>Generator</code> может быть возвращён из <a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction">функции-генератора</a>:</p>
 
-<pre class="line-numbers language-html">function* generator() {
+<pre class="brush: js">function* generator() {
   yield 1;
   yield 2;
   yield 3;
@@ -65,8 +65,6 @@ console.log(gen.next().value); // 2
 {{Specifications}}
 
 <h2 id="Совместимость">Совместимость</h2>
-
-
 
 <p>{{Compat}}</p>
 

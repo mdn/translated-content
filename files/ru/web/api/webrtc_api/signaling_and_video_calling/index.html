@@ -5,9 +5,9 @@ translation_of: Web/API/WebRTC_API/Signaling_and_video_calling
 ---
 <div>{{WebRTCSidebar}}</div>
 
-<p><span class="seoSummary"><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> позволяет обмениваться медиаданными между двумя устройствами напрямую (peer-to-peer) в режиме реального времени. Соединение устанавливается путём обнаружения и согласования, называемым <strong>сигнализацией (signaling)</strong>. Эта статья объясняет, как сделать двусторонний видеозвонок.</span></p>
+<p><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> позволяет обмениваться медиаданными между двумя устройствами напрямую (peer-to-peer) в режиме реального времени. Соединение устанавливается путём обнаружения и согласования, называемым <strong>сигнализацией (signaling)</strong>. Эта статья объясняет, как сделать двусторонний видеозвонок.</p>
 
-<p><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> это технология прямого обмена аудио-, видео- и другими данными в режиме реального времени с одним ключевым условием. Процесс обнаружения и согласования медиаформатов должен происходить так чтобы два устройства, подключённые к разным сетям, могли локализовать друг друга, <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#Establishing_a_connection">как обсуждалось здесь</a>. Этот процесс назван <span class="seoSummary"><strong>сигнализацией </strong></span>и подразумевает, что оба устройства подключаются к третьему, обоюдно согласованному серверу. Через третью сторону устройства определяют адреса друг друга и обмениваются согласующими сообщениями.</p>
+<p><a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> это технология прямого обмена аудио-, видео- и другими данными в режиме реального времени с одним ключевым условием. Процесс обнаружения и согласования медиаформатов должен происходить так чтобы два устройства, подключённые к разным сетям, могли локализовать друг друга, <a href="/en-US/docs/Web/API/WebRTC_API/Session_lifetime#Establishing_a_connection">как обсуждалось здесь</a>. Этот процесс назван <strong>сигнализацией </strong>и подразумевает, что оба устройства подключаются к третьему, обоюдно согласованному серверу. Через третью сторону устройства определяют адреса друг друга и обмениваются согласующими сообщениями.</p>
 
 <p>В этой статье мы будем дорабатывать  <a class="external external-icon" href="https://webrtc-from-chat.glitch.me/" rel="noopener">WebSocket-чат</a>, созданный для нашей документации к WebSocket, — добавим к нему двусторонний видеозвонок между двумя пользователями. Вы можете <a href="https://webrtc-from-chat.glitch.me/">использовать этот пример на Glitch</a> или <a href="https://glitch.com/edit/#!/remix/webrtc-from-chat">клонировать его</a>, чтобы поэкспериментировать самим. <a href="https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat">Весь проект</a> можно посмотреть на GitHub.</p>
 
@@ -644,7 +644,7 @@ function invite(evt) {
   }
 };</pre>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note:</strong> The <code>closed</code> signaling state has been deprecated in favor of the <code>closed</code> {{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}. We are watching for it here to add a bit of backward compatibility.</p>
 </div>
 

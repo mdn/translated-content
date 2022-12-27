@@ -62,7 +62,7 @@ new Proxy(target, {
 - 속성에 해당 대상 개체 속성이 있는 경우 `Object.defineProperty(target, prop, descriptor)`는 예외를 발생하지 않습니다.
 - 엄격 모드에서 `defineProperty()` 처리기의 `false` 반환 값은 {{jsxref("TypeError")}} 예외를 발생시킵니다.
 
-## 예제들
+## 예제
 
 ### defineProperty 트랩하기
 

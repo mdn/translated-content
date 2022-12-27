@@ -88,7 +88,7 @@ second.onchange = function() {
 
 <p>В примере выше мы берём данные из события сообщения и ставим их как <code>textContent</code> у результирующего абзаца, чтобы показать пользователю результат этой калькуляции.</p>
 
-<p class="note"><strong>Примечание</strong>: Обратите внимание, что <font face="consolas, Liberation Mono, courier, monospace"><code>onmessage()</code>​ и <code>postmessage()</code> должны вызываться из экземпляра Worker в главном потоке, но не в потоке worker-а. Это связано с тем, что внутри потока worker-а, worker выступает в качестве глобального объекта.</font></p>
+<p class="note"><strong>Примечание</strong>: Обратите внимание, что <code>onmessage()</code>​ и <code>postmessage()</code> должны вызываться из экземпляра Worker в главном потоке, но не в потоке worker-а. Это связано с тем, что внутри потока worker-а, worker выступает в качестве глобального объекта.</p>
 
 <p class="note"><strong>Примечание</strong>: При передаче сообщения между основным потоком и потоком worker-а, оно копируется или "передаётся" (перемещается), не делится между потоками. Читайте <a href="#transferring_data_to_and_from_workers:_further_details">Transferring data to and from workers: further details</a> для более подробного объяснения.</p>
 
@@ -158,7 +158,7 @@ importScripts('foo.js', 'bar.js');      /* imports two scripts */
 
 <p>Соединение с портом должно быть осуществлено либо неявно, используя обработчик событие <code>onmessage</code>, либо явно, вызвав метод <strong>start()</strong> перед тем, как отправлять любые сообщения. Вызов метода start() необходим только тогда, когда подписка на событие реализована через метод <code>addEventListener()</code>.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание: </strong>Когда используется метод <code>start()</code> чтобы открыть соединение с портом, его необходимо вызывать и в родительском потоке и в потоке worker-а, если необходима двухсторонняя коммуникация.</p>
 </div>
 
@@ -535,54 +535,54 @@ worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 
 <p>Не существует утверждённого способа встроить код worker-а в рамках веб-страницы, как элемент {{HTMLElement("script")}} делает для обычных скриптов. Но элемент {{HTMLElement("script")}}, который не имеет атрибута <code>src</code> и атрибута  <code>type</code>, которому не назначен выполняемый MIME type, можно считать блоком данных для использования JavaScript. Блок данных "Data blocks" — это более общее свойство HTML5, может содержать любые текстовые данные. Так, worker может быть встроен следующим образом:</p>
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">charset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>UTF-8<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>title</span><span class="punctuation token">&gt;</span></span>MDN Example - Embedded worker<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>title</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/js-worker<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="script token"><span class="language-javascript token">
-  <span class="comment token">// Этот script НЕ БУДЕТ анализироваться JS движками, потому что  его MIME-тип text/js-worker.</span>
-  <span class="keyword token">var</span> myVar <span class="operator token">=</span> <span class="string token">'Hello World!'</span><span class="punctuation token">;</span>
-  <span class="comment token">// </span></span></span></code>Остальная часть кода вашего воркера идёт сюда.<code class="language-html"><span class="script token"><span class="language-javascript token">
-</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/javascript<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="script token"><span class="language-javascript token">
-  <span class="comment token">// Этот script БУДЕТ проанализирован JS движкам, потому что его MIME-тип text/javascript.</span>
-  <span class="keyword token">function</span> <span class="function token">pageLog</span><span class="punctuation token">(</span><span class="parameter token">sMsg</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// Use a fragment: browser will only render/reflow once.</span>
-    <span class="keyword token">var</span> oFragm <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createDocumentFragment</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    oFragm<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>document<span class="punctuation token">.</span><span class="function token">createTextNode</span><span class="punctuation token">(</span>sMsg<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    oFragm<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">'br'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#logDisplay'</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>oFragm<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/js-worker<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="script token"><span class="language-javascript token">
-  <span class="comment token">// Этот script НЕ БУДЕТ анализироваться JS движками, потому что его MIME-тип text/js-worker.</span>
-  <span class="function function-variable token">onmessage</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">oEvent</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="function token">postMessage</span><span class="punctuation token">(</span>myVar<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;</span>
-  <span class="comment token">// </span></span></span></code>Остальная часть кода вашего воркера идёт сюда.<code class="language-html"><span class="script token"><span class="language-javascript token">
-</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/javascript<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="script token"><span class="language-javascript token">
-  <span class="comment token">// Этот script БУДЕТ проанализирован JS движкам, потому что его MIME-тип text/javascript.</span>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;MDN Example - Embedded worker&lt;/title&gt;
+&lt;script type="text/js-worker"&gt;
+  // Этот script НЕ БУДЕТ анализироваться JS движками, потому что  его MIME-тип text/js-worker.
+  var myVar = 'Hello World!';
+  // Остальная часть кода вашего воркера идёт сюда.
+&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+  // Этот script БУДЕТ проанализирован JS движкам, потому что его MIME-тип text/javascript.
+  function pageLog(sMsg) {
+    // Use a fragment: browser will only render/reflow once.
+    var oFragm = document.createDocumentFragment();
+    oFragm.appendChild(document.createTextNode(sMsg));
+    oFragm.appendChild(document.createElement('br'));
+    document.querySelector('#logDisplay').appendChild(oFragm);
+  }
+&lt;/script&gt;
+&lt;script type="text/js-worker"&gt;
+  // Этот script НЕ БУДЕТ анализироваться JS движками, потому что его MIME-тип text/js-worker.
+  onmessage = function(oEvent) {
+    postMessage(myVar);
+  };
+  // Остальная часть кода вашего воркера идёт сюда.
+&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+  // Этот script БУДЕТ проанализирован JS движкам, потому что его MIME-тип text/javascript.
 
-  <span class="comment token">// В прошлом...:</span>
-  <span class="comment token">// blob builder существовал</span>
-  <span class="comment token">// ... но теперь мы используем Blob...:</span>
-  <span class="keyword token">var</span> blob <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Blob</span><span class="punctuation token">(</span><span class="class-name token">Array</span><span class="punctuation token">.</span>prototype<span class="punctuation token">.</span><span class="function token">map</span><span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span>document<span class="punctuation token">.</span><span class="function token">querySelectorAll</span><span class="punctuation token">(</span><span class="string token">'script[type=\'text\/js-worker\']'</span><span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="keyword token">function</span> <span class="punctuation token">(</span><span class="parameter token">oScript</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">return</span> oScript<span class="punctuation token">.</span>textContent<span class="punctuation token">;</span> <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">,</span><span class="punctuation token">{</span>type<span class="punctuation token">:</span> <span class="string token">'text/javascript'</span><span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  // В прошлом...:
+  // blob builder существовал
+  // ... но теперь мы используем Blob...:
+  var blob = new Blob(Array.prototype.map.call(document.querySelectorAll('script[type=\'text\/js-worker\']'), function (oScript) { return oScript.textContent; }),{type: 'text/javascript'});
 
-  <span class="comment token">// Создание нового свойства document.worker, содержащего все наши "text/js-worker" скрипты.</span>
-  document<span class="punctuation token">.</span>worker <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Worker</span><span class="punctuation token">(</span>window<span class="punctuation token">.</span><span class="constant token">URL</span><span class="punctuation token">.</span><span class="function token">createObjectURL</span><span class="punctuation token">(</span>blob<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  // Создание нового свойства document.worker, содержащего все наши "text/js-worker" скрипты.
+  document.worker = new Worker(window.URL.createObjectURL(blob));
 
-  document<span class="punctuation token">.</span>worker<span class="punctuation token">.</span><span class="function function-variable token">onmessage</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">oEvent</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="function token">pageLog</span><span class="punctuation token">(</span><span class="string token">'Received: '</span> <span class="operator token">+</span> oEvent<span class="punctuation token">.</span>data<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">;</span>
+  document.worker.onmessage = function(oEvent) {
+    pageLog('Received: ' + oEvent.data);
+  };
 
-  <span class="comment token">// Запуск воркера.</span>
-  window<span class="punctuation token">.</span><span class="function function-variable token">onload</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> document<span class="punctuation token">.</span>worker<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="string token">''</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span><span class="punctuation token">;</span>
-</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>logDisplay<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code>
+  // Запуск воркера.
+  window.onload = function() { document.worker.postMessage(''); };
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;&lt;div id="logDisplay"&gt;&lt;/div&gt;&lt;/body&gt;
+&lt;/html&gt;
 </pre>
 
 <div id="logDisplay">Встраиваемый worker теперь внесён в новое custom свойство <code>document.worker</code></div>
@@ -642,35 +642,35 @@ onmessage = function(event) {
 
 <h4 id="HTML_код">HTML код</h4>
 
-<pre class="brush: html line-numbers language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">charset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>UTF-8<span class="punctuation token">"</span></span>  <span class="punctuation token">/&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>title</span><span class="punctuation token">&gt;</span></span>Test threads fibonacci<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>title</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"  /&gt;
+    &lt;title&gt;Test threads fibonacci&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>result<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+  &lt;div id="result"&gt;&lt;/div&gt;
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">language</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>javascript<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="script token"><span class="language-javascript token">
+  &lt;script language="javascript"&gt;
 
-    <span class="keyword token">var</span> worker <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Worker</span><span class="punctuation token">(</span><span class="string token">'fibonacci.js'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    var worker = new Worker('fibonacci.js');
 
-    worker<span class="punctuation token">.</span><span class="function function-variable token">onmessage</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">event</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'result'</span><span class="punctuation token">)</span><span class="punctuation token">.</span>textContent <span class="operator token">=</span> event<span class="punctuation token">.</span>data<span class="punctuation token">;</span>
-      <span class="function token">dump</span><span class="punctuation token">(</span><span class="string token">'Got: '</span> <span class="operator token">+</span> event<span class="punctuation token">.</span>data <span class="operator token">+</span> <span class="string token">'\n'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">;</span>
+    worker.onmessage = function(event) {
+      document.getElementById('result').textContent = event.data;
+      dump('Got: ' + event.data + '\n');
+    };
 
-    worker<span class="punctuation token">.</span><span class="function function-variable token">onerror</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">error</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="function token">dump</span><span class="punctuation token">(</span><span class="string token">'Worker error: '</span> <span class="operator token">+</span> error<span class="punctuation token">.</span>message <span class="operator token">+</span> <span class="string token">'\n'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">throw</span> error<span class="punctuation token">;</span>
-    <span class="punctuation token">}</span><span class="punctuation token">;</span>
+    worker.onerror = function(error) {
+      dump('Worker error: ' + error.message + '\n');
+      throw error;
+    };
 
-    worker<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="string token">'5'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    worker.postMessage('5');
 
-  </span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+  &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
 
 <p>Веб-страница создаёт элемент <code>div</code> с ID <code>result</code> , который используется для отображения результата, а затем порождает worker. После порождения worker-а, обработчик <code>onmessage</code> настроен для отображения результатов путём установки содержимого элемента <code>div</code>, и обработчик <code>onerror</code> настроен на <a href="/en-US/docs/Debugging_JavaScript#dump.28.29">выброс</a> сообщения об ошибке.</p>
 

@@ -11,7 +11,7 @@ translation_of: Web/API/Element
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p><span class="seoSummary">Интерфейс <code><strong>Element</strong></code> представляет собой один из объектов в {{domxref("Document")}}. Этот интерфейс описывает методы и свойства, общие для всех видов элементов. Конкретные модели поведения описаны в интерфейсах, которые наследуют от <code>Element</code>, и добавляют дополнительную функциональность.</span></p>
+<p>Интерфейс <code><strong>Element</strong></code> представляет собой один из объектов в {{domxref("Document")}}. Этот интерфейс описывает методы и свойства, общие для всех видов элементов. Конкретные модели поведения описаны в интерфейсах, которые наследуют от <code>Element</code>, и добавляют дополнительную функциональность.</p>
 
 <p>Например, интерфейс {{domxref("HTMLElement")}} является базовым интерфейсом для HTML-элементов, в то время как интерфейс {{domxref("SVGElement")}} является основой для всех SVG-элементов.</p>
 
@@ -51,15 +51,11 @@ translation_of: Web/API/Element
  <dt>{{ domxref("Element.innerHTML") }} {{experimental_inline}}</dt>
  <dd>Является {{domxref("DOMString")}}, представляющей разметку контента элемента.</dd>
  <dt>{{domxref("Element.namespaceURI")}} {{readonlyInline}}</dt>
- <dd>Пространство имён URI элемента или null, если это не пространство имён.</dd>
- <dd>
+ <dd><p>Пространство имён URI элемента или null, если это не пространство имён.</p>
  <div class="note">
  <p><strong>Примечание:</strong> В Firefox версии 3.5 и ранее, HTML-элементы не находятся в пространстве имён. В более поздних версиях, HTML-элементы находятся в пространстве имён  <code><a href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code>  как в деревьях HTML, так и XML. {{ gecko_minversion_inline("1.9.2") }}</p>
  </div>
  </dd>
-</dl>
-
-<dl>
  <dt>{{ domxref("ParentNode.lastElementChild") }}</dt>
  <dd>Является {{ domxref("Element") }}, последним непосредственным дочерним элементом данного элемента, или <code>null</code>, если у элемента нет дочерних элементов.</dd>
  <dt>{{ domxref("NonDocumentTypeChildNode.nextElementSibling") }}</dt>

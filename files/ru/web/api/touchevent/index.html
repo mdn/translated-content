@@ -42,7 +42,7 @@ translation_of: Web/API/TouchEvent
  <dt>{{ domxref("TouchEvent.shiftKey") }} {{readonlyInline}}</dt>
  <dd>Булево значение, показывающее, была ли нажата клавиша <kbd>shift</kbd>, когда произошло событие касания.</dd>
  <dt>{{ domxref("TouchEvent.targetTouches") }}{{readonlyInline}}</dt>
- <dd>Список {{ domxref("TouchList") }} со всеми объектами {{ domxref("Touch") }}, представляющими <span class="tlid-translation translation" lang="ru"><span title="">текущие точки касания с сенсорной поверхностью,</span></span> которые находятся на одном и том же целевом элементе target.</dd>
+ <dd>Список {{ domxref("TouchList") }} со всеми объектами {{ domxref("Touch") }}, представляющими текущие точки касания с сенсорной поверхностью, которые находятся на одном и том же целевом элементе target.</dd>
  <dt>{{ domxref("TouchEvent.touches") }} {{readonlyInline}}</dt>
  <dd>Список {{ domxref("TouchList") }} со всеми объектами {{ domxref("Touch") }}, представляющими текущие точки касания с сенсорной поверхностью, вне зависимости от целевого элемента и статуса.</dd>
  <dt>{{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{readonlyInline}}</dt>
@@ -53,7 +53,7 @@ translation_of: Web/API/TouchEvent
 
 <h2 id="Типы_событий_касания">Типы событий касания</h2>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Существует несколько типов событий, которые могут происходить в ответ на касания</span></span>. О<span class="tlid-translation translation" lang="ru"><span title="">пределить, какое именно событие произошло, можно с помощью свойства </span></span>{{ domxref("event.type", "TouchEvent.type") }}.</p>
+<p>Существует несколько типов событий, которые могут происходить в ответ на касания. Определить, какое именно событие произошло, можно с помощью свойства {{ domxref("event.type", "TouchEvent.type") }}.</p>
 
 <h3 id="domxrefElementtouchstart_event_touchstart">{{domxref("Element/touchstart_event", "touchstart")}}</h3>
 
@@ -80,8 +80,8 @@ translation_of: Web/API/TouchEvent
 <p>Происходит, если точка касания была по какой-либо причине удалена. Существует несколько возможных причин, почему это может произойти (и конкретные причины могут разниться от устройства к устройству, от браузера к браузеру):</p>
 
 <ul>
- <li><span class="tlid-translation translation" lang="ru"><span title="">Произошло какое-то событие, отменившее прикосновение;</span> <span title="">это может произойти, если во время взаимодействия появляется модальное окно</span></span>.</li>
- <li><span class="tlid-translation translation" lang="ru"><span title="">Точка касания покинула окно документа и переместилась в область пользовательского интерфейса браузера, подключаемого модуля или другого внешнего содержимого</span></span>.</li>
+ <li>Произошло какое-то событие, отменившее прикосновение; это может произойти, если во время взаимодействия появляется модальное окно.</li>
+ <li>Точка касания покинула окно документа и переместилась в область пользовательского интерфейса браузера, подключаемого модуля или другого внешнего содержимого.</li>
  <li>Пользователь задал больше точек касания на экране, чем поддерживается, в этом случае наиболее ранние точки {{ domxref("Touch") }} в списке {{ domxref("TouchList") }} будут отменены.</li>
 </ul>
 
@@ -89,7 +89,7 @@ translation_of: Web/API/TouchEvent
 
 <p>Важно отметить, что во многих случаях происходят и события касаний, и события мыши (чтобы код, не использующий касания, мог продолжать взаимодействовать с пользователем). Если вы используете события касания, вам следует вызывать {{domxref("Event.preventDefault","preventDefault()")}} для предотвращения отправки событий мыши.</p>
 
-<p>Исключением из этого правила является браузер Chrome, начиная с версии 56 (настольный, Chrome для android, и android webview), в которой значение по умолчанию для {{event("touchstart")}} и {{event("touchmove")}} равно <code>true</code> и вызовы метода {{domxref("Event.preventDefault","preventDefault()")}} не требуются. Чтобы переопределить такое поведение, просто установите значение опции <code>passive</code> равным <code>false</code> как показано в примере ниже. Это изменение <span class="tlid-translation translation" lang="ru"><span title="">запрещает обработчику блокировать отрисовку страницы во время прокрутки пользователем</span></span>. Демонстрация этого доступна на сайте <a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Google Developer</a>.</p>
+<p>Исключением из этого правила является браузер Chrome, начиная с версии 56 (настольный, Chrome для android, и android webview), в которой значение по умолчанию для {{event("touchstart")}} и {{event("touchmove")}} равно <code>true</code> и вызовы метода {{domxref("Event.preventDefault","preventDefault()")}} не требуются. Чтобы переопределить такое поведение, просто установите значение опции <code>passive</code> равным <code>false</code> как показано в примере ниже. Это изменение запрещает обработчику блокировать отрисовку страницы во время прокрутки пользователем. Демонстрация этого доступна на сайте <a href="https://developers.google.com/web/updates/2016/06/passive-event-listeners">Google Developer</a>.</p>
 
 <h2 id="GlobalEventHandlers">GlobalEventHandlers</h2>
 

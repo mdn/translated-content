@@ -24,7 +24,7 @@ translation_of: Web/API/Request/mode
 
  <ul>
   <li><code>same-origin</code> — Если запрос сделан к другому origin в этом режиме, то это вызовет ошибку. Можно использовать этот режим, чтобы проверить, что запрос всегда будет обращён к тому же origin, что  и текущий.</li>
-  <li><code>no-cors</code> — Разрешает использование только <code>HEAD</code>, <code>GET</code> или <code>POST</code> методов и <a href="https://fetch.spec.whatwg.org/#simple-header">простых заголовков</a> (т.е. разрешены только простые запросы). Если какой-либо ServiceWorkers перехватит запрос, то он не сможет добавить или изменить заголовки, кроме <a href="https://fetch.spec.whatwg.org/#simple-header">простых</a>. Также, для JavaScript может быть ограничен доступ к любому свойству объекта ответа {{domxref("Response")}}. Это позволяет наверняка знать, что ServiceWorkers не изменили семантику и <span class="tlid-translation translation" lang="ru"><span title="">предотвратить проблемы безопасности и конфиденциальности, возникающие при утечке данных между доменами</span></span>.</li>
+  <li><code>no-cors</code> — Разрешает использование только <code>HEAD</code>, <code>GET</code> или <code>POST</code> методов и <a href="https://fetch.spec.whatwg.org/#simple-header">простых заголовков</a> (т.е. разрешены только простые запросы). Если какой-либо ServiceWorkers перехватит запрос, то он не сможет добавить или изменить заголовки, кроме <a href="https://fetch.spec.whatwg.org/#simple-header">простых</a>. Также, для JavaScript может быть ограничен доступ к любому свойству объекта ответа {{domxref("Response")}}. Это позволяет наверняка знать, что ServiceWorkers не изменили семантику и предотвратить проблемы безопасности и конфиденциальности, возникающие при утечке данных между доменами.</li>
   <li><code>cors</code> — Разрешает кросс-доменные запросы. Например, чтобы получить доступ к некому API, предоставляемое третей стороной. Ожидается, что запрос в этом режиме будет придерживаться <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">CORS протокола</a>. В объекте ответа {{domxref("Response")}} доступен <a href="https://fetch.spec.whatwg.org/#concept-filtered-response-cors">ограниченный набор</a> заголовков, но тело доступно для чтения.</li>
   <li><code>navigate</code> — Режим, поддерживающий навигацию. Значение <code>navigate</code> предназначено только для использования в HTML навигации. Запрос в этом режиме создаётся только во время навигации между страницами.</li>
  </ul>
@@ -33,7 +33,7 @@ translation_of: Web/API/Request/mode
 
 <h4 id="Default_mode">Default mode</h4>
 
-<p>Запрос может быть создан разными способами и режим запроса<span class="tlid-translation translation" lang="ru"><span title=""> зависит от конкретных средств, с помощью которых он был инициирован</span></span>.</p>
+<p>Запрос может быть создан разными способами и режим запроса зависит от конкретных средств, с помощью которых он был инициирован.</p>
 
 <p>Например, когда объект <code>Request</code> создаётся с помощью конструктора {{domxref("Request.Request")}}, свойство <code>mode</code> этого <code>Request</code> будет иметь значение <code>cors</code>.</p>
 

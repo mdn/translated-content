@@ -27,28 +27,20 @@ translation_of: Web/JavaScript/Reference/Functions/arguments/callee
    alert(typeof test); //function
 }</pre>
 
-<p> </p>
-
 <p>Действительно незаменимым оно остаётся всего в одной ситуации. Когда мы создаём анонимную функцию напрямую через конструктор <em>Function.</em></p>
 
-<pre class="line-numbers  language-javascript"><code class="language-javascript"><span class="keyword token">var b = new Function("", "alert(typeof arguments.callee)");</span></code></pre>
-
-<p> </p>
+<pre class="brush: js">var b = new Function("", "alert(typeof arguments.callee)");</pre>
 
 <h2 id="Пример_использования">Пример использования</h2>
 
-<p> </p>
-
 <h3 id="Использование_arguments.callee_для_создания_рекурсии">Использование <code>arguments.callee</code> для создания рекурсии</h3>
 
-<pre class="line-numbers  language-javascript"><code class="language-javascript"><span class="keyword token">var factorial = function</span><span class="punctuation token">(</span>n<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">return</span> n<span class="operator token"> == </span><span class="number token">1</span> <span class="operator token">?</span> <span class="number token">1</span> <span class="punctuation token">:</span> n<span class="operator token"> * </span>arguments<span class="punctuation token">.</span><span class="function token">callee</span><span class="punctuation token">(</span>n<span class="number token">-1</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">};
+<pre class="brush: js">var factorial = function(n) {
+  return n == 1 ? 1 : n * arguments.callee(n-1);
+};
 
-</span><span class="keyword token">factorial</span></code>(7);
+factorial(7);
 </pre>
-
-<p> </p>
 
 <h2 id="Specifications">Specifications</h2>
 

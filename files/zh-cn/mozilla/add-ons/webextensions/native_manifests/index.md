@@ -284,7 +284,7 @@ PKCS #11 清单中包含单个 JSON 对象，对象具有如下属性：
     <tr>
       <td><code>type</code></td>
       <td>String</td>
-      <td>该值只能是<code>pkcs11</code>。 This must be "pkcs11".</td>
+      <td>该值只能是<code>pkcs11</code>。This must be "pkcs11".</td>
     </tr>
     <tr>
       <td><code>allowed_extensions</code></td>

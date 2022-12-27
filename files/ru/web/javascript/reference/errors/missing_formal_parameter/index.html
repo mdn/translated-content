@@ -24,7 +24,7 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_formal_parameter
 
 <p>Параметры функции должны быть идентификаторами при настройке функции. Все эти объявления функций, которые обеспечивают значения их параметров:</p>
 
-<pre class="brush: js example-bad highlight:[1,6,11]">function square(3) {
+<pre class="brush: js example-bad">function square(3) {
   return number * number;
 };
 // SyntaxError: отсутствует формальный параметр
@@ -42,7 +42,7 @@ function log({ obj: "value"}) {
 
 <p>В объявлениях функций необходимо использовать идентификаторы:</p>
 
-<pre class="brush: js example-good highlight:[1,5,9]">function square(number) {
+<pre class="brush: js example-good">function square(number) {
   return number * number;
 };
 

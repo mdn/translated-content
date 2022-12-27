@@ -5,17 +5,17 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Using_images", "Web/API/Canvas_API/Tutorial/Compositing")}}</div>
 
-<div class="summary"><span>Ранее в этом уроке мы узнали о</span> <span style="background-color: #e6ecf9;"> <a href="https://translate.googleusercontent.com/translate_c?act=url&amp;depth=1&amp;hl=ru&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes&amp;usg=ALkJrhiuWce927wE2920fN95Jlcrf1HyUg">сетке холста</a></span> <span>и <strong>координатном пространстве</strong> .</span> <span> До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд.</span> При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.</div>
+<div class="summary">Ранее в этом уроке мы узнали о  <a href="https://translate.googleusercontent.com/translate_c?act=url&amp;depth=1&amp;hl=ru&amp;ie=UTF8&amp;prev=_t&amp;rurl=translate.google.com&amp;sl=en&amp;sp=nmt4&amp;tl=ru&amp;u=https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes&amp;usg=ALkJrhiuWce927wE2920fN95Jlcrf1HyUg">сетке холста</a> и <strong>координатном пространстве</strong> .  До сих пор мы использовали только сетку по умолчанию и изменили размер всего холста для наших нужд. При преобразованиях существуют более мощные способы изменения исходных координат в различные положение, поворот сетки и даже масштабирование.</div>
 
-<h2 id="Saving_and_restoring_state"><span style="background-color: #e6ecf9;">Сохранение и восстановление состояния</span></h2>
+<h2 id="Saving_and_restoring_state">Сохранение и восстановление состояния</h2>
 
-<p><span>Прежде чем перейти к методам преобразования, давайте рассмотрим два других метода, которые необходимы, когда вы начинаете создавать все более сложные рисунки.</span></p>
+<p>Прежде чем перейти к методам преобразования, давайте рассмотрим два других метода, которые необходимы, когда вы начинаете создавать все более сложные рисунки.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.save", "save()")}}</dt>
- <dd><span>Сохраняет все состояние холста.</span></dd>
+ <dd>Сохраняет все состояние холста.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.restore", "restore()")}}</dt>
- <dd><span>Восстанавливает последнее сохранённое состояние холста.</span></dd>
+ <dd>Восстанавливает последнее сохранённое состояние холста.</dd>
 </dl>
 
 <p>Состояние холста сохраняется в стеке. Каждый раз, когда вызывается метод <code>save()</code>, текущее состояние отрисовки записывается в стек. Состояние отрисовки содержит:</p>
@@ -28,11 +28,11 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>Вы можете вызывать метод <code>save()</code> столько раз, сколько захотите. В то же время, при вызове метода <code>restore()</code> последнее сохранённое состояние будет считано из стека, и все сохранённые настройки будут восстановлены.</p>
 
-<h3 id="A_save_and_restore_canvas_state_example">Пример <font face="consolas, Liberation Mono, courier, monospace">сохранения и восстановления</font> состояния холста</h3>
+<h3 id="A_save_and_restore_canvas_state_example">Пример сохранения и восстановления состояния холста</h3>
 
 <p>Здесь показано, как функционирует сохранение в стек состояния отрисовки на примере последовательной отрисовки набора прямоугольников.</p>
 
-<pre class="brush: js; highlight:[5,10,15,18]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.fillRect(0, 0, 150, 150);   // рисуем прямоугольник с настройками по умолчанию
@@ -76,15 +76,15 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
  <dd>Перемещение холста на сетке. <code>x</code> и <code>y</code> - смещение по горизонтали и вертикали соответственно.</dd>
 </dl>
 
-<p>Неплохая идея - сохранять <code>canvas state</code> перед использованием любых трансформаций. Обычно удобнее использовать метод <code>restore</code>, чем выполнять обратные преобразования, чтобы вернуться к начальному состоянию. <span class="tlid-translation translation" lang="ru"><span title="">Кроме того, если вы выполняете преобразования внутри цикла не используя </span></span><code>save</code><span class="tlid-translation translation" lang="ru"><span title=""> и </span></span><code>restore</code><span class="tlid-translation translation" lang="ru"><span title="">, вы рискуете потерять часть рисунка, потому что он был нарисован за пределами края холста.</span></span></p>
+<p>Неплохая идея - сохранять <code>canvas state</code> перед использованием любых трансформаций. Обычно удобнее использовать метод <code>restore</code>, чем выполнять обратные преобразования, чтобы вернуться к начальному состоянию. Кроме того, если вы выполняете преобразования внутри цикла не используя <code>save</code> и <code>restore</code>, вы рискуете потерять часть рисунка, потому что он был нарисован за пределами края холста.</p>
 
 <h3 id="A_translate_example">Пример использования <code>translate</code></h3>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Этот пример демонстрирует некоторые преимущества</span></span> при использовании смещения холста. Без использования метода <code>translate()</code> все прямоугольники будут отрисованы в одинаковой позиции (0,0). Метод <code>translate()</code> даёт возможность размещения прямоугольника в любой позиции без изменения параметров функции <code>fillRect()</code>. Это может дать некоторое упрощение для понимания и использования.</p>
+<p>Этот пример демонстрирует некоторые преимущества при использовании смещения холста. Без использования метода <code>translate()</code> все прямоугольники будут отрисованы в одинаковой позиции (0,0). Метод <code>translate()</code> даёт возможность размещения прямоугольника в любой позиции без изменения параметров функции <code>fillRect()</code>. Это может дать некоторое упрощение для понимания и использования.</p>
 
 <p>Внутри функции <code>draw()</code> мы вызываем <code>fillRect()</code> девять раз, используя два цикла <code>for</code>. Каждый раз мы сохраняем состояние холста, смещаем его, рисуем прямоугольник, а затем восстанавливаем исходное состояние. Заметьте, что <code>fillRect()</code> всегда использует одни и те же параметры, а изменение позиции фигуры осуществляется с помощью <code>translate()</code>.</p>
 
-<pre class="brush: js; highlight:[7]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 3; i++) {
     for (var j = 0; j &lt; 3; j++) {
@@ -125,7 +125,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 <p><strong>Памятка</strong>: Углы измеряются в радианах, а не в градусах. Для преобразования единиц используйте следующую формулу: <code>radians = (Math.PI/180)*degrees</code>.</p>
 </div>
 
-<pre class="brush: js; highlight:[9, 23]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // left rectangles, rotate from canvas origin
@@ -183,7 +183,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <p>В этом примере мы нарисуем прямоугольники, используя разные масштабные коэффициенты.</p>
 
-<pre class="brush: js; highlight:[6,11]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // рисуем масштабированный прямоугольник.
@@ -214,11 +214,9 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}</dt>
- <dd>Накладывает матрицу преобразования, заданную параметрами, на текущую матрицу. Матрица преобразования задаётся следующим образом: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></dd>
-</dl>
+ <dd><p>Накладывает матрицу преобразования, заданную параметрами, на текущую матрицу. Матрица преобразования задаётся следующим образом: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &amp; c &amp; e \\ b &amp; d &amp; f \\ 0 &amp; 0 &amp; 1 \end{array} \right]</annotation></semantics></math></p>
 
-<dl>
- <dd>If any of the arguments are <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code> the transformation matrix must be marked as infinite instead of the method throwing an exception.</dd>
+ <p>If any of the arguments are <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity" title="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code> the transformation matrix must be marked as infinite instead of the method throwing an exception.</p>
 </dl>
 
 <p>Параметры функции:</p>
@@ -244,7 +242,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Transformations
 
 <h3 id="Пример_использования_transform_и_setTransform">Пример использования <code>transform</code> и <code>setTransform</code></h3>
 
-<pre class="brush: js; highlight:[12,15]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   var sin = Math.sin(Math.PI / 6);

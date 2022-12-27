@@ -5,9 +5,9 @@ translation_of: Web/API/XMLHttpRequest/responseType
 ---
 <p>{{APIRef('XMLHttpRequest')}}</p>
 
-<p><strong><code>XMLHttpRequest.responseType</code></strong> <font><font>Свойство является перечислимым значением, </font><font>которое возвращает тип ответа. </font><font>Он также позволяет автору изменять тип ответа. Если значение не задано, будет использовано значение по умолчанию <strong><code>text</code></strong></font></font><font><font>. </font></font><font><font>Установка значения responseType в «document» игнорируется, если выполняется в  </font></font><a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker"><font><font>рабочей</font></font></a><font><font> среде. </font><font>При настройке </font></font><code>responseType</code><font><font> на определённое значение автор должен убедиться, что сервер действительно отправляет ответ, совместимый с этим форматом. Если сервер возвращает данные, которые не совместимы с установленным </font></font><code>responseType</code><font><font>, значение </font></font><code>response</code> <font><font>будет </font></font><code>null</code><font><font>. </font><font>Кроме того, установка </font></font><code>responseType</code> <font><font>для синхронных запросов вызовет исключение </font></font><code>InvalidAccessError</code><font><font>.</font></font></p>
+<p><strong><code>XMLHttpRequest.responseType</code></strong> Свойство является перечислимым значением, которое возвращает тип ответа. Он также позволяет автору изменять тип ответа. Если значение не задано, будет использовано значение по умолчанию <strong><code>text</code></strong>. Установка значения responseType в «document» игнорируется, если выполняется в  <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">рабочей</a> среде. При настройке <code>responseType</code> на определённое значение автор должен убедиться, что сервер действительно отправляет ответ, совместимый с этим форматом. Если сервер возвращает данные, которые не совместимы с установленным <code>responseType</code>, значение <code>response</code> будет <code>null</code>. Кроме того, установка <code>responseType</code> для синхронных запросов вызовет исключение <code>InvalidAccessError</code>.</p>
 
-<p><font><font>Поддерживаемые значения </font></font><code>responseType</code><font><font>:</font></font></p>
+<p>Поддерживаемые значения <code>responseType</code>:</p>
 
 <table class="standard-table">
  <tbody>
@@ -42,9 +42,9 @@ translation_of: Web/API/XMLHttpRequest/responseType
   <tr>
    <td><code>"moz-chunked-arraybuffer"</code> {{non-standard_inline}}</td>
    <td>
-    <p><font><font>Похоже на </font></font><code>"arraybuffer"</code><font><font>, но потоковое. </font><font>Это означает, что значение в </font></font><code>response</code> <font><font>доступно только при отправке </font></font><code>"progress"</code> <font><font>события и содержит только данные, полученные с момента последнего </font></font><code>"progress"</code> <font><font>события.</font></font></p>
+    <p>Похоже на <code>"arraybuffer"</code>, но потоковое. Это означает, что значение в <code>response</code> доступно только при отправке <code>"progress"</code> события и содержит только данные, полученные с момента последнего <code>"progress"</code> события.</p>
 
-    <p><font><font>При </font></font><code>response</code><font><font> обращении во время события </font></font><code>"progress"</code> <font><font>он содержит строку с данными. </font><font>В противном случае он возвращается </font></font><code>null</code><font><font>.</font></font></p>
+    <p>При <code>response</code> обращении во время события <code>"progress"</code> он содержит строку с данными. В противном случае он возвращается <code>null</code>.</p>
 
     <p>Этот режим работает только в Firefox.. {{gecko_minversion_inline("9.0")}}</p>
    </td>

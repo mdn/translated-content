@@ -6,7 +6,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setInterval
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">Метод <strong><code>setInterval()</code></strong> предложен для {{domxref("Window")}} и {{domxref("Worker")}} интерфейсов. Он циклически вызывает функцию или участок кода с фиксированной паузой между каждым вызовом.</span> Уникальный идентификатор intervalID, возвращаемый методом, позволяет впоследствии удалить запущенный <span class="seoSummary"><strong><code>setInterval</code></strong></span> c помощью {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Метод определён с помощью миксина {{domxref("WindowOrWorkerGlobalScope")}}.</p>
+<p>Метод <strong><code>setInterval()</code></strong> предложен для {{domxref("Window")}} и {{domxref("Worker")}} интерфейсов. Он циклически вызывает функцию или участок кода с фиксированной паузой между каждым вызовом. Уникальный идентификатор intervalID, возвращаемый методом, позволяет впоследствии удалить запущенный <strong><code>setInterval</code></strong> c помощью {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}}. Метод определён с помощью миксина {{domxref("WindowOrWorkerGlobalScope")}}.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
@@ -52,7 +52,7 @@ function myCallback() {
 }
 </pre>
 
-<h3 id="Пример_2_Чередование_двух_цветов">Пример 2: <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Чередование двух цветов</span></span></span></h3>
+<h3 id="Пример_2_Чередование_двух_цветов">Пример 2: Чередование двух цветов</h3>
 
 <p>В следующем примере вызывается функция <code>flashtext()</code> раз в секунду, до того момента, как будет нажата кнопка Stop.</p>
 
@@ -91,7 +91,7 @@ function myCallback() {
 &lt;/html&gt;
 </pre>
 
-<h3 id="Пример_3_Симуляция_пишущей_машинки"><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Пример 3: Симуляция пишущей машинки</span></span></span></h3>
+<h3 id="Пример_3_Симуляция_пишущей_машинки">Пример 3: Симуляция пишущей машинки</h3>
 
 <p>The following example simulates typewriter by first clearing and then slowly typing content into the <a href="/en-US/docs/DOM/NodeList"><code>NodeList</code></a> that matches a specified group of selectors.</p>
 
@@ -588,11 +588,7 @@ MiniDaemon.prototype.start = function (bReverse) {
 
 <h2 id="Совместимость_с_браузерами">Совместимость с браузерами</h2>
 
-<div>
-
-
 <p>{{Compat}}</p>
-</div>
 
 <h2 id="Смотрите_также">Смотрите также</h2>
 
@@ -604,21 +600,3 @@ MiniDaemon.prototype.start = function (bReverse) {
  <li>{{domxref("window.requestAnimationFrame")}}</li>
  <li><a href="/en-US/Add-ons/Code_snippets/Timers/Daemons"><em>Daemons</em> management</a></li>
 </ul>
-
-<div id="simple-translate">
-<div>
-<div class="simple-translate-button isShow" style="height: 22px; width: 22px; top: 1554px; left: 525px;"></div>
-
-<div class="simple-translate-panel " style="width: 300px; height: 200px; top: 0px; left: 0px; font-size: 13px; background-color: rgb(255, 255, 255);">
-<div class="simple-translate-result-wrapper" style="overflow: hidden;">
-<div class="simple-translate-move"></div>
-
-<div class="simple-translate-result-contents">
-<p class="simple-translate-result" style="color: rgb(0, 0, 0);"></p>
-
-<p class="simple-translate-candidate" style="color: rgb(115, 115, 115);"></p>
-</div>
-</div>
-</div>
-</div>
-</div>

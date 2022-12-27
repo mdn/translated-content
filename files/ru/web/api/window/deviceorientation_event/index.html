@@ -13,19 +13,18 @@ translation_of: Web/API/Window/deviceorientation_event
 <h2 id="Общая_информация">Общая информация</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">Спецификация</dt>
- <dd style="margin: 0 0 0 120px;">Событие <a class="external" href="http://www.w3.org/TR/orientation-event/#deviceorientation">DeviceOrientation</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Определение</dt>
- <dd style="margin: 0 0 0 120px;">DeviceOrientationEvent</dd>
- <dt style="float: left; text-align: right; width: 120px;">Всплывает</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
- <dt style="float: left; text-align: right; width: 120px;">Отменяемо</dt>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
- <dt style="float: left; text-align: right; width: 120px;">Целевой элемент</dt>
- <dd style="margin: 0 0 0 120px;">По умолчанию (<code>window</code>)</dd>
- <dt style="float: left; text-align: right; width: 120px;">Действие по умолчанию </dt>
- <dd style="margin: 0 0 0 120px;"> </dd>
- <dd style="margin: 0 0 0 120px;">Нет</dd>
+ <dt>Спецификация</dt>
+ <dd>Событие <a href="http://www.w3.org/TR/orientation-event/#deviceorientation">DeviceOrientation</a></dd>
+ <dt>Определение</dt>
+ <dd>DeviceOrientationEvent</dd>
+ <dt>Всплывает</dt>
+ <dd>Нет</dd>
+ <dt>Отменяемо</dt>
+ <dd>Нет</dd>
+ <dt>Целевой элемент</dt>
+ <dd>По умолчанию (<code>window</code>)</dd>
+ <dt>Действие по умолчанию </dt>
+ <dd>Нет</dd>
 </dl>
 
 <h2 id="Свойства">Свойства</h2>
@@ -84,7 +83,7 @@ translation_of: Web/API/Window/deviceorientation_event
 
 <h2 id="Пример">Пример</h2>
 
-<pre class="pass: js">if (window.DeviceOrientationEvent) {
+<pre class="brush: js">if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function(event) {
         // alpha: rotation around z-axis
         var rotateDegrees = event.alpha;

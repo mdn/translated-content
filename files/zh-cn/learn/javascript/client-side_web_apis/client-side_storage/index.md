@@ -282,7 +282,7 @@ web storage 的一个关键特性是，数据在不同页面加载时都存在�
     };
     ```
 
-    我们将把所有的后续代码写在这个 `window.onload` 事件处理函数内，这个函数将在 window 的{{event("load")}}事件被触发时调用，为了确保我们没有在应用完整加载前试图使用 IndexedDB 功能（如果我们不这么做，它会失败）。
+    我们将把所有的后续代码写在这个 `window.onload` 事件处理函数内，这个函数将在 window 的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件被触发时调用，为了确保我们没有在应用完整加载前试图使用 IndexedDB 功能（如果我们不这么做，它会失败）。
 
 3. 在`window.onload`处理程序内，添加以下内容：
 

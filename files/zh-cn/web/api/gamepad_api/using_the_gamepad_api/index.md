@@ -11,7 +11,7 @@ HTML5 为丰富的交互式游戏开发引入了许多必要的组件。像 `<ca
 
 ## 连接控制器
 
-当一个新的手柄连接到计算机时，焦点页面 (当前页面) 首先接收一个 {{ event("gamepadconnected") }} 事件。 如果在加载页面时已经连接了手柄，则会在用户按下某个按钮或移动坐标方向 (axes) 时触发焦点页面的 {{ event("gamepadconnected") }} 事件。
+当一个新的手柄连接到计算机时，焦点页面 (当前页面) 首先接收一个 {{ event("gamepadconnected") }} 事件。如果在加载页面时已经连接了手柄，则会在用户按下某个按钮或移动坐标方向 (axes) 时触发焦点页面的 {{ event("gamepadconnected") }} 事件。
 
 > **备注：** 在 Firefox 中，控制器只会暴露给与用户产生交互的可见页面。这有助于防止控制器被用于获取用户的指纹。一旦有一个手柄与页面产生交互，那么其他连接的控制器将自动对页面可见。
 
@@ -19,7 +19,7 @@ HTML5 为丰富的交互式游戏开发引入了许多必要的组件。像 `<ca
 
 ```js
 window.addEventListener("gamepadconnected", function(e) {
-  console.log("控制器已连接于 %d 位: %s. %d 个按钮，%d 个坐标方向。",
+  console.log("控制器已连接于 %d 位：%s. %d 个按钮，%d 个坐标方向。",
     e.gamepad.index, e.gamepad.id,
     e.gamepad.buttons.length, e.gamepad.axes.length);
 });
@@ -33,7 +33,7 @@ window.addEventListener("gamepadconnected", function(e) {
 
 ```js
 window.addEventListener("gamepaddisconnected", function(e) {
-  console.log("控制器已从 %d 位断开: %s",
+  console.log("控制器已从 %d 位断开：%s",
     e.gamepad.index, e.gamepad.id);
 });
 ```
@@ -72,7 +72,7 @@ window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, f
 ```js
 window.addEventListener("gamepadconnected", function(e) {
   var gp = navigator.getGamepads()[e.gamepad.index];
-  console.log("控制器已连接于 %d 位: %s. %d 个按钮，%d 个坐标方向。",
+  console.log("控制器已连接于 %d 位：%s. %d 个按钮，%d 个坐标方向。",
     gp.index, gp.id,
     gp.buttons.length, gp.axes.length);
 });
@@ -192,7 +192,7 @@ function gameLoop() {
 
 ### 使用坐标方向 (axes) 信息
 
-**待讨论 (除了一个用 axes\[i] 一个用 button\[i].value ，其他基本一样，Firefox 与 Chrome 均是。)**
+**待讨论 (除了一个用 axes\[i] 一个用 button\[i].value，其他基本一样，Firefox 与 Chrome 均是。)**
 
 ## 完整的例子：显示控制器状态
 

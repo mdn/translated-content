@@ -106,7 +106,7 @@ slug: Web/Progressive_web_apps/Installable_PWAs
 
 在本文中，我们学习了如何使用网页清单和安装到主屏特性让 PWA 可安装。
 
-为了获得添加到主屏的更多信息，请阅读[添加到主屏指南](/zh-CN/docs/Web/Apps/Progressive/Add_to_home_screen)。 浏览器支持当前限于 Android 平台上的 Firefox 58+、Mobile Chrome、 Android Webview 31+ 以及 Android Opera 32+, 但是将来这些限制的影响会逐渐减小。
+为了获得添加到主屏的更多信息，请阅读[添加到主屏指南](/zh-CN/docs/Web/Apps/Progressive/Add_to_home_screen)。浏览器支持当前限于 Android 平台上的 Firefox 58+、Mobile Chrome、Android Webview 31+ 以及 Android Opera 32+, 但是将来这些限制的影响会逐渐减小。
 
 现在让我们将目光转移到 PWA 的最后一个难点：通过推送通知再次启动（re-engagement）。
 

@@ -5,9 +5,9 @@ translation_of: Web/API/Navigator/vibrate
 ---
 <p>{{APIRef("HTML DOM")}}</p>
 
-<p>Метод <strong><code>Navigator.vibrate()</code></strong> пульсирует вибрационным оборудованием на устройстве, <span id="result_box" lang="ru"><span class="hps">если</span> <span class="hps">такое аппаратное обеспечение</span> <span class="hps">существует. Если устройство не поддерживает вибрацию, этот метод не имеет ни какого эффекта.</span></span> Если шаблон вибрации уже в процессе выполнения, когда метод вызван, предыдущий шаблон останавливается и вместо него начинается новый.</p>
+<p>Метод <strong><code>Navigator.vibrate()</code></strong> пульсирует вибрационным оборудованием на устройстве, если такое аппаратное обеспечение существует. Если устройство не поддерживает вибрацию, этот метод не имеет ни какого эффекта. Если шаблон вибрации уже в процессе выполнения, когда метод вызван, предыдущий шаблон останавливается и вместо него начинается новый.</p>
 
-<p><span id="result_box" lang="ru"><span class="hps">Если</span> <span class="hps">метод</span> <span class="hps">не в состоянии</span> <span class="hps">вибрировать</span> <span class="hps">из-за</span> <span class="hps">недействительных</span> <span class="hps">параметров</span><span>,</span></span> он вернёт <code>false</code>, иначе вернёт <code>true</code>. Если шаблон ведёт к слишком длинной вибрации, он усекается: <span id="result_box" lang="ru"><span class="hps">максимальная длина</span> <span class="hps">зависит</span> <span class="hps">от</span> <span class="hps">конкретной реализации</span><span>.</span></span></p>
+<p>Если метод не в состоянии вибрировать из-за недействительных параметров, он вернёт <code>false</code>, иначе вернёт <code>true</code>. Если шаблон ведёт к слишком длинной вибрации, он усекается: максимальная длина зависит от конкретной реализации.</p>
 
 <h2 id="Syntax">Синтаксис</h2>
 
@@ -16,7 +16,7 @@ translation_of: Web/API/Navigator/vibrate
 
 <dl>
  <dt><em>pattern</em></dt>
- <dd><span class="short_text" id="result_box" lang="ru">Определяет <span class="hps">шаблон</span> <span class="hps">вибрации и</span> <span class="hps">интервал паузы</span><span>.</span></span> <span id="result_box" lang="ru"><span class="hps">Значение</span> <span class="hps">указывает на</span> <span class="hps">число миллисекунд</span><span> </span><span class="hps">вибрации</span> <span class="hps">или паузы</span>, <span class="hps">при чередовании</span></span>. <span id="result_box" lang="ru"><span class="hps">Вы можете</span> <span class="hps">указать либо</span> <span class="hps">одно значение</span> <span class="atn hps">(</span><span>вибрировать</span> <span class="hps">постоянно</span> <span class="hps">определённое</span> <span class="hps">количество миллисекунд</span><span>) или</span> <span class="hps">массив значений</span>, <span class="hps">поочерёдно</span>: <span class="hps">вибрировать</span><span>,</span> <span class="hps">пауза</span><span>, затем снова</span> <span class="hps">вибрировать</span><span class="hps">.</span></span> См. <a href="/en-US/docs/WebAPI/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibration API</a> для уточнения деталей.</dd>
+ <dd>Определяет шаблон вибрации и интервал паузы. Значение указывает на число миллисекунд вибрации или паузы, при чередовании. Вы можете указать либо одно значение (вибрировать постоянно определённое количество миллисекунд) или массив значений, поочерёдно: вибрировать, пауза, затем снова вибрировать. См. <a href="/en-US/docs/WebAPI/Vibration" title="/en-US/docs/WebAPI/Vibration">Vibration API</a> для уточнения деталей.</dd>
 </dl>
 
 <p>Переданное значение 0 или пустой массив, или массив содержащий все нули отменяет любой шаблон вибрации запущенный в текущий момент.</p>

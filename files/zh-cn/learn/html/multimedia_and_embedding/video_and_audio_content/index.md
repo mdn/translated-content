@@ -202,7 +202,7 @@ mediaElem.load();
 
 ### 音轨增删事件
 
-你可以监控媒体元素中的音频轨道，当音轨被添加或删除时，你可以通过监听相关事件来侦测到。具体来说，通过监听 {{domxref("AudioTrackList")}} 对象的 {{event("addtrack")}} 事件（即 {{domxref("HTMLMediaElement.audioTracks")}} 对象），你可以及时对音轨的增加做出响应。
+你可以监控媒体元素中的音频轨道，当音轨被添加或删除时，你可以通过监听相关事件来侦测到。具体来说，通过监听 {{domxref("AudioTrackList")}} 对象的 `addtrack` 事件（即 {{domxref("HTMLMediaElement.audioTracks")}} 对象），你可以及时对音轨的增加做出响应。
 
 ```js
 const mediaElem = document.querySelector("video");

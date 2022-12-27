@@ -64,7 +64,7 @@ function clearAlert() {
 
 <h2 id="Аргументы_колбэк-функции">Аргументы колбэк-функции</h2>
 
-<p>Если вам нужно передать аргумент в вашу callback функцию, но нужно, чтобы это работало в Internet Explorer 9 и ниже, который не поддерживает передачу дополнительных параметров (ни с <code>setTimeout()</code> или <code>setInterval()</code>), то вы можете прописать специальный код для <em>совместимости с IE, </em><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>вставив этот код в начало ваших скриптов</span></span></span>, <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>который включит функцию передачи стандартных параметров HTML5 в </span></span></span>Internet Explorer<span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span> для обоих таймеров</span></span></span>.</p>
+<p>Если вам нужно передать аргумент в вашу callback функцию, но нужно, чтобы это работало в Internet Explorer 9 и ниже, который не поддерживает передачу дополнительных параметров (ни с <code>setTimeout()</code> или <code>setInterval()</code>), то вы можете прописать специальный код для <em>совместимости с IE, </em>вставив этот код в начало ваших скриптов, который включит функцию передачи стандартных параметров HTML5 в Internet Explorer для обоих таймеров.</p>
 
 <pre class="brush: js">/*\
 |*|
@@ -119,7 +119,7 @@ if (document.all &amp;&amp; !window.setInterval.isPolyfill) {
 @*/
 </pre>
 
-<p><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Или используйте очень чистый подход, основанный на условном свойстве IE HTML</span></span></span>:</p>
+<p>Или используйте очень чистый подход, основанный на условном свойстве IE HTML:</p>
 
 <pre class="brush: html">&lt;!--[if lte IE 9]&gt;&lt;script&gt;
 (function(f){
@@ -162,7 +162,7 @@ setTimeout(myArray.myMethod, 1500, "1"); // prints "undefined" after 1.5 seconds
 setTimeout.call(myArray, myArray.myMethod, 2000); // error: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // same error</pre>
 
-<p><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Как видите, нет способов передать объект</span></span></span> <code>this</code> <span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>в колбэк-функцию.</span></span></span>.</p>
+<p>Как видите, нет способов передать объект <code>this</code> в колбэк-функцию..</p>
 
 <h3 id="Возможное_решение">Возможное решение</h3>
 
@@ -226,7 +226,7 @@ window.setTimeout("alert(\"Hello World!\");", 500);
 
 <p>String literals are evaluated in the global context, so local symbols in the context where <code>setTimeout()</code> was called will not be available when the string is evaluated as code.</p>
 
-<h3 id="Минимальная_максимальная_задержка_и_вложенность_таймаута"><span class="VIiyi" lang="ru"><span class="ChMk0b JLqJ4b"><span>Минимальная/ максимальная задержка и вложенность таймаута</span></span></span></h3>
+<h3 id="Минимальная_максимальная_задержка_и_вложенность_таймаута">Минимальная/ максимальная задержка и вложенность таймаута</h3>
 
 <p><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Historically</a> browsers implement <code>setTimeout()</code> "clamping": successive <code>setTimeout()</code> calls with <code>delay</code> smaller than the "minimum delay" limit are forced to use at least the minimum delay. The minimum delay, <code>DOM_MIN_TIMEOUT_VALUE</code>, is 4 ms (stored in a preference in Firefox: <code>dom.min_timeout_value</code>), with a <code>DOM_CLAMP_TIMEOUT_NESTING_LEVEL</code> of 5ms.</p>
 

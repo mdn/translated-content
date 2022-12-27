@@ -426,7 +426,7 @@ email.addEventListener("input", function (event) {
       <td>
         如果元素的值不存在校验问题，返回 <code>true</code>，否则返回
         <code>false</code
-        >。如果元素校验失败，此方法会触发{{event("invalid")}} 事件。
+        >。如果元素校验失败，此方法会触发 <a href="/zh-CN/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code></a> 事件。
       </td>
     </tr>
     <tr>
@@ -434,7 +434,7 @@ email.addEventListener("input", function (event) {
       <td>
         如果元素或它的子元素控件符合校验的限制，返回 <code>true</code> .
         当返回为 <code>false</code> 时，对每个无效元素可撤销
-        {{event("invalid")}} 事件会被唤起并且校验错误会报告给用户。
+        <a href="/zh-CN/docs/Web/API/HTMLInputElement/invalid_event"><code>invalid</code></a> 事件会被唤起并且校验错误会报告给用户。
       </td>
     </tr>
     <tr>

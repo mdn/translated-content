@@ -33,7 +33,7 @@ translation_of: Web/API/Document/cookie
    <li id="new-cookie_path">
     <p><code>;path=<var>path</var></code> (e.g., '<code>/</code>', '<code>/mydir</code>') If not specified, defaults to the current path of the current document location.</p>
 
-    <div class="blockIndicator note">
+    <div class="note">
     <p><strong>Note:</strong> Prior to {{Gecko("6.0")}}, paths with quotes were treated as if the quotes were part of the string, instead of as if they were delimiters surrounding the actual path string. This has been fixed.</p>
     </div>
 
@@ -68,17 +68,17 @@ translation_of: Web/API/Document/cookie
    <li><code>__Host-</code> Signals to the browser that in addition to the restriction to only use the cookie from a secure origin, the scope of the cookie is limited to a path attribute passed down by the server. If the server omits the path attribute the "directory" of the request URI is used. It also signals that the domain attribute must not be present, which prevents the cookie from being sent to other domains. For Chrome the path attribute must always be the origin.</li>
   </ul>
 
-  <div class="blockIndicator note">
+  <div class="note">
   <p>The dash is considered part of the prefix.</p>
   </div>
 
-  <div class="blockIndicator note">
+  <div class="note">
   <p>These flags are only setable with the <code>secure</code> attribute.</p>
   </div>
  </li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note:</strong> As you can see from the code above, <code>document.cookie</code> is an <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description">accessor property</a> with native <em>setter</em> and <em>getter</em> functions, and consequently is <strong>not</strong> a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#Description">data property</a> with a value: what you write is not the same as what you read, everything is always mediated by the JavaScript interpreter.</p>
 </div>
 

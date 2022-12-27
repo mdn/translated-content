@@ -17,10 +17,12 @@ translation_of: Web/API/AudioBuffer
 
 <dl>
  <dt>{{domxref("AudioBuffer.AudioBuffer", "AudioBuffer()")}}</dt>
- <dd><span class="hidden"> </span>Создаёт и возвращает новый объект <code>AudioBuffer</code>.</dd>
- <dt>
- <h2 id="Свойства"><span class="hidden"> </span>Свойства</h2>
- </dt>
+ <dd>Создаёт и возвращает новый объект <code>AudioBuffer</code>.</dd>
+</dl>
+
+<h2 id="Свойства">Свойства</h2>
+
+<dl>
  <dt>{{domxref("AudioBuffer.sampleRate")}} {{readonlyInline}}</dt>
  <dd>Возвращает число с плавающей точкой - частоту дискретизации (sample rate), хранящих в буфере данных ИКМ в звуковых фрагментах (samples) в секунду.</dd>
  <dt>{{domxref("AudioBuffer.length")}} {{readonlyInline}}</dt>
@@ -46,7 +48,7 @@ translation_of: Web/API/AudioBuffer
 
 <p>В этом примере показывается как создать объект AudioBuffer и заполнить его случайными белыми шумами. Вы можете найти полный пример в репозитории <a href="https://github.com/mdn/webaudio-examples">webaudio-examples</a>. Так же доступна <a href="https://mdn.github.io/webaudio-examples/audio-buffer/">live версия</a>.</p>
 
-<pre class="brush: js;highlight:[7,14,27]">// Стерео
+<pre class="brush: js;">// Стерео
 var channels = 2;
 
 // Создаёт пустой двухсекундный стерео-буфер

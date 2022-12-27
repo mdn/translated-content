@@ -47,14 +47,14 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toPrecision
 console.log(numObj.toPrecision());    // выведет '5.123456'
 console.log(numObj.toPrecision(5));   // выведет '5.1235'
 console.log(numObj.toPrecision(2));   // выведет '5.1'
-console.log(numObj.toPrecision(1));   // выведет '5'<code class="language-js">
+console.log(numObj.toPrecision(1));   // выведет '5'
 
-numObj <span class="operator token">=</span> <span class="number token">0.000123;</span>
+numObj = 0.000123;
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>numObj<span class="punctuation token">.</span><span class="function token">toPrecision</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>    <span class="comment token">// выведет '0.000123'</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>numObj<span class="punctuation token">.</span><span class="function token">toPrecision</span><span class="punctuation token">(</span><span class="number token">5</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>   <span class="comment token">// выведет '0.00012300'</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>numObj<span class="punctuation token">.</span><span class="function token">toPrecision</span><span class="punctuation token">(</span><span class="number token">2</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>   <span class="comment token">// выведет '0.00012'</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>numObj<span class="punctuation token">.</span><span class="function token">toPrecision</span><span class="punctuation token">(</span><span class="number token">1</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>   <span class="comment token">// выведет '0.0001' </span></code>
+console.log(numObj.toPrecision());    // выведет '0.000123'
+console.log(numObj.toPrecision(5));   // выведет '0.00012300'
+console.log(numObj.toPrecision(2));   // выведет '0.00012'
+console.log(numObj.toPrecision(1));   // выведет '0.0001'
 
 // Обратите внимание, что если заданного количества разрядов
 // недостаточно для точного отображения целой части числа,

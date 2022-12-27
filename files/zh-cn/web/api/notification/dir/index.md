@@ -17,7 +17,7 @@ var direction = Notification.dir;
 
 ### 值
 
-一个表示文本方向的{{domxref("DOMString")}}变量。 可能的取值为：
+一个表示文本方向的{{domxref("DOMString")}}变量。可能的取值为：
 
 - `auto`: 继承浏览器的语言设置里制定的方向 (默认)
 - `ltr`: 从左到右

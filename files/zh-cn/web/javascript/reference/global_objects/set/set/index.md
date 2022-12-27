@@ -21,7 +21,7 @@ new Set(iterable)
 ### 参数
 
 - `iterable` {{optional_inline}}
-    - : 如果传递一个[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)，它的所有元素将不重复地被添加到新的 `Set` 中。如果不指定此参数或其值为 `null`，则新的 `Set` 为空。
+  - : 如果传递一个[可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of)，它的所有元素将不重复地被添加到新的 `Set` 中。如果不指定此参数或其值为 `null`，则新的 `Set` 为空。
 
 ### 返回值
 

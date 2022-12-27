@@ -17,7 +17,7 @@ const state = track.readyState
 
 它采用以下值之一：
 
-- `"live"`表示输入已连接，并尽最大努力提供实时数据。 在这种情况下，可以使用{{domxref("MediaStreamTrack.enabled")}}属性打开或关闭数据输出。
+- `"live"`表示输入已连接，并尽最大努力提供实时数据。在这种情况下，可以使用{{domxref("MediaStreamTrack.enabled")}}属性打开或关闭数据输出。
 - `"ended"`表示输入不再提供任何数据，也永远不会提供新数据。
 
 ## 规范

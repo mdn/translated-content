@@ -5,7 +5,7 @@ translation_of: Web/API/ExtendableEvent/waitUntil
 ---
 <p>{{APIRef("Service Workers API")}}</p>
 
-<p><span class="seoSummary">Метод <code><strong>ExtendableEvent.waitUntil()</strong></code> сообщает диспетчеру событий, что выполняется действие. Также этот метод может быть использован, для того чтобы определить было ли то действие успешным. В рамках service workers, <code>waitUntil()</code> сообщает браузеру, что действие продолжается пока промис не завершится (<em>promise settles</em>) и браузер не должен прерывать service worker если он хочет, чтобы это действие завершилось.</span></p>
+<p>Метод <code><strong>ExtendableEvent.waitUntil()</strong></code> сообщает диспетчеру событий, что выполняется действие. Также этот метод может быть использован, для того чтобы определить было ли то действие успешным. В рамках service workers, <code>waitUntil()</code> сообщает браузеру, что действие продолжается пока промис не завершится (<em>promise settles</em>) и браузер не должен прерывать service worker если он хочет, чтобы это действие завершилось.</p>
 
 <p>События <code>install</code> в {{domxref("ServiceWorkerGlobalScope", "service workers")}} используют <code>waitUntil()</code> чтобы задержать service worker в {{domxref("ServiceWorkerRegistration.installing", "installing")}} фазе пока не завершатся задачи. Если промис, переданный в <code>waitUntil()</code>, отклоняется, установка считается неудачной и устанавливаемый service worker отбрасывается.  В первую очередь это используется для гарантии того, что service worker не рассматривается как установленный (installed), пока все основные кеши на которые он зависит успешно не заполнены.</p>
 
@@ -33,7 +33,7 @@ translation_of: Web/API/ExtendableEvent/waitUntil
 
 <p>Использование <code>waitUntil()</code> внутри события <code>install</code> в service worker:</p>
 
-<pre class="brush: js;highlight:[10]">addEventListener('install', event =&gt; {
+<pre class="brush: js;">addEventListener('install', event =&gt; {
   const preCache = async () =&gt; {
     const cache = await caches.open('static-v1');
     return cache.addAll([

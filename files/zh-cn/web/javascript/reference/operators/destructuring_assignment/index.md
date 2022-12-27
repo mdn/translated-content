@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Destructuring_assignment
 
 {{jsSidebar("Operators")}}
 
-**解构赋值**语法是一种 Javascript 表达式。通过**解构赋值，**可以将属性/值从对象/数组中取出，赋值给其他变量。
+**解构赋值**语法是一种 Javascript 表达式。通过**解构赋值**，可以将属性/值从对象/数组中取出，赋值给其他变量。
 
 {{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html")}}
 

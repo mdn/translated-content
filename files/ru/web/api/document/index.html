@@ -9,7 +9,7 @@ translation_of: Web/API/Document
 
 
 
-<p>Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект <strong>document</strong>. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core" title="Using_the_W3C_DOM_Level_1_Core">DOM</a> - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), <span id="result_box" lang="ru"><span>а также обеспечивает функциональность</span><span>, которая является</span> <span>глобальной для</span> <span>документа</span>, <span>например, для получения</span> <span>URL-адреса </span><span>страницы</span> <span>и</span>ли <span>создания новых элементов</span> <span>в документе</span></span>).</p>
+<p>Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект <strong>document</strong>. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего <a href="/en-US/docs/Using_the_W3C_DOM_Level_1_Core" title="Using_the_W3C_DOM_Level_1_Core">DOM</a> - дерева, включая такие элементы как {{HTMLElement("body")}} и {{HTMLElement("table")}}), а также обеспечивает функциональность, которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).</p>
 
 <p>Объект <strong>document</strong> может быть получен из разных API:</p>
 
@@ -391,11 +391,8 @@ translation_of: Web/API/Document
 
 <dl>
  <dt>{{domxref("document.fileSize")}}* {{Non-standard_Inline}} {{deprecated_inline}}</dt>
- <dd>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</dd>
- <dt><span style="font-weight: normal; line-height: 1.5;">Internet Explorer does not support all methods from the <code>Node</code> interface in the <code>Document</code> interface:</span></dt>
-</dl>
-
-<dl>
+ <dd><p>Returns size in bytes of the document. Starting with Internet Explorer 11, that property is no longer supported. See <a href="http://msdn.microsoft.com/en-us/library/ms533752%28v=VS.85%29.aspx">MSDN</a>.</p>
+ <p>Internet Explorer does not support all methods from the <code>Node</code> interface in the <code>Document</code> interface:</p>
  <dt>{{domxref("document.contains")}}</dt>
  <dd>As a work-around, <code>document.body.contains()</code> can be used.</dd>
 </dl>

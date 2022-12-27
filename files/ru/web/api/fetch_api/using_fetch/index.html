@@ -11,10 +11,10 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 
 <ul>
  <li>Promise возвращаемый вызовом <code>fetch()</code> <strong>не перейдёт в состояние "отклонено" из-за ответа HTTP, который считается ошибкой</strong>, даже если ответ HTTP 404 или 500.  Вместо этого, он будет выполнен нормально (с значением false в статусе <code>ok</code> ) и будет отклонён только при сбое сети или если что-то помешало запросу выполниться.</li>
- <li>По умолчанию, <code>fetch</code> <strong>не будет отправлять или получать cookie файлы </strong>с сервера, в результате чего запросы будут осуществляться без проверки подлинности, что приведёт<span class="tlid-translation translation" lang="ru"><span title=""> к неаутентифицированным запросам</span></span>, если сайт полагается на проверку пользовательской сессии (для отправки cookie файлов в аргументе <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init options</a> должно быть задано значение свойства <em>credentials</em> отличное от значения по умолчанию <code>omit</code>).</li>
+ <li>По умолчанию, <code>fetch</code> <strong>не будет отправлять или получать cookie файлы </strong>с сервера, в результате чего запросы будут осуществляться без проверки подлинности, что приведёт к неаутентифицированным запросам, если сайт полагается на проверку пользовательской сессии (для отправки cookie файлов в аргументе <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init options</a> должно быть задано значение свойства <em>credentials</em> отличное от значения по умолчанию <code>omit</code>).</li>
 </ul>
 
-<div class="blockIndicator note">
+<div class="note">
 <p>25 августа 2017 г. в спецификации изменилось значение по умолчанию свойства <em>credentials</em> на <code>same-origin</code>. Firefox применяет это изменение с версии 61.0b13.</p>
 </div>
 
@@ -74,7 +74,7 @@ postData('https://example.com/answer', { answer: 42 })
 
 <pre class="brush: js"><code>fetch('https://example.com', {
   credentials: 'include'
-})</code></pre>
+})</pre>
 
 <p>Если вы хотите отправлять запрос с учётными данными только если URL принадлежит одному источнику (origin) что и вызывающий его скрипт, добавьте <code>credentials: 'same-origin'</code>.</p>
 
@@ -82,78 +82,78 @@ postData('https://example.com/answer', { answer: 42 })
 
 fetch('https://example.com', {
   credentials: 'same-origin'
-})</code></pre>
+})</pre>
 
 <p>Напротив, чтобы быть уверенным, что учётные данные не передаются с запросом, используйте <code>credentials: 'omit'</code>:</p>
 
 <pre class="brush: js"><code>fetch('https://example.com', {
   credentials: 'omit'
-})</code></pre>
+})</pre>
 
 <h3 id="Отправка_данных_в_формате_JSON">Отправка данных в формате JSON</h3>
 
 <p>При помощи {{domxref("GlobalFetch.fetch","fetch()")}} можно отправлять POST-запросы в формате JSON.</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> url <span class="operator token">=</span> <span class="string token">'https://example.com/profile'</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> data <span class="operator token">=</span> <span class="punctuation token">{</span> username<span class="punctuation token">:</span> <span class="string token">'example'</span> <span class="punctuation token">}</span><span class="punctuation token">;</span>
+<pre class="brush: js">const url = 'https://example.com/profile';
+const data = { username: 'example' };
 
-<span class="keyword token">try</span> <span class="punctuation token">{</span>
-  <span class="keyword token">const</span> response <span class="operator token">=</span> <span class="keyword token">await</span> <span class="function token">fetch</span><span class="punctuation token">(</span>url<span class="punctuation token">,</span> <span class="punctuation token">{</span>
-    method<span class="punctuation token">:</span> <span class="string token">'POST'</span><span class="punctuation token">,</span> <span class="comment token">// или 'PUT'</span>
-    body<span class="punctuation token">:</span> <span class="constant token">JSON</span><span class="punctuation token">.</span><span class="function token">stringify</span><span class="punctuation token">(</span>data<span class="punctuation token">)</span><span class="punctuation token">,</span> <span class="comment token">// данные могут быть 'строкой' или {объектом}!</span>
-    headers<span class="punctuation token">:</span> <span class="punctuation token">{</span>
-      <span class="string token">'Content-Type'</span><span class="punctuation token">:</span> <span class="string token">'application/json'</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">const</span> json <span class="operator token">=</span> <span class="keyword token">await</span> response<span class="punctuation token">.</span><span class="function token">json</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Успех:'</span><span class="punctuation token">,</span> <span class="constant token">JSON</span><span class="punctuation token">.</span><span class="function token">stringify</span><span class="punctuation token">(</span>json<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span> <span class="keyword token">catch</span> <span class="punctuation token">(</span>error<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="string token">'Ошибка:'</span><span class="punctuation token">,</span> error<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+try {
+  const response = await fetch(url, {
+    method: 'POST', // или 'PUT'
+    body: JSON.stringify(data), // данные могут быть 'строкой' или {объектом}!
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+  const json = await response.json();
+  console.log('Успех:', JSON.stringify(json));
+} catch (error) {
+  console.error('Ошибка:', error);
+}</pre>
 
 <h3 id="Загрузка_файла_на_сервер">Загрузка файла на сервер</h3>
 
 <p>На сервер можно загрузить файл, используя комбинацию HTML-элемента <code>&lt;input type="file" /&gt;</code>, {{domxref("FormData.FormData","FormData()")}} и {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}.</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> formData <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">FormData</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> fileField <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'input[type="file"]'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js">const formData = new FormData();
+const fileField = document.querySelector('input[type="file"]');
 
-formData<span class="punctuation token">.</span><span class="function token">append</span><span class="punctuation token">(</span><span class="string token">'username'</span><span class="punctuation token">,</span> <span class="string token">'abc123'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-formData<span class="punctuation token">.</span><span class="function token">append</span><span class="punctuation token">(</span><span class="string token">'avatar'</span><span class="punctuation token">,</span> fileField<span class="punctuation token">.</span>files<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+formData.append('username', 'abc123');
+formData.append('avatar', fileField.files[0]);
 
-<span class="keyword token">try</span> <span class="punctuation token">{</span>
-  <span class="keyword token">const</span> response <span class="operator token">=</span> <span class="keyword token">await</span> <span class="function token">fetch</span><span class="punctuation token">(</span><span class="string token">'https://example.com/profile/avatar'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
-    method<span class="punctuation token">:</span> <span class="string token">'PUT'</span><span class="punctuation token">,</span>
-    body<span class="punctuation token">:</span> formData
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">const</span> result <span class="operator token">=</span> <span class="keyword token">await</span> response<span class="punctuation token">.</span><span class="function token">json</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Успех:'</span><span class="punctuation token">,</span> <span class="constant token">JSON</span><span class="punctuation token">.</span><span class="function token">stringify</span><span class="punctuation token">(</span>result<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span> <span class="keyword token">catch</span> <span class="punctuation token">(</span>error<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="string token">'Ошибка:'</span><span class="punctuation token">,</span> error<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+try {
+  const response = await fetch('https://example.com/profile/avatar', {
+    method: 'PUT',
+    body: formData
+  });
+  const result = await response.json();
+  console.log('Успех:', JSON.stringify(result));
+} catch (error) {
+  console.error('Ошибка:', error);
+}</pre>
 
 <h3 id="Загрузка_нескольких_файлов_на_сервер">Загрузка нескольких файлов на сервер</h3>
 
 <p>На сервер можно загрузить несколько файлов, используя комбинацию HTML-элемента <code>&lt;input type="file" multiple /&gt;</code>, {{domxref("FormData.FormData","FormData()")}} и {{domxref("WindowOrWorkerGlobalScope/fetch","fetch()")}}.</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> formData <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">FormData</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> photos <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'input[type="file"][multiple]'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js">const formData = new FormData();
+const photos = document.querySelector('input[type="file"][multiple]');
 
-formData<span class="punctuation token">.</span><span class="function token">append</span><span class="punctuation token">(</span><span class="string token">'title'</span><span class="punctuation token">,</span> <span class="string token">'Мой отпуск в Вегасе'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">let</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> photos<span class="punctuation token">.</span>files<span class="punctuation token">.</span>length<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  formData<span class="punctuation token">.</span><span class="function token">append</span><span class="punctuation token">(</span><span class="string token">'photos'</span><span class="punctuation token">,</span> photos<span class="punctuation token">.</span>files<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+formData.append('title', 'Мой отпуск в Вегасе');
+for (let i = 0; i &lt; photos.files.length; i++) {
+  formData.append('photos', photos.files[i]);
+}
 
-<span class="keyword token">try</span> <span class="punctuation token">{</span>
-  <span class="keyword token">const</span> response <span class="operator token">=</span> <span class="keyword token">await</span> <span class="function token">fetch</span><span class="punctuation token">(</span><span class="string token">'https://example.com/posts'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
-    method<span class="punctuation token">:</span> <span class="string token">'POST'</span><span class="punctuation token">,</span>
-    body<span class="punctuation token">:</span> formData
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">const</span> result <span class="operator token">=</span> <span class="keyword token">await</span> response<span class="punctuation token">.</span><span class="function token">json</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Успех:'</span><span class="punctuation token">,</span> <span class="constant token">JSON</span><span class="punctuation token">.</span><span class="function token">stringify</span><span class="punctuation token">(</span>result<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span> <span class="keyword token">catch</span> <span class="punctuation token">(</span>error<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="string token">'Ошибка:'</span><span class="punctuation token">,</span> error<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+try {
+  const response = await fetch('https://example.com/posts', {
+    method: 'POST',
+    body: formData
+  });
+  const result = await response.json();
+  console.log('Успех:', JSON.stringify(result));
+} catch (error) {
+  console.error('Ошибка:', error);
+}</pre>
 
 <h3 id="Обработка_текстового_файла_построчно">Обработка текстового файла построчно</h3>
 
@@ -199,40 +199,40 @@ for await (let line of makeTextFileLineIterator(urlOfFile)) {
 
 <p>В методе {{domxref("GlobalFetch.fetch","fetch()")}} promise будет отклонён (reject) с {{jsxref("TypeError")}}, когда случится ошибка сети или не будет сконфигурирован CORS на стороне запрашиваемого сервера, хотя обычно это означает проблемы доступа или аналогичные — для примера, 404 не является сетевой ошибкой. Для достоверной проверки успешности <code>fetch()</code> будет включать проверку того, что promise успешен (resolved), затем проверку того, что  значение свойства {{domxref("Response.ok")}} является true. Код будет выглядеть примерно так:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">try</span> <span class="punctuation token">{</span>
-  <span class="keyword token">const</span> response <span class="operator token">=</span> <span class="keyword token">await</span> <span class="function token">fetch</span><span class="punctuation token">(</span><span class="string token">'flowers.jpg'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>response<span class="punctuation token">.</span>ok<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">Error</span><span class="punctuation token">(</span><span class="string token">'Ответ сети был не ok.'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">const</span> myBlob <span class="operator token">=</span> <span class="keyword token">await</span> response<span class="punctuation token">.</span><span class="function token">blob</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">const</span> objectURL <span class="operator token">=</span> <span class="constant token">URL</span><span class="punctuation token">.</span><span class="function token">createObjectURL</span><span class="punctuation token">(</span>myBlob<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  myImage<span class="punctuation token">.</span>src <span class="operator token">=</span> objectURL<span class="punctuation token">;</span>
-<span class="punctuation token">}</span> <span class="keyword token">catch</span> <span class="punctuation token">(</span>error<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Возникла проблема с вашим fetch запросом: '</span><span class="punctuation token">,</span> error<span class="punctuation token">.</span>message<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js">try {
+  const response = await fetch('flowers.jpg');
+  if (!response.ok) {
+    throw new Error('Ответ сети был не ok.');
+  }
+  const myBlob = await response.blob();
+  const objectURL = URL.createObjectURL(myBlob);
+  myImage.src = objectURL;
+} catch (error) {
+  console.log('Возникла проблема с вашим fetch запросом: ', error.message);
+}</pre>
 
 <h3 id="Составление_своего_объекта_запроса">Составление своего объекта запроса</h3>
 
 <p>Вместо передачи пути ресурса, который вы хотите запросить вызовом <code>fetch()</code>, вы можете создать объект запроса, используя конструктор {{domxref("Request.Request","Request()")}}, и передать его в <code>fetch()</code> аргументом:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> myHeaders <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Headers</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js">const myHeaders = new Headers();
 
-<span class="keyword token">const</span> myInit <span class="operator token">=</span> <span class="punctuation token">{</span>
-  method<span class="punctuation token">:</span> <span class="string token">'GET'</span><span class="punctuation token">,</span>
-  headers<span class="punctuation token">:</span> myHeaders<span class="punctuation token">,</span>
-  mode<span class="punctuation token">:</span> <span class="string token">'cors'</span><span class="punctuation token">,</span>
-  cache<span class="punctuation token">:</span> <span class="string token">'default'</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span>
+const myInit = {
+  method: 'GET',
+  headers: myHeaders,
+  mode: 'cors',
+  cache: 'default'
+};
 
-<span class="keyword token">const</span> myRequest <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Request</span><span class="punctuation token">(</span><span class="string token">'flowers.jpg'</span><span class="punctuation token">,</span> myInit<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> response <span class="operator token">=</span> <span class="keyword token">await</span> <span class="function token">fetch</span><span class="punctuation token">(</span>myRequest<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> myBlob <span class="operator token">=</span> <span class="keyword token">await</span> response<span class="punctuation token">.</span><span class="function token">blob</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> objectURL <span class="operator token">=</span> <span class="constant token">URL</span><span class="punctuation token">.</span><span class="function token">createObjectURL</span><span class="punctuation token">(</span>myBlob<span class="punctuation token">)</span><span class="punctuation token">;</span>
-myImage<span class="punctuation token">.</span>src <span class="operator token">=</span> objectURL<span class="punctuation token">;</span></code></pre>
+const myRequest = new Request('flowers.jpg', myInit);
+const response = await fetch(myRequest);
+const myBlob = await response.blob();
+const objectURL = URL.createObjectURL(myBlob);
+myImage.src = objectURL;</pre>
 
 <p>Конструктор <code>Request()</code> принимает точно такие же параметры, как и метод <code>fetch()</code>. Вы даже можете передать существующий объект запроса для создания его копии:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> anotherRequest <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Request</span><span class="punctuation token">(</span>myRequest<span class="punctuation token">,</span> myInit<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">const anotherRequest = new Request(myRequest, myInit);</pre>
 
 <p>Довольно удобно, когда тела запроса и ответа используются единожды (прим.пер.: <em>"are one use only"</em>). Создание копии как показано позволяет вам использовать запрос/ответ повторно, при изменении опций <code>init</code>, при желании. Копия должна быть сделана до прочтения тела, а чтение тела в копии также пометит его прочитанным в исходном запросе.</p>
 
@@ -244,19 +244,19 @@ myImage<span class="punctuation token">.</span>src <span class="operator token">
 
 <p>Интерфейс {{domxref("Headers")}} позволяет вам создать ваш собственный объект заголовков через конструктор {{domxref("Headers.Headers","Headers()")}}. Объект заголовков - простая мультикарта имён-значений:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> content <span class="operator token">=</span> <span class="string token">'Hello World'</span><span class="punctuation token">;</span>
-<span class="keyword token">const</span> myHeaders <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Headers</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-myHeaders<span class="punctuation token">.</span><span class="function token">append</span><span class="punctuation token">(</span><span class="string token">'Content-Type'</span><span class="punctuation token">,</span> <span class="string token">'text/plain'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-myHeaders<span class="punctuation token">.</span><span class="function token">append</span><span class="punctuation token">(</span><span class="string token">'Content-Length'</span><span class="punctuation token">,</span> content<span class="punctuation token">.</span>length<span class="punctuation token">.</span><span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-myHeaders<span class="punctuation token">.</span><span class="function token">append</span><span class="punctuation token">(</span><span class="string token">'X-Custom-Header'</span><span class="punctuation token">,</span> <span class="string token">'ProcessThisImmediately'</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">const content = 'Hello World';
+const myHeaders = new Headers();
+myHeaders.append('Content-Type', 'text/plain');
+myHeaders.append('Content-Length', content.length.toString());
+myHeaders.append('X-Custom-Header', 'ProcessThisImmediately');</pre>
 
 <p>То же может быть достигнуто путём передачи массива массивов или литерального объекта конструктору:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> myHeaders <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Headers</span><span class="punctuation token">(</span><span class="punctuation token">{</span>
-  <span class="string token">'Content-Type'</span><span class="punctuation token">:</span> <span class="string token">'text/plain'</span><span class="punctuation token">,</span>
-  <span class="string token">'Content-Length'</span><span class="punctuation token">:</span> content<span class="punctuation token">.</span>length<span class="punctuation token">.</span><span class="function token">toString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-  <span class="string token">'X-Custom-Header'</span><span class="punctuation token">:</span> <span class="string token">'ProcessThisImmediately'</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">const myHeaders = new Headers({
+  'Content-Type': 'text/plain',
+  'Content-Length': content.length.toString(),
+  'X-Custom-Header': 'ProcessThisImmediately'
+});</pre>
 
 <p>Содержимое может быть запрошено и извлечено:</p>
 
@@ -275,26 +275,26 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
 
 <p>Все методы Headers выбрасывают <code>TypeError</code>, если имя используемого заголовка не является валидным именем HTTP Header. Операции мутации выбросят <code>TypeError</code> если есть защита от мутации (смотрите ниже) (прим.пер.: <em>"if there is an immutable guard"</em>). В противном случае они прерываются молча. Например:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> myResponse <span class="operator token">=</span> Response<span class="punctuation token">.</span><span class="function token">error</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">try</span> <span class="punctuation token">{</span>
-  myResponse<span class="punctuation token">.</span>headers<span class="punctuation token">.</span><span class="function token">set</span><span class="punctuation token">(</span><span class="string token">'Origin'</span><span class="punctuation token">,</span> <span class="string token">'http://mybank.com'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span> <span class="keyword token">catch</span> <span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Не могу притвориться банком!'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js">const myResponse = Response.error();
+try {
+  myResponse.headers.set('Origin', 'http://mybank.com');
+} catch (e) {
+  console.log('Не могу притвориться банком!');
+}</pre>
 
 <p>Хорошим вариантом использования заголовков  является проверка корректности типа контента перед его обработкой. Например:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">try</span> <span class="punctuation token">{</span>
-  <span class="keyword token">const</span> response <span class="operator token">=</span> <span class="keyword token">await</span> <span class="function token">fetch</span><span class="punctuation token">(</span>myRequest<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">const</span> contentType <span class="operator token">=</span> response<span class="punctuation token">.</span>headers<span class="punctuation token">.</span><span class="function token">get</span><span class="punctuation token">(</span><span class="string token">'content-type'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>contentType <span class="operator token">||</span> <span class="operator token">!</span>contentType<span class="punctuation token">.</span><span class="function token">includes</span><span class="punctuation token">(</span><span class="string token">'application/json'</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">throw</span> <span class="keyword token">new</span> <span class="class-name token">TypeError</span><span class="punctuation token">(</span><span class="string token">"Ой, мы не получили JSON!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">const</span> json <span class="operator token">=</span> <span class="keyword token">await</span> response<span class="punctuation token">.</span><span class="function token">json</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="comment token">/* Дальнейшая обработка JSON */</span>
-<span class="punctuation token">}</span> <span class="keyword token">catch</span> <span class="punctuation token">(</span>error<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>error<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js">try {
+  const response = await fetch(myRequest);
+  const contentType = response.headers.get('content-type');
+  if (!contentType || !contentType.includes('application/json')) {
+    throw new TypeError("Ой, мы не получили JSON!");
+  }
+  const json = await response.json();
+  /* Дальнейшая обработка JSON */
+} catch (error) {
+  console.log(error);
+}</pre>
 
 <h3 id="Защита">Защита</h3>
 
@@ -328,16 +328,16 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
 
 <p>Они так же могут быть созданы с помощью JavaScript, но реальная польза от этого есть только при использовании  {{domxref("ServiceWorker_API", "сервис-воркеров")}}, когда вы предоставляете собственный ответ на запрос с помощью метода {{domxref("FetchEvent.respondWith","respondWith()")}}:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> myBody <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Blob</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js">const myBody = new Blob();
 
-<span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'fetch'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="parameter token">event</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// ServiceWorker перехватывает fetch</span>
-  event<span class="punctuation token">.</span><span class="function token">respondWith</span><span class="punctuation token">(</span>
-    <span class="keyword token">new</span> <span class="class-name token">Response</span><span class="punctuation token">(</span>myBody<span class="punctuation token">,</span> <span class="punctuation token">{</span>
-      headers<span class="punctuation token">:</span> <span class="punctuation token">{</span> <span class="string token">'Content-Type'</span><span class="punctuation token">:</span> <span class="string token">'text/plain'</span> <span class="punctuation token">}</span>
-    <span class="punctuation token">}</span><span class="punctuation token">)</span>
-  <span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+addEventListener('fetch', function(event) {
+  // ServiceWorker перехватывает fetch
+  event.respondWith(
+    new Response(myBody, {
+      headers: { 'Content-Type': 'text/plain' }
+    })
+  );
+});</pre>
 
 <p>Конструктор {{domxref("Response.Response","Response()")}} принимает два необязательных аргумента — тело для ответа и объект init (аналогичный тому, который принимает {{domxref("Request.Request","Request()")}})</p>
 
@@ -375,11 +375,11 @@ console.log(myHeaders.get("X-Custom-Header")); // [ ]</pre>
 
 <p>В запросе можно установить параметры для отправки тела запроса:</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">const</span> form <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">FormData</span><span class="punctuation token">(</span>document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'login-form'</span><span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="function token">fetch</span><span class="punctuation token">(</span><span class="string token">'/login'</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
-  method<span class="punctuation token">:</span> <span class="string token">'POST'</span><span class="punctuation token">,</span>
-  body<span class="punctuation token">:</span> form
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">const form = new FormData(document.getElementById('login-form'));
+fetch('/login', {
+  method: 'POST',
+  body: form
+});</pre>
 
 <p>Параметры request и response (and by extension the <code>fetch()</code> function), по возможности возвращают корректные типы данных. Параметр request также автоматически установит <code>Content-Type</code> в заголовок, если он не был установлен из словаря.</p>
 

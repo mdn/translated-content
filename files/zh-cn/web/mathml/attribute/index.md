@@ -3,7 +3,7 @@ title: MathML attribute reference
 slug: Web/MathML/Attribute
 ---
 
-此页面是 MathML 属性的字母表。 每个属性的更多详细信息请看这里[element pages](/zh-CN/docs/MathML/Element)。
+此页面是 MathML 属性的字母表。每个属性的更多详细信息请看这里[element pages](/zh-CN/docs/MathML/Element)。
 
 注意：
 

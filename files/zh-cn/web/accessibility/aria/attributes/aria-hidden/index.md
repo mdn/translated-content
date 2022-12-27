@@ -14,7 +14,7 @@ original_slug: Web/Accessibility/ARIA/ARIA_Techniques/使用 aria-hidden 属性
 - 重复的内容，如重复的文本
 - 屏幕外或被折叠的内容，如菜单
 
-根据[无障碍的第四条规则](https://www.w3.org/TR/using-aria/#fourth)，`aria-hidden="true"` 不应该被用在可聚焦的元素上。 而且，由于这个属性是可以被子元素继承的，它也不应该被用在可聚焦元素的父元素上。
+根据[无障碍的第四条规则](https://www.w3.org/TR/using-aria/#fourth)，`aria-hidden="true"` 不应该被用在可聚焦的元素上。而且，由于这个属性是可以被子元素继承的，它也不应该被用在可聚焦元素的父元素上。
 
 如果父元素带有 `aria-hidden="true"` ，那么即使使用 `aria-hidden="false"` 也无法将该元素显示出来。
 

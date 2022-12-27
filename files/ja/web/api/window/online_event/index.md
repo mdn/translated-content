@@ -24,4 +24,4 @@ original_slug: Web/API/Document/ononline
 ## 関連情報
 
 - [online および offline イベント](/ja/docs/Online_and_offline_events)
-- [WHATWG Web App Specification](http://www.whatwg.org/specs/web-apps/current-work/#event-online)
+- [WHATWG Web App Specification](https://www.whatwg.org/specs/web-apps/current-work/#event-online)

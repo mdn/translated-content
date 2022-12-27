@@ -37,4 +37,4 @@ slug: Web/API/FileSystem
 
 引用：[File System API](/zh-CN/DOM/File_API/File_System_API)
 
-介绍: [Basic Concepts About the File System API](/zh-CN/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)
+介绍：[Basic Concepts About the File System API](/zh-CN/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API)

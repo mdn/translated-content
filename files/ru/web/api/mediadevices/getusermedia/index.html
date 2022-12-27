@@ -37,7 +37,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
   /* обработка ошибки */
 });</pre>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Примечание :</strong> Если документ загружен не безопасно, значение <code>navigator.mediaDevices</code> будет <code>undefined</code>, и нельзя будет использовать метод  <code>getUserMedia()</code>. Смотри  <a href="#security">Security</a> для дополнительной информации о дальнейших вопросах безопасности, связанной с использованием метода <code>getUserMedia()</code>.</p>
 </div>
 
@@ -176,7 +176,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 
 <p>Существуют несколько способов управлением безопасностью и контролем в  {{Glossary("user agent")}}. Для этого можно использовать метод <code>getUserMedia()</code> , который возвращает объекты ошибок, относящиеся к безопасности.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong> Примечание :</strong>  Модель безопасности для метода <code>getUserMedia()</code> находиться в процессе разработки. Первоначально спроектированный механизм безопасности находиться в процессе замещения Feature Policy, поэтому различные браузеры имеют разный уровень поддержки безопасности, используют различные механизмы. Вам необходимо осторожно тестировать свой код на различных устройствах и браузерах, чтобы удостовериться в его уверенной работоспособности.</p>
 </div>
 
@@ -327,7 +327,3 @@ var constraints = { video: { facingMode: (front? "user" : "environment") } };
  <li>{{domxref("mediaDevices.getDisplayMedia()")}}: Получение потока, содержащего экранную область</li>
  <li><a href="/en-US/docs/Web/API/WebRTC_API/Taking_still_photos">Taking webcam photos</a>: Руководство по использованию <code>getUserMedia()</code> для получения снимком вместо видео.</li>
 </ul>
-
-<div id="gtx-trans" style="position: absolute; left: 604px; top: 11916px;">
-<div class="gtx-trans-icon"></div>
-</div>

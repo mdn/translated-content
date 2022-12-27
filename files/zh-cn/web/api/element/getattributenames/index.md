@@ -7,7 +7,7 @@ slug: Web/API/Element/getAttributeNames
 
 `Element.getAttributeNames()` 返回一个{{jsxref("Array")}}，该数组包含指定元素（Element）的所有属性名称，如果该元素不包含任何属性，则返回一个空数组。
 
-将 `getAttributeNames()` 与 {{domxref("Element.getAttribute","getAttribute()")}} 组合使用， 是一种有效替代 {{domxref("Element.attributes")}} 的使用方法。
+将 `getAttributeNames()` 与 {{domxref("Element.getAttribute","getAttribute()")}} 组合使用，是一种有效替代 {{domxref("Element.attributes")}} 的使用方法。
 
 ## 语法
 

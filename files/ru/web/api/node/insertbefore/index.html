@@ -20,7 +20,7 @@ translation_of: Web/API/Node/insertBefore
 <pre class="syntaxbox">var <em>insertedElement</em> = <em>parentElement</em>.insertBefore(<em>newElement</em>, <em>referenceElement</em>);
 </pre>
 
-<p>В Mozilla Firefox, если <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">referenceElement</span> не задан или равен <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">null</span>, <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">newElement</span> вставляется в конец списка дочерних элементов. В IE, <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">referenceElement</span> равный <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">undefined</span>, сгенерируется исключение <span style="line-height: 1.5;">"</span>Invalid argument", в то время как Chrome сгенерирует исключение  "Uncaught TypeError", ожидая 2 аргумента.</p>
+<p>В Mozilla Firefox, если referenceElement не задан или равен null, newElement вставляется в конец списка дочерних элементов. В IE, referenceElement равный undefined, сгенерируется исключение "Invalid argument", в то время как Chrome сгенерирует исключение  "Uncaught TypeError", ожидая 2 аргумента.</p>
 
 <ul>
  <li><code>insertedElement</code> Вставленный элемент.</li>
@@ -49,13 +49,13 @@ parentDiv.insertBefore(sp1, sp2);
 &lt;/script&gt;
 </pre>
 
-<p>Однако нет метода <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">insertAfter</span>. Он может быть заменён использованием метода <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">insertBefore</span> в связке с <code style="font-style: normal;"><a href="/en-US/docs/DOM/Node.nextSibling" title="DOM/Node.nextSibling">nextSibling</a></code>.</p>
+<p>Однако нет метода insertAfter. Он может быть заменён использованием метода insertBefore в связке с <code style="font-style: normal;"><a href="/en-US/docs/DOM/Node.nextSibling" title="DOM/Node.nextSibling">nextSibling</a></code>.</p>
 
-<p>В предыдущем примере <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">sp1</span> может быть вставлен после <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">sp2</span> следующим образом:</p>
+<p>В предыдущем примере sp1 может быть вставлен после sp2 следующим образом:</p>
 
 <pre><code>parentDiv.insertBefore(sp1, sp2.nextSibling);</code></pre>
 
-<p>Если <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">sp2</span> не имеет следующего элемента, то он будет последним дочерним элементом,  <code style="font-style: normal;">sp2.nextSibling вернёт </code><span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">null</span>, а <code style="font-style: normal;">sp1</code> вставится в конец дочернего узла (сразу после <span style="font-family: Consolas, Monaco, 'Andale Mono', monospace;">sp2</span>).</p>
+<p>Если sp2 не имеет следующего элемента, то он будет последним дочерним элементом,  <code style="font-style: normal;">sp2.nextSibling вернёт </code>null, а <code style="font-style: normal;">sp1</code> вставится в конец дочернего узла (сразу после sp2).</p>
 
 <h2 id="Example2">Пример 2</h2>
 

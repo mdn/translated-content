@@ -9,7 +9,7 @@ Firefox 12 は 米国時間 2012 年 4 月 24 日にリリースされました�
 ### HTML
 
 - `title` の値に含めた改行文字が反映され、複数行のツールチップを表示できるようになりました。
-- JavaScript が無効である場合、[仕様](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html) に従ったフォールバックコンテンツではなく {{ HTMLElement("canvas") }} 要素が表示されていましたが、フォールバックコンテンツが表示されるようになりました。
+- JavaScript が無効である場合、[仕様](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html) に従ったフォールバックコンテンツではなく {{ HTMLElement("canvas") }} 要素が表示されていましたが、フォールバックコンテンツが表示されるようになりました。
 
 ### CSS
 

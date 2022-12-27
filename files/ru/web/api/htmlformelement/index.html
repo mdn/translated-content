@@ -49,7 +49,7 @@ translation_of: Web/API/HTMLFormElement
 
 <dl>
  <dt>{{domxref("HTMLFormElement.checkValidity()")}}</dt>
- <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the element's child controls are subject to constraint validation and satify those contraints, <span style="line-height: 1.5;">or </span><code style="font-style: normal; line-height: 1.5;">false</code><span style="line-height: 1.5;"> if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code style="font-style: normal; line-height: 1.5;">false</code>.</span></dd>
+ <dd>Returns a {{jsxref("Boolean")}} that is <code>true</code> if the element's child controls are subject to constraint validation and satify those contraints, or <code style="font-style: normal; line-height: 1.5;">false</code> if some controls do not satisfy their constraints. Fires an event named {{event("invalid")}} at any control that does not satisfy its constraints; such controls are considered invalid if the event is not canceled. It is up to the programmer to decide how to respond to <code style="font-style: normal; line-height: 1.5;">false</code>.</dd>
  <dt>{{domxref("HTMLFormElement.item()")}}</dt>
  <dd>Gets the item in the <code>elements</code> collection at the specified index, or null if there is no item at that index. You can also specify the index in array-style brackets or parentheses after the form object name, without calling this method explicitly.</dd>
  <dt>{{domxref("HTMLFormElement.namedItem()")}}</dt>
@@ -62,7 +62,7 @@ translation_of: Web/API/HTMLFormElement
 
 <dl>
  <dt>{{domxref("HTMLFormElement.reportValidity()")}}</dt>
- <dd>Returns<span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">true</code><span style="line-height: 1.5;"> if the element's child controls satisfy their validation constraints. </span><span style="line-height: 1.5;">When</span><span style="line-height: 1.5;"> </span><code style="font-style: normal; line-height: 1.5;">false</code><span style="line-height: 1.5;"> is returned, cancelable</span><span style="line-height: 1.5;"> <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/invalid" title="/en-US/docs/Web/Events/invalid">invalid</a></code> events are fired for each invalid child and validation problems are reported to the user.</span></dd>
+ <dd>Returns <code style="font-style: normal; line-height: 1.5;">true</code> if the element's child controls satisfy their validation constraints. When <code style="font-style: normal; line-height: 1.5;">false</code> is returned, cancelable <code><a href="https://developer.mozilla.org/en-US/docs/Web/Events/invalid" title="/en-US/docs/Web/Events/invalid">invalid</a></code> events are fired for each invalid child and validation problems are reported to the user.</dd>
 </dl>
 
 <h2 id="Examples">Examples</h2>

@@ -13,7 +13,7 @@ translation_of: Web/API/MediaStream
 ---
 <p>{{APIRef("Media Capture and Streams")}}</p>
 
-<p><span class="seoSummary">Интерфейс <strong><code>MediaStream</code></strong> представляет поток медиа данных. Поток состоит из нескольких <strong>треков</strong>, таких как видео и аудио треки. Каждый трек является экземпляром {{domxref("MediaStreamTrack")}}. MediaStream можно получить либо с помощью конструктора, либо вызовом {{domxref("MediaDevices.getUserMedia()")}}.</span></p>
+<p>Интерфейс <strong><code>MediaStream</code></strong> представляет поток медиа данных. Поток состоит из нескольких <strong>треков</strong>, таких как видео и аудио треки. Каждый трек является экземпляром {{domxref("MediaStreamTrack")}}. MediaStream можно получить либо с помощью конструктора, либо вызовом {{domxref("MediaDevices.getUserMedia()")}}.</p>
 
 <p>Некоторые агенты предоставляют подклассы, чтобы привести более точную информацию или расширить функциональность, например {{domxref("CanvasCaptureMediaStream")}}.</p>
 
@@ -67,8 +67,8 @@ translation_of: Web/API/MediaStream
 </dl>
 
 <dl>
- <dt><span style="line-height: 1.572;">{{domxref("MediaStream.getAudioTracks()")}}</span></dt>
- <dd><span style="line-height: 1.572;">Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте </span><code style="font-size: 14px;">MediaStream</code><span style="line-height: 1.572;"> с атрибутом </span><code style="font-size: 14px;">kind</code><span style="line-height: 1.572;"> имеющим значение </span><code style="font-size: 14px;">"audio"</code><span style="line-height: 1.572;">. Порядок не определён и может меняться между браузерами, а также между вызовами.</span></dd>
+ <dt>{{domxref("MediaStream.getAudioTracks()")}}</dt>
+ <dd>Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте <code style="font-size: 14px;">MediaStream</code> с атрибутом <code style="font-size: 14px;">kind</code> имеющим значение <code style="font-size: 14px;">"audio"</code>. Порядок не определён и может меняться между браузерами, а также между вызовами.</dd>
 </dl>
 
 <dl>
@@ -80,7 +80,7 @@ translation_of: Web/API/MediaStream
 
 <dl>
  <dt>{{domxref("MediaStream.getVideoTracks()")}}</dt>
- <dd><span style="line-height: 1.572;">Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте </span><code style="font-size: 14px;">MediaStream</code><span style="line-height: 1.572;"> с атрибутом </span><code style="font-size: 14px;">kind</code><span style="line-height: 1.572;"> имеющим значение </span><code style="font-size: 14px;">"video"</code><span style="line-height: 1.572;">. Порядок не определён и может меняться между браузерами, а также между вызовами.</span></dd>
+ <dd>Возвращает список объектов {{domxref("MediaStreamTrack")}}, хранимых в объекте <code style="font-size: 14px;">MediaStream</code> с атрибутом <code style="font-size: 14px;">kind</code> имеющим значение <code style="font-size: 14px;">"video"</code>. Порядок не определён и может меняться между браузерами, а также между вызовами.</dd>
 </dl>
 
 <dl>

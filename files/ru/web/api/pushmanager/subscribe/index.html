@@ -5,13 +5,13 @@ translation_of: Web/API/PushManager/subscribe
 ---
 <p>{{SeeCompatTable}}{{ApiRef("Push API")}}</p>
 
-<p><code style=""><font face="Arial, x-locale-body, sans-serif"><span style="background-color: #ffffff;">Метод </span></font><strong>subscribe()</strong></code> интерфейса {{domxref("PushManager")}} позволяет осуществлять подписку на push-уведомления.</p>
+<p>Метод <strong><code>subscribe()</code></strong></cod> интерфейса {{domxref("PushManager")}} позволяет осуществлять подписку на push-уведомления.</p>
 
 <p>Возвращает {{jsxref("Promise")}}, который разрешается в объект {{domxref("PushSubscription")}}, содержащий детали push-подписки. Новая push-подписка создаётся в случае, если сервис-воркер не имеет существующей подписки.</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="syntaxbox">​PushManager.subscribe(options).then(function(pushSubscription) { ... } );</pre>
+<pre class="syntaxbox">PushManager.subscribe(options).then(function(pushSubscription) { ... } );</pre>
 
 <h3 id="Свойства">Свойства</h3>
 
@@ -23,8 +23,8 @@ translation_of: Web/API/PushManager/subscribe
   <li><code>applicationServerKey</code>: открытый ключ ECDSA P-256, закодированный в Base64 {{domxref ('DOMString')}} или {{domxref ('ArrayBuffer')}}}, содержащий , который push-сервер будет использовать для аутентификации сервера приложений. Если указано, все сообщения с сервера вашего приложения должны использовать схему аутентификации VAPID и включать JWT, подписанный соответствующим закрытым ключом. Этот ключ <strong><em>НЕ </em></strong>тот же ключ ECDH, который вы используете для шифрования данных. Для получения дополнительной информации см. «<a href="https://blog.mozilla.org/services/2016/04/04/using-vapid-with-webpush/">Using VAPID with WebPush</a>».</li>
  </ul>
 
- <div class="blockIndicator note">
- <p><em><strong>Примечание: </strong>Свойство, требуемое некоторыми браузерами, например Chrome и Edge.</em></p>
+ <div class="note">
+ <p><strong>Примечание: </strong>Свойство, требуемое некоторыми браузерами, например Chrome и Edge.</p>
  </div>
  </dd>
 </dl>
@@ -37,8 +37,8 @@ translation_of: Web/API/PushManager/subscribe
 
 <pre class="brush: js">this.onpush = function(event) {
   console.log(event.data);
-  <code>// Отсюда можно записывать данные в IndexedDB, отправлять их в любое
-  // открытое окно, отображать уведомление и т. д.</code>
+  // Отсюда можно записывать данные в IndexedDB, отправлять их в любое
+  // открытое окно, отображать уведомление и т. д.
 }
 
 navigator.serviceWorker.register('serviceworker.js').then(
@@ -47,13 +47,13 @@ navigator.serviceWorker.register('serviceworker.js').then(
       function(pushSubscription) {
         console.log(pushSubscription.subscriptionId);
         console.log(pushSubscription.endpoint);
-        <code>// Детали push-подписки, требуемые сервером приложения,
+        // Детали push-подписки, требуемые сервером приложения,
         // теперь доступны, и могут быть отправлены, к примеру,
-        // при помощи XMLHttpRequest.</code>
+        // при помощи XMLHttpRequest.
       }, function(error) {
-        <code>// При разработке это часто помогает отлавливать ошибки в консоли.
+        // При разработке это часто помогает отлавливать ошибки в консоли.
         // В продакшен-среде это также может быть полезно для отправки отчёта
-        // об ошибках на сервер приложения.</code>
+        // об ошибках на сервер приложения.
         console.log(error);
       }
     );
@@ -73,7 +73,3 @@ navigator.serviceWorker.register('serviceworker.js').then(
  <li><a href="/en-US/docs/Web/API/Push_API/Using_the_Push_API">Using the Push API</a></li>
  <li><a href="http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web">Push Notifications on the Open Web</a>, Matt Gaunt</li>
 </ul>
-
-<p> </p>
-
-<p> </p>

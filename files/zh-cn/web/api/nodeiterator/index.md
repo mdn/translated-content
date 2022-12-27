@@ -53,7 +53,7 @@ _这个接口不继承任何属性。_
 _这个接口不会继承任何属性。_
 
 - {{domxref("NodeIterator.detach()")}} {{Deprecated_Inline}}
-  - : 这个方法不是必需的。它现在什么也不做. 之前用来告诉引擎，`NodeIterator` 已经不会再使用，现在已经不做任何事情。
+  - : 这个方法不是必需的。它现在什么也不做。之前用来告诉引擎，`NodeIterator` 已经不会再使用，现在已经不做任何事情。
 - {{domxref("NodeIterator.previousNode()")}}
   - : 返回前一个 {{domxref("Node")}}，如果不存在则返回 `null`.
 - {{domxref("NodeIterator.nextNode()")}}

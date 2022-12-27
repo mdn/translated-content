@@ -18,7 +18,7 @@ OscillatorNode.setPeriodicWave(wave);
 ### 参数
 
 - `wave`
-  - : 一个 {{domxref("PeriodicWave")}} 对象， 表示特定的波形用来形成 oscillator 的输出。
+  - : 一个 {{domxref("PeriodicWave")}} 对象，表示特定的波形用来形成 oscillator 的输出。
 
 ### 返回值
 

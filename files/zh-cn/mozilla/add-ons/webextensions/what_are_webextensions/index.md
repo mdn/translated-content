@@ -31,7 +31,7 @@ slug: Mozilla/Add-ons/WebExtensions/What_are_WebExtensions
 
 ![](qr_code_image_generator_add_on.png)
 
-示例: [Swimlanes for Trello](https://addons.mozilla.org/zh-CN/firefox/addon/swimlanes-for-trello/) and [Tomato Clock](https://addons.mozilla.org/zh-CN/firefox/addon/tomato-clock/)
+示例：[Swimlanes for Trello](https://addons.mozilla.org/zh-CN/firefox/addon/swimlanes-for-trello/) and [Tomato Clock](https://addons.mozilla.org/zh-CN/firefox/addon/tomato-clock/)
 
 **游戏**: 通过离线游玩的特性或者探索新游戏的可能性来提供传统计算机游戏的功能；例如，把游戏性融入到每天的网页浏览中。
 
