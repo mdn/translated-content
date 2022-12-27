@@ -114,7 +114,7 @@ slug: Web/HTML/Element/ol
 ### 使用 `start` 属性
 
 ```html
-<p>Finishing places of contestants not in the winners’ circle:</p>
+<p>Finishing places of contestants not in the winners' circle:</p>
 
 <ol start="4">
   <li>Speedwalk Stu</li>

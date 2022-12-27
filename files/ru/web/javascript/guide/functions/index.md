@@ -57,7 +57,7 @@ return number * number;
 
 Примитивные параметры (например, число) передаются функции значением; **значение** передаётся в функцию, но если функция меняет значение параметра, **это изменение не отразится глобально или после вызова функции.**
 
-Если вы передадите объект как параметр (не примитив, например, [`массив`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "The JavaScript Array object is a global object that is used in the construction of arrays; which are high-level, list-like objects.") или определяемые пользователем объекты), и функция изменит свойство переданного в неё объекта, это изменение будет видно и вне функции, как показано в следующем примере:
+Если вы передадите объект как параметр (не примитив, например, [`массив`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) или определяемые пользователем объекты), и функция изменит свойство переданного в неё объекта, это изменение будет видно и вне функции, как показано в следующем примере:
 
 ```js
 function myFunc(theObject) {
@@ -134,7 +134,7 @@ if (num === 0) {
 }
 ```
 
-В дополнение к объявлениям функций, описанных здесь, вы также можете использовать конструктор [Function](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function) для создания функций из строки во время выполнения (_runtime_), подобно [`eval()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval "The eval() method evaluates JavaScript code represented as a string.").
+В дополнение к объявлениям функций, описанных здесь, вы также можете использовать конструктор [Function](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function) для создания функций из строки во время выполнения (_runtime_), подобно [`eval()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
 **Метод** — это функция, которая является свойством объекта. Узнать больше про объекты и методы можно по ссылке: [Работа с объектами](/ru/docs/Web/JavaScript/Guide/Working_with_Objects).
 
@@ -150,7 +150,7 @@ square(5);
 
 Эта инструкция вызывает функцию с аргументом 5. Функция вызывает свои инструкции и возвращает значение 25.
 
-Функции могут быть в области видимости, когда они уже определены, но функции вида "function declaration statement" могут быть подняты (_[поднятие ](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5)—_ _hoisting_), также как в этом примере:
+Функции могут быть в области видимости, когда они уже определены, но функции вида "function declaration statement" могут быть подняты ([_поднятие_](/ru/docs/%D0%A1%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C/%D0%9F%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5) — _hoisting_), также как в этом примере:
 
 ```js
 console.log(square(5));
@@ -194,7 +194,7 @@ d = factorial(4); // d получает значение 24
 e = factorial(5); // e получает значение 120
 ```
 
-Есть другие способы вызвать функцию. Существуют частые случаи, когда функции необходимо вызывать динамически, или поменять номера аргументов функции, или необходимо вызвать функцию с привязкой к определённому контексту. Оказывается, что функции сами по себе являются объектами, и эти объекты в свою очередь имеют методы (посмотрите объект [`Function`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function "The Function constructor creates a new Function object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues similar to eval. However, unlike eval, the Function constructor allows executing code in the global scope, prompting better programming habits and allowing for more efficient code minification.")). Один из них это метод [`apply()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply "The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object)."), использование которого может достигнуть этой цели.
+Есть другие способы вызвать функцию. Существуют частые случаи, когда функции необходимо вызывать динамически, или поменять номера аргументов функции, или необходимо вызвать функцию с привязкой к определённому контексту. Оказывается, что функции сами по себе являются объектами, и эти объекты в свою очередь имеют методы (посмотрите объект [`Function`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function)). Один из них это метод [`apply()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply), использование которого может достигнуть этой цели.
 
 ## Область видимости функций
 
@@ -238,9 +238,9 @@ _**(function stack)**_
 
 Функция может вызывать саму себя. Три способа такого вызова:
 
-1.  по имени функции
-2.  [`arguments.callee`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee)
-3.  по переменной, которая ссылается на функцию
+1. по имени функции
+2. [`arguments.callee`](/ru/docs/Web/JavaScript/Reference/Functions/arguments/callee)
+3. по переменной, которая ссылается на функцию
 
 Для примера рассмотрим следующие функцию:
 
@@ -252,9 +252,9 @@ var foo = function bar() {
 
 Внутри функции (_function body_) все следующие вызовы эквивалентны:
 
-1.  `bar()`
-2.  `arguments.callee()`
-3.  `foo()`
+1. `bar()`
+2. `arguments.callee()`
+3. `foo()`
 
 Функция, которая вызывает саму себя, называется _рекурсивной функцией_ (_recursive function_). Получается, что рекурсия аналогична циклу (_loop_). Оба вызывают некоторый код несколько раз, и оба требуют условия (чтобы избежать бесконечного цикла, вернее бесконечной рекурсии). Например, следующий цикл:
 
@@ -391,9 +391,9 @@ A(1); // в консоле выводится 6 (1 + 2 + 3)
 
 В этом примере C имеет доступ к `y` функции `B` и к `x` функции `A`. Так получается, потому что:
 
-1.  Функция `B` формирует closure, включающее `A`, т.е. `B` имеет доступ к аргументам и переменным функции `A`.
-2.  Функция `C` формирует closure, включающее `B`.
-3.  Раз closure функции `B` включает `A`, то closure `С` тоже включает A, `C` имеет доступ к аргументам и переменным обоих функций `B` _и_ `A`. Другими словами, `С` связывает _цепью_ (_chain_) scopes функций `B` и `A` в таком порядке.
+1. Функция `B` формирует closure, включающее `A`, т.е. `B` имеет доступ к аргументам и переменным функции `A`.
+2. Функция `C` формирует closure, включающее `B`.
+3. Раз closure функции `B` включает `A`, то closure `С` тоже включает A, `C` имеет доступ к аргументам и переменным обоих функций `B` _и_ `A`. Другими словами, `С` связывает _цепью_ (_chain_) scopes функций `B` и `A` в таком порядке.
 
 В обратном порядке, однако, это не верно. `A` не имеет доступ к переменным и аргументам `C`, потому что `A` не имеет такой доступ к `B`. Таким образом, `C` остаётся приватным только для `B`.
 
@@ -547,7 +547,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 
 > **Примечание:** `arguments` является псевдо-массивом, но не массивом. Это псевдо-массив, в котором есть пронумерованные индексы и свойство `length`. Однако он не обладает всеми методами массивов.
 
-Рассмотрите объект [`Function`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function "The Function constructor creates a new Function object. Calling the constructor directly can create functions dynamically, but suffers from security and similar (but far less significant) performance issues similar to eval. However, unlike eval, the Function constructor allows executing code in the global scope, prompting better programming habits and allowing for more efficient code minification.") в JavaScript-справочнике для большей информации.
+Рассмотрите объект [`Function`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function) в JavaScript-справочнике для большей информации.
 
 ## Параметры функции
 
@@ -679,7 +679,7 @@ var p = new Person();
 
 Подробное техническое описание функций в статье справочника {{jsxref("Functions","Функции")}}
 
-Смотрите также [`Function`](/ru/docs/JavaScript/Reference/Global_Objects/Function "en-US/docs/JavaScript/Reference/Global Objects/Function") в Справочнике JavaScript для получения дополнительной информации по функции как объекту.
+Смотрите также [`Function`](/ru/docs/JavaScript/Reference/Global_Objects/Function) в Справочнике JavaScript для получения дополнительной информации по функции как объекту.
 
 Внешние ресурсы:
 

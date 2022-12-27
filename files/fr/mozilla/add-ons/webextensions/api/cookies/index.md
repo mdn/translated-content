@@ -70,7 +70,7 @@ Dans l'API `cookies`, le domaine de première partie est représenté à l'aide 
 
 Le {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} et {{WebExtAPIRef("cookies.remove()")}} Les API acceptent toutes une option `firstPartyDomain`.
 
-Lorsque l'isolation de première partie est activée, vous devez fournir cette option ou les appels de l'API échoueront. Pour `get()`, `set()`, et `remove()`vous devez passer une valeur de chaîne de caractères.
+Lorsque l'isolation de première partie est activée, vous devez fournir cette option ou les appels de l'API échoueront. Pour `get()`, `set()`, et `remove()` vous devez passer une valeur de chaîne de caractères.
 
 Pour `getAll()`,  vous pouvez aussi passer `null` ici, et ceci obtiendra tous les cookies,
 qu'ils aient ou non une valeur non vide pour `firstPartyDomain.`

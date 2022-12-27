@@ -196,7 +196,7 @@ D'autres erreurs courantes peuvent être commises en écrivant du code. Ce parag
 
 ### SyntaxError: missing ; before statement
 
-Cette erreur signale généralement l'oubli du point‑virgule à la fin d'une ligne de code&nbsp;; mais elle peut se révéler parfois plus énigmatique. Par exemple, si, dans la fonction  `checkGuess(),`nous modifions cette ligne&nbsp;:
+Cette erreur signale généralement l'oubli du point‑virgule à la fin d'une ligne de code&nbsp;; mais elle peut se révéler parfois plus énigmatique. Par exemple, si, dans la fonction `checkGuess()`, nous modifions cette ligne&nbsp;:
 
 ```js
 let userGuess = Number(guessField.value);

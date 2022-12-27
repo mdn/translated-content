@@ -63,6 +63,7 @@ Quelques exemples dans cette catégorie&nbsp;:
 On pourra créer des jeux classiques avec des fonctionnalités hors-ligne, ou encore explorer de nouvelles possibilités comme l'ajout de composantes ludiques dans la navigation de tous les jours.
 
 Quelques exemples dans cette catégorie&nbsp;:
+
 - [Solitaire Card Game](https://addons.mozilla.org/fr/firefox/addon/solitaire-spider-freecell/),
 - [2048 Prime](https://addons.mozilla.org/fr/firefox/addon/2048-prime/).
 

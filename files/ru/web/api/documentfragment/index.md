@@ -33,7 +33,7 @@ _Этот интерфейс не имеет определённых свойс
 
 ## Методы
 
-_Этот интерфейс наследует методы его родителя, {{domxref("Node")}}_, и реализует их из интерфейса {{domxref("ParentNode")}}_\_\_._
+_Этот интерфейс наследует методы его родителя, {{domxref("Node")}}_, и реализует их из интерфейса {{domxref("ParentNode")}}.
 
 - {{domxref("DocumentFragment.find()")}} {{experimental_inline}}
   - : Возвращает первое совпадение {{domxref("Element")}} в дереве `DocumentFragment`.

@@ -253,7 +253,7 @@ _可以使用_ JavaScript 和浏览器的原生功能来实现路由功能，但
 | 框架 | 浏览器支持 | DSL 偏好 | 支持的 DSL         |
 | --------- | ----------------------------------- | ------------- | ---------------------- |
 | Angular   | IE9+                                | TypeScript    | 基于 HTML、TypeScript |
-| React     | 现代的浏览器（IE9+ with Polyfills）      | JSX           | JSX、 TypeScript        |
+| React     | 现代的浏览器（IE9+ with Polyfills）      | JSX           | JSX、TypeScript        |
 | Vue       | IE9+                                | 基于 HTML    | 基于 HTML、JSX、Pug   |
 | Ember     | 现代的浏览器（IE9+ in Ember version 2.18）| Handlebars    | Handlebars、TypeScript |
 

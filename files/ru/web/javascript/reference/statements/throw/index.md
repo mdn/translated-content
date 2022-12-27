@@ -133,8 +133,8 @@ function verifyZipCode(z) {
      z = new ZipCode(z);
    } catch (e) {
      return e instanceof ZipCodeFormatException
-			? ZIPCODE_INVALID
-			: IPCODE_UNKNOWN_ERROR;
+      ? ZIPCODE_INVALID
+      : IPCODE_UNKNOWN_ERROR;
    }
    return z;
 }

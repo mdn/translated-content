@@ -57,8 +57,6 @@ Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecat
 X-SourceMap: /path/to/file.js.map
 ```
 
-##
-
 ## Смотрите также
 
 - [Как использовать карты кода – документация Firefox Tools](/ru/docs/Tools/Debugger/How_to/Use_a_source_map)

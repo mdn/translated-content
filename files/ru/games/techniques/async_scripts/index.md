@@ -30,17 +30,17 @@ document.body.appendChild(script);
 
 ## Когда асинхронный не асинхронный?
 
-Две распространённые ситуации, в которых сценарий \* не \* асинхронен (как [определено спецификацией HTML](http://www.w3.org/TR/html5/scripting-1.html) ):
+Две распространённые ситуации, в которых сценарий не асинхронен (как [определено спецификацией HTML](http://www.w3.org/TR/html5/scripting-1.html) ):
 
-```
-<script async>code</script>
+```html
+<script async src="file.js"></script>
 ```
 
 а также
 
-```
-var script = document.createElement('script');
-script.innerHTML = "code";
+```js
+const script = document.createElement("script");
+script.src = "file.js";
 document.body.appendChild(script);
 ```
 

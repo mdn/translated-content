@@ -279,7 +279,7 @@ If you check the app, you'll see that our todo list is now in a card, and we hav
 
 We should apply the button CSS classes to the `<button>` in our `ToDoForm` component. Since Vue templates are valid HTML, this is done in the same way to how you might do it in plain HTML — by adding a `class=""` attribute to the element.
 
-Add `class="btn btn__primary btn__lg"` to your form’s `<button>` element:
+Add `class="btn btn__primary btn__lg"` to your form's `<button>` element:
 
 ```html
 <button type="submit" class="btn btn__primary btn__lg">

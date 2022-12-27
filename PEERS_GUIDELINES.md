@@ -12,7 +12,7 @@ Active community maintenance teams are expected to keep their locales maintained
 
 - Reviewing and actioning all pull requests within 2 weeks.
 - Triaging and fixing all actionable issues within 1 month.
-- Making reasonable progress on keeping MDN’s Tier 1 content (definition TBD) synchronized with the `en-US` versions. This means some progress should be made each week, e.g. updating an article to be in sync with the English version, removing or fixing a bad quality article…
+- Making reasonable progress on keeping MDN's Tier 1 content (definition TBD) synchronized with the `en-US` versions. This means some progress should be made each week, e.g. updating an article to be in sync with the English version, removing or fixing a bad quality article…
 
 If no progress is made on a locale in these areas within 1 month, the locale will be considered inactive, and edits will stop being accepted.
 

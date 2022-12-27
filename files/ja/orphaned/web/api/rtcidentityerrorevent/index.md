@@ -23,7 +23,7 @@ _{{domxref("RTCIdentityErrorEvent")}} は {{domxref("Event")}}であり、この
 
 ## メソッド
 
-_{{domxref("RTCIdentityErrorEvent")}} は {{domxref("Event")}}であり、このイベントは{{domxref("Event")}} のプロパティも実装します。具体的な_{{domxref("RTCIdentityErrorEvent")}} メソッドはありません。\_\_
+_{{domxref("RTCIdentityErrorEvent")}} は {{domxref("Event")}}であり、このイベントは{{domxref("Event")}} のプロパティも実装します。具体的な {{domxref("RTCIdentityErrorEvent")}} メソッドはありません。_
 
 ## 例
 

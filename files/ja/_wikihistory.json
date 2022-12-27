@@ -29340,17 +29340,6 @@
       "nonki777"
     ]
   },
-  "Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode": {
-    "modified": "2020-04-10T09:42:32.564Z",
-    "contributors": [
-      "mfuji09",
-      "Uemmra3",
-      "nabetaro",
-      "SCENEE",
-      "ambi",
-      "shide55"
-    ]
-  },
   "Web/JavaScript/Reference/Template_literals": {
     "modified": "2020-10-15T21:33:08.783Z",
     "contributors": [
@@ -31390,6 +31379,17 @@
   "conflicting/Web/JavaScript/Reference/Errors/Unexpected_type": {
     "modified": "2020-03-12T19:48:11.857Z",
     "contributors": ["YuichiNukiyama"]
+  },
+  "conflicting/Web/JavaScript/Reference/Strict_mode": {
+    "modified": "2020-04-10T09:42:32.564Z",
+    "contributors": [
+      "mfuji09",
+      "Uemmra3",
+      "nabetaro",
+      "SCENEE",
+      "ambi",
+      "shide55"
+    ]
   },
   "conflicting/Web/SVG/Element/animate": {
     "modified": "2020-10-15T21:27:02.463Z",

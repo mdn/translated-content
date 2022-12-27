@@ -183,7 +183,7 @@ La première récupère juste le `message` du champ `notificationTitle` du fichi
 }
 ```
 
-Le membre `"placeholders"` définit tous les espaces réservés et d'où ils sont extraits. L'espace réservé `"url"` spécifie que son contenu est pris à partir de $1, qui est la première valeur donnée dans le second paramètre de  `getMessage()`. Puisque l'espace réservé est appelé `"url"`, nous utilisons `$URL$` pour l'appeler dans la chaîne de message (pour `"name"` vous utiliserez `$NAME$`, etc.) Si vous avez plusieurs espaces réservés, vous pouvez les fournir à l'intérieur un tableau qui est donné à {{WebExtAPIRef("i18n.getMessage()")}} en tant que deuxième paramètre — `[a, b, c]`sera disponible en`$1`, `$2`, et `$3`, et ainsi de suite, à l'intérieur des `messages.json`.
+Le membre `"placeholders"` définit tous les espaces réservés et d'où ils sont extraits. L'espace réservé `"url"` spécifie que son contenu est pris à partir de $1, qui est la première valeur donnée dans le second paramètre de  `getMessage()`. Puisque l'espace réservé est appelé `"url"`, nous utilisons `$URL$` pour l'appeler dans la chaîne de message (pour `"name"` vous utiliserez `$NAME$`, etc.) Si vous avez plusieurs espaces réservés, vous pouvez les fournir à l'intérieur un tableau qui est donné à {{WebExtAPIRef("i18n.getMessage()")}} en tant que deuxième paramètre — `[a, b, c]`sera disponible en `$1`, `$2`, et `$3`, et ainsi de suite, à l'intérieur des `messages.json`.
 
 Parcourons un exemple: la chaîne originale du message  `notificationContent` dans le fichier  `en/messages.json` est
 
@@ -208,7 +208,7 @@ Il est possible d'insérer vos variables (`$1`, `$2`, `$3`, etc.) directement da
 }
 ```
 
-Cela peut sembler plus rapide et moins complexe, mais l'inverse (en utilisant `"placeholders"`) est considéré comme la meilleure pratique. En effet, avoir le nom de l'espace réservé (par exemple `"url"`) et l'exemple vous aide à vous souvenir de l'espace réservé pour l'espace réservé — une semaine après avoir écrit votre code, vous oublierez probablement ce que `$1`–`$8` , plus susceptibles de savoir à quoi correspondent les noms de vos espaces réservés.
+Cela peut sembler plus rapide et moins complexe, mais l'inverse (en utilisant `"placeholders"`) est considéré comme la meilleure pratique. En effet, avoir le nom de l'espace réservé (par exemple `"url"`) et l'exemple vous aide à vous souvenir de l'espace réservé pour l'espace réservé — une semaine après avoir écrit votre code, vous oublierez probablement ce que `$1` – `$8`, plus susceptibles de savoir à quoi correspondent les noms de vos espaces réservés.
 
 ### Substitution codée en dur
 

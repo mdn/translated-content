@@ -61,7 +61,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
 - Extensiones para crear elementos incorporados personalizados
 
-  - :&#x20;
+  - : &#x20;
 
     - El atributo global HTML {{htmlattrxref("is")}}: Permite especificar que un elemento estandar HTML debe comportarse como un elemento incorporado personalizado registrado.
     - La opción "is" del método {{domxref("Document.createElement()")}}: Permite crear una instancia de un elemento HTML estandar que se comporta como un determinado elemento incorporado personalizado registrado.

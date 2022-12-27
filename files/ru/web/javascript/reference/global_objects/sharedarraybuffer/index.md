@@ -32,9 +32,9 @@ worker.postMessage(sab);
 
 ### API, принимающие объекты `SharedArrayBuffer`
 
-- [`WebGLRenderingContext.bufferData()`](/ru/docs/Web/API/WebGLRenderingContext/bufferData "Метод WebGLRenderingContext.bufferData() WebGL API инициализирует и создает хранилище данных буферного объекта.")
-- [`WebGLRenderingContext.bufferSubData()`](/ru/docs/Web/API/WebGLRenderingContext/bufferSubData "Метод WebGLRenderingContext.bufferSubData() WebGL API обновляет подмножество хранилища данных буферного объекта.")
-- [`WebGL2RenderingContext.getBufferSubData()`](/ru/docs/Web/API/WebGL2RenderingContext/getBufferSubData "Метод WebGL2RenderingContext.getBufferSubData() WebGL 2 API считывает данные из привязанной точки буфера и записывает их в ArrayBuffer или SharedArrayBuffer.")
+- [`WebGLRenderingContext.bufferData()`](/ru/docs/Web/API/WebGLRenderingContext/bufferData)
+- [`WebGLRenderingContext.bufferSubData()`](/ru/docs/Web/API/WebGLRenderingContext/bufferSubData)
+- [`WebGL2RenderingContext.getBufferSubData()`](/ru/docs/Web/API/WebGL2RenderingContext/getBufferSubData)
 
 ### Требования безопасности
 

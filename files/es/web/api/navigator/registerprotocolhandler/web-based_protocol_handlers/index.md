@@ -21,7 +21,7 @@ Los controladores de protocolos basados en web permiten a las aplicaciones basad
 
 ## Registro
 
-Configurar una aplicación web como un controlador de protocolo no es un proceso difícil. Básicamente la aplicación web usa [registerProtocolHandler()](/es/docs/Web/API/navigator.registerProtocolHandler "DOM/window.navigator.registerProtocolHandler") para registrarse a sí mismo con el navegador como un controlador potencial para un protocolo dado. Por ejemplo:
+Configurar una aplicación web como un controlador de protocolo no es un proceso difícil. Básicamente la aplicación web usa [registerProtocolHandler()](/es/docs/Web/API/navigator.registerProtocolHandler) para registrarse a sí mismo con el navegador como un controlador potencial para un protocolo dado. Por ejemplo:
 
 ```js
 navigator.registerProtocolHandler("burger",
@@ -127,4 +127,3 @@ if ( isset ( $_GET["value"] ) ) {
 - `nsIProtocolHandler` (solo XUL)
 - [RegisterProtocolHandler Mejora de la web federada](https://blog.mozilla.org/webdev/2010/07/26/registerprotocolhandler-enhancing-the-federated-web/) en Mozilla Webdev.
 - [Registrar un controlador de protocolo personalizado](https://web.dev/registering-a-custom-protocol-handler/) en Google Developers.
-

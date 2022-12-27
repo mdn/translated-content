@@ -49,8 +49,6 @@ let b = new Array(Math.pow(2, 32) - 1);
 b.length = b.length + 1;         // установка длинны 2^32
 ```
 
-###
-
 ```js example-good
 [ Math.pow(2, 40) ]                     // [ 1099511627776 ]
 [ -1 ]                                  // [ -1 ]

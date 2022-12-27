@@ -84,7 +84,7 @@ Vous n'aurez pas besoin d'apprendre les rouages des objets structurés du JavaSc
 
 ## Fonctions personnalisées
 
-Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) tiré de l'article [les boucles dans le code](/fr/Apprendre/JavaScript/Building_blocks/Looping_code) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) complet), nous avons inclus une fonction personnalisée `draw()`qui ressemblait à ça :
+Nous avons également rencontré beaucoup de fonctions personnalisées dans le cours jusqu'ici — fonctions définies dans votre code, et non pas dans le navigateur. À chaque fois que vous voyez un nom personnalisé suivi de parenthèses, vous utilisez une fonction personnalisée. Dans notre exemple [random-canvas-circles.html](http://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) tiré de l'article [les boucles dans le code](/fr/Apprendre/JavaScript/Building_blocks/Looping_code) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) complet), nous avons inclus une fonction personnalisée `draw()` qui ressemblait à ça :
 
 ```js
 function draw() {

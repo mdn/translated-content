@@ -57,4 +57,4 @@ ArrayBuffer.isView(dv); // true
 
 ## Смотрите также
 
-- [Типизированные массивы JavaScript](/ru/docs/Web/JavaScript/Typed_arrays "en/JavaScript typed arrays")
+- [Типизированные массивы JavaScript](/ru/docs/Web/JavaScript/Typed_arrays)

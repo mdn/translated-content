@@ -45,7 +45,7 @@ La première façon consiste à créer une couche de cascade nommée et qui cont
 }
 ```
 
-La seconde méthode consiste à créer une couche de cascade nommée sans lui affecter de styles. Il peut s'agit d'une seule couche&nbsp;:
+La seconde méthode consiste à créer une couche de cascade nommée sans lui affecter de styles. Il peut s'agir d'une seule couche&nbsp;:
 
 ```css
 @layer utilities;

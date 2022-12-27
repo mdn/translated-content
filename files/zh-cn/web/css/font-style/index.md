@@ -9,9 +9,7 @@ slug: Web/CSS/font-style
 
 {{EmbedInteractiveExample("pages/css/font-style.html")}}
 
-**Italic** 样式一般是指书写体，相比无样式的字体，通常会占用较少的高度，而 **oblique** 字形一般只是常规字形的倾斜版本。斜体（italic）和倾斜体（oblique）都是通过人工倾斜常规字体的字形来模拟的（使用 {{cssxref("font-synthesis")}} 对此进行控制）。
-
-**Italic** font faces are generally cursive in nature, usually using less horizontal space than their unstyled counterparts, while **oblique** faces are usually just sloped versions of the regular face. When the specified style is not available, both italic and oblique faces are simulated by artificially sloping the glyphs of the regular face (use {{cssxref("font-synthesis")}} to control this behavior).
+**Italic** 字体一般是现实生活中的草书，相比无样式的字体，通常会占用较少的水平空间，而 **oblique** 字体一般只是常规字形的倾斜版本。如果当前字体没有对应的斜体，那么斜体（italic）和倾斜体（oblique）都会通过人工倾斜常规字体的字形来模拟（使用 {{cssxref("font-synthesis")}} 对此进行控制）。
 
 ## 语法
 

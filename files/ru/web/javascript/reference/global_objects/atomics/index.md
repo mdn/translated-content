@@ -45,7 +45,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 `wait()` и `wake()` методы моделируются на основе futexes ("fast user-space mutex" - быстрый мьютекс пользовательского пространства) Linux и предоставляют собой способы ожидания момента, когда определённое состояние не станет true, и обычно используется как блокирующие конструкции.
 
 - {{jsxref("Atomics.wait()")}}
-  - : Проверяет, содержится в указанной позиции массива все ещё представленное значение и спит в ожидании или тайм-аут. Возвращает `"ok"`, `"not-equal" `или `"timed-out"`. Если ожидание не разрешено в вызывающем агенте, тогда выбросит ошибку исключения (большинство браузеров не разрешают `wait()` в главном потоке браузера).
+  - : Проверяет, содержится в указанной позиции массива все ещё представленное значение и спит в ожидании или тайм-аут. Возвращает `"ok"`, `"not-equal"` или `"timed-out"`. Если ожидание не разрешено в вызывающем агенте, тогда выбросит ошибку исключения (большинство браузеров не разрешают `wait()` в главном потоке браузера).
 - {{jsxref("Atomics.wake()")}}
   - : Пробуждает некоторых агентов, которые спят в очереди ожидания в указанной позиции массива. Возвращает количество агентов, которые были разбужены.
 - {{jsxref("Atomics.isLockFree()", "Atomics.isLockFree(size)")}}
@@ -76,6 +76,6 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Atomics
 - {{jsxref("ArrayBuffer")}}
 - [JavaScript typed arrays](/ru/docs/Web/JavaScript/Typed_arrays)
 - [Web Workers](/ru/docs/Web/API/Web_Workers_API)
-- [parlib-simple ](https://github.com/lars-t-hansen/parlib-simple)– a simple library providing synchronization and work distribution abstractions.
+- [parlib-simple](https://github.com/lars-t-hansen/parlib-simple) – a simple library providing synchronization and work distribution abstractions.
 - [Shared Memory – a brief tutorial](https://github.com/tc39/ecmascript_sharedmem/blob/master/TUTORIAL.md)
 - [A Taste of JavaScript’s New Parallel Primitives – Mozilla Hacks](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/)

@@ -18,7 +18,7 @@ original_slug: Web/API/WebRTC_API/протоколы
 
 Клиент отправит запрос к STUN серверу в интернете, который ответит публичным адресом клиента и, доступен ли, или нет, клиент за NAT маршрутизатором.
 
-![An interaction between two users of a WebRTC application involving a STUN server.](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols/webrtc-stun.png)
+![An interaction between two users of a WebRTC application involving a STUN server.](webrtc-stun.png)
 
 ## NAT
 
@@ -32,7 +32,7 @@ original_slug: Web/API/WebRTC_API/протоколы
 
 [Traversal Using Relays around NAT (TURN)](http://en.wikipedia.org/wiki/TURN) предназначен для обхода ограничения "Симметричный NAT" путём открытия соединения с TURN сервером и ретрансляции всей информации через этот сервер. Вы создадите соединение с TURN сервером и сообщите всем узлам слать пакеты этому серверу, которые затем будут переправлены вам. Очевидно, что они приходят с некоторыми накладными расходами, поэтому это используется, только если нет других альтернатив.
 
-![An interaction between two users of a WebRTC application involving STUN and TURN servers.](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols/webrtc-turn.png)
+![An interaction between two users of a WebRTC application involving STUN and TURN servers.](webrtc-turn.png)
 
 ## SDP
 

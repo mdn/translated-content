@@ -114,8 +114,8 @@ Todas las instancias `Number` heredan de {{jsxref("Number.prototype")}}. El obje
 El siguiente ejemplo utiliza las propiedades del objeto `Number` para asignar valores a varias variables numéricas:
 
 ```js
-const MásgrandeNum    = Number.MAX_VALUE;
-const MáspequeNum     = Number.MIN_VALUE;
+const masGrandeNum    = Number.MAX_VALUE;
+const masPequeNum     = Number.MIN_VALUE;
 const infinitoNum     = Number.POSITIVE_INFINITY;
 const notInfinitoNum  = Number.NEGATIVE_INFINITY;
 const noEsNum         = Number.NaN;

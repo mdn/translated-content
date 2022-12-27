@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 
 {{JSRef}}
 
-**`lastIndexOf()`** 方法返回调用{{jsxref("String")}} 对象的指定值最后一次出现的索引，在一个字符串中的指定位置 `fromIndex`处从后向前搜索。如果没找到这个特定值则返回-1 。
+**`lastIndexOf()`** 方法返回调用{{jsxref("String")}} 对象的指定值最后一次出现的索引，在一个字符串中的指定位置 `fromIndex`处从后向前搜索。如果没找到这个特定值则返回 -1。
 
 该方法将从尾到头地检索字符串 _str_，看它是否含有子串 _searchValue_。开始检索的位置在字符串的 _fromIndex_ 处或字符串的结尾（没有指定 _fromIndex_ 时）。如果找到一个 _searchValue_，则返回 _searchValue_ 的第一个字符在 _str_ 中的位置。*str*中的字符位置是从 0 开始的。
 
@@ -24,7 +24,7 @@ str.lastIndexOf(searchValue[, fromIndex])
 
 ### 返回值
 
-返回指定值最后一次出现的索引 (该索引仍是以从左至右 0 开始记数的)，如果没找到则返回-1。
+返回指定值最后一次出现的索引 (该索引仍是以从左至右 0 开始记数的)，如果没找到则返回 -1。
 
 ## 描述
 

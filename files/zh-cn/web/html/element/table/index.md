@@ -321,7 +321,7 @@ Providing a declaration of `scope="col"` on a {{HTMLElement("th")}} element will
 
 ### Complicated tables
 
-Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the {{htmlattrxref("colspan", "td")}} and {{htmlattrxref("rowspan", "td")}} attributes.
+Assistive technology such as screen readers may have difficulty parsing tables that are so complex that header cells can't be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the {{htmlattrxref("colspan", "td")}} and {{htmlattrxref("rowspan", "td")}} attributes.
 
 Ideally, consider alternate ways to present the table's content, including breaking it apart into a collection of smaller, related tables that don't have to rely on using the `colspan` and `rowspan` attributes. In addition to helping people who use assistive technology understand the table's content, this may also benefit people with cognitive concerns who may have difficulty understanding the associations the table layout is describing.
 

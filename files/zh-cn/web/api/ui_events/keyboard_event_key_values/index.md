@@ -48,7 +48,7 @@ Learn how to use these key values in JavaScript using [KeyboardEvent.key](/zh-CN
 
 ## Modifier keys
 
-修饰符是特殊键，用于生成特殊字符或与其他键组合使用时产生特殊操作。 示例包括<kbd>Shift</kbd>和<kbd>Control</kbd>键，以及<kbd>Lock Lock</kbd>和<kbd>NumLock</kbd>等锁定键。
+修饰符是特殊键，用于生成特殊字符或与其他键组合使用时产生特殊操作。示例包括<kbd>Shift</kbd>和<kbd>Control</kbd>键，以及<kbd>Lock Lock</kbd>和<kbd>NumLock</kbd>等锁定键。
 
 <table class="no-markdown">
   <thead>

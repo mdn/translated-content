@@ -10,11 +10,11 @@ original_slug: Web/JavaScript/A_re-introduction_to_JavaScript
 
 Было бы полезно начать с истории языка. JavaScript был создан в 1995 Бренданом Айком, инженером в компании Netscape. Первый релиз состоялся вместе с выходом браузера Netscape 2 в начале 1996 года. Сначала язык назывался LiveScript, но затем был переименован в связи с маркетинговыми целями, чтобы сыграть на популярности языка Java компании Sun Microsystem — несмотря на это языки практически не имеют ничего общего друг с другом. Так было положено начало путаницы между этими языками.
 
-Чуть позже Microsoft выпустила очень похожий и практически совместимый язык JScript, который шёл вместе с IE3. Через пару месяцев Netscape отправил язык в [Ecma International](http://www.ecma-international.org/), Европейскую организацию занимающуюся стандартами, которая выпустила первую версию стандарта [ECMAScript](https://developer.mozilla.org/en/JavaScript/Language_Resources "en/ECMAScript") в 1997. Стандарт получил значимое обновление в [ECMAScript edition 3](http://www.ecma-international.org/publications/standards/Ecma-262.htm) в 1999, и остаётся самым стабильным до сегодняшнего дня. Четвёртая версия была отклонена, из-за проблем с усложнениями в языке. Многие вещи из четвёртого издания послужили основой для стандарта ECMAScript 5 (декабрь 2009) и ECMAScript 6 (июнь 2015).
+Чуть позже Microsoft выпустила очень похожий и практически совместимый язык JScript, который шёл вместе с IE3. Через пару месяцев Netscape отправил язык в [Ecma International](http://www.ecma-international.org/), Европейскую организацию занимающуюся стандартами, которая выпустила первую версию стандарта [ECMAScript](/en/JavaScript/Language_Resources) в 1997. Стандарт получил значимое обновление в [ECMAScript edition 3](http://www.ecma-international.org/publications/standards/Ecma-262.htm) в 1999, и остаётся самым стабильным до сегодняшнего дня. Четвёртая версия была отклонена, из-за проблем с усложнениями в языке. Многие вещи из четвёртого издания послужили основой для стандарта ECMAScript 5 (декабрь 2009) и ECMAScript 6 (июнь 2015).
 
 > **Примечание:** **На заметку**: Далее по тексту мы будем называть язык ECMAScript как "JavaScript".
 
-В отличие от большинства языков, JavaScript не следует концепции ввода (input) и вывода (output). Он спроектирован таким образом, чтобы запускаться как язык сценариев, встроенный в среду исполнения. Самая популярная среда исполнения это браузер, однако интерпретаторы JavaScript присутствуют и в Adobe Acrobat, Photoshop, Yahoo!'s Widget engine, и даже в серверном окружении, например [node.js](http://nodejs.org/ "nodejs.org").
+В отличие от большинства языков, JavaScript не следует концепции ввода (input) и вывода (output). Он спроектирован таким образом, чтобы запускаться как язык сценариев, встроенный в среду исполнения. Самая популярная среда исполнения это браузер, однако интерпретаторы JavaScript присутствуют и в Adobe Acrobat, Photoshop, Yahoo!'s Widget engine, и даже в серверном окружении, например [node.js](http://nodejs.org/).
 
 ## Описание
 
@@ -22,14 +22,14 @@ JavaScript является объектно-ориентированным яз
 
 Начнём с основы любого языка: с типов данных. Программы на JavaScript оперируют значениями, и все эти значения принадлежат к определённому типу. Типы данных в JavaScript:
 
-- [Числа](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number "en/Core_JavaScript_1.5_Reference/Global_Objects/Number")
-- [Строки](/ru/docs/Web/JavaScript/Reference/Global_Objects/String "en/Core_JavaScript_1.5_Reference/Global_Objects/String")
-- [Логические типы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean "en/Core_JavaScript_1.5_Reference/Global_Objects/Boolean")
-- [Функции](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function "en/Core_JavaScript_1.5_Reference/Global_Objects/Function")
-- [Объекты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object "en/Core_JavaScript_1.5_Reference/Global_Objects/Object")
+- [Числа](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- [Строки](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)
+- [Логические типы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [Функции](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function)
+- [Объекты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object)
 - [Символы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (новый тип из шестой редакции)
 
-Да, ещё [Undefined](/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined) и [Null](/ru/docs/Web/JavaScript/Reference/Global_Objects/null), которые немного обособлены. И [Массивы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array "en/Core_JavaScript_1.5_Reference/Global_Objects/Array"), которые являются особым видом объектов. А также [Даты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date "en/Core_JavaScript_1.5_Reference/Global_Objects/Date") и [Регулярные выражения](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp "en/Core_JavaScript_1.5_Reference/Global_Objects/RegExp"), тоже являющиеся объектами. И, если быть технически точным, функции это тоже особый вид объекта. Поэтому схема типов выглядит скорее так:
+Да, ещё [Undefined](/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined) и [Null](/ru/docs/Web/JavaScript/Reference/Global_Objects/null), которые немного обособлены. И [Массивы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array), которые являются особым видом объектов. А также [Даты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date) и [Регулярные выражения](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp), тоже являющиеся объектами. И, если быть технически точным, функции это тоже особый вид объекта. Поэтому схема типов выглядит скорее так:
 
 - [Числа](/ru/docs/Web/JavaScript/Reference/Global_Objects/Number)
 - [Строки](/ru/docs/Web/JavaScript/Reference/Global_Objects/String)
@@ -45,7 +45,7 @@ JavaScript является объектно-ориентированным яз
 - [Null](/ru/docs/Web/JavaScript/Reference/Global_Objects/null)
 - [undefined](/ru/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
-Также есть несколько встроенных типов [Ошибок](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error "en/Core_JavaScript_1.5_Reference/Global_Objects/Error"). Чтобы было проще, рассмотрим подробнее первую схему.
+Также есть несколько встроенных типов [Ошибок](/ru/docs/Web/JavaScript/Reference/Global_Objects/Error). Чтобы было проще, рассмотрим подробнее первую схему.
 
 ## Числа
 
@@ -57,14 +57,14 @@ JavaScript является объектно-ориентированным яз
 
 На практике целые значения это 32-битные целые (и хранятся таким образом в некоторых браузерных реализациях), что может быть важно для побитовых операций.
 
-Поддерживаются стандартные [арифметические операторы](/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators "en/Core_JavaScript_1.5_Reference/Operators/Arithmetic_Operators"), включая сложение, вычитание, остаток от деления и т.д. Есть ещё встроенный объект, который я забыл упомянуть, называемый [Math](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math "en/Core_JavaScript_1.5_Reference/Global_Objects/Math"), который содержит более продвинутые математические функции и константы:
+Поддерживаются стандартные [арифметические операторы](/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators), включая сложение, вычитание, остаток от деления и т.д. Есть ещё встроенный объект, который я забыл упомянуть, называемый [Math](/ru/docs/Web/JavaScript/Reference/Global_Objects/Math), который содержит более продвинутые математические функции и константы:
 
 ```js
 Math.sin(3.5);
 var circumference = Math.PI * (r + r);
 ```
 
-Вы можете преобразовать строку в целое число, используя встроенную функцию [`parseInt()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt "en/Core_JavaScript_1.5_Reference/Global_Functions/parseInt"). Её необязательный второй параметр — основание системы счисления, которое следует всегда явно указывать:
+Вы можете преобразовать строку в целое число, используя встроенную функцию [`parseInt()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt). Её необязательный второй параметр — основание системы счисления, которое следует всегда явно указывать:
 
 ```js
 parseInt("123", 10); // 123
@@ -78,7 +78,7 @@ parseInt("010");  // 8
 parseInt("0x10"); // 16
 ```
 
-Это случилось потому, что функция [`parseInt()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt) расценила строку как восьмеричную из-за начального 0, а шестнадцатеричную - из-за начального "0x".
+Это случилось потому, что функция [`parseInt()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt) расценила строку как восьмеричную из-за начального 0, а шестнадцатеричную - из-за начального "0x".
 
 Если хотите преобразовать двоичное число в десятичное целое, просто смените основание:
 
@@ -86,7 +86,7 @@ parseInt("0x10"); // 16
 parseInt("11", 2); // 3
 ```
 
-Вы можете аналогично парсить дробные числа, используя встроенную функцию [`parseFloat()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/parseFloat "en/JavaScript/Reference/Global Objects/parseFloat"), которая использует всегда основание 10 в отличие от родственной [`parseInt()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt "en/JavaScript/Reference/Global Objects/parseInt").
+Вы можете аналогично парсить дробные числа, используя встроенную функцию [`parseFloat()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseFloat), которая использует всегда основание 10 в отличие от родственной [`parseInt()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt).
 
 Также можно использовать унарный оператор **`+`** для преобразования значения в число:
 
@@ -107,20 +107,20 @@ parseInt("hello", 10); // NaN
 NaN + 5; // NaN
 ```
 
-Проверить значение на `NaN` можно встроенной функцией [`isNaN()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/isNaN "en/Core_JavaScript_1.5_Reference/Global_Functions/isNaN"):
+Проверить значение на `NaN` можно встроенной функцией [`isNaN()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/isNaN):
 
 ```js
 isNaN(NaN); // true
 ```
 
-JavaScript также имеет специальные значения [`Infinity`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity "en/Core_JavaScript_1.5_Reference/Global_Properties/Infinity") (бесконечность) и` -Infinity`:
+JavaScript также имеет специальные значения [`Infinity`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Infinity) (бесконечность) и `-Infinity`:
 
 ```js
 1 / 0; // Infinity
 -1 / 0; // -Infinity
 ```
 
-Проверить значение на `Infinity`, `-Infinity` и `NaN` можно с помощью встроенной функции [`isFinite()`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/isFinite "en/Core_JavaScript_1.5_Reference/Global_Functions/isFinite"):
+Проверить значение на `Infinity`, `-Infinity` и `NaN` можно с помощью встроенной функции [`isFinite()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/isFinite):
 
 ```js
 isFinite(1/0); // false
@@ -128,21 +128,21 @@ isFinite(-Infinity); // false
 isFinite(NaN); // false
 ```
 
-> **Примечание:** функции [`parseInt()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt "en/JavaScript/Reference/Global Objects/parseInt") и [`parseFloat()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseFloat "en/JavaScript/Reference/Global Objects/parseFloat") обрабатывают строку до тех пор, пока не будет встречен символ, не являющийся корректным для заданного числового формата, затем эти функции возвращают число, полученное в результате обработки вплоть до этого символа. А оператор "+" просто возвращает `NaN`, если в строке есть хоть один некорректный символ. Попробуйте сами в консоли преобразовать строку "10.2abc" каждым из методов, и различие станет ясным.
+> **Примечание:** функции [`parseInt()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseInt) и [`parseFloat()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) обрабатывают строку до тех пор, пока не будет встречен символ, не являющийся корректным для заданного числового формата, затем эти функции возвращают число, полученное в результате обработки вплоть до этого символа. А оператор "+" просто возвращает `NaN`, если в строке есть хоть один некорректный символ. Попробуйте сами в консоли преобразовать строку "10.2abc" каждым из методов, и различие станет ясным.
 
 ## Строки
 
-Строки в JavaScript - это последовательности [символов Unicode](/ru/docs/Web/JavaScript/Guide/Grammar_and_types "en/Core_JavaScript_1.5_Guide/Unicode") (в кодировке UTF-16). Для тех, кто имеет дело с интернационализацией, это должно стать хорошей новостью. Если быть более точным, то строка - это последовательность кодовых единиц, каждая из которых представлена 16-битовым числом, а каждый символ Unicode состоит из 1 или 2 кодовых единиц.
+Строки в JavaScript - это последовательности [символов Unicode](/ru/docs/Web/JavaScript/Guide/Grammar_and_types) (в кодировке UTF-16). Для тех, кто имеет дело с интернационализацией, это должно стать хорошей новостью. Если быть более точным, то строка - это последовательность кодовых единиц, каждая из которых представлена 16-битовым числом, а каждый символ Unicode состоит из 1 или 2 кодовых единиц.
 
 Чтобы представить единственный символ, используйте строку, содержащую только этот символ.
 
-Чтобы выяснить длину строки (в кодовых единицах), используйте свойство [`length`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/length "en/Core_JavaScript_1.5_Reference/Global_Objects/String/length"):
+Чтобы выяснить длину строки (в кодовых единицах), используйте свойство [`length`](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/length):
 
 ```js
 "hello".length; // 5
 ```
 
-Это уже первый шаг для работы с объектами! Мы уже говорили, что и строки можно использовать как объекты? У них тоже есть [методы](/ru/docs/Web/JavaScript/Reference/Global_Objects/String "en/Core_JavaScript_1.5_Reference/Global_Objects/String#Methods"):
+Это уже первый шаг для работы с объектами! Мы уже говорили, что и строки можно использовать как объекты? У них тоже есть [методы](/ru/docs/Web/JavaScript/Reference/Global_Objects/String):
 
 ```js
 "hello".charAt(0); // h
@@ -156,8 +156,8 @@ JavaScript дополнительно различает такие типы, к
 
 Ещё в JavaScript есть логический (булевый) тип данных, который может принимать два возможных значения true или false (оба являются ключевыми словами). Любое значение может быть преобразовано в логическое значение в соответствии со следующими правилами:
 
-1.  `false`, `0`, пустая строка (`""`), `NaN`, `null` и `undefined` преобразуются в `false.`
-2.  Все остальные значения преобразуются в `true.`
+1. `false`, `0`, пустая строка (`""`), `NaN`, `null` и `undefined` преобразуются в `false.`
+2. Все остальные значения преобразуются в `true.`
 
 Преобразование значений можно осуществить явно, используя функцию `Boolean()`:
 
@@ -172,7 +172,7 @@ Boolean(234); // true
 
 ## Переменные
 
-Для объявления новых переменных в JavaScript используются ключевые слова [`let`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const) или [`var`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var "/en/JavaScript/Reference/Statements/var").
+Для объявления новых переменных в JavaScript используются ключевые слова [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) или [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var).
 
 ```js
 let a;
@@ -232,7 +232,7 @@ x = x + 5
 
 Так же используются операторы инкремента (`++`) и декремента (`--`). Которые имеют префиксную и постфиксную форму записи.
 
-[Оператор `+`](/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators "en/Core_JavaScript_1.5_Reference/Operators/String_Operators") так же выполняет конкатенацию (объединение) строк:
+[Оператор `+`](/ru/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators) так же выполняет конкатенацию (объединение) строк:
 
 ```js
 "hello" + " world"; // "hello world"
@@ -247,7 +247,7 @@ x = x + 5
 
 Для приведения значения к строке просто прибавьте к нему пустую строку.
 
-Для [сравнения](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators "en/Core_JavaScript_1.5_Reference/Operators/Comparison_Operators") в JavaScript используются следующие операторы: `<`, `>`, `<=` и `>=`. Сравнивать можно не только числа, но и строки. Проверка на равенство немного сложнее. Для проверки используют двойной (`==`) или тройной (`===`) оператор присваивания. Двойной оператор `==` осуществляет автоматическое преобразование типов, что может приводить к интересным результатам:
+Для [сравнения](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) в JavaScript используются следующие операторы: `<`, `>`, `<=` и `>=`. Сравнивать можно не только числа, но и строки. Проверка на равенство немного сложнее. Для проверки используют двойной (`==`) или тройной (`===`) оператор присваивания. Двойной оператор `==` осуществляет автоматическое преобразование типов, что может приводить к интересным результатам:
 
 ```js
 123 == "123"; // true
@@ -423,7 +423,7 @@ obj.details.color; // orange
 obj['details']['size']; // 12
 ```
 
-Эти два метода равнозначны. Первый метод используется, если мы точно знаем к какому методу нам нужно обратиться. Второй метод принимает в качестве имени свойства строку, и позволяет вычислять имя в процессе вычислений. Следует отметить, что последний метод мешает некоторым движкам и минимизаторам оптимизировать код. Если появится необходимость назначить в качестве имён свойств объекта [зарезервированные слова](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords "en/Core_JavaScript_1.5_Reference/Reserved_Words"), то данный метод тоже может пригодиться:
+Эти два метода равнозначны. Первый метод используется, если мы точно знаем к какому методу нам нужно обратиться. Второй метод принимает в качестве имени свойства строку, и позволяет вычислять имя в процессе вычислений. Следует отметить, что последний метод мешает некоторым движкам и минимизаторам оптимизировать код. Если появится необходимость назначить в качестве имён свойств объекта [зарезервированные слова](/ru/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords), то данный метод тоже может пригодиться:
 
 ```js
 // Вызовет Syntax error, ведь 'for' это зарезервированное слово
@@ -494,7 +494,7 @@ for (const currentValue of a) {
 }
 ```
 
-Перебрать элементы массива также можно с помощью цикла [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in "en/Core_JavaScript_1.5_Reference/Statements/for...in"). Но, если вдруг будет изменено какое-либо свойство `Array.prototype`, то оно тоже будет участвовать в выборке. Не используйте данный метод.
+Перебрать элементы массива также можно с помощью цикла [`for...in`](/ru/docs/Web/JavaScript/Reference/Statements/for...in). Но, если вдруг будет изменено какое-либо свойство `Array.prototype`, то оно тоже будет участвовать в выборке. Не используйте данный метод.
 
 И самый новый способ перебора свойств массива был добавлен в ECMAScript 5 — это метод [forEach()](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach):
 
@@ -554,7 +554,7 @@ add(2, 3, 4); // 5
 // используются только первые два аргумента, "4" игнорируется
 ```
 
-Это может показаться бессмысленным, но на самом деле функции могут получить доступ к "лишним" аргументам с помощью псевдомассива [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments "En/Core_JavaScript_1.5_Reference/Functions_and_function_scope/arguments"), в нём содержатся значения всех аргументов, переданных функции. Давайте напишем функцию, которая принимает неограниченное количество аргументов:
+Это может показаться бессмысленным, но на самом деле функции могут получить доступ к "лишним" аргументам с помощью псевдомассива [`arguments`](/ru/docs/Web/JavaScript/Reference/Functions/arguments), в нём содержатся значения всех аргументов, переданных функции. Давайте напишем функцию, которая принимает неограниченное количество аргументов:
 
 ```js
 function add() {
@@ -648,7 +648,7 @@ a; // 4
 b; // 2
 ```
 
-В JavaScript есть возможность рекурсивного вызова функции. Это может оказаться полезным при работе с иерархическими (древовидными) структурами данных (например такие, которые встречаются при работе с [DOM](/ru/DOM "en/DOM")).
+В JavaScript есть возможность рекурсивного вызова функции. Это может оказаться полезным при работе с иерархическими (древовидными) структурами данных (например такие, которые встречаются при работе с [DOM](/ru/DOM)).
 
 ```js
 function countChars(elm) {
@@ -682,7 +682,7 @@ var charsInBody = (function counter(elm) {
 
 ## Собственные объекты
 
-> **Примечание:** **На заметку:** Для более подробной информации по объектно-ориентированному программированию в JavaScript смотрите [Введение в объектно-ориентированный JavaScript](/ru/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript "https://developer.mozilla.org/en/Introduction_to_Object-Oriented_JavaScript").
+> **Примечание:** **На заметку:** Для более подробной информации по объектно-ориентированному программированию в JavaScript смотрите [Введение в объектно-ориентированный JavaScript](/ru/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript).
 
 В классическом Объектно-Ориентированном Программировании (ООП) объекты — это коллекции данных и методов, которые этими данными оперируют. JavaScript - это язык, основанный на прототипах, и в его определении нет понятия классов, таких, как в языках C++ или Java. (Иногда это может запутать программистов, знакомых с языками, в которых есть классы.) Вместо классов JavaScript использует функции. Давайте представим объект с личными данными, содержащий поля с именем и фамилией. Есть два типа отображения имён: "Имя Фамилия" или "Фамилия, Имя". С помощью объектов и функций можно сделать следующее:
 
@@ -727,7 +727,7 @@ s.fullName(); // Simon Willison
 s.fullNameReversed(); // Willison, Simon
 ```
 
-А вот кое-что новенькое: ключевое слово [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator"). Когда `this` используется внутри функции, оно ссылается на текущий объект. Значение ключевого слова зависит от способа вызова функции. Если вызвать функцию с обращением к объекту через [точку или квадратные скобки](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors "en/Core_JavaScript_1.5_Reference/Operators/Member_Operators"), то `this` получится равным данному объекту. В ином случае `this` будет ссылаться на глобальный объект. Это часто приводит к ошибкам. Например:
+А вот кое-что новенькое: ключевое слово [`this`](/ru/docs/Web/JavaScript/Reference/Operators/this). Когда `this` используется внутри функции, оно ссылается на текущий объект. Значение ключевого слова зависит от способа вызова функции. Если вызвать функцию с обращением к объекту через [точку или квадратные скобки](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors), то `this` получится равным данному объекту. В ином случае `this` будет ссылаться на глобальный объект. Это часто приводит к ошибкам. Например:
 
 ```js
 s = makePerson("Simon", "Willison")
@@ -753,7 +753,7 @@ function Person(first, last) {
 var s = new Person("Simon", "Willison");
 ```
 
-В примере мы использовали новое ключевое слово: [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new "en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator"). Оно тесно связано с [this](/ru/docs/Web/JavaScript/Reference/Operators/this). Данное ключевое слово создаёт новый пустой объект, а потом вызывает указанную функцию, а `this` получает ссылку на этот новый объект. Функции, которые предназначены для вызова с `new` называются конструкторами. Существует соглашение, согласно которому все функции-конструкторы записываются с заглавной буквы.
+В примере мы использовали новое ключевое слово: [`new`](/ru/docs/Web/JavaScript/Reference/Operators/new). Оно тесно связано с [this](/ru/docs/Web/JavaScript/Reference/Operators/this). Данное ключевое слово создаёт новый пустой объект, а потом вызывает указанную функцию, а `this` получает ссылку на этот новый объект. Функции, которые предназначены для вызова с `new` называются конструкторами. Существует соглашение, согласно которому все функции-конструкторы записываются с заглавной буквы.
 
 Мы доработали наш код в предыдущем примере, но всё равно остался один неприятный момент с самостоятельным вызовом `fullName()`.
 
@@ -804,7 +804,7 @@ Person.prototype.firstNameCaps = function() {
 s.firstNameCaps(); // "SIMON"
 ```
 
-Занимательно то, что добавлять свойства в прототип можно и для встроенных объектов JavaScript. Давайте добавим новый метод `reversed `классу `String`, этот метод будет возвращать строку задом наперёд:
+Занимательно то, что добавлять свойства в прототип можно и для встроенных объектов JavaScript. Давайте добавим новый метод `reversed` классу `String`, этот метод будет возвращать строку задом наперёд:
 
 ```js
 var s = "Simon";
@@ -864,7 +864,7 @@ var bill = trivialNew(Person, 'William', 'Orange');
 var bill = new Person('William', 'Orange');
 ```
 
-В JavaScript метод [`apply()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) имеет похожий метод [`call()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call "en/Core_JavaScript_1.5_Reference/Global_Objects/Function/call"), который тоже позволяет устанавливать `this`, но принимает список, а не массив аргументов.
+В JavaScript метод [`apply()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) имеет похожий метод [`call()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/call), который тоже позволяет устанавливать `this`, но принимает список, а не массив аргументов.
 
 ```js
 function lastNameCaps() {

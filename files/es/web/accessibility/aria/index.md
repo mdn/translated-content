@@ -86,7 +86,7 @@ También es importante probar su ARIA creado con tecnología de asistencia real.
 ## ARIA para widgets con scripts
 
 - [Escribir widgets JavaScript navegables por teclado](/es/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets)
-  -: Elementos integrados como {{HTMLElement("input")}}, {{HTMLElement("button")}} etc. tienen accesibilidad de teclado integrado. Si 'falsifica' estos con {{HTMLElement("div")}}s y ARIA, debe asegurarse de que sus widgets sean accesibles desde el teclado.
+  - : Elementos integrados como {{HTMLElement("input")}}, {{HTMLElement("button")}} etc. tienen accesibilidad de teclado integrado. Si 'falsifica' estos con {{HTMLElement("div")}}s y ARIA, debe asegurarse de que sus widgets sean accesibles desde el teclado.
 - [Regiones en vivo](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
   - : Las regiones activas brindan sugerencias a los lectores de pantalla sobre cómo manejar los cambios en el contenido de una página.
 - [Uso de regiones en vivo de ARIA para anunciar cambios de contenido](https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm)

@@ -52,9 +52,9 @@ Avec votre éditeur d'images favori, créez des versions de 400 et 120 px de lar
 - `firefox-addons.jpg`
 - `mozilla-dinosaur-head.png`
 
-Donnez-leur des noms similaires comme :  `firefoxlogo400.png` et `firefoxlogo120.png`.
+Donnez-leur des noms similaires comme : `firefoxlogo400.png` et `firefoxlogo120.png`.
 
-Continuons avec `mdn.svg`, ces images seront vos icônes pour lier aux ressources externes, contenues dans l'espace`further-info`. Vous ferez aussi un lien vers le logo firefox dans l'en-tête du site. Réservez toutes ces copies dans le même dossier que l'`index.html`.
+Continuons avec `mdn.svg`, ces images seront vos icônes pour lier aux ressources externes, contenues dans l'espace `further-info`. Vous ferez aussi un lien vers le logo firefox dans l'en-tête du site. Réservez toutes ces copies dans le même dossier que l'`index.html`.
 
 Puis, créez une version paysage de 1200px de large de `red-panda.jpg`, et une version portrait de 600px de large qui montre le panda en gros plan. Encore une fois, nommez-les de manière similaire pour les identifier facilement. Réservez toutes ces copies dans le même dossier que l'`index.html`.
 
@@ -80,7 +80,7 @@ Assurez-vous de faire correspondre les bonnes images avec les liens corrects !
 
 ### Un panda rouge créatif
 
-Dans l'élément {{htmlelement("div")}} de la catégorie r`ed-panda`, nous voulons insérer un élément {{htmlelement("picture")}} qui affiche le petit portrait du panda si le cadre est de 600px de large, ou moins, et le paysage dans les autres cas.
+Dans l'élément {{htmlelement("div")}} de la catégorie `red-panda`, nous voulons insérer un élément {{htmlelement("picture")}} qui affiche le petit portrait du panda si le cadre est de 600px de large, ou moins, et le paysage dans les autres cas.
 
 ## Exemple
 

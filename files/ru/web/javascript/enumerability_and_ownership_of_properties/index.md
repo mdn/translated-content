@@ -218,7 +218,7 @@ translation_of: Web/JavaScript/Enumerability_and_ownership_of_properties
 Хотим заметить, что данный алгоритм эффективен не для всех классов.
 
 - Определение свойства: `SimplePropertyRetriever.theGetMethodYouWant(obj).indexOf(prop) > -1`
-- Итерация: `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use` filter()`, `map()`, etc.)
+- Итерация: `SimplePropertyRetriever.theGetMethodYouWant(obj).forEach(function (value, prop) {});` (or use `filter()`, `map()`, etc.)
 
 ```js
 var SimplePropertyRetriever = {
@@ -296,9 +296,9 @@ var SimplePropertyRetriever = {
 
 ## Смотрите также
 
-- [`in`](/ru/docs/JavaScript/Reference/Operators/in "/en-US/docs/JavaScript/Reference/Operators/in")
-- [`for..in`](/ru/docs/JavaScript/Reference/Statements/for...in "/en-US/docs/JavaScript/Reference/Statements/for...in")
-- [`hasOwnProperty`](/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty "/en-US/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty")
-- [`propertyIsEnumerable`](/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable "/en-US/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable")
-- [`getOwnPropertyNames`](/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames "/en-US/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames")
-- [`Object.keys`](/ru/docs/JavaScript/Reference/Global_Objects/Object/keys "/en-US/docs/JavaScript/Reference/Global_Objects/Object/keys")
+- [`in`](/ru/docs/JavaScript/Reference/Operators/in)
+- [`for..in`](/ru/docs/JavaScript/Reference/Statements/for...in)
+- [`hasOwnProperty`](/ru/docs/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
+- [`propertyIsEnumerable`](/ru/docs/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable)
+- [`getOwnPropertyNames`](/ru/docs/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
+- [`Object.keys`](/ru/docs/JavaScript/Reference/Global_Objects/Object/keys)

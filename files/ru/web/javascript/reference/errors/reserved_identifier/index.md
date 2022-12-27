@@ -27,7 +27,7 @@ SyntaxError: Unexpected reserved word (Chrome)
 
 - `implements`
 - `interface`
-- [`let`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let)
+- [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let)
 - `package`
 - `private`
 - `protected`
@@ -62,7 +62,7 @@ var list = ["potatoes", "rice", "fries"];
 
 ### Обновление старых браузеров
 
-Например, если вы используете старый браузер, в котором ещё не реализована функция [`let`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/let) или [`class`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/class), вам следует перейти на более новую версию браузера, которая поддерживает данные языковые функции.
+Например, если вы используете старый браузер, в котором ещё не реализована функция [`let`](/ru/docs/Web/JavaScript/Reference/Statements/let) или [`class`](/ru/docs/Web/JavaScript/Reference/Statements/class), вам следует перейти на более новую версию браузера, которая поддерживает данные языковые функции.
 
 ```js
 "use strict";

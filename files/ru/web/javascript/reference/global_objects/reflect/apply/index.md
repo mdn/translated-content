@@ -10,7 +10,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 ---
 {{JSRef}}
 
-Статический метод **`Reflect`\*\***`.apply()`\*\* вызывает переданную ему функцию с указанными аргументами.
+Статический метод **`Reflect.apply()`** вызывает переданную ему функцию с указанными аргументами.
 
 {{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
 

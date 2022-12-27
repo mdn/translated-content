@@ -159,7 +159,7 @@ translation_of: Web/HTML/Element/meta
 
 В зависимости от установленных атрибутов, тип метаданных может быть одним из следующих:
 
-- Если в наборе {{htmlattrxref("name", "meta")}}, то это _document-level_ _metadata_, применяемая ко всей странице.
+- Если в наборе {{htmlattrxref("name", "meta")}}, то это _document-level metadata_, применяемая ко всей странице.
 - Если в наборе{{htmlattrxref("http-equiv", "meta")}} , то это _pragma directive_,
   то есть информация, веб-сервер предоставляет информацию о том, как должна обслуживаться веб-страница.
 - Если в наборе {{htmlattrxref("charset", "meta")}}, то это _charset declaration_,

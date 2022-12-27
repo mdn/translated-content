@@ -73,7 +73,7 @@ Once you are working in writing modes other than `horizontal-tb` many of the pro
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/width.html", '100%', 720)}}
 
-Therefore, we have new properties of {{cssxref("block-size")}} and {{cssxref("inline-size")}}. If we give our block an `inline-size` of 100px, it doesn’t matter whether we are in a horizontal or a vertical writing mode, `inline-size` will always mean the size in the inline direction.
+Therefore, we have new properties of {{cssxref("block-size")}} and {{cssxref("inline-size")}}. If we give our block an `inline-size` of 100px, it doesn't matter whether we are in a horizontal or a vertical writing mode, `inline-size` will always mean the size in the inline direction.
 因此，我们有了块大小和内联大小的新属性。如果我们给块一个 100px 的内联大小，不管我们是处于水平还是垂直写入模式，内联大小总是指内联方向的大小。
 
 {{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}

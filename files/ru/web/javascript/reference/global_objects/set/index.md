@@ -24,8 +24,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Set
 
 - iterable
   - : При передаче [итерируемого объекта](/ru/docs/Web/JavaScript/Reference/Statements/for...of), все его элементы будут добавлены в новый Set. Иначе (или при `null`) новый `Set` будет пуст.
-- ### Возвращает
-  - : Новый `Set` объект.
+
+### Возвращает
+
+Новый `Set` объект.
 
 ## Описание
 

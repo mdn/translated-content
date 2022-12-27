@@ -62,7 +62,7 @@ var color2 = "coral";
 
 ### Использование оператора `in` с неопределёнными или с уже удалёнными свойствами
 
-Если вы удалили свойство при помощи оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete"), то оператор `in` возвратит `false` для этого свойства.
+Если вы удалили свойство при помощи оператора [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete), то оператор `in` возвратит `false` для этого свойства.
 
 ```js
 var mycar = {make: "Honda", model: "Accord", year: 1998};
@@ -106,7 +106,7 @@ trees[3] = undefined;
 
 ## Смотрите также
 
-- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete "en-US/docs/JavaScript/Reference/Operators/Special/delete")
+- [`delete`](/en-US/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Reflect.has()")}}
 - [Enumerability and ownership of properties](/ru/docs/Enumerability_and_ownership_of_properties)

@@ -25,7 +25,7 @@ of active locales is:
 - `es`
 
 If you want to just find a task and jump in, search by the labels `l10n-fr`,
-`l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, `l10n-zh` and `l10n-es` in this repo’s
+`l10n-ja`, `l10n-ko`, `l10n-pt-br`, `l10n-ru`, `l10n-zh` and `l10n-es` in this repo's
 [issues list](https://github.com/mdn/translated-content/issues),
 or the main [content repo issues](https://github.com/mdn/content/issues).
 
@@ -83,7 +83,7 @@ Now you need to fork and clone both the
    export CONTENT_TRANSLATED_ROOT=/path/to/translated-content/files
    ```
 
-   But you’ll have to newly-set this every time you open up a new terminal
+   But you'll have to newly-set this every time you open up a new terminal
    window. Instead, you could put the environment variable setting in an `.env`
    file in the root of your content repo. This is most easily done using the
    following command:
@@ -94,7 +94,7 @@ Now you need to fork and clone both the
 
    (the `.env` file will be created for you if it does not already exist.)
 
-4. Now you’ve got this set up, enter the command `yarn start` to begin the local
+4. Now you've got this set up, enter the command `yarn start` to begin the local
    testing server running at `localhost:5042`.
 
 ### Working in the translated-content repo
@@ -119,7 +119,7 @@ then:
 
 ### For more info on editing this repo
 
-For more information, we’d like to suggest that you go to the [content repo](https://github.com/mdn/content)
+For more information, we'd like to suggest that you go to the [content repo](https://github.com/mdn/content)
 and read its README file, particularly to learn about [fundamental concepts](https://github.com/mdn/content#fundamental-concepts),
 [pull request etiquette](https://github.com/mdn/content#pull-request-etiquette),
 and common actions such as [adding](https://github.com/mdn/content#adding-a-new-document),

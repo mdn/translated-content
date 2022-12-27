@@ -7601,10 +7601,6 @@
     "modified": "2020-10-15T22:21:32.530Z",
     "contributors": ["thiag73"]
   },
-  "Web/API/console/dir": {
-    "modified": "2020-10-15T21:43:00.216Z",
-    "contributors": ["xavierartot", "loella16", "sylvaindethier", "Chevallm"]
-  },
   "Web/API/Console/dirxml": {
     "modified": "2020-10-15T21:56:31.266Z",
     "contributors": ["loella16", "BEHOUBA"]
@@ -13046,6 +13042,18 @@
       "mfrederic"
     ]
   },
+  "Web/API/Window/location": {
+    "modified": "2019-03-23T23:59:30.762Z",
+    "contributors": [
+      "Mahabarata",
+      "fscholz",
+      "maelito",
+      "tregagnon",
+      "Julien.stuby",
+      "Mgjbot",
+      "BenoitL"
+    ]
+  },
   "Web/API/Window/locationbar": {
     "modified": "2020-10-15T22:33:31.052Z",
     "contributors": ["Voulto"]
@@ -13597,6 +13605,10 @@
       "BenoitL"
     ]
   },
+  "Web/API/console/dir": {
+    "modified": "2020-10-15T21:43:00.216Z",
+    "contributors": ["xavierartot", "loella16", "sylvaindethier", "Chevallm"]
+  },
   "Web/API/crossOriginIsolated": {
     "modified": "2020-10-15T22:26:34.641Z",
     "contributors": ["Eliastik"]
@@ -13729,18 +13741,6 @@
       "Ceth",
       "BenoitL",
       "Mgjbot"
-    ]
-  },
-  "Web/API/Window/location": {
-    "modified": "2019-03-23T23:59:30.762Z",
-    "contributors": [
-      "Mahabarata",
-      "fscholz",
-      "maelito",
-      "tregagnon",
-      "Julien.stuby",
-      "Mgjbot",
-      "BenoitL"
     ]
   },
   "Web/Accessibility": {
@@ -19924,139 +19924,6 @@
       "Goofy"
     ]
   },
-  "Web/HTML/Element/input": {
-    "modified": "2020-10-15T21:14:16.017Z",
-    "contributors": [
-      "SphinxKnight",
-      "VictorLequin",
-      "Flop",
-      "Dridou",
-      "SimonArruti",
-      "lionel",
-      "marie-ototoi",
-      "nicofrand",
-      "wakka27",
-      "Flaburgan",
-      "jbeuh",
-      "arnaudbienner",
-      "msherefel",
-      "tregagnon",
-      "teoli"
-    ]
-  },
-  "Web/HTML/Element/input/button": {
-    "modified": "2020-10-15T21:37:46.494Z",
-    "contributors": ["SphinxKnight", "marie-ototoi", "dreizn", "Bat", "Goofy"]
-  },
-  "Web/HTML/Element/input/checkbox": {
-    "modified": "2020-10-15T21:39:40.574Z",
-    "contributors": [
-      "Jamelkol",
-      "a-carvallo",
-      "SphinxKnight",
-      "LaurentBarbareau",
-      "euZebe",
-      "FanJiyong",
-      "ctjhoa",
-      "AnthonyMaton"
-    ]
-  },
-  "Web/HTML/Element/input/color": {
-    "modified": "2020-10-15T21:34:25.198Z",
-    "contributors": ["Jamelkol", "SphinxKnight", "nicofrand", "josephcab"]
-  },
-  "Web/HTML/Element/input/date": {
-    "modified": "2020-10-15T21:39:48.210Z",
-    "contributors": [
-      "Flaburgan",
-      "SphinxKnight",
-      "Lodec",
-      "P45QU10U",
-      "mliatt",
-      "doriangillet",
-      "marie-ototoi",
-      "Bat"
-    ]
-  },
-  "Web/HTML/Element/input/datetime-local": {
-    "modified": "2020-10-28T11:18:38.925Z",
-    "contributors": ["nbtetreault", "SphinxKnight"]
-  },
-  "Web/HTML/Element/input/email": {
-    "modified": "2020-10-15T21:55:52.405Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/HTML/Element/input/file": {
-    "modified": "2020-10-15T21:54:07.371Z",
-    "contributors": [
-      "brunostasse",
-      "masonlouchart",
-      "SphinxKnight",
-      "PhilippePerret",
-      "gnoxr",
-      "daufinsyd"
-    ]
-  },
-  "Web/HTML/Element/input/hidden": {
-    "modified": "2020-10-15T21:55:51.697Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/HTML/Element/input/image": {
-    "modified": "2020-10-15T21:43:35.571Z",
-    "contributors": ["Jamelkol", "SphinxKnight"]
-  },
-  "Web/HTML/Element/input/month": {
-    "modified": "2020-10-15T21:56:34.329Z",
-    "contributors": ["SphinxKnight", "loganblangenois"]
-  },
-  "Web/HTML/Element/input/number": {
-    "modified": "2020-10-15T21:55:45.586Z",
-    "contributors": ["SphinxKnight", "nbrdx", "Louis-PhilippeTrempe"]
-  },
-  "Web/HTML/Element/input/password": {
-    "modified": "2020-10-15T21:43:36.452Z",
-    "contributors": ["SphinxKnight", "CAILAC-Maxime"]
-  },
-  "Web/HTML/Element/input/radio": {
-    "modified": "2020-10-15T21:55:43.403Z",
-    "contributors": ["SphinxKnight", "FanJiyong"]
-  },
-  "Web/HTML/Element/input/range": {
-    "modified": "2020-10-15T21:55:44.797Z",
-    "contributors": ["SphinxKnight", "jerominejournet"]
-  },
-  "Web/HTML/Element/input/reset": {
-    "modified": "2020-10-15T21:55:53.083Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/HTML/Element/input/search": {
-    "modified": "2020-10-15T21:55:52.204Z",
-    "contributors": ["SphinxKnight", "lionralfs"]
-  },
-  "Web/HTML/Element/input/submit": {
-    "modified": "2020-10-15T21:56:12.673Z",
-    "contributors": ["SphinxKnight", "cabalpit"]
-  },
-  "Web/HTML/Element/input/tel": {
-    "modified": "2020-11-24T06:34:33.505Z",
-    "contributors": ["Superkooka", "SphinxKnight"]
-  },
-  "Web/HTML/Element/input/text": {
-    "modified": "2020-10-15T21:57:28.394Z",
-    "contributors": ["SphinxKnight", "Keyhaku"]
-  },
-  "Web/HTML/Element/input/time": {
-    "modified": "2020-10-15T21:57:37.801Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/HTML/Element/input/url": {
-    "modified": "2020-10-15T21:57:06.539Z",
-    "contributors": ["SphinxKnight"]
-  },
-  "Web/HTML/Element/input/week": {
-    "modified": "2020-10-15T21:57:06.373Z",
-    "contributors": ["SphinxKnight"]
-  },
   "Web/HTML/Element/Keygen": {
     "modified": "2020-10-15T21:14:21.658Z",
     "contributors": [
@@ -20567,6 +20434,139 @@
   "Web/HTML/Element/image": {
     "modified": "2020-10-15T21:27:06.857Z",
     "contributors": ["SphinxKnight", "teoli", "msherefel"]
+  },
+  "Web/HTML/Element/input": {
+    "modified": "2020-10-15T21:14:16.017Z",
+    "contributors": [
+      "SphinxKnight",
+      "VictorLequin",
+      "Flop",
+      "Dridou",
+      "SimonArruti",
+      "lionel",
+      "marie-ototoi",
+      "nicofrand",
+      "wakka27",
+      "Flaburgan",
+      "jbeuh",
+      "arnaudbienner",
+      "msherefel",
+      "tregagnon",
+      "teoli"
+    ]
+  },
+  "Web/HTML/Element/input/button": {
+    "modified": "2020-10-15T21:37:46.494Z",
+    "contributors": ["SphinxKnight", "marie-ototoi", "dreizn", "Bat", "Goofy"]
+  },
+  "Web/HTML/Element/input/checkbox": {
+    "modified": "2020-10-15T21:39:40.574Z",
+    "contributors": [
+      "Jamelkol",
+      "a-carvallo",
+      "SphinxKnight",
+      "LaurentBarbareau",
+      "euZebe",
+      "FanJiyong",
+      "ctjhoa",
+      "AnthonyMaton"
+    ]
+  },
+  "Web/HTML/Element/input/color": {
+    "modified": "2020-10-15T21:34:25.198Z",
+    "contributors": ["Jamelkol", "SphinxKnight", "nicofrand", "josephcab"]
+  },
+  "Web/HTML/Element/input/date": {
+    "modified": "2020-10-15T21:39:48.210Z",
+    "contributors": [
+      "Flaburgan",
+      "SphinxKnight",
+      "Lodec",
+      "P45QU10U",
+      "mliatt",
+      "doriangillet",
+      "marie-ototoi",
+      "Bat"
+    ]
+  },
+  "Web/HTML/Element/input/datetime-local": {
+    "modified": "2020-10-28T11:18:38.925Z",
+    "contributors": ["nbtetreault", "SphinxKnight"]
+  },
+  "Web/HTML/Element/input/email": {
+    "modified": "2020-10-15T21:55:52.405Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Web/HTML/Element/input/file": {
+    "modified": "2020-10-15T21:54:07.371Z",
+    "contributors": [
+      "brunostasse",
+      "masonlouchart",
+      "SphinxKnight",
+      "PhilippePerret",
+      "gnoxr",
+      "daufinsyd"
+    ]
+  },
+  "Web/HTML/Element/input/hidden": {
+    "modified": "2020-10-15T21:55:51.697Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Web/HTML/Element/input/image": {
+    "modified": "2020-10-15T21:43:35.571Z",
+    "contributors": ["Jamelkol", "SphinxKnight"]
+  },
+  "Web/HTML/Element/input/month": {
+    "modified": "2020-10-15T21:56:34.329Z",
+    "contributors": ["SphinxKnight", "loganblangenois"]
+  },
+  "Web/HTML/Element/input/number": {
+    "modified": "2020-10-15T21:55:45.586Z",
+    "contributors": ["SphinxKnight", "nbrdx", "Louis-PhilippeTrempe"]
+  },
+  "Web/HTML/Element/input/password": {
+    "modified": "2020-10-15T21:43:36.452Z",
+    "contributors": ["SphinxKnight", "CAILAC-Maxime"]
+  },
+  "Web/HTML/Element/input/radio": {
+    "modified": "2020-10-15T21:55:43.403Z",
+    "contributors": ["SphinxKnight", "FanJiyong"]
+  },
+  "Web/HTML/Element/input/range": {
+    "modified": "2020-10-15T21:55:44.797Z",
+    "contributors": ["SphinxKnight", "jerominejournet"]
+  },
+  "Web/HTML/Element/input/reset": {
+    "modified": "2020-10-15T21:55:53.083Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Web/HTML/Element/input/search": {
+    "modified": "2020-10-15T21:55:52.204Z",
+    "contributors": ["SphinxKnight", "lionralfs"]
+  },
+  "Web/HTML/Element/input/submit": {
+    "modified": "2020-10-15T21:56:12.673Z",
+    "contributors": ["SphinxKnight", "cabalpit"]
+  },
+  "Web/HTML/Element/input/tel": {
+    "modified": "2020-11-24T06:34:33.505Z",
+    "contributors": ["Superkooka", "SphinxKnight"]
+  },
+  "Web/HTML/Element/input/text": {
+    "modified": "2020-10-15T21:57:28.394Z",
+    "contributors": ["SphinxKnight", "Keyhaku"]
+  },
+  "Web/HTML/Element/input/time": {
+    "modified": "2020-10-15T21:57:37.801Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Web/HTML/Element/input/url": {
+    "modified": "2020-10-15T21:57:06.539Z",
+    "contributors": ["SphinxKnight"]
+  },
+  "Web/HTML/Element/input/week": {
+    "modified": "2020-10-15T21:57:06.373Z",
+    "contributors": ["SphinxKnight"]
   },
   "Web/HTML/Element/ins": {
     "modified": "2020-10-15T21:23:18.858Z",
@@ -26398,10 +26398,6 @@
       "Automatik",
       "Munto"
     ]
-  },
-  "Web/JavaScript/Reference/Strict_mode/Transitioning_to_strict_mode": {
-    "modified": "2020-03-12T19:39:22.597Z",
-    "contributors": ["SphinxKnight", "Laurent_Lyaudet", "Bpruneau", "fscholz"]
   },
   "Web/JavaScript/Reference/Template_literals": {
     "modified": "2020-10-15T21:31:15.226Z",

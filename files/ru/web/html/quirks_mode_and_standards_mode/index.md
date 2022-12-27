@@ -39,7 +39,7 @@ translation_of: Web/HTML/Quirks_Mode_and_Standards_Mode
 
 ## Как узнать, какой режим используется?
 
-В Firefox необходимо в контекстном меню "Информация о странице" (_View Page Info)_ проверить\_ _"Тип визуализации" (\_Render Mode)_.
+В Firefox необходимо в контекстном меню "Информация о странице" (_View Page Info_) проверить "Тип визуализации" (_Render Mode_).
 
 В Internet Explorer через _F12_ проверить Тип документа (_Document Mode)_.
 

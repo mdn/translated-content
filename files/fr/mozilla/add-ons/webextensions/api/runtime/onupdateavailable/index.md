@@ -37,7 +37,7 @@ Les événements ont trois fonctions :
 - `addListener(callback)`
   - : Ajouter un écouteur à cet événement.
 - `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument`listener` est un écouteur à supprimer.
+  - : Arrêtez d'écouter cet événement. L'argument `listener` est un écouteur à supprimer.
 - `hasListener(listener)`
   - : Vérifie que l'`écouteur` est enregistré pour cet événement. Retourne `true` s'il écoute, sinon `false`.
 

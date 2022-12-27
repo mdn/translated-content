@@ -20,7 +20,7 @@ new Error([message[, fileName[, lineNumber]]])
 
 ### Параметры
 
-- ` message ``{{optional_inline()}} `
+- `message` {{optional_inline()}}
   - : Человеко-читаемое описание ошибки.
 - `fileName` {{non-standard_inline}} `{{optional_inline()}}`
   - : Значение свойства `fileName` созданного объекта `Error`. Значением по умолчанию является имя файла, содержащего код, вызвавший конструктор `Error()`.

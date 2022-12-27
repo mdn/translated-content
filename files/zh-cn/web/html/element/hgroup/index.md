@@ -52,7 +52,7 @@ So in the abstract outline produced by the [HTML outline algorithm defined in th
 
 To produce any (non-abstract) _rendered_ view of such an outline, some choice must be made in the design of the rendering tool about how to render `<hgroup>` headings in such a way as to convey their multi-level nature. There are a variety of ways an `<hgroup>` might be shown in a rendered outline; for example:
 
-- an `<hgroup>` might be shown in a rendered outline in with a colon character and space (“: ”) or other such punctuation after the primary heading and before the first secondary heading (and with the same or similar punctuation before any other secondary headings
+- an `<hgroup>` might be shown in a rendered outline in with a colon character and space (": ") or other such punctuation after the primary heading and before the first secondary heading (and with the same or similar punctuation before any other secondary headings
 - an `<hgroup>` might be shown in a rendered outline in with the primary heading followed by parentheses around the secondary heading(s)
 
 Consider the following HTML document:

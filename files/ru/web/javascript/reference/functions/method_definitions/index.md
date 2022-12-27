@@ -121,8 +121,6 @@ console.log(bar.foo2()); // 2
 
 {{Compat}}
 
-##
-
 ## SpiderMonkey-specific notes
 
 - Prior to SpiderMonkey 38 {{geckoRelease(38)}}, "`get`" and "`set`" were invalid names for generator methods. This has been fixed in {{bug(1073809)}}.

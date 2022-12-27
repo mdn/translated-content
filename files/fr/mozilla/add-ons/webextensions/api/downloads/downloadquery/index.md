@@ -24,7 +24,7 @@ Ce type est utilisé par exemple dans {{WebExtAPIRef("downloads.search()")}} et 
 Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
 - `query`{{optional_inline}}
-  - : Un `tableau` de`chaines`. Inclure uniquement {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} dont le `nom de fichier` ou l'`URL` contient toutes les chaînes données. Vous pouvez également inclure des termes commençant par un titet (-) — ces termes **ne doivent pas** figurer dans le `nom du fichier` ou l'`url` de l'élément à inclure.
+  - : Un `tableau` de `chaines`. Inclure uniquement {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} dont le `nom de fichier` ou l'`URL` contient toutes les chaînes données. Vous pouvez également inclure des termes commençant par un titet (-) — ces termes **ne doivent pas** figurer dans le `nom du fichier` ou l'`url` de l'élément à inclure.
 - `startedBefore`{{optional_inline}}
   - : Un {{WebExtAPIRef('downloads.DownloadTime', "DownloadTime")}}. Inclure uniquement {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} qui a démarré avant l'heure indiquée.
 - `startedAfter`{{optional_inline}}
@@ -44,7 +44,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `limit`{{optional_inline}}
   - : Un `integer` représentant un nombre de résultats. Incluez uniquement le nombre spécifié de {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}.
 - `orderBy`{{optional_inline}}
-  - : Un `tableau`de `chaînes` représentant les propriétés  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} les résultats de la recherche doivent être tirés par exemple, en incluant `startTime` puis `totalBytes` dans le tableau trierait {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} par leur heure de début, puis le total des octets — dans l'ordre croissant. Pour spécifier le tri par une propriété dans l'ordre décroissant, préfixez-le avec un trait d'union, par exemple `-startTime`.
+  - : Un `tableau` de `chaînes` représentant les propriétés  {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} les résultats de la recherche doivent être tirés par exemple, en incluant `startTime` puis `totalBytes` dans le tableau trierait {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} par leur heure de début, puis le total des octets — dans l'ordre croissant. Pour spécifier le tri par une propriété dans l'ordre décroissant, préfixez-le avec un trait d'union, par exemple `-startTime`.
 - `id`{{optional_inline}}
   - : Un `integer` représentant l'ID du {{WebExtAPIRef("downloads.DownloadItem")}} que vous souhaitez interroger.
 - `url`{{optional_inline}}

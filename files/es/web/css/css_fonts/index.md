@@ -39,7 +39,7 @@ translation_of: Web/CSS/CSS_Fonts
 
 - {{cssxref("@font-face")}}
 
-  - :&#x20;
+  - : &#x20;
 
     - {{cssxref("@font-face/font-family", "font-family")}}
     - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}

@@ -7,7 +7,7 @@ translation_of: Web/JavaScript/Reference/Operators/async_function
 
 Ключевое слово **`async function`** используется для определения асинхронной функции внутри выражений.
 
-Вы также можете определить асинхронные функции при помощи [инструкции async function](/ru/docs/Web/JavaScript/Reference/Statements/async_function "The async function keyword can be used to define async functions inside expressions.").
+Вы также можете определить асинхронные функции при помощи [инструкции async function](/ru/docs/Web/JavaScript/Reference/Statements/async_function).
 
 ## Синтаксис
 

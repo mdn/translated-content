@@ -53,7 +53,7 @@ await registeredUserScript.unregister();
     - `matches`
       - : Identique à `matches` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
     - `runAt` {{Optional_Inline}}
-      - : Identique à`run_at` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
+      - : Identique à `run_at` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
 
 Contrairement aux options de script de contenu, l'objet userScriptOptions n'a pas de propriété css. Utilisez {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} pour enregistrer/désenregistrer dynamiquement les feuilles de style).
 

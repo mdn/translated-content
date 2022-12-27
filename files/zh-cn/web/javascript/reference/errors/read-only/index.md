@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Errors/Read-only
 ## 报错消息
 
 ```plain
-TypeError: "x" is read-only (Firefox) //格式错误:"x"只读。(x 可以代表任意值)
+TypeError: "x" is read-only (Firefox) //格式错误："x"只读。(x 可以代表任意值)
 TypeError: 0 is read-only (Firefox)
 TypeError: Cannot assign to read only property 'x' of #<Object> (Chrome)
 //格式错误：对象的 x 属性是只读的不能设置（chrome）

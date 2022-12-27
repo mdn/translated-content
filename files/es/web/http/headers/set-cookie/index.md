@@ -104,7 +104,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : Impide que el código JavaScript acceda a la cookie. Por ejemplo, a través de la propiedad {{domxref("Document.cookie")}}, y la API {{domxref("XMLHttpRequest")}}, o la API {{domxref("Request")}}. Esto mitiga los ataques contra scripts cross-site ({{Glossary("XSS")}}).
 - `SameSite=<samesite-value>` {{optional_inline}}
 
-  - :&#x20;
+  - : &#x20;
 
     - `Strict`
     - `Lax`

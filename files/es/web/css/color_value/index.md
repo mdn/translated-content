@@ -1005,7 +1005,7 @@ Los colores puede ser definidos usando el modelo RGB (rojo-verde-azul) de dos ma
 
 - Notación Hexadecimal `#RRGGBB` ay `#RGB`
 
-  - :&#x20;
+  - : &#x20;
 
     - "`#`", seguido de seis caracteres hexadecimales (0-9, A-F).
     - "`#`", seguido de tres caracteres hexadecimales (0-9, A-F).

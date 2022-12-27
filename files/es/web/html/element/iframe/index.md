@@ -192,7 +192,7 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
 
 - {{htmlattrdef("mozbrowser")}} {{non-standard_inline}}
 
-  - :&#x20;
+  - : &#x20;
 
     > **Nota:** See {{bug(1318532)}} for exposing this to WebExtensions in Firefox.
 

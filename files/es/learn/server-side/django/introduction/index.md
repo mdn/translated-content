@@ -188,7 +188,7 @@ class Team(models.Model):
 
 El modelo de Django proporciona una API de consulta simple para buscar en la base de datos. Esta puede buscar concidencias contra varios campos al mismo tiempo usando diferentes criterios (ej. exacto, insensible a las mayúsculas, mayor que, etc.), y puede soportar sentencias complejas (por ejemplo, puedes especificar que se busque equipos U11 que tengan un nombre de equipo que empiece por "Fr" o termine con "al").
 
-El fragmento de código de más abajo muestra una función de visualización (manejador de recursos) para presentar en pantalla todos nuestros equipos U09. La línea en negrilla muestra como podemos usar la API de consulta del modelo para filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate como este criterio se pasa como argumento a la función `filter()` con el nombre del campo y tipo de coincidencia separados por un doble guion bajo: **team_level\_\_exact**).
+El fragmento de código de más abajo muestra una función de visualización (manejador de recursos) para presentar en pantalla todos nuestros equipos U09. La línea en negrilla muestra como podemos usar la API de consulta del modelo para filtrar todos los registros donde el campo `team_level` tenga exactamente el texto 'U09' (fíjate como este criterio se pasa como argumento a la función `filter()` con el nombre del campo y tipo de coincidencia separados por un doble guion bajo: **`team_level__exact`**).
 
 ```python
 ## filename: views.py

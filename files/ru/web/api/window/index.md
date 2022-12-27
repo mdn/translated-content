@@ -25,7 +25,7 @@ _Данный интерфейс наследует свойства из инт
   - : Точка доступа к богатой функциональности [XPCOM](/ru/docs/XPCOM). Некоторые свойства, т.к. [classes](/ru/docs/Components.classes), доступны только для достаточно привилегированного кода. **Web-код не должен использовать эти свойства.**
 - {{domxref("console","Window.console")}} {{Non-standard_inline}} {{ReadOnlyInline}}
   - : Возвращает ссылку на объект консоли, обеспечивающего доступ к консоли браузера.
-- {{domxref("Window.content")}} and Window.\_content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
+- {{domxref("Window.content")}} and Window.content {{Non-standard_inline}} {{obsolete_inline}}{{ReadOnlyInline}}
   - : Возвращает ссылку на элемент содержимого в текущем окне. Устаревший вариант в нижним подчёркиванием более не доступен для Web-содержимого.
 - {{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}
   - : Возвращает XUL контроллер объектов для текущего окна chrome.
