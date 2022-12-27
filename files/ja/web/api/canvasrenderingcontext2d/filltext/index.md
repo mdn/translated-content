@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.fillText()
 slug: Web/API/CanvasRenderingContext2D/fillText
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("CanvasRenderingContext2D")}} の **`fillText()`** はキャンバス 2D API のメソッドで、指定した座標にテキスト文字列を描画し、その文字を現在の {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}} で塗りつぶします。オプションの引数で、描画されるテキストの最大幅を指定すると、{{Glossary("user agent", "ユーザーエージェント")}}は、この幅に収まるようにテキストを圧縮したり、フォントサイズを縮小したりします。

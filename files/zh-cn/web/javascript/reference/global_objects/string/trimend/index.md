@@ -29,7 +29,7 @@ str.trimRight();
 
 ### 别名
 
-为了与 {{jsxref("String.prototype.padEnd")}} 等函数保持一致，标准方法名称为`trimEnd`。 但是，出于 Web 兼容性原因，`trimRight`仍然是`trimEnd`的别名。 在某些引擎中，这意味着：
+为了与 {{jsxref("String.prototype.padEnd")}} 等函数保持一致，标准方法名称为`trimEnd`。但是，出于 Web 兼容性原因，`trimRight`仍然是`trimEnd`的别名。在某些引擎中，这意味着：
 
 ```js
 String.prototype.trimRight.name === "trimEnd";

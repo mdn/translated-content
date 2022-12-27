@@ -11,13 +11,15 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Object/fromEntries
 ---
 {{JSRef}}
 
-El método **`Object.fromEntries()`** transforma una lista de pares con `[clave-valor] `en un objeto.
+El método **`Object.fromEntries()`** transforma una lista de pares con `[clave-valor]` en un objeto.
 
 {{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
 
 ## Sintaxis
 
-    Object.fromEntries(iterable);
+```
+Object.fromEntries(iterable);
+```
 
 ### Parámetros
 

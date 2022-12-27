@@ -2,6 +2,7 @@
 title: ConvolverNode
 slug: Web/API/ConvolverNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 `ConvolverNode` は {{domxref("AudioNode")}} の一種で、与えられた {{domxref("AudioBuffer")}} を用いて線形畳み込みを行います。リバーブの実装によく用いられます。 `ConvolverNode` は常に 1 つの入力と、1 つの出力を持ちます。

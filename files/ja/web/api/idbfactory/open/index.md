@@ -2,6 +2,7 @@
 title: IDBFactory.open
 slug: Web/API/IDBFactory/open
 ---
+
 {{APIRef("IDBFactory")}}
 
 {{domxref("IDBFactory")}} インターフェイスの **`open()`** メソッドは、[データベースへの接続](/ja/docs/IndexedDB#gloss_database_connection)を開くことを要求します。

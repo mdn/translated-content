@@ -17,7 +17,7 @@ Con las APIs de WebExtension, este tipo de botón es se llaman "browser actions"
 
 ## Un simple botón
 
-En esta sección vamos a crear una extension que agrega un botón a la barra de herramientas. Cuando el usuario de click en el botón, vamos abrir [https://developer.mozilla.org ](https://developer.mozilla.org)en una nueva pestaña.
+En esta sección vamos a crear una extension que agrega un botón a la barra de herramientas. Cuando el usuario de click en el botón, vamos abrir <https://developer.mozilla.org> en una nueva pestaña.
 
 Primero, crear una nueva carpeta "botón", y crea un archivo con el nombre de "manifest.json" con el siguiente contenido:
 
@@ -178,15 +178,17 @@ En nuestro JavaScript, esta a la espera de clicks en las opciones de nuestro pop
 
 La estructura de la extensión final debe ser como esta:
 
-    button/
-        icons/
-            page-16.png
-            page-32.png
-        popup/
-            choose_page.css
-            choose_page.html
-            choose_page.js
-        manifest.json
+```
+button/
+    icons/
+        page-16.png
+        page-32.png
+    popup/
+        choose_page.css
+        choose_page.html
+        choose_page.js
+    manifest.json
+```
 
 Ahora vamos a recargar la extensión, click en el botón otra vez e intenta dar click en las opciones del popup:
 

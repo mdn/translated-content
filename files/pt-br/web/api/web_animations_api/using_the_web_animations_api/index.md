@@ -68,7 +68,7 @@ Perceba que o fundo se mexe, a Alice gira e sua cor muda em sincronia com o giro
 }
 ```
 
-Isso muda a cor da Alice e a rotação do \`transform\` por 3 segundos em um ritmo constante (linear) e se repete infinitamente. No bloco do [@keyframes](/pt-BR/docs/Web/CSS/@keyframes) podemos ver que em 30% de cada repetição (por volta dos 900ms), a cor da Alice muda de preto para um vinho, e volta para o preto no final do loop.
+Isso muda a cor da Alice e a rotação do `transform` por 3 segundos em um ritmo constante (linear) e se repete infinitamente. No bloco do [@keyframes](/pt-BR/docs/Web/CSS/@keyframes) podemos ver que em 30% de cada repetição (por volta dos 900ms), a cor da Alice muda de preto para um vinho, e volta para o preto no final do loop.
 
 ### Mudando para o JavaScript
 

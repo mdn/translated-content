@@ -2,6 +2,7 @@
 title: UUID
 slug: Glossary/UUID
 ---
+
 **Universally Unique Identifier** (**UUID**) とは、あるリソースを、同じ種類の他のすべてのリソースの中から一意に識別するために使用されるラベルです。
 
 コンピューターシステムは、とても大きい桁の乱数を使って UUID をローカルで生成します。

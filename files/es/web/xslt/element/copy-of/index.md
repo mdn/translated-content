@@ -13,7 +13,9 @@ El elemento `<xsl:copy-of>` crea una copia completa (incluyendo nodos descendien
 
 ### Sintaxis
 
-    <xsl:copy-of select=EXPRESIÓN />
+```
+<xsl:copy-of select=EXPRESIÓN />
+```
 
 ### Atributos requeridos
 

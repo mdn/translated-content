@@ -3,6 +3,7 @@ title: Navigator.language
 slug: Web/API/Navigator/language
 original_slug: Web/API/NavigatorLanguage/language
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`Navigator.language`** は読み取り専用プロパティで、ユーザーの言語を表す文字列を返します。普通、ブラウザー UI の言語が返されます。

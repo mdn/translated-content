@@ -158,7 +158,7 @@ Los frameworks web proporcionan con frecuencia sistemas de plantillas. Éstas te
 
 Los frameworks web proporcionan con frecuencia un mecanismo para facilitar la generación de otros formatos a partir de los datos almacenados, incluyendo {{glossary("JSON")}} y {{glossary("XML")}}.
 
-Por ejemplo, el sistema de plantillas de Django te permite especificar variables usando una sintaxis de "llaves dobles" (ej. ` {`` { variable_name ``}``} `), que serán reemplazadas por valores pasados desde la función de visualización cuando la página sea renderizada. El sistema de plantillas también proporciona soporte para expresiones (con la sintaxis: `{% expression %}`), que permite a las plantillas realizar operaciones simples como iterar sobre la lista de valores pasados a la misma.
+Por ejemplo, el sistema de plantillas de Django te permite especificar variables usando una sintaxis de "llaves dobles" (ej. ` { { variable_name }} `), que serán reemplazadas por valores pasados desde la función de visualización cuando la página sea renderizada. El sistema de plantillas también proporciona soporte para expresiones (con la sintaxis: `{% expression %}`), que permite a las plantillas realizar operaciones simples como iterar sobre la lista de valores pasados a la misma.
 
 > **Nota:** Muchos otros sistemas de plantillas usan una sintaxis similar, ej.: Jinja2 (Python), Handlebars (JavaScript), Moustache (JavaScript), etc.
 

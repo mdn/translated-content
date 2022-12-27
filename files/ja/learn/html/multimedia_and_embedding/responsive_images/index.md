@@ -4,6 +4,7 @@ slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
 l10n:
   sourceCommit: c482f34f48d447bfb9ee76b76013dae3b66f45c7
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
 
 この記事では、レスポンシブ画像の概念 — 画面サイズ、解像度などの機能が大きく異なる機器で適切に動作する画像 — について学び、 HTML がそれを実装する上でどのような道具を提供しているかを見てみます。 レスポンシブ画像は、レスポンシブウェブデザインの一部にすぎませんが(そしてそれを実現する上で良いステージになりますが)、 [CSS のトピック](/ja/docs/Learn/CSS)の将来のモジュールで多くのことを学ぶトピックです。

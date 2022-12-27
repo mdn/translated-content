@@ -2,6 +2,7 @@
 title: AudioBuffer.length
 slug: Web/API/AudioBuffer/length
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`length`** は {{ domxref("AudioBuffer") }} インターフェイスのプロパティで、バッファーに格納された PCM データの長さをサンプルフレーム数で表す整数を返します。

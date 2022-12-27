@@ -254,7 +254,11 @@ Les valeurs suivantes sont uniquement implémentées pour l'une ou l'autre des p
 | `textfield-multiline`                  | Firefox                    | On utilisera `textarea` à la place.                                                                                                                                                                  |
 | `-apple-pay-button`                    | Safari                     | **iOS et macOS uniquement**. Disponible pour le Web à partir de iOS 10.1 et macOS 10.12.1                                                                                                            |
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{CSSSyntax}}
 
@@ -274,11 +278,7 @@ Voir également [cet exemple JSFiddle](https://jsfiddle.net/go392m5s/) qui illus
 
 ## Spécifications
 
-| Spécification                                                                                | État                                 | Commentaires         |
-| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Basic UI', "#appearance-switching", "appearance")}} | {{Spec2('CSS3 Basic UI')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 

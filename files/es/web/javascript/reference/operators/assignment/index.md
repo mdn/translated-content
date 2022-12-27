@@ -18,7 +18,9 @@ El operador de asignación (=) se utiliza para asignar un valor a una variable. 
 
 ## Sintaxis
 
-    Operador: x = y
+```
+Operador: x = y
+```
 
 ## Ejemplos
 

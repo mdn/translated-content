@@ -17,7 +17,9 @@ La función **`Math.acosh()`** retorna el arco coseno hiperbólico de un número
 
 ## Sintaxis
 
-    Math.acosh(x)
+```
+Math.acosh(x)
+```
 
 ### Parámetros
 

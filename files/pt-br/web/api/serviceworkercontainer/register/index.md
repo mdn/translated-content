@@ -9,7 +9,7 @@ O método **`register()`**da interface {{domxref("ServiceWorkerContainer")}} cri
 
 Em caso de sucesso, um registro de service worker vincula o URL do script fornecido ao es*copo*, que é usado posteriormente para a navegação correspondente. Você pode chamar esse método incondicionalmente da página controlada. Ou seja, você não precisa primeiro verificar se há um registro ativo.
 
-Há uma frequente confusão em relação ao significado e uso do escopo. Uma vez que um service worker não pode ter um escopo mais amplo do que sua própria localização, use apenas a opção \`scope\` quando precisar de um escopo mais limitado do que o padrão.
+Há uma frequente confusão em relação ao significado e uso do escopo. Uma vez que um service worker não pode ter um escopo mais amplo do que sua própria localização, use apenas a opção `scope` quando precisar de um escopo mais limitado do que o padrão.
 
 ## Síntaxe
 

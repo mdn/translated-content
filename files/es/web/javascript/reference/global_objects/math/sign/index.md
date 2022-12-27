@@ -15,7 +15,9 @@ La función **`Math.sign()`** retorna el signo de un número, indicando si el n�
 
 ## Syntaxis
 
-    Math.sign(x)
+```
+Math.sign(x)
+```
 
 ### Parametros
 

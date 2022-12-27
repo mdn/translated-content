@@ -2,6 +2,7 @@
 title: HTML の表の基本
 slug: Learn/HTML/Tables/Basics
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
 
 この記事は、 HTML の表を始めるために、行やセルなどとても基本的なところから、見出し、複数列や行のセルの結合、スタイルを適用するためにセルの列をすべてグループ化する方法などを扱います。

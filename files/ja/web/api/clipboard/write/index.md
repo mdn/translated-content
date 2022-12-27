@@ -2,6 +2,7 @@
 title: Clipboard.write()
 slug: Web/API/Clipboard/write
 ---
+
 {{APIRef("Clipboard API")}}
 
 {{domxref("Clipboard")}} の **`write()`** メソッドは、画像などの任意のデータをクリップボードに書き込みます。切り取りやコピーの機能を実装するのに利用することができます。

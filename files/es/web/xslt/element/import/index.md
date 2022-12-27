@@ -13,7 +13,9 @@ El elemento `<xsl:import>` sirve para importar el contenido de una hoja de estil
 
 ### Sintaxis
 
-    <xsl:import href=URI  />
+```
+<xsl:import href=URI  />
+```
 
 ### Atributos requeridos
 

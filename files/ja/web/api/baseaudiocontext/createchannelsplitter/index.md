@@ -3,6 +3,7 @@ title: BaseAudioContext.createChannelSplitter()
 slug: Web/API/BaseAudioContext/createChannelSplitter
 original_slug: Web/API/AudioContext/createChannelSplitter
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createChannelSplitter()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、 {{domxref("ChannelSplitterNode")}} を作成します。これは音声ストリームの個々のチャンネルにアクセスし、それらを個別に処理するために使用されます。

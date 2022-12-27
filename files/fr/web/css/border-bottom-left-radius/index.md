@@ -50,9 +50,13 @@ Cette propriété peut prendre deux formes :
 - `<length-percentage>`
   - : La mesure du rayon ou de l'un des demi-axes de l'ellipse. Une valeur absolue peut être exprimée dans n'importe quelle unité autorisée pour le type {{cssxref("&lt;length&gt;")}}. Les valeurs exprimées en pourcentage font référence à la hauteur de la boîte pour les valeurs verticales et à la largeur de la boîte pour les valeurs horizontales. Les valeurs négatives ne sont pas autorisées.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -101,15 +105,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Backgrounds', '#border-bottom-left-radius', 'border-bottom-left-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-bottom-left-radius")}}
+{{Compat}}
 
 ## Voir aussi
 

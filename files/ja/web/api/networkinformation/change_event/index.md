@@ -3,6 +3,7 @@ title: NetworkInformation.onchange
 slug: Web/API/NetworkInformation/change_event
 original_slug: Web/API/NetworkInformation/onchange
 ---
+
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
 **`NetworkInformation.onchange`** イベントハンドラは、接続情報が変化したときに発火し、{{domxref("NetworkInformation")}} オブジェクトが {{event("change")}} を受け取るコードを含みます。

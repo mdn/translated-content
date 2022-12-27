@@ -4,6 +4,7 @@ slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
 l10n:
   sourceCommit: 4eed7cfb25979c09def6634b836eddc1485ce57b
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML")}}
 
 HTML の文書の{{glossary("Head", "ヘッド")}}部は、ページが読み込まれてもウェブブラウザーには表示されない部分です。この部分には、例えば、 {{htmlelement("title")}} といった情報や {{glossary("CSS")}} へのリンク（HTML を CSS で修飾する場合）、独自のファビコンへのリンク、そしてほかのメタデータ（HTML を誰が書いたのかとかその HTML を表現する重要なキーワードなど）の情報を含んでいます。ウェブブラウザーは{{glossary("Head", "ヘッド")}}部の情報を、 HTML 文書を正しく描画するために使用します。この記事では、上記のすべてのことと、さらに、読者にマークアップ言語と頭に入れておくべきほかのコードについてよい基礎を与えます。

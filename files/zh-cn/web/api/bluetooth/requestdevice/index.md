@@ -21,7 +21,7 @@ Bluetooth.requestDevice(options).then(function(bluetoothDevice) { ... })
 
 - options
 
-  - : 设置设备请求选项的对象. 可用的选项是：
+  - : 设置设备请求选项的对象。可用的选项是：
 
     - `filters[]`: 一个 BluetoothScanFilters 数组。此过滤器由一个 BluetoothServiceUUID 数组，一个名称参数和一个 namePrefix 参数组成。
     - `optionalServices[]`: 一个 BluetoothServiceUUID 数组。
@@ -34,9 +34,9 @@ Bluetooth.requestDevice(options).then(function(bluetoothDevice) { ... })
 
 //. 标准心率服务。
 
-//. 两个16位服务ID 0x1802和0x1803。
+//. 两个 16 位服务 ID 0x1802 和 0x1803。
 
-//. 专有的128位UUID服务c48e6067-5295-48d3-8d5c-0395f61792b1。
+//. 专有的 128 位 UUID 服务 c48e6067-5295-48d3-8d5c-0395f61792b1。
 
 //. 名称为“设备名”的设备。
 
@@ -60,7 +60,7 @@ let options = {
 }
 
 navigator.bluetooth.requestDevice(options).then(function(device) {
-  console.log('名称: ' + device.name);
+  console.log('名称：' + device.name);
   // 在此处实现设备调用
 })
 .catch(function(error) {

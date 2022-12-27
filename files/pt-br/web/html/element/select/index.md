@@ -22,7 +22,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globa
 - {{htmlattrdef("autofocus")}} {{HTMLVersionInline("5")}}
   - : Este atributo permite especificar que um controle de formulário deve ter foco de entrada quando a página é carregada, a não ser que o usuário o substitua, por exemplo digitando em um controle diferente. Somente um elemento de formulário em um documento pode ter o atributo `autofocus`, que é booleano.
 - {{htmlattrdef("disabled")}}
-  - : Este atributo booleano indica que o usuário não pode interagir com o controle. Caso esse atributo não seja especificado, o controle herda a configuração do elemento que o contém, por exemplo o elemento `fieldset`; se não há nenhum elemento que o contém com o atributo `disabled,` então o controle está habilitado.
+  - : Este atributo booleano indica que o usuário não pode interagir com o controle. Caso esse atributo não seja especificado, o controle herda a configuração do elemento que o contém, por exemplo o elemento `fieldset`; se não há nenhum elemento que o contém com o atributo `disabled`, então o controle está habilitado.
 - {{htmlattrdef("form")}} {{HTMLVersionInline("5")}}
   - : O elemento form ao qual o elemento select é associado (algo como "formulário dono" do select). Se este atributo for especificado, seu valor deve ser o ID de um elemento form no mesmo documento. Isso permite que você coloque elementos select em qualquer lugar dentro do documento, e não apenas como descendentes de elementos form.
 - {{htmlattrdef("multiple")}}

@@ -2,6 +2,7 @@
 title: MediaDevices.getUserMedia()
 slug: Web/API/MediaDevices/getUserMedia
 ---
+
 {{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 {{domxref("MediaDevices")}}**`.getUserMedia()`** メソッドは、要求された種類のメディアを含むトラックを持つ {{domxref("MediaStream")}} を生成するメディア入力を使用する許可をユーザーに求めます。

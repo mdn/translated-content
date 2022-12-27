@@ -2,6 +2,7 @@
 title: PushEvent.PushEvent()
 slug: Web/API/PushEvent/PushEvent
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 **`PushEvent()`** コンストラクタは、新しい {{domxref("PushEvent")}} オブジェクトを生成します。このコンストラクタは、service worker にのみ公開されていることに注意してください。

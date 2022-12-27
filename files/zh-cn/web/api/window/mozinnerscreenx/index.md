@@ -19,7 +19,7 @@ screenX = window.mozInnerScreenX;
 
 ## 值
 
-- _screenX_ 存储的是`window.mozInnerScreenX 的属性值。`
+- _screenX_ 存储的是 `window.mozInnerScreenX` 的属性值。
 - `window.mozInnerScreenX` 属性的值是一个浮点数，只读; 它没有默认值。
 
 ## 规范

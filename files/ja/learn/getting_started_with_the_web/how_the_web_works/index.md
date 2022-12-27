@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web/How_the_Web_works
 l10n:
   sourceCommit: 281934f1f2deb6612a939f8248f7be89ea321843
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Getting_started_with_the_web/Publishing_your_website", "Learn/Getting_started_with_the_web")}}
 
 *ウェブのしくみ*では、あなたがコンピューターや携帯電話のウェブブラウザーでウェブページを見るときに起こることを簡単に説明します。

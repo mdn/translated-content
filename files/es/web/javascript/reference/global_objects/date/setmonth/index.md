@@ -8,11 +8,15 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Date/setMonth
 
 ## Sintaxis
 
-    dateObj.setMonth(monthValue[,dayValue])
+```
+dateObj.setMonth(monthValue[,dayValue])
+```
 
 ### Versiones anteriores a JavaScript 1.3
 
-    dateObj.setMonth(monthValue)
+```
+dateObj.setMonth(monthValue)
+```
 
 ### Parámetros
 

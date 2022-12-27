@@ -2,6 +2,7 @@
 title: PushMessageData.blob()
 slug: Web/API/PushMessageData/blob
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 {{domxref("PushMessageData")}} インターフェースの **`blob()`** メソッドは、プッシュメッセージデータを {{domxref("Blob")}} オブジェクトとして抽出します。

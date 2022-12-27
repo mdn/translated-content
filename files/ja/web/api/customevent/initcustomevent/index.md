@@ -2,6 +2,7 @@
 title: CustomEvent.initCustomEvent()
 slug: Web/API/CustomEvent/initCustomEvent
 ---
+
 {{APIRef("DOM")}}{{Deprecated_header}}
 
 **`CustomEvent.initCustomEvent()`** メソッドは {{domxref("CustomEvent")}} オブジェクトを初期化します。

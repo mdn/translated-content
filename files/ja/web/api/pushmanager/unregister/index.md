@@ -2,6 +2,7 @@
 title: PushManager.unregister()
 slug: Web/API/PushManager/unregister
 ---
+
 {{deprecated_header}}{{ ApiRef("Push API")}}
 
 **`unregister()`** メソッドは、システムに特定の端点の登録を解除して削除するよう依頼するために使用していました。更新された API では、加入は {{domxref("PushSubscription.unsubscribe()")}} メソッドで登録解除することができます。

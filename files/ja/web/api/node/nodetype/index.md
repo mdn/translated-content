@@ -2,6 +2,7 @@
 title: Node.nodeType
 slug: Web/API/Node/nodeType
 ---
+
 {{APIRef("DOM")}}
 
 **`nodeType`** は {{domxref("Node")}} インターフェイスの読み取り専用プロパティであり、整数値でこのノードがなんであるかを識別します。これは様々なノードの種類、例えば {{domxref("Element", "elements")}}, {{domxref("Text", "text")}}, {{domxref("Comment", "comments")}} を見分けます。

@@ -121,13 +121,11 @@ Pour les navigateurs qui prennent en charge `element`, on peut ici voir un arri�
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                             | Commentaires      |
-| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
-| {{SpecName('CSS4 Images', '#element-notation', 'Using Elements as Images: the element() notation')}} | {{Spec2('CSS4 Images')}} | Reporté pour CSS4 |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.image.element")}}
+{{Compat}}
 
 ## Voir aussi
 

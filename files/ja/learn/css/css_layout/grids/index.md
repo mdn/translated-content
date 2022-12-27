@@ -2,6 +2,7 @@
 title: グリッド
 slug: Learn/CSS/CSS_layout/Grids
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
 
 CSS グリッドレイアウト（Grid Layout）は、ウェブ用の 2 次元レイアウトシステムです。 これにより、コンテンツを行と列にレイアウトすることができ、複雑なレイアウトを簡単に構築できるようにする多くの機能があります。 この記事では、ページレイアウトを始めるために知っておくべきことをすべて説明します。

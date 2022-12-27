@@ -2,6 +2,7 @@
 title: Navigator.permissions
 slug: Web/API/Navigator/permissions
 ---
+
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 **`Navigator.permissions`** 読み取り専用プロパティは、[Permissions API](/ja/docs/Web/API/Permissions_API) の対象となる API のパーミッションの状態を照会および更新するために使用できる {{domxref("Permissions")}} オブジェクトを返します。

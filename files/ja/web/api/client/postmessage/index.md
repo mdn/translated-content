@@ -2,6 +2,7 @@
 title: Client.postMessage()
 slug: Web/API/Client/postMessage
 ---
+
 {{APIRef("Service Worker API")}}
 
 **`postMessage()`** は {{domxref("Client")}} インターフェイスのメソッドで、サービスワーカーがクライアント ({{domxref("Window")}}, {{domxref("Worker")}}, {{domxref("SharedWorker")}}) にメッセージを送信することができます。 メッセージは、 {{domxref("ServiceWorkerContainer", "navigator.serviceWorker")}} の "`message`" イベントで受信されます。

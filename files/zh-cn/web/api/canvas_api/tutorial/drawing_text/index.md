@@ -69,9 +69,9 @@ draw();
 - {{domxref("CanvasRenderingContext2D.textAlign", "textAlign = value")}}
   - : 文本对齐选项。可选的值包括：`start`, `end`, `left`, `right` or `center`. 默认值是 `start`。
 - {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline = value")}}
-  - : 基线对齐选项。可选的值包括：`top`, `hanging`, `middle`, `alphabetic`, `ideographic`, `bottom`。默认值是 `alphabetic。`
+  - : 基线对齐选项。可选的值包括：`top`, `hanging`, `middle`, `alphabetic`, `ideographic`, `bottom`。默认值是 `alphabetic`。
 - {{domxref("CanvasRenderingContext2D.direction", "direction = value")}}
-  - : 文本方向。可能的值包括：`ltr`, `rtl`, `inherit`。默认值是 `inherit。`
+  - : 文本方向。可能的值包括：`ltr`, `rtl`, `inherit`。默认值是 `inherit`。
 
 如果你之前使用过 CSS，那么这些选项你会很熟悉。
 

@@ -2,6 +2,7 @@
 title: 通知 API の使用
 slug: Web/API/Notifications_API/Using_the_Notifications_API
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 [通知 API](/ja/docs/Web/API/Notifications_API) は、ウェブページやアプリからシステムレベルでページ外部に表示される通知を送ることを可能にします。これにより、アプリケーションがアイドルやバックグラウンドの状態であっても、アプリからユーザーに情報を送信することができます。この記事では、アプリで API を使用する方法の基本を見ていきます。

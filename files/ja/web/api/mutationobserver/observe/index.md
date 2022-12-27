@@ -2,6 +2,7 @@
 title: MutationObserver.observe()
 slug: Web/API/MutationObserver/observe
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 {{domxref("MutationObserver")}} の **`observe()`** メソッドは、`MutationObserver` コールバックを設定し、与えられたオプションに適合する DOM への変更の通知の受信を開始します。設定によっては、オブザーバーは DOM ツリー内の単一の {{domxref("Node", "ノード")}} を監視したり、そのノードとその子孫ノードの一部またはすべてを監視したりします。

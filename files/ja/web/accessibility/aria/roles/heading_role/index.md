@@ -2,6 +2,7 @@
 title: 'ARIA: heading ロール'
 slug: Web/Accessibility/ARIA/Roles/heading_role
 ---
+
 見出し (`heading`) ロールは、この要素をページやセクションの見出しとして定義します。 ページに構造を与えるために、セクション間の関係を示すレベルも提供するべきです。
 
 ```html

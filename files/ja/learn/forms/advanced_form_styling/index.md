@@ -5,6 +5,7 @@ l10n:
   sourceCommit: 05324ee8658ea78ab284a736511581effbaf784b
 original_slug: Learn/Forms/Learn/Forms/Advanced_form_styling
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Styling_web_forms", "Learn/Forms/UI_pseudo-classes", "Learn/Forms")}}
 
 この記事では、スタイル設定がより難しい、「不良」「劣悪」に分類される種類のフォームコントロールにスタイル設定するために、 CSS で何ができるかを見ていきます。[前の記事](/ja/docs/Learn/Forms/Styling_web_forms)で見たように、テキストフィールドやボタンでの CSS 使用はまったく問題がありません。ここからは、ウェブフォームへのスタイル設定の闇の部分を見ていきます。

@@ -40,7 +40,4 @@ shape-image-threshold: 0.7;
 
 ## Spécifications
 
-| Spécification                                                                                        | État                             | Commentaires                                                                                   |
-| ---------------------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------- |
-| {{SpecName('CSS4 Colors', '#type-def-alpha-value', '&lt;alpha-value&gt;')}} | {{Spec2('CSS4 Colors')}} | Aucune modification significative.                                                             |
-| {{SpecName('CSS3 Colors', '#alphavaluedt', '&lt;alpha-value&gt;')}}             | {{Spec2('CSS3 Colors')}} | Introduit le type `<alpha-value>` ainsi que les notations fonctionnelles `rgba()` et `hsla()`. |
+{{Specifications}}

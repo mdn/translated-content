@@ -2,6 +2,7 @@
 title: MessageEvent.source
 slug: Web/API/MessageEvent/source
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`source`** は {{domxref("MessageEvent")}} インターフェイスの読み取り専用プロパティで、メッセージ送信者を表す `MessageEventSource` （{{domxref("WindowProxy")}}, {{domxref("MessagePort")}}, {{domxref("ServiceWorker")}} オブジェクトのいずれか）です。

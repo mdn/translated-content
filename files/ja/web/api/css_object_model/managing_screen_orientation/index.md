@@ -2,6 +2,7 @@
 title: 画面の向きを制御する
 slug: Web/API/CSS_Object_Model/Managing_screen_orientation
 ---
+
 {{DefaultAPISidebar("Screen Orientation API")}}{{SeeCompatTable}}
 
 画面の向きは、[端末の向き](/ja/docs/WebAPI/Detecting_device_orientation)と異なる場合があります。端末が自身の向きを検知することができない場合でも、画面には向きがあります。また端末が自身の向きを知ることが可能であっても、Web アプリケーションのインターフェイスを維持または適合するために画面の向きを制御できるとよいでしょう。

@@ -50,7 +50,7 @@ function leftFillNum(num, targetLength) {
 
 const num = 123;
 console.log(leftFillNum(num, 5));
-// 预期输出: "00123"
+// 预期输出："00123"
 ```
 
 ## 规范

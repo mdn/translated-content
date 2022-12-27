@@ -19,7 +19,9 @@ El método **`Object.is()`** determina si dos valores [son iguales](/es/docs/Web
 
 ## Síntaxis
 
-    Object.is(valor1, valor2);
+```
+Object.is(valor1, valor2);
+```
 
 ### Parámetros
 
@@ -100,8 +102,6 @@ if (!Object.is) {
 ## Compatibilidad en navegadores
 
 {{Compat("javascript.builtins.Object.is")}}
-
-##
 
 ## Ver también
 

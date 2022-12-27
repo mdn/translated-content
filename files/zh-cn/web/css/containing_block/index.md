@@ -37,7 +37,7 @@ original_slug: Web/CSS/All_About_The_Containing_Block
     1. {{cssxref("transform")}} 或 {{cssxref("perspective")}} 的值不是 `none`
     2. {{cssxref("will-change")}} 的值是 `transform` 或 `perspective`
     3. {{cssxref("filter")}} 的值不是 `none` 或 `will-change` 的值是 `filter`(只在 Firefox 下生效).
-    4. {{cssxref("contain")}} 的值是 `paint` (例如: `contain: paint;`)
+    4. {{cssxref("contain")}} 的值是 `paint` (例如：`contain: paint;`)
 
 > **备注：** 根元素 (\<html>) 所在的包含块是一个被称为**初始包含块**的矩形。他的尺寸是视口 viewport (for continuous media) 或分页媒体 page media (for paged media).
 

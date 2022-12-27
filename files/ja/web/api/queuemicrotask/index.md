@@ -2,6 +2,7 @@
 title: queueMicrotask()
 slug: Web/API/queueMicrotask
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`queueMicrotask()`** は {{domxref("Window")}} または {{domxref("Worker")}} インターフェイスのメソッドです。ブラウザーのイベントループへ制御が戻る前の安全なタイミングで実行されるマイクロタスクをキューします。

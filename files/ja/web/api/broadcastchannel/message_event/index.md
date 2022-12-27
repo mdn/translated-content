@@ -2,6 +2,7 @@
 title: 'BroadcastChannel: message イベント'
 slug: Web/API/BroadcastChannel/message_event
 ---
+
 {{APIRef}}
 
 `message` イベントは、メッセージがそのチャネルに到着したときに {{domxref('BroadcastChannel')}} オブジェクトに対して発生します。

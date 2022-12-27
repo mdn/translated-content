@@ -2,6 +2,7 @@
 title: DOMRectReadOnly
 slug: Web/API/DOMRectReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMRectReadOnly`** インターフェイスは {{domxref("DOMRect")}} で使用される標準プロパティを設定し、すべてのプロパティが変更不可の矩形を定義します。

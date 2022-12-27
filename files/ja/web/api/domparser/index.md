@@ -2,6 +2,7 @@
 title: DOMParser
 slug: Web/API/DOMParser
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMParser`** インターフェイスは、 {{Glossary("XML")}} や {{Glossary("HTML")}} ソースコードを文字列から DOM の {{domxref("Document")}} に解釈する機能を提供します。

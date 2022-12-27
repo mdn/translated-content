@@ -77,15 +77,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                    | État                                             | Commentaires         |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-end-end-radius", "border-end-end-radius")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-end-end-radius")}}
+{{Compat}}
 
 ## Voir aussi
 

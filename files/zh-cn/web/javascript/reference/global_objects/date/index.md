@@ -37,14 +37,14 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 
   - : 表示日期的字符串值。该字符串应该能被 {{jsxref("Date.parse()")}} 正确方法识别（即符合 [IETF-compliant RFC 2822 timestamps](http://tools.ietf.org/html/rfc2822#page-14) 或 [version of ISO8601](http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)）。
 
-    > **备注：** 由于浏览器之间的差异与不一致性，强烈不推荐使用`Date`构造函数来解析日期字符串 (或使用与其等价的`Date.parse`)。对 RFC 2822 格式的日期仅有约定俗成的支持。 对 ISO 8601 格式的支持中，仅有日期的串 (例如 "1970-01-01") 会被处理为 UTC 而不是本地时间，与其他格式的串的处理不同。
+    > **备注：** 由于浏览器之间的差异与不一致性，强烈不推荐使用`Date`构造函数来解析日期字符串 (或使用与其等价的`Date.parse`)。对 RFC 2822 格式的日期仅有约定俗成的支持。对 ISO 8601 格式的支持中，仅有日期的串 (例如 "1970-01-01") 会被处理为 UTC 而不是本地时间，与其他格式的串的处理不同。
 
 #### 分别提供日期与时间的每一个成员
 
 当至少提供了年份与月份时，这一形式的 `Date()` 返回的 `Date` 对象中的每一个成员都来自下列参数。没有提供的成员将使用最小可能值（对日期为`1`，其他为`0`）。
 
 - `year`
-  - : 表示年份的整数值。 0 到 99 会被映射至 1900 年至 1999 年，其它值代表实际年份。参见 [示例](#例子：将两位数年份映射为_1900_-_1999_年)。
+  - : 表示年份的整数值。0 到 99 会被映射至 1900 年至 1999 年，其它值代表实际年份。参见 [示例](#例子：将两位数年份映射为_1900_-_1999_年)。
 - `monthIndex`
   - : 表示月份的整数值，从 0（1 月）到 11（12 月）。
 - date{{optional_inline}}
@@ -274,7 +274,7 @@ yourFunctionReturn = printElapsedTime(yourFunction);
 var seconds = Math.floor(Date.now() / 1000);
 ```
 
-注意此处需要返回一个整数 （仅做除法得到的不是整数），并且需要返回实际已经经过的秒数（所以这里使用了{{jsxref("Math.floor()")}}而不是{{jsxref("Math.round()")}}).
+注意此处需要返回一个整数（仅做除法得到的不是整数），并且需要返回实际已经经过的秒数（所以这里使用了{{jsxref("Math.floor()")}}而不是{{jsxref("Math.round()")}}).
 
 ## 规范
 

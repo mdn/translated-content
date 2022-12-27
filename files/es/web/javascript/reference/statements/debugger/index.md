@@ -13,7 +13,9 @@ La sentencia **debugger** invoca cualquier funcionalidad de depuración disponib
 
 ## Sintaxis
 
-    debugger;
+```
+debugger;
+```
 
 ## Ejemplos
 

@@ -34,9 +34,13 @@ overflow-anchor: unset;
 - `none`
   - : L'élément ne sera pas sélectionné comme ancre.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -50,15 +54,11 @@ body {
 
 ## Spécifications
 
-| Spécification                                                                                                    | État                                         | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS Scroll Anchoring', '#propdef-overflow-anchor', 'overflow-anchor')}} | {{Spec2('CSS Scroll Anchoring')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overflow-anchor")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -42,20 +42,32 @@ throw true;     // генерирует исключение, значением
    this.name = "Исключение, определённое пользователем";
 }
 function getMonthName(mo) {
-   mo = mo-1; // Нужно скорректировать номер месяца согласно индексам массива (1=Jan, 12=Dec)
-   var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
-      "Aug", "Sep", "Oct", "Nov", "Dec"];
-   if (months[mo] !== undefined) {
-      return months[mo];
-   } else {
-      throw new UserException("Неверно указан номер месяца");
-   }
+   mo = mo - 1; // Нужно скорректировать номер месяца согласно индексам массива (1 = Jan, 12 = Dec)
+   const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+   ];
+   if (months[mo] !== undefined) return months[mo];
+   
+   throw new UserException("Неверно указан номер месяца");
 }
+
+let monthName;
 
 try {
    // statements to try
-   var myMonth = 15; // 15 находится вне границ массива, что приведёт к исключению
-   var monthName = getMonthName(myMonth);
+   const myMonth = 15; // 15 находится вне границ массива, что приведёт к исключению
+   monthName = getMonthName(myMonth);
 } catch (e) {
    monthName = "неизвестен";
    logMyErrors(e.message, e.name); // передаём исключение в обработчик ошибок
@@ -81,7 +93,7 @@ try {
 
 function ZipCode(zip) {
    zip = new String(zip);
-   var pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
+   const pattern = /[0-9]{5}([- ]?[0-9]{4})?/;
    if (pattern.test(zip)) {
       // значение почтового индекса должно быть первым совпадением в строке
       this.value = zip.match(pattern)[0];
@@ -109,18 +121,16 @@ function ZipCodeFormatException(value) {
  * для США.
  */
 
-var ZIPCODE_INVALID = -1;
-var ZIPCODE_UNKNOWN_ERROR = -2;
+const ZIPCODE_INVALID = -1;
+const ZIPCODE_UNKNOWN_ERROR = -2;
 
 function verifyZipCode(z) {
    try {
-      z = new ZipCode(z);
+     z = new ZipCode(z);
    } catch (e) {
-      if (e instanceof ZipCodeFormatException) {
-         return ZIPCODE_INVALID;
-      } else {
-         return ZIPCODE_UNKNOWN_ERROR;
-      }
+     return e instanceof ZipCodeFormatException
+			? ZIPCODE_INVALID
+			: IPCODE_UNKNOWN_ERROR;
    }
    return z;
 }

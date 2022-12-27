@@ -2,6 +2,7 @@
 title: PerformanceObserver
 slug: Web/API/PerformanceObserver
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 **`PerformanceObserver`** インターフェイスは、パフォーマンス測定イベントを監視し、ブラウザーのパフォーマンスタイムラインに記録されているので、新しい{{domxref("PerformanceEntry","performance entries", '', 'true')}} の通知を受けるために使用されます。

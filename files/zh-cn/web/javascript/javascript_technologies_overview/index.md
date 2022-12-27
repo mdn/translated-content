@@ -54,7 +54,7 @@ ECMAScript 版本由每年的 ECMA 大会批准并作为标准发布。所有的
 - [ECMAScript 一致性测试套件仓库](https://github.com/tc39/test262)
 - [TC39 会议记录](https://github.com/tc39/notes)
 - [ECMAScript 规范讨论；当前邮件列表](https://es.discourse.group/)
-- [ECMAScript 规范讨论；历史邮件列表档案（至 2021 年 3月）](https://esdiscuss.org/)
+- [ECMAScript 规范讨论；历史邮件列表档案（至 2021 年 3 月）](https://esdiscuss.org/)
 
 ## DOM API
 

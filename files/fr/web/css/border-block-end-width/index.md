@@ -31,9 +31,13 @@ border-block-end-width: thick;
 - `<'border-width'>`
   - : La largeur utilisée pour la bordure, voir {{cssxref("border-width")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -67,15 +71,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                        | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-end-width", "border-block-end-width")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-block-end-width")}}
+{{Compat}}
 
 ## Voir aussi
 

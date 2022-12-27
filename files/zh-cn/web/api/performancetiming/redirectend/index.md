@@ -7,7 +7,7 @@ slug: Web/API/PerformanceTiming/redirectEnd
 
 ## 概要
 
-**`PerformanceTiming.redirectEnd`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为最后一次的 HTTP 重定向被完成且 HTTP 响应的最后一个字节被接收之时的 Unix 毫秒时间戳。如果没有发生重定向，或者其中一个重定向不同源，则该值返回 `0。`
+**`PerformanceTiming.redirectEnd`** 是一个返回代表一个时刻的 `unsigned long long` 型只读属性，为最后一次的 HTTP 重定向被完成且 HTTP 响应的最后一个字节被接收之时的 Unix 毫秒时间戳。如果没有发生重定向，或者其中一个重定向不同源，则该值返回 `0`。
 
 ## 语法
 

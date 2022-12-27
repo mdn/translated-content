@@ -2,6 +2,7 @@
 title: CloseEvent()
 slug: Web/API/CloseEvent/CloseEvent
 ---
+
 {{APIRef("Websockets API")}}
 
 **`CloseEvent()`** コンストラクターは新しい {{domxref("CloseEvent")}} オブジェクトを作成します。

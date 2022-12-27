@@ -2,6 +2,7 @@
 title: 'MediaStreamTrack: mute イベント'
 slug: Web/API/MediaStreamTrack/mute_event
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`mute`** イベントは、トラックのソースが一時的にメディアデータを提供することができなくなったときに {{domxref("MediaStreamTrack")}} へ送られます。

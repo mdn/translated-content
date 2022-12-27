@@ -2,6 +2,7 @@
 title: DOMStringList
 slug: Web/API/DOMStringList
 ---
+
 {{APIRef("DOM")}}
 
 [DOMString](/ja/DOM/DOMString) (strings) のリストを含むいくつかの API が返す型です。

@@ -3,6 +3,7 @@ title: skewY()
 slug: conflicting/Web/CSS/transform-function/skewX
 original_slug: Web/CSS/transform-function/skewY()
 ---
+
 {{CSSRef}}
 
 **`skewY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、要素を二次元平面上で垂直方向にゆがめる変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。

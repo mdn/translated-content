@@ -2,6 +2,7 @@
 title: CSS Font Loading API
 slug: Web/API/CSS_Font_Loading_API
 ---
+
 {{DefaultAPISidebar("CSS Font Loading API")}}{{SeeCompatTable}}
 
 CSS Font Loading API は動的にフォントリソースをロードするイベントやインターフェイスを提供します。

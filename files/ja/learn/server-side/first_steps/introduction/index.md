@@ -2,6 +2,7 @@
 title: サーバサイドの概要
 slug: Learn/Server-side/First_steps/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Server-side/First_steps/Client-Server_overview", "Learn/Server-side/First_steps")}}
 
 MDN のサーバサイドプログラミング入門コースにようこそ！この最初の記事では、「それはどんなもの？」、「クライアントサイドプログラミングとはどう違う？」、「なぜ便利なの？」 という質問に答えながら、ハイレベルな視点からサーバサイドプログラミングを見ていきます。この記事を読めば、サーバサイドコーディングを行うことで、 Web サイトにどんな機能を加えることができるか、理解できるようになります。

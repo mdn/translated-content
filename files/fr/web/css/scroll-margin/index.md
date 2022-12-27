@@ -36,18 +36,18 @@ scroll-margin: unset;
 - `<length>`
   - : Un décalage par rapport au côté correspondant pour le conteneur de défilement. Voir {{cssxref("&lt;length&gt;")}} pour les valeurs possibles.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin", "scroll-margin")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-margin")}}
+{{Compat}}

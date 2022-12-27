@@ -135,7 +135,7 @@ superHeroes["members"][1]["powers"][2]
 ]
 ```
 
-上面是完全合法的 JSON。您只需要通过数组索引就可以访问数组元素，如`[0]["powers"][0]。`
+上面是完全合法的 JSON。您只需要通过数组索引就可以访问数组元素，如 `[0]["powers"][0]`。
 
 ### 其他注意事项
 
@@ -283,7 +283,7 @@ function showHeroes(jsonObj) {
 
 接下来，我们使用一个循环来，遍历每个元素。对于每一个元素，我们：
 
-1. 创建几个元素：一个 `<article>`,一个 `<h2>`, 三个 `<p>`s, 和一个 `<ul>。`
+1. 创建几个元素：一个 `<article>`,一个 `<h2>`, 三个 `<p>`s, 和一个 `<ul>`。
 2. 设置 `<h2>` 为当前英雄的 `name`。
 3. 使用他们的`secretIdentity`, `age`, "Superpowers:" 介绍信息列表 填充三个段落来。
 4. 保存 `powers` 属性于另一个变量 `superPowers`，包含英雄的`superpowers`列表。

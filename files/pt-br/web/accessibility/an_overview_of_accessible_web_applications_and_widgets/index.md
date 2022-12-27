@@ -20,7 +20,7 @@ A Rede Mundial está mudando. Estatísticamente, os sítios baseados em páginas
 
 ## O problema
 
-A maior parte do conjunto de ferramentas JavaScript oferece uma biblioteca de utilização de _widgets_ que imita o comportamento de interfaces de Ambiente familiares. Deslizantes, barras de menus, visão de arquivos em lista e muito mais pode ser construído com uma combinação de JavaScript, CSS e HTML. Uma vez que a especificação da HTML 4 não fornece etiquetas integradas (_built-in tags_) que descrevam estes tipos de _widgets_ semanticamente, os desenvolvedores recorrem ao uso de elementos genéricos, tais como \<div> e \<span>. Embora isto resulte em um _widget_ que se pareça com seu duplo de ambiente, geralmente não existe informação semântica suficiente, na marcação, para torná-lo utilizável por uma tecnologia assistiva. Teor dinâmico em uma página da Rede Mundial pode ser particularmente problemático para quem, por alguma razão, não pode ver a tela. Cotações de ações, alimentação instantânea de atualizações do twitter, indicadores de progresso e conteúdos similares alteram o DOM, enquanto uma tecnologia assistiva (TA/AT) pode não ser alertada disso. Aqui é onde o conjunto [ARIA](/en/ARIA "ARIA") entra.
+A maior parte do conjunto de ferramentas JavaScript oferece uma biblioteca de utilização de _widgets_ que imita o comportamento de interfaces de Ambiente familiares. Deslizantes, barras de menus, visão de arquivos em lista e muito mais pode ser construído com uma combinação de JavaScript, CSS e HTML. Uma vez que a especificação da HTML 4 não fornece etiquetas integradas (_built-in tags_) que descrevam estes tipos de _widgets_ semanticamente, os desenvolvedores recorrem ao uso de elementos genéricos, tais como \<div> e \<span>. Embora isto resulte em um _widget_ que se pareça com seu duplo de ambiente, geralmente não existe informação semântica suficiente, na marcação, para torná-lo utilizável por uma tecnologia assistiva. Teor dinâmico em uma página da Rede Mundial pode ser particularmente problemático para quem, por alguma razão, não pode ver a tela. Cotações de ações, alimentação instantânea de atualizações do twitter, indicadores de progresso e conteúdos similares alteram o DOM, enquanto uma tecnologia assistiva (TA/AT) pode não ser alertada disso. Aqui é onde o conjunto [ARIA](/en/ARIA) entra.
 
 _Exemplo 1: Marcação para um widget de abas construído sem as indicações ARIA. Não existem informações semânticas, na marcação, que descrevam a sua forma, nem a sua função._
 
@@ -89,11 +89,14 @@ Mudanças de apresentação dinâmicas agregam o uso de CSS para alterar a apar�
 
 #### Mudanças de estado
 
-O conjunto ARIA provê atributos para declarar o estado atual da interface de utilização de um _widget_. Os exemplos abrangem (mas não são apenas estes, com certeza( :
+O conjunto ARIA provê atributos para declarar o estado atual da interface de utilização de um _widget_. Os exemplos abrangem (mas não são apenas estes, com certeza) :
 
-- **`aria-checked `**`(marcada)`: indica o estado de uma caixa de seleção, ou de um botão de alternativa (`radio`)
-- **`aria-disabled `**`(desativado)`: indica que um elemento está visível, mas não pode ser editado, tampouco é executável.
-- **`aria-grabbed `**`(arrastado)`: indica o estado "arrastado" para um objeto, em uma operação de "arrastar e soltar".
+- `aria-checked` (marcada)
+  - : indica o estado de uma caixa de seleção, ou de um botão de alternativa (`radio`)
+- `aria-disabled` (desativado)
+  - : indica que um elemento está visível, mas não pode ser editado, tampouco é executável.
+- `aria-grabbed` (arrastado)
+  - : indica o estado "arrastado" para um objeto, em uma operação de "arrastar e soltar".
 
 (Para uma lista completa de estados ARIA, consulte a [ARIA list of states and properties](http://www.w3.org/TR/wai-aria/states_and_properties) (lista de estados e propriedades ARIA).
 
@@ -155,7 +158,7 @@ var processMenuChoice = function(item) {
 
 #### Alterações visuais
 
-Quando o conteúdo visual é alterado (isto é, um elemento é escondido, ou mostrado), os desenvolvedores devem mudar o valor da propriedade **`aria-hidden`**. As técnicas descritas acima devem ser usadas, a fim de declarar a CSS para ocultar um elemento utilizando` `_`display:none`_` `(_exibir:nenhum_).
+Quando o conteúdo visual é alterado (isto é, um elemento é escondido, ou mostrado), os desenvolvedores devem mudar o valor da propriedade **`aria-hidden`**. As técnicas descritas acima devem ser usadas, a fim de declarar a CSS para ocultar um elemento utilizando `display:none` (_exibir:nenhum_).
 
 O sítio da _Open Ajax Alliance_ fornece um exemplo de uma dica de tela (_tooltip_) que utiliza o estado aria-hidden para controlar a sua visibilidade (em inglês) an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. O exemplo mostra um formulário _web_ simples, com caixas de dicas de tela contendo instruções associadas aos campos de entrada. As partes relevantes deste exemplo estão explicadas abaixo.
 
@@ -200,17 +203,17 @@ var showTip = function(el) {
 
 > **Nota:** Em construção
 
-O conjunto ARIA possibilita que os desenvolvedores possam declarar uma função semântica para um elemento que, de outro modo, não a apresentaria, ou a ofereceria de forma incorreta. Por exemplo, quando alguma lista desordenada é utilizada para criar um menu, à` `{{ HTMLElement("ul") }}` `deve ser dada uma**` `\*\***`role`** de `menubar` e cada` `{{ HTMLElement("li") }}` `deve ter uma **`role`\*\* de `menuitem`.
+O conjunto ARIA possibilita que os desenvolvedores possam declarar uma função semântica para um elemento que, de outro modo, não a apresentaria, ou a ofereceria de forma incorreta. Por exemplo, quando alguma lista desordenada é utilizada para criar um menu, à {{ HTMLElement("ul") }} deve ser dada uma **`role`** de `menubar` e cada {{ HTMLElement("li") }} deve ter uma **`role`** de `menuitem`.
 
 O papel (**`role`**) de um elemento não deve mudar. Em vez disso, remova o elemento original e ocupe seu lugar com um elemento que tenha a função (**`role`**) nova.
 
-Por exemplo, considere um _widget_ de edição "_inline_": um componente que possibilita que seus utilizadores sejam capazes de editar uma parte de um texto, sem mudar toda a composição. Este componente carrega o modo "_visualizar_", no qual o texto não pode ser modificado, mas pode ser ativado e um modo "_editar_", no qual o texto pode ser alterado. Se você o desenvolve, pode ter a tentação de implementar o modo "_visualizar_" com o uso do elemento texto "_somente leitura_" {{ HTMLElement("input") }}, definindo a sua ARIA` `**` role``  `**para `button` e, em seguida, alternando para o modo "_editar_", para tornar o elemento apto à gravação e removendo o atributo **`role` **no modo "editar" (desde que os elementos {{ HTMLElement("input") }} tenham as suas próprias funções semânticas).
+Por exemplo, considere um _widget_ de edição "_inline_": um componente que possibilita que seus utilizadores sejam capazes de editar uma parte de um texto, sem mudar toda a composição. Este componente carrega o modo "_visualizar_", no qual o texto não pode ser modificado, mas pode ser ativado e um modo "_editar_", no qual o texto pode ser alterado. Se você o desenvolve, pode ter a tentação de implementar o modo "_visualizar_" com o uso do elemento texto "_somente leitura_" {{ HTMLElement("input") }}, definindo a sua ARIA **`role`** para `button` e, em seguida, alternando para o modo "_editar_", para tornar o elemento apto à gravação e removendo o atributo **`role`** no modo "editar" (desde que os elementos {{ HTMLElement("input") }} tenham as suas próprias funções semânticas).
 
 Não faça isso. Em substituição, implemente o modo "_visualizar_" usando um elemento completamente diferente, tal como uma {{ HTMLElement("div") }}, ou {{ HTMLElement("span") }} com uma **`role`** de `button` e o modo « _edit_ » utilizando um elemento texto {{ HTMLElement("input") }}.
 
 ### Mudanças assíncronas de conteúdo
 
-> **Nota:** Em construção. Veja, também, [Regiões Dinâmicas](/en/ARIA/Live_Regions "Live Regions")
+> **Nota:** Em construção. Veja, também, [Regiões Dinâmicas](/en/ARIA/Live_Regions)
 
 ## Navegação pelo Teclado
 
@@ -226,14 +229,14 @@ Aqui está um resumo sobre como a navegação pelo teclado deve funcionar, com a
 - Dentro de um formulário, a tecla "barra de spaço" deve selecionar, ou ativar um controle, enquanto a tecla "Entra" deve submeter sua ação padrão.
 - Se houver dúvidas, copie o comportamento das ações padronizadas para ambiente nos controles que você estiver criando.
 
-Assim, para o exemplo de _widget_ de abas acima, a pessoa que estiver navegando deve ser capaz de entrar e sair da caixa que o contém usando as teclas "_Tab_" e "_Shift+Tab_" ( a \<ol> na nossa marcação). Uma vez que o foco, pelo teclado, estiver dentro do contêiner, as teclas de setas devem permitir a navegação entre as suas diferentes guias (os elementos \<li> ). A partir daqui as convenções variam de plataforma para plataforma. No Windows, a próxima aba deve ser ativada, automaticamente, quando as teclas de setas forem pressionadas. Em Mac OS X, seus utilizadores ativam a próxima aba pressionando a tecla "_Entra_", ou a "_barra de espaço_". Um tutorial abrangente, para a criação de _widgets_, com navegação pelo teclado, descreve como implementar esse comportamento utilizando JavaScript [Keyboard-navigable JavaScript widgets (_JavaScript para_ _widgets navegáveis pelo teclado_)](/en/Accessibility/Keyboard-navigable_JavaScript_widgets "en/Accessibility/Keyboard-navigable JavaScript widgets").
+Assim, para o exemplo de _widget_ de abas acima, a pessoa que estiver navegando deve ser capaz de entrar e sair da caixa que o contém usando as teclas "_Tab_" e "_Shift+Tab_" ( a \<ol> na nossa marcação). Uma vez que o foco, pelo teclado, estiver dentro do contêiner, as teclas de setas devem permitir a navegação entre as suas diferentes guias (os elementos \<li> ). A partir daqui as convenções variam de plataforma para plataforma. No Windows, a próxima aba deve ser ativada, automaticamente, quando as teclas de setas forem pressionadas. Em Mac OS X, seus utilizadores ativam a próxima aba pressionando a tecla "_Entra_", ou a "_barra de espaço_". Um tutorial abrangente, para a criação de _widgets_, com navegação pelo teclado, descreve como implementar esse comportamento utilizando JavaScript [Keyboard-navigable JavaScript widgets (_JavaScript para_ _widgets navegáveis pelo teclado_)](/en/Accessibility/Keyboard-navigable_JavaScript_widgets).
 
-Para mais detalhes sobre as convenções da navegação pelo teclado em modelo ambiente, um guia completo (em inglês) [DHTML style guide (_guia de estilos da HTML Dinâmica_)](http://access.aol.com/dhtml-style-guide-working-group/) está disponível. Este guia oferece uma visão global de como a navegação pelo teclado deve funcionar em cada tipo de _widget_ suportado pelo conjunto ARIA. A W3C também oferece um documento que ajuda muito,\_ _[ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html), incluindo a navegação pelo teclado e as convenções de atalhos para uma variedade de \_widgets_.
+Para mais detalhes sobre as convenções da navegação pelo teclado em modelo ambiente, um guia completo (em inglês) [DHTML style guide (_guia de estilos da HTML Dinâmica_)](http://access.aol.com/dhtml-style-guide-working-group/) está disponível. Este guia oferece uma visão global de como a navegação pelo teclado deve funcionar em cada tipo de _widget_ suportado pelo conjunto ARIA. A W3C também oferece um documento que ajuda muito, [ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html), incluindo a navegação pelo teclado e as convenções de atalhos para uma variedade de _widgets_.
 
 ## Veja, também
 
-- [ARIA](/en/ARIA "ARIA")
-- [Web applications and ARIA FAQ](/en/Accessibility/Web_applications_and_ARIA_FAQ "Web applications and ARIA FAQ")
+- [ARIA](/en/ARIA)
+- [Web applications and ARIA FAQ](/en/Accessibility/Web_applications_and_ARIA_FAQ)
 - [WAI-ARIA Specification](http://www.w3.org/TR/wai-aria/)
 - [WAI-ARIA Best Practices](http://www.w3.org/WAI/PF/aria-practices/Overview.html)
 - [DHTML Style Guide](http://access.aol.com/dhtml-style-guide-working-group/)

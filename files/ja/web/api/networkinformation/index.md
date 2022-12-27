@@ -2,6 +2,7 @@
 title: NetworkInformation
 slug: Web/API/NetworkInformation
 ---
+
 {{APIRef("Network Information API")}}{{SeeCompatTable}}
 
 **`NetworkInformation`** インターフェースは、デバイスがネットワーク通信に使用している接続の情報を提供します。また、接続の種類が変更した場合、スクリプトに通知する手段を提供します。`NetworkInformation` インターフェースは、インスタンス生成できません。代わりに、{{domxref("Navigator")}} インターフェースの `connection` プロパティを通してアクセスします。

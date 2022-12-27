@@ -2,6 +2,7 @@
 title: MediaStream.getAudioTracks()
 slug: Web/API/MediaStream/getAudioTracks
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`getAudioTracks()`** は {{domxref("MediaStream")}} インターフェイスのメソッドで、そのストリームの [`track set`](https://www.w3.org/TR/mediacapture-streams/#track-set) の中から、 {{domxref("MediaStreamTrack.kind")}} が `audio` である {{domxref("MediaStreamTrack")}} を表すオブジェクトの配列を返します。

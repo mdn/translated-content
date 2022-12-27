@@ -2,6 +2,7 @@
 title: ウェブベースのプロトコルハンドラー
 slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 ---
+
 ## 背景
 
 ウェブページで `http` ではないプロトコルを使用したリソースへのリンクを見つけることがよくあります。例えば、 `mailto:` プロトコルです。

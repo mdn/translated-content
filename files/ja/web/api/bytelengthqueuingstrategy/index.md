@@ -2,6 +2,7 @@
 title: ByteLengthQueuingStrategy
 slug: Web/API/ByteLengthQueuingStrategy
 ---
+
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 [Streams API](/ja/docs/Web/API/Streams_API) の **`ByteLengthQueuingStrategy`** インターフェイスは、ストリームを構築するときに使用できる組み込みのバイト長キューイング戦略を提供します。

@@ -42,18 +42,18 @@ scroll-padding-block-end: unset;
 - `auto`
   - : Le décalage est déterminé par l'agent utilisateur. Cette valeur correspond généralement à `0px` mais le navigateur peut utiliser une heuristique et déterminer si une valeur non nulle est préférable au regard du contexte dans lequel se trouve l'élément.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
 
-## Specifications
+## Syntaxe formelle
 
-| Spécification                                                                                                                            | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-padding-block-end", "scroll-padding-block-end")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
+{{CSSSyntax}}
 
-{{cssinfo}}
+## Spécifications
+
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.scroll-padding-block-end")}}
+{{Compat}}

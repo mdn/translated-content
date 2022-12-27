@@ -2,6 +2,7 @@
 title: BroadcastChannel()
 slug: Web/API/BroadcastChannel/BroadcastChannel
 ---
+
 {{APIRef("BroadCastChannel API")}}
 
 **`BroadcastChannel()`** コンストラクタは新しい {{domxref("BroadcastChannel")}} を作成し、それを基礎となるチャネルに接続します。

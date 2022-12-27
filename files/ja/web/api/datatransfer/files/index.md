@@ -2,6 +2,7 @@
 title: DataTransfer.files
 slug: Web/API/DataTransfer/files
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 **`files`** は [`DataTransfer`](/ja/docs/Web/API/DataTransfer) オブジェクトのプロパティで、ドラッグ操作中の{{domxref("FileList", "ファイルのリスト", "", 1)}}です。操作にファイルが含まれていない場合、リストは空になります。

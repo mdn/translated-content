@@ -3,6 +3,7 @@ title: Closure (クロージャ)
 slug: Glossary/Closure
 original_slug: Glossary/クロージャ
 ---
+
 実行**{{glossary("scope","範囲")}}**を定義するバインディングのこと。{{glossary("JavaScript")}}では、**{{glossary("function","関数")}}**は閉じたコンテキストを作成します。
 
 ## 関連項目

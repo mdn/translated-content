@@ -3,6 +3,7 @@ title: PermissionStatus.onchange
 slug: Web/API/PermissionStatus/change_event
 original_slug: Web/API/PermissionStatus/onchange
 ---
+
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
 {{domxref("PermissionStatus")}} インターフェイス の **`onchange`** イベントハンドラは、{{domxref("PermissionStatus.state")}} プロパティが変更されるたびに呼び出されます。

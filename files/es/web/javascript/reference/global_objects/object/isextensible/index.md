@@ -16,7 +16,9 @@ El método **`Object.isExtensible()`** determina si un objeto es extendible (si 
 
 ## Síntaxis
 
-    Object.isExtensible(obj)
+```
+Object.isExtensible(obj)
+```
 
 ### Parametros
 

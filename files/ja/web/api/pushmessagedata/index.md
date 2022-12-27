@@ -2,6 +2,7 @@
 title: PushMessageData
 slug: Web/API/PushMessageData
 ---
+
 {{APIRef("Push API")}}{{SeeCompatTable()}}
 
 [Push API](/ja/docs/Web/API/Push_API) の **`PushMessageData`** インターフェースは、さまざまなフォーマットでサーバーから送信されるプッシュテータを取得する方法を提供します。

@@ -2,6 +2,7 @@
 title: ドメイン名とは？
 slug: Learn/Common_questions/What_is_a_domain_name
 ---
+
 <table>
   <tbody>
     <tr>

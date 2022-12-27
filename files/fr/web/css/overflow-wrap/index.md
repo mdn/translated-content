@@ -43,9 +43,13 @@ La propriété `overflow-wrap` peut être définie avec l'un des mots-clés suiv
 - `break-word`
   - : Indique que les mots qui ne subissent habituellement pas de césure peuvent être scindés à n'importe quelle position s'il n'y a pas d'autres positions envisageables pour la césure de la ligne. Les possibilités de rupture douces ajoutées par la césure **ne sont pas** prises en compte lors du calcul des tailles `min-content` intrinsèques.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -116,15 +120,11 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                                | État                         | Commentaires        |
-| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
-| {{SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap')}} | {{Spec2('CSS3 Text')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.overflow-wrap")}}
+{{Compat}}
 
 ## Voir aussi
 

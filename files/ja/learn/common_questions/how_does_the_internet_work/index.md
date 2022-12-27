@@ -2,6 +2,7 @@
 title: インターネットはどのように動くのか？
 slug: Learn/Common_questions/How_does_the_Internet_work
 ---
+
 {{LearnSidebar}}
 
 この記事はインターネットの仕組みとどのように動いているかを説明します。

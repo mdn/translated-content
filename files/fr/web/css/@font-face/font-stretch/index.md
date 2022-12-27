@@ -139,14 +139,11 @@ Les personnes atteintes de dyslexie ou d'autres troubles cognitifs pourront avoi
 
 ## Spécifications
 
-| Spécification                                                                    | État                             | Commentaires |
-| -------------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSS4 Fonts', '#font-prop-desc', 'font-stretch')}} | {{Spec2('CSS4 Fonts')}} |              |
-| {{SpecName('CSS3 Fonts', '#font-prop-desc', 'font-stretch')}} | {{Spec2('CSS3 Fonts')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.font-stretch")}}
+{{Compat}}
 
 ## Voir aussi
 

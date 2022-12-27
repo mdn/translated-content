@@ -7,7 +7,9 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_lis
 
 ## Mensaje
 
-    SyntaxError: missing } after property list
+```
+SyntaxError: missing } after property list
+```
 
 ## Tipo de error
 

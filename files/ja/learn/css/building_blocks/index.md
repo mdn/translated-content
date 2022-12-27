@@ -2,6 +2,7 @@
 title: CSS の構成要素
 slug: Learn/CSS/Building_blocks
 ---
+
 {{LearnSidebar}}
 
 このモジュールは [CSS の第一歩](/ja/docs/Learn/CSS/First_steps)から派生しています。CSS の言語や文法に慣れてきて、それを使う上での基本的な経験を得てきたという前提で、もう少し掘り下げてみましょう。カスケードと継承・セレクターの全種類・単位・サイズ設定・背景と枠線・デバッグなどを見ていきます。

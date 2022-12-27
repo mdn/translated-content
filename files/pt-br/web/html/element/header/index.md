@@ -13,8 +13,8 @@ O **elemento HTML** **`<header>` **representa um grupo de suporte introdutório 
 
 - _[Categoria de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), conteúdo palpável.
 - _Conteúdo permitido_[Flow content](/pt-BR/docs/HTML/Content_categories#Flow_content), mas não com descendentes de {{HTMLElement("header")}} ou {{HTMLElement("footer")}}
-- \_Omissão da tag_Nenhuma, as tags de abertura e fechamento são obrigatórias.
-- \_Elementos-pai permitidos_Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content). Note que o elemento {{HTMLElement("header")}} não deve ser descendente de {{HTMLElement("address")}}, {{HTMLElement("footer")}} ou outro elemento {{HTMLElement("header")}} .
+- _Omissão da tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias.
+- _Elementos-pai permitidos_ Qualquer elemento que aceite [flow content](/pt-BR/docs/HTML/Content_categories#Flow_content). Note que o elemento {{HTMLElement("header")}} não deve ser descendente de {{HTMLElement("address")}}, {{HTMLElement("footer")}} ou outro elemento {{HTMLElement("header")}} .
 - _Interface DOM_ {{domxref("HTMLElement")}}
 
 ## Atributos

@@ -33,15 +33,11 @@ La propriété **`margin-trim`** permet à un conteneur de rogner les marges de 
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Box", "#margin-trim", "margin-trim")}} | {{Spec2("CSS3 Box")}} | Définition initiale. |
-
-{{CSSInfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin-trim")}}
+{{Compat}}
 
 ## Voir aussi
 

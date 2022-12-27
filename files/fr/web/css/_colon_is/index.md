@@ -273,13 +273,11 @@ et cette dernière version sera plus rapide :
 
 ## Spécifications
 
-| Spécification                                                                | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#matches-pseudo", ":is()")}} | {{Spec2('CSS4 Selectors')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.is")}}
+{{Compat}}
 
 ## Voir aussi
 

@@ -3,6 +3,7 @@ title: BaseAudioContext.createOscillator()
 slug: Web/API/BaseAudioContext/createOscillator
 original_slug: Web/API/AudioContext/createOscillator
 ---
+
 {{APIRef("Web Audio API")}}
 
 `createOscillator()` は {{domxref("BaseAudioContext")}} インターフェイスのメソッドで、周期的な波形を表現するソースである {{domxref("OscillatorNode")}} を生成します。基本的には一定の音程を発生させます。

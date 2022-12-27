@@ -2,6 +2,7 @@
 title: ドキュメントの操作
 slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
 
 ウェブページやアプリを書く場合に、最も多く必要になるのはウェブ文書をどうかして操作する事でしょう。これは普通ドキュメントオブジェクトモデル (Document Object Model、DOM) によって為され、DOM は HTML とスタイルに関する情報を {{domxref("Document")}} オブジェクトを多用して操作する一連の API です。この記事では、DOM の使い方を詳しく見ながら、面白い方法であなたの環境を変える事ができる興味深い他の API もいくつか見ていきます。

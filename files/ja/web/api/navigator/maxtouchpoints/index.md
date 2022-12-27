@@ -2,6 +2,7 @@
 title: Navigator.maxTouchPoints
 slug: Web/API/Navigator/maxTouchPoints
 ---
+
 {{APIRef("HTML DOM")}}
 
 {{domxref("Navigator")}} インターフェイスの **`maxTouchPoints`** プロパティは読み取り専用で、現在の端末で対応している同時タッチコンタクト点の最大数を返します。

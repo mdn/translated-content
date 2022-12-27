@@ -17,7 +17,9 @@ La función **`Math.acos()`** devuelve el arco coseno (en radianes) de un númer
 
 ## Sintaxis
 
-    Math.acos(x)
+```
+Math.acos(x)
+```
 
 ### Parámetros
 

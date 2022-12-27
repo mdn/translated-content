@@ -2,6 +2,7 @@
 title: Document.vlinkColor
 slug: Web/API/Document/vlinkColor
 ---
+
 {{APIRef("DOM")}} {{ Deprecated_header() }}
 
 **`Document.vlinkColor`** プロパティは、文書内のユーザーが訪問済みのリンクの色を取得または設定します。

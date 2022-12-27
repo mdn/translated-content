@@ -15,16 +15,25 @@ La excepción de JavaScript: "`'use strict' no permitida en función`" ocurre cu
 
 ## Mensaje
 
-    Edge:
-    No se puede aplicar el modo estricto en funciones con una lista de parámetros complejos
+Edge:
 
-    Firefox:
-    SyntaxError: "use strict" no permitido en la función con parámetro predeterminado
-    SyntaxError: "use strict" no permitido en la función con parámetro rest
-    SyntaxError: "use strict" no permitido en la función con parámetro de desestructuración
+```
+No se puede aplicar el modo estricto en funciones con una lista de parámetros complejos
+```
 
-    Chrome:
-    SyntaxError: directiva ilegal 'use strict' en función con una lista de parámetros complejos
+Firefox:
+
+```
+SyntaxError: "use strict" no permitido en la función con parámetro predeterminado
+SyntaxError: "use strict" no permitido en la función con parámetro rest
+SyntaxError: "use strict" no permitido en la función con parámetro de desestructuración
+```
+
+Chrome:
+
+```
+SyntaxError: directiva ilegal 'use strict' en función con una lista de parámetros complejos
+```
 
 ## Tipo `Error`
 

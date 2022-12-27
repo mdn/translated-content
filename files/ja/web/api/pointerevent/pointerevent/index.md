@@ -2,6 +2,7 @@
 title: PointerEvent.PointerEvent()
 slug: Web/API/PointerEvent/PointerEvent
 ---
+
 {{APIRef("Pointer Events")}}
 
 **`PointerEvent()`** コンストラクタは、新しい信頼できない合成 {{domxref("PointerEvent")}} オブジェクトのインスタンスを作成します。

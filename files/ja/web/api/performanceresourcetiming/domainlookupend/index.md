@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.domainLookupEnd
 slug: Web/API/PerformanceResourceTiming/domainLookupEnd
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`domainLookupEnd`** 読み取り専用プロパティは、ブラウザーがリソースのドメイン名検索を終了した直後に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。

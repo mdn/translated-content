@@ -12,7 +12,9 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Math/log10
 
 ## Sintaxis
 
-    Math.log10(x)
+```
+Math.log10(x)
+```
 
 ### Parametros
 

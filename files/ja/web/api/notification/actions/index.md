@@ -2,6 +2,7 @@
 title: Notification.actions
 slug: Web/API/Notification/actions
 ---
+
 {{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 **`actions`** は {{domxref("Notification")}} インターフェイスの読み取り専用プロパティで、ユーザーが通知とやり取りするために選択することができるアクションを提供します。

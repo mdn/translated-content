@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web/HTML_basics
 l10n:
   sourceCommit: c48075af8c707cf1ea02f4926698996d3625a4bd
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics", "Learn/Getting_started_with_the_web")}}
 
 HTML （**H**yper**T**ext **M**arkup **L**anguage、ハイパーテキスト・マークアップ・ランゲージ）は、ウェブサイトのコンテンツの構造を作るために使うコードです。例えば、コンテンツは段落、箇条書きのリスト、画像の使用、データテーブルなどの組み合わせで構成されています。タイトルが示すように、この記事では HTML とその機能の基本的な理解ができるように説明します。

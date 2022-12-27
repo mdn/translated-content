@@ -75,7 +75,11 @@ La première valeur utilisée sera celle qui correspond à {{cssxref("align-cont
 - `stretch`
   - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe correspondant, tous les éléments dimensionnés automatiquement seront étirés de la même façon (et pas de façon proportionnelle) tout en respectant les contraintes imposées par {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou par les fonctionnalités équivalentes) afin que la taille de l'ensemble des éléments soit exactement celle du conteneur.
 
-### Syntaxe formelle
+## Définition formelle
+
+{{CSSInfo}}
+
+## Syntaxe formelle
 
 {{CSSSyntax}}
 
@@ -195,23 +199,11 @@ direction.addEventListener("change", function (evt) {
 
 ## Spécifications
 
-| Spécification                                                                                            | État                                     | Commentaires         |
-| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
-| {{SpecName("CSS3 Box Alignment", "#propdef-place-content", "place content")}} | {{Spec2("CSS3 Box Alignment")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.place-content")}}
-
-### Prise en charge pour les dispositions flexibles
-
-{{Compat("css.properties.place-content.flex_context")}}
-
-### Prise en charge pour les grilles
-
-{{Compat("css.properties.place-content.grid_context")}}
+{{Compat}}
 
 ## Voir aussi
 

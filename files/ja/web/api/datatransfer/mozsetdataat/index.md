@@ -2,6 +2,7 @@
 title: DataTransfer.mozSetDataAt()
 slug: Web/API/DataTransfer/mozSetDataAt
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{deprecated_header}}{{Non-standard_header()}}

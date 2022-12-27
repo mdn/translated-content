@@ -3,6 +3,7 @@ title: 'Document: touchmove イベント'
 slug: conflicting/Web/API/Element/touchmove_event
 original_slug: Web/API/Document/touchmove_event
 ---
+
 {{APIRef}}
 
 `touchmove` イベントは、タッチ平面に沿って 1 つ以上のタッチポイントが移動した場合に発生します。

@@ -2,6 +2,7 @@
 title: Document.rootElement
 slug: Web/API/Document/rootElement
 ---
+
 {{ApiRef("DOM")}}{{Deprecated_header}}
 
 **`Document.rootElement`** は {{domxref("Element")}} を返します。これは

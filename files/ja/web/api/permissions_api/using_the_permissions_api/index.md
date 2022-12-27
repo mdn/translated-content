@@ -2,6 +2,7 @@
 title: Permissions API の使用
 slug: Web/API/Permissions_API/Using_the_Permissions_API
 ---
+
 {{DefaultAPISidebar("Permissions API")}}{{SeeCompatTable}}
 
 この記事では、W3C の Permissions API を使用するための基本的なガイドを提供します。 これは、現在のコンテキストに起因する API のパーミッションの状態を照会するためのプログラムによる方法を提供します。

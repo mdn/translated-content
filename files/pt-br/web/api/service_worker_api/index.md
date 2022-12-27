@@ -47,7 +47,7 @@ Há também o evento `activate`. O momento em que ele é disparado é geralmente
 
 Seu service worker pode responder a requisições usando o {{domxref("FetchEvent")}}. Você pode manipular a resposta a essas requisições da maneira que quiser, através do método {{domxref("FetchEvent.respondWith")}}.
 
-> **Nota:**Como ` oninstall e ``onactivate ` podem demorar a serem concluídos, a especificação de _service workers_ disponibiliza um método [waitUntil](/pt-BR/docs/Web/API/ExtendableEvent/waitUntil). Ele recebe como parâmetro uma [promessa](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), notificando o navegador que há trabalho em andamento até que aquela promessa seja resolvida. O navegador, portanto, não deverá encerrar o service worker durante esse período de espera.
+> **Nota:**Como `oninstall` e `onactivate` podem demorar a serem concluídos, a especificação de _service workers_ disponibiliza um método [waitUntil](/pt-BR/docs/Web/API/ExtendableEvent/waitUntil). Ele recebe como parâmetro uma [promessa](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise), notificando o navegador que há trabalho em andamento até que aquela promessa seja resolvida. O navegador, portanto, não deverá encerrar o service worker durante esse período de espera.
 
 Para um tutorial completo, mostrando como construir seu primeiro exemplo do zero, leia [Usando Service Workers](/pt-BR/docs/Web/API/Service_Worker_API/Using_Service_Workers).
 

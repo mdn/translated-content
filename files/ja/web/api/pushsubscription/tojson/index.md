@@ -2,6 +2,7 @@
 title: PushSubscription.toJSON()
 slug: Web/API/PushSubscription/toJSON
 ---
+
 {{SeeCompatTable}}{{APIRef("Push API")}}
 
 {{domxref("PushSubscription")}} インターフェースの `toJSON()` メソッドは、スタンダードなシリアライザーです：これは、便利なショートカットを提供するサブスクリプションプロパティの JSON 表記を返します。

@@ -2,6 +2,7 @@
 title: CompositionEvent
 slug: Web/API/CompositionEvent
 ---
+
 {{APIRef("DOM Events")}}
 
 DOM **`CompositionEvent`** は間接的なテキストの入力によって発生するイベントを表します。

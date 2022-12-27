@@ -40,7 +40,7 @@ function getRandom() {
 
 ### Gerando um número aleatório entre dois valores
 
-Este exemplo retorna um número entre dois valores definidos. O valor retornado será maior ou igual a `min,` e menor que `max`.
+Este exemplo retorna um número entre dois valores definidos. O valor retornado será maior ou igual a `min`, e menor que `max`.
 
 ```js
 function getRandomArbitrary(min, max) {
@@ -50,7 +50,7 @@ function getRandomArbitrary(min, max) {
 
 ### Gerando um número inteiro aleatório entre dois valores
 
-Este exemplo retorna um número _inteiro_ entre dois valores definidos. O valor não poderá ser menor que `min` (ou do próximo inteiro maior que `min,` caso `min` não seja inteiro), e será menor (mas não igual) a `max`.
+Este exemplo retorna um número _inteiro_ entre dois valores definidos. O valor não poderá ser menor que `min` (ou do próximo inteiro maior que `min`, caso `min` não seja inteiro), e será menor (mas não igual) a `max`.
 
 ```js
 function getRandomInt(min, max) {
@@ -60,7 +60,7 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **Nota:** Pode ser tentandor usar `Math.round()` para arredondar `min` e `max,` mas dessa maneira a aleatoriedade dos números seguiria uma distribuição não-uniforme, que talvez não seja o que você precisa.
+> **Nota:** Pode ser tentandor usar `Math.round()` para arredondar `min` e `max`, mas dessa maneira a aleatoriedade dos números seguiria uma distribuição não-uniforme, que talvez não seja o que você precisa.
 
 ### Gerando um número inteiro aleatório entre dois valores, inclusive
 

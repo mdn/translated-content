@@ -2,6 +2,7 @@
 title: Bluetooth
 slug: Web/API/Bluetooth
 ---
+
 {{ apiref("W3C Bluetooth API") }} {{Non-standard_header()}}
 
 [Web Bluetooth API](/ja/Web/API/Web_Bluetooth_API) の **`Bluetooth`** インターフェースは、オプション指定した {{domxref("BluetoothDevice")}} の {{jsxref("Promise")}} を返します。

@@ -2,6 +2,7 @@
 title: CSS の値と単位
 slug: Learn/CSS/Building_blocks/Values_and_units
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
 CSS で使用されるすべてのプロパティには、特定の値または組み合わせのみが許可されており、MDN の各プロパティに関するページでは有効な値を理解するのに役立ちます。このレッスンでは、もっとも一般的な値と単位について見ていきます。

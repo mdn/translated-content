@@ -2,6 +2,7 @@
 title: 結合子
 slug: Learn/CSS/Building_blocks/Selectors/Combinators
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
 
 ここで取り上げる最後のセレクターは、他のセレクターと、ドキュメント内のコンテンツの場所や場所との有用な関係を提供する方法で組み合わせるため、コンビネーターと呼ばれます。

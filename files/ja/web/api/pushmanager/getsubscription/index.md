@@ -2,6 +2,7 @@
 title: PushManager.getSubscription()
 slug: Web/API/PushManager/getSubscription
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 {{domxref("PushManager")}} インターフェースの **`PushManager.getSubscription()`** メソッドは、既存のプッシュサブスクリプションを取得します。

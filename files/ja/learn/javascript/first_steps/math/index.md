@@ -2,6 +2,7 @@
 title: JavaScriptでの基本演算 — 数値と演算子
 slug: Learn/JavaScript/First_steps/Math
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}
 
 今回は JavaScript での数学的処理についてです。我々の命令を実行するために上手く数値を操作するのにどのように {{Glossary("Operator","演算子")}} や、その他の機能を使用できるのかを見ていきましょう。

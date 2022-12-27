@@ -39,9 +39,7 @@ La fonction `path()` est utilisée pour créer un tracé à suivre pour l'élém
 
 ## Spécifications
 
-| Spécification                                                            | Statut                           |
-| ------------------------------------------------------------------------ | -------------------------------- |
-| {{SpecName('CSS Shapes', '#funcdef-path', 'path()')}} | {{Spec2('CSS Shapes')}} |
+{{Specifications}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: 背景と枠線
 slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
 
 このレッスンでは、CSS の背景・枠線モジュールの機能を使ったクリエイティブな表現方法をいくつか見ていきます。グラデーション、背景画像、角の丸めを加えることを通じて、CSS を使ったスタイリングの多様な課題に対する解答が得られるでしょう。

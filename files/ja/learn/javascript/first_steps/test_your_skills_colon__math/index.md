@@ -2,6 +2,7 @@
 title: 'あなたのスキルをテストしよう: 数学'
 slug: Learn/JavaScript/First_steps/Test_your_skills:_Math
 ---
+
 {{learnsidebar}}
 
 このスキルテストの目的は、[JavaScript での基本演算 — 数値と演算子](/ja/docs/Learn/JavaScript/First_steps/Math) の記事を理解しているかどうかを評価することです。

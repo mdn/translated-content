@@ -18,7 +18,9 @@ El método **`Object.isSealed()`** si el objeto está sellado.
 
 ## Syntax
 
-    Object.isSealed(obj)
+```
+Object.isSealed(obj)
+```
 
 ### Parámetros
 
@@ -83,7 +85,7 @@ Object.isFrozen(s3); // === true
 
 ## Notes
 
-`En ES5, si el argumento de este método no es un objeto (primitivo), entonces causará un `{{jsxref("TypeError")}}. En ES2015, un argumento que no sea un objeto será tratado como si fuera un objeto sellado ordinario, simplemente devuelve `true`.
+En ES5, si el argumento de este método no es un objeto (primitivo), entonces causará un {{jsxref("TypeError")}}. En ES2015, un argumento que no sea un objeto será tratado como si fuera un objeto sellado ordinario, simplemente devuelve `true`.
 
 ```js
 Object.isSealed(1);

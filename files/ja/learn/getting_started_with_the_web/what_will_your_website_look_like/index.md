@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
 l10n:
   sourceCommit: ca3bd6f9ad181ea03b5b66bd7ca294559e169d83
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/Installing_basic_software", "Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web")}}
 
 「_ウェブサイトをどんな外見にするか_」では、コードを書き始める前に、このウェブサイトについて計画したりデザインしたりすべき事柄について説明します。例えば「どんな情報をウェブサイトで提供するのか」「どのフォントや色を使いたいのか」「このウェブサイトは何をするのか」などです。

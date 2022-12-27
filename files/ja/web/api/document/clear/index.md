@@ -2,6 +2,7 @@
 title: Document.clear()
 slug: Web/API/Document/clear
 ---
+
 {{APIRef("DOM")}}{{ Deprecated_header() }}
 
 **`Document.clear()`** メソッドは指定された文書全体を消去するもので、初期 (1.0 以前) の Mozilla アプリケーションにありました。

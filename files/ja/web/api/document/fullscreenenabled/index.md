@@ -2,6 +2,7 @@
 title: Document.fullscreenEnabled
 slug: Web/API/Document/fullscreenEnabled
 ---
+
 {{APIRef("Fullscreen API")}}
 
 {{domxref("Document")}} インターフェイスの **`fullscreenEnabled`** プロパティは読み取り専用で、全画面モードが使用できるかを示します。全画面モードは文書内にウィンドウ化されたプラグインを含まないページ、および文書内のすべての {{HTMLElement("iframe")}} 要素が {{HTMLAttrXRef("allowfullscreen", "iframe")}} 属性を持つページに限り使用することができます。

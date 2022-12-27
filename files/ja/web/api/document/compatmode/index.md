@@ -2,6 +2,7 @@
 title: Document.compatMode
 slug: Web/API/Document/compatMode
 ---
+
 {{ ApiRef("DOM") }}
 
 **`Document.compatMode`** プロパティは、文書が [Quirks モード](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) (互換モード) か標準準拠モードのどちらで表示されているかを示します。

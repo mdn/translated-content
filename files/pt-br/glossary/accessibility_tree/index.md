@@ -12,7 +12,7 @@ original_slug: Glossario/arvore_de_acessibilidade
 ---
 A **árvore de acessibilidade** contém informação relacionada à {{Glossary("accessibility", "acessibilidade")}} para a maioria dos elementos HTML.
 
-Navegadores convertem a marcação em uma representação interna chamada [árvore do DOM](https://developer.mozilla.org//pt-BR/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree). A árvore do DOM contém objetos representando todas as marcações de elementos, atributos e nós de texto. Os navegadores, então, criam uma árvore de acessibilidade baseada na árvore do DOM, a qual é usada por APIs específicas de plataforma para fornecer uma representação que possa ser entendida por tecnologias assistivas, como leitores de tela.
+Navegadores convertem a marcação em uma representação interna chamada [árvore do DOM](/pt-BR/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree). A árvore do DOM contém objetos representando todas as marcações de elementos, atributos e nós de texto. Os navegadores, então, criam uma árvore de acessibilidade baseada na árvore do DOM, a qual é usada por APIs específicas de plataforma para fornecer uma representação que possa ser entendida por tecnologias assistivas, como leitores de tela.
 
 Há quatro coisas em um objeto da árvore de acessibilidade:
 
@@ -23,7 +23,7 @@ Há quatro coisas em um objeto da árvore de acessibilidade:
 - **função**
   - : Que tipo de objeto é esse? Por exemplo, é um botão, uma barra de navegação ou uma lista de items?
 - **estado**
-  - : Tem um estado? Os exemplos incluem caixas de seleção marcadas ou desmarcadas, e recolhido ou expandido para o elemento [`<summary>`](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/summary)·
+  - : Tem um estado? Os exemplos incluem caixas de seleção marcadas ou desmarcadas, e recolhido ou expandido para o elemento [`<summary>`](/pt-BR/docs/Web/HTML/Element/summary)·
 
 Adicionalmente, a árvore de acessibilidade frequentemente contém informação sobre o que pode ser feito com um elemento: um link pode ser seguido, uma entrada de texto pode ser digitada, entre outras coisas.
 

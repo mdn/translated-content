@@ -83,15 +83,15 @@ Estes objetos representam strings e manipulam as mesmas.
 Estes objetos representam coleções de dados que são ordenados pelo valor de um índice. Isso inclui arrays (tipados) e arrays baseados em outros construtores, como `[]`.
 
 - {{jsxref("Global_Objects/Array", "Array")}}
-- [`Float32Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Float32Array)
-- [`Float64Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Float64Array)
-- [`Int16Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int16Array)
-- [`Int32Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int32Array)
-- [`Int8Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Int8Array)
-- [`Uint16Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint16Array)
-- [`Uint32Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint32Array)
-- [`Uint8Array`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint8Array)
-- [`Uint8ClampedArray`](https://developer.mozilla.org/en-US/docs/JavaScript_typed_arrays/Uint8ClampedArray)
+- [`Float32Array`](/en-US/docs/JavaScript_typed_arrays/Float32Array)
+- [`Float64Array`](/en-US/docs/JavaScript_typed_arrays/Float64Array)
+- [`Int16Array`](/en-US/docs/JavaScript_typed_arrays/Int16Array)
+- [`Int32Array`](/en-US/docs/JavaScript_typed_arrays/Int32Array)
+- [`Int8Array`](/en-US/docs/JavaScript_typed_arrays/Int8Array)
+- [`Uint16Array`](/en-US/docs/JavaScript_typed_arrays/Uint16Array)
+- [`Uint32Array`](/en-US/docs/JavaScript_typed_arrays/Uint32Array)
+- [`Uint8Array`](/en-US/docs/JavaScript_typed_arrays/Uint8Array)
+- [`Uint8ClampedArray`](/en-US/docs/JavaScript_typed_arrays/Uint8ClampedArray)
 - {{jsxref("Global_Objects/ParallelArray", "ParallelArray")}} {{non-standard_inline()}}
 
 ### Coleções chaveadas
@@ -139,4 +139,4 @@ Adições ao core do ECMAScript para funcionalidades sensíveis à linguagem.
 
 ### Outros
 
-- [`arguments`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)
+- [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/arguments)

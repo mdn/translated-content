@@ -3,6 +3,7 @@ title: 'Document: pointercancel イベント'
 slug: conflicting/Web/API/Element/pointercancel_event
 original_slug: Web/API/Document/pointercancel_event
 ---
+
 {{APIRef}}
 
 **`pointercancel`** イベントは、ブラウザーがもうポインターイベントが存在しないと判断したとき、または {{event("pointerdown")}} イベントが発生した後で、ポインターがビューポートのパン、ズーム、スクロールを操作するために使用されたときに発生します。

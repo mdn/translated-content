@@ -2,6 +2,7 @@
 title: 自動テストのイントロダクション
 slug: Learn/Tools_and_testing/Cross_browser_testing/Automated_testing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Feature_detection", "Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 1 日に数回、複数のブラウザーやデバイスで手動でテストを実行すると、面倒で時間がかかる場合があります。これを効率的に処理するには、自動化ツールに慣れておく必要があります。この記事では、利用可能なもの、タスクランナーの使い方、そして Sauce Labs や Browser Stack などの市販のブラウザーテスト自動化アプリケーションの基本的な使い方を見ていきます。

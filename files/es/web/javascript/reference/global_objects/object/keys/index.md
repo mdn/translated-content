@@ -12,7 +12,9 @@ El método `Object.keys()` devuelve un array de las propiedades **`names`** de u
 
 ## Sintaxis
 
-    Object.keys(obj)
+```
+Object.keys(obj)
+```
 
 ### Parámetros
 

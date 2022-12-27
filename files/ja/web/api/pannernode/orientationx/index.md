@@ -2,6 +2,7 @@
 title: PannerNode.orientationX
 slug: Web/API/PannerNode/orientationX
 ---
+
 {{ APIRef("Web Audio API") }}
 
 **`orientationX`** は {{ domxref("PannerNode") }} インターフェイスのプロパティで、音声ソースが向いている方向の X (水平) 成分を 3D 直交座標空間で表示します。

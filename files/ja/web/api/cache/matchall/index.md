@@ -2,6 +2,7 @@
 title: Cache.matchAll()
 slug: Web/API/Cache/matchAll
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Cache")}} インターフェイスの **`matchAll()`** メソッドは、{{domxref("Cache")}} オブジェクト内の一致するすべてのレスポンスの配列に解決される {{jsxref("Promise")}} を返します。

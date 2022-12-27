@@ -17,7 +17,9 @@ La función **`Math.ceil()`** devuelve el entero mayor o igual más próximo a u
 
 ## Sintaxis
 
-    Math.ceil(x)
+```
+Math.ceil(x)
+```
 
 ### Parámetros
 

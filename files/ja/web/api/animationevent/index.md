@@ -2,6 +2,7 @@
 title: AnimationEvent
 slug: Web/API/AnimationEvent
 ---
+
 {{SeeCompatTable}}{{APIRef("Web Animations API")}}
 
 **`AnimationEvent`** インターフェイスは、[アニメーション](/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations)に関する情報を提供するイベントを表します。

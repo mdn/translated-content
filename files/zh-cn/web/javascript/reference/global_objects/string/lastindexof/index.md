@@ -33,9 +33,9 @@ str.lastIndexOf(searchValue[, fromIndex])
 ```plain
 'canal'.lastIndexOf('a');     // returns 3（没有指明 fromIndex 则从末尾 l 处开始反向检索到的第一个 a 出现在 l 的后面，即 index 为 3 的位置）
 'canal'.lastIndexOf('a', 2);  // returns 1（指明 fromIndex 为 2 则从 n 处反向向回检索到其后面就是 a，即 index 为 1 的位置）
-'canal'.lastIndexOf('a', 0);  // returns -1(指明 fromIndex 为 0 则从 c 处向左回向检索 a 发现没有，故返回-1)
+'canal'.lastIndexOf('a', 0);  // returns -1(指明 fromIndex 为 0 则从 c 处向左回向检索 a 发现没有，故返回 -1)
 'canal'.lastIndexOf('x');     // returns -1
-'canal'.lastIndexOf('c', -5); // returns 0（指明 fromIndex 为-5 则视同 0，从 c 处向左回向查找发现自己就是，故返回 0）
+'canal'.lastIndexOf('c', -5); // returns 0（指明 fromIndex 为 -5 则视同 0，从 c 处向左回向查找发现自己就是，故返回 0）
 'canal'.lastIndexOf('c', 0);  // returns 0（指明 fromIndex 为 0 则从 c 处向左回向查找 c 发现自己就是，故返回自己的索引 0）
 'canal'.lastIndexOf('');      // returns 5
 'canal'.lastIndexOf('', 2);   // returns 2

@@ -67,7 +67,7 @@ admin.site.register(BookInstance)
 
 为了登录管理员站点，我们需要启动工作人员状态的用户账户。为了查看和创建记录，我们还需要该用户具有所有对象的记录。你可以创建一个“超级用户”账号，该账号具有完全访问该站点和所有必需的权限可以使用`manage.py`
 
-调用接下来的命令，在同样的目录下，`manage.py 创建超级用户。你将被提示输入用户名，电子邮件地址，和强密码。`
+调用接下来的命令，在同样的目录下，`manage.py` 创建超级用户。你将被提示输入用户名，电子邮件地址，和强密码。
 
 ```bash
 python3 manage.py createsuperuser
@@ -325,7 +325,7 @@ class BookAdmin(admin.ModelAdmin):
 我们在本节学到了很多东西，所以现在是时候尝试一些事情了。
 
 1. 对于 `BookInstance`列表视图，添加代码以显示书籍，状态，到期日期和 ID（而不是默认`__str__()`文本）。
-2. 添加的在线上市 Book 项目的 Author 使用，因为我们做了同样的做法详细视图`Book/ BookInstance。`
+2. 添加的在线上市 Book 项目的 Author 使用，因为我们做了同样的做法详细视图`Book/ BookInstance`。
 
 ## 概要
 

@@ -2,6 +2,7 @@
 title: Attr.ownerElement
 slug: Web/API/Attr/ownerElement
 ---
+
 {{APIRef("DOM")}}
 
 **`ownerElement`** は {{domxref("Attr")}} インターフェイスの読み取り専用プロパティで、この属性が所属する要素 ({{domxref("Element")}}) を返します。

@@ -47,9 +47,13 @@ La propriété `border-spacing` peut être définie avec une ou deux valeurs :
 - `length`
   - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}} qui décrit l'espacement entre les cellules.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -101,17 +105,13 @@ td {
 
 ## Spécifications
 
-| Spécification                                                                                    | État                     | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
-| {{SpecName('CSS2.1', 'tables.html#separated-borders', 'border-spacing')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-spacing")}}
+{{Compat}}
 
-## Voir auss
+## Voir aussi
 
 - {{cssxref("border-collapse")}}
 - {{cssxref("border-style")}}

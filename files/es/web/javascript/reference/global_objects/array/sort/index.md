@@ -13,11 +13,13 @@ original_slug: Web/JavaScript/Referencia/Objetos_globales/Array/sort
 
 El método **`sort()`** ordena los elementos de un arreglo (array) _localmente_ y devuelve el arreglo ordenado. La ordenación no es necesariamente [estable](https://en.wikipedia.org/wiki/Sorting_algorithm#Stability). El modo de ordenación por defecto responde a la posición del valor del string de acuerdo a su valor [Unicode](https://es.wikipedia.org/wiki/Unicode).
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone https\://github.com/mdn/interactive-examples y envíenos una solicitud de extracción (pull request).
+La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si desea contribuir al proyecto de ejemplos interactivos, clone <https://github.com/mdn/interactive-examples> y envíenos una solicitud de extracción (pull request).
 
 ## Sintaxis
 
-    arr.sort([compareFunction])
+```
+arr.sort([compareFunction])
+```
 
 ### Parámetros
 
@@ -88,10 +90,8 @@ var numbers = [4, 2, 5, 1, 3];
 numbers.sort(function(a, b) {
   return a - b;
 });
-console.log(numbers);
+console.log(numbers); // [1, 2, 3, 4, 5]
 ```
-
-    // [1, 2, 3, 4, 5]
 
 Los objectos pueden ser ordenados por el valor de una de sus propiedades.
 
@@ -156,8 +156,6 @@ var arr = [ 40, 1, 5, 200 ];
 arr.sort((a,b)=>a-b);  // [ 1, 5, 40, 200 ]
 ```
 
-###
-
 ### Creando, mostrando, y ordenando un array
 
 El siguiente ejemplo abunda en la idea de ordenar con y sin función de comparación. Además, ilustra una manera de mostrar un array una vez creado. El método [join](/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/join) es usado para convertir el array en una cadena de texto que imprimir. Al no pasarle un argumento que indique el separador, usará la coma por defecto para separar los elementos del array dentro de la cadena.
@@ -174,9 +172,11 @@ console.log('ordenado con función:', arr.sort(comparar));
 
 El ejemplo produce el siguiente resultado. Como muestra la salida, cuando una función de comparación es usada, los números se ordenan correctamente, sean estos valores numéricos o strings numéricos.
 
-    original: 80,9,700,40,1,5,200
-    ordenado sin función: 1,200,40,5,700,80,9
-    ordenado con función: 1,5,9,40,80,200,700
+```
+original: 80,9,700,40,1,5,200
+ordenado sin función: 1,200,40,5,700,80,9
+ordenado con función: 1,5,9,40,80,200,700
+```
 
 ### Ordenando caracteres no ASCII
 

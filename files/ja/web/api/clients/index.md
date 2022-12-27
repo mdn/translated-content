@@ -2,6 +2,7 @@
 title: Clients
 slug: Web/API/Clients
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`Clients`** インターフェイスは、{{domxref("Client")}} オブジェクトへのアクセスを提供します。 これは、[サービスワーカー](/ja/docs/Web/API/ServiceWorker_API)内で {{domxref("ServiceWorkerGlobalScope", "self")}}`.clients` を介してアクセスします。

@@ -229,7 +229,7 @@ a_record.save()
 
 > **备注：** 要用"抽象的"模型还有栏位说明怎么搜寻纪录可能会有点令人困惑。我们会以一个 Book 模型，其包含`title`与`genre`字段，而 genre 也是一个仅有`name`一个字段的模型。
 
-我们可以取得一个模型的所有纪录，为一个 `QuerySet` 使用`objects.all()。` `QuerySet` 是一个可迭代的物件，表示他含有多个物件，而我们可以藉由迭代/回圈取得每个物件。
+我们可以取得一个模型的所有纪录，为一个 `QuerySet` 使用`objects.all()`。`QuerySet` 是一个可迭代的物件，表示他含有多个物件，而我们可以藉由迭代/回圈取得每个物件。
 
 ```python
 all_books = Book.objects.all()

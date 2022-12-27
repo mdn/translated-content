@@ -2,6 +2,7 @@
 title: Clipboard
 slug: Web/API/Clipboard
 ---
+
 {{APIRef("Clipboard API")}} {{SecureContext_Header}}
 
 **`Clipboard`** インターフェイスは[クリップボード API](/ja/docs/Web/API/Clipboard_API) を実装し、ユーザーが許可する場合、システムクリップボードの内容に対する読み取りと書き込みの両方を提供します。クリップボード API は、ウェブアプリケーションに切り取り（カット）、コピー（複写）、貼り付け（ペースト）の機能を実装するために使うことができます。

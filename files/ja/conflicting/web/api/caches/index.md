@@ -3,6 +3,7 @@ title: ServiceWorkerGlobalScope.caches
 slug: conflicting/Web/API/caches
 original_slug: Web/API/ServiceWorkerGlobalScope/caches
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("ServiceWorkerGlobalScope")}} インターフェイスの **`caches`** 読み取り専用プロパティは、サービスワーカーに関連する {{domxref("CacheStorage")}} オブジェクトを返します。

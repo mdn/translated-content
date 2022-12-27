@@ -2,6 +2,7 @@
 title: Object のプロトタイプ
 slug: Learn/JavaScript/Objects/Object_prototypes
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
 
 プロトタイプは、JavaScript オブジェクトが互いに機能を継承するメカニズムです。この記事では、プロトタイプチェーンの仕組みを説明し、`prototype` プロパティを使って既存のコンストラクタにメソッドを追加する方法を見ていきます。

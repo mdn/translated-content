@@ -11,7 +11,7 @@ slug: Web/JavaScript/Guide/Modules
 
 JavaScript 程序本来很小——在早期，它们大多被用来执行独立的脚本任务，在你的 web 页面需要的地方提供一定交互，所以一般不需要多大的脚本。过了几年，我们现在有了运行大量 JavaScript 脚本的复杂程序，还有一些被用在其他环境（例如 [Node.js](/zh-CN/docs/Glossary/Node.js)）。
 
-因此，近年来，有必要开始考虑提供一种**将 JavaScript 程序拆分为可按需导入的单独模块**的机制。Node.js 已经提供这个能力很长时间了，还有很多的 JavaScript 库和框架已经开始了模块的使用（例如，[CommonJS](https://en.wikipedia.org/wiki/CommonJS) 和基于 [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) 的其他模块系统 如 [RequireJS](https://requirejs.org/)， 以及最新的 [Webpack](https://webpack.github.io/) 和 [Babel](https://babeljs.io/)）。
+因此，近年来，有必要开始考虑提供一种**将 JavaScript 程序拆分为可按需导入的单独模块**的机制。Node.js 已经提供这个能力很长时间了，还有很多的 JavaScript 库和框架已经开始了模块的使用（例如，[CommonJS](https://en.wikipedia.org/wiki/CommonJS) 和基于 [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) 的其他模块系统 如 [RequireJS](https://requirejs.org/)，以及最新的 [Webpack](https://webpack.github.io/) 和 [Babel](https://babeljs.io/)）。
 
 好消息是，最新的浏览器开始原生支持模块功能了，这是本文要重点讲述的。这会是一个好事情 —- 浏览器能够最优化加载模块，使它比使用库更有效率：使用库通常需要做额外的客户端处理。
 
@@ -117,7 +117,7 @@ import { name, draw, reportArea, reportPerimeter } from '/js-examples/modules/ba
 
 使用 [`import`](/zh-CN/docs/Web/JavaScript/Reference/Statements/import) 语句，然后你被花括号包围的用逗号分隔的你想导入的功能列表，然后是关键字 from，然后是模块文件的路径。模块文件的路径是相对于站点根目录的相对路径，对于我们的 `basic-modules` 应该是 `/js-examples/modules/basic-modules`。
 
-当然，我们写的路径有一点不同 -- 我们使用点语法意味 “当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得 URL 可移植 -- 如果在站点层中你把它移动到不同的路径下面仍然能够工作（修订版 1889482）。
+当然，我们写的路径有一点不同 -- 我们使用点语法意味“当前路径”，跟随着包含我们想要找的文件的路径。这比每次都要写下整个相对路径要好得多，因为它更短，使得 URL 可移植 -- 如果在站点层中你把它移动到不同的路径下面仍然能够工作（修订版 1889482）。
 
 那么看看例子吧：
 
@@ -148,7 +148,7 @@ reportPerimeter(square1.length, reportList);
 
 ## 应用模块到你的 HTML
 
-现在我们只需要将 main.mjs 模块应用到我们的 HTML 页面。 这与我们将常规脚本应用于页面的方式非常相似，但有一些显着的差异。
+现在我们只需要将 main.mjs 模块应用到我们的 HTML 页面。这与我们将常规脚本应用于页面的方式非常相似，但有一些显着的差异。
 
 首先，你需要把 `type="module"` 放到 {{htmlelement("script")}} 标签中，来声明这个脚本是一个模块：
 
@@ -335,7 +335,7 @@ Square.reportPerimeter(square1.length, reportList);
 
 正如我们之前提到的那样，您还可以导出和导入类；这是避免代码冲突的另一种选择，如果您已经以面向对象的方式编写了模块代码，那么它尤其有用。
 
-您可以在我们的 [classes](https://github.com/mdn/js-examples/tree/master/module-examples/classes) 目录中看到使用 ES 类重写的形状绘制模块的示例。 例如，[`square.mjs`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js) 文件现在包含单个类中的所有功能：
+您可以在我们的 [classes](https://github.com/mdn/js-examples/tree/master/module-examples/classes) 目录中看到使用 ES 类重写的形状绘制模块的示例。例如，[`square.mjs`](https://github.com/mdn/js-examples/blob/master/module-examples/classes/modules/square.js) 文件现在包含单个类中的所有功能：
 
 ```js
 class Square {
@@ -383,7 +383,7 @@ export { name } from 'x.mjs'
 
 > **备注：** 这实际上是导入后跟导出的简写，即“我导入模块 `x.mjs`，然后重新导出部分或全部导出”。
 
-有关示例，请参阅我们的 [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation)。 在这个例子中（基于我们之前的类示例），我们有一个名为 `shapes.mjs` 的额外模块，它将 `circle.mjs`，`square.mjs` 和 `riangle.mjs` 中的所有功能聚合在一起。 我们还将子模块移动到名为 shapes 的 modules 目录中的子目录中。 所以模块结构现在是这样的：
+有关示例，请参阅我们的 [module-aggregation](https://github.com/mdn/js-examples/tree/master/module-examples/module-aggregation)。在这个例子中（基于我们之前的类示例），我们有一个名为 `shapes.mjs` 的额外模块，它将 `circle.mjs`，`square.mjs` 和 `riangle.mjs` 中的所有功能聚合在一起。我们还将子模块移动到名为 shapes 的 modules 目录中的子目录中。所以模块结构现在是这样的：
 
 ```plain
 modules/
@@ -401,7 +401,7 @@ modules/
 export { Square };
 ```
 
-接下来是聚合部分。 在 [`shapes.mjs`](https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js) 里面，我们包括以下几行：
+接下来是聚合部分。在 [`shapes.mjs`](https://github.com/mdn/js-examples/blob/master/module-examples/module-aggregation/modules/shapes.js) 里面，我们包括以下几行：
 
 ```js
 export { Square } from '/js-examples/modules/module-aggregation/modules/shapes/square.mjs';
@@ -411,7 +411,7 @@ export { Circle } from '/js-examples/modules/module-aggregation/modules/shapes/c
 
 它们从各个子模块中获取导出，并有效地从 `shapes.mjs` 模块中获取它们。
 
-> **备注：** 即使 `shapes.mjs` 文件位于 modules 目录中，我们仍然需要相对于模块根目录编写这些 URL，因此需要 `/modules/`。 这是使用 JavaScript 模块时混淆的常见原因。
+> **备注：** 即使 `shapes.mjs` 文件位于 modules 目录中，我们仍然需要相对于模块根目录编写这些 URL，因此需要 `/modules/`。这是使用 JavaScript 模块时混淆的常见原因。
 
 > **备注：** `shapes.mjs` 中引用的导出基本上通过文件重定向，并且实际上并不存在，因此您将无法在同一文件中编写任何有用的相关代码。
 
@@ -471,7 +471,7 @@ squareBtn.addEventListener('click', () => {
 
 如果为了你的模块有问题，这里有一些提示有可能帮助到你。如果你发现更多的内容欢迎添加进来！
 
-- 在前面已经提到了，在这里再重申一次： `.mjs` 后缀的文件需要以 MIME-type 为 `javascript/esm` 来加载 (或者其他的 JavaScript 兼容的 MIME-type ，比如 `application/javascript`), 否则，你会一个严格的 MIME 类型检查错误，像是这样的 "The server responded with a non-JavaScript MIME type".
+- 在前面已经提到了，在这里再重申一次： `.mjs` 后缀的文件需要以 MIME-type 为 `javascript/esm` 来加载 (或者其他的 JavaScript 兼容的 MIME-type，比如 `application/javascript`), 否则，你会一个严格的 MIME 类型检查错误，像是这样的 "The server responded with a non-JavaScript MIME type".
 - 如果你尝试用本地文件加载 HTML 文件 (i.e. with a `file://` URL)，由于 JavaScript 模块的安全性要求，你会遇到 CORS 错误。你需要通过服务器来做你的测试。GitHub pages is ideal as it also serves `.mjs` files with the correct MIME type.
 - 因为 `.mjs` 是一个相当新的文件后缀，一些操作系统可能无法识别，或者尝试把它替换成别的。比如，我们发现 macOS 悄悄地在我们的 `.mjs` 后缀的文件后面添加上 `.js` 然后自动隐藏这个后缀。所以我们的文件实际上都是 `x.mjs.js`。当我们关闭自动隐藏文件后缀名，让它去接受认可 `.mjs`。问题解决。
 

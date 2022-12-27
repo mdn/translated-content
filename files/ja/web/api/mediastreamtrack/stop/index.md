@@ -2,6 +2,7 @@
 title: MediaStreamTrack.stop()
 slug: Web/API/MediaStreamTrack/stop
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack.stop()`** メソッドは、トラックを停止します。

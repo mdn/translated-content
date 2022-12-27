@@ -12,9 +12,11 @@ El elemento \<xsl:if> contiene un atributo a probar y una plantilla. Si el atrib
 
 ### Sintaxis
 
-    <xsl:if test=EXPRESSION>
-    	TEMPLATE
-    </xsl:if>
+```
+<xsl:if test=EXPRESSION>
+  TEMPLATE
+</xsl:if>
+```
 
 ### Atributos requeridos
 

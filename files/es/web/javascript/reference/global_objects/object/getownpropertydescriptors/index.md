@@ -16,7 +16,9 @@ El método **`Object.getOwnPropertyDescriptors()`** regresa todos los descriptor
 
 ## Sintáxis
 
-    Object.getOwnPropertyDescriptors(obj)
+```
+Object.getOwnPropertyDescriptors(obj)
+```
 
 ### Parámetros
 

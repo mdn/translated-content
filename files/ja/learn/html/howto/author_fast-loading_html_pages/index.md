@@ -3,6 +3,7 @@ title: 読み込みが速い HTML ページを作成するための豆知識
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
 original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 ---
+
 これらの豆知識は、一般の知識や実験に基づくものです。
 
 ウェブページを最適化すると、訪問者に対して応答性のよいサイトを提供するだけでなく、ウェブサーバーやインターネット接続の負荷を低減する効果もあります。これは大規模なサイトや、緊急事態で通信量が急増するニュース速報のようなサイトでは重要でしょう。

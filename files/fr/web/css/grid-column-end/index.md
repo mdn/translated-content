@@ -66,9 +66,13 @@ grid-column-end: unset;
 
     `<custom-ident>` ne peut pas prendre la valeur `span`.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -132,15 +136,11 @@ grid-column-end: unset;
 
 ## Spécifications
 
-| Spécification                                                                                    | État                         | Commentaires         |
-| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName("CSS3 Grid", "#propdef-grid-column-end", "grid-column-end")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.grid-column-end")}}
+{{Compat}}
 
 ## Voir aussi
 

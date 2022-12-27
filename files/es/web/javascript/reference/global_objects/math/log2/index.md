@@ -14,7 +14,9 @@ La función **`Math.log2()`** retorna el logaritmo base 2 de un número, esto es
 
 ## Syntax
 
-    Math.log2(x)
+```
+Math.log2(x)
+```
 
 ### Parámetros
 

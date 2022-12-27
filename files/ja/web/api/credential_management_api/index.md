@@ -2,6 +2,7 @@
 title: 認証情報管理 API
 slug: Web/API/Credential_Management_API
 ---
+
 {{DefaultAPISidebar("Credential Management API")}}{{ SeeCompatTable() }}
 
 認証情報管理 API を使用すると、ウェブサイトがユーザー、連携アカウント、公開鍵の認証情報を保存および取得することができます。これらの機能により、ユーザーはパスワードを入力せずにログインしたり、サイトへのログインに使用した連携アカウントを確認したり、期限切れのセッションに明示的なログインの手続きなしでセッションを再開したりすることができます。

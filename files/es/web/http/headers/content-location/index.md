@@ -28,7 +28,7 @@ Content-Location: <url>
 
 ### Solicitando datos de un servidor en distintos formatos
 
-Suponga que la API de un sitio web puede devolver datos en los formatos {{glossary("JSON")}}, {{glossary("XML")}}, o [CSV](https://en.wikipedia.org/wiki/Comma-separated_values "Comma-separated values"). Si la URL de un documento particular se encuentra en `https://example.com/documents/foo`, el sitio web podría retornar distintas URLs en la cabecera `Content-Location` dependiendo de la cabecera {{HTTPHeader("Accept")}} enviada en la petición:
+Suponga que la API de un sitio web puede devolver datos en los formatos {{glossary("JSON")}}, {{glossary("XML")}}, o [CSV](https://en.wikipedia.org/wiki/Comma-separated_values). Si la URL de un documento particular se encuentra en `https://example.com/documents/foo`, el sitio web podría retornar distintas URLs en la cabecera `Content-Location` dependiendo de la cabecera {{HTTPHeader("Accept")}} enviada en la petición:
 
 | Request header                        | Response header                         |
 | ------------------------------------- | --------------------------------------- |

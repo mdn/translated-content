@@ -2,6 +2,7 @@
 title: CSS と JavaScript のアクセシビリティの ベスト・プラクティス
 slug: Learn/Accessibility/CSS_and_JavaScript
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/HTML","Learn/Accessibility/WAI-ARIA_basics", "Learn/Accessibility")}}
 
 CSS と JavaScript も、適切に使えばアクセシブルなウェブ体験を可能にしてくれる可能性がありますが、誤用すると、大幅にアクセシビリティを悪化させることがあります。本記事では、複雑なコンテンツでもできる限りアクセシブルにすることを保証するために考慮すべき、CSS と JavaScript のベスト・プラクティスのいくつかを概観します。

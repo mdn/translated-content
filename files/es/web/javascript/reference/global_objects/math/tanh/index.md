@@ -19,7 +19,9 @@ La funcion **`Math.tanh()`** devuelve la hyperbolica tangente de un numero, esto
 
 ## Sintaxis
 
-    Math.tanh(x)
+```
+Math.tanh(x)
+```
 
 ### Parametros
 
@@ -66,7 +68,7 @@ Math.tanh = Math.tanh || function(x){
 
 {{Compat("javascript.builtins.Math.tanh")}}
 
-##
+## Ver también
 
 - {{jsxref("Math.acosh()")}}
 - {{jsxref("Math.asinh()")}}

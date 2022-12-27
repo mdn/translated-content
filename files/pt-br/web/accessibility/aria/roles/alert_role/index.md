@@ -110,9 +110,9 @@ document.getElementById("expirationWarning").className = "";
 
 ### Notas:
 
-- A utilização da função alerta em um elemento implica que ele tenha a` aria-live="assertive".`
+- A utilização da função alerta em um elemento implica que ele tenha a `aria-live="assertive"`.
 - O atributo _alert role_ deve ser usado, apenas, para conteúdo com texto estático. O elemento no qual a função alerta for usada não deve ser passível de receber foco, então, um leitor de tela vai, automaticamente, anunciar o alerta, independentemente de onde o foco do teclado esteja localizado no momento.
-- Se um alerta oferecer, também, controles interativos (tais como um controle de formulário que possibilite a sua correção, ou um botão "OK" que descarte o alerta), em seu lugar deve-se utilizar um [_alertdialog_ (diálogo de alerta)](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role "Using the alert role").
+- Se um alerta oferecer, também, controles interativos (tais como um controle de formulário que possibilite a sua correção, ou um botão "OK" que descarte o alerta), em seu lugar deve-se utilizar um [_alertdialog_ (diálogo de alerta)](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role).
 
 ### Atributos ARIA utilizados
 
@@ -120,8 +120,8 @@ document.getElementById("expirationWarning").className = "";
 
 ### Técnicas ARIA relacionadas
 
-- [Utilizando a função alertdialog](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role "en/ARIA/ARIA_Techniques/Using_the_alertdialog_role")
-- [Utilizando a propriedade aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property "Using the aria-invalid property")
+- [Utilizando a função alertdialog](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role)
+- [Utilizando a propriedade aria-invalid](/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property)
 
 ### Compatibilidade
 

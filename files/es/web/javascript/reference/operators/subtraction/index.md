@@ -14,7 +14,9 @@ El operador de sustracción (`-`) sustrae dos operandos, produciendo su diferenc
 
 ## Sintaxis
 
-    Operator: x - y
+```
+Operator: x - y
+```
 
 ## Ejemplos
 

@@ -55,9 +55,7 @@ ol {
 
 ## Spécifications
 
-| Spécification                                                                                | Statut                                       | Commentaires         |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Counter Styles', '#symbols-function', 'symbols()')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
+{{Specifications}}
 
 ## Voir aussi
 

@@ -2,6 +2,7 @@
 title: CacheStorage.open()
 slug: Web/API/CacheStorage/open
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("CacheStorage")}} インターフェイスの **`open()`** メソッドは、`cacheName` に一致する {{domxref("Cache")}} オブジェクトに解決される {{jsxref("Promise")}} を返します。

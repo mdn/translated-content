@@ -24,7 +24,7 @@ _Herda propriedades de seu pai, {{domxref("Node")}}, e implementa as interfaces 
 
 ## Methods
 
-_Inherits methods from its parent, {{domxref("Node")}}, and implements the {{domxref("ChildNode")}} \_and {{domxref("NonDocumentTypeChildNode")}}_ interface.\_
+_Inherits methods from its parent, {{domxref("Node")}}, and implements the {{domxref("ChildNode")}} and {{domxref("NonDocumentTypeChildNode")}}_ interface.
 
 - {{domxref("CharacterData.appendData()")}}
   - : Appends the given {{domxref("DOMString")}} to the `CharacterData.data` string; when this method returns, `data` contains the concatenated {{domxref("DOMString")}}.

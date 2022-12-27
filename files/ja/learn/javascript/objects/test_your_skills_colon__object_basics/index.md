@@ -2,6 +2,7 @@
 title: 'スキルテスト: オブジェクトの基本'
 slug: Learn/JavaScript/Objects/Test_your_skills:_Object_basics
 ---
+
 {{learnsidebar}}
 
 このスキルテストの目的は、[JavaScript オブジェクトの基本](/ja/docs/Learn/JavaScript/Objects/Basics)の理解度をテストすることです。

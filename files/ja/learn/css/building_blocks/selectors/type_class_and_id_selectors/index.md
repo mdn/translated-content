@@ -2,6 +2,7 @@
 title: 要素・クラス・ID によるセレクター
 slug: Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks")}}
 
 このレッスンでは、利用できる最も簡単にみえるセレクタをとりあげます。これは今後あなたが作業でよく使うことになります。

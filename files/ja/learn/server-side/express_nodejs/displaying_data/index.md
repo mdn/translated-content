@@ -2,6 +2,7 @@
 title: 'Express チュートリアル Part 5: ライブラリデータの表示'
 slug: Learn/Server-side/Express_Nodejs/Displaying_data
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs/forms", "Learn/Server-side/Express_Nodejs")}}
 
 これで[地域図書館](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)の Web サイトの書籍やその他のデータを表示するページを追加する準備が整いました。このページには、各モデルタイプのレコード数と、すべてのモデルのリストおよび詳細ページを示すホームページが含まれます。その過程で、データベースからレコードを取得したり、テンプレートを使用したりする際の実際的な経験を積むことになります。

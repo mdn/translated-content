@@ -3,6 +3,7 @@ title: Page Visibility API
 slug: Web/API/Page_Visibility_API
 original_slug: Web/Guide/User_experience/Using_the_Page_Visibility_API
 ---
+
 {{DefaultAPISidebar("Page Visibility API")}}
 
 タブを使って閲覧している場合、どのウェブページもバックグラウンドにあってユーザーから見えていない場合があります。 Page Visibility API では、現在ページが見えているかどうかを調べる機能とともに、文書が表示されたり非表示になったりした時を監視することができるイベントを提供します。

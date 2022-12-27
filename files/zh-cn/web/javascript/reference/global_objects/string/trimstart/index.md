@@ -23,7 +23,7 @@ str.trimLeft();
 
 ### 别名
 
-为了与 {{jsxref("String.prototype.padStart")}} 等函数保持一致，标准方法名称为`trimStart`。 但是，出于 Web 兼容性原因，`trimLeft` 仍然是 `trimStart` 的别名。在某些引擎中，这意味着：
+为了与 {{jsxref("String.prototype.padStart")}} 等函数保持一致，标准方法名称为`trimStart`。但是，出于 Web 兼容性原因，`trimLeft` 仍然是 `trimStart` 的别名。在某些引擎中，这意味着：
 
 ```js
 String.prototype.trimLeft.name === "trimStart";

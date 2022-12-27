@@ -3,6 +3,7 @@ title: ウェブフォント
 slug: Learn/CSS/Styling_text/Web_fonts
 original_slug: Learn/CSS/Styling_text/ウェブフォント
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}
 
 このモジュールの最初の記事では、フォントとテキストの装飾に使用できる基本的な CSS 機能について調べました。 この記事では、ウェブフォントの詳細を調べながら、さらに進みます — これらを使用すると、ウェブページと一緒にカスタムフォントをダウンロードすることを可能にして、より多様なカスタムテキストの装飾を可能にします。

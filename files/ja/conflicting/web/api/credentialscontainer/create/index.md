@@ -3,6 +3,7 @@ title: PublicKeyCredentialCreationOptions.excludeCredentials
 slug: conflicting/Web/API/CredentialsContainer/create
 original_slug: Web/API/PublicKeyCredentialCreationOptions/excludeCredentials
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`excludeCredentials`** は {{domxref("PublicKeyCredentialCreationOptions")}} 辞書の任意のプロパティであり、指定されたユーザーに既に存在する公開鍵の記述子を要素に持つ {{jsxref("Array")}} オブジェクトです。これは既存のユーザーに新しい認証情報を生成することを避けたい場合、パーティのサーバーから提供されます。

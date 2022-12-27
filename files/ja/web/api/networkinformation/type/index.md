@@ -2,6 +2,7 @@
 title: NetworkInformation.type
 slug: Web/API/NetworkInformation/type
 ---
+
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
 **`NetworkInformation.type`** 読み取り専用プロパティは、デバイスがネットワーク通信に使用している接続の種類を返します。

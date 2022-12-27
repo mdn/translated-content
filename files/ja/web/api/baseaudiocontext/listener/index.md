@@ -3,6 +3,7 @@ title: BaseAudioContext.listener
 slug: Web/API/BaseAudioContext/listener
 original_slug: Web/API/AudioContext/listener
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `listener` は {{ domxref("BaseAudioContext") }} インターフェイスのプロパティで、三次元音声空間処理を実装するために使う {{ domxref("AudioListener") }} オブジェクトを返します。

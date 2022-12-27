@@ -2,6 +2,7 @@
 title: KeyboardEvent.key
 slug: Web/API/KeyboardEvent/key
 ---
+
 {{APIRef("UI Events")}}
 
 {{domxref("KeyboardEvent")}} インターフェイスの **`key`** プロパティは読み取り専用で、ユーザーが押したキーの値を、 <kbd>Shift</kbd> キーなどの修飾キーやキーボードのロケールやレイアウトを考慮した値で返します。

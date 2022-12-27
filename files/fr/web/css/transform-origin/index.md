@@ -106,9 +106,13 @@ Les mots-clés sont des raccourcis qui correspondent aux valeurs {{cssxref("&lt;
 | `top`    | `0%`   |
 | `bottom` | `100%` |
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -299,15 +303,11 @@ transform-origin: 100% -30%;
 
 ## Spécifications
 
-| Spécification                                                                                                | État                                 | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
-| {{SpecName('CSS3 Transforms', '#transform-origin-property', 'transform-origin')}} | {{Spec2('CSS3 Transforms')}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.transform-origin")}}
+{{Compat}}
 
 ## Voir aussi
 

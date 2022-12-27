@@ -2,6 +2,7 @@
 title: 'ARIA: listbox ロール'
 slug: Web/Accessibility/ARIA/Roles/listbox_role
 ---
+
 リストボックス (`listbox`) ロールは、HTML の `<select>` 要素とは異なり、画像を含むことができる、1 つまたは複数の静的な項目をユーザーが選択できるリストに使用します。
 
 ## 説明

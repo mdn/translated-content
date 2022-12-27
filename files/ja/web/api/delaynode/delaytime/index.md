@@ -2,6 +2,7 @@
 title: DelayNode.delayTime
 slug: Web/API/DelayNode/delayTime
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `delayTime` は {{ domxref("DelayNode") }} インターフェイスのプロパティで、適用する遅延量を表す [a-rate](/ja/docs/Web/API/AudioParam#a-rate) の {{domxref("AudioParam")}} です。

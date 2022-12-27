@@ -2,6 +2,7 @@
 title: 画像・メディア・フォーム要素
 slug: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks")}}
 
 このレッスンでは、特定の要素が CSS でどのように扱われるかを見ていきます。画像・メディア・フォーム要素では、CSS でスタイルを設定するにあたって通常のボックスとは少し異なる動作をします。何が可能で何が不可能かを理解することで、フラストレーションを軽減することができます。このレッスンでは、知っておくべきことのをいくつかを取り上げます。

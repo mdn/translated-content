@@ -17,7 +17,9 @@ La función **`Math.hypot()`** retorna la raíz cuadrada de la suma de los cuadr
 
 ## Sintaxis
 
-    Math.hypot(valor1, valor2, ..., valorN)
+```
+Math.hypot(valor1, valor2, ..., valorN)
+```
 
 ### Parámetros
 
@@ -34,7 +36,7 @@ Para calcular la hipotenusa de un triángulo rectángulo, o la magnitud de un n�
 
 Esta función lo hace un poco más fácil y rápido, sólo coloca: `Math.hypot(v1, v2)` , o `Math.hypot(v1, v2, v3, v4, ...)` .
 
-Esto también evita un problema si la magnitud de tus números es muy elevada. El número más largo que puedes representar en JavaScript es `Number.MAX_VALUE = 1.797...e+308` . Si tus números son mayores que 1e154, tomando el cuadrado de esos valores resultaría en infinito destruyendo así tus resultados. Por ejemplo, `Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinito`. Si usas `hypot()` en su lugar, tú obtendrías un buen resultado `Math.hypot(1e200, 1e200) = 1.4142...e+200` . Eso también es verdad con números demasiados pequeños. `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0`, pero si en su lugar, usamos ` Math.hypot(1e-200, 1e-200) =``1.4142...e-200 `, obtendríamos un buen resultado una vez más.
+Esto también evita un problema si la magnitud de tus números es muy elevada. El número más largo que puedes representar en JavaScript es `Number.MAX_VALUE = 1.797...e+308` . Si tus números son mayores que 1e154, tomando el cuadrado de esos valores resultaría en infinito destruyendo así tus resultados. Por ejemplo, `Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinito`. Si usas `hypot()` en su lugar, tú obtendrías un buen resultado `Math.hypot(1e200, 1e200) = 1.4142...e+200` . Eso también es verdad con números demasiados pequeños. `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0`, pero si en su lugar, usamos `Math.hypot(1e-200, 1e-200) = 1.4142...e-200`, obtendríamos un buen resultado una vez más.
 
 Debido a que `hypot()` es un método estático de `Math`, siempre úsalo como `Math.hypot()`, en lugar de un método del objeto `Math` que hayas creado (`Math` no es un constructor).
 

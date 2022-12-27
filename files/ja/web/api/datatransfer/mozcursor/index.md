@@ -2,6 +2,7 @@
 title: DataTransfer.mozCursor
 slug: Web/API/DataTransfer/mozCursor
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{ Non-standard_header() }}

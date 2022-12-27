@@ -2,6 +2,7 @@
 title: 関数の戻り値
 slug: Learn/JavaScript/Building_blocks/Return_values
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Build_your_own_function","Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 このコースでの関数の学習を終えるために、最後に議論しておくべき関数についての大事なコンセプトがあります。それは戻り値です。関数によっては意味のある値を返さないものもありますが、値を返すものも当然あります。それらの値が何であるか、あなたのコードの中でどのように利用するのか、またどのように関数に意味のある値を返させるのかについて理解することは重要です。これらについてすべてを以下で紹介します。

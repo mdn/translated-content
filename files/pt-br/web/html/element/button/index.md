@@ -17,7 +17,7 @@ O **Elemento HTML _`<button>`_** representa um botão clicável.
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content), [Conteúdo iterativo](/pt-BR/docs/HTML/Content_categories#Interactive_content), [listado](/pt-BR/docs/HTML/Content_categories#Form_listed), [rotulável](/pt-BR/docs/HTML/Content_categories#Form_labelable), e elemento [enviável](/pt-BR/docs/HTML/Content_categories#Form_submittable) [associado a formulário](/pt-BR/docs/HTML/Content_categories#Form-associated_), conteúdo palpável.
 - _Conteúdo permitido_ [Conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
-- \_Omissão de Tag_Nenhuma, as tags de abertura e fechamento são obrigatórias.
+- _Omissão de Tag_ Nenhuma, as tags de abertura e fechamento são obrigatórias.
 - _Elementos pai permitidos_ Qualquer elemento que aceite [conteúdo fraseado](/pt-BR/docs/HTML/Content_categories#Phrasing_content).
 - _Interface DOM_ {{domxref("HTMLButtonElement")}}
 - _Tipo de elemento_ Inline

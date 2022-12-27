@@ -80,7 +80,7 @@ for (let x of generate) // TypeError: generate is not iterable
     console.log(x);
 ```
 
-当它没有被调用，这个 {{jsxref("Function")}} 相应的是可调用的，但是不可迭代。 调用 generator 生成一个可迭代对象，该对象将迭代在生成器执行期间生成的值。
+当它没有被调用，这个 {{jsxref("Function")}} 相应的是可调用的，但是不可迭代。调用 generator 生成一个可迭代对象，该对象将迭代在生成器执行期间生成的值。
 
 ```js example-good
 function* generate(a, b) {

@@ -2,6 +2,7 @@
 title: Navigator.deviceMemory
 slug: Web/API/Navigator/deviceMemory
 ---
+
 {{APIRef("Device Memory")}}{{securecontext_header}}{{SeeCompatTable}}
 
 **`deviceMemory`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、端末のおよそのメモリ量をギガバイト単位で返します。

@@ -223,7 +223,7 @@ function import() {} // Illegal.
 
 ### 空字面量
 
-`更多信息可以参考null`
+更多信息可以参考 `null`
 
 ```js
 null

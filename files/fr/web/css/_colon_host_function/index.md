@@ -62,13 +62,11 @@ La règle `:host(.footer) { color : red; }` s'applique à toutes les instances d
 
 ## Spécifications
 
-| Spécification                                                            | État                         | Commentaires         |
-| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
-| {{SpecName('CSS Scope', '#host-selector', ':host()')}} | {{Spec2('CSS Scope')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.hostfunction")}}
+{{Compat}}
 
 ## Voir aussi
 

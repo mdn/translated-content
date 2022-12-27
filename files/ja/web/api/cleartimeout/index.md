@@ -3,6 +3,7 @@ title: clearTimeout()
 slug: Web/API/clearTimeout
 original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
 ---
+
 {{APIRef("HTML DOM")}}
 
 グローバルの **`clearTimeout()`** メソッドは、 {{domxref("setTimeout()")}} の呼び出しによって以前に確立されたタイムアウトを解除します。

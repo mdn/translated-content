@@ -3,6 +3,7 @@ title: alert ロールの使用
 slug: conflicting/Web/Accessibility/ARIA/Roles/alert_role
 original_slug: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_alert_role
 ---
+
 ### 説明
 
 [alert](https://www.w3.org/TR/wai-aria-1.1/#alert) ロールの使用方法についての技術デモとブラウザおよび支援技術に及ぼす影響の説明。

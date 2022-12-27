@@ -62,7 +62,7 @@ Firefox (SpiderMonkey) 在 [JavaScript 1.7](/zh-CN/docs/Web/JavaScript/New_in_Ja
 - `Generator.prototype.close()` {{non-standard_inline}}
   - : 关闭生成器，因此执行该函数后调用`next() 函数时将会抛出` {{jsxref("StopIteration")}} 错误。与 ES2015 生成器对象的 return() 方法对应..
 - `Generator.prototype.send()` {{non-standard_inline}}
-  - : 用于将值发送到生成器。 该值由 {{jsxref("Operators/yield", "yield")}} 表达式返回，并且返回下一个 {{jsxref("Operators/yield", "yield")}} 表达式产生的值。`send(x)` 对应于 ES2015 生成器对象中的 `next(x)`
+  - : 用于将值发送到生成器。该值由 {{jsxref("Operators/yield", "yield")}} 表达式返回，并且返回下一个 {{jsxref("Operators/yield", "yield")}} 表达式产生的值。`send(x)` 对应于 ES2015 生成器对象中的 `next(x)`
 - **`Generator.`**`prototype.`**`throw()` **{{non-standard_inline}}
   - : 向生成器抛出错误。与 ES2015 生成器对象的 throw() 方法对应。
 

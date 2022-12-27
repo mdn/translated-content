@@ -183,7 +183,7 @@ Neste exemplo:
 
 > **Nota:** **Nota 2**: Se você não definir cabeçalho `Cache-Control: no-cache` o navegador armazenará em cache a resposta e jamais voltará a submeter o pedido, tornando a depuração "desafiadora". Também é possível acrescentar um parâmetro GET adicional sempre diferente, como o timestamp ou um número aleatório (veja [bypassing the cache](/en/DOM/XMLHttpRequest/Using_XMLHttpRequest#Bypassing_the_cache)).
 
-> **Nota:** **Nota 3**: Se a variável httpRequest é utilizada globalmente, funções concorrentes chamando ` makeRequest``() ` podem sobrescrever uma à outra, causando uma condição de corrida. Declarando o httpRequest variável local para um [closure](https://developer.mozilla.org/en/JavaScript/Guide/Closures) contendo as funções AJAX impede a condição de corrida.
+> **Nota:** **Nota 3**: Se a variável httpRequest é utilizada globalmente, funções concorrentes chamando `makeRequest()` podem sobrescrever uma à outra, causando uma condição de corrida. Declarando o httpRequest variável local para um [closure](/en/JavaScript/Guide/Closures) contendo as funções AJAX impede a condição de corrida.
 
 Caso ocorra um erro de comunicação (tal como a queda de do servidor web), uma exceção será lançada no método onreadystatechange quando o campo status for acessado. Tenha a certeza de envolver sua declaração if...then dentro de um bloco try...catch.
 
@@ -259,7 +259,7 @@ Vamos, também, adicionar uma linha para nosso manipulador de eventos obter os d
   };
 ```
 
-Precisamos modificar ` makeRequest ``() ` para aceitar os dados do usuário e passá-lo para o servidor. Vamos mudar o método de requisição de `GET` para `POST`, e incluir nossos dados como um parâmetro na chamada para `httpRequest.send()`:
+Precisamos modificar `makeRequest()` para aceitar os dados do usuário e passá-lo para o servidor. Vamos mudar o método de requisição de `GET` para `POST`, e incluir nossos dados como um parâmetro na chamada para `httpRequest.send()`:
 
 ```js
   function makeRequest(url, userName) {
@@ -277,7 +277,7 @@ A função `alertContents()` pode ser escrita da mesma forma que se encontrava n
 
 `{"userData":"Jane","computedString":"Hi, Jane!"}`
 
-Para utilizar estes dados dentro de `alertContents()`, nós não podemos simplesmente exibir com `alert()` a propriedade `responseText`. Temos que analisar (parse) e então alertar (`alert()`) `computedString,` a propriedade que queremos:
+Para utilizar estes dados dentro de `alertContents()`, nós não podemos simplesmente exibir com `alert()` a propriedade `responseText`. Temos que analisar (parse) e então alertar (`alert()`) `computedString`, a propriedade que queremos:
 
 ```js
 function alertContents() {

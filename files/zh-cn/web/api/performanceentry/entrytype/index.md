@@ -15,7 +15,7 @@ var type = entry.entryType;
 
 ### 返回值
 
-返回值取决于 `PerformanceEntry` 对象的 subtype， entryType 的取值会影响{{domxref('PerformanceEntry.name')}} 属性， 具体如下表所示.
+返回值取决于 `PerformanceEntry` 对象的 subtype，entryType 的取值会影响{{domxref('PerformanceEntry.name')}} 属性，具体如下表所示。
 
 | Value                 | Subtype                                                                                                    | Type of name property            | Description of name property                                                                                                    |
 | --------------------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |

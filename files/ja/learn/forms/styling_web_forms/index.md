@@ -5,6 +5,7 @@ l10n:
   sourceCommit: 4ca03cbbfe78d66e4e7efd7ceaf04acb08a18572
 original_slug: Learn/Forms/Styling_HTML_forms
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/Other_form_controls","Learn/Forms/Advanced_form_styling","Learn/Forms")}}
 
 これまでのいくつかの記事では、ウェブフォームを作成し、構成するために必要なすべての HTML について見てきました。この記事では、[CSS](/ja/docs/Web/CSS) を使用してフォームコントロールのスタイルを設定する方法について移動します。これは過去には難しいことでした。フォームコントロールは CSS でカスタマイズしやすいかどうかで大きく異なりますが、古いブラウザーが引退し、現代のブラウザーがより多くの機能を使用するようになるにつれて、簡単になってきています。

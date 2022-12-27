@@ -2,6 +2,7 @@
 title: Microsoft API extensions
 slug: Web/API/Microsoft_Extensions
 ---
+
 {{DefaultAPISidebar("Microsoft Extensions")}}
 
 Microsoft ブラウザー (Internet Explorer および、場合によっては Microsoft Edge) は、標準の [DOM API](/ja/docs/Web/API) に対するいくつかの特別な Microsoft 拡張機能をサポートしています。これらの拡張機能には `MS` または `ms`.のプレフィックスが付きます。

@@ -3,6 +3,7 @@ title: 'Document: pointermove イベント'
 slug: conflicting/Web/API/Element/pointermove_event
 original_slug: Web/API/Document/pointermove_event
 ---
+
 {{APIRef}}
 
 `pointermove` はポインターの座標が変化し、かつブラウザーの[タッチ操作](/ja/docs/Web/CSS/touch-action)によってポインターが[キャンセル](/ja/docs/Web/Events/pointercancel)されていないときに発生します。

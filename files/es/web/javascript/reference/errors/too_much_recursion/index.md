@@ -14,7 +14,9 @@ translation_of: Web/JavaScript/Reference/Errors/Too_much_recursion
 
 ## Mensaje
 
-    InternalError: too much recursion
+```
+InternalError: too much recursion
+```
 
 ## Tipo de error
 

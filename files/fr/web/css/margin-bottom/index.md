@@ -46,9 +46,13 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 - `auto`
   - : Voir {{cssxref("margin")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -102,15 +106,8 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                | État                                     | Commentaires                                    |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------- |
-| {{SpecName('CSS3 Box', '#margin-bottom', 'margin-bottom')}}             | {{Spec2('CSS3 Box')}}             | Pas de modification significative.              |
-| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-bottom')}} | {{Spec2('CSS3 Transitions')}} | `margin-bottom` peut désormais être animée.     |
-| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}} | {{Spec2('CSS2.1')}}                 | L'effet sur les éléments en ligne est supprimé. |
-| {{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.                            |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.margin-bottom")}}
+{{Compat}}

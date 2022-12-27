@@ -43,7 +43,7 @@ stop.caller === g && f.caller === g && g.caller === f
 
 ```js
 var f = stop;
-var stack = "调用栈:";
+var stack = "调用栈：";
 while (f) {
   stack += "\n" + f.name;
   f = f.caller;

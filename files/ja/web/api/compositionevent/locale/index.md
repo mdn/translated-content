@@ -2,6 +2,7 @@
 title: CompositionEvent.locale
 slug: Web/API/CompositionEvent/locale
 ---
+
 {{deprecated_header}}{{APIRef("DOM Events")}}
 
 **`locale`** は {{domxref("CompositionEvent")}} インターフェイスの読み取り専用のプロパティで、現在の入力メソッドのロケール (例えば、結合操作が IME に関連付けられているならばキーボードレイアウトのロケール) を返します。

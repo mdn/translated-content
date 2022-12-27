@@ -33,14 +33,11 @@ translation_of: Web/CSS/@media/-webkit-transform-3d
 
 ## Spécifications
 
-| Spécification                                                                                                                                                                                                                                 | État                                        | Commentaires                          |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------- |
-| {{SpecName('Compat', '#css-media-queries-webkit-transform-3d', '-webkit-transform-3d')}}                                                                                                                          | {{Spec2('Compat')}}                    | Définition initiale dans un standard. |
-| [Safari CSS Reference media query extensions in that document.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3) | Documentation non-officielle, non-standard. | Documentation initiale.               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.-webkit-transform-3d")}}
+{{Compat}}
 
 ## Voir aussi
 

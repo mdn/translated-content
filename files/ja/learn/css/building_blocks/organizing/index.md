@@ -2,6 +2,7 @@
 title: CSS の整理
 slug: Learn/CSS/Building_blocks/Organizing
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}
 
 大きなスタイルシートや巨大なプロジェクトで作業をはじめると、巨大な CSS ファイルを維持するのが難しいことがわかります。この記事では、CSS を書いていくのと保守していくのをやりやすくするためのベストプラクティスと、保守性を向上させるための解決策の一部を紹介します。

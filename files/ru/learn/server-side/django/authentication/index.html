@@ -24,7 +24,7 @@ original_slug: Learn/Server-side/Django/Аутентификация
 
 <p class="summary">В данном руководстве мы продемонстрируем вам систему входа пользователя на ваш сайт используя его собственный аккаунт. Кроме того, мы покажем как реализовать  контроль того, что может видеть и делать пользователь, в зависимости от того, залогинен он, или нет, а также имеет ли он соответствующий уровень прав доступа <em>(permissions)</em>. Для того чтобы продемонстрировать все это, мы расширим <a href="https://developer.mozilla.org/ru/docs/Learn/Server-side/Django/Tutorial_local_library_website">LocalLibrary</a>, добавив страницы для входа/выхода, а также страницы просмотра/редактирования книг, специфические для пользователя и персонала.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Требования:</th>
@@ -153,7 +153,7 @@ urlpatterns += [
 <p>Перейдите по <a href="http://127.0.0.1:8000/accounts/">http://127.0.0.1:8000/accounts/</a> URL (обратите внимание на косую черту!), Django покажет ошибку, что он не смог найти этот URL, и перечислить все URL, которые он пытался открыть. Из этого вы можете увидеть URL-адреса, которые будут работать, например:</p>
 
 <div class="note">
-<p><span id="result_box" lang="ru"><span>Примечание. Использование вышеуказанного метода добавляет следующие URL-адреса с именами в квадратных скобках, которые могут использоваться для изменения сопоставлений URL-адресов.</span> <span>Вам не нужно реализовывать что-либо ещё - приведённое выше сопоставление URL-адресов автоматически отображает указанные ниже URL-адреса.</span></span></p>
+<p>Примечание. Использование вышеуказанного метода добавляет следующие URL-адреса с именами в квадратных скобках, которые могут использоваться для изменения сопоставлений URL-адресов. Вам не нужно реализовывать что-либо ещё - приведённое выше сопоставление URL-адресов автоматически отображает указанные ниже URL-адреса.</p>
 </div>
 
 <div class="note">
@@ -167,18 +167,18 @@ accounts/ reset/&lt;uidb64&gt;/&lt;token&gt;/ [name='password_reset_confirm']
 accounts/ reset/done/ [name='password_reset_complete']</pre>
 </div>
 
-<p><span id="result_box" lang="ru"><span>Теперь попробуйте перейти к URL-адресу входа (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>).</span> <span>Это приведёт к сбою снова, но с ошибкой, сообщающей вам, что нам не хватает требуемого шаблона (registration / login.html) в пути поиска шаблона.</span> <span>Вы увидите следующие строки, перечисленные в жёлтом разделе вверху:</span></span></p>
+<p>Теперь попробуйте перейти к URL-адресу входа (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>). Это приведёт к сбою снова, но с ошибкой, сообщающей вам, что нам не хватает требуемого шаблона (registration / login.html) в пути поиска шаблона. Вы увидите следующие строки, перечисленные в жёлтом разделе вверху:</p>
 
 <pre class="brush: python">Exception Type:    TemplateDoesNotExist
 Exception Value:    <strong>registration/login.html</strong></pre>
 
-<p><span id="result_box" lang="ru"><span>Следующий шаг - создать каталог регистрации в пути поиска, а затем добавить файл login.html.</span></span></p>
+<p>Следующий шаг - создать каталог регистрации в пути поиска, а затем добавить файл login.html.</p>
 
 <h3 id="Каталог_шаблонов">Каталог шаблонов</h3>
 
-<p><span id="result_box" lang="ru"><span>URL-адреса (и неявные представления), которые мы только что добавили, ожидают найти связанные с ними шаблоны в каталоге / регистрации / где-то в пути поиска шаблонов.</span><br>
- <br>
- <span>Для этого сайта мы разместим наши HTML-страницы в каталоге <strong>templates / registration /</strong>.</span> <span>Этот каталог должен находиться в корневом каталоге проекта, то есть в том же каталоге, что и в каталоге и папках <strong>locallibrary</strong>).</span> <span>Создайте эти папки сейчас.</span></span></p>
+<p>URL-адреса (и неявные представления), которые мы только что добавили, ожидают найти связанные с ними шаблоны в каталоге / регистрации / где-то в пути поиска шаблонов.</p>
+
+<p>Для этого сайта мы разместим наши HTML-страницы в каталоге <strong>templates / registration /</strong>. Этот каталог должен находиться в корневом каталоге проекта, то есть в том же каталоге, что и в каталоге и папках <strong>locallibrary</strong>). Создайте эти папки сейчас.</p>
 
 <div class="note">
 <p><strong>Примечание:</strong> ваша структура папок теперь должна выглядеть как показано внизу:<br>
@@ -189,7 +189,7 @@ Exception Value:    <strong>registration/login.html</strong></pre>
                  |_registration</p>
 </div>
 
-<p>Чтобы сделать эти директории видимыми для загрузчика шаблонов   (<span id="result_box" lang="ru"><span>т. е. помещать этот каталог в путь поиска шаблона</span></span>) откройте настройки проекта (<strong>/locallibrary/locallibrary/settings.py</strong>), и обновите в секции <code>TEMPLATES</code> строку <code>'DIRS'</code> как показано.</p>
+<p>Чтобы сделать эти директории видимыми для загрузчика шаблонов   (т. е. помещать этот каталог в путь поиска шаблона) откройте настройки проекта (<strong>/locallibrary/locallibrary/settings.py</strong>), и обновите в секции <code>TEMPLATES</code> строку <code>'DIRS'</code> как показано.</p>
 
 <pre class="brush: python">TEMPLATES = [
     {
@@ -199,13 +199,13 @@ Exception Value:    <strong>registration/login.html</strong></pre>
         ...
 </pre>
 
-<h3 id="Шаблон_аутентификации">Шаблон <span id="result_box" lang="ru"><span>аутентификации</span></span></h3>
+<h3 id="Шаблон_аутентификации">Шаблон аутентификации</h3>
 
 <div class="warning">
-<p><strong>Важно</strong>: <span id="result_box" lang="ru"><span>Шаблоны аутентификации, представленные в этой статье, являются очень простой / слегка изменённой версией шаблонов логина демонстрации Django.</span> <span>Возможно, вам придётся настроить их для собственного использования!</span></span></p>
+<p><strong>Важно</strong>: Шаблоны аутентификации, представленные в этой статье, являются очень простой / слегка изменённой версией шаблонов логина демонстрации Django. Возможно, вам придётся настроить их для собственного использования!</p>
 </div>
 
-<p>Создайте новый HTML файл, названный /<strong>locallibrary/templates/registration/login.html</strong>. <span class="short_text" id="result_box" lang="ru"><span>дайте ему следующее содержание</span></span>:</p>
+<p>Создайте новый HTML файл, названный /<strong>locallibrary/templates/registration/login.html</strong>. дайте ему следующее содержание:</p>
 
 <pre class="brush: html line-numbers language-html">{% extends "base_generic.html" %}
 
@@ -217,46 +217,46 @@ Exception Value:    <strong>registration/login.html</strong></pre>
 <code class="language-html">
 {% if next %}
   {% if user.is_authenticated %}
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+    &lt;p&gt;Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.&lt;/p&gt;
   {% else %}
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Please login to see this page.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+    &lt;p&gt;Please login to see this page.&lt;/p&gt;
   {% endif %}
 {% endif %}
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span> <span class="attr-name token">method</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>post<span class="punctuation token">"</span></span> <span class="attr-name token">action</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>{% url 'login' %}<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
+&lt;form method="post" action="{% url 'login' %}"&gt;
 {% csrf_token %}
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>table</span><span class="punctuation token">&gt;</span></span>
+&lt;table&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>tr</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>td</span><span class="punctuation token">&gt;</span></span>\{{ form.username.label_tag }}<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>td</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>td</span><span class="punctuation token">&gt;</span></span>\{{ form.username }}<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>td</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>tr</span><span class="punctuation token">&gt;</span></span>
+&lt;tr&gt;
+  &lt;td&gt;\{{ form.username.label_tag }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.username }}&lt;/td&gt;
+&lt;/tr&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>tr</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>td</span><span class="punctuation token">&gt;</span></span>\{{ form.password.label_tag }}<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>td</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>td</span><span class="punctuation token">&gt;</span></span>\{{ form.password }}<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>td</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>tr</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>table</span><span class="punctuation token">&gt;</span></span>
+&lt;tr&gt;
+  &lt;td&gt;\{{ form.password.label_tag }}&lt;/td&gt;
+  &lt;td&gt;\{{ form.password }}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>submit<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>login<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>hidden<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>next<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>\{{ next }}<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span>
+&lt;input type="submit" value="login" /&gt;
+&lt;input type="hidden" name="next" value="\{{ next }}" /&gt;
+&lt;/form&gt;
 
 {# Assumes you setup the password_reset view in your URLconf #}
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>a</span> <span class="attr-name token">href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>{% url 'password_reset' %}<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Lost password?<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>a</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+&lt;p&gt;&lt;a href="{% url 'password_reset' %}"&gt;Lost password?&lt;/a&gt;&lt;/p&gt;
 
 {% endblock %}</code></pre>
 
-<p id="sect1"><span id="result_box" lang="ru"><span>Этот шаблон имеет сходство с тем, что мы видели раньше - он расширяет наш базовый шаблон и переопределяет блок контента.</span> <span>Остальная часть кода - это довольно стандартный код обработки формы, о котором мы поговорим в следующем учебном пособии.</span> <span>Все, что вам нужно знать, это показ формы, в которой вы можете ввести своё имя пользователя и пароль, а если вы введёте недопустимые значения, вам будет предложено ввести правильные значения, когда страница обновится.</span></span></p>
+<p id="sect1">Этот шаблон имеет сходство с тем, что мы видели раньше - он расширяет наш базовый шаблон и переопределяет блок контента. Остальная часть кода - это довольно стандартный код обработки формы, о котором мы поговорим в следующем учебном пособии. Все, что вам нужно знать, это показ формы, в которой вы можете ввести своё имя пользователя и пароль, а если вы введёте недопустимые значения, вам будет предложено ввести правильные значения, когда страница обновится.</p>
 
 <p>Перейдите на страницу входа (<a href="http://127.0.0.1:8000/accounts/login/">http://127.0.0.1:8000/accounts/login/</a>) когда вы сохраните свой шаблон, и вы должны увидеть что-то наподобие этого:</p>
 
 <p><img alt="Library login page v1" src="https://mdn.mozillademos.org/files/14101/library_login.png" style="border-style: solid; border-width: 1px; display: block; height: 173px; margin: 0px auto; width: 441px;"></p>
 
-<p><span id="result_box" lang="ru"><span>Если ваша попытка войти в систему будет успешной,  вы будете перенаправлены на другую страницу (по умолчанию это будет <a href="http://127.0.0.1:8000/accounts/profile/">http://127.0.0.1:8000/accounts/profile/</a>).</span> <span>Проблема здесь в том, что по умолчанию Django ожидает, что после входа в систему вы захотите перейти на страницу профиля, что может быть или не быть.</span> <span>Поскольку вы ещё не определили эту страницу, вы получите ещё одну ошибку!</span><br>
- <br>
- <span>Откройте настройки проекта (<strong>/locallibrary/locallibrary/settings.py</strong>) и добавьте текст ниже.</span> <span>Теперь, когда вы входите в систему, вы по умолчанию должны перенаправляться на домашнюю страницу сайта.</span></span></p>
+<p>Если ваша попытка войти в систему будет успешной,  вы будете перенаправлены на другую страницу (по умолчанию это будет <a href="http://127.0.0.1:8000/accounts/profile/">http://127.0.0.1:8000/accounts/profile/</a>). Проблема здесь в том, что по умолчанию Django ожидает, что после входа в систему вы захотите перейти на страницу профиля, что может быть или не быть. Поскольку вы ещё не определили эту страницу, вы получите ещё одну ошибку!</p>
+
+<p>Откройте настройки проекта (<strong>/locallibrary/locallibrary/settings.py</strong>) и добавьте текст ниже. Теперь, когда вы входите в систему, вы по умолчанию должны перенаправляться на домашнюю страницу сайта.</p>
 
 <pre class="brush: python"># Redirect to home URL after login (Default redirects to /accounts/profile/)
 LOGIN_REDIRECT_URL = '/'
@@ -264,9 +264,9 @@ LOGIN_REDIRECT_URL = '/'
 
 <h3 id="Шаблон_выхода">Шаблон выхода</h3>
 
-<p><span id="result_box" lang="ru"><span>Если вы перейдёте по URL-адресу выхода (<a href="http://127.0.0.1:8000/accounts/logout/">http://127.0.0.1:8000/accounts/logout/</a>), то увидите странное поведение - </span></span>ваш пользователь наверняка выйдет из системы<span lang="ru"><span>, </span></span>но вы попадёте на страницу выхода администратора<span lang="ru"><span>.</span> </span>Это не то, что вам нужно, хотя бы потому, что ссылка для входа на этой странице приведёт вас к экрану входа в систему администратора.<span lang="ru"><span> (и это доступно только для пользователей, у которых есть разрешение <code>is_staff</code>).</span><br>
+<p>Если вы перейдёте по URL-адресу выхода (<a href="http://127.0.0.1:8000/accounts/logout/">http://127.0.0.1:8000/accounts/logout/</a>), то увидите странное поведение - ваш пользователь наверняка выйдет из системы, но вы попадёте на страницу выхода администратора. Это не то, что вам нужно, хотя бы потому, что ссылка для входа на этой странице приведёт вас к экрану входа в систему администратора. (и это доступно только для пользователей, у которых есть разрешение <code>is_staff</code>).<br>
  <br>
- <span>Создайте и откройте <strong>/locallibrary/templates/registration/logged_out.html</strong>.</span> <span>Скопируйте текст ниже:</span></span></p>
+ Создайте и откройте <strong>/locallibrary/templates/registration/logged_out.html</strong>. Скопируйте текст ниже:</p>
 
 <pre class="brush: html">{% extends "base_generic.html" %}
 
@@ -276,19 +276,19 @@ LOGIN_REDIRECT_URL = '/'
 &lt;a href="{% url 'login'%}"&gt;Click here to login again.&lt;/a&gt;
 {% endblock %}</pre>
 
-<p><span id="result_box" lang="ru"><span>Этот шаблон очень прост.</span> <span>Он просто отображает сообщение, информирующее вас о том, что вы вышли из системы, и предоставляет ссылку, которую вы можете нажать, чтобы вернуться на экран входа в систему.</span> <span>Если вы снова перейдёте на страницу выхода из системы, вы увидите эту страницу:</span></span></p>
+<p>Этот шаблон очень прост. Он просто отображает сообщение, информирующее вас о том, что вы вышли из системы, и предоставляет ссылку, которую вы можете нажать, чтобы вернуться на экран входа в систему. Если вы снова перейдёте на страницу выхода из системы, вы увидите эту страницу:</p>
 
 <p><img alt="Library logout page v1" src="https://mdn.mozillademos.org/files/14103/library_logout.png" style="border-style: solid; border-width: 1px; display: block; height: 169px; margin: 0px auto; width: 385px;"></p>
 
 <h3 id="Шаблон_сброса_пароля">Шаблон сброса пароля</h3>
 
-<p><span id="result_box" lang="ru"><span>Система сброса пароля по умолчанию использует электронную почту, чтобы отправить пользователю ссылку на сброс.</span> <span>Вам необходимо создать формы, чтобы получить адрес электронной почты пользователя, отправить электронное письмо, разрешить им вводить новый пароль и отметить, когда весь процесс будет завершён.</span><br>
- <br>
- <span>В качестве отправной точки можно использовать следующие шаблоны.</span></span></p>
+<p>Система сброса пароля по умолчанию использует электронную почту, чтобы отправить пользователю ссылку на сброс. Вам необходимо создать формы, чтобы получить адрес электронной почты пользователя, отправить электронное письмо, разрешить им вводить новый пароль и отметить, когда весь процесс будет завершён.</p>
+
+<p>В качестве отправной точки можно использовать следующие шаблоны.</p>
 
 <h4 id="Форма_сброса_пароля">Форма сброса пароля</h4>
 
-<p><span id="result_box" lang="ru"><span>Это форма, используемая для получения адреса электронной почты пользователя (для отправки пароля для сброса пароля).</span> <span>Создайте <strong>/locallibrary/templates/registration/password_reset_form.html</strong> и дайте ему следующее содержание:</span></span></p>
+<p>Это форма, используемая для получения адреса электронной почты пользователя (для отправки пароля для сброса пароля). Создайте <strong>/locallibrary/templates/registration/password_reset_form.html</strong> и дайте ему следующее содержание:</p>
 
 <pre class="brush: html">{% extends "base_generic.html" %}
 {% block content %}
@@ -423,7 +423,7 @@ LOGIN_REDIRECT_URL = '/'
 
 <h3 id="Тестирование_в_представлениях">Тестирование в представлениях</h3>
 
-<p>Если вы используете функциональные представления, самым простым способом ограничить доступ к вашим функциям является применение <code>login_required</code> декоратор к вашей функции просмотра, как показано ниже. Если пользователь вошёл в систему, ваш код просмотра будет выполняться как обычно. Если пользователь не вошёл в систему, это перенаправит URL-адрес входа, определённый в настройках проекта. (<code>settings.LOGIN_URL</code>), передав текущий абсолютный путь в качестве <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">next</span></font> параметра URL. Если пользователю удастся войти в систему, они будут возвращены на эту страницу, но на этот раз аутентифицированы.</p>
+<p>Если вы используете функциональные представления, самым простым способом ограничить доступ к вашим функциям является применение <code>login_required</code> декоратор к вашей функции просмотра, как показано ниже. Если пользователь вошёл в систему, ваш код просмотра будет выполняться как обычно. Если пользователь не вошёл в систему, это перенаправит URL-адрес входа, определённый в настройках проекта. (<code>settings.LOGIN_URL</code>), передав текущий абсолютный путь в качестве next параметра URL. Если пользователю удастся войти в систему, они будут возвращены на эту страницу, но на этот раз аутентифицированы.</p>
 
 <pre class="brush: python">from django.contrib.auth.decorators import login_required
 

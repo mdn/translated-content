@@ -2,6 +2,7 @@
 title: Document.close()
 slug: Web/API/Document/close
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.close()`** メソッドは、 {{domxref("Document.open()")}} で開かれた文書への書き込みを終了します。

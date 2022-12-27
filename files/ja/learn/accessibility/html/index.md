@@ -2,6 +2,7 @@
 title: 'HTML: アクセシビリティの基礎'
 slug: Learn/Accessibility/HTML
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/What_is_Accessibility","Learn/Accessibility/CSS_and_JavaScript", "Learn/Accessibility")}}
 
 正確な HTML 要素が、常に正しい目的で使用されているかを確認するだけで、たくさんのウェブコンテンツがアクセシブルになります。 ここでは、最大限のアクセシビリティを確保するために、HTML をどのように使用できるかについて詳しく説明します。

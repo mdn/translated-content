@@ -2,6 +2,7 @@
 title: DOMTokenList.item()
 slug: Web/API/DOMTokenList/item
 ---
+
 {{APIRef("DOM")}}
 
 **`item()`** は {{domxref("DOMTokenList")}} インターフェイスのメソッドで、リスト内の項目をその位置から取得します。

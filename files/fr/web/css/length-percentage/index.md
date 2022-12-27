@@ -28,11 +28,8 @@ width: calc(100% - 200px);
 
 ## Spécifications
 
-| Spécification                                                                                            | État                             | Commentaires                                                |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------- |
-| {{SpecName('CSS4 Values', '#mixed-percentages', '&lt;length-percentage&gt;')}} | {{Spec2('CSS4 Values')}} |                                                             |
-| {{SpecName('CSS3 Values', '#mixed-percentages', '&lt;length-percentage&gt;')}} | {{Spec2('CSS3 Values')}} | Définition du type `<length-percentage>`. Ajout de `calc()` |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.length-percentage")}}
+{{Compat}}

@@ -3,6 +3,7 @@ title: WindowOrWorkerGlobalScope.btoa()
 slug: Web/API/btoa
 original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`WindowOrWorkerGlobalScope.btoa()`** メソッドは、 {{glossary("Base64")}} でエンコードされた ASCII 文字列を[バイナリ文字列](/ja/docs/Web/API/DOMString/Binary) (例えば {{jsxref("String")}} オブジェクトのうち、文字列中のすべての文字がバイナリデータのバイトとして扱うことができるもの) から生成します。

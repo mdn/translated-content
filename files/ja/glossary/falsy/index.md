@@ -2,6 +2,7 @@
 title: Falsy (偽値)
 slug: Glossary/Falsy
 ---
+
 **偽値** (_falsy_ または _falsey_ な値) は、 {{Glossary("Boolean")}} コンテキストに現れたときに偽とみなされる値です。
 
 {{Glossary("JavaScript")}} は{{Glossary("Conditional", "条件文")}}や{{Glossary("Loop", "繰り返し")}}などの場面で、任意の値を強制的に Boolean に{{Glossary("Type_Conversion", "型変換")}}します。

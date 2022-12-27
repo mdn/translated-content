@@ -15,7 +15,9 @@ El método **`propertyIsEnumerable()`** regresa un Boleano indicando si la propi
 
 ## Sintaxis
 
-    obj.propertyIsEnumerable(prop)
+```
+obj.propertyIsEnumerable(prop)
+```
 
 ### Parametros
 

@@ -2,6 +2,7 @@
 title: Intersection Observer API を使用したタイミング要素の可視性
 slug: Web/API/Intersection_Observer_API/Timing_element_visibility
 ---
+
 {{DefaultAPISidebar("Intersection Observer API")}}
 
 [Intersection Observer API](/ja/docs/Web/API/Intersection_Observer_API) は、{{domxref("Document")}} 自体を含む共有祖先ノードまたは要素によって、対象の要素が多かれ少なかれ不明瞭になったときに、非同期的に通知されることを容易にします。 この記事では、ページのコンテンツ間に多数の広告が散在している模擬ブログを作成し、その後 Intersection Observer API を使用して、各広告がユーザに見える時間を追跡します。表示時間の 1 分を超える広告は、新しい広告と置き換えられます。

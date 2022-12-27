@@ -18,7 +18,7 @@ str.toLocaleLowerCase([locale, locale, ...])
 ### 参数
 
 - `locale` {{optional_inline}}
-  - : 参数 `locale` 指明要转换成小写格式的特定语言区域。 如果以一个数组 {{jsxref("Array")}} 形式给出多个 locales, 最合适的地区将被选出来应用（参见[best available locale](https://tc39.github.io/ecma402/#sec-bestavailablelocale)）。默认的 locale 是主机环境的当前区域 (locale) 设置。
+  - : 参数 `locale` 指明要转换成小写格式的特定语言区域。如果以一个数组 {{jsxref("Array")}} 形式给出多个 locales, 最合适的地区将被选出来应用（参见[best available locale](https://tc39.github.io/ecma402/#sec-bestavailablelocale)）。默认的 locale 是主机环境的当前区域 (locale) 设置。
 
 ### 返回值
 

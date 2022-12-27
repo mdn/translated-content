@@ -2,6 +2,7 @@
 title: MouseEvent.offsetY
 slug: Web/API/MouseEvent/offsetY
 ---
+
 {{APIRef("DOM Events")}}
 
 **`offsetY`** は {{domxref("MouseEvent")}} インターフェイスの読み取り専用プロパティで、このイベントと対象ノードのパディング辺との間のマウスポインターの Y 座標におけるオフセットを提供します。

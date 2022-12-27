@@ -2,6 +2,7 @@
 title: Empty element (空要素)
 slug: Glossary/Empty_element
 ---
+
 **空要素** とは HTML、SVG、MathML における {{Glossary("element", "要素")}} のうち、子ノード (子要素およびテキストノード) を**持つことができない**ものを指します。
 
 [HTML](https://html.spec.whatwg.org/multipage/)、[SVG](https://www.w3.org/TR/SVG2/)、[MathML](https://www.w3.org/TR/MathML3/) 仕様は、それぞれの要素が何を含むことができるかを詳細に定義しています。でないと、例えば {{HTMLElement("hr")}} 要素を親に持つ {{HTMLElement("audio")}} 要素、といった無意味な組み合わせが多数存在してしまいます。

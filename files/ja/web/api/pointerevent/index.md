@@ -2,6 +2,7 @@
 title: PointerEvent
 slug: Web/API/PointerEvent
 ---
+
 {{ APIRef("Pointer Events") }}
 
 **`PointerEvent`** インターフェイスは、接触点のジオメトリ、イベントを生成したデバイスタイプ、接触面に加えられた圧力の量など、ポインタによって生成された DOM イベントの状態を表します。

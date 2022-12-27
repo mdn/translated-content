@@ -2,6 +2,7 @@
 title: テキストを扱う — JavaScript での文字列
 slug: Learn/JavaScript/First_steps/Strings
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps")}}
 
 プログラミングでは文字の羅列を文字列と呼びますが、次はこれを学習しましょう。この記事では、JavaScript でよく使われる、文字列を作ったり、引用符をエスケープしたり、文字列を結合したりといった、文字列について本当に知っておくべきことだけを見てみましょう。

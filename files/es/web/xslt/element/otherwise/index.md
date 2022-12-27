@@ -13,9 +13,11 @@ El elemento `<xsl:otherwise>` se utiliza para definir la acción que se debe tom
 
 ### Sintaxis
 
-    <xsl:otherwise>
-    	PLANTILLA
-    </xsl:otherwise>
+```
+<xsl:otherwise>
+  PLANTILLA
+</xsl:otherwise>
+```
 
 ### Atributos requeridos
 

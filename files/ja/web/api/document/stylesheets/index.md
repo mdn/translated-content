@@ -3,6 +3,7 @@ title: DocumentOrShadowRoot.styleSheets
 slug: Web/API/Document/styleSheets
 original_slug: Web/API/DocumentOrShadowRoot/styleSheets
 ---
+
 {{SeeCompatTable}}{{APIRef("Shadow DOM")}}
 
 {{domxref("DocumentOrShadowRoot")}} インターフェイスの **`styleSheets`** 読み取り専用プロパティは、 {{domxref('CSSStyleSheet')}} オブジェクトの {{domxref('StyleSheetList')}} を返します。ドキュメントに明示的にリンクまたは埋め込まれたスタイルシートの場合。

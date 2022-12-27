@@ -2,6 +2,7 @@
 title: CustomElementRegistry
 slug: Web/API/CustomElementRegistry
 ---
+
 {{DefaultAPISidebar("Web Components")}}
 
 **`CustomElementRegistry`** インターフェイスは、カスタム要素の登録と、登録された要素を照会するためのメソッドを提供します。このインスタンスを取得するには、{{domxref("window.customElements")}} プロパティを使用してください。

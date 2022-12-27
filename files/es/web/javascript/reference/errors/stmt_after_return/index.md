@@ -7,7 +7,9 @@ translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 
 ## Mensaje
 
-    Advertencia: código inaccesible después de sentencia de retorno (Firefox)
+```
+Advertencia: código inaccesible después de sentencia de retorno (Firefox)
+```
 
 ## Tipo de error
 

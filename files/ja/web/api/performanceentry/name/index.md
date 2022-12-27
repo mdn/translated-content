@@ -2,6 +2,7 @@
 title: PerformanceEntry.name
 slug: Web/API/PerformanceEntry/name
 ---
+
 {{APIRef("Performance Timeline API")}}
 
 {{domxref("PerformanceEntry")}} インターフェイスの **`name`** プロパティは、{{domxref("PerformanceEntry.entryType")}} プロパティによって返される値をさらに指定する値を返します。このプロパティは読み取り専用です。

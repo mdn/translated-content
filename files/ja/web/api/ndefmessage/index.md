@@ -2,6 +2,7 @@
 title: NDEFMessage
 slug: Web/API/NDEFMessage
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`NDEFMessage`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API) のインターフェイスで、 NHC タグで読み書きされる NDEF メッセージの内容を表します。インスタンスは `NDEFMessage()` コンストラクターを呼び出すか、 {{domxref("NDEFReader.reading_event", "reading")}} イベントに渡される {{domxref("NDEFReadingEvent.message")}} プロパティを用いるかして取得します。

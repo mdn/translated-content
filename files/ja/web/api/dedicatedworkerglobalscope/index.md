@@ -2,6 +2,7 @@
 title: DedicatedWorkerGlobalScope
 slug: Web/API/DedicatedWorkerGlobalScope
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`DedicatedWorkerGlobalScope`** object (the {{domxref("Worker")}} global scope) is accessible through the {{domxref("window.self","self")}} keyword. Some additional global functions, namespaces objects, and constructors, not typically associated with the worker global scope, but available on it, are listed in the [JavaScript Reference](/ja/docs/Web/JavaScript/Reference). See also: [Functions available to workers](/ja/docs/Web/Guide/Needs_categorization/Functions_available_to_workers).

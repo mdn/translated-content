@@ -30,9 +30,13 @@ The border width in the other dimension can be set with {{cssxref("border-block-
 - `<'border-width'>`
   - : La largeur de la bordure. Voir {{ cssxref("border-width") }}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -66,15 +70,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                            | État                                             | Commentaires         |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-width", "border-block-width")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-block-width")}}
+{{Compat}}
 
 ## Voir aussi
 

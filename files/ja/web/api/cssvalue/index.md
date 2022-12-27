@@ -2,6 +2,7 @@
 title: CSSValue
 slug: Web/API/CSSValue
 ---
+
 {{APIRef("CSSOM")}}
 
 **`SSValue`** インターフェイスは、 CSS プロパティの現在の計算値を表します。

@@ -2,6 +2,7 @@
 title: PointerEvent.getCoalescedEvents()
 slug: Web/API/PointerEvent/getCoalescedEvents
 ---
+
 {{APIRef("Pointer Events")}}{{seecompattable}}
 
 {{domxref("PointerEvent")}} インターフェイスの **`getCoalescedEvents()`** メソッドは、送出された {{event("pointermove")}} イベントに合体したすべての `PointerEvent` インスタンスのシーケンスを返します。

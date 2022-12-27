@@ -56,16 +56,11 @@ a:hover {
 
 ## Spécifications
 
-| Spécification                                                                                                    | Commentaires                                                 | Retours                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName('HTML WHATWG', 'scripting.html#selector-hover', ':hover')}}                     |                                                              | [_Issues_ GitHub du WHATWG HTML (en anglais)](https://github.com/whatwg/html/issues)                                  |
-| {{SpecName('CSS4 Selectors', '#the-hover-pseudo', ':hover')}}                                 | Permet d'appliquer `:hover` à n'importe quel pseudo-élément. | [Issues GitHub pour les brouillons du groupe de travail CSS (en anglais)](https://github.com/w3c/csswg-drafts/issues) |
-| {{SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':hover')}} |                                                              |                                                                                                                       |
-| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':hover')}}                 | Définition initiale.                                         |                                                                                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.hover")}}
+{{Compat}}
 
 ## Voir aussi
 

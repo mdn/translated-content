@@ -27,20 +27,20 @@ y valores de
 _localización_
 .
 
-- \<tt>Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)\</tt>
-- \<tt>Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.0.2) Gecko/20030208 Netscape/7.02\</tt>
-- \<tt>Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.0.2) Gecko/20021120 Netscape/7.01\</tt>
-- \<tt>Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.0.1) Gecko/20020823 Netscape/7.0\</tt>
-- \<tt>Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-US; rv:1.0.1) Gecko/20020730 AOL/7.0\</tt>
-- \<tt>Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.0rc2) Gecko/20020512 Netscape/7.0b1\</tt>
-- \<tt>Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4.2) Gecko/20020220 CS 2000 7.0/7.0\</tt>
+- `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.4) Gecko/20030624 Netscape/7.1 (ax)`
+- `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.0.2) Gecko/20030208 Netscape/7.02`
+- `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.0.2) Gecko/20021120 Netscape/7.01`
+- `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.0.1) Gecko/20020823 Netscape/7.0`
+- `Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-US; rv:1.0.1) Gecko/20020730 AOL/7.0`
+- `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.0rc2) Gecko/20020512 Netscape/7.0b1`
+- `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4.2) Gecko/20020220 CS 2000 7.0/7.0`
 
-  - \<tt>Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.4.2) Gecko/20020502 CS 2000 7.0/7.0\</tt>
+  - `Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.4.2) Gecko/20020502 CS 2000 7.0/7.0`
 
-- \<tt>Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4.1) Gecko/20020508 Netscape6/6.2.3\</tt>
-- \<tt>Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4.1) Gecko/20020314 Netscape6/6.2.2\</tt>
-- \<tt>Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4) Gecko/20011128 Netscape6/6.2.1\</tt>
-- \<tt>Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.2) Gecko/20010726 Netscape6/6.1\</tt>
+- `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4.1) Gecko/20020508 Netscape6/6.2.3`
+- `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4.1) Gecko/20020314 Netscape6/6.2.2`
+- `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4) Gecko/20011128 Netscape6/6.2.1`
+- `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.2) Gecko/20010726 Netscape6/6.1`
 
 Para una información más detallada sobre liberaciones de Netscape y Mozilla, por favor vea el [mozilla.org cvstags reference](http://www.mozilla.org/releases/cvstags.html).
 

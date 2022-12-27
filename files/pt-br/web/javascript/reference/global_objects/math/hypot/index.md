@@ -35,7 +35,7 @@ Para calcular a hipotenusa de um triângulo retângulo, ou o módulo de um núme
 
 A função Math.hypot() torna esta tarefa mais rápida e mais fácil, basta executar `Math.hypot(v1, v2)` , or `Math.hypot(v1, v2, v3, v4, ...)` .
 
-Dessa maneira também se evita problemas se a magnitude dos seus número for muito grande. O maio número que se pode representar em um _double float_ em JavasScript é `Number.MAX_VALUE` = 1.797...e+308. Se os seu números são maior que 1e154, calcular o quadrado deles resultará em `Infinity`, estragando os seus resultados. Por exemplo, `Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity`. Se você usar a função `Math.hypot()`, você receberá uma resposta aceitável: `Math.hypot(1e200, 1e200) = 1.4142...e+200`. Isto também é verdade para número muito pequenos. `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0`, mas ` Math.hypot(1e-200, 1e-200) = ``1.4142...e-200 ` é uma boa resposta.
+Dessa maneira também se evita problemas se a magnitude dos seus número for muito grande. O maio número que se pode representar em um _double float_ em JavasScript é `Number.MAX_VALUE` = 1.797...e+308. Se os seu números são maior que 1e154, calcular o quadrado deles resultará em `Infinity`, estragando os seus resultados. Por exemplo, `Math.sqrt(1e200*1e200 + 1e200*1e200) = Infinity`. Se você usar a função `Math.hypot()`, você receberá uma resposta aceitável: `Math.hypot(1e200, 1e200) = 1.4142...e+200`. Isto também é verdade para número muito pequenos. `Math.sqrt(1e-200*1e-200 + 1e-200*1e-200) = 0`, mas `Math.hypot(1e-200, 1e-200) = 1.4142...e-200` é uma boa resposta.
 
 > **Nota:** Por `hypot()` ser um método estático de `Math`, deve-se sempre usá-lo como `Math.hypot()`, e não como um método de um objeto `Math` que você criou.
 

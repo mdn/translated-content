@@ -3,6 +3,7 @@ title: 能力、制約、そして設定
 slug: Web/API/Media_Capture_and_Streams_API/Constraints
 original_slug: Web/API/Media_Streams_API/Constraints
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 歴史的に、Web API と密接に連携するウェブ用のスクリプトを作成することには、よく知られた課題がありました。 多くの場合、コードは、API が存在するかどうか、存在する場合は、それを実行している{{Glossary("user agent","ユーザーエージェント")}}の制限を知る必要があります。 これを理解するのは難しい場合が多く、通常、実行している{{Glossary("user agent","ユーザーエージェント")}}（またはブラウザー）とそのバージョンの組み合わせを調べ、特定のオブジェクトが存在するかどうかを確認したり、さまざまなものが機能するかどうかを確認したり、どのエラーが発生したかを判断したりする必要がありました。 その結果、非常に脆弱なコードが大量に発生するか、このような問題を解決するライブラリに依存したり、{{Glossary("polyfill", "ポリフィル")}}を実装して実装の穴にパッチを当てたりしました。

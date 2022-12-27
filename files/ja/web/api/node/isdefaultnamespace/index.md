@@ -2,6 +2,7 @@
 title: Node.isDefaultNamespace()
 slug: Web/API/Node/isDefaultNamespace
 ---
+
 {{APIRef("DOM")}}
 
 **`isDefaultNamespace()`** は {{domxref("Node")}} インターフェイスのメソッドで、名前空間 URI を引数として受け取ります。

@@ -2,6 +2,7 @@
 title: '評価: アクセシビリティのトラブルシューティング'
 slug: Learn/Accessibility/Accessibility_troubleshooting
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
 
 このモジュールの評価では、あなたが診断、修正するべきいくつかのアクセシビリティの問題を持った簡単なサイトを表示します。

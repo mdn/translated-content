@@ -2,6 +2,7 @@
 title: MediaStream Image Capture API
 slug: Web/API/MediaStream_Image_Capture_API
 ---
+
 {{DefaultAPISidebar("Image Capture API")}}{{SeeCompatTable}}
 
 **MediaStream Image Capture API** は、写真デバイスから画像やビデオをキャプチャするための API です。データをキャプチャするだけでなく、画像サイズ、赤目軽減、フラッシュの有無、現在の設定などのデバイス機能に関する情報を取得することもできます。逆に、API では、デバイスが許可する制限内で機能を設定できます。

@@ -2,6 +2,7 @@
 title: 'Django チュートリアル Part 3: モデルの使用'
 slug: Learn/Server-side/Django/Models
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
 この記事では、LocalLibrary Web サイトのモデルを定義する方法を説明します。モデルとは何か、その宣言方法、および主要なフィールドタイプについて説明します。また、モデルデータにアクセスするための主な方法のいくつかについても簡単に説明します。

@@ -2,6 +2,7 @@
 title: Document.createExpression()
 slug: Web/API/Document/createExpression
 ---
+
 {{APIRef("DOM")}}
 
 このメソッドは、 (繰り返して) 評価を行うために使用することができる {{DOMxRef("XPathExpression")}} をコンパイルします。

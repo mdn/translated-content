@@ -4,6 +4,7 @@ slug: Web/API/Payment_Request_API
 l10n:
   sourceCommit: 2d55f134b973850ecaa4ad01fe55c63bd3982576
 ---
+
 {{DefaultAPISidebar("Payment Request API")}}{{securecontext_header}}
 
 支払いリクエスト API (Payment Request API) は、販売者とユーザーの両方に、一貫したユーザー体験を提供します。これは新しい支払い方法ではなく、ユーザーが自分の好きな支払い方法を選択し、その情報を販売者が利用できるようにするための方法です。

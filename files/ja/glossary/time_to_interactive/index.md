@@ -2,6 +2,7 @@
 title: Time to interactive (対話時間)
 slug: Glossary/Time_to_interactive
 ---
+
 **対話時間 (TTI)** は、最後の[ロングタスク](/ja/docs/Web/API/Long_Tasks_API)が終了し、その後 5 秒間のネットワークとメインスレッドの非アクティブ状態が続いた時点として定義される、標準化されていない Web パフォーマンスの「進行状況」メトリクスです。
 
 2018 年に Web Incubator Community Group によって提案された TTI は、ページまたはアプリケーションに有用なコンテンツが含まれ、メインスレッドがアイドル状態になり、イベントハンドラの登録など、ユーザの操作に自由にレスポンスできるようになるメトリクスを提供します。

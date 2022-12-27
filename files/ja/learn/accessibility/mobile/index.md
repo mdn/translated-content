@@ -2,6 +2,7 @@
 title: モバイルのアクセシビリティ
 slug: Learn/Accessibility/Mobile
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/Multimedia","Learn/Accessibility/Accessibility_troubleshooting", "Learn/Accessibility")}}
 
 モバイルデバイスでのウェブアクセスは非常に人気があり、iOS や Android などの一般的なプラットフォームには本格的なアクセシビリティツールが備わっているため、これらのプラットフォームでのウェブコンテンツのアクセシビリティを考慮することが重要です。この記事では、モバイル固有のアクセシビリティについて検討します。

@@ -2,6 +2,7 @@
 title: CacheStorage
 slug: Web/API/CacheStorage
 ---
+
 {{APIRef("Service Workers API")}}
 
 **`CacheStorage`** インターフェイスは、{{domxref("Cache")}} オブジェクトのストレージを表します。

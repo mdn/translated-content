@@ -2,6 +2,7 @@
 title: CanvasRenderingContext2D.beginPath()
 slug: Web/API/CanvasRenderingContext2D/beginPath
 ---
+
 {{APIRef}}
 
 **`CanvasRenderingContext2D.beginPath()`** はキャンバス 2D API のメソッドで、サブパスのリストを空にすることにより新しいパスを開始します。新しいパスを作成したい場合は、このメソッドを呼び出してください。

@@ -38,7 +38,7 @@ image-rendering: unset;
 - `pixelated`
   - : 放大图像时，使用最近邻居算法，因此，图像看着像是由大块像素组成的。缩小图像时，算法与 `auto` 相同。
 
-> **备注：** 早期草案中出现的 `optimizationQuality` 和 `optimizationSpeed` （来自SVG的对应值）分别被定义为 `smooth` 和 `pixelated`。
+> **备注：** 早期草案中出现的 `optimizationQuality` 和 `optimizationSpeed` （来自 SVG 的对应值）分别被定义为 `smooth` 和 `pixelated`。
 
 ### 形式化语法
 

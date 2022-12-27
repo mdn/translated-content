@@ -2,6 +2,7 @@
 title: 独自の関数を作る
 slug: Learn/JavaScript/Building_blocks/Build_your_own_function
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/Functions","Learn/JavaScript/Building_blocks/Return_values", "Learn/JavaScript/Building_blocks")}}
 
 前の記事で扱った重要な理屈をたくさん使って、この記事では実践的な練習を行ないます。ここではあなたが自力で独自関数を作成するための練習を行なっていきます。同時に、関数を扱う上で役に立つ細々の説明もしていきます。

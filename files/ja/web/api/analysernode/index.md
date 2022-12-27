@@ -2,6 +2,7 @@
 title: AnalyserNode
 slug: Web/API/AnalyserNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **`AnalyserNode`** インタフェースはリアルタイム時間領域/周波数領域分析情報を表現します。{{domxref("AudioNode")}}は、入力から出力の流れにおいて audio stream そのものは変えず、データ加工や音声の可視化をすることができます。

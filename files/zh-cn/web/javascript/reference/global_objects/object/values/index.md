@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/values
 
 {{JSRef}}
 
-**`Object.values()`**方法返回一个给定对象自身的所有可枚举属性值的数组，值的顺序与使用{{jsxref("Statements/for...in", "for...in")}}循环的顺序相同 ( 区别在于 for-in 循环枚举原型链中的属性 )。
+**`Object.values()`** 方法返回一个给定对象自身的所有可枚举属性值的数组，值的顺序与使用 {{jsxref("Statements/for...in", "for...in")}} 循环的顺序相同（区别在于 for-in 循环枚举原型链中的属性）。
 
 ## 语法
 
@@ -52,7 +52,7 @@ console.log(Object.values('foo')); // ['f', 'o', 'o']
 
 ## Polyfill
 
-`如果要 Object.values`兼容不支持它的旧环境，可在 [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) 或 [es-shims/Object.values](https://github.com/es-shims/Object.values) 中找到 Polyfill 。
+如果要 `Object.values`兼容不支持它的旧环境，可在 [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) 或 [es-shims/Object.values](https://github.com/es-shims/Object.values) 中找到 Polyfill。
 
 根据**Object.keys()**的 Polyfill 仿写一个：
 

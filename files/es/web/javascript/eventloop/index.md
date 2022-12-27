@@ -66,7 +66,7 @@ Una desventaja de este modelo es que, si un mensaje toma mucho tiempo en complet
 
 En los navegadores web, los mensajes son añadidos cada vez que un evento ocurre y hay un escuchador de eventos asociado a él. Si no hay un escuchador, el evento se pierde. De este modo, al hacer click en un elemento con un manejador de eventos tipo click, se añadirá un mensaje. Lo mismo sucede en otros tipos de eventos.
 
-Al llamar [`setTimeout`](/es/docs/Web/API/setTimeout "/es/docs/Web/API/setTimeout") se añadirá un mensaje a la cola después de el tiempo especificado como segundo parámetro. Si no hay ningún otro mensaje en la cola, el mensaje es procesado en el momento; sin embargo, si hay mensajes en la cola, el mensaje de `setTimeout `tendrá que esperar a que los otros mensajes sean procesados. Por esta razón el segundo parámetro indica el tiempo mínimo tiempo esperado y no es una garantía.
+Al llamar [`setTimeout`](/es/docs/Web/API/setTimeout) se añadirá un mensaje a la cola después de el tiempo especificado como segundo parámetro. Si no hay ningún otro mensaje en la cola, el mensaje es procesado en el momento; sin embargo, si hay mensajes en la cola, el mensaje de `setTimeout` tendrá que esperar a que los otros mensajes sean procesados. Por esta razón el segundo parámetro indica el tiempo mínimo tiempo esperado y no es una garantía.
 
 ### Cero retraso
 
@@ -101,10 +101,10 @@ Cero retraso no significa que una llamada a una función (call back) se disparar
 
 ### Varios programas comunicandose al mismo tiempo
 
-Un web worker o cross-origin `iframe` tiene su propia pila, montículo y cola de mensajes. Dos programas diferentes solo se pueden comunicar enviando mensajes a través del método [`postMessage`](/es/docs/Web/API/Window/postMessage "/es/docs/Web/API/Window/postMessage"). Este método añade un mensaje al otro programa si éste último escucha eventos de tipo `message`.
+Un web worker o cross-origin `iframe` tiene su propia pila, montículo y cola de mensajes. Dos programas diferentes solo se pueden comunicar enviando mensajes a través del método [`postMessage`](/es/docs/Web/API/Window/postMessage). Este método añade un mensaje al otro programa si éste último escucha eventos de tipo `message`.
 
 ## Nunca se interrumpe
 
-Una propiedad muy interesante del modelo de loop de eventos es que JavaScript, a diferencia de otros lenguajes, nunca interrumpe otros programas en ejecución. Manejar operaciones de I/O (entrada/salida) es normalmente hecho a través de eventos y llamadas a función, de modo que cuando la aplicación, por ejemplo, está esperando por el retorno de una consulta [IndexedDB](/es/docs/Web/API/IndexedDB_API "/es/docs/IndexedDB") o una petición [XHR](/es/docs/Web/API/XMLHttpRequest "/es/docs/DOM/XMLHttpRequest"), ésta puede continuar procesando otras cosas como interacciones con el usuario (e.g. clicks).
+Una propiedad muy interesante del modelo de loop de eventos es que JavaScript, a diferencia de otros lenguajes, nunca interrumpe otros programas en ejecución. Manejar operaciones de I/O (entrada/salida) es normalmente hecho a través de eventos y llamadas a función, de modo que cuando la aplicación, por ejemplo, está esperando por el retorno de una consulta [IndexedDB](/es/docs/Web/API/IndexedDB_API) o una petición [XHR](/es/docs/Web/API/XMLHttpRequest), ésta puede continuar procesando otras cosas como interacciones con el usuario (e.g. clicks).
 
 Excepciones a esta regla existe en versiones anteriores del lenguaje, tales como `alert` o XHR síncrono, pero es considerada una buena práctica evitar su uso. Finalmente, hay que estar conscientes que hay [excepciones](https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311) a las excepciones (pero son usualmente errores de implementación mas que otra cosa).

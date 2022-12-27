@@ -2,6 +2,7 @@
 title: テスト実行のための戦略
 slug: Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Introduction","Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 この記事では「(クロス)ブラウザーテストとは何？」「最もよくある問題は何？」「問題をテスト、特定、修正する主な手法は何？」といった質問に答えることで、(クロス)ブラウザーテストの概観を与えることから始めます。

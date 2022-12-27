@@ -40,7 +40,7 @@ translation_of: Web/Guide
 
 <!---->
 
-- [Aplicativos da web progressivos](https://developer.mozilla.org/en-US/Apps/Progressive#Core_PWA_guides)
+- [Aplicativos da web progressivos](/en-US/Apps/Progressive#Core_PWA_guides)
   - : Aplicações progressivas web(PWAs) usam modernas web APIs juntamente com a estratégia tradicional de aprimoramento progressivo para criar aplicações web multiplataforma. Esses aplicações funcionam em qualquer lugar e fornecem vários recursos que proporcionam as mesmas vantagens da experiência de usuário (UX) tal como em aplicações nativas. Este conjunto de guias informa tudo o que você precisa saber sobre PWAs.
 - [Otimização e desempenho](/pt-BR/docs/Web/Guide/Performance)
   - : Ao construir aplicativos e sites Web modernos, é importante fazer o seu conteúdo funcionar de forma rápida e eficiente. Isso o torna efetivo tanto em poderosos dispositivos Desktop quanto em outros mais fracos como um celular.

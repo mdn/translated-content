@@ -57,10 +57,8 @@ La pseudo-classe **`:any-link`** permet de représenter un élément qui agit co
 
 ## Spécifications
 
-| Spécification                                                                            | État                                 | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
-| {{SpecName("CSS4 Selectors", "#the-any-link-pseudo", ":any-link")}} | {{Spec2('CSS4 Selectors')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.any-link")}}
+{{Compat}}

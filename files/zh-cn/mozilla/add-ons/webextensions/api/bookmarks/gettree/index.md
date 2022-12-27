@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getTree
 
 如果它们是文件夹的话，你可以通过其 `children` 属性及其后代的 `children` 属性递归地访问整个树。
 
-这是一个异步的函数，返回`Promise。`
+这是一个异步的函数，返回 `Promise`。
 
 ## 使用格式
 

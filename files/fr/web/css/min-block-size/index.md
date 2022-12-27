@@ -46,9 +46,13 @@ min-block-size: unset;
 
 La propriété `min-block-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -75,15 +79,11 @@ La propriété `min-block-size` peut prendre les mêmes valeurs que les proprié
 
 ## Spécifications
 
-| Spécification                                                                                                    | Statut                                           | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-min-block-size", "min-block-size")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.min-block-size")}}
+{{Compat}}
 
 ## Voir aussi
 

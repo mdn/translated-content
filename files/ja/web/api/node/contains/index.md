@@ -2,6 +2,7 @@
 title: Node.contains()
 slug: Web/API/Node/contains
 ---
+
 {{APIRef("DOM")}}
 
 **`contains()`** は {{domxref("Node")}} インターフェイスのメソッドで、あるノードが指定されたノードの子孫であるか、すなわち、このノード自体であるか、直接の子ノード ({{domxref("Node.childNodes", "childNodes")}}) の何れかであるか、直接の子ノードの子ノードの何れかであるか（以下同様）を示す論理値を返します。

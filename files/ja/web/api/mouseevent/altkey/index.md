@@ -2,6 +2,7 @@
 title: MouseEvent.altKey
 slug: Web/API/MouseEvent/altKey
 ---
+
 {{APIRef("DOM Events")}}
 
 **`MouseEvent.altKey`** は読み取り専用のプロパティでありマウスイベントが発行されたときに <kbd>alt</kbd> キーが押されていたかどうかを論理値で示します。

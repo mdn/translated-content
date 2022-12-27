@@ -2,6 +2,7 @@
 title: NodeList.prototype.forEach()
 slug: Web/API/NodeList/forEach
 ---
+
 {{APIRef("DOM")}}
 
 {{domxref("NodeList")}} インターフェースにおける **`forEach()`** メソッドは、引数に渡されたコールバックをリストの各値のペアに対して 1 度ずつ挿入順で呼び出します。

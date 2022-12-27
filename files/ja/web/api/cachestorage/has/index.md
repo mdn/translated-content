@@ -2,6 +2,7 @@
 title: CacheStorage.has()
 slug: Web/API/CacheStorage/has
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("CacheStorage")}} インターフェイスの **`has()`** メソッドは、{{domxref("Cache")}} オブジェクトが `cacheName` と一致する場合に `true` に解決される {{jsxref("Promise")}} を返します。

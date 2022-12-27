@@ -2,6 +2,7 @@
 title: NotificationEvent.NotificationEvent()
 slug: Web/API/NotificationEvent/NotificationEvent
 ---
+
 {{APIRef("Web Notifications")}}
 
 **`NotificationEvent()`** コンストラクターは、新しい {{domxref("NotificationEvent")}} オブジェクトを生成します。

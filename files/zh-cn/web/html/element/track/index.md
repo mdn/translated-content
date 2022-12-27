@@ -81,7 +81,7 @@ slug: Web/HTML/Element/track
 - {{htmlattrdef("src")}}
   - : track 的地址。必须是合法的 URL。该属性必须定义。
 - {{htmlattrdef("srclang")}}
-  - : track 文本数据的语言。它必须是合法的 [BCP 47](http://people.w3.org/rishida/utils/subtags/) 语言标签。如果 `kind` 属性被设为 `subtitles,` 那么`srclang` 必须定义。
+  - : track 文本数据的语言。它必须是合法的 [BCP 47](http://people.w3.org/rishida/utils/subtags/) 语言标签。如果 `kind` 属性被设为 `subtitles`, 那么 `srclang` 必须定义。
 
 ## 用法说明
 

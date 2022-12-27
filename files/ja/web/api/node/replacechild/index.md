@@ -2,6 +2,7 @@
 title: Node.replaceChild
 slug: Web/API/Node/replaceChild
 ---
+
 {{APIRef("DOM")}}
 
 **`replaceChild()`** は {{domxref("Node")}} 要素のメソッドで、この（親）ノードの中の子ノードを置き換えます。

@@ -2,6 +2,7 @@
 title: Web API の紹介
 slug: Learn/JavaScript/Client-side_web_APIs/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs")}}
 
 まずは API を高い視点から見ていきます — これは何なのか、どう働くのか、あなたのコードでどう使うのか、どういう風に作られているのか? また様々なクラスの API は何なのか、どのような使い方があるのかも見ていきます。

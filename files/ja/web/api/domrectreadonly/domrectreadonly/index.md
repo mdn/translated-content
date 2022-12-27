@@ -2,6 +2,7 @@
 title: DOMRectReadOnly()
 slug: Web/API/DOMRectReadOnly/DOMRectReadOnly
 ---
+
 {{APIRef("Geometry Interfaces")}}
 
 **`DOMRectReadOnly()`** コンストラクターは新しい {{domxref("DOMRectReadOnly")}} オブジェクトを生成します。

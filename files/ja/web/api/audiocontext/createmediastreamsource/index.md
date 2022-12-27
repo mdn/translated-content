@@ -2,6 +2,7 @@
 title: AudioContext.createMediaStreamSource()
 slug: Web/API/AudioContext/createMediaStreamSource
 ---
+
 {{ APIRef("Web Audio API") }}
 
 インターフェースの`createMediaStreamSource()`メソッドは、指定のメディアストリームから(言い換えると{{ domxref("navigator.getUserMedia") }}インスタンスから){{ domxref("MediaStreamAudioSourceNode") }}オブジェクトを生成します。ここからの音声は再生や編集ができます。

@@ -3,6 +3,7 @@ title: Text.replaceWholeText()
 slug: conflicting/Web/API/Text
 original_slug: Web/API/Text/replaceWholeText
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}
 
 **`replaceWholeText()`** は {{domxref("Text")}} インターフェイスのメソッドで、ノードのテキストと、*論理的に隣接するすべてのテキストノード*を指定されたテキストで置き換えます。

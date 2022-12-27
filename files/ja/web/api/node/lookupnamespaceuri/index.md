@@ -2,6 +2,7 @@
 title: Node.lookupNamespaceURI()
 slug: Web/API/Node/lookupNamespaceURI
 ---
+
 {{APIRef("DOM")}}
 
 **`lookupNamespaceURI()`** は {{domxref("Node")}} インターフェイスのメソッドで、引数として接頭辞を受け取り、このノードに関連付けられた名前空間が見つかれば、その URI を返します（見つからなければ `null` を返します）。

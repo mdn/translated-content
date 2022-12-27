@@ -2,6 +2,7 @@
 title: ウェブパフォーマンスとは
 slug: Learn/Performance/What_is_web_performance
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/why_web_performance", "Learn/Performance/Perceived_performance", "Learn/Performance")}}
 
 ウェブパフォーマンスとは、遅い処理を速く*見せる*ことも含めて、ウェブサイトを速くすることです。サイトがすぐに読み込まれるか、ユーザーがすぐに操作を始めることができるか、何かの読み込みに時間がかかっている場合には安心感のあるフィードバック (ローディングスピナーなど) を提供しているか。スクロールやアニメーションはスムーズか。この記事では、客観的で測定可能なウェブパフォーマンス\*について簡単に紹介し、ウェブの最適化にどのような技術、テクニック、ツールが必要なのかを見ていきます。

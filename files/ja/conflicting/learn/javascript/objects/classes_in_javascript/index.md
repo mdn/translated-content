@@ -3,6 +3,7 @@ title: 初心者のためのオブジェクト指向 JavaScript
 slug: conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript
 original_slug: Learn/JavaScript/Objects/Object-oriented_JS
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
 
 基礎が片付いたところで、オブジェクト指向 JavaScript (OOJS) について取り上げます。この記事ではオブジェクト指向プログラミング (OOP) の基本的な視点を説明し、 JavaScript がどのようにコンストラクター関数を通じてオブジェクトクラスをエミュレートしているか、またどのようにオブジェクトインスタンスを生成しているかを紹介します。

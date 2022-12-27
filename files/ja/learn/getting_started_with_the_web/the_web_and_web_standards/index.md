@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
 l10n:
   sourceCommit: 456818a08b697e125ddb765d8f18020bc80c9747
 ---
+
 {{learnsidebar}}
 
 この記事では、ウェブがどのようにして生まれたのか、ウェブ標準技術とは何か、どのように連携して動作するのか、なぜ「ウェブ開発者」が素晴らしい職業として選ばれるのか、コースを通じてどのような最善の手法を学ぶことができるのか、といったウェブの背景について、いくつか役立つ情報を提供しています。

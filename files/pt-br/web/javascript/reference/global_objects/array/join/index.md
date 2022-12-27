@@ -36,7 +36,7 @@ O exemplo interativo a seguir cria um array, `a`, com três elementos, e o junta
 
 ### Juntando um array-like object (objeto estilo-array)
 
-O exemplo abaixo junta um array-like object (ex: o objeto [`arguments`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments)), chamando {{jsxref("Function.prototype.call")}} no `Array.prototype.join`.
+O exemplo abaixo junta um array-like object (ex: o objeto [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments)), chamando {{jsxref("Function.prototype.call")}} no `Array.prototype.join`.
 
 ```js
 function f(a, b, c) {

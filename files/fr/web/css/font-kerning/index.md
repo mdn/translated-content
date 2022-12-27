@@ -34,9 +34,13 @@ font-kerning: unset;
 - `none`
   - : Ce mot-clé empêche le navigateur d'utiliser l'information de crénage stockée dans la police.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -81,15 +85,11 @@ nokern.textContent = input.value;
 
 ## Spécifications
 
-| Spécification                                                                            | État                             | Commentaire         |
-| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------- |
-| {{SpecName('CSS3 Fonts', '#propdef-font-kerning', 'font-kerning')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.font-kerning")}}
+{{Compat}}
 
 ## Voir aussi
 

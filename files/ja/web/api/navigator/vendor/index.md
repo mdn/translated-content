@@ -2,6 +2,7 @@
 title: Navigator.vendor
 slug: Web/API/Navigator/vendor
 ---
+
 {{ APIRef("HTML DOM") }}
 
 現在のブラウザーのブラウザーベンダーの名前を返します。

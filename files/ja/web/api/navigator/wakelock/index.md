@@ -2,6 +2,7 @@
 title: Navigator.wakeLock
 slug: Web/API/Navigator/wakeLock
 ---
+
 {{ApiRef("Screen Wake Lock API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 **`wakeLock`** は読み取り専用のプロパティで、 {{DOMxRef("WakeLock")}} インターフェイスを返します。これにより、文書が画面起動ロックを取得することができます。画面起動ロックが有効であれば、ユーザーエージェントは端末が画面を暗くしたり、画面を完全にオフにしたり、スクリーンセーバーを表示したりすることを防ぐよう試みることができます。

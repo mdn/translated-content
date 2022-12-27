@@ -2,6 +2,7 @@
 title: CSSStyleSheet.insertRule()
 slug: Web/API/CSSStyleSheet/insertRule
 ---
+
 **CSSStyleSheet.insertRule()** メソッドは、新しい [CSS 規則](/ja/docs/Web/API/CSSRule)を[現在のスタイルシート](/ja/docs/Web/API/CSSStyleSheet)に挿入しますが、いくつかの[制限](#Restrictions)があります。
 
 > **Note:** **メモ:** **insertRule()** は {{domxref("CSSStyleSheet")}} の排他的なメソッドですが、実際には規則を `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules`、内部的には {{domxref("CSSRuleList")}} に挿入します。

@@ -227,7 +227,7 @@ Pour finir, envoyons quelques données au serveur et réceptionnons la réponse.
 D’abord, nous allons ajouter un boîte de texte dans notre HTML afin que l’utilisateur ou l’utilisatrice puisse saisir son nom&nbsp;:
 
 ```html
-<label>Vore nom :
+<label>Votre nom :
   <input type="text" id="ajaxTextbox" />
 </label>
 <span id="ajaxButton">

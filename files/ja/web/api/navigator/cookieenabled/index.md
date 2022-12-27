@@ -2,6 +2,7 @@
 title: Navigator.cookieEnabled
 slug: Web/API/Navigator/cookieEnabled
 ---
+
 {{ApiRef("HTML DOM")}}
 
 `navigator.cookieEnabled` は、クッキーが有効かどうかを示す Boolean 値を返します。このプロパティは読み取り専用です。

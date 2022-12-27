@@ -3,7 +3,7 @@ title: HTML in XMLHttpRequest
 slug: Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 ---
 
-W3C {{domxref("XMLHttpRequest")}} 规范为 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)添加 HTML 语法解析功能，此前仅支持 XML 语法解析。该功能允许 Web 应用程序使用`XMLHttpRequest 作为解析的 DOM。`
+W3C {{domxref("XMLHttpRequest")}} 规范为 [`XMLHttpRequest`](/zh-CN/docs/Web/API/XMLHttpRequest)添加 HTML 语法解析功能，此前仅支持 XML 语法解析。该功能允许 Web 应用程序使用`XMLHttpRequest` 作为解析的 DOM。
 
 ## 局限
 

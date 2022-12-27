@@ -2,6 +2,7 @@
 title: Document.createTextNode()
 slug: Web/API/Document/createTextNode
 ---
+
 {{APIRef("DOM")}}
 
 新しい {{domxref("Text")}} ノードを生成します。このメソッドは HTML 文字をエスケープするのに利用できます。

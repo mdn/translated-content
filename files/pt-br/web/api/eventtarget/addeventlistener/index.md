@@ -199,7 +199,7 @@ if (el.addEventListener) {
 }
 ```
 
-Existe um porém com `attachEvent:` o valor de `this` será a referência ao objeto `window` em vez do elemento do qual foi disparado.
+Existe um porém com `attachEvent` o valor de `this` será a referência ao objeto `window` em vez do elemento do qual foi disparado.
 
 ### Uma maneira ultrapassada de registrar esperas de evento
 

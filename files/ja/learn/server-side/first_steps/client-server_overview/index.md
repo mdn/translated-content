@@ -2,6 +2,7 @@
 title: クライアント - サーバの概要
 slug: Learn/Server-side/First_steps/Client-Server_overview
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/First_steps/Introduction", "Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
 
 サーバサイドプログラミングの目的と潜在的な利点を知ったので、サーバがブラウザーから "動的リクエスト" を受け取ったときに起こることを詳細に検討します。ほとんどの Web サイトのサーバサイドコードは同様の方法でリクエストとレスポンスを処理するので、これは自身のコードの大部分を書くときに何が必要かを理解するのに役立ちます。

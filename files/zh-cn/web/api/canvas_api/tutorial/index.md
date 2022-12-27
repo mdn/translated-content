@@ -13,7 +13,7 @@ slug: Web/API/Canvas_API/Tutorial
 
 ## 开始之前
 
-使用 `<canvas>` 元素不是非常难，但你需要一些基本的[HTML](/zh-CN/docs/HTML)和[JavaScript](/zh-CN/docs/JavaScript)知识。除一些过时的浏览器不支持`<canvas>` 元素外，所有的新版本主流浏览器都支持它。Canvas 的默认大小为 300 像素 ×150 像素（宽 × 高，像素的单位是 px）。但是，可以使用 HTML 的高度和宽度属性来自定义 Canvas 的尺寸。为了在 Canvas 上绘制图形，我们使用一个 JavaScript 上下文对象，它能动态创建图像（ creates graphics on the fly）。
+使用 `<canvas>` 元素不是非常难，但你需要一些基本的[HTML](/zh-CN/docs/HTML)和[JavaScript](/zh-CN/docs/JavaScript)知识。除一些过时的浏览器不支持`<canvas>` 元素外，所有的新版本主流浏览器都支持它。Canvas 的默认大小为 300 像素 ×150 像素（宽 × 高，像素的单位是 px）。但是，可以使用 HTML 的高度和宽度属性来自定义 Canvas 的尺寸。为了在 Canvas 上绘制图形，我们使用一个 JavaScript 上下文对象，它能动态创建图像（creates graphics on the fly）。
 
 ## 本教程包含
 

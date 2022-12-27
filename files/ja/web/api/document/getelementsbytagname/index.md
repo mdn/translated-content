@@ -2,6 +2,7 @@
 title: Document.getElementsByTagName()
 slug: Web/API/Document/getElementsByTagName
 ---
+
 {{APIRef("DOM")}}
 
 **`getElementsByTagName`** は {{domxref("Document")}} インターフェイスのメソッドで、指定されたタグ名を持つ要素の {{domxref("HTMLCollection")}} を返します。ルートノードを含めた文書全体が検索されます。返された `HTMLCollection` は生きたものであり、つまり `document.getElementsByTagName()` を再度呼び出さなくても DOM ツリーと同期を取り続けるよう、自動的に自分自身を更新します。.

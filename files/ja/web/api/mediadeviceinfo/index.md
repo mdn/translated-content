@@ -2,6 +2,7 @@
 title: MediaDeviceInfo
 slug: Web/API/MediaDeviceInfo
 ---
+
 {{APIRef("WebRTC")}}
 
 **`MediaDevicesInfo`** インタフェースは 1 つメディアが入力か出力のデバイスであるかを示す情報を含みます。{{domxref("MediaDevices.enumerateDevices", "navigator.mediaDevices.enumerateDevices()")}}の呼び出しによって取得できるデバイスの一覧は、`MediaDeviceInfo`オブジェクトの配列であり、1 つの要素が 1 つのメディアデバイスになります。

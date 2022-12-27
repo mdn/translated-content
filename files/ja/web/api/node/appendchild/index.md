@@ -2,6 +2,7 @@
 title: Node.appendChild()
 slug: Web/API/Node/appendChild
 ---
+
 {{APIRef("DOM")}}
 
 **`appendChild()`** は {{domxref("Node")}} インターフェイスのメソッドで、指定された親ノードの子ノードリストの末尾にノードを追加します。追加しようとしたノードが既に存在していた場合は、 `appendChild()` はその子ノードを現在の位置から新しい位置へ移動します（他のノードに追加する前に、そのノードを親ノードから取り除く必要はありません）。

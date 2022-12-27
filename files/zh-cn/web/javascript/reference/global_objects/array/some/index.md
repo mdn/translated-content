@@ -56,7 +56,7 @@ some(function(element, index, array) { /* … */ }, thisArg)
 
 `callback` 被调用时传入三个参数：元素的值，元素的索引，被遍历的数组。
 
-如果一个`thisArg`参数提供给 some()，它将被用作调用的 `callback`的 `this` 值。否则， 它的 `this` value 将是 `undefined`。`this`的值最终通过 callback 来观察，根据 [the usual rules for determining the `this` seen by a function](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)的 this 判定规则来确定。
+如果一个`thisArg`参数提供给 some()，它将被用作调用的 `callback`的 `this` 值。否则，它的 `this` value 将是 `undefined`。`this`的值最终通过 callback 来观察，根据 [the usual rules for determining the `this` seen by a function](/zh-CN/docs/Web/JavaScript/Reference/Operators/this)的 this 判定规则来确定。
 
 `some()` 被调用时不会改变数组。
 

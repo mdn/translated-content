@@ -7,7 +7,9 @@ translation_of: Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 
 ## Razón
 
-    Razón: El canal de verifiación CORS no tuvo éxito.
+```
+Razón: El canal de verifiación CORS no tuvo éxito.
+```
 
 ## ¿Qué salió mal?
 

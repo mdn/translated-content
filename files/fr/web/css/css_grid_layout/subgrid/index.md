@@ -93,9 +93,7 @@ Une telle ressemblance entre `subgrid` et les grilles imbriquées peut faciliter
 
 ## Spécifications
 
-| Spécification                        | État                             | Commentaires                                                                                                                     |
-| ------------------------------------ | -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| {{SpecName("CSS Grid 2")}} | {{Spec2("CSS Grid 2")}} | Définition initiale des [sous-grilles (_subgrids_)](/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#sous-grille). |
+{{Specifications}}
 
 ## Voir aussi
 

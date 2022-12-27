@@ -341,65 +341,73 @@ if (mensajes.length === 100) {
 
 El siguiente ejemplo crea una matriz bidimensional que representa un tablero de ajedrez. El primer movimiento se realiza copiando la `'p'` de `tablero[6][4]` en `tablero[4][4]`. La posición `[6][4]` se limpia.
 
-    let tablero = [
-      ['T','C','A','D','R','A','C','T'],
-      ['P','P','P','P','P','P','P','P'],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      [' ',' ',' ',' ',' ',' ',' ',' '],
-      ['p','p','p','p','p','p','p','p'],
-      ['t','c','a','d','r','a','c','t'] ]
+```js
+let tablero = [
+  ['T','C','A','D','R','A','C','T'],
+  ['P','P','P','P','P','P','P','P'],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  ['p','p','p','p','p','p','p','p'],
+  ['t','c','a','d','r','a','c','t'] ]
 
-    console.log(tablero.join('\n') + '\n\n')
+console.log(tablero.join('\n') + '\n\n')
 
-    // Adelantar dos posiciones el peón de rey
-    tablero[4][4] = tablero[6][4]
-    tablero[6][4] = ' '
-    console.log(tablero.join('\n'))
+// Adelantar dos posiciones el peón de rey
+tablero[4][4] = tablero[6][4]
+tablero[6][4] = ' '
+console.log(tablero.join('\n'))
+```
 
 Este es el resultado:
 
-    T,C,A,D,R,A,C,T
-    P,P,P,P,P,P,P,P
-     , , , , , , ,
-     , , , , , , ,
-     , , , , , , ,
-     , , , , , , ,
-    p,p,p,p,p,p,p,p
-    t,c,a,d,r,a,c,t
+```
+T,C,A,D,R,A,C,T
+P,P,P,P,P,P,P,P
+  , , , , , , ,
+  , , , , , , ,
+  , , , , , , ,
+  , , , , , , ,
+p,p,p,p,p,p,p,p
+t,c,a,d,r,a,c,t
 
-    P,P,P,P,P,P,P,P
-     , , , , , , ,
-     , , , , , , ,
-     , , , ,p, , ,
-     , , , , , , ,
-    p,p,p,p, ,p,p,p
-    t,c,a,d,r,a,c,t
+P,P,P,P,P,P,P,P
+  , , , , , , ,
+  , , , , , , ,
+  , , , ,p, , ,
+  , , , , , , ,
+p,p,p,p, ,p,p,p
+t,c,a,d,r,a,c,t
+```
 
 ### Uso de un _array_ para tabular un conjunto de valores
 
-    valores = []
-    for (let x = 0; x < 10; x++){
-     valores.push([
-      2 ** x,
-      2 * x ** 2
-     ])
-    }
-    console.table(valores)
+```js
+valores = []
+for (let x = 0; x < 10; x++){
+  valores.push([
+  2 ** x,
+  2 * x ** 2
+  ])
+}
+console.table(valores)
+```
 
 da como resultado:
 
-    0	1	0
-    1	2	2
-    2	4	8
-    3	8	18
-    4	16	32
-    5	32	50
-    6	64	72
-    7	128	98
-    8	256	128
-    9	512	162
+```
+0  1  0
+1  2  2
+2  4  8
+3  8  18
+4  16  32
+5  32  50
+6  64  72
+7  128  98
+8  256  128
+9  512  162
+```
 
 (La primera columna es el índice).
 

@@ -3,6 +3,7 @@ title: Media Capture and Streams API (Media Streams)
 slug: Web/API/Media_Capture_and_Streams_API
 original_slug: Web/API/Media_Streams_API
 ---
+
 {{DefaultAPISidebar("Media Capture and Streams")}}
 
 **Media Capture and Streams** API は一般的に*Media Stream API*や*Stream API*と呼ばれる[WebRTC](/ja/docs/WebRTC)に関連した API です。この API では、オーディオやビデオデータのストリーム、これらを操作するためのメソッド、データタイプに関連づけられた制約、データを非同期に利用する際の成功と失敗のコールバック、これらの処理を行なっている最中に発生するイベントなどをサポートします。

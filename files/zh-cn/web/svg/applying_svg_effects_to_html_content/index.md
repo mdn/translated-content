@@ -5,7 +5,7 @@ slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 
 现代浏览器支持在 [CSS](/zh-CN/docs/Web/CSS) 样式中使用 [SVG](/zh-CN/docs/SVG) 来对 HTML 内容应用图像效果。
 
-你可以在同一文件中使用 SVG 样式，也可以通过外部样式表引入。有三个属性可以使用： [`mask`](/zh-CN/docs/Web/CSS/mask), [`clip-path`](/zh-CN/docs/Web/CSS/clip-path), 和 `filter。`
+你可以在同一文件中使用 SVG 样式，也可以通过外部样式表引入。有三个属性可以使用： [`mask`](/zh-CN/docs/Web/CSS/mask), [`clip-path`](/zh-CN/docs/Web/CSS/clip-path), 和 `filter`。
 
 > **备注：** 在外部文件引入的 SVG 必须与原始文件 [同源](/zh-CN/docs/Web/Security/Same-origin_policy) 。
 

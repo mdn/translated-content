@@ -34,7 +34,7 @@ The following text is shared between this article, DOM:window\.prompt and DOM:wi
 
 [Mozilla Chrome](/zh-CN/Chrome) 的用户 (比如 Firefox 插件开发者) 应该使用`nsIPromptService`这个方法。
 
-Chrome 浏览器版本 V46.0 开始屏蔽内部{{htmlelement("iframe")}}元素，除非用户在沙箱内开启了`allow-modal 选项。`
+Chrome 浏览器版本 V46.0 开始屏蔽内部 {{htmlelement("iframe")}} 元素，除非用户在沙箱内开启了 `allow-modal` 选项。
 
 在 gecko (23) 内核中，参数是可选的。
 

@@ -20,7 +20,7 @@ var elements = document.getElementsByTagName(name);
 
 ## 例子
 
-在以下的例子中，`getElementsByTagName() 开始于一个具体的父级元素并且从它自上而下递归地在`DOM 树中`搜索符合标签名称参数的子元素。`
+在以下的例子中，`getElementsByTagName()` 开始于一个具体的父级元素并且从它自上而下递归地在`DOM 树中`搜索符合标签名称参数的子元素。
 
 注意调用 `getElementsByTagName()` 的不是那个文件节点 document，事实上是使用这个方法 {{domxref("element.getElementsByTagName()")}}。
 

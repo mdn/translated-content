@@ -4,6 +4,7 @@ slug: Learn/Getting_started_with_the_web/CSS_basics
 l10n:
   sourceCommit: 15ed3e49a0e5ac3cd6833fc6b0fd0ddbd158718f
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Getting_started_with_the_web/HTML_basics", "Learn/Getting_started_with_the_web/JavaScript_basics", "Learn/Getting_started_with_the_web")}}
 
 CSS (Cascading Style Sheets) は、ウェブページのスタイルを設定するコードです。「_CSS の基本_」では、始めるのに必要なものを紹介します。ここでは、テキストを赤くするにはどうすればいいのか？コンテンツを（ウェブページの）レイアウトの中で特定の場所に表示するにはどうすればいいのか？背景画像と色を使って ウェブページをどのように飾るのか？というような疑問に答えていきます。

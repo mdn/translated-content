@@ -36,4 +36,4 @@ slug: Web/HTML/Global_attributes/contenteditable
 - 所有的 [全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} 和 {{domxref("HTMLElement.isContentEditable")}}
 - CSS {{cssxref("caret-color")}} 属性
-- [`HTMLElement` `input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)
+- [HTMLElement `input` 事件](/zh-CN/docs/Web/API/HTMLElement/input_event)

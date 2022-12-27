@@ -2,6 +2,7 @@
 title: performance.now()
 slug: Web/API/Performance/now
 ---
+
 {{APIRef("High Resolution Timing")}}
 
 **`performance.now()`** メソッドは、ミリ秒単位で計測された {{domxref("DOMHighResTimeStamp")}} を返します。

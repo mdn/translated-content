@@ -23,7 +23,7 @@ _这个接口没有父类，不继承任何属性。_
 ### 基本属性
 
 - {{ domxref("Touch.identifier") }}{{readonlyInline}}
-  - : 此 `Touch` 对象的唯一标识符。 一次触摸动作 (例如手指触摸) 在平面上移动的整个过程中，该标识符不变。可以根据它来判断跟踪的是否是同一次触摸过程。
+  - : 此 `Touch` 对象的唯一标识符。一次触摸动作 (例如手指触摸) 在平面上移动的整个过程中，该标识符不变。可以根据它来判断跟踪的是否是同一次触摸过程。
 - **{{ domxref("Touch.screenX") }}**{{readonlyInline}}
   - : 触点相对于屏幕左边缘的 X 坐标。
 - **{{ domxref("Touch.screenY") }}**{{readonlyInline}}

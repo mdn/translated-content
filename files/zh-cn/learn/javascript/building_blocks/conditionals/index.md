@@ -144,7 +144,7 @@ function setWeather() {
 
 1. 这里我们有 HTML {{htmlelement("select")}} 元素让我们选择不同的天气，以及一个简单的段落。
 2. 在 JavaScript 中，我们同时存储了对 {{htmlelement("select")}} 和 {{htmlelement("p")}} 的引用，并对 `<select>` 添加了一个事件监听器，因此，当它的值改变时，`setWeather()`函数被执行。
-3. 当函数运行时，我们首先新建了一个 `choice` 变量去存储当前被选的 `<select>` 中的值。接着我们用条件判断语句根据 `choice` 的值选择性的展示段落中的文本。注意 `else if() {...}`段中的条件是怎么被判断的，除了第一个，它是在 `if() {...}中被判断的。`
+3. 当函数运行时，我们首先新建了一个 `choice` 变量去存储当前被选的 `<select>` 中的值。接着我们用条件判断语句根据 `choice` 的值选择性的展示段落中的文本。注意 `else if() {...}` 段中的条件是怎么被判断的，除了第一个，它是在 `if() {...}` 中被判断的。
 4. 最后一个 `else {...}` 中的选择通常被叫做“最后招数” — 在所有的条件都不为 true 时其中的代码会被执行。在这个例子中，如果用户没有选择任何一个选项，它会将段落中的文本清空，例如当用户决定重新选择最开始出现的"--Make a choice--"选项时，就会有这样的效果。
 
 > **备注：** 你可以 [在 GitHub 上找到这个例子](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/simple-else-if.html) （也可以[在线运行](http://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)。）

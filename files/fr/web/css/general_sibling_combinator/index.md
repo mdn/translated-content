@@ -55,14 +55,11 @@ p ~ span {
 
 ## Spécifications
 
-| Spécification                                                                                                                | État                                 | Commentaires                                                       |
-| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------ |
-| {{SpecName('CSS4 Selectors', '#general-sibling-combinators', 'following-sibling combinator')}} | {{Spec2('CSS4 Selectors')}} | Ce combinateur est renommé en « _subsequent-sibling combinator_ ». |
-| {{SpecName('CSS3 Selectors', '#general-sibling-combinators', 'general sibling combinator')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                               |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.general_sibling")}}
+{{Compat}}
 
 ## Voir aussi
 

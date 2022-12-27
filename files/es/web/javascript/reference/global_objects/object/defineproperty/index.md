@@ -20,7 +20,9 @@ El método estático **`Object.defineProperty()`** define una nueva propiedad so
 
 ## Sintaxis
 
-    Object.defineProperty(obj, prop, descriptor)
+```
+Object.defineProperty(obj, prop, descriptor)
+```
 
 ### Parámetros
 

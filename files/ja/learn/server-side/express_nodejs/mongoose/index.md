@@ -2,6 +2,7 @@
 title: 'Express チュートリアル Part 3: データベースの使用 (Mongoose を使用)'
 slug: Learn/Server-side/Express_Nodejs/mongoose
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
 この記事ではデータベースと、それらを Node/Express アプリケーションで使用する方法について簡単に紹介します。続いて、[Mongoose](https://mongoosejs.com/) を使用して[地域図書館](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) Web サイトへのデータベースアクセスを提供する方法を説明します。 オブジェクトスキーマとモデルの宣言方法、主なフィールドタイプ、および基本的な検証について説明します。また、モデルデータにアクセスするための主な方法についても簡単に説明します。

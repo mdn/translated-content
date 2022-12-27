@@ -2,6 +2,7 @@
 title: Node.cloneNode()
 slug: Web/API/Node/cloneNode
 ---
+
 {{APIRef("DOM")}}
 
 **`cloneNode()`** は {{domxref("Node")}} インターフェイスのメソッドで、このメソッドが呼び出されたノードの複製を返します。

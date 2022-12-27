@@ -2,6 +2,7 @@
 title: JavaScriptへの最初のダイブ
 slug: Learn/JavaScript/First_steps/A_first_splash
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
 
 JavaScript の理論、そしてそれを使ってできることについて学んだところで、完全に実用的なチュートリアルを通じて、JavaScript の基本的な機能についての短期集中コースをお見せします。ここでは、簡単な「数字を当てる」ゲームをステップバイステップで構築します。

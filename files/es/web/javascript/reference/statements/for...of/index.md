@@ -15,9 +15,11 @@ La sentencia **sentencia `for...of`** ejecuta un bloque de código para cada ele
 
 ## Sintaxis
 
-    for (variable of iterable) {
-      statement
-    }
+```
+for (variable of iterable) {
+  statement
+}
+```
 
 - `variable`
   - : En cada iteración el elemento (propiedad enumerable) correspondiente es asignado a _variable_.
@@ -40,7 +42,7 @@ for (let value of iterable) {
 // 31
 ```
 
-Es posible usar `const` en lugar de `let `si no se va a modificar la variable dentro del bloque.
+Es posible usar `const` en lugar de `let` si no se va a modificar la variable dentro del bloque.
 
 ```js
 let iterable = [10, 20, 30];
@@ -143,16 +145,18 @@ for (let paragraph of articleParagraphs) {
 
 En los bucles `for...of`, se puede causar que la iteración termine de un modo brusco usando: `break`, `continue[4]`, `throw` or `return[5]`. En estos casos la iteración se cierra.
 
-    function* foo(){
-      yield 1;
-      yield 2;
-      yield 3;
-    };
+```js
+function* foo(){
+  yield 1;
+  yield 2;
+  yield 3;
+};
 
-    for (let o of foo()) {
-      console.log(o);
-      break; // closes iterator, triggers return
-    }
+for (let o of foo()) {
+  console.log(o);
+  break; // closes iterator, triggers return
+}
+```
 
 ### Iterando generadores
 
@@ -224,7 +228,7 @@ for (var value of iterable) {
 
 ### Diferencia entre `for...of` y `for...in`
 
-El bucle `for...in iterará sobre todas las propiedades de un objeto.` Más tecnicamente, iterará sobre cualquier propiedad en el objeto que haya sido internamente definida con su propiedad `[[Enumerable]] `configurada como `true`.
+El bucle `for...in iterará sobre todas las propiedades de un objeto.` Más tecnicamente, iterará sobre cualquier propiedad en el objeto que haya sido internamente definida con su propiedad `[[Enumerable]]` configurada como `true`.
 
 La sintaxis de **`for...of`** es específica para las **colecciones**, y no para todos los objetos. Esta Iterará sobre cualquiera de los elementos de una colección que tengan la propiedad `[Symbol.iterator]`.
 

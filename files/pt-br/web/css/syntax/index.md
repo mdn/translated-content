@@ -17,7 +17,7 @@ Tanto as propriedades como os valores são case-sensitive no CSS. Os pares se se
 
 ![css syntax - declaration.png](/@api/deki/files/6164/=css_syntax_-_declaration.png)
 
-Existem mais de [100 propriedades diferentes](https://developer.mozilla.org/en/CSS/CSS_Reference) no CSS e um número quase infinito de diferentes valores. Nem todos os pares de propriedades e valores são permitidos em cada propriedade define o que são valores válidos. Quando um valor não é válido para uma determinada propriedade, a declaração é considerada inválida e é totalmente ignorada pelo motor do CSS.
+Existem mais de [100 propriedades diferentes](/en/CSS/CSS_Reference) no CSS e um número quase infinito de diferentes valores. Nem todos os pares de propriedades e valores são permitidos em cada propriedade define o que são valores válidos. Quando um valor não é válido para uma determinada propriedade, a declaração é considerada inválida e é totalmente ignorada pelo motor do CSS.
 
 ## Blocos de declaração CSS
 

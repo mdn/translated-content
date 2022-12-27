@@ -2,6 +2,7 @@
 title: リテラル
 slug: Glossary/Literal
 ---
+
 **リテラル**は、JavaScript の値を表現します。これはスクリプト中に直接記述される固定値であり、変数ではありません。
 
 - [配列リテラル](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#array_literals)

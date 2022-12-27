@@ -3,6 +3,7 @@ title: XRTargetRayMode
 slug: conflicting/Web/API/XRInputSource/targetRayMode
 original_slug: Web/API/XRTargetRayMode
 ---
+
 {{APIRef("WebXR")}}
 
 [WebXR Device API](/ja/docs/Web/API/WebXR_Device_API) の **`XRTargetRayMode`** 列挙型は、入力コントローラーのターゲティング光線を生成する方法を記述します。 ターゲティングは、視線追跡システムを使用してターゲットを見るか、ハンドコントローラー、グローブ、またはモーショントラッキングシステムを使用してターゲットを指すか、画面上で指やマウスを使用してターゲットをタップまたはクリックすることによって行うことができます。

@@ -26,7 +26,7 @@ A _string_ original é mantida sem modificação.
 const newStr = str.replaceAll(regexp|substr, newSubstr|function)
 ```
 
-> **Nota:** quando usar uma \`_regexp_\`, você deve colocar o sinalizador (flag) global "`g`". Do contrário, será retornado um `TypeError`: "_replaceAll must be called with a global RegExp_".
+> **Nota:** quando usar uma `regexp`, você deve colocar o sinalizador (flag) global "`g`". Do contrário, será retornado um `TypeError`: "_replaceAll must be called with a global RegExp_".
 
 ### Parâmetros
 

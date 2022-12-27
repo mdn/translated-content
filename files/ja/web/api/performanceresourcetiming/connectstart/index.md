@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.connectStart
 slug: Web/API/PerformanceResourceTiming/connectStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`connectStart`** 読み取り専用プロパティは、リソースを取得するためにユーザエージェントがサーバへの接続の確立を開始する直前に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。

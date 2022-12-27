@@ -2,6 +2,7 @@
 title: 疑似クラスと疑似要素
 slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
 
 次に取り上げるセレクターのセットは、**疑似クラス**と**疑似要素**と呼ばれます。これらは多数あり、多くの場合、それらは非常に特定の目的に役立ちます。それらの使用方法がわかったら、リストを見て、達成しようとしているタスクに有効なものがあるかどうかを確認できます。ここでも、各セレクターに関連する MDN ページは、ブラウザーサポートの説明に役立ちます。

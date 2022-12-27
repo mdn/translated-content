@@ -2,6 +2,7 @@
 title: はじめてのクロスブラウザーテスト
 slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
 ---
+
 {{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 この記事では (クロス) ブラウザーテストのトピックの概要を説明し、「クロスブラウザーテストとは何ですか？」、「発生する最も一般的な問題の種類は何ですか？」、「問題のテスト、特定、および修正のための主なアプローチは？」などの質問に答えながらモジュールを始めます。

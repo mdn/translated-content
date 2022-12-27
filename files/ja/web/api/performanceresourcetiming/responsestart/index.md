@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.responseStart
 slug: Web/API/PerformanceResourceTiming/responseStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`responseStart`** 読み取り専用プロパティは、ブラウザーがサーバ、キャッシュ、またはローカルリソースからレスポンスの最初のバイトを受信した直後に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。

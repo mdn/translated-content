@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 
 ## 描述
 
-`FinalizationRegistry` 提供了这样的一种方法：当一个在注册表中注册的对象被回收时，请求在某个时间点上调用一个清理回调。（清理回调有时被称为 finalizer ）。
+`FinalizationRegistry` 提供了这样的一种方法：当一个在注册表中注册的对象被回收时，请求在某个时间点上调用一个清理回调。（清理回调有时被称为 finalizer）。
 
 > **备注：** 清理回调不应被用于必要的程序逻辑。详情请看[清理回调的注意事项](#Notes_on_cleanup_callbacks)。
 

@@ -2,6 +2,7 @@
 title: MessageEvent
 slug: Web/API/MessageEvent
 ---
+
 {{APIRef("HTML DOM")}}
 
 **`MessageEvent`** インターフェースは対象のオブジェクトから受け取ったメッセージを表します。

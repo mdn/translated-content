@@ -27,7 +27,7 @@ slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 
 - `img`: 我们将在游戏中使用的所有图片。
 - `src`:定义了游戏中所有源代码的 JavaScript 文件。
-- `audio:` 在游戏中使用的声音文件。
+- `audio`: 在游戏中使用的声音文件。
 
 ## Setting up the Canvas
 

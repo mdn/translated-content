@@ -2,6 +2,7 @@
 title: ローカルにテスト用サーバーを用意するには？
 slug: Learn/Common_questions/set_up_a_local_testing_server
 ---
+
 この記事では、マシン上に簡単なローカルテストサーバーを設定する方法と、その使い方の基本について説明します。
 
 <table>

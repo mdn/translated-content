@@ -18,7 +18,9 @@ El método **`Object.setPrototypeOf()`** establece el prototipo (p.e., la propie
 
 ## Sintaxis
 
-    Object.setPrototypeOf(obj, prototype);
+```
+Object.setPrototypeOf(obj, prototype);
+```
 
 ### Parámetros
 

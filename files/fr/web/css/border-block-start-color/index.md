@@ -39,9 +39,13 @@ border-block-start-color: inherit;
 - `<'border-color'>`
   - : Voir {{cssxref("border-color")}}
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -75,15 +79,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                                                                            | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-border-block-start-color", "border-block-start-color")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.border-block-start-color")}}
+{{Compat}}
 
 ## Voir aussi
 

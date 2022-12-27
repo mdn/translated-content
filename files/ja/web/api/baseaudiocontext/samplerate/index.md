@@ -3,6 +3,7 @@ title: BaseAudioContext.sampleRate
 slug: Web/API/BaseAudioContext/sampleRate
 original_slug: Web/API/AudioContext/sampleRate
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `sampleRate` は {{domxref("BaseAudioContext") }} インターフェイスのプロパティで、この音声コンテキスト内のすべてのノードが使用するサンプリングレートを、1 秒あたりのサンプル数で表した浮動小数点数を返すものです。この制限は、サンプリングレートコンバーターに対応していないことを意味します。

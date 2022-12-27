@@ -2,6 +2,7 @@
 title: DocumentType.remove()
 slug: Web/API/DocumentType/remove
 ---
+
 {{APIRef("DOM")}}
 
 **`DocumentType.remove()`** は文書の文書型宣言 (`doctype`) を削除します。

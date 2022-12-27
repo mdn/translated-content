@@ -26,8 +26,4 @@ translation_of: Web/CSS/CSS_Writing_Modes
 
 ## Spécifications
 
-| Spécification                                    | État                                     | Commentaires         |
-| ------------------------------------------------ | ---------------------------------------- | -------------------- |
-| {{SpecName('CSS3 Writing Modes')}}     | {{Spec2('CSS3 Writing Modes')}} |                      |
-| {{SpecName('CSS2.1', 'text.html')}} | {{Spec2('CSS2.1')}}                 |                      |
-| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}                 | Définition initiale. |
+{{Specifications}}

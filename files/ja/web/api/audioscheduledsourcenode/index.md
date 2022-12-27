@@ -2,6 +2,7 @@
 title: AudioScheduledSourceNode
 slug: Web/API/AudioScheduledSourceNode
 ---
+
 {{APIRef("Web Audio API")}}AudioScheduledSourceNode インターフェース (Web Audio API の一部分) は、オーディオソースノード各種の親インターフェースであり、必要に応じ、指定された時間で開始や停止を行う機能を持ちます。具体的には、このインタフェースでは、{{domxref("AudioScheduledSourceNode.start", "start()")}} や、{{domxref("AudioScheduledSourceNode.stop", "stop()")}} メソッドの他、{{domxref("AudioScheduledSourceNode.onended", "onended")}} イベントハンドラーを定義しています。
 
 > **Note:** AudioScheduledSourceNode オブジェクトは、直接作成することはできません。

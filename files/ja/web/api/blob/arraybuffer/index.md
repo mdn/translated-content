@@ -2,6 +2,7 @@
 title: Blob.arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 {{domxref("Blob")}} インターフェイスの **`arrayBuffer()`** メソッドは、{{domxref("ArrayBuffer")}} 内のバイナリデータとして Blob の内容を解決する {{jsxref("Promise")}} を返します。

@@ -2,6 +2,7 @@
 title: PerformanceMark
 slug: Web/API/PerformanceMark
 ---
+
 {{APIRef("User Timing API")}}
 
 **`PerformanceMark`** は {{domxref("PerformanceEntry.entryType","entryType")}} の "`mark`" を持つ{{domxref("PerformanceEntry")}} オブジェクトの抽象インターフェイスです。

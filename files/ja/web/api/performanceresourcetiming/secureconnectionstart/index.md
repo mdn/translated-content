@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.secureConnectionStart
 slug: Web/API/PerformanceResourceTiming/secureConnectionStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`secureConnectionStart`** 読み取り専用プロパティは、現在の接続を保護するためにブラウザーがハンドシェイクプロセスを開始する直前に {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。安全な接続が使用されていない場合、このプロパティはゼロを返します。

@@ -24,7 +24,9 @@ El método `CONNECT` es un método de salto entre servidores.
 
 ## Sintaxis
 
-    CONNECT www.example.com:443 HTTP/1.1
+```
+CONNECT www.example.com:443 HTTP/1.1
+```
 
 ## Ejemplo
 

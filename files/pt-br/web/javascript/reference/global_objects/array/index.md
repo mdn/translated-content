@@ -287,7 +287,7 @@ Todas as instâncias de `Array` herdam de [`Array.prototype`](/en-US/docs/JavaSc
 
 > **Aviso:** **Métodos genéricos de arrays não seguem o padrão, são obsoletos e serão removidos em breve.**
 
-Algumas vezes você poderá querer aplicar métodos de arrays para strings ou outros objetos parecidos com arrays (como em [`argumentos`](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments) de funções). Ao fazer isto, você trata uma string como um array de caracteres (ou em outros casos onde trata-se não-arrays como um array). Por exemplo, para checar se cada caractere em uma varivável _str_ é uma letra, você poderia escrever:
+Algumas vezes você poderá querer aplicar métodos de arrays para strings ou outros objetos parecidos com arrays (como em [`argumentos`](/en-US/docs/JavaScript/Reference/Functions_and_function_scope/arguments) de funções). Ao fazer isto, você trata uma string como um array de caracteres (ou em outros casos onde trata-se não-arrays como um array). Por exemplo, para checar se cada caractere em uma varivável _str_ é uma letra, você poderia escrever:
 
 ```js
 function isLetter(character) {

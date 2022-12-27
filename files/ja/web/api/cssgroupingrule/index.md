@@ -2,6 +2,7 @@
 title: CSSGroupingRule
 slug: Web/API/CSSGroupingRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 **`CSSGroupingRule`** は [CSS オブジェクトモデル](/ja/docs/Web/API/CSS_Object_Model)のインターフェイスで、内部に他のルールを持つあらゆる CSS の[アットルール](/ja/docs/Web/CSS/At-rule)を表します。

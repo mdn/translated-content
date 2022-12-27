@@ -2,6 +2,7 @@
 title: Navigator.mozIsLocallyAvailable()
 slug: Web/API/Navigator/mozIsLocallyAvailable
 ---
+
 {{APIRef("HTML DOM")}} {{non-standard_header}}{{deprecated_header}}
 
 **`Navigator.mozIsLocallyAvailable()`** メソッドは、アドオンが指定されたリソースが両可能かどうかを判断できるようにします。

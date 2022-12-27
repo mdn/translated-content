@@ -2,6 +2,7 @@
 title: リンクの装飾
 slug: Learn/CSS/Styling_text/Styling_links
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
 [リンク](/ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)を装飾するときは、擬似クラスを使用してリンク状態を効果的に装飾する方法と、ナビゲーションメニューやタブなどの一般的なさまざまなインターフェイス機能で使用するためのリンクの装飾方法を理解することが重要です。 この記事では、これらすべてのトピックを見ていきます。

@@ -104,14 +104,11 @@ Plusieurs fonctions sont disponibles en CSS pour décrire des transformations. C
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                     | Commentaires                  |
-| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------- |
-| {{SpecName('CSS Transforms 2', '#transform-functions', '&lt;transform-function&gt;')}} | {{Spec2('CSS Transforms 2')}} | Added 3D transform functions. |
-| {{SpecName('CSS3 Transforms', '#transform-functions', '&lt;transform-function&gt;')}}     | {{Spec2('CSS3 Transforms')}}     | Définition initiale.          |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.transform-function")}}
+{{Compat}}
 
 ## Voir aussi
 

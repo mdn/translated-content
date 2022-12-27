@@ -3,6 +3,7 @@ title: 'Document: pointerover イベント'
 slug: conflicting/Web/API/Element/pointerover_event
 original_slug: Web/API/Document/pointerover_event
 ---
+
 {{APIRef}}
 
 `pointerover` イベントは、ポインティングデバイスが要素のヒットテスト境界内に移動したときに発生します。

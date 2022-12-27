@@ -2,6 +2,7 @@
 title: CookieStore.set()
 slug: Web/API/CookieStore/set
 ---
+
 {{securecontext_header}}{{DefaultAPISidebar("Cookie Store API")}}
 
 {{domxref("CookieStore")}} インターフェイスの **`getAll()`** メソッドは、渡された名前またはオプションに一致する Cookie のリストを返します。引数を何も渡さなければ、現在のコンテキストのすべての Cookie を返します。

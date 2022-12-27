@@ -21,7 +21,9 @@ El método **`some()`** comprueba si al menos un elemento del array cumple con l
 
 ## Sintaxis
 
-    arr.some(callback(element[, index[, array]])[, thisArg])
+```
+arr.some(callback(element[, index[, array]])[, thisArg])
+```
 
 ### Parámetros
 

@@ -53,7 +53,7 @@ mask-border-slice: unset;
 
 切片过程总共创建了九个区域：四个角，四个边缘和一个中间区域。四个切片线，从其各自的侧面设置了给定的距离，以控制区域的大小。
 
-[![由border-image或border-image-slice属性定义的九个区域](/files/3814/border-image-slice.png)](/files/3814/border-image-slice.png)
+[![由 border-image 或 border-image-slice 属性定义的九个区域](/files/3814/border-image-slice.png)](/files/3814/border-image-slice.png)
 
 上图说明了每个区域的位置。
 

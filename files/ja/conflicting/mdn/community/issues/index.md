@@ -3,6 +3,7 @@ title: GitHub 早見表
 slug: conflicting/MDN/Community/Issues
 original_slug: MDN/Contribute/GitHub_cheatsheet
 ---
+
 {{MDNSidebar}}
 
 この記事では、 MDN に協力するために [Git](https://git-scm.com/) と [GitHub](https://github.com/) を使用する際に必要となる基本的なコマンドのクイックリファレンスを提供します。これらのツールに慣れておらず、助けが必要な場合は、[全くの初心者のための GitHub](/ja/docs/MDN/Contribute/GitHub_beginners) チュートリアルで基本的なことを教えています。

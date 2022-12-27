@@ -2,6 +2,7 @@
 title: DataTransfer.mozTypesAt()
 slug: Web/API/DataTransfer/mozTypesAt
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 {{deprecated_header}}{{Non-standard_header()}}

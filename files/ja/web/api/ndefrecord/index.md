@@ -2,6 +2,7 @@
 title: NDEFRecord
 slug: Web/API/NDEFRecord
 ---
+
 {{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
 
 **`NDEFRecord`** は[ウェブ NFC API](/ja/docs/Web/API/Web_NFC_API) のインターフェイスで、 NDEF に対応する NFC タグなど、互換性のある NFC 機器から読み取ったり、書き込んだりできるデータを提供します。

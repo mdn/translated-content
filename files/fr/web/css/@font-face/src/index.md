@@ -62,10 +62,8 @@ src: local(police), url(chemin/vers/police.svg) format("svg"),
 
 ## Spécifications
 
-| Spécification                                                | État                             | Commentaires         |
-| ------------------------------------------------------------ | -------------------------------- | -------------------- |
-| {{SpecName('CSS3 Fonts', '#src-desc', 'src')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.font-face.src")}}
+{{Compat}}

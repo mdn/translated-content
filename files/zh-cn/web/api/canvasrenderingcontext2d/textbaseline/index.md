@@ -32,7 +32,7 @@ ctx.textBaseline = "top" || "hanging" || "middle" || "alphabetic" || "ideographi
 - bottom
   - : 文本基线在文本块的底部。与 ideographic 基线的区别在于 ideographic 基线不需要考虑下行字母。
 
-默认值是 `alphabetic。`
+默认值是 `alphabetic`。
 
 ## 示例
 

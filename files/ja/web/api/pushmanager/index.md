@@ -2,6 +2,7 @@
 title: PushManager
 slug: Web/API/PushManager
 ---
+
 {{SeeCompatTable}}{{ApiRef("Push API")}}
 
 [Push API](/ja/docs/Web/API/Push_API) の `PushManager` インターフェースは、3rd パーティーのサーバーからの通知だけではなく、プッシュ通知へのリクエスト URL を取得するための方法を提供します。

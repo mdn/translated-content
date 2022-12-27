@@ -17,7 +17,9 @@ El método getMonth() devuelve el mes del objeto Date según la hora local, dond
 
 ## Sintaxis
 
-    dateObj.getMonth()
+```
+dateObj.getMonth()
+```
 
 ### Parámetros
 

@@ -2,6 +2,7 @@
 title: CSS
 slug: Learn/CSS
 ---
+
 {{LearnSidebar}}
 
 Cascading Style Sheets — {{glossary("CSS")}} — は{{glossary("HTML")}} を学んだら、まず次に勉強すべき技術です。HTML はコンテンツの構造と{{glossary("Semantics","意味論")}}を定義するのに使用されるのに対し、CSS はそのコンテンツにスタイルを与えたりレイアウトを決めるために使われます。例えばフォント、色、サイズ、余白を変更したり、コンテンツを複数の列に分割して段組を作成したり、アニメーションやその他の装飾機能を追加するのに CSS は利用できます。

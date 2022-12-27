@@ -9,7 +9,9 @@ translation_of: Web/JavaScript/Reference/Errors/Not_defined
 ---
 {{jsSidebar("Errors")}}
 
-    ReferenceError: "x" no está definida.
+```
+ReferenceError: "x" no está definida.
+```
 
 ## Tipo de error
 

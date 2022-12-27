@@ -2,6 +2,7 @@
 title: KeyboardEvent.getModifierState()
 slug: Web/API/KeyboardEvent/getModifierState
 ---
+
 {{APIRef("UI Events")}}
 
 **`KeyboardEvent.getModifierState()`** メソッドは、指定された修飾キーの現在の状態を返します。修飾キーが有効な場合（すなわち修飾キーが押されているかロックされている場合）は `true`、そうでなければ `false` になります。

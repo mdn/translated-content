@@ -65,10 +65,8 @@ p {
 
 ## Spécifications
 
-| Spécification                                                                    | État                                     | Commentaires                                      |
-| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------- |
-| {{SpecName('CSS4 Media Queries', '#scripting', 'scripting')}} | {{Spec2('CSS4 Media Queries')}} | Reporté à la spécification Media Queries Level 5. |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.at-rules.media.scripting")}}
+{{Compat}}

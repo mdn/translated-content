@@ -2,6 +2,7 @@
 title: OscillatorNode
 slug: Web/API/OscillatorNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 **OscillatorNode** インタフェースは、正弦波などの周期的な波形を表します。これは、指定された波形で、特定の周波数の一定のトーンを発生させる、オーディオ処理モジュール {{domxref("AudioScheduledSourceNode")}} です。

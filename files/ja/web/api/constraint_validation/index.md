@@ -2,6 +2,7 @@
 title: 制約検証 API
 slug: Web/API/Constraint_validation
 ---
+
 {{apiref()}}
 
 制約検証 (Constraint Validation) API により、ユーザーがフォームコントロールに入力した値を、サーバーに値を送信する前にチェックすることができます。

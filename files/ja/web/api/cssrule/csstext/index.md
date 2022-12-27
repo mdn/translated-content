@@ -2,6 +2,7 @@
 title: CSSRule.cssText
 slug: Web/API/CSSRule/cssText
 ---
+
 {{APIRef("CSSOM") }}
 
 **`cssText`** は {{domxref("CSSRule")}} インターフェイスのプロパティで、 {{domxref("CSSStyleSheet")}} スタイルルールの実際のテキストを返します。

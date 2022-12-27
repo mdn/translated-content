@@ -2,6 +2,7 @@
 title: Document.applets
 slug: Web/API/Document/applets
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}
 
 {{domxref("Document")}} インターフェイスの **`applets`** プロパティは、文書内のアプレットのリストを返します。

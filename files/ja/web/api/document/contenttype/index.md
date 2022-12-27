@@ -2,6 +2,7 @@
 title: Document.contentType
 slug: Web/API/Document/contentType
 ---
+
 {{APIRef}}
 
 **`Document.contentType`** プロパティは読み取り専用で、文書がレンダリングされる MIME タイプを返します。これは HTTP ヘッダーやその他の MIME 情報のソースから来る可能性があり、ブラウザーや拡張機能によって行われる自動型変換の影響を受ける可能性があります。

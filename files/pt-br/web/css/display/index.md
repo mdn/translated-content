@@ -257,7 +257,7 @@ p.secret  { display: none }
 | {{SpecName('CSS3 Grid', '#grid-declaration0', 'display')}}         | {{Spec2('CSS3 Grid')}}     | Adicionado os valores do modelo da caixa de grade.                 |
 | {{SpecName('CSS3 Flexbox', '#flex-containers', 'display')}}     | {{Spec2('CSS3 Flexbox')}} | Adicionado os valores do modelo de caixa flexível.                 |
 | {{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}} | {{Spec2('CSS2.1')}}         | Foram adicionados os valores do modelo de tabela e `inline-block.` |
-| {{SpecName('CSS1', '#display', 'display')}}                             | {{Spec2('CSS1')}}         | Valores básicos:`none`, `block`, `inline`, e `list-item`.          |
+| {{SpecName('CSS1', '#display', 'display')}}                             | {{Spec2('CSS1')}}         | Valores básicos: `none`, `block`, `inline`, e `list-item`.          |
 
 ## Navegadores compatíveis
 

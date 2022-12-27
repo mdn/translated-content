@@ -2,6 +2,7 @@
 title: MediaRecorderErrorEvent()
 slug: Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent
 ---
+
 {{APIRef("MediaStream Recording")}}
 
 **`MediaRecorderErrorEvent()`** コンストラクタは、[MediaStream Recording API](/ja/docs/Web/API/MediaStream_Recording_API) によるメディアの記録中に発生したエラーを表す新しい {{domxref("MediaRecorderErrorEvent")}} オブジェクトを作成します。

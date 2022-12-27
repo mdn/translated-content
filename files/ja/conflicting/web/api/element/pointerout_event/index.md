@@ -3,6 +3,7 @@ title: 'Document: pointerout イベント'
 slug: conflicting/Web/API/Element/pointerout_event
 original_slug: Web/API/Document/pointerout_event
 ---
+
 {{APIRef}}
 
 `pointerout` イベントはいくつかの理由で発生します。ポインティングデバイスが要素の*ヒットテスト*境界を出たとき、ホバーに対応していない端末で {{domxref("Document/pointerup_event", "pointerup")}} イベントが発生したとき ({{domxref("Document/pointerup_event", "pointerup")}} を参照)、 {{domxref("Document/pointercancel_event", "pointercancel")}} イベントが発生した後 ({{domxref("Document/pointercancel_event", "pointercancel")}} を参照)、スタイラスペンがデジタイザーで検出可能なホバー範囲を離れたとき、などです。

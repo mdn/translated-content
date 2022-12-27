@@ -9,7 +9,7 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 <p class="summary">Обнаружение функций включает определение того, поддерживает ли браузер определённый блок кода, и выполнение другого кода в зависимости от того, поддерживает ли он или нет, так что браузер всегда может обеспечить работу, а не сбой / ошибку в некоторых браузерах. В этой статье подробно описывается, как написать собственное простое обнаружение функций, как использовать библиотеку для ускорения реализации, а также встроенные функции для обнаружения функций, такие как <code>@supports</code>.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Предусловия:</th>
@@ -28,13 +28,13 @@ translation_of: Learn/Tools_and_testing/Cross_browser_testing/Feature_detection
 
 <p>Давайте подведём итоги и посмотрим на пример, который мы затронули в нашем документе <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#Feature_detection">Решение самых распространённых проблем JavaScript</a>— <a href="/en-US/docs/Web/API/Geolocation/Using_geolocation">Использование геолокации</a> (который предоставляет доступные данные о местоположении для устройства, на котором работает веб-браузер) есть основная точка входа для его использования, свойство <code>geolocation,</code>  доступное на глобальном объекте <a href="/en-US/docs/Web/API/Navigator">Navigator</a>. Следовательно, вы можете определить, поддерживает ли браузер геолокацию или нет, используя что-то вроде следующего:</p>
 
-<pre class="language-js"><span class="keyword token">if </span><span class="punctuation token">(</span><span class="string token">"geolocation"</span> <span class="keyword token">in</span> navigator<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  navigator<span class="punctuation token">.</span>geolocation<span class="punctuation token">.</span><span class="function token">getCurrentPosition</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span>position<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="language-js">if ("geolocation" in navigator) {
+  navigator.geolocation.getCurrentPosition(function(position) {
     // show the location on a map, perhaps using the Google Maps API
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;
-}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
+  });
+} else {
   // Give the user a choice of static maps instead perhaps
-<span class="punctuation token">}</span></pre>
+}</pre>
 
 <p>Однако, вероятно, лучше использовать установленную библиотеку обнаружения объектов, а не писать свою собственную все время. Modernizr - это отраслевой стандарт для тестирования функций, и мы рассмотрим это позже.</p>
 
@@ -177,7 +177,7 @@ if (testElem.style.flex !== undefined &amp;&amp; testElem.style.flexFlow !== und
 
 <p>В качестве примера, наша демо версия <a href="https://github.com/chrisdavidmills/snapshot">Snapshot</a> использует её для выборочного применения библиотеки Brick JavaScript и её использования для обработки макета пользовательского интерфейса, но только для небольшого экрана (шириной 480 пикселей или меньше). Сначала мы используем атрибут <code>media</code>,чтобы применить CSS-код Brick к странице, только если ширина страницы составляет 480px или меньше:</p>
 
-<pre class="brush: css">&lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>dist/brick.css<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">media</span>=<span class="pl-s"><span class="pl-pds">"</span>all and (max-width: 480px)<span class="pl-pds">"</span></span>&gt;</pre>
+<pre class="brush: css">&lt;link href="dist/brick.css" type="text/css" rel="stylesheet" media="all and (max-width: 480px)"&gt;</pre>
 
 <p>Затем мы используем <code>matchMedia()</code> в JavaScript несколько раз, чтобы запускать функции навигации Brick только в том случае, если мы на маленьком экране (в более широких экранах все можно увидеть сразу, поэтому нам не нужно переходить между различными изображениями).</p>
 

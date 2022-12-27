@@ -50,7 +50,7 @@ foo
 <!-- afterend -->
 ```
 
-> **备注：** 当节点处于 DOM 树中而且有一个父元素的时候 `beforebegin` 和 `afterend 操作才能起作用。`
+> **备注：** 当节点处于 DOM 树中而且有一个父元素的时候 `beforebegin` 和 `afterend` 操作才能起作用。
 
 ## 例子
 

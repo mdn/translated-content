@@ -2,6 +2,7 @@
 title: CDATASection
 slug: Web/API/CDATASection
 ---
+
 {{APIRef("DOM")}}
 
 **`CDATA セクション`** 内では、通常の文字として XML 内に記述する場合に実態参照として記述する必要がある < や & など（※本来これらは `&lt;` や `&amp;` のように記述する必要がある）を、エスケープ無しでそのまま記述する事ができます。

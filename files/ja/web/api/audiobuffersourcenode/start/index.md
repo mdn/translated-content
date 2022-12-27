@@ -2,6 +2,7 @@
 title: AudioBufferSourceNode.start()
 slug: Web/API/AudioBufferSourceNode/start
 ---
+
 {{ APIRef("Web Audio API") }}
 
 インターフェースの`start()`メソッドは、オーディオバッファの再生をスケジュールするために使われます。

@@ -5,6 +5,7 @@ l10n:
   sourceCommit: 25233e77fc3d3de84511203fd41eaddf361880ef
 original_slug: Learn/Forms/The_native_form_widgets
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_a_web_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
 [一つ前の記事](/ja/docs/Learn/Forms/How_to_structure_a_web_form)では、機能的なウェブフォームの例をマークアップし、いくつかのフォームコントロールとよくある構造要素を導入し、アクセシビリティのベストプラクティスを見てきました。次にさまざまなフォームコントロールやウィジェットの機能を詳しく見ていきます。 — 色々な種類のデータを集めるのにどんなオプションが使えるのかを見ていきます。とりわけこの記事では、ウェブの初期からありすべてのブラウザーで利用できる、元からあるフォームコントロールを見ていきます。

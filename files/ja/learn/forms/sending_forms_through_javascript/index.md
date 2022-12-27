@@ -4,6 +4,7 @@ slug: Learn/Forms/Sending_forms_through_JavaScript
 l10n:
   sourceCommit: af71b32dc9d2c057aba5fabd9c3d9a85b0ced9fa
 ---
+
 {{LearnSidebar}}
 
 HTML フォームは [HTTP](/ja/docs/Web/HTTP) リクエストを宣言的に送信できます。しかし、フォームは 、例えば `XMLHttpRequest` のように JavaScript 経由で送信する HTTP リクエストを準備することもできます。この記事ではその方法を探ります。

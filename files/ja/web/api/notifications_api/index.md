@@ -2,6 +2,7 @@
 title: 通知 API
 slug: Web/API/Notifications_API
 ---
+
 {{DefaultAPISidebar("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
 通知 API を使えば、ウェブページがエンドユーザーに表示するシステム通知を制御できるようになります。これらのシステムは、最上位の閲覧コンテキストのビューポートの外にあるため、ユーザーがタブを切り替えたり、別のアプリに移動していても表示されます。また、この API は既存の通知システムと互換性を持つように設計されているので、異なるプラットフォームでも動作します。

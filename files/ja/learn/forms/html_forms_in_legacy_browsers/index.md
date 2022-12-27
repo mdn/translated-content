@@ -4,6 +4,7 @@ slug: Learn/Forms/HTML_forms_in_legacy_browsers
 l10n:
   sourceCommit: 4eeea08a8c50ab8f67ea815c31b53a09e5c44b04
 ---
+
 {{LearnSidebar}}
 
 ウェブ開発者は誰でも、ウェブが自分たちにとって非常に厳しい場所であることを、すぐに (時には痛みを伴って) 学びます。最悪の災いは古いブラウザーです。「古いブラウザー」というと、 Safari や古いバージョンの Internet Explorer を思い浮かべますが、それだけではありません。モバイルの世界では、古い Android スマホや iPhone のように、ブラウザーも OS もアップデートできない場合、アップデートされない純正ブラウザーも古いブラウザーです。

@@ -16,22 +16,28 @@ La identidad y la localización del recursos en la Web son en su mayoria proporc
 
 La forma más común de URI es la ({{Glossary("URL")}}) (de las siglas en ingles: "_Uniform Resource Locator_", que podría traducirse como: Localizador Uniforme de Recursos), _que se conoce como la dirección web._
 
-    https://developer.mozilla.org
-    https://developer.mozilla.org/en-US/docs/Learn/
-    https://developer.mozilla.org/en-US/search?q=URL
+```
+https://developer.mozilla.org
+https://developer.mozilla.org/en-US/docs/Learn/
+https://developer.mozilla.org/en-US/search?q=URL
+```
 
 Cualquiera de estas URLs se pueden escribir en la barra de direcciones de su navegador para decirle que cargue la pagina asociada (recurso).
 
 Una URL esta compuesta de diferentes partes, algunas obligatorias y otras son opcionales. Un ejemplo más complejo podría tener este aspecto:
 
-    http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+```
+http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+```
 
 ### URNs
 
 Un URN es una URI que identifica un recurso por su nombre en un espacio de nombres particular.
 
-    urn:isbn:9780141036144
-    urn:ietf:rfc:7230
+```
+urn:isbn:9780141036144
+urn:ietf:rfc:7230
+```
 
 Las dos URNs corresponden a
 
@@ -39,8 +45,6 @@ Las dos URNs corresponden a
 - La especificación IETF 7230, Hypertext Transfer Protocol (HTTP/1.1): Sintaxis de Mensajes y Enrutamiento.
 
 ## Sintaxis de Identificador Uniforme de Recursos (URIs)
-
-###
 
 ### Esquema o protocolo
 
@@ -87,11 +91,13 @@ Las dos URNs corresponden a
 
 ## Ejemplos
 
-    https://developer.mozilla.org/en-US/docs/Learn
-    tel:+1-816-555-1212
-    git@github.com:mdn/browser-compat-data.git
-    ftp://example.org/resource.txt
-    urn:isbn:9780141036144
+```
+https://developer.mozilla.org/en-US/docs/Learn
+tel:+1-816-555-1212
+git@github.com:mdn/browser-compat-data.git
+ftp://example.org/resource.txt
+urn:isbn:9780141036144
+```
 
 ## Especificaciones
 

@@ -2,6 +2,7 @@
 title: Cache.put()
 slug: Web/API/Cache/put
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Cache")}} インターフェイスの **`put()`** メソッドを使用すると、キーと値のペアを現在の {{domxref("Cache")}} オブジェクトに追加できます。

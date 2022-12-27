@@ -50,7 +50,7 @@ border-image-width: unset;
 
 ### 取值
 
-- `<长度-百分比>`
+- `<长度 - 百分比>`
   - : 边界的宽度，可按 {{cssxref("&lt;length&gt;")}} 或 {{cssxref("&lt;percentage&gt;")}} 指定。百分比是相较于水平（垂直）方向上的边框图像区域宽度（高度）的偏移量，不能为负。
 - `<数值>`
   - : 边框宽度，指定为 {{cssxref("border-width")}} 的相应倍数，不能为负。

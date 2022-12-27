@@ -24,7 +24,7 @@ ctx.direction = "ltr" || "rtl" || "inherit";
 - inherit
   - : 根据情况继承 {{HTMLElement("canvas")}} 元素或者 {{domxref("Document")}} 。
 
-默认值是`inherit。`
+默认值是 `inherit`。
 
 ## 示例
 

@@ -2,6 +2,7 @@
 title: Permissions
 slug: Web/API/Permissions
 ---
+
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
 [Permissions API](/ja/docs/Web/API/Permissions_API) の `Permissions` インターフェイスは、パーミッションの照会および取り消しのためのメソッドなど、コアとなる Permission API 機能を提供します。

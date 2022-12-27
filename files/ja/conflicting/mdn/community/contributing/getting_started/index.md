@@ -3,6 +3,7 @@ title: 全くの初心者のための GitHub
 slug: conflicting/MDN/Community/Contributing/Getting_started
 original_slug: MDN/Contribute/GitHub_beginners
 ---
+
 {{MDNSidebar}}
 
 [Git](https://git-scm.com/) と [GitHub](https://github.com/) は学習したり使いこなしたりするのが難しいツールですが、いくつかの簡単なコマンドと適切なアドバイスがあれば、 MDN への協力を始めるのに十分な程度のことが、さほど苦労せずにできるはずです。この記事の目的は、 Git や GitHub を使いこなすことではなく、基本的なレベルで生産的になり、 MDN に協力するために必要なことを紹介することです。

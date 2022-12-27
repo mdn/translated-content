@@ -2,6 +2,7 @@
 title: PublicKeyCredential
 slug: Web/API/PublicKeyCredential
 ---
+
 {{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 **`PublicKeyCredential`** インターフェイスは、パスワードの代わりにフィッシングやデータ消去に耐性のある非対称の鍵ペアを使用してサービスにログインするための資格情報である、公開鍵と秘密鍵のペアについての情報を提供します。これは {{domxref("Credential")}} を継承しており、 [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API) が [Credential Management API](/ja/docs/Web/API/Credential_Management_API) へ拡張された際に作成されました。 {{domxref("Credential")}} を継承している他のインターフェイスとしては、 {{domxref("PasswordCredential")}} や {{domxref("FederatedCredential")}} があります。

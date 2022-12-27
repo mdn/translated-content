@@ -8,15 +8,17 @@ original_slug: Web/JavaScript/Referencia/Operadores/this
 
 ## Introducción
 
-La palabra clave **`this`** de una función se comporta un poco diferente en Javascript en comparación con otros lenguajes. Además tiene algunas diferencias entre el [modo estricto](/es/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto "en-US/docs/JavaScript/Strict mode") y el modo no estricto.
+La palabra clave **`this`** de una función se comporta un poco diferente en Javascript en comparación con otros lenguajes. Además tiene algunas diferencias entre el [modo estricto](/es/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto) y el modo no estricto.
 
-En general, el valor de `this` está determinado por cómo se invoca a la función. No puede ser establecida mediante una asignación en tiempo de ejecución, y puede ser diferente cada vez que la función es invocada. ES5 introdujo el método {{jsxref("Function.bind()", "bind()")}} para [establecer el valor de la función `this` independientemente de como es llamada](#Funciones_enlazadas "https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Operators/Special/this#Bound_functions"), y ES2015 introdujo las [funciones flecha](/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions) que no proporcionan su propio "binding" de `this` (se mantiene el valor de `this` del contexto léxico que envuelve a la función)
+En general, el valor de `this` está determinado por cómo se invoca a la función. No puede ser establecida mediante una asignación en tiempo de ejecución, y puede ser diferente cada vez que la función es invocada. ES5 introdujo el método {{jsxref("Function.bind()", "bind()")}} para [establecer el valor de la función `this` independientemente de como es llamada](#Funciones_enlazadas), y ES2015 introdujo las [funciones flecha](/es/docs/Web/JavaScript/Referencia/Funciones/Arrow_functions) que no proporcionan su propio "binding" de `this` (se mantiene el valor de `this` del contexto léxico que envuelve a la función)
 
 {{EmbedInteractiveExample("pages/js/expressions-this.html")}}
 
 ## Sintaxis
 
-    this
+```
+this
+```
 
 ### Valor
 
@@ -65,7 +67,7 @@ f2() === undefined;
 
 En modo estricto, el valor de **this** se mantiene en lo que está establecida al entrar en el contexto de ejecución. Si no está definido, permanece undefined. También se puede ajustar a cualquier valor, tales como **null** o **42** o "**Yo no soy this**".
 
-> **Nota:** En el segundo ejemplo, **`this`** debería ser {{jsxref("undefined")}}, porque `f2` fue llamado sin proporcionar ninguna base (ej. `window.f2()`). Esta característica no fue implementada en algunos navegadores cuando se comenzó a dar soporte al [modo estricto](/es/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto "Strict mode"). Como resultado, retorna incorrectamente el objeto window.
+> **Nota:** En el segundo ejemplo, **`this`** debería ser {{jsxref("undefined")}}, porque `f2` fue llamado sin proporcionar ninguna base (ej. `window.f2()`). Esta característica no fue implementada en algunos navegadores cuando se comenzó a dar soporte al [modo estricto](/es/docs/Web/JavaScript/Referencia/Funciones/Modo_estricto). Como resultado, retorna incorrectamente el objeto window.
 
 Como un método de un objeto
 
@@ -100,7 +102,7 @@ console.log(o.f()); // logs 37
 
 Esto demuestra que sólo importa que la función fue invocada del elemento `f` de `o`.
 
-Asimismo, el enlace `this` sólo se ve afectado por la referencia del miembro más inmediata. En el siguiente ejemplo, cuando invocamos a la función, lo llamamos como metodo `g` del objeto `o.b`. Esta vez durante la ejecución, `this `dentro de la función se referirá a `o.b`. El hecho de que el objeto es en sí mismo un elemento de `o` no tiene ninguna consecuencia, la referencia más inmediata es todo lo que importa.
+Asimismo, el enlace `this` sólo se ve afectado por la referencia del miembro más inmediata. En el siguiente ejemplo, cuando invocamos a la función, lo llamamos como metodo `g` del objeto `o.b`. Esta vez durante la ejecución, `this` dentro de la función se referirá a `o.b`. El hecho de que el objeto es en sí mismo un elemento de `o` no tiene ninguna consecuencia, la referencia más inmediata es todo lo que importa.
 
 ```js
 o.b = {g: independent, prop: 42};
@@ -120,7 +122,7 @@ p.b = 4;
 console.log(p.f()); // 5
 ```
 
-En este ejemplo, el objeto asignado a la variable `p` no tiene su propia propiedad `f`, esto lo hereda de su prototipo. Pero no importa que la búsqueda de `f` eventualmente encuentre un elemento con ese nombre en `o`; la búsqueda comenzó como una referencia a `p.f`, asi `this `dentro de la funcion toma el valor del objeto referido como `p`. Es decir, desde que `f` es llamado como método de `p`, su `this` refiere a `p`. Esto es una interesante característica de la herencia de prototipo de JavaScript.
+En este ejemplo, el objeto asignado a la variable `p` no tiene su propia propiedad `f`, esto lo hereda de su prototipo. Pero no importa que la búsqueda de `f` eventualmente encuentre un elemento con ese nombre en `o`; la búsqueda comenzó como una referencia a `p.f`, asi `this` dentro de la funcion toma el valor del objeto referido como `p`. Es decir, desde que `f` es llamado como método de `p`, su `this` refiere a `p`. Esto es una interesante característica de la herencia de prototipo de JavaScript.
 
 #### ... o como un getter o setter
 

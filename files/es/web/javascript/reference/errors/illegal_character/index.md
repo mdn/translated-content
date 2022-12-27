@@ -14,11 +14,13 @@ original_slug: Web/JavaScript/Reference/Errors/caracter_ilegal
 
 ## Mensaje
 
-    SyntaxError: illegal character (Firefox)
-    SyntaxError: Invalid or unexpected token (Chrome)
+```
+SyntaxError: illegal character (Firefox)
+SyntaxError: Invalid or unexpected token (Chrome)
 
-    ErrorDeSintasix: Carácter ilegal (Firefox)
-    ErrorDeSintasix: Componente léxico inválido o inesperado (Chrome)
+ErrorDeSintasix: Carácter ilegal (Firefox)
+ErrorDeSintasix: Componente léxico inválido o inesperado (Chrome)
+```
 
 ## Tipo de error
 

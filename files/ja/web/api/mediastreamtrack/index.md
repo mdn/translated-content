@@ -2,6 +2,7 @@
 title: MediaStreamTrack
 slug: Web/API/MediaStreamTrack
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 **`MediaStreamTrack`** インターフェイスは、ストリームに含まれる一つのメディアトラックを表現します。一般的に、音声や動画のトラックですが、他の種類のトラックも存在することがあります。

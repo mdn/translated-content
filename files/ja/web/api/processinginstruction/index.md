@@ -2,6 +2,7 @@
 title: ProcessingInstruction
 slug: Web/API/ProcessingInstruction
 ---
+
 {{APIRef("DOM")}}
 
 **`ProcessingInstruction`** インターフェイスは[処理命令](https://www.w3.org/TR/xml/#sec-pi)を表します。すなわち、特定のアプリケーションを対象とした埋め込み {{domxref("Node")}} を表します。しかし、その命令を理解できないほかのアプリケーションは無視することができます。

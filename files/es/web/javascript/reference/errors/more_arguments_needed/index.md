@@ -13,10 +13,12 @@ translation_of: Web/JavaScript/Reference/Errors/More_arguments_needed
 
 ## Mensage
 
-    TypeError: argument is not an Object and is not null (Edge)
-    TypeError: Object.create necesita al menos 1 argumento, pero solo only 0 fueron aprovadas.
-    TypeError: Object.setPrototypeOf necesita al menos 2 argumentos, pero solo 0 fueron aprovados
-    TypeError: Object.defineProperties requires at least 1 argument, but only 0 were passed
+```
+TypeError: argument is not an Object and is not null (Edge)
+TypeError: Object.create necesita al menos 1 argumento, pero solo only 0 fueron aprovadas.
+TypeError: Object.setPrototypeOf necesita al menos 2 argumentos, pero solo 0 fueron aprovados
+TypeError: Object.defineProperties requires at least 1 argument, but only 0 were passed
+```
 
 ## Tipo de error
 

@@ -23,7 +23,7 @@ allCookies = document.cookie;
 document.cookie = newCookie;
 ```
 
-`newCookie 是一个键值对形式的字符串。需要注意的是，用这个方法一次只能对一个 cookie 进行设置或更新。`
+`newCookie` 是一个键值对形式的字符串。需要注意的是，用这个方法一次只能对一个 cookie 进行设置或更新。
 
 - 以下可选的 cookie 属性值可以跟在键值对后，用来具体化对 cookie 的设定/更新，使用分号以作分隔：
 

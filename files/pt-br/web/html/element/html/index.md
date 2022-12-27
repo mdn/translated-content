@@ -17,9 +17,9 @@ O elemento **HTML \<html> **(ou _HTML root element_) representa a raiz de um HTM
 
 - _[Categorias de conteúdo](/pt-BR/docs/HTML/Content_categories)_ Nenhuma.
 - _Conteúdo permitido_ Um elemento {{HTMLElement("head")}}, seguido por um elemento {{HTMLElement("body")}}.
-- \_Omissão de tag_A tag inicial pode ser omitida se a primeira coisa dentro do elemento `<html>` não for um comentário.
+- _Omissão de tag_ A tag inicial pode ser omitida se a primeira coisa dentro do elemento `<html>` não for um comentário.
   A tag final pode ser omitida se o elemento `<html>` não for imediatamente seguido por um comentário, e conter um elemento {{HTMLElement("body")}} ou que não está vazio, ou cuja tag inicial está presente.
-- \_Elementos pais permitidos_Como o elemento raiz do documento, ou qualquer fragmento de subdocumento é permitido em um documento composto.
+- _Elementos pais permitidos_ Como o elemento raiz do documento, ou qualquer fragmento de subdocumento é permitido em um documento composto.
 - _DOM interface_ {{domxref("HTMLhtmlElement")}}
 
 ## Atributos

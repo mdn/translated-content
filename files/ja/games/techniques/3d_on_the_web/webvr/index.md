@@ -2,6 +2,7 @@
 title: WebVR — ウェブによる仮想現実
 slug: Games/Techniques/3D_on_the_web/WebVR
 ---
+
 {{GamesSidebar}}
 
 仮想現実の概念自体は新しいものではありませんが、今ではそれをあるべき姿で機能させるためのテクノロジーと、それをウェブアプリケーションで活用するための JavaScript API があります。 この記事では、ゲームでの使用の観点から WebVR を紹介しています。

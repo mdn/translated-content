@@ -28,7 +28,9 @@ console.log(iterator.next().value); // p
 
 ## Sintaxis
 
-    arr.values()
+```
+arr.values()
+```
 
 ### Valor devuelto
 

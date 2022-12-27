@@ -26,7 +26,7 @@ Uma string que representa os elementos de um array.
 
 ### Usando `toLocaleString`
 
-Os elementos de um array são convertidos para strings usando seus respectivos métodos `toLocaleString:`
+Os elementos de um array são convertidos para strings usando seus respectivos métodos `toLocaleString`:
 
 - `Object`: {{jsxref("Object.prototype.toLocaleString()")}}
 - `Number`: {{jsxref("Number.prototype.toLocaleString()")}}

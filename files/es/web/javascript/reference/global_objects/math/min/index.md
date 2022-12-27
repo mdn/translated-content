@@ -15,7 +15,9 @@ La función **`Math.min()`** devuelve el menor de cero o más números.
 
 ## Sintaxis
 
-    Math.min([valor1[, valor2[, ...]]])
+```
+Math.min([valor1[, valor2[, ...]]])
+```
 
 ### Parámetros
 

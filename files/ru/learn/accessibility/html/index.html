@@ -21,7 +21,7 @@ original_slug: Learn/Доступность/HTML
 
 <p class="summary">Большая часть содержимого интернета может быть сделана доступной просто благодаря использованию правильных HTML-элементов по назначению. В этой статье подробно рассмотрено как HTML может быть использован для обеспечения максимальной доступности.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Необходимые знания:</th>
@@ -78,25 +78,25 @@ original_slug: Learn/Доступность/HTML
 
 <p>Одно из самых лучших вспомогательных средств доступности для пользователя скринридера — хорошая структура заголовков, параграфов, список и т.д. Пример хорошей семантики может выглядеть так:</p>
 
-<pre class="brush: html example-good line-numbers language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h1</span><span class="punctuation token">&gt;</span></span>Мой заголовок<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h1</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html example-good line-numbers language-html"><code class="language-html">&lt;h1&gt;Мой заголовок&lt;/h1&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;Это первый раздел моей страницы.</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+&lt;p&gt;Это первый раздел моей страницы.&lt;/p&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;Я добавлю ещё один параграф тут.</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;
+&lt;p&gt;Я добавлю ещё один параграф тут.&lt;/p&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Это&lt;/li&gt;
   &lt;li&gt;список для&lt;/li&gt;
   &lt;li&gt;чтения&lt;/li&gt;
-&lt;/ol&gt;</span></span>
+&lt;/ol&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h2</span><span class="punctuation token">&gt;</span></span>Мой подзаголовок<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h2</span><span class="punctuation token">&gt;</span></span>
+&lt;h2&gt;Мой подзаголовок&lt;/h2&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Это первый подраздел моей страницы. Я бы хотела, чтобы люди могли найти этот контент!<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+&lt;p&gt;Это первый подраздел моей страницы. Я бы хотела, чтобы люди могли найти этот контент!&lt;/p&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h2</span><span class="punctuation token">&gt;Мой второй подзаголовок&lt;/</span></span><span class="tag token"><span class="tag token">h2</span><span class="punctuation token">&gt;</span></span>
+&lt;h2&gt;Мой второй подзаголовок&lt;/h2&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Это второй подраздел. Думаю, он намного интереснее, чем предыдущий.<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;p&gt;Это второй подраздел. Думаю, он намного интереснее, чем предыдущий.&lt;/p&gt;</code></pre>
 
 <p>Мы подготовили версию с длинными текстом, чтобы вы попробовали со скринридером (смотрите <a href="http://mdn.github.io/learning-area/accessibility/html/good-semantics.html">good-semantics.html</a>). Если вы попробуете поперемещаться, то увидите, как легко ориентироваться на странице:</p>
 
@@ -109,24 +109,24 @@ original_slug: Learn/Доступность/HTML
 
 <p>Иногда люди используют презентационные элементы HTML и перенос строки, чтобы написать заголовки или параграфы:</p>
 
-<pre class="brush: html example-bad line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">size</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>7<span class="punctuation token">"</span></span><span class="punctuation token">&gt;Мой заголовок</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="punctuation token">Это первый раздел моей страницы.</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="punctuation token">Я добавлю ещё один параграф тут.</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;
+<pre class="brush: html example-bad line-numbers  language-html"><code class="language-html">&lt;font size="7"&gt;Мой заголовок&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
+Это первый раздел моей страницы.
+&lt;br&gt;&lt;br&gt;
+Я добавлю ещё один параграф тут.
+&lt;br&gt;&lt;br&gt;
 1. Это
-</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;
+&lt;br&gt;&lt;br&gt;
 2. список для
-</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;
+&lt;br&gt;&lt;br&gt;
 3. чтения
-</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">size</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>5<span class="punctuation token">"</span></span><span class="punctuation token">&gt;Мой подзаголовок</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
+&lt;br&gt;&lt;br&gt;
+&lt;font size="5"&gt;Мой подзаголовок&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
 Это первый подраздел моей страницы. Я бы хотела, чтобы люди могли найти этот контент!
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">size</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>5<span class="punctuation token">"</span></span><span class="punctuation token">&gt;Мой второй подзаголовок</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span><span class="punctuation token">&gt;</span></span>
+&lt;br&gt;&lt;br&gt;
+&lt;font size="5"&gt;Мой второй подзаголовок&lt;/font&gt;
+&lt;br&gt;&lt;br&gt;
 Это второй подраздел. Думаю, он намного интереснее, чем предыдущий.</code></pre>
 
 <p>Если вы попробуете полную версию с помощью скринридера (смотрите <a href="http://mdn.github.io/learning-area/accessibility/html/bad-semantics.html">bad-semantics.html</a>), вам не слишком это понравится: скринридеру нечего использовать как ориентир, поэтому вы не сможете получить содержание, а вся страница для скринридера — это один большой блок, поэтому он озвучит всё за один раз, без остановок. </p>
@@ -339,11 +339,11 @@ original_slug: Learn/Доступность/HTML
 
 <p>Хотя дополнение, которые мы сделали, позволяет нам перемещаться по кнопкам с помощью <kbd>Tab</kbd>, оно не позволяет нам активировать их кнопкой <kbd>Enter</kbd>. Для этого нам необходимо добавить хитрый кусочек JavaScript:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">document<span class="punctuation token">.</span>onkeydown <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span>e<span class="punctuation token">.</span>keyCode <span class="operator token">===</span> <span class="number token">13</span><span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="comment token">// Кнопка Enter</span>
-    document<span class="punctuation token">.</span>activeElement<span class="punctuation token">.</span><span class="function token">click</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">document.onkeydown = function(e) {
+  if(e.keyCode === 13) { // Кнопка Enter
+    document.activeElement.click();
+  }
+};</code></pre>
 
 <p>Мы навешиваем обработчик событий на <code>document</code> для обнаружения нажатий с клавиатуры. Далее, через свойство объекта события <code><a href="/ru/docs/Web/API/KeyboardEvent/keyCode">keyCode</a></code>, проверяем, какая кнопка была нажата. Если код клавиши совпадает с кодом клавиши <kbd>Enter</kbd>, мы выполняем функцию, которая хранится в обработчике кнопки <code>onclick</code>, используя <code>document.activeElement.click().</code> <code><a href="/ru/docs/Web/API/Document/activeElement">activeElement</a></code> возвращает текущий сфокусированный элемент.</p>
 

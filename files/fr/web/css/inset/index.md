@@ -40,9 +40,13 @@ inset: unset;
 
 La propriété `inset` prend les mêmes valeurs que la propriété {{cssxref("left")}}.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -78,15 +82,11 @@ div {
 
 ## Spécifications
 
-| Spécification                                                                            | État                                             | Commentaires         |
-| ---------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
-| {{SpecName("CSS Logical Properties", "#propdef-inset", "inset")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.inset")}}
+{{Compat}}
 
 ## Voir aussi
 

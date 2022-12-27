@@ -2,6 +2,7 @@
 title: Notification.requestPermission()
 slug: Web/API/Notification/requestPermission
 ---
+
 {{APIRef("Web Notifications")}}{{securecontext_header}}
 
 > **Note:** Safari はまだ、許可を得るのにコールバック構文を使用します。適切に機能を検出してコードを実行する方法の良い例として、[通知 API の使用](/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API)をご覧ください。

@@ -34,7 +34,7 @@ O objeto do tipo {{jsxref("DataView")}} é uma interface de baixo nível que for
   - : O método `FileReader.prototype.readAsArrayBuffer()` inicia a leitura do conteúdo de um objeto do tipo [Blob](/pt-BR/docs/Web/API/Blob) ou [FIle](/pt-BR/docs/Web/API/File) especificado.
 - [`XMLHttpRequest.prototype.send()`](</pt-BR/docs/Web/API/XMLHttpRequest#send()>)
   - : O método `send()` das instâncias de `XMLHttpRequest` agora suportam arrays tipados e objetos do tipo {{jsxref("ArrayBuffer")}} como argumento.
-- [`ImageData.data`](https://developer.mozilla.org/en-US/docs/Web/API/ImageData)
+- [`ImageData.data`](/en-US/docs/Web/API/ImageData)
   - : É objeto do tipo {{jsxref("Uint8ClampedArray")}} que representa uma matriz unidimensional que contém dados na ordem RGBA, com valores numéricos entre `0` e `255` inclusive.
 
 ## Exemplos

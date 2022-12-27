@@ -2,6 +2,7 @@
 title: Document.location
 slug: Web/API/Document/location
 ---
+
 {{APIRef("DOM")}}
 
 **`Document.location`** は読み取り専用のプロパティで、この文書の URL に関する情報を持った {{domxref("Location")}} オブジェクトを返します。これはその URL を変更したり他の URL を読み込んだりするためのメソッドも提供しています。

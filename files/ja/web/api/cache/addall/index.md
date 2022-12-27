@@ -2,6 +2,7 @@
 title: Cache.addAll()
 slug: Web/API/Cache/addAll
 ---
+
 {{APIRef("Service Workers API")}}
 
 {{domxref("Cache")}} インターフェイスの **`addAll()`** メソッドは、URL の配列を受け取り、取得して、指定されたキャッシュに結果のレスポンスオブジェクトを追加します。取得の間に作成されたリクエストオブジェクトは、格納されるレスポンス操作のキーになります。

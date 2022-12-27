@@ -2,6 +2,7 @@
 title: location.hostname
 slug: Web/API/Location/hostname
 ---
+
 {{ApiRef("URL API")}}
 
 **`hostname`** は {{domxref("Location")}} インターフェイスのプロパティで、 {{domxref("USVString")}} で URL のドメインを保持します。

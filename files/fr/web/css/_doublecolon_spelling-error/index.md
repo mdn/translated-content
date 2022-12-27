@@ -61,13 +61,11 @@ p::spelling-error { color:red }
 
 ## Spécifications
 
-| Spécification                                                                                                        | État                                         | Commentaires        |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS4 Pseudo-Elements', '#selectordef-spelling-error', '::spelling-error')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Définition initiale |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.selectors.spelling-error")}}
+{{Compat}}
 
 ## Voir aussi
 

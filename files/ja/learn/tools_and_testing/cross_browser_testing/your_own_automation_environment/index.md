@@ -2,6 +2,7 @@
 title: テスト自動化環境をセットアップする
 slug: Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Cross_browser_testing/Automated_testing", "Learn/Tools_and_testing/Cross_browser_testing")}}
 
 この記事では、Selenium/WebDriver や selenium-webdriver for Node のようなテストライブラリーを使って、自動化環境のインストールとテストを実行する方法を教えます。またあなたのローカルテスト環境と、以前の記事で見てきたような商用アプリとを統合する方法についても見て行きます。

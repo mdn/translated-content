@@ -2,6 +2,7 @@
 title: CSSKeyframesRule.name
 slug: Web/API/CSSKeyframesRule/name
 ---
+
 {{APIRef("CSSOM") }}
 
 **`name`** は {{domxref("CSSKeyframeRule")}} インターフェイスのプロパティで、 {{cssxref("animation-name")}} プロパティで使用されるアニメーションの名前を取得したり設定したりします。

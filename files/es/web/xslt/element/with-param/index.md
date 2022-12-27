@@ -13,9 +13,11 @@ El elemento `<xsl:with-param>` establece el valor de un parámetro que se pasar�
 
 ### Syntax
 
-    <xsl:with-param name=NOMBRE select=EXPRESIÓN>
-    	PLANTILLA
-    </xsl:with-param>
+```
+<xsl:with-param name=NOMBRE select=EXPRESIÓN>
+  PLANTILLA
+</xsl:with-param>
+```
 
 ### Atributos requeridos
 

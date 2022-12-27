@@ -17,7 +17,7 @@ translation_of: Learn/JavaScript/Asynchronous/Introducing
 
 <p class="summary">В этой статье мы кратко остановимся на проблемах, связанных с синхронным Javascript, а также ознакомимся с несколькими асинхронными методами, демонстрирующими как они могут помочь нам подобные проблемы решить.</p>
 
-<table class="learn-box standard-table">
+<table>
  <tbody>
   <tr>
    <th scope="row">Необходимое условие:</th>
@@ -65,7 +65,7 @@ btn.addEventListener('click', () =&gt; {
 <p>Так и в примере выше: после нажатия кнопки абзац не сможет появиться пока не будет нажата кнопка OK в окне сообщения. Попробуйте сами:</p>
 
 <div class="hidden">
-<pre class="brush: html">&lt;<span class="pl-ent">button</span>&gt;Нажми меня&lt;/<span class="pl-ent">button</span>&gt;</pre>
+<pre class="brush: html">&lt;button&gt;Нажми меня&lt;/button&gt;</pre>
 </div>
 
 <p>{{EmbedLiveSample('Синхронный_JavaScript', '100%', '70px')}}</p>
@@ -84,7 +84,7 @@ btn.addEventListener('click', () =&gt; {
 let blob = response.blob();
 // display your image blob in the UI somehow</pre>
 
-<p>Это происходит потому что вы не знаете сколько времени займёт загрузка картинки, следовательно, когда вы начнёте выполнять вторую строку кода, сгенерируется ошибка (возможно, периодически, возможно, каждый раз), потому что <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">response</span></font> ещё не доступен. Вместо этого, ваш код должен дождаться возвращения <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">response</span></font> до того, как попытается выполнить дальнейшие инструкции.</p>
+<p>Это происходит потому что вы не знаете сколько времени займёт загрузка картинки, следовательно, когда вы начнёте выполнять вторую строку кода, сгенерируется ошибка (возможно, периодически, возможно, каждый раз), потому что response ещё не доступен. Вместо этого, ваш код должен дождаться возвращения response до того, как попытается выполнить дальнейшие инструкции.</p>
 
 <p>Есть два типа стиля асинхронного кода, с которыми вы столкнётесь в коде JavaScript, старый метод — колбэки (callbacks) и более новый — промисы (promises). В следующих разделах мы познакомимся с каждым из них. </p>
 
@@ -245,7 +245,7 @@ console.log("all done");</pre>
 
 <p>Теперь вместо третьего сообщения должна возникнуть следующая ошибка:</p>
 
-<pre><span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: image is undefined; can't access its "src" property</span></span></span></pre>
+<pre>TypeError: image is undefined; can't access its "src" property</pre>
 
 <p>Это происходит потому, что в то же время браузер пытается запустить третий <code>console.log()</code>, блок <code>fetch()</code> ещё не закончил выполнение, поэтому переменная <code>image</code> ещё не имеет значения.</p>
 

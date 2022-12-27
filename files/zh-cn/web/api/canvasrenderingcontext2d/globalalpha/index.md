@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/globalAlpha
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.globalAlpha`** 是 Canvas 2D API 用来描述在 canvas 上绘图之前，设置图形和图片透明度的属性。 数值的范围从 0.0（完全透明）到 1.0（完全不透明）。
+**`CanvasRenderingContext2D.globalAlpha`** 是 Canvas 2D API 用来描述在 canvas 上绘图之前，设置图形和图片透明度的属性。数值的范围从 0.0（完全透明）到 1.0（完全不透明）。
 
 在 [Canvas Tutorial](/zh-CN/docs/Web/API/Canvas_API/Tutorial) 中参见 [Applying styles and color](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) 章节。
 
@@ -18,7 +18,7 @@ ctx.globalAlpha = value;
 ### 选项
 
 - `value`
-  - : 数字在 0.0 （完全透明）和 1.0（完全不透明）之间。 默认值是 1.0。如果数值不在范围内，包括{{jsxref("Infinity")}} 和{{jsxref("NaN")}} ，无法赋值，并且 `globalAlpha` 会保持原有的数值。
+  - : 数字在 0.0（完全透明）和 1.0（完全不透明）之间。默认值是 1.0。如果数值不在范围内，包括{{jsxref("Infinity")}} 和{{jsxref("NaN")}} ，无法赋值，并且 `globalAlpha` 会保持原有的数值。
 
 ## 示例
 
@@ -95,7 +95,7 @@ window.addEventListener("load", drawCanvas);
 
 ### `globalAlpha` 例子
 
-此例中，绘制了 4 个不同背景色的正方形。在他们上面，绘制半透明的圆形。将那个点绘制的所有图形的 `globalAlpha` 属性值都设置为 0.2。通过 for 循环绘制半径逐渐增大的圆形。 最终形成的结果是放射性渐变。通过不停地叠加圆形， 使得先前绘制的圆形的透明度越来越暗。通过增加循环数量绘制更多的圆形，图片中心的背景将会变成完全不透明。
+此例中，绘制了 4 个不同背景色的正方形。在他们上面，绘制半透明的圆形。将那个点绘制的所有图形的 `globalAlpha` 属性值都设置为 0.2。通过 for 循环绘制半径逐渐增大的圆形。最终形成的结果是放射性渐变。通过不停地叠加圆形，使得先前绘制的圆形的透明度越来越暗。通过增加循环数量绘制更多的圆形，图片中心的背景将会变成完全不透明。
 
 ```js
 var ctx = document.getElementById('canvas').getContext('2d');

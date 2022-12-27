@@ -18,7 +18,9 @@ El valor inicial de la propiedad **`@@iterator`** es el mismo objeto de función
 
 ## Sintaxis
 
-    arr[Symbol.iterator]()
+```
+arr[Symbol.iterator]()
+```
 
 ### Valor de retorno
 

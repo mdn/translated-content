@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/Object_initializer
 
 {{JsSidebar("Operators")}}
 
-可以通过[`new Object()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)，`Object.create()`方法，或者使用字面量标记（初始化标记）初始化对象。 一个对象初始化器，由花括号/大括号 (`{}`) 包含的一个由零个或多个对象属性名和其关联值组成的一个逗号分隔的列表构成。
+可以通过[`new Object()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)，`Object.create()`方法，或者使用字面量标记（初始化标记）初始化对象。一个对象初始化器，由花括号/大括号 (`{}`) 包含的一个由零个或多个对象属性名和其关联值组成的一个逗号分隔的列表构成。
 
 ## 语法
 
@@ -117,7 +117,7 @@ var a = {x: 1, x: 2};
 console.log(a); // { x: 2}
 ```
 
-在 ECMAScript 5 严格模式的代码中， 重复的属性名会被当做{{jsxref("SyntaxError")}}。引入计算的属性名以后，属性名会在运行时出现重复。ECMAScript 2015 移除了这个限制。
+在 ECMAScript 5 严格模式的代码中，重复的属性名会被当做{{jsxref("SyntaxError")}}。引入计算的属性名以后，属性名会在运行时出现重复。ECMAScript 2015 移除了这个限制。
 
 ```js
 function haveES6DuplicatePropertySemantics(){

@@ -2,6 +2,7 @@
 title: Navigator.oscpu
 slug: Web/API/Navigator/oscpu
 ---
+
 {{ ApiRef("HTML DOM") }}
 
 **`Navigator.oscpu`** プロパティは、現在のオペレーティングシステムを識別する文字列を返します。

@@ -8,7 +8,9 @@ original_slug: Web/JavaScript/Referencia/Operadores/await
 
 ## Sintaxis
 
-    [rv] = await expression;
+```
+[rv] = await expression;
+```
 
 - `expression`
   - : Una {{jsxref("Promise")}} o cualquier otro valor por el cual haya que esperar.

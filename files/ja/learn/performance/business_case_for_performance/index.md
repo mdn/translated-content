@@ -2,6 +2,7 @@
 title: ウェブパフォーマンスのビジネスケース
 slug: Learn/Performance/business_case_for_performance
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/Performance/Mobile", "Learn/Performance")}}
 
 ここまで、ウェブパフォーマンスの重要性についてお話してきました。ウェブパフォーマンスを最適化するために何をすべきかを学びました。しかし、クライアントや経営陣にパフォーマンスに優先順位をつけて投資するように説得するにはどうすればよいのでしょうか？このセクションでは、意思決定者に投資をするように説得するための明確なビジネスケースの作成について説明します。

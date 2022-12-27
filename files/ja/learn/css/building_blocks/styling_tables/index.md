@@ -2,6 +2,7 @@
 title: 表のスタイリング
 slug: Learn/CSS/Building_blocks/Styling_tables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 HTML の表を装飾することは、世界で最も魅力的な仕事ではありませんが、時にはそれをしなければならないこともあります。 この記事では、これまでに説明した機能のいくつかとともに、HTML の表を見栄え良くするためのガイドを提供します。

@@ -19,9 +19,11 @@ Aplica una función simultáneamente contra un acumulador y cada elemento de un 
 
 ## Sintaxis
 
-    array.reduceRight(
-    funcion[,
-    valorInicial])
+```
+array.reduceRight(
+funcion[,
+valorInicial])
+```
 
 ### Parámetros
 

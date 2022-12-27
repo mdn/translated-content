@@ -2,6 +2,7 @@
 title: PerformanceResourceTiming.redirectStart
 slug: Web/API/PerformanceResourceTiming/redirectStart
 ---
+
 {{APIRef("Resource Timing API")}}
 
 **`redirectStart`** 読み取り専用プロパティは、リダイレクトを開始するフェッチの開始時間を表す {{domxref("DOMHighResTimeStamp","timestamp")}} を返します。

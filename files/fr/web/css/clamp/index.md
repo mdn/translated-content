@@ -89,13 +89,11 @@ Ici on utilise l'unité `rem` pour fixer un maximum correspondant à deux fois l
 
 ## Spécifications
 
-| Spécification                                                                | État                             | Commentaires |
-| ---------------------------------------------------------------------------- | -------------------------------- | ------------ |
-| {{SpecName('CSS4 Values', '#calc-notation', 'clamp()')}} | {{Spec2('CSS4 Values')}} |              |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.types.clamp")}}
+{{Compat}}
 
 ## Voir aussi
 

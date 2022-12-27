@@ -34,7 +34,7 @@ Array.of(element0[, element1[, ...[, elementN]]])
 
 ## 描述
 
-此函数是 ECMAScript 2015 标准的一部分。详见 [`Array.of 和` `Array.from` proposal](https://gist.github.com/rwaldron/1074126) 和 [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576)。
+此函数是 ECMAScript 2015 标准的一部分。详见 [`Array.of` 和 `Array.from` proposal](https://gist.github.com/rwaldron/1074126) 和 [`Array.of` polyfill](https://gist.github.com/rwaldron/3186576)。
 
 ## 示例
 

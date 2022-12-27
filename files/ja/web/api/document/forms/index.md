@@ -2,6 +2,7 @@
 title: Document.forms
 slug: Web/API/Document/forms
 ---
+
 {{domxref("Document")}} インターフェイスの **`forms`** プロパティは読み取り専用で、文書内に含まれるすべての {{HTMLElement("form")}} を列挙した {{domxref("HTMLCollection")}} を返します。
 
 > **Note:** 同様に、{{domxref("HTMLFormElement.elements")}} プロパティを使用すると、フォームコンポーネントのユーザー入力要素のリストにアクセスすることができます。

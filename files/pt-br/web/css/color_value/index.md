@@ -1009,7 +1009,7 @@ A cor deste texto é a mesma da linha:  <div style="background:currentcolor; hei
 
 Colors can be defined using the red-green-blue (RGB) model in two ways:
 
-- Hexadecimal notation `#RRGGBB,` `#RGB`
+- Hexadecimal notation `#RRGGBB`, `#RGB`
 
   - :&#x20;
 

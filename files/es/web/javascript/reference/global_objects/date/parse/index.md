@@ -16,7 +16,9 @@ Transforma una cadena con la representación de una fecha y hora, y devuelve el 
 
 ## Sintaxis
 
-    Date.parse(cadenaFecha)
+```
+Date.parse(cadenaFecha)
+```
 
 ### Parámetros
 

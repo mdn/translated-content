@@ -104,9 +104,13 @@ La position des marques d'emphase varie en fonction du langage. Par exemple, en 
 - `left`
   - : Les marques sont dessinées à gauche du texte lorsqu'il est écrit en mode vertical.
 
-### Syntaxe formelle
+## Définition formelle
 
-{{csssyntax}}
+{{CSSInfo}}
+
+## Syntaxe formelle
+
+{{CSSSyntax}}
 
 ## Exemples
 
@@ -157,15 +161,11 @@ em {
 
 ## Spécifications
 
-| Spécification                                                                                                            | Statut                                       | Commentaires        |
-| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | ------------------- |
-| {{SpecName('CSS3 Text Decoration', '#text-emphasis-position-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale |
-
-{{cssinfo}}
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("css.properties.text-emphasis-position")}}
+{{Compat}}
 
 ## Voir aussi
 

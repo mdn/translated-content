@@ -2,6 +2,7 @@
 title: DOMPoint
 slug: Web/API/DOMPoint
 ---
+
 {{APIRef("DOM")}}
 
 **`DOMPoint`** オブジェクトは、座標系における二次元または三次元の点を表します。最大三次元までの座標の値、およびオプションで視点の値も含まれます。 `DOMPoint` は {{domxref("DOMPointReadOnly")}} に基づいていますが、そのプロパティの値を変更することができます。

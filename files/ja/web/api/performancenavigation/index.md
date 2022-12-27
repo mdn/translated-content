@@ -2,6 +2,7 @@
 title: PerformanceNavigation
 slug: Web/API/PerformanceNavigation
 ---
+
 {{APIRef("Navigation Timing")}}
 
 > **Warning:** このインターフェイスは [Navigation Timing Level 2 仕様書](https://w3c.github.io/navigation-timing/#obsolete)では非推奨です。代わりに {{domxref("PerformanceNavigationTiming")}} インターフェイスを使用してください。

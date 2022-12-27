@@ -2,6 +2,7 @@
 title: 必要な情報を保存する — 変数
 slug: Learn/JavaScript/First_steps/Variables
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
 
 前回までの記事を読んで、高度な視点からその機能を概観し、JavaScript とは何なのか、それで何ができるのか、他の Web の技術とどう一緒に使うのか、そして、どのような機能があるのかが分かったのではないでしょうか。この記事では、本当の基本に立ち返り、JavaScript の基本的な構成要素である変数について見てみましょう。

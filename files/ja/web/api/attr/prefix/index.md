@@ -2,6 +2,7 @@
 title: Attr.prefix
 slug: Web/API/Attr/prefix
 ---
+
 {{APIRef("DOM")}}
 
 **`prefix`** は {{domxref("Attr")}} インターフェイスの読み取り専用プロパティで、この属性の名前空間接頭辞を返します。接頭辞が指定されていなければ `null` を返します。

@@ -2,6 +2,7 @@
 title: IDBFactory.deleteDatabase
 slug: Web/API/IDBFactory/deleteDatabase
 ---
+
 {{ APIRef("IDBFactory") }}
 
 {{domxref("IDBFactory")}}インターフェイスの`deleteDatabase()`メソッドは、データベースの削除を要求します。 このメソッドは直ちに{{domxref("IDBOpenDBRequest")}} オブジェクトを返し、非同期でデータベースの削除処理を行います。

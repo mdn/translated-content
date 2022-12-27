@@ -67,7 +67,7 @@ Um {{domxref("RenderingContext")}} que pode ser:
 - {{domxref("WebGL2RenderingContext")}} para `"webgl2"` ou
 - {{domxref("ImageBitmapRenderingContext")}} para `"bitmaprenderer"`.
 
-Se o _contextType_ não bater com um possivel contexto de desenho,`null` é retornado.
+Se o _contextType_ não bater com um possivel contexto de desenho, `null` é retornado.
 
 ## Examples
 

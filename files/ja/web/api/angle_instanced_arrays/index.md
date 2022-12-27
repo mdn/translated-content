@@ -2,6 +2,7 @@
 title: ANGLE_instanced_arrays
 slug: Web/API/ANGLE_instanced_arrays
 ---
+
 {{APIRef("WebGL")}}
 
 **`ANGLE_instanced_arrays`** 拡張機能は [WebGL API](/ja/docs/Web/API/WebGL_API) の一部であり、同じ頂点データ、プリミティブカウント、およびタイプを共有している同じオブジェクトまたは同様のオブジェクトのグループを複数回描画することができます。

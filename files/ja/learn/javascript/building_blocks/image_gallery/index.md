@@ -2,6 +2,7 @@
 title: イメージギャラリー
 slug: Learn/JavaScript/Building_blocks/Image_gallery
 ---
+
 {{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/Building_blocks/Events", "Learn/JavaScript/Building_blocks")}}
 
 JavaScript の基本的な構成要素を見てきたところで、これからたくさんのウェブサイトで見かける項目、JavaScript で動作するイメージギャラリーをつくってみることで、あなたが得た繰り返し、関数、条件とイベントの知識を試してみましょう。

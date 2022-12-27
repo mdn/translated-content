@@ -16,7 +16,9 @@ El método **`Object.isFrozen()`** determina si un objeto está _congelado_.
 
 ## Síntaxis
 
-    Object.isFrozen(obj)
+```
+Object.isFrozen(obj)
+```
 
 ### Parametros
 

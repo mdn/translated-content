@@ -3,6 +3,7 @@ title: BaseAudioContext.createBuffer()
 slug: Web/API/BaseAudioContext/createBuffer
 original_slug: Web/API/AudioContext/createBuffer
 ---
+
 {{ APIRef("Web Audio API") }}
 
 `createBuffer()` は {{ domxref("BaseAudioContext") }} インターフェイスのメソッドで、新しい空の {{ domxref("AudioBuffer") }} オブジェクトを生成するために使用されます。このオブジェクトにデータを代入し、{{ domxref("AudioBufferSourceNode") }} を介して再生することができます。

@@ -2,6 +2,7 @@
 title: MutationObserver.takeRecords()
 slug: Web/API/MutationObserver/takeRecords
 ---
+
 {{APIRef("DOM WHATWG")}}
 
 {{domxref("MutationObserver")}} の **`takeRecords()`** メソッドは、検出されたがオブザーバのコールバック関数で処理されていない DOM の変更に一致するすべてのリストを返し、変更キューは空のままにします。 最も一般的な使用例は、オブザーバを切断する直前に保留中の変更記録をすべて取得し、オブザーバを停止する際に保留中の変更を処理できるようにすることです。

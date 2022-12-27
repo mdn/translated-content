@@ -2,6 +2,7 @@
 title: Permissions.revoke()
 slug: Web/API/Permissions/revoke
 ---
+
 {{APIRef("Permissions API")}}{{SeeCompatTable}}
 
 {{domxref("Permissions")}} インターフェイスの **`Permissions.revoke()`** メソッドは、現在設定されているパーミッションをデフォルト状態（通常は `prompt`）に戻します。

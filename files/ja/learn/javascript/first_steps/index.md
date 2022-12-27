@@ -4,6 +4,7 @@ slug: Learn/JavaScript/First_steps
 l10n:
   sourceCommit: 0b270d4f95ba1c4abcc81215df774a9448a78105
 ---
+
 {{LearnSidebar}}
 
 最初の JavaScript のモジュールでは、初めて JavaScript を書く実践的な経験を体験する前に、「JavaScript とは何？」や「どのようなもの？」や「何ができる？」といったような基本的な質問に答えます。その後、変数や文字列、 数値、配列といったような言語の内容をお話しします。

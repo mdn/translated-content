@@ -2,6 +2,7 @@
 title: PerformanceNavigationTiming.loadEventEnd
 slug: Web/API/PerformanceNavigationTiming/loadEventEnd
 ---
+
 {{APIRef("Navigation Timing")}}{{SeeCompatTable}}
 
 **`loadEventEnd`** 読み取り専用プロパティは、現在のドキュメントのロードイベントが完了した時刻と同じ{{domxref("DOMHighResTimeStamp","timestamp")}} を返します。

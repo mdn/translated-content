@@ -104,7 +104,7 @@ new Int8Array(buffer [, byteOffset [, length]]);
 - {{jsxref("TypedArray.values", "Int8Array.prototype.values()")}}
   - : 返回一个数组迭代器对象，该迭代器会包含所有数组元素的值。参照 {{jsxref("Array.prototype.values()")}}
 - {{jsxref("TypedArray.toLocaleString", "Int8Array.prototype.toLocaleString()")}}
-  - : 返回一个由所有数组元素组合而成的本地化后的字符串. See also {{jsxref("Array.prototype.toLocaleString()")}}.
+  - : 返回一个由所有数组元素组合而成的本地化后的字符串。See also {{jsxref("Array.prototype.toLocaleString()")}}.
 - {{jsxref("TypedArray.toString", "Int8Array.prototype.toString()")}}
   - : 返回一个由所有数组元素组合而成的字符串。参照 {{jsxref("Array.prototype.toString()")}}
 - {{jsxref("TypedArray.@@iterator", "Int8Array.prototype[@@iterator]()")}}

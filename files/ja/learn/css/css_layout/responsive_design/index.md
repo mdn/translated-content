@@ -2,6 +2,7 @@
 title: レスポンシブデザイン
 slug: Learn/CSS/CSS_layout/Responsive_Design
 ---
+
 {{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
 
 Web デザインの初期には、特定の画面サイズを対象とするページが作成されていました。 ユーザーの画面がデザイナーの予想よりも大きかったり小さかったりした場合、結果は望ましくないスクロールバーから、過度に長い行長、そして中途半端なスペースにまで及びました。 より多様な画面サイズが利用可能になると、_レスポンシブ Web デザイン_（responsive web design、RWD）の概念が登場しました。 これは、さまざまな画面幅、解像度などに合わせて Web ページがレイアウトと外観を変更できるようにする一連の実践です。 これは、マルチデバイス Web のデザイン方法を変えたアイデアであり、この記事は、それをマスターするために知っておくべき主なテクニックを理解するのに役立ちます。

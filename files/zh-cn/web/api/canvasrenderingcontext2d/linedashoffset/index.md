@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/lineDashOffset
 
 {{APIRef}}
 
-**`CanvasRenderingContext2D.lineDashOffset`** 是 Canvas 2D API 设置虚线偏移量的属性，例如可以实现“[蚂蚁线](http://en.wikipedia.org/wiki/Marching_ants)“ 的效果。
+**`CanvasRenderingContext2D.lineDashOffset`** 是 Canvas 2D API 设置虚线偏移量的属性，例如可以实现“[蚂蚁线](http://en.wikipedia.org/wiki/Marching_ants)“的效果。
 
 ## 语法
 
@@ -14,7 +14,7 @@ ctx.lineDashOffset = value;
 ```
 
 - `value`
-  - : 偏移量是 float 精度的数字。初始值为 `0.0。`
+  - : 偏移量是 float 精度的数字。初始值为 `0.0`。
 
 ## 示例
 
@@ -91,7 +91,7 @@ window.addEventListener("load", drawCanvas);
 
 ### “蚂蚁线”
 
-”蚂蚁线“效果是一种动画技巧，经常出现在计算机绘图程序的套索工具中。 它能帮助用户根据图片背景动态变化的边界来区分选择的边界。
+”蚂蚁线“效果是一种动画技巧，经常出现在计算机绘图程序的套索工具中。它能帮助用户根据图片背景动态变化的边界来区分选择的边界。
 
 ```html hidden
 <canvas id="canvas" class="playable-canvas"></canvas>
